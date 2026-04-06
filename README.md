@@ -2,7 +2,8 @@
 
 Definitive source repository for the shared specification methodology.
 
-The authoritative methodology surfaces live under `specification/standards/`.
+The authoritative shared methodology surfaces live under
+`specification/standards/`.
 Installers may vend copies of that tree into workspace-local locations such as
 `.genesis/docs/standards/`, but those installed copies are distributions, not
 the source of truth.
