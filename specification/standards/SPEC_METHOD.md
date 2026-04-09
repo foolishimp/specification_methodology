@@ -108,6 +108,12 @@ The important boundary is:
 - a shared design surface plus any tenant-local design surfaces choose the concrete mechanism
 - when a project realization model uses build tenants, `build_tenants/` is the project-owned realization root beneath one shared specification
 
+The authoritative split is strict:
+
+- `specification/` defines `WHAT`
+- design and realization surfaces define `HOW`
+- no build-tenant, design, code, or derived surface may become co-equal constitutional authority with `specification/`
+
 Structurally, `requirements/` is a folder under `specification/`. Requirements may be stored as individual files or grouped into requirement families. The purpose of this shape is to avoid collapsing the constitutional surface into one monolithic requirements document.
 
 This is one expression of the broader declarative bias: we prefer declaring requirement structure and family boundaries over maintaining one imperative catch-all document.
@@ -151,6 +157,12 @@ This is the homeostatic loop. Every link in the chain is load-bearing. A break a
 Requirements are the constitutional **what** of the project. They are not limited to user-visible product features. The live requirement surface may include capabilities, invariants, constraints, governance, and verification obligations. What matters is that each requirement states something the project must make true.
 
 Design is the structural **how**. It chooses the concrete realization that satisfies requirement truth: interfaces, topology, file placement, carrier documents, entry/control surfaces, runtime wiring, and lawful tenant boundaries. Requirements may require such surfaces to exist and be delivered; design chooses where and how they are realized unless the path itself is constitutional.
+
+Where a project uses build tenants, that split remains exact:
+
+- `specification/` is the shared constitutional `WHAT`
+- `build_tenants/` contains one or more independent `HOW` realizations of that shared `WHAT`
+- tenant-local realization is derivative unless and until the governing truth is ratified in specification
 
 ---
 
@@ -560,7 +572,7 @@ The target constitutional shape for a project is:
 
 If the realization model is tenanted, the target project topology also includes:
 
-- `build_tenants/` as the project-owned realization root for one-to-many independent implementations of the shared specification
+- `build_tenants/` as the project-owned realization root for one-to-many independent `HOW` realizations of the shared `WHAT` defined in specification
 - `build_tenants/TENANT_REGISTRY.md` as the canonical registry of tenant families, variants, and activity state
 - `build_tenants/common/` as the shared realization root for cross-tenant law
 - `docs/` as project-owned supporting documentation
@@ -670,4 +682,4 @@ If a requirement names an operational mechanism, the ADR must name that mechanis
 
 ## Stone Version
 
-Spec-driven development treats specification as constitutional source, not commentary on code. Methodology defines the process constitution. Intent and requirements define the project constitution. Requirements define the full constitutional what: capabilities, guarantees, governance, and verification obligations. Design defines the structural how, and ADRs are one durable form of that design record. Scenarios verify operational meaning where capability claims need end-to-end proof. Code realizes decisions. Design must be derivable from intent and requirements; code must be derivable from requirements and design. Iteration is cumulative repricing, not waterfall. Events, projection, and delta reveal drift. Every live requirement family must have design ownership, explicit classification, and downstream closure or explicit deferment. Every design record must ground itself in requirements. Shipping behavior must trace back to constitutional authority. Live constitutional surfaces are versioned history and must change by supersession or withdrawal, not silent in-place mutation. New intent emerges from real use cases hitting the current model — through explicit gap analysis, not ad hoc pressure.
+Spec-driven development treats specification as constitutional source, not commentary on code. Methodology defines the process constitution. Intent, product, and requirements define the project constitution. Specification defines `WHAT`. Design and realization define `HOW`. In tenanted projects, `build_tenants/` holds one or more independent `HOW` realizations of the shared `WHAT`; it does not define a rival constitution. Requirements define the full constitutional what: capabilities, guarantees, governance, and verification obligations. Design defines the structural how, and ADRs are one durable form of that design record. Scenarios verify operational meaning where capability claims need end-to-end proof. Code realizes decisions. Design must be derivable from intent and requirements; code must be derivable from requirements and design. Iteration is cumulative repricing, not waterfall. Events, projection, and delta reveal drift. Every live requirement family must have design ownership, explicit classification, and downstream closure or explicit deferment. Every design record must ground itself in requirements. Shipping behavior must trace back to constitutional authority. Live constitutional surfaces are versioned history and must change by supersession or withdrawal, not silent in-place mutation. New intent emerges from real use cases hitting the current model — through explicit gap analysis, not ad hoc pressure.
