@@ -236,8 +236,44 @@ downstream realization is sufficiently constrained."
 
 ## Change Management Rule
 
-Every substantive change begins with an explicit declared change intent and a lawful
-re-entry point into the constitutional chain.
+Every substantive change begins with intake triage, an explicit declared change
+intent, and a lawful re-entry point into the constitutional chain.
+
+### Universal Intake Triage
+
+There is one front door for substantive change.
+
+The intake label does not determine the process class.
+
+That means a reported:
+
+- bug
+- feature request
+- issue
+- regression
+- operator finding
+- release blocker
+- scenario failure
+
+all enter through the same intake-triage process.
+
+Intake triage must determine:
+
+- whether the report represents a substantive change at all
+- the affected product boundary and intended scope
+- the lawful change class
+- the lawful re-entry point into the constitutional chain
+- the downstream surfaces and evidence that must be repriced, re-derived, or
+  re-proved
+- whether the work remains within the currently declared release scope or
+  requires repricing of that release plan
+
+No bug, feature, issue, or other intake may bypass this triage by going
+straight to code, tests, or release handling.
+
+The purpose of triage is not to create a separate ticket bureaucracy. It is to
+classify impact correctly so the change enters the method at the right
+constitutional boundary.
 
 The minimum lawful change classes are:
 
@@ -701,6 +737,13 @@ This rule exists to keep the requirement surface structurally clear, derivable, 
 
 ## Method
 
+When any substantive intake arrives:
+
+1. Triage the intake and classify the change.
+2. Determine the lawful re-entry point into the constitutional chain.
+3. Identify the affected downstream span that must remain consistent.
+4. Only then treat the work as implementation, repricing, or release-bound change.
+
 When a feature is introduced or changed:
 
 1. Update **Goals** if the current bounded work wave or overriding concerns have changed.
@@ -734,6 +777,12 @@ When a real use case reveals a gap:
 2. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
 3. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).
 4. If implementation: write requirements/design as needed, then implement.
+
+The intake source does not change this rule.
+
+A bug report, feature request, failed testcase, release blocker, or operator
+observation still enters through intake triage first, then follows the lawful
+change class selected there.
 
 ---
 
