@@ -4,6 +4,14 @@
 
 **Scope**: Defines the minimal local-first ticket layer complementary to `POSTING_GUIDE.md`.
 
+**Relation**: Refines `SPEC_METHOD.md` for local work tracking. Ticket types are
+not constitutional change classes. They are a separate execution-tracking
+taxonomy that should be used alongside the change-class model from
+`SPEC_METHOD.md`.
+
+Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology and the
+default meaning of `Source Project`, `Product`, `Install`, and `Artifact`.
+
 ---
 
 ## Purpose
@@ -79,11 +87,12 @@ governed by `POSTING_GUIDE.md`.
 ## Minimal Layout
 
 ```text
+.genesis/docs/standards/
+├── POSTING_GUIDE.md
+└── TICKET_METHOD.md
+
 specification/
 ├── GOALS.md
-└── standards/
-    ├── POSTING_GUIDE.md
-    └── TICKET_METHOD.md
 
 .ai-workspace/
 ├── tickets/
@@ -139,6 +148,10 @@ Each ticket must record at least:
 - `type`
 - `status`
 - `goal`
+- `change_intent`
+- `change_class`
+- `re_entry_point`
+- `triaged_at`
 - `created_at`
 - `updated_at`
 
@@ -147,6 +160,8 @@ Recommended additional fields:
 - `priority`
 - `dependencies`
 - `links`
+- `intake_source`
+- `affected_boundary`
 
 ### Allowed Types
 
@@ -158,6 +173,41 @@ Minimum common set:
 - `chore`
 
 Projects may add more, but this default set should be enough for most cases.
+
+### Change Class
+
+Ticket type and change class are orthogonal.
+
+- ticket type answers: what kind of work record is this?
+- change class answers: where does this change lawfully re-enter the
+  constitutional chain?
+
+Tickets must record the `change_class` declared by intake triage, using the
+change classes from `SPEC_METHOD.md`.
+
+Common pairings are:
+
+- `feature` with `goal_reprice`, `intent_reprice`, `product_reprice`,
+  `requirement_reprice`, or `design_reframe`
+- `bug` with `requirement_reprice`, `design_reframe`, or
+  `realization_refactor`
+- `chore` with `design_reframe` or `realization_refactor`
+- `spike` as exploratory work that still carries the current triage class and
+  should terminate either in a more specific downstream ticket or in an
+  explicit decision that no further substantive change is required
+
+### Triage Metadata
+
+Because tickets are the durable authority surface for work tracking, a ticket
+for substantive work must carry the minimum metadata required by
+`SPEC_METHOD.md` intake triage.
+
+That means the ticket must record at least:
+
+- the declared `change_intent`
+- the lawful `change_class`
+- the lawful `re_entry_point`
+- when triage occurred via `triaged_at`
 
 ### Allowed Status
 
@@ -192,6 +242,10 @@ This keeps the live set small enough that `rg` remains fast and readable.
 - type: feature
 - status: active
 - goal: methodology-bootstrap
+- change_intent: make the product-definition layer explicit in the constitutional chain
+- change_class: product_reprice
+- re_entry_point: product
+- triaged_at: 2026-04-07
 - priority: high
 - created_at: 2026-04-07
 - updated_at: 2026-04-07
@@ -234,6 +288,8 @@ rg -n "T-001|B-002" .ai-workspace/tickets
 ## Relationship To Other Surfaces
 
 - `GOALS.md` answers: what broad work wave matters now
+- `SPEC_METHOD.md` answers: what constitutional change class and re-entry point
+  govern the work
 - tickets answer: what durable units of work exist and what state they are in
 - comments answer: what was proposed, argued, decided, reviewed, or handed off
 - `POSTING_GUIDE.md` answers: how comment-layer publications are structured and

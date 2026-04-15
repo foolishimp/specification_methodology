@@ -6,6 +6,8 @@
 **Repriced**: 2026-03-24 — Verification Layers and Renewal Path added, derived from product-owner scenario analysis (20260324T165057_PRODUCT_SCENARIOS_abg-gtl-first-10.md)
 **Repriced**: 2026-04-07 — Product definition layer made explicit in the constitutional chain, bootstrap rule, and spec-driven method
 **Repriced**: 2026-04-07 — Goals layer made explicit in the constitutional chain, bootstrap rule, and spec-driven method
+**Repriced**: 2026-04-15 — Recursive product taxonomy raised into the baseline method and spec-method terminology tightened around product-definition surfaces
+**Repriced**: 2026-04-15 — Baseline ambiguity terms made substrate-agnostic, trace-closure and anti-drift rules consolidated, and source-versus-installed authority paths made explicit
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -16,6 +18,39 @@ It is intentionally general.
 
 Where a product is realized as a graph-native system, this baseline is refined
 by a stronger constitutional method such as `GRAPH_METHOD.md`.
+
+Use `GLOSSARY_GUIDE.md` for shared terminology across recursive product,
+graph-native, and world-model work.
+
+---
+
+## Canonical Compression
+
+Spec-driven development treats specification as constitutional source, not
+commentary on code. Methodology defines the process constitution. Intent,
+product definition, and requirements define the project constitution.
+Specification defines `WHAT`. Design and realization define `HOW`. In tenanted
+projects, `build_tenants/` holds one or more independent `HOW` realizations of
+the shared `WHAT`; it does not define a rival constitution. Requirements define
+the full constitutional what: capabilities, guarantees, governance, and
+verification obligations. Design defines the structural how, and ADRs are one
+durable form of that design record. The SDLC is a governed disambiguation
+pipeline: each major boundary reduces the space of lawful interpretations and
+must surface major ambiguity explicitly. Ambiguity detection is mandatory;
+blocking or escalation is policy-driven by declared risk appetite, except for
+hard-stop prerequisite failures. Scenarios verify operational meaning where
+capability claims need end-to-end proof. Code realizes decisions. Design must
+be derivable from requirements, which are themselves derivable from goals,
+intent, and product definition; code must be derivable from requirements and
+design. Iteration is cumulative repricing, not waterfall.
+Events, projection, and delta reveal drift. Every live requirement family must
+have design ownership, explicit classification, and downstream closure or
+explicit deferment. Every design record must ground itself in requirements.
+Shipping behavior must trace back to constitutional authority. Live
+constitutional surfaces are versioned history and must change by supersession
+or withdrawal, not silent in-place mutation. New intent emerges from real use
+cases hitting the current model through explicit gap analysis, not ad hoc
+pressure.
 
 ---
 
@@ -37,13 +72,57 @@ Imperative procedure still exists, but it is subordinate to declared authority.
 
 ---
 
+## Recursive Product Taxonomy
+
+Software is recursive and compositional.
+
+A released product may be used to build:
+
+- the next released version of itself
+- a dependent product
+- downstream project artifacts
+
+Most taxonomy drift in recursive software systems comes from collapsing these
+roles into one overloaded word such as `product`.
+
+This methodology therefore distinguishes:
+
+- **Substrate**: a lower product or runtime used to build other products
+- **Source Project**: the mutable workspace building the next release cut
+- **Release Cut**: the tapped immutable boundary over the accepted feature set
+- **Product**: the released immutable thing resulting from that release cut
+- **Install**: a stamped workspace instance of that released product
+- **Artifact**: any published output built by a source project or by a
+  configured installed product
+
+The governing rules are:
+
+- do not call a mutable source workspace a product
+- do not confuse a tapped release or installed product with the mutable source
+  project building the next cut
+- `PRODUCT.md` is the product-definition surface of a source project, not the
+  released product artifact itself
+- products may depend on other products
+- installed products may build the next version of themselves or other products
+
+The compiler analogy is the intended model:
+
+`bootstrap source -> release P0 -> install P0 -> use P0 to build source for P1 -> release P1`
+
+This taxonomy is load-bearing.
+
+If it is blurred, dependency and self-hosting errors compound quickly and are
+expensive to unwind.
+
+---
+
 ## Manifesto
 
 We define the current **goals** for the active body of work before repricing deeper constitutional layers.
 
 We work from **intent** before implementation.
 
-We define the current **product** in explicit present-tense terms before decomposing it into detailed requirements.
+We define the current **product definition** in explicit present-tense terms before decomposing it into detailed requirements.
 
 We define the full constitutional **what** in **requirements**, not merely a feature list.
 
@@ -59,7 +138,7 @@ We demand **evidence** for claims through scenarios, tests, events, projection, 
 
 We treat **repricing** as part of correctness: when reality exposes a constitutional gap, the specification must change.
 
-We keep **authority directional** even while iterating: goals govern intent, intent governs product, product governs requirements, requirements govern design, and requirements plus design govern code.
+We keep **authority directional** even while iterating: goals govern intent, intent governs product definition, product definition governs requirements, requirements govern design, and requirements plus design govern code.
 
 We keep the **live operative surface** in the present tense only: once a new current reality is established, transitional paths are erased from the live product unless explicitly retained as compatibility features.
 
@@ -69,12 +148,12 @@ If these claims do not hold, the work is not genuinely spec-driven.
 
 ---
 
-## Litmus Tests
+## Spec-Drivenness Litmus
 
 The work is not genuinely spec-driven if any of these fail:
 
 1. Given goals, a competent team cannot derive a conformant intent surface.
-2. Given intent, a competent team cannot derive a conformant product definition.
+2. Given intent, a competent team cannot derive a conformant product-definition surface.
 3. Given product definition, a competent team cannot derive conformant requirements.
 4. Given requirements, a competent team cannot derive a conformant design.
 5. Given requirements and design, a competent team cannot derive conformant code.
@@ -106,7 +185,7 @@ The important boundary is:
 - `SPEC_METHOD.md` defines the process constitution
 - `GOALS.md` defines the current overriding concerns for the active body of work
 - `INTENT.md` defines domain direction
-- `PRODUCT.md` defines the current product realization
+- `PRODUCT.md` defines the current product-definition surface of the mutable source project
 - `specification/requirements/` is the live requirement surface derived from product definition
 - a shared design surface plus any tenant-local design surfaces choose the concrete mechanism
 - when a project realization model uses build tenants, `build_tenants/` is the project-owned realization root beneath one shared specification
@@ -128,7 +207,7 @@ So if project-specific design and code disappeared, recovery would proceed throu
 ## Constitutional Chain
 
 ```
-Goals → Intent → Product → Requirements → Design → Code → Events → Projection → Delta
+Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta
                                                                                        ↓
                                                                                   Scenarios
                                                                                        ↓
@@ -139,7 +218,7 @@ Goals → Intent → Product → Requirements → Design → Code → Events →
 
 - **Goals** define the current overriding concerns for the active body of work.
 - **Intent** defines purpose and direction.
-- **Product** defines the current product realization, key terms, and end-state shape in terms that can be decomposed into requirements.
+- **Product Definition** defines the current product realization of the mutable source project, its key terms, and end-state shape in terms that can be decomposed into requirements.
 - **Requirements** define invariant truths the system must satisfy.
 - **Design** defines the structural decisions, interfaces, carrier surfaces, and delivery topology that make those truths achievable.
 - **ADRs** are one durable form of design record, not a second constitutional layer above design.
@@ -155,7 +234,11 @@ This is the homeostatic loop. Every link in the chain is load-bearing. A break a
 
 `GOALS.md` is the bounded work-wave surface. It captures the current overriding concerns for the next body of work, keeps temporary focus out of deeper constitutional layers until it is intentionally repriced there, and is more immediate than intent while remaining higher-level than product definition and requirements.
 
-`PRODUCT.md` is the bridge between direction and obligation. It states the current product realization in present-tense terms, names the product terms and boundaries that downstream layers rely on, and provides the surface that requirements decompose.
+`PRODUCT.md` is the bridge between direction and obligation. It states the current product-definition surface of the mutable source project in present-tense terms, names the product terms and boundaries that downstream layers rely on, and provides the surface that requirements decompose.
+
+`PRODUCT.md` is not the tapped release artifact and not the installed product.
+
+Those belong to the recursive product taxonomy above.
 
 Requirements are the constitutional **what** of the project. They are not limited to user-visible product features. The live requirement surface may include capabilities, invariants, constraints, governance, and verification obligations. What matters is that each requirement states something the project must make true.
 
@@ -207,16 +290,16 @@ Ambiguity detection is mandatory. Blocking is policy.
 
 The default governance model is:
 
-- ambiguity may be carried or decided by lawful probabilistic processing such as
-  `F_P` when project policy allows it
-- ambiguity may be escalated to human judgment such as `F_H` when project policy
+- ambiguity may be carried or decided by lawful probabilistic processing when
+  project policy allows it
+- ambiguity may be escalated to explicit human adjudication when project policy
   requires it
 - the threshold between those actions is determined by declared risk appetite,
   not by silent convenience
 
 Projects may therefore choose different ambiguity-handling policies. A lower
 risk appetite escalates more major ambiguity to explicit human judgment. A
-higher risk appetite permits more bounded `F_P` decision-making. In either
+higher risk appetite permits more bounded probabilistic decision-making. In either
 case, the ambiguity and the decision must be recorded.
 
 Some conditions are not optional ambiguity decisions and therefore remain hard
@@ -326,15 +409,19 @@ a separate release process surface such as `RELEASE_METHOD.md`.
 
 ---
 
+## Evidence Rules
+
+The following rules govern how constitutional claims are proved in practice.
+
 ## Verification Layers
 
 Each layer in the chain preserves a distinct kind of truth:
 
-| Layer | What it preserves | What it catches |
-|-------|-------------------|-----------------|
-| **Requirements** | Invariant truth | "The system must do X" |
-| **Design** | Structural choice | "We chose mechanism Y to satisfy X" |
-| **Scenarios** | Operational meaning | "Can I actually do Z with this system?" |
+| Layer | What it preserves | Primary question answered |
+|-------|-------------------|---------------------------|
+| **Requirements** | Invariant truth | "What must be true?" |
+| **Design** | Structural choice | "How is that truth realized?" |
+| **Scenarios** | Operational meaning | "Can the realized system actually do the claimed thing?" |
 
 Without scenarios, important capabilities can appear "covered" because the words exist in requirements and design. Scenarios force the sharper question: can the product *really* do the thing? A requirement can say "compositional graphs" and a design ADR can describe Fragment types, but only a scenario asks "can I model a reusable discovery workflow and apply it twice?"
 
@@ -447,14 +534,14 @@ Requirements should also avoid freezing concrete realization choices prematurely
 
 ---
 
-## Reconstruction Litmus Test
+## Reconstruction Litmus
 
 The methodology is specification-driven only if the layers are reconstructable in order:
 
 1. Given **Goals**, a competent team should be able to derive a conformant **Intent** surface.
 2. Given **Intent**, a competent team should be able to derive a conformant **Product** definition.
 3. Given **Product**, a competent team should be able to derive conformant **Requirements**.
-4. Given **Requirements** and a chosen technology stack, a competent team should be able to derive a conformant **Design**.
+4. Given **Requirements**, a competent team should be able to derive a conformant **Design**.
 5. Given **Requirements + Design**, a competent team should be able to derive conformant **Code**.
 
 This does not mean the derivation is unique. Different designs may satisfy the same requirements, and different codebases may satisfy the same design. The test is sufficiency, not determinism.
@@ -478,6 +565,10 @@ is not yet sufficient even if some downstream artifact can be produced.
 Requirements state what control or delivery surfaces must exist.
 
 Design decides the concrete mechanism that realizes them.
+
+If a technology stack, carrier, or runtime is not already constrained by an
+upstream constitutional surface, choosing it is part of design rather than a
+separate upstream authority.
 
 That boundary matters especially for agent-facing bootstrap and control surfaces:
 
@@ -515,27 +606,58 @@ What must remain stable is the full direction of authority: goals govern intent,
 
 ---
 
-## Ownership Rules
-
-1. Every live requirement family must map to one or more owning design decisions.
-2. Every ADR or other design record must ground itself in requirements via an explicit `Implements:` line.
-3. Every live requirement family must have downstream closure: realized in design/code/tests, or explicitly deferred through an honest deferment surface.
-4. Every shipping code or test behavior must trace back to live requirement and design authority.
-5. Unowned requirements, ungrounded design records, deferred requirements without explicit deferment, and code without trace authority are design drift. When that happens, code becomes accidental law.
-
----
-
-## Trace Closure Rule
+## Trace Closure And Anti-Drift Rule
 
 Spec-driven development requires constitutional trace closure.
 
-- No live requirement may remain as a free-floating statement of intent. If it is live, it must either:
+### Ownership
+
+- Every live requirement family must map to one or more owning design
+  decisions.
+- Every ADR or other design record must ground itself in requirements via an
+  explicit `Implements:` line.
+
+### Downstream Closure
+
+- No live requirement may remain as a free-floating statement of intent. If it
+  is live, it must either:
   - be realized through the downstream chain, or
   - be explicitly deferred with an honest surface that records the deferment.
-- No shipping code or tests may exist as ungoverned behavior. If behavior exists, it must trace back out to live requirements and the design decisions that authorize it.
-- No hidden product surface is allowed. Behavior without trace authority is accidental law even if it "works."
+- Every live requirement family must therefore have downstream closure:
+  realized in design/code/tests, or explicitly deferred through an honest
+  deferment surface.
+- No shipping code or tests may exist as ungoverned behavior. If behavior
+  exists, it must trace back out to live requirements and the design decisions
+  that authorize it.
+- No hidden product surface is allowed. Behavior without trace authority is
+  accidental law even if it works.
 
-Trace closure is stricter than documentation completeness. It is the rule that closes the constitution over realized behavior.
+### Drift Signals
+
+- Unowned requirements, ungrounded design records, deferred requirements
+  without explicit deferment, and code without trace authority are design
+  drift.
+- If an ADR or other design artifact has no requirement grounding, it is design
+  without constitutional authority.
+- If code behavior has no design owner, the design has already drifted.
+- If shipping code or tests cannot trace back out to live requirement and
+  design authority, they are ungoverned product surface.
+- If tests validate implementation habit rather than requirement truth, they
+  lock in drift.
+- If events and projection reveal persistent delta, either code is wrong or the
+  requirement/design stack is stale.
+- If a capability has requirements and design but no scenario, its operational
+  meaning is unverified.
+- If a requirement is treated as a product feature when it is actually a
+  guarantee, governance rule, or verification obligation, the requirement
+  surface has been misclassified.
+- If a live constitutional artifact is corrected by in-place mutation rather
+  than supersession or withdrawal, constitutional history has been corrupted.
+- If a real use case reveals a gap not expressible in current requirements, a
+  new intent is needed, not a code hack.
+
+Trace closure is stricter than documentation completeness. It is the rule that
+closes the constitution over realized behavior.
 
 ---
 
@@ -649,34 +771,39 @@ In project documents, this classification shall be explicit in requirement heade
 
 ---
 
-## Anti-Drift Rules
-
-- If a requirement is active law, it must map to one or more owning design decisions.
-- If a live requirement is not yet realized, it must be explicitly deferred rather than silently orphaned.
-- If an ADR or other design artifact has no requirement grounding, it is design without constitutional authority.
-- If code behavior has no design owner, the design has already drifted.
-- If shipping code or tests cannot trace back out to live requirement and design authority, they are ungoverned product surface.
-- If tests validate implementation habit rather than requirement truth, they lock in drift.
-- If events and projection reveal persistent delta, either code is wrong or the requirement/design stack is stale.
-- If a capability has requirements and design but no scenario, its operational meaning is unverified — it may be vaporware.
-- If a requirement is treated as a product feature when it is actually a guarantee, governance rule, or verification obligation, the requirement surface has been misclassified.
-- If intent cannot be re-derived from goals, requirements cannot be re-derived from product, design cannot be re-derived from requirements, or code cannot be re-derived from requirements plus design, the constitutional chain is broken.
-- If a live constitutional artifact is corrected by in-place mutation rather than supersession or withdrawal, constitutional history has been corrupted.
-- If a real use case reveals a gap not expressible in current requirements, a new intent is needed — not a code hack.
-
----
-
 ## Bootstrap Rule
 
 The target constitutional shape for a project is:
 
-- `.genesis/docs/standards/SPEC_METHOD.md` as process constitution
+- `.genesis/docs/standards/SPEC_METHOD.md` as installed process constitution
 - `specification/GOALS.md` as current work-wave orientation
 - `specification/INTENT.md` as domain direction
-- `specification/PRODUCT.md` as current product realization
+- `specification/PRODUCT.md` as current product-definition surface
 - `specification/requirements/` as the live requirement surface
 - a live shared design surface
 - any tenant-local design surfaces required by the realization model
+
+The authoritative path split is:
+
+- source methodology authority lives in the source workspace under
+  `specification_methodology/specification/standards/`
+- installed methodology distribution lives under `.genesis/docs/standards/`
+- project-owned constitutional surfaces live under `specification/`
+
+Projects shall not create a competing local methodology root such as
+`specification/standards/`.
+
+Method authority is singular:
+
+- source methodology authority in the methodology source workspace
+- installed methodology authority in `.genesis/docs/standards/`
+- project constitutional authority in `specification/`
+
+When editing or repricing methodology, the source path is authoritative.
+
+When operating inside an installed workspace, the installed path is the
+operative local distribution of that source authority until a new release or
+install refreshes it.
 
 If the realization model is tenanted, the target project topology also includes:
 
@@ -688,11 +815,12 @@ If the realization model is tenanted, the target project topology also includes:
 The corresponding folder shape is:
 
 ```text
+.genesis/docs/standards/
+├── *_METHOD.md
+├── *_GUIDE.md
+└── *_TEMPLATE.md
+
 specification/
-├── standards/
-│   ├── *_METHOD.md
-│   ├── *_GUIDE.md
-│   └── *_TEMPLATE.md
 ├── GOALS.md
 ├── INTENT.md
 ├── PRODUCT.md
@@ -773,10 +901,12 @@ When bootstrapping a project or repricing a requirement surface:
 
 When a real use case reveals a gap:
 
-1. Write the **Scenario** first — make the gap concrete and testable.
-2. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
-3. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).
-4. If implementation: write requirements/design as needed, then implement.
+1. Run intake triage first and classify the report as a lawful change.
+2. Then write the **Scenario** as the first substantive project artifact for the
+   gap so the pressure becomes concrete and testable.
+3. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
+4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).
+5. If implementation: write requirements/design as needed, then implement.
 
 The intake source does not change this rule.
 
@@ -795,14 +925,8 @@ Each ADR should explicitly include:
 | `Implements:` | REQ-* IDs this ADR makes true |
 | `Derives from:` | INT-* or strategy document that motivated the decision |
 | `Supersedes:` | Prior ADR or doctrine this replaces |
-| `Degenerate case:` | When earlier behavior is intentionally retained as a special case of the current surface |
+| `Retained special case:` | When earlier behavior is intentionally retained as a special case of the current surface |
 
 Write ADRs per decision boundary, not per requirement file. The question is: "what design choice makes these ACs true?" That is the ADR boundary.
 
 If a requirement names an operational mechanism, the ADR must name that mechanism too. If a requirement expands the event taxonomy, the EC ADR must be repriced immediately — event semantics must not drift into a second constitution.
-
----
-
-## Stone Version
-
-Spec-driven development treats specification as constitutional source, not commentary on code. Methodology defines the process constitution. Intent, product, and requirements define the project constitution. Specification defines `WHAT`. Design and realization define `HOW`. In tenanted projects, `build_tenants/` holds one or more independent `HOW` realizations of the shared `WHAT`; it does not define a rival constitution. Requirements define the full constitutional what: capabilities, guarantees, governance, and verification obligations. Design defines the structural how, and ADRs are one durable form of that design record. The SDLC is a governed disambiguation pipeline: each major boundary reduces the space of lawful interpretations and must surface major ambiguity explicitly. Ambiguity detection is mandatory; blocking or escalation is policy-driven by declared risk appetite, except for hard-stop prerequisite failures. Scenarios verify operational meaning where capability claims need end-to-end proof. Code realizes decisions. Design must be derivable from intent and requirements; code must be derivable from requirements and design. Iteration is cumulative repricing, not waterfall. Events, projection, and delta reveal drift. Every live requirement family must have design ownership, explicit classification, and downstream closure or explicit deferment. Every design record must ground itself in requirements. Shipping behavior must trace back to constitutional authority. Live constitutional surfaces are versioned history and must change by supersession or withdrawal, not silent in-place mutation. New intent emerges from real use cases hitting the current model — through explicit gap analysis, not ad hoc pressure.

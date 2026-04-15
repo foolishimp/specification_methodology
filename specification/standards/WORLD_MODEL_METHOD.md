@@ -1,0 +1,595 @@
+# World Model Method
+
+**Status**: Approved
+**Date**: 2026-04-15
+**Derived from**: `odd_domain` product and methodology R&D, repriced into a
+single constitutional world-model method surface
+
+This document defines the constitutional method for world-model construction
+work.
+
+It states what a world model is, what problem the method exists to solve, what
+the governing units and laws are, and how world-model work should proceed from
+source observation to published semantic artifacts and downstream projections.
+
+It is intentionally method-level.
+
+Use `WORLD_MODEL_GUIDE.md` for the concrete representation, publication, and
+carrier rules that refine this method.
+
+---
+
+## Position
+
+Most institutional data systems move values farther than they move meaning.
+
+They dump, copy, reshape, join, map, catalog, publish, and report. Values
+survive. The semantic history that made those values intelligible usually does
+not.
+
+The world-model method exists to reverse that failure.
+
+It starts from these positions:
+
+- source systems are not merely data emitters
+- domains are not just vocabularies
+- records are not self-explanatory
+- mappings are not just field correspondences
+- catalogs are commentary, not comprehension
+- schemas are structural projections, not domain truth
+
+Institutional reality is enacted through bounded functional surfaces.
+
+Those surfaces produce code paths, events, records, APIs, schedules,
+configurations, documents, and downstream obligations. A world model is the
+governed semantic reconstruction of that enacted reality.
+
+The point is not to build another static ontology or opaque metadata store.
+
+The point is to build inspectable, versioned, machine-reasonable domain truth.
+
+---
+
+## Method Role
+
+`SPEC_METHOD.md` defines the general constitutional method for spec-driven
+work.
+
+`WORLD_MODEL_METHOD.md` is a domain-specific refinement of that baseline for
+products and projects that observe existing source systems and publish bounded
+world-model artifacts.
+
+The role split is:
+
+- `SPEC_METHOD.md` defines the general process constitution
+- `WORLD_MODEL_METHOD.md` defines the constitutional refinement for
+  world-model construction work
+- `WORLD_MODEL_GUIDE.md` defines the concrete representation and publication
+  rules for world-model artifacts
+
+Within the world-model domain, this document is the primary method surface.
+
+Where a product is both graph-native and world-model-driven:
+
+- `GRAPH_METHOD.md` governs graph-native execution shape and traversal law
+- `WORLD_MODEL_METHOD.md` governs world-model semantics, publication, and
+  composition law
+
+Those methods compose. They do not compete.
+
+This method inherits the recursive product taxonomy from `SPEC_METHOD.md`.
+Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology and the
+default meaning of `Source Project`, `Product`, `Install`, and `Artifact`.
+
+In particular:
+
+- `product` means a released immutable builder or runtime
+- `install` means a stamped workspace instance of that released product
+- `source project` means the mutable configured workspace using an installed
+  product
+- `builder project` is the world-model specialization of that source-project
+  concept
+- `PRODUCT.md` remains the product-definition surface of a mutable source
+  project, not the released product artifact itself
+
+---
+
+## Manifesto
+
+We observe source systems before we attempt to standardize them.
+
+We comprehend enacted semantics before we flatten them into schemas.
+
+We treat domains as bounded functional surfaces, not as loose vocabularies.
+
+We treat data as evidence of function, never as meaning in isolation.
+
+We recover the objects, boundaries, states, transitions, treatments, and
+reference artifacts that experts already reason with implicitly.
+
+We materialize that understanding into governed world-model artifacts rather
+than leaving it trapped in people, pipelines, or detached documentation.
+
+We use fully qualified naming to remove preventable aliasing before arguing
+about deeper semantic transformation.
+
+We model cross-domain change as treatment, covariance, and adjoint
+interpretation, not as naked field mapping.
+
+We publish immutable semantic cuts and supersede them explicitly rather than
+silently rewriting truth in place.
+
+We compose local fragments into higher-order views without erasing local
+authority.
+
+We treat projections as conveniences derived from the semantic kernel, never as
+co-equal constitutional truth.
+
+We allow the world model to become generative only after it is descriptively
+grounded.
+
+If these claims do not hold, the work is not genuinely world-model-driven.
+
+---
+
+## What A World Model Is
+
+A world model is a governed semantic layer built over existing source systems.
+
+It is descriptive before it is generative.
+
+It should make explicit:
+
+- what objects are treated as real in a bounded context
+- what boundaries make those objects coherent
+- what state and transition surfaces matter
+- what evidence supports those claims
+- what value lists or classifications govern interpretation
+- how adjacent domains reinterpret the objects
+- what co-varies across those domains
+- what is preserved, changed, aggregated, delayed, or lost
+
+A world model is not:
+
+- a replacement system of record
+- a central monolith that erases local semantics
+- a generic catalog entry
+- a copied data warehouse
+- a schema registry pretending to be comprehension
+
+---
+
+## Method Objectives
+
+The method should produce world models that are:
+
+- bounded
+- inspectable
+- challengeable
+- evidence-backed
+- versioned
+- composable
+- projection-capable
+- machine-reasonable
+
+If the method is working, it should become possible to answer:
+
+- what object is this record evidence of
+- what boundary defines that object
+- what source evidence supports the claim
+- which source is locally authoritative
+- what treatment changed the meaning downstream
+- what relationship exists between two differently treated objects
+- what value list or classification was in force at the time
+- why a downstream figure is or is not explainable from upstream reality
+
+---
+
+## Core Claims
+
+### Source Systems Remain Sovereign
+
+Operational truth remains with the systems that enact it.
+
+The world model is a derived semantic layer over those systems. It is not a
+replacement operational source.
+
+### Domains Are Functional Surfaces
+
+A domain is defined by coherent function:
+
+- what enters
+- what changes
+- what is owned
+- what is guaranteed
+- what leaves
+- what adjacent domains can rely on
+
+### Data Is Evidence, Not Meaning By Itself
+
+Data is a trace of constrained function execution.
+
+It is invalid in isolation from context.
+
+### World Models Externalize Expert Cognition
+
+The world model is the inspectable form of the domain understanding that
+experts already carry implicitly.
+
+### Mappings Are Semantic Treatments
+
+Cross-domain transformation is not plain structural rewrite.
+
+Every treatment must declare preserved structure, changed meaning, loss,
+surplus, and ambiguity.
+
+### Fully Qualified Naming Is Mandatory
+
+Many cross-domain failures are preventable naming collisions.
+
+Fully qualified naming removes aliasing so the remaining hard work is real
+semantic transformation.
+
+### Value Lists Are Domain Artifacts Too
+
+Changing code sets, classifications, and value lists are governed temporal
+reference artifacts, not static enum decorations.
+
+### The World Model Sits Above APIs And Schemas
+
+API contracts and schema contracts are projections over the world model.
+
+They are useful because they publish structure and function. They are not the
+highest semantic authority.
+
+### Probability Belongs In The Epistemic Overlay
+
+The canonical world-model object should remain semantic and bounded.
+
+Probability belongs in uncertainty, ranking, anomaly, and alignment overlays,
+not in the ontological identity of the published object itself.
+
+---
+
+## Evidence Hierarchy
+
+The method works from the strongest available explanatory surfaces.
+
+Preferred hierarchy:
+
+1. realized system behavior and emitted records or events
+2. source code, rules, and configuration when available
+3. interfaces and schemas
+4. large-scale observational data evidence
+5. documentation, catalogs, and operator testimony
+
+Code is a high-fidelity explanatory surface when available.
+
+Realized behavior remains the broader truth surface because some systems are
+proprietary, partially visible, or only intelligible through their outputs and
+effects.
+
+The method therefore never depends on code availability as a prerequisite for
+comprehension.
+
+---
+
+## Method Units
+
+### App
+
+A world-model builder application.
+
+### Builder Project
+
+A configured project instance of the builder with its own source inputs,
+settings, and publication lane.
+
+This is a specialization of the `Source Project` term from `SPEC_METHOD.md`.
+
+### Domain Artifact
+
+A published world-model output built by a project.
+
+### Fragment
+
+A bounded published slice inside a domain artifact.
+
+### World Model Object
+
+A machine-reasonable representation of something treated as real in the
+institutional operating model.
+
+### Markov Object
+
+A stable self-bounding world-model object whose internal state can be reasoned
+about through its effective blanket.
+
+### Treatment Surface
+
+A semantic reinterpretation from one domain into another.
+
+### Covariance Edge
+
+A declared relation showing how changes in one object correspond to changes in
+another.
+
+### Adjoint Mapping
+
+The interpret-back contract for a treatment.
+
+### Temporal Reference Artifact
+
+A changing value list, code set, or classification set whose semantics matter
+for object interpretation.
+
+### Projection
+
+A user-facing or downstream-facing artifact derived from the semantic kernel.
+
+---
+
+## Method Flow
+
+The method proceeds through these stages.
+
+### 1. Observe
+
+Gather source evidence from the strongest available surfaces:
+
+- runtime behavior
+- source records and events
+- code and configuration when available
+- interfaces and schemas
+- docs and metadata
+
+### 2. Extract
+
+Produce reviewable intermediate surfaces:
+
+- source inventories
+- object candidates
+- event and lifecycle candidates
+- treatment candidates
+- authority candidates
+- ambiguity registers
+
+These are not the world model yet.
+
+They are the auditable path toward it.
+
+### 3. Bound
+
+Identify bounded contexts and the objects that actually cohere inside them.
+
+Reject schema-first modeling and vocabulary-cluster modeling.
+
+Define local boundaries in terms of function, authority, state, and adjacency.
+
+### 4. Materialize
+
+Publish world-model objects and Markov objects with enough semantic context for
+alignment and reasoning.
+
+Sparse first publication is lawful if the object is bounded, distinguishable,
+and evidence-backed.
+
+### 5. Relate
+
+Add treatment surfaces, covariance edges, adjoint mappings, and temporal
+reference artifacts.
+
+This is where cross-domain meaning becomes explicit.
+
+### 6. Publish
+
+Publish immutable cuts of the world-model artifact.
+
+Do not mutate prior published truth in place.
+
+In the low-volume lane, Git and the filesystem are sufficient as publication
+authority.
+
+### 7. Compose
+
+Stitch fragments into higher-order views without erasing local authority.
+
+Composition is recursive, inspectable, and bounded.
+
+### 8. Builder Project
+
+Emit familiar outputs from the same semantic kernel:
+
+- tables
+- schema contracts
+- API contracts
+- event contracts
+- mapping documents
+- transformation specifications
+- covariant transforms
+- tests and application scaffolds where applicable
+
+---
+
+## Representation Law
+
+Every published object must be prompt-sufficient for reasoning.
+
+At minimum, the object should make visible:
+
+- identity
+- boundary
+- authority
+- state
+- evidence
+- treatment
+- covariance
+- ambiguity
+
+Markov objects must additionally make their effective blanket explicit.
+
+Use `WORLD_MODEL_GUIDE.md` for the concrete representation and publication
+rules.
+
+---
+
+## Materialization Law
+
+The materialized world-model object is an artifact of the world-model builder,
+not a raw artifact of the source system.
+
+The governing split is:
+
+- source systems remain sovereign for operational truth
+- the builder observes and comprehends that truth
+- the published world-model object is the canonical truth of the world-model
+  layer
+- projections are derived from that semantic artifact
+
+This is why world-model artifacts should be versioned and superseded explicitly.
+
+The versioned object is the builder's governed understanding of reality, not a
+claim that the source system emitted the object directly.
+
+---
+
+## Publication Law
+
+Published world-model truth should be:
+
+- immutable per cut
+- reviewable by diff
+- traceable to evidence
+- superseded by explicit later cuts rather than silently overwritten
+
+The filesystem and Git are sufficient for the publication plane in the initial
+lane.
+
+A database, if introduced later, is a query-plane complement rather than the
+constitutional publication authority.
+
+In other words:
+
+`Git is the publication ledger. A database is the query plane.`
+
+---
+
+## Composition Law
+
+Do not build one central monolith first.
+
+Build local fragments, publish them, then stitch them.
+
+Composition must preserve:
+
+- fragment authority
+- bounded-context meaning
+- treatment semantics
+- declared loss
+- ambiguity
+
+Higher-order models are composed from local ones. They do not erase them.
+
+The preferred end-state is a federated world-model mesh rather than a single
+flattened enterprise model.
+
+---
+
+## Projection Law
+
+Projection is downstream convenience, not semantic authority.
+
+The semantic kernel remains primary.
+
+All projections should remain traceable back to:
+
+- governing objects
+- evidence
+- treatments
+- covariance edges
+- adjoint mappings
+- temporal reference artifacts where applicable
+
+Tables, schemas, APIs, mapping documents, and covariant transforms are all
+publication forms over the same semantic kernel.
+
+Because an API usually carries more business semantics than a bare schema, the
+preferred structural order is:
+
+`world model -> API contract -> schema contract`
+
+---
+
+## Proof Law
+
+Adoption should not depend on winning the standardization argument first.
+
+Preferred wedge:
+
+1. comprehend one bounded source slice
+2. publish one fragment
+3. stitch one adjacent fragment
+4. answer one painful question the incumbent pipeline cannot answer cleanly
+5. emit both conventional and covariant outputs side by side
+
+This is incremental semantic capture, not a demand for immediate central
+convergence.
+
+The proof obligation is practical:
+
+build the world model once, then show that the same semantic substrate can emit
+the legacy artifacts the organization expects and the richer covariant outputs
+the method makes possible.
+
+---
+
+## World-Model-Driven Development
+
+The method stands in parallel with spec-driven development.
+
+Specifications are usually normative.
+
+World models are usually descriptive.
+
+A sufficiently well-formed world model can therefore project large parts of an
+application surface without requiring duplicated semantic re-authoring
+downstream.
+
+Preferred relationship:
+
+`world model -> application projections -> implementation`
+
+Use normative application specs where the problem is primarily:
+
+- user interaction
+- workflow choice
+- non-domain behavior
+- operational policy beyond the domain semantics themselves
+
+Use the world model as the semantic substrate wherever the software is mainly
+an interface over stable domain reality.
+
+---
+
+## Method Output
+
+If the method is working, the result is not just better metadata.
+
+The result is:
+
+- a governed world-model artifact
+- inspectable object packets
+- explicit treatment and covariance semantics
+- temporal reference artifacts for changing domain enumerations
+- familiar projections emitted from the same semantic substrate
+- a basis for AI reasoning over real institutional meaning
+
+---
+
+## Companion Surfaces
+
+- `SPEC_METHOD.md`: constitutional specification method
+- `WORLD_MODEL_GUIDE.md`: representation and publication guide for world-model
+  artifacts
+- `RELEASE_METHOD.md`: method for releasing standards into installed workspaces
+- `TICKET_METHOD.md`: method for turning discovery into bounded execution work

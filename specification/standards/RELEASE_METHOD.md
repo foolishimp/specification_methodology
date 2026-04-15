@@ -3,6 +3,8 @@
 **Status**: Draft
 **Scope**: Release-process method for evaluating, tapping, and publishing one point-in-time release cut
 
+Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology.
+
 ---
 
 ## Position

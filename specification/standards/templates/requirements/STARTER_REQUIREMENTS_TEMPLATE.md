@@ -1,9 +1,11 @@
 # Starter Requirements
 
-**Family**: REQ-PROJ-STARTER-*
-**Status**: Draft
-**Category**: Project
+**Family**: REQ-CAP-STARTER-*
+**Status**: Deferred
+**Category**: Capability
 
-### REQ-PROJ-STARTER-001 — Replace me
+### REQ-CAP-STARTER-001 — Replace me
 
-Describe the first project-specific requirement.
+Replace this starter family with the first real project-specific requirement
+family. If it is retained temporarily during bootstrap, keep it honestly
+classified as deferred rather than presenting it as active product truth.
