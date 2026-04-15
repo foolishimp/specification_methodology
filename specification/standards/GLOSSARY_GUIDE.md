@@ -112,6 +112,10 @@ settings, and publication lane.
 This is a specialization of `Source Project` used in world-model work to avoid
 overloading the bare word `project`.
 
+### Published Domain Artifact
+
+An immutable published semantic output of a builder project.
+
 ### World Model Object
 
 A machine-reasonable representation of something treated as real in a bounded
@@ -134,6 +138,16 @@ another.
 ### Adjoint Mapping
 
 The interpret-back contract paired with a treatment.
+
+### Composed World Model
+
+A higher-order world model built by referencing and stitching published domain
+artifacts while preserving their identity, version, and local authority.
+
+### Query Plane
+
+An optional downstream serving surface for traversal or query over published
+domain artifacts and composed world models.
 
 ---
 

@@ -12,10 +12,8 @@ It states what a world model is, what problem the method exists to solve, what
 the governing units and laws are, and how world-model work should proceed from
 source observation to published semantic artifacts and downstream projections.
 
-It is intentionally method-level.
-
-Use `WORLD_MODEL_GUIDE.md` for the concrete representation, publication, and
-carrier rules that refine this method.
+It is intentionally method-level, but for now it also carries the governing
+representation and publication law for world-model work.
 
 ---
 
@@ -63,9 +61,8 @@ The role split is:
 
 - `SPEC_METHOD.md` defines the general process constitution
 - `WORLD_MODEL_METHOD.md` defines the constitutional refinement for
-  world-model construction work
-- `WORLD_MODEL_GUIDE.md` defines the concrete representation and publication
-  rules for world-model artifacts
+  world-model construction work, including the current representation and
+  publication law
 
 Within the world-model domain, this document is the primary method surface.
 
@@ -91,6 +88,21 @@ In particular:
   concept
 - `PRODUCT.md` remains the product-definition surface of a mutable source
   project, not the released product artifact itself
+
+---
+
+## Constitutional Intents
+
+World-model work has two constitutional intents:
+
+1. build published domain artifacts
+2. compose those artifacts into higher-order world models
+
+Query, traversal, and serving over those artifacts are important delivery
+concerns, but they do not define the constitutional identity of the method.
+
+Those concerns may later be realized through a dedicated query or serving plane
+without changing the two core intents above.
 
 ---
 
@@ -287,23 +299,49 @@ settings, and publication lane.
 
 This is a specialization of the `Source Project` term from `SPEC_METHOD.md`.
 
-### Domain Artifact
+### Published Domain Artifact
 
-A published world-model output built by a project.
+A published immutable world-model output built by a builder project.
 
 ### Fragment
 
-A bounded published slice inside a domain artifact.
+A bounded published slice inside a published domain artifact.
 
 ### World Model Object
 
 A machine-reasonable representation of something treated as real in the
 institutional operating model.
 
+### Assurance
+
+The governed basis on which a traced source observation is accepted as a
+qualified semantic claim.
+
+Assurance answers why a claim is lawful world-model truth rather than merely a
+raw observation.
+
+### Attribute Ledger
+
+An append-only ordered record of qualified attribute claims over a stable
+object identity.
+
+Attribute-ledger entries may carry:
+
+- observed values
+- derived values
+- interpreted meanings
+- rule or constraint claims
+- topology or relation claims
+- provenance and authority claims
+- effective, observed, and publication coordinates
+
 ### Markov Object
 
 A stable self-bounding world-model object whose internal state can be reasoned
 about through its effective blanket.
+
+The published Markov object is an immutable object cut projected from the
+attribute ledger, not an in-place mutable record.
 
 ### Treatment Surface
 
@@ -323,9 +361,20 @@ The interpret-back contract for a treatment.
 A changing value list, code set, or classification set whose semantics matter
 for object interpretation.
 
+### Composed World Model
+
+A higher-order world model built by referencing and stitching published domain
+artifacts while preserving their identity, version, and local authority.
+
 ### Projection
 
 A user-facing or downstream-facing artifact derived from the semantic kernel.
+
+### Query Plane
+
+An optional downstream serving surface that makes published domain artifacts or
+composed world models queryable or traversable without becoming the
+constitutional publication authority.
 
 ---
 
@@ -343,9 +392,17 @@ Gather source evidence from the strongest available surfaces:
 - interfaces and schemas
 - docs and metadata
 
-### 2. Extract
+### 2. Trace
 
-Produce reviewable intermediate surfaces:
+Index and locate the source surfaces that may support semantic claims.
+
+Tracing should make it possible to point from a later world-model attribute
+claim back to the concrete source span, field, locator, code path, or record
+that supports it.
+
+### 3. Extract
+
+Produce reviewable intermediate surfaces from traced source objects:
 
 - source inventories
 - object candidates
@@ -358,7 +415,26 @@ These are not the world model yet.
 
 They are the auditable path toward it.
 
-### 3. Bound
+### 4. Assure
+
+Qualify traced observations into lawful world-model claims.
+
+Assurance should make explicit:
+
+- what is being claimed
+- whether the claim is observed, derived, interpreted, or composed
+- which source surfaces support it
+- which source is authoritative for which aspect of the claim
+- what ambiguity or missingness remains
+
+### 5. Ledger
+
+Write the accepted qualified claims into the attribute ledger.
+
+The ledger is append-only. New understanding is recorded as new qualified
+claims and later object cuts, not by mutating prior accepted entries in place.
+
+### 6. Bound
 
 Identify bounded contexts and the objects that actually cohere inside them.
 
@@ -366,37 +442,38 @@ Reject schema-first modeling and vocabulary-cluster modeling.
 
 Define local boundaries in terms of function, authority, state, and adjacency.
 
-### 4. Materialize
+### 7. Materialize
 
-Publish world-model objects and Markov objects with enough semantic context for
-alignment and reasoning.
+Project world-model objects and Markov object cuts from the attribute ledger
+with enough semantic context for alignment and reasoning.
 
 Sparse first publication is lawful if the object is bounded, distinguishable,
 and evidence-backed.
 
-### 5. Relate
+### 8. Relate
 
 Add treatment surfaces, covariance edges, adjoint mappings, and temporal
 reference artifacts.
 
 This is where cross-domain meaning becomes explicit.
 
-### 6. Publish
+### 9. Publish
 
-Publish immutable cuts of the world-model artifact.
+Publish immutable cuts of the published domain artifact.
 
 Do not mutate prior published truth in place.
 
 In the low-volume lane, Git and the filesystem are sufficient as publication
 authority.
 
-### 7. Compose
+### 10. Compose
 
-Stitch fragments into higher-order views without erasing local authority.
+Stitch published domain artifacts and their fragments into higher-order world
+models without erasing local authority.
 
 Composition is recursive, inspectable, and bounded.
 
-### 8. Builder Project
+### 11. Project
 
 Emit familiar outputs from the same semantic kernel:
 
@@ -408,6 +485,14 @@ Emit familiar outputs from the same semantic kernel:
 - transformation specifications
 - covariant transforms
 - tests and application scaffolds where applicable
+
+### 12. Serve Or Query (Optional)
+
+If delivery needs justify it, expose traversal or query capability over
+published domain artifacts and composed world models.
+
+This may remain filesystem-first in the low-volume lane or later move behind a
+dedicated query plane.
 
 ---
 
@@ -428,9 +513,6 @@ At minimum, the object should make visible:
 
 Markov objects must additionally make their effective blanket explicit.
 
-Use `WORLD_MODEL_GUIDE.md` for the concrete representation and publication
-rules.
-
 ---
 
 ## Materialization Law
@@ -446,10 +528,31 @@ The governing split is:
   layer
 - projections are derived from that semantic artifact
 
-This is why world-model artifacts should be versioned and superseded explicitly.
+This is why published domain artifacts should be versioned and superseded
+explicitly.
 
 The versioned object is the builder's governed understanding of reality, not a
 claim that the source system emitted the object directly.
+
+More specifically:
+
+`source -> tracing -> assurance -> attribute ledger -> Markov object cut`
+
+The Markov object cut is the immutable projection, not the mutable source of
+truth.
+
+The attribute ledger is the accepted semantic record over which the object cut
+is projected.
+
+Every accepted object attribute should therefore be recoverable through:
+
+- the object cut that contains it
+- the attribute-ledger entries that justify it
+- the assurance basis that accepted those entries
+- the traced source surfaces that support the assurance
+
+No object attribute should exist without ledger support. No ledger entry should
+exist without assurance. No assurance should exist without traceable source.
 
 ---
 
@@ -472,13 +575,64 @@ In other words:
 
 `Git is the publication ledger. A database is the query plane.`
 
+This publication ledger is distinct from the attribute ledger.
+
+- the attribute ledger records qualified semantic claims over object identity
+- the publication ledger records immutable published cuts of domain artifacts
+  and object projections
+
+Both should remain append-only and replayable.
+
+---
+
+## Attribute Ledger Law
+
+The attribute ledger is the immediate semantic source of a Markov object cut.
+
+Every entry should be a fully qualified claim, potentially including:
+
+- a value or measured quantity
+- a rule or constraint
+- a classification
+- a topology or relation claim
+- provenance and authority information
+- effective, observed, and publication coordinates
+
+The ledger may be supported by one or more evidence surfaces, including:
+
+- documents for declared semantics or policy
+- code for derivation logic or invariants
+- data for observed state or emitted values
+
+The method does not assume one source per attribute. It assumes one lawful
+claim record per accepted attribute fact.
+
+---
+
+## Saturation Law
+
+World-model construction is iterative.
+
+Builder projects may work a bounded source-object set repeatedly until the
+resulting attribute ledger is judged sufficiently saturated for publication.
+
+Sufficient saturation means:
+
+- materially important attributes have traceable support
+- remaining gaps are explicit ambiguities rather than silent misses
+- the resulting object cut is stable enough to publish and supersede later if
+  needed
+
+Sparse first publication remains lawful. Silent unsupported attribute creation
+does not.
+
 ---
 
 ## Composition Law
 
 Do not build one central monolith first.
 
-Build local fragments, publish them, then stitch them.
+Build local published domain artifacts, then stitch them.
 
 Composition must preserve:
 
@@ -488,7 +642,8 @@ Composition must preserve:
 - declared loss
 - ambiguity
 
-Higher-order models are composed from local ones. They do not erase them.
+Higher-order models are composed from published domain artifacts. They do not
+erase them.
 
 The preferred end-state is a federated world-model mesh rather than a single
 flattened enterprise model.
@@ -517,6 +672,10 @@ Because an API usually carries more business semantics than a bare schema, the
 preferred structural order is:
 
 `world model -> API contract -> schema contract`
+
+Query and traversal are also downstream-facing conveniences in this sense. They
+may be a first-class delivery pillar without becoming the constitutional core
+of the method.
 
 ---
 
@@ -577,7 +736,8 @@ If the method is working, the result is not just better metadata.
 
 The result is:
 
-- a governed world-model artifact
+- published domain artifacts as the durable semantic publication units
+- composed world models built from those published artifacts
 - inspectable object packets
 - explicit treatment and covariance semantics
 - temporal reference artifacts for changing domain enumerations
@@ -589,7 +749,5 @@ The result is:
 ## Companion Surfaces
 
 - `SPEC_METHOD.md`: constitutional specification method
-- `WORLD_MODEL_GUIDE.md`: representation and publication guide for world-model
-  artifacts
 - `RELEASE_METHOD.md`: method for releasing standards into installed workspaces
 - `TICKET_METHOD.md`: method for turning discovery into bounded execution work

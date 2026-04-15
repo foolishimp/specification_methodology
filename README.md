@@ -17,3 +17,5 @@ Initial provenance:
 Going forward, edit methodology here first. Downstream repos should either
 reference this repository directly as source authority or install copies from
 this tree.
+
+Release notes for tapped cuts live under `releases/`.
