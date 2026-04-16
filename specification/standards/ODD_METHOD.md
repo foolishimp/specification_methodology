@@ -149,6 +149,95 @@ The point is to copy the structural law.
 
 ---
 
+## Responsibility Layers And Local Binding
+
+`ODD_METHOD.md` governs structural responsibility layers and their required
+publication shape.
+
+It does not freeze one product's local asset names as universal ODD doctrine.
+
+The method-level expectation is:
+
+- a responsibility layer expresses one capability class
+- the product binds that capability to its own local domain semantics
+- the GTL carrier publishes the lawful transitions for that bound capability
+
+Examples of capability classes may include:
+
+- bootstrap or intake
+- design
+- implementation
+- qualification
+- release
+- operational transition
+- retrofit
+
+Those are responsibility-layer ideas, not mandatory universal instance names.
+
+For one concrete product, each active layer should bind explicitly to:
+
+- local typed assets or typed nodes
+- public graph-function carriers
+- required carried environment
+- proof or closure surfaces
+- projection or query surfaces
+
+That means an audit should distinguish clearly between:
+
+- shared ODD structural law
+- local product semantic bindings
+
+If a product copies another product's local asset names without semantic need,
+that is not reuse of method. It is accidental doctrine transfer.
+
+If a product declares a capability in prose but does not bind it into typed
+assets, graph functions, and proof lanes, that capability is under-built.
+
+---
+
+## Method Governance And Audit
+
+Products governed under `ODD_METHOD.md` should be audited against this method
+as the shared ODD constitutional surface.
+
+That audit should ask at minimum:
+
+- what responsibility layer or capability class is being implemented
+- what local typed assets or nodes bind that capability into the product
+- what public graph functions carry the constructive transition
+- what proof or closure lane justifies the capability
+- what projected/query state is exposed without replacing ABG runtime truth
+
+The governance rule is:
+
+- approved shared-pattern work must update `ODD_METHOD.md` when it changes or
+  clarifies the reusable ODD structural law
+- product-local work may remain local if it does not change shared ODD law
+
+Grey work must not be silently absorbed into the line.
+
+When an implementation or design move is not clearly covered by the current
+method, it must be evaluated against `ODD_METHOD.md` and resolved as one of:
+
+- compliant with the current method
+- non-compliant with the current method
+- valid and worth incorporation into `ODD_METHOD.md`
+
+If the result is incorporation, the implementation is not fully approved until
+the method surface is updated accordingly.
+
+If the result is non-compliance, the implementation should be repriced, repaired,
+or rejected rather than normalized by repetition.
+
+The practical rule is:
+
+- no shared structural pattern becomes "approved by usage"
+- no grey pattern becomes constitutional by drift
+- reusable ODD law is ratified in `ODD_METHOD.md`
+- local product law is ratified in the product's own authority surfaces
+
+---
+
 ## What An ODD Product Is
 
 An ODD product is a configured GTL/ABG domain product whose constructive work
@@ -364,6 +453,29 @@ carried environment, not only the immediately previous output.
 If a product publishes graph functions without this cumulative environment law,
 the line is graph-shaped but structurally wrong.
 
+### 9. Global Convergence Must Be Stable Under Zoom
+
+Local green arcs are not enough.
+
+If an outer public carrier is refined into inner executable structure, then:
+
+- the refined inner chain must close lawfully
+- the enclosing coarse contract must also remain true after fold-back
+- zoomed and unzoomed views must agree on whether the enclosing carrier is
+  open or closed
+
+For current product closure, live current requirements that lack an executable
+proof witness keep the enclosing carrier open until they are:
+
+- realized
+- explicitly deferred
+- explicitly repriced out of the active branch
+
+For the active software line, the immediate pressure is usually realized
+testcase or archived test evidence, but the governing law is proof-lane aware:
+the witness must be a governed realized proof surface appropriate to the
+requirement class.
+
 ---
 
 ## Invocation Rule
@@ -387,8 +499,10 @@ the expected sequence is:
 7. define the machine-readable function catalog
 8. define or update the GTL module, including outer callable carriers and live
    traversal boundaries
-9. define the projection/query lane as projection over constructive history
-10. only then implement code, policy, and transport surfaces
+9. define how coarse carriers, refined inner carriers, and executable proof
+   lanes close together without scale contradiction
+10. define the projection/query lane as projection over constructive history
+11. only then implement code, policy, and transport surfaces
 
 The instruction does **not** mean:
 
@@ -450,6 +564,8 @@ An LLM ramping into an ODD product should quickly answer:
 6. What belongs to ABG versus the product?
 7. What is the projection/query lane?
 8. What proof surfaces close the current capabilities?
+9. What outer carrier remains open if a refined inner lane is green but live
+   requirements still lack executable proof?
 
 If those questions cannot be answered quickly, the product is not yet
 sufficiently ODD-shaped.
