@@ -5,46 +5,44 @@
 **Derived from**: `odd_domain` product and methodology R&D, repriced into a
 single constitutional world-model method surface
 
-This document defines the constitutional method for world-model construction
-work.
+This document defines the constitutional method for world-model construction.
 
-It states what a world model is, what problem the method exists to solve, what
-the governing units and laws are, and how world-model work should proceed from
-source observation to published semantic artifacts and downstream projections.
+It governs world-model semantics, representation, publication, composition, and
+downstream projection.
 
-It is intentionally method-level, but for now it also carries the governing
-representation and publication law for world-model work.
+It is method-level. It currently carries the governing representation and
+publication law for world-model work.
 
 ---
 
 ## Position
 
-Most institutional data systems move values farther than they move meaning.
+Most institutional systems preserve values and lose the semantic context needed
+to interpret them.
 
-They dump, copy, reshape, join, map, catalog, publish, and report. Values
-survive. The semantic history that made those values intelligible usually does
-not.
+World-model work builds a governed semantic layer over authoritative source
+systems.
 
-The world-model method exists to reverse that failure.
+Those systems enact bounded domain function through code paths, events,
+records, APIs, schedules, configurations, documents, and downstream
+obligations.
 
-It starts from these positions:
+The method starts from these claims:
 
-- source systems are not merely data emitters
-- domains are not just vocabularies
-- records are not self-explanatory
-- mappings are not just field correspondences
-- catalogs are commentary, not comprehension
-- schemas are structural projections, not domain truth
+- source systems enact domain function and remain sovereign for operational
+  truth
+- domains are defined by bounded function and authority
+- records are intelligible only through function, provenance, and treatment
+  context
+- mappings are semantic treatments over governed meaning
+- catalogs and schemas are explanatory projections over deeper semantic
+  structure
+- the world model traces authoritative source surfaces, records accepted
+  semantic claims in ledgers, and publishes bounded semantic cuts
+- the published semantic layer gives probabilistic systems a governed substrate
+  for reasoning and correspondence
 
-Institutional reality is enacted through bounded functional surfaces.
-
-Those surfaces produce code paths, events, records, APIs, schedules,
-configurations, documents, and downstream obligations. A world model is the
-governed semantic reconstruction of that enacted reality.
-
-The point is not to build another static ontology or opaque metadata store.
-
-The point is to build inspectable, versioned, machine-reasonable domain truth.
+The method builds inspectable, versioned, machine-reasonable domain truth.
 
 ---
 
@@ -122,6 +120,13 @@ reference artifacts that experts already reason with implicitly.
 We materialize that understanding into governed world-model artifacts rather
 than leaving it trapped in people, pipelines, or detached documentation.
 
+We build the world model to give rich conceptual knowledge of institutional
+systems, not merely better metadata about them.
+
+We use that semantic substrate to tether AI or other probabilistic reasoning
+into bounded domain reality before asking it to align, compare, or interpret
+across domains.
+
 We use fully qualified naming to remove preventable aliasing before arguing
 about deeper semantic transformation.
 
@@ -133,6 +138,10 @@ silently rewriting truth in place.
 
 We compose local fragments into higher-order views without erasing local
 authority.
+
+We let probabilistic correspondence live in a governed epistemic overlay, then
+compile accepted understanding into deterministic execution where delivery
+requires real volume.
 
 We treat projections as conveniences derived from the semantic kernel, never as
 co-equal constitutional truth.
@@ -260,6 +269,47 @@ The canonical world-model object should remain semantic and bounded.
 
 Probability belongs in uncertainty, ranking, anomaly, and alignment overlays,
 not in the ontological identity of the published object itself.
+
+That overlay may include:
+
+- correspondence candidates
+- confidence and ranking
+- ambiguity registers
+- anomaly and surprise signals
+- candidate mappings or treatment suggestions
+
+The overlay is useful because it lets probabilistic reasoning operate over a
+governed semantic substrate rather than over detached strings, schemas, or raw
+tables.
+
+But the overlay is not the same thing as published semantic truth.
+
+Accepted semantic treatments, published domain artifacts, and compiled
+deterministic execution artifacts remain distinct from probabilistic overlays.
+
+---
+
+## Single Truth Surface
+
+World-model work has one constitutional truth surface: the published semantic
+layer.
+
+That layer consists of:
+
+- published domain artifacts
+- their bounded fragments and published object cuts
+- explicit treatments, covariance edges, adjoint mappings, and temporal
+  reference artifacts
+- composed world models built by reference from those published artifacts
+
+Everything else is downstream or supporting:
+
+- epistemic overlays
+- query planes
+- mapping reports
+- compiled deterministic execution artifacts
+
+Those surfaces may be important. They do not create a second truth surface.
 
 ---
 
@@ -473,7 +523,22 @@ models without erasing local authority.
 
 Composition is recursive, inspectable, and bounded.
 
-### 11. Project
+### 11. Align (Optional)
+
+Use the semantic kernel as a tether for probabilistic alignment across domains,
+artifacts, and projections.
+
+This stage may produce:
+
+- correspondence candidates
+- confidence-ranked alignments
+- ambiguity overlays
+- mapping suggestions
+- anomaly or mismatch overlays
+
+These outputs are epistemic overlays, not yet published semantic truth.
+
+### 12. Project
 
 Emit familiar outputs from the same semantic kernel:
 
@@ -486,7 +551,27 @@ Emit familiar outputs from the same semantic kernel:
 - covariant transforms
 - tests and application scaffolds where applicable
 
-### 12. Serve Or Query (Optional)
+### 13. Compile (Optional)
+
+Where delivery requires real execution, compile accepted semantic
+understanding into deterministic executable artifacts.
+
+Examples may include:
+
+- data-movement specifications
+- transformation jobs
+- high-volume ETL or ELT plans
+- deterministic mapping-tool records
+- generated implementation artifacts
+
+The important rule is:
+
+- probabilistic correspondence may help comprehension
+- accepted semantic understanding governs compilation
+- execution at scale should run through deterministic compiled artifacts rather
+  than through row-by-row probabilistic inference
+
+### 14. Serve Or Query (Optional)
 
 If delivery needs justify it, expose traversal or query capability over
 published domain artifacts and composed world models.
@@ -648,6 +733,10 @@ erase them.
 The preferred end-state is a federated world-model mesh rather than a single
 flattened enterprise model.
 
+Detailed mesh topology may remain product-local while the line is still being
+developed. Method-level mesh law should be ratified only once the reusable node
+and edge model is stable.
+
 ---
 
 ## Projection Law
@@ -679,6 +768,47 @@ of the method.
 
 ---
 
+## Control Plane And Data Plane
+
+The world-model method naturally separates semantic control from bulk
+execution.
+
+The semantic control plane consists of:
+
+- published domain artifacts
+- composed world models
+- treatments, covariance edges, and adjoint mappings
+- epistemic overlays for correspondence, ranking, and ambiguity
+
+The high-volume data plane consists of deterministic executable artifacts
+compiled from accepted semantic understanding.
+
+That means:
+
+- world-model artifacts carry semantic truth
+- epistemic overlays carry probabilistic correspondence and uncertainty
+- compiled execution artifacts carry deterministic runtime behavior
+
+This is a plane split, not a truth split.
+
+The semantic truth surface remains the published world-model layer.
+
+LLMs and other probabilistic systems belong primarily on the semantic control
+plane.
+
+They should help with:
+
+- comprehension
+- candidate alignment
+- ambiguity reduction
+- correspondence ranking
+
+They should not be the row-by-row execution engine for large-scale data
+movement when the semantic understanding has already been accepted and can be
+compiled.
+
+---
+
 ## Proof Law
 
 Adoption should not depend on winning the standardization argument first.
@@ -700,6 +830,11 @@ build the world model once, then show that the same semantic substrate can emit
 the legacy artifacts the organization expects and the richer covariant outputs
 the method makes possible.
 
+Where the line is mature enough, the proof should also show that accepted
+semantic understanding can be compiled into deterministic executable pipelines
+without losing the traceability and challengeability of the governing world
+model.
+
 ---
 
 ## World-Model-Driven Development
@@ -715,6 +850,10 @@ application surface without requiring duplicated semantic re-authoring
 downstream.
 
 Preferred relationship:
+
+`world model -> epistemic correspondence overlay -> deterministic compiled artifacts -> implementation`
+
+For simpler lines, the shorter compression still holds:
 
 `world model -> application projections -> implementation`
 
@@ -740,8 +879,11 @@ The result is:
 - composed world models built from those published artifacts
 - inspectable object packets
 - explicit treatment and covariance semantics
+- epistemic correspondence overlays grounded in the same semantic substrate
 - temporal reference artifacts for changing domain enumerations
 - familiar projections emitted from the same semantic substrate
+- deterministic compiled execution artifacts where the line must move real
+  volume safely
 - a basis for AI reasoning over real institutional meaning
 
 ---

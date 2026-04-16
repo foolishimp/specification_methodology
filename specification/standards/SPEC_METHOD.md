@@ -354,8 +354,8 @@ Intake triage must determine:
 No bug, feature, issue, or other intake may bypass this triage by going
 straight to code, tests, or release handling.
 
-The purpose of triage is not to create a separate ticket bureaucracy. It is to
-classify impact correctly so the change enters the method at the right
+The purpose of triage is not to create a separate tracking bureaucracy. It is
+to classify impact correctly so the change enters the method at the right
 constitutional boundary.
 
 The minimum lawful change classes are:

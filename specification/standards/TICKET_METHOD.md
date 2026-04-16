@@ -96,6 +96,7 @@ specification/
 
 .ai-workspace/
 ├── tickets/
+│   ├── backlog/
 │   ├── active/
 │   └── completed/
 └── comments/
@@ -109,8 +110,8 @@ specification/
 ## Authority
 
 - `GOALS.md` is the epic layer
-- `.ai-workspace/tickets/active/` and `.ai-workspace/tickets/completed/` are
-  the ticket authority
+- `.ai-workspace/tickets/backlog/`, `.ai-workspace/tickets/active/`, and
+  `.ai-workspace/tickets/completed/` are the ticket authority
 - `.ai-workspace/comments/` is the discussion and publication layer
 
 There is no separate mandatory `ACTIVE_TASKS.md` in this model.
@@ -213,13 +214,19 @@ That means the ticket must record at least:
 
 Minimum status model:
 
+- `backlog`
 - `active`
 - `completed`
 
-Projects may add `blocked`, `cancelled`, or `deferred` later if needed, but the
-base method starts with only `active` and `completed`.
+Projects may add `blocked`, `cancelled`, or other explicit local states later
+if needed, but the base method starts with `backlog`, `active`, and
+`completed`.
 
-### Archiving
+### Ticket Lanes
+
+Backlog tickets live in:
+
+- `.ai-workspace/tickets/backlog/`
 
 Active tickets live in:
 
@@ -229,7 +236,15 @@ Completed tickets move to:
 
 - `.ai-workspace/tickets/completed/`
 
-This keeps the live set small enough that `rg` remains fast and readable.
+The intended meaning is:
+
+- `backlog`: accepted durable work that should remain visible but is not part
+  of the current execution focus
+- `active`: the current bounded execution set
+- `completed`: closed work retained as history
+
+This keeps the live execution set small enough that `rg` remains fast and
+readable without forcing deferred work into comments or goals.
 
 ---
 
@@ -273,6 +288,8 @@ product-definition layer.
 This method assumes:
 
 - humans and agents can read the active ticket folder directly
+- backlog remains searchable durable work, but does not compete with the active
+  lane for immediate attention
 - `rg` is sufficient for finding active work
 - no database or board is required
 
@@ -280,6 +297,7 @@ Typical commands:
 
 ```bash
 rg -n "^#|^- status:|^- type:|^- goal:" .ai-workspace/tickets/active
+rg -n "^#|^- status:|^- type:|^- goal:" .ai-workspace/tickets/backlog
 rg -n "T-001|B-002" .ai-workspace/tickets
 ```
 
@@ -298,6 +316,7 @@ rg -n "T-001|B-002" .ai-workspace/tickets
 This separation prevents:
 
 - goals becoming an overloaded backlog
+- active work being diluted by every deferred ticket
 - comments becoming informal task status
 - task boards becoming accidental authority
 
