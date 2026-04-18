@@ -8,6 +8,7 @@
 **Repriced**: 2026-04-07 — Goals layer made explicit in the constitutional chain, bootstrap rule, and spec-driven method
 **Repriced**: 2026-04-15 — Recursive product taxonomy raised into the baseline method and spec-method terminology tightened around product-definition surfaces
 **Repriced**: 2026-04-15 — Baseline ambiguity terms made substrate-agnostic, trace-closure and anti-drift rules consolidated, and source-versus-installed authority paths made explicit
+**Repriced**: 2026-04-18 — Core interface refactors strengthened into inside-out migration waves with explicit consumer audits, bridge prohibition, and proof-last closure
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -385,6 +386,132 @@ For the declared change span, the framework must prove:
 - tests and qualification prove the active intended behavior rather than stale precedent
 
 If that proof is missing, the change remains open even if one local artifact already looks correct.
+
+---
+
+## Core Interface Migration Rule
+
+Core interface changes are not ordinary local patches.
+
+Where a change alters a load-bearing contract, carrier, resolver, provider,
+projection law, closure law, or other shared interface that multiple surfaces
+depend on, the work must be handled as an **inside-out migration wave** rather
+than as incremental patching.
+
+The governing rule is:
+
+- change the authoritative core contract first
+- ban bridge code for that contract family as an authoritative surface
+- audit every producer and every consumer of the impacted interface
+- migrate each producer and consumer to the new contract
+- chase every downstream effect until no superseded closure law remains
+- run proof only after the migration wave is complete
+
+This rule exists because partial interface migration creates recurring drift:
+
+- one producer writes the new contract while another still writes the old one
+- runtime reads one carrier while reporting or topology reads another
+- compatibility aliases silently remain authoritative
+- projections become a second truth surface
+- tests go green while architecture remains split
+
+Spec-driven development forbids declaring such a state complete.
+
+### What Counts As A Core Interface
+
+A core interface includes any shared contract or carrier that materially governs:
+
+- runtime closure
+- reporting or status truth
+- topology or frame progression
+- proof or qualification outcome
+- event or projection semantics
+- identity or binding resolution
+- provider or resolver behavior
+
+If changing the interface can alter how multiple surfaces decide "what is true
+now," it is a core interface change.
+
+### Required Migration Protocol
+
+Every core interface migration must explicitly declare:
+
+1. the new authoritative contract
+2. the superseded contract or surface
+3. the authoritative closure law for the new contract
+4. the full set of producers of the old and new contract
+5. the full set of consumers of the old and new contract
+6. every projection, report, status surface, and proof surface that derives from it
+
+Every old path must then be classified as one of:
+
+- `remove`
+- `replace`
+- `re-authorize`
+- `temporary scaffolding`
+
+Temporary scaffolding is lawful only if it is explicitly non-authoritative and
+scheduled for removal before closure.
+
+### Bridge Prohibition
+
+For a core interface migration:
+
+- no compatibility alias may remain authoritative
+- no fallback identity law may remain as silent runtime behavior
+- no bridge path may participate in acceptance as if it were the new contract
+- no old reader or writer may remain authoritative once the new contract exists
+
+The only lawful exception is an explicit compatibility feature retained as part
+of the live product. In that case the compatibility path must be:
+
+- intentionally specified
+- explicitly bounded
+- clearly identified as compatibility rather than current native truth
+
+### Projection Discipline
+
+Projections, reports, status views, and topology views may reflect the
+authoritative carrier.
+
+They must not become a second closure surface.
+
+Therefore:
+
+- if runtime, reporting, topology, and proof can disagree about closure because
+  they consume different carriers or different closure laws, the migration is
+  incomplete
+- if a projection can independently close while the authoritative carrier is
+  still open, the migration is incomplete
+- if the authoritative carrier can close while a projection still depends on an
+  older law, the migration is incomplete
+
+### Proof-Last Rule For Core Interface Changes
+
+Proof is not valid while producers and consumers are split across old and new
+contracts.
+
+Therefore:
+
+- tests that pass only because bridge-state semantics remain alive do not count
+  as closure proof
+- green local tests do not overrule a split architecture
+- proof belongs after migration, not during a partially migrated state
+
+### Closure Criterion
+
+A core interface migration is complete only when all of the following are true:
+
+- every authoritative producer writes the new contract
+- every authoritative consumer reads the new contract
+- all superseded authoritative paths are removed or explicitly re-authorized
+- projections are downstream of the same authoritative truth rather than acting
+  as competing truth surfaces
+- runtime, reporting, topology, and proof share one closure law
+- no temporary scaffolding remains in the acceptance path
+
+Until those conditions hold, the work remains an active migration wave rather
+than a completed refactor.
 
 ---
 
@@ -768,6 +895,34 @@ Every live requirement family must be classified on two independent axes:
 These axes answer different questions. Lifecycle status says whether the requirement still belongs in the constitution and whether it is operative or explicitly deferred. Requirement category says what kind of project truth it asserts. A live requirement is incomplete if either axis is missing.
 
 In project documents, this classification shall be explicit in requirement header metadata. `Status` carries lifecycle status. `Category` carries the requirement kind.
+
+---
+
+## Specification Surface Rule
+
+The active specification layers have distinct constitutional roles:
+
+- **Goals** orient the current bounded work wave. They shall not be used as a substitute requirement surface.
+- **Intent** states why the system exists and what directional change is in or out of scope. It shall not carry optional realization detail unless that detail is itself constitutional.
+- **Product** states the current concrete product definition and bridges intent to requirements. It is not a release note surface.
+- **Requirements** state stable obligations that must be true. They shall carry explicit acceptance criteria and remain sufficient for downstream design derivation.
+- **Design** states how requirement truth is realized. It is downstream of requirements and may choose structure, interfaces, carriers, packaging, and tenant boundaries.
+- **ADRs** are durable design memory. They are not a second requirement surface.
+
+Constitutional specification is current-surface law and shall be written in present tense.
+
+Dead law shall not remain in active constitutional artifacts for historical comfort. If something is no longer live, it shall be deleted, superseded, or moved to commentary. A migration wave does not justify preserving stale constitutional wording inside the live surface.
+
+During a change wave, write the live constitutional surface in terms of the current truth and the declared affected boundary. Do not use version-line branding such as `2.0`, `3.0`, or similar labels merely to indicate recency. Reserve explicit version labels for tapped release facts or clearly historical or superseded material.
+
+Before treating a downstream specification artifact as complete, check the whole affected span:
+
+1. Is the change class clear?
+2. Is the re-entry point lawful for that class?
+3. Can each downstream layer still be derived from the upstream layer?
+4. Do the active intent, product, requirements, design, and qualification surfaces still say the same thing in the affected scope?
+
+If not, the gate is not actually closed.
 
 ---
 
