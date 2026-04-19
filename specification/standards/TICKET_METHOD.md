@@ -197,6 +197,25 @@ Common pairings are:
   should terminate either in a more specific downstream ticket or in an
   explicit decision that no further substantive change is required
 
+### Upward Propagation Check
+
+Before declaring `realization_refactor` for a bug, triage must check backwards
+through the constitutional chain:
+
+1. Is there a live requirement that governs this behavior?
+2. If yes, is there a design decision that realizes it?
+3. If both exist, did the code deviate from them?
+
+The re-entry point is the **first missing layer**, not the layer where the
+symptom appeared.
+
+- If the requirement is absent → `requirement_reprice`
+- If the requirement exists but no design decision realizes it → `design_reframe`
+- If both exist and code deviated → `realization_refactor`
+
+`realization_refactor` is only lawful for a bug when both the governing
+requirement and the realizing design decision are already present.
+
 ### Triage Metadata
 
 Because tickets are the durable authority surface for work tracking, a ticket
