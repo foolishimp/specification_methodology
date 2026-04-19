@@ -105,17 +105,17 @@ So the composition rule is:
 
 Examples:
 
-- for `odd_sdlc`
+- for a graph-native product
   - `ODD_METHOD.md` provides the shared ODD structural law
   - `GRAPH_METHOD.md` provides graph-native constitutional law
-  - `odd_sdlc` `INTENT.md`, `PRODUCT.md`, requirements, ADRs, and GTL surfaces
-    provide the local product line
+  - product-local `INTENT.md`, `PRODUCT.md`, requirements, ADRs, and GTL
+    surfaces provide the local product line
 
-- for `odd_domain`
+- for a world-model product
   - `ODD_METHOD.md` provides the shared ODD structural law
   - `GRAPH_METHOD.md` provides graph-native constitutional law
   - `WORLD_MODEL_METHOD.md` provides world-model semantic law
-  - `odd_domain` `INTENT.md`, `PRODUCT.md`, requirements, and design provide
+  - product-local `INTENT.md`, `PRODUCT.md`, requirements, and design provide
     the local product line
 
 If an agent reads only `ODD_METHOD.md`, it should understand the paradigm.
@@ -127,21 +127,17 @@ product-specific method and local authority surfaces.
 
 ## Derived Guidance
 
-This method should be read together with:
-
-- the `abiogenesis` builder guide: `LLM_GTL_APP_BUILDER_GUIDE.md`
-- the `odd_sdlc` product design guide: `LLM_ODD_SDLC_GUIDE.md`
+This method may be read together with product-owned builder guides and
+product-owned design guides when those guides exist.
 
 Those guides are operational builder aids.
 
-This document is the constitutional method surface that makes their shared
-pattern explicit and reusable beyond `odd_sdlc`.
+This document is the constitutional method surface that makes shared ODD
+structural law explicit and reusable across products.
 
 When those guides are available in the current source tree or installed product
 line, prefer reading them by canonical document name and owning product lineage
 rather than by one machine-local absolute path.
-
-`odd_sdlc` is the canonical reference implementation of the pattern today.
 
 The point is not to copy SDLC-specific asset names.
 
@@ -412,8 +408,7 @@ ODD method gives the product shape, not the domain semantics.
 
 That means:
 
-- the same ODD structural law can build `odd_sdlc`, `odd_domain`, and future
-  domain products
+- the same ODD structural law can build many different domain products
 - each product defines its own asset meanings, proof lanes, and query overlays
 
 Do not confuse:
@@ -527,7 +522,7 @@ When starting cold in a concrete ODD product, use this order.
 7. active design surfaces
 8. GTL module, function catalog, and query surfaces
 
-### World-Model Product Such As odd_domain
+### World-Model Product
 
 1. `SPEC_METHOD.md`
 2. `GRAPH_METHOD.md`

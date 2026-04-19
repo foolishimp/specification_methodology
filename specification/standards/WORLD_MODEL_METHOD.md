@@ -2,7 +2,7 @@
 
 **Status**: Approved
 **Date**: 2026-04-15
-**Derived from**: `odd_domain` product and methodology R&D, repriced into a
+**Derived from**: world-model product and methodology R&D, repriced into a
 single constitutional world-model method surface
 
 This document defines the constitutional method for world-model construction.
