@@ -19,3 +19,8 @@ reference this repository directly as source authority or install copies from
 this tree.
 
 Release notes for tapped cuts live under `releases/`.
+
+Pre-constitutional work under development lives under `strategy/`. Those
+artifacts are explicitly not-yet-ratified and graduate to `specification/`
+only when re-authored as constitutional material. See `strategy/README.md`
+for the authority boundary and graduation path.

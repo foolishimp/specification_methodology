@@ -9,6 +9,7 @@
 **Repriced**: 2026-04-15 — Recursive product taxonomy raised into the baseline method and spec-method terminology tightened around product-definition surfaces
 **Repriced**: 2026-04-15 — Baseline ambiguity terms made substrate-agnostic, trace-closure and anti-drift rules consolidated, and source-versus-installed authority paths made explicit
 **Repriced**: 2026-04-18 — Core interface refactors strengthened into inside-out migration waves with explicit consumer audits, bridge prohibition, and proof-last closure
+**Repriced**: 2026-04-21 — Inside-Out First Sequencing subsection added under Core Interface Migration Rule; graph-native refinement reference repointed to `ODD_METHOD.md` following absorption of `GRAPH_METHOD.md` into that method surface
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -18,7 +19,8 @@ what counts as sufficiency, drift, proof, and repricing.
 It is intentionally general.
 
 Where a product is realized as a graph-native system, this baseline is refined
-by a stronger constitutional method such as `GRAPH_METHOD.md`.
+by a stronger constitutional method such as `ODD_METHOD.md`, which covers
+graph-native execution law and graph-native ODD product-authoring law.
 
 Use `GLOSSARY_GUIDE.md` for shared terminology across recursive product,
 graph-native, and world-model work.
@@ -485,6 +487,23 @@ Therefore:
   still open, the migration is incomplete
 - if the authoritative carrier can close while a projection still depends on an
   older law, the migration is incomplete
+
+### Inside-Out First Sequencing
+
+Core interface migrations must proceed from the new authoritative source
+carrier outward.
+
+Therefore:
+
+- authoritative producer and source-carrier work comes before downstream
+  consumer, projection, prompt, dossier, report, or review-surface hardening
+- downstream consumer work may explore integration early, but it must remain
+  explicitly non-authoritative until the source carrier is published and
+  admitted
+- a downstream projection ticket must not close while the source-carrier ticket
+  it depends on is still open
+- dependency direction must reflect this order explicitly so the ticket set
+  exposes the migration wave from source truth to downstream read models
 
 ### Proof-Last Rule For Core Interface Changes
 

@@ -1,20 +1,17 @@
 # ODD Method
 
+**Status**: Approved
+**Date**: 2026-04-05
+**Amended**: 2026-04-21 — Absorbed prior `GRAPH_METHOD.md` (archived at `../../archive/GRAPH_METHOD.md`). Graph-native substrate law (Graph Model, Product Boundary, Self-Host Boundary, Manual Walkthrough/Automation Rules, Scenario/Installed-Dev/Dogfooding/Release/Failure Pattern) consolidated into this method surface. Source-authority vs installed-distribution distinction made explicit in Method Folder Semantics. Software-development realization topology labelled as canonical specialization rather than universal ODD law. Vector vs graph-function distinction tightened in Core Law §11.7.
 **Governance**: Maintained by the methodology author.
+**Scope**: Constitutional method for graph-native ODD products — covering graph-native execution substrate and ODD product-authoring law over GTL and ABG.
+**Relation**: Refines `SPEC_METHOD.md`. Use this method when building a graph-native ODD product, or when repricing an imperative prototype into one.
 
-**Scope**: Constitutional product-authoring method for ODD products built over
-GTL and ABG.
-
-**Relation**: Refines `SPEC_METHOD.md` and composes with `GRAPH_METHOD.md`.
-Use this method when building an ODD product or repricing an imperative
-prototype into an ODD product.
-
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this
-method explicitly narrows a term.
+Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this method explicitly narrows a term.
 
 ---
 
-## Position
+## 1. Position
 
 `ODD_METHOD.md` exists to make one instruction precise:
 
@@ -41,53 +38,44 @@ The paradigm is:
 
 `product = typed asset/domain model + GTL-defined graph functions + ABG runtime + governed projection/query surfaces`
 
-If the constructive carrier remains hidden in imperative loops, local service
-logic, or product-specific orchestration scripts, the product is not yet built
-using ODD method.
+If the constructive carrier remains hidden in imperative loops, local service logic, or product-specific orchestration scripts, the product is not yet built using ODD method.
+
+The method has two core jobs:
+
+1. describe the product as a declared asset graph in graph-native terms
+2. ensure automation never outruns a lawful manual traversal of the same graph
+
+The graph is not decoration around the process. The graph is the process model. GTL is the language expression of the method. ABG is the execution and binding runtime that traverses and realizes the GTL program.
 
 ---
 
-## Method Role
+## 2. Method Role
 
 `SPEC_METHOD.md` defines the general constitutional method.
 
-`GRAPH_METHOD.md` defines the constitutional method for graph-native products.
-
-`ODD_METHOD.md` defines the product-authoring method for ODD products that use
-GTL-defined graph functions as the primary constructive carrier.
+`ODD_METHOD.md` defines the graph-native ODD product-authoring method that uses GTL-defined graph functions as the primary constructive carrier.
 
 The role split is:
 
-- `SPEC_METHOD.md`
-  - constitutional baseline for goals, intent, product, requirements, design,
-    and lawful re-entry
-- `GRAPH_METHOD.md`
-  - constitutional law for graph-native execution, assets, vectors, traversal,
-    and graph functions
-- `ODD_METHOD.md`
-  - product-authoring law for building an ODD product correctly over that
-    substrate
+- `SPEC_METHOD.md` — constitutional baseline for goals, intent, product, requirements, design, and lawful re-entry
+- `ODD_METHOD.md` — constitutional law for graph-native execution (assets, vectors, traversal, graph functions) AND product-authoring law for building an ODD product correctly over that substrate
 
-This method does not replace product-specific methods such as
-`WORLD_MODEL_METHOD.md`.
+This method does not replace product-specific domain methods such as `WORLD_MODEL_METHOD.md`.
 
-Where a product is both ODD and world-model-driven:
+Where a product is ODD and world-model-driven:
 
-- `ODD_METHOD.md` governs ODD product shape
-- `GRAPH_METHOD.md` governs graph-native carrier and traversal law
-- `WORLD_MODEL_METHOD.md` governs world-model semantics, publication, and
-  composition law
+- `ODD_METHOD.md` governs graph-native structure and ODD product shape
+- `WORLD_MODEL_METHOD.md` governs world-model semantics, publication, and composition law
 
 Those methods compose.
 
 ---
 
-## Method Composition
+## 3. Method Composition
 
-`ODD_METHOD.md` is not meant to be sufficient on its own for domain-correct
-product work.
+`ODD_METHOD.md` is not meant to be sufficient on its own for domain-correct product work.
 
-It gives the structural law for how an ODD product should be built.
+It gives the structural law for how a graph-native ODD product should be built.
 
 It does not, by itself, give:
 
@@ -98,57 +86,170 @@ It does not, by itself, give:
 
 So the composition rule is:
 
-- `ODD_METHOD.md` tells you how to build the product as an ODD product
+- `ODD_METHOD.md` tells you how to build the product as a graph-native ODD product
 - domain methods tell you what semantic law the product must honor
-- local `INTENT.md`, `PRODUCT.md`, requirements, and design tell you the
-  currently ratified local line
+- local `INTENT.md`, `PRODUCT.md`, requirements, and design tell you the currently ratified local line
 
 Examples:
 
-- for a graph-native product
-  - `ODD_METHOD.md` provides the shared ODD structural law
-  - `GRAPH_METHOD.md` provides graph-native constitutional law
-  - product-local `INTENT.md`, `PRODUCT.md`, requirements, ADRs, and GTL
-    surfaces provide the local product line
+- for a graph-native software-development ODD product
+  - `ODD_METHOD.md` provides the graph-native substrate and ODD structural law
+  - product-local `INTENT.md`, `PRODUCT.md`, requirements, ADRs, and GTL surfaces provide the local product line
 
 - for a world-model product
-  - `ODD_METHOD.md` provides the shared ODD structural law
-  - `GRAPH_METHOD.md` provides graph-native constitutional law
+  - `ODD_METHOD.md` provides the graph-native substrate and ODD structural law
   - `WORLD_MODEL_METHOD.md` provides world-model semantic law
-  - product-local `INTENT.md`, `PRODUCT.md`, requirements, and design provide
-    the local product line
+  - product-local `INTENT.md`, `PRODUCT.md`, requirements, and design provide the local product line
 
 If an agent reads only `ODD_METHOD.md`, it should understand the paradigm.
 
-If it needs to build one concrete product correctly, it must then read the
-product-specific method and local authority surfaces.
+If it needs to build one concrete product correctly, it must then read the product-specific method and local authority surfaces.
 
 ---
 
-## Derived Guidance
+## 4. Method Folder Semantics
 
-This method may be read together with product-owned builder guides and
-product-owned design guides when those guides exist.
+The methodology library has two roles. Authority lives at the source; workspaces carry installed distributions.
 
-Those guides are operational builder aids.
+- `specification/standards/` — in the `specification_methodology` source repository, this is the **authoritative methodology library**. All constitutional method surfaces live here.
+- `.genesis/docs/standards/` — in a project workspace, this is an **installed distribution** of the methodology library. It is a local copy vended by the installer and must not diverge from the upstream source of truth.
 
-This document is the constitutional method surface that makes shared ODD
-structural law explicit and reusable across products.
+Both roots contain three classes of document:
 
-When those guides are available in the current source tree or installed product
-line, prefer reading them by canonical document name and owning product lineage
-rather than by one machine-local absolute path.
+- `*_METHOD.md` — constitutional method surfaces
+- `*_GUIDE.md` — operational guides and application standards
+- `*_TEMPLATE.md` — reusable starter forms and examples
 
-The point is not to copy SDLC-specific asset names.
+Only `*_METHOD.md` documents are constitutional method surfaces.
 
-The point is to copy the structural law.
+`*_GUIDE.md` documents refine application of the method.
+
+`*_TEMPLATE.md` documents are convenience artifacts only.
+
+When the installed distribution and the source authority disagree, the source authority wins. The installed copy refreshes on the next install.
 
 ---
 
-## Responsibility Layers And Local Binding
+## 5. Graph Model
 
-`ODD_METHOD.md` governs structural responsibility layers and their required
-publication shape.
+The product is expressed as a declared asset graph over state-transitions relevant to the product's work.
+
+### Nodes
+
+Nodes are durable truth surfaces or product assets. Each node names a bounded state of truth.
+
+Examples from a software-development ODD product:
+
+- `intent`
+- `product`
+- `requirements`
+- `design`
+- `module_decomp`
+- `code`
+- `uat_testcases`
+- `integration_tests`
+- `bootloader`
+- build targets
+
+These are illustrative asset names from one concrete product. The method law is that nodes name bounded states; specific node names are product-local.
+
+### Vectors
+
+Vectors are lawful transitions between nodes.
+
+Each vector declares:
+
+- required upstream assets
+- target asset
+- governing evaluators and gates
+- output contract
+
+Vectors are the admissible transitions of the product.
+
+### Graph Functions
+
+Graph functions are named constructive programs that realize vectors.
+
+A graph function may:
+
+- realize one outer vector directly
+- refine one outer vector into a small inner workflow
+- act as a reusable higher-order library function
+
+The outer vector remains the constitutional contract. The graph function is the constructive realization of that contract.
+
+### Traversal
+
+The workflow is a traversal over the graph. Traversal means:
+
+- bind the current target
+- locate the next admissible vectors
+- traverse one vector
+- materialize the next asset
+- prove the vector closed
+- continue until the selected target closes
+
+The graph is the declared program space of the product.
+
+---
+
+## 6. Product Boundary
+
+The graph-native product and the project built with it are distinct.
+
+The installed product provides the method, runtime, and carrier surfaces. It does not provide the target project's business domain.
+
+A clean install means:
+
+1. install the graph-native ODD product
+2. author the target project's intent, product definition, requirements, and realization root
+3. traverse the product graph to build the target project's domain outputs
+
+The installed product owns:
+
+- the graph-native method and its execution substrate
+- runtime and control surfaces
+- command surfaces
+- release-managed methodology surfaces
+- project scaffold templates
+
+The target project owns:
+
+- constitutional surfaces per `SPEC_METHOD.md` (`GOALS.md`, `INTENT.md`, `PRODUCT.md`, `requirements/`)
+- one or more realization roots — the canonical root name in this ecosystem is `build_tenants/` for software-development ODD products; other domain types may use their own realization-root names
+- domain outputs and evidence (for a software-development ODD product these are design, code, tests, docs, and proof surfaces; other domains name their produced artifacts accordingly)
+
+The installed product must not assume prior knowledge of the target project's domain.
+
+---
+
+## 7. Self-Host Boundary Rule
+
+Self-hosting is lawful only when the installed product under use remains distinct from the product under development.
+
+A released installed product may help build the next version of itself, but the two must not collapse into one mixed authority surface.
+
+The required distinction is:
+
+- installed released builder
+- in-development product being built
+
+This is the same boundary preserved when one compiler release builds the next compiler release.
+
+The framework must preserve distinct:
+
+- territories
+- authority surfaces
+- runtime state
+- project-owned specification and build-tenant surfaces
+
+If automation, runtime resolution, or qualification silently merges those surfaces, the framework is violating the method.
+
+---
+
+## 8. Responsibility Layers And Local Binding
+
+`ODD_METHOD.md` governs structural responsibility layers and their required publication shape.
 
 It does not freeze one product's local asset names as universal ODD doctrine.
 
@@ -183,18 +284,15 @@ That means an audit should distinguish clearly between:
 - shared ODD structural law
 - local product semantic bindings
 
-If a product copies another product's local asset names without semantic need,
-that is not reuse of method. It is accidental doctrine transfer.
+If a product copies another product's local asset names without semantic need, that is not reuse of method. It is accidental doctrine transfer.
 
-If a product declares a capability in prose but does not bind it into typed
-assets, graph functions, and proof lanes, that capability is under-built.
+If a product declares a capability in prose but does not bind it into typed assets, graph functions, and proof lanes, that capability is under-built.
 
 ---
 
-## Method Governance And Audit
+## 9. Method Governance And Audit
 
-Products governed under `ODD_METHOD.md` should be audited against this method
-as the shared ODD constitutional surface.
+Products governed under `ODD_METHOD.md` should be audited against this method as the shared constitutional surface.
 
 That audit should ask at minimum:
 
@@ -206,38 +304,33 @@ That audit should ask at minimum:
 
 The governance rule is:
 
-- approved shared-pattern work must update `ODD_METHOD.md` when it changes or
-  clarifies the reusable ODD structural law
-- product-local work may remain local if it does not change shared ODD law
+- approved shared-pattern work must update `ODD_METHOD.md` when it changes or clarifies the reusable structural law
+- product-local work may remain local if it does not change shared structural law
 
 Grey work must not be silently absorbed into the line.
 
-When an implementation or design move is not clearly covered by the current
-method, it must be evaluated against `ODD_METHOD.md` and resolved as one of:
+When an implementation or design move is not clearly covered by the current method, it must be evaluated against `ODD_METHOD.md` and resolved as one of:
 
 - compliant with the current method
 - non-compliant with the current method
 - valid and worth incorporation into `ODD_METHOD.md`
 
-If the result is incorporation, the implementation is not fully approved until
-the method surface is updated accordingly.
+If the result is incorporation, the implementation is not fully approved until the method surface is updated accordingly.
 
-If the result is non-compliance, the implementation should be repriced, repaired,
-or rejected rather than normalized by repetition.
+If the result is non-compliance, the implementation should be repriced, repaired, or rejected rather than normalized by repetition.
 
 The practical rule is:
 
 - no shared structural pattern becomes "approved by usage"
 - no grey pattern becomes constitutional by drift
-- reusable ODD law is ratified in `ODD_METHOD.md`
+- reusable structural law is ratified in `ODD_METHOD.md`
 - local product law is ratified in the product's own authority surfaces
 
 ---
 
-## What An ODD Product Is
+## 10. What An ODD Product Is
 
-An ODD product is a configured GTL/ABG domain product whose constructive work
-is carried by published graph functions over typed domain assets.
+An ODD product is a configured GTL/ABG domain product whose constructive work is carried by published graph functions over typed domain assets.
 
 The stable app boundary is:
 
@@ -257,7 +350,9 @@ App
 
 Read the ownership split strictly.
 
-### Product Specification
+The `Product Specification` and `Product Realization` subsections below name the **canonical topology for a software-development ODD product** in this ecosystem. ODD method at the universal layer commits to the authority split (one `WHAT` surface, one `HOW` surface, runtime owned by ABG, product owning domain meaning) but not to specific directory names. Other ODD product types may adapt directory layout while preserving that authority split.
+
+### Product Specification (software-development topology)
 
 `specification/` is the authoritative `WHAT`.
 
@@ -269,7 +364,7 @@ It defines:
 - requirements
 - scenarios
 
-### Product Realization
+### Product Realization (software-development topology)
 
 `build_tenants/` is the authoritative `HOW`.
 
@@ -320,11 +415,11 @@ Do not hide the real constructive carrier behind the word `service`.
 
 ---
 
-## Core Law
+## 11. Core Law
 
 An ODD product is built correctly only when all of the following are true.
 
-### 1. Typed Assets And Nodes Are Explicit
+### 11.1 Typed Assets And Nodes Are Explicit
 
 The product works over explicit typed assets or typed nodes.
 
@@ -336,10 +431,9 @@ It does not work over:
 
 Concrete assets must bind explicitly into typed domain boundaries.
 
-Where an asset is a real produced or consumed boundary, declare its
-`asset_surface`.
+Where an asset is a real produced or consumed boundary, declare its `asset_surface`.
 
-### 2. Graph Functions Are The Primary Constructive Carrier
+### 11.2 Graph Functions Are The Primary Constructive Carrier
 
 Every operative constructive step is carried by:
 
@@ -353,7 +447,7 @@ Do not leave the real carrier inside:
 - controller scripts
 - service methods that only happen to call GTL-adjacent helpers
 
-### 3. The Function Catalog Is Published
+### 11.3 The Function Catalog Is Published
 
 The live line must publish a machine-readable function catalog.
 
@@ -365,28 +459,24 @@ At minimum, each retained function should expose:
 - intent
 - public or helper role
 
-If the callable surface exists only in prose or prompt memory, the product is
-under-built.
+If the callable surface exists only in prose or prompt memory, the product is under-built.
 
-### 4. The GTL Module Is The Operative Publication Surface
+### 11.4 The GTL Module Is The Operative Publication Surface
 
 The product must publish:
 
 - the public graph-function carriers
 - the graph or graphs those carriers traverse
 - typed node and vector surfaces
-- semantic jobs or equivalent outer callable contracts bound to the public
-  carrier
+- semantic jobs or equivalent outer callable contracts bound to the public carrier
 
 Do not bind callers directly to hidden inner vectors.
 
-Where a public carrier refines into inner executable structure, publish the
-live traversal boundaries explicitly through lawful GTL boundary surfaces such
-as `RefinementBoundary` or `CandidateFamily`.
+Where a public carrier refines into inner executable structure, publish the live traversal boundaries explicitly through lawful GTL boundary surfaces such as `RefinementBoundary` or `CandidateFamily`.
 
 The outer public carrier remains the callable contract.
 
-### 5. Current State Is A Projection Over Constructive History
+### 11.5 Current State Is A Projection Over Constructive History
 
 Visible current state is a projection.
 
@@ -402,7 +492,7 @@ The ODD query lane may expose:
 
 It must not redefine ABG runtime facts.
 
-### 6. Product-Specific Semantics Sit Above The Shared Carrier
+### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
 ODD method gives the product shape, not the domain semantics.
 
@@ -416,21 +506,40 @@ Do not confuse:
 - structural GTL law
 - product-specific semantic law
 
-### 7. Manual Walkthrough Must Still Be Lawful
+### 11.7 Manual Walkthrough Must Still Be Lawful
 
 Automation must remain true for a manual walkthrough.
 
-A human should be able to identify:
+A human operator, using only the declared authority surfaces, should be able to:
 
-- the current typed assets
-- the next lawful graph function
-- the required carried environment
-- the produced asset or checkpoint
-- the proof or gap outcome
+1. identify the current asset state (current typed asset or node)
+2. identify the next lawful vector and its public graph-function carrier (vector is the constitutional transition contract; the graph function is the published constructive program that realizes it — see §5.2 and §5.3)
+3. determine the required inputs, evaluators, output contract, and carried environment
+4. construct or assess the next asset (produced asset or checkpoint)
+5. repeat until target-relative closure is reached
 
-If automation cannot be explained in those terms, it is ahead of the method.
+Automation may make this faster, safer, or more repeatable. It may not invent a different process.
 
-### 8. Cumulative Environment Law Is Mandatory
+**Automation is lawful** when it:
+
+- renders prompts
+- scaffolds artifacts
+- selects the next traversal step
+- runs workers
+- collects evidence
+- assesses closure
+
+**Automation is unlawful** when it:
+
+- skips undeclared nodes
+- fabricates authority not present in the declared surfaces
+- collapses multiple constitutional transitions into one opaque step without declaring the refinement
+- depends on implementation-carrier knowledge that the installed product should not have
+- collapses the installed builder and the product under development into one authority surface during self-host work
+
+If the team cannot explain the manual traversal, the automation is not yet method-safe. If automation cannot be explained in these terms, it is ahead of the method.
+
+### 11.8 Cumulative Environment Law Is Mandatory
 
 Do not model composition as "the last output feeds the next input".
 
@@ -442,13 +551,11 @@ Each retained `GraphFunction` should declare:
 - `environment.provides`
 - `environment.carries`
 
-Later functions may require any typed binding available in the cumulative
-carried environment, not only the immediately previous output.
+Later functions may require any typed binding available in the cumulative carried environment, not only the immediately previous output.
 
-If a product publishes graph functions without this cumulative environment law,
-the line is graph-shaped but structurally wrong.
+If a product publishes graph functions without this cumulative environment law, the line is graph-shaped but structurally wrong.
 
-### 9. Global Convergence Must Be Stable Under Zoom
+### 11.9 Global Convergence Must Be Stable Under Zoom
 
 Local green arcs are not enough.
 
@@ -456,24 +563,103 @@ If an outer public carrier is refined into inner executable structure, then:
 
 - the refined inner chain must close lawfully
 - the enclosing coarse contract must also remain true after fold-back
-- zoomed and unzoomed views must agree on whether the enclosing carrier is
-  open or closed
+- zoomed and unzoomed views must agree on whether the enclosing carrier is open or closed
 
-For current product closure, live current requirements that lack an executable
-proof witness keep the enclosing carrier open until they are:
+For current product closure, live current requirements that lack an executable proof witness keep the enclosing carrier open until they are:
 
 - realized
 - explicitly deferred
 - explicitly repriced out of the active branch
 
-For the active software line, the immediate pressure is usually realized
-testcase or archived test evidence, but the governing law is proof-lane aware:
-the witness must be a governed realized proof surface appropriate to the
-requirement class.
+For the active software line, the immediate pressure is usually realized testcase or archived test evidence, but the governing law is proof-lane aware: the witness must be a governed realized proof surface appropriate to the requirement class.
 
 ---
 
-## Invocation Rule
+## 12. Scenario Rule
+
+Scenarios are graph-native proving surfaces.
+
+They are not only test documentation.
+
+A scenario bundle should make clear:
+
+- which feature or use-case boundary is being exercised
+- which assets are expected to exist before the scenario starts
+- which vectors are expected to be traversed
+- which significant paths are expected to be exercised
+- what evidence closes the scenario
+
+The best proving paths come from declared scenarios and use cases because they pressure both feature intent and design decisions.
+
+That makes them the best source for selecting the significant code and control paths the system must exercise.
+
+---
+
+## 13. Installed-Dev Rule
+
+Where the product has an installable development form, decisive proof runs against that installed development form in an isolated environment.
+
+For a graph-native ODD product, this means the proving lane should exercise:
+
+1. install
+2. project bootstrap
+3. graph traversal
+4. evidence collection
+5. target-relative closure
+
+Direct source checks remain useful. They do not replace installed-dev proof.
+
+---
+
+## 14. Dogfooding Rule
+
+The product should be developed through the same graph-native method it claims to provide.
+
+That means the project should increasingly describe and build itself through:
+
+- explicit assets
+- explicit vectors
+- explicit graph functions
+- explicit scenario bundles
+- explicit target-relative closure
+
+The method is stronger when the product can walk itself.
+
+---
+
+## 15. Release Boundary
+
+Release version is not constitutional graph truth.
+
+Release version belongs to the release process and release metadata.
+
+The graph-native method concerns:
+
+- current assets
+- current vectors
+- current closures
+- current authority
+
+Release tapping remains a separate process surface.
+
+---
+
+## 16. Failure Pattern
+
+The method is being violated when any of these are true:
+
+1. a claimed product step has no corresponding node or vector
+2. a graph function exists with no clear outer contract
+3. automation performs work that cannot be described as a manual traversal
+4. the installed product depends on authoring-carrier knowledge that a clean target project should not contain
+5. scenarios cannot name the significant paths they intend to prove
+6. the project claims closure without target-relative evidence
+7. the cumulative environment law is bypassed by "last-output feeds next-input" wiring
+8. zoomed and unzoomed views disagree about whether a carrier is closed
+
+---
+
+## 17. Invocation Rule
 
 When an agent or designer is instructed:
 
@@ -492,10 +678,8 @@ the expected sequence is:
 5. identify the domain-specific typed assets or nodes
 6. identify the public graph-function carriers
 7. define the machine-readable function catalog
-8. define or update the GTL module, including outer callable carriers and live
-   traversal boundaries
-9. define how coarse carriers, refined inner carriers, and executable proof
-   lanes close together without scale contradiction
+8. define or update the GTL module, including outer callable carriers and live traversal boundaries
+9. define how coarse carriers, refined inner carriers, and executable proof lanes close together without scale contradiction
 10. define the projection/query lane as projection over constructive history
 11. only then implement code, policy, and transport surfaces
 
@@ -507,32 +691,30 @@ The instruction does **not** mean:
 
 ---
 
-## Cold-Start Reading Order
+## 18. Cold-Start Reading Order
 
 When starting cold in a concrete ODD product, use this order.
 
 ### General ODD Product
 
 1. `SPEC_METHOD.md`
-2. `GRAPH_METHOD.md`
-3. `ODD_METHOD.md`
-4. product `INTENT.md`
-5. product `PRODUCT.md`
-6. relevant product requirements
-7. active design surfaces
-8. GTL module, function catalog, and query surfaces
+2. `ODD_METHOD.md`
+3. product `INTENT.md`
+4. product `PRODUCT.md`
+5. relevant product requirements
+6. active design surfaces
+7. GTL module, function catalog, and query surfaces
 
 ### World-Model Product
 
 1. `SPEC_METHOD.md`
-2. `GRAPH_METHOD.md`
-3. `ODD_METHOD.md`
-4. `WORLD_MODEL_METHOD.md`
-5. product `INTENT.md`
-6. product `PRODUCT.md`
-7. relevant requirement families
-8. current design surfaces
-9. GTL module, function catalog, query surfaces, and proof lane
+2. `ODD_METHOD.md`
+3. `WORLD_MODEL_METHOD.md`
+4. product `INTENT.md`
+5. product `PRODUCT.md`
+6. relevant requirement families
+7. current design surfaces
+8. GTL module, function catalog, query surfaces, and proof lane
 
 The practical rule is:
 
@@ -547,7 +729,7 @@ If an LLM skips that ordering, it will usually either:
 
 ---
 
-## Ramp-Up Checklist
+## 19. Ramp-Up Checklist
 
 An LLM ramping into an ODD product should quickly answer:
 
@@ -559,17 +741,12 @@ An LLM ramping into an ODD product should quickly answer:
 6. What belongs to ABG versus the product?
 7. What is the projection/query lane?
 8. What proof surfaces close the current capabilities?
-9. What outer carrier remains open if a refined inner lane is green but live
-   requirements still lack executable proof?
+9. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
 
-If those questions cannot be answered quickly, the product is not yet
-sufficiently ODD-shaped.
+If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
 
 ---
 
-## Canonical Compression
+## 20. Canonical Compression
 
-ODD method is the product-authoring method for building GTL/ABG domain
-products. It requires typed domain assets, named graph functions, a published
-function catalog, a GTL module as the operative carrier, and projection/query
-surfaces that expose current state as projection over constructive history.
+ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph.
