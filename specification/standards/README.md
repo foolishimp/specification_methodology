@@ -6,9 +6,9 @@ It includes:
 
 - constitutional method surfaces such as `SPEC_METHOD.md`, `ODD_METHOD.md`,
   `IDENTITY_METHOD.md`, and `WORLD_MODEL_METHOD.md`
-- companion governance and operating guides such as `POSTING_GUIDE.md`,
+- companion governance and operating surfaces such as `POSTING_GUIDE.md`,
   `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`,
-  and `GLOSSARY_GUIDE.md`
+  `DESIGN_MODULE_METHOD.md`, and `GLOSSARY_GUIDE.md`
 - starter templates under `templates/`, including project specification
   templates and agent bootstrap templates such as `CLAUDE_TEMPLATE.md` and
   `AGENTS_TEMPLATE.md`

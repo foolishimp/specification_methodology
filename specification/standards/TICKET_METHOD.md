@@ -200,6 +200,10 @@ Recommended additional fields:
 - `intake_source`
 - `affected_boundary`
 
+For `ticket_category: implementation_migration`, also require:
+
+- `migration_strategy`
+
 For execution-contract admission, the runtime-drafted contract should also
 carry, at minimum:
 
@@ -419,6 +423,9 @@ For implementation migrations, typical non-closure conditions include:
 
 - old authoritative path still passes in normal execution
 - mixed old/new proof is still accepted
+- proxy or partial interface implementation still stands in the acceptance path
+- superseded-path debt is deferred as cleanup rather than retired within the
+  migration wave
 - ticket wording, product wording, and proof wording are not reconciled
 
 These conditions are not optional commentary. They are the anti-self-deception
@@ -439,6 +446,7 @@ accepting a closure claim on one concrete work item.
 
 The ticket must explicitly declare:
 
+- the migration strategy used for this work item
 - the old truth path or superseded contract
 - the new truth path or authoritative contract
 - the producer set for the old and new path
@@ -466,6 +474,15 @@ At minimum, the ticket must carry this checklist in live markdown form:
 This ticket category is the local ticket-method enforcement surface for the
 inside-out migration law defined in `SPEC_METHOD.md`.
 
+The required field is:
+
+- `migration_strategy`
+
+Allowed values are:
+
+- `inside_out_hard_break`
+- `fundamental_re_adoption`
+
 For `ticket_category: implementation_migration`, closure is blocked while the
 old authoritative interface still passes in normal execution unless the ticket
 explicitly declares a retained compatibility feature.
@@ -478,6 +495,36 @@ That means:
   native truth
 - retained compatibility must be justified in the ticket itself rather than
   inferred from surviving code
+- proxy or partial implementations do not satisfy migration closure
+- if a ticket was marked `completed` and later review shows checked closure
+  items are false on the current tree, the ticket must be reopened or an
+  explicitly linked successor ticket must be created; a false closure claim is
+  a ticket-method defect, not just a code defect
+
+### Migration Strategy Requirements
+
+If `migration_strategy: inside_out_hard_break`, the ticket must carry:
+
+- a full best-guess interface inventory for the migrating contract family
+- the ordered break sequence from deepest source truth outward
+- the old seam each break intentionally severs
+- the negative proof expected for each break
+
+If `migration_strategy: fundamental_re_adoption`, the ticket must carry:
+
+- the sideways reference line or prior implementation boundary being treated as
+  source material
+- the module and interface adjudication surface
+- explicit classifications for inherited modules, interfaces, carriers,
+  projections, and proof surfaces
+
+Allowed inherited-implementation classifications are:
+
+- `carry_across`
+- `redundant`
+- `rewrite`
+
+Unclassified inherited implementation blocks closure.
 
 ### Implementation Migration Review Disambiguation
 
@@ -514,6 +561,52 @@ same semantic center alive behind typed wrappers, adapter-local policy, old
 lists beside new algebra, fallback config, or rehydrated dict payloads still
 fails migration review even if public behavior remains green.
 
+### Impacted Interface Review Checklist
+
+For a core-interface, carrier, or authoritative-contract migration, the ticket
+must include an `Impacted Interface Review Checklist` before tests can be used
+as closure evidence.
+
+This checklist is a named walk of every live interface that can still bypass,
+reinterpret, replay, or project the migrating truth path.
+
+At minimum it should enumerate, when they exist:
+
+- the source-carrier builder
+- closure/register/projection builders
+- deepest semantic kernel and adapter boundaries
+- public wrappers, bootstrap, replay, ingest, resume, and query entrypoints
+- prompt/report/projection/read-model surfaces
+- constructor/materialization paths
+- proof lanes and negative-proof fixtures
+
+Each checklist item must state what counts as closure for that interface.
+
+Examples:
+
+- “`fd_checks.py` consumes the carrier/projection and does not import raw
+  helper authority”
+- “`query-domain` exposes a read model only and does not silently rebuild the
+  carrier when publication is absent”
+- “`span_analysis.py` does not aggregate open dict rows into an independent
+  closure decision”
+
+Review rules:
+
+- a checked box asserts truth on the current tree, not merely intended
+  direction
+- if review shows a checked interface item is false, the ticket is not
+  closure-ready
+- if an interface is intentionally deferred, the ticket must name the successor
+  ticket or leave that item unchecked
+- compatibility shims do not satisfy the checklist unless they are explicitly
+  justified as retained compatibility
+- for `inside_out_hard_break`, the checklist must describe the seam inventory
+  before tests are used as closure evidence
+- for `fundamental_re_adoption`, the checklist must cover inherited modules and
+  interfaces being carried, dropped, or rewritten; implicit carry-forward does
+  not count
+
 ### Required Break Order And Break-To-Closure Map
 
 Implementation migration tickets that touch a core interface must include a
@@ -521,11 +614,13 @@ Implementation migration tickets that touch a core interface must include a
 
 The order must start at the authoritative source carrier and move outward:
 
-1. publish or admit the new source carrier
-2. rebind the deepest semantic kernel to that carrier
-3. remove or demote old producers
-4. rebind old consumers
-5. reprice projections, reports, prompts, delivery bindings, and tests
+1. discover the full best-guess interface family
+2. publish or admit the new source carrier
+3. deliberately sever one old authoritative seam and keep it broken
+4. rebind the deepest semantic kernel to that carrier
+5. remove or demote old producers
+6. rebind old consumers
+7. reprice projections, reports, prompts, delivery bindings, and tests
 
 The ticket must also include a `Break-To-Closure Map` when the migration has
 multiple old interfaces. The map must state which break closes which
@@ -536,6 +631,8 @@ Reviewers must treat the following as explicit defects:
 
 - a typed wrapper that still carries old semantic authority
 - a new carrier added beside the old authoritative read model
+- a proxy or partial implementation that keeps the old interface alive behind a
+  new name
 - constructor, replay, ingest, resume, bootstrap, or public-wrapper paths that
   bypass admission
 - a projection or test that can pass without the new carrier
@@ -550,6 +647,8 @@ For a migration ticket, positive behavior proof is not enough.
 The proof surface should include at least one negative or structural proof that
 the old path can no longer satisfy the closure law. Examples include:
 
+- the severed seam in the current break is rejected before downstream repair is
+  accepted as progress
 - removing the new carrier makes advancement, closure, prompt assembly, or
   projection fail closed rather than silently falling back
 - a legacy payload without the admitted carrier is rejected instead of
@@ -559,6 +658,11 @@ the old path can no longer satisfy the closure law. Examples include:
 
 If the old path still works in normal execution, the ticket remains open unless
 that path is explicitly specified as retained compatibility.
+
+For tickets with an `Impacted Interface Review Checklist`, the negative proof
+must exercise the named public consumers that matter for closure. Proving that
+one legacy shim is bypassed is not sufficient when the live authority path
+already bypasses that shim through other helpers, loaders, or rebuild paths.
 
 ### Allowed Status
 
@@ -640,6 +744,7 @@ For an implementation migration ticket:
 - id: B-010
 - type: bug
 - ticket_category: implementation_migration
+- migration_strategy: inside_out_hard_break
 - status: active
 - goal: operator-gap-truth
 - change_intent: replace the mixed operator gap truth with one authoritative declared carrier

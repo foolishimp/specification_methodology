@@ -397,8 +397,8 @@ Core interface changes are not ordinary local patches.
 
 Where a change alters a load-bearing contract, carrier, resolver, provider,
 projection law, closure law, or other shared interface that multiple surfaces
-depend on, the work must be handled as an **inside-out migration wave** rather
-than as incremental patching.
+depend on, the work must be handled as a constitutional migration rather than
+as incremental patching.
 
 The governing rule is:
 
@@ -418,6 +418,30 @@ This rule exists because partial interface migration creates recurring drift:
 - tests go green while architecture remains split
 
 Spec-driven development forbids declaring such a state complete.
+
+### Constitutional Migration Options
+
+Core interface and major implementation replacement work has two lawful
+constitutional strategies:
+
+- **Inside-Out Hard-Break Migration**: use this when the project remains on the
+  same implementation line and the authoritative source truth is being replaced
+  in place. The work proceeds from source carrier outward through a sequence of
+  deliberate breaks and repairs.
+- **Fundamental Re-Adoption Migration**: use this when the rewrite is major and
+  the project is intentionally re-deriving itself on a materially different
+  implementation basis, such as a new runtime model, carrier model, type
+  system, execution substrate, or realization tree. The prior implementation is
+  moved sideways and treated as reference material, not live authority.
+
+Both strategies share these non-negotiable rules:
+
+- no proxy interface partial implementation may stand in for the new contract in
+  any acceptance path
+- no bridge or fallback path may remain silently authoritative
+- debt retirement for the superseded interface family is part of the same
+  migration closure bar as feature delivery, not optional cleanup by default
+- tests are leak detectors and proof surfaces, not the migration plan
 
 ### What Counts As A Core Interface
 
@@ -463,6 +487,8 @@ For a core interface migration:
 - no fallback identity law may remain as silent runtime behavior
 - no bridge path may participate in acceptance as if it were the new contract
 - no old reader or writer may remain authoritative once the new contract exists
+- no proxy or partial implementation of the new interface may stand between old
+  and new truth as if it were completion
 
 The only lawful exception is an explicit compatibility feature retained as part
 of the live product. In that case the compatibility path must be:
@@ -490,20 +516,50 @@ Therefore:
 
 ### Inside-Out First Sequencing
 
-Core interface migrations must proceed from the new authoritative source
+Inside-out hard-break migrations must proceed from the new authoritative source
 carrier outward.
 
 Therefore:
 
+- the full best-guess interface family must be discovered before proof is used
+  as closure evidence, including producers, consumers, projections, prompts,
+  reports, wrappers, replay paths, ingest paths, bootstrap paths, and proof
+  surfaces
 - authoritative producer and source-carrier work comes before downstream
   consumer, projection, prompt, dossier, report, or review-surface hardening
-- downstream consumer work may explore integration early, but it must remain
-  explicitly non-authoritative until the source carrier is published and
-  admitted
+- downstream exploration may exist only as isolated non-authoritative work; it
+  must not land in public runtime, projection, prompt, report, or proof entry
+  points until the source carrier is published and admitted
 - a downstream projection ticket must not close while the source-carrier ticket
   it depends on is still open
 - dependency direction must reflect this order explicitly so the ticket set
   exposes the migration wave from source truth to downstream read models
+
+### Hard-Break Discipline
+
+Inside-out migration is a hard-break sequence over one interface family.
+
+The migration wave is the ordered set of those breaks. It is not a separate mode
+that permits dual truth.
+
+For each break:
+
+1. publish or admit the new deepest authoritative source carrier
+2. deliberately sever one old authoritative seam
+3. keep that seam broken
+4. repair outward from source truth to consumers, then projections, then
+   prompts/reports, then proof surfaces
+5. run negative proof that the severed seam is rejected rather than merely
+   unused
+
+During this sequence:
+
+- tests may discover missed interfaces, but they do not replace the required
+  interface inventory
+- newly discovered affected interfaces remain part of the same migration wave
+  unless the work is explicitly repriced upward
+- re-enabling the old seam through wrappers, fallbacks, projections, or prompt
+  paths is a migration defect
 
 ### Proof-Last Rule For Core Interface Changes
 
@@ -516,6 +572,8 @@ Therefore:
   as closure proof
 - green local tests do not overrule a split architecture
 - proof belongs after migration, not during a partially migrated state
+- per-break proof must show the severed old seam is rejected or fails closed
+  before downstream hardening can count as progress
 
 ### Closure Criterion
 
@@ -836,6 +894,20 @@ In that case:
 - every carry-forward is intentional and should land in the correct layer: goals, intent, product, requirements, design, guide, or template
 - old design and code may be used as reference implementations, but they do not govern the new constitutional surface unless explicitly re-derived and re-adopted
 - absence from the new constitutional surface means "not yet adopted" and carries no automatic authority from the prior line
+- the prior implementation may be moved sideways as a reference line, but that
+  sideways line has no live implementation authority in the new line
+- every inherited module, interface, carrier, projection, and proof surface must
+  be explicitly classified before reuse
+
+The required implementation classifications are:
+
+- `carry_across`: the module remains materially the same and is intentionally
+  re-adopted into the new line
+- `redundant`: the module is no longer needed in the new line
+- `rewrite`: the module remains needed but must be rebuilt under the new
+  requirements and design
+
+Unclassified inherited implementation is a defect.
 
 The purpose of this rule is to prevent accidental law from leaking through migration by mere inheritance. Fundamental migration is controlled adoption, not passive preservation.
 
@@ -843,9 +915,20 @@ When performing a fundamental migration:
 
 1. Declare the migration line and treat the prior line as source material.
 2. Establish fresh constitutional surfaces for method, goals, intent, product, requirements, and design.
-3. Classify inherited material as adopted, superseded, deferred, or orphaned.
-4. Copy forward only what is intentionally retained.
-5. Re-derive downstream design and code from the new constitutional surfaces, not from ambient precedent.
+3. Move the prior implementation sideways if needed so it cannot continue as ambient live authority.
+4. Classify inherited constitutional material as adopted, superseded, deferred, or orphaned.
+5. Classify inherited implementation material as `carry_across`, `redundant`, or `rewrite`.
+6. Copy forward only what is intentionally retained.
+7. Re-derive downstream design and code from the new constitutional surfaces, not from ambient precedent.
+
+For a fundamental migration:
+
+- `carry_across` does not mean automatic copy-forward; it means explicit
+  re-adoption under the new line
+- direct runtime, projection, prompt, proof, or review dependence on the
+  sideways implementation line is bridge debt
+- proxy interfaces that partially imitate the target line while still depending
+  on the sideways line are not lawful closure
 
 This is a lawful form of supersession, not a violation of live-surface immutability, because the new line is creating a new constitutional surface rather than silently mutating the old one.
 
@@ -853,13 +936,17 @@ This is a lawful form of supersession, not a violation of live-surface immutabil
 
 ## Transformation Wave Rule
 
-Refactor and migration should be understood as a transformation wave over mutable implementation surfaces.
+Refactor and migration should be understood as a transformation wave over
+mutable implementation surfaces.
 
 While the wave is in flight:
 
-- temporary mixed-state implementation may exist
-- transitional adapters or scaffolds may exist
-- refactor state may still carry traces of the prior operative model
+- temporary mixed-state implementation may exist only below the current break
+  boundary and only as explicitly non-authoritative plumbing
+- transitional adapters or scaffolds may exist only when they are named,
+  bounded, and outside the acceptance path
+- refactor state may still carry traces of the prior operative model, but never
+  as dual authoritative execution
 
 When the wave lands:
 
