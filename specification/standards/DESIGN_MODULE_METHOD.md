@@ -1,15 +1,19 @@
 # Design Module Method
 
 **Status**: Approved
-**Date**: 2026-04-22
+**Date**: 2026-04-23
 **Governance**: Maintained by the methodology author.
-**Scope**: Realization-level design method for projects that want low coupling,
-modular composition, immutable carriers, explicit effect management, and
-minimal semantic bleed between interfaces.
-**Relation**: Complements `SPEC_METHOD.md` and `ODD_METHOD.md`. This method is
-not constitutional process law. It is a realization-method surface that a
+**Scope**: Realization-level design method for module, schema, carrier, and
+data-entity design in projects that want low coupling, modular composition,
+immutable carriers, explicit effect management, and minimal semantic bleed
+between interfaces.
+**Relation**: Complements `SPEC_METHOD.md`, `ODD_METHOD.md`, and
+`TICKET_METHOD.md`. This method is not constitutional process law and does not
+own ticket lifecycle mechanics. It is a realization-method surface that a
 project may adopt in design surfaces, ADRs, tickets, and reviews. Once adopted
 for a project or boundary, it is binding realization law for that scope.
+Ticket status, closure, reopening, dependency, and follow-up tracking remain
+governed by `TICKET_METHOD.md`.
 
 Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this
 method explicitly narrows a term.
@@ -39,8 +43,27 @@ The goals are:
 - increase refactorability
 - reduce hidden authority, hidden mutation, and semantic drift in realization
   code
+- preserve enough evidence that later reviewers can audit, refactor, and
+  reconstruct why the realization took its current shape
 
 This method is therefore about implementation shape.
+
+It does not mandate one optimal authoring path for every agent, worker, or
+runtime.
+
+Agentic coders may sometimes move faster by deriving implementation and proof in
+the same work pass. That is acceptable only if the boundary reaches eventual
+completeness before any design-method closure claim.
+
+One pillar of spec-driven development is bounded intermediate traversal over
+the graph.
+
+Specification gives the global `WHAT`. Every intermediate traversal should have
+a finite, inspectable unit for reasoning, implementation, evaluation, proof, and
+later refactor. A module boundary is one realization-level tool for creating
+that unit; it is not the only possible bounded traversal. Without bounded units,
+reviewers and agents must traverse too much context at once, and correctness
+depends on memory rather than on preserved structure.
 
 It does not replace constitutional authority from `SPEC_METHOD.md`.
 
@@ -48,6 +71,15 @@ It does not replace graph-native law from `ODD_METHOD.md`.
 
 It governs how realization modules should be structured once the project has
 already decided what it is building.
+
+These rules apply to:
+
+- module boundaries
+- schema and carrier families
+- entity and record design
+- interface contracts
+
+They are not limited to one programming language or one runtime binding.
 
 ---
 
@@ -83,6 +115,106 @@ If a reader must inspect orchestration code, mutable workspace state, service
 methods, or fallback defaults to determine what the system means, the design is
 too imperative and too coupled.
 
+## 3A. Boundary Closure Evaluators
+
+When this method governs a boundary, each design or implementation change
+should be judged against three overriding evaluators.
+
+These are not optional heuristics.
+
+If a change improves local ergonomics, test output, or static-checker output
+but fails one of these evaluators, it is not real progress under this method.
+
+### 1. Authority Seam Closure
+
+Each change must not increase the number of truth surfaces.
+
+When duplicate or rival truth surfaces already exist, seam-closure work should
+reduce them.
+
+This means:
+
+- one authoritative carrier or contract at each semantic boundary
+- no controller-side reconstruction of already-admitted truth
+- no downstream surface silently rebuilding source truth from raw artifacts
+- no raw or open payload trusted past ingress
+
+The test is:
+
+- if the authoritative carrier were removed, would the system fail closed, or
+  would another path silently reconstruct the same meaning?
+
+If meaning survives by reconstruction, the seam is not closed.
+
+### 2. Essential Carrier Consolidation
+
+Each change should collapse the slice to the few real identity-bearing carrier
+families.
+
+This means:
+
+- declare the Irreducible Architectural Carrier Set first
+- keep Subordinate Payloads subordinate by default
+- avoid fragment classes, interfaces, or result records created only to satisfy
+  typing, serialization, or convenience extraction
+
+Progress here is:
+
+- fewer sharper carrier families
+- less duplicate authority
+- less boundary inflation
+
+Not:
+
+- one more wrapper layer
+- one more branch-local peer type
+- one more public record that only mirrors payload detail
+
+### 3. Enforcement After Proof
+
+Typing, schemas, validators, contracts, or codecs exist to lock in a seam that
+has already been made real.
+
+This means:
+
+- parse, validate, or construct first
+- admit and narrow the boundary explicitly
+- then use types or schemas to enforce the proved shape
+
+It does **not** mean:
+
+- relabel an open payload and call it closed
+- wrap loose data in a typed envelope while keeping the same authority path
+- use casts, unchecked assertions, or dynamic mutation as fake closure
+
+This evaluator is language-agnostic.
+
+In one language it may be `mypy --strict`, in another a sealed ADT plus a
+schema parser, in another a compiler-enforced sum type plus decoder. The rule
+is the same: proof first, enforcement second.
+
+## 3B. Ingress Collapse Rule
+
+Foreign, dynamic, or weakly-typed input is lawful only at ingress.
+
+Once admitted, it must collapse immediately into local carrier truth before
+semantic transforms begin.
+
+The required shape is:
+
+1. receive foreign input
+2. parse, validate, or normalize it once
+3. construct local admitted carrier truth
+4. consume only that local truth in semantic kernels
+
+The following are not lawful seam closure:
+
+- repeated parsing of the same loose payload in multiple modules
+- `from_dict(...).to_dict()` or equivalent round-trip ceremony that preserves
+  the same open authority
+- loaders that merely relabel stored JSON or map data without validating it
+- semantic kernels that continue to inspect open payload fragments directly
+
 ---
 
 ## 4. Functional Bias Without Language Mandate
@@ -91,6 +223,7 @@ Projects using this method must prefer:
 
 - immutable data carriers over mutable shared objects
 - closed typed carriers over open dict or string protocols
+- parsing and admitting foreign data once at ingress
 - explicit return values over hidden mutation
 - explicit failure carriers over ambient exception-driven control flow where
   practical
@@ -102,21 +235,97 @@ Projects using this method must avoid:
 - one orchestration method that owns semantic law
 - hidden read/write coupling through globals, shared registries, or mutable
   service state
+- typed envelopes over open payload truth
+- dynamic payload mutation at the semantic center
 - effectful helpers that both decide meaning and perform writes
 - proxy interfaces that partially imitate a new design while preserving the old
   authority path
 
 ---
 
+## 4A. Python Typing Rule
+
+When this method governs a Python boundary, repo-authored Python must be fully
+typed.
+
+That means:
+
+- every function, method, and callable surface has explicit parameter and return
+  annotations
+- semantic carriers are closed and typed
+- repo-authored tests, scripts, and support code are typed too; they do not get
+  a lower bar than production code
+
+Under this method, the following do **not** count as typed semantic design:
+
+- untyped `def`
+- implicit `Any`
+- semantic `dict[str, Any]`
+- semantic `Mapping[str, Any]`
+- semantic `object` payloads used as carrier truth
+- unchecked JSON blobs passed through multiple layers and interpreted by
+  `.get(...)` chains
+
+For Python, `dict[str, Any]` at the semantic center is untyped design debt, not
+an acceptable carrier.
+
+The required shape is:
+
+- use `dataclass`, `TypedDict`, `Protocol`, `Literal`, `Enum`, or other closed
+  typed forms for local carriers
+- parse and validate dynamic input at the boundary
+- narrow untyped external data into local typed carriers before semantic
+  transforms begin
+- keep `Any` at foreign boundaries only, and collapse it immediately
+
+`Any`, `cast(...)`, and `# type: ignore` are allowed only when all of the
+following are true:
+
+- the boundary is genuinely foreign or dynamically typed
+- the local code cannot express the shape more precisely
+- the use is narrow, explicit, and justified in place
+- the imprecision does not cross into the semantic kernel as governing truth
+
+Python boundaries using this method must be checked with a strict static typing
+pass such as `mypy --strict` or an equivalent strict checker configuration.
+
+If the checker cannot run cleanly on the adopted boundary, the boundary is not
+yet implementation-conformant under this method.
+
+---
+
 ## 5. Prime Law
 
-New functions should be introduced only when they are structurally prime.
+New top-level realization units should be introduced only when they are
+structurally prime.
 
-A function is **prime** when it introduces one irreducible new semantic or
-topological boundary that cannot be honestly expressed as composition of
+This applies to:
+
+- functions
+- classes
+- carrier types
+- top-level schema records
+- modules
+
+Typed closure by itself is **not** sufficient reason to create a new top-level
+type.
+
+The hard vocabulary for this rule is:
+
+- **Irreducible Architectural Carrier Set**: the smallest lawful top-level
+  carrier family required for one boundary
+- **Subordinate Payload**: payload detail that exists inside that boundary but
+  is not top-level by default
+- **Promotion Test**: the explicit test a subordinate payload must pass before
+  it becomes a top-level type
+- **Boundary Inflation**: the defect where subordinate payload detail is
+  promoted into extra peer types without irreducible need
+
+A realization unit is **prime** when it introduces one irreducible new semantic
+or topological boundary that cannot be honestly expressed as composition of
 existing functions.
 
-Typical lawful reasons to introduce a new function are:
+Typical lawful reasons to introduce a new top-level realization unit are:
 
 - a new feature topology or branch in the admitted work graph
 - a new typed carrier transformation
@@ -124,24 +333,281 @@ Typical lawful reasons to introduce a new function are:
 - a new validation or admission boundary
 - a new projection boundary
 
-A function is **not** prime when it exists only to:
+A realization unit is **not** prime when it exists only to:
 
 - shorten a call site without creating a new semantic boundary
 - aggregate unrelated behavior for convenience
 - preserve an old interface behind a new name
 - shuttle data through one more wrapper layer
 - hide mutation, fallback, or orchestration that should remain explicit
+- name one more payload variation that does not carry independent authority
+- turn internal record detail into public schema surface without an irreducible
+  boundary
+- mirror another top-level carrier with only small field variation
+- respond to typing discomfort by multiplying peer classes instead of closing
+  one governing carrier family
 
 This is Occam's razor for design modules:
 
 - prefer composition over convenience extraction
 - prefer existing lawful functions over new wrappers
 - prefer fewer sharper boundaries over many vague helper functions
+- prefer fewer sharper carrier families over many payload-shaped peer types
 
 The purpose of the Prime Law is not to minimize line count.
 
 The purpose is to stop semantic fragmentation and helper sprawl from becoming
 architecture.
+
+## 5A. Irreducible Architectural Carrier Set Rule
+
+When defining a schema, carrier family, or typed public boundary, start by
+naming the **Irreducible Architectural Carrier Set**.
+
+The Irreducible Architectural Carrier Set is the smallest set of carriers
+required to carry the real functionality and authority flow of the boundary.
+
+That set should be named before subordinate payload records, helper result
+shapes, or internal branch detail.
+
+Examples of architecturally prime carrier roles include:
+
+- source truth carrier
+- admission carrier
+- execution carrier
+- yielded or recovery carrier
+- effect plan carrier
+- public projection carrier
+
+The following do **not** automatically justify a top-level carrier:
+
+- one more branch-specific payload shape
+- one more internal persistence detail
+- one more read-model row shape
+- one more field grouping extracted only to make typing easier
+
+The required carrier-set evidence is:
+
+1. declare the Irreducible Architectural Carrier Set
+2. declare which carriers are authoritative and which are downstream
+3. treat every other shape as a Subordinate Payload by default
+4. keep subordinate payload detail private unless it passes the Promotion Test
+5. reconcile the typed implementation to that carrier set before claiming
+   design-method closure
+
+If the Irreducible Architectural Carrier Set has not been declared, the schema
+is not yet design-method complete under this method.
+
+For planned implementation work, declaring the carrier set first is the preferred
+route. If implementation runs ahead, the missing carrier-set evidence must be
+reconstructed, checked against the implementation, and corrected before
+design-method closure.
+
+## 5B. Promotion Test
+
+A top-level class, dataclass, TypedDict, enum, or named schema record must
+justify its existence as an architectural boundary, not merely as payload
+detail.
+
+A Subordinate Payload may be promoted to a top-level type only when at least
+one of the following is true:
+
+- it is an authoritative source carrier
+- it is a public or persisted contract boundary
+- it is an explicit variant of a public outcome family that consumers
+  pattern-match directly
+- it is reused across multiple modules without semantic bleed
+- it is versioned, published, or admitted independently
+
+Promotion is not lawful when the candidate type is only:
+
+- internal record detail of one larger carrier
+- a field grouping used once inside one module
+- a temporary typing shim around an open dict
+- a private payload variation that never crosses a true interface boundary
+- a mirror of another type with cosmetic or local field differences
+
+Default rule:
+
+- if a shape does not need independent authority, independent reuse, or direct
+  pattern-match semantics, it remains a Subordinate Payload and stays nested,
+  private, or local to the carrier family
+
+The burden of proof is on promotion.
+
+Designers and reviewers should assume a candidate type stays subordinate until
+an irreducible boundary is shown.
+
+## 5C. Boundary Inflation Prohibition
+
+Schema work must declare:
+
+- the Irreducible Architectural Carrier Set
+- which types are authoritative
+- which types are downstream projections
+- which shapes are Subordinate Payloads
+- which Subordinate Payloads are intentionally deferred from promotion
+
+This rule exists to stop type proliferation from turning one migration into many
+parallel schema migrations.
+
+If a schema or ticket lists a wide family of types, it must distinguish:
+
+- the Irreducible Architectural Carrier Set
+- Subordinate Payloads
+
+Failing to make that distinction is design drift.
+
+Typed closure does not excuse Boundary Inflation.
+
+Boundary Inflation exists when:
+
+- payload detail is promoted into peer types because the code feels hard to type
+- internal records are turned into public schema surface without a new
+  authoritative boundary
+- many near-identical top-level types appear for one boundary where one carrier
+  family would suffice
+- one migration ticket silently becomes several parallel schema migrations
+
+Boundary Inflation is design debt, not progress.
+
+## 5D. Reference-Derived Module Design Rule
+
+When a realization is being derived from an existing design line, released
+tenant, or reference implementation, design-method completion must not rest on
+code comparison alone.
+
+The required derivation evidence is:
+
+1. constitutional `WHAT`
+2. reference design
+3. target design mapping
+4. target module boundary assets
+5. implementation
+
+This rule exists to stop code-first ports from importing reference drift,
+delivery quirks, helper sprawl, or accidental authority paths into the new
+realization without a later audit trail.
+
+The minimum lawful design assets for a reference-derived module boundary are:
+
+- the named reference design surfaces being used as source material
+- the target design surfaces that replace or bind those source surfaces
+- an explicit mapping that says what is preserved, reshaped, deferred, or
+  demoted to delivery binding in the target line
+- the target module boundary assets required by this method, including the
+  Irreducible Architectural Carrier Set and structural carrier diagram
+
+The design question is not:
+
+- "how do I port these files?"
+
+It is:
+
+- "what is the target module boundary, and how does the new realization derive
+  it from the reference design without inheriting incidental implementation
+  drift?"
+
+If a target realization cannot show that derivation chain, it is not yet
+design-method complete under this method.
+
+## 5E. Structural Carrier Diagram Rule
+
+Every active typed module boundary must carry one complete structural carrier
+asset before it claims design-method closure.
+
+That asset must include a Mermaid `classDiagram` view unless the project has
+ratified another text-native diagram format explicitly.
+
+The diagram is not decorative.
+
+It is a sign-off surface for:
+
+- Prime Law
+- visibility
+- carrier ownership
+- subordinate payload discipline
+- boundary inflation review
+
+The diagram must show, for the active boundary:
+
+- prime carriers
+- subordinate payloads
+- effect-edge-only payloads
+- downstream-only projections
+- deferred families outside the active slice
+- authoritative versus downstream role
+- public versus module-local visibility
+- composition, containment, and variant-family structure
+
+The standard stereotype vocabulary is:
+
+- `<<prime>>`
+- `<<subordinate>>`
+- `<<effect-edge>>`
+- `<<deferred>>`
+- `<<authoritative>>`
+- `<<downstream>>`
+
+The standard visibility vocabulary is:
+
+- `+` public or exported
+- `-` module-local or private
+
+The standard relationship expectations are:
+
+- composition for owned subordinate payloads
+- association for downstream consumption
+- inheritance only for real variant or outcome families
+
+The diagram must stay module-bounded.
+
+It is a defect if the asset mixes one active module boundary with unrelated
+bootstrap, test harness, projection, or delivery shapes simply to look
+complete.
+
+For planned implementation work, completing the structural carrier diagram before
+implementation is the preferred route. If implementation runs ahead, the diagram
+must be reconstructed from the actual boundary, checked against the IACS and
+implementation, and corrected before design-method closure.
+
+If a boundary has no complete structural carrier diagram, it is not yet
+design-method complete under this method.
+
+## 5F. Theoretical Framing For Boundary Law
+
+This method is operational and stands on its own. It does not require a user to
+adopt the world-model domain or accept any empirical ontology program before
+using it.
+
+The current world-model work does, however, provide a useful theoretical
+framing for why these rules are shaped this way.
+
+`WORLD_MODEL_METHOD.md` treats a Markov object as a candidate
+identity-bearing cut: a stable self-bounding pattern whose effective blanket
+separates what is load-bearing for identity from what is load-bearing for
+context. Under that framing, the engineering problem is not "how do I name more
+field groups?" but "what is the smallest lawful boundary that preserves the
+thing's identity under variation?"
+
+Read that framing into this method carefully:
+
+- the **Irreducible Architectural Carrier Set** is the software-design analogue
+  of the smallest identity-bearing cut
+- the **Promotion Test** asks whether a subordinate payload has enough
+  independent authority to count as its own boundary rather than as evidence
+  carried inside another one
+- **Boundary Inflation** is the software-design form of mistaking many sensed
+  fragments, attributes, or payload groupings for many real peer objects
+- strong typing at the semantic boundary prevents the identity-bearing cut from
+  remaining fuzzy, reconstructive, or controller-owned
+
+This is a theoretical justification, not an extra prerequisite.
+
+The rules in this file remain engineering law even where the Markov-object
+construct is irrelevant, unavailable, or still only candidate-class. The
+theoretical framing sharpens the ask; it does not expand the scope of the
+method.
 
 ## 6. Design Module Taxonomy
 
@@ -165,8 +631,119 @@ Recommended roles are:
 
 The point of the taxonomy is not naming ceremony.
 
-The point is to stop semantic law from being smeared across modules with mixed
-authority.
+Modules are realization-level tools for bounding graph-traversal reasoning.
+
+The point is to give reviewers, maintainers, and future refactor work a stable
+cut for global reasoning without letting semantic law smear across mixed
+authority surfaces.
+
+A good module boundary improves the likelihood of correct traversal because the
+computation and evaluation surface is better constrained. This is true for any
+intermediate traversal of the graph under finite context, attention, and time.
+Review can ask what the bounded unit owns, what it consumes, what it emits, and
+what proof is sufficient without re-reading the whole system.
+
+That same constrained surface makes later consolidation into reusable libraries
+easier. Repeated module-local computations are visible as recurrence candidates
+instead of disappearing into broad orchestration code.
+
+## 6A. Design To Module To (Implementation, Unit Tests) Evidence Route
+
+When this method governs an active realization boundary, the canonical evidence
+route is:
+
+1. design
+2. module boundary asset
+3. implementation and unit tests in parallel
+
+This route is the preferred authoring path.
+
+It is not a universal claim about the fastest possible agentic coding path.
+
+What is mandatory is eventual completeness:
+
+- the final implementation must be traceable to design and module boundary
+  assets
+- unit tests must be traceable to module ownership, not only to helper layout
+- any implementation-first work must be reconciled back into the design/module
+  evidence before design-method closure
+
+Implementation may run ahead of full module evidence during exploration or
+agentic construction.
+
+It may not claim design-method closure from code alone.
+
+Unit tests may be discovered from implementation behavior, but the closure proof
+must be re-expressed against module ownership rather than code helper shape.
+
+The module boundary is the intermediate reasoning surface that lets
+implementation and unit tests be audited against the same ownership cut.
+
+It does not outrank constitutional truth or ratified design.
+
+The minimum complete evidence chain is:
+
+1. constitutional `WHAT`
+2. target design
+3. target module boundary assets
+4. implementation
+5. unit tests derived from the same module boundary
+
+Where a reference realization exists, the complete evidence chain becomes:
+
+1. constitutional `WHAT`
+2. reference design
+3. target design mapping
+4. target module boundary assets
+5. implementation and unit tests
+
+If a change jumps from design or code straight to tests and never reconstructs
+the module boundary, the proof surface is too weak.
+
+## 6B. Module-Derived Unit Test Rule
+
+Unit tests under this method are module-owned proof lanes.
+
+They must derive from module ownership evidence, not from code shape alone.
+
+That means a unit test should be traceable to:
+
+- the governing module design
+- the active IACS or equivalent carrier inventory
+- the module-bounded structural carrier diagram when one exists
+- the requirement families the module owns
+
+Unit tests must not be authored primarily from:
+
+- helper function boundaries
+- private method layout
+- incidental branch structure
+- temporary implementation decomposition
+- mock convenience that hides the real module contract
+
+The required question is not:
+
+- "what functions exist to test?"
+
+It is:
+
+- "what does this module own, and what proof does that ownership require?"
+
+This does not prohibit helper-level tests.
+
+It does prohibit helper-level tests from becoming the canonical proof surface
+for a module boundary.
+
+Canonical rule:
+
+- module-owned unit tests are authoritative for module proof
+- broader integration, scenario, and sandbox lanes remain downstream proof
+  families
+- transitional slice-gating tests may exist, but they do not replace
+  module-derived unit proof
+
+If a module has code but no module-derived unit test lane, the module is not
+closure-ready under this method.
 
 ---
 
@@ -294,6 +871,209 @@ invented.
 
 ---
 
+## 11A. Governance/Strategy Separation Rule
+
+When a boundary governs, observes, routes, audits, or evaluates another actor,
+executor, builder, or substrate, it must publish governance truth, not
+imperative strategy law, unless strategy ownership is explicitly part of the
+boundary's ratified responsibility.
+
+Lawful governance publication includes:
+
+- current state
+- preserved structure
+- unmet pressure or unresolved ids
+- route eligibility
+- lawful edit or proof frontier
+- admitted policy identity
+- prior-turn or prior-run continuity
+
+Unlawful strategy drift includes:
+
+- imperative instructions about how the downstream actor should repair or act
+- framework-owned preference rules masquerading as observability
+- budgets, scores, counters, or heuristic ratings that recreate the governed
+  actor's own judgment unless that assessment boundary is explicitly owned
+- prompt, report, or read-model surfaces that become hidden strategy doctrine
+
+The required distinction is:
+
+- governance surfaces describe the state, boundary, and admissible routes
+- strategy surfaces prescribe how another actor should do the work
+
+If a system is meant to remain governance/observability over another actor, it
+must not drift into replacement decision-engine behavior through contexts,
+projections, prompts, or route helpers.
+
+---
+
+## 11B. Opportunistic Optimization Rule
+
+When a realization boundary is lawfully open for migration, refactor, or
+bounded implementation work, the area should be left better than it was found.
+
+This does not outrank constitutional truth, declared module ownership evidence,
+or functional equivalence. It is subordinate to them.
+
+Opportunistic optimization is lawful only when it is:
+
+- boundary-local to the active design or module surface
+- behavior-preserving at the declared semantic boundary
+- authority-neutral, with no change to ownership of truth
+- visibility-neutral, with no silent promotion of subordinate payloads
+- effect-neutral, with no hidden expansion of runtime, persistence, or
+  bootstrap doctrine
+
+Examples of lawful opportunistic cleanup include:
+
+- removing parser re-entry on locally assembled truth
+- consolidating duplicated module-local route logic
+- replacing a poor local algorithm or repeated scan inside the active boundary
+  when semantic behavior stays the same
+- simplifying proof fixtures or module-derived tests without changing their
+  governing module claims
+
+Examples that are not opportunistic cleanup and therefore require explicit
+design re-entry include:
+
+- repricing lookup, indexing, caching, or persistence strategy across module
+  boundaries
+- changing public carriers, visibility, or ownership of truth
+- widening effect boundaries or runtime observability doctrine
+- introducing performance behavior that changes product expectations rather
+  than only improving local realization quality
+
+When a cross-boundary opportunity is discovered during lawful cleanup, it must
+not be silently absorbed into the active boundary. It must become a separate
+follow-up work item at the smallest lawful re-entry point before follow-up
+implementation is opened.
+
+This method owns the scope-separation rule. It does not own the work-tracking
+mechanism. For ticketed work, `TICKET_METHOD.md` governs how the follow-up is
+recorded and how it affects ticket closure.
+
+The test is simple:
+
+- if the improvement stays inside the active boundary and preserves declared
+  behavior, it is lawful cleanup
+- if it changes authority, public meaning, or cross-boundary realization
+  doctrine, it is a new design decision
+
+Leaving an opened area better than it was found is good realization practice.
+Using cleanup as cover for unauthorized redesign is not.
+
+---
+
+## 11C. Recurrence Extraction Rule
+
+When the same realization pattern appears across more than one processed
+boundary, review must treat that pattern as a commonization candidate rather
+than as another purely local cleanup.
+
+Module boundaries make this review possible. They constrain computation and
+evaluation enough that repeated local shapes can be compared honestly and
+consolidated into libraries without changing product truth.
+
+A recurrence candidate is usually:
+
+- not product truth
+- authority-neutral
+- reused across two or more tickets or module boundaries
+- consumable through local adapters without changing semantic ownership
+
+Typical candidates include:
+
+- expectation derivation
+- nested contract or policy carriers
+- proof-helper or fixture shaping
+- effect-edge request or plan shaping
+- constructor or materialization helpers that do not own semantic law
+
+The rule of two is:
+
+- the second credible recurrence forces a library/commonization review
+- the third local rebuild is not acceptable by default
+
+A third local rebuild is not design-method conformant unless one of these is
+true:
+
+- the active boundary consumes an existing reusable library/commonization surface
+- the active boundary extends that surface before the local implementation lands
+- review records an explicit do-not-commonize decision and why the pattern is
+  still boundary-specific
+
+For ticketed implementation work, `TICKET_METHOD.md` owns the ticket-level
+recording and enforcement of that decision through fields such as
+`library_usage`, `governing_library`, and `library_rationale`. This section
+defines the design-method review obligation, not a rival ticket lifecycle.
+
+Preferred commonization order is:
+
+1. boundary-local cleanup
+2. tenant-local reusable library
+3. shared/common propagation only through separate design re-entry
+
+If a reusable pattern remains tenant-local and authority-neutral, it should be
+extracted into a reusable library/common realization surface rather than being
+recreated inside each module.
+
+If commonization would change ownership, public carriers, module boundaries, or
+shared/common law, it is no longer recurrence extraction. It is a separate
+design decision and must be treated that way.
+
+---
+
+## 11D. Post-Ticket Design Review Rule
+
+When a ticket adopts this method and claims its boundary has been processed, the
+design-method closure claim should not rest on implementation status alone.
+
+A design-module-method review must be run against the processed boundary before
+the ticket claims closure under this method.
+
+`TICKET_METHOD.md` remains the authority for ticket status, closure mechanics,
+reopening, dependency handling, and follow-up ticket recording. This rule states
+what the design-method review must cover when this method governs the ticketed
+boundary.
+
+That review must check:
+
+- whether the boundary stayed lawful under the current design and module assets
+- whether boundary-local cleanup opportunities were discovered and should be
+  absorbed before the design-method closure claim
+- whether repeated realization patterns were discovered and should be absorbed
+  into an existing or new library/commonization surface before the design-method
+  closure claim
+- whether any cross-boundary opportunities were discovered and require separate
+  follow-up work items
+
+The required consequence is:
+
+- boundary-local, behavior-preserving, authority-neutral cleanup should be
+  absorbed into the active boundary before the design-method closure claim when
+  feasible
+- tenant-local reusable recurrence should be absorbed by consuming or extending
+  the governing library/commonization surface before the design-method closure
+  claim when feasible
+- cross-boundary opportunities must not be folded into closure cleanup; they
+  must become separate follow-up work items at the smallest lawful re-entry
+  point
+- the processed ticket should record the review outcome and resulting follow-up
+  work items where `TICKET_METHOD.md` or the local ticket surface requires that
+  record
+
+This rule exists to force discovery while the boundary is still warm:
+
+- local optimizations are easier to see and safer to absorb before a
+  design-method closure claim
+- cross-boundary opportunities are easier to see and safer to isolate before
+  momentum is lost
+
+No processed ticket that has adopted this method should claim design-method
+closure until this review step is complete.
+
+---
+
 ## 12. Interface Bleed Prohibition
 
 No interface should bleed semantic authority into another interface family.
@@ -352,9 +1132,135 @@ When reviewing code under this method, ask:
    than silently rebuilding truth?
 9. Is each new function structurally prime, or is it convenience aggregation?
 10. Does any interface bleed semantic authority into another interface family?
+11. For Python, does any governed semantic surface still rely on `Any`, open
+    dict payloads, or untyped defs?
+12. Has the boundary declared its Irreducible Architectural Carrier Set?
+13. Which shapes are Subordinate Payloads, and why are they not staying
+    subordinate?
+14. Does every promoted top-level type pass the Promotion Test?
+15. Has typed closure caused Boundary Inflation by multiplying peer types or
+    parallel schema migrations?
+16. Does this change avoid increasing truth surfaces, and reduce duplicate truth
+    where duplicate truth exists?
+17. Is any foreign or open payload still trusted past ingress?
+18. Did enforcement follow proof, or is the typing/schema work cosmetic?
+19. If this boundary governs another actor, is it publishing state and
+    admissible routes, or imperatively prescribing strategy?
+20. If a reference realization exists, has the target boundary been derived
+    explicitly from reference design to target design to target module assets
+    rather than from code drift?
+21. Does a module-bounded structural carrier diagram exist and accurately show
+    prime carriers, subordinate payloads, visibility, ownership, and deferred
+    families?
+22. Do the unit tests derive from module ownership and module assets rather
+    than from helper layout or incidental code shape?
+23. If the change claims cleanup or optimization, does it stay boundary-local,
+    behavior-preserving, and authority-neutral rather than becoming silent
+    redesign?
+24. If a cross-boundary opportunity was discovered, was it separated into a
+    follow-up work item rather than folded into the current change?
+25. If the same realization pattern has already appeared elsewhere, did review
+    make an explicit library/commonization decision rather than allowing
+    another silent local rebuild?
+26. If this would be the third local rebuild of the same realization pattern,
+    is the change design-method conformant because it consumes or extends the
+    governing library or records an explicit do-not-commonize decision?
+27. If the ticket is making a design-method closure claim, was a design-module-method
+    review run against the processed boundary so local optimization and
+    recurrence/commonization discovery were handled before that claim?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
+
+---
+
+## 14A. Functional Realization Review Checklist
+
+When a project claims functional bias, pure transforms, immutable carriers,
+single-owner truth, or low-coupling realization, review must explicitly check:
+
+- [ ] Does the change preserve the constitutional `WHAT` and keep realization work
+      inside lawful `HOW` surfaces only?
+- [ ] If a reference realization exists, is the new realization functionally
+      equivalent at the semantic boundary without copying incidental
+      implementation drift?
+- [ ] If a reference realization exists, does the target design explicitly map
+      reference design to target design to target module boundary before
+      implementation?
+- [ ] Do implementation and unit tests both derive from the same module
+      boundary assets rather than from code-first decomposition?
+- [ ] Does each semantic truth surface still have one clear authoritative owner?
+- [ ] Does the change reduce duplicated truth, controller reconstruction, and
+      rival local authority paths?
+- [ ] Do semantic functions consume admitted carriers only?
+- [ ] Are semantic functions pure for the same admitted inputs?
+- [ ] Are time, randomness, UUID minting, environment reads, process state,
+      filesystem, network, and global registries absent from the semantic
+      center?
+- [ ] If identity is introduced, is identity creation explicitly owned by a
+      declared ingress or effect boundary rather than hidden inside semantic
+      helpers?
+- [ ] Are carriers immutable and returned as new values rather than mutated in
+      place?
+- [ ] Is shared mutable state absent from the semantic center?
+- [ ] Do semantic transforms operate directly on local admitted carriers rather
+      than re-entering parsers, validators, or loaders on locally assembled
+      truth?
+- [ ] Is invalid or incomplete truth rejected at ingress instead of being
+      repaired procedurally inside semantic code?
+- [ ] Are defaults explicit, ratified, and carrier-owned rather than
+      helper-owned?
+- [ ] Does each function have one clear owner and one clear responsibility
+      rather than mixing admission, semantics, and effects?
+- [ ] Is coupling low by dependency shape:
+      semantic algebra depends on carrier contracts, not runtime shells;
+      admission depends on validation, not semantic orchestration; effect code
+      stays at the edge
+- [ ] Does no function both decide semantic meaning and perform effects?
+- [ ] Are effect boundaries explicit, typed, and unable to erase carrier truth
+      into open objects?
+- [ ] Do package, bootstrap, controller, adapter, and runtime-shell layers stay
+      below the semantic center?
+- [ ] Do governance and observability surfaces publish facts, eligibility, and
+      provenance only without imperative builder or executor strategy?
+- [ ] Does the active boundary have a complete structural carrier diagram that
+      matches the current IACS, visibility, ownership, and deferred-family
+      split?
+- [ ] Do the unit tests for the active boundary derive from module ownership,
+      IACS, and structural carrier assets rather than from helper layout?
+- [ ] If the change includes cleanup or optimization, does it stay
+      boundary-local, behavior-preserving, and authority-neutral?
+- [ ] If the same realization pattern has appeared before, has the ticket made
+      an explicit library/commonization decision rather than rebuilding it
+      again silently?
+- [ ] If a reusable library/commonization surface exists, does the ticket
+      explicitly consume or extend it rather than duplicating the pattern
+      locally?
+- [ ] If no reusable library/commonization surface is used, is there an
+      explicit rationale that the pattern is boundary-specific or not yet a
+      lawful commonization candidate?
+- [ ] If a cross-boundary opportunity was discovered, was it separated into a
+      follow-up work item and triaged before follow-up implementation?
+- [ ] If the ticket is making a design-method closure claim, was a
+      design-module-method review run and were boundary-local optimizations,
+      recurrence extraction, and cross-boundary opportunities handled lawfully?
+- [ ] Is there a negative proof showing that an imperative bypass, open-payload
+      bypass, or effect-edge erasure fails closed?
+
+The compact hard-gate version of this checklist is:
+
+- [ ] pure functions in the semantic center
+- [ ] immutable carriers with no shared mutable semantic state
+- [ ] one owner per truth surface
+- [ ] low coupling between admission, algebra, and effect edges
+- [ ] no hidden runtime authority in semantic code
+- [ ] functional equivalence to specification and, when present, the reference
+      realization at the semantic boundary
+- [ ] negative proof for imperative or open bypass
+
+This checklist is language-agnostic.
+It governs module design, carrier design, data-entity design, and review of
+realization work in any language.
 
 ---
 
@@ -376,8 +1282,30 @@ named boundary:
 - constructors and materializers
 - projection and query surfaces
 
-Partial adoption is allowed, but the adopted boundary should be named
-explicitly.
+For migrations involving carrier closure, schema closure, or governance
+boundaries, projects should make the Boundary Closure Evaluators explicit in
+the governing ADR or ticket rather than leaving them implicit.
+
+When the adopted boundary includes schema or typed carrier work, the project
+must declare and reconcile the Irreducible Architectural Carrier Set before
+claiming design-method completion.
+
+When the adopted boundary is derived from an existing realization, the project
+must also publish the reference-to-target derivation asset and the
+module-bounded structural carrier diagram before claiming design-method
+completion for that boundary.
+
+When the adopted boundary has active implementation, the project must also
+publish a module-derived unit test lane before claiming closure for that
+boundary.
+
+Partial adoption is allowed, but the adopted boundary and adopted rule family
+should be named explicitly.
+
+Partial adoption may narrow scope.
+
+It must not be used to claim design-method completion while skipping the evidence
+needed to audit, refactor, or reconstruct the realized boundary.
 
 ---
 
