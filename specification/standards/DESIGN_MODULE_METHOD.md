@@ -2,6 +2,10 @@
 
 **Status**: Approved
 **Date**: 2026-04-23
+**Amended**: 2026-04-26 — Clarified ODD alignment: this method governs
+deterministic realization structure inside modules, while ODD-governed products
+must still express operative framework behavior as outcome-first graph
+traversals under `ODD_METHOD.md`.
 **Governance**: Maintained by the methodology author.
 **Scope**: Realization-level design method for module, schema, carrier, and
 data-entity design in projects that want low coupling, modular composition,
@@ -72,6 +76,11 @@ It does not replace graph-native law from `ODD_METHOD.md`.
 It governs how realization modules should be structured once the project has
 already decided what it is building.
 
+For an ODD-governed product, this method does not authorize replacing a graph
+function, edge traversal, or GTL module with deterministic implementation
+modules. It governs the deterministic realization shape inside or beneath those
+ODD carriers.
+
 These rules apply to:
 
 - module boundaries
@@ -115,7 +124,43 @@ If a reader must inspect orchestration code, mutable workspace state, service
 methods, or fallback defaults to determine what the system means, the design is
 too imperative and too coupled.
 
-## 3A. Boundary Closure Evaluators
+## 3A. ODD Alignment And Escalation Rule
+
+When this method is used inside an ODD-governed product, reviewers must first
+ask whether the boundary is an operative graph traversal.
+
+If the boundary represents product movement from one typed asset state to
+another, the governing shape is:
+
+1. outcome traversal under `ODD_METHOD.md`
+2. declarative GTL/ABG carrier structure
+3. deterministic module realization under this method
+
+This method may govern:
+
+- `F_D` evaluators and proofs
+- carrier constructors and admissions
+- deterministic transforms inside an edge traversal
+- effect shells that publish the traversal result
+- projections over already-admitted carrier truth
+
+This method must not be used to hide:
+
+- graph functions inside service methods
+- edge traversal semantics inside module orchestration
+- continuation or re-entry decisions inside deterministic controllers
+- semantic target movement inside constructors, materializers, or projections
+- probabilistic worker boundaries inside imperative prompt or dispatch code
+
+If a deterministic module appears to own "what work is next", "what target is
+being moved to", "what closes the traversal", or "what graph function is being
+performed", the boundary should be repriced against `ODD_METHOD.md` before
+claiming design-method closure.
+
+In ODD products, the module boundary is a realization cut inside the graph
+program. It is not the program.
+
+## 3B. Boundary Closure Evaluators
 
 When this method governs a boundary, each design or implementation change
 should be judged against three overriding evaluators.
@@ -1168,6 +1213,13 @@ When reviewing code under this method, ask:
 27. If the ticket is making a design-method closure claim, was a design-module-method
     review run against the processed boundary so local optimization and
     recurrence/commonization discovery were handled before that claim?
+28. If the project is ODD-governed, is this module realizing a declared
+    outcome traversal rather than substituting for the graph function?
+29. Has review checked whether a deterministic module boundary is actually an
+    operative edge traversal that should be declared under `ODD_METHOD.md`?
+30. Do `F_D` evaluators, deterministic transforms, and effect shells remain
+    subordinate to the GTL/ABG graph carrier rather than becoming the hidden
+    program?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
@@ -1246,6 +1298,11 @@ single-owner truth, or low-coupling realization, review must explicitly check:
       recurrence extraction, and cross-boundary opportunities handled lawfully?
 - [ ] Is there a negative proof showing that an imperative bypass, open-payload
       bypass, or effect-edge erasure fails closed?
+- [ ] If the project is ODD-governed, does the deterministic module sit inside
+      a declared outcome traversal rather than replacing one?
+- [ ] If the module appears to decide next work, traversal closure, semantic
+      target movement, or graph-function identity, has the boundary been
+      repriced under `ODD_METHOD.md`?
 
 The compact hard-gate version of this checklist is:
 
@@ -1324,6 +1381,11 @@ So:
 - `DESIGN_MODULE_METHOD.md` answers what is the preferred implementation design
   discipline when you want low coupling, no interface bleed, and explicit effect
   management
+
+For ODD-governed products, `ODD_METHOD.md` decides whether the operative unit is
+an outcome traversal, graph function, GTL module, or ABG runtime boundary.
+`DESIGN_MODULE_METHOD.md` then governs the deterministic module structure that
+realizes, evaluates, adapts, or projects inside that ODD boundary.
 
 ---
 

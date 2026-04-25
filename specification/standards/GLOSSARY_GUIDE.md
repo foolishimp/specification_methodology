@@ -55,6 +55,58 @@ This is not the released product artifact itself.
 
 ---
 
+## Test Authority Terms
+
+### Design/Module Conformance Test
+
+An executable proof surface derived from design or module authority.
+
+It proves that implementation realizes a designed boundary correctly. Unit
+tests, module integration tests, negative tests, and fail-closed tests may all
+belong to this family when their source authority is a module or design surface.
+
+### Unit Test
+
+A module-owned design conformance proof lane.
+
+In this methodology, a canonical unit test derives from module ownership and
+carrier law, not merely from helper function layout.
+
+### UAT / Acceptance Test
+
+An executable proof surface derived from requirements, acceptance criteria,
+declared scenarios, or use cases.
+
+It proves that the composed product satisfies claimed user or product behavior.
+Under `SPEC_METHOD.md`, UAT / acceptance tests must run as sandbox tests or an
+explicitly equivalent isolated composed-product proof lane.
+
+### Sandbox Test
+
+A UAT / acceptance test that exercises the deployed, installed, or otherwise
+runnable product form through declared application, public, runtime, or control
+surfaces.
+
+The test must be driven by requirement-sourced scenario or acceptance authority.
+
+### Harnessed Sandbox Test
+
+A sandbox test that exercises the composed product path with deterministic,
+fake, recorded, or injected worker/result surfaces.
+
+It proves scenario wiring and control behavior without relying on live external
+probabilistic execution.
+
+### Live Sandbox Test
+
+A sandbox test that exercises the composed product path with a real configured
+worker, tool, agent, service, or external probabilistic transport.
+
+It is the acceptance lane required when a product or release claim depends on
+live probabilistic compute.
+
+---
+
 ## Graph-Native Terms
 
 ### GTL
@@ -67,8 +119,25 @@ The language expression used to declare graph-native products in graph terms.
 
 Abiogenesis runtime / substrate.
 
-The execution and binding runtime that traverses and realizes GTL-declared
-program space.
+The traversal governance, binding, and runtime-truth substrate that realizes
+GTL-declared program space without owning domain-internal solution strategy.
+
+### Edge Traversal
+
+One bounded invocation of a declared graph transition.
+
+The traversal is the admissible external work space: it carries the declared
+input, output, context, evaluator regime, provenance obligation, and lawful
+control states for one movement across a graph boundary.
+
+### Probabilistic Compute
+
+Bounded constructive work whose internal solution path is not fully determined
+by the framework.
+
+`ODD_METHOD.md` gives the graph-native definition: one vector or edge traversal
+is the bounded unit of probabilistic compute, and the traversal contract defines
+the admissible external space.
 
 ---
 
@@ -79,7 +148,17 @@ program space.
 Bounded non-human processing permitted by policy to carry or resolve declared
 ambiguity.
 
-This is the substrate-agnostic baseline term.
+This is the substrate-agnostic baseline term for permission to use
+probabilistic compute under a declared boundary.
+
+### F_D
+
+Historical graph/runtime shorthand for deterministic evaluation or proof.
+
+F_D can validate, measure, or optimize a domain-owned path when the domain can
+make part of the work precise.
+
+It does not move domain HOW into the framework.
 
 ### Human Adjudication
 
@@ -88,7 +167,8 @@ appetite requires it.
 
 ### F_P
 
-Historical graph/runtime shorthand for probabilistic or delegated processing.
+Historical graph/runtime shorthand for a bounded probabilistic worker turn under
+a declared traversal boundary.
 
 Use only in graph-native or runtime-specific surfaces, not as baseline
 methodology terminology.

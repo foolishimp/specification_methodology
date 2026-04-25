@@ -175,6 +175,68 @@ The filename should carry:
 - stable id
 - short slug
 
+### Multi-Build-Tenant Ticket Independence
+
+If one source/product/design work item must be realized in more than one build
+tenant, do not track all tenant realizations inside one ticket lifecycle.
+
+This rule governs:
+
+- backlog tickets
+- active tickets
+
+It is not retroactive for historical completed tickets unless a completed
+ticket is reopened or explicitly repriced.
+
+This does **not** mean every ticket becomes multi-tenant.
+
+Use tenant duplication only when the same admitted work item genuinely has more
+than one tenant execution line.
+
+So there are three lawful cases:
+
+1. upstream-only ticket
+   - source/product/design authority only
+   - no tenant duplicate yet
+2. single-tenant ticket
+   - one tenant-local execution line only
+   - no sibling tenant duplicate required
+3. multi-tenant work item
+   - one upstream authority ticket
+   - one suffixed tenant-local ticket per tenant execution line
+
+Instead:
+
+- keep the upstream source/product/design ticket as its own authority surface
+- duplicate the work item into one tenant-local ticket per build tenant
+- append a build-tenant mnemonic to the base ticket id and filename
+- keep status, proof, closure, and reopen logic independent for each tenant
+
+Recommended examples:
+
+- source/product ticket: `B-030-publish-one-maximum-autonomy-gen-start-profile...`
+- TypeScript tenant ticket: `B-030-TS-publish-one-maximum-autonomy-gen-start-profile...`
+- Python tenant ticket: `B-030-PY-publish-one-maximum-autonomy-gen-start-profile...`
+
+The important law is:
+
+- one ticket must not claim closure for more than one build-tenant lifecycle
+- a tenant-local blocker or false closure in one tenant must not be hidden by
+  green status in another tenant
+- tenant-local proof, repricing, and reopening remain tenant-local
+
+If a tenant-local duplicate exists, it should record:
+
+- `source_ticket`
+- `build_tenant`
+
+The unsuffixed/base ticket may remain the upstream product or design authority.
+
+If the work item is multi-tenant, tenant execution and closure for
+backlog/active work must live on the suffixed duplicates.
+
+If the work item is single-tenant, no sibling duplicate is required.
+
 ### Required Fields
 
 Each ticket must record at least:
@@ -199,10 +261,24 @@ Recommended additional fields:
 - `links`
 - `intake_source`
 - `affected_boundary`
+- `source_ticket` when this ticket duplicates or derives from another ticket
+- `build_tenant` when this ticket is tenant-local
 
 For `ticket_category: implementation_migration`, also require:
 
 - `migration_strategy`
+- `library_usage`
+
+For tenant-local implementation migrations, also require:
+
+- `build_tenant`
+- `source_ticket` when the tenant-local ticket duplicates or derives from an
+  upstream source/product/design ticket
+
+For `ticket_category: implementation_migration`, also conditionally require:
+
+- `governing_library` when `library_usage: consume` or `library_usage: extend`
+- `library_rationale` when `library_usage: none`
 
 For execution-contract admission, the runtime-drafted contract should also
 carry, at minimum:
@@ -468,6 +544,9 @@ At minimum, the ticket must carry this checklist in live markdown form:
 - [ ] old truth path is removed or explicitly demoted from authority
 - [ ] mixed-state behavior is no longer accepted as closure evidence
 - [ ] tests proving mixed old/new behavior are removed or repriced
+- [ ] recurring realization patterns are checked against existing library/commonization surfaces
+- [ ] ticket declares library usage and names the governing library or rationale
+- [ ] if the work exists in more than one build tenant, this backlog/active ticket carries only one tenant lifecycle and any sibling tenant work lives on its own suffixed ticket
 - [ ] ticket wording, product wording, and proof claims are reconciled before closure
 ```
 
@@ -477,11 +556,27 @@ inside-out migration law defined in `SPEC_METHOD.md`.
 The required field is:
 
 - `migration_strategy`
+- `library_usage`
 
 Allowed values are:
 
 - `inside_out_hard_break`
 - `fundamental_re_adoption`
+
+Allowed `library_usage` values are:
+
+- `none`
+- `consume`
+- `extend`
+
+If `library_usage: consume` or `library_usage: extend`, the ticket must name
+the governing reusable library/commonization surface in `governing_library`.
+
+If `library_usage: none`, the ticket must explain in `library_rationale` why:
+
+- no existing reusable surface applies, or
+- the pattern is still boundary-specific, or
+- this is not yet a lawful recurrence/commonization candidate
 
 For `ticket_category: implementation_migration`, closure is blocked while the
 old authoritative interface still passes in normal execution unless the ticket
@@ -526,6 +621,51 @@ Allowed inherited-implementation classifications are:
 
 Unclassified inherited implementation blocks closure.
 
+### Recurring Realization And Library Declaration
+
+Implementation migration tickets must declare whether the active boundary is:
+
+- rebuilding a pattern locally
+- consuming an existing reusable library/commonization surface
+- extending that surface before the local implementation lands
+
+This is what `library_usage` records.
+
+The recurrence rule is:
+
+- the second credible recurrence forces an explicit library/commonization review
+- the third local rebuild is not acceptable by default
+
+If review shows the same realization pattern already exists in two module
+boundaries or tickets, a third local rebuild blocks implementation unless the
+ticket does one of these:
+
+- declares `library_usage: consume`
+- declares `library_usage: extend`
+- links an explicit do-not-commonize design decision in `library_rationale`
+
+Preferred order is:
+
+1. boundary-local cleanup
+2. tenant-local reusable library/commonization surface
+3. shared/common propagation only through separate design re-entry
+
+If a reusable pattern is discovered during the active ticket and is not
+absorbed into an existing or new library/commonization surface within that
+ticket, a follow-up triage ticket must be created before closure.
+
+### Multi-Build-Tenant Review Rule
+
+If the same work item is being processed across multiple build tenants, review
+of backlog/active tickets must check that:
+
+1. each tenant has its own suffixed ticket
+2. each ticket names its `build_tenant`
+3. each tenant ticket has its own proof surface and closure law
+4. one tenant's green proof does not stand in for another tenant's closure
+5. reopen, repricing, and successor work remain tenant-local unless the
+   upstream source/product/design ticket itself must be changed
+
 ### Implementation Migration Review Disambiguation
 
 Implementation migration tickets must make the review problem concrete enough
@@ -555,6 +695,9 @@ ticket, but reviewers should be able to answer these generic questions:
 8. If deterministic gates, validation, or F_D-like checks exist, do they inform
    the current state without structurally blocking the lawful constructive or
    F_P-like path that the admitted contract permits?
+9. If the same realization pattern already exists elsewhere, does the ticket
+   explicitly consume or extend a reusable library/commonization surface rather
+   than rebuilding it locally again?
 
 Passing tests do not satisfy this section by themselves. A slice that keeps the
 same semantic center alive behind typed wrappers, adapter-local policy, old

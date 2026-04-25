@@ -10,6 +10,8 @@
 **Repriced**: 2026-04-15 — Baseline ambiguity terms made substrate-agnostic, trace-closure and anti-drift rules consolidated, and source-versus-installed authority paths made explicit
 **Repriced**: 2026-04-18 — Core interface refactors strengthened into inside-out migration waves with explicit consumer audits, bridge prohibition, and proof-last closure
 **Repriced**: 2026-04-21 — Inside-Out First Sequencing subsection added under Core Interface Migration Rule; graph-native refinement reference repointed to `ODD_METHOD.md` following absorption of `GRAPH_METHOD.md` into that method surface
+**Repriced**: 2026-04-24 — Probabilistic work boundary clarified: the method governs declared work boundaries, admissible evidence, and control truth; it does not absorb domain HOW or worker-internal reasoning.
+**Repriced**: 2026-04-24 — Testing strategy taxonomy made explicit: design/module tests prove realization conformance; UAT/acceptance tests derive from requirements and scenarios and must run as sandbox or equivalent composed-product proof, split into harnessed and live lanes.
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -72,6 +74,41 @@ interfaces, constraints, and evidence surfaces, then let lawful processing
 derive and realize work from that declared surface.
 
 Imperative procedure still exists, but it is subordinate to declared authority.
+
+---
+
+## Probabilistic Work Boundary
+
+Spec-driven development exists to govern the boundary around work, not to absorb
+the worker's internal solution strategy into the framework.
+
+For any probabilistic, agentic, or delegated work unit, the live specification
+and design should declare:
+
+- the input and output contract
+- the required context
+- the capability or role expectation
+- the admissible evidence and evaluator regime
+- the provenance obligation
+- the lawful stop, hold, gap, continuation, or completion states
+
+The worker, tool, agent, or domain implementation owns the internal HOW inside
+that declared boundary unless the product explicitly promotes part of that HOW
+into reusable declared structure.
+
+Deterministic checks and validation are evidence surfaces. They may optimize or
+prove a domain-local path where the domain can make part of the work precise.
+They do not authorize the methodology, runtime, or framework to absorb domain
+solution strategy as constitutional law.
+
+In graph-native refinements such as `ODD_METHOD.md`, this boundary is usually
+one vector or edge traversal. The traversal is the admissible external space.
+Any unconstrained part of an F_P worker's reasoning remains hidden
+worker-internal traversal and must be forced back through declared contracts,
+evidence, provenance, and control truth.
+
+If a framework layer begins prescribing domain solution strategy beyond the
+declared work contract and control truth, it has crossed its authority boundary.
 
 ---
 
@@ -632,6 +669,90 @@ Without scenarios, important capabilities can appear "covered" because the words
 Scenarios are the product-owner layer. They are concrete, end-to-end use cases that validate the chain from intent to realized behavior. When a scenario cannot be written, the capability is not yet real. When a scenario fails, the gap is between the system's actual behavior and its claimed capability — not between the spec's words and the spec's other words.
 
 Scenarios do not replace requirement categories. They primarily validate capability claims and other behavior with concrete operational meaning. Constraints, governance rules, and verification-infrastructure requirements may require different evidence in addition to, or instead of, end-to-end scenarios.
+
+---
+
+## Testing Strategy Taxonomy
+
+Every executable proof surface must declare its authority source.
+
+Authority source is not the same thing as execution breadth. A test may be
+small or broad, fast or slow, deterministic or live, but it still derives from
+one of two primary authorities:
+
+1. **Design/module conformance tests**
+2. **UAT / acceptance tests**
+
+Design/module conformance tests derive from realization authority:
+
+- governing design
+- module ownership
+- IACS or equivalent carrier inventory
+- structural carrier diagrams when present
+- boundary-local fail-closed law
+
+They answer:
+
+- did the implementation realize the module or design boundary correctly?
+
+Unit tests are design/module conformance tests. Module integration tests,
+negative tests, and fail-closed tests may also be design/module conformance
+tests when their proof target is a designed module boundary rather than a user
+scenario.
+
+UAT / acceptance tests derive from constitutional user or product authority:
+
+- requirements
+- acceptance criteria
+- declared scenarios or use cases
+- product-level release or qualification claims
+
+They answer:
+
+- does the composed product satisfy the claimed requirement or scenario?
+
+Under this method, only sandbox tests or an explicitly equivalent isolated
+composed-product proof lane may be called UAT / acceptance tests.
+
+A sandbox test must exercise the deployed, installed, or otherwise runnable
+product form through declared application, public, runtime, or control surfaces.
+It must be driven by a requirement-sourced scenario or acceptance case. Direct
+source-level unit tests, helper tests, and module integration tests may be
+valuable proof, but they are not UAT and cannot close user acceptance by
+themselves.
+
+Sandbox UAT has two lawful execution modes:
+
+- **Harnessed sandbox UAT**: exercises the full composed product path with a
+  deterministic, fake, recorded, or injected worker/result surface.
+- **Live sandbox UAT**: exercises the full composed product path with a real
+  configured worker, tool, agent, service, or other external probabilistic
+  transport where the product depends on that live boundary.
+
+Harnessed sandbox UAT proves composition, orchestration, control, projection,
+archive, and scenario wiring without relying on live probabilistic execution.
+It is the right lane for deterministic reproducibility.
+
+Live sandbox UAT proves that the same scenario can cross the real external
+probabilistic boundary and return evidence through the declared result,
+evaluation, provenance, and projection surfaces. Where a product or release
+claim depends on live probabilistic compute, semantic green, unit green, module
+integration green, and harnessed sandbox green are necessary but not sufficient
+for live acceptance.
+
+Terminology rules:
+
+- `unit` names module/design conformance scope, not user acceptance.
+- `integration` names execution breadth, not authority source.
+- `sandbox` names composed-product acceptance execution.
+- `harnessed`, `fake`, `recorded`, or `deterministic` name non-live sandbox
+  execution.
+- `live` is reserved for real external worker or transport execution. A status
+  projection named "live" is not live UAT unless it crosses that real boundary.
+
+If a project uses different local filenames or runner labels, the local test
+surface must still map each executable lane back to this taxonomy before
+claiming closure.
 
 ---
 

@@ -2,9 +2,9 @@
 
 **Status**: Approved
 **Date**: 2026-04-05
-**Amended**: 2026-04-21 — Absorbed prior `GRAPH_METHOD.md` (archived at `../../archive/GRAPH_METHOD.md`). Graph-native substrate law (Graph Model, Product Boundary, Self-Host Boundary, Manual Walkthrough/Automation Rules, Scenario/Installed-Dev/Dogfooding/Release/Failure Pattern) consolidated into this method surface. Source-authority vs installed-distribution distinction made explicit in Method Folder Semantics. Software-development realization topology labelled as canonical specialization rather than universal ODD law. Vector vs graph-function distinction tightened in Core Law §11.7.
+**Amended**: 2026-04-26 — Tightened outcome-first realization law: an ODD product must use its own edge-traversal unit of compute to build operative framework behavior, with outcome traversals first, declarative GTL/ABG carrier structure second, and imperative adapter code last. Prior 2026-04-24 amendment: added foundational GTL/ABG application law that ABG owns continuation and re-entry, while domain applications remain cooperative bounded-step subsystems that publish assets or evidence and return control. Clarified that one vector or edge traversal is the bounded unit of probabilistic compute and that GTL/ABG govern traversal contracts and control truth, not worker-internal HOW. Prior 2026-04-21 amendment: absorbed `GRAPH_METHOD.md` (archived at `../../archive/GRAPH_METHOD.md`). Graph-native substrate law (Graph Model, Product Boundary, Self-Host Boundary, Manual Walkthrough/Automation Rules, Scenario/Installed-Dev/Dogfooding/Release/Failure Pattern) consolidated into this method surface. Source-authority vs installed-distribution distinction made explicit in Method Folder Semantics. Software-development realization topology labelled as canonical specialization rather than universal ODD law. Vector vs graph-function distinction tightened in Core Law §11.7.
 **Governance**: Maintained by the methodology author.
-**Scope**: Constitutional method for graph-native ODD products — covering graph-native execution substrate and ODD product-authoring law over GTL and ABG.
+**Scope**: Constitutional method for graph-native ODD products — covering graph-native traversal governance substrate and ODD product-authoring law over GTL and ABG.
 **Relation**: Refines `SPEC_METHOD.md`. Use this method when building a graph-native ODD product, or when repricing an imperative prototype into one.
 
 Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this method explicitly narrows a term.
@@ -29,14 +29,17 @@ It means:
 - define typed domain assets and nodes
 - publish named graph functions as the constructive carrier
 - bind them into a GTL module
-- let ABG own traversal, runtime facts, and provenance
+- let ABG own traversal governance, runtime facts, and provenance
+- let ABG own continuation and re-entry after each publish boundary
+- keep product commands and services as cooperative bounded-step subsystems that
+  publish assets or evidence and return control to ABG
 - expose visible current state as projection over constructive history
 
 This is a programming paradigm, not only a documentation preference.
 
 The paradigm is:
 
-`product = typed asset/domain model + GTL-defined graph functions + ABG runtime + governed projection/query surfaces`
+`product = typed asset/domain model + GTL-defined graph functions + ABG traversal-control runtime + governed projection/query surfaces`
 
 If the constructive carrier remains hidden in imperative loops, local service logic, or product-specific orchestration scripts, the product is not yet built using ODD method.
 
@@ -45,7 +48,7 @@ The method has two core jobs:
 1. describe the product as a declared asset graph in graph-native terms
 2. ensure automation never outruns a lawful manual traversal of the same graph
 
-The graph is not decoration around the process. The graph is the process model. GTL is the language expression of the method. ABG is the execution and binding runtime that traverses and realizes the GTL program.
+The graph is not decoration around the process. The graph is the process model. GTL is the language expression of the method. ABG is the traversal governance, binding, and runtime-truth substrate that realizes the GTL program without owning the domain's internal HOW.
 
 ---
 
@@ -58,7 +61,7 @@ The graph is not decoration around the process. The graph is the process model. 
 The role split is:
 
 - `SPEC_METHOD.md` — constitutional baseline for goals, intent, product, requirements, design, and lawful re-entry
-- `ODD_METHOD.md` — constitutional law for graph-native execution (assets, vectors, traversal, graph functions) AND product-authoring law for building an ODD product correctly over that substrate
+- `ODD_METHOD.md` — constitutional law for graph-native traversal governance (assets, vectors, traversal, graph functions) AND product-authoring law for building an ODD product correctly over that substrate
 
 This method does not replace product-specific domain methods such as `WORLD_MODEL_METHOD.md`.
 
@@ -166,6 +169,45 @@ Each vector declares:
 
 Vectors are the admissible transitions of the product.
 
+### Probabilistic Compute
+
+In ODD method, probabilistic compute is bounded constructive work over one
+declared vector or edge traversal where the worker's internal solution path is
+not fully determined by the graph or runtime.
+
+One vector or edge traversal is the bounded unit of probabilistic compute.
+
+The vector declares the admissible external traversal space:
+
+- required upstream assets
+- target asset or output contract
+- required context
+- role or capability expectation
+- governing evaluators and gates
+- provenance obligation
+- lawful stop, hold, gap, continuation, or completion states
+
+ABG may govern, invoke, observe, and classify the traversal. It does not own the
+worker's hidden constructive path.
+
+Anything not constrained by the traversal boundary remains worker-internal HOW:
+
+- hidden LLM reasoning
+- heuristic search
+- domain implementation strategy
+- tool-local execution detail
+- product-specific business choice
+
+F_P is the graph/runtime shorthand for this bounded probabilistic worker turn.
+F_D is deterministic evaluation or proof over declared properties of the
+traversal. F_D may optimize or validate a domain-local path where the domain can
+make part of the work precise, but it does not move domain HOW into GTL, ABG, or
+the framework.
+
+The method governs the traversal contract, evidence, provenance, and control
+truth. It does not make the framework the executor of the domain's internal
+solution strategy.
+
 ### Graph Functions
 
 Graph functions are named constructive programs that realize vectors.
@@ -207,7 +249,7 @@ A clean install means:
 
 The installed product owns:
 
-- the graph-native method and its execution substrate
+- the graph-native method and its traversal-control substrate
 - runtime and control surfaces
 - command surfaces
 - release-managed methodology surfaces
@@ -301,6 +343,8 @@ That audit should ask at minimum:
 - what public graph functions carry the constructive transition
 - what proof or closure lane justifies the capability
 - what projected/query state is exposed without replacing ABG runtime truth
+- whether any product command, service, or query surface is trying to replace
+  ABG continuation with tenant-local orchestration
 
 The governance rule is:
 
@@ -386,6 +430,7 @@ ABG owns:
 - runtime facts
 - frames
 - continuations
+- re-entry after publish boundaries
 - lineage and provenance
 
 ### ODD Product
@@ -410,6 +455,8 @@ Service or query layers may own:
 - API surfaces
 
 They do not own runtime truth.
+
+They also do not own continuation truth.
 
 Do not hide the real constructive carrier behind the word `service`.
 
@@ -446,6 +493,55 @@ Do not leave the real carrier inside:
 - bespoke Python pipeline runners
 - controller scripts
 - service methods that only happen to call GTL-adjacent helpers
+
+### 11.2A Outcome-First Realization Order
+
+If ODD introduces an edge traversal as the unit of compute, an ODD product must
+use that unit of compute to build its own operative framework behavior.
+
+The required realization order is:
+
+1. declare the outcome traversal over typed assets
+2. publish the declarative GTL/ABG carrier structure
+3. implement only the minimal imperative adapter code that remains necessary
+
+Outcome traversal means the product declares the governed movement before
+implementation:
+
+- source asset type
+- target asset type
+- edge traversal or graph-function name
+- closure or evaluation obligation
+- lineage obligation
+- ambiguity or gap obligation
+- allowed `F_D`, `F_P`, and `F_H` bindings
+
+Declarative carrier structure means:
+
+- GTL graph functions
+- typed nodes
+- vectors
+- operator bindings
+- evaluator bindings
+- carrier schemas
+- policy declarations
+- projection declarations
+- lineage ledger declarations
+
+Imperative adapter code is lawful only where it transports or persists facts:
+
+- file or network IO
+- CLI or API transport
+- event persistence
+- runtime invocation
+- projection rendering
+- tool execution that has already been admitted by a declared traversal
+
+Imperative code must not own domain meaning, semantic target movement, step
+selection, closure semantics, lineage truth, or constructive workflow truth.
+
+If framework behavior is implemented imperatively first and only later
+described with GTL vocabulary, the product is ODD-shaped but not yet ODD-built.
 
 ### 11.3 The Function Catalog Is Published
 
@@ -491,6 +587,39 @@ The ODD query lane may expose:
 - domain-specific explainability overlays
 
 It must not redefine ABG runtime facts.
+
+### 11.5A ABG Owns Continuation And Re-Entry
+
+An ODD application over GTL/ABG is a cooperative subsystem, not a replacement
+runtime.
+
+ABG owns:
+
+- continuation authority
+- re-entry after publish boundaries
+- graph-call lifecycle
+- step selection over the declared graph
+
+The product may:
+
+- publish typed assets and evidence
+- execute one admitted bounded constructive step
+- publish downstream read models or domain overlays
+- return control to ABG
+
+The product must not:
+
+- own a hidden continuation loop
+- carry multi-step controller memory across publish boundaries
+- infer later steps locally instead of re-entering through ABG
+- treat public `next` and explicit graph-function continuation as rival
+  authorities inside one controller
+- build product-local orchestration that effectively replaces ABG
+
+If an application attempts to replace ABG continuation with tenant-local
+control flow, it is no longer behaving as an ODD application over GTL/ABG. It
+has drifted into a different architecture that only happens to publish some
+ODD-shaped artifacts.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
@@ -615,6 +744,10 @@ Direct source checks remain useful. They do not replace installed-dev proof.
 
 The product should be developed through the same graph-native method it claims to provide.
 
+Where the product provides ODD framework behavior, it must build that behavior
+through ODD graph functions. It must not merely publish ODD-shaped artifacts
+after imperative execution has already decided the work.
+
 That means the project should increasingly describe and build itself through:
 
 - explicit assets
@@ -656,6 +789,9 @@ The method is being violated when any of these are true:
 6. the project claims closure without target-relative evidence
 7. the cumulative environment law is bypassed by "last-output feeds next-input" wiring
 8. zoomed and unzoomed views disagree about whether a carrier is closed
+9. imperative service code owns an operative transition that has no published graph-function outcome contract
+10. framework behavior is implemented as workspace orchestration first and only later described with GTL vocabulary
+11. imperative code decides closure, continuation, semantic target movement, or lineage truth outside declared graph-function, ABG runtime, or product-owned carrier truth
 
 ---
 
@@ -749,4 +885,4 @@ If those questions cannot be answered quickly, the product is not yet sufficient
 
 ## 20. Canonical Compression
 
-ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph.
+ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last.
