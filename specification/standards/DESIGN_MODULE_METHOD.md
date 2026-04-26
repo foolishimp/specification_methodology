@@ -6,6 +6,9 @@
 deterministic realization structure inside modules, while ODD-governed products
 must still express operative framework behavior as outcome-first graph
 traversals under `ODD_METHOD.md`.
+**Amended**: 2026-04-26 — Added projection-source coherence review law:
+projection modules must derive from admitted carrier truth or fail closed on
+structural drift; name-only matching is not enough.
 **Governance**: Maintained by the methodology author.
 **Scope**: Realization-level design method for module, schema, carrier, and
 data-entity design in projects that want low coupling, modular composition,
@@ -190,6 +193,16 @@ The test is:
   would another path silently reconstruct the same meaning?
 
 If meaning survives by reconstruction, the seam is not closed.
+
+For projection and query modules, seam closure also requires source coherence:
+
+- the projection must name the admitted carrier, runtime, event, or source truth
+  it derives from
+- reconstructed catalog, ownership, route, status, or closure truth must be
+  structurally compared against the admitted source carrier before publication
+- same-name but different-shape carriers must fail closed unless an explicit
+  migration design makes the divergence lawful
+- negative tests must cover structural drift, not only missing source truth
 
 ### 2. Essential Carrier Consolidation
 
@@ -1170,54 +1183,56 @@ When reviewing code under this method, ask:
 2. Are the main steps readable as transforms over admitted truth?
 3. Are effects isolated to explicit edge modules?
 4. Can projections or reports invent closure independently?
-5. Is mutation justified, bounded, and local?
-6. Can consumers pattern-match the source carrier directly?
-7. Is any proxy or compatibility surface still silently authoritative?
-8. Would removing the authoritative carrier make the system fail closed rather
+5. Does each projection/query module derive from an admitted source carrier, or
+   can it reconstruct a same-name but structurally different truth surface?
+6. Is mutation justified, bounded, and local?
+7. Can consumers pattern-match the source carrier directly?
+8. Is any proxy or compatibility surface still silently authoritative?
+9. Would removing the authoritative carrier make the system fail closed rather
    than silently rebuilding truth?
-9. Is each new function structurally prime, or is it convenience aggregation?
-10. Does any interface bleed semantic authority into another interface family?
-11. For Python, does any governed semantic surface still rely on `Any`, open
+10. Is each new function structurally prime, or is it convenience aggregation?
+11. Does any interface bleed semantic authority into another interface family?
+12. For Python, does any governed semantic surface still rely on `Any`, open
     dict payloads, or untyped defs?
-12. Has the boundary declared its Irreducible Architectural Carrier Set?
-13. Which shapes are Subordinate Payloads, and why are they not staying
+13. Has the boundary declared its Irreducible Architectural Carrier Set?
+14. Which shapes are Subordinate Payloads, and why are they not staying
     subordinate?
-14. Does every promoted top-level type pass the Promotion Test?
-15. Has typed closure caused Boundary Inflation by multiplying peer types or
+15. Does every promoted top-level type pass the Promotion Test?
+16. Has typed closure caused Boundary Inflation by multiplying peer types or
     parallel schema migrations?
-16. Does this change avoid increasing truth surfaces, and reduce duplicate truth
+17. Does this change avoid increasing truth surfaces, and reduce duplicate truth
     where duplicate truth exists?
-17. Is any foreign or open payload still trusted past ingress?
-18. Did enforcement follow proof, or is the typing/schema work cosmetic?
-19. If this boundary governs another actor, is it publishing state and
+18. Is any foreign or open payload still trusted past ingress?
+19. Did enforcement follow proof, or is the typing/schema work cosmetic?
+20. If this boundary governs another actor, is it publishing state and
     admissible routes, or imperatively prescribing strategy?
-20. If a reference realization exists, has the target boundary been derived
+21. If a reference realization exists, has the target boundary been derived
     explicitly from reference design to target design to target module assets
     rather than from code drift?
-21. Does a module-bounded structural carrier diagram exist and accurately show
+22. Does a module-bounded structural carrier diagram exist and accurately show
     prime carriers, subordinate payloads, visibility, ownership, and deferred
     families?
-22. Do the unit tests derive from module ownership and module assets rather
+23. Do the unit tests derive from module ownership and module assets rather
     than from helper layout or incidental code shape?
-23. If the change claims cleanup or optimization, does it stay boundary-local,
+24. If the change claims cleanup or optimization, does it stay boundary-local,
     behavior-preserving, and authority-neutral rather than becoming silent
     redesign?
-24. If a cross-boundary opportunity was discovered, was it separated into a
+25. If a cross-boundary opportunity was discovered, was it separated into a
     follow-up work item rather than folded into the current change?
-25. If the same realization pattern has already appeared elsewhere, did review
+26. If the same realization pattern has already appeared elsewhere, did review
     make an explicit library/commonization decision rather than allowing
     another silent local rebuild?
-26. If this would be the third local rebuild of the same realization pattern,
+27. If this would be the third local rebuild of the same realization pattern,
     is the change design-method conformant because it consumes or extends the
     governing library or records an explicit do-not-commonize decision?
-27. If the ticket is making a design-method closure claim, was a design-module-method
+28. If the ticket is making a design-method closure claim, was a design-module-method
     review run against the processed boundary so local optimization and
     recurrence/commonization discovery were handled before that claim?
-28. If the project is ODD-governed, is this module realizing a declared
+29. If the project is ODD-governed, is this module realizing a declared
     outcome traversal rather than substituting for the graph function?
-29. Has review checked whether a deterministic module boundary is actually an
+30. Has review checked whether a deterministic module boundary is actually an
     operative edge traversal that should be declared under `ODD_METHOD.md`?
-30. Do `F_D` evaluators, deterministic transforms, and effect shells remain
+31. Do `F_D` evaluators, deterministic transforms, and effect shells remain
     subordinate to the GTL/ABG graph carrier rather than becoming the hidden
     program?
 

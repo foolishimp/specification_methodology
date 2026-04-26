@@ -2,6 +2,9 @@
 
 **Status**: Approved
 **Date**: 2026-04-05
+**Amended**: 2026-04-26 — Added projection-source coherence law: ODD
+projection and query lanes must derive from admitted carrier/runtime truth or
+fail closed on structural drift; name equality is not enough.
 **Amended**: 2026-04-26 — Tightened outcome-first realization law: an ODD product must use its own edge-traversal unit of compute to build operative framework behavior, with outcome traversals first, declarative GTL/ABG carrier structure second, and imperative adapter code last. Prior 2026-04-24 amendment: added foundational GTL/ABG application law that ABG owns continuation and re-entry, while domain applications remain cooperative bounded-step subsystems that publish assets or evidence and return control. Clarified that one vector or edge traversal is the bounded unit of probabilistic compute and that GTL/ABG govern traversal contracts and control truth, not worker-internal HOW. Prior 2026-04-21 amendment: absorbed `GRAPH_METHOD.md` (archived at `../../archive/GRAPH_METHOD.md`). Graph-native substrate law (Graph Model, Product Boundary, Self-Host Boundary, Manual Walkthrough/Automation Rules, Scenario/Installed-Dev/Dogfooding/Release/Failure Pattern) consolidated into this method surface. Source-authority vs installed-distribution distinction made explicit in Method Folder Semantics. Software-development realization topology labelled as canonical specialization rather than universal ODD law. Vector vs graph-function distinction tightened in Core Law §11.7.
 **Governance**: Maintained by the methodology author.
 **Scope**: Constitutional method for graph-native ODD products — covering graph-native traversal governance substrate and ODD product-authoring law over GTL and ABG.
@@ -621,6 +624,36 @@ control flow, it is no longer behaving as an ODD application over GTL/ABG. It
 has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
+### 11.5B Projection-Source Coherence
+
+Projection and query lanes are downstream read models over admitted carrier,
+runtime, event, or source truth.
+
+They may summarize, index, filter, or render that truth.
+
+They must not reconstruct an alternate authority surface beside the admitted
+carrier.
+
+For an ODD product, this means:
+
+- function catalog views must reconcile to the admitted GTL module or public
+  carrier
+- asset ownership and start-target views must be derived from, or structurally
+  compared against, the admitted carrier they expose
+- runtime status views must derive from ABG runtime facts, events, replay, or
+  projection truth
+- domain query overlays must fail closed when the carrier they describe is
+  missing, stale, or structurally divergent
+
+Name equality is not enough.
+
+A same-named graph function, node, carrier, policy, or route with different
+inputs, outputs, vectors, declarations, ownership, or closure law is a different
+truth surface until reconciled.
+
+Negative proof for a projection must include structural drift, not only missing
+source truth.
+
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
 ODD method gives the product shape, not the domain semantics.
@@ -816,7 +849,9 @@ the expected sequence is:
 7. define the machine-readable function catalog
 8. define or update the GTL module, including outer callable carriers and live traversal boundaries
 9. define how coarse carriers, refined inner carriers, and executable proof lanes close together without scale contradiction
-10. define the projection/query lane as projection over constructive history
+10. define the projection/query lane as projection over admitted constructive
+    history, including the structural coherence rule between the read model and
+    its source carrier
 11. only then implement code, policy, and transport surfaces
 
 The instruction does **not** mean:
@@ -876,8 +911,10 @@ An LLM ramping into an ODD product should quickly answer:
 5. Where is the GTL module?
 6. What belongs to ABG versus the product?
 7. What is the projection/query lane?
-8. What proof surfaces close the current capabilities?
-9. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
+8. What admitted carrier, runtime, event, or source truth does each projection
+   derive from, and how does it fail closed on structural drift?
+9. What proof surfaces close the current capabilities?
+10. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
 
 If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
 

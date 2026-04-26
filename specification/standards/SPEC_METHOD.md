@@ -12,6 +12,7 @@
 **Repriced**: 2026-04-21 — Inside-Out First Sequencing subsection added under Core Interface Migration Rule; graph-native refinement reference repointed to `ODD_METHOD.md` following absorption of `GRAPH_METHOD.md` into that method surface
 **Repriced**: 2026-04-24 — Probabilistic work boundary clarified: the method governs declared work boundaries, admissible evidence, and control truth; it does not absorb domain HOW or worker-internal reasoning.
 **Repriced**: 2026-04-24 — Testing strategy taxonomy made explicit: design/module tests prove realization conformance; UAT/acceptance tests derive from requirements and scenarios and must run as sandbox or equivalent composed-product proof, split into harnessed and live lanes.
+**Repriced**: 2026-04-26 — Fixture portability clarified: required closure lanes cannot depend on undeclared local filesystem fixtures; external reference fixtures must be checked in, declared by manifest, or moved to an explicit sandbox/reference lane.
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -753,6 +754,25 @@ Terminology rules:
 If a project uses different local filenames or runner labels, the local test
 surface must still map each executable lane back to this taxonomy before
 claiming closure.
+
+### Fixture And Proof Portability Rule
+
+Required closure lanes must be reproducible from the declared source boundary.
+
+A unit, semantic, or module-design conformance lane must not depend on an
+undeclared local path, sibling workspace, operator home directory, or mutable
+external fixture.
+
+If a proof needs external project evidence, one of these must be true:
+
+- a minimal fixture is checked into the source boundary
+- a fixture manifest declares the external source, version, and acquisition or
+  binding rule
+- the test is classified as harnessed sandbox, live sandbox, reference
+  comparison, or optional local evidence rather than required semantic closure
+
+Missing external fixtures must fail with a governed diagnostic that names the
+fixture authority and lane. They must not masquerade as product semantic failure.
 
 ---
 

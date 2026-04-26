@@ -798,6 +798,10 @@ the old path can no longer satisfy the closure law. Examples include:
   rehydrated into current truth
 - old and new truth intentionally disagree in a fixture and the new truth wins
   or the run fails closed
+- a same-name carrier, graph function, route, policy, or projection source with
+  different structure fails closed instead of being accepted as equivalent
+- required closure proof does not depend on undeclared local fixtures or mutable
+  sibling workspaces
 
 If the old path still works in normal execution, the ticket remains open unless
 that path is explicitly specified as retained compatibility.
