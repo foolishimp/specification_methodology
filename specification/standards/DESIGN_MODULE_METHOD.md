@@ -1388,6 +1388,9 @@ needed to audit, refactor, or reconstruct the realized boundary.
 - `ODD_METHOD.md` governs graph-native constructive carrier law
 - `DESIGN_MODULE_METHOD.md` governs preferred realization structure inside
   implementation and design modules
+- `UX_METHOD.md` refines this method for UX surfaces with rendering,
+  state-transition, and effect-membrane rules; load it only when the work
+  realizes a UX surface
 
 So:
 
@@ -1396,11 +1399,16 @@ So:
 - `DESIGN_MODULE_METHOD.md` answers what is the preferred implementation design
   discipline when you want low coupling, no interface bleed, and explicit effect
   management
+- `UX_METHOD.md` answers the additional discipline that applies when a module
+  realizes a UI surface
 
 For ODD-governed products, `ODD_METHOD.md` decides whether the operative unit is
 an outcome traversal, graph function, GTL module, or ABG runtime boundary.
 `DESIGN_MODULE_METHOD.md` then governs the deterministic module structure that
-realizes, evaluates, adapts, or projects inside that ODD boundary.
+realizes, evaluates, adapts, or projects inside that ODD boundary. When that
+boundary includes a UX surface, `UX_METHOD.md` adds the render-purity,
+reducer-purity, effect-membrane, and AssetSurface-binding rules required for
+strong functional consistency between front-end and back-end.
 
 ---
 
