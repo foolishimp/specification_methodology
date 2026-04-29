@@ -2,7 +2,7 @@
 
 **Governance**: Maintained by the methodology author. Read-only for agents unless explicitly asked to revise it.
 
-**Scope**: Defines the minimal local-first ticket layer complementary to `POSTING_GUIDE.md`.
+**Scope**: Defines the minimal local-first ticket and sprint layer complementary to `POSTING_GUIDE.md`.
 
 **Relation**: Refines `SPEC_METHOD.md` for local work tracking. Ticket types are
 not constitutional change classes. They are a separate execution-tracking
@@ -26,13 +26,14 @@ specification methodology without overloading deeper constitutional surfaces.
 The method separates:
 
 - `GOALS.md` for current epics and bounded work waves
+- `.ai-workspace/sprints/` for bounded execution batches and close review
 - tickets for enduring work items
 - `.ai-workspace/comments/` for ideas, proposals, reviews, handoffs, and
   closure
 
 This document is complementary to `POSTING_GUIDE.md`.
 
-- `TICKET_METHOD.md` defines durable work-item tracking
+- `TICKET_METHOD.md` defines durable work-item and sprint tracking
 - `POSTING_GUIDE.md` defines how ideas, reviews, plans, handoffs, and closure
   are published into the comment layer
 
@@ -70,6 +71,29 @@ Tickets are used for:
 - spikes
 - chores
 
+### Sprints
+
+Sprints are bounded execution batches.
+
+Each sprint is:
+
+- one manifest under `.ai-workspace/sprints/`
+- a control surface for a bounded body of work
+- a place to batch repeated authority references, closure law, evidence
+  expectations, and deferred local compliance debt
+- closed by an explicit sprint-close review
+
+Sprints are not constitutional authority. They operate under `SPEC_METHOD.md`
+and the project surfaces they cite.
+
+A sprint may contain durable tickets, manifest-local iteration entries, or both.
+Use tickets for work items that need durable identity across sessions. Use
+manifest-local iteration entries for small changes whose only independent value
+is traceability inside the sprint.
+
+The sprint is the batch authority. It does not erase the need for paydown
+tickets when close review finds debt that must survive past the sprint.
+
 ### Comments
 
 `.ai-workspace/comments/` is the message board.
@@ -91,11 +115,13 @@ governed by `POSTING_GUIDE.md`.
 Tickets are durable work authority.
 
 Execution contracts are the run-scoped admitted work surface derived from a
-ticket or drafted during intake when no durable ticket exists yet.
+ticket, from a sprint manifest plus included ticket or iteration entry, or
+drafted during intake when no durable work surface exists yet.
 
 The important distinction is:
 
 - a ticket survives sessions and work waves
+- a sprint survives one bounded execution batch and its close review
 - an execution contract is the current admitted execution function for one run
 
 Execution contracts are not a rival backlog or a second planning surface.
@@ -130,6 +156,7 @@ specification/
 ├── GOALS.md
 
 .ai-workspace/
+├── sprints/
 ├── tickets/
 │   ├── backlog/
 │   ├── active/
@@ -145,6 +172,8 @@ specification/
 ## Authority
 
 - `GOALS.md` is the epic layer
+- `.ai-workspace/sprints/` is the bounded execution-batch and sprint-close
+  review layer
 - `.ai-workspace/tickets/backlog/`, `.ai-workspace/tickets/active/`, and
   `.ai-workspace/tickets/completed/` are the ticket authority
 - `.ai-workspace/comments/` is the discussion and publication layer
@@ -154,6 +183,169 @@ There is no separate mandatory `ACTIVE_TASKS.md` in this model.
 If a project later wants a board view, it may generate one from the ticket
 folders, but that board is a projection only and must not become the source of
 truth.
+
+---
+
+## Sprint Rules
+
+### One File Per Sprint
+
+Each sprint lives in its own markdown manifest.
+
+Recommended naming:
+
+- `SPRINT-2026-04-30-process-navigator.md`
+- `SPRINT-2026-05-12-dashboard-density.md`
+
+The filename should carry:
+
+- stable id
+- short slug
+
+### Sprint Manifest Required Fields
+
+Each sprint manifest must record at least:
+
+- `id`
+- `title`
+- `status`
+- `goal`
+- `opened_at`
+- `updated_at`
+- `authority_refs`
+- `scope`
+- `excluded_boundaries`
+- `expected_change_classes`
+- `included_tickets` or `iterations`
+- `closure_trigger`
+- `closure_law`
+- `proof_surface`
+- `deferred_compliance`
+- `non_closure_conditions`
+- `paydown_policy`
+
+`authority_refs` names the upstream Goals, Intent, Product, Requirement,
+Design, or other governing surfaces the sprint operates under.
+
+`excluded_boundaries` names what the sprint is not allowed to change. Typical
+exclusions include product truth, data contracts, runtime semantics,
+governance/closure law, public carrier shape, and release criteria.
+
+`deferred_compliance` names any local proof, review, accessibility, screenshot,
+walkthrough, test, design wording, or trace cleanup intentionally deferred until
+sprint close.
+
+`paydown_policy` states how deferred debt becomes accepted, ticketed, repriced,
+or removed during close review.
+
+### Sprint Status
+
+Minimum sprint status model:
+
+- `active`
+- `closing`
+- `closed`
+- `superseded`
+
+The intended meaning is:
+
+- `active`: iteration is admitted inside the sprint boundary
+- `closing`: new iteration is frozen while close review and paydown
+  classification run
+- `closed`: close review finished and all remaining debt is accepted, ticketed,
+  repriced, or removed
+- `superseded`: the sprint boundary was wrong and a new authority surface,
+  sprint, or ticket set replaced it
+
+Projects may add `planned` or `cancelled` if needed, but those states do not
+replace close review.
+
+### Sprint Admission
+
+A sprint may admit work only when the manifest makes the boundary reviewable.
+
+Admission requires:
+
+- a bounded scope
+- cited authority
+- expected change classes
+- explicit excluded boundaries
+- a closure law
+- non-closure conditions
+- a paydown policy for deferred compliance
+
+The sprint may batch repeated closure criteria that would otherwise be copied
+into every included ticket.
+
+The sprint may not batch away intake triage. Substantive included tickets still
+record their lawful `change_class` and `re_entry_point`. Manifest-local
+iteration entries may rely on the sprint's declared class only when they remain
+inside the sprint scope and excluded boundaries.
+
+### Sprint Compliance Escrow
+
+A sprint may defer local compliance proof only when:
+
+- the manifest names the deferred proof or cleanup class
+- the debt is local to the sprint's admitted surface
+- expected correction cost is lower than per-change proof cost
+- the sprint is short enough that the debt remains reviewable
+- the close review must classify and pay down the debt
+
+Deferred compliance is not silent debt. It is escrow held by the sprint.
+
+The following may be eligible for escrow when the governing method allows it:
+
+- screenshots or walkthrough capture
+- visual review
+- accessibility cleanup
+- replay proof for product-meaningful UX interactions
+- design wording cleanup
+- trace cleanup
+- local realization cleanup
+
+The following may not be hidden in escrow:
+
+- new product truth
+- new or changed data contracts
+- new runtime, governance, closure, provenance, or evidence semantics
+- missing constructive carriers
+- changed public graph functions or AssetSurface contracts
+- law-changing work that needs `goal_reprice`, `intent_reprice`,
+  `product_reprice`, `requirement_reprice`, or `design_reframe`
+
+If one of those appears during the sprint, the sprint records the finding and
+the work exits the sprint path through a standalone ticket, a repricing action,
+or sprint supersession.
+
+### Sprint Close Review
+
+Sprint close begins by moving the manifest to `status: closing`.
+
+While closing:
+
+- new iteration inside that sprint is frozen
+- every included ticket or iteration entry is reviewed against the manifest
+- accumulated evidence is checked for durability
+- changed surfaces are walked against cited authority
+- deferred compliance is classified
+- paydown tickets are opened where debt must survive past the close review
+
+Each reviewed item is classified as one of:
+
+- `accepted`: compliant under the sprint authority
+- `local_paydown`: local debt remains and is captured by a paydown ticket
+- `design_reframe`: the work needs design repricing
+- `requirement_reprice`: the work needs requirement repricing
+- `product_reprice`: the work changes product definition
+- `remove`: the work should be backed out or kept out of closure
+
+A sprint may move to `closed` only when every item and every debt entry is
+classified and the resulting paydown or repricing work is durable.
+
+Sprint close can accept local paydown debt only when the governing method allows
+that debt to survive as explicit follow-up. Sprint close cannot accept hidden
+authority drift.
 
 ---
 
@@ -435,6 +627,10 @@ Tickets are not only planning notes.
 For substantive work, the ticket is the first-class human-readable draft of the
 execution contract.
 
+For sprint-contained work, the sprint manifest supplies the batch-level portion
+of that contract and the included ticket or iteration entry supplies the
+item-level portion.
+
 That means the runtime should be able to treat the ticket as:
 
 - the categorization proposal
@@ -444,9 +640,9 @@ That means the runtime should be able to treat the ticket as:
 
 before execution begins.
 
-If no durable ticket exists yet, the system should draft one ticket-shaped
-execution contract first, then validate it, then execute under the admitted
-result.
+If no durable ticket or sprint entry exists yet, the system should draft a
+ticket-shaped execution contract or sprint-entry-shaped execution contract
+first, then validate it, then execute under the admitted result.
 
 This is the intended workflow:
 
@@ -462,8 +658,8 @@ under unstated closure conditions.
 
 ### Execution Contract Admission
 
-The runtime execution flow should treat the ticket or ticket-shaped draft as an
-admission candidate, not as automatic truth.
+The runtime execution flow should treat the ticket, sprint entry, or drafted
+work contract as an admission candidate, not as automatic truth.
 
 Minimum expected states are:
 
@@ -851,6 +1047,56 @@ readable without forcing deferred work into comments or goals.
 
 ## Recommended Ticket Shape
 
+Recommended sprint shape:
+
+```md
+# SPRINT-2026-04-30 Process Navigator UX Iteration
+
+- id: SPRINT-2026-04-30-process-navigator
+- status: active
+- goal: process-navigator-ux
+- opened_at: 2026-04-30T09:00:00Z
+- updated_at: 2026-04-30T09:00:00Z
+
+## Authority
+
+- specification/GOALS.md#process-navigator-ux
+- specification/PRODUCT.md#process-navigator
+- build_tenants/typescript/design/PROCESS_NAVIGATOR.md
+
+## Scope
+
+Iterate the process navigator projection surface for layout, readability,
+interaction affordance, and visual evidence quality.
+
+## Excluded Boundaries
+
+- no product truth changes
+- no data contract changes
+- no runtime or governance semantics changes
+- no new constructive carrier
+
+## Expected Change Classes
+
+- realization_refactor
+
+## Iterations
+
+- id: UXI-001
+  intent: improve graph line readability
+  evidence_ref: screenshots/2026-04-30/UXI-001.png
+  debt: accessibility contrast check pending
+
+## Closure
+
+- closure_trigger: timebox, changed surface volume, or design-lead close request
+- closure_law: forensic walkthrough reviews each changed state against authority
+- proof_surface: screenshots plus walkthrough notes
+- deferred_compliance: screenshots, accessibility check, Msg-replay review
+- non_closure_conditions: product truth or data contract drift remains hidden
+- paydown_policy: open paydown tickets for accepted local debt; reprice authority drift
+```
+
 ```md
 # T-001 Add Product Layer To SPEC_METHOD
 
@@ -955,6 +1201,8 @@ rg -n "T-001|B-002" .ai-workspace/tickets
 - `GOALS.md` answers: what broad work wave matters now
 - `SPEC_METHOD.md` answers: what constitutional change class and re-entry point
   govern the work
+- sprints answer: what bounded execution batch is currently pricing proof,
+  evidence, and paydown
 - tickets answer: what durable units of work exist and what state they are in
 - comments answer: what was proposed, argued, decided, reviewed, or handed off
 - `POSTING_GUIDE.md` answers: how comment-layer publications are structured and

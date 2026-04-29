@@ -13,6 +13,7 @@
 **Repriced**: 2026-04-24 — Probabilistic work boundary clarified: the method governs declared work boundaries, admissible evidence, and control truth; it does not absorb domain HOW or worker-internal reasoning.
 **Repriced**: 2026-04-24 — Testing strategy taxonomy made explicit: design/module tests prove realization conformance; UAT/acceptance tests derive from requirements and scenarios and must run as sandbox or equivalent composed-product proof, split into harnessed and live lanes.
 **Repriced**: 2026-04-26 — Fixture portability clarified: required closure lanes cannot depend on undeclared local filesystem fixtures; external reference fixtures must be checked in, declared by manifest, or moved to an explicit sandbox/reference lane.
+**Repriced**: 2026-04-30 — Sprint execution-control boundary added: sprints may batch work and price proof cost under existing authority, but they do not become a new constitutional layer or hide authority drift.
 
 This document defines the philosophical baseline for spec-driven development.
 
@@ -56,7 +57,8 @@ Shipping behavior must trace back to constitutional authority. Live
 constitutional surfaces are versioned history and must change by supersession
 or withdrawal, not silent in-place mutation. New intent emerges from real use
 cases hitting the current model through explicit gap analysis, not ad hoc
-pressure.
+pressure. Sprints are execution-control batches for pricing proof cost and
+forcing close review; they are not authority layers and cannot hide drift.
 
 ---
 
@@ -290,6 +292,65 @@ Where a project uses build tenants, that split remains exact:
 - `specification/` is the shared constitutional `WHAT`
 - `build_tenants/` contains one or more independent `HOW` realizations of that shared `WHAT`
 - tenant-local realization is derivative unless and until the governing truth is ratified in specification
+
+---
+
+## Sprint Execution Boundary
+
+A sprint is a bounded execution-control surface.
+
+It is not a new layer in the constitutional chain.
+
+A sprint may batch work, coordinate tickets or iteration entries, price proof
+cost, and force close review under existing Goals, Intent, Product Definition,
+Requirements, and Design authority. It must not create, supersede, weaken, or
+override that authority.
+
+A lawful sprint states at least:
+
+- the goal or work-wave it serves
+- the upstream authority surfaces it depends on
+- the scope it admits
+- the product, requirement, design, runtime, data-contract, or governance
+  boundaries it excludes
+- the change classes it expects to contain
+- the local proof or compliance debt, if any, that may be deferred during the
+  sprint
+- the closure trigger and closure law
+- the paydown or repricing path for debt discovered at close
+
+Sprints exist because proof cost is not uniform. For some work, especially
+projection-surface and UX iteration, proving every micro-change before the next
+change can cost more than making the bounded change visible and correcting it
+at close. That optimization is lawful only when the deferred cost remains local,
+visible, bounded, and repayable.
+
+Deferred compliance inside a sprint is escrow, not acceptance. It cannot satisfy
+method, release, or product closure until it is paid down, explicitly accepted
+under the governing method, or repriced into the appropriate upstream surface.
+
+A sprint may be recommended for close when any of these become true:
+
+- its timebox expires
+- the intended scope has been reached
+- accumulated changed surface area makes continued iteration more expensive
+  than review
+- review uncertainty makes more work unsafe without reconciliation
+- discovered gaps suggest the sprint boundary is no longer the right container
+
+Sprint close is a forensic reconciliation event, not automatic approval. Close
+review compares the accumulated work and evidence against the governing
+authority, classifies each gap, accepts compliant work, opens paydown work for
+local debt, and escalates any authority drift through the lawful change class.
+
+If a sprint discovers a goal, intent, product, requirement, design, runtime,
+data-contract, governance, or other product-truth change, the sprint manifest
+does not authorize landing that change. The work must be split, escalated,
+repriced, or carried as explicit paydown according to the governing method.
+
+`TICKET_METHOD.md` defines the sprint and ticket mechanics. Domain refinements,
+such as `UX_METHOD.md`, may define when sprint compliance escrow is an
+appropriate cost optimization for that domain.
 
 ---
 

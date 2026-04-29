@@ -2,6 +2,7 @@
 
 **Status**: Active
 **Date**: 2026-04-26
+**Amended**: 2026-04-30 — Added UX sprint compliance escrow as the governed rapid-iteration use case for `SPEC_METHOD.md` sprint execution control and `TICKET_METHOD.md` sprint close review.
 **Amended**: 2026-04-27 — Tightened constitutional authority, UX/ODD carrier boundary, `Cmd` / `Sub` declaration, Msg-replay proof, external-seam validation, AssetSurface binding, scaffold exemption law, and design-module closure requirements so adopted UX surfaces cannot treat existing code, stack convention, or local precedent as rival authority. Prior 2026-04-26 amendment: Reframed as constitutional adoption of the Elm Architecture as the UX process model. Removed the architecture tier table; replaced with a process-model-without-stack-mandate clause mirroring `DESIGN_MODULE_METHOD.md` §4. Genericized framework-specific terminology (state cells, effect interpreter, render functions) so the method does not assume React, Elm-the-language, or any other implementation stack.
 **Governance**: Maintained by the methodology author.
 **Scope**: UX realization method for graph-native ODD products with web, desktop, or thin-client surfaces. Refines `DESIGN_MODULE_METHOD.md` with rendering, state-transition, and effect-membrane rules specific to UI work. Does not govern back-end realization or non-UX module design.
@@ -386,6 +387,70 @@ when the design module or ticket records:
 An exempt scaffold cannot become the production UX by accumulation. It must be
 retired, repriced into a governed UX surface, or kept outside product closure.
 
+### 13B. UX Sprint Compliance Escrow
+
+UX is the primary governed use case for sprint compliance escrow.
+
+Under `SPEC_METHOD.md` and `TICKET_METHOD.md`, a UX sprint may defer local UX
+compliance proof during a short iteration window when per-change proof cost is
+higher than expected correction cost.
+
+This is a cost-optimization rule. It does not weaken the UX process model.
+
+A UX sprint may escrow:
+
+- screenshots or walkthrough capture
+- visual review
+- copy, spacing, density, and layout cleanup
+- accessibility review and remediation
+- Msg-replay proof updates for product-meaningful interaction families
+- design-module wording cleanup
+- trace cleanup between changed UX states and governing authority
+
+A UX sprint may not escrow:
+
+- product-truth-changing `Msg` variants that lack an admitted carrier
+- new or changed `AssetSurface` contracts or equivalent typed product contracts
+- new navigation, information architecture, or selection authority that changes
+  product meaning
+- runtime, governance, closure, continuation, lineage, provenance, or evidence
+  semantics
+- release criteria or method law
+
+If one of those appears, the sprint records the finding and the work exits the
+UX sprint path through standalone repricing or sprint supersession. The UX layer
+must still not become the hidden constructive carrier.
+
+A UX sprint should close when continued iteration is more expensive or less
+trustworthy than review. Valid close triggers include:
+
+- the declared timebox ends
+- accumulated changed states are too numerous for casual review
+- screenshots or walkthrough evidence no longer explain the current surface
+- interaction behavior changed beyond visual polish
+- reviewer uncertainty makes more iteration unsafe without reconciliation
+
+UX sprint close is a forensic walkthrough. The walkthrough reviews each changed
+screen, state, and product-meaningful interaction against the cited authority.
+
+Each finding is classified as:
+
+- `accepted`: compliant with this method and the cited design
+- `local_paydown`: local UX debt remains and is captured by a paydown ticket
+- `design_reframe`: design authority must change
+- `requirement_reprice`: requirement authority must change
+- `product_reprice`: product definition must change
+- `remove`: the change should be backed out or kept out of closure
+
+The sprint may close with explicit local paydown tickets only where the debt is
+local to UX realization and the governing method allows follow-up. It may not
+close while product-truth carrier gaps, hidden state continuation, or authority
+drift remain unclassified.
+
+Method closure for a product UX surface still requires the §8A Msg-replay proof
+and §11 accessibility obligations unless an explicit exemption is recorded. The
+sprint can defer those obligations during iteration; it cannot erase them.
+
 ---
 
 ## 14. Failure Pattern
@@ -408,6 +473,8 @@ A UX surface is violating this method when any of these are true:
 14. external data crosses into UX state without runtime validation
 15. a scaffold or debug surface is reachable, mutating, or used as proof without the §13A exemption record
 16. a project-local ADR, component convention, or existing code pattern is used to weaken this method
+17. a UX sprint claims closure while deferred proof, accessibility, carrier,
+    scaffold, or authority debt remains unclassified or un-ticketed
 
 Any of these is a method violation. Repeated violations are not normalized by usage; they are repaired or the surface is repriced.
 
@@ -430,6 +497,8 @@ A UX surface review under this method should answer:
 11. What realization stack is chosen, and how does it preserve the §4 Elm process model?
 12. Does the surface honor the §8 view-does-not-own-continuation rule under user replay?
 13. Does the design module include the `DESIGN_MODULE_METHOD.md` carrier set and structural carrier diagram required for closure?
+14. If the work used a UX sprint, did close review classify every deferred proof,
+    accessibility, carrier, scaffold, and authority finding?
 
 If any of these cannot be answered, the design module is incomplete.
 
@@ -440,7 +509,7 @@ If any of these cannot be answered, the design module is incomplete.
 - `SPEC_METHOD.md` governs constitutional process, authority flow, repricing, and migration law.
 - `ODD_METHOD.md` governs graph-native constructive carrier law. UX surfaces are projection / query surfaces under §10 of that method.
 - `DESIGN_MODULE_METHOD.md` governs deterministic realization discipline at the module level. `UX_METHOD.md` refines it for UX modules.
-- `TICKET_METHOD.md` governs ticket lifecycle. UX work uses tickets the same way other realization work does.
+- `TICKET_METHOD.md` governs ticket and sprint lifecycle. UX work may use sprint compliance escrow under §13B when the sprint boundary makes deferred proof visible, bounded, and payable.
 - `WORLD_MODEL_METHOD.md` governs world-model semantic law for products that have a world-model dimension. UX surfaces over world-model state still bind through `AssetSurface` (or equivalent) per §7.
 
 A UX-touching design module reads `DESIGN_MODULE_METHOD.md` plus `UX_METHOD.md`. A non-UX design module reads `DESIGN_MODULE_METHOD.md` only and ignores this surface.
@@ -470,4 +539,7 @@ When adopted, this method is the sole UX realization authority for the covered
 surface. Product-truth-changing UX messages must map to admitted product
 carriers; the UX layer must not become the hidden constructive carrier. External
 payloads are runtime-validated before entering UX state. Scaffolds and debug
-surfaces are governed unless explicitly exempted, bounded, and retired.
+surfaces are governed unless explicitly exempted, bounded, and retired. UX
+sprints may defer local proof and cleanup only as visible compliance escrow;
+close review must classify and pay down the debt before method closure is
+claimed.
