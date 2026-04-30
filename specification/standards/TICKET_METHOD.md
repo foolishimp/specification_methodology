@@ -1,44 +1,5 @@
 # Ticket Method
 
-**Governance**: Maintained by the methodology author. Read-only for agents unless explicitly asked to revise it.
-
-**Scope**: Defines the minimal local-first ticket and sprint layer complementary to `POSTING_GUIDE.md`.
-
-**Relation**: Refines `SPEC_METHOD.md` for local work tracking. Ticket types are
-not constitutional change classes. They are a separate execution-tracking
-taxonomy that should be used alongside the change-class model from
-`SPEC_METHOD.md`.
-
-For implementation migrations, `SPEC_METHOD.md` remains the source of law while
-`TICKET_METHOD.md` is the enforceable ticket-level check surface used to judge
-individual completion claims.
-
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology and the
-default meaning of `Source Project`, `Product`, `Install`, and `Artifact`.
-
----
-
-## Purpose
-
-This document defines a minimal local-first work-tracking method that fits the
-specification methodology without overloading deeper constitutional surfaces.
-
-The method separates:
-
-- `GOALS.md` for current epics and bounded work waves
-- `.ai-workspace/sprints/` for bounded execution batches and close review
-- tickets for enduring work items
-- `.ai-workspace/comments/` for ideas, proposals, reviews, handoffs, and
-  closure
-
-This document is complementary to `POSTING_GUIDE.md`.
-
-- `TICKET_METHOD.md` defines durable work-item and sprint tracking
-- `POSTING_GUIDE.md` defines how ideas, reviews, plans, handoffs, and closure
-  are published into the comment layer
-
----
-
 ## Core Model
 
 ### Goals

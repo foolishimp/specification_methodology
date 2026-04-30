@@ -1,13 +1,5 @@
 # Posting Guide
 
-**Governance**: Maintained by the methodology author. Read-only for agents unless explicitly asked to revise it.
-
-**Scope**: Applies to posts written under `.ai-workspace/comments/`.
-
----
-
-## Purpose
-
 Posting is the commentary layer of the repo.
 
 Posts are for:

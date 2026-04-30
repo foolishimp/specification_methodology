@@ -1,17 +1,5 @@
 # UX Method
 
-**Status**: Active
-**Date**: 2026-04-26
-**Amended**: 2026-04-30 — Added UX sprint compliance escrow as the governed rapid-iteration use case for `SPEC_METHOD.md` sprint execution control and `TICKET_METHOD.md` sprint close review.
-**Amended**: 2026-04-27 — Tightened constitutional authority, UX/ODD carrier boundary, `Cmd` / `Sub` declaration, Msg-replay proof, external-seam validation, AssetSurface binding, scaffold exemption law, and design-module closure requirements so adopted UX surfaces cannot treat existing code, stack convention, or local precedent as rival authority. Prior 2026-04-26 amendment: Reframed as constitutional adoption of the Elm Architecture as the UX process model. Removed the architecture tier table; replaced with a process-model-without-stack-mandate clause mirroring `DESIGN_MODULE_METHOD.md` §4. Genericized framework-specific terminology (state cells, effect interpreter, render functions) so the method does not assume React, Elm-the-language, or any other implementation stack.
-**Governance**: Maintained by the methodology author.
-**Scope**: UX realization method for graph-native ODD products with web, desktop, or thin-client surfaces. Refines `DESIGN_MODULE_METHOD.md` with rendering, state-transition, and effect-membrane rules specific to UI work. Does not govern back-end realization or non-UX module design.
-**Relation**: Refines `DESIGN_MODULE_METHOD.md` for UX surfaces. Composes with `ODD_METHOD.md` (the view layer is a projection / query surface in ODD terms). Binds to `AssetSurface`-style contracts when the product publishes them. Does not replace `DESIGN_MODULE_METHOD.md`; an LLM agent or designer working on a non-UX surface need not load this method.
-
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this method explicitly narrows a term.
-
----
-
 ## 1. Position
 
 `UX_METHOD.md` exists to make one instruction precise:

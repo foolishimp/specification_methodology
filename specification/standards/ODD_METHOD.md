@@ -1,19 +1,5 @@
 # ODD Method
 
-**Status**: Approved
-**Date**: 2026-04-05
-**Amended**: 2026-04-26 — Added projection-source coherence law: ODD
-projection and query lanes must derive from admitted carrier/runtime truth or
-fail closed on structural drift; name equality is not enough.
-**Amended**: 2026-04-26 — Tightened outcome-first realization law: an ODD product must use its own edge-traversal unit of compute to build operative framework behavior, with outcome traversals first, declarative GTL/ABG carrier structure second, and imperative adapter code last. Prior 2026-04-24 amendment: added foundational GTL/ABG application law that ABG owns continuation and re-entry, while domain applications remain cooperative bounded-step subsystems that publish assets or evidence and return control. Clarified that one vector or edge traversal is the bounded unit of probabilistic compute and that GTL/ABG govern traversal contracts and control truth, not worker-internal HOW. Prior 2026-04-21 amendment: absorbed `GRAPH_METHOD.md` (archived at `../../archive/GRAPH_METHOD.md`). Graph-native substrate law (Graph Model, Product Boundary, Self-Host Boundary, Manual Walkthrough/Automation Rules, Scenario/Installed-Dev/Dogfooding/Release/Failure Pattern) consolidated into this method surface. Source-authority vs installed-distribution distinction made explicit in Method Folder Semantics. Software-development realization topology labelled as canonical specialization rather than universal ODD law. Vector vs graph-function distinction tightened in Core Law §11.7.
-**Governance**: Maintained by the methodology author.
-**Scope**: Constitutional method for graph-native ODD products — covering graph-native traversal governance substrate and ODD product-authoring law over GTL and ABG.
-**Relation**: Refines `SPEC_METHOD.md`. Use this method when building a graph-native ODD product, or when repricing an imperative prototype into one.
-
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this method explicitly narrows a term.
-
----
-
 ## 1. Position
 
 `ODD_METHOD.md` exists to make one instruction precise:
@@ -348,6 +334,9 @@ That audit should ask at minimum:
 - what projected/query state is exposed without replacing ABG runtime truth
 - whether any product command, service, or query surface is trying to replace
   ABG continuation with tenant-local orchestration
+- whether the execution-authority audit proves that traversal loops, actor
+  invocation, process supervision, retry/continuation, runtime events, and
+  closure folds remain owned by ABG
 
 The governance rule is:
 
@@ -429,10 +418,15 @@ ABG owns:
 
 - traversal
 - dispatch
+- actor invocation
+- process supervision
 - graph-call realization
 - runtime facts
+- runtime event emission and replay
 - frames
 - continuations
+- retry and correction control
+- closure folds over runtime truth
 - re-entry after publish boundaries
 - lineage and provenance
 
@@ -624,7 +618,50 @@ control flow, it is no longer behaving as an ODD application over GTL/ABG. It
 has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
-### 11.5B Projection-Source Coherence
+### 11.5B Execution Authority Audit
+
+Any ODD product over GTL/ABG that changes runtime, `start`/`iterate`, worker
+transport, actor invocation, process supervision, plugin dispatch, event
+projection, closure, assurance, retry, or continuation semantics must include
+an execution-authority audit before activation and closure.
+
+The audit must prove that there is exactly one execution authority for the
+affected traversal. For a GTL/ABG product, that authority is ABG unless the
+product being changed is ABG itself or another explicitly ratified runtime
+product.
+
+The audit must inventory at least these surfaces:
+
+| Surface | Lawful owner | Product or plugin role | Forbidden local implementation |
+| --- | --- | --- | --- |
+| Traversal selection and vector advance | ABG | Declare graph functions, vectors, assets, and domain policy inputs | Product-local runner deciding the next traversal step |
+| Actor invocation and process supervision | ABG | Provide actor bindings, prompts, payload adapters, and evidence adapters | Product-local worker `spawn`, `spawnSync`, `exec`, timeout, kill, or stdout/stderr supervision outside the ABG actor seam |
+| Retry, correction, continuation, and re-entry | ABG | Publish bounded-step outputs and return control | Product-local retry loops, carry-over controller memory, or hidden `next` authority |
+| Runtime event emission, append, replay, and projection | ABG | Map domain evidence into admitted event payloads | Direct event append, side ledger mutation, or projection reconstruction that bypasses ABG runtime truth |
+| Closure fold and assurance gate | ABG, with product policy and gain inputs | Provide domain interpretation, evaluators, gap reasons, and policy weights | Worker self-report or product postflight directly closing the runtime unit |
+
+The audit is not satisfied by reviewing produced artifacts alone. It must
+include a code, call-graph, or static-surface review appropriate to the
+language and tenant, and it must name the evidence used to rule out hidden
+execution authority.
+
+Non-closure conditions include:
+
+- a downstream product contains its own `start` or `iterate` loop for an ABG
+  traversal
+- product or plugin code supervises worker processes outside the ABG actor seam
+- product or plugin code constructs retry, continuation, or re-entry state
+  outside ABG
+- product or plugin code appends runtime events or mutates runtime ledgers
+  without ABG admission
+- plugin output carries next-vector, closure, actor-invocation, process, or
+  runtime-event authority instead of evidence or policy input
+- two controllers can each claim authority for one traversal
+
+If any of those conditions are present, the product may be useful, but it is
+not currently ODD-correct over GTL/ABG.
+
+### 11.5C Projection-Source Coherence
 
 Projection and query lanes are downstream read models over admitted carrier,
 runtime, event, or source truth.
@@ -825,6 +862,9 @@ The method is being violated when any of these are true:
 9. imperative service code owns an operative transition that has no published graph-function outcome contract
 10. framework behavior is implemented as workspace orchestration first and only later described with GTL vocabulary
 11. imperative code decides closure, continuation, semantic target movement, or lineage truth outside declared graph-function, ABG runtime, or product-owned carrier truth
+12. a GTL/ABG product or plugin carries hidden execution authority for
+    traversal loops, actor invocation, process supervision, retry,
+    continuation, runtime events, projection, or closure folds
 
 ---
 
@@ -849,10 +889,12 @@ the expected sequence is:
 7. define the machine-readable function catalog
 8. define or update the GTL module, including outer callable carriers and live traversal boundaries
 9. define how coarse carriers, refined inner carriers, and executable proof lanes close together without scale contradiction
-10. define the projection/query lane as projection over admitted constructive
+10. complete the execution-authority audit for affected runtime, plugin,
+    worker, event, projection, assurance, closure, or continuation surfaces
+11. define the projection/query lane as projection over admitted constructive
     history, including the structural coherence rule between the read model and
     its source carrier
-11. only then implement code, policy, and transport surfaces
+12. only then implement code, policy, and transport surfaces
 
 The instruction does **not** mean:
 
@@ -913,8 +955,10 @@ An LLM ramping into an ODD product should quickly answer:
 7. What is the projection/query lane?
 8. What admitted carrier, runtime, event, or source truth does each projection
    derive from, and how does it fail closed on structural drift?
-9. What proof surfaces close the current capabilities?
-10. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
+9. What proves that execution authority has not escaped ABG into product or
+   plugin code?
+10. What proof surfaces close the current capabilities?
+11. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
 
 If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
 
@@ -922,4 +966,4 @@ If those questions cannot be answered quickly, the product is not yet sufficient
 
 ## 20. Canonical Compression
 
-ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last.
+ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, ABG-owned execution authority, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last.

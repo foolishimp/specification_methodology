@@ -1,36 +1,5 @@
 # Spec-Driven Homeostatic Methodology
 
-**Status**: Approved
-**Date**: 2026-03-24
-**Derived from**: 20260324T142230_NOTE_spec-driven-homeostatic-methodology.md
-**Repriced**: 2026-03-24 — Verification Layers and Renewal Path added, derived from product-owner scenario analysis (20260324T165057_PRODUCT_SCENARIOS_abg-gtl-first-10.md)
-**Repriced**: 2026-04-07 — Product definition layer made explicit in the constitutional chain, bootstrap rule, and spec-driven method
-**Repriced**: 2026-04-07 — Goals layer made explicit in the constitutional chain, bootstrap rule, and spec-driven method
-**Repriced**: 2026-04-15 — Recursive product taxonomy raised into the baseline method and spec-method terminology tightened around product-definition surfaces
-**Repriced**: 2026-04-15 — Baseline ambiguity terms made substrate-agnostic, trace-closure and anti-drift rules consolidated, and source-versus-installed authority paths made explicit
-**Repriced**: 2026-04-18 — Core interface refactors strengthened into inside-out migration waves with explicit consumer audits, bridge prohibition, and proof-last closure
-**Repriced**: 2026-04-21 — Inside-Out First Sequencing subsection added under Core Interface Migration Rule; graph-native refinement reference repointed to `ODD_METHOD.md` following absorption of `GRAPH_METHOD.md` into that method surface
-**Repriced**: 2026-04-24 — Probabilistic work boundary clarified: the method governs declared work boundaries, admissible evidence, and control truth; it does not absorb domain HOW or worker-internal reasoning.
-**Repriced**: 2026-04-24 — Testing strategy taxonomy made explicit: design/module tests prove realization conformance; UAT/acceptance tests derive from requirements and scenarios and must run as sandbox or equivalent composed-product proof, split into harnessed and live lanes.
-**Repriced**: 2026-04-26 — Fixture portability clarified: required closure lanes cannot depend on undeclared local filesystem fixtures; external reference fixtures must be checked in, declared by manifest, or moved to an explicit sandbox/reference lane.
-**Repriced**: 2026-04-30 — Sprint execution-control boundary added: sprints may batch work and price proof cost under existing authority, but they do not become a new constitutional layer or hide authority drift.
-
-This document defines the philosophical baseline for spec-driven development.
-
-It states why specification is authority, what the constitutional chain is, and
-what counts as sufficiency, drift, proof, and repricing.
-
-It is intentionally general.
-
-Where a product is realized as a graph-native system, this baseline is refined
-by a stronger constitutional method such as `ODD_METHOD.md`, which covers
-graph-native execution law and graph-native ODD product-authoring law.
-
-Use `GLOSSARY_GUIDE.md` for shared terminology across recursive product,
-graph-native, and world-model work.
-
----
-
 ## Canonical Compression
 
 Spec-driven development treats specification as constitutional source, not

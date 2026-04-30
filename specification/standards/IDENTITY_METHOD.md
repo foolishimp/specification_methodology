@@ -1,19 +1,5 @@
 # Identity Method
 
-**Governance**: Maintained by the methodology author.
-
-**Scope**: Shared identity and naming method for constitutional surfaces,
-runtime artifacts, and derived domain products.
-
-**Relation**: Composes with `SPEC_METHOD.md`, `ODD_METHOD.md`,
-`WORLD_MODEL_METHOD.md`, and `RELEASE_METHOD.md`.
-
-Use this method when defining, parsing, publishing, or overriding identities
-for requirements, design surfaces, scenarios, runtime artifacts, and other
-governed objects.
-
----
-
 ## Position
 
 Identity must be:

@@ -1,8 +1,6 @@
 # Standards Library
 
-This tree is the authoritative source for the shared specification methodology.
-
-It includes:
+This tree is the authoritative source for the shared specification methodology:
 
 - constitutional method surfaces such as `SPEC_METHOD.md`, `ODD_METHOD.md`,
   `IDENTITY_METHOD.md`, and `WORLD_MODEL_METHOD.md`

@@ -1,32 +1,5 @@
 # Design Module Method
 
-**Status**: Approved
-**Date**: 2026-04-23
-**Amended**: 2026-04-26 — Clarified ODD alignment: this method governs
-deterministic realization structure inside modules, while ODD-governed products
-must still express operative framework behavior as outcome-first graph
-traversals under `ODD_METHOD.md`.
-**Amended**: 2026-04-26 — Added projection-source coherence review law:
-projection modules must derive from admitted carrier truth or fail closed on
-structural drift; name-only matching is not enough.
-**Governance**: Maintained by the methodology author.
-**Scope**: Realization-level design method for module, schema, carrier, and
-data-entity design in projects that want low coupling, modular composition,
-immutable carriers, explicit effect management, and minimal semantic bleed
-between interfaces.
-**Relation**: Complements `SPEC_METHOD.md`, `ODD_METHOD.md`, and
-`TICKET_METHOD.md`. This method is not constitutional process law and does not
-own ticket lifecycle mechanics. It is a realization-method surface that a
-project may adopt in design surfaces, ADRs, tickets, and reviews. Once adopted
-for a project or boundary, it is binding realization law for that scope.
-Ticket status, closure, reopening, dependency, and follow-up tracking remain
-governed by `TICKET_METHOD.md`.
-
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology unless this
-method explicitly narrows a term.
-
----
-
 ## 1. Purpose
 
 This method exists for projects that want a stronger implementation discipline

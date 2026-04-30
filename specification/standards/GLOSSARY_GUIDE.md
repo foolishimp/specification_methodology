@@ -1,25 +1,5 @@
 # Glossary Guide
 
-**Governance**: Maintained by the methodology author.
-
-**Scope**: Shared terminology reference for the specification methodology
-library.
-
-**Relation**: Companion glossary for `SPEC_METHOD.md` and its refinements.
-Use this guide to keep terminology stable across method, guide, and product
-surfaces.
-
----
-
-## Purpose
-
-This glossary centralizes the highest-load terms that otherwise drift across
-recursive product, graph-native, and world-model work.
-
-It is a reference surface, not a constitutional method in its own right.
-
----
-
 ## Recursive Product Terms
 
 ### Substrate

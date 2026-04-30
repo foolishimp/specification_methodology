@@ -1,34 +1,5 @@
 # World Model Method
 
-**Status**: Approved
-**Date**: 2026-04-15
-**Amended**:
-- 2026-04-21 — Theoretical Underpinnings Of The Markov Object and
-  Markov Object Construction Law added; Markov Object definition and
-  Representation Law tightened; empirical companion surface added.
-- 2026-04-22 — epistemic status clarified: "empirically validated"
-  softened to "consistent with candidate evidence"; "Four Empirical
-  Refinements" retitled to "Four Working Refinements Indicated By The
-  Empirical Program"; Epistemic Status Of The Construct subsection
-  added.
-- 2026-04-24 — Markov-object primacy raised: the method now treats the
-  published Markov-object cut as the primary semantic unit of world-model
-  construction, publication, and composition; residual generic
-  "world-model object" wording demoted to shorthand; companion-surface
-  wording aligned with candidate-status claims.
-**Derived from**: world-model product and methodology R&D, repriced into a
-single constitutional world-model method surface
-
-This document defines the constitutional method for world-model construction.
-
-It governs world-model semantics, representation, publication, composition, and
-downstream projection.
-
-It is method-level. It currently carries the governing representation and
-publication law for world-model work.
-
----
-
 ## Position
 
 Most institutional systems preserve values and lose the semantic context needed
