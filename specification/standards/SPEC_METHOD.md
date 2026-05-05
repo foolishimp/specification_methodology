@@ -457,6 +457,12 @@ For the declared change span, the framework must prove:
 
 If that proof is missing, the change remains open even if one local artifact already looks correct.
 
+When a code/test mismatch appears during ticketed work, implementation behavior
+is evidence but not authority. The mismatch is reconciled through the admitted
+ticket, its intake triage, its lawful re-entry point, and the governing
+requirement, design, module, graph, carrier, or closure surface. `TICKET_METHOD.md`
+defines the ticket-local test-case authority rule.
+
 ---
 
 ## Core Interface Migration Rule
@@ -706,6 +712,11 @@ Scenarios do not replace requirement categories. They primarily validate capabil
 ## Testing Strategy Taxonomy
 
 Every executable proof surface must declare its authority source.
+
+For ticketed work, the immediate proof authority is the admitted ticket and its
+triage path. Tests derive from the ticket's lawful re-entry point and the
+governing constitutional or realization-law surfaces it cites; they do not
+derive expected results from current implementation behavior.
 
 Authority source is not the same thing as execution breadth. A test may be
 small or broad, fast or slow, deterministic or live, but it still derives from

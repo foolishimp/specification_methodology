@@ -664,6 +664,51 @@ For implementation migrations, typical non-closure conditions include:
 These conditions are not optional commentary. They are the anti-self-deception
 surface for execution.
 
+### Test Case Authority
+
+Tests are proof projections from admitted work authority.
+
+Every substantive test case should derive from:
+
+```text
+ticket -> intake triage -> lawful re-entry point -> governing requirement,
+design, module, graph, carrier, or closure surface -> test expectation
+```
+
+Tests do not derive authority from the current implementation.
+
+Implementation behavior is evidence. It is not the arbiter of the expected
+result when code and tests disagree.
+
+When a ticket is fixed and a mismatch appears between implementation behavior
+and test expectation, review must reconcile the mismatch in this order:
+
+1. the ticket's `change_intent`, `change_class`, `re_entry_point`,
+   `target_truth`, `superseded_truth`, `closure_law`,
+   `evaluation_criteria`, and `non_closure_conditions`
+2. the ticket's intake triage and first missing layer
+3. the governing requirement, design, module, graph-function, carrier, or
+   other cited authority surface
+4. the test case expectation
+5. the implementation
+
+The implementation may prove that a test is stale, incomplete, or too narrow,
+but it cannot by itself authorize changing the expected result.
+
+Changing a test only because the current code behaves differently is a
+ticket-method defect.
+
+If a test predates a lawful ticket repricing, update or remove the test only
+after naming the governing ticket and the authority change that superseded the
+old expectation.
+
+If the ticket is stale, ambiguous, or missing the authority needed to decide the
+test expectation, the work must re-enter triage before either the code or test
+is treated as correct.
+
+A passing test is closure evidence only when the test expectation can be traced
+back to the admitted ticket and its governing authority chain.
+
 ### Implementation Migration Category
 
 If `ticket_category: implementation_migration`, the ticket must carry both:
