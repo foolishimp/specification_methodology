@@ -691,6 +691,242 @@ truth surface until reconciled.
 Negative proof for a projection must include structural drift, not only missing
 source truth.
 
+### 11.5D Constructive Evaluation And Yield Loop
+
+Every ODD product over GTL/ABG must preserve one constructive evaluation loop
+from observation to next lawful action.
+
+The loop is framework-independent. Product implementations may use different
+carrier names, but they must preserve this authority shape:
+
+```text
+ObservationSnapshot
+-> TargetObligationBinding
+-> PriorityProjection
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> EvaluatorProjection
+```
+
+The objects have these method-level meanings:
+
+| Object | Definition | Authority |
+| --- | --- | --- |
+| `Worksite` | Current workspace, runtime archive, transform assets, product asset root, profile, and observed file or process state. | Observable substrate, not authority by itself. |
+| `RuntimeEventLog` | Append-only admitted runtime facts. | ABG runtime truth. |
+| `RuntimeProjection` | Replay-derived current runtime state over event log and execution basis. | ABG projection truth. |
+| `ObservationSnapshot` | Read-only view of runtime truth plus worksite facts relevant to construction. | ABG evaluator carrier with product domain rows. |
+| `GapPressureRow` | Typed pressure over missing, partial, blocked, waiting, or ambiguous assets and evidence. | Product domain meaning over admitted observation. |
+| `TargetObligationBinding` | Exact binding from gap pressure to target assets, required roles, evidence refs, and admissible graph outcomes. | Product domain binding over GTL/ABG action authority. |
+| `ActionCatalog` | Published lawful graph actions: graph functions, vectors, targets, inputs, and eligible outcomes. | GTL/product publication consumed by ABG. |
+| `PriorityProjection` | Deterministic ranking over bound lawful actions under visible policy. | ABG evaluator kernel plus product policy. |
+| `ConstructionIntent` | Admitted selected action for one bounded graph invocation. | ABG admission and traversal authority. |
+| `AdmittedEvidence` | Admitted worker, process, product, execution, materialization, liveness, and postflight evidence. | ABG/product admission, not worker self-closure. |
+| `EdgeFulfillmentLedger` | Evidence and convergence carrier for one edge attempt or version. | Closure evidence truth. |
+| `EdgeClosureDecision` | Sum type over the ledger: close, yield, retry, repair, re-enter, reprice, block. | Closure decision truth. |
+| `EvaluatorProjection` | Read model that observes the closure decision plus current truth and selects a next graph action only when lawful. | ABG evaluator projection with product policy. |
+
+The loop is governed by these axioms:
+
+**A0. One Surface**
+
+There is one authoritative computational surface for traversal consequence:
+
+```text
+ObservationSnapshot
+-> TargetObligationBinding
+-> PriorityProjection
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> EvaluatorProjection
+```
+
+No CLI branch, prompt prose, postflight string, gap-dossier action list, query
+projection, service method, or local operator summary may become a rival source
+of traversal truth.
+
+**A1. Worksite Is Observed, Not Trusted**
+
+The file system, process output, screen logs, worker artifacts, and product
+files are observations. They become authority only after admission into typed
+evidence and fold into ledger and decision truth.
+
+**A2. Exact Target Binding**
+
+Every constructive action must bind the current gap to exact target assets and
+obligations before invocation:
+
+```text
+gap pressure + target assets + required roles + evidence refs
+-> TargetObligationBinding
+```
+
+A broad edge cannot satisfy a specific product or evidence gap unless the
+binding proves that edge is the lawful action for those exact assets.
+
+**A3. Published Action Law**
+
+The evaluator may rank only published lawful actions from the action catalog. If
+the desired action is unpublished, the lawful result is a typed no-action
+disposition, not fallback to a broad executive graph or local script.
+
+**A4. Evaluator Totality**
+
+The evaluator must be total.
+
+If an active closure decision is `yield`, the evaluator resumes or yields the
+same edge from replay-visible resume truth. Otherwise:
+
+```text
+if higher-priority lawful action exists:
+  select it
+else if current graph edge remains lawful:
+  follow the graph
+else if authority is missing:
+  reprice or block
+else:
+  block with typed no-action disposition
+```
+
+Default graph following is ordinary, but it is still an evaluator decision, not
+hidden sequential control.
+
+**A5. F_P Freedom, F_D Authority**
+
+F_P may inspect, discover, reason, draft, transform, and propose within the
+bounded action. F_P must not close the edge, emit runtime events, mutate ledgers,
+or decide re-entry. F_D/ABG/product admission owns durable evidence and closure
+truth.
+
+**A6. Evidence Before Closure**
+
+No edge closes from raw artifact presence, raw worker report, raw process
+success, or CLI summary. Closure is a fold over admitted evidence:
+
+```text
+AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+```
+
+**A7. Ledger Is Evidence, Not Action Selector**
+
+`EdgeFulfillmentLedger` records evidence and convergence:
+
+```text
+counts
+obligation rows
+materialization refs
+liveness refs
+admission refs
+edge_converged
+```
+
+It does not select the next action. Action selection belongs to the evaluator
+over `EdgeClosureDecision` plus current observed truth.
+
+**A8. Closure Decision Is A Sum Type**
+
+The closure decision vocabulary is:
+
+```text
+close
+yield
+retry
+repair
+re-enter
+reprice
+block
+```
+
+Each disposition is replay-visible and must carry basis and reason refs
+sufficient to reproduce the decision.
+
+**A9. Yield Is Lawful Iterate**
+
+`yield` is the lawful iteration boundary:
+
+```text
+same edge or attempt remains lawful
+progress or waiting state is admitted
+resume basis is replay-visible
+control returns without failure classification
+```
+
+Yield is not retry. Yield is not block. Yield is not timeout. Yield is not a
+local CLI loop. It is the pressure-release state that lets long-running,
+bounded, or partially productive work return control without losing the current
+edge.
+
+**A10. Liveness Does Not Close Semantic Truth**
+
+Liveness observes activity, inactivity, process state, and interruption. It can
+support yield or liveness interruption. It cannot by itself declare semantic
+failure, semantic closure, or requirement non-satisfaction.
+
+**A11. Re-Entry Is Graph Law**
+
+Repair and re-entry are graph actions selected from admitted closure truth and
+published action authority. They are not local retry branches over strings.
+
+**A12. Public Query Is A Read-Only Evaluator View**
+
+A public query or gaps view may render the same evaluator truth the runner
+consumes. It must not append events, invoke workers, admit intent, or choose
+traversal by itself.
+
+**A13. Replayability**
+
+Every closure decision and next-action selection must be reproducible from:
+
+```text
+RuntimeEventLog
++ execution basis
++ admitted evidence
++ EdgeFulfillmentLedger
++ EdgeClosureDecision
++ visible policy refs
+```
+
+If replay cannot reproduce the decision, the implementation has created hidden
+state.
+
+**A14. Method Ownership**
+
+ABG owns runtime truth, event replay, graph-call lifecycle, actor/process
+supervision, continuation, and re-entry mechanics. The product owns domain asset
+meaning, graph-function catalog meaning, gap interpretation, and priority
+policy. Design Module Method governs realization modules inside that split; it
+must not fragment the evaluator into module-local decision authorities.
+
+The constitutional equation is:
+
+```text
+let O = observe(RuntimeEventLog, Worksite)
+let B = bind(O.gaps, ActionCatalog, target obligations)
+let P = rank(B, Policy)
+let I = admit_intent(P.selected)
+let E = admit_evidence(invoke(I))
+let L = ledger(E, B.obligations)
+let D = closure_decision(L)
+let N = evaluate_next(D, observe(RuntimeEventLog, Worksite))
+
+return N
+```
+
+Where:
+
+```text
+D.disposition in {close, yield, retry, repair, re-enter, reprice, block}
+```
+
+The implementation is correct only when the next work decision is derived from
+that equation and no other path can decide what work happens next.
+
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
 ODD method gives the product shape, not the domain semantics.
@@ -865,6 +1101,12 @@ The method is being violated when any of these are true:
 12. a GTL/ABG product or plugin carries hidden execution authority for
     traversal loops, actor invocation, process supervision, retry,
     continuation, runtime events, projection, or closure folds
+13. yield or lawful iteration is flattened into retry, block, timeout, local
+    waiting state, or a hidden CLI loop instead of being represented as
+    replay-visible closure disposition
+14. a public query, gaps view, postflight string, service method, or installed
+    operator summary can decide next work outside the constructive evaluation
+    loop
 
 ---
 
@@ -891,10 +1133,15 @@ the expected sequence is:
 9. define how coarse carriers, refined inner carriers, and executable proof lanes close together without scale contradiction
 10. complete the execution-authority audit for affected runtime, plugin,
     worker, event, projection, assurance, closure, or continuation surfaces
-11. define the projection/query lane as projection over admitted constructive
+11. define the constructive evaluation loop from observation through target
+    binding, lawful action selection, admitted evidence, fulfillment ledger,
+    closure decision, and evaluator projection
+12. define the closure decision vocabulary, including `yield` as lawful
+    iteration rather than retry, block, timeout, or local waiting state
+13. define the projection/query lane as projection over admitted constructive
     history, including the structural coherence rule between the read model and
     its source carrier
-12. only then implement code, policy, and transport surfaces
+14. only then implement code, policy, and transport surfaces
 
 The instruction does **not** mean:
 
@@ -957,8 +1204,12 @@ An LLM ramping into an ODD product should quickly answer:
    derive from, and how does it fail closed on structural drift?
 9. What proves that execution authority has not escaped ABG into product or
    plugin code?
-10. What proof surfaces close the current capabilities?
-11. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
+10. What is the product's constructive evaluation loop from observation to next
+    lawful action?
+11. What are the closure decision dispositions, and how is `yield` represented
+    as replay-visible lawful iteration?
+12. What proof surfaces close the current capabilities?
+13. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
 
 If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
 
@@ -966,4 +1217,4 @@ If those questions cannot be answered quickly, the product is not yet sufficient
 
 ## 20. Canonical Compression
 
-ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, ABG-owned execution authority, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last.
+ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, ABG-owned execution authority, one constructive evaluation loop from observation to next lawful action, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last. Yield is the lawful iteration boundary, not retry, block, timeout, or a hidden local loop.
