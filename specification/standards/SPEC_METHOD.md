@@ -1361,15 +1361,33 @@ change class selected there.
 
 ## ADR Conventions
 
-Each ADR should explicitly include:
+Each ADR shall explicitly include:
 
 | Field | Purpose |
 |-------|---------|
+| `Status:` | `active`, `superseded`, or `retired` |
 | `Implements:` | REQ-* IDs this ADR makes true |
 | `Derives from:` | INT-* or strategy document that motivated the decision |
 | `Supersedes:` | Prior ADR or doctrine this replaces |
+| `Superseded by:` | Successor ADR when this ADR is `Status: superseded` |
 | `Retained special case:` | When earlier behavior is intentionally retained as a special case of the current surface |
 
 Write ADRs per decision boundary, not per requirement file. The question is: "what design choice makes these ACs true?" That is the ADR boundary.
 
 If a requirement names an operational mechanism, the ADR must name that mechanism too. If a requirement expands the event taxonomy, the EC ADR must be repriced immediately — event semantics must not drift into a second constitution.
+
+### ADR Folder Convention
+
+ADRs are stored in an `adrs/` subdirectory under the design surface that owns the decision.
+
+- tenant-local build-tenant ADRs: `build_tenants/<tenant-path>/design/adrs/`
+- shared or cross-tenant ADRs: `build_tenants/common/design/adrs/`
+- non-tenanted or project-local ADRs: `<governing-design-surface>/adrs/`
+
+The `<tenant-path>` is one or more path segments that uniquely identify the build tenant within `build_tenants/`. Both `<family>/<variant>` (e.g., `abiogenesis/typescript/`) and single-label (e.g., `typescript/`, `python/`) tenant paths are lawful, provided the project's `build_tenants/TENANT_REGISTRY.md` records the tenant identity used. The recommended scaffold is `<family>/<variant>`; existing single-segment layouts remain conformant and do not require migration.
+
+The governing design surface is the closest design surface whose authority owns the decision. ADRs must not be placed in comments, generated views, runtime archives, or requirement folders.
+
+Filename convention is `ADR-<local-id>-short-slug.md`. The local ID is unique within the owning `adrs/` directory. Numeric IDs such as `ADR-001-...` are the default; namespace-prefixed IDs such as `ADR-GM-005-...` are allowed when the owning design surface already uses them.
+
+A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but is not required. The constitutional source remains each ADR file; a registry is a read model that may drift unless tooling maintains it.

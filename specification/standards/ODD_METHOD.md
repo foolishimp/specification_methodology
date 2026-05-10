@@ -694,26 +694,36 @@ source truth.
 ### 11.5D Constructive Evaluation And Yield Loop
 
 Every ODD product over GTL/ABG must preserve one constructive evaluation loop
-from observation to next lawful action.
+from intent lineage and model synthesis through observation to next lawful
+action.
+
+This is the method-level homeostasis loop. The constitutional surface names the
+operative functions directly: `synthesize_model`, `eval_gap`, `evaluate_next`,
+and `evaluate_action`.
 
 The loop is framework-independent. Product implementations may use different
 carrier names, but they must preserve this authority shape:
 
 ```text
-ObservationSnapshot
+IntentLineage
+-> ProductAssetModel
+-> ObservationSnapshot
+-> GapPressureRow
 -> TargetObligationBinding
 -> PriorityProjection
 -> ConstructionIntent
 -> AdmittedEvidence
 -> EdgeFulfillmentLedger
 -> EdgeClosureDecision
--> EvaluatorProjection
+-> NextActionProjection
 ```
 
 The objects have these method-level meanings:
 
 | Object | Definition | Authority |
 | --- | --- | --- |
+| `IntentLineage` | Admitted source intent and its lineage refs: human, imported source, prior product, intent engine, or prior synthesized construction intent. | ABG event-log truth over source intent. It seeds the product model and must not invent graph actions. |
+| `ProductAssetModel` | Desired and known typed asset model synthesized from intent lineage, prior model, and admitted product truth. | Product-owned model truth whose publication basis is carried by admitted events and product-owned projection refs. It is not runtime fact or action authority. |
 | `Worksite` | Current workspace, runtime archive, transform assets, product asset root, profile, and observed file or process state. | Observable substrate, not authority by itself. |
 | `RuntimeEventLog` | Append-only admitted runtime facts. | ABG runtime truth. |
 | `RuntimeProjection` | Replay-derived current runtime state over event log and execution basis. | ABG projection truth. |
@@ -721,12 +731,38 @@ The objects have these method-level meanings:
 | `GapPressureRow` | Typed pressure over missing, partial, blocked, waiting, or ambiguous assets and evidence. | Product domain meaning over admitted observation. |
 | `TargetObligationBinding` | Exact binding from gap pressure to target assets, required roles, evidence refs, and admissible graph outcomes. | Product domain binding over GTL/ABG action authority. |
 | `ActionCatalog` | Published lawful graph actions: graph functions, vectors, targets, inputs, and eligible outcomes. | GTL/product publication consumed by ABG. |
+| `NextActionBasis` | Sum type naming why `evaluate_next` is being called: `initial_selection`, `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. | Dispatch basis for next-action evaluation. It is not a separate controller. |
 | `PriorityProjection` | Deterministic ranking over bound lawful actions under visible policy. | ABG evaluator kernel plus product policy. |
 | `ConstructionIntent` | Admitted selected action for one bounded graph invocation. | ABG admission and traversal authority. |
 | `AdmittedEvidence` | Admitted worker, process, product, execution, materialization, liveness, and postflight evidence. | ABG/product admission, not worker self-closure. |
 | `EdgeFulfillmentLedger` | Evidence and convergence carrier for one edge attempt or version. | Closure evidence truth. |
 | `EdgeClosureDecision` | Sum type over the ledger: close, yield, retry, repair, re-enter, reprice, block. | Closure decision truth. |
-| `EvaluatorProjection` | Read model that observes the closure decision plus current truth and selects a next graph action only when lawful. | ABG evaluator projection with product policy. |
+| `NextActionProjection` | Read model that observes `NextActionBasis` plus current truth and selects a next graph action only when lawful. | ABG next-action evaluation projection with product policy. |
+
+The loop has one model synthesis function and three distinct evaluation
+functions. They may share underlying libraries, but they must not share
+authority:
+
+| Function | Inputs | Output | Boundary |
+| --- | --- | --- | --- |
+| `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, select work, invoke work, or close work. |
+| `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It does not choose work and does not close work. |
+| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. It may select only published lawful graph actions that bind to the gap. It does not admit construction intent and does not evaluate the result of an action. |
+| `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
+
+The word `evaluator` is not sufficient by itself. A design, ticket, code module,
+or proof must name which function it is implementing or consuming:
+`synthesize_model`, `eval_gap`, `evaluate_next`, or `evaluate_action`.
+
+Intent has lineage through the loop. Bootstrap or external intent may come from a
+human, imported source, prior product, or intent engine. That intent seeds the
+product asset model used by `eval_gap`. Current construction intent is
+synthesized against that model and the observed gap, then admitted by a distinct
+admission step after `evaluate_next` selects a published graph action. Intent
+does not invent unpublished actions; gap-derived action selection provides the
+selected action basis for admitting current construction intent over an
+already-published graph function or vector. `ConstructionIntent` must cite the
+lineage and selected action that produced it.
 
 The loop is governed by these axioms:
 
@@ -735,14 +771,17 @@ The loop is governed by these axioms:
 There is one authoritative computational surface for traversal consequence:
 
 ```text
-ObservationSnapshot
+IntentLineage
+-> ProductAssetModel
+-> ObservationSnapshot
+-> GapPressureRow
 -> TargetObligationBinding
 -> PriorityProjection
 -> ConstructionIntent
 -> AdmittedEvidence
 -> EdgeFulfillmentLedger
 -> EdgeClosureDecision
--> EvaluatorProjection
+-> NextActionProjection
 ```
 
 No CLI branch, prompt prose, postflight string, gap-dossier action list, query
@@ -770,16 +809,22 @@ binding proves that edge is the lawful action for those exact assets.
 
 **A3. Published Action Law**
 
-The evaluator may rank only published lawful actions from the action catalog. If
-the desired action is unpublished, the lawful result is a typed no-action
+`evaluate_next` may rank only published lawful actions from the action catalog.
+If the desired action is unpublished, the lawful result is a typed no-action
 disposition, not fallback to a broad executive graph or local script.
 
-**A4. Evaluator Totality**
+**A4. Evaluate_Next Totality**
 
-The evaluator must be total.
+`evaluate_next` must be total.
 
-If an active closure decision is `yield`, the evaluator resumes or yields the
-same edge from replay-visible resume truth. Otherwise:
+If `NextActionBasis` is `initial_selection`, `evaluate_next` selects from the
+current model, current gap, target binding, catalog, and policy. If
+`NextActionBasis` is `post_yield_resume`, `evaluate_next` resumes or yields the
+same edge from replay-visible resume truth without classifying the action as
+failure. If `NextActionBasis` is `post_close_graph_continuation`,
+`evaluate_next` may select the next graph edge after the current edge is closed,
+or no action when the graph is complete. For `post_retry`, `post_repair`,
+`post_reenter`, `post_reprice`, and `post_block`:
 
 ```text
 if higher-priority lawful action exists:
@@ -792,8 +837,32 @@ else:
   block with typed no-action disposition
 ```
 
-Default graph following is ordinary, but it is still an evaluator decision, not
-hidden sequential control.
+Default graph following is ordinary, but it is still an `evaluate_next`
+decision, not hidden sequential control.
+
+**A4a. Evaluation Function Separation**
+
+`synthesize_model`, `eval_gap`, `evaluate_next`, and `evaluate_action` are
+separate authority functions.
+
+`synthesize_model` may synthesize the current product asset model from
+event-log-backed intent lineage, prior model, and admitted product truth only.
+It must not observe the worksite, admit construction intent, invoke work, close
+work, or select next action.
+
+`eval_gap` may emit observation and gap pressure only. It must not admit
+construction intent, invoke work, close work, or select next action.
+
+`evaluate_action` may fold admitted action evidence into ledger and closure
+decision only. It must not select the next graph action.
+
+`evaluate_next` may bind target obligations, rank lawful published actions, and
+publish next-action projection. It must not admit construction intent or decide
+whether the prior action closed, yielded, failed, or requires repair except by
+consuming the admitted `EdgeClosureDecision`.
+
+Any module that lets one of these functions perform another function's authority
+creates a rival control surface and violates A0.
 
 **A5. F_P Freedom, F_D Authority**
 
@@ -826,8 +895,8 @@ admission refs
 edge_converged
 ```
 
-It does not select the next action. Action selection belongs to the evaluator
-over `EdgeClosureDecision` plus current observed truth.
+It does not select the next action. Action selection belongs to `evaluate_next`
+over `EdgeClosureDecision` plus fresh `eval_gap` truth.
 
 **A8. Closure Decision Is A Sum Type**
 
@@ -870,14 +939,20 @@ failure, semantic closure, or requirement non-satisfaction.
 
 **A11. Re-Entry Is Graph Law**
 
-Repair and re-entry are graph actions selected from admitted closure truth and
-published action authority. They are not local retry branches over strings.
+Repair and re-entry are graph actions selected by `evaluate_next` from admitted
+closure truth and published action authority. They are not local retry branches
+over strings.
 
-**A12. Public Query Is A Read-Only Evaluator View**
+`evaluate_action` may emit `repair` or `re-enter` as a closure disposition.
+`evaluate_next` selects which published graph action realizes that repair or
+re-entry. Disposition is conceptual; selection is invocational.
 
-A public query or gaps view may render the same evaluator truth the runner
-consumes. It must not append events, invoke workers, admit intent, or choose
-traversal by itself.
+**A12. Public Query Is A Read-Only Evaluation View**
+
+A public query or gaps view may render read-only outputs from `eval_gap`,
+`evaluate_action`, and `evaluate_next`: gap pressure, closure decision, and
+next-action projection. It must not append events, invoke workers, admit intent,
+run `evaluate_action`, or choose traversal by itself.
 
 **A13. Replayability**
 
@@ -886,42 +961,156 @@ Every closure decision and next-action selection must be reproducible from:
 ```text
 RuntimeEventLog
 + execution basis
++ ABG event-log-backed IntentLineage
++ ProductAssetModel publication basis and its event refs
++ GapPressureRow
++ TargetObligationBinding
++ ActionCatalog
 + admitted evidence
 + EdgeFulfillmentLedger
 + EdgeClosureDecision
++ NextActionBasis
 + visible policy refs
 ```
 
 If replay cannot reproduce the decision, the implementation has created hidden
 state.
 
-**A14. Method Ownership**
+**A13a. Causal Chain Integrity**
+
+Each governing admitted or replay-derived carrier and projection in the loop
+must reference its causal predecessor refs:
+
+```text
+IntentLineage
+-> ProductAssetModel
+-> GapPressureRow
+-> TargetObligationBinding
+-> PriorityProjection
+-> NextActionProjection (selected_action)
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> NextActionBasis
+-> NextActionProjection (next)
+```
+
+The first `NextActionProjection` in the chain carries the selected action
+that admits `ConstructionIntent`. The second `NextActionProjection` is the
+post-action projection produced from `NextActionBasis` plus fresh `eval_gap`
+truth. Both must be reachable from their predecessor refs.
+
+A13 requires that the decision can be reproduced from the inputs. A13a
+requires that each governing carrier or projection carry the predecessor refs
+that make reproduction reachable without external joins. A broken predecessor
+chain is non-replayable at the carrier level and therefore fails A13.
+
+**A14. Recursive Published Refinement**
+
+The homeostasis loop recurses over published refinement.
+
+If a graph function refines an outer vector into published inner vectors, each
+inner vector boundary obeys `synthesize_model`, `eval_gap`, `evaluate_next`, and
+`evaluate_action` with its own visible model, gap, binding, action, evidence,
+ledger, closure, and next-action projection.
+
+If the inner realization is intentionally opaque, it is ordinary implementation
+inside one bounded action. It may use local control flow to compute the action's
+internal result, but it must not publish, dispatch, retry, repair, re-enter, or
+close graph work as a hidden traversal controller. Once a refinement is
+published as graph structure, it is governed by the loop recursively.
+
+**A15. Method Ownership**
 
 ABG owns runtime truth, event replay, graph-call lifecycle, actor/process
 supervision, continuation, and re-entry mechanics. The product owns domain asset
 meaning, graph-function catalog meaning, gap interpretation, and priority
 policy. Design Module Method governs realization modules inside that split; it
-must not fragment the evaluator into module-local decision authorities.
+must not fragment `eval_gap`, `evaluate_next`, or `evaluate_action` into
+module-local decision authorities.
+
+**A16. Constitutional Override**
+
+For any ticket, design, code module, or proof that touches `synthesize_model`,
+`eval_gap`, `evaluate_next`, `evaluate_action`, traversal, gap evaluation,
+action selection, construction intent, worker invocation, evidence admission,
+fulfillment, liveness, closure, re-entry, public query, or live proof, this
+axiom set and the constitutional equation are the controlling acceptance
+target.
+
+Ticket-local closure wording, test names, source-grep checks, compact CLI
+summaries, or implementation notes cannot weaken the constitutional loop. If a
+ticket appears complete by its local checklist but leaves a rival traversal
+consequence path, the ticket is not constitutionally complete. The lawful
+result is to reprice the ticket, narrow the ticket target and open an
+explicit paydown ticket, or keep the gap as a closure blocker.
+
+The following artifacts may provide evidence, diagnostics, or read-model
+context only. They must not independently close an edge, select a next action,
+or route retry, repair, or re-entry:
+
+```text
+gap dossier
+postflight report
+assurance report
+materialization manifest
+runtime liveness projection
+run summary
+worker prose
+screen or PTY transcript
+prompt package
+harness target argument
+source-grep test
+CLI branch or compact output
+public query or gaps view
+service method output
+```
+
+If any of those artifacts conflict with the admitted `EdgeFulfillmentLedger`,
+`EdgeClosureDecision`, or `NextActionProjection`, the ledger, decision, and
+projection chain wins. If that chain is absent, the edge has not
+constitutionally closed and the next action has not been constitutionally
+selected.
 
 The constitutional equation is:
 
 ```text
-let O = observe(RuntimeEventLog, Worksite)
-let B = bind(O.gaps, ActionCatalog, target obligations)
-let P = rank(B, Policy)
-let I = admit_intent(P.selected)
+let L = project_intent_lineage_from_event_log(source_intent_refs, prior_intent_refs)
+let M0 = synthesize_model(L, prior_model, admitted_product_truth)
+let G0 = eval_gap(M0, RuntimeEventLog, RuntimeProjection, Worksite)
+let O = G0.observation
+let B0 = bind(G0.pressures, ActionCatalog, target obligations)
+let Q0 = initial_selection(L, M0)
+let N0 = evaluate_next(Q0, G0, B0, ActionCatalog, Policy)
+let I = admit_construction_intent(L, N0.selected_action, N0.next_action_projection)
 let E = admit_evidence(invoke(I))
-let L = ledger(E, B.obligations)
-let D = closure_decision(L)
-let N = evaluate_next(D, observe(RuntimeEventLog, Worksite))
+let A = evaluate_action(I, E, B0, Policy)
+let M1 = synthesize_model(L, M0, admitted_product_truth)
+let G1 = eval_gap(M1, RuntimeEventLog, RuntimeProjection, Worksite)
+let B1 = bind(G1.pressures, ActionCatalog, target obligations)
+let Q1 = next_action_basis_from(A.decision)
+let N1 = evaluate_next(Q1, G1, B1, ActionCatalog, Policy)
 
-return N
+return N1
 ```
 
 Where:
 
 ```text
-D.disposition in {close, yield, retry, repair, re-enter, reprice, block}
+A.ledger = EdgeFulfillmentLedger
+A.decision = EdgeClosureDecision
+A.decision.disposition in {close, yield, retry, repair, re-enter, reprice, block}
+Q0.kind = initial_selection
+Q1.kind in {
+  post_yield_resume,
+  post_close_graph_continuation,
+  post_retry,
+  post_repair,
+  post_reenter,
+  post_reprice,
+  post_block
+}
 ```
 
 The implementation is correct only when the next work decision is derived from
@@ -1133,9 +1322,10 @@ the expected sequence is:
 9. define how coarse carriers, refined inner carriers, and executable proof lanes close together without scale contradiction
 10. complete the execution-authority audit for affected runtime, plugin,
     worker, event, projection, assurance, closure, or continuation surfaces
-11. define the constructive evaluation loop from observation through target
-    binding, lawful action selection, admitted evidence, fulfillment ledger,
-    closure decision, and evaluator projection
+11. define the constructive evaluation loop from intent lineage and model
+    synthesis through observation, target binding, lawful action selection,
+    admitted evidence, fulfillment ledger, closure decision, and next-action
+    projection
 12. define the closure decision vocabulary, including `yield` as lawful
     iteration rather than retry, block, timeout, or local waiting state
 13. define the projection/query lane as projection over admitted constructive
