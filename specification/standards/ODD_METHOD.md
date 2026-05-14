@@ -794,6 +794,70 @@ The file system, process output, screen logs, worker artifacts, and product
 files are observations. They become authority only after admission into typed
 evidence and fold into ledger and decision truth.
 
+**A1a. Workspace-Ledger Governed Work Pair**
+
+The worksite/workspace and ledger form the governed work pair:
+
+```text
+W = mutable workspace under construction
+L = immutable governed ledger of work over W
+E = immutable event log / replay spine
+Ev = evaluator work over L
+```
+
+The workspace is where F_P construction occurs. The ledger is the immutable
+governed account of closure-relevant work over that workspace. The ledger is not
+a copy of the workspace; it is the admitted trace of callout basis, observed
+deltas, file refs, digests, execution evidence, obligations touched, claims
+made, evaluator inputs, evaluator outputs, and admission status.
+
+The loop is:
+
+```text
+F_P acts in W.
+Admission records governed facts in L.
+E orders and anchors L entries with predecessor refs.
+Ev evaluates a declared L snapshot, not ambient W.
+Ev output is itself F_P work and is admitted back into L/E.
+L/E constrain the next lawful F_P action in W.
+```
+
+The consistency rule is:
+
+```text
+W can change without being true.
+L can be true without being the whole W.
+Closure can only use W through L.
+Eval can only judge W through L.
+Eval only affects traversal after its own L/E admission.
+```
+
+Every closure-relevant F_P callout that does work needs ledger admission.
+Evaluator work is not outside F_P merely because it reads ledgers. Evaluator work
+is F_P work over governed ledger state, and its result must be admitted into the
+immutable ledger/event spine before it can affect closure, routing, or traversal.
+Corrections append or supersede ledger/event facts; they do not rewrite the
+governed history of work.
+
+**A1b. Ledger Is Governed Attention**
+
+A ledger is the system's governed attention over construction history.
+
+This is a structural analogy, not an implementation dependency on transformer
+attention. Model attention selects from context through learned weights. ODD
+ledger attention is typed, immutable, lineage-constrained, policy-bounded, and
+replayable.
+
+An evaluator may attend only to admitted ledger rows reachable through declared
+lineage, predecessor refs, target binding, policy, and the relevant event-log
+cursor. Workspace facts, worker prose, archives, summaries, or controller memory
+outside that reachable ledger set are not inside the evaluator's lawful
+attention surface.
+
+Lineage is therefore not only provenance bookkeeping. Lineage is the attention
+graph: it determines which evidence the evaluator may see, what must be ignored,
+and which predecessor chain makes the judgment reproducible.
+
 **A2. Exact Target Binding**
 
 Every constructive action must bind the current gap to exact target assets and
