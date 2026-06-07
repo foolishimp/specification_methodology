@@ -7,6 +7,8 @@ This tree is the authoritative source for the shared specification methodology:
 - companion governance and operating surfaces such as `POSTING_GUIDE.md`,
   `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`,
   `DESIGN_MODULE_METHOD.md`, and `GLOSSARY_GUIDE.md`
+- source-maintained compressed read models under `authority_compressions/` for
+  prompt-construction installs that need compact shared-method authority
 - starter templates under `templates/`, including project specification
   templates and agent bootstrap templates such as `CLAUDE_TEMPLATE.md` and
   `AGENTS_TEMPLATE.md`

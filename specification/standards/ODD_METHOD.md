@@ -1227,6 +1227,39 @@ Automation may make this faster, safer, or more repeatable. It may not invent a 
 
 If the team cannot explain the manual traversal, the automation is not yet method-safe. If automation cannot be explained in these terms, it is ahead of the method.
 
+### 11.7A Conforming Agentic Development
+
+ODD method is the premise for conforming agentic development over the graph-native worksite. An agentic coder produces governed work by following the constitutional process over a minimal declared authority packet, with the artifacts it produces gated by admission. `SPEC_METHOD.md` governs the general constitutional process and `TICKET_METHOD.md` governs artifact admission; this section names the ODD specialization and composes that law rather than re-declaring it.
+
+Conformance has two halves: an F_P proof that the process is followable, and an F_D gate that admits the produced artifacts.
+
+**The walkthrough is the conformance proof.**
+
+§11.7 requires automation to remain true for a manual walkthrough. The agentic form of that law is a conformance test of the method itself: an agentic coder executes the constitutional process end-to-end on real work — intake triage, smallest lawful re-entry, the spec/requirement/design/ticket chain, the constructive evaluation loop of §11.5D, and closure proof — using only the declared authority surfaces. The agentic coder is F_P over the constitutional process.
+
+The agent works from a minimal declared authority packet, not from memory and not from wholesale hidden context. `SPEC_METHOD.md` already requires declared context — input/output contract, required context, role, evaluator regime, and provenance — for any agentic work unit. The ODD addition is that the packet carries only the smallest declared authority sufficient to decide the step, with its source refs, and that conformance is enforced by admitting the produced artifact rather than by enlarging what the agent must hold. Compression is prompt input, never the deciding authority.
+
+The walkthrough proves at two levels:
+
+- the work it produces must be lawful: correct change-class, traceable, admitted
+- a point where the walkthrough cannot proceed is a method defect only when a competent agent, correctly configured and using the declared authority, still cannot decide — ambiguity, a missing step, contradictory authority, or an un-decidable change-class in an owning surface. That defect is repriced into the owning authority surface, the same way a failed manual traversal is a graph defect under §11.7.
+
+An agent that ignored the declared authority, relied on stale memory, or reasoned badly has produced agent error, not a method defect. Admission rejects the malformed artifact either way, so a bad agent turn neither becomes law nor silently indicts the method.
+
+This proof is independent of any automated runtime. A live lane that depends on external execution conditions — an overloaded model API, a flaky transport — cannot prove the constitutional process is sound, because it conflates process validity with runtime availability. The walkthrough proves the process; the runtime only executes it.
+
+**The validator is the conformance gate.**
+
+The constitutional process is an interface contract, and interface conformance is enforced by validating artifacts against the contract, not by the conformer holding the contract.
+
+ODD does not re-declare the artifact rules. Tickets, change-class declarations, design-module derivations, and execution contracts are admitted under `SPEC_METHOD.md` and `TICKET_METHOD.md`, which already require that a drafted classification be admitted or rejected against deterministic criteria rather than taken as automatic truth. ODD requires only that agentic development pass through that admission: the agentic coder produces the artifact; the declared admission gates it deterministically, fail-closed, naming the violated rule — exactly as a typed asset is enforced by its constructor (§11.1).
+
+This preserves the F_P/F_D split at the method layer. The agentic coder is F_P: it reasons, drafts, and proposes within the declared packet. Admission is F_D: it decides whether the produced artifact conforms. The walkthrough establishes that the process is followable; admission establishes that each act of following it conforms.
+
+**Conformance is not approval-by-usage.**
+
+A passed admission and a completed walkthrough are conformance evidence, not ratification. Shared method change still follows §9: grey work is not made constitutional by repeated agentic execution. The agentic coder conforms to the method; it does not amend the method by acting.
+
 ### 11.8 Cumulative Environment Law Is Mandatory
 
 Do not model composition as "the last output feeds the next input".
@@ -1360,6 +1393,9 @@ The method is being violated when any of these are true:
 14. a public query, gaps view, postflight string, service method, or installed
     operator summary can decide next work outside the constructive evaluation
     loop
+15. a constitutional process cannot be followed end-to-end by an agentic coder
+    from the declared authority, or a produced constitutional artifact is
+    accepted without passing deterministic admission (§11.7A)
 
 ---
 
@@ -1464,6 +1500,7 @@ An LLM ramping into an ODD product should quickly answer:
     as replay-visible lawful iteration?
 12. What proof surfaces close the current capabilities?
 13. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
+14. Can an agentic coder follow the constitutional process from the declared authority alone, and do the artifacts it produces pass deterministic admission?
 
 If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
 
@@ -1471,4 +1508,4 @@ If those questions cannot be answered quickly, the product is not yet sufficient
 
 ## 20. Canonical Compression
 
-ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, ABG-owned execution authority, one constructive evaluation loop from observation to next lawful action, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last. Yield is the lawful iteration boundary, not retry, block, timeout, or a hidden local loop.
+ODD method is the graph-native product-authoring method for building GTL/ABG domain products. It requires typed domain assets, named graph functions, a published function catalog, a GTL module as the operative carrier, ABG-owned execution authority, one constructive evaluation loop from observation to next lawful action, projection/query surfaces that expose current state as projection over constructive history, and automation that remains explainable as a lawful manual traversal of the same graph. Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last. Yield is the lawful iteration boundary, not retry, block, timeout, or a hidden local loop. Agentic development conforms by following the constitutional process from a minimal declared authority packet, with produced artifacts passing deterministic admission: the agentic walkthrough proves the process is followable, and admission proves each act conforms.
