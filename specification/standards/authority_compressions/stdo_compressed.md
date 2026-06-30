@@ -13,13 +13,13 @@ source_refs:
   - ../TICKET_METHOD.md
   - ../UX_METHOD.md
 source_digests:
-  SPEC_METHOD.md: 3bf7f89a1c6528abf5ce17e68b98920270d3add6c77119ea61a4167382165eec
-  DESIGN_MODULE_METHOD.md: bac51dd6250c8464f8c63e1037caa982cf41e52e54e0218a63404fde8125071e
+  SPEC_METHOD.md: 00b802d5c0ead9bef4d95b1143797b806022ffd5884c4a89b37b29ad321e11de
+  DESIGN_MODULE_METHOD.md: 84ecd60707dd26c0248e160336b9eb5d346d80197d441175aa48ca82b1dad409
   ODD_METHOD.md: e420024069307ec0de189b3e6e401058db063dfdcc8c701fee3088e844f060f4
   TICKET_METHOD.md: 1b190915d2d76ed485b385c722c1221f39e32f72a37b379bd7d35ccafab0e17c
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
-generated_by: claude
-generated_at: 2026-06-07
+generated_by: codex
+generated_at: 2026-06-30
 stale_if_source_digest_changes: true
 ---
 
@@ -31,6 +31,9 @@ Specification is constitutional source. Design and realization are subordinate
 implementation surfaces. Code, prompts, tests, generated views, dashboards,
 archives, and comments are projections or realization proof, not independent
 truth.
+
+Products, applications, modules, graph functions, build tenants, and runtime
+surfaces implement constitutional documents; they do not replace them.
 
 ## Authority Flow
 
@@ -55,6 +58,14 @@ layer that owns the missing truth.
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a
   method defect; agent error is not.
+- Operational lifecycle signal is constitutional pressure. Product and
+  requirements provide enough signal for downstream design, or name the gap.
+  The canonical chain is: intent -> requirement -> build -> assurance ->
+  release -> deployment -> live usage -> observed telemetry -> retirement.
+- Design-module review confirms lifecycle signal at the realization boundary.
+  Each phase is answered, declared not applicable with a reason, or recorded as
+  `Gap:` / `Unanswered:`. Implementation precedent, prompt prose, local
+  convention, and test fixtures cannot invent missing lifecycle authority.
 
 ## Prompt-Relevant Rules
 

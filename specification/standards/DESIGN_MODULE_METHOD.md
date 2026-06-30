@@ -778,6 +778,56 @@ closure-ready under this method.
 
 ---
 
+## 6C. Module Lifecycle Confirmation Rule
+
+Every designed module, function, application surface, runtime surface, plugin
+surface, public interface, data surface, graph function, or GTL module exists
+inside an operational lifecycle. This method must confirm that lifecycle signal
+at the realization boundary before design-method closure.
+
+The canonical operational lifecycle chain is defined by `SPEC_METHOD.md` under
+the Operational Lifecycle Sufficiency Rule. This method consumes that canonical
+chain; it does not redefine the phases.
+
+This checklist is not a release plan and does not replace `RELEASE_METHOD.md`.
+It is an ambiguity detector for ultimate intended use.
+
+For each governed boundary, design-module-method evidence must state, or point
+to a surface that states:
+
+- the upstream intent and requirement authority
+- the build or realization surface
+- the assurance and proof surface
+- the release or packaging posture
+- the deployment or install posture
+- the live usage or invocation posture
+- the observed telemetry, projection, or monitoring posture
+- the retirement, revocation, supersession, or decommission posture
+- the owner, source truth, and authority boundary for the lifecycle decisions
+
+Each lifecycle phase must be one of:
+
+- answered by the active design, requirement, release, deployment, or telemetry
+  surface
+- declared not applicable with a reason
+- recorded as a named `Gap:` or `Unanswered:` item with an owning follow-up
+
+A phase list without answers, not-applicable reasons, or named gaps is not
+design-method evidence.
+
+Implementation proves the selected lifecycle path only within the authority it
+owns. Code, tests, generated artifacts, or runtime fixtures may confirm that a
+lifecycle claim is real, but they may not invent lifecycle authority that the
+product, requirements, design, release, or operational surface did not declare.
+
+If the lifecycle checklist exposes missing release, deployment, live-use,
+telemetry, or retirement truth, the module may still proceed only when that gap
+is explicitly governed. It may not close by relying on local convention,
+implementation precedent, mutable runtime state, prompt prose, or test-only
+fixture behavior.
+
+---
+
 ## 7. Immutable Carrier Rule
 
 Source truth should be carried in typed immutable values unless mutation is
@@ -1208,6 +1258,14 @@ When reviewing code under this method, ask:
 31. Do `F_D` evaluators, deterministic transforms, and effect shells remain
     subordinate to the GTL/ABG graph carrier rather than becoming the hidden
     program?
+32. Does the boundary have a lifecycle confirmation against the canonical
+    `SPEC_METHOD.md` operational lifecycle chain, or named `Gap:` /
+    `Unanswered:` items for unresolved phases?
+33. Are release, deployment, live usage, observed telemetry, and retirement
+    questions answered by the proper authority surface rather than invented by
+    implementation, prompt prose, local convention, or fixtures?
+34. If a lifecycle phase is declared not applicable, is the reason explicit and
+    compatible with the product and requirement authority?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
@@ -1291,6 +1349,13 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 - [ ] If the module appears to decide next work, traversal closure, semantic
       target movement, or graph-function identity, has the boundary been
       repriced under `ODD_METHOD.md`?
+- [ ] Does the active boundary carry lifecycle confirmation against the
+      canonical `SPEC_METHOD.md` operational lifecycle chain, with each phase
+      answered, declared not applicable with a reason, or recorded as a named
+      `Gap:` / `Unanswered:` item?
+- [ ] Are release, deployment, live usage, telemetry, and retirement claims
+      confirmed against product, requirement, design, release, or operational
+      authority rather than derived from implementation convention or fixtures?
 
 The compact hard-gate version of this checklist is:
 
@@ -1301,6 +1366,8 @@ The compact hard-gate version of this checklist is:
 - [ ] no hidden runtime authority in semantic code
 - [ ] functional equivalence to specification and, when present, the reference
       realization at the semantic boundary
+- [ ] lifecycle confirmation or named lifecycle gaps against the canonical
+      `SPEC_METHOD.md` operational lifecycle chain
 - [ ] negative proof for imperative or open bypass
 
 This checklist is language-agnostic.
@@ -1358,6 +1425,8 @@ needed to audit, refactor, or reconstruct the realized boundary.
 
 - `SPEC_METHOD.md` governs constitutional process, authority flow, repricing,
   and migration law
+- `RELEASE_METHOD.md` governs release-cut, product, install, and tap-process
+  evaluation
 - `ODD_METHOD.md` governs graph-native constructive carrier law
 - `DESIGN_MODULE_METHOD.md` governs preferred realization structure inside
   implementation and design modules
@@ -1368,6 +1437,8 @@ needed to audit, refactor, or reconstruct the realized boundary.
 So:
 
 - `SPEC_METHOD.md` answers what is lawful process
+- `RELEASE_METHOD.md` answers what is a lawful release, product, install, and
+  tap decision
 - `ODD_METHOD.md` answers what is lawful graph-native product shape
 - `DESIGN_MODULE_METHOD.md` answers what is the preferred implementation design
   discipline when you want low coupling, no interface bleed, and explicit effect
@@ -1382,6 +1453,12 @@ realizes, evaluates, adapts, or projects inside that ODD boundary. When that
 boundary includes a UX surface, `UX_METHOD.md` adds the render-purity,
 reducer-purity, effect-membrane, and AssetSurface-binding rules required for
 strong functional consistency between front-end and back-end.
+
+The module lifecycle confirmation rule in this method detects whether the
+realization has enough lifecycle signal to be safely built and reviewed. It
+does not decide release eligibility, tap acceptance, install policy, or
+operational rollout. Those decisions remain governed by `RELEASE_METHOD.md` and
+project-owned release, deployment, or operational surfaces.
 
 ---
 

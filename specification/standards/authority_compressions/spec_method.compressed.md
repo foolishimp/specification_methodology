@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 3bf7f89a1c6528abf5ce17e68b98920270d3add6c77119ea61a4167382165eec
+source_digest: 00b802d5c0ead9bef4d95b1143797b806022ffd5884c4a89b37b29ad321e11de
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-06-06
+generated_at: 2026-06-30
 stale_if_source_digest_changes: true
 ---
 
@@ -19,6 +19,10 @@ stale_if_source_digest_changes: true
 
 Specification defines product truth. Downstream surfaces implement, prove, or
 project that truth; they do not replace it.
+
+Products, applications, modules, graph functions, build tenants, and runtime
+surfaces are implementations of constitutional documents, not substitutes for
+them.
 
 ## Prompt-Relevant Rules
 
@@ -30,6 +34,12 @@ project that truth; they do not replace it.
 - Active specification should stay present-tense; historical comparisons belong
   in comments, design history, tickets, or release notes.
 - Missing requirement, design, proof, or traceability is pressure, not success.
+- Product and requirement surfaces must provide enough operational lifecycle
+  signal for downstream design, or record a named gap. The canonical lifecycle
+  chain is: intent -> requirement -> build -> assurance -> release ->
+  deployment -> live usage -> observed telemetry -> retirement.
+- Downstream design must not fill missing lifecycle truth from implementation
+  precedent, prompt prose, local convention, or test fixtures.
 
 ## Compression Use
 

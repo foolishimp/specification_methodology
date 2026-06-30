@@ -18,6 +18,8 @@ for their subtree.
   `Goals -> Intent -> Product Definition -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`.
 - `specification/` defines `WHAT`. Design, build tenants, and code define
   `HOW`.
+- Products, applications, modules, graph functions, build tenants, and runtime
+  surfaces implement constitutional documents; they do not replace them.
 - Active surfaces stay present tense. Historical, provisional, or comparative
   material belongs in comments, design history, or release notes, not in live
   constitutional text.
@@ -26,6 +28,13 @@ for their subtree.
   design.
 - Missing traceability is a defect. Ungrounded code, unowned requirements, or
   design without requirement authority are process drift.
+- Product and requirement surfaces must provide enough operational lifecycle
+  signal for downstream design, or record a named gap. The canonical lifecycle
+  chain is: intent -> requirement -> build -> assurance -> release ->
+  deployment -> live usage -> observed telemetry -> retirement.
+- Design confirms lifecycle signal at the realization boundary. Implementation
+  precedent, prompt prose, local convention, and test fixtures cannot invent
+  missing lifecycle authority.
 
 ### Recursive Product Taxonomy
 

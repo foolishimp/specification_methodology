@@ -14,8 +14,11 @@ durable form of that design record. The SDLC is a governed disambiguation
 pipeline: each major boundary reduces the space of lawful interpretations and
 must surface major ambiguity explicitly. Ambiguity detection is mandatory;
 blocking or escalation is policy-driven by declared risk appetite, except for
-hard-stop prerequisite failures. Scenarios verify operational meaning where
-capability claims need end-to-end proof. Code realizes decisions. Design must
+hard-stop prerequisite failures. Products, applications, modules, graph
+functions, build tenants, and runtime surfaces are implementations of the
+constitutional documents, not substitutes for them. Scenarios verify
+operational meaning where capability claims need end-to-end proof. Code
+realizes decisions. Design must
 be derivable from requirements, which are themselves derivable from goals,
 intent, and product definition; code must be derivable from requirements and
 design. Iteration is cumulative repricing, not waterfall.
@@ -176,6 +179,10 @@ The work is not genuinely spec-driven if any of these fail:
 10. A capability claim has no operational evidence.
 11. Drift is discovered, but the constitutional source is not repriced.
 12. A major ambiguity at a constitutional or realization boundary is neither recorded nor explicitly governed.
+13. A material product, module, function, application, runtime surface, or
+    capability has no declared operational lifecycle signal and no recorded
+    gap for unanswered release, deployment, live-use, telemetry, or retirement
+    questions.
 
 ---
 
@@ -385,6 +392,55 @@ stops regardless of risk appetite. Typical hard-stop classes include:
 The methodology is therefore not "eliminate all ambiguity before work." It is
 "make ambiguity visible, govern it explicitly, and reduce it progressively until
 downstream realization is sufficiently constrained."
+
+---
+
+## Operational Lifecycle Sufficiency Rule
+
+Constitutional specification must treat a designed thing as more than its build
+shape.
+
+Any material product, application, module, graph function, runtime surface,
+plugin surface, public interface, data surface, or capability has an operational
+lifecycle. The canonical operational lifecycle chain is:
+
+```text
+intent
+  -> requirement
+  -> build
+  -> assurance
+  -> release
+  -> deployment
+  -> live usage
+  -> observed telemetry
+  -> retirement
+```
+
+`PRODUCT.md` and the requirement surface do not need to prescribe the detailed
+implementation mechanism for every phase. They do need to provide enough
+constitutional signal for downstream design to derive the intended lifecycle,
+or explicitly record the unresolved ambiguity.
+
+For product definition, this means naming the current product boundary, intended
+use context, release/install posture, live-use posture, observability posture,
+and retirement or supersession posture where those materially affect the
+product's meaning.
+
+For requirements, this means stating any invariant obligation that governs
+build, assurance, release, deployment, live usage, telemetry, retirement,
+ownership, source truth, authority boundary, or downstream interpretation. A
+requirement may defer a phase only by naming the deferment and the surface that
+will own its later resolution.
+
+This rule is an ambiguity detector, not a demand that every requirement become
+a release plan. If a phase is not applicable, say why. If the phase is unknown,
+record a named gap such as `Gap:` or `Unanswered:`. Silent absence is not a
+valid lifecycle answer.
+
+When the lifecycle signal is missing, downstream design may not fill the gap by
+local convention, implementation precedent, prompt prose, or test fixture. It
+must reprice the appropriate constitutional surface or carry the ambiguity as
+explicit, governed debt.
 
 ---
 
@@ -1192,8 +1248,8 @@ The active specification layers have distinct constitutional roles:
 
 - **Goals** orient the current bounded work wave. They shall not be used as a substitute requirement surface.
 - **Intent** states why the system exists and what directional change is in or out of scope. It shall not carry optional realization detail unless that detail is itself constitutional.
-- **Product** states the current concrete product definition and bridges intent to requirements. It is not a release note surface.
-- **Requirements** state stable obligations that must be true. They shall carry explicit acceptance criteria and remain sufficient for downstream design derivation.
+- **Product** states the current concrete product definition and bridges intent to requirements. It is not a release note surface. It shall carry enough operational lifecycle signal for downstream requirements and design to understand intended use, release/install posture, live-use posture, observability posture, and retirement or supersession posture where those materially affect product meaning.
+- **Requirements** state stable obligations that must be true. They shall carry explicit acceptance criteria and remain sufficient for downstream design derivation, including lifecycle obligations or named lifecycle ambiguity gaps where build, assurance, release, deployment, live usage, telemetry, or retirement materially affect the obligation.
 - **Design** states how requirement truth is realized. It is downstream of requirements and may choose structure, interfaces, carriers, packaging, and tenant boundaries.
 - **ADRs** are durable design memory. They are not a second requirement surface.
 
@@ -1320,7 +1376,7 @@ When a feature is introduced or changed:
 1. Update **Goals** if the current bounded work wave or overriding concerns have changed.
 2. Update **Intent** if the purpose or scope has changed.
 3. Update **Product** if the current product realization, terms, boundaries, or end-state shape have changed.
-4. Update **Requirements** so the invariant truths are explicit as a decomposition of the product definition, and classify each new or changed requirement by category.
+4. Update **Requirements** so the invariant truths are explicit as a decomposition of the product definition, including any lifecycle obligations or named lifecycle ambiguity gaps, and classify each new or changed requirement by category.
 5. Update or write **Design** so the governing structural choice is explicit. ADRs are one valid design form.
 6. Write **Scenarios** for capability claims that require operational proof, and define other evidence surfaces for non-capability requirements where appropriate.
 7. Prefer declarative expression of the problem and acceptance surface before adding imperative mechanism.
