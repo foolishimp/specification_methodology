@@ -542,34 +542,37 @@ It is:
 If a target realization cannot show that derivation chain, it is not yet
 design-method complete under this method.
 
-## 5E. Structural Carrier Diagram Rule
+## 5E. Three-View Behavioral Design Gate
 
-Every active typed module boundary must carry one complete structural carrier
-asset before it claims design-method closure.
+Every active semantic or typed module boundary must carry one complete
+three-view Mermaid design asset before mergeable implementation starts.
 
-That asset must include a Mermaid `classDiagram` view unless the project has
-ratified another text-native diagram format explicitly.
+The asset must contain all three views:
 
-The diagram is not decorative.
+1. a Mermaid `classDiagram` domain model;
+2. a Mermaid `sequenceDiagram` execution model; and
+3. a Mermaid `stateDiagram-v2` lifecycle model.
 
-It is a sign-off surface for:
+A project may ratify another text-native diagram format only when it preserves
+the same three distinct views and the same cross-view checks. One broad flowchart
+does not substitute for the three models.
 
-- Prime Law
-- visibility
-- carrier ownership
-- subordinate payload discipline
-- boundary inflation review
+The views are not decorative. Together they are the sign-off surface for domain
+identity, authority, behavior, lifecycle, and axiom conformance.
 
-The diagram must show, for the active boundary:
+### Domain model
 
-- prime carriers
-- subordinate payloads
-- effect-edge-only payloads
-- downstream-only projections
-- deferred families outside the active slice
-- authoritative versus downstream role
-- public versus module-local visibility
-- composition, containment, and variant-family structure
+The `classDiagram` must show, for the active boundary:
+
+- domain identities and cardinalities rather than helper-class decomposition;
+- prime carriers;
+- subordinate payloads;
+- effect-edge-only payloads;
+- downstream-only projections;
+- deferred families outside the active slice;
+- authoritative versus downstream role;
+- public versus module-local visibility; and
+- composition, containment, association, and real variant-family structure.
 
 The standard stereotype vocabulary is:
 
@@ -587,23 +590,86 @@ The standard visibility vocabulary is:
 
 The standard relationship expectations are:
 
-- composition for owned subordinate payloads
-- association for downstream consumption
-- inheritance only for real variant or outcome families
+- composition for owned subordinate payloads;
+- association for downstream consumption; and
+- inheritance only for real variant or outcome families.
 
-The diagram must stay module-bounded.
+### Sequence model
 
-It is a defect if the asset mixes one active module boundary with unrelated
-bootstrap, test harness, projection, or delivery shapes simply to look
-complete.
+The `sequenceDiagram` must show the supported execution path from admitted
+input to result or truthful stop. It must name the owner of every decision and
+effect boundary. Where applicable it must show malformed input or output,
+retry, recursion, fan-out/fan-in, nested workflow, and human escalation paths.
 
-For planned implementation work, completing the structural carrier diagram before
-implementation is the preferred route. If implementation runs ahead, the diagram
-must be reconstructed from the actual boundary, checked against the IACS and
-implementation, and corrected before design-method closure.
+Every participant must exist in the domain model or be an explicitly external
+actor. Every message must bind to a declared carrier transform, graph/C
+constructor, interpreter action, or effect-handler call. A private loop,
+service method, plugin, shell, or script may not silently replace a declared
+workflow transition.
 
-If a boundary has no complete structural carrier diagram, it is not yet
-design-method complete under this method.
+### State model
+
+The `stateDiagram-v2` must show the complete admitted lifecycle for the active
+boundary, including refusal, blocked, continuation, retry, escalation, and
+terminal states that the boundary can produce. Every transition must name its
+owning admission, compiler, interpreter, event, projection, or external act.
+
+Controller-local memory is not a lawful source of lifecycle truth when the
+product declares replay, event, graph, or carrier ownership.
+
+### Cross-view axiom evaluation
+
+The design pack must evaluate every applicable product, graph, language,
+runtime, handler, and module axiom with one of:
+
+- `pass`;
+- `fail`; or
+- `not_applicable`, with a reason.
+
+The minimum evaluation columns are:
+
+| Axiom | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |
+|---|---|---|---|---|---|---|---|---|
+
+The cross-view evaluation must prove that:
+
+- every sequence participant and lifecycle carrier exists in the domain model;
+- every sequence message has a declared semantic or effect boundary;
+- every lifecycle transition is derivable from admitted truth;
+- raw probabilistic output cannot transition directly to accepted or closed;
+- handlers and plugins own interiors only when the runtime owns admission,
+  events, continuation, and closure;
+- native types enforce locally decidable relations; and
+- admission or semantic compilation owns global references, completeness, and
+  realization gaps.
+
+For graph-native work, every batch, retry, recursion, or nested workflow must
+be visible through the product's declared graph or compute algebra. A relied-on
+`semantic_not_realized` constructor is a blocking gap. It may not be replaced
+by imperative glue in a plugin, shell, service, script, or test harness.
+
+### Gate and retrospective work
+
+The design verdict must be `accepted` before implementation can enter the
+active product line. Any failed applicable axiom or blocking realization gap
+keeps the verdict non-accepted.
+
+An exploratory implementation may exist only as an explicitly disposable
+spike outside the mergeable product line. It supplies evidence to design; it
+does not earn retention, publication, or implementation authority.
+
+Existing implementation placed under retrospective review is frozen until its
+three-view asset and axiom evaluation are accepted. The design must evaluate
+the code against prior authority; it must not rewrite the diagrams to
+rationalize an unlawful implementation shape.
+
+The asset must stay boundary-bounded. It is a defect if it mixes an active
+semantic boundary with unrelated bootstrap, test-harness, projection, or
+delivery shapes merely to look complete.
+
+If any of the three views, the cross-view evaluation, or the accepted verdict
+is absent, the boundary is not design-method complete and implementation may
+not proceed.
 
 ## 5F. Theoretical Framing For Boundary Law
 
@@ -683,26 +749,25 @@ instead of disappearing into broad orchestration code.
 When this method governs an active realization boundary, the canonical evidence
 route is:
 
-1. design
-2. module boundary asset
-3. implementation and unit tests in parallel
+1. constitutional `WHAT` and owning requirements;
+2. target design and IACS;
+3. accepted three-view behavioral design plus axiom evaluation;
+4. implementation and module-derived unit tests.
 
-This route is the preferred authoring path.
+This route is mandatory for implementation entering the active product line.
+It is not a claim about the fastest disposable exploration path. A spike that
+runs ahead remains outside the mergeable product line and has no retention or
+publication presumption.
 
-It is not a universal claim about the fastest possible agentic coding path.
-
-What is mandatory is eventual completeness:
+Completeness requires:
 
 - the final implementation must be traceable to design and module boundary
   assets
 - unit tests must be traceable to module ownership, not only to helper layout
-- any implementation-first work must be reconciled back into the design/module
-  evidence before design-method closure
-
-Implementation may run ahead of full module evidence during exploration or
-agentic construction.
-
-It may not claim design-method closure from code alone.
+- any implementation-first spike must remain disposable until the three-view
+  gate is accepted; and
+- implementation may not compensate for an unrealized declared constructor by
+  introducing a hidden controller or alternative authority path.
 
 Unit tests may be discovered from implementation behavior, but the closure proof
 must be re-expressed against module ownership rather than code helper shape.
@@ -716,17 +781,19 @@ The minimum complete evidence chain is:
 
 1. constitutional `WHAT`
 2. target design
-3. target module boundary assets
-4. implementation
-5. unit tests derived from the same module boundary
+3. target module boundary assets and IACS
+4. accepted domain, sequence, and state views with axiom evaluation
+5. implementation
+6. unit tests derived from the same module boundary
 
 Where a reference realization exists, the complete evidence chain becomes:
 
 1. constitutional `WHAT`
 2. reference design
 3. target design mapping
-4. target module boundary assets
-5. implementation and unit tests
+4. target module boundary assets and IACS
+5. accepted domain, sequence, and state views with axiom evaluation
+6. implementation and unit tests
 
 If a change jumps from design or code straight to tests and never reconstructs
 the module boundary, the proof surface is too weak.
@@ -1266,6 +1333,21 @@ When reviewing code under this method, ask:
     implementation, prompt prose, local convention, or fixtures?
 34. If a lifecycle phase is declared not applicable, is the reason explicit and
     compatible with the product and requirement authority?
+35. Does the boundary have distinct Mermaid domain, sequence, and state-machine
+    views rather than one carrier inventory or broad flowchart?
+36. Does every sequence participant exist in the domain model, and does every
+    message bind to a declared transform, graph/C constructor, interpreter act,
+    or effect boundary?
+37. Does every state transition derive from admitted carrier, event, or
+    projection truth rather than controller-local memory?
+38. Does the axiom matrix evaluate every applicable product, graph, language,
+    runtime, handler, and module law with `pass`, `fail`, or reasoned
+    `not_applicable`?
+39. Is any relied-on graph, batch, retry, recursion, or workflow constructor
+    still `semantic_not_realized`, and if so has implementation stopped rather
+    than bypassing it with imperative glue?
+40. Is the design verdict explicitly `accepted` before product implementation
+    or publication proceeds?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
@@ -1321,9 +1403,11 @@ single-owner truth, or low-coupling realization, review must explicitly check:
       below the semantic center?
 - [ ] Do governance and observability surfaces publish facts, eligibility, and
       provenance only without imperative builder or executor strategy?
-- [ ] Does the active boundary have a complete structural carrier diagram that
-      matches the current IACS, visibility, ownership, and deferred-family
-      split?
+- [ ] Does the active boundary have complete Mermaid domain, sequence, and
+      state-machine views that match the current IACS, visibility, ownership,
+      behavior, lifecycle, and deferred-family split?
+- [ ] Does the active boundary carry a complete cross-view axiom matrix and an
+      explicit `accepted` design verdict with no bypassed realization gap?
 - [ ] Do the unit tests for the active boundary derive from module ownership,
       IACS, and structural carrier assets rather than from helper layout?
 - [ ] If the change includes cleanup or optimization, does it stay
@@ -1364,6 +1448,8 @@ The compact hard-gate version of this checklist is:
 - [ ] one owner per truth surface
 - [ ] low coupling between admission, algebra, and effect edges
 - [ ] no hidden runtime authority in semantic code
+- [ ] accepted domain, sequence, and state-machine views
+- [ ] complete cross-view axiom evaluation with no bypassed realization gap
 - [ ] functional equivalence to specification and, when present, the reference
       realization at the semantic boundary
 - [ ] lifecycle confirmation or named lifecycle gaps against the canonical
