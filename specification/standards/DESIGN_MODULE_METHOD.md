@@ -26,7 +26,7 @@ The goals are:
 - preserve enough evidence that later reviewers can audit, refactor, and
   reconstruct why the realization took its current shape
 
-This method is therefore about implementation shape.
+This method is therefore about realization design and implementation shape.
 
 It does not mandate one optimal authoring path for every agent, worker, or
 runtime.
@@ -49,8 +49,10 @@ It does not replace constitutional authority from `SPEC_METHOD.md`.
 
 It does not replace graph-native law from `ODD_METHOD.md`.
 
-It governs how realization modules should be structured once the project has
-already decided what it is building.
+It governs how the Ontology, architecture, and realization modules should be
+derived once the project has decided the outcomes and capabilities it is
+building. A product decision that functionality is required does not decide how
+many entities, functions, public operations, carriers, or modules should exist.
 
 For an ODD-governed product, this method does not authorize replacing a graph
 function, edge traversal, or GTL module with deterministic implementation
@@ -325,10 +327,249 @@ yet implementation-conformant under this method.
 
 ---
 
+## 4B. Ontology-First Design Rule
+
+Every adopted active semantic boundary must derive its semantic model from one
+accepted **Ontology**. Before a new or changed entity, function, authority,
+effect, Prime carrier, module boundary, public operation, or schema is promoted,
+the affected boundary must first produce a candidate Ontology slice and carry it
+through the acceptance sequence below.
+
+The Ontology is the prior **semantic-design authority** for the boundary. It is
+subordinate to constitutional `WHAT`: it derives from intent, product,
+requirements, and applicable graph or domain method. It does not invent product
+meaning. Once accepted, it governs semantic entities, relationships,
+invariants, lifecycle, authority, functions, composition, and effects.
+
+The Ontology does not replace target architecture or module design. Accepted
+design remains the structural `HOW` for topology, interfaces, carrier placement,
+module boundaries, algorithms, and local realization. Implementation and tests
+derive from requirements plus accepted design and must preserve the accepted
+Ontology; they are not direct substitutes for either layer.
+
+Ontology acceptance must identify the constitutional sources it derives from
+and the design authority that accepted it. It must carry stable element or
+relation identities plus a version or basis that makes source change,
+staleness, and the affected projection set decidable. A reprice of a governing
+source invalidates only the affected Ontology relations and downstream
+projections until their impact is re-evaluated. Code, tests, generated schemas,
+or a single implementing agent cannot self-ratify missing Ontology authority.
+The Ontology verdict may live in the same design pack and acceptance record as
+the three-view verdict; this rule does not require a second document, ticket, or
+approval ceremony.
+
+Proportionality applies. A `realization_refactor` wholly inside an accepted
+boundary may cite the existing Ontology and design basis and prove `no ontology
+delta`; it does not require re-authoring or re-accepting unchanged evidence. A
+semantic or structural change must publish only the affected Ontology/design
+delta and its projection impact set. Unaffected maintenance and unrelated
+boundaries do not freeze merely because one source digest changed.
+
+For this method:
+
+```text
+Ontology =
+  entities
+  + identities
+  + relationships
+  + invariants
+  + lifecycle
+  + authority
+  + atomic functions
+  + higher-order composition
+  + effects
+  + projections
+```
+
+A class inventory, schema list, endpoint list, command list, or carrier census
+alone is not an Ontology.
+
+Discovered functionality is evidence about required behavior. It is not yet an
+architectural operation. A discovered verb, screen action, endpoint, command,
+ticket phrase, or use case shall not be promoted directly into a public
+operation identity, peer carrier, module, or implementation function. It must
+first be derived through the Ontology.
+
+The required derivation order is:
+
+```text
+constitutional functionality
+  -> candidate Ontology
+  -> logical completeness
+  -> whole-family Prime contraction
+  -> accepted Ontology basis
+  -> Irreducible Architectural Carrier Set
+  -> target design and domain, sequence, and state projections
+  -> public contract and adapter projections
+  -> implementation and test projections
+```
+
+### Entity And Lifecycle Completeness
+
+The Ontology must enumerate the entities inside the active boundary, their
+identities, relationships, cardinalities, invariants, lifecycle states, and
+authority owners.
+
+For each entity, design evidence must provide this logical-completeness matrix
+or an equivalent closed representation:
+
+| Entity | Identity | Authority owner | Declare/create | Read/project | Update/transition | Delete/retire |
+|---|---|---|---|---|---|---|
+
+This matrix applies to identity-bearing entities and independently governed
+value families. A Subordinate Payload or value object inherits the lifecycle
+and authority of its owning entity unless it passes the Promotion Test; it does
+not require a ceremonial peer lifecycle row.
+
+The lifecycle columns are completeness questions, not a mandate for mutable
+CRUD:
+
+- create may be declaration, construction, admission, or materialization;
+- read should normally be a typed projection over authoritative truth;
+- update should normally be an admitted transition or new version rather than
+  in-place semantic mutation;
+- delete should normally be retirement, revocation, decommission, or
+  supersession where history or identity must remain true.
+
+Every cell must identify a lawful function, declare `not_applicable` with a
+reason, or name a `Gap:` / `Unanswered:` item and owner. Silence is not
+logical-completeness evidence.
+
+This entity lifecycle is distinct from the operational module lifecycle in
+section 6C. The Ontology describes what states and transformations exist for
+domain entities. Section 6C confirms how the resulting realization is built,
+released, deployed, observed, and retired.
+
+### Authority Model
+
+Authority is part of the Ontology, not metadata added to an operation after its
+shape has been selected.
+
+For every Ontology function or lifecycle transition that crosses a semantic,
+authority, admission, effect, persistence, or public boundary, design evidence
+must provide this authority matrix or an equivalent closed representation:
+
+| Function or transition | Proposer | Evaluator | Verifier | Admitter | Executor | Projector | Retirement owner |
+|---|---|---|---|---|---|---|---|
+
+The model must distinguish:
+
+- actor identity from authority;
+- available capability from authority admitted for the current basis;
+- proposal from evaluation, verification, admission, execution, projection,
+  and retirement;
+- attribution from permission; and
+- ownership of domain meaning from ownership of runtime effects.
+
+One owner may lawfully occupy more than one role only when the governing
+authority explicitly says so. Role coincidence must not be inferred from
+implementation convenience.
+
+Pure subordinate helpers inherit the authority envelope of their owning
+Ontology function and do not require peer authority rows unless they cross one
+of those boundaries.
+
+Composition must not widen authority implicitly. A composed or higher-order
+function has no more authority than the authority law admitted for its inputs,
+constituent functions, and current basis. Delegation, elevation, transfer, or
+retirement authority requires a named typed transition and an owning admission
+boundary. Projections cannot create authority, and downstream code cannot
+reconstruct an authority witness from actor labels, capability strings, or
+payload shape.
+
+### Atomic Functions And Higher-Order Composition
+
+The Ontology must derive the smallest parameterized atomic function families
+that make the entity lifecycles logically complete. Variation that changes only
+an entity kind, projection kind, transition kind, policy, or subordinate payload
+should normally be a typed parameter or closed variant of one function family,
+not another peer function.
+
+The minimum function-derivation evidence is:
+
+| Discovered functionality | Entity | Atomic function or template | Higher-order composition | Effect class | Required authority | Disposition |
+|---|---|---|---|---|---|---|
+
+Every row must be one of:
+
+- derived through an admitted atomic function;
+- derived through a declared higher-order composition;
+- deferred with an owner and re-entry condition;
+- excluded by current product authority; or
+- unresolved as a named gap.
+
+Where the boundary has higher-order behavior, the Ontology must name the
+governing composition and effect algebra. Typical categories include unit or
+lift, sequential composition, parallel or applicative composition, fold or
+evaluation, retry or recovery, recursion or fixed point, and projection. The
+design must state the applicable identity, closure, associativity, cardinality,
+effect, and authority-conservation laws rather than hiding them in controller
+flow.
+
+This rule does not require monadic or category-theory vocabulary. An ODD product
+may bind the requirement to GTL composition and ABG interpretation; another
+product may use another explicit algebra. What is mandatory is that composition
+and effects are declared before implementation and that no private helper,
+loop, adapter, or endpoint invents another constructor.
+
+### Whole-Family Prime Contraction
+
+Prime review must evaluate the complete candidate function and carrier family,
+not only each proposed unit in isolation.
+
+Before promotion, review must ask:
+
+- can several proposed operations be typed parameters of one atomic function?
+- are several commands lifecycle transitions over one entity?
+- are several reads projections over one source truth?
+- are several implementations applications of one higher-order function?
+- does the candidate introduce independent identity, authority, effect,
+  lifecycle, reuse, or public pattern-match semantics?
+
+A family of individually plausible functions is not Prime when one
+parameterized template plus closed variants carries the same meaning and
+authority. Recurrence must be contracted during design when visible; the
+post-implementation recurrence rule is not a substitute for this prior pass.
+
+### Ontology Projection Law
+
+The Ontology is one semantic truth. The following must preserve it and must not
+become independent semantic authorities:
+
+- class or domain diagrams;
+- sequence diagrams;
+- state and lifecycle diagrams;
+- authority and effect matrices;
+- the Irreducible Architectural Carrier Set;
+- public APIs, operation registers, SDK and CLI surfaces;
+- schemas, codecs, manifests, and generated catalogs;
+- target architecture and module design;
+- implementation modules through accepted target design; and
+- test and proof inventories through requirements and accepted design.
+
+Each design projection must identify its Ontology source and the identity,
+relationship, lifecycle, authority, function, or effect law it preserves. Any
+intentional omission or flattening must declare accepted loss and a failure
+condition. Target design may add structural `HOW` that is absent from the
+Ontology, but it may not originate rival semantic meaning. Implementation and
+tests trace through that accepted design rather than bypassing it.
+
+If a public operation, sequence message, state transition, carrier, or effect
+cannot be traced through accepted design to the accepted Ontology, it is
+ungrounded design and must not enter the active product line. An implementation
+branch or test expectation must trace to requirements plus accepted design; it
+must preserve, but need not be enumerated by, the Ontology.
+
+---
+
 ## 5. Prime Law
 
-New top-level realization units should be introduced only when they are
-structurally prime.
+Using the logically complete candidate Ontology, new top-level realization
+units should be proposed only when they are structurally prime. Whole-family
+Prime is part of the evidence used to accept the Ontology basis. After
+acceptance, only the resulting Prime units may enter target design and
+realization. Prime applies both to each unit and to the candidate family as a
+whole.
 
 This applies to:
 
@@ -392,8 +633,9 @@ architecture.
 
 ## 5A. Irreducible Architectural Carrier Set Rule
 
-When defining a schema, carrier family, or typed public boundary, start by
-naming the **Irreducible Architectural Carrier Set**.
+When defining a schema, carrier family, or typed public boundary, derive the
+**Irreducible Architectural Carrier Set** from the accepted Ontology before
+naming subordinate payloads or implementation modules.
 
 The Irreducible Architectural Carrier Set is the smallest set of carriers
 required to carry the real functionality and authority flow of the boundary.
@@ -419,20 +661,28 @@ The following do **not** automatically justify a top-level carrier:
 
 The required carrier-set evidence is:
 
-1. declare the Irreducible Architectural Carrier Set
-2. declare which carriers are authoritative and which are downstream
-3. treat every other shape as a Subordinate Payload by default
-4. keep subordinate payload detail private unless it passes the Promotion Test
-5. reconcile the typed implementation to that carrier set before claiming
+1. cite the accepted Ontology and function-derivation evidence
+2. declare the Irreducible Architectural Carrier Set
+3. map each carrier to the Ontology identity, lifecycle, function, authority,
+   effect, or projection law it carries
+4. declare which carriers are authoritative and which are downstream
+5. treat every other shape as a Subordinate Payload by default
+6. keep subordinate payload detail private unless it passes the Promotion Test
+7. reconcile the typed implementation to that carrier set before claiming
    design-method closure
 
-If the Irreducible Architectural Carrier Set has not been declared, the schema
-is not yet design-method complete under this method.
+The IACS is a realization projection of the Ontology. It must not replace the
+Ontology or become the first surface on which entities, functions, lifecycle,
+or authority acquire meaning.
 
-For planned implementation work, declaring the carrier set first is the preferred
-route. If implementation runs ahead, the missing carrier-set evidence must be
-reconstructed, checked against the implementation, and corrected before
-design-method closure.
+If the accepted Ontology or Irreducible Architectural Carrier Set has not been
+declared, the schema is not yet design-method complete under this method.
+
+For planned implementation work, declaring the Ontology and then the carrier
+set is mandatory before mergeable implementation starts. If retrospective
+implementation already exists, it remains frozen until the missing Ontology and
+carrier-set evidence are reconstructed, checked against the implementation, and
+accepted.
 
 ## 5B. Promotion Test
 
@@ -512,9 +762,10 @@ The required derivation evidence is:
 
 1. constitutional `WHAT`
 2. reference design
-3. target design mapping
-4. target module boundary assets
-5. implementation
+3. target Ontology and reference-to-Ontology mapping
+4. target design mapping
+5. target module boundary assets
+6. implementation
 
 This rule exists to stop code-first ports from importing reference drift,
 delivery quirks, helper sprawl, or accidental authority paths into the new
@@ -523,11 +774,14 @@ realization without a later audit trail.
 The minimum lawful design assets for a reference-derived module boundary are:
 
 - the named reference design surfaces being used as source material
+- the accepted target Ontology, including the disposition of reference entities,
+  functions, lifecycle, authority, effects, and projections
 - the target design surfaces that replace or bind those source surfaces
 - an explicit mapping that says what is preserved, reshaped, deferred, or
   demoted to delivery binding in the target line
 - the target module boundary assets required by this method, including the
-  Irreducible Architectural Carrier Set and structural carrier diagram
+  Ontology-derived Irreducible Architectural Carrier Set and three-view design
+  asset
 
 The design question is not:
 
@@ -542,10 +796,11 @@ It is:
 If a target realization cannot show that derivation chain, it is not yet
 design-method complete under this method.
 
-## 5E. Three-View Behavioral Design Gate
+## 5E. Ontology And Three-View Behavioral Design Gate
 
-Every active semantic or typed module boundary must carry one complete
-three-view Mermaid design asset before mergeable implementation starts.
+Every active semantic or typed module boundary must carry one accepted Ontology
+and one complete three-view Mermaid design asset before mergeable
+implementation starts.
 
 The asset must contain all three views:
 
@@ -557,14 +812,40 @@ A project may ratify another text-native diagram format only when it preserves
 the same three distinct views and the same cross-view checks. One broad flowchart
 does not substitute for the three models.
 
-The views are not decorative. Together they are the sign-off surface for domain
-identity, authority, behavior, lifecycle, and axiom conformance.
+The views are not decorative and they are not peer truth surfaces. They are
+fidelity-checked projections of the accepted Ontology. Together they are the
+sign-off surface for domain identity, authority, behavior, lifecycle, and axiom
+conformance.
+
+### Ontology evidence
+
+The design asset must cite one accepted Ontology for the active boundary and
+include or reference its:
+
+- entity and relationship inventory;
+- invariant and cardinality law;
+- entity-lifecycle completeness matrix;
+- authority matrix;
+- atomic-function and higher-order-function derivation matrix;
+- governing composition and effect algebra where applicable;
+- whole-family Prime contraction result; and
+- explicit deferred, excluded, and unresolved functionality.
+
+The Ontology may be a boundary-bounded slice of a wider accepted product
+Ontology. The slice must cite its parent and preserve parent identity,
+relationship, lifecycle, authority, and function law. Copying selected rows into
+a new local model without that derivation creates another truth surface.
 
 ### Domain model
 
-The `classDiagram` must show, for the active boundary:
+The `classDiagram` is the structural domain projection of the Ontology. It must
+show, for the active boundary:
 
 - domain identities and cardinalities rather than helper-class decomposition;
+- entity ownership, invariants, and lawful lifecycle relationships;
+- atomic function families and their entity inputs and outputs where they cross
+  the active boundary;
+- higher-order composition relationships where they determine boundary shape;
 - prime carriers;
 - subordinate payloads;
 - effect-edge-only payloads;
@@ -596,10 +877,12 @@ The standard relationship expectations are:
 
 ### Sequence model
 
-The `sequenceDiagram` must show the supported execution path from admitted
-input to result or truthful stop. It must name the owner of every decision and
-effect boundary. Where applicable it must show malformed input or output,
-retry, recursion, fan-out/fan-in, nested workflow, and human escalation paths.
+The `sequenceDiagram` is the behavioral projection of Ontology functions and
+authority. It must show the supported execution path from admitted input to
+result or truthful stop. It must name the owner and required authority of every
+decision, admission, execution, projection, and effect boundary. Where
+applicable it must show malformed input or output, retry, recursion,
+fan-out/fan-in, nested workflow, and human escalation paths.
 
 Every participant must exist in the domain model or be an explicitly external
 actor. Every message must bind to a declared carrier transform, graph/C
@@ -607,12 +890,17 @@ constructor, interpreter action, or effect-handler call. A private loop,
 service method, plugin, shell, or script may not silently replace a declared
 workflow transition.
 
+Every message must also bind to an Ontology function and its admitted authority
+role. Actor identity or call reachability alone does not authorize a message.
+
 ### State model
 
-The `stateDiagram-v2` must show the complete admitted lifecycle for the active
-boundary, including refusal, blocked, continuation, retry, escalation, and
-terminal states that the boundary can produce. Every transition must name its
-owning admission, compiler, interpreter, event, projection, or external act.
+The `stateDiagram-v2` is the lifecycle projection of Ontology entities. It must
+show the complete admitted lifecycle for the active boundary, including
+refusal, blocked, continuation, retry, escalation, and terminal states that the
+boundary can produce. Every transition must bind to an Ontology function and
+name its owning authority, admission, compiler, interpreter, event, projection,
+or external act.
 
 Controller-local memory is not a lawful source of lifecycle truth when the
 product declares replay, event, graph, or carrier ownership.
@@ -628,14 +916,21 @@ runtime, handler, and module axiom with one of:
 
 The minimum evaluation columns are:
 
-| Axiom | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |
-|---|---|---|---|---|---|---|---|---|
+| Axiom | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |
+|---|---|---|---|---|---|---|---|---|---|
 
 The cross-view evaluation must prove that:
 
+- every element in each view derives from the accepted Ontology;
+- every discovered functionality row has a derived, deferred, excluded, or gap
+  disposition;
 - every sequence participant and lifecycle carrier exists in the domain model;
 - every sequence message has a declared semantic or effect boundary;
 - every lifecycle transition is derivable from admitted truth;
+- every function and transition has an explicit authority path and composition
+  does not widen that authority implicitly;
+- every public operation is a projection of an Ontology function rather than an
+  independently authored semantic peer;
 - raw probabilistic output cannot transition directly to accepted or closed;
 - handlers and plugins own interiors only when the runtime owns admission,
   events, continuation, and closure;
@@ -650,32 +945,45 @@ by imperative glue in a plugin, shell, service, script, or test harness.
 
 ### Gate and retrospective work
 
-The design verdict must be `accepted` before implementation can enter the
-active product line. Any failed applicable axiom or blocking realization gap
-keeps the verdict non-accepted.
+For a new or semantically changed boundary, the Ontology and design verdict must
+both be `accepted` before implementation can enter the active product line. Any
+failed applicable axiom, missing functionality disposition, unresolved
+authority path, or blocking realization gap keeps the verdict non-accepted.
+
+For an unchanged `realization_refactor`, the gate is proportional: cite the
+accepted Ontology and design basis, identify the touched projection set, and
+prove that entities, relationships, lifecycle, authority, functions, effects,
+and public semantics have no delta. That proof reuses the existing verdict; it
+does not create a new Ontology or acceptance ceremony.
 
 An exploratory implementation may exist only as an explicitly disposable
 spike outside the mergeable product line. It supplies evidence to design; it
 does not earn retention, publication, or implementation authority.
 
-Existing implementation placed under retrospective review is frozen until its
-three-view asset and axiom evaluation are accepted. The design must evaluate
-the code against prior authority; it must not rewrite the diagrams to
-rationalize an unlawful implementation shape.
+Existing implementation placed under retrospective review is frozen only at
+the affected semantic boundary until its Ontology, three-view asset, and axiom
+evaluation are accepted. Unrelated maintenance and accepted boundaries remain
+available. The design must evaluate the code against prior authority; it must
+not rewrite the Ontology or diagrams to rationalize an unlawful implementation
+shape.
 
 The asset must stay boundary-bounded. It is a defect if it mixes an active
 semantic boundary with unrelated bootstrap, test-harness, projection, or
 delivery shapes merely to look complete.
 
-If any of the three views, the cross-view evaluation, or the accepted verdict
-is absent, the boundary is not design-method complete and implementation may
-not proceed.
+If the Ontology, any of the three views, the cross-view evaluation, or either
+accepted verdict is absent, the boundary is not design-method complete and
+implementation may not proceed.
 
 ## 5F. Theoretical Framing For Boundary Law
 
 This method is operational and stands on its own. It does not require a user to
 adopt the world-model domain or accept any empirical ontology program before
 using it.
+
+The capitalized `Ontology` in section 4B is the engineering Ontology of one
+designed boundary. It does not require adoption of the Constraint-Emergence
+Ontology, a world-model theory, or any other metaphysical or empirical claim.
 
 The current world-model work does, however, provide a useful theoretical
 framing for why these rules are shaped this way.
@@ -750,9 +1058,11 @@ When this method governs an active realization boundary, the canonical evidence
 route is:
 
 1. constitutional `WHAT` and owning requirements;
-2. target design and IACS;
-3. accepted three-view behavioral design plus axiom evaluation;
-4. implementation and module-derived unit tests.
+2. accepted Ontology with lifecycle, authority, function derivation, and
+   whole-family Prime evidence;
+3. target design and Ontology-derived IACS;
+4. accepted three-view behavioral projections plus axiom evaluation;
+5. implementation and module-derived unit tests.
 
 This route is mandatory for implementation entering the active product line.
 It is not a claim about the fastest disposable exploration path. A spike that
@@ -761,11 +1071,12 @@ publication presumption.
 
 Completeness requires:
 
+- the final implementation must be traceable to the accepted Ontology;
 - the final implementation must be traceable to design and module boundary
   assets
 - unit tests must be traceable to module ownership, not only to helper layout
-- any implementation-first spike must remain disposable until the three-view
-  gate is accepted; and
+- any implementation-first spike must remain disposable until the Ontology and
+  three-view gate is accepted; and
 - implementation may not compensate for an unrealized declared constructor by
   introducing a hidden controller or alternative authority path.
 
@@ -780,20 +1091,22 @@ It does not outrank constitutional truth or ratified design.
 The minimum complete evidence chain is:
 
 1. constitutional `WHAT`
-2. target design
-3. target module boundary assets and IACS
-4. accepted domain, sequence, and state views with axiom evaluation
-5. implementation
-6. unit tests derived from the same module boundary
+2. accepted Ontology
+3. target design
+4. target module boundary assets and Ontology-derived IACS
+5. accepted domain, sequence, and state projections with axiom evaluation
+6. implementation
+7. unit tests derived from the same Ontology and module boundary
 
 Where a reference realization exists, the complete evidence chain becomes:
 
 1. constitutional `WHAT`
 2. reference design
-3. target design mapping
-4. target module boundary assets and IACS
-5. accepted domain, sequence, and state views with axiom evaluation
-6. implementation and unit tests
+3. accepted target Ontology and reference-to-Ontology mapping
+4. target design mapping
+5. target module boundary assets and Ontology-derived IACS
+6. accepted domain, sequence, and state projections with axiom evaluation
+7. implementation and unit tests derived from the same Ontology
 
 If a change jumps from design or code straight to tests and never reconstructs
 the module boundary, the proof surface is too weak.
@@ -806,9 +1119,11 @@ They must derive from module ownership evidence, not from code shape alone.
 
 That means a unit test should be traceable to:
 
+- the accepted Ontology and applicable entity, lifecycle, authority, function,
+  effect, or projection law
 - the governing module design
 - the active IACS or equivalent carrier inventory
-- the module-bounded structural carrier diagram when one exists
+- the module-bounded domain, sequence, and state projections
 - the requirement families the module owns
 
 Unit tests must not be authored primarily from:
@@ -1299,9 +1614,9 @@ When reviewing code under this method, ask:
 21. If a reference realization exists, has the target boundary been derived
     explicitly from reference design to target design to target module assets
     rather than from code drift?
-22. Does a module-bounded structural carrier diagram exist and accurately show
-    prime carriers, subordinate payloads, visibility, ownership, and deferred
-    families?
+22. Does a module-bounded domain projection exist and accurately show prime
+    carriers, subordinate payloads, visibility, ownership, and deferred
+    families from the accepted Ontology?
 23. Do the unit tests derive from module ownership and module assets rather
     than from helper layout or incidental code shape?
 24. If the change claims cleanup or optimization, does it stay boundary-local,
@@ -1348,6 +1663,28 @@ When reviewing code under this method, ask:
     than bypassing it with imperative glue?
 40. Is the design verdict explicitly `accepted` before product implementation
     or publication proceeds?
+41. Does one accepted Ontology exist before IACS, public operation, schema,
+    module, or implementation promotion?
+42. Does the Ontology enumerate entities, identities, relationships,
+    invariants, and logical lifecycle completeness without treating mutable CRUD
+    as the default?
+43. Does every Ontology function or transition declare proposer, evaluator,
+    verifier, admitter, executor, projector, and retirement authority as
+    applicable, with actor and capability kept distinct from authority?
+44. Has every discovered functionality item been derived through an atomic
+    function or higher-order composition, explicitly deferred or excluded, or
+    assigned to a named gap?
+45. Was Prime contraction applied to the complete candidate function and
+    carrier family, including the parameterized-template test, rather than only
+    to each proposed unit in isolation?
+46. Does the boundary declare its composition and effect algebra and prove
+    identity, closure, cardinality, effect, and authority conservation where
+    applicable?
+47. Are the class, sequence, state, IACS, public contract, adapter, code, and
+    test surfaces traceable projections of the Ontology with any accepted loss
+    declared?
+48. Would removing the Ontology reveal ungrounded meaning in a downstream view,
+    operation register, controller, or implementation branch?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
@@ -1361,6 +1698,23 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 
 - [ ] Does the change preserve the constitutional `WHAT` and keep realization work
       inside lawful `HOW` surfaces only?
+- [ ] Does the active boundary have one accepted Ontology that derives its
+      entities, identities, relationships, invariants, lifecycle, authority,
+      atomic functions, higher-order composition, effects, and projections?
+- [ ] Does the entity-lifecycle completeness matrix give every declare/create,
+      read/project, update/transition, and delete/retire question a lawful
+      function, reasoned `not_applicable`, or named owned gap?
+- [ ] Does the authority matrix distinguish actor, capability, proposal,
+      evaluation, verification, admission, execution, projection, and
+      retirement without implicit authority widening?
+- [ ] Does the function-derivation matrix dispose every discovered
+      functionality item and prevent direct verb-to-operation promotion?
+- [ ] Has whole-family Prime contraction factored repeated behavior into
+      parameterized atomic functions and declared higher-order composition
+      before peer functions, operations, or carriers are promoted?
+- [ ] Are the IACS, three views, public contracts, adapters, implementation, and
+      tests fidelity-checked projections of the accepted Ontology rather than
+      independent design authorities?
 - [ ] If a reference realization exists, is the new realization functionally
       equivalent at the semantic boundary without copying incidental
       implementation drift?
@@ -1443,12 +1797,15 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 
 The compact hard-gate version of this checklist is:
 
+- [ ] accepted Ontology before Prime carriers, operations, or implementation
+- [ ] complete entity lifecycle, authority, and function-derivation evidence
+- [ ] whole-family Prime contraction and declared composition/effect algebra
 - [ ] pure functions in the semantic center
 - [ ] immutable carriers with no shared mutable semantic state
 - [ ] one owner per truth surface
 - [ ] low coupling between admission, algebra, and effect edges
 - [ ] no hidden runtime authority in semantic code
-- [ ] accepted domain, sequence, and state-machine views
+- [ ] accepted domain, sequence, and state-machine projections of the Ontology
 - [ ] complete cross-view axiom evaluation with no bypassed realization gap
 - [ ] functional equivalence to specification and, when present, the reference
       realization at the semantic boundary
@@ -1474,6 +1831,7 @@ Projects may adopt this method by:
 When a project adopts this method, it must apply it consistently across the
 named boundary:
 
+- Ontology and architecture derivation
 - design modules
 - runtime or execution kernels
 - prompt assembly and reporting paths
@@ -1484,13 +1842,18 @@ For migrations involving carrier closure, schema closure, or governance
 boundaries, projects should make the Boundary Closure Evaluators explicit in
 the governing ADR or ticket rather than leaving them implicit.
 
+Every adopted semantic boundary must declare or cite its accepted Ontology
+before claiming design-method completion. The Ontology evidence must include
+entity lifecycle, authority, function derivation, whole-family Prime, and
+projection traceability at the granularity applicable to the boundary.
+
 When the adopted boundary includes schema or typed carrier work, the project
-must declare and reconcile the Irreducible Architectural Carrier Set before
-claiming design-method completion.
+must derive and reconcile the Irreducible Architectural Carrier Set from that
+Ontology before claiming design-method completion.
 
 When the adopted boundary is derived from an existing realization, the project
 must also publish the reference-to-target derivation asset and the
-module-bounded structural carrier diagram before claiming design-method
+Ontology-derived three-view design asset before claiming design-method
 completion for that boundary.
 
 When the adopted boundary has active implementation, the project must also
@@ -1527,8 +1890,8 @@ So:
   tap decision
 - `ODD_METHOD.md` answers what is lawful graph-native product shape
 - `DESIGN_MODULE_METHOD.md` answers what is the preferred implementation design
-  discipline when you want low coupling, no interface bleed, and explicit effect
-  management
+  discipline when you want Ontology-first derivation, low coupling, no
+  interface bleed, and explicit authority and effect management
 - `UX_METHOD.md` answers the additional discipline that applies when a module
   realizes a UI surface
 
@@ -1559,3 +1922,8 @@ This method does not require:
 
 It does require that the implementation shape remain readable, modular, and
 honest about where meaning lives and where effects happen.
+
+Where a boundary composes higher-order functions or effectful computation, it
+does require an explicit composition and effect algebra with its applicable
+identity, closure, cardinality, effect, and authority-conservation laws. The
+vocabulary is optional; the law is not.

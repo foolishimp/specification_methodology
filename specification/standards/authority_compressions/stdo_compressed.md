@@ -14,12 +14,12 @@ source_refs:
   - ../UX_METHOD.md
 source_digests:
   SPEC_METHOD.md: 00b802d5c0ead9bef4d95b1143797b806022ffd5884c4a89b37b29ad321e11de
-  DESIGN_MODULE_METHOD.md: 84ecd60707dd26c0248e160336b9eb5d346d80197d441175aa48ca82b1dad409
+  DESIGN_MODULE_METHOD.md: c28084bc8b14dc4b19f50bf280be249031ff06a89559760d362524b4267c7911
   ODD_METHOD.md: e420024069307ec0de189b3e6e401058db063dfdcc8c701fee3088e844f060f4
   TICKET_METHOD.md: 1b190915d2d76ed485b385c722c1221f39e32f72a37b379bd7d35ccafab0e17c
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
 generated_by: codex
-generated_at: 2026-06-30
+generated_at: 2026-07-15
 stale_if_source_digest_changes: true
 ---
 
@@ -53,6 +53,18 @@ layer that owns the missing truth.
 - Missing traceability is a defect.
 - Prefer one algebraic primitive plus projections over multiple local decision
   systems.
+- When `DESIGN_MODULE_METHOD` is adopted for a named semantic boundary, treat
+  discovered functionality as input to design, not as pre-authorized operation
+  identities. Derive a candidate Ontology, complete lifecycle and authority,
+  run whole-family Prime, and then accept the Ontology before promoting IACS,
+  public operations, schemas, or modules.
+- The Ontology is semantic-design authority, not a replacement for target
+  architecture or module design. Domain, sequence, state, authority, IACS, and
+  public-contract surfaces preserve it; code and tests derive through
+  requirements plus accepted design.
+- Apply the gate proportionally. An unchanged `realization_refactor` cites the
+  accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
+  affected relations and projections, with no extra ticket or approval ceremony.
 - Method compression is a prompt input, not a replacement for the source method.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 84ecd60707dd26c0248e160336b9eb5d346d80197d441175aa48ca82b1dad409
+source_digest: c28084bc8b14dc4b19f50bf280be249031ff06a89559760d362524b4267c7911
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-06-30
+generated_at: 2026-07-15
 stale_if_source_digest_changes: true
 ---
 
@@ -17,9 +17,37 @@ stale_if_source_digest_changes: true
 
 ## Governing Claim
 
-A design module is the current realization contract between requirements and
-code. It owns structure, interfaces, coupling, state, effects, data flow, proof,
-and module boundaries for the realization surface.
+A design module derives one realization contract between requirements and code.
+Its accepted Ontology is the prior semantic-design authority for entities,
+identity, relationships, invariants, lifecycle, authority, atomic functions,
+higher-order composition, effects, and projections. The Ontology does not
+replace target architecture or module design; implementation and tests derive
+from requirements plus accepted design and preserve the Ontology through that
+design.
+
+Discovered functionality is not yet an architectural operation. The lawful
+order is:
+
+```text
+constitutional functionality
+  -> candidate Ontology
+  -> logical completeness
+  -> whole-family Prime contraction
+  -> accepted Ontology basis
+  -> IACS
+  -> target design and three-view projections
+  -> public contracts
+  -> implementation and tests
+```
+
+The Ontology remains subordinate to constitutional `WHAT`. It may not invent
+product meaning.
+
+This rule applies only to the named boundary where the project adopts this
+method. The Ontology verdict may share the existing design pack and acceptance;
+it requires no extra document, ticket, or ceremony. An unchanged
+`realization_refactor` cites the accepted Ontology/design basis and proves `no
+ontology delta`; only affected semantic relations and projections re-enter.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
@@ -27,6 +55,25 @@ surfaces.
 
 ## Prime Rules
 
+- Start from a candidate Ontology, not from endpoints, commands, schemas,
+  classes, or a carrier census. Accept it only after completeness and
+  whole-family Prime have been evaluated.
+- Version the Ontology against its constitutional basis; reprice invalidates
+  affected acceptance until the changed relations are evaluated again.
+- Complete each entity's declare/create, read/project, update/transition, and
+  delete/retire questions with a lawful function, reasoned not-applicable
+  disposition, or named owned gap. Apply this to identity-bearing or
+  independently governed entities; subordinate values inherit their owner's
+  lifecycle and authority unless promoted.
+- Declare proposer, evaluator, verifier, admitter, executor, projector, and
+  retirement authority. Actor and available capability are not authority.
+- Derive parameterized atomic function families and the governing higher-order
+  composition/effect algebra before promoting peer operations.
+- Apply Prime to the complete function and carrier family, not only to each
+  proposed unit in isolation.
+- Treat IACS, class/sequence/state views, and public contracts as
+  fidelity-checked Ontology projections. Target design remains the structural
+  `HOW`; code and tests derive through requirements plus accepted design.
 - One truth surface for each decision; no rival local centers.
 - Prefer total functions, closed enums, explicit state, and deterministic folds.
 - Separate pure decision logic from effect edges.
@@ -41,6 +88,8 @@ surfaces.
 - Code, tests, generated artifacts, runtime fixtures, prompt prose, and local
   convention may prove lifecycle claims, but must not invent lifecycle
   authority.
+- Mergeable implementation requires accepted Ontology evidence, accepted
+  domain/sequence/state projections, and complete cross-view axiom evaluation.
 
 ## Prompt-Relevant Rules
 
