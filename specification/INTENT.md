@@ -20,6 +20,7 @@ Excluding executable STDO machinery does not make that algebra optional.
 
 ## Version 2 Direction
 
-Version 2 evolves the accepted `v1.8.0` Product incrementally. It preserves all
-accepted predecessor semantics and adds only the lessons that remain valuable
-independently of the rejected executable and overcorrected candidates.
+Version 2 evolves the accepted `v1.8.0` Product incrementally. It preserves or
+explicitly supersedes every accepted predecessor semantic and adds only the
+lessons that remain valuable independently of the rejected executable and
+overcorrected candidates.
