@@ -104,6 +104,19 @@ So the intended loop is:
 5. closure is checked against that same contract
 6. resulting state still flows through normal proof, gap analysis, and repricing
 
+### Milestone And Phase-Scoped Truth (`STDO-UP-006`)
+
+A ticket may contain several closure-bearing milestones without becoming
+several tickets. Each milestone has stable identity, a bounded claim, relevant
+dependencies, current state, required evidence, and an explicit relation to
+ticket closure.
+
+Milestone acceptance proves only its declared claim. Accepted design does not
+satisfy implementation, installed proof, qualification, or release. Ticket
+completion requires every closure-bearing milestone to be accepted; optional
+or deferred work requires an explicit disposition and owner. Commentary and
+generated summaries cannot mutate milestone or ticket truth.
+
 ---
 
 ## Minimal Layout
@@ -638,6 +651,24 @@ An admitted execution contract should be:
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
 
+### Execution And Verification Authority Separation (`STDO-UP-007`)
+
+Authority to author or implement a change is not independent authority to
+verify it. Where independent review is required, the reviewer is not the author
+of the reviewed subject and identifies the exact subject, basis, scope,
+exclusions, evidence, verdict, and unresolved findings.
+
+Self-review remains useful authoring evidence but cannot be relabeled as
+independent. Human authority may accept or reject the claim; it does not make
+implementer self-review independent. Independent review is required at Product,
+qualification, release, and explicitly risk-bearing boundaries that claim it,
+not for every local implementation step.
+
+A direct or lawfully proxied human ruling receives durable disposition before
+the next affected acceptance boundary. Its source wording remains distinct
+from agent interpretation. Opening a ticket records the obligation but does not
+satisfy it, and an agent cannot widen the ruling while recording it.
+
 ### Evaluation Criteria And Non-Closure Conditions
 
 Execution contracts should expose both:
@@ -1048,6 +1079,18 @@ The intended meaning is:
 
 This keeps the live execution set small enough that `rg` remains fast and
 readable without forcing deferred work into comments or goals.
+
+### One-Truth State Projection And Drift Refusal (`STDO-UP-009`)
+
+Work state has one authority chain: Goals own the bounded work wave, the ticket
+owns ticket state, milestone authority owns subordinate milestone state, and
+accepted design owns realization decisions. Comments, dashboards, registers,
+indexes, and generated summaries are projections.
+
+Recency, visibility, or repetition does not turn a projection into truth.
+Contradiction between the owning ticket, required milestones, current Goals, or
+cited acceptance evidence blocks closure. Superseded evidence remains history
+and cannot be projected as current acceptance.
 
 ---
 

@@ -1260,6 +1260,34 @@ This preserves the F_P/F_D split at the method layer. The agentic coder is F_P: 
 
 A passed admission and a completed walkthrough are conformance evidence, not ratification. Shared method change still follows §9: grey work is not made constitutional by repeated agentic execution. The agentic coder conforms to the method; it does not amend the method by acting.
 
+### 11.7B Real Authority-Path Negative Proof (`STDO-UP-010`)
+
+Negative proof for an ODD or graph-native boundary exercises the supported
+Product authority path. It must not manufacture the refusal state, blocked
+event, gap, or verdict that the system is supposed to derive.
+
+Closure-grade negative evidence identifies the supported entry and governing
+authority, invalidates the real authority-bearing input, exercises the
+supported path, proves refusal before the prohibited effect, and establishes
+that no legacy, fallback, reconstruction, or parallel path succeeds. Source,
+packaged, installed, and runtime absence are distinct claims.
+
+Where these identities apply, the supported relation is:
+
+```text
+public entry
+  -> admitted GTL composition owns traversal topology
+  -> named GraphFunction supplies the callable work contract
+  -> implementation or plugin binding realizes only its admitted seam
+  -> ABG owns traversal, event, continuation, and replay truth
+  -> replay-derived projection
+  -> typed Product outcome or continuation
+```
+
+No CLI, SDK, service, adapter, plugin, fixture, query, or projection may become
+a rival traversal controller. The consumer owns the concrete test and evidence
+mechanism; this section owns the property that mechanism must prove.
+
 ### 11.8 Cumulative Environment Law Is Mandatory
 
 Do not model composition as "the last output feeds the next input".

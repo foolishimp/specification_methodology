@@ -1,16 +1,20 @@
 # /spec.refresh — Reload Specification Methodology Standards into Context
 
-Read the canonical standard documents from `specification_methodology` and surface their full content into the active session. After this command, the session has the live constitutional text available for reasoning, not just stale memory.
+Read standard documents from one explicitly selected STDO basis and surface
+their full content into the active session. Loading a document is a context
+projection of that complete basis; it does not create a partial constitution.
 
 ## Usage
 
 ```
-/spec.refresh [--doc <name>] [--list]
+/spec.refresh (--installed | --release <version> | --candidate) [--doc <name>] [--list]
 ```
 
 | Option | Description |
 |--------|-------------|
-| (none) | Load SPEC_METHOD.md (the baseline) |
+| `--installed` | Load from the consumer's pinned installed STDO cut |
+| `--release <version>` | Load from the immutable released cut identified by `<version>` |
+| `--candidate` | Load mutable authoring source as explicitly non-operative candidate context |
 | `--doc <name>` | Load a specific document by short name (see list below) |
 | `--list` | Show available documents and their paths |
 
@@ -19,7 +23,9 @@ Read the canonical standard documents from `specification_methodology` and surfa
 | Short name | File | What it governs |
 |------------|------|-----------------|
 | `spec` | `specification/standards/SPEC_METHOD.md` | Constitutional baseline — authority chain, drift, repricing, sufficiency |
+| `design` | `specification/standards/DESIGN_MODULE_METHOD.md` | Ontology, IACS, Prime, three-view, and functional realization method |
 | `odd` | `specification/standards/ODD_METHOD.md` | Graph-native ODD product realization — covers graph substrate law, traversal, and ODD product-authoring over GTL/ABG (absorbed the prior `GRAPH_METHOD.md` on 2026-04-21) |
+| `ux` | `specification/standards/UX_METHOD.md` | UX state, message, transition, effect, replay, and carrier law |
 | `writing` | `specification/standards/WRITING_GUIDE.md` | Prose style and compression rules |
 | `posting` | `specification/standards/POSTING_GUIDE.md` | Commentary and post format |
 | `ticket` | `specification/standards/TICKET_METHOD.md` | Work item structure and triage |
@@ -30,26 +36,29 @@ Read the canonical standard documents from `specification_methodology` and surfa
 
 ## Instructions
 
-### Step 1: Resolve workspace root
+### Step 1: Resolve the selected basis
 
-Locate the `specification_methodology` repo root. The standards live at:
+The command requires exactly one basis mode:
+
+- `--installed`: resolve the consumer's installed cut and verify its selected
+  version, immutable reference, and member-inventory identity;
+- `--release <version>`: resolve the immutable released cut for that version;
+- `--candidate`: resolve mutable `specification_methodology` authoring source
+  and label it candidate-only.
+
+Do not silently fall back between modes. Mutable source must never replace a
+missing installed or released basis. If the selected basis cannot be verified,
+stop and report the missing identity.
+
+For `--candidate`, emit:
 
 ```
-<repo-root>/specification/standards/
-```
-
-Resolve the root by finding the directory that contains `specification/standards/SPEC_METHOD.md`. If this command is invoked from a downstream workspace (e.g., a project that has the methodology installed under `.genesis/docs/standards/`), read from the **source repo** path, not the installed copy. Installed copies under `.genesis/` are mirrors and may be stale.
-
-If the source repo cannot be located, fall back to the installed copy and emit a warning:
-
-```
-[WARN] Source repo not found — loading installed copy from .genesis/docs/standards/.
-       Installed copies may be stale. Locate specification_methodology to load authoritative text.
+[CANDIDATE] Mutable STDO authoring source loaded. This is not released consumer law.
 ```
 
 ### Step 2: Resolve target document(s)
 
-- No arguments → load `SPEC_METHOD.md`
+- No `--doc` argument -> load `SPEC_METHOD.md`
 - `--list` → print the Document Registry table above and stop
 - `--doc <name>` → resolve the short name against the Document Registry; error if unknown
 
@@ -60,7 +69,8 @@ Read the full file content. Then output:
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SPEC REFRESH — <short name> (<filename>)
-Source: <absolute path>
+Basis: <selected version or candidate identity>
+Source: <resolved path>
 Last repriced: <extract from file header if present>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -68,7 +78,7 @@ Last repriced: <extract from file header if present>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 END SPEC REFRESH — <short name>
-This text is now active in your session context.
+This document is now available as a projection of the selected complete basis.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -77,12 +87,13 @@ This text is now active in your session context.
 After surfacing the document, output one line:
 
 ```
-Active: <short name> loaded. Constitutional text is in context — reason from this, not from training memory.
+Active context: <short name> from <basis>. The complete selected basis remains constitutional authority.
 ```
 
 ## Notes
 
 - This command is read-only. It never writes, emits events, or modifies workspace state.
 - Run this at the start of any session that will edit, review, or reason about constitutional methodology text.
-- If the source file has been updated since the last session, running this command picks up the current version automatically.
+- Released and installed modes never follow mutable source updates.
+- Candidate mode follows mutable source and remains explicitly non-operative.
 - Multiple `--doc` calls in sequence build up a multi-document context surface in the session.

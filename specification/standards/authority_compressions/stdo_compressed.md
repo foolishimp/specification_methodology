@@ -12,14 +12,20 @@ source_refs:
   - ../ODD_METHOD.md
   - ../TICKET_METHOD.md
   - ../UX_METHOD.md
+  - ../IDENTITY_METHOD.md
+  - ../RELEASE_METHOD.md
+  - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: 00b802d5c0ead9bef4d95b1143797b806022ffd5884c4a89b37b29ad321e11de
-  DESIGN_MODULE_METHOD.md: c28084bc8b14dc4b19f50bf280be249031ff06a89559760d362524b4267c7911
-  ODD_METHOD.md: e420024069307ec0de189b3e6e401058db063dfdcc8c701fee3088e844f060f4
-  TICKET_METHOD.md: 1b190915d2d76ed485b385c722c1221f39e32f72a37b379bd7d35ccafab0e17c
+  SPEC_METHOD.md: e5dab258f9173e74f1dfbc59d13c7501502cf3353980b2aba6f35b9126f5c097
+  DESIGN_MODULE_METHOD.md: caa162979d3e6675e828a3de0a1d7f972331d0f4c9e5dc6b4430eff782d9c84b
+  ODD_METHOD.md: 0f512cd788e12a6468b4d5999951223ec574f5df6559024a532fdc68eba058a6
+  TICKET_METHOD.md: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
+  IDENTITY_METHOD.md: 09fd5547a942f6c375510e83a5a074566921aeec38bc1a3e84ea24b0c3ceb814
+  RELEASE_METHOD.md: 0234f118a504e449a6670d4276422abab89a2a3fa5f281d313aacc87815dd79e
+  POSTING_GUIDE.md: 29968e92ca44411d4102fc9351febb8afe72286e0bdccc0bc8db995ba0415762
 generated_by: codex
-generated_at: 2026-07-15
+generated_at: 2026-07-22
 stale_if_source_digest_changes: true
 ---
 
@@ -53,11 +59,11 @@ layer that owns the missing truth.
 - Missing traceability is a defect.
 - Prefer one algebraic primitive plus projections over multiple local decision
   systems.
-- When `DESIGN_MODULE_METHOD` is adopted for a named semantic boundary, treat
-  discovered functionality as input to design, not as pre-authorized operation
-  identities. Derive a candidate Ontology, complete lifecycle and authority,
-  run whole-family Prime, and then accept the Ontology before promoting IACS,
-  public operations, schemas, or modules.
+- When `DESIGN_MODULE_METHOD` is adopted for a new or materially changed
+  semantic boundary, treat discovered functionality as input to design, not as
+  pre-authorized operation identities. Derive a candidate Ontology, complete
+  lifecycle and authority, run whole-family Prime, and then accept the Ontology
+  before promoting IACS, public operations, schemas, or modules.
 - The Ontology is semantic-design authority, not a replacement for target
   architecture or module design. Domain, sequence, state, authority, IACS, and
   public-contract surfaces preserve it; code and tests derive through
@@ -66,6 +72,18 @@ layer that owns the missing truth.
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
 - Method compression is a prompt input, not a replacement for the source method.
+- Select one complete immutable STDO version; mutable source and mixed standard
+  sets are not consumer authority.
+- Proof identifies its exact property and nearest weaker excluded property.
+  Semantic basis, evidence basis, and state projection remain distinct.
+- Product progress advances one bound outcome. Parallel work remains lawful,
+  but preservation is not progress and regression blocks affected promotion.
+- Native constructability precedes design acceptance. Prime applies recursively
+  and counts governance cost while conserving root authority.
+- Authority has identity and may be proxied only through an explicit bounded
+  grant. Implementer self-review is not independent review.
+- Exact-candidate qualification covers final delta and complete predecessor
+  semantics before human acceptance and immutable release.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a

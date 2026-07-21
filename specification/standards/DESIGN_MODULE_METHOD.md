@@ -358,12 +358,15 @@ The Ontology verdict may live in the same design pack and acceptance record as
 the three-view verdict; this rule does not require a second document, ticket, or
 approval ceremony.
 
-Proportionality applies. A `realization_refactor` wholly inside an accepted
-boundary may cite the existing Ontology and design basis and prove `no ontology
-delta`; it does not require re-authoring or re-accepting unchanged evidence. A
-semantic or structural change must publish only the affected Ontology/design
-delta and its projection impact set. Unaffected maintenance and unrelated
-boundaries do not freeze merely because one source digest changed.
+Proportionality applies. A **material semantic boundary** is one whose change
+affects identity, authority, lifecycle, public contract, externally observable
+Product meaning, cross-module topology, or accepted effect or closure law. A
+`realization_refactor` wholly inside an accepted boundary may cite the existing
+Ontology and design basis and prove `no ontology delta`; it does not require
+re-authoring or re-accepting unchanged evidence. A semantic or structural
+change must publish only the affected Ontology/design delta and its projection
+impact set. Unaffected maintenance and unrelated boundaries do not freeze
+merely because one source digest changed.
 
 For this method:
 
@@ -403,6 +406,19 @@ constitutional functionality
   -> public contract and adapter projections
   -> implementation and test projections
 ```
+
+### Native Constructability Before Design Acceptance (`STDO-UP-002`)
+
+A semantically coherent design is not acceptable when its selected substrate
+cannot natively construct the required identities, relationships, transitions,
+authority boundaries, effects, lifecycle, composition, publication, and
+retirement behavior.
+
+A missing substrate capability remains an explicit design gap or triggers
+lawful re-entry. It must not be hidden behind a reference bridge, adapter,
+filesystem runner, test double, or promised future feature. This is a
+constructability obligation, not a prescribed implementation; the consumer
+chooses the substrate and evidence mechanism.
 
 ### Entity And Lifecycle Completeness
 
@@ -531,6 +547,21 @@ parameterized template plus closed variants carries the same meaning and
 authority. Recurrence must be contracted during design when visible; the
 post-implementation recurrence rule is not a substitute for this prior pass.
 
+### Recursive Prime And Root Conservation (`STDO-UP-003`)
+
+At a material semantic boundary, Prime contraction applies to each proposed
+authority-bearing unit and then to the complete family produced by those
+contractions. A locally minimal unit is not globally Prime when the family
+duplicates identity, authority, function, lifecycle, effect, or projection
+meaning.
+
+Contraction must preserve root authority and every retained semantic relation.
+Reducing files, functions, operations, or authoring surfaces cannot compensate
+for introducing another authority source or truth path. Prime evidence states
+the candidate family, contraction relation, retained meaning, authority before
+and after, accepted loss, and falsification condition. Work inside an accepted
+boundary cites the existing Prime basis rather than recreating it.
+
 ### Ontology Projection Law
 
 The Ontology is one semantic truth. The following must preserve it and must not
@@ -630,6 +661,18 @@ The purpose of the Prime Law is not to minimize line count.
 
 The purpose is to stop semantic fragmentation and helper sprawl from becoming
 architecture.
+
+### Boundary And Governance Cost (`STDO-UP-005`)
+
+Review cuts, realization units, runtime modules, and work items are distinct
+boundaries. They may relate many-to-one or one-to-many and must not be forced
+into one-to-one decomposition for administrative convenience.
+
+Prime review accounts for governance cost as well as implementation count.
+Contraction is not successful when it increases authority centers, maintained
+truth surfaces, acceptance boundaries, dependency cycles, manually reconciled
+projections, or review burden. Evidence remains proportional to semantic
+change and risk; this rule does not require one artifact or review per concern.
 
 ## 5A. Irreducible Architectural Carrier Set Rule
 
@@ -798,9 +841,11 @@ design-method complete under this method.
 
 ## 5E. Ontology And Three-View Behavioral Design Gate
 
-Every active semantic or typed module boundary must carry one accepted Ontology
-and one complete three-view Mermaid design asset before mergeable
-implementation starts.
+Every new or materially changed semantic or typed module boundary must carry
+one accepted Ontology and one complete three-view Mermaid design asset before
+mergeable implementation starts. Unchanged boundaries cite their accepted
+basis; local realization work with no material semantic-boundary delta does not
+recreate this gate.
 
 The asset must contain all three views:
 
@@ -811,6 +856,10 @@ The asset must contain all three views:
 A project may ratify another text-native diagram format only when it preserves
 the same three distinct views and the same cross-view checks. One broad flowchart
 does not substitute for the three models.
+
+The three views may be sections of one existing design surface and may share
+one acceptance decision. This rule does not require three files, three tickets,
+three reviews, or three approval ceremonies.
 
 The views are not decorative and they are not peer truth surfaces. They are
 fidelity-checked projections of the accepted Ontology. Together they are the

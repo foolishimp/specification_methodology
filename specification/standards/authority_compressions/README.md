@@ -1,8 +1,8 @@
 # Authority Compression Assets
 
-These files are source-maintained compressed read models over the shared method
-standards. They are prompt-construction inputs for installed workspaces, not
-replacement constitutional authority.
+These files are source-maintained compressed read models over one complete
+released STDO cut. They are prompt-construction inputs, not replacement
+constitutional authority and not independently selectable method versions.
 
 The source method documents remain the authority:
 
@@ -16,7 +16,7 @@ Each compression file carries the source path and digest it was derived from.
 If a source digest changes, the compression is stale and must be regenerated or
 explicitly reaccepted before installation treats it as current.
 
-Installed workspaces should consume installed copies of these files before
-reading raw shared-method documents. Raw method documents are fallback inputs
-only for a named unresolved method question, stale compression, or missing
-compression.
+Installed workspaces consume compressions and source standards from the same
+selected release identity. Mutable upstream source must not replace that basis.
+Raw selected-cut standards remain deciding authority when a compression is
+insufficient or stale.

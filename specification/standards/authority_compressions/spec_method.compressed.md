@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 00b802d5c0ead9bef4d95b1143797b806022ffd5884c4a89b37b29ad321e11de
+source_digest: e5dab258f9173e74f1dfbc59d13c7501502cf3353980b2aba6f35b9126f5c097
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-06-30
+generated_at: 2026-07-22
 stale_if_source_digest_changes: true
 ---
 
@@ -40,6 +40,16 @@ them.
   deployment -> live usage -> observed telemetry -> retirement.
 - Downstream design must not fill missing lifecycle truth from implementation
   precedent, prompt prose, local convention, or test fixtures.
+- Select one complete immutable STDO version. Mutable source, partial standard
+  sets, compressions, and installed mirrors do not create another constitution.
+- Identify the exact proof target and its nearest weaker excluded property;
+  never substitute packaging, presence, or local green for a stronger claim.
+- Keep semantic basis, evidence basis, and state projection distinct.
+- Product progress is measured against one bound outcome. Parallel work may
+  proceed, but preservation is not progress and regression blocks promotion on
+  the affected path.
+- Prioritize fast Product feedback proportionally; this is not a global
+  scheduler or fixed execution sequence.
 
 ## Compression Use
 

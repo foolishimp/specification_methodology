@@ -209,6 +209,32 @@ their meaning.
 
 ---
 
+## Authority Identity And Conservation (`STDO-UP-004`)
+
+Authority is an identity-bearing semantic relation, not a display label,
+capability string, actor identity, or reachable code path. Its identity
+preserves owner, kind, governed subject, scope, and governing basis.
+
+Composition, delegation, adapters, projections, wrappers, and registries may
+restrict or faithfully carry admitted authority. They must not silently widen
+scope, add a role, increase cardinality, change kind, or reconstruct authority
+from actor identity, payload shape, or available capability. Elevation,
+transfer, split, merge, proxy grant, revocation, and retirement require an
+explicit authority decision and identifiable basis.
+
+Human authority may act directly or through an explicitly admitted bounded
+proxy. Proxy actor identity and human-authority identity remain distinct;
+graph-native surfaces may project the relation as `F_H`. A proxy grant names
+its grantor, actor, subject, scope, permitted and excluded decisions, validity,
+delegation rights, revocation, and provenance.
+
+A direct or proxied decision preserves its source, subject and basis, acting
+identity and mode, scope, change class, disposition, and supersession. Recording
+a ruling cannot widen it. Proxy authority does not make implementer self-review
+independent or confer unrelated runtime or domain authority.
+
+---
+
 ## Default Formats And Overrides
 
 ### ABG Defaults

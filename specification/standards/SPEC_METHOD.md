@@ -223,6 +223,35 @@ So if project-specific design and code disappeared, recovery would proceed throu
 
 ---
 
+## One Constitutional Surface And Version Boundary (`STDO-SURFACE-001`)
+
+The shared methodology is modular in authorship and singular in authority.
+Each law has one owning standard; other standards consume it by reference. The
+standards become operative only as one complete released STDO version.
+
+A released cut identifies its exact member set, member digests, review basis,
+human acceptance, and immutable identity. Compressions, templates, comments,
+candidate work, installed copies, and mutable source are derived, evidential, or
+authoring surfaces. They cannot become a selectable partial constitution or
+reinterpret the owning standards.
+
+STDO owns normative construction algebra, authority relations, abstract state
+and transition laws, admissibility conditions, necessary causal order, and
+evidence invariants. Consumers own concrete Product realization: instantiated
+types and schemas, files, tools, runtime and orchestration machinery, tests,
+and executable conformance implementation. A concrete form is method law only
+when the method explicitly accepts it as an interoperability boundary.
+
+A shared-method amendment cannot create an executable tool, workflow engine,
+runtime, assurance system, or consumer realization as STDO Product scope
+without separate explicit human authorization. An agent recording a ruling
+cannot widen its subject, implication, authority, or change class.
+
+Only a released method version is publication authority. Mutable method source
+may author a future cut; it must not silently govern a consumer.
+
+---
+
 ## Constitutional Chain
 
 ```
@@ -521,6 +550,42 @@ defines the ticket-local test-case authority rule.
 
 ---
 
+## Product Outcome Conservation (`STDO-UP-013`)
+
+Every Product-outcome-bearing work wave identifies one current directly
+verifiable Product outcome. Product-progress claims and promotion onto the
+supported Product path are judged against that same outcome.
+
+Evidence distinguishes material advance, prerequisite readiness, preservation,
+and regression. Only material advance projects Product progress. Prerequisite
+work names the Product obligation it enables and remains bounded. Preservation
+is useful evidence but is not progress.
+
+A regression or unresolved gap blocks further promotion on the affected path
+until repaired, repriced, or accepted by the owning authority. It does not
+globally serialize independent work. Parallel work may proceed under its own
+admitted basis but cannot be laundered into the governed outcome's progress
+claim.
+
+Changing the outcome requires lawful re-entry at its owning Product surface.
+Outcome success is necessary delivery evidence, not complete Product or release
+closure.
+
+## Proportional Delivery Priority (`STDO-UP-014`)
+
+Delivery priority is justified by the current Product outcome, likelihood,
+impact, reversibility, dependency, and cost of delayed Product feedback.
+Probability informs lawful priority; it does not waive authority, integrity,
+safety, retained release claims, or another hard stop.
+
+The default priority is work that exposes or advances the smallest supported
+Product path and its highest-value likely failures. Defensive or prerequisite
+work that displaces that path identifies the affected claim, evidence basis,
+bounded effort, return condition, and expected Product consequence. This is a
+priority relation, not a fixed global execution sequence or scheduling runtime.
+
+---
+
 ## Core Interface Migration Rule
 
 Core interface changes are not ordinary local patches.
@@ -746,6 +811,35 @@ a separate release process surface such as `RELEASE_METHOD.md`.
 ## Evidence Rules
 
 The following rules govern how constitutional claims are proved in practice.
+
+### Proof Target Identity And Adequacy (`STDO-UP-001`)
+
+Every load-bearing proof identifies the exact subject, intended property,
+governing basis, relation between witness and claim, nearest weaker excluded
+property, and falsification condition before selecting its witness. Without
+those relations, the result is evidence discovery rather than closure-grade
+proof.
+
+Packaging, syntax, compilation, file presence, invocation, or local behavior
+must not substitute for semantic, authority-bearing, installed, release, or
+end-to-end proof merely because the weaker property is easier to measure.
+
+### Semantic, Evidence, And Projection Separation (`STDO-UP-008`)
+
+The method distinguishes:
+
+- **semantic basis**: constitutional and accepted-design relations defining
+  what a claim means;
+- **evidence basis**: exact artifacts, events, logs, tests, and observations
+  used to evaluate it; and
+- **state projection**: a current view derived from admitted semantic and
+  evidence bases.
+
+Evidence change may invalidate a verdict without changing law. Projection
+change may invalidate a view without changing semantic truth. Semantic change
+requires lawful re-entry and invalidates affected downstream acceptance. A
+broad digest may conservatively invalidate review, but it does not prove that
+every semantic relation changed.
 
 ## Verification Layers
 

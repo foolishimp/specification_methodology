@@ -262,6 +262,28 @@ reconcile them before publishing the relevant cut.
 
 ---
 
+## Exact Candidate Qualification And Final Delta (`STDO-UP-011`)
+
+Every qualification verdict binds the exact candidate that may be tapped. It
+identifies candidate identity, governing Product and release basis, properties
+claimed, evidence subjects and observation boundaries, owner verdicts, and
+unresolved gaps.
+
+Evidence matches the claim. Source success does not prove packaged or installed
+behavior; packaging equivalence does not prove semantic behavior; artifact
+presence does not prove usability unless presence is the exact claim.
+
+Before tap, the candidate is compared with the qualified subject. A change that
+can affect a qualified property invalidates that verdict until the property is
+re-evaluated. Qualification covers the complete successor Product and complete
+release delta from the declared predecessor, not only the latest authoring
+increment.
+
+A tapped release requires acceptance of that exact candidate by the human
+authority owning the Product boundary or by a separately established bounded
+proxy. Acceptance of a plan, topic, or earlier candidate does not imply
+acceptance of a changed release subject.
+
 ## Tap Criteria
 
 The release tap should occur only when:
@@ -302,6 +324,28 @@ For example:
   live bundle against a selected external backend
 - then that bundle must pass against a healthy backend before the release may
   claim the MVP is delivered
+
+## Successor Baseline Conservation (`STDO-UP-015`)
+
+A successor identifies the exact predecessor release whose semantic claims it
+evolves. That origin remains immutable for the candidate. Every predecessor
+claim capable of affecting the successor receives one semantic disposition:
+
+- **conserved**: the successor retains the claim;
+- **superseded**: an accepted successor relation replaces it;
+- **intentionally removed**: current Product authority removes it; or
+- **not applicable**: it has no successor effect, with a bounded reason.
+
+An unresolved disposition blocks qualification of the affected claim.
+Conservation is semantic: patch absence does not prove loss when a
+successor-native realization preserves behavior, and naming or code similarity
+does not prove conservation without relevant evidence.
+
+Where a maintenance or support line may affect retained claims, the release
+basis identifies the watched source, observation boundary, inclusion policy,
+and successor candidate. Relevant changes receive semantic disposition at
+material integration, qualification, and final-delta evaluation. The consumer
+owns the record, branch strategy, comparison, and proof mechanism.
 
 ---
 

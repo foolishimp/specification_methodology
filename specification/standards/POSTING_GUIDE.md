@@ -161,3 +161,25 @@ A post becomes consequential only when its content is explicitly adopted into:
 - accepted implementation
 
 Until then it is commentary, not law.
+
+## Shared Method Adoption And Propagation (`STDO-UP-012`)
+
+Reusable method change preserves this authority relation:
+
+```text
+incident or review evidence
+  -> shared-method intake
+  -> one owning standard
+  -> consistency and independent review
+  -> human-authority acceptance
+  -> one complete released STDO version
+  -> explicit consumer selection
+  -> consumer-owned realization and evidence
+```
+
+This is authority causality, not a prescribed intake workflow or artifact set.
+An executable tool, runtime, carrier schema, or assurance implementation cannot
+enter STDO merely because it accompanies a method lesson; it requires separate
+Product authorization. Other standards consume admitted law by reference, and
+consumers select complete released versions rather than mixing members from
+different cuts.

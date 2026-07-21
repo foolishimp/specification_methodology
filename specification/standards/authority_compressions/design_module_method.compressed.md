@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: c28084bc8b14dc4b19f50bf280be249031ff06a89559760d362524b4267c7911
+source_digest: caa162979d3e6675e828a3de0a1d7f972331d0f4c9e5dc6b4430eff782d9c84b
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-15
+generated_at: 2026-07-22
 stale_if_source_digest_changes: true
 ---
 
@@ -44,10 +44,13 @@ The Ontology remains subordinate to constitutional `WHAT`. It may not invent
 product meaning.
 
 This rule applies only to the named boundary where the project adopts this
-method. The Ontology verdict may share the existing design pack and acceptance;
-it requires no extra document, ticket, or ceremony. An unchanged
-`realization_refactor` cites the accepted Ontology/design basis and proves `no
-ontology delta`; only affected semantic relations and projections re-enter.
+method. A material semantic boundary changes identity, authority, lifecycle,
+public contract, externally observable Product meaning, cross-module topology,
+or accepted effect or closure law. The Ontology verdict may share the existing
+design pack and acceptance; it requires no extra document, ticket, or ceremony.
+An unchanged `realization_refactor` cites the accepted Ontology/design basis and
+proves `no ontology delta`; only affected semantic relations and projections
+re-enter.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
@@ -71,6 +74,12 @@ surfaces.
   composition/effect algebra before promoting peer operations.
 - Apply Prime to the complete function and carrier family, not only to each
   proposed unit in isolation.
+- Prove native constructability in the selected substrate before design
+  acceptance; a bridge or promised future capability cannot hide a gap.
+- Apply Prime recursively and preserve root authority. Local minimality does
+  not prove that the resulting family is globally Prime.
+- Count governance cost as well as implementation count; reducing files while
+  multiplying authority or review surfaces is not contraction.
 - Treat IACS, class/sequence/state views, and public contracts as
   fidelity-checked Ontology projections. Target design remains the structural
   `HOW`; code and tests derive through requirements plus accepted design.
@@ -88,8 +97,10 @@ surfaces.
 - Code, tests, generated artifacts, runtime fixtures, prompt prose, and local
   convention may prove lifecycle claims, but must not invent lifecycle
   authority.
-- Mergeable implementation requires accepted Ontology evidence, accepted
-  domain/sequence/state projections, and complete cross-view axiom evaluation.
+- A new or materially changed boundary requires accepted Ontology evidence,
+  accepted domain/sequence/state projections, and complete cross-view axiom
+  evaluation before mergeable implementation. Existing accepted evidence is
+  reused when the boundary is unchanged.
 
 ## Prompt-Relevant Rules
 

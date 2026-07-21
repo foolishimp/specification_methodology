@@ -46,4 +46,4 @@ When a later ADR supersedes this one, set `Status: superseded` and `Superseded b
 
 ## Optional registry
 
-A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but not required. If you maintain one, treat it as a read model over the ADR files; the ADR files remain the constitutional source.
+A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but not required. If you maintain one, treat it as a read model over the ADR files; the ADR files remain the accepted design authority.

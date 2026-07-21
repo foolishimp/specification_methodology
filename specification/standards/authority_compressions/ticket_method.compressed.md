@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 1b190915d2d76ed485b385c722c1221f39e32f72a37b379bd7d35ccafab0e17c
+source_digest: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-06-06
+generated_at: 2026-07-22
 stale_if_source_digest_changes: true
 ---
 
@@ -33,6 +33,12 @@ proof, and current status.
   historical commentary.
 - Prompt migration work must update tickets when the prompt contract itself is
   the work item.
+- Milestone acceptance proves only its bounded claim; design, implementation,
+  qualification, and release remain distinct closure boundaries.
+- Implementer self-review is not independent review. Human acceptance does not
+  relabel it.
+- Ticket and milestone truth outrank comments, dashboards, indexes, and other
+  state projections; contradiction blocks closure.
 
 ## Fallback Rule
 

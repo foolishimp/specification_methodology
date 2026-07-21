@@ -40,10 +40,13 @@ to the `genesis_sdlc` source surfaces at the time this repository was created.
 
 ## Going Forward
 
-This repository is now the source-of-truth home for the shared methodology.
+This repository is now the authoring home for the shared methodology.
 
 - Author methodology updates here.
-- Treat copies inside product repos or installed workspaces as mirrors or
-  distributions.
-- Point installers, tests, and canonical-path references here rather than to a
-  product repository.
+- Publish accepted methodology as complete immutable versioned cuts.
+- Bind installers, tests, and canonical references to one released version,
+  immutable reference, and exact member inventory.
+- Treat mutable repository head as future-cut authoring input, never as
+  operative consumer law.
+- Treat copies inside product repos or installed workspaces as selected
+  distributions whose authority derives from their pinned release identity.

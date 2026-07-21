@@ -36,6 +36,26 @@ override this file for their subtree.
   precedent, prompt prose, local convention, and test fixtures cannot invent
   missing lifecycle authority.
 
+### Design And Assurance Compression
+
+- At a material semantic boundary, derive an accepted Ontology before public
+  operations, carrier families, modules, or implementation. Derive IACS and
+  domain, sequence, and state views from that one Ontology.
+- Apply Prime recursively to the whole candidate family. Preserve root
+  authority and count governance cost, not only files or functions.
+- Prove native constructability in the selected substrate before accepting
+  design; a bridge or future capability does not close the gap.
+- Identify the exact proof target and nearest weaker excluded property. Keep
+  semantic basis, evidence basis, and state projection distinct.
+- Implementer self-review is not independent review. Ticket, milestone, and
+  release claims close only at their own evidence altitude.
+- Product progress advances one bound outcome. Parallel work is lawful, but
+  preservation is not progress and regression blocks affected promotion.
+- Negative proof exercises the real authority path and never manufactures the
+  refusal it later asserts.
+- Exact-candidate qualification includes final delta and semantic predecessor
+  conservation before direct or lawfully proxied human acceptance.
+
 ### Recursive Product Taxonomy
 
 - `Source Project`: mutable workspace building the next cut.
@@ -141,31 +161,39 @@ Apply these rules:
 - if the repo is ODD-shaped, do not collapse the constructive carrier back into
   imperative glue
 
-## Shared Method Source
+## Selected Method Basis
 
-The upstream shared methodology source of truth for this install lives under:
+This project is governed by one complete released STDO cut:
 
-- `<method-standards-root>`
+- version: `<stdo-version>`
+- immutable reference: `<stdo-release-ref>`
+- member inventory: `<stdo-inventory-ref-or-digest>`
+- installed or referenced standards root: `<method-standards-root>`
 
-Use these source documents when exact constitutional wording matters or when
-editing shared method:
+Use the selected cut when exact constitutional wording matters:
 
 - `SPEC_METHOD.md`
+- `DESIGN_MODULE_METHOD.md`
 - `ODD_METHOD.md`
+- `UX_METHOD.md`
+- `WORLD_MODEL_METHOD.md`
+- `IDENTITY_METHOD.md`
+- `RELEASE_METHOD.md`
 - `TICKET_METHOD.md`
 - `POSTING_GUIDE.md`
 - `WRITING_GUIDE.md`
+- `GLOSSARY_GUIDE.md`
 
-Repo-local installed copies such as `.genesis/docs/standards/` may describe one
-project's installed line, but they are local installs or mirrors, not the
-upstream source authority.
+Mutable `specification_methodology` source authors future releases. It is not
+operative authority for this consumer. An installed copy is authoritative only
+through the selected release identity above.
 
 ## Workspace Rules
 
 - Do not spread changes across sibling repos by drift. Work only in the named
   repo or in `specification_methodology` unless the task explicitly spans both.
-- If a methodological change is shared law, update `specification_methodology`
-  first and then update downstream installs only when requested or when the
-  task explicitly includes propagation.
+- If a methodological change is shared law, author it in
+  `specification_methodology`, publish a successor STDO version, and update this
+  consumer only through explicit version selection.
 - When writing posts, handoffs, or reviews, keep them commentary and do not
   present them as ratified specification or design.

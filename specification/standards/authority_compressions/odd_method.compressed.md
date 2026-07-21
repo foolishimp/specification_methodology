@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: e420024069307ec0de189b3e6e401058db063dfdcc8c701fee3088e844f060f4
+source_digest: 0f512cd788e12a6468b4d5999951223ec574f5df6559024a532fdc68eba058a6
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: claude
-generated_at: 2026-06-07
+generated_at: 2026-07-22
 stale_if_source_digest_changes: true
 ---
 
@@ -47,3 +47,8 @@ surface.
   deterministic admission of the produced artifact is the F_D gate. A walkthrough
   a competent agent using declared authority cannot complete is a method defect;
   agent error is not. Conformance is not approval-by-usage.
+- Negative proof mutates the real authority-bearing input and exercises the
+  supported Product path. It must not manufacture the refusal it later asserts.
+- GTL composition owns traversal topology, a GraphFunction supplies the
+  callable work contract, implementation realizes only its admitted seam, and
+  ABG owns traversal, event, continuation, and replay truth.
