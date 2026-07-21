@@ -329,11 +329,11 @@ yet implementation-conformant under this method.
 
 ## 4B. Ontology-First Design Rule
 
-Every adopted active semantic boundary must derive its semantic model from one
-accepted **Ontology**. Before a new or changed entity, function, authority,
-effect, Prime carrier, module boundary, public operation, or schema is promoted,
-the affected boundary must first produce a candidate Ontology slice and carry it
-through the acceptance sequence below.
+Every new or materially changed active semantic boundary must derive its
+semantic model from one accepted **Ontology**. Before a new or changed entity,
+function, authority, effect, Prime carrier, module boundary, public operation,
+or schema is promoted, the affected boundary must first produce a candidate
+Ontology slice and carry it through the acceptance sequence below.
 
 The Ontology is the prior **semantic-design authority** for the boundary. It is
 subordinate to constitutional `WHAT`: it derives from intent, product,
@@ -1103,7 +1103,7 @@ instead of disappearing into broad orchestration code.
 
 ## 6A. Design To Module To (Implementation, Unit Tests) Evidence Route
 
-When this method governs an active realization boundary, the canonical evidence
+For a new or materially changed realization boundary, the canonical evidence
 route is:
 
 1. constitutional `WHAT` and owning requirements;
@@ -1113,10 +1113,12 @@ route is:
 4. accepted three-view behavioral projections plus axiom evaluation;
 5. implementation and module-derived unit tests.
 
-This route is mandatory for implementation entering the active product line.
-It is not a claim about the fastest disposable exploration path. A spike that
-runs ahead remains outside the mergeable product line and has no retention or
-publication presumption.
+This route is mandatory for new or materially changed implementation entering
+the active product line. An unchanged `realization_refactor` cites the accepted
+route and proves no material semantic-boundary delta; it does not recreate the
+evidence. This is not a claim about the fastest disposable exploration path. A
+spike that runs ahead remains outside the mergeable product line and has no
+retention or publication presumption.
 
 Completeness requires:
 
@@ -1844,7 +1846,8 @@ single-owner truth, or low-coupling realization, review must explicitly check:
       confirmed against product, requirement, design, release, or operational
       authority rather than derived from implementation convention or fixtures?
 
-The compact hard-gate version of this checklist is:
+For a new or materially changed boundary, the compact hard-gate version of this
+checklist is:
 
 - [ ] accepted Ontology before Prime carriers, operations, or implementation
 - [ ] complete entity lifecycle, authority, and function-derivation evidence
@@ -1865,6 +1868,10 @@ The compact hard-gate version of this checklist is:
 This checklist is language-agnostic.
 It governs module design, carrier design, data-entity design, and review of
 realization work in any language.
+
+For an unchanged boundary, the hard gate is the accepted basis plus evidence
+of no material semantic-boundary delta. It does not require a new Ontology,
+IACS, three-view asset, cross-view evaluation, or unit-test lane.
 
 ---
 
@@ -1891,23 +1898,24 @@ For migrations involving carrier closure, schema closure, or governance
 boundaries, projects should make the Boundary Closure Evaluators explicit in
 the governing ADR or ticket rather than leaving them implicit.
 
-Every adopted semantic boundary must declare or cite its accepted Ontology
-before claiming design-method completion. The Ontology evidence must include
-entity lifecycle, authority, function derivation, whole-family Prime, and
-projection traceability at the granularity applicable to the boundary.
+Every new or materially changed adopted semantic boundary must declare or cite
+its accepted Ontology before claiming design-method completion. The Ontology
+evidence must include entity lifecycle, authority, function derivation,
+whole-family Prime, and projection traceability at the granularity applicable
+to the material change.
 
-When the adopted boundary includes schema or typed carrier work, the project
+When the material change includes schema or typed carrier work, the project
 must derive and reconcile the Irreducible Architectural Carrier Set from that
 Ontology before claiming design-method completion.
 
-When the adopted boundary is derived from an existing realization, the project
-must also publish the reference-to-target derivation asset and the
-Ontology-derived three-view design asset before claiming design-method
-completion for that boundary.
+When the new or materially changed boundary is derived from an existing
+realization, the project must also publish the reference-to-target derivation
+asset and the Ontology-derived three-view design asset before claiming
+design-method completion for the changed boundary.
 
-When the adopted boundary has active implementation, the project must also
-publish a module-derived unit test lane before claiming closure for that
-boundary.
+When the new or materially changed boundary has active implementation, the
+project must also publish a module-derived unit test lane before claiming
+closure for that change.
 
 Partial adoption is allowed, but the adopted boundary and adopted rule family
 should be named explicitly.

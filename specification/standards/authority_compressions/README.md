@@ -11,6 +11,9 @@ The source method documents remain the authority:
 - `../ODD_METHOD.md`
 - `../TICKET_METHOD.md`
 - `../UX_METHOD.md`
+- `../IDENTITY_METHOD.md`
+- `../RELEASE_METHOD.md`
+- `../POSTING_GUIDE.md`
 
 Each compression file carries the source path and digest it was derived from.
 If a source digest changes, the compression is stale and must be regenerated or
