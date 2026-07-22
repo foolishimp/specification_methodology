@@ -1,4 +1,11 @@
-# /spec.refresh — Reload Specification Methodology Standards into Context
+---
+name: refresh
+description: Reload one selected STDO standards basis into context
+argument-hint: "(--installed | --release <version> | --candidate) [--doc <name>] [--list]"
+disable-model-invocation: true
+---
+
+# /spec:refresh - Reload Specification Methodology Standards into Context
 
 Read the standard documents from one explicitly selected STDO basis and surface
 their full content into the active session. Loading a document is a context
@@ -7,7 +14,7 @@ projection of that complete basis; it does not create a partial constitution.
 ## Usage
 
 ```
-/spec.refresh (--installed | --release <version> | --candidate) [--doc <name>] [--list]
+/spec:refresh (--installed | --release <version> | --candidate) [--doc <name>] [--list]
 ```
 
 | Option | Description |
