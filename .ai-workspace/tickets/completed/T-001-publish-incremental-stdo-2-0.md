@@ -1,8 +1,8 @@
 # T-001 - Publish Incremental STDO 2.0
 
 - id: T-001
-- status: active
-- review_status: pending_exact_cut_review
+- status: completed
+- review_status: accepted_and_published
 - change_class: product_reprice
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-07-22
@@ -54,3 +54,10 @@ reconstructing or silently deleting predecessor law.
 4. Derived distributions faithfully reflect the exact source cut.
 5. The complete candidate and `v1.8.0` delta pass independent review.
 6. Human authority accepts the exact candidate before publication.
+
+## Closure Result
+
+- accepted candidate: `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`
+- release branch: `release/2.0.0`
+- release tag: `v2.0.0`
+- closed_at: `2026-07-22`

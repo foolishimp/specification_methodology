@@ -2,8 +2,8 @@
 
 ## Current Goal
 
-Publish STDO `2.0.0` as an incremental successor to the accepted `v1.8.0`
-standards Product.
+STDO `2.0.0` is the latest published standards Product. No successor release
+wave is currently admitted.
 
 ## Governing Outcome
 
@@ -20,7 +20,13 @@ an acceptable substitute for predecessor conservation.
 | `M1` Authorized design increment | Three-view and Ontology/IACS/Prime commits are replayed exactly. | completed |
 | `M2` Incident-derived increment | Only independently valuable 2.0 laws are added at normative altitude. | completed |
 | `M3` Release reconciliation | Predecessor dispositions, derived distributions, and exact inventory agree. | completed |
-| `M4` Qualification and tap | Independent exact-cut review and human acceptance precede `v2.0.0`. | active |
+| `M4` Qualification and tap | Independent exact-cut review and human acceptance precede `v2.0.0`. | completed |
+
+## Published Cut
+
+- release branch: `release/2.0.0`
+- release tag: `v2.0.0`
+- release commit: `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`
 
 ## Exclusions
 
