@@ -2,8 +2,8 @@
 
 ## Subject
 
-- candidate commit: `915d992c6ceb7c23df41bb30d12bdbdd10cb97ce`
-- candidate tree: `e47a60d4b4dd6a15e26b017f93c35855aa6b8fe7`
+- candidate commit: `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`
+- candidate tree: `250ace7dc18c85fd30bffc635d96245c58e1a2f9`
 - predecessor: `v1.8.0` at
   `9cf2741917ca2d496cd78f5736ea2218d5eb0897`
 - branch and remote matched the candidate when this checkpoint was written
@@ -13,7 +13,7 @@ This checkpoint is commentary. It does not amend or accept the candidate.
 
 ## Review Repair
 
-The repair closes the findings against `11ba894`:
+The repair closes the findings against `11ba894` and `915d992`:
 
 1. `SPEC_METHOD.md` no longer has a rival design-first execution sequence.
    Design owns structural `HOW`; design, implementation, and tests may co-evolve
@@ -23,8 +23,8 @@ The repair closes the findings against `11ba894`:
    selected immutable release authority, and its installed distribution.
 3. The auxiliary plugin now uses the canonical marketplace layout:
    `plugins/spec/.claude-plugin/plugin.json` plus
-   `plugins/spec/commands/spec-refresh.md`. Marketplace and plugin validation
-   both pass.
+   `plugins/spec/skills/refresh/SKILL.md`. Marketplace and plugin validation
+   both pass, and component inventory exposes one `/spec:refresh` skill.
 
 ## Reproducible Evidence
 
@@ -38,7 +38,7 @@ The repair closes the findings against `11ba894`:
 - all 16 new law identifiers have one owning top-level occurrence
 - source and aggregate compression digests match
 - release inventory paths and hashes match the exact standards tree
-- auxiliary marketplace, plugin, and command hashes match the release note
+- auxiliary marketplace, plugin, and skill hashes match the release note
 - `git diff --check` passes
 - no executable STDO conformance or workflow implementation exists
 
