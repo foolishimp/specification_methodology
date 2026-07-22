@@ -1399,9 +1399,13 @@ The target constitutional shape for a project is:
 
 The authoritative path split is:
 
-- source methodology authority lives in the source workspace under
-  `specification_methodology/specification/standards/`
+- mutable methodology authoring lives in the source workspace under
+  `specification_methodology/specification/standards/` and governs only a
+  future candidate cut
+- released methodology authority is the exact immutable STDO version selected
+  by the consumer
 - installed methodology distribution lives under `.genesis/docs/standards/`
+  and must match that selected release
 - project-owned constitutional surfaces live under `specification/`
 
 Projects shall not create a competing local methodology root such as
@@ -1409,15 +1413,17 @@ Projects shall not create a competing local methodology root such as
 
 Method authority is singular:
 
-- source methodology authority in the methodology source workspace
-- installed methodology authority in `.genesis/docs/standards/`
+- selected immutable STDO release authority, projected into the installed
+  `.genesis/docs/standards/` distribution
 - project constitutional authority in `specification/`
 
-When editing or repricing methodology, the source path is authoritative.
+When editing or repricing methodology, the mutable source path is authoring
+authority for the candidate being constructed. It is not operative consumer
+law before release and explicit selection.
 
 When operating inside an installed workspace, the installed path is the
-operative local distribution of that source authority until a new release or
-install refreshes it.
+operative local distribution of the selected immutable release until the
+consumer explicitly adopts and installs another released cut.
 
 If the realization model is tenanted, the target project topology also includes:
 
@@ -1492,12 +1498,17 @@ When a feature is introduced or changed:
 2. Update **Intent** if the purpose or scope has changed.
 3. Update **Product** if the current product realization, terms, boundaries, or end-state shape have changed.
 4. Update **Requirements** so the invariant truths are explicit as a decomposition of the product definition, including any lifecycle obligations or named lifecycle ambiguity gaps, and classify each new or changed requirement by category.
-5. Update or write **Design** so the governing structural choice is explicit. ADRs are one valid design form.
+5. Establish or update **Design** so it owns the governing structural `HOW`.
+   When upstream truth leaves no unresolved material architecture decision,
+   design, implementation, and tests may co-evolve. When such a decision
+   remains, accept the affected design before retained implementation
+   establishes it. ADRs are one valid design form.
 6. Write **Scenarios** for capability claims that require operational proof, and define other evidence surfaces for non-capability requirements where appropriate.
 7. Prefer declarative expression of the problem and acceptance surface before adding imperative mechanism.
 8. Check the reconstruction boundary: can the current goals support the current intent, can the current intent support the current product, can the current product support the intended requirements, can the current requirements support the intended design, and can the current design support the intended implementation?
 9. Record any major ambiguity discovered at the active boundary, and govern it according to declared risk appetite rather than silent convenience.
-10. Only then implement **Code**.
+10. Develop **Code** under the selected design relation and reconcile design,
+    implementation, and tests before promotion or closure.
 11. Use **Events, Projection, and Delta** to verify whether reality still satisfies the requirements.
 
 When bootstrapping a project or repricing a requirement surface:

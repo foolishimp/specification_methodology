@@ -373,11 +373,11 @@ merely because one source digest changed.
 Design sequencing follows unresolved architectural risk rather than one global
 authoring order:
 
-- **co-evolution** is lawful when Product and requirements disambiguate a clear
-  projection from specification to code and no unresolved material decision
-  would let implementation choose identity, authority, lifecycle, public
-  contract, cross-module topology, or accepted effect or closure law. Design,
-  implementation, and tests may then evolve together and reconcile before
+- **co-evolution** is lawful when Product and requirements constrain the
+  admissible realization enough to leave no unresolved material decision over
+  identity, authority, lifecycle, public contract, cross-module topology, or
+  accepted effect or closure law. Design still owns the structural `HOW`, but
+  design, implementation, and tests may evolve together and reconcile before
   promotion or closure;
 - **design-gated** sequencing is required when implementation would otherwise
   make a material architectural decision with durable consequences for future
@@ -393,9 +393,10 @@ unrelated work.
 
 This applies the governing proportionality law: a prior design gate is
 warranted when the ambiguity it removes and the durable architecture it
-protects justify its reasoning load. It is disproportionate when Product and
-requirements already decide the architecture and another acceptance surface
-would only duplicate that truth.
+protects justify its reasoning load. It is disproportionate when upstream
+truth leaves no materially divergent architecture to adjudicate and a separate
+prior acceptance would add no disambiguation. Design still records and owns the
+resulting `HOW` before promotion or closure.
 
 For this method:
 
@@ -1048,13 +1049,13 @@ authority, or satisfy promotion or closure. In design-gated mode, only a
 disposable spike may cross the unresolved decision before design acceptance.
 
 Existing implementation placed under retrospective review may continue to
-inform the affected design. Co-evolution remains lawful where the specification
-already disambiguates the architecture; newly discovered material ambiguity
-activates the design gate for that decision. Promotion and design-method closure
-remain blocked until the required Ontology, three-view asset, and axiom
-evaluation are accepted. The design must evaluate the code against prior
-authority; it must not rewrite the Ontology or diagrams merely to rationalize
-an unlawful implementation shape.
+inform the affected design. Co-evolution remains lawful where upstream truth
+leaves no unresolved material architecture decision; newly discovered material
+ambiguity activates the design gate for that decision. Promotion and design-
+method closure remain blocked until the required Ontology, three-view asset,
+and axiom evaluation are accepted. The design must evaluate the code against
+prior authority; it must not rewrite the Ontology or diagrams merely to
+rationalize an unlawful implementation shape.
 
 The asset must stay boundary-bounded. It is a defect if it mixes an active
 semantic boundary with unrelated bootstrap, test-harness, projection, or
@@ -1155,13 +1156,14 @@ constitutional WHAT and owning requirements
   -> promotion and design-method closure
 ```
 
-The bidirectional middle relation applies when Product and requirements
-disambiguate the architecture. It permits design, implementation, and tests to
-co-evolve without making implementation semantic authority. Where a material
-architecture decision remains unresolved, the relation is design-gated at that
-decision and retained implementation follows its acceptance. An unchanged
-`realization_refactor` cites the accepted relation and proves no material
-semantic-boundary delta; it does not recreate the evidence.
+The bidirectional middle relation applies when upstream truth leaves no
+unresolved material architecture decision. It permits design, implementation,
+and tests to co-evolve without making implementation semantic authority. Design
+still owns the structural `HOW`. Where a material architecture decision remains
+unresolved, the relation is design-gated at that decision and retained
+implementation follows its acceptance. An unchanged `realization_refactor`
+cites the accepted relation and proves no material semantic-boundary delta; it
+does not recreate the evidence.
 
 Completeness requires:
 

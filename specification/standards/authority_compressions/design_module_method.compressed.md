@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: f7726627065e9b052c79c69bb23ea0e46829f4ab1fa7adeba0def247fc63bf34
+source_digest: 982bc4255ef319f9b424f2150d8d2abf93a142de5f7cf2062ea2625c5c770623
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -53,12 +53,13 @@ An unchanged `realization_refactor` cites the accepted Ontology/design basis and
 proves `no ontology delta`; only affected semantic relations and projections
 re-enter.
 
-Use co-evolution when Product and requirements disambiguate a clear projection
-to code and no unresolved material architecture decision remains. Use a prior
-design gate when implementation would otherwise establish a durable identity,
-authority, lifecycle, public-contract, topology, effect, or closure decision.
-The gate is proportional to that decision, not the whole project: it must
-remove enough ambiguity to justify the reasoning surface it adds.
+Use co-evolution when Product and requirements constrain the admissible
+realization enough to leave no unresolved material architecture decision.
+Design still owns structural `HOW`. Use a prior design gate when implementation
+would otherwise establish a durable identity, authority, lifecycle, public-
+contract, topology, effect, or closure decision. The gate is proportional to
+that decision, not the whole project: it must remove enough ambiguity to
+justify the reasoning surface it adds.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational

@@ -40,8 +40,9 @@ for their subtree.
 
 - At a material semantic boundary, derive Ontology, IACS, and domain, sequence,
   and state views from one semantic basis. Design, implementation, and tests may
-  co-evolve when specification and requirements disambiguate the architecture;
-  unresolved material architecture requires a prior design gate.
+  co-evolve when upstream truth leaves no unresolved material architecture
+  decision; design still owns structural `HOW`, and unresolved material
+  architecture requires a prior design gate.
 - Judge proportionality by ambiguity removed versus effective reasoning
   complexity added, not by line or artifact count alone.
 - Apply Prime recursively to the whole candidate family. Preserve root

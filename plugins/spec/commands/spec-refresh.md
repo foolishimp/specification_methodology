@@ -1,6 +1,6 @@
 # /spec.refresh — Reload Specification Methodology Standards into Context
 
-Read standard documents from one explicitly selected STDO basis and surface
+Read the standard documents from one explicitly selected STDO basis and surface
 their full content into the active session. Loading a document is a context
 projection of that complete basis; it does not create a partial constitution.
 

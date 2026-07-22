@@ -16,8 +16,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: b9aea3997b9b6e19001a068240be389e7aead05c6183bfcc080634cd9e8ffe34
-  DESIGN_MODULE_METHOD.md: f7726627065e9b052c79c69bb23ea0e46829f4ab1fa7adeba0def247fc63bf34
+  SPEC_METHOD.md: 8725ce248d0e89481b89c48844ebeb6354be4a9662ff9da5616f66a92353d0e2
+  DESIGN_MODULE_METHOD.md: 982bc4255ef319f9b424f2150d8d2abf93a142de5f7cf2062ea2625c5c770623
   ODD_METHOD.md: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
   TICKET_METHOD.md: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
@@ -71,10 +71,11 @@ layer that owns the missing truth.
 - Apply the gate proportionally. An unchanged `realization_refactor` cites the
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
-- Design, implementation, and tests may co-evolve when specification and
-  requirements disambiguate the architecture. An unresolved material decision
-  requires a prior design gate at that decision. Accepted Ontology, IACS, and
-  three-view evidence always gate promotion and closure.
+- Design, implementation, and tests may co-evolve when upstream truth leaves no
+  unresolved material architecture decision. Design still owns structural
+  `HOW`; an unresolved material decision requires a prior design gate at that
+  decision. Accepted Ontology, IACS, and three-view evidence always gate
+  promotion and closure.
 - Method compression is a prompt input, not a replacement for the source method.
 - Select one complete immutable STDO version; mutable source and mixed standard
   sets are not consumer authority.
