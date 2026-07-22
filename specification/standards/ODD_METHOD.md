@@ -101,10 +101,20 @@ If it needs to build one concrete product correctly, it must then read the produ
 
 ## 4. Method Folder Semantics
 
-The methodology library has two roles. Authority lives at the source; workspaces carry installed distributions.
+The methodology library has two roles. Mutable source authors a future release;
+consumers select one complete immutable release.
 
-- `specification/standards/` — in the `specification_methodology` source repository, this is the **authoritative methodology library**. All constitutional method surfaces live here.
-- `.genesis/docs/standards/` — in a project workspace, this is an **installed distribution** of the methodology library. It is a local copy vended by the installer and must not diverge from the upstream source of truth.
+- `specification/standards/` in the `specification_methodology` source
+  repository is the **authoring library** for the next method cut. Mutable
+  source does not govern a consumer before publication and explicit selection.
+- `.genesis/docs/standards/` in a project workspace is an **installed
+  distribution** of one selected release. Its authority derives from the
+  selected version, immutable reference, and exact member inventory.
+
+The selected immutable release is consumer authority. An installed copy must
+match that release; mutable source cannot silently repair, replace, or outrank
+it. A mismatch is an adoption defect resolved by selecting and installing a
+released cut, not by mixing source and installed members.
 
 Both roots contain three classes of document:
 
@@ -118,7 +128,9 @@ Only `*_METHOD.md` documents are constitutional method surfaces.
 
 `*_TEMPLATE.md` documents are convenience artifacts only.
 
-When the installed distribution and the source authority disagree, the source authority wins. The installed copy refreshes on the next install.
+When an installed distribution disagrees with its selected immutable release,
+the selected release wins and the installation must be repaired. Mutable source
+authors a future cut; it does not govern the installed consumer.
 
 ---
 

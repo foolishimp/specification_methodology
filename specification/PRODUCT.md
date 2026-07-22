@@ -28,8 +28,8 @@ Version 2 consists of:
    review, milestone truth, and projection-drift refusal;
 5. real-path negative evidence, exact-candidate final-delta qualification, and
    semantic predecessor conservation;
-6. Product-outcome conservation and proportional delivery priority without a
-   prescribed scheduling runtime; and
+6. Product-outcome conservation and proportional method and delivery judgment
+   without a prescribed scoring or scheduling runtime; and
 7. one complete immutable method-version boundary with explicit consumer
    selection.
 
@@ -46,5 +46,9 @@ Version 2 is complete when one exact candidate:
 - has internally consistent source and derived distributions;
 - has exact member identity and a complete `v1.8.0` delta;
 - passes independent exact-cut review; and
-- is accepted by direct or lawfully proxied human authority before immutable
-  publication.
+- is accepted directly by the human authority owning this 2.0 Product boundary
+  before immutable publication.
+
+The bounded-proxy law introduced by this release becomes available only after
+2.0 is operative. It cannot bootstrap acceptance of the release that creates
+it.

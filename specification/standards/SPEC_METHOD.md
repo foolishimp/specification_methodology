@@ -571,12 +571,33 @@ Changing the outcome requires lawful re-entry at its owning Product surface.
 Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
-## Proportional Delivery Priority (`STDO-UP-014`)
+## Proportional Method And Delivery (`STDO-UP-014`)
 
-Delivery priority is justified by the current Product outcome, likelihood,
-impact, reversibility, dependency, and cost of delayed Product feedback.
-Probability informs lawful priority; it does not waive authority, integrity,
-safety, retained release claims, or another hard stop.
+Proportionality is the relation between semantic ambiguity removed and
+effective reasoning complexity introduced. A method obligation is proportional
+when its contraction of the admissible interpretation space justifies the
+additional concepts, relations, projections, and evidence that an agent must
+hold together to reach a correct decision.
+
+Effective reasoning complexity includes independent concepts and authority
+surfaces, cross-document joins, exceptions and branching, states and
+transitions, duplicated representations requiring reconciliation, and the
+detail required to decide the governed question. It is not raw line count,
+artifact count, or context-window size. Detailed algebra, Ontology, IACS,
+Prime, or semantic views may be highly proportional when they eliminate rival
+interpretations. A short additional ticket, receipt, or summary may be
+disproportionate when it creates another truth surface without reducing
+uncertainty.
+
+A method addition is disproportionate when it duplicates truth, increases
+reconciliation paths, or expands the bounded reasoning surface without
+materially reducing ambiguity. Existing obligations should absorb new detail
+where they can do so without weakening ownership or meaning.
+
+Delivery priority applies the same relation to the current Product outcome,
+likelihood, impact, reversibility, dependency, and cost of delayed Product
+feedback. Probability informs lawful priority; it does not waive authority,
+integrity, safety, retained release claims, or another hard stop.
 
 The default priority is work that exposes or advances the smallest supported
 Product path and its highest-value likely failures. Defensive or prerequisite

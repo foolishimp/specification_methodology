@@ -16,9 +16,9 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: e5dab258f9173e74f1dfbc59d13c7501502cf3353980b2aba6f35b9126f5c097
-  DESIGN_MODULE_METHOD.md: 875289cfaa26efbbe3c9d3a108dfbf444d33419ecafc597651f0e34b70ee47d0
-  ODD_METHOD.md: 0f512cd788e12a6468b4d5999951223ec574f5df6559024a532fdc68eba058a6
+  SPEC_METHOD.md: b9aea3997b9b6e19001a068240be389e7aead05c6183bfcc080634cd9e8ffe34
+  DESIGN_MODULE_METHOD.md: f7726627065e9b052c79c69bb23ea0e46829f4ab1fa7adeba0def247fc63bf34
+  ODD_METHOD.md: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
   TICKET_METHOD.md: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
   IDENTITY_METHOD.md: 09fd5547a942f6c375510e83a5a074566921aeec38bc1a3e84ea24b0c3ceb814
@@ -71,6 +71,10 @@ layer that owns the missing truth.
 - Apply the gate proportionally. An unchanged `realization_refactor` cites the
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
+- Design, implementation, and tests may co-evolve when specification and
+  requirements disambiguate the architecture. An unresolved material decision
+  requires a prior design gate at that decision. Accepted Ontology, IACS, and
+  three-view evidence always gate promotion and closure.
 - Method compression is a prompt input, not a replacement for the source method.
 - Select one complete immutable STDO version; mutable source and mixed standard
   sets are not consumer authority.
@@ -78,6 +82,10 @@ layer that owns the missing truth.
   Semantic basis, evidence basis, and state projection remain distinct.
 - Product progress advances one bound outcome. Parallel work remains lawful,
   but preservation is not progress and regression blocks affected promotion.
+- Judge proportionality by semantic ambiguity removed versus effective
+  reasoning complexity added, not by line or artifact count. Detail is lawful
+  when it contracts rival interpretations; duplicate truth and reconciliation
+  paths are not.
 - Native constructability precedes design acceptance. Prime applies recursively
   and counts governance cost while conserving root authority.
 - Authority has identity and may be proxied only through an explicit bounded

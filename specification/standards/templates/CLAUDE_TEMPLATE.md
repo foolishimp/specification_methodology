@@ -38,9 +38,12 @@ override this file for their subtree.
 
 ### Design And Assurance Compression
 
-- At a material semantic boundary, derive an accepted Ontology before public
-  operations, carrier families, modules, or implementation. Derive IACS and
-  domain, sequence, and state views from that one Ontology.
+- At a material semantic boundary, derive Ontology, IACS, and domain, sequence,
+  and state views from one semantic basis. Design, implementation, and tests may
+  co-evolve when specification and requirements disambiguate the architecture;
+  unresolved material architecture requires a prior design gate.
+- Judge proportionality by ambiguity removed versus effective reasoning
+  complexity added, not by line or artifact count alone.
 - Apply Prime recursively to the whole candidate family. Preserve root
   authority and count governance cost, not only files or functions.
 - Prove native constructability in the selected substrate before accepting

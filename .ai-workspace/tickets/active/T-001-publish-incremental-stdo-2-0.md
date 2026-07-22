@@ -39,7 +39,7 @@ reconstructing or silently deleting predecessor law.
 | Exact candidate and final delta | retain | `RELEASE_METHOD.md` |
 | Shared-method intake and propagation | retain as authority relation, not workflow | `POSTING_GUIDE.md` |
 | Product-outcome conservation | retain as progress and promotion law, not global scheduler | `SPEC_METHOD.md` |
-| Proportional delivery priority | retain as priority relation, not fixed sequence | `SPEC_METHOD.md` |
+| Proportional method obligation and delivery priority | retain as ambiguity-reduction and priority relation, not artifact-count rule or fixed sequence | `SPEC_METHOD.md` |
 | Semantic predecessor conservation | retain | `RELEASE_METHOD.md` |
 | Executable STDO conformance Product | reject | none; archived history |
 | Generic carrier schemas, rank/frontier algorithms, fixtures, and workflow runtime | reject | consumer realization |

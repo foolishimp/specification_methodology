@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: 0f512cd788e12a6468b4d5999951223ec574f5df6559024a532fdc68eba058a6
+source_digest: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -32,6 +32,8 @@ surface.
 
 ## Prompt-Relevant Rules
 
+- A consumer selects one immutable method release. Its installed distribution
+  must match that cut; mutable methodology source authors only a future cut.
 - Graph functions are constructive carriers. Do not hide work in scripts,
   prompts, or local controller loops.
 - Worker prompts are invocation surfaces over admitted graph work; they do not

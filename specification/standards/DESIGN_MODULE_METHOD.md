@@ -368,6 +368,35 @@ change must publish only the affected Ontology/design delta and its projection
 impact set. Unaffected maintenance and unrelated boundaries do not freeze
 merely because one source digest changed.
 
+### Proportional Design Sequencing
+
+Design sequencing follows unresolved architectural risk rather than one global
+authoring order:
+
+- **co-evolution** is lawful when Product and requirements disambiguate a clear
+  projection from specification to code and no unresolved material decision
+  would let implementation choose identity, authority, lifecycle, public
+  contract, cross-module topology, or accepted effect or closure law. Design,
+  implementation, and tests may then evolve together and reconcile before
+  promotion or closure;
+- **design-gated** sequencing is required when implementation would otherwise
+  make a material architectural decision with durable consequences for future
+  change. The affected design decision must be accepted before retained
+  implementation establishes that architecture. A disposable spike may supply
+  evidence without becoming the selected design.
+
+The selected relation and its basis belong in the existing work or design
+carrier; this rule does not require a separate artifact. If implementation
+exposes previously hidden architectural ambiguity, the boundary switches to
+design-gated sequencing at that decision rather than retroactively invalidating
+unrelated work.
+
+This applies the governing proportionality law: a prior design gate is
+warranted when the ambiguity it removes and the durable architecture it
+protects justify its reasoning load. It is disproportionate when Product and
+requirements already decide the architecture and another acceptance surface
+would only duplicate that truth.
+
 For this method:
 
 ```text
@@ -524,9 +553,10 @@ flow.
 
 This rule does not require monadic or category-theory vocabulary. An ODD product
 may bind the requirement to GTL composition and ABG interpretation; another
-product may use another explicit algebra. What is mandatory is that composition
-and effects are declared before implementation and that no private helper,
-loop, adapter, or endpoint invents another constructor.
+product may use another explicit algebra. Composition, effects, and
+implementation may be discovered iteratively, but they must be reconciled into
+accepted design before promotion or design-method closure. No private helper,
+loop, adapter, or endpoint may become an undeclared constructor.
 
 ### Whole-Family Prime Contraction
 
@@ -721,11 +751,13 @@ or authority acquire meaning.
 If the accepted Ontology or Irreducible Architectural Carrier Set has not been
 declared, the schema is not yet design-method complete under this method.
 
-For planned implementation work, declaring the Ontology and then the carrier
-set is mandatory before mergeable implementation starts. If retrospective
-implementation already exists, it remains frozen until the missing Ontology and
-carrier-set evidence are reconstructed, checked against the implementation, and
-accepted.
+Under co-evolution, Ontology, carrier-set evidence, implementation, and tests
+may develop together. Implementation may expose a missing entity, relation,
+function, or carrier, but it cannot self-ratify that meaning. Before the
+affected boundary is promoted or claims design-method closure, the Ontology and
+IACS must be accepted and the typed implementation reconciled to them. Under
+design-gated sequencing, the unresolved material decision is accepted before
+retained implementation establishes it.
 
 ## 5B. Promotion Test
 
@@ -843,9 +875,12 @@ design-method complete under this method.
 
 Every new or materially changed semantic or typed module boundary must carry
 one accepted Ontology and one complete three-view Mermaid design asset before
-mergeable implementation starts. Unchanged boundaries cite their accepted
-basis; local realization work with no material semantic-boundary delta does not
-recreate this gate.
+the boundary is promoted or claims design-method closure. In co-evolution mode,
+design evidence, implementation, and tests may develop together before that
+gate. In design-gated mode, the unresolved material architecture decision is
+accepted before retained implementation establishes it. Unchanged boundaries
+cite their accepted basis; local realization work with no material semantic-
+boundary delta does not recreate this gate.
 
 The asset must contain all three views:
 
@@ -995,7 +1030,8 @@ by imperative glue in a plugin, shell, service, script, or test harness.
 ### Gate and retrospective work
 
 For a new or semantically changed boundary, the Ontology and design verdict must
-both be `accepted` before implementation can enter the active product line. Any
+both be `accepted` before the affected implementation, public contract, or
+semantic carrier is promoted or the work claims design-method closure. Any
 failed applicable axiom, missing functionality disposition, unresolved
 authority path, or blocking realization gap keeps the verdict non-accepted.
 
@@ -1005,24 +1041,29 @@ prove that entities, relationships, lifecycle, authority, functions, effects,
 and public semantics have no delta. That proof reuses the existing verdict; it
 does not create a new Ontology or acceptance ceremony.
 
-An exploratory implementation may exist only as an explicitly disposable
-spike outside the mergeable product line. It supplies evidence to design; it
-does not earn retention, publication, or implementation authority.
+In co-evolution mode, implementation may precede or develop with design evidence
+and may be retained after reconciliation. Until the design gate is accepted,
+it is provisional evidence: it does not author semantic truth, earn publication
+authority, or satisfy promotion or closure. In design-gated mode, only a
+disposable spike may cross the unresolved decision before design acceptance.
 
-Existing implementation placed under retrospective review is frozen only at
-the affected semantic boundary until its Ontology, three-view asset, and axiom
-evaluation are accepted. Unrelated maintenance and accepted boundaries remain
-available. The design must evaluate the code against prior authority; it must
-not rewrite the Ontology or diagrams to rationalize an unlawful implementation
-shape.
+Existing implementation placed under retrospective review may continue to
+inform the affected design. Co-evolution remains lawful where the specification
+already disambiguates the architecture; newly discovered material ambiguity
+activates the design gate for that decision. Promotion and design-method closure
+remain blocked until the required Ontology, three-view asset, and axiom
+evaluation are accepted. The design must evaluate the code against prior
+authority; it must not rewrite the Ontology or diagrams merely to rationalize
+an unlawful implementation shape.
 
 The asset must stay boundary-bounded. It is a defect if it mixes an active
 semantic boundary with unrelated bootstrap, test-harness, projection, or
 delivery shapes merely to look complete.
 
 If the Ontology, any of the three views, the cross-view evaluation, or either
-accepted verdict is absent, the boundary is not design-method complete and
-implementation may not proceed.
+accepted verdict is absent, the boundary is not design-method complete. Work
+may continue as provisional co-evolution, but the affected boundary may not be
+promoted, published, or closed.
 
 ## 5F. Theoretical Framing For Boundary Law
 
@@ -1104,21 +1145,23 @@ instead of disappearing into broad orchestration code.
 ## 6A. Design To Module To (Implementation, Unit Tests) Evidence Route
 
 For a new or materially changed realization boundary, the canonical evidence
-route is:
+relation is:
 
-1. constitutional `WHAT` and owning requirements;
-2. accepted Ontology with lifecycle, authority, function derivation, and
-   whole-family Prime evidence;
-3. target design and Ontology-derived IACS;
-4. accepted three-view behavioral projections plus axiom evaluation;
-5. implementation and module-derived unit tests.
+```text
+constitutional WHAT and owning requirements
+  -> Ontology, IACS, target design, and three-view evidence
+  <-> implementation and module-derived unit tests
+  -> reconciliation and acceptance
+  -> promotion and design-method closure
+```
 
-This route is mandatory for new or materially changed implementation entering
-the active product line. An unchanged `realization_refactor` cites the accepted
-route and proves no material semantic-boundary delta; it does not recreate the
-evidence. This is not a claim about the fastest disposable exploration path. A
-spike that runs ahead remains outside the mergeable product line and has no
-retention or publication presumption.
+The bidirectional middle relation applies when Product and requirements
+disambiguate the architecture. It permits design, implementation, and tests to
+co-evolve without making implementation semantic authority. Where a material
+architecture decision remains unresolved, the relation is design-gated at that
+decision and retained implementation follows its acceptance. An unchanged
+`realization_refactor` cites the accepted relation and proves no material
+semantic-boundary delta; it does not recreate the evidence.
 
 Completeness requires:
 
@@ -1126,8 +1169,8 @@ Completeness requires:
 - the final implementation must be traceable to design and module boundary
   assets
 - unit tests must be traceable to module ownership, not only to helper layout
-- any implementation-first spike must remain disposable until the Ontology and
-  three-view gate is accepted; and
+- implementation-first discoveries must be reconciled into the Ontology and
+  three-view evidence before promotion or closure; and
 - implementation may not compensate for an unrealized declared constructor by
   introducing a hidden controller or alternative authority path.
 
@@ -1710,10 +1753,12 @@ When reviewing code under this method, ask:
     runtime, handler, and module law with `pass`, `fail`, or reasoned
     `not_applicable`?
 39. Is any relied-on graph, batch, retry, recursion, or workflow constructor
-    still `semantic_not_realized`, and if so has implementation stopped rather
-    than bypassing it with imperative glue?
-40. Is the design verdict explicitly `accepted` before product implementation
-    or publication proceeds?
+    still `semantic_not_realized`, and if so are promotion and closure blocked
+    rather than bypassed with imperative glue?
+40. Is the proportional sequencing relation justified, and is the design
+    verdict explicitly `accepted` before promotion or closure and, where
+    design-gated, before retained implementation establishes the unresolved
+    architecture?
 41. Does one accepted Ontology exist before IACS, public operation, schema,
     module, or implementation promotion?
 42. Does the Ontology enumerate entities, identities, relationships,
@@ -1849,7 +1894,8 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 For a new or materially changed boundary, the compact hard-gate version of this
 checklist is:
 
-- [ ] accepted Ontology before Prime carriers, operations, or implementation
+- [ ] accepted Ontology before promotion or closure and, where design-gated,
+      before retained implementation establishes unresolved architecture
 - [ ] complete entity lifecycle, authority, and function-derivation evidence
 - [ ] whole-family Prime contraction and declared composition/effect algebra
 - [ ] pure functions in the semantic center

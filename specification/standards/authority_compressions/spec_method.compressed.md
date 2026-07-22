@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: e5dab258f9173e74f1dfbc59d13c7501502cf3353980b2aba6f35b9126f5c097
+source_digest: b9aea3997b9b6e19001a068240be389e7aead05c6183bfcc080634cd9e8ffe34
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -48,8 +48,12 @@ them.
 - Product progress is measured against one bound outcome. Parallel work may
   proceed, but preservation is not progress and regression blocks promotion on
   the affected path.
-- Prioritize fast Product feedback proportionally; this is not a global
-  scheduler or fixed execution sequence.
+- Judge proportionality by semantic ambiguity removed versus effective
+  reasoning complexity added, not by line or artifact count. Detail is lawful
+  when it contracts rival interpretations; duplicate truth and reconciliation
+  paths are not.
+- Prioritize fast Product feedback under that same relation; this is not a
+  global scheduler or fixed execution sequence.
 
 ## Compression Use
 

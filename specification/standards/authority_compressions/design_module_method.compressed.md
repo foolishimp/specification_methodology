@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 875289cfaa26efbbe3c9d3a108dfbf444d33419ecafc597651f0e34b70ee47d0
+source_digest: f7726627065e9b052c79c69bb23ea0e46829f4ab1fa7adeba0def247fc63bf34
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -25,8 +25,8 @@ replace target architecture or module design; implementation and tests derive
 from requirements plus accepted design and preserve the Ontology through that
 design.
 
-Discovered functionality is not yet an architectural operation. The lawful
-order is:
+Discovered functionality is not yet an architectural operation. The required
+closure relation is:
 
 ```text
 constitutional functionality
@@ -36,8 +36,9 @@ constitutional functionality
   -> accepted Ontology basis
   -> IACS
   -> target design and three-view projections
-  -> public contracts
-  -> implementation and tests
+  <-> implementation and tests
+  -> reconciliation and acceptance
+  -> promotion and closure
 ```
 
 The Ontology remains subordinate to constitutional `WHAT`. It may not invent
@@ -51,6 +52,13 @@ design pack and acceptance; it requires no extra document, ticket, or ceremony.
 An unchanged `realization_refactor` cites the accepted Ontology/design basis and
 proves `no ontology delta`; only affected semantic relations and projections
 re-enter.
+
+Use co-evolution when Product and requirements disambiguate a clear projection
+to code and no unresolved material architecture decision remains. Use a prior
+design gate when implementation would otherwise establish a durable identity,
+authority, lifecycle, public-contract, topology, effect, or closure decision.
+The gate is proportional to that decision, not the whole project: it must
+remove enough ambiguity to justify the reasoning surface it adds.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
@@ -97,10 +105,13 @@ surfaces.
 - Code, tests, generated artifacts, runtime fixtures, prompt prose, and local
   convention may prove lifecycle claims, but must not invent lifecycle
   authority.
-- A new or materially changed boundary requires accepted Ontology evidence,
-  accepted domain/sequence/state projections, and complete cross-view axiom
-  evaluation before mergeable implementation. Existing accepted evidence is
-  reused when the boundary is unchanged.
+- In co-evolution mode, design evidence, implementation, and tests may develop
+  together. A new or materially changed boundary requires accepted Ontology
+  evidence, accepted domain/sequence/state projections, and complete cross-view
+  axiom evaluation before promotion or closure. In design-gated mode, the
+  unresolved material decision is accepted before retained implementation
+  establishes it. Existing accepted evidence is reused when the boundary is
+  unchanged.
 
 ## Prompt-Relevant Rules
 
