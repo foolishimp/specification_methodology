@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 982bc4255ef319f9b424f2150d8d2abf93a142de5f7cf2062ea2625c5c770623
+source_digest: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-22
+generated_at: 2026-07-24
 stale_if_source_digest_changes: true
 ---
 
@@ -113,6 +113,12 @@ surfaces.
   unresolved material decision is accepted before retained implementation
   establishes it. Existing accepted evidence is reused when the boundary is
   unchanged.
+- The post-ticket design check may be part of normal verification. It blocks
+  when the exact claim or an applicable hard stop fails, including causally
+  applicable active authority that ticket or review wording cannot narrow away.
+  Optional cleanup, recurrence, generality, and cross-boundary observations are
+  repricing input; they do not automatically widen the subject or require
+  another ticket, artifact, review round, or reviewer.
 
 ## Prompt-Relevant Rules
 

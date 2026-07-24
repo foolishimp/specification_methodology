@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
+source_digest: b57a32f17adcd4215096d58cae452e3d3fa4ec3ad0f057479f19ab8332e30c81
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-22
+generated_at: 2026-07-24
 stale_if_source_digest_changes: true
 ---
 
@@ -37,6 +37,22 @@ proof, and current status.
   qualification, and release remain distinct closure boundaries.
 - Implementer self-review is not independent review. Human acceptance does not
   relabel it.
+- A review finding blocks when it falsifies the exact claim, contradicts
+  causally applicable authority, exposes competing authority, violates safety
+  or retained accepted behavior, or establishes durable architectural
+  foreclosure. Other observations are repricing input and do not automatically
+  widen the subject or require another ticket, artifact, review, or
+  implementation increment.
+- A Product-slice milestone may close under singular authority across the full
+  causal closure of its acceptance path while its enclosing migration remains
+  visibly active. Its claim cannot exclude causally applicable Product,
+  requirement, design, or retained-predecessor authority. Slice acceptance does
+  not satisfy migration closure.
+- Fundamental re-adoption requires the ticket to bind the explicit human
+  selection, comparison with bounded evolution, and abort or re-entry
+  condition.
+- A migration ticket binds its exact affected scope plus every excluded or
+  disjoint Product or compatibility scope and deterministic routing relation.
 - Ticket and milestone truth outrank comments, dashboards, indexes, and other
   state projections; contradiction blocks closure.
 

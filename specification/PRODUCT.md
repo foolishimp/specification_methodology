@@ -16,11 +16,18 @@ explicitly accepted method interoperability boundary. It does not implement a
 generic conformance engine, workflow governor, runtime, fixture suite, or
 consumer Product.
 
-## Version 2 Increment
+## Published Baseline
 
-Version 2 consists of:
+The exact released predecessor is STDO `v2.0.0` at
+`94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`. It remains immutable and is the
+current published Product until a successor is independently qualified,
+accepted, and tapped.
 
-1. the complete accepted `v1.8.0` standards baseline;
+The current successor source takes the complete `v2.0.0` Product as its
+construction basis and conserves it except for the explicit supersessions in
+the Current Successor Amendment below:
+
+1. the complete accepted `v2.0.0` standards baseline;
 2. the accepted Ontology-first, IACS, Prime, and three-view design additions;
 3. proof-target identity and separation of semantic, evidence, and projection
    truth;
@@ -34,21 +41,46 @@ Version 2 consists of:
    selection.
 
 The rejected executable and overcorrected normative candidates remain archived
-history. Neither is a construction basis for this Product.
+history. Neither is a construction basis for this successor.
 
-## Release Outcome
+## Current Successor Amendment
 
-Version 2 is complete when one exact candidate:
+The bounded successor:
 
-- preserves or explicitly supersedes every material predecessor claim;
-- contains the accepted incremental laws with one owner each;
+1. makes outcome succession explicit: acceptance exhausts only the exact bound
+   outcome instance and interval, stops that instance selecting later
+   Product-progress work, retains its witnesses as regression evidence, and
+   leaves enduring or recurring obligations live;
+2. prevents assurance evidence from selecting, enlarging, or replacing the
+   Product outcome it evaluates;
+3. makes bounded evolution the rebuttable selection presumption when it and
+   fundamental re-adoption are both lawful and feasible and a working
+   predecessor can reach the admitted outcome without rival authority, while
+   requiring explicit human comparative selection and an abort or re-entry
+   condition for fundamental re-adoption;
+4. separates Product-slice promotion from full migration closure while keeping
+   competing or ambiguous authority blocking on the affected acceptance path;
+   and
+5. keeps contradictions of the exact claim or causally applicable authority,
+   competing authority, safety failures, retained-behavior regressions, and
+   durable architectural foreclosure blocking while preventing other discovery
+   from automatically widening work or creating follow-up tickets.
+
+This amendment adds no scoring algorithm, frontier runtime, schema, fixture
+registry, mandatory review round, or conformance implementation.
+
+## Successor Release Outcome
+
+The successor is complete when one exact candidate:
+
+- preserves or explicitly supersedes every material `v2.0.0` predecessor claim;
+- contains the bounded successor laws with one owner each;
 - contains no executable STDO conformance or workflow implementation;
 - has internally consistent source and derived distributions;
-- has exact member identity and a complete `v1.8.0` delta;
+- has exact member identity and a complete `v2.0.0` delta;
 - passes independent exact-cut review; and
-- is accepted directly by the human authority owning this 2.0 Product boundary
+- is accepted directly by the human authority owning the successor Product boundary
   before immutable publication.
 
-The bounded-proxy law introduced by this release becomes available only after
-2.0 is operative. It cannot bootstrap acceptance of the release that creates
-it.
+The current source and any candidate review remain non-operative for consumers
+until an immutable successor is tapped and explicitly selected.

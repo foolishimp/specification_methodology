@@ -664,6 +664,17 @@ implementer self-review independent. Independent review is required at Product,
 qualification, release, and explicitly risk-bearing boundaries that claim it,
 not for every local implementation step.
 
+A review verdict is bounded by the exact reviewed claim and its applicable hard
+stops. A finding blocks current promotion only when it falsifies that claim,
+exposes competing or ambiguous authority on its acceptance path, violates
+applicable active authority, safety, or retained accepted behavior, or
+establishes a material architectural decision with durable consequences that
+forecloses an admitted Product outcome.
+
+A valid observation outside that boundary is repricing input. It does not by
+itself widen the reviewed subject, block its bounded claim, or require a new
+ticket, artifact, review round, or implementation increment.
+
 A direct or lawfully proxied human ruling receives durable disposition before
 the next affected acceptance boundary. Its source wording remains distinct
 from agent interpretation. Opening a ticket records the obligation but does not
@@ -685,15 +696,20 @@ These are the local gain function for the work.
 
 For implementation migrations, typical non-closure conditions include:
 
-- old authoritative path still passes in normal execution
+- old authoritative path still passes in normal execution within the declared
+  affected scope
 - mixed old/new proof is still accepted
 - proxy or partial interface implementation still stands in the acceptance path
-- superseded-path debt is deferred as cleanup rather than retired within the
-  migration wave
+- competing or ambiguous executable authority remains reachable on the claimed
+  Product acceptance path
 - ticket wording, product wording, and proof wording are not reconciled
 
 These conditions are not optional commentary. They are the anti-self-deception
 surface for execution.
+
+Residual implementation debt outside the claimed acceptance path is not a
+non-closure condition by itself. It may be deferred only under the
+path-relative authority and explicit disposition rules in `SPEC_METHOD.md`.
 
 ### Test Case Authority
 
@@ -756,6 +772,9 @@ accepting a closure claim on one concrete work item.
 The ticket must explicitly declare:
 
 - the migration strategy used for this work item
+- the exact affected migration scope
+- every explicitly excluded or disjoint Product or compatibility scope and its
+  deterministic routing relation
 - the old truth path or superseded contract
 - the new truth path or authoritative contract
 - the producer set for the old and new path
@@ -769,12 +788,14 @@ At minimum, the ticket must carry this checklist in live markdown form:
 ```md
 ## Migration Checklist
 
+- [ ] exact affected migration scope is named
+- [ ] excluded or disjoint Product and compatibility scopes are named with deterministic routing
 - [ ] old truth path is named explicitly
 - [ ] new truth path is named explicitly
 - [ ] producer set for the new truth is listed
 - [ ] consumer set for the new truth is listed
 - [ ] projection/read-model surfaces are listed
-- [ ] old truth path is removed or explicitly demoted from authority
+- [ ] old truth path is removed or explicitly demoted from authority within the affected scope
 - [ ] mixed-state behavior is no longer accepted as closure evidence
 - [ ] tests proving mixed old/new behavior are removed or repriced
 - [ ] recurring realization patterns are checked against existing library/commonization surfaces
@@ -812,15 +833,18 @@ If `library_usage: none`, the ticket must explain in `library_rationale` why:
 - this is not yet a lawful recurrence/commonization candidate
 
 For `ticket_category: implementation_migration`, closure is blocked while the
-old authoritative interface still passes in normal execution unless the ticket
-explicitly declares a retained compatibility feature.
+old authoritative interface still passes in normal execution within the
+declared affected scope unless the ticket explicitly declares a retained
+compatibility feature. A deterministically routed, non-overlapping Product scope
+outside the declared affected scope remains governed by its own current
+authority.
 
 That means:
 
-- the old path may not remain silently authoritative
+- the old path may not remain silently authoritative within the affected scope
 - mixed old/new green tests do not count as migration completion
-- any retained old path must be named as compatibility rather than current
-  native truth
+- any retained old path within the affected scope must be named as
+  compatibility rather than current native truth
 - retained compatibility must be justified in the ticket itself rather than
   inferred from surviving code
 - proxy or partial implementations do not satisfy migration closure
@@ -828,6 +852,14 @@ That means:
   items are false on the current tree, the ticket must be reopened or an
   explicitly linked successor ticket must be created; a false closure claim is
   a ticket-method defect, not just a code defect
+
+An intermediate Product-slice milestone inside an open implementation-migration
+ticket may be accepted under the path-relative promotion rule in
+`SPEC_METHOD.md`. Its identity and acceptance criteria must derive from Product
+plus every causally applicable live requirement, accepted design relation, and
+retained predecessor claim; ticket wording cannot narrow that authority away.
+The ticket remains active and must not claim migration closure until the
+migration checklist and final closure law are satisfied.
 
 ### Migration Strategy Requirements
 
@@ -840,6 +872,10 @@ If `migration_strategy: inside_out_hard_break`, the ticket must carry:
 
 If `migration_strategy: fundamental_re_adoption`, the ticket must carry:
 
+- the explicit human Product-authority selection of fundamental re-adoption
+- the comparison with bounded evolution across Product value, feedback latency,
+  authority risk, reversibility, total cost, and retained predecessor semantics
+- the bounded abort or re-entry condition
 - the sideways reference line or prior implementation boundary being treated as
   source material
 - the module and interface adjudication surface
@@ -883,9 +919,11 @@ Preferred order is:
 2. tenant-local reusable library/commonization surface
 3. shared/common propagation only through separate design re-entry
 
-If a reusable pattern is discovered during the active ticket and is not
-absorbed into an existing or new library/commonization surface within that
-ticket, a follow-up triage ticket must be created before closure.
+If a reusable pattern is discovered during the active ticket, the second- and
+third-recurrence rules above still apply. Outside those rules and the current
+claim's applicable hard stops, the pattern is repricing input. It does not block
+the bounded claim or require a follow-up ticket unless the owning authority
+admits that follow-up.
 
 ### Multi-Build-Tenant Review Rule
 

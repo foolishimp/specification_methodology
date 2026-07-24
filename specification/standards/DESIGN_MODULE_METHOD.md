@@ -1503,13 +1503,13 @@ design re-entry include:
   than only improving local realization quality
 
 When a cross-boundary opportunity is discovered during lawful cleanup, it must
-not be silently absorbed into the active boundary. It must become a separate
-follow-up work item at the smallest lawful re-entry point before follow-up
-implementation is opened.
+not be silently absorbed into the active boundary. It is repricing input. If
+the owning authority admits follow-up implementation, that work enters
+separately at the smallest lawful re-entry point.
 
 This method owns the scope-separation rule. It does not own the work-tracking
-mechanism. For ticketed work, `TICKET_METHOD.md` governs how the follow-up is
-recorded and how it affects ticket closure.
+mechanism. For ticketed work, `TICKET_METHOD.md` governs whether admitted
+follow-up is recorded and how it affects ticket closure.
 
 The test is simple:
 
@@ -1587,49 +1587,49 @@ design decision and must be treated that way.
 When a ticket adopts this method and claims its boundary has been processed, the
 design-method closure claim should not rest on implementation status alone.
 
-A design-module-method review must be run against the processed boundary before
-the ticket claims closure under this method.
+The processed boundary must be checked against its accepted design basis and
+exact closure claim before the ticket claims closure under this method. This
+check may be part of the ticket's normal verification; it does not require a
+separate artifact, review round, or reviewer.
 
 `TICKET_METHOD.md` remains the authority for ticket status, closure mechanics,
 reopening, dependency handling, and follow-up ticket recording. This rule states
-what the design-method review must cover when this method governs the ticketed
+what the design check must cover when this method governs the ticketed
 boundary.
 
-That review must check:
+That check must determine:
 
 - whether the boundary stayed lawful under the current design and module assets
-- whether boundary-local cleanup opportunities were discovered and should be
-  absorbed before the design-method closure claim
-- whether repeated realization patterns were discovered and should be absorbed
-  into an existing or new library/commonization surface before the design-method
-  closure claim
-- whether any cross-boundary opportunities were discovered and require separate
-  follow-up work items
+- whether the exact claim includes every causally applicable live requirement,
+  accepted design relation, and retained predecessor claim
+- whether the exact closure claim leaves competing or ambiguous authority on
+  its acceptance path
+- whether implementation established a material architectural decision with
+  durable consequences that forecloses an admitted Product outcome
+- whether any discovered issue falsifies the current claim or an applicable
+  hard stop
 
 The required consequence is:
 
-- boundary-local, behavior-preserving, authority-neutral cleanup should be
-  absorbed into the active boundary before the design-method closure claim when
-  feasible
-- tenant-local reusable recurrence should be absorbed by consuming or extending
-  the governing library/commonization surface before the design-method closure
-  claim when feasible
-- cross-boundary opportunities must not be folded into closure cleanup; they
-  must become separate follow-up work items at the smallest lawful re-entry
-  point
-- the processed ticket should record the review outcome and resulting follow-up
-  work items where `TICKET_METHOD.md` or the local ticket surface requires that
-  record
-
-This rule exists to force discovery while the boundary is still warm:
-
-- local optimizations are easier to see and safer to absorb before a
+- an issue that falsifies the current claim or applicable hard stop blocks the
   design-method closure claim
-- cross-boundary opportunities are easier to see and safer to isolate before
-  momentum is lost
+- ticket or review wording cannot narrow applicable active authority away
+- boundary-local cleanup or commonization is absorbed only when required to make
+  the current claim true, preserve singular authority, satisfy accepted design,
+  or avoid the durable architectural foreclosure above
+- other cleanup, recurrence, generality, and cross-boundary opportunities are
+  repricing inputs; they do not automatically widen the subject, block its
+  bounded claim, or require a follow-up ticket
+- any repricing admitted by the owning authority enters through the smallest
+  lawful re-entry point
+
+This rule keeps design closure truthful without turning discovery into automatic
+scope expansion. Current defects and hard stops remain blocking. Useful
+observations may survive as repricing input. Unclaimed future capability and
+optional cleanup do not become implicit work.
 
 No processed ticket that has adopted this method should claim design-method
-closure until this review step is complete.
+closure until this bounded design check is complete.
 
 ---
 
@@ -1718,17 +1718,18 @@ When reviewing code under this method, ask:
 24. If the change claims cleanup or optimization, does it stay boundary-local,
     behavior-preserving, and authority-neutral rather than becoming silent
     redesign?
-25. If a cross-boundary opportunity was discovered, was it separated into a
-    follow-up work item rather than folded into the current change?
+25. If a cross-boundary opportunity was discovered, was it kept out of the
+    current change unless the owning authority admitted it at the lawful
+    re-entry point?
 26. If the same realization pattern has already appeared elsewhere, did review
     make an explicit library/commonization decision rather than allowing
     another silent local rebuild?
 27. If this would be the third local rebuild of the same realization pattern,
     is the change design-method conformant because it consumes or extends the
     governing library or records an explicit do-not-commonize decision?
-28. If the ticket is making a design-method closure claim, was a design-module-method
-    review run against the processed boundary so local optimization and
-    recurrence/commonization discovery were handled before that claim?
+28. If the ticket is making a design-method closure claim, did the bounded
+    design check cover the exact claim and applicable hard stops without
+    automatically absorbing optional discovery?
 29. If the project is ODD-governed, is this module realizing a declared
     outcome traversal rather than substituting for the graph function?
 30. Has review checked whether a deterministic module boundary is actually an
@@ -1873,11 +1874,12 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 - [ ] If no reusable library/commonization surface is used, is there an
       explicit rationale that the pattern is boundary-specific or not yet a
       lawful commonization candidate?
-- [ ] If a cross-boundary opportunity was discovered, was it separated into a
-      follow-up work item and triaged before follow-up implementation?
-- [ ] If the ticket is making a design-method closure claim, was a
-      design-module-method review run and were boundary-local optimizations,
-      recurrence extraction, and cross-boundary opportunities handled lawfully?
+- [ ] If a cross-boundary opportunity was discovered, was it kept out of the
+      current change unless the owning authority admitted it at the lawful
+      re-entry point?
+- [ ] If the ticket is making a design-method closure claim, did the bounded
+      design check cover the exact claim and applicable hard stops without
+      automatically absorbing optional discovery?
 - [ ] Is there a negative proof showing that an imperative bypass, open-payload
       bypass, or effect-edge erasure fails closed?
 - [ ] If the project is ODD-governed, does the deterministic module sit inside

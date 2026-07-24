@@ -53,8 +53,22 @@ override this file for their subtree.
   semantic basis, evidence basis, and state projection distinct.
 - Implementer self-review is not independent review. Ticket, milestone, and
   release claims close only at their own evidence altitude.
-- Product progress advances one bound outcome. Parallel work is lawful, but
-  preservation is not progress and regression blocks affected promotion.
+- Product progress advances one explicitly selected unresolved Product-defined
+  outcome instance. Acceptance ends that instance's progress authority while
+  prior witnesses remain regression evidence; the next already-defined outcome
+  still requires explicit Goals/work sequencing. Evidence cannot select,
+  enlarge, or replace its Product claim.
+- When both strategies are lawful and feasible, bounded evolution is the
+  rebuttable selection presumption when a working predecessor can reach the
+  admitted outcome without competing or ambiguous authority. It never requires
+  continuing an unsafe or inadmissible path. Fundamental re-adoption requires
+  explicit human comparative selection and an abort or re-entry condition.
+- Product-slice promotion requires singular authority across the full causal
+  closure of its acceptance path but does not close an enclosing migration.
+  Ticket and review wording cannot exclude causally applicable authority;
+  competing authority, safety failures, retained-behavior regressions, and
+  durable architectural foreclosure remain blocking. Other observations remain
+  repricing input rather than automatic scope or ticket creation.
 - Negative proof exercises the real authority path and never manufactures the
   refusal it later asserts.
 - Exact-candidate qualification includes final delta and semantic predecessor

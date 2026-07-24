@@ -16,16 +16,16 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: 8725ce248d0e89481b89c48844ebeb6354be4a9662ff9da5616f66a92353d0e2
-  DESIGN_MODULE_METHOD.md: 982bc4255ef319f9b424f2150d8d2abf93a142de5f7cf2062ea2625c5c770623
+  SPEC_METHOD.md: dfe9853483502e65dd74f995fea32d739f452b15f2c85d42c80dedbd729177df
+  DESIGN_MODULE_METHOD.md: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
   ODD_METHOD.md: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
-  TICKET_METHOD.md: f0906efbd13a3a78492264c34cd4950ca7edbf8aa3c9aa2faedcb8c14370b7bb
+  TICKET_METHOD.md: b57a32f17adcd4215096d58cae452e3d3fa4ec3ad0f057479f19ab8332e30c81
   UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
   IDENTITY_METHOD.md: 09fd5547a942f6c375510e83a5a074566921aeec38bc1a3e84ea24b0c3ceb814
   RELEASE_METHOD.md: 0234f118a504e449a6670d4276422abab89a2a3fa5f281d313aacc87815dd79e
   POSTING_GUIDE.md: 29968e92ca44411d4102fc9351febb8afe72286e0bdccc0bc8db995ba0415762
 generated_by: codex
-generated_at: 2026-07-22
+generated_at: 2026-07-24
 stale_if_source_digest_changes: true
 ---
 
@@ -81,12 +81,26 @@ layer that owns the missing truth.
   sets are not consumer authority.
 - Proof identifies its exact property and nearest weaker excluded property.
   Semantic basis, evidence basis, and state projection remain distinct.
-- Product progress advances one bound outcome. Parallel work remains lawful,
-  but preservation is not progress and regression blocks affected promotion.
+- Product progress advances one explicitly selected unresolved Product-defined
+  outcome instance. Acceptance ends that instance's progress authority while
+  retaining prior witnesses as regression evidence; selecting the next
+  already-defined outcome still requires explicit Goals/work sequencing.
+  Evidence cannot select, enlarge, or replace its Product claim.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation
   paths are not.
+- When both strategies are lawful and feasible, bounded evolution is the
+  rebuttable selection presumption when a working predecessor can reach the
+  admitted outcome without competing or ambiguous authority. It never requires
+  continuing an unsafe or inadmissible path. Fundamental re-adoption requires
+  explicit human comparative selection and an abort or re-entry condition.
+- Product-slice promotion requires singular authority across the full causal
+  closure of its acceptance path but does not close an enclosing migration.
+  Ticket and review wording cannot exclude causally applicable authority;
+  competing authority, safety failures, retained-behavior regressions, and
+  durable architectural foreclosure remain blocking. Other observations remain
+  repricing input rather than automatic scope or ticket creation.
 - Native constructability precedes design acceptance. Prime applies recursively
   and counts governance cost while conserving root authority.
 - Authority has identity and may be proxied only through an explicit bounded

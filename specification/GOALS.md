@@ -2,25 +2,26 @@
 
 ## Current Goal
 
-STDO `2.0.0` is the latest published standards Product. No successor release
-wave is currently admitted.
+Construct one bounded successor to the published STDO `2.0.0` Product. The
+successor amends Product-outcome succession, migration-strategy selection,
+path-relative migration closure, and review-scope discipline without adding
+runtime process or another governance carrier.
 
 ## Governing Outcome
 
-The exact `v1.8.0` baseline remains present and authoritative except where one
-bounded 2.0 amendment explicitly adds or supersedes method law. Every admitted
-change must identify its new semantic value; candidate-derived rewriting is not
-an acceptable substitute for predecessor conservation.
+The exact `v2.0.0` cut remains the immutable predecessor and current published
+Product. The successor changes only the admitted law families named above.
+Every other `v2.0.0` semantic remains conserved.
 
 ## Milestones
 
 | Milestone | Exit | State |
 |---|---|---|
-| `M0` Baseline | `v1.8.0` is the clean construction base and all earlier stable tags are ancestors. | completed |
-| `M1` Authorized design increment | Three-view and Ontology/IACS/Prime commits are replayed exactly. | completed |
-| `M2` Incident-derived increment | Only independently valuable 2.0 laws are added at normative altitude. | completed |
-| `M3` Release reconciliation | Predecessor dispositions, derived distributions, and exact inventory agree. | completed |
-| `M4` Qualification and tap | Independent exact-cut review and human acceptance precede `v2.0.0`. | completed |
+| `M0` Predecessor | Exact `v2.0.0` source and release identity are fixed. | completed |
+| `M1` Normative amendment | The three admitted amendment families are owned once in their existing standards. | completed |
+| `M2` Derived reconciliation | Compressions, Product, ticket, and release delta agree with the amended source. | completed |
+| `M3` Qualification | Exact predecessor conservation and independent exact-cut review pass. | active |
+| `M4` Tap | Direct human acceptance precedes any `v2.1.0` tag or publication. | pending |
 
 ## Published Cut
 
@@ -28,9 +29,13 @@ an acceptable substitute for predecessor conservation.
 - release tag: `v2.0.0`
 - release commit: `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`
 
+No `v2.1.0` release exists while this work wave remains open.
+
 ## Exclusions
 
 - executable conformance or root-governor machinery;
 - consumer schemas, runtime, fixtures, tests, or adoption;
-- wholesale rewriting or compression of accepted `v1.8.0` law; and
+- wholesale rewriting or compression of accepted `v2.0.0` law;
+- numeric progress algorithms, mandatory review rounds, or automatic ticket
+  creation; and
 - publication before exact-cut review and human acceptance.

@@ -552,14 +552,37 @@ defines the ticket-local test-case authority rule.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
-Every Product-outcome-bearing work wave identifies one current directly
-verifiable Product outcome. Product-progress claims and promotion onto the
-supported Product path are judged against that same outcome.
+Every Product-outcome-bearing work wave identifies one explicitly selected,
+unresolved, directly verifiable Product-defined outcome. Product-progress
+claims and promotion onto the supported Product path are judged against that
+same outcome.
 
 Evidence distinguishes material advance, prerequisite readiness, preservation,
 and regression. Only material advance projects Product progress. Prerequisite
 work names the Product obligation it enables and remains bounded. Preservation
 is useful evidence but is not progress.
+
+The exact bound outcome instance stops selecting later Product-progress work
+when the owning authority accepts it. Its witnesses remain regression and
+preservation evidence. Acceptance exhausts only that instance and its declared
+acceptance interval. It does not discharge an enduring guarantee, recurring
+obligation, or broader Product family beyond the accepted instance. Further
+work against the accepted instance is preservation, a named bounded
+prerequisite for another admitted outcome, or a new change requiring lawful
+repricing; it is not additional progress against the accepted instance.
+
+Selecting the next unresolved outcome already defined by Product is a Goals and
+work-sequencing decision. Changing an outcome's meaning or scope, or introducing
+a new Product outcome, requires lawful re-entry at Product.
+
+Evidence evaluates and constrains its bound Product claim. Completion of a
+proof surface, matrix, coverage ledger, inventory, design-method artifact, test
+suite, or other evidence surface cannot by itself select, enlarge, or replace
+the Product outcome. If an assurance capability is explicitly defined as
+Product behavior, delivery of that capability is judged as Product progress;
+its evidence still does not author the claim. The same artifact may be Product
+output for one claim and evidence for another only when those roles are
+declared separately.
 
 A regression or unresolved gap blocks further promotion on the affected path
 until repaired, repriced, or accepted by the owning authority. It does not
@@ -567,7 +590,6 @@ globally serialize independent work. Parallel work may proceed under its own
 admitted basis but cannot be laundered into the governed outcome's progress
 claim.
 
-Changing the outcome requires lawful re-entry at its owning Product surface.
 Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
@@ -623,7 +645,9 @@ The governing rule is:
 - audit every producer and every consumer of the impacted interface
 - migrate each producer and consumer to the new contract
 - chase every downstream effect until no superseded closure law remains
-- run proof only after the migration wave is complete
+- run complete migration-closure proof only after the migration wave is
+  complete; bounded Product-slice proof remains governed by the path-relative
+  promotion rule below
 
 This rule exists because partial interface migration creates recurring drift:
 
@@ -650,14 +674,59 @@ constitutional strategies:
   system, execution substrate, or realization tree. The prior implementation is
   moved sideways and treated as reference material, not live authority.
 
+Where bounded evolution and fundamental re-adoption are both lawful and
+feasible, and a working predecessor can reach the admitted Product outcome
+without retaining competing or ambiguous authority, evolution on the supported
+Product path is the rebuttable selection presumption. This does not require
+continuing an unsafe or constitutionally inadmissible predecessor path. It
+conserves accepted predecessor semantics and Product feedback; it does not
+require preserving an internal implementation or public mechanism that Product
+authority explicitly supersedes.
+
+When bounded evolution includes a core-interface migration, it uses the
+Inside-Out Hard-Break strategy. Bounded evolution is a strategy-selection
+presumption, not a third migration strategy.
+
+Fundamental re-adoption requires explicit selection by the human authority
+owning the affected Product boundary. The selection compares re-adoption with
+bounded evolution across Product value, feedback latency, authority risk,
+reversibility, total cost, and retained predecessor semantics. It also states a
+bounded abort or re-entry condition. Implementation scale or architectural
+preference alone does not select re-adoption.
+
 Both strategies share these non-negotiable rules:
 
 - no proxy interface partial implementation may stand in for the new contract in
   any acceptance path
 - no bridge or fallback path may remain silently authoritative
-- debt retirement for the superseded interface family is part of the same
-  migration closure bar as feature delivery, not optional cleanup by default
+- promotion of an affected Product outcome requires one unambiguous
+  authoritative path for that outcome
+- competing or ambiguous executable authority on the promoted acceptance path
+  blocks that outcome
+- residual material from the superseded interface family outside the promoted
+  path may be deferred only when it is explicitly non-authoritative for the
+  promoted outcome or governs an explicitly specified, disjoint Product or
+  compatibility scope with deterministic routing, cannot falsify current or
+  retained Product claims, and retains a bounded migration, qualification, or
+  release disposition
 - tests are leak detectors and proof surfaces, not the migration plan
+
+For this rule, the affected acceptance path is the full causal closure of the
+outcome: every admitted entrypoint, producer, consumer, resolver, fallback,
+shared state surface, event, projection, and proof surface capable of changing,
+interpreting, or closing the outcome. Singular authority means one governing
+authority across that closure, not one selected successful trace. If the same
+request, fact, identity, state, or projection is admissible to old and new
+authority, authority is competing and promotion blocks.
+
+Product-slice promotion and complete migration closure are distinct claims. An
+intermediate Product outcome may be promoted while its enclosing migration
+remains open only when the outcome's acceptance path has singular authority and
+the residual implementation satisfies the deferment rule above. That promotion
+does not close the migration or waive its final retirement criteria. The
+slice's identity and acceptance criteria derive from Product plus every causally
+applicable live requirement, accepted design relation, and retained predecessor
+claim. Ticket or review wording cannot narrow that authority away.
 
 ### What Counts As A Core Interface
 
@@ -678,12 +747,15 @@ now," it is a core interface change.
 
 Every core interface migration must explicitly declare:
 
-1. the new authoritative contract
-2. the superseded contract or surface
-3. the authoritative closure law for the new contract
-4. the full set of producers of the old and new contract
-5. the full set of consumers of the old and new contract
-6. every projection, report, status surface, and proof surface that derives from it
+1. the exact affected migration scope
+2. every explicitly excluded or disjoint Product or compatibility scope and its
+   deterministic routing relation
+3. the new authoritative contract
+4. the superseded contract or surface
+5. the authoritative closure law for the new contract
+6. the full set of producers of the old and new contract
+7. the full set of consumers of the old and new contract
+8. every projection, report, status surface, and proof surface that derives from it
 
 Every old path must then be classified as one of:
 
@@ -702,7 +774,8 @@ For a core interface migration:
 - no compatibility alias may remain authoritative
 - no fallback identity law may remain as silent runtime behavior
 - no bridge path may participate in acceptance as if it were the new contract
-- no old reader or writer may remain authoritative once the new contract exists
+- no old reader or writer may remain authoritative for the promoted outcome
+  once the new contract governs that outcome
 - no proxy or partial implementation of the new interface may stand between old
   and new truth as if it were completion
 
@@ -756,7 +829,10 @@ Therefore:
 Inside-out migration is a hard-break sequence over one interface family.
 
 The migration wave is the ordered set of those breaks. It is not a separate mode
-that permits dual truth.
+that permits competing or ambiguous dual truth over the same request, fact,
+identity, state, or projection. Explicitly specified, deterministically routed,
+non-overlapping Product or compatibility scopes may coexist while the enclosing
+migration remains open.
 
 For each break:
 
@@ -779,21 +855,25 @@ During this sequence:
 
 ### Proof-Last Rule For Core Interface Changes
 
-Proof is not valid while producers and consumers are split across old and new
-contracts.
+Complete migration-closure proof is not valid while producers and consumers
+are split across old and new contracts. Bounded Product-slice proof may establish
+only the exact intermediate outcome permitted by the path-relative promotion
+rule; it cannot establish migration closure.
 
 Therefore:
 
 - tests that pass only because bridge-state semantics remain alive do not count
   as closure proof
 - green local tests do not overrule a split architecture
-- proof belongs after migration, not during a partially migrated state
+- migration-closure proof belongs after migration, not during a partially
+  migrated state
 - per-break proof must show the severed old seam is rejected or fails closed
   before downstream hardening can count as progress
 
 ### Closure Criterion
 
-A core interface migration is complete only when all of the following are true:
+A core interface migration is complete across its declared affected scope only
+when all of the following are true:
 
 - every authoritative producer writes the new contract
 - every authoritative consumer reads the new contract
@@ -805,6 +885,10 @@ A core interface migration is complete only when all of the following are true:
 
 Until those conditions hold, the work remains an active migration wave rather
 than a completed refactor.
+
+An accepted intermediate Product slice within that wave must therefore name the
+slice it closes and keep the enclosing migration visibly open. It must not
+project slice acceptance as migration, qualification, or release closure.
 
 ---
 
@@ -1299,12 +1383,17 @@ While the wave is in flight:
 - transitional adapters or scaffolds may exist only when they are named,
   bounded, and outside the acceptance path
 - refactor state may still carry traces of the prior operative model, but never
-  as dual authoritative execution
+  as competing or ambiguous dual authority over the same request, fact,
+  identity, state, or projection
 
-When the wave lands:
+Explicitly specified, deterministically routed, non-overlapping Product or
+compatibility scopes are not competing authority under this rule. They may
+coexist while the enclosing migration remains visibly open.
 
-- only the new current operative surface remains live
-- prior operative paths are erased from the live product
+When the wave lands across its declared affected scope:
+
+- only the new current operative surface remains live for that scope
+- prior operative paths for that scope are erased from the live product
 - the path taken to get there survives only in version control, event history, and superseded records
 - mixed old/new operative models are not a stable end state
 
