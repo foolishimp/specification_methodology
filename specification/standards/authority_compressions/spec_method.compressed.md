@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: dfe9853483502e65dd74f995fea32d739f452b15f2c85d42c80dedbd729177df
+source_digest: ee92267e15e3d74977b257d8691610cb1af38c737a787707bd7b2664458747fa
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-24
+generated_at: 2026-07-25
 stale_if_source_digest_changes: true
 ---
 
@@ -53,6 +53,15 @@ them.
 - Evidence evaluates its bound Product claim; completion of a proof surface,
   matrix, inventory, design artifact, or test suite cannot select, enlarge, or
   replace that outcome.
+- Within a Product-outcome-bearing wave, material realization growth requires
+  the selected outcome, an admitted named bounded prerequisite to it, or an
+  admitted named bounded experiment whose stated observation discriminates a
+  stated decision for it. A prerequisite or experiment is provisional-only:
+  it cannot enlarge Product, authorize downstream work, confer promotion or
+  closure, or waive applicable law. An exhausted or falsified basis cannot
+  select further Product-progress work without another admitted basis. Retained
+  evidence, regression protection, or donor material does not inherit growth
+  authority; consumers own disposal and salvage mechanics.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation

@@ -58,6 +58,14 @@ for their subtree.
   prior witnesses remain regression evidence; the next already-defined outcome
   still requires explicit Goals/work sequencing. Evidence cannot select,
   enlarge, or replace its Product claim.
+- Within a Product-outcome-bearing wave, realization growth requires the
+  selected outcome, an admitted named bounded prerequisite to it, or an
+  admitted named bounded experiment whose stated observation discriminates a
+  stated decision for it. A prerequisite or experiment is provisional-only and
+  cannot enlarge Product, authorize downstream work, confer promotion or
+  closure, or waive applicable law. An exhausted or falsified basis cannot
+  select further Product-progress work without another admitted basis; retained
+  evidence or donor material does not inherit growth authority.
 - When both strategies are lawful and feasible, bounded evolution is the
   rebuttable selection presumption when a working predecessor can reach the
   admitted outcome without competing or ambiguous authority. It never requires

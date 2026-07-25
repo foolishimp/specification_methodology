@@ -1,4 +1,4 @@
-# T-002 - Bound Product Delivery And Migration Closure
+# T-002 - Bound Product Delivery, Growth, And Migration Closure
 
 - id: T-002
 - status: active
@@ -12,7 +12,9 @@
 Publish one bounded successor to STDO `v2.0.0` that prevents accepted bootstrap
 or assurance work from selecting later Product progress, requires comparative
 authority for fundamental re-adoption, separates Product-slice promotion from
-complete migration closure, and prevents review discovery from automatically
+complete migration closure, withdraws growth authority from realization that
+has exhausted or falsified its selected outcome, admitted prerequisite, or
+admitted experiment basis, and prevents review discovery from automatically
 widening work.
 
 ## Construction Basis
@@ -22,7 +24,15 @@ widening work.
   `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`;
 - human intake: direct request to run the bounded successor repair on
   2026-07-24;
-- intended release target: `v2.1.0`.
+- successor repricing: direct human request on 2026-07-25 to produce the
+  modulated STDO `2.2` candidate;
+- unpublished intermediate candidate:
+  `d6a0fd829fbcb0f7d1142da107b90fc5ad8118e8`; and
+- intended release target: `v2.2.0`.
+
+No `v2.1.0` Product was published. The intermediate candidate remains history
+inside the cumulative `v2.0.0 -> v2.2.0` construction line and is not a
+predecessor release.
 
 ## Target Truth
 
@@ -32,16 +42,29 @@ widening work.
    witnesses remain regression evidence and enduring or recurring obligations
    remain live beyond the accepted interval.
 3. Evidence cannot select, enlarge, or replace its Product claim.
-4. Bounded evolution is the rebuttable selection presumption when it and
+4. Within a Product-outcome-bearing wave, material-realization growth derives
+   authority only from the selected outcome, an admitted named bounded
+   prerequisite to it, or an admitted named bounded experiment whose stated
+   observation discriminates a stated decision for it.
+5. A prerequisite or experiment authorizes only its declared provisional
+   bound. It cannot enlarge Product, authorize downstream work, confer
+   promotion or closure, or waive applicable law.
+6. Exhausted or falsified outcome, prerequisite, or experiment authority cannot
+   select or require further Product-progress work without another admitted
+   basis.
+7. Retained supported behavior, required evidence, regression protection, and
+   bounded donor material do not inherit further growth authority. Consumers
+   own concrete deletion, archival, quarantine, and salvage mechanics.
+8. Bounded evolution is the rebuttable selection presumption when it and
    fundamental re-adoption are both lawful and feasible and it can reach the
    admitted outcome without competing or ambiguous authority.
-5. Fundamental re-adoption requires explicit human comparative selection and
+9. Fundamental re-adoption requires explicit human comparative selection and
    an abort or re-entry condition.
-6. Product-slice promotion requires singular authority across the complete
-   causal closure of its acceptance path but does not falsely close the
-   enclosing migration.
-7. Review and design discovery remain blocking when they falsify the exact
-   claim, contradict causally applicable authority, expose competing authority,
+10. Product-slice promotion requires singular authority across the complete
+    causal closure of its acceptance path but does not falsely close the
+    enclosing migration.
+11. Review and design discovery remain blocking when they falsify the exact
+    claim, contradict causally applicable authority, expose competing authority,
    violate safety or retained accepted behavior, or establish durable
    architectural foreclosure. Other observations are repricing input rather
    than automatic scope.
@@ -65,12 +88,12 @@ reclassify them as accidental or previously unauthorized.
 
 | Concern | Source owner |
 |---|---|
-| Outcome succession and evidence role | `specification/standards/SPEC_METHOD.md` |
+| Outcome succession, evidence role, and continued-growth authority | `specification/standards/SPEC_METHOD.md` |
 | Migration selection and path-relative closure | `specification/standards/SPEC_METHOD.md` |
 | Exact review finding scope | `specification/standards/TICKET_METHOD.md` |
 | Bounded post-ticket design check | `specification/standards/DESIGN_MODULE_METHOD.md` |
 | Product and current work wave | `specification/PRODUCT.md`, `specification/GOALS.md` |
-| Candidate delta and release gate | `releases/v2.1.0.md` |
+| Candidate delta and release gate | `releases/v2.2.0.md` |
 
 ## Evaluation Criteria
 
@@ -81,15 +104,28 @@ reclassify them as accidental or previously unauthorized.
 3. Source-maintained authority compressions bind the changed source digests and
    project the amended law without creating new authority.
 4. No schema, runtime, fixture, threshold, mandatory independent review round,
-   or automatic ticket-generation mechanism is added.
-5. The exact candidate and complete `v2.0.0` delta pass independent review.
-6. No `v2.1.0` tag is created before direct human acceptance of that exact
+   automatic ticket-generation mechanism, survival state machine, or
+   prescribed disposal process is added.
+5. The exact candidate and complete `v2.0.0` delta pass RC qualification and
+   independent review.
+6. One immutable RC branch and tag publish that exact reviewed subject before
+   final tap.
+7. No `v2.2.0` tag is created before direct human acceptance of that exact
    candidate.
 
 ## Non-Closure Conditions
 
 - an accepted witness is discarded instead of retained as regression evidence;
 - assurance or design artifacts become a Product work queue;
+- realization continues selecting growth after its outcome or an admitted
+  named bounded prerequisite or experiment has exhausted or falsified its
+  declared bound;
+- a prerequisite or experiment confers promotion, closure, downstream work
+  authority, or an exception to applicable law;
+- retention as evidence or donor material silently preserves the enclosing
+  work's authority, dependencies, completion claim, or work-selection power;
+- continued-growth authority is used to redefine or weaken Prime, IACS, or
+  Design Module Method;
 - fundamental re-adoption can be selected by implementation preference alone;
 - competing or ambiguous authority can be promoted on the affected path;
 - slice acceptance is projected as complete migration closure;

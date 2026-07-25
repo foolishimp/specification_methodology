@@ -584,6 +584,26 @@ its evidence still does not author the claim. The same artifact may be Product
 output for one claim and evidence for another only when those roles are
 declared separately.
 
+Within a Product-outcome-bearing work wave, material realization growth derives
+authority from the selected unresolved Product outcome, an admitted named
+bounded prerequisite to it, or an admitted named bounded experiment whose
+stated observation discriminates a stated decision for it. A prerequisite or
+experiment authorizes only its declared provisional bound. It does not select
+or enlarge the Product outcome, authorize downstream work, confer promotion or
+closure, or waive applicable Prime, design, safety, authority, or release law.
+
+When the selected outcome is accepted, or when such a basis or bound is
+exhausted, rejected, withdrawn, superseded, repriced away, or falsified by
+evidence, the work must not select, enlarge, or require further
+Product-progress work without another admitted basis.
+
+Retention as supported Product behavior, required evidence, regression
+protection, or bounded donor material does not confer further growth authority.
+Consumers own deletion, archival, quarantine, and salvage mechanics. Salvage
+carries only the explicitly re-adopted semantics; it does not inherit the
+enclosing work's authority, dependencies, completion claim, or power to select
+further work.
+
 A regression or unresolved gap blocks further promotion on the affected path
 until repaired, repriced, or accepted by the owning authority. It does not
 globally serialize independent work. Parallel work may proceed under its own

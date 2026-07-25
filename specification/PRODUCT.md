@@ -51,23 +51,30 @@ The bounded successor:
    outcome instance and interval, stops that instance selecting later
    Product-progress work, retains its witnesses as regression evidence, and
    leaves enduring or recurring obligations live;
-2. prevents assurance evidence from selecting, enlarging, or replacing the
+2. limits mutable-realization growth within a Product-outcome-bearing wave to
+   the selected outcome or an admitted named bounded prerequisite or experiment
+   under it, withdraws that authority when its basis or bound is exhausted or
+   falsified, and allows supported behavior, required evidence, regression
+   protection, and bounded donor material to remain without selecting more
+   work;
+3. prevents assurance evidence from selecting, enlarging, or replacing the
    Product outcome it evaluates;
-3. makes bounded evolution the rebuttable selection presumption when it and
+4. makes bounded evolution the rebuttable selection presumption when it and
    fundamental re-adoption are both lawful and feasible and a working
    predecessor can reach the admitted outcome without rival authority, while
    requiring explicit human comparative selection and an abort or re-entry
    condition for fundamental re-adoption;
-4. separates Product-slice promotion from full migration closure while keeping
+5. separates Product-slice promotion from full migration closure while keeping
    competing or ambiguous authority blocking on the affected acceptance path;
    and
-5. keeps contradictions of the exact claim or causally applicable authority,
+6. keeps contradictions of the exact claim or causally applicable authority,
    competing authority, safety failures, retained-behavior regressions, and
    durable architectural foreclosure blocking while preventing other discovery
    from automatically widening work or creating follow-up tickets.
 
 This amendment adds no scoring algorithm, frontier runtime, schema, fixture
-registry, mandatory review round, or conformance implementation.
+registry, mandatory review round, conformance implementation, survival state
+machine, or prescribed deletion, archival, quarantine, or salvage process.
 
 ## Successor Release Outcome
 

@@ -16,7 +16,7 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: dfe9853483502e65dd74f995fea32d739f452b15f2c85d42c80dedbd729177df
+  SPEC_METHOD.md: ee92267e15e3d74977b257d8691610cb1af38c737a787707bd7b2664458747fa
   DESIGN_MODULE_METHOD.md: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
   ODD_METHOD.md: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
   TICKET_METHOD.md: b57a32f17adcd4215096d58cae452e3d3fa4ec3ad0f057479f19ab8332e30c81
@@ -25,7 +25,7 @@ source_digests:
   RELEASE_METHOD.md: 0234f118a504e449a6670d4276422abab89a2a3fa5f281d313aacc87815dd79e
   POSTING_GUIDE.md: 29968e92ca44411d4102fc9351febb8afe72286e0bdccc0bc8db995ba0415762
 generated_by: codex
-generated_at: 2026-07-24
+generated_at: 2026-07-25
 stale_if_source_digest_changes: true
 ---
 
@@ -86,6 +86,15 @@ layer that owns the missing truth.
   retaining prior witnesses as regression evidence; selecting the next
   already-defined outcome still requires explicit Goals/work sequencing.
   Evidence cannot select, enlarge, or replace its Product claim.
+- Within a Product-outcome-bearing wave, material realization growth requires
+  the selected outcome, an admitted named bounded prerequisite to it, or an
+  admitted named bounded experiment whose stated observation discriminates a
+  stated decision for it. A prerequisite or experiment is provisional-only:
+  it cannot enlarge Product, authorize downstream work, confer promotion or
+  closure, or waive applicable law. An exhausted or falsified basis cannot
+  select further Product-progress work without another admitted basis. Retained
+  evidence, regression protection, or donor material does not inherit growth
+  authority; consumers own disposal and salvage mechanics.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation
