@@ -42,11 +42,9 @@ Posts live under:
 .ai-workspace/comments/<agent>/
 ```
 
-Examples:
+Capability example:
 
-- `.ai-workspace/comments/codex/`
-- `.ai-workspace/comments/claude/`
-- `.ai-workspace/comments/gemini/`
+- `.ai-workspace/comments/<agent-id>/`
 
 ---
 

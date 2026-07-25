@@ -16,14 +16,14 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: ee92267e15e3d74977b257d8691610cb1af38c737a787707bd7b2664458747fa
+  SPEC_METHOD.md: 577b9f5efd4f9d79de54b85682e47fe12049b7eef274ea98eb33e020e7e0357a
   DESIGN_MODULE_METHOD.md: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
-  ODD_METHOD.md: f942c0c78c0d5007a80cde87fec489155514dfa0cd1757ce99582ce1f534d34c
-  TICKET_METHOD.md: b57a32f17adcd4215096d58cae452e3d3fa4ec3ad0f057479f19ab8332e30c81
-  UX_METHOD.md: e2ca1da558e69917d0ed8787409c6a67a4835e14d6d577af89e9f4eacd79f46e
-  IDENTITY_METHOD.md: 09fd5547a942f6c375510e83a5a074566921aeec38bc1a3e84ea24b0c3ceb814
+  ODD_METHOD.md: 080d7484468d06e33f42112b21406f22112f91c88816955b0f40a05fc123d451
+  TICKET_METHOD.md: b6366816df1a520d06b91f8a8fba1c483f1e19435dd425fe06be2dfd2e80eef2
+  UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
+  IDENTITY_METHOD.md: 9348451648b4afc9f61c4f4b544aeafc7a92c3b1b5bc112872945cd44c8e0a53
   RELEASE_METHOD.md: 0234f118a504e449a6670d4276422abab89a2a3fa5f281d313aacc87815dd79e
-  POSTING_GUIDE.md: 29968e92ca44411d4102fc9351febb8afe72286e0bdccc0bc8db995ba0415762
+  POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
 generated_at: 2026-07-25
 stale_if_source_digest_changes: true
@@ -40,6 +40,12 @@ truth.
 
 Products, applications, modules, graph functions, build tenants, and runtime
 surfaces implement constitutional documents; they do not replace them.
+
+Method vocabulary names normative capabilities and construction relations.
+Consumers bind concrete implementations and immutable identities under their
+own Product authority. A downstream Product may prove or falsify conformance;
+it cannot supply reusable method meaning. Constitutional examples use neutral
+capability and authority identities.
 
 ## Authority Flow
 
@@ -86,6 +92,15 @@ layer that owns the missing truth.
   retaining prior witnesses as regression evidence; selecting the next
   already-defined outcome still requires explicit Goals/work sequencing.
   Evidence cannot select, enlarge, or replace its Product claim.
+- An ODD constructive loop consumes that selected Product outcome as external
+  authority. Models, gaps, assurance, ledgers, projections, edge closure, and
+  next-action machinery cannot author, select, enlarge, or accept the outcome.
+  Repricing requests re-entry; it does not perform re-entry or choose a
+  successor outcome.
+- Target binding and admitted construction intent preserve exact selected
+  outcome and bounded-basis refs for causal replay. An unresolved
+  `post_reprice` returns typed no-action until lawful re-entry separately admits
+  a new basis.
 - Within a Product-outcome-bearing wave, material realization growth requires
   the selected outcome, an admitted named bounded prerequisite to it, or an
   admitted named bounded experiment whose stated observation discriminates a
@@ -112,6 +127,10 @@ layer that owns the missing truth.
   repricing input rather than automatic scope or ticket creation.
 - Native constructability precedes design acceptance. Prime applies recursively
   and counts governance cost while conserving root authority.
+- Apply an axiom family only where it is causally relevant to the selected
+  outcome and affected published boundary. Cite unchanged accepted relations
+  rather than reproving them; axioms do not authorize horizontal realization
+  growth.
 - Authority has identity and may be proxied only through an explicit bounded
   grant. Implementer self-review is not independent review.
 - Exact-candidate qualification covers final delta and complete predecessor

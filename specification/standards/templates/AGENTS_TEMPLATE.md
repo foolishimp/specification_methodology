@@ -58,6 +58,9 @@ for their subtree.
   prior witnesses remain regression evidence; the next already-defined outcome
   still requires explicit Goals/work sequencing. Evidence cannot select,
   enlarge, or replace its Product claim.
+- Method vocabulary and examples identify capabilities and authority
+  relations, not required downstream products or implementations. Bind concrete
+  realization and immutable identity in the consumer's own authority surfaces.
 - Within a Product-outcome-bearing wave, realization growth requires the
   selected outcome, an admitted named bounded prerequisite to it, or an
   admitted named bounded experiment whose stated observation discriminates a
@@ -132,6 +135,8 @@ No bug, feature, issue, or request skips triage and jumps straight to code.
 
 Use this context for GTL, ABG, and ODD-shaped products in this workspace.
 
+- ODD, GTL, and ABG are normative capability roles and construction algebra,
+  not required repositories, packages, vendors, or runtime implementations.
 - An ODD product is:
   `typed domain assets or nodes + published graph functions + GTL module or public carrier + ABG runtime + projection or query surface + proof surface`.
 - Graph functions are the primary constructive carrier.
@@ -144,6 +149,15 @@ Use this context for GTL, ABG, and ODD-shaped products in this workspace.
   provenance, correction, and projection mechanics.
 - The product owns domain meaning, function catalog, policy overlays, query
   overlays, and domain proof interpretation.
+- The constructive loop consumes the selected Product outcome as external
+  authority. Models, gaps, ledgers, projections, assurance, edge closure, and
+  next-action machinery cannot author, select, enlarge, or accept it.
+- Target binding and admitted construction intent preserve the selected outcome
+  and any admitted bounded-basis refs for replay. An unresolved reprice returns
+  no action until lawful re-entry separately admits a new basis.
+- Apply ODD axioms only where causally relevant to the selected outcome and
+  affected published boundary; the axiom family does not authorize horizontal
+  work expansion.
 
 ### Work Tracking And Commentary
 

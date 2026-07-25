@@ -15,7 +15,9 @@ authority for fundamental re-adoption, separates Product-slice promotion from
 complete migration closure, withdraws growth authority from realization that
 has exhausted or falsified its selected outcome, admitted prerequisite, or
 admitted experiment basis, and prevents review discovery from automatically
-widening work.
+widening work. The successor also binds graph-native action selection to that
+Product outcome and removes downstream implementation identity from method
+roles and constitutional examples.
 
 ## Construction Basis
 
@@ -68,6 +70,14 @@ predecessor release.
    violate safety or retained accepted behavior, or establish durable
    architectural foreclosure. Other observations are repricing input rather
    than automatic scope.
+12. A graph-native constructive loop consumes the selected Product outcome as
+    external authority. Model, gap, assurance, ledger, edge closure, and
+    repricing dispositions cannot author, select, enlarge, or accept Product
+    truth. Graph or edge closure is evidence toward Product acceptance, not
+    acceptance itself.
+13. Method role names denote normative capabilities and algebra rather than
+    required concrete implementations. Constitutional examples use neutral
+    capability and authority identities, never downstream product labels.
 
 ## Superseded Truth
 
@@ -79,6 +89,10 @@ predecessor release.
 - `DESIGN_MODULE_METHOD.md` and `TICKET_METHOD.md` required post-ticket
   discovery to absorb feasible cleanup and commonization and automatically
   create cross-boundary or reusable-pattern follow-up work.
+- predecessor examples named concrete downstream products and one guide fixed
+  an abstract runtime role to a concrete implementation identity.
+- `ODD_METHOD.md` did not explicitly compose its next-action loop with the
+  selected Product outcome introduced by `STDO-UP-013`.
 
 These migration and post-ticket-review claims were accepted predecessor law.
 This ticket explicitly supersedes only the relations named above; it does not
@@ -89,6 +103,8 @@ reclassify them as accidental or previously unauthorized.
 | Concern | Source owner |
 |---|---|
 | Outcome succession, evidence role, and continued-growth authority | `specification/standards/SPEC_METHOD.md` |
+| Product-outcome binding and implementation-independent ODD roles | `specification/standards/ODD_METHOD.md` |
+| Neutral capability and authority examples | `specification/standards/IDENTITY_METHOD.md`, `specification/standards/TICKET_METHOD.md`, `specification/standards/SPEC_METHOD.md`, `specification/standards/GLOSSARY_GUIDE.md`, `specification/standards/UX_METHOD.md`, `specification/standards/POSTING_GUIDE.md` |
 | Migration selection and path-relative closure | `specification/standards/SPEC_METHOD.md` |
 | Exact review finding scope | `specification/standards/TICKET_METHOD.md` |
 | Bounded post-ticket design check | `specification/standards/DESIGN_MODULE_METHOD.md` |
@@ -106,11 +122,13 @@ reclassify them as accidental or previously unauthorized.
 4. No schema, runtime, fixture, threshold, mandatory independent review round,
    automatic ticket-generation mechanism, survival state machine, or
    prescribed disposal process is added.
-5. The exact candidate and complete `v2.0.0` delta pass RC qualification and
+5. No constitutional method or example derives authority from a downstream
+   product, repository, package, version, command, or implementation symbol.
+6. The exact candidate and complete `v2.0.0` delta pass RC qualification and
    independent review.
-6. One immutable RC branch and tag publish that exact reviewed subject before
+7. One immutable RC branch and tag publish that exact reviewed subject before
    final tap.
-7. No `v2.2.0` tag is created before direct human acceptance of that exact
+8. No `v2.2.0` tag is created before direct human acceptance of that exact
    candidate.
 
 ## Non-Closure Conditions
@@ -126,6 +144,10 @@ reclassify them as accidental or previously unauthorized.
   work's authority, dependencies, completion claim, or work-selection power;
 - continued-growth authority is used to redefine or weaken Prime, IACS, or
   Design Module Method;
+- an ODD action, edge closure, evidence surface, or reprice disposition authors,
+  selects, enlarges, or accepts Product truth;
+- a constitutional method role or example depends on a downstream product or
+  concrete implementation identity;
 - fundamental re-adoption can be selected by implementation preference alone;
 - competing or ambiguous authority can be promoted on the affected path;
 - slice acceptance is projected as complete migration closure;

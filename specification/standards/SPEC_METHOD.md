@@ -1675,7 +1675,13 @@ ADRs are stored in an `adrs/` subdirectory under the design surface that owns th
 - shared or cross-tenant ADRs: `build_tenants/common/design/adrs/`
 - non-tenanted or project-local ADRs: `<governing-design-surface>/adrs/`
 
-The `<tenant-path>` is one or more path segments that uniquely identify the build tenant within `build_tenants/`. Both `<family>/<variant>` (e.g., `abiogenesis/typescript/`) and single-label (e.g., `typescript/`, `python/`) tenant paths are lawful, provided the project's `build_tenants/TENANT_REGISTRY.md` records the tenant identity used. The recommended scaffold is `<family>/<variant>`; existing single-segment layouts remain conformant and do not require migration.
+The `<tenant-path>` is one or more path segments that uniquely identify the
+build tenant within `build_tenants/`. Both capability-oriented
+`<product-family>/<realization-variant>` paths and single-label
+`<realization-variant>` paths are lawful, provided the project's
+`build_tenants/TENANT_REGISTRY.md` records the tenant identity used. The
+recommended scaffold is `<product-family>/<realization-variant>`; existing
+single-segment layouts remain conformant and do not require migration.
 
 The governing design surface is the closest design surface whose authority owns the decision. ADRs must not be placed in comments, generated views, runtime archives, or requirement folders.
 

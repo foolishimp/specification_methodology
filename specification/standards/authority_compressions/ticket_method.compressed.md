@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: b57a32f17adcd4215096d58cae452e3d3fa4ec3ad0f057479f19ab8332e30c81
+source_digest: b6366816df1a520d06b91f8a8fba1c483f1e19435dd425fe06be2dfd2e80eef2
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -25,6 +25,9 @@ proof, and current status.
 
 - Do not treat ticket prose as product truth when requirements or design already
   own the matter.
+- Use neutral capability and authority identities in reusable method examples.
+  A downstream Product or implementation may supply evidence for its own
+  ticket; it does not become constitutional precedent.
 - Use tickets to identify active work scope, closure law, proof obligations,
   and open pressure.
 - A ticket closes only when its closure law is met and every non-closure

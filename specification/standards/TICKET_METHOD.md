@@ -136,9 +136,7 @@ specification/
 │   ├── active/
 │   └── completed/
 └── comments/
-    ├── codex/
-    ├── claude/
-    └── gemini/
+    └── <agent-id>/
 ```
 
 ---
@@ -333,7 +331,7 @@ Recommended naming:
 
 - `T-001-add-product-layer.md`
 - `B-002-fix-reset-manifest-id.md`
-- `S-003-evaluate-linear-mcp.md`
+- `S-003-evaluate-integration-capability.md`
 - `C-004-clean-up-trace-tags.md`
 
 The filename should carry:
@@ -380,9 +378,9 @@ Instead:
 
 Recommended examples:
 
-- source/product ticket: `B-030-publish-one-maximum-autonomy-gen-start-profile...`
-- TypeScript tenant ticket: `B-030-TS-publish-one-maximum-autonomy-gen-start-profile...`
-- Python tenant ticket: `B-030-PY-publish-one-maximum-autonomy-gen-start-profile...`
+- source/product ticket: `B-030-publish-capability-profile...`
+- first tenant ticket: `B-030-T1-publish-capability-profile...`
+- second tenant ticket: `B-030-T2-publish-capability-profile...`
 
 The important law is:
 
@@ -998,12 +996,12 @@ Each checklist item must state what counts as closure for that interface.
 
 Examples:
 
-- “`fd_checks.py` consumes the carrier/projection and does not import raw
-  helper authority”
-- “`query-domain` exposes a read model only and does not silently rebuild the
-  carrier when publication is absent”
-- “`span_analysis.py` does not aggregate open dict rows into an independent
-  closure decision”
+- “`<conformance-module>::consume_projection` consumes the admitted carrier or
+  projection and does not import raw helper authority”
+- “`<query-module>::project_domain` exposes a read model only and does not
+  silently rebuild the carrier when publication is absent”
+- “`<gap-module>::build_canonical_gap` does not aggregate open payload rows into
+  an independent closure decision”
 
 Review rules:
 
@@ -1137,23 +1135,23 @@ and cannot be projected as current acceptance.
 Recommended sprint shape:
 
 ```md
-# SPRINT-2026-04-30 Process Navigator UX Iteration
+# SPRINT-2026-04-30 Operational Projection UX Iteration
 
-- id: SPRINT-2026-04-30-process-navigator
+- id: SPRINT-2026-04-30-operational-projection
 - status: active
-- goal: process-navigator-ux
+- goal: operational-projection-ux
 - opened_at: 2026-04-30T09:00:00Z
 - updated_at: 2026-04-30T09:00:00Z
 
 ## Authority
 
-- specification/GOALS.md#process-navigator-ux
-- specification/PRODUCT.md#process-navigator
-- build_tenants/typescript/design/PROCESS_NAVIGATOR.md
+- specification/GOALS.md#operational-projection-ux
+- specification/PRODUCT.md#operational-projection
+- <governing-design-surface>/OPERATIONAL_PROJECTION.md
 
 ## Scope
 
-Iterate the process navigator projection surface for layout, readability,
+Iterate an operational projection surface for layout, readability,
 interaction affordance, and visual evidence quality.
 
 ## Excluded Boundaries
@@ -1170,7 +1168,7 @@ interaction affordance, and visual evidence quality.
 ## Iterations
 
 - id: UXI-001
-  intent: improve graph line readability
+  intent: improve relation-line readability
   evidence_ref: screenshots/2026-04-30/UXI-001.png
   debt: accessibility contrast check pending
 
@@ -1179,7 +1177,7 @@ interaction affordance, and visual evidence quality.
 - closure_trigger: timebox, changed surface volume, or design-lead close request
 - closure_law: forensic walkthrough reviews each changed state against authority
 - proof_surface: screenshots plus walkthrough notes
-- deferred_compliance: screenshots, accessibility check, Msg-replay review
+- deferred_compliance: screenshots, accessibility check, event-replay review
 - non_closure_conditions: product truth or data contract drift remains hidden
 - paydown_policy: open paydown tickets for accepted local debt; reprice authority drift
 ```
@@ -1213,7 +1211,7 @@ product-definition layer.
 
 ## Links
 
-- comment: `.ai-workspace/comments/codex/...`
+- comment: `.ai-workspace/comments/<agent-id>/...`
 ```
 
 For an implementation migration ticket:
@@ -1236,16 +1234,16 @@ For an implementation migration ticket:
 
 ## Migration Declaration
 
-- old_truth_path: fallback graph-gap projection with synthetic convergence fields
-- new_truth_path: explicit declared-obligation projection plus separately classified fallback graph gaps
-- producers_old: `span_analysis._canonical_graph_gap`
-- producers_new: `traceability.collect_declared_obligation_gaps`, `span_analysis.canonical_edge_gaps`
-- consumers_old: `gaps`, span summary, operator review
-- consumers_new: `gaps`, span summary, operator review
+- old_truth_path: fallback gap projection with synthetic convergence fields
+- new_truth_path: explicit declared-obligation projection plus separately classified fallback gaps
+- producers_old: `<gap-module>::build_fallback_gap`
+- producers_new: `<obligation-module>::collect_declared_obligations`, `<gap-module>::build_canonical_gap`
+- consumers_old: `<query-module>::project_gaps`, `<summary-module>::project_span`, `<review-surface>::render`
+- consumers_new: `<query-module>::project_gaps`, `<summary-module>::project_span`, `<review-surface>::render`
 - derived_surfaces:
-  - `odd_sdlc gaps`
-  - span summary
-  - first-slice proof
+  - `<query-surface>::gaps`
+  - `<summary-surface>::span`
+  - `<proof-surface>::first_slice_negative`
 - closure_law: migration closes only when the old projection is no longer authoritative and mixed old/new proof does not count as acceptance
 
 ## Migration Checklist
@@ -1312,7 +1310,7 @@ This minimal method can later grow into:
 - ticket dependency checks
 - links from tickets to scenario, requirement, or ADR surfaces
 - external sync with a real ticketing system
-- message-board integration through an MCP layer such as Agent Mail
+- message-board integration through a standard tool-protocol capability
 
 The durable local file model should remain valid even if those later extensions
 are added.

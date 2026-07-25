@@ -16,6 +16,12 @@ explicitly accepted method interoperability boundary. It does not implement a
 generic conformance engine, workflow governor, runtime, fixture suite, or
 consumer Product.
 
+Method vocabulary names normative capability roles and algebra. It does not
+select a required repository, package, vendor, runtime implementation, or
+consumer Product. Consumers bind concrete conforming realizations and their
+immutable identities in downstream Product, requirements, design, and release
+authority.
+
 ## Published Baseline
 
 The exact released predecessor is STDO `v2.0.0` at
@@ -66,8 +72,15 @@ The bounded successor:
    condition for fundamental re-adoption;
 5. separates Product-slice promotion from full migration closure while keeping
    competing or ambiguous authority blocking on the affected acceptance path;
-   and
-6. keeps contradictions of the exact claim or causally applicable authority,
+6. binds graph-native traversal and next-action selection to the externally
+   selected Product outcome without allowing graph closure, evidence, or
+   repricing dispositions to author, select, enlarge, or accept Product truth;
+   graph or edge closure remains evidence toward Product acceptance, not
+   acceptance itself;
+7. treats named method terms as implementation-independent capability roles and
+   makes constitutional examples demonstrate capability and authority
+   relations without depending on downstream product identity; and
+8. keeps contradictions of the exact claim or causally applicable authority,
    competing authority, safety failures, retained-behavior regressions, and
    durable architectural foreclosure blocking while preventing other discovery
    from automatically widening work or creating follow-up tickets.

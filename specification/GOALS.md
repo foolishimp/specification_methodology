@@ -5,7 +5,9 @@
 Construct one bounded successor to the published STDO `2.0.0` Product. The
 successor amends Product-outcome succession and continued-growth authority,
 migration-strategy selection, path-relative migration closure, and review-scope
-discipline without adding runtime process or another governance carrier.
+discipline. It also binds graph-native traversal to the selected Product outcome
+and removes downstream implementation identity from method roles and examples,
+without adding runtime process or another governance carrier.
 
 ## Governing Outcome
 
@@ -18,7 +20,7 @@ Every other `v2.0.0` semantic remains conserved.
 | Milestone | Exit | State |
 |---|---|---|
 | `M0` Predecessor | Exact `v2.0.0` source and release identity are fixed. | completed |
-| `M1` Normative amendment | The three grouped amendment families are owned once in their existing standards. | completed |
+| `M1` Normative amendment | The four grouped amendment families are owned once in their existing standards. | completed |
 | `M2` Derived reconciliation | Compressions, Product, ticket, and release delta agree with the amended source. | completed |
 | `M3` Qualification | One exact RC passes predecessor conservation and independent exact-cut review and is published immutably. | active |
 | `M4` Tap | Direct human acceptance precedes any `v2.2.0` tag or publication. | pending |
@@ -37,6 +39,8 @@ remains open.
 
 - executable conformance or root-governor machinery;
 - consumer schemas, runtime, fixtures, tests, or adoption;
+- downstream product, repository, package, version, command, or implementation
+  identity as constitutional method authority or example;
 - wholesale rewriting or compression of accepted `v2.0.0` law;
 - numeric progress algorithms, mandatory review rounds, or automatic ticket
   creation;

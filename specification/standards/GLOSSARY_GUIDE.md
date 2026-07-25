@@ -97,10 +97,12 @@ The language expression used to declare graph-native products in graph terms.
 
 ### ABG
 
-Abiogenesis runtime / substrate.
+The singular traversal-governance, binding, and runtime-truth authority role
+used by the graph-native method.
 
-The traversal governance, binding, and runtime-truth substrate that realizes
-GTL-declared program space without owning domain-internal solution strategy.
+A consumer binds this role to a concrete conforming realization and immutable
+dependency identity. The method role does not select or derive authority from a
+particular repository, package, vendor, or downstream product.
 
 ### Edge Traversal
 

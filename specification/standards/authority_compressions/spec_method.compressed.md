@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: ee92267e15e3d74977b257d8691610cb1af38c737a787707bd7b2664458747fa
+source_digest: 577b9f5efd4f9d79de54b85682e47fe12049b7eef274ea98eb33e020e7e0357a
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -23,6 +23,11 @@ project that truth; they do not replace it.
 Products, applications, modules, graph functions, build tenants, and runtime
 surfaces are implementations of constitutional documents, not substitutes for
 them.
+
+Method vocabulary names normative capabilities and relations. It does not
+select a downstream repository, package, vendor, Product, or concrete
+implementation. Constitutional examples therefore demonstrate enabled
+capabilities through neutral identities rather than consumer precedent.
 
 ## Prompt-Relevant Rules
 

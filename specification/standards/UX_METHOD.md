@@ -124,10 +124,15 @@ This mirrors `DESIGN_MODULE_METHOD.md` §4 ("Functional Bias Without Language Ma
 
 Any realization that preserves §4–§8 is method-compliant. Examples (non-normative):
 
-- **Elm** itself — the canonical realization; the runtime is part of the language.
-- **TypeScript with a typed reducer and a typed effect interpreter** — for example React paired with Redux Toolkit (or any pure-reducer state container) plus Effect-TS or a hand-rolled `Cmd` interpreter for the effect membrane.
-- **Reactive-signal frameworks** (SolidJS, Vue 3 with Composition API, Svelte 5 runes) — method-compliant when the project layers a typed reducer + Cmd interpreter on top and forbids signal mutation outside the reducer.
-- **Server-rendered hypermedia** (HTMX, Phoenix LiveView, Hotwire) — method-compliant when server-side state derivation is the reducer and the effect membrane is the request/response cycle.
+- **A language-integrated reducer runtime** — enables typed state, message,
+  update, command, and view relations as native runtime capabilities.
+- **A typed reducer with an effect interpreter** — enables a host-language UI
+  stack to preserve pure update and an explicit effect membrane.
+- **A reactive-signal realization behind a reducer** — enables reactive
+  projection while forbidding signal mutation outside the reducer.
+- **A server-rendered hypermedia realization** — enables server-side state
+  derivation as the reducer and uses the request/response boundary as the
+  effect membrane.
 
 What is constitutionally rejected: any realization that lets the view own state continuation, performs side effects in render code, mutates state outside a typed reducer, or carries multi-step view-local state machines that bypass `Msg`. Two-way binding without `Msg` emission, imperative DOM manipulation in render code, and effect-handlers used as controllers are violations regardless of stack.
 

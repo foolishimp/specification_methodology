@@ -32,6 +32,20 @@ The paradigm is:
 
 If the constructive carrier remains hidden in imperative loops, local service logic, or product-specific orchestration scripts, the product is not yet built using ODD method.
 
+Within this method, `ODD`, `GTL`, and `ABG` name normative capability roles
+and construction algebra, not a required repository, package, vendor, or
+concrete implementation:
+
+- `ODD` names the graph-native product-authoring profile;
+- `GTL` names the typed declarative graph-language role; and
+- `ABG` names the singular traversal-governance and runtime-truth authority
+  role.
+
+A consumer binds those roles to concrete conforming realizations in its own
+Product, requirements, design, and immutable dependency identity. A consumer,
+reference realization, or historical product may prove or falsify conformance;
+it does not supply method authority.
+
 The method has two core jobs:
 
 1. describe the product as a declared asset graph in graph-native terms
@@ -638,9 +652,11 @@ projection, closure, assurance, retry, or continuation semantics must include
 an execution-authority audit before activation and closure.
 
 The audit must prove that there is exactly one execution authority for the
-affected traversal. For a GTL/ABG product, that authority is ABG unless the
-product being changed is ABG itself or another explicitly ratified runtime
-product.
+affected traversal. For a consumer using the GTL and ABG roles, that authority
+is the one consumer-bound realization of the ABG role. This remains true when
+the realization under change itself implements that role. A different
+realization is lawful only under an explicitly ratified, non-overlapping
+runtime scope.
 
 The audit must inventory at least these surfaces:
 
@@ -713,10 +729,23 @@ This is the method-level homeostasis loop. The constitutional surface names the
 operative functions directly: `synthesize_model`, `eval_gap`, `evaluate_next`,
 and `evaluate_action`.
 
+The selected Product outcome under `STDO-UP-013` is external authority for this
+loop. Product models, gaps, assurance, ledgers, and projections may interpret
+that outcome but cannot author, select, or enlarge it. `evaluate_next` may
+select material work only within that outcome or an admitted bounded
+prerequisite or experiment. Graph or edge closure is evidence toward Product
+acceptance; it is not Product or release acceptance. When the governing basis
+is exhausted, the loop selects no further material work without another
+admitted basis. A `reprice` disposition requests lawful constitutional
+re-entry; it does not perform the reprice or select the successor outcome.
+
 The loop is framework-independent. Product implementations may use different
 carrier names, but they must preserve this authority shape:
 
 ```text
+selected Product outcome and admitted bounded-basis refs
+-> TargetObligationBinding
+
 IntentLineage
 -> ProductAssetModel
 -> ObservationSnapshot
@@ -741,11 +770,11 @@ The objects have these method-level meanings:
 | `RuntimeProjection` | Replay-derived current runtime state over event log and execution basis. | ABG projection truth. |
 | `ObservationSnapshot` | Read-only view of runtime truth plus worksite facts relevant to construction. | ABG evaluator carrier with product domain rows. |
 | `GapPressureRow` | Typed pressure over missing, partial, blocked, waiting, or ambiguous assets and evidence. | Product domain meaning over admitted observation. |
-| `TargetObligationBinding` | Exact binding from gap pressure to target assets, required roles, evidence refs, and admissible graph outcomes. | Product domain binding over GTL/ABG action authority. |
+| `TargetObligationBinding` | Exact binding from gap pressure to the selected Product outcome, any admitted prerequisite or experiment basis, target assets, required roles, evidence refs, and admissible graph outcomes. | Product domain binding over GTL/ABG action authority. |
 | `ActionCatalog` | Published lawful graph actions: graph functions, vectors, targets, inputs, and eligible outcomes. | GTL/product publication consumed by ABG. |
-| `NextActionBasis` | Sum type naming why `evaluate_next` is being called: `initial_selection`, `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. | Dispatch basis for next-action evaluation. It is not a separate controller. |
+| `NextActionBasis` | Sum type naming why `evaluate_next` is being called: `initial_selection`, `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. `post_reprice` records a re-entry request and carries no action-selection authority. | Dispatch basis for next-action evaluation. It is not a separate controller. |
 | `PriorityProjection` | Deterministic ranking over bound lawful actions under visible policy. | ABG evaluator kernel plus product policy. |
-| `ConstructionIntent` | Admitted selected action for one bounded graph invocation. | ABG admission and traversal authority. |
+| `ConstructionIntent` | Admitted selected action for one bounded graph invocation, preserving the selected outcome or admitted bounded-basis refs carried by its target binding. | ABG admission and traversal authority. |
 | `AdmittedEvidence` | Admitted worker, process, product, execution, materialization, liveness, and postflight evidence. | ABG/product admission, not worker self-closure. |
 | `EdgeFulfillmentLedger` | Evidence and convergence carrier for one edge attempt or version. | Closure evidence truth. |
 | `EdgeClosureDecision` | Sum type over the ledger: close, yield, retry, repair, re-enter, reprice, block. | Closure decision truth. |
@@ -759,7 +788,7 @@ authority:
 | --- | --- | --- | --- |
 | `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, select work, invoke work, or close work. |
 | `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It does not choose work and does not close work. |
-| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. It may select only published lawful graph actions that bind to the gap. It does not admit construction intent and does not evaluate the result of an action. |
+| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It does not admit construction intent and does not evaluate the result of an action. |
 | `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
 
 The word `evaluator` is not sufficient by itself. A design, ticket, code module,
@@ -774,7 +803,8 @@ admission step after `evaluate_next` selects a published graph action. Intent
 does not invent unpublished actions; gap-derived action selection provides the
 selected action basis for admitting current construction intent over an
 already-published graph function or vector. `ConstructionIntent` must cite the
-lineage and selected action that produced it.
+lineage, selected action, and `TargetObligationBinding` that preserve the exact
+selected Product outcome and any admitted bounded-basis refs.
 
 The loop is governed by these axioms:
 
@@ -876,7 +906,9 @@ Every constructive action must bind the current gap to exact target assets and
 obligations before invocation:
 
 ```text
-gap pressure + target assets + required roles + evidence refs
+selected Product outcome ref
++ optional admitted prerequisite or experiment basis ref
++ gap pressure + target assets + required roles + evidence refs
 -> TargetObligationBinding
 ```
 
@@ -900,7 +932,7 @@ same edge from replay-visible resume truth without classifying the action as
 failure. If `NextActionBasis` is `post_close_graph_continuation`,
 `evaluate_next` may select the next graph edge after the current edge is closed,
 or no action when the graph is complete. For `post_retry`, `post_repair`,
-`post_reenter`, `post_reprice`, and `post_block`:
+`post_reenter`, and `post_block`:
 
 ```text
 if higher-priority lawful action exists:
@@ -912,6 +944,12 @@ else if authority is missing:
 else:
   block with typed no-action disposition
 ```
+
+For `post_reprice`, `evaluate_next` must return a typed no-action disposition
+while constitutional re-entry remains unresolved. The reprice decision cannot
+authorize a replacement action. Work may be evaluated again only after lawful
+re-entry separately admits an exact selected Product outcome or bounded basis
+and supplies it through a new `initial_selection` or basis-bearing resume.
 
 Default graph following is ordinary, but it is still an `evaluate_next`
 decision, not hidden sequential control.
@@ -1039,6 +1077,7 @@ RuntimeEventLog
 + execution basis
 + ABG event-log-backed IntentLineage
 + ProductAssetModel publication basis and its event refs
++ selected Product outcome identity and admitted bounded-basis refs
 + GapPressureRow
 + TargetObligationBinding
 + ActionCatalog
@@ -1058,6 +1097,9 @@ Each governing admitted or replay-derived carrier and projection in the loop
 must reference its causal predecessor refs:
 
 ```text
+selected Product outcome and admitted bounded-basis refs
+-> TargetObligationBinding
+
 IntentLineage
 -> ProductAssetModel
 -> GapPressureRow
@@ -1072,8 +1114,10 @@ IntentLineage
 -> NextActionProjection (next)
 ```
 
-The first `NextActionProjection` in the chain carries the selected action
-that admits `ConstructionIntent`. The second `NextActionProjection` is the
+The target binding must be reachable from the exact selected Product outcome
+and any admitted bounded-basis refs. The first `NextActionProjection` in the
+chain carries the selected action that admits `ConstructionIntent`, which
+preserves those authority refs. The second `NextActionProjection` is the
 post-action projection produced from `NextActionBasis` plus fresh `eval_gap`
 truth. Both must be reachable from their predecessor refs.
 
@@ -1111,16 +1155,21 @@ module-local decision authorities.
 For any ticket, design, code module, or proof that touches `synthesize_model`,
 `eval_gap`, `evaluate_next`, `evaluate_action`, traversal, gap evaluation,
 action selection, construction intent, worker invocation, evidence admission,
-fulfillment, liveness, closure, re-entry, public query, or live proof, this
-axiom set and the constitutional equation are the controlling acceptance
-target.
+fulfillment, liveness, closure, re-entry, public query, or live proof, the
+causally applicable members of this axiom set and the constitutional equation
+are the controlling acceptance constraints for the selected Product outcome
+and affected published boundary. Unchanged accepted relations cite their
+accepted basis rather than being re-proven. The axiom family does not authorize
+horizontal realization growth, create Product work, or widen the selected
+outcome.
 
 Ticket-local closure wording, test names, source-grep checks, compact CLI
 summaries, or implementation notes cannot weaken the constitutional loop. If a
 ticket appears complete by its local checklist but leaves a rival traversal
 consequence path, the ticket is not constitutionally complete. The lawful
-result is to reprice the ticket, narrow the ticket target and open an
-explicit paydown ticket, or keep the gap as a closure blocker.
+result is to request lawful re-entry, keep the gap as a closure blocker, or
+admit separately bounded paydown under an independently selected Product
+outcome or prerequisite basis.
 
 The following artifacts may provide evidence, diagnostics, or read-model
 context only. They must not independently close an edge, select a next action,
@@ -1152,19 +1201,20 @@ selected.
 The constitutional equation is:
 
 ```text
+let U = (selected_product_outcome_ref, optional_admitted_bounded_basis_ref)
 let L = project_intent_lineage_from_event_log(source_intent_refs, prior_intent_refs)
 let M0 = synthesize_model(L, prior_model, admitted_product_truth)
 let G0 = eval_gap(M0, RuntimeEventLog, RuntimeProjection, Worksite)
 let O = G0.observation
-let B0 = bind(G0.pressures, ActionCatalog, target obligations)
+let B0 = bind(U, G0.pressures, ActionCatalog, target obligations)
 let Q0 = initial_selection(L, M0)
 let N0 = evaluate_next(Q0, G0, B0, ActionCatalog, Policy)
-let I = admit_construction_intent(L, N0.selected_action, N0.next_action_projection)
+let I = admit_construction_intent(L, B0, N0.selected_action, N0.next_action_projection)
 let E = admit_evidence(invoke(I))
 let A = evaluate_action(I, E, B0, Policy)
 let M1 = synthesize_model(L, M0, admitted_product_truth)
 let G1 = eval_gap(M1, RuntimeEventLog, RuntimeProjection, Worksite)
-let B1 = bind(G1.pressures, ActionCatalog, target obligations)
+let B1 = bind(U, G1.pressures, ActionCatalog, target obligations)
 let Q1 = next_action_basis_from(A.decision)
 let N1 = evaluate_next(Q1, G1, B1, ActionCatalog, Policy)
 
@@ -1187,10 +1237,13 @@ Q1.kind in {
   post_reprice,
   post_block
 }
+Q1.kind = post_reprice and no separately admitted constitutional basis
+  => N1 = typed no-action pending re-entry
 ```
 
 The implementation is correct only when the next work decision is derived from
-that equation and no other path can decide what work happens next.
+that equation, `U` remains causally reachable through the target binding and
+construction intent, and no other path can decide what work happens next.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
