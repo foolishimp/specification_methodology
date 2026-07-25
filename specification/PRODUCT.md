@@ -54,15 +54,22 @@ history. Neither is a construction basis for this successor.
 The bounded successor:
 
 1. makes outcome succession explicit: acceptance exhausts only the exact bound
-   outcome instance and interval, stops that instance selecting later
-   Product-progress work, retains its witnesses as regression evidence, and
-   leaves enduring or recurring obligations live;
+   outcome instance and its declared acceptance interval, stops that instance
+   selecting later Product-progress work, retains its witnesses as regression
+   evidence, and leaves enduring or recurring obligations live;
 2. limits mutable-realization growth within a Product-outcome-bearing wave to
-   the selected outcome or an admitted named bounded prerequisite or experiment
-   under it, withdraws that authority when its basis or bound is exhausted or
-   falsified, and allows supported behavior, required evidence, regression
-   protection, and bounded donor material to remain without selecting more
-   work;
+   the selected outcome or a named bounded prerequisite or experiment admitted
+   by the authority owning the work wave or its explicitly bounded proxy and
+   durably recorded in existing work authority; each admitted basis declares
+   its provisional bound and terminal condition and cannot enlarge Product,
+   authorize downstream work, confer promotion or closure, or waive applicable
+   law; acceptance of the outcome, discharge of the prerequisite, resolution of
+   the experiment's stated decision, another admitted terminal condition,
+   exhaustion, rejection, withdrawal, supersession, repricing of the basis
+   away, or falsification of the basis ends that authority; evidence, active
+   work state, prior admission, repair, or continuation cannot renew it;
+   supported behavior, required evidence, regression protection, and bounded
+   donor material may remain without selecting more work;
 3. prevents assurance evidence from selecting, enlarging, or replacing the
    Product outcome it evaluates;
 4. makes bounded evolution the rebuttable selection presumption when it and
@@ -82,8 +89,14 @@ The bounded successor:
    relations without depending on downstream product identity; and
 8. keeps contradictions of the exact claim or causally applicable authority,
    competing authority, safety failures, retained-behavior regressions, and
-   durable architectural foreclosure blocking while preventing other discovery
-   from automatically widening work or creating follow-up tickets.
+   durable architectural decisions that foreclose an admitted Product outcome
+   blocking while preventing other discovery from automatically widening work
+   or creating follow-up tickets; and
+9. distinguishes the exact Product release subject and release-scoped claims
+   from co-located mutable source-project state, requires final-ready
+   release-scoped bytes before exact RC review, and binds human acceptance to
+   the final carrier and proved final-delta relation before final Product
+   publication.
 
 This amendment adds no scoring algorithm, frontier runtime, schema, fixture
 registry, mandatory review round, conformance implementation, survival state
@@ -91,16 +104,21 @@ machine, or prescribed deletion, archival, quarantine, or salvage process.
 
 ## Successor Release Outcome
 
-The successor is complete when one exact candidate:
+The successor is complete when one exact Product release subject and its
+reviewed-to-final carrier relation are established and the subject:
 
 - preserves or explicitly supersedes every material `v2.0.0` predecessor claim;
 - contains the bounded successor laws with one owner each;
 - contains no executable STDO conformance or workflow implementation;
 - has internally consistent source and derived distributions;
 - has exact member identity and a complete `v2.0.0` delta;
-- passes independent exact-cut review; and
-- is accepted directly by the human authority owning the successor Product boundary
-  before immutable publication.
+- is published through one immutable final-ready RC and passes independent
+  exact-cut review;
+- preserves the reviewed Product and release-scoped bytes through final-delta
+  proof; and
+- is accepted directly by the human authority owning the successor Product
+  boundary, including the final carrier and final-delta relation, before final
+  Product publication.
 
 The current source and any candidate review remain non-operative for consumers
 until an immutable successor is tapped and explicitly selected.

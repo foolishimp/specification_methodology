@@ -1,11 +1,17 @@
 # T-002 - Bound Product Delivery, Growth, And Migration Closure
 
 - id: T-002
+- type: feature
+- ticket_category: ordinary
 - status: active
 - review_status: pending
+- goal: publish-one-bounded-stdo-2.2-successor
+- change_intent: amend Product-outcome growth authority, migration selection and path-relative closure, review scope, implementation-independent method roles, and exact release identity without adding executable governance
 - change_class: product_reprice
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-07-24
+- created_at: 2026-07-24
+- updated_at: 2026-07-25
 
 ## Purpose
 
@@ -13,11 +19,13 @@ Publish one bounded successor to STDO `v2.0.0` that prevents accepted bootstrap
 or assurance work from selecting later Product progress, requires comparative
 authority for fundamental re-adoption, separates Product-slice promotion from
 complete migration closure, withdraws growth authority from realization that
-has exhausted or falsified its selected outcome, admitted prerequisite, or
-admitted experiment basis, and prevents review discovery from automatically
-widening work. The successor also binds graph-native action selection to that
-Product outcome and removes downstream implementation identity from method
-roles and constitutional examples.
+has reached any terminal condition for its selected outcome, admitted
+prerequisite, or admitted experiment basis, and prevents review discovery from
+automatically widening work. The successor also binds admission and renewal to
+the existing work-wave authority, binds graph-native action selection to that
+Product outcome, removes downstream implementation identity from method roles
+and constitutional examples, and makes the reviewed RC-to-final release
+identity exact.
 
 ## Construction Basis
 
@@ -39,7 +47,7 @@ predecessor release.
 ## Target Truth
 
 1. One explicitly selected unresolved Product-defined outcome instance governs
-   a Product-progress wave.
+   a Product-progress wave and declares its acceptance interval.
 2. Acceptance ends that instance's authority to select later progress while its
    witnesses remain regression evidence and enduring or recurring obligations
    remain live beyond the accepted interval.
@@ -47,13 +55,21 @@ predecessor release.
 4. Within a Product-outcome-bearing wave, material-realization growth derives
    authority only from the selected outcome, an admitted named bounded
    prerequisite to it, or an admitted named bounded experiment whose stated
-   observation discriminates a stated decision for it.
-5. A prerequisite or experiment authorizes only its declared provisional
-   bound. It cannot enlarge Product, authorize downstream work, confer
-   promotion or closure, or waive applicable law.
-6. Exhausted or falsified outcome, prerequisite, or experiment authority cannot
-   select or require further Product-progress work without another admitted
-   basis.
+   observation discriminates a stated decision for it. Prerequisite or
+   experiment admission and renewal belong to the authority owning the selected
+   work wave or its explicitly bounded proxy and remain durably recorded in
+   existing Goals or ticket authority.
+5. Each admitted prerequisite or experiment declares its provisional bound and
+   terminal condition and authorizes only that bound. It cannot enlarge Product,
+   authorize downstream work, confer promotion or closure, or waive applicable
+   law.
+6. Acceptance of the outcome, discharge of the prerequisite, resolution of the
+   experiment's stated decision, another admitted terminal condition,
+   exhaustion, rejection, withdrawal, supersession, repricing of the basis away,
+   or falsification of the basis ends its growth authority. Evidence, active
+   work state, prior admission, repair, or continuation cannot renew it; further
+   material work requires a new admission from the owning authority or its
+   explicitly bounded proxy.
 7. Retained supported behavior, required evidence, regression protection, and
    bounded donor material do not inherit further growth authority. Consumers
    own concrete deletion, archival, quarantine, and salvage mechanics.
@@ -67,9 +83,9 @@ predecessor release.
     enclosing migration.
 11. Review and design discovery remain blocking when they falsify the exact
     claim, contradict causally applicable authority, expose competing authority,
-   violate safety or retained accepted behavior, or establish durable
-   architectural foreclosure. Other observations are repricing input rather
-   than automatic scope.
+    violate safety or retained accepted behavior, or establish a durable
+    architectural decision that forecloses an admitted Product outcome. Other
+    observations are repricing input rather than automatic scope.
 12. A graph-native constructive loop consumes the selected Product outcome as
     external authority. Model, gap, assurance, ledger, edge closure, and
     repricing dispositions cannot author, select, enlarge, or accept Product
@@ -78,6 +94,11 @@ predecessor release.
 13. Method role names denote normative capabilities and algebra rather than
     required concrete implementations. Constitutional examples use neutral
     capability and authority identities, never downstream product labels.
+14. Qualification declares the exact Product release subject,
+    release-scoped claim surfaces, and excluded mutable source-project fields.
+    One immutable final-ready RC receives exact-cut review. Human acceptance
+    binds the exact subject, final carrier, and proved final-delta relation
+    before the final branch and tag are published.
 
 ## Superseded Truth
 
@@ -86,28 +107,38 @@ predecessor release.
   already-defined outcome through Goals and work sequencing.
 - `SPEC_METHOD.md` coupled retirement of the complete superseded-interface
   family to the same closure bar as feature delivery.
+- `SPEC_METHOD.md` treated a major intentional re-derivation on a materially
+  different implementation basis as sufficient migration-strategy selection
+  guidance. It did not prefer bounded evolution when both strategies were
+  lawful and feasible or require explicit human comparison and an abort or
+  re-entry condition for fundamental re-adoption.
 - `DESIGN_MODULE_METHOD.md` and `TICKET_METHOD.md` required post-ticket
   discovery to absorb feasible cleanup and commonization and automatically
   create cross-boundary or reusable-pattern follow-up work.
+- `RELEASE_METHOD.md` allowed release-facing content to be finalized after
+  candidate acceptance, so the accepted subject and final release truth could
+  differ without another exact acceptance.
 - predecessor examples named concrete downstream products and one guide fixed
   an abstract runtime role to a concrete implementation identity.
 - `ODD_METHOD.md` did not explicitly compose its next-action loop with the
   selected Product outcome introduced by `STDO-UP-013`.
 
-These migration and post-ticket-review claims were accepted predecessor law.
-This ticket explicitly supersedes only the relations named above; it does not
-reclassify them as accidental or previously unauthorized.
+These predecessor claims were accepted law. This ticket explicitly supersedes
+only the relations named above; it does not reclassify them as accidental or
+previously unauthorized.
 
 ## Amendment Owners
 
 | Concern | Source owner |
 |---|---|
 | Outcome succession, evidence role, and continued-growth authority | `specification/standards/SPEC_METHOD.md` |
+| Execution-contract projection of growth-basis admission | `specification/standards/TICKET_METHOD.md` |
 | Product-outcome binding and implementation-independent ODD roles | `specification/standards/ODD_METHOD.md` |
 | Neutral capability and authority examples | `specification/standards/IDENTITY_METHOD.md`, `specification/standards/TICKET_METHOD.md`, `specification/standards/SPEC_METHOD.md`, `specification/standards/GLOSSARY_GUIDE.md`, `specification/standards/UX_METHOD.md`, `specification/standards/POSTING_GUIDE.md` |
 | Migration selection and path-relative closure | `specification/standards/SPEC_METHOD.md` |
 | Exact review finding scope | `specification/standards/TICKET_METHOD.md` |
 | Bounded post-ticket design check | `specification/standards/DESIGN_MODULE_METHOD.md` |
+| Release subject, carrier, exact RC review, and final delta | `specification/standards/RELEASE_METHOD.md` |
 | Product and current work wave | `specification/PRODUCT.md`, `specification/GOALS.md` |
 | Candidate delta and release gate | `releases/v2.2.0.md` |
 
@@ -124,20 +155,30 @@ reclassify them as accidental or previously unauthorized.
    prescribed disposal process is added.
 5. No constitutional method or example derives authority from a downstream
    product, repository, package, version, command, or implementation symbol.
-6. The exact candidate and complete `v2.0.0` delta pass RC qualification and
-   independent review.
-7. One immutable RC branch and tag publish that exact reviewed subject before
-   final tap.
-8. No `v2.2.0` tag is created before direct human acceptance of that exact
-   candidate.
+6. Pre-RC qualification fixes the exact Product release subject,
+   release-scoped claims, excluded source-project state, and RC carrier.
+7. One immutable RC tag publishes the final-ready subject for independent
+   exact-cut review.
+8. Any intervening final-carrier delta is restricted to declared excluded
+   source-state fields and proves Product and release-scoped bytes unchanged.
+9. Direct human acceptance binds the exact release subject, final carrier, and
+   final-delta relation before the final branch and `v2.2.0` tag are published.
+10. Publication-caused Goals and ticket closure is recorded afterward on the
+    continuing source branch without moving the immutable release tag.
 
 ## Non-Closure Conditions
 
 - an accepted witness is discarded instead of retained as regression evidence;
 - assurance or design artifacts become a Product work queue;
-- realization continues selecting growth after its outcome or an admitted
-  named bounded prerequisite or experiment has exhausted or falsified its
-  declared bound;
+- realization continues selecting growth after acceptance of its outcome,
+  discharge of its prerequisite, resolution of its experiment decision, or
+  another admitted terminal condition, exhaustion, rejection, withdrawal,
+  supersession, repricing of the basis away, or falsification of its basis;
+- a draft, admitted, or active ticket or execution contract, prior admission,
+  repair, continuation, or evidence renews ended growth authority;
+- a prerequisite or experiment is admitted or renewed without the work-wave
+  owner or explicitly bounded proxy and durable existing Goals or ticket
+  authority;
 - a prerequisite or experiment confers promotion, closure, downstream work
   authority, or an exception to applicable law;
 - retention as evidence or donor material silently preserves the enclosing
@@ -152,5 +193,9 @@ reclassify them as accidental or previously unauthorized.
 - competing or ambiguous authority can be promoted on the affected path;
 - slice acceptance is projected as complete migration closure;
 - optional cleanup, future generality, or cross-boundary discovery
-  automatically widens the current subject; or
+  automatically widens the current subject;
+- speculative architecture that does not foreclose an admitted Product outcome
+  blocks the current bounded claim;
+- Product or release-scoped bytes change after exact RC review without a new
+  affected review and exact acceptance; or
 - mutable candidate source is presented as operative consumer authority.

@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: 080d7484468d06e33f42112b21406f22112f91c88816955b0f40a05fc123d451
+source_digest: c0e21a41291d3a7b05614822e327258aa358aab1b43a669c2ec1e58e49c1df58
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -43,10 +43,17 @@ identity in its own authority surfaces.
   outcome. Product models, gaps, ledgers, projections, assurance, and edge
   closure may interpret or evidence that outcome; they cannot author, select,
   enlarge, or accept it.
-- `evaluate_next` remains inside the selected outcome or an admitted bounded
-  prerequisite or experiment. When that basis is exhausted, the loop cannot
-  select more material work. Repricing requests constitutional re-entry; it
-  does not perform re-entry or choose a successor outcome.
+- `evaluate_next` remains inside the selected outcome or a bounded prerequisite
+  or experiment admitted under `STDO-UP-013` by the work-wave owner or its
+  explicitly bounded proxy and durably recorded in existing work authority.
+  The selected outcome declares its acceptance interval; each prerequisite or
+  experiment declares its provisional bound and terminal condition. Acceptance
+  of the outcome, discharge of the prerequisite, resolution of the experiment
+  decision, another admitted terminal condition, exhaustion, rejection,
+  withdrawal, supersession, repricing of the basis away, or falsification of
+  the basis prevents the loop from selecting more material work. Repricing
+  requests constitutional re-entry; it does not perform re-entry or choose a
+  successor outcome.
 - The target binding and admitted construction intent preserve exact selected
   outcome and bounded-basis refs. Replay must reproduce those refs. An unresolved
   `post_reprice` returns typed no-action until lawful re-entry separately admits

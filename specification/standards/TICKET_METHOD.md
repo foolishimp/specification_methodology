@@ -649,6 +649,14 @@ An admitted execution contract should be:
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
 
+Execution-contract admission validates a proposed contract against its cited
+Product outcome, prerequisite, or experiment basis; it does not admit that
+growth basis. Admission or renewal of the basis belongs to the authority owning
+the selected Goals work wave, or its explicitly bounded proxy, and remains
+durably legible in existing Goals or ticket authority. Drafting, admitting, or
+retaining an active execution contract cannot create or renew authority that
+the owning work-wave authority has not admitted.
+
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
 Authority to author or implement a change is not independent authority to
@@ -858,6 +866,13 @@ plus every causally applicable live requirement, accepted design relation, and
 retained predecessor claim; ticket wording cannot narrow that authority away.
 The ticket remains active and must not claim migration closure until the
 migration checklist and final closure law are satisfied.
+
+Active ticket status does not renew the accepted slice's exhausted growth
+authority. Work that only discharges already admitted removal, demotion, and
+migration-closure proof obligations may continue within their existing bound
+without claiming further Product progress. Further material producer or
+consumer growth requires another still-live basis admitted under
+`STDO-UP-013`; ticket activity alone is not that basis.
 
 ### Migration Strategy Requirements
 
@@ -1072,8 +1087,12 @@ the old path can no longer satisfy the closure law. Examples include:
 - required closure proof does not depend on undeclared local fixtures or mutable
   sibling workspaces
 
-If the old path still works in normal execution, the ticket remains open unless
-that path is explicitly specified as retained compatibility.
+If the old path still works in normal execution within the declared affected
+scope, or remains reachable on the claimed acceptance path, the ticket remains
+open unless that path is explicitly specified as retained compatibility. A
+deterministically routed, non-overlapping Product scope outside the declared
+affected scope remains governed by its own current authority and does not block
+the migration merely because its path still works.
 
 For tickets with an `Impacted Interface Review Checklist`, the negative proof
 must exercise the named public consumers that matter for closure. Proving that
@@ -1223,6 +1242,8 @@ For an implementation migration ticket:
 - type: bug
 - ticket_category: implementation_migration
 - migration_strategy: inside_out_hard_break
+- library_usage: none
+- library_rationale: this migration is boundary-specific and does not establish a recurring realization pattern
 - status: active
 - goal: operator-gap-truth
 - change_intent: replace the mixed operator gap truth with one authoritative declared carrier
@@ -1234,6 +1255,8 @@ For an implementation migration ticket:
 
 ## Migration Declaration
 
+- affected_scope: gap projection on the declared operator-query acceptance path
+- excluded_or_disjoint_scopes: none
 - old_truth_path: fallback gap projection with synthetic convergence fields
 - new_truth_path: explicit declared-obligation projection plus separately classified fallback gaps
 - producers_old: `<gap-module>::build_fallback_gap`
@@ -1244,18 +1267,23 @@ For an implementation migration ticket:
   - `<query-surface>::gaps`
   - `<summary-surface>::span`
   - `<proof-surface>::first_slice_negative`
-- closure_law: migration closes only when the old projection is no longer authoritative and mixed old/new proof does not count as acceptance
+- closure_law: migration closes only when the old projection is no longer authoritative within the affected scope and mixed old/new proof does not count as acceptance
 
 ## Migration Checklist
 
+- [ ] exact affected migration scope is named
+- [ ] excluded or disjoint Product and compatibility scopes are named with deterministic routing, or explicitly declared absent
 - [ ] old truth path is named explicitly
 - [ ] new truth path is named explicitly
 - [ ] producer set for the new truth is listed
 - [ ] consumer set for the new truth is listed
 - [ ] projection/read-model surfaces are listed
-- [ ] old truth path is removed or explicitly demoted from authority
+- [ ] old truth path is removed or explicitly demoted from authority within the affected scope
 - [ ] mixed-state behavior is no longer accepted as closure evidence
 - [ ] tests proving mixed old/new behavior are removed or repriced
+- [ ] recurring realization patterns are checked against existing library/commonization surfaces
+- [ ] ticket declares library usage and names the governing library or rationale
+- [ ] if the work exists in more than one build tenant, this backlog/active ticket carries only one tenant lifecycle and any sibling tenant work lives on its own suffixed ticket
 - [ ] ticket wording, product wording, and proof claims are reconciled before closure
 ```
 

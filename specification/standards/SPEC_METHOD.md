@@ -553,9 +553,9 @@ defines the ticket-local test-case authority rule.
 ## Product Outcome Conservation (`STDO-UP-013`)
 
 Every Product-outcome-bearing work wave identifies one explicitly selected,
-unresolved, directly verifiable Product-defined outcome. Product-progress
-claims and promotion onto the supported Product path are judged against that
-same outcome.
+unresolved, directly verifiable Product-defined outcome and declares the
+acceptance interval for that instance. Product-progress claims and promotion
+onto the supported Product path are judged against that same outcome.
 
 Evidence distinguishes material advance, prerequisite readiness, preservation,
 and regression. Only material advance projects Product progress. Prerequisite
@@ -592,10 +592,22 @@ experiment authorizes only its declared provisional bound. It does not select
 or enlarge the Product outcome, authorize downstream work, confer promotion or
 closure, or waive applicable Prime, design, safety, authority, or release law.
 
-When the selected outcome is accepted, or when such a basis or bound is
-exhausted, rejected, withdrawn, superseded, repriced away, or falsified by
-evidence, the work must not select, enlarge, or require further
-Product-progress work without another admitted basis.
+Admission or renewal of a prerequisite or experiment belongs to the authority
+owning the selected work wave, or its explicitly bounded proxy, and is recorded
+in the existing durable Goals or ticket authority. The admitted basis states
+its provisional bound and exhaustion or falsification condition. Satisfaction
+of an experiment's stated decision-discriminating observation exhausts that
+experiment. Drafting or validating a ticket or execution contract, retaining
+active status, or holding a prior admission cannot create, extend, or renew the
+basis.
+
+Acceptance of the selected outcome, discharge of an admitted prerequisite, or
+resolution of an admitted experiment's stated decision exhausts that basis. A
+basis or bound also ends when another admitted terminal condition is reached or
+it is rejected, withdrawn, superseded, repriced away, or falsified by evidence.
+Ended authority cannot be renewed by repair, continuation, evidence, active
+ticket or run state, or prior admission; further material work requires a new
+admission by the owning authority or its explicitly bounded proxy.
 
 Retention as supported Product behavior, required evidence, regression
 protection, or bounded donor material does not confer further growth authority.
@@ -747,6 +759,13 @@ does not close the migration or waive its final retirement criteria. The
 slice's identity and acceptance criteria derive from Product plus every causally
 applicable live requirement, accepted design relation, and retained predecessor
 claim. Ticket or review wording cannot narrow that authority away.
+
+Active migration status does not renew an accepted slice's exhausted growth
+authority. Work that only discharges already admitted removal, demotion, and
+migration-closure proof obligations may continue within that existing bound
+without claiming further Product progress. Further material producer or
+consumer growth requires another still-live basis admitted under
+`STDO-UP-013`; ticket activity alone is not that basis.
 
 ### What Counts As A Core Interface
 

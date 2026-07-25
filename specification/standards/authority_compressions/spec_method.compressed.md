@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 577b9f5efd4f9d79de54b85682e47fe12049b7eef274ea98eb33e020e7e0357a
+source_digest: d0b536b955558b48e18ba5b292bf36c1dc1126a6ed5f92743422629f36683c7d
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -51,22 +51,30 @@ capabilities through neutral identities rather than consumer precedent.
   never substitute packaging, presence, or local green for a stronger claim.
 - Keep semantic basis, evidence basis, and state projection distinct.
 - Product progress is measured against one explicitly selected unresolved
-  Product-defined outcome instance. Acceptance ends that instance's authority
-  to select later progress while its witnesses remain regression evidence and
-  enduring or recurring obligations remain live. Selecting the next
-  already-defined outcome is Goals/work sequencing, not Product reprice.
+  Product-defined outcome instance with a declared acceptance interval.
+  Acceptance ends that instance's authority to select later progress while its
+  witnesses remain regression evidence and enduring or recurring obligations
+  remain live. Selecting the next already-defined outcome is Goals/work
+  sequencing, not Product reprice.
 - Evidence evaluates its bound Product claim; completion of a proof surface,
   matrix, inventory, design artifact, or test suite cannot select, enlarge, or
   replace that outcome.
 - Within a Product-outcome-bearing wave, material realization growth requires
   the selected outcome, an admitted named bounded prerequisite to it, or an
   admitted named bounded experiment whose stated observation discriminates a
-  stated decision for it. A prerequisite or experiment is provisional-only:
-  it cannot enlarge Product, authorize downstream work, confer promotion or
-  closure, or waive applicable law. An exhausted or falsified basis cannot
-  select further Product-progress work without another admitted basis. Retained
-  evidence, regression protection, or donor material does not inherit growth
-  authority; consumers own disposal and salvage mechanics.
+  stated decision for it. Admission or renewal belongs to the work-wave owner
+  or explicitly bounded proxy and is durably recorded in existing Goals or
+  ticket authority. Each prerequisite or experiment declares its provisional
+  bound and terminal condition and cannot enlarge Product, authorize downstream
+  work, confer promotion or closure, or waive applicable law. Acceptance of the
+  outcome, discharge of the prerequisite, resolution of the experiment
+  decision, another admitted terminal condition, exhaustion, rejection,
+  withdrawal, supersession, repricing of the basis away, or falsification ends
+  that authority. Evidence, active work state, prior admission, repair, or
+  continuation cannot renew it;
+  further material work requires a new admission. Retained evidence,
+  regression protection, or donor material does not inherit growth authority;
+  consumers own disposal and salvage mechanics.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation

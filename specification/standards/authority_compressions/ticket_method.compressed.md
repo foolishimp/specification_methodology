@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: b6366816df1a520d06b91f8a8fba1c483f1e19435dd425fe06be2dfd2e80eef2
+source_digest: baa3fa0ad41f1bdb36d03e6ae871a2c658412e5a00e56b7e39394ebf834453ff
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -42,15 +42,21 @@ proof, and current status.
   relabel it.
 - A review finding blocks when it falsifies the exact claim, contradicts
   causally applicable authority, exposes competing authority, violates safety
-  or retained accepted behavior, or establishes durable architectural
-  foreclosure. Other observations are repricing input and do not automatically
-  widen the subject or require another ticket, artifact, review, or
-  implementation increment.
+  or retained accepted behavior, or establishes a durable architectural
+  decision that forecloses an admitted Product outcome. Other observations are
+  repricing input and do not automatically widen the subject or require another
+  ticket, artifact, review, or implementation increment.
+- Execution-contract admission validates against a cited growth basis; it does
+  not admit or renew that basis. Admission or renewal belongs to the Goals
+  work-wave owner or explicitly bounded proxy and remains durably legible in
+  existing Goals or ticket authority.
 - A Product-slice milestone may close under singular authority across the full
   causal closure of its acceptance path while its enclosing migration remains
   visibly active. Its claim cannot exclude causally applicable Product,
   requirement, design, or retained-predecessor authority. Slice acceptance does
-  not satisfy migration closure.
+  not satisfy migration closure, and active ticket status does not renew the
+  slice's exhausted growth authority. Bounded retirement proof may continue;
+  material producer or consumer growth requires another live admitted basis.
 - Fundamental re-adoption requires the ticket to bind the explicit human
   selection, comparison with bounded evolution, and abort or re-entry
   condition.

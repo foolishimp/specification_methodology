@@ -16,13 +16,13 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: 577b9f5efd4f9d79de54b85682e47fe12049b7eef274ea98eb33e020e7e0357a
+  SPEC_METHOD.md: d0b536b955558b48e18ba5b292bf36c1dc1126a6ed5f92743422629f36683c7d
   DESIGN_MODULE_METHOD.md: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
-  ODD_METHOD.md: 080d7484468d06e33f42112b21406f22112f91c88816955b0f40a05fc123d451
-  TICKET_METHOD.md: b6366816df1a520d06b91f8a8fba1c483f1e19435dd425fe06be2dfd2e80eef2
+  ODD_METHOD.md: c0e21a41291d3a7b05614822e327258aa358aab1b43a669c2ec1e58e49c1df58
+  TICKET_METHOD.md: baa3fa0ad41f1bdb36d03e6ae871a2c658412e5a00e56b7e39394ebf834453ff
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: 9348451648b4afc9f61c4f4b544aeafc7a92c3b1b5bc112872945cd44c8e0a53
-  RELEASE_METHOD.md: 0234f118a504e449a6670d4276422abab89a2a3fa5f281d313aacc87815dd79e
+  RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
 generated_at: 2026-07-25
@@ -88,10 +88,11 @@ layer that owns the missing truth.
 - Proof identifies its exact property and nearest weaker excluded property.
   Semantic basis, evidence basis, and state projection remain distinct.
 - Product progress advances one explicitly selected unresolved Product-defined
-  outcome instance. Acceptance ends that instance's progress authority while
-  retaining prior witnesses as regression evidence; selecting the next
-  already-defined outcome still requires explicit Goals/work sequencing.
-  Evidence cannot select, enlarge, or replace its Product claim.
+  outcome instance with a declared acceptance interval. Acceptance ends that
+  instance's progress authority while retaining prior witnesses as regression
+  evidence; selecting the next already-defined outcome still requires explicit
+  Goals/work sequencing. Evidence cannot select, enlarge, or replace its
+  Product claim.
 - An ODD constructive loop consumes that selected Product outcome as external
   authority. Models, gaps, assurance, ledgers, projections, edge closure, and
   next-action machinery cannot author, select, enlarge, or accept the outcome.
@@ -104,12 +105,18 @@ layer that owns the missing truth.
 - Within a Product-outcome-bearing wave, material realization growth requires
   the selected outcome, an admitted named bounded prerequisite to it, or an
   admitted named bounded experiment whose stated observation discriminates a
-  stated decision for it. A prerequisite or experiment is provisional-only:
-  it cannot enlarge Product, authorize downstream work, confer promotion or
-  closure, or waive applicable law. An exhausted or falsified basis cannot
-  select further Product-progress work without another admitted basis. Retained
-  evidence, regression protection, or donor material does not inherit growth
-  authority; consumers own disposal and salvage mechanics.
+  stated decision for it. Admission or renewal belongs to the work-wave owner
+  or explicitly bounded proxy and is durably recorded in existing Goals or
+  ticket authority. Each prerequisite or experiment declares its provisional
+  bound and terminal condition and cannot enlarge Product, authorize downstream
+  work, confer promotion or closure, or waive applicable law. Acceptance of the
+  outcome, discharge of the prerequisite, resolution of the experiment
+  decision, another admitted terminal condition, exhaustion, rejection,
+  withdrawal, supersession, repricing of the basis away, or falsification ends
+  that authority. Evidence, active work state, prior admission, repair, or
+  continuation cannot renew it;
+  retained evidence, regression protection, or donor material does not inherit
+  growth authority.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation
@@ -123,8 +130,9 @@ layer that owns the missing truth.
   closure of its acceptance path but does not close an enclosing migration.
   Ticket and review wording cannot exclude causally applicable authority;
   competing authority, safety failures, retained-behavior regressions, and
-  durable architectural foreclosure remain blocking. Other observations remain
-  repricing input rather than automatic scope or ticket creation.
+  durable architectural decisions that foreclose an admitted Product outcome
+  remain blocking. Other observations remain repricing input rather than
+  automatic scope or ticket creation.
 - Native constructability precedes design acceptance. Prime applies recursively
   and counts governance cost while conserving root authority.
 - Apply an axiom family only where it is causally relevant to the selected
@@ -133,8 +141,10 @@ layer that owns the missing truth.
   growth.
 - Authority has identity and may be proxied only through an explicit bounded
   grant. Implementer self-review is not independent review.
-- Exact-candidate qualification covers final delta and complete predecessor
-  semantics before human acceptance and immutable release.
+- Exact-candidate qualification declares the Product release subject,
+  release-scoped claims, and excluded source state. An immutable final-ready RC
+  receives exact review; final-delta proof preserves Product and release-scoped
+  bytes before human acceptance of the final carrier and final publication.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a

@@ -5,9 +5,11 @@
 Construct one bounded successor to the published STDO `2.0.0` Product. The
 successor amends Product-outcome succession and continued-growth authority,
 migration-strategy selection, path-relative migration closure, and review-scope
-discipline. It also binds graph-native traversal to the selected Product outcome
-and removes downstream implementation identity from method roles and examples,
-without adding runtime process or another governance carrier.
+discipline. It also binds graph-native traversal to the selected Product
+outcome, removes downstream implementation identity from method roles and
+examples, and makes RC-to-final release identity exact without treating mutable
+source-work state as Product content, without adding runtime process or another
+governance carrier.
 
 ## Governing Outcome
 
@@ -20,10 +22,10 @@ Every other `v2.0.0` semantic remains conserved.
 | Milestone | Exit | State |
 |---|---|---|
 | `M0` Predecessor | Exact `v2.0.0` source and release identity are fixed. | completed |
-| `M1` Normative amendment | The four grouped amendment families are owned once in their existing standards. | completed |
+| `M1` Normative amendment | The five grouped amendment families are owned once in their existing standards. | completed |
 | `M2` Derived reconciliation | Compressions, Product, ticket, and release delta agree with the amended source. | completed |
-| `M3` Qualification | One exact RC passes predecessor conservation and independent exact-cut review and is published immutably. | active |
-| `M4` Tap | Direct human acceptance precedes any `v2.2.0` tag or publication. | pending |
+| `M3` RC qualification | Pre-RC qualification passes; one immutable RC tag publishes the exact final-ready subject for independent exact-cut review. | active |
+| `M4` Tap | Final-delta proof preserves the reviewed Product and release-scoped bytes; direct human acceptance binds the exact final carrier before final branch and `v2.2.0` tag publication. | pending |
 
 ## Published Cut
 
@@ -46,4 +48,4 @@ remains open.
   creation;
 - survival state machines or prescribed deletion, archival, quarantine, or
   salvage mechanics; and
-- publication before exact-cut review and human acceptance.
+- final Product publication before exact-cut review and human acceptance.

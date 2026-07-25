@@ -115,10 +115,14 @@ surfaces.
   unchanged.
 - The post-ticket design check may be part of normal verification. It blocks
   when the exact claim or an applicable hard stop fails, including causally
-  applicable active authority that ticket or review wording cannot narrow away.
-  Optional cleanup, recurrence, generality, and cross-boundary observations are
-  repricing input; they do not automatically widen the subject or require
-  another ticket, artifact, review round, or reviewer.
+  applicable active authority that ticket or review wording cannot narrow away
+  and a material architectural decision that forecloses an admitted Product
+  outcome. Optional cleanup, recurrence, generality, and cross-boundary
+  observations are repricing input; they do not automatically widen the subject
+  or require another ticket, artifact, review round, or reviewer.
+- The retained recurrence rule remains distinct: a second credible recurrence
+  requires commonization review, and a third local rebuild requires an explicit
+  consume, extend, or do-not-commonize disposition.
 
 ## Prompt-Relevant Rules
 

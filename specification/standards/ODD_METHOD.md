@@ -734,9 +734,12 @@ loop. Product models, gaps, assurance, ledgers, and projections may interpret
 that outcome but cannot author, select, or enlarge it. `evaluate_next` may
 select material work only within that outcome or an admitted bounded
 prerequisite or experiment. Graph or edge closure is evidence toward Product
-acceptance; it is not Product or release acceptance. When the governing basis
-is exhausted, the loop selects no further material work without another
-admitted basis. A `reprice` disposition requests lawful constitutional
+acceptance; it is not Product or release acceptance. When the selected outcome
+is accepted, an admitted prerequisite is discharged, an admitted experiment's
+stated decision is resolved, another admitted terminal condition is reached, or
+its governing basis or bound is exhausted, rejected, withdrawn, superseded,
+repriced away, or falsified, the loop selects no further material work without
+another admitted basis. A `reprice` disposition requests lawful constitutional
 re-entry; it does not perform the reprice or select the successor outcome.
 
 The loop is framework-independent. Product implementations may use different
