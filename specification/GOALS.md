@@ -2,20 +2,16 @@
 
 ## Current Goal
 
-Construct one bounded successor to the published STDO `2.0.0` Product. The
-successor amends Product-outcome succession and continued-growth authority,
-migration-strategy selection, path-relative migration closure, and review-scope
-discipline. It also binds graph-native traversal to the selected Product
-outcome, removes downstream implementation identity from method roles and
-examples, and makes RC-to-final release identity exact without treating mutable
-source-work state as Product content, without adding runtime process or another
-governance carrier.
+STDO `2.2.0` is the current published Product. No successor work wave is
+selected. Later substantive change re-enters through normal intake triage and
+does not alter the immutable `2.2.0` cut.
 
 ## Governing Outcome
 
-The exact `v2.0.0` cut remains the immutable predecessor and current published
-Product. The successor changes only the admitted law families named above.
-Every other `v2.0.0` semantic remains conserved.
+The exact `v2.2.0` cut at
+`5326562f075d60052806d0d2c79d3db49671a8ea`, with standards aggregate
+`ca6dc3d5094fc5473380df45d76da3c52263c5c21c52a3af62f542c97db2f86c`,
+is the immutable current Product. The `2.2` work wave is closed.
 
 ## Milestones
 
@@ -24,18 +20,19 @@ Every other `v2.0.0` semantic remains conserved.
 | `M0` Predecessor | Exact `v2.0.0` source and release identity are fixed. | completed |
 | `M1` Normative amendment | The five grouped amendment families are owned once in their existing standards. | completed |
 | `M2` Derived reconciliation | Compressions, Product, ticket, and release delta agree with the amended source. | completed |
-| `M3` RC qualification | Pre-RC qualification passes; one immutable RC tag publishes the exact final-ready subject for independent exact-cut review. | active |
-| `M4` Tap | Final-delta proof preserves the reviewed Product and release-scoped bytes; direct human acceptance binds the exact final carrier before final branch and `v2.2.0` tag publication. | pending |
+| `M3` RC qualification | Pre-RC qualification passes; one immutable RC tag publishes the exact final-ready subject for independent exact-cut review. | completed |
+| `M4` Tap | Final-delta proof preserves the reviewed Product and release-scoped bytes; direct human acceptance binds the exact final carrier before final branch and `v2.2.0` tag publication. | completed |
 
 ## Published Cut
 
-- release branch: `release/2.0.0`
-- release tag: `v2.0.0`
-- release commit: `94ccf4faa1c0a10b002273b1e9a9e7bf4a34753a`
+- release branch: `release/2.2.0`
+- release tag: `v2.2.0`
+- release commit: `5326562f075d60052806d0d2c79d3db49671a8ea`
+- standards aggregate:
+  `ca6dc3d5094fc5473380df45d76da3c52263c5c21c52a3af62f542c97db2f86c`
 
 No `v2.1.0` release was published. Its untagged candidate is incorporated into
-this cumulative successor. No `v2.2.0` release exists while this work wave
-remains open.
+the cumulative `v2.0.0 -> v2.2.0` release line.
 
 ## Exclusions
 

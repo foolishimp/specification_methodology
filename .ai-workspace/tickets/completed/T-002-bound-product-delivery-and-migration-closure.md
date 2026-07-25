@@ -3,8 +3,8 @@
 - id: T-002
 - type: feature
 - ticket_category: ordinary
-- status: active
-- review_status: pending
+- status: completed
+- review_status: accepted_and_published
 - goal: publish-one-bounded-stdo-2.2-successor
 - change_intent: amend Product-outcome growth authority, migration selection and path-relative closure, review scope, implementation-independent method roles, and exact release identity without adding executable governance
 - change_class: product_reprice
@@ -12,6 +12,7 @@
 - triaged_at: 2026-07-24
 - created_at: 2026-07-24
 - updated_at: 2026-07-25
+- completed_at: 2026-07-25
 
 ## Purpose
 
@@ -199,3 +200,31 @@ previously unauthorized.
 - Product or release-scoped bytes change after exact RC review without a new
   affected review and exact acceptance; or
 - mutable candidate source is presented as operative consumer authority.
+
+## Closure
+
+- RC tag: `v2.2.0-rc.1`
+- RC tag object:
+  `bb4a2c0b8db4d033a4cff245bfb1c9e5c8e0d1e6`
+- accepted and published commit:
+  `5326562f075d60052806d0d2c79d3db49671a8ea`
+- standards aggregate:
+  `ca6dc3d5094fc5473380df45d76da3c52263c5c21c52a3af62f542c97db2f86c`
+- RC-to-final delta: zero
+- release branch: `release/2.2.0`
+- release tag: `v2.2.0`
+- release tag object:
+  `9a9beb2a19d4bdff66792a09833c81db2f758ba0`
+- exact-tag review:
+  `.ai-workspace/comments/claude/20260725T053000Z_REVIEW_stdo_2_2_0_rc_1_exact_tag.md`
+- direct human review and acceptance:
+  `.ai-workspace/comments/human/20260725T055634Z_DECISION_accept_and_publish_stdo_2_2_0.md`
+
+Direct human authority accepted the exact RC subject, accepted the zero-byte
+RC-to-final delta, and authorized publication of `release/2.2.0` and `v2.2.0`.
+The final branch and tag resolve to the accepted commit above.
+
+The exact-tag review recorded one non-blocking compression omission:
+`ticket_method.compressed.md` drops “or ambiguous” from one review-boundary
+summary while raw `TICKET_METHOD.md` remains deciding authority. This does not
+alter the released subject or reopen T-002.
