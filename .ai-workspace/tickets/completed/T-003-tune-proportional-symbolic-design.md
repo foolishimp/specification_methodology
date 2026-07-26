@@ -3,8 +3,8 @@
 - id: T-003
 - type: feature
 - ticket_category: ordinary
-- status: active
-- review_status: final_delta_proven_awaiting_human_acceptance
+- status: completed
+- review_status: accepted_and_published
 - goal: publish-one-bounded-stdo-2.2.1-tuning
 - change_intent: tune proportional symbolic contraction, design authority, Prime semantic atoms, and semantic review without prescribing agent procedure or adding governance machinery
 - change_class: requirement_reprice
@@ -12,6 +12,7 @@
 - triaged_at: 2026-07-26
 - created_at: 2026-07-26
 - updated_at: 2026-07-27
+- completed_at: 2026-07-27
 
 ## Construction Basis
 
@@ -24,9 +25,10 @@
   `6fa5074807d90112cdd3ba5b0182d52f8181e4c2`; and
 - direct human intake: author the agreed `2.2.1` tuning on `main`.
 
-The rejected executable-overstep line remains preserved at
-`archive/rejected-stdo-2.0-executable-overstep` and is not a construction
-basis.
+The rejected executable-overstep candidate at
+`c6c085acc7a88d6a50a834853af5573218d5857c` is historical evidence and is not
+a construction basis. Its temporary archive branch does not carry Product
+authority.
 
 ## Target Truth
 
@@ -151,6 +153,36 @@ basis.
 The immutable `v2.2.1-rc.1` exact-cut review requested changes. The bounded
 repairs were frozen and published as `v2.2.1-rc.2`. Fresh independent semantic,
 mechanical, and heterogeneous exact-tag reviews accepted that exact cut with no
-P0/P1/P2 blocker. The proposed final carrier is the exact RC subject and its
-zero-byte final-delta relation is proven. Direct human acceptance and final
-publication remain open.
+P0/P1/P2 blocker. Direct human authority accepted the exact RC subject and its
+zero-byte final-delta relation. `release/2.2.1` and `v2.2.1` publish that exact
+accepted carrier.
+
+## Closure
+
+- RC tag: `v2.2.1-rc.2`
+- RC tag object:
+  `cad1a07b223e92820cf17e1c8398f8c7d9a811f7`
+- accepted and published commit:
+  `05f8edab05b0badb7d8c91e433b91b3143df42f6`
+- subject tree:
+  `9e93c6a65d6f11011e90e14fb2bbcbe2dd65b205`
+- standards aggregate:
+  `df1064dea1e1926436a3123280071a5082c5dc03b8418d07e46e839cbed20aed`
+- release-note SHA-256:
+  `900a05d5052c687b5a9e4372e986547478e2978e42aa8c224ea20838bcdb705b`
+- RC-to-final Product delta: zero bytes
+- release branch: `release/2.2.1`
+- release tag: `v2.2.1`
+- release tag object:
+  `23e06818a87935f1adc31033fa6948de2a815427`
+- exact-cut reviews:
+  `.ai-workspace/comments/codex/20260726T155024Z_REVIEW_stdo_2_2_1_rc2_exact_cut.md`
+  and
+  `.ai-workspace/comments/claude/20260726T155448Z_REVIEW_stdo_2_2_1_rc2_exact_cut.md`
+- final-delta proof:
+  `.ai-workspace/comments/codex/20260726T155558Z_PROOF_stdo_2_2_1_rc2_final_delta.md`
+- direct human acceptance:
+  `.ai-workspace/comments/human/20260726T162009Z_DECISION_stdo_2_2_1_release_acceptance.md`
+
+The final branch and tag resolve to the exact accepted RC carrier. This
+publication-caused source-work closure does not move the immutable Product tag.

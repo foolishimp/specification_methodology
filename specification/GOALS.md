@@ -2,18 +2,16 @@
 
 ## Current Goal
 
-Produce one bounded STDO `2.2.1` tuning over immutable `v2.2.0`. Preserve the
-existing Product boundary and proportional method while making its symbolic
-design, co-evolution, Prime, and review predicates harder to detach or
-misinterpret.
+STDO `2.2.1` is the current published Product. No successor work wave is
+selected. Later substantive change re-enters through normal intake triage and
+does not alter the immutable `2.2.1` cut.
 
 ## Governing Outcome
 
-One exact `v2.2.1` release subject makes the bounded clarifications and
-supersessions declared in its predecessor delta without selecting a fixed
-reasoning procedure, blanket design-first sequence, new artifact programme, or
-executable governance. The current operative Product remains `v2.2.0` until
-that successor is independently reviewed, directly accepted, and tapped.
+The exact `v2.2.1` cut at
+`05f8edab05b0badb7d8c91e433b91b3143df42f6`, with standards aggregate
+`df1064dea1e1926436a3123280071a5082c5dc03b8418d07e46e839cbed20aed`,
+is the immutable current Product. The `2.2.1` work wave is closed.
 
 ## Milestones
 
@@ -23,18 +21,17 @@ that successor is independently reviewed, directly accepted, and tapped.
 | `M1` Normative tuning | Proportional constraint selection, decision completeness, Prime semantic atoms, and review reconstruction are tuned in their existing owners with explicit predecessor dispositions. | completed |
 | `M2` Derived reconciliation | Product, compressions, templates, ticket, and release delta preserve every amended predicate. | completed |
 | `M3` RC qualification | One immutable final-ready `v2.2.1` RC passes exact-cut review. | completed |
-| `M4` Tap | Direct human acceptance binds the exact final carrier and final-delta relation before `v2.2.1` publication. | pending |
+| `M4` Tap | Direct human acceptance binds the exact final carrier and final-delta relation before `v2.2.1` publication. | completed |
 
-## Construction Basis
+## Published Cut
 
-- predecessor release: `v2.2.0`
-- predecessor commit: `5326562f075d60052806d0d2c79d3db49671a8ea`
-- predecessor standards aggregate:
-  `ca6dc3d5094fc5473380df45d76da3c52263c5c21c52a3af62f542c97db2f86c`
-- continuing source basis:
-  `6fa5074807d90112cdd3ba5b0182d52f8181e4c2`
-- active work item:
-  `.ai-workspace/tickets/active/T-003-tune-proportional-symbolic-design.md`
+- release branch: `release/2.2.1`
+- release tag: `v2.2.1`
+- release commit: `05f8edab05b0badb7d8c91e433b91b3143df42f6`
+- standards aggregate:
+  `df1064dea1e1926436a3123280071a5082c5dc03b8418d07e46e839cbed20aed`
+- completed work item:
+  `.ai-workspace/tickets/completed/T-003-tune-proportional-symbolic-design.md`
 
 ## Exclusions
 
