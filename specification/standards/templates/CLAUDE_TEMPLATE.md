@@ -39,20 +39,33 @@ override this file for their subtree.
 ### Design And Assurance Compression
 
 - At a material semantic boundary, derive Ontology, IACS, and domain, sequence,
-  and state views from one semantic basis. Design, implementation, and tests may
-  co-evolve when upstream truth leaves no unresolved material architecture
-  decision; design still owns structural `HOW`, and unresolved material
-  architecture requires a prior design gate.
+  and state views from one semantic basis. Co-evolution is admissible only when
+  the decision-complete network has no unresolved material relation; design
+  still owns structural `HOW`. Otherwise gate the smallest causally closed
+  unresolved decision set before retained implementation establishes it.
+- Design/implementation bidirectionality carries evidence and falsification,
+  not reverse semantic authority. Material surprise re-enters design; serial
+  code repair does not establish design acceptance.
 - Judge proportionality by ambiguity removed versus effective reasoning
-  complexity added, not by line or artifact count alone.
-- Apply Prime recursively to the whole candidate family. Preserve root
-  authority and count governance cost, not only files or functions.
+  complexity added, including downstream code, runtime states, tests, reviews,
+  and reconciliation paths contracted by bounded symbolic design. Constrain
+  agent procedure only where its variation can affect a governed property; do
+  not create per-clause rationale carriers.
+- Treat Ontology, Prime, IACS, views, modules, implementation, and tests as
+  projections of one decision-complete satisfiable constraint network.
+- Apply Prime recursively to the whole semantic candidate family. Prime atoms
+  are design relations, not files or functions; accepted atoms govern every
+  admitted instance in their declared domain. Preserve root authority and count
+  governance cost.
 - Prove native constructability in the selected substrate before accepting
   design; a bridge or future capability does not close the gap.
 - Identify the exact proof target and nearest weaker excluded property. Keep
   semantic basis, evidence basis, and state projection distinct.
-- Implementer self-review is not independent review. Ticket, milestone, and
-  release claims close only at their own evidence altitude.
+- Implementer self-review is not independent review. An independent-review
+  claim requires a durably traceable exact subject and verdict in an existing
+  carrier. Ticket, milestone, and release claims close only at their own
+  evidence altitude; hashes, headings, and green counts cannot supply missing
+  semantics.
 - Product progress advances one explicitly selected unresolved Product-defined
   outcome instance with a declared acceptance interval. Acceptance ends that
   instance's progress authority while prior witnesses remain regression
@@ -84,10 +97,10 @@ override this file for their subtree.
 - Product-slice promotion requires singular authority across the full causal
   closure of its acceptance path but does not close an enclosing migration.
   Ticket and review wording cannot exclude causally applicable authority;
-  competing authority, safety failures, retained-behavior regressions, and
-  durable architectural decisions that foreclose an admitted Product outcome
-  remain blocking. Other observations remain repricing input rather than
-  automatic scope or ticket creation.
+  competing or ambiguous authority, safety failures, retained-behavior
+  regressions, and durable architectural decisions that foreclose an admitted
+  Product outcome remain blocking. Other observations remain repricing input
+  rather than automatic scope or ticket creation.
 - Negative proof exercises the real authority path and never manufactures the
   refusal it later asserts.
 - Exact-candidate qualification declares the Product release subject,

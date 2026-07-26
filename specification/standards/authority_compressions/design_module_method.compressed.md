@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
+source_digest: 1b9e2eef7227e15e0df9c5ada99fb81cf244db2eb1396d1ddde23fd0298c110c
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-24
+generated_at: 2026-07-26
 stale_if_source_digest_changes: true
 ---
 
@@ -36,10 +36,17 @@ constitutional functionality
   -> accepted Ontology basis
   -> IACS
   -> target design and three-view projections
-  <-> implementation and tests
+  -> implementation and tests
   -> reconciliation and acceptance
   -> promotion and closure
+
+implementation and tests
+  -> evidence, counterexample, or falsification input
+  -> affected Ontology or design relation
 ```
+
+The first chain is semantic derivation. The second is evidence feedback.
+Implementation and tests cannot select or accept the affected semantic answer.
 
 The Ontology remains subordinate to constitutional `WHAT`. It may not invent
 product meaning.
@@ -53,13 +60,28 @@ An unchanged `realization_refactor` cites the accepted Ontology/design basis and
 proves `no ontology delta`; only affected semantic relations and projections
 re-enter.
 
-Use co-evolution when Product and requirements constrain the admissible
-realization enough to leave no unresolved material architecture decision.
-Design still owns structural `HOW`. Use a prior design gate when implementation
-would otherwise establish a durable identity, authority, lifecycle, public-
-contract, topology, effect, or closure decision. The gate is proportional to
-that decision, not the whole project: it must remove enough ambiguity to
-justify the reasoning surface it adds.
+Co-evolution is admissible only when the decision-complete network has no
+unresolved material relation. Neither co-evolution nor prior design is the
+global default. Use a prior design gate for the smallest causally closed
+decision set that implementation would otherwise establish durably. Count the
+downstream code, runtime-state, test, review, and reconciliation space that its
+bounded symbolic contraction removes.
+
+Design/implementation bidirectionality carries evidence, counterexamples,
+falsification, and reconciliation, never reverse semantic authority.
+Implementation cannot select a missing semantic answer or rewrite upstream
+truth to legalize itself. Material semantic surprise gates the affected
+decision set; serial code repair does not establish design acceptance.
+
+A design boundary is decision-complete only when its complete source-defined
+material-relation set—identities, authorities, functions, relationships,
+cardinalities, topology, lifecycle transitions, public contracts, externally
+observable Product meaning, admission conditions, failure and refusal routes,
+effect and closure laws, projections, module mappings, and material algorithmic
+obligations—forms one satisfiable constraint network. Artifact presence or
+individually plausible views do not prove completeness. Local implementation
+choices may remain open only when they are semantically equivalent under that
+network.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
@@ -81,12 +103,19 @@ surfaces.
   retirement authority. Actor and available capability are not authority.
 - Derive parameterized atomic function families and the governing higher-order
   composition/effect algebra before promoting peer operations.
-- Apply Prime to the complete function and carrier family, not only to each
-  proposed unit in isolation.
+- Treat Prime atoms as irreducible semantic-design relations, not as files,
+  source functions, classes, schemas, diagrams, operations, modules, or owner
+  categories. Realization units project accepted atoms and may map many-to-many.
+- Apply Prime to the complete semantic function and carrier family, not only
+  to each candidate atom in isolation.
+- An accepted Prime atom governs every admitted instance in its declared
+  domain. Later use cases compose or parameterize it; an in-domain
+  counterexample re-enters at the shared atom rather than authorizing a local
+  replacement.
 - Prove native constructability in the selected substrate before design
   acceptance; a bridge or promised future capability cannot hide a gap.
-- Apply Prime recursively and preserve root authority. Local minimality does
-  not prove that the resulting family is globally Prime.
+- Apply Prime recursively and preserve root authority. Local atom
+  irreducibility does not prove that the resulting family is globally Prime.
 - Count governance cost as well as implementation count; reducing files while
   multiplying authority or review surfaces is not contraction.
 - Treat IACS, class/sequence/state views, and public contracts as
@@ -106,13 +135,13 @@ surfaces.
 - Code, tests, generated artifacts, runtime fixtures, prompt prose, and local
   convention may prove lifecycle claims, but must not invent lifecycle
   authority.
-- In co-evolution mode, design evidence, implementation, and tests may develop
-  together. A new or materially changed boundary requires accepted Ontology
-  evidence, accepted domain/sequence/state projections, and complete cross-view
-  axiom evaluation before promotion or closure. In design-gated mode, the
-  unresolved material decision is accepted before retained implementation
-  establishes it. Existing accepted evidence is reused when the boundary is
-  unchanged.
+- Only when the decision-complete network has no unresolved material relation
+  may design evidence, implementation, and tests co-evolve. A new or materially
+  changed boundary requires accepted Ontology evidence, accepted
+  domain/sequence/state projections, and complete cross-view axiom evaluation
+  before promotion or closure. Otherwise the unresolved decision is accepted
+  before retained implementation establishes it. Existing accepted evidence is
+  reused when the boundary is unchanged.
 - The post-ticket design check may be part of normal verification. It blocks
   when the exact claim or an applicable hard stop fails, including causally
   applicable active authority that ticket or review wording cannot narrow away
@@ -120,6 +149,10 @@ surfaces.
   outcome. Optional cleanup, recurrence, generality, and cross-boundary
   observations are repricing input; they do not automatically widen the subject
   or require another ticket, artifact, review round, or reviewer.
+- Reconstruct closure from governing requirements through Ontology, Prime
+  atoms, IACS, views, modules, implementation, and module-owned proof. Hashes
+  prove identity; headings prove location; green tests prove only their actual
+  assertions. None supplies a missing semantic relation.
 - The retained recurrence rule remains distinct: a second credible recurrence
   requires commonization review, and a third local rebuild requires an explicit
   consume, extend, or do-not-commonize disposition.

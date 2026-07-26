@@ -643,6 +643,28 @@ interpretations. A short additional ticket, receipt, or summary may be
 disproportionate when it creates another truth surface without reducing
 uncertainty.
 
+A proportional method deliberately constrains the admissible reasoning and
+realization space. Each constraint must identify the semantic ambiguity, rival
+authority, failure class, or evidence uncertainty it removes and must remove
+enough of that space to justify the reasoning complexity it introduces. The
+method does not prescribe an internal decomposition, search, collaboration,
+tool, or synthesis procedure when variation in that procedure cannot affect a
+governed semantic, authority, evidence, safety, or release property. Increased
+agent capability may enlarge the bounded relation an agent can resolve; it does
+not grant authority, weaken an invariant, or waive acceptance.
+
+The owning law may justify one coherent constraint family once. This does not
+require a rationale field, receipt, or repeated audit for every clause or
+consumer application.
+
+For symbolic design, proportionality includes the counterfactual downstream
+reasoning space that the design contracts: materially divergent implementation
+paths, runtime states, tests, reviews, and reconciliation joins that would
+otherwise remain live. When one bounded symbolic model can resolve those
+material alternatives within effective reasoning capacity, resolving it at
+design altitude is proportional even when the model is detailed. A prior design
+surface that removes no material alternative remains disproportionate.
+
 A method addition is disproportionate when it duplicates truth, increases
 reconciliation paths, or expands the bounded reasoning surface without
 materially reducing ambiguity. Existing obligations should absorb new detail
@@ -1627,10 +1649,11 @@ When a feature is introduced or changed:
 3. Update **Product** if the current product realization, terms, boundaries, or end-state shape have changed.
 4. Update **Requirements** so the invariant truths are explicit as a decomposition of the product definition, including any lifecycle obligations or named lifecycle ambiguity gaps, and classify each new or changed requirement by category.
 5. Establish or update **Design** so it owns the governing structural `HOW`.
-   When upstream truth leaves no unresolved material architecture decision,
-   design, implementation, and tests may co-evolve. When such a decision
-   remains, accept the affected design before retained implementation
-   establishes it. ADRs are one valid design form.
+   When `DESIGN_MODULE_METHOD.md` applies and its decision-complete network has
+   no unresolved material relation, design, implementation, and tests may
+   co-evolve. Otherwise accept the smallest causally closed affected design set
+   before retained implementation establishes it. ADRs are one valid design
+   form.
 6. Write **Scenarios** for capability claims that require operational proof, and define other evidence surfaces for non-capability requirements where appropriate.
 7. Prefer declarative expression of the problem and acceptance surface before adding imperative mechanism.
 8. Check the reconstruction boundary: can the current goals support the current intent, can the current intent support the current product, can the current product support the intended requirements, can the current requirements support the intended design, and can the current design support the intended implementation?

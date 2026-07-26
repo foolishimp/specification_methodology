@@ -670,6 +670,13 @@ implementer self-review independent. Independent review is required at Product,
 qualification, release, and explicitly risk-bearing boundaries that claim it,
 not for every local implementation step.
 
+A claimed independent review may support promotion or closure only when its
+exact subject and verdict are durably traceable through an existing ticket,
+commentary, qualification, or release-evidence carrier. A statement that review
+occurred, an unbound conversation summary, or an unavailable draft is not the
+review verdict. This rule requires no separate receipt, carrier, or review
+round.
+
 A review verdict is bounded by the exact reviewed claim and its applicable hard
 stops. A finding blocks current promotion only when it falsifies that claim,
 exposes competing or ambiguous authority on its acceptance path, violates

@@ -16,16 +16,16 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: d0b536b955558b48e18ba5b292bf36c1dc1126a6ed5f92743422629f36683c7d
-  DESIGN_MODULE_METHOD.md: 0b59201e27bd04fa8c4cda92a3d01973dad31d6482fda6647473d007bf24efcb
+  SPEC_METHOD.md: 94905f03ead99eaca624856bdaa622fee4e5036d92c79add8499425a17eba3b1
+  DESIGN_MODULE_METHOD.md: 1b9e2eef7227e15e0df9c5ada99fb81cf244db2eb1396d1ddde23fd0298c110c
   ODD_METHOD.md: c0e21a41291d3a7b05614822e327258aa358aab1b43a669c2ec1e58e49c1df58
-  TICKET_METHOD.md: baa3fa0ad41f1bdb36d03e6ae871a2c658412e5a00e56b7e39394ebf834453ff
+  TICKET_METHOD.md: ce266bbc80d2cd465611241258bc5a64dd58c7806c78a3ef53fb33cfe2afbd26
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: 9348451648b4afc9f61c4f4b544aeafc7a92c3b1b5bc112872945cd44c8e0a53
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
-generated_at: 2026-07-25
+generated_at: 2026-07-26
 stale_if_source_digest_changes: true
 ---
 
@@ -77,11 +77,20 @@ layer that owns the missing truth.
 - Apply the gate proportionally. An unchanged `realization_refactor` cites the
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
-- Design, implementation, and tests may co-evolve when upstream truth leaves no
-  unresolved material architecture decision. Design still owns structural
-  `HOW`; an unresolved material decision requires a prior design gate at that
-  decision. Accepted Ontology, IACS, and three-view evidence always gate
-  promotion and closure.
+- Co-evolution is admissible only when the decision-complete network has no
+  unresolved material relation. Neither mode is the global default. Design
+  still owns structural `HOW`; otherwise the smallest causally closed
+  unresolved decision set requires a prior design gate. Design/implementation
+  feedback carries evidence and falsification, never reverse semantic
+  authority.
+- Treat Ontology, Prime, IACS, views, modules, implementation, and tests as
+  projections of one decision-complete satisfiable constraint network.
+  Headings, artifact presence, exact identity, and aggregate green labels
+  cannot supply a missing semantic relation.
+- Prime atoms are irreducible semantic-design relations. Realization units
+  project them, and an accepted atom governs every admitted instance in its
+  declared domain. Later cases compose or parameterize it rather than creating
+  feature-local replacements.
 - Method compression is a prompt input, not a replacement for the source method.
 - Select one complete immutable STDO version; mutable source and mixed standard
   sets are not consumer authority.
@@ -119,8 +128,11 @@ layer that owns the missing truth.
   growth authority.
 - Judge proportionality by semantic ambiguity removed versus effective
   reasoning complexity added, not by line or artifact count. Detail is lawful
-  when it contracts rival interpretations; duplicate truth and reconciliation
-  paths are not.
+  when it contracts rival interpretations. Count downstream implementation
+  paths, runtime states, tests, reviews, and reconciliation joins removed by
+  bounded symbolic design. Do not prescribe internal agent procedure when its
+  variation has no governed effect, and do not create per-clause rationale
+  carriers.
 - When both strategies are lawful and feasible, bounded evolution is the
   rebuttable selection presumption when a working predecessor can reach the
   admitted outcome without competing or ambiguous authority. It never requires

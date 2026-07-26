@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: d0b536b955558b48e18ba5b292bf36c1dc1126a6ed5f92743422629f36683c7d
+source_digest: 94905f03ead99eaca624856bdaa622fee4e5036d92c79add8499425a17eba3b1
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-25
+generated_at: 2026-07-26
 stale_if_source_digest_changes: true
 ---
 
@@ -79,6 +79,16 @@ capabilities through neutral identities rather than consumer precedent.
   reasoning complexity added, not by line or artifact count. Detail is lawful
   when it contracts rival interpretations; duplicate truth and reconciliation
   paths are not.
+- STDO intentionally constrains admissible reasoning and realization, but each
+  constraint identifies the governed ambiguity, rival authority, failure
+  class, or evidence uncertainty it removes. Do not prescribe an internal
+  search, decomposition, collaboration, tool, or synthesis procedure when its
+  variation cannot affect a governed property. One owning law may justify a
+  coherent constraint family; do not create a per-clause rationale carrier.
+- For bounded symbolic design, count the materially divergent implementation
+  paths, runtime states, tests, reviews, and reconciliation joins it contracts.
+  Increased agent capability may enlarge the relation resolved; it does not
+  grant authority, weaken invariants, or waive acceptance.
 - Prioritize fast Product feedback under that same relation; this is not a
   global scheduler or fixed execution sequence.
 - When both strategies are lawful and feasible, bounded evolution is the

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: baa3fa0ad41f1bdb36d03e6ae871a2c658412e5a00e56b7e39394ebf834453ff
+source_digest: ce266bbc80d2cd465611241258bc5a64dd58c7806c78a3ef53fb33cfe2afbd26
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-07-24
+generated_at: 2026-07-26
 stale_if_source_digest_changes: true
 ---
 
@@ -39,13 +39,16 @@ proof, and current status.
 - Milestone acceptance proves only its bounded claim; design, implementation,
   qualification, and release remain distinct closure boundaries.
 - Implementer self-review is not independent review. Human acceptance does not
-  relabel it.
+  relabel it. An independent-review claim supports promotion or closure only
+  when its exact subject and verdict are durably traceable in an existing
+  ticket, commentary, qualification, or release-evidence carrier; no separate
+  receipt or review round is required.
 - A review finding blocks when it falsifies the exact claim, contradicts
-  causally applicable authority, exposes competing authority, violates safety
-  or retained accepted behavior, or establishes a durable architectural
-  decision that forecloses an admitted Product outcome. Other observations are
-  repricing input and do not automatically widen the subject or require another
-  ticket, artifact, review, or implementation increment.
+  causally applicable authority, exposes competing or ambiguous authority,
+  violates safety or retained accepted behavior, or establishes a durable
+  architectural decision that forecloses an admitted Product outcome. Other
+  observations are repricing input and do not automatically widen the subject
+  or require another ticket, artifact, review, or implementation increment.
 - Execution-contract admission validates against a cited growth basis; it does
   not admit or renew that basis. Admission or renewal belongs to the Goals
   work-wave owner or explicitly bounded proxy and remains durably legible in
