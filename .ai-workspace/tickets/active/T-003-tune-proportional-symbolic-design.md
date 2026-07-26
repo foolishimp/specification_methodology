@@ -4,7 +4,7 @@
 - type: feature
 - ticket_category: ordinary
 - status: active
-- review_status: exact_rc_review_accepted
+- review_status: final_delta_proven_awaiting_human_acceptance
 - goal: publish-one-bounded-stdo-2.2.1-tuning
 - change_intent: tune proportional symbolic contraction, design authority, Prime semantic atoms, and semantic review without prescribing agent procedure or adding governance machinery
 - change_class: requirement_reprice
@@ -151,5 +151,6 @@ basis.
 The immutable `v2.2.1-rc.1` exact-cut review requested changes. The bounded
 repairs were frozen and published as `v2.2.1-rc.2`. Fresh independent semantic,
 mechanical, and heterogeneous exact-tag reviews accepted that exact cut with no
-P0/P1/P2 blocker. Exact final-delta proof, direct human acceptance, and final
+P0/P1/P2 blocker. The proposed final carrier is the exact RC subject and its
+zero-byte final-delta relation is proven. Direct human acceptance and final
 publication remain open.
