@@ -9,18 +9,18 @@ misinterpret.
 
 ## Governing Outcome
 
-One exact `v2.2.1` release subject clarifies the existing law without selecting
-a fixed reasoning procedure, blanket design-first sequence, new artifact
-programme, or executable governance. The current operative Product remains
-`v2.2.0` until that successor is independently reviewed, directly accepted,
-and tapped.
+One exact `v2.2.1` release subject makes the bounded clarifications and
+supersessions declared in its predecessor delta without selecting a fixed
+reasoning procedure, blanket design-first sequence, new artifact programme, or
+executable governance. The current operative Product remains `v2.2.0` until
+that successor is independently reviewed, directly accepted, and tapped.
 
 ## Milestones
 
 | Milestone | Exit | State |
 |---|---|---|
 | `M0` Predecessor | Exact `v2.2.0` source, release identity, and post-publication continuation are fixed. | completed |
-| `M1` Normative tuning | Proportional constraint selection, decision completeness, Prime semantic atoms, and review reconstruction are clarified in their existing owners. | completed |
+| `M1` Normative tuning | Proportional constraint selection, decision completeness, Prime semantic atoms, and review reconstruction are tuned in their existing owners with explicit predecessor dispositions. | completed |
 | `M2` Derived reconciliation | Product, compressions, templates, ticket, and release delta preserve every amended predicate. | completed |
 | `M3` RC qualification | One immutable final-ready `v2.2.1` RC passes exact-cut review. | pending |
 | `M4` Tap | Direct human acceptance binds the exact final carrier and final-delta relation before `v2.2.1` publication. | pending |

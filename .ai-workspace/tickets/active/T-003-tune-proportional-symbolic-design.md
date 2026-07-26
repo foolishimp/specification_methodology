@@ -6,12 +6,12 @@
 - status: active
 - review_status: candidate_ready_for_review
 - goal: publish-one-bounded-stdo-2.2.1-tuning
-- change_intent: clarify proportional symbolic contraction, design authority, Prime semantic atoms, and semantic review without prescribing agent procedure or adding governance machinery
+- change_intent: tune proportional symbolic contraction, design authority, Prime semantic atoms, and semantic review without prescribing agent procedure or adding governance machinery
 - change_class: requirement_reprice
 - re_entry_point: specification/standards/SPEC_METHOD.md
 - triaged_at: 2026-07-26
 - created_at: 2026-07-26
-- updated_at: 2026-07-26
+- updated_at: 2026-07-27
 
 ## Construction Basis
 
@@ -63,10 +63,13 @@ basis.
     counts cannot supply missing semantics.
 12. Independent-review claims supporting closure remain durably traceable in an
     existing carrier without creating another receipt system or review round.
-13. The amendment makes the consequence of the accepted `v2.2.0`
-    proportional-design law harder to detach or evade. It does not create a new
-    design obligation: `v2.2.0` already required a design gate where retained
-    implementation would otherwise establish a material architectural decision.
+13. The amendment preserves the accepted `v2.2.0` proportional-design purpose.
+    It clarifies decision-complete reconstruction and the smallest affected
+    design gate while superseding the narrower permission for retained
+    co-evolution during discovery of unresolved `M(B)` relations. Retained
+    co-evolution now requires `U(B)` to be empty; otherwise only a disposable
+    spike may cross the unresolved decision as evidence before design
+    acceptance.
 
 ## Amendment Owners
 
@@ -82,13 +85,15 @@ basis.
 ## Evaluation Criteria
 
 1. The amendment preserves the complete immutable `v2.2.0` Product except for
-   the explicit clarifications above.
+   the explicit clarifications and supersessions above.
 2. Co-evolution permission and its no-unresolved-material-decision predicate
    remain inseparable in source, compressions, and agent templates.
 3. Prime remains symbolic design law and realization remains its projection.
-4. The release delta states explicitly that the decision-complete design
-   predicate clarifies `v2.2.0`; it does not make a draft successor the source
-   of an obligation that already governed consumers.
+4. The release delta distinguishes clarified reconstruction and affected scope
+   from the superseded `v2.2.0` retained-co-evolution permission while
+   preserving proportional mode choice, design authority, and unrelated
+   accepted work. Draft successor law remains non-operative before release and
+   consumer selection.
 5. The amended surfaces do not impose a fixed reasoning strategy, blanket
    sequencing rule, runtime, schema, threshold, worker count, or new artifact.
 6. Source-maintained compressions bind exact source digests and preserve every
@@ -123,6 +128,7 @@ basis.
 
 ## Current State
 
-Source-law authoring and derived reconciliation are complete. Exact candidate
-freeze, pre-RC qualification, independent review, acceptance, and publication
-remain open.
+Source-law authoring, derived reconciliation, and the bounded predecessor-
+disposition repair are complete. Exact corrected-candidate freeze, pre-RC
+qualification, independent exact-RC review, acceptance, and publication remain
+open.
