@@ -333,9 +333,9 @@ yet implementation-conformant under this method.
 
 Every new or materially changed active semantic boundary must derive its
 semantic model from one accepted **Ontology**. Before a new or changed entity,
-function, authority, effect, Prime carrier, module boundary, public operation,
-or schema is promoted, the affected boundary must first produce a candidate
-Ontology slice and carry it through the acceptance sequence below.
+function, authority, effect, Prime-conformant carrier, module boundary, public
+operation, or schema is promoted, the affected boundary must first produce a
+candidate Ontology slice and carry it through the acceptance sequence below.
 
 The Ontology is the prior **semantic-design authority** for the boundary. It is
 subordinate to constitutional `WHAT`: it derives from intent, product,
@@ -373,32 +373,44 @@ merely because one source digest changed.
 ### Proportional Design Sequencing
 
 For one governed boundary `B`, let `M(B)` be its complete material-relation set
-defined under Decision-Complete Symbolic Design, and let `U(B)` be the unresolved
-members of that set:
+defined under Decision-Complete Symbolic Design, and let `U(B)` be the
+unresolved members of that set:
 
 ```text
 U(B) = unresolved(M(B))
-co_evolution_admissible(B) iff U(B) = empty
-design_gate(B) = the smallest causally closed decision set needed to contract U(B)
+decision_complete(B) iff
+  U(B) = empty
+  and M(B) is jointly satisfiable
+  and every network admitted by M(B) is semantically equivalent under the
+      governing Product, requirements, and accepted design relations
+co_evolution_admissible(B) iff decision_complete(B)
+design_gate(B) =
+  the smallest causally closed affected set needed to establish
+  decision_complete(B)
 ```
 
-Design sequencing follows `U(B)` rather than one global authoring order:
+Design sequencing follows `decision_complete(B)` rather than one global
+authoring order:
 
-- **co-evolution** is lawful only when `U(B)` is empty. Design still owns the
-  structural `HOW`, but design, implementation, and tests may evolve together
-  and reconcile before promotion or closure;
+- **co-evolution** is lawful only when `decision_complete(B)` holds. Design
+  still owns the structural `HOW`, but design, implementation, and tests may
+  evolve together and reconcile before promotion or closure;
 - **design-gated** sequencing is required when implementation would otherwise
-  select any member of `U(B)` with durable consequences for future change. The
-  affected design decision must be accepted before retained implementation
-  establishes it. A disposable spike may supply evidence without becoming the
-  selected design.
+  establish an unresolved or contradictory relation, or choose between
+  materially non-equivalent networks, with durable consequences for future
+  change. The affected design decision must be accepted before retained
+  implementation establishes it. A disposable spike may supply evidence
+  without becoming the selected design.
 
 Neither mode is the global default. The same proportionality relation selects
-between them. Where a bounded symbolic model can contract `U(B)` within
-effective reasoning capacity, the code, runtime-state, test, review, and
-reconciliation space thereby removed counts in favor of the design gate.
-Where no material alternative remains, a separate prior gate adds ceremony
-without disambiguation.
+between them. Proportionality decides which relations are material and bounds
+the smallest affected gate; decision completeness is the resulting
+admissibility test. Where a bounded symbolic model can contract the material
+semantic alternatives within effective reasoning capacity, the code,
+runtime-state, test, review, and reconciliation space thereby removed is
+counterfactual evidence of that contraction, not an independent reason for a
+design gate. Where no material alternative remains, a separate prior gate adds
+ceremony without disambiguation.
 
 The bidirectional design-and-implementation relation is an evidence relation,
 not bidirectional semantic authority. Implementation may provide a
@@ -417,10 +429,11 @@ require one bounded `design_reframe`; retained code remains provisional
 evidence until that reframe is accepted.
 
 This applies the governing proportionality law: a prior design gate is
-warranted when the ambiguity it removes and the durable architecture it
-protects justify its reasoning load. It is disproportionate when upstream
-truth leaves no materially divergent architecture to adjudicate and a separate
-prior acceptance would add no disambiguation. Design still records and owns the
+warranted when it removes material semantic ambiguity whose alternatives would
+establish materially different durable architecture, and that contraction
+justifies its reasoning load. It is disproportionate when upstream truth leaves
+no materially divergent architecture to adjudicate and a separate prior
+acceptance would add no disambiguation. Design still records and owns the
 resulting `HOW` before promotion or closure.
 
 For this method:
@@ -448,16 +461,20 @@ For one governed boundary `B`, the complete material-relation set is:
 
 ```text
 M(B) =
-  identities
-  + authorities
-  + functions
+  entities
+  + identities
   + relationships
   + cardinalities
+  + invariants
+  + authorities
+  + authority transitions
+  + functions
+  + higher-order composition laws
   + topology
-  + lifecycle transitions
+  + lifecycle states and transitions
   + public contracts
   + externally observable Product meaning
-  + admission conditions
+  + declared domains and admission conditions
   + failure and refusal routes
   + effect and closure laws
   + projections
@@ -465,8 +482,10 @@ M(B) =
   + material algorithmic obligations
 ```
 
-A design boundary is **decision-complete** when every member of `M(B)` forms
-one jointly satisfiable constraint network.
+A design boundary is **decision-complete** when `U(B)` is empty, `M(B)` forms
+one jointly satisfiable constraint network, and every network admitted by
+`M(B)` is semantically equivalent under the governing Product, requirements,
+and accepted design relations.
 
 Ontology, Prime contraction, IACS, target design, domain/sequence/state views,
 public contracts, module boundaries, implementation, and tests are projections
@@ -474,12 +493,12 @@ of that one network at different reasoning altitudes. Their presence, section
 names, individual plausibility, or mechanical validity does not establish
 decision completeness.
 
-The boundary is underconstrained whenever `U(B)` is non-empty, including when
-implementation must introduce a new material semantic decision or two
-materially different networks remain admissible. Local algorithm and layout
-choices may remain open only when every admitted choice is semantically
-equivalent under the accepted network. Contradictory projections make the
-design unsatisfiable and block promotion.
+The boundary is underconstrained whenever `decision_complete(B)` is false,
+including when implementation must introduce a new material semantic decision,
+projections contradict one another, or two materially non-equivalent networks
+remain admissible. Local algorithm and layout choices may remain open only when
+every admitted choice is semantically equivalent under the accepted network.
+Contradictory projections make the design unsatisfiable and block promotion.
 
 Decision completeness does not require another document. The constraint
 network may be expressed through the existing Ontology, algebra, module mapping,
@@ -625,10 +644,11 @@ may bind the requirement to GTL composition and ABG interpretation; another
 product may use another explicit algebra. Composition, effects, and
 implementation may be discovered iteratively only when
 `co_evolution_admissible(B)` holds. Otherwise only a disposable spike may
-supply evidence across the unresolved decision before its design is accepted.
-Every retained result must be reconciled into accepted design before promotion
-or design-method closure. No private helper, loop, adapter, or endpoint may
-become an undeclared constructor.
+supply evidence across the affected unresolved, contradictory, or materially
+non-equivalent relation before its design is accepted. Every retained result
+must be reconciled into accepted design before promotion or design-method
+closure. No private helper, loop, adapter, or endpoint may become an undeclared
+constructor.
 
 ### Prime Semantic Atoms And Universal Domain
 
@@ -653,10 +673,16 @@ another candidate atom for design admission. An in-domain counterexample
 falsifies the shared atom and re-enters at that atom's design boundary rather
 than authorizing a feature-local replacement.
 
+An atom without a declared admitted domain remains a candidate atom. It cannot
+supply Prime acceptance or Prime-conformance to a realization projection.
+
 ### Whole-Family Prime Contraction
 
-Prime review must evaluate the complete candidate function and carrier family,
-not only each proposed unit in isolation.
+Prime review evaluates the complete candidate semantic-atom family and every
+proposed realization projection, not only functions, carriers, or each atom in
+isolation. The family includes every proposed identity, authority transition,
+lifecycle relation, topology, function, composition law, effect, and closure
+law. A function-and-carrier-only pass does not establish whole-family Prime.
 
 Before promotion, review must ask:
 
@@ -666,6 +692,10 @@ Before promotion, review must ask:
 - are several implementations applications of one higher-order function?
 - does the candidate introduce independent identity, authority, effect,
   lifecycle, reuse, or public pattern-match semantics?
+- has every candidate atom kind entered the same contraction?
+- does every realization unit map explicitly to its accepted atom or atoms?
+- does any realization projection introduce, duplicate, or reinterpret meaning
+  or authority?
 
 A family of individually plausible functions is not Prime when one
 parameterized template plus closed variants carries the same meaning and
@@ -684,9 +714,12 @@ semantic family globally Prime.
 Contraction must preserve root authority and every retained semantic relation.
 Reducing files, functions, operations, or authoring surfaces cannot compensate
 for introducing another authority source or truth path. Prime evidence states
-the candidate family, contraction relation, retained meaning, authority before
-and after, accepted loss, and falsification condition. Work inside an accepted
-boundary cites the existing Prime basis rather than recreating it.
+the complete candidate semantic-atom family; each atom's stable identity,
+irreducible relation, admitted domain, and falsification condition; the
+whole-family contraction relation; retained meaning and authority before and
+after contraction; accepted loss; and the explicit total mapping from every
+proposed realization projection to its accepted atom or atoms. Work inside an
+accepted boundary cites the existing Prime basis rather than recreating it.
 
 ### Ontology Projection Law
 
@@ -814,7 +847,7 @@ required to carry the real functionality and authority flow of the boundary.
 That set should be named before subordinate payload records, helper result
 shapes, or internal branch detail.
 
-Examples of architecturally prime carrier roles include:
+Examples of irreducible architectural carrier roles include:
 
 - source truth carrier
 - admission carrier
@@ -854,8 +887,9 @@ implementation, and tests may develop together. Implementation may expose a
 missing entity, relation, function, or carrier, but it cannot self-ratify that
 meaning. Before the affected boundary is promoted or claims design-method
 closure, the Ontology and IACS must be accepted and the typed implementation
-reconciled to them. Under design-gated sequencing, the unresolved material
-decision is accepted before retained implementation establishes it.
+reconciled to them. Under design-gated sequencing, the affected unresolved,
+contradictory, or materially non-equivalent relation is accepted before
+retained implementation establishes it.
 
 ## 5B. Promotion Test
 
@@ -975,10 +1009,11 @@ Every new or materially changed semantic or typed module boundary must carry
 one accepted Ontology and one complete three-view Mermaid design asset before
 the boundary is promoted or claims design-method closure. When
 `co_evolution_admissible(B)` holds, design evidence, implementation, and tests
-may develop together before that gate. Otherwise the unresolved material
-relation is accepted before retained implementation establishes it. Unchanged
-boundaries cite their accepted basis; local realization work with no material
-semantic-boundary delta does not recreate this gate.
+may develop together before that gate. Otherwise the affected unresolved,
+contradictory, or materially non-equivalent relation is accepted before
+retained implementation establishes it. Unchanged boundaries cite their
+accepted basis; local realization work with no material semantic-boundary delta
+does not recreate this gate.
 
 The asset must contain all three views:
 
@@ -1010,7 +1045,8 @@ include or reference its:
 - authority matrix;
 - atomic-function and higher-order-function derivation matrix;
 - governing composition and effect algebra where applicable;
-- whole-family Prime contraction result; and
+- whole-family Prime contraction, including every accepted atom's admitted
+  domain and realization-projection mapping; and
 - explicit deferred, excluded, and unresolved functionality.
 
 The Ontology may be a boundary-bounded slice of a wider accepted product
@@ -1028,7 +1064,7 @@ show, for the active boundary:
 - atomic function families and their entity inputs and outputs where they cross
   the active boundary;
 - higher-order composition relationships where they determine boundary shape;
-- prime carriers;
+- IACS carriers and their Prime-atom projection mappings;
 - subordinate payloads;
 - effect-edge-only payloads;
 - downstream-only projections;
@@ -1039,7 +1075,7 @@ show, for the active boundary:
 
 The standard stereotype vocabulary is:
 
-- `<<prime>>`
+- `<<prime-conformant>>`
 - `<<subordinate>>`
 - `<<effect-edge>>`
 - `<<deferred>>`
@@ -1143,17 +1179,18 @@ When `co_evolution_admissible(B)` holds, implementation may precede or develop
 with design evidence and may be retained after reconciliation. Until the
 design gate is accepted, it is provisional evidence: it does not author
 semantic truth, earn publication authority, or satisfy promotion or closure.
-Otherwise only a disposable spike may cross the unresolved decision before
-design acceptance.
+Otherwise only a disposable spike may cross the affected unresolved,
+contradictory, or materially non-equivalent relation before design acceptance.
 
 Existing implementation placed under retrospective review may continue to
 inform the affected design. Co-evolution remains lawful only while
-`co_evolution_admissible(B)` holds; newly discovered material ambiguity adds a
-member to `U(B)` and activates the design gate for that decision. Promotion and
-design-method closure remain blocked until the required Ontology, three-view
-asset, and axiom evaluation are accepted. The design must evaluate the code
-against prior authority; it must not rewrite the Ontology or diagrams merely
-to rationalize an unlawful implementation shape.
+`co_evolution_admissible(B)` holds; newly discovered material ambiguity,
+contradiction, or materially non-equivalent network makes
+`decision_complete(B)` false and activates the design gate for that decision.
+Promotion and design-method closure remain blocked until the required
+Ontology, three-view asset, and axiom evaluation are accepted. The design must
+evaluate the code against prior authority; it must not rewrite the Ontology or
+diagrams merely to rationalize an unlawful implementation shape.
 
 The asset must stay boundary-bounded. It is a defect if it mixes an active
 semantic boundary with unrelated bootstrap, test-harness, projection, or
@@ -1263,10 +1300,11 @@ The first chain is semantic derivation. The second is evidence feedback and
 cannot select or accept the affected semantic answer. When
 `co_evolution_admissible(B)` holds, the two chains may proceed together without
 making implementation semantic authority. Design still owns the structural
-`HOW`. Where `U(B)` is non-empty, the relation is design-gated at the smallest
-causally closed affected decision set and retained implementation follows its
-acceptance. An unchanged `realization_refactor` cites the accepted relation and
-proves no material semantic-boundary delta; it does not recreate the evidence.
+`HOW`. Where `decision_complete(B)` is false, the relation is design-gated at
+the smallest causally closed affected decision set and retained implementation
+follows its acceptance. An unchanged `realization_refactor` cites the accepted
+relation and proves no material semantic-boundary delta; it does not recreate
+the evidence.
 
 Completeness requires:
 
@@ -1822,9 +1860,9 @@ When reviewing code under this method, ask:
 21. If a reference realization exists, has the target boundary been derived
     explicitly from reference design to target design to target module assets
     rather than from code drift?
-22. Does a module-bounded domain projection exist and accurately show prime
-    carriers, subordinate payloads, visibility, ownership, and deferred
-    families from the accepted Ontology?
+22. Does a module-bounded domain projection exist and accurately show IACS
+    carriers, their Prime-atom projection mappings, subordinate payloads,
+    visibility, ownership, and deferred families from the accepted Ontology?
 23. Do the unit tests derive from module ownership and module assets rather
     than from helper layout or incidental code shape?
 24. If the change claims cleanup or optimization, does it stay boundary-local,
@@ -1872,8 +1910,8 @@ When reviewing code under this method, ask:
     rather than bypassed with imperative glue?
 40. Is the proportional sequencing relation justified, and is the design
     verdict explicitly `accepted` before promotion or closure and, where
-    design-gated, before retained implementation establishes the unresolved
-    architecture?
+    design-gated, before retained implementation establishes an unresolved or
+    contradictory relation or chooses a materially non-equivalent network?
 41. Does one accepted Ontology exist before IACS, public operation, schema,
     module, or implementation promotion?
 42. Does the Ontology enumerate entities, identities, relationships,
@@ -1885,9 +1923,10 @@ When reviewing code under this method, ask:
 44. Has every discovered functionality item been derived through an atomic
     function or higher-order composition, explicitly deferred or excluded, or
     assigned to a named gap?
-45. Was Prime contraction applied to the complete candidate function and
-    carrier family, including the parameterized-template test, rather than only
-    to each proposed unit in isolation?
+45. Was Prime contraction applied to the complete candidate semantic-atom
+    family and all proposed realization projections, with every accepted
+    atom's admitted domain recorded, rather than only to functions, carriers,
+    or isolated units?
 46. Does the boundary declare its composition and effect algebra and prove
     identity, closure, cardinality, effect, and authority conservation where
     applicable?
@@ -1923,6 +1962,9 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 - [ ] Has whole-family Prime contraction factored repeated behavior into
       parameterized atomic functions and declared higher-order composition
       before peer functions, operations, or carriers are promoted?
+- [ ] Does Prime evidence cover the complete candidate semantic-atom family,
+      record every accepted atom's admitted domain, and map accepted atoms to
+      every proposed realization projection?
 - [ ] Are the IACS, three views, public contracts, adapters, implementation, and
       tests fidelity-checked projections of the accepted Ontology rather than
       independent design authorities?
@@ -2011,9 +2053,11 @@ For a new or materially changed boundary, the compact hard-gate version of this
 checklist is:
 
 - [ ] accepted Ontology before promotion or closure and, where design-gated,
-      before retained implementation establishes unresolved architecture
+      before retained implementation establishes an unresolved or contradictory
+      relation or chooses a materially non-equivalent network
 - [ ] complete entity lifecycle, authority, and function-derivation evidence
-- [ ] whole-family Prime contraction and declared composition/effect algebra
+- [ ] whole-family Prime contraction, accepted atom domains, realization
+      projection mappings, and declared composition/effect algebra
 - [ ] pure functions in the semantic center
 - [ ] immutable carriers with no shared mutable semantic state
 - [ ] one owner per truth surface
@@ -2063,7 +2107,8 @@ the governing ADR or ticket rather than leaving them implicit.
 Every new or materially changed adopted semantic boundary must declare or cite
 its accepted Ontology before claiming design-method completion. The Ontology
 evidence must include entity lifecycle, authority, function derivation,
-whole-family Prime, and projection traceability at the granularity applicable
+whole-family Prime, each accepted atom's admitted domain, atom-to-realization
+projection mappings, and projection traceability at the granularity applicable
 to the material change.
 
 When the material change includes schema or typed carrier work, the project

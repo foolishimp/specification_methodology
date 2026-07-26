@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 1b9e2eef7227e15e0df9c5ada99fb81cf244db2eb1396d1ddde23fd0298c110c
+source_digest: 13e7e49233bb61d8a73b1b83cc379afc80f0c2d9c74d52926a4d90feb1337233
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -60,12 +60,16 @@ An unchanged `realization_refactor` cites the accepted Ontology/design basis and
 proves `no ontology delta`; only affected semantic relations and projections
 re-enter.
 
-Co-evolution is admissible only when the decision-complete network has no
-unresolved material relation. Neither co-evolution nor prior design is the
-global default. Use a prior design gate for the smallest causally closed
-decision set that implementation would otherwise establish durably. Count the
-downstream code, runtime-state, test, review, and reconciliation space that its
-bounded symbolic contraction removes.
+Co-evolution is admissible only when `decision_complete(B)` holds: the complete
+material-relation set has no unresolved member, is jointly satisfiable, and
+admits no materially non-equivalent network under governing Product,
+requirements, and accepted design relations. Neither co-evolution nor prior
+design is the global default. Use a prior design gate for the smallest causally
+closed set that implementation would otherwise establish as an unresolved,
+contradictory, or materially non-equivalent relation. Downstream code,
+runtime-state, test, review, and reconciliation space removed is
+counterfactual evidence of semantic alternatives contracted, not an
+independent reason for the gate.
 
 Design/implementation bidirectionality carries evidence, counterexamples,
 falsification, and reconciliation, never reverse semantic authority.
@@ -74,14 +78,16 @@ truth to legalize itself. Material semantic surprise gates the affected
 decision set; serial code repair does not establish design acceptance.
 
 A design boundary is decision-complete only when its complete source-defined
-material-relation set—identities, authorities, functions, relationships,
-cardinalities, topology, lifecycle transitions, public contracts, externally
-observable Product meaning, admission conditions, failure and refusal routes,
-effect and closure laws, projections, module mappings, and material algorithmic
-obligations—forms one satisfiable constraint network. Artifact presence or
-individually plausible views do not prove completeness. Local implementation
-choices may remain open only when they are semantically equivalent under that
-network.
+material-relation set—entities, identities, relationships, cardinalities,
+invariants, authorities, authority transitions, functions, higher-order
+composition laws, topology, lifecycle states and transitions, public
+contracts, externally observable Product meaning, declared domains and
+admission conditions, failure and refusal routes, effect and closure laws,
+projections, module mappings, and material algorithmic obligations—has no
+unresolved member, forms one jointly satisfiable constraint network, and
+admits no materially non-equivalent network. Artifact presence or individually
+plausible views do not prove completeness. Local implementation choices may
+remain open only when they are semantically equivalent under that network.
 
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
@@ -106,12 +112,17 @@ surfaces.
 - Treat Prime atoms as irreducible semantic-design relations, not as files,
   source functions, classes, schemas, diagrams, operations, modules, or owner
   categories. Realization units project accepted atoms and may map many-to-many.
-- Apply Prime to the complete semantic function and carrier family, not only
-  to each candidate atom in isolation.
+- Apply Prime to the complete candidate semantic-atom family and every proposed
+  realization projection, not only to functions, carriers, or each atom in
+  isolation.
 - An accepted Prime atom governs every admitted instance in its declared
   domain. Later use cases compose or parameterize it; an in-domain
   counterexample re-enters at the shared atom rather than authorizing a local
-  replacement.
+  replacement. An atom without a declared admitted domain remains a candidate
+  and cannot confer Prime-conformance.
+- Prime evidence records each accepted atom's admitted domain, the whole-family
+  contraction, and the explicit total mapping from every proposed realization
+  projection to its accepted atom or atoms.
 - Prove native constructability in the selected substrate before design
   acceptance; a bridge or promised future capability cannot hide a gap.
 - Apply Prime recursively and preserve root authority. Local atom
@@ -135,11 +146,12 @@ surfaces.
 - Code, tests, generated artifacts, runtime fixtures, prompt prose, and local
   convention may prove lifecycle claims, but must not invent lifecycle
   authority.
-- Only when the decision-complete network has no unresolved material relation
-  may design evidence, implementation, and tests co-evolve. A new or materially
-  changed boundary requires accepted Ontology evidence, accepted
+- Only when `decision_complete(B)` holds—no unresolved member, joint
+  satisfiability, and no materially non-equivalent admitted network—may design
+  evidence, implementation, and tests co-evolve. A new or materially changed
+  boundary requires accepted Ontology evidence, accepted
   domain/sequence/state projections, and complete cross-view axiom evaluation
-  before promotion or closure. Otherwise the unresolved decision is accepted
+  before promotion or closure. Otherwise the affected relation is accepted
   before retained implementation establishes it. Existing accepted evidence is
   reused when the boundary is unchanged.
 - The post-ticket design check may be part of normal verification. It blocks

@@ -38,25 +38,34 @@ override this file for their subtree.
 
 ### Design And Assurance Compression
 
-- At a material semantic boundary, derive Ontology, IACS, and domain, sequence,
-  and state views from one semantic basis. Co-evolution is admissible only when
-  the decision-complete network has no unresolved material relation; design
-  still owns structural `HOW`. Otherwise gate the smallest causally closed
-  unresolved decision set before retained implementation establishes it.
+- At a material semantic boundary where Design Module Method applies, derive
+  Ontology, IACS, and domain, sequence, and state views from one semantic basis.
+  Co-evolution is admissible only when the complete material-relation set has no
+  unresolved member, is jointly satisfiable, and admits no materially
+  non-equivalent network under the governing Product, requirements, and
+  accepted design relations; design still owns structural `HOW`. Otherwise
+  gate the smallest causally closed affected set before retained implementation
+  establishes the unresolved, contradictory, or materially non-equivalent
+  relation. Outside an adopted Design Module Method boundary, retain the generic
+  no-unresolved-material-design-decision test.
 - Design/implementation bidirectionality carries evidence and falsification,
   not reverse semantic authority. Material surprise re-enters design; serial
   code repair does not establish design acceptance.
-- Judge proportionality by ambiguity removed versus effective reasoning
-  complexity added, including downstream code, runtime states, tests, reviews,
-  and reconciliation paths contracted by bounded symbolic design. Constrain
-  agent procedure only where its variation can affect a governed property; do
-  not create per-clause rationale carriers.
+- Judge proportionality by semantic ambiguity removed versus effective
+  reasoning complexity added. Rival authority, failure classification, and
+  evidence uncertainty are types or evidence of materially distinct
+  interpretations removed; downstream code, runtime states, tests, reviews, and
+  reconciliation paths are counterfactual evidence of that contraction, not an
+  independent numerator. Constrain agent procedure only where its variation
+  can affect a governed property; do not create per-clause rationale carriers.
 - Treat Ontology, Prime, IACS, views, modules, implementation, and tests as
-  projections of one decision-complete satisfiable constraint network.
-- Apply Prime recursively to the whole semantic candidate family. Prime atoms
-  are design relations, not files or functions; accepted atoms govern every
-  admitted instance in their declared domain. Preserve root authority and count
-  governance cost.
+  projections of the same decision-complete network.
+- Apply Prime recursively to the complete candidate semantic-atom family and
+  every realization projection. Prime atoms are design relations, not files or
+  functions; every accepted atom records its admitted domain and governs every
+  admitted instance in it, and every proposed realization projection maps to
+  its accepted atom or atoms. Preserve root authority and count governance
+  cost.
 - Prove native constructability in the selected substrate before accepting
   design; a bridge or future capability does not close the gap.
 - Identify the exact proof target and nearest weaker excluded property. Keep

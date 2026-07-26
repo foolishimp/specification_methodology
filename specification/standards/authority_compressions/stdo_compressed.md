@@ -16,8 +16,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: 94905f03ead99eaca624856bdaa622fee4e5036d92c79add8499425a17eba3b1
-  DESIGN_MODULE_METHOD.md: 1b9e2eef7227e15e0df9c5ada99fb81cf244db2eb1396d1ddde23fd0298c110c
+  SPEC_METHOD.md: 220144b53f801b8cd4ec905a5745598bedeb2b6562d2759b74bea16bb44f9432
+  DESIGN_MODULE_METHOD.md: 13e7e49233bb61d8a73b1b83cc379afc80f0c2d9c74d52926a4d90feb1337233
   ODD_METHOD.md: c0e21a41291d3a7b05614822e327258aa358aab1b43a669c2ec1e58e49c1df58
   TICKET_METHOD.md: ce266bbc80d2cd465611241258bc5a64dd58c7806c78a3ef53fb33cfe2afbd26
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
@@ -77,20 +77,25 @@ layer that owns the missing truth.
 - Apply the gate proportionally. An unchanged `realization_refactor` cites the
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
-- Co-evolution is admissible only when the decision-complete network has no
-  unresolved material relation. Neither mode is the global default. Design
-  still owns structural `HOW`; otherwise the smallest causally closed
-  unresolved decision set requires a prior design gate. Design/implementation
-  feedback carries evidence and falsification, never reverse semantic
-  authority.
+- Where `DESIGN_MODULE_METHOD` is adopted, co-evolution is admissible only when
+  the complete material-relation set has no unresolved member, is jointly
+  satisfiable, and admits no materially non-equivalent network under the
+  governing Product, requirements, and accepted design relations. Neither mode
+  is the global default. Design still owns structural `HOW`; otherwise the
+  smallest causally closed affected set requires a prior design gate. Outside
+  an adopted boundary, retain the generic no-unresolved-material-design-decision
+  test. Design/implementation feedback carries evidence and falsification,
+  never reverse semantic authority.
 - Treat Ontology, Prime, IACS, views, modules, implementation, and tests as
-  projections of one decision-complete satisfiable constraint network.
-  Headings, artifact presence, exact identity, and aggregate green labels
-  cannot supply a missing semantic relation.
-- Prime atoms are irreducible semantic-design relations. Realization units
-  project them, and an accepted atom governs every admitted instance in its
-  declared domain. Later cases compose or parameterize it rather than creating
-  feature-local replacements.
+  projections of that one decision-complete network. Headings, artifact
+  presence, exact identity, and aggregate green labels cannot supply a missing
+  semantic relation.
+- Prime atoms are irreducible semantic-design relations. Apply contraction to
+  the complete candidate semantic-atom family and all realization projections.
+  Each accepted atom records its admitted domain and governs every admitted
+  instance in it; every proposed realization projection maps explicitly to its
+  accepted atom or atoms. Later cases compose or parameterize the atom rather
+  than creating feature-local replacements.
 - Method compression is a prompt input, not a replacement for the source method.
 - Select one complete immutable STDO version; mutable source and mixed standard
   sets are not consumer authority.
@@ -127,10 +132,12 @@ layer that owns the missing truth.
   retained evidence, regression protection, or donor material does not inherit
   growth authority.
 - Judge proportionality by semantic ambiguity removed versus effective
-  reasoning complexity added, not by line or artifact count. Detail is lawful
-  when it contracts rival interpretations. Count downstream implementation
-  paths, runtime states, tests, reviews, and reconciliation joins removed by
-  bounded symbolic design. Do not prescribe internal agent procedure when its
+  reasoning complexity added, not by line or artifact count. Rival authority,
+  failure classification, and evidence uncertainty count only as types or
+  evidence of materially distinct admissible interpretations removed.
+  Downstream implementation paths, runtime states, tests, reviews, and
+  reconciliation joins are counterfactual evidence of that contraction, not an
+  independent numerator. Do not prescribe internal agent procedure when its
   variation has no governed effect, and do not create per-clause rationale
   carriers.
 - When both strategies are lawful and feasible, bounded evolution is the

@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 94905f03ead99eaca624856bdaa622fee4e5036d92c79add8499425a17eba3b1
+source_digest: 220144b53f801b8cd4ec905a5745598bedeb2b6562d2759b74bea16bb44f9432
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -80,15 +80,24 @@ capabilities through neutral identities rather than consumer precedent.
   when it contracts rival interpretations; duplicate truth and reconciliation
   paths are not.
 - STDO intentionally constrains admissible reasoning and realization, but each
-  constraint identifies the governed ambiguity, rival authority, failure
-  class, or evidence uncertainty it removes. Do not prescribe an internal
-  search, decomposition, collaboration, tool, or synthesis procedure when its
-  variation cannot affect a governed property. One owning law may justify a
-  coherent constraint family; do not create a per-clause rationale carrier.
-- For bounded symbolic design, count the materially divergent implementation
-  paths, runtime states, tests, reviews, and reconciliation joins it contracts.
+  constraint identifies the semantic ambiguity it removes. Rival authority,
+  failure classification, and evidence uncertainty count only as types or
+  evidence of materially distinct admissible interpretations removed; they are
+  not independent proportional benefits. Do not prescribe an internal search,
+  decomposition, collaboration, tool, or synthesis procedure when its variation
+  cannot affect a governed property. One owning law may justify a coherent
+  constraint family; do not create a per-clause rationale carrier.
+- For bounded symbolic design, materially divergent implementation paths,
+  runtime states, tests, reviews, and reconciliation joins are counterfactual
+  evidence of semantic alternatives contracted, not an independent numerator.
   Increased agent capability may enlarge the relation resolved; it does not
   grant authority, weaken invariants, or waive acceptance.
+- Where `DESIGN_MODULE_METHOD.md` applies, co-evolution requires its complete
+  decision-completeness predicate; otherwise accept the smallest causally
+  closed affected design set before retained implementation establishes an
+  unresolved, contradictory, or materially non-equivalent relation. Outside an
+  adopted boundary, retain the generic no-unresolved-material-design-decision
+  test.
 - Prioritize fast Product feedback under that same relation; this is not a
   global scheduler or fixed execution sequence.
 - When both strategies are lawful and feasible, bounded evolution is the

@@ -32,27 +32,33 @@ basis.
 
 1. STDO intentionally constrains admissible reasoning and realization only to
    preserve governed semantic, authority, evidence, safety, and release truth.
-2. Every coherent constraint family is justified by the ambiguity, rival
-   authority, failure class, or evidence uncertainty it removes and remains
-   proportional to the effective reasoning complexity it introduces without a
-   per-clause rationale carrier.
+2. Every coherent constraint family is justified by the admissible semantic
+   interpretation space it removes and remains proportional to the effective
+   reasoning complexity it introduces without a per-clause rationale carrier.
+   Rival authority, failure classification, and evidence uncertainty count
+   only as types or evidence of that same ambiguity contraction.
 3. Expanded agent capability may enlarge the bounded symbolic relation an agent
    can resolve but cannot author authority, weaken invariants, or waive
    acceptance.
-4. Proportionality counts the implementation, runtime-state, test, review, and
-   reconciliation space contracted by symbolic design, not only the immediate
-   cost of expressing the design.
-5. Co-evolution is admissible only where no unresolved material semantic
-   decision remains. Neither co-evolution nor prior design is a global default.
+4. The implementation, runtime-state, test, review, and reconciliation space
+   contracted by symbolic design is counterfactual evidence of the semantic
+   alternatives removed, not an independent proportional benefit.
+5. Where Design Module Method applies, co-evolution is admissible only when the
+   complete material-relation set has no unresolved member, is jointly
+   satisfiable, and admits no materially non-equivalent network. Neither
+   co-evolution nor prior design is a global default.
 6. Design/implementation bidirectionality carries evidence, counterexamples,
    falsification, and reconciliation. It does not reverse semantic authority
    from code into design.
-7. A design boundary is decision-complete only when its material relations and
-   projections form one satisfiable constraint network from which
-   implementation can be derived without another material semantic decision.
-8. Prime atoms are irreducible semantic-design relations. Files, classes,
-   functions, schemas, operations, diagrams, and modules are projections, not
-   automatic Prime identities.
+7. A design boundary is decision-complete only when its complete
+   material-relation set, including entities, invariants, higher-order
+   composition, declared domains, and every prior listed relation, has no
+   unresolved member, forms one jointly satisfiable network, and admits no
+   materially non-equivalent network under governing authority.
+8. Prime atoms are irreducible semantic-design relations. Whole-family Prime
+   evaluates every candidate atom kind and every proposed realization
+   projection. Files, classes, functions, schemas, operations, diagrams, and
+   modules are projections, not automatic Prime identities.
 9. An accepted Prime atom governs every admitted instance in its declared
    domain. New use cases compose or parameterize it; an in-domain
    counterexample re-enters at the shared atom.
@@ -63,13 +69,16 @@ basis.
     counts cannot supply missing semantics.
 12. Independent-review claims supporting closure remain durably traceable in an
     existing carrier without creating another receipt system or review round.
-13. The amendment preserves the accepted `v2.2.0` proportional-design purpose.
+13. The amendment preserves the accepted `v2.2.0` proportional-design purpose
+    and does not create an authority-, failure-, evidence-, or downstream-cost
+    numerator independent of semantic ambiguity contraction.
     It clarifies decision-complete reconstruction and the smallest affected
     design gate while superseding the narrower permission for retained
-    co-evolution during discovery of unresolved `M(B)` relations. Retained
-    co-evolution now requires `U(B)` to be empty; otherwise only a disposable
-    spike may cross the unresolved decision as evidence before design
-    acceptance.
+    co-evolution during discovery of unresolved, contradictory, or materially
+    non-equivalent `M(B)` relations. Retained co-evolution now requires
+    `decision_complete(B)`; otherwise only a disposable spike may cross the
+    affected unresolved, contradictory, or materially non-equivalent relation
+    as evidence before design acceptance.
 
 ## Amendment Owners
 
@@ -86,9 +95,13 @@ basis.
 
 1. The amendment preserves the complete immutable `v2.2.0` Product except for
    the explicit clarifications and supersessions above.
-2. Co-evolution permission and its no-unresolved-material-decision predicate
-   remain inseparable in source, compressions, and agent templates.
-3. Prime remains symbolic design law and realization remains its projection.
+2. Co-evolution permission and the full decision-completeness predicate—no
+   unresolved member, joint satisfiability, and no materially non-equivalent
+   admitted network—remain inseparable in source, compressions, and agent
+   templates.
+3. Prime remains symbolic design law; the complete candidate semantic-atom
+   family is contracted, every accepted atom records its admitted domain, and
+   every realization projection maps to accepted atoms.
 4. The release delta distinguishes clarified reconstruction and affected scope
    from the superseded `v2.2.0` retained-co-evolution permission while
    preserving proportional mode choice, design authority, and unrelated
@@ -104,19 +117,26 @@ basis.
 8. One exact 41-member standards inventory and path-ordered aggregate reproduce
    from the candidate tree.
 9. The release follows one immutable final-ready RC, independent exact-cut
-   review, direct human acceptance, and exact final-delta proof.
+   review, exact final-delta proof for the proposed final carrier, direct human
+   acceptance of the exact subject, carrier, and final-delta relation, then
+   final publication.
 
 ## Non-Closure Conditions
 
 - a reasoning or implementation procedure is mandated without a governed
   semantic, authority, evidence, safety, or release effect;
 - co-evolution is stated without its admissibility predicate;
+- the material-relation set is incomplete, internally unsatisfiable, or admits
+  materially non-equivalent networks;
 - code, tests, or review findings are permitted to author missing semantic
   truth or retrospectively legalize their own shape;
 - Ontology, Prime, IACS, views, modules, or tests are treated as independently
   satisfiable checklist items;
 - a file, function, class, schema, diagram, operation, module, or owner category
   is treated as Prime without semantic-family contraction;
+- Prime contraction stops at functions or carriers, an accepted atom lacks a
+  declared admitted domain, or a realization projection lacks its accepted
+  atom mapping;
 - a Product use case locally rebuilds an accepted shared atom within its
   declared domain;
 - exact identity or aggregate-green evidence substitutes for reconstruction of
@@ -128,7 +148,8 @@ basis.
 
 ## Current State
 
-Source-law authoring, derived reconciliation, and the bounded predecessor-
-disposition repair are complete. Exact corrected-candidate freeze, pre-RC
-qualification, independent exact-RC review, acceptance, and publication remain
-open.
+The immutable `v2.2.1-rc.1` exact-cut review requested changes. Its bounded
+semantic and projection repairs are complete and have passed WIP re-audit. The
+corrected exact candidate is ready for fresh pre-RC qualification. Immutable
+RC publication, independent exact-cut review, final-delta proof, acceptance,
+and final publication remain open.

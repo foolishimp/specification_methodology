@@ -44,19 +44,23 @@ history. Neither is a construction basis for this successor.
 The bounded `2.2.1` successor:
 
 1. clarifies that proportional method intentionally contracts invalid
-   interpretations but does not prescribe internal reasoning procedure without
-   a governed semantic, authority, evidence, safety, or release effect;
-2. counts the downstream implementation, runtime-state, test, review, and
-   reconciliation space removed by bounded symbolic design when selecting
-   between co-evolution and a prior design gate;
+   interpretations and treats rival authority, failure classification, and
+   evidence uncertainty as types of that semantic ambiguity, but does not
+   prescribe internal reasoning procedure without a governed semantic,
+   authority, evidence, safety, or release effect;
+2. treats the downstream implementation, runtime-state, test, review, and
+   reconciliation space removed by bounded symbolic design as counterfactual
+   evidence of semantic alternatives contracted when selecting between
+   co-evolution and a prior design gate, not as an independent proportional
+   numerator;
 3. defines design/implementation bidirectionality as evidence, counterexample,
    falsification, and reconciliation rather than reverse semantic authority;
 4. defines decision-complete design as one jointly satisfiable symbolic network
    whose material implementation boundaries can be derived without another
    semantic decision;
-5. locates Prime atoms at semantic-design altitude, makes realization units
-   projections of those atoms, and applies each accepted atom universally over
-   its declared admitted domain;
+5. locates Prime atoms at semantic-design altitude, requires every realization
+   unit to map explicitly to its accepted atom or atoms, and applies each
+   accepted atom universally over its declared admitted domain;
 6. requires semantic surprise to re-enter at the smallest causally closed
    design set instead of accumulating serial code repairs; and
 7. requires review to reconstruct the governed semantic relation rather than
