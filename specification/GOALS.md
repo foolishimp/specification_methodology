@@ -22,7 +22,7 @@ that successor is independently reviewed, directly accepted, and tapped.
 | `M0` Predecessor | Exact `v2.2.0` source, release identity, and post-publication continuation are fixed. | completed |
 | `M1` Normative tuning | Proportional constraint selection, decision completeness, Prime semantic atoms, and review reconstruction are tuned in their existing owners with explicit predecessor dispositions. | completed |
 | `M2` Derived reconciliation | Product, compressions, templates, ticket, and release delta preserve every amended predicate. | completed |
-| `M3` RC qualification | One immutable final-ready `v2.2.1` RC passes exact-cut review. | pending |
+| `M3` RC qualification | One immutable final-ready `v2.2.1` RC passes exact-cut review. | completed |
 | `M4` Tap | Direct human acceptance binds the exact final carrier and final-delta relation before `v2.2.1` publication. | pending |
 
 ## Construction Basis
