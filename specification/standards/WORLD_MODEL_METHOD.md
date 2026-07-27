@@ -241,9 +241,9 @@ method adopts them as the best current reading of the construct.
 
 2. **Attribute schemas sense and fragment.** Any fixed attribute
    basis will partially align with and partially distribute a given
-   object's identity. A published cut must expose the identity axis,
-   not only the attribute profile. Schemas are evidence, not
-   ontology.
+   object's identity. Where a Markov-object overlay is published, it
+   must expose the identity axis, not only the attribute profile.
+   Schemas are evidence, not ontology.
 
 3. **Core identity, not core size, is diagnostic.** A sparse invariant
    with semantically loaded content is a lawful Markov object. A
@@ -284,9 +284,17 @@ residual variation along remaining components should be independent
 of the target under plausible treatments. That test has been run and
 did not meet its predicate, and its multi-layer successor did not
 either. The gate stands where it is; it has not been met and must not
-be relocated to accommodate the negative result. Published cuts that
-invoke this method are therefore candidate cuts of a candidate
-construct, not certified blankets of formally-established objects.
+be relocated to accommodate the negative result.
+
+This status attaches to the Markov-object construct and to overlays
+built on it. A published Markov-object overlay is a candidate-class
+overlay of a candidate construct, not a certified blanket of a
+formally-established object.
+
+It does not attach to entity cuts. An entity cut is lawful published
+truth on its own admissibility test and does not inherit the
+construct's candidate status. A candidate entity that has not met
+that test is a candidate; a published entity cut is not.
 
 This epistemic status is inherited downstream. Tooling that
 materializes Markov-object overlays under this method should default to a
@@ -671,7 +679,7 @@ claims and later object cuts, not by mutating prior accepted entries in place.
 
 ### 6. Bound
 
-Identify bounded contexts and the candidate Markov objects that actually cohere
+Identify bounded contexts and the candidate entities that actually cohere
 inside them.
 
 Reject schema-first modeling and vocabulary-cluster modeling.
@@ -910,12 +918,18 @@ model already commits to, then qualifying them into published truth.
 
 ### Admissibility
 
-An entity cut is admissible when its identity, boundary, authority, evidence,
-and ambiguity are explicit, traceable, and discriminated from plausible
-alternatives at evidence altitude proportional to the claim.
+An entity cut is admissible when its identity, boundary, authority, state,
+evidence, treatment, covariance, and ambiguity are explicit, traceable, and
+discriminated from plausible alternatives at evidence altitude proportional to
+the claim.
 
 That is the whole constitutional test. It binds what must be true of a
 published cut. It does not prescribe how a builder establishes it.
+
+"Explicit" admits three lawful values on every surface: a stated value, stated
+absence, or stated non-applicability with its reason. A cut whose entity has no
+adjacent-domain treatment says so; it does not manufacture one. This keeps the
+predicate whole without adding evidence machinery.
 
 Sparse first publication remains lawful. A unique, historical, single-context,
 inaccessible, or regulated entity is publishable when the above holds and its
@@ -956,9 +970,10 @@ as such.
 
 ### Publication
 
-A published entity cut makes its identity, boundary, authority, state,
-evidence, and ambiguity visible and traceable, and records the basis on which
-identity was discriminated.
+A published entity cut makes the eight admissibility surfaces — identity,
+boundary, authority, state, evidence, treatment, covariance, and ambiguity —
+visible and traceable, each as a stated value, stated absence, or stated
+non-applicability, and records the basis on which identity was discriminated.
 
 Cuts are immutable. Revising identity or boundary produces a new cut that
 supersedes the prior one.
@@ -1303,7 +1318,8 @@ The result is:
 
 - published domain artifacts as the durable semantic publication units
 - composed world models built from those published artifacts
-- inspectable Markov-object packets
+- published entity cuts as the primary semantic units
+- inspectable Markov-object overlays where a representation space is selected
 - explicit treatment and covariance semantics
 - epistemic correspondence overlays grounded in the same semantic substrate
 - temporal reference artifacts for changing domain enumerations

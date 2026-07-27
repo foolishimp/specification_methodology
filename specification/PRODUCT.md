@@ -51,10 +51,12 @@ representation-substrate geometry in `WORLD_MODEL_METHOD.md`:
 2. establishes the Markov-object overlay as an optional geometric overlay
    admissible only where a representation space is declared, which strengthens
    an entity cut and whose absence does not weaken one;
-3. states entity-cut admissibility proportionally, so identity, boundary,
-   authority, evidence, and ambiguity must be explicit, traceable, and
-   discriminated from plausible alternatives at evidence altitude proportional
-   to the claim, without mandating one discrimination technique;
+3. states entity-cut admissibility proportionally over one predicate, so
+   identity, boundary, authority, state, evidence, treatment, covariance, and
+   ambiguity must be explicit — as a stated value, stated absence, or stated
+   non-applicability — traceable, and discriminated from plausible
+   alternatives at evidence altitude proportional to the claim, without
+   mandating one discrimination technique;
 4. scopes the geometric construction, verification, and storage law to the
    declared-representation-space case and binds a declared versioned
    representation space into the overlay; and

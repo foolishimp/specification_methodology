@@ -45,7 +45,7 @@ conserved.
 - release delta: `releases/v2.2.2.md`
 - changed member: `specification/standards/WORLD_MODEL_METHOD.md`
 - candidate standards aggregate:
-  `1428276dbe7bb9c3ecd84dfc55fe7ca081f68b38c641cea856663f68ecb88c9a`
+  `33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`
 - carrier correction:
   `.ai-workspace/comments/claude/20260727T070000Z_CORRECTION_stdo_2_2_1_carrier_identity.md`
   (recorded, pending direct human ratification)
