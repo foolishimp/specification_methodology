@@ -145,7 +145,7 @@ A world model is a governed semantic layer built over existing source systems.
 
 It is descriptive before it is generative.
 
-Its primary semantic unit is the published Markov-object cut: an
+Its primary semantic unit is the published entity cut: an
 identity-bearing, evidence-backed, bounded semantic cut projected from the
 attribute ledger. Generic references to a "world-model object" are shorthand
 for this unit unless the text explicitly names a looser candidate or
@@ -215,8 +215,8 @@ The load-bearing reading is geometric.
   space along which object identity is preserved under treatment.
 - The attribute basis is evidence for that projection. The projection
   is not a column-membership predicate.
-- A published Markov object cut is an identity direction together with
-  the distributed attribute evidence supporting it.
+- A published Markov-object overlay is an identity direction together
+  with the distributed attribute evidence supporting it.
 
 This reading is consistent with candidate evidence from a learned
 representation system. The evidence is direction-level and
@@ -276,9 +276,10 @@ Markov object in the statistical sense.
 Adopting this method does not require that the empirical program be
 complete. Method commitments that depend on a formally established
 conditional-independence object — for example, claims that a
-published Markov-object cut *is* the blanket rather than a candidate
-for it — must be read as working commitments, open to revision when
-the companion program produces a conditional-independence result.
+published Markov-object overlay *is* the blanket rather than a
+candidate for it — must be read as working commitments, open to
+revision when the companion program produces a conditional-independence
+result.
 
 Promotion gate. The outstanding experimental result that would promote
 the construct from candidate to established is a direction-native
@@ -290,7 +291,7 @@ method should be read as candidate cuts of a candidate construct,
 not as certified blankets of formally-established objects.
 
 This epistemic status is inherited downstream. Tooling that
-materializes Markov-object cuts under this method should default to a
+materializes Markov-object overlays under this method should default to a
 candidate-class publication kind and reserve any formally-closed
 publication kind for cuts backed by a real promotion-gate result.
 
@@ -405,7 +406,7 @@ highest semantic authority.
 
 ### Probability Belongs In The Epistemic Overlay
 
-The canonical published Markov-object cut should remain semantic and bounded.
+The canonical published entity cut should remain semantic and bounded.
 
 Probability belongs in uncertainty, ranking, anomaly, and alignment overlays,
 not in the ontological identity of the published object itself.
@@ -437,7 +438,7 @@ layer.
 That layer consists of:
 
 - published domain artifacts
-- their bounded fragments and published Markov-object cuts
+- their bounded fragments and published entity cuts
 - explicit treatments, covariance edges, adjoint mappings, and temporal
   reference artifacts
 - composed world models built by reference from those published artifacts
@@ -540,16 +541,44 @@ attribute ledger, not an in-place mutable record. The cut is an identity
 direction together with the distributed attribute evidence that supports
 it, not an enumeration of member columns.
 
-Within this method, the published Markov-object cut is the canonical semantic
-unit for object publication, composition, and downstream projection. Builder
-projects may begin with looser object candidates, but world-model publication
-should converge them into Markov-object cuts or explicitly leave them as
+The Markov object is the theoretical account of why a discovered boundary is a
+real object rather than an arbitrary cluster. It is not a claim that the
+builder invents the object. Institutional entities are already committed by
+people, implicitly in code paths, records, and workflows or explicitly in
+schemas and policy. The method's practical work is to trawl existing systems
+and recover them.
+
+A recovered entity is published as an **Entity Cut**. Where the builder
+additionally operates over a representation space in which identity is a
+geometric direction, the entity cut may carry a Markov-object overlay.
+
+Full theoretical treatment in *Theoretical Underpinnings Of The Markov
+Object*. Discovery obligations in *Entity Cut Construction Law*.
+Representation-substrate obligations in *Markov Object Construction Law*.
+
+### Entity Cut
+
+The primary published semantic unit: an identity-bearing, bounded,
+evidence-backed cut of a recovered entity, projected from the attribute
+ledger.
+
+An entity cut is lawful without an identity direction. It publishes identity,
+boundary, authority, state, evidence, treatment, covariance, and ambiguity,
+each traced to ledger entries and their assurance basis.
+
+Builder projects may begin with looser object candidates. World-model
+publication converges them into entity cuts, or explicitly leaves them as
 non-object artifacts such as treatment surfaces, covariance edges, or temporal
 reference artifacts.
 
-Full theoretical treatment in *Theoretical Underpinnings Of The Markov
-Object*. Construction and storage obligations in *Markov Object
-Construction Law*.
+### Markov-Object Overlay
+
+An optional geometric overlay on an entity cut, admissible only where a
+declared representation space exists. It adds an identity direction,
+projection support, and effective coordinate, constructed and verified under
+*Markov Object Construction Law*.
+
+The overlay strengthens an entity cut. Its absence does not weaken one.
 
 ### Treatment Surface
 
@@ -653,7 +682,7 @@ Define local boundaries in terms of function, authority, state, and adjacency.
 
 ### 7. Materialize
 
-Project Markov-object cuts from the attribute ledger with enough semantic
+Project entity cuts from the attribute ledger with enough semantic
 context for alignment and reasoning.
 
 Sparse first publication is lawful if the object is bounded, distinguishable,
@@ -678,7 +707,7 @@ authority.
 ### 10. Compose
 
 Stitch published domain artifacts, their fragments, and their published
-Markov-object cuts into higher-order world models without erasing local
+entity cuts into higher-order world models without erasing local
 authority.
 
 Composition is recursive, inspectable, and bounded.
@@ -686,7 +715,7 @@ Composition is recursive, inspectable, and bounded.
 ### 11. Align (Optional)
 
 Use the semantic kernel as a tether for probabilistic alignment across domains,
-Markov-object cuts, artifacts, and projections.
+entity cuts, artifacts, and projections.
 
 This stage may produce:
 
@@ -743,7 +772,7 @@ dedicated query plane.
 
 ## Representation Law
 
-Every published Markov-object cut must be prompt-sufficient for reasoning.
+Every published entity cut must be prompt-sufficient for reasoning.
 
 At minimum, the cut should make visible:
 
@@ -756,26 +785,34 @@ At minimum, the cut should make visible:
 - covariance
 - ambiguity
 
-"Make the effective blanket explicit" means: identify
-the low-rank projection along which object identity is preserved under
-treatment, not enumerate a set of member attribute columns. Attribute
-schemas are evidence for the identity axis, not the axis itself. A
-well-formed Markov-object publication should therefore expose both the
-distributed attribute evidence and the projection that recovers identity
-from it.
+"Make the effective blanket explicit" means: state the boundary at which the
+entity's identity survives reinterpretation, not enumerate a set of member
+attribute columns. Attribute schemas are evidence for identity, not identity
+itself.
+
+The boundary is interventional, not structural. The test is "does this
+identity survive treatment across its adjacent domains?", never "which
+attributes are in the member set?"
+
+Where a declared representation space exists, that boundary takes its
+geometric form: the low-rank projection along which identity is preserved
+under treatment. A Markov-object overlay should then expose both the
+distributed attribute evidence and the projection that recovers identity from
+it. Outside such a space the same law is discharged semantically, under
+*Entity Cut Construction Law*.
 
 ---
 
 ## Materialization Law
 
-The materialized Markov-object cut is an artifact of the world-model builder,
+The materialized entity cut is an artifact of the world-model builder,
 not a raw artifact of the source system.
 
 The governing split is:
 
 - source systems remain sovereign for operational truth
 - the builder observes and comprehends that truth
-- the published Markov-object cut is the canonical object-level truth of the
+- the published entity cut is the canonical object-level truth of the
   world-model layer
 - projections are derived from that semantic artifact
 
@@ -787,9 +824,9 @@ claim that the source system emitted the object directly.
 
 More specifically:
 
-`source -> tracing -> assurance -> attribute ledger -> Markov object cut`
+`source -> tracing -> assurance -> attribute ledger -> entity cut`
 
-The Markov object cut is the immutable projection, not the mutable source of
+The entity cut is the immutable projection, not the mutable source of
 truth. "Projection" is literal: the cut is a low-rank identity direction
 over the distributed evidence in the ledger, accompanied by that
 evidence and its verification record. See *Markov Object Construction
@@ -843,7 +880,7 @@ Both should remain append-only and replayable.
 
 ## Attribute Ledger Law
 
-The attribute ledger is the immediate semantic source of a Markov object cut.
+The attribute ledger is the immediate semantic source of an entity cut.
 
 Every entry should be a fully qualified claim, potentially including:
 
@@ -865,12 +902,124 @@ claim record per accepted attribute fact.
 
 ---
 
+## Entity Cut Construction Law
+
+Entities are recovered, not invented. A builder project constructs an entity
+cut by trawling authoritative source surfaces for the boundaries the operating
+model already commits to, then qualifying them into published truth.
+
+This law governs the ordinary case: institutional systems whose ledger claims
+are heterogeneous and symbolic, where no representation space is declared.
+
+### 1. Recovery
+
+Identify the candidate entity from enacted function, authority, state, and
+adjacency, using the traced and assured surfaces from the method flow.
+
+Reject schema-first modeling and vocabulary-cluster modeling. A table, a
+message type, or a vocabulary cluster is evidence that someone committed to
+something; it is not itself the commitment.
+
+### 2. Cross-Context Invariance
+
+Assemble ledger evidence across every context in which the candidate is
+instantiated, and separate:
+
+- **invariant core**: the claims that hold wherever the entity appears, and
+  without which the operating model would treat it as a different thing
+- **context coat**: the claims a particular context adds, carrying
+  reinterpretation rather than identity
+
+Core size is not diagnostic. A sparse core with identity-loaded content is a
+lawful entity; a rich cluster with nothing invariant under context change is
+not.
+
+### 3. Null-Peer Distinguishability
+
+Name at least one structurally similar entity in the same system that the
+operating model treats as a different thing, and state what distinguishes
+them.
+
+The null peer is a check on a recovered boundary, not the derivation of it.
+If nothing in the invariant core separates the candidate from its nearest
+peer, the boundary has not been recovered yet.
+
+### 4. Verification By Treatment
+
+Identity claims are accepted only against interventional evidence. Record at
+least one:
+
+- **adjoint round-trip**: interpret the entity through an adjacent domain's
+  treatment surface and back through its adjoint mapping, and show the
+  invariant core survives
+- **transplant**: show that a null peer acquiring the core claims would be
+  treated as this entity by the operating model
+- **coat stripping**: vary or remove context-coat claims and show identity
+  survives; vary a core claim and show it does not
+
+The adjoint round-trip is the semantic form of the boundary test. It
+discriminates a real boundary from an attribute grouping, which is the same
+discrimination the geometric boundary test performs in a representation
+space.
+
+An entity with no acceptable verification is a candidate, not a published
+entity cut.
+
+### 5. Cut Publication
+
+A published entity cut must make visible, at minimum:
+
+- **identity**: what the operating model treats this as, and the invariant
+  core carrying it
+- **boundary**: the reinterpretations under which identity was shown to
+  survive, and the adjacent domains tested
+- **authority**: which source is authoritative for which aspect
+- **state**: the state and transition surfaces that matter
+- **evidence**: core and coat claims, traced to ledger entries
+- **verification record**: treatments applied, outcomes observed, contexts
+  covered
+- **null-peer comparison**: what similar entities were tested, what was
+  accepted, what was rejected
+- **ambiguity**: what remains unresolved or unsupported
+
+Sparse first publication is lawful where the entity is bounded,
+distinguishable, and evidence-backed.
+
+A cut is immutable. Revising identity or boundary produces a new cut that
+supersedes the prior one.
+
+### 6. Storage Shape
+
+The stored entity cut is a package, not a row:
+
+- the identity and boundary statement
+- the distributed evidence (pointers into the attribute ledger)
+- the verification trace (treatments, contexts, outcomes)
+- the provenance and authority record
+- the supersession record
+- the Markov-object overlay, where one has been constructed
+
+A storage layout that loses any present surface is not a lawful entity-cut
+storage layout.
+
+---
+
 ## Markov Object Construction Law
 
-A builder project constructs a Markov object cut by a directional,
-interventional procedure. The framework below is both how the object is
-*built* and the minimum structure that must be *stored* when the cut is
+This law is the representation-substrate specialization of *Entity Cut
+Construction Law*. It applies only where the builder operates over a declared
+representation space in which identity is a geometric direction — a learned
+representation, an embedding over ledger claims, or an equivalent metric
+space. It is not required for ordinary institutional recovery.
+
+Where it applies, a builder project constructs the Markov-object overlay by a
+directional, interventional procedure. The framework below is both how the
+overlay is *built* and the minimum structure that must be *stored* when it is
 published.
+
+The declared representation space is part of the overlay. An identity
+direction is uninterpretable without the space it lives in, and directions
+computed in different spaces do not compose.
 
 ### 1. Paired Evidence Collection
 
@@ -921,8 +1070,16 @@ must record at least one acceptable verification:
   blanket from set-membership blanket)
 
 A direction that has no acceptable verification is a candidate, not an
-accepted Markov object. Publishing an unverified direction is a
-violation of the Representation Law.
+accepted overlay. Publishing an unverified direction is a violation of
+the Representation Law. The underlying entity cut remains lawful and
+publishable without the overlay.
+
+The empirical program that motivates these treatments reports that the
+strongest of them — direction-native conditional independence — has been
+tested and does not close. Passing this battery establishes that a
+direction is verified for publication under this method; it does not
+establish a formally closed Markov blanket. See *Epistemic Status Of The
+Construct*.
 
 ### 4. Core And Coat Decomposition
 
@@ -954,10 +1111,12 @@ Failure on the uniqueness and transfer tests means the cluster is
 not yet a lawful Markov object, even if its invariants are
 internally consistent.
 
-### 6. Cut Publication
+### 6. Overlay Publication
 
-A published Markov object cut must make visible, at minimum:
+A published Markov-object overlay must make visible, at minimum:
 
+- **representation space**: the declared space and attribute basis the
+  direction is expressed in, versioned so a later re-fit is detectable
 - **identity direction**: the projection (representation-space
   vector or equivalent geometric description)
 - **attribute evidence**: core + coat, traced to ledger entries
@@ -970,22 +1129,25 @@ A published Markov object cut must make visible, at minimum:
 - **effective coordinate**: α along direction for this instance,
   where applicable
 
-A cut is an immutable projection. Revising the identity direction —
-because new contexts or new evidence became available — produces a
-new cut that supersedes the prior one. Prior cuts are never mutated
-in place (see Publication Law).
+An overlay is an immutable projection. Revising the identity direction —
+because new contexts, new evidence, or a re-fitted representation space
+became available — produces a new overlay that supersedes the prior one.
+A change of representation space changes every direction expressed in it
+and is therefore a supersession even when no ledger entry changed. Prior
+overlays are never mutated in place (see Publication Law).
 
 ### 7. Storage Shape
 
-The stored cut is not a row in a table and not a membership list. It
-is a package:
+The stored overlay is not a row in a table and not a membership list.
+It is a package attached to its entity cut:
 
+- the declared representation space and its version
 - the geometric object (identity direction and projection support)
 - the distributed evidence (pointers into the attribute ledger)
 - the verification trace (treatments, contexts, outcomes)
 - the provenance and authority record (who accepted, on what
   assurance basis)
-- the supersession record (which cut this replaces, if any)
+- the supersession record (which overlay this replaces, if any)
 
 A storage layout that loses any of these surfaces is not a lawful
 Markov-object storage layout. Query planes and projection surfaces
@@ -1017,7 +1179,7 @@ does not.
 
 Do not build one central monolith first.
 
-Build local published domain artifacts and their Markov-object cuts, then
+Build local published domain artifacts and their entity cuts, then
 stitch them.
 
 Composition must preserve:
