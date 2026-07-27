@@ -86,6 +86,18 @@ referential triple over source states rather than a geometric direction.
 That observation motivated this reprice. It is a downstream consumer state,
 not STDO evidence, and it closes nothing in this ticket.
 
+## Intake Evidence
+
+`.ai-workspace/comments/claude/20260727T050000Z_REVIEW_world_model_method_under_spec_method.md`
+reviews the **predecessor** member at `v2.2.1` and opened this ticket. It is
+intake evidence only and carries no promotion or closure authority over the
+successor. Its F1 and F2 are discharged by this reprice; its F3 (cited
+experiment range) and F4 (refinement drift from the companion source) remain
+open and are not carried here.
+
+The independent exact-cut review required before tap must bind the immutable
+`v2.2.2-rc.1` subject, and must not be authored by this ticket's pen holder.
+
 ## Change
 
 1. **Entity Cut** added as the primary published semantic unit: lawful
