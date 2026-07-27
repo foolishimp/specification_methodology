@@ -24,13 +24,13 @@ authority.
 
 ## Published Baseline
 
-The exact released predecessor and current operative Product is STDO `v2.2.1`
-at `8ad868eb0c9a3bdd075ff17ec4f7923d5ceec1cf`, with standards aggregate
-`df1064dea1e1926436a3123280071a5082c5dc03b8418d07e46e839cbed20aed`.
+The exact released and current operative Product is STDO `v2.2.2`
+at `124d0f8ee25e5a9a547cafdaffa4fea0523b45a4`, with standards aggregate
+`33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`.
 It remains immutable and operative until a successor is independently
 qualified, accepted, tapped, and explicitly selected by a consumer.
 
-The current successor source takes the complete `v2.2.1` Product as its
+Any successor source takes the complete `v2.2.2` Product as its
 construction basis. It preserves the Product boundary, construction algebra,
 authority relations, Product-outcome conservation, proportional method,
 Ontology, IACS, Prime, three-view design, independent review, and exact release
@@ -39,9 +39,9 @@ identity.
 The rejected executable and overcorrected normative candidates remain archived
 history. Neither is a construction basis for this successor.
 
-## Current Successor Amendment
+## Published Amendment
 
-The bounded `2.2.2` successor separates entity recovery from
+The released `2.2.2` amendment separates entity recovery from
 representation-substrate geometry in `WORLD_MODEL_METHOD.md`:
 
 1. establishes the entity cut as the primary published world-model semantic

@@ -4,8 +4,8 @@
 - title: Separate entity recovery from representation-substrate geometry in `WORLD_MODEL_METHOD.md`
 - type: correction
 - ticket_category: ordinary
-- status: active
-- review_status: candidate_ready_for_review
+- status: completed
+- review_status: rc1_independently_reviewed_and_rejected; rc2_bounded_repair_accepted_by_direct_human_authority
 - goal: >-
     Publish one bounded STDO 2.2.2 successor in which a recovered
     institutional entity has a lawful published form, geometric obligations
@@ -21,6 +21,8 @@
 - triaged_at: 2026-07-27
 - created_at: 2026-07-27
 - updated_at: 2026-07-27
+- closed_at: 2026-07-27
+- released_as: v2.2.2 at 124d0f8ee25e5a9a547cafdaffa4fea0523b45a4
 - owner: specification_methodology
 - pen_holder: claude
 - predecessor_release: v2.2.1 at 8ad868eb0c9a3bdd075ff17ec4f7923d5ceec1cf
@@ -147,3 +149,23 @@ identity directions is retained unchanged.
 No change to STDO Product boundary, member set, altitude, or any other
 standards member. No executable conformance, schema, or consumer adoption
 change. This ticket does not tap `2.2.2`.
+
+## Closure
+
+Released as `v2.2.2` at `124d0f8ee25e5a9a547cafdaffa4fea0523b45a4`, aggregate
+`33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`.
+
+`v2.2.2-rc.1` was independently reviewed and rejected with three findings
+(geometry leaking into ordinary entity cuts at four sites; two conflicting
+entity-cut acceptance predicates; candidate-state wording in a status-free
+release note). `v2.2.2-rc.2` carries the bounded repair of exactly those three
+and nothing else, and is the accepted subject. `rc.2` did not receive its own
+separate independent exact-cut review; direct human authority accepted it on
+the basis recorded in
+`.ai-workspace/comments/human/20260727T080000Z_DECISION_accept_and_publish_stdo_2_2_2.md`.
+
+The final carrier is the reviewed RC commit, so the final delta is zero by
+identity.
+
+Not closed by this ticket: ratification of the `v2.2.1` carrier correction, and
+F3 and F4 of the predecessor World Method review.
