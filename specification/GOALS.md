@@ -2,26 +2,26 @@
 
 ## Current Goal
 
-STDO `2.2.2` is the current published Product. No successor work wave is
-selected. Later substantive change re-enters through normal intake triage and
-does not alter the immutable `2.2.2` cut.
+Construct one bounded successor to the published STDO `2.2.2` Product,
+reconciling the four working refinements in `WORLD_MODEL_METHOD.md` to the
+companion source this method pins.
 
 ## Governing Outcome
 
 The exact `v2.2.2` cut at
-`124d0f8ee25e5a9a547cafdaffa4fea0523b45a4`, with standards aggregate
-`33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`,
-is the immutable current Product. The `2.2.2` work wave is closed.
+`124d0f8ee25e5a9a547cafdaffa4fea0523b45a4` remains the immutable predecessor
+and current published Product. The successor changes exactly one standards
+member and supersedes no law.
 
 ## Milestones
 
 | Milestone | Exit | State |
 |---|---|---|
-| `M0` Predecessor | Exact `v2.2.1` source and release identity are fixed. | completed |
-| `M1` Normative amendment | Entity cut, Markov-object overlay, Entity Cut Construction Law, and the scoped geometric law are owned once in `WORLD_MODEL_METHOD.md`. | completed |
-| `M2` Derived reconciliation | Product, release delta, ticket, and Goals agree with the amended source and with the released `v2.2.1` identity; no compression or template binds the changed member. | completed |
-| `M3` RC qualification | Two immutable RCs published; `rc.1` independently reviewed and rejected with three findings; `rc.2` carries the bounded repair. | completed |
-| `M4` Tap | Direct human acceptance bound the exact subject and final carrier; the final carrier is the reviewed RC commit, so the final delta is zero by identity. | completed |
+| `M0` Predecessor | Exact `v2.2.2` source and release identity are fixed. | completed |
+| `M1` Normative amendment | The four working refinements are restated in the pinned companion's order and sense, each citing its grounding experiment, and scoped to the Markov construct. | completed |
+| `M2` Derived reconciliation | Release delta, ticket, and Goals agree with the amended source; no compression or template binds the changed member. | completed |
+| `M3` RC qualification | One immutable final-ready `v2.2.3` RC passes independent exact-cut review. | pending |
+| `M4` Tap | Direct human acceptance binds the exact subject and final carrier before `v2.2.3` publication. | pending |
 
 ## Published Cut
 
@@ -43,12 +43,22 @@ is the immutable current Product. The `2.2.2` work wave is closed.
 - `v2.2.0` at `5326562f075d60052806d0d2c79d3db49671a8ea`, aggregate
   `ca6dc3d5…2f86c`
 
-## Outstanding
+## Current Successor Wave
 
-- the `v2.2.1` carrier correction
-  (`.ai-workspace/comments/claude/20260727T070000Z_CORRECTION_stdo_2_2_1_carrier_identity.md`)
-  remains recorded and pending direct human ratification; it is not carried by
-  the `2.2.2` release.
+- successor line: `2.2.3`
+- work item: `.ai-workspace/tickets/active/T-005-reconcile-working-refinements-to-pinned-source.md`
+- release delta: `releases/v2.2.3.md`
+- changed member: `specification/standards/WORLD_MODEL_METHOD.md`
+- candidate standards aggregate: `4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`
+
+No `v2.2.3` release exists while this work wave remains open.
+
+## Settled
+
+- the `v2.2.1` carrier correction is **ratified**:
+  `.ai-workspace/comments/human/20260727T083000Z_DECISION_ratify_stdo_2_2_1_carrier_correction.md`
+- predecessor World Method review finding F3 (cited experiment range) was
+  discharged in `2.2.2`; F4 is carried by T-005 above
 
 ## Exclusions
 

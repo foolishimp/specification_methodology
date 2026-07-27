@@ -232,33 +232,48 @@ treats Markov objects. They are working refinements: the program has
 produced candidate evidence for them, not a formal closure. The
 method adopts them as the best current reading of the construct.
 
-1. **Identity is a translation, not a variance axis.** Object
-   identity appears as a mean offset in representation space, not as
-   the dominant-variance direction. World-model construction that
-   characterizes objects by "the biggest source of variance in the
-   attribute set" will miss identity. Characterize by
-   typical-offset-from-a-null-peer instead.
+They are stated here in the order and sense carried by the pinned
+companion surface, each with the experiment that grounds it, so the two
+can be checked against each other. Where the companion later re-cuts
+them, the pin in *Companion Surfaces* fixes which reading this method
+adopted.
 
-2. **Attribute schemas sense and fragment.** Any fixed attribute
-   basis will partially align with and partially distribute a given
-   object's identity. Where a Markov-object overlay is published, it
-   must expose the identity axis, not only the attribute profile.
-   Schemas are evidence, not ontology.
+1. **Effective blanket is geometric, not set-theoretic** (exp 17). A
+   boundary stated as attribute-column membership leaks under bypass.
+   The load-bearing structure is the identity axis, and a set-valued
+   boundary over columns is an epistemic convenience rather than the
+   object. Read the Representation Law this way: the test is whether
+   identity survives treatment, not which attributes are in the
+   member set.
 
-3. **Core identity, not core size, is diagnostic.** A sparse invariant
-   with semantically loaded content is a lawful Markov object. A
-   rich attribute cluster without invariants under context variation
-   is not. More columns do not buy more objecthood.
+2. **Attribute schemas sense and fragment; they do not isolate.** Any
+   fixed attribute basis partially aligns with a given object's
+   identity and partially distributes it. Where a Markov-object
+   overlay is published, it must expose the identity axis, not only
+   the attribute profile. Schemas are evidence, not ontology.
 
-4. **Boundary is interventional, not structural.** The test for
-   "is this the object's blanket?" is: does projection along this
-   direction preserve identity under plausible treatments? It is not:
-   which attributes are in the member-set? The Representation Law
-   should be read this way.
+3. **Core identity, not core size, is the discriminator of
+   objecthood** (exps 15, 16). A sparse invariant with semantically
+   loaded content is a lawful object; a rich attribute cluster with
+   nothing invariant under context variation is not. More columns do
+   not buy more objecthood. This is why sparse first publication
+   remains lawful under the Saturation Law.
+
+4. **Identity is a DC shift, not a principal-variance axis** (exp 18).
+   Object identity appears as a mean offset in representation space,
+   not as the dominant-variance direction. Characterization by "the
+   biggest source of variance in the attribute set" systematically
+   misses identity; characterize by typical-offset-from-a-null-peer
+   instead. This is the basis for excluding principal-component and
+   maximum-variance constructions as identity directions.
 
 These refinements do not weaken the Markov-object construct. They
 sharpen it into a construct that can be operationally validated and
-reproduced in published cuts.
+reproduced in published overlays.
+
+They constrain the Markov-object construct and overlays built on it.
+They are not admissibility conditions for entity cuts, which are
+governed by *Entity Cut Construction Law*.
 
 ### Epistemic Status Of The Construct
 
