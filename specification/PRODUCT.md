@@ -25,8 +25,8 @@ authority.
 ## Published Baseline
 
 The exact released and current operative Product is STDO `v2.2.2`
-at `124d0f8ee25e5a9a547cafdaffa4fea0523b45a4`, with standards aggregate
-`33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`.
+with standards aggregate
+`4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`.
 It remains immutable and operative until a successor is independently
 qualified, accepted, tapped, and explicitly selected by a consumer.
 

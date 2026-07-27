@@ -22,7 +22,7 @@
 - created_at: 2026-07-27
 - updated_at: 2026-07-27
 - closed_at: 2026-07-27
-- released_as: v2.2.2 at 124d0f8ee25e5a9a547cafdaffa4fea0523b45a4
+- released_as: v2.2.2
 - owner: specification_methodology
 - pen_holder: claude
 - predecessor_release: v2.2.1 at 8ad868eb0c9a3bdd075ff17ec4f7923d5ceec1cf
@@ -150,10 +150,30 @@ No change to STDO Product boundary, member set, altitude, or any other
 standards member. No executable conformance, schema, or consumer adoption
 change. This ticket does not tap `2.2.2`.
 
+## Second Increment: Working Refinements
+
+Carried finding F4 of the predecessor World Method review into the same wave
+rather than a separate release.
+
+The four working refinements were a faithful projection of a companion surface
+that has since been re-cut. The set survived; order, emphasis, and grounding
+did not, and none cited its supporting experiment, so drift was undetectable
+by reading.
+
+They are now stated in the pinned companion's order and sense, each citing its
+grounding experiment (17; -; 15 and 16; 18), with a stated rule that the pin in
+Companion Surfaces fixes which reading this method adopted. They are scoped
+explicitly to the Markov construct and overlays, not to entity cuts. No law is
+superseded.
+
+Finding F3 of the same review was discharged earlier in this wave: the
+Companion Surfaces entry cites experiments 08 onward and names experiment 20
+and its multi-layer successor.
+
 ## Closure
 
-Released as `v2.2.2` at `124d0f8ee25e5a9a547cafdaffa4fea0523b45a4`, aggregate
-`33961936b2862be61991630fdbccd56070389bbf597e6276615a0faeb770c50e`.
+Released as `v2.2.2`, aggregate
+`4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`.
 
 `v2.2.2-rc.1` was independently reviewed and rejected with three findings
 (geometry leaking into ordinary entity cuts at four sites; two conflicting
