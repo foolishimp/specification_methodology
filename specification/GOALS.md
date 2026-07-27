@@ -22,7 +22,7 @@ conserved.
 |---|---|---|
 | `M0` Predecessor | Exact `v2.2.1` source and release identity are fixed. | completed |
 | `M1` Normative amendment | Entity cut, Markov-object overlay, Entity Cut Construction Law, and the scoped geometric law are owned once in `WORLD_MODEL_METHOD.md`. | completed |
-| `M2` Derived reconciliation | Release delta, ticket, and Goals agree with the amended source; no compression or template binds the changed member. | completed |
+| `M2` Derived reconciliation | Product, release delta, ticket, and Goals agree with the amended source and with the released `v2.2.1` identity; no compression or template binds the changed member. | completed |
 | `M3` RC qualification | One immutable final-ready `v2.2.2` RC passes independent exact-cut review. | pending |
 | `M4` Tap | Direct human acceptance binds the exact final carrier and final-delta relation before `v2.2.2` publication. | pending |
 
@@ -45,7 +45,10 @@ conserved.
 - release delta: `releases/v2.2.2.md`
 - changed member: `specification/standards/WORLD_MODEL_METHOD.md`
 - candidate standards aggregate:
-  `6c5fbd6309fdda6fb8eedbbc7eb281571ddb6e9b81e8ce68643eb8e0d951f5cd`
+  `1428276dbe7bb9c3ecd84dfc55fe7ca081f68b38c641cea856663f68ecb88c9a`
+- carrier correction:
+  `.ai-workspace/comments/claude/20260727T070000Z_CORRECTION_stdo_2_2_1_carrier_identity.md`
+  (recorded, pending direct human ratification)
 
 No `v2.2.2` release exists while this work wave remains open.
 
@@ -55,7 +58,7 @@ No `v2.2.2` release exists while this work wave remains open.
 - consumer schemas, runtime, fixtures, tests, or adoption changes;
 - downstream product, repository, package, version, command, or implementation
   identity as constitutional method authority or example;
-- wholesale rewriting or contraction of accepted `v2.2.0` law;
+- wholesale rewriting or contraction of accepted `v2.2.1` law;
 - numeric progress algorithms, mandatory review rounds, or automatic ticket
   creation;
 - prescribed model decomposition, search, collaboration, worker count, tool,

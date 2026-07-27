@@ -220,14 +220,10 @@ The load-bearing reading is geometric.
 
 This reading is consistent with candidate evidence from a learned
 representation system. The evidence is direction-level and
-behavioural; the formal conditional-independence condition that
-would promote the Markov-object construct from candidate to
-established remains future work in the companion program. See the
-companion research surface at
-[`foolishimp/constraint_emergence_ontology` → `markov_object_research/empirical_results.md`](https://github.com/foolishimp/constraint_emergence_ontology/blob/main/markov_object_research/empirical_results.md)
-§15 for the specific experiments that discriminate geometric blanket
-from set-membership blanket, and the candidate-alignment table for
-this method's Markov-object construct.
+behavioural. The formal conditional-independence condition that would
+promote the Markov-object construct from candidate to established has
+been tested and did not meet its predicate. The construct remains
+candidate-class. See *Epistemic Status Of The Construct*.
 
 ### Four Working Refinements Indicated By The Empirical Program
 
@@ -281,14 +277,16 @@ candidate for it — must be read as working commitments, open to
 revision when the companion program produces a conditional-independence
 result.
 
-Promotion gate. The outstanding experimental result that would promote
-the construct from candidate to established is a direction-native
+Promotion gate. The experimental result that would promote the
+construct from candidate to established is a direction-native
 conditional-independence test: given the identity projection,
 residual variation along remaining components should be independent
-of the target under plausible treatments. Until such a test runs and
-succeeds at a meaningful threshold, published cuts that invoke this
-method should be read as candidate cuts of a candidate construct,
-not as certified blankets of formally-established objects.
+of the target under plausible treatments. That test has been run and
+did not meet its predicate, and its multi-layer successor did not
+either. The gate stands where it is; it has not been met and must not
+be relocated to accommodate the negative result. Published cuts that
+invoke this method are therefore candidate cuts of a candidate
+construct, not certified blankets of formally-established objects.
 
 This epistemic status is inherited downstream. Tooling that
 materializes Markov-object overlays under this method should default to a
@@ -827,15 +825,17 @@ More specifically:
 `source -> tracing -> assurance -> attribute ledger -> entity cut`
 
 The entity cut is the immutable projection, not the mutable source of
-truth. "Projection" is literal: the cut is a low-rank identity direction
-over the distributed evidence in the ledger, accompanied by that
-evidence and its verification record. See *Markov Object Construction
-Law* for the full obligation.
+truth. "Projection" is literal: the cut selects one bounded identity and
+boundary over the distributed evidence in the ledger, accompanied by that
+evidence and the basis on which it was accepted. See *Entity Cut
+Construction Law* for the obligation, and *Markov Object Construction Law*
+where the selection is expressed geometrically in a declared representation
+space.
 
-The attribute ledger is the accepted semantic record over which the object cut
+The attribute ledger is the accepted semantic record over which the entity cut
 is projected. A single ledger state can support many different cuts at
-different identity directions and different context scopes; the cut
-records which direction was taken, not that the ledger *is* the cut.
+different identities, boundaries, and context scopes; the cut records which
+selection was taken, not that the ledger *is* the cut.
 
 Every accepted object attribute should therefore be recoverable through:
 
@@ -908,101 +908,64 @@ Entities are recovered, not invented. A builder project constructs an entity
 cut by trawling authoritative source surfaces for the boundaries the operating
 model already commits to, then qualifying them into published truth.
 
-This law governs the ordinary case: institutional systems whose ledger claims
-are heterogeneous and symbolic, where no representation space is declared.
+### Admissibility
 
-### 1. Recovery
+An entity cut is admissible when its identity, boundary, authority, evidence,
+and ambiguity are explicit, traceable, and discriminated from plausible
+alternatives at evidence altitude proportional to the claim.
 
-Identify the candidate entity from enacted function, authority, state, and
-adjacency, using the traced and assured surfaces from the method flow.
+That is the whole constitutional test. It binds what must be true of a
+published cut. It does not prescribe how a builder establishes it.
 
-Reject schema-first modeling and vocabulary-cluster modeling. A table, a
-message type, or a vocabulary cluster is evidence that someone committed to
-something; it is not itself the commitment.
+Sparse first publication remains lawful. A unique, historical, single-context,
+inaccessible, or regulated entity is publishable when the above holds and its
+residual ambiguity is declared. Absence of a comparison population, of repeated
+contexts, or of permission to intervene is a bound on evidence altitude to be
+stated, not a bar to publication.
 
-### 2. Cross-Context Invariance
+### Discrimination
 
-Assemble ledger evidence across every context in which the candidate is
-instantiated, and separate:
+"Discriminated from plausible alternatives" means the cut states why this
+boundary rather than a nearby one the operating model would treat differently.
+The claim carries its own discrimination; a stronger claim needs stronger
+discrimination.
 
-- **invariant core**: the claims that hold wherever the entity appears, and
-  without which the operating model would treat it as a different thing
-- **context coat**: the claims a particular context adds, carrying
-  reinterpretation rather than identity
+Techniques that serve this, none of them mandatory and none of them exhaustive:
 
-Core size is not diagnostic. A sparse core with identity-loaded content is a
-lawful entity; a rich cluster with nothing invariant under context change is
-not.
-
-### 3. Null-Peer Distinguishability
-
-Name at least one structurally similar entity in the same system that the
-operating model treats as a different thing, and state what distinguishes
-them.
-
-The null peer is a check on a recovered boundary, not the derivation of it.
-If nothing in the invariant core separates the candidate from its nearest
-peer, the boundary has not been recovered yet.
-
-### 4. Verification By Treatment
-
-Identity claims are accepted only against interventional evidence. Record at
-least one:
-
+- **cross-context invariance**: separate what holds wherever the entity appears
+  from what a particular context adds, where multiple contexts exist
+- **null-peer comparison**: name a structurally similar entity the operating
+  model treats differently, and state what separates them
 - **adjoint round-trip**: interpret the entity through an adjacent domain's
-  treatment surface and back through its adjoint mapping, and show the
-  invariant core survives
-- **transplant**: show that a null peer acquiring the core claims would be
-  treated as this entity by the operating model
-- **coat stripping**: vary or remove context-coat claims and show identity
-  survives; vary a core claim and show it does not
+  treatment surface and back through its adjoint mapping, and show the identity
+  claim survives
+- **transplant**: show what a neighbouring entity would have to acquire to be
+  treated as this one
+- **coat stripping**: vary or remove contextual claims and show identity
+  survives; vary an identity claim and show it does not
 
-The adjoint round-trip is the semantic form of the boundary test. It
-discriminates a real boundary from an attribute grouping, which is the same
-discrimination the geometric boundary test performs in a representation
-space.
+The adjoint round-trip performs, at semantic altitude, the discrimination the
+geometric boundary test performs in a representation space. Where a builder can
+intervene, interventional evidence discriminates more strongly than declarative
+evidence, and a cut should say which kind it rests on.
 
-An entity with no acceptable verification is a candidate, not a published
-entity cut.
+Boundary is interventional in character, not structural. A cut that states its
+boundary only as a set of source fields has made a weaker claim than one that
+states the reinterpretations under which identity survives, and should be read
+as such.
 
-### 5. Cut Publication
+### Publication
 
-A published entity cut must make visible, at minimum:
+A published entity cut makes its identity, boundary, authority, state,
+evidence, and ambiguity visible and traceable, and records the basis on which
+identity was discriminated.
 
-- **identity**: what the operating model treats this as, and the invariant
-  core carrying it
-- **boundary**: the reinterpretations under which identity was shown to
-  survive, and the adjacent domains tested
-- **authority**: which source is authoritative for which aspect
-- **state**: the state and transition surfaces that matter
-- **evidence**: core and coat claims, traced to ledger entries
-- **verification record**: treatments applied, outcomes observed, contexts
-  covered
-- **null-peer comparison**: what similar entities were tested, what was
-  accepted, what was rejected
-- **ambiguity**: what remains unresolved or unsupported
-
-Sparse first publication is lawful where the entity is bounded,
-distinguishable, and evidence-backed.
-
-A cut is immutable. Revising identity or boundary produces a new cut that
+Cuts are immutable. Revising identity or boundary produces a new cut that
 supersedes the prior one.
 
-### 6. Storage Shape
-
-The stored entity cut is a package, not a row:
-
-- the identity and boundary statement
-- the distributed evidence (pointers into the attribute ledger)
-- the verification trace (treatments, contexts, outcomes)
-- the provenance and authority record
-- the supersession record
-- the Markov-object overlay, where one has been constructed
-
-A storage layout that loses any present surface is not a lawful entity-cut
-storage layout.
-
----
+Concrete carriers, layouts, schemas, and storage topology are consumer
+realization. This method requires that the published surfaces survive; it does
+not select the form they are stored in.
 
 ## Markov Object Construction Law
 
@@ -1356,10 +1319,14 @@ The result is:
 - `SPEC_METHOD.md`: constitutional specification method
 - `RELEASE_METHOD.md`: method for releasing standards into installed workspaces
 - `TICKET_METHOD.md`: method for turning discovery into bounded execution work
-- [`foolishimp/constraint_emergence_ontology` → `markov_object_research/empirical_results.md`](https://github.com/foolishimp/constraint_emergence_ontology/blob/main/markov_object_research/empirical_results.md):
+- `constraint_emergence_ontology`, at
+  `markov_object_research/empirical_results.md`:
   candidate empirical program on the Markov-object construct in a learned
-  representation system (GPT-2 + SAEs). Experiments 08–18 report evidence
-  consistent with the geometric-blanket reading, with causal and
-  discrimination results that sharpen this method's working construct while
-  leaving the formal conditional-independence promotion gate open. See §15 of
-  that document for the claim-by-claim alignment table.
+  representation system (GPT-2 + SAEs). Experiments 08 onward report evidence
+  consistent with the geometric-blanket reading; experiment 20 and its
+  multi-layer successor tested the formal conditional-independence promotion
+  gate and did not meet it. Bound at commit
+  `2da7871bf48d3144e4e83d5e8a336671251a6c76`, document SHA-256
+  `269b5c008bc9fa20283cef63bf2daca373af86b2cf495182753671a5b203b3dd`.
+  This is research evidence, not constitutional authority; a later revision
+  of that program does not amend this method.

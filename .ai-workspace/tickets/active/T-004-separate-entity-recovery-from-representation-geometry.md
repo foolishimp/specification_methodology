@@ -6,6 +6,11 @@
 - ticket_category: ordinary
 - status: active
 - review_status: candidate_ready_for_review
+- goal: >-
+    Publish one bounded STDO 2.2.2 successor in which a recovered
+    institutional entity has a lawful published form, geometric obligations
+    apply only where a representation space is declared, and the Markov
+    construct's epistemic status is stated once.
 - change_intent: >-
     Restore the Markov object to its stated role as the theoretical account of
     why a recovered boundary is real, and give the discovery path its own
@@ -15,6 +20,7 @@
 - re_entry_point: specification/standards/WORLD_MODEL_METHOD.md
 - triaged_at: 2026-07-27
 - created_at: 2026-07-27
+- updated_at: 2026-07-27
 - owner: specification_methodology
 - pen_holder: claude
 - predecessor_release: v2.2.1 at 8ad868eb0c9a3bdd075ff17ec4f7923d5ceec1cf
@@ -66,11 +72,19 @@ procedure presumes a representation space that institutional ledger claims do
 not supply. The method's own discovery pipeline therefore produced output its
 own publication law refused to accept.
 
-Confirmed empirically in the `odd_world_model` builder, whose proof surface
+Motivating observation, not closure evidence. The `odd_world_model` builder at
+commit `f94aa30fb2518a342655bf6d53cbb66fb3321277` shows the same split
+independently: its proof surface
+(`build_tenants/typescript/code/src/proof/generate_full_build_proof.ts`,
+SHA-256 `da11f4790c9ca0f2c17de48cf46704b10601aeee8d9316809515dd2074434377`)
 declares `identity_direction_shape_exists_but_held_out_treatment_and_
-distributed_evidence_are_unresolved_refs`, and whose produced
-`identity_direction` is a referential triple over source states, not a
-geometric direction.
+distributed_evidence_are_unresolved_refs`, and its produced
+`identity_direction` (artifact SHA-256
+`cd3b16bba437287e7e22f2d02cc72184a06a7871cff7a264b4abae971da29050`) is a
+referential triple over source states rather than a geometric direction.
+
+That observation motivated this reprice. It is a downstream consumer state,
+not STDO evidence, and it closes nothing in this ticket.
 
 ## Change
 
@@ -79,9 +93,12 @@ geometric direction.
    state, evidence, treatment, covariance, and ambiguity.
 2. **Markov-Object Overlay** added as an optional geometric overlay,
    admissible only where a representation space is declared.
-3. **Entity Cut Construction Law** added: recovery, cross-context invariance,
-   null-peer distinguishability, verification by treatment (adjoint
-   round-trip, transplant, coat stripping), cut publication, storage shape.
+3. **Entity Cut Construction Law** added in proportional form: one
+   admissibility test over identity, boundary, authority, evidence, and
+   ambiguity at evidence altitude proportional to the claim. Cross-context
+   invariance, null-peer comparison, adjoint round-trip, transplant, and coat
+   stripping are named as non-mandatory techniques. Concrete carriers,
+   layouts, and storage topology remain consumer realization.
 4. **Markov Object Construction Law** scoped as the representation-substrate
    specialization; the declared representation space becomes a required,
    versioned overlay member, and a re-fitted space is an explicit supersession
