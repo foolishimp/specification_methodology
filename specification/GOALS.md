@@ -2,24 +2,28 @@
 
 ## Current Goal
 
-STDO `2.2.2` is the current published Product. It is the full aggregate
-surface. No successor work wave is selected.
+Construct and qualify one bounded STDO `2.3.0` successor that binds
+transformation admission, bounded frame conservation, invariant
+reconstruction, computational realization, and agentic construction execution
+without introducing executable STDO workflow machinery.
 
 ## Governing Outcome
 
 The exact `v2.2.2` cut, with standards aggregate
 `4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`,
-is the immutable current Product. The `2.2.2` work wave is closed.
+remains the immutable current Product and predecessor. The final-ready
+`2.3.0` candidate changes four normative members and five authority
+compressions while retaining the 41-member Product boundary.
 
 ## Milestones
 
 | Milestone | Exit | State |
 |---|---|---|
 | `M0` Predecessor | Exact `v2.2.2` source and release identity are fixed. | completed |
-| `M1` Normative amendment | Entity cut, Markov-object overlay, Entity Cut Construction Law, the scoped geometric law, and the reconciled working refinements are owned once in `WORLD_MODEL_METHOD.md`. | completed |
-| `M2` Derived reconciliation | Release delta, ticket, and Goals agree with the amended source; no compression or template binds the changed member. | completed |
-| `M3` RC qualification | Two immutable RCs published; `rc.1` independently reviewed and rejected with three findings; `rc.2` carried the bounded repair. | completed |
-| `M4` Tap | Direct human acceptance bound the exact subject and carrier. | completed |
+| `M1` Normative amendment | `STDO-UP-016` through `STDO-UP-020` have one owner each and preserve the STDO Product boundary. | completed |
+| `M2` Derived reconciliation | Affected authority compressions bind the amended sources and preserve the complete execution relation. | completed |
+| `M3` RC qualification | One immutable final-ready `v2.3.0` RC receives independent exact-cut review. | pending |
+| `M4` Tap | Direct human acceptance binds the exact release subject, final carrier, and final-delta relation before publication. | pending |
 
 ## Published Cut
 
@@ -48,9 +52,29 @@ is the immutable current Product. The `2.2.2` work wave is closed.
 - predecessor World Method review finding F3 (cited experiment range) was
   discharged in `2.2.2`; F4 is carried by T-005 above
 
+## Current Successor Wave
+
+- successor line: `2.3.0`
+- work items:
+  `.ai-workspace/tickets/active/T-005-bind-entity-transformation-authority-across-stdo.md`
+  and
+  `.ai-workspace/tickets/active/T-006-bind-agentic-construction-execution-into-stdo-2-3.md`
+- release delta: `releases/v2.3.0.md`
+- changed normative members: `SPEC_METHOD.md`, `DESIGN_MODULE_METHOD.md`,
+  `ODD_METHOD.md`, and `TICKET_METHOD.md`
+- changed derived members: their four authority compressions plus
+  `stdo_compressed.md`
+- candidate standards aggregate:
+  `014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`
+
+No `v2.3.0` release exists until the immutable RC passes the required review,
+the final delta is proven, and direct human authority accepts the exact final
+carrier.
+
 ## Exclusions
 
-- executable conformance or root-governor machinery;
+- executable conformance or root-governor machinery; this does not exclude an
+  abstract normative agentic construction-execution relation;
 - consumer schemas, runtime, fixtures, tests, or adoption changes;
 - downstream product, repository, package, version, command, or implementation
   identity as constitutional method authority or example;

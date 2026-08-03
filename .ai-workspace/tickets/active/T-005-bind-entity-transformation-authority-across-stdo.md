@@ -7,7 +7,7 @@
 - type: proposal
 - ticket_category: constitutional
 - status: proposed
-- review_status: reviewed_five_times_2026_08_02; converged; acceptable_in_substance; awaiting_authorization
+- review_status: reviewed_five_times_2026_08_02; converged; acceptable_in_substance; authorized_for_v2.3.0_rc_candidate
 - goal: >-
     Publish one bounded STDO successor in which accepted design identifies the
     complete admission relation for each consequential entity-transition
@@ -30,7 +30,7 @@
 - pen_holder: unassigned
 - predecessor_release: v2.2.2 at 0519129d63de10822ae6353fa0c5ce05d56f13e9
 - target_release_line: 2.3.0
-- work_authorization: none
+- work_authorization: direct_human_authorization_2026-08-03
 
 ## Governing Principle
 

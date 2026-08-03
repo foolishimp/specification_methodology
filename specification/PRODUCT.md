@@ -68,17 +68,43 @@ This amendment adds no runtime, schema, scoring algorithm, representation-space
 requirement for ordinary recovery, mandatory artifact, review-round count,
 candidate threshold, or conformance implementation.
 
+## Current Successor Amendment
+
+The bounded `2.3.0` successor completes the method relation from globally
+governed design into proportional local agentic construction:
+
+1. `STDO-UP-016` requires one complete transformation-admission relation for
+   each consequential entity-transition domain and explicit disposition of
+   competing paths;
+2. `STDO-UP-017` requires a bounded local action to conserve every governing
+   frame and causally relevant seam it affects;
+3. `STDO-UP-018` requires accepted method plus design to reconstruct the
+   governing invariants needed for a bounded decision without conversation,
+   commentary, prior-agent memory, or folklore;
+4. `STDO-UP-019` projects domain design into computational realization,
+   declares component role sets, and separates semantic from realization
+   commonization decisions; and
+5. `STDO-UP-020` governs sufficient agentic intake, bounded causal
+   construction, independent live-surface assessment where required,
+   delegated routine advancement, proportional disposition, proof cadence,
+   exact checkpointing, and progress-versus-churn semantics.
+
+The successor adds normative execution algebra, not executable workflow
+machinery. Consumers continue to own models, prompts, tools, worker topology,
+runtime, orchestration, repository layout, concrete design, code, tests, and
+conformance implementation.
+
 ## Successor Release Outcome
 
 The successor is complete when one exact Product release subject and its
 reviewed-to-final carrier relation are established and the subject:
 
-- preserves or explicitly supersedes every material `v2.2.1` predecessor
+- preserves or explicitly supersedes every material `v2.2.2` predecessor
   claim;
 - contains the bounded tuning laws with one owner each;
 - contains no executable STDO conformance or workflow implementation;
 - has internally consistent source and derived distributions;
-- has exact member identity and a complete `v2.2.1` delta;
+- has exact member identity and a complete `v2.2.2` delta;
 - is published through one immutable final-ready RC and passes independent
   exact-cut review;
 - preserves the reviewed Product and release-scoped bytes through final-delta
