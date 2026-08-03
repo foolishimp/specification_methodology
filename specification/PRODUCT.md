@@ -24,13 +24,13 @@ authority.
 
 ## Published Baseline
 
-The exact released and current operative Product is STDO `v2.2.2`
-with standards aggregate
-`4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`.
+The exact released and current operative Product is STDO `v2.3.0` at
+`b2c64047e01d9d582243a25af587ac772233a4ea`, with standards aggregate
+`014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`.
 It remains immutable and operative until a successor is independently
 qualified, accepted, tapped, and explicitly selected by a consumer.
 
-Any successor source takes the complete `v2.2.2` Product as its
+Any successor source takes the complete `v2.3.0` Product as its
 construction basis. It preserves the Product boundary, construction algebra,
 authority relations, Product-outcome conservation, proportional method,
 Ontology, IACS, Prime, three-view design, independent review, and exact release
@@ -39,7 +39,7 @@ identity.
 The rejected executable and overcorrected normative candidates remain archived
 history. Neither is a construction basis for this successor.
 
-## Published Amendment
+## Published 2.2.2 Amendment
 
 The released `2.2.2` amendment separates entity recovery from
 representation-substrate geometry in `WORLD_MODEL_METHOD.md`:
@@ -68,9 +68,9 @@ This amendment adds no runtime, schema, scoring algorithm, representation-space
 requirement for ordinary recovery, mandatory artifact, review-round count,
 candidate threshold, or conformance implementation.
 
-## Current Successor Amendment
+## Published 2.3.0 Amendment
 
-The bounded `2.3.0` successor completes the method relation from globally
+The released `2.3.0` amendment completes the method relation from globally
 governed design into proportional local agentic construction:
 
 1. `STDO-UP-016` requires one complete transformation-admission relation for
@@ -99,12 +99,12 @@ conformance implementation.
 The successor is complete when one exact Product release subject and its
 reviewed-to-final carrier relation are established and the subject:
 
-- preserves or explicitly supersedes every material `v2.2.2` predecessor
+- preserves or explicitly supersedes every material `v2.3.0` predecessor
   claim;
 - contains the bounded tuning laws with one owner each;
 - contains no executable STDO conformance or workflow implementation;
 - has internally consistent source and derived distributions;
-- has exact member identity and a complete `v2.2.2` delta;
+- has exact member identity and a complete predecessor delta;
 - is published through one immutable final-ready RC and passes independent
   exact-cut review;
 - preserves the reviewed Product and release-scoped bytes through final-delta

@@ -6,8 +6,8 @@
   projection into `DESIGN_MODULE_METHOD.md`
 - type: proposal
 - ticket_category: constitutional
-- status: proposed
-- review_status: reviewed_five_times_2026_08_02; converged; acceptable_in_substance; authorized_for_v2.3.0_rc_candidate
+- status: completed
+- review_status: reviewed_five_times; accepted_in_v2.3.0_exact_cut
 - goal: >-
     Publish one bounded STDO successor in which accepted design identifies the
     complete admission relation for each consequential entity-transition
@@ -26,6 +26,8 @@
 - triaged_at: 2026-08-02
 - created_at: 2026-08-02
 - updated_at: 2026-08-02
+- closed_at: 2026-08-03
+- released_as: v2.3.0
 - owner: specification_methodology
 - pen_holder: unassigned
 - predecessor_release: v2.2.2 at 0519129d63de10822ae6353fa0c5ce05d56f13e9

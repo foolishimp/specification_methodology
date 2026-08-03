@@ -4,8 +4,8 @@
 - title: Bind the agentic construction execution protocol into `SPEC_METHOD.md`
 - type: proposal
 - ticket_category: constitutional
-- status: candidate_ready_for_independent_review
-- review_status: bounded_review_findings_repaired; awaiting_immutable_rc_exact_cut_review
+- status: completed
+- review_status: bounded_review_findings_repaired; accepted_in_v2.3.0_exact_cut
 - goal: >-
     Complete the open STDO 2.3 method candidate with one normative execution
     relation that turns accepted specification and design into bounded agentic
@@ -22,6 +22,8 @@
 - triaged_at: 2026-08-03
 - created_at: 2026-08-03
 - updated_at: 2026-08-03
+- closed_at: 2026-08-03
+- released_as: v2.3.0
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_release: v2.2.2 at 0519129d63de10822ae6353fa0c5ce05d56f13e9
@@ -308,6 +310,7 @@ hooks, the Goals clarification, and the corresponding compression updates.
 ## Authorization Boundary
 
 Direct human authorization on 2026-08-03 admitted the bounded source, Goals,
-and derived-compression amendment. The exact candidate now awaits independent
-review. Release authoring, publication, and downstream-consumer adoption remain
-unauthorized.
+and derived-compression amendment. Direct human acceptance then bound immutable
+RC and final carrier `b2c64047e01d9d582243a25af587ac772233a4ea` with a
+zero-byte final delta before publication as `v2.3.0`. Downstream-consumer
+adoption remains separately governed.

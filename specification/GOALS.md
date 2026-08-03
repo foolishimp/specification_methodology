@@ -2,18 +2,15 @@
 
 ## Current Goal
 
-Construct and qualify one bounded STDO `2.3.0` successor that binds
-transformation admission, bounded frame conservation, invariant
-reconstruction, computational realization, and agentic construction execution
-without introducing executable STDO workflow machinery.
+STDO `2.3.0` is the current published Product. Its bounded successor wave is
+closed. No later work wave is selected.
 
 ## Governing Outcome
 
-The exact `v2.2.2` cut, with standards aggregate
-`4cc6a10fca6b1a2c6991664d2a7ee19220401d95f3f1c0f4fa848c6a9ed81c21`,
-remains the immutable current Product and predecessor. The final-ready
-`2.3.0` candidate changes four normative members and five authority
-compressions while retaining the 41-member Product boundary.
+The exact `v2.3.0` cut at
+`b2c64047e01d9d582243a25af587ac772233a4ea`, with standards aggregate
+`014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`,
+is the immutable current Product.
 
 ## Milestones
 
@@ -22,8 +19,8 @@ compressions while retaining the 41-member Product boundary.
 | `M0` Predecessor | Exact `v2.2.2` source and release identity are fixed. | completed |
 | `M1` Normative amendment | `STDO-UP-016` through `STDO-UP-020` have one owner each and preserve the STDO Product boundary. | completed |
 | `M2` Derived reconciliation | Affected authority compressions bind the amended sources and preserve the complete execution relation. | completed |
-| `M3` RC qualification | One immutable final-ready `v2.3.0` RC receives independent exact-cut review. | pending |
-| `M4` Tap | Direct human acceptance binds the exact release subject, final carrier, and final-delta relation before publication. | pending |
+| `M3` RC qualification | Immutable `v2.3.0-rc.1` was reviewed; its bounded findings were repaired before freeze, and final qualification passed. | completed |
+| `M4` Tap | Direct human acceptance bound the exact zero-delta carrier before `release/2.3.0` and `v2.3.0` publication. | completed |
 
 ## Published Cut
 
@@ -52,24 +49,19 @@ compressions while retaining the 41-member Product boundary.
 - predecessor World Method review finding F3 (cited experiment range) was
   discharged in `2.2.2`; F4 is carried by T-005 above
 
-## Current Successor Wave
+## Published 2.3.0 Cut
 
-- successor line: `2.3.0`
-- work items:
-  `.ai-workspace/tickets/active/T-005-bind-entity-transformation-authority-across-stdo.md`
-  and
-  `.ai-workspace/tickets/active/T-006-bind-agentic-construction-execution-into-stdo-2-3.md`
+- release branch: `release/2.3.0`
+- release tag: `v2.3.0`
+- release and reviewed RC commit:
+  `b2c64047e01d9d582243a25af587ac772233a4ea`
+- reviewed RC tag: `v2.3.0-rc.1`
 - release delta: `releases/v2.3.0.md`
-- changed normative members: `SPEC_METHOD.md`, `DESIGN_MODULE_METHOD.md`,
-  `ODD_METHOD.md`, and `TICKET_METHOD.md`
-- changed derived members: their four authority compressions plus
-  `stdo_compressed.md`
-- candidate standards aggregate:
+- standards aggregate:
   `014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`
-
-No `v2.3.0` release exists until the immutable RC passes the required review,
-the final delta is proven, and direct human authority accepts the exact final
-carrier.
+- completed work items: T-005 and T-006
+- acceptance:
+  `.ai-workspace/comments/human/20260803T095022Z_DECISION_accept_and_publish_stdo_2_3_0.md`
 
 ## Exclusions
 
