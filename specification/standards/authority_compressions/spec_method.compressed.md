@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 25e673f16a1d28fc43c95848a486625b34da8ea703ad36febb653456e86f1b37
+source_digest: f899b4f798f0ee9083e1fc3e092cd73f1444fc57c26feb898da2cf6e36430708
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-03
+generated_at: 2026-08-06
 stale_if_source_digest_changes: true
 ---
 
@@ -100,6 +100,25 @@ capabilities through neutral identities rather than consumer precedent.
   test.
 - Prioritize fast Product feedback under that same relation; this is not a
   global scheduler or fixed execution sequence.
+- For a material admission, each owner independently derives the causally
+  complete enclosing relation and binds one exact admission-valid basis through
+  validation and admission. Basis advancement causes effect-free re-entry;
+  participating owners use an equal or declared coherent composite basis. All
+  participants and joins validate before effects, and the complete transition
+  is one semantic commit: complete or none, never a subset. Caller assertions,
+  mixed bases, partial results, and competing same-scope paths cannot establish
+  truth.
+- Qualify every owner and supported boundary with direct, supported
+  composite/nested, forged, ambiguous enclosing relation, stale or preflight-
+  advanced basis, incoherent multi-owner basis, competing same-scope authority,
+  fresh-process reconstruction, exact replay equality, and post-validation
+  atomic-publication cases. Exercise every materially distinct boundary capable
+  of exposing a subset, unless a design-declared dominance/equivalence proof
+  shows named observations cover the complete partial-failure surface, and
+  follow each observation with fresh reconstruction. An indivisible unit is
+  observed immediately on both sides. Unsupported composite/nested forms
+  require design-grounded non-applicability and no weaker path. Final-
+  participant validation failure is not atomic-publication evidence.
 - For probabilistic or agentic construction, execute one bounded causal cone
   from a reconstruction-sufficient governing basis supplied by `STDO-UP-016`
   through `STDO-UP-019`. Identify the affected relations, selected computational

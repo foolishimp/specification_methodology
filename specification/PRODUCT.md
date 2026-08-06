@@ -22,22 +22,39 @@ consumer Product. Consumers bind concrete conforming realizations and their
 immutable identities in downstream Product, requirements, design, and release
 authority.
 
-## Published Baseline
+## Operative Predecessor
 
-The exact released and current operative Product is STDO `v2.3.0` at
+The exact operative predecessor for the current successor amendment is STDO
+`v2.3.0` at
 `b2c64047e01d9d582243a25af587ac772233a4ea`, with standards aggregate
 `014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`.
-It remains immutable and operative until a successor is independently
-qualified, accepted, tapped, and explicitly selected by a consumer.
+It remains immutable. Consumers continue to select the published predecessor
+until a successor is tapped and explicitly selected.
 
-Any successor source takes the complete `v2.3.0` Product as its
-construction basis. It preserves the Product boundary, construction algebra,
-authority relations, Product-outcome conservation, proportional method,
-Ontology, IACS, Prime, three-view design, independent review, and exact release
-identity.
+The current successor takes the complete `v2.3.0` Product as its construction
+basis. It preserves the Product boundary, construction algebra, authority
+relations, Product-outcome conservation, proportional method, Ontology, IACS,
+Prime, three-view design, independent review, and exact release identity.
 
 The rejected executable and overcorrected normative candidates remain archived
 history. Neither is a construction basis for this successor.
+
+## Current 2.3.1 Successor Amendment
+
+The current `2.3.1` successor amendment adds complete enclosing-relation
+admission as federal method law. Every admission owner independently derives
+the complete relation, preserves one exact admission-valid basis, validates all
+participants before effects, and admits the complete transition or none.
+Accepted design declares the concrete owner, boundary, basis, relation, fault
+surface, reconstruction, supported structural forms, and competing-path
+disposition needed to instantiate that law.
+
+The exact successor Product subject is the 41-member standards distribution
+with aggregate
+`0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7`.
+Naming this exact successor does not assert publication. Consumer operability
+still requires an immutable final-ready RC, independent exact-cut review,
+final-delta proof, direct human acceptance, tap, and explicit selection.
 
 ## Published 2.2.2 Amendment
 
@@ -94,14 +111,15 @@ machinery. Consumers continue to own models, prompts, tools, worker topology,
 runtime, orchestration, repository layout, concrete design, code, tests, and
 conformance implementation.
 
-## Successor Release Outcome
+## 2.3.1 Release Outcome
 
-The successor is complete when one exact Product release subject and its
+The amendment is complete when one exact Product release subject and its
 reviewed-to-final carrier relation are established and the subject:
 
 - preserves or explicitly supersedes every material `v2.3.0` predecessor
   claim;
-- contains the bounded tuning laws with one owner each;
+- contains `STDO-UP-021` in `SPEC_METHOD.md` and its compact declaration
+  obligation in `DESIGN_MODULE_METHOD.md` without duplicate authority;
 - contains no executable STDO conformance or workflow implementation;
 - has internally consistent source and derived distributions;
 - has exact member identity and a complete predecessor delta;
@@ -113,5 +131,5 @@ reviewed-to-final carrier relation are established and the subject:
   boundary, including the final carrier and final-delta relation, before final
   Product publication.
 
-The current source and any candidate review remain non-operative for consumers
-until an immutable successor is tapped and explicitly selected.
+Consumer operability attaches only to an immutable tapped release explicitly
+selected by that consumer.

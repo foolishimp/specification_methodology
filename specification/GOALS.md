@@ -2,8 +2,10 @@
 
 ## Current Goal
 
-STDO `2.3.0` is the current published Product. Its bounded successor wave is
-closed. No later work wave is selected.
+STDO `2.3.0` remains the operative predecessor. The exact `2.3.1` Candidate 03
+constitutional amendment is independently accepted, and its final-ready RC
+carrier is prepared. This records no RC publication or tag, direct human final
+acceptance, release tap, or consumer selection.
 
 ## Governing Outcome
 
@@ -11,6 +13,33 @@ The exact `v2.3.0` cut at
 `b2c64047e01d9d582243a25af587ac772233a4ea`, with standards aggregate
 `014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`,
 is the immutable current Product.
+
+## Active 2.3.1 Patch Outcome
+
+The successor candidate requires every admission owner of a material
+transition to independently derive the complete enclosing relation from
+authoritative inputs, preserve one exact authoritative basis through admission,
+validate every participant before transition effects, and admit the complete
+transition atomically. Qualification for every owner and supported boundary
+covers direct and supported composite or nested forms; forged inputs; stale or
+advanced bases; ambiguous enclosing relations; incoherent multi-owner basis;
+competing same-scope authority; fresh reconstruction and exact replay equality;
+and every materially distinct post-validation partial-failure boundary, or a
+design-declared dominance/equivalence proof covering the complete surface.
+
+The federal transition law has one normative home in `SPEC_METHOD.md`.
+`DESIGN_MODULE_METHOD.md` declares the concrete design information required to
+instantiate that law without reproducing it. Consumer realization mechanisms,
+runtime, participant cardinality, concrete bindings, and downstream adoption
+remain outside this wave.
+
+| Milestone | Exit | State |
+|---|---|---|
+| `S0` Authorization | Direct Product authority selects the bounded constitutional outcome and `2.3.1` patch line. | completed |
+| `S1` Candidate construction | Source law, design consumption, and affected compressions form one digest-current candidate. | completed |
+| `S2` Independent qualification | Independent exact-candidate review accepts Candidate 03 and aggregate `0b785c84…61a7`. | completed |
+| `S3` RC preparation | Prepare the exact final-ready `2.3.1` RC subject and release-scoped note without publishing either. | completed |
+| `S4` Tap | Exact-cut review, final-delta proof, and direct human acceptance precede publication. | pending |
 
 ## Milestones
 

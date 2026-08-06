@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 82e40cf5074b1af0ba05c459c664c29a625cba8fa07c9b791b31973cf0c725da
+source_digest: 3a609a873f7bb98708261498eb56d8210108afbf9098633a769f6786f1df7a2e
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-03
+generated_at: 2026-08-06
 stale_if_source_digest_changes: true
 ---
 
@@ -121,6 +121,19 @@ surfaces.
   no admission authority, and reconstructed projection state is not
   self-authenticating admission evidence. Consequential results re-enter the
   governing admission relation against an explicit predecessor basis.
+- For every material admission relation, accepted design compactly declares
+  each owner and supported boundary; exact basis identity, continuity, and any
+  coherent multi-owner basis; enclosing relation, participants, and joins;
+  refusal/effect boundaries; semantic commit unit and decomposability; every
+  materially distinct post-validation partial-failure boundary, or a design-
+  declared dominance/equivalence proof that named observations cover the
+  complete surface; reconstruction; supported direct/composite/nested forms;
+  and competing paths. Instantiate
+  `SPEC_METHOD.md` `STDO-UP-021` qualification per owner and supported boundary.
+  Unsupported composite/nested forms require design-grounded `not_applicable`
+  and no weaker or competing path. Missing or downstream-invented fields,
+  inferred basis/boundary-coverage/reconstruction law, and helper-manufactured
+  non-applicability falsify the declaration.
 - Declare the governing frames a material boundary derives from, its bounded
   affected relation set, inherited invariants, and the authority and composition
   seams crossing that set. Governing frames form a constraint network; deriving

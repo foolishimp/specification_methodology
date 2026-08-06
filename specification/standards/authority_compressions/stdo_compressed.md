@@ -16,8 +16,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: 25e673f16a1d28fc43c95848a486625b34da8ea703ad36febb653456e86f1b37
-  DESIGN_MODULE_METHOD.md: 82e40cf5074b1af0ba05c459c664c29a625cba8fa07c9b791b31973cf0c725da
+  SPEC_METHOD.md: f899b4f798f0ee9083e1fc3e092cd73f1444fc57c26feb898da2cf6e36430708
+  DESIGN_MODULE_METHOD.md: 3a609a873f7bb98708261498eb56d8210108afbf9098633a769f6786f1df7a2e
   ODD_METHOD.md: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
   TICKET_METHOD.md: 2a23614cdd344179cf43263dd6074b1c2f7d4747c33083fdcebff3992df41675
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
@@ -25,7 +25,7 @@ source_digests:
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
-generated_at: 2026-07-26
+generated_at: 2026-08-06
 stale_if_source_digest_changes: true
 ---
 
@@ -85,6 +85,40 @@ layer that owns the missing truth.
   replica, a replacement, or a deliberately independent realization of the
   admission law. Disposition does not mean deletion; an undisposed equivalent
   path is the defect, not the equivalence itself.
+- For a material transition, each admission owner independently derives the
+  causally complete enclosing relation, including every relevant participant,
+  equality join, and crossing seam, from one exact admission-valid basis.
+  Basis continuity holds through admission: advancement after preflight causes
+  a declared predecessor/currentness check or effect-free re-entry, and
+  participating owners use an equal or design-declared coherent composite
+  basis, never mixed independently valid bases. Every participant and join is
+  validated before effect; the semantic commit is the complete transition,
+  admitting all or none. Caller or owner assertions cannot establish this law.
+- Direct and every supported composite or nested boundary preserve the same
+  law; competing same-scope paths cannot bypass it, and fresh reconstruction or
+  replay reproduces the exact relation, basis, and outcome or refusal. Qualify
+  each owner and supported boundary for direct, supported composite/nested,
+  forged, ambiguous enclosing relation, stale or preflight-advanced basis,
+  incoherent multi-owner basis, competing same-scope authority,
+  reconstructed/fresh-process, exact replay equality, and post-validation
+  atomic failure. Exercise
+  every materially distinct boundary capable of exposing a subset, unless a
+  design-declared dominance/equivalence proof shows named observations cover
+  the complete partial-failure surface, and follow each with fresh
+  reconstruction. An indivisible unit is observed immediately on both sides;
+  final-participant validation failure is not atomic-failure evidence.
+- For each material admission relation, accepted design compactly declares the
+  owner and supported boundary; exact basis and continuity, including any
+  coherent multi-owner basis; enclosing relation, participants, and joins;
+  refusal/effect boundary; complete semantic commit unit and decomposability;
+  every materially distinct post-validation partial-failure boundary, or a
+  design-declared dominance/equivalence proof that named observations cover the
+  complete surface; reconstruction; supported direct/composite/nested forms;
+  and competing paths. Qualification is per owner and supported boundary;
+  unsupported composite/nested forms require design-grounded `not_applicable`
+  and no weaker or competing path. Missing or downstream-invented fields,
+  inferred basis/boundary-coverage/reconstruction law, or helper-manufactured
+  non-applicability falsifies the declaration.
 - Declare the governing frames a material boundary derives from, its bounded
   affected relation set, and the seams crossing it. Frames form a constraint
   network; more than one governing frame is lawful. Every seam crossing the

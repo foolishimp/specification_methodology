@@ -828,6 +828,72 @@ reported as accepted Product progress.
 
 ---
 
+## Complete Enclosing-Relation Admission (`STDO-UP-021`)
+
+For a material transition, each admission owner independently derives the
+complete enclosing relation from authoritative inputs. The relation contains
+every participant and equality join whose identity, validity, authority,
+currentness, or transition can affect or be affected by admission; each
+crossing seam includes its relevant far side or authoritatively establishes
+that the far side cannot participate. Caller or owner assertions of
+completeness, validity, prior admission, or authority do not establish truth.
+
+Derivation and validation bind one exact admission-valid authoritative basis
+identity through admission. If validity or currentness can advance after
+preflight, admission remains conditional on the declared predecessor and
+currentness law for that basis or re-enters derivation and validation without
+effect. Participating owners bind an equal basis or a design-declared coherent
+composite basis; independently valid mixed-basis judgments cannot combine.
+
+Every participant and join is validated before any transition effect. Internal
+evaluation order is implementation-owned, but no participant subset or nested
+constituent becomes admitted truth. Admission is one semantic commit of the
+complete transition, bound to its exact basis identity; failure or interruption
+admits the complete transition or none, never a subset. No realization
+mechanism or participant count is prescribed.
+
+Direct and every supported composite or nested boundary preserve this law. A
+partial result cannot substitute for an owner's derivation and validation, and
+a competing same-scope path cannot establish the transition outside the
+governing admission relation. Fresh reconstruction and replay over the same
+basis reproduce the enclosing relation, basis identity, and complete outcome
+or refusal exactly at semantic altitude.
+
+This law is false if completeness is asserted rather than derived; a relevant
+participant, join, or seam is omitted; validation and admission use an
+unidentified, stale, or incoherently mixed basis; currentness can advance
+without a commit condition or effect-free re-entry; any effect precedes
+complete validation; failure or interruption exposes a subset; fresh
+reconstruction differs; or competing same-scope authority remains.
+
+### Standing Structural Qualification
+
+Qualification is instantiated for every admission owner and supported boundary
+declared by accepted design:
+
+| Form | Required observation |
+|---|---|
+| direct | the complete direct relation is derived, validated, and admitted once |
+| supported composite / nested | every supported constituent and owning boundary satisfies the same law; unsupported forms have a design-grounded `not_applicable` disposition and no weaker or competing path |
+| forged | forged identity, membership, equality, or authority is refused without effect |
+| ambiguous enclosing relation | unresolved participant, join, seam, or relation identity ambiguity is refused without effect |
+| stale / advanced basis | stale input is refused, and basis advancement between preflight and admission causes effect-free re-entry rather than mixed-basis admission |
+| incoherent multi-owner basis | owner judgments on bases that are neither equal nor joined by a design-declared coherent composite basis cannot combine and are refused without effect |
+| competing same-scope admission authority | an undisposed competing same-scope path cannot establish the transition |
+| reconstructed / fresh-process | the same basis reconstructs the same relation, basis identity, and outcome or refusal |
+| exact replay equality | replay over the same basis reproduces exactly the enclosing relation, basis identity, and complete outcome or refusal |
+| atomic publication failure | after validation succeeds, failure or interruption is observed at every materially distinct commit or publication boundary capable of exposing a subset and followed by fresh reconstruction showing the complete transition or none; named representative observations suffice only under a design-declared dominance/equivalence proof covering the complete partial-failure surface |
+
+For an indivisible commit unit, the atomic test establishes that boundary and
+observes failure immediately on both sides. Final-participant validation
+failure does not substitute for post-validation atomic-failure evidence. A
+standing claim is false if an owner or supported boundary is omitted, a
+materially distinct partial-failure boundary lacks an observation or declared
+coverage proof, a case uses a weaker helper or manufactured refusal, or fresh
+reconstruction does not compare the complete semantic result.
+
+---
+
 ## Core Interface Migration Rule
 
 Core interface changes are not ordinary local patches.

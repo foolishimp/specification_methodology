@@ -669,6 +669,33 @@ authority matrix above or an equivalent closed representation:
 | Entity transition domain | Predecessor basis | Candidate family | Admission relation | Durable result | Competing-path disposition |
 |---|---|---|---|---|---|
 
+For every material admission relation, accepted design declares, in one compact
+relation or equivalent representation:
+
+- each admission owner and supported admission boundary;
+- the exact admission-valid basis identity, predecessor/currentness continuity
+  through admission, and any equal or coherent composite multi-owner basis;
+- the complete enclosing relation, participant identities, and equality joins;
+- refusal and effect boundaries;
+- the complete semantic commit unit and its decomposability; every materially
+  distinct post-validation commit or publication boundary capable of exposing
+  a subset, or a design-declared dominance/equivalence proof that named
+  representative observations cover the complete partial-failure surface;
+- reconstruction and the supported direct, composite, and nested forms; and
+- competing-path disposition.
+
+The declaration binds `SPEC_METHOD.md` `STDO-UP-021`, which solely owns the
+admission and standing-test semantics. Qualification is instantiated per owner
+and supported boundary. Unsupported composite or nested forms use
+`not_applicable` only when accepted domain/design excludes the form and the
+boundary has no weaker or competing admission path.
+
+This obligation is false if a field, owner, or supported boundary is missing or
+invented downstream; basis continuity, partial-failure boundary coverage or its
+dominance/equivalence proof, or reconstruction is left to implementation
+inference; or non-applicability is established only by a parser, helper, or
+manufactured refusal.
+
 Singularity attaches to the complete decision relation, not to one actor,
 callable, or component. Multiple actors, stages, or implementations are lawful
 as constituents or disjoint instances of that relation. A relation may lawfully
