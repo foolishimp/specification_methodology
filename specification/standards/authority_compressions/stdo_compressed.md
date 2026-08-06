@@ -16,8 +16,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  SPEC_METHOD.md: f899b4f798f0ee9083e1fc3e092cd73f1444fc57c26feb898da2cf6e36430708
-  DESIGN_MODULE_METHOD.md: 3a609a873f7bb98708261498eb56d8210108afbf9098633a769f6786f1df7a2e
+  SPEC_METHOD.md: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
+  DESIGN_MODULE_METHOD.md: 1ef7a7c1cfbe8cd4f992aa629cfe8813c209fc841b9e22bcd859bb43bda4313d
   ODD_METHOD.md: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
   TICKET_METHOD.md: 2a23614cdd344179cf43263dd6074b1c2f7d4747c33083fdcebff3992df41675
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
@@ -25,7 +25,7 @@ source_digests:
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
-generated_at: 2026-08-06
+generated_at: 2026-08-07
 stale_if_source_digest_changes: true
 ---
 
@@ -46,6 +46,11 @@ Consumers bind concrete implementations and immutable identities under their
 own Product authority. A downstream Product may prove or falsify conformance;
 it cannot supply reusable method meaning. Constitutional examples use neutral
 capability and authority identities.
+
+This aggregate alone carries the complete T-008 F1-F5 decision bundle spanning
+`SPEC_METHOD.md` `STDO-UP-022` and DMM-owned IACS revision. Source-specific
+compressions remain standalone only for decisions owned by their source and
+refuse cross-law closure.
 
 ## Authority Flow
 
@@ -169,6 +174,14 @@ layer that owns the missing truth.
   projections of that one decision-complete network. Headings, artifact
   presence, exact identity, and aggregate green labels cannot supply a missing
   semantic relation.
+- IACS is not numerically frozen. Addition, removal, merge, or split proceeds
+  through accepted Ontology/design re-entry. Re-derive and classify the complete
+  set, rerun Promotion and Boundary Inflation over the full revised set, update
+  every existing conformance/checker subject to the declared composite carrier
+  relation, and reconcile implementation before closure.
+  No concrete checker is required to exist. Prohibition without a lawful path,
+  new-carriers-only gates, weaker assurance, or unreconciled implementation
+  falsifies revision.
 - Prime atoms are irreducible semantic-design relations. Apply contraction to
   the complete candidate semantic-atom family and all realization projections.
   Each accepted atom records its admitted domain and governs every admitted
@@ -180,6 +193,46 @@ layer that owns the missing truth.
   sets are not consumer authority.
 - Proof identifies its exact property and nearest weaker excluded property.
   Semantic basis, evidence basis, and state projection remain distinct.
+- Assurance supporting promotion or closure binds the exact subject and its
+  authoritative composition relation. Per-file evidence cannot close a
+  multi-file or carrier-set claim; cross-carrier satisfaction and conflict are
+  decided at the declared composite boundary.
+- Mechanical enforcement names an executable or reproducible predicate and a
+  witness reachable through the declared ordinary assurance path. Planned or
+  specification-only evidence is not observed verification. Absent that
+  predicate or declared-path witness, the claim stays open or narrows to the
+  planned property. Quantifier, population, and scope cannot outrun evaluated
+  evidence; generalization requires a declared inference relation, comparable
+  population, counterexample treatment, and governing evidence. Later
+  counterevidence invalidates dependent verdicts until superseded, withdrawn,
+  or requalified.
+- Generic method sufficiency consumes the Probabilistic Work Boundary,
+  `STDO-UP-020`, and Reconstruction Litmus. A fresh competent constructor works
+  inside a declared capability/context/configuration envelope using only the
+  declared ordinary method and authority surfaces. An independently authorized
+  evaluator has a declared governing basis and comparison predicate. Where
+  exposure compromises independence, material expected/reference outcomes,
+  source exemplars/incumbents, author memory, and ad hoc rescue are withheld from
+  the constructor until its result is frozen. After freeze, the evaluator
+  compares that result against the mandatory governing semantic basis. Any
+  separately held material expected/reference outcome, if one exists and is
+  applicable, is optional evidence and explicitly non-authoritative; equivalence
+  to it is required only where the governing basis requires it. A lawful
+  alternative permitted by the basis passes, while subjective similarity to the
+  basis or reference is insufficient to establish semantic conformance/
+  equivalence. Byte/structural identity, unique derivation, determinism, and
+  incumbent equality are not generic criteria. An out-of-envelope actor cannot
+  indict the method. Post-exposure revision is a declared intervention and either
+  a method constituent with its qualification boundary or a new qualification
+  subject; it cannot retroactively pass the frozen run. Undeclared constructor
+  competence, context, or configuration, undeclared supplemental method or
+  authority input, undeclared evaluator authority, basis, or predicate, premature
+  reference exposure, omission of the governing basis, constructor-authorized or
+  self-adjusted comparison, reference-as-authority, reference equivalence required
+  where the basis does not require it or omitted where the basis does,
+  subjective-similarity proof, generic identity criteria, and unclassified
+  revision falsify qualification. No fixed actor type/count, review round,
+  engine, prompt, or orchestration follows.
 - Product progress advances one explicitly selected unresolved Product-defined
   outcome instance with a declared acceptance interval. Acceptance ends that
   instance's progress authority while retaining prior witnesses as regression

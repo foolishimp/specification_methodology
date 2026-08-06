@@ -6,9 +6,10 @@
 - ticket_category: constitutional
 - status: active
 - review_status: candidate_03_independently_accepted
-- release_preparation_status: final_ready_rc_carrier_prepared_unpublished
+- release_preparation_status: immutable_rc1_published_reviewed_superseded_for_final_tap
 - candidate_generation: 03
 - accepted_standards_aggregate: 0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7
+- current_combined_release_aggregate: 53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df
 - goal: >-
     Produce the minimal STDO 2.3.1 patch subject and final-ready RC carrier
     binding independent complete-relation derivation, exact authoritative-basis
@@ -22,7 +23,7 @@
 - re_entry_point: specification/standards/SPEC_METHOD.md
 - triaged_at: 2026-08-06
 - created_at: 2026-08-06
-- updated_at: 2026-08-06
+- updated_at: 2026-08-07
 - owner: specification_methodology
 - pen_holder: /root/admission_owner_constitution_worker
 - predecessor_release: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -34,10 +35,17 @@
 
 Direct Product authority selected the bounded constitutional outcome and then
 repriced it as a minimal `2.3.1` patch amendment. `v2.3.0` remains immutable and
-operative. Candidate 03, including the two bounded qualification repairs
-returned by Candidate 02 review, is independently accepted. F_H authorized
-final-ready RC carrier preparation only; RC publication, exact-cut review,
-direct human final acceptance, and release tap remain external transitions.
+operative. T-007 Candidate 03, including the two bounded qualification repairs
+returned by Candidate 02 review, is independently accepted at historical
+candidate aggregate
+`0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7`.
+Immutable `v2.3.1-rc.1` was published and independently reviewed, then
+superseded for final tap by accepted T-008 and the required RC2 carrier. The
+accepted UP021 bytes remain conserved in the current combined release aggregate
+`53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`.
+Final-ready RC2 preparation is authorized; RC2 publication, exact-cut review,
+final-delta proof, direct human release acceptance, and final tap remain
+external transitions.
 
 ## Candidate Scope
 
@@ -111,13 +119,21 @@ No standards member is added or removed.
 - [x] Affected compressions are standalone and pin current source digests.
 - [x] The standards inventory remains the exact 41-member `v2.3.0` inventory.
 - [x] Independent exact-candidate review accepts Candidate 03.
+- [x] Historical T-007 Candidate 03 remains bound to aggregate
+      `0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7`;
+      its accepted UP021 bytes are conserved in combined aggregate
+      `53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`.
+- [x] Immutable `v2.3.1-rc.1` was published and independently reviewed, then
+      superseded for final tap by T-008 and RC2.
 - [x] The final-ready release note declares the exact predecessor, 41-member
       subject, five-member delta, aggregate, conserved law, exclusions, and
       publication relation without mutable review or tag-existence status.
-- [ ] One immutable final-ready RC cut is published and passes independent
-      exact-cut review.
+- [ ] One immutable final-ready RC2 cut of the combined subject is published and
+      passes independent exact-cut review.
+- [ ] Final-delta proof preserves the reviewed standards, Product, and
+      release-note bytes through the proposed final carrier.
 - [ ] Direct human authority accepts the exact release subject and carrier
-      before publication.
+      and its final-delta relation before final publication.
 
 ## Non-Closure Conditions
 
@@ -137,6 +153,6 @@ affected compression is stale.
   adoption change.
 - No concrete commit, coordination, persistence, or execution mechanism, and no
   fixed participant count.
-- No RC commit, branch, tag, push, publication, exact-cut review verdict, final
-  acceptance, or release tap.
+- No RC2 commit, branch, tag, push, publication, exact-cut review verdict,
+  final-delta claim, direct human release acceptance, or release tap.
 - No edit to the F_H progression log.

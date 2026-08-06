@@ -1218,6 +1218,83 @@ requires lawful re-entry and invalidates affected downstream acceptance. A
 broad digest may conservatively invalidate review, but it does not prove that
 every semantic relation changed.
 
+### Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`)
+
+A checker, validator, harness, reviewer, or other assurance surface supporting
+promotion or closure binds the exact claimed subject and its authoritative
+composition relation. Evidence over one file or carrier proves only that
+boundary; it cannot establish a multi-file or carrier-set claim. Cross-carrier
+satisfaction and conflict are decided at the declared composite boundary.
+
+A claim of mechanical enforcement names an executable or reproducible predicate
+and a witness reachable through the declared ordinary assurance path. A planned
+or specification-only harness is planned evidence, not observed verification.
+Until both the predicate and such a witness are observed, the claim remains
+open or is explicitly downgraded to the planned property.
+
+A claim's quantifier, population, and scope cannot exceed its evaluated
+evidence. Generalizing a local defect requires a declared inference relation,
+the relevant comparable population, explicit counterexample treatment, and
+governing evidence. Later counterevidence invalidates every dependent verdict
+until the claim-evidence relation is superseded, withdrawn, or requalified.
+
+Qualification of generic method sufficiency consumes the Probabilistic Work
+Boundary, the `STDO-UP-020` construction/assessment relation, and the
+Reconstruction Litmus; it does not create a second process. A fresh competent
+constructor operates inside a declared capability, context, and configuration
+envelope using only the declared ordinary method and authority surfaces. An
+independently authorized evaluator has a declared governing basis and comparison
+predicate. Material expected or reference outcomes, source exemplars or
+incumbent realizations, author memory, and ad hoc rescue are withheld from the
+constructor until its construction result is frozen wherever earlier exposure
+would compromise reconstructive independence.
+
+After freeze, the evaluator compares the frozen result against the mandatory
+governing semantic basis for semantic conformance or equivalence. Any separately
+held material expected or reference outcome, if one exists and is applicable,
+is optional evidence and explicitly non-authoritative. Semantic equivalence to
+that reference is required only where the governing basis requires it. A lawful
+alternative construction permitted by the basis passes. Subjective similarity
+to the basis or reference is insufficient to establish semantic conformance or
+equivalence. Byte or structural identity, unique derivation, determinism, and
+incumbent equality are not generic comparison criteria. A construction outside
+the declared competence or configuration envelope cannot indict generic method
+sufficiency.
+
+Any post-exposure revision is a declared intervention and is either a method
+constituent with its qualification boundary or a new qualification subject. It
+cannot retroactively make the original frozen construction pass. This law
+prescribes no actor type or count, review-round count, engine, prompt, or
+orchestration.
+
+This law is false if:
+
+- assurance observes a weaker or different subject, or per-carrier evidence is
+  used to close an unevaluated composite claim;
+- mechanical enforcement lacks its predicate or a witness reachable through the
+  declared ordinary assurance path, or planned evidence is reported as observed
+  verification;
+- a verdict outruns its evaluated population or declared inference relation, or
+  dependent verdicts survive material counterevidence without requalification;
+- constructor competence or its capability, context, or configuration envelope,
+  or evaluator authority, governing basis, or comparison predicate, is
+  undeclared, or an out-of-envelope construction is used to indict the method;
+- the constructor uses supplemental method or authority input that is not
+  declared;
+- a material expected or reference outcome, source exemplar or incumbent
+  realization, author memory, or ad hoc rescue is exposed to the constructor
+  before freeze where that exposure compromises reconstructive independence;
+- comparison omits the mandatory governing semantic basis, proceeds under
+  constructor authority instead of independently authorized evaluator authority,
+  or is self-adjusted after seeing the result;
+- a reference outcome is used as authority, reference equivalence is required
+  where the governing basis does not require it, basis-required reference
+  equivalence is omitted, subjective similarity is used as proof, or identity,
+  unique derivation, determinism, or incumbent equality substitutes for semantic
+  conformance or equivalence; or
+- a post-exposure revision is unclassified or is used to make the original
+  frozen construction pass retroactively.
+
 ## Verification Layers
 
 Each layer in the chain preserves a distinct kind of truth:

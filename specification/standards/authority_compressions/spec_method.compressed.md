@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: f899b4f798f0ee9083e1fc3e092cd73f1444fc57c26feb898da2cf6e36430708
+source_digest: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-06
+generated_at: 2026-08-07
 stale_if_source_digest_changes: true
 ---
 
@@ -28,6 +28,11 @@ Method vocabulary names normative capabilities and relations. It does not
 select a downstream repository, package, vendor, Product, or concrete
 implementation. Constitutional examples therefore demonstrate enabled
 capabilities through neutral identities rather than consumer precedent.
+
+This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
+decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
+For that decision, route to the digest-current DMM source or compression, or to
+the aggregate STDO compression.
 
 ## Prompt-Relevant Rules
 
@@ -50,6 +55,47 @@ capabilities through neutral identities rather than consumer precedent.
 - Identify the exact proof target and its nearest weaker excluded property;
   never substitute packaging, presence, or local green for a stronger claim.
 - Keep semantic basis, evidence basis, and state projection distinct.
+- Assurance supporting promotion or closure binds the exact claimed subject
+  and authoritative composition relation. Per-file or per-carrier evidence
+  cannot close a multi-file or carrier-set claim; cross-carrier satisfaction
+  and conflict are decided at the declared composite boundary.
+- Mechanical enforcement names an executable or reproducible predicate and a
+  witness reachable through the declared ordinary assurance path. Planned or
+  specification-only evidence is not observed verification. Absent that
+  predicate or declared-path witness, the claim stays open or narrows to the
+  planned property. A verdict's quantifier, population, and scope cannot outrun
+  evaluated evidence. Generalization requires a declared inference relation,
+  comparable population, counterexample treatment, and governing evidence;
+  later counterevidence invalidates dependent verdicts until supersession,
+  withdrawal, or requalification.
+- Qualify generic method sufficiency by consuming the Probabilistic Work
+  Boundary, `STDO-UP-020`, and Reconstruction Litmus. A fresh competent
+  constructor works inside a declared capability/context/configuration envelope
+  using only the declared ordinary method and authority surfaces. An
+  independently authorized evaluator has a declared governing basis and
+  comparison predicate.
+  Where exposure compromises independence, withhold material expected/reference
+  outcomes, source exemplars/incumbents, author memory, and ad hoc rescue from the
+  constructor until its result is frozen. After freeze, the evaluator compares
+  that result against the mandatory governing semantic basis. Any separately held
+  material expected/reference outcome, if one exists and is applicable, is
+  optional evidence and explicitly non-authoritative; equivalence to it is
+  required only where the governing basis requires it. A lawful alternative
+  permitted by the basis passes, while subjective similarity to the basis or
+  reference is insufficient to establish semantic conformance/equivalence.
+  Byte/structural identity, unique derivation, determinism, and incumbent equality
+  are not generic criteria. An out-of-envelope actor cannot indict the method.
+  Post-exposure revision is a declared intervention and either a method
+  constituent with its qualification boundary or a new qualification subject;
+  it cannot retroactively pass the frozen run. Undeclared constructor competence,
+  context, or configuration, undeclared supplemental method or authority input,
+  undeclared evaluator authority, basis, or predicate, premature reference
+  exposure, omission of the governing basis, constructor-authorized or
+  self-adjusted comparison, reference-as-authority, reference equivalence required
+  where the basis does not require it or omitted where the basis does,
+  subjective-similarity proof, generic identity criteria, and unclassified
+  revision falsify qualification. No fixed actor type/count, review round,
+  engine, prompt, or orchestration follows.
 - Product progress is measured against one explicitly selected unresolved
   Product-defined outcome instance with a declared acceptance interval.
   Acceptance ends that instance's authority to select later progress while its

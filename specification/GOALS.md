@@ -2,10 +2,15 @@
 
 ## Current Goal
 
-STDO `2.3.0` remains the operative predecessor. The exact `2.3.1` Candidate 03
-constitutional amendment is independently accepted, and its final-ready RC
-carrier is prepared. This records no RC publication or tag, direct human final
-acceptance, release tap, or consumer selection.
+STDO `2.3.0` remains the operative predecessor. Immutable `v2.3.1-rc.1` at
+`c861ca9d96684745365c44d2c8f90f9f1c3aebd7` remains accepted evidence but is
+superseded for final tap by the Product-selected T-008 increment. T-008
+Candidate 03 is independently accepted at standards aggregate
+`53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`.
+Release-facing reconciliation is complete and one final-ready RC2 carrier is
+prepared but unpublished. Immutable RC2 publication, exact-cut review,
+final-delta proof, direct human final acceptance, release tap, and consumer
+selection remain pending.
 
 ## Governing Outcome
 
@@ -33,13 +38,32 @@ instantiate that law without reproducing it. Consumer realization mechanisms,
 runtime, participant cardinality, concrete bindings, and downstream adoption
 remain outside this wave.
 
+## Selected RC2 Increment
+
+T-008 binds assurance evidence to the exact claimed subject and composition
+boundary, mechanical-enforcement claims to a declared ordinary-path witness,
+verdict scope to evaluated populations, and generic method sufficiency to a
+fresh declared-input Reconstruction Litmus with construction freeze and
+independent mandatory-basis evaluation. Applicable reference outcomes remain
+optional, non-authoritative evidence. The increment also gives IACS addition,
+removal, merge, and split a lawful Ontology/design re-entry path with full-set
+gate replay and existing-checker reconciliation without requiring a checker.
+
+T-007 and `STDO-UP-021` remain accepted and conserved. Product, release note,
+Goals, and ticket bookkeeping now form the final-ready RC2 reconciliation
+carrier; publication and every downstream release gate remain separate.
+
 | Milestone | Exit | State |
 |---|---|---|
 | `S0` Authorization | Direct Product authority selects the bounded constitutional outcome and `2.3.1` patch line. | completed |
 | `S1` Candidate construction | Source law, design consumption, and affected compressions form one digest-current candidate. | completed |
-| `S2` Independent qualification | Independent exact-candidate review accepts Candidate 03 and aggregate `0b785c84…61a7`. | completed |
+| `S2` T-007 independent qualification | Independent exact-candidate review accepts T-007 Candidate 03 and historical aggregate `0b785c84…61a7`. | completed |
 | `S3` RC preparation | Prepare the exact final-ready `2.3.1` RC subject and release-scoped note without publishing either. | completed |
-| `S4` Tap | Exact-cut review, final-delta proof, and direct human acceptance precede publication. | pending |
+| `S4` RC1 publication and review | `v2.3.1-rc.1` is immutable and exact-cut reviewed, then superseded for final tap by selected T-008. | completed |
+| `S5` T-008 qualification | Independent exact-candidate review accepts Candidate 03 and aggregate `53b33aab…e4df`. | completed |
+| `S6` RC2 reconciliation | Reconcile Product, release note, Goals, and tickets and freeze one final-ready RC2 carrier without publication. | completed |
+| `S7` RC2 publication and proof | Publish one immutable RC2, obtain independent exact-cut review, and prove its final delta. | pending |
+| `S8` Final acceptance and tap | Direct human authority accepts the exact subject, carrier, and final-delta relation before final publication and tap. | pending |
 
 ## Milestones
 

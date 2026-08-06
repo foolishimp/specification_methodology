@@ -41,17 +41,34 @@ history. Neither is a construction basis for this successor.
 
 ## Current 2.3.1 Successor Amendment
 
-The current `2.3.1` successor amendment adds complete enclosing-relation
-admission as federal method law. Every admission owner independently derives
-the complete relation, preserves one exact admission-valid basis, validates all
-participants before effects, and admits the complete transition or none.
-Accepted design declares the concrete owner, boundary, basis, relation, fault
-surface, reconstruction, supported structural forms, and competing-path
-disposition needed to instantiate that law.
+The complete current `2.3.1` successor contains two accepted bounded
+amendments. `STDO-UP-021` adds complete enclosing-relation admission as federal
+method law. Every admission owner independently derives the complete relation,
+preserves one exact admission-valid basis, validates all participants before
+effects, and admits the complete transition or none. Accepted design declares
+the concrete owner, boundary, basis, relation, fault surface, reconstruction,
+supported structural forms, and competing-path disposition needed to
+instantiate that law.
+
+`STDO-UP-022` binds assurance to the exact claimed subject and composition
+boundary, mechanical enforcement to an executable or reproducible predicate and
+a witness reachable through the declared ordinary assurance path, and verdict
+scope to evaluated evidence. Generic method qualification uses a fresh competent
+constructor inside declared inputs and configuration, freezes the result before
+material reference exposure, and evaluates it independently against the
+mandatory governing semantic basis. Applicable reference outcomes remain
+optional, non-authoritative evidence; post-exposure repair cannot retroactively
+qualify the frozen result.
+
+The accepted DMM IACS revision obligation admits carrier addition, removal,
+merge, and split through Ontology/design re-entry, complete-set derivation and
+gate replay, reconciliation of every existing assurance subject, and
+implementation reconciliation before closure. It consumes `STDO-UP-022`
+without duplicating federal assurance law or requiring a concrete checker.
 
 The exact successor Product subject is the 41-member standards distribution
 with aggregate
-`0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7`.
+`53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`.
 Naming this exact successor does not assert publication. Consumer operability
 still requires an immutable final-ready RC, independent exact-cut review,
 final-delta proof, direct human acceptance, tap, and explicit selection.
@@ -113,15 +130,19 @@ conformance implementation.
 
 ## 2.3.1 Release Outcome
 
-The amendment is complete when one exact Product release subject and its
+The successor is complete when one exact Product release subject and its
 reviewed-to-final carrier relation are established and the subject:
 
 - preserves or explicitly supersedes every material `v2.3.0` predecessor
   claim;
 - contains `STDO-UP-021` in `SPEC_METHOD.md` and its compact declaration
   obligation in `DESIGN_MODULE_METHOD.md` without duplicate authority;
+- contains `STDO-UP-022` in `SPEC_METHOD.md` and the DMM IACS revision
+  obligation without duplicate authority or a mandatory checker;
 - contains no executable STDO conformance or workflow implementation;
-- has internally consistent source and derived distributions;
+- has internally consistent, digest-current source and compression
+  distributions whose source-specific assets preserve their authority
+  boundaries and whose aggregate carries the complete combined decision;
 - has exact member identity and a complete predecessor delta;
 - is published through one immutable final-ready RC and passes independent
   exact-cut review;

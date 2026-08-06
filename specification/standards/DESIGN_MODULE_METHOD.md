@@ -1006,6 +1006,25 @@ reconciled to them. Under design-gated sequencing, the affected unresolved,
 contradictory, or materially non-equivalent relation is accepted before
 retained implementation establishes it.
 
+### IACS Revision Obligation
+
+The IACS is not numerically frozen. Adding, removing, merging, or splitting a
+carrier is lawful through accepted Ontology and design re-entry. For every such
+revision, accepted design:
+
+- re-derives the complete IACS and classifies every addition, removal, merge,
+  and split;
+- reruns the Promotion Test and Boundary Inflation prohibition over the full
+  revised set, not only newly introduced carriers;
+- updates every conformance or checker subject to the declared composite
+  carrier relation under `SPEC_METHOD.md` `STDO-UP-022`; and
+- reconciles implementation to the revised set before promotion or closure.
+
+This obligation consumes the federal assurance law without restating it. A
+prohibition without a lawful revision path is false. A revision is also false
+if its gates inspect only new carriers, its assurance surfaces retain a weaker
+or obsolete subject, or implementation is not reconciled before closure.
+
 ## 5B. Promotion Test
 
 A top-level class, dataclass, TypedDict, enum, or named schema record must

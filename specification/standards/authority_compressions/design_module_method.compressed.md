@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 3a609a873f7bb98708261498eb56d8210108afbf9098633a769f6786f1df7a2e
+source_digest: 1ef7a7c1cfbe8cd4f992aa629cfe8813c209fc841b9e22bcd859bb43bda4313d
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-06
+generated_at: 2026-08-07
 stale_if_source_digest_changes: true
 ---
 
@@ -50,6 +50,11 @@ Implementation and tests cannot select or accept the affected semantic answer.
 
 The Ontology remains subordinate to constitutional `WHAT`. It may not invent
 product meaning.
+
+This asset projects `DESIGN_MODULE_METHOD.md` only. It is standalone for
+DMM-owned decisions, including IACS revision, but cannot close the SPEC-owned
+`STDO-UP-022` assurance decision. For that decision, route to the digest-current
+SPEC source or compression, or to the aggregate STDO compression.
 
 This rule applies only to the named boundary where the project adopts this
 method. A material semantic boundary changes identity, authority, lifecycle,
@@ -187,6 +192,14 @@ surfaces.
 - Treat IACS, class/sequence/state views, and public contracts as
   fidelity-checked Ontology projections. Target design remains the structural
   `HOW`; code and tests derive through requirements plus accepted design.
+- IACS is not numerically frozen. Addition, removal, merge, or split proceeds
+  through accepted Ontology/design re-entry. Re-derive and classify the complete
+  revised set, rerun Promotion and Boundary Inflation over that full set, update
+  every existing conformance/checker subject to its declared composite carrier
+  relation under `SPEC_METHOD.md` `STDO-UP-022`, and reconcile implementation
+  before closure. No concrete checker is required to exist. A prohibition
+  without a revision path, a new-carriers-only gate, a weaker assurance subject,
+  or unreconciled implementation falsifies revision.
 - Declare a role set for every material realization component. Technology
   capability is not authority. Variation inside a declared abstract role is
   ordinary; a new operational responsibility or a new semantic or authoritative
