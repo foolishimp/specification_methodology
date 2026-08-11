@@ -29,6 +29,8 @@ projection of that complete basis; it does not create a partial constitution.
 
 | Short name | File | What it governs |
 |------------|------|-----------------|
+| `frame` | `specification/standards/REFERENCE_FRAME_METHOD.md` | Finite reference-frame declaration, activation, evaluation, conjunction, translation, coverage, revision, and qualification |
+| `frame-baseline` | `specification/standards/STDO_REFERENCE_FRAME_BASELINE.md` | Applied STDO Executive, Worker, and Reviewer engagement profile |
 | `spec` | `specification/standards/SPEC_METHOD.md` | Constitutional baseline — authority chain, drift, repricing, sufficiency |
 | `design` | `specification/standards/DESIGN_MODULE_METHOD.md` | Ontology, IACS, Prime, three-view, and functional realization method |
 | `odd` | `specification/standards/ODD_METHOD.md` | Graph-native ODD product realization — covers graph substrate law, traversal, and ODD product-authoring over GTL/ABG (absorbed the prior `GRAPH_METHOD.md` on 2026-04-21) |

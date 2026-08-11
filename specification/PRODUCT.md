@@ -24,133 +24,171 @@ authority.
 
 ## Operative Predecessor
 
-The exact operative predecessor for the current successor amendment is STDO
-`v2.3.0` at
+The exact operative Product predecessor is STDO `v2.3.0` at
 `b2c64047e01d9d582243a25af587ac772233a4ea`, with standards aggregate
 `014ead42a96412f51a172a8158e42fdfe1447a0af5e4f70a79cf8a020129630c`.
-It remains immutable. Consumers continue to select the published predecessor
-until a successor is tapped and explicitly selected.
+It remains immutable. Consumers continue to select it until a successor is
+tapped and explicitly selected.
 
-The current successor takes the complete `v2.3.0` Product as its construction
-basis. It preserves the Product boundary, construction algebra, authority
-relations, Product-outcome conservation, proportional method, Ontology, IACS,
-Prime, three-view design, independent review, and exact release identity.
+The `v2.3.1-rc.2` carrier at
+`e204f3bb287651daedefa9ea28f1c2c7cc387787`, with aggregate
+`53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`,
+is an immutable published release-candidate input, not an operative Product.
+It contains the independently accepted `STDO-UP-021` and `STDO-UP-022`
+amendments. STDO `2.4.0` conserves those exact semantics rather than reopening
+them or tapping an intermediate `2.3.1` Product.
 
-The rejected executable and overcorrected normative candidates remain archived
-history. Neither is a construction basis for this successor.
+## Current 2.4.0 Successor Amendment
 
-## Current 2.3.1 Successor Amendment
+The selected `2.4.0` successor adds a universal Reference Frame Method and one
+derived STDO application profile to the complete accepted predecessor line.
 
-The complete current `2.3.1` successor contains two accepted bounded
-amendments. `STDO-UP-021` adds complete enclosing-relation admission as federal
-method law. Every admission owner independently derives the complete relation,
-preserves one exact admission-valid basis, validates all participants before
-effects, and admits the complete transition or none. Accepted design declares
-the concrete owner, boundary, basis, relation, fault surface, reconstruction,
-supported structural forms, and competing-path disposition needed to
-instantiate that law.
+### Reference Frame Method
 
-`STDO-UP-022` binds assurance to the exact claimed subject and composition
-boundary, mechanical enforcement to an executable or reproducible predicate and
-a witness reachable through the declared ordinary assurance path, and verdict
-scope to evaluated evidence. Generic method qualification uses a fresh competent
-constructor inside declared inputs and configuration, freezes the result before
-material reference exposure, and evaluates it independently against the
-mandatory governing semantic basis. Applicable reference outcomes remain
-optional, non-authoritative evidence; post-exposure repair cannot retroactively
-qualify the frozen result.
+`REFERENCE_FRAME_METHOD.md` is the sole owner of the universal finite
+engagement relation. It defines:
 
-The accepted DMM IACS revision obligation admits carrier addition, removal,
-merge, and split through Ontology/design re-entry, complete-set derivation and
-gate replay, reconciliation of every existing assurance subject, and
-implementation reconciliation before closure. It consumes `STDO-UP-022`
-without duplicating federal assurance law or requiring a concrete checker.
+- a reference frame as one finite evaluation-relative relation over exact
+  subject and topology basis, material manifold, coordinates, invariants,
+  authorities, evidence, exclusions, result algebra, capability envelope,
+  dependencies, and invalidation conditions;
+- frame-set declaration, activation, evaluation, conjunction, translation,
+  coverage audit, and revision as distinct method functions;
+- non-hierarchical independence, overlap, refinement, restriction, temporal
+  succession, conjunction, translation, and material composition;
+- the distinction among frames, roles, personas, actors, components, lenses,
+  semantic authority, evaluation authority, and decision authority;
+- lawful `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, and
+  `invalid_basis` outcomes;
+- operational full coverage relative to a declared workspace, outcome, basis,
+  evaluation inventory, frame set, and time, with explicit residual uncertainty
+  and no universal completeness claim; and
+- qualification over every claimed method function, result branch,
+  interaction, failure relation, actor envelope, and result-consumption path.
 
-The exact successor Product subject is the 41-member standards distribution
-with aggregate
-`53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df`.
-Naming this exact successor does not assert publication. Consumer operability
-still requires an immutable final-ready RC, independent exact-cut review,
-final-delta proof, direct human acceptance, tap, and explicit selection.
+The method is an engagement meta-method. It does not define a domain Product,
+specification taxonomy, design ontology, runtime, workflow, agent topology,
+controller, registry, or universal frame engine.
 
-## Published 2.2.2 Amendment
+### STDO Reference-Frame Baseline
 
-The released `2.2.2` amendment separates entity recovery from
-representation-substrate geometry in `WORLD_MODEL_METHOD.md`:
+`STDO_REFERENCE_FRAME_BASELINE.md` is a derived optional application profile.
+It maps three practical engagement frames onto existing STDO owners:
 
-1. establishes the entity cut as the primary published world-model semantic
-   unit, lawful without a geometric identity direction, carrying identity,
-   boundary, authority, state, evidence, treatment, covariance, and ambiguity
-   traced to ledger entries and their assurance basis;
-2. establishes the Markov-object overlay as an optional geometric overlay
-   admissible only where a representation space is declared, which strengthens
-   an entity cut and whose absence does not weaken one;
-3. states entity-cut admissibility proportionally over one predicate, so
-   identity, boundary, authority, state, evidence, treatment, covariance, and
-   ambiguity must be explicit — as a stated value, stated absence, or stated
-   non-applicability — traceable, and discriminated from plausible
-   alternatives at evidence altitude proportional to the claim, without
-   mandating one discrimination technique;
-4. scopes the geometric construction, verification, and storage law to the
-   declared-representation-space case and binds a declared versioned
-   representation space into the overlay; and
-5. states one epistemic truth for the Markov construct: the named
-   conditional-independence promotion test ran and did not meet its predicate,
-   and the construct remains candidate-class.
+```text
+Executive activates Worker
+  -> Worker returns every closed result to Executive
+  -> Executive determines whether independent review is required
+  -> Executive activates Reviewer where required
+  -> Reviewer returns one closed result to Executive
+  -> Executive applies the existing STDO disposition and continuation relation
+```
 
-This amendment adds no runtime, schema, scoring algorithm, representation-space
-requirement for ordinary recovery, mandatory artifact, review-round count,
-candidate threshold, or conformance implementation.
+Executive, Worker, and Reviewer are overlapping finite evaluation frames, not
+a hierarchy, fixed actor topology, or persona labels by themselves. The
+Executive has only existing bounded decision authority. The Worker constructs
+and self-reviews but cannot accept or advance itself. The Reviewer independently
+reacquires and evaluates the exact subject without implementing repair or
+disposing the result.
 
-## Published 2.3.0 Amendment
+A project may adopt this profile or define another configuration. Existing
+Goals, Product, requirements, or accepted design own that decision. A local
+axioms file may carry the projection but does not create a peer constitutional
+authority layer.
 
-The released `2.3.0` amendment completes the method relation from globally
-governed design into proportional local agentic construction:
+### Installed And Agent Bootstrap Projection
 
-1. `STDO-UP-016` requires one complete transformation-admission relation for
-   each consequential entity-transition domain and explicit disposition of
-   competing paths;
-2. `STDO-UP-017` requires a bounded local action to conserve every governing
-   frame and causally relevant seam it affects;
-3. `STDO-UP-018` requires accepted method plus design to reconstruct the
-   governing invariants needed for a bounded decision without conversation,
-   commentary, prior-agent memory, or folklore;
-4. `STDO-UP-019` projects domain design into computational realization,
-   declares component role sets, and separates semantic from realization
-   commonization decisions; and
-5. `STDO-UP-020` governs sufficient agentic intake, bounded causal
-   construction, independent live-surface assessment where required,
-   delegated routine advancement, proportional disposition, proof cadence,
-   exact checkpointing, and progress-versus-churn semantics.
+The complete method distribution includes the two new source members. The
+aggregate compression cites and projects them. `AGENTS_TEMPLATE.md` and
+`CLAUDE_TEMPLATE.md` carry equal frame-engagement semantics, including method
+basis, role/actor separation, activation, independence, coverage, and lawful
+re-entry after context loss.
 
-The successor adds normative execution algebra, not executable workflow
-machinery. Consumers continue to own models, prompts, tools, worker topology,
-runtime, orchestration, repository layout, concrete design, code, tests, and
-conformance implementation.
+Those projections remain derived. An installed copy becomes consumer authority
+only through explicit selection of one immutable complete release.
 
-## 2.3.1 Release Outcome
+## Conserved 2.3.1 RC Amendments
 
-The successor is complete when one exact Product release subject and its
-reviewed-to-final carrier relation are established and the subject:
+The successor conserves the complete independently accepted RC2 semantics:
+
+- `STDO-UP-021` complete enclosing-relation admission, exact-basis continuity,
+  all-participant pre-effect validation, complete-transition atomicity,
+  reconstruction, replay, competing-path disposition, and boundary-complete
+  standing qualification; and
+- `STDO-UP-022` exact assurance-subject and composition binding, ordinary-path
+  mechanical evidence, bounded verdict populations, fresh method
+  reconstruction, mandatory governing-basis comparison, reference-outcome
+  non-authority, and post-exposure qualification boundaries.
+
+The accepted Design Module Method IACS revision obligation is also conserved:
+carrier addition, removal, merge, and split re-enter accepted Ontology/design,
+rederive and regate the complete set, reconcile existing assurance subjects,
+and reconcile implementation before closure.
+
+## Exact Successor Subject
+
+The selected successor Product subject is the exact 43-member
+`specification/standards/` distribution with aggregate:
+
+`39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6`
+
+Relative to the operative `v2.3.0` Product, nine existing members change, two
+members are added, and 32 members are byte-conserved. The exact inventory and
+hashes are recorded in `releases/v2.4.0.md`.
+
+Naming this subject does not assert publication. Consumer operability attaches
+only to the immutable tapped release explicitly selected by that consumer.
+
+## 2.4.0 Release Outcome
+
+The successor is complete when one exact final Product carrier and release
+relation are established and the subject:
 
 - preserves or explicitly supersedes every material `v2.3.0` predecessor
-  claim;
-- contains `STDO-UP-021` in `SPEC_METHOD.md` and its compact declaration
-  obligation in `DESIGN_MODULE_METHOD.md` without duplicate authority;
-- contains `STDO-UP-022` in `SPEC_METHOD.md` and the DMM IACS revision
-  obligation without duplicate authority or a mandatory checker;
-- contains no executable STDO conformance or workflow implementation;
-- has internally consistent, digest-current source and compression
-  distributions whose source-specific assets preserve their authority
-  boundaries and whose aggregate carries the complete combined decision;
-- has exact member identity and a complete predecessor delta;
-- is published through one immutable final-ready RC and passes independent
-  exact-cut review;
-- preserves the reviewed Product and release-scoped bytes through final-delta
-  proof; and
-- is accepted directly by the human authority owning the successor Product
-  boundary, including the final carrier and final-delta relation, before final
-  Product publication.
+  claim and conserves the accepted `v2.3.1-rc.2` semantic line;
+- gives universal reference-frame law one normative owner and keeps the STDO
+  baseline a derived profile of existing owners;
+- distinguishes frames from roles, personas, actors, components, and lenses;
+- supports non-hierarchical overlap and composition only where an evaluation
+  requires them;
+- binds frame, interaction, authority, capability, failure, independence, and
+  residual coverage to one declared tuple rather than claiming universal
+  completeness;
+- contains no executable frame engine, workflow governor, runtime, controller,
+  registry, consumer schema, or ABIogenesis-specific universal law;
+- has internally consistent digest-current source, compression, and dual-agent
+  bootstrap projections;
+- has exact 43-member identity and a complete `v2.3.0..2.4.0` semantic and
+  member disposition;
+- passes full-subject deterministic qualification and independent review of one
+  frozen final carrier;
+- is accepted directly by the human authority owning the Product boundary; and
+- is published through `release/2.4.0` and annotated tag `v2.4.0` without later
+  movement of that immutable identity.
 
-Consumer operability attaches only to an immutable tapped release explicitly
-selected by that consumer.
+Direct human authority selected a release-specific direct-final path using the
+published `v2.3.1-rc.2` lineage and no new `v2.4.0-rc.*` tag. This exception is
+explicit release Product authority for this cut; it does not silently amend the
+generic RC process in `RELEASE_METHOD.md`. Exact final-carrier review and direct
+human exact-subject acceptance remain required before publication.
+
+## Published Predecessor Amendments
+
+### STDO 2.2.2
+
+The released `2.2.2` amendment separates entity recovery from optional
+representation-substrate geometry in `WORLD_MODEL_METHOD.md`. It establishes
+the entity cut as the primary semantic unit and makes the versioned Markov
+overlay conditional on a declared representation space.
+
+### STDO 2.3.0
+
+The released `2.3.0` amendment completes the method relation from globally
+governed design into proportional local agentic construction through
+`STDO-UP-016` through `STDO-UP-020`: singular transformation authority,
+bounded-frame conservation, reconstruction sufficiency, computational
+realization projection, and agentic construction execution.
+
+Consumers continue to own concrete models, prompts, tools, actor topology,
+runtime, orchestration, repository layout, design, code, tests, and conformance
+implementation.

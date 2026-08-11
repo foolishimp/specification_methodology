@@ -3,8 +3,10 @@
 This tree authors the shared specification methodology. One complete immutable
 released cut of this tree is the selectable STDO Product:
 
-- constitutional method surfaces such as `SPEC_METHOD.md`, `ODD_METHOD.md`,
-  `IDENTITY_METHOD.md`, and `WORLD_MODEL_METHOD.md`
+- constitutional method surfaces such as `REFERENCE_FRAME_METHOD.md`,
+  `SPEC_METHOD.md`, `ODD_METHOD.md`, `IDENTITY_METHOD.md`, and
+  `WORLD_MODEL_METHOD.md`
+- derived application profiles such as `STDO_REFERENCE_FRAME_BASELINE.md`
 - companion governance and operating surfaces such as `POSTING_GUIDE.md`,
   `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`,
   `DESIGN_MODULE_METHOD.md`, and `GLOSSARY_GUIDE.md`

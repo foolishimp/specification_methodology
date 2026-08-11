@@ -117,6 +117,34 @@ override this file for their subtree.
   receives exact review; final-delta proof preserves Product and release-scoped
   bytes before human acceptance of the final carrier and final publication.
 
+### Reference Frame Engagement Compression
+
+- Use a finite reference frame for one declared evaluation family. Bind its
+  exact subject/basis, material relations, coordinates, governing invariants,
+  semantic/evaluation/decision authority, evidence, exclusions, closed result
+  algebra, capability envelope, and invalidation conditions.
+- Frames may overlap or compose without forming a hierarchy. Compose or
+  translate only where a material evaluation crosses their internal relations.
+- Existing Goals, Product, requirements, or accepted-design authority selects
+  the project frame configuration. A local axioms file may carry that decision;
+  it does not create authority.
+- The STDO baseline maps Executive, Worker, and Reviewer onto existing STDO
+  clauses. Executive activates Worker. Worker returns every closed work result
+  to Executive. Executive alone determines whether a candidate requires
+  Reviewer activation, receives any review result, and applies the existing
+  `STDO-UP-020` disposition within its grant.
+- Worker self-review is not independent review. Reviewer evaluates the exact
+  subject and live production and proof surfaces but does not edit or direct the
+  repair. Executive does not become another semantic or implementation owner.
+- A minimum activation packet names frame/revision, evaluation/result algebra,
+  exact subject/basis, specialist frames and invariants, authorities, actor
+  capability/independence, admissible evidence and acquisition path,
+  exclusions, input/output relations, and invalidation/stop/re-entry conditions.
+- Return `indeterminate`, `out_of_frame`, or `invalid_basis` rather than filling
+  missing material context from conversation or confidence. Coverage binds the
+  known evaluation and interaction inventory to capable frames or explicit
+  residuals.
+
 ### Recursive Product Taxonomy
 
 - `Source Project`: mutable workspace building the next cut.
@@ -242,8 +270,10 @@ This project is governed by one complete released STDO cut:
 - member inventory: `<stdo-inventory-ref-or-digest>`
 - installed or referenced standards root: `<method-standards-root>`
 
-Use the selected cut when exact constitutional wording matters:
+Use the selected cut when exact method or profile wording matters:
 
+- `REFERENCE_FRAME_METHOD.md`
+- `STDO_REFERENCE_FRAME_BASELINE.md`
 - `SPEC_METHOD.md`
 - `DESIGN_MODULE_METHOD.md`
 - `ODD_METHOD.md`

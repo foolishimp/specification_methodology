@@ -4,8 +4,10 @@ These files are source-maintained compressed read models over one complete
 released STDO cut. They are prompt-construction inputs, not replacement
 constitutional authority and not independently selectable method versions.
 
-The source method documents remain the authority:
+The source method and profile documents remain the deciding sources:
 
+- `../REFERENCE_FRAME_METHOD.md`
+- `../STDO_REFERENCE_FRAME_BASELINE.md`
 - `../SPEC_METHOD.md`
 - `../DESIGN_MODULE_METHOD.md`
 - `../ODD_METHOD.md`
