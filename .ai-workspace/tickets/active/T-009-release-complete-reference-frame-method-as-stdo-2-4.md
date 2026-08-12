@@ -5,20 +5,23 @@
 - type: proposal
 - ticket_category: constitutional
 - status: active
-- review_status: deterministic_qualification_passed_candidate_freeze_pending
+- review_status: apache_2_license_repair_qualified_freeze_pending
+- candidate_generation: 02
 - goal: >-
     Release one complete STDO 2.4.0 Product containing the accepted 2.3.1 RC2
     semantic line, universal Reference Frame Method, derived STDO engagement
-    baseline, aggregate compression, and aligned Codex and Claude bootstraps.
+    baseline, aggregate compression, aligned Codex and Claude bootstraps, and
+    complete Apache-2.0 release and install licensing.
 - change_intent: >-
     Give finite actors a rigorous, evaluation-relative way to engage an STDO
     body larger than one active context while preserving existing semantic,
-    execution, review, identity, and release owners.
+    execution, review, identity, and release owners, while making the resulting
+    distribution legally reusable under one explicit license.
 - change_class: product_reprice
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-08-11
 - created_at: 2026-08-11
-- updated_at: 2026-08-11
+- updated_at: 2026-08-12
 - owner: specification_methodology
 - pen_holder: codex
 - operative_predecessor: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -26,6 +29,7 @@
 - release_class: minor_release_direct_final_promotion
 - target_release: 2.4.0
 - work_authorization: direct_human_authorization_2026-08-11
+- license_repair_authorization: direct_human_authorization_2026-08-12
 
 ## Authority And Release Boundary
 
@@ -44,6 +48,15 @@ The direct-final instruction removes only the new RC identity. It does not
 waive exact subject identity, complete deterministic qualification, independent
 review of the frozen final carrier, direct human exact-subject acceptance, or
 immutable final branch/tag publication.
+
+On 2026-08-12 direct human Product authority identified the missing release
+license as an omission, selected Apache License 2.0, and explicitly retained
+the `2.4.0` version. Candidate Generation 01 at
+`b2a57ebccf0831d4c7bfe605f6e5da8e9b87ab07` is therefore superseded before
+review, acceptance, or publication. No local or remote release ref names that
+carrier. The repair is release-scoped rather than a new methodology feature,
+but it changes protected carrier bytes and requires a replacement identity and
+affected qualification.
 
 ## Selected Execution Basis
 
@@ -73,16 +86,22 @@ The complete release subject contains:
 6. equal frame-engagement projections in `AGENTS_TEMPLATE.md` and
    `CLAUDE_TEMPLATE.md`; and
 7. an independently versioned Claude plugin registry that can load both new
-   method members without treating the plugin as Product law.
+   method members without treating the plugin as Product law; and
+8. the canonical Apache-2.0 license at repository root, an exact standalone
+   plugin copy and manifest declaration, and an install requirement that keeps
+   the legal asset outside the normative member inventory.
 
-The Product subject remains purely normative. Test installs, reviews, tickets,
-comments, Product/Goals source state, release notes, plugin tooling, downstream
-consumer changes, and runtime machinery are not standards members.
+The Product subject remains purely normative. The Apache-2.0 text grants legal
+permissions but is not methodology law. Test installs, licenses, reviews,
+tickets, comments, Product/Goals source state, release notes, plugin tooling,
+downstream consumer changes, and runtime machinery are not standards members.
 
 ## Affected Surfaces
 
 - `specification/GOALS.md`
 - `specification/PRODUCT.md`
+- `LICENSE`
+- `README.md`
 - `specification/standards/README.md`
 - `specification/standards/REFERENCE_FRAME_METHOD.md`
 - `specification/standards/STDO_REFERENCE_FRAME_BASELINE.md`
@@ -92,8 +111,11 @@ consumer changes, and runtime machinery are not standards members.
 - `specification/standards/templates/CLAUDE_TEMPLATE.md`
 - `.claude-plugin/marketplace.json`
 - `plugins/spec/.claude-plugin/plugin.json`
+- `plugins/spec/LICENSE`
 - `plugins/spec/skills/refresh/SKILL.md`
 - `releases/v2.4.0.md`
+- non-operative preview only:
+  `/Users/jim/src/apps/test_instal_01/.genesis/{LICENSE,STDO_INSTALL_MANIFEST.md,STDO_RELEASE_ASSET_SHA256SUMS}`
 - T-007 and T-008 publication bookkeeping after final acceptance
 - this ticket
 
@@ -108,10 +130,13 @@ consumer changes, and runtime machinery are not standards members.
 | `templates/AGENTS_TEMPLATE.md` | `b1efb82ea5e9e08d8cf02d9e0c6d9c8bacfc072d4caed3c4f05ce9c41c0d38c6` |
 | `templates/CLAUDE_TEMPLATE.md` | `02b43201f0e0b3de8122144ef0e1a5808677dd1cee7207ab18eadb1a4c87cfbf` |
 | complete 43-member standards aggregate | `39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6` |
-| `specification/PRODUCT.md` | `0dccae5c03d69b50d6a36391bcd9f409db0f294fd44ca6e0dc23fb370ca5b5bd` |
-| `releases/v2.4.0.md` | `c473492f9d7141c9af9d76ba20e9ca1b2fc4868c8427ae5e639b2686af175d85` |
+| `LICENSE` | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` |
+| `README.md` | `cc6a483821cf5eb15446852f432ee0632b70afc56f83792469a34490a3c88cb6` |
+| `specification/PRODUCT.md` | `9c36d175e02ff25c9a4cbb39fb7f4f0d5d886fcb99c464c126e27d69d4de8e3b` |
+| `releases/v2.4.0.md` | `a37f0db63108e293aa7f481c73cdd0be9ba67f845fc9e68bf8477d5b06f87c91` |
 | `.claude-plugin/marketplace.json` | `ad88de5384c19227ee1512051d28fc9bb5b916f873cb42df93dddc99105106` |
-| `plugins/spec/.claude-plugin/plugin.json` | `520ce03bee9f2fea5834d840ef507fa3aaf603b5bd5cd0b8628b8953d9dcb293` |
+| `plugins/spec/.claude-plugin/plugin.json` | `77cb1a4ada6b9a8970811a35f33d1ce52e3c5a2c9c9bb841b9469427e97f2ccd` |
+| `plugins/spec/LICENSE` | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` |
 | `plugins/spec/skills/refresh/SKILL.md` | `1ca76a378245de66e3b1726f778fc5eb4abcddadb5675c3159f23156a8ab933d` |
 
 This table binds the reconciled standards and protected release-scoped subject.
@@ -142,13 +167,18 @@ The final carrier identity and review evidence are added only after freeze.
 - [x] Codex and Claude templates carry equal frame-engagement semantics.
 - [x] The independently versioned Claude plugin exposes both new members without
       entering the standards Product subject.
+- [x] The canonical root and standalone-plugin license copies are byte-identical
+      to the official Apache License 2.0 text, and the plugin manifest declares
+      SPDX identifier `Apache-2.0` without changing its selected version.
+- [x] The test install carries that exact license outside the normative
+      standards member root and verifies it independently from member identity.
 - [x] The exact subject contains 43 members with two additions, nine changes,
       32 conserved members, and no removals relative to `v2.3.0`.
 - [x] The release note declares the complete semantic/member delta, conserved
       law, exclusions, direct-final relation, and exact inventory.
 - [x] Deterministic source/compression, inventory/disposition, dual-agent,
-      plugin-registry, installed-preview, JSON, and diff qualification passes
-      for the exact candidate subject.
+      license, plugin-registry, installed-preview, JSON, and diff qualification
+      passes for the exact candidate subject.
 - [ ] A fresh capable constructor exercises every claimed Reference Frame
       Method function/result population and every required STDO baseline
       transition branch without hidden conversation or expected-output input.
@@ -171,9 +201,10 @@ Executive becomes universal authority; Worker activates review or advances
 itself; Reviewer implements repair; a local carrier mints authority; a frame
 hierarchy or universal composition is assumed; an interaction, failure,
 capability, authority, or residual coverage relation is omitted; compression or
-one agent template is stale; exact review evaluates a moving subject; direct
-human acceptance precedes exact final identity; or final refs are published at
-different carriers.
+one agent template is stale; the canonical, plugin, or installed license is
+missing, altered, misdeclared, or counted as methodology authority; exact
+review evaluates a moving subject; direct human acceptance precedes exact final
+identity; or final refs are published at different carriers.
 
 ## Exclusions
 
@@ -181,7 +212,10 @@ different carriers.
   registry, schema, fixture suite, model, prompt, or consumer implementation.
 - No ABIogenesis-specific entity, graph, runtime, module, topology, or work
   stage as universal method law.
-- No downstream install or consumer selection.
+- No operative downstream install or consumer selection; the test install
+  remains a non-operative distribution preview.
+- No version increment for the bounded license omission repair: the selected
+  release remains `2.4.0` and plugin remains `2.1.0`.
 - No `v2.4.0-rc.*` branch or tag.
 - No final release branch, tag, or push before exact qualification, independent
   frozen-carrier review, and direct human exact-subject acceptance.

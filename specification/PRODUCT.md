@@ -107,6 +107,21 @@ re-entry after context loss.
 Those projections remain derived. An installed copy becomes consumer authority
 only through explicit selection of one immutable complete release.
 
+### Release Licensing And Distribution
+
+STDO `2.4.0`, its 43-member standards payload, and the co-released Claude
+plugin are distributed under the Apache License, Version 2.0
+(`Apache-2.0`). The final carrier includes the canonical license at `LICENSE`;
+the independently distributable plugin includes an exact copy at
+`plugins/spec/LICENSE` and declares `Apache-2.0` in its manifest.
+
+An installer or other redistributor of this STDO cut carries an exact copy of
+`LICENSE` with the installed standards payload. The license and its installed
+copy are legal distribution assets, not normative standards members. They do
+not change the 43-member standards inventory, establish methodology authority,
+or make an installed copy operative without explicit selection of the
+immutable release.
+
 ## Conserved 2.3.1 RC Amendments
 
 The successor conserves the complete independently accepted RC2 semantics:
@@ -158,6 +173,9 @@ relation are established and the subject:
   registry, consumer schema, or ABIogenesis-specific universal law;
 - has internally consistent digest-current source, compression, and dual-agent
   bootstrap projections;
+- carries the canonical Apache-2.0 license in the release carrier, standalone
+  plugin, and installed distribution without treating legal text as normative
+  methodology law;
 - has exact 43-member identity and a complete `v2.3.0..2.4.0` semantic and
   member disposition;
 - passes full-subject deterministic qualification and independent review of one

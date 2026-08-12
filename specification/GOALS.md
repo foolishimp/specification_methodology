@@ -5,7 +5,9 @@
 Release STDO `2.4.0` as the complete everything-to-date methodology Product:
 the accepted `v2.3.1-rc.2` semantic line plus the universal Reference Frame
 Method, its derived STDO Executive/Worker/Reviewer profile, aggregate
-compression, and aligned `AGENTS.md` and `CLAUDE.md` bootstrap templates.
+compression, aligned `AGENTS.md` and `CLAUDE.md` bootstrap templates, and an
+Apache-2.0 license carried by the release, standalone plugin, and installed
+distribution.
 
 Direct human Product authority selected the `2.4.0` minor release and instructed
 that no separate `v2.4.0-rc.*` cut be created. The published
@@ -56,20 +58,42 @@ Product, requirement, or accepted-design authority.
 the minimum frame-engagement projection required after context loss. They do
 not turn prompts or installed copies into independent authority.
 
+The release carrier supplies the canonical Apache License, Version 2.0 at
+`LICENSE`. The standalone Claude plugin carries the same text and declares
+`Apache-2.0`; an installed STDO cut carries an exact copy with its standards
+payload. License assets remain legal distribution inputs outside the normative
+standards member inventory.
+
 ## Exact Selected Subject
 
 - Product member set: 43 files under `specification/standards/`
 - standards aggregate:
   `39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6`
+- release license: canonical Apache-2.0 text at `LICENSE`, SHA-256
+  `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`
 - changed from `v2.3.0`: nine existing members
 - added from `v2.3.0`: two members
 - conserved from `v2.3.0`: 32 members
 - release-scoped claim: `releases/v2.4.0.md`
 - active work item: T-009
 
-This exact identity binds the current authoring subject. Any standards-byte or
-member change creates a new candidate identity and invalidates dependent
+This standards identity and the protected legal, Product, release-note, and
+plugin assets bind the current authoring subject. Any protected byte or
+standards-member change creates a new carrier identity and invalidates affected
 qualification.
+
+## License Re-Entry
+
+The authoring candidate formerly frozen at
+`b2a57ebccf0831d4c7bfe605f6e5da8e9b87ab07` omitted a release license and is
+superseded before review or publication. No release or RC ref identified it.
+Direct human Product authority classified the omission as repair within the
+selected `2.4.0` outcome and explicitly retained the version number.
+
+The repair adds legal distribution assets and changes no normative
+reference-frame, admission, assurance, design, or execution semantics. It does
+change protected carrier bytes, so a new exact candidate must be frozen and
+reviewed. The prior activation packet cannot establish the replacement carrier.
 
 ## Direct Final Promotion
 
@@ -79,6 +103,7 @@ Product authority:
 ```text
 published v2.3.1-rc.2 lineage
   + exact 2.4.0 standards delta
+  + canonical Apache-2.0 legal distribution assets
   + final-ready Product and release note
   -> deterministic full-subject qualification
   -> frozen final carrier
@@ -96,8 +121,8 @@ not silently amend the generic RC process in `RELEASE_METHOD.md`.
 |---|---|---|
 | `R0` Product selection | Direct human authority selects the complete `2.4.0` minor-release outcome and direct-final path. | completed |
 | `R1` Method construction | Reference Frame Method, STDO profile, compression, and dual-agent templates form one repaired authoring candidate. | completed |
-| `R2` Release reconciliation | Product, Goals, release note, T-009, auxiliary plugin registry, and installed preview declare one exact final subject and predecessor delta. | completed |
-| `R3` Deterministic qualification | Source/compression pins, inventory/disposition, dual-agent projection, plugin registry, installed-preview equivalence, and mechanical integrity pass. | completed |
+| `R2` Release reconciliation | Product, Goals, release note, T-009, Apache-2.0 assets, auxiliary plugin registry, and installed preview declare one exact final subject and predecessor delta. | completed |
+| `R3` Deterministic qualification | Source/compression pins, inventory/disposition, dual-agent projection, license fidelity, plugin registry, installed-preview equivalence, and mechanical integrity pass. | completed |
 | `R4` Fresh method/profile qualification | A fresh capable constructor exercises the declared method-function and profile-transition populations; an independent evaluator assesses the frozen results. | pending |
 | `R5` Independent carrier review | A reviewer independently evaluates the exact frozen final carrier and complete `v2.3.0..2.4.0` delta. | pending |
 | `R6` Acceptance and publication | Human authority accepts the exact subject/carrier/review relation; `release/2.4.0` and `v2.4.0` are published. | pending |
@@ -139,5 +164,7 @@ the accepted `2.4.0` carrier; their historical RC identities remain immutable.
 - no local-axioms authority independent of Goals, Product, requirements, or
   accepted design;
 - no downstream consumer adoption or mutation through this release; and
+- no redistribution of the `2.4.0` standards payload without its Apache-2.0
+  license copy; and
 - no final tag or publication before the exact frozen carrier is qualified,
   independently reviewed, and accepted by direct human authority.

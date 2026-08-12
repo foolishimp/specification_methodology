@@ -20,6 +20,18 @@ consumer constitutional authority.
 
 Release notes for tapped cuts live under `releases/`.
 
+## License
+
+Copyright 2026 Dimitar Popov.
+
+Unless a file states otherwise, this repository and its STDO distributions are
+licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
+
+An installed or otherwise redistributed STDO cut must carry an exact copy of
+that license with the standards payload. The license grants legal permissions;
+it does not become normative methodology authority or alter the selected
+release's standards-member identity.
+
 Pre-constitutional work under development lives under `strategy/`. Those
 artifacts are explicitly not-yet-ratified and graduate to `specification/`
 only when re-authored as constitutional material. See `strategy/README.md`
