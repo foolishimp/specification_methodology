@@ -121,25 +121,36 @@ for their subtree.
 
 - Use a finite reference frame for one declared evaluation family. Bind its
   exact subject/basis, material relations, coordinates, governing invariants,
-  semantic/evaluation/decision authority, evidence, exclusions, closed result
-  algebra, capability envelope, and invalidation conditions.
-- Frames may overlap or compose without forming a hierarchy. Compose or
-  translate only where a material evaluation crosses their internal relations.
+  semantic/evaluation/decision authority and operation authority where
+  material, evidence, exclusions, closed result algebra, capability envelope,
+  and invalidation conditions.
+- Keep frame disjointness, separately activated evaluation, and Reviewer
+  assurance independence distinct. Frames may overlap or compose without
+  forming a hierarchy. Compose or translate only where a material evaluation
+  crosses their internal relations.
+- A state-value change preserves topology only when every material entity,
+  relation, lifecycle, authority, capability, adjacency, and seam is preserved.
 - Existing Goals, Product, requirements, or accepted-design authority selects
   the project frame configuration. A local axioms file may carry that decision;
   it does not create authority.
 - The STDO baseline maps Executive, Worker, and Reviewer onto existing STDO
-  clauses. Executive activates Worker. Worker returns every closed work result
-  to Executive. Executive alone determines whether a candidate requires
-  Reviewer activation, receives any review result, and applies the existing
+  clauses. A failed activation returns to Executive and creates no Worker
+  result. After lawful activation, `satisfied`, `falsified`, `indeterminate`,
+  and `out_of_frame | invalid_basis` map to `candidate_ready`, `refused`,
+  `incomplete`, and `re_entry_requested`. Every Worker result returns to
+  Executive. Executive alone activates Reviewer and applies the existing
   `STDO-UP-020` disposition within its grant.
-- Worker self-review is not independent review. Reviewer evaluates the exact
-  subject and live production and proof surfaces but does not edit or direct the
-  repair. Executive does not become another semantic or implementation owner.
+- Worker carries only inherited bounded operation authority; self-review is not
+  independent review. Reviewer returns a Reference Frame Method result over the
+  exact live subject but does not edit, direct repair, or apply disposition.
+  Executive does not become another semantic, operation, or implementation
+  owner.
 - A minimum activation packet names frame/revision, evaluation/result algebra,
-  exact subject/basis, specialist frames and invariants, authorities, actor
-  capability/independence, admissible evidence and acquisition path,
-  exclusions, input/output relations, and invalidation/stop/re-entry conditions.
+  exact subject/basis, specialist frames and invariants, semantic/evaluation/
+  decision and material operation authorities, actor capability, separate-
+  activation and assurance-independence conditions, admissible evidence and
+  acquisition path, exclusions, input/output relations, and invalidation/stop/
+  re-entry conditions.
 - Return `indeterminate`, `out_of_frame`, or `invalid_basis` rather than filling
   missing material context from conversation or confidence. Coverage binds the
   known evaluation and interaction inventory to capable frames or explicit

@@ -54,10 +54,12 @@ engagement relation. It defines:
   dependencies, and invalidation conditions;
 - frame-set declaration, activation, evaluation, conjunction, translation,
   coverage audit, and revision as distinct method functions;
-- non-hierarchical independence, overlap, refinement, restriction, temporal
-  succession, conjunction, translation, and material composition;
+- non-hierarchical disjointness, overlap, refinement, restriction, temporal
+  succession, separately activated evaluation, assurance independence,
+  conjunction, translation, and material composition;
 - the distinction among frames, roles, personas, actors, components, lenses,
-  semantic authority, evaluation authority, and decision authority;
+  semantic authority, evaluation authority, operation authority where material,
+  and decision authority;
 - lawful `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, and
   `invalid_basis` outcomes;
 - operational full coverage relative to a declared workspace, outcome, basis,
@@ -76,20 +78,22 @@ controller, registry, or universal frame engine.
 It maps three practical engagement frames onto existing STDO owners:
 
 ```text
-Executive activates Worker
-  -> Worker returns every closed result to Executive
+Executive attempts Worker activation
+  -> activation refusal returns directly to Executive with no Worker result
+  -> after lawful activation, Worker returns every closed result to Executive
   -> Executive determines whether independent review is required
   -> Executive activates Reviewer where required
-  -> Reviewer returns one closed result to Executive
+  -> Reviewer returns one Reference Frame Method result to Executive
   -> Executive applies the existing STDO disposition and continuation relation
 ```
 
 Executive, Worker, and Reviewer are overlapping finite evaluation frames, not
 a hierarchy, fixed actor topology, or persona labels by themselves. The
 Executive has only existing bounded decision authority. The Worker constructs
-and self-reviews but cannot accept or advance itself. The Reviewer independently
-reacquires and evaluates the exact subject without implementing repair or
-disposing the result.
+and self-reviews through its inherited bounded operation authority but cannot
+admit, publish, accept, or advance itself. The Reviewer independently reacquires
+and evaluates the exact subject without implementing repair, returning an STDO
+disposition, or disposing the result.
 
 A project may adopt this profile or define another configuration. Existing
 Goals, Product, requirements, or accepted design own that decision. A local
@@ -101,8 +105,9 @@ authority layer.
 The complete method distribution includes the two new source members. The
 aggregate compression cites and projects them. `AGENTS_TEMPLATE.md` and
 `CLAUDE_TEMPLATE.md` carry equal frame-engagement semantics, including method
-basis, role/actor separation, activation, independence, coverage, and lawful
-re-entry after context loss.
+basis, role/actor separation, activation, disjointness, evaluation and assurance
+independence, operation authority, coverage, and lawful re-entry after context
+loss.
 
 Those projections remain derived. An installed copy becomes consumer authority
 only through explicit selection of one immutable complete release.
@@ -145,7 +150,7 @@ and reconcile implementation before closure.
 The selected successor Product subject is the exact 43-member
 `specification/standards/` distribution with aggregate:
 
-`39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6`
+`1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5`
 
 Relative to the operative `v2.3.0` Product, nine existing members change, two
 members are added, and 32 members are byte-conserved. The exact inventory and

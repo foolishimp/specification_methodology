@@ -5,8 +5,8 @@
 - type: proposal
 - ticket_category: constitutional
 - status: active
-- review_status: apache_2_license_repair_qualified_freeze_pending
-- candidate_generation: 02
+- review_status: candidate_03_bounded_semantic_repair_in_progress
+- candidate_generation: 03
 - goal: >-
     Release one complete STDO 2.4.0 Product containing the accepted 2.3.1 RC2
     semantic line, universal Reference Frame Method, derived STDO engagement
@@ -21,7 +21,7 @@
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-08-11
 - created_at: 2026-08-11
-- updated_at: 2026-08-12
+- updated_at: 2026-08-14
 - owner: specification_methodology
 - pen_holder: codex
 - operative_predecessor: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -30,6 +30,8 @@
 - target_release: 2.4.0
 - work_authorization: direct_human_authorization_2026-08-11
 - license_repair_authorization: direct_human_authorization_2026-08-12
+- semantic_repair_and_same_version_republication_authorization:
+  direct_human_authorization_2026-08-14
 
 ## Authority And Release Boundary
 
@@ -57,6 +59,16 @@ review, acceptance, or publication. No local or remote release ref names that
 carrier. The repair is release-scoped rather than a new methodology feature,
 but it changes protected carrier bytes and requires a replacement identity and
 affected qualification.
+
+On 2026-08-14 review falsified Candidate Generation 02 at
+`296042702e95b3c2e70c7d2a9b20ef99fb6c4352`. It found overloaded independence,
+an overlapping Worker-result algebra, omitted material-operation authority,
+unsafe topology-preservation wording, a Reviewer-output algebra defect, and a
+malformed marketplace digest in this ticket. That carrier was published before
+the corrections were applied. Direct human Product authority ordered the
+bounded corrections and same-version replacement. Candidate Generation 03
+therefore supersedes Candidate Generation 02 without changing Product scope,
+the 43-member inventory, plugin version, or release number.
 
 ## Selected Execution Basis
 
@@ -123,18 +135,18 @@ downstream consumer changes, and runtime machinery are not standards members.
 
 | Surface | SHA-256 |
 |---|---|
-| `REFERENCE_FRAME_METHOD.md` | `bfe92df7e888c3b0ee269dde161c31897e8c5d2dfdf340804c49059bade76a96` |
-| `STDO_REFERENCE_FRAME_BASELINE.md` | `5ea5e9b98fcb504c2eae48e3c81fc38f774244f3d4c2cf10b53aee4cac992ef8` |
+| `REFERENCE_FRAME_METHOD.md` | `0d8370e383e72cf89eb68175a6f3ecccb4a7fb913f4feed1f0810d1b558e471d` |
+| `STDO_REFERENCE_FRAME_BASELINE.md` | `e9731953144b5a0cf679ed5ed25150b2f82d4de7efce9d52b952504578f05d2e` |
 | `authority_compressions/README.md` | `e421d8bdce98a4dd7c23e81125a919939568a344201d3a4700200b9eea6c44a2` |
-| `authority_compressions/stdo_compressed.md` | `be3c2d15f278ee7eca461ba82b666554aeda60217bfcfd6b6c941d9c77112abc` |
-| `templates/AGENTS_TEMPLATE.md` | `b1efb82ea5e9e08d8cf02d9e0c6d9c8bacfc072d4caed3c4f05ce9c41c0d38c6` |
-| `templates/CLAUDE_TEMPLATE.md` | `02b43201f0e0b3de8122144ef0e1a5808677dd1cee7207ab18eadb1a4c87cfbf` |
-| complete 43-member standards aggregate | `39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6` |
+| `authority_compressions/stdo_compressed.md` | `3190ecbcc1f2b6a3f19b005ca6ffe47d3d6217630679eb33634846f76b0b957e` |
+| `templates/AGENTS_TEMPLATE.md` | `c1ed95a205176513f0fad18a7a0246bd13c812c8d3e1a7299557243cde01121e` |
+| `templates/CLAUDE_TEMPLATE.md` | `cb90ef689985dd33c11c7e376ab8cc809bd0cdf86530b5c1bc7fb38075054485` |
+| complete 43-member standards aggregate | `1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5` |
 | `LICENSE` | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` |
 | `README.md` | `cc6a483821cf5eb15446852f432ee0632b70afc56f83792469a34490a3c88cb6` |
-| `specification/PRODUCT.md` | `9c36d175e02ff25c9a4cbb39fb7f4f0d5d886fcb99c464c126e27d69d4de8e3b` |
-| `releases/v2.4.0.md` | `a37f0db63108e293aa7f481c73cdd0be9ba67f845fc9e68bf8477d5b06f87c91` |
-| `.claude-plugin/marketplace.json` | `ad88de5384c19227ee1512051d28fc9bb5b916f873cb42df93dddc99105106` |
+| `specification/PRODUCT.md` | `23b95079c51995ef7ef5bc8d287c5f52ae35e3f4cf6d3cc8ef26a384a4f71c5b` |
+| `releases/v2.4.0.md` | `b5ab7b74b766ed20d5a990cdfae970729a26af23917061bf8fa492f68bb9fce4` |
+| `.claude-plugin/marketplace.json` | `ad88de5384c19227ee1512051d28fc9bb5b3b916f873cb42df93dddc99105106` |
 | `plugins/spec/.claude-plugin/plugin.json` | `77cb1a4ada6b9a8970811a35f33d1ce52e3c5a2c9c9bb841b9469427e97f2ccd` |
 | `plugins/spec/LICENSE` | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` |
 | `plugins/spec/skills/refresh/SKILL.md` | `1ca76a378245de66e3b1726f778fc5eb4abcddadb5675c3159f23156a8ab933d` |
@@ -152,14 +164,25 @@ The final carrier identity and review evidence are added only after freeze.
       `REFERENCE_FRAME_METHOD.md`.
 - [x] The STDO profile maps Executive, Worker, and Reviewer onto existing STDO
       owners without a second execution or amendment path.
-- [x] Every Worker result returns to Executive; Executive alone activates
-      Reviewer; Reviewer returns to Executive and does not implement repair.
-- [x] Frame, role, persona, actor, lens, component, authority, and independence
-      remain distinct.
+- [x] Activation refusal creates no Worker activation or Worker result; each
+      lawfully activated Worker result maps disjointly from exactly one
+      Reference Frame Method result and returns to Executive.
+- [x] Executive alone activates Reviewer; Reviewer returns a Reference Frame
+      Method result, does not implement repair, and does not return or apply an
+      STDO disposition.
+- [x] Frame, role, persona, actor, lens, component, structural disjointness,
+      evaluation independence, assurance independence, and authority remain
+      distinct.
+- [x] Every effectful frame carries the existing owner's exact construction,
+      transformation, admission, publication, or mutation authority without
+      gaining it from frame selection.
 - [x] Projects may adopt or replace the baseline only through existing project
       authority; local axioms do not become a new owner.
 - [x] Frame topology is non-hierarchical by default and composition is required
       only where a material evaluation crosses frame relations.
+- [x] A state-value change preserves topology only when it preserves every
+      material entity, relation, lifecycle, authority, capability, adjacency,
+      and seam; otherwise the activation re-evaluates or recharts.
 - [x] Coverage is tuple-relative, interaction-aware, authority-aware,
       failure-aware, falsifiable, and explicit about residual uncertainty.
 - [x] Aggregate compression pins and projects both new sources.

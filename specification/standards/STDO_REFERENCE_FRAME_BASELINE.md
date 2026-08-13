@@ -12,24 +12,29 @@ existing project authority
   + selected complete STDO and Reference Frame Method basis
   + exact governed outcome and workspace basis
   -> Executive frame activation
-  -> Worker frame activation
-  -> Worker returns one closed work result to Executive
-       |- refused | incomplete | re-entry requested
-       |    -> Executive disposition
-       `- candidate ready with exact subject
-            |- independent review not required
-            |    -> Executive disposition
-            `- independent review required
-                 -> Executive activates Reviewer
-                 -> Reviewer returns one closed result to Executive
-                 -> Executive disposition
+  -> attempted Worker activation
+       |- activation refusal
+       |    -> Executive reconfiguration or disposition
+       `- Worker frame activation
+            -> Worker returns one closed work result to Executive
+                 |- refused | incomplete | re-entry requested
+                 |    -> Executive disposition
+                 `- candidate ready with exact subject
+                      |- independent review not required
+                      |    -> Executive disposition
+                      `- independent review required
+                           -> Executive activates Reviewer
+                           -> Reviewer returns one closed result to Executive
+                           -> Executive disposition
 ```
 
 The three frames are overlapping evaluation contexts, not a hierarchy or actor
 topology. The Worker supplies the candidate subject but never activates the
 Reviewer. The Reviewer evaluates but does not implement. The Executive applies
 only decision authority already granted by Product, Goals, requirements,
-accepted design, ticket, identity, or release law.
+accepted design, ticket, identity, or release law. The Worker carries only the
+construction or transformation authority in its admitted intake. No frame gains
+admission, publication, mutation, or other operation authority from its label.
 
 A project may adopt this profile or define another reference-frame
 configuration. That choice is admitted by the existing project authority that
@@ -124,8 +129,9 @@ executive observer.
 
 **Worker** is the profile label for `STDO-UP-020`'s bounded constructor role
 when activated as a reference frame. It owns construction and self-review
-inside its exact intake. It does not accept its own result or infer
-continuation authority.
+inside its exact intake through the operation authority inherited from the
+governing work relation. It does not acquire admission, publication, acceptance,
+or continuation authority.
 
 ### Reviewer
 
@@ -138,14 +144,30 @@ the repair, apply disposition, or activate the next frame.
 ### Work result
 
 A **work result** is the closed Worker-to-Executive output used by this profile.
-Its variants are profile carriers, not new STDO semantic dispositions:
+It exists only after successful Worker activation. An `activation_refusal`
+returns directly to Executive and creates neither a Worker activation nor a
+Worker result.
 
-- `candidate_ready`: an exact candidate and transition evidence are available;
-- `refused`: construction encountered a governing prohibition or invalid
-  request;
-- `incomplete`: construction did not produce a candidate and makes no closure
-  claim; or
-- `re_entry_requested`: a decision outside Worker authority appears necessary.
+The work-result variants are profile carriers, not new STDO semantic
+dispositions. They are disjoint by their accompanying Reference Frame Method
+result:
+
+- `candidate_ready` accompanies `satisfied`: an exact candidate and transition
+  evidence are available;
+- `refused` accompanies `falsified`: lawful activation occurred, but a
+  governing prohibition or owner-valid construction refusal defeats the
+  requested construction;
+- `incomplete` accompanies `indeterminate`: the valid activation has not
+  produced a candidate because admissible evidence or bounded execution cannot
+  yet decide or complete the relation; and
+- `re_entry_requested` accompanies `out_of_frame` or `invalid_basis`: a
+  material decision lies outside Worker authority or the activated basis can no
+  longer support the work.
+
+The mapping is total and exclusive after lawful activation. Payload wording,
+stop timing, or actor preference cannot select another variant. A capability,
+authority, stale-basis, ambiguous-basis, or topology mismatch known during
+activation is an `activation_refusal`, not a synthetic Worker result.
 
 Consumers choose the representation. `STDO-UP-020` remains the owner of the
 execution relation and its semantic dispositions.
@@ -183,8 +205,9 @@ The active configuration uses three distinct relation structures:
    admit a frame configuration, dispose a result, or require re-entry;
 2. **temporal and evidence flow** carries activation packets and closed results;
    and
-3. **frame topology** records overlap, independence, conjunction, translation,
-   or composition among the evaluations actually used.
+3. **frame topology** records disjointness, overlap, conjunction, translation,
+   or composition among the evaluations actually used, while evaluation and
+   Reviewer-assurance independence remain separate activation relations.
 
 These structures may align in one case. They are not one hierarchy.
 
@@ -220,7 +243,7 @@ This notation requires no Cartesian-product schema or universal frame runtime.
 | material manifold | outcome, affected causal cone, evaluation inventory, frame configuration, actor envelopes, evidence obligations, returned results, re-entry owners, and already-authorized continuation boundary |
 | coordinates | exact method, project, outcome, authority, checkpoint, candidate, evidence, finding, and actor identities |
 | governing invariants | `RF-001..017`; `STDO-UP-017..020`; applicable identity, ticket, assurance, and release law |
-| authority | existing Product/work authority or its admitted bounded proxy; no authority arises from the Executive label |
+| authority | existing Product/work frame-set and decision authority or its admitted bounded proxy; no operation authority or other authority arises from the Executive label |
 | evidence | live authority surfaces, frame results, exact candidate identity, transition evidence, coverage residuals, and specialist-frame results |
 | capability envelope | enough method, authority, workspace, and actor-selection competence to configure and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
 | exclusions | implementation ownership, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
@@ -243,7 +266,7 @@ bounded candidate disposition remains exactly `accept`, `local_repair`,
 | material manifold | affected entities, lifecycles, transformations, authorities, capabilities, algorithms, inputs, outputs, dependencies, interaction seams, failure boundaries, and proof obligations |
 | coordinates | exact activation, source checkpoint, workspace, inputs, dependencies, configuration, actor envelope, outputs, candidate, and evidence identities |
 | governing invariants | the complete selected STDO and project relations material to the affected cone; `STDO-UP-020` owns construction and self-review |
-| authority | bounded implementation and self-review only; no independent acceptance, frame-set revision, or inferred next action |
+| authority | inherited bounded construction or transformation operation authority and self-review only; no admission, publication, mutation, independent acceptance, frame-set revision, or inferred next action |
 | evidence | live implementation, tests and test source, analysis, generated artifacts, installed or operational behavior where claimed, reconstruction, mutations, and exact transition evidence |
 | capability envelope | the declared method, domain, implementation, tool, access, and finite-context competence required by the causal cone |
 | exclusions | upstream semantic change, unauthorized cone expansion, self-acceptance, hidden competing paths, and advancement after returning the work result |
@@ -265,7 +288,7 @@ relations their production and test semantics actually exercise.
 | material manifold | claimed relations; causal producers and consumers; authority seams; competing paths; failure, recovery, installed, and reconstruction surfaces where claimed; test and fixture semantics; historical counterexamples |
 | coordinates | exact candidate, source basis, authority revision, configuration, dependency, evidence population, installed subject, review time, and Reviewer identity |
 | governing invariants | `RF-001..017`; `STDO-UP-020`; `STDO-UP-007`; `STDO-UP-022`; applicable Product, design, identity, and release law |
-| authority | bounded evaluation only; no implementation, decision, disposition, or next-activation authority follows from review access |
+| authority | bounded evaluation only; no construction, transformation, admission, publication, mutation, decision, disposition, or next-activation authority follows from review access |
 | evidence | independently acquired live authority, candidate implementation, tests, artifacts, history, operational evidence, mutations, replay/reconstruction, and reproduced observations material to the claim |
 | capability envelope | declared method, domain, implementation, assurance, tool, access, context, counterexample-search, and independence competence |
 | exclusions | candidate editing, repair implementation, Worker-summary substitution, assurance-owned semantic reconstruction, unbound evidence flattening, and silent scope expansion |
@@ -312,6 +335,11 @@ The Executive applies `REFERENCE_FRAME_METHOD.md` activation to the
   conditions; and
 - the exact bounded action already authorized.
 
+If activation detects a known capability, authority, subject, basis, or
+topology mismatch, it returns `activation_refusal` directly to Executive. No
+Worker frame is active, no Worker evaluation occurs, and Executive must not
+manufacture a Worker result to represent the failed activation.
+
 ### 3. Worker Returns To Executive
 
 Every Worker activation terminates in one closed work result sent to the
@@ -326,6 +354,11 @@ WorkerResult
 ```
 
 The notation is explanatory and mandates no schema.
+
+Each variant accompanies exactly one Reference Frame Method result under the
+mapping in `Work result`: `satisfied -> candidate_ready`, `falsified ->
+refused`, `indeterminate -> incomplete`, and `out_of_frame | invalid_basis ->
+re_entry_requested`. The mapping applies only after lawful activation.
 
 The Worker does not send a candidate directly into an implicitly active
 Reviewer. It stops after returning the result.
@@ -410,6 +443,7 @@ other admitted carriers. This profile requires no new artifact type.
 | Projection | Producer -> consumer | Minimum material content | Owning law |
 |---|---|---|---|
 | Worker activation | Executive -> Worker | exact intake, basis, affected cone, authority, frames, evidence, exclusions, stop and re-entry conditions | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
+| activation refusal | activation relation -> Executive | attempted frame, subject/basis, actor, failed capability or authority predicate, evidence, and reconfiguration pressure; no Worker result | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
 | work result | Worker -> Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | `STDO-UP-020` |
 | Reviewer activation | Executive -> Reviewer | exact subject, claim, composition boundary, evidence population, authority, independence, invalidation | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-007`; `STDO-UP-022` |
 | review result | Reviewer -> Executive | exact verdict basis, evidence, findings, counterexamples, residuals, invalidation | `STDO-UP-007`; `STDO-UP-020`; `STDO-UP-022` |
@@ -445,8 +479,9 @@ conflicted, or authority-excluded residual required by
 `REFERENCE_FRAME_METHOD.md`.
 
 Executive visibility is not coverage. Every material evaluation still requires
-a capable frame, admissible evidence, and an identified semantic and decision
-owner.
+a capable frame, admissible evidence, and identified semantic and decision
+owners. Every material construction, transformation, admission, publication,
+or mutation also requires its existing operation owner and exact grant.
 
 ---
 
@@ -516,8 +551,9 @@ authority records:
 - exact method and project basis;
 - known evaluation inventory;
 - each frame declaration and capability envelope;
-- semantic, evaluation, and decision authority;
-- intentional overlap and required independence;
+- semantic, evaluation, operation where material, and decision authority;
+- intentional overlap, separately activated evaluations, and required
+  assurance independence;
 - conjunction, translation, and composition actually used;
 - mapping to applicable STDO construction, assessment, disposition, identity,
   and release obligations;
@@ -534,10 +570,10 @@ document category.
 
 ### Extension Versus Replacement
 
-Adding domain or specialist frames, additional independent coverage, or local
-evidence coordinates is an extension of this profile. Changing the material
-Executive, Worker, Reviewer, handoff, independence, or disposition
-configuration creates a project-defined profile.
+Adding domain or specialist frames, additional separately activated or
+assurance-independent coverage, or local evidence coordinates is an extension
+of this profile. Changing the material Executive, Worker, Reviewer, handoff,
+independence, or disposition configuration creates a project-defined profile.
 
 Neither choice amends federal STDO execution law. A project intentionally
 departing from that law records a separate method basis or non-conformance; it
@@ -573,20 +609,25 @@ protocol.
 A representative profile trial establishes at least:
 
 1. existing project authority selects and projects the frame configuration;
-2. a fresh capable Worker reconstructs its intake without hidden conversation
+2. a known incapable or unauthorized actor produces an activation refusal and
+   no Worker result;
+3. a fresh capable Worker reconstructs its intake without hidden conversation
    history;
-3. every Worker work-result variant returns to Executive;
-4. `candidate_ready` reaches Executive disposition without Reviewer activation
+4. every effectful Worker activation carries its exact inherited operation
+   authority without granting operation authority to another frame;
+5. every Worker work-result variant is disjointly mapped from its Reference
+   Frame Method result and returns to Executive;
+6. `candidate_ready` reaches Executive disposition without Reviewer activation
    when independent review is not required;
-5. review-required `candidate_ready` causes Executive, not Worker, to activate
+7. review-required `candidate_ready` causes Executive, not Worker, to activate
    Reviewer;
-6. Reviewer reacquires the exact subject and live production and assurance
+8. Reviewer reacquires the exact subject and live production and assurance
    surfaces material to its claim;
-7. changed candidate or basis invalidates the affected review result;
-8. Worker self-review, Reviewer evaluation, Executive decision authority, and
+9. changed candidate or basis invalidates the affected review result;
+10. Worker self-review, Reviewer evaluation, Executive decision authority, and
    `STDO-UP-020` disposition remain distinguishable;
-9. missing-frame pressure triggers bounded diagnosis or lawful re-entry; and
-10. a project-defined configuration can replace the profile without changing
+11. missing-frame pressure triggers bounded diagnosis or lawful re-entry; and
+12. a project-defined configuration can replace the profile without changing
     the selected STDO law or inventing another authority layer.
 
 The claim is limited to the frame revisions, actor envelopes, result branches,
@@ -639,7 +680,7 @@ and evidence populations actually evaluated.
 - evaluation and result algebra:
 - exact subject and basis:
 - material specialist frames and governing invariants:
-- semantic, evaluation, and decision authority:
+- semantic, evaluation, operation where material, and decision authority:
 - actor and capability/independence envelope:
 - admissible evidence and acquisition path:
 - exclusions and prohibited assumptions:
@@ -683,21 +724,23 @@ This profile is misapplied when:
 3. Executive is made a universal context, semantic interpreter, or
    implementation controller;
 4. Worker sends a candidate directly into an implied Reviewer activation;
-5. refused, incomplete, or re-entry work results have no route to Executive;
-6. Worker accepts its own result or infers continuation;
-7. Reviewer relies on Worker narrative instead of acquiring the material live
+5. an activation refusal is relabeled as a Worker result or any Worker result
+   variant is selected without its required Reference Frame Method result;
+6. refused, incomplete, or re-entry work results have no route to Executive;
+7. Worker accepts its own result or infers continuation;
+8. Reviewer relies on Worker narrative instead of acquiring the material live
    subject;
-8. Reviewer trusts tests without reviewing their semantics where they can
+9. Reviewer trusts tests without reviewing their semantics where they can
    change the proof;
-9. Reviewer edits or directs repair while retaining independent-review status;
-10. changed candidate or basis reuses the predecessor verdict;
-11. results from different coordinates are flattened into one relation;
-12. a local axioms file is treated as authority without an owning
+10. Reviewer edits or directs repair while retaining independent-review status;
+11. changed candidate or basis reuses the predecessor verdict;
+12. results from different coordinates are flattened into one relation;
+13. a local axioms file is treated as authority without an owning
     Goals/Product/requirement/design decision;
-13. this profile restates `STDO-UP-020`, `STDO-UP-007`, or `STDO-UP-022` as
+14. this profile restates `STDO-UP-020`, `STDO-UP-007`, or `STDO-UP-022` as
     peer constitutional law;
-14. a project-defined configuration silently changes selected STDO law; or
-15. ABIogenesis-specific realization machinery is presented as a universal
+15. a project-defined configuration silently changes selected STDO law; or
+16. ABIogenesis-specific realization machinery is presented as a universal
     requirement.
 
 ---
@@ -711,7 +754,9 @@ A project has applied this baseline to one outcome when:
    sources;
 3. Executive, Worker, and Reviewer are finite evaluation frames, not hierarchy
    or actor identities;
-4. every Worker result returns first to Executive;
+4. activation refusal remains distinct from Worker results, and every Worker
+   result maps exclusively from one closed Reference Frame Method result and
+   returns first to Executive;
 5. Executive alone determines whether an exact candidate enters a Reviewer
    activation under the applicable existing authority;
 6. required Reviewer assessment binds the exact subject, evidence population,
@@ -722,7 +767,8 @@ A project has applied this baseline to one outcome when:
    evaluation and interaction or retain an explicit residual;
 9. frame, basis, capability, evidence, and topology change can invalidate and
    rechart the configuration; and
-10. no new execution authority, local constitutional layer, actor topology,
+10. every material operation carries its existing owner's exact grant; and
+11. no new execution authority, local constitutional layer, actor topology,
     runtime, or universal completeness claim is inferred from the profile.
 
 A project-defined frame configuration closes against

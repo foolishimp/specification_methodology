@@ -18,8 +18,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
 source_digests:
-  REFERENCE_FRAME_METHOD.md: bfe92df7e888c3b0ee269dde161c31897e8c5d2dfdf340804c49059bade76a96
-  STDO_REFERENCE_FRAME_BASELINE.md: 5ea5e9b98fcb504c2eae48e3c81fc38f774244f3d4c2cf10b53aee4cac992ef8
+  REFERENCE_FRAME_METHOD.md: 0d8370e383e72cf89eb68175a6f3ecccb4a7fb913f4feed1f0810d1b558e471d
+  STDO_REFERENCE_FRAME_BASELINE.md: e9731953144b5a0cf679ed5ed25150b2f82d4de7efce9d52b952504578f05d2e
   SPEC_METHOD.md: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
   DESIGN_MODULE_METHOD.md: 1ef7a7c1cfbe8cd4f992aa629cfe8813c209fc841b9e22bcd859bb43bda4313d
   ODD_METHOD.md: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
@@ -344,20 +344,25 @@ layer that owns the missing truth.
 
 - A reference frame is one finite, capability-bounded evaluation context. It
   binds evaluation family, exact subject/basis, material relations, coordinates,
-  invariants, semantic/evaluation/decision authority, evidence, exclusions,
-  closed results, invalidation, actor capability, and only the cross-frame
-  relations actually used.
-- Frames may overlap, refine, restrict, translate, compose, or succeed one
-  another. Hierarchy is optional. Shared entities or equal-looking values do not
-  collapse coordinates, meaning, evidence, or authority.
+  invariants, semantic/evaluation/decision authority and operation authority
+  where material, evidence, exclusions, closed results, invalidation, actor
+  capability, and only the cross-frame relations actually used.
+- Frame disjointness, separately activated evaluation, and claim-relative
+  assurance independence are distinct. Frames may overlap, refine, restrict,
+  translate, compose, or succeed one another. Hierarchy is optional. Shared
+  entities or equal-looking values do not collapse coordinates, meaning,
+  evidence, or authority.
+- A state-value change preserves topology only when every material entity,
+  relation, lifecycle, authority, capability, adjacency, and seam is preserved;
+  otherwise the activation requires topology recharting.
 - The baseline result family is `satisfied`, `falsified`, `indeterminate`,
   `out_of_frame`, or `invalid_basis`. Missing context, evidence, authority, or
   capability cannot be converted to satisfaction.
 - Coverage is relative to an exact workspace, governed outcome, basis, known
   evaluation inventory, frame set, and time. It covers material interactions,
-  authority, failure, capability, and required independent overlap or records
-  explicit residuals; file, artifact, test, review, or actor count is not
-  coverage.
+  semantic/operation/decision authority, failure, capability, separately
+  activated overlap, assurance independence, or explicit residuals; file,
+  artifact, test, review, or actor count is not coverage.
 - Existing Goals, Product, requirements, or accepted-design authority selects a
   project's frame configuration. A local axioms or configuration file may carry
   that projection but does not become another constitutional owner.
@@ -367,27 +372,35 @@ layer that owns the missing truth.
   independent live-surface evaluation governed by `STDO-UP-007` and
   `STDO-UP-022` where `STDO-UP-020` requires it. The profile creates no peer
   execution, review, disposition, checkpoint, or continuation law.
-- The complete baseline route is: Executive activates Worker; Worker returns
-  every `candidate_ready`, `refused`, `incomplete`, or `re_entry_requested`
-  result to Executive; Executive evaluates non-candidates under existing
-  authority; for a candidate, Executive either dispositions directly when
+- The complete baseline route is: Executive attempts Worker activation; an
+  activation refusal returns directly to Executive and creates no Worker result;
+  after lawful activation, `satisfied`, `falsified`, `indeterminate`, and
+  `out_of_frame | invalid_basis` map exclusively to `candidate_ready`,
+  `refused`, `incomplete`, and `re_entry_requested`. Every Worker result returns
+  to Executive. For a candidate, Executive either dispositions directly when
   independent review is not required or activates Reviewer, receives the closed
   review result, and then applies exactly one existing `STDO-UP-020`
   disposition.
 - Worker supplies an exact candidate but never activates Reviewer. Worker
-  self-review is not independent review. Reviewer evaluates but does not edit,
-  direct repair, or authorize continuation. Executive cannot exceed its existing
-  grant or become another semantic or implementation owner.
+  carries only its inherited bounded construction/transformation operation
+  authority; self-review is not independent review. Reviewer returns only a
+  Reference Frame Method result and does not edit, direct repair, apply an STDO
+  disposition, or authorize continuation. Executive cannot exceed its existing
+  grant or become another semantic, operation, or implementation owner.
 - The minimum activation packet carries frame identity/revision, evaluation and
   result algebra, exact subject/basis, material specialist frames and
-  invariants, semantic/evaluation/decision authority, actor capability and
-  independence, admissible evidence and acquisition path, exclusions, input and
-  output relations, and invalidation/stop/re-entry conditions.
+  invariants, semantic/evaluation/decision authority and operation authority
+  where material, actor capability, separate-activation and assurance-
+  independence conditions, admissible evidence and acquisition path,
+  exclusions, input and output relations, and invalidation/stop/re-entry
+  conditions.
 - Method qualification covers declaration, activation, every evaluation result,
   conjunction conflict and basis mismatch, translation preservation/loss/
-  refusal, interaction and authority coverage, topology/capability/evidence
-  revision, result consumption, and material composition. One valid frame set
-  or coverage result cannot prove the unevaluated function population.
+  refusal, interaction and semantic/operation/decision-authority coverage,
+  topology/capability/evidence revision, result consumption, material
+  composition, activation refusal, and the closed Worker-result mapping. One
+  valid frame set or coverage result cannot prove the unevaluated function
+  population.
 
 ## Prompt-Relevant Rules
 

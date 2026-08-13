@@ -80,8 +80,9 @@ controller, service, registry, graph, or frame engine is required.
    coordinate systems.
 7. Coverage is relative to a declared workspace, governed outcome, evaluation
    inventory, basis, and time.
-8. A frame selection or frame result cannot acquire semantic authority from its
-   breadth, usefulness, actor, or implementation technology.
+8. A frame selection or frame result cannot acquire semantic, operation, or
+   decision authority from its breadth, usefulness, actor, or implementation
+   technology.
 9. Unknown and out-of-frame results are lawful pressure for reconfiguration.
    They are not failed evaluations or implied acceptance.
 10. Historical failures, resets, and invisible violations are evidence for
@@ -94,9 +95,10 @@ controller, service, registry, graph, or frame engine is required.
 ### Evaluation
 
 An **evaluation** is a declared question whose admissible result family,
-evidence basis, and decision authority are known. An evaluation may ask for a
-judgment, prediction, construction, comparison, proof, refusal, classification,
-or action recommendation.
+evidence basis, decision authority, and operation authority where it performs a
+material action are known. An evaluation may ask for a judgment, prediction,
+construction, comparison, proof, refusal, classification, or action
+recommendation.
 
 An evaluation family groups questions that require the same material relation
 manifold, authority basis, and result algebra. Similar wording does not prove
@@ -125,7 +127,8 @@ is detected and when reevaluation is required.
 
 A relation is **material** to an evaluation when a lawful change to that
 relation can change the evaluation result, invalidate its basis, change the
-admissible evidence, or change who may decide it.
+admissible evidence, change who may perform a material operation, or change who
+may decide it.
 
 Materiality is evaluation-relative. A relation may be material in one frame and
 irrelevant in another.
@@ -153,12 +156,14 @@ establish coordinate equality. Equality follows a declared relation.
 ### Topology
 
 **Topology** is the relation structure among the material entities,
-capabilities, authorities, states, and seams visible to a frame at one basis.
-The frame need not contain the workspace's complete topology.
+capabilities, authorities, lifecycle state spaces, adjacencies, and seams
+visible to a frame at one basis. The frame need not contain the workspace's
+complete topology.
 
-A state change preserves the frame topology. A topology mutation changes a
-material entity, relation, authority, adjacency, lifecycle, or seam and may
-invalidate the frame's coordinates.
+A state-value change preserves the frame topology only when it preserves every
+material entity, relation, lifecycle, authority, capability, adjacency, and
+seam. A state transition that changes any such relation is a topology mutation
+and may invalidate the frame's coordinates.
 
 ### Evidence
 
@@ -175,23 +180,47 @@ The method distinguishes:
   project frame set;
 - **semantic authority**: the owner of meaning for a material relation;
 - **evaluation authority**: the role permitted to perform an evaluation;
+- **operation authority**: the owner-issued grant to construct, transform,
+  admit, publish, or mutate a material subject where an evaluation performs
+  such an operation;
 - **decision authority**: the role permitted to accept, reject, or otherwise
   dispose its result; and
 - **actor identity**: the human, agent, tool, or process performing work.
 
 These relations may coincide in a lawful case. They never collapse by default.
-Declaring, selecting, or executing a frame does not grant semantic or decision
-authority.
+Declaring, selecting, activating, or executing a frame does not grant semantic,
+operation, or decision authority. A read-only evaluation declares no operation
+authority. An effectful evaluation inherits the exact operation grant from its
+existing owner; the frame does not create that grant.
 
 Human authority may act directly or through an explicitly admitted bounded
 proxy where the governing identity and authority law permits it. Proxy identity
 and human-authority identity remain distinct.
 
+### Disjointness And Independence
+
+Three relations remain distinct:
+
+- **frame disjointness** is structural: two frames share no material variable,
+  coordinate, evidence, or result dependency for the declared evaluations;
+- **evaluation independence** is procedural: separately activated evaluations
+  do not consume or influence one another's unclosed working results, although
+  they may intentionally inspect the same subject, overlap in their manifolds,
+  and later supply closed results to a conjunction; and
+- **assurance independence** is claim-relative: the governing assurance law
+  states the required non-authorship, evidence-acquisition, reference-exposure,
+  actor, and configuration separation for a verdict to count as independent
+  assurance.
+
+Disjoint frames need not be independently evaluated, and independently
+activated evaluations need not be disjoint. The unqualified word
+`independent` does not establish any of these relations by itself.
+
 ### Capability envelope
 
 A **capability envelope** declares the competence, context capacity, tools,
-access, independence, and configuration required to activate a frame and
-perform its evaluations.
+access, applicable evaluation- or assurance-independence conditions, and
+configuration required to activate a frame and perform its evaluations.
 
 The same frame may be usable by one actor and unusable by another. Actor
 capability may justify a different frame size or activation sequence. It cannot
@@ -238,7 +267,8 @@ frame declaration is not evidence that a particular activation was correct.
 
 A **frame set** is the human-declared family of frames available for a governed
 outcome or workspace. It may intentionally contain overlaps, alternatives,
-specialist frames, broad exploratory frames, and independent assurance frames.
+specialist frames, broad exploratory frames, and separately activated assurance
+frames.
 
 A frame set is not required to be a partition, tree, stack, or exhaustive
 ontology.
@@ -247,7 +277,8 @@ ontology.
 
 An **active frame configuration** is the set of frame activations and declared
 result relations used for one evaluation or decision. It may contain one frame
-or several independent, overlapping, or composed frames.
+or several disjoint, overlapping, or composed frames. Separately activated
+evaluations may be disjoint or overlapping.
 
 ### Lens
 
@@ -288,8 +319,9 @@ not reconstructable for that actor.
 ### RF-003 Material Sufficiency
 
 Every known relation whose lawful change can alter the evaluation result,
-basis validity, evidence sufficiency, or decision authority appears in the
-frame or enters through a declared authoritative input.
+basis validity, evidence sufficiency, operation authority, or decision
+authority appears in the frame or enters through a declared authoritative
+input.
 
 Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
@@ -310,15 +342,17 @@ coordinate equality.
 ### RF-006 Authority Conservation
 
 A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct authority from actor identity, available capability,
-evidence shape, implementation reachability, or frame selection.
+transfer, or reconstruct semantic, evaluation, operation, or decision authority
+from actor identity, available capability, evidence shape, implementation
+reachability, or frame selection.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
 Semantic law defines what the evaluation means. Evidence supplies observations.
-The evaluator applies the declared relation. Decision authority disposes the
-result. A frame declaration keeps these roles distinguishable even when one
-actor lawfully performs several of them.
+The evaluator applies the declared relation. Where the evaluation performs a
+material operation, the existing operation owner supplies the exact grant.
+Decision authority disposes the result. A frame declaration keeps these roles
+distinguishable even when one actor lawfully performs several of them.
 
 ### RF-008 Overlap Without Identity Collapse
 
@@ -329,7 +363,7 @@ is needed.
 
 ### RF-009 No Assumed Hierarchy
 
-Frames may relate through independence, overlap, refinement, restriction,
+Frames may relate through disjointness, overlap, refinement, restriction,
 translation, temporal succession, composition, or governance. Parent and child
 relations apply only where explicitly declared.
 
@@ -345,8 +379,8 @@ Composition law is required only when the governing evaluation combines their
 internal variables, transports evidence or values across them, or treats their
 operations as one material execution relation.
 
-Independent evaluations may instead return closed results to one declared
-conjunction or decision rule.
+Independently activated evaluations may instead return closed results to one
+declared conjunction or decision rule.
 
 ### RF-011 Topology Mutation And Recharting
 
@@ -404,10 +438,10 @@ material distinctions and failure detections required by its evaluation family
 while fitting its capability envelope.
 
 Compression does not require a unique smallest frame. Intentional overlap is
-retained where it supplies independent evaluation, different capability fit,
-different evidence altitude, or useful fault detection. Frames are merged only
-when the merged frame preserves evaluation meaning, authority, capability fit,
-and proportional reasoning cost.
+retained where it supplies independently activated evaluation, different
+capability fit, different evidence altitude, or useful fault detection. Frames
+are merged only when the merged frame preserves evaluation meaning, authority,
+capability fit, and proportional reasoning cost.
 
 ### Engagement Atom And Semantic Prime
 
@@ -420,8 +454,9 @@ Where an adopting method supplies a Prime or equivalent semantic-contraction
 law, that law governs the domain atom family. Frame-set contraction then asks a
 different question: whether two frame declarations support the same evaluation
 relation without material difference in evidence, authority, capability fit,
-independence, or failure detection. A frame set is not contracted into a
-disjoint minimum merely because its material variables overlap.
+evaluation or assurance independence, or failure detection. A frame set is not
+contracted into a disjoint minimum merely because its material variables
+overlap.
 
 ---
 
@@ -437,9 +472,10 @@ up. It records:
 - the governed workspace and outcome;
 - the known evaluation inventory;
 - the selected frames and their capability envelopes;
-- intentional overlaps and independent checks;
+- intentional overlaps and separately activated checks;
 - known frame dependencies or translations;
-- decision and acceptance authority;
+- semantic, evaluation, operation where material, decision, and acceptance
+  authority;
 - known exclusions and residual uncertainty; and
 - conditions for revision.
 
@@ -469,7 +505,7 @@ Selection also accounts for:
 - evaluation risk and consequence;
 - acquisition and reasoning cost;
 - evidence availability;
-- useful independent overlap;
+- useful independently activated overlap;
 - translation and reconciliation cost;
 - historical blind spots; and
 - reversibility when the frame set proves inadequate.
@@ -522,7 +558,8 @@ An engagement names:
 - the governed outcome or decision;
 - the exact workspace subject and basis;
 - the evaluation or evaluation family;
-- the applicable human and semantic authority;
+- the applicable frame-set, semantic, evaluation, operation where material,
+  and decision authority;
 - the available actor capability envelopes; and
 - the conditions that make the result stale or out of scope.
 
@@ -573,11 +610,13 @@ that another frame is required.
 
 Frames participate together through four distinct relations.
 
-### Independent Co-Evaluation
+### Independently Activated Co-Evaluation
 
-Several frames evaluate the same subject independently and return closed
-results. Their internal variables do not cross. This is useful for independent
-assurance, different evidence altitudes, or distinct failure perspectives.
+Several frames may evaluate the same subject through separate activations and
+return closed results. They may overlap in subject, manifold, or evidence
+sources, but neither evaluation consumes or influences the other's unclosed
+working result. This is useful for assurance independence, different evidence
+altitudes, or distinct failure perspectives.
 
 ### Result Conjunction
 
@@ -601,8 +640,8 @@ accepted loss, provenance, equality law, and refusal conditions.
 
 Several frame-governed operations form one material execution or reasoning
 relation. The owning application declares the composition, shared invariants,
-effect or decision order where material, closure, failure, and authority
-conservation.
+effect or decision order where material, closure, failure, and semantic,
+operation, and decision-authority conservation.
 
 Composition is introduced only when the evaluation requires it. A possible
 future interaction does not require a general composition law in every frame.
@@ -613,7 +652,8 @@ future interaction does not require a general composition law in every frame.
 
 Frames may relate as:
 
-- **independent**: no material variable or result relation is shared;
+- **disjoint**: no material variable, coordinate, evidence, or result dependency
+  is shared for the declared evaluations;
 - **overlapping**: some material variables, evidence, or entities are shared;
 - **complementary**: distinct evaluations jointly inform one decision;
 - **alternative**: different frames can evaluate the same claim under declared
@@ -692,8 +732,8 @@ dimensions include:
 - historical regression; and
 - actor capability and context fit.
 
-These are coverage lenses. They become frames only when independently
-instantiated as bounded evaluation families.
+These are coverage lenses. They become frames only when separately instantiated
+as bounded evaluation families.
 
 ### Coverage Ledger
 
@@ -707,6 +747,7 @@ The coverage ledger contains at least:
 | selected frames | frames capable of evaluating it |
 | actor envelope | competence and context required |
 | semantic authority | owner of evaluated meaning |
+| operation authority | existing owner grant for construction, transformation, admission, publication, or mutation where the evaluation performs it; otherwise none |
 | decision authority | owner of disposition |
 | evidence | required observations and provenance |
 | dependencies | material frame or seam relations |
@@ -716,7 +757,7 @@ The coverage ledger contains at least:
 The baseline coverage statuses are:
 
 - `covered`;
-- `independently_covered`;
+- `separately_covered`;
 - `conditionally_covered`;
 - `conflicted`;
 - `uncovered`;
@@ -732,9 +773,11 @@ composition evaluation.
 
 ### Authority Coverage
 
-Every material evaluation identifies semantic and decision authority. A frame
-set with broad observational reach and an unresolved decision owner is not
-closed.
+Every material evaluation identifies semantic and decision authority. Every
+material operation also identifies its existing construction, transformation,
+admission, publication, or mutation authority. A frame set with broad
+observational reach, an unresolved decision owner, or an effectful path without
+operation authority is not closed.
 
 ### Failure Coverage
 
@@ -743,13 +786,14 @@ reconstruction, and competing-path cases where they are material. Historical
 failures remain first-class coverage inputs until a declared frame detects or
 excludes their recurrence.
 
-### High-Risk Independent Coverage
+### High-Risk Separately Activated Coverage
 
-Human authority may require independent frame coverage for evaluations whose
-failure has high consequence, weak observability, strong confirmation bias, or
-a history of local proof masking. Independent coverage uses a separately
-activated evaluation relation. A persona label alone does not establish
-independence.
+Human authority may require independently activated frame coverage for
+evaluations whose failure has high consequence, weak observability, strong
+confirmation bias, or a history of local proof masking. Such coverage uses a
+separately activated evaluation relation and declares any additional
+assurance-independence conditions. A persona label alone establishes neither
+relation.
 
 ### Operational Full Coverage
 
@@ -758,9 +802,11 @@ A frame set has **operational full coverage** for its declared tuple when:
 1. every known material evaluation is covered by at least one capable frame;
 2. every material interaction has a declared evaluation, conjunction,
    translation, or composition relation;
-3. every evaluation has semantic and decision authority;
+3. every evaluation has semantic and decision authority and every material
+   operation has its inherited operation authority;
 4. every mandatory claim has an admissible evidence and refusal path;
-5. required independent overlaps are present;
+5. required independently activated overlaps and assurance-independence
+   conditions are present;
 6. no unresolved frame-result conflict is hidden by aggregation;
 7. excluded evaluations cite governing authority; and
 8. uncovered and unknown residuals are explicit and compatible with the claim.
@@ -861,7 +907,7 @@ The minimum activation packet contains:
 - evaluation and result algebra;
 - exact subject and basis;
 - material relations and applicable invariants;
-- semantic, evaluation, and decision authority;
+- semantic, evaluation, operation where material, and decision authority;
 - admissible evidence and tools;
 - capability and context envelope;
 - exclusions and prohibited assumptions;
@@ -895,7 +941,8 @@ evaluation asks:
 5. **Basis test**: Does stale, mismatched, or ambiguous basis information
    invalidate or refuse the evaluation?
 6. **Authority test**: Does frame selection preserve semantic and decision
-   authority?
+   authority and the exact inherited operation authority for every material
+   construction, transformation, admission, publication, or mutation?
 7. **Counterexample test**: Does the frame detect representative historical or
    constructed violations it claims to cover?
 8. **Capability test**: Can the declared actor class hold and operate the frame
@@ -928,10 +975,10 @@ method claims:
 | `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |
 | `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy, and declared veto return conflict, indeterminate, or refusal without flattening frame meaning |
 | `translate` | preserved coordinates and provenance reach the target; declared loss remains explicit; identity, basis, authority, or equality mismatch refuses |
-| `audit_coverage` | evaluation, interaction, authority, failure, capability, and required independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
+| `audit_coverage` | evaluation, interaction, semantic/operation/decision authority, failure, capability, and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
 | `revise` | historical failure, topology mutation, evidence change, and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction, and coverage claim requiring reevaluation |
 | result consumption | a declared consumer uses one closed result without importing hidden frame context or authority; insufficient output produces a reconstructability failure |
-| material composition | a case requiring cross-frame execution declares composition, order where material, closure, failure, and authority conservation; an independent case remains uncomposed |
+| material composition | a case requiring cross-frame execution declares composition, order where material, closure, failure, and semantic/operation/decision-authority conservation; a case not requiring composition remains uncomposed |
 
 One valid frame-set declaration and coverage result establishes only the
 `declare` and evaluated `audit_coverage` population. It cannot prove activation,
@@ -964,7 +1011,8 @@ For `STDO_REFERENCE_FRAME_BASELINE.md`, the composition trial covers at least:
 - Executive-only Reviewer activation and result disposition;
 - project configuration derived from existing Goals, Product, requirements, or
   accepted-design authority rather than a new local authority layer;
-- exact subject, evidence population, independence, and invalidation behavior;
+- exact subject, evidence population, assurance independence, and invalidation
+  behavior;
   and
 - adoption and project-defined frame configurations with explicit coverage and
   residual boundaries.
@@ -999,8 +1047,8 @@ claim:
 11. a topology mutation reuses a stale activation without recharting;
 12. every failure creates another frame before activation, basis, evidence,
     capability, and evaluation defects are excluded;
-13. intentional overlap is contracted even though it supplies independent
-    failure detection or materially different capability fit; or
+13. intentional overlap is contracted even though it supplies independently
+    activated failure detection or materially different capability fit; or
 14. a generic runtime, registry, controller, or universal carrier is presented
     as required by this method.
 
@@ -1027,13 +1075,13 @@ claim:
 <applicable governing laws>
 
 ## Authorities
-<frame-set, semantic, evaluation, and decision authority>
+<frame-set, semantic, evaluation, operation where material, and decision authority>
 
 ## Evidence
 <admissible sources, provenance, and exclusions>
 
 ## Capability Envelope
-<competence, context, access, tools, independence, configuration>
+<competence, context, access, tools, evaluation/assurance independence, configuration>
 
 ## Boundary And Exclusions
 <irrelevant material, prohibited assumptions, and out-of-frame conditions>
@@ -1071,7 +1119,7 @@ claim:
 <mapping from evaluations to capable frames>
 
 ## Intentional Overlap
-<independent checks or alternative capability fit>
+<separately activated checks, assurance-independence conditions, or alternative capability fit>
 
 ## Conjunction And Translation
 <only the cross-frame relations required by evaluations>
@@ -1095,7 +1143,7 @@ claim:
 - evaluation:
 - subject and basis:
 - actor and capability envelope:
-- semantic and decision authority:
+- semantic, evaluation, operation where material, and decision authority:
 - admissible evidence:
 - result:
 - inference relation:
@@ -1164,7 +1212,7 @@ coverage, and revision laws.
 
 No ABIogenesis module, runtime, event, admission, transport, or topology model
 is part of this method's universal domain. Promotion of any additional local
-discovery requires independent method intake and representative validation.
+discovery requires separate method intake and representative validation.
 
 ---
 

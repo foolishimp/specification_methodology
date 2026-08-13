@@ -41,8 +41,11 @@ The universal method defines:
 - a finite reference-frame atom over one evaluation family, exact basis,
   material manifold, coordinates, invariants, authorities, evidence,
   exclusions, result algebra, actor capability, and invalidation conditions;
-- non-hierarchical overlap, independence, conjunction, translation,
-  composition, coverage, and revision;
+- non-hierarchical disjointness and overlap, separately activated evaluation,
+  assurance independence, conjunction, translation, composition, coverage, and
+  revision;
+- inherited operation authority for every material construction,
+  transformation, admission, publication, or mutation;
 - explicit `indeterminate`, `out_of_frame`, and `invalid_basis` results;
 - operational coverage relative to one declared workspace/outcome tuple and
   an explicit residual boundary; and
@@ -50,9 +53,10 @@ The universal method defines:
 
 The derived STDO profile maps Executive, Worker, and Reviewer engagement frames
 onto existing STDO owners without creating another execution protocol. Frames,
-roles, personas, actors, authority, and independence remain distinct. Projects
-may adopt the profile or define another configuration through existing Goals,
-Product, requirement, or accepted-design authority.
+roles, personas, actors, structural disjointness, evaluation independence,
+assurance independence, and authority remain distinct. Projects may adopt the
+profile or define another configuration through existing Goals, Product,
+requirement, or accepted-design authority.
 
 `AGENTS_TEMPLATE.md`, `CLAUDE_TEMPLATE.md`, and the aggregate compression carry
 the minimum frame-engagement projection required after context loss. They do
@@ -68,7 +72,7 @@ standards member inventory.
 
 - Product member set: 43 files under `specification/standards/`
 - standards aggregate:
-  `39b210b13814aca25713fd2ada749e7200bd9d77c997493a67c6d03cc71188d6`
+  `1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5`
 - release license: canonical Apache-2.0 text at `LICENSE`, SHA-256
   `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`
 - changed from `v2.3.0`: nine existing members
