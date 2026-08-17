@@ -19,9 +19,9 @@ source_refs:
   - ../POSTING_GUIDE.md
 source_digests:
   REFERENCE_FRAME_METHOD.md: 0d8370e383e72cf89eb68175a6f3ecccb4a7fb913f4feed1f0810d1b558e471d
-  STDO_REFERENCE_FRAME_BASELINE.md: e9731953144b5a0cf679ed5ed25150b2f82d4de7efce9d52b952504578f05d2e
+  STDO_REFERENCE_FRAME_BASELINE.md: 1d208cc2b141ba3717b5842ce0ad881fe6662c58a55e3f3cdd170af1d5f61bed
   SPEC_METHOD.md: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
-  DESIGN_MODULE_METHOD.md: 1ef7a7c1cfbe8cd4f992aa629cfe8813c209fc841b9e22bcd859bb43bda4313d
+  DESIGN_MODULE_METHOD.md: 89659b99abe7af87a7cc0241d9f167b8a74acdbfe7b721544151cd1ce5d876d1
   ODD_METHOD.md: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
   TICKET_METHOD.md: 2a23614cdd344179cf43263dd6074b1c2f7d4747c33083fdcebff3992df41675
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
@@ -29,7 +29,7 @@ source_digests:
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
 generated_by: codex
-generated_at: 2026-08-11
+generated_at: 2026-08-17
 stale_if_source_digest_changes: true
 ---
 
@@ -163,6 +163,39 @@ layer that owns the missing truth.
   that equivalent code is never rebuilt; it is that a local realization must not
   present an accepted semantic or authoritative relation as newly owned local
   truth.
+- Before constructing a material generic capability, common mechanic, or
+  algorithm, or selecting a material dependency, apply DMM `STDO-UP-023`
+  proportionally. State the capability without Product, domain, module, vendor,
+  file, or incumbent labels. Distinguish every irreducible semantic or authority-
+  bearing relation and its owner, role kind, subject, scope, basis, lifecycle,
+  and refusal invariants from generic mechanics and foundation capabilities.
+  Compare credible project, native/standard, predecessor-lineage, maintained
+  external, local, and mixed compositions across material total-lifecycle
+  dimensions. Bound discovery by recording searched sources or categories,
+  cutoff and version basis, applicability criteria, exclusions, predecessor or
+  incumbent status, discovered candidates, and residual unknowns. A material
+  discovery gap prevents selection; a later materially qualifying candidate
+  invalidates the affected selection evidence. The comparison
+  operates inside the Product boundary and any applicable migration strategy
+  already admitted by their existing owners and does not displace SPEC's
+  bounded-evolution versus fundamental-re-adoption decision. Hard authority,
+  contract, safety, security, license, or constructability failure eliminates a
+  candidate; unknowns remain unknown.
+  One lawful composition dominates another only when every material dimension
+  is comparable or evidenced as non-discriminating, it is no worse on every
+  comparable dimension, and strictly better on at least one. A material unknown
+  that could reverse the relation prevents dominance. A dominated candidate,
+  including a local generic rebuild, cannot be selected unless new evidence or
+  another material dimension invalidates the dominance relation.
+  Select from the undominated frontier only through priorities and risk
+  tolerances declared by the existing tradeoff owner for the exact Product and
+  basis; if they do not resolve it, retain the gap. Reuse does not automatically
+  confer or transfer authority. A foundation may realize an explicitly assigned
+  authority-bearing role only while preserving the declared relation's owner,
+  role kind, subject, scope, basis, lifecycle, and refusal invariants. Ownership
+  follows the declared relation, not local authorship. A newly exposed material
+  generic subproblem recursively re-enters selection. This prior pass is
+  distinct from recurrence review.
 - Apply the gate proportionally. An unchanged `realization_refactor` cites the
   accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
   affected relations and projections, with no extra ticket or approval ceremony.
@@ -401,6 +434,51 @@ layer that owns the missing truth.
   composition, activation refusal, and the closed Worker-result mapping. One
   valid frame set or coverage result cannot prove the unevaluated function
   population.
+
+## Product Testing Frame Compression
+
+- When a project adopts the optional STDO baseline for Product assurance,
+  assign claims by fan-out rather than hierarchy: user outcome to UAT, runnable
+  causal path to E2E, composition boundary to integration, and module-owned law
+  to unit; then bind the distinct results through a declared conjunction to
+  Product or release disposition.
+- UAT and E2E evaluate an exact deployed, installed, or otherwise runnable
+  Product form. UAT proves only that the declared user can obtain the claimed
+  outcome through supported ordinary surfaces. E2E proves the complete
+  authoritative causal path. Correct output through a forbidden path falsifies
+  E2E, and harnessed substitutes cannot prove a boundary claimed as live.
+- Integration proves one declared participant composition and interaction
+  population. A substitute proves only its explicitly narrower equivalence
+  claim.
+- Every coded module retains its DMM-owned module-derived unit lane. Unit
+  evidence proves module-owned laws, including public module contracts;
+  internal combinatorial complexity determines evidence volume and strategy,
+  not eligibility. Unit evidence cannot close Product, runnable-path,
+  composition, user, or release claims.
+- Coverage retains the exact claim, subject, path, population, oracle,
+  interaction strength, residual combinations, and invalidation conditions.
+  Test count, assertion count, source coverage, and aggregate green are not
+  broader assurance.
+- Technical-debt erasure evaluates two finite graphs. Production closure
+  excludes obsolete, bypass, fallback, and rival paths from the exact runnable
+  Product and configuration. Assurance/source closure prevents obsolete
+  consumers, fixtures, proof scripts, generators, mutations, or tools from
+  falsely supplying evidence or reintroducing the removed Product path. A
+  declared test-only seam is lawful when isolated from Product distribution and
+  ordinary-path evidence.
+- Assurance subject acquisition and evaluation remain distinct. Acquire
+  Product, runtime, lifecycle, admission, replay, and projection truth through
+  the exact runnable owner surface. Then evaluate it with an independently
+  law-derived oracle. Generic assurance may compare bytes, digests, order,
+  equality, membership, completeness, and conjunction over owner-issued
+  evidence; it may not reconstruct a rival owner state from raw payloads,
+  events, logs, labels, or implementation fragments. A missing owner projection
+  is a gap, not permission for proof code to become another semantic owner.
+- Return a counterexample to its causally minimal supported frontier, not merely
+  the first logged failure. Represent one unique locus, a jointly established
+  incomparable set, unresolved alternative frontiers, or `indeterminate`
+  evidence. Localization does not authorize wider testing, compatibility repair,
+  another controller, or reinterpretation of unchanged upstream law.
 
 ## Prompt-Relevant Rules
 

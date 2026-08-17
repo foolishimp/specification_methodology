@@ -4,9 +4,9 @@
 - title: Bind complete enclosing-relation admission into `SPEC_METHOD.md`
 - type: proposal
 - ticket_category: constitutional
-- status: active
+- status: completed
 - review_status: candidate_03_independently_accepted
-- release_preparation_status: immutable_rc1_published_reviewed_superseded_for_final_tap
+- release_preparation_status: semantics_conserved_and_published_in_v2.4.0
 - candidate_generation: 03
 - accepted_standards_aggregate: 0b785c84de3fc1ce7950a40044c697b8363db5cb6a31d4585843701c451c61a7
 - current_combined_release_aggregate: 53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df
@@ -23,7 +23,9 @@
 - re_entry_point: specification/standards/SPEC_METHOD.md
 - triaged_at: 2026-08-06
 - created_at: 2026-08-06
-- updated_at: 2026-08-07
+- updated_at: 2026-08-17
+- closed_at: 2026-08-17
+- released_as: v2.4.0 at e05984c4f3b75525e6d962f6b9d72bbedd8e271a
 - owner: specification_methodology
 - pen_holder: /root/admission_owner_constitution_worker
 - predecessor_release: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -156,3 +158,13 @@ affected compression is stale.
 - No RC2 commit, branch, tag, push, publication, exact-cut review verdict,
   final-delta claim, direct human release acceptance, or release tap.
 - No edit to the F_H progression log.
+
+## Publication Closure
+
+The accepted `STDO-UP-021` semantics were conserved in the immutable
+`v2.4.0` Product published at
+`e05984c4f3b75525e6d962f6b9d72bbedd8e271a`, standards aggregate
+`1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5`.
+The target `2.3.1` final tap was superseded by direct Product selection of the
+complete `2.4.0` carrier. Unchecked historical process conditions above are not
+retroactively asserted; they no longer keep this superseded work item active.

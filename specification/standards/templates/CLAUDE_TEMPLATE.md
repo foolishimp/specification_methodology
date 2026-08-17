@@ -68,6 +68,33 @@ override this file for their subtree.
   cost.
 - Prove native constructability in the selected substrate before accepting
   design; a bridge or future capability does not close the gap.
+- Before constructing a material generic capability, common mechanic, or
+  algorithm, or selecting a material dependency, apply `STDO-UP-023`
+  proportionally. State the capability without Product, domain, module, vendor,
+  file, or incumbent labels. Distinguish declared semantic or authority-bearing
+  relations and their owner, role kind, subject, scope, basis, lifecycle, and
+  refusal invariants from generic mechanics and foundation capabilities. Compare
+  credible foundation compositions across material total-lifecycle dimensions.
+- Bound foundation discovery: record searched sources or categories, cutoff and
+  version basis, applicability criteria, exclusions, predecessor or incumbent
+  status, discovered candidates, and residual unknowns. A material discovery
+  gap prevents selection; a later materially qualifying candidate invalidates
+  the affected evidence.
+- A lawful foundation composition dominates another only when every material
+  dimension is comparable or evidenced as non-discriminating, it is no worse
+  on each comparable dimension, and strictly better on at least one. A material
+  unknown that could reverse the relation prevents dominance. Do not select a
+  dominated local generic rebuild unless new evidence invalidates that relation.
+- Select from the undominated frontier only through priorities and risk
+  tolerances declared by the existing tradeoff owner for the exact Product and
+  basis; otherwise retain the gap. Reuse does not automatically confer or
+  transfer authority. A foundation may realize an explicitly assigned
+  authority-bearing role only while preserving the declared relation's owner,
+  role kind, subject, scope, basis, lifecycle, and refusal invariants; ownership
+  follows that relation, not local authorship. Local code is a candidate, not
+  the default. Apply this inside the Product boundary and admitted migration
+  strategy without replacing SPEC's bounded-evolution versus fundamental-re-
+  adoption decision.
 - Identify the exact proof target and nearest weaker excluded property. Keep
   semantic basis, evidence basis, and state projection distinct.
 - Implementer self-review is not independent review. An independent-review
@@ -155,6 +182,28 @@ override this file for their subtree.
   missing material context from conversation or confidence. Coverage binds the
   known evaluation and interaction inventory to capable frames or explicit
   residuals.
+- When the optional STDO Product-testing baseline is adopted, assign claims by
+  fan-out: user outcome to UAT, runnable causal path to E2E, composition
+  boundary to integration, and module-owned law to unit; bind the distinct
+  results through declared conjunction. UAT/E2E use an exact deployed,
+  installed, or otherwise runnable Product form. Every coded module retains a
+  module-derived unit lane; internal combinatorial complexity determines its
+  evidence size and strategy, not eligibility.
+- Separate production closure from assurance/source closure. The first excludes
+  obsolete, bypass, fallback, and rival paths from the exact runnable Product;
+  the second prevents obsolete fixtures, consumers, and proof tools from
+  falsely supplying evidence or reintroducing that path. An isolated declared
+  test-only seam outside Product distribution and ordinary-path evidence is not
+  a production-path failure.
+- Acquire Product and runtime assurance truth through the exact runnable owner
+  surface, then evaluate it with an independently law-derived oracle. Generic
+  proof code may compare owner-issued evidence; it must not reconstruct a rival
+  owner state from raw payloads, events, logs, labels, or implementation
+  fragments. A missing owner projection remains a gap.
+- Return a counterexample to its causally minimal supported frontier: one unique
+  locus, a jointly established incomparable set, unresolved alternative
+  frontiers, or `indeterminate` evidence. Localization does not authorize wider
+  repair or another controller.
 
 ### Recursive Product Taxonomy
 

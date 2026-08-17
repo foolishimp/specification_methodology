@@ -580,6 +580,120 @@ filesystem runner, test double, or promised future feature. This is a
 constructability obligation, not a prescribed implementation; the consumer
 chooses the substrate and evidence mechanism.
 
+### Capability And Foundation Selection (`STDO-UP-023`)
+
+Native constructability proves that the selected substrate can realize the
+design. It does not prove that locally constructing another generic mechanism
+is the best realization. Before constructing a material generic capability,
+common mechanic, or algorithm, or selecting a material dependency, the active
+design boundary must perform a proportional foundation-selection pass.
+
+The pass first states the required capability without Product, domain, module,
+vendor, file, or incumbent-implementation labels. It then distinguishes:
+
+- each irreducible semantic or authority-bearing relation, including its
+  declared owner, role kind, subject, scope, basis, and material lifecycle and
+  refusal invariants; from
+- generic mechanics and foundation capabilities that may support those
+  relations or realize an explicitly assigned role.
+
+This factoring concerns declared relations and roles, not source authorship.
+
+The bounded candidate population draws applicable compositions from:
+
+- foundations already admitted in the current project;
+- language, runtime, platform, or standard-library capabilities;
+- accepted predecessor or immutable-lineage realizations usable as evidence;
+- maintained external foundations where the Product permits a dependency; and
+- a bounded local implementation.
+
+Candidate discovery is bounded, reproducible, and explicitly non-exhaustive.
+For every candidate category, the evidence record declares the sources or
+collections searched, cutoff time and relevant version basis, applicability and
+inclusion criteria, material exclusions, predecessor or incumbent status,
+discovered candidates, and residual unknowns; a category not searched records
+`not_applicable` or a named gap with its reason. Discovery closes only for that
+declared basis and cutoff. A discovery gap that could materially alter the
+frontier prevents selection; an immaterial residual records why it cannot change
+the current decision. A later candidate that satisfies the applicability
+criteria and could materially alter the lawful frontier invalidates the affected
+selection evidence and re-enters this relation.
+
+This relation operates inside the Product boundary and, where applicable, the
+migration strategy already admitted by their existing owners. It does not
+choose bounded evolution versus fundamental re-adoption or override the
+rebuttable strategy presumption in `SPEC_METHOD.md`. A working predecessor may
+therefore constrain the admitted candidate set at migration altitude. Within
+that admitted boundary and the generic-capability decision, discovery may begin
+with the incumbent or an already installed dependency, but selection has no
+source-order, familiarity, sunk-cost, local-code, or dependency-count
+preference. Candidate *compositions* are evaluated, not only individual
+packages: a lawful result may use a foundation for generic mechanics and may
+also use it to realize a semantic or authority-bearing role explicitly assigned
+by accepted design. Neither case changes who owns the declared relation.
+
+For every material candidate admitted to that bounded population, one evidence
+ledger or equivalent design record compares the dimensions that can change the
+decision, including:
+
+- functional and constructability fit;
+- semantic or operation-authority leakage;
+- adapter, integration, migration, deletion, and future-code cost;
+- license, maintenance, security, upgrade, and supply-chain posture;
+- package, runtime, startup, storage, and operational cost;
+- determinism, concurrency, failure, recovery, reconstruction, and replay;
+- proof and assurance burden; and
+- exit, replacement, and reversibility cost.
+
+A hard authority, Product-contract, safety, security, licensing, or native-
+constructability failure eliminates a candidate. Unknown evidence remains
+unknown and cannot be converted into a favorable score. A universal scalar is
+not required. Lawful candidates that remain materially incomparable form an
+explicit undominated frontier.
+
+One lawful candidate composition **dominates** another on the current basis
+only when every material decision dimension is comparable or evidenced as
+non-discriminating between them, it is no worse on every comparable dimension,
+and it is strictly better on at least one. A material unknown that could reverse
+the relation prevents dominance and remains a gap. A dominated candidate cannot
+be selected unless new evidence or another material dimension invalidates the
+dominance relation. Therefore a local rebuild of generic mechanics is
+inadmissible when an existing lawful foundation composition dominates it.
+Unused feature breadth alone does not establish dominance and may itself add
+lifecycle cost.
+
+The existing tradeoff owner may select an undominated lawful composition only
+by applying priorities and risk tolerances declared for the exact Product and
+basis and recording how they resolve the frontier. If those priorities and
+tolerances do not resolve the frontier, the choice remains an explicit design
+gap. The selected construction is not necessarily the fewest dependencies,
+smallest immediate edit, lowest local line count, or richest feature set. A
+rejected material candidate records the decisive evidence or falsifier.
+Unsupported preference is not design closure.
+
+Reuse does not automatically confer or transfer semantic, admission, or other
+operation authority. A selected foundation may realize an explicitly assigned
+authority-bearing role when accepted design preserves the declared relation's
+owner, role kind, subject, scope, basis, and material lifecycle and refusal
+invariants. Foundation capability, provenance, or source authorship cannot
+widen or remint that role. Ownership belongs to the declared relation, not
+necessarily to locally written code. An irreducible Product or domain relation
+retains its declared owner whether local code, a reused foundation, or their
+composition realizes it. Generic local code is lawful only when it wins the
+same comparison; it is not the default.
+
+If construction exposes another material generic subproblem, that subproblem
+recursively re-enters this selection relation before its implementation is
+retained. This prior selection pass is distinct from section 11C: recurrence
+review detects repeated realization after patterns exist, while this rule
+prevents avoidable reproduction before construction.
+
+Apply the pass proportionally. It is mandatory for material algorithms, common
+mechanics, new dependencies, and locally rebuilt foundation capabilities. It
+does not require a package survey or ledger for a trivial helper whose choice
+cannot materially affect authority, Product behavior, lifecycle cost, or the
+accepted design network.
+
 ### Entity And Lifecycle Completeness
 
 The Ontology must enumerate the entities inside the active boundary, their
@@ -2204,6 +2318,31 @@ When reviewing code under this method, ask:
     declared?
 48. Would removing the Ontology reveal ungrounded meaning in a downstream view,
     operation register, controller, or implementation branch?
+49. Before constructing a material generic capability or common mechanic, was
+    it stated without Product, domain, module, vendor, file, or incumbent labels,
+    with declared semantic or authority-bearing relations distinguished from
+    generic mechanics?
+50. Does bounded discovery record every searched source or category, cutoff
+    time and version basis, applicability criteria, exclusions, predecessor or
+    incumbent status, and residual unknown, with later material candidates
+    invalidating affected selection evidence?
+51. Did foundation selection compare credible candidate compositions across
+    the decision-relevant lifecycle dimensions without incumbent, source-order,
+    local-code, or dependency-count preference?
+52. Are hard authority, Product-contract, safety, security, licensing, and
+    constructability failures eliminative, while unknown evidence remains
+    explicit rather than becoming a favorable score?
+53. Does every reused foundation hold only explicitly assigned roles, preserving
+    each declared relation's owner, role kind, subject, scope, basis, lifecycle,
+    and refusal invariants without authority widening?
+54. Is the selected composition undominated under the evidence, and did the
+    existing tradeoff owner apply declared priorities and risk tolerances rather
+    than asserting an undefined total ordering?
+55. Does every rejected material candidate carry decisive evidence or a
+    falsifier, while an unresolved frontier remains a gap rather than an
+    unsupported preference?
+56. Did any newly exposed material generic subproblem recursively re-enter the
+    foundation-selection relation before its implementation was retained?
 
 If these questions cannot be answered cleanly, the realization is too coupled
 or too imperative.
@@ -2243,6 +2382,11 @@ single-owner truth, or low-coupling realization, review must explicitly check:
 - [ ] If a reference realization exists, does the target design explicitly map
       reference design to target design to target module boundary before
       implementation?
+- [ ] Before constructing a material generic capability, did the boundary run
+      the proportional `STDO-UP-023` foundation-selection pass, record bounded
+      discovery and the undominated frontier, distinguish declared relations
+      from generic mechanics, preserve every assigned role and authority tuple,
+      and record decisive evidence for selected and rejected candidates?
 - [ ] Do implementation and unit tests both derive from the same module
       boundary assets rather than from code-first decomposition?
 - [ ] Does each semantic truth surface still have one clear authoritative owner?
@@ -2327,6 +2471,9 @@ checklist is:
 - [ ] complete entity lifecycle, authority, and function-derivation evidence
 - [ ] whole-family Prime contraction, accepted atom domains, realization
       projection mappings, and declared composition/effect algebra
+- [ ] proportional capability/foundation selection for material generic
+      mechanics and dependencies, with bounded discovery, frontier disposition,
+      and exact role and authority conservation
 - [ ] pure functions in the semantic center
 - [ ] immutable carriers with no shared mutable semantic state
 - [ ] one owner per truth surface

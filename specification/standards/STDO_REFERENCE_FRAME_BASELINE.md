@@ -36,6 +36,29 @@ accepted design, ticket, identity, or release law. The Worker carries only the
 construction or transformation authority in its admitted intake. No frame gains
 admission, publication, mutation, or other operation authority from its label.
 
+This profile also derives four Product-testing specialist-frame families:
+user acceptance, end to end, integration, and unit. They are activated inside
+the same Executive, Worker, and Reviewer engagement relation; they are not new
+roles, stages, authorities, or a testing hierarchy. Their ordinary evidence
+topology is:
+
+```text
+Product and accepted design
+  |- user-outcome claims -> user-acceptance frames
+  |- runnable causal-path claims -> end-to-end frames
+  |- composition-boundary claims -> integration frames
+  `- module-owned laws -> unit frames
+
+bound results -> declared conjunction -> Product or release disposition
+```
+
+The fan-out assigns claims to their congruent evidence frames; it is not an
+authority hierarchy or a claim that one frame decomposes into another.
+Evidence may relate through declared conjunction, translation, falsification,
+and re-entry. A broader frame cannot make a module-owned law true, and any
+number of narrower green frames cannot establish an unevaluated Product
+composition or user outcome.
+
 A project may adopt this profile or define another reference-frame
 configuration. That choice is admitted by the existing project authority that
 owns the affected decision. A local axioms file may carry the decision; the file
@@ -55,6 +78,9 @@ of STDO's execution protocol.
 | construction, self-review, assessment, disposition, checkpoint, and continuation | `SPEC_METHOD.md` `STDO-UP-020` | supplies the complete execution transition relation |
 | author/implementer and independent-review separation | `TICKET_METHOD.md` `STDO-UP-007` | supplies Reviewer independence and exact-verdict traceability |
 | exact assurance subject, evidence population, and generic-method freeze | `SPEC_METHOD.md` `STDO-UP-022` | supplies review-boundary and qualification constraints |
+| module-derived unit proof | `DESIGN_MODULE_METHOD.md` Design-to-Module evidence route and Module-Derived Unit Test Rule | supplies the unit frame's module ownership basis while this profile limits its claim and evidence altitude |
+| capability and foundation selection before material generic construction | `DESIGN_MODULE_METHOD.md` `STDO-UP-023` | supplies the Worker's proportional reuse comparison without treating reuse itself as authority transfer; any assigned foundation role preserves its declared relation and owner |
+| Product testing taxonomy, claim, ordinary user path, and acceptance meaning | `SPEC_METHOD.md` Verification Layers, Testing Strategy Taxonomy, and Test Authority Rule; current Product, requirements, accepted design, and release authority where applicable | selects user outcomes, supported interfaces, material compositions, runnable Product subjects, harnessed or live execution mode, and required testing populations |
 | work selection and growth authority | current Goals, Product, requirements, and admitted ticket or equivalent work authority | selects the governed outcome and admits local frame configuration |
 | design structure and local realization frame decisions | accepted design under its governing Product and requirements | supplies specialist frames and material relations |
 | human and proxy identity | `IDENTITY_METHOD.md` plus project authority | binds the Executive actor and its decision envelope |
@@ -113,6 +139,40 @@ release, domain, implementation, test, operational, historical, or capability
 frame needed by one engagement evaluation. A method member, file, component, or
 lens becomes a frame only when its evaluation, basis, material manifold,
 authority, evidence, result algebra, and capability envelope are declared.
+
+### Testing frame
+
+A **testing frame** is a specialist frame whose evaluation executes or observes
+a declared subject to discriminate one exact claim through an explicit oracle,
+evidence population, path boundary, and falsification condition. A test file,
+suite, runner, fixture, scenario label, coverage percentage, or actor does not
+become a testing frame merely by existing.
+
+Testing-frame authority is bounded by the claim actually exercised. Test count,
+assertion count, source coverage, runtime duration, and framework category do
+not widen that boundary.
+
+### Authoritative Product path
+
+An **authoritative Product path** is the declared ordinary causal composition
+from a supported user or Public entry through the exact selected interfaces,
+owners, state transitions, effects, persistence and recovery boundaries, and
+outcome projection required by the Product claim. Producing an expected output
+through a bypass, obsolete executor, test-only seam, undeclared fallback, or
+competing authority falsifies path conformance even when the output value is
+equal.
+
+### Material combinatorial complexity
+
+**Material combinatorial complexity** is the claim-relative population of
+independent dimensions and interactions whose combinations can change an
+outcome, violate an invariant, select another authority path, or expose a
+failure. At unit altitude it includes module-owned laws, including behavior at
+the public module contract, and their algebraic operators, calculation regimes,
+states, transitions, boundary classes, and failure cases. Cross-participant
+interface, Product, persistence, configuration, and user-role combinations
+belong to integration, end-to-end, or user-acceptance frames rather than being
+mocked away and counted as unit evidence.
 
 ### Executive
 
@@ -312,6 +372,328 @@ not relied upon as a substitute for reviewing those semantics.
 
 ---
 
+## Derived Product Testing Frame Set
+
+When this profile supports Product promotion, closure, or release assurance,
+testing is configured as a claim-relative specialist-frame set. The kind of
+runner does not select the frame. The evaluated claim, subject, path,
+population, oracle, and falsification boundary do.
+
+The ordinary configuration contains four distinct frames:
+
+- user acceptance evaluates the Product outcome from the user's supported
+  reference frame;
+- end to end evaluates the complete runnable causal realization of that
+  outcome;
+- integration evaluates one material composition boundary and its interaction
+  population; and
+- unit evaluates one module-owned law. Internal combinatorial complexity
+  determines the proportional size and strategy of that evidence, not whether
+  the module-owned law is eligible for unit proof.
+
+These frames may overlap and one execution may supply evidence to several of
+them. Every result remains bound to its own claim. A label such as `UAT`, `E2E`,
+`integration`, or `unit` has no assurance value without the corresponding frame
+declaration.
+
+### Derived User-Acceptance Frame
+
+| Frame element | Derived application |
+|---|---|
+| evaluation family | Can a declared user, with the user's admitted capability and information, obtain the exact Product-defined outcome through the supported ordinary Product surface? |
+| subject and basis | exact deployed, installed, or otherwise runnable Product form named by the claim; current Product, requirement, UX, identity, policy, and acceptance authority; declared user role, environment, and harnessed or live sandbox mode under `SPEC_METHOD.md` |
+| material manifold | user goal, supported entry surfaces, permissions, inputs, Product configuration, ordinary dependencies, any declared external-worker or transport substitution boundary, user-visible state and outputs, refusal and recovery behavior, and acceptance interval |
+| coordinates | exact Product and artifact identity, install, user role, capability, configuration, dependency realization, harnessed or live mode, data, workspace, invocation, time, outcome, and scenario identity |
+| governing invariants | applicable Product and requirement outcomes; supported-interface, identity, UX, safety, persistence, and release laws; `RF-001..017`; `STDO-UP-001`, `STDO-UP-008`, and `STDO-UP-022` |
+| authority | bounded evaluation only; the user-acceptance frame does not mint Product meaning or acceptance authority, and an automated actor does not become the human or Product acceptance owner |
+| evidence | actual supported-surface requests and responses, user-visible projections, durable side effects where claimed, refusals, recovery observations, scenario records, exact-subject identity, and declared live or substituted dependency identity |
+| capability envelope | ability to operate the Product as the declared user would, perceive the material outcome and refusal surfaces, and distinguish hidden setup or unsupported assistance |
+| exclusions | source imports, private APIs, direct Product-state injection, test-only endpoints, hidden administrator capability, undeclared fixtures or substitutes, a test double at a boundary claimed as real or live, compatibility bypasses, and internal success substituted for the user outcome |
+| result | one Reference Frame Method result bound to the exact user-outcome claim, plus witnessed paths, counterexamples, residual user populations, and invalidation conditions |
+| invalidation | material Product, supported interface, user role, capability, configuration, dependency or substitution mode, data contract, runnable subject, acceptance meaning, or ordinary-path change |
+
+User acceptance is the primary Product-outcome evidence frame when the claim is
+that a user can use the Product. It may be automated only when automation
+faithfully occupies the declared user frame and does not gain a path or
+capability unavailable to that user. Automation can execute acceptance
+evidence; it cannot assume acceptance authority.
+
+Where `SPEC_METHOD.md` admits harnessed sandbox UAT, a deterministic, fake,
+recorded, or injected external worker or transport limits the result to the
+composed Product relations actually exercised. It does not prove that the live
+external boundary works. When a Product or release claim depends on real
+external compute or transport, live sandbox UAT is mandatory for that claim;
+unit, integration, semantic, end-to-end evidence that uses the substitute, and
+harnessed UAT green are not sufficient.
+
+### Derived End-To-End Frame
+
+| Frame element | Derived application |
+|---|---|
+| evaluation family | Does the exact Product subject realize the claimed outcome through the complete authoritative Product path, including every material interface, owner, state transition, effect, persistence, continuation, recovery, and projection boundary? |
+| subject and basis | exact deployed, installed, or otherwise runnable Product form, composition design, supported entry, selected owner and dependency set, ordinary runtime configuration, and Product claim |
+| material manifold | complete causal producers and consumers from entry to outcome; interface contracts; authority transitions; state, event, persistence, process, continuation, retry, recovery, and projection relations; competing paths |
+| coordinates | artifact and installed-tree identity, entry, operation, selected definition and owner, path and edge identities, process, event prefix, state, configuration, dependency, result, replay, and scenario identity |
+| governing invariants | Product and accepted-design composition laws; exact-subject and assurance congruence; path singularity where required; lifecycle, authority, persistence, replay, recovery, and release law |
+| authority | bounded evaluation only; observation may expose internal evidence but may not bypass, repair, replace, or reinterpret the Product path |
+| evidence | supported entry invocation, observed semantic path and authority edges, owner receipts, durable events, state transitions, outputs, replay or reconstruction where claimed, installed artifact identity, and negative-path observations |
+| capability envelope | ability to execute and observe the complete Product path without changing it, distinguish authoritative from rival paths, and reproduce material state and failure relations |
+| exclusions | source-only substitutes for runnable-Product claims, direct invocation below the supported entry, test doubles at claimed real boundaries, test-only routing, hidden retries or repair, omitted persistence or fresh-process boundaries, and output equality without path evidence |
+| result | one Reference Frame Method result bound to the exact end-to-end claim, with exercised composition edges, unexercised material paths, counterexamples, and residual combinations |
+| invalidation | material artifact, install, dependency, configuration, interface, owner, path, lifecycle, persistence, recovery, projection, test semantics, or evidence-population change |
+
+The expected output is necessary but not sufficient. Reaching it through a
+forbidden or obsolete path falsifies the end-to-end claim. A test is not end to
+end merely because it starts and finishes in one process, crosses many lines,
+or carries an end-to-end label.
+
+### Derived Integration Frame
+
+| Frame element | Derived application |
+|---|---|
+| evaluation family | Do the actual participants at one declared material composition boundary satisfy their joint contract across the combinations of state, authority, configuration, timing, failure, and recovery that can change the boundary result? |
+| subject and basis | exact interface or composition declaration, actual participating implementations or exact substitutes admitted by the bounded claim, governing Product/requirement/design law, and interaction population |
+| material manifold | both sides of the boundary, shared carriers, preconditions, postconditions, authority and ownership, ordering, state, configuration, failure, retry, recovery, translation, and competing participants |
+| coordinates | participant and version identities, interface and carrier revision, state, configuration, dependency, interaction case, input, output, failure, and evidence identity |
+| governing invariants | declared interface and composition laws, complete participant admission, atomicity and reconstruction where applicable, and exact assurance boundary under `STDO-UP-022` |
+| authority | bounded boundary evaluation only; no integration result establishes an unevaluated Product outcome or authorizes a substitute participant |
+| evidence | actual exchanges, admitted carriers, state transitions, contract verdicts, failures, retries, recovery observations, interaction combinations, and participant identities |
+| capability envelope | competence and access to exercise and observe the real composition seam, identify participant substitution, and vary every material interaction dimension |
+| exclusions | mocks or stubs that hide the claimed real contract, one-sided contract assertions, happy-path-only exchange, helper-call equivalence, flattened versions or states, and projection of a boundary result to the whole Product without a governing relation |
+| result | one Reference Frame Method result for the declared integration claim, with covered combinations, counterexamples, omitted interactions, and invalidation conditions |
+| invalidation | material participant, interface, carrier, state, configuration, dependency, timing, failure, recovery, or interaction-population change |
+
+A substitute or test double may support a deliberately narrower claim only when
+its equivalence boundary and exclusions are explicit. Its result cannot be
+promoted to evidence that the real participant or Product composition was
+exercised.
+
+### Derived Unit-Test Frame
+
+| Frame element | Derived application |
+|---|---|
+| evaluation family | Does one module-owned law hold across its material combinations of algebraic operator, calculation regime, state, transition, public or private boundary class, and failure case? |
+| subject and basis | one exact module boundary, accepted Ontology and design, active IACS or equivalent carrier inventory, module-owned requirements and public contracts, implementation, and a module-bounded decidable oracle |
+| material manifold | module-owned public contracts, algebras, calculations, parsers, reducers, state machines, transition functions, combinators, admission predicates, conservation laws, invariants, numerical boundaries, and failures |
+| coordinates | module and implementation revision, owned law, operator or function family, module state, input class, boundary class, expected relation, generated case, mutation, and result identity |
+| governing invariants | `DESIGN_MODULE_METHOD.md` module ownership and unit-proof law; accepted Ontology, IACS, domain, sequence, state, algorithm, and error relations material to the module |
+| authority | bounded local evidence only; a unit result has no Product, installed, integration, user-acceptance, architecture, path-selection, or release authority |
+| evidence | law-derived examples, equivalence classes, finite exhaustive cases where available, property-based or generative cases, metamorphic relations, calculation or algebra oracles, boundary cases, and killed internal mutations |
+| capability envelope | competence to derive an oracle independently from the owned law, identify the module-bounded combination population, and distinguish invariant violation from implementation restatement |
+| exclusions | Product outcomes, cross-module composition, supported user paths, packaging or installation, real external participants, orchestration topology, mocked-away interface behavior, incidental branches, private helper layout, assertion count, and source coverage used as broader assurance |
+| result | one Reference Frame Method result limited to the exact module-owned law and module-bounded population, with counterexamples, residual combinations, and invalidation conditions |
+| invalidation | material Ontology, IACS, module boundary, owned law, algorithm, state space, numerical regime, implementation, oracle, generator, or module-bounded population change |
+
+Unit testing is deliberately module-bounded. Every coded module requires the
+module-derived unit lane owned by `DESIGN_MODULE_METHOD.md`; public module
+contracts are valid unit-proof subjects. Internal combinatorial complexity
+determines the proportional size and strategy of that evidence. Its highest
+discriminating value is often in algebras, calculations, transformations,
+parsers, reducers, state machines, decision tables, admission predicates,
+conservation relations, and bounded algorithms with strong independently
+derived oracles. A unit test whose oracle merely repeats the implementation or
+whose cases follow incidental code branches provides weak or circular
+evidence.
+
+Modules whose material complexity lies primarily in composition, orchestration,
+configuration, persistence, ownership, or user interaction require integration,
+end-to-end, or user-acceptance evidence at that actual boundary. Mocking those
+relations into a unit test does not convert their complexity into unit evidence.
+
+This profile does not waive the module-derived unit lane. It binds that lane to
+module-owned law and the smallest congruent evidence population. Low internal
+combinatorial complexity justifies a small lane, not omission and not hundreds
+of implementation-shaped tests. Unit-test volume has no independent closure
+value.
+
+No Product, user-outcome, installed-path, cross-module composition, or release
+claim may be closed from unit evidence, regardless of test count, assertion
+count, source coverage, mutation score, runtime, or historical pass rate.
+Treating unit green as broader assurance is a frame error.
+
+### Combinatorial Coverage And Testing-Value Index
+
+Testing value is indexed first by the material combinations a frame can
+discriminate for its exact claim. It is not indexed by test, assertion, file,
+line, branch, mock, snapshot, or runner count.
+
+For one claim, the testing-value index considers at least:
+
+1. congruence between the claim and evaluated subject;
+2. the number and materiality of independent claim dimensions;
+3. the interaction strength actually covered among those dimensions;
+4. authoritative-path exactness;
+5. oracle independence and precision;
+6. sensitivity to realistic faults, rival paths, and historical failures;
+7. observability, reconstruction, and reproducibility of the result; and
+8. explicit residual combinations and invalidation conditions.
+
+No universal scalar is required. A project may define one only through Product,
+requirement, or accepted-design authority and must retain the underlying
+coverage coordinates rather than flattening them into a score.
+
+At unit altitude, the relevant dimensions are module-bounded. Unit-testing
+value normally rises with the internal combinatorial complexity of an algebra,
+calculation, state machine, transition relation, or other module-owned closed
+domain because local tests can cheaply discriminate many meaningful
+combinations against a precise oracle.
+
+At integration, end-to-end, and user-acceptance altitude, testing value can be
+multiplicative rather than additive: each material interface composes
+preconditions, postconditions, authority, state, configuration, failure, and
+recovery with every other traversed boundary. The evidence value comes from
+the interactions actually discriminated, not from merely touching many
+interfaces on one sunny path.
+
+Material Product factors commonly include:
+
+- user role and capability;
+- supported operation and Product composition;
+- selected definition, owner, implementation, and dependency;
+- lifecycle and persisted state;
+- configuration and version combination;
+- process, continuation, retry, re-entry, and recovery mode;
+- success, refusal, malformed result, partial failure, and competing-path case;
+- fresh-process, replay, reconstruction, and migration condition; and
+- user-visible outcome and projection.
+
+The activated frame declares the finite interaction population and why its
+covering set is adequate. Pairwise or other covering-array reduction is lawful
+only where the basis explains why omitted higher-order interactions cannot
+change the claim or retains them as residuals. High-consequence authority,
+persistence, concurrency, recovery, migration, and historically failure-prone
+relations normally require explicit higher-strength combinations.
+
+Source, line, branch, and function coverage may diagnose whether code was
+visited. They do not establish semantic combination coverage, authoritative
+path selection, user-outcome coverage, or the absence of a rival path.
+
+### Legitimate-Path And Technical-Debt Erasure
+
+Every Product path claim requires two-sided evidence:
+
+1. **required-path reachability**: each required authoritative composition has
+   an exact witness in the deployed, installed, or otherwise runnable Product
+   form through the supported ordinary path; and
+2. **forbidden-path exclusion**: each material superseded, duplicate, fallback,
+   bypass, or otherwise forbidden production path is absent, unreachable, or
+   refused at its declared boundary.
+
+A successor passing does not prove predecessor removal. Technical-debt erasure
+evaluates two distinct, finite, subject-relative graphs:
+
+1. **production closure**: the exact deployed, installed, or otherwise runnable
+   Product form and configuration, including its transitive imports, exports,
+   package paths, configuration switches, registries, fallbacks, consumers,
+   generated runtime artifacts, recovery paths, and fresh-process
+   reconstruction. No obsolete, bypass, fallback, or rival production path may
+   remain reachable inside this graph for the claimed scope; and
+2. **assurance/source closure**: the source consumers, fixtures, proof scripts,
+   generators, mutations, and assurance tooling relied upon for the claim. No
+   obsolete assurance consumer may falsely supply closure evidence or
+   reintroduce the removed production path into the Product graph.
+
+A test-only seam is lawful when it is isolated from the Product distribution,
+excluded from ordinary-path evidence, and declared in the assurance subject.
+Its mere presence outside the production graph is not a production-path
+failure. A retained obsolete test or proof consumer remains an assurance defect
+when it can falsely establish the claim or reintroduce the removed path.
+
+Where proportionate and safe, assurance includes path-sensitive mutation or
+sabotage:
+
+- disabling the selected authoritative path prevents the Product scenario from
+  succeeding;
+- forcing or restoring a rival path causes refusal or a detected
+  counterexample rather than silent success;
+- corrupting a material interface or owner result is detected at the owning
+  boundary; and
+- removing an asserted obsolete path does not change the accepted Product
+  outcome except through the declared deletion relation.
+
+A Product outcome reached through a forbidden path is a falsified path claim,
+not a passing Product test. A negative-path test that mutates the exact subject
+without isolation, restoration, and subject revalidation invalidates its own
+assurance basis.
+
+### Testing Evidence Composition
+
+One execution may provide several bound results. For example, a supported user
+scenario may supply user-acceptance evidence for the outcome, end-to-end
+evidence for the runnable causal path, integration evidence for selected
+seams, and unit counterexamples for a module-owned algebra. Those claims remain
+distinct and are combined only through declared Reference Frame Method
+relations.
+
+The default proof responsibilities are:
+
+- user acceptance proves the outcome from the user's supported frame;
+- end to end proves the complete authoritative runnable Product path;
+- integration proves material participant composition; and
+- unit proves module-owned laws, with evidence size and strategy proportional
+  to their internal combinatorial complexity.
+
+User acceptance alone may leave internal path singularity unevaluated.
+End-to-end success alone may leave unselected user populations or combinations
+unevaluated. Integration and unit results cannot substitute for either broader
+claim. When the Product claim requires all of them, a conflict or missing result
+remains visible to Executive disposition and cannot be hidden by aggregate
+green status.
+
+### Assurance Subject Acquisition And Evaluation
+
+Acquiring the assurance subject and evaluating it are distinct relations.
+Where a claim depends on owner-issued Product, runtime, lifecycle, admission,
+replay, or projection truth, the testing frame acquires that truth through the
+exact runnable owner surface, validator, projection, receipt, or reconstruction
+relation. A harness, fixture, expected-value builder, proof script, assurance
+evaluator, or Reviewer does not reconstruct a parallel owner state from raw
+payloads, events, logs, filenames, labels, or implementation fragments and then
+evaluate that self-authored state as if it were the Product subject.
+
+After lawful acquisition, an independently derived oracle may evaluate the
+governing claim. Generic assurance mechanics may compute bytes, digests,
+ordering, equality, set membership, completeness, and conjunction over
+owner-issued evidence. Those mechanics remain evidence evaluators: they cannot
+mint owner carriers, choose current history, select the authoritative path,
+interpret domain lifecycle or admission meaning, or become a runtime fallback.
+
+This rule does not require an evaluator to trust the implementation under test
+as its semantic oracle. The oracle derives from Product, requirement, and
+accepted-design law. It does require the assurance subject to be the actual
+owner-issued subject rather than a second implementation of the owner's
+runtime meaning. If the required owner projection or observable seam is absent,
+the result retains a named assurance or design gap; the proof harness does not
+fill it with rival semantics.
+
+### Counterexample Localization
+
+A testing counterexample is returned to its earliest supported causal frontier
+on the declared path. The frontier contains the causally minimal violated owner
+relations or seam coordinates established by the evidence; earliest means
+minimal under the declared causal relation, not first in log or clock order.
+
+The localization result represents exactly one of:
+
+- one unique violated locus;
+- a jointly established set of incomparable earliest violated loci whose
+  combined violation is necessary to the supported causal explanation;
+- unresolved alternative frontiers when the evidence supports several possible
+  causal explanations but cannot establish which occurred; or
+- `indeterminate` when the evidence cannot support a bounded frontier.
+
+Localization records the subject, basis, frontier form and members, causal
+evidence, expected relations, observed counterexample, and downstream claims
+invalidated by it. It does not collapse a jointly established set into one
+arbitrary owner or misreport unresolved alternatives as a joint cause.
+
+A localized frontier does not itself authorize broader test expansion,
+compatibility repair, another controller, or reinterpretation of unchanged
+upstream meaning. Any resulting scope or design change follows the existing
+re-entry relation.
+
+---
+
 ## Complete Engagement Transition
 
 ### 1. Existing Authority Selects The Basis
@@ -329,6 +711,9 @@ The Executive applies `REFERENCE_FRAME_METHOD.md` activation to the
 - exact governed outcome and checkpoint;
 - affected causal relation set and governing invariants;
 - selected computational relations and specialist frames;
+- testing claims, exact subjects, frame topology, material combination
+  populations, ordinary paths, oracles, and forbidden-path exclusions where
+  testing evidence is required;
 - Worker authority and capability envelope;
 - evidence and qualification obligations;
 - exclusions, prohibited competing paths, stop conditions, and re-entry
@@ -374,7 +759,9 @@ accepted progress merely because work occurred.
 For `candidate_ready`, the Executive verifies the exact subject and determines
 whether independent assessment is required by `STDO-UP-007`,
 `STDO-UP-020`, `STDO-UP-022`, Product, release, risk, or the admitted work
-contract.
+contract. Green aggregate status cannot satisfy this step when a required
+user-acceptance, end-to-end, integration, unit, or negative-path result is
+missing, bound to another subject, or contradicted by a material frame result.
 
 ### 5A. Candidate Does Not Require Independent Review
 
@@ -394,6 +781,8 @@ When independent review is required, the Executive activates the Reviewer with:
 - exact claim, composition boundary, population, scope, and exclusions;
 - applicable STDO and project authority;
 - required evidence and ordinary assurance path;
+- required user-acceptance, end-to-end, integration, unit, combinatorial, and
+  negative-path frame results with their exact claims and populations;
 - Reviewer capability and independence envelope; and
 - invalidation and stop conditions.
 
@@ -465,8 +854,13 @@ or project workspace. They organize finite evaluations over specialist frames.
 |---|---|---|
 | exact method, project, and work basis | Executive | complete STDO cut; current Goals/Product/requirements/design/work authority |
 | affected causal cone and frame configuration | Executive, challenged by Worker and Reviewer | `STDO-UP-017..020`; domain, identity, dependency, implementation, and history frames |
-| bounded realization and self-review | Worker | accepted design, capability/reuse, implementation, environment, and proof frames |
+| bounded realization and self-review | Worker | accepted design; `STDO-UP-023` capability/foundation selection where material; capability/reuse, implementation, environment, and proof frames |
 | candidate and transition evidence | Worker | `STDO-UP-020` and exact identity/evidence relations |
+| user can obtain the Product-defined outcome through supported surfaces | Worker for execution and self-review; Reviewer where independent assurance is required | derived user-acceptance frame; Product, requirement, UX, identity, installed-subject, and acceptance inputs |
+| complete authoritative installed path realizes the outcome | Worker for execution and self-review; Reviewer where independently assessed | derived end-to-end frame; composition, authority, lifecycle, persistence, recovery, replay, and negative-reachability inputs |
+| material interfaces compose across their interaction population | Worker and Reviewer according to the claim | derived integration frames; actual participant, carrier, state, configuration, failure, and recovery inputs |
+| module-owned laws hold | Worker and Reviewer according to the claim | derived unit frames; Ontology, IACS, public module contract, algebra, calculation, state-machine, invariant, and module-bounded combination inputs |
+| obsolete and rival Product paths are absent, unreachable, or refused | Worker for deletion evidence; Reviewer for exact-subject challenge where required | distinct production-closure and assurance/source-closure graphs; package, consumer, mutation, sabotage, reconstruction, and history frames |
 | independent exact-subject assessment where required | Reviewer | `STDO-UP-007`, `STDO-UP-020`, `STDO-UP-022`, live implementation and assurance frames |
 | result conjunction and disposition | Executive | exact closed Worker, Reviewer, and mandatory specialist results |
 | checkpoint and continuation | Executive under existing authority | `STDO-UP-020`; current Goals/Product/release boundary |
@@ -538,6 +932,9 @@ An adoption projection records:
 - local Executive, Worker, and Reviewer capability envelopes and actor-binding
   rules;
 - specialist-frame declarations or authoritative acquisition paths;
+- testing-frame declarations, exact Product and module claims, ordinary-path
+  identities, combinatorial populations, scenario matrix, oracles, and
+  forbidden-path inventory where testing evidence is material;
 - local subject, evidence, checkpoint, and review-result coordinates;
 - coverage ledger and accepted residual boundary; and
 - invalidation and frame-set revision conditions.
@@ -626,8 +1023,30 @@ A representative profile trial establishes at least:
 9. changed candidate or basis invalidates the affected review result;
 10. Worker self-review, Reviewer evaluation, Executive decision authority, and
    `STDO-UP-020` disposition remain distinguishable;
-11. missing-frame pressure triggers bounded diagnosis or lawful re-entry; and
-12. a project-defined configuration can replace the profile without changing
+11. missing-frame pressure triggers bounded diagnosis or lawful re-entry;
+12. a supported-surface user scenario binds one exact user, deployed,
+    installed, or otherwise runnable Product form, configuration, ordinary
+    path, and Product outcome without hidden
+    capability or test-only entry;
+13. the corresponding end-to-end frame observes the authoritative runnable
+    causal path and falsifies equal output obtained through a forbidden path;
+14. integration trials vary the material participant interaction dimensions
+    and retain omitted higher-order combinations as residuals;
+15. every coded module has a module-derived unit lane, and unit trials use
+    evidence size and strategy proportional to the internal combinatorial
+    complexity of the module-owned law while remaining unable to establish an
+    integration, runnable-Product, user, or Product claim;
+16. disabling the selected path or forcing a rival path produces the declared
+    failure or refusal without mutating the assurance subject undetectably;
+17. aggregate green status cannot hide a missing, conflicted, stale-subject, or
+    wrong-path testing-frame result;
+18. owner-issued runtime truth is acquired through the exact owner surface and
+    evaluated with a separately derived oracle, while generic assurance
+    mechanics remain authority-neutral;
+19. a counterexample returns a causally minimal supported frontier represented
+    as one unique locus, a jointly established incomparable set, unresolved
+    alternative frontiers, or `indeterminate` evidence; and
+20. a project-defined configuration can replace the profile without changing
     the selected STDO law or inventing another authority layer.
 
 The claim is limited to the frame revisions, actor envelopes, result branches,
@@ -663,6 +1082,9 @@ and evidence populations actually evaluated.
 
 ## Coverage
 - evaluation inventory and ledger:
+- testing claims and frame topology:
+- material combination populations and scenario matrix:
+- required and forbidden authoritative paths:
 - accepted residual boundary:
 
 ## Invalidation And Re-Entry
@@ -683,6 +1105,8 @@ and evidence populations actually evaluated.
 - semantic, evaluation, operation where material, and decision authority:
 - actor and capability/independence envelope:
 - admissible evidence and acquisition path:
+- testing claim, oracle, material combination population, ordinary or module
+  path, and falsification condition where applicable:
 - exclusions and prohibited assumptions:
 - required input and output relations:
 - invalidation, stop, and re-entry conditions:
@@ -701,7 +1125,16 @@ assurance basis.
 |---|---|
 | Worker cannot see a material violation visible from another evaluation | missing or misactivated specialist frame, capability mismatch, or oversized frame |
 | Reviewer asks assurance code to recreate Product or implementation meaning | Reviewer authority bleed or missing capability/reuse frame |
+| a harness derives current owner state from raw events or payloads despite an installed owner projection | rival semantic interpreter and invalid assurance subject |
+| a downstream symptom is assigned to one upstream owner without causal-frontier evidence | unsupported counterexample localization; determine whether evidence supports one locus, a joint incomparable set, alternative frontiers, or `indeterminate` |
 | passing tests mask malformed fixtures or a false proof relation | test semantics omitted from Reviewer manifold |
+| hundreds of green unit tests coexist with a failed Product outcome | unit-frame evidence was flattened into an unevaluated user-acceptance, end-to-end, or composition claim |
+| the expected output is reached through an obsolete or bypass path | end-to-end path-conformance falsification despite output equality |
+| a UAT scenario uses private APIs, injected state, hidden administrator capability, or a test-only endpoint | invalid user-frame subject or unsupported ordinary path |
+| one sunny end-to-end path is reported as combinatorial coverage | undeclared interaction population and residual higher-order combinations |
+| pairwise coverage is used for authority, persistence, recovery, migration, or historical multi-boundary failures without justification | insufficient interaction strength or invalid coverage basis |
+| successor tests pass while obsolete exports, consumers, fallbacks, or proof scripts remain | technical-debt deletion and forbidden-path exclusion are unproved |
+| a negative-path test overwrites the frozen install it is meant to qualify | assurance-subject invalidation and missing mutation isolation |
 | review evaluates a moving tree or rebuilt artifact | invalid exact-subject basis under `STDO-UP-007`/`STDO-UP-022` |
 | several episodes or stores are flattened into one apparent path | missing coordinate translation or interaction binding |
 | Worker starts the next stage after self-review | violation of `STDO-UP-020` decision and continuation authority |
@@ -739,9 +1172,36 @@ This profile is misapplied when:
     Goals/Product/requirement/design decision;
 14. this profile restates `STDO-UP-020`, `STDO-UP-007`, or `STDO-UP-022` as
     peer constitutional law;
-15. a project-defined configuration silently changes selected STDO law; or
+15. a project-defined configuration silently changes selected STDO law;
 16. ABIogenesis-specific realization machinery is presented as a universal
-    requirement.
+    requirement;
+17. test labels or runner choice substitute for declaring the exact testing
+    frame, subject, claim, population, oracle, path, and falsification condition;
+18. unit-test, assertion, snapshot, line, branch, or function count is used as a
+    Product-confidence or closure measure;
+19. implementation-shaped unit tests are treated as independent design,
+    architecture, integration, installed, or user-outcome assurance;
+20. interface, persistence, orchestration, authority, configuration, or user
+    complexity is mocked away and then counted as unit-test coverage;
+21. helper-level tests become the canonical proof surface for a module-owned
+    algebra or for a broader Product composition;
+22. an expected output is accepted without proving the required authoritative
+    path or while a material rival path remains reachable;
+23. one end-to-end sunny path substitutes for a declared combinatorial
+    population, interaction-strength justification, failure coverage, and
+    residual set;
+24. UAT gains capabilities, information, setup paths, or interfaces unavailable
+    to the declared user;
+25. a harness, fixture, proof script, or expected-value builder reconstructs
+    owner-issued runtime meaning and treats that reconstruction as the assurance
+    subject;
+26. a downstream symptom is assigned to one owner when the evidence establishes
+    a joint causal frontier, unresolved alternatives, or no bounded frontier, or
+    localization is used to authorize wider repair;
+27. a mutation, sabotage, fixture, or proof capture changes the exact assurance
+    subject without isolation, restoration, and revalidation; or
+28. aggregate green status hides a missing or conflicting user-acceptance,
+    end-to-end, integration, unit, or negative-path frame result.
 
 ---
 
@@ -766,10 +1226,40 @@ A project has applied this baseline to one outcome when:
 8. specialist frames and result relations cover every known material
    evaluation and interaction or retain an explicit residual;
 9. frame, basis, capability, evidence, and topology change can invalidate and
-   rechart the configuration; and
-10. every material operation carries its existing owner's exact grant; and
+   rechart the configuration;
+10. every material operation carries its existing owner's exact grant;
 11. no new execution authority, local constitutional layer, actor topology,
-    runtime, or universal completeness claim is inferred from the profile.
+    runtime, or universal completeness claim is inferred from the profile;
+12. every material Product testing claim is assigned to an exact
+    user-acceptance, end-to-end, integration, unit, or explicitly declared
+    alternative frame rather than inferred from a suite label;
+13. a user-outcome claim binds the declared user capability, exact Product
+    subject, supported ordinary surface, environment, and observable outcome;
+14. an end-to-end claim binds the exact deployed, installed, or otherwise
+    runnable Product form and records the required authoritative causal path
+    rather than accepting output equality through an unknown or forbidden path;
+15. material interface and Product factors have a declared combinatorial
+    population, adequate interaction strength, exercised scenario matrix, and
+    explicit residual combinations;
+16. unit-test evidence proves module-owned laws, including public module
+    contracts, and its volume and strategy are proportional to useful
+    discrimination of the module-bounded population rather than implementation
+    size;
+17. required paths have positive runnable-Product witnesses; the production
+    closure excludes obsolete, rival, fallback, and bypass paths; and the
+    assurance/source closure cannot falsely supply evidence or reintroduce a
+    removed production path, while declared isolated test-only seams remain
+    outside ordinary-path claims;
+18. source or code coverage, test count, and aggregate green status do not
+    substitute for Product, installed, path, composition, or user-frame proof;
+19. test fixtures, mutations, sabotage, proof capture, and assurance tooling
+    preserve or revalidate the exact subject they claim to evaluate;
+20. owner-issued Product and runtime truth is acquired through the exact owner
+    surface and evaluated by a separately derived oracle without a rival
+    assurance-owned semantic interpreter; and
+21. counterexamples return a causally minimal supported frontier represented as
+    one unique locus, a jointly established incomparable set, unresolved
+    alternative frontiers, or `indeterminate` evidence.
 
 A project-defined frame configuration closes against
 `REFERENCE_FRAME_METHOD.md`, the selected complete STDO cut, and its cited

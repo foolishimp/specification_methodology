@@ -4,11 +4,11 @@
 - title: Bind assurance-boundary congruence and method qualification
 - type: proposal
 - ticket_category: constitutional
-- status: active
+- status: completed
 - review_status: candidate_03_independently_accepted
 - candidate_generation: 03
 - accepted_standards_aggregate: 53b33aab4bf4f4859126f8e794d9edfd3497e2eed8a9fd22b954abdc07f7e4df
-- release_reconciliation_status: final_ready_rc2_carrier_prepared_unpublished
+- release_reconciliation_status: semantics_conserved_and_published_in_v2.4.0
 - goal: >-
     Produce the minimal STDO 2.3.1 RC2 candidate that binds assurance to the
     exact claimed subject and composition boundary, constrains verdict scope to
@@ -22,7 +22,9 @@
 - re_entry_point: specification/standards/SPEC_METHOD.md#evidence-rules
 - triaged_at: 2026-08-07
 - created_at: 2026-08-07
-- updated_at: 2026-08-07
+- updated_at: 2026-08-17
+- closed_at: 2026-08-17
+- released_as: v2.4.0 at e05984c4f3b75525e6d962f6b9d72bbedd8e271a
 - owner: specification_methodology
 - pen_holder: /root/admission_owner_constitution_worker
 - operative_predecessor: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -214,3 +216,13 @@ pending.
 - No RC2 commit, branch move, tag, push, publication, exact-cut review verdict,
   final-delta claim, direct human release acceptance, final release, or
   downstream adoption.
+
+## Publication Closure
+
+The accepted `STDO-UP-022` and IACS-revision semantics were conserved in the
+immutable `v2.4.0` Product published at
+`e05984c4f3b75525e6d962f6b9d72bbedd8e271a`, standards aggregate
+`1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5`.
+The target `2.3.1` final tap was superseded by direct Product selection of the
+complete `2.4.0` carrier. Unchecked historical process conditions above are not
+retroactively asserted; they no longer keep this superseded work item active.

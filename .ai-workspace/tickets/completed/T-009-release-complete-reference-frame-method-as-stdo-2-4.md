@@ -4,8 +4,8 @@
 - title: Release the complete Reference Frame Method and STDO baseline as `2.4.0`
 - type: proposal
 - ticket_category: constitutional
-- status: active
-- review_status: candidate_03_bounded_semantic_repair_in_progress
+- status: completed
+- review_status: candidate_03_repaired_and_directly_released
 - candidate_generation: 03
 - goal: >-
     Release one complete STDO 2.4.0 Product containing the accepted 2.3.1 RC2
@@ -21,7 +21,9 @@
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-08-11
 - created_at: 2026-08-11
-- updated_at: 2026-08-14
+- updated_at: 2026-08-17
+- closed_at: 2026-08-17
+- released_as: v2.4.0 at e05984c4f3b75525e6d962f6b9d72bbedd8e271a
 - owner: specification_methodology
 - pen_holder: codex
 - operative_predecessor: v2.3.0 at b2c64047e01d9d582243a25af587ac772233a4ea
@@ -242,3 +244,19 @@ identity; or final refs are published at different carriers.
 - No `v2.4.0-rc.*` branch or tag.
 - No final release branch, tag, or push before exact qualification, independent
   frozen-carrier review, and direct human exact-subject acceptance.
+
+## Publication Closure
+
+Direct human Product authority ordered the bounded semantic repairs and
+same-version publication. The repaired carrier was published on 2026-08-14 as
+`release/2.4.0` and annotated tag `v2.4.0` at
+`e05984c4f3b75525e6d962f6b9d72bbedd8e271a`, tag object
+`66118f3c5808536df5e5393d725e54e4eebc45f4`, with the exact 43-member
+standards aggregate
+`1571aab5bf9cc3605222d79502117c4873e4e5e136e07f909f4d4ad3684a4cc5`.
+
+The unchecked historical qualification and review boxes above are not
+retroactively converted into evidence. Publication is recorded as fact and the
+gap remains historical release-process evidence debt. T-010 requires fresh
+qualification and independent exact-subject review for the complete `2.4.1`
+successor; it does not inherit closure from this ticket.

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 1ef7a7c1cfbe8cd4f992aa629cfe8813c209fc841b9e22bcd859bb43bda4313d
+source_digest: 89659b99abe7af87a7cc0241d9f167b8a74acdbfe7b721544151cd1ce5d876d1
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-07
+generated_at: 2026-08-17
 stale_if_source_digest_changes: true
 ---
 
@@ -185,6 +185,51 @@ surfaces.
   projection to its accepted atom or atoms.
 - Prove native constructability in the selected substrate before design
   acceptance; a bridge or promised future capability cannot hide a gap.
+- Before constructing a material generic capability, common mechanic, or
+  algorithm, or selecting a material dependency, apply `STDO-UP-023`
+  proportionally. State the capability without Product, domain, module, vendor,
+  file, or incumbent labels. Distinguish each irreducible semantic or authority-
+  bearing relation and its owner, role kind, subject, scope, basis, lifecycle,
+  and refusal invariants from generic mechanics and foundation capabilities.
+  Compare credible compositions of admitted project, language/runtime/standard-
+  library, predecessor-lineage, maintained external, and bounded local
+  foundations. The rule operates inside the Product boundary and any applicable
+  migration strategy already admitted by their existing owners; it does not
+  displace SPEC's bounded-evolution versus fundamental-re-adoption decision.
+  Within that boundary, selection has no source-order, familiarity, sunk-cost,
+  local-code, or dependency-count preference.
+- Bound discovery by recording, for every candidate category, searched sources
+  or collections, cutoff time and version basis, applicability and inclusion
+  criteria, material exclusions, predecessor or incumbent status, discovered
+  candidates, and residual unknowns. A discovery gap capable of changing the
+  frontier prevents selection. A later materially qualifying candidate
+  invalidates the affected selection evidence and re-enters the relation.
+- Compare only dimensions material to the decision: fit and constructability;
+  authority leakage; adapter, integration, migration, deletion, and future-code
+  cost; license, maintenance, security, upgrade, and supply chain; runtime and
+  operations; determinism, concurrency, failure, recovery, reconstruction, and
+  replay; proof burden; and exit cost. Hard contract, authority, safety,
+  security, license, or constructability failure eliminates a candidate;
+  unknown evidence remains unknown. Record decisive evidence or a falsifier for
+  rejected material candidates. Incomparable lawful candidates remain on an
+  explicit undominated frontier.
+- One lawful composition dominates another only when every material dimension
+  is comparable or evidenced as non-discriminating, it is no worse on every
+  comparable dimension, and strictly better on at least one. A material unknown
+  that could reverse the relation prevents dominance. A dominated candidate,
+  including a local generic rebuild, cannot be selected unless new evidence or
+  another material dimension invalidates the dominance relation; unused feature
+  breadth alone is not dominance and may add lifecycle cost.
+- Select an undominated lawful composition only through the existing tradeoff
+  owner's priorities and risk tolerances declared for the exact Product and
+  basis. If they do not resolve the frontier, retain the design gap.
+- Reuse does not automatically confer or transfer authority. A foundation may
+  realize an explicitly assigned authority-bearing role only while preserving
+  the declared relation's owner, role kind, subject, scope, basis, lifecycle,
+  and refusal invariants. Ownership belongs to the declared relation, not source
+  authorship. Generic local code is a candidate, not the default, and newly
+  exposed material generic subproblems recursively re-enter selection. This is
+  a preconstruction rule distinct from post-implementation recurrence review.
 - Apply Prime recursively and preserve root authority. Local atom
   irreducibility does not prove that the resulting family is globally Prime.
 - Count governance cost as well as implementation count; reducing files while
