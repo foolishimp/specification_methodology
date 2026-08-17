@@ -4,8 +4,8 @@
 - title: Enrich the published STDO 2.4 basis as a `2.4.1` successor
 - type: proposal
 - ticket_category: constitutional
-- status: active
-- review_status: candidate_02_fresh_construction_passed_ready_for_rc
+- status: completed
+- review_status: rc1_independently_reviewed_accepted_and_published
 - candidate_generation: 02
 - goal: >-
     Produce one exact STDO 2.4.1 successor that completes the optional
@@ -21,6 +21,9 @@
 - triaged_at: 2026-08-17
 - created_at: 2026-08-17
 - updated_at: 2026-08-17
+- closed_at: 2026-08-17
+- released_as: v2.4.1 at c37452a390e8456863eeb4e3d5bf9c9a237a44ed
+- release_tag_object: a570e3d46df0b1e635d55bbcf060139c2bdfcb71
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_release: v2.4.0 at e05984c4f3b75525e6d962f6b9d72bbedd8e271a
@@ -217,10 +220,10 @@ or accepted design.
 No standards member, license, plugin registry, or runtime implementation is
 added or removed.
 
-## Exact Reconciled Source Candidate 02
+## Released Candidate 02 Identity
 
-This is an uncommitted mutable authoring candidate, not a frozen RC or released
-Product.
+The table below records the protected identity published unchanged through
+`v2.4.1-rc.1` and final `v2.4.1`.
 
 | Surface | SHA-256 |
 |---|---|
@@ -266,6 +269,32 @@ explicit gap instead of manufacturing closure; none is a candidate-method
 defect. The constructor did not perform independent release review or apply an
 Executive disposition.
 
+## Independent Exact-RC Review
+
+An independent Claude Opus 5 Reviewer, session
+`38370314-487a-4d8a-8b88-32a696ca9a98`, reacquired the complete mandatory
+population from the clean detached `v2.4.1-rc.1` carrier:
+
+- RC tag object:
+  `a4b66bd24862f024c7c909e675de839104179d11`;
+- reviewed commit:
+  `c37452a390e8456863eeb4e3d5bf9c9a237a44ed`;
+- reviewed tree:
+  `02976636453e1ce90c2f02e6f2c142b08cd8cf30`;
+- durable review:
+  `.ai-workspace/comments/claude/20260817T042458Z_REVIEW_stdo_2_4_1_rc1_exact_carrier.md`;
+- review SHA-256:
+  `a7c30da1b49297b516d74c52a8dedcacca03f4028268d8e7903b50f63853e958`;
+- Reference Frame Method result: `satisfied`; and
+- recommended `STDO-UP-020` disposition: `accept`.
+
+No finding requires a protected-byte change. The review retains one
+non-blocking historical evidence debt: the earlier external review's phrase
+"four initial testing repairs" cannot be mapped one-to-one because that review
+is not enumerated in a durable repository carrier. The Reviewer independently
+verified all seven testing obligations declared by this ticket, so promotion
+does not rely on the missing historical framing.
+
 ## Acceptance Conditions
 
 - [x] Direct Product authority selects the `2.4.1` successor scope and forbids
@@ -308,11 +337,11 @@ Executive disposition.
       conservation, JSON, and diff checks pass.
 - [x] A fresh capable constructor exercises the changed testing-profile and
       `STDO-UP-023` function/failure populations without consumer-local input.
-- [ ] An independently authorized reviewer assesses one exact frozen candidate
+- [x] An independently authorized reviewer assesses one exact frozen candidate
       against complete `v2.4.0` and the declared amendment.
-- [ ] One immutable final-ready RC is published and reviewed before final tap.
-- [ ] Direct human authority accepts the exact final carrier and review relation.
-- [ ] `release/2.4.1` and annotated `v2.4.1` are published without moving
+- [x] One immutable final-ready RC is published and reviewed before final tap.
+- [x] Direct human authority accepts the exact final carrier and review relation.
+- [x] `release/2.4.1` and annotated `v2.4.1` are published without moving
       `v2.4.0`.
 
 ## Non-Closure Conditions
@@ -343,3 +372,47 @@ qualification, review, and acceptance.
 - No mutation of `v2.4.0`, `release/2.4.0`, or its annotated tag.
 - No `2.4.1` release branch, tag, push, or publication during source-candidate
   construction.
+
+## Publication Closure
+
+Direct human Product authority instructed release of `2.4.1` through the
+governing process. After fresh construction and independent exact-RC review
+both closed `satisfied`, that instruction was bound to the exact accepted
+relation in:
+
+`.ai-workspace/comments/human/20260817T042800Z_DECISION_accept_and_publish_stdo_2_4_1.md`
+
+with SHA-256
+`a10c2a5e555d864568ae9bc9301aad4e0f016b6ec0e7c56aada2e276a7aba78f`.
+
+The accepted final carrier is byte-for-byte and commit-for-commit identical to
+the reviewed RC:
+
+```text
+v2.4.1-rc.1 peeled commit c37452a390e8456863eeb4e3d5bf9c9a237a44ed
+v2.4.1      peeled commit c37452a390e8456863eeb4e3d5bf9c9a237a44ed
+```
+
+Therefore the final carrier, Product, standards, and release-scoped-claim
+deltas are all zero. On 2026-08-17 the following refs were published and
+reacquired from `origin`:
+
+- `rc/2.4.1` at
+  `c37452a390e8456863eeb4e3d5bf9c9a237a44ed`;
+- immutable `v2.4.1-rc.1`, tag object
+  `a4b66bd24862f024c7c909e675de839104179d11`, peeled to that commit;
+- `release/2.4.1` at that commit; and
+- immutable `v2.4.1`, tag object
+  `a570e3d46df0b1e635d55bbcf060139c2bdfcb71`, peeled to that commit.
+
+The final release retains the exact 43-member standards aggregate
+`0f46a3d583f321da0445331566ef878e11e19e16e71c54fb9a8e66c5fff4ce91`.
+The review's historical traceability residual remains recorded as
+release-process evidence debt and is not converted into a claim of reacquired
+evidence.
+
+This closure record, the independent review, the human decision, Goal state,
+and ticket movement are publication-caused source-state bookkeeping on
+continuing `main`. They are not members of the immutable release carrier and do
+not move `v2.4.1`. No downstream consumer is silently upgraded; consumer
+selection and reconciliation remain separately owned.
