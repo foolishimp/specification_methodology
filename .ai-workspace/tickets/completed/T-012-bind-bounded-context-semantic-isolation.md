@@ -4,8 +4,8 @@
 - title: Bind bounded-context semantic isolation and explicit term resolution
 - type: proposal
 - ticket_category: constitutional
-- status: active
-- review_status: pending
+- status: completed
+- review_status: satisfied_published
 - goal: >-
     Prepare one STDO 2.4.3 successor over immutable v2.4.2 that prevents equal
     term spelling from collapsing meaning or authority across bounded contexts.
@@ -19,6 +19,7 @@
 - triaged_at: 2026-08-21
 - created_at: 2026-08-21
 - updated_at: 2026-08-21
+- completed_at: 2026-08-21
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_release: v2.4.2 at e50ee39a4e446dd781e6dc4e490076588c71982d
@@ -26,6 +27,7 @@
   5b5957d1a43be52a03b1316d442f2d797ba86a084550a1346dfc2dc6254123be
 - target_release: 2.4.3
 - release_class: patch_release_default_rc_path
+- release_note: releases/v2.4.3.md
 - current_goal_binding: this ticket
 - work_authorization: direct_human_authorization_2026-08-21
 
@@ -45,9 +47,13 @@ immutable release or downstream consumer is mutable under this ticket.
 constitutional meaning-resolution relation used by every downstream method,
 product definition, multi-product workspace, and composed bounded context.
 
-## Current Goal
+## Governed Goal
 
-Author one reviewable successor candidate that:
+This ticket was the bounded current goal and durable work carrier for the
+single `2.4.3` release wave. It is now closed; no continuing work wave is
+implied.
+
+The governed goal was to author one reviewable successor candidate that:
 
 1. treats a term as a lexical label rather than a context-free concept identity;
 2. resolves meaning through bounded-context identity, owning authority,
@@ -196,8 +202,35 @@ This ticket closes only when:
 - predecessor regression: local and remote annotated `v2.4.2` still peel to
   `e50ee39a4e446dd781e6dc4e490076588c71982d`, with predecessor aggregate
   `5b5957d1a43be52a03b1316d442f2d797ba86a084550a1346dfc2dc6254123be`;
-- release preparation and immutable RC publication: authorized by the direct
-  2026-08-21 instruction and in progress under `RELEASE_METHOD.md`;
-- independent exact-carrier review: pending;
-- exact-carrier human acceptance: pending; and
-- final release branch, tag, and publication: not established.
+- pre-RC qualification: passed and recorded in
+  `.ai-workspace/comments/codex/20260821T053106Z_CHECKPOINT_stdo_2_4_3_pre_rc_qualification.md`;
+- immutable RC: `v2.4.3-rc.1`, tag object
+  `2a0c0159ed428c4d65651f3494b2a4a73b7196c1`, peeled commit
+  `7207b43bba9a422c676840567e1566ff3f1558fb`;
+- independent exact-carrier review: `satisfied`, with no finding, recorded in
+  `.ai-workspace/comments/codex/20260821T055311Z_REVIEW_stdo_2_4_3_rc1_exact_carrier.md`;
+- human exact-carrier acceptance: recorded in
+  `.ai-workspace/comments/human/20260821T055459Z_DECISION_accept_and_publish_stdo_2_4_3.md`;
+- reviewed-RC to final-carrier delta: zero;
+- release branch: `release/2.4.3` at
+  `7207b43bba9a422c676840567e1566ff3f1558fb`;
+- annotated release tag: `v2.4.3`, tag object
+  `361f609c5b56a79c98322bc4fb22081a27970a99`, peeled to the same commit; and
+- publication: completed and reacquired from `origin`.
+
+## Publication Closure
+
+Every closure-law condition is satisfied. The exact 45-member Product subject
+and protected Intent, Product, and release-note bytes were frozen in one RC,
+independently reacquired and reviewed, accepted by direct human Product
+authority, and tapped without carrier or protected-byte delta.
+
+The independent fresh construction evaluated 16 semantic-isolation cases: five
+lawful admissions and eleven required refusals. It found no critical, high,
+medium, or low issue. All 18 compression edges, ten owner-declared contexts,
+27 exact glossary locators, and 13 schema boundary cases reproduced.
+
+The final branch and annotated tag were remotely reacquired at the accepted
+carrier. This ticket closure and its review, decision, and publication records
+are excluded source-state bookkeeping committed afterward on continuing
+`main`; they do not move or amend immutable `v2.4.3`.
