@@ -130,14 +130,16 @@ consumers select one complete immutable release.
 - `specification/standards/` in the `specification_methodology` source
   repository is the **authoring library** for the next method cut. Mutable
   source does not govern a consumer before publication and explicit selection.
-- `.genesis/docs/standards/` in a project workspace is an **installed
-  distribution** of one selected release. Its authority derives from the
-  selected version, immutable reference, and exact member inventory.
+- the shared versioned STDO store contains each **installed distribution** of
+  one selected immutable RC cut. A Product Definition addresses it through an
+  exact logical release URI and installed-manifest digest, independent of the
+  machine-local store path. A project-local copy is optional, not the default.
 
-The selected immutable release is consumer authority. An installed copy must
-match that release; mutable source cannot silently repair, replace, or outrank
-it. A mismatch is an adoption defect resolved by selecting and installing a
-released cut, not by mixing source and installed members.
+The selected immutable RC is consumer authority. Installed bytes must match
+that cut; mutable source and the moving version-line selector cannot silently
+repair, replace, or outrank it. A mismatch is an adoption defect resolved by
+selecting and installing one complete released cut, not by mixing source and
+installed members.
 
 Both roots contain three classes of document:
 
@@ -1529,7 +1531,8 @@ The graph-native method concerns:
 - current closures
 - current authority
 
-Release tapping remains a separate process surface.
+Immutable RC publication, exact-cut acceptance, and version-line selector
+promotion remain a separate process surface.
 
 ---
 

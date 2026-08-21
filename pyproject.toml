@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stdo-toolchain"
+version = "0.1.0"
+description = "Install, resolve, verify, and adopt immutable STDO releases"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Dimitar Popov" }
+]
+dependencies = [
+  "jsonschema[format-nongpl]>=4.23,<5"
+]
+
+[project.scripts]
+stdo = "stdo_toolchain.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

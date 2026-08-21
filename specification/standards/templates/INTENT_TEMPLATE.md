@@ -2,7 +2,8 @@
 
 State the direction for this project in present tense.
 
-Use the installed method surfaces under `.genesis/docs/standards/` as the governing standards while you fill this document out.
+Resolve and verify the exact installed STDO basis declared by the applicable
+Product Definition while you fill this document out.
 
 ## Purpose
 

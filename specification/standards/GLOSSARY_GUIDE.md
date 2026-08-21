@@ -50,6 +50,20 @@ fallback decision.
 | `Constitutional Set` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#constitutional-set-sufficiency`](SPEC_METHOD.md#constitutional-set-sufficiency) |
 | `Project Reference-Frame Basis` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#collective-reference-frame-basis`](SPEC_METHOD.md#collective-reference-frame-basis) |
 | `Agent Frame Activation` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#collective-reference-frame-basis`](SPEC_METHOD.md#collective-reference-frame-basis) |
+| `Installed Release Basis` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager`](SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager) |
+| `Adoption Plan` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager`](SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager) |
+| `Fleet Adoption Plan` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager`](SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager) |
+| `STDO Toolchain Manager` | `urn:stdo:bounded-context:product-definition-routing` | [`SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager`](SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager) |
+
+## Release-Publication Index
+
+| Indexed term | Bounded-context identity | Owning concept clause |
+|---|---|---|
+| `Candidate Source` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
+| `RC Branch` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
+| `Immutable RC Cut` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
+| `Version-Line Selector` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
+| `Release Branch` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
 
 ## Reference-Frame Evaluation Index
 

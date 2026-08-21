@@ -1,0 +1,265 @@
+# STDO Quickstart
+
+This guide adds STDO governance to an existing project without changing that
+project's folder structure. The result is one Product Definition Overlay that
+selects an exact immutable STDO release, locates the project's existing `WHAT`
+and `HOW`, and gives agents a small stable discovery bootstrap.
+
+## The Three Things To Keep Separate
+
+- The immutable STDO RC cut owns the selected methodology.
+- `stdo_<label>.json` owns the project's exact selection and locator mapping.
+- The shared toolchain store contains verified installed bytes; its local path
+  is derived machine state and never belongs in the Product Definition.
+
+The moving `v<version>` tag is only a discovery selector. It never governs a
+project directly.
+
+## Prerequisites
+
+- Git
+- Python 3.11 or newer
+- `pipx`, or another isolated Python application installer
+- An immutable STDO cut of the form `v<version>-rc.<n>`
+
+## 1. Install The Toolchain Manager
+
+From a checkout while developing the manager:
+
+```sh
+pipx install .
+```
+
+For normal use, install the manager from an exact immutable STDO RC tag that
+contains it:
+
+```sh
+pipx install \
+  "git+https://github.com/foolishimp/specification_methodology.git@v<version>-rc.<n>"
+```
+
+Confirm the executable is available:
+
+```sh
+stdo --version
+```
+
+Do not install from the moving `v<version>` selector when reproducibility
+matters.
+
+## 2. Install One Immutable STDO Cut
+
+Replace the two values below with the accepted cut and its version line:
+
+```sh
+STDO_CUT='<immutable-cut>'
+STDO_VERSION='<version>'
+
+stdo install "$STDO_CUT"
+stdo verify "$STDO_CUT"
+```
+
+For example, an immutable cut has the shape `v2.4.3-rc.2`, while its version
+line has the shape `2.4.3`.
+
+Keep the `manifest_sha256` returned by `install` or `verify`. The Product
+Definition pins both the immutable cut and that digest.
+
+The default shared store is platform-specific. Override it when needed with
+`STDO_STORE` or the global `--store <path>` option. Never write the resulting
+machine-local path into a Product Definition.
+
+## 3. Copy The Product Definition Template
+
+Resolve the template from the same installed cut:
+
+```sh
+STDO_TEMPLATE_PATH="$(
+  stdo resolve \
+    "stdo://releases/${STDO_CUT}/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json" |
+    python3 -c 'import json, sys; print(json.load(sys.stdin)["path"])'
+)"
+
+cp "$STDO_TEMPLATE_PATH" ./stdo_default.json
+```
+
+Use:
+
+- `stdo_default.json` for one default product definition;
+- `stdo_<label>.json` for a named product definition; or
+- several named definitions for several independently governed products.
+
+Place each definition at the logical root of the product it describes. The
+project's existing directories and documents can stay where they are.
+
+## 4. Fill The Overlay
+
+Start by replacing the release placeholders:
+
+```json
+{
+  "$schema": "stdo://releases/<immutable-cut>/standards/schemas/product-definition.schema.json",
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/<version>",
+      "basis": {
+        "uri": "stdo://releases/<immutable-cut>/",
+        "manifest_sha256": "<64-lowercase-hex-digest>"
+      }
+    }
+  }
+}
+```
+
+Then bind the project's actual surfaces:
+
+| Question | Product Definition field |
+|---|---|
+| Which mutable product-definition line is this? | `product.definition_id` |
+| Where is its project root? | `product.source_project` |
+| What constitution governs it? | `constitution` and `local_constitution` |
+| Which shared evaluation frames apply? | `reference_frame_bases` |
+| What is the product? | `what.intent`, `what.product`, `what.specification` |
+| How is it realized? | `how.common`, `how.build_tenants` |
+| Where does work coordination live? | `ticketing` |
+| Which other products are explicitly related? | `composition` |
+
+Important rules:
+
+- `product.definition_id` identifies the mutable definition line, not an
+  immutable released Product.
+- The selector is discovery input. The basis URI and manifest digest are the
+  operative selection.
+- Relative project references overlay the existing layout; they do not require
+  `specification/`, `build_tenants/`, or `.ai-workspace/` directories.
+- Bootstrap targets are relative to the resolved `product.source_project` and
+  cannot use absolute paths, parent traversal, symlinks, or reparse points.
+- Delete illustrative local disambiguations or composition edges that do not
+  apply. Retain explicit empty arrays where the schema requires them.
+
+The complete field-level guide is in
+[`specification/standards/templates/README.md`](specification/standards/templates/README.md).
+
+## 5. Synchronize And Verify
+
+Synchronize the exact basis already selected by the definition:
+
+```sh
+stdo sync --definition stdo_default.json
+stdo status --definition stdo_default.json --verify
+```
+
+`sync` never consults the moving selector and never edits the Product
+Definition. A missing cut is installed only when its reconstructed manifest
+matches the pinned digest.
+
+## 6. Install The Agent Bootstrap
+
+Preview every target first:
+
+```sh
+stdo bootstrap --definition stdo_default.json --dry-run
+```
+
+Then install or refresh the marker-owned blocks:
+
+```sh
+stdo bootstrap --definition stdo_default.json
+```
+
+Only the correctly ordered `STDO_BOOTSTRAP_START` to `STDO_BOOTSTRAP_END` span
+is manager-owned. Existing prefix and suffix bytes remain project-owned.
+
+## Daily Use
+
+Check the selected basis:
+
+```sh
+stdo status --definition stdo_default.json --verify
+```
+
+Recreate the exact selected installation on another machine:
+
+```sh
+stdo sync --definition stdo_default.json
+```
+
+Resolve an owning standard:
+
+```sh
+stdo resolve \
+  "stdo://releases/${STDO_CUT}/standards/SPEC_METHOD.md"
+```
+
+## Adopt A New Accepted RC
+
+Adoption is deliberately two-phase. First obtain the read-only plan:
+
+```sh
+stdo adopt --definition stdo_default.json --dry-run
+```
+
+Review the reported target cut, tag object, commit, tree, manifest digest, and
+`plan_sha256`. If that exact transition is accepted, pass the digest in a
+separate invocation:
+
+```sh
+stdo adopt --definition stdo_default.json \
+  --accept-plan-sha256 <plan_sha256>
+```
+
+The manager re-derives the plan before installation or mutation. Selector,
+target, manifest, or Product Definition drift invalidates the accepted digest.
+Run another dry-run and review the new subject instead of bypassing the refusal.
+
+## Monorepos And Hierarchical Repositories
+
+Discover and inspect every definition below a workspace root:
+
+```sh
+stdo fleet status --root /path/to/workspace
+stdo fleet verify --root /path/to/workspace
+```
+
+Fleet writes require explicit whole-selection authorization:
+
+```sh
+stdo fleet sync --root /path/to/workspace --all
+stdo fleet bootstrap --root /path/to/workspace --all --dry-run
+stdo fleet bootstrap --root /path/to/workspace --all
+```
+
+Fleet adoption also uses two phases:
+
+```sh
+stdo fleet adopt --root /path/to/workspace --all --dry-run
+stdo fleet adopt --root /path/to/workspace --all \
+  --accept-plan-sha256 <plan_sha256>
+```
+
+Directory nesting creates no implicit inheritance or product composition. Each
+definition names its own basis and every composition edge explicitly.
+
+## Common Refusals
+
+| Refusal | What to check |
+|---|---|
+| Schema cut differs from basis | `$schema` and `constitution.stdo.basis.uri` must name the same immutable cut |
+| Manifest digest differs | Copy the digest for the exact selected cut; do not substitute another installation |
+| Adoption plan differs | The selector, target, manifest, or definition changed; create and review a new dry-run |
+| Bootstrap target escapes | Make the target relative to `product.source_project` and remove traversal or redirected components |
+| Duplicate definition identity | Give independently governed product-definition lines distinct `product.definition_id` values |
+| Installed release is damaged | Inspect the reported missing, extra, changed, redirected, or special entry; the manager will not repair it in place |
+
+## Next References
+
+- [`README.md`](README.md) — repository and command overview
+- [`design/TOOLCHAIN_MANAGER.md`](design/TOOLCHAIN_MANAGER.md) — executable
+  boundary and refusal design
+- [`specification/standards/SPEC_METHOD.md`](specification/standards/SPEC_METHOD.md)
+  — Product Definition and toolchain authority
+- [`specification/standards/RELEASE_METHOD.md`](specification/standards/RELEASE_METHOD.md)
+  — immutable RC and selector law

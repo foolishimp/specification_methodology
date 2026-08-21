@@ -325,7 +325,10 @@ Release version is not the same thing as object identity.
 
 Per `RELEASE_METHOD.md` and `SPEC_METHOD.md`:
 
-- the tapped release version is the only operative release version identifier
+- an immutable `v<version>-rc.<n>` cut tag is the only exact operative release
+  identifier
+- the mutable `v<version>` tag is only the latest-accepted version-line
+  selector
 - release version is a release-process fact
 - release version is not the live constitutional identity of every object in
   the project
@@ -335,6 +338,7 @@ So the method must distinguish:
 - object identity
 - release identity
 - publication/revision coordinates
+- mutable discovery selectors
 
 These may relate, but they are not interchangeable.
 

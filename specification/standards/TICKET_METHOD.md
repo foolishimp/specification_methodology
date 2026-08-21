@@ -128,10 +128,6 @@ generated summaries cannot mutate milestone or ticket truth.
 ```text
 stdo_default.json
 
-.genesis/docs/standards/
-├── POSTING_GUIDE.md
-└── TICKET_METHOD.md
-
 specification/
 ├── GOALS.md
 
@@ -144,6 +140,10 @@ specification/
 └── comments/
     └── <agent-id>/
 ```
+
+The applicable Product Definition resolves `POSTING_GUIDE.md` and
+`TICKET_METHOD.md` from its exact shared installed STDO basis. Their absence
+from the project tree is not absence from the governing method.
 
 This is the starter file layout. A conforming `stdo_<label>.json` definition
 may bind the same ticket, comment, and sprint roles to existing directories,

@@ -2,7 +2,8 @@
 
 Project-specific requirement families live in this folder.
 
-Use `.genesis/docs/standards/` as the governing method reference when writing or revising these files.
+Resolve the governing method references from the exact installed STDO basis in
+the applicable Product Definition when writing or revising these files.
 
 ## Rules
 

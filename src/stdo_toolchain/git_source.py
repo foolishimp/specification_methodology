@@ -1,0 +1,221 @@
+"""Read exact immutable STDO cuts without using a mutable checkout."""
+
+from __future__ import annotations
+
+import re
+import subprocess
+import tempfile
+from dataclasses import dataclass
+from pathlib import Path
+
+from .errors import StdoError
+
+_CUT_RE = re.compile(
+    r"^v(?!.*-rc\..*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*-rc\.[1-9][0-9]*$"
+)
+_VERSION_RE = re.compile(r"^(?!.*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*$")
+
+
+def _git(
+    arguments: list[str],
+    *,
+    cwd: Path | None = None,
+    text: bool = True,
+) -> str | bytes:
+    command = ["git", *arguments]
+    try:
+        completed = subprocess.run(
+            command,
+            cwd=cwd,
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=text,
+        )
+    except FileNotFoundError as exc:
+        raise StdoError("git is required but was not found") from exc
+    except subprocess.CalledProcessError as exc:
+        detail = (
+            exc.stderr.strip()
+            if isinstance(exc.stderr, str)
+            else exc.stderr.decode("utf-8", "replace").strip()
+        )
+        raise StdoError(f"git command failed ({' '.join(command)}): {detail}") from exc
+    return completed.stdout
+
+
+def normalize_cut(cut: str) -> str:
+    value = cut.removeprefix("refs/tags/")
+    if not _CUT_RE.fullmatch(value):
+        raise StdoError(f"Immutable STDO cut must match v<version>-rc.<n>, got {cut!r}")
+    return value
+
+
+def normalize_version_line(version_line: str) -> str:
+    value = version_line.removeprefix("v")
+    if not _VERSION_RE.fullmatch(value):
+        raise StdoError(f"Invalid STDO version line: {version_line!r}")
+    return value
+
+
+@dataclass(frozen=True)
+class ChannelResolution:
+    version_line: str
+    selector_ref: str
+    selector_object: str
+    commit: str
+    cut: str
+    cut_ref: str
+    cut_tag_object: str
+
+
+def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
+    """Resolve a mutable version-line tag to its matching immutable RC tag."""
+
+    version = normalize_version_line(version_line)
+    selector_ref = f"refs/tags/v{version}"
+    rc_prefix = f"refs/tags/v{version}-rc."
+    output = _git(
+        [
+            "ls-remote",
+            "--tags",
+            repository,
+            selector_ref,
+            f"{selector_ref}^{{}}",
+            f"{rc_prefix}*",
+            f"{rc_prefix}*^{{}}",
+        ]
+    )
+    assert isinstance(output, str)
+    refs: dict[str, str] = {}
+    for line in output.splitlines():
+        if not line.strip():
+            continue
+        try:
+            object_id, ref = line.split("\t", 1)
+        except ValueError as exc:
+            raise StdoError(f"Unexpected git ls-remote output: {line!r}") from exc
+        refs[ref] = object_id
+
+    selector_object = refs.get(selector_ref)
+    if selector_object is None:
+        raise StdoError(f"STDO channel tag is missing: {selector_ref}")
+    selector_commit = refs.get(f"{selector_ref}^{{}}")
+    if selector_commit is None:
+        raise StdoError(
+            f"STDO channel selector must be an annotated tag: {selector_ref}"
+        )
+
+    matching: list[tuple[int, str, str]] = []
+    for ref, tag_object in refs.items():
+        if ref.endswith("^{}") or not ref.startswith(rc_prefix):
+            continue
+        suffix = ref[len(rc_prefix) :]
+        if not suffix.isdigit() or int(suffix) < 1:
+            continue
+        peeled = refs.get(f"{ref}^{{}}")
+        if peeled is None:
+            continue
+        if peeled == selector_commit:
+            matching.append((int(suffix), ref, tag_object))
+
+    if not matching:
+        raise StdoError(
+            f"Channel {selector_ref} resolves to {selector_commit}, but no immutable RC tag resolves to that commit"
+        )
+
+    _, cut_ref, cut_tag_object = max(matching)
+    return ChannelResolution(
+        version_line=version,
+        selector_ref=selector_ref,
+        selector_object=selector_object,
+        commit=selector_commit,
+        cut=cut_ref.removeprefix("refs/tags/"),
+        cut_ref=cut_ref,
+        cut_tag_object=cut_tag_object,
+    )
+
+
+class GitSnapshot:
+    """Temporary bare-object view of one annotated immutable release tag."""
+
+    def __init__(self, repository: str, cut: str):
+        self.repository = repository
+        self.cut = normalize_cut(cut)
+        self.ref = f"refs/tags/{self.cut}"
+        self._temporary: tempfile.TemporaryDirectory[str] | None = None
+        self.git_dir: Path | None = None
+        self.tag_object = ""
+        self.commit = ""
+        self.tree = ""
+        self.standards_tree = ""
+
+    def __enter__(self) -> "GitSnapshot":
+        self._temporary = tempfile.TemporaryDirectory(prefix="stdo-git-")
+        self.git_dir = Path(self._temporary.name) / "objects.git"
+        _git(["init", "--bare", str(self.git_dir)])
+        _git(
+            [
+                "--git-dir",
+                str(self.git_dir),
+                "fetch",
+                "--quiet",
+                "--no-tags",
+                self.repository,
+                f"+{self.ref}:{self.ref}",
+            ]
+        )
+        object_type = self._text(["cat-file", "-t", self.ref]).strip()
+        if object_type != "tag":
+            raise StdoError(
+                f"Immutable cut {self.cut} must be an annotated tag; found {object_type}"
+            )
+        self.tag_object = self._text(["rev-parse", self.ref]).strip()
+        self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
+        self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
+        try:
+            self.standards_tree = self._text(
+                ["rev-parse", f"{self.commit}:specification/standards"]
+            ).strip()
+        except StdoError as exc:
+            raise StdoError(
+                f"Cut {self.cut} does not contain specification/standards"
+            ) from exc
+        return self
+
+    def __exit__(self, exc_type: object, exc: object, traceback: object) -> None:
+        if self._temporary is not None:
+            self._temporary.cleanup()
+        self._temporary = None
+        self.git_dir = None
+
+    def _arguments(self, arguments: list[str]) -> list[str]:
+        if self.git_dir is None:
+            raise StdoError("Git snapshot is not open")
+        return ["--git-dir", str(self.git_dir), *arguments]
+
+    def _text(self, arguments: list[str]) -> str:
+        output = _git(self._arguments(arguments), text=True)
+        assert isinstance(output, str)
+        return output
+
+    def list_files(self, root: str) -> list[str]:
+        output = self._text(
+            ["ls-tree", "-r", "--name-only", "-z", self.commit, "--", root]
+        )
+        return sorted(path for path in output.split("\0") if path)
+
+    def read_file(self, path: str) -> bytes:
+        output = _git(self._arguments(["show", f"{self.commit}:{path}"]), text=False)
+        assert isinstance(output, bytes)
+        return output
+
+    def path_exists(self, path: str) -> bool:
+        if self.git_dir is None:
+            raise StdoError("Git snapshot is not open")
+        completed = subprocess.run(
+            ["git", *self._arguments(["cat-file", "-e", f"{self.commit}:{path}"])],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        return completed.returncode == 0

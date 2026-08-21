@@ -128,4 +128,5 @@ During a change wave, prefer terms such as:
 - shared
 - tenant-local
 
-Use explicit version labels only for tapped release facts or clearly historical material.
+Use explicit version labels only for immutable release facts, explicit mutable
+selector bindings, or clearly historical material.

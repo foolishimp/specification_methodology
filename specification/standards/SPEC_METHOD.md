@@ -141,10 +141,10 @@ This methodology therefore distinguishes:
   (`urn:stdo:concept:recursive-product-taxonomy:source-project`): the mutable
   workspace building the next release cut;
 - **Release Cut**
-  (`urn:stdo:concept:recursive-product-taxonomy:release-cut`): the tapped
-  immutable boundary over the accepted feature set;
+  (`urn:stdo:concept:recursive-product-taxonomy:release-cut`): one immutable
+  annotated RC boundary over a published feature set;
 - **Product** (`urn:stdo:concept:recursive-product-taxonomy:product`): the
-  released immutable thing resulting from that release cut;
+  released immutable thing resulting when that release cut is accepted;
 - **Install** (`urn:stdo:concept:recursive-product-taxonomy:install`): a
   stamped workspace instance of that released product;
 - **Artifact** (`urn:stdo:concept:recursive-product-taxonomy:artifact`): any
@@ -159,7 +159,7 @@ This methodology therefore distinguishes:
 The governing rules are:
 
 - do not call a mutable source workspace a product
-- do not confuse a tapped release or installed product with the mutable source
+- do not confuse an immutable RC release cut or installed product with the mutable source
   project building the next cut
 - `PRODUCT.md` is the product-definition surface of a source project, not the
   released product artifact itself
@@ -341,8 +341,13 @@ Each definition contains:
 
 - `product` — stable product-definition identity, display name, source-project
   locator, and an explicit bounded-context declaration or `null`;
-- `constitution` — the governing constitutional sets and useful reading
-  entrypoints;
+- `constitution.stdo` — the STDO source repository, mutable version-line
+  discovery selector, and exact installed release basis with its deterministic
+  manifest digest;
+- `constitution.additional_authorities` — every non-STDO constitutional set;
+- `constitution.entrypoints` — basis-qualified useful reading routes; and
+- `constitution.agent_bootstrap` — the constitutional entrypoint and
+  marker-managed agent-instruction targets;
 - `local_constitution` — local axioms, overrides, and disambiguations with
   their owning authority, target, basis, and scope, including context-qualified
   term resolution where applicable;
@@ -389,12 +394,13 @@ classes, required folders, or a one-document-per-dimension partition. One
 document may cover several dimensions, and one dimension may be distributed
 across several owning documents.
 
-`constitution.authorities` locates each complete constitutional set or
-additional constitutional source. For STDO, the reference must identify one
-complete immutable released cut and its exact inventory, not a hand-selected
-subset. `constitution.entrypoints` provides product-relevant reading routes
-into those authorities. Entry points are derived navigation and cannot narrow
-or replace the complete selected constitution.
+`constitution.stdo.basis` locates the complete selected STDO constitutional
+set. `constitution.additional_authorities` locates every additional
+constitutional set or source. The STDO basis identifies one complete immutable
+RC cut and its exact installed-release manifest, not a hand-selected subset.
+Each `constitution.entrypoints[]` member names the basis against which its URI
+resolves. Entry points are derived navigation and cannot narrow or replace a
+complete selected constitution.
 
 This rule does not promote every concrete design Ontology into constitutional
 `WHAT`. Product-level ontology that fixes Product meaning belongs in or is
@@ -402,6 +408,123 @@ cited by the bound `WHAT`. The accepted Design Module Method Ontology remains
 semantic-design authority for a realization boundary, derives from
 constitutional `WHAT` and applicable domain methods, and cannot invent
 missing Product meaning.
+
+### Shared Installed Release Basis And Toolchain Manager
+
+Within the product-definition-routing bounded context, an **Installed Release
+Basis** is the pair:
+
+```text
+(immutable stdo://releases/<cut>/ URI, installed-manifest SHA-256)
+```
+
+The URI identifies one immutable annotated RC cut. The digest identifies the
+deterministic installed-release manifest that binds its tag object, commit,
+repository tree, standards subtree, exact standards inventory, member bytes,
+and admitted auxiliary payloads. The manifest shape is owned by
+`schemas/installed-release-manifest.schema.json`. It is transport and integrity
+evidence, not a replacement constitution.
+
+An **Adoption Plan** is the read-only, deterministic acceptance object binding
+one current Product Definition's identity and bytes to its current basis and
+one resolved immutable target's cut, annotated tag object, commit, tree, and
+installed-manifest digest. Its SHA-256 is the operator-presentable acceptance
+token; possession alone does not grant authority, while a mismatch proves that
+the presented subject is no longer the subject being mutated. A **Fleet
+Adoption Plan** binds an authorized fleet root and the complete ordered set of
+per-definition plan digests under the same law.
+
+Plan hashing uses the acceptance object only: local installation status and
+machine-local install paths are excluded. Its canonical bytes are UTF-8 JSON
+with recursively sorted object keys, two-space indentation, LF line endings,
+and one final LF. Fleet order is deterministic discovery-path order. These
+rules make a presented digest independently reproducible rather than an opaque
+session token.
+
+The **STDO Toolchain Manager** is the bounded executable realization that:
+
+- installs each immutable cut once in a shared, versioned release store;
+- resolves logical `stdo://releases/...` URIs to verified installed bytes;
+- inventories and verifies complete installed distributions;
+- synchronizes the exact basis already selected by a Product Definition;
+- emits an exact digest-bound adoption plan from a mutable version-line
+  selector and performs adoption only when that plan is explicitly accepted;
+- manages the stable marker-bounded bootstrap in declared agent files; and
+- applies those operations to an explicitly discovered fleet of Product
+  Definitions.
+
+The store may live at any machine-local path. Its registry maps logical release
+URIs to installed paths and manifest digests, but owns neither Product
+selection nor method meaning. A consumer repository therefore does not need a
+project-local standards copy or a prescribed folder structure. Several Product
+Definitions on one machine may select different installed cuts concurrently.
+Every manager-owned component from the configured store root downward must be
+a physical directory or regular file of its declared type. A symlink, junction,
+reparse point, device, socket, or other redirection or special entry fails
+closed. Verification inventories every filesystem entry type, including
+directories, and rejects any entry not derived from the manifest's exact file
+paths. It never follows an unmanifested alias.
+
+`constitution.stdo.source.repository` identifies the transport source.
+`constitution.stdo.selector` is a mutable `stdo://channels/<version>` discovery
+selector whose Git alias semantics are owned by `RELEASE_METHOD.md`. Neither is
+operative authority. `constitution.stdo.basis.uri` and
+`constitution.stdo.basis.manifest_sha256` are the sole authored STDO selection
+for that Product Definition.
+
+The manager observes these command boundaries:
+
+- `install` admits one explicitly named immutable RC cut without changing any
+  Product Definition;
+- `sync` installs and verifies only the exact basis already selected by the
+  Product Definition and never consults its mutable selector;
+- `adopt --dry-run` resolves the annotated selector and immutable RC, presents
+  the target cut, tag object, commit, tree, manifest digest, current Product-
+  Definition byte digest, and a deterministic adoption-plan digest without
+  mutation;
+- mutating `adopt` requires that exact prior plan digest as explicit
+  acceptance, re-derives it before installation, installs only the bound target,
+  rechecks the Product Definition bytes, and atomically changes only its basis
+  and basis-relative schema locator; any drift refuses mutation;
+- `status`, `verify`, `list`, `manifest`, and `resolve` are read-only with
+  respect to Product Definitions; and
+- fleet adoption emits and requires explicit acceptance of one aggregate plan
+  digest over every per-definition plan; all fleet writes require explicit
+  whole-selection authorization and do not infer composition or inheritance
+  from directory nesting.
+
+Missing cuts, moved immutable tags, tag-to-commit mismatch, manifest-digest
+mismatch, missing, extra, or changed installed members, ambiguous Product
+Definition discovery, unaccepted or stale adoption plans, URI escape, physical
+store redirection, undeclared filesystem entry types, and malformed bootstrap
+markers fail closed. Every `stdo:` schema locator is parsed before schema
+loading under URI scheme case-insensitivity and must name the same immutable
+cut as `constitution.stdo.basis`; spelling variation cannot cross that basis.
+No cache, registry entry, source checkout, version alias, schema, or agent file
+may silently replace the basis selected in the Product Definition.
+
+`constitution.agent_bootstrap` does not embed another constitution. It names
+one basis-qualified bootstrap entrypoint and the local instruction files whose
+small discovery block the manager owns between explicit markers. Each target
+is a portable relative path resolved against `product.source_project`; absolute
+paths, parent traversal, redirected path components, and escape from that
+boundary fail closed. A fleet additionally confines every resolved source
+project to its explicitly authorized fleet root and preflights every target
+before the first write. Exactly one correctly ordered marker span may be
+replaced. Bytes before and after it, including trailing whitespace, remain
+project-owned and byte-identical; appending a new span preserves all existing
+bytes as an exact prefix. The bootstrap routes agents to the applicable Product
+Definition, exact installed basis, and owning sources; it cannot restate or
+override them.
+
+Recursive fleet discovery prunes these exact directory names as VCS,
+dependency, generated, cache, or managed-store internals:
+`.git`, `.hg`, `.svn`, `.bzr`, `.venv`, `venv`, `node_modules`, `vendor`,
+`site-packages`, `build`, `dist`, `out`, `target`, `.gradle`, `.tox`, `.nox`,
+`.cache`, `.ruff_cache`, `.mypy_cache`, `.pytest_cache`, `__pycache__`,
+`.genesis`, and `.stdo`. Discovered Product Definitions may not themselves be
+symlinks. These exclusions are discovery law, not evidence that an excluded
+tree lacks another independently governed Product.
 
 ### Bounded-Context Semantic Resolution
 
@@ -742,7 +865,7 @@ This is the homeostatic loop. Every link in the chain is load-bearing. A break a
 
 `PRODUCT.md` is the bridge between direction and obligation. It states the current product-definition surface of the mutable source project in present-tense terms, names the product terms and boundaries that downstream layers rely on, and provides the surface that requirements decompose.
 
-`PRODUCT.md` is not the tapped release artifact and not the installed product.
+`PRODUCT.md` is not the immutable RC release artifact and not the installed product.
 
 Those belong to the recursive product taxonomy above.
 
@@ -1640,22 +1763,27 @@ project slice acceptance as migration, qualification, or release closure.
 
 ## Release Version Boundary
 
-The only operative version identifier is the tapped release version.
+The only exact operative release identifier is the immutable RC cut tag
+`v<version>-rc.<n>`.
 
-That version is:
+That cut is:
 
-- a point-in-time release decision
+- a point-in-time release identity
 - a boundary over the feature set accepted for that cut
 - part of release metadata and release-process evaluation
 
 It is not part of the live project specification.
 
+The mutable `v<version>` tag is a version-line discovery selector to the latest
+accepted immutable RC. It is not an exact dependency, evidence, or
+constitutional basis and cannot silently change a consumer selection.
+
 Active constitutional and shared realization surfaces should therefore describe
 current truth by role, boundary, and status rather than by release-line version
 labels.
 
-Release criteria, release taps, and the process for cutting a release belong to
-a separate release process surface such as `RELEASE_METHOD.md`.
+Release criteria, immutable RC publication, selector promotion, and the process
+for cutting a release belong to `RELEASE_METHOD.md`.
 
 ---
 
@@ -2290,7 +2418,7 @@ Constitutional specification is current-surface law and shall be written in pres
 
 Dead law shall not remain in active constitutional artifacts for historical comfort. If something is no longer live, it shall be deleted, superseded, or moved to commentary. A migration wave does not justify preserving stale constitutional wording inside the live surface.
 
-During a change wave, write the live constitutional surface in terms of the current truth and the declared affected boundary. Do not use version-line branding such as `2.0`, `3.0`, or similar labels merely to indicate recency. Reserve explicit version labels for tapped release facts or clearly historical or superseded material.
+During a change wave, write the live constitutional surface in terms of the current truth and the declared affected boundary. Do not use version-line branding such as `2.0`, `3.0`, or similar labels merely to indicate recency. Reserve explicit version labels for immutable release facts, selector bindings, or clearly historical or superseded material.
 
 Before treating a downstream specification artifact as complete, check the whole affected span:
 
@@ -2314,7 +2442,8 @@ renaming, or duplicating existing authority or realization surfaces.
 
 The default scaffold binds:
 
-- `.genesis/docs/standards/` as the installed distribution of the selected
+- a shared versioned STDO store, addressed through the exact
+  `constitution.stdo.basis`, as the installed distribution of the selected
   process constitution;
 - `specification/GOALS.md` as current work-wave orientation;
 - `specification/INTENT.md` as domain direction;
@@ -2334,8 +2463,8 @@ The authority split is:
   future candidate cut
 - released methodology authority is the exact immutable STDO version selected
   by the consumer
-- installed methodology distribution lives under `.genesis/docs/standards/`
-  by default and must match that selected release
+- installed methodology distribution lives in the toolchain manager's shared
+  versioned store by default and must match the basis URI and manifest digest
 - project-owned constitutional surfaces live at the definition's `what`
   bindings
 - project-owned realization and work surfaces live at its `how` and
@@ -2355,20 +2484,16 @@ When editing or repricing methodology, the mutable source path is authoring
 authority for the candidate being constructed. It is not operative consumer
 law before release and explicit selection.
 
-When operating inside an installed workspace, the bound installed path is the
-operative local distribution of the selected immutable release until the
-consumer explicitly adopts and installs another released cut.
+When operating inside a governed workspace, the resolved installed basis is the
+operative distribution of the selected immutable release until the consumer
+explicitly adopts another cut. A project-local exact copy remains lawful when
+explicitly bound and verified, but it is not the default and file proximity
+cannot select it.
 
 The corresponding default folder shape is:
 
 ```text
 stdo_default.json
-
-.genesis/docs/standards/
-├── *_METHOD.md
-├── *_GUIDE.md
-├── schemas/
-└── templates/
 
 specification/
 ├── GOALS.md
@@ -2413,32 +2538,40 @@ Most projects begin by deriving `INTENT.md` from `GOALS.md`, then `PRODUCT.md` f
 
 The bootstrap sequence is:
 
-1. Select one complete immutable STDO release and install or reference its exact
-   standards inventory.
-2. Copy `PRODUCT_DEFINITION_TEMPLATE.json` to the product definition root as
+1. Install the STDO toolchain manager once, resolve one version-line selector,
+   and explicitly select one immutable RC cut.
+2. Install that complete cut in the shared release store and retain its
+   deterministic installed-manifest digest.
+3. Copy `PRODUCT_DEFINITION_TEMPLATE.json` from that exact cut to the product definition root as
    `stdo_default.json` or `stdo_<label>.json`.
-3. Assign the stable `product.definition_id` for the mutable `WHAT` definition
+4. Assign the stable `product.definition_id` for the mutable `WHAT` definition
    line, its source-project locator, and bounded-context declaration; keep it
    distinct from every immutable Product and release identity.
-4. Bind the complete constitutional authority set and relevant entrypoints;
+5. Bind `constitution.stdo.source`, its non-operative selector, the exact basis
+   URI and manifest digest, every additional constitutional authority, and the
+   relevant basis-qualified entrypoints;
    confirm that the set collectively defines axioms, ontology, epistemology,
    taxonomy, and semantics for the governed scope.
-5. Bind or explicitly empty the local axiom, override, and disambiguation
+6. Bind the agent bootstrap entrypoint and portable targets relative to the
+   resolved `product.source_project`, then let the manager preflight every
+   target and install or refresh only their marker-bounded discovery blocks.
+7. Bind or explicitly empty the local axiom, override, and disambiguation
    collections.
-6. Bind at least one accepted collective reference-frame basis, its admitting
+8. Bind at least one accepted collective reference-frame basis, its admitting
    authorities, and its exact governed scope.
-7. Write or confirm the current Goals carrier, then run the
+9. Write or confirm the current Goals carrier, then run the
    `goals → intent → product` steps and bind the resulting Intent and Product
    entrypoints.
-8. Gather, derive, classify, and bind the live specification or requirement
+10. Gather, derive, classify, and bind the live specification or requirement
    surfaces without creating a co-equal rival.
-9. Bind at least one build tenant, including its root, design, and
+11. Bind at least one build tenant, including its root, design, and
    implementation surfaces, and bind any shared realization law.
-10. Bind the Goals carrier, ticket lanes, comments root, and optional sprint
+12. Bind the Goals carrier, ticket lanes, comments root, and optional sprint
    root.
-11. Bind every known product-composition edge explicitly, including its target
-    definition identity, relation authority, and non-empty contract set.
-12. Validate the JSON shape, assert URI and URI-reference syntax, then resolve
+13. Bind every known product-composition edge explicitly, including its target
+   definition identity, relation authority, and non-empty contract set.
+14. Validate the JSON shape, assert URI and URI-reference syntax, synchronize
+    and verify the exact installed basis, then resolve
     every URI and perform the cross-definition identity, composition,
     constitutional-sufficiency, and authority-congruence checks.
 
@@ -2485,7 +2618,9 @@ When a feature is introduced or changed:
 
 When bootstrapping a project or repricing a requirement surface:
 
-1. Start from `.genesis/docs/standards/SPEC_METHOD.md` and `GOALS.md`.
+1. Resolve the applicable Product Definition, verify its exact installed STDO
+   basis, load its declared bootstrap entrypoint, and then load `GOALS.md` or
+   the bound equivalent current epic carrier.
 2. Perform the `goals → intent` step and write or confirm `INTENT.md`.
 3. Perform the `intent → product` step and write or confirm `PRODUCT.md` as the current product-definition bridge.
 4. Gather requirement source material from the relevant constitutional inputs.

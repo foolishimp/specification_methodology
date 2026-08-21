@@ -1,0 +1,971 @@
+from __future__ import annotations
+
+import json
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+from stdo_toolchain.errors import StdoError
+from stdo_toolchain.git_source import (
+    normalize_cut,
+    normalize_version_line,
+    resolve_channel,
+)
+from stdo_toolchain.product_definition import (
+    adopt_definition,
+    definition_status,
+    discover_definitions,
+    install_bootstrap,
+    sync_definition,
+)
+from stdo_toolchain.store import Store
+from stdo_toolchain.constants import (
+    BOOTSTRAP_END,
+    BOOTSTRAP_START,
+    BOOTSTRAP_TEXT,
+)
+from stdo_toolchain.cli import _parser, run
+
+
+def run_git(repository: Path, *arguments: str) -> str:
+    completed = subprocess.run(
+        ["git", *arguments],
+        cwd=repository,
+        check=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+    return completed.stdout.strip()
+
+
+class ReleaseFixture:
+    def __init__(self, root: Path):
+        self.repository = root / "repository"
+        self.repository.mkdir()
+        run_git(self.repository, "init", "-q")
+        run_git(self.repository, "config", "user.name", "STDO Test")
+        run_git(self.repository, "config", "user.email", "stdo-test@example.invalid")
+        (self.repository / "specification" / "standards").mkdir(parents=True)
+        (self.repository / "specification" / "standards" / "schemas").mkdir()
+        (self.repository / "plugins" / "spec" / "skills" / "refresh").mkdir(
+            parents=True
+        )
+        (self.repository / "releases").mkdir()
+        (self.repository / "LICENSE").write_text("test license\n", encoding="utf-8")
+        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
+            "# Spec one\n", encoding="utf-8"
+        )
+        (self.repository / "specification" / "standards" / "README.md").write_text(
+            "# Standards\n", encoding="utf-8"
+        )
+        (
+            self.repository
+            / "specification"
+            / "standards"
+            / "schemas"
+            / "product-definition.schema.json"
+        ).write_text(
+            json.dumps(
+                {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "required": ["kind", "constitution"],
+                    "properties": {
+                        "kind": {"const": "stdo.product-definition"},
+                        "constitution": {"type": "object"},
+                    },
+                }
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        (
+            self.repository / "plugins" / "spec" / "skills" / "refresh" / "SKILL.md"
+        ).write_text("# Refresh\n", encoding="utf-8")
+        (self.repository / "releases" / "v1.0.0.md").write_text(
+            "# Release\n", encoding="utf-8"
+        )
+        run_git(self.repository, "add", ".")
+        run_git(self.repository, "commit", "-qm", "release one")
+        run_git(self.repository, "tag", "-a", "v1.0.0-rc.1", "-m", "RC1")
+        run_git(self.repository, "tag", "-a", "v1.0.0", "-m", "line one")
+
+    def add_rc2(self) -> None:
+        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
+            "# Spec two\n", encoding="utf-8"
+        )
+        run_git(self.repository, "add", ".")
+        run_git(self.repository, "commit", "-qm", "release two")
+        run_git(self.repository, "tag", "-a", "v1.0.0-rc.2", "-m", "RC2")
+        run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line two")
+
+    def add_rc3(self) -> None:
+        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
+            "# Spec three\n", encoding="utf-8"
+        )
+        run_git(self.repository, "add", ".")
+        run_git(self.repository, "commit", "-qm", "release three")
+        run_git(self.repository, "tag", "-a", "v1.0.0-rc.3", "-m", "RC3")
+        run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line three")
+
+    def make_selector_lightweight(self) -> None:
+        run_git(self.repository, "tag", "-d", "v1.0.0")
+        run_git(self.repository, "tag", "v1.0.0")
+
+
+def definition_document(repository: Path, basis_uri: str, digest: str) -> dict:
+    return {
+        "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+        "kind": "stdo.product-definition",
+        "product": {
+            "definition_id": "urn:test:product-definition:one",
+            "name": "Test Product",
+            "source_project": "./",
+            "bounded_context": None,
+        },
+        "constitution": {
+            "stdo": {
+                "source": {"repository": str(repository)},
+                "selector": "stdo://channels/1.0.0",
+                "basis": {
+                    "uri": basis_uri,
+                    "manifest_sha256": digest,
+                },
+            },
+            "additional_authorities": [],
+            "entrypoints": [
+                {
+                    "basis": "#/constitution/stdo/basis",
+                    "uri": "standards/SPEC_METHOD.md",
+                }
+            ],
+            "agent_bootstrap": {
+                "entrypoint": "#/constitution/entrypoints/0",
+                "targets": ["./AGENTS.md", "./CLAUDE.md"],
+            },
+        },
+        "local_constitution": {
+            "axioms": [],
+            "overrides": [],
+            "disambiguations": [],
+        },
+        "reference_frame_bases": [
+            {
+                "uri": "./specification/PRODUCT.md#frames",
+                "authority": ["./specification/PRODUCT.md"],
+                "applies_to": ["urn:test:product-definition:one"],
+            }
+        ],
+        "what": {
+            "intent": "./specification/INTENT.md",
+            "product": "./specification/PRODUCT.md",
+            "specification": ["./specification/requirements/"],
+        },
+        "how": {
+            "common": [],
+            "build_tenants": [
+                {
+                    "id": "urn:test:build-tenant:default",
+                    "root": "./",
+                    "design": ["./design/"],
+                    "implementation": ["./src/"],
+                }
+            ],
+        },
+        "ticketing": {
+            "goals": "./specification/PRODUCT.md",
+            "tickets": {
+                "root": "./.ai-workspace/tickets/",
+                "lanes": {
+                    "backlog": "./.ai-workspace/tickets/backlog/",
+                    "active": "./.ai-workspace/tickets/active/",
+                    "completed": "./.ai-workspace/tickets/completed/",
+                },
+            },
+            "comments": {"root": "./.ai-workspace/comments/"},
+        },
+        "composition": [],
+        "unrelated": {"preserved": True},
+    }
+
+
+class StoreTests(unittest.TestCase):
+    def test_release_identity_parsing_reserves_the_rc_suffix(self) -> None:
+        self.assertEqual(normalize_version_line("v2.4.3"), "2.4.3")
+        self.assertEqual(normalize_cut("v2.4.3-rc.2"), "v2.4.3-rc.2")
+        with self.assertRaises(StdoError):
+            normalize_version_line("2.4.3-rc.2")
+        with self.assertRaises(StdoError):
+            normalize_cut("v2.4.3-rc.1-rc.2")
+
+    def test_install_resolve_reinstall_and_detect_tamper(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+
+            first = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            self.assertEqual(first.status, "installed")
+            self.assertEqual(first.manifest["standards"]["member_count"], 3)
+            self.assertTrue(
+                store.resolve(first.uri + "standards/SPEC_METHOD.md").is_file()
+            )
+            self.assertTrue(store.verify(first.cut)["valid"])
+
+            second = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            self.assertEqual(second.status, "already_installed")
+            self.assertEqual(second.manifest_sha256, first.manifest_sha256)
+
+            method = first.path / "standards" / "SPEC_METHOD.md"
+            method.chmod(0o644)
+            method.write_text("tampered\n", encoding="utf-8")
+            report = store.verify(first.cut)
+            self.assertFalse(report["valid"])
+            self.assertTrue(
+                any("changed standards member" in item for item in report["failures"])
+            )
+            with self.assertRaises(StdoError):
+                store.resolve(first.uri + "standards/SPEC_METHOD.md")
+
+    def test_verify_detects_extra_release_member(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            extra = installed.path / "unexpected.txt"
+            extra.write_text("not admitted\n", encoding="utf-8")
+            report = store.verify(installed.cut)
+            self.assertFalse(report["valid"])
+            self.assertIn(
+                "extra installed release member: unexpected.txt",
+                report["failures"],
+            )
+
+    def test_install_refuses_unexpected_manifest_digest(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            with self.assertRaises(StdoError):
+                store.install(
+                    str(fixture.repository),
+                    "v1.0.0-rc.1",
+                    expected_manifest_sha256="0" * 64,
+                )
+            self.assertEqual(store.list_releases(), [])
+
+    def test_resolver_refuses_path_escape(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            store.install(str(fixture.repository), "v1.0.0-rc.1")
+            with self.assertRaises(StdoError):
+                store.resolve("stdo://releases/v1.0.0-rc.1/%2E%2E/registry.json")
+
+    def test_resolver_refuses_registry_redirection(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            store.install(str(fixture.repository), "v1.0.0-rc.1")
+            registry = json.loads(store.registry_path.read_text(encoding="utf-8"))
+            registry["releases"]["v1.0.0-rc.1"]["path"] = "../redirected"
+            store.registry_path.write_text(
+                json.dumps(registry) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(StdoError):
+                store.resolve("stdo://releases/v1.0.0-rc.1/standards/SPEC_METHOD.md")
+
+    def test_store_refuses_a_redirected_releases_root(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            store.install(str(fixture.repository), "v1.0.0-rc.1")
+            physical_releases = root / "physical-releases"
+            store.releases_root.rename(physical_releases)
+            store.releases_root.symlink_to(physical_releases, target_is_directory=True)
+
+            with self.assertRaises(StdoError):
+                store.verify("v1.0.0-rc.1")
+            with self.assertRaises(StdoError):
+                store.resolve("stdo://releases/v1.0.0-rc.1/standards/SPEC_METHOD.md")
+
+    def test_verify_detects_an_unmanifested_directory_symlink_alias(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            outside = root / "outside"
+            outside.mkdir()
+            (outside / "authority.md").write_text("not admitted\n", encoding="utf-8")
+            (installed.path / "alias").symlink_to(outside, target_is_directory=True)
+
+            report = store.verify(installed.cut)
+            self.assertFalse(report["valid"])
+            self.assertTrue(
+                any("alias (redirect)" in failure for failure in report["failures"]),
+                report["failures"],
+            )
+            with self.assertRaises(StdoError):
+                store.resolve(installed.uri + "alias/authority.md")
+
+    def test_lightweight_version_line_selector_is_refused(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.make_selector_lightweight()
+            with self.assertRaisesRegex(StdoError, "annotated tag"):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+
+class ProductDefinitionTests(unittest.TestCase):
+    def test_fleet_sync_requires_all_and_materializes_each_selected_definition(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            planning_store = Store(root / "planning-store")
+            planned = planning_store.install(str(fixture.repository), "v1.0.0-rc.1")
+            fleet_root = root / "fleet"
+            for label in ("one", "two"):
+                project = fleet_root / label
+                project.mkdir(parents=True)
+                document = definition_document(
+                    fixture.repository,
+                    planned.uri,
+                    planned.manifest_sha256,
+                )
+                document["product"]["definition_id"] = f"urn:test:fleet:{label}"
+                (project / "stdo_default.json").write_text(
+                    json.dumps(document, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+            parser = _parser()
+            refused = parser.parse_args(
+                [
+                    "--store",
+                    str(root / "store"),
+                    "fleet",
+                    "sync",
+                    "--root",
+                    str(fleet_root),
+                ]
+            )
+            with self.assertRaises(StdoError):
+                run(refused)
+
+            permitted = parser.parse_args(
+                [
+                    "--store",
+                    str(root / "store"),
+                    "fleet",
+                    "sync",
+                    "--root",
+                    str(fleet_root),
+                    "--all",
+                ]
+            )
+            result, exit_code = run(permitted)
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(len(result["definitions"]), 2)
+            self.assertTrue(
+                all(
+                    definition["status"] in {"installed", "verified"}
+                    for definition in result["definitions"]
+                )
+            )
+
+    def test_fleet_adoption_requires_the_externally_accepted_fleet_plan(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            rc1 = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            fleet_root = root / "fleet"
+            definitions: list[Path] = []
+            for label in ("one", "two"):
+                project = fleet_root / label
+                project.mkdir(parents=True)
+                document = definition_document(
+                    fixture.repository,
+                    rc1.uri,
+                    rc1.manifest_sha256,
+                )
+                document["product"]["definition_id"] = f"urn:test:fleet:{label}"
+                definition = project / "stdo_default.json"
+                definition.write_text(
+                    json.dumps(document, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+                definitions.append(definition)
+            fixture.add_rc2()
+            parser = _parser()
+
+            unaccepted = parser.parse_args(
+                [
+                    "--store",
+                    str(store.root),
+                    "fleet",
+                    "adopt",
+                    "--root",
+                    str(fleet_root),
+                    "--all",
+                ]
+            )
+            with self.assertRaisesRegex(StdoError, "prior dry-run"):
+                run(unaccepted)
+            for definition in definitions:
+                self.assertIn(
+                    "v1.0.0-rc.1",
+                    definition.read_text(encoding="utf-8"),
+                )
+
+            dry_run = parser.parse_args(
+                [
+                    "--store",
+                    str(store.root),
+                    "fleet",
+                    "adopt",
+                    "--root",
+                    str(fleet_root),
+                    "--all",
+                    "--dry-run",
+                ]
+            )
+            plan, exit_code = run(dry_run)
+            self.assertEqual(exit_code, 0)
+
+            accepted = parser.parse_args(
+                [
+                    "--store",
+                    str(store.root),
+                    "fleet",
+                    "adopt",
+                    "--root",
+                    str(fleet_root),
+                    "--all",
+                    "--accept-plan-sha256",
+                    plan["plan_sha256"],
+                ]
+            )
+            applied, exit_code = run(accepted)
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(
+                applied["accepted_plan_sha256"],
+                plan["plan_sha256"],
+            )
+            for definition in definitions:
+                self.assertIn(
+                    "v1.0.0-rc.2",
+                    definition.read_text(encoding="utf-8"),
+                )
+
+    def test_definition_refuses_a_schema_from_another_release_basis(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            definition = root / "stdo_default.json"
+            document = definition_document(
+                fixture.repository,
+                installed.uri,
+                installed.manifest_sha256,
+            )
+            document["$schema"] = (
+                "stdo://releases/v1.0.0-rc.2/standards/schemas/"
+                "product-definition.schema.json"
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(StdoError):
+                definition_status(definition, store)
+
+    def test_definition_refuses_uppercase_scheme_schema_from_another_basis(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            rc1 = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            fixture.add_rc2()
+            store.install(str(fixture.repository), "v1.0.0-rc.2")
+            definition = root / "stdo_default.json"
+            document = definition_document(
+                fixture.repository,
+                rc1.uri,
+                rc1.manifest_sha256,
+            )
+            document["$schema"] = (
+                "STDO://releases/v1.0.0-rc.2/standards/schemas/"
+                "product-definition.schema.json"
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(StdoError, "differs from its basis"):
+                definition_status(definition, store)
+
+    def test_agent_templates_match_the_manager_bootstrap_exactly(self) -> None:
+        repository = Path(__file__).resolve().parents[1]
+        expected = f"{BOOTSTRAP_START}\n{BOOTSTRAP_TEXT}\n{BOOTSTRAP_END}\n"
+        for name in ("AGENTS_TEMPLATE.md", "CLAUDE_TEMPLATE.md"):
+            actual = (
+                repository / "specification/standards/templates" / name
+            ).read_text(encoding="utf-8")
+            self.assertEqual(actual, expected)
+
+    def test_sync_installs_only_the_selected_exact_basis(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            planning_store = Store(root / "planning-store")
+            planned = planning_store.install(str(fixture.repository), "v1.0.0-rc.1")
+            definition = root / "project" / "stdo_default.json"
+            definition.parent.mkdir()
+            document = definition_document(
+                fixture.repository,
+                planned.uri,
+                planned.manifest_sha256,
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            fixture.add_rc2()
+            store = Store(root / "store")
+
+            dry_run = sync_definition(definition, store, dry_run=True)
+            self.assertEqual(dry_run["status"], "would_install")
+            self.assertEqual(store.list_releases(), [])
+
+            synced = sync_definition(definition, store)
+            self.assertEqual(synced["status"], "installed")
+            self.assertTrue(definition_status(definition, store)["valid"])
+            self.assertEqual(
+                json.loads(definition.read_text(encoding="utf-8")),
+                document,
+            )
+            self.assertEqual(
+                [release["cut"] for release in store.list_releases()],
+                ["v1.0.0-rc.1"],
+            )
+
+    def test_definition_resolves_a_relative_repository_from_its_own_root(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            planning_store = Store(root / "planning-store")
+            planned = planning_store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            document = definition_document(
+                Path("../repository"),
+                planned.uri,
+                planned.manifest_sha256,
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            store = Store(root / "store")
+            synced = sync_definition(definition, store)
+            self.assertEqual(synced["status"], "installed")
+
+    def test_sync_refuses_a_cut_that_differs_from_the_selected_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            definition = root / "project" / "stdo_default.json"
+            definition.parent.mkdir()
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        "stdo://releases/v1.0.0-rc.1/",
+                        "0" * 64,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            store = Store(root / "store")
+            with self.assertRaises(StdoError):
+                sync_definition(definition, store)
+            self.assertEqual(store.list_releases(), [])
+
+    def test_adopt_updates_only_basis_and_schema_release(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            rc1 = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            definition = root / "project" / "stdo_default.json"
+            definition.parent.mkdir()
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        rc1.uri,
+                        rc1.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            fixture.add_rc2()
+
+            plan = adopt_definition(definition, store, dry_run=True)
+            self.assertTrue(plan["changed"])
+            self.assertEqual(plan["to"]["cut"], "v1.0.0-rc.2")
+            self.assertEqual(len(store.list_releases()), 1)
+
+            original = definition.read_bytes()
+            with self.assertRaisesRegex(StdoError, "accept-plan-sha256"):
+                adopt_definition(definition, store)
+            self.assertEqual(definition.read_bytes(), original)
+
+            applied = adopt_definition(
+                definition,
+                store,
+                accepted_plan_sha256=plan["plan_sha256"],
+            )
+            self.assertTrue(applied["changed"])
+            self.assertEqual(
+                applied["accepted_plan_sha256"],
+                plan["plan_sha256"],
+            )
+            updated = json.loads(definition.read_text(encoding="utf-8"))
+            self.assertEqual(
+                updated["constitution"]["stdo"]["basis"]["uri"],
+                "stdo://releases/v1.0.0-rc.2/",
+            )
+            self.assertEqual(updated["unrelated"], {"preserved": True})
+            self.assertIn(
+                "v1.0.0-rc.2",
+                updated["$schema"],
+            )
+            self.assertTrue(definition_status(definition, store, verify=True)["valid"])
+
+    def test_adopt_replaces_a_candidate_local_schema_when_the_basis_advances(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            rc1 = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            candidate_schema = project / "candidate-product-definition.schema.json"
+            candidate_schema.write_bytes(
+                (
+                    fixture.repository
+                    / "specification/standards/schemas/product-definition.schema.json"
+                ).read_bytes()
+            )
+            definition = project / "stdo_default.json"
+            document = definition_document(
+                fixture.repository,
+                rc1.uri,
+                rc1.manifest_sha256,
+            )
+            document["$schema"] = f"./{candidate_schema.name}"
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            fixture.add_rc2()
+
+            plan = adopt_definition(definition, store, dry_run=True)
+            adopt_definition(
+                definition,
+                store,
+                accepted_plan_sha256=plan["plan_sha256"],
+            )
+            updated = json.loads(definition.read_text(encoding="utf-8"))
+            self.assertEqual(
+                updated["$schema"],
+                "stdo://releases/v1.0.0-rc.2/standards/schemas/"
+                "product-definition.schema.json",
+            )
+
+    def test_adopt_refuses_a_plan_after_the_selector_moves(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            rc1 = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            document = definition_document(
+                fixture.repository,
+                rc1.uri,
+                rc1.manifest_sha256,
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            fixture.add_rc2()
+            accepted = adopt_definition(definition, store, dry_run=True)
+            fixture.add_rc3()
+
+            with self.assertRaisesRegex(StdoError, "explicitly accepted plan"):
+                adopt_definition(
+                    definition,
+                    store,
+                    accepted_plan_sha256=accepted["plan_sha256"],
+                )
+            self.assertEqual(
+                json.loads(definition.read_text(encoding="utf-8")),
+                document,
+            )
+            self.assertEqual(
+                [release["cut"] for release in store.list_releases()],
+                ["v1.0.0-rc.1"],
+            )
+
+    def test_bootstrap_is_marker_bounded_and_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        installed.uri,
+                        installed.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (project / "AGENTS.md").write_text("# Local Rules\n", encoding="utf-8")
+
+            first = install_bootstrap(definition, store)
+            second = install_bootstrap(definition, store)
+            self.assertEqual(first["targets"][0]["action"], "appended")
+            self.assertEqual(second["targets"][0]["action"], "unchanged")
+            agents = (project / "AGENTS.md").read_text(encoding="utf-8")
+            self.assertTrue(agents.startswith("# Local Rules\n"))
+            self.assertEqual(agents.count("<!-- STDO_BOOTSTRAP_START -->"), 1)
+            self.assertTrue((project / "CLAUDE.md").is_file())
+
+    def test_bootstrap_refuses_malformed_existing_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        installed.uri,
+                        installed.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (project / "AGENTS.md").write_text(
+                "<!-- STDO_BOOTSTRAP_START -->\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(StdoError):
+                install_bootstrap(definition, store)
+
+    def test_bootstrap_refuses_reversed_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        installed.uri,
+                        installed.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            target = project / "CLAUDE.md"
+            original = f"{BOOTSTRAP_END}\nowned\n{BOOTSTRAP_START}\n".encode()
+            target.write_bytes(original)
+            with self.assertRaises(StdoError):
+                install_bootstrap(definition, store)
+            self.assertEqual(target.read_bytes(), original)
+            self.assertFalse((project / "AGENTS.md").exists())
+
+    def test_bootstrap_preserves_existing_prefix_suffix_and_trailing_whitespace(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        installed.uri,
+                        installed.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            target = project / "AGENTS.md"
+            prefix = b"# Owned prefix\n \t\n"
+            suffix = b"\n# Owned suffix\n\t  \n"
+            target.write_bytes(
+                prefix
+                + BOOTSTRAP_START.encode()
+                + b"\nstale\n"
+                + BOOTSTRAP_END.encode()
+                + suffix
+            )
+
+            install_bootstrap(definition, store)
+            updated = target.read_bytes()
+            self.assertTrue(updated.startswith(prefix))
+            self.assertTrue(updated.endswith(suffix))
+
+            unmarked = project / "CLAUDE.md"
+            owned = b"# Owned\n \t\n"
+            unmarked.write_bytes(owned)
+            install_bootstrap(definition, store)
+            self.assertTrue(unmarked.read_bytes().startswith(owned))
+
+    def test_bootstrap_refuses_target_escape(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            project = root / "project"
+            project.mkdir()
+            definition = project / "stdo_default.json"
+            document = definition_document(
+                fixture.repository,
+                installed.uri,
+                installed.manifest_sha256,
+            )
+            document["constitution"]["agent_bootstrap"]["targets"] = ["../../victim.md"]
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(StdoError, "confined relative path"):
+                install_bootstrap(definition, store)
+            self.assertFalse((root.parent / "victim.md").exists())
+
+    def test_fleet_bootstrap_preflights_all_source_project_boundaries(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            store = Store(root / "store")
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+            fleet = root / "fleet"
+            first = fleet / "first"
+            second = fleet / "second"
+            outside = root / "outside"
+            first.mkdir(parents=True)
+            second.mkdir(parents=True)
+            outside.mkdir()
+            for label, project in (("first", first), ("second", second)):
+                document = definition_document(
+                    fixture.repository,
+                    installed.uri,
+                    installed.manifest_sha256,
+                )
+                document["product"]["definition_id"] = f"urn:test:fleet:{label}"
+                if label == "second":
+                    document["product"]["source_project"] = "../../outside"
+                (project / "stdo_default.json").write_text(
+                    json.dumps(document, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+            arguments = _parser().parse_args(
+                [
+                    "--store",
+                    str(store.root),
+                    "fleet",
+                    "bootstrap",
+                    "--root",
+                    str(fleet),
+                    "--all",
+                ]
+            )
+            with self.assertRaisesRegex(StdoError, "authorized fleet root"):
+                run(arguments)
+            self.assertFalse((first / "AGENTS.md").exists())
+            self.assertFalse((outside / "AGENTS.md").exists())
+
+    def test_discovery_skips_managed_and_dependency_directories(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "a").mkdir()
+            (root / "a" / "stdo_one.json").write_text("{}\n", encoding="utf-8")
+            for skipped in (
+                ".hg",
+                ".stdo",
+                ".venv",
+                "build",
+                "dist",
+                "node_modules",
+                "vendor",
+            ):
+                (root / skipped).mkdir()
+                (root / skipped / "stdo_hidden.json").write_text(
+                    "{}\n", encoding="utf-8"
+                )
+            self.assertEqual(
+                discover_definitions(root),
+                [(root / "a" / "stdo_one.json").resolve()],
+            )
+
+
+if __name__ == "__main__":
+    unittest.main()

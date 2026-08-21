@@ -2,7 +2,9 @@
 
 Tenant-local design surfaces live here.
 
-Use `.genesis/docs/standards/` as the governing method reference and `build_tenants/common/design/` for shared realization law.
+Resolve the governing method from the exact installed STDO basis in the
+applicable Product Definition and use `build_tenants/common/design/` for shared
+realization law.
 
 ## Adopted Common Surfaces
 

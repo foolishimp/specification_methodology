@@ -16,7 +16,9 @@ tools, runtime and orchestration machinery, tests, and conformance evidence.
 The method remains intentionally opinionated. Functional design, GTL/ABG/ODD
 construction, UX transition algebra, world-model construction, Prime, IACS,
 and semantic design views are method law where their owning standards apply.
-Excluding executable STDO machinery does not make that algebra optional.
+The bounded distribution toolchain does not interpret that algebra; executable
+semantic realization remains consumer-owned and does not make the algebra
+optional.
 
 ## Evolution Direction
 

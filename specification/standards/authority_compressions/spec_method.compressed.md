@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 769f179486efabf32d1a9d63366f15a402ee59656938f9a95a4b41ed90a39b5c
+source_digest: 3829f64c51d7164fa8bd06d4110a608f2a83864e1b474eecbc92ba62bbc16cbc
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -46,10 +46,13 @@ the aggregate STDO compression.
 - The definition is a layout-neutral identity, locator, relation, discovery,
   collective-frame-basis, work-carrier, and composition overlay. It does not
   restate or replace the meaning owned by referenced authority.
-- `constitution.authorities` locates complete constitutional sets;
-  `constitution.entrypoints` is navigation only. The set must collectively
-  make axioms, ontology, epistemology, taxonomy, and semantics recoverable.
-  Those are sufficiency dimensions, not five required files or folders.
+- `constitution.stdo` separates transport source and mutable version-line
+  discovery from the operative immutable release URI and installed-manifest
+  digest. `constitution.additional_authorities` locates every other
+  constitutional set; each `constitution.entrypoints[]` route names its basis.
+  The complete selected set makes axioms, ontology, epistemology, taxonomy, and
+  semantics recoverable. Those are sufficiency dimensions, not five required
+  files or folders.
 - Local axioms, overrides, and disambiguations name their carrier, governing
   authority, target where applicable, selected basis, and exact scope. Each
   disambiguation also binds the exact term, target bounded context, complete
@@ -67,13 +70,31 @@ the aggregate STDO compression.
   ticket lanes, comments, and optional sprints. Each `composition` edge binds
   the target definition locator and expected `product.definition_id`, the
   directed relation authority, and a non-empty governing contract set.
-- Discover `stdo_*.json` recursively inside the selected workspace.
-  Directory nesting creates no inheritance, ownership, or composition.
+- Discover `stdo_*.json` recursively inside the selected workspace while
+  pruning the exact VCS, dependency, generated, cache, and managed-store names
+  declared by the source method; refuse symlinked definitions. Directory
+  nesting creates no inheritance, ownership, or composition.
+- Install immutable cuts once in a shared versioned store. A logical
+  `stdo://releases/...` URI plus deterministic installed-manifest digest is the
+  Product Definition's exact basis; a machine-local store path and registry are
+  derived resolution state. Managed entries must be physical and exact;
+  redirections, special entries, and undeclared entries of any type fail closed.
+  `sync` installs only that pinned basis. `adopt --dry-run` emits a digest over
+  current definition bytes and the exact cut/tag/commit/tree/manifest target;
+  mutation requires and re-derives that externally accepted digest. Fleet
+  adoption requires its aggregate plan digest. Agent files contain only a
+  marker-bounded discovery bootstrap whose relative targets are confined to
+  resolved `product.source_project`; fleet bootstrap preflights all targets and
+  additionally confines every source project to its authorized root. Exactly
+  one ordered marker span is manager-owned, while prefix and suffix bytes remain
+  exact project-owned bytes.
 - Portable Draft 2020-12 JSON Schema proves structural shape. URI formats are
   annotations unless an assertion-capable validator is selected, so
   conformance separately asserts RFC 3986 syntax, resolution, target identity,
   selected-release identity, cross-file uniqueness, constitutional sufficiency,
-  semantic-resolution completeness, and authority congruence.
+  semantic-resolution completeness, and authority congruence. Parse every
+  `stdo:` schema locator case-insensitively before loading and require its cut to
+  equal the operative basis cut.
 
 ## Bounded-Context Semantic Isolation Compression
 

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:stdo:schema:product-definition:2",
+  "$id": "urn:stdo:schema:product-definition:3",
   "title": "STDO Product Definition Overlay",
-  "description": "Layout-neutral identity, authority-location, bounded-context disambiguation, collective reference-frame basis, realization, work-carrier, and composition bindings for one STDO-defined product WHAT.",
+  "description": "Layout-neutral exact STDO basis, identity, authority-location, bounded-context disambiguation, collective reference-frame basis, realization, work-carrier, bootstrap, and composition bindings for one STDO-defined product WHAT.",
   "type": "object",
   "required": [
     "$schema",
@@ -72,15 +72,28 @@
     "constitution": {
       "type": "object",
       "required": [
-        "authorities",
-        "entrypoints"
+        "stdo",
+        "additional_authorities",
+        "entrypoints",
+        "agent_bootstrap"
       ],
       "properties": {
-        "authorities": {
-          "$ref": "#/$defs/nonEmptyReferences"
+        "stdo": {
+          "$ref": "#/$defs/stdoBinding"
+        },
+        "additional_authorities": {
+          "$ref": "#/$defs/references"
         },
         "entrypoints": {
-          "$ref": "#/$defs/nonEmptyReferences"
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/constitutionalEntrypoint"
+          },
+          "uniqueItems": true
+        },
+        "agent_bootstrap": {
+          "$ref": "#/$defs/agentBootstrap"
         }
       },
       "additionalProperties": false
@@ -255,6 +268,128 @@
         "$ref": "#/$defs/referenceUri"
       },
       "uniqueItems": true
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "stdoChannelUri": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/identityUri"
+        },
+        {
+          "pattern": "^stdo://channels/(?![^/]*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*/?$"
+        }
+      ]
+    },
+    "stdoReleaseUri": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/identityUri"
+        },
+        {
+          "pattern": "^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*/?$"
+        }
+      ]
+    },
+    "stdoBinding": {
+      "type": "object",
+      "required": [
+        "source",
+        "selector",
+        "basis"
+      ],
+      "properties": {
+        "source": {
+          "type": "object",
+          "required": [
+            "repository"
+          ],
+          "properties": {
+            "repository": {
+              "$ref": "#/$defs/referenceUri",
+              "description": "Git repository carrying the selected STDO release line and immutable RC cuts."
+            }
+          },
+          "additionalProperties": false
+        },
+        "selector": {
+          "$ref": "#/$defs/stdoChannelUri",
+          "description": "Mutable version-line discovery selector carried by an annotated Git tag. It is never operative constitutional authority without digest-bound explicit resolution and adoption."
+        },
+        "basis": {
+          "type": "object",
+          "required": [
+            "uri",
+            "manifest_sha256"
+          ],
+          "properties": {
+            "uri": {
+              "$ref": "#/$defs/stdoReleaseUri",
+              "description": "Exact immutable installed STDO cut selected by this Product Definition."
+            },
+            "manifest_sha256": {
+              "$ref": "#/$defs/sha256",
+              "description": "Digest of the deterministic installed-release manifest carrying tag, commit, tree, and complete distribution identity."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "constitutionalEntrypoint": {
+      "type": "object",
+      "required": [
+        "basis",
+        "uri"
+      ],
+      "properties": {
+        "basis": {
+          "$ref": "#/$defs/referenceUri",
+          "description": "Reference to the constitutional basis against which the entrypoint URI resolves."
+        },
+        "uri": {
+          "$ref": "#/$defs/referenceUri",
+          "description": "Reading route relative to the referenced constitutional basis."
+        }
+      },
+      "additionalProperties": false
+    },
+    "agentBootstrap": {
+      "type": "object",
+      "required": [
+        "entrypoint",
+        "targets"
+      ],
+      "properties": {
+        "entrypoint": {
+          "$ref": "#/$defs/referenceUri",
+          "description": "Reference to the constitutional entrypoint loaded by the stable agent bootstrap."
+        },
+        "targets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/bootstrapTarget"
+          },
+          "uniqueItems": true,
+          "description": "Instruction files, resolved relative to product.source_project, whose marker-bounded STDO bootstrap projection is managed by the toolchain manager."
+        }
+      },
+      "additionalProperties": false
+    },
+    "bootstrapTarget": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/referenceUri"
+        },
+        {
+          "pattern": "^(?![A-Za-z][A-Za-z0-9+.-]*:)(?!//)(?!/)(?!\\.\\.(?:/|$))(?!.*\\/\\.\\.(?:\\/|$))[^?#\\\\]+$"
+        }
+      ],
+      "description": "Portable relative file reference confined to the resolved product.source_project. Absolute paths, authorities, parent traversal, queries, fragments, backslashes, symlinks, and reparse points are refused by manager conformance."
     },
     "carrierRoot": {
       "type": "object",

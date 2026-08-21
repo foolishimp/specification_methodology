@@ -1,0 +1,105 @@
+{
+  "$schema": "./specification/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:specification-methodology",
+    "name": "STDO Specification Methodology",
+    "source_project": "./",
+    "bounded_context": null
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.4.3",
+      "basis": {
+        "uri": "stdo://releases/v2.4.3-rc.1/",
+        "manifest_sha256": "ca6cdcb78166998e96e1efe07128209c15f6277b1c67b3e5760529f70bc538a9"
+      }
+    },
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_compressed.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/additional_authorities/0",
+        "uri": "./specification/INTENT.md"
+      },
+      {
+        "basis": "#/constitution/additional_authorities/1",
+        "uri": "./specification/PRODUCT.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/PRODUCT.md#reference-frame-engagement",
+      "authority": [
+        "./specification/PRODUCT.md"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:specification-methodology"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/standards/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo:build-tenant:toolchain-python",
+        "root": "./",
+        "design": [
+          "./design/TOOLCHAIN_MANAGER.md"
+        ],
+        "implementation": [
+          "./pyproject.toml",
+          "./src/stdo_toolchain/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md#governed-outcome",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    }
+  },
+  "composition": []
+}

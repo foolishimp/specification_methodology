@@ -2560,8 +2560,8 @@ needed to audit, refactor, or reconstruct the realized boundary.
 
 - `SPEC_METHOD.md` governs constitutional process, authority flow, repricing,
   and migration law
-- `RELEASE_METHOD.md` governs release-cut, product, install, and tap-process
-  evaluation
+- `RELEASE_METHOD.md` governs release-cut, Product, install, qualification, and
+  version-line promotion evaluation
 - `ODD_METHOD.md` governs graph-native constructive carrier law
 - `DESIGN_MODULE_METHOD.md` governs preferred realization structure inside
   implementation and design modules
@@ -2572,8 +2572,8 @@ needed to audit, refactor, or reconstruct the realized boundary.
 So:
 
 - `SPEC_METHOD.md` answers what is lawful process
-- `RELEASE_METHOD.md` answers what is a lawful release, product, install, and
-  tap decision
+- `RELEASE_METHOD.md` answers what is a lawful release, Product, install,
+  exact-cut acceptance, and selector-promotion decision
 - `ODD_METHOD.md` answers what is lawful graph-native product shape
 - `DESIGN_MODULE_METHOD.md` answers what is the preferred implementation design
   discipline when you want Ontology-first derivation, low coupling, no
@@ -2591,9 +2591,10 @@ strong functional consistency between front-end and back-end.
 
 The module lifecycle confirmation rule in this method detects whether the
 realization has enough lifecycle signal to be safely built and reviewed. It
-does not decide release eligibility, tap acceptance, install policy, or
-operational rollout. Those decisions remain governed by `RELEASE_METHOD.md` and
-project-owned release, deployment, or operational surfaces.
+does not decide release eligibility, exact-cut acceptance, selector promotion,
+install policy, or operational rollout. Those decisions remain governed by
+`RELEASE_METHOD.md` and project-owned release, deployment, or operational
+surfaces.
 
 ---
 

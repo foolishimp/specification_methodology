@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: de06dc0c5ec29add0adf3521164e90863160669817e79d27822bb874c9db6694
+source_digest: cc60fb5b4f2701a0fa7c7b166c33b2555c73e208e0ee4c777c3f0fbafea8153d
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -63,8 +63,9 @@ realization and immutable identity in its own authority surfaces.
 
 ## Prompt-Relevant Rules
 
-- A consumer selects one immutable method release. Its installed distribution
-  must match that cut; mutable methodology source authors only a future cut.
+- A consumer Product Definition selects one immutable RC cut and installed-
+  manifest digest. Its shared installed distribution must match that basis;
+  mutable methodology source and the version-line selector cannot replace it.
 - The ODD constructive loop consumes one externally selected unresolved Product
   outcome. Product models, gaps, ledgers, projections, assurance, and edge
   closure may interpret or evidence that outcome; they cannot author, select,

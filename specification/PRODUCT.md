@@ -2,8 +2,11 @@
 
 ## Product
 
-STDO is a versioned normative standards distribution. One released Product is
-one immutable, complete standards cut selected by a consumer.
+STDO is a versioned distribution containing one normative standards library
+and bounded auxiliary tooling. One released Product is one immutable, complete
+RC cut. Its standards member set is the singular constitutional authority; its
+toolchain manager and plugin remain subordinate executable and interaction
+projections.
 
 STDO owns normative construction algebra, authority relations, abstract state
 and transition laws, admissibility and refusal conditions, necessary causal
@@ -12,9 +15,11 @@ requirements, instantiated types and schemas, files, tools, runtime and
 orchestration machinery, tests, and executable conformance implementation.
 
 STDO may require a concrete representation only when that representation is an
-explicitly accepted method interoperability boundary. It does not implement a
-generic conformance engine, workflow governor, runtime, fixture suite, or
-consumer Product.
+explicitly accepted method interoperability boundary. STDO includes a bounded
+toolchain manager that installs, inventories, resolves, and verifies exact
+released STDO distributions and updates explicit Product Definition basis
+bindings. That manager does not interpret semantic conformance, govern consumer
+workflow, execute consumer construction, or become a consumer Product.
 
 Method vocabulary names normative capability roles and algebra. It does not
 select a required repository, package, vendor, runtime implementation, or
@@ -42,7 +47,11 @@ The Product provides:
 - an optional reference-frame baseline with engagement, specialist, and
   Product-testing evaluation families;
 - normative interoperability schemas and starter templates where the method
-  accepts a concrete exchange shape; and
+  accepts a concrete exchange shape;
+- one optional executable toolchain manager for shared versioned installation,
+  exact installed-release verification, portable `stdo:` URI resolution,
+  Product Definition synchronization and adoption, stable bootstrap management,
+  and bounded fleet operations; and
 - digest-bound compressed and bootstrap read models that project, but never
   replace, their deciding sources.
 
@@ -109,6 +118,13 @@ The overlay locates and relates:
 The overlay owns only identity, location, discovery, and relation mapping.
 Referenced constitutional, Product, requirement, design, ticket, comment, and
 runtime surfaces retain their own meaning and authority.
+
+The overlay also binds one mutable STDO version-line selector to one exact
+installed release basis. The selector locates an available accepted cut; it is
+not operative authority. The exact basis URI and installed-manifest digest are
+the sole current STDO selection for that Product Definition. Installed bytes,
+registries, caches, receipts, compressions, and agent bootstraps remain derived
+projections of that selection.
 
 ### Constitutional Sufficiency
 
@@ -211,7 +227,7 @@ their own Product or accepted-design authority when material.
 
 ## Product Outcome
 
-A conforming STDO Product is one complete immutable released standards cut in
+A conforming STDO Product is one complete immutable released RC distribution in
 which:
 
 - every law has one owning standard and every consuming surface refers to that
@@ -232,7 +248,11 @@ which:
   free of consumer-local architecture;
 - normative schemas, templates, source standards, compressions, and bootstrap
   projections express congruent relations at their respective authority
-  levels; and
+  levels;
+- the toolchain manager installs and resolves complete immutable releases,
+  verifies exact transport and inventory identity, and changes a consumer basis
+  only through a separately presented and explicitly accepted digest-bound
+  Product Definition adoption plan; and
 - every compression digest resolves to its deciding source or explicitly
   classified non-deciding index in the same selected cut.
 
@@ -251,12 +271,16 @@ this live Product surface.
 
 ## Exclusions
 
-- no executable frame, ticket, schema, URI, composition, build-tenancy, or
-  semantic-resolution or conformance engine;
+- no executable frame, ticket, schema, composition, build-tenancy,
+  semantic-resolution, or semantic-conformance engine; the bounded toolchain
+  manager executes only distribution, integrity, locator, bootstrap, and
+  explicit basis-adoption mechanics;
 - no prohibition on lawful term reuse across bounded contexts and no mandatory
   repeated qualifier where an enclosing context resolves one meaning uniquely;
-- no required package manager, registry, vendor, runtime, scoring formula,
-  model, prompt, or repository layout;
+- no required third-party package manager, registry vendor, runtime, scoring
+  formula, model, prompt, or repository layout; the STDO installation store and
+  `stdo:` resolver remain location-independent and optional where an exact
+  released distribution is otherwise resolvable;
 - no Bazel or other build-system representation requirement;
 - no testing hierarchy or authority transfer between testing frames;
 - no mandatory one-component-per-frame or one-agent-per-frame topology;

@@ -1408,7 +1408,8 @@ The result is:
 ## Companion Surfaces
 
 - `SPEC_METHOD.md`: constitutional specification method
-- `RELEASE_METHOD.md`: method for releasing standards into installed workspaces
+- `RELEASE_METHOD.md`: method for publishing immutable cuts and promoting
+  version-line selectors for installed consumer bases
 - `TICKET_METHOD.md`: method for turning discovery into bounded execution work
 - `constraint_emergence_ontology`, at
   `markov_object_research/empirical_results.md`:

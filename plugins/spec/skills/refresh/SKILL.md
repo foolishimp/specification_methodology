@@ -1,7 +1,7 @@
 ---
 name: refresh
 description: Reload one selected STDO standards basis into context
-argument-hint: "(--installed | --release <version> | --candidate) [--doc <name>] [--list]"
+argument-hint: "(--installed | --release <immutable-rc-cut> | --candidate) [--doc <name>] [--list]"
 disable-model-invocation: true
 ---
 
@@ -14,13 +14,13 @@ projection of that complete basis; it does not create a partial constitution.
 ## Usage
 
 ```
-/spec:refresh (--installed | --release <version> | --candidate) [--doc <name>] [--list]
+/spec:refresh (--installed | --release <immutable-rc-cut> | --candidate) [--doc <name>] [--list]
 ```
 
 | Option | Description |
 |--------|-------------|
-| `--installed` | Load from the consumer's pinned installed STDO cut |
-| `--release <version>` | Load from the immutable released cut identified by `<version>` |
+| `--installed` | Resolve the applicable Product Definition and load its pinned, verified installed STDO basis |
+| `--release <immutable-rc-cut>` | Load the immutable released cut identified by `v<version>-rc.<n>` |
 | `--candidate` | Load mutable authoring source as explicitly non-operative candidate context |
 | `--doc <name>` | Load a specific document by short name (see list below) |
 | `--list` | Show available documents and their paths |
@@ -49,15 +49,21 @@ projection of that complete basis; it does not create a partial constitution.
 
 The command requires exactly one basis mode:
 
-- `--installed`: resolve the consumer's installed cut and verify its selected
-  version, immutable reference, and member-inventory identity;
-- `--release <version>`: resolve the immutable released cut for that version;
+- `--installed`: discover the applicable `stdo_<label>.json`, require exactly
+  one definition for the requested Product scope, read
+  `constitution.stdo.basis`, and use the STDO toolchain manager to verify and
+  resolve that exact URI and manifest digest;
+- `--release <immutable-rc-cut>`: resolve the exact annotated
+  `v<version>-rc.<n>` tag and never substitute the mutable `v<version>`
+  selector;
 - `--candidate`: resolve mutable `specification_methodology` authoring source
   and label it candidate-only.
 
-Do not silently fall back between modes. Mutable source must never replace a
-missing installed or released basis. If the selected basis cannot be verified,
-stop and report the missing identity.
+Do not silently fall back between modes. Mutable source, a different installed
+cut, a project-local copy, and the moving version-line selector must never
+replace a missing installed or released basis. If the Product Definition is
+ambiguous or the exact basis cannot be verified, stop and report the missing
+identity.
 
 For `--candidate`, emit:
 

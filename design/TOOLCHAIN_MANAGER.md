@@ -1,0 +1,113 @@
+# STDO Toolchain Manager Design
+
+- Status: active
+- Implements: `.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md`
+- Derives from: `specification/PRODUCT.md#product-definition-overlay`
+- Supersedes: none
+- Superseded by: none
+
+## Boundary
+
+The manager is a dependency-light Python command-line application installed
+once per user or build image. It manages exact STDO distribution bytes and
+Product Definition routing. It does not evaluate semantic conformance, govern a
+consumer workflow, infer product composition, or own a consumer's selection.
+
+The Product Definition is the sole authored selection surface. Its exact basis
+is an immutable logical release URI plus the SHA-256 of a deterministic
+installed-release manifest. Its version-line selector is discovery input only.
+
+## Legacy Installer Disposition
+
+ABIogenesis `gen-install.py` supplied three useful precedents: an explicit
+verify-only path, idempotent marker-delimited `AGENTS.md`/`CLAUDE.md` updates,
+and machine-readable install results. The manager retains those properties.
+
+It intentionally does not retain that installer's adjacent mutable-source copy,
+wholesale `.genesis` replacement, fixed project scaffold, or presence-only
+standards verification. Those behaviors coupled method upgrades to one source
+checkout and rewrote every consumer. The replacement installs immutable cuts in
+one shared store and lets each layout-neutral Product Definition select its own
+exact basis.
+
+## Components
+
+- `git_source.py` reacquires one annotated immutable RC tag into an isolated
+  temporary bare object store and resolves a mutable version-line alias to a
+  matching immutable RC.
+- `manifest.py` derives the exact tag, commit, trees, standards inventory,
+  canonical member-set digest, member bytes, license, release note, and plugin
+  payload admitted to an installation.
+- `store.py` atomically materializes immutable cuts, records logical URI
+  mappings, resolves members within the release root, and detects missing,
+  extra, changed, or redirected state.
+- `product_definition.py` discovers overlays, validates them against their
+  exact schema, reports and synchronizes pinned bases, performs explicit
+  selector adoption, and updates marker-bounded agent bootstraps.
+- `cli.py` exposes singular and fleet operations without creating another
+  authority surface.
+
+## Store
+
+The logical layout is:
+
+```text
+<store>/
+├── registry.json
+└── releases/
+    └── v<version>-rc.<n>/
+        ├── manifest.json
+        ├── standards/
+        ├── plugins/spec/
+        ├── release/release-note.md
+        └── LICENSE
+```
+
+The physical root defaults to the user data directory for the host platform and
+may be overridden by `STDO_STORE` or `--store`. Product Definitions never carry
+that machine-local path. `stdo://releases/<cut>/...` resolves through the local
+registry only after the entry is confined to the expected release directory.
+
+Installation is staged under the store, verified, made read-only, and renamed
+atomically. Existing bytes are never repaired or overwritten in place. A
+damaged installation fails closed so the operator can inspect it.
+Manager-owned store roots, registries, release directories, payload
+directories, and payload files must be physical entries of their declared
+type. Verification inventories directories, regular files, redirects, and
+special entries without following them; every undeclared entry is damage.
+
+## Operations
+
+- `install` names an immutable RC cut directly and changes only the store.
+- `sync` installs and verifies the basis already pinned in one definition; it
+  never follows the selector and never edits the definition.
+- `adopt --dry-run` resolves and reports the exact selector target plus a digest
+  over current definition bytes, cut, annotated tag, commit, tree, and manifest.
+- mutating `adopt` requires that externally accepted digest, re-derives it,
+  installs only the bound target, rechecks the definition bytes, then atomically
+  changes only `constitution.stdo.basis` and a basis-relative `$schema` URI.
+- `bootstrap` owns only one delimited block in each declared agent file and
+  preserves all other project bytes exactly. Targets are relative to the
+  resolved `product.source_project`; every target is preflighted before writes.
+- `fleet` discovers `stdo_<label>.json` files recursively while excluding VCS,
+  dependency, generated, and managed-store directories. Every fleet write
+  requires `--all`; adoption also requires its aggregate accepted plan digest,
+  while bootstrap confines every source project to the fleet root.
+
+## Refusals
+
+The manager refuses unannotated or malformed cut identities, lightweight
+version-line selectors, absent matching RC tags, unaccepted or stale adoption
+plans, unexpected manifest digests, damaged or extra installed entries of any
+type, store or registry redirection, URI traversal, cross-basis schema locators,
+invalid Product Definition shape or formats, bootstrap boundary escape,
+malformed markers, and implicit fleet writes.
+
+## Verification
+
+The executable boundary is tested against unrelated temporary Git releases for
+installation, reinstallation, tamper detection, URI escape, exact-basis sync,
+selector adoption, marker idempotence, fleet discovery, and refusal paths. A
+repository dogfood test independently installs the immutable released
+`v2.4.3-rc.1` cut and checks its known commit, 45-member inventory, and canonical
+aggregate digest.

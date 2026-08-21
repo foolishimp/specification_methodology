@@ -13,20 +13,18 @@ Use these templates as source material for project-local files such as:
 - `CLAUDE.md`
 - `AGENTS.md`
 
-When a template contains install-local placeholders such as
-`<workspace-root>` or `<method-standards-root>`, replace them with the values
-for the target workspace.
-
 ## Product Definition Overlay
 
 `PRODUCT_DEFINITION_TEMPLATE.json` is the one per-product fill-in overlay. Its
 normative schema is `../schemas/product-definition.schema.json`.
 
-The current schema identity is `urn:stdo:schema:product-definition:2`. Relative
-to schema revision 1, definitions with an empty `disambiguations` array require
-no field migration. Every retained non-empty revision-1 disambiguation must add
-the term, context, selected concept, and basis coordinates required below; no
-other Product Definition Overlay field changes in this repair.
+The current schema identity is `urn:stdo:schema:product-definition:3`. Revision
+3 replaces the undifferentiated `constitution.authorities` array with one
+explicit STDO source, mutable version-line selector, exact installed basis and
+manifest digest, plus `additional_authorities`. Constitutional entrypoints are
+basis-qualified objects, and `agent_bootstrap` declares the entrypoint and local
+instruction targets managed between stable markers. Other Product Definition
+relations retain their revision-2 meaning.
 
 Copy it to the logical root of one product definition:
 
@@ -42,10 +40,11 @@ references from the copied JSON file. Fill its bindings over the project's
 existing files and systems; do not restructure an existing project merely to
 match the default paths in the template.
 
-The template's `$schema` value assumes the selected standards are installed at
-`.genesis/docs/standards/` relative to that definition root. Replace it with
-the selected released schema URI when the install is elsewhere, including for
-a definition nested below a workspace-level standards install.
+The template's `$schema` value is relative to the same exact logical release
+basis selected in `constitution.stdo.basis`; it contains no machine-local store
+path. Install the cut once through the STDO toolchain manager and resolve the
+`stdo:` URI through that manager. A project-local `.genesis` copy is not
+required.
 
 One definition represents one distinct product `WHAT`. Put multiple
 independent realizations of that same `WHAT` in `how.build_tenants`, not in
@@ -71,12 +70,15 @@ the complete import, translation, or equivalence relation required by
 
 Replace at least:
 
-- `$schema` when the default install-relative URI does not resolve;
+- `$schema` with the exact immutable release URI selected below;
 - `product.definition_id`, name, source-project locator, and bounded-context
   declaration, keeping definition identity distinct from immutable Product and
   release identities;
-- the immutable STDO release tag in `constitution.authorities`;
-- constitutional entrypoints and every local constitutional relation;
+- `constitution.stdo.source.repository`, the non-operative
+  `stdo://channels/<version>` selector, and the exact
+  `stdo://releases/<immutable-rc>/` basis plus installed-manifest digest;
+- every additional constitutional authority, basis-qualified entrypoint, agent
+  bootstrap target, and local constitutional relation;
 - every retained disambiguation placeholder, including its term, context,
   candidate concepts, selected concept, authority, basis, and scope;
 - collective reference-frame basis URIs, admitting authorities, and scopes;
@@ -101,3 +103,13 @@ constitutional set, confirm unique definition and tenant identities, verify
 composition target identities and contracts, and evaluate constitutional
 sufficiency, semantic resolution, cross-context relation completeness, and
 authority congruence under `SPEC_METHOD.md`.
+
+For a filled definition, `stdo sync --definition <file>` installs and verifies
+only its already selected exact basis. Run
+`stdo adopt --definition <file> --dry-run` to show the immutable cut currently
+advertised by its annotated version-line selector and its exact plan digest;
+apply with `--accept-plan-sha256 <digest>` in a separate invocation only after
+explicitly accepting that basis change. `stdo bootstrap --definition <file>`
+preflights targets relative to `product.source_project` and refreshes only the
+declared marker-bounded agent bootstrap. Fleet writes require `--all`; fleet
+adoption also requires its separately presented aggregate plan digest.

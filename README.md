@@ -2,11 +2,70 @@
 
 Authoring source repository for the shared specification methodology.
 
+New to the toolchain or adding STDO to an existing project? Start with the
+[STDO Quickstart](QUICKSTART.md).
+
 Mutable future-method source lives under `specification/standards/`. Publication
-authority is one immutable released STDO cut identified by version, immutable
-reference, and exact member inventory. A consumer is governed by the complete
-released cut it selects, whether referenced directly or installed into a local
-location such as `.genesis/docs/standards/`.
+authority is one immutable released STDO RC cut identified by its annotated tag,
+commit, tree, and exact member inventory. A consumer is governed by the complete
+cut pinned in its Product Definition. The `v<version>` tag is only the mutable
+alias to the latest accepted RC on that line.
+
+The `stdo` toolchain manager installs immutable cuts once in a shared versioned
+store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
+already pinned Product Definitions, and performs explicit adoption and fleet
+updates. Projects do not need a copied standards tree or prescribed layout.
+
+During development, install the manager itself with an isolated Python
+application installer:
+
+```sh
+pipx install .
+```
+
+For a released manager, install from an immutable RC tag rather than the moving
+version-line alias:
+
+```sh
+pipx install "git+https://github.com/foolishimp/specification_methodology.git@v<version>-rc.<n>"
+```
+
+Then install or inspect a cut:
+
+```sh
+stdo install v2.4.3-rc.1
+stdo list
+stdo resolve stdo://releases/v2.4.3-rc.1/standards/SPEC_METHOD.md
+```
+
+For a governed project, use `stdo sync --definition stdo_default.json` to
+materialize the exact basis already pinned by that definition. Use the following
+to inspect a newer accepted RC. The dry-run emits `plan_sha256`; pass that exact
+digest in a separate invocation only when the project accepts the presented
+target:
+
+```sh
+stdo adopt --definition stdo_default.json --dry-run
+stdo adopt --definition stdo_default.json \
+  --accept-plan-sha256 <plan_sha256>
+```
+
+For a monorepo or a directory of independently governed projects, fleet reads
+discover every `stdo_<label>.json` recursively. Writes require explicit
+whole-selection authorization:
+
+```sh
+stdo fleet status --root /path/to/workspace
+stdo fleet sync --root /path/to/workspace --all
+stdo fleet adopt --root /path/to/workspace --all --dry-run
+stdo fleet adopt --root /path/to/workspace --all \
+  --accept-plan-sha256 <plan_sha256>
+stdo fleet bootstrap --root /path/to/workspace --all
+```
+
+Bootstrap targets are portable paths relative to each definition's resolved
+`product.source_project`. Fleet bootstrap first confirms that every source
+project and target remains inside the authorized fleet root.
 
 Initial provenance:
 
@@ -15,10 +74,11 @@ Initial provenance:
 - `abiogenesis` installed the standards library from `genesis_sdlc/specification/standards/` through `gen-install.py` as of commit `f7820d4cfdff3e1b1cf270223f62b758a43a2214` on 2026-04-06.
 
 Going forward, edit methodology here first. Downstream repos select and pin one
-complete released STDO version. Mutable repository head is authoring input, not
-consumer constitutional authority.
+complete immutable STDO RC cut. Mutable repository head and the moving version-
+line alias are discovery or authoring inputs, not consumer constitutional
+authority.
 
-Release notes for tapped cuts live under `releases/`.
+Release notes for immutable RC cuts live under `releases/`.
 
 ## License
 
