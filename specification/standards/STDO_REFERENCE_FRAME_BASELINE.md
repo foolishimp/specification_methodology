@@ -112,10 +112,14 @@ installed file presence, prompts, summaries, and commentary do not select it.
 
 ---
 
-## Practical Provenance
+## Empirical Revision Boundary
 
-ABIogenesis supplied the practical discovery environment for this profile. Its
-current delivery practice exposed several durable lessons:
+Accumulated delivery practice and observed failure may inform frame selection,
+qualification, and revision. Such evidence does not become STDO authority and
+does not import the originating consumer's architecture, names, actors,
+topology, runtime, artifacts, or work stages into this generic profile.
+
+The profile's engagement relation requires:
 
 - one bounded authority selects the active work and the finite frames needed to
   evaluate it;
@@ -127,11 +131,11 @@ current delivery practice exposed several durable lessons:
 - inability to perceive a known violation is evidence of a missing,
   misactivated, oversized, or capability-incompatible frame.
 
-Repeated resets, days-long repair loops, moving review subjects, proof masking,
-and duplicate authority supplied the failure evidence. ABIogenesis remains
-discovery evidence, not STDO authority. No ABIogenesis graph, runtime, event,
-module, agent topology, ticket stage, or local role name is part of this
-profile's universal subject.
+Repeated resets, extended repair loops, moving review subjects, proof masking,
+and duplicate authority are generic signals that a frame declaration,
+activation, capability match, basis, or authority relation may be defective.
+They justify reevaluation; they do not identify one universal architecture or
+grant precedent semantic authority.
 
 ---
 
@@ -406,6 +410,13 @@ basis, material manifold, coordinates, invariants, authority, evidence,
 exclusions, result algebra, capability envelope, dependencies, and
 invalidation conditions for every activated instance.
 
+The family labels resolve inside
+`urn:stdo:bounded-context:reference-frame-evaluation` under the selected STDO
+basis. Under `SPEC_METHOD.md`'s Bounded-Context Semantic Resolution law,
+`Product`, `Owner`, `Entity`, `Operator`, `Install`, and the other labels do not
+become equal to same-spelled Product, authority, domain, or runtime concepts.
+An explicit relation is required at every material cross-context seam.
+
 | Frame family | Evaluation family and exact subject | Governing authority and permitted output | Immediate falsifier |
 |---|---|---|---|
 | **Product** | Does one exact current Product claim, outcome, boundary, and lifecycle govern the claimed Product subject without downstream reinterpretation? The basis is current Intent, Product, requirements, acceptance meaning, and exact Product coordinates. | Product and requirement authority retain meaning and acceptance. The frame returns only a bounded evaluation result and evidence. | Design, code, tests, a predecessor behavior, or local convention changes Product meaning or substitutes a different Product subject. |
@@ -457,9 +468,8 @@ and provenance. A missing or non-commuting seam returns the applicable
 `falsified`, `indeterminate`, `out_of_frame`, or `invalid_basis` result; no
 frame is selected as dominant.
 
-This generic set imports no ABIogenesis, GTL, HoG, or ABG frame and no renamed
-architectural substitute such as Product Composition, Semantic Source,
-Execution Derivation, or Admission And Runtime Truth. A consumer may declare
+This generic set imports no consumer-specific frame, runtime role,
+architectural topology, or renamed local substitute. A consumer may declare
 such frames under its own Product or accepted-design authority when they are
 material. They are not part of this baseline.
 
@@ -1286,9 +1296,8 @@ This profile is misapplied when:
 14. this profile restates `STDO-UP-020`, `STDO-UP-007`, or `STDO-UP-022` as
     peer constitutional law;
 15. a project-defined configuration silently changes selected STDO law;
-16. consumer-specific realization machinery, including ABIogenesis, GTL, HoG,
-    or ABG topology or a renamed architectural equivalent, is presented as a
-    universal requirement;
+16. consumer-specific realization machinery or a renamed architectural
+    equivalent is presented as a universal requirement;
 17. test labels or runner choice substitute for declaring the exact testing
     frame, subject, claim, population, oracle, path, and falsification condition;
 18. unit-test, assertion, snapshot, line, branch, or function count is used as a

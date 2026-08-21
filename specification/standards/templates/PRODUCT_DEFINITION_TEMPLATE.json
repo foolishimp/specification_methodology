@@ -23,7 +23,28 @@
   "local_constitution": {
     "axioms": [],
     "overrides": [],
-    "disambiguations": []
+    "disambiguations": [
+      {
+        "uri": "./specification/PRODUCT.md#replace-with-term-disambiguation",
+        "term": "Replace Me",
+        "context": "urn:stdo:bounded-context:replace-me",
+        "disambiguates": [
+          "./specification/PRODUCT.md#replace-with-selected-concept",
+          "./specification/PRODUCT.md#replace-with-competing-concept"
+        ],
+        "resolves_to": "./specification/PRODUCT.md#replace-with-selected-concept",
+        "authority": [
+          "./specification/PRODUCT.md"
+        ],
+        "basis": [
+          "https://github.com/foolishimp/specification_methodology/tree/REPLACE_WITH_RELEASE_TAG/specification/standards/",
+          "./specification/PRODUCT.md"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:replace-me"
+        ]
+      }
+    ]
   },
   "reference_frame_bases": [
     {

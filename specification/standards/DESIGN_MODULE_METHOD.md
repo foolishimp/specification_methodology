@@ -1733,6 +1733,12 @@ the module boundary, the proof surface is too weak.
 
 ## 6B. Module-Derived Unit Test Rule
 
+This clause consumes the product-assurance bounded context
+`urn:stdo:bounded-context:product-assurance` declared by
+`SPEC_METHOD.md#testing-strategy-taxonomy`. `DESIGN_MODULE_METHOD.md` owns the
+module-derived `Unit Test` concept and proof relation inside that context; it
+does not take ownership of Product-level UAT or acceptance meaning.
+
 Unit tests under this method are module-owned proof lanes.
 
 They must derive from module ownership evidence, not from code shape alone.

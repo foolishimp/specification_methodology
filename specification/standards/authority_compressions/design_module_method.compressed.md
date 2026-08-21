@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 89659b99abe7af87a7cc0241d9f167b8a74acdbfe7b721544151cd1ce5d876d1
+source_digest: 46424b835a46f8b63b47c2fb74713620fa23ea9f4b5c399986c64e09d010c000
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -55,6 +55,11 @@ This asset projects `DESIGN_MODULE_METHOD.md` only. It is standalone for
 DMM-owned decisions, including IACS revision, but cannot close the SPEC-owned
 `STDO-UP-022` assurance decision. For that decision, route to the digest-current
 SPEC source or compression, or to the aggregate STDO compression.
+
+Inside the SPEC-declared product-assurance bounded context, DMM owns the
+module-derived `Unit Test` concept and proof relation. Unit proof derives from
+module ownership and the accepted Ontology/design basis; it does not acquire
+Product-level UAT or acceptance authority.
 
 This rule applies only to the named boundary where the project adopts this
 method. A material semantic boundary changes identity, authority, lifecycle,

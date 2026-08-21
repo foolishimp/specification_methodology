@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: de0fe03a92709fd71d784087be7bc883ad4ac21586d00b6d21b05baf2c2df73b
+source_digest: 769f179486efabf32d1a9d63366f15a402ee59656938f9a95a4b41ed90a39b5c
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -51,8 +51,10 @@ the aggregate STDO compression.
   make axioms, ontology, epistemology, taxonomy, and semantics recoverable.
   Those are sufficiency dimensions, not five required files or folders.
 - Local axioms, overrides, and disambiguations name their carrier, governing
-  authority, target where applicable, and exact scope. Listing a local file
-  does not mint authority.
+  authority, target where applicable, selected basis, and exact scope. Each
+  disambiguation also binds the exact term, target bounded context, complete
+  material candidate set, and one selected member of that set. Listing a local
+  file does not mint authority or supply meaning.
 - `reference_frame_bases` is non-empty and locates the durable shared project
   frame-basis declarations, every admitting authority, and their exact scopes.
   An authorized work instruction or activation packet binds a particular agent
@@ -71,7 +73,34 @@ the aggregate STDO compression.
   annotations unless an assertion-capable validator is selected, so
   conformance separately asserts RFC 3986 syntax, resolution, target identity,
   selected-release identity, cross-file uniqueness, constitutional sufficiency,
-  and authority congruence.
+  semantic-resolution completeness, and authority congruence.
+
+## Bounded-Context Semantic Isolation Compression
+
+- A term is a lexical label, not a context-free concept identity. Resolve each
+  material occurrence through `(term, bounded-context identity, owning
+  authority, selected basis, governed scope)`.
+- An enclosing owning surface may declare context once. Unqualified use is
+  lawful when the coordinates resolve exactly one concept. Zero or multiple
+  applicable concepts fail closed; nominal match, familiarity, recency, file
+  proximity, or a glossary fallback cannot choose one.
+- The glossary is a non-deciding locator index, not a global namespace. Each
+  record points to an exact source clause that declares its context and owns
+  its concept. A record applies only when selected by the occurrence's semantic
+  address or explicitly imported into the target context.
+- Cross-context use requires an owner-authorized import, disambiguation,
+  directional translation, or equivalence relation identifying exact concepts
+  and contexts, direction where material, preserved and changed meaning, loss,
+  refusal, owners, bases, scope, provenance, lifecycle, and invalidation.
+  Translation does not transfer authority; identical spelling does not prove
+  equivalence.
+- A specialization is a directional translation that preserves cited source
+  meaning while narrowing admissible instances or adding target-context
+  constraints. It declares the exact target, exclusions, and absence or law of
+  an inverse; the label `specialization` alone establishes nothing.
+- Conformance includes positive unique-resolution and explicit-relation cases
+  plus collisions for `Frame`, `Owner`, `Product`, `Tenant`, and `User`.
+  Correct behavior reached through guessed meaning is non-conformant.
 
 ## Build-Tenancy Compression
 

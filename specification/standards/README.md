@@ -8,8 +8,10 @@ released cut of this tree is the selectable STDO Product:
   `WORLD_MODEL_METHOD.md`
 - derived application profiles such as `STDO_REFERENCE_FRAME_BASELINE.md`
 - companion governance and operating surfaces such as `POSTING_GUIDE.md`,
-  `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`,
-  `DESIGN_MODULE_METHOD.md`, and `GLOSSARY_GUIDE.md`
+  `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`, and
+  `DESIGN_MODULE_METHOD.md`
+- the non-deciding semantic locator index `GLOSSARY_GUIDE.md`, whose rows point
+  to context-declaring owning clauses and never define a shared default
 - source-maintained compressed read models under `authority_compressions/` for
   prompt-construction installs that need compact shared-method authority
 - normative interoperability schemas under `schemas/`, including the

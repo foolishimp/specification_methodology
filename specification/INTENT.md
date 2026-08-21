@@ -18,9 +18,14 @@ construction, UX transition algebra, world-model construction, Prime, IACS,
 and semantic design views are method law where their owning standards apply.
 Excluding executable STDO machinery does not make that algebra optional.
 
-## Version 2 Direction
+## Evolution Direction
 
-Version 2 evolves the accepted `v1.8.0` Product incrementally. It preserves or
-explicitly supersedes every accepted predecessor semantic and adds only the
-lessons that remain valuable independently of the rejected executable and
-overcorrected candidates.
+STDO evolves through explicit repricing and supersession. A live standards cut
+states current method truth in version-neutral terms; release authority records
+the exact predecessor relation, changed and conserved members, acceptance, and
+publication history for each immutable cut.
+
+Method evolution retains accepted semantics unless an owning source explicitly
+supersedes them. It admits reusable law independently of any particular
+consumer realization, discovery environment, executable mechanism, or rejected
+candidate.

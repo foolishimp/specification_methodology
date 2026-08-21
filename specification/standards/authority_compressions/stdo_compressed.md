@@ -13,28 +13,33 @@ source_refs:
   - ../schemas/product-definition.schema.json
   - ../DESIGN_MODULE_METHOD.md
   - ../ODD_METHOD.md
-  - ../GLOSSARY_GUIDE.md
+  - ../WORLD_MODEL_METHOD.md
   - ../TICKET_METHOD.md
   - ../UX_METHOD.md
   - ../IDENTITY_METHOD.md
   - ../RELEASE_METHOD.md
   - ../POSTING_GUIDE.md
+index_refs:
+  - ../GLOSSARY_GUIDE.md
 source_digests:
-  REFERENCE_FRAME_METHOD.md: 0d8370e383e72cf89eb68175a6f3ecccb4a7fb913f4feed1f0810d1b558e471d
-  STDO_REFERENCE_FRAME_BASELINE.md: 86b046e9b2ba25523ce47d7891c09163ffb550ee8c13201717795d9c54ef1384
-  SPEC_METHOD.md: de0fe03a92709fd71d784087be7bc883ad4ac21586d00b6d21b05baf2c2df73b
-  schemas/product-definition.schema.json: 59739be97bc8caa688ce522e6e8a6b0c616395c6cea9f58d1caed73f6e5c1db1
-  DESIGN_MODULE_METHOD.md: 89659b99abe7af87a7cc0241d9f167b8a74acdbfe7b721544151cd1ce5d876d1
-  ODD_METHOD.md: c0d9d657e50a7947e0fa17a8fb751a0369aee18ac98677ceca61c894db28ab50
-  GLOSSARY_GUIDE.md: 4c4e3c99965846a7c1879a114b1b5aa16f7772ddb6ed4b625a806da2b36cb0ac
-  TICKET_METHOD.md: 1aed28098af70875df08d1b00b6b840988cd4a4f79b02b4e0289857aa73f09fe
+  REFERENCE_FRAME_METHOD.md: a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174
+  STDO_REFERENCE_FRAME_BASELINE.md: 9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9
+  SPEC_METHOD.md: 769f179486efabf32d1a9d63366f15a402ee59656938f9a95a4b41ed90a39b5c
+  schemas/product-definition.schema.json: 3a617bdcd1665198d518af2103d02280a33603c2133e730e43ccbe55f10fab35
+  DESIGN_MODULE_METHOD.md: 46424b835a46f8b63b47c2fb74713620fa23ea9f4b5c399986c64e09d010c000
+  ODD_METHOD.md: de06dc0c5ec29add0adf3521164e90863160669817e79d27822bb874c9db6694
+  WORLD_MODEL_METHOD.md: a6a7d9ebac98d13754616e48e9a7f98ce34535ad9854d69cdc1b8f1d5e3fea32
+  TICKET_METHOD.md: 0e54239e332c0adb59a7fb74e931176efe741598566aa9ad6a6c9994c271b4e1
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: 9348451648b4afc9f61c4f4b544aeafc7a92c3b1b5bc112872945cd44c8e0a53
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
+index_digests:
+  GLOSSARY_GUIDE.md: e3254b36a451767e8f297984adc2f36dc4d405e162b25125c8d6d5ffb1972306
 generated_by: codex
 generated_at: 2026-08-21
 stale_if_source_digest_changes: true
+stale_if_index_digest_changes: true
 ---
 
 # STDO Compressed Authority
@@ -103,6 +108,10 @@ layer that owns the missing truth.
 - A constitutionally sufficient document set collectively makes axioms,
   ontology, epistemology, taxonomy, and semantics recoverable. These are
   coverage dimensions, not five assumed documents or directories.
+- Each local disambiguation binds the exact term, target bounded context,
+  complete material candidate set, one selected member of that set, owning
+  carrier and authority, semantic bases, and governed scope. The overlay
+  locates the resolution; it does not own or restate the candidate meanings.
 - `reference_frame_bases` is non-empty and locates each durable shared project
   frame-basis declaration, its existing admitting authorities, and exact
   governed scope. A ticket or other authorized work instruction binds one
@@ -124,7 +133,34 @@ layer that owns the missing truth.
   annotations unless an assertion-capable validator is used, so conformance
   separately checks RFC 3986 syntax, resolution, target identity, immutable
   release identity, cross-file uniqueness, constitutional sufficiency, and
-  authority congruence.
+  semantic-resolution completeness, and authority congruence.
+
+## Bounded-Context Semantic Isolation
+
+- Term spelling is a label, not context-free concept identity. Resolve each
+  material occurrence by term, bounded-context identity, owning authority,
+  selected basis, and governed scope.
+- An owning document, section, field, operation, or other surface may declare
+  context once. Unqualified use is lawful when exactly one concept resolves.
+  Zero or multiple applicable concepts fail closed; repository position,
+  nominal match, actor familiarity, frequency, or recency cannot choose one.
+- `GLOSSARY_GUIDE.md` is a non-deciding locator index, not a global default
+  namespace. Each row points to a source clause that declares the context and
+  owns the concept; the index declares neither. Another context receives a
+  meaning only through an explicit relation.
+- Cross-context import, disambiguation, directional translation, or equivalence
+  identifies exact source and target concepts and contexts, relation kind and
+  direction where material, preserved and changed meaning, loss, refusal,
+  owners, bases, scope, provenance, lifecycle, and invalidation. It transfers
+  no semantic or decision authority.
+- The world-model context imports `Source Project`, `Product`, `Install`, and
+  `Artifact` unchanged from the recursive taxonomy. `Builder Project` is a
+  distinct exact target concept related to `Source Project` by a directional
+  specialization that declares preserved and narrowed meaning, loss, refusal,
+  owners, basis, scope, and invalidation. Glossary references remain indexes.
+- Conformance covers positive unique-resolution and explicit-relation cases and
+  negative collisions for `Frame`, `Owner`, `Product`, `Tenant`, and `User`.
+  Correct output through an inferred or guessed meaning does not pass.
 
 ## Build-Tenancy Compression
 

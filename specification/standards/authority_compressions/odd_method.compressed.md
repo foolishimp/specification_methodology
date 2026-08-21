@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: c0d9d657e50a7947e0fa17a8fb751a0369aee18ac98677ceca61c894db28ab50
+source_digest: de06dc0c5ec29add0adf3521164e90863160669817e79d27822bb874c9db6694
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -21,10 +21,13 @@ An ODD product is typed domain assets or nodes, published graph functions, GTL
 module or public carrier, ABG runtime, projection or query surface, and proof
 surface.
 
-ODD, GTL, and ABG name normative capability roles and construction algebra.
-They do not select a repository, package, vendor, runtime implementation, or
-downstream Product. A consumer binds each concrete realization and immutable
-identity in its own authority surfaces.
+ODD means Outcome-Driven Development and GTL means Graph Transformation
+Language. `ODD_METHOD.md` owns ODD, GTL, ABG, graph traversal, and F_D/F_P/F_H
+concepts in `urn:stdo:bounded-context:graph-native-odd`. These normative
+capability roles
+and construction algebra do not select a repository, package, vendor, runtime
+implementation, or downstream Product. A consumer binds each concrete
+realization and immutable identity in its own authority surfaces.
 
 ## Boundary Compression
 
@@ -37,8 +40,12 @@ identity in its own authority surfaces.
   transformation-admission relation in `DESIGN_MODULE_METHOD.md`. ABG's broader
   execution, supervision, retry, and projection authority derives from ODD law
   and is not thereby reclassified as admission authority. `F_P` and `F_H` are
-  the ODD projections of the generic candidate-producer and human-adjudication
-  roles.
+  directional graph/runtime specializations of substrate-neutral lawful
+  probabilistic processing and human adjudication. They narrow scope to one
+  declared traversal and have no implied inverse or authority transfer.
+  Their exact target concepts are `urn:stdo:concept:graph-native-odd:f-p` and
+  `urn:stdo:concept:graph-native-odd:f-h`; their exact sources are the
+  corresponding ambiguity-governance concepts declared by `SPEC_METHOD.md`.
 - The product owns domain meaning, policy overlays, domain acceptance, and
   product-specific interpretation.
 - One `stdo_<label>.json` definition locates the concrete product's
@@ -86,6 +93,9 @@ identity in its own authority surfaces.
 - F_D can validate, admit, project, and mechanically transform admitted truth.
   F_D cannot replace semantic F_P judgment unless a product contract declares
   deterministic authority.
+- F_H is explicit human adjudication under the traversal's declared authority
+  and ambiguity policy; human identity alone grants no ambient traversal,
+  semantic, or closure authority.
 - Conforming agentic development (§11.7A): an agentic coder follows the
   constitutional process from a minimal declared authority packet with source
   refs. The agentic walkthrough is the F_P proof the process is followable;

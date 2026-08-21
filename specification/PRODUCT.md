@@ -24,20 +24,48 @@ authority.
 
 ## Current Product Definition
 
-The current STDO source project authors one complete successor standards cut
-that makes product authority, realization tenancy, work carriers, collective
-reference-frame engagement, and product composition discoverable without
-making repository layout constitutional.
+The current STDO source project defines one complete, modular standards
+distribution whose released authority is singular. STDO names its key
+Specification, Ticketing, Design, and Outcome-Driven Development method pillars
+without reducing the Product to those four owners or making any member
+independently selectable.
 
-The Product has two primary additions:
+The Product provides:
 
-1. one layout-neutral STDO Product Definition Overlay for each distinct current
-   product `WHAT`; and
-2. a generic specialist-frame set in the optional STDO reference-frame
-   baseline.
+- normative construction, authority, admissibility, causal-order, and evidence
+  relations across its owning standards;
+- one layout-neutral Product Definition Overlay for locating constitutional
+  `WHAT`, independent build-tenant `HOW`, work carriers, collective
+  reference-frame bases, local constitutional decisions, and explicit
+  composition;
+- bounded-context semantic isolation and explicit cross-context relations;
+- an optional reference-frame baseline with engagement, specialist, and
+  Product-testing evaluation families;
+- normative interoperability schemas and starter templates where the method
+  accepts a concrete exchange shape; and
+- digest-bound compressed and bootstrap read models that project, but never
+  replace, their deciding sources.
 
-The same Product also defines the STDO and ODD shorthands explicitly and keeps
-their glossary, source compressions, and bootstrap projections aligned.
+## Bounded-Context Semantic Isolation
+
+Equal spelling across bounded contexts does not establish equal meaning,
+concept identity, equivalence, or authority. A material term occurrence is
+interpretable only under its bounded context, owning authority, selected basis,
+and governed scope. Unqualified prose remains lawful where those coordinates
+resolve exactly one applicable meaning; otherwise interpretation fails closed.
+
+A context may consume another context's meaning only through an explicit
+owner-authorized import, translation, equivalence, or disambiguation relation.
+The relation identifies the source and target concepts and contexts, direction
+where material, preserved and changed meaning, authority, basis, scope,
+refusal, and invalidation conditions. Translation never transfers the source
+or target owner's authority.
+
+The glossary is a non-deciding index of exact source-owned concept clauses and
+their declared bounded contexts. It cannot supply meaning merely because a
+matching word appears in another method, Product, runtime, tenant, user model,
+or repository subtree. Directory nesting, file proximity, shared actors, and
+nominal equality create no semantic import.
 
 ## Product Definition Overlay
 
@@ -67,7 +95,8 @@ The overlay locates and relates:
   optional bounded-context identity;
 - complete constitutional authorities and useful reading entrypoints;
 - local axioms, overrides, and disambiguations with their lawful authority,
-  target, and scope;
+  target, basis, and scope, including exact term, context, candidate, and
+  selected-concept bindings for disambiguation;
 - one or more durable project reference-frame bases with admitting authorities
   and governed scopes;
 - Intent, Product, and specification carriers defining `WHAT`;
@@ -120,7 +149,8 @@ URI and URI-reference formats are annotations unless the selected validator
 implements format assertion. Conformance therefore checks syntax through an
 assertion-capable RFC 3986 validator and checks resolution, fragment existence,
 selected-release identity, cross-file uniqueness, constitutional sufficiency,
-composition identity, and authority congruence separately.
+semantic-relation completeness, composition identity, and authority congruence
+separately.
 
 ## Build Tenancy And Work Carriers
 
@@ -149,10 +179,9 @@ and proof obligations separately.
 
 ## Reference-Frame Engagement
 
-The optional STDO baseline retains Executive, Worker, and Reviewer engagement
-frames and the distinct user-acceptance, end-to-end, integration, and unit
-testing frames. It additionally provides eleven generic specialist-frame
-families:
+The optional STDO baseline defines Executive, Worker, and Reviewer engagement
+frames, distinct user-acceptance, end-to-end, integration, and unit testing
+frames, and eleven generic specialist-frame families:
 
 - Product;
 - Design;
@@ -176,33 +205,36 @@ conjunction that satisfies every applicable constraint and preserves or
 lawfully translates identity, coordinate and basis, value or evidence,
 lifecycle, authority, and provenance at each material cross-frame seam.
 
-ABIogenesis remains practical discovery evidence. ABIogenesis, GTL, HoG, ABG,
-and renamed consumer-local architectural substitutes are not members of the
-generic baseline. Consumers may declare local frames under their own Product or
-accepted-design authority when material.
+Consumer-local architectures, runtime roles, and renamed local substitutes are
+not members of the generic baseline. Consumers may declare local frames under
+their own Product or accepted-design authority when material.
 
 ## Product Outcome
 
-The current Product is complete when one exact candidate:
+A conforming STDO Product is one complete immutable released standards cut in
+which:
 
-- contains one normative Product Definition Overlay schema and one fill-in
-  template;
-- preserves layout independence across existing, default, monorepo, and nested
-  project forms;
-- keeps constitutional, local, frame-basis, `WHAT`, `HOW`, work, and
-  composition authority distinct and discoverable;
-- verifies mutable definition identity independently from immutable Product and
-  release identity;
-- refuses composition retargeting, empty governing contracts, unresolved
-  authority, malformed URI syntax, and conflicting carrier ownership;
-- adds the eleven generic specialist-frame families without importing a local
-  architecture or creating another authority layer;
-- keeps source-specific and aggregate compressions digest-current and keeps
-  Codex and Claude bootstrap projections semantically aligned;
-- preserves every predecessor relation outside the declared Product additions;
-  and
-- passes the exact qualification, review, acceptance, and publication path
-  required for one immutable successor cut.
+- every law has one owning standard and every consuming surface refers to that
+  owner without creating rival authority;
+- material terms resolve through bounded-context identity, owning authority,
+  selected basis, and governed scope, with zero or multiple meanings failing
+  closed;
+- cross-context imports, translations, equivalences, specializations, and
+  disambiguations identify exact concepts and preserve owner authority;
+- the glossary contains locator records only and every indexed context and
+  concept is declared in its cited owning clause;
+- the Product Definition Overlay remains layout-neutral, identity-complete,
+  composition-explicit, and separate from the meaning of every surface it
+  locates;
+- mutable product-definition identity, immutable Product and release identity,
+  build-tenancy identity, and bounded-context identity remain distinct;
+- the optional reference-frame baseline remains generic, non-hierarchical, and
+  free of consumer-local architecture;
+- normative schemas, templates, source standards, compressions, and bootstrap
+  projections express congruent relations at their respective authority
+  levels; and
+- every compression digest resolves to its deciding source or explicitly
+  classified non-deciding index in the same selected cut.
 
 ## Release And History Boundary
 
@@ -220,7 +252,9 @@ this live Product surface.
 ## Exclusions
 
 - no executable frame, ticket, schema, URI, composition, build-tenancy, or
-  conformance engine;
+  semantic-resolution or conformance engine;
+- no prohibition on lawful term reuse across bounded contexts and no mandatory
+  repeated qualifier where an enclosing context resolves one meaning uniquely;
 - no required package manager, registry, vendor, runtime, scoring formula,
   model, prompt, or repository layout;
 - no Bazel or other build-system representation requirement;

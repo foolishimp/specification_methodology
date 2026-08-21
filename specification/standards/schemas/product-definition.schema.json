@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:stdo:schema:product-definition:1",
+  "$id": "urn:stdo:schema:product-definition:2",
   "title": "STDO Product Definition Overlay",
-  "description": "Layout-neutral identity, authority-location, collective reference-frame basis, realization, work-carrier, and composition bindings for one STDO-defined product WHAT.",
+  "description": "Layout-neutral identity, authority-location, bounded-context disambiguation, collective reference-frame basis, realization, work-carrier, and composition bindings for one STDO-defined product WHAT.",
   "type": "object",
   "required": [
     "$schema",
@@ -43,6 +43,7 @@
           "$ref": "#/$defs/referenceUri"
         },
         "bounded_context": {
+          "description": "Optional enclosing bounded context for this product WHAT. It is not an exhaustive registry of subordinate, peer, composed, tenant, user, or runtime contexts.",
           "oneOf": [
             {
               "type": "null"
@@ -315,22 +316,47 @@
       "type": "object",
       "required": [
         "uri",
+        "term",
+        "context",
         "disambiguates",
+        "resolves_to",
         "authority",
+        "basis",
         "applies_to"
       ],
       "properties": {
         "uri": {
-          "$ref": "#/$defs/referenceUri"
+          "$ref": "#/$defs/referenceUri",
+          "description": "Resolution-carrier locator. For cross-context resolution, the carrier declares the complete authorized import, translation, equivalence, or disambiguation relation."
+        },
+        "term": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact lexical label being resolved; the label is not a context-free concept identity."
+        },
+        "context": {
+          "$ref": "#/$defs/identityUri",
+          "description": "Bounded-context identity in which the resolution applies."
         },
         "disambiguates": {
-          "$ref": "#/$defs/nonEmptyReferences"
+          "$ref": "#/$defs/nonEmptyReferences",
+          "description": "Complete material candidate concept or clause references for the declared term, context, basis, and scope."
+        },
+        "resolves_to": {
+          "$ref": "#/$defs/referenceUri",
+          "description": "Exact concept reference selected by the owning resolution carrier. Conformance separately verifies that it is a member of disambiguates."
         },
         "authority": {
-          "$ref": "#/$defs/nonEmptyReferences"
+          "$ref": "#/$defs/nonEmptyReferences",
+          "description": "Existing lawful authorities owning the resolution and any cross-context relation."
+        },
+        "basis": {
+          "$ref": "#/$defs/nonEmptyReferences",
+          "description": "Selected semantic bases needed to interpret the candidate concepts and resolution."
         },
         "applies_to": {
-          "$ref": "#/$defs/nonEmptyReferences"
+          "$ref": "#/$defs/nonEmptyReferences",
+          "description": "Exact governed scopes in which the resolution applies."
         }
       },
       "additionalProperties": false

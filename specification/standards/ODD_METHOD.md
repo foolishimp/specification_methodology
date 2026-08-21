@@ -36,10 +36,19 @@ Within this method, `ODD`, `GTL`, and `ABG` name normative capability roles
 and construction algebra, not a required repository, package, vendor, or
 concrete implementation:
 
-- `ODD` names the graph-native product-authoring profile;
-- `GTL` names the typed declarative graph-language role; and
+- `ODD` means **Outcome-Driven Development** and names the graph-native
+  product-authoring profile;
+- `GTL` means **Graph Transformation Language** and names the typed declarative
+  graph-language role; and
 - `ABG` names the singular traversal-governance and runtime-truth authority
   role.
+
+`ODD_METHOD.md` owns those concepts in the graph-native bounded context
+`urn:stdo:bounded-context:graph-native-odd` under the selected complete STDO
+basis. The context covers the ODD product shape, GTL language role, ABG method
+role, graph assets, vectors, functions, traversals, and graph/runtime worker and
+evaluator shorthands defined by this standard. It does not absorb a consuming
+Product's domain semantics or a concrete runtime's same-spelled carriers.
 
 A consumer binds those roles to concrete conforming realizations in its own
 Product, requirements, design, and immutable dependency identity. A consumer,
@@ -213,11 +222,40 @@ Anything not constrained by the traversal boundary remains worker-internal HOW:
 - tool-local execution detail
 - product-specific business choice
 
-F_P is the graph/runtime shorthand for this bounded probabilistic worker turn.
-F_D is deterministic evaluation or proof over declared properties of the
+`F_P` (`urn:stdo:concept:graph-native-odd:f-p`) is the graph/runtime shorthand
+for this bounded probabilistic worker turn.
+It is an ODD specialization of substrate-neutral lawful probabilistic
+processing: it preserves bounded non-human construction under declared policy
+and narrows that meaning to one graph traversal contract.
+
+`F_D` (`urn:stdo:concept:graph-native-odd:f-d`) is the graph/runtime shorthand
+for deterministic evaluation or proof over declared properties of the
 traversal. F_D may optimize or validate a domain-local path where the domain can
-make part of the work precise, but it does not move domain HOW into GTL, ABG, or
-the framework.
+make part of the work precise, but it does not move domain HOW into GTL, ABG,
+or the framework.
+
+`F_H` (`urn:stdo:concept:graph-native-odd:f-h`) is the graph/runtime shorthand
+for explicit human adjudication invoked under the traversal's declared
+authority and ambiguity policy. It specializes the substrate-neutral
+human-adjudication concept without granting a human ambient traversal,
+semantic, or closure authority.
+
+The F_P specialization is directional from
+`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing` to
+`urn:stdo:concept:graph-native-odd:f-p`. The F_H specialization is directional
+from `urn:stdo:concept:ambiguity-governance:human-adjudication` to
+`urn:stdo:concept:graph-native-odd:f-h`. The source concepts and context are
+owned by `SPEC_METHOD.md#ambiguity-governance-rule`; this standard owns the
+targets in the graph-native ODD context.
+
+Both relations preserve the source meaning and authority, narrow scope to a
+declared ODD traversal, and add graph-contract and runtime-control coordinates.
+They exclude processing or adjudication outside that traversal, refuse ambient
+worker or human authority, and have no implied inverse. Their source and target
+basis is the selected complete STDO release, their governed scope is ODD
+traversal, and this clause is their provenance carrier. A change to either
+concept or context, the basis, scope, preserved or narrowed meaning, or control
+contract invalidates the affected specialization until reevaluated.
 
 The method governs the traversal contract, evidence, provenance, and control
 truth. It does not make the framework the executor of the domain's internal

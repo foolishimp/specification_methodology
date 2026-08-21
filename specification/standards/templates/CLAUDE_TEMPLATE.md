@@ -30,6 +30,15 @@ override this file for their subtree.
 - The Product Definition Overlay owns locator and relation mapping only.
   Referenced constitutional, Product, requirement, design, ticket, and comment
   surfaces retain their own meaning and authority.
+- Treat term spelling as a label, not a context-free concept identity. Resolve
+  each material occurrence through its bounded-context identity, owning
+  authority, selected basis, and governed scope. Unqualified use is lawful only
+  when those coordinates select exactly one concept.
+- The glossary is a non-deciding locator index, not a global default namespace.
+  Equal spelling creates no import, equivalence, inheritance, or authority.
+  Cross-context use requires an explicit owner-authorized import, translation,
+  equivalence, or disambiguation relation; zero or multiple meanings fail
+  closed instead of being guessed.
 - Products, applications, modules, graph functions, build tenants, and runtime
   surfaces implement constitutional documents; they do not replace them.
 - Active surfaces stay present tense. Historical, provisional, or comparative

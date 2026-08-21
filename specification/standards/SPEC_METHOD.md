@@ -10,7 +10,11 @@ STDO-defined product publishes a layout-neutral `stdo_<label>.json` definition
 that locates its governing constitution, local constitutional decisions,
 collective reference-frame bases, `WHAT`, independent build-tenant `HOW`
 realizations, work surfaces, and explicit product composition. The definition
-is a routing overlay, not a rival truth surface. Requirements define
+is a routing overlay, not a rival truth surface. A material term resolves only
+under its bounded-context identity, owning authority, selected basis, and
+governed scope. Equal spelling creates no cross-context meaning or authority;
+explicit imports, translations, equivalences, and disambiguations govern those
+seams, and zero or multiple applicable meanings fail closed. Requirements define
 the full constitutional what: capabilities, guarantees, governance, and
 verification obligations. Design defines the structural how, and ADRs are one
 durable form of that design record. The SDLC is a governed disambiguation
@@ -55,6 +59,28 @@ Imperative procedure still exists, but it is subordinate to declared authority.
 
 ---
 
+## STDO Method Identity
+
+`SPEC_METHOD.md` owns the method-identity bounded context
+`urn:stdo:bounded-context:method-identity` under the selected complete STDO
+basis.
+
+Within that context, **STDO** is the shorthand for the method's four key
+pillars:
+
+- **S** — Specification, owned by `SPEC_METHOD.md`;
+- **T** — Ticketing, owned by `TICKET_METHOD.md`;
+- **D** — Design, owned by `DESIGN_MODULE_METHOD.md`; and
+- **O** — Outcome-Driven Development, owned by `ODD_METHOD.md`.
+
+The `O` names the complete Outcome-Driven Development pillar. `ODD_METHOD.md`
+owns the `ODD` identity and graph-native meaning. This expansion does not make
+the four named files independently selectable or reduce the STDO Product to
+four members. Consumer authority remains one complete immutable released STDO
+cut with its exact member inventory.
+
+---
+
 ## Probabilistic Work Boundary
 
 Spec-driven development exists to govern the boundary around work, not to absorb
@@ -81,7 +107,7 @@ solution strategy as constitutional law.
 
 In graph-native refinements such as `ODD_METHOD.md`, this boundary is usually
 one vector or edge traversal. The traversal is the admissible external space.
-Any unconstrained part of an F_P worker's reasoning remains hidden
+Any unconstrained part of a probabilistic worker's reasoning remains hidden
 worker-internal traversal and must be forced back through declared contracts,
 evidence, provenance, and control truth.
 
@@ -91,6 +117,10 @@ declared work contract and control truth, it has crossed its authority boundary.
 ---
 
 ## Recursive Product Taxonomy
+
+`SPEC_METHOD.md` owns this taxonomy in the recursive-product bounded context
+`urn:stdo:bounded-context:recursive-product-taxonomy` under the selected
+complete STDO basis.
 
 Software is recursive and compositional.
 
@@ -105,13 +135,26 @@ roles into one overloaded word such as `product`.
 
 This methodology therefore distinguishes:
 
-- **Substrate**: a lower product or runtime used to build other products
-- **Source Project**: the mutable workspace building the next release cut
-- **Release Cut**: the tapped immutable boundary over the accepted feature set
-- **Product**: the released immutable thing resulting from that release cut
-- **Install**: a stamped workspace instance of that released product
-- **Artifact**: any published output built by a source project or by a
-  configured installed product
+- **Substrate** (`urn:stdo:concept:recursive-product-taxonomy:substrate`): a
+  lower product or runtime used to build other products;
+- **Source Project**
+  (`urn:stdo:concept:recursive-product-taxonomy:source-project`): the mutable
+  workspace building the next release cut;
+- **Release Cut**
+  (`urn:stdo:concept:recursive-product-taxonomy:release-cut`): the tapped
+  immutable boundary over the accepted feature set;
+- **Product** (`urn:stdo:concept:recursive-product-taxonomy:product`): the
+  released immutable thing resulting from that release cut;
+- **Install** (`urn:stdo:concept:recursive-product-taxonomy:install`): a
+  stamped workspace instance of that released product;
+- **Artifact** (`urn:stdo:concept:recursive-product-taxonomy:artifact`): any
+  published output built by a source project or by a configured installed
+  product; and
+- **Product Definition**
+  (`urn:stdo:concept:recursive-product-taxonomy:product-definition`): the
+  present-tense source-project authority surface conventionally carried by
+  `PRODUCT.md`; it defines the current product `WHAT` for decomposition and is
+  not the released Product artifact.
 
 The governing rules are:
 
@@ -237,6 +280,12 @@ So if project-specific design and code disappeared, recovery would proceed throu
 
 ## STDO Product Definition Overlay And Layout Independence
 
+`SPEC_METHOD.md` owns the product-definition-routing bounded context
+`urn:stdo:bounded-context:product-definition-routing` under the selected
+complete STDO basis. This section defines that context's overlay, definition,
+discovery, locator, and composition concepts. The JSON schema realizes its
+accepted interoperability shape but does not become a second semantic owner.
+
 Every STDO-defined product publishes one JSON definition for each distinct
 current product `WHAT`. Its conventional filename is:
 
@@ -250,13 +299,14 @@ hosts more than one distinct product `WHAT`. Multiple build tenants realizing
 the same `WHAT` remain entries in one definition and do not create additional
 definition files.
 
-The suffix `<label>` is a stable lowercase local discovery label made from
-ASCII letters, digits, hyphens, or underscores. It is unique only among
-definitions in the same directory. It is not Product identity. The
-`product.definition_id` URI inside the definition is the stable identity of
-the mutable product-definition line and must be unique within the discovered
-workspace definition set. It identifies one continuing `WHAT` definition, not
-one immutable released Product.
+The suffix `<label>` is the **Definition Label**: a stable lowercase local
+discovery label made from ASCII letters, digits, hyphens, or underscores. It is
+unique only among definitions in the same directory. It is not Product
+identity. The `product.definition_id` URI inside the definition is the
+**Product-Definition Identity**: the stable identity of the mutable
+product-definition line, unique within the discovered workspace definition
+set. It identifies one continuing `WHAT` definition, not one immutable released
+Product.
 
 The definition identity may remain stable while that source line authors
 successive Product releases. Every immutable Product or release produced from
@@ -294,7 +344,8 @@ Each definition contains:
 - `constitution` — the governing constitutional sets and useful reading
   entrypoints;
 - `local_constitution` — local axioms, overrides, and disambiguations with
-  their owning authority, target, and scope;
+  their owning authority, target, basis, and scope, including context-qualified
+  term resolution where applicable;
 - `reference_frame_bases` — one or more accepted collective reference-frame
   basis declarations with their admitting authorities and governed scopes;
 - `what` — the current Intent, Product, and specification bindings;
@@ -309,11 +360,18 @@ The overlay owns this locator and relation map. Referenced documents own their
 content. Repeating source truth inside the JSON creates a rival authority and
 is non-conformant.
 
+`product.bounded_context` identifies the enclosing bounded context of the
+definition's own product `WHAT`, or is `null` when no separate enclosing context
+is claimed. It is not an exhaustive registry and does not flatten subordinate,
+peer, composed, tenant, user, or runtime contexts into one namespace. Those
+contexts remain defined by their owning authorities; every local
+disambiguation names the exact context in which its resolution applies.
+
 ### Constitutional-Set Sufficiency
 
-A product constitution is a set of governing documents, not five prescribed
-files. Collectively, the selected set must make the following recoverable for
-the governed scope:
+A **Constitutional Set** is the complete set of governing documents selected
+for a product, not five prescribed files. Collectively, the selected set must
+make the following recoverable for the governed scope:
 
 - **axioms** — irreducible starting truths, invariants, and refusal conditions;
 - **ontology** — the kinds of things treated as real and their material
@@ -345,6 +403,95 @@ semantic-design authority for a realization boundary, derives from
 constitutional `WHAT` and applicable domain methods, and cannot invent
 missing Product meaning.
 
+### Bounded-Context Semantic Resolution
+
+`SPEC_METHOD.md` owns this law in the semantic-resolution bounded context
+`urn:stdo:bounded-context:semantic-resolution` under the selected complete STDO
+basis. The glossary may index this identity but does not participate in its
+declaration.
+
+A **term** is a lexical label used in an occurrence, not a context-free concept
+identity. A **bounded context** is an explicitly identified semantic scope in
+which a governed vocabulary, concept set, and relation set are jointly
+interpretable under named authority. A **concept reference** is an exact,
+resolvable reference to a meaning owned by an authority under a selected basis;
+the reference locates that meaning but does not mint it or its authority.
+
+A bounded context exists only when an owning authority declares its stable
+identity, owner, selected basis, and governed semantic scope. A consuming
+standard may define a concept inside that context only through an explicit
+owner relation. A filename, heading, index row, glossary section, schema value,
+or bare URI cannot constitute the context.
+
+Every material term occurrence resolves under this **semantic address**:
+
+```text
+(term, bounded-context identity, owning authority, selected basis, governed scope)
+```
+
+Equal spelling, capitalization, shape, file location, directory nesting, actor,
+or implementation does not establish equal meaning, concept identity,
+equivalence, inheritance, or authority. Different spelling also does not prove
+different meaning. Those relations follow only from the applicable semantic
+address or an explicit authorized relation.
+
+Resolution proceeds in this order:
+
+1. identify the occurrence's governed scope and nearest explicit bounded-
+   context declaration;
+2. identify the exact selected basis and the authorities applicable to that
+   context and scope;
+3. collect context-local definitions and explicitly imported concept
+   references admitted by those authorities and that basis;
+4. apply every applicable owner-authorized override or disambiguation; and
+5. admit the occurrence only when exactly one concept remains.
+
+A document, section, schema field, operation, or other owning surface may
+declare a context for all subordinate occurrences, so uniquely resolved prose
+does not need to repeat a qualifier on every term. A repository, directory,
+filename, heading, glossary match, prompt, actor, or nearby definition does not
+declare a bounded context by accident.
+
+Zero applicable concepts is unresolved meaning. More than one is ambiguous
+meaning. Both fail closed at a material boundary: an agent, design, schema,
+implementation, test, translation, or reviewer must not select one by
+familiarity, frequency, recency, nominal match, or a context-free glossary
+fallback.
+
+`GLOSSARY_GUIDE.md` is a non-deciding locator index. Each record points to an
+exact source clause that declares the bounded context and owns the indexed
+concept. The glossary defines neither and cannot repair a missing declaration.
+An indexed concept is applicable only when the semantic address selects its
+owning clause or the target context explicitly imports it; appearance in the
+glossary creates no shared default.
+
+A cross-context relation is explicit and owner-authorized. Its carrier states:
+
+- exact source and target concept references and bounded-context identities;
+- whether the relation imports unchanged meaning, disambiguates a use,
+  translates directionally, including a specialization, or establishes the
+  stronger equivalence claim;
+- direction and any lawful inverse where material;
+- preserved meaning, changed meaning, loss, and refusal conditions;
+- source and target semantic owners without transferring either authority;
+- selected source and target bases, governed scope, and provenance; and
+- lifecycle and invalidation conditions.
+
+A **Semantic Import** adopts the cited meaning unchanged for its declared target
+scope. A **Semantic Translation** declares how meaning changes in one direction.
+**Semantic Equivalence** requires the governing authorities to establish the
+claimed equality; neither identical spelling nor two opposing translations
+proves it automatically. A **Semantic Disambiguation** selects one meaning for
+one scope and does not make competing concepts equal. No relation widens its
+source or target authority.
+
+A specialization is a directional translation whose target preserves the
+declared source meaning while narrowing its admissible instances or adding
+target-context constraints. It identifies the exact target concept, preserved
+and narrowed meaning, excluded source instances, and absence or law of any
+inverse. Calling a term a specialization without those coordinates establishes
+nothing.
+
 ### Local Constitutional Binding
 
 A local axiom, override, or disambiguation does not gain authority from its file
@@ -356,10 +503,33 @@ category or from being listed in the overlay. Every local entry names:
 - the clause or ambiguity it overrides or resolves where applicable; and
 - the exact scope to which it applies.
 
+Each `local_constitution.disambiguations` binding additionally names:
+
+- `term` — the exact lexical label being resolved;
+- `context` — the bounded-context identity in which the resolution applies;
+- `disambiguates` — the complete material candidate concept or clause
+  references;
+- `resolves_to` — the exact selected concept reference, which is one member of
+  `disambiguates`;
+- `basis` — every selected semantic basis needed to interpret the candidates
+  and resolution; and
+- `uri`, `authority`, and `applies_to` — the owning resolution carrier, lawful
+  authority, and exact governed scope.
+
+The referenced `uri` owns the resolution. When candidates cross bounded
+contexts, that carrier also declares the complete import, translation, or
+equivalence relation required above. The overlay metadata makes the relation
+discoverable and checkable; it does not restate the source-owned meanings or
+mint the decision.
+
 An empty local array explicitly declares that no local entry of that kind is
 bound for the product. Omission is not an equivalent declaration.
 
 ### Collective Reference-Frame Basis
+
+A **Project Reference-Frame Basis** is an accepted declaration of the shared
+frame set through which finite actors collectively engage one governed Product
+scope or outcome under `REFERENCE_FRAME_METHOD.md`.
 
 `reference_frame_bases` is the non-empty locator set for the accepted frame
 bases through which finite actors collectively engage the governed Product and
@@ -378,13 +548,14 @@ invalidation law required by `REFERENCE_FRAME_METHOD.md`. It may adopt
 entry locates that declaration and its authority relation; it does not restate
 the frames or create frame-set authority.
 
-The collective basis and an actor activation are distinct. The Product
-definition records the durable shared basis. A ticket or other authorized work
-instruction may cite an applicable basis and carry the exact activation packet
-for one agent, evaluation, subject, and capability envelope. That execution
-binding does not mutate the Product Definition Overlay. The overlay does not
-register agents, assign permanent frames, or persist temporary active frame
-configurations.
+The collective basis and an actor activation are distinct. An **Agent Frame Activation**
+is the execution-scoped binding of one agent to an applicable
+frame declaration or active configuration, exact evaluation, subject, basis,
+evidence boundary, and capability envelope. The Product definition records the
+durable shared basis. A ticket or other authorized work instruction carries the
+activation packet. That execution binding does not mutate the Product Definition
+Overlay. The overlay does not register agents, assign permanent frames, or
+persist temporary active frame configurations.
 
 Frames and actors remain separate identities. Several agents may activate
 overlapping subsets of one frame set; one agent may activate different frames
@@ -400,14 +571,23 @@ required evaluation and authority relations.
 
 ### WHAT, HOW, And Work Carriers
 
+`SPEC_METHOD.md` owns the build-tenancy bounded context
+`urn:stdo:bounded-context:build-tenancy` under the selected complete STDO basis.
+It governs the realization relation defined here: one constitutional product
+`WHAT` is realized by one or more independent project-owned `HOW` tenants. A
+**build tenant** is one such realization. **Build tenancy** is the one-or-more
+relation; one tenant is its singleton case and multi-build-tenancy begins when
+the same `WHAT` has more than one independent realization.
+
 `what.intent`, `what.product`, and `what.specification` locate the current
 constitutional `WHAT`. Intent and Product each have one canonical entrypoint;
 specification may cite more than one requirement or specification surface.
 
-`how.build_tenants` is the canonical locator registry for the product's
-independent `HOW` realizations. Each entry has stable identity and locates its
-root, design, and implementation surfaces. `how.common` may locate realization
-law explicitly adopted across more than one tenant. A separate
+The **Tenant Registry** is the canonical `how.build_tenants` collection for the
+product's independent `HOW` realizations. Each entry has stable identity and
+locates its root, design, and implementation surfaces. The **Common Build-Tenant Surface**
+is the realization law bound by `how.common` and
+explicitly adopted across more than one tenant. A separate
 `TENANT_REGISTRY.md` may remain as a human-readable companion or generated
 projection, but it cannot become a second tenant-identity or location
 authority.
@@ -456,6 +636,13 @@ A conforming discovered set satisfies all of the following:
 - every build-tenant identity is unique within its Product Definition Overlay;
 - every governed scope has a resolvable applicable reference-frame basis, and
   overlapping basis bindings are reconciled by their cited authority;
+- every local disambiguation binds one exact term, target context, complete
+  material candidate set, selected concept, authority, basis, and scope, and
+  `resolves_to` is a member of `disambiguates` and its referenced resolution
+  carrier is congruent with those bindings;
+- every material cross-context term seam resolves through an explicit import,
+  disambiguation, translation, or equivalence relation rather than nominal
+  match;
 - every composition target resolves to another product definition whose
   `product.definition_id` equals `target_definition_id`, and every relation and
   non-empty contract set resolves; and
@@ -468,7 +655,29 @@ declared validator implements format assertion. Conformance therefore performs
 an explicit RFC 3986 URI and URI-reference syntax check with an
 assertion-capable validator, followed separately by resolution, fragment
 existence, selected-release identity, uniqueness across files, constitutional
-sufficiency, and authority congruence checks.
+sufficiency, semantic-resolution and cross-context-relation completeness, and
+authority congruence checks.
+
+### Semantic-Resolution Conformance Cases
+
+Conformance covers both uniquely resolved use and material collision. At
+minimum, it establishes these cases under an exact selected basis:
+
+| Term | Candidate contexts | Required result without an explicit cross-context relation |
+|---|---|---|
+| `Frame` | Reference Frame Method evaluation context and a Product- or ABG-owned runtime carrier | remain distinct; nominal match cannot enroll the runtime carrier as an evaluation frame |
+| `Owner` | generic specialist evaluation family and a semantic or decision authority owner | remain distinct; the evaluation family acquires no owner authority |
+| `Product` | immutable released Product and mutable Product Definition | remain distinct and select only through the occurrence's declared context |
+| `Tenant` | STDO build realization and hosted, customer, account, runtime, or data tenancy | remain distinct; Build Tenancy supplies no default for the other contexts |
+| `User` | Product role, human person, identity principal, account, actor, operator, or data subject | unresolved until downstream authority defines or explicitly relates the applicable meanings |
+
+A positive local case declares one context and resolves exactly one concept. A
+positive cross-context case supplies the complete authorized relation. Negative
+cases cover zero candidates, multiple candidates after disambiguation,
+selected concept outside the candidate set, context-free glossary fallback,
+incomplete relation coordinates, authority or basis mismatch, undeclared loss,
+and invalidated relations. Correct downstream behavior produced through a
+guessed meaning does not pass semantic conformance.
 
 ---
 
@@ -612,6 +821,12 @@ appropriate cost optimization for that domain.
 
 ## Ambiguity Governance Rule
 
+`SPEC_METHOD.md` owns the substrate-neutral ambiguity-governance bounded
+context `urn:stdo:bounded-context:ambiguity-governance` under the selected
+complete STDO basis. Graph/runtime shorthands such as `F_D`, `F_P`, and `F_H`
+remain in the graph-native ODD context unless an explicit relation imports or
+translates them.
+
 Spec-driven development is not only a derivation pipeline. It is a governed
 disambiguation pipeline.
 
@@ -645,6 +860,14 @@ Therefore, at each major boundary the process must:
   blocked
 
 Ambiguity detection is mandatory. Blocking is policy.
+
+**Lawful Probabilistic Processing**
+(`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing`) is
+bounded non-human processing permitted by declared policy to carry or resolve
+declared ambiguity. **Human Adjudication**
+(`urn:stdo:concept:ambiguity-governance:human-adjudication`) is explicit human
+judgment admitted by authority to resolve declared ambiguity where policy or
+risk appetite requires it.
 
 The default governance model is:
 
@@ -1565,6 +1788,12 @@ Scenarios do not replace requirement categories. They primarily validate capabil
 ---
 
 ## Testing Strategy Taxonomy
+
+`SPEC_METHOD.md` owns the product-assurance bounded context
+`urn:stdo:bounded-context:product-assurance` under the selected complete STDO
+basis. This section owns the Product-level test-authority taxonomy.
+`DESIGN_MODULE_METHOD.md` retains ownership of module-derived unit-proof law;
+the shared context does not merge those authority sources.
 
 Every executable proof surface must declare its authority source.
 

@@ -48,6 +48,10 @@ The role split is:
   publication law
 
 Within the world-model domain, this document is the primary method surface.
+`WORLD_MODEL_METHOD.md` owns the world-model bounded context
+`urn:stdo:bounded-context:world-model` under the selected complete STDO basis.
+A consuming Product may declare narrower Product-owned contexts without
+changing this method context by proximity.
 
 Where a product is both graph-native and world-model-driven:
 
@@ -58,20 +62,71 @@ Where a product is both graph-native and world-model-driven:
 
 Those methods compose. They do not compete.
 
-This method inherits the recursive product taxonomy from `SPEC_METHOD.md`.
-Use `GLOSSARY_GUIDE.md` for shared recursive-product terminology and the
-default meaning of `Source Project`, `Product`, `Install`, and `Artifact`.
+This method explicitly imports these exact concepts from
+`SPEC_METHOD.md#recursive-product-taxonomy` and
+`urn:stdo:bounded-context:recursive-product-taxonomy` into
+`urn:stdo:bounded-context:world-model`:
+
+- `urn:stdo:concept:recursive-product-taxonomy:source-project`;
+- `urn:stdo:concept:recursive-product-taxonomy:product`;
+- `urn:stdo:concept:recursive-product-taxonomy:install`; and
+- `urn:stdo:concept:recursive-product-taxonomy:artifact`.
+
+The meanings are adopted unchanged for this method scope under the selected
+complete STDO basis. Their SPEC owner is retained, and a change to either
+context, any cited concept or taxonomy clause, or the selected STDO basis
+invalidates the import until reevaluated. `GLOSSARY_GUIDE.md` only locates those
+source-owned meanings. No other same-spelled concept is imported by this
+declaration. For each import, the source and target concept reference is the
+same listed identity; the relation expands applicability into the target
+context and mints no alias or new semantic owner.
 
 In particular:
 
-- `product` means a released immutable builder or runtime
-- `install` means a stamped workspace instance of that released product
-- `source project` means the mutable configured workspace using an installed
-  product
-- `builder project` is the world-model specialization of that source-project
-  concept
-- `PRODUCT.md` remains the product-definition surface of a mutable source
-  project, not the released product artifact itself
+- `Product` retains the released immutable-thing meaning; a builder or runtime
+  may be one such Product;
+- `Install` retains the stamped-workspace-instance meaning;
+- `Source Project` retains the mutable-workspace-building-the-next-release-cut
+  meaning;
+- `Artifact` retains the published-output meaning; and
+- `PRODUCT.md` remains the product-definition surface of a mutable Source
+  Project, not the released Product artifact itself.
+
+### Builder-Project Specialization Relation
+
+`Builder Project` is not an unchanged import or an alias for `Source Project`.
+It is the target of this explicit directional semantic translation of kind
+**specialization**:
+
+- **source concept:**
+  `urn:stdo:concept:recursive-product-taxonomy:source-project`, term
+  `Source Project`, in
+  `urn:stdo:bounded-context:recursive-product-taxonomy`, owned by
+  `SPEC_METHOD.md#recursive-product-taxonomy`;
+- **target concept:** `urn:stdo:concept:world-model:builder-project`, term
+  `Builder Project`, in `urn:stdo:bounded-context:world-model`, owned by
+  `WORLD_MODEL_METHOD.md#builder-project`;
+- **direction:** source to target only; no inverse, equivalence, or assertion
+  that every Source Project is a Builder Project;
+- **preserved meaning:** a mutable workspace builds a next release cut and
+  remains distinct from a Release Cut, Product, Install, and Artifact;
+- **changed and narrowed meaning:** the workspace is configured for a
+  world-model builder application and owns its source inputs, settings, and
+  publication lane; it may use an installed builder Product as substrate;
+- **loss and refusal:** general Source Projects outside that narrower
+  configuration are excluded; neither the installed builder Product nor its
+  Install may be substituted for the mutable Builder Project;
+- **semantic owners:** `SPEC_METHOD.md` retains the source concept;
+  `WORLD_MODEL_METHOD.md` owns the target specialization and adds no authority
+  over the source taxonomy;
+- **source and target basis:** the same selected complete STDO release that
+  contains both cited clauses;
+- **governed scope and provenance:** world-model construction under this
+  standard; this clause is the normative relation carrier; and
+- **lifecycle and invalidation:** a change to either concept or context, the
+  selected STDO basis, the builder configuration relation, or the governed
+  scope invalidates the translation until it is reevaluated by the owning
+  authorities.
 
 ---
 
@@ -506,10 +561,15 @@ A world-model builder application.
 
 ### Builder Project
 
+A **Builder Project** has concept identity
+`urn:stdo:concept:world-model:builder-project`.
+
 A configured project instance of the builder with its own source inputs,
 settings, and publication lane.
 
-This is a specialization of the `Source Project` term from `SPEC_METHOD.md`.
+Its relation to `Source Project` is the explicit directional specialization in
+*Builder-Project Specialization Relation*; this local clause must not be read as
+an unchanged import or general equivalence.
 
 ### Published Domain Artifact
 

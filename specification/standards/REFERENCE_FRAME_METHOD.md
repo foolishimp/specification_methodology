@@ -59,6 +59,14 @@ implementation. An application profile binds this method to a concrete method,
 workspace, or Product and declares the evaluations and authorities meaningful
 there.
 
+`REFERENCE_FRAME_METHOD.md` owns the reference-frame-evaluation bounded context
+`urn:stdo:bounded-context:reference-frame-evaluation` under the selected
+complete STDO basis. This standard owns its frame, activation, evaluation,
+basis, relation, result, coverage, and qualification concepts. Application
+profiles may define specialist frame families inside that context by explicit
+reference; a same-spelled Product or runtime carrier is not imported by
+proximity or nominal match.
+
 The method is substrate-neutral. A reference frame may be represented in prose,
 structured data, a prompt, a design asset, a typed carrier, a runtime context,
 or another form selected by its consumer. No class, aggregate, actor,

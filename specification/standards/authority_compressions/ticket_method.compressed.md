@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 1aed28098af70875df08d1b00b6b840988cd4a4f79b02b4e0289857aa73f09fe
+source_digest: 0e54239e332c0adb59a7fb74e931176efe741598566aa9ad6a6c9994c271b4e1
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -55,6 +55,14 @@ proof, and current status.
 
 - Do not treat ticket prose as product truth when requirements or design already
   own the matter.
+- Resolve material ticket terms through their bounded-context identity, owning
+  authority, selected basis, and affected scope. Unqualified use is lawful only
+  when those coordinates select exactly one concept.
+- A cross-context or multiply defined term cites the applicable Product
+  Definition Overlay disambiguation or owner-authorized semantic relation.
+  Ticket prose, glossary match, actor familiarity, comments, and tenant location
+  cannot select meaning. Unresolved or multiply resolved material meaning
+  blocks execution-contract admission and affected closure.
 - Use neutral capability and authority identities in reusable method examples.
   A downstream Product or implementation may supply evidence for its own
   ticket; it does not become constitutional precedent.

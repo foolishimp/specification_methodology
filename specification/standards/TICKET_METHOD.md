@@ -362,6 +362,16 @@ For a local file, the filename should carry:
 
 ### Multi-Build-Tenant Ticket Independence
 
+This clause consumes the build-tenancy bounded context
+`urn:stdo:bounded-context:build-tenancy` declared by
+`SPEC_METHOD.md#what-how-and-work-carriers`. `TICKET_METHOD.md` owns the
+multi-build-tenant work-item and ticket-lifecycle relation inside that context;
+it does not redefine build-tenant identity or realization meaning.
+
+A **Multi-Build-Tenant Work Item** is one admitted upstream work item with more
+than one build-tenant execution line. The upstream authority and each
+tenant-local ticket retain distinct identities and lifecycles.
+
 If one source/product/design work item must be realized in more than one build
 tenant, do not track all tenant realizations inside one ticket lifecycle.
 
@@ -732,6 +742,25 @@ commit, qualification, or release-evidence surface. No new ticket state,
 document type, review round, or approval ceremony is required. Ticket Method
 carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
+
+### Bounded-Context Term Binding
+
+Ticket and work-instruction terms resolve under `SPEC_METHOD.md`'s
+Bounded-Context Semantic Resolution law. A ticket may use an unqualified term
+when its cited Product, re-entry surface, execution basis, and affected scope
+select exactly one bounded-context meaning.
+
+When a ticket spans contexts or a material term has competing meanings, the
+ticket cites the applicable Product Definition Overlay disambiguation or the
+owner-authorized import, translation, equivalence, or disambiguation carrier.
+It may reference that relation rather than duplicate it. Ticket prose, actor
+familiarity, a matching glossary heading, tenant placement, or comment context
+cannot select meaning or transfer authority.
+
+An unresolved or multiply resolved material term blocks execution-contract
+admission and closure for the affected claim. Opening or updating the ticket
+records the pressure but does not cure it; resolution re-enters at the authority
+that owns the missing context or semantic relation.
 
 ### Evaluation Criteria And Non-Closure Conditions
 
