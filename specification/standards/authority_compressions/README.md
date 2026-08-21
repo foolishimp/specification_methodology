@@ -4,13 +4,16 @@ These files are source-maintained compressed read models over one complete
 released STDO cut. They are prompt-construction inputs, not replacement
 constitutional authority and not independently selectable method versions.
 
-The source method and profile documents remain the deciding sources:
+The source method, profile, and shared-vocabulary documents remain the deciding
+sources:
 
 - `../REFERENCE_FRAME_METHOD.md`
 - `../STDO_REFERENCE_FRAME_BASELINE.md`
 - `../SPEC_METHOD.md`
+- `../schemas/product-definition.schema.json`
 - `../DESIGN_MODULE_METHOD.md`
 - `../ODD_METHOD.md`
+- `../GLOSSARY_GUIDE.md`
 - `../TICKET_METHOD.md`
 - `../UX_METHOD.md`
 - `../IDENTITY_METHOD.md`

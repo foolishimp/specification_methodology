@@ -36,6 +36,16 @@ accepted design, ticket, identity, or release law. The Worker carries only the
 construction or transformation authority in its admitted intake. No frame gains
 admission, publication, mutation, or other operation authority from its label.
 
+This profile also derives eleven generic specialist-frame families: Product,
+Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect,
+Reuse/Foundation, Install, and Proof. They separate recurring evaluation
+questions that otherwise collapse across constitutional `WHAT`, structural
+`HOW`, identity, authority, effects, foundations, installed subjects, and
+evidence. They are available frame families, not mandatory actors, stages,
+components, services, files, or runtime types. An activation selects only the
+families material to its exact evaluation and retains an explicit residual for
+any material family it cannot cover.
+
 This profile also derives four Product-testing specialist-frame families:
 user acceptance, end to end, integration, and unit. They are activated inside
 the same Executive, Worker, and Reviewer engagement relation; they are not new
@@ -81,6 +91,7 @@ of STDO's execution protocol.
 | module-derived unit proof | `DESIGN_MODULE_METHOD.md` Design-to-Module evidence route and Module-Derived Unit Test Rule | supplies the unit frame's module ownership basis while this profile limits its claim and evidence altitude |
 | capability and foundation selection before material generic construction | `DESIGN_MODULE_METHOD.md` `STDO-UP-023` | supplies the Worker's proportional reuse comparison without treating reuse itself as authority transfer; any assigned foundation role preserves its declared relation and owner |
 | Product testing taxonomy, claim, ordinary user path, and acceptance meaning | `SPEC_METHOD.md` Verification Layers, Testing Strategy Taxonomy, and Test Authority Rule; current Product, requirements, accepted design, and release authority where applicable | selects user outcomes, supported interfaces, material compositions, runnable Product subjects, harnessed or live execution mode, and required testing populations |
+| generic Product, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof evaluation families | current Product and requirements; accepted design; `DESIGN_MODULE_METHOD.md`; `IDENTITY_METHOD.md`; `RELEASE_METHOD.md`; applicable domain, effect, interface, dependency, and assurance owners | supplies recurring specialist evaluation families without transferring their owners or requiring one architecture |
 | work selection and growth authority | current Goals, Product, requirements, and admitted ticket or equivalent work authority | selects the governed outcome and admits local frame configuration |
 | design structure and local realization frame decisions | accepted design under its governing Product and requirements | supplies specialist frames and material relations |
 | human and proxy identity | `IDENTITY_METHOD.md` plus project authority | binds the Executive actor and its decision envelope |
@@ -139,6 +150,20 @@ release, domain, implementation, test, operational, historical, or capability
 frame needed by one engagement evaluation. A method member, file, component, or
 lens becomes a frame only when its evaluation, basis, material manifold,
 authority, evidence, result algebra, and capability envelope are declared.
+
+### Generic specialist-frame family
+
+A **generic specialist-frame family** is a reusable evaluation-family
+archetype in this profile. It identifies a recurring distinction that a
+project must either instantiate it where material, have capable authority
+establish it as non-material for the governed outcome, or retain it as an
+explicit coverage residual.
+
+The family does not select a concrete carrier, component, actor, architecture,
+owner, or implementation. One project may instantiate several frames in one
+family. One declared frame may cover several families only when its evaluation
+and result relations preserve every material distinction rather than flattening
+them behind one broad label.
 
 ### Testing frame
 
@@ -372,12 +397,85 @@ not relied upon as a substitute for reviewing those semantics.
 
 ---
 
+## Derived Generic Specialist Frame Set
+
+This profile declares the following generic frame families for Product work.
+Each row is an evaluation archetype under `REFERENCE_FRAME_METHOD.md`, not a
+complete frame declaration. An adopting project binds the exact subject,
+basis, material manifold, coordinates, invariants, authority, evidence,
+exclusions, result algebra, capability envelope, dependencies, and
+invalidation conditions for every activated instance.
+
+| Frame family | Evaluation family and exact subject | Governing authority and permitted output | Immediate falsifier |
+|---|---|---|---|
+| **Product** | Does one exact current Product claim, outcome, boundary, and lifecycle govern the claimed Product subject without downstream reinterpretation? The basis is current Intent, Product, requirements, acceptance meaning, and exact Product coordinates. | Product and requirement authority retain meaning and acceptance. The frame returns only a bounded evaluation result and evidence. | Design, code, tests, a predecessor behavior, or local convention changes Product meaning or substitutes a different Product subject. |
+| **Design** | Does the accepted structural `HOW` satisfy the material constitutional `WHAT`, close the required design relations, and preserve their owners across the affected topology? | Accepted design under its governing Product and requirements owns structural decisions. The frame may identify satisfaction, contradiction, or a design re-entry gap; it cannot invent Product truth. | Implementation precedent resolves an open material design decision, design creates Product meaning, or a material relation or competing structure remains undeclared. |
+| **Design Component** | Does one bounded design component and its direct causal dependency cone preserve its parent contract, internal relations, sibling seams, and required outputs? | The accepted design boundary owns only its bounded composition decision. Parent, sibling, Product, requirement, and runtime owners retain their relations. | The component omits a material far-side seam, absorbs a sibling or parent decision, or reports local closure while its direct composition is unresolved. |
+| **Public Boundary** | Does one supported public entry or exit perform exactly its assigned validation, selection, transport, refusal, and projection relations while preserving the selected interior owners? | Product, interface, identity, security, and accepted-design authority define the boundary. The frame evaluates the boundary result or refusal and returns only its closed evaluation; it does not recreate interior semantics. | The public surface interprets owner meaning, sequences hidden domain decisions, exposes an interior carrier as Product truth, or admits an unsupported path. |
+| **Entity** | Is one semantic, artifact, or runtime entity bound to its exact identity, kind, lifecycle, owner, representation, and applicable effect regime? | Product, domain, identity, requirement, and accepted-design authority define the entity. The frame returns an identity- and lifecycle-bound evaluation. | A filename, wrapper, ticket, object shape, cache, or process instance substitutes for stable entity identity, or distinct lifecycle coordinates are collapsed. |
+| **Operator** | Is one material operation an irreducible declared relation over its admitted domain, inputs, outputs, refusals, algebra, effects, and lawful compositions? | Product, requirements, accepted Ontology and design, and the named operation owner define the relation. The frame evaluates it without creating another executable plan. | An endpoint, function, class, command, or file label is asserted to be the semantic atom; orchestration hides the real operator; or generic mechanics are rebuilt as domain law. |
+| **Owner** | Does one semantic or authority-bearing relation preserve its owner, role kind, subject, scope, basis, lifecycle, refusal invariants, and permitted delegation? | The existing Product, requirement, identity, accepted-design, release, or other named authority owns the relation. The frame may evaluate authority congruence only. | Another surface recreates the judgment, source authorship is treated as authority transfer, or a proxy, foundation, frame, or actor widens the grant. |
+| **Effect** | Does one action obey its declared pure, observational, artifact, or runtime effect regime, including commit, failure, retry, recovery, compensation, admission, and projection law where material? | The applicable Product, requirement, design, artifact, runtime, and admission owners retain their decisions. The frame returns an effect-bound result and evidence. | Distinct effect regimes are collapsed, a mutation bypasses its admitted owner, compensation is treated as semantic rollback, or a read becomes rival writable truth. |
+| **Reuse/Foundation** | Has one material generic capability or dependency been normalized and compared against credible lawful foundations with any irreducible local remainder and authority-bearing role preserved? | `DESIGN_MODULE_METHOD.md` `STDO-UP-023` and the existing tradeoff owner govern selection. The frame cannot transfer semantic authority to a foundation. | Incumbent or local code wins without bounded comparison, a richer lawful foundation is reproduced, unknowns are scored favorably, or reuse acquires owner authority. |
+| **Install** | Is the exact selected Product, release, artifact, dependency set, configuration, and callable entry resolved and exercised through its admitted installed coordinate independently of mutable source convenience? | Product, identity, release, dependency, packaging, and accepted-design authority define the installed subject. The frame returns installed identity, reachability, and refusal evidence. | Source-tree imports, ambient resolution, process registries, fixture bindings, rebuilt artifacts, or a moving workspace substitute for the claimed installed subject. |
+| **Proof** | Does one exact claim have congruent subject, basis, path, population, oracle, evidence, falsifier, residual boundary, and invalidation law? | The claim owner defines meaning; applicable testing, assurance, review, Product, and release owners define evaluation and acceptance. The frame returns evidence and a closed evaluation result, not Product meaning or disposition. | A harness recreates owner meaning, evidence targets another subject or path, count or aggregate green substitutes for the claim, or proof tooling mutates the subject undetectably. |
+
+These families are non-hierarchical and may overlap. Product does not outrank
+Design by frame topology; Product authority already governs constitutional
+meaning. Owner does not gain authority over Entity or Operator by being a
+broader frame. Proof does not become Reviewer, acceptance, or disposition
+authority. The existing authority graph remains controlling.
+
+For each governed outcome, the known evaluation inventory dispositions every
+family as one of:
+
+- instantiated by one or more exact frame declarations or authoritative
+  acquisition paths because the family is material;
+- evidenced as non-material to the exact outcome by the authority capable of
+  making that determination; or
+- retained as an explicit uncovered, conditional, conflicted, or
+  `out_of_frame` residual.
+
+Absence of a named file, component, runtime object, or actor is not evidence
+that a family is non-material. Conversely, adopting this profile does not
+require a project to create eleven components or activate eleven frames for
+every task.
+
+When a generic frame is recursively refined, each child declaration records
+its parent contract, purpose, material entities, identity and lifecycle
+relations, semantic owners, direct sibling seams, applicable invariants, and
+prohibited competing paths. Refinement opens only for a material distinction
+needed to close the parent evaluation. This is a frame dependency relation,
+not an organizational or runtime hierarchy.
+
+Coverage records the union of admissible observations contributed by the
+activated frames. A composite claim is `satisfied` only through a declared
+conjunction in which every applicable constraint is satisfied and every
+material cross-frame seam preserves or lawfully translates exact identity,
+coordinate and basis, carried value or evidence, lifecycle scope, authority,
+and provenance. A missing or non-commuting seam returns the applicable
+`falsified`, `indeterminate`, `out_of_frame`, or `invalid_basis` result; no
+frame is selected as dominant.
+
+This generic set imports no ABIogenesis, GTL, HoG, or ABG frame and no renamed
+architectural substitute such as Product Composition, Semantic Source,
+Execution Derivation, or Admission And Runtime Truth. A consumer may declare
+such frames under its own Product or accepted-design authority when they are
+material. They are not part of this baseline.
+
+---
+
 ## Derived Product Testing Frame Set
 
 When this profile supports Product promotion, closure, or release assurance,
 testing is configured as a claim-relative specialist-frame set. The kind of
 runner does not select the frame. The evaluated claim, subject, path,
 population, oracle, and falsification boundary do.
+
+Where the generic specialist set is adopted, testing frames supply
+claim-congruent evidence to one or more Proof-frame evaluations. Proof is not a
+testing hierarchy or aggregate-green frame: user-acceptance, end-to-end,
+integration, and unit results retain their distinct claims and coordinates.
 
 The ordinary configuration contains four distinct frames:
 
@@ -854,6 +952,7 @@ or project workspace. They organize finite evaluations over specialist frames.
 |---|---|---|
 | exact method, project, and work basis | Executive | complete STDO cut; current Goals/Product/requirements/design/work authority |
 | affected causal cone and frame configuration | Executive, challenged by Worker and Reviewer | `STDO-UP-017..020`; domain, identity, dependency, implementation, and history frames |
+| generic specialist-family coverage and cross-frame seam conservation | Executive for configuration; Worker and Reviewer for their exact evaluations | material Product, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof declarations or authoritative acquisition paths; explicit non-material and residual dispositions |
 | bounded realization and self-review | Worker | accepted design; `STDO-UP-023` capability/foundation selection where material; capability/reuse, implementation, environment, and proof frames |
 | candidate and transition evidence | Worker | `STDO-UP-020` and exact identity/evidence relations |
 | user can obtain the Product-defined outcome through supported surfaces | Worker for execution and self-review; Reviewer where independent assurance is required | derived user-acceptance frame; Product, requirement, UX, identity, installed-subject, and acceptance inputs |
@@ -931,6 +1030,10 @@ An adoption projection records:
 - governed workspace, Product scope, outcome, basis, and time;
 - local Executive, Worker, and Reviewer capability envelopes and actor-binding
   rules;
+- generic specialist-frame declarations or authoritative acquisition paths,
+  plus an authority-bound non-material or explicit residual disposition for
+  each Product, Design, Design Component, Public Boundary, Entity, Operator,
+  Owner, Effect, Reuse/Foundation, Install, and Proof family;
 - specialist-frame declarations or authoritative acquisition paths;
 - testing-frame declarations, exact Product and module claims, ordinary-path
   identities, combinatorial populations, scenario matrix, oracles, and
@@ -1045,9 +1148,18 @@ A representative profile trial establishes at least:
     mechanics remain authority-neutral;
 19. a counterexample returns a causally minimal supported frontier represented
     as one unique locus, a jointly established incomparable set, unresolved
-    alternative frontiers, or `indeterminate` evidence; and
+    alternative frontiers, or `indeterminate` evidence;
 20. a project-defined configuration can replace the profile without changing
-    the selected STDO law or inventing another authority layer.
+    the selected STDO law or inventing another authority layer;
+21. every generic specialist-frame family is instantiated where material,
+    evidenced as non-material by capable authority, or retained as an explicit
+    residual rather than omitted by artifact or component absence;
+22. a representative multi-frame claim refuses or returns non-satisfaction
+    when an identity, coordinate, value/evidence, lifecycle, authority, or
+    provenance seam is missing, stale, foreign, or non-commuting; and
+23. the generic specialist set can be instantiated without importing a
+    consumer-specific architecture, runtime object, or renamed local topology
+    into the baseline.
 
 The claim is limited to the frame revisions, actor envelopes, result branches,
 and evidence populations actually evaluated.
@@ -1073,6 +1185,7 @@ and evidence populations actually evaluated.
 
 ## Frames And Actors
 - frame declarations or references:
+- generic specialist-family declarations, non-material evidence, and residuals:
 - capability and independence envelopes:
 - actor-binding rules:
 
@@ -1173,8 +1286,9 @@ This profile is misapplied when:
 14. this profile restates `STDO-UP-020`, `STDO-UP-007`, or `STDO-UP-022` as
     peer constitutional law;
 15. a project-defined configuration silently changes selected STDO law;
-16. ABIogenesis-specific realization machinery is presented as a universal
-    requirement;
+16. consumer-specific realization machinery, including ABIogenesis, GTL, HoG,
+    or ABG topology or a renamed architectural equivalent, is presented as a
+    universal requirement;
 17. test labels or runner choice substitute for declaring the exact testing
     frame, subject, claim, population, oracle, path, and falsification condition;
 18. unit-test, assertion, snapshot, line, branch, or function count is used as a
@@ -1199,9 +1313,14 @@ This profile is misapplied when:
     a joint causal frontier, unresolved alternatives, or no bounded frontier, or
     localization is used to authorize wider repair;
 27. a mutation, sabotage, fixture, or proof capture changes the exact assurance
-    subject without isolation, restoration, and revalidation; or
+    subject without isolation, restoration, and revalidation;
 28. aggregate green status hides a missing or conflicting user-acceptance,
-    end-to-end, integration, unit, or negative-path frame result.
+    end-to-end, integration, unit, or negative-path frame result;
+29. a generic specialist-frame family is treated as a required component,
+    actor, service, file, runtime type, stage, or new semantic owner; or
+30. a material generic family is omitted because no artifact shares its name,
+    or several families are flattened into one broad frame without preserving
+    their distinct evaluation and result relations.
 
 ---
 
@@ -1256,10 +1375,19 @@ A project has applied this baseline to one outcome when:
     preserve or revalidate the exact subject they claim to evaluate;
 20. owner-issued Product and runtime truth is acquired through the exact owner
     surface and evaluated by a separately derived oracle without a rival
-    assurance-owned semantic interpreter; and
+    assurance-owned semantic interpreter;
 21. counterexamples return a causally minimal supported frontier represented as
     one unique locus, a jointly established incomparable set, unresolved
-    alternative frontiers, or `indeterminate` evidence.
+    alternative frontiers, or `indeterminate` evidence;
+22. every Product, Design, Design Component, Public Boundary, Entity, Operator,
+    Owner, Effect, Reuse/Foundation, Install, and Proof family material to the
+    outcome has an exact declaration or acquisition path, while every
+    non-material or uncovered family has an authority-bound disposition;
+23. every material cross-frame seam preserves or lawfully translates identity,
+    coordinate and basis, carried value or evidence, lifecycle scope,
+    authority, and provenance; and
+24. no consumer-specific architecture, renamed local topology, runtime object,
+    or component roster is inferred from the generic specialist set.
 
 A project-defined frame configuration closes against
 `REFERENCE_FRAME_METHOD.md`, the selected complete STDO cut, and its cited

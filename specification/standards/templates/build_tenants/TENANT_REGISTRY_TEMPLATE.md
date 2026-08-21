@@ -1,19 +1,34 @@
 # Tenant Registry
 
-`build_tenants/` is the project-owned realization root beneath the shared project specification.
+This is an optional human-readable companion to the canonical
+`how.build_tenants` bindings in the Product's `stdo_<label>.json` definition.
 
-Use it for one-to-many independent implementations of the same constitutional `specification/`.
+The Product Definition Overlay owns build-tenant identity and location. Keep
+this table consistent with that JSON or generate it from the definition. This
+file must not become a second tenant registry.
 
-This file is the canonical registry surface for the project's build tenants.
+`build_tenants/` is the default project-owned realization root beneath the
+shared project specification. An existing project may bind another layout.
 
-The constitutional `specification/` surface is singleton project truth.
+Use build tenancy for one-to-many independent implementations of the same
+constitutional `WHAT`.
 
-`build_tenants/` is many-valued realization structure beneath that truth.
+The bound `WHAT` is singleton Product truth. The bound build tenants are
+many-valued realization structure beneath it.
 
 ## Structure
 
-- `common/` holds shared realization/design law adopted across more than one tenant.
-- `<family>/<variant>/` holds one concrete tenant realization. The `<family>/<variant>` shape is the recommended scaffold; single-label tenant paths such as `<variant>/` are also lawful per `SPEC_METHOD.md` `## ADR Folder Convention`. Pick one shape per project and stay with it.
+- `common/` is the default location for shared realization/design law adopted
+  across more than one tenant.
+- `<family>/<variant>/` is the recommended default location for one concrete
+  tenant realization. Single-label paths such as `<variant>/` and other
+  definition-bound layouts are also lawful.
+
+## Shared Surface
+
+When `how.common` is non-empty, list those shared realization references here
+for readers. `common` is not itself a build tenant and must not appear as a
+tenant identity.
 
 ## Registry
 
@@ -27,7 +42,8 @@ Suggested lifecycle states include:
 
 | Entry | Kind | Path | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `common` | shared root | `build_tenants/common/` | In Development | Shared realization law across tenants |
-| `<family>/<variant>` | variant | `build_tenants/<family>/<variant>/` | Planned | Replace with the current tenant candidates for this project |
+| `<tenant-id-uri>` | `<family>/<variant>` | `build_tenants/<family>/<variant>/` | Planned | Replace with the current tenant candidates for this project |
 
-Record the currently active realization focus explicitly in the table notes or an adjacent short section when more than one tenant exists.
+Record the currently active realization focus explicitly in the table notes or
+an adjacent short section when more than one tenant exists. The entry identity
+must match the corresponding `how.build_tenants[].id`.

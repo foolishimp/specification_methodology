@@ -1,0 +1,407 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:stdo:schema:product-definition:1",
+  "title": "STDO Product Definition Overlay",
+  "description": "Layout-neutral identity, authority-location, collective reference-frame basis, realization, work-carrier, and composition bindings for one STDO-defined product WHAT.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "kind",
+    "product",
+    "constitution",
+    "local_constitution",
+    "reference_frame_bases",
+    "what",
+    "how",
+    "ticketing",
+    "composition"
+  ],
+  "properties": {
+    "$schema": {
+      "$ref": "#/$defs/referenceUri"
+    },
+    "kind": {
+      "const": "stdo.product-definition"
+    },
+    "product": {
+      "type": "object",
+      "required": [
+        "definition_id",
+        "name",
+        "source_project",
+        "bounded_context"
+      ],
+      "properties": {
+        "definition_id": {
+          "$ref": "#/$defs/identityUri"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_project": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "bounded_context": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "id",
+                "definition"
+              ],
+              "properties": {
+                "id": {
+                  "$ref": "#/$defs/identityUri"
+                },
+                "definition": {
+                  "$ref": "#/$defs/referenceUri"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "constitution": {
+      "type": "object",
+      "required": [
+        "authorities",
+        "entrypoints"
+      ],
+      "properties": {
+        "authorities": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "entrypoints": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "local_constitution": {
+      "type": "object",
+      "required": [
+        "axioms",
+        "overrides",
+        "disambiguations"
+      ],
+      "properties": {
+        "axioms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/localAxiom"
+          },
+          "uniqueItems": true
+        },
+        "overrides": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/localOverride"
+          },
+          "uniqueItems": true
+        },
+        "disambiguations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/localDisambiguation"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "reference_frame_bases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/referenceFrameBasis"
+      },
+      "uniqueItems": true
+    },
+    "what": {
+      "type": "object",
+      "required": [
+        "intent",
+        "product",
+        "specification"
+      ],
+      "properties": {
+        "intent": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "product": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "specification": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "how": {
+      "type": "object",
+      "required": [
+        "common",
+        "build_tenants"
+      ],
+      "properties": {
+        "common": {
+          "$ref": "#/$defs/references"
+        },
+        "build_tenants": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/buildTenant"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "ticketing": {
+      "type": "object",
+      "required": [
+        "goals",
+        "tickets",
+        "comments"
+      ],
+      "properties": {
+        "goals": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "tickets": {
+          "type": "object",
+          "required": [
+            "root",
+            "lanes"
+          ],
+          "properties": {
+            "root": {
+              "$ref": "#/$defs/referenceUri"
+            },
+            "lanes": {
+              "type": "object",
+              "required": [
+                "backlog",
+                "active",
+                "completed"
+              ],
+              "properties": {
+                "backlog": {
+                  "$ref": "#/$defs/referenceUri"
+                },
+                "active": {
+                  "$ref": "#/$defs/referenceUri"
+                },
+                "completed": {
+                  "$ref": "#/$defs/referenceUri"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "comments": {
+          "$ref": "#/$defs/carrierRoot"
+        },
+        "sprints": {
+          "$ref": "#/$defs/carrierRoot"
+        }
+      },
+      "additionalProperties": false
+    },
+    "composition": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/compositionEdge"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identityUri": {
+      "type": "string",
+      "format": "uri",
+      "minLength": 1,
+      "description": "URI syntax annotation. Conformance requires an assertion-capable URI validator in addition to portable Draft 2020-12 structural validation."
+    },
+    "referenceUri": {
+      "type": "string",
+      "format": "uri-reference",
+      "minLength": 1,
+      "description": "URI-reference syntax annotation. Conformance requires an assertion-capable URI-reference validator in addition to portable Draft 2020-12 structural validation."
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/referenceUri"
+      },
+      "uniqueItems": true
+    },
+    "nonEmptyReferences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/referenceUri"
+      },
+      "uniqueItems": true
+    },
+    "carrierRoot": {
+      "type": "object",
+      "required": [
+        "root"
+      ],
+      "properties": {
+        "root": {
+          "$ref": "#/$defs/referenceUri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "localAxiom": {
+      "type": "object",
+      "required": [
+        "uri",
+        "authority",
+        "applies_to"
+      ],
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "authority": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "localOverride": {
+      "type": "object",
+      "required": [
+        "uri",
+        "overrides",
+        "authority",
+        "applies_to"
+      ],
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "overrides": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "authority": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "localDisambiguation": {
+      "type": "object",
+      "required": [
+        "uri",
+        "disambiguates",
+        "authority",
+        "applies_to"
+      ],
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "disambiguates": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "authority": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "referenceFrameBasis": {
+      "type": "object",
+      "required": [
+        "uri",
+        "authority",
+        "applies_to"
+      ],
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "authority": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "buildTenant": {
+      "type": "object",
+      "required": [
+        "id",
+        "root",
+        "design",
+        "implementation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identityUri"
+        },
+        "root": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "design": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        },
+        "implementation": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    },
+    "compositionEdge": {
+      "type": "object",
+      "required": [
+        "product_definition",
+        "target_definition_id",
+        "relation",
+        "contracts"
+      ],
+      "properties": {
+        "product_definition": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "target_definition_id": {
+          "$ref": "#/$defs/identityUri"
+        },
+        "relation": {
+          "$ref": "#/$defs/referenceUri"
+        },
+        "contracts": {
+          "$ref": "#/$defs/nonEmptyReferences"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

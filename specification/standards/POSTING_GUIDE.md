@@ -30,13 +30,16 @@ Do not use a post for:
 - live design decisions
 - active process law
 
-Those belong in `specification/` or ratified design surfaces.
+Those belong in the applicable bound `WHAT` or ratified design surfaces.
 
 ---
 
 ## Location
 
-Posts live under:
+Posts live at the Product Definition Overlay's `ticketing.comments.root`
+binding.
+
+The default local-file binding is:
 
 ```text
 .ai-workspace/comments/<agent>/
@@ -46,11 +49,17 @@ Capability example:
 
 - `.ai-workspace/comments/<agent-id>/`
 
+An existing project may bind another directory, repository resource, message
+board, API collection, or product-scoped query. The bound carrier must preserve
+the commentary-versus-authority distinction in this guide. Its location or
+visibility cannot turn a post into ticket, Product, requirement, or design
+truth.
+
 ---
 
-## Filename
+## Carrier Identity
 
-Use:
+For the default local-file carrier, use:
 
 ```text
 YYYYMMDDTHHMMSS_CATEGORY_SUBJECT.md
@@ -62,7 +71,9 @@ Example:
 20260327T120000_REVIEW_bootloader-boundary.md
 ```
 
-The subject should be short, specific, and stable enough to scan later.
+The subject should be short, specific, and stable enough to scan later. A
+non-file carrier must preserve an equivalent stable post identity, publication
+time, category, subject, author, discussion state, and supersession history.
 
 ---
 
@@ -133,8 +144,8 @@ later change would materially alter a closed conclusion, reopen an old dispute,
 or start a new bounded subject.
 
 Closed posts are not constitutional truth. They are stable commentary records
-unless and until their content is adopted into `specification/`, ratified
-design, or accepted implementation.
+unless and until their content is adopted into a bound `WHAT` surface,
+ratified design, or accepted implementation.
 
 ---
 
@@ -154,7 +165,7 @@ design, or accepted implementation.
 
 A post becomes consequential only when its content is explicitly adopted into:
 
-- `specification/`
+- a bound `WHAT` surface
 - ratified design
 - accepted implementation
 

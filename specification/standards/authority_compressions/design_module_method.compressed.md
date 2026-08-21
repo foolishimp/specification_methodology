@@ -9,7 +9,7 @@ target_prompt_families:
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-17
+generated_at: 2026-08-21
 stale_if_source_digest_changes: true
 ---
 
@@ -311,6 +311,10 @@ surfaces.
 - The retained recurrence rule remains distinct: a second credible recurrence
   requires commonization review, and a third local rebuild requires an explicit
   consume, extend, or do-not-commonize disposition.
+- Preferred commonization order is boundary-local cleanup, then a tenant-local
+  reusable surface, then shared/common propagation only through separate design
+  re-entry. Similarity does not itself promote tenant-local meaning, ownership,
+  public carriers, module boundaries, or shared law.
 
 ## Prompt-Relevant Rules
 

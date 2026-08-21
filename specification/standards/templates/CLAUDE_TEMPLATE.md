@@ -16,8 +16,20 @@ override this file for their subtree.
 - Specification is constitutional source, not commentary on code.
 - Authority flows:
   `Goals -> Intent -> Product Definition -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`.
-- `specification/` defines `WHAT`. Design, build tenants, and code define
-  `HOW`.
+- The applicable `stdo_<label>.json` definition locates `WHAT`, `HOW`,
+  collective reference-frame bases, work carriers, and explicit product
+  composition. `specification/`, `build_tenants/`, and `.ai-workspace/` are
+  default paths, not universal layout law.
+- `product.definition_id` identifies the mutable `WHAT` definition line, not
+  an immutable Product or release. Composition binds both the target definition
+  locator and expected definition identity, its directed relation authority,
+  and a non-empty governing contract set.
+- The selected constitutional set collectively makes axioms, ontology,
+  epistemology, taxonomy, and semantics recoverable. These are sufficiency
+  dimensions, not five assumed document names.
+- The Product Definition Overlay owns locator and relation mapping only.
+  Referenced constitutional, Product, requirement, design, ticket, and comment
+  surfaces retain their own meaning and authority.
 - Products, applications, modules, graph functions, build tenants, and runtime
   surfaces implement constitutional documents; they do not replace them.
 - Active surfaces stay present tense. Historical, provisional, or comparative
@@ -146,6 +158,26 @@ override this file for their subtree.
 
 ### Reference Frame Engagement Compression
 
+- Load the applicable `reference_frame_bases` binding as the durable shared
+  project basis, then use the authorized work instruction or activation packet
+  to bind this agent's exact frame configuration, evaluation, subject, and
+  capability envelope. The Product Definition Overlay is not an actor registry
+  and does not persist temporary activations.
+- The optional baseline provides Product, Design, Design Component, Public
+  Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and
+  Proof specialist-frame families. Instantiate only the families material to
+  the exact evaluation; evidence a family as non-material through capable
+  authority or retain it as an explicit residual. These labels create no
+  component, stage, actor, service, runtime type, or semantic owner.
+- For a composite claim, preserve or lawfully translate identity,
+  coordinate/basis, value/evidence, lifecycle, authority, and provenance at
+  every material cross-frame seam. Missing or non-commuting seams return closed
+  pressure; no broad frame dominates the others.
+- Do not import ABIogenesis, GTL, HoG, ABG, or renamed architectural equivalents
+  into the generic baseline. Consumer-local frames remain locally declared.
+- Do not treat a Product, domain, or runtime carrier named `Frame` as an
+  engagement frame by label. It remains `WHAT` or `HOW` and may instead be the
+  exact subject or coordinate evaluated by a declared reference frame.
 - Use a finite reference frame for one declared evaluation family. Bind its
   exact subject/basis, material relations, coordinates, governing invariants,
   semantic/evaluation/decision authority and operation authority where
@@ -262,8 +294,9 @@ Use this context for GTL, ABG, and ODD-shaped products in this workspace.
 - Graph functions are the primary constructive carrier.
 - Do not hide the constructive carrier inside ad hoc service methods,
   orchestration loops, or one-off scripts.
-- `specification/` owns intent, product, goals, requirements, and scenarios.
-- `build_tenants/` and ratified design own realization structure, GTL
+- The applicable Product Definition Overlay's `what` bindings locate intent,
+  Product, requirements, and scenarios.
+- Its `how` bindings and ratified design own realization structure, GTL
   publications, code, tests, and local proof surfaces.
 - ABG owns traversal, runtime facts, frames, continuations, lineage,
   provenance, correction, and projection mechanics.
@@ -281,9 +314,10 @@ Use this context for GTL, ABG, and ODD-shaped products in this workspace.
 
 ### Work Tracking And Commentary
 
-- `GOALS.md` is the bounded current work-wave surface.
-- `.ai-workspace/tickets/` is the durable work-item surface.
-- `.ai-workspace/comments/<agent>/` is the commentary surface for analysis,
+- The bound Goals carrier is the bounded current work-wave surface.
+- `ticketing.tickets` in the applicable Product Definition Overlay locates the
+  durable work-item surface.
+- `ticketing.comments.root` locates the commentary surface for analysis,
   review, strategy, gaps, handoff, schema notes, and closure.
 - Posts are commentary, not law.
 - If a pattern becomes reusable shared law, ratify it in
@@ -300,21 +334,28 @@ Use this context for GTL, ABG, and ODD-shaped products in this workspace.
 
 ## Repo Entry Rule
 
-Before changing a specific child repo, identify the owning repo and then read
-its local authority surfaces in this order when present:
+Before changing a specific child repo, identify the owning repo, recursively
+discover its `stdo_*.json` definitions, select the definition whose Product
+scope governs the work, and then read:
 
-1. `README.md`
-2. `specification/GOALS.md`
-3. `specification/INTENT.md`
-4. `specification/PRODUCT.md`
-5. `specification/requirements/`
-6. ratified design surfaces
-7. deeper local `CLAUDE.md` or `AGENTS.md`
+1. the applicable `stdo_<label>.json`
+2. its complete constitutional authority and relevant entrypoints
+3. the applicable bound project reference-frame basis and this agent's
+   authorized activation packet
+4. its bound Intent, Product, and specification surfaces
+5. its bound shared and tenant-local design surfaces
+6. its bound ticket and commentary carriers when work state or history matters
+7. relevant `README.md` files
+8. deeper local `CLAUDE.md` or `AGENTS.md`
+
+Directory nesting does not select a Product or create inheritance by itself.
+Use explicit product-definition identity, immutable Product or release identity
+where material, scope, and composition.
 
 Apply these rules:
 
-- specification defines `WHAT`
-- design and realization define `HOW`
+- the bound `what` surfaces define `WHAT`
+- the bound design and realization surfaces define `HOW`
 - comments, generated views, and stale precedent do not outrank live
   specification and design
 - use the smallest lawful re-entry point from the change classes above
@@ -345,6 +386,8 @@ Use the selected cut when exact method or profile wording matters:
 - `POSTING_GUIDE.md`
 - `WRITING_GUIDE.md`
 - `GLOSSARY_GUIDE.md`
+- `schemas/product-definition.schema.json`
+- `templates/PRODUCT_DEFINITION_TEMPLATE.json`
 
 Mutable `specification_methodology` source authors future releases. It is not
 operative authority for this consumer. An installed copy is authoritative only

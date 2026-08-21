@@ -5,9 +5,12 @@
 Spec-driven development treats specification as constitutional source, not
 commentary on code. Methodology defines the process constitution. Intent,
 product definition, and requirements define the project constitution.
-Specification defines `WHAT`. Design and realization define `HOW`. In tenanted
-projects, `build_tenants/` holds one or more independent `HOW` realizations of
-the shared `WHAT`; it does not define a rival constitution. Requirements define
+Specification defines `WHAT`. Design and realization define `HOW`. Every
+STDO-defined product publishes a layout-neutral `stdo_<label>.json` definition
+that locates its governing constitution, local constitutional decisions,
+collective reference-frame bases, `WHAT`, independent build-tenant `HOW`
+realizations, work surfaces, and explicit product composition. The definition
+is a routing overlay, not a rival truth surface. Requirements define
 the full constitutional what: capabilities, guarantees, governance, and
 verification obligations. Design defines the structural how, and ADRs are one
 durable form of that design record. The SDLC is a governed disambiguation
@@ -202,24 +205,270 @@ Therefore, if a project's implementation disappears, this methodology should sti
 The important boundary is:
 
 - `SPEC_METHOD.md` defines the process constitution
-- `GOALS.md` defines the current overriding concerns for the active body of work
-- `INTENT.md` defines domain direction
-- `PRODUCT.md` defines the current product-definition surface of the mutable source project
-- `specification/requirements/` is the live requirement surface derived from product definition
+- `GOALS.md` conventionally names the current overriding concerns for the active body of work
+- `INTENT.md` conventionally names domain direction
+- `PRODUCT.md` conventionally names the current product-definition surface of the mutable source project
+- `specification/requirements/` is the conventional live requirement surface derived from product definition
 - a shared design surface plus any tenant-local design surfaces choose the concrete mechanism
-- when a project realization model uses build tenants, `build_tenants/` is the project-owned realization root beneath one shared specification
+- the product's `stdo_<label>.json` definition binds the actual authority
+  locations; these conventional names do not require an existing project to
+  move or duplicate its files
+- the definition's `how.build_tenants` entries locate the project-owned
+  realizations beneath one shared specification
 
 The authoritative split is strict:
 
-- `specification/` defines `WHAT`
+- the surfaces bound by `what` define `WHAT`
 - design and realization surfaces define `HOW`
-- no build-tenant, design, code, or derived surface may become co-equal constitutional authority with `specification/`
+- no build-tenant, design, code, definition overlay, or derived surface may
+  become co-equal constitutional authority with the bound `WHAT`
 
-Structurally, `requirements/` is a folder under `specification/`. Requirements may be stored as individual files or grouped into requirement families. The purpose of this shape is to avoid collapsing the constitutional surface into one monolithic requirements document.
+In the default scaffold, `requirements/` is a folder under `specification/`.
+Requirements may instead be stored at any URI bound by the product definition,
+as individual files or grouped into requirement families. The purpose of the
+default shape is to avoid collapsing the constitutional surface into one
+monolithic requirements document, not to make folder placement constitutional.
 
 This is one expression of the broader declarative bias: we prefer declaring requirement structure and family boundaries over maintaining one imperative catch-all document.
 
 So if project-specific design and code disappeared, recovery would proceed through this methodology plus the surviving domain specification. Methodology alone can bootstrap the process; methodology plus domain specification can reconstruct the project.
+
+---
+
+## STDO Product Definition Overlay And Layout Independence
+
+Every STDO-defined product publishes one JSON definition for each distinct
+current product `WHAT`. Its conventional filename is:
+
+```text
+stdo_<label>.json
+```
+
+`stdo_default.json` is the default filename for a source project with one
+product definition. A directory may contain more than one definition when it
+hosts more than one distinct product `WHAT`. Multiple build tenants realizing
+the same `WHAT` remain entries in one definition and do not create additional
+definition files.
+
+The suffix `<label>` is a stable lowercase local discovery label made from
+ASCII letters, digits, hyphens, or underscores. It is unique only among
+definitions in the same directory. It is not Product identity. The
+`product.definition_id` URI inside the definition is the stable identity of
+the mutable product-definition line and must be unique within the discovered
+workspace definition set. It identifies one continuing `WHAT` definition, not
+one immutable released Product.
+
+The definition identity may remain stable while that source line authors
+successive Product releases. Every immutable Product or release produced from
+the line retains its own Product- and Release-Method identity. A fork,
+replacement, or independently governed `WHAT` definition receives another
+`product.definition_id`; changing a released Product does not repurpose the
+definition identity as release identity.
+
+Product-definition, immutable Product, bounded-context, and build-tenant
+identity URIs are identity carriers, not self-authorizing strings. They remain
+subject to `IDENTITY_METHOD.md` and the owning Product, release, or domain
+authority. A URI locator, filename, path, or display label cannot mint or widen
+identity authority.
+
+The directory containing a definition is its **definition root**. Relative URI
+references resolve against the definition file's retrieval URI. The
+`product.source_project` reference identifies the source-project root and may
+resolve to the definition root or elsewhere. File proximity does not create
+authority.
+
+The normative schema is
+`schemas/product-definition.schema.json`. The single fill-in form is
+`templates/PRODUCT_DEFINITION_TEMPLATE.json`. This concrete JSON shape is an
+accepted interoperability boundary under `STDO-SURFACE-001`. It standardizes
+only identity, location, relation, and discovery fields. It does not absorb the
+meaning owned by any referenced constitutional, Product, requirement, design,
+ticket, or commentary surface.
+
+### Required Definition Relations
+
+Each definition contains:
+
+- `product` — stable product-definition identity, display name, source-project
+  locator, and an explicit bounded-context declaration or `null`;
+- `constitution` — the governing constitutional sets and useful reading
+  entrypoints;
+- `local_constitution` — local axioms, overrides, and disambiguations with
+  their owning authority, target, and scope;
+- `reference_frame_bases` — one or more accepted collective reference-frame
+  basis declarations with their admitting authorities and governed scopes;
+- `what` — the current Intent, Product, and specification bindings;
+- `how` — any shared realization surfaces and one or more independent build
+  tenants;
+- `ticketing` — Goals, ticket, comment, and optional sprint carrier bindings;
+- `composition` — explicit relations to other STDO product definitions; and
+- `$schema` and `kind` — the schema locator and
+  `stdo.product-definition` discriminator.
+
+The overlay owns this locator and relation map. Referenced documents own their
+content. Repeating source truth inside the JSON creates a rival authority and
+is non-conformant.
+
+### Constitutional-Set Sufficiency
+
+A product constitution is a set of governing documents, not five prescribed
+files. Collectively, the selected set must make the following recoverable for
+the governed scope:
+
+- **axioms** — irreducible starting truths, invariants, and refusal conditions;
+- **ontology** — the kinds of things treated as real and their material
+  identities, relations, boundaries, and lifecycle;
+- **epistemology** — how claims become knowable or acceptable, including
+  admissible evidence, observation, uncertainty, falsification, and decision
+  authority;
+- **taxonomy** — the classifications and kind distinctions used to prevent
+  category collapse; and
+- **semantics** — the governed meaning of terms, relations, states, operations,
+  and outcomes.
+
+These are sufficiency dimensions of the complete set. They are not filename
+classes, required folders, or a one-document-per-dimension partition. One
+document may cover several dimensions, and one dimension may be distributed
+across several owning documents.
+
+`constitution.authorities` locates each complete constitutional set or
+additional constitutional source. For STDO, the reference must identify one
+complete immutable released cut and its exact inventory, not a hand-selected
+subset. `constitution.entrypoints` provides product-relevant reading routes
+into those authorities. Entry points are derived navigation and cannot narrow
+or replace the complete selected constitution.
+
+This rule does not promote every concrete design Ontology into constitutional
+`WHAT`. Product-level ontology that fixes Product meaning belongs in or is
+cited by the bound `WHAT`. The accepted Design Module Method Ontology remains
+semantic-design authority for a realization boundary, derives from
+constitutional `WHAT` and applicable domain methods, and cannot invent
+missing Product meaning.
+
+### Local Constitutional Binding
+
+A local axiom, override, or disambiguation does not gain authority from its file
+category or from being listed in the overlay. Every local entry names:
+
+- the URI carrying the local decision;
+- the existing Product, requirement, accepted-design, or other lawful authority
+  that owns it;
+- the clause or ambiguity it overrides or resolves where applicable; and
+- the exact scope to which it applies.
+
+An empty local array explicitly declares that no local entry of that kind is
+bound for the product. Omission is not an equivalent declaration.
+
+### Collective Reference-Frame Basis
+
+`reference_frame_bases` is the non-empty locator set for the accepted frame
+bases through which finite actors collectively engage the governed Product and
+its work. Each entry names:
+
+- the URI carrying one accepted frame-basis declaration;
+- every existing Goals, Product, requirement, accepted-design, or other lawful
+  authority that admits the declaration; and
+- the exact Product, bounded context, build tenant, outcome, or other governed
+  scope to which it applies.
+
+The referenced declaration owns the selected frame set, method or profile
+basis, governed outcome, capability envelopes, coverage, result relations, and
+invalidation law required by `REFERENCE_FRAME_METHOD.md`. It may adopt
+`STDO_REFERENCE_FRAME_BASELINE.md` or define a project configuration. The JSON
+entry locates that declaration and its authority relation; it does not restate
+the frames or create frame-set authority.
+
+The collective basis and an actor activation are distinct. The Product
+definition records the durable shared basis. A ticket or other authorized work
+instruction may cite an applicable basis and carry the exact activation packet
+for one agent, evaluation, subject, and capability envelope. That execution
+binding does not mutate the Product Definition Overlay. The overlay does not
+register agents, assign permanent frames, or persist temporary active frame
+configurations.
+
+Frames and actors remain separate identities. Several agents may activate
+overlapping subsets of one frame set; one agent may activate different frames
+over time. Neither an actor name nor a broad frame grants semantic, operation,
+review, acceptance, or disposition authority beyond the cited owners and the
+exact activation.
+
+A Product, domain, or runtime carrier also named `Frame` is not included by
+nominal match. It remains governed by its bound `WHAT` and `HOW` and may be the
+subject or coordinate of an evaluation frame. It enters the collective frame
+set only through an explicit `REFERENCE_FRAME_METHOD.md` declaration with the
+required evaluation and authority relations.
+
+### WHAT, HOW, And Work Carriers
+
+`what.intent`, `what.product`, and `what.specification` locate the current
+constitutional `WHAT`. Intent and Product each have one canonical entrypoint;
+specification may cite more than one requirement or specification surface.
+
+`how.build_tenants` is the canonical locator registry for the product's
+independent `HOW` realizations. Each entry has stable identity and locates its
+root, design, and implementation surfaces. `how.common` may locate realization
+law explicitly adopted across more than one tenant. A separate
+`TENANT_REGISTRY.md` may remain as a human-readable companion or generated
+projection, but it cannot become a second tenant-identity or location
+authority.
+
+`ticketing.goals` locates the current work-wave carrier.
+`ticketing.tickets` locates the durable ticket root and the minimum backlog,
+active, and completed lanes. `ticketing.comments` locates the commentary
+root. `ticketing.sprints` optionally locates bounded execution-batch
+manifests. These bindings may resolve to directories, repository resources,
+tracker collections, API endpoints, or product-scoped queries. Goals own the
+bounded work wave, ticket state remains ticket authority, and comments remain
+non-authoritative commentary.
+
+### Recursive Discovery And Explicit Composition
+
+Tools discover `stdo_*.json` recursively within the selected workspace
+boundary. Discovery includes definitions at the workspace root and definitions
+at arbitrarily deep nested project roots.
+
+Directory nesting creates no implicit inheritance, ownership, composition, or
+constitutional override. Parent and child definitions remain independent until
+`composition` explicitly relates them. Each composition entry records:
+
+- `product_definition` — the current locator for the target definition;
+- `target_definition_id` — the stable identity expected from the target's
+  `product.definition_id`;
+- `relation` — the authority defining the directed composition kind, source
+  and target roles, owner, scope, lifecycle, and invalidation conditions; and
+- `contracts` — one or more exact interface, capability, identity, lifecycle,
+  data, evidence, or other governing contract references consumed by that
+  relation.
+
+Resolution verifies both locator and expected identity. Moving a definition
+requires a locator update but does not change its identity. Replacing content
+at the same locator with another definition identity fails closed. When an edge
+binds exact immutable Product or release versions, the cited relation and
+contracts also carry and verify those identities; the mutable definition
+identity cannot substitute for them.
+
+A conforming discovered set satisfies all of the following:
+
+- every definition validates against its selected released schema;
+- every required URI and fragment resolves under the declared workspace and
+  resolver boundary;
+- every `product.definition_id` is unique;
+- every build-tenant identity is unique within its Product Definition Overlay;
+- every governed scope has a resolvable applicable reference-frame basis, and
+  overlapping basis bindings are reconciled by their cited authority;
+- every composition target resolves to another product definition whose
+  `product.definition_id` equals `target_definition_id`, and every relation and
+  non-empty contract set resolves; and
+- no two carriers claim authority for the same Product, tenant, ticket state,
+  or constitutional relation.
+
+Portable Draft 2020-12 JSON Schema validation establishes structural shape.
+The schema's `uri` and `uri-reference` formats are annotations unless the
+declared validator implements format assertion. Conformance therefore performs
+an explicit RFC 3986 URI and URI-reference syntax check with an
+assertion-capable validator, followed separately by resolution, fragment
+existence, selected-release identity, uniqueness across files, constitutional
+sufficiency, and authority congruence checks.
 
 ---
 
@@ -292,10 +541,12 @@ Requirements are the constitutional **what** of the project. They are not limite
 
 Design is the structural **how**. It chooses the concrete realization that satisfies requirement truth: interfaces, topology, file placement, carrier documents, entry/control surfaces, runtime wiring, and lawful tenant boundaries. Requirements may require such surfaces to exist and be delivered; design chooses where and how they are realized unless the path itself is constitutional.
 
-Where a project uses build tenants, that split remains exact:
+For an STDO-defined product, the split remains exact regardless of physical
+layout:
 
-- `specification/` is the shared constitutional `WHAT`
-- `build_tenants/` contains one or more independent `HOW` realizations of that shared `WHAT`
+- the definition's `what` bindings locate the shared constitutional `WHAT`
+- the definition's `how.build_tenants` bindings locate one or more independent
+  `HOW` realizations of that shared `WHAT`
 - tenant-local realization is derivative unless and until the governing truth is ratified in specification
 
 ---
@@ -1825,17 +2076,29 @@ If not, the gate is not actually closed.
 
 ## Bootstrap Rule
 
-The target constitutional shape for a project is:
+Every STDO-defined product begins from
+`templates/PRODUCT_DEFINITION_TEMPLATE.json`. Copy it to the product's
+definition root as `stdo_default.json` for a singleton default project or as
+`stdo_<label>.json` for a named product definition. An existing project fills
+the URI bindings over its current layout; adoption does not require moving,
+renaming, or duplicating existing authority or realization surfaces.
 
-- `.genesis/docs/standards/SPEC_METHOD.md` as installed process constitution
-- `specification/GOALS.md` as current work-wave orientation
-- `specification/INTENT.md` as domain direction
-- `specification/PRODUCT.md` as current product-definition surface
-- `specification/requirements/` as the live requirement surface
-- a live shared design surface
-- any tenant-local design surfaces required by the realization model
+The default scaffold binds:
 
-The authoritative path split is:
+- `.genesis/docs/standards/` as the installed distribution of the selected
+  process constitution;
+- `specification/GOALS.md` as current work-wave orientation;
+- `specification/INTENT.md` as domain direction;
+- `specification/PRODUCT.md` as current product-definition surface;
+- `specification/requirements/` as the live requirement surface;
+- `build_tenants/` as the root for shared and tenant-local realization
+  surfaces; and
+- `.ai-workspace/` as the sprint, ticket, and comment carrier root.
+
+These are template defaults, not universal path law. The definition's URI
+bindings select the actual project carriers.
+
+The authority split is:
 
 - mutable methodology authoring lives in the source workspace under
   `specification_methodology/specification/standards/` and governs only a
@@ -1843,40 +2106,40 @@ The authoritative path split is:
 - released methodology authority is the exact immutable STDO version selected
   by the consumer
 - installed methodology distribution lives under `.genesis/docs/standards/`
-  and must match that selected release
-- project-owned constitutional surfaces live under `specification/`
+  by default and must match that selected release
+- project-owned constitutional surfaces live at the definition's `what`
+  bindings
+- project-owned realization and work surfaces live at its `how` and
+  `ticketing` bindings
 
-Projects shall not create a competing local methodology root such as
-`specification/standards/`.
+Projects shall not create a competing local methodology root such as the
+default `specification/standards/`, nor bind mutable or partial method source
+as if it were the selected immutable release.
 
 Method authority is singular:
 
 - selected immutable STDO release authority, projected into the installed
-  `.genesis/docs/standards/` distribution
-- project constitutional authority in `specification/`
+  distribution located by the Product Definition Overlay
+- project constitutional authority at the definition's bound `WHAT` surfaces
 
 When editing or repricing methodology, the mutable source path is authoring
 authority for the candidate being constructed. It is not operative consumer
 law before release and explicit selection.
 
-When operating inside an installed workspace, the installed path is the
+When operating inside an installed workspace, the bound installed path is the
 operative local distribution of the selected immutable release until the
 consumer explicitly adopts and installs another released cut.
 
-If the realization model is tenanted, the target project topology also includes:
-
-- `build_tenants/` as the project-owned realization root for one-to-many independent `HOW` realizations of the shared `WHAT` defined in specification
-- `build_tenants/TENANT_REGISTRY.md` as the canonical registry of tenant families, variants, and activity state
-- `build_tenants/common/` as the shared realization root for cross-tenant law
-- `docs/` as project-owned supporting documentation
-
-The corresponding folder shape is:
+The corresponding default folder shape is:
 
 ```text
+stdo_default.json
+
 .genesis/docs/standards/
 ├── *_METHOD.md
 ├── *_GUIDE.md
-└── *_TEMPLATE.md
+├── schemas/
+└── templates/
 
 specification/
 ├── GOALS.md
@@ -1885,13 +2148,29 @@ specification/
 └── requirements/
     └── *.md
 
+build_tenants/
+├── common/
+└── default/
+
+.ai-workspace/
+├── sprints/
+├── tickets/
+│   ├── backlog/
+│   ├── active/
+│   └── completed/
+└── comments/
 ```
 
-This shape is structural rather than exhaustive. It declares where constitutional specification and realization-law surfaces belong. Concrete implementation layout remains a design decision unless separately ratified.
+This is a starter topology, not a conformance requirement. A monorepo may place
+several `stdo_<label>.json` definitions at one root and bind each to a
+different `WHAT`. A hierarchical repository may place one or more definitions
+at any nested project root. Recursive discovery finds both shapes; explicit
+composition, never directory nesting, relates their products.
 
 Projects do not need to start with a complete `requirements/` tree on day zero.
 
-Requirements may be sourced from any legitimate constitutional input, including:
+Requirements may be sourced from any legitimate constitutional input,
+regardless of its path, including:
 
 - `GOALS.md`
 - `INTENT.md`
@@ -1905,19 +2184,39 @@ Most projects begin by deriving `INTENT.md` from `GOALS.md`, then `PRODUCT.md` f
 
 The bootstrap sequence is:
 
-1. Establish or install `.genesis/docs/standards/SPEC_METHOD.md`.
-2. Write or confirm `GOALS.md`.
-3. Run the `goals → intent` step and write or confirm `INTENT.md`.
-4. Run the `intent → product` step and write or confirm `PRODUCT.md`.
-5. Gather the requirement source material relevant to the project.
-6. Run the `product → requirements` step and write the resulting live surface under `requirements/`.
-7. Store requirements as individual files or grouped requirement families, whichever yields the clearest constitutional surface.
-8. Classify each live requirement family by lifecycle status and requirement category.
-9. Treat `requirements/` as the authoritative requirement surface going forward.
+1. Select one complete immutable STDO release and install or reference its exact
+   standards inventory.
+2. Copy `PRODUCT_DEFINITION_TEMPLATE.json` to the product definition root as
+   `stdo_default.json` or `stdo_<label>.json`.
+3. Assign the stable `product.definition_id` for the mutable `WHAT` definition
+   line, its source-project locator, and bounded-context declaration; keep it
+   distinct from every immutable Product and release identity.
+4. Bind the complete constitutional authority set and relevant entrypoints;
+   confirm that the set collectively defines axioms, ontology, epistemology,
+   taxonomy, and semantics for the governed scope.
+5. Bind or explicitly empty the local axiom, override, and disambiguation
+   collections.
+6. Bind at least one accepted collective reference-frame basis, its admitting
+   authorities, and its exact governed scope.
+7. Write or confirm the current Goals carrier, then run the
+   `goals → intent → product` steps and bind the resulting Intent and Product
+   entrypoints.
+8. Gather, derive, classify, and bind the live specification or requirement
+   surfaces without creating a co-equal rival.
+9. Bind at least one build tenant, including its root, design, and
+   implementation surfaces, and bind any shared realization law.
+10. Bind the Goals carrier, ticket lanes, comments root, and optional sprint
+   root.
+11. Bind every known product-composition edge explicitly, including its target
+    definition identity, relation authority, and non-empty contract set.
+12. Validate the JSON shape, assert URI and URI-reference syntax, then resolve
+    every URI and perform the cross-definition identity, composition,
+    constitutional-sufficiency, and authority-congruence checks.
 
-Once `requirements/` exists as the live constitutional surface, no rival monolithic requirements document should remain co-equal authority with it.
-
-This rule exists to keep the requirement surface structurally clear, derivable, and non-monolithic.
+Once a bound requirement set is the live constitutional surface, no rival
+monolithic requirements document should remain co-equal authority with it.
+This rule keeps requirement truth structurally clear, derivable, and
+non-monolithic without prescribing its folder.
 
 ---
 
@@ -2004,19 +2303,24 @@ If a requirement names an operational mechanism, the ADR must name that mechanis
 
 ### ADR Folder Convention
 
-ADRs are stored in an `adrs/` subdirectory under the design surface that owns the decision.
+ADRs are stored at the design surface that owns the decision. An `adrs/`
+subdirectory is the default scaffold, not a mandatory repository location.
 
-- tenant-local build-tenant ADRs: `build_tenants/<tenant-path>/design/adrs/`
-- shared or cross-tenant ADRs: `build_tenants/common/design/adrs/`
+- tenant-local build-tenant ADRs: the applicable
+  `how.build_tenants[].design` surface; default
+  `build_tenants/<tenant-path>/design/adrs/`
+- shared or cross-tenant ADRs: the applicable `how.common` surface; default
+  `build_tenants/common/design/adrs/`
 - non-tenanted or project-local ADRs: `<governing-design-surface>/adrs/`
 
-The `<tenant-path>` is one or more path segments that uniquely identify the
-build tenant within `build_tenants/`. Both capability-oriented
+In the default scaffold, `<tenant-path>` is one or more path segments beneath
+`build_tenants/`. Both capability-oriented
 `<product-family>/<realization-variant>` paths and single-label
-`<realization-variant>` paths are lawful, provided the project's
-`build_tenants/TENANT_REGISTRY.md` records the tenant identity used. The
-recommended scaffold is `<product-family>/<realization-variant>`; existing
-single-segment layouts remain conformant and do not require migration.
+`<realization-variant>` paths are lawful. In every layout, the product's
+`how.build_tenants` binding records the tenant identity and locations used.
+The recommended default scaffold is
+`<product-family>/<realization-variant>`; existing or alternative layouts
+remain conformant and do not require migration.
 
 The governing design surface is the closest design surface whose authority owns the decision. ADRs must not be placed in comments, generated views, runtime archives, or requirement folders.
 

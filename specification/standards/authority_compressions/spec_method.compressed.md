@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
+source_digest: de0fe03a92709fd71d784087be7bc883ad4ac21586d00b6d21b05baf2c2df73b
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-07
+generated_at: 2026-08-21
 stale_if_source_digest_changes: true
 ---
 
@@ -33,6 +33,64 @@ This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
 decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
 For that decision, route to the digest-current DMM source or compression, or to
 the aggregate STDO compression.
+
+## Product Definition Overlay Compression
+
+- Every STDO-defined product publishes one `stdo_<label>.json` definition per
+  distinct current `WHAT`; `stdo_default.json` is the singleton default.
+  Multiple build tenants realizing one `WHAT` stay in that definition.
+- `product.definition_id` is the stable identity of the mutable `WHAT`
+  definition line, not an immutable Product or release identity. Successive
+  releases retain their own Product and release identities; a fork or
+  independently governed definition receives another definition identity.
+- The definition is a layout-neutral identity, locator, relation, discovery,
+  collective-frame-basis, work-carrier, and composition overlay. It does not
+  restate or replace the meaning owned by referenced authority.
+- `constitution.authorities` locates complete constitutional sets;
+  `constitution.entrypoints` is navigation only. The set must collectively
+  make axioms, ontology, epistemology, taxonomy, and semantics recoverable.
+  Those are sufficiency dimensions, not five required files or folders.
+- Local axioms, overrides, and disambiguations name their carrier, governing
+  authority, target where applicable, and exact scope. Listing a local file
+  does not mint authority.
+- `reference_frame_bases` is non-empty and locates the durable shared project
+  frame-basis declarations, every admitting authority, and their exact scopes.
+  An authorized work instruction or activation packet binds a particular agent
+  to an applicable frame configuration, evaluation, subject, and capability
+  envelope. The overlay does not register agents or temporary activations.
+  Product or runtime types named `Frame` remain `WHAT` or `HOW`; a matching
+  label does not enroll them in the collective evaluation frame set.
+- `what` locates Intent, Product, and specification. `how` locates shared
+  realization law and one or more build tenants. `ticketing` locates Goals,
+  ticket lanes, comments, and optional sprints. Each `composition` edge binds
+  the target definition locator and expected `product.definition_id`, the
+  directed relation authority, and a non-empty governing contract set.
+- Discover `stdo_*.json` recursively inside the selected workspace.
+  Directory nesting creates no inheritance, ownership, or composition.
+- Portable Draft 2020-12 JSON Schema proves structural shape. URI formats are
+  annotations unless an assertion-capable validator is selected, so
+  conformance separately asserts RFC 3986 syntax, resolution, target identity,
+  selected-release identity, cross-file uniqueness, constitutional sufficiency,
+  and authority congruence.
+
+## Build-Tenancy Compression
+
+- Build tenancy is the STDO realization model: one bound constitutional `WHAT`
+  has one or more independently bound `HOW` realizations. One tenant is the
+  singleton case; multi-build-tenancy begins above one.
+- A build tenant may own tenant-local design, tooling, code, proof, release, and
+  lifecycle state. It remains derivative and cannot become a rival project
+  constitution.
+- `how.build_tenants` is the canonical Product-bound tenant identity and
+  location registry. `how.common` carries only realization law explicitly
+  adopted across more than one tenant. `build_tenants/`,
+  `build_tenants/common/`, and tenant-local ADR paths are default scaffold
+  locations only.
+- A separate `TENANT_REGISTRY.md` may be a companion or generated projection,
+  but cannot become a second tenant-identity or location authority.
+- Build tenancy does not imply hosted, runtime, customer, account, or data
+  multitenancy. A Product claiming those forms defines their identity,
+  isolation, lifecycle, and proof obligations separately.
 
 ## Prompt-Relevant Rules
 

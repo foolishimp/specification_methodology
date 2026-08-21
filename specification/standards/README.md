@@ -12,8 +12,11 @@ released cut of this tree is the selectable STDO Product:
   `DESIGN_MODULE_METHOD.md`, and `GLOSSARY_GUIDE.md`
 - source-maintained compressed read models under `authority_compressions/` for
   prompt-construction installs that need compact shared-method authority
-- starter templates under `templates/`, including project specification
-  templates and agent bootstrap templates such as `CLAUDE_TEMPLATE.md` and
+- normative interoperability schemas under `schemas/`, including the
+  layout-neutral STDO Product Definition Overlay
+- starter templates under `templates/`, including the single per-product
+  `PRODUCT_DEFINITION_TEMPLATE.json`, project specification templates, and
+  agent bootstrap templates such as `CLAUDE_TEMPLATE.md` and
   `AGENTS_TEMPLATE.md`
 
 Installed workspaces may carry copies under `.genesis/docs/standards/`. Their

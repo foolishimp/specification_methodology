@@ -4,7 +4,8 @@
 
 ### Goals
 
-`GOALS.md` holds the current epic layer.
+The Product Definition Overlay's `ticketing.goals` binding locates the current
+epic layer. `GOALS.md` is the default file.
 
 Goals are:
 
@@ -20,7 +21,7 @@ Tickets are the enduring work records.
 
 Each ticket is:
 
-- one markdown file
+- one durable record; one markdown file is the default carrier
 - the source of truth for that unit of work
 - durable across sessions
 - typed, so bugs and features share one system
@@ -38,7 +39,8 @@ Sprints are bounded execution batches.
 
 Each sprint is:
 
-- one manifest under `.ai-workspace/sprints/`
+- one manifest under the Product Definition Overlay's optional
+  `ticketing.sprints.root`; `.ai-workspace/sprints/` is the default
 - a control surface for a bounded body of work
 - a place to batch repeated authority references, closure law, evidence
   expectations, and deferred local compliance debt
@@ -57,7 +59,9 @@ tickets when close review finds debt that must survive past the sprint.
 
 ### Comments
 
-`.ai-workspace/comments/` is the message board.
+The Product Definition Overlay's `ticketing.comments.root` is the message
+board.
+`.ai-workspace/comments/` is the default binding.
 
 Comments are for:
 
@@ -119,9 +123,11 @@ generated summaries cannot mutate milestone or ticket truth.
 
 ---
 
-## Minimal Layout
+## Default Layout
 
 ```text
+stdo_default.json
+
 .genesis/docs/standards/
 ├── POSTING_GUIDE.md
 └── TICKET_METHOD.md
@@ -139,37 +145,49 @@ specification/
     └── <agent-id>/
 ```
 
+This is the starter file layout. A conforming `stdo_<label>.json` definition
+may bind the same ticket, comment, and sprint roles to existing directories,
+repository resources, tracker collections, API endpoints, or product-scoped
+queries without restructuring the project.
+
 ---
 
 ## Authority
 
-- `GOALS.md` is the epic layer
-- `.ai-workspace/sprints/` is the bounded execution-batch and sprint-close
-  review layer
-- `.ai-workspace/tickets/backlog/`, `.ai-workspace/tickets/active/`, and
-  `.ai-workspace/tickets/completed/` are the ticket authority
-- `.ai-workspace/comments/` is the discussion and publication layer
+- `ticketing.goals` locates the epic layer
+- `ticketing.sprints.root`, when present, is the bounded execution-batch and
+  sprint-close review layer
+- `ticketing.tickets.lanes.backlog`, `.active`, and `.completed` locate the
+  ticket authority
+- `ticketing.comments.root` locates the discussion and publication layer
+
+The paths shown in the default layout are the bindings supplied by
+`stdo_default.json`. The definition locates these carriers but does not own
+their ticket or comment content.
 
 There is no separate mandatory `ACTIVE_TASKS.md` in this model.
 
-If a project later wants a board view, it may generate one from the ticket
-folders, but that board is a projection only and must not become the source of
-truth.
+If a project later wants a board view, it may generate one from the bound
+ticket authority. That board is a projection only and must not become the
+source of truth unless the Product Definition Overlay explicitly rebinds the
+ticket authority to that carrier and no rival remains.
 
 ---
 
 ## Sprint Rules
 
-### One File Per Sprint
+### One Durable Record Per Sprint
 
-Each sprint lives in its own markdown manifest.
+Each sprint has one durable manifest record. The default carrier is one
+markdown file. Another bound carrier must preserve the same identity, required
+fields, history, closure law, and one-truth relation.
 
-Recommended naming:
+Recommended local-file naming:
 
 - `SPRINT-2026-04-30-process-navigator.md`
 - `SPRINT-2026-05-12-dashboard-density.md`
 
-The filename should carry:
+For a local file, the filename should carry:
 
 - stable id
 - short slug
@@ -323,18 +341,21 @@ authority drift.
 
 ## Ticket Rules
 
-### One File Per Ticket
+### One Durable Record Per Ticket
 
-Each ticket lives in its own markdown file.
+Each ticket has one durable authoritative record. The default carrier is one
+markdown file. A repository or external tracker carrier is lawful only when it
+preserves the required ticket contract, history, state transition, stable
+identity, searchability, and closure semantics without a co-equal local copy.
 
-Recommended naming:
+Recommended local-file naming:
 
 - `T-001-add-product-layer.md`
 - `B-002-fix-reset-manifest-id.md`
 - `S-003-evaluate-integration-capability.md`
 - `C-004-clean-up-trace-tags.md`
 
-The filename should carry:
+For a local file, the filename should carry:
 
 - stable id
 - short slug
@@ -393,6 +414,11 @@ If a tenant-local duplicate exists, it should record:
 
 - `source_ticket`
 - `build_tenant`
+
+The `build_tenant` value must identify the applicable entry in the product's
+`how.build_tenants` definition. A path name, display alias, or tracker label
+does not replace that tenant identity unless the Product Definition Overlay
+binds it as the identity.
 
 The unsuffixed/base ticket may remain the upstream product or design authority.
 
@@ -1134,15 +1160,16 @@ if needed, but the base method starts with `backlog`, `active`, and
 
 ### Ticket Lanes
 
-Backlog tickets live in:
+Backlog tickets live at the Product Definition Overlay's
+`ticketing.tickets.lanes.backlog` binding. The default is:
 
 - `.ai-workspace/tickets/backlog/`
 
-Active tickets live in:
+Active tickets live at `ticketing.tickets.lanes.active`. The default is:
 
 - `.ai-workspace/tickets/active/`
 
-Completed tickets move to:
+Completed tickets move to `ticketing.tickets.lanes.completed`. The default is:
 
 - `.ai-workspace/tickets/completed/`
 
@@ -1312,7 +1339,7 @@ For an implementation migration ticket:
 
 ## Operating Mode
 
-This method assumes:
+The default local-file carrier assumes:
 
 - humans and agents can read the active ticket folder directly
 - backlog remains searchable durable work, but does not compete with the active
@@ -1320,7 +1347,7 @@ This method assumes:
 - `rg` is sufficient for finding active work
 - no database or board is required
 
-Typical commands:
+Typical commands for that default carrier:
 
 ```bash
 rg -n "^#|^- status:|^- type:|^- goal:" .ai-workspace/tickets/active
@@ -1361,5 +1388,6 @@ This minimal method can later grow into:
 - external sync with a real ticketing system
 - message-board integration through a standard tool-protocol capability
 
-The durable local file model should remain valid even if those later extensions
-are added.
+The durable local-file model remains the default and must remain valid when
+selected. Another carrier is not required to reproduce its folders, but it must
+preserve the same ticket authority and refusal laws.

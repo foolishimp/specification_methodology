@@ -10,8 +10,10 @@ source_refs:
   - ../REFERENCE_FRAME_METHOD.md
   - ../STDO_REFERENCE_FRAME_BASELINE.md
   - ../SPEC_METHOD.md
+  - ../schemas/product-definition.schema.json
   - ../DESIGN_MODULE_METHOD.md
   - ../ODD_METHOD.md
+  - ../GLOSSARY_GUIDE.md
   - ../TICKET_METHOD.md
   - ../UX_METHOD.md
   - ../IDENTITY_METHOD.md
@@ -19,21 +21,39 @@ source_refs:
   - ../POSTING_GUIDE.md
 source_digests:
   REFERENCE_FRAME_METHOD.md: 0d8370e383e72cf89eb68175a6f3ecccb4a7fb913f4feed1f0810d1b558e471d
-  STDO_REFERENCE_FRAME_BASELINE.md: 1d208cc2b141ba3717b5842ce0ad881fe6662c58a55e3f3cdd170af1d5f61bed
-  SPEC_METHOD.md: 23f33acb7c8e8c02f1d2d639615c427b76d698c371a5270b9c40871e2508b13e
+  STDO_REFERENCE_FRAME_BASELINE.md: 86b046e9b2ba25523ce47d7891c09163ffb550ee8c13201717795d9c54ef1384
+  SPEC_METHOD.md: de0fe03a92709fd71d784087be7bc883ad4ac21586d00b6d21b05baf2c2df73b
+  schemas/product-definition.schema.json: 59739be97bc8caa688ce522e6e8a6b0c616395c6cea9f58d1caed73f6e5c1db1
   DESIGN_MODULE_METHOD.md: 89659b99abe7af87a7cc0241d9f167b8a74acdbfe7b721544151cd1ce5d876d1
-  ODD_METHOD.md: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
-  TICKET_METHOD.md: 2a23614cdd344179cf43263dd6074b1c2f7d4747c33083fdcebff3992df41675
+  ODD_METHOD.md: c0d9d657e50a7947e0fa17a8fb751a0369aee18ac98677ceca61c894db28ab50
+  GLOSSARY_GUIDE.md: 4c4e3c99965846a7c1879a114b1b5aa16f7772ddb6ed4b625a806da2b36cb0ac
+  TICKET_METHOD.md: 1aed28098af70875df08d1b00b6b840988cd4a4f79b02b4e0289857aa73f09fe
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: 9348451648b4afc9f61c4f4b544aeafc7a92c3b1b5bc112872945cd44c8e0a53
   RELEASE_METHOD.md: f66805ccaab8bbb51a2dcd8309dc121780a994230194067f42eaa0a280cc184e
-  POSTING_GUIDE.md: d9d838704f600bf806ac1aa5cac21eb8a12ff0241512b8662775d75848c3aa57
+  POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 generated_by: codex
-generated_at: 2026-08-17
+generated_at: 2026-08-21
 stale_if_source_digest_changes: true
 ---
 
 # STDO Compressed Authority
+
+## Method Identity
+
+`STDO` is shorthand for its four key method pillars:
+
+- `S` — Specification (`SPEC_METHOD.md`);
+- `T` — Ticketing (`TICKET_METHOD.md`);
+- `D` — Design (`DESIGN_MODULE_METHOD.md`); and
+- `O` — Outcome-Driven Development (`ODD_METHOD.md`).
+
+`ODD` expands to Outcome-Driven Development. The `O` in `STDO` names that
+complete ODD pillar.
+
+This shorthand does not reduce the STDO Product to four files. Consumer
+authority remains one complete immutable released STDO cut with its exact
+member inventory.
 
 ## Governing Claim
 
@@ -65,6 +85,71 @@ Use the smallest current authority surface that can decide the question:
 
 When a lower layer needs a change in meaning, re-enter at the smallest upstream
 layer that owns the missing truth.
+
+## Product Definition Overlay
+
+- Every STDO-defined product has one `stdo_<label>.json` definition per
+  distinct current `WHAT`; `stdo_default.json` is the singleton default.
+- `product.definition_id` identifies the mutable `WHAT` definition line, not
+  any immutable Product or release produced from it. Product and release
+  identities remain separate; a fork or independently governed definition
+  receives another definition identity.
+- The definition locates complete constitutional authorities and entrypoints,
+  local axioms/overrides/disambiguations, collective reference-frame bases,
+  Intent/Product/specification `WHAT`, common and tenant-local `HOW`,
+  Goals/tickets/comments/optional sprints, and explicit product composition.
+  It is a locator and relation authority, not a restatement of referenced
+  truth.
+- A constitutionally sufficient document set collectively makes axioms,
+  ontology, epistemology, taxonomy, and semantics recoverable. These are
+  coverage dimensions, not five assumed documents or directories.
+- `reference_frame_bases` is non-empty and locates each durable shared project
+  frame-basis declaration, its existing admitting authorities, and exact
+  governed scope. A ticket or other authorized work instruction binds one
+  agent's exact activation from an applicable basis. The Product Definition
+  Overlay is neither an actor registry nor a store of temporary active
+  configurations.
+  A Product or runtime carrier named `Frame` remains `WHAT` or `HOW`; nominal
+  overlap does not make it a collective evaluation frame.
+- Existing projects bind their current carriers without restructuring. The
+  default `specification/`, `build_tenants/`, and `.ai-workspace/` layout
+  is scaffold only.
+- Discover definitions recursively. Several definitions may share a monorepo
+  root or appear at arbitrarily deep project roots. Folder nesting creates no
+  implicit inheritance or composition; composition references other definition
+  URIs explicitly. Each composition edge also binds the expected target
+  definition identity, directed relation authority, and a non-empty governing
+  contract set.
+- Portable Draft 2020-12 schema validation proves shape. URI formats remain
+  annotations unless an assertion-capable validator is used, so conformance
+  separately checks RFC 3986 syntax, resolution, target identity, immutable
+  release identity, cross-file uniqueness, constitutional sufficiency, and
+  authority congruence.
+
+## Build-Tenancy Compression
+
+- Build tenancy is STDO's `WHAT` once, independent `HOW` one-or-many
+  realization model. The bound `what` remains singleton constitutional truth;
+  `how.build_tenants` locates one or more project-owned realizations beneath
+  it.
+- Each build tenant may carry tenant-local design, tooling, code, proof,
+  release, and lifecycle state. No tenant becomes a second constitution, and
+  one tenant's evidence cannot close another tenant's claim.
+- `how.build_tenants` canonically records tenant identities and locations.
+  `how.common` carries only realization law explicitly adopted across more
+  than one tenant. A Markdown tenant registry is a companion or projection, not
+  a second authority.
+- Tenant-local truth remains local. Similarity creates a commonization
+  candidate, not shared law; promotion to `common/` requires the applicable
+  design re-entry and preserves semantic ownership.
+- An upstream-only work item needs no tenant ticket, and a single-tenant item
+  needs no sibling. When one admitted upstream item has multiple tenant
+  execution lines, retain the upstream ticket and create one suffixed ticket
+  per tenant with `source_ticket`, `build_tenant`, independent status, proof,
+  closure, reopening, and repricing.
+- Build tenancy is not a synonym for hosted, runtime, customer, account, or
+  data multitenancy. A downstream Product claiming those forms owns their
+  separate identity, isolation, lifecycle, and proof law.
 
 ## Prime Operating Rules
 
@@ -380,6 +465,23 @@ layer that owns the missing truth.
   invariants, semantic/evaluation/decision authority and operation authority
   where material, evidence, exclusions, closed results, invalidation, actor
   capability, and only the cross-frame relations actually used.
+- The optional baseline supplies eleven generic specialist-frame families:
+  Product, Design, Design Component, Public Boundary, Entity, Operator, Owner,
+  Effect, Reuse/Foundation, Install, and Proof. For the exact outcome, each
+  family is instantiated where material, evidenced as non-material by capable
+  authority, or retained as an explicit residual. These are evaluation
+  families, not required actors, stages, components, files, services, runtime
+  types, or new semantic owners.
+- Generic-frame coverage records the union of admissible observations, while a
+  composite claim is satisfied only through a declared conjunction satisfying
+  every applicable constraint. Material seams preserve or lawfully translate
+  identity, coordinate/basis, value/evidence, lifecycle, authority, and
+  provenance. Missing or non-commuting seams return closed pressure rather than
+  selecting a dominant frame.
+- The generic set imports no ABIogenesis, GTL, HoG, or ABG frame and no renamed
+  Product Composition, Semantic Source, Execution Derivation, or Admission And
+  Runtime Truth topology. Consumers may declare local frames under their own
+  authority; runtime carriers named `Frame` are not enrolled by label.
 - Frame disjointness, separately activated evaluation, and claim-relative
   assurance independence are distinct. Frames may overlap, refine, restrict,
   translate, compose, or succeed one another. Hierarchy is optional. Shared

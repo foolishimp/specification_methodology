@@ -1,5 +1,162 @@
 # Glossary Guide
 
+## Method Identity Terms
+
+### STDO
+
+The shorthand for the Specification, Ticketing, Design, and Outcome-Driven
+Development method pillars:
+
+- `S` — Specification, owned by `SPEC_METHOD.md`;
+- `T` — Ticketing, owned by `TICKET_METHOD.md`;
+- `D` — Design, owned by `DESIGN_MODULE_METHOD.md`; and
+- `O` — Outcome-Driven Development, owned by `ODD_METHOD.md`.
+
+The `O` names the complete ODD pillar; `ODD` expands to Outcome-Driven
+Development.
+
+This shorthand identifies the key method pillars. It does not reduce the STDO
+Product to four files or make those files independently selectable. Consumer
+authority remains one complete immutable released STDO cut with its exact
+member inventory.
+
+### ODD
+
+Outcome-Driven Development.
+
+Within STDO, ODD is the graph-native product-authoring pillar owned by
+`ODD_METHOD.md`.
+
+---
+
+## Product-Definition Routing Terms
+
+### STDO Product Definition Overlay
+
+The layout-neutral `stdo_<label>.json` locator and relation map for one
+distinct product `WHAT`.
+
+It identifies the Product, governing constitutional sets, local constitutional
+decisions, collective reference-frame bases, `WHAT`, shared and tenant-local
+`HOW`, Goals, ticket and commentary carriers, and explicit product
+composition. It does not restate or replace the meaning owned by those
+referenced surfaces.
+
+### Definition Root
+
+The directory containing one or more `stdo_<label>.json` definitions.
+
+Relative URI references resolve from the definition file. Directory nesting
+does not create constitutional inheritance, Product ownership, or composition.
+
+### Definition Label
+
+The `<label>` suffix in `stdo_<label>.json`.
+
+It is a directory-local discovery label, not definition or Product identity.
+`product.definition_id` inside the definition is the stable identity of the
+mutable product-definition line.
+
+### Product-Definition Identity
+
+The stable `product.definition_id` URI for one continuing mutable `WHAT`
+definition discovered through an STDO Product Definition Overlay.
+
+It may identify a source line across successive releases, but it is not the
+identity of any immutable Product or release produced from that line. A fork,
+replacement, or independently governed `WHAT` definition receives another
+identity. Immutable Product and release identities remain owned by their
+Product and release authority.
+
+### Constitutional Set
+
+The complete set of governing documents selected for a product.
+
+A constitutionally sufficient set collectively makes its axioms, ontology,
+epistemology, taxonomy, and semantics recoverable for the governed scope. These
+are coverage dimensions of the set, not five required filenames or folders.
+
+### Project Reference-Frame Basis
+
+An accepted declaration of the shared frame set through which finite actors
+collectively engage one governed Product scope or outcome under
+`REFERENCE_FRAME_METHOD.md`.
+
+`reference_frame_bases` in the STDO Product Definition Overlay locates each
+declaration, the existing authorities that admit it, and the scope to which it
+applies. The declaration may adopt the STDO baseline or define a project
+configuration. The overlay entry is not itself a frame declaration, actor
+roster, or grant of authority. A Product or runtime type named `Frame` is not a
+member by name; it remains `WHAT` or `HOW` unless separately declared as a
+Reference Frame Method evaluation frame.
+
+### Agent Frame Activation
+
+The execution-scoped binding of one agent to a frame or active frame
+configuration, exact evaluation, subject and basis, evidence boundary, and
+capability envelope under `REFERENCE_FRAME_METHOD.md`.
+
+An activation cites an applicable Project Reference-Frame Basis and belongs in
+the authorized work instruction or activation packet. It is not a permanent
+agent-to-frame assignment and is not registered in `stdo_<label>.json`.
+
+---
+
+## Build-Tenancy Terms
+
+### Build Tenant
+
+One project-owned, independent `HOW` realization of the shared constitutional
+`WHAT` located by an STDO Product Definition Overlay.
+
+A build tenant may carry its own design, tooling, code, proof, release, and
+lifecycle state. It remains derivative realization authority and does not
+become a second project constitution.
+
+### Build Tenancy
+
+The STDO realization model in which one singleton product `WHAT` is realized
+by one or more independent build tenants located by `how.build_tenants`.
+
+A product with one build tenant uses the singleton case. **Multi-build-tenancy**
+begins when the same `WHAT` has more than one independent build tenant.
+
+Build tenancy does not by itself mean hosted, runtime, customer, account, or
+data multitenancy. A Product claiming any of those forms must define their
+identity, isolation, lifecycle, and proof obligations separately in its own
+constitutional and design surfaces.
+
+### Tenant Registry
+
+The canonical `how.build_tenants` collection in one
+`stdo_<label>.json` definition. It records the Product-bound tenant identities
+and locates their roots, design, and implementation surfaces.
+
+A `build_tenants/TENANT_REGISTRY.md` file is a default human-readable
+companion or projection. It may carry additional lifecycle notes but cannot
+become a second identity or location authority.
+
+### Common Build-Tenant Surface
+
+The realization law bound by `how.common` and explicitly adopted across more
+than one build tenant. `build_tenants/common/` is its default scaffold path.
+
+Similarity or recurrence does not automatically promote tenant-local truth to
+this surface. Cross-tenant commonization that changes shared design law requires
+separate design re-entry.
+
+### Multi-Build-Tenant Work Item
+
+One admitted upstream work item that has more than one tenant-local execution
+line.
+
+The upstream source, Product, or design ticket remains distinct. Each tenant
+execution uses its own suffixed ticket, names its `source_ticket` and
+`build_tenant`, and retains independent status, proof, closure, reopening, and
+repricing unless the upstream authority itself changes.
+
+---
+
 ## Recursive Product Terms
 
 ### Substrate
@@ -29,7 +186,9 @@ product.
 
 ### Product Definition
 
-The present-tense source-project surface recorded in `PRODUCT.md`.
+The present-tense source-project surface conventionally recorded in
+`PRODUCT.md` and located by `what.product` in an STDO Product Definition
+Overlay.
 
 This is not the released product artifact itself.
 

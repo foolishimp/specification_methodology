@@ -1,0 +1,79 @@
+{
+  "$schema": ".genesis/docs/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:replace-me",
+    "name": "Replace Me",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo:bounded-context:replace-me",
+      "definition": "./specification/PRODUCT.md#product-terms"
+    }
+  },
+  "constitution": {
+    "authorities": [
+      "https://github.com/foolishimp/specification_methodology/tree/REPLACE_WITH_RELEASE_TAG/specification/standards/"
+    ],
+    "entrypoints": [
+      "./.genesis/docs/standards/SPEC_METHOD.md",
+      "./.genesis/docs/standards/REFERENCE_FRAME_METHOD.md",
+      "./.genesis/docs/standards/STDO_REFERENCE_FRAME_BASELINE.md"
+    ]
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./replace-with-project-reference-frame-basis",
+      "authority": [
+        "./replace-with-admitting-authority"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:replace-me"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo:build-tenant:default",
+        "root": "./build_tenants/default/",
+        "design": [
+          "./build_tenants/default/design/"
+        ],
+        "implementation": [
+          "./build_tenants/default/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    }
+  },
+  "composition": []
+}

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: 42be18b4d16e7d1bd8ca764d951fd533a19fa0ce4c67d17462c3a0f6879d46bb
+source_digest: c0d9d657e50a7947e0fa17a8fb751a0369aee18ac98677ceca61c894db28ab50
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
-generated_by: claude
-generated_at: 2026-08-02
+generated_by: codex
+generated_at: 2026-08-21
 stale_if_source_digest_changes: true
 ---
 
@@ -41,6 +41,18 @@ identity in its own authority surfaces.
   roles.
 - The product owns domain meaning, policy overlays, domain acceptance, and
   product-specific interpretation.
+- One `stdo_<label>.json` definition locates the concrete product's
+  constitutional set, local decisions, collective reference-frame bases,
+  `WHAT`, `HOW`, work carriers, and explicit composition. `specification/` and
+  `build_tenants/` are default software-development topology, not universal
+  path law.
+- Cold-start product work reads the applicable Product Definition Overlay,
+  project reference-frame basis, and authorized agent activation before its
+  bound Intent, Product, requirements, design, GTL, query, and proof surfaces.
+- `reference_frame_bases` carries Reference Frame Method evaluation bases. ABG
+  runtime, attention, zoom, and overlay frames remain ABG-owned runtime
+  contracts; a name match neither enrolls them nor collapses their runtime and
+  evaluation meanings.
 
 ## Prompt-Relevant Rules
 

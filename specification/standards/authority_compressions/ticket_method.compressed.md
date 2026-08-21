@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 2a23614cdd344179cf43263dd6074b1c2f7d4747c33083fdcebff3992df41675
+source_digest: 1aed28098af70875df08d1b00b6b840988cd4a4f79b02b4e0289857aa73f09fe
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-03
+generated_at: 2026-08-21
 stale_if_source_digest_changes: true
 ---
 
@@ -20,6 +20,36 @@ stale_if_source_digest_changes: true
 A ticket is a durable work contract with explicit intake, smallest lawful
 re-entry, target truth, superseded truth, closure law, non-closure conditions,
 proof, and current status.
+
+## Carrier-Binding Compression
+
+- The applicable `stdo_<label>.json` Product Definition Overlay locates
+  `ticketing.goals`, the ticket root and backlog/active/completed lanes, the
+  comments root, and an optional sprint root.
+- `.ai-workspace/` and one Markdown file per ticket or sprint are the default
+  local carrier, not universal repository layout.
+- Another repository or tracker carrier is lawful only when it preserves stable
+  identity, the complete required contract, history, state transitions,
+  searchability, closure, and one authoritative record without a co-equal copy.
+- Comment carriers may be local or external but remain commentary. Their
+  visibility, recency, or location cannot turn them into ticket state or
+  Product, requirement, or design truth.
+
+## Build-Tenancy Compression
+
+- An upstream-only work item needs no tenant duplicate. A single-tenant work
+  item needs only its one tenant execution ticket.
+- When one admitted upstream work item has more than one tenant execution line,
+  retain the upstream source, Product, or design ticket and create one suffixed
+  tenant-local ticket per build tenant.
+- Each tenant ticket names `source_ticket` and `build_tenant` and carries its
+  own status, proof surface, closure law, reopening, and repricing.
+- `build_tenant` identifies the applicable Product Definition Overlay's
+  `how.build_tenants` entry; a path or display alias is insufficient unless the
+  overlay binds it as the identity.
+- One tenant's green proof or closure cannot close, hide, or substitute for
+  another tenant's lifecycle. Tenant-local pressure remains local unless it
+  requires a change to the upstream authority.
 
 ## Prompt-Relevant Rules
 

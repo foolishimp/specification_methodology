@@ -272,8 +272,16 @@ The installed product owns:
 
 The target project owns:
 
-- constitutional surfaces per `SPEC_METHOD.md` (`GOALS.md`, `INTENT.md`, `PRODUCT.md`, `requirements/`)
-- one or more realization roots — the canonical root name in this ecosystem is `build_tenants/` for software-development ODD products; other domain types may use their own realization-root names
+- one `stdo_<label>.json` definition for each distinct product `WHAT`,
+  locating its constitutional, local, collective reference-frame basis,
+  realization, work, and composition surfaces
+- constitutional surfaces per `SPEC_METHOD.md`; `GOALS.md`, `INTENT.md`,
+  `PRODUCT.md`, and `requirements/` are the default software-development
+  scaffold rather than mandatory names
+- one or more realization roots bound through `how.build_tenants`;
+  `build_tenants/` is the default root name for software-development ODD
+  products, while existing projects and other domain types may use their own
+  locations
 - domain outputs and evidence (for a software-development ODD product these are design, code, tests, docs, and proof surfaces; other domains name their produced artifacts accordingly)
 
 The installed product must not assume prior knowledge of the target project's domain.
@@ -412,11 +420,25 @@ App
 
 Read the ownership split strictly.
 
-The `Product Specification` and `Product Realization` subsections below name the **canonical topology for a software-development ODD product** in this ecosystem. ODD method at the universal layer commits to the authority split (one `WHAT` surface, one `HOW` surface, runtime owned by ABG, product owning domain meaning) but not to specific directory names. Other ODD product types may adapt directory layout while preserving that authority split.
+The `Product Specification` and `Product Realization` subsections below name
+the **default topology for a software-development ODD product** in this
+ecosystem. `SPEC_METHOD.md`'s `stdo_<label>.json` definition binds the actual
+locations. ODD method at the universal layer commits to the authority split
+(one `WHAT` surface, one `HOW` relation, runtime owned by ABG, product owning
+domain meaning) but not to specific directory names. Existing projects and
+other ODD product types may use another layout while preserving that split.
+
+The Product Definition Overlay's `reference_frame_bases` bindings use
+`REFERENCE_FRAME_METHOD.md`'s evaluation-frame meaning. An ABG runtime `Frame`,
+attention frame, zoom frame, or overlay frame remains an ABG-owned runtime
+contract in `WHAT` and `HOW`; its name does not enroll it in the project's
+collective evaluation frame set. A declared evaluation frame may inspect such
+a runtime frame as its exact subject or coordinate without collapsing the two.
 
 ### Product Specification (software-development topology)
 
-`specification/` is the authoritative `WHAT`.
+The Product Definition Overlay's `what` bindings locate the authoritative `WHAT`.
+`specification/` is the default software-development location.
 
 It defines:
 
@@ -428,7 +450,8 @@ It defines:
 
 ### Product Realization (software-development topology)
 
-`build_tenants/` is the authoritative `HOW`.
+The Product Definition Overlay's `how` bindings locate the authoritative `HOW`.
+`build_tenants/` is the default software-development location.
 
 It carries:
 
@@ -1552,22 +1575,28 @@ When starting cold in a concrete ODD product, use this order.
 
 1. `SPEC_METHOD.md`
 2. `ODD_METHOD.md`
-3. product `INTENT.md`
-4. product `PRODUCT.md`
-5. relevant product requirements
-6. active design surfaces
-7. GTL module, function catalog, and query surfaces
+3. the product's `stdo_<label>.json` definition
+4. the applicable bound project reference-frame basis and authorized agent
+   activation packet
+5. the bound product Intent
+6. the bound Product definition
+7. relevant bound product requirements
+8. active bound design surfaces
+9. GTL module, function catalog, and query surfaces
 
 ### World-Model Product
 
 1. `SPEC_METHOD.md`
 2. `ODD_METHOD.md`
 3. `WORLD_MODEL_METHOD.md`
-4. product `INTENT.md`
-5. product `PRODUCT.md`
-6. relevant requirement families
-7. current design surfaces
-8. GTL module, function catalog, query surfaces, and proof lane
+4. the product's `stdo_<label>.json` definition
+5. the applicable bound project reference-frame basis and authorized agent
+   activation packet
+6. the bound product Intent
+7. the bound Product definition
+8. relevant bound requirement families
+9. current bound design surfaces
+10. GTL module, function catalog, query surfaces, and proof lane
 
 The practical rule is:
 
