@@ -4,8 +4,8 @@
 - title: Prepare the Product Definition Overlay and generic reference frames as STDO 2.4.2
 - type: proposal
 - ticket_category: constitutional
-- status: active
-- review_status: pre_rc_qualification_passed_ready_for_rc
+- status: completed
+- review_status: satisfied_published
 - goal: >-
     Publish one exact STDO 2.4.2 successor over immutable v2.4.1 that adds the
     layout-neutral Product Definition Overlay, build-tenancy and work-carrier
@@ -20,6 +20,7 @@
 - triaged_at: 2026-08-21
 - created_at: 2026-08-21
 - updated_at: 2026-08-21
+- completed_at: 2026-08-21
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_release: v2.4.1 at c37452a390e8456863eeb4e3d5bf9c9a237a44ed
@@ -49,12 +50,12 @@ STDO Product boundary while preserving the existing Intent and immutable
 tapped release. The selected target is `2.4.2`; selection does not tap, publish,
 or make the mutable candidate operative.
 
-## Current Goal
+## Governed Goal
 
-This active ticket is the bounded current goal and durable work carrier for the
+This ticket was the bounded current goal and durable work carrier for the
 single `2.4.2` release wave. The repository maintains no separate
-`specification/GOALS.md` surface. When this ticket closes and no successor
-ticket is active, no continuing work wave is implied.
+`specification/GOALS.md` surface. This ticket is now closed; no continuing work
+wave is implied.
 
 The current goal is to freeze, independently review, accept, and publish one
 exact candidate that:
@@ -110,7 +111,7 @@ authority, and provenance at every material seam.
 ABIogenesis remains discovery evidence. ABIogenesis, GTL, HoG, ABG, and renamed
 local architectural substitutes are excluded from the generic baseline.
 
-## Current Candidate Identity
+## Released Candidate Identity
 
 - predecessor: immutable `v2.4.1`;
 - predecessor standards members: 43;
@@ -169,13 +170,38 @@ This ticket closes only when:
 
 ## Current State
 
-- Product and source amendments: candidate complete;
+- Product and source amendments: published as immutable STDO `2.4.2`;
 - deterministic structural and digest qualification: passed and recorded in
   `.ai-workspace/comments/codex/20260821T023045Z_CHECKPOINT_stdo_2_4_2_pre_rc_qualification.md`;
 - target release selection: `2.4.2`;
-- draft release note and protected Product identity: reconciled;
-- immutable RC: not created;
-- independent exact-RC review: pending;
-- human exact-carrier acceptance: pending;
-- release branch and tag: absent;
-- publication: pending.
+- final-ready release note and protected Product identity: reconciled;
+- immutable RC: `v2.4.2-rc.1`, tag object
+  `fc846c135d5ffe2a79f2b6931acae667bdb749ab`, peeled commit
+  `e50ee39a4e446dd781e6dc4e490076588c71982d`;
+- independent exact-RC review: `satisfied`, recorded in
+  `.ai-workspace/comments/codex/20260821T032117Z_REVIEW_stdo_2_4_2_rc1_exact_carrier.md`;
+- human exact-carrier acceptance: recorded in
+  `.ai-workspace/comments/human/20260821T032223Z_DECISION_accept_and_publish_stdo_2_4_2.md`;
+- release branch: `release/2.4.2` at
+  `e50ee39a4e446dd781e6dc4e490076588c71982d`;
+- annotated release tag: `v2.4.2`, tag object
+  `d4724fff241f5511d47a30aa05ec9ff70f28d8d6`, peeled to the same commit;
+- reviewed-RC to final-carrier delta: zero; and
+- publication: completed and reacquired from `origin`.
+
+## Publication Closure
+
+Every closure-law condition is satisfied. The independent Reviewer found no
+release-blocking defect and recommended `accept`. Direct human Product
+authority accepted the exact reviewed carrier. The final branch and annotated
+tag were pushed at that same carrier, leaving Product, standards,
+release-scoped claim, auxiliary protected-input, and carrier deltas at zero.
+
+The Reviewer's low wording residual concerning “locator and relation authority”
+in the aggregate compression is retained as a non-blocking observation. The
+deciding source and adjacent compression text preserve authority over the map
+without transferring referenced semantic authority. No protected-byte change
+was required.
+
+Publication evidence and exact identities are consolidated in
+`.ai-workspace/comments/codex/20260821T032328Z_CLOSURE_stdo_2_4_2_publication.md`.
