@@ -20,6 +20,7 @@ from .constants import (
 from .errors import StdoError
 from .git_source import (
     GitSnapshot,
+    ensure_channel_not_downgrade,
     normalize_cut,
     normalize_version_line,
     resolve_channel,
@@ -453,6 +454,7 @@ def adopt_definition(
     binding = load_binding(path)
     validate_definition_document(binding.document, binding.path, store)
     resolution = resolve_channel(binding.repository, binding.version_line)
+    ensure_channel_not_downgrade(binding.cut, resolution.cut)
     manifest, digest = _planned_manifest(binding.repository, resolution.cut)
 
     release = manifest["release"]

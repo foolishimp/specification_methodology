@@ -1774,16 +1774,17 @@ That cut is:
 
 It is not part of the live project specification.
 
-The mutable `v<version>` tag is a version-line discovery selector to the latest
-accepted immutable RC. It is not an exact dependency, evidence, or
-constitutional basis and cannot silently change a consumer selection.
+The mutable `v<version>` tag is a version-line discovery selector to the
+highest-ordinal published immutable RC. It is not an exact dependency,
+evidence, or constitutional basis and cannot silently change a consumer
+selection.
 
 Active constitutional and shared realization surfaces should therefore describe
 current truth by role, boundary, and status rather than by release-line version
 labels.
 
-Release criteria, immutable RC publication, selector promotion, and the process
-for cutting a release belong to `RELEASE_METHOD.md`.
+Release criteria, immutable RC publication, selector advancement, and the
+process for cutting a release belong to `RELEASE_METHOD.md`.
 
 ---
 

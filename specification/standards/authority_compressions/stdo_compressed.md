@@ -25,21 +25,21 @@ index_refs:
 source_digests:
   REFERENCE_FRAME_METHOD.md: a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174
   STDO_REFERENCE_FRAME_BASELINE.md: 9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9
-  SPEC_METHOD.md: 3829f64c51d7164fa8bd06d4110a608f2a83864e1b474eecbc92ba62bbc16cbc
+  SPEC_METHOD.md: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea
   DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
-  ODD_METHOD.md: cc60fb5b4f2701a0fa7c7b166c33b2555c73e208e0ee4c777c3f0fbafea8153d
+  ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
   WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
   TICKET_METHOD.md: a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
-  RELEASE_METHOD.md: 191ba28ff82ec9e4237182ab9726e661232cf31b7918895576c4857026b5c508
+  RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
   GLOSSARY_GUIDE.md: df8bf186ee10905ef8ca21a0939dc1096a86365a871ffbcbeef6ad075f8fb255
 generated_by: codex
-generated_at: 2026-08-21
+generated_at: 2026-08-23
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -505,14 +505,15 @@ layer that owns the missing truth.
 - Authority has identity and may be proxied only through an explicit bounded
   grant. Implementer self-review is not independent review.
 - Exact-cut qualification declares the Product release subject, release-scoped
-  claims, and excluded source state against one immutable annotated RC tag. The
-  mutable annotated `v<version>` selector moves only after human acceptance and
-  then peels to that already reviewed RC commit; a lightweight selector is
-  invalid. It is discovery, never exact authority. Consumer adoption is a
-  separate two-invocation transition whose mutation requires the externally
-  accepted exact plan digest. Any qualifying-byte change requires a higher
-  immutable RC; alias promotion adds no second final carrier or repeated
-  semantic review.
+  claims, and excluded source state against one immutable annotated RC tag. At
+  publication, the mutable annotated `v<version>` selector advances
+  monotonically to the highest-ordinal published RC; a lightweight, lagging, or
+  backward selector is invalid. It is discovery, never exact authority.
+  Consumer channel adoption refuses a same-line downgrade and is a separate
+  two-invocation transition whose mutation requires the externally accepted
+  exact plan digest. An intentionally older cut remains available through its
+  exact immutable basis. Any qualifying-byte change requires a higher immutable
+  RC; selector advancement adds no second final carrier or semantic review.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a

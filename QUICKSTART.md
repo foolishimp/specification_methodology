@@ -12,8 +12,8 @@ and `HOW`, and gives agents a small stable discovery bootstrap.
 - The shared toolchain store contains verified installed bytes; its local path
   is derived machine state and never belongs in the Product Definition.
 
-The moving `v<version>` tag is only a discovery selector. It never governs a
-project directly.
+The moving `v<version>` tag is the discovery selector for the highest-ordinal
+published immutable RC on that line. It never governs a project directly.
 
 ## Prerequisites
 
@@ -194,7 +194,7 @@ stdo resolve \
   "stdo://releases/${STDO_CUT}/standards/SPEC_METHOD.md"
 ```
 
-## Adopt A New Accepted RC
+## Adopt The Latest Published RC
 
 Adoption is deliberately two-phase. First obtain the read-only plan:
 
@@ -214,6 +214,13 @@ stdo adopt --definition stdo_default.json \
 The manager re-derives the plan before installation or mutation. Selector,
 target, manifest, or Product Definition drift invalidates the accepted digest.
 Run another dry-run and review the new subject instead of bypassing the refusal.
+
+The channel resolver enumerates the line's immutable RC tags and refuses a
+lagging selector instead of selecting an older cut. Channel adoption also
+refuses a same-line downgrade. To intentionally retain an older cut, keep its
+exact `stdo://releases/v<version>-rc.<n>/` URI and manifest digest in the Product
+Definition and use `sync`; do not use the latest-version channel for that
+choice.
 
 ## Monorepos And Hierarchical Repositories
 
@@ -250,6 +257,8 @@ definition names its own basis and every composition edge explicitly.
 | Schema cut differs from basis | `$schema` and `constitution.stdo.basis.uri` must name the same immutable cut |
 | Manifest digest differs | Copy the digest for the exact selected cut; do not substitute another installation |
 | Adoption plan differs | The selector, target, manifest, or definition changed; create and review a new dry-run |
+| Version-line selector lags | Advance `v<version>` to the highest published immutable RC; the manager will not adopt the older alias target |
+| Channel would downgrade | Retain an older immutable basis explicitly with `sync`, or advance through the latest channel; channel adoption never moves backward |
 | Bootstrap target escapes | Make the target relative to `product.source_project` and remove traversal or redirected components |
 | Duplicate definition identity | Give independently governed product-definition lines distinct `product.definition_id` values |
 | Installed release is damaged | Inspect the reported missing, extra, changed, redirected, or special entry; the manager will not repair it in place |

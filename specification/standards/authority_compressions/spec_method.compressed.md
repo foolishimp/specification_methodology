@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 3829f64c51d7164fa8bd06d4110a608f2a83864e1b474eecbc92ba62bbc16cbc
+source_digest: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-21
+generated_at: 2026-08-23
 stale_if_source_digest_changes: true
 ---
 
@@ -47,8 +47,10 @@ the aggregate STDO compression.
   collective-frame-basis, work-carrier, and composition overlay. It does not
   restate or replace the meaning owned by referenced authority.
 - `constitution.stdo` separates transport source and mutable version-line
-  discovery from the operative immutable release URI and installed-manifest
-  digest. `constitution.additional_authorities` locates every other
+  latest-published discovery from the operative immutable release URI and
+  installed-manifest digest. A lagging channel or same-line channel downgrade
+  fails closed; an intentionally older exact basis remains lawful.
+  `constitution.additional_authorities` locates every other
   constitutional set; each `constitution.entrypoints[]` route names its basis.
   The complete selected set makes axioms, ontology, epistemology, taxonomy, and
   semantics recoverable. Those are sufficiency dimensions, not five required
@@ -81,8 +83,9 @@ the aggregate STDO compression.
   redirections, special entries, and undeclared entries of any type fail closed.
   `sync` installs only that pinned basis. `adopt --dry-run` emits a digest over
   current definition bytes and the exact cut/tag/commit/tree/manifest target;
-  mutation requires and re-derives that externally accepted digest. Fleet
-  adoption requires its aggregate plan digest. Agent files contain only a
+  the target must be the highest-ordinal published RC and cannot be a same-line
+  downgrade. Mutation requires and re-derives that externally accepted digest.
+  Fleet adoption requires its aggregate plan digest. Agent files contain only a
   marker-bounded discovery bootstrap whose relative targets are confined to
   resolved `product.source_project`; fleet bootstrap preflights all targets and
   additionally confines every source project to its authorized root. Exactly

@@ -6,14 +6,14 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  SPEC_METHOD.md: 3829f64c51d7164fa8bd06d4110a608f2a83864e1b474eecbc92ba62bbc16cbc
-  RELEASE_METHOD.md: 191ba28ff82ec9e4237182ab9726e661232cf31b7918895576c4857026b5c508
+  SPEC_METHOD.md: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
+  RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-08-21
+generated_at: 2026-08-23
 stale_if_source_digest_changes: true
 ---
 
@@ -45,12 +45,13 @@ owning standards remain constitutional authority.
    as required by the active task and governed scope.
 
 `sync` materializes only the already selected exact basis. `adopt --dry-run`
-presents a digest-bound exact immutable plan; a later mutating `adopt` must be
-given that plan digest and must re-derive it unchanged. Fleet adoption requires
-the aggregate plan digest. `adopt` is the sole toolchain operation that may
-resolve the mutable version-line selector and atomically change a Product
-Definition basis after explicit acceptance. Moving the selector alone never
-changes a consumer.
+presents a digest-bound plan to the highest-ordinal published immutable RC and
+refuses a lagging selector or same-line downgrade; a later mutating `adopt`
+must be given that plan digest and must re-derive it unchanged. Fleet adoption
+requires the aggregate plan digest. `adopt` is the sole toolchain operation
+that may resolve the mutable version-line selector and atomically change a
+Product Definition basis after explicit acceptance. Moving the selector alone
+never changes a consumer.
 
 Bootstrap targets are relative to the resolved `product.source_project` and
 cannot escape or traverse a redirected component. Fleet bootstrap additionally

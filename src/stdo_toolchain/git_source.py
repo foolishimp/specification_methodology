@@ -58,6 +58,27 @@ def normalize_version_line(version_line: str) -> str:
     return value
 
 
+def cut_coordinates(cut: str) -> tuple[str, int]:
+    """Return the version line and positive RC ordinal for an immutable cut."""
+
+    normalized = normalize_cut(cut)
+    version, ordinal = normalized.removeprefix("v").rsplit("-rc.", 1)
+    return version, int(ordinal)
+
+
+def ensure_channel_not_downgrade(current_cut: str, target_cut: str) -> None:
+    """Refuse channel adoption from a higher cut to a lower cut on one line."""
+
+    current_version, current_ordinal = cut_coordinates(current_cut)
+    target_version, target_ordinal = cut_coordinates(target_cut)
+    if current_version == target_version and target_ordinal < current_ordinal:
+        raise StdoError(
+            "STDO channel adoption cannot move backward on one version line: "
+            f"current {current_cut}, target {target_cut}. Pin an older immutable "
+            "cut explicitly instead of using the latest channel."
+        )
+
+
 @dataclass(frozen=True)
 class ChannelResolution:
     version_line: str
@@ -65,12 +86,13 @@ class ChannelResolution:
     selector_object: str
     commit: str
     cut: str
+    cut_ordinal: int
     cut_ref: str
     cut_tag_object: str
 
 
 def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
-    """Resolve a mutable version-line tag to its matching immutable RC tag."""
+    """Resolve a version-line tag only when it names the highest published RC."""
 
     version = normalize_version_line(version_line)
     selector_ref = f"refs/tags/v{version}"
@@ -106,31 +128,54 @@ def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
             f"STDO channel selector must be an annotated tag: {selector_ref}"
         )
 
-    matching: list[tuple[int, str, str]] = []
+    published: list[tuple[int, str, str, str | None]] = []
     for ref, tag_object in refs.items():
         if ref.endswith("^{}") or not ref.startswith(rc_prefix):
             continue
         suffix = ref[len(rc_prefix) :]
-        if not suffix.isdigit() or int(suffix) < 1:
+        if re.fullmatch(r"[1-9][0-9]*", suffix) is None:
             continue
-        peeled = refs.get(f"{ref}^{{}}")
-        if peeled is None:
-            continue
-        if peeled == selector_commit:
-            matching.append((int(suffix), ref, tag_object))
+        published.append((int(suffix), ref, tag_object, refs.get(f"{ref}^{{}}")))
 
-    if not matching:
+    if not published:
         raise StdoError(
-            f"Channel {selector_ref} resolves to {selector_commit}, but no immutable RC tag resolves to that commit"
+            f"STDO channel has no published immutable RC cuts: {selector_ref}"
         )
 
-    _, cut_ref, cut_tag_object = max(matching)
+    cut_ordinal, cut_ref, cut_tag_object, cut_commit = max(
+        published,
+        key=lambda candidate: candidate[0],
+    )
+    cut = cut_ref.removeprefix("refs/tags/")
+    if cut_commit is None:
+        raise StdoError(f"Latest published STDO cut {cut} must be an annotated tag")
+    if selector_commit != cut_commit:
+        matching_selector_cuts = [
+            ref.removeprefix("refs/tags/")
+            for _, ref, _, peeled in published
+            if peeled == selector_commit
+        ]
+        selector_target = (
+            max(
+                matching_selector_cuts,
+                key=lambda candidate: cut_coordinates(candidate)[1],
+            )
+            if matching_selector_cuts
+            else selector_commit
+        )
+        raise StdoError(
+            f"STDO channel {selector_ref} is stale: it resolves to "
+            f"{selector_target}, but the latest published immutable cut is {cut}. "
+            "Refusing to select an older cut through a latest-version channel."
+        )
+
     return ChannelResolution(
         version_line=version,
         selector_ref=selector_ref,
         selector_object=selector_object,
         commit=selector_commit,
-        cut=cut_ref.removeprefix("refs/tags/"),
+        cut=cut,
+        cut_ordinal=cut_ordinal,
         cut_ref=cut_ref,
         cut_tag_object=cut_tag_object,
     )

@@ -113,8 +113,16 @@ STDO source project resolves its own declared builder basis through the manager.
   and selector no-op adoption checks pass; and
 - operator onboarding: root `QUICKSTART.md`, linked from `README.md`.
 
-Immutable RC publication and subsequent independent exact-cut review remain
-pending.
+After immutable RC2 publication and the 2026-08-23 selector repair, the source
+project explicitly adopted builder basis `stdo://releases/v2.4.3-rc.2/` with
+installed-manifest SHA-256
+`8fb8ef7e8768c54e69eaa457c8acd9f621f8ad4f70391a2246a02014a5455944`.
+The subsequent package patch and latest-selector refusal boundary are owned by
+T-014 and do not reprice this ticket's Product outcome.
+
+Immutable RC2 publication is complete. Its later exact-cut disposition remains
+bound to RC2; the bounded latest-selector repair and its RC3 publication are
+owned by T-014.
 
 ## RC2 Review Repair
 
@@ -137,5 +145,6 @@ boundaries. The repaired subject now:
    distinct peeled commit.
 
 Each defect has a positive refusal-path regression. The repaired candidate
-still requires independent exact-cut review and human acceptance before
-version-line selector promotion.
+still requires independent exact-cut review for its immutable RC2 verdict.
+Under T-014, selector advancement is publication bookkeeping rather than an
+acceptance transition; consumer adoption remains separately plan-bound.

@@ -12,7 +12,7 @@ select released cuts. It does not own Product meaning or consumer adoption.
 Release process is distinct from live project specification.
 
 Live specification defines the current constitutional truth of the project.
-Release process defines how one accepted point-in-time cut is evaluated,
+Release process defines how one published point-in-time cut is evaluated,
 bounded, named, published, and made discoverable.
 
 The exact operative release identity is always an immutable RC cut tag:
@@ -27,10 +27,11 @@ The unqualified version tag:
 v<version>
 ```
 
-is a mutable **Version-Line Selector**. It points to the latest accepted
-immutable RC cut on that line. It is convenient discovery, not immutable
-identity and not sufficient as an exact constitutional, dependency, evidence,
-or replay basis.
+is a mutable **Version-Line Selector**. It points to the latest published
+immutable RC cut on that line, where latest means the greatest positive RC
+ordinal present in the release source. It is convenient discovery, not
+immutable identity and not sufficient as an exact constitutional, dependency,
+evidence, or replay basis.
 
 Release handling is downstream of intake triage. A bug, feature, regression,
 or release blocker first receives its change class, lawful re-entry point,
@@ -48,9 +49,10 @@ The release-publication context distinguishes:
 - **Immutable RC Cut** — an annotated `v<version>-rc.<n>` tag naming one exact
   published candidate and, once accepted, one released Product;
 - **Version-Line Selector** — the mutable `v<version>` tag alias naming the
-  latest accepted immutable RC cut on that version line; and
+  highest-ordinal published immutable RC cut on that version line; and
 - **Release Branch** — an optional mutable convenience carrier such as
-  `release/<version>` aligned to the same accepted commit as the selector.
+  `release/<version>` aligned to the same latest-published commit as the
+  selector.
 
 Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
@@ -60,14 +62,14 @@ version-line selector may move. An immutable RC tag never moves.
 The release process has three phases:
 
 1. mutable candidate construction;
-2. immutable RC publication and exact-cut qualification; and
-3. accepted version-line promotion.
+2. immutable RC publication and monotonic version-line advancement; and
+3. exact-cut qualification, acceptance, and explicit consumer adoption.
 
-There is no second final cut after the accepted RC. Promotion moves only the
-version-line selector and optional release branch to the already reviewed RC
-commit. If any byte capable of affecting the accepted Product or a
-release-scoped claim changes, the project publishes and reviews a new immutable
-RC cut instead.
+There is no second final cut after an accepted RC. Publication immediately
+makes the new highest ordinal discoverable through the version-line selector;
+acceptance remains a verdict over the exact immutable RC rather than a second
+carrier. If any byte capable of affecting the Product or a release-scoped claim
+changes, the project publishes and reviews a higher immutable RC cut instead.
 
 ## Mutable Candidate Construction
 
@@ -86,20 +88,28 @@ material scope change is repriced instead of being silently absorbed.
 ## Immutable RC Publication
 
 A published RC cut exists to provide one exact subject for review, replay, and
-possible acceptance. Before creating its tag, the project:
+possible acceptance. To publish it, the project:
 
 1. confirms the triaged scope and lawful constitutional re-entry;
 2. declares the exact Product release subject and release-scoped claim set;
 3. reconciles the release note and other release-facing assets to that subject;
 4. runs the proportionate pre-RC qualification and operator checks;
-5. commits and pushes the exact carrier;
-6. creates and pushes one annotated immutable `v<version>-rc.<n>` tag; and
-7. records enough identity and inventory evidence to reacquire the cut without
+5. commits the exact carrier;
+6. creates one annotated immutable `v<version>-rc.<n>` tag and an annotated
+   `v<version>` selector tag over that same commit;
+7. atomically pushes the carrier, RC branch, immutable RC tag, selector, and
+   optional release branch where the transport supports it;
+8. verifies remotely that the immutable tag, selector, and release branch
+   resolve to the highest published RC commit; and
+9. records enough identity and inventory evidence to reacquire the cut without
    trusting a mutable checkout.
 
 Each published RC tag is immutable. Further work increments `<n>` on the same
 version line when the intended line remains applicable. It does not require a
-minor-version increment merely because review found a bounded repair.
+minor-version increment merely because review found a bounded repair. A
+published higher RC without matching selector advancement is an invalid,
+fail-closed release state; it never authorizes resolution of the older cut as
+the version-line latest.
 
 ## Exact-Cut Qualification
 
@@ -120,43 +130,42 @@ presence does not prove usability unless presence is the exact claim.
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
 requires any qualifying-byte change, the verdict remains attached to the old
-RC and a new RC is published. Review does not restart merely because the next
-action is selector promotion; the promotion performs identity checks against
-the accepted RC and changes no reviewed bytes.
+RC and a higher RC is published. The selector already advertises the highest
+published RC; acceptance does not move it, rewrite it, or create another final
+carrier.
 
-## Accepted Version-Line Promotion
+## Monotonic Version-Line Advancement
 
-Promotion makes an accepted RC discoverable as the current release on its
-version line:
+Version-line advancement makes the newly published highest RC discoverable:
 
-1. identify the exact accepted immutable RC tag and its peeled commit;
-2. confirm the remote RC tag object and commit still match the accepted
-   subject;
-3. confirm `v<version>` is absent or currently resolves to an earlier accepted
-   RC on the same line;
+1. identify the exact new immutable RC tag, ordinal, and peeled commit;
+2. confirm that no higher RC ordinal already exists on that line;
+3. confirm `v<version>` is absent or currently resolves to a lower RC ordinal
+   on the same line;
 4. atomically create or force-update the annotated `v<version>` selector to the
-   accepted RC commit;
+   new highest RC commit;
 5. create or update `release/<version>` to the same commit when that optional
    carrier is used;
-6. push the selector and optional branch; and
-7. verify remotely that the selector peels to the accepted RC commit and that
-   an immutable RC tag at that commit exists.
+6. push the carrier, RC branch, immutable RC tag, selector, and optional release
+   branch atomically where the transport supports it; and
+7. verify remotely that the selector peels to the highest RC commit and that
+   the matching immutable annotated RC tag exists.
 
-Promotion is refused when the target has no matching immutable RC tag, the RC
-identity differs from the accepted subject, the selector would move to a lower
-RC number without an explicit emergency decision, or Product/release-scoped
-bytes changed after review.
+Advancement is refused when the target has no matching immutable annotated RC
+tag, any higher ordinal already exists, the selector would move to a lower RC,
+or the selector and release branch would not align to the same highest commit.
 
-Normal forward movement is monotonic by RC ordinal. A later defect is repaired
-through a higher immutable RC and another explicit acceptance, not by moving an
-old RC tag or silently rolling the selector backward.
+Forward movement is strictly monotonic by RC ordinal. A later defect is
+repaired through a higher immutable RC, not by moving an old RC tag or rolling
+the selector backward. The selector is therefore equivalent to
+`v<version>-rc.latest`, while every concrete RC tag remains addressable.
 
 ## Selector And Consumer Adoption
 
 The version-line selector answers only:
 
-> Which accepted immutable RC cut is currently advertised on this version
-> line?
+> Which highest-ordinal published immutable RC cut currently exists on this
+> version line?
 
 It never answers:
 
@@ -172,6 +181,15 @@ annotated selector with a distinct peeled commit; absence of a peeled selector
 ref fails closed and cannot be interpreted as a lightweight selector whose tag
 object is its commit.
 
+Channel resolution enumerates the published RC tags, selects the greatest
+positive ordinal, requires that cut and the version-line selector to be
+annotated tags peeling to the same commit, and fails closed when the selector
+lags or points elsewhere. Channel adoption also refuses a same-line target
+whose ordinal is below the Product Definition's current exact basis. A consumer
+that intentionally retains an older cut names that immutable RC URI and digest
+explicitly and uses exact-basis operations such as `sync`; it does not express
+that choice through the latest-version channel.
+
 Presentation and mutation are separate invocations. The read-only plan binds
 the current Product Definition bytes and basis to the target immutable cut,
 annotated tag object, peeled commit, tree, and installed-manifest digest, then
@@ -182,9 +200,10 @@ fleet uses the same law with one aggregate digest over all exact per-definition
 plans; planning inside a mutating invocation is not external presentation and
 cannot authorize itself.
 
-This split lets operators refer to `v<version>` for the current accepted release
+This split lets operators refer to `v<version>` for the latest published RC
 without repeatedly incrementing the version line, while every governed project
-retains reproducible exact-cut authority.
+retains reproducible exact-cut authority and changes only through explicit
+adoption.
 
 ## Naming
 
@@ -200,8 +219,8 @@ For example:
 - candidate branch: `rc/2.4.3`;
 - first immutable cut: `v2.4.3-rc.1`;
 - second immutable cut: `v2.4.3-rc.2`;
-- accepted-release branch: `release/2.4.3`; and
-- current accepted selector: `v2.4.3`.
+- latest-release branch: `release/2.4.3`; and
+- latest-published selector: `v2.4.3`.
 
 Projects may choose another spelling only when they preserve the same mutable
 carrier, immutable cut, and mutable selector distinctions.
@@ -242,7 +261,7 @@ branch and cannot move the immutable RC tag.
 
 ## Acceptance Criteria
 
-An RC may be promoted when:
+An RC may be accepted when:
 
 - pre-RC qualification passed for the declared subject;
 - independent exact-cut review passed where required;
@@ -253,9 +272,10 @@ An RC may be promoted when:
   narrowed; and
 - the human Product authority accepted the exact immutable RC identity.
 
-Selector promotion then proves only that the remote alias and optional branch
-resolve to that accepted commit and a matching immutable RC tag. It does not
-repeat construction or semantic qualification already bound to the RC.
+Acceptance attaches to that immutable RC identity. It neither advances nor
+rolls back the version-line selector. Consumer adoption separately evaluates
+the exact latest target presented by the channel and mutates only after its
+digest-bound plan is accepted.
 
 ## External Qualification Dependencies
 
@@ -294,6 +314,5 @@ branch strategy, comparison, and proof mechanism.
 ## Open Questions
 
 - What exact qualification bundle is mandatory for each Product class?
-- What explicit emergency authority may permit version-line selector rollback?
 - What version-line compatibility rule requires a new `<version>` rather than a
   higher RC ordinal?

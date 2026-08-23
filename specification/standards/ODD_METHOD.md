@@ -1531,8 +1531,8 @@ The graph-native method concerns:
 - current closures
 - current authority
 
-Immutable RC publication, exact-cut acceptance, and version-line selector
-promotion remain a separate process surface.
+Immutable RC publication, version-line selector advancement, and exact-cut
+acceptance remain a separate process surface.
 
 ---
 

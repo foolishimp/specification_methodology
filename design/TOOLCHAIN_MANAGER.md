@@ -1,7 +1,8 @@
 # STDO Toolchain Manager Design
 
 - Status: active
-- Implements: `.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md`
+- Implements: `.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md`,
+  `.ai-workspace/tickets/active/T-014-make-version-line-selector-latest.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
@@ -15,7 +16,8 @@ consumer workflow, infer product composition, or own a consumer's selection.
 
 The Product Definition is the sole authored selection surface. Its exact basis
 is an immutable logical release URI plus the SHA-256 of a deterministic
-installed-release manifest. Its version-line selector is discovery input only.
+installed-release manifest. Its version-line selector is discovery input for
+the highest-ordinal published immutable RC only.
 
 ## Legacy Installer Disposition
 
@@ -33,8 +35,8 @@ exact basis.
 ## Components
 
 - `git_source.py` reacquires one annotated immutable RC tag into an isolated
-  temporary bare object store and resolves a mutable version-line alias to a
-  matching immutable RC.
+  temporary bare object store and resolves a mutable version-line alias only
+  when it matches the highest-ordinal published immutable RC.
 - `manifest.py` derives the exact tag, commit, trees, standards inventory,
   canonical member-set digest, member bytes, license, release note, and plugin
   payload admitted to an installation.
@@ -81,8 +83,9 @@ special entries without following them; every undeclared entry is damage.
 - `install` names an immutable RC cut directly and changes only the store.
 - `sync` installs and verifies the basis already pinned in one definition; it
   never follows the selector and never edits the definition.
-- `adopt --dry-run` resolves and reports the exact selector target plus a digest
-  over current definition bytes, cut, annotated tag, commit, tree, and manifest.
+- `adopt --dry-run` resolves and reports the exact latest selector target plus a
+  digest over current definition bytes, cut, annotated tag, commit, tree, and
+  manifest; a lagging selector or same-line downgrade fails closed.
 - mutating `adopt` requires that externally accepted digest, re-derives it,
   installs only the bound target, rechecks the definition bytes, then atomically
   changes only `constitution.stdo.basis` and a basis-relative `$schema` URI.
@@ -96,18 +99,21 @@ special entries without following them; every undeclared entry is damage.
 
 ## Refusals
 
-The manager refuses unannotated or malformed cut identities, lightweight
-version-line selectors, absent matching RC tags, unaccepted or stale adoption
-plans, unexpected manifest digests, damaged or extra installed entries of any
-type, store or registry redirection, URI traversal, cross-basis schema locators,
-invalid Product Definition shape or formats, bootstrap boundary escape,
-malformed markers, and implicit fleet writes.
+The manager refuses unannotated or malformed cut identities, lightweight or
+lagging version-line selectors, a selector that does not match the highest
+published RC, absent matching RC tags, channel downgrades, unaccepted or stale
+adoption plans, unexpected manifest digests, damaged or extra installed entries
+of any type, store or registry redirection, URI traversal, cross-basis schema
+locators, invalid Product Definition shape or formats, bootstrap boundary
+escape, malformed markers, and implicit fleet writes.
 
 ## Verification
 
 The executable boundary is tested against unrelated temporary Git releases for
 installation, reinstallation, tamper detection, URI escape, exact-basis sync,
-selector adoption, marker idempotence, fleet discovery, and refusal paths. A
+latest-selector adoption, lagging-selector and downgrade refusal, marker
+idempotence, fleet discovery, and refusal paths. A
 repository dogfood test independently installs the immutable released
 `v2.4.3-rc.1` cut and checks its known commit, 45-member inventory, and canonical
-aggregate digest.
+aggregate digest; a second dogfood boundary binds the source Product Definition
+to the exact installed RC2 builder basis.

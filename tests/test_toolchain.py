@@ -8,6 +8,8 @@ from pathlib import Path
 
 from stdo_toolchain.errors import StdoError
 from stdo_toolchain.git_source import (
+    cut_coordinates,
+    ensure_channel_not_downgrade,
     normalize_cut,
     normalize_version_line,
     resolve_channel,
@@ -92,14 +94,15 @@ class ReleaseFixture:
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.1", "-m", "RC1")
         run_git(self.repository, "tag", "-a", "v1.0.0", "-m", "line one")
 
-    def add_rc2(self) -> None:
+    def add_rc2(self, *, advance_selector: bool = True) -> None:
         (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
             "# Spec two\n", encoding="utf-8"
         )
         run_git(self.repository, "add", ".")
         run_git(self.repository, "commit", "-qm", "release two")
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.2", "-m", "RC2")
-        run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line two")
+        if advance_selector:
+            run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line two")
 
     def add_rc3(self) -> None:
         (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
@@ -113,6 +116,10 @@ class ReleaseFixture:
     def make_selector_lightweight(self) -> None:
         run_git(self.repository, "tag", "-d", "v1.0.0")
         run_git(self.repository, "tag", "v1.0.0")
+
+    def make_latest_cut_lightweight(self) -> None:
+        run_git(self.repository, "tag", "-d", "v1.0.0-rc.2")
+        run_git(self.repository, "tag", "v1.0.0-rc.2")
 
 
 def definition_document(repository: Path, basis_uri: str, digest: str) -> dict:
@@ -199,6 +206,41 @@ class StoreTests(unittest.TestCase):
             normalize_version_line("2.4.3-rc.2")
         with self.assertRaises(StdoError):
             normalize_cut("v2.4.3-rc.1-rc.2")
+        self.assertEqual(cut_coordinates("v2.4.3-rc.12"), ("2.4.3", 12))
+
+    def test_channel_refuses_a_lagging_selector(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.add_rc2(advance_selector=False)
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "latest published immutable cut is v1.0.0-rc.2",
+            ):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_refuses_a_lightweight_latest_cut(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.add_rc2()
+            fixture.make_latest_cut_lightweight()
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "Latest published STDO cut v1.0.0-rc.2 must be an annotated tag",
+            ):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_adoption_refuses_downgrade_but_exact_cut_remains_valid(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(StdoError, "cannot move backward"):
+            ensure_channel_not_downgrade("v1.0.0-rc.2", "v1.0.0-rc.1")
+
+        ensure_channel_not_downgrade("v1.0.0-rc.1", "v1.0.0-rc.2")
+        self.assertEqual(normalize_cut("v1.0.0-rc.1"), "v1.0.0-rc.1")
 
     def test_install_resolve_reinstall_and_detect_tamper(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -608,6 +650,90 @@ class ProductDefinitionTests(unittest.TestCase):
             with self.assertRaises(StdoError):
                 sync_definition(definition, store)
             self.assertEqual(store.list_releases(), [])
+
+    def test_sync_preserves_an_explicit_older_cut_when_the_channel_is_newer(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            planning_store = Store(root / "planning-store")
+            rc1 = planning_store.install(str(fixture.repository), "v1.0.0-rc.1")
+            fixture.add_rc2()
+
+            definition = root / "project" / "stdo_default.json"
+            definition.parent.mkdir()
+            definition.write_text(
+                json.dumps(
+                    definition_document(
+                        fixture.repository,
+                        rc1.uri,
+                        rc1.manifest_sha256,
+                    ),
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            store = Store(root / "store")
+            synced = sync_definition(definition, store)
+            self.assertEqual(synced["basis"], "stdo://releases/v1.0.0-rc.1/")
+            self.assertEqual(
+                [release["cut"] for release in store.list_releases()],
+                ["v1.0.0-rc.1"],
+            )
+
+    def test_adopt_refuses_a_same_line_downgrade_before_install_or_write(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.add_rc2()
+            store = Store(root / "store")
+            rc2 = store.install(str(fixture.repository), "v1.0.0-rc.2")
+            definition = root / "project" / "stdo_default.json"
+            definition.parent.mkdir()
+            document = definition_document(
+                fixture.repository,
+                rc2.uri,
+                rc2.manifest_sha256,
+            )
+            document["$schema"] = document["$schema"].replace(
+                "v1.0.0-rc.1",
+                "v1.0.0-rc.2",
+            )
+            definition.write_text(
+                json.dumps(document, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            original = definition.read_bytes()
+
+            rc1_commit = run_git(
+                fixture.repository,
+                "rev-parse",
+                "v1.0.0-rc.1^{commit}",
+            )
+            run_git(fixture.repository, "tag", "-d", "v1.0.0-rc.2")
+            run_git(
+                fixture.repository,
+                "tag",
+                "-fa",
+                "v1.0.0",
+                "-m",
+                "line rollback",
+                rc1_commit,
+            )
+
+            with self.assertRaisesRegex(StdoError, "cannot move backward"):
+                adopt_definition(definition, store, dry_run=True)
+
+            self.assertEqual(definition.read_bytes(), original)
+            self.assertEqual(
+                [release["cut"] for release in store.list_releases()],
+                ["v1.0.0-rc.2"],
+            )
 
     def test_adopt_updates_only_basis_and_schema_release(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

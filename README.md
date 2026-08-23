@@ -9,7 +9,7 @@ Mutable future-method source lives under `specification/standards/`. Publication
 authority is one immutable released STDO RC cut identified by its annotated tag,
 commit, tree, and exact member inventory. A consumer is governed by the complete
 cut pinned in its Product Definition. The `v<version>` tag is only the mutable
-alias to the latest accepted RC on that line.
+alias to the highest-ordinal published RC on that line.
 
 The `stdo` toolchain manager installs immutable cuts once in a shared versioned
 store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
@@ -33,16 +33,18 @@ pipx install "git+https://github.com/foolishimp/specification_methodology.git@v<
 Then install or inspect a cut:
 
 ```sh
-stdo install v2.4.3-rc.1
+STDO_CUT='<immutable-cut>'
+stdo install "$STDO_CUT"
 stdo list
-stdo resolve stdo://releases/v2.4.3-rc.1/standards/SPEC_METHOD.md
+stdo resolve "stdo://releases/${STDO_CUT}/standards/SPEC_METHOD.md"
 ```
 
 For a governed project, use `stdo sync --definition stdo_default.json` to
 materialize the exact basis already pinned by that definition. Use the following
-to inspect a newer accepted RC. The dry-run emits `plan_sha256`; pass that exact
-digest in a separate invocation only when the project accepts the presented
-target:
+to inspect the latest published RC. Resolution fails closed if the alias lags
+the highest published ordinal or would move the Product Definition backward.
+The dry-run emits `plan_sha256`; pass that exact digest in a separate invocation
+only when the project accepts the presented target:
 
 ```sh
 stdo adopt --definition stdo_default.json --dry-run

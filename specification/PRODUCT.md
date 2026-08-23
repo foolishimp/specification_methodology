@@ -120,9 +120,10 @@ Referenced constitutional, Product, requirement, design, ticket, comment, and
 runtime surfaces retain their own meaning and authority.
 
 The overlay also binds one mutable STDO version-line selector to one exact
-installed release basis. The selector locates an available accepted cut; it is
-not operative authority. The exact basis URI and installed-manifest digest are
-the sole current STDO selection for that Product Definition. Installed bytes,
+installed release basis. The selector locates the highest-ordinal published
+immutable cut on that line; it is not operative authority. The exact basis URI
+and installed-manifest digest are the sole current STDO selection for that
+Product Definition. Installed bytes,
 registries, caches, receipts, compressions, and agent bootstraps remain derived
 projections of that selection.
 
