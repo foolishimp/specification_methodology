@@ -39,6 +39,7 @@ SelectionLedger = {
   representation_profile_sha256: Sha256,
   evaluated_members: EvaluatedMember[],
   selections: Selection[],
+  generated_source_keys: GeneratedSourceKeyBinding[],
   residual_uncertainty: Residual[],
   author: AuthorityBinding,
   supersedes: SelectionLedgerIdentity | null
@@ -65,6 +66,14 @@ Selection = {
   rationale: non-empty string,
   source_owner: SourceIdentity,
   ordered_relation: boolean
+}
+
+GeneratedSourceKeyBinding = {
+  source_key:
+    "urn:stdo-representation:source-key:sha256:" +
+    64 lowercase hexadecimal characters,
+  primary_source_locator: SourceLocator,
+  local_declaration_key: non-empty string
 }
 
 Residual = {
@@ -99,10 +108,11 @@ The complete `evaluated_members` array equals the selected installed manifest's
 the population presented to human semantic authorship. It does not claim a
 machine-proved occurrence census inside each member.
 
-`selections` sort by `selection_ref` in ascending unsigned UTF-16 code-unit
-order. `residual_uncertainty` sorts by its first SourceLocator under the common
-locator ordering. Reference and locator arrays follow the common algebra's
-closed ordering law. Array order is decided before JCS serialization.
+`selections` sort by `selection_ref` and `generated_source_keys` sort by
+`source_key`, each in ascending unsigned UTF-16 code-unit order.
+`residual_uncertainty` sorts by its first SourceLocator under the common locator
+ordering. Reference and locator arrays follow the common algebra's closed
+ordering law. Array order is decided before JCS serialization.
 
 ## Selection and acceptance law
 
@@ -120,41 +130,59 @@ representation ref. An uncertain selection cannot be silently omitted or
 serialized as settled law. A retained row has at least one representation ref;
 an omitted row has none.
 
-**REQ-P-SELECT-003**: Omission shall identify the evaluated source span and
+**REQ-P-SELECT-003**: Every generated `SemanticAddress.source_key` shall have
+exactly one `generated_source_keys` binding, and every binding shall be used by
+exactly one represented SemanticAddress. Its `source_key` shall equal exactly:
+
+```text
+"urn:stdo-representation:source-key:sha256:" +
+sha256(JCS({
+  primary_source_locator,
+  local_declaration_key
+}))
+```
+
+The primary locator shall occur in that represented record's `source_locators`
+and in the Selection row owning its representation identity. The local key is
+unique within the primary locator's cited span. An existing Source STDO identity
+shall not appear in `generated_source_keys`; an omitted, duplicate, unused,
+wrong-preimage, or multiply used binding refuses construction.
+
+**REQ-P-SELECT-004**: Omission shall identify the evaluated source span and
 explain why it contributes no governing graph or constraint to the declared
 consumer purpose. Token reduction, repetition, filename, document kind, or
 author intuition alone is not an omission rationale.
 
-**REQ-P-SELECT-004**: The ledger shall preserve residual uncertainty and its
+**REQ-P-SELECT-005**: The ledger shall preserve residual uncertainty and its
 consequence and re-entry route. If uncertainty can change governed LLM
 reasoning, construction shall hold until `F_H` resolves it or Product authority
 accepts an explicitly limited candidate boundary.
 
-**REQ-P-SELECT-005**: `F_D` may verify ledger shape, exact population, digests,
+**REQ-P-SELECT-006**: `F_D` may verify ledger shape, exact population, digests,
 set equality, ordering, and references. It shall not decide the semantic truth
 of retained content, omission rationale, or residual acceptance.
 
-**REQ-P-SELECT-006**: Selection authorship and the external ledger acceptance
+**REQ-P-SELECT-007**: Selection authorship and the external ledger acceptance
 record shall each bind exact actor identity, authority identity, grant, subject,
 basis, and exact ledger bytes. Human presence, repository ownership, a Git
 author string, or possession of a digest does not by itself grant `F_H`
 authority.
 
-**REQ-P-SELECT-007**: The accepted ledger is qualification evidence external to
+**REQ-P-SELECT-008**: The accepted ledger is qualification evidence external to
 the ordinary reasoning-program payload. A host may supply it to an `F_P`
 invocation for a declared assurance purpose, but routine consumption shall not
 pay its token cost by default.
 
-**REQ-P-SELECT-008**: A change to Source STDO, WHAT, tenant, representation
+**REQ-P-SELECT-009**: A change to Source STDO, WHAT, tenant, representation
 profile, evaluated population, selection rows, residuals, author or acceptance
 binding creates a new ledger candidate. An earlier acceptance does not flow to
 changed bytes.
 
-**REQ-P-SELECT-009**: Empty, omitted, auto-generated, self-accepted, or
+**REQ-P-SELECT-010**: Empty, omitted, auto-generated, self-accepted, or
 conversation-only selection evidence refuses construction and publication. A
 temporary transcript may inform authorship but cannot be the durable ledger.
 
-**REQ-P-SELECT-010**: Product acceptance shall cite the exact accepted Semantic
+**REQ-P-SELECT-011**: Product acceptance shall cite the exact accepted Semantic
 Selection Ledger identity alongside structural receipts, measurements, and
 applicable `F_P` observations. None of those evidence classes substitutes for
 another.

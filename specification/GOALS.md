@@ -21,6 +21,8 @@ by probabilistic LLM consumers.
   structural carrier validation, canonical identity, and measurement.
 - Require an external `F_H` Semantic Selection Ledger before deterministic
   carrier construction.
+- Define an Executive Context Assignment and least-closure projection contract
+  for proportionate Executive, Worker, and Reviewer context packets.
 - Register GTL and JSON Schema as independent HOW tenants.
 - Keep tenant profiles, concrete programs, and releases unselected until their
   exact designs are separately reviewed and accepted.
@@ -42,6 +44,9 @@ by probabilistic LLM consumers.
   acceptance, or invocation records.
 - Semantic selection is durably recorded and accepted under `F_H`; it is not
   inferred from successful structural validation.
+- Executive context setting binds exact frame activations, actor capability,
+  authority, role, evidence, stop states, source re-entry, and token budget;
+  mandatory closure is never silently removed to fit context.
 - Requirement categories and active ticket metadata conform to the selected
   methods.
 - The GTL carrier authority remains confined to the GTL tenant.
@@ -59,6 +64,9 @@ the STDO graph-and-constraint program against the exact frozen GTL basis.
 ### Current selection
 
 - Publish the canonical consumption artifact as `stdo.gtl`.
+- Support exact carrier-native projections of `stdo.gtl` for authorized
+  Executive, Worker, and Reviewer context assignments without changing the
+  parent Product.
 - Map common semantic atoms to identity-bearing GTL nodes, semantic relations
   to passive typed declarations, and constraints to passive GTL rules.
 - Target direct ODD `F_P` LLM traversal; use `F_D` only for declared structural
@@ -76,6 +84,9 @@ the STDO graph-and-constraint program against the exact frozen GTL basis.
   and every retained, omitted, or uncertain selection before serialization.
 - `stdo.gtl` is reproducible, canonical, structurally valid, content-addressed,
   and traceable to exact Source STDO.
+- A frozen role-bound assignment reproduces the same least declared projection,
+  inclusion/omission identities, carrier digest, and token measurement or
+  returns an explicit hold.
 - Exact byte and token measurements demonstrate the achieved context reduction.
 - Frozen `F_P` observations exercise representative and adversarial workspace
   reasoning without claiming deterministic semantic closure.

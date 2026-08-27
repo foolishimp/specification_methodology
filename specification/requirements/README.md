@@ -10,9 +10,12 @@ every build tenant:
 3. [`REQ-P-FP-CONSUMPTION.md`](REQ-P-FP-CONSUMPTION.md) binds the fundamental
    ODD `F_D`, `F_P`, and `F_H` traversal functions and defines the external LLM
    reasoning contract.
-4. [`REQ-P-SELECTION-AND-ACCEPTANCE.md`](REQ-P-SELECTION-AND-ACCEPTANCE.md)
+4. [`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`](REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md)
+   defines authorized Executive frame assignment and least-closure context
+   packets for Executive, Worker, and Reviewer targets.
+5. [`REQ-P-SELECTION-AND-ACCEPTANCE.md`](REQ-P-SELECTION-AND-ACCEPTANCE.md)
    defines the external `F_H` semantic-selection ledger and acceptance boundary.
-5. [`REQ-P-COMPRESSION-VERIFICATION.md`](REQ-P-COMPRESSION-VERIFICATION.md)
+6. [`REQ-P-COMPRESSION-VERIFICATION.md`](REQ-P-COMPRESSION-VERIFICATION.md)
    separates deterministic construction and cost measurement from probabilistic
    usefulness observations.
 

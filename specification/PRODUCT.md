@@ -33,8 +33,17 @@ Within `urn:stdo-representation:bounded-context:product`:
   `F_P` consumer under one host-owned declared ODD vector or edge-traversal
   identity. Its model, workspace, prompt, output, and cost coordinates are not
   Product identity coordinates.
-- **Projection** is an intent- and frame-selected subgraph with the constraint
-  and interpretation closure required for its bounded purpose.
+- **Executive Context Assignment** is an external immutable binding of one
+  parent program, workspace basis, outcome, intent, target actor, Source STDO
+  Executive, Worker, or Reviewer engagement role, activated frames, authority,
+  capability, evidence, stop states, and context budget.
+- **Projection** is the least declared subgraph fixed point over an exact
+  assignment's program seeds, with every required constraint and interpretation
+  relation for its bounded purpose.
+- **Context Packet** is an invocation-input bundle containing the exact
+  assignment, selected frame declarations or routes, carrier-native projection,
+  projection manifest, required evidence, and stop, residual, and source
+  re-entry routes. It is not a new Product or authority surface.
 - **Structural Admission** is deterministic validation of exact bases,
   canonical carrier bytes, closed references, and carrier law. It does not
   judge the semantic truth of an LLM response.
@@ -62,7 +71,8 @@ Program Product provides:
 2. passive constraints declaring what an `F_P` consumer must preserve or avoid;
 3. the authority, bounded-context, basis, scope, and provenance coordinates
    required to interpret those atoms, relations, and constraints;
-4. optional bounded projections for declared intents and capability budgets;
+4. role-bound projections for authorized Executive, Worker, and Reviewer frame
+   assignments and capability budgets;
 5. exact routes back to Source STDO when the compressed program is insufficient;
 6. reproducible byte, token, and cost measurements against the exact source;
    and
@@ -90,8 +100,9 @@ They remain owned by `ODD_METHOD.md` in
 `urn:stdo:bounded-context:graph-native-odd`. Their use here does not mint local
 meanings or transfer their authority:
 
-- `F_D` applies to deterministic acquisition, construction, canonicalization,
-  structural validation, digesting, and measurement over declared properties;
+- domain HOW performs deterministic acquisition, construction,
+  canonicalization, serialization, digesting, and measurement, while `F_D`
+  evaluates or proves declared properties of those results;
 - `F_P` applies to one bounded external LLM traversal over the reasoning program
   and separately supplied invocation inputs; and
 - `F_H` applies to semantic selection, ambiguity adjudication, frame-basis and
@@ -142,6 +153,31 @@ its `traversal_ref` and still claim the exact ODD function identity.
 do not mutate `P_B` or enter its immutable Product identity. The host consuming
 the Product owns prompt assembly, model invocation, workspace acquisition, and
 response handling under its own authority.
+
+Before a role-bound invocation, an authorized Executive applies Source STDO
+frame declaration and activation law to create an exact assignment `A`. This
+Product then defines the carrier-neutral context relation:
+
+```text
+Z(A) = mandatory frame refs + exact role refs + explicit program seed refs
+P_A  = least_closure(P_B, Z(A), L_context)
+K_A  = A.context_budget
+contextualize(P_B, A) -> ContextPacket(P_A, K_A) | hold
+```
+
+`L_context` preserves the exact semantic-address, bounded-context, authority,
+scope, basis, dependency, constraint, evidence, exclusion, refusal,
+invalidation, and re-entry relations required by the assignment. The full
+program is lawful when selected and within capability; otherwise no mandatory
+closure member may be removed merely to meet `K`.
+
+An Executive may target itself, a Worker, or a Reviewer. Self-targeting creates
+no self-grant or independent-review relation. Worker context carries only its
+inherited bounded operation grants and returns a closed result to Executive.
+Reviewer context binds exact-subject acquisition and independence conditions,
+prohibits repair while retaining the Reviewer claim, and also returns to
+Executive. The complete common contract is
+`requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`.
 
 ## Product identity
 
@@ -211,8 +247,8 @@ the resulting content digest and Product identity after canonical bytes exist.
 
 ## Authority acceptance record
 
-Frame-basis, representation-profile, Semantic Selection Ledger, Product, and
-release acceptance use one external record shape:
+Frame-basis, representation-profile, Semantic Selection Ledger, and Product
+acceptance use one external record shape:
 
 ```text
 AuthorityAcceptanceIdentity =
@@ -224,7 +260,7 @@ AuthorityAcceptanceRecord = {
   schema_version: 1,
   subject_kind:
     "reference_frame_basis" | "representation_profile" |
-    "semantic_selection_ledger" | "product" | "release",
+    "semantic_selection_ledger" | "product",
   subject_identity: non-empty absolute URI,
   subject_sha256: "sha256:" + 64 lowercase hexadecimal characters,
   traversal_ref: non-empty absolute URI,
@@ -233,6 +269,7 @@ AuthorityAcceptanceRecord = {
   grant_identity: absolute URI,
   grant_scope: non-empty string,
   basis_refs: non-empty absolute URI[],
+  admitting_authority_refs: URI-reference[] | null,
   decision: "accepted" | "rejected",
   decided_at: RFC3339 timestamp,
   evidence_refs: non-empty URI-reference[],
@@ -245,8 +282,12 @@ identity is the `AuthorityAcceptanceIdentity` prefix followed by
 `sha256(JCS(AuthorityAcceptanceRecord))`. The record is created only after the
 accepting actor is presented the exact subject identity and digest.
 `subject_sha256` addresses the exact file or canonical record bytes selected by
-`subject_kind`. `basis_refs` and `evidence_refs` are duplicate-free and sorted
-by ascending unsigned UTF-16 code units before JCS.
+`subject_kind`. `basis_refs`, non-null `admitting_authority_refs`, and
+`evidence_refs` are duplicate-free and sorted by ascending unsigned UTF-16 code
+units before JCS. For `subject_kind = "reference_frame_basis"`,
+`admitting_authority_refs` is non-empty and equals exactly the applicable
+Product Definition's `reference_frame_bases[*].authority` string set after
+sorting, without URI rewriting. For every other subject kind it is `null`.
 `grant_identity` locates the durable authority grant and `grant_scope` states the
 bounded permission exercised for this subject. The record points inward to that
 unchanged subject; the subject never embeds the later acceptance-record
@@ -271,9 +312,50 @@ STDO basis.
 
 The Product acceptance record uses the common authority-acceptance law. A
 separate release record binds the exact accepted Product identity, release name,
-release evidence, and any `supersedes` Product identities. Supersession and
-retirement are new external lifecycle records; they do not mutate, reuse, or
-delete the identity of an earlier immutable Product.
+and any superseded Product or release identities:
+
+```text
+ReleaseRecordIdentity =
+  "urn:stdo-representation:release-record:sha256:" +
+  64 lowercase hexadecimal characters
+
+ReleaseRecord = {
+  kind: "stdo-representation.release",
+  schema_version: 1,
+  release_identity:
+    "urn:stdo-representation:release:" + tenant_label + ":" + semantic_version,
+  tenant_label: non-empty lowercase ASCII label,
+  semantic_version: SemVer 2.0.0 version without a leading "v",
+  build_tenant_identity: non-empty absolute URI,
+  product_identity: non-empty absolute URI,
+  product_content_identity: "sha256:" + 64 lowercase hexadecimal characters,
+  product_acceptance_identity: AuthorityAcceptanceIdentity,
+  release_manifest_sha256: "sha256:" + 64 lowercase hexadecimal characters,
+  semantic_selection_ledger_identity:
+    "urn:stdo-representation:semantic-selection-ledger:sha256:" +
+    64 lowercase hexadecimal characters,
+  traversal_ref: non-empty absolute URI,
+  actor_identity: absolute URI,
+  authority_identity: absolute URI,
+  grant_identity: absolute URI,
+  grant_scope: non-empty string,
+  evidence_refs: non-empty URI-reference[],
+  supersedes_product_identities: absolute URI[],
+  supersedes_release_identities: absolute URI[],
+  released_at: RFC3339 timestamp
+}
+```
+
+Its canonical bytes are exact RFC 8785 JCS bytes with no framing bytes, and its
+identity is the `ReleaseRecordIdentity` prefix followed by
+`sha256(JCS(ReleaseRecord))`. The three array fields are duplicate-free and
+sorted by ascending unsigned UTF-16 code units. `release_identity` equals
+exactly the value derived from `tenant_label` and `semantic_version`; one
+release identity binds one immutable record and shall never retarget another
+Product. Product and release supersession occur only in this record and never
+through `AuthorityAcceptanceRecord.supersedes`, which relates acceptance
+decisions. Supersession does not mutate or delete an earlier Product or release.
+Retirement is not defined or claimed by this source-project candidate.
 
 ## Product Authority
 
@@ -284,9 +366,11 @@ delete the identity of an earlier immutable Product.
 - Each build tenant owns its carrier basis, representation profile,
   canonicalization, and concrete program bytes.
 - The workspace owner owns the supplied workspace evidence and its acquisition.
-- `F_D` may decide only declared deterministic construction, structural,
-  identity, and measurement properties. It does not select semantic content or
-  judge the unique correctness of probabilistic reasoning.
+- Domain HOW may construct and measure exact carriers and projections. `F_D`
+  may decide only declared deterministic structural, identity, admission, and
+  measurement properties of those results. It does not perform the construction,
+  select semantic content, or judge the unique correctness of probabilistic
+  reasoning merely because the mechanics are deterministic.
 - An `F_P` consumer may reason, propose, diagnose, hold, expose a gap, or refuse
   within its declared traversal contract and latitude. Its output does not
   create semantic, decision, operation, acceptance, release, or closure
@@ -294,6 +378,10 @@ delete the identity of an earlier immutable Product.
 - `F_H` semantic selection and adjudication require an exact human or
   bounded-proxy identity, grant, subject, basis, evidence, and recorded decision;
   human presence alone grants no ambient authority.
+- Executive frame assignment requires existing frame-set authority and an exact
+  grant. An Executive label, access to the full program, or selection of its own
+  context cannot widen semantic, operation, decision, or Reviewer-independence
+  authority.
 - Human Product authority accepts an immutable program for publication after
   reviewing its structural evidence, measurements, and applicable `F_P`
   observations. The resulting acceptance record names the exact human or
@@ -320,6 +408,10 @@ unless a host explicitly selects them.
 The Product does not contain a workspace, prompt, model configuration, LLM
 response, deterministic semantic assessor, total coverage matrix, assessment
 disposition, HoG program, ABG event stream, or runtime truth.
+
+Executive Context Assignments, projections, and Context Packets are derived
+invocation surfaces pointing to an immutable parent Product. They do not enter
+that Product's identity or become another constitutional source.
 
 ## Reference Frame Basis
 

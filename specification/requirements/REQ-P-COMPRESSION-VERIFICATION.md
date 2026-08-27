@@ -26,8 +26,10 @@ by the candidate Product coordinates.
 Semantic Selection Ledger shall be frozen before carrier serialization.
 Repeating canonical serialization and structural construction over that
 identical set and the same exact bases/profile shall reproduce identical program
-bytes and content digest. This is `F_D` artifact construction after `F_H`
-semantic authorship, not deterministic semantic extraction or assessment.
+bytes and content digest. Tenant domain HOW performs that construction after
+`F_H` semantic authorship; `F_D` may evaluate or prove its declared
+reproducibility, canonicalization, identity, and admission properties. The
+mechanics are not deterministic semantic extraction or assessment.
 
 **REQ-P-VERIFY-003**: Structural validation shall verify canonical carrier form,
 closed identities, reference kinds, basis coherence, constraint shape, source
@@ -71,9 +73,11 @@ context-budget pressure.
 by structural evidence, compression measurements, and applicable `F_P`
 observations. The acceptance record shall bind the exact human or bounded-proxy
 identity and grant, exact Product identity, decision time, evidence coordinates,
-tenant-qualified release name when released, and supersession relations when
-applicable. Neither structural validity, one successful answer, nor token
-reduction alone proves semantic adequacy.
+and decision. When released, the separate exact Release Record defined by
+`PRODUCT.md#release-and-lifecycle-relation` shall bind the tenant-qualified
+release identity, accepted Product, release grant and time, evidence, and
+Product/release supersession relations. Neither structural validity, one
+successful answer, nor token reduction alone proves semantic adequacy.
 
 **REQ-P-VERIFY-012**: Temporary outputs and invocation transcripts may support
 exploration but shall not support a published measurement or usefulness claim

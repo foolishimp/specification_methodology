@@ -9,7 +9,8 @@ is its human-readable companion.
 | JSON Schema | `urn:stdo-representation:build-tenant:json-schema` | unselected | unselected | none |
 
 Both tenants realize the same pure graph-and-constraint WHAT for external ODD
-`F_P` LLM traversal. `F_H` selection precedes each tenant's `F_D` construction.
+`F_P` LLM traversal. `F_H` selection precedes each tenant's domain construction;
+`F_D` may evaluate or prove declared deterministic properties of its result.
 Neither tenant may redefine the STDO Representation Algebra, introduce
 deterministic semantic assessment, or consume the other tenant as a mandatory
 intermediate carrier.

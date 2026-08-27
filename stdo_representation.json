@@ -120,6 +120,63 @@
         "applies_to": [
           "urn:stdo:product-definition:stdo-representation"
         ]
+      },
+      {
+        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "term": "Executive",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        ],
+        "resolves_to": "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "term": "Worker",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+        ],
+        "resolves_to": "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "term": "Reviewer",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+        ],
+        "resolves_to": "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
       }
     ]
   },
@@ -131,6 +188,7 @@
         "./specification/PRODUCT.md#product-authority",
         "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
         "./specification/requirements/REQ-P-COMPRESSION-VERIFICATION.md",
+        "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md",
         "./specification/requirements/REQ-P-FP-CONSUMPTION.md",
         "./specification/requirements/REQ-P-REPRESENTATION-ALGEBRA.md",
         "./specification/requirements/REQ-P-SELECTION-AND-ACCEPTANCE.md"

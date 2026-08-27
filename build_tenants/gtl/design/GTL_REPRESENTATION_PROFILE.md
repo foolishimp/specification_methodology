@@ -1,10 +1,10 @@
-# GTL Representation Profile — STDO.gtl 0.3.0
+# GTL Representation Profile — STDO.gtl 0.4.0
 
 Status: acceptance-controlled candidate; this carrier confers no construction
 authority
 
 Profile identity:
-`urn:stdo-representation:gtl-profile:stdo-gtl:0.3.0`
+`urn:stdo-representation:gtl-profile:stdo-gtl:0.4.0`
 
 Build-tenant identity: `urn:stdo-representation:build-tenant:gtl`
 
@@ -15,10 +15,11 @@ Source STDO semantic graph and passive constraints required by an external ODD
 `F_P` LLM traversal over a separately supplied workspace.
 
 `F_D`, `F_P`, and `F_H` retain their exact Source STDO traversal-function
-identities. `F_H` selects and accepts semantic declarations, `F_D` constructs
-and structurally admits canonical carrier bytes, and `F_P` consumes the
-resulting program. `stdo.gtl` is not a deterministic workspace assessor, public
-callable GTL workflow, HoG execution plan, ABG runtime, or qualification bundle.
+identities. `F_H` selects and accepts semantic declarations, GTL tenant mechanics
+construct canonical carrier bytes, `F_D` evaluates or proves their declared
+admission properties, and `F_P` consumes the resulting program. `stdo.gtl` is
+not a deterministic workspace assessor, public callable GTL workflow, HoG
+execution plan, ABG runtime, or qualification bundle.
 
 Acceptance binds this file's exact bytes and SHA-256. Any later change creates a
 new profile candidate requiring separate acceptance.
@@ -337,8 +338,9 @@ with rationale. Uncertainty is retained as residual truth and cannot be guessed
 away for a smaller token count.
 
 The ledger is external qualification evidence and is not injected into the
-ordinary `F_P` payload. Canonical serialization is `F_D` only after the selected
-declaration set and ledger are frozen and accepted.
+ordinary `F_P` payload. Tenant mechanics perform canonical serialization only
+after the selected declaration set and ledger are frozen and accepted; `F_D`
+may evaluate or prove the resulting declared properties.
 
 ## Identity and canonical bytes
 
@@ -388,6 +390,35 @@ No workspace bytes, model configuration, prompt wrapper, response, usage price,
 reasoning transcript, GraphVector, or runtime record is embedded in `stdo.gtl`.
 The host binds and may retain those invocation coordinates separately.
 
+## Executive context projection
+
+The complete `stdo.gtl` artifact is the immutable parent program. An authorized
+Executive may select exact Source STDO or downstream project frame activations
+for itself, a Worker, or a Reviewer and request a carrier-native least-closure
+projection under
+`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`. The assignment, workspace evidence,
+actor, capability envelope, grants, and activation records remain external to
+the parent artifact.
+
+A GTL projection shall contain exactly the admitted GTL declarations realizing
+the parent identities in the assignment's least fixed point. It retains the
+same atom, edge, constraint, semantic-address, and SourceLocator identities and
+does not mint projection-local substitutes. The external Context Projection
+Manifest binds the parent Product and content digest, included and omitted sets,
+projected carrier digest, tokenizer coordinates, token count, residuals, and
+source re-entry routes.
+
+Executive, Worker, and Reviewer packets use the exact Source STDO engagement
+meanings. Executive self-targeting creates no self-grant. Worker projection
+preserves bounded operation and return-to-Executive law. Reviewer projection
+preserves exact-subject acquisition, independence, no-mutation, and
+return-to-Executive law.
+
+This profile does not define a second GTL parser or validator for projections.
+The exact frozen GTL typed declaration, raw admission, and non-lowering
+validation chain remains mandatory. Domain-specific identity-set, closure,
+assignment, and budget checks follow GTL admission and cannot replace it.
+
 ## Construction and qualification surfaces
 
 The Product payload is only `stdo.gtl`. External supporting records are:
@@ -395,7 +426,9 @@ The Product payload is only `stdo.gtl`. External supporting records are:
 - the accepted Semantic Selection Ledger and its exact `F_H` binding;
 - a candidate/release manifest pointing to exact bases, profile, Product
   identity, and `stdo.gtl` digest;
-- an `F_D` canonical-build and structural-validation receipt;
+- a domain canonical-build receipt and an `F_D` structural-admission receipt;
+- exact Executive Context Assignments and Context Projection Manifests for any
+  role-bound projection used in a qualification observation;
 - exact source-versus-program byte and token measurements; and
 - frozen representative and adversarial `F_P` observations.
 

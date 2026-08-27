@@ -24,8 +24,12 @@ not translate them or create same-spelled local alternatives.
 - An explicit ODD traversal contract for each claimed `F_P` invocation, with
   bounded inputs, target/output, gates, provenance, and stop states supplied by
   the consuming host rather than embedded runtime machinery.
-- Intent-selected projections that fit declared LLM context budgets without
-  pretending omitted material was supplied.
+- Executive-selected, role-bound context packets that set finite reference-frame
+  configurations for the Executive itself, Workers, and Reviewers while
+  preserving their distinct authority, evidence, stop, and return relations.
+- Intent-selected least declared graph closures that fit declared LLM context
+  budgets without pretending omitted material was supplied or claiming one
+  globally unique minimum frame set.
 - Measured reductions in bytes, tokens, and estimated consumption cost against
   the exact Source STDO basis.
 - Independent HOW realizations, initially GTL and JSON Schema, that expose
@@ -51,11 +55,12 @@ The program constrains and informs reasoning. It does not make the LLM
 deterministic, execute STDO, own the workspace, admit runtime truth, or grant
 the LLM semantic, decision, operation, acceptance, or closure authority.
 
-`F_D` owns reproducible construction, canonicalization, and structural
-admission over declared properties. `F_H` owns semantic-selection and Product
-acceptance decisions under an explicit authority grant. Neither function may
-substitute for `F_P` semantic reasoning, and `F_P` may not claim either
-function's authority.
+Tenant or host domain mechanics own reproducible construction,
+canonicalization, serialization, and measurement. `F_D` evaluates or proves
+declared deterministic properties of those results. `F_H` owns
+semantic-selection, frame-assignment, and Product-acceptance decisions only
+under an explicit authority grant. Neither function may substitute for `F_P`
+semantic reasoning, and `F_P` may not claim either function's authority.
 
 ## Constitutional relation
 
@@ -70,6 +75,12 @@ place that carrier in an LLM context alongside a workspace input, but the host,
 workspace, prompt assembly, model invocation, and response remain separate
 consumer concerns.
 
+An Executive may use the immutable program to select or confirm an exact frame
+configuration and derive a proportionate context packet for itself, a Worker,
+or a Reviewer. The packet is an invocation input projected from the Product; it
+does not mutate the Product, create a new constitution, or grant authority by
+visibility.
+
 ## Non-goals
 
 - Deterministic semantic assessment of a workspace or an LLM response.
@@ -80,6 +91,8 @@ consumer concerns.
   Product. A consuming Product may bind those realizations externally.
 - Prescribing a step-by-step solution procedure, prompt strategy, or hidden
   selection policy for the `F_P` consumer.
+- Claiming one universal or globally minimal context packet independent of
+  outcome, actor capability, risk, evidence, or frame-set authority.
 - Making GTL, JSON Schema, a model, or a generated artifact a second source of
   STDO semantic authority.
 - Treating lower byte or token count alone as evidence that the program is

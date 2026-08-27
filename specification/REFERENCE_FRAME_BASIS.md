@@ -3,7 +3,7 @@
 ## Project Frame Basis
 
 Identity:
-`urn:stdo-representation:reference-frame-basis:source-project:2`
+`urn:stdo-representation:reference-frame-basis:source-project:3`
 
 Status: acceptance-controlled project-defined configuration; this carrier
 confers no acceptance
@@ -36,13 +36,15 @@ accepted declaration.
   `urn:stdo:product-definition:stdo-representation`
 - governed bounded context:
   `urn:stdo-representation:bounded-context:product`
-- project configuration candidate authored: 2026-08-27
+- project configuration candidate authored: 2026-08-28
 
 The governed outcome is an immutable, compact graph-and-constraint reasoning
-program for `F_P` LLM consumption over separately supplied workspaces. This
-frame basis governs the source project that defines, constructs, reviews, and
-publishes that Product. It is not a reference frame encoded inside Source STDO
-and is not a per-invocation LLM frame activation.
+program for `F_P` LLM consumption over separately supplied workspaces, including
+proportionate role-bound context projections through which an Executive sets
+frames for itself, Workers, and Reviewers. This frame basis governs the source
+project that defines, constructs, reviews, and publishes that Product. It is not
+a reference frame encoded inside Source STDO and is not a per-invocation LLM
+frame activation.
 
 ## Known evaluation inventory
 
@@ -53,6 +55,7 @@ and is not a per-invocation LLM frame activation.
 | `E-BASIS` | Are Source STDO, WHAT, tenant, carrier, profile, and content identities exact and non-cyclic? | Product identity and `REQ-P-BASIS-*` |
 | `E-GRAPH` | Is the common representation a closed pure graph plus passive constraints with conserved source meaning? | `REQ-P-ALG-*` |
 | `E-CONSUMER` | Can an LLM consume the program with a workspace, intent, frame, and budget without receiving false authority? | `REQ-P-FP-*` |
+| `E-CONTEXT` | Can an authorized Executive produce a reconstructable, role-bound, least-closure packet for itself, a Worker, or a Reviewer without silent omission or authority collapse? | `REQ-P-CONTEXT-*` and Source STDO frame law |
 | `E-SELECTION` | Does durable `F_H` evidence bind the evaluated Source STDO population and every retained, omitted, or uncertain selection? | `REQ-P-SELECT-*` |
 | `E-CARRIER` | Does a tenant realize the common program directly and lawfully in its exact carrier? | accepted tenant design and carrier authority |
 | `E-COST` | Are byte, token, and cost reductions measured on exact comparable payloads? | `REQ-P-VERIFY-*` |
@@ -139,6 +142,25 @@ material evaluation triggers the revision law below.
   mapping from `I_B`, `V_B`, `E_B`, and `C_B`.
 - Operation authority: the accepted tenant work ticket and design only.
 
+### `urn:stdo-representation:frame:executive-context-projection`
+
+- Evaluation: `E-CONTEXT` and the deterministic projection portion of
+  `E-COST`.
+- Intent: preserve Source STDO frame selection, activation, capability,
+  authority, evidence, independence, stop, and return relations while deriving
+  the least declared program closure that fits one target actor's context.
+- Required capability: resolve exact Executive, Worker, Reviewer, frame,
+  activation, actor, grant, parent-program, tokenizer, and closure identities;
+  compute graph fixed points and distinguish role access from role authority.
+- Evidence: Executive Context Assignment, exact selected frame carriers,
+  parent program, Context Projection Manifest, carrier admission, identity-set
+  equality, token measurement, holds, and source re-entry routes.
+- Operation authority: context assembly uses the consuming host's existing
+  bounded operation grant. The frame creates no construction or mutation grant.
+- Decision authority: the exact frame-set authority and grant recorded by the
+  assignment. `F_D` may evaluate declared closure and budget properties but
+  cannot select the frames or accept semantic sufficiency.
+
 ### `urn:stdo-representation:frame:semantic-selection`
 
 - Evaluation: `E-SELECTION`.
@@ -186,6 +208,9 @@ material evaluation triggers the revision law below.
   claimed independent assurance requires a distinct eligible activation.
 - Every activation binds exact subject, outcome, basis, frame, actor capability,
   evidence boundary, and expected result relation.
+- Every role-bound packet binds the exact activation configuration selected for
+  its target. An Executive self-packet repeats the same grant and capability
+  checks and creates neither self-grant nor Reviewer independence.
 
 Source STDO retains semantic authority. Product and requirements retain
 constitutional decision authority. Accepted design and ticket authority grant
@@ -197,8 +222,11 @@ releases the resulting Product.
 - Product-boundary and graph-fidelity frames intentionally overlap on semantic
   scope so carrier or assessment concepts cannot silently redefine WHAT.
 - Traversal-function integrity overlaps Product boundary, consumption,
-  selection, and carrier realization so `F_D`, `F_P`, and `F_H` cannot absorb
-  one another's authority.
+  context projection, selection, and carrier realization so `F_D`, `F_P`, and
+  `F_H` cannot absorb one another's authority.
+- Executive context projection overlaps graph fidelity, `F_P` consumption,
+  basis/identity, capability, and compression measurement because a cheap packet
+  is lawful only when its selected role and mandatory closure remain exact.
 - Basis-and-identity and carrier-realization frames intentionally overlap on
   exact carrier/profile coordinates.
 - Compression measurement and `F_P` consumption remain separate: deterministic
@@ -222,10 +250,11 @@ releases the resulting Product.
 | `E-BASIS` | basis-and-identity, independent-assurance | no released Product identity exists |
 | `E-GRAPH` | graph-and-constraint-fidelity, independent-assurance | GTL mapping is proposed, not accepted |
 | `E-CONSUMER` | fp-consumption, independent-assurance | no constructed program or frozen workspace trial exists |
+| `E-CONTEXT` | executive-context-projection, traversal-function-integrity, independent-assurance | no accepted parent program, assignment, or projected packet exists |
 | `E-SELECTION` | semantic-selection, independent-assurance | no accepted Semantic Selection Ledger exists |
 | `E-CARRIER` | carrier-realization, independent-assurance | GTL is proposed; JSON Schema basis is unselected |
 | `E-COST` | compression-measurement, fp-consumption, independent-assurance | no canonical program bytes exist to measure |
-| `E-ASSURANCE` | independent-assurance | exact candidate review occurs only after construction |
+| `E-ASSURANCE` | independent-assurance | pre-construction constitutional/profile review is active; post-construction Product-candidate review has no subject yet |
 
 These residuals prevent claims that depend on missing evidence. They do not
 authorize a frame to absorb another owner's decision.
@@ -235,6 +264,8 @@ authorize a frame to absorb another owner's decision.
 - Product Definition: `../stdo_representation.json`
 - Intent and Product: `INTENT.md`, `PRODUCT.md`
 - Common requirements: `requirements/`
+- Executive Context Assignments and Context Projection Manifests: future
+  immutable records under the consuming host or qualification evidence surface
 - Semantic Selection Ledgers: future immutable records under the selected
   tenant's construction evidence surface
 - Goals: `GOALS.md`
@@ -258,6 +289,8 @@ materially:
 - selected carrier basis or accepted representation profile;
 - semantic-selection population or authority, Product acceptance claims,
   ordinary consumer payload, or measurement basis;
+- Executive context-assignment law, selected engagement roles, frame
+  activations, closure law, context budget, or packet evidence;
 - actor capability or independence needed by a claimed evaluation; or
 - a counterexample reveals a missing evaluation, frame, relation, or evidence
   boundary.

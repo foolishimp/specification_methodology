@@ -58,6 +58,7 @@ LANE_STATUS = {
 EXPECTED_REQUIREMENTS = {
     "REQ-P-BASIS-AND-IDENTITY.md",
     "REQ-P-COMPRESSION-VERIFICATION.md",
+    "REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md",
     "REQ-P-FP-CONSUMPTION.md",
     "REQ-P-REPRESENTATION-ALGEBRA.md",
     "REQ-P-SELECTION-AND-ACCEPTANCE.md",
@@ -67,17 +68,71 @@ TRAVERSAL_IDENTITIES = {
     "F_P": "urn:stdo:concept:graph-native-odd:f-p",
     "F_H": "urn:stdo:concept:graph-native-odd:f-h",
 }
-FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:2"
-GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.3.0"
+ROLE_IDENTITIES = {
+    "Executive": (
+        "stdo://releases/v2.4.3-rc.3/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#executive"
+    ),
+    "Worker": (
+        "stdo://releases/v2.4.3-rc.3/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#worker"
+    ),
+    "Reviewer": (
+        "stdo://releases/v2.4.3-rc.3/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+    ),
+}
+FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
+GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.4.0"
 FRAME_AUTHORITIES = {
     "./specification/GOALS.md",
     "./specification/PRODUCT.md#product-authority",
     "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
     "./specification/requirements/REQ-P-COMPRESSION-VERIFICATION.md",
+    "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md",
     "./specification/requirements/REQ-P-FP-CONSUMPTION.md",
     "./specification/requirements/REQ-P-REPRESENTATION-ALGEBRA.md",
     "./specification/requirements/REQ-P-SELECTION-AND-ACCEPTANCE.md",
 }
+FUNCTION_BINDING_URI = (
+    "./specification/PRODUCT.md#fundamental-traversal-function-binding"
+)
+FUNCTION_BINDING_AUTHORITY = [
+    "stdo://releases/v2.4.3-rc.3/standards/ODD_METHOD.md#probabilistic-compute",
+    FUNCTION_BINDING_URI,
+]
+ROLE_BINDING_URI = (
+    "./specification/requirements/"
+    "REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+)
+EXPECTED_DISAMBIGUATIONS = {
+    term: {
+        "uri": FUNCTION_BINDING_URI,
+        "term": term,
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [identity],
+        "resolves_to": identity,
+        "authority": FUNCTION_BINDING_AUTHORITY,
+        "basis": ["#/constitution/stdo/basis"],
+        "applies_to": ["urn:stdo:product-definition:stdo-representation"],
+    }
+    for term, identity in TRAVERSAL_IDENTITIES.items()
+}
+EXPECTED_DISAMBIGUATIONS.update(
+    {
+        term: {
+            "uri": ROLE_BINDING_URI,
+            "term": term,
+            "context": "urn:stdo-representation:bounded-context:product",
+            "disambiguates": [identity],
+            "resolves_to": identity,
+            "authority": [identity, ROLE_BINDING_URI],
+            "basis": ["#/constitution/stdo/basis"],
+            "applies_to": ["urn:stdo:product-definition:stdo-representation"],
+        }
+        for term, identity in ROLE_IDENTITIES.items()
+    }
+)
 GTL_CARRIER_COORDINATE = {
     "authority_inventory_count": 33,
     "authority_root": "specification/requirements/gtl/",
@@ -299,19 +354,21 @@ def check_definition(root: Path = ROOT) -> dict[str, Any]:
     require(isinstance(local_constitution, dict), "local constitution is not an object")
     disambiguations = local_constitution.get("disambiguations")
     require(isinstance(disambiguations, list), "missing local disambiguations")
-    require(len(disambiguations) == 3, "expected exactly three function resolutions")
-    resolution: dict[str, str] = {}
+    require(
+        len(disambiguations) == len(EXPECTED_DISAMBIGUATIONS),
+        "unexpected semantic disambiguation count",
+    )
+    observed: dict[str, dict[str, Any]] = {}
     for item in disambiguations:
-        require(isinstance(item, dict), "function resolution is not an object")
+        require(isinstance(item, dict), "semantic resolution is not an object")
         term = item.get("term")
-        target = item.get("resolves_to")
-        require(
-            isinstance(term, str) and isinstance(target, str),
-            "invalid function resolution",
-        )
-        require(term not in resolution, f"duplicate function resolution for {term}")
-        resolution[term] = target
-    require(resolution == TRAVERSAL_IDENTITIES, "F_D/F_P/F_H resolution is not exact")
+        require(isinstance(term, str), "invalid semantic resolution term")
+        require(term not in observed, f"duplicate semantic resolution for {term}")
+        observed[term] = item
+    require(
+        observed == EXPECTED_DISAMBIGUATIONS,
+        "function and engagement-role disambiguation records are not exact",
+    )
     return definition
 
 
@@ -337,7 +394,9 @@ def main() -> None:
     product_path = SPEC / "PRODUCT.md"
     intent_path = SPEC / "INTENT.md"
     algebra_path = SPEC / "requirements" / "REQ-P-REPRESENTATION-ALGEBRA.md"
+    context_path = SPEC / "requirements" / "REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md"
     fp_path = SPEC / "requirements" / "REQ-P-FP-CONSUMPTION.md"
+    selection_path = SPEC / "requirements" / "REQ-P-SELECTION-AND-ACCEPTANCE.md"
     frame_path = SPEC / "REFERENCE_FRAME_BASIS.md"
     profile_path = (
         ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md"
@@ -346,7 +405,9 @@ def main() -> None:
     product = product_path.read_text(encoding="utf-8")
     intent = intent_path.read_text(encoding="utf-8")
     algebra = algebra_path.read_text(encoding="utf-8")
+    context_contract = context_path.read_text(encoding="utf-8")
     fp_contract = fp_path.read_text(encoding="utf-8")
+    selection_contract = selection_path.read_text(encoding="utf-8")
     frame_basis = frame_path.read_text(encoding="utf-8")
     profile = profile_path.read_text(encoding="utf-8")
 
@@ -355,8 +416,33 @@ def main() -> None:
     require_text(algebra, "P_B = (B, I_B, V_B, E_B, C_B)", algebra_path)
     require_text(algebra, "## Reference-kind law", algebra_path)
     require_text(algebra, "Every record contains exactly", algebra_path)
+    require_text(context_contract, "ExecutiveContextAssignment = {", context_path)
+    require_text(context_contract, "ContextProjectionManifest = {", context_path)
+    require_text(
+        context_contract,
+        "P_A = least_closure(P_B, Z(A), L_context)",
+        context_path,
+    )
+    require_text(
+        context_contract,
+        "STDO_REFERENCE_FRAME_BASELINE.md#executive",
+        context_path,
+    )
+    require_text(
+        context_contract,
+        "STDO_REFERENCE_FRAME_BASELINE.md#worker",
+        context_path,
+    )
+    require_text(
+        context_contract,
+        "STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+        context_path,
+    )
+    require_text(selection_contract, "GeneratedSourceKeyBinding = {", selection_path)
+    require_text(product, "admitting_authority_refs", product_path)
+    require_text(product, "ReleaseRecord = {", product_path)
     require_text(frame_basis, "Status: acceptance-controlled", frame_path)
-    require_text(profile, "STDO.gtl 0.3.0", profile_path)
+    require_text(profile, "STDO.gtl 0.4.0", profile_path)
     require_text(profile, "Status: acceptance-controlled candidate", profile_path)
     require_text(profile, "A Rule has no `.id`", profile_path)
     require_text(profile, "canonical_program_bytes = JCS(Module) + LF", profile_path)
@@ -432,6 +518,7 @@ def main() -> None:
                 "gtl_profile_sha256": profile_digest,
                 "frame_basis_status": "candidate carrier; acceptance not evaluated",
                 "gtl_profile_status": "candidate carrier; acceptance not evaluated",
+                "context_projection_contract": "Executive, Worker, Reviewer",
                 "structural_checks_pass": True,
             },
             indent=2,

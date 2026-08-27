@@ -19,13 +19,23 @@ F_P(reasoning program, workspace, intent, frame, context budget)
   -> probabilistic reasoning | hold | gap | refusal
 ```
 
+An authorized Executive may first derive a role-bound packet from the same
+immutable program:
+
+```text
+STDO reasoning program + outcome + actor + frames + capability + token budget
+  -> Executive | Worker | Reviewer context packet
+  -> F_P traversal over separately supplied workspace evidence
+```
+
 `F_D`, `F_P`, and `F_H` retain their exact Source STDO meanings as the
 fundamental deterministic, probabilistic, and human functions of the ODD
 traversal architecture. The Product constrains an LLM; it does not make semantic
-reasoning deterministic or grant the LLM authority. `F_D` support is limited to
-exact basis verification, canonical construction, structural carrier
-validation, digesting, and byte/token measurement. `F_H` owns semantic selection
-and acceptance under an explicit grant.
+reasoning deterministic or grant the LLM authority. Tenant or host domain HOW
+constructs, serializes, and measures carriers and projections; `F_D` evaluates
+or proves declared deterministic properties of those results. `F_H` owns
+semantic selection, authorized frame assignment, and acceptance under an
+explicit grant.
 
 HoG execution, ABG runtime admission, events, continuation, deterministic
 workspace assessment, and runtime truth are not embedded in the Product. A
@@ -39,6 +49,8 @@ The constitutional WHAT owns:
 - the closed identity, semantic-atom, typed-edge, and passive-constraint algebra;
 - the `F_P` consumer and workspace-input boundary;
 - the exact `F_D/F_P/F_H` allocation and external traversal contract;
+- Executive Context Assignments and least declared, role-bound context
+  projections for Executive, Worker, and Reviewer engagement frames;
 - semantic identity, authority, bounded-context, dependency, composition,
   overlay, projection, and source-reentry laws;
 - content-first Product identity;

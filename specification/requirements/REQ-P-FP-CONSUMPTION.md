@@ -35,7 +35,7 @@ For this Product, the traversal-function allocation is:
 
 | Function | Bounded role | Forbidden substitution |
 |---|---|---|
-| `F_D` | exact acquisition, construction, canonicalization, structural validation, digesting, and measurement | semantic selection, probabilistic judgment, human acceptance |
+| `F_D` | evaluation or proof of declared deterministic basis, identity, structural-admission, closure, and measurement properties | constructor mechanics, semantic selection, probabilistic judgment, human acceptance |
 | `F_P` | one bounded LLM traversal over a reasoning program and its separately bound invocation inputs | structural or closure truth, semantic authority, acceptance |
 | `F_H` | semantic selection, explicit ambiguity adjudication, and acceptance under an exact human or bounded-proxy grant | ambient authority, hidden worker strategy, deterministic proof |
 
@@ -81,6 +81,9 @@ processing but is not a claimed ODD `F_P` traversal.
 **REQ-P-FP-003**: A reasoning invocation shall bind a Product identity,
 separately acquired workspace input, reasoning intent, selected frame or frame
 projection, and declared model capability/context budget before invocation.
+An Executive-, Worker-, or Reviewer-targeted invocation shall additionally bind
+the exact Executive Context Assignment and Context Projection Manifest required
+by `REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`.
 
 **REQ-P-FP-004**: The complete reasoning program shall be reusable across
 workspaces and invocations. A workspace path, snapshot, prompt, model, response,
@@ -99,7 +102,9 @@ an `F_P` consumer to distinguish materially different lawful interpretations.
 **REQ-P-FP-007**: A bounded projection may be consumed instead of the complete
 program only when it declares its intent, frame, budget, included closure, and
 exact routes to omitted Source STDO material. A consumer shall not treat a
-projection as authority outside that boundary.
+projection as authority outside that boundary. Role-bound projection shall use
+the exact least-closure and assignment contract of
+`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`.
 
 **REQ-P-FP-008**: When program declarations explicitly leave a decision
 underdetermined, the `F_P` consumer may reason within that latitude and shall
@@ -124,6 +129,10 @@ under a declared grant but shall not claim that human presence deterministically
 proves semantic completeness. Every durable `F_D` receipt or `F_H` decision
 claim shall bind its own declared traversal identity and complete applicable
 contract.
+
+Deterministic domain acquisition, construction, canonicalization,
+serialization, digesting, and measurement remain mechanics evaluated by `F_D`;
+they do not become `F_D` merely because they are deterministic.
 
 **REQ-P-FP-012**: A host unable to supply the selected program, workspace input,
 intent, frame, capability budget, or complete traversal contract shall expose

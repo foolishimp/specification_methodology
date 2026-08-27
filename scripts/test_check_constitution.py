@@ -30,6 +30,35 @@ class ConstitutionCheckerTests(unittest.TestCase):
             ):
                 checker.load_json_unique(path)
 
+    def test_disambiguation_context_mutation_fails(self) -> None:
+        definition = checker.load_json_unique(checker.ROOT / "stdo_representation.json")
+        definition["local_constitution"]["disambiguations"][0][
+            "context"
+        ] = "urn:mutation:wrong-context"
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "stdo_representation.json"
+            path.write_text(json.dumps(definition), encoding="utf-8")
+            with self.assertRaisesRegex(
+                checker.CheckFailure, "disambiguation records are not exact"
+            ):
+                checker.check_definition(Path(directory))
+
+    def test_role_import_target_mutation_fails(self) -> None:
+        definition = checker.load_json_unique(checker.ROOT / "stdo_representation.json")
+        executive = next(
+            item
+            for item in definition["local_constitution"]["disambiguations"]
+            if item["term"] == "Executive"
+        )
+        executive["resolves_to"] = "urn:mutation:local-executive-persona"
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "stdo_representation.json"
+            path.write_text(json.dumps(definition), encoding="utf-8")
+            with self.assertRaisesRegex(
+                checker.CheckFailure, "engagement-role disambiguation records"
+            ):
+                checker.check_definition(Path(directory))
+
     def test_duplicate_ticket_header_key_fails(self) -> None:
         text = "# Ticket\n\nid: T-900\nid: T-901\n\n## Body\n"
         with self.assertRaisesRegex(checker.CheckFailure, "duplicate ticket metadata"):

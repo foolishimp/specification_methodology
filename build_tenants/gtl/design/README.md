@@ -1,6 +1,6 @@
 # GTL Tenant Design
 
-Status: `STDO.gtl 0.3.0` profile proposed; no design is accepted for
+Status: `STDO.gtl 0.4.0` profile proposed; no design is accepted for
 construction.
 
 The exact frozen carrier basis is recorded in [`GTL_BASIS.md`](GTL_BASIS.md).
