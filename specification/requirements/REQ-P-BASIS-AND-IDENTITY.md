@@ -1,8 +1,8 @@
-# REQ-P-BASIS-AND-IDENTITY — Basis, Census, And Product Identity
+# REQ-P-BASIS-AND-IDENTITY — Basis And Program Identity
 
 Family: `REQ-P-BASIS-*`
-Status: active
-Category: constraint / guarantee
+Status: Active
+Category: Constraint / Guarantee
 Design ownership: deferred independently to each registered build tenant; no
 tenant design is accepted
 
@@ -11,82 +11,70 @@ Derives from: `../PRODUCT.md#product-identity`,
 
 ## Purpose
 
-Make the source corpus and every immutable assessment coordinate decidable
-before a tenant representation is constructed.
+Bind each reusable reasoning program to exact immutable source, Product, tenant,
+carrier, profile, and content coordinates without making a workspace invocation
+or qualification record part of program identity.
 
 ## Requirements
 
-**REQ-P-BASIS-001**: Every assessment shall select one exact installed STDO
+**REQ-P-BASIS-001**: Construction shall select one exact installed Source STDO
 release URI and its deterministic installed-manifest SHA-256. A mutable channel,
 branch, workspace, cache entry, or unverified checkout shall not be operative
 Source STDO authority.
 
-**REQ-P-BASIS-002**: The Source STDO corpus shall contain every member of the
-selected manifest's complete `standards.members` inventory in its declared
-order and with its declared digest. Auxiliary release assets shall remain
-provenance inputs unless Source STDO explicitly assigns them semantic authority.
+**REQ-P-BASIS-002**: Construction shall verify every member of the selected
+manifest's complete `standards.members` inventory in declared order and against
+its declared digest before deriving program content. Auxiliary release assets
+remain non-semantic unless Source STDO assigns them another role.
 
-**REQ-P-BASIS-003**: Acquisition shall verify the installed manifest, member
-set, member order, member types, and member digests before semantic census or
-tenant construction begins. Any mismatch blocks the assessment.
+**REQ-P-BASIS-003**: Every representation profile shall bind one exact build
+tenant and immutable carrier basis. A discovery selector may locate a candidate
+basis but shall not enter construction until resolved and explicitly selected as
+an exact coordinate.
 
-**REQ-P-BASIS-004**: The source census shall assign a stable source locator to
-every standards member, owned normative clause, declared identity, material
-term occurrence, semantic relation, required state, and refusal condition that
-can change interpretation or conformance.
+**REQ-P-BASIS-004**: Every represented semantic atom, edge, and constraint shall
+carry or resolve to its exact Source STDO semantic address and acquisition route.
+A filename, heading, lexical match, directory, glossary row, carrier label, or
+graph position shall not invent semantic identity.
 
-**REQ-P-BASIS-005**: Every material term occurrence shall resolve under the
-Source STDO semantic-address tuple:
+**REQ-P-BASIS-005**: Equal spelling across bounded contexts shall not establish
+equal meaning. Every material semantic address preserves its term, bounded
+context, owning authority, selected basis, and governed scope coordinates, or an
+exact Source STDO relation that supplies them.
+
+**REQ-P-BASIS-006**: The canonical carrier bytes shall be content-addressed
+before Product identity is issued. The Product WHAT member set and coordinate
+object shall use the exact ordering and canonicalization defined by
+`PRODUCT.md#product-identity`:
 
 ```text
-(term, bounded-context identity, owning authority, selected basis, governed scope)
+program_content_identity = sha256(canonical_program_bytes)
 ```
 
-The representation may deduplicate occurrences that resolve to one concept,
-but it shall preserve the occurrence-to-concept mapping and every scope in
-which the resolution applies.
+The immutable `urn:stdo-representation:product:sha256:<digest>` identity then
+binds exact Source STDO, Product WHAT, tenant, carrier basis, representation
+profile, and `program_content_identity`.
 
-**REQ-P-BASIS-006**: A filename, heading, directory, glossary row, schema field,
-equal spelling, or similar topology shall not create a concept identity,
-bounded context, owner, relation, or equivalence. Zero or multiple lawful
-resolutions shall remain explicit unresolved or ambiguous findings.
+**REQ-P-BASIS-007**: Construction, validation, measurement, qualification,
+acceptance, release, and invocation records shall point to the Product identity.
+The Product identity shall not include the identities or digests of records that
+can exist only after that Product has been constructed.
 
-**REQ-P-BASIS-007**: The source census shall classify each standards member and
-semantic surface by its Source STDO authority role, including deciding,
-non-deciding index, derived compression, schema realization, template,
-provenance, or other source-declared role. A derived or non-deciding surface
-shall not be promoted by representation.
+The canonical program may embed the pre-content Product coordinates. It shall
+not embed its own final content digest or Product identity. The release manifest
+binds those values after canonical program bytes exist.
 
-**REQ-P-BASIS-008**: One immutable STDO Representation Product identity shall
-bind all coordinates listed by `PRODUCT.md#product-identity`, including the
-exact Source STDO, Product WHAT, build tenant, carrier basis, representation
-profile, artifact set, mappings, findings, evidence, and disposition.
+**REQ-P-BASIS-008**: A workspace input, reasoning intent, selected invocation
+frame, model, prompt, response, token price, and usage record are invocation
+coordinates. They shall not alter or substitute for reasoning-program Product
+identity.
 
-**REQ-P-BASIS-009**: Each build tenant shall publish a stable tenant identity.
-Each representation profile shall publish a distinct versioned identity and a
-digest over its complete admitted profile bytes. Equal output shape across two
-tenants or profiles shall not establish equal Product identity.
+**REQ-P-BASIS-009**: No tenant program, carrier type, generated graph identity,
+constraint, source map, validation result, or LLM response shall become a second
+Source STDO authority. Source-owned meaning remains reachable through exact
+semantic addresses.
 
-**REQ-P-BASIS-010**: Every external carrier basis shall be immutable and
-reacquirable. Its coordinate shall identify the authoritative source, exact
-version or object, governed member scope, member-set identity, and acquisition
-method. A moving documentation page or package selector is insufficient.
-
-**REQ-P-BASIS-011**: A discovery selector may locate a candidate basis but
-shall not enter construction, comparison, or acceptance until it resolves to
-and is accepted as an exact immutable coordinate.
-
-**REQ-P-BASIS-012**: Every artifact, map, projection, measurement, finding,
-test vector, and receipt shall bind the complete Product identity or an exact
-content-addressed parent that binds it. Reuse across a different basis or
-profile requires regeneration and a new identity.
-
-**REQ-P-BASIS-013**: No tenant artifact or external carrier shall become a
-second Source STDO authority. All represented meanings and relations shall
-retain exact source semantic addresses even when the carrier uses different
-names or structural identities.
-
-**REQ-P-BASIS-014**: A candidate with an unresolved basis, incomplete source
-census, digest mismatch, ambiguous semantic address, missing owner, or
-unacquirable carrier basis shall receive disposition `blocked` and shall not be
-admitted as a complete or limited Product.
+**REQ-P-BASIS-010**: A wrong or unresolved Source STDO basis, carrier basis,
+profile identity, source address, or canonical content digest shall refuse
+construction or structural admission. It shall not be converted into a
+probabilistic semantic guess.

@@ -1,159 +1,155 @@
-# REQ-P-REPRESENTATION-ALGEBRA — Carrier-Independent Algebra
+# REQ-P-REPRESENTATION-ALGEBRA — Graph And Constraint Program
 
 Family: `REQ-P-ALG-*`
-Status: active
-Category: invariant / constraint
+Status: Active
+Category: Constraint / Guarantee
 Design ownership: deferred independently to each registered build tenant; no
 tenant design is accepted
 
 Derives from: `../PRODUCT.md#product-terms`,
+`../PRODUCT.md#program-boundary`,
 `../PRODUCT.md#product-authority`
 
 ## Purpose
 
-Define the semantic algebra every build tenant realizes without defining a
-shared physical graph or importing a tenant carrier into WHAT.
+Define the carrier-independent pure graph and constraint program supplied to an
+`F_P` LLM consumer. The algebra declares semantic structure and governing law;
+it is not a deterministic workspace evaluator or a shared serialized carrier.
 
-## Algebraic domains
+## Closed algebra
 
-For one exact Source STDO basis `B`, the Representation Algebra is:
-
-```text
-A_B = (S_B, C_B, O_B, K_B, E_B, F_B, X_B)
-```
-
-- `S_B` is the set of semantic subjects resolved from the complete source
-  census. Every member carries its source occurrence locators and semantic
-  address.
-- `C_B` is the set of explicitly declared bounded-context identities.
-- `O_B` is the set of semantic and decision authorities named by Source STDO.
-- `K_B` is the set of relation-kind concepts resolved to exact Source STDO
-  semantic addresses.
-- `E_B` is the set of typed, directed semantic-relation assertions between
-  members of `S_B`, `C_B`, `O_B`, `F_B`, or other source-declared identities.
-- `F_B` is the set of declared reference-frame bases, frame intents, governed
-  scopes, and capability coordinates.
-- `X_B` is the set of explicit ambiguity, unresolved, excluded, lost, limited,
-  or unrepresentable residuals.
-
-`A_B` defines semantic obligations and equivalence. It has no required byte,
-object, graph-database, JSON, GTL, table, prompt, or executable form.
-
-An abstract representation under `B` is:
+For one exact Source STDO basis `B`, the program algebra is:
 
 ```text
-R_B = (B, S_R, E_R, F_R, X_R)
+P_B = (B, I_B, V_B, E_B, C_B)
 ```
 
-where `S_R`, `E_R`, and `F_R` are the admitted subjects, relations, and frame
-coordinates and `X_R` is the complete residual set. A tenant realization adds
-a versioned mapping from `R_B` into its carrier; that mapping is not part of the
-common algebra and creates no shared intermediate artifact.
+- `I_B` is the closed finite identity universe of this program.
+- `V_B` is the finite set of source-addressed semantic-atom records.
+- `E_B` is the finite set of typed directed semantic-edge records.
+- `C_B` is the finite set of passive source-addressed constraint records.
 
-## Operations
-
-The common operations are:
+The identity universe is exact:
 
 ```text
-resolve_B(occurrence, scope) -> semantic subject | residual
-closure_B(seed, relation predicate) -> subject and relation closure
-compose_B(left, right, relation set) -> representation | residual
-restrict_B(representation, governed scope) -> bounded representation + residuals
-overlay_B(base, delta, authority, scope) -> derived representation | residual
-project_B(representation, frame, budget) -> projection + residuals
-compare_B(left, right, comparison frame) -> semantic delta
+I_B = ids(V_B) union ids(E_B) union ids(C_B)
 ```
 
-Tenant profiles may choose carrier-native names and mechanisms. They shall
-preserve the operation inputs, outputs, laws, and refusals.
+Every identity reference in `V_B`, `E_B`, or `C_B` resolves to exactly one
+member of `I_B`, except an explicitly typed immutable source locator. No
+open-ended “other identity” domain exists.
+
+### Semantic atoms
+
+A semantic atom records at least:
+
+```text
+(id, atom_class, label, semantic_address, source_locators)
+```
+
+`atom_class` is structural representation metadata. Source concepts own their
+semantic types. Authorities, bounded contexts, relation kinds, scopes, bases,
+intents, reference frames, documents, clauses, terms, states, and refusals are
+represented as ordinary source-addressed atoms when material; their spelling or
+atom class grants no authority.
+
+### Semantic edges
+
+A semantic edge records at least:
+
+```text
+(id, source_ref, relation_kind_ref, target_ref,
+ context_ref, owner_ref, scope_ref, source_locators)
+```
+
+Every `*_ref` resolves inside `I_B`; context, owner, and scope may be explicitly
+`null` only when Source STDO declares that coordinate inapplicable. An edge may
+target another edge or constraint identity when Source STDO makes that relation
+first-class.
+
+### Constraints
+
+A passive constraint records at least:
+
+```text
+(id, statement, applies_to_refs,
+ context_ref, owner_ref, scope_ref, source_locators)
+```
+
+`statement` preserves the source-owned obligation, prohibition, invariant,
+admission condition, refusal, or declared latitude in compact declarative form.
+It tells an `F_P` consumer what must hold or what remains underdetermined. It is
+not executable policy, a hidden strategy, or a deterministic truth function.
+
+## Derived views
+
+A Source STDO reference frame is not another primitive domain. A frame view is
+the source-addressed frame atom plus the graph-and-constraint closure that binds
+its intent, authority, governed scope, capability envelope, basis, evidence
+relations, exclusions, and revision conditions:
+
+```text
+frame_B(f) = closure(P_B, f, required_frame_relations)
+```
+
+A collection of frames is a selection of these derived subgraphs. Selection
+creates no semantic identity or authority. A separately governed collection is
+represented only when Source STDO supplies its own identity and relations.
+
+A bounded reasoning projection is:
+
+```text
+project(P_B, intent, frame, budget) -> P'_B + omitted_source_routes
+```
+
+`P'_B` retains the identity, authority, context, relation-kind, constraint, and
+interpretation closure needed by its intent. Omitted material remains
+discoverable through exact Source STDO routes. Projection is program packaging,
+not deterministic semantic judgment.
 
 ## Requirements
 
-**REQ-P-ALG-001**: Every tenant representation shall provide a total declared
-mapping for the applicable domains `S_B`, `C_B`, `O_B`, `K_B`, `E_B`, `F_B`,
-and `X_B`. An unsupported domain shall produce coverage findings rather than an
-implicit omission.
+**REQ-P-ALG-001**: Every tenant shall realize `I_B`, `V_B`, `E_B`, and `C_B`
+directly in its selected carrier. It shall not introduce a mandatory common
+serialized graph or lower through another build tenant.
 
-**REQ-P-ALG-002**: Relation kinds shall derive from exact Source STDO concepts.
-This Product shall not create a context-free global relation vocabulary that
-flattens source-owned meanings.
+**REQ-P-ALG-002**: Every reference in the canonical program shall resolve
+exactly once with the required identity kind. Duplicate identities, dangling
+references, wrong-kind references, or cross-basis references refuse structural
+admission.
 
-**REQ-P-ALG-003**: Every relation assertion shall preserve its exact source and
-target identities, relation-kind semantic address, direction, bounded context,
-owner, basis, governed scope, and provenance.
+**REQ-P-ALG-003**: Every semantic edge shall preserve source, target, relation
+kind, direction, bounded context, owner, basis, governed scope, and source
+provenance wherever Source STDO makes those coordinates material.
 
-**REQ-P-ALG-004**: A cross-context relation shall additionally preserve whether
-it is an unchanged import, disambiguation, directional translation including
-specialization, or authority-established equivalence; its lawful inverse; its
-preserved meaning, changed meaning, loss, refusal conditions, lifecycle, and
-invalidation conditions where material.
+**REQ-P-ALG-004**: Cross-context edges shall preserve their exact Source STDO
+classification and material change: unchanged import, disambiguation,
+directional translation including specialization, or authority-established
+equivalence. Equal spelling or similar topology shall not supply that relation.
 
-**REQ-P-ALG-005**: `resolve_B` shall apply Source STDO semantic-resolution order
-and shall return exactly one semantic subject, unresolved meaning, or ambiguous
-meaning. A tenant shall not resolve by lexical similarity, proximity,
-frequency, carrier convention, or implementation default.
+**REQ-P-ALG-005**: Every constraint shall preserve its owning authority,
+applicable subjects or relations, bounded context, governed scope, source route,
+and any explicit underdetermination or refusal boundary.
 
-**REQ-P-ALG-006**: `closure_B` shall include every subject and relation required
-by the selected seed, relation predicate, owning authority, bounded context,
-and assessment frame. A tenant shall expose the closure predicate and shall not
-claim closure from a preselected convenient subset.
+**REQ-P-ALG-006**: Graph topology and constraints shall be sufficient for an
+`F_P` consumer to recover material dependency, authority, context, composition,
+overlay, projection, and invalidation relations without consulting a hidden
+carrier convention.
 
-**REQ-P-ALG-007**: `compose_B` shall conserve the identities, owners, contexts,
-bases, directions, and source meanings of both operands. Cross-context
-composition requires the complete explicit relation set that makes it lawful.
-Missing or conflicting relations produce residuals and block a complete claim.
+**REQ-P-ALG-007**: Semantic identity and authority shall be conserved by
+construction, canonicalization, compression, projection, and carrier
+translation. Copying, labeling, ordering, or graph placement shall not create,
+merge, widen, or transfer Source STDO meaning or authority.
 
-**REQ-P-ALG-008**: `restrict_B` shall retain the exact governed scope and the
-closure required to interpret the retained subjects. Every excluded material
-subject or relation shall remain discoverable through an explicit residual or
-source-corpus locator.
+**REQ-P-ALG-008**: A projection shall include the constraint and interpretation
+closure required for its declared intent and frame. If the budget cannot carry
+that closure, packaging shall refuse rather than silently trim it.
 
-**REQ-P-ALG-009**: `overlay_B` shall bind an immutable base identity, explicit
-delta, owning authority, target scope, precedence or resolution law, and
-provenance. An overlay creates a derived representation; it shall not mutate
-the base, transfer authority, or make equal spelling equivalent.
+**REQ-P-ALG-009**: Declared `F_P` latitude is lawful only where its source-owned
+constraint identifies the underdetermined scope and decision route. A missing
+atom, edge, constraint, owner, context, or basis is a representation defect, not
+permission for invention.
 
-**REQ-P-ALG-010**: `project_B` shall bind the source-representation identity,
-reference-frame intent, authority basis, governed corpus, capability budget,
-included closure, and complete residual set. A projection shall not acquire
-authority or claim completeness outside those coordinates.
-
-**REQ-P-ALG-011**: `compare_B` shall compare under an explicit frame and report
-identity, relation, context, owner, basis, scope, coverage, and residual deltas.
-Equal serialization or topology alone shall not establish semantic
-equivalence.
-
-**REQ-P-ALG-012**: Semantic identity shall be conserved by every operation.
-Copying, renaming, reordering, compressing, or translating a carrier object
-shall not create or merge a Source STDO concept identity.
-
-**REQ-P-ALG-013**: Bounded contexts shall remain isolated. A relation crossing
-contexts exists only through its exact owner-authorized import,
-disambiguation, translation, specialization, or equivalence record.
-
-**REQ-P-ALG-014**: Authority shall be conserved. No operation, carrier type,
-schema assertion, validation result, graph edge, projection, or generated
-artifact shall widen, transfer, or mint semantic or decision authority.
-
-**REQ-P-ALG-015**: Dependency closure shall be explicit. A representation that
-omits a dependency required for interpretation shall classify the affected
-subject as limited, unresolved, or unrepresentable and shall not claim it as
-faithfully represented.
-
-**REQ-P-ALG-016**: Operations shall be deterministic over exact inputs and a
-versioned representation profile. Reordering or carrier-equivalent spelling
-may change bytes only where the profile declares it; it shall not change the
-abstract result.
-
-**REQ-P-ALG-017**: A tenant shall realize the algebra directly in its selected
-carrier. No mandatory shared serialized graph, lowered plan, hidden schema, or
-other intermediate carrier may stand between WHAT and tenant realization.
-
-**REQ-P-ALG-018**: A carrier-specific construct may implement an algebraic
-domain, relation, or operation but shall not redefine it. A missing construct
-produces a typed coverage finding and may support a `limited` disposition.
-
-**REQ-P-ALG-019**: The algebra and every tenant realization are declarative.
-They define representation and assessment only; they shall not prescribe or
-perform STDO execution, HoG traversal, ABG admission, runtime continuation, or
-closure.
+**REQ-P-ALG-010**: The program shall remain declarative. It shall contain no
+workspace-specific observation, deterministic workspace verdict, prompt tactic,
+HoG traversal, ABG admission, runtime event, continuation, or closure truth.

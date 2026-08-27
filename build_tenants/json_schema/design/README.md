@@ -1,16 +1,15 @@
 # JSON Schema Tenant Design
 
-Status: no carrier basis, representation profile, or design is accepted.
+Status: no carrier basis, program profile, or design is accepted.
 
-A future profile must map the common algebra directly into canonical JSON data
-and an exact JSON Schema validation vocabulary. It must define identities,
-typed relations, context and authority coordinates, composition, overlays,
-projections, residuals, coverage, canonicalization, measurements,
-regeneration, and conformance.
+A future profile must map `I_B`, `V_B`, `E_B`, and `C_B` directly into canonical
+JSON data under one exact JSON Schema dialect. It must define content identity,
+typed references, source routes, canonicalization, structural validation,
+`F_P` consumption, and compression measurement.
 
-Schema keywords or successful validation shall not mint Source STDO meaning or
-prove algebraic equivalence. Any relation or law the selected dialect cannot
-constrain faithfully remains a typed carrier-boundary finding.
+Schema keywords and successful validation provide structural evidence only.
+They do not mint Source STDO authority, prove deterministic semantic
+equivalence, or assess an input workspace.
 
-The tenant shall not consume GTL artifacts or a shared serialized graph as an
+The tenant shall not consume GTL or another shared serialized graph as an
 intermediate representation.

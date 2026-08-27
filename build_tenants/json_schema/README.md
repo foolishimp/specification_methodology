@@ -2,15 +2,17 @@
 
 Identity: `urn:stdo-representation:build-tenant:json-schema`
 
-Status: registered; exact carrier basis, representation profile, design, and
-artifacts unselected.
+Status: registered; exact carrier basis, program profile, design, and artifact
+unselected.
 
-This tenant tests a representation made from canonical JSON instance documents
-whose structural constraints are validated by an exact JSON Schema dialect.
-JSON Schema is not itself the represented instance corpus, and schema validity
-alone does not prove semantic fidelity.
+This tenant may realize the common graph-and-constraint program as canonical
+JSON instance data structurally validated by an exact JSON Schema dialect. The
+result would target the same `F_P` LLM consumer boundary as `stdo.gtl`; it would
+not be a deterministic semantic workspace assessor.
+
+JSON Schema is not the represented instance corpus, and schema validity cannot
+mint Source STDO meaning or make probabilistic reasoning deterministic.
 
 The tenant fails closed until the basis gate in
 [`design/JSON_SCHEMA_BASIS.md`](design/JSON_SCHEMA_BASIS.md) is satisfied.
-
-Execution and runtime behavior are outside this tenant.
+Execution and runtime behavior remain outside this tenant.

@@ -2,43 +2,66 @@
 
 ## Intent
 
-Define one carrier-independent algebra for representing an exact STDO release
-compactly and traceably, then assess independent carrier realizations against
-the same semantic obligations and bounded-context rules.
+Compile one exact STDO release into a compact, traceable reasoning program for
+probabilistic LLM (`F_P`) consumption. The program presents STDO as a pure
+semantic graph plus constraints so an LLM can reason over a separately supplied
+workspace with materially lower context, token, and cost pressure than loading
+the complete source documents.
 
 ## Desired outcomes
 
-- A constitutional representation algebra owned by WHAT rather than by any
-  tenant, syntax, serializer, or tool.
-- Preservation of exact semantic addresses, authority, bounded contexts,
-  dependencies, composition, projections, and explicit residuals.
-- Compact projections that fit declared machine and LLM context budgets without
-  silently claiming the omitted corpus.
-- Multiple independent HOW realizations, initially GTL and JSON Schema, that
-  expose rather than conceal carrier boundaries.
-- A complete coverage and adequacy account for every tenant, including lawful
-  `limited`, `unresolved`, and `unrepresentable` findings.
-- Reproducible comparison of carriers using the same STDO basis, abstract
-  algebra, conformance corpus, and measurement frames.
+- A carrier-independent graph-and-constraint algebra owned by WHAT rather than
+  by GTL, JSON Schema, a serializer, model, prompt, or tool.
+- One reusable immutable program per exact Source STDO and carrier realization;
+  an input workspace or individual LLM invocation does not alter that program.
+- Preservation of the identities, authorities, bounded contexts, relations,
+  constraints, dependencies, and source routes needed for governed reasoning.
+- Intent-selected projections that fit declared LLM context budgets without
+  pretending omitted material was supplied.
+- Measured reductions in bytes, tokens, and estimated consumption cost against
+  the exact Source STDO basis.
+- Independent HOW realizations, initially GTL and JSON Schema, that expose
+  their carrier boundaries without creating a second STDO authority.
+- Probabilistic usefulness observations over representative workspaces without
+  reclassifying semantic judgment as deterministic computation.
+
+## Consumer relation
+
+The primary consumer is an LLM operating in the `F_P` regime:
+
+```text
+F_P(reasoning_program, workspace_input, intent, frame, capability_budget)
+  -> probabilistic reasoning
+```
+
+The program constrains and informs reasoning. It does not make the LLM
+deterministic, execute STDO, own the workspace, admit runtime truth, or grant
+the LLM semantic, decision, operation, acceptance, or closure authority.
 
 ## Constitutional relation
 
-Source STDO owns the meanings being represented. This Product owns only the
-carrier-independent representation algebra, projection law, coverage law, and
-acceptance obligations. Each build tenant owns its concrete realization and
-must map it back to the common algebra.
+Source STDO owns every represented meaning and governing relation. This Product
+owns only the carrier-independent program algebra, consumption contract,
+projection law, identity law, and compression obligations. Each build tenant
+owns its direct carrier realization and canonical form.
 
-The common algebra is not an intermediate representation. No serialized common
-graph is passed from WHAT into tenants. Each tenant realizes the algebra
-directly in its selected carrier and proves the relation.
+The common algebra is not a serialized intermediate representation. Each tenant
+realizes the graph and constraints directly in its selected carrier. A host may
+place that carrier in an LLM context alongside a workspace input, but the host,
+workspace, prompt assembly, model invocation, and response remain separate
+consumer concerns.
 
 ## Non-goals
 
-- Executing STDO or selecting HoG, ABG, a workflow engine, or runtime truth.
-- Selecting one carrier as constitutional semantic authority for every tenant.
-- Defining GTL, JSON Schema, or another carrier inside this Product.
-- Treating byte size or token count alone as semantic fidelity.
-- Allowing a tenant-specific extension to amend the common algebra.
+- Deterministic semantic assessment of a workspace or an LLM response.
+- A complete occurrence census, exactly-once semantic coverage matrix, or
+  deterministic `complete` / `limited` / `blocked` semantic disposition.
+- Executing STDO or selecting HoG, ABG, a workflow engine, runtime event model,
+  continuation mechanism, or runtime-truth carrier.
+- Prescribing a step-by-step solution procedure, prompt strategy, or hidden
+  selection policy for the `F_P` consumer.
+- Making GTL, JSON Schema, a model, or a generated artifact a second source of
+  STDO semantic authority.
+- Treating lower byte or token count alone as evidence that the program is
+  useful or semantically adequate.
 - Inferring cross-context equivalence from equal spelling or similar topology.
-- Hiding unresolved meaning or carrier limitations in generators, prompts,
-  validators, schemas, adapters, or reports.
