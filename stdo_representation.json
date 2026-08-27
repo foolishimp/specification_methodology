@@ -63,13 +63,77 @@
   "local_constitution": {
     "axioms": [],
     "overrides": [],
-    "disambiguations": []
+    "disambiguations": [
+      {
+        "uri": "./specification/PRODUCT.md#fundamental-traversal-function-binding",
+        "term": "F_D",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "urn:stdo:concept:graph-native-odd:f-d"
+        ],
+        "resolves_to": "urn:stdo:concept:graph-native-odd:f-d",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/ODD_METHOD.md#probabilistic-compute",
+          "./specification/PRODUCT.md#fundamental-traversal-function-binding"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/PRODUCT.md#fundamental-traversal-function-binding",
+        "term": "F_P",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "urn:stdo:concept:graph-native-odd:f-p"
+        ],
+        "resolves_to": "urn:stdo:concept:graph-native-odd:f-p",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/ODD_METHOD.md#probabilistic-compute",
+          "./specification/PRODUCT.md#fundamental-traversal-function-binding"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/PRODUCT.md#fundamental-traversal-function-binding",
+        "term": "F_H",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "urn:stdo:concept:graph-native-odd:f-h"
+        ],
+        "resolves_to": "urn:stdo:concept:graph-native-odd:f-h",
+        "authority": [
+          "stdo://releases/v2.4.3-rc.3/standards/ODD_METHOD.md#probabilistic-compute",
+          "./specification/PRODUCT.md#fundamental-traversal-function-binding"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      }
+    ]
   },
   "reference_frame_bases": [
     {
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
-        "./specification/PRODUCT.md#product-authority"
+        "./specification/GOALS.md",
+        "./specification/PRODUCT.md#product-authority",
+        "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+        "./specification/requirements/REQ-P-COMPRESSION-VERIFICATION.md",
+        "./specification/requirements/REQ-P-FP-CONSUMPTION.md",
+        "./specification/requirements/REQ-P-REPRESENTATION-ALGEBRA.md",
+        "./specification/requirements/REQ-P-SELECTION-AND-ACCEPTANCE.md"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"

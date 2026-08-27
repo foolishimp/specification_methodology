@@ -1,8 +1,8 @@
 # STDO Representation
 
 STDO Representation compiles an exact STDO release into compact, traceable
-graph-and-constraint programs for probabilistic LLM (`F_P`) reasoning over
-separately supplied workspaces.
+graph-and-constraint programs for Outcome-Driven Development probabilistic LLM
+(`F_P`) traversal over separately supplied workspaces.
 
 The primary goal is lower context, token, and consumption cost without losing
 the identities, authorities, bounded contexts, relations, constraints, and
@@ -16,16 +16,21 @@ exact Source STDO
   -> STDO reasoning program
 
 F_P(reasoning program, workspace, intent, frame, context budget)
-  -> probabilistic reasoning
+  -> probabilistic reasoning | hold | gap | refusal
 ```
 
-The Product constrains an LLM; it does not make semantic reasoning deterministic
-or grant the LLM authority. Deterministic support is limited to exact basis
-verification, canonical construction, structural carrier validation, digesting,
-and byte/token measurement.
+`F_D`, `F_P`, and `F_H` retain their exact Source STDO meanings as the
+fundamental deterministic, probabilistic, and human functions of the ODD
+traversal architecture. The Product constrains an LLM; it does not make semantic
+reasoning deterministic or grant the LLM authority. `F_D` support is limited to
+exact basis verification, canonical construction, structural carrier
+validation, digesting, and byte/token measurement. `F_H` owns semantic selection
+and acceptance under an explicit grant.
 
-HoG traversal, ABG runtime admission, events, continuation, deterministic
-workspace assessment, and runtime truth are outside the Product.
+HoG execution, ABG runtime admission, events, continuation, deterministic
+workspace assessment, and runtime truth are not embedded in the Product. A
+consuming host may realize the external `F_P` traversal through them under its
+own authority.
 
 ## WHAT and HOW
 
@@ -33,9 +38,11 @@ The constitutional WHAT owns:
 
 - the closed identity, semantic-atom, typed-edge, and passive-constraint algebra;
 - the `F_P` consumer and workspace-input boundary;
+- the exact `F_D/F_P/F_H` allocation and external traversal contract;
 - semantic identity, authority, bounded-context, dependency, composition,
   overlay, projection, and source-reentry laws;
-- content-first Product identity; and
+- content-first Product identity;
+- external `F_H` semantic-selection evidence; and
 - reproducible compression and probabilistic-usefulness evidence boundaries.
 
 Independent build tenants own direct HOW realizations:
@@ -59,6 +66,11 @@ commit `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`. Its
 proposed and awaits exact digest-bound acceptance. The JSON Schema tenant has
 not selected a dialect. Neither tenant has a constructed or released program.
 
+The project [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md) is
+also an exact proposal pending an external `F_H` acceptance record. The overlay
+already carries its complete proposed admitting-authority set, but structural
+Product Definition validity does not convert that proposal into acceptance.
+
 ## Authority
 
 Read the project surfaces in this order:
@@ -81,8 +93,10 @@ stdo verify v2.4.3-rc.3
 stdo status --definition stdo_representation.json --verify
 stdo bootstrap --definition stdo_representation.json --dry-run
 python3 scripts/check_constitution.py
+python3 -m unittest discover -s scripts -p 'test_*.py' -v
 ```
 
 These checks prove the selected installation, routing, source-project metadata,
-identity inputs, and explicit `F_P`/`F_D` structural boundary. They do not claim
-deterministic semantic assessment or GTL profile acceptance.
+identity inputs, and declared `F_D/F_P/F_H` structural boundaries. They do not
+prove semantic compression adequacy, human acceptance, or GTL profile
+acceptance.

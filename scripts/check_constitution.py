@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Check decidable STDO Representation source-project invariants.
 
-This checker validates structure, metadata, identity inputs, and the explicit
-F_P/F_D boundary. It does not assess semantic adequacy or an LLM response.
+The checker proves only the structural and declared-boundary conditions named in
+its output. It does not assess semantic compression adequacy, accept a reference
+frame or representation profile, or judge an LLM response.
 """
 
 from __future__ import annotations
@@ -10,7 +11,9 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
+from typing import Any, NoReturn
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,44 +55,152 @@ LANE_STATUS = {
     "active": "active",
     "completed": "completed",
 }
+EXPECTED_REQUIREMENTS = {
+    "REQ-P-BASIS-AND-IDENTITY.md",
+    "REQ-P-COMPRESSION-VERIFICATION.md",
+    "REQ-P-FP-CONSUMPTION.md",
+    "REQ-P-REPRESENTATION-ALGEBRA.md",
+    "REQ-P-SELECTION-AND-ACCEPTANCE.md",
+}
+TRAVERSAL_IDENTITIES = {
+    "F_D": "urn:stdo:concept:graph-native-odd:f-d",
+    "F_P": "urn:stdo:concept:graph-native-odd:f-p",
+    "F_H": "urn:stdo:concept:graph-native-odd:f-h",
+}
+FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:2"
+GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.3.0"
+FRAME_AUTHORITIES = {
+    "./specification/GOALS.md",
+    "./specification/PRODUCT.md#product-authority",
+    "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+    "./specification/requirements/REQ-P-COMPRESSION-VERIFICATION.md",
+    "./specification/requirements/REQ-P-FP-CONSUMPTION.md",
+    "./specification/requirements/REQ-P-REPRESENTATION-ALGEBRA.md",
+    "./specification/requirements/REQ-P-SELECTION-AND-ACCEPTANCE.md",
+}
+GTL_CARRIER_COORDINATE = {
+    "authority_inventory_count": 33,
+    "authority_root": "specification/requirements/gtl/",
+    "authority_tree_sha1": "21a44b1941a1055d6abd973937e65b83e359de1b",
+    "commit_sha1": "8d7f965a3fae7d1acea6a9db298798480fd4cc2f",
+    "repository": "https://github.com/foolishimp/abiogenesis.git",
+}
+
+
+class CheckFailure(RuntimeError):
+    """One explicit source-project invariant failed."""
+
+
+def fail(message: str) -> NoReturn:
+    raise CheckFailure(message)
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        fail(message)
 
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def metadata(text: str) -> dict[str, str]:
+def canonical_ascii_coordinate_bytes(value: object) -> bytes:
+    """Serialize the closed ASCII GTL basis coordinate in its RFC 8785 form.
+
+    This helper is intentionally not advertised as a general JCS implementation.
+    The governed coordinate contains only ASCII object names/strings and one
+    non-negative integer, for which this serialization is the exact JCS result.
+    """
+
+    return json.dumps(
+        value,
+        ensure_ascii=False,
+        allow_nan=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode("utf-8")
+
+
+def reject_duplicate_object_names(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            fail(f"duplicate JSON object name: {key}")
+        result[key] = value
+    return result
+
+
+def load_json_unique(path: Path) -> Any:
+    try:
+        return json.loads(
+            path.read_text(encoding="utf-8"),
+            object_pairs_hook=reject_duplicate_object_names,
+        )
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        fail(f"cannot read unique-name JSON {path}: {exc}")
+
+
+def parse_ticket_metadata(text: str, source: str) -> dict[str, str]:
+    """Parse only the contiguous metadata header immediately below the H1."""
+
+    lines = text.splitlines()
+    require(bool(lines) and lines[0].startswith("# "), f"missing ticket H1: {source}")
+    index = 1
+    while index < len(lines) and not lines[index].strip():
+        index += 1
+
     values: dict[str, str] = {}
-    for line in text.splitlines():
-        if ": " not in line:
-            continue
-        key, value = line.split(": ", 1)
-        if re.fullmatch(r"[a-z_]+", key):
-            values[key] = value
+    metadata_pattern = re.compile(r"([a-z][a-z0-9_]*): (.+)")
+    while index < len(lines) and lines[index].strip():
+        match = metadata_pattern.fullmatch(lines[index])
+        require(
+            match is not None, f"invalid ticket metadata line {index + 1}: {source}"
+        )
+        key, value = match.groups()
+        require(key not in values, f"duplicate ticket metadata key {key}: {source}")
+        values[key] = value
+        index += 1
+
+    require(bool(values), f"missing ticket metadata header: {source}")
     return values
 
 
-def active_requirement_members() -> list[Path]:
+def one_metadata_value(text: str, key: str, source: Path) -> str:
+    matches = re.findall(rf"^{re.escape(key)}: (.+)$", text, re.MULTILINE)
+    require(len(matches) == 1, f"expected one {key} metadata value: {source}")
+    return matches[0]
+
+
+def active_requirement_members(spec_root: Path = SPEC) -> list[Path]:
     members: list[Path] = []
     seen_ids: dict[str, Path] = {}
-    for path in sorted((SPEC / "requirements").glob("REQ-P-*.md")):
+    requirement_paths = sorted((spec_root / "requirements").glob("REQ-P-*.md"))
+    require(
+        {path.name for path in requirement_paths} == EXPECTED_REQUIREMENTS,
+        "active requirement file inventory differs from the closed expected set",
+    )
+
+    for path in requirement_paths:
         text = path.read_text(encoding="utf-8")
-        status_match = re.search(r"^Status: (.+)$", text, re.MULTILINE)
-        category_match = re.search(r"^Category: (.+)$", text, re.MULTILINE)
-        assert status_match, f"missing requirement Status: {path}"
-        assert category_match, f"missing requirement Category: {path}"
-        status = status_match.group(1)
-        category = category_match.group(1)
-        assert status in REQUIREMENT_STATUSES, (path, status)
-        assert category in REQUIREMENT_CATEGORIES, (path, category)
+        status = one_metadata_value(text, "Status", path)
+        category = one_metadata_value(text, "Category", path)
+        require(
+            status in REQUIREMENT_STATUSES,
+            f"invalid requirement status {status}: {path}",
+        )
+        require(
+            category in REQUIREMENT_CATEGORIES,
+            f"invalid requirement category {category}: {path}",
+        )
 
         ids = re.findall(r"\*\*(REQ-P-[A-Z]+-\d{3})\*\*", text)
-        assert ids, f"no requirement identities: {path}"
+        require(bool(ids), f"no requirement identities: {path}")
+        require(len(ids) == len(set(ids)), f"duplicate requirement identity in {path}")
         for requirement_id in ids:
-            assert requirement_id not in seen_ids, (
-                requirement_id,
-                path,
-                seen_ids[requirement_id],
+            require(
+                requirement_id not in seen_ids,
+                f"duplicate requirement identity {requirement_id}: {path} and "
+                f"{seen_ids.get(requirement_id)}",
             )
             seen_ids[requirement_id] = path
         if status == "Active":
@@ -97,13 +208,18 @@ def active_requirement_members() -> list[Path]:
     return members
 
 
-def what_member_set_identity(requirements: list[Path]) -> tuple[str, list[str]]:
-    members = [SPEC / "INTENT.md", SPEC / "PRODUCT.md", *requirements]
-    ordered = members[:2] + sorted(members[2:], key=lambda p: p.relative_to(SPEC).as_posix())
+def what_member_set_identity(
+    requirements: list[Path], spec_root: Path = SPEC
+) -> tuple[str, list[str]]:
+    members = [spec_root / "INTENT.md", spec_root / "PRODUCT.md", *requirements]
+    ordered = members[:2] + sorted(
+        members[2:], key=lambda path: path.relative_to(spec_root).as_posix()
+    )
     identity_input = bytearray()
     paths: list[str] = []
     for path in ordered:
-        relative = path.relative_to(SPEC).as_posix()
+        require(path.is_file(), f"missing WHAT member: {path}")
+        relative = path.relative_to(spec_root).as_posix()
         paths.append(relative)
         digest = sha256_bytes(path.read_bytes())
         identity_input.extend(relative.encode("utf-8"))
@@ -113,88 +229,210 @@ def what_member_set_identity(requirements: list[Path]) -> tuple[str, list[str]]:
     return sha256_bytes(bytes(identity_input)), paths
 
 
-def check_tickets() -> int:
+def validate_ticket_metadata(values: dict[str, str], path: Path) -> None:
+    missing = TICKET_FIELDS - values.keys()
+    require(not missing, f"missing ticket metadata {sorted(missing)}: {path}")
+    require(values["type"] in TICKET_TYPES, f"invalid ticket type: {path}")
+    require(
+        values["ticket_category"] in TICKET_CATEGORIES,
+        f"invalid ticket category: {path}",
+    )
+    require(
+        values["change_class"] in CHANGE_CLASSES,
+        f"invalid ticket change class: {path}",
+    )
+    lane = path.parent.name
+    require(lane in LANE_STATUS, f"invalid ticket lane {lane}: {path}")
+    require(
+        values["status"] == LANE_STATUS[lane],
+        f"ticket status/lane mismatch: {path}",
+    )
+
+
+def check_tickets(root: Path = ROOT) -> tuple[int, dict[str, dict[str, str]]]:
     count = 0
-    ticket_root = ROOT / ".ai-workspace" / "tickets"
+    records: dict[str, dict[str, str]] = {}
+    ticket_root = root / ".ai-workspace" / "tickets"
     for path in sorted(ticket_root.glob("*/*.md")):
         if path.name == "README.md":
             continue
-        values = metadata(path.read_text(encoding="utf-8"))
-        missing = TICKET_FIELDS - values.keys()
-        assert not missing, (path, sorted(missing))
-        assert values["type"] in TICKET_TYPES, (path, values["type"])
-        assert values["ticket_category"] in TICKET_CATEGORIES, (
-            path,
-            values["ticket_category"],
-        )
-        assert values["change_class"] in CHANGE_CLASSES, (
-            path,
-            values["change_class"],
-        )
-        lane = path.parent.name
-        assert lane in LANE_STATUS, (path, lane)
-        assert values["status"] == LANE_STATUS[lane], (
-            path,
-            values["status"],
-            lane,
-        )
+        values = parse_ticket_metadata(path.read_text(encoding="utf-8"), str(path))
+        validate_ticket_metadata(values, path)
+        require(values["id"] not in records, f"duplicate ticket id {values['id']}")
+        records[values["id"]] = values
         count += 1
-    return count
+    return count, records
+
+
+def require_text(text: str, needle: str, source: Path) -> None:
+    require(needle in text, f"missing required declaration {needle!r}: {source}")
+
+
+def check_definition(root: Path = ROOT) -> dict[str, Any]:
+    definition_path = root / "stdo_representation.json"
+    definition = load_json_unique(definition_path)
+    require(isinstance(definition, dict), "Product Definition root is not an object")
+
+    frame_bases = definition.get("reference_frame_bases")
+    require(
+        isinstance(frame_bases, list) and len(frame_bases) == 1,
+        "expected one frame basis",
+    )
+    frame_basis = frame_bases[0]
+    require(isinstance(frame_basis, dict), "frame basis entry is not an object")
+    require(
+        frame_basis.get("uri")
+        == "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+        "unexpected Project Reference-Frame Basis URI",
+    )
+    frame_authorities = frame_basis.get("authority")
+    require(
+        isinstance(frame_authorities, list), "frame basis authority is not an array"
+    )
+    require(
+        len(frame_authorities) == len(FRAME_AUTHORITIES)
+        and set(frame_authorities) == FRAME_AUTHORITIES,
+        "Project Reference-Frame Basis authority set is incomplete or unexpected",
+    )
+
+    local_constitution = definition.get("local_constitution")
+    require(isinstance(local_constitution, dict), "local constitution is not an object")
+    disambiguations = local_constitution.get("disambiguations")
+    require(isinstance(disambiguations, list), "missing local disambiguations")
+    require(len(disambiguations) == 3, "expected exactly three function resolutions")
+    resolution: dict[str, str] = {}
+    for item in disambiguations:
+        require(isinstance(item, dict), "function resolution is not an object")
+        term = item.get("term")
+        target = item.get("resolves_to")
+        require(
+            isinstance(term, str) and isinstance(target, str),
+            "invalid function resolution",
+        )
+        require(term not in resolution, f"duplicate function resolution for {term}")
+        resolution[term] = target
+    require(resolution == TRAVERSAL_IDENTITIES, "F_D/F_P/F_H resolution is not exact")
+    return definition
 
 
 def main() -> None:
-    definition = json.loads((ROOT / "stdo_representation.json").read_text(encoding="utf-8"))
-    frame_basis = definition["reference_frame_bases"]
-    assert len(frame_basis) == 1
-    assert frame_basis[0]["uri"] == (
-        "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis"
-    )
-
+    definition = check_definition()
     required_files = [
         SPEC / "INTENT.md",
         SPEC / "PRODUCT.md",
         SPEC / "REFERENCE_FRAME_BASIS.md",
-        SPEC / "requirements" / "REQ-P-BASIS-AND-IDENTITY.md",
-        SPEC / "requirements" / "REQ-P-REPRESENTATION-ALGEBRA.md",
-        SPEC / "requirements" / "REQ-P-FP-CONSUMPTION.md",
-        SPEC / "requirements" / "REQ-P-COMPRESSION-VERIFICATION.md",
+        *(SPEC / "requirements" / name for name in sorted(EXPECTED_REQUIREMENTS)),
         ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md",
+        ROOT / "scripts" / "test_check_constitution.py",
     ]
     for path in required_files:
-        assert path.is_file(), f"missing required file: {path}"
+        require(path.is_file(), f"missing required file: {path}")
 
-    assert not (
-        SPEC / "requirements" / "REQ-P-PROJECTION-AND-CONFORMANCE.md"
-    ).exists(), "retired deterministic-assessment requirement remains live"
-
-    product = (SPEC / "PRODUCT.md").read_text(encoding="utf-8")
-    intent = (SPEC / "INTENT.md").read_text(encoding="utf-8")
-    algebra = (
-        SPEC / "requirements" / "REQ-P-REPRESENTATION-ALGEBRA.md"
-    ).read_text(encoding="utf-8")
-    assert "F_P(P_B, W, I, F, K) -> J" in product
-    assert "probabilistic LLM (`F_P`) consumption" in intent
-    assert "P_B = (B, I_B, V_B, E_B, C_B)" in algebra
-    assert "Assessment Disposition" not in product
-    assert "REQ-P-CONF" not in "\n".join(
-        path.read_text(encoding="utf-8") for path in required_files
+    retired = SPEC / "requirements" / "REQ-P-PROJECTION-AND-CONFORMANCE.md"
+    require(
+        not retired.exists(),
+        "retired deterministic-assessment requirement remains live",
     )
+
+    product_path = SPEC / "PRODUCT.md"
+    intent_path = SPEC / "INTENT.md"
+    algebra_path = SPEC / "requirements" / "REQ-P-REPRESENTATION-ALGEBRA.md"
+    fp_path = SPEC / "requirements" / "REQ-P-FP-CONSUMPTION.md"
+    frame_path = SPEC / "REFERENCE_FRAME_BASIS.md"
+    profile_path = (
+        ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md"
+    )
+
+    product = product_path.read_text(encoding="utf-8")
+    intent = intent_path.read_text(encoding="utf-8")
+    algebra = algebra_path.read_text(encoding="utf-8")
+    fp_contract = fp_path.read_text(encoding="utf-8")
+    frame_basis = frame_path.read_text(encoding="utf-8")
+    profile = profile_path.read_text(encoding="utf-8")
+
+    require_text(product, "F_P(P_B, W, I, F, K) -> J", product_path)
+    require_text(intent, "Outcome-Driven Development", intent_path)
+    require_text(algebra, "P_B = (B, I_B, V_B, E_B, C_B)", algebra_path)
+    require_text(algebra, "## Reference-kind law", algebra_path)
+    require_text(algebra, "Every record contains exactly", algebra_path)
+    require_text(frame_basis, "Status: acceptance-controlled", frame_path)
+    require_text(profile, "STDO.gtl 0.3.0", profile_path)
+    require_text(profile, "Status: acceptance-controlled candidate", profile_path)
+    require_text(profile, "A Rule has no `.id`", profile_path)
+    require_text(profile, "canonical_program_bytes = JCS(Module) + LF", profile_path)
+    require("Assessment Disposition" not in product, "assessment Product term returned")
+    require(
+        "REQ-P-CONF"
+        not in "\n".join(path.read_text(encoding="utf-8") for path in required_files),
+        "retired assessment requirement identity returned",
+    )
+
+    for identity in TRAVERSAL_IDENTITIES.values():
+        require_text(product, identity, product_path)
+        require_text(fp_contract, identity, fp_path)
+
+    carrier_digest = sha256_bytes(
+        canonical_ascii_coordinate_bytes(GTL_CARRIER_COORDINATE)
+    )
+    require_text(profile, carrier_digest, profile_path)
 
     requirements = active_requirement_members()
     what_digest, what_members = what_member_set_identity(requirements)
-    ticket_count = check_tickets()
-    profile = ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md"
+    ticket_count, tickets = check_tickets()
+    require(
+        "T-002" in tickets and "T-003" in tickets,
+        "required T-002/T-003 records missing",
+    )
+    require(tickets["T-002"]["status"] == "active", "T-002 must remain active")
+    require(tickets["T-003"]["status"] == "backlog", "T-003 must remain backlog")
+
+    what_identity = f"sha256:{what_digest}"
+    frame_digest = f"sha256:{sha256_bytes(frame_path.read_bytes())}"
+    profile_digest = f"sha256:{sha256_bytes(profile_path.read_bytes())}"
+    expected_ticket_bindings = {
+        "T-002": {
+            "candidate_what_member_set_identity": what_identity,
+            "candidate_frame_basis_identity": FRAME_BASIS_IDENTITY,
+            "candidate_frame_basis_sha256": frame_digest,
+            "candidate_gtl_profile_identity": GTL_PROFILE_IDENTITY,
+            "candidate_gtl_profile_sha256": profile_digest,
+        },
+        "T-003": {
+            "required_what_member_set_identity": what_identity,
+            "required_frame_basis_identity": FRAME_BASIS_IDENTITY,
+            "required_frame_basis_sha256": frame_digest,
+            "required_profile_identity": GTL_PROFILE_IDENTITY,
+            "required_profile_sha256": profile_digest,
+        },
+    }
+    for ticket_id, expected in expected_ticket_bindings.items():
+        for key, value in expected.items():
+            require(
+                tickets[ticket_id].get(key) == value,
+                f"{ticket_id} {key} does not bind the exact current candidate",
+            )
 
     print(
         json.dumps(
             {
+                "check_scope": (
+                    "source-project structure, metadata, identity inputs, and "
+                    "declared traversal boundaries; semantic adequacy and human "
+                    "acceptance are not evaluated"
+                ),
                 "definition_id": definition["product"]["definition_id"],
                 "requirement_members": len(requirements),
                 "ticket_records": ticket_count,
-                "what_member_set_identity": f"sha256:{what_digest}",
+                "what_member_set_identity": what_identity,
                 "what_members": what_members,
-                "gtl_profile_sha256": f"sha256:{sha256_bytes(profile.read_bytes())}",
-                "valid": True,
+                "gtl_carrier_basis_identity": (
+                    "urn:stdo-representation:carrier-basis:gtl:sha256:" + carrier_digest
+                ),
+                "frame_basis_sha256": frame_digest,
+                "gtl_profile_sha256": profile_digest,
+                "frame_basis_status": "candidate carrier; acceptance not evaluated",
+                "gtl_profile_status": "candidate carrier; acceptance not evaluated",
+                "structural_checks_pass": True,
             },
             indent=2,
         )
@@ -202,4 +440,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except CheckFailure as exc:
+        print(f"constitution check failed: {exc}", file=sys.stderr)
+        raise SystemExit(1) from None

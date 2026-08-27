@@ -7,9 +7,12 @@ every build tenant:
    source, carrier, profile, program-content, and Product identity.
 2. [`REQ-P-REPRESENTATION-ALGEBRA.md`](REQ-P-REPRESENTATION-ALGEBRA.md) defines
    the closed pure graph-and-constraint algebra.
-3. [`REQ-P-FP-CONSUMPTION.md`](REQ-P-FP-CONSUMPTION.md) defines the LLM `F_P`
-   consumer and workspace reasoning boundary.
-4. [`REQ-P-COMPRESSION-VERIFICATION.md`](REQ-P-COMPRESSION-VERIFICATION.md)
+3. [`REQ-P-FP-CONSUMPTION.md`](REQ-P-FP-CONSUMPTION.md) binds the fundamental
+   ODD `F_D`, `F_P`, and `F_H` traversal functions and defines the external LLM
+   reasoning contract.
+4. [`REQ-P-SELECTION-AND-ACCEPTANCE.md`](REQ-P-SELECTION-AND-ACCEPTANCE.md)
+   defines the external `F_H` semantic-selection ledger and acceptance boundary.
+5. [`REQ-P-COMPRESSION-VERIFICATION.md`](REQ-P-COMPRESSION-VERIFICATION.md)
    separates deterministic construction and cost measurement from probabilistic
    usefulness observations.
 
@@ -17,7 +20,10 @@ The graph-and-constraint algebra is normative Product law, not a common
 serialized intermediate representation. Each tenant realizes it directly in
 its carrier. Tenant design may define syntax, layout, canonical bytes, loading,
 and mapping mechanisms; it may not turn the `F_P` consumer into an `F_D`
-semantic assessor or grant its carrier Source STDO authority.
+semantic assessor, replace `F_H` selection with deterministic extraction, or
+grant its carrier Source STDO authority.
 
-HoG traversal, ABG runtime admission, deterministic workspace assessment, and
-runtime truth remain outside this requirements surface.
+HoG execution, ABG runtime admission, deterministic workspace assessment, and
+runtime truth are not embedded in the reasoning-program payload. A consuming
+Product may supply those external traversal realizations under its own
+authority.

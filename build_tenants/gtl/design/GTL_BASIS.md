@@ -10,10 +10,13 @@ Status: selected immutable HOW basis
 - authority root: `specification/requirements/gtl/`
 - authority-tree SHA-1: `21a44b1941a1055d6abd973937e65b83e359de1b`
 - authority inventory: 33 regular files
+- carrier-basis identity:
+  `urn:stdo-representation:carrier-basis:gtl:sha256:b5becdf2801577f00bbc119a6bb23e0015a2007147818557ee2e770bc682b703`
 
-The commit and authority-tree object are the operative version coordinate. A
-development package, tag alias, branch, mutable workspace, or refreshed guide
-is not a substitute.
+The carrier-basis identity is the RFC 8785 JCS/SHA-256 identity of the exact
+repository, commit, authority root, authority tree, and inventory coordinate
+defined by the representation profile. A development package, tag alias,
+branch, mutable workspace, or refreshed guide is not a substitute.
 
 ## Reading routes
 

@@ -8,7 +8,8 @@ measurement comparisons derive from this family
 
 Derives from: `../INTENT.md#desired-outcomes`,
 `../PRODUCT.md#product-identity`,
-`../PRODUCT.md#product-contents`
+`../PRODUCT.md#product-contents`,
+`REQ-P-SELECTION-AND-ACCEPTANCE.md#semantic-selection-ledger`
 
 ## Purpose
 
@@ -21,22 +22,23 @@ keeping probabilistic semantic use distinct from deterministic checks.
 Product WHAT, tenant, carrier basis, and accepted representation profile bound
 by the candidate Product coordinates.
 
-**REQ-P-VERIFY-002**: The source-addressed semantic declaration set selected by
-human Product authority shall be frozen before carrier serialization. Repeating
-canonical serialization and structural construction over that identical set and
-the same exact bases/profile shall reproduce identical program bytes and content
-digest. This is deterministic artifact construction after semantic authorship,
-not deterministic semantic extraction or assessment.
+**REQ-P-VERIFY-002**: The source-addressed semantic declaration set and accepted
+Semantic Selection Ledger shall be frozen before carrier serialization.
+Repeating canonical serialization and structural construction over that
+identical set and the same exact bases/profile shall reproduce identical program
+bytes and content digest. This is `F_D` artifact construction after `F_H`
+semantic authorship, not deterministic semantic extraction or assessment.
 
 **REQ-P-VERIFY-003**: Structural validation shall verify canonical carrier form,
 closed identities, reference kinds, basis coherence, constraint shape, source
-route syntax, and the selected carrier's own language law. It shall not claim
-that one LLM response is the uniquely correct semantic answer.
+route syntax, complete ledger-to-`I_B` equality, and the selected carrier's own
+language law. It shall not claim that the ledger's semantic decisions or one LLM
+response are uniquely correct.
 
 **REQ-P-VERIFY-004**: A release record shall bind the resulting Product identity,
-canonical program digest, construction procedure, structural-validation result,
-and exact measurement records without entering those post-construction records
-back into Product identity.
+canonical program digest, accepted selection-ledger identity, construction
+procedure, structural-validation result, and exact measurement records without
+entering those post-construction records back into Product identity.
 
 **REQ-P-VERIFY-005**: Byte measurements shall bind exact Source STDO and program
 inventories, inclusion rules, encoding, normalization, and counting procedure.

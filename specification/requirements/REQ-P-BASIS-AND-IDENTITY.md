@@ -30,7 +30,10 @@ remain non-semantic unless Source STDO assigns them another role.
 **REQ-P-BASIS-003**: Every representation profile shall bind one exact build
 tenant and immutable carrier basis. A discovery selector may locate a candidate
 basis but shall not enter construction until resolved and explicitly selected as
-an exact coordinate.
+an exact coordinate. The carrier-basis coordinate shall contain at least the
+repository identity, immutable commit, authority root, authority-tree identity,
+and exact authority inventory. Its tenant-owned typed identity shall be the
+SHA-256 of the RFC 8785 canonical coordinate bytes.
 
 **REQ-P-BASIS-004**: Every represented semantic atom, edge, and constraint shall
 carry or resolve to its exact Source STDO semantic address and acquisition route.
@@ -42,7 +45,14 @@ equal meaning. Every material semantic address preserves its term, bounded
 context, owning authority, selected basis, and governed scope coordinates, or an
 exact Source STDO relation that supplies them.
 
-**REQ-P-BASIS-006**: The canonical carrier bytes shall be content-addressed
+**REQ-P-BASIS-006**: Every common identity coordinate and Product coordinate
+shall use RFC 8785 JSON Canonicalization Scheme bytes over an I-JSON-compatible
+value. A raw parser shall reject duplicate object names before canonicalization.
+Strings shall enter JCS as their exact Unicode scalar values without a separate
+normalization pass. The governing coordinate schema decides value types and
+array order before JCS; an implementation default shall not.
+
+**REQ-P-BASIS-007**: The canonical carrier bytes shall be content-addressed
 before Product identity is issued. The Product WHAT member set and coordinate
 object shall use the exact ordering and canonicalization defined by
 `PRODUCT.md#product-identity`:
@@ -55,7 +65,7 @@ The immutable `urn:stdo-representation:product:sha256:<digest>` identity then
 binds exact Source STDO, Product WHAT, tenant, carrier basis, representation
 profile, and `program_content_identity`.
 
-**REQ-P-BASIS-007**: Construction, validation, measurement, qualification,
+**REQ-P-BASIS-008**: Construction, validation, measurement, qualification,
 acceptance, release, and invocation records shall point to the Product identity.
 The Product identity shall not include the identities or digests of records that
 can exist only after that Product has been constructed.
@@ -64,17 +74,23 @@ The canonical program may embed the pre-content Product coordinates. It shall
 not embed its own final content digest or Product identity. The release manifest
 binds those values after canonical program bytes exist.
 
-**REQ-P-BASIS-008**: A workspace input, reasoning intent, selected invocation
+**REQ-P-BASIS-009**: A workspace input, reasoning intent, selected invocation
 frame, model, prompt, response, token price, and usage record are invocation
 coordinates. They shall not alter or substitute for reasoning-program Product
 identity.
 
-**REQ-P-BASIS-009**: No tenant program, carrier type, generated graph identity,
+**REQ-P-BASIS-010**: No tenant program, carrier type, generated graph identity,
 constraint, source map, validation result, or LLM response shall become a second
 Source STDO authority. Source-owned meaning remains reachable through exact
 semantic addresses.
 
-**REQ-P-BASIS-010**: A wrong or unresolved Source STDO basis, carrier basis,
+**REQ-P-BASIS-011**: A wrong or unresolved Source STDO basis, carrier basis,
 profile identity, source address, or canonical content digest shall refuse
 construction or structural admission. It shall not be converted into a
 probabilistic semantic guess.
+
+**REQ-P-BASIS-012**: A tenant profile shall name the exact canonicalization
+algorithm for its complete carrier bytes and every identity coordinate. If the
+carrier adds framing bytes such as a final line feed, the profile shall state
+whether those bytes enter content identity. Competing escaped, normalized,
+ordered, or whitespace variants shall refuse rather than acquire rival identity.
