@@ -424,6 +424,24 @@ Retirement is not defined or claimed by this source-project candidate.
   observations. The resulting acceptance record names the exact human or
   bounded proxy and authority grant.
 
+For this source definition, the project-local human Product-owner grant is:
+
+```text
+actor_identity = "https://github.com/foolishimp"
+authority_identity = "urn:stdo-representation:authority:product-owner"
+grant_identity = "urn:stdo-representation:grant:product-owner:1"
+grant_scope = "Select and accept project-owned frame bases, representation profiles, Source STDO semantic selections, candidate STDO.gtl Products, and tenant-qualified releases, and authorize deterministic construction; excludes changing Source STDO or granting execution, review, or runtime authority."
+```
+
+This clause is the durable declaration located by those authority and grant
+identities. The grant is bound to the named actor and the exact applicable
+project basis cited by each decision record. It does not create ambient
+authority: every selection, construction authorization, Product acceptance, or
+release still requires its own external exact-subject `F_H` record. It cannot
+change, reinterpret, or transfer Source STDO authority and cannot grant an
+Executive, Worker, Reviewer, constructor, or runtime any authority they do not
+already possess.
+
 No carrier construct, generated edge, constraint, validation result, token
 reduction, or LLM response mints Source STDO authority.
 

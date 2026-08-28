@@ -99,9 +99,14 @@ def write_canonical(path: Path, value: Any) -> None:
 
 
 def write_pretty(path: Path, value: Any) -> None:
-    path.write_text(
-        f"{json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True)}\n",
-        encoding="utf-8",
+    path.write_bytes(pretty_bytes(value))
+
+
+def pretty_bytes(value: Any) -> bytes:
+    return (
+        f"{json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True)}\n".encode(
+            "utf-8"
+        )
     )
 
 
@@ -1269,6 +1274,25 @@ def main() -> None:
         "records": records,
     }
     authority = policy["authority_binding"]
+    review_bytes = selection_review(
+        records,
+        ledger,
+        ledger_identity,
+        ledger_sha,
+        profile_sha,
+        frame_sha,
+        publisher_basis,
+    ).encode("utf-8")
+    projection_bytes = pretty_bytes(projection_routes)
+    evidence_refs = sorted(
+        [
+            "projection-route-candidates.json?sha256=" f"{sha256(projection_bytes)}",
+            "publisher/gtl-toolchain-product.json?sha256="
+            f"{sha256(publisher_manifest_bytes)}",
+            f"selection-policy.json?sha256={sha256(POLICY.read_bytes())}",
+            f"selection-review.md?sha256={sha256(review_bytes)}",
+        ]
+    )
     acceptance_request = {
         "kind": "stdo-representation.f-h-acceptance-request",
         "schema_version": 1,
@@ -1277,6 +1301,7 @@ def main() -> None:
         "requested_authority_identity": authority["authority_identity"],
         "requested_grant_identity": authority["grant_identity"],
         "requested_grant_scope": authority["grant_scope"],
+        "required_basis_refs": ledger["author"]["basis_refs"],
         "subjects": [
             {
                 "subject_kind": "reference_frame_basis",
@@ -1297,12 +1322,7 @@ def main() -> None:
                 "path": "semantic-selection-ledger.json",
             },
         ],
-        "evidence_refs": [
-            "projection-route-candidates.json",
-            "publisher/gtl-toolchain-product.json",
-            "selection-policy.json",
-            "selection-review.md",
-        ],
+        "evidence_refs": evidence_refs,
         "effect_of_acceptance": "Authorizes deterministic construction against only these unchanged subjects; it does not accept or release the resulting Product.",
     }
     summary = {
@@ -1343,21 +1363,10 @@ def main() -> None:
         )
         (temporary / "publisher" / "gtl-toolchain-product.tgz").write_bytes(artifact)
         write_pretty(temporary / "build-plan-base.json", plan_base)
-        write_pretty(temporary / "projection-route-candidates.json", projection_routes)
+        (temporary / "projection-route-candidates.json").write_bytes(projection_bytes)
         write_pretty(temporary / "acceptance-request.json", acceptance_request)
         write_pretty(temporary / "candidate-summary.json", summary)
-        (temporary / "selection-review.md").write_text(
-            selection_review(
-                records,
-                ledger,
-                ledger_identity,
-                ledger_sha,
-                profile_sha,
-                frame_sha,
-                publisher_basis,
-            ),
-            encoding="utf-8",
-        )
+        (temporary / "selection-review.md").write_bytes(review_bytes)
         output.parent.mkdir(parents=True, exist_ok=True)
         temporary.rename(output)
     except Exception:

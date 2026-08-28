@@ -11,10 +11,10 @@ change_class: intent_reprice
 re_entry_point: Intent
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T11:13:36+10:00
+updated_at: 2026-08-28T11:21:22+10:00
 source_ticket: T-001
-affected_boundary: Intent, Product, traversal-function allocation, common algebra and identity, Executive context projection, semantic selection, project frame basis, checker, and proposed GTL profile
-candidate_what_member_set_identity: sha256:3035176148fed9a1d6d34a92786b2ab0218a6ee54d728b0cad41d7ed935d1c02
+affected_boundary: Intent, Product, Product-owner grant, traversal-function allocation, common algebra and identity, Executive context projection, semantic selection, project frame basis, checker, and proposed GTL profile
+candidate_what_member_set_identity: sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e
 candidate_frame_basis_identity: urn:stdo-representation:reference-frame-basis:source-project:3
 candidate_frame_basis_sha256: sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0
 candidate_gtl_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0
@@ -102,6 +102,8 @@ survives raw admission, and passes the sole frozen GTL publication validator;
 domain reference, identity, and accepted-record-payload mutations fail closed.
 The Semantic Selection Ledger now binds the complete canonical record payload,
 not only its stable record identities. T-003 remains backlog and no production
-index exists. The exact WHAT, frame-basis, and new profile candidate identities
-and digests are bound in this ticket header. Human acceptance and the exact
-Semantic Selection Ledger remain separate gates.
+index exists. The Product now declares the exact actor, Product-owner authority,
+bounded grant, and exclusions required by external `F_H` records. The exact
+WHAT, frame-basis, and new profile candidate identities and digests are bound in
+this ticket header. Human acceptance and the exact Semantic Selection Ledger
+remain separate gates.

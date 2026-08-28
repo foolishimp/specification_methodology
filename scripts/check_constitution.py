@@ -83,6 +83,15 @@ ROLE_IDENTITIES = {
 }
 FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
 GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0"
+PRODUCT_OWNER_ACTOR = "https://github.com/foolishimp"
+PRODUCT_OWNER_AUTHORITY = "urn:stdo-representation:authority:product-owner"
+PRODUCT_OWNER_GRANT = "urn:stdo-representation:grant:product-owner:1"
+PRODUCT_OWNER_GRANT_SCOPE = (
+    "Select and accept project-owned frame bases, representation profiles, Source "
+    "STDO semantic selections, candidate STDO.gtl Products, and tenant-qualified "
+    "releases, and authorize deterministic construction; excludes changing Source "
+    "STDO or granting execution, review, or runtime authority."
+)
 FRAME_AUTHORITIES = {
     "./specification/GOALS.md",
     "./specification/PRODUCT.md#product-authority",
@@ -404,6 +413,9 @@ def main() -> None:
     profile_path = (
         ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md"
     )
+    selection_policy_path = (
+        ROOT / "build_tenants" / "gtl" / "representation" / "selection-policy.json"
+    )
 
     product = product_path.read_text(encoding="utf-8")
     intent = intent_path.read_text(encoding="utf-8")
@@ -413,6 +425,7 @@ def main() -> None:
     selection_contract = selection_path.read_text(encoding="utf-8")
     frame_basis = frame_path.read_text(encoding="utf-8")
     profile = profile_path.read_text(encoding="utf-8")
+    selection_policy = load_json_unique(selection_policy_path)
 
     require_text(product, "F_P(P_B, W, I, F, K) -> J", product_path)
     require_text(intent, "Outcome-Driven Development", intent_path)
@@ -456,6 +469,23 @@ def main() -> None:
     require_text(product, "STDO Programmatic Semantic Index Product", product_path)
     require_text(product, "not a frozen-GTL `GtlProgram`", product_path)
     require_text(product, "vector database", product_path)
+    for value in (
+        PRODUCT_OWNER_ACTOR,
+        PRODUCT_OWNER_AUTHORITY,
+        PRODUCT_OWNER_GRANT,
+        PRODUCT_OWNER_GRANT_SCOPE,
+    ):
+        require_text(product, value, product_path)
+    require(
+        selection_policy.get("authority_binding")
+        == {
+            "actor_identity": PRODUCT_OWNER_ACTOR,
+            "authority_identity": PRODUCT_OWNER_AUTHORITY,
+            "grant_identity": PRODUCT_OWNER_GRANT,
+            "grant_scope": PRODUCT_OWNER_GRANT_SCOPE,
+        },
+        "semantic-selection policy does not bind the exact Product-owner grant",
+    )
     require_text(profile, "STDO.gtl 0.7.0", profile_path)
     require_text(profile, "representation_records_sha256", profile_path)
     require_text(profile, "Status: acceptance-controlled candidate", profile_path)

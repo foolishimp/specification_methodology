@@ -87,22 +87,107 @@ def run(argv: list[str], *, cwd: Path, capture: bool = False) -> str:
     return completed.stdout if capture else ""
 
 
+def validate_request(request: dict[str, Any]) -> None:
+    require_exact_keys(
+        request,
+        {
+            "kind",
+            "schema_version",
+            "status",
+            "requested_actor_identity",
+            "requested_authority_identity",
+            "requested_grant_identity",
+            "requested_grant_scope",
+            "required_basis_refs",
+            "subjects",
+            "evidence_refs",
+            "effect_of_acceptance",
+        },
+        "acceptance request",
+    )
+    if (
+        request["kind"] != "stdo-representation.f-h-acceptance-request"
+        or request["schema_version"] != 1
+        or request["status"] != "pending"
+    ):
+        raise FinalizationFailure("acceptance request has the wrong identity or state")
+    for key in (
+        "requested_actor_identity",
+        "requested_authority_identity",
+        "requested_grant_identity",
+        "requested_grant_scope",
+        "effect_of_acceptance",
+    ):
+        if not isinstance(request[key], str) or not request[key]:
+            raise FinalizationFailure(f"acceptance request {key} is empty")
+    if (
+        not isinstance(request["required_basis_refs"], list)
+        or not request["required_basis_refs"]
+        or request["required_basis_refs"] != sorted(set(request["required_basis_refs"]))
+        or SOURCE_URI not in request["required_basis_refs"]
+        or not isinstance(request["evidence_refs"], list)
+        or not request["evidence_refs"]
+        or request["evidence_refs"] != sorted(set(request["evidence_refs"]))
+    ):
+        raise FinalizationFailure(
+            "acceptance request bases and evidence are not exact canonical sets"
+        )
+    subjects = request.get("subjects")
+    if not isinstance(subjects, list) or len(subjects) != 3:
+        raise FinalizationFailure(
+            "acceptance request must contain exactly three subjects"
+        )
+    kinds: set[str] = set()
+    for row in subjects:
+        if not isinstance(row, dict):
+            raise FinalizationFailure("acceptance request subject is not an object")
+        require_exact_keys(
+            row,
+            {"subject_kind", "subject_identity", "subject_sha256", "path"},
+            "acceptance request subject",
+        )
+        if any(not isinstance(row[key], str) or not row[key] for key in row):
+            raise FinalizationFailure(
+                "acceptance request subject contains an empty field"
+            )
+        kinds.add(row["subject_kind"])
+    if kinds != {
+        "reference_frame_basis",
+        "representation_profile",
+        "semantic_selection_ledger",
+    }:
+        raise FinalizationFailure("acceptance request subject kinds are incomplete")
+
+
 def accepted_subjects(
     request: dict[str, Any], decision: dict[str, Any]
 ) -> dict[str, dict[str, str]]:
+    rows = decision.get("accepted_subjects")
+    if not isinstance(rows, list) or len(rows) != 3:
+        raise FinalizationFailure(
+            "authorization does not contain exactly three accepted subjects"
+        )
+    for row in rows:
+        if not isinstance(row, dict):
+            raise FinalizationFailure("accepted subject is not an object")
+        require_exact_keys(
+            row,
+            {"subject_kind", "subject_identity", "subject_sha256"},
+            "accepted subject",
+        )
     expected = {
         (row["subject_kind"], row["subject_identity"], row["subject_sha256"])
         for row in request["subjects"]
     }
     observed = {
         (row["subject_kind"], row["subject_identity"], row["subject_sha256"])
-        for row in decision["accepted_subjects"]
+        for row in rows
     }
-    if expected != observed or len(expected) != 3:
+    if expected != observed or len(expected) != 3 or len(observed) != len(rows):
         raise FinalizationFailure(
             "authorization does not accept exactly the three requested subjects"
         )
-    return {row["subject_kind"]: row for row in decision["accepted_subjects"]}
+    return {row["subject_kind"]: row for row in rows}
 
 
 def acceptance_record(
@@ -260,6 +345,7 @@ def main() -> None:
     if output.exists():
         raise FinalizationFailure(f"output already exists: {output}")
     request, _ = load_unique(candidate / "acceptance-request.json")
+    validate_request(request)
     decision, decision_bytes = load_unique(args.authorization.resolve())
     require_exact_keys(
         decision,
@@ -299,16 +385,11 @@ def main() -> None:
             "authorization does not accept the exact requested authority binding"
         )
     if (
-        not isinstance(decision["basis_refs"], list)
-        or not decision["basis_refs"]
-        or decision["basis_refs"] != sorted(set(decision["basis_refs"]))
-        or SOURCE_URI not in decision["basis_refs"]
-        or not isinstance(decision["evidence_refs"], list)
-        or not decision["evidence_refs"]
-        or decision["evidence_refs"] != sorted(set(decision["evidence_refs"]))
+        decision["basis_refs"] != request["required_basis_refs"]
+        or decision["evidence_refs"] != request["evidence_refs"]
     ):
         raise FinalizationFailure(
-            "authorization bases and evidence must be non-empty canonical sets"
+            "authorization bases and evidence do not equal the exact request"
         )
     subjects = accepted_subjects(request, decision)
     base, _ = load_unique(candidate / "build-plan-base.json")

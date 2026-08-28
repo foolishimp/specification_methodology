@@ -11,11 +11,11 @@ change_class: design_reframe
 re_entry_point: Design
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T11:13:36+10:00
+updated_at: 2026-08-28T11:21:22+10:00
 source_ticket: T-002
 build_tenant: urn:stdo-representation:build-tenant:gtl
 dependencies: T-002 closure and digest-bound acceptance of the GTL representation profile
-required_what_member_set_identity: sha256:3035176148fed9a1d6d34a92786b2ab0218a6ee54d728b0cad41d7ed935d1c02
+required_what_member_set_identity: sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e
 required_frame_basis_identity: urn:stdo-representation:reference-frame-basis:source-project:3
 required_frame_basis_sha256: sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0
 required_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0
