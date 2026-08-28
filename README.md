@@ -10,6 +10,8 @@ The primary goal is lower context, token, and consumption cost without losing
 the identities, authorities, bounded contexts, relations, constraints, and
 source routes needed for governed reasoning.
 
+New to the project? Start with the [Quickstart](QUICKSTART.md).
+
 ## Consumer model
 
 ```text

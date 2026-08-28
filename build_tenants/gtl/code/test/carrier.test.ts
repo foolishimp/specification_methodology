@@ -24,7 +24,7 @@ import type {
 const SOURCE_URI = "stdo://releases/v2.4.3-rc.3/";
 const MEMBER_DIGEST = "2".repeat(64);
 const MEMBER_SET = `sha256:${"3".repeat(64)}`;
-const PROFILE_ID = "urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0";
+const PROFILE_ID = "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0";
 const FRAME_ID = "urn:stdo-representation:reference-frame-basis:source-project:3";
 const FRAME_AUTHORITIES = [
   "./specification/GOALS.md",
@@ -211,6 +211,11 @@ function fixture(): { plan: GtlBuildPlan; evidence: AcceptedBuildEvidence } {
     build_tenant_identity: "urn:stdo-representation:build-tenant:gtl",
     representation_profile_identity: PROFILE_ID,
     representation_profile_sha256: profileSha,
+    representation_records_sha256: sha256Canonical(
+      [...records].sort((left, right) =>
+        compareUnicodeCodeUnits(left.id, right.id),
+      ) as unknown as JsonValue,
+    ),
     evaluated_members: evaluatedMembers,
     selections,
     generated_source_keys: [],
@@ -343,6 +348,18 @@ test("domain admission rejects a dangling semantic reference", () => {
   assert(edge !== undefined && edge.kind === "edge");
   (edge as { target_ref: string }).target_ref = `urn:stdo-representation:atom:sha256:${"f".repeat(64)}`;
   assert.throws(() => constructStdoGtl(plan, evidence), /dangling or outside I_B/u);
+});
+
+test("accepted selection rejects payload drift under unchanged record identities", () => {
+  const { plan, evidence } = fixture();
+  const constraint = plan.records.find((record) => record.kind === "constraint");
+  assert(constraint !== undefined && constraint.kind === "constraint");
+  (constraint as { statement: string }).statement =
+    "Mutated statement with the same semantic address and record identity.";
+  assert.throws(
+    () => constructStdoGtl(plan, evidence),
+    /representation_records_sha256/u,
+  );
 });
 
 test("domain admission rejects an identity with the wrong preimage", () => {

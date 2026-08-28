@@ -82,7 +82,7 @@ ROLE_IDENTITIES = {
     ),
 }
 FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
-GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0"
+GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0"
 FRAME_AUTHORITIES = {
     "./specification/GOALS.md",
     "./specification/PRODUCT.md#product-authority",
@@ -442,6 +442,11 @@ def main() -> None:
         context_path,
     )
     require_text(selection_contract, "GeneratedSourceKeyBinding = {", selection_path)
+    require_text(
+        selection_contract,
+        "representation_records_sha256: Sha256",
+        selection_path,
+    )
     require_text(product, "admitting_authority_refs", product_path)
     require_text(product, "ReleaseRecord = {", product_path)
     require_text(frame_basis, "Status: acceptance-controlled", frame_path)
@@ -451,7 +456,8 @@ def main() -> None:
     require_text(product, "STDO Programmatic Semantic Index Product", product_path)
     require_text(product, "not a frozen-GTL `GtlProgram`", product_path)
     require_text(product, "vector database", product_path)
-    require_text(profile, "STDO.gtl 0.6.0", profile_path)
+    require_text(profile, "STDO.gtl 0.7.0", profile_path)
+    require_text(profile, "representation_records_sha256", profile_path)
     require_text(profile, "Status: acceptance-controlled candidate", profile_path)
     require_text(profile, "No GTL Node is claimed", profile_path)
     require_text(

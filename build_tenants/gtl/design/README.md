@@ -1,6 +1,6 @@
 # GTL Tenant Design
 
-Status: `STDO.gtl 0.6.0` profile proposed; its exact frozen-carrier path is
+Status: `STDO.gtl 0.7.0` profile proposed; its exact frozen-carrier path is
 implemented and verified, but no design is accepted for production
 construction.
 
@@ -9,9 +9,11 @@ The proposed direct mapping is
 [`GTL_REPRESENTATION_PROFILE.md`](GTL_REPRESENTATION_PROFILE.md). Human
 acceptance must bind that file's exact bytes and SHA-256 before construction.
 
-Version `0.6.0` replaces the non-admissible legacy `Module { graphs[] }` sketch
-with the exact frozen TypeScript `ModulePublication` carrier and a compact
-programmatic semantic-index Rule configuration.
+The current candidate uses the exact frozen TypeScript `ModulePublication`
+carrier and a compact programmatic semantic-index Rule configuration rather
+than the non-admissible legacy `Module { graphs[] }` sketch. Version `0.7.0`
+also binds the complete canonical represented-record payload into semantic
+selection.
 
 The profile maps the common closed identity universe, semantic atoms, typed
 edges, and passive constraints directly into frozen GTL. It defines the

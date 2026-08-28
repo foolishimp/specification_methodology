@@ -1,6 +1,6 @@
 # GTL Tenant Code
 
-This TypeScript package implements the proposed `STDO.gtl 0.6.0` programmatic
+This TypeScript package implements the proposed `STDO.gtl 0.7.0` programmatic
 semantic-index carrier. It:
 
 - validates the closed common atom, edge, and constraint identities;

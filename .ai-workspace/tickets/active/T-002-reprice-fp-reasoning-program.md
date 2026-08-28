@@ -11,14 +11,14 @@ change_class: intent_reprice
 re_entry_point: Intent
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T04:27:09+10:00
+updated_at: 2026-08-28T11:13:36+10:00
 source_ticket: T-001
 affected_boundary: Intent, Product, traversal-function allocation, common algebra and identity, Executive context projection, semantic selection, project frame basis, checker, and proposed GTL profile
-candidate_what_member_set_identity: sha256:bfa93dfa237bbf8bf2201cc3111ec3d120cb94aad3fe714b8c4657de471f6baf
+candidate_what_member_set_identity: sha256:3035176148fed9a1d6d34a92786b2ab0218a6ee54d728b0cad41d7ed935d1c02
 candidate_frame_basis_identity: urn:stdo-representation:reference-frame-basis:source-project:3
 candidate_frame_basis_sha256: sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0
-candidate_gtl_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0
-candidate_gtl_profile_sha256: sha256:260b2dbaea31d6f56cb3be29b6a43c25af3142929df3610fcb9b5c723e2cd090
+candidate_gtl_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0
+candidate_gtl_profile_sha256: sha256:27b496722bfea537ed9e3a8c412c3ca162f83e723ecd9b783e1697d8ffae5f47
 
 ## Outcome
 
@@ -96,10 +96,12 @@ through which an Executive sets frames for itself, Workers, and Reviewers while
 The traversal-function repair, closed algebra, generated-source-key binding,
 selection-ledger law, Executive context-projection contract, proposed project
 frame basis, fail-closed structural checker, and negative tests are authored.
-`STDO.gtl 0.6.0` now uses the exact frozen `ModulePublication` carrier rather
+`STDO.gtl 0.7.0` now uses the exact frozen `ModulePublication` carrier rather
 than the rejected legacy Module sketch. Its passive typed declaration compiles,
 survives raw admission, and passes the sole frozen GTL publication validator;
-domain reference and identity mutations fail closed. T-003 remains backlog and
-no production index exists. The exact WHAT, frame-basis, and new profile
-candidate identities and digests are bound in this ticket header. Human
-acceptance and the exact Semantic Selection Ledger remain separate gates.
+domain reference, identity, and accepted-record-payload mutations fail closed.
+The Semantic Selection Ledger now binds the complete canonical record payload,
+not only its stable record identities. T-003 remains backlog and no production
+index exists. The exact WHAT, frame-basis, and new profile candidate identities
+and digests are bound in this ticket header. Human acceptance and the exact
+Semantic Selection Ledger remain separate gates.

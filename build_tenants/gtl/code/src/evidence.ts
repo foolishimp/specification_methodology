@@ -132,7 +132,7 @@ function validateLedger(
   const ledger = evidence.semantic_selection_ledger;
   requireExact(
     ledger,
-    ["kind", "schema_version", "source_stdo_uri", "source_stdo_manifest_sha256", "source_member_set_sha256", "what_member_set_identity", "build_tenant_identity", "representation_profile_identity", "representation_profile_sha256", "evaluated_members", "selections", "generated_source_keys", "residual_uncertainty", "author", "supersedes"],
+    ["kind", "schema_version", "source_stdo_uri", "source_stdo_manifest_sha256", "source_member_set_sha256", "what_member_set_identity", "build_tenant_identity", "representation_profile_identity", "representation_profile_sha256", "representation_records_sha256", "evaluated_members", "selections", "generated_source_keys", "residual_uncertainty", "author", "supersedes"],
     "semantic_selection_ledger",
   );
   exactCanonicalBytes(ledger, evidence.semantic_selection_ledger_bytes, "semantic_selection_ledger");
@@ -152,6 +152,18 @@ function validateLedger(
     ledger.representation_profile_sha256 !== plan.representation_profile_sha256
   ) {
     fail("semantic_selection_ledger", "selects a different Product basis");
+  }
+  const canonicalRecords = [...plan.records].sort((left, right) =>
+    compareUnicodeCodeUnits(left.id, right.id),
+  );
+  if (
+    ledger.representation_records_sha256 !==
+    sha256Canonical(canonicalRecords as unknown as JsonValue)
+  ) {
+    fail(
+      "semantic_selection_ledger.representation_records_sha256",
+      "does not bind the complete ID-sorted canonical build-plan record array",
+    );
   }
   if (!Array.isArray(ledger.evaluated_members) || ledger.evaluated_members.length !== members.length) fail("semantic_selection_ledger.evaluated_members", "does not equal the exact manifest population");
   if (!Array.isArray(ledger.selections) || ledger.selections.length === 0) fail("semantic_selection_ledger.selections", "must be non-empty");

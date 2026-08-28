@@ -1,7 +1,7 @@
 import type { JsonValue } from "./canonical.js";
 
 export const PROFILE_IDENTITY =
-  "urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0";
+  "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0";
 export const BUILD_TENANT_IDENTITY =
   "urn:stdo-representation:build-tenant:gtl";
 export const CARRIER_BASIS_IDENTITY =

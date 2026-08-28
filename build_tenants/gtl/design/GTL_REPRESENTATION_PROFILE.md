@@ -1,10 +1,10 @@
-# GTL Representation Profile — STDO.gtl 0.6.0
+# GTL Representation Profile — STDO.gtl 0.7.0
 
 Status: acceptance-controlled candidate; these bytes grant no construction or
 acceptance authority
 
 Profile identity:
-`urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0`
+`urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0`
 
 Build-tenant identity: `urn:stdo-representation:build-tenant:gtl`
 
@@ -335,7 +335,8 @@ Production construction consumes:
 3. this profile's accepted identity and SHA-256;
 4. an accepted project Reference-Frame Basis;
 5. an exact accepted Semantic Selection Ledger whose retained-reference union
-   equals `I_B`;
+   equals `I_B` and whose `representation_records_sha256` reproduces from the
+   complete ID-sorted canonical build-plan record array;
 6. the GTL Tenant Toolchain Product's verified publisher-artifact basis; and
 7. tenant-owned build-plan records whose identities, locators, and reference
    kinds reproduce under the common law.
@@ -377,8 +378,10 @@ relations; it cannot invent the actor, grant, or semantic decision.
 
 The Semantic Selection Ledger's evaluated population equals all 47 installed
 standards members in manifest order. Every retained atom, edge, and constraint
-has exactly one retained selection owner. Omission and uncertainty remain
-external qualification evidence and are not paid as routine LLM-context cost.
+has exactly one retained selection owner, and its record-set digest binds every
+field of those represented records rather than only their content-addressed
+semantic identities. Omission and uncertainty remain external qualification
+evidence and are not paid as routine LLM-context cost.
 
 ## ODD F_P consumption
 

@@ -38,6 +38,7 @@ SelectionLedger = {
   build_tenant_identity: string,
   representation_profile_identity: string,
   representation_profile_sha256: Sha256,
+  representation_records_sha256: Sha256,
   evaluated_members: EvaluatedMember[],
   selections: Selection[],
   generated_source_keys: GeneratedSourceKeyBinding[],
@@ -104,6 +105,13 @@ source locators, or representation refs refuse admission. A separate
 that unchanged ledger identity and digest; acceptance never enters the ledger
 bytes it accepts.
 
+`representation_records_sha256` equals `sha256(JCS(R_B))`, where `R_B` is the
+complete `ProgramRecord[]` proposed for construction, sorted by record `id` in
+ascending unsigned UTF-16 code-unit order before canonicalization. This digest
+binds every record field and value, including edge endpoints, constraint text,
+applicability, declared latitude, and source locators. Record identities alone
+do not bind those payloads and are insufficient semantic-selection evidence.
+
 The complete `evaluated_members` array equals the selected installed manifest's
 47-member `standards.members` inventory in that exact order. This establishes
 the population presented to human semantic authorship. It does not claim a
@@ -129,7 +137,9 @@ named by exactly one `retained` selection row, and the union of retained
 `representation_refs` shall equal `I_B`. An omitted selection has no
 representation ref. An uncertain selection cannot be silently omitted or
 serialized as settled law. A retained row has at least one representation ref;
-an omitted row has none.
+an omitted row has none. The ledger's `representation_records_sha256` shall
+reproduce from the complete ID-sorted build-plan record array before any record
+is serialized.
 
 **REQ-P-SELECT-003**: Every generated `SemanticAddress.source_key` shall have
 exactly one `generated_source_keys` binding, and every binding shall be used by
@@ -176,12 +186,15 @@ pay its token cost by default.
 
 **REQ-P-SELECT-009**: A change to Source STDO, WHAT, tenant, representation
 profile, evaluated population, selection rows, residuals, author or acceptance
-binding creates a new ledger candidate. An earlier acceptance does not flow to
-changed bytes.
+binding, or any represented record payload creates a new ledger candidate. An
+earlier acceptance does not flow to changed bytes even when every record
+identity remains unchanged.
 
 **REQ-P-SELECT-010**: Empty, omitted, auto-generated, self-accepted, or
 conversation-only selection evidence refuses construction and publication. A
-temporary transcript may inform authorship but cannot be the durable ledger.
+temporary transcript may inform authorship but cannot be the durable ledger. A
+missing, stale, or non-reproducing `representation_records_sha256` also refuses
+construction and publication.
 
 **REQ-P-SELECT-011**: Product acceptance shall cite the exact accepted Semantic
 Selection Ledger identity alongside structural receipts, measurements, and

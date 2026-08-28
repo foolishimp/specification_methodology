@@ -2,7 +2,7 @@
 
 Identity: `urn:stdo-representation:build-tenant:gtl`
 
-Status: exact carrier basis selected; `STDO.gtl 0.6.0` profile proposed; the
+Status: exact carrier basis selected; `STDO.gtl 0.7.0` profile proposed; the
 typed/raw carrier path is implemented and verified; profile acceptance and
 production index construction remain pending.
 
