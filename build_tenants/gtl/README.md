@@ -2,9 +2,9 @@
 
 Identity: `urn:stdo-representation:build-tenant:gtl`
 
-Status: exact carrier basis selected; `STDO.gtl 0.7.0` profile proposed; the
-typed/raw carrier path is implemented and verified; profile acceptance and
-production index construction remain pending.
+Status: exact carrier basis selected; `STDO.gtl 0.7.0` profile and semantic
+selection accepted for the exact first construction; canonical candidate
+constructed and reproduced; Product acceptance and release remain pending.
 
 This tenant produces `stdo.gtl`: the canonical frozen-GTL encoding of the STDO
 Programmatic Semantic Index. It contains Source STDO semantic atoms, typed
@@ -23,7 +23,7 @@ continuation. In particular, it is not a frozen-GTL `GtlProgram`.
 The external host owns the `F_P` traversal contract. Semantic relations are not
 GTL GraphVectors merely because they are directed.
 
-See the exact [GTL basis](design/GTL_BASIS.md) and proposed
+See the exact [GTL basis](design/GTL_BASIS.md) and accepted-for-construction
 [`stdo.gtl` profile](design/GTL_REPRESENTATION_PROFILE.md). The
 [`code/`](code/) package is the typed tenant implementation; the replayable
 frozen-carrier probe is `python3 scripts/test_frozen_gtl_tenant.py` from the

@@ -4,14 +4,14 @@ id: T-003
 title: Construct STDO.gtl
 type: feature
 ticket_category: ordinary
-status: backlog
+status: active
 goal: GOAL-002
 change_intent: construct and measure the first frozen-GTL programmatic semantic index of the STDO symbolic axiomatic program and its role-bound context projections after profile acceptance
 change_class: design_reframe
 re_entry_point: Design
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T11:21:22+10:00
+updated_at: 2026-08-28T14:08:23+10:00
 source_ticket: T-002
 build_tenant: urn:stdo-representation:build-tenant:gtl
 dependencies: T-002 closure and digest-bound acceptance of the GTL representation profile
@@ -49,10 +49,20 @@ STDO and frozen GTL after the accepted design gate opens.
 
 ## Admission gate
 
-This ticket remains backlog and non-executable until T-002 closes, the Project
-Reference-Frame Basis is accepted, and human authority accepts the exact profile
-identity and digest cited by this ticket. Ledger authorship and acceptance then
-precede deterministic serialization.
+Satisfied. T-002 is closed, and exact external records accept the Project
+Reference-Frame Basis, GTL profile, and Semantic Selection Ledger before
+serialization.
+
+## Current checkpoint
+
+The canonical parent index is constructed as Product
+`urn:stdo-representation:product:sha256:85b1345ccc5b40bb4c482a90b8572d5cfc75c3a64d566aef41257649e286d9a6`.
+Its 153986-byte `stdo.gtl` content digest is
+`sha256:9c214136067d2873af3ff8db77b7c98903f7dfe700dea82bb166e0213cbab890`.
+A fresh second construction reproduced every retained output byte. Role-bound
+assignment/projection records, exact token and cost measurements, frozen `F_P`
+observations, independent Product review, Product acceptance, and release
+remain open.
 
 ## Acceptance
 

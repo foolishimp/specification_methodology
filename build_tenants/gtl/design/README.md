@@ -1,13 +1,14 @@
 # GTL Tenant Design
 
-Status: `STDO.gtl 0.7.0` profile proposed; its exact frozen-carrier path is
-implemented and verified, but no design is accepted for production
-construction.
+Status: exact `STDO.gtl 0.7.0` profile accepted for the first construction
+basis; frozen-carrier path implemented, verified, and reproduced. A profile
+change creates a new unaccepted candidate.
 
 The exact frozen carrier basis is recorded in [`GTL_BASIS.md`](GTL_BASIS.md).
 The proposed direct mapping is
 [`GTL_REPRESENTATION_PROFILE.md`](GTL_REPRESENTATION_PROFILE.md). Human
-acceptance must bind that file's exact bytes and SHA-256 before construction.
+acceptance binds that file's exact bytes and SHA-256 for the retained first
+construction.
 
 The current candidate uses the exact frozen TypeScript `ModulePublication`
 carrier and a compact programmatic semantic-index Rule configuration rather

@@ -17,9 +17,10 @@ From a clean checkout you can:
   encoding, and projection mechanics; and
 - inspect the proposed Product, reference-frame basis, and GTL profile.
 
-The repository does not yet contain a released `stdo.gtl`. Production
-construction remains closed until the reference-frame basis, GTL profile, and
-Semantic Selection Ledger have exact `F_H` acceptance records.
+The repository contains one constructed but unreleased `stdo.gtl` candidate.
+Its reference-frame basis, GTL profile, and Semantic Selection Ledger have exact
+`F_H` construction-acceptance records. Product acceptance and release remain
+separate and have not occurred.
 
 ## Prerequisites
 
@@ -158,7 +159,7 @@ The TypeScript package exposes `constructProjectionCandidate` for the exact
 least-closure projection. A consumer-facing projection CLI and LLM host adapter
 have not yet been published.
 
-## 8. Construct Only After Acceptance
+## 8. Inspect Or Reproduce The Constructed Candidate
 
 A production build requires all of the following exact inputs:
 
@@ -168,26 +169,21 @@ A production build requires all of the following exact inputs:
 - accepted Semantic Selection Ledger and its acceptance record; and
 - publisher Product manifest and immutable publisher artifact.
 
-Once those records exist, the compiled tenant CLI uses this fail-closed shape:
+The retained candidate is under
+`build_tenants/gtl/representation/products/stdo-2.4.3-rc.3/`. Its exact
+authorization and build plan can reproduce it into any new output directory:
 
 ```sh
-stdo-gtl build \
-  --plan build-plan.json \
-  --source-manifest manifest.json \
-  --profile build_tenants/gtl/design/GTL_REPRESENTATION_PROFILE.md \
-  --frame-basis specification/REFERENCE_FRAME_BASIS.md \
-  --selection-ledger semantic-selection-ledger.json \
-  --profile-acceptance profile-acceptance.json \
-  --frame-basis-acceptance frame-basis-acceptance.json \
-  --selection-acceptance selection-acceptance.json \
-  --publisher-manifest gtl-toolchain-product.json \
-  --publisher-artifact gtl-toolchain-product.tgz \
-  --output-directory candidate
+python3 scripts/finalize_stdo_gtl_product.py \
+  --candidate-directory build_tenants/gtl/representation/candidates/stdo-2.4.3-rc.3 \
+  --authorization build_tenants/gtl/representation/candidates/stdo-2.4.3-rc.3/construction-authorization.json \
+  --output-directory /new/empty/path/stdo-2.4.3-rc.3
 ```
 
-The output directory must not already exist. Success creates only `stdo.gtl`
-and `build-receipt.json`. The repository intentionally ships no placeholder
-acceptance records that could be mistaken for authority.
+The output directory must not already exist. The finalizer reconstructs the
+same authorization, acceptance records, build plan, `stdo.gtl`, receipt, and
+construction summary or refuses. The retained authorization accepts only the
+exact construction inputs; it is not Product acceptance or a release record.
 
 ## Update To A Later STDO RC
 

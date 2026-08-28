@@ -528,8 +528,8 @@ def main() -> None:
         "T-002" in tickets and "T-003" in tickets,
         "required T-002/T-003 records missing",
     )
-    require(tickets["T-002"]["status"] == "active", "T-002 must remain active")
-    require(tickets["T-003"]["status"] == "backlog", "T-003 must remain backlog")
+    require(tickets["T-002"]["status"] == "completed", "T-002 must be completed")
+    require(tickets["T-003"]["status"] == "active", "T-003 must be active")
 
     what_identity = f"sha256:{what_digest}"
     frame_digest = f"sha256:{sha256_bytes(frame_path.read_bytes())}"

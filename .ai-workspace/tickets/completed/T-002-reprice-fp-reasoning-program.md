@@ -4,14 +4,14 @@ id: T-002
 title: Reprice STDO Representation As An ODD F_P Semantic Index
 type: bug
 ticket_category: ordinary
-status: active
+status: completed
 goal: GOAL-001
 change_intent: bind the fundamental ODD traversal functions around a programmatic semantic index of the STDO symbolic axiomatic program and role-bound Executive context projections for probabilistic LLM consumers
 change_class: intent_reprice
 re_entry_point: Intent
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T11:21:22+10:00
+updated_at: 2026-08-28T14:08:23+10:00
 source_ticket: T-001
 affected_boundary: Intent, Product, Product-owner grant, traversal-function allocation, common algebra and identity, Executive context projection, semantic selection, project frame basis, checker, and proposed GTL profile
 candidate_what_member_set_identity: sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e
@@ -91,7 +91,7 @@ through which an Executive sets frames for itself, Workers, and Reviewers while
 - A smaller packet is not admissible when it omits a mandatory closure member,
   exceeds capability, or lacks an executable frame assignment.
 
-## Current checkpoint
+## Historical closure
 
 The traversal-function repair, closed algebra, generated-source-key binding,
 selection-ledger law, Executive context-projection contract, proposed project
@@ -100,10 +100,10 @@ frame basis, fail-closed structural checker, and negative tests are authored.
 than the rejected legacy Module sketch. Its passive typed declaration compiles,
 survives raw admission, and passes the sole frozen GTL publication validator;
 domain reference, identity, and accepted-record-payload mutations fail closed.
-The Semantic Selection Ledger now binds the complete canonical record payload,
-not only its stable record identities. T-003 remains backlog and no production
-index exists. The Product now declares the exact actor, Product-owner authority,
-bounded grant, and exclusions required by external `F_H` records. The exact
-WHAT, frame-basis, and new profile candidate identities and digests are bound in
-this ticket header. Human acceptance and the exact Semantic Selection Ledger
-remain separate gates.
+The Semantic Selection Ledger binds the complete canonical record payload, not
+only its stable record identities. The Product declares the exact actor,
+Product-owner authority, bounded grant, and exclusions required by external
+`F_H` records. Exact construction acceptance records now bind the frame basis,
+profile, and ledger cited by this ticket. T-003 owns construction, measurement,
+probabilistic observation, Product acceptance, and release; none are imported
+back into this constitutional closure.

@@ -1,14 +1,15 @@
 # STDO.gtl Index Artifacts
 
-No production STDO Programmatic Semantic Index artifact is accepted or
-constructed. Candidate construction inputs live under `candidates/`; their
-presence grants no semantic or acceptance authority.
+The first canonical STDO Programmatic Semantic Index candidate is constructed
+under [`products/stdo-2.4.3-rc.3/`](products/stdo-2.4.3-rc.3/). Rebuilding from
+the retained exact inputs reproduces every output byte. It remains a Product
+candidate: no Product acceptance or release record exists.
 
-This surface remains empty until human authority accepts the exact bytes and
-SHA-256 of the proposed
-[`STDO.gtl 0.7.0` profile](../design/GTL_REPRESENTATION_PROFILE.md).
+The external construction authorization accepts the exact frame basis,
+[`STDO.gtl 0.7.0` profile](../design/GTL_REPRESENTATION_PROFILE.md), and Semantic
+Selection Ledger. It authorizes deterministic construction only.
 
-The future ordinary LLM payload is `stdo.gtl`: one canonical programmatic
+The ordinary LLM payload is `stdo.gtl`: one canonical programmatic
 semantic index containing a pure graph and passive constraints. Selection ledgers, manifests, measurements,
 validation receipts, and `F_P` observations are supporting records rather than
 material automatically injected into the consumer context.
@@ -37,6 +38,8 @@ python3 scripts/finalize_stdo_gtl_product.py \
   --output-directory build_tenants/gtl/representation/products/stdo-2.4.3-rc.3
 ```
 
+The retained authorization is
+[`candidates/stdo-2.4.3-rc.3/construction-authorization.json`](candidates/stdo-2.4.3-rc.3/construction-authorization.json).
 The finalizer rejects a non-canonical or drifted authorization, derives the
 three exact acceptance records, rebuilds the immutable frozen-GTL runtime,
 executes the production constructor, and publishes atomically into a new output

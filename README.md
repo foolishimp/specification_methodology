@@ -82,16 +82,17 @@ SHA-256 `312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551`.
 The [GTL tenant](build_tenants/gtl/design/GTL_BASIS.md) selects frozen GTL at
 commit `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`. Its
 [STDO.gtl profile](build_tenants/gtl/design/GTL_REPRESENTATION_PROFILE.md) is
-proposed and awaits exact digest-bound acceptance. Its typed passive
+accepted for the exact first construction basis. Its typed passive
 `ModulePublication`, raw-admission path, frozen GTL validation, compact indexed
-encoding, and negative domain tests are implemented. The JSON Schema tenant
-has not selected a dialect. Neither tenant has a production-constructed or
-released index Product.
+encoding, and negative domain tests are implemented. The first canonical
+[constructed candidate](build_tenants/gtl/representation/products/stdo-2.4.3-rc.3/)
+is reproducible and structurally admitted; it is not yet Product-accepted or
+released. The JSON Schema tenant has not selected a dialect.
 
 The project [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md) is
-also an exact proposal pending an external `F_H` acceptance record. The overlay
-already carries its complete proposed admitting-authority set, but structural
-Product Definition validity does not convert that proposal into acceptance.
+accepted for that exact construction basis by the external records retained
+with the candidate. A changed basis, profile, ledger, or WHAT requires new
+acceptance rather than inheriting this decision.
 
 ## Authority
 
@@ -120,6 +121,6 @@ python3 scripts/test_frozen_gtl_tenant.py
 ```
 
 These checks prove the selected installation, routing, source-project metadata,
-identity inputs, and declared `F_D/F_P/F_H` structural boundaries. They do not
-prove semantic compression adequacy, human acceptance, or GTL profile
-acceptance.
+identity inputs, and declared `F_D/F_P/F_H` structural boundaries. The retained
+acceptance records separately prove who accepted the exact construction inputs;
+neither class proves Product usefulness or authorizes release.
