@@ -6,11 +6,11 @@ Status: candidate requiring exact `F_H` review and acceptance; no Product has be
 
 - Source STDO: `stdo://releases/v2.4.3-rc.3/`
 - Source manifest: `sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551`
-- Semantic Selection Ledger: `urn:stdo-representation:semantic-selection-ledger:sha256:b32f01db4c234c1f48bd1bf392dcdfe48d5d8cb8b05fe9b6053e1289d33fb434`
-- Ledger SHA-256: `sha256:b32f01db4c234c1f48bd1bf392dcdfe48d5d8cb8b05fe9b6053e1289d33fb434`
+- Semantic Selection Ledger: `urn:stdo-representation:semantic-selection-ledger:sha256:48a01fed2714afba6904fb95d6b3b2d9babae0f2285b85fc543cade2837cc6af`
+- Ledger SHA-256: `sha256:48a01fed2714afba6904fb95d6b3b2d9babae0f2285b85fc543cade2837cc6af`
 - GTL profile: `urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0` / `sha256:27b496722bfea537ed9e3a8c412c3ca162f83e723ecd9b783e1697d8ffae5f47`
 - Project frame basis: `urn:stdo-representation:reference-frame-basis:source-project:3` / `sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0`
-- Publisher Product: `urn:stdo-representation:gtl-toolchain-product:sha256:924a7fcddd40d9cae4c958c0eb8c7696374dbf1da006a0be9ab74f87e13f952e`
+- Publisher Product: `urn:stdo-representation:gtl-toolchain-product:sha256:b38a9e4a235b4b6558072782505cb81e7dca2fad281c17205e6be5e89546eb4d`
 
 ## Population
 
