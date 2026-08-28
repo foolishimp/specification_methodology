@@ -1,4 +1,4 @@
-# REQ-P-REPRESENTATION-ALGEBRA — Graph And Constraint Program
+# REQ-P-REPRESENTATION-ALGEBRA — Programmatic Semantic Index Algebra
 
 Family: `REQ-P-ALG-*`
 Status: Active
@@ -8,26 +8,28 @@ tenant design is accepted
 
 Derives from: `../PRODUCT.md#product-terms`,
 `../PRODUCT.md#fundamental-traversal-function-binding`,
-`../PRODUCT.md#program-boundary`,
+`../PRODUCT.md#programmatic-index-boundary`,
 `../PRODUCT.md#product-authority`
 
 ## Purpose
 
-Define the carrier-independent pure graph and constraint program supplied to an
-ODD `F_P` LLM traversal. The algebra declares semantic structure and governing
-law; it is not a deterministic workspace evaluator or a shared serialized
-carrier.
+Define the carrier-independent programmatic semantic index supplied to an ODD
+`F_P` LLM traversal. The algebra encodes the Source STDO Symbolic Axiomatic
+Program as exact semantic identities, typed graph relations, passive
+constraints, provenance, and source re-entry routes. It is not a deterministic
+workspace evaluator, executable carrier program, vector database, or shared
+serialized carrier.
 
 ## Closed algebra
 
-For one exact Source STDO basis `B`, the program algebra is:
+For one exact Source STDO basis `B`, the programmatic index algebra is:
 
 ```text
 B   = (release_uri, installed_manifest_sha256, standards_member_set_sha256)
 P_B = (B, I_B, V_B, E_B, C_B)
 ```
 
-- `I_B` is the closed finite identity universe of this program.
+- `I_B` is the closed finite identity universe of this index.
 - `V_B` is the finite set of source-addressed semantic-atom records.
 - `E_B` is the finite set of typed directed semantic-edge records.
 - `C_B` is the finite set of passive source-addressed constraint records.
@@ -38,7 +40,7 @@ The identity universe is exact:
 I_B = ids(V_B) union ids(E_B) union ids(C_B)
 ```
 
-Every targetable program reference resolves to exactly one member of `I_B`.
+Every targetable index reference resolves to exactly one member of `I_B`.
 Source identities and source locators occur only in the closed scalar coordinate
 fields below; they are not an open targetable identity domain.
 
@@ -85,7 +87,7 @@ SourceLocator = {
 exactly one member of the selected installed manifest. `..`, an absolute path,
 an empty segment, a backslash, or a fragment embedded in `member_path` is
 invalid. `fragment` is the source-owned anchor or local clause key when one is
-available. A locator is provenance, not a program identity.
+available. A locator is provenance, not an index identity.
 
 `SemanticAddress.source_key` is an existing Source STDO semantic identity when
 one exists. Otherwise `F_H` semantic authorship issues this routing-only key:
@@ -102,7 +104,7 @@ meaning or authority. Equal spelling never supplies `source_key`, bounded
 context, authority, basis, or scope.
 
 Every record identity is independently reproducible without following another
-program reference:
+index reference:
 
 ```text
 identity_coordinate = {
@@ -219,7 +221,7 @@ not executable policy, a prompt tactic, or a deterministic truth function.
 
 ## Reference-kind law
 
-The only program-reference fields and their allowed targets are:
+The only index-reference fields and their allowed targets are:
 
 | Reference field | Required target |
 |---|---|
@@ -234,7 +236,7 @@ The only program-reference fields and their allowed targets are:
 | `applies_to_refs` | atoms, edges, or constraints |
 | `re_entry_ref` | atom class `clause`, `design`, `intent`, `method`, `product`, `requirement`, or `ticket` |
 
-No other field is a program reference. `id` is a self-identity, while
+No other field is an index reference. `id` is a self-identity, while
 `SemanticAddress` and `SourceLocator` carry non-targetable Source STDO
 coordinates. Null is permitted only in the explicitly nullable fields and under
 their stated source-evidence rule.
@@ -270,8 +272,9 @@ project(P_B, intent, frame, budget) -> P'_B + omitted_source_routes
 
 `P'_B` retains the identity, authority, context, relation-kind, constraint, and
 interpretation closure needed by its intent. Omitted material remains
-discoverable through exact Source STDO routes. Projection is program packaging,
-not deterministic semantic judgment.
+discoverable through exact Source STDO routes. Projection is index packaging,
+not deterministic semantic judgment; it does not create or execute a
+carrier-language program.
 
 ## Requirements
 
@@ -284,7 +287,7 @@ tagged record type above. Unknown fields, kinds, atom classes, constraint
 classes, reference fields, or cross-context classifications refuse structural
 admission.
 
-**REQ-P-ALG-003**: Every program reference shall resolve exactly once under the
+**REQ-P-ALG-003**: Every index reference shall resolve exactly once under the
 Reference-kind Law. Duplicate identities, duplicate semantic addresses,
 dangling references, wrong-kind references, unlawful nulls, or cross-basis
 references refuse structural admission.
@@ -321,7 +324,7 @@ source-owned constraint identifies the underdetermined scope, exact function
 identity, decision owner, and re-entry route. A missing record, owner, context,
 basis, or relation is a representation defect, not permission for invention.
 
-**REQ-P-ALG-011**: The program shall remain declarative. It shall contain no
+**REQ-P-ALG-011**: The index shall remain declarative. It shall contain no
 workspace-specific observation, deterministic workspace verdict, prompt tactic,
 HoG execution plan, ABG admission, runtime event, continuation, or closure truth.
 
@@ -333,3 +336,11 @@ output is uniquely correct.
 **REQ-P-ALG-013**: `F_H` selection shall precede deterministic serialization and
 shall be bound by the Semantic Selection Ledger. Neither an empty selection nor
 an omitted or unresolved source population may pass as successful compression.
+
+**REQ-P-ALG-014**: Constitutional selection, identity resolution, dependency,
+authority, applicable constraint, inclusion, omission, and projection closure
+shall be decided only by exact declared index identities and relations.
+Embedding similarity, vector distance, retrieval rank, filename proximity, or
+LLM association shall not supply any of those relations. An external host may
+use probabilistic retrieval to acquire workspace evidence, but that evidence
+enters through `W` and does not alter `P_B` or its governing closure.

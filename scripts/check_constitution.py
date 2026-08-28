@@ -74,8 +74,7 @@ ROLE_IDENTITIES = {
         "STDO_REFERENCE_FRAME_BASELINE.md#executive"
     ),
     "Worker": (
-        "stdo://releases/v2.4.3-rc.3/standards/"
-        "STDO_REFERENCE_FRAME_BASELINE.md#worker"
+        "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
     ),
     "Reviewer": (
         "stdo://releases/v2.4.3-rc.3/standards/"
@@ -83,7 +82,7 @@ ROLE_IDENTITIES = {
     ),
 }
 FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
-GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.4.0"
+GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0"
 FRAME_AUTHORITIES = {
     "./specification/GOALS.md",
     "./specification/PRODUCT.md#product-authority",
@@ -380,6 +379,10 @@ def main() -> None:
         SPEC / "REFERENCE_FRAME_BASIS.md",
         *(SPEC / "requirements" / name for name in sorted(EXPECTED_REQUIREMENTS)),
         ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md",
+        ROOT / "build_tenants" / "gtl" / "code" / "src" / "construct.ts",
+        ROOT / "build_tenants" / "gtl" / "code" / "src" / "encoding.ts",
+        ROOT / "build_tenants" / "gtl" / "code" / "src" / "validation.ts",
+        ROOT / "scripts" / "test_frozen_gtl_tenant.py",
         ROOT / "scripts" / "test_check_constitution.py",
     ]
     for path in required_files:
@@ -442,10 +445,30 @@ def main() -> None:
     require_text(product, "admitting_authority_refs", product_path)
     require_text(product, "ReleaseRecord = {", product_path)
     require_text(frame_basis, "Status: acceptance-controlled", frame_path)
-    require_text(profile, "STDO.gtl 0.4.0", profile_path)
+    require_text(intent, "STDO Symbolic Axiomatic Program", intent_path)
+    require_text(intent, "Programmatic Semantic Index", intent_path)
+    require_text(product, "STDO Symbolic Axiomatic Program", product_path)
+    require_text(product, "STDO Programmatic Semantic Index Product", product_path)
+    require_text(product, "not a frozen-GTL `GtlProgram`", product_path)
+    require_text(product, "vector database", product_path)
+    require_text(profile, "STDO.gtl 0.6.0", profile_path)
     require_text(profile, "Status: acceptance-controlled candidate", profile_path)
-    require_text(profile, "A Rule has no `.id`", profile_path)
-    require_text(profile, "canonical_program_bytes = JCS(Module) + LF", profile_path)
+    require_text(profile, "No GTL Node is claimed", profile_path)
+    require_text(
+        profile,
+        "urn:stdo-representation:gtl-contract:programmatic-semantic-index:1",
+        profile_path,
+    )
+    require_text(profile, 'kind   = "stdo.programmatic_semantic_index"', profile_path)
+    require_text(
+        profile,
+        "canonical_index_bytes = RFC8785_JCS(raw_admitted_ModulePublication) + LF",
+        profile_path,
+    )
+    require(
+        "stdo.reasoning_program" not in profile,
+        "retired ambiguous GTL reasoning-program kind returned",
+    )
     require("Assessment Disposition" not in product, "assessment Product term returned")
     require(
         "REQ-P-CONF"

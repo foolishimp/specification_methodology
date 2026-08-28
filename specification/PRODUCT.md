@@ -9,36 +9,48 @@ Within `urn:stdo-representation:bounded-context:product`:
 
 - **STDO Representation Source Project** is this mutable workspace while it
   defines and builds candidate Products.
-- **STDO Reasoning Program Product** is one immutable carrier-native program
-  bound to one exact Source STDO basis, one build tenant, one exact carrier
-  basis, one representation profile, and one canonical program digest.
 - **Source STDO** is the exact immutable STDO release whose constitutional
   meanings and relations are represented.
+- **STDO Symbolic Axiomatic Program** is the exact Source STDO constitutional
+  corpus understood as one symbolic system of named declarations, identities,
+  typed relations, constraints, authority boundaries, and lawful latitude. Its
+  authoritative notation is the complete selected Source STDO documents.
+- **STDO Programmatic Semantic Index Product** is one immutable carrier-native,
+  machine-addressable encoding of the STDO Symbolic Axiomatic Program, bound to
+  one exact Source STDO basis, one build tenant, one exact carrier basis, one
+  representation profile, and one canonical content digest.
+- **Programmatic Semantic Index** is the Product's identity-addressed graph and
+  passive-constraint navigation surface. Software can resolve, validate,
+  traverse, and project it without inferring governing relations from textual
+  similarity.
 - **STDO Representation Algebra** is the carrier-independent pure graph and
   constraint contract defined by this Product's requirements.
 - **Build Tenant** is one independent HOW realization of that algebra.
 - **Representation Profile** is a tenant-owned, versioned mapping from the
   common graph and constraints into one exact carrier basis.
-- **STDO.gtl** is the GTL build tenant's canonical STDO Reasoning Program.
+- **STDO.gtl** is the GTL build tenant's canonical encoding of the STDO
+  Programmatic Semantic Index. It is a passive frozen-GTL `ModulePublication`,
+  not a frozen-GTL `GtlProgram`.
 - **F_D**, **F_P**, and **F_H** are Source STDO's exact fundamental ODD
   traversal-function identities for deterministic evaluation/proof,
   probabilistic construction, and explicit human adjudication respectively.
 - **F_P Consumer** is a probabilistic LLM bound to the exact Source STDO `F_P`
   identity for one declared external traversal contract. It receives a
-  reasoning program and separately supplied workspace input, intent, frame, and
-  capability budget.
+  programmatic semantic index and separately supplied workspace input, intent,
+  frame, and capability budget.
 - **Workspace Input** is consumer-supplied evidence about the workspace being
-  reasoned over. It is not embedded in or owned by the reasoning program.
-- **Reasoning Invocation** is one external use of a reasoning program by an
-  `F_P` consumer under one host-owned declared ODD vector or edge-traversal
+  reasoned over. It is not embedded in or owned by the index.
+- **Reasoning Invocation** is one external use of a programmatic semantic index
+  by an `F_P` consumer under one host-owned declared ODD vector or edge-traversal
   identity. Its model, workspace, prompt, output, and cost coordinates are not
   Product identity coordinates.
 - **Executive Context Assignment** is an external immutable binding of one
-  parent program, workspace basis, outcome, intent, target actor, Source STDO
+  parent index Product, workspace basis, outcome, intent, target actor, Source
+  STDO
   Executive, Worker, or Reviewer engagement role, activated frames, authority,
   capability, evidence, stop states, and context budget.
 - **Projection** is the least declared subgraph fixed point over an exact
-  assignment's program seeds, with every required constraint and interpretation
+  assignment's index seeds, with every required constraint and interpretation
   relation for its bounded purpose.
 - **Context Packet** is an invocation-input bundle containing the exact
   assignment, selected frame declarations or routes, carrier-native projection,
@@ -60,12 +72,33 @@ Within `urn:stdo-representation:bounded-context:product`:
 
 The Representation Algebra is constitutional WHAT. It is not a physical common
 graph, shared serialized intermediate representation, deterministic evaluator,
-workspace assessor, executable plan, or runtime-truth system.
+workspace assessor, executable plan, vector database, similarity-retrieval
+authority, or runtime-truth system.
+
+## Symbolic program and index relation
+
+The complete Source STDO documents are the authoritative expression of the
+STDO Symbolic Axiomatic Program. A Programmatic Semantic Index compiles their
+material semantic declarations into exact identities, typed relations, passive
+constraints, provenance, and source re-entry routes. The compilation changes
+representation, not meaning, ownership, authority, or basis.
+
+The index is **programmatic** because software can validate its closed identity
+universe, follow declared edges, compute declared least closures, create
+role-bound projections, and return from any represented record to exact Source
+STDO. It is **not executable**: it contains no GTL callable program, workflow,
+model invocation, hidden reasoning strategy, event loop, or runtime truth.
+
+Embedding or vector retrieval may help an external host acquire unstructured
+workspace evidence. Similarity, rank, or proximity cannot establish which STDO
+identity, authority, bounded context, dependency, constraint, omission, or
+closure applies. Those relations come only from the exact symbolic index and
+its Source STDO authority.
 
 ## Product statement
 
-For one exact Source STDO basis and carrier realization, an STDO Reasoning
-Program Product provides:
+For one exact Source STDO basis and carrier realization, an STDO Programmatic
+Semantic Index Product provides:
 
 1. a compact graph of source-addressed STDO semantic atoms and typed relations;
 2. passive constraints declaring what an `F_P` consumer must preserve or avoid;
@@ -73,17 +106,17 @@ Program Product provides:
    required to interpret those atoms, relations, and constraints;
 4. role-bound projections for authorized Executive, Worker, and Reviewer frame
    assignments and capability budgets;
-5. exact routes back to Source STDO when the compressed program is insufficient;
+5. exact routes back to Source STDO when the compressed index is insufficient;
 6. reproducible byte, token, and cost measurements against the exact source;
    and
 7. external, digest-bound semantic-selection evidence sufficient for `F_H`
    authority to review what compression retained, omitted, or left uncertain.
 
-The Product is consumed by placing the complete program or one lawful
+The Product is consumed by placing the complete index or one lawful
 projection in an LLM context alongside a workspace input and reasoning intent.
-The LLM performs probabilistic semantic reasoning constrained by the program.
-The program does not prescribe a deterministic answer or make the response
-authoritative.
+The LLM acts as a bounded probabilistic interpreter of the represented symbolic
+axiomatic program. It does not execute the GTL carrier. The index does not
+prescribe a deterministic answer or make the response authoritative.
 
 ## Fundamental traversal-function binding
 
@@ -103,17 +136,17 @@ meanings or transfer their authority:
 - domain HOW performs deterministic acquisition, construction,
   canonicalization, serialization, digesting, and measurement, while `F_D`
   evaluates or proves declared properties of those results;
-- `F_P` applies to one bounded external LLM traversal over the reasoning program
+- `F_P` applies to one bounded external LLM traversal over the semantic index
   and separately supplied invocation inputs; and
 - `F_H` applies to semantic selection, ambiguity adjudication, frame-basis and
   profile acceptance, Product acceptance, and release decisions under an exact
   human or bounded-proxy grant.
 
-The reasoning-program payload is optimized for `F_P`. The source project and
+The programmatic-index payload is optimized for `F_P`. The source project and
 external qualification records still preserve the surrounding `F_D` and `F_H`
 boundaries.
 
-## Program boundary
+## Programmatic index boundary
 
 The consumer relation is:
 
@@ -121,11 +154,11 @@ The consumer relation is:
 F_P(P_B, W, I, F, K) -> J
 ```
 
-where `P_B` is the immutable reasoning program under Source STDO basis `B`, `W`
-is a separately supplied workspace input, `I` is the reasoning intent, `F` is
-the selected reference-frame view, `K` is the consumer capability/context
-budget, and `J` is probabilistic reasoning output or an explicit hold, gap, or
-refusal.
+where `P_B` is the immutable programmatic semantic index of the Source STDO
+Symbolic Axiomatic Program under basis `B`, `W` is a separately supplied
+workspace input, `I` is the reasoning intent, `F` is the selected
+reference-frame view, `K` is the consumer capability/context budget, and `J`
+is probabilistic reasoning output or an explicit hold, gap, or refusal.
 
 That compact relation is not a second definition of `F_P`. A host claiming an
 ODD `F_P` invocation binds a complete traversal contract:
@@ -142,7 +175,7 @@ The contract declares required upstream assets, target/output contract,
 required context, role or capability expectation, governing evaluators and
 gates, provenance obligation, and lawful stop, hold, gap, continuation, and
 completion states. The external host owns that contract and any HoG or ABG
-realization. `P_B` remains passive immutable input and contains no runtime.
+realization. `P_B` remains a passive immutable index and contains no runtime.
 
 Every `F_D`, `F_P`, or `F_H` claim in this project is qualified by such a
 declared traversal contract. Supporting prose may name the function allocation
@@ -159,7 +192,7 @@ frame declaration and activation law to create an exact assignment `A`. This
 Product then defines the carrier-neutral context relation:
 
 ```text
-Z(A) = mandatory frame refs + exact role refs + explicit program seed refs
+Z(A) = mandatory frame refs + exact role refs + explicit index seed refs
 P_A  = least_closure(P_B, Z(A), L_context)
 K_A  = A.context_budget
 contextualize(P_B, A) -> ContextPacket(P_A, K_A) | hold
@@ -168,7 +201,7 @@ contextualize(P_B, A) -> ContextPacket(P_A, K_A) | hold
 `L_context` preserves the exact semantic-address, bounded-context, authority,
 scope, basis, dependency, constraint, evidence, exclusion, refusal,
 invalidation, and re-entry relations required by the assignment. The full
-program is lawful when selected and within capability; otherwise no mandatory
+index is lawful when selected and within capability; otherwise no mandatory
 closure member may be removed merely to meet `K`.
 
 An Executive may target itself, a Worker, or a Reviewer. Self-targeting creates
@@ -194,8 +227,12 @@ what_member_set_identity = sha256(
 The canonical carrier bytes are then content-addressed:
 
 ```text
-program_content_identity = "sha256:" + sha256(canonical_program_bytes)
+program_content_identity = "sha256:" + sha256(canonical_index_bytes)
 ```
+
+`program_content_identity` names the canonical encoding of the Source STDO
+Symbolic Axiomatic Program. It does not identify or imply a frozen-GTL
+`GtlProgram`.
 
 Every build tenant issues one typed immutable carrier-basis identity from an
 exact carrier coordinate containing, at minimum, repository identity, immutable
@@ -240,7 +277,7 @@ Changing any bound coordinate creates a different Product. A mutable selector,
 workspace input, model invocation, response, or usage observation never
 substitutes for immutable Product identity.
 
-The canonical program embeds every Product coordinate available before its own
+The canonical index embeds every Product coordinate available before its own
 content digest, but it cannot embed its final Product identity or
 `program_content_identity` without a self-reference. A release manifest binds
 the resulting content digest and Product identity after canonical bytes exist.
@@ -361,10 +398,10 @@ Retirement is not defined or claimed by this source-project candidate.
 
 - Source STDO owns every represented constitutional meaning, semantic identity,
   authority relation, bounded context, dependency, and constraint.
-- STDO Representation WHAT owns the abstract program algebra, consumer boundary,
-  projection law, identity law, and compression obligations.
+- STDO Representation WHAT owns the abstract programmatic-index algebra,
+  consumer boundary, projection law, identity law, and compression obligations.
 - Each build tenant owns its carrier basis, representation profile,
-  canonicalization, and concrete program bytes.
+  canonicalization, and concrete index bytes.
 - The workspace owner owns the supplied workspace evidence and its acquisition.
 - Domain HOW may construct and measure exact carriers and projections. `F_D`
   may decide only declared deterministic structural, identity, admission, and
@@ -379,10 +416,10 @@ Retirement is not defined or claimed by this source-project candidate.
   bounded-proxy identity, grant, subject, basis, evidence, and recorded decision;
   human presence alone grants no ambient authority.
 - Executive frame assignment requires existing frame-set authority and an exact
-  grant. An Executive label, access to the full program, or selection of its own
+  grant. An Executive label, access to the full index, or selection of its own
   context cannot widen semantic, operation, decision, or Reviewer-independence
   authority.
-- Human Product authority accepts an immutable program for publication after
+- Human Product authority accepts an immutable index Product for publication after
   reviewing its structural evidence, measurements, and applicable `F_P`
   observations. The resulting acceptance record names the exact human or
   bounded proxy and authority grant.
@@ -392,17 +429,17 @@ reduction, or LLM response mints Source STDO authority.
 
 ## Product contents
 
-The F_P consumption payload is only:
+The `F_P` consumption payload is only:
 
-- one canonical carrier-native graph-and-constraint program;
-- the minimal exact basis and program identity coordinates required to interpret
+- one canonical carrier-native programmatic semantic index;
+- the minimal exact basis and index identity coordinates required to interpret
   it; and
 - embedded source semantic addresses or reacquisition routes.
 
 A release may accompany that payload with a manifest, canonical-build receipt,
 structural-validation receipt, semantic-selection ledger, measurements, and
 probabilistic usefulness observations. Those materials qualify and explain the
-Product; they are not part of the program consumed on every reasoning invocation
+Product; they are not part of the index consumed on every reasoning invocation
 unless a host explicitly selects them.
 
 The Product does not contain a workspace, prompt, model configuration, LLM
@@ -430,7 +467,8 @@ The source project selects STDO `v2.4.3-rc.3` as its constitution. The GTL tenan
 selects frozen GTL at commit
 `8d7f965a3fae7d1acea6a9db298798480fd4cc2f` and currently has a proposed,
 unaccepted representation profile. The JSON Schema tenant has not selected a
-dialect. Neither tenant has a constructed or released STDO Reasoning Program.
+dialect. Neither tenant has a constructed or released STDO Programmatic
+Semantic Index Product.
 
 HoG execution, ABG admission, runtime continuation, and deterministic workspace
 assessment are not embedded in or owned by this Product. An external consuming

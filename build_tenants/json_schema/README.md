@@ -2,10 +2,10 @@
 
 Identity: `urn:stdo-representation:build-tenant:json-schema`
 
-Status: registered; exact carrier basis, program profile, design, and artifact
+Status: registered; exact carrier basis, index profile, design, and artifact
 unselected.
 
-This tenant may realize the common graph-and-constraint program as canonical
+This tenant may realize the common programmatic semantic index as canonical
 JSON instance data structurally validated by an exact JSON Schema dialect. The
 result would target the same external ODD `F_P` LLM traversal boundary as
 `stdo.gtl`; it would not be a deterministic semantic workspace assessor.

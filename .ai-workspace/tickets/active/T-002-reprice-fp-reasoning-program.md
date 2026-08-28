@@ -1,40 +1,42 @@
-# T-002 — Reprice STDO Representation As An ODD F_P Context Program
+# T-002 — Reprice STDO Representation As An ODD F_P Semantic Index
 
 id: T-002
-title: Reprice STDO Representation As An ODD F_P Context Program
+title: Reprice STDO Representation As An ODD F_P Semantic Index
 type: bug
 ticket_category: ordinary
 status: active
 goal: GOAL-001
-change_intent: bind the fundamental ODD traversal functions around a compact graph-and-constraint program and role-bound Executive context projections for probabilistic LLM consumers
+change_intent: bind the fundamental ODD traversal functions around a programmatic semantic index of the STDO symbolic axiomatic program and role-bound Executive context projections for probabilistic LLM consumers
 change_class: intent_reprice
 re_entry_point: Intent
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-28T02:58:41+10:00
+updated_at: 2026-08-28T04:27:09+10:00
 source_ticket: T-001
 affected_boundary: Intent, Product, traversal-function allocation, common algebra and identity, Executive context projection, semantic selection, project frame basis, checker, and proposed GTL profile
-candidate_what_member_set_identity: sha256:8413bf3ae62f00e734d5c2096334acb350b2edc33e716ebb3e19fe2a162ebc48
+candidate_what_member_set_identity: sha256:bfa93dfa237bbf8bf2201cc3111ec3d120cb94aad3fe714b8c4657de471f6baf
 candidate_frame_basis_identity: urn:stdo-representation:reference-frame-basis:source-project:3
-candidate_frame_basis_sha256: sha256:b7768ee2331da77f30c485ff956e6b8b462a30f40b179f163baf92662f281852
-candidate_gtl_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.4.0
-candidate_gtl_profile_sha256: sha256:7d207c24ba059530dc1ec217859b3d811ea8b5acc12ed4849a7ec13d1e6d7143
+candidate_frame_basis_sha256: sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0
+candidate_gtl_profile_identity: urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0
+candidate_gtl_profile_sha256: sha256:260b2dbaea31d6f56cb3be29b6a43c25af3142929df3610fcb9b5c723e2cd090
 
 ## Outcome
 
-Make the current constitutional baseline consistently define an immutable pure
-graph-and-constraint program consumed by an external ODD `F_P` LLM traversal
-over a separately supplied workspace, including authorized least-closure
-context packets through which an Executive sets frames for itself, Workers, and
-Reviewers while `F_D` structural and `F_H` semantic authority remain explicit.
+Make the current constitutional baseline consistently define Source STDO as a
+Symbolic Axiomatic Program and the immutable Product as its Programmatic
+Semantic Index, consumed by an external ODD `F_P` LLM traversal over a
+separately supplied workspace. Include authorized least-closure context packets
+through which an Executive sets frames for itself, Workers, and Reviewers while
+`F_D` structural and `F_H` semantic authority remain explicit.
 
 ## In scope
 
-- Reprice Intent and Product around cost/token reduction and `F_P` consumption.
+- Reprice Intent and Product around symbolic axiomatic-program encoding,
+  programmatic indexing, cost/token reduction, and `F_P` consumption.
 - Bind exact Source STDO `F_D`, `F_P`, and `F_H` identities unchanged and define
   their non-substitutable Product roles.
 - Replace deterministic assessment disposition, complete census, total coverage,
-  and assessment-bound identity with the program boundary.
+  and assessment-bound identity with the semantic-index boundary.
 - Close the common identity, graph, and passive-constraint algebra.
 - Define exact RFC 8785 identity and carrier-basis canonicalization.
 - Define exact Executive Context Assignments, Source STDO engagement-role
@@ -54,7 +56,7 @@ Reviewers while `F_D` structural and `F_H` semantic authority remain explicit.
 - Constructing `stdo.gtl` before profile acceptance.
 - Selecting the JSON Schema dialect.
 - Embedding HoG execution, ABG runtime admission, events, continuation, or
-  closure truth in the reasoning-program Product.
+  closure truth in the programmatic-index Product.
 - Releasing or tagging an STDO Representation Product.
 
 ## Acceptance
@@ -62,13 +64,16 @@ Reviewers while `F_D` structural and `F_H` semantic authority remain explicit.
 - Intent, Product, requirements, frame basis, overlay, Goals, tenant guidance,
   and proposed GTL profile express one consistent ODD `F_D/F_P/F_H` Product
   boundary.
+- Source STDO is explicitly the authoritative symbolic axiomatic program;
+  `stdo.gtl` is its programmatic semantic index, not a frozen-GTL `GtlProgram`,
+  vector database, or replacement authority.
 - The old deterministic assessment predicates, census/coverage Product, and
   cyclic identity relation are absent from live constitutional truth.
 - The graph algebra has one closed identity universe, exact tagged record
   schemas, a complete reference-kind table, and only vertices, typed edges, and
   passive constraints.
 - Executive, Worker, and Reviewer packets bind exact actor, frame activation,
-  capability, authority, evidence, stop, return, parent-program, closure, and
+  capability, authority, evidence, stop, return, parent-index, closure, and
   token-budget coordinates without self-grant or role collapse.
 - Structural verification and probabilistic usefulness observation are
   explicitly different evidence classes.
@@ -80,7 +85,7 @@ Reviewers while `F_D` structural and `F_H` semantic authority remain explicit.
 - A proposed frame basis, profile, or Semantic Selection Ledger is not accepted
   without a separate human or bounded-proxy record binding its exact identity,
   bytes, authority and grant.
-- No generated program or measurement can close this ticket while common WHAT
+- No generated index or measurement can close this ticket while common WHAT
   remains internally inconsistent.
 - A successful LLM response is not deterministic semantic proof.
 - A smaller packet is not admissible when it omits a mandatory closure member,
@@ -90,9 +95,11 @@ Reviewers while `F_D` structural and `F_H` semantic authority remain explicit.
 
 The traversal-function repair, closed algebra, generated-source-key binding,
 selection-ledger law, Executive context-projection contract, proposed project
-frame basis, fail-closed structural checker, negative tests, and `STDO.gtl
-0.4.0` profile proposal are authored. T-003 remains backlog and no program
-exists. The exact WHAT, frame-basis, and profile candidate identities and
-digests are bound in this ticket header. Human acceptance remains a separate
-post-presentation decision, and the frozen GTL carrier-shape blocker remains
-open before profile acceptance.
+frame basis, fail-closed structural checker, and negative tests are authored.
+`STDO.gtl 0.6.0` now uses the exact frozen `ModulePublication` carrier rather
+than the rejected legacy Module sketch. Its passive typed declaration compiles,
+survives raw admission, and passes the sole frozen GTL publication validator;
+domain reference and identity mutations fail closed. T-003 remains backlog and
+no production index exists. The exact WHAT, frame-basis, and new profile
+candidate identities and digests are bound in this ticket header. Human
+acceptance and the exact Semantic Selection Ledger remain separate gates.

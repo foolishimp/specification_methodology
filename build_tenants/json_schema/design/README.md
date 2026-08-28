@@ -1,6 +1,6 @@
 # JSON Schema Tenant Design
 
-Status: no carrier basis, program profile, or design is accepted.
+Status: no carrier basis, index profile, or design is accepted.
 
 A future profile must map `I_B`, `V_B`, `E_B`, and `C_B` directly into canonical
 JSON data under one exact JSON Schema dialect. It must define content identity,

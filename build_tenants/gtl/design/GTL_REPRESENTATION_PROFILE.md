@@ -1,28 +1,31 @@
-# GTL Representation Profile — STDO.gtl 0.4.0
+# GTL Representation Profile — STDO.gtl 0.6.0
 
-Status: acceptance-controlled candidate; this carrier confers no construction
-authority
+Status: acceptance-controlled candidate; these bytes grant no construction or
+acceptance authority
 
 Profile identity:
-`urn:stdo-representation:gtl-profile:stdo-gtl:0.4.0`
+`urn:stdo-representation:gtl-profile:stdo-gtl:0.6.0`
 
 Build-tenant identity: `urn:stdo-representation:build-tenant:gtl`
 
 ## Purpose
 
-Define `stdo.gtl`, a compact authored GTL declaration program containing the
-Source STDO semantic graph and passive constraints required by an external ODD
-`F_P` LLM traversal over a separately supplied workspace.
+Define `stdo.gtl`, the canonical frozen-GTL encoding of the STDO Programmatic
+Semantic Index for an external ODD `F_P` LLM traversal over a separately
+supplied workspace. The index encodes the Source STDO Symbolic Axiomatic Program
+as compact passive graph-and-constraint declarations while preserving exact
+identity, basis, authority, bounded-context, scope, source-route, and refusal
+coordinates.
 
-`F_D`, `F_P`, and `F_H` retain their exact Source STDO traversal-function
-identities. `F_H` selects and accepts semantic declarations, GTL tenant mechanics
-construct canonical carrier bytes, `F_D` evaluates or proves their declared
-admission properties, and `F_P` consumes the resulting program. `stdo.gtl` is
-not a deterministic workspace assessor, public callable GTL workflow, HoG
-execution plan, ABG runtime, or qualification bundle.
+`F_H` selects and accepts semantic declarations. Domain HOW constructs,
+serializes, and measures exact bytes. `F_D` evaluates the declared structural
+and identity properties of those results. `F_P` consumes the admitted index.
+The payload is not a deterministic workspace assessor, frozen-GTL `GtlProgram`,
+callable GTL workflow, vector database, HoG plan, ABG runtime, or qualification
+bundle.
 
 Acceptance binds this file's exact bytes and SHA-256. Any later change creates a
-new profile candidate requiring separate acceptance.
+new profile candidate and does not inherit an earlier acceptance.
 
 ## Exact bases
 
@@ -36,31 +39,16 @@ new profile candidate requiring separate acceptance.
   `127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275`
 - standards inventory: 47 regular files in installed-manifest order
 
-### GTL
+### Frozen GTL
 
 - repository: `https://github.com/foolishimp/abiogenesis.git`
 - commit SHA-1: `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`
 - authority root: `specification/requirements/gtl/`
 - authority-tree SHA-1: `21a44b1941a1055d6abd973937e65b83e359de1b`
 - authority inventory: 33 regular files
+- TypeScript tenant package: `@abiogenesis/typescript-tenant@5.0.0-dev.286`
 
-The complete frozen GTL authority is operative. Relevant immutable routes
-include:
-
-- [GTL language boundary](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md);
-- [Graph](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md),
-  [Node](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-NODE.md), and
-  [Context](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md);
-- [passive Rule constraints](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-RULE.md);
-- [Module publication](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-MODULE.md); and
-- [canonical declarations and traversal latitude](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-LAWS.md).
-
-These links navigate the basis; they do not replace the complete 33-member
-authority tree.
-
-## Carrier-basis identity
-
-The GTL carrier coordinate contains exactly:
+The carrier-basis coordinate contains exactly:
 
 ```json
 {
@@ -72,394 +60,398 @@ The GTL carrier coordinate contains exactly:
 }
 ```
 
-Its identity is:
+Its RFC 8785 JCS/SHA-256 identity is:
 
 ```text
 urn:stdo-representation:carrier-basis:gtl:sha256:
   b5becdf2801577f00bbc119a6bb23e0015a2007147818557ee2e770bc682b703
 ```
 
-The digest is SHA-256 over exact RFC 8785 JCS bytes of that object. Repository,
-commit, authority root, authority tree, and inventory are therefore one typed
-immutable carrier-basis identity rather than competing partial coordinates.
+Relevant immutable navigation routes are the
+[language boundary](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md),
+[contract-law API](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md),
+[Rule boundary](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-RULE.md), and
+[Module boundary](https://github.com/foolishimp/abiogenesis/blob/8d7f965a3fae7d1acea6a9db298798480fd4cc2f/specification/requirements/gtl/REQ-L-GTL3-MODULE.md).
+The complete 33-member authority tree remains operative.
 
-## Governing representation decision
+## Frozen carrier contract
 
-The common program is `P_B = (B, I_B, V_B, E_B, C_B)`. This profile realizes it
-directly as one authored GTL `Module` containing one non-callable `Graph`:
+The serialized root is the frozen TypeScript `ModulePublication`, not the
+legacy `Module { graphs[] }` shape:
 
 ```text
-Module stdo
-  metadata       pre-content Product, profile, basis, and F_P coordinates
-  graphs[1]
-    Graph stdo
-      nodes[]    V_B semantic atoms; Node.id is the atom identity
-      rules[]    atom coordinates plus E_B edges and C_B constraints
-      contexts[] exact Source STDO snapshot constraint
-      vectors[]  empty
-      inputs[]   empty
-      outputs[]  empty
-      effects[]  empty
-  graph_functions[]       empty
-  refinement_boundaries[] empty
-  candidate_families[]    empty
-  jobs[]                   empty
-  roles[]                  empty
-  operators[]              empty
-  evaluators[]             empty
-  rules[]                  empty
-  imports[]                empty
+ModulePublication {
+  kind: "module_publication"
+  moduleRef: string
+  moduleVersion: "5.0.0"
+  owningProductId: string
+  artifactDigest: Sha256
+  productContentDigest: Sha256
+  productManifestDigest: Sha256
+  descriptorRef: string
+  contributionManifestRef: string
+  productSemanticsBinding: ProductSemanticsBinding
+  contracts: [ContractDeclaration]
+  evaluators: []
+  rules: [RuleDeclaration]
+  implementationBindings: []
+  closureContracts: []
+  programs: []
+  graphFunctions: []
+  contributions: [CatalogContribution]
+}
 ```
 
-This is an **F_P Reasoning Program**, a Product term for an LLM-consumed authored
-GTL declaration. It is not a public callable GTL workflow. The `F_P` traversal
-contract is external to the payload. Empty callable, GraphVector, operator,
-evaluator, and runtime-adjacent inventories are explicit positive boundary
-claims, not a denial of the ODD traversal architecture.
+The one Contract declares
+`urn:stdo-representation:gtl-contract:programmatic-semantic-index:1` as an input
+value of kind `stdo_programmatic_semantic_index_v1`. The one Rule has:
+
+```text
+name   = "stdo.programmatic-semantic-index.v1"
+kind   = "stdo.programmatic_semantic_index"
+config = CompactSemanticIndexConfig
+tags   = []
+```
+
+The one CatalogContribution is a non-callable `node_type` contribution pointing
+to that Contract and has empty Program membership. At least one contribution is
+required by the frozen GTL validator. No GTL Node is claimed: frozen
+`GtlNode` exists only inside a callable GraphFunction template, which this
+Product excludes.
+
+The empty callable, evaluator, implementation, closure, Program, and
+GraphFunction inventories are positive Product-boundary claims. The external
+host owns the complete ODD `F_P` traversal contract.
+
+## Publication owner and cycle boundary
+
+`ModulePublication.owningProductId`, its three Product digests, descriptor,
+contribution manifest, package coordinates, and Product-semantics binding name
+one immutable **GTL Tenant Toolchain Product** that publishes this carrier.
+They do not name the later STDO Programmatic Semantic Index Product.
+
+The toolchain Product basis shall be supplied as one verified immutable
+`PublisherArtifactBasis`:
+
+```text
+PublisherArtifactBasis = {
+  owning_product_id: absolute URI,
+  artifact_digest: Sha256,
+  product_content_digest: Sha256,
+  product_manifest_digest: Sha256,
+  descriptor_ref: absolute URI,
+  contribution_manifest_ref: absolute URI,
+  package_name: non-empty string,
+  package_version: non-empty string,
+  module_path: non-empty string,
+  named_symbol: non-empty string
+}
+```
+
+The named symbol is the toolchain's exported
+`STDO_GTL_PRODUCT_SEMANTICS`. The output bytes incorporate the exact publisher
+basis. Consequently, the later content-first STDO Programmatic Semantic Index
+Product
+identity covers it transitively without embedding its own final identity and
+creating a cycle. A source-project path, mutable package, placeholder digest,
+or the ABIogenesis Product identity cannot substitute for this publisher basis.
+
+The evidence bundle carries the exact publisher artifact bytes and one
+canonical publisher manifest with repository commit/tree, normalized
+path-sorted content inventory, package and semantics-binding coordinates, and
+the artifact/content digests. `product_content_digest` is SHA-256 over each
+`path + NUL + sha256 + LF` inventory row. `product_manifest_digest` is SHA-256
+of the exact RFC 8785 JCS manifest bytes, `artifact_digest` is SHA-256 of the
+exact supplied artifact bytes, and:
+
+```text
+owning_product_id =
+  "urn:stdo-representation:gtl-toolchain-product:sha256:" +
+  hex(product_manifest_digest)
+```
+
+All four values are independently reproduced before construction. The
+publisher manifest is not embedded in routine LLM context.
+
+This profile claims frozen GTL publication validation, not ABIogenesis Product
+catalog readiness. Catalog installation would additionally require an exact
+installed Product descriptor and contribution manifest under that Product's
+own admission process.
 
 ## Direct algebra mapping
 
-| Common element | GTL realization | Governing boundary |
-|---|---|---|
-| `B` | one GTL `Context` plus Module metadata | exact installed STDO locator and digest; no mutable selector |
-| atom identities in `I_B` | GTL `Node.id` | GTL identity and targeting surface |
-| edge and constraint identities in `I_B` | Product-owned `edge_ref` and `constraint_ref` values in closed Rule configurations | not GTL declaration identities; profile-aware structural validation targets them |
-| `V_B` | GTL `Node` plus passive `Rule(kind = "stdo.atom")` | Node carries identity/locus; Rule carries complete atom coordinates |
-| `E_B` | passive `Rule(kind = "stdo.edge")` | typed directed semantic data; never GTL GraphVector topology by nominal match |
-| `C_B` | passive `Rule(kind = "stdo.constraint")` | governing law or declared latitude; never a GTL Evaluator |
+The common programmatic index remains `P_B = (B, I_B, V_B, E_B, C_B)`.
+Frozen GTL's open, passive Rule configuration carries one reversible compact
+encoding:
 
-`I_B` is therefore the union of every `Node.id`, `stdo.edge.config.edge_ref`,
-and `stdo.constraint.config.constraint_ref`. A Rule has no `.id` in the frozen
-GTL contract. `Rule.name` remains a label and never supplies targeting,
-identity, equality, or authority. Semantic edges are Product data carried by
-Rules; they are not GTL GraphVector transitions.
-
-GTL `Context` represents the exact external Source STDO snapshot. Source STDO
-bounded-context identities remain ordinary semantic Nodes; these two meanings
-are not collapsed.
-
-The three `Rule.kind` values are Product-owned declaration kinds over GTL's open
-passive Rule surface. They do not extend GTL ontology, define a GTL policy
-language, or give the GTL validator Source STDO semantics. A profile-aware
-structural validator checks their selected closed configurations; Source STDO
-and this Product retain the meaning of that data.
-
-## Selected carrier shapes
-
-The serialized carrier uses the frozen GTL fields and exact JSON types below:
-
-```text
-JsonValue = null | boolean | string | non-negative safe integer |
-            JsonValue[] | { string: JsonValue }
-
-Context = {
-  name: "source-stdo",
-  locator: "stdo://releases/v2.4.3-rc.3/",
-  digest: "sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551"
-}
-
-Node = {
-  id: atom Identity,
-  name: atom label,
-  schema: {
-    kind: "symbolic",
-    ref: "urn:stdo-representation:atom-class:" + AtomClass
-  },
-  markov: [],
-  asset_surface: null,
-  tags: []
-}
-
-Rule = {
-  name: string,
-  kind: "stdo.atom" | "stdo.edge" | "stdo.constraint",
-  config: AtomConfig | EdgeConfig | ConstraintConfig,
-  tags: []
-}
-
-Graph = {
-  id: string,
-  name: "stdo",
-  inputs: [],
-  outputs: [],
-  nodes: Node[],
-  vectors: [],
-  contexts: [Context],
-  rules: Rule[],
-  effects: [],
-  tags: []
-}
-
-Module = {
-  name: "stdo",
-  graphs: [Graph],
-  graph_functions: [],
-  refinement_boundaries: [],
-  candidate_families: [],
-  jobs: [],
-  roles: [],
-  operators: [],
-  evaluators: [],
-  rules: [],
-  imports: [],
-  metadata: ModuleMetadata
-}
-```
-
-Every field shown is required. Unknown fields are rejected. Graph and Rule tags
-are empty. Governing STDO constraints live in passive Rules; they are not
-duplicated into `markov` or asset-surface semantics.
-
-The GTL Graph identity is a carrier declaration identity outside `I_B`:
-
-```text
-graph_coordinate = {
-  source_stdo_manifest_sha256,
-  what_member_set_identity,
-  build_tenant_identity,
-  carrier_basis_identity,
-  representation_profile_identity,
-  representation_profile_sha256
-}
-
-Graph.id = "urn:stdo-representation:gtl:graph:sha256:" +
-           sha256(JCS(graph_coordinate))
-```
-
-Each Rule label is deterministic but non-targetable:
-
-```text
-Rule.name = Rule.kind + "." + final_64_hex_digits(primary_ref)
-```
-
-Equal spelling between a Rule label and an identity never creates identity.
-
-## Module metadata
-
-Module metadata contains exactly these string-valued fields:
-
-```text
-source_stdo_uri
-source_stdo_manifest_sha256
-what_member_set_identity
-build_tenant_identity
-carrier_basis_identity
-representation_profile_identity
-representation_profile_sha256
-consumer_function_identity = "urn:stdo:concept:graph-native-odd:f-p"
-```
-
-The carrier commit and authority tree resolve through `carrier_basis_identity`
-and this accepted profile; they are not rival Product coordinates. The final
-program-content digest and Product identity are intentionally absent from
-`stdo.gtl`: both are issued only after canonical bytes exist and are bound by an
-external candidate/release manifest.
-
-## Closed Product-owned Rule configurations
-
-The common `SemanticAddress`, `SourceLocator`, `AtomClass`, `CrossContext`,
-`ConstraintClass`, and `DeclaredLatitude` nested shapes are incorporated
-unchanged from `REQ-P-REPRESENTATION-ALGEBRA.md`. The common record tag maps to
-`Rule.kind`; the common record `id` maps to the corresponding `*_ref` config
-field, and an atom `id` also maps to `Node.id`. No common field is dropped or
-inferred from `Rule.name`. Configurations are exact carrier schemas:
-
-```text
-AtomConfig = {
-  atom_ref: atom Identity,
-  atom_class: AtomClass,
-  label: non-empty string,
-  semantic_address: SemanticAddress,
-  source_locators: non-empty SourceLocator[]
-}
-
-EdgeConfig = {
-  edge_ref: edge Identity,
-  semantic_address: SemanticAddress,
-  source_ref: Identity,
-  relation_kind_ref: atom Identity,
-  target_ref: Identity,
-  context_ref: atom Identity | null,
-  owner_ref: atom Identity | null,
-  scope_ref: atom Identity | null,
-  cross_context: CrossContext,
-  source_locators: non-empty SourceLocator[]
-}
-
-ConstraintConfig = {
-  constraint_ref: constraint Identity,
-  semantic_address: SemanticAddress,
-  constraint_class: ConstraintClass,
-  statement: non-empty string,
-  applies_to_refs: non-empty Identity[],
-  context_ref: atom Identity | null,
-  owner_ref: atom Identity | null,
-  scope_ref: atom Identity | null,
-  declared_latitude: DeclaredLatitude,
-  source_locators: non-empty SourceLocator[]
-}
-```
-
-An `stdo.atom` Rule corresponds exactly to one Node with
-`Node.id = AtomConfig.atom_ref`, the same label, and the symbolic schema for its
-atom class. There is exactly one atom Rule per Node. There is exactly one edge
-or constraint Rule per edge or constraint identity.
-
-The common Reference-kind Law applies without carrier reinterpretation:
-
-| Config reference | Allowed target |
+| Common element | Carrier realization |
 |---|---|
-| `source_ref`, `target_ref`, `applies_to_refs`, preserved/changed refs | atom `Node.id`, `edge_ref`, or `constraint_ref` |
-| `relation_kind_ref` | Node whose atom Rule has class `relation_kind` |
-| context refs | Node whose atom Rule has class `bounded_context` |
-| owner and decision-owner refs | Node whose atom Rule has class `authority` |
-| scope refs | Node whose atom Rule has class `scope` |
-| refusal and invalidation refs | `constraint_ref` |
-| inverse ref | `edge_ref` |
-| re-entry ref | Node whose atom Rule has an allowed re-entry atom class |
+| `B` and pre-content Product coordinates | `config.m` metadata tuple |
+| `I_B` | `config.i`, the sorted full-identity table |
+| non-identity strings | `config.s`, a sorted, duplicate-free string table |
+| `V_B` | `config.a`, atom tuples using identity and string indexes |
+| `E_B` | `config.e`, typed semantic-edge tuples; never GTL GraphVector topology |
+| `C_B` | `config.c`, passive constraint tuples; never GTL Evaluators |
+| tuple and enumeration meaning | `config.l`, one embedded legend |
 
-Unknown configuration fields, missing fields, wrong tagged configuration,
-duplicate identities, dangling references, wrong-kind references, cross-basis
-references, unlawful nulls, and undeclared latitude refuse structural admission.
+Encoding changes only representation. Decoding reproduces every exact common
+record and its identity. There is no shared carrier-independent serialized IR:
+the build plan and tuple encoding are GTL-tenant HOW, while the common algebra
+remains constitutional WHAT.
 
-## Source-to-program selection
+## CompactSemanticIndexConfig
 
-Construction consumes an exact accepted Semantic Selection Ledger conforming to
-`REQ-P-SELECTION-AND-ACCEPTANCE.md`. Its evaluated-member population equals all
-47 verified Source STDO standards members in installed-manifest order. Its
-retained representation-ref union equals `I_B` exactly.
-
-`F_H` selection retains every source-owned axiom, definition, requirement,
-invariant, prohibition, refusal, and explicit latitude material to governed LLM
-reasoning, plus the identities and relations needed to interpret that law. It
-may omit navigation, prose repetition, examples, templates, schemas, generated
-compression, and non-deciding indexes only through source-addressed ledger rows
-with rationale. Uncertainty is retained as residual truth and cannot be guessed
-away for a smaller token count.
-
-The ledger is external qualification evidence and is not injected into the
-ordinary `F_P` payload. Tenant mechanics perform canonical serialization only
-after the selected declaration set and ledger are frozen and accepted; `F_D`
-may evaluate or prove the resulting declared properties.
-
-## Identity and canonical bytes
-
-Atom, edge, and constraint identities use the common carrier-independent
-identity grammar and RFC 8785 JCS coordinates. GTL does not mint tenant-specific
-substitute identities for them.
-
-The canonical artifact is named `stdo.gtl`. Its bytes are:
+The Rule configuration contains exactly:
 
 ```text
-canonical_program_bytes = JCS(Module) + LF
-program_content_identity = "sha256:" + sha256(canonical_program_bytes)
+CompactSemanticIndexConfig = {
+  k: "stdo.programmatic_semantic_index",
+  v: 1,
+  m: MetadataTuple,
+  l: Legend,
+  s: string[],
+  i: Identity[],
+  a: AtomTuple[],
+  e: EdgeTuple[],
+  c: ConstraintTuple[]
+}
 ```
 
-`JCS` is RFC 8785 over an I-JSON-compatible Module. A raw parser rejects
-duplicate object names before canonicalization. Strings enter JCS without a
-separate Unicode normalization pass. Integers are non-negative safe integers.
-The final LF is byte `0x0a`, is outside the JCS value, and is included in
-`program_content_identity`. A byte-order mark, carriage return, leading byte,
-additional trailing byte, non-canonical escape, or alternate number spelling
-refuses admission.
+`m` has these positional fields:
 
-Nodes sort by `Node.id`. Rules sort by `(Rule.kind, primary_ref)`, where
-`primary_ref` is `atom_ref`, `edge_ref`, or `constraint_ref`. Contexts sort by
-`(name, locator, digest)` and contain exactly the selected Source STDO context.
-Set-valued arrays follow the common unsigned UTF-16 code-unit and SourceLocator
-tuple ordering law; an ordered Source STDO relation preserves
-ledger-declared source order. Parsing and canonical reserialization of admitted
-bytes reproduces the identical bytes and digest.
+```text
+[source_stdo_uri,
+ source_stdo_manifest_sha256,
+ standards_member_set_sha256,
+ what_member_set_identity,
+ build_tenant_identity,
+ carrier_basis_identity,
+ representation_profile_identity,
+ representation_profile_sha256,
+ project_reference_frame_basis_identity,
+ project_reference_frame_basis_sha256,
+ semantic_selection_ledger_identity,
+ semantic_selection_ledger_sha256]
+```
+
+`i` contains every member of `I_B`, once, sorted by ascending unsigned UTF-16
+code units. Every index reference is a non-negative index into `i`. `s`
+contains every other repeated scalar used by an address, locator, label, or
+statement, once under the same ordering. Every string-table reference is a
+non-negative index into `s`.
+
+The legend uses these tuple keys:
+
+```text
+z = [source_key, term, context, authority, scope]
+o = [member_path, member_sha256, fragment]
+a = [id, class, label, address, locators]
+e = [id, address, source, relation, target, context, owner, scope,
+     cross_context, locators]
+c = [id, address, class, statement, applies_to, context, owner, scope,
+     latitude, locators]
+x = [class, source_context, target_context, preserved, changed, refusals,
+     inverse, invalidations]
+y = [function, decision_owner, re_entry]
+```
+
+The legend also embeds the ordered `ak`, `ck`, `xk`, and `fk` code tables copied
+from the common AtomClass, ConstraintClass, CrossContext classification, and
+declared-latitude function vocabularies. A class or function code is its
+zero-based index in the applicable table. Nullable fields remain JSON `null`.
+
+`SemanticAddress.selected_basis` is restored from the first two `m` fields for
+every decoded record. `SourceLocator.basis_uri` is restored from the first `m`
+field. No semantic field is dropped, guessed from a label, or inferred through
+GTL nominal equality. The embedded legend is ordinary Product data and does not
+extend GTL's ontology or validator.
+
+## Canonical order and bytes
+
+Before carrier construction:
+
+- identity and string tables sort by unsigned UTF-16 code units;
+- atom, edge, and constraint rows sort by their full record identities;
+- every reference-set and locator set satisfies the common algebra order;
+- exact Source STDO ordered relations retain ledger-declared source order; and
+- the domain validator rejects duplicate, dangling, wrong-kind, cross-basis,
+  out-of-range, missing, unknown, or non-reversible values.
+
+The frozen GTL typed constructor canonicalizes `ModulePublication`; raw
+admission canonicalizes the equivalent serialized value. The two canonical
+values must be byte-identical before publication validation. The artifact is:
+
+```text
+canonical_index_bytes = RFC8785_JCS(raw_admitted_ModulePublication) + LF
+program_content_identity = "sha256:" + sha256(canonical_index_bytes)
+```
+
+The final LF is byte `0x0a` and participates in the content identity of this
+index encoding. The `program_content_identity` field names the encoded Source
+STDO Symbolic Axiomatic Program; it is not a frozen-GTL `GtlProgram` identity.
+A BOM, CR, leading byte, extra trailing byte, duplicate object name,
+non-canonical escape, unsafe number, or alternate order refuses admission.
+Frozen GTL's raw-admission subject digest addresses the canonical JSON value
+without the framing LF; the build receipt records both identities explicitly.
+
+The final STDO Programmatic Semantic Index Product coordinate and identity are
+issued only after these bytes exist, under `PRODUCT.md#product-identity`.
+Neither final
+identity is embedded back into the carrier.
+
+## Mandatory admission chain
+
+One successful construction executes, in order:
+
+```text
+exact accepted build plan and semantic-selection evidence
+  -> Product-owned typed TypeScript declaration
+  -> frozen GTL modulePublication constructor
+  -> exact canonical serialization
+  -> frozen GTL rawAdmitValue(module_publication)
+  -> frozen GTL rawAdmitValue(catalog_contribution)
+  -> frozen GTL validatePublication
+  -> domain decode/reference/identity checks
+  -> canonical stdo.gtl bytes and receipt
+```
+
+The frozen validator is the only GTL validator. Tenant domain checks operate
+after GTL admission and decide only this Product's compact record contract,
+common identity law, basis equality, and reference-kind law. They neither
+replace nor fork GTL validation.
+
+The replayable conformance probe reacquires the exact frozen commit, verifies
+the 33-member authority tree, builds its TypeScript package, compiles this
+tenant against its published declarations, then runs positive and negative
+admission tests. A locally compatible package, hand-written interface, or
+successful JSON parse is insufficient.
+
+## Construction inputs and authority gates
+
+Production construction consumes:
+
+1. exact Source STDO release and installed manifest;
+2. exact current WHAT member-set identity;
+3. this profile's accepted identity and SHA-256;
+4. an accepted project Reference-Frame Basis;
+5. an exact accepted Semantic Selection Ledger whose retained-reference union
+   equals `I_B`;
+6. the GTL Tenant Toolchain Product's verified publisher-artifact basis; and
+7. tenant-owned build-plan records whose identities, locators, and reference
+   kinds reproduce under the common law.
+
+The CLI admits one JSON `GtlBuildPlan` containing exactly:
+
+```text
+GtlBuildPlan = {
+  kind: "stdo-representation.gtl-build-plan",
+  schema_version: 1,
+  source_stdo: B,
+  what_member_set_identity: Sha256,
+  representation_profile_identity: this profile identity,
+  representation_profile_sha256: Sha256,
+  frame_basis_identity: absolute URI,
+  frame_basis_sha256: Sha256,
+  frame_admitting_authority_refs: URI-reference[],
+  semantic_selection_ledger_identity: SelectionLedgerIdentity,
+  semantic_selection_ledger_sha256: Sha256,
+  profile_acceptance_identity: AuthorityAcceptanceIdentity,
+  frame_basis_acceptance_identity: AuthorityAcceptanceIdentity,
+  selection_acceptance_identity: AuthorityAcceptanceIdentity,
+  publisher: PublisherArtifactBasis,
+  records: non-empty ProgramRecord[]
+}
+```
+
+`frame_admitting_authority_refs` equals the complete applicable Product
+Definition authority set byte-for-byte and in canonical order. The evidence
+bundle supplies the exact installed manifest, profile and frame-basis bytes,
+canonical ledger, three canonical acceptance records, canonical publisher
+manifest, and publisher artifact bytes. Digests or identities in the plan are
+locators to those supplied bytes, not trusted assertions.
+
+Each acceptance is an external, canonical `AuthorityAcceptanceRecord` binding
+the unchanged subject, exact human or bounded-proxy authority and grant,
+evidence, basis, decision, and time. Structural tooling may verify those record
+relations; it cannot invent the actor, grant, or semantic decision.
+
+The Semantic Selection Ledger's evaluated population equals all 47 installed
+standards members in manifest order. Every retained atom, edge, and constraint
+has exactly one retained selection owner. Omission and uncertainty remain
+external qualification evidence and are not paid as routine LLM-context cost.
 
 ## ODD F_P consumption
 
-The ordinary consumer payload is `stdo.gtl`, or a lawful intent/frame projection
-of it, alongside separately acquired invocation inputs:
+The ordinary consumer relation remains:
 
 ```text
 F_P(stdo.gtl, workspace_input, intent, frame, capability_budget)
   -> probabilistic reasoning | hold | gap | refusal
 ```
 
-This is a projection of the complete external ODD traversal contract required
-by `REQ-P-FP-CONSUMPTION.md`. The LLM uses Node identities and semantic edge data
-to navigate the constitution and passive Rules to constrain reasoning. It
-receives no semantic, operation, release, runtime, or closure authority.
+The host also supplies the tuple legend primer when the model cannot reliably
+recover it from `config.l`. The carrier contains no workspace bytes, model
+configuration, prompt wrapper, response, usage price, transcript, GraphVector,
+event, continuation, or runtime truth. Consumption grants no semantic,
+decision, operation, acceptance, publication, release, or closure authority.
 
-No workspace bytes, model configuration, prompt wrapper, response, usage price,
-reasoning transcript, GraphVector, or runtime record is embedded in `stdo.gtl`.
-The host binds and may retain those invocation coordinates separately.
+## Executive context projections
 
-## Executive context projection
+The complete `stdo.gtl` is the immutable parent Product. An authorized
+Executive Context Assignment selects seed identities under
+`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`. The tenant computes the exact least
+closure in decoded common-record space and re-encodes only those rows, with
+fresh minimal `i` and `s` tables and the unchanged basis/profile coordinates.
 
-The complete `stdo.gtl` artifact is the immutable parent program. An authorized
-Executive may select exact Source STDO or downstream project frame activations
-for itself, a Worker, or a Reviewer and request a carrier-native least-closure
-projection under
-`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`. The assignment, workspace evidence,
-actor, capability envelope, grants, and activation records remain external to
-the parent artifact.
+A projected carrier remains a frozen-GTL-admitted passive
+`ModulePublication`, but it is a Context Packet artifact, not a new Product or
+publication authority. Its external Context Projection Manifest binds parent
+Product/content identity, assignment, included and omitted identity sets,
+projected carrier digest, measurement, residuals, and source re-entry routes.
+Repeating an assignment either reproduces the same bytes or returns the
+declared hold. A token budget never removes a mandatory closure member.
 
-A GTL projection shall contain exactly the admitted GTL declarations realizing
-the parent identities in the assignment's least fixed point. It retains the
-same atom, edge, constraint, semantic-address, and SourceLocator identities and
-does not mint projection-local substitutes. The external Context Projection
-Manifest binds the parent Product and content digest, included and omitted sets,
-projected carrier digest, tokenizer coordinates, token count, residuals, and
-source re-entry routes.
+## Measurements and observations
 
-Executive, Worker, and Reviewer packets use the exact Source STDO engagement
-meanings. Executive self-targeting creates no self-grant. Worker projection
-preserves bounded operation and return-to-Executive law. Reviewer projection
-preserves exact-subject acquisition, independence, no-mutation, and
-return-to-Executive law.
+Qualification records exact byte count plus tokenizer identity, tokenizer
+version, token count, price basis, and comparison-population identity for:
 
-This profile does not define a second GTL parser or validator for projections.
-The exact frozen GTL typed declaration, raw admission, and non-lowering
-validation chain remains mandatory. Domain-specific identity-set, closure,
-assignment, and budget checks follow GTL admission and cannot replace it.
+- all 47 raw Source STDO standards members;
+- the released `stdo_compressed.md` prompt projection; and
+- complete and role-projected `stdo.gtl` carriers.
 
-## Construction and qualification surfaces
-
-The Product payload is only `stdo.gtl`. External supporting records are:
-
-- the accepted Semantic Selection Ledger and its exact `F_H` binding;
-- a candidate/release manifest pointing to exact bases, profile, Product
-  identity, and `stdo.gtl` digest;
-- a domain canonical-build receipt and an `F_D` structural-admission receipt;
-- exact Executive Context Assignments and Context Projection Manifests for any
-  role-bound projection used in a qualification observation;
-- exact source-versus-program byte and token measurements; and
-- frozen representative and adversarial `F_P` observations.
-
-These evidence classes do not substitute for one another and are not injected
-into every LLM context by default.
+Only like-for-like declared payloads support a reduction claim. Representative
+and adversarial `F_P` observations may characterize usefulness, navigation,
+holds, and failures; repeated observations do not become deterministic semantic
+proof.
 
 ## Refusals
 
-Construction or structural admission refuses at least:
+Construction or admission refuses at least:
 
-- unverified or cross-basis Source STDO or GTL;
-- an unaccepted profile digest or Semantic Selection Ledger;
-- an incomplete, reordered, or digest-mismatched 47-member evaluated population;
+- unverified, mutable, cross-cut, or mismatched Source STDO or GTL basis;
+- an unaccepted profile, frame basis, or Semantic Selection Ledger;
+- an unverified or placeholder publisher-artifact basis;
+- a missing, reordered, duplicate, or digest-mismatched 47-member ledger
+  population;
 - a retained-reference union unequal to `I_B`;
-- duplicate semantic address or unresolved identity;
-- dangling, wrong-kind, unlawful-null, or cross-basis reference;
-- an atom, edge, or constraint without its exact SourceLocator;
-- lexical or topological semantic equivalence without Source STDO authority;
-- undeclared cross-context meaning or `F_P`/`F_H` latitude;
-- use of `Rule.name` as identity or targeting truth;
-- a semantic edge encoded as GTL GraphVector merely because it is directed;
-- callable, evaluator, HoG, ABG, event, continuation, or runtime-truth content;
-- non-JCS, duplicate-key, non-canonical, or nondeterministic artifact bytes; and
-- a token or usefulness claim lacking its exact comparison coordinates.
+- an unreproducible identity or generated source-key preimage;
+- duplicate, dangling, wrong-kind, unlawful-null, cross-basis, or out-of-range
+  reference;
+- a non-reversible tuple or unknown legend, table, field, or code;
+- semantic equivalence inferred only from spelling or graph shape;
+- a semantic edge encoded as GTL GraphVector topology;
+- callable Program, GraphFunction, evaluator, implementation, closure, HoG,
+  ABG, event, continuation, or runtime-truth content;
+- disagreement between typed declaration and raw admission;
+- a second GTL parser, validator, or lowering surface; and
+- non-canonical bytes or an unbound token/usefulness claim.
 
 ## Acceptance gate
 
-This carrier grants no acceptance to itself. Without an external
-`AuthorityAcceptanceRecord` it is a proposal; with one, these same unchanged
-bytes are the accepted profile. The record identifies this file's exact SHA-256,
-actor identity, authority identity and grant, subject, basis, decision, time,
-and declared `F_H` traversal identity, and authorizes only construction of
-`stdo.gtl`. It does not pre-accept a Semantic Selection Ledger, generated
-program, measurement, probabilistic observation, Product release, or tag.
+This carrier grants no acceptance to itself. Without an external accepted
+`AuthorityAcceptanceRecord`, it remains a proposal. Profile acceptance
+authorizes only construction against these unchanged bytes and exact bases. It
+does not pre-accept a Semantic Selection Ledger, toolchain Product, generated
+index, projection, measurement, probabilistic observation, Product release,
+or tag.

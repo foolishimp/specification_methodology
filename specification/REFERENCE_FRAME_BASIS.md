@@ -38,26 +38,26 @@ accepted declaration.
   `urn:stdo-representation:bounded-context:product`
 - project configuration candidate authored: 2026-08-28
 
-The governed outcome is an immutable, compact graph-and-constraint reasoning
-program for `F_P` LLM consumption over separately supplied workspaces, including
-proportionate role-bound context projections through which an Executive sets
-frames for itself, Workers, and Reviewers. This frame basis governs the source
-project that defines, constructs, reviews, and publishes that Product. It is not
-a reference frame encoded inside Source STDO and is not a per-invocation LLM
-frame activation.
+The governed outcome is an immutable, compact Programmatic Semantic Index of
+the Source STDO Symbolic Axiomatic Program for `F_P` LLM consumption over
+separately supplied workspaces. It includes proportionate role-bound context
+projections through which an Executive sets frames for itself, Workers, and
+Reviewers. This frame basis governs the source project that defines, constructs,
+reviews, and publishes that Product. It is not a reference frame encoded inside
+Source STDO and is not a per-invocation LLM frame activation.
 
 ## Known evaluation inventory
 
 | Evaluation | Material question | Governing owner |
 |---|---|---|
-| `E-PRODUCT` | Is the Product an ODD `F_P` reasoning program rather than a deterministic assessor or embedded runtime? | Intent and Product |
+| `E-PRODUCT` | Is Source STDO bound as a symbolic axiomatic program and the Product as its programmatic semantic index for ODD `F_P`, rather than a deterministic assessor or embedded runtime? | Intent and Product |
 | `E-FUNCTIONS` | Are the exact Source STDO `F_D`, `F_P`, and `F_H` identities and their authority boundaries preserved? | Product and `REQ-P-FP-*` |
 | `E-BASIS` | Are Source STDO, WHAT, tenant, carrier, profile, and content identities exact and non-cyclic? | Product identity and `REQ-P-BASIS-*` |
 | `E-GRAPH` | Is the common representation a closed pure graph plus passive constraints with conserved source meaning? | `REQ-P-ALG-*` |
-| `E-CONSUMER` | Can an LLM consume the program with a workspace, intent, frame, and budget without receiving false authority? | `REQ-P-FP-*` |
+| `E-CONSUMER` | Can an LLM consume the index with a workspace, intent, frame, and budget without receiving false authority? | `REQ-P-FP-*` |
 | `E-CONTEXT` | Can an authorized Executive produce a reconstructable, role-bound, least-closure packet for itself, a Worker, or a Reviewer without silent omission or authority collapse? | `REQ-P-CONTEXT-*` and Source STDO frame law |
 | `E-SELECTION` | Does durable `F_H` evidence bind the evaluated Source STDO population and every retained, omitted, or uncertain selection? | `REQ-P-SELECT-*` |
-| `E-CARRIER` | Does a tenant realize the common program directly and lawfully in its exact carrier? | accepted tenant design and carrier authority |
+| `E-CARRIER` | Does a tenant realize the common index directly and lawfully in its exact carrier? | accepted tenant design and carrier authority |
 | `E-COST` | Are byte, token, and cost reductions measured on exact comparable payloads? | `REQ-P-VERIFY-*` |
 | `E-ASSURANCE` | Is the exact candidate independently reviewable, and are uncertainty and counterexamples visible to acceptance authority? | Product authority and selected STDO assurance law |
 
@@ -69,7 +69,7 @@ material evaluation triggers the revision law below.
 ### `urn:stdo-representation:frame:product-boundary`
 
 - Evaluation: `E-PRODUCT`.
-- Intent: preserve the `F_P` program boundary and prevent assessment/runtime
+- Intent: preserve the `F_P` programmatic-index boundary and prevent assessment/runtime
   scope from entering the Product.
 - Required capability: read exact Intent, Product, requirements, and consumer
   terminology; distinguish `F_P`, `F_D`, and `F_H` authority.
@@ -98,7 +98,7 @@ material evaluation triggers the revision law below.
 - Required capability: resolve the installed release and carrier objects,
   reproduce manifests/digests, and reason over identity issuance order.
 - Evidence: Product Definition, installed manifest, carrier basis, canonical
-  program bytes, and one-way records referencing Product identity.
+  index bytes, and one-way records referencing Product identity.
 - Semantic and decision authority: Source STDO, Product identity requirements,
   and human Product acceptance.
 
@@ -110,7 +110,7 @@ material evaluation triggers the revision law below.
   meaning.
 - Required capability: semantic and graph-model analysis across the complete
   affected Source STDO span and common algebra.
-- Evidence: source clauses, program declarations, source routes, and explicit
+- Evidence: source clauses, index declarations, source routes, and explicit
   adversarial seams such as equal spelling across contexts.
 - Semantic authority: Source STDO. Evaluation authority: the applicable
   requirement owner. The frame cannot repair source ambiguity.
@@ -119,11 +119,11 @@ material evaluation triggers the revision law below.
 
 - Evaluations: `E-CONSUMER` and the probabilistic part of `E-COST`.
 - Intent: observe whether a capable LLM can reason over workspace inputs using
-  the program at lower context cost while respecting declared constraints.
+  the index at lower context cost while respecting declared constraints.
 - Required capability: an `F_P` model with sufficient context, instruction
   following, semantic disambiguation, graph reasoning, and source-route use,
   plus a host capable of binding the complete ODD traversal contract.
-- Evidence: exact program/workspace/intent/frame/model coordinates, target,
+- Evidence: exact index/workspace/intent/frame/model coordinates, target,
   gates, provenance, stop states, and retained outputs from representative and
   adversarial trials.
 - Evaluation result: probabilistic observation with uncertainty and
@@ -137,7 +137,7 @@ material evaluation triggers the revision law below.
 - Intent: verify direct lawful realization in one exact carrier without a
   private dialect, rival authority, shared serialized IR, or runtime expansion.
 - Required capability: complete knowledge of the selected carrier authority and
-  the common program algebra.
+  the common programmatic-index algebra.
 - Evidence: accepted profile, canonical artifact, carrier validation, and exact
   mapping from `I_B`, `V_B`, `E_B`, and `C_B`.
 - Operation authority: the accepted tenant work ticket and design only.
@@ -148,12 +148,12 @@ material evaluation triggers the revision law below.
   `E-COST`.
 - Intent: preserve Source STDO frame selection, activation, capability,
   authority, evidence, independence, stop, and return relations while deriving
-  the least declared program closure that fits one target actor's context.
+  the least declared index closure that fits one target actor's context.
 - Required capability: resolve exact Executive, Worker, Reviewer, frame,
-  activation, actor, grant, parent-program, tokenizer, and closure identities;
+  activation, actor, grant, parent-index, tokenizer, and closure identities;
   compute graph fixed points and distinguish role access from role authority.
 - Evidence: Executive Context Assignment, exact selected frame carriers,
-  parent program, Context Projection Manifest, carrier admission, identity-set
+  parent index, Context Projection Manifest, carrier admission, identity-set
   equality, token measurement, holds, and source re-entry routes.
 - Operation authority: context assembly uses the consuming host's existing
   bounded operation grant. The frame creates no construction or mutation grant.
@@ -169,7 +169,7 @@ material evaluation triggers the revision law below.
 - Required capability: read every exact Source STDO standards member, author
   source-addressed declarations and omission rationale, record residual
   uncertainty, and distinguish `F_H` decision from `F_D` shape validation.
-- Evidence: exact Semantic Selection Ledger, Source STDO manifest, program
+- Evidence: exact Semantic Selection Ledger, Source STDO manifest, index
   identity universe, authority identity and grant, and acceptance record.
 - Decision authority: the exact `F_H` actor and grant named by the ledger;
   structural validation checks coordinates but cannot accept semantic choices.
@@ -249,11 +249,11 @@ releases the resulting Product.
 | `E-FUNCTIONS` | traversal-function-integrity, product-boundary, independent-assurance | revised binding awaits exact frame/profile review |
 | `E-BASIS` | basis-and-identity, independent-assurance | no released Product identity exists |
 | `E-GRAPH` | graph-and-constraint-fidelity, independent-assurance | GTL mapping is proposed, not accepted |
-| `E-CONSUMER` | fp-consumption, independent-assurance | no constructed program or frozen workspace trial exists |
-| `E-CONTEXT` | executive-context-projection, traversal-function-integrity, independent-assurance | no accepted parent program, assignment, or projected packet exists |
+| `E-CONSUMER` | fp-consumption, independent-assurance | no constructed index or frozen workspace trial exists |
+| `E-CONTEXT` | executive-context-projection, traversal-function-integrity, independent-assurance | no accepted parent index, assignment, or projected packet exists |
 | `E-SELECTION` | semantic-selection, independent-assurance | no accepted Semantic Selection Ledger exists |
 | `E-CARRIER` | carrier-realization, independent-assurance | GTL is proposed; JSON Schema basis is unselected |
-| `E-COST` | compression-measurement, fp-consumption, independent-assurance | no canonical program bytes exist to measure |
+| `E-COST` | compression-measurement, fp-consumption, independent-assurance | no canonical index bytes exist to measure |
 | `E-ASSURANCE` | independent-assurance | pre-construction constitutional/profile review is active; post-construction Product-candidate review has no subject yet |
 
 These residuals prevent claims that depend on missing evidence. They do not
@@ -283,7 +283,7 @@ This configuration is invalidated or requires revision when any of these change
 materially:
 
 - selected STDO or Reference Frame Method basis;
-- Product intent, traversal-function binding, `F_P` consumer, program boundary,
+- Product intent, traversal-function binding, `F_P` consumer, index boundary,
   or authority allocation;
 - graph-and-constraint algebra or identity issuance law;
 - selected carrier basis or accepted representation profile;

@@ -8,17 +8,18 @@ WHAT; carrier realization and prompt assembly are owned by each build tenant or
 external consuming host
 
 Derives from: `../INTENT.md#desired-outcomes`,
-`../PRODUCT.md#product-terms`, `../PRODUCT.md#program-boundary`,
+`../PRODUCT.md#product-terms`, `../PRODUCT.md#programmatic-index-boundary`,
 `REQ-P-REPRESENTATION-ALGEBRA.md#closed-algebra`,
 `REQ-P-FP-CONSUMPTION.md#external-traversal-contract`, and exact Source STDO
 `REFERENCE_FRAME_METHOD.md` and `STDO_REFERENCE_FRAME_BASELINE.md`
 
 ## Purpose
 
-Define how an authorized Executive uses an STDO Reasoning Program to set a
-finite reference-frame configuration and provide proportionate constitutional
-context to itself, a Worker, or a Reviewer. The result is a role-bound context
-packet derived from one immutable parent program. It is not a second
+Define how an authorized Executive uses an STDO Programmatic Semantic Index to
+set a finite reference-frame configuration and provide proportionate
+constitutional context to itself, a Worker, or a Reviewer. The result is a
+role-bound context packet derived from one immutable parent index Product. It is
+not a second
 constitution, a universal prompt, a deterministic semantic assessor, or an
 embedded frame runtime.
 
@@ -146,10 +147,14 @@ member of `I_B`. At least one mandatory ref per activation targets an atom in
 by the accepted Semantic Selection Ledger to the exact selected Source STDO
 engagement-role clause.
 
+The `program_*` and `*_program_refs` field names address the indexed encoding of
+the Source STDO Symbolic Axiomatic Program; they do not identify a frozen-GTL
+`GtlProgram`.
+
 `maximum_projection_tokens + reserved_non_program_tokens` shall not exceed
 `model_context_limit_tokens`. The reservation covers workspace, host
 instructions, activation material, and other non-program input. A changed
-tokenizer, configuration, reservation, model limit, parent program, frame,
+tokenizer, configuration, reservation, model limit, parent index, frame,
 actor, outcome, evaluation, grant, or workspace basis creates a new assignment.
 `supersedes` may name only an older assignment for the same parent/subject
 relation and shall not create a self-reference or cycle.
@@ -158,9 +163,9 @@ The assignment binds an already-declared Reference Frame Method activation. It
 does not replace the complete activation record or mint its frame, authority,
 capability, operation, decision, or evidence meaning.
 
-## Least declared program closure
+## Least declared index closure
 
-For assignment `A`, the program seed set is:
+For assignment `A`, the index seed set is:
 
 ```text
 Z(A) = union(
@@ -170,7 +175,7 @@ Z(A) = union(
 )
 ```
 
-`Z(A)` shall be non-empty. The projected program is the unique least fixed
+`Z(A)` shall be non-empty. The projected index is the unique least fixed
 point:
 
 ```text
@@ -178,7 +183,7 @@ P_A = least_closure(P_B, Z(A), L_context)
 ```
 
 Each `mandatory_program_refs` set is the frame authority's explicit declaration
-of the program records material to that activation. `role_program_refs` is the
+of the index records material to that activation. `role_program_refs` is the
 corresponding exact Source STDO engagement-role set. Selecting semantic
 materiality is therefore an authorized frame decision, not a hidden graph walk.
 
@@ -215,7 +220,7 @@ Executive names it in `explicit_program_seed_refs`; no member of the fixed point
 may be removed to meet a token budget.
 
 This is token-minimal only relative to one frozen assignment, seed set, parent
-program, and closure law. It does not claim that one globally smallest or
+index, and closure law. It does not claim that one globally smallest or
 semantically unique frame set exists. Source STDO frame-set authority may
 lawfully retain overlap or additional frames for risk reduction, independent
 activation, actor fit, or failure detection.
@@ -256,7 +261,7 @@ ContextProjectionIdentity =
 
 The included set equals exactly `ids(P_A)`. The omitted set equals exactly
 `I_B - ids(P_A)`. Both digests are independently reproduced from their sorted
-sets; counts and set relations are checked against the exact parent program.
+sets; counts and set relations are checked against the exact parent index.
 The token count is reproduced with the tokenizer identity, version, and
 configuration bound by the assignment and does not exceed
 `maximum_projection_tokens`. A manifest is not issued for a budget or
@@ -272,7 +277,8 @@ A **Context Packet** is the consumer-selected bundle of:
 - required externally owned evidence selected for the activation; and
 - explicit stop, refusal, residual, and source re-entry routes.
 
-The packet is an invocation input, not a new STDO Reasoning Program Product.
+The packet is an invocation input, not a new STDO Programmatic Semantic Index
+Product.
 Workspace evidence, prompt assembly, model configuration, reasoning output,
 HoG execution, and ABG runtime truth remain external. Qualification and replay
 records may retain the complete packet, but an ordinary consumer need not pay
@@ -298,7 +304,7 @@ material law merely because the same actor selected the packet.
 
 A Worker packet carries the exact authorized outcome and sufficient execution
 intake, selected engagement and specialist frames, affected-boundary and
-authority constraints represented by the program, inherited operation grants,
+authority constraints represented by the index, inherited operation grants,
 required evidence, stop and re-entry conditions, and the closed return route to
 Executive. It grants no admission, publication, acceptance, continuation, or
 next-frame authority.
@@ -336,7 +342,7 @@ closure authority.
 
 **REQ-P-CONTEXT-001**: An Executive shall set context for itself, a Worker, or a
 Reviewer only through an exact Executive Context Assignment binding the parent
-program, workspace subject and basis, outcome, intent, engagement role, target
+index, workspace subject and basis, outcome, intent, engagement role, target
 actor and capability, selected frame activations, authority and grant, evidence,
 stop states, and token budget.
 
@@ -345,7 +351,7 @@ existing frame-set authority and grant it records. An ungranted LLM suggestion,
 persona label, repository role, or prior assignment is a proposal and shall not
 activate work.
 
-**REQ-P-CONTEXT-003**: The projected program shall equal the least fixed point
+**REQ-P-CONTEXT-003**: The projected index shall equal the least fixed point
 of the declared structural reference closure over the exact authorized seed
 set. A dangling reference, missing applicable constraint, unresolved mandatory
 or role ref, unresolved frame, or unequal included set refuses admission.
@@ -372,7 +378,7 @@ re-entering the owning Product relation.
 
 **REQ-P-CONTEXT-007**: Executive, Worker, and Reviewer packets shall preserve
 their distinct Source STDO authority, evidence, result, independence, stop, and
-return relations. Equal access to the same parent program shall not collapse
+return relations. Equal access to the same parent index shall not collapse
 their roles.
 
 **REQ-P-CONTEXT-008**: An Executive self-packet shall not self-grant authority,
@@ -397,12 +403,12 @@ evaluate or prove only its declared deterministic properties; `F_P` performs
 bounded probabilistic reasoning; and `F_H` selects or accepts only under its
 exact grant. No function may absorb another function's authority.
 
-**REQ-P-CONTEXT-013**: A changed parent program, assignment, frame revision,
+**REQ-P-CONTEXT-013**: A changed parent index, assignment, frame revision,
 workspace basis, actor capability, grant, evidence population, tokenizer,
 budget, projection carrier, or closure result invalidates the earlier packet
 for claims dependent on that coordinate.
 
 **REQ-P-CONTEXT-014**: A host unable to reacquire the exact assignment, selected
-frames, parent program, projection bytes, required evidence, or source re-entry
+frames, parent index, projection bytes, required evidence, or source re-entry
 routes shall refuse reconstructable activation rather than depend on hidden
 conversation or ambient memory.

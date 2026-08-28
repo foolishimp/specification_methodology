@@ -1,4 +1,4 @@
-# REQ-P-BASIS-AND-IDENTITY — Basis And Program Identity
+# REQ-P-BASIS-AND-IDENTITY — Basis And Index Identity
 
 Family: `REQ-P-BASIS-*`
 Status: Active
@@ -11,9 +11,9 @@ Derives from: `../PRODUCT.md#product-identity`,
 
 ## Purpose
 
-Bind each reusable reasoning program to exact immutable source, Product, tenant,
-carrier, profile, and content coordinates without making a workspace invocation
-or qualification record part of program identity.
+Bind each reusable Programmatic Semantic Index Product to exact immutable
+source, Product, tenant, carrier, profile, and content coordinates without
+making a workspace invocation or qualification record part of index identity.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ Source STDO authority.
 
 **REQ-P-BASIS-002**: Construction shall verify every member of the selected
 manifest's complete `standards.members` inventory in declared order and against
-its declared digest before deriving program content. Auxiliary release assets
+its declared digest before deriving index content. Auxiliary release assets
 remain non-semantic unless Source STDO assigns them another role.
 
 **REQ-P-BASIS-003**: Every representation profile shall bind one exact build
@@ -58,8 +58,12 @@ object shall use the exact ordering and canonicalization defined by
 `PRODUCT.md#product-identity`:
 
 ```text
-program_content_identity = sha256(canonical_program_bytes)
+program_content_identity = sha256(canonical_index_bytes)
 ```
+
+`program_content_identity` names the canonical encoding of the Source STDO
+Symbolic Axiomatic Program. It does not identify or imply a frozen-GTL
+`GtlProgram`.
 
 The immutable `urn:stdo-representation:product:sha256:<digest>` identity then
 binds exact Source STDO, Product WHAT, tenant, carrier basis, representation
@@ -70,16 +74,16 @@ acceptance, release, and invocation records shall point to the Product identity.
 The Product identity shall not include the identities or digests of records that
 can exist only after that Product has been constructed.
 
-The canonical program may embed the pre-content Product coordinates. It shall
+The canonical index may embed the pre-content Product coordinates. It shall
 not embed its own final content digest or Product identity. The release manifest
-binds those values after canonical program bytes exist.
+binds those values after canonical index bytes exist.
 
 **REQ-P-BASIS-009**: A workspace input, reasoning intent, selected invocation
 frame, model, prompt, response, token price, and usage record are invocation
-coordinates. They shall not alter or substitute for reasoning-program Product
-identity.
+coordinates. They shall not alter or substitute for Programmatic Semantic Index
+Product identity.
 
-**REQ-P-BASIS-010**: No tenant program, carrier type, generated graph identity,
+**REQ-P-BASIS-010**: No tenant index, carrier type, generated graph identity,
 constraint, source map, validation result, or LLM response shall become a second
 Source STDO authority. Source-owned meaning remains reachable through exact
 semantic addresses.

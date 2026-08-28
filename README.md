@@ -1,8 +1,10 @@
 # STDO Representation
 
-STDO Representation compiles an exact STDO release into compact, traceable
-graph-and-constraint programs for Outcome-Driven Development probabilistic LLM
-(`F_P`) traversal over separately supplied workspaces.
+STDO Representation treats an exact STDO release as a **Symbolic Axiomatic
+Program** expressed by its authoritative documents and compiles it into a
+compact, traceable **Programmatic Semantic Index** for Outcome-Driven
+Development probabilistic LLM (`F_P`) traversal over separately supplied
+workspaces.
 
 The primary goal is lower context, token, and consumption cost without losing
 the identities, authorities, bounded contexts, relations, constraints, and
@@ -12,26 +14,29 @@ source routes needed for governed reasoning.
 
 ```text
 exact Source STDO
-  -> carrier-native graph + constraints
-  -> STDO reasoning program
+  -> symbolic identities + typed relations + passive constraints
+  -> carrier-native programmatic semantic index
 
-F_P(reasoning program, workspace, intent, frame, context budget)
+F_P(programmatic index, workspace, intent, frame, context budget)
   -> probabilistic reasoning | hold | gap | refusal
 ```
 
 An authorized Executive may first derive a role-bound packet from the same
-immutable program:
+immutable index:
 
 ```text
-STDO reasoning program + outcome + actor + frames + capability + token budget
+STDO programmatic index + outcome + actor + frames + capability + token budget
   -> Executive | Worker | Reviewer context packet
   -> F_P traversal over separately supplied workspace evidence
 ```
 
 `F_D`, `F_P`, and `F_H` retain their exact Source STDO meanings as the
 fundamental deterministic, probabilistic, and human functions of the ODD
-traversal architecture. The Product constrains an LLM; it does not make semantic
-reasoning deterministic or grant the LLM authority. Tenant or host domain HOW
+traversal architecture. The Product is a programmatic semantic index, not a
+frozen-GTL executable `GtlProgram`, vector database, or replacement for the
+Source STDO documents. The LLM is its bounded probabilistic interpreter. The
+Product constrains an LLM; it does not make semantic reasoning deterministic or
+grant the LLM authority. Tenant or host domain HOW
 constructs, serializes, and measures carriers and projections; `F_D` evaluates
 or proves declared deterministic properties of those results. `F_H` owns
 semantic selection, authorized frame assignment, and acceptance under an
@@ -59,9 +64,9 @@ The constitutional WHAT owns:
 
 Independent build tenants own direct HOW realizations:
 
-- `build_tenants/gtl/` produces the GTL program `stdo.gtl`;
+- `build_tenants/gtl/` produces the GTL index carrier `stdo.gtl`;
 - `build_tenants/json_schema/` may produce a canonical JSON graph-and-constraint
-  program after an exact JSON Schema dialect is selected.
+  index after an exact JSON Schema dialect is selected.
 
 No tenant may redefine common meaning, import the other tenant as an
 intermediate representation, or turn structural validation into deterministic
@@ -75,8 +80,11 @@ SHA-256 `312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551`.
 The [GTL tenant](build_tenants/gtl/design/GTL_BASIS.md) selects frozen GTL at
 commit `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`. Its
 [STDO.gtl profile](build_tenants/gtl/design/GTL_REPRESENTATION_PROFILE.md) is
-proposed and awaits exact digest-bound acceptance. The JSON Schema tenant has
-not selected a dialect. Neither tenant has a constructed or released program.
+proposed and awaits exact digest-bound acceptance. Its typed passive
+`ModulePublication`, raw-admission path, frozen GTL validation, compact indexed
+encoding, and negative domain tests are implemented. The JSON Schema tenant
+has not selected a dialect. Neither tenant has a production-constructed or
+released index Product.
 
 The project [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md) is
 also an exact proposal pending an external `F_H` acceptance record. The overlay
@@ -93,7 +101,7 @@ Read the project surfaces in this order:
 4. [`specification/requirements/`](specification/requirements/)
 5. [`specification/REFERENCE_FRAME_BASIS.md`](specification/REFERENCE_FRAME_BASIS.md)
 6. the selected tenant's `design/` surface
-7. the selected tenant's program artifact, once authorized
+7. the selected tenant's index artifact, once authorized
 
 The layout-neutral Product Definition is
 [`stdo_representation.json`](stdo_representation.json).
@@ -106,6 +114,7 @@ stdo status --definition stdo_representation.json --verify
 stdo bootstrap --definition stdo_representation.json --dry-run
 python3 scripts/check_constitution.py
 python3 -m unittest discover -s scripts -p 'test_*.py' -v
+python3 scripts/test_frozen_gtl_tenant.py
 ```
 
 These checks prove the selected installation, routing, source-project metadata,

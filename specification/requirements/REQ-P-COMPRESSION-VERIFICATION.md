@@ -25,7 +25,7 @@ by the candidate Product coordinates.
 **REQ-P-VERIFY-002**: The source-addressed semantic declaration set and accepted
 Semantic Selection Ledger shall be frozen before carrier serialization.
 Repeating canonical serialization and structural construction over that
-identical set and the same exact bases/profile shall reproduce identical program
+identical set and the same exact bases/profile shall reproduce identical index
 bytes and content digest. Tenant domain HOW performs that construction after
 `F_H` semantic authorship; `F_D` may evaluate or prove its declared
 reproducibility, canonicalization, identity, and admission properties. The
@@ -38,11 +38,11 @@ language law. It shall not claim that the ledger's semantic decisions or one LLM
 response are uniquely correct.
 
 **REQ-P-VERIFY-004**: A release record shall bind the resulting Product identity,
-canonical program digest, accepted selection-ledger identity, construction
+canonical index digest, accepted selection-ledger identity, construction
 procedure, structural-validation result, and exact measurement records without
 entering those post-construction records back into Product identity.
 
-**REQ-P-VERIFY-005**: Byte measurements shall bind exact Source STDO and program
+**REQ-P-VERIFY-005**: Byte measurements shall bind exact Source STDO and index
 inventories, inclusion rules, encoding, normalization, and counting procedure.
 
 **REQ-P-VERIFY-006**: Token measurements shall additionally bind exact tokenizer
@@ -52,15 +52,16 @@ be compared as though they were one measurement.
 
 **REQ-P-VERIFY-007**: Cost estimates shall bind the measured token counts, exact
 price schedule and currency, date or immutable price source, and calculation.
-Price movement changes the estimate, not the reasoning-program Product.
+Price movement changes the estimate, not the Programmatic Semantic Index
+Product.
 
 **REQ-P-VERIFY-008**: Compression reporting shall compare like-for-like consumer
 payloads: the complete Source STDO material otherwise supplied to the LLM versus
-the selected complete program or named projection. It shall report raw bytes,
+the selected complete index or named projection. It shall report raw bytes,
 tokens, ratios, and the material excluded from either payload.
 
 **REQ-P-VERIFY-009**: Probabilistic usefulness shall be observed with frozen
-workspace tasks, intents, frames, source/program payload identities, model and
+workspace tasks, intents, frames, source/index payload identities, model and
 configuration, context budgets, and retained outputs. Results characterize an
 `F_P` consumer; they are not a deterministic assessment disposition.
 

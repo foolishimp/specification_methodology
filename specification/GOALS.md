@@ -1,18 +1,18 @@
 # STDO Representation Goals
 
-## GOAL-001 — Establish the carrier-neutral F_P reasoning-program project
+## GOAL-001 — Establish the carrier-neutral F_P semantic-index project
 
 Status: active
 
 Establish the constitutional WHAT, exact source basis, independent build-tenant
-boundaries, and acceptance gates for compact graph-and-constraint programs used
-by probabilistic LLM consumers.
+boundaries, and acceptance gates for programmatic semantic indexes of the STDO
+Symbolic Axiomatic Program used by probabilistic LLM consumers.
 
 ### Current selection
 
 - Use `../stdo_representation.json` as the Product Definition overlay.
 - Govern the source project with exact STDO cut `v2.4.3-rc.3`.
-- Define one closed carrier-neutral graph-and-constraint algebra.
+- Define one closed carrier-neutral programmatic-index algebra.
 - Bind Source STDO's exact `F_D`, `F_P`, and `F_H` identities as the fundamental
   deterministic, probabilistic, and human functions around the representation;
   the primary payload consumer is an external `F_P` LLM traversal over a
@@ -24,7 +24,7 @@ by probabilistic LLM consumers.
 - Define an Executive Context Assignment and least-closure projection contract
   for proportionate Executive, Worker, and Reviewer context packets.
 - Register GTL and JSON Schema as independent HOW tenants.
-- Keep tenant profiles, concrete programs, and releases unselected until their
+- Keep tenant profiles, concrete indexes, and releases unselected until their
   exact designs are separately reviewed and accepted.
 - Keep deterministic workspace assessment and embedded HoG/ABG execution
   outside the Product payload while preserving the external ODD traversal
@@ -35,12 +35,13 @@ by probabilistic LLM consumers.
 - The Product Definition validates and verifies against its exact installed
   STDO basis.
 - The project binds a conforming accepted reference-frame basis.
-- Intent, Product, and requirements consistently define a reusable ODD `F_P`
-  reasoning program, its surrounding `F_D/F_H` authority boundaries, and its
-  external traversal contract rather than a carrier assessment bundle.
+- Intent, Product, and requirements consistently define Source STDO as a
+  symbolic axiomatic program and the reusable Product as its programmatic
+  semantic index, with surrounding `F_D/F_H` authority boundaries and an
+  external `F_P` traversal contract rather than a carrier assessment bundle.
 - The algebra is a closed identity, graph, and passive-constraint contract with
   no open identity domain or assessment residual domain.
-- Program identity is content-first and cannot cycle through later evidence,
+- Index Product identity is content-first and cannot cycle through later evidence,
   acceptance, or invocation records.
 - Semantic selection is durably recorded and accepted under `F_H`; it is not
   inferred from successful structural validation.
@@ -59,7 +60,7 @@ by probabilistic LLM consumers.
 Status: active
 
 Define, accept, construct, and measure the first canonical GTL realization of
-the STDO graph-and-constraint program against the exact frozen GTL basis.
+the STDO Programmatic Semantic Index against the exact frozen GTL basis.
 
 ### Current selection
 
@@ -67,8 +68,10 @@ the STDO graph-and-constraint program against the exact frozen GTL basis.
 - Support exact carrier-native projections of `stdo.gtl` for authorized
   Executive, Worker, and Reviewer context assignments without changing the
   parent Product.
-- Map common semantic atoms to identity-bearing GTL nodes, semantic relations
-  to passive typed declarations, and constraints to passive GTL rules.
+- Map the complete common identity table, semantic atoms, semantic relations,
+  and passive constraints reversibly into one compact indexed GTL Rule
+  configuration. Frozen GTL Nodes remain confined to callable GraphFunctions
+  and therefore do not enter this passive Product.
 - Target direct ODD `F_P` LLM traversal; use `F_D` only for declared structural
   properties and never as a semantic evaluator.
 - Do not reinterpret arbitrary semantic relations as GTL traversal edges.
@@ -90,5 +93,5 @@ the STDO graph-and-constraint program against the exact frozen GTL basis.
 - Exact byte and token measurements demonstrate the achieved context reduction.
 - Frozen `F_P` observations exercise representative and adversarial workspace
   reasoning without claiming deterministic semantic closure.
-- The Product payload contains only the graph, constraints, minimal basis
+- The Product payload contains only the symbolic index, constraints, minimal basis
   coordinates, and source routes required by the LLM consumer.

@@ -1,4 +1,4 @@
-# REQ-P-FP-CONSUMPTION — ODD Probabilistic LLM Traversal
+# REQ-P-FP-CONSUMPTION — ODD Probabilistic Index Consumption
 
 Family: `REQ-P-FP-*`
 Status: Active
@@ -8,14 +8,16 @@ invocation realization are owned by each build tenant or external host
 
 Derives from: `../INTENT.md#consumer-relation`,
 `../PRODUCT.md#fundamental-traversal-function-binding`,
-`../PRODUCT.md#program-boundary`,
+`../PRODUCT.md#programmatic-index-boundary`,
 `../PRODUCT.md#product-authority`
 
 ## Purpose
 
-Define direct LLM use of an STDO Reasoning Program as the probabilistic function
-of Source STDO's fundamental ODD traversal architecture without turning that
-reasoning into deterministic assessment or runtime truth.
+Define direct LLM use of an STDO Programmatic Semantic Index as the
+probabilistic function of Source STDO's fundamental ODD traversal architecture.
+The LLM is a bounded probabilistic interpreter of the represented STDO Symbolic
+Axiomatic Program; it does not execute a GTL `GtlProgram` or turn reasoning into
+deterministic assessment or runtime truth.
 
 ## Exact function identities
 
@@ -36,7 +38,7 @@ For this Product, the traversal-function allocation is:
 | Function | Bounded role | Forbidden substitution |
 |---|---|---|
 | `F_D` | evaluation or proof of declared deterministic basis, identity, structural-admission, closure, and measurement properties | constructor mechanics, semantic selection, probabilistic judgment, human acceptance |
-| `F_P` | one bounded LLM traversal over a reasoning program and its separately bound invocation inputs | structural or closure truth, semantic authority, acceptance |
+| `F_P` | one bounded LLM traversal over a programmatic semantic index and its separately bound invocation inputs | structural or closure truth, semantic authority, acceptance |
 | `F_H` | semantic selection, explicit ambiguity adjudication, and acceptance under an exact human or bounded-proxy grant | ambient authority, hidden worker strategy, deterministic proof |
 
 ## External traversal contract
@@ -61,15 +63,16 @@ stop states         = hold | gap | refusal | continuation | completion
 ```
 
 The consuming host owns this invocation contract and any execution realization.
-The immutable reasoning program supplies graph and constraint input; it neither
+The immutable semantic index supplies graph and constraint input; it neither
 executes the traversal nor admits its output.
 
 ## Requirements
 
 **REQ-P-FP-001**: The primary Product consumer shall be an LLM bound to exact
-Source STDO concept `urn:stdo:concept:graph-native-odd:f-p`. The program shall be
-optimized to provide that consumer with STDO graph structure and constraints at
-materially lower context cost than the complete Source STDO documents.
+Source STDO concept `urn:stdo:concept:graph-native-odd:f-p`. The programmatic
+semantic index shall be optimized to provide that consumer with STDO graph
+structure and constraints at materially lower context cost than the complete
+Source STDO documents.
 
 **REQ-P-FP-002**: Every invocation claimed as `F_P` shall bind one complete
 external traversal contract containing one declared ODD vector or edge-traversal
@@ -85,28 +88,28 @@ An Executive-, Worker-, or Reviewer-targeted invocation shall additionally bind
 the exact Executive Context Assignment and Context Projection Manifest required
 by `REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`.
 
-**REQ-P-FP-004**: The complete reasoning program shall be reusable across
+**REQ-P-FP-004**: The complete semantic index shall be reusable across
 workspaces and invocations. A workspace path, snapshot, prompt, model, response,
-or price shall not be embedded as program semantic truth or alter Product
+or price shall not be embedded as index semantic truth or alter Product
 identity.
 
-**REQ-P-FP-005**: The LLM shall receive graph topology and applicable passive
-constraints as governing context. The Product shall not prescribe a hidden
-chain of thought, prompt tactic, business priority, solution sequence, or
-deterministic semantic algorithm.
+**REQ-P-FP-005**: The LLM shall receive exact index topology and applicable
+passive constraints as governing context. The Product shall not prescribe a
+hidden chain of thought, prompt tactic, business priority, solution sequence,
+or deterministic semantic algorithm.
 
-**REQ-P-FP-006**: The program shall preserve enough source identity, authority,
+**REQ-P-FP-006**: The index shall preserve enough source identity, authority,
 bounded-context, scope, basis, provenance, dependency, and refusal structure for
 an `F_P` consumer to distinguish materially different lawful interpretations.
 
 **REQ-P-FP-007**: A bounded projection may be consumed instead of the complete
-program only when it declares its intent, frame, budget, included closure, and
+index only when it declares its intent, frame, budget, included closure, and
 exact routes to omitted Source STDO material. A consumer shall not treat a
 projection as authority outside that boundary. Role-bound projection shall use
 the exact least-closure and assignment contract of
 `REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`.
 
-**REQ-P-FP-008**: When program declarations explicitly leave a decision
+**REQ-P-FP-008**: When index declarations explicitly leave a decision
 underdetermined, the `F_P` consumer may reason within that latitude and shall
 retain the declared owner or re-entry route. An undeclared gap shall not be
 treated as creative latitude.
@@ -115,15 +118,15 @@ treated as creative latitude.
 analysis, proposed actions, diagnoses, questions, holds, gaps, refusals, or
 source-addressed findings, but it shall not claim semantic, operation,
 acceptance, release, runtime, or closure authority merely because it consumed
-the program.
+the index.
 
-**REQ-P-FP-010**: The reasoning-program Product shall not embed or own HoG
-execution, ABG runtime admission, an event log, a deterministic evaluator, or a
-runtime continuation surface. An external consuming Product may bind those
+**REQ-P-FP-010**: The Programmatic Semantic Index Product shall not embed or own
+HoG execution, ABG runtime admission, an event log, a deterministic evaluator,
+or a runtime continuation surface. An external consuming Product may bind those
 roles under its own authority; their absence from the payload does not remove
 the required ODD traversal contract.
 
-**REQ-P-FP-011**: `F_D` structural checks may admit exact program properties but
+**REQ-P-FP-011**: `F_D` structural checks may admit exact index properties but
 shall not replace `F_P` judgment. `F_H` may select or accept an exact subject
 under a declared grant but shall not claim that human presence deterministically
 proves semantic completeness. Every durable `F_D` receipt or `F_H` decision
@@ -134,6 +137,6 @@ Deterministic domain acquisition, construction, canonicalization,
 serialization, digesting, and measurement remain mechanics evaluated by `F_D`;
 they do not become `F_D` merely because they are deterministic.
 
-**REQ-P-FP-012**: A host unable to supply the selected program, workspace input,
+**REQ-P-FP-012**: A host unable to supply the selected index, workspace input,
 intent, frame, capability budget, or complete traversal contract shall expose
 the missing coordinate and refuse the `F_P` claim.

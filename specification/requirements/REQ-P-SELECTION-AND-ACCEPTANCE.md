@@ -13,9 +13,10 @@ Derives from: `../INTENT.md#desired-outcomes`,
 
 ## Purpose
 
-Retain durable evidence for the semantic authorship that compresses Source STDO
-into a reasoning program. This is an `F_H` selection and acceptance surface, not
-a deterministic occurrence census, semantic assessor, or ordinary LLM payload.
+Retain durable evidence for the semantic authorship that compiles Source STDO's
+Symbolic Axiomatic Program into a Programmatic Semantic Index. This is an `F_H`
+selection and acceptance surface, not a deterministic occurrence census,
+semantic assessor, or ordinary LLM payload.
 
 ## Semantic Selection Ledger
 
@@ -123,7 +124,7 @@ refuses construction. Each member's `selection_refs` shall equal exactly the
 selection rows containing a SourceLocator for that member, and every selection
 row shall be reachable from at least one member.
 
-**REQ-P-SELECT-002**: Every retained program atom, edge, and constraint shall be
+**REQ-P-SELECT-002**: Every retained index atom, edge, and constraint shall be
 named by exactly one `retained` selection row, and the union of retained
 `representation_refs` shall equal `I_B`. An omitted selection has no
 representation ref. An uncertain selection cannot be silently omitted or
@@ -169,7 +170,7 @@ author string, or possession of a digest does not by itself grant `F_H`
 authority.
 
 **REQ-P-SELECT-008**: The accepted ledger is qualification evidence external to
-the ordinary reasoning-program payload. A host may supply it to an `F_P`
+the ordinary programmatic-index payload. A host may supply it to an `F_P`
 invocation for a declared assurance purpose, but routine consumption shall not
 pay its token cost by default.
 
