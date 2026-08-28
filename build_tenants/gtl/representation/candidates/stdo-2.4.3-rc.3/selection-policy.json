@@ -1,0 +1,126 @@
+{
+  "kind": "stdo-representation.semantic-selection-policy",
+  "schema_version": 1,
+  "status": "candidate-requiring-f-h-review",
+  "source_stdo_uri": "stdo://releases/v2.4.3-rc.3/",
+  "aggregate_member": "authority_compressions/stdo_compressed.md",
+  "selection_rule": "Retain every top-level declaration in the aggregate compression, exact routes for every installed standards member, the explicit authority-flow graph, the STDO pillar graph, and Source STDO engagement roles and generic specialist-frame families.",
+  "authority_binding": {
+    "actor_identity": "https://github.com/foolishimp",
+    "authority_identity": "urn:stdo-representation:authority:product-owner",
+    "grant_identity": "urn:stdo-representation:grant:product-owner:1",
+    "grant_scope": "Author and select Source STDO declarations for the first GTL Programmatic Semantic Index candidate."
+  },
+  "sections": {
+    "Method Identity": {
+      "bounded_context": "urn:stdo:bounded-context:method-identity",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "axiom",
+      "frame_families": ["Product"]
+    },
+    "Governing Claim": {
+      "bounded_context": "urn:stdo:bounded-context:recursive-product-taxonomy",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "invariant",
+      "frame_families": ["Product"]
+    },
+    "Authority Flow": {
+      "bounded_context": "urn:stdo:bounded-context:recursive-product-taxonomy",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "invariant",
+      "frame_families": ["Product", "Owner"]
+    },
+    "Product Definition Overlay": {
+      "bounded_context": "urn:stdo:bounded-context:product-definition-routing",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "obligation",
+      "frame_families": ["Product"]
+    },
+    "Bounded-Context Semantic Isolation": {
+      "bounded_context": "urn:stdo:bounded-context:semantic-resolution",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "invariant",
+      "frame_families": ["Product", "Owner"]
+    },
+    "Build-Tenancy Compression": {
+      "bounded_context": "urn:stdo:bounded-context:build-tenancy",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "invariant",
+      "frame_families": ["Product", "Design", "Owner"]
+    },
+    "Prime Operating Rules": {
+      "bounded_context": "urn:stdo:bounded-context:recursive-product-taxonomy",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "obligation",
+      "frame_families": ["Product", "Design"]
+    },
+    "Reference Frame Engagement Compression": {
+      "bounded_context": "urn:stdo:bounded-context:reference-frame-evaluation",
+      "authority_member": "REFERENCE_FRAME_METHOD.md",
+      "default_constraint_class": "invariant",
+      "frame_families": ["Product", "Design", "Design Component", "Public Boundary", "Entity", "Operator", "Owner", "Effect", "Reuse/Foundation", "Install", "Proof"]
+    },
+    "Product Testing Frame Compression": {
+      "bounded_context": "urn:stdo:bounded-context:product-assurance",
+      "authority_member": "DESIGN_MODULE_METHOD.md",
+      "default_constraint_class": "obligation",
+      "frame_families": ["Product", "Design Component", "Public Boundary", "Proof"]
+    },
+    "Prompt-Relevant Rules": {
+      "bounded_context": "urn:stdo:bounded-context:graph-native-odd",
+      "authority_member": "ODD_METHOD.md",
+      "default_constraint_class": "obligation",
+      "frame_families": ["Product", "Operator"]
+    },
+    "Re-Entry Compression": {
+      "bounded_context": "urn:stdo:bounded-context:recursive-product-taxonomy",
+      "authority_member": "SPEC_METHOD.md",
+      "default_constraint_class": "axiom",
+      "frame_families": ["Product", "Design"]
+    },
+    "Proof Compression": {
+      "bounded_context": "urn:stdo:bounded-context:product-assurance",
+      "authority_member": "DESIGN_MODULE_METHOD.md",
+      "default_constraint_class": "obligation",
+      "frame_families": ["Proof"]
+    }
+  },
+  "keyword_frame_routes": {
+    "Design Component": ["component", "module", "iacs"],
+    "Public Boundary": ["public", "interface", "api", "contract"],
+    "Entity": ["entity", "identity"],
+    "Operator": ["operator", "algorithm", "operation"],
+    "Owner": ["owner", "authority", "grant", "admission"],
+    "Effect": ["effect", "atomic", "mutation", "rollback", "failure"],
+    "Reuse/Foundation": ["reuse", "foundation", "dependency", "generic capability"],
+    "Install": ["install", "deployment", "runnable", "release"],
+    "Proof": ["proof", "evidence", "assurance", "test", "verification"]
+  },
+  "additional_statements": [
+    {
+      "section": "Method Identity",
+      "constraint_class": "axiom",
+      "statement": "STDO means Specification, Ticketing, Design, and Outcome-Driven Development; ODD means Outcome-Driven Development."
+    },
+    {
+      "section": "Governing Claim",
+      "constraint_class": "invariant",
+      "statement": "Specification is constitutional source; design and realization are subordinate implementation surfaces, and generated views are not independent truth."
+    },
+    {
+      "section": "Governing Claim",
+      "constraint_class": "prohibition",
+      "statement": "A downstream Product may prove or falsify conformance but cannot supply reusable STDO method meaning."
+    },
+    {
+      "section": "Authority Flow",
+      "constraint_class": "obligation",
+      "statement": "Use the smallest current authority surface that can decide the question and re-enter at the smallest upstream owner when meaning must change."
+    },
+    {
+      "section": "Proof Compression",
+      "constraint_class": "obligation",
+      "statement": "Closure requires authority trace, realization proof, negative proof where drift is plausible, and a present-tense statement of residual open pressure."
+    }
+  ]
+}
