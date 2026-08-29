@@ -7,6 +7,7 @@ target_prompt_families:
   - evaluate_design_depth
   - evaluate_review_grade
 source_refs:
+  - ../AXIOMATIC_CALCULUS.md
   - ../REFERENCE_FRAME_METHOD.md
   - ../STDO_REFERENCE_FRAME_BASELINE.md
   - ../SPEC_METHOD.md
@@ -23,9 +24,10 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  REFERENCE_FRAME_METHOD.md: a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174
-  STDO_REFERENCE_FRAME_BASELINE.md: 9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9
-  SPEC_METHOD.md: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
+  AXIOMATIC_CALCULUS.md: 95c9c856a4e206588b984f04ae0b528259cdaf955885ccf42fc58d80debbc02d
+  REFERENCE_FRAME_METHOD.md: 90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f
+  STDO_REFERENCE_FRAME_BASELINE.md: f6a4e2be637df6c2dd5c69c6da7e77cefd8d8cde93af65ca686608ec43555e3f
+  SPEC_METHOD.md: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea
   DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
@@ -37,9 +39,9 @@ source_digests:
   RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
-  GLOSSARY_GUIDE.md: df8bf186ee10905ef8ca21a0939dc1096a86365a871ffbcbeef6ad075f8fb255
+  GLOSSARY_GUIDE.md: fe2df2548cecbe0e4709ec49b33301f26a02d1e7e4e5b00578c1aa886e2409e6
 generated_by: codex
-generated_at: 2026-08-23
+generated_at: 2026-08-29
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -83,6 +85,58 @@ source-specific compression, including the complete T-008 F1-F5 bundle and the
 Reference Frame Method/STDO baseline application relation. Source-specific
 compressions remain standalone only for decisions owned by their source and
 refuse cross-law closure.
+
+## Axiomatic Calculus
+
+- `a_c` is the domain-specific, carrier-neutral constitutional calculus owned by
+  `AXIOMATIC_CALCULUS.md` in
+  `urn:stdo:bounded-context:axiomatic-calculus`.
+- It makes no claim of universal applicability, logical completeness,
+  consistency, decidability, soundness, or category-theoretic status except
+  where separately proved for an exact scope.
+- Keep `a_c`, an interpreted `a_c.X` model, and an encoded `a_c.X.C` carrier as
+  distinct governed layers with separate content identities, judgments, and
+  proof. Product status requires separate acceptance and release authority.
+- One closed signature declares every sort, relation kind, constraint kind,
+  residual kind, functor kind, judgment kind, stop kind, field, and type. A model is
+  `M_b=(b,I,O,E,C,L,X)`: exact basis, identities, objects, relations,
+  constraints, latitude, and residuals.
+- Identity is scoped by type, context, owner, scope, and basis. Relations are
+  directed and typed. Authority, provenance, and residual uncertainty survive
+  every projection, transformation, interpretation, and encoding.
+- Transformation is an operation-bearing specialization of one exact
+  traversal. It directly carries context, owner, scope, basis, operation
+  authority, evidence, preservation, mutation, residual, and refusal
+  coordinates plus one exact typed preservation relation; nominal preservation
+  and broader or mismatched traversal coordinates refuse. Its closed delta
+  partitions every input identity into preserved or removed and every successor
+  identity into preserved or introduced; silent retention, loss, duplication,
+  or residual erasure refuses.
+- Material closure is the least finite unique lawful record closure under an
+  exact dependency family. Projection returns that closure plus its explicit
+  boundary; it cannot trim required members to meet a budget.
+- `F_D`, `F_P`, and `F_H` are generic functor-kind identities. Apply them only
+  as `F_K[v](X_v) -> Y_v | Omega_v`, with one exact traversal `v`. Actors and
+  domain operations are separate coordinates.
+- `F_D[v]` evaluates or proves declared properties and returns a judgment over
+  an unchanged subject. `F_P[v]` performs bounded probabilistic proposal
+  without acceptance authority. `F_H[v]` performs explicit human adjudication
+  under an exact grant.
+- Equal spelling in another bounded context creates no import, specialization,
+  or authority relation. Any external relation is separately owned and remains
+  outside the calculus.
+- Structural conformance proves closed shape, types, identities, references,
+  and bases. It does not prove semantic fidelity or human acceptance.
+- Model and carrier identities are content-first. Semantic acceptance and
+  carrier admission are external judgments over unchanged subject identities;
+  neither judgment enters the identity of its own subject.
+- Carrier encoding requires an external accepted semantic judgment whose
+  subject identity and digest exactly match the interpreted model. The judgment
+  remains outside both content identities and is retained in the admitted
+  encoding evidence relation.
+- Concrete subject interpretations and carrier encodings remain downstream
+  relations. Neither a selected interpretation nor a carrier is content of the
+  calculus.
 
 ## Authority Flow
 
@@ -529,6 +583,11 @@ layer that owns the missing truth.
 
 ## Reference Frame Engagement Compression
 
+- Keep three owners distinct: `REFERENCE_FRAME_METHOD.md` supplies pure frame
+  principles; `STDO_REFERENCE_FRAME_BASELINE.md` supplies an optional role and
+  evaluation profile; each Product owns its concrete Project Reference-Frame
+  Basis under `SPEC_METHOD.md`. Profile availability, Product adoption, and
+  execution-scoped activation are distinct.
 - A reference frame is one finite, capability-bounded evaluation context. It
   binds evaluation family, exact subject/basis, material relations, coordinates,
   invariants, semantic/evaluation/decision authority and operation authority
@@ -547,10 +606,10 @@ layer that owns the missing truth.
   identity, coordinate/basis, value/evidence, lifecycle, authority, and
   provenance. Missing or non-commuting seams return closed pressure rather than
   selecting a dominant frame.
-- The generic set imports no ABIogenesis, GTL, HoG, or ABG frame and no renamed
-  Product Composition, Semantic Source, Execution Derivation, or Admission And
-  Runtime Truth topology. Consumers may declare local frames under their own
-  authority; runtime carriers named `Frame` are not enrolled by label.
+- The pure method imports no consumer profile, role mapping, Product binding,
+  runtime topology, adoption relation, or discovery provenance. Applications
+  may declare external profiles and bindings under their own authority;
+  same-spelled carriers are not enrolled by label.
 - Frame disjointness, separately activated evaluation, and claim-relative
   assurance independence are distinct. Frames may overlap, refine, restrict,
   translate, compose, or succeed one another. Hierarchy is optional. Shared
@@ -567,9 +626,11 @@ layer that owns the missing truth.
   semantic/operation/decision authority, failure, capability, separately
   activated overlap, assurance independence, or explicit residuals; file,
   artifact, test, review, or actor count is not coverage.
-- Existing Goals, Product, requirements, or accepted-design authority selects a
-  project's frame configuration. A local axioms or configuration file may carry
-  that projection but does not become another constitutional owner.
+- Existing Goals, Product, requirements, or accepted-design authority owns the
+  Project Reference-Frame Basis: method/profile basis, frames, actor-binding
+  rules, capability/grant requirements, scopes, result and coverage relations,
+  lifecycle triggers, and invalidation. The Product Definition only locates
+  that binding.
 - The practical STDO profile maps Executive, Worker, and Reviewer frames onto
   existing law: Executive uses existing project or bounded-proxy decision
   authority; Worker is the `STDO-UP-020` constructor; Reviewer supplies the
@@ -585,12 +646,14 @@ layer that owns the missing truth.
   independent review is not required or activates Reviewer, receives the closed
   review result, and then applies exactly one existing `STDO-UP-020`
   disposition.
-- Worker supplies an exact candidate but never activates Reviewer. Worker
-  carries only its inherited bounded construction/transformation operation
-  authority; self-review is not independent review. Reviewer returns only a
-  Reference Frame Method result and does not edit, direct repair, apply an STDO
-  disposition, or authorize continuation. Executive cannot exceed its existing
-  grant or become another semantic, operation, or implementation owner.
+- Worker supplies an exact candidate but never activates Reviewer. The Worker
+  label grants no mutation authority. An effectful Worker may mutate only the
+  exact subject and write territory named by its inherited owner grant;
+  missing, ambiguous, or out-of-territory authority refuses. Self-review is not
+  independent review. Reviewer returns only a Reference Frame Method result and
+  does not edit, direct repair, apply an STDO disposition, or authorize
+  continuation. Executive cannot exceed its existing grant or become another
+  semantic, operation, or implementation owner.
 - The minimum activation packet carries frame identity/revision, evaluation and
   result algebra, exact subject/basis, material specialist frames and
   invariants, semantic/evaluation/decision authority and operation authority

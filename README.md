@@ -11,6 +11,12 @@ commit, tree, and exact member inventory. A consumer is governed by the complete
 cut pinned in its Product Definition. The `v<version>` tag is only the mutable
 alias to the highest-ordinal published RC on that line.
 
+The standards library includes the domain-specific
+[`a_c` STDO Axiomatic Calculus for Governed Symbolic Systems](specification/standards/AXIOMATIC_CALCULUS.md).
+`a_c` is the carrier-neutral constitutional calculus. Interpreted subjects and
+carrier encodings are separately governed downstream layers; they become
+Products only through their own acceptance and release authority.
+
 The `stdo` toolchain manager installs immutable cuts once in a shared versioned
 store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
 already pinned Product Definitions, and performs explicit adoption and fleet

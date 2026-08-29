@@ -650,9 +650,25 @@ bound for the product. Omission is not an equivalent declaration.
 
 ### Collective Reference-Frame Basis
 
-A **Project Reference-Frame Basis** is an accepted declaration of the shared
-frame set through which finite actors collectively engage one governed Product
-scope or outcome under `REFERENCE_FRAME_METHOD.md`.
+A **Project Reference-Frame Basis** is the Product-owned accepted declaration
+of the shared frame set through which finite actors collectively engage one
+governed Product scope or outcome. It binds:
+
+```text
+Project Reference-Frame Basis
+  = exact Reference Frame Method and optional profile basis
+  + admitting authorities and governed scopes
+  + frame declarations and evaluation inventory
+  + actor-binding rules and capability envelopes
+  + semantic, evaluation, operation, and decision grants
+  + result, conjunction, translation, and coverage relations
+  + lifecycle activation triggers and invalidation law
+```
+
+`REFERENCE_FRAME_METHOD.md` supplies frame principles only.
+`STDO_REFERENCE_FRAME_BASELINE.md` supplies one optional profile only. Neither
+surface selects, adopts, or owns a Product binding. The adopting Product's
+existing authority owns the concrete declaration and every grant it contains.
 
 `reference_frame_bases` is the non-empty locator set for the accepted frame
 bases through which finite actors collectively engage the governed Product and
@@ -665,11 +681,17 @@ its work. Each entry names:
   scope to which it applies.
 
 The referenced declaration owns the selected frame set, method or profile
-basis, governed outcome, capability envelopes, coverage, result relations, and
-invalidation law required by `REFERENCE_FRAME_METHOD.md`. It may adopt
-`STDO_REFERENCE_FRAME_BASELINE.md` or define a project configuration. The JSON
-entry locates that declaration and its authority relation; it does not restate
-the frames or create frame-set authority.
+basis, governed outcome, actor-binding rules, capability envelopes, grant
+requirements, triggers, coverage, result relations, and invalidation law. It
+may adopt an available profile or define a project configuration. The JSON
+entry locates that declaration and its authority relation; it does not contain
+the binding, adopt the profile, restate the frames, or create frame-set
+authority.
+
+Profile availability, Product adoption, and execution-scoped activation are
+three distinct relations. Inclusion in a selected method cut makes a profile
+available. Only Product authority may adopt it. Only an exact authorized work
+instruction may activate one bound frame for an actor and subject.
 
 The collective basis and an actor activation are distinct. An **Agent Frame Activation**
 is the execution-scoped binding of one agent to an applicable
@@ -689,8 +711,8 @@ exact activation.
 A Product, domain, or runtime carrier also named `Frame` is not included by
 nominal match. It remains governed by its bound `WHAT` and `HOW` and may be the
 subject or coordinate of an evaluation frame. It enters the collective frame
-set only through an explicit `REFERENCE_FRAME_METHOD.md` declaration with the
-required evaluation and authority relations.
+set only through an explicit frame declaration with the required evaluation
+and authority relations.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -788,7 +810,7 @@ minimum, it establishes these cases under an exact selected basis:
 
 | Term | Candidate contexts | Required result without an explicit cross-context relation |
 |---|---|---|
-| `Frame` | Reference Frame Method evaluation context and a Product- or ABG-owned runtime carrier | remain distinct; nominal match cannot enroll the runtime carrier as an evaluation frame |
+| `Frame` | Reference Frame Method evaluation context and a consumer-owned runtime carrier | remain distinct; nominal match cannot enroll the runtime carrier as an evaluation frame |
 | `Owner` | generic specialist evaluation family and a semantic or decision authority owner | remain distinct; the evaluation family acquires no owner authority |
 | `Product` | immutable released Product and mutable Product Definition | remain distinct and select only through the occurrence's declared context |
 | `Tenant` | STDO build realization and hosted, customer, account, runtime, or data tenancy | remain distinct; Build Tenancy supplies no default for the other contexts |

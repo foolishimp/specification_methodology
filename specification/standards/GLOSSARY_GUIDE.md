@@ -26,6 +26,25 @@ fallback decision.
 | `STDO` | `urn:stdo:bounded-context:method-identity` | [`SPEC_METHOD.md#stdo-method-identity`](SPEC_METHOD.md#stdo-method-identity) | — |
 | `O` pillar symbol | `urn:stdo:bounded-context:method-identity` | [`SPEC_METHOD.md#stdo-method-identity`](SPEC_METHOD.md#stdo-method-identity) | [`ODD_METHOD.md#1-position`](ODD_METHOD.md#1-position) |
 
+## Axiomatic-Calculus Index
+
+| Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
+|---|---|---|---|
+| `a_c`; `Axiomatic Calculus`; `STDO Axiomatic Calculus for Governed Symbolic Systems` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#position`](AXIOMATIC_CALCULUS.md#position) | — |
+| `a_c Signature` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#core-signature`](AXIOMATIC_CALCULUS.md#core-signature) | — |
+| `a_c Model` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#core-signature`](AXIOMATIC_CALCULUS.md#core-signature) | [`AXIOMATIC_CALCULUS.md#interpretation-and-models`](AXIOMATIC_CALCULUS.md#interpretation-and-models) |
+| `Semantic Object` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#semantic-object`](AXIOMATIC_CALCULUS.md#semantic-object) | — |
+| `Typed Relation` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#typed-relation`](AXIOMATIC_CALCULUS.md#typed-relation) | — |
+| `Constraint` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#constraint`](AXIOMATIC_CALCULUS.md#constraint) | — |
+| `Latitude` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#latitude`](AXIOMATIC_CALCULUS.md#latitude) | — |
+| `Residual` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#residual`](AXIOMATIC_CALCULUS.md#residual) | — |
+| `Judgment` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-014-judgment-separation`](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) | — |
+| `Functor Kind`; `F_D`; `F_P`; `F_H` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds) | — |
+| `Material Closure` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-010-material-closure`](AXIOMATIC_CALCULUS.md#ac-010-material-closure) | — |
+| `Projection` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-011-projection`](AXIOMATIC_CALCULUS.md#ac-011-projection) | — |
+| `Interpretation` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#interpretation-and-models`](AXIOMATIC_CALCULUS.md#interpretation-and-models) | — |
+| `Axiomatic Calculus Basis` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#exact-calculus-identity`](AXIOMATIC_CALCULUS.md#exact-calculus-identity) | — |
+
 ## Semantic Resolution Index
 
 | Indexed term | Bounded-context identity | Owning concept clause |

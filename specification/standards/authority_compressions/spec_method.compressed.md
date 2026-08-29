@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
+source_digest: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-23
+generated_at: 2026-08-29
 stale_if_source_digest_changes: true
 ---
 
@@ -60,13 +60,18 @@ the aggregate STDO compression.
   disambiguation also binds the exact term, target bounded context, complete
   material candidate set, and one selected member of that set. Listing a local
   file does not mint authority or supply meaning.
-- `reference_frame_bases` is non-empty and locates the durable shared project
-  frame-basis declarations, every admitting authority, and their exact scopes.
-  An authorized work instruction or activation packet binds a particular agent
-  to an applicable frame configuration, evaluation, subject, and capability
-  envelope. The overlay does not register agents or temporary activations.
-  Product or runtime types named `Frame` remain `WHAT` or `HOW`; a matching
-  label does not enroll them in the collective evaluation frame set.
+- `reference_frame_bases` is non-empty and locates Product-owned Project
+  Reference-Frame Basis declarations, every admitting authority, and their
+  exact scopes. The pure Reference Frame Method supplies principles and an
+  optional profile supplies mappings; neither selects a Product binding.
+  Profile availability, Product adoption, and execution-scoped activation are
+  distinct. The durable basis binds actor-binding rules and capability/grant
+  requirements; an authorized work instruction binds a particular actor to an
+  applicable frame, evaluation, subject, capability envelope, and operation
+  grant. The overlay neither contains the binding nor registers actors or
+  temporary activations. Product or runtime types named `Frame` remain `WHAT`
+  or `HOW`; a matching label does not enroll them in the collective evaluation
+  frame set.
 - `what` locates Intent, Product, and specification. `how` locates shared
   realization law and one or more build tenants. `ticketing` locates Goals,
   ticket lanes, comments, and optional sprints. Each `composition` edge binds

@@ -53,19 +53,19 @@ execution contexts over a changing body of work. It applies to human work,
 agentic work, deterministic evaluation, probabilistic construction, assurance,
 and mixed work where the governing product or method permits them.
 
-This is an engagement meta-method. It does not define a domain Product,
-specification taxonomy, design ontology, runtime, workflow, or assurance
-implementation. An application profile binds this method to a concrete method,
-workspace, or Product and declares the evaluations and authorities meaningful
-there.
+This is an engagement meta-method. It does not define an application profile,
+role mapping, Product-owned frame-basis binding, domain Product, specification
+taxonomy, design ontology, runtime, workflow, adoption relation, or assurance
+implementation. External methods and Products may import or specialize these
+relations under their own authority. That external relation does not enter or
+amend the principles.
 
 `REFERENCE_FRAME_METHOD.md` owns the reference-frame-evaluation bounded context
-`urn:stdo:bounded-context:reference-frame-evaluation` under the selected
-complete STDO basis. This standard owns its frame, activation, evaluation,
-basis, relation, result, coverage, and qualification concepts. Application
-profiles may define specialist frame families inside that context by explicit
-reference; a same-spelled Product or runtime carrier is not imported by
-proximity or nominal match.
+`urn:stdo:bounded-context:reference-frame-evaluation` under its exact
+publication basis. This standard owns only its frame declaration, activation,
+evaluation, basis, relation, result, coverage, revision, and qualification
+concepts. A same-spelled profile, Product, role, or runtime carrier is not
+imported by proximity or nominal match.
 
 The method is substrate-neutral. A reference frame may be represented in prose,
 structured data, a prompt, a design asset, a typed carrier, a runtime context,
@@ -409,8 +409,8 @@ result family is:
   capability; or
 - `invalid_basis`: the subject or basis cannot support the evaluation.
 
-An application profile may refine this algebra while preserving explicit
-indeterminate, out-of-frame, and invalid-basis pressure.
+An externally owned compatible extension may refine this algebra while
+preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
 
 ### RF-013 Reconstructable Activation
 
@@ -964,13 +964,12 @@ to an unevaluated population by naming the frame generically.
 
 ### Method Self-Qualification
 
-Qualification of this method consumes `SPEC_METHOD.md` `STDO-UP-020` and
-`STDO-UP-022`; it does not create a second construction or qualification
-protocol. A fresh competent constructor operates inside a declared capability,
-context, and configuration envelope using this method and declared trial
-subjects. Its results are frozen before material reference exposure wherever
-earlier exposure would compromise reconstructive independence. An independently
-authorized evaluator then compares the exact frozen results with this method's
+Qualification of this method uses the constructor, freeze, assessor,
+acceptance, and release protocols supplied by its external governing
+authority; it does not define those protocols. A fresh competent constructor
+operates inside a declared capability, context, and configuration envelope
+using this method and declared trial subjects. An independently authorized
+evaluator then compares the exact stabilized results with this method's
 complete mandatory relation population.
 
 The qualification population includes every function and failure relation the
@@ -1002,33 +1001,6 @@ remains open rather than inheriting a whole-method verdict.
 Prior exemplar frame sets or outcomes may be used as optional comparison
 evidence after freeze. They are not mandatory target answers unless the
 governing basis explicitly requires equivalence.
-
-### Application-Profile Composition Qualification
-
-When a released method cut includes an application profile, qualification of
-the combined claim evaluates both subjects and their declared composition. The
-profile must consume this method's frame relations and the applied method's
-semantic owners without reproducing either as peer authority.
-
-For `STDO_REFERENCE_FRAME_BASELINE.md`, the composition trial covers at least:
-
-- exact mapping of Executive, Worker, and Reviewer evaluations to their owning
-  Reference Frame Method and STDO clauses;
-- every Worker closed-result branch, including the no-independent-review and
-  independent-review candidate paths;
-- Executive-only Reviewer activation and result disposition;
-- project configuration derived from existing Goals, Product, requirements, or
-  accepted-design authority rather than a new local authority layer;
-- exact subject, evidence population, assurance independence, and invalidation
-  behavior;
-  and
-- adoption and project-defined frame configurations with explicit coverage and
-  residual boundaries.
-
-A valid universal-frame trial does not prove the applied profile, and a valid
-profile trial does not prove this method's complete function population.
-
----
 
 ## Anti-Patterns
 
@@ -1159,68 +1131,6 @@ claim:
 - invalidation conditions:
 - consuming decision or conjunction:
 ```
-
----
-
-## Relationship To STDO
-
-The Reference Frame Method defines how finite actors select and operate bounded
-evaluation contexts. `SPEC_METHOD.md` defines the constitutional
-specification-driven process. `DESIGN_MODULE_METHOD.md` defines symbolic design,
-Ontology, Prime, frame conservation, and realization projection. Other STDO
-members own their declared domains.
-
-Within the current STDO family, authority remains distributed as follows:
-
-| Concern | Owning STDO surface | Reference-frame relation |
-|---|---|---|
-| specification process, proportionality, evidence, agentic construction, and method qualification | `SPEC_METHOD.md` | supplies governing evaluations and constraints to an activated frame |
-| Ontology, Prime, bounded design-frame conservation, IACS, and realization projection | `DESIGN_MODULE_METHOD.md` | supplies design-owned material relations and frame candidates |
-| identity and authority conservation | `IDENTITY_METHOD.md` | supplies identity-bearing authority law used by frame declarations |
-| graph-native construction and runtime terminology | `ODD_METHOD.md` | supplies a domain application profile where selected |
-| reference frame atom, frame-set declaration, activation, evaluation, conjunction, translation, coverage, and revision | `REFERENCE_FRAME_METHOD.md` | owns the finite engagement relation |
-
-This method does not supersede or reproduce a domain closure claim owned by
-another STDO member. Its frames cite and carry those laws as material inputs.
-Where current STDO already owns a semantic relation, an applied frame evaluates
-against that owner rather than restating the relation as reference-frame law.
-
-An applied STDO reference-frame profile must declare:
-
-- the STDO evaluation inventory relevant to a consumer;
-- the frame set through which that consumer engages the selected complete STDO
-  cut;
-- method-member and local-authority acquisition;
-- actor capability envelopes;
-- conjunction and translation rules actually required;
-- coverage and residual-uncertainty reporting; and
-- reconfiguration when STDO, the consumer basis, or workspace topology changes.
-
-`STDO_REFERENCE_FRAME_BASELINE.md` supplies the practical default application
-profile. Existing project authority in Goals, Product, requirements, or
-accepted design explicitly adopts that profile or declares another complete
-project frame configuration. A local axioms document may carry the accepted
-configuration, but the carrier does not create its authority.
-
-The applied profile consumes STDO law. It does not redefine or partially select
-the released STDO Product.
-
-Graph-native profiles may use domain-local names for human, deterministic, or
-probabilistic authority. This baseline method uses substrate-neutral terms.
-
----
-
-## Discovery Provenance
-
-ABIogenesis supplied one practical discovery environment for this method.
-Repeated design resets, authority duplication, proof masking, context loss, and
-agent inability to perceive known violations exposed missing or misactivated
-evaluation frames. Those observations are evidence for the method's frame,
-coverage, and revision laws.
-
-No ABIogenesis module, runtime, event, admission, transport, or topology model
-is part of this method's universal domain. Promotion of any additional local
-discovery requires separate method intake and representative validation.
 
 ---
 

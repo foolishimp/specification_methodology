@@ -8,6 +8,8 @@ interaction tooling:
 - constitutional method surfaces such as `REFERENCE_FRAME_METHOD.md`,
   `SPEC_METHOD.md`, `ODD_METHOD.md`, `IDENTITY_METHOD.md`, and
   `WORLD_MODEL_METHOD.md`
+- the fundamental carrier-neutral `AXIOMATIC_CALCULUS.md`, whose `a_c` theory
+  remains separate from interpreted subject models and carrier encodings
 - derived application profiles such as `STDO_REFERENCE_FRAME_BASELINE.md`
 - companion governance and operating surfaces such as `POSTING_GUIDE.md`,
   `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`, and

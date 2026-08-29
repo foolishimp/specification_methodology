@@ -57,6 +57,7 @@ def digest_map(metadata: str, key: str) -> dict[str, str]:
 class CompressionDigestTests(unittest.TestCase):
     def test_source_specific_compressions_match_their_sources(self) -> None:
         for name in (
+            "axiomatic_calculus.compressed.md",
             "design_module_method.compressed.md",
             "odd_method.compressed.md",
             "spec_method.compressed.md",

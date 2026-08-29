@@ -6,6 +6,7 @@ constitutional authority and not independently selectable method versions.
 
 The source method, profile, and schema documents remain the deciding sources:
 
+- `../AXIOMATIC_CALCULUS.md`
 - `../REFERENCE_FRAME_METHOD.md`
 - `../STDO_REFERENCE_FRAME_BASELINE.md`
 - `../SPEC_METHOD.md`
@@ -19,6 +20,10 @@ The source method, profile, and schema documents remain the deciding sources:
 - `../IDENTITY_METHOD.md`
 - `../RELEASE_METHOD.md`
 - `../POSTING_GUIDE.md`
+
+`axiomatic_calculus.compressed.md` is the source-specific projection of the
+fundamental `a_c` standard. It cannot define an interpreted `a_c.X` model or a
+carrier encoding.
 
 `../GLOSSARY_GUIDE.md` is a non-deciding semantic locator index. The aggregate
 compression watches it through separate `index_refs` and `index_digests` fields

@@ -78,8 +78,17 @@ does not become a new constitutional owner merely by carrying it.
 
 ## Status And Authority Boundary
 
-This document is a derived application profile. It has no independent ownership
-of STDO's execution protocol.
+This document is an optional derived role and evaluation profile. It has no
+independent ownership of STDO's execution protocol or of any Product binding.
+
+The ownership layers are distinct:
+
+- `REFERENCE_FRAME_METHOD.md` owns the pure frame principles;
+- this profile owns the optional Executive, Worker, Reviewer, specialist, and
+  testing mappings; and
+- `SPEC_METHOD.md#collective-reference-frame-basis` owns the Product-binding
+  relation, while each adopting Product authority owns its concrete Project
+  Reference-Frame Basis.
 
 | Relation | Normative owner | Use in this profile |
 |---|---|---|
@@ -106,9 +115,11 @@ Neither kind creates a second amendment path for the owning federal law. If the
 profile conflicts with an owning STDO clause, the owning clause controls and the
 profile requires revision.
 
-This profile is selected only through an exact released standards cut or
-another explicitly admitted project method basis. Mutable authoring source,
-installed file presence, prompts, summaries, and commentary do not select it.
+Inclusion in an exact released standards cut or another admitted method basis
+makes this profile available; it does not adopt it. Adoption requires a
+separately accepted Product-owned Project Reference-Frame Basis. Mutable
+authoring source, installed file presence, prompts, summaries, and commentary
+neither select nor adopt it.
 
 ---
 
@@ -273,16 +284,15 @@ equivalent exact-subject relation sufficient for the claimed assessment.
 This profile does not create a new constitutional lifecycle state named
 `frozen`.
 
-### Frame-basis declaration
+### Baseline-adoption projection
 
-A **frame-basis declaration** is a projection of the existing authority that
-selected the frame configuration. It records the selected method basis, profile
-or project-defined frame set, exact outcome, actor envelopes, evidence
-coordinates, and revision conditions.
-
-Its carrier may be called local axioms, Product configuration, accepted design,
-a ticket, or another project-owned name. The carrier does not mint the
-authority it projects.
+A **baseline-adoption projection** consumes the Product-owned Project
+Reference-Frame Basis defined by
+`SPEC_METHOD.md#collective-reference-frame-basis`. Where that basis adopts this
+profile, the projection records the selected profile mapping, exact outcome,
+actor envelopes, evidence coordinates, and revision conditions needed in
+addition to the Product binding. It is not a second frame-basis definition and
+does not mint the authority it projects.
 
 ---
 
@@ -355,7 +365,7 @@ bounded candidate disposition remains exactly `accept`, `local_repair`,
 | material manifold | affected entities, lifecycles, transformations, authorities, capabilities, algorithms, inputs, outputs, dependencies, interaction seams, failure boundaries, and proof obligations |
 | coordinates | exact activation, source checkpoint, workspace, inputs, dependencies, configuration, actor envelope, outputs, candidate, and evidence identities |
 | governing invariants | the complete selected STDO and project relations material to the affected cone; `STDO-UP-020` owns construction and self-review |
-| authority | inherited bounded construction or transformation operation authority and self-review only; no admission, publication, mutation, independent acceptance, frame-set revision, or inferred next action |
+| authority | inherited bounded construction or transformation operation authority and self-review only; mutation is permitted only when the exact inherited owner grant names the subject and write territory; no admission, publication, independent acceptance, frame-set revision, or inferred next action |
 | evidence | live implementation, tests and test source, analysis, generated artifacts, installed or operational behavior where claimed, reconstruction, mutations, and exact transition evidence |
 | capability envelope | the declared method, domain, implementation, tool, access, and finite-context competence required by the causal cone |
 | exclusions | upstream semantic change, unauthorized cone expansion, self-acceptance, hidden competing paths, and advancement after returning the work result |
@@ -365,6 +375,11 @@ bounded candidate disposition remains exactly `accept`, `local_repair`,
 `candidate_ready` binds the exact candidate and the transition evidence required
 by `STDO-UP-020`. It is not `accept`. Green tests are evidence only for the
 relations their production and test semantics actually exercise.
+
+The Worker label grants no mutation authority. An effectful Worker may mutate
+only the exact subject and write territory named by its inherited construction
+or transformation grant. Missing, ambiguous, or out-of-territory mutation
+authority refuses the effect.
 
 ---
 
@@ -808,7 +823,7 @@ re-entry relation.
 
 Goals, Product, requirements, accepted design, ticket, release, or an admitted
 bounded proxy selects the outcome and work authority under its existing STDO
-owner. The frame-basis declaration projects that decision.
+owner. The Product-owned Project Reference-Frame Basis projects that decision.
 
 ### 2. Executive Activates Worker
 
@@ -822,7 +837,8 @@ The Executive applies `REFERENCE_FRAME_METHOD.md` activation to the
 - testing claims, exact subjects, frame topology, material combination
   populations, ordinary paths, oracles, and forbidden-path exclusions where
   testing evidence is required;
-- Worker authority and capability envelope;
+- Worker authority, capability envelope, and the exact inherited operation
+  grant, subject, and write territory where mutation is authorized;
 - evidence and qualification obligations;
 - exclusions, prohibited competing paths, stop conditions, and re-entry
   conditions; and
@@ -939,7 +955,7 @@ other admitted carriers. This profile requires no new artifact type.
 
 | Projection | Producer -> consumer | Minimum material content | Owning law |
 |---|---|---|---|
-| Worker activation | Executive -> Worker | exact intake, basis, affected cone, authority, frames, evidence, exclusions, stop and re-entry conditions | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
+| Worker activation | Executive -> Worker | exact intake, basis, affected cone, inherited operation grant, mutation subject and write territory where applicable, frames, evidence, exclusions, stop and re-entry conditions | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
 | activation refusal | activation relation -> Executive | attempted frame, subject/basis, actor, failed capability or authority predicate, evidence, and reconfiguration pressure; no Worker result | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
 | work result | Worker -> Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | `STDO-UP-020` |
 | Reviewer activation | Executive -> Reviewer | exact subject, claim, composition boundary, evidence population, authority, independence, invalidation | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-007`; `STDO-UP-022` |
@@ -1013,7 +1029,7 @@ making its frame larger.
 
 ---
 
-## Adoption Or Project-Defined Configuration
+## Product-Owned Adoption Or Project-Defined Configuration
 
 ### Existing Authority Selects The Configuration
 
@@ -1027,13 +1043,14 @@ that owns the material decision:
 - identity and release owners retain their declared decisions; and
 - an explicitly bounded proxy acts only inside its existing grant.
 
-One configuration may derive from several governing owners. The frame-basis
-declaration cites all material sources and does not collapse them into a new
-local-axiom authority.
+One configuration may derive from several governing owners. The Product-owned
+Project Reference-Frame Basis defined by `SPEC_METHOD.md` cites all material
+sources and does not collapse them into a new local-axiom authority.
 
 ### Adopt This Baseline
 
-An adoption projection records:
+A baseline-adoption projection records the following content inside that
+Product-owned basis:
 
 - exact selected complete STDO, Reference Frame Method, and profile identities;
 - existing authority admitting adoption;
@@ -1116,6 +1133,11 @@ Qualification of this derived profile applies `REFERENCE_FRAME_METHOD.md`
 Frame Qualification and `STDO-UP-022`; it does not create another qualification
 protocol.
 
+The profile trial evaluates both this profile and its declared composition with
+the exact Reference Frame Method basis without reproducing either as peer
+authority. A valid pure-method trial does not prove this profile, and a valid
+profile trial does not prove the method's complete function population.
+
 A representative profile trial establishes at least:
 
 1. existing project authority selects and projects the frame configuration;
@@ -1124,7 +1146,9 @@ A representative profile trial establishes at least:
 3. a fresh capable Worker reconstructs its intake without hidden conversation
    history;
 4. every effectful Worker activation carries its exact inherited operation
-   authority without granting operation authority to another frame;
+   grant, subject, and write territory; an in-territory mutation succeeds only
+   under that exact grant and an out-of-territory mutation refuses, without
+   granting operation authority to another frame;
 5. every Worker work-result variant is disjointly mapped from its Reference
    Frame Method result and returns to Executive;
 6. `candidate_ready` reaches Executive disposition without Reviewer activation
@@ -1176,10 +1200,13 @@ and evidence populations actually evaluated.
 
 ---
 
-## Minimal Frame-Basis Projection
+## Minimal Baseline-Adoption Content
+
+The following is content inside a Product-owned Project Reference-Frame Basis.
+It is not a competing basis definition or adoption authority.
 
 ```markdown
-# Project Reference-Frame Basis
+# Baseline Adoption Content
 
 ## Owning Authority
 - Goals/Product/requirement/accepted-design identities:
@@ -1226,6 +1253,8 @@ and evidence populations actually evaluated.
 - exact subject and basis:
 - material specialist frames and governing invariants:
 - semantic, evaluation, operation where material, and decision authority:
+- exact inherited operation grant, mutation subject, and write territory where
+  applicable:
 - actor and capability/independence envelope:
 - admissible evidence and acquisition path:
 - testing claim, oracle, material combination population, ordinary or module
@@ -1283,7 +1312,8 @@ This profile is misapplied when:
 5. an activation refusal is relabeled as a Worker result or any Worker result
    variant is selected without its required Reference Frame Method result;
 6. refused, incomplete, or re-entry work results have no route to Executive;
-7. Worker accepts its own result or infers continuation;
+7. Worker accepts its own result, infers continuation, or treats its role label
+   or broad workspace access as mutation authority;
 8. Reviewer relies on Worker narrative instead of acquiring the material live
    subject;
 9. Reviewer trusts tests without reviewing their semantics where they can

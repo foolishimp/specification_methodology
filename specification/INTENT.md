@@ -13,6 +13,13 @@ admissibility conditions, necessary causal order, and evidence invariants.
 Consumers apply that method through their own concrete products, types, files,
 tools, runtime and orchestration machinery, tests, and conformance evidence.
 
+STDO also publishes `a_c`, the STDO Axiomatic Calculus for Governed Symbolic
+Systems, as a separately identifiable, domain-specific, carrier-neutral
+constitutional calculus distilled from those principles. It defines reusable
+symbolic-model law without containing an STDO interpretation or carrier.
+Applying `a_c` to a subject and encoding an accepted model remain separately
+governed downstream relations. Neither relation is automatically a Product.
+
 The method remains intentionally opinionated. Functional design, GTL/ABG/ODD
 construction, UX transition algebra, world-model construction, Prime, IACS,
 and semantic design views are method law where their owning standards apply.
