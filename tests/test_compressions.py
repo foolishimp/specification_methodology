@@ -58,6 +58,7 @@ class CompressionDigestTests(unittest.TestCase):
     def test_source_specific_compressions_match_their_sources(self) -> None:
         for name in (
             "axiomatic_calculus.compressed.md",
+            "traversal_occurrence_profile.compressed.md",
             "design_module_method.compressed.md",
             "odd_method.compressed.md",
             "spec_method.compressed.md",
@@ -99,6 +100,83 @@ class CompressionDigestTests(unittest.TestCase):
                     sha256(source),
                     f"{name}: {reference}",
                 )
+
+    def test_axiomatic_compressions_preserve_deciding_algebra(self) -> None:
+        texts = {
+            name: (COMPRESSIONS / name).read_text(encoding="utf-8")
+            for name in (
+                "axiomatic_calculus.compressed.md",
+                "stdo_compressed.md",
+            )
+        }
+        required = (
+            "M_b = (b, I, O, E, C, L, X, V, T, J)",
+            "RefDomain_Sigma(record_kind, field)",
+            "required_basis_relation",
+            "Resolution_M",
+            "external_preserved",
+            "external_removed",
+            "external_introduced",
+            "N_t intersect Local_b = empty",
+            "ER_t intersect E_b_prime = empty",
+            "external_resolution_witnesses",
+            "ExternalResolutionPreservationWitness",
+            "decision: equal",
+            "cross-basis",
+            "composite-basis",
+            "signature-extension",
+            "AxiomaticCalculusBasis",
+            "sha256(JCS(AxiomaticCalculusBasis))",
+            "stdo.axiomatic-calculus-basis",
+            "RFC 8785",
+            "duplicate object names",
+            "principle_refs",
+            "unsigned-UTF-16",
+            "heading fragment",
+            "member_sha256",
+            "probabilistic interpretation",
+            "construction, or",
+            "proposal without acceptance authority",
+        )
+        record_kinds = (
+            "semantic-object",
+            "typed-relation",
+            "constraint",
+            "latitude",
+            "residual",
+            "traversal",
+            "transformation",
+            "judgment",
+        )
+        for name, text in texts.items():
+            for claim in required:
+                self.assertIn(claim, text, f"{name}: {claim}")
+            for record_kind in record_kinds:
+                identity = (
+                    "urn:stdo:concept:axiomatic-calculus:record-kind:" f"{record_kind}"
+                )
+                self.assertIn(identity, text, f"{name}: {identity}")
+
+    def test_occurrence_compressions_preserve_deciding_algebra(self) -> None:
+        texts = {
+            name: (COMPRESSIONS / name).read_text(encoding="utf-8")
+            for name in (
+                "traversal_occurrence_profile.compressed.md",
+                "stdo_compressed.md",
+            )
+        }
+        for name, text in texts.items():
+            for claim in (
+                "RefDomain_Sigma_occurrence",
+                "nine-field",
+                "EventKind_occurrence",
+                "admits_claim",
+                "materializes_relation",
+                "frontier_contains",
+                "OperationKind",
+                "instance contract",
+            ):
+                self.assertIn(claim, text, f"{name}: {claim}")
 
 
 if __name__ == "__main__":

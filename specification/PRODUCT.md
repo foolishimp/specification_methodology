@@ -44,6 +44,8 @@ The Product provides:
 - the separately identifiable, domain-specific Axiomatic Calculus `a_c`, with
   closed symbolic-model, traversal-functor, judgment, projection,
   interpretation, and identity laws;
+- the application-neutral Traversal Occurrence Profile over `a_c` for immutable
+  application histories over externally mutable subjects, optional to adopt;
 - normative construction, authority, admissibility, causal-order, and evidence
   relations across its owning standards;
 - one layout-neutral Product Definition Overlay for locating constitutional
@@ -104,6 +106,40 @@ the rest of STDO as that downstream Product's constitution.
 The generic `a_c` functor-kind identities `F_D`, `F_P`, and `F_H` create no
 implicit import, specialization, or authority relation for equal-spelled
 concepts in another bounded context.
+
+## Traversal Occurrence Profile
+
+`TRAVERSAL_OCCURRENCE_PROFILE.md` owns one `a_c` model-family profile in
+bounded context `urn:stdo:bounded-context:traversal-occurrence-profile`. It
+imports one exact `a_c` basis and instantiates one closed model-family
+signature under its laws. It does not amend the calculus or make occurrence
+semantics mandatory for another `a_c` model. The profile is optional to adopt;
+optionality is not part of its concept name.
+
+The profile represents this relation:
+
+```text
+immutable occurrence application over current external subject
+  -> separately authorized effect operation, when any
+  -> immutable admitted facts and bounded observations
+  -> typed transition judgment
+  -> fresh later occurrence over the then-current subject, when reapplied
+```
+
+The external subject remains the mutable reality carrier. Observations,
+results, evidence, checkpoints, projections, and event records are immutable
+facts or views; none substitutes for that subject. Identity dependency and
+declared causal subgraphs are acyclic. Wider typed lineage may contain lawful
+opposing relation kinds and is not coerced into one untyped DAG.
+
+Profile availability is not Product adoption. A consumer that adopts the
+profile owns its exact subject binding, vocabulary mapping, operation and
+admission authorities, event interpretation, projection law, requirements,
+design, implementation, and evidence. No consumer identity or runtime topology
+enters this STDO profile.
+
+The profile does not define prospective Reference Frame semantics. Any such
+profile remains separately owned and separately selected.
 
 ## Bounded-Context Semantic Isolation
 
@@ -246,128 +282,38 @@ and proof obligations separately.
 
 ## Reference-Frame Engagement
 
-Reference-frame authority has three layers:
+Reference-frame authority remains separated:
 
 ```text
 REFERENCE_FRAME_METHOD.md
-  -> pure declaration, activation, evaluation, result, and coverage principles
+  -> declaration, activation, evaluation, result, coverage, and revision law
 
 STDO_REFERENCE_FRAME_BASELINE.md
-  -> optional Executive, Worker, Reviewer, specialist, and testing profile
+  -> optional engagement, specialist, and testing mappings
 
 Project Reference-Frame Basis
-  -> Product-owned concrete frames, actor-binding rules, capability and grant
-     requirements, scopes, triggers, result relations, and invalidation law
-     under SPEC_METHOD.md
+  -> Product-owned configuration, actor bindings, exact grants, coverage,
+     lifecycle triggers, results, invalidation, and revision
 ```
 
-Presence of the optional profile in an STDO distribution makes it available;
-it does not adopt it. A Product-owned Project Reference-Frame Basis adopts that
-profile or declares another configuration. An execution-scoped activation then
-binds one available frame to one exact evaluation, subject, basis, actor,
-capability envelope, evidence boundary, and authority grant. Availability,
-adoption, and activation are distinct.
+Profile availability does not adopt it, and Product adoption does not activate
+a frame. One execution-scoped activation binds an available Product-owned
+declaration to an exact evaluation, subject, basis, actor, capability envelope,
+evidence boundary, and authority grant.
 
-For this STDO source Product, this section is the Project Reference-Frame Basis
-located by `stdo_default.json`. It adopts the optional STDO profile for the
-families below and binds all concrete activations to the current Product
-Definition, exact constitutional basis, current goal and ticket authority, and
-the actor-specific grants carried by the work instruction.
+This Product owns the complete source-project configuration in
+[`REFERENCE_FRAME_BASIS.md`](REFERENCE_FRAME_BASIS.md). That declaration binds
+the exact method and profile acquisition bases; Executive, Worker, Reviewer,
+and Fundamental Invariant Conservation frames; actor and operation grants; all
+eleven generic specialist-family dispositions; four testing frames; coverage
+and result relations; lifecycle triggers; and invalidation and revision law.
 
-The optional STDO baseline defines Executive, Worker, and Reviewer engagement
-frames, distinct user-acceptance, end-to-end, integration, and unit testing
-frames, and eleven generic specialist-frame families:
-
-- Product;
-- Design;
-- Design Component;
-- Public Boundary;
-- Entity;
-- Operator;
-- Owner;
-- Effect;
-- Reuse/Foundation;
-- Install; and
-- Proof.
-
-These are reusable evaluation archetypes, not mandatory actors, stages,
-components, services, files, runtime types, or new semantic owners. For one
-exact outcome, each family is instantiated where material, established as
-non-material by capable authority, or retained as an explicit residual.
-
-The families are non-hierarchical. Composite satisfaction requires a declared
-conjunction that satisfies every applicable constraint and preserves or
-lawfully translates identity, coordinate and basis, value or evidence,
-lifecycle, authority, and provenance at each material cross-frame seam.
-
-Consumer-local architectures, runtime roles, and renamed local substitutes are
-not members of the generic baseline. Consumers may declare local frames under
-their own Product or accepted-design authority when material.
-
-### Fundamental Invariant Conservation Frame
-
-This Product additionally requires a **Fundamental Invariant Conservation**
-frame for every material proposal or candidate that can affect a Product
-invariant. The trigger is independent of change class, implementation layer,
-and owner count; it therefore applies to requirements, design, realization,
-code, proof, and release candidates as well as constitutional source changes.
-
-Its frame declaration identity is:
-
-```text
-urn:stdo:reference-frame:fundamental-invariant-conservation:v1
-```
-
-The declaration preserves the complete Reference Frame Method tuple:
-
-| Coordinate | Product binding |
-|---|---|
-| `Q` | evaluate whether one named invariant is conserved by one exact proposed change |
-| `B` | current Product Definition, exact constitutional and dependency bases, source checkpoint, and governed scope |
-| `M` | complete affected relation cone and every owning or constraining authority material to the invariant |
-| `C` | exact semantic addresses, identities, revisions, digests, and basis-aware equality; spelling or similar payload is not equality |
-| `I` | one named invariant plus its complete finite owning-authority closure |
-| `A` | Product authority owns the binding; Executive activates; an author-independent capable Reviewer evaluates; existing Product authority disposes |
-| `E` | exact authority bytes, proposed change, affected artifacts, counterexamples, transition evidence, and independently acquired review evidence |
-| `X` | unresolved, ambiguous, stale, omitted, capability-inaccessible, or substituted owners and any authority outside the declared scope |
-| `R` | `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, or `invalid_basis` plus coverage and residuals |
-| `J` | any material basis, subject, owner, carrier, effect, evidence, representation, or topology change invalidates the activation |
-| `K` | declared Reviewer method, domain, context, access, counterexample-search, and author-independence capabilities |
-| `D` | declared inputs from owning authorities and one closed result returned to Executive; no implicit cross-frame relation |
-
-One activation evaluates one named invariant. Its basis is the complete finite
-closure of every exact authority that owns or constrains that invariant,
-including applicable Intent, Product, requirement, standard, accepted design,
-external method, and selected dependency law. A convenient Product-to-design
-path is not sufficient when another authority is material. An unresolved,
-ambiguous, stale, or capability-inaccessible owner returns `invalid_basis` or
-`out_of_frame`; it cannot be treated as satisfaction.
-
-The activation binds at least:
-
-- the invariant identity and exact owning-authority closure;
-- the proposed change, affected relation cone, preserved and changed meaning,
-  and prohibited substitute;
-- the actor and capability envelope;
-- the subject, evidence-acquisition boundary, and counterexamples;
-- the result and coverage relations; and
-- invalidation and reactivation conditions.
-
-The Executive frame activates this review. A capable Reviewer frame evaluates
-it and returns the closed result to Executive. The Worker or other author may
-supply the exact candidate and evidence but cannot qualify its own
-invariant-affecting candidate through self-review. The Reviewer gains no repair,
-acceptance, or continuation authority from the activation.
-
-The frame activates before accepted-design admission or source acceptance and
-again before release promotion. It reactivates whenever the affected change
-alters an authority owner, semantic or state carrier, effect target, operation
-grant, evidence boundary, storage or retry relation, representation boundary,
-or the topology of the owning-authority closure. A changed basis or subject
-creates a new activation; a prior result does not transfer.
-
-The frame evaluates conservation. It creates no invariant, authority, design,
-operation grant, runtime mechanism, or acceptance decision.
+The declaration governs the mutable source project. It is not a released
+standards member, does not alter an immutable release, and does not select or
+activate frames for a consumer. Every effectful Worker activation must inherit
+an exact owner grant naming its mutation subject and write territory. A frame
+label, broad workspace access, or prior result grants no operation, review,
+acceptance, publication, disposition, or continuation authority.
 
 ## Product Outcome
 
@@ -376,6 +322,8 @@ which:
 
 - the Axiomatic Calculus remains carrier-neutral and separate from every
   interpreted subject model and carrier encoding;
+- the Traversal Occurrence Profile remains application-neutral, separately
+  identifiable, and unavailable as implicit consumer or runtime law;
 - every law has one owning standard and every consuming surface refers to that
   owner without creating rival authority;
 - material terms resolve through bounded-context identity, owning authority,
@@ -432,6 +380,7 @@ this live Product surface.
 - no mandatory one-component-per-frame or one-agent-per-frame topology;
 - no consumer-specific entity, owner, graph, event, runtime, framework,
   topology, count, ticket, or work-stage law;
+- no requirement that a symbolic model import the Traversal Occurrence Profile;
 - no local-axioms authority independent of Goals or equivalent current epic
   authority, Product, requirements, or accepted design;
 - no release version, branch, tag, candidate, review, acceptance, or publication

@@ -109,7 +109,7 @@ class RepositoryDogfoodTests(unittest.TestCase):
             target_errors,
         )
 
-    def test_repository_product_definition_binds_the_rc2_builder_basis(
+    def test_repository_product_definition_binds_the_rc3_builder_basis(
         self,
     ) -> None:
         repository = Path(__file__).resolve().parents[1]
@@ -117,7 +117,7 @@ class RepositoryDogfoodTests(unittest.TestCase):
         definition = json.loads(definition_path.read_text(encoding="utf-8"))
         with tempfile.TemporaryDirectory() as temporary:
             store = Store(Path(temporary) / "store")
-            installed = store.install(str(repository), "v2.4.3-rc.2")
+            installed = store.install(str(repository), "v2.4.3-rc.3")
             self.assertEqual(
                 definition["constitution"]["stdo"]["basis"],
                 {

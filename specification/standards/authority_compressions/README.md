@@ -7,6 +7,7 @@ constitutional authority and not independently selectable method versions.
 The source method, profile, and schema documents remain the deciding sources:
 
 - `../AXIOMATIC_CALCULUS.md`
+- `../TRAVERSAL_OCCURRENCE_PROFILE.md`
 - `../REFERENCE_FRAME_METHOD.md`
 - `../STDO_REFERENCE_FRAME_BASELINE.md`
 - `../SPEC_METHOD.md`
@@ -24,6 +25,11 @@ The source method, profile, and schema documents remain the deciding sources:
 `axiomatic_calculus.compressed.md` is the source-specific projection of the
 fundamental `a_c` standard. It cannot define an interpreted `a_c.X` model or a
 carrier encoding.
+
+`traversal_occurrence_profile.compressed.md` is the source-specific projection
+of the application-neutral Traversal Occurrence Profile. It cannot supply
+consumer adoption, subject interpretation, runtime semantics, or operation
+authority.
 
 `../GLOSSARY_GUIDE.md` is a non-deciding semantic locator index. The aggregate
 compression watches it through separate `index_refs` and `index_digests` fields

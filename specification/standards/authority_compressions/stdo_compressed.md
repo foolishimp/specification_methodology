@@ -8,6 +8,7 @@ target_prompt_families:
   - evaluate_review_grade
 source_refs:
   - ../AXIOMATIC_CALCULUS.md
+  - ../TRAVERSAL_OCCURRENCE_PROFILE.md
   - ../REFERENCE_FRAME_METHOD.md
   - ../STDO_REFERENCE_FRAME_BASELINE.md
   - ../SPEC_METHOD.md
@@ -24,7 +25,8 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  AXIOMATIC_CALCULUS.md: 95c9c856a4e206588b984f04ae0b528259cdaf955885ccf42fc58d80debbc02d
+  AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
+  TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: 90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f
   STDO_REFERENCE_FRAME_BASELINE.md: f6a4e2be637df6c2dd5c69c6da7e77cefd8d8cde93af65ca686608ec43555e3f
   SPEC_METHOD.md: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
@@ -39,9 +41,9 @@ source_digests:
   RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
-  GLOSSARY_GUIDE.md: fe2df2548cecbe0e4709ec49b33301f26a02d1e7e4e5b00578c1aa886e2409e6
+  GLOSSARY_GUIDE.md: 8ac0511cdea5321641cb1d754aa0acec58c323e74aef7dc21c2d767526bdb79a
 generated_by: codex
-generated_at: 2026-08-29
+generated_at: 2026-08-30
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -97,21 +99,59 @@ refuse cross-law closure.
 - Keep `a_c`, an interpreted `a_c.X` model, and an encoded `a_c.X.C` carrier as
   distinct governed layers with separate content identities, judgments, and
   proof. Product status requires separate acceptance and release authority.
-- One closed signature declares every sort, relation kind, constraint kind,
-  residual kind, functor kind, judgment kind, stop kind, field, and type. A model is
-  `M_b=(b,I,O,E,C,L,X)`: exact basis, identities, objects, relations,
-  constraints, latitude, and residuals.
-- Identity is scoped by type, context, owner, scope, and basis. Relations are
-  directed and typed. Authority, provenance, and residual uncertainty survive
-  every projection, transformation, interpretation, and encoding.
+- One closed signature declares the fixed eight-member record-kind universe and
+  every sort, relation kind, constraint kind, residual kind, functor kind,
+  judgment kind, stop kind, field, value domain, and reference domain. The
+  model tuple is `M_b = (b, I, O, E, C, L, X, V, T, J)`: exact basis,
+  identities, objects, relations, constraints, latitude, residuals, traversals,
+  transformations, and judgments.
+  A total population map assigns every fundamental record to exactly one family.
+  `RecordKind_ac` is exactly:
+
+  ```text
+  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object
+  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation
+  urn:stdo:concept:axiomatic-calculus:record-kind:constraint
+  urn:stdo:concept:axiomatic-calculus:record-kind:latitude
+  urn:stdo:concept:axiomatic-calculus:record-kind:residual
+  urn:stdo:concept:axiomatic-calculus:record-kind:traversal
+  urn:stdo:concept:axiomatic-calculus:record-kind:transformation
+  urn:stdo:concept:axiomatic-calculus:record-kind:judgment
+  ```
+- Identity is scoped by type, context, owner, scope, and basis. The total
+  `RefDomain_Sigma(record_kind, field)` function closes every identity-bearing
+  field with exact cardinality, permitted local record families and sorts,
+  external target kinds, and `required_basis_relation`. Relations
+  are directed and typed. Authority, provenance, and residual uncertainty
+  survive every projection, transformation, interpretation, and encoding.
 - Transformation is an operation-bearing specialization of one exact
   traversal. It directly carries context, owner, scope, basis, operation
   authority, evidence, preservation, mutation, residual, and refusal
   coordinates plus one exact typed preservation relation; nominal preservation
-  and broader or mismatched traversal coordinates refuse. Its closed delta
-  partitions every input identity into preserved or removed and every successor
-  identity into preserved or introduced; silent retention, loss, duplication,
-  or residual erasure refuses.
+  and broader or mismatched traversal coordinates refuse. Its local-record
+  delta partitions every input local identity into preserved or removed and
+  every successor local identity into preserved or introduced. Its separate
+  `Resolution_M` delta partitions exact external-resolution coordinates into
+  `external_preserved`, `external_removed`, and `external_introduced`, with one
+  total equality witness for every preserved coordinate. Silent local or
+  external retention, loss, duplication, reintroduction, or residual erasure
+  refuses.
+  Exact closure requires
+  `Local_b = P_t disjoint_union R_t`,
+  `Local_b_prime = P_t disjoint_union N_t`,
+  `N_t intersect Local_b = empty`,
+  `R_t intersect Local_b_prime = empty`,
+  `E_b = EP_t disjoint_union ER_t`,
+  `E_b_prime = EP_t disjoint_union EN_t`,
+  `EN_t intersect E_b = empty`, and
+  `ER_t intersect E_b_prime = empty`.
+  `external_resolution_witnesses` contains exactly one
+  `ExternalResolutionPreservationWitness` per preserved coordinate, with exact
+  domain/codomain model and resolution tuples, `decision: equal`, and non-empty
+  evidence; the tuples are field-equal. A cross-basis or cross-signature migration
+  requires one separately identified specialization with exact composite-basis
+  and compatible signature-extension relations; changed basis or record kind is
+  removal plus introduction, never preservation.
 - Material closure is the least finite unique lawful record closure under an
   exact dependency family. Projection returns that closure plus its explicit
   boundary; it cannot trim required members to meet a budget.
@@ -119,9 +159,9 @@ refuse cross-law closure.
   as `F_K[v](X_v) -> Y_v | Omega_v`, with one exact traversal `v`. Actors and
   domain operations are separate coordinates.
 - `F_D[v]` evaluates or proves declared properties and returns a judgment over
-  an unchanged subject. `F_P[v]` performs bounded probabilistic proposal
-  without acceptance authority. `F_H[v]` performs explicit human adjudication
-  under an exact grant.
+  an unchanged subject. `F_P[v]` performs bounded probabilistic interpretation,
+  construction, or proposal without acceptance authority. `F_H[v]` performs
+  explicit human adjudication under an exact grant.
 - Equal spelling in another bounded context creates no import, specialization,
   or authority relation. Any external relation is separately owned and remains
   outside the calculus.
@@ -137,6 +177,73 @@ refuse cross-law closure.
 - Concrete subject interpretations and carrier encodings remain downstream
   relations. Neither a selected interpretation nor a carrier is content of the
   calculus.
+- `id(AxiomaticCalculusBasis)` is
+  `urn:stdo:axiomatic-calculus-basis:sha256:` plus
+  `sha256(JCS(AxiomaticCalculusBasis))`. Its exact kind is
+  `stdo.axiomatic-calculus-basis`, schema version is `1`, and concept identity is
+  the calculus. RFC 8785 JCS is mandatory and duplicate object names refuse. The
+  record separates an absolute immutable accepted predecessor derivation basis
+  from the distinct immutable successor publication basis. The predecessor
+  manifest and every non-empty, duplicate-free, unsigned-UTF-16-sorted
+  `principle_refs` member byte and heading fragment resolve exactly. The
+  successor manifest, calculus `member_uri`, and `member_sha256` resolve exactly;
+  same-carrier or cyclic derivation refuses.
+
+## Traversal Occurrence Profile
+
+- `TRAVERSAL_OCCURRENCE_PROFILE.md` owns one application-neutral `a_c`
+  model-family profile. It instantiates one closed signature under an exact
+  calculus basis without modifying the calculus; adoption remains optional and
+  availability is not adoption.
+- Only Traversal Occurrence Profile semantic objects use
+  `SemanticObject.value`. Every relation, constraint, latitude, residual,
+  traversal, transformation, and judgment retains its inherited `a_c` family
+  and coordinates.
+- The profile supplies a complete qualified
+  `RefDomain_Sigma_occurrence(record_kind, field)` table and the exact inherited
+  eight-family population. Relation and claim qualifiers use the declared
+  nine-field contract; missing, unknown, duplicate, wrong-family, wrong-sort,
+  or wrong-basis references refuse.
+- `EventKind_occurrence` is closed to claim admission, occurrence admission,
+  effect disposition, and external-fact admission, each with exact payload,
+  scope, claim, and occurrence contracts.
+- Occurrence identity binds only pre-admission application, traversal,
+  functor-kind, subject-binding, intent, lineage, and identity-dependency
+  inputs. Post-effect observations, evidence, judgments, events, ordinals, and
+  projections cannot enter the seed.
+- Candidate claim, claim judgment, framework event, event judgment, and
+  materialized typed relation are distinct identities and authority surfaces.
+  Their admitted semantic cut requires admitted claim, event, and cut judgments
+  over unchanged subjects; exact `admits_claim`, `materializes_relation`, and
+  successor `frontier_contains` edges; one basis; and identical source
+  frontiers. It then contains its exact source and successor frontiers or
+  refuses. Byte-equal duplicate admission reuses the cut; a collision refuses.
+- Identity dependency, occurrence cause, and event cause are separate acyclic
+  graphs. Wider typed lineage may contain opposing support and correction
+  edges; temporal or carrier order does not create cause.
+- Mutable reality remains external under one stable subject binding.
+  Observation, result, evidence, checkpoint, event, projection, cache, or model
+  content cannot replace it.
+- Functor kind, traversal, effect operation, executor, actor, owner-issued
+  grant, and invocation are distinct. Every effect-operation instance binds one
+  operation kind, subject, territory, and contract. Its exact instance contract
+  must equal the OperationKind contract, and the invocation and
+  grant must reproduce the kind, subject, and territory coordinates. Reapplying
+  the traversal over the then-current subject creates a fresh immutable
+  occurrence.
+- An effect-readiness judgment binds the current observation, invocation,
+  operation, territory, and grant. Stale or unauthorized readiness never
+  dispatches; later disposition is immutable and partial effect remains an
+  explicit residual with bounded post-observation.
+- Every retained component traversal application has its own occurrence. A
+  declared composite application may also have an aggregate occurrence; typed
+  component membership is not material cause.
+- An event frontier binds the complete event set, exact basis, and precedence
+  law. New events require a new frontier; a new projection judgment is required
+  only when that frontier is projected or evaluated.
+- A Product separately adopts and interprets the profile. The profile grants no
+  operation, admission, evaluation, decision, correction, continuation, or
+  closure authority and contains no consumer runtime mapping.
 
 ## Authority Flow
 

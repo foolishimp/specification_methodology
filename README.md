@@ -17,6 +17,12 @@ The standards library includes the domain-specific
 carrier encodings are separately governed downstream layers; they become
 Products only through their own acceptance and release authority.
 
+STDO also provides the application-neutral [`a_c` Traversal Occurrence
+Profile](specification/standards/TRAVERSAL_OCCURRENCE_PROFILE.md) for reasoning
+about immutable application histories over externally mutable subjects. The
+profile remains optional to adopt; availability does not activate it for a
+consumer.
+
 The `stdo` toolchain manager installs immutable cuts once in a shared versioned
 store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
 already pinned Product Definitions, and performs explicit adoption and fleet

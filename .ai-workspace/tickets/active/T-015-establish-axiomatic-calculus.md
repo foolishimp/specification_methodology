@@ -11,12 +11,12 @@
 - re_entry_point: specification/INTENT.md
 - triaged_at: 2026-08-29
 - created_at: 2026-08-29
-- updated_at: 2026-08-29
+- updated_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-29
-- derivation_basis: stdo://releases/v2.4.3-rc.2/
-- derivation_manifest_sha256: 8fb8ef7e8768c54e69eaa457c8acd9f621f8ad4f70391a2246a02014a5455944
+- derivation_basis: stdo://releases/v2.4.3-rc.3/
+- derivation_manifest_sha256: 312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551
 - publication_basis: unresolved
 
 ## Intake Triage

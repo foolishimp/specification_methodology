@@ -56,9 +56,23 @@ The calculus contracts recurring principles already established by STDO:
   [`IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004`](IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004);
 - exact bounded-context meaning and explicit cross-context relations from
   [`SPEC_METHOD.md#bounded-context-semantic-resolution`](SPEC_METHOD.md#bounded-context-semantic-resolution);
-- ambiguity, probabilistic proposal, human adjudication, and deterministic
-  admission separation from
+- probabilistic construction as a bounded evaluation class from
+  [`REFERENCE_FRAME_METHOD.md#position`](REFERENCE_FRAME_METHOD.md#position)
+  and
+  [`REFERENCE_FRAME_METHOD.md#evaluation`](REFERENCE_FRAME_METHOD.md#evaluation);
+- delegated probabilistic construction, exact candidate production, and
+  construction-versus-assessment separation from
+  [`SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020);
+- governed ambiguity, bounded probabilistic processing, explicit human
+  adjudication, and hard-stop separation from
   [`SPEC_METHOD.md#ambiguity-governance-rule`](SPEC_METHOD.md#ambiguity-governance-rule);
+- exact-basis evaluation, evidence-and-verdict separation, authority
+  conservation, and closed results from
+  [`REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates`](REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates),
+  [`REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation`](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation),
+  [`REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation`](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation),
+  and
+  [`REFERENCE_FRAME_METHOD.md#rf-012-closed-results`](REFERENCE_FRAME_METHOD.md#rf-012-closed-results);
 - constitutional derivation and re-entry from
   [`SPEC_METHOD.md#constitutional-chain`](SPEC_METHOD.md#constitutional-chain);
 - finite material closure, projection, authority conservation, residual
@@ -71,6 +85,14 @@ These references establish provenance. The definitions and laws below are the
 sole normative authority for the meaning of `a_c` within the selected complete
 STDO cut. A consumer does not need an implicit STDO representation, GTL
 carrier, or downstream implementation to interpret the calculus.
+
+This standard introduces the generic calculus identities `F_D`, `F_P`, and
+`F_H`. It does not import those identities from an equal-spelled graph,
+runtime, ODD, or application shorthand. The predecessor clauses establish the
+substrate-neutral evaluation, probabilistic-processing, human-adjudication,
+authority, evidence, and refusal principles from which the generic definitions
+below are derived. Nominal equality with a predecessor or downstream shorthand
+creates no concept-identity, import, or equivalence relation.
 
 The relative links above identify derivation clause families in this authoring
 source. Issuance of an exact `AxiomaticCalculusBasis` resolves and records their
@@ -104,6 +126,7 @@ An `a_c` signature is:
 
 ```text
 Sigma = (
+  RecordKind,
   Sort,
   RelationKind,
   ConstraintKind,
@@ -114,10 +137,32 @@ Sigma = (
 )
 ```
 
-Each member is a finite, closed identity set for one model family. The
-signature defines:
+`a_c` fixes this finite core record-kind set:
+
+```text
+RecordKind_ac = {
+  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object,
+  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation,
+  urn:stdo:concept:axiomatic-calculus:record-kind:constraint,
+  urn:stdo:concept:axiomatic-calculus:record-kind:latitude,
+  urn:stdo:concept:axiomatic-calculus:record-kind:residual,
+  urn:stdo:concept:axiomatic-calculus:record-kind:traversal,
+  urn:stdo:concept:axiomatic-calculus:record-kind:transformation,
+  urn:stdo:concept:axiomatic-calculus:record-kind:judgment
+}
+```
+
+Every `a_c` signature imports those identities unchanged. A model-family
+signature specializes their fields, value domains, reference domains, and
+admissible kinds; it does not remove, rename, shadow, or silently add a core
+record family. Another fundamental record family requires an explicit
+compatible calculus extension rather than an extra subject sort.
+
+Every signature member is a finite, closed identity set for one model family.
+The signature defines:
 
 - the fields and value domains of every sort and record family;
+- the reference domain and cardinality of every identity-bearing field;
 - the allowed source and target sorts for every relation kind;
 - the subject and predicate domains of every constraint kind;
 - the subject, uncertainty, consequence, and re-entry domains of every
@@ -131,7 +176,18 @@ an explicit compatible extension relation.
 An `a_c` model over exact basis `b` is:
 
 ```text
-M_b = (b, I, O, E, C, L, X)
+M_b = (b, I, O, E, C, L, X, V, T, J)
+
+Population_M = {
+  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object  -> O,
+  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation  -> E,
+  urn:stdo:concept:axiomatic-calculus:record-kind:constraint      -> C,
+  urn:stdo:concept:axiomatic-calculus:record-kind:latitude        -> L,
+  urn:stdo:concept:axiomatic-calculus:record-kind:residual        -> X,
+  urn:stdo:concept:axiomatic-calculus:record-kind:traversal       -> V,
+  urn:stdo:concept:axiomatic-calculus:record-kind:transformation  -> T,
+  urn:stdo:concept:axiomatic-calculus:record-kind:judgment        -> J
+}
 ```
 
 where:
@@ -141,13 +197,56 @@ where:
 - `E` is the finite set of typed directed relations;
 - `C` is the finite set of constitutional constraints;
 - `L` is the finite set of declared latitude records; and
-- `X` is the finite set of residual uncertainty records.
+- `X` is the finite set of residual uncertainty records;
+- `V` is the finite set of traversal records;
+- `T` is the finite set of transformation records; and
+- `J` is the finite set of judgment records.
+
+`Population_M` is a total function over `RecordKind_ac`. Every population is
+finite, every fundamental record belongs to exactly one population, and record
+identities are unique across their disjoint union. Let `Local_M` be that union.
+Then `I = Local_M disjoint_union External_M`, where every member of
+`External_M` is admitted only through one signature-declared external reference
+domain and exact resolution relation. A hidden record, an unpopulated extra
+record family, an identity occurring in two populations, or an identity in `I`
+with neither one local record nor one lawful external resolution refuses the
+model. A population may be empty only when the selected signature does not
+require a member of that record kind.
+
+The signature declares a finite reference-domain function:
+
+```text
+RefDomain_Sigma(record_kind, field)
+  -> (cardinality,
+      allowed_local_record_kinds,
+      allowed_semantic_object_sorts,
+      allowed_external_target_kinds,
+      required_basis_relation)
+```
+
+Every scalar or collection member that carries an identity reference is
+checked through that function. A local reference resolves across the exact
+`Population_M` family named by its target record kind; a reference to a
+semantic object also satisfies the declared target sort. An external reference
+resolves through exactly one declared external target kind and basis relation.
+No reference may resolve both locally and externally. Missing field domains,
+wrong-family targets, wrong-sort targets, ambiguous targets, and dangling
+external identities refuse structural admission.
 
 The tuple is abstract. A carrier may use records, tables, graphs, terms,
 clauses, code, or another representation only when its encoding profile proves
 that every tuple relation is preserved or explicitly refused.
 
 ## Typed Records
+
+The following sections define the exact shapes of the eight core record
+families. `SemanticObject`, `TypedRelation`, `Constraint`, `Latitude`, and
+`Residual` populate `O`, `E`, `C`, `L`, and `X`. The traversal,
+transformation, and judgment records defined below populate `V`, `T`, and `J`.
+A traversal, transformation, or judgment is not placed in `O` merely by
+reifying its name as a semantic object. A subject model may independently
+represent the concept of a record kind, but that representation does not
+satisfy the core population law.
 
 ### Semantic Object
 
@@ -272,7 +371,9 @@ An undeclared residual kind or value refuses structural admission.
 
 Every admitted object, relation, constraint, latitude, residual, traversal,
 transformation specialization, and judgment belongs to one declared signature.
-Missing or unknown kinds fail closed.
+Every fundamental record also occurs exactly once in the total
+`Population_M` function under its declared `RecordKind_ac`. Missing, duplicate,
+shadowed, or unknown record kinds and populations fail closed.
 
 ### AC-002 Scoped Identity
 
@@ -283,8 +384,11 @@ does not establish semantic identity.
 ### AC-003 Reference Closure
 
 Every referenced identity resolves exactly once in the applicable model or
-through one explicit external relation. Dangling, duplicate, wrong-kind, or
-ambiguous references refuse structural admission.
+through one explicit external relation. Resolution uses the exact
+`RefDomain_Sigma(source_record_kind, field)` declaration across the model's
+record populations. Dangling, duplicate, wrong-record-kind, wrong-sort,
+wrong-basis, locally-and-externally ambiguous, or undeclared-field references
+refuse structural admission.
 
 ### AC-004 Relation Typing
 
@@ -354,8 +458,8 @@ member to satisfy a carrier or capability budget.
 
 ### AC-012 Overlay
 
-An overlay adds explicit objects, relations, constraints, latitude, or
-residuals to a basis model. It does not mutate the basis. Override,
+An overlay adds explicit records to one or more declared `Population_M`
+families of a basis model. It does not mutate the basis. Override,
 disambiguation, equivalence, specialization, or translation exists only as a
 typed relation with exact authority, direction, scope, basis, preservation,
 loss, refusal, and invalidation semantics.
@@ -381,6 +485,10 @@ t = {
   preserved,
   introduced,
   removed,
+  external_preserved,
+  external_introduced,
+  external_removed,
+  external_resolution_witnesses,
   residuals,
   evidence,
   provenance,
@@ -395,32 +503,128 @@ authority, evidence, provenance, and stop contract must equal or lawfully
 restrict the corresponding traversal coordinates. A broader or mismatched
 coordinate refuses.
 
-`preservation_relation` resolves one exact typed equality, equivalence, or
-meaning-preservation relation applicable to the declared domain and codomain
-record kinds. Its direction, authority, scope, basis, and comparison law are
-material. Nominal equality or an unbound assertion of preserved meaning
-refuses.
+`domain_model` and `codomain_model` resolve exact content identities of the
+complete input and proposed successor models. Each model identity commits to
+its exact calculus basis, signature identity, complete finite `Population_M`,
+complete `External_M`, exact external-resolution map, and selected
+model-content identity under the owning identity law. A mutable locator,
+model-family name, partial projection, or population digest without the exact
+model identity refuses.
 
-Let `I_b` be the complete input-model identity set, `P_t` the identities named
-by `preserved`, `R_t` those named by `removed`, and `N_t` the identities of the
-complete records named by `introduced`. A lawful transformation proves the
-closed delta:
+For each `x in External_M`, the model's exact resolution relation determines:
 
 ```text
-I_b       = P_t disjoint_union R_t
-I_b_prime = P_t disjoint_union N_t
-N_t intersect I_b = empty
-R_t intersect I_b_prime = empty
+Resolution_M(x) = {
+  external_identity,
+  reference_domain,
+  external_target_kind,
+  resolved_target_identity,
+  basis_relation,
+  resolution_basis,
+  evidence_identity
+}
+
+ResolutionSet_M = { Resolution_M(x) | x in External_M }
 ```
 
-Every preserved record is byte-identical or is related by the exact
-`preservation_relation`. Every removed identity is absent from the successor.
-Every introduced identity is absent from the input and carries a complete
-lawful record. Every input identity is classified exactly once as preserved or
-removed; no identity may be silently dropped, retained, or duplicated.
+`Resolution_M` is a model coordinate supplied by the signature-declared
+external reference relation, not a ninth fundamental record family. Every
+field is identity-bearing and exact. One external identity has exactly one
+resolution tuple in one model; a missing, ambiguous, or extra tuple refuses.
+
+For an ordinary same-basis transformation:
+
+```text
+basis(domain_model) = basis(codomain_model) = t.basis = basis(t.traversal)
+signature(domain_model) = signature(codomain_model)
+```
+
+A cross-basis or cross-signature migration requires a separately identified
+transformation specialization whose exact composite-basis and compatible
+signature-extension relations name both sides. No identity whose basis or
+record kind changes belongs to `preserved`; the source identity is removed and
+the successor identity is introduced, with their continuity represented only
+by the exact migration relation.
+
+`preservation_relation` resolves one exact typed equality relation applicable
+to the declared domain and codomain model identities and record kinds. It binds
+both model identities, both exact bases, comparison domain, direction,
+authority, scope, evidence, and equality law. Equivalence or
+meaning-preservation may relate a removed identity to an introduced identity;
+it cannot retain one identity in `preserved`.
+
+Let `Local_b` be the complete input-model local-record identity set, `P_t` the
+identities named by `preserved`, `R_t` those named by `removed`, and `N_t` the
+identities of the complete records named by `introduced`. A lawful
+transformation proves the closed local-record delta:
+
+```text
+Local_b       = P_t disjoint_union R_t
+Local_b_prime = P_t disjoint_union N_t
+N_t intersect Local_b = empty
+R_t intersect Local_b_prime = empty
+```
+
+For every identity in `P_t`, the input and successor records have the same
+record kind, identity, context, owner, scope, and basis. They are either:
+
+1. byte-identical under one exact canonical record grammar selected for both
+   models; or
+2. equal under the exact `preservation_relation` when the abstract records do
+   not share such a byte grammar.
+
+Canonical-byte equality and typed record equality are alternative proofs of
+identity preservation, not carrier selection by the calculus. A changed field,
+changed basis, changed record kind, nominally equal identifier, equivalence,
+or unbound assertion of preserved meaning refuses membership in `P_t`.
+
+Every removed identity is absent from the successor. Every introduced identity
+is absent from the input and carries a complete lawful record in exactly one
+successor population. Every input local-record identity is classified exactly
+once as preserved or removed; no local record may be silently dropped,
+retained, or duplicated.
+
+The external-resolution coordinates form a distinct closed delta. Let `E_b`
+and `E_b_prime` be `ResolutionSet_M` for the domain and codomain models;
+`EP_t`, `ER_t`, and `EN_t` are exactly the resolution coordinates named by
+`external_preserved`, `external_removed`, and `external_introduced`:
+
+```text
+E_b       = EP_t disjoint_union ER_t
+E_b_prime = EP_t disjoint_union EN_t
+EN_t intersect E_b = empty
+ER_t intersect E_b_prime = empty
+```
+
+For every `x in EP_t`, `external_resolution_witnesses` contains exactly one:
+
+```text
+ExternalResolutionPreservationWitness = {
+  external_resolution: x,
+  domain_model,
+  codomain_model,
+  domain_resolution: Resolution_domain_model(x),
+  codomain_resolution: Resolution_codomain_model(x),
+  decision: equal,
+  evidence
+}
+```
+
+The two resolution tuples are exactly field-equal. A nominally equal external
+identifier, equivalent target, changed target kind, changed resolved target,
+changed reference domain, changed basis relation, changed resolution basis, or
+missing witness cannot enter `EP_t`. Every member of `ER_t` has its complete
+resolution only in the domain model; every member of `EN_t` has its complete
+resolution only in the codomain model. A changed external resolution is a
+removal followed by introduction of the new resolution coordinate and any
+separately declared continuity relation; the referenced external identity may
+remain unchanged, but the resolution is not preserved. Witnesses are total and
+unique over `EP_t` and name no other resolution coordinate.
+
 Material residuals remain in the successor residual set unless an exact
 authorized disposition is included in the transformation evidence. Failure to
-establish any partition, identity, residual, or codomain equation refuses.
+establish any model identity, basis, population, local or external partition,
+equality, external-resolution witness, residual, or codomain equation refuses.
 
 Application is:
 
@@ -559,8 +763,9 @@ The interpretation contract declares:
 - exact `a_c` basis;
 - exact subject identity, inventory, and bytes or semantic addresses;
 - selected signature and any compatible extension relation;
-- mapping from subject declarations to model objects, relations, constraints,
-  latitude, and residuals;
+- mapping from subject declarations to every applicable model record population,
+  including objects, relations, constraints, latitude, residuals, traversals,
+  transformations, and judgments;
 - interpreter identity, capability, provenance, and stop states;
 - structural evaluation contract;
 - semantic selection and acceptance authority; and
@@ -775,15 +980,19 @@ being useful to an application.
 
 Review and qualification of this fundamental standard cover at least:
 
-1. closed signature and record definitions;
+1. closed signature, `RecordKind_ac`, population, field, value-domain, and
+   reference-domain definitions;
 2. well-typed positive and refusal examples for every fundamental law;
 3. identity uniqueness and cross-context collision cases;
-4. closure, projection, overlay, transformation, and composition laws;
+4. closure, projection, overlay, transformation, and composition laws,
+   including exact model identities, population partitions, basis equality,
+   and byte-or-typed-equality preservation refusal;
 5. strict separation of domain operations, functor kinds, actors, and
    judgments;
 6. residual and authority conservation through interpretation and encoding;
 7. exact calculus-basis identity reconstruction;
-8. direct-coordinate and refusal cases for every fundamental record family;
+8. direct-coordinate, cross-family reference, wrong-family, duplicate-family,
+   and dangling-reference refusal cases for every fundamental record family;
 9. derivation-basis and publication-basis reconstruction with cyclic and
    same-carrier counterexamples; and
 10. one neutral toy model demonstrating that the calculus has no hidden

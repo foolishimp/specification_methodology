@@ -10,6 +10,9 @@ interaction tooling:
   `WORLD_MODEL_METHOD.md`
 - the fundamental carrier-neutral `AXIOMATIC_CALCULUS.md`, whose `a_c` theory
   remains separate from interpreted subject models and carrier encodings
+- the application-neutral `TRAVERSAL_OCCURRENCE_PROFILE.md`, which instantiates
+  one closed model-family signature under an exact `a_c` basis without changing
+  the calculus or selecting a consumer; adoption remains optional;
 - derived application profiles such as `STDO_REFERENCE_FRAME_BASELINE.md`
 - companion governance and operating surfaces such as `POSTING_GUIDE.md`,
   `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`, and

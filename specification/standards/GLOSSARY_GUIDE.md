@@ -45,6 +45,18 @@ fallback decision.
 | `Interpretation` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#interpretation-and-models`](AXIOMATIC_CALCULUS.md#interpretation-and-models) | — |
 | `Axiomatic Calculus Basis` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#exact-calculus-identity`](AXIOMATIC_CALCULUS.md#exact-calculus-identity) | — |
 
+## Traversal-Occurrence-Profile Index
+
+| Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
+|---|---|---|---|
+| `Traversal Occurrence Profile`; `Sigma_occurrence` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#position`](TRAVERSAL_OCCURRENCE_PROFILE.md#position) | [`TRAVERSAL_OCCURRENCE_PROFILE.md#imported-calculus-boundary`](TRAVERSAL_OCCURRENCE_PROFILE.md#imported-calculus-boundary) |
+| `Occurrence` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity`](TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity) | — |
+| `Framework Event` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation`](TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation) | — |
+| `Typed Lineage` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#causality-and-typed-lineage`](TRAVERSAL_OCCURRENCE_PROFILE.md#causality-and-typed-lineage) | — |
+| `Mutable Subject` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#mutable-subject-effect-relation`](TRAVERSAL_OCCURRENCE_PROFILE.md#mutable-subject-effect-relation) | — |
+| `Event Frontier` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#event-frontier-and-projection`](TRAVERSAL_OCCURRENCE_PROFILE.md#event-frontier-and-projection) | — |
+| `Traversal Occurrence Profile Basis` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE_PROFILE.md#exact-profile-identity`](TRAVERSAL_OCCURRENCE_PROFILE.md#exact-profile-identity) | — |
+
 ## Semantic Resolution Index
 
 | Indexed term | Bounded-context identity | Owning concept clause |
