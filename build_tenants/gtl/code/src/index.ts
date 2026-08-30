@@ -5,6 +5,18 @@ export { validateBuildPlan } from "./validation.js";
 export { validateAcceptedBuildEvidence } from "./evidence.js";
 export { parseUniqueJson } from "./io.js";
 export {
+  constructAxiomIndexGtlCandidate,
+  decodeAxiomIndexConfig,
+  AXIOM_INDEX_MACHINE,
+  STDO_AXIOM_INDEX_GTL_PRODUCT_SEMANTICS,
+  type AcceptedAxiomaticProgram,
+  type AxiomModel,
+  type AxiomIndexGtlCandidate,
+  type AxiomIndexGtlInput,
+  type CandidateStructureResult,
+  type SemanticSelectionJudgment,
+} from "./axiom_index.js";
+export {
   ATOM_CLASSES,
   BUILD_TENANT_IDENTITY,
   CARRIER_BASIS_IDENTITY,

@@ -9,7 +9,7 @@ external consuming host
 
 Derives from: `../INTENT.md#desired-outcomes`,
 `../PRODUCT.md#product-terms`, `../PRODUCT.md#programmatic-index-boundary`,
-`REQ-P-REPRESENTATION-ALGEBRA.md#closed-algebra`,
+`REQ-P-REPRESENTATION-ALGEBRA.md#exact-model-algebra`,
 `REQ-P-FP-CONSUMPTION.md#external-traversal-contract`, and exact Source STDO
 `REFERENCE_FRAME_METHOD.md` and `STDO_REFERENCE_FRAME_BASELINE.md`
 
@@ -35,15 +35,15 @@ unchanged:
 
 ```text
 ExecutiveRoleRef =
-  stdo://releases/v2.4.3-rc.3/standards/
+  stdo://releases/v2.5.0-rc.1/standards/
     STDO_REFERENCE_FRAME_BASELINE.md#executive
 
 WorkerRoleRef =
-  stdo://releases/v2.4.3-rc.3/standards/
+  stdo://releases/v2.5.0-rc.1/standards/
     STDO_REFERENCE_FRAME_BASELINE.md#worker
 
 ReviewerRoleRef =
-  stdo://releases/v2.4.3-rc.3/standards/
+  stdo://releases/v2.5.0-rc.1/standards/
     STDO_REFERENCE_FRAME_BASELINE.md#reviewer
 
 EngagementRoleRef = ExecutiveRoleRef | WorkerRoleRef | ReviewerRoleRef
@@ -142,8 +142,8 @@ trailing line feed. Duplicate object names or duplicate array members refuse
 admission. URI, identity, and digest arrays sort by ascending unsigned UTF-16
 code units. `frame_activations` sort by `activation_ref`. Every
 `mandatory_program_ref`, `role_program_ref`, and explicit seed resolves to one
-member of `I_B`. At least one mandatory ref per activation targets an atom in
-`P_B` with `atom_class = "reference_frame"`; every `role_program_ref` is bound
+member of `I`. At least one mandatory ref per activation targets a semantic
+object in `M_B.O` whose `sort` resolves the selected reference-frame sort; every `role_program_ref` is bound
 by the accepted Semantic Selection Ledger to the exact selected Source STDO
 engagement-role clause.
 
@@ -179,7 +179,9 @@ Z(A) = union(
 point:
 
 ```text
-P_A = least_closure(P_B, Z(A), L_context)
+Index_A = project(Index_B, Z(A), L_context)
+Index_A = (M_A, P_A)
+P_A = P_B restricted to Local_{M_A}
 ```
 
 Each `mandatory_program_refs` set is the frame authority's explicit declaration
@@ -194,7 +196,7 @@ materiality is therefore an authorized frame decision, not a hidden graph walk.
    owner, scope, cross-context, inverse, refusal, and invalidation references;
 3. for an included constraint, include every applies-to, context, owner, scope,
    decision-owner, and re-entry reference;
-4. include every constraint in `C_B` whose `applies_to_refs` names an included
+4. include every constraint in `M_B.C` whose `applies_to` names an included
    record; and
 5. repeat steps 2 through 4 until no identity is added.
 
@@ -208,22 +210,25 @@ The authorized mandatory sets shall name the records needed to preserve:
    those constraints;
 4. frame intent, evaluation family, capability envelope, evidence, exclusion,
    result, dependency, overlap, translation, invalidation, and re-entry
-   relations represented in `P_B`;
+   relations represented in `M_B`;
 5. authority, grant-kind, decision, operation, refusal, and provenance
    distinctions material to the selected engagement role; and
-6. every SourceLocator carried by an included atom, edge, or constraint.
+6. the unchanged `P_A` row and every SourceLocator for each included record.
 
-Since `I_B` is finite, the structural relation terminates. It does not infer
+Since `I` is finite, the structural relation terminates. It does not infer
 semantic materiality from spelling or topology. No record outside that fixed
 point is included unless frame authority names it in a mandatory set or the
 Executive names it in `explicit_program_seed_refs`; no member of the fixed point
 may be removed to meet a token budget.
 
-This is token-minimal only relative to one frozen assignment, seed set, parent
-index, and closure law. It does not claim that one globally smallest or
-semantically unique frame set exists. Source STDO frame-set authority may
-lawfully retain overlap or additional frames for risk reduction, independent
-activation, actor fit, or failure detection.
+This is the unique least lawful **record closure** for one frozen assignment,
+seed set, parent index, and closure law. It is not a token-minimization
+algorithm and does not claim that one globally smallest or semantically unique
+frame set exists. Token size is measured only after the complete closure is
+serialized. If it exceeds the declared budget, the result is `budget_exceeded`;
+no required record is trimmed. Source STDO frame-set authority may lawfully
+retain overlap or additional frames for risk reduction, independent activation,
+actor fit, or failure detection.
 
 ## Projection manifest and context packet
 
@@ -259,9 +264,11 @@ ContextProjectionIdentity =
   sha256(JCS(ContextProjectionManifest))
 ```
 
-The included set equals exactly `ids(P_A)`. The omitted set equals exactly
-`I_B - ids(P_A)`. Both digests are independently reproduced from their sorted
+The included set equals exactly `ids(M_A)`. The omitted set equals exactly
+`I - ids(M_A)`. Both digests are independently reproduced from their sorted
 sets; counts and set relations are checked against the exact parent index.
+The projection carrier serializes `Index_A = (M_A, P_A)` and its
+`source_reentry_refs` equal the exact Source STDO member routes in `P_A`.
 The token count is reproduced with the tokenizer identity, version, and
 configuration bound by the assignment and does not exceed
 `maximum_projection_tokens`. A manifest is not issued for a budget or
@@ -272,7 +279,7 @@ A **Context Packet** is the consumer-selected bundle of:
 
 - the exact Executive Context Assignment;
 - the exact selected frame declarations or reacquisition routes;
-- the carrier-native serialization of `P_A`;
+- the carrier-native serialization of `Index_A = (M_A, P_A)`;
 - the Context Projection Manifest;
 - required externally owned evidence selected for the activation; and
 - explicit stop, refusal, residual, and source re-entry routes.
@@ -320,20 +327,21 @@ disposition, or next-activation grant. Worker narrative or hidden reasoning may
 be identified as evidence but cannot substitute for independent acquisition of
 the exact subject and material live surfaces.
 
-## Function and authority allocation
+## Functor and authority allocation
 
-Frame recommendation or packet critique by an LLM is `F_P` output. It becomes
+Frame recommendation or packet critique by an LLM is `F_P[v_reason]` output. It becomes
 an executable assignment only when an existing human or admitted bounded-proxy
 frame-set authority exercises the exact recorded grant. Such an exercise is
-`F_H` only when it satisfies Source STDO's exact human-function contract.
+`F_H[v_frame_assignment]` only when it satisfies Source STDO's exact human
+functor contract and binds its exact `traversal_ref`.
 
 Tenant or host domain mechanics compute the least closure, serialize the
 carrier, and count its tokens. Those mechanics are not `F_D` merely because
-they are deterministic. `F_D` may evaluate or prove declared properties of the
+they are deterministic. `F_D[v_context_admission]` may evaluate or prove declared properties of the
 assignment, closure, identity sets, carrier admission, token measurement, and
 budget relation under its own exact traversal contract.
 
-Neither successful construction nor `F_D` admission proves that human frame
+Neither successful construction nor `F_D[v_context_admission]` admission proves that human frame
 selection was semantically complete. Neither Executive status nor context
 visibility enlarges semantic, operation, decision, acceptance, release, or
 closure authority.
@@ -353,10 +361,13 @@ activate work.
 
 **REQ-P-CONTEXT-003**: The projected index shall equal the least fixed point
 of the declared structural reference closure over the exact authorized seed
-set. A dangling reference, missing applicable constraint, unresolved mandatory
-or role ref, unresolved frame, or unequal included set refuses admission.
+set, paired with exactly `P_B` restricted to the projected local records. A
+dangling reference, missing applicable constraint, unresolved mandatory or
+role ref, unresolved frame, unequal included set, or missing or changed
+provenance row refuses admission.
 
-Semantic sufficiency of the mandatory sets remains an `F_H` frame-selection
+Semantic sufficiency of the mandatory sets remains an
+`F_H[v_frame_assignment]` frame-selection
 decision subject to review; structural closure does not prove it.
 
 **REQ-P-CONTEXT-004**: The projection shall preserve source routes and expose
@@ -398,10 +409,11 @@ WHAT. Each build tenant shall realize the same assignment and closure relation
 directly in its admitted carrier without introducing a shared serialized
 intermediate graph or a second carrier validator.
 
-**REQ-P-CONTEXT-012**: Domain mechanics may construct a projection; `F_D` may
-evaluate or prove only its declared deterministic properties; `F_P` performs
-bounded probabilistic reasoning; and `F_H` selects or accepts only under its
-exact grant. No function may absorb another function's authority.
+**REQ-P-CONTEXT-012**: Domain mechanics may construct a projection;
+`F_D[v_context_admission]` may evaluate or prove only its declared deterministic
+properties; `F_P[v_reason]` performs bounded probabilistic reasoning; and
+`F_H[v_frame_assignment]` selects or accepts only under its exact grant. No
+functor-classified traversal may absorb another's authority.
 
 **REQ-P-CONTEXT-013**: A changed parent index, assignment, frame revision,
 workspace basis, actor capability, grant, evidence population, tokenizer,

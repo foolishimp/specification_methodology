@@ -1,10 +1,12 @@
 # STDO Representation
 
 STDO Representation treats an exact STDO release as a **Symbolic Axiomatic
-Program** expressed by its authoritative documents and compiles it into a
-compact, traceable **Programmatic Semantic Index** for Outcome-Driven
-Development probabilistic LLM (`F_P`) traversal over separately supplied
-workspaces.
+Program** expressed by its authoritative documents. A declared generic `a_c`
+probabilistic LLM traversal (`F_P[v_compile]`) semantically compiles
+those documents into a candidate algebra; `F_H[v_select]` selects its semantic
+content, and GTL gives the accepted algebra a reliable typed, closed, canonical
+form. The resulting compact **Programmatic Semantic Index** supports later
+`F_P[v_reason]` reasoning over separately supplied workspaces.
 
 The primary goal is lower context, token, and consumption cost without losing
 the identities, authorities, bounded contexts, relations, constraints, and
@@ -16,10 +18,16 @@ New to the project? Start with the [Quickstart](QUICKSTART.md).
 
 ```text
 exact Source STDO
-  -> symbolic identities + typed relations + passive constraints
-  -> carrier-native programmatic semantic index
+  -> F_P[v_compile] immutable semantic proposal
+  -> deterministic ConstructCandidate binds exact invocation + provenance
+  -> F_D[v_candidate_structure] structural result
+  -> F_H[v_select] unchanged-model selection ledger | rework | rejected
+  -> F_H[v_accept_interpretation] accepted a_c.STDO | rejected
+  -> GTL encoding produces immutable carrier G
+  -> F_D[v_carrier_admission] produces admission judgment D_G
+  -> reliable carrier-native programmatic semantic index when D_G = admitted
 
-F_P(programmatic index, workspace, intent, frame, context budget)
+F_P[v_reason](programmatic index, workspace, intent, frame, context budget)
   -> probabilistic reasoning | hold | gap | refusal
 ```
 
@@ -29,39 +37,40 @@ immutable index:
 ```text
 STDO programmatic index + outcome + actor + frames + capability + token budget
   -> Executive | Worker | Reviewer context packet
-  -> F_P traversal over separately supplied workspace evidence
+  -> F_P[v_reason] traversal over separately supplied workspace evidence
 ```
 
-`F_D`, `F_P`, and `F_H` retain their exact Source STDO meanings as the
-fundamental deterministic, probabilistic, and human functions of the ODD
-traversal architecture. The Product is a programmatic semantic index, not a
+`F_D`, `F_P`, and `F_H` are the exact generic functor kinds defined by the
+selected STDO Axiomatic Calculus. `F_K[v](...)` means that the exact declared traversal
+`v` is classified by functor kind `F_K`; named domain operations are not `F_*`
+aliases. Any ODD specialization is a separate downstream relation. The Product is a programmatic semantic index, not a
 frozen-GTL executable `GtlProgram`, vector database, or replacement for the
 Source STDO documents. The LLM is its bounded probabilistic interpreter. The
 Product constrains an LLM; it does not make semantic reasoning deterministic or
 grant the LLM authority. Tenant or host domain HOW
-constructs, serializes, and measures carriers and projections; `F_D` evaluates
-or proves declared deterministic properties of those results. `F_H` owns
-semantic selection, authorized frame assignment, and acceptance under an
-explicit grant.
+constructs, serializes, and measures carriers and projections; an `F_D[v]`
+traversal evaluates or proves declared deterministic properties of those
+results. An `F_H[v]` traversal may exercise semantic selection, authorized
+frame assignment, or acceptance only under an explicit grant.
 
 HoG execution, ABG runtime admission, events, continuation, deterministic
 workspace assessment, and runtime truth are not embedded in the Product. A
-consuming host may realize the external `F_P` traversal through them under its
+consuming host may realize the external `F_P[v]` traversal through them under its
 own authority.
 
 ## WHAT and HOW
 
 The constitutional WHAT owns:
 
-- the closed identity, semantic-atom, typed-edge, and passive-constraint algebra;
-- the `F_P` consumer and workspace-input boundary;
-- the exact `F_D/F_P/F_H` allocation and external traversal contract;
+- the closed `a_c` `I/O/E/C/L/X/V/T/J + ResolutionSet_M` model algebra;
+- the `F_P[v_compile]` compiler and `F_P[v_reason]` consumer boundaries;
+- the exact `F_D/F_P/F_H` functor allocation and external traversal contracts;
 - Executive Context Assignments and least declared, role-bound context
   projections for Executive, Worker, and Reviewer engagement frames;
 - semantic identity, authority, bounded-context, dependency, composition,
   overlay, projection, and source-reentry laws;
 - content-first Product identity;
-- external `F_H` semantic-selection evidence; and
+- external `F_H[v_select]` semantic-selection evidence; and
 - reproducible compression and probabilistic-usefulness evidence boundaries.
 
 Independent build tenants own direct HOW realizations:
@@ -76,23 +85,33 @@ semantic judgment.
 
 ## Current basis and status
 
-The source project is governed by exact STDO cut `v2.4.3-rc.3`, manifest
-SHA-256 `312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551`.
+The source project is governed by exact STDO cut `v2.5.0-rc.1`, manifest
+SHA-256 `3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`.
+That cut supplies the exact `a_c` member used to construct a candidate
+`a_c.STDO`; semantic acceptance and GTL encoding remain separate gates.
 
 The [GTL tenant](build_tenants/gtl/design/GTL_BASIS.md) selects frozen GTL at
 commit `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`. Its
-[STDO.gtl profile](build_tenants/gtl/design/GTL_REPRESENTATION_PROFILE.md) is
-accepted for the exact first construction basis. Its typed passive
-`ModulePublication`, raw-admission path, frozen GTL validation, compact indexed
-encoding, and negative domain tests are implemented. The first canonical
+[axiom-index GTL profile](build_tenants/gtl/design/GTL_AXIOM_INDEX_PROFILE.json)
+is the active carrier candidate; the prose `0.8.0` profile and earlier exact
+`0.7.0` profile belong to the pre-`a_c` design line. The active prototype can
+construct and check a Semantic Compilation Candidate and tests a synthetic
+accepted relation through the GTL encoder. The exact 2.5 run
+`20260829T233718Z` instead returned a structurally valid `basis_gap`; no real
+candidate, `F_H` acceptance, or current GTL carrier exists. The first canonical
 [constructed candidate](build_tenants/gtl/representation/products/stdo-2.4.3-rc.3/)
-is reproducible and structurally admitted; it is not yet Product-accepted or
+is reproducible and structurally admitted against its exact prior WHAT basis.
+The Product definition has since re-entered, so those retained bytes are not a
+candidate for the current source definition and cannot be Product-accepted or
 released. The JSON Schema tenant has not selected a dialect.
 
-The project [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md) is
-accepted for that exact construction basis by the external records retained
-with the candidate. A changed basis, profile, ledger, or WHAT requires new
-acceptance rather than inheriting this decision.
+The earlier Project Reference-Frame Basis digest was accepted for that exact
+construction basis by the external records retained with the pre-reprice
+candidate. The current [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md)
+is a new candidate. The changed WHAT requires renewed acceptance; the prior
+decision is not inherited. Until an external exact-subject `F_H` record accepts
+those unchanged bytes, `reference_frame_bases` is deliberately empty and the
+Product Definition fails closed rather than presenting a proposal as operative.
 
 ## Authority
 
@@ -112,15 +131,16 @@ The layout-neutral Product Definition is
 ## Current checks
 
 ```sh
-stdo verify v2.4.3-rc.3
-stdo status --definition stdo_representation.json --verify
-stdo bootstrap --definition stdo_representation.json --dry-run
+stdo verify v2.5.0-rc.1
 python3 scripts/check_constitution.py
 python3 -m unittest discover -s scripts -p 'test_*.py' -v
 python3 scripts/test_frozen_gtl_tenant.py
 ```
 
-These checks prove the selected installation, routing, source-project metadata,
-identity inputs, and declared `F_D/F_P/F_H` structural boundaries. The retained
-acceptance records separately prove who accepted the exact construction inputs;
-neither class proves Product usefulness or authorizes release.
+`stdo status --definition stdo_representation.json --verify` and bootstrap
+currently fail only because `reference_frame_bases` is deliberately empty.
+That is the required fail-closed state until an external `F_H` record accepts
+the exact unchanged project frame basis. The passing project-local staging
+checks prove the selected installation, source-project metadata, identity
+inputs, and declared `F_D/F_P/F_H` boundaries; they do not prove Product
+usefulness or authorize release or Product Definition conformance.

@@ -1,0 +1,311 @@
+{
+  "kind": "stdo-index.gtl-encoding-profile",
+  "schema_version": 5,
+  "identity": "urn:stdo-index:gtl-profile:axiom-index:7",
+  "status": "prototype_candidate",
+  "build_tenant": {
+    "identity": "urn:stdo-representation:build-tenant:gtl",
+    "carrier_basis": {
+      "identity": "urn:stdo-representation:carrier-basis:gtl:sha256:b5becdf2801577f00bbc119a6bb23e0015a2007147818557ee2e770bc682b703",
+      "identity_rule": "urn:stdo-representation:carrier-basis:gtl:sha256:<sha256(RFC8785_JCS(coordinate))>",
+      "coordinate": {
+        "authority_inventory_count": 33,
+        "authority_root": "specification/requirements/gtl/",
+        "authority_tree_sha1": "21a44b1941a1055d6abd973937e65b83e359de1b",
+        "commit_sha1": "8d7f965a3fae7d1acea6a9db298798480fd4cc2f",
+        "repository": "https://github.com/foolishimp/abiogenesis.git"
+      }
+    }
+  },
+  "input": "accepted_index_b",
+  "index_relation": "Index_B=(M_B,P_B)",
+  "index_mapping": "direct_reversible",
+  "projection_relation": "P_Z=P_B restricted to Local_M_Z",
+  "source_binding_projection": "preserve_exact_bindings_for_P_Z",
+  "acceptance_gate": "exact_interpreted_model_matching_external_f_h_judgment",
+  "subject_inventory": "exact_installed_release_manifest",
+  "signature_validation": "exact_profile_bytes_and_closed_domains",
+  "transformation_population": "declared_empty_until_exact_ac_013_specialization",
+  "structural_judgment": "external_full_f_d_judgment",
+  "authority_grants": "external_exact_artifacts",
+  "carrier": "frozen_gtl_module_publication",
+  "source_basis": {
+    "release_uri": "stdo://releases/v2.5.0-rc.1/",
+    "manifest_sha256": "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
+  },
+  "subject_basis_identity": "urn:stdo-representation:subject-basis:stdo:sha256:73f2581c2d8466a2c8e41b842c2178495431ff28450192f00368ec9fff8766a6",
+  "what_member_set_identity": "sha256:be6f3c244009d319c90588f8b403cd3379d6e135fcb29738d7aa3d49450a5379",
+  "target_signature": {
+    "identity": "urn:stdo-index:signature:stdo:7",
+    "sha256": "sha256:c64b731928529b7af3d43d9bb6a19a5524d60bf8c0b30060f0a5da6ffc5dd10a"
+  },
+  "interpretation_contract": {
+    "identity": "urn:stdo-representation:traversal:semantic-compile:7",
+    "sha256": "sha256:48ae6fb6bb0b4da6f91c71c0f4ba23a367a38b5b79fbdce54e67dd24c88ce02e"
+  },
+  "frame_basis": {
+    "identity": "urn:stdo-representation:reference-frame-basis:source-project:7",
+    "sha256": "sha256:4b32e19c48dfa6df909f174603bbeb43f00559f9bc50b5d8e27a02397b6464c3"
+  },
+  "calculus_basis": {
+    "identity": "urn:stdo:axiomatic-calculus-basis:sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da",
+    "sha256": "sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da"
+  },
+  "canonicalization": {
+    "coordinate_algorithm": "RFC8785_JCS_SHA256",
+    "carrier_value_algorithm": "RFC8785_JCS",
+    "raw_admission_subject": "canonical_module_publication_value_bytes_without_framing",
+    "artifact_framing": {
+      "prefix_hex": "",
+      "suffix_hex": "0a",
+      "suffix_in_program_content_identity": true
+    },
+    "program_content_identity_rule": "sha256(RFC8785_JCS(raw_admitted_ModulePublication) || 0x0a)",
+    "input_domain": "I-JSON",
+    "duplicate_object_names": "reject_before_canonicalization",
+    "string_domain": "Unicode_scalar_values",
+    "unicode_normalization": "none",
+    "number_domain": "non_negative_safe_integers_excluding_negative_zero"
+  },
+  "publication_contract": {
+    "module_publication": {
+      "raw_admission_contract_ref": "urn:abiogenesis:contract:gtl:module-publication:5.0.0",
+      "kind": "module_publication",
+      "module_version": "5.0.0",
+      "exact_fields": [
+        "kind",
+        "moduleRef",
+        "moduleVersion",
+        "owningProductId",
+        "artifactDigest",
+        "productContentDigest",
+        "productManifestDigest",
+        "descriptorRef",
+        "contributionManifestRef",
+        "productSemanticsBinding",
+        "contracts",
+        "evaluators",
+        "rules",
+        "implementationBindings",
+        "closureContracts",
+        "programs",
+        "graphFunctions",
+        "contributions"
+      ],
+      "inventory_cardinality": {
+        "contracts": 1,
+        "evaluators": 0,
+        "rules": 1,
+        "implementationBindings": 0,
+        "closureContracts": 0,
+        "programs": 0,
+        "graphFunctions": 0,
+        "contributions": 1
+      }
+    },
+    "product_semantics_binding": {
+      "kind": "product_semantics_binding",
+      "binding_ref": "urn:stdo-index:product-semantics:gtl-axiom-index:4",
+      "exact_fields": [
+        "kind",
+        "bindingRef",
+        "packageName",
+        "packageVersion",
+        "modulePath",
+        "namedSymbol"
+      ],
+      "publisher_fields": [
+        "package_name",
+        "package_version",
+        "module_path",
+        "named_symbol"
+      ]
+    },
+    "record_contract": {
+      "contract_ref": "urn:stdo-index:gtl-contract:axiom-index:4",
+      "contract_version": "5.0.0",
+      "contract_kind": "input",
+      "value_kind": "stdo_axiom_index_v4",
+      "exact_fields": [
+        "contractRef",
+        "contractVersion",
+        "contractKind",
+        "valueKind"
+      ]
+    },
+    "rule": {
+      "name": "stdo.axiom-index.v4",
+      "kind": "stdo.axiom_index",
+      "tags": [],
+      "exact_fields": [
+        "name",
+        "kind",
+        "config",
+        "tags"
+      ]
+    },
+    "contribution": {
+      "raw_admission_contract_ref": "urn:abiogenesis:contract:gtl:catalog-contribution:5.0.0",
+      "handle": "stdo.axiom-index.v4",
+      "kind": "node_type",
+      "declaration_or_contract_ref": "urn:stdo-index:gtl-contract:axiom-index:4",
+      "program_membership_refs": [],
+      "readiness_prerequisite_refs": [],
+      "compatibility_refs": [],
+      "provenance_refs": [
+        "publisher.artifact_digest",
+        "publisher.product_manifest_digest"
+      ],
+      "exact_fields": [
+        "handle",
+        "kind",
+        "declarationOrContractRef",
+        "owningProductId",
+        "programMembershipRefs",
+        "readinessPrerequisiteRefs",
+        "compatibilityRefs",
+        "provenanceRefs"
+      ]
+    }
+  },
+  "configuration": {
+    "kind": "stdo.axiom_index",
+    "version": 4,
+    "exact_keys": [
+      "k",
+      "v",
+      "m",
+      "b",
+      "z",
+      "s",
+      "i",
+      "o",
+      "e",
+      "c",
+      "l",
+      "x",
+      "V",
+      "T",
+      "J",
+      "q",
+      "p",
+      "r"
+    ],
+    "field_keys": {
+      "metadata": "m",
+      "basis": "b",
+      "legend": "z",
+      "strings": "s",
+      "identities": "i",
+      "objects": "o",
+      "relations": "e",
+      "constraints": "c",
+      "latitudes": "l",
+      "residuals": "x",
+      "traversals": "V",
+      "transformations": "T",
+      "judgments": "J",
+      "external_resolutions": "q",
+      "record_provenance": "p",
+      "source_bindings": "r"
+    },
+    "basis_schema": {
+      "exact_fields": [
+        "calculus",
+        "candidate_structure_result",
+        "corpus",
+        "interpretation_contract",
+        "semantic_compilation_candidate",
+        "subject_basis",
+        "target_profile"
+      ],
+      "coordinate_exact_fields": [
+        "identity",
+        "sha256"
+      ]
+    },
+    "table_laws": {
+      "identities": "duplicate_free_sorted_unsigned_utf16_code_units",
+      "strings": "duplicate_free_sorted_unsigned_utf16_code_units",
+      "indexes": "non_negative_safe_integer_in_referenced_table",
+      "record_rows": "accepted_model_canonical_identity_order",
+      "reference_sets": "accepted_model_declared_order"
+    },
+    "tuple_schemas": {
+      "m": {
+        "fields": ["interpreted_model_identity", "interpreted_model_sha256", "accepted_program_identity", "accepted_program_sha256", "semantic_selection_ledger_identity", "semantic_selection_ledger_sha256", "model_basis_identity"],
+        "types": ["identity", "sha256", "identity", "sha256", "identity", "sha256", "identity"]
+      },
+      "o": {
+        "fields": ["id", "sort", "context", "owner", "scope", "basis", "value"],
+        "types": ["identity_index", "string_index", "identity_index", "identity_index", "string_index", "identity_index", "string_index"]
+      },
+      "e": {
+        "fields": ["id", "kind", "source", "target", "context", "owner", "scope", "basis", "qualifiers"],
+        "types": ["identity_index", "string_index", "identity_index", "identity_index", "identity_index", "identity_index", "string_index", "identity_index", "string_index[]"]
+      },
+      "c": {
+        "fields": ["id", "kind", "applies_to", "predicate", "context", "owner", "scope", "basis", "judgment_kind", "latitude_ref", "refusal"],
+        "types": ["identity_index", "string_index", "identity_index", "string_index", "identity_index", "identity_index", "string_index", "identity_index", "string_index", "identity_index|null", "string_index"]
+      },
+      "l": {
+        "fields": ["id", "applies_to", "allowed_variation", "forbidden_variation", "context", "owner", "scope", "basis", "invalidation"],
+        "types": ["identity_index", "identity_index", "string_index[]", "string_index[]", "identity_index", "identity_index", "string_index", "identity_index", "string_index"]
+      },
+      "x": {
+        "fields": ["id", "subject", "kind", "uncertainty", "consequence", "context", "owner", "scope", "basis", "re_entry", "invalidation"],
+        "types": ["identity_index", "identity_index", "string_index", "string_index", "string_index", "identity_index", "identity_index", "string_index", "identity_index", "string_index", "string_index"]
+      },
+      "V": {
+        "fields": ["id", "domain", "codomain", "context", "owner", "scope", "basis", "preconditions", "postconditions", "authority", "evidence", "provenance", "stop_states"],
+        "types": ["identity_index", "identity_index", "identity_index", "identity_index", "identity_index", "string_index", "identity_index", "string_index[]", "string_index[]", "identity_index", "identity_index[]", "identity_index[]", "string_index[]"]
+      },
+      "T": {
+        "fields": ["id", "traversal", "domain_model", "codomain_model", "context", "owner", "scope", "basis", "operation_authority", "preconditions", "preservation_relation", "preserved", "introduced", "removed", "external_preserved", "external_introduced", "external_removed", "external_resolution_witnesses", "residuals", "evidence", "provenance", "stop_states", "invalidation", "re_entry"],
+        "types": ["identity_index", "identity_index", "identity_index", "identity_index", "identity_index", "identity_index", "string_index", "identity_index", "identity_index", "string_index[]", "identity_index", "identity_index[]", "identity_index[]", "identity_index[]", "identity_index[]", "identity_index[]", "identity_index[]", "canonical_json_set<external_resolution_witness>", "identity_index[]", "identity_index[]", "identity_index[]", "string_index[]", "string_index", "string_index"]
+      },
+      "J": {
+        "fields": ["id", "kind", "subject", "subject_digest", "context", "owner", "scope", "basis", "evaluator", "authority", "decision", "evidence", "provenance", "decided_at"],
+        "types": ["identity_index", "string_index", "identity_index", "string_index", "identity_index", "identity_index", "string_index", "identity_index", "identity_index", "identity_index", "string_index", "identity_index[]", "identity_index[]", "string_index"]
+      },
+      "q": {
+        "fields": ["external_identity", "reference_domain", "external_target_kind", "resolved_target_identity", "basis_relation", "resolution_basis", "evidence_identity"],
+        "types": ["identity_index", "string_index", "string_index", "string_index", "string_index", "string_index", "string_index"]
+      },
+      "p": {
+        "fields": ["model_record_ref", "provenance_kind", "source_key", "term", "bounded_context", "owning_authority", "selected_basis", "governed_scope", "source_locators", "derivation_evidence_refs"],
+        "types": ["identity_index", "string_index", "string_index", "string_index", "string_index", "string_index", "string_index", "string_index", "source_locator_tuple[]", "string_index[]"]
+      },
+      "r": {
+        "fields": ["member_path", "member_sha256", "disposition", "model_refs", "residual_refs", "reason_code"],
+        "types": ["string_index", "string_index", "string_index", "identity_index[]", "identity_index[]", "string_index"]
+      },
+      "source_locator": {
+        "fields": ["basis_uri", "member_path", "member_sha256", "fragment"],
+        "types": ["string_index", "string_index", "string_index", "string_index|null"]
+      }
+    },
+    "record_schemas": {
+      "external_resolution_witness": {
+        "exact_fields": ["external_resolution", "domain_model", "codomain_model", "domain_resolution", "codomain_resolution", "decision", "evidence"],
+        "field_types": ["identity", "identity", "identity", "external_resolution", "external_resolution", "equal", "identity"]
+      },
+      "external_resolution": {
+        "exact_fields": ["external_identity", "reference_domain", "external_target_kind", "resolved_target_identity", "basis_relation", "resolution_basis", "evidence_identity"],
+        "field_types": ["identity", "string", "string", "string", "string", "string", "string"]
+      }
+    }
+  },
+  "publisher_membership": "exact_npm_tgz_inventory",
+  "structure_evaluator": {
+    "identity": "urn:stdo-index:evaluator:candidate-structure:4",
+    "implementation_ref": "./build_tenants/semantic_compile/scripts/evaluate_candidate.py",
+    "implementation_sha256": "sha256:26afb60f77f93118d964371b921d5ef16f66de956826be810b8a9b09d0d4b19d",
+    "grant_kind": "stdo-representation.candidate-structure-evaluation-grant",
+    "grant_identity_rule": "urn:stdo-representation:candidate-structure-grant:sha256:<sha256(JCS(grant))>",
+    "grant_scope": "Evaluate the exact unchanged SemanticCompilationCandidate under F_D[v_candidate_structure] for declared structural checks only; grants no construction, repair, semantic selection, acceptance, carrier, release, or runtime authority.",
+    "authority_source_ref": "./specification/PRODUCT.md#product-authority"
+  },
+  "semantic_acceptance": "external",
+  "carrier_admission": "external"
+}

@@ -1,7 +1,10 @@
 # Constructed STDO.gtl Candidate
 
-Status: canonically constructed and independently reproduced; not
-Product-accepted and not released.
+Status: canonically constructed and independently reproduced against prior WHAT
+member-set identity
+`sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e`;
+invalidated for current candidacy by Product re-entry, retained as historical
+construction evidence, never Product-accepted, and never released.
 
 ## Identity
 

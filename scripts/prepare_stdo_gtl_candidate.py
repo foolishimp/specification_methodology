@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare the exact first STDO.gtl candidate and its F_H acceptance request."""
+"""Replay preparation only for the exact historical first STDO.gtl basis."""
 
 from __future__ import annotations
 
@@ -30,6 +30,15 @@ SOURCE_MANIFEST_SHA = "312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065a
 SOURCE_MEMBER_SET = "127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275"
 PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0"
 FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
+HISTORICAL_WHAT_MEMBER_SET_IDENTITY = (
+    "sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e"
+)
+HISTORICAL_PROFILE_SHA256 = (
+    "sha256:27b496722bfea537ed9e3a8c412c3ca162f83e723ecd9b783e1697d8ffae5f47"
+)
+HISTORICAL_FRAME_BASIS_SHA256 = (
+    "sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0"
+)
 BUILD_TENANT_IDENTITY = "urn:stdo-representation:build-tenant:gtl"
 F_H = "urn:stdo:concept:graph-native-odd:f-h"
 AGGREGATE_MEMBER = "authority_compressions/stdo_compressed.md"
@@ -64,6 +73,23 @@ FRAME_AUTHORITIES = (
 
 class PreparationFailure(RuntimeError):
     """The candidate cannot be prepared from the exact selected bases."""
+
+
+def require_historical_preparation_basis(
+    current_what: str, profile_sha: str, frame_sha: str
+) -> None:
+    observed = (current_what, profile_sha, frame_sha)
+    expected = (
+        HISTORICAL_WHAT_MEMBER_SET_IDENTITY,
+        HISTORICAL_PROFILE_SHA256,
+        HISTORICAL_FRAME_BASIS_SHA256,
+    )
+    if observed != expected:
+        raise PreparationFailure(
+            "legacy preparer is historical-only; active WHAT requires an immutable "
+            "F_P[v_compile] Semantic Compilation Candidate and a new digest-qualified "
+            "candidate coordinate"
+        )
 
 
 def run(argv: list[str], *, cwd: Path, capture: bool = False) -> str:
@@ -1227,12 +1253,13 @@ def main() -> None:
     output = args.output_directory.resolve()
     if output.exists():
         raise PreparationFailure(f"output already exists: {output}")
-    policy = json.loads(POLICY.read_text(encoding="utf-8"))
-    store = selected_store(args.store)
-    release, manifest, manifest_bytes, digests = load_source(store)
     current_what = what_identity()
     profile_sha = f"sha256:{sha256(PROFILE.read_bytes())}"
     frame_sha = f"sha256:{sha256(FRAME_BASIS.read_bytes())}"
+    require_historical_preparation_basis(current_what, profile_sha, frame_sha)
+    policy = json.loads(POLICY.read_text(encoding="utf-8"))
+    store = selected_store(args.store)
+    release, manifest, manifest_bytes, digests = load_source(store)
     records, reasons, generated, projection_routes = prepare_records(
         release, manifest, digests, policy
     )

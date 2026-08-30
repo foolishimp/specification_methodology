@@ -3,8 +3,8 @@
 Family: `REQ-P-BASIS-*`
 Status: Active
 Category: Constraint / Guarantee
-Design ownership: deferred independently to each registered build tenant; no
-tenant design is accepted
+Design ownership: common basis and Product-identity law owned by WHAT; each
+registered build tenant owns its carrier-basis coordinate and canonical bytes
 
 Derives from: `../PRODUCT.md#product-identity`,
 `../PRODUCT.md#product-authority`
@@ -12,7 +12,8 @@ Derives from: `../PRODUCT.md#product-identity`,
 ## Purpose
 
 Bind each reusable Programmatic Semantic Index Product to exact immutable
-source, Product, tenant, carrier, profile, and content coordinates without
+calculus, subject, interpreted-model, semantic-judgment, Product, tenant,
+carrier, profile, and content coordinates without
 making a workspace invocation or qualification record part of index identity.
 
 ## Requirements
@@ -27,6 +28,16 @@ manifest's complete `standards.members` inventory in declared order and against
 its declared digest before deriving index content. Auxiliary release assets
 remain non-semantic unless Source STDO assigns them another role.
 
+For this WHAT the exact subject has 51 standards members and member-set digest
+`sha256:87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5`.
+
+**REQ-P-BASIS-014**: Interpretation shall bind exact calculus basis
+`urn:stdo:axiomatic-calculus-basis:sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da`
+and subject basis
+`urn:stdo-representation:subject-basis:stdo:sha256:73f2581c2d8466a2c8e41b842c2178495431ff28450192f00368ec9fff8766a6`.
+A concept identity, member digest, release URI, or mutable source locator shall
+not substitute for either exact basis identity.
+
 **REQ-P-BASIS-003**: Every representation profile shall bind one exact build
 tenant and immutable carrier basis. A discovery selector may locate a candidate
 basis but shall not enter construction until resolved and explicitly selected as
@@ -35,15 +46,16 @@ repository identity, immutable commit, authority root, authority-tree identity,
 and exact authority inventory. Its tenant-owned typed identity shall be the
 SHA-256 of the RFC 8785 canonical coordinate bytes.
 
-**REQ-P-BASIS-004**: Every represented semantic atom, edge, and constraint shall
-carry or resolve to its exact Source STDO semantic address and acquisition route.
+**REQ-P-BASIS-004**: Exact external `P_B` shall bind every `Local_M` record once.
+Every subject-derived model record shall resolve through that row to its exact
+Source STDO semantic address and acquisition route.
 A filename, heading, lexical match, directory, glossary row, carrier label, or
 graph position shall not invent semantic identity.
 
 **REQ-P-BASIS-005**: Equal spelling across bounded contexts shall not establish
-equal meaning. Every material semantic address preserves its term, bounded
-context, owning authority, selected basis, and governed scope coordinates, or an
-exact Source STDO relation that supplies them.
+equal meaning. Every `P_B` semantic address preserves its term, bounded context,
+owning authority, selected `B_STDO`, and governed scope congruent with the
+referenced record while that record independently preserves exact `b_M`.
 
 **REQ-P-BASIS-006**: Every common identity coordinate and Product coordinate
 shall use RFC 8785 JSON Canonicalization Scheme bytes over an I-JSON-compatible
@@ -61,13 +73,14 @@ object shall use the exact ordering and canonicalization defined by
 program_content_identity = sha256(canonical_index_bytes)
 ```
 
-`program_content_identity` names the canonical encoding of the Source STDO
-Symbolic Axiomatic Program. It does not identify or imply a frozen-GTL
-`GtlProgram`.
+`program_content_identity` names the canonical carrier encoding of accepted
+`a_c.STDO`. It does not identify or imply a frozen-GTL `GtlProgram`.
 
 The immutable `urn:stdo-representation:product:sha256:<digest>` identity then
-binds exact Source STDO, Product WHAT, tenant, carrier basis, representation
-profile, and `program_content_identity`.
+binds exact calculus, Source STDO subject, signature, interpretation contract,
+interpreted-model identity and content, selection ledger, semantic-acceptance
+judgment, Product WHAT, tenant, carrier basis, representation profile, and
+`program_content_identity`.
 
 **REQ-P-BASIS-008**: Construction, validation, measurement, qualification,
 acceptance, release, and invocation records shall point to the Product identity.
@@ -98,3 +111,10 @@ algorithm for its complete carrier bytes and every identity coordinate. If the
 carrier adds framing bytes such as a final line feed, the profile shall state
 whether those bytes enter content identity. Competing escaped, normalized,
 ordered, or whitespace variants shall refuse rather than acquire rival identity.
+
+**REQ-P-BASIS-013**: Every mutable construction-workspace coordinate for a new
+candidate shall include the exact WHAT member-set digest and immutable Semantic
+Compilation Candidate digest. Every published Product coordinate shall
+additionally include or resolve to the final Product digest. A filesystem path
+is a locator, not identity; a new candidate shall use a new path and shall not
+overwrite or ambiguously reuse a prior-WHAT candidate or Product directory.

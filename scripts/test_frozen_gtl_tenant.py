@@ -32,6 +32,7 @@ def run(
     *,
     cwd: Path,
     capture: bool = False,
+    env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess[str]:
     completed = subprocess.run(
         argv,
@@ -39,6 +40,7 @@ def run(
         check=False,
         text=True,
         capture_output=capture,
+        env=env,
     )
     if completed.returncode != 0:
         detail = completed.stderr if capture else "see command output above"
@@ -131,7 +133,9 @@ def test_tenant(frozen_tenant: Path, workspace: Path) -> None:
     scope.mkdir(parents=True, exist_ok=True)
     os.symlink(frozen_tenant, scope / "typescript-tenant", target_is_directory=True)
     run(["npm", "run", "build"], cwd=probe)
-    run(["npm", "test"], cwd=probe)
+    test_env = dict(os.environ)
+    test_env["STDO_REPRESENTATION_ROOT"] = str(ROOT)
+    run(["npm", "test"], cwd=probe, env=test_env)
 
 
 def main() -> None:

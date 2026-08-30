@@ -34,6 +34,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node --test build/test/*.test.js"
+    "pretest": "npm run build",
+    "test": "node scripts/run-tests.mjs"
   }
 }

@@ -1,0 +1,1721 @@
+{
+  "kind": "stdo-index.target-signature",
+  "schema_version": 2,
+  "identity": "urn:stdo-index:signature:stdo:7",
+  "calculus_concept": "urn:stdo:concept:axiomatic-calculus:a-c",
+  "record_kinds": [
+    {
+      "population": "O",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+      "name": "SemanticObject",
+      "required_nonempty": true,
+      "maximum_records": null
+    },
+    {
+      "population": "E",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+      "name": "TypedRelation",
+      "required_nonempty": true,
+      "maximum_records": null
+    },
+    {
+      "population": "C",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+      "name": "Constraint",
+      "required_nonempty": true,
+      "maximum_records": null
+    },
+    {
+      "population": "L",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+      "name": "Latitude",
+      "required_nonempty": false,
+      "maximum_records": null
+    },
+    {
+      "population": "X",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+      "name": "Residual",
+      "required_nonempty": false,
+      "maximum_records": null
+    },
+    {
+      "population": "V",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+      "name": "Traversal",
+      "required_nonempty": true,
+      "maximum_records": null
+    },
+    {
+      "population": "T",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+      "name": "Transformation",
+      "required_nonempty": false,
+      "maximum_records": 0
+    },
+    {
+      "population": "J",
+      "identity": "urn:stdo:concept:axiomatic-calculus:record-kind:judgment",
+      "name": "Judgment",
+      "required_nonempty": false,
+      "maximum_records": null
+    }
+  ],
+  "external_target_kinds": [
+    {
+      "identity": "urn:stdo-index:external-target-kind:model-basis:1",
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:external-target-kind:target-signature-member:1",
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:external-target-kind:complete-model:1",
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-complete-model:1"
+    }
+  ],
+  "sorts": [
+    "urn:stdo-index:stdo:sort:authority:1",
+    "urn:stdo-index:stdo:sort:bounded-context:1",
+    "urn:stdo-index:stdo:sort:capability:1",
+    "urn:stdo-index:stdo:sort:concept:1",
+    "urn:stdo-index:stdo:sort:constraint-law:1",
+    "urn:stdo-index:stdo:sort:evidence:1",
+    "urn:stdo-index:stdo:sort:frame:1",
+    "urn:stdo-index:stdo:sort:functor-kind:1",
+    "urn:stdo-index:stdo:sort:judgment-kind:1",
+    "urn:stdo-index:stdo:sort:lifecycle-state:1",
+    "urn:stdo-index:stdo:sort:method:1",
+    "urn:stdo-index:stdo:sort:product-kind:1",
+    "urn:stdo-index:stdo:sort:relation-kind:1",
+    "urn:stdo-index:stdo:sort:role:1",
+    "urn:stdo-index:stdo:sort:source-member:1",
+    "urn:stdo-index:stdo:sort:stop-kind:1",
+    "urn:stdo-index:stdo:sort:work-surface:1"
+  ],
+  "value_domains": [
+    {
+      "id": "expression",
+      "kind": "nonempty_string",
+      "max_length": 512
+    },
+    {
+      "id": "sha256",
+      "kind": "pattern_string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    {
+      "id": "symbol",
+      "kind": "pattern_string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    {
+      "id": "symbol_set",
+      "kind": "sorted_unique_array",
+      "item_domain": "symbol"
+    },
+    {
+      "id": "timestamp",
+      "kind": "pattern_string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    }
+  ],
+  "sort_value_domains": [
+    {
+      "sort": "urn:stdo-index:stdo:sort:authority:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:bounded-context:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:capability:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:concept:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:constraint-law:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:evidence:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:frame:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:functor-kind:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:judgment-kind:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:lifecycle-state:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:method:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:product-kind:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:relation-kind:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:role:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:source-member:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:stop-kind:1",
+      "domain": "symbol"
+    },
+    {
+      "sort": "urn:stdo-index:stdo:sort:work-surface:1",
+      "domain": "symbol"
+    }
+  ],
+  "relation_kinds": [
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:binds:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "bounded_operation_grant",
+        "exact_decision_grant",
+        "immutable_coordinate",
+        "result_only"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:classifies:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "builder_substrate"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:conserves:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:defines:1",
+      "source_sorts": [
+        "urn:stdo-index:stdo:sort:method:1",
+        "urn:stdo-index:stdo:sort:source-member:1",
+        "urn:stdo-index:stdo:sort:work-surface:1"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "directional"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:derives-from:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "accepted_released",
+        "immutable_cut_of",
+        "published_output",
+        "stamped_instance"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:excludes:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:governs:1",
+      "source_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1",
+        "urn:stdo-index:stdo:sort:method:1"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:invalidates:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:owns:1",
+      "source_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1",
+        "urn:stdo-index:stdo:sort:method:1",
+        "urn:stdo-index:stdo:sort:work-surface:1"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "singular_owner"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:precedes:1",
+      "source_sorts": [
+        "urn:stdo-index:stdo:sort:lifecycle-state:1",
+        "urn:stdo-index:stdo:sort:work-surface:1"
+      ],
+      "target_sorts": [
+        "urn:stdo-index:stdo:sort:lifecycle-state:1",
+        "urn:stdo-index:stdo:sort:work-surface:1"
+      ],
+      "qualifier_mode": "exactly_one_of",
+      "allowed_qualifiers": [
+        "authority_flow"
+      ]
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:projects:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:refines:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:requires:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:specializes:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    },
+    {
+      "id": "urn:stdo-index:stdo:relation-kind:supersedes:1",
+      "source_sorts": [
+        "*"
+      ],
+      "target_sorts": [
+        "*"
+      ],
+      "qualifier_mode": "zero_or_more_of",
+      "allowed_qualifiers": []
+    }
+  ],
+  "constraint_kinds": [
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:admission:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:candidate-structure:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    },
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:axiom:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    },
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:invariant:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    },
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:obligation:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    },
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:prohibition:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    },
+    {
+      "id": "urn:stdo-index:stdo:constraint-kind:refusal:1",
+      "judgment_kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "subject_populations": [
+        "O"
+      ],
+      "predicate_domain": "expression",
+      "refusal_domain": "symbol"
+    }
+  ],
+  "residual_kinds": [
+    "urn:stdo-index:stdo:residual-kind:basis-gap:1",
+    "urn:stdo-index:stdo:residual-kind:possible-compression-loss:1",
+    "urn:stdo-index:stdo:residual-kind:unmodeled-member:1",
+    "urn:stdo-index:stdo:residual-kind:unresolved-semantics:1"
+  ],
+  "functor_kinds": [
+    "urn:stdo:concept:axiomatic-calculus:f-d",
+    "urn:stdo:concept:axiomatic-calculus:f-h",
+    "urn:stdo:concept:axiomatic-calculus:f-p"
+  ],
+  "judgment_kinds": [
+    "urn:stdo-index:stdo:judgment-kind:candidate-structure:1",
+    "urn:stdo-index:stdo:judgment-kind:carrier-admission:1",
+    "urn:stdo-index:stdo:judgment-kind:frame-evaluation:1",
+    "urn:stdo-index:stdo:judgment-kind:semantic-selection:1"
+  ],
+  "stop_kinds": [
+    "urn:stdo-index:stdo:stop-kind:accepted:1",
+    "urn:stdo-index:stdo:stop-kind:admitted:1",
+    "urn:stdo-index:stdo:stop-kind:candidate:1",
+    "urn:stdo-index:stdo:stop-kind:eligible:1",
+    "urn:stdo-index:stdo:stop-kind:gap:1",
+    "urn:stdo-index:stdo:stop-kind:hold:1",
+    "urn:stdo-index:stdo:stop-kind:refusal:1",
+    "urn:stdo-index:stdo:stop-kind:rejected:1",
+    "urn:stdo-index:stdo:stop-kind:rework:1",
+    "urn:stdo-index:stdo:stop-kind:satisfied:1",
+    "urn:stdo-index:stdo:stop-kind:falsified:1",
+    "urn:stdo-index:stdo:stop-kind:indeterminate:1"
+  ],
+  "record_value_domains": [
+    {
+      "population": "O",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "E",
+      "field": "qualifiers",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "E",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "C",
+      "field": "predicate",
+      "domain": "expression"
+    },
+    {
+      "population": "C",
+      "field": "refusal",
+      "domain": "symbol"
+    },
+    {
+      "population": "C",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "L",
+      "field": "allowed_variation",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "L",
+      "field": "forbidden_variation",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "L",
+      "field": "invalidation",
+      "domain": "symbol"
+    },
+    {
+      "population": "L",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "X",
+      "field": "uncertainty",
+      "domain": "symbol"
+    },
+    {
+      "population": "X",
+      "field": "consequence",
+      "domain": "symbol"
+    },
+    {
+      "population": "X",
+      "field": "re_entry",
+      "domain": "symbol"
+    },
+    {
+      "population": "X",
+      "field": "invalidation",
+      "domain": "symbol"
+    },
+    {
+      "population": "X",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "V",
+      "field": "preconditions",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "V",
+      "field": "postconditions",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "V",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "T",
+      "field": "preconditions",
+      "domain": "symbol_set"
+    },
+    {
+      "population": "T",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "T",
+      "field": "invalidation",
+      "domain": "symbol"
+    },
+    {
+      "population": "T",
+      "field": "re_entry",
+      "domain": "symbol"
+    },
+    {
+      "population": "J",
+      "field": "subject_digest",
+      "domain": "sha256"
+    },
+    {
+      "population": "J",
+      "field": "scope",
+      "domain": "symbol"
+    },
+    {
+      "population": "J",
+      "field": "decision",
+      "domain": "symbol"
+    },
+    {
+      "population": "J",
+      "field": "decided_at",
+      "domain": "timestamp"
+    }
+  ],
+  "residual_contracts": [
+    {
+      "kind": "urn:stdo-index:stdo:residual-kind:basis-gap:1",
+      "subject_populations": [
+        "O",
+        "E",
+        "C",
+        "L",
+        "X",
+        "V",
+        "T",
+        "J"
+      ],
+      "external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "uncertainty_domain": "symbol",
+      "consequence_domain": "symbol",
+      "re_entry_domain": "symbol",
+      "invalidation_domain": "symbol"
+    },
+    {
+      "kind": "urn:stdo-index:stdo:residual-kind:possible-compression-loss:1",
+      "subject_populations": [
+        "O",
+        "E",
+        "C",
+        "L",
+        "X",
+        "V",
+        "T",
+        "J"
+      ],
+      "external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "uncertainty_domain": "symbol",
+      "consequence_domain": "symbol",
+      "re_entry_domain": "symbol",
+      "invalidation_domain": "symbol"
+    },
+    {
+      "kind": "urn:stdo-index:stdo:residual-kind:unmodeled-member:1",
+      "subject_populations": [
+        "O",
+        "E",
+        "C",
+        "L",
+        "X",
+        "V",
+        "T",
+        "J"
+      ],
+      "external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "uncertainty_domain": "symbol",
+      "consequence_domain": "symbol",
+      "re_entry_domain": "symbol",
+      "invalidation_domain": "symbol"
+    },
+    {
+      "kind": "urn:stdo-index:stdo:residual-kind:unresolved-semantics:1",
+      "subject_populations": [
+        "O",
+        "E",
+        "C",
+        "L",
+        "X",
+        "V",
+        "T",
+        "J"
+      ],
+      "external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "uncertainty_domain": "symbol",
+      "consequence_domain": "symbol",
+      "re_entry_domain": "symbol",
+      "invalidation_domain": "symbol"
+    }
+  ],
+  "judgment_contracts": [
+    {
+      "kind": "urn:stdo-index:stdo:judgment-kind:candidate-structure:1",
+      "inputs": [
+        "semantic_compilation_candidate",
+        "candidate_structure_evaluation_grant",
+        "target_signature",
+        "exact_basis"
+      ],
+      "outputs": [
+        "urn:stdo-index:stdo:stop-kind:eligible:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ],
+      "evidence": [
+        "exact_subject_bytes",
+        "exact_basis",
+        "candidate_structure_evaluation_grant"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "kind": "urn:stdo-index:stdo:judgment-kind:carrier-admission:1",
+      "inputs": [
+        "carrier",
+        "carrier_profile",
+        "carrier_basis"
+      ],
+      "outputs": [
+        "urn:stdo-index:stdo:stop-kind:admitted:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ],
+      "evidence": [
+        "exact_subject_bytes",
+        "exact_basis"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "kind": "urn:stdo-index:stdo:judgment-kind:frame-evaluation:1",
+      "inputs": [
+        "activated_frame",
+        "unchanged_subject"
+      ],
+      "outputs": [
+        "urn:stdo-index:stdo:stop-kind:satisfied:1",
+        "urn:stdo-index:stdo:stop-kind:falsified:1",
+        "urn:stdo-index:stdo:stop-kind:indeterminate:1"
+      ],
+      "evidence": [
+        "activation",
+        "acquired_evidence"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:gap:1",
+        "urn:stdo-index:stdo:stop-kind:hold:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "kind": "urn:stdo-index:stdo:judgment-kind:semantic-selection:1",
+      "inputs": [
+        "semantic_compilation_candidate",
+        "candidate_structure_result"
+      ],
+      "outputs": [
+        "urn:stdo-index:stdo:stop-kind:accepted:1",
+        "urn:stdo-index:stdo:stop-kind:rework:1",
+        "urn:stdo-index:stdo:stop-kind:rejected:1"
+      ],
+      "evidence": [
+        "exact_subject_bytes",
+        "selection_ledger",
+        "authority_grant"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:hold:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    }
+  ],
+  "traversal_permissions": [
+    {
+      "traversal": "urn:stdo-representation:traversal:semantic-compile:7",
+      "functor": "urn:stdo:concept:axiomatic-calculus:f-p",
+      "domain": [
+        "product_selected_calculus_basis",
+        "exact_subject_basis",
+        "target_signature",
+        "compilation_frame_configuration",
+        "exact_source_packet",
+        "compile_grant",
+        "capability_envelope"
+      ],
+      "codomain": [
+        "semantic_compilation_proposal"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:hold:1",
+        "urn:stdo-index:stdo:stop-kind:gap:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "traversal": "urn:stdo-representation:traversal:candidate-structure:3",
+      "functor": "urn:stdo:concept:axiomatic-calculus:f-d",
+      "domain": [
+        "semantic_compilation_candidate",
+        "candidate_structure_evaluation_grant",
+        "target_signature",
+        "exact_basis"
+      ],
+      "codomain": [
+        "candidate_structure_result"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "traversal": "urn:stdo-representation:traversal:semantic-selection:2",
+      "functor": "urn:stdo:concept:axiomatic-calculus:f-h",
+      "domain": [
+        "semantic_compilation_candidate",
+        "candidate_structure_result",
+        "authority_grant",
+        "evidence"
+      ],
+      "codomain": [
+        "semantic_selection_result"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:hold:1",
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    },
+    {
+      "traversal": "urn:stdo-index:traversal:carrier-admission:1",
+      "functor": "urn:stdo:concept:axiomatic-calculus:f-d",
+      "domain": [
+        "carrier",
+        "carrier_profile",
+        "carrier_basis"
+      ],
+      "codomain": [
+        "carrier_admission_judgment"
+      ],
+      "stops": [
+        "urn:stdo-index:stdo:stop-kind:refusal:1"
+      ]
+    }
+  ],
+  "reference_domains": [
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "O",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:o:context:1",
+      "population": "O",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:o:owner:1",
+      "population": "O",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:sort:1",
+      "population": "O",
+      "field": "sort",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "E",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:e:context:1",
+      "population": "E",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:relation-kind:1",
+      "population": "E",
+      "field": "kind",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:e:owner:1",
+      "population": "E",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:e:source:1",
+      "population": "E",
+      "field": "source",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:e:target:1",
+      "population": "E",
+      "field": "target",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:c:applies-to:1",
+      "population": "C",
+      "field": "applies_to",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "C",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:c:context:1",
+      "population": "C",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:judgment-kind:1",
+      "population": "C",
+      "field": "judgment_kind",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:constraint-kind:1",
+      "population": "C",
+      "field": "kind",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:c:latitude-ref:1",
+      "population": "C",
+      "field": "latitude_ref",
+      "cardinality": "zero_or_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude"
+      ],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:c:owner:1",
+      "population": "C",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:l:applies-to:1",
+      "population": "L",
+      "field": "applies_to",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "L",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:l:context:1",
+      "population": "L",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:l:owner:1",
+      "population": "L",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "X",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:x:context:1",
+      "population": "X",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:residual-kind:1",
+      "population": "X",
+      "field": "kind",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:x:owner:1",
+      "population": "X",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:x:subject:1",
+      "population": "X",
+      "field": "subject",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:authority:1",
+      "population": "V",
+      "field": "authority",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "V",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:codomain:1",
+      "population": "V",
+      "field": "codomain",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:concept:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:context:1",
+      "population": "V",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:domain:1",
+      "population": "V",
+      "field": "domain",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:concept:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:evidence:1",
+      "population": "V",
+      "field": "evidence",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:owner:1",
+      "population": "V",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:v:provenance:1",
+      "population": "V",
+      "field": "provenance",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:stop-kind:1",
+      "population": "V",
+      "field": "stop_states",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "T",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:complete-model:1",
+      "population": "T",
+      "field": "codomain_model",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:complete-model:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-complete-model:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:context:1",
+      "population": "T",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:complete-model:1",
+      "population": "T",
+      "field": "domain_model",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:complete-model:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-complete-model:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:evidence:1",
+      "population": "T",
+      "field": "evidence",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:external-introduced:1",
+      "population": "T",
+      "field": "external_introduced",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:external-preserved:1",
+      "population": "T",
+      "field": "external_preserved",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:external-removed:1",
+      "population": "T",
+      "field": "external_removed",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:introduced:1",
+      "population": "T",
+      "field": "introduced",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:operation-authority:1",
+      "population": "T",
+      "field": "operation_authority",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:owner:1",
+      "population": "T",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:preservation-relation:1",
+      "population": "T",
+      "field": "preservation_relation",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation"
+      ],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:preserved:1",
+      "population": "T",
+      "field": "preserved",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:provenance:1",
+      "population": "T",
+      "field": "provenance",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:removed:1",
+      "population": "T",
+      "field": "removed",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:residuals:1",
+      "population": "T",
+      "field": "residuals",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual"
+      ],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:stop-kind:1",
+      "population": "T",
+      "field": "stop_states",
+      "cardinality": "zero_or_more",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:t:traversal:1",
+      "population": "T",
+      "field": "traversal",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal"
+      ],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:authority:1",
+      "population": "J",
+      "field": "authority",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:model-basis:1",
+      "population": "J",
+      "field": "basis",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:context:1",
+      "population": "J",
+      "field": "context",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:bounded-context:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:evaluator:1",
+      "population": "J",
+      "field": "evaluator",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:role:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:evidence:1",
+      "population": "J",
+      "field": "evidence",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:judgment-kind:1",
+      "population": "J",
+      "field": "kind",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [],
+      "allowed_semantic_object_sorts": [],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:target-signature-member:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-target-signature:1"
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:owner:1",
+      "population": "J",
+      "field": "owner",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:authority:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:provenance:1",
+      "population": "J",
+      "field": "provenance",
+      "cardinality": "one_or_more",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object"
+      ],
+      "allowed_semantic_object_sorts": [
+        "urn:stdo-index:stdo:sort:evidence:1",
+        "urn:stdo-index:stdo:sort:source-member:1"
+      ],
+      "allowed_external_target_kinds": [],
+      "required_basis_relation": null
+    },
+    {
+      "identity": "urn:stdo-index:reference-domain:stdo:j:subject:1",
+      "population": "J",
+      "field": "subject",
+      "cardinality": "exactly_one",
+      "allowed_local_record_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+        "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+      ],
+      "allowed_semantic_object_sorts": [
+        "*"
+      ],
+      "allowed_external_target_kinds": [
+        "urn:stdo-index:external-target-kind:model-basis:1"
+      ],
+      "required_basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1"
+    }
+  ]
+}

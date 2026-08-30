@@ -1,7 +1,12 @@
 # GTL Tenant Code
 
-This TypeScript package implements the proposed `STDO.gtl 0.7.0` programmatic
-semantic-index carrier. It:
+This TypeScript package implements the historical `STDO.gtl 0.7.0` carrier and
+the active Axiom Index GTL profile candidate. The active encoder requires the
+exact STDO `v2.5.0-rc.1` calculus basis, all eight `a_c` populations,
+`ResolutionSet_M`, accepted-program and selection-ledger bytes, the exact F_D
+result, and an external F_H judgment. Its tests synthesize that acceptance only
+to exercise the gate; they accept no repository artifact and create no current
+carrier candidate. The `0.7.0` implementation:
 
 - validates the closed common atom, edge, and constraint identities;
 - encodes them reversibly into compact indexed tuple tables;
@@ -32,8 +37,9 @@ python3 scripts/test_frozen_gtl_tenant.py \
 The probe archives the immutable GTL commit rather than compiling mutable
 checkout bytes.
 
-After the profile, frame basis, and Semantic Selection Ledger have exact
-acceptance records, the compiled CLI constructs into a new directory atomically:
+For historical `0.7.0` inputs only, after the profile, frame basis, and Semantic
+Selection Ledger have exact acceptance records, the compiled CLI constructs
+into a new directory atomically:
 
 ```sh
 stdo-gtl build \
@@ -50,7 +56,8 @@ stdo-gtl build \
   --output-directory candidate
 ```
 
-The destination must not already exist. Success creates only `stdo.gtl` and
+The command is not an active-WHAT construction path. The destination must not
+already exist. Success creates only `stdo.gtl` and
 `build-receipt.json`. The package API also exposes the exact least-context
 closure and role-bound projection-candidate constructor; a projection remains
 non-admitted until its exact tokenizer measurement and Context Projection

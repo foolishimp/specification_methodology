@@ -1,25 +1,40 @@
-# GTL Representation Profile — STDO.gtl 0.7.0
+# GTL Representation Profile — STDO.gtl 0.8.0
 
-Status: acceptance-controlled candidate; these bytes grant no construction or
-acceptance authority
+Status: superseded pre-`a_c` design candidate; never accepted; retained as
+design history
+
+The active `a_c.STDO.GTL` mapping candidate is
+[`GTL_AXIOM_INDEX_PROFILE.json`](GTL_AXIOM_INDEX_PROFILE.json). This document
+preserves the prior five-family `P_B` mapping and its RC3 coordinates; it is not
+an input to current construction.
 
 Profile identity:
-`urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0`
+`urn:stdo-representation:gtl-profile:stdo-gtl:0.8.0`
 
 Build-tenant identity: `urn:stdo-representation:build-tenant:gtl`
 
 ## Purpose
 
 Define `stdo.gtl`, the canonical frozen-GTL encoding of the STDO Programmatic
-Semantic Index for an external ODD `F_P` LLM traversal over a separately
+Semantic Index for an external ODD `F_P[v_reason]` LLM traversal over a separately
 supplied workspace. The index encodes the Source STDO Symbolic Axiomatic Program
 as compact passive graph-and-constraint declarations while preserving exact
 identity, basis, authority, bounded-context, scope, source-route, and refusal
 coordinates.
 
-`F_H` selects and accepts semantic declarations. Domain HOW constructs,
-serializes, and measures exact bytes. `F_D` evaluates the declared structural
-and identity properties of those results. `F_P` consumes the admitted index.
+`F_H[v_select]` selects and accepts the exact carrier-neutral algebra. Domain
+HOW constructs, serializes, and measures exact bytes.
+`F_D[v_carrier_admission]` evaluates the declared structural and identity
+properties of those results and issues a separate admission judgment over their
+unchanged identity and bytes. It does not transform, rewrite, reissue, or rename
+the carrier. `F_P[v_reason]` consumes the index only when that judgment is
+`admitted`. These are functor applications to exact declared traversals, not
+names for the domain operations themselves.
+
+This profile receives only the carrier-neutral `P_B` and Semantic Selection
+Ledger already accepted under `F_H[v_select]`. It is not an input to
+`F_P[v_compile]` and cannot cause the compiler to omit or alter Source STDO
+meaning for GTL representability.
 The payload is not a deterministic workspace assessor, frozen-GTL `GtlProgram`,
 callable GTL workflow, vector database, HoG plan, ABG runtime, or qualification
 bundle.
@@ -121,7 +136,7 @@ Product excludes.
 
 The empty callable, evaluator, implementation, closure, Program, and
 GraphFunction inventories are positive Product-boundary claims. The external
-host owns the complete ODD `F_P` traversal contract.
+host owns the complete ODD `F_P[v_reason]` traversal contract.
 
 ## Publication owner and cycle boundary
 
@@ -252,7 +267,7 @@ c = [id, address, class, statement, applies_to, context, owner, scope,
      latitude, locators]
 x = [class, source_context, target_context, preserved, changed, refusals,
      inverse, invalidations]
-y = [function, decision_owner, re_entry]
+y = [functor_kind, decision_owner, re_entry]
 ```
 
 The legend also embeds the ordered `ak`, `ck`, `xk`, and `fk` code tables copied
@@ -334,9 +349,11 @@ Production construction consumes:
 2. exact current WHAT member-set identity;
 3. this profile's accepted identity and SHA-256;
 4. an accepted project Reference-Frame Basis;
-5. an exact accepted Semantic Selection Ledger whose retained-reference union
-   equals `I_B` and whose `representation_records_sha256` reproduces from the
-   complete ID-sorted canonical build-plan record array;
+5. the immutable Semantic Compilation Candidate and eligible Candidate Structure
+   Result bound by an exact accepted Semantic Selection Ledger whose
+   retained-reference union equals `I_B` and whose
+   `representation_records_sha256` reproduces from the complete ID-sorted
+   canonical build-plan record array;
 6. the GTL Tenant Toolchain Product's verified publisher-artifact basis; and
 7. tenant-owned build-plan records whose identities, locators, and reference
    kinds reproduce under the common law.
@@ -354,6 +371,11 @@ GtlBuildPlan = {
   frame_basis_identity: absolute URI,
   frame_basis_sha256: Sha256,
   frame_admitting_authority_refs: URI-reference[],
+  semantic_compilation_candidate_identity:
+    SemanticCompilationCandidateIdentity,
+  semantic_compilation_candidate_sha256: Sha256,
+  candidate_structure_result_identity: CandidateStructureResultIdentity,
+  candidate_structure_result_sha256: Sha256,
   semantic_selection_ledger_identity: SelectionLedgerIdentity,
   semantic_selection_ledger_sha256: Sha256,
   profile_acceptance_identity: AuthorityAcceptanceIdentity,
@@ -367,9 +389,11 @@ GtlBuildPlan = {
 `frame_admitting_authority_refs` equals the complete applicable Product
 Definition authority set byte-for-byte and in canonical order. The evidence
 bundle supplies the exact installed manifest, profile and frame-basis bytes,
-canonical ledger, three canonical acceptance records, canonical publisher
-manifest, and publisher artifact bytes. Digests or identities in the plan are
-locators to those supplied bytes, not trusted assertions.
+Semantic Compilation Candidate, Candidate Structure Result, canonical ledger,
+three canonical acceptance records, canonical publisher manifest, and
+publisher artifact bytes. Candidate and structure-result coordinates equal
+those bound by the ledger. Digests or identities in the plan are locators to
+those supplied bytes, not trusted assertions.
 
 Each acceptance is an external, canonical `AuthorityAcceptanceRecord` binding
 the unchanged subject, exact human or bounded-proxy authority and grant,
@@ -388,7 +412,7 @@ evidence and are not paid as routine LLM-context cost.
 The ordinary consumer relation remains:
 
 ```text
-F_P(stdo.gtl, workspace_input, intent, frame, capability_budget)
+F_P[v_reason](stdo.gtl, workspace_input, intent, frame, capability_budget)
   -> probabilistic reasoning | hold | gap | refusal
 ```
 
@@ -424,7 +448,7 @@ version, token count, price basis, and comparison-population identity for:
 - complete and role-projected `stdo.gtl` carriers.
 
 Only like-for-like declared payloads support a reduction claim. Representative
-and adversarial `F_P` observations may characterize usefulness, navigation,
+and adversarial `F_P[v_reason]` observations may characterize usefulness, navigation,
 holds, and failures; repeated observations do not become deterministic semantic
 proof.
 

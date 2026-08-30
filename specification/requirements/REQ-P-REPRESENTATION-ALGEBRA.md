@@ -1,346 +1,247 @@
-# REQ-P-REPRESENTATION-ALGEBRA — Programmatic Semantic Index Algebra
+# REQ-P-REPRESENTATION-ALGEBRA — The `a_c.STDO` Model
 
 Family: `REQ-P-ALG-*`
 Status: Active
 Category: Constraint / Guarantee
-Design ownership: deferred independently to each registered build tenant; no
-tenant design is accepted
+Design ownership: the exact calculus is owned by Source STDO; this WHAT owns
+the STDO model-family signature and interpretation contract; each build tenant
+owns only its direct carrier encoding
 
-Derives from: `../PRODUCT.md#product-terms`,
-`../PRODUCT.md#fundamental-traversal-function-binding`,
-`../PRODUCT.md#programmatic-index-boundary`,
-`../PRODUCT.md#product-authority`
+Derives from: `../PRODUCT.md#exact-calculus-and-subject-bases`,
+`../PRODUCT.md#symbolic-program-and-index-relation`,
+`../PRODUCT.md#fundamental-traversal-functor-binding`, and exact Source STDO
+`AXIOMATIC_CALCULUS.md`
 
 ## Purpose
 
-Define the carrier-independent programmatic semantic index supplied to an ODD
-`F_P` LLM traversal. The algebra encodes the Source STDO Symbolic Axiomatic
-Program as exact semantic identities, typed graph relations, passive
-constraints, provenance, and source re-entry routes. It is not a deterministic
-workspace evaluator, executable carrier program, vector database, or shared
-serialized carrier.
+Define the carrier-neutral `a_c.STDO` model consumed by an `a_c`
+`F_P[v_reason]` traversal. This requirement specializes the exact released
+calculus; it does not redefine it or make GTL part of the model.
 
-## Closed algebra
-
-For one exact Source STDO basis `B`, the programmatic index algebra is:
+## Exact model algebra
 
 ```text
-B   = (release_uri, installed_manifest_sha256, standards_member_set_sha256)
-P_B = (B, I_B, V_B, E_B, C_B)
+b_ac   = urn:stdo:axiomatic-calculus-basis:sha256:
+         bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da
+
+B_STDO = urn:stdo-representation:subject-basis:stdo:sha256:
+         73f2581c2d8466a2c8e41b842c2178495431ff28450192f00368ec9fff8766a6
+
+ModelBasisIdentity =
+  "urn:stdo-index:model-basis:sha256:" + 64 lowercase hexadecimal characters
+
+b_M = "urn:stdo-index:model-basis:sha256:" + sha256(JCS({
+  calculus_basis_identity: b_ac,
+  subject_basis_identity: B_STDO,
+  signature_identity: id(Sigma_STDO),
+  interpretation_contract_identity: id(I_STDO)
+}))
+
+M_B* = (b_M, I, O, E, C, L, X, V, T, J)
+
+Population_M = {
+  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object -> O,
+  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation -> E,
+  urn:stdo:concept:axiomatic-calculus:record-kind:constraint -> C,
+  urn:stdo:concept:axiomatic-calculus:record-kind:latitude -> L,
+  urn:stdo:concept:axiomatic-calculus:record-kind:residual -> X,
+  urn:stdo:concept:axiomatic-calculus:record-kind:traversal -> V,
+  urn:stdo:concept:axiomatic-calculus:record-kind:transformation -> T,
+  urn:stdo:concept:axiomatic-calculus:record-kind:judgment -> J
+}
+
+Local_M = O disjoint_union E disjoint_union C disjoint_union L
+          disjoint_union X disjoint_union V disjoint_union T
+          disjoint_union J
+
+I = Local_M disjoint_union External_M
 ```
 
-- `I_B` is the closed finite identity universe of this index.
-- `V_B` is the finite set of source-addressed semantic-atom records.
-- `E_B` is the finite set of typed directed semantic-edge records.
-- `C_B` is the finite set of passive source-addressed constraint records.
+`M_B*` is a candidate model. Its accepted relation is
+`a_c.STDO = (id(a_c.STDO*), M_B*, P_B*, Ledger_B, J_B)` where the ledger
+selects the unchanged model and provenance proposal and `J_B.decision =
+accepted` binds the unchanged interpreted-model identity and model-content
+digest.
 
-The identity universe is exact:
+Every population is finite and present. A population may be empty only when
+the exact `Sigma_STDO` permits no required member of that record kind. A
+traversal, transformation, or judgment record remains in `V`, `T`, or `J`; a
+same-labelled semantic object in `O` does not satisfy that population.
+
+## Imported record grammar
+
+`Sigma_STDO` imports unchanged the exact eight record shapes from
+`AXIOMATIC_CALCULUS.md#typed-records`, `#ac-013-transformation`,
+`#ac-014-judgment-separation`, and `#traversals-and-functor-kinds`:
 
 ```text
-I_B = ids(V_B) union ids(E_B) union ids(C_B)
+ModelRecord =
+  SemanticObject | TypedRelation | Constraint | Latitude | Residual |
+  Traversal | Transformation | Judgment
 ```
 
-Every targetable index reference resolves to exactly one member of `I_B`.
-Source identities and source locators occur only in the closed scalar coordinate
-fields below; they are not an open targetable identity domain.
+It closes finite sets for `Sort`, `RelationKind`, `ConstraintKind`,
+`ResidualKind`, `FunctorKind`, `JudgmentKind`, and `StopKind`; every field and
+value domain; and the total `RefDomain_Sigma(record_kind, field)` function.
+Unknown fields, kinds, sorts, references, or record families require a new
+signature or explicit compatible extension and otherwise refuse.
 
-## Common scalar and coordinate types
-
-The common algebra has these exact carrier-independent types:
+## Source coordinates
 
 ```text
 Sha256 = "sha256:" + 64 lowercase hexadecimal characters
+Identity = non-empty absolute URI
 
-Identity =
-  "urn:stdo-representation:" + ("atom" | "edge" | "constraint") +
-  ":sha256:" + 64 lowercase hexadecimal characters
-
-SourceIdentity = non-empty absolute URI owned or cited by Source STDO
-
-SourceKey = SourceIdentity |
-  "urn:stdo-representation:source-key:sha256:" +
-  64 lowercase hexadecimal characters
-
-SelectedBasis = {
-  release_uri: SourceIdentity,
-  installed_manifest_sha256: Sha256
+SourceLocator = {
+  basis_uri: "stdo://releases/v2.5.0-rc.1/",
+  member_path: normalized relative POSIX path,
+  member_sha256: Sha256,
+  fragment: null
 }
 
 SemanticAddress = {
-  source_key: SourceKey,
+  source_key: Identity,
   term: non-empty string,
-  bounded_context: SourceIdentity,
-  owning_authority: SourceIdentity,
-  selected_basis: SelectedBasis,
-  governed_scope: SourceIdentity
+  bounded_context: Identity,
+  owning_authority: Identity,
+  selected_basis: B_STDO,
+  governed_scope: Identity
 }
 
-SourceLocator = {
-  basis_uri: SourceIdentity,
-  member_path: non-empty normalized POSIX path,
-  member_sha256: Sha256,
-  fragment: non-empty string | null
-}
-```
-
-`basis_uri` equals `B.release_uri`; `member_path` and `member_sha256` resolve to
-exactly one member of the selected installed manifest. `..`, an absolute path,
-an empty segment, a backslash, or a fragment embedded in `member_path` is
-invalid. `fragment` is the source-owned anchor or local clause key when one is
-available. A locator is provenance, not an index identity.
-
-`SemanticAddress.source_key` is an existing Source STDO semantic identity when
-one exists. Otherwise `F_H` semantic authorship issues this routing-only key:
-
-```text
-source_key = "urn:stdo-representation:source-key:sha256:" +
-             sha256(JCS({ primary_source_locator, local_declaration_key }))
-```
-
-`local_declaration_key` is non-empty and unique within the cited source span,
-and its issuance is recorded in the Semantic Selection Ledger. A generated
-source key locates one representation declaration; it does not mint Source STDO
-meaning or authority. Equal spelling never supplies `source_key`, bounded
-context, authority, basis, or scope.
-
-Every record identity is independently reproducible without following another
-index reference:
-
-```text
-identity_coordinate = {
-  record_kind: "atom" | "edge" | "constraint",
-  semantic_address: SemanticAddress
-}
-
-id = "urn:stdo-representation:" + record_kind + ":sha256:" +
-     sha256(JCS(identity_coordinate))
-```
-
-`JCS` is the exact RFC 8785 JSON Canonicalization Scheme binding owned by
-`PRODUCT.md#product-identity`. Two records of the same kind may not share a
-`SemanticAddress`. Identity derivation therefore has no reference cycle even
-when the represented graph is cyclic.
-
-## Exact record types
-
-Every record contains exactly the fields shown for its tagged type. Unknown or
-missing fields refuse structural admission.
-
-### Semantic atom
-
-```text
-AtomClass =
-  "authority" | "basis" | "bounded_context" | "capability" |
-  "clause" | "concept" | "design" | "document" | "evidence" |
-  "intent" | "method" | "product" | "product_definition" |
-  "reference_frame" | "relation_kind" | "requirement" | "role" |
-  "scope" | "state" | "term" | "ticket"
-
-SemanticAtom = {
-  kind: "atom",
-  id: Identity,
-  atom_class: AtomClass,
-  label: non-empty string,
+RecordProvenanceBinding = {
+  model_record_ref: Identity,
+  provenance_kind: "subject_derived",
   semantic_address: SemanticAddress,
-  source_locators: non-empty SourceLocator[]
+  source_locators: SourceLocator[],
+  derivation_evidence_refs: Identity[]
 }
+
+P_B = RecordProvenanceBinding[]
+dom(P_B) = Local_M
+Index_B = (M_B, P_B)
+
+DerivationEvidenceDomain_B = {
+  b_ac,
+  id(B_STDO),
+  id(Sigma_STDO),
+  id(I_STDO),
+  what_member_set_identity
+} union exact Source STDO member identities
 ```
 
-`atom_class` is closed structural representation metadata, not a replacement
-Source STDO ontology. Source concepts own their semantic types. A structural
-class or label grants no authority.
+`P_B` is external interpretation evidence, not a ninth `a_c` record family.
+It is sorted by `model_record_ref` in unsigned UTF-16 code-unit order and binds
+every `Local_M` identity exactly once. Each `source_locators` array is
+duplicate-free and sorted by the UTF-16 code-unit order of its JCS bytes;
+`derivation_evidence_refs` is duplicate-free and identity-sorted by the same
+string order. Address context, owning authority, and governed scope equal the
+referenced record's context, owner, and scope. `SemanticAddress.selected_basis`
+remains exact `B_STDO`; the referenced record retains exact model basis `b_M`.
 
-### Semantic edge
+Every row is `subject_derived` and has non-empty exact Source STDO locators.
+Compiler mechanics remain outside `M_B*` and cannot enter `P_B` as model-local
+meaning. Every supplied derivation-evidence ref resolves in
+`DerivationEvidenceDomain_B`; a bare, unresolved, mutable, wrong-basis, or
+caller-invented ref refuses. A Source STDO member identity resolves under exact
+`B_STDO` to one manifest member digest. This cut permits only member-level
+locators (`fragment = null`). A filename, heading, spelling, graph position, or
+carrier label does not create semantic identity.
+
+Every `semantic_address.source_key` is either an exact identity declared or
+resolved under `B_STDO` at that row's address/locator, or a governed
+`urn:stdo-representation:source-key:sha256:` identity with its exact
+`GeneratedSourceKeyBinding` preimage. Any third, unresolved namespace refuses.
+
+An external identity enters `I` only through exactly one signature-declared
+reference domain and exact resolution:
 
 ```text
-CrossContext = null | {
-  classification:
-    "unchanged_import" | "disambiguation" |
-    "directional_translation" | "specialization" |
-    "authority_equivalence",
-  source_context_ref: Identity,
-  target_context_ref: Identity,
-  preserved_meaning_refs: Identity[],
-  changed_meaning_refs: Identity[],
-  refusal_refs: Identity[],
-  inverse_ref: Identity | null,
-  invalidation_refs: Identity[]
-}
-
-SemanticEdge = {
-  kind: "edge",
-  id: Identity,
-  semantic_address: SemanticAddress,
-  source_ref: Identity,
-  relation_kind_ref: Identity,
-  target_ref: Identity,
-  context_ref: Identity | null,
-  owner_ref: Identity | null,
-  scope_ref: Identity | null,
-  cross_context: CrossContext,
-  source_locators: non-empty SourceLocator[]
+Resolution_M(x) = {
+  external_identity,
+  reference_domain,
+  external_target_kind,
+  resolved_target_identity,
+  basis_relation,
+  resolution_basis,
+  evidence_identity
 }
 ```
 
-`cross_context` is `null` only for a within-context relation. A null context,
-owner, or scope is lawful only when the cited Source STDO clause explicitly
-declares that coordinate inapplicable; missing knowledge is not `null`.
-
-### Passive constraint
+## Projection
 
 ```text
-ConstraintClass =
-  "admission_condition" | "axiom" | "guarantee" | "invariant" |
-  "latitude" | "obligation" | "prohibition" | "refusal"
-
-DeclaredLatitude = null | {
-  function_ref:
-    "urn:stdo:concept:graph-native-odd:f-p" |
-    "urn:stdo:concept:graph-native-odd:f-h",
-  decision_owner_ref: Identity,
-  re_entry_ref: Identity
-}
-
-PassiveConstraint = {
-  kind: "constraint",
-  id: Identity,
-  semantic_address: SemanticAddress,
-  constraint_class: ConstraintClass,
-  statement: non-empty string,
-  applies_to_refs: non-empty Identity[],
-  context_ref: Identity | null,
-  owner_ref: Identity | null,
-  scope_ref: Identity | null,
-  declared_latitude: DeclaredLatitude,
-  source_locators: non-empty SourceLocator[]
-}
+project(Index_B, Z, R) -> (Index_Z, Boundary_Z) | gap | refusal
+Index_Z = (M_Z, P_Z)
+P_Z = P_B restricted to Local_{M_Z}
 ```
 
-The statement preserves the source-owned law in compact declarative form. It is
-not executable policy, a prompt tactic, or a deterministic truth function.
-
-## Reference-kind law
-
-The only index-reference fields and their allowed targets are:
-
-| Reference field | Required target |
-|---|---|
-| `SemanticEdge.source_ref`, `target_ref` | any one atom, edge, or constraint |
-| `relation_kind_ref` | atom with `atom_class = "relation_kind"` |
-| every `context_ref`, `source_context_ref`, `target_context_ref` | atom with `atom_class = "bounded_context"` |
-| every `owner_ref`, `decision_owner_ref` | atom with `atom_class = "authority"` |
-| every `scope_ref` | atom with `atom_class = "scope"` |
-| `preserved_meaning_refs`, `changed_meaning_refs` | atoms, edges, or constraints |
-| `refusal_refs`, `invalidation_refs` | constraints |
-| `inverse_ref` | edge |
-| `applies_to_refs` | atoms, edges, or constraints |
-| `re_entry_ref` | atom class `clause`, `design`, `intent`, `method`, `product`, `requirement`, or `ticket` |
-
-No other field is an index reference. `id` is a self-identity, while
-`SemanticAddress` and `SourceLocator` carry non-targetable Source STDO
-coordinates. Null is permitted only in the explicitly nullable fields and under
-their stated source-evidence rule.
-
-Every array is ordered. Identity-string sets are duplicate-free and sort by the
-lexicographically ascending sequence of unsigned UTF-16 code units, with a
-shorter equal prefix first. `SourceLocator` sets sort by `(member_path,
-fragment, member_sha256)` under the same string order, with `null` fragment
-before a string. A Source STDO relation declared ordered may instead preserve
-that exact source order; the Semantic Selection Ledger records that exception
-and its source route.
-
-## Derived views
-
-A Source STDO reference frame is not another primitive domain. A frame view is
-the source-addressed frame atom plus the graph-and-constraint closure that binds
-its intent, authority, governed scope, capability envelope, basis, evidence
-relations, exclusions, and revision conditions:
-
-```text
-frame_B(f) = closure(P_B, f, required_frame_relations)
-```
-
-A collection of frames is a selection of these derived subgraphs. Selection
-creates no semantic identity or authority. A separately governed collection is
-represented only when Source STDO supplies its own identity and relations.
-
-A bounded reasoning projection is:
-
-```text
-project(P_B, intent, frame, budget) -> P'_B + omitted_source_routes
-```
-
-`P'_B` retains the identity, authority, context, relation-kind, constraint, and
-interpretation closure needed by its intent. Omitted material remains
-discoverable through exact Source STDO routes. Projection is index packaging,
-not deterministic semantic judgment; it does not create or execute a
-carrier-language program.
+`M_Z` is the material closure of seed set `Z` under the exact relation set `R`.
+It preserves applicable constraints, latitude, residuals, authority, basis,
+external resolutions, and invalidation. `P_Z` preserves exactly one unchanged
+source-address row for every projected local record. `Boundary_Z` records
+excluded, external, unresolved, translated, and invalidation-sensitive seams.
+Budget pressure cannot remove a required member.
 
 ## Requirements
 
-**REQ-P-ALG-001**: Every tenant shall realize `I_B`, `V_B`, `E_B`, and `C_B`
-directly in its selected carrier. It shall not introduce a mandatory common
-serialized graph or lower through another build tenant.
+**REQ-P-ALG-001**: Every candidate shall contain the exact model basis,
+`Sigma_STDO` identity, `I_STDO` identity, complete finite `I`, all eight
+`Population_M` arrays, the exact external-resolution set, and total external
+record-provenance relation `P_B`.
 
-**REQ-P-ALG-002**: Every canonical record shall conform to exactly one closed
-tagged record type above. Unknown fields, kinds, atom classes, constraint
-classes, reference fields, or cross-context classifications refuse structural
-admission.
+**REQ-P-ALG-002**: Every local record shall conform to exactly one imported
+`a_c` core record family and exactly one population. Duplicate identities,
+cross-population identities, hidden records, and extra record families refuse.
 
-**REQ-P-ALG-003**: Every index reference shall resolve exactly once under the
-Reference-kind Law. Duplicate identities, duplicate semantic addresses,
-dangling references, wrong-kind references, unlawful nulls, or cross-basis
-references refuse structural admission.
+**REQ-P-ALG-003**: `I` shall equal exactly `Local_M disjoint_union External_M`.
+Every local reference resolves once under `RefDomain_Sigma`; every external
+reference resolves once through `Resolution_M`; ambiguous, cross-basis,
+wrong-kind, wrong-sort, or dangling references refuse.
 
-**REQ-P-ALG-004**: Every semantic edge shall preserve source, target, relation
-kind, direction, bounded context, owner, basis, governed scope, and source
-provenance wherever Source STDO makes those coordinates material.
+**REQ-P-ALG-004**: `Sigma_STDO` shall be finite and closed and shall not remove,
+rename, shadow, or add an `a_c` core record family. A signature change creates a
+new signature identity and candidate model.
 
-**REQ-P-ALG-005**: Cross-context edges shall preserve their exact Source STDO
-classification and material change: unchanged import, disambiguation,
-directional translation including specialization, or authority-established
-equivalence. Equal spelling or similar topology shall not supply that relation.
+**REQ-P-ALG-005**: `P_B` shall be a total bijection over `Local_M`. Every
+subject-derived record shall preserve its exact Source STDO address, owner,
+context, scope, `B_STDO`, `b_M`, and source route. Equal spelling or similar
+topology supplies none of those relations.
 
-**REQ-P-ALG-006**: Every constraint shall preserve its owning authority,
-applicable subjects or relations, bounded context, governed scope, source route,
-and any explicit underdetermination or refusal boundary.
+**REQ-P-ALG-006**: Every one of the 51 exact Source STDO members shall receive a
+retained, omitted, residual, inapplicable, or refused disposition. Absence does
+not establish immateriality.
 
-**REQ-P-ALG-007**: Graph topology and constraints shall be sufficient for an
-`F_P` consumer to recover material dependency, authority, context, composition,
-overlay, projection, and invalidation relations without consulting a hidden
-carrier convention.
+**REQ-P-ALG-007**: Every constraint shall name its exact judgment kind and any
+applicable latitude or refusal. A probabilistic or human predicate shall not be
+encoded as deterministic proof.
 
-**REQ-P-ALG-008**: Semantic identity and authority shall be conserved by
-construction, canonicalization, compression, projection, and carrier
-translation. Copying, labeling, ordering, or graph placement shall not create,
-merge, widen, or transfer Source STDO meaning or authority.
+**REQ-P-ALG-008**: Every material uncertainty shall remain in `X`, be resolved
+by an exact authorized disposition, or refuse acceptance. Projection,
+compression, selection, and carrier encoding shall not erase it.
 
-**REQ-P-ALG-009**: A projection shall include the constraint and interpretation
-closure required for its declared intent and frame. If the budget cannot carry
-that closure, packaging shall refuse rather than silently trim it.
+**REQ-P-ALG-009**: `V`, `T`, and `J` shall preserve traversal, operation,
+authority, evidence, stop, mutation, subject, and decision separation.
+`F_D[v]` returns a judgment over an unchanged subject; it does not perform the
+construction it evaluates.
 
-**REQ-P-ALG-010**: Declared `F_P` or `F_H` latitude is lawful only where its
-source-owned constraint identifies the underdetermined scope, exact function
-identity, decision owner, and re-entry route. A missing record, owner, context,
-basis, or relation is a representation defect, not permission for invention.
+**REQ-P-ALG-010**: `F_P[v_compile]` proposes `M_B*` and `P_B*` and has no
+semantic, admission, acceptance, or closure authority. `F_H[v_select]` acts
+only under its exact external grant and cannot alter the candidate model or
+record-provenance relation it judges.
 
-**REQ-P-ALG-011**: The index shall remain declarative. It shall contain no
-workspace-specific observation, deterministic workspace verdict, prompt tactic,
-HoG execution plan, ABG admission, runtime event, continuation, or closure truth.
+**REQ-P-ALG-011**: Projection shall implement the exact `a_c` projection
+relation above. If mandatory closure does not fit a capability or context
+budget, it shall return `gap` or `refusal` rather than silently trim records.
 
-**REQ-P-ALG-012**: `F_D` may decide conformance to the exact structural types,
-reference-kind table, canonicalization, and carrier law. It shall not decide
-which Source STDO declarations are semantically material or whether one `F_P`
-output is uniquely correct.
+**REQ-P-ALG-012**: The model shall remain declarative. Workspace observations,
+prompt tactics, carrier syntax, execution plans, runtime events, continuation,
+and runtime truth are excluded.
 
-**REQ-P-ALG-013**: `F_H` selection shall precede deterministic serialization and
-shall be bound by the Semantic Selection Ledger. Neither an empty selection nor
-an omitted or unresolved source population may pass as successful compression.
+**REQ-P-ALG-013**: Every tenant shall encode accepted `a_c.STDO` directly in
+its selected carrier and prove or refuse preservation of every model population,
+external resolution, and `P_B` row. A tenant cannot reshape `M_B*` or its
+record-provenance relation to fit its carrier.
 
-**REQ-P-ALG-014**: Constitutional selection, identity resolution, dependency,
-authority, applicable constraint, inclusion, omission, and projection closure
-shall be decided only by exact declared index identities and relations.
-Embedding similarity, vector distance, retrieval rank, filename proximity, or
-LLM association shall not supply any of those relations. An external host may
-use probabilistic retrieval to acquire workspace evidence, but that evidence
-enters through `W` and does not alter `P_B` or its governing closure.
+**REQ-P-ALG-014**: Embedding similarity, vector distance, retrieval rank,
+filename proximity, or LLM association shall not supply constitutional
+identity, authority, dependency, inclusion, omission, or projection closure.

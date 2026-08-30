@@ -1,0 +1,1062 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STDO semantic compilation result v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "schema_version",
+    "payload"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "stdo-representation.semantic-compilation-proposal",
+        "stdo-representation.semantic-compilation-stop"
+      ]
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 2
+    },
+    "payload": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/candidatePayload"
+        },
+        {
+          "$ref": "#/$defs/stopPayload"
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "identity": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:.+$"
+    },
+    "stringSet": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identitySet": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/identity"
+      }
+    },
+    "semanticObject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sort",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "value"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "sort": {
+          "$ref": "#/$defs/identity"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "typedRelation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "source",
+        "target",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "qualifiers"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "source": {
+          "$ref": "#/$defs/identity"
+        },
+        "target": {
+          "$ref": "#/$defs/identity"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "qualifiers": {
+          "$ref": "#/$defs/stringSet"
+        }
+      }
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "applies_to",
+        "predicate",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "judgment_kind",
+        "latitude_ref",
+        "refusal"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/identity"
+        },
+        "predicate": {
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "judgment_kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "latitude_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/identity"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "refusal": {
+          "type": "string"
+        }
+      }
+    },
+    "latitude": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "applies_to",
+        "allowed_variation",
+        "forbidden_variation",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "invalidation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/identity"
+        },
+        "allowed_variation": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "forbidden_variation": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "invalidation": {
+          "type": "string"
+        }
+      }
+    },
+    "residual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "subject",
+        "kind",
+        "uncertainty",
+        "consequence",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "re_entry",
+        "invalidation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "subject": {
+          "$ref": "#/$defs/identity"
+        },
+        "kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "consequence": {
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "re_entry": {
+          "type": "string"
+        },
+        "invalidation": {
+          "type": "string"
+        }
+      }
+    },
+    "traversal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "domain",
+        "codomain",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "preconditions",
+        "postconditions",
+        "authority",
+        "evidence",
+        "provenance",
+        "stop_states"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "domain": {
+          "$ref": "#/$defs/identity"
+        },
+        "codomain": {
+          "$ref": "#/$defs/identity"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "preconditions": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "postconditions": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "authority": {
+          "$ref": "#/$defs/identity"
+        },
+        "evidence": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "provenance": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "stop_states": {
+          "$ref": "#/$defs/identitySet"
+        }
+      }
+    },
+    "externalResolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_identity",
+        "reference_domain",
+        "external_target_kind",
+        "resolved_target_identity",
+        "basis_relation",
+        "resolution_basis",
+        "evidence_identity"
+      ],
+      "properties": {
+        "external_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "reference_domain": {
+          "$ref": "#/$defs/identity"
+        },
+        "external_target_kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "resolved_target_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "basis_relation": {
+          "$ref": "#/$defs/identity"
+        },
+        "resolution_basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "evidence_identity": {
+          "$ref": "#/$defs/identity"
+        }
+      }
+    },
+    "externalResolutionWitness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_resolution",
+        "domain_model",
+        "codomain_model",
+        "domain_resolution",
+        "codomain_resolution",
+        "decision",
+        "evidence"
+      ],
+      "properties": {
+        "external_resolution": {
+          "$ref": "#/$defs/identity"
+        },
+        "domain_model": {
+          "$ref": "#/$defs/identity"
+        },
+        "codomain_model": {
+          "$ref": "#/$defs/identity"
+        },
+        "domain_resolution": {
+          "$ref": "#/$defs/externalResolution"
+        },
+        "codomain_resolution": {
+          "$ref": "#/$defs/externalResolution"
+        },
+        "decision": {
+          "type": "string",
+          "const": "equal"
+        },
+        "evidence": {
+          "$ref": "#/$defs/identity"
+        }
+      }
+    },
+    "transformation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "traversal",
+        "domain_model",
+        "codomain_model",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "operation_authority",
+        "preconditions",
+        "preservation_relation",
+        "preserved",
+        "introduced",
+        "removed",
+        "external_preserved",
+        "external_introduced",
+        "external_removed",
+        "external_resolution_witnesses",
+        "residuals",
+        "evidence",
+        "provenance",
+        "stop_states",
+        "invalidation",
+        "re_entry"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "traversal": {
+          "$ref": "#/$defs/identity"
+        },
+        "domain_model": {
+          "$ref": "#/$defs/identity"
+        },
+        "codomain_model": {
+          "$ref": "#/$defs/identity"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "operation_authority": {
+          "$ref": "#/$defs/identity"
+        },
+        "preconditions": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "preservation_relation": {
+          "$ref": "#/$defs/identity"
+        },
+        "preserved": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "introduced": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "removed": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "external_preserved": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "external_introduced": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "external_removed": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "external_resolution_witnesses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/externalResolutionWitness"
+          }
+        },
+        "residuals": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "evidence": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "provenance": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "stop_states": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "invalidation": {
+          "type": "string"
+        },
+        "re_entry": {
+          "type": "string"
+        }
+      }
+    },
+    "judgment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "subject",
+        "subject_digest",
+        "context",
+        "owner",
+        "scope",
+        "basis",
+        "evaluator",
+        "authority",
+        "decision",
+        "evidence",
+        "provenance",
+        "decided_at"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identity"
+        },
+        "kind": {
+          "$ref": "#/$defs/identity"
+        },
+        "subject": {
+          "$ref": "#/$defs/identity"
+        },
+        "subject_digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owner": {
+          "$ref": "#/$defs/identity"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "evaluator": {
+          "$ref": "#/$defs/identity"
+        },
+        "authority": {
+          "$ref": "#/$defs/identity"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "provenance": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "decided_at": {
+          "type": "string"
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_basis_identity",
+        "identities",
+        "semantic_objects",
+        "typed_relations",
+        "constraints",
+        "latitudes",
+        "residuals",
+        "traversals",
+        "transformations",
+        "judgments",
+        "external_resolutions"
+      ],
+      "properties": {
+        "model_basis_identity": {
+          "type": "string",
+          "pattern": "^urn:stdo-index:model-basis:sha256:[0-9a-f]{64}$"
+        },
+        "identities": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "semantic_objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/semanticObject"
+          }
+        },
+        "typed_relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/typedRelation"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "latitudes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/latitude"
+          }
+        },
+        "residuals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/residual"
+          }
+        },
+        "traversals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/traversal"
+          }
+        },
+        "transformations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/transformation"
+          }
+        },
+        "judgments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/judgment"
+          }
+        },
+        "external_resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/externalResolution"
+          }
+        }
+      }
+    },
+    "sourceMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_path",
+        "member_sha256"
+      ],
+      "properties": {
+        "member_path": {
+          "type": "string"
+        },
+        "member_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "candidatePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "calculus_basis_identity",
+        "source_stdo_uri",
+        "source_stdo_manifest_sha256",
+        "source_member_set_sha256",
+        "source_members",
+        "subject_basis_identity",
+        "what_member_set_identity",
+        "signature_identity",
+        "signature_sha256",
+        "interpretation_contract_identity",
+        "interpretation_contract_sha256",
+        "frame_basis_identity",
+        "frame_basis_sha256",
+        "selected_frame_refs",
+        "candidate_model",
+        "candidate_model_content_identity",
+        "proposed_record_provenance",
+        "proposed_evaluated_members",
+        "proposed_selections",
+        "proposed_generated_source_keys",
+        "compilation_residuals",
+        "stop_state"
+      ],
+      "properties": {
+        "calculus_basis_identity": {
+          "type": "string",
+          "pattern": "^urn:stdo:axiomatic-calculus-basis:sha256:[0-9a-f]{64}$"
+        },
+        "source_stdo_uri": {
+          "type": "string",
+          "const": "stdo://releases/v2.5.0-rc.1/"
+        },
+        "source_stdo_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_member_set_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceMember"
+          }
+        },
+        "subject_basis_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "what_member_set_identity": {
+          "$ref": "#/$defs/sha256"
+        },
+        "signature_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "signature_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "interpretation_contract_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "interpretation_contract_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "frame_basis_identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "frame_basis_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "selected_frame_refs": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "candidate_model": {
+          "$ref": "#/$defs/model"
+        },
+        "candidate_model_content_identity": {
+          "$ref": "#/$defs/sha256"
+        },
+        "proposed_record_provenance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recordProvenanceBinding"
+          }
+        },
+        "proposed_evaluated_members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evaluatedMember"
+          }
+        },
+        "proposed_selections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/selection"
+          }
+        },
+        "proposed_generated_source_keys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/generatedSourceKey"
+          }
+        },
+        "compilation_residuals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/compilationResidual"
+          }
+        },
+        "stop_state": {
+          "type": "string",
+          "const": "urn:stdo-index:stdo:stop-kind:candidate:1"
+        }
+      }
+    },
+    "stopPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stop_state",
+        "reason_code",
+        "re_entry_refs"
+      ],
+      "properties": {
+        "stop_state": {
+          "type": "string",
+          "enum": [
+            "urn:stdo-index:stdo:stop-kind:hold:1",
+            "urn:stdo-index:stdo:stop-kind:gap:1",
+            "urn:stdo-index:stdo:stop-kind:refusal:1"
+          ]
+        },
+        "reason_code": {
+          "type": "string",
+          "enum": [
+            "basis_gap",
+            "capability_mismatch",
+            "insufficient_evidence",
+            "output_contract_mismatch"
+          ]
+        },
+        "re_entry_refs": {
+          "$ref": "#/$defs/identitySet"
+        }
+      }
+    },
+    "sourceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis_uri",
+        "member_path",
+        "member_sha256",
+        "fragment"
+      ],
+      "properties": {
+        "basis_uri": {
+          "type": "string",
+          "const": "stdo://releases/v2.5.0-rc.1/"
+        },
+        "member_path": {
+          "type": "string"
+        },
+        "member_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "fragment": {
+          "type": "null",
+          "const": null
+        }
+      }
+    },
+    "semanticAddress": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_key",
+        "term",
+        "bounded_context",
+        "owning_authority",
+        "selected_basis",
+        "governed_scope"
+      ],
+      "properties": {
+        "source_key": {
+          "$ref": "#/$defs/identity"
+        },
+        "term": {
+          "type": "string"
+        },
+        "bounded_context": {
+          "$ref": "#/$defs/identity"
+        },
+        "owning_authority": {
+          "$ref": "#/$defs/identity"
+        },
+        "selected_basis": {
+          "$ref": "#/$defs/identity"
+        },
+        "governed_scope": {
+          "$ref": "#/$defs/identity"
+        }
+      }
+    },
+    "recordProvenanceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_record_ref",
+        "provenance_kind",
+        "semantic_address",
+        "source_locators",
+        "derivation_evidence_refs"
+      ],
+      "properties": {
+        "model_record_ref": {
+          "$ref": "#/$defs/identity"
+        },
+        "provenance_kind": {
+          "type": "string",
+          "const": "subject_derived"
+        },
+        "semantic_address": {
+          "$ref": "#/$defs/semanticAddress"
+        },
+        "source_locators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceLocator"
+          }
+        },
+        "derivation_evidence_refs": {
+          "$ref": "#/$defs/identitySet"
+        }
+      }
+    },
+    "evaluatedMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_path",
+        "member_sha256",
+        "disposition",
+        "selection_refs",
+        "rationale"
+      ],
+      "properties": {
+        "member_path": {
+          "type": "string"
+        },
+        "member_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "disposition": {
+          "type": "string",
+          "enum": [
+            "contains_retained_material",
+            "contains_no_retained_material",
+            "uncertain",
+            "inapplicable",
+            "refused"
+          ]
+        },
+        "selection_refs": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selection_ref",
+        "source_locators",
+        "disposition",
+        "model_record_refs",
+        "rationale",
+        "source_owner"
+      ],
+      "properties": {
+        "selection_ref": {
+          "$ref": "#/$defs/identity"
+        },
+        "source_locators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceLocator"
+          }
+        },
+        "disposition": {
+          "type": "string",
+          "enum": [
+            "retained",
+            "omitted",
+            "uncertain",
+            "inapplicable",
+            "refused"
+          ]
+        },
+        "model_record_refs": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "source_owner": {
+          "$ref": "#/$defs/identity"
+        }
+      }
+    },
+    "generatedSourceKey": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_key",
+        "primary_source_locator",
+        "local_declaration_key"
+      ],
+      "properties": {
+        "source_key": {
+          "type": "string",
+          "pattern": "^urn:stdo-representation:source-key:sha256:[0-9a-f]{64}$"
+        },
+        "primary_source_locator": {
+          "$ref": "#/$defs/sourceLocator"
+        },
+        "local_declaration_key": {
+          "type": "string"
+        }
+      }
+    },
+    "compilationResidual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "residual_ref",
+        "source_locators",
+        "statement",
+        "consequence",
+        "model_residual_refs",
+        "re_entry_route"
+      ],
+      "properties": {
+        "residual_ref": {
+          "$ref": "#/$defs/identity"
+        },
+        "source_locators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceLocator"
+          }
+        },
+        "statement": {
+          "type": "string"
+        },
+        "consequence": {
+          "type": "string"
+        },
+        "model_residual_refs": {
+          "$ref": "#/$defs/identitySet"
+        },
+        "re_entry_route": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

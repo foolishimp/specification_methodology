@@ -64,83 +64,92 @@ EXPECTED_REQUIREMENTS = {
     "REQ-P-SELECTION-AND-ACCEPTANCE.md",
 }
 TRAVERSAL_IDENTITIES = {
-    "F_D": "urn:stdo:concept:graph-native-odd:f-d",
-    "F_P": "urn:stdo:concept:graph-native-odd:f-p",
-    "F_H": "urn:stdo:concept:graph-native-odd:f-h",
+    "F_D": "urn:stdo:concept:axiomatic-calculus:f-d",
+    "F_P": "urn:stdo:concept:axiomatic-calculus:f-p",
+    "F_H": "urn:stdo:concept:axiomatic-calculus:f-h",
 }
 ROLE_IDENTITIES = {
     "Executive": (
-        "stdo://releases/v2.4.3-rc.3/standards/"
+        "stdo://releases/v2.5.0-rc.1/standards/"
         "STDO_REFERENCE_FRAME_BASELINE.md#executive"
     ),
     "Worker": (
-        "stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+        "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
     ),
     "Reviewer": (
-        "stdo://releases/v2.4.3-rc.3/standards/"
+        "stdo://releases/v2.5.0-rc.1/standards/"
         "STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
     ),
 }
-FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:3"
-GTL_PROFILE_IDENTITY = "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0"
+STDO_SCHEMA_URI = (
+    "stdo://releases/v2.5.0-rc.1/standards/schemas/product-definition.schema.json"
+)
+STDO_SELECTOR = "stdo://channels/2.5.0"
+STDO_BASIS_URI = "stdo://releases/v2.5.0-rc.1/"
+STDO_MANIFEST_SHA256 = (
+    "3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
+)
+STDO_MEMBER_COUNT = 51
+STDO_MEMBER_SET_SHA256 = (
+    "87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5"
+)
+AXIOMATIC_CALCULUS_SHA256 = (
+    "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+)
+CALCULUS_BASIS_IDENTITY = (
+    "urn:stdo:axiomatic-calculus-basis:sha256:"
+    "bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da"
+)
+SUBJECT_BASIS_IDENTITY = (
+    "urn:stdo-representation:subject-basis:stdo:sha256:"
+    "73f2581c2d8466a2c8e41b842c2178495431ff28450192f00368ec9fff8766a6"
+)
+FRAME_BASIS_IDENTITY = "urn:stdo-representation:reference-frame-basis:source-project:7"
+GTL_PROFILE_IDENTITY = "urn:stdo-index:gtl-profile:axiom-index:7"
+T002_ACCEPTED_WHAT_MEMBER_SET_IDENTITY = (
+    "sha256:4158caca78aeadd4dd31e802f9801ee2b81e0f1a96fc2774705db909d3bbf35e"
+)
+T002_ACCEPTED_FRAME_BASIS_IDENTITY = (
+    "urn:stdo-representation:reference-frame-basis:source-project:3"
+)
+T002_ACCEPTED_FRAME_BASIS_SHA256 = (
+    "sha256:b589485673b72536c222c9cd52b8f36ac250533a1eaaee4d0303754788045ec0"
+)
+T002_ACCEPTED_GTL_PROFILE_SHA256 = (
+    "sha256:27b496722bfea537ed9e3a8c412c3ca162f83e723ecd9b783e1697d8ffae5f47"
+)
+T002_ACCEPTED_GTL_PROFILE_IDENTITY = (
+    "urn:stdo-representation:gtl-profile:stdo-gtl:0.7.0"
+)
 PRODUCT_OWNER_ACTOR = "https://github.com/foolishimp"
 PRODUCT_OWNER_AUTHORITY = "urn:stdo-representation:authority:product-owner"
 PRODUCT_OWNER_GRANT = "urn:stdo-representation:grant:product-owner:1"
 PRODUCT_OWNER_GRANT_SCOPE = (
     "Select and accept project-owned frame bases, representation profiles, Source "
     "STDO semantic selections, candidate STDO.gtl Products, and tenant-qualified "
-    "releases, and authorize deterministic construction; excludes changing Source "
-    "STDO or granting execution, review, or runtime authority."
+    "releases; authorize deterministic construction; and issue bounded build-time "
+    "operation grants for proposal-only semantic-compilation and deterministic "
+    "structural-evaluation traversals; excludes "
+    "changing Source STDO or transferring semantic, review, acceptance, release, "
+    "or runtime authority to a traversal."
 )
-FRAME_AUTHORITIES = {
-    "./specification/GOALS.md",
-    "./specification/PRODUCT.md#product-authority",
-    "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
-    "./specification/requirements/REQ-P-COMPRESSION-VERIFICATION.md",
-    "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md",
-    "./specification/requirements/REQ-P-FP-CONSUMPTION.md",
-    "./specification/requirements/REQ-P-REPRESENTATION-ALGEBRA.md",
-    "./specification/requirements/REQ-P-SELECTION-AND-ACCEPTANCE.md",
-}
-FUNCTION_BINDING_URI = (
-    "./specification/PRODUCT.md#fundamental-traversal-function-binding"
-)
-FUNCTION_BINDING_AUTHORITY = [
-    "stdo://releases/v2.4.3-rc.3/standards/ODD_METHOD.md#probabilistic-compute",
-    FUNCTION_BINDING_URI,
-]
 ROLE_BINDING_URI = (
     "./specification/requirements/"
     "REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
 )
 EXPECTED_DISAMBIGUATIONS = {
     term: {
-        "uri": FUNCTION_BINDING_URI,
+        "uri": ROLE_BINDING_URI,
         "term": term,
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [identity],
         "resolves_to": identity,
-        "authority": FUNCTION_BINDING_AUTHORITY,
+        "authority": [identity, ROLE_BINDING_URI],
         "basis": ["#/constitution/stdo/basis"],
         "applies_to": ["urn:stdo:product-definition:stdo-representation"],
     }
-    for term, identity in TRAVERSAL_IDENTITIES.items()
+    for term, identity in ROLE_IDENTITIES.items()
 }
-EXPECTED_DISAMBIGUATIONS.update(
-    {
-        term: {
-            "uri": ROLE_BINDING_URI,
-            "term": term,
-            "context": "urn:stdo-representation:bounded-context:product",
-            "disambiguates": [identity],
-            "resolves_to": identity,
-            "authority": [identity, ROLE_BINDING_URI],
-            "basis": ["#/constitution/stdo/basis"],
-            "applies_to": ["urn:stdo:product-definition:stdo-representation"],
-        }
-        for term, identity in ROLE_IDENTITIES.items()
-    }
-)
 GTL_CARRIER_COORDINATE = {
     "authority_inventory_count": 33,
     "authority_root": "specification/requirements/gtl/",
@@ -148,6 +157,7 @@ GTL_CARRIER_COORDINATE = {
     "commit_sha1": "8d7f965a3fae7d1acea6a9db298798480fd4cc2f",
     "repository": "https://github.com/foolishimp/abiogenesis.git",
 }
+GTL_CARRIER_BASIS_PREFIX = "urn:stdo-representation:carrier-basis:gtl:sha256:"
 
 
 class CheckFailure(RuntimeError):
@@ -331,31 +341,176 @@ def require_text(text: str, needle: str, source: Path) -> None:
     require(needle in text, f"missing required declaration {needle!r}: {source}")
 
 
+def check_semantic_compilation_contract(text: str, source: Path) -> None:
+    for declaration in (
+        "CandidatePayload = {",
+        "SemanticCompilationProposal = {",
+        "SemanticCompilationCandidate = {",
+        "schema_version: 2",
+        "source_members: SourceMember[51]",
+        "compiler_invocation: CompilerInvocation",
+        "candidate_model: ACModel",
+        "proposed_record_provenance: RecordProvenanceBinding[]",
+        "proposed_evaluated_members: EvaluatedMember[51]",
+        "semantic_objects: SemanticObject[]",
+        "typed_relations: TypedRelation[]",
+        "constraints: Constraint[]",
+        "latitudes: Latitude[]",
+        "residuals: Residual[]",
+        "traversals: Traversal[]",
+        "transformations: Transformation[]",
+        "judgments: Judgment[]",
+        "external_resolutions: ExternalResolution[]",
+        "RecordProvenanceBinding = {",
+        'provenance_kind: "subject_derived"',
+        "CompilerProvenanceBundle = {",
+        "members: CompilerProvenanceMember[9]",
+        "CandidateStructureResultIdentity =",
+        "CandidateStructureEvaluationGrantIdentity =",
+        "CandidateStructureEvaluationGrant = {",
+        "CandidateStructureResult = {",
+        "semantic_compilation_candidate_identity:",
+        "semantic_compilation_candidate_sha256: Sha256",
+        "candidate_structure_result_identity:",
+        "candidate_structure_result_sha256: Sha256",
+        "subject_identity: SemanticCompilationCandidateIdentity",
+        "subject_sha256: Sha256",
+        "proposal_dispositions: ProposalDisposition[]",
+        "decided_at: RFC3339 timestamp",
+        "evidence_refs: non-empty sorted duplicate-free URI-reference[]",
+        "proposed_generated_source_keys: GeneratedSourceKeyBinding[]",
+        '"evaluated_member" | "model_record" | "selection" |',
+        "provenance_sha256: Sha256",
+        "ConstructCandidate(",
+        'Every\n`proposal_kind = "model_record"` disposition is exactly',
+        "every model record and its `P_B` row are accepted\nunchanged",
+    ):
+        require_text(text, declaration, source)
+
+
+def check_functor_application_notation(surfaces: dict[Path, str]) -> None:
+    for source, text in surfaces.items():
+        require(
+            re.search(r"\bF_[DPH]\s*\(", text) is None,
+            f"bare F_D(...), F_P(...), or F_H(...) notation bypasses "
+            f"functor application: {source}",
+        )
+
+
+def check_carrier_neutral_compiler(product: str, fp_contract: str) -> None:
+    require(
+        "G_profile" not in product and "G_profile" not in fp_contract,
+        "tenant profile leaked into carrier-neutral semantic compilation",
+    )
+
+
+def check_selection_acceptance_topology(
+    product: str, selection_contract: str, source: Path
+) -> None:
+    for declaration in (
+        "The ledger is itself the exact `F_H[v_select]` decision",
+        "It has no second acceptance record.",
+        'subject_kind = "interpreted_model"',
+        "J_B.decision = accepted",
+    ):
+        require(
+            declaration in product or declaration in selection_contract,
+            f"missing selection/acceptance topology {declaration!r}: {source}",
+        )
+    require(
+        '"semantic_selection_ledger"' not in product,
+        f"selection ledger incorrectly requires a second acceptance record: {source}",
+    )
+
+
+def check_carrier_admission_judgment(text: str, source: Path) -> None:
+    for declaration in (
+        "Encode_T(M_B*, P_B*, Ledger_B, J_B, Profile_T, CarrierBasis_T)\n"
+        "  -> G_{B,T}",
+        "D_{G,T} =\n  F_D[v_carrier_admission]" "(G_{B,T}, Profile_T, CarrierBasis_T)",
+        "-> admitted | refuse",
+        "returns only `D_{G,T}`",
+        "leaving the evaluated carrier bytes and identity\nunchanged",
+    ):
+        require_text(text, declaration, source)
+    require(
+        re.search(
+            r"F_D\[v_carrier_admission\]\([^)]*\)\s*->\s*G_\{B,T\}",
+            text,
+        )
+        is None,
+        "carrier admission transforms or promotes the carrier instead of "
+        f"returning a separate judgment: {source}",
+    )
+
+
+def check_exploratory_quickstart(text: str, source: Path) -> None:
+    require_text(
+        text,
+        "This bare model call is exploratory probabilistic processing.",
+        source,
+    )
+    require_text(
+        text,
+        "**not** an\nExecutive Context Assignment, Reviewer activation, Context Packet",
+        source,
+    )
+
+
 def check_definition(root: Path = ROOT) -> dict[str, Any]:
     definition_path = root / "stdo_representation.json"
     definition = load_json_unique(definition_path)
     require(isinstance(definition, dict), "Product Definition root is not an object")
 
+    require(definition.get("$schema") == STDO_SCHEMA_URI, "unexpected STDO schema")
+    constitution = definition.get("constitution")
+    require(isinstance(constitution, dict), "constitution is not an object")
+    stdo = constitution.get("stdo")
+    require(isinstance(stdo, dict), "STDO constitution is not an object")
+    require(stdo.get("selector") == STDO_SELECTOR, "unexpected STDO selector")
+    require(
+        stdo.get("basis")
+        == {
+            "uri": STDO_BASIS_URI,
+            "manifest_sha256": STDO_MANIFEST_SHA256,
+        },
+        "unexpected immutable STDO basis",
+    )
+    entrypoints = constitution.get("entrypoints")
+    require(isinstance(entrypoints, list), "STDO entrypoints are not an array")
+    entrypoint_uris = {
+        item.get("uri") for item in entrypoints if isinstance(item, dict)
+    }
+    require(
+        "standards/AXIOMATIC_CALCULUS.md" in entrypoint_uris,
+        "Axiomatic Calculus is not an STDO entrypoint",
+    )
+    require(
+        "standards/ODD_METHOD.md" not in entrypoint_uris,
+        "ODD Method leaked into the carrier-neutral baseline",
+    )
+
+    how = definition.get("how")
+    require(isinstance(how, dict), "HOW is not an object")
+    require(
+        how.get("common") == ["./build_tenants/semantic_compile/"],
+        "semantic_compile is not the exact common construction surface",
+    )
+    tenants = how.get("build_tenants")
+    require(isinstance(tenants, list), "build tenants are not an array")
+    require(
+        {item.get("id") for item in tenants if isinstance(item, dict)}
+        == {
+            "urn:stdo-representation:build-tenant:gtl",
+            "urn:stdo-representation:build-tenant:json-schema",
+        },
+        "GTL and JSON Schema tenant registry is not exact",
+    )
+
     frame_bases = definition.get("reference_frame_bases")
     require(
-        isinstance(frame_bases, list) and len(frame_bases) == 1,
-        "expected one frame basis",
-    )
-    frame_basis = frame_bases[0]
-    require(isinstance(frame_basis, dict), "frame basis entry is not an object")
-    require(
-        frame_basis.get("uri")
-        == "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
-        "unexpected Project Reference-Frame Basis URI",
-    )
-    frame_authorities = frame_basis.get("authority")
-    require(
-        isinstance(frame_authorities, list), "frame basis authority is not an array"
-    )
-    require(
-        len(frame_authorities) == len(FRAME_AUTHORITIES)
-        and set(frame_authorities) == FRAME_AUTHORITIES,
-        "Project Reference-Frame Basis authority set is incomplete or unexpected",
+        frame_bases == [],
+        "an unaccepted Project Reference-Frame Basis occupies the operative overlay",
     )
 
     local_constitution = definition.get("local_constitution")
@@ -375,7 +530,7 @@ def check_definition(root: Path = ROOT) -> dict[str, Any]:
         observed[term] = item
     require(
         observed == EXPECTED_DISAMBIGUATIONS,
-        "function and engagement-role disambiguation records are not exact",
+        "engagement-role disambiguation records are not exact",
     )
     return definition
 
@@ -383,16 +538,13 @@ def check_definition(root: Path = ROOT) -> dict[str, Any]:
 def main() -> None:
     definition = check_definition()
     required_files = [
+        SPEC / "GOALS.md",
         SPEC / "INTENT.md",
         SPEC / "PRODUCT.md",
         SPEC / "REFERENCE_FRAME_BASIS.md",
         *(SPEC / "requirements" / name for name in sorted(EXPECTED_REQUIREMENTS)),
-        ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md",
-        ROOT / "build_tenants" / "gtl" / "code" / "src" / "construct.ts",
-        ROOT / "build_tenants" / "gtl" / "code" / "src" / "encoding.ts",
-        ROOT / "build_tenants" / "gtl" / "code" / "src" / "validation.ts",
-        ROOT / "scripts" / "test_frozen_gtl_tenant.py",
         ROOT / "scripts" / "test_check_constitution.py",
+        ROOT / "build_tenants" / "gtl" / "design" / "GTL_AXIOM_INDEX_PROFILE.json",
     ]
     for path in required_files:
         require(path.is_file(), f"missing required file: {path}")
@@ -401,6 +553,10 @@ def main() -> None:
     require(
         not retired.exists(),
         "retired deterministic-assessment requirement remains live",
+    )
+    require(
+        (ROOT / "build_tenants" / "semantic_compile").is_dir(),
+        "missing common semantic_compile construction surface",
     )
 
     product_path = SPEC / "PRODUCT.md"
@@ -411,10 +567,7 @@ def main() -> None:
     selection_path = SPEC / "requirements" / "REQ-P-SELECTION-AND-ACCEPTANCE.md"
     frame_path = SPEC / "REFERENCE_FRAME_BASIS.md"
     profile_path = (
-        ROOT / "build_tenants" / "gtl" / "design" / "GTL_REPRESENTATION_PROFILE.md"
-    )
-    selection_policy_path = (
-        ROOT / "build_tenants" / "gtl" / "representation" / "selection-policy.json"
+        ROOT / "build_tenants" / "gtl" / "design" / "GTL_AXIOM_INDEX_PROFILE.json"
     )
 
     product = product_path.read_text(encoding="utf-8")
@@ -424,51 +577,163 @@ def main() -> None:
     fp_contract = fp_path.read_text(encoding="utf-8")
     selection_contract = selection_path.read_text(encoding="utf-8")
     frame_basis = frame_path.read_text(encoding="utf-8")
-    profile = profile_path.read_text(encoding="utf-8")
-    selection_policy = load_json_unique(selection_policy_path)
+    profile = load_json_unique(profile_path)
 
-    require_text(product, "F_P(P_B, W, I, F, K) -> J", product_path)
-    require_text(intent, "Outcome-Driven Development", intent_path)
-    require_text(algebra, "P_B = (B, I_B, V_B, E_B, C_B)", algebra_path)
-    require_text(algebra, "## Reference-kind law", algebra_path)
-    require_text(algebra, "Every record contains exactly", algebra_path)
+    require(isinstance(profile, dict), "GTL axiom-index profile is not an object")
+    require(
+        profile.get("identity") == GTL_PROFILE_IDENTITY,
+        "unexpected active GTL profile identity",
+    )
+    require(
+        profile.get("calculus_basis", {}).get("identity") == CALCULUS_BASIS_IDENTITY,
+        "GTL profile does not bind the exact calculus basis",
+    )
+    require(
+        profile.get("source_basis", {}).get("release_uri") == STDO_BASIS_URI,
+        "GTL profile does not bind the exact STDO subject",
+    )
+    profile_tenant = profile.get("build_tenant", {})
+    profile_carrier_basis = profile_tenant.get("carrier_basis", {})
+    derived_carrier_digest = sha256_bytes(
+        canonical_ascii_coordinate_bytes(GTL_CARRIER_COORDINATE)
+    )
+    require(
+        profile_tenant.get("identity") == "urn:stdo-representation:build-tenant:gtl",
+        "GTL profile does not bind the selected build tenant",
+    )
+    require(
+        profile_carrier_basis.get("coordinate") == GTL_CARRIER_COORDINATE,
+        "GTL profile carrier coordinate differs from the frozen basis",
+    )
+    require(
+        profile_carrier_basis.get("identity")
+        == GTL_CARRIER_BASIS_PREFIX + derived_carrier_digest,
+        "GTL profile carrier-basis identity is not content-derived",
+    )
+    require(
+        profile.get("canonicalization", {}).get("coordinate_algorithm")
+        == "RFC8785_JCS_SHA256",
+        "GTL profile does not bind exact coordinate canonicalization",
+    )
+    require(
+        profile.get("publication_contract", {})
+        .get("module_publication", {})
+        .get("raw_admission_contract_ref")
+        == "urn:abiogenesis:contract:gtl:module-publication:5.0.0",
+        "GTL profile does not bind the frozen ModulePublication contract",
+    )
+
+    require_text(
+        product,
+        "F_P[v_reason](Index_B, W, I, R, K) -> J_reason",
+        product_path,
+    )
+    require_text(product, "F_K[v](upstream_v) -> result_v", product_path)
+    for identity in (CALCULUS_BASIS_IDENTITY, SUBJECT_BASIS_IDENTITY):
+        prefix, digest = identity.rsplit(":", 1)
+        require_text(algebra, prefix + ":", algebra_path)
+        require_text(algebra, digest, algebra_path)
+    require_text(product, AXIOMATIC_CALCULUS_SHA256, product_path)
+    require_text(product, "M_B* = (b_M, I, O, E, C, L, X, V, T, J)", product_path)
+    require_text(
+        product,
+        "Encode_T(M_B*, P_B*, Ledger_B, J_B, Profile_T, CarrierBasis_T)",
+        product_path,
+    )
+    require_text(algebra, "Population_M = {", algebra_path)
+    require_text(algebra, "ModelBasisIdentity =", algebra_path)
+    require_text(algebra, 'b_M = "urn:stdo-index:model-basis:sha256:"', algebra_path)
+    require_text(algebra, "I = Local_M disjoint_union External_M", algebra_path)
+    require_text(algebra, "P_B = RecordProvenanceBinding[]", algebra_path)
+    require_text(algebra, "dom(P_B) = Local_M", algebra_path)
+    require_text(algebra, 'provenance_kind: "subject_derived"', algebra_path)
+    require_text(algebra, "Resolution_M(x) = {", algebra_path)
+    require_text(
+        algebra,
+        "a_c.STDO = (id(a_c.STDO*), M_B*, P_B*, Ledger_B, J_B)",
+        algebra_path,
+    )
     require_text(context_contract, "ExecutiveContextAssignment = {", context_path)
     require_text(context_contract, "ContextProjectionManifest = {", context_path)
     require_text(
         context_contract,
-        "P_A = least_closure(P_B, Z(A), L_context)",
+        "Index_A = project(Index_B, Z(A), L_context)",
         context_path,
     )
+    require_text(context_contract, "P_A = P_B restricted to Local_{M_A}", context_path)
     require_text(
-        context_contract,
-        "STDO_REFERENCE_FRAME_BASELINE.md#executive",
-        context_path,
+        context_contract, "stdo://releases/v2.5.0-rc.1/standards/", context_path
     )
-    require_text(
-        context_contract,
-        "STDO_REFERENCE_FRAME_BASELINE.md#worker",
-        context_path,
-    )
-    require_text(
-        context_contract,
-        "STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
-        context_path,
-    )
+    for role in ("executive", "worker", "reviewer"):
+        require_text(
+            context_contract,
+            f"STDO_REFERENCE_FRAME_BASELINE.md#{role}",
+            context_path,
+        )
+    check_semantic_compilation_contract(selection_contract, selection_path)
+    check_selection_acceptance_topology(product, selection_contract, product_path)
     require_text(selection_contract, "GeneratedSourceKeyBinding = {", selection_path)
     require_text(
         selection_contract,
-        "representation_records_sha256: Sha256",
+        "candidate_model_content_identity: Sha256",
         selection_path,
     )
     require_text(product, "admitting_authority_refs", product_path)
     require_text(product, "ReleaseRecord = {", product_path)
     require_text(frame_basis, "Status: acceptance-controlled", frame_path)
+    require_text(frame_basis, FRAME_BASIS_IDENTITY, frame_path)
+    require_text(frame_basis, STDO_MEMBER_SET_SHA256, frame_path)
+    require_text(frame_basis, AXIOMATIC_CALCULUS_SHA256, frame_path)
+    require_text(
+        frame_basis,
+        "urn:stdo-representation:frame:semantic-compilation",
+        frame_path,
+    )
+    require_text(frame_basis, "`E-COMPILATION`", frame_path)
+    for declaration in (
+        "F_i^7 = <Q_i, B_7, M_i, C_7, I_i, A_i, E_i, X_i, R_7, J_i, K_i, D_i>",
+        "Every activation binds the exact role envelope",
+        "### Generic specialist-family disposition",
+        "### Testing-frame acquisition",
+    ):
+        require_text(frame_basis, declaration, frame_path)
     require_text(intent, "STDO Symbolic Axiomatic Program", intent_path)
     require_text(intent, "Programmatic Semantic Index", intent_path)
     require_text(product, "STDO Symbolic Axiomatic Program", product_path)
     require_text(product, "STDO Programmatic Semantic Index Product", product_path)
+    require_text(product, "S_B = (B_STDO, Members_B, Bytes_B)", product_path)
+    require_text(product, "F_P[v_compile]", product_path)
+    require_text(product, "Encode_T", product_path)
+    require_text(product, "Reliability here is structural", product_path)
     require_text(product, "not a frozen-GTL `GtlProgram`", product_path)
     require_text(product, "vector database", product_path)
+    require_text(
+        product,
+        "Unaccepted proposal and\nstructural-evaluation evidence may exist",
+        product_path,
+    )
+    require_text(
+        frame_basis,
+        "remains proposed and T-003 remains non-executable",
+        frame_path,
+    )
+    check_functor_application_notation(
+        {
+            product_path: product,
+            intent_path: intent,
+            algebra_path: algebra,
+            context_path: context_contract,
+            fp_path: fp_contract,
+            selection_path: selection_contract,
+            frame_path: frame_basis,
+        }
+    )
+    check_carrier_neutral_compiler(product, fp_contract)
+    check_carrier_admission_judgment(product, product_path)
+    require(
+        "token-minimal" not in product and "token-minimal" not in context_contract,
+        "least lawful record closure is still misrepresented as token minimality",
+    )
     for value in (
         PRODUCT_OWNER_ACTOR,
         PRODUCT_OWNER_AUTHORITY,
@@ -476,35 +741,6 @@ def main() -> None:
         PRODUCT_OWNER_GRANT_SCOPE,
     ):
         require_text(product, value, product_path)
-    require(
-        selection_policy.get("authority_binding")
-        == {
-            "actor_identity": PRODUCT_OWNER_ACTOR,
-            "authority_identity": PRODUCT_OWNER_AUTHORITY,
-            "grant_identity": PRODUCT_OWNER_GRANT,
-            "grant_scope": PRODUCT_OWNER_GRANT_SCOPE,
-        },
-        "semantic-selection policy does not bind the exact Product-owner grant",
-    )
-    require_text(profile, "STDO.gtl 0.7.0", profile_path)
-    require_text(profile, "representation_records_sha256", profile_path)
-    require_text(profile, "Status: acceptance-controlled candidate", profile_path)
-    require_text(profile, "No GTL Node is claimed", profile_path)
-    require_text(
-        profile,
-        "urn:stdo-representation:gtl-contract:programmatic-semantic-index:1",
-        profile_path,
-    )
-    require_text(profile, 'kind   = "stdo.programmatic_semantic_index"', profile_path)
-    require_text(
-        profile,
-        "canonical_index_bytes = RFC8785_JCS(raw_admitted_ModulePublication) + LF",
-        profile_path,
-    )
-    require(
-        "stdo.reasoning_program" not in profile,
-        "retired ambiguous GTL reasoning-program kind returned",
-    )
     require("Assessment Disposition" not in product, "assessment Product term returned")
     require(
         "REQ-P-CONF"
@@ -515,11 +751,6 @@ def main() -> None:
     for identity in TRAVERSAL_IDENTITIES.values():
         require_text(product, identity, product_path)
         require_text(fp_contract, identity, fp_path)
-
-    carrier_digest = sha256_bytes(
-        canonical_ascii_coordinate_bytes(GTL_CARRIER_COORDINATE)
-    )
-    require_text(profile, carrier_digest, profile_path)
 
     requirements = active_requirement_members()
     what_digest, what_members = what_member_set_identity(requirements)
@@ -536,11 +767,11 @@ def main() -> None:
     profile_digest = f"sha256:{sha256_bytes(profile_path.read_bytes())}"
     expected_ticket_bindings = {
         "T-002": {
-            "candidate_what_member_set_identity": what_identity,
-            "candidate_frame_basis_identity": FRAME_BASIS_IDENTITY,
-            "candidate_frame_basis_sha256": frame_digest,
-            "candidate_gtl_profile_identity": GTL_PROFILE_IDENTITY,
-            "candidate_gtl_profile_sha256": profile_digest,
+            "candidate_what_member_set_identity": T002_ACCEPTED_WHAT_MEMBER_SET_IDENTITY,
+            "candidate_frame_basis_identity": T002_ACCEPTED_FRAME_BASIS_IDENTITY,
+            "candidate_frame_basis_sha256": T002_ACCEPTED_FRAME_BASIS_SHA256,
+            "candidate_gtl_profile_identity": T002_ACCEPTED_GTL_PROFILE_IDENTITY,
+            "candidate_gtl_profile_sha256": T002_ACCEPTED_GTL_PROFILE_SHA256,
         },
         "T-003": {
             "required_what_member_set_identity": what_identity,
@@ -554,7 +785,7 @@ def main() -> None:
         for key, value in expected.items():
             require(
                 tickets[ticket_id].get(key) == value,
-                f"{ticket_id} {key} does not bind the exact current candidate",
+                f"{ticket_id} {key} does not bind its exact declared subject",
             )
 
     print(
@@ -570,13 +801,24 @@ def main() -> None:
                 "ticket_records": ticket_count,
                 "what_member_set_identity": what_identity,
                 "what_members": what_members,
-                "gtl_carrier_basis_identity": (
-                    "urn:stdo-representation:carrier-basis:gtl:sha256:" + carrier_digest
-                ),
+                "stdo_basis_uri": STDO_BASIS_URI,
+                "stdo_manifest_sha256": STDO_MANIFEST_SHA256,
+                "stdo_member_count": STDO_MEMBER_COUNT,
+                "stdo_member_set_sha256": STDO_MEMBER_SET_SHA256,
+                "calculus_basis_identity": CALCULUS_BASIS_IDENTITY,
+                "subject_basis_identity": SUBJECT_BASIS_IDENTITY,
                 "frame_basis_sha256": frame_digest,
+                "frame_basis_status": "proposed; acceptance remains open",
+                "gtl_profile_identity": GTL_PROFILE_IDENTITY,
                 "gtl_profile_sha256": profile_digest,
-                "frame_basis_status": "candidate carrier; acceptance not evaluated",
-                "gtl_profile_status": "candidate carrier; acceptance not evaluated",
+                "current_model_status": "no accepted current a_c.STDO",
+                "current_carrier_status": "no current a_c.STDO.GTL artifact claimed",
+                "downstream_reentry_required": [
+                    "T-003",
+                    "GTL representation profile",
+                    "README.md",
+                    "QUICKSTART.md",
+                ],
                 "context_projection_contract": "Executive, Worker, Reviewer",
                 "structural_checks_pass": True,
             },

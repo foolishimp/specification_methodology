@@ -1,0 +1,1521 @@
+Apply the supplied F_P[v_compile] contract and frame to the supplied exact inputs.
+Return exactly one value in the declared codomain and matching the output schema.
+Use only declared identities, kinds, relations, and exact source bytes.
+Represent unresolved meaning as a Residual or declared stop.
+Do not accept, admit, encode, repair, or explain the candidate.
+Include the exact model-basis identity in `model.I`; use that identity wherever
+the signature permits the external `model_basis` target. Map every model record
+to at least one exact source disposition.
+
+Return the transport envelope required by the supplied output schema. For a
+candidate, set `reason_code` to null and `re_entry_refs` to []; for a lawful
+stop, set `model` and `source_dispositions` to null and provide a closed reason
+and non-empty re-entry refs. Null transport fields are not domain records.
+
+This is a sealed semantic-computation packet. Do not use tools, inspect a
+workspace, discover authority, or modify files. All inputs follow. Return
+only the schema-conforming result.
+
+candidate_model_basis: urn:stdo-index:model-basis:sha256:45767243417958a74c18b7af53e86e0049c050459f1553403af3fd91a14c9b09
+actor_ref: urn:openai:codex:gpt-5.6-sol
+model_ref: urn:openai:model:gpt-5.6-sol
+capability_ref: urn:axiom-indexer:capability:semantic-compilation-prototype:1
+grant_ref: urn:axiom-indexer:grant:semantic-proposal-only:1
+
+<basis>
+{"calculus":{"concept_identity":"urn:stdo:concept:axiomatic-calculus:a-c","source_repository":"/Users/jim/src/apps/specification_methodology","source_commit":"6ce043322598611bf37aebb6f5e743d2f2f822c9","member_path":"specification/standards/AXIOMATIC_CALCULUS.md","member_sha256":"sha256:95c9c856a4e206588b984f04ae0b528259cdaf955885ccf42fc58d80debbc02d","status":"candidate_unpublished"},"subject":{"release_uri":"stdo://releases/v2.4.3-rc.3/","installed_manifest_sha256":"sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551","standards_member_set_sha256":"sha256:127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275","member_count":47},"signature":{"identity":"urn:stdo-index:signature:stdo:3","sha256":"sha256:6e4dc42eae4e911c7b000d2f502848f06d69764d7c520cdf3b390b05c17681e4"},"interpretation_contract":{"identity":"urn:axiom-indexer:traversal:semantic-compile:2","sha256":"sha256:78b90313e10e1ac014b6b8cee3c652412481a8167dbec8afed31e7a19dbe7893"},"frame":{"identity":"urn:stdo-index:frame:stdo-core:1","sha256":"sha256:deebd8c4c3d24407c38bbc204d442b2bffad5aba6d340ae62a643b2d6f6192c8"},"source_packet":{"identity":"urn:stdo-index:source-packet:sha256:42cba391b2ca829c50291071c598594d5d7372edbf3b24f9ed689d5f491a736d","sha256":"sha256:42cba391b2ca829c50291071c598594d5d7372edbf3b24f9ed689d5f491a736d"}}
+</basis>
+<signature>
+{"kind":"stdo-index.target-signature","schema_version":1,"identity":"urn:stdo-index:signature:stdo:3","calculus_concept":"urn:stdo:concept:axiomatic-calculus:a-c","sorts":["authority","bounded_context","capability","concept","constraint_law","evidence","frame","functor_kind","judgment_kind","lifecycle_state","method","product_kind","relation_kind","role","source_member","stop_kind","work_surface"],"value_domains":[{"id":"expression","kind":"nonempty_string","max_length":512},{"id":"symbol","kind":"pattern_string","pattern":"^[A-Za-z][A-Za-z0-9_.:-]*$"},{"id":"symbol_set","kind":"sorted_unique_array","item_domain":"symbol"}],"sort_value_domains":[{"sort":"authority","domain":"symbol"},{"sort":"bounded_context","domain":"symbol"},{"sort":"capability","domain":"symbol"},{"sort":"concept","domain":"symbol"},{"sort":"constraint_law","domain":"symbol"},{"sort":"evidence","domain":"symbol"},{"sort":"frame","domain":"symbol"},{"sort":"functor_kind","domain":"symbol"},{"sort":"judgment_kind","domain":"symbol"},{"sort":"lifecycle_state","domain":"symbol"},{"sort":"method","domain":"symbol"},{"sort":"product_kind","domain":"symbol"},{"sort":"relation_kind","domain":"symbol"},{"sort":"role","domain":"symbol"},{"sort":"source_member","domain":"symbol"},{"sort":"stop_kind","domain":"symbol"},{"sort":"work_surface","domain":"symbol"}],"relation_kinds":[{"id":"binds","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["bounded_operation_grant","exact_decision_grant","immutable_coordinate","result_only"]},{"id":"classifies","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["builder_substrate"]},{"id":"conserves","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"defines","source_sorts":["method","source_member","work_surface"],"target_sorts":["*"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["directional"]},{"id":"derives_from","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["accepted_released","immutable_cut_of","published_output","stamped_instance"]},{"id":"excludes","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"governs","source_sorts":["authority","method"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"invalidates","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"owns","source_sorts":["authority","method","work_surface"],"target_sorts":["*"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["singular_owner"]},{"id":"precedes","source_sorts":["lifecycle_state","work_surface"],"target_sorts":["lifecycle_state","work_surface"],"qualifier_mode":"exactly_one_of","allowed_qualifiers":["authority_flow"]},{"id":"projects","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"refines","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"requires","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"specializes","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]},{"id":"supersedes","source_sorts":["*"],"target_sorts":["*"],"qualifier_mode":"zero_or_more_of","allowed_qualifiers":[]}],"constraint_kinds":[{"id":"admission","judgment_kind":"candidate_structure","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"},{"id":"axiom","judgment_kind":"semantic_selection","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"},{"id":"invariant","judgment_kind":"semantic_selection","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"},{"id":"obligation","judgment_kind":"semantic_selection","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"},{"id":"prohibition","judgment_kind":"semantic_selection","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"},{"id":"refusal","judgment_kind":"semantic_selection","subject_families":["O"],"predicate_domain":"expression","refusal_domain":"symbol","latitude":"optional_L"}],"residual_kinds":["basis_gap","possible_compression_loss","unmodeled_member","unresolved_semantics"],"functor_kinds":["urn:stdo:concept:axiomatic-calculus:f-d","urn:stdo:concept:axiomatic-calculus:f-h","urn:stdo:concept:axiomatic-calculus:f-p"],"judgment_kinds":["candidate_structure","carrier_admission","frame_evaluation","semantic_selection"],"stop_kinds":["accepted","admitted","candidate","eligible","gap","hold","refusal","rejected"],"record_value_domains":[{"family":"O","field":"scope","domain":"symbol"},{"family":"E","field":"qualifiers","domain":"symbol_set"},{"family":"E","field":"scope","domain":"symbol"},{"family":"C","field":"predicate","domain":"expression"},{"family":"C","field":"refusal","domain":"symbol"},{"family":"C","field":"scope","domain":"symbol"},{"family":"L","field":"allowed_variation","domain":"symbol_set"},{"family":"L","field":"forbidden_variation","domain":"symbol_set"},{"family":"L","field":"invalidation","domain":"symbol"},{"family":"L","field":"scope","domain":"symbol"},{"family":"X","field":"uncertainty","domain":"symbol"},{"family":"X","field":"consequence","domain":"symbol"},{"family":"X","field":"re_entry","domain":"symbol"},{"family":"X","field":"invalidation","domain":"symbol"},{"family":"X","field":"scope","domain":"symbol"}],"residual_contracts":[{"kind":"basis_gap","subject_families":["O","E","C","L","X"],"external_subjects":["model_basis"],"uncertainty_domain":"symbol","consequence_domain":"symbol","re_entry_domain":"symbol","invalidation_domain":"symbol"},{"kind":"possible_compression_loss","subject_families":["O","E","C","L","X"],"external_subjects":["model_basis"],"uncertainty_domain":"symbol","consequence_domain":"symbol","re_entry_domain":"symbol","invalidation_domain":"symbol"},{"kind":"unmodeled_member","subject_families":["O","E","C","L","X"],"external_subjects":["model_basis"],"uncertainty_domain":"symbol","consequence_domain":"symbol","re_entry_domain":"symbol","invalidation_domain":"symbol"},{"kind":"unresolved_semantics","subject_families":["O","E","C","L","X"],"external_subjects":["model_basis"],"uncertainty_domain":"symbol","consequence_domain":"symbol","re_entry_domain":"symbol","invalidation_domain":"symbol"}],"judgment_contracts":[{"kind":"candidate_structure","inputs":["semantic_compilation_candidate","target_signature","exact_basis"],"outputs":["eligible","refusal"],"evidence":["exact_subject_bytes","exact_basis"],"stops":["refusal"]},{"kind":"carrier_admission","inputs":["carrier","carrier_profile","carrier_basis"],"outputs":["admitted","refusal"],"evidence":["exact_subject_bytes","exact_basis"],"stops":["refusal"]},{"kind":"frame_evaluation","inputs":["activated_frame","unchanged_subject"],"outputs":["satisfied","falsified","indeterminate"],"evidence":["activation","acquired_evidence"],"stops":["gap","hold","refusal"]},{"kind":"semantic_selection","inputs":["semantic_compilation_candidate","candidate_structure_result"],"outputs":["accepted","rework","rejected"],"evidence":["exact_subject_bytes","selection_ledger","authority_grant"],"stops":["hold","refusal"]}],"traversal_permissions":[{"traversal":"urn:axiom-indexer:traversal:semantic-compile:2","functor":"urn:stdo:concept:axiomatic-calculus:f-p","domain":["exact_calculus_basis","exact_subject_basis","target_signature","compilation_frame","exact_source_packet","compile_grant","capability_envelope"],"codomain":["semantic_compilation_candidate"],"stops":["hold","gap","refusal"]},{"traversal":"urn:stdo-index:traversal:candidate-structure:1","functor":"urn:stdo:concept:axiomatic-calculus:f-d","domain":["semantic_compilation_candidate","target_signature","exact_basis"],"codomain":["candidate_structure_result"],"stops":["refusal"]},{"traversal":"urn:stdo-index:traversal:semantic-selection:1","functor":"urn:stdo:concept:axiomatic-calculus:f-h","domain":["semantic_compilation_candidate","candidate_structure_result","authority_grant","evidence"],"codomain":["semantic_selection_result"],"stops":["hold","refusal"]},{"traversal":"urn:stdo-index:traversal:carrier-admission:1","functor":"urn:stdo:concept:axiomatic-calculus:f-d","domain":["carrier","carrier_profile","carrier_basis"],"codomain":["carrier_admission_judgment"],"stops":["refusal"]}],"reference_domains":[{"family":"O","field":"context","target_families":["O"],"target_sorts":["bounded_context"],"external_targets":[]},{"family":"O","field":"owner","target_families":["O"],"target_sorts":["authority"],"external_targets":[]},{"family":"E","field":"source","target_families":["O"],"target_sorts":["*"],"external_targets":[]},{"family":"E","field":"target","target_families":["O"],"target_sorts":["*"],"external_targets":[]},{"family":"E","field":"context","target_families":["O"],"target_sorts":["bounded_context"],"external_targets":[]},{"family":"E","field":"owner","target_families":["O"],"target_sorts":["authority"],"external_targets":[]},{"family":"C","field":"applies_to","target_families":["O","E","C","L","X"],"target_sorts":["*"],"external_targets":[]},{"family":"C","field":"context","target_families":["O"],"target_sorts":["bounded_context"],"external_targets":[]},{"family":"C","field":"owner","target_families":["O"],"target_sorts":["authority"],"external_targets":[]},{"family":"C","field":"latitude_ref","target_families":["L"],"target_sorts":["*"],"external_targets":[]},{"family":"L","field":"applies_to","target_families":["O","E","C","L","X"],"target_sorts":["*"],"external_targets":[]},{"family":"L","field":"context","target_families":["O"],"target_sorts":["bounded_context"],"external_targets":[]},{"family":"L","field":"owner","target_families":["O"],"target_sorts":["authority"],"external_targets":[]},{"family":"X","field":"subject","target_families":["O","E","C","L","X"],"target_sorts":["*"],"external_targets":["model_basis"]},{"family":"X","field":"context","target_families":["O"],"target_sorts":["bounded_context"],"external_targets":[]},{"family":"X","field":"owner","target_families":["O"],"target_sorts":["authority"],"external_targets":[]}]}
+</signature>
+<interpretation_contract>
+{"kind":"axiom-indexer.semantic-compilation-contract","schema_version":1,"identity":"urn:axiom-indexer:traversal:semantic-compile:2","functor_ref":"urn:stdo:concept:axiomatic-calculus:f-p","domain":["exact_calculus_basis","exact_subject_basis","target_signature","compilation_frame","exact_source_packet","compile_grant","capability_envelope"],"codomain":["semantic_compilation_candidate"],"record_families":["SemanticObject","TypedRelation","Constraint","Latitude","Residual"],"source_population":"complete_installed_manifest","source_packet_relation":"full_population_or_exact_projection_with_residuals","source_disposition_unit":"manifest_member","postconditions":["candidate_implies_nonempty_O","candidate_implies_nonempty_E","candidate_implies_nonempty_C","model_basis_identity_in_I","external_model_basis_refs_use_exact_identity","every_source_member_dispositioned","every_model_record_source_dispositioned","unmodeled_materiality_implies_X"],"authority":"proposal_only","semantic_acceptance":"external_f_h_v_select","carrier":"excluded","runtime":"excluded","stop_states":["hold","gap","refusal"],"stop_reason_codes":["basis_gap","capability_mismatch","insufficient_evidence","output_contract_mismatch"]}
+</interpretation_contract>
+<compilation_frame>
+{"kind":"stdo-index.compilation-frame","schema_version":1,"identity":"urn:stdo-index:frame:stdo-core:1","evaluation":"governed_product_construction","subject":"stdo_method_core","seeds":["authority_topology","change_reentry","evidence_and_judgment","identity_law","odd_constructive_model","product_taxonomy","reference_frame_lifecycle","release_lifecycle","work_carriers"],"material_relations":["binds","conserves","defines","excludes","governs","owns","precedes","projects","requires"],"required_record_families":["Constraint","Residual","SemanticObject","TypedRelation"],"exclusions":["application_domain_semantics","historical_narrative","implementation_choice","runtime_state"],"result":["candidate","hold","gap","refusal"]}
+</compilation_frame>
+<source_manifest>
+{"kind":"stdo-index.source-manifest","schema_version":1,"release_uri":"stdo://releases/v2.4.3-rc.3/","installed_root":"/Users/jim/Library/Application Support/STDO/releases/v2.4.3-rc.3/standards","installed_manifest_sha256":"sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551","standards_member_set_sha256":"sha256:127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275","members":[{"path":"DESIGN_MODULE_METHOD.md","sha256":"sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc"},{"path":"GLOSSARY_GUIDE.md","sha256":"sha256:df8bf186ee10905ef8ca21a0939dc1096a86365a871ffbcbeef6ad075f8fb255"},{"path":"IDENTITY_METHOD.md","sha256":"sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd"},{"path":"ODD_METHOD.md","sha256":"sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d"},{"path":"POSTING_GUIDE.md","sha256":"sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a"},{"path":"README.md","sha256":"sha256:e3b05aad406f6868da35e41639c45fcbf217f8602882cfc669371d3744f9a876"},{"path":"REFERENCE_FRAME_METHOD.md","sha256":"sha256:a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174"},{"path":"RELEASE_METHOD.md","sha256":"sha256:c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0"},{"path":"SPEC_METHOD.md","sha256":"sha256:50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c"},{"path":"STDO_REFERENCE_FRAME_BASELINE.md","sha256":"sha256:9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9"},{"path":"TICKET_METHOD.md","sha256":"sha256:a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457"},{"path":"UX_METHOD.md","sha256":"sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7"},{"path":"WORLD_MODEL_METHOD.md","sha256":"sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762"},{"path":"WRITING_GUIDE.md","sha256":"sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd"},{"path":"authority_compressions/README.md","sha256":"sha256:4fa199b3812425ae403d5f009731f15282cad356c7dcc0ed72738627a369d4e5"},{"path":"authority_compressions/design_module_method.compressed.md","sha256":"sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de"},{"path":"authority_compressions/odd_method.compressed.md","sha256":"sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b"},{"path":"authority_compressions/spec_method.compressed.md","sha256":"sha256:4bc1a252c53979c3f3df5a6c0407eaf89ffcd72fc89ab9fff8f117e57eba8967"},{"path":"authority_compressions/stdo_bootstrap.md","sha256":"sha256:ed263e74e26548ad524443df304cad93d2b5138a43d8d7a45b9ede7c9b6735a4"},{"path":"authority_compressions/stdo_compressed.md","sha256":"sha256:d8393f3b4dfe4ae826c8e973e982d37f1403bd5b6c5fa5580383b143ad3a80b6"},{"path":"authority_compressions/ticket_method.compressed.md","sha256":"sha256:a30e7048fea0a7637820f48f88d6b087908ea12a0a727de10934eccce5a61e98"},{"path":"authority_compressions/ux_method.compressed.md","sha256":"sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54"},{"path":"schemas/installed-release-manifest.schema.json","sha256":"sha256:bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea"},{"path":"schemas/product-definition.schema.json","sha256":"sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"},{"path":"templates/AGENTS_TEMPLATE.md","sha256":"sha256:5e8e9328b0dd27e5789f2e70e5621ce81d96ae3e5990773256f1ac2a8bc122f6"},{"path":"templates/CLAUDE_TEMPLATE.md","sha256":"sha256:5e8e9328b0dd27e5789f2e70e5621ce81d96ae3e5990773256f1ac2a8bc122f6"},{"path":"templates/GOALS_TEMPLATE.md","sha256":"sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"},{"path":"templates/INTENT_TEMPLATE.md","sha256":"sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"},{"path":"templates/PRODUCT_DEFINITION_TEMPLATE.json","sha256":"sha256:2c4982341b0bde9b213c0dfe909d91d350180296bad36fc893bb6fa0e1efe15e"},{"path":"templates/PRODUCT_TEMPLATE.md","sha256":"sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"},{"path":"templates/README.md","sha256":"sha256:cbe46d9716e63dc174f93b43292084db5d31e17ff397b00bae8f0f6f3cd4f222"},{"path":"templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md","sha256":"sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"},{"path":"templates/build_tenants/common/README_TEMPLATE.md","sha256":"sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"},{"path":"templates/build_tenants/common/design/README_TEMPLATE.md","sha256":"sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd"},{"path":"templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md","sha256":"sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd"},{"path":"templates/build_tenants/common/design/adrs/README_TEMPLATE.md","sha256":"sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7"},{"path":"templates/build_tenants/variant/README_TEMPLATE.md","sha256":"sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"},{"path":"templates/build_tenants/variant/design/README_TEMPLATE.md","sha256":"sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1"},{"path":"templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md","sha256":"sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b"},{"path":"templates/build_tenants/variant/design/adrs/README_TEMPLATE.md","sha256":"sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591"},{"path":"templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md","sha256":"sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"},{"path":"templates/build_tenants/variant/design/fp/README_TEMPLATE.md","sha256":"sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"},{"path":"templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json","sha256":"sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"},{"path":"templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md","sha256":"sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"},{"path":"templates/docs/README_TEMPLATE.md","sha256":"sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"},{"path":"templates/requirements/README_TEMPLATE.md","sha256":"sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"},{"path":"templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md","sha256":"sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd"}],"supplied_members":[{"path":"authority_compressions/stdo_compressed.md","sha256":"sha256:d8393f3b4dfe4ae826c8e973e982d37f1403bd5b6c5fa5580383b143ad3a80b6"}]}
+</source_manifest>
+<calculus_source>
+# The STDO Axiomatic Calculus for Governed Symbolic Systems
+
+## Position
+
+The **STDO Axiomatic Calculus for Governed Symbolic Systems**, written `a_c`,
+is STDO's domain-specific, carrier-neutral constitutional calculus for
+representing and relating governed symbolic systems.
+
+Its stable concept identity is:
+
+```text
+urn:stdo:concept:axiomatic-calculus:a-c
+```
+
+This standard owns that concept in bounded context:
+
+```text
+urn:stdo:bounded-context:axiomatic-calculus
+```
+
+`a_c` is a separately identifiable calculus derived from STDO principles. It
+defines sorts, typed objects, relations, constraints, latitude, residual
+uncertainty, traversals, functor kinds, judgments, closure, projections,
+transformations, models, and validity laws. Those definitions do not depend on
+a derivation-source record layout, a selected subject interpretation, a
+particular carrier, a model provider, a runtime, or a repository topology.
+
+`a_c` makes no claim of universal applicability, logical completeness,
+consistency, decidability, soundness, or category-theoretic status except where
+an exact, separately identified proof establishes that claim for a declared
+fragment, model, or relation.
+
+STDO principles are the derivation provenance of the calculus. Application of
+the calculus to any exact subject is a separately owned downstream relation.
+Those relations are distinct:
+
+```text
+exact predecessor STDO principles ──derive──> a_c
+a_c + exact subject X              ──interpret──> a_c.X
+a_c.X + exact accepted semantic judgment J_X
+      + exact carrier C            ──encode─────> a_c.X.C
+```
+
+The calculus, an interpreted model, and an encoded carrier are distinct
+governed layers with separate content identities and proof boundaries. A layer
+becomes a released Product only through separately authorized Product
+acceptance and release. Neither interpretation nor encoding can redefine the
+calculus.
+
+## Derivation Provenance
+
+The calculus contracts recurring principles already established by STDO:
+
+- scoped identity and authority conservation from
+  [`IDENTITY_METHOD.md#core-law`](IDENTITY_METHOD.md#core-law) and
+  [`IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004`](IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004);
+- exact bounded-context meaning and explicit cross-context relations from
+  [`SPEC_METHOD.md#bounded-context-semantic-resolution`](SPEC_METHOD.md#bounded-context-semantic-resolution);
+- ambiguity, probabilistic proposal, human adjudication, and deterministic
+  admission separation from
+  [`SPEC_METHOD.md#ambiguity-governance-rule`](SPEC_METHOD.md#ambiguity-governance-rule);
+- constitutional derivation and re-entry from
+  [`SPEC_METHOD.md#constitutional-chain`](SPEC_METHOD.md#constitutional-chain);
+- finite material closure, projection, authority conservation, residual
+  uncertainty, and capability fit from
+  [`REFERENCE_FRAME_METHOD.md#reference-frame-laws`](REFERENCE_FRAME_METHOD.md#reference-frame-laws); and
+- singular released authority from
+  [`SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001`](SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001).
+
+These references establish provenance. The definitions and laws below are the
+sole normative authority for the meaning of `a_c` within the selected complete
+STDO cut. A consumer does not need an implicit STDO representation, GTL
+carrier, or downstream implementation to interpret the calculus.
+
+The relative links above identify derivation clause families in this authoring
+source. Issuance of an exact `AxiomaticCalculusBasis` resolves and records their
+absolute predecessor-cut semantic addresses under
+`derivation_basis.release_uri`. The mutable authoring links are not themselves
+the digest-bound derivation references.
+
+The derivation direction is one-way. A model of STDO under `a_c`, an encoded
+carrier, a proof tool, or a successful application cannot amend the source
+principles or this calculus.
+
+## Scope
+
+`a_c` governs the form of a symbolic axiomatic model. It answers:
+
+- what identities and typed objects exist;
+- how relations bind exact endpoints;
+- how constraints, latitude, and residuals remain explicit;
+- how traversals and judgments are typed;
+- how material closure, projection, overlay, and transformation behave;
+- what a model must preserve from its subject; and
+- which claims are structural, semantic, or authority decisions.
+
+`a_c` does not choose the subject vocabulary, decide which source declarations
+are material, supply semantic acceptance, select a carrier, execute a model, or
+prove that one interpretation is uniquely correct.
+
+## Core Signature
+
+An `a_c` signature is:
+
+```text
+Sigma = (
+  Sort,
+  RelationKind,
+  ConstraintKind,
+  ResidualKind,
+  FunctorKind,
+  JudgmentKind,
+  StopKind
+)
+```
+
+Each member is a finite, closed identity set for one model family. The
+signature defines:
+
+- the fields and value domains of every sort and record family;
+- the allowed source and target sorts for every relation kind;
+- the subject and predicate domains of every constraint kind;
+- the subject, uncertainty, consequence, and re-entry domains of every
+  residual kind;
+- the input, output, evidence, and stop contract of every judgment kind; and
+- the functor kinds permitted for each traversal.
+
+Unknown kinds and fields are not extensions. They require a new signature or
+an explicit compatible extension relation.
+
+An `a_c` model over exact basis `b` is:
+
+```text
+M_b = (b, I, O, E, C, L, X)
+```
+
+where:
+
+- `I` is the closed identity universe;
+- `O` is the finite set of typed semantic objects;
+- `E` is the finite set of typed directed relations;
+- `C` is the finite set of constitutional constraints;
+- `L` is the finite set of declared latitude records; and
+- `X` is the finite set of residual uncertainty records.
+
+The tuple is abstract. A carrier may use records, tables, graphs, terms,
+clauses, code, or another representation only when its encoding profile proves
+that every tuple relation is preserved or explicitly refused.
+
+## Typed Records
+
+### Semantic Object
+
+Every semantic object has exactly:
+
+```text
+SemanticObject = {
+  id,
+  sort,
+  context,
+  owner,
+  scope,
+  basis,
+  value
+}
+```
+
+`id`, `sort`, `context`, `owner`, and `basis` are identities. `scope` is the
+closed governed domain. `value` is sort-defined carrier-neutral content or a
+reference to exact content.
+
+### Typed Relation
+
+Every relation has exactly:
+
+```text
+TypedRelation = {
+  id,
+  kind,
+  source,
+  target,
+  context,
+  owner,
+  scope,
+  basis,
+  qualifiers
+}
+```
+
+`source` and `target` resolve to members of `I`. `qualifiers` is the closed
+kind-specific record declaring direction, cardinality, preservation, loss,
+inverse, invalidation, or other relation semantics required by the signature.
+
+### Constraint
+
+Every constraint has exactly:
+
+```text
+Constraint = {
+  id,
+  kind,
+  applies_to,
+  predicate,
+  context,
+  owner,
+  scope,
+  basis,
+  judgment_kind,
+  latitude_ref,
+  refusal
+}
+```
+
+`kind` resolves one declared `ConstraintKind`; `judgment_kind` resolves one
+declared `JudgmentKind`. The owning signature defines the predicate language
+and how its result is judged. A predicate that is not deterministically
+decidable states the required probabilistic or human judgment kind rather than
+pretending to be a machine proof.
+
+### Latitude
+
+Latitude is an explicit permission set inside a constraint boundary:
+
+```text
+Latitude = {
+  id,
+  applies_to,
+  allowed_variation,
+  forbidden_variation,
+  context,
+  owner,
+  scope,
+  basis,
+  invalidation
+}
+```
+
+Silence is not latitude. Latitude grants no authority beyond its owner, scope,
+basis, and invalidation law.
+
+### Residual
+
+Residual uncertainty is first-class model content:
+
+```text
+Residual = {
+  id,
+  subject,
+  kind,
+  uncertainty,
+  consequence,
+  context,
+  owner,
+  scope,
+  basis,
+  re_entry,
+  invalidation
+}
+```
+
+Projection, compression, interpretation, or encoding cannot erase a residual.
+It remains represented, is explicitly dispositioned by competent authority, or
+causes refusal.
+
+`kind` resolves one declared `ResidualKind`. The owning signature defines its
+lawful subject, uncertainty, consequence, re-entry, and invalidation domains.
+An undeclared residual kind or value refuses structural admission.
+
+## Fundamental Laws
+
+### AC-001 Closed Signature
+
+Every admitted object, relation, constraint, latitude, residual, traversal,
+transformation specialization, and judgment belongs to one declared signature.
+Missing or unknown kinds fail closed.
+
+### AC-002 Scoped Identity
+
+An identity resolves one member under one type, context, owner, scope, and
+basis. Equal spelling, payload equality, graph position, or carrier equality
+does not establish semantic identity.
+
+### AC-003 Reference Closure
+
+Every referenced identity resolves exactly once in the applicable model or
+through one explicit external relation. Dangling, duplicate, wrong-kind, or
+ambiguous references refuse structural admission.
+
+### AC-004 Relation Typing
+
+A relation is lawful only when its kind admits the exact source and target
+sorts and all required qualifiers are present. Direction is material unless the
+relation kind explicitly declares symmetry.
+
+### AC-005 Authority Conservation
+
+Objects, relations, constraints, latitude, residuals, traversals,
+transformations, projections, and judgments retain their declared semantic,
+operation, evaluation, and decision authority. Copying, interpreting, encoding,
+evaluating, or transporting a record does not transfer authority.
+
+### AC-006 Basis Coherence
+
+Every fundamental record, model, and result binds an exact basis. Mixed bases
+require an explicitly owned composite-basis relation. Individually valid
+coordinates do not create a coherent composite basis by proximity.
+
+### AC-007 Constraint And Refusal
+
+Each constraint names its governed subject, predicate, judgment kind,
+latitude, and refusal. A failed, missing, indeterminate, out-of-scope, or
+invalid-basis result follows the declared result algebra rather than being
+coerced to success.
+
+### AC-008 Explicit Latitude
+
+Two values may differ lawfully only through an applicable latitude or
+transformation relation. An implementation preference, probabilistic choice,
+or human presence is not implicit latitude.
+
+### AC-009 Residual Conservation
+
+Every material uncertainty, omission, translation loss, unresolved boundary,
+or unproven relation remains in `X` until an authorized disposition creates an
+exact successor model. Absence from a projection is not resolution.
+
+### AC-010 Material Closure
+
+For model `M`, seed set `Z`, and exact dependency relation family `R`, material
+closure is the least fixed point:
+
+```text
+closure_R(M, Z) = lfp(lambda Q: Z union required_R(M, Q))
+```
+
+The result is defined only when `Z`, `R`, required-edge semantics, basis, and
+scope are exact and the fixed point is finite and unique. Failure to establish
+those conditions returns a gap or refusal. Least closure means least lawful
+record closure under `R`; it does not claim globally minimal prose, bytes,
+tokens, cost, or cognitive effort.
+
+### AC-011 Projection
+
+A projection selects a view of a model without changing selected meaning:
+
+```text
+project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal
+```
+
+`M_Z` contains the material closure of `Z`. `Boundary_Z` records excluded,
+external, unresolved, translated, and invalidation-sensitive seams. A
+projection is not a new semantic owner and cannot silently trim a required
+member to satisfy a carrier or capability budget.
+
+### AC-012 Overlay
+
+An overlay adds explicit objects, relations, constraints, latitude, or
+residuals to a basis model. It does not mutate the basis. Override,
+disambiguation, equivalence, specialization, or translation exists only as a
+typed relation with exact authority, direction, scope, basis, preservation,
+loss, refusal, and invalidation semantics.
+
+### AC-013 Transformation
+
+A transformation is an operation-bearing specialization of one exact traversal
+record `v`:
+
+```text
+t = {
+  id,
+  traversal,
+  domain_model,
+  codomain_model,
+  context,
+  owner,
+  scope,
+  basis,
+  operation_authority,
+  preconditions,
+  preservation_relation,
+  preserved,
+  introduced,
+  removed,
+  residuals,
+  evidence,
+  provenance,
+  stop_states,
+  invalidation,
+  re_entry
+}
+```
+
+`t.traversal` resolves one `v`; its context, owner, scope, basis, operation
+authority, evidence, provenance, and stop contract must equal or lawfully
+restrict the corresponding traversal coordinates. A broader or mismatched
+coordinate refuses.
+
+`preservation_relation` resolves one exact typed equality, equivalence, or
+meaning-preservation relation applicable to the declared domain and codomain
+record kinds. Its direction, authority, scope, basis, and comparison law are
+material. Nominal equality or an unbound assertion of preserved meaning
+refuses.
+
+Let `I_b` be the complete input-model identity set, `P_t` the identities named
+by `preserved`, `R_t` those named by `removed`, and `N_t` the identities of the
+complete records named by `introduced`. A lawful transformation proves the
+closed delta:
+
+```text
+I_b       = P_t disjoint_union R_t
+I_b_prime = P_t disjoint_union N_t
+N_t intersect I_b = empty
+R_t intersect I_b_prime = empty
+```
+
+Every preserved record is byte-identical or is related by the exact
+`preservation_relation`. Every removed identity is absent from the successor.
+Every introduced identity is absent from the input and carries a complete
+lawful record. Every input identity is classified exactly once as preserved or
+removed; no identity may be silently dropped, retained, or duplicated.
+Material residuals remain in the successor residual set unless an exact
+authorized disposition is included in the transformation evidence. Failure to
+establish any partition, identity, residual, or codomain equation refuses.
+
+Application is:
+
+```text
+T[t](M_b, inputs) -> M_b_prime* | hold | gap | refusal
+```
+
+The exact transformation identity `t` declares every mutation it may perform.
+The input model remains unchanged; `M_b_prime*` is a proposed successor. A
+proposed successor does not accept or admit itself.
+
+### AC-014 Judgment Separation
+
+A judgment points to an unchanged subject:
+
+```text
+Judgment = {
+  id,
+  kind,
+  subject,
+  subject_digest,
+  context,
+  owner,
+  scope,
+  basis,
+  evaluator,
+  authority,
+  decision,
+  evidence,
+  provenance,
+  decided_at
+}
+```
+
+Issuing a judgment does not transform, rewrite, reissue, or rename its subject.
+Promotion is an explicit relation between the unchanged subject and its
+admission or acceptance judgment.
+
+## Traversals And Functor Kinds
+
+A traversal is a typed contract:
+
+```text
+v = {
+  id,
+  domain,
+  codomain,
+  context,
+  owner,
+  scope,
+  basis,
+  preconditions,
+  postconditions,
+  authority,
+  evidence,
+  provenance,
+  stop_states
+}
+```
+
+`a_c` defines three fundamental functor-kind identities:
+
+```text
+F_D = urn:stdo:concept:axiomatic-calculus:f-d
+F_P = urn:stdo:concept:axiomatic-calculus:f-p
+F_H = urn:stdo:concept:axiomatic-calculus:f-h
+```
+
+Application notation is:
+
+```text
+F_K[v](X_v) -> Y_v | Omega_v
+```
+
+where `F_K` is one functor kind, `v` is one exact traversal identity, `X_v` and
+`Y_v` are its typed input and result domains, and `Omega_v` is its closed stop
+algebra.
+
+- `F_D` classifies deterministic evaluation or proof over declared properties.
+  It returns a judgment and does not perform the domain construction being
+  judged.
+- `F_P` classifies bounded probabilistic interpretation, construction, or
+  proposal under an exact traversal contract. Its result has no semantic,
+  admission, acceptance, or closure authority merely because it is useful or
+  repeatable.
+- `F_H` classifies explicit human adjudication under an exact identity,
+  authority grant, subject, basis, and decision contract. Human presence grants
+  no ambient authority.
+
+The actor, executor, domain operation, and functor kind are different
+coordinates. `Encode`, `Interpret`, `Serialize`, `Measure`, and other named
+domain operations are not aliases for `F_D`, `F_P`, or `F_H`. Different
+traversals may share one functor kind without sharing identity, semantics,
+inputs, outputs, authority, or evidence.
+
+`Functor Kind` is an `a_c` term for this traversal classification. It does not
+by itself assert a category-theoretic functor. A model claiming categorical
+functor laws additionally defines its source and target categories and proves
+identity and composition preservation.
+
+### AC-015 Functor Classification
+
+Every functor application binds exactly one functor kind and one traversal
+identity. Applying any `F_*` kind without bracketed traversal identity `[v]` is
+incomplete.
+
+### AC-016 Typed Composition
+
+Two traversals compose only when the first result type and judgment satisfy the
+second traversal's exact domain and preconditions:
+
+```text
+F_K2[w] compose F_K1[v]
+```
+
+Composition retains both traversal identities, intermediate results,
+judgments, evidence, authority, provenance, and stop states. It cannot flatten
+probabilistic proposal, deterministic evaluation, and human decision into one
+undifferentiated operation. `a_c` prescribes no universal `F_P -> F_D -> F_H`
+sequence; each application owns its lawful topology.
+
+## Interpretation And Models
+
+An interpretation applies `a_c` to an exact subject:
+
+```text
+Interpret_a_c(subject_basis, signature, interpretation_contract)
+  -> M_subject* | hold | gap | refusal
+```
+
+The trailing `*` marks a proposed model that has not received the applicable
+semantic acceptance judgment.
+
+The interpretation contract declares:
+
+- exact `a_c` basis;
+- exact subject identity, inventory, and bytes or semantic addresses;
+- selected signature and any compatible extension relation;
+- mapping from subject declarations to model objects, relations, constraints,
+  latitude, and residuals;
+- interpreter identity, capability, provenance, and stop states;
+- structural evaluation contract;
+- semantic selection and acceptance authority; and
+- source re-entry and invalidation rules.
+
+The proposed model `M_subject*` does not become accepted through construction.
+Structural evaluation can prove closed shape, reference typing, identity
+derivation, and basis coherence. It cannot prove that probabilistic semantic
+selection retained every material subject meaning. Semantic acceptance remains
+a separately recorded authority judgment.
+
+### AC-017 Interpretation Fidelity
+
+Every admitted model record maps to exact subject provenance or is explicitly
+identified as model-local content under competent authority. Every evaluated
+subject declaration has a retained, omitted, residual, inapplicable, or refused
+disposition. Interpretation cannot treat absence as immateriality without a
+recorded basis and authority.
+
+### AC-018 Structural And Semantic Separation
+
+Structural conformance decides closed syntax, types, identities, references,
+bases, and mechanically decidable predicates. Semantic fidelity decides the
+meaning and materiality of the interpretation. Structural success is evidence
+for semantic review, not a substitute for it.
+
+### AC-019 Valid Model
+
+A model `M_b` is a valid model of `a_c` under signature `Sigma`, written:
+
+```text
+M_b satisfies a_c[Sigma]
+```
+
+only when:
+
+1. `Sigma` and the exact `a_c` basis resolve;
+2. every record satisfies AC-001 through AC-009;
+3. every claimed closure, projection, overlay, transformation, judgment, and
+   composition satisfies its applicable law;
+4. interpretation fidelity and residual dispositions bind the exact subject;
+5. structural evaluation and semantic acceptance remain distinct and both
+   required where claimed; and
+6. all evidence, provenance, invalidation, and re-entry coordinates resolve.
+
+A checker may decide the structural subset. No generic checker may claim the
+semantic or authority subset unless the model supplies an exact lawful decision
+contract for it.
+
+## Subject And Carrier Boundaries
+
+The three governed layers are:
+
+```text
+a_c       = the pure calculus
+a_c.X     = subject X interpreted as a model of a_c
+a_c.X.C   = that accepted model encoded in carrier C
+```
+
+Their relations are:
+
+```text
+M_X = Interpret_a_c(X)
+J_X = Accept_X(M_X) -> accepted | refuse
+G_C = Encode_C(M_X, J_X) where J_X = accepted
+D_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)
+      -> admitted | refuse
+```
+
+`J_X` is an external semantic-acceptance judgment over unchanged `M_X`.
+Encoding requires `J_X.decision = accepted` and exact equality between the
+judgment subject identity and digest and `M_X`; hold or refusal cannot be
+encoded. `D_C` is a judgment over unchanged carrier bytes. It is not a
+transformed carrier. The admitted encoding evidence relation is the exact
+triple `(G_C, J_X, D_C)`; neither judgment enters the identity of its subject.
+
+### AC-020 Layer And Release Separation
+
+`a_c`, `a_c.X`, and `a_c.X.C` have independent content identities, judgments,
+supersession relations, and proof obligations:
+
+- `a_c` qualification evaluates internal coherence against its complete
+  declared calculus-law set;
+- `a_c.X` proves faithful interpretation of exact subject `X`; and
+- `a_c.X.C` proves faithful, canonical encoding of the accepted model in
+  carrier `C`.
+
+An encoding failure does not change `a_c.X`. An interpretation failure does not
+change `a_c`. A downstream success cannot ratify an upstream layer or basis.
+None of these layers is automatically an independently released Product. The
+external authority that selects and releases one owns that Product status.
+
+## Exact Calculus Identity
+
+The stable concept identity does not identify one immutable calculus edition.
+An exact released calculus basis is an external record created after the
+publication bytes exist. It keeps the predecessor authority from which the
+edition was derived distinct from the successor carrier that publishes it:
+
+```text
+AxiomaticCalculusBasis = {
+  kind: "stdo.axiomatic-calculus-basis",
+  schema_version: 1,
+  concept_identity: "urn:stdo:concept:axiomatic-calculus:a-c",
+  derivation_basis: {
+    release_uri: absolute immutable predecessor release URI,
+    manifest_sha256: "sha256:" + 64 lowercase hexadecimal characters,
+    principle_refs: non-empty absolute semantic-address URI[]
+  },
+  publication_basis: {
+    release_uri: absolute immutable successor release URI,
+    manifest_sha256: "sha256:" + 64 lowercase hexadecimal characters,
+    member_uri: absolute URI for this member in that release,
+    member_sha256: "sha256:" + 64 lowercase hexadecimal characters
+  }
+}
+```
+
+The record uses RFC 8785 JSON Canonicalization Scheme bytes. Duplicate object
+names are rejected before canonicalization. `derivation_basis.principle_refs`
+is duplicate-free and sorted by ascending unsigned UTF-16 code units. Its
+identity is:
+
+```text
+urn:stdo:axiomatic-calculus-basis:sha256:
+  + sha256(JCS(AxiomaticCalculusBasis))
+```
+
+`derivation_basis` binds one exact accepted predecessor cut and the complete
+finite set of clauses from which this edition was derived. Every principle
+reference is one clause identified under `Derivation Provenance`, resolves
+inside that predecessor cut, and is retained without a hard-coded member count.
+The set is recomputed when the derivation account changes. It cannot depend on
+the publication carrier or calculus-basis identity being created.
+
+`publication_basis` binds the distinct immutable successor carrier and this
+standard's exact bytes. Its member URI resolves inside its release URI. The
+record is external because this standard cannot contain its own final byte
+digest. Same-release references that cite this calculus are publication or
+cross-context relations, not derivation provenance.
+
+An interpreted-subject identity binds at least:
+
+```text
+id(a_c.X) binds
+  exact id(a_c)
+  + exact subject basis id(X)
+  + exact interpretation contract
+  + selected model content identity
+  + semantic-selection ledger identity and digest
+```
+
+An external semantic-acceptance judgment points to that unchanged identity and
+content digest. It is not embedded in `id(a_c.X)`. The accepted interpretation
+is the pair `(a_c.X, J_X)` where `J_X` is the applicable accepted judgment. This
+one-way relation prevents the acceptance record and its subject from requiring
+each other's final identity.
+
+An encoded-carrier identity binds at least:
+
+```text
+id(a_c.X.C) binds
+  exact id(a_c.X)
+  + exact carrier Product or cut
+  + exact encoding profile
+  + canonical carrier content identity
+```
+
+The accepted semantic judgment remains external to both content identities.
+Encoding mechanically verifies its subject identity and digest against the
+unchanged interpreted model and retains it in the evidence relation. The
+carrier-admission judgment points to the unchanged carrier identity and digest
+and is not embedded in `id(a_c.X.C)`. The admitted encoding relation is the
+triple `(a_c.X.C, J_X, D_C)`. Any Product acceptance and release likewise point
+to the unchanged content-first layer identity rather than entering it.
+
+The owning Product defines the canonical record grammar and issuance authority
+for those downstream identities. It cannot omit the upstream identities or
+replace them with mutable locators.
+
+## Application Boundary
+
+This standard defines the generic relations `a_c.X` and `a_c.X.C`. It selects,
+constructs, accepts, or releases no concrete interpretation or carrier. A
+downstream authority owns its exact subject population, interpretation,
+carrier, judgments, and Product or release status. The downstream identity is
+never embedded back into the calculus or its publication basis.
+
+## External Imports And Specializations
+
+An application may declare a typed import, translation, or specialization of
+an `a_c` concept under that application's own exact authority, context, basis,
+scope, preservation, loss, refusal, and invalidation law. Such a relation is
+external to the calculus. It neither changes `a_c` nor enters this standard by
+being useful to an application.
+
+## Exclusions
+
+`a_c` is not:
+
+- a representation or compression of its derivation source;
+- a selected semantic model of any subject;
+- a carrier profile or carrier instance;
+- an executable language, interpreter, compiler implementation, or runtime;
+- a deterministic semantic assessor or theorem prover;
+- a required graph storage topology;
+- a world-model ontology;
+- an authority registry; or
+- a claim that all governed systems share one vocabulary or relation set.
+
+## Conformance Obligations
+
+Review and qualification of this fundamental standard cover at least:
+
+1. closed signature and record definitions;
+2. well-typed positive and refusal examples for every fundamental law;
+3. identity uniqueness and cross-context collision cases;
+4. closure, projection, overlay, transformation, and composition laws;
+5. strict separation of domain operations, functor kinds, actors, and
+   judgments;
+6. residual and authority conservation through interpretation and encoding;
+7. exact calculus-basis identity reconstruction;
+8. direct-coordinate and refusal cases for every fundamental record family;
+9. derivation-basis and publication-basis reconstruction with cyclic and
+   same-carrier counterexamples; and
+10. one neutral toy model demonstrating that the calculus has no hidden
+    derivation-source record, application-profile, or carrier dependency.
+
+No example, checker, model, or carrier can qualify a law outside the exact
+claim it evaluates.
+
+</calculus_source>
+<subject_sources>
+<member path="authority_compressions/stdo_compressed.md" sha256="sha256:d8393f3b4dfe4ae826c8e973e982d37f1403bd5b6c5fa5580383b143ad3a80b6">
+---
+kind: authority_compression_asset
+asset_ref: authority-compression://stdo/core/v1
+compression_profile: prompt_authority_compact_v1
+target_prompt_families:
+  - transform
+  - evaluate_design_depth
+  - evaluate_review_grade
+source_refs:
+  - ../REFERENCE_FRAME_METHOD.md
+  - ../STDO_REFERENCE_FRAME_BASELINE.md
+  - ../SPEC_METHOD.md
+  - ../schemas/product-definition.schema.json
+  - ../schemas/installed-release-manifest.schema.json
+  - ../DESIGN_MODULE_METHOD.md
+  - ../ODD_METHOD.md
+  - ../WORLD_MODEL_METHOD.md
+  - ../TICKET_METHOD.md
+  - ../UX_METHOD.md
+  - ../IDENTITY_METHOD.md
+  - ../RELEASE_METHOD.md
+  - ../POSTING_GUIDE.md
+index_refs:
+  - ../GLOSSARY_GUIDE.md
+source_digests:
+  REFERENCE_FRAME_METHOD.md: a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174
+  STDO_REFERENCE_FRAME_BASELINE.md: 9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9
+  SPEC_METHOD.md: 50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c
+  schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
+  schemas/installed-release-manifest.schema.json: bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea
+  DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
+  ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
+  WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
+  TICKET_METHOD.md: a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457
+  UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
+  IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
+  RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
+  POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
+index_digests:
+  GLOSSARY_GUIDE.md: df8bf186ee10905ef8ca21a0939dc1096a86365a871ffbcbeef6ad075f8fb255
+generated_by: codex
+generated_at: 2026-08-23
+stale_if_source_digest_changes: true
+stale_if_index_digest_changes: true
+---
+
+# STDO Compressed Authority
+
+## Method Identity
+
+`STDO` is shorthand for its four key method pillars:
+
+- `S` — Specification (`SPEC_METHOD.md`);
+- `T` — Ticketing (`TICKET_METHOD.md`);
+- `D` — Design (`DESIGN_MODULE_METHOD.md`); and
+- `O` — Outcome-Driven Development (`ODD_METHOD.md`).
+
+`ODD` expands to Outcome-Driven Development. The `O` in `STDO` names that
+complete ODD pillar.
+
+This shorthand does not reduce the STDO Product to four files. Consumer
+authority remains one complete immutable released STDO cut with its exact
+member inventory.
+
+## Governing Claim
+
+Specification is constitutional source. Design and realization are subordinate
+implementation surfaces. Code, prompts, tests, generated views, dashboards,
+archives, and comments are projections or realization proof, not independent
+truth.
+
+Products, applications, modules, graph functions, build tenants, and runtime
+surfaces implement constitutional documents; they do not replace them.
+
+Method vocabulary names normative capabilities and construction relations.
+Consumers bind concrete implementations and immutable identities under their
+own Product authority. A downstream Product may prove or falsify conformance;
+it cannot supply reusable method meaning. Constitutional examples use neutral
+capability and authority identities.
+
+This aggregate carries cross-source decisions that cannot be closed from one
+source-specific compression, including the complete T-008 F1-F5 bundle and the
+Reference Frame Method/STDO baseline application relation. Source-specific
+compressions remain standalone only for decisions owned by their source and
+refuse cross-law closure.
+
+## Authority Flow
+
+Use the smallest current authority surface that can decide the question:
+
+`Goals -> Intent -> Product Definition -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
+
+When a lower layer needs a change in meaning, re-enter at the smallest upstream
+layer that owns the missing truth.
+
+## Product Definition Overlay
+
+- Every STDO-defined product has one `stdo_<label>.json` definition per
+  distinct current `WHAT`; `stdo_default.json` is the singleton default.
+- `product.definition_id` identifies the mutable `WHAT` definition line, not
+  any immutable Product or release produced from it. Product and release
+  identities remain separate; a fork or independently governed definition
+  receives another definition identity.
+- The definition locates complete constitutional authorities and entrypoints,
+  local axioms/overrides/disambiguations, collective reference-frame bases,
+  Intent/Product/specification `WHAT`, common and tenant-local `HOW`,
+  Goals/tickets/comments/optional sprints, and explicit product composition.
+  It is a locator and relation authority, not a restatement of referenced
+  truth.
+- `constitution.stdo.source` and its `stdo://channels/<version>` selector are
+  transport and mutable discovery inputs. The exact
+  `stdo://releases/v<version>-rc.<n>/` URI and installed-manifest digest are the
+  sole authored operative STDO selection. Additional constitutional sets and
+  every reading entrypoint are basis-qualified.
+- A constitutionally sufficient document set collectively makes axioms,
+  ontology, epistemology, taxonomy, and semantics recoverable. These are
+  coverage dimensions, not five assumed documents or directories.
+- Each local disambiguation binds the exact term, target bounded context,
+  complete material candidate set, one selected member of that set, owning
+  carrier and authority, semantic bases, and governed scope. The overlay
+  locates the resolution; it does not own or restate the candidate meanings.
+- `reference_frame_bases` is non-empty and locates each durable shared project
+  frame-basis declaration, its existing admitting authorities, and exact
+  governed scope. A ticket or other authorized work instruction binds one
+  agent's exact activation from an applicable basis. The Product Definition
+  Overlay is neither an actor registry nor a store of temporary active
+  configurations.
+  A Product or runtime carrier named `Frame` remains `WHAT` or `HOW`; nominal
+  overlap does not make it a collective evaluation frame.
+- Existing projects bind their current carriers without restructuring. The
+  default `specification/`, `build_tenants/`, and `.ai-workspace/` layout
+  is scaffold only.
+- One shared versioned store may carry many immutable cuts for many projects.
+  Store paths and registry entries are derived; no project-local standards copy
+  is required. Every managed store component is a physical directory or regular
+  file; verification inventories all entry types and rejects redirection,
+  special entries, and anything not derived from exact manifest paths. `sync`
+  materializes only a definition's pinned cut. `adopt --dry-run` emits a digest
+  binding current definition bytes to the exact cut, tag, commit, tree, and
+  manifest; mutation requires and re-derives that accepted digest. Fleet
+  adoption likewise requires its aggregate plan digest. Stable agent files only
+  discover the definition, verify the exact installed basis, and route to its
+  bootstrap entrypoint.
+- Discover definitions recursively. Several definitions may share a monorepo
+  root or appear at arbitrarily deep project roots. Folder nesting creates no
+  implicit inheritance or composition; composition references other definition
+  URIs explicitly. Each composition edge also binds the expected target
+  definition identity, directed relation authority, and a non-empty governing
+  contract set.
+- Fleet discovery prunes the exact VCS, dependency, generated, cache, and
+  managed-store names declared by `SPEC_METHOD.md` and refuses symlinked
+  definitions. Bootstrap targets are relative to resolved
+  `product.source_project`; parent traversal, redirection, and boundary escape
+  fail closed. Fleet bootstrap confines source projects to its authorized root
+  and preflights all targets. Exactly one ordered marker span is manager-owned;
+  all prefix and suffix bytes remain project-owned and byte-identical.
+- Portable Draft 2020-12 schema validation proves shape. URI formats remain
+  annotations unless an assertion-capable validator is used, so conformance
+  separately checks RFC 3986 syntax, resolution, target identity, immutable
+  release identity, cross-file uniqueness, constitutional sufficiency,
+  semantic-resolution completeness, and authority congruence. Every `stdo:`
+  schema locator is parsed case-insensitively before loading and must select the
+  same immutable cut as the operative basis.
+
+## Bounded-Context Semantic Isolation
+
+- Term spelling is a label, not context-free concept identity. Resolve each
+  material occurrence by term, bounded-context identity, owning authority,
+  selected basis, and governed scope.
+- An owning document, section, field, operation, or other surface may declare
+  context once. Unqualified use is lawful when exactly one concept resolves.
+  Zero or multiple applicable concepts fail closed; repository position,
+  nominal match, actor familiarity, frequency, or recency cannot choose one.
+- `GLOSSARY_GUIDE.md` is a non-deciding locator index, not a global default
+  namespace. Each row points to a source clause that declares the context and
+  owns the concept; the index declares neither. Another context receives a
+  meaning only through an explicit relation.
+- Cross-context import, disambiguation, directional translation, or equivalence
+  identifies exact source and target concepts and contexts, relation kind and
+  direction where material, preserved and changed meaning, loss, refusal,
+  owners, bases, scope, provenance, lifecycle, and invalidation. It transfers
+  no semantic or decision authority.
+- The world-model context imports `Source Project`, `Product`, `Install`, and
+  `Artifact` unchanged from the recursive taxonomy. `Builder Project` is a
+  distinct exact target concept related to `Source Project` by a directional
+  specialization that declares preserved and narrowed meaning, loss, refusal,
+  owners, basis, scope, and invalidation. Glossary references remain indexes.
+- Conformance covers positive unique-resolution and explicit-relation cases and
+  negative collisions for `Frame`, `Owner`, `Product`, `Tenant`, and `User`.
+  Correct output through an inferred or guessed meaning does not pass.
+
+## Build-Tenancy Compression
+
+- Build tenancy is STDO's `WHAT` once, independent `HOW` one-or-many
+  realization model. The bound `what` remains singleton constitutional truth;
+  `how.build_tenants` locates one or more project-owned realizations beneath
+  it.
+- Each build tenant may carry tenant-local design, tooling, code, proof,
+  release, and lifecycle state. No tenant becomes a second constitution, and
+  one tenant's evidence cannot close another tenant's claim.
+- `how.build_tenants` canonically records tenant identities and locations.
+  `how.common` carries only realization law explicitly adopted across more
+  than one tenant. A Markdown tenant registry is a companion or projection, not
+  a second authority.
+- Tenant-local truth remains local. Similarity creates a commonization
+  candidate, not shared law; promotion to `common/` requires the applicable
+  design re-entry and preserves semantic ownership.
+- An upstream-only work item needs no tenant ticket, and a single-tenant item
+  needs no sibling. When one admitted upstream item has multiple tenant
+  execution lines, retain the upstream ticket and create one suffixed ticket
+  per tenant with `source_ticket`, `build_tenant`, independent status, proof,
+  closure, reopening, and repricing.
+- Build tenancy is not a synonym for hosted, runtime, customer, account, or
+  data multitenancy. A downstream Product claiming those forms owns their
+  separate identity, isolation, lifecycle, and proof law.
+
+## Prime Operating Rules
+
+- Do not create a second truth surface when a current authority surface exists.
+- Keep active constitutional surfaces present-tense.
+- Treat generated artifacts and summaries as read models unless admitted as
+  source truth by the owning method.
+- Missing traceability is a defect.
+- Prefer one algebraic primitive plus projections over multiple local decision
+  systems.
+- When `DESIGN_MODULE_METHOD` is adopted for a new or materially changed
+  semantic boundary, treat discovered functionality as input to design, not as
+  pre-authorized operation identities. Derive a candidate Ontology, complete
+  lifecycle and authority, run whole-family Prime, and then accept the Ontology
+  before promoting IACS, public operations, schemas, or modules.
+- The Ontology is semantic-design authority, not a replacement for target
+  architecture or module design. Domain, sequence, state, authority, IACS, and
+  public-contract surfaces preserve it; code and tests derive through
+  requirements plus accepted design.
+- Naming an admitter is not sufficient. State the complete admission relation
+  for each consequential entity-transition domain — entity identity,
+  predecessor basis, authority scope, candidate family, decision cardinality,
+  admission predicate, durable result, supersession law. Singularity attaches to
+  the relation, not one actor; quorum, multi-signature, step-up, and proxy are
+  lawful when declared. A projection may produce a candidate but confers no
+  admission authority, and reconstructed state is not self-authenticating.
+- Disposition every equivalent competing path explicitly as a constituent, a
+  replica, a replacement, or a deliberately independent realization of the
+  admission law. Disposition does not mean deletion; an undisposed equivalent
+  path is the defect, not the equivalence itself.
+- For a material transition, each admission owner independently derives the
+  causally complete enclosing relation, including every relevant participant,
+  equality join, and crossing seam, from one exact admission-valid basis.
+  Basis continuity holds through admission: advancement after preflight causes
+  a declared predecessor/currentness check or effect-free re-entry, and
+  participating owners use an equal or design-declared coherent composite
+  basis, never mixed independently valid bases. Every participant and join is
+  validated before effect; the semantic commit is the complete transition,
+  admitting all or none. Caller or owner assertions cannot establish this law.
+- Direct and every supported composite or nested boundary preserve the same
+  law; competing same-scope paths cannot bypass it, and fresh reconstruction or
+  replay reproduces the exact relation, basis, and outcome or refusal. Qualify
+  each owner and supported boundary for direct, supported composite/nested,
+  forged, ambiguous enclosing relation, stale or preflight-advanced basis,
+  incoherent multi-owner basis, competing same-scope authority,
+  reconstructed/fresh-process, exact replay equality, and post-validation
+  atomic failure. Exercise
+  every materially distinct boundary capable of exposing a subset, unless a
+  design-declared dominance/equivalence proof shows named observations cover
+  the complete partial-failure surface, and follow each with fresh
+  reconstruction. An indivisible unit is observed immediately on both sides;
+  final-participant validation failure is not atomic-failure evidence.
+- For each material admission relation, accepted design compactly declares the
+  owner and supported boundary; exact basis and continuity, including any
+  coherent multi-owner basis; enclosing relation, participants, and joins;
+  refusal/effect boundary; complete semantic commit unit and decomposability;
+  every materially distinct post-validation partial-failure boundary, or a
+  design-declared dominance/equivalence proof that named observations cover the
+  complete surface; reconstruction; supported direct/composite/nested forms;
+  and competing paths. Qualification is per owner and supported boundary;
+  unsupported composite/nested forms require design-grounded `not_applicable`
+  and no weaker or competing path. Missing or downstream-invented fields,
+  inferred basis/boundary-coverage/reconstruction law, or helper-manufactured
+  non-applicability falsifies the declaration.
+- Declare the governing frames a material boundary derives from, its bounded
+  affected relation set, and the seams crossing it. Frames form a constraint
+  network; more than one governing frame is lawful. Every seam crossing the
+  affected set must either include its causally relevant far-side relation or
+  state why that relation cannot affect and cannot be affected by the action.
+  A bounded local action conserves governing truth; changing a governing
+  relation re-enters there.
+- Design evidence is durable reasoning state for a bounded actor. The selected
+  STDO basis plus accepted design must recover every governing relation in a
+  proposed action's causally closed affected set and decide preserve, change,
+  duplicate, or violate — without dialogue, commentary, prior-worker memory, or
+  folklore. Design must not restate federal decision law to achieve this.
+- The four decisions: `preserve` leaves the relation intact and operates inside
+  it; `change` alters the relation and re-enters at it before acceptance;
+  `duplicate` establishes an equivalent path explicitly disposed as constituent,
+  replica, replacement, or deliberately independent realization; `violate`
+  contradicts the relation or leaves an equivalent path undisposed. The
+  change/violate boundary is the locus of acceptance, not the size of the delta.
+  The duplicate/violate boundary is disposition, not equivalence.
+- Declare a role set for every material realization component; capability is not
+  authority. At a material boundary also project the domain design into data
+  structures, algorithms, algebraic laws, and effect boundaries. That projection
+  is subordinate: similarity yields a commonization candidate, never an
+  adjudication. Materially non-equivalent identity, ownership, ordering,
+  mutation, consistency, retention, failure, access, lifecycle, or authority law
+  requires separation; a difference alone does not discharge Prime contraction.
+- Dispose every material algorithmic obligation twice. Semantically it is an
+  existing accepted relation, an extension of one, or a new candidate relation.
+  In realization it is consume, implement locally, optimize, adapt, or
+  deliberately duplicate under stated non-semantic constraints — isolation,
+  substrate, performance, security, or dependency ownership. The rule is not
+  that equivalent code is never rebuilt; it is that a local realization must not
+  present an accepted semantic or authoritative relation as newly owned local
+  truth.
+- Before constructing a material generic capability, common mechanic, or
+  algorithm, or selecting a material dependency, apply DMM `STDO-UP-023`
+  proportionally. State the capability without Product, domain, module, vendor,
+  file, or incumbent labels. Distinguish every irreducible semantic or authority-
+  bearing relation and its owner, role kind, subject, scope, basis, lifecycle,
+  and refusal invariants from generic mechanics and foundation capabilities.
+  Compare credible project, native/standard, predecessor-lineage, maintained
+  external, local, and mixed compositions across material total-lifecycle
+  dimensions. Bound discovery by recording searched sources or categories,
+  cutoff and version basis, applicability criteria, exclusions, predecessor or
+  incumbent status, discovered candidates, and residual unknowns. A material
+  discovery gap prevents selection; a later materially qualifying candidate
+  invalidates the affected selection evidence. The comparison
+  operates inside the Product boundary and any applicable migration strategy
+  already admitted by their existing owners and does not displace SPEC's
+  bounded-evolution versus fundamental-re-adoption decision. Hard authority,
+  contract, safety, security, license, or constructability failure eliminates a
+  candidate; unknowns remain unknown.
+  One lawful composition dominates another only when every material dimension
+  is comparable or evidenced as non-discriminating, it is no worse on every
+  comparable dimension, and strictly better on at least one. A material unknown
+  that could reverse the relation prevents dominance. A dominated candidate,
+  including a local generic rebuild, cannot be selected unless new evidence or
+  another material dimension invalidates the dominance relation.
+  Select from the undominated frontier only through priorities and risk
+  tolerances declared by the existing tradeoff owner for the exact Product and
+  basis; if they do not resolve it, retain the gap. Reuse does not automatically
+  confer or transfer authority. A foundation may realize an explicitly assigned
+  authority-bearing role only while preserving the declared relation's owner,
+  role kind, subject, scope, basis, lifecycle, and refusal invariants. Ownership
+  follows the declared relation, not local authorship. A newly exposed material
+  generic subproblem recursively re-enters selection. This prior pass is
+  distinct from recurrence review.
+- Apply the gate proportionally. An unchanged `realization_refactor` cites the
+  accepted Ontology/design basis and proves no semantic delta. Re-evaluate only
+  affected relations and projections, with no extra ticket or approval ceremony.
+- Where `DESIGN_MODULE_METHOD` is adopted, co-evolution is admissible only when
+  the complete material-relation set has no unresolved member, is jointly
+  satisfiable, and admits no materially non-equivalent network under the
+  governing Product, requirements, and accepted design relations. Neither mode
+  is the global default. Design still owns structural `HOW`; otherwise the
+  smallest causally closed affected set requires a prior design gate. Outside
+  an adopted boundary, retain the generic no-unresolved-material-design-decision
+  test. Design/implementation feedback carries evidence and falsification,
+  never reverse semantic authority.
+- Treat Ontology, Prime, IACS, views, modules, implementation, and tests as
+  projections of that one decision-complete network. Headings, artifact
+  presence, exact identity, and aggregate green labels cannot supply a missing
+  semantic relation.
+- IACS is not numerically frozen. Addition, removal, merge, or split proceeds
+  through accepted Ontology/design re-entry. Re-derive and classify the complete
+  set, rerun Promotion and Boundary Inflation over the full revised set, update
+  every existing conformance/checker subject to the declared composite carrier
+  relation, and reconcile implementation before closure.
+  No concrete checker is required to exist. Prohibition without a lawful path,
+  new-carriers-only gates, weaker assurance, or unreconciled implementation
+  falsifies revision.
+- Prime atoms are irreducible semantic-design relations. Apply contraction to
+  the complete candidate semantic-atom family and all realization projections.
+  Each accepted atom records its admitted domain and governs every admitted
+  instance in it; every proposed realization projection maps explicitly to its
+  accepted atom or atoms. Later cases compose or parameterize the atom rather
+  than creating feature-local replacements.
+- Method compression is a prompt input, not a replacement for the source method.
+- Select one complete immutable STDO version; mutable source and mixed standard
+  sets are not consumer authority.
+- Proof identifies its exact property and nearest weaker excluded property.
+  Semantic basis, evidence basis, and state projection remain distinct.
+- Assurance supporting promotion or closure binds the exact subject and its
+  authoritative composition relation. Per-file evidence cannot close a
+  multi-file or carrier-set claim; cross-carrier satisfaction and conflict are
+  decided at the declared composite boundary.
+- Mechanical enforcement names an executable or reproducible predicate and a
+  witness reachable through the declared ordinary assurance path. Planned or
+  specification-only evidence is not observed verification. Absent that
+  predicate or declared-path witness, the claim stays open or narrows to the
+  planned property. Quantifier, population, and scope cannot outrun evaluated
+  evidence; generalization requires a declared inference relation, comparable
+  population, counterexample treatment, and governing evidence. Later
+  counterevidence invalidates dependent verdicts until superseded, withdrawn,
+  or requalified.
+- Generic method sufficiency consumes the Probabilistic Work Boundary,
+  `STDO-UP-020`, and Reconstruction Litmus. A fresh competent constructor works
+  inside a declared capability/context/configuration envelope using only the
+  declared ordinary method and authority surfaces. An independently authorized
+  evaluator has a declared governing basis and comparison predicate. Where
+  exposure compromises independence, material expected/reference outcomes,
+  source exemplars/incumbents, author memory, and ad hoc rescue are withheld from
+  the constructor until its result is frozen. After freeze, the evaluator
+  compares that result against the mandatory governing semantic basis. Any
+  separately held material expected/reference outcome, if one exists and is
+  applicable, is optional evidence and explicitly non-authoritative; equivalence
+  to it is required only where the governing basis requires it. A lawful
+  alternative permitted by the basis passes, while subjective similarity to the
+  basis or reference is insufficient to establish semantic conformance/
+  equivalence. Byte/structural identity, unique derivation, determinism, and
+  incumbent equality are not generic criteria. An out-of-envelope actor cannot
+  indict the method. Post-exposure revision is a declared intervention and either
+  a method constituent with its qualification boundary or a new qualification
+  subject; it cannot retroactively pass the frozen run. Undeclared constructor
+  competence, context, or configuration, undeclared supplemental method or
+  authority input, undeclared evaluator authority, basis, or predicate, premature
+  reference exposure, omission of the governing basis, constructor-authorized or
+  self-adjusted comparison, reference-as-authority, reference equivalence required
+  where the basis does not require it or omitted where the basis does,
+  subjective-similarity proof, generic identity criteria, and unclassified
+  revision falsify qualification. No fixed actor type/count, review round,
+  engine, prompt, or orchestration follows.
+- Product progress advances one explicitly selected unresolved Product-defined
+  outcome instance with a declared acceptance interval. Acceptance ends that
+  instance's progress authority while retaining prior witnesses as regression
+  evidence; selecting the next already-defined outcome still requires explicit
+  Goals/work sequencing. Evidence cannot select, enlarge, or replace its
+  Product claim.
+- An ODD constructive loop consumes that selected Product outcome as external
+  authority. Models, gaps, assurance, ledgers, projections, edge closure, and
+  next-action machinery cannot author, select, enlarge, or accept the outcome.
+  Repricing requests re-entry; it does not perform re-entry or choose a
+  successor outcome.
+- Target binding and admitted construction intent preserve exact selected
+  outcome and bounded-basis refs for causal replay. An unresolved
+  `post_reprice` returns typed no-action until lawful re-entry separately admits
+  a new basis.
+- Within a Product-outcome-bearing wave, material realization growth requires
+  the selected outcome, an admitted named bounded prerequisite to it, or an
+  admitted named bounded experiment whose stated observation discriminates a
+  stated decision for it. Admission or renewal belongs to the work-wave owner
+  or explicitly bounded proxy and is durably recorded in existing Goals or
+  ticket authority. Each prerequisite or experiment declares its provisional
+  bound and terminal condition and cannot enlarge Product, authorize downstream
+  work, confer promotion or closure, or waive applicable law. Acceptance of the
+  outcome, discharge of the prerequisite, resolution of the experiment
+  decision, another admitted terminal condition, exhaustion, rejection,
+  withdrawal, supersession, repricing of the basis away, or falsification ends
+  that authority. Evidence, active work state, prior admission, repair, or
+  continuation cannot renew it;
+  retained evidence, regression protection, or donor material does not inherit
+  growth authority.
+- Judge proportionality by semantic ambiguity removed versus effective
+  reasoning complexity added, not by line or artifact count. Rival authority,
+  failure classification, and evidence uncertainty count only as types or
+  evidence of materially distinct admissible interpretations removed.
+  Downstream implementation paths, runtime states, tests, reviews, and
+  reconciliation joins are counterfactual evidence of that contraction, not an
+  independent numerator. Do not prescribe internal agent procedure when its
+  variation has no governed effect, and do not create per-clause rationale
+  carriers.
+- For probabilistic or agentic construction, begin from a reconstruction-
+  sufficient governing basis and execute the smallest coherent causal cone.
+  Bind selected computational relations, construction and assessment authority,
+  and re-entry conditions. Constructor self-review is not independent live-
+  surface assessment.
+- A bounded proxy may accept preservation, require local repair, reject a
+  violation, and advance to the next already-authorized action. Product,
+  requirement, governing-authority, or accepted-design changes re-enter at
+  their owner. Routine advancement requires no renewed human ceremony when the
+  delegation is already accepted.
+- Disposition bounded candidates as `accept`, `local_repair`, `re_enter`, or
+  `reject`. Conserve every governing relation affected by the local action;
+  unrelated incompleteness is repricing input. Repeated failure against an
+  unchanged boundary triggers reassessment without a numeric candidate or
+  review-round threshold.
+- Transition evidence binds the exact candidate, affected relations, changed
+  and competing paths, proof, remaining seams, non-changes, and disposition.
+  Use focused falsification during construction and whole-candidate proof at a
+  declared boundary unless risk requires it earlier. A durable reconstruction
+  claim needs loss or exclusion of incidental process state when same-process
+  state is a material counterexample.
+- Acceptance binds an exact checkpoint and permits the next already-authorized
+  action without widening scope. Accepted material Product movement is
+  progress; rejected or superseded work is churn; repeated proof is evidence;
+  discovery of hidden distance revises forecast. No numeric progress algorithm
+  is prescribed.
+- When both strategies are lawful and feasible, bounded evolution is the
+  rebuttable selection presumption when a working predecessor can reach the
+  admitted outcome without competing or ambiguous authority. It never requires
+  continuing an unsafe or inadmissible path. Fundamental re-adoption requires
+  explicit human comparative selection and an abort or re-entry condition.
+- Product-slice promotion requires singular authority across the full causal
+  closure of its acceptance path but does not close an enclosing migration.
+  Ticket and review wording cannot exclude causally applicable authority;
+  competing authority, safety failures, retained-behavior regressions, and
+  durable architectural decisions that foreclose an admitted Product outcome
+  remain blocking. Other observations remain repricing input rather than
+  automatic scope or ticket creation.
+- Native constructability precedes design acceptance. Prime applies recursively
+  and counts governance cost while conserving root authority.
+- Apply an axiom family only where it is causally relevant to the selected
+  outcome and affected published boundary. Cite unchanged accepted relations
+  rather than reproving them; axioms do not authorize horizontal realization
+  growth.
+- Authority has identity and may be proxied only through an explicit bounded
+  grant. Implementer self-review is not independent review.
+- Exact-cut qualification declares the Product release subject, release-scoped
+  claims, and excluded source state against one immutable annotated RC tag. At
+  publication, the mutable annotated `v<version>` selector advances
+  monotonically to the highest-ordinal published RC; a lightweight, lagging, or
+  backward selector is invalid. It is discovery, never exact authority.
+  Consumer channel adoption refuses a same-line downgrade and is a separate
+  two-invocation transition whose mutation requires the externally accepted
+  exact plan digest. An intentionally older cut remains available through its
+  exact immutable basis. Any qualifying-byte change requires a higher immutable
+  RC; selector advancement adds no second final carrier or semantic review.
+- Agentic development conforms by following the constitutional process from
+  declared authority, with produced artifacts passing deterministic admission. A
+  walkthrough a competent agent using declared authority cannot complete is a
+  method defect; agent error is not.
+- Operational lifecycle signal is constitutional pressure. Product and
+  requirements provide enough signal for downstream design, or name the gap.
+  The canonical chain is: intent -> requirement -> build -> assurance ->
+  release -> deployment -> live usage -> observed telemetry -> retirement.
+- Design-module review confirms lifecycle signal at the realization boundary.
+  Each phase is answered, declared not applicable with a reason, or recorded as
+  `Gap:` / `Unanswered:`. Implementation precedent, prompt prose, local
+  convention, and test fixtures cannot invent missing lifecycle authority.
+
+## Reference Frame Engagement Compression
+
+- A reference frame is one finite, capability-bounded evaluation context. It
+  binds evaluation family, exact subject/basis, material relations, coordinates,
+  invariants, semantic/evaluation/decision authority and operation authority
+  where material, evidence, exclusions, closed results, invalidation, actor
+  capability, and only the cross-frame relations actually used.
+- The optional baseline supplies eleven generic specialist-frame families:
+  Product, Design, Design Component, Public Boundary, Entity, Operator, Owner,
+  Effect, Reuse/Foundation, Install, and Proof. For the exact outcome, each
+  family is instantiated where material, evidenced as non-material by capable
+  authority, or retained as an explicit residual. These are evaluation
+  families, not required actors, stages, components, files, services, runtime
+  types, or new semantic owners.
+- Generic-frame coverage records the union of admissible observations, while a
+  composite claim is satisfied only through a declared conjunction satisfying
+  every applicable constraint. Material seams preserve or lawfully translate
+  identity, coordinate/basis, value/evidence, lifecycle, authority, and
+  provenance. Missing or non-commuting seams return closed pressure rather than
+  selecting a dominant frame.
+- The generic set imports no ABIogenesis, GTL, HoG, or ABG frame and no renamed
+  Product Composition, Semantic Source, Execution Derivation, or Admission And
+  Runtime Truth topology. Consumers may declare local frames under their own
+  authority; runtime carriers named `Frame` are not enrolled by label.
+- Frame disjointness, separately activated evaluation, and claim-relative
+  assurance independence are distinct. Frames may overlap, refine, restrict,
+  translate, compose, or succeed one another. Hierarchy is optional. Shared
+  entities or equal-looking values do not collapse coordinates, meaning,
+  evidence, or authority.
+- A state-value change preserves topology only when every material entity,
+  relation, lifecycle, authority, capability, adjacency, and seam is preserved;
+  otherwise the activation requires topology recharting.
+- The baseline result family is `satisfied`, `falsified`, `indeterminate`,
+  `out_of_frame`, or `invalid_basis`. Missing context, evidence, authority, or
+  capability cannot be converted to satisfaction.
+- Coverage is relative to an exact workspace, governed outcome, basis, known
+  evaluation inventory, frame set, and time. It covers material interactions,
+  semantic/operation/decision authority, failure, capability, separately
+  activated overlap, assurance independence, or explicit residuals; file,
+  artifact, test, review, or actor count is not coverage.
+- Existing Goals, Product, requirements, or accepted-design authority selects a
+  project's frame configuration. A local axioms or configuration file may carry
+  that projection but does not become another constitutional owner.
+- The practical STDO profile maps Executive, Worker, and Reviewer frames onto
+  existing law: Executive uses existing project or bounded-proxy decision
+  authority; Worker is the `STDO-UP-020` constructor; Reviewer supplies the
+  independent live-surface evaluation governed by `STDO-UP-007` and
+  `STDO-UP-022` where `STDO-UP-020` requires it. The profile creates no peer
+  execution, review, disposition, checkpoint, or continuation law.
+- The complete baseline route is: Executive attempts Worker activation; an
+  activation refusal returns directly to Executive and creates no Worker result;
+  after lawful activation, `satisfied`, `falsified`, `indeterminate`, and
+  `out_of_frame | invalid_basis` map exclusively to `candidate_ready`,
+  `refused`, `incomplete`, and `re_entry_requested`. Every Worker result returns
+  to Executive. For a candidate, Executive either dispositions directly when
+  independent review is not required or activates Reviewer, receives the closed
+  review result, and then applies exactly one existing `STDO-UP-020`
+  disposition.
+- Worker supplies an exact candidate but never activates Reviewer. Worker
+  carries only its inherited bounded construction/transformation operation
+  authority; self-review is not independent review. Reviewer returns only a
+  Reference Frame Method result and does not edit, direct repair, apply an STDO
+  disposition, or authorize continuation. Executive cannot exceed its existing
+  grant or become another semantic, operation, or implementation owner.
+- The minimum activation packet carries frame identity/revision, evaluation and
+  result algebra, exact subject/basis, material specialist frames and
+  invariants, semantic/evaluation/decision authority and operation authority
+  where material, actor capability, separate-activation and assurance-
+  independence conditions, admissible evidence and acquisition path,
+  exclusions, input and output relations, and invalidation/stop/re-entry
+  conditions.
+- Method qualification covers declaration, activation, every evaluation result,
+  conjunction conflict and basis mismatch, translation preservation/loss/
+  refusal, interaction and semantic/operation/decision-authority coverage,
+  topology/capability/evidence revision, result consumption, material
+  composition, activation refusal, and the closed Worker-result mapping. One
+  valid frame set or coverage result cannot prove the unevaluated function
+  population.
+
+## Product Testing Frame Compression
+
+- When a project adopts the optional STDO baseline for Product assurance,
+  assign claims by fan-out rather than hierarchy: user outcome to UAT, runnable
+  causal path to E2E, composition boundary to integration, and module-owned law
+  to unit; then bind the distinct results through a declared conjunction to
+  Product or release disposition.
+- UAT and E2E evaluate an exact deployed, installed, or otherwise runnable
+  Product form. UAT proves only that the declared user can obtain the claimed
+  outcome through supported ordinary surfaces. E2E proves the complete
+  authoritative causal path. Correct output through a forbidden path falsifies
+  E2E, and harnessed substitutes cannot prove a boundary claimed as live.
+- Integration proves one declared participant composition and interaction
+  population. A substitute proves only its explicitly narrower equivalence
+  claim.
+- Every coded module retains its DMM-owned module-derived unit lane. Unit
+  evidence proves module-owned laws, including public module contracts;
+  internal combinatorial complexity determines evidence volume and strategy,
+  not eligibility. Unit evidence cannot close Product, runnable-path,
+  composition, user, or release claims.
+- Coverage retains the exact claim, subject, path, population, oracle,
+  interaction strength, residual combinations, and invalidation conditions.
+  Test count, assertion count, source coverage, and aggregate green are not
+  broader assurance.
+- Technical-debt erasure evaluates two finite graphs. Production closure
+  excludes obsolete, bypass, fallback, and rival paths from the exact runnable
+  Product and configuration. Assurance/source closure prevents obsolete
+  consumers, fixtures, proof scripts, generators, mutations, or tools from
+  falsely supplying evidence or reintroducing the removed Product path. A
+  declared test-only seam is lawful when isolated from Product distribution and
+  ordinary-path evidence.
+- Assurance subject acquisition and evaluation remain distinct. Acquire
+  Product, runtime, lifecycle, admission, replay, and projection truth through
+  the exact runnable owner surface. Then evaluate it with an independently
+  law-derived oracle. Generic assurance may compare bytes, digests, order,
+  equality, membership, completeness, and conjunction over owner-issued
+  evidence; it may not reconstruct a rival owner state from raw payloads,
+  events, logs, labels, or implementation fragments. A missing owner projection
+  is a gap, not permission for proof code to become another semantic owner.
+- Return a counterexample to its causally minimal supported frontier, not merely
+  the first logged failure. Represent one unique locus, a jointly established
+  incomparable set, unresolved alternative frontiers, or `indeterminate`
+  evidence. Localization does not authorize wider testing, compatibility repair,
+  another controller, or reinterpretation of unchanged upstream law.
+
+## Prompt-Relevant Rules
+
+- A prompt is rendered contract code over typed authority. It is not source law.
+- Prompt text must project current authority refs, obligations, contracts,
+  boundaries, proof expectations, and fallback conditions.
+- Prompt bodies must not carry historical workaround prose unless the current
+  requirement, design, runtime, or test still needs that constraint.
+- Raw method documents are fallback inputs when this compressed authority is
+  stale, missing, or insufficient for a named unresolved method question.
+
+## Re-Entry Compression
+
+- `goal_reprice`: current work-wave focus changes.
+- `intent_reprice`: direction or scope changes.
+- `product_reprice`: product shape changes while intent stays stable.
+- `requirement_reprice`: constitutional requirement truth changes.
+- `design_reframe`: realization structure changes while requirements stay stable.
+- `realization_refactor`: local realization changes with no upstream change.
+
+## Proof Compression
+
+Closure requires authority trace, realization proof, negative proof where drift
+is plausible, and a present-tense statement of residual open pressure.
+
+</member>
+</subject_sources>
+
+Produce a compact algebraic model, not a prose summary. Every source
+member receives exactly one disposition. Use residuals for any material
+content not atomized. Do not quote source prose. Sort model.I, record
+families by id, dispositions by member_path, and every set-like array.

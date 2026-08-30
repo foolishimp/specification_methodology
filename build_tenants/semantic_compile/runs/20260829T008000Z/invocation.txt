@@ -1,0 +1,60 @@
+Apply the supplied F_P[v_compile] contract and frame to the supplied exact inputs.
+Return exactly one value in the declared codomain and matching the output schema.
+Use only declared identities, kinds, relations, and exact source bytes.
+Represent unresolved meaning as a Residual or declared stop.
+Do not accept, admit, encode, repair, or explain the candidate.
+Include the exact model-basis identity in `model.I`; use that identity wherever
+the signature permits the external `model_basis` target. Map every model record
+to at least one exact source disposition.
+
+Return the transport envelope required by the supplied output schema. For a
+candidate, set `reason_code` to null and `re_entry_refs` to []; for a lawful
+stop, set `model` and `source_dispositions` to null and provide a closed reason
+and non-empty re-entry refs. Null transport fields are not domain records.
+
+Exact input coordinates:
+- calculus source: /Users/jim/src/apps/specification_methodology/specification/standards/AXIOMATIC_CALCULUS.md
+- subject root: /Users/jim/Library/Application Support/STDO/releases/v2.4.3-rc.3/standards
+- source manifest: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/runs/20260829T008000Z/source-manifest.json
+- selected signature: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/profile/stdo-signature.json
+- interpretation contract: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/contract/v_compile.json
+- candidate model basis: urn:stdo-index:model-basis:sha256:45767243417958a74c18b7af53e86e0049c050459f1553403af3fd91a14c9b09
+
+Invocation coordinates required in the result:
+- actor_ref: urn:openai:codex:gpt-5.6-sol
+- model_ref: urn:openai:model:gpt-5.6-sol
+- capability_ref: urn:axiom-indexer:capability:semantic-compilation-prototype:1
+- grant_ref: urn:axiom-indexer:grant:semantic-proposal-only:1
+
+Use this exact basis object:
+{
+  "calculus": {
+    "concept_identity": "urn:stdo:concept:axiomatic-calculus:a-c",
+    "source_repository": "/Users/jim/src/apps/specification_methodology",
+    "source_commit": "6ce043322598611bf37aebb6f5e743d2f2f822c9",
+    "member_path": "specification/standards/AXIOMATIC_CALCULUS.md",
+    "member_sha256": "sha256:95c9c856a4e206588b984f04ae0b528259cdaf955885ccf42fc58d80debbc02d",
+    "status": "candidate_unpublished"
+  },
+  "subject": {
+    "release_uri": "stdo://releases/v2.4.3-rc.3/",
+    "installed_manifest_sha256": "sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551",
+    "standards_member_set_sha256": "sha256:127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275",
+    "member_count": 47
+  },
+  "signature": {
+    "identity": "urn:stdo-index:signature:stdo:3",
+    "sha256": "sha256:6e4dc42eae4e911c7b000d2f502848f06d69764d7c520cdf3b390b05c17681e4"
+  },
+  "interpretation_contract": {
+    "identity": "urn:axiom-indexer:traversal:semantic-compile:2",
+    "sha256": "sha256:78b90313e10e1ac014b6b8cee3c652412481a8167dbec8afed31e7a19dbe7893"
+  }
+}
+
+Produce a compact first model of the governing STDO method, not a prose summary.
+Every manifest member must have exactly one source disposition. Represent the
+constitutional method surfaces and their cross-cutting laws directly; use
+Residual records for material source population not yet atomized. Keep values,
+predicates, qualifiers, and residuals symbolic and terse. Do not quote source
+prose. Sort model.I and every set-like array lexically.
