@@ -4,17 +4,20 @@
 - title: Separate pure Reference Frame principles, optional profiles, and Product bindings
 - type: bug
 - ticket_category: ordinary
-- status: active
+- status: completed
+- review_status: satisfied_published
 - goal: keep Reference Frame principles substrate-neutral while making every concrete role and frame-set binding explicitly profile-owned or Product-owned
 - change_intent: remove application-profile and consumer provenance from the pure method, make the optional STDO baseline own its role mapping only, strengthen the Product-owned frame-basis relation, and repair the Worker's bounded mutation grant
 - change_class: product_reprice
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-08-29
 - created_at: 2026-08-29
-- updated_at: 2026-08-29
+- updated_at: 2026-08-30
+- completed_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-29
+- publication_basis: stdo://releases/v2.5.0-rc.1/
 
 ## Intake Triage
 
@@ -91,3 +94,24 @@ bytes, purity and mutation counterexamples pass, every compression edge
 reproduces, and the full repository suite passes. Closure does not select or
 publish a release, adopt a profile for another Product, or authorize an
 occurrence theory.
+
+## Publication Closure
+
+The pure method, optional STDO profile, and Product-binding relation are
+published unchanged in `v2.5.0-rc.1`. The release manifest binds:
+
+- `REFERENCE_FRAME_METHOD.md` at
+  `90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f`;
+- `STDO_REFERENCE_FRAME_BASELINE.md` at
+  `f6a4e2be637df6c2dd5c69c6da7e77cefd8d8cde93af65ca686608ec43555e3f`;
+  and
+- `SPEC_METHOD.md` at
+  `4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b`.
+
+The independent exact-cut review found no P0, P1, or P2 issue. Purity,
+operation-grant, compression, inventory, and full-suite checks reproduced.
+Human Product authority accepted that exact immutable cut in
+`.ai-workspace/comments/human/20260830T085826Z_DECISION_accept_stdo_2_5_0.md`.
+
+This closure adopts no profile for another Product, activates no frame, and
+grants no consumer operation or mutation authority.

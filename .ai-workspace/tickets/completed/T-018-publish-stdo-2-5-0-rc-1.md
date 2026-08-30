@@ -4,7 +4,8 @@
 - title: Qualify and publish the joined STDO 2.5.0 RC1 carrier
 - type: release
 - ticket_category: release
-- status: active
+- status: completed
+- review_status: satisfied_published
 - goal: publish one immutable reviewable STDO 2.5.0 RC containing the qualified a_c, Reference Frame boundary repair, and optional Traversal Occurrence Profile
 - change_intent: close the supplied release-blocking findings, reconcile the exact successor inventory and release claims, and publish v2.5.0-rc.1 without inferring Product acceptance
 - change_class: bounded_release
@@ -12,6 +13,7 @@
 - triaged_at: 2026-08-30
 - created_at: 2026-08-30
 - updated_at: 2026-08-30
+- completed_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-30
@@ -21,7 +23,11 @@
 - target_release_line: 2.5.0
 - target_rc: v2.5.0-rc.1
 - release_note: releases/v2.5.0.md
-- depends_on: T-015, T-016, T-017 exact source qualification
+- depends_on: T-015, T-016, T-017 qualified and closed
+- published_tag_object: 42f59b6cd24071d9c445a29ae2a691cf0828211e
+- published_commit: ca6694314c4e9a56d3facae3eef06fe2792104c9
+- published_manifest_sha256: 3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338
+- accepted_product_cut: v2.5.0-rc.1
 
 ## Intake Triage
 
@@ -88,3 +94,28 @@ review is recorded. Any qualifying-byte repair after publication requires
 - an unresolved predecessor claim lacks a semantic disposition;
 - publication is represented as Product acceptance; or
 - downstream STDO adoption is inferred from selector movement.
+
+## Completion Evidence
+
+Every closure condition is satisfied:
+
+- immutable annotated RC: `v2.5.0-rc.1`, tag object
+  `42f59b6cd24071d9c445a29ae2a691cf0828211e`;
+- peeled commit: `ca6694314c4e9a56d3facae3eef06fe2792104c9`;
+- repository tree: `f0fac91f195b1f1506423060556bd36b3256d835`;
+- standards tree: `48a3e52b0aaf24b6d1d38ff551349e19b9b3c208`;
+- standards inventory: 51 members with aggregate
+  `87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5`;
+- installed-manifest SHA-256:
+  `3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`;
+- remote `rc/2.5.0`, `release/2.5.0`, immutable RC tag, and annotated
+  `v2.5.0` selector reacquired at the peeled commit;
+- independent exact-cut review: `GO`, `P0=0`, `P1=0`, `P2=0`, recorded in
+  `.ai-workspace/comments/codex/20260829T203033Z_REVIEW_stdo_2_5_0_rc_1_exact_cut.md`;
+  and
+- direct human Product acceptance recorded in
+  `.ai-workspace/comments/human/20260830T085826Z_DECISION_accept_stdo_2_5_0.md`.
+
+Under the governing Release Method, the accepted Product is the immutable RC
+itself. Acceptance creates no second final carrier. The existing release refs
+remain unchanged, and no consumer adoption is inferred.

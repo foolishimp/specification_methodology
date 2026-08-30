@@ -4,7 +4,8 @@
 - title: Establish a_c as STDO's constitutional axiomatic calculus
 - type: feature
 - ticket_category: ordinary
-- status: active
+- status: completed
+- review_status: satisfied_published
 - goal: establish and qualify a pure carrier-neutral axiomatic calculus derived from STDO principles and separate it from every interpreted subject model and carrier encoding
 - change_intent: add AXIOMATIC_CALCULUS.md as a fundamental constitutional standard, close its own record and identity law, and prepare its exact source bytes for independent review
 - change_class: intent_reprice
@@ -12,12 +13,13 @@
 - triaged_at: 2026-08-29
 - created_at: 2026-08-29
 - updated_at: 2026-08-30
+- completed_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-29
 - derivation_basis: stdo://releases/v2.4.3-rc.3/
 - derivation_manifest_sha256: 312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551
-- publication_basis: unresolved
+- publication_basis: stdo://releases/v2.5.0-rc.1/
 
 ## Intake Triage
 
@@ -96,8 +98,21 @@ the complete standards inventory and tests pass. Review may require local
 repair or Product re-entry. Closure does not select a release line, publish a
 release, construct a downstream Product, or update a Product Definition.
 
-## Current Boundary
+## Publication Closure
 
-The constitutional source is authored for review. No immutable STDO cut yet
-contains it. Existing released STDO cuts, downstream `stdo_representation`
-bases, interpreted-subject candidates, and carrier cuts remain unchanged.
+The exact constitutional source is published as
+`stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md` with SHA-256
+`cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d`.
+It is one member of the accepted 51-member STDO Product whose installed-
+manifest SHA-256 is
+`3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`.
+
+The independent exact-cut review accepted the unchanged source with no P0,
+P1, or P2 finding. Every source and index digest edge, the complete inventory,
+and the 71-test suite reproduced. Human Product authority accepted that exact
+immutable cut in
+`.ai-workspace/comments/human/20260830T085826Z_DECISION_accept_stdo_2_5_0.md`.
+
+This closure establishes and releases only the carrier-neutral calculus as an
+STDO standards member. It constructs no `a_c.X`, `a_c.X.C`, downstream
+Product, semantic acceptance, carrier admission, or consumer adoption.
