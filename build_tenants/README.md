@@ -1,16 +1,28 @@
 # Build Tenants
 
-The canonical Tenant Registry is `../stdo_representation.json#/how`. This file
-is its human-readable companion.
+The canonical active tenant registry is
+`../stdo_representation.json#/how/build_tenants`.
 
-| Tenant | Identity | Carrier basis | Index profile | Index Product |
-|---|---|---|---|---|
-| GTL | `urn:stdo-representation:build-tenant:gtl` | selected | proposed; carrier path verified | none |
-| JSON Schema | `urn:stdo-representation:build-tenant:json-schema` | unselected | unselected | none |
+| Tenant | Status | Product relation |
+|---|---|---|
+| Axiom Indexer | active | carries the selected `a_c.STDO` program and logical map; exact accepted Axiom Indexer supplies all deterministic code |
+| semantic compile | retained history | prior full-model compiler and qualification prototype; excluded from `0.1.0` |
+| GTL | retained history | prior passive carrier, codec, projection, and frozen-GTL experiments; excluded from `0.1.0` |
+| JSON Schema | retained history | unselected placeholder; excluded from `0.1.0` |
 
-Both tenants realize the same programmatic semantic-index WHAT for external ODD
-`F_P` LLM traversal. `F_H` selection precedes each tenant's domain construction;
-`F_D` may evaluate or prove declared deterministic properties of its result.
-Neither tenant may redefine the STDO Representation Algebra, introduce
-deterministic semantic assessment, or consume the other tenant as a mandatory
-intermediate carrier.
+The thin active relation is:
+
+```text
+LLM authors meaning
+  -> Axiom Indexer validates and instantiates the map
+  -> LLM selects frames and ordered context
+  -> Axiom Indexer joins exact strings
+```
+
+No active tenant may introduce a second resolver, validator, canonicalizer,
+logical-map schema, joiner, automatic frame selector, GTL engine, prompt packet
+engine, renderer, or agent runtime.
+
+Historical tenant bytes remain inspectable source history and evidence. They
+are not active Product members, dependencies, or future work requirements by
+presence alone.

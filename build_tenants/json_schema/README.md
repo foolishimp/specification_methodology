@@ -1,19 +1,13 @@
-# JSON Schema Build Tenant
+# JSON Schema Tenant History
 
 Identity: `urn:stdo-representation:build-tenant:json-schema`
 
-Status: registered; exact carrier basis, index profile, design, and artifact
-unselected.
+Status: retained unselected placeholder; excluded from STDO Representation
+`0.1.0` and absent from the active Product Definition tenant registry
 
-This tenant may realize the common programmatic semantic index as canonical
-JSON instance data structurally validated by an exact JSON Schema dialect. The
-result would target the same external ODD `F_P` LLM traversal boundary as
-`stdo.gtl`; it would not be a deterministic semantic workspace assessor.
+No carrier basis, profile, implementation, or Product artifact was selected.
+The thin Product imports the released Axiom Indexer program schema and does not
+create another schema tenant.
 
-JSON Schema is not the represented instance corpus, and schema validity cannot
-mint Source STDO meaning or make probabilistic reasoning deterministic.
-
-The tenant fails closed until the basis gate in
-[`design/JSON_SCHEMA_BASIS.md`](design/JSON_SCHEMA_BASIS.md) is satisfied.
-An accepted `F_H` selection ledger, exact canonicalization, and closed mapping
-remain required. Execution and runtime behavior are not embedded in this tenant.
+This directory remains source history. It supplies no Product member,
+dependency, validation claim, or future-work obligation.

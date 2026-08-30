@@ -1,35 +1,32 @@
 # STDO Representation Requirements
 
-These active requirement families define the constitutional WHAT shared by
-every build tenant:
+The active requirements define one thin LLM-operated path:
+
+```text
+Source STDO
+  -> LLM-authored a_c.STDO
+  -> exact Axiom Indexer validation and logical map
+  -> LLM-selected frames and ordered sections
+  -> exact Axiom Indexer join
+  -> native Codex or Claude use
+```
 
 1. [`REQ-P-BASIS-AND-IDENTITY.md`](REQ-P-BASIS-AND-IDENTITY.md) binds exact
-   source, carrier, profile, index-content, and Product identity.
-2. [`REQ-P-REPRESENTATION-ALGEBRA.md`](REQ-P-REPRESENTATION-ALGEBRA.md) defines
-   the closed `a_c` `I/O/E/C/L/X/V/T/J + ResolutionSet_M` model algebra.
-3. [`REQ-P-FP-CONSUMPTION.md`](REQ-P-FP-CONSUMPTION.md) binds the fundamental
-   generic `a_c` `F_D`, `F_P`, and `F_H` traversal functor kinds and defines the `F_P`
-   semantic-compilation and downstream LLM reasoning contracts.
-4. [`REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md`](REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md)
-   defines authorized Executive frame assignment and least-closure context
-   packets for Executive, Worker, and Reviewer targets.
-5. [`REQ-P-SELECTION-AND-ACCEPTANCE.md`](REQ-P-SELECTION-AND-ACCEPTANCE.md)
-   separates the `F_P[v_compile]` compilation proposal from the external
-   `F_H[v_select]`
-   semantic-selection ledger and acceptance boundary.
-6. [`REQ-P-COMPRESSION-VERIFICATION.md`](REQ-P-COMPRESSION-VERIFICATION.md)
-   separates deterministic construction and cost measurement from probabilistic
-   usefulness observations.
+   Source STDO, Axiom Indexer, program, map, skill, and request coordinates.
+2. [`REQ-P-STDO-AUTHORING-MAP.md`](REQ-P-STDO-AUTHORING-MAP.md) specializes the
+   released Axiom Indexer `a_c.text` program for Source STDO.
+3. [`REQ-P-CANDIDATE-VALIDATION.md`](REQ-P-CANDIDATE-VALIDATION.md) defines the
+   LLM author/diagnose/repair boundary and imports the released validator.
+4. [`REQ-P-NATIVE-FRAME-USE.md`](REQ-P-NATIVE-FRAME-USE.md) defines native
+   Codex and Claude pickup, explicit LLM frame selection, and exact joining.
+5. [`REQ-P-DOGFOOD-VERIFICATION.md`](REQ-P-DOGFOOD-VERIFICATION.md) determines
+   whether the thin Product is useful enough to release and keep using.
 
-The programmatic semantic-index algebra is normative Product law, not a common
-serialized intermediate representation. Each tenant realizes it directly in
-its carrier. Tenant design may define syntax, layout, canonical bytes, loading,
-and mapping mechanisms; it may not turn an `F_P`-classified compiler or
-consumer traversal into an `F_D` semantic assessor, replace `F_H[v_select]`
-selection with compiler output or
-deterministic extraction, or grant its carrier Source STDO authority.
+Source STDO remains semantic authority. Axiom Indexer owns its released
+mechanical contracts. This Product owns only the selected STDO authoring map,
+native instructions, and their bounded usefulness claim.
 
-HoG execution, ABG runtime admission, deterministic workspace assessment, and
-runtime truth are not embedded in the programmatic-index payload. A consuming
-Product may supply those external traversal realizations under its own
-authority.
+The active requirement set does not define a complete admitted `a_c` model,
+GTL overlay, GraphFunction, automatic closure, deterministic prompt packet,
+renderer, skill generator, or ABG runtime. Retained implementations of those
+earlier directions are historical evidence outside the `0.1.0` Product.

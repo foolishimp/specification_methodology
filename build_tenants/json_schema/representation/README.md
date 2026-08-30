@@ -1,8 +1,7 @@
-# JSON Schema Index Artifacts
+# JSON Schema Representation History
 
-No JSON Schema carrier basis, index profile, or artifact is accepted.
+Status: empty unselected historical surface; excluded from STDO Representation
+`0.1.0`
 
-This surface remains empty until an exact dialect and a design satisfying the
-common graph-and-constraint, `F_H` selection, `F_D` structural-evaluation,
-Executive context-projection, and external ODD `F_P` traversal requirements are
-explicitly accepted.
+The thin Product carries only the selected Axiom Indexer program and logical
+map under `build_tenants/axiom_indexer/representation/`.

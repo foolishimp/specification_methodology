@@ -1,146 +1,107 @@
 # STDO Representation
 
-STDO Representation treats an exact STDO release as a **Symbolic Axiomatic
-Program** expressed by its authoritative documents. A declared generic `a_c`
-probabilistic LLM traversal (`F_P[v_compile]`) semantically compiles
-those documents into a candidate algebra; `F_H[v_select]` selects its semantic
-content, and GTL gives the accepted algebra a reliable typed, closed, canonical
-form. The resulting compact **Programmatic Semantic Index** supports later
-`F_P[v_reason]` reasoning over separately supplied workspaces.
-
-The primary goal is lower context, token, and consumption cost without losing
-the identities, authorities, bounded contexts, relations, constraints, and
-source routes needed for governed reasoning.
-
-New to the project? Start with the [Quickstart](QUICKSTART.md).
-
-## Consumer model
+STDO Representation is an exact Source STDO authoring map and a concise native
+skill for using it. An LLM authors and reviews meaning. Accepted Axiom Indexer
+`v0.1.0-rc.1` supplies URI resolution, basic validation, logical-map
+instantiation, and exact ordered string joining.
 
 ```text
-exact Source STDO
-  -> F_P[v_compile] immutable semantic proposal
-  -> deterministic ConstructCandidate binds exact invocation + provenance
-  -> F_D[v_candidate_structure] structural result
-  -> F_H[v_select] unchanged-model selection ledger | rework | rejected
-  -> F_H[v_accept_interpretation] accepted a_c.STDO | rejected
-  -> GTL encoding produces immutable carrier G
-  -> F_D[v_carrier_admission] produces admission judgment D_G
-  -> reliable carrier-native programmatic semantic index when D_G = admitted
-
-F_P[v_reason](programmatic index, workspace, intent, frame, context budget)
-  -> probabilistic reasoning | hold | gap | refusal
+Source STDO v2.5.0-rc.1
+  -> LLM-authored a_c.STDO
+  -> validated logical constraint map
+  -> LLM-selected visible reference frames
+  -> exact ordered join
+  -> native Codex or Claude work with source re-entry
 ```
 
-An authorized Executive may first derive a role-bound packet from the same
-immutable index:
+The map may be larger than prose. Its value is explicit reusable constraints
+and stable source routes, not byte compression. Source STDO remains authority.
 
-```text
-STDO programmatic index + outcome + actor + frames + capability + token budget
-  -> Executive | Worker | Reviewer context packet
-  -> F_P[v_reason] traversal over separately supplied workspace evidence
-```
+## MVP
 
-`F_D`, `F_P`, and `F_H` are the exact generic functor kinds defined by the
-selected STDO Axiomatic Calculus. `F_K[v](...)` means that the exact declared traversal
-`v` is classified by functor kind `F_K`; named domain operations are not `F_*`
-aliases. Any ODD specialization is a separate downstream relation. The Product is a programmatic semantic index, not a
-frozen-GTL executable `GtlProgram`, vector database, or replacement for the
-Source STDO documents. The LLM is its bounded probabilistic interpreter. The
-Product constrains an LLM; it does not make semantic reasoning deterministic or
-grant the LLM authority. Tenant or host domain HOW
-constructs, serializes, and measures carriers and projections; an `F_D[v]`
-traversal evaluates or proves declared deterministic properties of those
-results. An `F_H[v]` traversal may exercise semantic selection, authorized
-frame assignment, or acceptance only under an explicit grant.
+The selected Product members are:
 
-HoG execution, ABG runtime admission, events, continuation, deterministic
-workspace assessment, and runtime truth are not embedded in the Product. A
-consuming host may realize the external `F_P[v]` traversal through them under its
-own authority.
+- the STDO Axiomatic Program and logical map under
+  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/`;
+- one canonical skill under `skills/stdo-representation/`;
+- concise Codex and Claude instruction references in that skill; and
+- native discovery symlinks under `.agents/skills/` and `.claude/skills/`.
 
-## WHAT and HOW
+The Product contains no local engine code. The LLM selects every frame, label,
+text value, and ordering choice. The Axiom Indexer joiner only concatenates
+those exact strings.
 
-The constitutional WHAT owns:
+## Use
 
-- the closed `a_c` `I/O/E/C/L/X/V/T/J + ResolutionSet_M` model algebra;
-- the `F_P[v_compile]` compiler and `F_P[v_reason]` consumer boundaries;
-- the exact `F_D/F_P/F_H` functor allocation and external traversal contracts;
-- Executive Context Assignments and least declared, role-bound context
-  projections for Executive, Worker, and Reviewer engagement frames;
-- semantic identity, authority, bounded-context, dependency, composition,
-  overlay, projection, and source-reentry laws;
-- content-first Product identity;
-- external `F_H[v_select]` semantic-selection evidence; and
-- reproducible compression and probabilistic-usefulness evidence boundaries.
+Start with the [Quickstart](QUICKSTART.md). The normal agent loop is:
 
-Independent build tenants own direct HOW realizations:
+1. discover the `stdo-representation` native skill;
+2. load the logical map before loading broad Source STDO prose;
+3. select material frame URIs for the task;
+4. show each frame's purpose and Source STDO route;
+5. re-enter source when a residual, disagreement, or task requires it;
+6. write the ordered labeled context; and
+7. invoke the exact Axiom Indexer joiner.
 
-- `build_tenants/gtl/` produces the GTL index carrier `stdo.gtl`;
-- `build_tenants/json_schema/` may produce a canonical JSON graph-and-constraint
-  index after an exact JSON Schema dialect is selected.
+Executive, Worker, and Reviewer are instruction-level context roles imported
+from Source STDO. A role label or prompt grants no external authority.
 
-No tenant may redefine common meaning, import the other tenant as an
-intermediate representation, or turn structural validation into deterministic
-semantic judgment.
+## Exact bases
 
-## Current basis and status
+- Source STDO: `v2.5.0-rc.1`, installed-manifest SHA-256
+  `3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`.
+- Axiom Indexer: annotated `v0.1.0-rc.1` tag object
+  `e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeled commit
+  `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
+  `8c9ad5f5e99a60c18fb8c1802471753afb226272`.
 
-The source project is governed by exact STDO cut `v2.5.0-rc.1`, manifest
-SHA-256 `3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`.
-That cut supplies the exact `a_c` member used to construct a candidate
-`a_c.STDO`; semantic acceptance and GTL encoding remain separate gates.
+The first STDO Representation Product line is `0.1.0`. No immutable STDO
+Representation RC exists until exact candidate bytes are qualified, published,
+and accepted under the installed STDO Release Method.
 
-The [GTL tenant](build_tenants/gtl/design/GTL_BASIS.md) selects frozen GTL at
-commit `8d7f965a3fae7d1acea6a9db298798480fd4cc2f`. Its
-[axiom-index GTL profile](build_tenants/gtl/design/GTL_AXIOM_INDEX_PROFILE.json)
-is the active carrier candidate; the prose `0.8.0` profile and earlier exact
-`0.7.0` profile belong to the pre-`a_c` design line. The active prototype can
-construct and check a Semantic Compilation Candidate and tests a synthetic
-accepted relation through the GTL encoder. The exact 2.5 run
-`20260829T233718Z` instead returned a structurally valid `basis_gap`; no real
-candidate, `F_H` acceptance, or current GTL carrier exists. The first canonical
-[constructed candidate](build_tenants/gtl/representation/products/stdo-2.4.3-rc.3/)
-is reproducible and structurally admitted against its exact prior WHAT basis.
-The Product definition has since re-entered, so those retained bytes are not a
-candidate for the current source definition and cannot be Product-accepted or
-released. The JSON Schema tenant has not selected a dialect.
+## Evidence and boundary
 
-The earlier Project Reference-Frame Basis digest was accepted for that exact
-construction basis by the external records retained with the pre-reprice
-candidate. The current [Reference-Frame Basis](specification/REFERENCE_FRAME_BASIS.md)
-is a new candidate. The changed WHAT requires renewed acceptance; the prior
-decision is not inherited. Until an external exact-subject `F_H` record accepts
-those unchanged bytes, `reference_frame_bases` is deliberately empty and the
-Product Definition fails closed rather than presenting a proposal as operative.
+The initial map-authoring evidence is under
+`dogfood/axiom-indexer-v0.1.0-rc.1/stdo-v2.5.0-rc.1/run-001/`. Runtime bindings
+and reports are evidence, not portable Product members.
 
-## Authority
+Validation proves declared mechanical structure and resolution only. This
+release does not claim:
 
-Read the project surfaces in this order:
+- a complete admitted `a_c` model;
+- semantic truth, completeness, fidelity, or unique interpretation;
+- automatic frame selection;
+- GTL, GraphFunctions, deterministic prompt packets, rendering, or ABG; or
+- authority obtained from a map, skill, validation result, or prompt.
+
+The retained semantic-compiler, GTL, JSON Schema, and historical carrier paths
+remain source history and evidence. They are not current Product members or
+dependencies.
+
+## Product Definition
+
+The Product owner accepted project frame basis revision 11 at exact SHA-256
+`09db079c16758db8765452bd05f6b5de3ce831974e80fb9ea59ef876fab50ed9`.
+`stdo_representation.json` binds that basis and its durable acceptance record.
+Product Definition verification is therefore part of the release gate rather
+than an intentional staging hold.
+
+## Authority order
 
 1. [`specification/GOALS.md`](specification/GOALS.md)
 2. [`specification/INTENT.md`](specification/INTENT.md)
 3. [`specification/PRODUCT.md`](specification/PRODUCT.md)
 4. [`specification/requirements/`](specification/requirements/)
 5. [`specification/REFERENCE_FRAME_BASIS.md`](specification/REFERENCE_FRAME_BASIS.md)
-6. the selected tenant's `design/` surface
-7. the selected tenant's index artifact, once authorized
+6. current build-tenant instructions and exact artifacts
+7. retained evidence and history
 
-The layout-neutral Product Definition is
-[`stdo_representation.json`](stdo_representation.json).
-
-## Current checks
+## Focused checks
 
 ```sh
 stdo verify v2.5.0-rc.1
 python3 scripts/check_constitution.py
-python3 -m unittest discover -s scripts -p 'test_*.py' -v
-python3 scripts/test_frozen_gtl_tenant.py
+python3 -m unittest scripts.test_check_constitution -v
 ```
 
-`stdo status --definition stdo_representation.json --verify` and bootstrap
-currently fail only because `reference_frame_bases` is deliberately empty.
-That is the required fail-closed state until an external `F_H` record accepts
-the exact unchanged project frame basis. The passing project-local staging
-checks prove the selected installation, source-project metadata, identity
-inputs, and declared `F_D/F_P/F_H` boundaries; they do not prove Product
-usefulness or authorize release or Product Definition conformance.
+Project-local checks establish only the properties they report.

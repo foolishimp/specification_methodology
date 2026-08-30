@@ -65,7 +65,7 @@
     "overrides": [],
     "disambiguations": [
       {
-        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
         "term": "Executive",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
@@ -74,7 +74,7 @@
         "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
         "authority": [
           "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
-          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
           "#/constitution/stdo/basis"
@@ -84,7 +84,7 @@
         ]
       },
       {
-        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
         "term": "Worker",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
@@ -93,7 +93,7 @@
         "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
         "authority": [
           "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
-          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
           "#/constitution/stdo/basis"
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "uri": "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import",
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
         "term": "Reviewer",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
@@ -112,7 +112,7 @@
         "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
         "authority": [
           "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
-          "./specification/requirements/REQ-P-EXECUTIVE-CONTEXT-PROJECTION.md#cross-context-role-import"
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
           "#/constitution/stdo/basis"
@@ -123,7 +123,18 @@
       }
     ]
   },
-  "reference_frame_bases": [],
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+      "authority": [
+        "./specification/PRODUCT.md#product-disposition-authority",
+        "./.ai-workspace/decisions/20260831T005313_frame_basis_rev11_acceptance.json"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:stdo-representation"
+      ]
+    }
+  ],
   "what": {
     "intent": "./specification/INTENT.md",
     "product": "./specification/PRODUCT.md",
@@ -132,28 +143,16 @@
     ]
   },
   "how": {
-    "common": [
-      "./build_tenants/semantic_compile/"
-    ],
+    "common": [],
     "build_tenants": [
       {
-        "id": "urn:stdo-representation:build-tenant:gtl",
-        "root": "./build_tenants/gtl/",
+        "id": "urn:stdo-representation:build-tenant:axiom-indexer",
+        "root": "./build_tenants/axiom_indexer/",
         "design": [
-          "./build_tenants/gtl/design/"
+          "./build_tenants/axiom_indexer/README.md"
         ],
         "implementation": [
-          "./build_tenants/gtl/representation/"
-        ]
-      },
-      {
-        "id": "urn:stdo-representation:build-tenant:json-schema",
-        "root": "./build_tenants/json_schema/",
-        "design": [
-          "./build_tenants/json_schema/design/"
-        ],
-        "implementation": [
-          "./build_tenants/json_schema/representation/"
+          "./build_tenants/axiom_indexer/representation/"
         ]
       }
     ]
