@@ -1,0 +1,863 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:axiom-indexer:program:abiogenesis:constitutional-spine:1",
+  "calculus_ref": "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "repo://abiogenesis/",
+  "frame_refs": [
+    "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#current-product-frame",
+    "repo://abiogenesis/specification/GOALS.md#current-selection",
+    "repo://abiogenesis/specification/INTENT.md#program-and-runtime-boundary",
+    "repo://abiogenesis/specification/PRODUCT.md#definition-tool-and-runtime-authority"
+  ],
+  "vocabulary_refs": [
+    "urn:axiom-indexer:kind:adapter",
+    "urn:axiom-indexer:kind:artifact",
+    "urn:axiom-indexer:kind:callable",
+    "urn:axiom-indexer:kind:compute-regime",
+    "urn:axiom-indexer:kind:event-history",
+    "urn:axiom-indexer:kind:executor",
+    "urn:axiom-indexer:kind:language",
+    "urn:axiom-indexer:kind:product",
+    "urn:axiom-indexer:kind:publication",
+    "urn:axiom-indexer:kind:requirement-domain",
+    "urn:axiom-indexer:kind:runtime",
+    "urn:axiom-indexer:kind:validation",
+    "urn:axiom-indexer:kind:work-selection",
+    "urn:axiom-indexer:operator:derives",
+    "urn:axiom-indexer:operator:excludes",
+    "urn:axiom-indexer:operator:owns",
+    "urn:axiom-indexer:operator:preserves",
+    "urn:axiom-indexer:operator:prohibits",
+    "urn:axiom-indexer:operator:publishes",
+    "urn:axiom-indexer:operator:requires",
+    "urn:axiom-indexer:operator:routes",
+    "urn:axiom-indexer:operator:selects",
+    "urn:axiom-indexer:operator:separates",
+    "urn:axiom-indexer:operator:traverses",
+    "urn:axiom-indexer:operator:uses",
+    "urn:axiom-indexer:operator:validates",
+    "urn:axiom-indexer:role:condition",
+    "urn:axiom-indexer:role:object",
+    "urn:axiom-indexer:role:requirement",
+    "urn:axiom-indexer:role:source",
+    "urn:axiom-indexer:role:subject"
+  ],
+  "symbols": [
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:abg",
+      "kind": "urn:axiom-indexer:kind:runtime",
+      "label": "ABG runtime-truth substrate",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#abg-owns-admitted-runtime-truth",
+        "repo://abiogenesis/specification/PRODUCT.md#abg"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:catalog",
+      "kind": "urn:axiom-indexer:kind:publication",
+      "label": "Installed catalog",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#installed-product-and-catalog"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:current-work-selection",
+      "kind": "urn:axiom-indexer:kind:work-selection",
+      "label": "Current Wave 2 R2 and R3 design selection",
+      "source_refs": [
+        "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#current-product-frame",
+        "repo://abiogenesis/specification/GOALS.md#current-selection"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:event-calculus",
+      "kind": "urn:axiom-indexer:kind:validation",
+      "label": "Event Calculus",
+      "source_refs": [
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:event-history",
+      "kind": "urn:axiom-indexer:kind:event-history",
+      "label": "Admitted event history",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-005-event-sourced-run-governance",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:f-d",
+      "kind": "urn:axiom-indexer:kind:compute-regime",
+      "label": "Deterministic compute regime F_D",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:f-h",
+      "kind": "urn:axiom-indexer:kind:compute-regime",
+      "label": "Human-authority compute regime F_H",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:f-p",
+      "kind": "urn:axiom-indexer:kind:compute-regime",
+      "label": "Probabilistic compute regime F_P",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:graph-function",
+      "kind": "urn:axiom-indexer:kind:callable",
+      "label": "GraphFunction",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions",
+        "repo://abiogenesis/specification/PRODUCT.md#graphfunction"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:gtl-program",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "Admitted GTL program",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#gtl-owns-program-meaning",
+        "repo://abiogenesis/specification/PRODUCT.md#gtl-program"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:gtl-typescript",
+      "kind": "urn:axiom-indexer:kind:language",
+      "label": "GTL.TypeScript",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#governing-intent",
+        "repo://abiogenesis/specification/PRODUCT.md#gtltypescript"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:gtl-validator",
+      "kind": "urn:axiom-indexer:kind:validation",
+      "label": "Non-lowering GTL validator",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#the-gtl-validator-owns-non-runtime-judgment",
+        "repo://abiogenesis/specification/PRODUCT.md#validation-contract"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:hog",
+      "kind": "urn:axiom-indexer:kind:executor",
+      "label": "HoG executor framework",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#hog-owns-direct-traversal",
+        "repo://abiogenesis/specification/PRODUCT.md#hog"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:implementation-binding",
+      "kind": "urn:axiom-indexer:kind:adapter",
+      "label": "Leaf implementation binding",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:module",
+      "kind": "urn:axiom-indexer:kind:publication",
+      "label": "Published module",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#module-catalog-and-implementation"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:product",
+      "kind": "urn:axiom-indexer:kind:product",
+      "label": "ABIogenesis 5.0",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#product-statement"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:public-surface",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "One public Product surface",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#system-and-one-surface"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:replay",
+      "kind": "urn:axiom-indexer:kind:validation",
+      "label": "Replay and projection",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-005-event-sourced-run-governance",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:requirement-surface",
+      "kind": "urn:axiom-indexer:kind:requirement-domain",
+      "label": "Routed Product, GTL, ABG, and mapping requirements",
+      "source_refs": [
+        "repo://abiogenesis/specification/requirements/README.md#active-requirement-domains",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope",
+        "repo://abiogenesis/specification/requirements/gtl/README.md#scope",
+        "repo://abiogenesis/specification/requirements/mapping/README.md#scope",
+        "repo://abiogenesis/specification/requirements/product/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:root-product-outcome",
+      "kind": "urn:axiom-indexer:kind:validation",
+      "label": "Root Product outcome R1 through R10",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#root-product-outcome"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:abiogenesis:sdk-cli",
+      "kind": "urn:axiom-indexer:kind:adapter",
+      "label": "Source-independent SDK and thin CLI",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#sdk-and-cli"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:abg-owns-runtime-truth",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:owns",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:abg"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "admission, events, replay, lineage, evidence, correction, continuation, and closure"
+        }
+      ],
+      "statement": "ABG owns admitted runtime truth and the complete replayable causal episode.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#abg-owns-admitted-runtime-truth",
+        "repo://abiogenesis/specification/PRODUCT.md#abg"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:current-selection-design-only",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:selects",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:current-work-selection"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "W2-R2 and W2-R3 decision-complete design only; no implementation, candidate, E00, or release work"
+        }
+      ],
+      "statement": "Current ABIogenesis work authority is design-only and grants no implementation authority.",
+      "source_refs": [
+        "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#current-product-frame",
+        "repo://abiogenesis/specification/GOALS.md#current-selection"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:event-calculus-derives-state",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:derives",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:event-calculus"
+        },
+        {
+          "role": "urn:axiom-indexer:role:source",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:event-history"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "runtime fluents, state, closure, and projections"
+        }
+      ],
+      "statement": "Runtime state is replay-derived from admitted event history rather than authored by a controller.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-005-event-sourced-run-governance",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:f-d-is-mechanical",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-d"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "total mechanical function over declared closed inputs"
+        }
+      ],
+      "statement": "F_D owns total mechanical functions over declared closed inputs.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:f-h-is-human-authority",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-h"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "attributed human-authority decision or lawfully admitted proxy"
+        }
+      ],
+      "statement": "F_H owns attributed human-authority decisions and responses.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:f-p-produces-candidates",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-p"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "bounded semantic construction whose output remains candidate material until admitted"
+        }
+      ],
+      "statement": "F_P output remains candidate material until admitted by the owning boundary.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:graph-function-is-sole-callable",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:graph-function"
+        }
+      ],
+      "statement": "GraphFunction is the sole named callable work contract inside a GTL program.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions",
+        "repo://abiogenesis/specification/PRODUCT.md#graphfunction"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:graph-function-requires-gtl-template",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:graph-function"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "one replayable GTL template that materializes its graph"
+        }
+      ],
+      "statement": "Every GraphFunction supplies a GTL template; implementation-only callables cannot replace it.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:gtl-owns-program-meaning",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:owns",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "topology, starts, callable membership, interfaces, policies, effects, results, and proof obligations"
+        }
+      ],
+      "statement": "The admitted GTL composition is the program and owns its complete declared meaning.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#gtl-owns-program-meaning",
+        "repo://abiogenesis/specification/PRODUCT.md#gtl-program"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:gtl-validator-is-non-lowering",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "lowering GTL into an executable IR, selecting runtime work, or emitting runtime truth"
+        }
+      ],
+      "statement": "The GTL validator checks whole-program law without becoming a second program authority.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#the-gtl-validator-owns-non-runtime-judgment",
+        "repo://abiogenesis/specification/PRODUCT.md#validation-contract"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:gtl-validator-validates-program",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:validates",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+        }
+      ],
+      "statement": "The GTL validator applies whole-program law to the admitted GTL program without lowering it.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#the-gtl-validator-owns-non-runtime-judgment",
+        "repo://abiogenesis/specification/PRODUCT.md#validation-contract"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:hog-requires-validated-program",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:hog"
+        },
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+        }
+      ],
+      "statement": "HoG entry requires the exact materialized GTL graph to pass whole-program validation.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#the-gtl-validator-owns-non-runtime-judgment",
+        "repo://abiogenesis/specification/PRODUCT.md#root-product-outcome"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:hog-runtime-effects-require-abg-admission",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:hog"
+        },
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:abg"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:event-history"
+        }
+      ],
+      "statement": "Every HoG runtime effect and result crosses ABG owner admission into event history before it becomes runtime truth.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#abg-owns-admitted-runtime-truth",
+        "repo://abiogenesis/specification/PRODUCT.md#hog-and-abg-runtime-contract"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:hog-traverses-original-program",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:traverses",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:hog"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+        }
+      ],
+      "statement": "HoG traverses the original admitted GTL value directly.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#hog-owns-direct-traversal",
+        "repo://abiogenesis/specification/PRODUCT.md#hog"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:implementation-binding-is-leaf-only",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:implementation-binding"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "replacing GraphFunction meaning, body, topology, or callable identity"
+        }
+      ],
+      "statement": "An implementation binding may realize a declared leaf seam but cannot own program meaning.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:no-controller-authority",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "controller authority in SDK, CLI, installer, fixture, worker, plugin, Consensus, or projection"
+        }
+      ],
+      "statement": "Adapters and projections cannot become rival lifecycle controllers.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#explicit-exclusions",
+        "repo://abiogenesis/specification/PRODUCT.md#explicit-non-features"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:no-rival-ir",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "second GTL source language, executable IR, bytecode, generated HoG program, or runtime-program registry"
+        }
+      ],
+      "statement": "ABIogenesis has one GTL program authority and no rival executable representation.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#explicit-exclusions",
+        "repo://abiogenesis/specification/PRODUCT.md#explicit-non-features"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:odd-glc-is-not-release-dependency",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:excludes",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "odd_glc or another GLC product as a 5.0 build, qualification, or release dependency"
+        }
+      ],
+      "statement": "The current odd_glc downstream proof force-ranks design but is not an ABIogenesis 5.0 release dependency.",
+      "source_refs": [
+        "repo://abiogenesis/specification/GOALS.md#current-wave-2-goal-reprice",
+        "repo://abiogenesis/specification/INTENT.md#explicit-exclusions"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:product-authority-chain",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "Goals -> Intent -> Product -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap -> Reprice"
+        }
+      ],
+      "statement": "Work must enter through the smallest lawful authority surface; code cannot silently reprice Product meaning.",
+      "source_refs": [
+        "repo://abiogenesis/specification/GOALS.md#authority"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:publication-uses-module-and-catalog",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:publishes",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:module"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:catalog"
+        }
+      ],
+      "statement": "Modules publish declarations and compatible bindings into the installed catalog boundary.",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#installed-product-and-catalog",
+        "repo://abiogenesis/specification/PRODUCT.md#module-catalog-and-implementation"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:regimes-remain-distinct",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:separates",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-d"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-p"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:f-h"
+        }
+      ],
+      "statement": "Compute regimes may consume admitted evidence but cannot impersonate one another or inherit authority.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#compute-regimes-remain-distinct"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:replay-derives-from-event-history",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:derives",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:replay"
+        },
+        {
+          "role": "urn:axiom-indexer:role:source",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:event-history"
+        }
+      ],
+      "statement": "Replay reconstructs runtime state and projections from admitted event history and declared inputs.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-005-event-sourced-run-governance",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:replay-does-not-author-truth",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:replay"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "creating runtime facts, continuation, or closure outside admitted event history"
+        }
+      ],
+      "statement": "Replay reconstructs and projects admitted truth; it does not create a rival lifecycle.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#int-005-event-sourced-run-governance"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:requirement-domains-route-law",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:routes",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:requirement-surface"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "Product, GTL language, ABG runtime, and GTL-to-ABG mapping domains"
+        }
+      ],
+      "statement": "Requirements route product contract, language meaning, runtime truth, and bridge law to distinct owning domains.",
+      "source_refs": [
+        "repo://abiogenesis/specification/requirements/README.md#active-requirement-domains",
+        "repo://abiogenesis/specification/requirements/abg/README.md#scope",
+        "repo://abiogenesis/specification/requirements/gtl/README.md#scope",
+        "repo://abiogenesis/specification/requirements/mapping/README.md#scope",
+        "repo://abiogenesis/specification/requirements/product/README.md#scope"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:root-path-is-one-causal-chain",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:root-product-outcome"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "R1 artifacts -> R2 install -> R3 workspace -> R4 catalog -> R5 program -> R6 callable/contracts -> R7 GTL validation -> R8 HoG -> R9 ABG result/closure -> R10 replay/CLI equality on one binding"
+        }
+      ],
+      "statement": "The sunny root is one finite causal chain; a partial, private, fixture-authored, or source-dependent path remains red.",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#root-product-outcome"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:sdk-cli-remain-thin",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:prohibits",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:sdk-cli"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "owning program topology, traversal, event admission, continuation, or closure"
+        }
+      ],
+      "statement": "The SDK and CLI expose Product operations without becoming another controller.",
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#sdk-and-cli"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:abiogenesis:source-independent-product",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:abiogenesis:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "immutable installation and operation without mutable source-project imports"
+        }
+      ],
+      "statement": "The released Product must install and operate from exact immutable artifacts without mutable source.",
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#directional-success",
+        "repo://abiogenesis/specification/PRODUCT.md#product-statement"
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "uri": "urn:axiom-indexer:residual:abiogenesis:accepted-design-how",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:abiogenesis:current-work-selection"
+      ],
+      "detail": "The accepted predecessor design and selected R2/R3 design documents are HOW and are not compressed in this constitutional spine.",
+      "re_entry_refs": [
+        "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#accepted-s1-predecessor-work-and-gates",
+        "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#accepted-wave-2-goal-reprice-and-design-roadmap"
+      ],
+      "source_refs": [
+        "repo://abiogenesis/specification/GOALS.md#current-selection"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:abiogenesis:full-requirement-clauses",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:abiogenesis:requirement-surface"
+      ],
+      "detail": "This first slice preserves requirement-family routing but does not axiomatize every individual requirement clause.",
+      "re_entry_refs": [
+        "repo://abiogenesis/specification/requirements/README.md#active-requirement-domains",
+        "repo://abiogenesis/specification/requirements/abg/README.md#families",
+        "repo://abiogenesis/specification/requirements/gtl/README.md#families",
+        "repo://abiogenesis/specification/requirements/mapping/README.md#families",
+        "repo://abiogenesis/specification/requirements/product/README.md#families"
+      ],
+      "source_refs": [
+        "repo://abiogenesis/specification/requirements/README.md#rules"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:abiogenesis:gtl-reference-frame-composition",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:abiogenesis:gtl-program"
+      ],
+      "detail": "This is level-two a_c.text dogfood. No level-three GTL reference-frame composition or native role packet has been produced yet.",
+      "re_entry_refs": [
+        "repo://abiogenesis/specification/INTENT.md#gtl-owns-program-meaning",
+        "repo://abiogenesis/specification/requirements/gtl/README.md#families"
+      ],
+      "source_refs": [
+        "repo://abiogenesis/specification/INTENT.md#program-and-runtime-boundary"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:abiogenesis:runtime-realization",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:abiogenesis:abg",
+        "urn:axiom-indexer:symbol:abiogenesis:hog"
+      ],
+      "detail": "The map captures constitutional ownership and constraints, not current implementation status, runtime event schemas, or executable proof evidence.",
+      "re_entry_refs": [
+        "repo://abiogenesis/specification/requirements/abg/README.md#families",
+        "repo://abiogenesis/specification/requirements/mapping/README.md#families"
+      ],
+      "source_refs": [
+        "repo://abiogenesis/specification/GOALS.md#current-selection",
+        "repo://abiogenesis/specification/INTENT.md#abg-owns-admitted-runtime-truth"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:abiogenesis:semantic-fidelity",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:abiogenesis:product"
+      ],
+      "detail": "Deterministic validation proves URI resolution, grounding, shape, and closure; it does not prove that this LLM-authored compression is complete or uniquely faithful.",
+      "re_entry_refs": [
+        "repo://abiogenesis/specification/GOALS.md#authority",
+        "repo://abiogenesis/specification/INTENT.md#governing-intent",
+        "repo://abiogenesis/specification/PRODUCT.md#product-statement"
+      ],
+      "source_refs": [
+        "repo://abiogenesis/specification/PRODUCT.md#product-completion-predicate"
+      ]
+    }
+  ]
+}

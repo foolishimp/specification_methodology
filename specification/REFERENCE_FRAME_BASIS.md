@@ -1,221 +1,262 @@
 # Axiom Indexer Project Reference-Frame Basis
 
-Status: Accepted source-project basis, revision 3.
+Status: proposed source-project basis, revision 6; exact Product-owner
+acceptance pending.
 
 ## Project Frame Basis
 
-This declaration instantiates four read-only project frames for constitutional
-extraction. It is a project configuration under the exact
-STDO Reference Frame Method; it does not redefine that method or adopt an
-optional role profile.
-
 ```text
-frame_set_id = "urn:axiom-indexer:frame-set:constitutional-extraction:3"
-method_basis = "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md"
-method_sha256 = "sha256:a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174"
-spec_method_basis = "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#collective-reference-frame-basis"
-spec_method_sha256 = "sha256:50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c"
-release_manifest_sha256 = "sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551"
+frame_set_uri = "urn:axiom-indexer:frame-set:release-readiness:6"
+governed_workspace = "repo://axiom-indexer/"
 governed_subject = "urn:axiom-indexer:bounded-context:product"
-governed_outcome = "target-neutral constitutional extraction"
-frame_set_authority = "urn:axiom-indexer:authority:product-owner"
-frame_set_grant = "urn:axiom-indexer:grant:product-owner:1"
-acceptance_record = "../.ai-workspace/decisions/20260829T184859_frame_basis_acceptance.json"
+governed_outcome = "qualify and publish the bounded 0.1.0 MVP"
+method_basis = "stdo://releases/v2.5.0-rc.1/standards/REFERENCE_FRAME_METHOD.md"
+method_sha256 = "sha256:90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f"
+release_method = "stdo://releases/v2.5.0-rc.1/standards/RELEASE_METHOD.md"
+release_method_sha256 = "sha256:c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0"
+stdo_manifest_sha256 = "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
 ```
 
-The Product authority and the digest-bound acceptance record admit this frame
-set. Goals, Intent, Product, and requirements listed below are material basis
-sources. Their inclusion supplies no frame-set, semantic, operation, or
-decision authority.
+The declaration applies to the Axiom Indexer source project and its first
+repository-carried release subject. Pre-publication activation binds a complete
+deterministic candidate inventory, Product members, claim bytes, dependencies,
+qualification basis, and activation time; it does not require an RC tag.
+Post-publication exact-cut activation binds the annotated RC tag object, peeled
+commit, tree, those same members and claim bytes, remote refs, and activation
+time. A mutable branch name, ambient conversation, path count, or passing test
+total is not an exact basis.
 
-## Governed Workspace And Basis Law
+## Human Authority
 
-The governed workspace is the resolved Axiom Indexer source-project root. Each
-activation shall bind:
+- Frame-set declaration and acceptance authority:
+  `urn:axiom-indexer:authority:product-owner`.
+- Semantic authority: the owners of each source, frame, and Product relation
+  under `specification/PRODUCT.md#product-disposition-authority`.
+- Evaluation authority: one explicitly assigned read-only evaluator for one
+  exact activation.
+- Operation authority: none is granted by this frame set. Construction,
+  publication, tag movement, and remote mutation require separate authority.
+- Decision authority: the Product owner disposes the candidate and accepts or
+  rejects an exact immutable RC.
 
-- the exact candidate subject URI and content digest;
-- this frame-set identity, revision, selected frame identity, declaration URI,
-  and declaration content digest;
-- the exact repository or source-project basis on which the candidate exists;
-- the STDO release and method identities above;
-- every material source URI and content digest required by the selected frame;
-- the exact evaluation, actor identity, capability envelope, evaluation grant,
-  evidence-acquisition boundary, and stop states; and
-- any required assurance-independence conditions.
+Agents may propose and evaluate this frame set. They may not accept it. Human
+acceptance must bind the exact declaration digest in a durable decision record.
 
-An unresolved or mutable method basis, missing material source, frame-
-declaration mismatch, subject/digest mismatch, or ambiguous bounded context
-returns `invalid_basis` before evaluation. A changed frame declaration,
-subject, material-source byte set, actor, evidence boundary, or activation
-grant requires a fresh activation.
+## Shared Coordinates, Evidence, And Results
 
-## Known Evaluation Inventory
+Semantic coordinates compare by URI, owner, scope, and exact content identity.
+Candidate coordinates compare by complete inventory digest, Product member set,
+claim bytes, dependency identities, and qualification basis. Exact-cut
+coordinates add the annotated tag object, peeled commit, tree, and remote refs.
+Same names, paths, counts, or prose do not establish equality.
 
-| Evaluation | Predicate | Material sources |
-|---|---|---|
-| `E-PRODUCT-BOUNDARY` | The candidate preserves the common Product, target-profile, carrier-tenant, target-Product, and consumer boundaries. | `GOALS.md`, `INTENT.md`, `PRODUCT.md` |
-| `E-ALGEBRA-CLOSURE` | The candidate closes identities, references, accepted-population lineage, constraints, latitude, residuals, judgments, and source routes under the selected calculus and target profile. | `PRODUCT.md`; basis, algebra, selection, and projection requirements |
-| `E-AUTHORITY-SEPARATION` | Proposal, structural inspection, semantic selection, encoding, carrier admission, artifact acceptance, release, invocation, and downstream decision authority remain distinct. | `PRODUCT.md`; compilation, selection, carrier, and projection requirements |
-| `E-TARGET-CARRIER-ISOLATION` | Target meaning cannot select or be reshaped by carrier mechanics, and carrier law cannot ratify semantics. | `PRODUCT.md`; basis, algebra, carrier, and projection requirements |
+Admissible evidence is exact source or immutable reacquisition evidence,
+URI-addressed claims and counterexamples, deterministic diagnostics, observed
+tool outputs, retained dogfood results, Git object identities, and independent
+judgments where required. Schema, hash, parse, or test success proves only its
+declared mechanical property.
 
-Known material interactions are compilation-to-selection-to-encoding-to-
-admission, candidate-to-accepted-population conservation, target-to-carrier
-independence, and accepted-parent-to-projection closure. Frame-declaration and
-activation validity are preconditions governed by the shared basis law above,
-not an additional evaluation in this inventory.
-
-## Shared Frame Relations
-
-These relations are inherited by each declaration below and complete its
-`F = <Q,B,M,C,I,A,E,X,R,J,K,D>` tuple.
-
-### Coordinates And Equality `C`
-
-Material identities are compared by exact semantic address, content digest,
-bounded context, owner, scope, and basis. Same spelling, filename, or prose is
-not equality. Cross-surface claims require exact cited relations rather than
-textual similarity.
-
-### Authority `A`
-
-- Source owners and the current WHAT surfaces own their meaning.
-- The frame-set authority declares and accepts this reusable configuration.
-- An exact work instruction grants a capable actor read-only evaluation
-  authority for one activation.
-- These frames declare no operation authority.
-- The activated evaluator returns a result and cannot accept the Product,
-  semantic subject, artifact, or release.
-- The Product owner retains disposition authority over source-project changes.
-- Actor, semantic, evaluation, operation, and decision identities never
-  collapse by role name or participation.
-
-### Evidence `E`
-
-Admissible evidence consists of exact candidate and basis bytes or immutable
-reacquisition routes, semantic-addressed citations, explicit counterexamples,
-and independently identified judgments or receipts where required. Hashes,
-schema success, parsing, and deterministic structural checks prove only their
-declared properties. They cannot prove semantic sufficiency or acceptance.
-
-### Results `R`
-
-Every completed evaluation returns exactly one of:
+Each evaluation returns exactly one of:
 
 - `satisfied`;
-- `falsified` with at least one material counterexample;
-- `indeterminate` with the undecidable evidence boundary;
-- `out_of_frame` with the missing material relation or capability; or
-- `invalid_basis` with the failed subject or basis relation.
+- `falsified` with a URI-addressed counterexample;
+- `indeterminate` with missing evidence;
+- `out_of_frame` with the required additional frame; or
+- `invalid_basis` with the unresolved subject, source, identity, or authority.
 
-`activation_refusal` is a pre-evaluation outcome, not an evaluation result. It
-applies when actor capability, evaluation authority, independence, or the
-evidence-acquisition boundary is absent or conflicting.
+Every result names the frame, exact activation basis, evaluator, evidence,
+verdict, residuals, and invalidation conditions.
 
-### Invalidation And Revision `J`
+## Evaluation Inventory And Selected Frames
 
-An activation is invalidated by any change to its subject, basis, actor,
-capability, grant, evidence law, or required material bytes. This frame-set
-declaration requires revision and new acceptance when the governing STDO
-method, evaluation inventory, frame tuple, authority split, capability law,
-result algebra, material topology, coverage map, or known blind spots change.
+### F-AUTHORING-ESSENCE
 
-### Common Capability Envelope `K`
+- Evaluation: does the program capture operative symbols, relations,
+  constraints, and material uncertainty rather than restating prose?
+- Evidence: exact program, source and frame URIs, residuals, and required source
+  re-entry.
+- Invariants: every semantic item is source-linked; uncertainty remains
+  explicit; source meaning is not invented.
+- Actor envelope: `K-AUTHORING`.
+- Exclusions: byte size, polish, and apparent completeness do not prove useful
+  compression.
 
-The actor must fit the bounded material surface; resolve and verify the exact
-STDO and project bases; traverse semantic addresses and authority relations;
-distinguish probabilistic proposal, semantic adjudication, deterministic
-inspection, construction, and admission; cite exact evidence; retain
-uncertainty; and refuse when the frame is insufficient. No ambient
-conversation history may be required.
+### F-SYMBOLIC-INTEGRITY
 
-## Frame Declarations
+- Evaluation: are identities and relations late-bound through stable URIs and
+  reproducible bindings?
+- Evidence: exact program, Binding Set, resolved resources, validation report,
+  logical map, and relocation falsifiers.
+- Invariants: unique absolute identities, binding-root confinement, reference
+  closure, and deterministic map instantiation.
+- Actor envelope: `K-SYMBOLIC`.
+- Exclusions: line numbers, positions, counts, and physical paths are not
+  semantic identities.
 
-### `F-PRODUCT-BOUNDARY`
+### F-VALIDATION-BOUNDARY
 
-- `Q`: evaluate `E-PRODUCT-BOUNDARY`.
-- `B`: exact candidate plus Goals, Intent, Product, and this declaration.
-- `M`: Product terms, owned capabilities, extension axes, outputs, non-goals,
-  target/tenant/consumer relations, and source-project authority.
-- `I`: target neutrality, carrier neutrality, one common Product authority,
-  and no unselected target, carrier, implementation, artifact, or release.
-- `X`: generated views, comments, target-specific precedent, and implementation
-  convenience cannot redefine the common Product.
-- `K`: common envelope plus Product-boundary and recursive-Product-taxonomy
-  competence.
-- `D`: overlaps `F-AUTHORITY-SEPARATION` and
-  `F-TARGET-CARRIER-ISOLATION`; its closed result may feed a Product-owner
-  disposition but does not decide it.
+- Evaluation: do validation and joining remain inside their declared
+  mechanical contracts?
+- Evidence: exact implementation, requirements, positive cases, refusal cases,
+  and byte-comparison results.
+- Invariants: code does not author or repair meaning; the joiner preserves
+  caller-supplied labels, text, and order; diagnostics do not claim semantics.
+- Actor envelope: `K-VALIDATION`.
+- Exclusions: green tests do not establish truth, fidelity, acceptance, or
+  usefulness.
 
-### `F-ALGEBRA-CLOSURE`
+### F-DOGFOOD-USEFULNESS
 
-- `Q`: evaluate `E-ALGEBRA-CLOSURE`.
-- `B`: exact candidate plus Product and the basis, algebra, selection, and
-  projection requirements; a selected calculus or target profile is mandatory
-  when the subject claims their concrete conformance.
-- `M`: candidate population, accepted model, source bindings, selection ledger,
-  semantic-selection judgment, identities, references, constraints, latitude,
-  residuals, projection closure, and re-entry routes.
-- `I`: finite closed signature, unique typed resolution, total source-preserving
-  candidate disposition, explicit uncertainty, and no silent semantic loss.
-- `X`: cardinality alone, structural eligibility, carrier success, similarity,
-  or omission-by-silence cannot establish semantic closure.
-- `K`: common envelope plus competence in the selected calculus, identity law,
-  fixed-point closure, and counterexample construction.
-- `D`: consumes the exact accepted-population and projection claims and overlaps
-  `F-AUTHORITY-SEPARATION` at the semantic-selection gate.
+- Evaluation: does a fresh LLM use the map and skill for real work with bounded
+  source re-entry and retain a useful improvement?
+- Evidence: exact skill, program, map, request, fresh-agent result, re-entry
+  routes, and retained Product change.
+- Invariants: initial context omits the complete corpus; the map remains a read
+  model; selected frames remain visible; source authority is preserved.
+- Actor envelope: `K-DOGFOOD`.
+- Exclusions: fixture success, artifact presence, or token reduction alone does
+  not establish usefulness.
 
-### `F-AUTHORITY-SEPARATION`
+### F-CANDIDATE-READINESS
 
-- `Q`: evaluate `E-AUTHORITY-SEPARATION`.
-- `B`: exact candidate plus Product and compilation, selection, carrier, and
-  projection requirements.
-- `M`: actors, subjects, grants, evidence boundaries, judgments, construction
-  operations, admissions, acceptances, release, invocation, and closure.
-- `I`: semantic compilation proposes; structural inspection proves only
-  declared form; semantic selection issues an external exact-subject judgment;
-  encoding constructs under that judgment; carrier admission judges unchanged
-  bytes; downstream owners retain their own authority.
-- `X`: authorship, visibility, human presence, schema success, successful use,
-  deterministic admission, or role labels cannot mint authority.
-- `K`: common envelope plus authority-graph, judgment-identity, and operation-
-  versus-evaluation competence.
-- `D`: overlaps every other frame where a material claim could collapse owner,
-  evaluator, constructor, admitter, or disposer.
+- Evaluation: is one frozen candidate ready for immutable RC publication under
+  the declared Product member, claim, dependency, exclusion, qualification,
+  and first-release relations?
+- Evidence: `releases/v0.1.0.md`, complete deterministic candidate inventory,
+  member and claim bytes, dependency verification, pre-RC results, publication
+  plan, and remote namespace observations.
+- Invariants: candidate readiness requires no published tag; excluded carrier
+  bytes gain no Product status; a satisfied result grants no publication
+  operation authority.
+- Actor envelope: `K-CANDIDATE`.
+- Exclusions: a branch, path list, local test total, or intended tag name does
+  not establish candidate readiness.
 
-### `F-TARGET-CARRIER-ISOLATION`
+### F-EXACT-CUT
 
-- `Q`: evaluate `E-TARGET-CARRIER-ISOLATION`.
-- `B`: exact candidate plus Product and basis, algebra, carrier, and projection
-  requirements; selected target and carrier profiles are required only when a
-  concrete extension is being evaluated.
-- `M`: target population and interpretation laws, common accepted semantics,
-  carrier mappings, canonicalization, admission, projection encoding, gaps,
-  and refusal paths.
-- `I`: target profiles do not select carriers; carrier profiles do not shape
-  compilation or accepted meaning; unsupported accepted meaning produces an
-  explicit carrier gap or refusal.
-- `X`: first-implementation precedent, carrier schema, token budget, storage,
-  and runtime convenience cannot become semantic-selection input.
-- `K`: common envelope plus target/profile and carrier/admission boundary
-  competence.
-- `D`: overlaps `F-PRODUCT-BOUNDARY` and `F-AUTHORITY-SEPARATION`; a selected
-  target or carrier may add separately owned specialist frames.
+- Evaluation: does the published immutable RC exactly carry the ready candidate
+  and satisfy exact-cut qualification and acceptance prerequisites?
+- Evidence: annotated RC and selector tag objects, peeled commit and tree,
+  remote refs, reacquired Product members and claim bytes, closed candidate
+  results, and independent exact-cut review.
+- Invariants: immutable RC tags never move; `v0.1.0` is only the mutable
+  highest-published selector; candidate and cut bytes must agree; qualifying-byte
+  repair produces a higher RC.
+- Actor envelope: `K-EXACT-CUT`.
+- Exclusions: this frame is not activated before publication. A lightweight
+  tag, local-only ref, source-only test, or approval lacking exact-cut identity
+  cannot establish exact-cut qualification.
 
-## Coverage, Exclusions And Residuals
+## Actor Capability Envelopes
 
-| Evaluation or interaction | Primary frame | Overlapping frame | Coverage status | Residual |
-|---|---|---|---|---|
-| Product and extension boundary | `F-PRODUCT-BOUNDARY` | `F-TARGET-CARRIER-ISOLATION` | covered | Concrete target, tenant, and consumer claims require their own selected bases. |
-| Candidate and accepted-program closure | `F-ALGEBRA-CLOSURE` | `F-AUTHORITY-SEPARATION` | covered | Concrete calculus conformance requires a selected calculus basis. |
-| Proposal, judgment, construction, and admission chain | `F-AUTHORITY-SEPARATION` | `F-ALGEBRA-CLOSURE` | covered | Effectful realization and downstream authority require separate frames. |
-| Target/carrier bidirectional isolation | `F-TARGET-CARRIER-ISOLATION` | `F-PRODUCT-BOUNDARY` | covered | Concrete profile conformance requires selected target and carrier bases. |
-| Accepted parent and bounded projection | `F-ALGEBRA-CLOSURE` | `F-TARGET-CARRIER-ISOLATION` | covered | Runtime usefulness and invocation behavior remain downstream evaluations. |
+Each activation records the actual actor identity, model or tool version,
+configuration, context boundary, access, and prior involvement.
 
-This frame set covers the known constitutional-extraction evaluations above.
-It does not claim universal completeness, design or implementation
-qualification, calculus conformance without a selected calculus, target or
-carrier conformance without their selected profiles, target-artifact
-acceptance, release qualification, runtime behavior, or downstream migration.
-Those are explicit residuals requiring fresh bases and, where material,
-additional specialist frames. A discovered blind spot returns `out_of_frame`
-and triggers frame-set repricing rather than silent expansion.
+| Envelope | Actor class and configuration | Context, tools, and access | Independence and stop law |
+|---|---|---|---|
+| `K-GOVERNANCE` | Product owner or explicitly admitted authority verifier capable of exact-basis and digest-bound decision handling; STDO basis and identity configuration recorded | proposed frame bytes, Product disposition authority, overlay bytes, digest and schema tools, and durable decision surface | only the Product owner accepts; an agent may verify or present but not decide; stops on identity, digest, scope, or authority mismatch |
+| `K-AUTHORING` | semantic evaluator capable of `a_c`, source comparison, residual analysis, and URI reasoning; actual model and instructions recorded | exact program, calculus, selected frames, source routes, and read-only source access within the activation budget | records authorship and prior exposure; no independent-assurance claim if the evaluator authored the subject; stops on missing source, frame, or capacity |
+| `K-SYMBOLIC` | technical evaluator capable of URI, confinement, canonicalization, and graph analysis; resolver and encoding configuration recorded | exact program, bindings, resources, diagnostics, map, and read-only filesystem/tool access | consumes no unclosed semantic verdict; stops on ambiguous binding, inaccessible bytes, or unsupported coordinate law |
+| `K-VALIDATION` | Python reviewer and test operator capable of counterexample construction and deterministic replay; Python, platform, optimization, and tool versions recorded | exact requirements, implementation, tests, temporary output space, and read-only Product inputs | evaluator does not repair qualifying bytes during activation; assurance use records non-authorship and prior exposure; stops on environment or evidence drift |
+| `K-DOGFOOD` | fresh LLM task actor capable of native skill pickup, map traversal, task disposition, and URI re-entry; model, skill, and request configuration recorded | initially bounded skill, map, and request context; read-only source access only through declared re-entry routes | no prior complete-corpus or expected-answer exposure; stops and reports if source, residual, authority, or context boundary is insufficient |
+| `K-CANDIDATE` | release-readiness evaluator capable of STDO release law, inventory, claim matching, Git planning, and dependency verification; exact tool versions recorded | frozen candidate inventory, release record, closed Product-frame results, local Git object inspection, and read-only remote namespace access | no publication authority from evaluation; construction involvement is disclosed; stops on mutable or incomplete inventory, unresolved remote, claim, dependency, or qualification evidence |
+| `K-EXACT-CUT` | separately activated release assessor capable of remote reacquisition, annotated-tag inspection, tree/member comparison, and claim-to-evidence review; exact tool versions recorded | published refs, clean reacquisition, exact release record, candidate-result identities, governing Product and methods, and read-only remote access | assessor did not author qualifying repairs and receives only closed candidate results; stops on tag, tree, selector, remote, member, claim, or provenance mismatch |
+
+## Coverage Ledger
+
+The inventory derives from Goals, Intent, Product, active requirements, the
+release record, core realization and tests, retained self and ABIogenesis
+dogfood, prior frame-basis replacement, and the installed STDO Reference Frame
+and Release methods.
+
+| ID and evaluation | Provenance | Subject and basis | Selected frame | Actor envelope | Semantic authority | Operation authority | Decision authority | Evidence | Dependencies | Status | Residual or re-entry |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| `C0` exact frame-set acceptance and Product Definition binding | Reference Frame Method; Product disposition authority; T-002 | exact declaration digest plus overlay bytes under STDO `v2.5.0-rc.1` | external governing acceptance relation; no frame self-accepts | `K-GOVERNANCE` | Product owner | separately granted overlay editor; none from evaluation | Product owner | digest-bound acceptance record and valid `stdo status --verify` | prerequisite to frame activation | separately covered | exact human acceptance and overlay binding pending |
+| `C1` semantic compression and residual honesty | Goals; Intent; Product; `REQ-P-AUTHORING` | exact program, calculus, source, frames, and source bytes | `F-AUTHORING-ESSENCE` | `K-AUTHORING` | source and frame owners | none | Product owner disposes usefulness claim | program, sources, residuals, source comparison | `D-AR`, `D-AD` | conditionally covered | requires exact activation; semantic uncertainty remains explicit |
+| `C2` URI identity, resolution, and map closure | Product; `REQ-P-PROGRAM`; `REQ-P-RESOLUTION` | exact program, Binding Set, resources, report, and map | `F-SYMBOLIC-INTEGRITY` | `K-SYMBOLIC` | Product owns contract; source owners own bytes | none | Product owner | resolved digests, diagnostics, relocation and escape falsifiers | `D-AR`, `D-SV` | conditionally covered | missing or ambiguous binding returns failure or re-entry |
+| `C3` validator and joiner mechanical boundary | Product; `REQ-P-VALIDATION`; `REQ-P-JOINING` | exact requirements, implementation, tests, inputs, and outputs | `F-VALIDATION-BOUNDARY` | `K-VALIDATION` | Product owns mechanical contract | none | Product owner | normal and optimized tests, counterexamples, exact output comparisons | `D-SV`, `D-VD` | conditionally covered | environment drift or untested claim narrows evidence |
+| `C4` native pickup and practical consistency | Goal completion; Product dogfood predicate; retained dogfood | exact skill, map, request, result, initial-context boundary, and re-entry bytes | `F-DOGFOOD-USEFULNESS` | `K-DOGFOOD` | source owners; Product owns usefulness claim | none | Product owner | fresh-agent inputs/results, opened URIs, retained changes | `D-AD`, `D-VD`, `D-PC` | conditionally covered | broader usefulness and semantic truth remain unclaimed |
+| `C5` pre-publication candidate readiness | Release Method candidate/publication phases; T-002; release record | deterministic candidate inventory, Product members, claim bytes, dependencies, qualification results, and publication plan | `F-CANDIDATE-READINESS` | `K-CANDIDATE` | Product and release-record owners | separately granted publisher after closed result; none from evaluation | Product owner disposes candidate | inventory, release record, dependency verification, closed `C1`-`C4` results, remote namespace observation | `D-PC`; `C0` prerequisite | conditionally covered | exact candidate activation and publication operation grant pending |
+| `C6` post-publication exact-cut qualification and acceptance readiness | Release Method exact-cut phase; release record | annotated RC and selector objects, peeled commit, tree, remote refs, reacquired members and claims | `F-EXACT-CUT` | `K-EXACT-CUT` | Product and release-record owners | none; evaluation is read-only | Product owner accepts or rejects exact RC | remote reacquisition, tag/tree/member comparison, independent review, closed `C5` result | `D-CX`; published RC prerequisite | conditionally covered by phase | not activated until publication; any qualifying-byte repair requires higher RC |
+
+## Material Interactions And Result Consumption
+
+| Relation | Producer to consumer | Shared coordinate | Consumption and failure law |
+|---|---|---|---|
+| `D-AR` authoring-resolution | `F-AUTHORING-ESSENCE` to `F-SYMBOLIC-INTEGRITY` | exact program digest, authored source/frame URIs, and residual re-entry URIs | symbolic evaluation consumes the frozen authored coordinates; unresolved, escaped, or changed bytes return failure or `invalid_basis`, never silent repair |
+| `D-SV` symbolic-validation | `F-SYMBOLIC-INTEGRITY` to `F-VALIDATION-BOUNDARY` | exact program, Binding Set, resolved digests, diagnostics, and map identity | validation-boundary evaluation consumes closed symbolic coordinates; tests on another program, binding, or map prove nothing about this subject |
+| `D-AD` authoring-dogfood | `F-AUTHORING-ESSENCE` to `F-DOGFOOD-USEFULNESS` | exact program/map meaning, residuals, and source routes | dogfood tests usefulness without converting its result into semantic truth; source disagreement re-enters authoring authority |
+| `D-VD` validation-dogfood | `F-VALIDATION-BOUNDARY` to `F-DOGFOOD-USEFULNESS` | valid report, map digest, joined-request bytes, and refusal law | dogfood consumes only closed validation outputs for the same bytes; an invalid, stale, or mismatched result makes the dogfood activation `invalid_basis` |
+| `D-PC` Product-candidate | closed `F-AUTHORING-ESSENCE`, `F-SYMBOLIC-INTEGRITY`, `F-VALIDATION-BOUNDARY`, and `F-DOGFOOD-USEFULNESS` results to `F-CANDIDATE-READINESS` | result identities plus candidate inventory, Product members, claims, and dependencies | candidate readiness consumes closed results without reinterpreting them; conflict, missing evidence, or byte mismatch prevents a satisfied result |
+| `D-CX` candidate-exact-cut | `F-CANDIDATE-READINESS` to `F-EXACT-CUT` | candidate inventory digest, members, claims, dependencies, and qualification-result identities | exact-cut review rebinds the closed candidate result to the published tree and tag objects with no lossy translation; mismatch rejects the cut or requires a higher RC |
+
+Only closed results cross frame boundaries. Unclosed working context, persona
+labels, and ambient conversation are not inputs.
+
+## Intentional Overlap And Independence
+
+Authoring essence and dogfood usefulness overlap because structurally valid
+compression may still be useless. Symbolic integrity and validation overlap
+because a declared rule needs counterexamples at its implementation boundary.
+Dogfood and validation overlap at exact report, map, and request identities;
+neither result proves the other frame's claim.
+
+Exact-cut review is separately activated from candidate construction. A role
+label alone establishes no independence; the activation records reviewer,
+configuration, evidence-acquisition boundary, subject, prior involvement, and
+closed candidate results exposed after freeze.
+
+## Phase Configurations And Conjunction
+
+### Pre-publication candidate readiness
+
+`C0` is a governance prerequisite. Once it is satisfied, activate
+`F-AUTHORING-ESSENCE`, `F-SYMBOLIC-INTEGRITY`, `F-VALIDATION-BOUNDARY`,
+`F-DOGFOOD-USEFULNESS`, and `F-CANDIDATE-READINESS` over one frozen candidate.
+All five must return `satisfied`. The closed conjunction may be consumed by a
+separately authorized publisher. `F-EXACT-CUT` is not activated and cannot veto
+publication because its subject does not yet exist.
+
+### Post-publication exact-cut qualification
+
+After publication, activate `F-EXACT-CUT` over the immutable RC. It consumes
+the closed candidate-readiness identity and requires exact equality between the
+published tree and ready-candidate members, claims, dependencies, and evidence
+subjects. A `satisfied` result supports, but does not perform, Product-owner RC
+acceptance. Any qualifying-byte repair creates a higher RC and a new
+activation.
+
+No lossy coordinate or result translation is admitted between phases.
+
+## Residual Uncertainty
+
+- The exact RC tag object and post-publication activation do not exist during
+  candidate readiness; this is a phase condition, not a pre-publication gap.
+- Python behavior is currently observed on the qualified host; broader runtime
+  portability is not claimed without matching evidence.
+- Semantic truth, unique interpretation, complete `M_b` admission, GTL,
+  automatic frame selection, carrier admission, and prompt orchestration remain
+  outside this release outcome.
+- Undiscovered material evaluations remain possible. A new material relation
+  returns `out_of_frame` and triggers re-entry rather than silent scope growth.
+
+## Revision Triggers
+
+Revise and reacquire acceptance when Product meaning, requirements, member or
+claim sets, calculus or STDO bases, frame evaluations, authority, capability,
+evidence law, release line, topology, or known failure interactions change.
+Any qualifying-byte change invalidates prior activations and requires a fresh
+candidate result or higher immutable RC as applicable.
+
+## Acceptance Gate
+
+Revision 6 remains proposed until the Product owner accepts its exact SHA-256.
+The durable decision must name this frame-set URI and digest, actor and authority
+identities, decision, scope, and time. Only then may `stdo_default.json` bind
+this basis with both:
+
+- `./specification/PRODUCT.md#product-disposition-authority`; and
+- the exact digest-bound acceptance record.
+
+Editing this file after presentation changes its subject and requires a new
+digest and decision.

@@ -1,7 +1,15 @@
 # Axiom Indexer Core Build Tenant
 
-This tenant is the routing surface for a future realization of the common
-Axiom Indexer capability. No design or implementation is selected.
+The core tenant realizes the MVP boundary:
 
-Target profiles and carrier tenants are separate extensions. This core tenant
-shall not absorb their vocabulary, validators, runtime, or publication law.
+```text
+native skill -> LLM-authored program -> resolver/validator -> logical map
+  -> Executive-authored labeled sections -> exact string join
+```
+
+The LLM owns semantic interpretation and repair. The implementation owns only
+symbolic URI resolution, declared consistency checks, diagnostics, and map
+instantiation. It also joins caller-supplied labels and text without selecting
+or changing them.
+
+Target-specific corpora and future GTL composition remain separate extensions.

@@ -1,43 +1,76 @@
 # Axiom Indexer Goals
 
-## GOAL-001 — Establish the target-neutral Axiom Indexer Product
+## GOAL-001 — Dogfood the smallest useful Axiom Indexer
+
+Status: completed
+
+Build one LLM-first loop:
+
+```text
+exact a_c URI + source URIs + frame URIs + tight skill instructions
+  -> LLM-authored axiomatic program
+  -> URI resolution and basic validation
+  -> diagnostics
+  -> LLM repair or use
+  -> Executive-selected labeled sections -> exact string join
+```
+
+`a_c` compresses the operative meaning of documents into a logical constraint
+map. The map may be larger than its prose source. Its value is explicit,
+reusable logic, not byte reduction.
+
+### Completion
+
+- One portable native skill tells an LLM how to author and use the program.
+- One small tool resolves symbolic URIs, instantiates the map, and returns
+  structured diagnostics.
+- The same tool joins an LLM-supplied ordered list of labels and text without
+  selecting, rewriting, or interpreting its content.
+- The validator checks identity, reference, source binding, clause shape, and
+  residual closure without authoring semantic content.
+- The Tool's own Goals, Intent, Product, and requirements are represented by a
+  valid program.
+- A fresh agent uses that program, without the complete source corpus in its
+  initial context, to perform one useful Product task.
+- The observed result drives at least one retained improvement to the skill,
+  program, validator, or Product.
+- Acting as Executive, an LLM uses the map and selected reference frames to
+  build one request whose frame URIs, purposes, and source routes remain
+  visible for debugging.
+
+### Disposition
+
+GTL carrier composition, automatic frame selection, fixed multi-model prompt
+systems, semantic approval, and carrier admission remain later Product work.
+The retained self and ABIogenesis dogfood evidence establishes sufficient
+usefulness to select a bounded first publication wave.
+
+## GOAL-002 — Publish Axiom Indexer 0.1.0
 
 Status: active
 
-Establish the constitutional WHAT for a reusable Product that compiles one
-exact governed document corpus into a candidate axiomatic program, preserves
-semantic uncertainty and source re-entry, subjects that candidate to exact
-selection, and encodes the accepted program as a machine-addressable Axiom
-Index.
+Publish the current repository-carried MVP without expanding its Product
+meaning.
 
-### Current selection
+### Completion
 
-- Govern this source project with exact STDO cut `v2.4.3-rc.3`.
-- Keep document-target profiles independent from carrier tenants.
-- Define a closed carrier-neutral index algebra and exact source-basis law.
-- Distinguish semantic proposal, structural inspection, semantic selection,
-  carrier construction, structural admission, and downstream consumption.
-- Provide exact least-closure context projection without embedding a prompt,
-  model, workspace, runtime, or decision authority.
-- Keep every named target corpus, calculus Product, carrier, implementation,
-  and release unselected until separately accepted.
+- The exact Product member set, release claims, dependencies, exclusions, and
+  first-release successor disposition are declared in `releases/v0.1.0.md`.
+- One concise project frame set covers semantic compression, symbolic
+  integrity, validation boundaries, dogfood usefulness, and exact release
+  identity under the installed STDO basis.
+- The Product owner accepts the exact frame-set bytes and the Product
+  Definition names that acceptance without relying on ambient conversation.
+- Pre-RC qualification passes against one frozen candidate carrier.
+- An annotated immutable `v0.1.0-rc.<n>` cut and annotated `v0.1.0` selector
+  are published over the same commit and verified remotely.
+- Independent exact-cut review and Product-owner acceptance bind the immutable
+  RC tag object, peeled commit, tree, member set, and claim bytes.
 
-### Completion conditions
+### Boundary
 
-- The Product Definition resolves and verifies against its exact installed
-  governing basis.
-- Intent, Product, and requirements define one target-neutral Product without
-  importing target-specific vocabulary or carrier semantics.
-- The common algebra closes identity, reference, constraint, latitude,
-  residual, source-reentry, and projection relations.
-- A semantic compilation candidate cannot become an accepted axiomatic program
-  without an exact semantic-selection judgment.
-- Every accepted semantic-selection judgment conserves the complete candidate
-  population through exact retained, replacement, residual, omission, or
-  rejection lineage.
-- Carrier admission cannot rewrite, rename, or semantically ratify its subject.
-- A context budget cannot silently remove mandatory closure members.
-- The accepted project frame basis declares reconstructable frames, complete
-  authority and result relations, known evaluation coverage, and residuals.
-- No target profile, carrier tenant, runtime engine, or implementation is
-  selected by this constitutional extraction.
+This goal authorizes release authority, qualification, carrier publication,
+and exact-cut acceptance for the declared MVP only. It does not authorize GTL,
+semantic acceptance, carrier admission, automatic frame selection, a prompt
+engine, or changes to the core implementation and native skill merely to add
+release ceremony.

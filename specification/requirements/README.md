@@ -1,15 +1,17 @@
 # Axiom Indexer Requirements
 
-These requirements define the target-neutral constitutional contract.
+The MVP has five requirement families:
 
-| Requirement family | Owns |
+| Family | Owns |
 |---|---|
-| `REQ-P-BASIS-AND-IDENTITY` | corpus, calculus, target, candidate, program, carrier and projection identity |
-| `REQ-P-SEMANTIC-COMPILATION` | probabilistic proposal and candidate structural boundary |
-| `REQ-P-AXIOM-INDEX-ALGEBRA` | closed carrier-neutral program and reference law |
-| `REQ-P-SELECTION-AND-ACCEPTANCE` | exact semantic-selection judgment, population conservation and target-artifact acceptance governance |
-| `REQ-P-CARRIER-AND-ADMISSION` | independent encoding and unchanged-subject structural admission |
-| `REQ-P-CONTEXT-PROJECTION` | assignment-bound least closure and context packets |
+| `REQ-P-AUTHORING` | LLM semantic compression and residual honesty |
+| `REQ-P-PROGRAM` | the symbolic axiomatic-program contract |
+| `REQ-P-RESOLUTION` | URI late binding and source re-entry |
+| `REQ-P-VALIDATION` | small deterministic checks and diagnostics |
+| `REQ-P-JOINING` | exact LLM-supplied labeled-text joining |
 
-Named document families, carrier languages, runtime engines, and role profiles
-belong to separately selected target, tenant, or consuming-Product surfaces.
+The LLM authors meaning and selects request frames, labels, text, and order.
+Code resolves, validates, instantiates, reports, and joins. GTL, automatic
+frame selection, carrier admission, and semantic acceptance remain deferred.
+Release publication adds no Product requirement family; the installed STDO
+Release Method and the selected release record govern each point-in-time cut.

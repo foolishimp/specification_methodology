@@ -1,322 +1,190 @@
 # Axiom Indexer Product
 
-Status: active source definition; no released Axiom Indexer Product or accepted
-target index artifact exists.
-
-## Product Terms
-
-Within `urn:axiom-indexer:bounded-context:product`:
-
-- **Axiom Indexer Source Project** is this mutable workspace while it defines
-  and builds candidate Products.
-- **Target Corpus** is one exact, finite, authority-bound document population.
-- **Corpus Basis** identifies the target corpus, ordered members, exact member
-  bytes, governing authorities, and acquisition boundary.
-- **Axiomatic Calculus Basis** identifies the exact external calculus under
-  which a corpus may be interpreted as an axiomatic program.
-- **Target Profile** declares corpus-specific population, semantic-address,
-  source-reentry, required-closure, and refusal rules without changing the
-  common algebra.
-- **Semantic Compilation** is a bounded probabilistic traversal that proposes
-  a typed axiomatic interpretation of one exact corpus. It grants no semantic
-  or acceptance authority.
-- **Semantic Compilation Candidate** is the immutable proposed program,
-  source-selection rows, and explicit residual uncertainty returned by semantic
-  compilation.
-- **Axiomatic Program** is the exact candidate content accepted by an
-  authorized semantic-selection judgment under one corpus, calculus, and target
-  profile basis.
-- **Axiom Indexer** is the reusable Product capability that compiles candidate
-  programs, exposes them to structural inspection and externally authorized
-  semantic selection, encodes accepted programs, exposes encoded artifacts to
-  carrier admission, projects accepted programs, and exposes each encoded
-  projection to carrier admission while preserving those authority boundaries.
-- **Axiom Index** is one immutable, carrier-native, content-addressed artifact
-  encoding an Axiomatic Program whose exact program and ledger identities are
-  bound by an accepting Semantic Selection Judgment. A target Product may
-  separately accept and release that artifact under its own authority.
-- **Carrier Tenant** is one independent HOW realization that encodes the common
-  algebra in a selected carrier.
-- **Carrier Profile** is a versioned, exact mapping from the common algebra into
-  one carrier basis.
-- **Structural Inspection** evaluates declared form, basis, identity, and
-  closure properties without selecting semantic content.
-- **Semantic Selection Judgment** is an external exact-subject decision that
-  accepts, reworks, or rejects candidate semantic content under declared
-  authority and evidence. It binds the unchanged compilation candidate and
-  structural judgment to the exact resulting program and selection-ledger
-  identities when accepted.
-- **Carrier Admission Judgment** decides whether unchanged carrier bytes
-  satisfy their exact profile and carrier law.
-- **Projection Assignment** binds one exact accepted relation `(P_X, S_X,
-  J_X)`, selected carrier basis and profile, purpose, seed set, frames, actor
-  capability, required evidence, and context budget.
-- **Context Projection** is the exact least declared closure of an assignment's
-  seeds under the common projection law.
-- **Context Packet** is an invocation-input bundle containing an assignment,
-  carrier-native projection, manifest, required evidence, stop states,
-  residuals, and source-reentry routes. It is not a new Product or authority.
+Status: active source definition; first repository-carried release candidate
+selected; no immutable Axiom Indexer RC accepted.
 
 ## Product statement
 
-Axiom Indexer converts an exact governed corpus into a reviewable candidate
-axiomatic program, preserves the distinction between proposal and acceptance,
-and produces one or more carrier-native Axiom Index artifacts from the accepted
-program. The accepted program is reusable across downstream assignments and
-can be projected into bounded contexts before each projection is independently
-encoded and structurally admitted.
+Axiom Indexer is an LLM-first semantic-compression tool. An LLM turns exact
+documents into a source-linked axiomatic program. A small resolver and validator
+instantiate that program as a logical constraint map and return diagnostics the
+LLM can use to repair it.
 
-The Product is target-neutral and carrier-neutral at its common boundary. A
-target profile binds what corpus is being interpreted. A carrier tenant binds
-how accepted meaning is encoded. Neither extension axis may redefine the other
-or the common Product.
+The same executable exposes a pure labeled-text joiner. An Executive LLM uses
+the map and reference frames, supplies every label, section, and ordering
+choice, and receives their exact concatenation.
 
-## Core relation
+The Product is useful when the program makes later reasoning more consistent,
+inspectable, and source-reenterable. Smaller files or prompts are optional
+benefits, not the Product claim.
 
-```text
-X_B = (B, M_B, D_B)
-B   = exact Corpus Basis
-M_B = duplicate-free ordered member inventory
-D_B = exact member bytes addressed by M_B
-A   = exact Axiomatic Calculus Basis
-T   = exact Target Profile
-H_X = exact semantic-selection activation binding actor, authority, grant and evidence boundary
+## Product terms
 
-Compile(X_B, A, T, I_C, R_C, K_C)
-  -> Q_X* = (P_X*, S_X*, U_X*) | hold | gap | refusal
+- **Source URI** is a stable symbolic address for a document or semantic
+  fragment. It is not a line number.
+- **Binding Set** maps logical URI prefixes to physical or immutable resources
+  for one invocation.
+- **Frame URI** identifies vocabulary or operator guidance loaded only when
+  needed.
+- **a_c.text Axiomatic Program** is the LLM-authored, source-facing semantic
+  compression under one exact `a_c` source:
 
-Inspect(Q_X*, A, T)
-  -> D_Q = eligible | refuse
+  ```text
+  P = (uri, calculus_ref, source_basis, frame_refs, vocabulary_refs,
+       symbols, clauses, residuals)
+  ```
 
-Select(Q_X*, X_B, D_Q = eligible, H_X)
-  -> J_X = accepted(P_X, S_X) | rework | rejected
+  It is the MVP authoring surface for an axiomatic logical map. It does not by
+  itself claim a complete admitted `a_c` model `M_b`; that stronger mapping and
+  its carrier proof remain later work.
 
-Encode_C(P_X, S_X, J_X, Profile_C, Basis_C)
-  -> G_X,C
+- **Symbol** is a URI-identified concept with concise meaning and source refs.
+- **Clause** is a URI-identified typed relation or constraint whose operator and
+  operands are URIs or literals and whose source refs ground the claim.
+- **Residual** records ambiguity, conflict, omission, or unresolved meaning with
+  an explicit source or frame re-entry route.
+- **Logical Constraint Map** is the derived adjacency and constraint view of one
+  unchanged program.
+- **Resolver** late-binds symbolic URIs through a supplied Binding Set.
+- **Validator** checks declared mechanical laws and returns structured
+  diagnostics. It never changes the program.
+- **Native Skill** is a concise, filesystem-based instruction bundle that tells
+  an LLM how to author, validate, repair, and use an Axiomatic Program.
+- **Prompt Joiner** is the pure function
+  `Join([{label, text}, ...]) -> string`. It preserves caller order and content.
+  It performs no selection, resolution, interpretation, rewriting, budgeting,
+  truncation, or orchestration.
 
-Admit_C(G_X,C, Profile_C, Basis_C)
-  -> D_G = admitted | refuse
-```
+## Program law
 
-`P_X*` is the candidate axiomatic program, `S_X*` the proposed source-selection
-rows, and `U_X*` explicit residual uncertainty. `D_Q` is deterministic
-structural evidence and grants no semantic-selection authority. `J_X` is the
-external semantic-selection judgment. An accepting `J_X` binds the unchanged
-`Q_X*` and `D_Q` to exact accepted program content `P_X` and its exact selection
-ledger `S_X`. `G_X,C` is an immutable carrier produced only from that accepted
-relation and before admission. `D_G` is a separate deterministic judgment over
-its unchanged identity and bytes; it cannot stand in for `J_X`.
+Every program shall:
 
-`D_Q = eligible` is a necessary but insufficient precondition for an accepting
-`J_X`. `D_Q = refuse` prohibits acceptance and returns the candidate to rework
-or rejection without constructing `Accepted_X`.
+1. resolve one exact `a_c` calculus URI;
+2. use unique absolute URIs for the program and every semantic item;
+3. bind one source basis and zero or more frame URIs;
+4. ground every symbol, clause, and residual in at least one resolvable source
+   URI;
+5. resolve every clause operand either to a local item, a declared frame or
+   vocabulary URI, or a literal;
+6. preserve uncertainty as a residual rather than invented certainty; and
+7. remain unchanged during validation and map instantiation.
 
-The accepted semantic subject is the relation:
+The same program plus the same resolved bindings produces the same logical map
+and validation result.
 
-```text
-Accepted_X = (P_X, S_X, J_X)
-```
-
-`J_X` points to the identities of `P_X` and `S_X` but remains outside both
-identity preimages. Rework or rejection produces no `Accepted_X`.
-
-Selection conserves the complete typed candidate population:
-
-```text
-Pop(Q_X*) = ids(P_X*) + ids(S_X*) + ids(U_X*)
-domain(disposition(S_X)) = Pop(Q_X*)
-
-accepted(J_X) only if:
-  every candidate identity has exactly one lawful disposition;
-  every retained or uncertain identity maps to an accepted model or residual;
-  every reworked identity maps to exact source-preserving replacement lineage;
-  every omitted or rejected identity retains its source route and rationale;
-  every accepted model identity has candidate or rework lineage.
-```
-
-This is typed lineage conservation, not cardinality equality. A selected Target
-Profile may permit declared splits or merges, but missing, duplicate,
-conflicting, unresolved, or profile-forbidden dispositions prohibit an
-accepting `J_X`.
-
-The accepted carrier-neutral Axiomatic Program has the minimum common envelope:
+## LLM-first workflow
 
 ```text
-P_X = (B, A, T, M_X, R_X)
-
-B   = exact Corpus Basis
-A   = exact Axiomatic Calculus Basis
-T   = exact Target Profile
-M_X = accepted finite model conforming to A and T
-R_X = duplicate-free bindings from M_X identities to exact source routes
+author:      LLM reads sources and frames, then writes P*
+validate:    tool resolves URIs and reports valid | diagnostics
+repair:      LLM writes a new P* when diagnostics or source review require it
+instantiate: tool derives the logical map from unchanged valid bytes
+use:         LLM applies the map to a task and re-enters source when needed
+compose:     Executive selects frames and authors ordered labeled text
+join:        tool concatenates those exact strings without semantic action
 ```
 
-The selected calculus—not Axiom Indexer—owns the record families, coordinates,
-relations, constraints, latitude, residuals, judgments, and compatible-extension
-law inside `M_X`. Axiom Indexer requires those laws to close and binds every
-accepted model identity to exact source evidence through `R_X`. Unknown kinds,
-unresolved references, cross-context collisions, missing required coordinates,
-or unresolved source bindings refuse.
+The primary interface is the native skill and its referenced contract. The
+validator is intentionally small. Its human-readable report and CLI validation
+output are views over the same diagnostics, not a separate workflow.
 
-## Identity
+## Prompt joining
 
-The Product uses content-first identities. At minimum, distinct immutable
-identities bind:
+The join input is the bare ordered JSON array:
 
-1. the exact Corpus Basis and member inventory;
-2. the exact Axiomatic Calculus Basis;
-3. the exact Target Profile;
-4. the complete Semantic Compilation Candidate;
-5. the structural inspection judgment;
-6. the accepted Axiomatic Program content;
-7. the accepted source-selection ledger;
-8. the semantic-selection judgment;
-9. the exact Carrier Basis and Carrier Profile;
-10. the canonical Axiom Index bytes; and
-11. each Projection Assignment, semantic closure, projection envelope, and
-    manifest.
-
-Acceptance, admission, release, invocation, and observation records point to
-those immutable subjects. They do not enter or retroactively change subject
-identity. A carrier cannot embed its final content identity in the bytes from
-which that identity is derived.
-
-## Projection relation
-
-For accepted relation `(P_X, S_X, J_X)` and assignment `A_P`:
-
-```text
-Z(A_P) = mandatory frame refs + target refs + explicit seed refs
-P_A    = least_closure(P_X, Z(A_P), L_projection)
-S_A    = exact applicable rows projected from unchanged S_X
-R_A    = exact judgment, evidence and source-reacquisition relations
-V_A    = (P_A, S_A, ref(J_X), R_A)
-
-EncodeProjection_C(V_A, A_P.carrier_profile, A_P.carrier_basis)
-  -> G_A,C
-
-Admit_C(G_A,C, A_P.carrier_profile, A_P.carrier_basis)
-  -> D_A = admitted | refuse
-
-Contextualize(P_X, S_X, J_X, A_P)
-  -> ContextPacket(V_A, G_A,C, D_A)
-   | capability_mismatch | budget_exceeded | invalid_basis | refuse
+```json
+[{"label": "Outcome", "text": "..."}]
 ```
 
-`L_projection` computes the semantic closure `P_A`. The projection envelope
-`V_A` preserves every applicable identity, authority, basis, dependency,
-constraint, latitude, residual, evidence, exclusion, refusal, invalidation,
-selection-ledger, semantic-selection-judgment, and source-reentry relation
-required by the assignment. `S_A` is an immutable view of exact rows from
-`S_X`; it cannot rewrite the parent ledger. `R_A` carries exact evidence where
-selected and immutable reacquisition routes otherwise. A budget may cause a
-hold; it cannot trim mandatory closure. A projection is bounded by its exact
-assignment and grants no authority outside it. `P_A` is the semantic closure;
-`V_A` has its own immutable identity binding that closure and its external
-acceptance relations. `EncodeProjection_C` verifies the exact envelope and
-encodes only its unchanged `P_A`; it cannot accept an unbound substitute
-closure. `G_A,C` is that closure's carrier-native encoding, and `D_A` judges the
-unchanged encoded bytes. A Context Packet is issued only when `J_X` accepts the
-exact parent program and ledger, `V_A` closes, and `D_A = admitted`.
+For each row the Product emits `label + "\n" + text`, with two newline
+characters between rows and no added terminal newline. Empty strings, empty
+input, repeated labels, Unicode, and multiline text are preserved. Only the
+array, closed row shape, string types, and UTF-8 encoding are mechanical input
+law.
 
-## Authority
+The Executive chooses the reference frames and authors a visible frame-details
+section containing each selected frame URI, its purpose, and its source route.
+Model- or version-specific build tenants may recommend labels and ordering, but
+the LLM supplies the actual list for each invocation.
 
-- Corpus owners own source meaning and the authority to define the corpus.
-- The selected calculus owns its algebraic kinds and laws.
-- A target profile owns only target-specific population and interpretation
-  boundaries.
-- A semantic compiler may propose content and expose uncertainty; it cannot
-  accept its proposal.
-- Semantic-selection authority accepts, reworks, or rejects one exact
-  candidate under an explicit grant and evidence boundary.
-- A carrier tenant owns only encoding, canonicalization, and structural
-  carrier law.
-- Carrier admission judges unchanged carrier bytes and cannot select semantics.
-- A consuming Product owns invocation, workspace, runtime, effects, events,
-  evaluation, continuation, decisions, and closure.
+## Validation boundary
 
-No generated record, carrier, projection, token reduction, model response, or
-structural success mints source, semantic, operation, decision, acceptance,
-release, or runtime authority.
+The MVP validator checks:
 
-### Source-project Product authority
+- closed top-level and item shapes;
+- absolute and unique logical URIs;
+- symbolic source resolution and heading-fragment resolution;
+- local reference closure and declared external vocabulary;
+- required source bindings;
+- non-empty clause arguments and exact reference-or-literal operand shape;
+- residual subject and re-entry closure; and
+- canonical serialization and a derived content digest.
 
-```text
-actor_identity = "https://github.com/foolishimp"
-authority_identity = "urn:axiom-indexer:authority:product-owner"
-grant_identity = "urn:axiom-indexer:grant:product-owner:1"
-grant_scope = "Establish and accept source-project Goals, Intent, Product, requirements, project frame basis and routing; excludes selecting a calculus, target profile, carrier tenant, implementation, target artifact, release or downstream migration."
-```
+Validation does not prove that an authored claim is true, complete, useful, or
+the only interpretation. Those remain LLM review and dogfood questions.
 
-Every decision under this grant still binds its exact subject and basis. The
-grant creates no semantic-selection, carrier-admission, runtime, independent
-review, or target-Product authority.
+## Symbolic resolution
 
-## Product contents
+The program stores logical URIs. A Binding Set supplies physical locations.
+Moving a physical source while preserving the same logical binding does not
+require rewriting the program. Changing resolved bytes changes verification
+evidence, not the logical URI.
 
-An Axiom Indexer Product contains the target-neutral capabilities and public
-contracts required to:
+Diagnostics identify the affected program item and source by URI. A line or
+column may be included only as a disposable display hint.
 
-- acquire and verify exact corpus, calculus and target-profile bases;
-- produce immutable Semantic Compilation Candidates;
-- expose candidates to structural inspection and external semantic selection;
-- verify the accepted `(P_X, S_X, J_X)` relation, receive selected carrier
-  profiles, and construct canonical index artifacts;
-- expose unchanged artifacts to Carrier Admission; and
-- derive, encode and admit assignment-bound context projections.
+## Self-dogfood MVP
 
-It also contains the identity, refusal, source-reentry and extension boundaries
-that keep target profiles and carrier tenants independent. It does not contain
-or silently select a particular target profile, carrier tenant, target artifact
-or consuming runtime.
+The first subject is this Product's own constitutional corpus. The MVP is
+complete only when:
 
-## Output artifact boundary
+1. an LLM authors a valid program for the corpus;
+2. the validator catches seeded malformed and unresolved variants;
+3. a fresh agent loads the native skill and compact program;
+4. that agent performs a real Product task without receiving all source prose
+   in its initial prompt; and
+5. its result causes a retained iteration; and
+6. acting as Executive, it uses selected reference frames and the joiner to
+   produce one visible, bounded request for another agent.
 
-An Axiom Index artifact contains only:
+If we prefer the complete prose because the program or skill is less useful,
+the MVP has failed and shall be revised before GTL expansion.
 
-- canonical carrier-native axiomatic-program records;
-- minimal exact basis and identity coordinates needed to interpret them; and
-- embedded source addresses or exact source-reacquisition routes.
+## Deferred Product surfaces
 
-Qualification and release materials may accompany the artifact: source
-inventory, compilation candidate, structural receipt, semantic-selection
-judgment and ledger, carrier receipt, measurements, and bounded usefulness
-observations. They do not enter every invocation payload unless explicitly
-selected. The exact accepting judgment remains a required external relation for
-encoding and projection even when its full evidence payload is reacquired by
-identity. A target Product decides whether to accept and release an exact
-artifact.
+GTL encoding and GraphFunctions, automatic frame selection, fixed
+model-specific template systems, semantic approval, carrier admission,
+and prompt orchestration are not part of this MVP. A model-specific tenant may
+provide optional label-order guidance to the pure joiner. It gains no semantic
+or execution authority.
 
-The Product does not contain a source workspace, target workspace, prompt,
-model configuration, response, execution plan, runtime engine, event stream,
-continuation state, or downstream decision.
+## Authority boundary
 
-## Extension boundary
+Source owners own source meaning. Frame owners own their declared vocabulary
+and operators. This Product owns the program contract, URI resolution boundary,
+validator behavior, exact string-join law, native skill instructions, and MVP
+evidence.
 
-Target profiles and carrier tenants are independently selected:
+Loading a program or skill grants no operation, review, acceptance, release, or
+runtime authority.
 
-```text
-                    target profile T1
-                   /
-common Product ---- target profile T2
-                   \
-                    target profile Tn
+## Product disposition authority
 
-                    carrier tenant C1
-                   /
-accepted P_X ------ carrier tenant C2
-                   \
-                    carrier tenant Cn
-```
+`urn:axiom-indexer:authority:product-owner` owns acceptance of an exact project
+frame set, release scope, and immutable RC subject. An agent may propose,
+evaluate, or publish only under a separate bounded grant; none of those actions
+accepts Product meaning or the release. Frame-set acceptance binds the exact
+declaration digest. Release acceptance binds the annotated immutable RC tag
+object, peeled commit, repository tree, member set, and claim bytes.
 
-A target profile may not select a carrier. A carrier profile may not influence
-semantic compilation or request omission of accepted meaning. A carrier unable
-to represent accepted `P_X` returns a profile gap or refusal.
+Release publication is governed by the exact installed STDO Release Method. It
+is a lifecycle over the Product, not an additional Product capability. Version
+and RC identities remain in release-scoped records rather than this live
+present-tense definition.
 
 ## Current boundary
 
-This source project has no selected Axiomatic Calculus Product, Target Profile,
-Carrier Tenant, Semantic Compilation Candidate, accepted Axiomatic Program,
-Axiom Index candidate, released Axiom Indexer Product, target-accepted artifact,
-or release. The constitutional extraction authorizes no implementation or
-downstream migration.
+This repository currently contains constitutional source and a bounded MVP
+selected for release-candidate construction. Until exact publication and
+acceptance occur, no released Product, accepted semantic program, GTL carrier,
+or immutable Axiom Indexer RC is claimed.

@@ -1,59 +1,93 @@
 # Axiom Indexer
 
-Axiom Indexer is a target-neutral source project for constructing a reusable
-Product capability and compact,
-machine-addressable axiomatic semantic indexes from exact governed document
-corpora.
+Axiom Indexer is an LLM-first semantic-compression tool. An LLM turns exact
+documents into a source-linked axiomatic program. A small resolver/validator
+checks URI, shape, reference, grounding, and residual closure, then
+instantiates the unchanged program as a logical constraint map.
 
-It separates four things that must not collapse:
-
-1. a target profile identifies the corpus and its source semantics;
-2. semantic compilation proposes an axiomatic program;
-3. authorized selection accepts or rejects that proposal; and
-4. a carrier tenant encodes the exact accepted program-and-ledger relation
-   under its external semantic-selection judgment without redefining it.
+The map may be larger than the prose. Its value is explicit reusable logic:
+an LLM can traverse constraints consistently and re-enter exact sources without
+reconstructing the whole corpus from textual similarity.
 
 ```text
-exact corpus X + exact calculus A + target profile T
-  -> semantic compilation candidate Q_X*
-  -> structural judgment D_Q
-  -> authorized semantic-selection judgment J_X
-  -> accepted relation (P_X, S_X, J_X)
-  -> carrier encoding G_X,C
-  -> carrier-admission judgment D_G over unchanged bytes
-  -> bounded context projections for downstream reasoning
+exact a_c URI + source URIs + frame URIs + native skill
+  -> LLM-authored axiomatic program
+  -> validate -> diagnostics -> LLM repair
+  -> logical constraint map
+  -> Executive-selected labeled sections -> exact string join
+  -> LLM use with source re-entry when required
 ```
 
-An Axiom Index is not proof that the source documents are true, complete, or
-consistent. It is a carrier-native encoding of an accepted, source-addressed
-axiomatic program whose identities, relations, constraints, latitude,
-residuals, and re-entry routes can be traversed and projected without
-reconstructing governing relations from textual similarity.
+Code does not author, repair, select, or accept meaning. It performs symbolic
+late binding and declared mechanical checks. Logical identity uses URIs;
+physical paths, line numbers, and member counts do not become semantic
+identity.
 
-## Extension axes
+## MVP
 
-The Product has two independent extension axes:
+- [`skills/axiomatize-corpus/`](skills/axiomatize-corpus/) is the native LLM
+  instruction surface.
+- [`build_tenants/core/code/ac.py`](build_tenants/core/code/ac.py) resolves,
+  validates, instantiates, and joins LLM-supplied labeled text.
+- [`dogfood/self/`](dogfood/self/) contains the Product's first self-program,
+  validation report, and logical map.
+- [`dogfood/abg/`](dogfood/abg/) contains the first external map and an
+  Executive-authored request that visibly names its reference frames.
 
-- **target profiles** bind particular document corpora and their semantic
-  population rules;
-- **carrier tenants** encode an accepted target program in a selected carrier.
+Validate the self-program:
 
-No target or carrier is part of the common Product identity merely because it
-is the first implementation. Runtime engines, mutable workspaces, prompts,
-model invocations, event logs, and downstream decision authority remain outside
-the Product.
+```sh
+python3 build_tenants/core/code/ac.py validate \
+  --program dogfood/self/axiomatic-program.json \
+  --bindings dogfood/self/bindings.json \
+  --output dogfood/self/validation-report.json \
+  --emit-map dogfood/self/logical-constraint-map.json
 
-## Current status
+python3 build_tenants/core/code/ac.py join \
+  --input dogfood/abg/executive-sections.json \
+  --output dogfood/abg/executive-request.txt
+```
 
-This repository contains the initial constitutional extraction and the empty
-core-realization routing required by its Product Definition. It has no selected
-target profile, calculus Product, carrier tenant, design, implementation,
-accepted Axiom Index, or release.
+Run the focused tests:
 
-The source project is governed by exact STDO cut `v2.4.3-rc.3`, manifest
-SHA-256 `312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551`.
-That cut governs how this source project is specified; it is not an indexing
-target.
+```sh
+python3 -m unittest discover -s build_tenants/core/code -p 'test_*.py' -v
+```
+
+The same canonical skill is discoverable by Codex through `.agents/skills/`
+and by Claude through `.claude/skills/`.
+
+## Release candidate
+
+The selected first Product line is `0.1.0`. Its candidate subject, claims,
+dependencies, exclusions, and publication gates are declared in
+[`releases/v0.1.0.md`](releases/v0.1.0.md).
+
+No immutable Axiom Indexer RC exists until an exact committed carrier is
+published as an annotated `v0.1.0-rc.<n>` tag and accepted under the installed
+STDO Release Method. The unqualified `v0.1.0` tag is only the mutable
+highest-published-RC selector.
+
+## Boundary
+
+Validation proves declared structure and resolution, not semantic truth,
+completeness, fidelity, or usefulness. The source remains authority. The LLM
+reviews meaning and revises candidates.
+
+The working artifact is the `a_c.text` authoring surface. Mapping it to a
+complete admitted `a_c` model `M_b` remains an explicit residual, not an MVP
+claim.
+
+GTL composition, automatic frame selection, fixed prompt-template systems,
+semantic acceptance, and carrier admission remain deferred. The MVP joiner
+only concatenates the exact labels and text supplied by the LLM.
+
+Release publication is a separate lifecycle over this bounded Product; it does
+not become another Product capability. The active source-project frame basis
+is a frozen proposal after the release goal reprice. The empty
+`reference_frame_bases` array in `stdo_default.json` is therefore an honest
+publication hold until the Product owner accepts the exact frame-basis digest.
+It does not gate ordinary MVP use.
 
 ## Authority order
 
@@ -65,17 +99,3 @@ target.
 
 The layout-neutral Product Definition is
 [`stdo_default.json`](stdo_default.json).
-
-## Checks
-
-```sh
-stdo status --definition stdo_default.json --verify
-stdo bootstrap --definition stdo_default.json --dry-run
-git add -A
-git diff --cached --check
-```
-
-The final two commands are the initial-checkpoint hygiene gate: the candidate
-must be staged intentionally before the check so new files are included.
-Ordinary `git diff --check` does not inspect untracked files. After the initial
-commit, stage every new candidate path before using the cached check.
