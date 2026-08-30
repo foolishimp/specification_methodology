@@ -1,7 +1,6 @@
 # Axiom Indexer Product
 
-Status: active source definition; first repository-carried release candidate
-selected; no immutable Axiom Indexer RC accepted.
+Status: active source definition; Axiom Indexer 0.1.0 released.
 
 ## Product statement
 
@@ -184,7 +183,8 @@ present-tense definition.
 
 ## Current boundary
 
-This repository currently contains constitutional source and a bounded MVP
-selected for release-candidate construction. Until exact publication and
-acceptance occur, no released Product, accepted semantic program, GTL carrier,
-or immutable Axiom Indexer RC is claimed.
+The released Product is the exact immutable `v0.1.0-rc.1` cut identified in
+`../releases/v0.1.0.md` and its durable acceptance record. The source project
+may build a successor without changing that Product. No accepted semantic
+program, GTL carrier, runtime authority, or capability outside the release
+claims is implied.

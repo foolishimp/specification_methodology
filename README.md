@@ -57,16 +57,16 @@ python3 -m unittest discover -s build_tenants/core/code -p 'test_*.py' -v
 The same canonical skill is discoverable by Codex through `.agents/skills/`
 and by Claude through `.claude/skills/`.
 
-## Release candidate
+## Release
 
-The selected first Product line is `0.1.0`. Its candidate subject, claims,
-dependencies, exclusions, and publication gates are declared in
+The released first Product line is `0.1.0`. Its exact subject, claims,
+dependencies, exclusions, and qualification boundary are declared in
 [`releases/v0.1.0.md`](releases/v0.1.0.md).
 
-No immutable Axiom Indexer RC exists until an exact committed carrier is
-published as an annotated `v0.1.0-rc.<n>` tag and accepted under the installed
-STDO Release Method. The unqualified `v0.1.0` tag is only the mutable
-highest-published-RC selector.
+The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
+`e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeling to commit
+`dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
+only the mutable highest-published-RC selector.
 
 ## Boundary
 
@@ -84,10 +84,7 @@ only concatenates the exact labels and text supplied by the LLM.
 
 Release publication is a separate lifecycle over this bounded Product; it does
 not become another Product capability. The active source-project frame basis
-is a frozen proposal after the release goal reprice. The empty
-`reference_frame_bases` array in `stdo_default.json` is therefore an honest
-publication hold until the Product owner accepts the exact frame-basis digest.
-It does not gate ordinary MVP use.
+is accepted at its exact revision-6 digest and bound in `stdo_default.json`.
 
 ## Authority order
 

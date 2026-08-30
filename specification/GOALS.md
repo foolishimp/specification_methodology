@@ -47,7 +47,7 @@ usefulness to select a bounded first publication wave.
 
 ## GOAL-002 — Publish Axiom Indexer 0.1.0
 
-Status: active
+Status: completed
 
 Publish the current repository-carried MVP without expanding its Product
 meaning.
@@ -66,6 +66,18 @@ meaning.
   are published over the same commit and verified remotely.
 - Independent exact-cut review and Product-owner acceptance bind the immutable
   RC tag object, peeled commit, tree, member set, and claim bytes.
+
+### Release disposition
+
+- immutable Product tag: `v0.1.0-rc.1`;
+- tag object: `e7afc8a42a7123aebe91cb7582cb037b1aae612d`;
+- peeled commit: `dc3e00998da36dae6ac7b76b340431a85096c83c`;
+- repository tree: `8c9ad5f5e99a60c18fb8c1802471753afb226272`;
+- Product member-set SHA-256:
+  `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`;
+- remote: `https://github.com/foolishimp/axiom_indexer`; and
+- acceptance:
+  `../.ai-workspace/decisions/20260831T001139_v0.1.0_rc1_acceptance.json`.
 
 ### Boundary
 
