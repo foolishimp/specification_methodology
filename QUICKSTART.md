@@ -39,7 +39,7 @@ Set the verified dependency root for this shell:
 AXIOM_INDEXER_ROOT="/path/to/Axiom Indexer/releases/v0.1.0-rc.1"
 ```
 
-Validate the Product candidate using invocation-local bindings:
+Validate the released Product program using invocation-local bindings:
 
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \

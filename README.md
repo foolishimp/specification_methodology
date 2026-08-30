@@ -55,9 +55,13 @@ from Source STDO. A role label or prompt grants no external authority.
   `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
   `8c9ad5f5e99a60c18fb8c1802471753afb226272`.
 
-The first STDO Representation Product line is `0.1.0`. No immutable STDO
-Representation RC exists until exact candidate bytes are qualified, published,
-and accepted under the installed STDO Release Method.
+The first STDO Representation Product is the accepted immutable
+[`v0.1.0-rc.1`](https://github.com/foolishimp/stdo_representation/releases/tag/v0.1.0-rc.1).
+Its annotated tag object is
+`46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f`; it peels to commit
+`b127ee9a0362f85d4875ae59664ecfcd13028d9c` and tree
+`15f9beb360836386ce9607dd31e30d0c8b5cd830`. The annotated `v0.1.0` tag is
+the mutable highest-published-RC selector, not the immutable Product identity.
 
 ## Evidence and boundary
 

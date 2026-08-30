@@ -266,7 +266,7 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             "not part of the `0.1.0`",
         ],
         "specification/PRODUCT.md": ["eight repository entries", "adds no local"],
-        ".ai-workspace/tickets/active/T-003-construct-stdo-gtl.md": [
+        ".ai-workspace/tickets/completed/T-003-construct-stdo-gtl.md": [
             "change_class: product_reprice",
             "build-tenant:axiom-indexer",
         ],

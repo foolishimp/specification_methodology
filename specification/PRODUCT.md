@@ -1,7 +1,7 @@
 # STDO Representation Product
 
-Status: active source definition; thin `0.1.0` Product selected; no immutable
-STDO Representation RC published or accepted.
+Status: active source definition; thin `0.1.0` Product released and accepted as
+immutable `v0.1.0-rc.1`.
 
 ## Product statement
 
@@ -290,11 +290,13 @@ prose holds release for the smallest owning reprice.
 
 ## Current boundary
 
-The exact Source STDO and accepted Axiom Indexer dependency exist. The thin
-Product member bytes and digests are frozen in `releases/v0.1.0.md`. Project
-frame basis revision 11 is accepted by exact digest and bound into the
-operative Product Definition. Dogfood and qualification remain evidence over a
-candidate until immutable RC publication and exact-cut acceptance close.
+The accepted Product is annotated immutable tag `v0.1.0-rc.1`, tag object
+`46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f`, peeled commit
+`b127ee9a0362f85d4875ae59664ecfcd13028d9c`, tree
+`15f9beb360836386ce9607dd31e30d0c8b5cd830`, and eight-member inventory
+`316121da619af277b984a599d290e41e4740ef9f1a2bf3fd8151ac9b1d64e091`.
+The exact-cut review and Product-owner decision accept only release claims
+`STDO-REP-0.1-C01` through `STDO-REP-0.1-C05` at their declared boundaries.
 
-No STDO Representation RC, released `a_c.STDO`, GTL composition, or accepted
-Product is currently claimed.
+No GTL composition, complete admitted `M_b`, provider attestation, automatic
+frame selection, ABG runtime, or semantic-completeness claim is made.

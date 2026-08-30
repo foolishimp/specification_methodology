@@ -19,13 +19,13 @@ resolver, basic validator, logical-map instantiation, and pure ordered joiner.
 This Product has zero local engine code and adds no deterministic orchestration
 or GTL engine.
 
-The first Product line is `0.1.0`. Its first immutable candidate will be
+The first Product line is `0.1.0`. Its accepted immutable Product is
 `v0.1.0-rc.1`; the unqualified `v0.1.0` tag is only the mutable
 highest-published-RC selector.
 
 ## GOAL-001 — Freeze the STDO authoring map
 
-Status: active
+Status: completed
 
 Produce one source-linked Axiom Indexer `a_c.text` program for exact Source
 STDO `v2.5.0-rc.1` and instantiate it as a logical constraint map.
@@ -54,7 +54,7 @@ Exact content digests are assigned only after those bytes are frozen.
 
 ## GOAL-002 — Supply native frame use
 
-Status: active
+Status: completed
 
 Make the frozen map directly useful to Codex and Claude through one concise
 canonical skill with target-specific instruction references.
@@ -77,7 +77,7 @@ canonical skill with target-specific instruction references.
 
 ## GOAL-003 — Dogfood and release `0.1.0`
 
-Status: active
+Status: completed
 
 Use the map and native skills for real STDO Representation and ABIogenesis work,
 then publish only if the thin Product earns continued use.

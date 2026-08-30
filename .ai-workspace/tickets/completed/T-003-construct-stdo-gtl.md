@@ -4,14 +4,14 @@ id: T-003
 title: Deliver the thin STDO Representation MVP
 type: feature
 ticket_category: ordinary
-status: active
+status: completed
 goal: GOAL-003
 change_intent: freeze and dogfood one exact Source STDO authoring map plus concise native Codex and Claude instructions using accepted Axiom Indexer mechanics, without building a local GTL or orchestration engine
 change_class: product_reprice
 re_entry_point: Product
 triaged_at: 2026-08-27T19:41:42+10:00
 created_at: 2026-08-27T19:41:42+10:00
-updated_at: 2026-08-31T00:30:00+10:00
+updated_at: 2026-08-31T01:49:45+10:00
 source_ticket: T-002
 dependencies: exact Source STDO v2.5.0-rc.1; accepted Axiom Indexer v0.1.0-rc.1; installed STDO Release and Reference Frame methods
 build_tenant: urn:stdo-representation:build-tenant:axiom-indexer
@@ -124,3 +124,15 @@ members. The release subject uses the stable Product paths above.
 - No evidence or prose claims GTL, deterministic frame selection, complete
   semantic equivalence, or authority from validation.
 - A separate release ticket or release record owns publication and acceptance.
+
+## Closure
+
+The exact eight-member MVP froze at inventory SHA-256
+`316121da619af277b984a599d290e41e4740ef9f1a2bf3fd8151ac9b1d64e091`.
+The Axiom Indexer validator returned zero diagnostics and reproduced map
+identity
+`2df34cb85bf6fbad2436e468e14cb5c26ff8d0aa721f8de10bb7e948b0d21b78`.
+Fresh Codex and Claude pickup, visible Executive frame selection, byte-exact
+joining, retained negative evidence, and the matched direct-prose/map-first
+comparison satisfy the ticket's bounded acceptance conditions. T-004 owns the
+separate release lifecycle and exact Product acceptance.

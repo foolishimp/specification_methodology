@@ -4,14 +4,14 @@ id: T-004
 title: Publish STDO Representation 0.1.0
 type: chore
 ticket_category: ordinary
-status: active
+status: completed
 goal: GOAL-003
 change_intent: qualify, publish, independently reacquire, and accept the first immutable thin STDO Representation Product cut
 change_class: realization_refactor
 re_entry_point: Release Method
 triaged_at: 2026-08-31T00:45:00+10:00
 created_at: 2026-08-31T00:45:00+10:00
-updated_at: 2026-08-31T00:45:00+10:00
+updated_at: 2026-08-31T01:49:45+10:00
 source_ticket: T-003
 dependencies: completed thin MVP candidate; accepted project frame basis; exact Source STDO v2.5.0-rc.1; accepted Axiom Indexer v0.1.0-rc.1
 
@@ -78,3 +78,20 @@ bookkeeping bytes that are not Product members.
   existing immutable tag never moves.
 - Acceptance over a mutable branch, selector name, or unreacquired checkout is
   invalid.
+
+## Closure
+
+Atomic publication created annotated immutable tag `v0.1.0-rc.1` object
+`46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f` and annotated selector
+`v0.1.0` object `98ef2a4e54d7b6d8465b71234451e2ccc465f1f8`. Both peel to commit
+`b127ee9a0362f85d4875ae59664ecfcd13028d9c`; `main`, `rc/0.1.0`, and
+`release/0.1.0` aligned to that commit at publication. The repository tree is
+`15f9beb360836386ce9607dd31e30d0c8b5cd830`.
+
+Clean public reacquisition reproduced the eight-member inventory, release
+record, dependencies, map, joins, native skill, tests, and claims. Independent
+exact-cut review SHA-256
+`2445256dd9729c87bf1c99e80d00799b73f9fc23ce0f234f738275e12f505990`
+reported GO with no P1 or P2. The Product-owner acceptance decision binds the
+exact immutable RC and claims C01-C05. This continuing-main closure does not
+move the immutable RC or its release carriers.
