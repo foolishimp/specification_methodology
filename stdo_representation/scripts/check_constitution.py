@@ -65,6 +65,13 @@ CANDIDATE_RELEASE_CLAIMS = (
 CANDIDATE_RELEASE_CLAIM_IDS = tuple(
     f"STDO-REP-2.5-C{ordinal:02d}" for ordinal in range(1, 6)
 )
+CANDIDATE_PREDECESSOR_DISPOSITIONS = (
+    "`STDO-REP-0.1-C01`: **superseded**",
+    "`STDO-REP-0.1-C02`: **conserved**",
+    "`STDO-REP-0.1-C03`: **conserved**",
+    "`STDO-REP-0.1-C04`: **conserved**",
+    "`STDO-REP-0.1-C05`: **conserved**",
+)
 CANDIDATE_NATIVE_EVIDENCE = {
     Path("dogfood/native-pickup/release-2.5.0/codex-run-004/README.md"): (
         "183fb2363cae0923079ed07cf1019457061f617c2771aa14879145775a145f42"
@@ -594,12 +601,24 @@ def validate_candidate_release(root: Path) -> list[str]:
         "## Exact dependency basis"
     )[0]
     normalized_claims_section = " ".join(claims_section.split())
-    actual_claim_ids = tuple(re.findall(r"`(STDO-REP-2\.5-C[0-9]{2})`", claims_section))
+    actual_claim_ids = tuple(
+        re.findall(
+            r"^- `(STDO-REP-2\.5-C[0-9]{2})`:",
+            claims_section,
+            flags=re.MULTILINE,
+        )
+    )
     if actual_claim_ids != CANDIDATE_RELEASE_CLAIM_IDS:
         failures.append("candidate release record has the wrong 2.5 claim population")
     for claim in CANDIDATE_RELEASE_CLAIMS:
         if claim not in normalized_claims_section:
             failures.append(f"candidate release record lacks exact claim: {claim[:22]}")
+    for disposition in CANDIDATE_PREDECESSOR_DISPOSITIONS:
+        if disposition not in claims_section:
+            failures.append(
+                "candidate release lacks exact predecessor disposition: "
+                f"{disposition[:24]}"
+            )
     for claim in CANDIDATE_LAYER_CLAIMS:
         if claim not in normalized_layer_section:
             failures.append(f"candidate release record lacks layer claim: {claim}")

@@ -215,6 +215,28 @@ class ThinConstitutionTests(unittest.TestCase):
                 failures,
             )
 
+    def test_predecessor_disposition_drift_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            self.copy_candidate_release_subject(temp_root)
+            release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
+            record = release_path.read_text(encoding="utf-8")
+            record = record.replace(
+                "`STDO-REP-0.1-C01`: **superseded**",
+                "`STDO-REP-0.1-C01`: **refined**",
+                1,
+            )
+            release_path.write_text(record, encoding="utf-8")
+            failures = CHECKER.validate_candidate_release(temp_root)
+            self.assertTrue(
+                any(
+                    failure.startswith(
+                        "candidate release lacks exact predecessor disposition"
+                    )
+                    for failure in failures
+                )
+            )
+
     def test_corrected_native_evidence_drift_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_root = Path(temp_dir)
