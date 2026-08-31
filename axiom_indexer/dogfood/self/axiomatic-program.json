@@ -1,0 +1,503 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:axiom-indexer:program:self:mvp:1",
+  "calculus_ref": "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "repo://axiom-indexer/",
+  "frame_refs": [
+    "repo://axiom-indexer/specification/INTENT.md#identity-and-late-binding",
+    "repo://axiom-indexer/specification/PRODUCT.md#llm-first-workflow",
+    "repo://axiom-indexer/specification/PRODUCT.md#validation-boundary"
+  ],
+  "vocabulary_refs": [
+    "urn:axiom-indexer:kind:agent",
+    "urn:axiom-indexer:kind:artifact",
+    "urn:axiom-indexer:kind:capability",
+    "urn:axiom-indexer:kind:corpus",
+    "urn:axiom-indexer:kind:evidence",
+    "urn:axiom-indexer:kind:product",
+    "urn:axiom-indexer:operator:authors",
+    "urn:axiom-indexer:operator:checks",
+    "urn:axiom-indexer:operator:defers",
+    "urn:axiom-indexer:operator:derives",
+    "urn:axiom-indexer:operator:forbids",
+    "urn:axiom-indexer:operator:preserves",
+    "urn:axiom-indexer:operator:requires",
+    "urn:axiom-indexer:operator:uses",
+    "urn:axiom-indexer:role:condition",
+    "urn:axiom-indexer:role:object",
+    "urn:axiom-indexer:role:requirement",
+    "urn:axiom-indexer:role:subject"
+  ],
+  "symbols": [
+    {
+      "uri": "urn:axiom-indexer:symbol:axiomatic-program",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "Axiomatic Program",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-terms"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:binding-set",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "Binding Set",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-terms"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:dogfood-loop",
+      "kind": "urn:axiom-indexer:kind:evidence",
+      "label": "Self-dogfood loop",
+      "source_refs": [
+        "repo://axiom-indexer/specification/GOALS.md#goal-001-dogfood-the-smallest-useful-axiom-indexer",
+        "repo://axiom-indexer/specification/PRODUCT.md#self-dogfood-mvp"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:llm",
+      "kind": "urn:axiom-indexer:kind:agent",
+      "label": "LLM harness",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#product-relation"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:logical-map",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "Logical Constraint Map",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-terms"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:native-skill",
+      "kind": "urn:axiom-indexer:kind:artifact",
+      "label": "Native Skill",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#native-skill"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:product",
+      "kind": "urn:axiom-indexer:kind:product",
+      "label": "Axiom Indexer",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-statement"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:prompt-joiner",
+      "kind": "urn:axiom-indexer:kind:capability",
+      "label": "Prompt Joiner",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#prompt-joining",
+        "repo://axiom-indexer/specification/requirements/REQ-P-JOINING.md#req-p-joining-exact-labeled-text-joining"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:resolver",
+      "kind": "urn:axiom-indexer:kind:capability",
+      "label": "URI Resolver",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#symbolic-resolution"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:source-corpus",
+      "kind": "urn:axiom-indexer:kind:corpus",
+      "label": "Exact Source Corpus",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#boundary"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:symbol:validator",
+      "kind": "urn:axiom-indexer:kind:capability",
+      "label": "Basic Validator",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#validation-boundary"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:axiom-indexer:clause:code-does-not-author-meaning",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "author, repair, select, or accept semantic meaning"
+        }
+      ],
+      "statement": "Code does not author or repair semantic meaning.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#product-relation"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:dogfood-required",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "ref": "urn:axiom-indexer:symbol:dogfood-loop"
+        }
+      ],
+      "statement": "The MVP must be used for a real task and retain an improvement.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#self-dogfood-mvp"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:executive-self-uses-frames",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:uses",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:llm"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:prompt-joiner"
+        }
+      ],
+      "statement": "The Executive selects frames and visibly joins their URI, purpose, and source route into a bounded request.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#native-skill",
+        "repo://axiom-indexer/specification/PRODUCT.md#self-dogfood-mvp",
+        "repo://axiom-indexer/specification/requirements/REQ-P-JOINING.md#req-p-joining-exact-labeled-text-joining"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:gtl-deferred",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:defers",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "literal": "GTL, role projection, rendering, semantic approval, and carrier admission"
+        }
+      ],
+      "statement": "Heavier downstream surfaces remain outside the bounded MVP.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#deferred-product-surfaces"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:identity-is-symbolic-uri",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "stable absolute URI identities and references"
+        }
+      ],
+      "statement": "Logical identity uses URIs, never line numbers or counts.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#identity-and-late-binding",
+        "repo://axiom-indexer/specification/requirements/REQ-P-PROGRAM.md#req-p-program-symbolic-axiomatic-program"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:joiner-does-not-select-context",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:prompt-joiner"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "selecting frames, labels, text, order, semantics, budgets, or execution"
+        }
+      ],
+      "statement": "The joiner owns no context or semantic decision.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#prompt-joining",
+        "repo://axiom-indexer/specification/requirements/REQ-P-JOINING.md#req-p-joining-exact-labeled-text-joining"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:joiner-preserves-caller-order",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:prompt-joiner"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "exact caller-supplied label and text order"
+        }
+      ],
+      "statement": "The joiner preserves the caller's exact labels, text, and order.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#prompt-joining",
+        "repo://axiom-indexer/specification/requirements/REQ-P-JOINING.md#req-p-joining-exact-labeled-text-joining"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:llm-authors-program",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:authors",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:llm"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        }
+      ],
+      "statement": "The LLM authors the semantic compression.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#llm-first-workflow",
+        "repo://axiom-indexer/specification/requirements/REQ-P-AUTHORING.md#req-p-authoring-llm-semantic-compression"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:map-guides-later-work",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:uses",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:llm"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:logical-map"
+        }
+      ],
+      "statement": "Later work starts from the logical map and re-enters source when needed.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#native-skill"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:program-derives-map",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:derives",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:logical-map"
+        }
+      ],
+      "statement": "An unchanged valid program instantiates as a logical constraint map.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#program-law"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:resolver-late-binds-source",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:uses",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:resolver"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:binding-set"
+        }
+      ],
+      "statement": "The resolver late-binds logical source URIs through a Binding Set.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#symbolic-resolution",
+        "repo://axiom-indexer/specification/requirements/REQ-P-RESOLUTION.md#req-p-resolution-symbolic-uri-late-binding"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:semantic-not-byte-compression",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:product"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "treat byte or token reduction as the primary success claim"
+        }
+      ],
+      "statement": "Compression means explicit reusable logic, not necessarily fewer bytes.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-statement"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:skill-instructs-llm",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:uses",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:llm"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:native-skill"
+        }
+      ],
+      "statement": "The LLM uses tight native skill instructions to author and use programs.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#native-skill"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:source-grounding-required",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "non-empty resolvable source URIs on every semantic item"
+        }
+      ],
+      "statement": "Every authored semantic item is source-grounded.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#program-law"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:source-remains-authority",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "ref": "urn:axiom-indexer:symbol:source-corpus"
+        }
+      ],
+      "statement": "The source corpus remains the authority for source meaning.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/INTENT.md#boundary"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:validation-is-bounded",
+      "clause_type": "constraint",
+      "operator": "urn:axiom-indexer:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:condition",
+          "ref": "urn:axiom-indexer:symbol:validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:requirement",
+          "literal": "claim truth, completeness, fidelity, satisfiability, or acceptance"
+        }
+      ],
+      "statement": "Validation claims only declared structure and resolution.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#validation-boundary"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:clause:validator-checks-program",
+      "clause_type": "relation",
+      "operator": "urn:axiom-indexer:operator:checks",
+      "arguments": [
+        {
+          "role": "urn:axiom-indexer:role:subject",
+          "ref": "urn:axiom-indexer:symbol:validator"
+        },
+        {
+          "role": "urn:axiom-indexer:role:object",
+          "ref": "urn:axiom-indexer:symbol:axiomatic-program"
+        }
+      ],
+      "statement": "The validator checks the unchanged authored program.",
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#llm-first-workflow",
+        "repo://axiom-indexer/specification/requirements/REQ-P-VALIDATION.md#req-p-validation-basic-consistency-validation"
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "uri": "urn:axiom-indexer:residual:full-a-c-model",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:axiomatic-program",
+        "urn:axiom-indexer:symbol:logical-map"
+      ],
+      "detail": "The MVP a_c.text authoring surface does not yet construct or qualify a complete a_c model M_b.",
+      "re_entry_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-terms"
+      ],
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#product-terms"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:gtl-shape",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:product"
+      ],
+      "detail": "GTL, automatic frame selection, and fixed prompt-template systems require a separate Product re-entry beyond the bounded MVP.",
+      "re_entry_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#deferred-product-surfaces"
+      ],
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#deferred-product-surfaces"
+      ]
+    },
+    {
+      "uri": "urn:axiom-indexer:residual:semantic-usefulness",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:axiom-indexer:symbol:axiomatic-program",
+        "urn:axiom-indexer:symbol:logical-map"
+      ],
+      "detail": "Broader cross-task usefulness remains unresolved after the first successful self-dogfood review.",
+      "re_entry_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#self-dogfood-mvp"
+      ],
+      "source_refs": [
+        "repo://axiom-indexer/specification/PRODUCT.md#self-dogfood-mvp"
+      ]
+    }
+  ]
+}

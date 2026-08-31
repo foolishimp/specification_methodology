@@ -1,0 +1,116 @@
+{
+  "$schema": "stdo://releases/v2.5.0-rc.1/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:axiom-indexer",
+    "name": "Axiom Indexer",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:axiom-indexer:bounded-context:product",
+      "definition": "./specification/PRODUCT.md#product-terms"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.5.0",
+      "basis": {
+        "uri": "stdo://releases/v2.5.0-rc.1/",
+        "manifest_sha256": "3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
+      }
+    },
+    "additional_authorities": [],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/AXIOMATIC_CALCULUS.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/IDENTITY_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/RELEASE_METHOD.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+      "authority": [
+        "./specification/PRODUCT.md#product-disposition-authority",
+        "./.ai-workspace/decisions/20260831T000157_frame_basis_acceptance.json"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:axiom-indexer"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:axiom-indexer:build-tenant:core",
+        "root": "./build_tenants/core/",
+        "design": [
+          "./build_tenants/core/design/"
+        ],
+        "implementation": [
+          "./build_tenants/core/code/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    }
+  },
+  "composition": []
+}

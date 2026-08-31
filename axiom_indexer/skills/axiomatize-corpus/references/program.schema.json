@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiom-indexer:schema:axiomatic-program:1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "schema_version",
+    "uri",
+    "calculus_ref",
+    "source_basis",
+    "frame_refs",
+    "vocabulary_refs",
+    "symbols",
+    "clauses",
+    "residuals"
+  ],
+  "properties": {
+    "kind": {"const": "axiom-indexer.axiomatic-program"},
+    "schema_version": {"const": 1},
+    "uri": {"type": "string", "format": "uri"},
+    "calculus_ref": {"type": "string", "format": "uri"},
+    "source_basis": {"type": "string", "format": "uri"},
+    "frame_refs": {"$ref": "#/$defs/uriSet"},
+    "vocabulary_refs": {"$ref": "#/$defs/uriSet"},
+    "symbols": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/symbol"}
+    },
+    "clauses": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/clause"}
+    },
+    "residuals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/residual"}
+    }
+  },
+  "$defs": {
+    "uri": {"type": "string", "format": "uri"},
+    "uriSet": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/uri"}
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/uri"}
+    },
+    "symbol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri", "kind", "label", "source_refs"],
+      "properties": {
+        "uri": {"$ref": "#/$defs/uri"},
+        "kind": {"$ref": "#/$defs/uri"},
+        "label": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/sourceRefs"}
+      }
+    },
+    "argument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role"],
+      "properties": {
+        "role": {"$ref": "#/$defs/uri"},
+        "ref": {"$ref": "#/$defs/uri"},
+        "literal": {"type": ["string", "number", "integer", "boolean", "null"]}
+      },
+      "oneOf": [
+        {"required": ["ref"], "not": {"required": ["literal"]}},
+        {"required": ["literal"], "not": {"required": ["ref"]}}
+      ]
+    },
+    "clause": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uri",
+        "clause_type",
+        "operator",
+        "arguments",
+        "statement",
+        "source_refs"
+      ],
+      "properties": {
+        "uri": {"$ref": "#/$defs/uri"},
+        "clause_type": {"enum": ["relation", "constraint"]},
+        "operator": {"$ref": "#/$defs/uri"},
+        "arguments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/argument"}
+        },
+        "statement": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/sourceRefs"}
+      }
+    },
+    "residual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uri",
+        "kind",
+        "subject_refs",
+        "detail",
+        "re_entry_refs",
+        "source_refs"
+      ],
+      "properties": {
+        "uri": {"$ref": "#/$defs/uri"},
+        "kind": {"enum": ["ambiguity", "conflict", "omission", "unresolved"]},
+        "subject_refs": {"$ref": "#/$defs/uriSet"},
+        "detail": {"type": "string", "minLength": 1},
+        "re_entry_refs": {
+          "allOf": [
+            {"$ref": "#/$defs/uriSet"},
+            {"minItems": 1}
+          ]
+        },
+        "source_refs": {"$ref": "#/$defs/sourceRefs"}
+      }
+    }
+  }
+}
