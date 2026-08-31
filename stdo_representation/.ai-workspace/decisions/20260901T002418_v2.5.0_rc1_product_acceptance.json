@@ -1,0 +1,72 @@
+{
+  "kind": "stdo-representation.product-acceptance",
+  "schema_version": 1,
+  "product_release": "stdo_representation/v2.5.0-rc.1",
+  "immutable_tag_ref": "refs/tags/stdo_representation/v2.5.0-rc.1",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "immutable_tag_object": "sha1:1eb81f90bcb2348027682b7d4d7e75285d7d917b",
+  "selector_tag_object": "sha1:5f3abae64770bf19185d9ab8a76b7bdf14785761",
+  "peeled_commit": "sha1:5767f40a4d363067b2dbe8f47f6e288e3e5e9cd7",
+  "repository_tree": "sha1:66ff1f256dd96e2fba84a009a1f83a1c969a3c2b",
+  "project_subtree_path": "stdo_representation",
+  "project_subtree_tree": "sha1:c1a8221b525a292322d80543d7d4d3491c4fe5e0",
+  "product_member_inventory_sha256": "sha256:08a13f8c160ec70e724d414260324923eba4187d9474aa434342098d9c45002a",
+  "release_record_sha256": "sha256:079f1af9f05031524ec3fe003b7bf8cfea6238eacc8ac36dae0802cc3bd03557",
+  "exact_cut_review_sha256": "sha256:65362bc47668577ddba0221c358fa909e738d0daa07cef09b1fda087d17119e4",
+  "predecessor_relation": {
+    "release": "v0.1.0-rc.1",
+    "tag_object": "sha1:46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f",
+    "peeled_commit": "sha1:b127ee9a0362f85d4875ae59664ecfcd13028d9c",
+    "product_member_inventory_sha256": "sha256:316121da619af277b984a599d290e41e4740ef9f1a2bf3fd8151ac9b1d64e091",
+    "dispositions": {
+      "STDO-REP-0.1-C01": "superseded",
+      "STDO-REP-0.1-C02": "conserved",
+      "STDO-REP-0.1-C03": "conserved",
+      "STDO-REP-0.1-C04": "conserved",
+      "STDO-REP-0.1-C05": "conserved"
+    }
+  },
+  "claims": [
+    {
+      "id": "STDO-REP-2.5-C01",
+      "decision": "accepted"
+    },
+    {
+      "id": "STDO-REP-2.5-C02",
+      "decision": "accepted"
+    },
+    {
+      "id": "STDO-REP-2.5-C03",
+      "decision": "accepted"
+    },
+    {
+      "id": "STDO-REP-2.5-C04",
+      "decision": "accepted"
+    },
+    {
+      "id": "STDO-REP-2.5-C05",
+      "decision": "accepted"
+    }
+  ],
+  "actor_identity": "https://github.com/foolishimp",
+  "authority_identity": "urn:stdo-representation:authority:product-owner",
+  "decision": "accepted",
+  "scope": "Accept only the exact immutable STDO Representation 2.5.0 RC1 Product subject and bounded claims C01-C05; Source STDO remains semantic authority; excludes complete semantic truth, full admitted M_b, GTL, deterministic orchestration, provider attestation, automatic frame selection, runtime authority, and consumer adoption.",
+  "decided_at": "2026-09-01T00:24:18+10:00",
+  "decision_source": "Standing direct Product-owner instruction in this collaboration: release.",
+  "residuals": [
+    "the five published program residuals remain active and source-reenterable",
+    "semantic fidelity and usefulness beyond the retained tasks and model families remain probabilistic",
+    "provider backing revisions are not attested",
+    "structural validation and successful native observations do not establish complete semantic truth",
+    "consumer adoption remains a separate decision"
+  ],
+  "evidence_refs": [
+    "./releases/v2.5.0.md",
+    "./.ai-workspace/comments/codex/20260831T235000_REVIEW_stdo_representation_2.5_pre_rc.md",
+    "./.ai-workspace/comments/codex/20260901T001000_REVIEW_stdo_representation_2.5_exact_cut.md",
+    "./.ai-workspace/decisions/20260831T211524_frame_basis_rev13_acceptance.json",
+    "./.ai-workspace/decisions/20260901T000051_v2.5.0_rc1_publication_grant.json",
+    "./specification/PRODUCT.md#product-disposition-authority"
+  ]
+}

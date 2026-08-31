@@ -161,7 +161,7 @@ candidate review required before immutable RC publication.
 
 ## GOAL-006 — Repair and qualify the 2.5.0 RC candidate
 
-Status: active
+Status: completed
 
 Correct the checkpoint review findings without changing the represented STDO
 cut, Product member count, compression, index, or Axiom Indexer dependency.
@@ -176,3 +176,19 @@ cut, Product member count, compression, index, or Axiom Indexer dependency.
 - Live status text, frame-basis state, release record, checker, and review
   evidence agree on one exact candidate.
 - A new exact candidate review passes before any publication grant is exercised.
+
+### Completion
+
+- Pre-RC review closed with no P0, P1, or P2 findings over the exact frozen
+  subject and inventory.
+- Annotated immutable tag `stdo_representation/v2.5.0-rc.1` and annotated
+  selector `stdo_representation/v2.5.0` peel to commit
+  `5767f40a4d363067b2dbe8f47f6e288e3e5e9cd7`; remote `main`, RC, and release
+  branches align to that commit.
+- Independent exact-cut review SHA-256
+  `65362bc47668577ddba0221c358fa909e738d0daa07cef09b1fda087d17119e4`
+  returned GO with no P0, P1, or P2 findings.
+- Product-owner decision SHA-256
+  `2a9f4e4c494ef1744347b28fe3fc135337d549cdd28cceb2c5d7c7646302afab`
+  accepts the exact immutable RC and bounded claims `STDO-REP-2.5-C01`
+  through `STDO-REP-2.5-C05`.
