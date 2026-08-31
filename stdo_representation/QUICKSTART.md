@@ -65,10 +65,11 @@ portable Product member.
 
 ## 3. Use the native skill
 
-The accepted native skill remains an exact member of published STDO
-Representation `2.5.0` RC1 until its RC2 artifact route is separately repriced
-and reviewed. Do not treat repository discovery alone as RC2-basis readiness.
-After that bounded update, native discovery remains:
+The native skill in this source candidate is repriced to the exact RC2
+compression and index and passes the project checker. Published STDO
+Representation `2.5.0` RC1 remains the accepted Product; repository discovery
+of these newer bytes is a source-project convenience, not another released RC.
+Native discovery remains:
 
 Codex discovers:
 
@@ -101,12 +102,32 @@ Write a bare ordered JSON array:
 ```json
 [
   {
-    "label": "Reference frames",
-    "text": "<frame URI, purpose, and source route>"
+    "label": "Role and outcome",
+    "text": "<acting role and intended result>"
   },
   {
-    "label": "Task",
-    "text": "<bounded task>"
+    "label": "Reference frame and exact subject",
+    "text": "<frame URI, purpose, source route, subject, and evidence boundary>"
+  },
+  {
+    "label": "Hard constraints",
+    "text": "<only material governing and forbidden relations>"
+  },
+  {
+    "label": "Index context and evidence routes",
+    "text": "<selected clauses, residuals, evidence, and source routes>"
+  },
+  {
+    "label": "Open solution space",
+    "text": "<choices left to the acting model unless prohibited>"
+  },
+  {
+    "label": "Return and stop contract",
+    "text": "<result, evidence, residual, and stop requirements>"
+  },
+  {
+    "label": "ACTION",
+    "text": "<bounded requested action>"
   }
 ]
 ```
@@ -121,7 +142,9 @@ python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" join \
 
 The joiner preserves every supplied label, text value, and row order. It does
 not select frames, rewrite instructions, enforce a token budget, invoke a model,
-or decide authority.
+or decide authority. The seven rows are caller guidance, not a prompt schema or
+engine; include only material constraints and leave unowned realization choices
+open.
 
 ## 5. Check the accepted basis
 
