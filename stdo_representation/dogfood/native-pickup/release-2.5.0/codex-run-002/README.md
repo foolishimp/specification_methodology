@@ -71,9 +71,11 @@ Reviewer request was not executed and returned closed to Executive.
 |---|---:|---|
 | `request.md` | 5705 | `00c4c69e98b075bb0edcb9d2b9059bb3cbd081bd5700cdaba30397c0c96b88f6` |
 | `events.jsonl` | 246803 | `d03799a3bf86012aa0ae9bdd4b0641c0696d09db4a49160544d184055d9d40fd` |
-| `result.md` | 4932 | `1e6f614e55042b37f312d91edfb528d46451f64aed9aa6a37875bec15e1bd5b7` |
+| `result.md` | 4929 | `6989605681ceccbee080451eab6c6697922f25ff931ae7759ef5962c6cf009c5` |
 | `sections.json` | 7439 | `01801684f094d34758bd188c39eaa0b9774ff339a68068f7dbd6f568ab19639b` |
 | `joined-request.txt` | 7188 | `97ff403ea6564e9b6139f499b39f4bd11d462a21ffb03ab807767aedaf75ef5e` |
 
-`events.jsonl` is the raw event stream. `result.md` is the CLI-emitted final
-message. The run changed no existing Product or source member.
+`events.jsonl` preserves the raw final message. `result.md` is its readable
+projection with trailing Markdown line-break spaces removed for repository
+diff hygiene; no words or result claims changed. The run changed no existing
+Product or source member.

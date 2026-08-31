@@ -67,7 +67,7 @@ CANDIDATE_RELEASE_CLAIM_IDS = tuple(
 )
 CANDIDATE_NATIVE_EVIDENCE = {
     Path("dogfood/native-pickup/release-2.5.0/codex-run-002/README.md"): (
-        "7a9ae4b8c33f6398dd8710dad94da97b811cf177be3bd269eb190857330c8d85"
+        "5d9eebb16f5cb2aa7f736190719dc2dc41581cd3ca79838ae2d149d96f26b824"
     ),
     Path("dogfood/native-pickup/release-2.5.0/claude-run-002/README.md"): (
         "7179cf36a3bad0db19213c5b56b2f742cb6e416ddfa5aa76647d0bbef9d9044b"

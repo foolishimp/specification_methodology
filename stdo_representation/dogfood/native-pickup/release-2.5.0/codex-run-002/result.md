@@ -56,9 +56,9 @@ Ordered Source STDO openings were the bootstrap projection for constitutional ro
 
 ### Outputs
 
-- [sections.json](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-002/sections.json)  
+- [sections.json](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-002/sections.json)
   SHA-256 `01801684f094d34758bd188c39eaa0b9774ff339a68068f7dbd6f568ab19639b`, 7,439 bytes.
-- [joined-request.txt](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-002/joined-request.txt)  
+- [joined-request.txt](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-002/joined-request.txt)
   SHA-256 `97ff403ea6564e9b6139f499b39f4bd11d462a21ffb03ab807767aedaf75ef5e`, 7,188 bytes.
 
 The bare six-section array passed its declared JSON shape check. Immutable `ac.py` was invoked once. Independent byte comparison against the specified concatenation law was exact, with no terminal newline.
