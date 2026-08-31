@@ -26,8 +26,8 @@ interaction tooling:
   release manifest
 - starter templates under `templates/`, including the single per-product
   `PRODUCT_DEFINITION_TEMPLATE.json`, project specification templates, and
-  agent bootstrap templates such as `CLAUDE_TEMPLATE.md` and
-  `AGENTS_TEMPLATE.md`
+  `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`, plus agent bootstrap templates
+  such as `CLAUDE_TEMPLATE.md` and `AGENTS_TEMPLATE.md`
 
 The STDO toolchain manager installs complete immutable cuts once in a shared
 versioned store and resolves logical release URIs without putting machine-local

@@ -10,22 +10,15 @@ maps three practical engagement frames onto those existing owners:
 ```text
 existing project authority
   + selected complete STDO and Reference Frame Method basis
-  + exact governed outcome and workspace basis
-  -> Executive frame activation
-  -> attempted Worker activation
-       |- activation refusal
-       |    -> Executive reconfiguration or disposition
-       `- Worker frame activation
-            -> Worker returns one closed work result to Executive
-                 |- refused | incomplete | re-entry requested
-                 |    -> Executive disposition
-                 `- candidate ready with exact subject
-                      |- independent review not required
-                      |    -> Executive disposition
-                      `- independent review required
-                           -> Executive activates Reviewer
-                           -> Reviewer returns one closed result to Executive
-                           -> Executive disposition
+  + exact governed Product or Product-chain outcome and workspace basis
+  + known evaluation inventory, dependencies, and residuals
+  -> Executive outcome and basis lock
+  -> smallest finite dependency-ready activation frontier
+  -> independently activated Worker, Reviewer, and specialist evaluations
+  -> closed results and declared conjunction
+  -> authorized disposition and next bounded action
+  -> updated basis, coverage, residuals, and frontier
+  -> repeat or stop
 ```
 
 The three frames are overlapping evaluation contexts, not a hierarchy or actor
@@ -36,9 +29,9 @@ accepted design, ticket, identity, or release law. The Worker carries only the
 construction or transformation authority in its admitted intake. No frame gains
 admission, publication, mutation, or other operation authority from its label.
 
-This profile also derives eleven generic specialist-frame families: Product,
-Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect,
-Reuse/Foundation, Install, and Proof. They separate recurring evaluation
+This profile also derives twelve generic specialist-frame families: Product,
+Product Composition, Design, Design Component, Public Boundary, Entity,
+Operator, Owner, Effect, Reuse/Foundation, Install, and Proof. They separate recurring evaluation
 questions that otherwise collapse across constitutional `WHAT`, structural
 `HOW`, identity, authority, effects, foundations, installed subjects, and
 evidence. They are available frame families, not mandatory actors, stages,
@@ -100,7 +93,7 @@ The ownership layers are distinct:
 | module-derived unit proof | `DESIGN_MODULE_METHOD.md` Design-to-Module evidence route and Module-Derived Unit Test Rule | supplies the unit frame's module ownership basis while this profile limits its claim and evidence altitude |
 | capability and foundation selection before material generic construction | `DESIGN_MODULE_METHOD.md` `STDO-UP-023` | supplies the Worker's proportional reuse comparison without treating reuse itself as authority transfer; any assigned foundation role preserves its declared relation and owner |
 | Product testing taxonomy, claim, ordinary user path, and acceptance meaning | `SPEC_METHOD.md` Verification Layers, Testing Strategy Taxonomy, and Test Authority Rule; current Product, requirements, accepted design, and release authority where applicable | selects user outcomes, supported interfaces, material compositions, runnable Product subjects, harnessed or live execution mode, and required testing populations |
-| generic Product, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof evaluation families | current Product and requirements; accepted design; `DESIGN_MODULE_METHOD.md`; `IDENTITY_METHOD.md`; `RELEASE_METHOD.md`; applicable domain, effect, interface, dependency, and assurance owners | supplies recurring specialist evaluation families without transferring their owners or requiring one architecture |
+| generic Product, Product Composition, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof evaluation families | current Product and requirements; `SPEC_METHOD.md` composition law; accepted design; `DESIGN_MODULE_METHOD.md`; `IDENTITY_METHOD.md`; `RELEASE_METHOD.md`; applicable domain, effect, interface, dependency, and assurance owners | supplies recurring specialist evaluation families without transferring their owners or requiring one architecture |
 | work selection and growth authority | current Goals, Product, requirements, and admitted ticket or equivalent work authority | selects the governed outcome and admits local frame configuration |
 | design structure and local realization frame decisions | accepted design under its governing Product and requirements | supplies specialist frames and material relations |
 | human and proxy identity | `IDENTITY_METHOD.md` plus project authority | binds the Executive actor and its decision envelope |
@@ -147,6 +140,11 @@ and duplicate authority are generic signals that a frame declaration,
 activation, capability match, basis, or authority relation may be defective.
 They justify reevaluation; they do not identify one universal architecture or
 grant precedent semantic authority.
+
+The same applies to repeated Product drift: a useful implementation,
+specialization, scenario, dependency, installed builder, or downstream Product
+does not become the Product being authored merely because it is visible to the
+same actor or participates in one delivery chain.
 
 ---
 
@@ -224,6 +222,106 @@ It may be occupied by direct human authority or by a bounded proxy admitted
 under `STDO-UP-020`, `IDENTITY_METHOD.md`, and the current project authority.
 It is not a universal semantic owner, controller, manager service, or runtime
 executive observer.
+
+---
+
+## Executive Attention, Evaluation, And Action
+
+Executive is the profile frame for three inseparable duties over one governed
+outcome:
+
+1. **attention management** maintains the exact outcome and basis, Product-role
+   map, evaluation inventory, dependency relation, unresolved frontier, actor
+   envelopes, and residual boundary, then selects the smallest finite
+   dependency-ready activation set sufficient for the next decision;
+2. **evaluation orchestration** activates capable Workers, Reviewers, or
+   specialists, preserves their exact subjects and bases, and consumes only
+   closed results or declared translations; and
+3. **authorized action selection** applies an existing disposition and issues
+   only the next already-authorized activation or action.
+
+Executive does not contain the complete workspace, perform every evaluation,
+or acquire Product meaning, implementation, mutation, acceptance, publication,
+or other operation authority from the role. A material effect remains owned by
+the actor carrying its exact operation grant.
+
+The attention cycle is:
+
+```text
+U0 = every known material evaluation not closed on the current basis
+
+while U is non-empty:
+  select a finite dependency-ready subset M that fits the assigned actors
+  activate each member of M against the exact outcome and basis
+  keep assurance-independent evaluations free of unclosed peer results
+  record every closed result, residual, and invalidation condition
+  apply only declared conjunctions or translations
+  invalidate affected results when the subject or basis changes
+  update U from coverage, dependencies, conflicts, and discovered materiality
+
+stop only when every mandatory evaluation is closed, or governing authority
+has explicitly retained every remaining residual consistently with the claim
+```
+
+This relation requires no scheduler or frame engine. `M` may contain parallel
+activations. Recursion follows declared evaluation dependencies and bounded
+refinements; it does not nest or join undifferentiated copies of every frame.
+The Executive retains the frontier and closed-result ledger in attention, not
+the undocumented working context of every evaluator.
+
+Every result returns to Executive, a declared conjunction, or another frame
+through an explicit `D` relation. No lateral handoff, child completion, model
+response, tool output, or shared actor implicitly activates another frame or
+authorizes continuation. A consumer receives the closed result and its source
+routes, not the child's hidden reasoning context.
+
+### Executive Drift Locks
+
+Before activation and before disposition, Executive revalidates:
+
+- **outcome lock** — selected Goal, Product outcome, boundary, and lawful
+  re-entry class remain unchanged;
+- **basis lock** — subject, authority, dependency, configuration, topology,
+  evidence, time, and candidate coordinates remain exact and current;
+- **Product-role lock** — mutable Source Project, Product Definition,
+  Release Cut, Product, Install, Artifact, and dependent Product identities
+  remain distinct, and every Development Product role remains bound to its
+  exact underlying Install;
+- **authority lock** — semantic, evaluation, operation, decision, acceptance,
+  and publication owners and grants remain unchanged; and
+- **coverage-and-return lock** — every material evaluation and interaction is
+  closed or explicit residual, and every consumed result followed its declared
+  return relation.
+
+Changed Product meaning requires re-entry. A stale or substituted basis is
+`invalid_basis`. Missing material scope is `out_of_frame`. Missing operation
+authority refuses activation or the effect. An unresolved mandatory conflict
+prevents a satisfied conjunction. Executive does not repair any of these by
+making its own frame larger.
+
+### Product-Chain Basis
+
+A governed outcome may concern one Product or an explicit directed chain of
+Products. Its basis records the distinct role of every mutable Source Project,
+current Product Definition, exact candidate checkpoint, Release Cut, Product,
+Install, Artifact, Development Product, dependent Product, and composition
+edge. Each Development Product role binds one exact underlying Install
+identity. Each edge names its source and target roles, governing authority and
+contracts, lifecycle, evidence boundary, refusal, and invalidation.
+
+An installed Product may lawfully build its own successor or another Product.
+That Development Product remains distinct from the mutable Source Project and
+the Product being authored. Directory nesting, shared code, shared actors,
+source imports, tool reachability, matching labels, or output equality creates
+no Product identity, composition edge, or authority transfer.
+
+Exact basis does not make a Source Project immutable. A Worker may
+cumulatively mutate the exact Source Project and write territory named by its
+operation grant. A Reviewer evaluates an exact candidate checkpoint produced
+from that workspace. Repair advances the workspace, creates a new candidate,
+and invalidates affected results. A released Product, Release Cut, or exact
+Install remains immutable under its own lifecycle law; it does not impose
+immutability on the Source Project constructing a successor.
 
 ### Worker
 
@@ -435,6 +533,7 @@ An explicit relation is required at every material cross-context seam.
 | Frame family | Evaluation family and exact subject | Governing authority and permitted output | Immediate falsifier |
 |---|---|---|---|
 | **Product** | Does one exact current Product claim, outcome, boundary, and lifecycle govern the claimed Product subject without downstream reinterpretation? The basis is current Intent, Product, requirements, acceptance meaning, and exact Product coordinates. | Product and requirement authority retain meaning and acceptance. The frame returns only a bounded evaluation result and evidence. | Design, code, tests, a predecessor behavior, or local convention changes Product meaning or substitutes a different Product subject. |
+| **Product Composition** | Does one exact directed relation between Products preserve the source and target roles, Product Definition, Release Cut, Product, and Install identities, each Development Product role binding, governing contracts, authority, lifecycle, evidence boundary, and invalidation law? A chain is evaluated through bounded edge activations and declared conjunction. | Each Product retains its own meaning. The authority and contracts cited by the composition relation own the edge. The frame returns evaluation evidence only. | Directory nesting, shared implementation, common actor, source import, tool reachability, matching output, or builder convenience creates or changes a composition relation; a Development Product is confused with the Product being authored; or one node silently redefines another. |
 | **Design** | Does the accepted structural `HOW` satisfy the material constitutional `WHAT`, close the required design relations, and preserve their owners across the affected topology? | Accepted design under its governing Product and requirements owns structural decisions. The frame may identify satisfaction, contradiction, or a design re-entry gap; it cannot invent Product truth. | Implementation precedent resolves an open material design decision, design creates Product meaning, or a material relation or competing structure remains undeclared. |
 | **Design Component** | Does one bounded design component and its direct causal dependency cone preserve its parent contract, internal relations, sibling seams, and required outputs? | The accepted design boundary owns only its bounded composition decision. Parent, sibling, Product, requirement, and runtime owners retain their relations. | The component omits a material far-side seam, absorbs a sibling or parent decision, or reports local closure while its direct composition is unresolved. |
 | **Public Boundary** | Does one supported public entry or exit perform exactly its assigned validation, selection, transport, refusal, and projection relations while preserving the selected interior owners? | Product, interface, identity, security, and accepted-design authority define the boundary. The frame evaluates the boundary result or refusal and returns only its closed evaluation; it does not recreate interior semantics. | The public surface interprets owner meaning, sequences hidden domain decisions, exposes an interior carrier as Product truth, or admits an unsupported path. |
@@ -464,7 +563,7 @@ family as one of:
 
 Absence of a named file, component, runtime object, or actor is not evidence
 that a family is non-material. Conversely, adopting this profile does not
-require a project to create eleven components or activate eleven frames for
+require a project to create twelve components or activate twelve frames for
 every task.
 
 When a generic frame is recursively refined, each child declaration records
@@ -960,6 +1059,8 @@ other admitted carriers. This profile requires no new artifact type.
 | work result | Worker -> Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | `STDO-UP-020` |
 | Reviewer activation | Executive -> Reviewer | exact subject, claim, composition boundary, evidence population, authority, independence, invalidation | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-007`; `STDO-UP-022` |
 | review result | Reviewer -> Executive | exact verdict basis, evidence, findings, counterexamples, residuals, invalidation | `STDO-UP-007`; `STDO-UP-020`; `STDO-UP-022` |
+| specialist activation | Executive or declared parent relation -> capable evaluator | exact evaluation, subject/basis, bounded map of material relations, actor envelope, evidence, authority, dependencies, exclusions, result consumer, invalidation | `REFERENCE_FRAME_METHOD.md`; exact specialist owner |
+| specialist result | evaluator -> Executive, declared conjunction, or exact parent relation | closed result, exact activation and basis, evidence and source routes, residuals, invalidation, and no implicit continuation | `REFERENCE_FRAME_METHOD.md`; exact specialist owner |
 | disposition/checkpoint | Executive -> existing work authority and any next activation | exact consumed results, decision grant, `STDO-UP-020` disposition, checkpoint, residuals, next already-authorized action | `STDO-UP-020` |
 
 Flattening these projections across candidates, processes, episodes,
@@ -978,7 +1079,7 @@ or project workspace. They organize finite evaluations over specialist frames.
 |---|---|---|
 | exact method, project, and work basis | Executive | complete STDO cut; current Goals/Product/requirements/design/work authority |
 | affected causal cone and frame configuration | Executive, challenged by Worker and Reviewer | `STDO-UP-017..020`; domain, identity, dependency, implementation, and history frames |
-| generic specialist-family coverage and cross-frame seam conservation | Executive for configuration; Worker and Reviewer for their exact evaluations | material Product, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof declarations or authoritative acquisition paths; explicit non-material and residual dispositions |
+| generic specialist-family coverage and cross-frame seam conservation | Executive for configuration; Worker and Reviewer for their exact evaluations | material Product, Product Composition, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof declarations or authoritative acquisition paths; explicit non-material and residual dispositions |
 | bounded realization and self-review | Worker | accepted design; `STDO-UP-023` capability/foundation selection where material; capability/reuse, implementation, environment, and proof frames |
 | candidate and transition evidence | Worker | `STDO-UP-020` and exact identity/evidence relations |
 | user can obtain the Product-defined outcome through supported surfaces | Worker for execution and self-review; Reviewer where independent assurance is required | derived user-acceptance frame; Product, requirement, UX, identity, installed-subject, and acceptance inputs |
@@ -1059,8 +1160,8 @@ Product-owned basis:
   rules;
 - generic specialist-frame declarations or authoritative acquisition paths,
   plus an authority-bound non-material or explicit residual disposition for
-  each Product, Design, Design Component, Public Boundary, Entity, Operator,
-  Owner, Effect, Reuse/Foundation, Install, and Proof family;
+  each Product, Product Composition, Design, Design Component, Public Boundary,
+  Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof family;
 - specialist-frame declarations or authoritative acquisition paths;
 - testing-frame declarations, exact Product and module claims, ordinary-path
   identities, combinatorial populations, scenario matrix, oracles, and
@@ -1200,74 +1301,46 @@ and evidence populations actually evaluated.
 
 ---
 
-## Minimal Baseline-Adoption Content
+## Baseline-Specific Project-Basis Additions
 
-The following is content inside a Product-owned Project Reference-Frame Basis.
-It is not a competing basis definition or adoption authority.
+An adopting Product starts from the Project Reference-Frame Basis binding owned
+by `SPEC_METHOD.md` and projected by
+`templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`. This optional profile
+adds only the following profile-specific content. It is not a competing basis
+definition or adoption authority.
 
 ```markdown
-# Baseline Adoption Content
+# STDO Baseline Adoption Additions
 
-## Owning Authority
-- Goals/Product/requirement/accepted-design identities:
-- admitting human or bounded-proxy identity:
-
-## Selected Method
-- complete STDO cut and inventory:
-- Reference Frame Method identity:
-- STDO baseline or project-defined profile identity:
-
-## Governed Outcome And Basis
-- exact workspace, outcome, checkpoint, and time:
-
-## Frames And Actors
-- frame declarations or references:
-- generic specialist-family declarations, non-material evidence, and residuals:
-- capability and independence envelopes:
-- actor-binding rules:
-
-## Relations
-- activation and closed-result routes:
-- conjunction, translation, or composition used:
-
-## Coverage
-- evaluation inventory and ledger:
-- testing claims and frame topology:
-- material combination populations and scenario matrix:
-- required and forbidden authoritative paths:
-- accepted residual boundary:
-
-## Invalidation And Re-Entry
-- topology, authority, method, capability, evidence, and outcome changes:
+- exact STDO Reference Frame Baseline identity:
+- Executive, Worker, and Reviewer declaration or acquisition references:
+- role-specific actor capability, authority, and independence bindings:
+- Worker result to Frame Method result mapping:
+- twelve generic specialist-family declarations, non-material evidence, or
+  explicit residuals:
+- Product-testing claims, frame topology, material combination populations,
+  scenario matrix, oracles, and required and forbidden authoritative paths:
+- profile-specific activation refusal, closed-result, conjunction, and return
+  relations:
+- profile-specific qualification evidence and residuals:
 ```
 
 ---
 
-## Minimal Activation Packet
+## Baseline-Specific Activation Additions
 
-```markdown
-# Reference-Frame Activation
+Every activation first carries the generic binding defined by
+`REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding`.
 
-- frame identity and revision:
-- evaluation and result algebra:
-- exact subject and basis:
-- material specialist frames and governing invariants:
-- semantic, evaluation, operation where material, and decision authority:
-- exact inherited operation grant, mutation subject, and write territory where
-  applicable:
-- actor and capability/independence envelope:
-- admissible evidence and acquisition path:
-- testing claim, oracle, material combination population, ordinary or module
-  path, and falsification condition where applicable:
-- exclusions and prohibited assumptions:
-- required input and output relations:
-- invalidation, stop, and re-entry conditions:
-```
-
-For Worker activation, this packet is the `STDO-UP-020` sufficient execution
-intake. For Reviewer activation, it also carries the exact claim, composition
-boundary, population, and `STDO-UP-007`/`STDO-UP-022` independence and
-assurance basis.
+For Worker activation, that binding is also the `STDO-UP-020` sufficient
+execution intake and adds the exact inherited operation grant, mutation
+subject, and write territory where applicable. For Reviewer activation, it
+adds the exact claim, composition boundary, evaluated population, oracle,
+ordinary or module path, falsification condition, and
+`STDO-UP-007`/`STDO-UP-022` independence and assurance basis. For Executive
+activation, it adds the current Product-role map, evaluation frontier,
+closed-result and residual ledger, conjunction rule, and exact disposition
+grant.
 
 ---
 
@@ -1275,6 +1348,13 @@ assurance basis.
 
 | Observation | First diagnosis |
 |---|---|
+| implementation produces a coherent capability that is not the selected Product | Product-frame falsification and Product re-entry |
+| a Development Product's structure becomes the authored Product's meaning | Product-role or composition-basis drift |
+| an authorized mutable Source Project is treated as one immutable review subject throughout construction | Source Project and candidate-checkpoint lifecycle collapse |
+| one actor receives every specialist concern as one global context and repeatedly misses known violations | attention-surface or capability mismatch; refine and independently activate frames |
+| every local frame is green but an affected Product edge is unevaluated | missing Product Composition activation |
+| a child result directly starts repair, review, publication, or continuation | return-topology and decision-authority violation |
+| a compression, summary, generated map, or prior result replaces current source authority | invalid basis or evidence substitution |
 | Worker cannot see a material violation visible from another evaluation | missing or misactivated specialist frame, capability mismatch, or oversized frame |
 | Reviewer asks assurance code to recreate Product or implementation meaning | Reviewer authority bleed or missing capability/reuse frame |
 | a harness derives current owner state from raw events or payloads despite an installed owner projection | rival semantic interpreter and invalid assurance subject |
@@ -1418,10 +1498,11 @@ A project has applied this baseline to one outcome when:
 21. counterexamples return a causally minimal supported frontier represented as
     one unique locus, a jointly established incomparable set, unresolved
     alternative frontiers, or `indeterminate` evidence;
-22. every Product, Design, Design Component, Public Boundary, Entity, Operator,
-    Owner, Effect, Reuse/Foundation, Install, and Proof family material to the
-    outcome has an exact declaration or acquisition path, while every
-    non-material or uncovered family has an authority-bound disposition;
+22. every Product, Product Composition, Design, Design Component, Public
+    Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and
+    Proof family material to the outcome has an exact declaration or
+    acquisition path, while every non-material or uncovered family has an
+    authority-bound disposition;
 23. every material cross-frame seam preserves or lawfully translates identity,
     coordinate and basis, carried value or evidence, lifecycle scope,
     authority, and provenance; and

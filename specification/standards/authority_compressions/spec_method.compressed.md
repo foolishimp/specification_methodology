@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
+source_digest: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-29
+generated_at: 2026-08-31
 stale_if_source_digest_changes: true
 ---
 
@@ -33,6 +33,19 @@ This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
 decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
 For that decision, route to the digest-current DMM source or compression, or to
 the aggregate STDO compression.
+
+## Recursive Product Taxonomy Compression
+
+- Source Project, Product Definition, candidate checkpoint, Release Cut,
+  Product, Install, Artifact, and dependent Product retain distinct identities;
+  Development Product is a role binding over one of those exact Installs.
+- A Development Product is one exact Install of a released Product acting as
+  builder substrate for a Source Project. The role creates no Product identity
+  and transfers no meaning or authority to the Product being authored.
+- Every directed Product-composition edge retains its source and target roles,
+  authority, contracts, lifecycle, evidence boundary, refusal, and
+  invalidation law. Repository nesting, shared actors, code, or outputs create
+  no edge.
 
 ## Product Definition Overlay Compression
 
@@ -71,7 +84,14 @@ the aggregate STDO compression.
   grant. The overlay neither contains the binding nor registers actors or
   temporary activations. Product or runtime types named `Frame` remain `WHAT`
   or `HOW`; a matching label does not enroll them in the collective evaluation
-  frame set.
+  frame set. A source-linked prose starter is provided by
+  `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`; it projects this law
+  but supplies no authority. When a governed outcome crosses a Product chain,
+  the basis keeps Source Project, Product Definition, candidate checkpoint,
+  Release Cut, Product, Install, Artifact, and dependent Product identities
+  distinct, records Development Product as a role over an exact Install, and
+  binds every directed composition edge to its source and target roles,
+  authority, contracts, evidence, lifecycle, refusal, and invalidation.
 - `what` locates Intent, Product, and specification. `how` locates shared
   realization law and one or more build tenants. `ticketing` locates Goals,
   ticket lanes, comments, and optional sprints. Each `composition` edge binds

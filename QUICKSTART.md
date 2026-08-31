@@ -83,6 +83,35 @@ STDO_TEMPLATE_PATH="$(
 cp "$STDO_TEMPLATE_PATH" ./stdo_default.json
 ```
 
+Copy the Product-owned frame-basis starter from the same cut:
+
+```sh
+STDO_FRAME_BASIS_TEMPLATE="$(
+  stdo resolve \
+    "stdo://releases/${STDO_CUT}/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md" |
+    python3 -c 'import json, sys; print(json.load(sys.stdin)["path"])'
+)"
+
+mkdir -p ./specification
+python3 - "$STDO_FRAME_BASIS_TEMPLATE" \
+  ./specification/REFERENCE_FRAME_BASIS.md <<'PY'
+import pathlib
+import sys
+
+source = pathlib.Path(sys.argv[1])
+target = pathlib.Path(sys.argv[2])
+try:
+    with target.open("xb") as output:
+        output.write(source.read_bytes())
+except FileExistsError:
+    raise SystemExit(f"refusing to overwrite existing frame basis: {target}")
+PY
+```
+
+The copied file is not accepted merely because it exists. Replace every
+placeholder, bind it to the project's exact Product and work authorities, and
+record the accepting decision before treating it as the applicable basis.
+
 Use:
 
 - `stdo_default.json` for one default product definition;
@@ -180,6 +209,13 @@ Check the selected basis:
 ```sh
 stdo status --definition stdo_default.json --verify
 ```
+
+Before governed work, resolve the accepted Project Reference-Frame Basis named
+by the Product Definition. Enter through its Executive frame or declared
+project equivalent: bind the exact outcome and basis, inspect the unresolved
+evaluation frontier, and activate only the smallest dependency-ready context
+needed for the next decision. Re-enter the owning source when the basis,
+authority, evidence, or frame does not resolve exactly.
 
 Recreate the exact selected installation on another machine:
 

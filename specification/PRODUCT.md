@@ -53,8 +53,10 @@ The Product provides:
   reference-frame bases, local constitutional decisions, and explicit
   composition;
 - bounded-context semantic isolation and explicit cross-context relations;
-- an optional reference-frame baseline with engagement, specialist, and
-  Product-testing evaluation families;
+- an optional reference-frame baseline with Executive attention management,
+  evaluation orchestration, authorized-action selection, engagement and
+  Product-testing mappings, generic specialist families including distinct
+  Product and Product Composition evaluations, and Product-chain drift locks;
 - normative interoperability schemas and starter templates where the method
   accepts a concrete exchange shape;
 - one optional executable toolchain manager for shared versioned installation,
@@ -301,12 +303,15 @@ a frame. One execution-scoped activation binds an available Product-owned
 declaration to an exact evaluation, subject, basis, actor, capability envelope,
 evidence boundary, and authority grant.
 
-This Product owns the complete source-project configuration in
-[`REFERENCE_FRAME_BASIS.md`](REFERENCE_FRAME_BASIS.md). That declaration binds
-the exact method and profile acquisition bases; Executive, Worker, Reviewer,
-and Fundamental Invariant Conservation frames; actor and operation grants; all
-eleven generic specialist-family dispositions; four testing frames; coverage
-and result relations; lifecycle triggers; and invalidation and revision law.
+This Product owns the complete current source-project configuration in
+[`REFERENCE_FRAME_BASIS.md`](REFERENCE_FRAME_BASIS.md). That separately
+accepted prior-cut declaration binds the exact method and profile acquisition
+bases; Executive, Worker, Reviewer, and Fundamental Invariant Conservation
+frames; actor and operation grants; all eleven prior-profile generic
+specialist-family dispositions; four testing frames; coverage and result
+relations; lifecycle triggers; and invalidation and revision law. Availability
+of the twelve-family successor profile does not retarget that accepted basis;
+adoption requires its own exact project-basis decision.
 
 The declaration governs the mutable source project. It is not a released
 standards member, does not alter an immutable release, and does not select or

@@ -265,6 +265,15 @@ where:
 This tuple specifies the relation. It is not a required schema or runtime
 carrier.
 
+Operationally, a reference frame is an evaluation contract that defines the
+finite attention scope required for one evaluation family. A prompt, context
+packet, symbolic program, or other representation is a projection of an
+activated frame, not the frame itself. A frame is bound when every material
+coordinate above resolves to an exact source, subject, basis, authority,
+evidence route, actor envelope, result relation, and invalidation condition.
+The binding may be expressed entirely in source-linked prose; representation
+cannot create, widen, or replace it.
+
 ### Activated frame
 
 An **activated frame** binds one frame declaration to an exact evaluation,
@@ -930,6 +939,151 @@ Frame size is optimized for reliable evaluation, not maximum context loading.
 A more capable agent may activate a broader frame. A less capable agent may use
 a lawful refinement sequence. Both preserve the same material invariants and
 authority relations.
+
+### Minimal Frame Activation Binding
+
+The following carrier-neutral content is sufficient to bind one declared frame
+for one evaluation. It may be written in Markdown, structured data, a prompt,
+or another Product-selected carrier without changing the relation.
+
+```markdown
+# Reference-Frame Activation: <stable activation identity>
+
+## Frame
+- declaration identity and revision:
+- exact evaluation and closed result algebra:
+
+## Subject And Basis
+- exact subject or candidate identity:
+- workspace, authority, dependency, configuration, and time basis:
+
+## Attention Surface
+- material relations and applicable invariants:
+- exact source and semantic references:
+- explicit exclusions and prohibited assumptions:
+
+## Actor And Authority
+- actor and capability envelope:
+- semantic and evaluation authority:
+- operation authority, subject, and territory where material:
+- decision, acceptance, and publication authority:
+
+## Evidence And Relations
+- admissible evidence and acquisition route:
+- dependency, overlap, input, conjunction, or translation relations used:
+- expected result consumer and return relation:
+
+## Stop And Change
+- invalidation conditions:
+- stop, residual, re-entry, and reconfiguration conditions:
+```
+
+Every field resolves through stable identities and source references. Paths,
+line numbers, member counts, summaries, and matching labels may aid navigation
+or diagnostics but do not substitute for the declared identity and basis.
+
+### Worked Binding: Product-Chain Drift Evaluation
+
+This non-normative example demonstrates a complete prose binding. It defines no
+universal Product profile and selects no implementation or representation.
+
+```markdown
+# Reference-Frame Activation:
+# urn:example:activation:product-chain-drift:1
+
+## Frame
+- declaration identity and revision:
+  urn:example:frame:product-chain-drift:1
+- evaluation:
+  Does candidate urn:example:candidate:change:7 preserve the selected Product
+  definition and every affected contract in the declared Product chain?
+- result algebra:
+  satisfied | falsified | indeterminate | out_of_frame | invalid_basis
+
+## Subject And Basis
+- exact subject:
+  urn:example:candidate:change:7 at urn:example:checkpoint:source:42
+- workspace:
+  urn:example:source-project:authoring-product at the exact checkpoint above
+- configuration and time:
+  urn:example:configuration:product-change-review:2;
+  urn:example:time-basis:2026-08-31T00:00:00Z
+- basis:
+  urn:example:product-definition:authoring-product;
+  urn:example:work-authority:change:7;
+  urn:example:product:development-substrate:3;
+  urn:example:install:development-substrate:3:local-1;
+  urn:example:product:dependency:5;
+  urn:example:contract:authoring-to-dependency:2
+
+## Attention Surface
+- material relations:
+  mutable Source Project -> candidate checkpoint -> Release Cut -> Product;
+  installed Development Product -> authorized builder substrate;
+  authoring Product -> directed dependency contract -> dependent Product
+- coordinates and equality:
+  every Product, Install, checkpoint, contract, actor, grant, and evidence
+  coordinate compares by its declared identity and exact content digest;
+  source and target Product roles are not nominally interchangeable
+- invariants:
+  the builder is not the Product being authored;
+  a scenario or specialization is not a new Product without Product re-entry;
+  every affected composition edge retains its owner and contract;
+  mutable workspace state is not substituted for an immutable review subject
+- source references:
+  urn:example:source:goals;
+  urn:example:source:product-definition;
+  urn:example:source:requirements;
+  urn:example:source:composition-contract;
+  urn:example:source:candidate-delta
+- exclusions:
+  conversation summaries, generated maps, implementation precedent, matching
+  output, shared actors, directory nesting, and tool reachability as Product
+  or composition authority
+
+## Actor And Authority
+- actor and capability envelope:
+  urn:example:actor:product-chain-reviewer with Product, identity,
+  composition, source-acquisition, and counterexample-search capability
+- semantic authority:
+  the cited Product, requirement, identity, and composition-contract owners
+- evaluation authority:
+  urn:example:grant:evaluate-product-chain-drift:1
+- operation authority:
+  none
+- decision, acceptance, and publication authority:
+  retained by urn:example:authority:product-owner and the cited release owner
+
+## Evidence And Relations
+- admissible evidence:
+  exact authority sources, candidate bytes and delta, dependency identities,
+  composition contracts, affected-path observations, and counterexamples
+- acquisition and provenance:
+  independently reacquire every authority, candidate, dependency, and contract
+  through urn:example:route:product-change-review:2 under
+  urn:example:grant:acquire-review-evidence:2; retain source identities,
+  content digests, acquisition time, and observed failures
+- dependencies:
+  exact Product-preservation results for every affected Product;
+  one composition-edge result for every affected directed edge
+- expected return:
+  one closed result to urn:example:conjunction:product-change:7
+
+## Stop And Change
+- invalidation:
+  any material subject, checkpoint, Product, dependency, contract, actor,
+  capability, evidence, authority, or topology change
+- stop and re-entry:
+  invalid_basis on stale or substituted basis;
+  out_of_frame on missing material scope;
+  indeterminate on unresolved evidence;
+  re-enter the owning Product or contract authority when meaning must change
+```
+
+The example's URIs are illustrative stable coordinates. A consumer replaces
+them with its own exact identities and source routes. It may encode the same
+binding through an axiomatic model or other carrier, but neither is required to
+understand, activate, or evaluate the frame.
 
 ---
 

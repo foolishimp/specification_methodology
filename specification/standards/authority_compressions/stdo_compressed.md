@@ -27,9 +27,9 @@ index_refs:
 source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
-  REFERENCE_FRAME_METHOD.md: 90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f
-  STDO_REFERENCE_FRAME_BASELINE.md: f6a4e2be637df6c2dd5c69c6da7e77cefd8d8cde93af65ca686608ec43555e3f
-  SPEC_METHOD.md: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
+  REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
+  STDO_REFERENCE_FRAME_BASELINE.md: 3099864f6c411d2646d270f4b5a8c80722e076950254043b6395f5f38a7b21b4
+  SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea
   DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
@@ -41,9 +41,9 @@ source_digests:
   RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
-  GLOSSARY_GUIDE.md: 8ac0511cdea5321641cb1d754aa0acec58c323e74aef7dc21c2d767526bdb79a
+  GLOSSARY_GUIDE.md: 47bc27254163253ff1ece97fb9548109c7e24e72692d1236795a35956a48ffa2
 generated_by: codex
-generated_at: 2026-08-30
+generated_at: 2026-08-31
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -700,13 +700,20 @@ layer that owns the missing truth.
   invariants, semantic/evaluation/decision authority and operation authority
   where material, evidence, exclusions, closed results, invalidation, actor
   capability, and only the cross-frame relations actually used.
-- The optional baseline supplies eleven generic specialist-frame families:
-  Product, Design, Design Component, Public Boundary, Entity, Operator, Owner,
-  Effect, Reuse/Foundation, Install, and Proof. For the exact outcome, each
-  family is instantiated where material, evidenced as non-material by capable
-  authority, or retained as an explicit residual. These are evaluation
-  families, not required actors, stages, components, files, services, runtime
-  types, or new semantic owners.
+  Operationally it is an evaluation contract defining finite attention scope.
+  A prompt, context packet, symbolic program, or other representation projects
+  an activation; it does not become the frame or create its authority. The pure
+  method supplies a complete prose activation binding and worked Product-chain
+  drift example, so no representation Product is required.
+- The optional baseline supplies twelve generic specialist-frame families:
+  Product, Product Composition, Design, Design Component, Public Boundary,
+  Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof. For the
+  exact outcome, each family is instantiated where material, evidenced as
+  non-material by capable authority, or retained as an explicit residual.
+  These are evaluation families, not required actors, stages, components,
+  files, services, runtime types, or new semantic owners. Product Composition
+  evaluates directed Product roles and governing contracts; executable
+  Integration remains a distinct Product-testing frame.
 - Generic-frame coverage records the union of admissible observations, while a
   composite claim is satisfied only through a declared conjunction satisfying
   every applicable constraint. Material seams preserve or lawfully translate
@@ -744,6 +751,24 @@ layer that owns the missing truth.
   independent live-surface evaluation governed by `STDO-UP-007` and
   `STDO-UP-022` where `STDO-UP-020` requires it. The profile creates no peer
   execution, review, disposition, checkpoint, or continuation law.
+- Executive owns attention management, evaluation orchestration, and
+  authorized-action selection inside its existing grant. It maintains the
+  exact outcome/basis, Product-role map, evaluation inventory, smallest finite
+  dependency-ready frontier, closed-result ledger, and residual boundary. It
+  activates independent evaluations, consumes only closed results or declared
+  translations, applies declared conjunctions, and selects only the next
+  already-authorized action. It does not load every frame or inherit their
+  undocumented working contexts.
+- Product-chain drift locks keep Source Project, Product Definition, candidate
+  checkpoint, Release Cut, Product, Install, Artifact, dependent Product, and
+  directed composition-edge identities and authorities distinct. A
+  Development Product is a role binding over one exact Install of a released
+  Product acting as builder substrate, not a new Product identity or a source
+  of meaning for the Product being authored. Exact review checkpoints and
+  Products remain immutable under their lifecycle law; that immutability does
+  not make the mutable Source Project immutable. Changed outcome, basis,
+  Product role, authority, coverage, or return topology refuses, invalidates,
+  or re-enters rather than enlarging the Executive frame.
 - The complete baseline route is: Executive attempts Worker activation; an
   activation refusal returns directly to Executive and creates no Worker result;
   after lawful activation, `satisfied`, `falsified`, `indeterminate`, and

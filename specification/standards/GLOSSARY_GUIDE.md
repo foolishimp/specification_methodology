@@ -119,6 +119,7 @@ fallback decision.
 | Indexed term | Bounded-context identity | Owning concept clause |
 |---|---|---|
 | `Substrate` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`SPEC_METHOD.md#recursive-product-taxonomy`](SPEC_METHOD.md#recursive-product-taxonomy) |
+| `Development Product` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`SPEC_METHOD.md#recursive-product-taxonomy`](SPEC_METHOD.md#recursive-product-taxonomy) |
 | `Source Project` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`SPEC_METHOD.md#recursive-product-taxonomy`](SPEC_METHOD.md#recursive-product-taxonomy) |
 | `Release Cut` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`SPEC_METHOD.md#recursive-product-taxonomy`](SPEC_METHOD.md#recursive-product-taxonomy) |
 | `Product` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`SPEC_METHOD.md#recursive-product-taxonomy`](SPEC_METHOD.md#recursive-product-taxonomy) |

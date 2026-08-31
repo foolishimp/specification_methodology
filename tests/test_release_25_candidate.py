@@ -8,19 +8,34 @@ from pathlib import Path
 
 
 REPOSITORY = Path(__file__).resolve().parents[1]
-STANDARDS = REPOSITORY / "specification" / "standards"
-RELEASE_NOTE = REPOSITORY / "releases" / "v2.5.0.md"
+RELEASE_TAG = "v2.5.0-rc.1^{}"
+RELEASE_NOTE = "releases/v2.5.0.md"
 PREDECESSOR = "v2.4.3-rc.3"
 
 
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def git_bytes(revision: str, relative: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{revision}:{relative}"],
+        cwd=REPOSITORY,
+        check=True,
+        capture_output=True,
+    ).stdout
+
+
+def git_paths(revision: str, prefix: str) -> list[str]:
+    return subprocess.run(
+        ["git", "ls-tree", "-r", "--name-only", revision, prefix],
+        cwd=REPOSITORY,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
 
 
 class Release25CandidateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.note = RELEASE_NOTE.read_text(encoding="utf-8")
+        cls.note = git_bytes(RELEASE_TAG, RELEASE_NOTE).decode("utf-8")
         rows = re.findall(
             r"^\| (conserved|changed|added) \| `([^`]+)` \| `([0-9a-f]{64})` \|$",
             cls.note,
@@ -32,32 +47,22 @@ class Release25CandidateTests(unittest.TestCase):
 
     def test_inventory_is_complete_exact_and_unique(self) -> None:
         members = sorted(
-            path.relative_to(STANDARDS).as_posix()
-            for path in STANDARDS.rglob("*")
-            if path.is_file()
+            path.removeprefix("specification/standards/")
+            for path in git_paths(RELEASE_TAG, "specification/standards")
         )
         self.assertEqual(len(self.inventory), 51)
         self.assertEqual(sorted(self.inventory), members)
         for member in members:
-            self.assertEqual(self.inventory[member][1], sha256(STANDARDS / member))
+            released = git_bytes(
+                RELEASE_TAG,
+                f"specification/standards/{member}",
+            )
+            self.assertEqual(
+                self.inventory[member][1], hashlib.sha256(released).hexdigest()
+            )
 
     def test_inventory_dispositions_match_predecessor(self) -> None:
-        predecessor_members = set(
-            subprocess.run(
-                [
-                    "git",
-                    "ls-tree",
-                    "-r",
-                    "--name-only",
-                    PREDECESSOR,
-                    "specification/standards",
-                ],
-                cwd=REPOSITORY,
-                check=True,
-                capture_output=True,
-                text=True,
-            ).stdout.splitlines()
-        )
+        predecessor_members = set(git_paths(PREDECESSOR, "specification/standards"))
         current_members = {
             f"specification/standards/{member}" for member in self.inventory
         }
@@ -69,12 +74,7 @@ class Release25CandidateTests(unittest.TestCase):
             if repository_member not in predecessor_members:
                 actual = "added"
             else:
-                prior = subprocess.run(
-                    ["git", "show", f"{PREDECESSOR}:{repository_member}"],
-                    cwd=REPOSITORY,
-                    check=True,
-                    capture_output=True,
-                ).stdout
+                prior = git_bytes(PREDECESSOR, repository_member)
                 actual = (
                     "conserved"
                     if hashlib.sha256(prior).hexdigest() == current_digest
@@ -85,9 +85,12 @@ class Release25CandidateTests(unittest.TestCase):
         self.assertEqual(counts, {"conserved": 38, "changed": 9, "added": 4})
 
     def test_member_stream_aggregate_matches_release_note(self) -> None:
-        members = sorted(path for path in STANDARDS.rglob("*") if path.is_file())
+        members = sorted(git_paths(RELEASE_TAG, "specification/standards"))
         member_stream = b"".join(
-            f"{sha256(path)}  {path.relative_to(REPOSITORY).as_posix()}\n".encode()
+            (
+                f"{hashlib.sha256(git_bytes(RELEASE_TAG, path)).hexdigest()}  "
+                f"{path}\n"
+            ).encode()
             for path in members
         )
         aggregate = hashlib.sha256(member_stream).hexdigest()
@@ -103,7 +106,8 @@ class Release25CandidateTests(unittest.TestCase):
             pattern = rf"^\| `{re.escape(relative)}` \| `([0-9a-f]{{64}})` \|$"
             match = re.search(pattern, self.note, flags=re.MULTILINE)
             self.assertIsNotNone(match, relative)
-            self.assertEqual(match.group(1), sha256(REPOSITORY / relative))
+            released = git_bytes(RELEASE_TAG, relative)
+            self.assertEqual(match.group(1), hashlib.sha256(released).hexdigest())
 
 
 if __name__ == "__main__":

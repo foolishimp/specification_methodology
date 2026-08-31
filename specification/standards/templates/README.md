@@ -12,6 +12,8 @@ Use these templates as source material for project-local files such as:
 - `PRODUCT.md`
 - `CLAUDE.md`
 - `AGENTS.md`
+- a Product-owned Project Reference-Frame Basis copied from
+  `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`
 
 ## Product Definition Overlay
 
@@ -54,10 +56,16 @@ additional definition files.
 accepted project frame-basis declaration already carried by Product,
 requirements, local constitutional authority, accepted design, or another
 lawful surface. Bind every admitting authority and exact governed scope. The
-default placeholder does not require a new file or fixed location. Do not put
-agent identities or temporary frame activations in the Product Definition
-Overlay; their authorized work instruction or activation packet cites the
-applicable basis.
+default path uses `./specification/REFERENCE_FRAME_BASIS.md`; replace it when
+the owning project chooses another layout. Do not put agent identities or
+temporary frame activations in the Product Definition Overlay; their authorized
+work instruction or activation packet cites the applicable basis.
+
+`PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` is the copyable structured-prose
+starter for that referenced declaration. It projects the normative binding law
+from `SPEC_METHOD.md`; it does not become authority by being copied. A project
+may use another carrier when it preserves the same exact sources, roles,
+frames, grants, results, coverage, invalidation, and re-entry relations.
 
 The template includes one `local_constitution.disambiguations` placeholder to
 show the complete binding. Replace it for every material local term resolution,

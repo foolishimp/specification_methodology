@@ -3,17 +3,21 @@ kind: authority_compression_asset
 asset_ref: authority-compression://stdo/bootstrap/v1
 source_refs:
   - ../SPEC_METHOD.md
+  - ../REFERENCE_FRAME_METHOD.md
+  - ../STDO_REFERENCE_FRAME_BASELINE.md
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  SPEC_METHOD.md: 4c4158b0b2a888277802237d467c7ea0b7e8e5993f5976f5b929e63a6ed0a85b
+  SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
+  REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
+  STDO_REFERENCE_FRAME_BASELINE.md: 3099864f6c411d2646d270f4b5a8c80722e076950254043b6395f5f38a7b21b4
   RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-08-29
+generated_at: 2026-08-31
 stale_if_source_digest_changes: true
 ---
 
@@ -40,9 +44,16 @@ owning standards remain constitutional authority.
 5. Resolve the Product Definition's declared bootstrap entrypoint against its
    named basis. Load raw owning standards whenever this projection is
    insufficient or its source digests are stale.
-6. Load the Product Definition's bound `WHAT`, local constitutional relations,
-   collective reference-frame bases, `HOW`, work carriers, and composition only
-   as required by the active task and governed scope.
+6. Resolve the applicable accepted Project Reference-Frame Basis or its
+   declared composition. Enter governed work through its Executive frame or
+   declared project equivalent: bind the exact outcome and basis, inspect the
+   unresolved evaluation frontier, and activate only the smallest
+   dependency-ready context needed for the next decision.
+7. Load the Product Definition's bound `WHAT`, local constitutional relations,
+   `HOW`, work carriers, composition contracts, and exact source material only
+   as required by that activation and governed scope. A prompt, summary,
+   symbolic map, or prior result may route attention but cannot replace current
+   source authority or a closed frame result.
 
 `sync` materializes only the already selected exact basis. `adopt --dry-run`
 presents a digest-bound plan to the highest-ordinal published immutable RC and

@@ -137,6 +137,12 @@ This methodology therefore distinguishes:
 
 - **Substrate** (`urn:stdo:concept:recursive-product-taxonomy:substrate`): a
   lower product or runtime used to build other products;
+- **Development Product**
+  (`urn:stdo:concept:recursive-product-taxonomy:development-product`): the
+  role of one exact Install of a released Product while that Install acts as
+  builder substrate for a Source Project. The role creates no new Product
+  identity and transfers no meaning or authority from the builder to the
+  Product being authored;
 - **Source Project**
   (`urn:stdo:concept:recursive-product-taxonomy:source-project`): the mutable
   workspace building the next release cut;
@@ -159,6 +165,8 @@ This methodology therefore distinguishes:
 The governing rules are:
 
 - do not call a mutable source workspace a product
+- when a released Product acts as builder substrate, bind the exact Install as
+  a Development Product without confusing it with the Product being authored
 - do not confuse an immutable RC release cut or installed product with the mutable source
   project building the next cut
 - `PRODUCT.md` is the product-definition surface of a source project, not the
@@ -707,6 +715,26 @@ overlapping subsets of one frame set; one agent may activate different frames
 over time. Neither an actor name nor a broad frame grants semantic, operation,
 review, acceptance, or disposition authority beyond the cited owners and the
 exact activation.
+
+The Project Reference-Frame Basis also records the Product-role map when the
+governed outcome crosses a chain of Products. The map keeps mutable Source
+Projects, Product Definitions, candidate checkpoints, Release Cuts, released
+Products, Installs, Artifacts, and dependent Products as distinct identities,
+and records each Development Product as a role binding over its exact
+underlying Install identity. Every directed Product-composition edge names its
+source and target roles, governing authority and contracts, lifecycle,
+evidence boundary, refusal, and invalidation conditions. Common actors,
+repositories, files, implementations, outputs, or tool access create no
+composition or identity relation.
+
+An accepted Project Reference-Frame Basis may be expressed entirely as
+source-linked prose. The starter at
+`templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` projects this binding
+law into one copyable shape. The template is not authority and no schema,
+axiomatic representation, prompt framework, or runtime frame engine is needed
+to use the method. An adopting Product replaces every placeholder with its own
+exact identities, owners, scopes, sources, grants, results, and invalidation
+conditions, then admits that completed declaration under existing authority.
 
 A Product, domain, or runtime carrier also named `Frame` is not included by
 nominal match. It remains governed by its bound `WHAT` and `HOW` and may be the

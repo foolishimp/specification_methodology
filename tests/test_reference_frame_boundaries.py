@@ -13,6 +13,9 @@ PRODUCT = ROOT / "specification/PRODUCT.md"
 BASIS = ROOT / "specification/REFERENCE_FRAME_BASIS.md"
 DEFINITION = ROOT / "stdo_default.json"
 COMPRESSION = ROOT / "specification/standards/authority_compressions/stdo_compressed.md"
+BASIS_TEMPLATE = (
+    ROOT / "specification/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
+)
 
 
 class ReferenceFrameBoundaryTests(unittest.TestCase):
@@ -53,6 +56,65 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
         )
         for coordinate in "QBMCI AEXRJKD".replace(" ", ""):
             self.assertIn(f"| `{coordinate}` |", basis)
+
+    def test_method_is_directly_bindable_without_a_representation(self) -> None:
+        text = METHOD.read_text(encoding="utf-8")
+        for required in (
+            "an evaluation contract that defines the",
+            "finite attention scope",
+            "## Minimal Frame Activation Binding",
+            "## Worked Binding: Product-Chain Drift Evaluation",
+            "The binding may be expressed entirely in source-linked prose",
+            "axiomatic model or other carrier",
+            "coordinates and equality:",
+            "configuration and time:",
+            "acquisition and provenance:",
+        ):
+            self.assertIn(required, text)
+
+        self.assertNotIn("conjunction:executive", text)
+
+        self.assertIn("# Project Reference-Frame Basis", BASIS_TEMPLATE.read_text())
+
+    def test_executive_controls_attention_evaluation_action_and_drift(self) -> None:
+        text = PROFILE.read_text(encoding="utf-8")
+        for required in (
+            "## Executive Attention, Evaluation, And Action",
+            "**attention management**",
+            "**evaluation orchestration**",
+            "**authorized action selection**",
+            "dependency-ready activation set sufficient",
+            "### Executive Drift Locks",
+            "### Product-Chain Basis",
+            "| **Product Composition** |",
+            "does not make a Source Project immutable",
+            "No lateral handoff",
+        ):
+            self.assertIn(required, text)
+
+        for forbidden in ("ABIogenesis", "ABG", "HoG", "GTL"):
+            self.assertNotIn(forbidden, text)
+
+    def test_product_composition_and_integration_remain_distinct(self) -> None:
+        text = PROFILE.read_text(encoding="utf-8")
+        self.assertIn("twelve generic specialist-frame families", text)
+        self.assertIn("Product Composition, Design", text)
+        self.assertIn("A chain is evaluated through bounded edge activations", text)
+        self.assertIn("### Derived Integration Frame", text)
+
+        compression = COMPRESSION.read_text(encoding="utf-8")
+        self.assertIn("twelve generic specialist-frame families", compression)
+        self.assertIn("executable\n  Integration remains a distinct", compression)
+
+        spec_method = SPEC_METHOD.read_text(encoding="utf-8")
+        self.assertIn(
+            "urn:stdo:concept:recursive-product-taxonomy:development-product",
+            spec_method,
+        )
+        self.assertIn("role of one exact Install of a released Product", spec_method)
+        self.assertNotIn("Development Product identities", spec_method)
+        self.assertNotIn("Development Product identities", text)
+        self.assertNotIn("Development Product identities", compression)
 
     def test_project_basis_binds_exact_immutable_method_coordinates(self) -> None:
         text = BASIS.read_text(encoding="utf-8")
