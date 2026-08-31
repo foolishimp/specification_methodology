@@ -24,13 +24,13 @@ as a source-project convenience and report that boundary.
    the deterministic index over that unchanged compression.
 2. Verify the exact inputs before use:
    - compression file SHA-256:
-     `a561853b324e6464324238ee3cdb505edff20e78a8b5b83ff8bc202a1d261783`;
+     `5e6b6250492f4322f52248f4d889310ae29ff4dfa5578e0126b0a9e8d7ff6d63`;
    - compression canonical SHA-256:
-     `e325e4399560b0be5562d345005818e4f925f72ecbfd9a234207f8c77b095cc5`;
+     `8910927be67b1d2cac988797a826c3be459512011e82a29bbbe8374614c3f11c`;
    - index file SHA-256:
-     `8161a99e0cd80170882e2019f72f419dd773683c0731ad9b3a0d1d31a5905a95`;
+     `e00a7ccdecbfb6fae1bd1c99e023ff8bede5508e679562b29f4a054907d9a4dd`;
    - index intrinsic SHA-256:
-     `2df34cb85bf6fbad2436e468e14cb5c26ff8d0aa721f8de10bb7e948b0d21b78`;
+     `e3ec18cc61cc297e1fbee96e65bc125de2da08eb3d4e6ddd4f4c354c1073cd93`;
    - accepted project frame-basis SHA-256:
      `0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`;
    - frame-basis acceptance-decision SHA-256:

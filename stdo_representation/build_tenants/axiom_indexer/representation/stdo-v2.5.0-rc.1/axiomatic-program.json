@@ -18,7 +18,6 @@
     "urn:stdo-representation:vocabulary:kind:context",
     "urn:stdo-representation:vocabulary:kind:corpus",
     "urn:stdo-representation:vocabulary:kind:model",
-    "urn:stdo-representation:vocabulary:kind:product",
     "urn:stdo-representation:vocabulary:kind:projection",
     "urn:stdo-representation:vocabulary:kind:record",
     "urn:stdo-representation:vocabulary:kind:role",
@@ -80,11 +79,11 @@
       ]
     },
     {
-      "uri": "urn:stdo-representation:a-c-text:symbol:installed-release",
-      "kind": "urn:stdo-representation:vocabulary:kind:product",
-      "label": "Immutable installed release",
+      "uri": "urn:stdo-representation:a-c-text:symbol:install",
+      "kind": "urn:stdo-representation:vocabulary:kind:artifact",
+      "label": "Verified installed Product instance",
       "source_refs": [
-        "stdo://releases/v2.5.0-rc.1/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        "stdo://releases/v2.5.0-rc.1/standards/schemas/installed-release-manifest.schema.json"
       ]
     },
     {
@@ -101,6 +100,14 @@
       "label": "Reference frame",
       "source_refs": [
         "stdo://releases/v2.5.0-rc.1/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:symbol:release-cut",
+      "kind": "urn:stdo-representation:vocabulary:kind:artifact",
+      "label": "Immutable RC release cut",
+      "source_refs": [
+        "stdo://releases/v2.5.0-rc.1/standards/RELEASE_METHOD.md#immutable-rc-publication"
       ]
     },
     {
@@ -684,7 +691,7 @@
       "arguments": [
         {
           "role": "urn:stdo-representation:vocabulary:role:subject",
-          "ref": "urn:stdo-representation:a-c-text:symbol:installed-release"
+          "ref": "urn:stdo-representation:a-c-text:symbol:install"
         },
         {
           "role": "urn:stdo-representation:vocabulary:role:requirement",
@@ -764,10 +771,10 @@
         },
         {
           "role": "urn:stdo-representation:vocabulary:role:requirement",
-          "literal": "A Product Definition structurally binds one Product identity, exact STDO basis, local constitutional relations, reference-frame bases, WHAT, HOW, work carriers, and composition under a closed schema."
+          "literal": "A Product Definition structurally binds one Product-Definition identity for a continuing mutable WHAT line, exact STDO basis, local constitutional relations, reference-frame bases, WHAT, HOW, work carriers, and composition under a closed schema; it is not immutable Product identity."
         }
       ],
-      "statement": "A Product Definition structurally binds one Product identity, exact STDO basis, local constitutional relations, reference-frame bases, WHAT, HOW, work carriers, and composition under a closed schema.",
+      "statement": "A Product Definition structurally binds one Product-Definition identity for a continuing mutable WHAT line, exact STDO basis, local constitutional relations, reference-frame bases, WHAT, HOW, work carriers, and composition under a closed schema; it is not immutable Product identity.",
       "source_refs": [
         "stdo://releases/v2.5.0-rc.1/standards/schemas/product-definition.schema.json"
       ]
@@ -836,7 +843,7 @@
       "arguments": [
         {
           "role": "urn:stdo-representation:vocabulary:role:subject",
-          "ref": "urn:stdo-representation:a-c-text:symbol:installed-release"
+          "ref": "urn:stdo-representation:a-c-text:symbol:release-cut"
         },
         {
           "role": "urn:stdo-representation:vocabulary:role:requirement",
