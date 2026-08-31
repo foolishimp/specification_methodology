@@ -5,7 +5,7 @@
 - type: release
 - ticket_category: release
 - status: active
-- review_status: blocked_by_t022_exact_review
+- review_status: in_review
 - goal: >-
     Publish the current 52-member STDO successor as one immutable,
     project-qualified RC2 and make it reacquirable without moving RC1.
@@ -26,7 +26,7 @@
 - project_release_namespace: specification_methodology
 - project_subtree: specification_methodology
 - release_note: releases/v2.5.0.md
-- depends_on: T-019, T-020, T-021 closed; T-022 closure
+- depends_on: T-019, T-020, T-021, T-022 closed
 
 ## Admission Gate
 

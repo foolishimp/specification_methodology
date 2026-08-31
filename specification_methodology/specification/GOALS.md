@@ -35,10 +35,10 @@ selected by this Product goal.
 
 ## Current Disposition
 
-T-019 through T-021 are closed predecessor work for this release wave. T-022 is
-active with `changes_requested` until fresh exact review accepts its repaired
-subject. T-023 is active and depends on that closure. RC2 publication remains
-pending exact candidate qualification and independent release review.
+T-019 through T-022 are closed predecessor work for this release wave. The
+final exact-subject a_c-guided Reviewer result for T-022 is `satisfied` with no
+S0-S4 findings. T-023 is active in review. RC2 publication remains pending one
+independent whole-cut release review and exact remote publication verification.
 
 ## Selection Boundary
 

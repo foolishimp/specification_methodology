@@ -4,8 +4,8 @@
 - title: Bind technical triage to Reviewer and Product disposition to Executive
 - type: feature
 - ticket_category: constitutional
-- status: active
-- review_status: changes_requested
+- status: completed
+- review_status: satisfied
 - goal: >-
     Make finding evaluation proportional while preserving one Executive over
     the complete Product and current MVP or release mandate.
@@ -17,6 +17,7 @@
 - triaged_at: 2026-09-01
 - created_at: 2026-09-01
 - updated_at: 2026-09-01
+- completed_at: 2026-09-01
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-09-01
@@ -62,22 +63,28 @@ runtime.
 - `specification/standards/authority_compressions/stdo_compressed.md`
 - `tests/test_reference_frame_boundaries.py`
 
-## Current Review Evidence
+## Completion Evidence
 
-The first lean a_c-guided review returned `falsified` for the exact prior
-52-member candidate aggregate
-`554646747e6ba2227b4d0ad2b714764e1014173ad18532266de738476a073d26`.
-Its exact result is retained at
-`../stdo_representation/dogfood/rc2-self-review/lean-run-001/reviewer-result.md`.
-It found three material S2 gaps: one contradictory compression sentence,
-substring-only focused proof, and a non-consumable closure assertion in this
-ticket. That result was later invalidated for the live candidate by an
-independent standards-schema change, but remains exact evidence for the subject
-it evaluated.
+- Exact reviewed commit: `d75520ceef0ba3fdeb35903a470c02ce7200dd64`.
+- Standards aggregate:
+  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`.
+- The a_c-guided Reviewer activation used one derived Reviewer frame, selected
+  material index clauses, preserved open solution space, and placed the action
+  last. The immutable Axiom Indexer join reproduced the seven-section request.
+- The exact semantic Reviewer result is `satisfied`; S0 through S4 are all
+  empty. It closes Reviewer-to-Executive totality, raw/compression/template
+  congruence, and the explicit limit of mechanical proof.
+- Exact result:
+  `stdo_representation/dogfood/rc2-self-review/final-lean-run-003/review-result.md`,
+  SHA-256
+  `edec926f7a31cc18aa80e4e28d08ea633d1665fe49971d33c03e4255821f55f0`.
+- Run metadata:
+  `stdo_representation/dogfood/rc2-self-review/final-lean-run-003/run.json`,
+  SHA-256
+  `b92c581f512f0874378fa24a844d9331fbefa0b3dc4c703c5da1e172065614a5`.
+- Focused mechanical proof and the full candidate suite pass normally and under
+  optimized Python. Those checks protect declared structure and refusal
+  boundaries; they do not substitute for the semantic result above.
 
-Closure now requires repaired compression, mechanical branch/cardinality and
-refusal-boundary coverage, and a fresh exact-subject semantic Reviewer result
-that binds the current candidate, activation, evidence, scale direction,
-Reference Frame Method result, findings, and residuals. The tests do not
-substitute for that semantic result. The ticket remains active until both
-evidence classes exist.
+The exact self-review evidence closes this ticket. It is not the independent
+whole-cut review required by T-023 and grants no publication authority.
