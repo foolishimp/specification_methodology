@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: active
+Status: completed
 
 Qualify and publish the current STDO 2.5.0 successor as one immutable,
 project-qualified RC2 without moving the accepted RC1 or confusing the shared
@@ -10,7 +10,7 @@ repository carrier with the STDO Product subject.
 
 ## Selected Work
 
-- `T-023` owns release-record reconciliation, bounded executable
+- `T-023` completed release-record reconciliation, bounded executable
   qualified-ref support, exact candidate qualification, immutable RC2
   publication, and remote verification.
 
@@ -35,11 +35,11 @@ selected by this Product goal.
 
 ## Current Disposition
 
-T-019 through T-022 are closed predecessor work for this release wave. The
-final exact-subject a_c-guided Reviewer result for T-022 is `satisfied` with no
-S0-S4 findings. T-023 has independent pre-publication `GO` with P0, P1, and P2
-all zero. The authorized atomic publication and exact remote verification are
-the remaining current actions.
+T-019 through T-023 are closed. The exact-subject a_c-guided Reviewer result
+for T-022 is `satisfied` with no S0-S4 findings. STDO 2.5.0 RC2 is published
+under the qualified project namespace and independently verified from its
+public immutable cut with P0 through P3 all zero. Product acceptance and
+consumer adoption remain separate. No successor work is selected.
 
 ## Selection Boundary
 

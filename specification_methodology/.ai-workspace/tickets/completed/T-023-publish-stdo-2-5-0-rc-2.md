@@ -4,8 +4,8 @@
 - title: Qualify and publish STDO 2.5.0 RC2 from the shared release source
 - type: release
 - ticket_category: release
-- status: active
-- review_status: go
+- status: completed
+- review_status: satisfied_published
 - goal: >-
     Publish the current 52-member STDO successor as one immutable,
     project-qualified RC2 and make it reacquirable without moving RC1.
@@ -17,6 +17,7 @@
 - triaged_at: 2026-09-01
 - created_at: 2026-09-01
 - updated_at: 2026-09-01
+- completed_at: 2026-09-01
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-09-01
@@ -27,6 +28,9 @@
 - project_subtree: specification_methodology
 - release_note: releases/v2.5.0.md
 - depends_on: T-019, T-020, T-021, T-022 closed
+- published_tag_object: 5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3
+- published_commit: 2c9a11701d567d01320482100979c9fcd54ab846
+- published_manifest_sha256: 313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a
 
 ## Admission Gate
 
@@ -74,3 +78,28 @@ tree, `specification_methodology` Project Subtree tree, installed manifest,
 qualified refs, remote parity, and exact-cut review are recorded. Any
 qualifying-byte repair after publication advances to
 `specification_methodology/v2.5.0-rc.3`; neither RC1 nor RC2 may move.
+
+## Completion Evidence
+
+- Immutable annotated RC2 tag object:
+  `5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3`.
+- Peeled carrier commit:
+  `2c9a11701d567d01320482100979c9fcd54ab846`.
+- Repository tree: `374813552b319254d615de8b1c29fa0a99ec4e9b`.
+- Specification Methodology subtree:
+  `b416e6f6819e8dbff7497a5ab92f32df131804f8`.
+- Standards tree: `f636fd8dcc234e05b8aa464a35f24d843c258dc9`.
+- Installed-manifest SHA-256:
+  `313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`.
+- The qualified selector tag object is
+  `1170380798149236b91afeb9ce5a550206226b67`; it peels to the RC2 commit.
+- Qualified `main`, RC, and release branches align to RC2. Historical RC1
+  branches and annotated objects remain unchanged.
+- Fresh public installation and verification reproduce 52 members and aggregate
+  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`.
+- Independent exact-cut review is `GO`; P0 through P3 all zero. It is retained
+  at
+  `.ai-workspace/comments/codex/20260901T073000_REVIEW_stdo_2_5_0_rc2_exact_cut.md`.
+
+Publication and exact-cut qualification are complete. Product acceptance and
+consumer adoption are not inferred.
