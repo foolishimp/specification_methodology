@@ -65,9 +65,13 @@ codex exec --ephemeral --sandbox workspace-write --model gpt-5.6-sol \
 |---|---:|---|
 | `request.md` | 3,859 | `e86a1ad39092b1fd2368b14aea51c87997e536e88b997fdf4f7b80f32c9c4ea9` |
 | `events.jsonl` | 305,999 | `85ae8a66f853816541cd8eefa6f24eb76a2ea0014822f5510e3201c7e94403f0` |
-| `result.md` | 5,019 | `b1d4b0eeb30d96baf2ae7b50fec3dc43336b05c8c41493ed0f000a81fd173036` |
+| `result.md` | 5,016 | `9088c52b351bc28f36ae74549f3a787c40848c28c0fff8e973d5c427172aff73` |
 | `sections.json` | 4,705 | `dd6f21b0555ddd0cfe8ab490a8c44e5e525f4cc257e3c832b35e6349681b5c44` |
 | `joined-request.txt` | 4,446 | `185b16b588d4dc2588e8ee418d97090d6b071a4c0515774d25053ccc030e86ca` |
+
+`events.jsonl` preserves the raw final message. `result.md` is its readable
+projection with trailing Markdown line-break spaces removed for repository
+diff hygiene; no words or result claims changed.
 
 The extracted immutable Axiom dependency verified as annotated tag object
 `e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeled commit

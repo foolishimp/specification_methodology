@@ -36,6 +36,10 @@ class ThinConstitutionTests(unittest.TestCase):
         release_target = target_root / CHECKER.CANDIDATE_RELEASE_PATH
         release_target.parent.mkdir(parents=True, exist_ok=True)
         release_target.write_bytes((ROOT / CHECKER.CANDIDATE_RELEASE_PATH).read_bytes())
+        for path in CHECKER.CANDIDATE_NATIVE_EVIDENCE:
+            target = target_root / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes((ROOT / path).read_bytes())
 
     def test_current_tree_passes_focused_audit(self) -> None:
         result = CHECKER.audit(ROOT, self.axiom_root)
@@ -177,6 +181,18 @@ class ThinConstitutionTests(unittest.TestCase):
             self.assertIn(
                 "candidate release declared Product inventory does not match live member bytes",
                 failures,
+            )
+
+    def test_corrected_native_evidence_drift_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            self.copy_candidate_release_subject(temp_root)
+            evidence_path = next(iter(CHECKER.CANDIDATE_NATIVE_EVIDENCE))
+            target = temp_root / evidence_path
+            target.write_bytes(target.read_bytes() + b"\nchanged\n")
+            failures = CHECKER.validate_candidate_release(temp_root)
+            self.assertIn(
+                f"corrected native evidence changed: {evidence_path}", failures
             )
 
     def test_overlay_rejects_heavy_tenant_reactivation(self) -> None:

@@ -39,9 +39,9 @@ One material frame was selected:
 
 ### Outputs
 
-- [sections.json](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-001/sections.json)  
+- [sections.json](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-001/sections.json)
   SHA-256 `dd6f21b0555ddd0cfe8ab490a8c44e5e525f4cc257e3c832b35e6349681b5c44`
-- [joined-request.txt](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-001/joined-request.txt)  
+- [joined-request.txt](/Users/jim/src/apps/specification_stack/stdo_representation/dogfood/native-pickup/release-2.5.0/codex-run-001/joined-request.txt)
   SHA-256 `185b16b588d4dc2588e8ee418d97090d6b071a4c0515774d25053ccc030e86ca`
 
 Six Codex-layout sections were joined using only the extracted immutable `ac.py`. The 4,446 output bytes exactly equal the caller-authored `label + "\n" + text` rows separated by two newlines, with no terminal newline. No tracked Product or source member changed.

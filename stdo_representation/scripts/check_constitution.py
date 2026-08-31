@@ -65,6 +65,14 @@ CANDIDATE_RELEASE_CLAIMS = (
 CANDIDATE_RELEASE_CLAIM_IDS = tuple(
     f"STDO-REP-2.5-C{ordinal:02d}" for ordinal in range(1, 6)
 )
+CANDIDATE_NATIVE_EVIDENCE = {
+    Path("dogfood/native-pickup/release-2.5.0/codex-run-002/README.md"): (
+        "7a9ae4b8c33f6398dd8710dad94da97b811cf177be3bd269eb190857330c8d85"
+    ),
+    Path("dogfood/native-pickup/release-2.5.0/claude-run-002/README.md"): (
+        "7179cf36a3bad0db19213c5b56b2f742cb6e416ddfa5aa76647d0bbef9d9044b"
+    ),
+}
 CANDIDATE_LAYER_CLAIMS = (
     "Source STDO prose 2.5.0",
     "a_c.STDO 2.5.0 Axiomatic Program",
@@ -551,6 +559,21 @@ def validate_candidate_release(root: Path) -> list[str]:
     )
     if declared_inventory_digests != [inventory_sha256]:
         failures.append("candidate release declares the wrong Product inventory digest")
+
+    for evidence_path, expected_digest in CANDIDATE_NATIVE_EVIDENCE.items():
+        full_path = root / evidence_path
+        if not full_path.is_file():
+            failures.append(f"missing corrected native evidence: {evidence_path}")
+            continue
+        if hashlib.sha256(full_path.read_bytes()).hexdigest() != expected_digest:
+            failures.append(f"corrected native evidence changed: {evidence_path}")
+        if (
+            evidence_path.as_posix() not in record_text
+            or expected_digest not in record_text
+        ):
+            failures.append(
+                f"candidate release does not bind corrected evidence: {evidence_path}"
+            )
     return failures
 
 
