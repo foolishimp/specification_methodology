@@ -4,8 +4,8 @@
 - title: Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
 - type: implementation
 - ticket_category: design_realization
-- status: active
-- review_status: changes_requested
+- status: completed
+- review_status: go
 - goal: >-
     Place the three related source projects under one coordination-only Git
     repository so finite LLM actors can traverse the complete stack without
@@ -19,6 +19,7 @@
 - triaged_at: 2026-08-31
 - created_at: 2026-08-31
 - updated_at: 2026-08-31
+- completed_at: 2026-08-31
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-31
@@ -148,5 +149,13 @@ and project-subtree release identity. This ticket grants no such release.
   reports technical integration GO with two P2 closure-state findings. The
   verdict is retained at
   `../../comments/codex/20260831T144618_REVIEW_specification_stack_monorepo_candidate.md`.
-  Closure remains open until those findings are repaired and the exact delta
-  is independently reviewed.
+- The closure-state repair cut
+  `757f9ea3920b6fbd05310f705f78e50ee07cf0c3` moves T-013 and T-014 to their
+  evidence-congruent completed state, retains the initial verdict, and aligns
+  T-020 and Goals in the active review state.
+- Independent review of that exact repair cut reports GO with P0, P1, and P2
+  all zero. The verdict is retained at
+  `../../comments/codex/20260831T144954_REVIEW_specification_stack_monorepo_closure_delta.md`.
+- Direct Product-owner instruction selected the monorepo migration. This
+  record closes only the local migration; it does not authorize remote
+  cutover or future release refs.

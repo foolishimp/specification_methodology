@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: in_review
+Status: completed
 
 Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
 as three peer source projects under one coordination-only repository root while
@@ -20,10 +20,9 @@ remain explicit residuals after local integration succeeds.
 
 ## Disposition
 
-The technical history-preserving integration is complete. Closure-state
-repairs are in exact review; no successor implementation wave is selected.
-Project-qualified release refs and any remote cutover require a separate goal
-reprice and exact review.
+The local history-preserving integration and closure review are complete. No
+successor implementation wave is selected. Project-qualified release refs and
+any remote cutover require a separate goal reprice and exact review.
 
 ## Selection Boundary
 
