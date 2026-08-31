@@ -1,16 +1,17 @@
 # STDO Representation Project Reference-Frame Basis
 
-Status: proposed source-project basis, revision 11; exact Product-owner
-acceptance pending.
+Status: source-project basis, revision 12; acceptance is external and
+digest-bound.
 
 ## Project frame basis
 
 ```text
 frame_set_uri =
-  "urn:stdo-representation:reference-frame-basis:source-project:11"
+  "urn:stdo-representation:reference-frame-basis:source-project:12"
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
-governed_outcome = "qualify and publish the thin 0.1.0 Product"
+governed_outcome =
+  "qualify STDO Representation 2.5.0 as compression and index of STDO 2.5.0"
 frame_set_authority =
   "urn:stdo-representation:authority:product-owner"
 reference_frame_method =
@@ -50,6 +51,8 @@ Axiom Indexer tree =
   8c9ad5f5e99a60c18fb8c1802471753afb226272
 Axiom Indexer member inventory =
   sha256:7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
+Representation semantic version = 2.5.0
+Represented STDO semantic version = 2.5.0
 ```
 
 ## Human authority
@@ -95,8 +98,9 @@ residuals, and invalidation conditions.
 
 ### F-PRODUCT-BOUNDARY
 
-- Evaluation: is `0.1.0` the thin map-and-native-instructions Product with no
-  local engine or hidden heavy-prototype dependency?
+- Evaluation: is `2.5.0` exactly the semantic compression, constraint index,
+  and native-instructions Product with no local engine or hidden
+  heavy-prototype dependency?
 - Evidence: exact WHAT, member inventory, dependency basis, exclusions, and
   realization routing.
 - Invariants: eight Product members; Axiom Indexer owns all deterministic code;
@@ -105,14 +109,30 @@ residuals, and invalidation conditions.
 - Exclusions: repository presence, prior tests, or GTL terminology cannot widen
   the Product.
 
+### F-VERSION-ALIGNMENT
+
+- Evaluation: does the Representation semantic version equal the represented
+  STDO semantic version while preserving distinct Product, RC, member, and Git
+  identities?
+- Evidence: exact Source STDO cut and selector, Product version law, historical
+  bootstrap release, project-qualified release plan, and dependency identities.
+- Invariants: `representation_version = represented_stdo_version = 2.5.0`;
+  Source STDO, STDO Representation, and Axiom Indexer remain different
+  Products; historical refs never move.
+- Actor envelope: `K-PRODUCT`.
+- Exclusions: equal version text cannot substitute one Product, cut, install,
+  subtree, or release ref for another.
+
 ### F-MAP-ESSENCE
 
-- Evaluation: does `a_c.STDO` capture essential constraints and uncertainty
-  with usable Source STDO routes rather than restate prose?
-- Evidence: exact program and map, the closed `F-MECHANICAL-BOUNDARY` result,
+- Evaluation: does `a_c.STDO` compress essential constraints and uncertainty,
+  and does the index expose that unchanged logic with usable Source STDO routes
+  rather than restate prose?
+- Evidence: exact compression and index, the closed `F-MECHANICAL-BOUNDARY` result,
   source routes, residuals, and source-grounded counterexamples.
-- Invariants: URI identity, explicit residuals, bounded source re-entry, and no
-  complete-`M_b` or unique-truth claim.
+- Invariants: exact compression-to-index identity, URI identity, explicit
+  residuals, bounded source re-entry, and no complete-`M_b` or unique-truth
+  claim.
 - Actor envelope: `K-MAP`.
 - Exclusions: size, polish, source-member count, or structural validity alone
   does not prove semantic usefulness.
@@ -206,8 +226,9 @@ configuration, context boundary, access, and prior involvement.
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
 | exact frame-set acceptance and overlay binding | Reference Frame Method; Product owner | external acceptance relation | Product owner decides; overlay mutation separately granted | exact file digest, acceptance record, valid Product Definition; prerequisite to activation | separately covered; human acceptance and overlay binding pending |
-| thin Product boundary | Goals; Intent; Product; T-003 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
-| authoring-map essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | program, map, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
+| compression-and-index Product boundary | Goals; Intent; Product; T-006 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
+| represented-version alignment | Product version relation; T-006; Release Method | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, Representation candidate, historical bootstrap, project-qualified refs | conditionally covered; mismatch or identity collapse falsifies |
+| compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | compression, index, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
 | imported validator and join boundary | Product; candidate requirement; Axiom release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | exact dependency, reports, maps, joins, falsifiers | conditionally covered; proves mechanical properties only |
 | Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | skill inventory, target references, fresh pickups, selected frames | conditionally covered; each target requires observation |
 | practical usefulness | dogfood requirement | `F-DOGFOOD-USEFULNESS` | Product owner disposes claim | comparable tasks, outputs, source re-entry, regressions | conditionally covered; unobserved tasks remain residual |
@@ -239,7 +260,7 @@ configuration, context boundary, access, and prior involvement.
 Only closed results cross frame boundaries. Unclosed working context and ambient
 conversation are not evidence.
 
-Before publication, the five Product frames plus `F-CANDIDATE-READINESS` must
+Before publication, the six Product frames plus `F-CANDIDATE-READINESS` must
 return `satisfied` on one frozen candidate after the external acceptance and
 overlay prerequisite is satisfied. `F-EXACT-CUT` is not activated and cannot
 veto publication. After the separately authorized publication relation
@@ -263,10 +284,9 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
-Revision 11 remains proposed until the Product owner accepts its exact SHA-256.
-The decision must name the frame-set URI and digest, actor and authority,
-decision, scope, and time. Only then may `stdo_representation.json` bind this
-basis with the exact acceptance record.
+Revision 12 is accepted only through a Product-owner decision naming its exact
+SHA-256, frame-set URI, actor, authority, scope, and time. Only that external
+decision allows `stdo_representation.json` to bind this basis.
 
 Editing this file after presentation changes its subject and requires a new
 digest and decision.

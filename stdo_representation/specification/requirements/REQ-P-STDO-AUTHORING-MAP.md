@@ -1,4 +1,4 @@
-# REQ-P-STDO-AUTHORING-MAP — Source-Linked STDO Compression
+# REQ-P-STDO-AUTHORING-MAP — STDO Compression And Constraint Index
 
 Family: `REQ-P-MAP-*`
 Status: Active
@@ -10,8 +10,10 @@ Derives from: `../PRODUCT.md#product-terms`, exact Source STDO
 ## Purpose
 
 Specialize the released Axiom Indexer `a_c.text` authoring surface for exact
-Source STDO. The result is a compact logical constraint map for LLM use, not a
-second Source STDO authority or a complete admitted calculus model.
+Source STDO. The Axiomatic Program is the semantic compression. The emitted
+Logical Constraint Map is the deterministic index over that unchanged
+compression. Neither is a second Source STDO authority or a complete admitted
+calculus model.
 
 ## Program shape
 
@@ -54,14 +56,21 @@ rather than invented certainty.
 member counts, array positions, lexical similarity, and graph proximity shall
 not establish meaning, equality, dependency, authority, or frame selection.
 
-**REQ-P-MAP-006**: The logical map shall be instantiated by exact Axiom Indexer
-from the unchanged valid program. STDO Representation shall not add another
-canonicalizer, resolver, map schema, or validator.
+**REQ-P-MAP-006**: The logical constraint index shall be instantiated by exact
+Axiom Indexer from the unchanged valid compression and shall bind its URI,
+canonical digest, source basis, frame references, populations, and total source
+routes. STDO Representation shall not add another canonicalizer, resolver, map
+schema, or validator.
 
-**REQ-P-MAP-007**: The map may omit prose wording and may be larger than the
-source. It shall preserve enough explicit logic and source routes for the
-selected dogfood tasks or return to authoring reprice.
+**REQ-P-MAP-007**: Compression is semantic and attentional, not a byte-size
+claim. The compression or index may exceed the prose bytes. They shall preserve
+enough explicit logic and source routes for selected tasks or return to
+authoring reprice.
 
-**REQ-P-MAP-008**: The Product shall not describe this authoring map as the full
+**REQ-P-MAP-008**: The Product shall not describe this compression or index as the full
 `M_b`, all `I/O/E/C/L/X/V/T/J` populations, a lossless carrier, a selected
 semantic baseline, or GTL.
+
+**REQ-P-MAP-009**: The Product semantic version shall equal the represented
+STDO semantic version. Equal version text shall not collapse their Product,
+release-cut, RC-ordinal, or content identities.

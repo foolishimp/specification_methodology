@@ -128,7 +128,7 @@
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
         "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20260831T005313_frame_basis_rev11_acceptance.json"
+        "./.ai-workspace/decisions/20260831T153019_frame_basis_rev12_acceptance.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"
@@ -174,5 +174,16 @@
       "root": "./.ai-workspace/sprints/"
     }
   },
-  "composition": []
+  "composition": [
+    {
+      "product_definition": "../axiom_indexer/stdo_default.json",
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "relation": "./specification/PRODUCT.md#axiom-indexer-development-product-relation",
+      "contracts": [
+        "./specification/PRODUCT.md#exact-dependency-bases",
+        "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary",
+        "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation"
+      ]
+    }
+  ]
 }

@@ -15,23 +15,28 @@ Live specification defines the current constitutional truth of the project.
 Release process defines how one published point-in-time cut is evaluated,
 bounded, named, published, and made discoverable.
 
-The exact operative release identity is always an immutable RC cut tag:
+The product-local cut name is always:
 
 ```text
 v<version>-rc.<n>
 ```
 
-The unqualified version tag:
+In a release source carrying one independently released project, that name may
+also be the Git tag name. In a shared release source it is the suffix of the
+project-qualified Git ref defined below. Equal product-local cut names do not
+collapse releases owned by different projects.
+
+The product-local version-line selector name is:
 
 ```text
 v<version>
 ```
 
-is a mutable **Version-Line Selector**. It points to the latest published
-immutable RC cut on that line, where latest means the greatest positive RC
-ordinal present in the release source. It is convenient discovery, not
-immutable identity and not sufficient as an exact constitutional, dependency,
-evidence, or replay basis.
+It denotes a mutable **Version-Line Selector**. The selector points to the
+latest published immutable RC cut on that line, where latest means the greatest
+positive RC ordinal published for that project and version line. It is
+convenient discovery, not immutable identity and not sufficient as an exact
+constitutional, dependency, evidence, or replay basis.
 
 Release handling is downstream of intake triage. A bug, feature, regression,
 or release blocker first receives its change class, lawful re-entry point,
@@ -42,20 +47,106 @@ The existence of an RC window does not authorize untriaged mutation.
 
 The release-publication context distinguishes:
 
+- **Project Release Namespace** — a stable repository-local key assigned by the
+  Product release authority to one independently released source project;
+- **Project Subtree** — the exact repository-relative source-project root and
+  Git tree object selected for one cut;
 - **Candidate Source** — mutable source-project state constructing a possible
   successor;
-- **RC Branch** — a mutable carrier such as `rc/<version>` for the current
-  candidate window;
-- **Immutable RC Cut** — an annotated `v<version>-rc.<n>` tag naming one exact
-  published candidate and, once accepted, one released Product;
-- **Version-Line Selector** — the mutable `v<version>` tag alias naming the
-  highest-ordinal published immutable RC cut on that version line; and
-- **Release Branch** — an optional mutable convenience carrier such as
-  `release/<version>` aligned to the same latest-published commit as the
-  selector.
+- **RC Branch** — a mutable project-qualified carrier for the current candidate
+  window;
+- **Immutable RC Cut** — an annotated project-qualified Git tag plus its exact
+  Product release subject, naming one published candidate and, once accepted,
+  one released Product;
+- **Version-Line Selector** — the mutable project-qualified tag alias naming
+  the highest-ordinal published immutable RC cut for that project and version
+  line; and
+- **Release Branch** — an optional mutable project-qualified convenience
+  carrier aligned to the same latest-published commit as the selector.
 
 Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
+
+## Project-Qualified Git Refs
+
+`<project>` is one explicit Project Release Namespace. It matches
+`[a-z0-9]+(?:[-_][a-z0-9]+)*`, contains no slash, is unique within the release
+source, and remains stable for the continuing release line. It is assigned by
+the Product release authority. A directory name, display name, definition
+label, package name, or matching version cannot infer or reassign it.
+
+A shared release source uses these exact ref shapes for every future
+publication:
+
+```text
+RC branch:              refs/heads/rc/<project>/<version>
+immutable RC cut tag:   refs/tags/<project>/v<version>-rc.<n>
+version-line selector:  refs/tags/<project>/v<version>
+release branch:         refs/heads/release/<project>/<version>
+```
+
+The short Git tag names are therefore `<project>/v<version>-rc.<n>` and
+`<project>/v<version>`. A shared release source must not publish a future cut or
+selector under the unqualified `v<version>-rc.<n>` or `v<version>` refs.
+
+A single-project release source may retain the unqualified ref profile only
+while it has exactly one independently released project and its release record
+declares that profile. Adding a second independently released project requires
+project-qualified refs before either project publishes another cut.
+
+For the Specification Stack shared source, the allocated namespaces are
+`specification_methodology`, `axiom_indexer`, and `stdo_representation`. These
+keys distinguish release refs; they do not merge the three Products or imply a
+dependency or composition relation.
+
+## Project-Subtree Release Identity
+
+In a shared release source, an immutable cut binds all of:
+
+- the Project Release Namespace and owning Product authority;
+- the exact qualified Git ref and annotated tag object;
+- the peeled commit and repository-root tree;
+- the normalized repository-relative Project Subtree root at that commit;
+- the Git tree object at that exact Project Subtree root;
+- the declared Product member inventory and release-scoped claim bytes; and
+- the predecessor and successor dispositions required by this method.
+
+The Project Subtree root is a locator inside the exact peeled commit, not
+Product identity. Its canonical spelling is the slash-separated Git path from
+the repository root, with no leading or trailing slash and no empty, `.`, or
+`..` component; `.` alone denotes the repository root. Each non-root component
+must name the exact tree entry bytes traversed at that commit. Moving a source
+project changes this locator and its cut identity without reassigning the
+Project Release Namespace. If the source project occupies the repository root,
+its project-subtree tree equals the repository-root tree.
+
+A tag over a monorepo commit does not make sibling subtrees Product members.
+Unrelated sibling bytes remain carrier state outside the declared Product
+subject. Conversely, a member inventory or payload digest without the
+qualified ref, commit, Project Subtree root, and Project Subtree tree is not a
+complete reacquirable release identity.
+
+## Historical Ref And Public-URI Conservation
+
+Project qualification is prospective. Existing unqualified refs retain their
+names, objects, peels, and public links. A historical tag object may remain
+reachable through an additional archival ref, but it is not recreated,
+re-annotated, moved, or replaced. An immutable historical tag remains the same
+object regardless of which preserving ref reaches it.
+
+Product-local cut names and public logical release URIs also remain unchanged.
+In particular, a logical STDO release remains
+`stdo://releases/v<version>-rc.<n>/`; the project-qualified Git ref is transport
+identity and is not inserted into that URI. Resolution binds the public logical
+cut to its exact historical or project-qualified Git ref and fails closed if
+one project-local coordinate names different tag objects.
+
+When one version line spans the transition, latest means the greatest positive
+RC ordinal across that project's preserved historical cuts and its qualified
+future cuts. The first qualified publication creates the qualified selector.
+The historical unqualified selector is preserved at its existing object and
+ceases to be the current selector for the shared source; it is not force-moved
+to imitate the qualified namespace.
 
 ## Phases
 
@@ -95,14 +186,17 @@ possible acceptance. To publish it, the project:
 3. reconciles the release note and other release-facing assets to that subject;
 4. runs the proportionate pre-RC qualification and operator checks;
 5. commits the exact carrier;
-6. creates one annotated immutable `v<version>-rc.<n>` tag and an annotated
-   `v<version>` selector tag over that same commit;
-7. atomically pushes the carrier, RC branch, immutable RC tag, selector, and
+6. resolves and records the exact Project Release Namespace, Project Subtree
+   root, and Project Subtree tree;
+7. creates one annotated immutable `<project>/v<version>-rc.<n>` tag and an
+   annotated `<project>/v<version>` selector tag over that same commit in a
+   shared release source;
+8. atomically pushes the carrier, RC branch, immutable RC tag, selector, and
    optional release branch where the transport supports it;
-8. verifies remotely that the immutable tag, selector, and release branch
+9. verifies remotely that the immutable tag, selector, and release branch
    resolve to the highest published RC commit; and
-9. records enough identity and inventory evidence to reacquire the cut without
-   trusting a mutable checkout.
+10. records enough ref, subtree, identity, and inventory evidence to reacquire
+    the cut without trusting a mutable checkout.
 
 Each published RC tag is immutable. Further work increments `<n>` on the same
 version line when the intended line remains applicable. It does not require a
@@ -115,8 +209,9 @@ the version-line latest.
 
 Qualification binds:
 
-- the immutable RC tag object, peeled commit, repository tree, and declared
-  Product member set;
+- the Project Release Namespace, qualified immutable RC ref, annotated tag
+  object, peeled commit, repository tree, Project Subtree root and tree, and
+  declared Product member set;
 - the exact release-scoped claim bytes;
 - the governing Product and release basis;
 - each claimed property and its observation boundary;
@@ -136,16 +231,17 @@ carrier.
 
 ## Monotonic Version-Line Advancement
 
-Version-line advancement makes the newly published highest RC discoverable:
+Version-line advancement makes the newly published highest RC for one Project
+Release Namespace discoverable:
 
 1. identify the exact new immutable RC tag, ordinal, and peeled commit;
 2. confirm that no higher RC ordinal already exists on that line;
-3. confirm `v<version>` is absent or currently resolves to a lower RC ordinal
-   on the same line;
-4. atomically create or force-update the annotated `v<version>` selector to the
-   new highest RC commit;
-5. create or update `release/<version>` to the same commit when that optional
-   carrier is used;
+3. confirm the project-qualified selector is absent or currently resolves to a
+   lower RC ordinal on the same project line;
+4. atomically create or force-update the annotated
+   `<project>/v<version>` selector to the new highest RC commit;
+5. create or update `release/<project>/<version>` to the same commit when that
+   optional carrier is used;
 6. push the carrier, RC branch, immutable RC tag, selector, and optional release
    branch atomically where the transport supports it; and
 7. verify remotely that the selector peels to the highest RC commit and that
@@ -181,14 +277,16 @@ annotated selector with a distinct peeled commit; absence of a peeled selector
 ref fails closed and cannot be interpreted as a lightweight selector whose tag
 object is its commit.
 
-Channel resolution enumerates the published RC tags, selects the greatest
-positive ordinal, requires that cut and the version-line selector to be
-annotated tags peeling to the same commit, and fails closed when the selector
-lags or points elsewhere. Channel adoption also refuses a same-line target
-whose ordinal is below the Product Definition's current exact basis. A consumer
-that intentionally retains an older cut names that immutable RC URI and digest
-explicitly and uses exact-basis operations such as `sync`; it does not express
-that choice through the latest-version channel.
+Channel resolution enumerates the published RC tags for the selected Project
+Release Namespace, including preserved unqualified historical cuts during a
+namespace transition, selects the greatest positive ordinal, requires that cut
+and the current selector to be annotated tags peeling to the same commit, and
+fails closed when the selector lags or points elsewhere. Channel adoption also
+refuses a same-line target whose ordinal is below the Product Definition's
+current exact basis. A consumer that intentionally retains an older cut names
+that immutable RC URI and digest explicitly and uses exact-basis operations
+such as `sync`; it does not express that choice through the latest-version
+channel.
 
 Presentation and mutation are separate invocations. The read-only plan binds
 the current Product Definition bytes and basis to the target immutable cut,
@@ -207,23 +305,26 @@ adoption.
 
 ## Naming
 
-The default naming shape is:
+The shared-source naming shape is:
 
-- RC branch: `rc/<version>`;
-- immutable RC tag: `v<version>-rc.<n>`;
-- optional release branch: `release/<version>`; and
-- mutable version-line selector tag: `v<version>`.
+- RC branch: `rc/<project>/<version>`;
+- immutable RC tag: `<project>/v<version>-rc.<n>`;
+- optional release branch: `release/<project>/<version>`; and
+- mutable version-line selector tag: `<project>/v<version>`.
 
 For example:
 
-- candidate branch: `rc/2.4.3`;
-- first immutable cut: `v2.4.3-rc.1`;
-- second immutable cut: `v2.4.3-rc.2`;
-- latest-release branch: `release/2.4.3`; and
-- latest-published selector: `v2.4.3`.
+- candidate branch: `rc/stdo_representation/2.5.0`;
+- first immutable cut: `stdo_representation/v2.5.0-rc.1`;
+- second immutable cut: `stdo_representation/v2.5.0-rc.2`;
+- latest-release branch: `release/stdo_representation/2.5.0`; and
+- latest-published selector: `stdo_representation/v2.5.0`.
 
-Projects may choose another spelling only when they preserve the same mutable
-carrier, immutable cut, and mutable selector distinctions.
+The unqualified profile remains lawful only under the single-project and
+historical-conservation conditions above. Projects may choose another spelling
+only in a release source whose ref policy proves collision freedom and preserves
+the same project namespace, mutable carrier, immutable cut, and mutable selector
+distinctions.
 
 ## Release-Scoped Assets
 
@@ -249,15 +350,18 @@ belong in release-scoped carriers and consumer basis bindings.
 
 Before qualification, the project declares:
 
+- its Project Release Namespace and exact Project Subtree root;
 - the exact Product member set or artifact constituting the release subject;
 - the release-scoped claim surfaces describing that subject; and
 - co-located mutable source-project fields excluded from both.
 
 A repository commit carries those declared sets but does not make every
-co-located file a Product member. Once the immutable RC is published, no
-post-review carrier delta is admitted into that cut. Publication-caused ticket
-or source-work bookkeeping is recorded afterward on the continuing source
-branch and cannot move the immutable RC tag.
+co-located file or sibling Project Subtree a Product member. The exact
+Project Subtree tree and Product member inventory distinguish the subject from
+the wider carrier. Once the immutable RC is published, no post-review carrier
+delta is admitted into that cut. Publication-caused ticket or source-work
+bookkeeping is recorded afterward on the continuing source branch and cannot
+move the immutable RC tag.
 
 ## Acceptance Criteria
 

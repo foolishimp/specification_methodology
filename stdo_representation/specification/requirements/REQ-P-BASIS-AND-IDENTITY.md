@@ -9,7 +9,7 @@ Derives from: `../PRODUCT.md#exact-dependency-bases` and
 
 ## Purpose
 
-Bind the STDO authoring map, native skill, and joined requests to exact Source
+Bind the STDO compression, logical constraint index, native skill, and joined requests to exact Source
 STDO and Axiom Indexer coordinates without turning physical paths, counts, or
 runtime observations into semantic identity.
 
@@ -41,6 +41,8 @@ Axiom Indexer Product member inventory SHA-256:
 
 - Program and logical-map identities use the exact released Axiom Indexer
   canonicalization and digest law.
+- Representation semantic version equals represented STDO semantic version;
+  equal version text does not equate their Products, cuts, or RC identities.
 - Skill identity binds its exact regular-file inventory and symlink target
   strings.
 - Joined-request identity is SHA-256 over exact UTF-8 output bytes.
@@ -75,10 +77,10 @@ routes. A physical binding shall not enter the program as meaning.
 logical prefix unambiguously and remain external to the portable Product member
 set. Missing, escaped, ambiguous, or mismatched bindings shall refuse.
 
-**REQ-P-BASIS-005**: The logical map shall bind the unchanged valid program,
-resolved-source evidence, and intrinsic map digest emitted by the exact Axiom
-Indexer dependency. A map from different program or dependency bytes is a
-different subject.
+**REQ-P-BASIS-005**: The logical constraint index shall bind the unchanged
+valid compression URI and canonical digest, resolved-source evidence, and
+intrinsic map digest emitted by the exact Axiom Indexer dependency. An index
+from different compression or dependency bytes is a different subject.
 
 **REQ-P-BASIS-006**: The canonical skill shall be exposed through exactly these
 relative symlink targets:
@@ -100,3 +102,8 @@ not enter program, map, skill, or joined-request identity.
 Product inventory, dependency bases, claim bytes, evidence, annotated immutable
 RC tag object, peeled commit, and tree. Publication or validation alone shall
 not imply Product acceptance.
+
+**REQ-P-BASIS-010**: STDO Representation `2.5.0` shall represent only exact
+STDO semantic version `2.5.0`. Its project-qualified RC ordinal, Product member
+identity, and acceptance remain independent of the represented STDO cut and of
+Axiom Indexer `0.1.0`.

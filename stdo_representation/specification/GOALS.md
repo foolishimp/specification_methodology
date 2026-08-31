@@ -2,12 +2,12 @@
 
 ## Current work wave
 
-Release and dogfood the smallest useful STDO context Product:
+Maintain the release-matched STDO compression and constraint index:
 
 ```text
-exact Source STDO prose
-  -> LLM-authored a_c.STDO authoring map
-  -> Axiom Indexer validation and logical constraint map
+exact Source STDO prose 2.5.0
+  -> LLM-authored a_c.STDO 2.5.0 semantic compression
+  -> Axiom Indexer validation and logical constraint index
   -> LLM-selected reference frames and ordered context
   -> exact string join
   -> native Codex or Claude use with source re-entry
@@ -19,16 +19,17 @@ resolver, basic validator, logical-map instantiation, and pure ordered joiner.
 This Product has zero local engine code and adds no deterministic orchestration
 or GTL engine.
 
-The first Product line is `0.1.0`. Its accepted immutable Product is
-`v0.1.0-rc.1`; the unqualified `v0.1.0` tag is only the mutable
-highest-published-RC selector.
+The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
+historical `v0.1.0-rc.1`. The active Product line is `2.5.0`, matching the
+represented STDO Product line. Representation RC ordinals and content
+identities remain independently qualified.
 
-## GOAL-001 — Freeze the STDO authoring map
+## GOAL-001 — Freeze the STDO semantic compression
 
 Status: completed
 
 Produce one source-linked Axiom Indexer `a_c.text` program for exact Source
-STDO `v2.5.0-rc.1` and instantiate it as a logical constraint map.
+STDO `v2.5.0-rc.1` and instantiate a logical constraint index over it.
 
 ### Completion conditions
 
@@ -39,7 +40,7 @@ STDO `v2.5.0-rc.1` and instantiate it as a logical constraint map.
 - Every item has a source route; uncertainty remains explicit.
 - Exact Axiom Indexer validation succeeds and reproduces the same logical map
   from the same program, bindings, and dependency release.
-- The Product claims an `a_c.STDO` authoring map, not a complete admitted
+- The Product claims an `a_c.STDO` semantic compression, not a complete admitted
   `M_b`, unique interpretation, or lossless replacement for Source STDO.
 
 The selected Product paths are:
@@ -100,9 +101,9 @@ then publish only if the thin Product earns continued use.
 
 ## Deferred direction
 
-An `a_c.STDO` map may later inform a GTL or ABG composition. That is a separate
-Product re-entry after this thin release proves useful. It is not a `0.1.0`
-member, dependency, completion condition, or implied capability.
+An `a_c.STDO` compression and its index may later inform a GTL or ABG
+composition. That is a separate Product re-entry. It is not a member,
+dependency, completion condition, or implied capability of this Product.
 
 ## GOAL-004 — Enter the Specification Stack monorepo
 
@@ -127,3 +128,31 @@ accepted dependency.
 - Constitution, project, and optimized-Python checks pass from the nested
   child root, and fleet verification preserves the independent Product
   Definition.
+
+## GOAL-005 — Align the Product with represented STDO 2.5.0
+
+Status: completed
+
+Reprice STDO Representation as the version-matched package of canonical
+`a_c.STDO` compression, deterministic logical constraint index, and native use
+instructions for exact STDO 2.5.0.
+
+### Completion conditions
+
+- The represented semantic version is `2.5.0`; the exact Source STDO basis is
+  immutable `v2.5.0-rc.1`.
+- The `a_c.STDO` program is the canonical released compression for that exact
+  basis; the logical map is explicitly an index over the unchanged program.
+- Source STDO remains semantic authority and every indexed item retains source
+  re-entry.
+- Axiom Indexer retains its independent `0.1.0` identity and owns only the
+  mechanical validation, materialization, and join contracts.
+- Historical STDO Representation `v0.1.0-rc.1` remains unchanged and reachable.
+- The new release line uses project-qualified monorepo refs and binds its
+  project subtree rather than treating the repository tree as Product identity.
+- Focused checks, native skill validation, exact map reproduction, and
+  independent candidate review pass before publication.
+
+The local frozen-member candidate satisfies these conditions. Immutable RC
+publication, post-publication exact-cut review, and Product acceptance remain a
+separate release action.

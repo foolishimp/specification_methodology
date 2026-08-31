@@ -10,7 +10,7 @@ Derives from: `../INTENT.md#native-agent-use`,
 
 ## Purpose
 
-Let Codex and Claude use the STDO logical map natively while keeping semantic
+Let Codex and Claude use the STDO logical constraint index natively while keeping semantic
 selection in the LLM and deterministic code limited to the released Axiom
 Indexer joiner.
 
@@ -37,7 +37,7 @@ instruction differences.
 ## Frame-use relation
 
 ```text
-LLMSelect(map, task, role, evidence_boundary)
+LLMSelect(index_over_compression, task, role, evidence_boundary)
   -> selected frames + ordered labeled sections | hold
 
 AxiomJoin(ordered labeled sections)
@@ -51,9 +51,9 @@ no semantic work.
 ## Requirements
 
 **REQ-P-NATIVE-001**: The canonical skill shall tell the agent to verify the
-exact map and dependency, load the map before broad source prose, and re-enter
-exact Source STDO when a task, residual, disagreement, or unresolved route
-requires it.
+exact compression, index binding, and dependency; load the index before broad
+source prose; and re-enter exact Source STDO when a task, residual,
+disagreement, or unresolved route requires it.
 
 **REQ-P-NATIVE-002**: The LLM shall select frames explicitly. No similarity,
 retrieval rank, graph distance, validator, fixed-point closure, or hidden model

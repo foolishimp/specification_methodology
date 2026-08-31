@@ -4,31 +4,32 @@
 
 Status: completed
 
-Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
-as three peer source projects under one coordination-only repository root while
-preserving each Product, Product Definition, immutable release identity,
-authority, history, and native LLM pickup surface.
+Ratify collision-free shared-source release refs and exact Project Subtree
+identity for the three independently released Specification Stack Products
+without changing historical refs, tag objects, public URIs, Product boundaries,
+or release state.
 
 ## Selected Work
 
-- `T-020` owns the source-topology design, legacy-root and nested-root STDO
-  release-reader compatibility, history-preserving local integration, root
-  coordination surface, and cross-project verification.
+- `T-021` owns the shared Release Method requirement reprice, prospective
+  project-qualified ref grammar, Project Subtree release identity, historical
+  ref and public-URI conservation, owned compression/index updates, and focused
+  proof.
 
-No release cut is selected. New monorepo release-tag law and remote cutover
-remain explicit residuals after local integration succeeds.
+No release cut, tag, branch, Product acceptance, or remote cutover is selected.
 
 ## Disposition
 
-The local history-preserving integration and closure review are complete. No
-successor implementation wave is selected. Project-qualified release refs and
-any remote cutover require a separate goal reprice and exact review.
+The shared-source release law is ratified. Future Specification Stack refs are
+qualified by `specification_methodology`, `axiom_indexer`, or
+`stdo_representation` and bind their exact Project Subtree. Historical refs and
+logical release URIs remain unchanged. Executable qualified-ref resolution and
+any publication require separately selected realization and release work.
 
 ## Selection Boundary
 
-This work may change source layout, toolchain-manager design and realization,
-project-local path bindings, root coordination instructions, native skill
-discovery, tests, and migration evidence. It does not change any Product
-meaning, merge Product Definitions, retarget an immutable release, infer
-composition from directory nesting, publish a release, rename or delete a
-remote, or archive a predecessor repository.
+This work may change only shared release-publication requirement truth and its
+owned compressed, glossary, work-tracking, and proof projections. It does not
+change Product meaning, Product Definition selection, dependency or composition
+authority, source layout, executable resolution, any historical ref or object,
+an immutable release, a public logical URI, a remote, or publication state.

@@ -1,6 +1,6 @@
 # Codex GPT-5.6 Sol Layout
 
-Use a lean request. State each instruction once. Include only the tools and map
+Use a lean request. State each instruction once. Include only the tools and index
 regions needed for the task.
 
 Prefer this section order unless the task gives a better one:
@@ -13,7 +13,7 @@ Prefer this section order unless the task gives a better one:
 6. `Success and return`
 
 Name the authorized action boundary and the evidence required for completion.
-Keep the map excerpt source-linked. Do not copy the complete standards corpus or
+Keep the index excerpt source-linked. Do not copy the complete standards corpus or
 repeat the same rule in several sections.
 
 This layout follows the GPT-5.6 guidance to keep prompts lean, expose only

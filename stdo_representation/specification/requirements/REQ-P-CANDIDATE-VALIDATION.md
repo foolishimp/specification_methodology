@@ -19,8 +19,8 @@ mechanical diagnostics, and write a new candidate when repair is needed.
 LLMAuthor(Source_STDO, authoring_contract, selected_frames)
   -> Program* | hold | residual
 
-AxiomValidate(Program*, BindingSet)
-  -> valid + LogicalConstraintMap | diagnostics
+AxiomValidate(Compression*, BindingSet)
+  -> valid compression + bound LogicalConstraintIndex | diagnostics
 ```
 
 The LLM performs semantic interpretation and repair. Axiom Indexer performs the
@@ -62,9 +62,14 @@ script shall fork, widen, or silently patch the imported contract.
 to the LLM. A crash, unresolved dependency, invalid binding, parse failure, or
 partial evaluation shall not produce `valid`.
 
-**REQ-P-CANDIDATE-005**: A repair is a new program candidate with new content
-identity. Revalidation of identical program and binding bytes under the exact
-same dependency shall reproduce the same report and map.
+**REQ-P-CANDIDATE-005**: A repair is a new compression candidate with new
+content identity. Revalidation of identical compression and binding bytes under
+the exact same dependency shall reproduce the same report and index.
+
+**REQ-P-CANDIDATE-009**: `valid` shall require the emitted index to bind the
+unchanged compression URI and canonical digest, exact source basis, frame
+references, logical populations, and total source routes. An index over another
+compression is invalid.
 
 **REQ-P-CANDIDATE-006**: `valid` shall be described only as satisfaction of the
 released mechanical contract. Semantic source comparison and usefulness remain

@@ -38,10 +38,10 @@ source_digests:
   TICKET_METHOD.md: a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
-  RELEASE_METHOD.md: c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0
+  RELEASE_METHOD.md: 8e6de5a50ac06f5826fc90f8f8792fb0c7bbc61458c822affe019e10290a80cd
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
-  GLOSSARY_GUIDE.md: 47bc27254163253ff1ece97fb9548109c7e24e72692d1236795a35956a48ffa2
+  GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
 generated_at: 2026-08-31
 stale_if_source_digest_changes: true
@@ -666,15 +666,25 @@ layer that owns the missing truth.
 - Authority has identity and may be proxied only through an explicit bounded
   grant. Implementer self-review is not independent review.
 - Exact-cut qualification declares the Product release subject, release-scoped
-  claims, and excluded source state against one immutable annotated RC tag. At
-  publication, the mutable annotated `v<version>` selector advances
-  monotonically to the highest-ordinal published RC; a lightweight, lagging, or
-  backward selector is invalid. It is discovery, never exact authority.
-  Consumer channel adoption refuses a same-line downgrade and is a separate
-  two-invocation transition whose mutation requires the externally accepted
-  exact plan digest. An intentionally older cut remains available through its
-  exact immutable basis. Any qualifying-byte change requires a higher immutable
-  RC; selector advancement adds no second final carrier or semantic review.
+  claims, and excluded source state against one immutable annotated RC tag. A
+  shared release source allocates one stable Project Release Namespace per
+  independently released project and uses
+  `refs/tags/<project>/v<version>-rc.<n>` for immutable cuts and
+  `refs/tags/<project>/v<version>` for its mutable selector. The exact cut also
+  binds the peeled commit and repository tree, Project Subtree root and tree,
+  Product member inventory, and claim bytes; a monorepo tag does not make
+  sibling subtrees Product members. Existing unqualified refs, tag objects,
+  peels, links, and product-local public URIs remain unchanged. In particular,
+  `stdo://releases/v<version>-rc.<n>/` never gains the Git project prefix.
+  At publication, the qualified selector advances monotonically to the
+  highest-ordinal published RC for that project and line; a lightweight,
+  lagging, or backward selector is invalid. It is discovery, never exact
+  authority. Consumer channel adoption refuses a same-line downgrade and is a
+  separate two-invocation transition whose mutation requires the externally
+  accepted exact plan digest. An intentionally older cut remains available
+  through its exact immutable basis. Any qualifying-byte change requires a
+  higher immutable RC; selector advancement adds no second final carrier or
+  semantic review.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a

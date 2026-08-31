@@ -1,27 +1,29 @@
 # STDO Representation
 
-STDO Representation is an exact Source STDO authoring map and a concise native
-skill for using it. An LLM authors and reviews meaning. Accepted Axiom Indexer
-`v0.1.0-rc.1` supplies URI resolution, basic validation, logical-map
-instantiation, and exact ordered string joining.
+STDO Representation 2.5.0 is the canonical `a_c.STDO` semantic compression of
+STDO 2.5.0, a deterministic logical constraint index over that compression,
+and a concise native skill for using both. An LLM authors and reviews meaning.
+Accepted Axiom Indexer `v0.1.0-rc.1` supplies URI resolution, basic validation,
+index instantiation, and exact ordered string joining.
 
 ```text
-Source STDO v2.5.0-rc.1
-  -> LLM-authored a_c.STDO
-  -> validated logical constraint map
+Source STDO 2.5.0 (exact cut v2.5.0-rc.1)
+  -> LLM-authored a_c.STDO 2.5.0 compression
+  -> validated logical constraint index over the compression
   -> LLM-selected visible reference frames
   -> exact ordered join
   -> native Codex or Claude work with source re-entry
 ```
 
-The map may be larger than prose. Its value is explicit reusable constraints
-and stable source routes, not byte compression. Source STDO remains authority.
+The compression or index may be larger than prose. Their value is explicit
+reusable constraints and stable source routes, not fewer bytes. Source STDO
+remains semantic authority.
 
 ## MVP
 
 The selected Product members are:
 
-- the STDO Axiomatic Program and logical map under
+- the STDO Axiomatic Program compression and logical constraint index under
   `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/`;
 - one canonical skill under `skills/stdo-representation/`;
 - concise Codex and Claude instruction references in that skill; and
@@ -36,7 +38,8 @@ those exact strings.
 Start with the [Quickstart](QUICKSTART.md). The normal agent loop is:
 
 1. discover the `stdo-representation` native skill;
-2. load the logical map before loading broad Source STDO prose;
+2. load the logical constraint index over the exact compression before loading
+   broad Source STDO prose;
 3. select material frame URIs for the task;
 4. show each frame's purpose and Source STDO route;
 5. re-enter source when a residual, disagreement, or task requires it;
@@ -55,13 +58,15 @@ from Source STDO. A role label or prompt grants no external authority.
   `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
   `8c9ad5f5e99a60c18fb8c1802471753afb226272`.
 
-The first STDO Representation Product is the accepted immutable
+The bootstrap STDO Representation Product remains the accepted immutable
 [`v0.1.0-rc.1`](https://github.com/foolishimp/stdo_representation/releases/tag/v0.1.0-rc.1).
 Its annotated tag object is
 `46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f`; it peels to commit
 `b127ee9a0362f85d4875ae59664ecfcd13028d9c` and tree
 `15f9beb360836386ce9607dd31e30d0c8b5cd830`. The annotated `v0.1.0` tag is
 the mutable highest-published-RC selector, not the immutable Product identity.
+The active source candidate is STDO Representation `2.5.0`, matching the
+represented STDO line while retaining its own RC and Product identities.
 
 ## Evidence and boundary
 
@@ -84,11 +89,10 @@ dependencies.
 
 ## Product Definition
 
-The Product owner accepted project frame basis revision 11 at exact SHA-256
-`09db079c16758db8765452bd05f6b5de3ce831974e80fb9ea59ef876fab50ed9`.
-`stdo_representation.json` binds that basis and its durable acceptance record.
-Product Definition verification is therefore part of the release gate rather
-than an intentional staging hold.
+The Product owner accepted project frame basis revision 12 at SHA-256
+`ca11d7f1977333f1b9cdc47f4051280fb980abdef95143bc49072e5c22e10434`.
+`stdo_representation.json` binds that exact basis and decision. Product
+Definition verification is part of the release gate.
 
 ## Authority order
 

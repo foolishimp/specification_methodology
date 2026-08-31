@@ -24,8 +24,10 @@ authorized next action. It does not load every frame into one context.
 Native skills available from this root:
 
 - `$axiomatize-corpus` authors and mechanically validates an `a_c` program;
-- `$stdo-representation` uses the released source-linked `a_c.STDO` map and
-  re-enters Source STDO for exact details.
+- `$stdo-representation` uses the mutable source project's current
+  source-linked `a_c.STDO` compression index and re-enters Source STDO for
+  exact details. It is a development convenience, not an immutable Product
+  Install; verify the child checkpoint and Product status before use.
 
 The skills route attention. They grant no semantic, mutation, acceptance, or
 release authority.

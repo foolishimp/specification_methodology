@@ -10,7 +10,7 @@ Derives from: `../INTENT.md#success-criterion`,
 
 ## Purpose
 
-Determine whether the STDO authoring map and native instructions are useful
+Determine whether the STDO compression, its index, and native instructions are useful
 enough to release and keep using. The relevant comparison is direct Source STDO
 prose versus map-first use with bounded source re-entry. A joined role request
 is a use of the same map, not a claimed GTL level.
@@ -37,9 +37,9 @@ criteria.
 same material task, workspace evidence, role, output contract, model capability,
 and evaluator. Context differences shall remain visible.
 
-**REQ-P-DOGFOOD-003**: The candidate program shall validate with zero
-diagnostics under exact Axiom Indexer and reproduce the same logical map from
-the same program and bindings.
+**REQ-P-DOGFOOD-003**: The candidate compression shall validate with zero
+diagnostics under exact Axiom Indexer and reproduce the same logical constraint
+index from the same compression and bindings.
 
 **REQ-P-DOGFOOD-004**: Negative observations shall force URI, reference,
 source-route, grounding, residual re-entry, and ordering failures. Expected

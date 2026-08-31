@@ -90,6 +90,8 @@ fallback decision.
 
 | Indexed term | Bounded-context identity | Owning concept clause |
 |---|---|---|
+| `Project Release Namespace` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
+| `Project Subtree` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
 | `Candidate Source` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
 | `RC Branch` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |
 | `Immutable RC Cut` | `urn:stdo:bounded-context:release-publication` | [`RELEASE_METHOD.md#release-identities`](RELEASE_METHOD.md#release-identities) |

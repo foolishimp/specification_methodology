@@ -1,14 +1,16 @@
 # STDO Representation Product
 
-Status: active source definition; thin `0.1.0` Product released and accepted as
-immutable `v0.1.0-rc.1`.
+Status: active source definition for release-matched `2.5.0`; bootstrap
+`v0.1.0-rc.1` remains an accepted immutable historical Product.
 
 ## Product statement
 
-STDO Representation is an exact Source STDO authoring map plus concise native
-instructions for using it. An LLM reads Source STDO, authors `a_c.STDO`, invokes
-the released Axiom Indexer validator, repairs diagnostics, and uses the resulting
-logical constraint map to select reference frames and prepare bounded work.
+STDO Representation 2.5.0 is the canonical `a_c.STDO` semantic compression of
+exact Source STDO 2.5.0, the deterministic logical constraint index over that
+compression, and concise native instructions for using both. An LLM reads
+Source STDO, authors the compression, invokes the released Axiom Indexer
+validator, repairs diagnostics, and uses the index to select reference frames
+and prepare bounded work.
 
 The Product adds no local semantic compiler, GTL engine, prompt orchestrator,
 or model runtime. Exact Axiom Indexer supplies all deterministic mechanics. The
@@ -18,9 +20,9 @@ and ordering choice.
 ## Product shape
 
 ```text
-exact Source STDO
-  -> a_c.STDO Axiomatic Program
-  -> logical constraint map
+exact Source STDO 2.5.0
+  -> a_c.STDO 2.5.0 Axiomatic Program (semantic compression)
+  -> Logical Constraint Map (deterministic index over the program)
   -> native STDO Representation skill
   -> LLM-selected visible frame details and ordered sections
   -> Axiom Indexer pure join
@@ -32,14 +34,18 @@ it.
 
 ## Product terms
 
-- **Source STDO** is the exact installed STDO `v2.5.0-rc.1` standards corpus.
+- **Represented STDO Version** is semantic version line `2.5.0`; its exact
+  represented cut is immutable STDO `v2.5.0-rc.1`.
+- **Source STDO** is that exact installed standards corpus and remains semantic
+  authority.
 - **Axiom Indexer Dependency** is exact accepted Axiom Indexer
   `v0.1.0-rc.1`, used without copying its Product members into this Product.
-- **`a_c.STDO` Axiomatic Program** is the STDO-specific Axiom Indexer
-  `a_c.text` authoring surface. It contains URI-identified symbols, clauses,
-  and residuals grounded in Source STDO.
-- **Logical Constraint Map** is the deterministic Axiom Indexer view
-  instantiated from the unchanged valid program and invocation-local bindings.
+- **`a_c.STDO` Axiomatic Program** is the canonical semantic compression
+  selected for the exact represented cut. It contains URI-identified symbols,
+  clauses, and residuals grounded in Source STDO.
+- **Logical Constraint Map** is the deterministic Axiom Indexer index
+  instantiated from the unchanged valid compression and invocation-local
+  bindings. It adds no semantic interpretation.
 - **Source Route** is a logical URI from a program item or residual to exact
   Source STDO. A physical path is an invocation binding, not semantic identity.
 - **Reference Frame Selection** is the LLM's explicit choice of material frame
@@ -58,6 +64,23 @@ it.
 - **Released Product** is the exact immutable member set accepted under the
   installed STDO Release Method. Repository proximity does not make other bytes
   Product members.
+
+## Version relation
+
+STDO Representation inherits the semantic version of the represented STDO
+Product line:
+
+```text
+representation_version = represented_stdo_version
+2.5.0 = semantic_version(stdo://releases/v2.5.0-rc.1/)
+```
+
+This equality identifies what is represented; it does not collapse release
+cuts. STDO Representation has its own RC ordinal, member identities, review,
+acceptance, and project-qualified Git refs. Axiom Indexer remains independently
+versioned. A new represented STDO version requires a new Representation version;
+an implementation-only Representation correction may publish a higher RC on
+the same matched version line.
 
 `a_c.STDO` does not claim a complete admitted `M_b`, the full
 `I/O/E/C/L/X/V/T/J` population, a total semantic interpretation, or a lossless
@@ -92,6 +115,24 @@ product_member_inventory_sha256:
 The dependency contributes URI resolution, released program validation,
 logical-map instantiation, exact diagnostics, and ordered string joining. This
 Product does not widen those claims.
+
+## Axiom Indexer Development Product relation
+
+STDO Representation is the source Product and exact Axiom Indexer
+`v0.1.0-rc.1` is the Development Product. The relation is owned by
+`urn:stdo-representation:authority:product-owner` and is limited to mechanical
+validation, logical constraint index materialization, diagnostics, URI
+resolution, and exact joining under the contracts below. It imports no Axiom
+Indexer Product member and transfers no semantic, acceptance, publication, or
+runtime authority.
+
+The relation begins only when the target Product Definition resolves to
+`urn:stdo:product-definition:axiom-indexer` and the exact release coordinates
+in [Exact dependency bases](#exact-dependency-bases) verify. Its governing
+contracts are [Imported validation boundary](requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary)
+and [Frame-use relation](requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation).
+It is invalidated by target-definition, release, member-inventory, contract, or
+result drift. Mutable sibling source never substitutes for the selected Install.
 
 ## Authoring and validation relation
 
@@ -182,7 +223,7 @@ that code validates role independence or computes a deterministic role packet.
 
 ## Product member set
 
-The selected `0.1.0` Product contains exactly these eight repository entries:
+The selected `2.5.0` Product contains exactly these eight repository entries:
 
 ```text
 build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/
@@ -253,8 +294,8 @@ publication, or tag visibility performs neither decision.
 
 - Source STDO owns STDO meaning and role definitions.
 - Axiom Indexer owns its released program, validation, map, and join contracts.
-- This Product owns the selected STDO authoring map, native use instructions,
-  member set, and dogfood claim.
+- This Product owns the selected STDO semantic compression, its logical
+  constraint index, native use instructions, member set, and dogfood claim.
 - The LLM owns probabilistic interpretation, frame selection, content, and
   revision within its supplied authority.
 - External owners retain operation, decision, review, acceptance, publication,
@@ -264,7 +305,7 @@ Loading a map or skill grants none of those authorities.
 
 ## Non-goals and exclusions
 
-The `0.1.0` Product excludes:
+The `2.5.0` Product excludes:
 
 - the retained semantic-compilation and full-model prototypes;
 - the retained GTL codecs, profiles, carrier artifacts, and frozen tenant;
@@ -288,15 +329,22 @@ recovery, make selected frames inspectable, and use bounded source re-entry
 without hidden orchestration. A material regression against direct Source STDO
 prose holds release for the smallest owning reprice.
 
-## Current boundary
+## Historical and current boundary
 
-The accepted Product is annotated immutable tag `v0.1.0-rc.1`, tag object
+The accepted bootstrap Product is annotated immutable historical tag
+`v0.1.0-rc.1`, tag object
 `46e9cb36ce0056cf75e9c12bcde4e6834a1d3a4f`, peeled commit
 `b127ee9a0362f85d4875ae59664ecfcd13028d9c`, tree
 `15f9beb360836386ce9607dd31e30d0c8b5cd830`, and eight-member inventory
 `316121da619af277b984a599d290e41e4740ef9f1a2bf3fd8151ac9b1d64e091`.
 The exact-cut review and Product-owner decision accept only release claims
-`STDO-REP-0.1-C01` through `STDO-REP-0.1-C05` at their declared boundaries.
+`STDO-REP-0.1-C01` through `STDO-REP-0.1-C05` at their declared boundaries. It
+is not retargeted or renamed.
+
+The active source project is preparing STDO Representation `2.5.0` under a new
+project-qualified immutable RC. Until that exact cut is published, independently
+qualified, and accepted, `2.5.0` is a candidate and the bootstrap cut remains
+the latest accepted Representation Product.
 
 No GTL composition, complete admitted `M_b`, provider attestation, automatic
 frame selection, ABG runtime, or semantic-completeness claim is made.

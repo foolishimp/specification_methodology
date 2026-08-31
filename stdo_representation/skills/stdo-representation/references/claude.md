@@ -13,7 +13,7 @@ Prefer this section order unless the task gives a better one:
 6. `<success_and_return>`
 
 State why the task matters, the authorized boundary, and the stop condition.
-Keep instructions brief. Do not prescribe hidden reasoning or ask Claude to
+Keep the source-linked index excerpt bounded. Keep instructions brief. Do not prescribe hidden reasoning or ask Claude to
 reproduce it. For long source excerpts, keep the query at the end.
 
 This layout follows the Claude Fable 5 guidance for brief steering, explicit

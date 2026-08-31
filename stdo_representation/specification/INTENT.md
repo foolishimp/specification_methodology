@@ -14,10 +14,10 @@ instantiation, and exact ordered string joining.
 ## Product relation
 
 ```text
-Source STDO v2.5.0-rc.1
-  -> LLM authors source-linked a_c.STDO
+Source STDO 2.5.0 (exact cut v2.5.0-rc.1)
+  -> LLM authors source-linked a_c.STDO 2.5.0 compression
   -> Axiom Indexer validates or returns diagnostics
-  -> Axiom Indexer instantiates the unchanged logical constraint map
+  -> Axiom Indexer instantiates the logical constraint index over it
   -> LLM selects material frames and source re-entry
   -> LLM writes ordered labeled sections
   -> Axiom Indexer joins the exact strings
@@ -26,8 +26,14 @@ Source STDO v2.5.0-rc.1
 
 `a_c.STDO` is the STDO-specific instance of the released Axiom Indexer
 `a_c.text` authoring surface. It captures essential symbols, relations,
-constraints, and residual uncertainty. It may be larger than prose. Its value
-is an explicit reusable constraint map, not byte compression.
+constraints, and residual uncertainty. It may be larger than prose. Compression
+means reduced interpretive reconstruction and an explicit reusable logical
+form, not fewer bytes.
+
+The Axiomatic Program is the canonical semantic compression selected by this
+Product. The Logical Constraint Map is a deterministic index over that
+unchanged compression. The index adds resolution and source-route evidence; it
+does not reinterpret or outrank the compression.
 
 The map is a derived interpretation. Source STDO remains semantic authority.
 Every material item retains source routes, and the LLM re-enters source when a
@@ -96,7 +102,7 @@ external authority.
 - authority obtained by including text in a prompt.
 
 GTL and ABG remain possible downstream consumers after a separate re-entry.
-They are not part of the `0.1.0` Product.
+They are not part of the active Representation Product.
 
 ## Success criterion
 

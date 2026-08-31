@@ -1,6 +1,6 @@
 # STDO Representation Quickstart
 
-This guide exercises the thin map-first Product. It is not constitutional
+This guide exercises the STDO 2.5.0 compression-and-index Product. It is not constitutional
 authority.
 
 ## 1. Verify the dependencies
@@ -31,7 +31,7 @@ Expected peeled commit:
 
 Stop on any mismatch. Do not substitute a branch or compatible source tree.
 
-## 2. Validate the selected map
+## 2. Validate the compression and index
 
 Set the verified dependency root for this shell:
 
@@ -39,7 +39,7 @@ Set the verified dependency root for this shell:
 AXIOM_INDEXER_ROOT="/path/to/Axiom Indexer/releases/v0.1.0-rc.1"
 ```
 
-Validate the released Product program using invocation-local bindings:
+Validate the selected `a_c.STDO` compression using invocation-local bindings:
 
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
@@ -50,14 +50,14 @@ python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
   --emit-map /tmp/stdo-representation-map.json
 ```
 
-Compare the emitted map with:
+Compare the emitted logical constraint index with:
 
 ```text
 build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/
   logical-constraint-map.json
 ```
 
-Identical program, bindings, and dependency bytes must reproduce the same map.
+Identical compression, bindings, and dependency bytes must reproduce the same index.
 The dogfood binding file contains installation-local physical paths and is not a
 portable Product member.
 
@@ -78,7 +78,7 @@ Claude discovers:
 Both resolve to the canonical `skills/stdo-representation/` bundle. Ask the
 agent to use `stdo-representation` for a bounded task. It should:
 
-1. load the logical map;
+1. load the logical constraint index and verify it binds the exact compression;
 2. select material frame URIs;
 3. show each frame URI, purpose, and source route;
 4. re-enter Source STDO only when required;
@@ -124,7 +124,7 @@ python3 -m unittest scripts.test_check_constitution -v
 ```
 
 `stdo status --definition stdo_representation.json --verify` must pass against
-the exact accepted revision-11 project frame basis. Any failure is a release
+the exact accepted revision-12 project frame basis. Any failure is a release
 hold.
 
 ## Historical paths
@@ -140,5 +140,5 @@ scripts/finalize_stdo_gtl_product.py
 scripts/test_frozen_gtl_tenant.py
 ```
 
-They remain retained prior-WHAT history and evidence. The thin `0.1.0` Product
+They remain retained prior-WHAT history and evidence. The active Product
 contains no local engine and makes no GTL or deterministic-orchestration claim.
