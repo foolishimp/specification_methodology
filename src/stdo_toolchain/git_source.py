@@ -15,6 +15,10 @@ _CUT_RE = re.compile(
 )
 _VERSION_RE = re.compile(r"^(?!.*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*$")
 
+_LEGACY_PROJECT_ROOT = ""
+_MONOREPO_PROJECT_ROOT = "specification_methodology"
+_STANDARDS_ROOT = "specification/standards"
+
 
 def _git(
     arguments: list[str],
@@ -194,39 +198,42 @@ class GitSnapshot:
         self.commit = ""
         self.tree = ""
         self.standards_tree = ""
+        self.project_root = ""
 
     def __enter__(self) -> "GitSnapshot":
         self._temporary = tempfile.TemporaryDirectory(prefix="stdo-git-")
         self.git_dir = Path(self._temporary.name) / "objects.git"
-        _git(["init", "--bare", str(self.git_dir)])
-        _git(
-            [
-                "--git-dir",
-                str(self.git_dir),
-                "fetch",
-                "--quiet",
-                "--no-tags",
-                self.repository,
-                f"+{self.ref}:{self.ref}",
-            ]
-        )
-        object_type = self._text(["cat-file", "-t", self.ref]).strip()
-        if object_type != "tag":
-            raise StdoError(
-                f"Immutable cut {self.cut} must be an annotated tag; found {object_type}"
-            )
-        self.tag_object = self._text(["rev-parse", self.ref]).strip()
-        self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
-        self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
         try:
+            _git(["init", "--bare", str(self.git_dir)])
+            _git(
+                [
+                    "--git-dir",
+                    str(self.git_dir),
+                    "fetch",
+                    "--quiet",
+                    "--no-tags",
+                    self.repository,
+                    f"+{self.ref}:{self.ref}",
+                ]
+            )
+            object_type = self._text(["cat-file", "-t", self.ref]).strip()
+            if object_type != "tag":
+                raise StdoError(
+                    f"Immutable cut {self.cut} must be an annotated tag; "
+                    f"found {object_type}"
+                )
+            self.tag_object = self._text(["rev-parse", self.ref]).strip()
+            self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
+            self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
+            self.project_root = self._detect_project_root()
+            standards_path = self._repository_path(_STANDARDS_ROOT)
             self.standards_tree = self._text(
-                ["rev-parse", f"{self.commit}:specification/standards"]
+                ["rev-parse", f"{self.commit}:{standards_path}"]
             ).strip()
-        except StdoError as exc:
-            raise StdoError(
-                f"Cut {self.cut} does not contain specification/standards"
-            ) from exc
-        return self
+            return self
+        except BaseException:
+            self.__exit__(None, None, None)
+            raise
 
     def __exit__(self, exc_type: object, exc: object, traceback: object) -> None:
         if self._temporary is not None:
@@ -244,22 +251,98 @@ class GitSnapshot:
         assert isinstance(output, str)
         return output
 
-    def list_files(self, root: str) -> list[str]:
-        output = self._text(
-            ["ls-tree", "-r", "--name-only", "-z", self.commit, "--", root]
+    def _repository_object_type(self, path: str) -> str | None:
+        if self.git_dir is None:
+            raise StdoError("Git snapshot is not open")
+        completed = subprocess.run(
+            [
+                "git",
+                *self._arguments(["cat-file", "-t", f"{self.commit}:{path}"]),
+            ],
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
         )
-        return sorted(path for path in output.split("\0") if path)
+        if completed.returncode != 0:
+            return None
+        return completed.stdout.strip()
+
+    def _detect_project_root(self) -> str:
+        candidates = []
+        for project_root in (_LEGACY_PROJECT_ROOT, _MONOREPO_PROJECT_ROOT):
+            standards_path = "/".join(
+                part for part in (project_root, _STANDARDS_ROOT) if part
+            )
+            if self._repository_object_type(standards_path) == "tree":
+                candidates.append(project_root)
+
+        if len(candidates) != 1:
+            found = "none" if not candidates else "legacy root and nested root"
+            raise StdoError(
+                f"Cut {self.cut} must contain exactly one STDO project layout at "
+                "specification/standards or "
+                "specification_methodology/specification/standards; "
+                f"found {found}"
+            )
+        return candidates[0]
+
+    def _repository_path(self, logical_path: str) -> str:
+        if (
+            not logical_path
+            or logical_path.startswith("/")
+            or any(part in {"", ".", ".."} for part in logical_path.split("/"))
+        ):
+            raise StdoError(f"Unsafe logical STDO path: {logical_path!r}")
+        return "/".join(part for part in (self.project_root, logical_path) if part)
+
+    def list_files(self, root: str) -> list[str]:
+        repository_root = self._repository_path(root)
+        output = self._text(
+            [
+                "ls-tree",
+                "-r",
+                "--name-only",
+                "-z",
+                self.commit,
+                "--",
+                repository_root,
+            ]
+        )
+        prefix = f"{self.project_root}/" if self.project_root else ""
+        logical_paths = []
+        for path in output.split("\0"):
+            if not path:
+                continue
+            if prefix:
+                if not path.startswith(prefix):
+                    raise StdoError(
+                        f"Git member escaped selected STDO project root: {path}"
+                    )
+                path = path[len(prefix) :]
+            logical_paths.append(path)
+        return sorted(logical_paths)
 
     def read_file(self, path: str) -> bytes:
-        output = _git(self._arguments(["show", f"{self.commit}:{path}"]), text=False)
+        repository_path = self._repository_path(path)
+        output = _git(
+            self._arguments(["show", f"{self.commit}:{repository_path}"]),
+            text=False,
+        )
         assert isinstance(output, bytes)
         return output
 
     def path_exists(self, path: str) -> bool:
         if self.git_dir is None:
             raise StdoError("Git snapshot is not open")
+        repository_path = self._repository_path(path)
         completed = subprocess.run(
-            ["git", *self._arguments(["cat-file", "-e", f"{self.commit}:{path}"])],
+            [
+                "git",
+                *self._arguments(
+                    ["cat-file", "-e", f"{self.commit}:{repository_path}"]
+                ),
+            ],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )

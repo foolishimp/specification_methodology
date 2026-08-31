@@ -2,7 +2,8 @@
 
 - Status: active
 - Implements: `.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md`,
-  `.ai-workspace/tickets/active/T-014-make-version-line-selector-latest.md`
+  `.ai-workspace/tickets/active/T-014-make-version-line-selector-latest.md`,
+  `.ai-workspace/tickets/active/T-020-consolidate-specification-stack-monorepo.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
@@ -36,7 +37,10 @@ exact basis.
 
 - `git_source.py` reacquires one annotated immutable RC tag into an isolated
   temporary bare object store and resolves a mutable version-line alias only
-  when it matches the highest-ordinal published immutable RC.
+  when it matches the highest-ordinal published immutable RC. A cut contains
+  STDO either at the historical repository root or at the exact monorepo prefix
+  `specification_methodology/`, never both. Physical nested paths are projected
+  back to project-relative logical source paths before manifest construction.
 - `manifest.py` derives the exact tag, commit, trees, standards inventory,
   canonical member-set digest, member bytes, license, release note, and plugin
   payload admitted to an installation.
@@ -101,11 +105,12 @@ special entries without following them; every undeclared entry is damage.
 
 The manager refuses unannotated or malformed cut identities, lightweight or
 lagging version-line selectors, a selector that does not match the highest
-published RC, absent matching RC tags, channel downgrades, unaccepted or stale
-adoption plans, unexpected manifest digests, damaged or extra installed entries
-of any type, store or registry redirection, URI traversal, cross-basis schema
-locators, invalid Product Definition shape or formats, bootstrap boundary
-escape, malformed markers, and implicit fleet writes.
+published RC, absent matching RC tags, zero or multiple recognized STDO project
+layouts, channel downgrades, unaccepted or stale adoption plans, unexpected
+manifest digests, damaged or extra installed entries of any type, store or
+registry redirection, URI traversal, cross-basis schema locators, invalid
+Product Definition shape or formats, bootstrap boundary escape, malformed
+markers, and implicit fleet writes.
 
 ## Verification
 
@@ -113,7 +118,11 @@ The executable boundary is tested against unrelated temporary Git releases for
 installation, reinstallation, tamper detection, URI escape, exact-basis sync,
 latest-selector adoption, lagging-selector and downgrade refusal, marker
 idempotence, fleet discovery, and refusal paths. A
-repository dogfood test independently installs the immutable released
-`v2.4.3-rc.1` cut and checks its known commit, 45-member inventory, and canonical
-aggregate digest; a second dogfood boundary binds the source Product Definition
-to the exact installed RC2 builder basis.
+repository dogfood tests independently install the immutable released
+`v2.4.3-rc.1` and `v2.5.0-rc.1` cuts and check their known commits, inventories,
+canonical aggregate digests, and historical manifest bytes. Synthetic
+repository tests also prove the exact `specification_methodology/` monorepo
+prefix, repository-root and standards-subtree identities, project-relative
+logical members, and refusal of absent or ambiguous layouts. A second dogfood
+boundary binds the source Product Definition to the exact installed RC2 builder
+basis.

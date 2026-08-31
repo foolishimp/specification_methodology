@@ -8,6 +8,7 @@ from pathlib import Path
 
 from stdo_toolchain.errors import StdoError
 from stdo_toolchain.git_source import (
+    GitSnapshot,
     cut_coordinates,
     ensure_channel_not_downgrade,
     normalize_cut,
@@ -42,28 +43,39 @@ def run_git(repository: Path, *arguments: str) -> str:
     return completed.stdout.strip()
 
 
+def installed_payloads(root: Path) -> dict[str, bytes]:
+    return {
+        path.relative_to(root).as_posix(): path.read_bytes()
+        for path in sorted(root.rglob("*"))
+        if path.is_file() and path.relative_to(root).as_posix() != "manifest.json"
+    }
+
+
 class ReleaseFixture:
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, *, project_prefix: str = ""):
         self.repository = root / "repository"
         self.repository.mkdir()
+        self.project_root = (
+            self.repository / project_prefix if project_prefix else self.repository
+        )
         run_git(self.repository, "init", "-q")
         run_git(self.repository, "config", "user.name", "STDO Test")
         run_git(self.repository, "config", "user.email", "stdo-test@example.invalid")
-        (self.repository / "specification" / "standards").mkdir(parents=True)
-        (self.repository / "specification" / "standards" / "schemas").mkdir()
-        (self.repository / "plugins" / "spec" / "skills" / "refresh").mkdir(
+        (self.project_root / "specification" / "standards").mkdir(parents=True)
+        (self.project_root / "specification" / "standards" / "schemas").mkdir()
+        (self.project_root / "plugins" / "spec" / "skills" / "refresh").mkdir(
             parents=True
         )
-        (self.repository / "releases").mkdir()
-        (self.repository / "LICENSE").write_text("test license\n", encoding="utf-8")
-        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
-            "# Spec one\n", encoding="utf-8"
-        )
-        (self.repository / "specification" / "standards" / "README.md").write_text(
+        (self.project_root / "releases").mkdir()
+        (self.project_root / "LICENSE").write_text("test license\n", encoding="utf-8")
+        (
+            self.project_root / "specification" / "standards" / "SPEC_METHOD.md"
+        ).write_text("# Spec one\n", encoding="utf-8")
+        (self.project_root / "specification" / "standards" / "README.md").write_text(
             "# Standards\n", encoding="utf-8"
         )
         (
-            self.repository
+            self.project_root
             / "specification"
             / "standards"
             / "schemas"
@@ -84,20 +96,24 @@ class ReleaseFixture:
             encoding="utf-8",
         )
         (
-            self.repository / "plugins" / "spec" / "skills" / "refresh" / "SKILL.md"
+            self.project_root / "plugins" / "spec" / "skills" / "refresh" / "SKILL.md"
         ).write_text("# Refresh\n", encoding="utf-8")
-        (self.repository / "releases" / "v1.0.0.md").write_text(
+        (self.project_root / "releases" / "v1.0.0.md").write_text(
             "# Release\n", encoding="utf-8"
         )
+        if project_prefix:
+            (self.repository / "MONOREPO.md").write_text(
+                "# Repository root\n", encoding="utf-8"
+            )
         run_git(self.repository, "add", ".")
         run_git(self.repository, "commit", "-qm", "release one")
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.1", "-m", "RC1")
         run_git(self.repository, "tag", "-a", "v1.0.0", "-m", "line one")
 
     def add_rc2(self, *, advance_selector: bool = True) -> None:
-        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
-            "# Spec two\n", encoding="utf-8"
-        )
+        (
+            self.project_root / "specification" / "standards" / "SPEC_METHOD.md"
+        ).write_text("# Spec two\n", encoding="utf-8")
         run_git(self.repository, "add", ".")
         run_git(self.repository, "commit", "-qm", "release two")
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.2", "-m", "RC2")
@@ -105,9 +121,9 @@ class ReleaseFixture:
             run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line two")
 
     def add_rc3(self) -> None:
-        (self.repository / "specification" / "standards" / "SPEC_METHOD.md").write_text(
-            "# Spec three\n", encoding="utf-8"
-        )
+        (
+            self.project_root / "specification" / "standards" / "SPEC_METHOD.md"
+        ).write_text("# Spec three\n", encoding="utf-8")
         run_git(self.repository, "add", ".")
         run_git(self.repository, "commit", "-qm", "release three")
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.3", "-m", "RC3")
@@ -270,6 +286,142 @@ class StoreTests(unittest.TestCase):
             )
             with self.assertRaises(StdoError):
                 store.resolve(first.uri + "standards/SPEC_METHOD.md")
+
+    def test_install_projects_the_exact_nested_monorepo_layout(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(
+                root,
+                project_prefix="specification_methodology",
+            )
+            store = Store(root / "store")
+
+            installed = store.install(str(fixture.repository), "v1.0.0-rc.1")
+
+            self.assertEqual(
+                installed.manifest["release"]["tree"],
+                run_git(fixture.repository, "rev-parse", "v1.0.0-rc.1^{tree}"),
+            )
+            self.assertEqual(
+                installed.manifest["release"]["standards_tree"],
+                run_git(
+                    fixture.repository,
+                    "rev-parse",
+                    "v1.0.0-rc.1:specification_methodology/specification/standards",
+                ),
+            )
+            self.assertEqual(
+                installed.manifest["standards"]["source_root"],
+                "specification/standards",
+            )
+            self.assertEqual(
+                installed.manifest["auxiliary"]["plugin"]["source_root"],
+                "plugins/spec",
+            )
+            self.assertEqual(
+                installed.manifest["auxiliary"]["release_note"]["source_path"],
+                "releases/v1.0.0.md",
+            )
+            self.assertEqual(
+                [
+                    member["path"]
+                    for member in installed.manifest["standards"]["members"]
+                ],
+                [
+                    "README.md",
+                    "SPEC_METHOD.md",
+                    "schemas/product-definition.schema.json",
+                ],
+            )
+            self.assertEqual(
+                (installed.path / "standards" / "SPEC_METHOD.md").read_text(
+                    encoding="utf-8"
+                ),
+                "# Spec one\n",
+            )
+            self.assertTrue(store.verify(installed.cut)["valid"])
+
+            legacy_root = root / "legacy"
+            legacy_root.mkdir()
+            legacy_fixture = ReleaseFixture(legacy_root)
+            legacy = Store(root / "legacy-store").install(
+                str(legacy_fixture.repository),
+                "v1.0.0-rc.1",
+            )
+            self.assertEqual(
+                installed.manifest["standards"],
+                legacy.manifest["standards"],
+            )
+            self.assertEqual(
+                installed.manifest["auxiliary"],
+                legacy.manifest["auxiliary"],
+            )
+            self.assertEqual(
+                installed_payloads(installed.path),
+                installed_payloads(legacy.path),
+            )
+
+    def test_install_refuses_ambiguous_legacy_and_nested_layouts(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(
+                root,
+                project_prefix="specification_methodology",
+            )
+            legacy_standards = fixture.repository / "specification" / "standards"
+            legacy_standards.mkdir(parents=True)
+            (legacy_standards / "README.md").write_text(
+                "# Ambiguous\n", encoding="utf-8"
+            )
+            run_git(fixture.repository, "add", ".")
+            run_git(fixture.repository, "commit", "-qm", "ambiguous layout")
+            run_git(
+                fixture.repository,
+                "tag",
+                "-a",
+                "v1.0.1-rc.1",
+                "-m",
+                "ambiguous",
+            )
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "exactly one STDO project layout.*legacy root and nested root",
+            ):
+                Store(root / "store").install(
+                    str(fixture.repository),
+                    "v1.0.1-rc.1",
+                )
+
+    def test_install_refuses_a_cut_without_a_recognized_layout(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            repository = root / "repository"
+            repository.mkdir()
+            run_git(repository, "init", "-q")
+            run_git(repository, "config", "user.name", "STDO Test")
+            run_git(repository, "config", "user.email", "stdo-test@example.invalid")
+            (repository / "README.md").write_text("# Not STDO\n", encoding="utf-8")
+            run_git(repository, "add", ".")
+            run_git(repository, "commit", "-qm", "not an STDO release")
+            run_git(
+                repository,
+                "tag",
+                "-a",
+                "v1.0.0-rc.1",
+                "-m",
+                "not STDO",
+            )
+
+            snapshot = GitSnapshot(str(repository), "v1.0.0-rc.1")
+            with self.assertRaisesRegex(
+                StdoError,
+                "exactly one STDO project layout.*found none",
+            ):
+                with snapshot:
+                    self.fail("unrecognized layout unexpectedly opened")
+            self.assertIsNone(snapshot.git_dir)
+            self.assertIsNone(snapshot._temporary)
 
     def test_verify_detects_extra_release_member(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

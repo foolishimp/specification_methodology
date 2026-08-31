@@ -12,6 +12,18 @@ from stdo_toolchain.product_definition import definition_status
 from stdo_toolchain.store import Store
 
 
+def git_repository(project_root: Path) -> Path:
+    return Path(
+        subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            cwd=project_root,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    )
+
+
 class RepositoryDogfoodTests(unittest.TestCase):
     def test_install_released_stdo_2_4_3_rc1_exactly(self) -> None:
         repository = Path(__file__).resolve().parents[1]
@@ -25,7 +37,11 @@ class RepositoryDogfoodTests(unittest.TestCase):
             self.skipTest("repository checkout does not contain v2.4.3-rc.1")
         with tempfile.TemporaryDirectory() as temporary:
             store = Store(Path(temporary) / "store")
-            installed = store.install(str(repository), "v2.4.3-rc.1")
+            installed = store.install(str(git_repository(repository)), "v2.4.3-rc.1")
+            self.assertEqual(
+                installed.manifest_sha256,
+                "ca6cdcb78166998e96e1efe07128209c15f6277b1c67b3e5760529f70bc538a9",
+            )
             self.assertEqual(installed.manifest["standards"]["member_count"], 45)
             self.assertEqual(
                 installed.manifest["standards"]["member_set_sha256"],
@@ -47,6 +63,34 @@ class RepositoryDogfoodTests(unittest.TestCase):
                 Draft202012Validator(manifest_schema).iter_errors(installed.manifest)
             )
             self.assertEqual(errors, [])
+
+    def test_install_released_stdo_2_5_0_rc1_exactly(self) -> None:
+        repository = Path(__file__).resolve().parents[1]
+        available = subprocess.run(
+            ["git", "cat-file", "-e", "v2.5.0-rc.1^{tag}"],
+            cwd=repository,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        if available.returncode != 0:
+            self.skipTest("repository checkout does not contain v2.5.0-rc.1")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = Store(Path(temporary) / "store")
+            installed = store.install(str(git_repository(repository)), "v2.5.0-rc.1")
+            self.assertEqual(
+                installed.manifest_sha256,
+                "3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338",
+            )
+            self.assertEqual(installed.manifest["standards"]["member_count"], 51)
+            self.assertEqual(
+                installed.manifest["standards"]["member_set_sha256"],
+                "87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5",
+            )
+            self.assertEqual(
+                installed.manifest["release"]["commit"],
+                "ca6694314c4e9a56d3facae3eef06fe2792104c9",
+            )
+            self.assertTrue(store.verify("v2.5.0-rc.1")["valid"])
 
     def test_revision_three_product_definition_template_is_structurally_valid(
         self,
@@ -117,7 +161,7 @@ class RepositoryDogfoodTests(unittest.TestCase):
         definition = json.loads(definition_path.read_text(encoding="utf-8"))
         with tempfile.TemporaryDirectory() as temporary:
             store = Store(Path(temporary) / "store")
-            installed = store.install(str(repository), "v2.4.3-rc.3")
+            installed = store.install(str(git_repository(repository)), "v2.4.3-rc.3")
             self.assertEqual(
                 definition["constitution"]["stdo"]["basis"],
                 {
