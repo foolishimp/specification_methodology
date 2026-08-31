@@ -168,7 +168,7 @@ class Release25CandidateTests(unittest.TestCase):
         aggregate = hashlib.sha256(member_stream).hexdigest()
         self.assertEqual(
             aggregate,
-            "01238f901426807b5350e1013c85b8e5f4ebe29cf89c62a858707dd705d6415b",
+            "787b49219db716e9a7acd60b780889365a78751ed604e610348734dc2ef71f4a",
         )
         self.assertIn(f"`{aggregate}`", self.note)
 

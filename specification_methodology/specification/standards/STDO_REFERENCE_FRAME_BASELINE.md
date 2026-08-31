@@ -1104,8 +1104,15 @@ dispositions, priorities, or lifecycle states.
 | `satisfied` | explicit no-finding state; triage `not_applicable`; evidence, residuals, and invalidation remain present | priority and current-boundary effect are `not_applicable` to this review result unless another exact consumed result supplies a finding |
 | `falsified` | one or more exact findings; triage is `complete` where supported and preserves `indeterminate` fields where evidence cannot close them | apply Product-owned priority and boundary policy without mechanically mapping severity to disposition |
 | `indeterminate` | partial finding or observation state; triage `indeterminate`; exact evidence gaps and residual uncertainty | retain uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or a closed finding |
-| `out_of_frame` | out-of-claim observation; triage `not_applicable` to the evaluated claim; exact re-entry pressure | return to the declared re-entry owner; severity cannot make the observation block the evaluated claim |
+| `out_of_frame` | the evaluation requires an undeclared material relation or capability; the branch projection below preserves whether that gap is outside or inside the evaluated claim | do not consume the result as satisfaction or falsification; follow the branch-specific re-entry relation |
 | `invalid_basis` | basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse result consumption and return through the declared basis re-entry relation |
+
+### Reviewer Out-Of-Frame Branch Projection
+
+| Out-of-frame cause | Finding and triage payload | Executive consumption constraint |
+|---|---|---|
+| observation outside the exact evaluated claim | adjacent observation; triage `not_applicable` to the evaluated claim; exact repricing or re-entry pressure | do not create a claim-relative block or another review round from severity alone; return the observation to its declared owner |
+| evaluated claim requires an undeclared material relation or evaluator capability | preserve the same affected claim; triage `indeterminate`; name the missing relation or capability and exact reconfiguration pressure | refine or reconfigure a capable activation and retain the claim as unresolved; do not treat the gap as an outside-claim observation or consume it as a closed finding |
 
 The Reviewer returns to Executive, not Worker. It does not edit the candidate,
 direct the repair, or authorize continuation.

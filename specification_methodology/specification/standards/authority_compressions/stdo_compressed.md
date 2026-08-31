@@ -28,7 +28,7 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
-  STDO_REFERENCE_FRAME_BASELINE.md: 0f7257f8c2adf4341f1eb8075f822984a88cfcb9930e11440fa74defceea4f4c
+  STDO_REFERENCE_FRAME_BASELINE.md: d25d7631f35d0a51394371a438f86be74e7a47a0aeb9571df3aad0185fee5f19
   SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
@@ -776,8 +776,10 @@ layer that owns the missing truth.
   repair, or continuation. Its payload projection is total: `satisfied` carries
   an explicit no-finding state; `falsified` carries findings and supported or
   explicitly indeterminate triage; `indeterminate` carries the evidence gap;
-  and `out_of_frame` or `invalid_basis` carries re-entry pressure with triage
-  not applicable to the evaluated claim.
+  `out_of_frame` preserves either an outside-claim observation with
+  not-applicable triage or an in-claim missing material relation or capability
+  with indeterminate triage and reconfiguration pressure; and `invalid_basis`
+  carries basis-repair pressure with triage not applicable.
 - Executive consumes that technical triage with the complete Product view and
   current MVP or release mandate. It assigns priority, determines the effect on
   the current promotion boundary, applies exactly one existing `STDO-UP-020`

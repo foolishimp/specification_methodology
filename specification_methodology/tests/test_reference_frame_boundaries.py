@@ -35,6 +35,44 @@ def markdown_table(text: str, heading: str) -> list[dict[str, str]]:
     return [dict(zip(headers, row, strict=True)) for row in table[2:]]
 
 
+def indexed_markdown_table(
+    text: str,
+    heading: str,
+    key: str,
+) -> dict[str, dict[str, str]]:
+    rows = markdown_table(text, heading)
+    indexed = {row[key]: row for row in rows}
+    if len(indexed) != len(rows):
+        raise AssertionError(f"duplicate {key} under {heading}")
+    return indexed
+
+
+def reviewer_projection(
+    profile: str,
+    result: str,
+    *,
+    out_of_frame_cause: str | None = None,
+) -> dict[str, str]:
+    results = indexed_markdown_table(
+        profile,
+        "### Reviewer Result And Triage Projection",
+        "Reference Frame Method result",
+    )
+    row = results[f"`{result}`"]
+    if result != "out_of_frame":
+        if out_of_frame_cause is not None:
+            raise AssertionError("out-of-frame cause supplied for another result")
+        return row
+    if out_of_frame_cause is None:
+        raise AssertionError("out_of_frame requires an exact cause")
+    branches = indexed_markdown_table(
+        profile,
+        "### Reviewer Out-Of-Frame Branch Projection",
+        "Out-of-frame cause",
+    )
+    return branches[out_of_frame_cause]
+
+
 class ReferenceFrameBoundaryTests(unittest.TestCase):
     def test_pure_method_excludes_profiles_consumers_and_runtimes(self) -> None:
         text = METHOD.read_text(encoding="utf-8")
@@ -157,7 +195,12 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
     def test_reviewer_result_projection_is_total_and_exclusive(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")
         rows = markdown_table(profile, "### Reviewer Result And Triage Projection")
-        by_result = {row["Reference Frame Method result"]: row for row in rows}
+        by_result = indexed_markdown_table(
+            profile,
+            "### Reviewer Result And Triage Projection",
+            "Reference Frame Method result",
+        )
+        self.assertEqual(len(rows), 5)
         self.assertEqual(
             set(by_result),
             {
@@ -184,13 +227,73 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             by_result["`indeterminate`"]["Finding and triage payload"],
         )
         self.assertIn(
-            "cannot make the observation block",
-            by_result["`out_of_frame`"]["Executive consumption constraint"],
+            "undeclared material relation or capability",
+            by_result["`out_of_frame`"]["Finding and triage payload"],
         )
         self.assertIn(
             "refuse result consumption",
             by_result["`invalid_basis`"]["Executive consumption constraint"],
         )
+
+    def test_reviewer_projection_executes_each_result_and_refusal_branch(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        cases = (
+            ("satisfied", None, "no-finding", "`not_applicable`"),
+            ("falsified", None, "exact findings", "mechanically mapping severity"),
+            ("indeterminate", None, "evidence gaps", "do not consume it"),
+            (
+                "out_of_frame",
+                "observation outside the exact evaluated claim",
+                "`not_applicable`",
+                "do not create a claim-relative block",
+            ),
+            (
+                "out_of_frame",
+                "evaluated claim requires an undeclared material relation or "
+                "evaluator capability",
+                "same affected claim",
+                "refine or reconfigure a capable activation",
+            ),
+            ("invalid_basis", None, "basis failure", "refuse result consumption"),
+        )
+        for result, cause, payload_text, constraint_text in cases:
+            with self.subTest(result=result, cause=cause):
+                row = reviewer_projection(
+                    profile,
+                    result,
+                    out_of_frame_cause=cause,
+                )
+                self.assertIn(payload_text, row["Finding and triage payload"])
+                self.assertIn(
+                    constraint_text,
+                    row["Executive consumption constraint"],
+                )
+
+        with self.assertRaisesRegex(AssertionError, "requires an exact cause"):
+            reviewer_projection(profile, "out_of_frame")
+        with self.assertRaisesRegex(AssertionError, "another result"):
+            reviewer_projection(
+                profile,
+                "satisfied",
+                out_of_frame_cause="observation outside the exact evaluated claim",
+            )
+
+    def test_projection_table_refuses_duplicate_result_rows(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        heading = "### Reviewer Result And Triage Projection"
+        rows = markdown_table(profile, heading)
+        duplicate = "| " + " | ".join(rows[0].values()) + " |"
+        mutated = profile.replace(
+            "\n\n### Reviewer Out-Of-Frame Branch Projection",
+            f"\n{duplicate}\n\n### Reviewer Out-Of-Frame Branch Projection",
+            1,
+        )
+        with self.assertRaisesRegex(AssertionError, "duplicate"):
+            indexed_markdown_table(
+                mutated,
+                heading,
+                "Reference Frame Method result",
+            )
 
     def test_executive_promotion_constraints_cover_negative_cases(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")
