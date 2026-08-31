@@ -1,0 +1,104 @@
+Apply the supplied F_P[v_compile] contract to the exact packet.
+Return one schema-conforming candidate or lawful stop.
+Populate M=(b,I,O,E,C,L,X,V,T,J) and ResolutionSet_M exactly as declared.
+Disposition every source member and map every local record to source evidence.
+Use X or a stop for unresolved material meaning.
+Do not judge, accept, repair, encode, execute, or explain the proposal.
+
+Exact input coordinates:
+- calculus source: /Users/jim/Library/Application Support/STDO/releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md
+- subject root: /Users/jim/Library/Application Support/STDO/releases/v2.5.0-rc.1/standards
+- source manifest: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/runs/20260829T223500Z/source-manifest.json
+- selected signature: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/profile/stdo-signature.json
+- interpretation contract: /Users/jim/src/apps/stdo_representation/build_tenants/semantic_compile/contract/v_compile.json
+- candidate model basis: urn:stdo-index:model-basis:sha256:01d9d4f01c78b84503dd7e51b74821beae14b62f2a51522791836b8150f9db60
+
+Use these exact invocation coordinates:
+{
+  "traversal_ref": "urn:axiom-indexer:traversal:semantic-compile:3",
+  "functor_ref": "urn:stdo:concept:axiomatic-calculus:f-p",
+  "actor_ref": "urn:openai:codex:gpt-5.6-sol",
+  "model_ref": "urn:openai:model:gpt-5.6-sol",
+  "capability_ref": "urn:axiom-indexer:capability:semantic-compilation-prototype:1",
+  "grant_ref": "urn:axiom-indexer:grant:semantic-proposal-only:1",
+  "evidence_refs": [
+    "urn:stdo-index:source-packet:sha256:6c49ab15a369745dd385652e9da321a2277114fd466deb0930a921d916cc9608"
+  ],
+  "provenance_refs": [
+    "stdo://releases/v2.5.0-rc.1/",
+    "urn:stdo:axiomatic-calculus-basis:sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da"
+  ]
+}
+
+Use this exact basis object:
+{
+  "calculus": {
+    "identity": "urn:stdo:axiomatic-calculus-basis:sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da",
+    "record": {
+      "concept_identity": "urn:stdo:concept:axiomatic-calculus:a-c",
+      "derivation_basis": {
+        "manifest_sha256": "sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551",
+        "principle_refs": [
+          "stdo://releases/v2.4.3-rc.3/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004",
+          "stdo://releases/v2.4.3-rc.3/standards/IDENTITY_METHOD.md#core-law",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#evaluation",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#position",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation",
+          "stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results",
+          "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+          "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#ambiguity-governance-rule",
+          "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#bounded-context-semantic-resolution",
+          "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#constitutional-chain",
+          "stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001"
+        ],
+        "release_uri": "stdo://releases/v2.4.3-rc.3/"
+      },
+      "kind": "stdo.axiomatic-calculus-basis",
+      "publication_basis": {
+        "manifest_sha256": "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338",
+        "member_sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+        "member_uri": "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "release_uri": "stdo://releases/v2.5.0-rc.1/"
+      },
+      "schema_version": 1
+    },
+    "record_sha256": "sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da",
+    "status": "reconstructed_candidate_not_issued"
+  },
+  "subject": {
+    "release_uri": "stdo://releases/v2.5.0-rc.1/",
+    "installed_manifest_sha256": "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338",
+    "standards_member_set_sha256": "sha256:87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5",
+    "member_count": 51
+  },
+  "signature": {
+    "identity": "urn:stdo-index:signature:stdo:4",
+    "sha256": "sha256:5f3c15a705de16f61e5239201796430afecf9af0c30a85d8efa3b2a7c44fa742"
+  },
+  "interpretation_contract": {
+    "identity": "urn:axiom-indexer:traversal:semantic-compile:3",
+    "sha256": "sha256:bec9fa44168b3ab66efccb004d9083a8acff0c8056808cba566a8c9b6a23b3bb"
+  },
+  "frame": {
+    "identity": "urn:stdo-index:frame:stdo-core:2",
+    "sha256": "sha256:c9eccd9295a55b12798a3750f451282617505d171b2d8559689cbd46a9aa8ce6"
+  },
+  "source_packet": {
+    "identity": "urn:stdo-index:source-packet:sha256:6c49ab15a369745dd385652e9da321a2277114fd466deb0930a921d916cc9608",
+    "sha256": "sha256:6c49ab15a369745dd385652e9da321a2277114fd466deb0930a921d916cc9608"
+  }
+}
+
+Use this exact required model-basis resolution:
+{
+  "external_identity": "urn:stdo-index:model-basis:sha256:01d9d4f01c78b84503dd7e51b74821beae14b62f2a51522791836b8150f9db60",
+  "reference_domain": "urn:stdo-index:reference-domain:model-basis:1",
+  "external_target_kind": "urn:stdo-index:external-target-kind:model-basis:1",
+  "resolved_target_identity": "urn:stdo-index:model-basis:sha256:01d9d4f01c78b84503dd7e51b74821beae14b62f2a51522791836b8150f9db60",
+  "basis_relation": "urn:stdo-index:basis-relation:exact-model-basis:1",
+  "resolution_basis": "urn:stdo:axiomatic-calculus-basis:sha256:bac18f57d655ce730462b84d62306d4af9ef3ebe1292f9889d67fe877f31d0da",
+  "evidence_identity": "urn:stdo-index:evidence:model-basis-preimage:sha256:01d9d4f01c78b84503dd7e51b74821beae14b62f2a51522791836b8150f9db60"
+}

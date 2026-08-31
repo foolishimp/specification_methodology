@@ -1,0 +1,51 @@
+{
+  "kind": "stdo-representation.axiom-indexer-dogfood-basis",
+  "schema_version": 1,
+  "run_uri": "urn:stdo-representation:dogfood:axiom-indexer-v0.1.0-rc.1:stdo-v2.5.0-rc.1:run-001",
+  "authoring_claim": {
+    "surface": "a_c.text",
+    "status": "working_authoring_surface",
+    "excludes": [
+      "accepted a_c.STDO baseline",
+      "complete admitted M_b",
+      "GTL carrier or a_c.STDO.GTL",
+      "semantic truth, completeness, fidelity, or unique interpretation",
+      "model invocation attestation"
+    ]
+  },
+  "development_product": {
+    "name": "Axiom Indexer",
+    "release": "v0.1.0-rc.1",
+    "installed_root": "/Users/jim/Library/Application Support/Axiom Indexer/releases/v0.1.0-rc.1",
+    "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+    "commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+    "tree": "8c9ad5f5e99a60c18fb8c1802471753afb226272",
+    "skill": {
+      "path": "skills/axiomatize-corpus/SKILL.md",
+      "sha256": "sha256:dcd2294e7de7ae5bfb4a70b3980594a36f9a3b28b42236523a86cbc42aa7babe"
+    },
+    "output_contract": {
+      "path": "skills/axiomatize-corpus/references/output-contract.md",
+      "sha256": "sha256:fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694"
+    },
+    "program_schema": {
+      "path": "skills/axiomatize-corpus/references/program.schema.json",
+      "sha256": "sha256:61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b"
+    },
+    "validator": {
+      "path": "build_tenants/core/code/ac.py",
+      "sha256": "sha256:dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672"
+    }
+  },
+  "source_corpus": {
+    "name": "STDO",
+    "release_uri": "stdo://releases/v2.5.0-rc.1/",
+    "installed_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.0-rc.1",
+    "standards_root_uri": "stdo://releases/v2.5.0-rc.1/standards/",
+    "manifest_sha256": "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338",
+    "standards_member_count": 51,
+    "standards_member_set_sha256": "sha256:87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5",
+    "calculus_ref": "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md",
+    "calculus_member_sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  }
+}

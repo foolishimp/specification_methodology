@@ -1,0 +1,40 @@
+{
+  "name": "@foolishimp/stdo-representation-gtl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "stdo-gtl": "./build/src/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./build/src/index.d.ts",
+      "import": "./build/src/index.js"
+    },
+    "./semantics": {
+      "types": "./build/src/semantics.d.ts",
+      "import": "./build/src/semantics.js"
+    }
+  },
+  "files": [
+    "build/**"
+  ],
+  "peerDependencies": {
+    "@abiogenesis/typescript-tenant": "5.0.0-dev.286"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "typescript": "5.9.2"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
+    "test": "node scripts/run-tests.mjs"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "stdo-representation.semantic-compilation-contract",
+  "schema_version": 2,
+  "identity": "urn:stdo-representation:traversal:semantic-compile:7",
+  "functor_ref": "urn:stdo:concept:axiomatic-calculus:f-p",
+  "domain": [
+    "product_selected_calculus_basis",
+    "exact_subject_basis",
+    "target_signature",
+    "compilation_frame_configuration",
+    "exact_source_packet",
+    "compile_grant",
+    "capability_envelope"
+  ],
+  "codomain": ["semantic_compilation_proposal"],
+  "record_kinds": {
+    "O": "urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object",
+    "E": "urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation",
+    "C": "urn:stdo:concept:axiomatic-calculus:record-kind:constraint",
+    "L": "urn:stdo:concept:axiomatic-calculus:record-kind:latitude",
+    "X": "urn:stdo:concept:axiomatic-calculus:record-kind:residual",
+    "V": "urn:stdo:concept:axiomatic-calculus:record-kind:traversal",
+    "T": "urn:stdo:concept:axiomatic-calculus:record-kind:transformation",
+    "J": "urn:stdo:concept:axiomatic-calculus:record-kind:judgment"
+  },
+  "model_coordinates": ["b", "I", "O", "E", "C", "L", "X", "V", "T", "J", "ResolutionSet_M"],
+  "source_population": "complete_installed_manifest",
+  "source_packet_relation": "full_population_or_exact_projection_with_residuals",
+  "source_disposition_unit": "manifest_member",
+  "postconditions": [
+    "proposal_implies_total_population_M",
+    "proposal_implies_signature_population_cardinalities",
+    "T_is_empty_until_exact_transformation_specialization",
+    "I_equals_disjoint_union_Local_M_and_External_M",
+    "ResolutionSet_M_is_total_unique_over_External_M",
+    "every_reference_uses_declared_RefDomain_Sigma",
+    "every_source_member_dispositioned",
+    "P_B_is_total_bijection_over_Local_M",
+    "every_P_B_semantic_address_is_record_congruent",
+    "every_generated_source_key_is_exactly_represented",
+    "five_proposal_identity_families_are_globally_disjoint",
+    "candidate_construction_requires_exact_compiler_provenance_bundle",
+    "unmodeled_materiality_implies_X"
+  ],
+  "authority": "proposal_only",
+  "semantic_acceptance": "external_f_h_v_select_over_unchanged_candidate",
+  "carrier": "excluded",
+  "runtime": "excluded",
+  "stop_states": [
+    "urn:stdo-index:stdo:stop-kind:gap:1",
+    "urn:stdo-index:stdo:stop-kind:hold:1",
+    "urn:stdo-index:stdo:stop-kind:refusal:1"
+  ],
+  "stop_reason_codes": [
+    "basis_gap",
+    "capability_mismatch",
+    "insufficient_evidence",
+    "output_contract_mismatch"
+  ]
+}
