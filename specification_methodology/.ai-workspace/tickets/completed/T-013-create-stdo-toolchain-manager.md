@@ -4,8 +4,8 @@
 - title: Create the shared versioned STDO toolchain manager
 - type: proposal
 - ticket_category: product
-- status: active
-- review_status: pending
+- status: completed
+- review_status: accepted_in_v2.5.0_exact_cut
 - goal: >-
     Make one centrally installed, versioned STDO distribution usable by any
     number of explicitly governed Product Definitions without copying the
@@ -19,7 +19,8 @@
 - re_entry_point: specification/PRODUCT.md
 - triaged_at: 2026-08-21
 - created_at: 2026-08-21
-- updated_at: 2026-08-22
+- updated_at: 2026-08-31
+- completed_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_release: v2.4.3 at 7207b43bba9a422c676840567e1566ff3f1558fb
@@ -148,3 +149,11 @@ Each defect has a positive refusal-path regression. The repaired candidate
 still requires independent exact-cut review for its immutable RC2 verdict.
 Under T-014, selector advancement is publication bookkeeping rather than an
 acceptance transition; consumer adoption remains separately plan-bound.
+
+## Final Disposition
+
+The Toolchain Manager outcome was published in immutable `v2.4.3-rc.2` and
+remains present in the accepted `v2.5.0-rc.1` exact cut. The manager installs
+and verifies both historical and current cuts, and its complete current suite
+passes normally and under optimized Python. T-014 separately owns the bounded
+latest-selector repair. No remaining work from this ticket is selected.

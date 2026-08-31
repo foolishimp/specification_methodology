@@ -4,8 +4,8 @@
 - title: Make the version-line selector resolve only the latest published RC
 - type: bug
 - ticket_category: release
-- status: active
-- review_status: pending
+- status: completed
+- review_status: accepted_in_v2.5.0_exact_cut
 - goal: >-
     Make an STDO version-line reference such as 2.4.3 mean the highest-ordinal
     published immutable RC on that line, while preserving direct access to
@@ -17,7 +17,8 @@
 - re_entry_point: specification/standards/RELEASE_METHOD.md
 - triaged_at: 2026-08-23
 - created_at: 2026-08-23
-- updated_at: 2026-08-23
+- updated_at: 2026-08-31
+- completed_at: 2026-08-30
 - owner: specification_methodology
 - pen_holder: codex
 - predecessor_cut: v2.4.3-rc.2
@@ -100,3 +101,13 @@ This ticket closes only when:
 - the packaged CLI reports `stdo-toolchain 0.1.1`; and
 - the bounded repair is published as the next immutable RC on 2.4.3, with the
   selector and release branch aligned to it.
+
+## Final Disposition
+
+Immutable `v2.4.3-rc.3` tag object
+`044208c82b741fa98aa1a6e34fcf2a3094a313b0` peels to
+`eb87a20247beeb93de394523ebdf8faecfd71949`. The annotated `v2.4.3`
+selector peels to the same commit, exact older cuts remain addressable, and
+the repair is conserved in accepted `v2.5.0-rc.1`. Current selector,
+downgrade-refusal, installation, and optimized-Python tests pass. No remaining
+work from this ticket is selected.

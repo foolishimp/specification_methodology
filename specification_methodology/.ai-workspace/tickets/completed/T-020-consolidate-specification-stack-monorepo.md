@@ -4,8 +4,8 @@
 - title: Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
 - type: implementation
 - ticket_category: design_realization
-- status: completed
-- review_status: go
+- status: active
+- review_status: changes_requested
 - goal: >-
     Place the three related source projects under one coordination-only Git
     repository so finite LLM actors can traverse the complete stack without
@@ -19,7 +19,6 @@
 - triaged_at: 2026-08-31
 - created_at: 2026-08-31
 - updated_at: 2026-08-31
-- completed_at: 2026-08-31
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-31
@@ -145,4 +144,9 @@ and project-subtree release identity. This ticket grants no such release.
   find exactly three valid independent Product Definitions.
 - Root and child native skill links resolve, Git ancestry checks pass, and
   `git fsck --full --no-dangling` passes.
-- Independent cold review reports no P0, P1, or P2 finding.
+- Independent review of exact candidate `7ce99b0d17839fc19f1c95414d38bcb1c7643fa2`
+  reports technical integration GO with two P2 closure-state findings. The
+  verdict is retained at
+  `../../comments/codex/20260831T144618_REVIEW_specification_stack_monorepo_candidate.md`.
+  Closure remains open until those findings are repaired and the exact delta
+  is independently reviewed.
