@@ -1,0 +1,41 @@
+{
+  "kind": "stdo-representation.release-publication-grant",
+  "schema_version": 1,
+  "release_line": "2.5.0",
+  "candidate_tag": "stdo_representation/v2.5.0-rc.1",
+  "candidate_tag_ref": "refs/tags/stdo_representation/v2.5.0-rc.1",
+  "selector_tag": "stdo_representation/v2.5.0",
+  "selector_tag_ref": "refs/tags/stdo_representation/v2.5.0",
+  "rc_branch_ref": "refs/heads/rc/stdo_representation/2.5.0",
+  "release_branch_ref": "refs/heads/release/stdo_representation/2.5.0",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "publisher_identity": "urn:openai:codex:root-agent",
+  "credential_principal": "https://github.com/foolishimp",
+  "authority_identity": "urn:stdo-representation:authority:product-owner",
+  "grant_scope": "Commit the qualified carrier and atomically publish main, the qualified STDO Representation 2.5.0 RC and release branches, the annotated immutable RC tag, and the annotated version-line selector to the named repository; verify all remote refs; do not move the immutable RC after publication; do not mutate unqualified Source STDO refs.",
+  "qualified_subject": {
+    "commit": "fb0c696b3cca9cf66a58d301d37b73ef9ec4862e",
+    "repository_tree": "1430f70652a58d8f1b5cfb48561e5571902eaef5",
+    "project_subtree_path": "stdo_representation",
+    "project_subtree_tree": "b69d725726b9d44de63ab55ec436719b13eae6c6"
+  },
+  "product_member_inventory_sha256": "sha256:08a13f8c160ec70e724d414260324923eba4187d9474aa434342098d9c45002a",
+  "release_record_sha256": "sha256:079f1af9f05031524ec3fe003b7bf8cfea6238eacc8ac36dae0802cc3bd03557",
+  "pre_rc_review_sha256": "sha256:3dd3db886f6e09a7af8ecd3a02040dba2ef8f9421c7dc8466e4b613d118d65d3",
+  "release_claims": [
+    "STDO-REP-2.5-C01",
+    "STDO-REP-2.5-C02",
+    "STDO-REP-2.5-C03",
+    "STDO-REP-2.5-C04",
+    "STDO-REP-2.5-C05"
+  ],
+  "granted_at": "2026-09-01T00:00:51+10:00",
+  "grant_source": "Direct Product-owner instruction in this collaboration: release.",
+  "evidence_refs": [
+    "./specification/PRODUCT.md#product-disposition-authority",
+    "./specification/REFERENCE_FRAME_BASIS.md#material-interactions-and-conjunction",
+    "./.ai-workspace/tickets/active/T-007-repair-stdo-representation-2.5-rc-candidate.md",
+    "./.ai-workspace/comments/codex/20260831T235000_REVIEW_stdo_representation_2.5_pre_rc.md",
+    "./releases/v2.5.0.md"
+  ]
+}
