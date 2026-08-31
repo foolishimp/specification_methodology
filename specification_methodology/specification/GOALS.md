@@ -37,8 +37,9 @@ selected by this Product goal.
 
 T-019 through T-022 are closed predecessor work for this release wave. The
 final exact-subject a_c-guided Reviewer result for T-022 is `satisfied` with no
-S0-S4 findings. T-023 is active in review. RC2 publication remains pending one
-independent whole-cut release review and exact remote publication verification.
+S0-S4 findings. T-023 has independent pre-publication `GO` with P0, P1, and P2
+all zero. The authorized atomic publication and exact remote verification are
+the remaining current actions.
 
 ## Selection Boundary
 

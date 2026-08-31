@@ -5,7 +5,7 @@
 - type: release
 - ticket_category: release
 - status: active
-- review_status: in_review
+- review_status: go
 - goal: >-
     Publish the current 52-member STDO successor as one immutable,
     project-qualified RC2 and make it reacquirable without moving RC1.
@@ -50,6 +50,22 @@ inventory declared by `releases/v2.5.0.md`. The shared repository commit and
 sibling subtrees are carrier state, not additional STDO Product members.
 Publication does not adopt RC2 for a consumer or accept a downstream
 representation.
+
+## Pre-Publication Evidence
+
+- Exact reviewed carrier commit:
+  `79ca34b312f262343b1df5acc5d0afaa42a1c2cb`.
+- Standards tree: `f636fd8dcc234e05b8aa464a35f24d843c258dc9`.
+- Standards aggregate:
+  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`.
+- Independent whole-cut review: `GO`; P0, P1, and P2 all zero.
+- Review carrier:
+  `.ai-workspace/comments/codex/20260901T070000_REVIEW_stdo_2_5_0_rc2_prepublication.md`.
+- The direct human conditional publication grant is recorded in
+  `.ai-workspace/comments/human/20260901T064000_DECISION_authorize_stdo_2_5_0_rc2_publication.md`.
+
+The review and authorization close the pre-publication gate. They do not
+constitute Product acceptance or consumer adoption.
 
 ## Closure Law
 
