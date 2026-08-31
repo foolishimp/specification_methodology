@@ -168,7 +168,7 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "02607239cca2ceb550a426b3d969a3206de6af014a873b7665056ec6fef6e97c",
+                "ba7b83bce4a3a437ec78fcd6a1b5745d080bda23d93236d20067bfa14f1158d0",
                 "0" * 64,
                 1,
             )

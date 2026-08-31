@@ -31,6 +31,10 @@ as a source-project convenience and report that boundary.
      `8161a99e0cd80170882e2019f72f419dd773683c0731ad9b3a0d1d31a5905a95`;
    - index intrinsic SHA-256:
      `2df34cb85bf6fbad2436e468e14cb5c26ff8d0aa721f8de10bb7e948b0d21b78`;
+   - accepted project frame-basis SHA-256:
+     `0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`;
+   - frame-basis acceptance-decision SHA-256:
+     `7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`;
    - Axiom Indexer `v0.1.0-rc.1` tag object `e7afc8a42a7123aebe91cb7582cb037b1aae612d`,
      commit `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
      `8c9ad5f5e99a60c18fb8c1802471753afb226272`, member inventory
@@ -52,7 +56,7 @@ as a source-project convenience and report that boundary.
      8c9ad5f5e99a60c18fb8c1802471753afb226272
    git -C "$stack_root" archive --format=tar "$axiom_ref" | tar -xf - -C "$axiom_root"
    test -f "$axiom_root/build_tenants/core/code/ac.py"
-   test "$(shasum -a 256 "$axiom_root/build_tenants/core/code/ac.py" | awk '{print $1}')" = \
+   test "$(shasum -a 256 "$axiom_root/build_tenants/core/code/ac.py" | cut -d ' ' -f 1)" = \
      dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
    ```
 
@@ -75,7 +79,10 @@ as a source-project convenience and report that boundary.
      or choosing continuation; and
    - Reviewer evaluates the exact subject and evidence without repair while
      retaining the Reviewer claim, then returns findings to Executive.
-6. Select the smallest relevant frame URIs and linked constraints. Show each
+6. Select the smallest relevant frame only from the map's top-level
+   `frame_refs`. A frame's STDO URI is its source route. Select supporting
+   clauses or residuals separately and use their `source_routes` entries. Never
+   label a clause, residual, symbol, or digest as a reference frame. Show each
    selected frame's URI, purpose, and source route so the choice is inspectable.
 7. Follow the selected constraints. Re-enter exact Source STDO through an index
    source route when the task, a residual, or an unresolved meaning requires it.

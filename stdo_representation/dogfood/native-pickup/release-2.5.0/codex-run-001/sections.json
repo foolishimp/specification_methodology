@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Outcome",
+    "text": "Act as the Worker for one bounded, non-mutating qualification. Evaluate and report this exact divergence: a derived Product status view says an immutable release is accepted, while the live release record says the same subject is only a candidate; Product specification is otherwise unchanged. Do not resolve the divergence by mutation or disposition. Return one closed evaluation or a visible hold to the Executive."
+  },
+  {
+    "label": "Reference frames",
+    "text": "Use exactly one material STDO reference frame.\nURI: stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame\nPurpose: bind this Worker to one exact evidence-based evaluation and closed return while withholding admission, publication, acceptance, frame-set revision, and inferred-next-action authority.\nSource STDO route: stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame\nMaterial application: construction and self-review are limited to the evaluation report. If the report is complete, candidate_ready describes only that report; it never means that the release is accepted."
+  },
+  {
+    "label": "Constraints and boundaries",
+    "text": "Operate read-only. Do not edit Product, source, status, release, evidence, decision, or reference records; create or move release refs; accept or publish anything; activate a Reviewer; choose a disposition; or choose or activate any later action. Treat the unchanged Product specification as a fixed input and do not expand into repair or general release qualification. Keep mechanical validation, publication of an immutable subject, and Product-owner acceptance as distinct relations. A derived status view is evidence of a claim, not self-proving authority. If exact subject identity, governing evidence, acceptance authority, or the selected frame route is missing or ambiguous, do not guess: return HOLD with the smallest lawful re-entry point."
+  },
+  {
+    "label": "Evidence and source routes",
+    "text": "Evidence boundary:\n1. The derived Product status view claims that an immutable release is accepted.\n2. The live release record for the asserted subject says that the subject is only a candidate.\n3. Product specification is otherwise unchanged.\nEstablish whether both status claims bind the same exact immutable subject; identify the evidence and owner that govern acceptance status; and state whether an exact acceptance decision is present in the supplied evidence. Do not infer identity from matching names, versions, paths, counts, or prose. Bounded Source STDO re-entry is limited to the selected frame route and the material anchors in the same owning file: #status-and-authority-boundary, #worker, and #complete-engagement-transition. Open no unrelated STDO region. If these inputs or routes do not resolve the meaning needed for the evaluation, return HOLD."
+  },
+  {
+    "label": "Task",
+    "text": "1. Name the exact release subject established by the supplied evidence, or state the missing identity coordinate.\n2. Compare the two status claims without changing either source.\n3. Identify the governing evidence for acceptance status and explain why it governs; identify the contradictory derived claim as a divergence without silently promoting it.\n4. State the Worker's authorized action boundary for this activation.\n5. State separately what mechanical validation could establish, what publication could establish, and what only the authorized Product owner could accept.\n6. Return the closed evaluation, or HOLD with the smallest lawful owner, material relation, or exact evidence coordinate required for re-entry. Stop after returning to the Executive."
+  },
+  {
+    "label": "Success and return",
+    "text": "Return exactly these fields:\nstatus: CLOSED_EVALUATION | HOLD\nframe_uri: <the single selected frame URI>\nframe_result: candidate_ready | refused | incomplete | re_entry_requested\nexact_subject: <identity and basis, or unresolved coordinate>\nevidence_considered: <bounded list>\ngoverning_evidence: <evidence, owner, and reason>\ndivergence: <precise comparison>\nauthorized_action_boundary: <read-only evaluation and return limits>\nvalidation_publication_acceptance_boundary: <three distinct statements>\nresiduals: <none or explicit uncertainty>\nsmallest_lawful_re_entry: none | <owner, material relation, and exact evidence needed>\nreturn_to: Executive\nFor CLOSED_EVALUATION, candidate_ready applies only to this exact evaluation report and smallest_lawful_re_entry is none. For HOLD, use incomplete or re_entry_requested and name only the smallest lawful re-entry; do not select or activate it."
+  }
+]
