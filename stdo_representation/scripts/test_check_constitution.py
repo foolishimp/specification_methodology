@@ -131,6 +131,38 @@ class ThinConstitutionTests(unittest.TestCase):
         )
         self.assertIn("Product index source routes do not match index items", failures)
 
+    def test_product_definition_identity_collapse_is_rejected(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        changed = copy.deepcopy(compression)
+        clause = next(
+            row
+            for row in changed["clauses"]
+            if row["uri"].endswith("product-definition-schema-closes-routing-shape")
+        )
+        clause["statement"] = "A Product Definition binds one Product identity."
+        failures = CHECKER.validate_semantic_boundaries(changed)
+        self.assertIn(
+            "Product compression collapses Product-Definition and Product identity",
+            failures,
+        )
+
+    def test_release_cut_install_collapse_is_rejected(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        changed = copy.deepcopy(compression)
+        clause = next(
+            row
+            for row in changed["clauses"]
+            if row["uri"].endswith("release-rc-is-immutable")
+        )
+        clause["arguments"][0][
+            "ref"
+        ] = "urn:stdo-representation:a-c-text:symbol:install"
+        failures = CHECKER.validate_semantic_boundaries(changed)
+        self.assertIn(
+            "Product compression does not bind RC publication to Release Cut",
+            failures,
+        )
+
     def test_historical_bootstrap_release_record_cannot_drift(self) -> None:
         source = ROOT / CHECKER.HISTORICAL_BOOTSTRAP_RELEASE_PATH
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -172,7 +204,7 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "ba7b83bce4a3a437ec78fcd6a1b5745d080bda23d93236d20067bfa14f1158d0",
+                "905313e0784ed15c717d04e432385f68e399e7155a59c31809475d291f4e28c6",
                 "0" * 64,
                 1,
             )

@@ -37,7 +37,7 @@ HISTORICAL_BOOTSTRAP_RELEASE_SHA256 = (
 )
 CANDIDATE_RELEASE_PATH = Path("releases/v2.5.0.md")
 CANDIDATE_INVENTORY_SHA256 = (
-    "e5155655497ad3021b33fc90a3e105031d5b199be7c3245fd26a9da6a27eb45b"
+    "08a13f8c160ec70e724d414260324923eba4187d9474aa434342098d9c45002a"
 )
 CANDIDATE_RELEASE_FIELDS = {
     "represented STDO version": "2.5.0",
@@ -66,11 +66,11 @@ CANDIDATE_RELEASE_CLAIM_IDS = tuple(
     f"STDO-REP-2.5-C{ordinal:02d}" for ordinal in range(1, 6)
 )
 CANDIDATE_NATIVE_EVIDENCE = {
-    Path("dogfood/native-pickup/release-2.5.0/codex-run-002/README.md"): (
-        "5d9eebb16f5cb2aa7f736190719dc2dc41581cd3ca79838ae2d149d96f26b824"
+    Path("dogfood/native-pickup/release-2.5.0/codex-run-004/README.md"): (
+        "183fb2363cae0923079ed07cf1019457061f617c2771aa14879145775a145f42"
     ),
-    Path("dogfood/native-pickup/release-2.5.0/claude-run-002/README.md"): (
-        "7179cf36a3bad0db19213c5b56b2f742cb6e416ddfa5aa76647d0bbef9d9044b"
+    Path("dogfood/native-pickup/release-2.5.0/claude-run-003/README.md"): (
+        "08639b2e5cc2cd4656cc1024e1a1ef86bc511b5d4b9b2919043cb5095df6e0ca"
     ),
 }
 CANDIDATE_LAYER_CLAIMS = (
@@ -320,12 +320,79 @@ def validate_frame_basis(root: Path) -> list[str]:
     return failures
 
 
+def validate_semantic_boundaries(compression: dict[str, Any]) -> list[str]:
+    """Protect the recursive Product identities encoded by the compression."""
+
+    failures: list[str] = []
+    symbols = {
+        row.get("uri"): row
+        for row in compression.get("symbols", [])
+        if isinstance(row, dict) and isinstance(row.get("uri"), str)
+    }
+    clauses = {
+        row.get("uri"): row
+        for row in compression.get("clauses", [])
+        if isinstance(row, dict) and isinstance(row.get("uri"), str)
+    }
+    install_uri = "urn:stdo-representation:a-c-text:symbol:install"
+    release_cut_uri = "urn:stdo-representation:a-c-text:symbol:release-cut"
+    obsolete_uri = "urn:stdo-representation:a-c-text:symbol:installed-release"
+    if obsolete_uri in symbols:
+        failures.append(
+            "Product compression retains collapsed installed-release identity"
+        )
+    if (
+        symbols.get(install_uri, {}).get("label")
+        != "Verified installed Product instance"
+    ):
+        failures.append("Product compression does not declare the Install identity")
+    if symbols.get(release_cut_uri, {}).get("label") != "Immutable RC release cut":
+        failures.append("Product compression does not declare the Release Cut identity")
+
+    product_definition_clause = clauses.get(
+        "urn:stdo-representation:a-c-text:clause:"
+        "product-definition-schema-closes-routing-shape",
+        {},
+    )
+    expected_product_definition_statement = (
+        "A Product Definition structurally binds one Product-Definition identity for "
+        "a continuing mutable WHAT line, exact STDO basis, local constitutional "
+        "relations, reference-frame bases, WHAT, HOW, work carriers, and composition "
+        "under a closed schema; it is not immutable Product identity."
+    )
+    if (
+        product_definition_clause.get("statement")
+        != expected_product_definition_statement
+    ):
+        failures.append(
+            "Product compression collapses Product-Definition and Product identity"
+        )
+
+    manifest_clause = clauses.get(
+        "urn:stdo-representation:a-c-text:clause:"
+        "manifest-schema-closes-release-shape",
+        {},
+    )
+    release_clause = clauses.get(
+        "urn:stdo-representation:a-c-text:clause:release-rc-is-immutable", {}
+    )
+    manifest_arguments = manifest_clause.get("arguments", [])
+    release_arguments = release_clause.get("arguments", [])
+    if not manifest_arguments or manifest_arguments[0].get("ref") != install_uri:
+        failures.append("Product compression does not bind the manifest to Install")
+    if not release_arguments or release_arguments[0].get("ref") != release_cut_uri:
+        failures.append(
+            "Product compression does not bind RC publication to Release Cut"
+        )
+    return failures
+
+
 def validate_compression_index(
     compression: dict[str, Any], logical_index: dict[str, Any]
 ) -> list[str]:
     """Validate the Axiom program as compression and its map as the bound index."""
 
-    failures: list[str] = []
+    failures = validate_semantic_boundaries(compression)
     if compression.get("kind") != "axiom-indexer.axiomatic-program":
         failures.append("Product compression has the wrong Axiom program kind")
     if logical_index.get("kind") != "axiom-indexer.logical-constraint-map":
