@@ -21,6 +21,12 @@ The dependency owns URI resolution, released validation, logical-map
 instantiation, and pure ordered joining. This tenant does not copy or fork that
 code.
 
+When the source projects share one monorepo, the sibling
+`../../../axiom_indexer/` checkout remains mutable source. It does not replace the
+exact released Axiom Indexer Product above. Cross-project development against
+both mutable sources requires an explicit work relation and creates new
+evidence; ordinary STDO Representation use retains the immutable dependency.
+
 ## Product artifacts
 
 ```text

@@ -86,3 +86,13 @@ and exact-cut acceptance for the declared MVP only. It does not authorize GTL,
 semantic acceptance, carrier admission, automatic frame selection, a prompt
 engine, or changes to the core implementation and native skill merely to add
 release ceremony.
+
+## GOAL-003 — Enter the Specification Stack monorepo
+
+Status: active
+
+Move the unchanged Axiom Indexer source project and complete history under the
+coordination-only Specification Stack root. Preserve the accepted Product,
+Product Definition, release objects, relative tool and skill topology, and
+independent authority. Co-location creates no composition and does not replace
+the exact released dependency selected by another Product.

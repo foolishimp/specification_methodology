@@ -103,3 +103,14 @@ then publish only if the thin Product earns continued use.
 An `a_c.STDO` map may later inform a GTL or ABG composition. That is a separate
 Product re-entry after this thin release proves useful. It is not a `0.1.0`
 member, dependency, completion condition, or implied capability.
+
+## GOAL-004 — Enter the Specification Stack monorepo
+
+Status: active
+
+Move the unchanged STDO Representation source project and complete history
+under the coordination-only Specification Stack root. Preserve the accepted
+Product, Product Definition, eight-member Product boundary, exact Axiom Indexer
+Development Product dependency, native skills, and independent authority.
+Co-location creates no composition and mutable sibling source is not the
+accepted dependency.

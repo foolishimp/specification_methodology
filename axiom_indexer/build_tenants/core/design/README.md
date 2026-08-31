@@ -10,3 +10,13 @@ The MVP has four boundaries:
 
 No semantic acceptance service, carrier, orchestration runtime, automatic frame
 selection, or prompt-template engine belongs in this cut.
+
+## Monorepo Placement
+
+The source project may reside at `axiom_indexer/` under a coordination-only
+repository root. Its Product Definition, relative paths, tool behavior, and
+canonical native skill remain project-local. A root discovery link may expose
+that skill without copying it or granting authority. Co-location with
+Specification Methodology or STDO Representation creates no Product identity,
+composition, or permission to substitute mutable sibling source for an exact
+released dependency.
