@@ -45,6 +45,11 @@ class ThinConstitutionTests(unittest.TestCase):
         self.assertEqual(result["product"]["represented_stdo_version"], "2.5.0")
         self.assertEqual(result["historical_bootstrap"]["status"], "conserved")
         self.assertEqual(result["candidate_release"]["status"], "frozen")
+        self.assertEqual(result["frame_basis"]["status"], "accepted_and_bound")
+        self.assertEqual(
+            result["frame_basis"]["decision_sha256"],
+            "sha256:" + CHECKER.FRAME_DECISION_SHA256,
+        )
         self.assertEqual(
             result["candidate_release"]["inventory_sha256"],
             "sha256:" + CHECKER.CANDIDATE_INVENTORY_SHA256,
@@ -163,7 +168,7 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "f0372d7f52c440ae7baa32929b8cd09291e8d4841b5bf11c34f76c3a0b24b7c7",
+                "02607239cca2ceb550a426b3d969a3206de6af014a873b7665056ec6fef6e97c",
                 "0" * 64,
                 1,
             )
@@ -190,17 +195,17 @@ class ThinConstitutionTests(unittest.TestCase):
         overlay["composition"][0]["target_definition_id"] = "urn:test:wrong"
         failures = CHECKER.validate_overlay(overlay)
         self.assertIn(
-            "Axiom Indexer Development Product composition is not exact", failures
+            "Axiom Indexer Product dependency composition is not exact", failures
         )
 
-    def test_frame_basis_binding_cannot_drift(self) -> None:
+    def test_accepted_frame_basis_binding_cannot_drift(self) -> None:
         overlay = json.loads((ROOT / "stdo_representation.json").read_text())
         overlay["reference_frame_bases"] = [{"uri": "urn:test:unaccepted"}]
         failures = CHECKER.validate_overlay(overlay)
         self.assertIn("accepted project frame basis binding is not exact", failures)
 
-    def test_frame_acceptance_binds_exact_bytes(self) -> None:
-        self.assertEqual(CHECKER.validate_frame_acceptance(ROOT), [])
+    def test_proposed_frame_basis_binds_exact_bytes(self) -> None:
+        self.assertEqual(CHECKER.validate_frame_basis(ROOT), [])
 
 
 if __name__ == "__main__":

@@ -35,7 +35,7 @@ Product. The Logical Constraint Map is a deterministic index over that
 unchanged compression. The index adds resolution and source-route evidence; it
 does not reinterpret or outrank the compression.
 
-The map is a derived interpretation. Source STDO remains semantic authority.
+The map is a derived index projection. Source STDO remains semantic authority.
 Every material item retains source routes, and the LLM re-enters source when a
 task, residual, disagreement, or unresolved route requires it.
 

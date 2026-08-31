@@ -46,6 +46,9 @@ pipx install --force ./specification_methodology
 ```
 
 Existing immutable releases remain at their original repositories and refs.
-The Release Method now defines project-qualified future refs and project-subtree
-identity. Each child still requires its own frozen candidate, authority,
+Mutable Specification Methodology source defines a successor shared-source ref
+and subtree-evidence law, but that source is not publication authority for a
+consumer until released and adopted. A child using the currently installed
+method must define any alternate Git spelling as its own Product-local release
+profile. Each child still requires its own frozen candidate, authority,
 qualification, and publication decision.

@@ -104,6 +104,11 @@ RC tag object, peeled commit, and tree. Publication or validation alone shall
 not imply Product acceptance.
 
 **REQ-P-BASIS-010**: STDO Representation `2.5.0` shall represent only exact
-STDO semantic version `2.5.0`. Its project-qualified RC ordinal, Product member
+STDO semantic version `2.5.0`. Its locally qualified RC ordinal, Product member
 identity, and acceptance remain independent of the represented STDO cut and of
 Axiom Indexer `0.1.0`.
+
+**REQ-P-BASIS-011**: The Product-owned Shared-Source Release Profile shall
+specialize only alternate Git spelling permitted by the installed Release
+Method. Its source-subtree root and tree are additional reacquisition evidence,
+not Product identity or authority imported from mutable method source.

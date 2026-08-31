@@ -20,15 +20,16 @@ CALCULUS_REF = "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md"
 AXIOM_TAG_OBJECT = "e7afc8a42a7123aebe91cb7582cb037b1aae612d"
 AXIOM_COMMIT = "dc3e00998da36dae6ac7b76b340431a85096c83c"
 AXIOM_TREE = "8c9ad5f5e99a60c18fb8c1802471753afb226272"
-FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:12"
+FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:13"
 FRAME_PATH = Path("specification/REFERENCE_FRAME_BASIS.md")
-FRAME_SHA256 = "ca11d7f1977333f1b9cdc47f4051280fb980abdef95143bc49072e5c22e10434"
+FRAME_SHA256 = "0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539"
 FRAME_DECISION_PATH = Path(
-    ".ai-workspace/decisions/20260831T153019_frame_basis_rev12_acceptance.json"
+    ".ai-workspace/decisions/20260831T211524_frame_basis_rev13_acceptance.json"
 )
 FRAME_DECISION_SHA256 = (
-    "58ae74c83eccb330d5c58799058f5507fd5f42a4f64a4a99bb1ac06336a5b559"
+    "7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001"
 )
+FRAME_STATUS = "accepted_and_bound"
 HISTORICAL_BOOTSTRAP_VERSION = "0.1.0"
 HISTORICAL_BOOTSTRAP_RELEASE_PATH = Path("releases/v0.1.0.md")
 HISTORICAL_BOOTSTRAP_RELEASE_SHA256 = (
@@ -36,13 +37,13 @@ HISTORICAL_BOOTSTRAP_RELEASE_SHA256 = (
 )
 CANDIDATE_RELEASE_PATH = Path("releases/v2.5.0.md")
 CANDIDATE_INVENTORY_SHA256 = (
-    "bc3bae5b322149b1457c8c2372b734de1b897ad9540f7c98602f2c4fcfc7e331"
+    "a1246384214b5d9b71529108d9def4f062fedc1ee7c44cda23e9f4d8ab2c8b92"
 )
 CANDIDATE_RELEASE_FIELDS = {
     "represented STDO version": "2.5.0",
     "represented exact cut": "refs/tags/v2.5.0-rc.1",
     "Representation version": "2.5.0",
-    "Representation project key": "stdo_representation",
+    "Representation local release key": "stdo_representation",
     "first candidate RC ref": "refs/tags/stdo_representation/v2.5.0-rc.1",
     "version-line selector": "refs/tags/stdo_representation/v2.5.0",
     "RC branch": "refs/heads/rc/stdo_representation/2.5.0",
@@ -55,7 +56,7 @@ CANDIDATE_RELEASE_CLAIMS = (
     "`a_c.STDO` semantic compression for exact STDO `v2.5.0-rc.1`.",
     "`STDO-REP-2.5-C03`: the logical constraint index deterministically binds "
     "the unchanged compression and exposes total source re-entry for its items.",
-    "`STDO-REP-2.5-C04`: the explicit Axiom Indexer Development Product relation "
+    "`STDO-REP-2.5-C04`: the explicit Axiom Indexer Product dependency relation "
     "binds exact `v0.1.0-rc.1` mechanics without mutable-sibling substitution.",
     "`STDO-REP-2.5-C05`: one concise native skill lets Codex and Claude use the "
     "index, select visible reference frames, and re-enter Source STDO without "
@@ -213,7 +214,7 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
             "authority": [
                 "./specification/PRODUCT.md#product-disposition-authority",
                 "./.ai-workspace/decisions/"
-                "20260831T153019_frame_basis_rev12_acceptance.json",
+                "20260831T211524_frame_basis_rev13_acceptance.json",
             ],
             "applies_to": ["urn:stdo:product-definition:stdo-representation"],
         }
@@ -226,7 +227,7 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
             "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
             "relation": (
                 "./specification/PRODUCT.md"
-                "#axiom-indexer-development-product-relation"
+                "#axiom-indexer-product-dependency-relation"
             ),
             "contracts": [
                 "./specification/PRODUCT.md#exact-dependency-bases",
@@ -238,7 +239,7 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
         }
     ]
     if overlay.get("composition") != expected_composition:
-        failures.append("Axiom Indexer Development Product composition is not exact")
+        failures.append("Axiom Indexer Product dependency composition is not exact")
 
     how = overlay.get("how", {})
     if how.get("common") != []:
@@ -260,14 +261,35 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
         failures.append("role disambiguation population is wrong")
     if any(row.get("uri") != role_uri for row in roles):
         failures.append("role disambiguation does not route to native frame use")
+
+    expected_axioms = [
+        {
+            "uri": "./specification/PRODUCT.md#shared-source-release-profile",
+            "authority": ["./specification/PRODUCT.md#product-disposition-authority"],
+            "applies_to": ["urn:stdo:product-definition:stdo-representation"],
+        }
+    ]
+    if overlay.get("local_constitution", {}).get("axioms") != expected_axioms:
+        failures.append("Product-local shared-source release profile is not exact")
     return failures
 
 
-def validate_frame_acceptance(root: Path) -> list[str]:
+def validate_frame_basis(root: Path) -> list[str]:
     failures: list[str] = []
     frame_bytes = (root / FRAME_PATH).read_bytes()
     if hashlib.sha256(frame_bytes).hexdigest() != FRAME_SHA256:
-        failures.append("accepted project frame basis bytes changed")
+        failures.append("proposed project frame basis bytes changed")
+        return failures
+
+    frame_text = frame_bytes.decode("utf-8")
+    if FRAME_URI not in frame_text:
+        failures.append("proposed project frame basis has the wrong identity")
+    expected_status = (
+        "Status: proposed source-project basis, revision 13; Product-owner "
+        "acceptance\nand overlay binding are pending."
+    )
+    if expected_status not in frame_text:
+        failures.append("project frame basis has the wrong proposed status")
 
     decision_path = root / FRAME_DECISION_PATH
     decision_bytes = decision_path.read_bytes()
@@ -546,7 +568,7 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
     failures: list[str] = []
     overlay = load_json(root / "stdo_representation.json")
     failures.extend(validate_overlay(overlay))
-    failures.extend(validate_frame_acceptance(root))
+    failures.extend(validate_frame_basis(root))
     historical_bootstrap_failures = validate_historical_bootstrap(root)
     failures.extend(historical_bootstrap_failures)
     candidate_release_failures = validate_candidate_release(root)
@@ -593,6 +615,15 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             "eight repository entries",
             "adds no local",
             "representation_version = represented_stdo_version",
+            "local_release_key = stdo_representation",
+            "source-subtree root",
+            "additional carrier and reacquisition evidence only",
+        ],
+        "skills/stdo-representation/SKILL.md": [
+            'git -C "$stack_root" archive --format=tar "$axiom_ref"',
+            'test -f "$axiom_root/build_tenants/core/code/ac.py"',
+            "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672",
+            "mutable `axiom_indexer/` sibling",
         ],
         ".ai-workspace/tickets/completed/T-003-construct-stdo-gtl.md": [
             "change_class: product_reprice",
@@ -674,7 +705,7 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             "uri": FRAME_URI,
             "sha256": "sha256:" + FRAME_SHA256,
             "decision_sha256": "sha256:" + FRAME_DECISION_SHA256,
-            "status": "accepted_and_bound",
+            "status": FRAME_STATUS,
         },
     }
 

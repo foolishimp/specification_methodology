@@ -10,11 +10,11 @@ Work from the STDO Representation repository root.
 First determine whether the skill came from mutable source or an immutable
 Product Install. Discovery through a repository symlink proves neither release
 nor acceptance. When the task requires a released Representation, verify its
-external release record, project-qualified immutable tag, and complete member
+external release record, profile-qualified immutable tag, and complete member
 inventory before calling it released.
 
 In a source checkout, read `releases/v2.5.0.md` for the current status, exact
-eight-member inventory, claim boundary, and planned project-qualified refs.
+eight-member inventory, claim boundary, and planned Product-local refs.
 Recompute its member rows from bytes and symlink targets. If the declared
 immutable tag is absent, or the record still says candidate, use the skill only
 as a source-project convenience and report that boundary.
@@ -37,13 +37,30 @@ as a source-project convenience and report that boundary.
      `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`,
      and `ac.py` SHA-256
      `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
-   In the Specification Stack monorepo, resolve that immutable dependency from
-   `refs/tags/legacy/axiom_indexer/v0.1.0-rc.1`: require the ref to equal the tag
-   object above and its peel to equal the declared commit, then extract that
-   exact tag with `git archive` into a fresh temporary directory. Use the
-   extracted Product as `<axiom-indexer-root>` below. Never substitute the
-   mutable `axiom_indexer/` sibling. An external Install is lawful only when it
-   reproduces the same tag, commit, tree, and seven-member inventory.
+   In the Specification Stack monorepo, acquire that immutable dependency from
+   the child root with this root-forced sequence:
+
+   ```sh
+   stack_root="$(git rev-parse --show-toplevel)"
+   axiom_ref=refs/tags/legacy/axiom_indexer/v0.1.0-rc.1
+   axiom_root="$(mktemp -d "${TMPDIR:-/tmp}/axiom-indexer-v0.1.0-rc.1.XXXXXX")"
+   test "$(git -C "$stack_root" cat-file -t "$axiom_ref")" = tag
+   test "$(git -C "$stack_root" rev-parse "$axiom_ref")" = e7afc8a42a7123aebe91cb7582cb037b1aae612d
+   test "$(git -C "$stack_root" rev-parse "$axiom_ref^{}")" = \
+     dc3e00998da36dae6ac7b76b340431a85096c83c
+   test "$(git -C "$stack_root" rev-parse "$axiom_ref^{}^{tree}")" = \
+     8c9ad5f5e99a60c18fb8c1802471753afb226272
+   git -C "$stack_root" archive --format=tar "$axiom_ref" | tar -xf - -C "$axiom_root"
+   test -f "$axiom_root/build_tenants/core/code/ac.py"
+   test "$(shasum -a 256 "$axiom_root/build_tenants/core/code/ac.py" | awk '{print $1}')" = \
+     dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+   ```
+
+   Recompute the extracted seven-member inventory and require
+   `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`.
+   Use `$axiom_root` as `<axiom-indexer-root>` below. Never substitute the
+   mutable `axiom_indexer/` sibling. The final file test is mandatory because a
+   child-scoped empty archive can otherwise exit successfully.
 3. Read
    `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/logical-constraint-map.json`.
    Start from the index, not the full STDO corpus. Verify that its `program_uri`

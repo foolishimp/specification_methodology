@@ -89,10 +89,11 @@ dependencies.
 
 ## Product Definition
 
-The Product owner accepted project frame basis revision 12 at SHA-256
-`ca11d7f1977333f1b9cdc47f4051280fb980abdef95143bc49072e5c22e10434`.
-`stdo_representation.json` binds that exact basis and decision. Product
-Definition verification is part of the release gate.
+The Product owner accepted project frame basis revision 13 at SHA-256
+`0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`.
+The external decision SHA-256 is
+`7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`.
+`stdo_representation.json` binds those exact bytes and the decision.
 
 ## Authority order
 

@@ -123,9 +123,12 @@ python3 scripts/check_constitution.py
 python3 -m unittest scripts.test_check_constitution -v
 ```
 
+Revision 13 of the project frame basis is accepted at SHA-256
+`0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`.
+Its external Product-owner decision SHA-256 is
+`7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`.
 `stdo status --definition stdo_representation.json --verify` must pass against
-the exact accepted revision-12 project frame basis. Any failure is a release
-hold.
+that exact binding. Any failure is a release hold.
 
 ## Historical paths
 

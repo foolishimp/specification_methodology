@@ -1,13 +1,13 @@
 # STDO Representation Project Reference-Frame Basis
 
-Status: source-project basis, revision 12; acceptance is external and
-digest-bound.
+Status: proposed source-project basis, revision 13; Product-owner acceptance
+and overlay binding are pending.
 
 ## Project frame basis
 
 ```text
 frame_set_uri =
-  "urn:stdo-representation:reference-frame-basis:source-project:12"
+  "urn:stdo-representation:reference-frame-basis:source-project:13"
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
 governed_outcome =
@@ -115,13 +115,14 @@ residuals, and invalidation conditions.
   STDO semantic version while preserving distinct Product, RC, member, and Git
   identities?
 - Evidence: exact Source STDO cut and selector, Product version law, historical
-  bootstrap release, project-qualified release plan, and dependency identities.
+  bootstrap release, Product-owned shared-source release profile, and dependency
+  identities.
 - Invariants: `representation_version = represented_stdo_version = 2.5.0`;
   Source STDO, STDO Representation, and Axiom Indexer remain different
   Products; historical refs never move.
 - Actor envelope: `K-PRODUCT`.
 - Exclusions: equal version text cannot substitute one Product, cut, install,
-  subtree, or release ref for another.
+  source-subtree evidence coordinate, or release ref for another.
 
 ### F-MAP-ESSENCE
 
@@ -226,8 +227,8 @@ configuration, context boundary, access, and prior involvement.
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
 | exact frame-set acceptance and overlay binding | Reference Frame Method; Product owner | external acceptance relation | Product owner decides; overlay mutation separately granted | exact file digest, acceptance record, valid Product Definition; prerequisite to activation | separately covered; human acceptance and overlay binding pending |
-| compression-and-index Product boundary | Goals; Intent; Product; T-006 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
-| represented-version alignment | Product version relation; T-006; Release Method | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, Representation candidate, historical bootstrap, project-qualified refs | conditionally covered; mismatch or identity collapse falsifies |
+| compression-and-index Product boundary | Goals; Intent; Product; T-007 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
+| represented-version alignment | Product version relation; T-007; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, Representation candidate, historical bootstrap, local ref profile | conditionally covered; mismatch or identity collapse falsifies |
 | compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | compression, index, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
 | imported validator and join boundary | Product; candidate requirement; Axiom release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | exact dependency, reports, maps, joins, falsifiers | conditionally covered; proves mechanical properties only |
 | Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | skill inventory, target references, fresh pickups, selected frames | conditionally covered; each target requires observation |
@@ -284,9 +285,9 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
-Revision 12 is accepted only through a Product-owner decision naming its exact
-SHA-256, frame-set URI, actor, authority, scope, and time. Only that external
-decision allows `stdo_representation.json` to bind this basis.
+Revision 13 may be accepted only through a Product-owner decision naming its
+exact SHA-256, frame-set URI, actor, authority, scope, and time. Only that
+external decision allows `stdo_representation.json` to bind this basis.
 
 Editing this file after presentation changes its subject and requires a new
 digest and decision.

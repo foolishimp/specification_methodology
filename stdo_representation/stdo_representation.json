@@ -61,7 +61,17 @@
     }
   },
   "local_constitution": {
-    "axioms": [],
+    "axioms": [
+      {
+        "uri": "./specification/PRODUCT.md#shared-source-release-profile",
+        "authority": [
+          "./specification/PRODUCT.md#product-disposition-authority"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      }
+    ],
     "overrides": [],
     "disambiguations": [
       {
@@ -128,7 +138,7 @@
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
         "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20260831T153019_frame_basis_rev12_acceptance.json"
+        "./.ai-workspace/decisions/20260831T211524_frame_basis_rev13_acceptance.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"
@@ -178,7 +188,7 @@
     {
       "product_definition": "../axiom_indexer/stdo_default.json",
       "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
-      "relation": "./specification/PRODUCT.md#axiom-indexer-development-product-relation",
+      "relation": "./specification/PRODUCT.md#axiom-indexer-product-dependency-relation",
       "contracts": [
         "./specification/PRODUCT.md#exact-dependency-bases",
         "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary",

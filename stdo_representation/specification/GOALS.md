@@ -112,15 +112,14 @@ Status: completed
 Move the unchanged STDO Representation source project and complete history
 under the coordination-only Specification Stack root. Preserve the accepted
 Product, Product Definition, eight-member Product boundary, exact Axiom Indexer
-Development Product dependency, native skills, and independent authority.
+Product dependency, native skills, and independent authority.
 Co-location creates no composition and mutable sibling source is not the
 accepted dependency.
 
 ### Completion
 
 - The exact source history entered `stdo_representation/` without rewriting.
-- The accepted release objects remain reachable under project-qualified
-  archival refs.
+- The accepted release objects remain reachable under namespaced archival refs.
 - The eight-member Product and exact Axiom Indexer dependency remain
   unchanged.
 - Project-local and root native skill discovery resolve to the unchanged
@@ -141,18 +140,39 @@ instructions for exact STDO 2.5.0.
 
 - The represented semantic version is `2.5.0`; the exact Source STDO basis is
   immutable `v2.5.0-rc.1`.
-- The `a_c.STDO` program is the canonical released compression for that exact
-  basis; the logical map is explicitly an index over the unchanged program.
+- The `a_c.STDO` program is the canonical candidate compression for that exact
+  basis; publication alone may establish a released compression subject.
+  The logical map is explicitly an index over the unchanged program.
 - Source STDO remains semantic authority and every indexed item retains source
   re-entry.
 - Axiom Indexer retains its independent `0.1.0` identity and owns only the
   mechanical validation, materialization, and join contracts.
 - Historical STDO Representation `v0.1.0-rc.1` remains unchanged and reachable.
-- The new release line uses project-qualified monorepo refs and binds its
-  project subtree rather than treating the repository tree as Product identity.
+- The new release line uses a Product-owned shared-source ref profile and records
+  its source-subtree tree as additional reacquisition evidence, never Product
+  identity or unreleased shared-method law.
 - Focused checks, native skill validation, exact map reproduction, and
   independent candidate review pass before publication.
 
-The local frozen-member candidate satisfies these conditions. Immutable RC
-publication, post-publication exact-cut review, and Product acceptance remain a
-separate release action.
+Checkpoint `e875a8282b65fa64508adb4cb34e801f8659b77a` demonstrated the
+version and layer relation but is not the final candidate. GOAL-006 owns the
+active repair, new frame-basis acceptance, fresh native evidence, and exact
+candidate review required before immutable RC publication.
+
+## GOAL-006 — Repair and qualify the 2.5.0 RC candidate
+
+Status: active
+
+Correct the checkpoint review findings without changing the represented STDO
+cut, Product member count, compression, index, or Axiom Indexer dependency.
+
+### Completion conditions
+
+- All active terminology derives from exact installed STDO `v2.5.0-rc.1` or an
+  explicitly bound Product-local axiom.
+- The Axiom Indexer dependency is acquired from its exact immutable tag from the
+  prescribed child-root working directory and never from mutable sibling source.
+- Fresh Codex and Claude pickup evidence binds the repaired skill bytes.
+- Live status text, frame-basis state, release record, checker, and review
+  evidence agree on one exact candidate.
+- A new exact candidate review passes before any publication grant is exercised.

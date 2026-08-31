@@ -40,6 +40,9 @@ it.
   authority.
 - **Axiom Indexer Dependency** is exact accepted Axiom Indexer
   `v0.1.0-rc.1`, used without copying its Product members into this Product.
+- **Shared-Source Release Profile** is this Product's local specialization of
+  the installed Release Method's alternate-spelling permission. It owns only
+  Git transport spelling and additional source-subtree reacquisition evidence.
 - **`a_c.STDO` Axiomatic Program** is the canonical semantic compression
   selected for the exact represented cut. It contains URI-identified symbols,
   clauses, and residuals grounded in Source STDO.
@@ -77,10 +80,32 @@ representation_version = represented_stdo_version
 
 This equality identifies what is represented; it does not collapse release
 cuts. STDO Representation has its own RC ordinal, member identities, review,
-acceptance, and project-qualified Git refs. Axiom Indexer remains independently
+acceptance, and Product-owned shared-source Git refs. Axiom Indexer remains independently
 versioned. A new represented STDO version requires a new Representation version;
 an implementation-only Representation correction may publish a higher RC on
 the same matched version line.
+
+## Shared-source release profile
+
+Installed STDO `v2.5.0-rc.1` permits a project to choose alternate Git spelling
+when it preserves the mutable carrier, immutable cut, and mutable selector
+distinctions. The Product owner selects this local profile:
+
+```text
+local_release_key = stdo_representation
+RC branch = refs/heads/rc/stdo_representation/2.5.0
+immutable RC = refs/tags/stdo_representation/v2.5.0-rc.<n>
+version-line selector = refs/tags/stdo_representation/v2.5.0
+release branch = refs/heads/release/stdo_representation/2.5.0
+source_subtree_root = stdo_representation/
+```
+
+This profile is a Product-local axiom, not imported mutable Specification
+Methodology law. Exact-cut identity remains the installed Release Method's
+annotated tag object, peeled commit, repository tree, declared Product member
+inventory, release claims, and predecessor relation. The source-subtree root
+and tree are additional carrier and reacquisition evidence only. They never
+become Product identity and never make sibling bytes Product members.
 
 `a_c.STDO` does not claim a complete admitted `M_b`, the full
 `I/O/E/C/L/X/V/T/J` population, a total semantic interpretation, or a lossless
@@ -116,10 +141,10 @@ The dependency contributes URI resolution, released program validation,
 logical-map instantiation, exact diagnostics, and ordered string joining. This
 Product does not widen those claims.
 
-## Axiom Indexer Development Product relation
+## Axiom Indexer Product dependency relation
 
 STDO Representation is the source Product and exact Axiom Indexer
-`v0.1.0-rc.1` is the Development Product. The relation is owned by
+`v0.1.0-rc.1` is its mechanical Product dependency. The relation is owned by
 `urn:stdo-representation:authority:product-owner` and is limited to mechanical
 validation, logical constraint index materialization, diagnostics, URI
 resolution, and exact joining under the contracts below. It imports no Axiom
@@ -341,8 +366,8 @@ The exact-cut review and Product-owner decision accept only release claims
 `STDO-REP-0.1-C01` through `STDO-REP-0.1-C05` at their declared boundaries. It
 is not retargeted or renamed.
 
-The active source project is preparing STDO Representation `2.5.0` under a new
-project-qualified immutable RC. Until that exact cut is published, independently
+The active source project is preparing STDO Representation `2.5.0` under its
+Product-owned shared-source release profile. Until that exact cut is published, independently
 qualified, and accepted, `2.5.0` is a candidate and the bootstrap cut remains
 the latest accepted Representation Product.
 
