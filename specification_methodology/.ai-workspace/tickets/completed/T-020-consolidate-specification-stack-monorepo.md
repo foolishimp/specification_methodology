@@ -4,8 +4,8 @@
 - title: Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
 - type: implementation
 - ticket_category: design_realization
-- status: active
-- review_status: pending
+- status: completed
+- review_status: go
 - goal: >-
     Place the three related source projects under one coordination-only Git
     repository so finite LLM actors can traverse the complete stack without
@@ -19,6 +19,7 @@
 - triaged_at: 2026-08-31
 - created_at: 2026-08-31
 - updated_at: 2026-08-31
+- completed_at: 2026-08-31
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-08-31
@@ -124,3 +125,24 @@ retain both names. This migration preserves those objects under project-scoped
 archival refs. Before any successor Product is published from the monorepo,
 `RELEASE_METHOD.md` must separately define project-qualified future tag refs
 and project-subtree release identity. This ticket grants no such release.
+
+## Closure Evidence
+
+- Frozen source commits and trees are recorded in root `MIGRATION.md`; each
+  imported subtree at its import commit reproduces the source tree exactly.
+- Specification Methodology entered under `specification_methodology/` with
+  zero byte changes; Axiom Indexer and STDO Representation entered through
+  history-preserving, non-squash merges.
+- Existing STDO refs are unchanged. Colliding Axiom Indexer and STDO
+  Representation release objects remain reachable through project-qualified
+  archival refs.
+- The STDO reader accepts exactly one legacy or nested layout, preserves
+  logical manifest paths and installed bytes, and refuses zero or duplicate
+  layouts.
+- Specification Methodology passes 78/78 tests normally and under optimized
+  Python; Black, Ruff, JSON, and diff checks pass.
+- All child suites pass from their nested roots. Fleet status and verification
+  find exactly three valid independent Product Definitions.
+- Root and child native skill links resolve, Git ancestry checks pass, and
+  `git fsck --full --no-dangling` passes.
+- Independent cold review reports no P0, P1, or P2 finding.

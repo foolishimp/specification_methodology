@@ -40,3 +40,20 @@ deleted or archived by this migration.
 The root contains no Product Definition, `PRODUCT.md`, or licence. Each child
 retains its own Product and licence disposition. Future releases are blocked
 until project-qualified tag refs and project-subtree identity are ratified.
+
+## Verification
+
+- The three import-commit subtree trees equal the frozen source trees.
+- The three frozen source commits remain ancestors of the integrated branch.
+- Original annotated release tag objects and peels reproduce exactly.
+- Specification Methodology passes 78/78 tests normally and under optimized
+  Python from its nested root.
+- Axiom Indexer and STDO Representation pass their complete project checks
+  from their nested roots.
+- `stdo fleet status --root .` and `stdo fleet verify --root .` find exactly
+  three valid, independently governed Product Definitions.
+- Root and child native skill links resolve without copying Product members.
+- JSON, formatting, lint, diff, and Git object-integrity checks pass.
+
+No remote was changed by the local migration. A remote cutover requires a
+separate exact-tree review and explicit publication authorization.

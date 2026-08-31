@@ -106,7 +106,7 @@ member, dependency, completion condition, or implied capability.
 
 ## GOAL-004 — Enter the Specification Stack monorepo
 
-Status: active
+Status: completed
 
 Move the unchanged STDO Representation source project and complete history
 under the coordination-only Specification Stack root. Preserve the accepted
@@ -114,3 +114,16 @@ Product, Product Definition, eight-member Product boundary, exact Axiom Indexer
 Development Product dependency, native skills, and independent authority.
 Co-location creates no composition and mutable sibling source is not the
 accepted dependency.
+
+### Completion
+
+- The exact source history entered `stdo_representation/` without rewriting.
+- The accepted release objects remain reachable under project-qualified
+  archival refs.
+- The eight-member Product and exact Axiom Indexer dependency remain
+  unchanged.
+- Project-local and root native skill discovery resolve to the unchanged
+  canonical skill.
+- Constitution, project, and optimized-Python checks pass from the nested
+  child root, and fleet verification preserves the independent Product
+  Definition.

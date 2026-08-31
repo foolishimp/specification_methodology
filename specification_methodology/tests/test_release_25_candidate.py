@@ -8,6 +8,15 @@ from pathlib import Path
 
 
 REPOSITORY = Path(__file__).resolve().parents[1]
+GIT_REPOSITORY = Path(
+    subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"],
+        cwd=REPOSITORY,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+)
 RELEASE_TAG = "v2.5.0-rc.1^{}"
 RELEASE_NOTE = "releases/v2.5.0.md"
 PREDECESSOR = "v2.4.3-rc.3"
@@ -16,7 +25,7 @@ PREDECESSOR = "v2.4.3-rc.3"
 def git_bytes(revision: str, relative: str) -> bytes:
     return subprocess.run(
         ["git", "show", f"{revision}:{relative}"],
-        cwd=REPOSITORY,
+        cwd=GIT_REPOSITORY,
         check=True,
         capture_output=True,
     ).stdout
@@ -25,7 +34,7 @@ def git_bytes(revision: str, relative: str) -> bytes:
 def git_paths(revision: str, prefix: str) -> list[str]:
     return subprocess.run(
         ["git", "ls-tree", "-r", "--name-only", revision, prefix],
-        cwd=REPOSITORY,
+        cwd=GIT_REPOSITORY,
         check=True,
         capture_output=True,
         text=True,

@@ -2,6 +2,8 @@
 
 ## Goal
 
+Status: completed
+
 Consolidate Specification Methodology, Axiom Indexer, and STDO Representation
 as three peer source projects under one coordination-only repository root while
 preserving each Product, Product Definition, immutable release identity,
@@ -15,6 +17,12 @@ authority, history, and native LLM pickup surface.
 
 No release cut is selected. New monorepo release-tag law and remote cutover
 remain explicit residuals after local integration succeeds.
+
+## Disposition
+
+The local history-preserving integration is complete. No successor work wave
+is selected. Project-qualified release refs and any remote cutover require a
+separate goal reprice and exact review.
 
 ## Selection Boundary
 
