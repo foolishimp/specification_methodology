@@ -28,10 +28,10 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
-  STDO_REFERENCE_FRAME_BASELINE.md: 3099864f6c411d2646d270f4b5a8c80722e076950254043b6395f5f38a7b21b4
+  STDO_REFERENCE_FRAME_BASELINE.md: 0f7257f8c2adf4341f1eb8075f822984a88cfcb9930e11440fa74defceea4f4c
   SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
-  schemas/installed-release-manifest.schema.json: bfb06fa156ea0503050dd0442607b01a8e71bab414dce1beb1a00929d6875dea
+  schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
   DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
   ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
   WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
@@ -43,7 +43,7 @@ source_digests:
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
-generated_at: 2026-08-31
+generated_at: 2026-09-01
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -769,6 +769,22 @@ layer that owns the missing truth.
   translations, applies declared conjunctions, and selects only the next
   already-authorized action. It does not load every frame or inherit their
   undocumented working contexts.
+- Reviewer owns evidence-bound technical triage for its exact finding: affected
+  claim, severity, causal assessment and confidence, blast radius, workaround,
+  repair complexity and regression risk, and residual uncertainty where
+  supportable. It assigns no priority, promotion-boundary effect, disposition,
+  repair, or continuation. Its payload projection is total: `satisfied` carries
+  an explicit no-finding state; `falsified` carries findings and supported or
+  explicitly indeterminate triage; `indeterminate` carries the evidence gap;
+  and `out_of_frame` or `invalid_basis` carries re-entry pressure with triage
+  not applicable to the evaluated claim.
+- Executive consumes that technical triage with the complete Product view and
+  current MVP or release mandate. It assigns priority, determines the effect on
+  the current promotion boundary, applies exactly one existing `STDO-UP-020`
+  disposition, and selects only an already-authorized next action. Severity,
+  priority, frame result, boundary effect, and disposition remain distinct.
+  The Product-owned Project Reference-Frame Basis binds the scales, cutoff, and
+  non-waivable hard stops; the profile imposes no universal numeric scale.
 - Product-chain drift locks keep Source Project, Product Definition, candidate
   checkpoint, Release Cut, Product, Install, Artifact, dependent Product, and
   directed composition-edge identities and authorities distinct. A
@@ -792,10 +808,12 @@ layer that owns the missing truth.
   label grants no mutation authority. An effectful Worker may mutate only the
   exact subject and write territory named by its inherited owner grant;
   missing, ambiguous, or out-of-territory authority refuses. Self-review is not
-  independent review. Reviewer returns only a Reference Frame Method result and
-  does not edit, direct repair, apply an STDO disposition, or authorize
-  continuation. Executive cannot exceed its existing grant or become another
-  semantic, operation, or implementation owner.
+  independent review. Reviewer returns one Reference Frame Method result with
+  its evidence, findings or explicit no-finding state, technical triage where
+  applicable, residuals, and invalidation conditions. It does not edit, direct
+  repair, apply an STDO disposition, or authorize continuation. Executive
+  cannot exceed its existing grant or become another semantic, operation, or
+  implementation owner.
 - The minimum activation packet carries frame identity/revision, evaluation and
   result algebra, exact subject/basis, material specialist frames and
   invariants, semantic/evaluation/decision authority and operation authority

@@ -18,6 +18,7 @@ _VERSION_RE = re.compile(r"^(?!.*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*$")
 _LEGACY_PROJECT_ROOT = ""
 _MONOREPO_PROJECT_ROOT = "specification_methodology"
 _STANDARDS_ROOT = "specification/standards"
+_PROJECT_RELEASE_NAMESPACE = "specification_methodology"
 
 
 def _git(
@@ -46,6 +47,48 @@ def _git(
         )
         raise StdoError(f"git command failed ({' '.join(command)}): {detail}") from exc
     return completed.stdout
+
+
+def _remote_tag_refs(repository: str, refs: list[str]) -> dict[str, str]:
+    patterns = [item for ref in refs for item in (ref, f"{ref}^{{}}")]
+    output = _git(["ls-remote", "--tags", repository, *patterns])
+    assert isinstance(output, str)
+    resolved: dict[str, str] = {}
+    for line in output.splitlines():
+        if not line.strip():
+            continue
+        try:
+            object_id, ref = line.split("\t", 1)
+        except ValueError as exc:
+            raise StdoError(f"Unexpected git ls-remote output: {line!r}") from exc
+        resolved[ref] = object_id
+    return resolved
+
+
+def _candidate_cut_refs(cut: str) -> tuple[str, str]:
+    return (
+        f"refs/tags/{cut}",
+        f"refs/tags/{_PROJECT_RELEASE_NAMESPACE}/{cut}",
+    )
+
+
+def _resolve_cut_ref(repository: str, cut: str) -> str:
+    candidates = _candidate_cut_refs(cut)
+    refs = _remote_tag_refs(repository, list(candidates))
+    present = [ref for ref in candidates if ref in refs]
+    if not present:
+        raise StdoError(f"Immutable STDO cut tag is missing: {cut}")
+    identities = {(refs[ref], refs.get(f"{ref}^{{}}")) for ref in present}
+    if len(identities) != 1:
+        raise StdoError(
+            f"Immutable STDO cut {cut} is ambiguous across historical and "
+            "project-qualified refs: {', '.join(present)}"
+        )
+    # A later preserving alias must not change the manifest of an already
+    # installed historical cut. Channel resolution may prefer the qualified
+    # transport ref, while direct logical-cut reacquisition retains the
+    # historical ref whenever both names reach the same exact tag object.
+    return candidates[0] if candidates[0] in present else candidates[1]
 
 
 def normalize_cut(cut: str) -> str:
@@ -99,17 +142,23 @@ def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
     """Resolve a version-line tag only when it names the highest published RC."""
 
     version = normalize_version_line(version_line)
-    selector_ref = f"refs/tags/v{version}"
-    rc_prefix = f"refs/tags/v{version}-rc."
+    historical_selector_ref = f"refs/tags/v{version}"
+    qualified_selector_ref = f"refs/tags/{_PROJECT_RELEASE_NAMESPACE}/v{version}"
+    historical_rc_prefix = f"refs/tags/v{version}-rc."
+    qualified_rc_prefix = f"refs/tags/{_PROJECT_RELEASE_NAMESPACE}/v{version}-rc."
     output = _git(
         [
             "ls-remote",
             "--tags",
             repository,
-            selector_ref,
-            f"{selector_ref}^{{}}",
-            f"{rc_prefix}*",
-            f"{rc_prefix}*^{{}}",
+            historical_selector_ref,
+            f"{historical_selector_ref}^{{}}",
+            qualified_selector_ref,
+            f"{qualified_selector_ref}^{{}}",
+            f"{historical_rc_prefix}*",
+            f"{historical_rc_prefix}*^{{}}",
+            f"{qualified_rc_prefix}*",
+            f"{qualified_rc_prefix}*^{{}}",
         ]
     )
     assert isinstance(output, str)
@@ -123,40 +172,113 @@ def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
             raise StdoError(f"Unexpected git ls-remote output: {line!r}") from exc
         refs[ref] = object_id
 
-    selector_object = refs.get(selector_ref)
-    if selector_object is None:
-        raise StdoError(f"STDO channel tag is missing: {selector_ref}")
+    historical: dict[int, tuple[str, str, str | None]] = {}
+    qualified: dict[int, tuple[str, str, str | None]] = {}
+    for ref, tag_object in refs.items():
+        if ref.endswith("^{}"):
+            continue
+        if ref.startswith(historical_rc_prefix):
+            prefix = historical_rc_prefix
+            profile = historical
+        elif ref.startswith(qualified_rc_prefix):
+            prefix = qualified_rc_prefix
+            profile = qualified
+        else:
+            continue
+        suffix = ref[len(prefix) :]
+        if re.fullmatch(r"[1-9][0-9]*", suffix) is None:
+            continue
+        ordinal = int(suffix)
+        peeled = refs.get(f"{ref}^{{}}")
+        profile[ordinal] = (ref, tag_object, peeled)
+
+    for ordinal in sorted(historical.keys() & qualified.keys()):
+        historical_ref, historical_object, historical_peeled = historical[ordinal]
+        qualified_ref, qualified_object, qualified_peeled = qualified[ordinal]
+        if (historical_object, historical_peeled) != (
+            qualified_object,
+            qualified_peeled,
+        ):
+            raise StdoError(
+                f"STDO cut v{version}-rc.{ordinal} is ambiguous across refs "
+                f"{historical_ref} and {qualified_ref}"
+            )
+
+    if not historical and not qualified:
+        raise StdoError(
+            "STDO channel has no published immutable RC cuts: "
+            f"{historical_selector_ref} or {qualified_selector_ref}"
+        )
+
+    historical_selector_object = refs.get(historical_selector_ref)
+    qualified_selector_object = refs.get(qualified_selector_ref)
+    if historical and historical_selector_object is None:
+        raise StdoError(
+            "Historical STDO channel selector must remain present: "
+            f"{historical_selector_ref}"
+        )
+    if not historical and historical_selector_object is not None:
+        raise StdoError(
+            "Historical STDO channel selector has no historical immutable cuts: "
+            f"{historical_selector_ref}"
+        )
+    if qualified and qualified_selector_object is None:
+        raise StdoError(
+            "First project-qualified STDO publication must create its qualified "
+            f"selector: {qualified_selector_ref}"
+        )
+    if not qualified and qualified_selector_object is not None:
+        raise StdoError(
+            "Project-qualified STDO selector has no project-qualified immutable "
+            f"cuts: {qualified_selector_ref}"
+        )
+
+    if historical:
+        historical_selector_commit = refs.get(f"{historical_selector_ref}^{{}}")
+        if historical_selector_commit is None:
+            raise StdoError(
+                "Historical STDO channel selector must remain an annotated tag: "
+                f"{historical_selector_ref}"
+            )
+        highest_historical_ordinal = max(historical)
+        highest_historical_commit = historical[highest_historical_ordinal][2]
+        if qualified and historical_selector_commit != highest_historical_commit:
+            raise StdoError(
+                "Historical STDO channel selector must remain at its highest "
+                "historical immutable cut during the qualified transition: "
+                f"v{version}-rc.{highest_historical_ordinal}"
+            )
+
+    ordinals: dict[int, tuple[str, str, str | None]] = dict(historical)
+    ordinals.update(qualified)
+    cut_ordinal = max(ordinals)
+    cut_ref, cut_tag_object, cut_commit = ordinals[cut_ordinal]
+    cut = f"v{version}-rc.{cut_ordinal}"
+
+    if qualified:
+        if cut_ordinal not in qualified:
+            raise StdoError(
+                "Project-qualified STDO selector cannot activate while the highest "
+                f"published cut remains historical: {cut}"
+            )
+        selector_ref = qualified_selector_ref
+        selector_object = qualified_selector_object
+    else:
+        selector_ref = historical_selector_ref
+        selector_object = historical_selector_object
+    assert selector_object is not None
     selector_commit = refs.get(f"{selector_ref}^{{}}")
     if selector_commit is None:
         raise StdoError(
             f"STDO channel selector must be an annotated tag: {selector_ref}"
         )
 
-    published: list[tuple[int, str, str, str | None]] = []
-    for ref, tag_object in refs.items():
-        if ref.endswith("^{}") or not ref.startswith(rc_prefix):
-            continue
-        suffix = ref[len(rc_prefix) :]
-        if re.fullmatch(r"[1-9][0-9]*", suffix) is None:
-            continue
-        published.append((int(suffix), ref, tag_object, refs.get(f"{ref}^{{}}")))
-
-    if not published:
-        raise StdoError(
-            f"STDO channel has no published immutable RC cuts: {selector_ref}"
-        )
-
-    cut_ordinal, cut_ref, cut_tag_object, cut_commit = max(
-        published,
-        key=lambda candidate: candidate[0],
-    )
-    cut = cut_ref.removeprefix("refs/tags/")
     if cut_commit is None:
         raise StdoError(f"Latest published STDO cut {cut} must be an annotated tag")
     if selector_commit != cut_commit:
         matching_selector_cuts = [
-            ref.removeprefix("refs/tags/")
-            for _, ref, _, peeled in published
+            f"v{version}-rc.{ordinal}"
+            for ordinal, (_, _, peeled) in ordinals.items()
             if peeled == selector_commit
         ]
         selector_target = (
@@ -191,7 +313,7 @@ class GitSnapshot:
     def __init__(self, repository: str, cut: str):
         self.repository = repository
         self.cut = normalize_cut(cut)
-        self.ref = f"refs/tags/{self.cut}"
+        self.ref = ""
         self._temporary: tempfile.TemporaryDirectory[str] | None = None
         self.git_dir: Path | None = None
         self.tag_object = ""
@@ -199,11 +321,17 @@ class GitSnapshot:
         self.tree = ""
         self.standards_tree = ""
         self.project_root = ""
+        self.project_tree = ""
+        self.project_release_namespace = ""
 
     def __enter__(self) -> "GitSnapshot":
         self._temporary = tempfile.TemporaryDirectory(prefix="stdo-git-")
         self.git_dir = Path(self._temporary.name) / "objects.git"
         try:
+            self.ref = _resolve_cut_ref(self.repository, self.cut)
+            qualified_prefix = f"refs/tags/{_PROJECT_RELEASE_NAMESPACE}/"
+            if self.ref.startswith(qualified_prefix):
+                self.project_release_namespace = _PROJECT_RELEASE_NAMESPACE
             _git(["init", "--bare", str(self.git_dir)])
             _git(
                 [
@@ -226,6 +354,13 @@ class GitSnapshot:
             self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
             self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
             self.project_root = self._detect_project_root()
+            self.project_tree = (
+                self.tree
+                if not self.project_root
+                else self._text(
+                    ["rev-parse", f"{self.commit}:{self.project_root}"]
+                ).strip()
+            )
             standards_path = self._repository_path(_STANDARDS_ROOT)
             self.standards_tree = self._text(
                 ["rev-parse", f"{self.commit}:{standards_path}"]

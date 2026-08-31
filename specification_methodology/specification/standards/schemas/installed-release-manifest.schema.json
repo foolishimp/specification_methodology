@@ -42,7 +42,46 @@
         },
         "standards_tree": {
           "$ref": "#/$defs/gitObjectId"
+        },
+        "project_release_namespace": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "qualified_ref": {
+          "type": "string",
+          "pattern": "^refs/tags/[a-z0-9][a-z0-9._-]*/v[^/]+-rc\\.[1-9][0-9]*$"
+        },
+        "project_subtree_root": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?:\\.|(?!/)(?!.*(?:^|/)(?:\\.|\\.\\.)(?:/|$))(?!.*//).+)$"
+        },
+        "project_subtree_tree": {
+          "$ref": "#/$defs/gitObjectId"
         }
+      },
+      "dependentRequired": {
+        "project_release_namespace": [
+          "qualified_ref",
+          "project_subtree_root",
+          "project_subtree_tree"
+        ],
+        "qualified_ref": [
+          "project_release_namespace",
+          "project_subtree_root",
+          "project_subtree_tree"
+        ],
+        "project_subtree_root": [
+          "project_release_namespace",
+          "qualified_ref",
+          "project_subtree_tree"
+        ],
+        "project_subtree_tree": [
+          "project_release_namespace",
+          "qualified_ref",
+          "project_subtree_root"
+        ]
       },
       "additionalProperties": false
     },

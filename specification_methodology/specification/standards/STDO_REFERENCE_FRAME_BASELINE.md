@@ -15,8 +15,8 @@ existing project authority
   -> Executive outcome and basis lock
   -> smallest finite dependency-ready activation frontier
   -> independently activated Worker, Reviewer, and specialist evaluations
-  -> closed results and declared conjunction
-  -> authorized disposition and next bounded action
+  -> closed results, Reviewer technical triage, and declared conjunction
+  -> Executive priority, boundary effect, disposition, and next bounded action
   -> updated basis, coverage, residuals, and frontier
   -> repeat or stop
 ```
@@ -130,8 +130,10 @@ The profile's engagement relation requires:
 - a Worker constructs one exact candidate, self-reviews, reports, and stops;
 - an independently activated Reviewer reacquires live authority, code, tests,
   and proof rather than accepting the Worker summary;
-- the Reviewer returns findings without becoming a second implementation loop;
-- the Executive adjudicates under an existing bounded grant; and
+- the Reviewer returns evidence-bound severity and technical implications
+  without becoming a second implementation loop;
+- the Executive assigns priority and adjudicates the current Product mandate
+  under an existing bounded grant; and
 - inability to perceive a known violation is evidence of a missing,
   misactivated, oversized, or capability-incompatible frame.
 
@@ -216,7 +218,9 @@ mocked away and counted as unit evidence.
 
 **Executive** is the profile label for the frame that selects or confirms the
 bounded activation configuration and consumes closed Worker and Reviewer
-results under existing project decision authority.
+results under existing project decision authority. It holds the complete
+Product view and current MVP or release mandate needed to assign priority,
+apply disposition, and select the next authorized action.
 
 It may be occupied by direct human authority or by a bounded proxy admitted
 under `STDO-UP-020`, `IDENTITY_METHOD.md`, and the current project authority.
@@ -232,12 +236,15 @@ outcome:
 
 1. **attention management** maintains the exact outcome and basis, Product-role
    map, evaluation inventory, dependency relation, unresolved frontier, actor
-   envelopes, and residual boundary, then selects the smallest finite
-   dependency-ready activation set sufficient for the next decision;
+   envelopes, current MVP or release mandate, applicable triage policy, and
+   residual boundary, then selects the smallest
+   dependency-ready activation set sufficient for the next decision within the
+   finite actor envelopes;
 2. **evaluation orchestration** activates capable Workers, Reviewers, or
    specialists, preserves their exact subjects and bases, and consumes only
    closed results or declared translations; and
-3. **authorized action selection** applies an existing disposition and issues
+3. **authorized action selection** assigns priority, determines the effect on
+   the current promotion boundary, applies an existing disposition, and issues
    only the next already-authorized activation or action.
 
 Executive does not contain the complete workspace, perform every evaluation,
@@ -254,8 +261,9 @@ while U is non-empty:
   select a finite dependency-ready subset M that fits the assigned actors
   activate each member of M against the exact outcome and basis
   keep assurance-independent evaluations free of unclosed peer results
-  record every closed result, residual, and invalidation condition
+  record every closed result, technical triage, residual, and invalidation condition
   apply only declared conjunctions or translations
+  assign priority and boundary effect only under the current Product mandate
   invalidate affected results when the subject or basis changes
   update U from coverage, dependencies, conflicts, and discovered materiality
 
@@ -269,6 +277,11 @@ refinements; it does not nest or join undifferentiated copies of every frame.
 The Executive retains the frontier and closed-result ledger in attention, not
 the undocumented working context of every evaluator.
 
+Severity supplied by Reviewer is evaluation evidence. Priority, current-boundary
+effect, `STDO-UP-020` disposition, and subsequent action are Executive decisions.
+They remain distinct ledger entries even when a Product-defined policy maps one
+to another.
+
 Every result returns to Executive, a declared conjunction, or another frame
 through an explicit `D` relation. No lateral handoff, child completion, model
 response, tool output, or shared actor implicitly activates another frame or
@@ -280,7 +293,8 @@ routes, not the child's hidden reasoning context.
 Before activation and before disposition, Executive revalidates:
 
 - **outcome lock** — selected Goal, Product outcome, boundary, and lawful
-  re-entry class remain unchanged;
+  re-entry class, current MVP or release mandate, and triage policy remain
+  unchanged;
 - **basis lock** — subject, authority, dependency, configuration, topology,
   evidence, time, and candidate coordinates remain exact and current;
 - **Product-role lock** — mutable Source Project, Product Definition,
@@ -336,8 +350,45 @@ or continuation authority.
 **Reviewer** is the profile label for the independent live-surface evaluation
 consumed by the `STDO-UP-020` assessment relation and governed by
 `STDO-UP-007` and `STDO-UP-022` when activated as a reference frame. It
-evaluates one exact subject and returns a closed result. It does not implement
-the repair, apply disposition, or activate the next frame.
+evaluates one exact subject and returns a closed result with evidence-bound
+technical triage when a finding exists. It does not implement the repair,
+assign priority, apply disposition, or activate the next frame.
+
+### Technical triage, severity, priority, and boundary effect
+
+**Technical triage** is the Reviewer-owned assessment of one finding against
+the exact evaluated claim and basis. Where supported by admissible evidence and
+the actor capability envelope, it records:
+
+- the affected claim and observed failure;
+- severity under the Product-selected severity scale;
+- causal assessment and confidence;
+- blast radius and affected users, paths, or relations;
+- available workaround or containment;
+- repair complexity, regression risk, and material dependencies; and
+- residual uncertainty and the evidence required to reduce it.
+
+Missing causal or repair evidence remains explicit. Reviewer returns
+`indeterminate` or `out_of_frame` pressure where the missing relation can change
+the evaluation; it does not invent precision or send work laterally to Worker.
+
+**Severity** grades consequence if the finding manifests. **Priority** orders
+response relative to the complete Product outcome, likelihood and exposure,
+current MVP or release mandate, reversibility, dependencies, cost of delay, and
+available capacity. Reviewer grades severity. Executive assigns priority.
+
+The Product-owned Project Reference-Frame Basis binds the severity scale,
+priority scale, current-boundary decision cutoff, and non-waivable hard stops.
+This profile imposes no universal numeric scale. Severity, priority, Reference
+Frame Method result, and current-boundary effect remain distinct. None alone
+makes a finding release-blocking.
+
+**Current-boundary effect** is Executive's determination that the finding blocks
+the current promotion boundary, requires narrowing, or may remain an explicit
+residual. Executive then applies exactly one existing `STDO-UP-020`
+disposition. A hard stop or falsified mandatory claim cannot be waived by
+lowering priority. An observation outside the exact claim boundary cannot
+create another review round merely by receiving a severe label.
 
 ### Work result
 
@@ -413,9 +464,10 @@ governed outcome, workspace checkpoint, affected relation set, candidate,
 evidence, and residuals. Their overlap does not collapse evaluation or
 authority:
 
-- Executive evaluates activation and disposition;
+- Executive evaluates activation, priority, boundary effect, and disposition;
 - Worker evaluates and performs bounded construction;
-- Reviewer evaluates the exact candidate claim where assessment is activated.
+- Reviewer evaluates the exact candidate claim and supplies technical triage
+  where assessment is activated.
 
 The active evaluation may be represented as:
 
@@ -435,22 +487,28 @@ This notation requires no Cartesian-product schema or universal frame runtime.
 
 | Frame element | Derived application |
 |---|---|
-| evaluation family | Is the bounded outcome and execution basis authorized? Which frames and actors are capable? Is a returned result exact and current? What `STDO-UP-020` disposition is permitted? |
-| subject and basis | complete selected STDO cut; exact Goals/Product/requirements/design/work authority; current workspace and checkpoint; open findings; proxy grant where used |
-| material manifold | outcome, affected causal cone, evaluation inventory, frame configuration, actor envelopes, evidence obligations, returned results, re-entry owners, and already-authorized continuation boundary |
-| coordinates | exact method, project, outcome, authority, checkpoint, candidate, evidence, finding, and actor identities |
+| evaluation family | Is the bounded outcome and execution basis authorized? Which frames and actors are capable? Is a returned result exact and current? What priority, current-boundary effect, `STDO-UP-020` disposition, and next action follow from the current Product mandate? |
+| subject and basis | complete selected STDO cut; exact Goals/Product/requirements/design/work authority; current MVP or release mandate; current workspace and checkpoint; open findings and technical triage; Product-selected triage policy; proxy grant where used |
+| material manifold | outcome, mandate, affected causal cone, evaluation inventory, frame configuration, actor envelopes, evidence obligations, returned results and technical triage, priority, boundary effect, re-entry owners, and already-authorized continuation boundary |
+| coordinates | exact method, project, outcome, mandate, authority, checkpoint, candidate, evidence, finding, triage-policy, and actor identities |
 | governing invariants | `RF-001..017`; `STDO-UP-017..020`; applicable identity, ticket, assurance, and release law |
 | authority | existing Product/work frame-set and decision authority or its admitted bounded proxy; no operation authority or other authority arises from the Executive label |
-| evidence | live authority surfaces, frame results, exact candidate identity, transition evidence, coverage residuals, and specialist-frame results |
-| capability envelope | enough method, authority, workspace, and actor-selection competence to configure and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
-| exclusions | implementation ownership, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
-| result | one Reference Frame Method result plus an existing `STDO-UP-020` disposition where the basis is decidable |
-| invalidation | material method, authority, outcome, checkpoint, candidate, evidence, finding, capability, or topology change |
+| evidence | live authority surfaces, frame results, Reviewer technical triage, exact candidate identity, transition evidence, coverage residuals, and specialist-frame results |
+| capability envelope | enough method, Product, release or MVP, authority, workspace, triage, and actor-selection competence to configure, prioritize, and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
+| exclusions | implementation ownership, silently rewriting Reviewer evidence or severity, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
+| result | one Reference Frame Method result, assigned priority and current-boundary effect, plus an existing `STDO-UP-020` disposition where the basis is decidable |
+| invalidation | material method, authority, outcome, mandate, triage policy, checkpoint, candidate, evidence, finding, capability, or topology change |
 
 The Executive frame does not introduce `authorize` or `no_action` as peer
 STDO dispositions. Activation is the `REFERENCE_FRAME_METHOD.md` function;
 bounded candidate disposition remains exactly `accept`, `local_repair`,
 `re_enter`, or `reject` under `STDO-UP-020`.
+
+Priority and current-boundary effect are decision projections, not additional
+Reference Frame Method results or `STDO-UP-020` dispositions. If Executive
+cannot rely on the supplied severity or technical assessment, it reactivates a
+capable evaluation or retains the uncertainty; it does not silently rewrite the
+Reviewer result.
 
 ---
 
@@ -485,17 +543,17 @@ authority refuses the effect.
 
 | Frame element | Derived application |
 |---|---|
-| evaluation family | Is this the exact claimed subject and basis? Does it satisfy the applicable STDO and project relations without competing authority, proof masking, or an unevaluated composition boundary? |
-| subject and basis | exact candidate, claim, governing STDO and project authority, scope, exclusions, evidence population, review carrier, and declared independence conditions |
-| material manifold | claimed relations; causal producers and consumers; authority seams; competing paths; failure, recovery, installed, and reconstruction surfaces where claimed; test and fixture semantics; historical counterexamples |
-| coordinates | exact candidate, source basis, authority revision, configuration, dependency, evidence population, installed subject, review time, and Reviewer identity |
+| evaluation family | Is this the exact claimed subject and basis? Does it satisfy the applicable STDO and project relations without competing authority, proof masking, or an unevaluated composition boundary? For each finding, what evidence-bound severity and technical implications follow? |
+| subject and basis | exact candidate, claim, governing STDO and project authority, scope, exclusions, evidence population, Product-selected severity scale, review carrier, and declared independence conditions |
+| material manifold | claimed relations; causal producers and consumers; authority seams; competing paths; failure, recovery, installed, and reconstruction surfaces where claimed; test and fixture semantics; historical counterexamples; finding cause, blast radius, workaround, repair complexity, regression risk, and uncertainty where supportable |
+| coordinates | exact candidate, source basis, authority revision, configuration, dependency, evidence population, severity scale, installed subject, review time, and Reviewer identity |
 | governing invariants | `RF-001..017`; `STDO-UP-020`; `STDO-UP-007`; `STDO-UP-022`; applicable Product, design, identity, and release law |
 | authority | bounded evaluation only; no construction, transformation, admission, publication, mutation, decision, disposition, or next-activation authority follows from review access |
-| evidence | independently acquired live authority, candidate implementation, tests, artifacts, history, operational evidence, mutations, replay/reconstruction, and reproduced observations material to the claim |
-| capability envelope | declared method, domain, implementation, assurance, tool, access, context, counterexample-search, and independence competence |
-| exclusions | candidate editing, repair implementation, Worker-summary substitution, assurance-owned semantic reconstruction, unbound evidence flattening, and silent scope expansion |
-| result | one Reference Frame Method result plus findings, counterexamples, and residuals sufficient for Executive to apply the existing `STDO-UP-020` disposition where the basis is decidable |
-| invalidation | material candidate, authority, basis, evidence population, dependency, configuration, scope, or independence change |
+| evidence | independently acquired live authority, candidate implementation, tests, artifacts, history, operational evidence, mutations, replay/reconstruction, and reproduced observations material to the claim and technical triage |
+| capability envelope | declared method, domain, implementation, assurance, technical-triage, tool, access, context, counterexample-search, and independence competence |
+| exclusions | candidate editing, repair implementation, priority assignment, release or MVP boundary disposition, next-action selection, Worker-summary substitution, assurance-owned semantic reconstruction, unbound evidence flattening, and silent scope expansion |
+| result | one Reference Frame Method result plus findings, counterexamples, evidence-bound technical triage, and residuals sufficient for Executive to assign priority and apply the existing `STDO-UP-020` disposition where the basis is decidable |
+| invalidation | material candidate, authority, basis, evidence population, severity scale, dependency, configuration, scope, or independence change |
 
 `STDO-UP-007` determines when independent review is required and what makes it
 traceable. `STDO-UP-022` determines exact assurance-boundary and qualification
@@ -507,6 +565,11 @@ profile uses the Reviewer result as independent live-surface evaluation input
 and the Executive as the already-authorized assessor or bounded proxy that
 applies the one existing disposition. It creates no second verdict or
 disposition family.
+
+Reviewer may assess likely repair complexity and regression risk without
+becoming the repair owner. When cause, blast radius, workaround, or repair risk
+cannot be supported inside the activation, the result records that uncertainty
+instead of manufacturing a complete triage.
 
 Tests are inside the Reviewer manifold when their code, fixtures, mutations,
 environment, or interpretation can change the proof claim. A passing result is
@@ -1006,6 +1069,7 @@ When independent review is required, the Executive activates the Reviewer with:
 - required evidence and ordinary assurance path;
 - required user-acceptance, end-to-end, integration, unit, combinatorial, and
   negative-path frame results with their exact claims and populations;
+- the Product-selected severity scale and exact affected Product claims;
 - Reviewer capability and independence envelope; and
 - invalidation and stop conditions.
 
@@ -1022,8 +1086,26 @@ The Reviewer returns one closed evaluation containing:
 - Reviewer actor and independence conditions;
 - evidence and ordinary assurance path acquired;
 - Reference Frame Method result;
-- findings, counterexamples, residuals, and adjacent observations; and
+- findings, counterexamples, and adjacent observations;
+- for each finding, affected claim, severity, causal assessment and confidence,
+  blast radius, workaround, repair complexity, regression risk, and residual
+  uncertainty where supportable; and
 - invalidation conditions and re-entry owner where applicable.
+
+### Reviewer Result And Triage Projection
+
+The Reviewer payload projection is total across the Reference Frame Method
+result algebra. `complete`, `indeterminate`, and `not_applicable` below classify
+the finding-level triage payload; they are not new evaluation results,
+dispositions, priorities, or lifecycle states.
+
+| Reference Frame Method result | Finding and triage payload | Executive consumption constraint |
+|---|---|---|
+| `satisfied` | explicit no-finding state; triage `not_applicable`; evidence, residuals, and invalidation remain present | priority and current-boundary effect are `not_applicable` to this review result unless another exact consumed result supplies a finding |
+| `falsified` | one or more exact findings; triage is `complete` where supported and preserves `indeterminate` fields where evidence cannot close them | apply Product-owned priority and boundary policy without mechanically mapping severity to disposition |
+| `indeterminate` | partial finding or observation state; triage `indeterminate`; exact evidence gaps and residual uncertainty | retain uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or a closed finding |
+| `out_of_frame` | out-of-claim observation; triage `not_applicable` to the evaluated claim; exact re-entry pressure | return to the declared re-entry owner; severity cannot make the observation block the evaluated claim |
+| `invalid_basis` | basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse result consumption and return through the declared basis re-entry relation |
 
 The Reviewer returns to Executive, not Worker. It does not edit the candidate,
 direct the repair, or authorize continuation.
@@ -1031,8 +1113,10 @@ direct the repair, or authorize continuation.
 ### 7. Executive Disposes And Checkpoints
 
 The Executive verifies that every consumed result remains bound to the current
-subject and basis, applies any declared result conjunction, and acts on exactly
-one `STDO-UP-020` disposition within its grant:
+subject and basis, revalidates the complete Product view and current MVP or
+release mandate, applies any declared result conjunction, assigns priority,
+records the effect on the current promotion boundary, and acts on exactly one
+`STDO-UP-020` disposition within its grant:
 
 - `accept`;
 - `local_repair`;
@@ -1043,6 +1127,21 @@ one `STDO-UP-020` disposition within its grant:
 and next already-authorized bounded action. A repair creates a new candidate.
 An affected review is reactivated against that candidate. Acceptance does not
 widen the Product outcome or authorize an unselected successor.
+
+Severity does not mechanically select priority or block promotion. Priority
+does not erase severity or waive a hard stop. The Executive determines blocking
+from the exact affected claim, current mandate, applicable hard stops, and
+Product-owned cutoff policy. An unsupported technical assessment is returned
+through a new or refined activation rather than silently rewritten.
+
+### Executive Promotion Constraint Projection
+
+| Consumed condition | Required Executive constraint |
+|---|---|
+| valid falsification of a mandatory claim governed by a non-waivable hard stop | current promotion boundary blocks regardless of assigned priority or decision cutoff |
+| valid finding below the Product-owned decision cutoff with no hard stop | no mechanical block follows; apply the Product-owned policy and retain any accepted residual explicitly |
+| observation outside the exact evaluated claim | treat as bounded repricing or re-entry input; do not create a claim-relative block or another review round by severity label |
+| unsupported or materially incomplete technical assessment | reactivate a capable evaluation or retain `indeterminate`; do not rewrite Reviewer evidence |
 
 ---
 
@@ -1057,11 +1156,11 @@ other admitted carriers. This profile requires no new artifact type.
 | Worker activation | Executive -> Worker | exact intake, basis, affected cone, inherited operation grant, mutation subject and write territory where applicable, frames, evidence, exclusions, stop and re-entry conditions | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
 | activation refusal | activation relation -> Executive | attempted frame, subject/basis, actor, failed capability or authority predicate, evidence, and reconfiguration pressure; no Worker result | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-020` |
 | work result | Worker -> Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | `STDO-UP-020` |
-| Reviewer activation | Executive -> Reviewer | exact subject, claim, composition boundary, evidence population, authority, independence, invalidation | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-007`; `STDO-UP-022` |
-| review result | Reviewer -> Executive | exact verdict basis, evidence, findings, counterexamples, residuals, invalidation | `STDO-UP-007`; `STDO-UP-020`; `STDO-UP-022` |
+| Reviewer activation | Executive -> Reviewer | exact subject, claim, composition boundary, evidence population, Product-selected severity scale, authority, independence, invalidation | `REFERENCE_FRAME_METHOD.md`; `STDO-UP-007`; `STDO-UP-022` |
+| review result | Reviewer -> Executive | exact verdict basis, evidence, findings, counterexamples, technical triage, residuals, invalidation; no priority or disposition | `STDO-UP-007`; `STDO-UP-020`; `STDO-UP-022` |
 | specialist activation | Executive or declared parent relation -> capable evaluator | exact evaluation, subject/basis, bounded map of material relations, actor envelope, evidence, authority, dependencies, exclusions, result consumer, invalidation | `REFERENCE_FRAME_METHOD.md`; exact specialist owner |
 | specialist result | evaluator -> Executive, declared conjunction, or exact parent relation | closed result, exact activation and basis, evidence and source routes, residuals, invalidation, and no implicit continuation | `REFERENCE_FRAME_METHOD.md`; exact specialist owner |
-| disposition/checkpoint | Executive -> existing work authority and any next activation | exact consumed results, decision grant, `STDO-UP-020` disposition, checkpoint, residuals, next already-authorized action | `STDO-UP-020` |
+| disposition/checkpoint | Executive -> existing work authority and any next activation | exact consumed results and technical triage, current Product and MVP or release mandate, priority, promotion-boundary effect, decision grant, `STDO-UP-020` disposition, checkpoint, residuals, next already-authorized action | `STDO-UP-020`; Product-owned triage policy |
 
 Flattening these projections across candidates, processes, episodes,
 configurations, evidence populations, or bases does not establish their
@@ -1087,8 +1186,8 @@ or project workspace. They organize finite evaluations over specialist frames.
 | material interfaces compose across their interaction population | Worker and Reviewer according to the claim | derived integration frames; actual participant, carrier, state, configuration, failure, and recovery inputs |
 | module-owned laws hold | Worker and Reviewer according to the claim | derived unit frames; Ontology, IACS, public module contract, algebra, calculation, state-machine, invariant, and module-bounded combination inputs |
 | obsolete and rival Product paths are absent, unreachable, or refused | Worker for deletion evidence; Reviewer for exact-subject challenge where required | distinct production-closure and assurance/source-closure graphs; package, consumer, mutation, sabotage, reconstruction, and history frames |
-| independent exact-subject assessment where required | Reviewer | `STDO-UP-007`, `STDO-UP-020`, `STDO-UP-022`, live implementation and assurance frames |
-| result conjunction and disposition | Executive | exact closed Worker, Reviewer, and mandatory specialist results |
+| independent exact-subject assessment and technical triage where required | Reviewer | `STDO-UP-007`, `STDO-UP-020`, `STDO-UP-022`, Product-selected severity scale, live implementation and assurance frames |
+| result conjunction, priority, promotion-boundary effect, and disposition | Executive | exact closed Worker, Reviewer, and mandatory specialist results; current Product and MVP or release mandate; Product-owned triage policy |
 | checkpoint and continuation | Executive under existing authority | `STDO-UP-020`; current Goals/Product/release boundary |
 | missing-frame and topology-change response | Executive with pressure from any frame | Reference Frame Method coverage and revision functions |
 
@@ -1294,7 +1393,16 @@ A representative profile trial establishes at least:
     provenance seam is missing, stale, foreign, or non-commuting; and
 23. the generic specialist set can be instantiated without importing a
     consumer-specific architecture, runtime object, or renamed local topology
-    into the baseline.
+    into the baseline;
+24. Reviewer returns evidence-bound severity and technical implications while
+    remaining unable to assign priority, block promotion, direct repair, or
+    activate another frame;
+25. Executive consumes the exact technical triage with the complete Product
+    view and current MVP or release mandate, keeps severity, priority, frame
+    result, and promotion-boundary effect distinct, and selects only an
+    authorized disposition and action; and
+26. a finding outside the exact claim boundary remains repricing input rather
+    than creating a release block or another review round by severity label.
 
 The claim is limited to the frame revisions, actor envelopes, result branches,
 and evidence populations actually evaluated.
@@ -1315,6 +1423,8 @@ definition or adoption authority.
 - exact STDO Reference Frame Baseline identity:
 - Executive, Worker, and Reviewer declaration or acquisition references:
 - role-specific actor capability, authority, and independence bindings:
+- Product-selected severity and priority scales, current-boundary cutoff,
+  non-waivable hard stops, and Reviewer-to-Executive triage relation:
 - Worker result to Frame Method result mapping:
 - twelve generic specialist-family declarations, non-material evidence, or
   explicit residuals:
@@ -1337,10 +1447,11 @@ execution intake and adds the exact inherited operation grant, mutation
 subject, and write territory where applicable. For Reviewer activation, it
 adds the exact claim, composition boundary, evaluated population, oracle,
 ordinary or module path, falsification condition, and
-`STDO-UP-007`/`STDO-UP-022` independence and assurance basis. For Executive
-activation, it adds the current Product-role map, evaluation frontier,
-closed-result and residual ledger, conjunction rule, and exact disposition
-grant.
+`STDO-UP-007`/`STDO-UP-022` independence and assurance basis, Product-selected
+severity scale, and required technical-triage capability. For Executive
+activation, it adds the current Product-role map, MVP or release mandate,
+evaluation frontier, closed-result and technical-triage ledger, priority and
+boundary policy, conjunction rule, and exact disposition grant.
 
 ---
 
@@ -1371,6 +1482,8 @@ grant.
 | several episodes or stores are flattened into one apparent path | missing coordinate translation or interaction binding |
 | Worker starts the next stage after self-review | violation of `STDO-UP-020` decision and continuation authority |
 | Reviewer implements the fix while retaining its verdict | violation of `STDO-UP-007` independence and frame authority |
+| Reviewer assigns priority, blocks promotion, directs repair, or activates another frame | Reviewer-to-Executive decision-authority bleed |
+| Executive treats severity, priority, frame verdict, and release blocking as one value | triage-relation collapse; reapply the Product-owned policy to the exact claim and mandate |
 | Executive rewrites semantics to close a local problem | decision outside proxy grant; `STDO-UP-020` re-entry required |
 | repeated local repair creates another authority path | incomplete affected cone or missing owner/capability frame |
 | long effort resets after local success | coverage, frame altitude, topology, evidence, or capability diagnosis required |
@@ -1439,7 +1552,11 @@ This profile is misapplied when:
     actor, service, file, runtime type, stage, or new semantic owner; or
 30. a material generic family is omitted because no artifact shares its name,
     or several families are flattened into one broad frame without preserving
-    their distinct evaluation and result relations.
+    their distinct evaluation and result relations;
+31. Reviewer assigns priority, decides promotion blocking, directs repair, or
+    starts another activation; or
+32. Executive collapses severity, priority, frame result, promotion-boundary
+    effect, and disposition into one status value.
 
 ---
 
@@ -1458,8 +1575,10 @@ A project has applied this baseline to one outcome when:
 5. Executive alone determines whether an exact candidate enters a Reviewer
    activation under the applicable existing authority;
 6. required Reviewer assessment binds the exact subject, evidence population,
-   verdict, and independence conditions;
-7. Executive consumes closed results and applies only the existing
+   verdict, evidence-bound technical triage, and independence conditions;
+7. Executive consumes closed results and technical triage against the complete
+   Product view and current MVP or release mandate, keeps severity, priority,
+   frame result, and boundary effect distinct, and applies only the existing
    `STDO-UP-020` disposition and continuation relation;
 8. specialist frames and result relations cover every known material
    evaluation and interaction or retain an explicit residual;

@@ -1,9 +1,10 @@
 # STDO Toolchain Manager Design
 
 - Status: active
-- Implements: `.ai-workspace/tickets/active/T-013-create-stdo-toolchain-manager.md`,
-  `.ai-workspace/tickets/active/T-014-make-version-line-selector-latest.md`,
-  `.ai-workspace/tickets/active/T-020-consolidate-specification-stack-monorepo.md`
+- Implements: `.ai-workspace/tickets/completed/T-013-create-stdo-toolchain-manager.md`,
+  `.ai-workspace/tickets/completed/T-014-make-version-line-selector-latest.md`,
+  `.ai-workspace/tickets/completed/T-020-consolidate-specification-stack-monorepo.md`,
+  `.ai-workspace/tickets/completed/T-021-qualify-monorepo-release-refs.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
@@ -37,13 +38,23 @@ exact basis.
 
 - `git_source.py` reacquires one annotated immutable RC tag into an isolated
   temporary bare object store and resolves a mutable version-line alias only
-  when it matches the highest-ordinal published immutable RC. A cut contains
+  when it matches the highest-ordinal published immutable RC. During the
+  shared-source transition it conserves historical unqualified cuts and
+  resolves future `specification_methodology/` qualified tags to the unchanged
+  product-local cut and public `stdo:` URI. Additional refs to the same exact
+  tag object are conserved; equal local cuts naming different tag objects are
+  ambiguous and refuse. Channel resolution selects the qualified successor;
+  direct logical-cut reacquisition keeps the historical ref when an identical
+  preserving alias also exists, so an installed historical manifest does not
+  drift. A cut contains
   STDO either at the historical repository root or at the exact monorepo prefix
   `specification_methodology/`, never both. Physical nested paths are projected
   back to project-relative logical source paths before manifest construction.
 - `manifest.py` derives the exact tag, commit, trees, standards inventory,
   canonical member-set digest, member bytes, license, release note, and plugin
-  payload admitted to an installation.
+  payload admitted to an installation. A qualified shared-source cut also
+  retains its Project Release Namespace, qualified ref, Project Subtree root,
+  and Project Subtree tree; historical manifests remain byte-reproducible.
 - `store.py` atomically materializes immutable cuts, records logical URI
   mappings, resolves members within the release root, and detects missing,
   extra, changed, or redirected state.
@@ -105,7 +116,7 @@ special entries without following them; every undeclared entry is damage.
 
 The manager refuses unannotated or malformed cut identities, lightweight or
 lagging version-line selectors, a selector that does not match the highest
-published RC, absent matching RC tags, zero or multiple recognized STDO project
+published RC, absent or ambiguous matching RC tags, zero or multiple recognized STDO project
 layouts, channel downgrades, unaccepted or stale adoption plans, unexpected
 manifest digests, damaged or extra installed entries of any type, store or
 registry redirection, URI traversal, cross-basis schema locators, invalid

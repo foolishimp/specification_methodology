@@ -2,34 +2,48 @@
 
 ## Goal
 
-Status: completed
+Status: active
 
-Ratify collision-free shared-source release refs and exact Project Subtree
-identity for the three independently released Specification Stack Products
-without changing historical refs, tag objects, public URIs, Product boundaries,
-or release state.
+Qualify and publish the current STDO 2.5.0 successor as one immutable,
+project-qualified RC2 without moving the accepted RC1 or confusing the shared
+repository carrier with the STDO Product subject.
 
 ## Selected Work
 
-- `T-021` owns the shared Release Method requirement reprice, prospective
-  project-qualified ref grammar, Project Subtree release identity, historical
-  ref and public-URI conservation, owned compression/index updates, and focused
-  proof.
+- `T-023` owns release-record reconciliation, bounded executable
+  qualified-ref support, exact candidate qualification, immutable RC2
+  publication, and remote verification.
 
-No release cut, tag, branch, Product acceptance, or remote cutover is selected.
+No further Product or method expansion, downstream adoption, interpreted
+`a_c.STDO` model, Axiom Indexer change, or STDO Representation release is
+selected by this Product goal.
 
-## Disposition
+## Governed Outcome
 
-The shared-source release law is ratified. Future Specification Stack refs are
-qualified by `specification_methodology`, `axiom_indexer`, or
-`stdo_representation` and bind their exact Project Subtree. Historical refs and
-logical release URIs remain unchanged. Executable qualified-ref resolution and
-any publication require separately selected realization and release work.
+- The exact 52-member standards successor and its protected claim inputs are
+  reproducible from the release record.
+- `stdo-toolchain 0.1.2` resolves historical and project-qualified STDO cuts,
+  preserves project-relative logical identity, and records the shared-source
+  transport coordinates needed to reacquire a qualified cut.
+- `specification_methodology/v2.5.0-rc.2` becomes one annotated immutable cut
+  under the `specification_methodology` Project Release Namespace and Project
+  Subtree.
+- The qualified selector, RC branch, and release branch align to RC2; all
+  historical RC1 refs and objects remain unchanged.
+- Publication, exact-cut review, Product acceptance, and consumer adoption
+  remain distinct.
+
+## Current Disposition
+
+T-019 through T-021 are closed predecessor work for this release wave. T-022 is
+active with `changes_requested` until fresh exact review accepts its repaired
+subject. T-023 is active and depends on that closure. RC2 publication remains
+pending exact candidate qualification and independent release review.
 
 ## Selection Boundary
 
-This work may change only shared release-publication requirement truth and its
-owned compressed, glossary, work-tracking, and proof projections. It does not
-change Product meaning, Product Definition selection, dependency or composition
-authority, source layout, executable resolution, any historical ref or object,
-an immutable release, a public logical URI, a remote, or publication state.
+This wave may change the bounded release record, release qualification proof,
+toolchain realization needed for nested and qualified shared-source cuts, work
+tracking, and the authorized Git publication carriers. Any additional
+constitutional or Product change requires re-entry and creates a new release
+subject. Any qualifying-byte repair after RC2 publication advances to RC3.

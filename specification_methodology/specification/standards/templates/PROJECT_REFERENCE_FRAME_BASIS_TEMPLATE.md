@@ -69,12 +69,36 @@ For each available project frame record:
 Actor identity and frame identity remain separate. One actor may occupy several
 frames only where every authority and independence condition remains valid.
 
+## Technical Triage And Promotion Policy
+
+- exact current Product and MVP or release mandate:
+- Product-selected severity scale, direction, and evidence criteria:
+- Product-selected priority scale, direction, and assignment authority:
+- current-boundary decision cutoff and required Executive disposition:
+- non-waivable authority, safety, integrity, and retained-claim hard stops:
+- claim-relative release-blocking and scope-narrowing rule:
+- required Reviewer technical-triage fields and capability envelope:
+- unsupported or indeterminate technical-assessment return route:
+
+Reviewer grades severity and returns evidence, affected claims, causal
+assessment where supportable, blast radius, workaround, repair complexity,
+regression risk, confidence, and residual uncertainty. Executive assigns
+priority and determines promotion-boundary effect against the complete Product
+view and current mandate. Severity, priority, frame result, boundary effect,
+and `STDO-UP-020` disposition remain distinct.
+
+This template imposes no universal numeric scale. A project may bind `S0..Sn`
+and `P0..Pn`, including a `P2` decision cutoff, only by defining their exact
+direction and effect here. A cutoff cannot waive a hard stop or turn an
+out-of-claim observation into a blocker.
+
 ## Executive Attention, Evaluation, And Action
 
-- exact governed outcome and current basis lock:
+- exact governed outcome, current MVP or release mandate, and basis lock:
 - unresolved evaluation frontier and dependency relation:
 - attention or capability limits used to select the next activation set:
-- closed-result and residual ledger:
+- closed-result, technical-triage, priority, boundary-effect, and residual
+  ledger:
 - conjunction and conflict rule:
 - existing disposition and next-action authority:
 
@@ -90,8 +114,9 @@ the Executive label.
 existing authority
   -> Executive basis and outcome lock
   -> exact Worker, Reviewer, or specialist activation
-  -> closed result
+  -> closed result and Reviewer technical triage where applicable
   -> Executive or declared conjunction
+  -> Executive priority and boundary effect
   -> authorized disposition and next activation | stop | re-entry
 ```
 
@@ -117,7 +142,8 @@ not coverage.
 
 Revalidate before activation and disposition:
 
-- outcome lock: Goal, Product outcome, boundary, and re-entry class;
+- outcome lock: Goal, Product outcome, current MVP or release mandate,
+  promotion policy, boundary, and re-entry class;
 - basis lock: subject, checkpoint, authority, dependency, configuration,
   topology, evidence, and time;
 - Product-role lock: Source Project, Product Definition, Development Product,

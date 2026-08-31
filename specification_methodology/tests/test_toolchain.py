@@ -15,6 +15,7 @@ from stdo_toolchain.git_source import (
     normalize_version_line,
     resolve_channel,
 )
+from stdo_toolchain.manifest import verify_materialization
 from stdo_toolchain.product_definition import (
     adopt_definition,
     definition_status,
@@ -119,6 +120,30 @@ class ReleaseFixture:
         run_git(self.repository, "tag", "-a", "v1.0.0-rc.2", "-m", "RC2")
         if advance_selector:
             run_git(self.repository, "tag", "-fa", "v1.0.0", "-m", "line two")
+
+    def add_qualified_rc2(self, *, advance_selector: bool = True) -> None:
+        (
+            self.project_root / "specification" / "standards" / "SPEC_METHOD.md"
+        ).write_text("# Spec two\n", encoding="utf-8")
+        run_git(self.repository, "add", ".")
+        run_git(self.repository, "commit", "-qm", "release two")
+        run_git(
+            self.repository,
+            "tag",
+            "-a",
+            "specification_methodology/v1.0.0-rc.2",
+            "-m",
+            "RC2",
+        )
+        if advance_selector:
+            run_git(
+                self.repository,
+                "tag",
+                "-fa",
+                "specification_methodology/v1.0.0",
+                "-m",
+                "line two",
+            )
 
     def add_rc3(self) -> None:
         (
@@ -235,6 +260,225 @@ class StoreTests(unittest.TestCase):
                 "latest published immutable cut is v1.0.0-rc.2",
             ):
                 resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_and_install_cross_into_project_qualified_refs(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(
+                root,
+                project_prefix="specification_methodology",
+            )
+            fixture.add_qualified_rc2()
+
+            resolution = resolve_channel(str(fixture.repository), "1.0.0")
+            self.assertEqual(resolution.cut, "v1.0.0-rc.2")
+            self.assertEqual(resolution.cut_ordinal, 2)
+            self.assertEqual(
+                resolution.cut_ref,
+                "refs/tags/specification_methodology/v1.0.0-rc.2",
+            )
+            self.assertEqual(
+                resolution.selector_ref,
+                "refs/tags/specification_methodology/v1.0.0",
+            )
+
+            installed = Store(root / "store").install(
+                str(fixture.repository),
+                resolution.cut,
+            )
+            self.assertEqual(installed.cut, "v1.0.0-rc.2")
+            self.assertEqual(installed.manifest["release"]["cut"], "v1.0.0-rc.2")
+            self.assertEqual(
+                installed.manifest["release"]["tag_object"],
+                run_git(
+                    fixture.repository,
+                    "rev-parse",
+                    "specification_methodology/v1.0.0-rc.2",
+                ),
+            )
+            self.assertEqual(
+                installed.manifest["release"]["project_release_namespace"],
+                "specification_methodology",
+            )
+            self.assertEqual(
+                installed.manifest["release"]["qualified_ref"],
+                "refs/tags/specification_methodology/v1.0.0-rc.2",
+            )
+            self.assertEqual(
+                installed.manifest["release"]["project_subtree_root"],
+                "specification_methodology",
+            )
+            self.assertEqual(
+                installed.manifest["release"]["project_subtree_tree"],
+                run_git(
+                    fixture.repository,
+                    "rev-parse",
+                    "specification_methodology/v1.0.0-rc.2^{}:specification_methodology",
+                ),
+            )
+            incomplete = json.loads(json.dumps(installed.manifest))
+            del incomplete["release"]["qualified_ref"]
+            self.assertIn(
+                "incomplete shared-source release coordinates",
+                verify_materialization(installed.path, incomplete),
+            )
+            from jsonschema import Draft202012Validator
+
+            schema = json.loads(
+                (
+                    Path(__file__).resolve().parents[1]
+                    / "specification/standards/schemas/installed-release-manifest.schema.json"
+                ).read_text(encoding="utf-8")
+            )
+            self.assertTrue(
+                list(Draft202012Validator(schema).iter_errors(incomplete)),
+                "schema accepted incomplete shared-source release coordinates",
+            )
+
+    def test_channel_refuses_qualified_cut_without_qualified_selector(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(
+                root,
+                project_prefix="specification_methodology",
+            )
+            fixture.add_qualified_rc2()
+            run_git(
+                fixture.repository,
+                "tag",
+                "-d",
+                "specification_methodology/v1.0.0",
+            )
+            run_git(
+                fixture.repository,
+                "tag",
+                "-fa",
+                "v1.0.0",
+                "-m",
+                "invalid moved historical selector",
+                "specification_methodology/v1.0.0-rc.2^{}",
+            )
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "must create its qualified selector",
+            ):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_refuses_qualified_selector_without_qualified_cut(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            run_git(
+                fixture.repository,
+                "tag",
+                "-a",
+                "specification_methodology/v1.0.0",
+                "-m",
+                "invalid qualified selector",
+                "v1.0.0-rc.1^{}",
+            )
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "has no project-qualified immutable cuts",
+            ):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_preserves_historical_selector_after_transition(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(
+                root,
+                project_prefix="specification_methodology",
+            )
+            fixture.add_qualified_rc2()
+            run_git(
+                fixture.repository,
+                "tag",
+                "-fa",
+                "v1.0.0",
+                "-m",
+                "invalid moved historical selector",
+                "specification_methodology/v1.0.0-rc.2^{}",
+            )
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "Historical STDO channel selector must remain",
+            ):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+    def test_channel_refuses_duplicate_local_cut_across_ref_profiles(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.add_rc2()
+            run_git(
+                fixture.repository,
+                "tag",
+                "-a",
+                "specification_methodology/v1.0.0-rc.2",
+                "-m",
+                "duplicate RC2",
+            )
+            run_git(
+                fixture.repository,
+                "tag",
+                "-a",
+                "specification_methodology/v1.0.0",
+                "-m",
+                "qualified line two",
+            )
+
+            with self.assertRaisesRegex(StdoError, "ambiguous across refs"):
+                resolve_channel(str(fixture.repository), "1.0.0")
+
+            with self.assertRaisesRegex(
+                StdoError,
+                "ambiguous across historical and project-qualified refs",
+            ):
+                with GitSnapshot(str(fixture.repository), "v1.0.0-rc.2"):
+                    self.fail("ambiguous cut unexpectedly opened")
+
+    def test_channel_accepts_an_additional_ref_to_the_same_tag_object(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = ReleaseFixture(root)
+            fixture.add_rc2()
+            store = Store(root / "store")
+            before_alias = store.install(
+                str(fixture.repository),
+                "v1.0.0-rc.2",
+            )
+            run_git(
+                fixture.repository,
+                "update-ref",
+                "refs/tags/specification_methodology/v1.0.0-rc.2",
+                "refs/tags/v1.0.0-rc.2",
+            )
+            run_git(
+                fixture.repository,
+                "update-ref",
+                "refs/tags/specification_methodology/v1.0.0",
+                "refs/tags/v1.0.0",
+            )
+
+            resolution = resolve_channel(str(fixture.repository), "1.0.0")
+            self.assertEqual(
+                resolution.cut_ref,
+                "refs/tags/specification_methodology/v1.0.0-rc.2",
+            )
+            after_alias = store.install(
+                str(fixture.repository),
+                resolution.cut,
+            )
+            self.assertEqual(after_alias.status, "already_installed")
+            self.assertEqual(after_alias.manifest_sha256, before_alias.manifest_sha256)
+            self.assertEqual(after_alias.manifest, before_alias.manifest)
+            with GitSnapshot(str(fixture.repository), "v1.0.0-rc.2") as snapshot:
+                self.assertEqual(snapshot.ref, "refs/tags/v1.0.0-rc.2")
+                self.assertEqual(snapshot.tag_object, resolution.cut_tag_object)
 
     def test_channel_refuses_a_lightweight_latest_cut(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -18,6 +18,23 @@ BASIS_TEMPLATE = (
 )
 
 
+def markdown_table(text: str, heading: str) -> list[dict[str, str]]:
+    section = text.split(heading, 1)[1]
+    lines = section.splitlines()
+    table: list[list[str]] = []
+    started = False
+    for line in lines:
+        if line.startswith("|"):
+            started = True
+            table.append([cell.strip() for cell in line.strip("|").split("|")])
+        elif started:
+            break
+    if len(table) < 3:
+        raise AssertionError(f"missing table under {heading}")
+    headers = table[0]
+    return [dict(zip(headers, row, strict=True)) for row in table[2:]]
+
+
 class ReferenceFrameBoundaryTests(unittest.TestCase):
     def test_pure_method_excludes_profiles_consumers_and_runtimes(self) -> None:
         text = METHOD.read_text(encoding="utf-8")
@@ -94,6 +111,114 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
 
         for forbidden in ("ABIogenesis", "ABG", "HoG", "GTL"):
             self.assertNotIn(forbidden, text)
+
+    def test_reviewer_triages_and_executive_dispositions(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        template = BASIS_TEMPLATE.read_text(encoding="utf-8")
+        compression = COMPRESSION.read_text(encoding="utf-8")
+
+        for required in (
+            "### Technical triage, severity, priority, and boundary effect",
+            "Reviewer grades severity. Executive assigns priority.",
+            "This profile imposes no universal numeric scale.",
+            "cause, blast radius, workaround, or repair risk",
+            "Severity does not mechanically select priority or block promotion.",
+            "Reviewer assigns priority, blocks promotion, directs repair",
+            "current MVP or release mandate",
+        ):
+            self.assertIn(required, profile)
+
+        for required in (
+            "## Technical Triage And Promotion Policy",
+            "Product-selected severity scale",
+            "Product-selected priority scale",
+            "current-boundary decision cutoff",
+            "non-waivable authority, safety, integrity",
+            "including a `P2` decision cutoff",
+        ):
+            self.assertIn(required, template)
+
+        for required in (
+            "Reviewer owns evidence-bound technical triage",
+            "Executive consumes that technical triage",
+            "the profile imposes no universal numeric scale",
+            "Its payload projection is total",
+        ):
+            self.assertIn(required, compression)
+        self.assertNotIn(
+            "Reviewer returns only a Reference Frame Method result",
+            compression,
+        )
+
+        pure_method = METHOD.read_text(encoding="utf-8")
+        self.assertNotIn("Technical triage", pure_method)
+        self.assertNotIn("promotion-boundary effect", pure_method)
+
+    def test_reviewer_result_projection_is_total_and_exclusive(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        rows = markdown_table(profile, "### Reviewer Result And Triage Projection")
+        by_result = {row["Reference Frame Method result"]: row for row in rows}
+        self.assertEqual(
+            set(by_result),
+            {
+                "`satisfied`",
+                "`falsified`",
+                "`indeterminate`",
+                "`out_of_frame`",
+                "`invalid_basis`",
+            },
+        )
+        self.assertIn(
+            "no-finding", by_result["`satisfied`"]["Finding and triage payload"]
+        )
+        self.assertIn(
+            "`not_applicable`",
+            by_result["`satisfied`"]["Finding and triage payload"],
+        )
+        self.assertIn(
+            "one or more exact findings",
+            by_result["`falsified`"]["Finding and triage payload"],
+        )
+        self.assertIn(
+            "`indeterminate`",
+            by_result["`indeterminate`"]["Finding and triage payload"],
+        )
+        self.assertIn(
+            "cannot make the observation block",
+            by_result["`out_of_frame`"]["Executive consumption constraint"],
+        )
+        self.assertIn(
+            "refuse result consumption",
+            by_result["`invalid_basis`"]["Executive consumption constraint"],
+        )
+
+    def test_executive_promotion_constraints_cover_negative_cases(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        rows = markdown_table(
+            profile,
+            "### Executive Promotion Constraint Projection",
+        )
+        self.assertEqual(len(rows), 4)
+        constraints = {
+            row["Consumed condition"]: row["Required Executive constraint"]
+            for row in rows
+        }
+        hard_stop = next(
+            value for key, value in constraints.items() if "hard stop" in key
+        )
+        below_cutoff = next(
+            value for key, value in constraints.items() if "below" in key
+        )
+        outside_claim = next(
+            value for key, value in constraints.items() if "outside" in key
+        )
+        unsupported = next(
+            value for key, value in constraints.items() if "unsupported" in key
+        )
+        self.assertIn("blocks regardless", hard_stop)
+        self.assertIn("no mechanical block", below_cutoff)
+        self.assertIn("do not create a claim-relative block", outside_claim)
+        self.assertIn("do not rewrite Reviewer evidence", unsupported)
 
     def test_product_composition_and_integration_remain_distinct(self) -> None:
         text = PROFILE.read_text(encoding="utf-8")

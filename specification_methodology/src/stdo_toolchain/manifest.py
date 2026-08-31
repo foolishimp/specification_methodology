@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import re
 import stat
 from pathlib import Path
 from typing import Any
@@ -78,16 +79,27 @@ def build_manifest(snapshot: GitSnapshot) -> dict[str, Any]:
         "sha256": sha256_bytes(snapshot.read_file(release_note_source)),
     }
 
+    release = {
+        "cut": snapshot.cut,
+        "tag_object": snapshot.tag_object,
+        "commit": snapshot.commit,
+        "tree": snapshot.tree,
+        "standards_tree": snapshot.standards_tree,
+    }
+    if snapshot.project_release_namespace:
+        release.update(
+            {
+                "project_release_namespace": snapshot.project_release_namespace,
+                "qualified_ref": snapshot.ref,
+                "project_subtree_root": snapshot.project_root or ".",
+                "project_subtree_tree": snapshot.project_tree,
+            }
+        )
+
     return {
         "kind": MANIFEST_KIND,
         "schema_version": MANIFEST_VERSION,
-        "release": {
-            "cut": snapshot.cut,
-            "tag_object": snapshot.tag_object,
-            "commit": snapshot.commit,
-            "tree": snapshot.tree,
-            "standards_tree": snapshot.standards_tree,
-        },
+        "release": release,
         "standards": {
             "source_root": STANDARDS_SOURCE_ROOT,
             "installed_root": STANDARDS_INSTALL_ROOT,
@@ -282,6 +294,34 @@ def verify_materialization(release_root: Path, manifest: dict[str, Any]) -> list
         failures.append(
             f"unexpected manifest schema version: {manifest.get('schema_version')!r}"
         )
+
+    release = manifest.get("release", {})
+    shared_source_keys = {
+        "project_release_namespace",
+        "qualified_ref",
+        "project_subtree_root",
+        "project_subtree_tree",
+    }
+    present_shared_source_keys = shared_source_keys & set(release)
+    if present_shared_source_keys and present_shared_source_keys != shared_source_keys:
+        failures.append("incomplete shared-source release coordinates")
+    elif present_shared_source_keys:
+        namespace = release.get("project_release_namespace")
+        cut = release.get("cut")
+        expected_ref = f"refs/tags/{namespace}/{cut}"
+        if namespace != "specification_methodology":
+            failures.append("unexpected STDO Project Release Namespace")
+        if release.get("qualified_ref") != expected_ref:
+            failures.append("qualified release ref does not match namespace and cut")
+        subtree_root = release.get("project_subtree_root")
+        if subtree_root != "specification_methodology":
+            failures.append("unexpected STDO Project Subtree root")
+        subtree_tree = release.get("project_subtree_tree")
+        if (
+            not isinstance(subtree_tree, str)
+            or re.fullmatch(r"[0-9a-f]{40}(?:[0-9a-f]{24})?", subtree_tree) is None
+        ):
+            failures.append("invalid Project Subtree tree object")
 
     expected_entries = _expected_installed_entries(manifest)
     actual_entries = _actual_entries(release_root)
