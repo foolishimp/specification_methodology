@@ -1,18 +1,20 @@
 # STDO Representation Quickstart
 
-This guide exercises the STDO 2.5.0 compression-and-index Product. It is not constitutional
-authority.
+This guide exercises the STDO 2.5.0 compression-and-index source candidate
+against exact Source STDO `v2.5.0-rc.2`. It is not constitutional authority.
+Project frame basis revision 14 must be accepted and bound before this workflow
+is treated as governed Product use.
 
 ## 1. Verify the dependencies
 
 Verify Source STDO:
 
 ```sh
-stdo verify v2.5.0-rc.1
+stdo verify v2.5.0-rc.2
 ```
 
 The result must identify manifest SHA-256
-`3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`
+`313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`
 with no failures.
 
 Resolve an installed Axiom Indexer `v0.1.0-rc.1` checkout and verify:
@@ -44,16 +46,16 @@ Validate the selected `a_c.STDO` compression using invocation-local bindings:
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
   --program \
-    build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/axiomatic-program.json \
+    build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/axiomatic-program.json \
   --bindings \
-    dogfood/axiom-indexer-v0.1.0-rc.1/stdo-v2.5.0-rc.1/run-001/bindings.json \
+    build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/bindings.json \
   --emit-map /tmp/stdo-representation-map.json
 ```
 
 Compare the emitted logical constraint index with:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/
   logical-constraint-map.json
 ```
 
@@ -62,6 +64,11 @@ The dogfood binding file contains installation-local physical paths and is not a
 portable Product member.
 
 ## 3. Use the native skill
+
+The accepted native skill remains an exact member of published STDO
+Representation `2.5.0` RC1 until its RC2 artifact route is separately repriced
+and reviewed. Do not treat repository discovery alone as RC2-basis readiness.
+After that bounded update, native discovery remains:
 
 Codex discovers:
 
@@ -116,19 +123,27 @@ The joiner preserves every supplied label, text value, and row order. It does
 not select frames, rewrite instructions, enforce a token budget, invoke a model,
 or decide authority.
 
-## 5. Run project checks
+## 5. Check the accepted basis
 
 ```sh
-python3 scripts/check_constitution.py
-python3 -m unittest scripts.test_check_constitution -v
+stdo verify v2.5.0-rc.2
+python3 -m json.tool stdo_representation.json >/dev/null
 ```
 
-Revision 13 of the project frame basis is accepted at SHA-256
-`0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`.
-Its external Product-owner decision SHA-256 is
-`7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`.
-`stdo status --definition stdo_representation.json --verify` must pass against
-that exact binding. Any failure is a release hold.
+Revision 14 of the project frame basis is accepted at SHA-256
+`6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f`.
+Product-owner decision SHA-256
+`68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba`
+binds those exact bytes. `stdo_representation.json` names that decision in its
+`reference_frame_bases` relation; it does not infer activation from this guide
+or reuse revision 13. Verify the binding with:
+
+```sh
+stdo status --definition stdo_representation.json --verify
+```
+
+This acceptance governs the continuing RC2-basis source candidate. It does not
+publish or accept another immutable STDO Representation RC.
 
 ## Historical paths
 

@@ -1,5 +1,5 @@
 {
-  "$schema": "stdo://releases/v2.5.0-rc.1/standards/schemas/product-definition.schema.json",
+  "$schema": "stdo://releases/v2.5.0-rc.2/standards/schemas/product-definition.schema.json",
   "kind": "stdo.product-definition",
   "product": {
     "definition_id": "urn:stdo:product-definition:stdo-representation",
@@ -17,8 +17,8 @@
       },
       "selector": "stdo://channels/2.5.0",
       "basis": {
-        "uri": "stdo://releases/v2.5.0-rc.1/",
-        "manifest_sha256": "3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
+        "uri": "stdo://releases/v2.5.0-rc.2/",
+        "manifest_sha256": "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a"
       }
     },
     "additional_authorities": [],
@@ -79,11 +79,11 @@
         "term": "Executive",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
         ],
-        "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+        "resolves_to": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
         "authority": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -98,11 +98,11 @@
         "term": "Worker",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
         ],
-        "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+        "resolves_to": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
         "authority": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -117,11 +117,11 @@
         "term": "Reviewer",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
         ],
-        "resolves_to": "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+        "resolves_to": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
         "authority": [
-          "stdo://releases/v2.5.0-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+          "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -138,7 +138,7 @@
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
         "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20260831T211524_frame_basis_rev13_acceptance.json"
+        "./.ai-workspace/decisions/20260901T074151_frame_basis_rev14_acceptance.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"

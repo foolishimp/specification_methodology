@@ -7,7 +7,7 @@ Accepted Axiom Indexer `v0.1.0-rc.1` supplies URI resolution, basic validation,
 index instantiation, and exact ordered string joining.
 
 ```text
-Source STDO 2.5.0 (exact cut v2.5.0-rc.1)
+Source STDO 2.5.0 (exact cut v2.5.0-rc.2)
   -> LLM-authored a_c.STDO 2.5.0 compression
   -> validated logical constraint index over the compression
   -> LLM-selected visible reference frames
@@ -24,7 +24,7 @@ remains semantic authority.
 The selected Product members are:
 
 - the STDO Axiomatic Program compression and logical constraint index under
-  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/`;
+  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/`;
 - one canonical skill under `skills/stdo-representation/`;
 - concise Codex and Claude instruction references in that skill; and
 - native discovery symlinks under `.agents/skills/` and `.claude/skills/`.
@@ -51,8 +51,10 @@ from Source STDO. A role label or prompt grants no external authority.
 
 ## Exact bases
 
-- Source STDO: `v2.5.0-rc.1`, installed-manifest SHA-256
-  `3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338`.
+- Source STDO: `v2.5.0-rc.2`, installed-manifest SHA-256
+  `313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`;
+  standards member aggregate
+  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`.
 - Axiom Indexer: annotated `v0.1.0-rc.1` tag object
   `e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeled commit
   `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
@@ -89,11 +91,17 @@ dependencies.
 
 ## Product Definition
 
-The Product owner accepted project frame basis revision 13 at SHA-256
-`0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`.
-The external decision SHA-256 is
-`7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`.
-`stdo_representation.json` binds those exact bytes and the decision.
+`stdo_representation.json` selects exact published Source STDO
+`v2.5.0-rc.2`. Project frame basis revision 14 is accepted at SHA-256
+`6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f`.
+Product-owner decision SHA-256
+`68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba`
+accepts those exact bytes, and the overlay binds that decision and basis.
+
+Accepted revision 13 and its decision remain exact historical authority for
+the published STDO Representation `2.5.0` RC1 subject. Revision 14 separately
+governs the continuing RC2-basis source candidate; it neither changes RC1 nor
+publishes or accepts another immutable Representation RC.
 
 ## Authority order
 
@@ -108,9 +116,10 @@ The external decision SHA-256 is
 ## Focused checks
 
 ```sh
-stdo verify v2.5.0-rc.1
-python3 scripts/check_constitution.py
-python3 -m unittest scripts.test_check_constitution -v
+stdo verify v2.5.0-rc.2
+python3 -m json.tool stdo_representation.json >/dev/null
 ```
 
-Project-local checks establish only the properties they report.
+The JSON parse establishes syntax only. Product Definition status verifies the
+accepted basis relation; project-local checks establish only the additional
+properties they report.

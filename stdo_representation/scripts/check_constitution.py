@@ -13,21 +13,21 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 REPRESENTATION_VERSION = "2.5.0"
-STDO_BASIS = "stdo://releases/v2.5.0-rc.1/"
-STDO_MANIFEST = "3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
-STDO_MEMBER_SET = "87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5"
-CALCULUS_REF = "stdo://releases/v2.5.0-rc.1/standards/AXIOMATIC_CALCULUS.md"
+STDO_BASIS = "stdo://releases/v2.5.0-rc.2/"
+STDO_MANIFEST = "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a"
+STDO_MEMBER_SET = "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7"
+CALCULUS_REF = "stdo://releases/v2.5.0-rc.2/standards/AXIOMATIC_CALCULUS.md"
 AXIOM_TAG_OBJECT = "e7afc8a42a7123aebe91cb7582cb037b1aae612d"
 AXIOM_COMMIT = "dc3e00998da36dae6ac7b76b340431a85096c83c"
 AXIOM_TREE = "8c9ad5f5e99a60c18fb8c1802471753afb226272"
-FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:13"
+FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:14"
 FRAME_PATH = Path("specification/REFERENCE_FRAME_BASIS.md")
-FRAME_SHA256 = "0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539"
+FRAME_SHA256 = "6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f"
 FRAME_DECISION_PATH = Path(
-    ".ai-workspace/decisions/20260831T211524_frame_basis_rev13_acceptance.json"
+    ".ai-workspace/decisions/20260901T074151_frame_basis_rev14_acceptance.json"
 )
 FRAME_DECISION_SHA256 = (
-    "7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001"
+    "68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba"
 )
 FRAME_STATUS = "accepted_and_bound"
 HISTORICAL_BOOTSTRAP_VERSION = "0.1.0"
@@ -37,14 +37,16 @@ HISTORICAL_BOOTSTRAP_RELEASE_SHA256 = (
 )
 CANDIDATE_RELEASE_PATH = Path("releases/v2.5.0.md")
 CANDIDATE_INVENTORY_SHA256 = (
-    "08a13f8c160ec70e724d414260324923eba4187d9474aa434342098d9c45002a"
+    "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d"
 )
 CANDIDATE_RELEASE_FIELDS = {
     "represented STDO version": "2.5.0",
-    "represented exact cut": "refs/tags/v2.5.0-rc.1",
+    "represented exact cut": "refs/tags/specification_methodology/v2.5.0-rc.2",
     "Representation version": "2.5.0",
-    "Representation local release key": "stdo_representation",
-    "first candidate RC ref": "refs/tags/stdo_representation/v2.5.0-rc.1",
+    "accepted Representation release": ("refs/tags/stdo_representation/v2.5.0-rc.1"),
+    "Representation candidate ref pattern": (
+        "refs/tags/stdo_representation/v2.5.0-rc.<n>"
+    ),
     "version-line selector": "refs/tags/stdo_representation/v2.5.0",
     "RC branch": "refs/heads/rc/stdo_representation/2.5.0",
     "release branch": "refs/heads/release/stdo_representation/2.5.0",
@@ -53,44 +55,38 @@ CANDIDATE_RELEASE_CLAIMS = (
     "`STDO-REP-2.5-C01`: the Product version equals represented STDO semantic "
     "version `2.5.0` while every Product and RC identity remains distinct.",
     "`STDO-REP-2.5-C02`: the Product carries one canonical source-linked "
-    "`a_c.STDO` semantic compression for exact STDO `v2.5.0-rc.1`.",
+    "`a_c.STDO` semantic compression for exact Source STDO `v2.5.0-rc.2`.",
     "`STDO-REP-2.5-C03`: the logical constraint index deterministically binds "
-    "the unchanged compression and exposes total source re-entry for its items.",
+    "the unchanged compression and exposes source re-entry for every indexed "
+    "item.",
     "`STDO-REP-2.5-C04`: the explicit Axiom Indexer Product dependency relation "
     "binds exact `v0.1.0-rc.1` mechanics without mutable-sibling substitution.",
-    "`STDO-REP-2.5-C05`: one concise native skill lets Codex and Claude use the "
-    "index, select visible reference frames, and re-enter Source STDO without "
-    "treating the index as truth or authority.",
+    "`STDO-REP-2.5-C05`: one concise native skill lets Codex and Claude select "
+    "visible reference frames, retain open solution space, join exact ordered "
+    "sections, and re-enter Source STDO without treating the index as truth or "
+    "authority.",
 )
 CANDIDATE_RELEASE_CLAIM_IDS = tuple(
     f"STDO-REP-2.5-C{ordinal:02d}" for ordinal in range(1, 6)
 )
 CANDIDATE_PREDECESSOR_DISPOSITIONS = (
-    "`STDO-REP-0.1-C01`: **superseded**",
-    "`STDO-REP-0.1-C02`: **conserved**",
-    "`STDO-REP-0.1-C03`: **conserved**",
-    "`STDO-REP-0.1-C04`: **conserved**",
-    "`STDO-REP-0.1-C05`: **conserved**",
+    "`STDO-REP-2.5-C01`: **conserved**",
+    "`STDO-REP-2.5-C02`: **superseded**",
+    "`STDO-REP-2.5-C03`: **conserved**",
+    "`STDO-REP-2.5-C04`: **conserved**",
+    "`STDO-REP-2.5-C05`: **conserved**",
 )
-CANDIDATE_NATIVE_EVIDENCE = {
-    Path("dogfood/native-pickup/release-2.5.0/codex-run-004/README.md"): (
-        "183fb2363cae0923079ed07cf1019457061f617c2771aa14879145775a145f42"
-    ),
-    Path("dogfood/native-pickup/release-2.5.0/claude-run-003/README.md"): (
-        "08639b2e5cc2cd4656cc1024e1a1ef86bc511b5d4b9b2919043cb5095df6e0ca"
-    ),
-}
 CANDIDATE_LAYER_CLAIMS = (
-    "Source STDO prose 2.5.0",
+    "published Source STDO v2.5.0-rc.2 prose",
     "a_c.STDO 2.5.0 Axiomatic Program",
     "canonical semantic compression",
     "Axiom Indexer Logical Constraint Map",
-    "deterministic logical constraint index over the unchanged compression",
-    "native frame selection, evaluation, and Source STDO re-entry",
+    "deterministic index over the unchanged compression",
+    "native frame selection and bounded source re-entry",
+    "caller-authored ordered sections with ACTION last",
     "Source STDO remains semantic authority.",
-    "The index binds the compression URI and digest, calculus, source basis, "
-    "frame references, logical populations, and source routes; it adds no new "
-    "semantic judgment.",
+    "The map is an index and read model, not a semantic decision.",
+    "it is not a prompt engine, schema, renderer, or automatic selector.",
 )
 
 SEMANTIC_VERSION_PATTERN = re.compile(
@@ -108,7 +104,7 @@ CANDIDATE_MEMBER_ROW_PATTERN = re.compile(
 )
 
 COMPRESSION_PATH = Path(
-    "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/"
+    "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/"
     "axiomatic-program.json"
 )
 INDEX_PATH = COMPRESSION_PATH.with_name("logical-constraint-map.json")
@@ -229,7 +225,7 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
             "authority": [
                 "./specification/PRODUCT.md#product-disposition-authority",
                 "./.ai-workspace/decisions/"
-                "20260831T211524_frame_basis_rev13_acceptance.json",
+                "20260901T074151_frame_basis_rev14_acceptance.json",
             ],
             "applies_to": ["urn:stdo:product-definition:stdo-representation"],
         }
@@ -300,7 +296,7 @@ def validate_frame_basis(root: Path) -> list[str]:
     if FRAME_URI not in frame_text:
         failures.append("proposed project frame basis has the wrong identity")
     expected_status = (
-        "Status: proposed source-project basis, revision 13; Product-owner "
+        "Status: proposed source-project basis, revision 14; Product-owner "
         "acceptance\nand overlay binding are pending."
     )
     if expected_status not in frame_text:
@@ -484,6 +480,143 @@ def validate_program_map(
     return validate_compression_index(program, logical_map)
 
 
+def validate_rc2_projection(
+    compression: dict[str, Any], logical_index: dict[str, Any]
+) -> list[str]:
+    """Require the released RC2 frame and source-routing semantics."""
+
+    failures: list[str] = []
+    expected_frame_refs = [
+        "stdo://releases/v2.5.0-rc.2/standards/"
+        "REFERENCE_FRAME_METHOD.md#reference-frame-laws",
+        "stdo://releases/v2.5.0-rc.2/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame",
+        "stdo://releases/v2.5.0-rc.2/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+        "stdo://releases/v2.5.0-rc.2/standards/"
+        "STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame",
+    ]
+    if compression.get("frame_refs") != expected_frame_refs:
+        failures.append("Product compression has the wrong RC2 frame references")
+
+    encoded = json.dumps(
+        {"compression": compression, "index": logical_index},
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    if "repo://" in encoded:
+        failures.append("RC2 Product artifacts retain mutable candidate routes")
+    if "stdo://releases/v2.5.0-rc.1/" in encoded:
+        failures.append("RC2 Product artifacts retain RC1 Source STDO routes")
+
+    required_clauses = {
+        "engagement-return-topology": (
+            "Executive locks the outcome and basis, selects the smallest "
+            "dependency-ready evaluation frontier, consumes closed Worker, Reviewer, "
+            "and specialist results, and alone assigns priority, current-boundary "
+            "effect, disposition, and the next authorized action; Reviewer returns "
+            "evidence-bound severity and technical triage without repair, priority, "
+            "blocking, or continuation authority."
+        ),
+        "executive-promotion-constraints": (
+            "Executive blocks a valid mandatory-claim falsification governed by a "
+            "non-waivable hard stop regardless of priority, does not mechanically "
+            "block a below-cutoff finding without a hard stop, returns an out-of-claim "
+            "observation for bounded repricing or re-entry rather than claim-relative "
+            "blocking, and reactivates or retains indeterminate any unsupported "
+            "technical assessment instead of rewriting Reviewer evidence."
+        ),
+        "profile-qualification-separates-mechanical-and-semantic-evidence": (
+            "Mechanical document checks may protect exact table shape, result "
+            "cardinality, source-digest congruence, and named refusal boundaries, but "
+            "remain structural evidence only; semantic truth and profile qualification "
+            "require a capable source-linked Reviewer evaluation, and qualification "
+            "binds both evidence kinds without claiming either as the other."
+        ),
+        "reference-frame-preserves-open-realization": (
+            "Do not turn a finite substrate-neutral evaluation context into a prompt "
+            "engine, universal carrier, controller, or solution plan: include the "
+            "relations material to its declared evaluation and leave realization "
+            "choices not owned by those relations with their governing Product, "
+            "design, and authorized actor."
+        ),
+        "reviewer-result-triage-is-total": (
+            "Reviewer projection is total across the Reference Frame Method result "
+            "algebra: satisfied carries an explicit no-finding state and not-applicable "
+            "triage; falsified carries exact findings with complete or explicitly "
+            "indeterminate triage fields; indeterminate preserves evidence gaps; "
+            "out_of_frame means the evaluated claim requires an undeclared material "
+            "relation or evaluator capability and carries indeterminate triage plus "
+            "reconfiguration pressure; invalid_basis carries basis failure and refuses "
+            "consumption."
+        ),
+    }
+    actual_clauses = {
+        row.get("uri", "").rsplit(":", 1)[-1]: row.get("statement")
+        for row in compression.get("clauses", [])
+        if isinstance(row, dict)
+    }
+    for clause, expected_statement in required_clauses.items():
+        if actual_clauses.get(clause) != expected_statement:
+            failures.append(f"RC2 Product compression changes frame clause: {clause}")
+    return failures
+
+
+def validate_native_layout(root: Path) -> list[str]:
+    """Check the lean caller-authored projection without creating an engine."""
+
+    failures: list[str] = []
+    skill_text = (root / SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+    required_skill_claims = (
+        "Reviewer evaluates the exact subject and evidence without repair",
+        "Executive alone consumes the complete Product view",
+        "open solution space",
+        "`ACTION` last",
+        "not a prompt engine, schema, selector, or renderer",
+    )
+    for claim in required_skill_claims:
+        if claim not in skill_text:
+            failures.append(f"native skill lacks RC2 projection claim: {claim}")
+
+    layouts = {
+        "codex": (
+            root / SKILL_ROOT / "references/codex.md",
+            (
+                "1. `Role and outcome`",
+                "2. `Reference frame and exact subject`",
+                "3. `Hard constraints`",
+                "4. `Index context and evidence routes`",
+                "5. `Open solution space`",
+                "6. `Return and stop contract`",
+                "7. `ACTION`",
+            ),
+        ),
+        "claude": (
+            root / SKILL_ROOT / "references/claude.md",
+            (
+                "1. `<role_and_outcome>`",
+                "2. `<reference_frame_and_exact_subject>`",
+                "3. `<hard_constraints>`",
+                "4. `<index_context_and_evidence_routes>`",
+                "5. `<open_solution_space>`",
+                "6. `<return_and_stop_contract>`",
+                "7. `<ACTION>`",
+            ),
+        ),
+    }
+    for target, (path, markers) in layouts.items():
+        text = path.read_text(encoding="utf-8")
+        normalized_text = " ".join(text.split())
+        positions = [text.find(marker) for marker in markers]
+        if any(position < 0 for position in positions) or positions != sorted(
+            positions
+        ):
+            failures.append(f"{target} layout does not preserve the seven-part order")
+        if "not a prompt engine, schema, selector, or renderer" not in normalized_text:
+            failures.append(f"{target} layout loses the no-prompt-engine boundary")
+    return failures
+
+
 def validate_historical_bootstrap(root: Path) -> list[str]:
     """Protect the immutable 0.1.0 bootstrap release record in the live tree."""
 
@@ -582,8 +715,8 @@ def validate_candidate_release(root: Path) -> list[str]:
     if not record_text.startswith("# STDO Representation 2.5.0\n"):
         failures.append("candidate release record has the wrong Product version")
     expected_status = (
-        "Status: frozen-member candidate; no immutable Representation 2.5.0 RC is "
-        "published or accepted by this record."
+        "Status: frozen RC2-basis source candidate; no new immutable STDO "
+        "Representation RC is published or accepted by this record."
     )
     if expected_status not in normalized_record:
         failures.append("candidate release record has the wrong candidate status")
@@ -594,13 +727,16 @@ def validate_candidate_release(root: Path) -> list[str]:
         if field_matches != [expected_value]:
             failures.append(f"candidate release record has the wrong {field}")
     layer_section = record_text.partition("## Layer relation")[2].partition(
-        "## Release claims"
+        "## Candidate claims"
     )[0]
     normalized_layer_section = " ".join(layer_section.split())
-    claims_section = record_text.partition("## Release claims")[2].partition(
-        "## Exact dependency basis"
+    claims_section = record_text.partition("## Candidate claims")[2].partition(
+        "The accepted RC1 claims"
     )[0]
     normalized_claims_section = " ".join(claims_section.split())
+    dispositions_section = record_text.partition("The accepted RC1 claims")[
+        2
+    ].partition("## Exact bases")[0]
     actual_claim_ids = tuple(
         re.findall(
             r"^- `(STDO-REP-2\.5-C[0-9]{2})`:",
@@ -614,7 +750,7 @@ def validate_candidate_release(root: Path) -> list[str]:
         if claim not in normalized_claims_section:
             failures.append(f"candidate release record lacks exact claim: {claim[:22]}")
     for disposition in CANDIDATE_PREDECESSOR_DISPOSITIONS:
-        if disposition not in claims_section:
+        if disposition not in dispositions_section:
             failures.append(
                 "candidate release lacks exact predecessor disposition: "
                 f"{disposition[:24]}"
@@ -646,20 +782,6 @@ def validate_candidate_release(root: Path) -> list[str]:
     if declared_inventory_digests != [inventory_sha256]:
         failures.append("candidate release declares the wrong Product inventory digest")
 
-    for evidence_path, expected_digest in CANDIDATE_NATIVE_EVIDENCE.items():
-        full_path = root / evidence_path
-        if not full_path.is_file():
-            failures.append(f"missing corrected native evidence: {evidence_path}")
-            continue
-        if hashlib.sha256(full_path.read_bytes()).hexdigest() != expected_digest:
-            failures.append(f"corrected native evidence changed: {evidence_path}")
-        if (
-            evidence_path.as_posix() not in record_text
-            or expected_digest not in record_text
-        ):
-            failures.append(
-                f"candidate release does not bind corrected evidence: {evidence_path}"
-            )
     return failures
 
 
@@ -700,11 +822,12 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
     if not failures and all(
         (root / path).is_file() for path in (PROGRAM_PATH, MAP_PATH)
     ):
-        failures.extend(
-            validate_program_map(
-                load_json(root / PROGRAM_PATH), load_json(root / MAP_PATH)
-            )
-        )
+        compression = load_json(root / PROGRAM_PATH)
+        logical_index = load_json(root / MAP_PATH)
+        failures.extend(validate_program_map(compression, logical_index))
+        failures.extend(validate_rc2_projection(compression, logical_index))
+    if all((root / path).is_file() for path in PRODUCT_FILES):
+        failures.extend(validate_native_layout(root))
 
     for historical in HISTORICAL_ROOTS:
         if not (root / historical).is_dir():
@@ -725,8 +848,8 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             "adds no local",
             "representation_version = represented_stdo_version",
             "local_release_key = stdo_representation",
-            "source-subtree root",
-            "additional carrier and reacquisition evidence only",
+            "Project Subtree root",
+            "do not become Product meaning or membership",
         ],
         "skills/stdo-representation/SKILL.md": [
             'git -C "$stack_root" archive --format=tar "$axiom_ref"',

@@ -14,7 +14,7 @@ instantiation, and exact ordered string joining.
 ## Product relation
 
 ```text
-Source STDO 2.5.0 (exact cut v2.5.0-rc.1)
+Source STDO 2.5.0 (exact cut v2.5.0-rc.2)
   -> LLM authors source-linked a_c.STDO 2.5.0 compression
   -> Axiom Indexer validates or returns diagnostics
   -> Axiom Indexer instantiates the logical constraint index over it

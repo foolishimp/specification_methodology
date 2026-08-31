@@ -37,7 +37,7 @@ selection of Source STDO, the program content, and its bounded usefulness claim.
 
 **REQ-P-MAP-001**: `calculus_ref` shall resolve exact Source STDO
 `AXIOMATIC_CALCULUS.md`; `source_basis` shall identify exact Source STDO
-`v2.5.0-rc.1`; every selected frame shall be an absolute source URI.
+`v2.5.0-rc.2`; every selected frame shall be an absolute source URI.
 
 **REQ-P-MAP-002**: Every symbol shall name a concept essential to using the
 corpus. Every clause shall express one material relation or constraint with

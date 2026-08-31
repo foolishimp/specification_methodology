@@ -17,11 +17,11 @@ runtime observations into semantic identity.
 
 ```text
 Source STDO release:
-  stdo://releases/v2.5.0-rc.1/
+  stdo://releases/v2.5.0-rc.2/
 Source STDO installed manifest SHA-256:
-  3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338
+  313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a
 Source STDO member-set SHA-256:
-  87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5
+  a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
 Axiomatic Calculus SHA-256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
@@ -61,7 +61,7 @@ local checkout, or unverified cache shall not substitute.
 **REQ-P-BASIS-002**: The selected Product artifact paths shall be:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/
   axiomatic-program.json
   logical-constraint-map.json
 ```

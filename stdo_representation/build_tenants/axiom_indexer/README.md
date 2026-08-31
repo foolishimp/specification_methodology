@@ -30,7 +30,7 @@ evidence; ordinary STDO Representation use retains the immutable dependency.
 ## Product artifacts
 
 ```text
-representation/stdo-v2.5.0-rc.1/
+representation/stdo-v2.5.0-rc.2/
   axiomatic-program.json
   logical-constraint-map.json
 ```
@@ -38,7 +38,9 @@ representation/stdo-v2.5.0-rc.1/
 The program is the LLM-authored STDO specialization of the Axiom Indexer
 `a_c.text` surface and is the semantic compression. The map is the exact
 deterministic constraint index produced from the unchanged valid compression
-and invocation-local bindings.
+and invocation-local bindings. These candidate artifacts represent exact
+Source STDO `v2.5.0-rc.2`; they do not become accepted Product members merely
+because the path exists or validation succeeds.
 
 Runtime Binding Sets and validation reports contain installation-specific
 evidence and remain outside the portable Product member set. The native skill

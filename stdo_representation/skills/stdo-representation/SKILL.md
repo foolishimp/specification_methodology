@@ -23,18 +23,23 @@ as a source-project convenience and report that boundary.
    Program is canonical `a_c.STDO` compression; the Logical Constraint Map is
    the deterministic index over that unchanged compression.
 2. Verify the exact inputs before use:
+   - Source STDO release `stdo://releases/v2.5.0-rc.2/`, installed-manifest
+     SHA-256
+     `313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`,
+     and standards member-set SHA-256
+     `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`;
    - compression file SHA-256:
-     `5e6b6250492f4322f52248f4d889310ae29ff4dfa5578e0126b0a9e8d7ff6d63`;
+     `b64c1fc9b90b5d9eb5bcbeae9dce920ede637286de58c4ce5da5deb89fa9f5fc`;
    - compression canonical SHA-256:
-     `8910927be67b1d2cac988797a826c3be459512011e82a29bbbe8374614c3f11c`;
+     `72cce525acc26956b32f76e3d7b33061351d6d6118bc210a08d875537311f9d3`;
    - index file SHA-256:
-     `e00a7ccdecbfb6fae1bd1c99e023ff8bede5508e679562b29f4a054907d9a4dd`;
+     `8a08c82b0d15fdb17d2f17862ef7cfa808430875a0e8fa0d82494daeaa23da9f`;
    - index intrinsic SHA-256:
-     `e3ec18cc61cc297e1fbee96e65bc125de2da08eb3d4e6ddd4f4c354c1073cd93`;
+     `87346a4264aad378b3087f5fccc34610aa3cdff1a186af0c723bd47987b89828`;
    - accepted project frame-basis SHA-256:
-     `0e3e0f70e78030a4e1d099be01699823d375293f929e549ef780a3a83c925539`;
+     `6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f`;
    - frame-basis acceptance-decision SHA-256:
-     `7866c99d4f40d8625d5ca469730fbfc9412c55a6e693a53079d7085f3c493001`;
+     `68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba`;
    - Axiom Indexer `v0.1.0-rc.1` tag object `e7afc8a42a7123aebe91cb7582cb037b1aae612d`,
      commit `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
      `8c9ad5f5e99a60c18fb8c1802471753afb226272`, member inventory
@@ -66,7 +71,7 @@ as a source-project convenience and report that boundary.
    mutable `axiom_indexer/` sibling. The final file test is mandatory because a
    child-scoped empty archive can otherwise exit successfully.
 3. Read
-   `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/logical-constraint-map.json`.
+   `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/logical-constraint-map.json`.
    Start from the index, not the full STDO corpus. Verify that its `program_uri`
    and `program_sha256` bind the exact compression before relying on it.
 4. Identify the requested role and outcome. The LLM remains the Executive,
@@ -77,8 +82,11 @@ as a source-project convenience and report that boundary.
    - Worker performs one bounded construction, self-validates, and returns to
      Executive without promoting its result, creating Reviewer independence,
      or choosing continuation; and
-   - Reviewer evaluates the exact subject and evidence without repair while
-     retaining the Reviewer claim, then returns findings to Executive.
+   - Reviewer evaluates the exact subject and evidence without repair, grades
+     evidence-bound technical severity, and returns its result and triage to
+     Executive without assigning priority, promotion effect, disposition, or
+     continuation. Executive alone consumes the complete Product view and
+     assigns those decision coordinates under accepted project policy.
 6. Select the smallest relevant frame only from the map's top-level
    `frame_refs`. A frame's STDO URI is its source route. Select supporting
    clauses or residuals separately and use their `source_routes` entries. Never
@@ -93,10 +101,16 @@ as a source-project convenience and report that boundary.
    re-entry request. Do not guess context.
 10. For Codex, read [the Codex layout](references/codex.md). For Claude Fable 5,
    read [the Claude layout](references/claude.md).
-11. To construct a request, author a bare ordered JSON array of
-   `{"label": string, "text": string}` sections. Choose every label, text, and
-   ordering detail yourself. Resolve the exact Axiom Indexer `v0.1.0-rc.1`
-   install, then run its pure joiner:
+11. To construct a request, follow the target reference's seven-section order:
+   role and outcome; frame and exact subject; hard constraints; index context
+   and evidence routes; open solution space; return and stop contract; then
+   `ACTION` last. Include only material constraints and leave every realization
+   choice not prohibited by authority or the selected frame open to the target
+   LLM. Author a bare ordered JSON array of
+   `{"label": string, "text": string}` sections and choose every byte yourself.
+   This is caller guidance, not a prompt engine, schema, selector, or renderer.
+   Resolve the exact Axiom Indexer `v0.1.0-rc.1` install, then run its pure
+   joiner:
 
    ```sh
    python3 <axiom-indexer-root>/build_tenants/core/code/ac.py join \

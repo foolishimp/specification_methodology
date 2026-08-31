@@ -1,7 +1,8 @@
 # STDO Representation Product
 
-Status: active source definition for release-matched `2.5.0`; bootstrap
-`v0.1.0-rc.1` remains an accepted immutable historical Product.
+Status: active source definition repricing release-matched `2.5.0` to exact
+Source STDO `v2.5.0-rc.2`; accepted STDO Representation
+`stdo_representation/v2.5.0-rc.1` remains immutable.
 
 ## Product statement
 
@@ -35,14 +36,15 @@ it.
 ## Product terms
 
 - **Represented STDO Version** is semantic version line `2.5.0`; its exact
-  represented cut is immutable STDO `v2.5.0-rc.1`.
+  represented cut is immutable STDO `v2.5.0-rc.2`.
 - **Source STDO** is that exact installed standards corpus and remains semantic
   authority.
 - **Axiom Indexer Dependency** is exact accepted Axiom Indexer
   `v0.1.0-rc.1`, used without copying its Product members into this Product.
-- **Shared-Source Release Profile** is this Product's local specialization of
-  the installed Release Method's alternate-spelling permission. It owns only
-  Git transport spelling and additional source-subtree reacquisition evidence.
+- **Shared-Source Release Profile** is this Product's stable Project Release
+  Namespace and project-qualified ref selection under the installed Release
+  Method. It owns Git transport spelling and Project Subtree coordinates, not
+  Product meaning or membership.
 - **`a_c.STDO` Axiomatic Program** is the canonical semantic compression
   selected for the exact represented cut. It contains URI-identified symbols,
   clauses, and residuals grounded in Source STDO.
@@ -75,7 +77,7 @@ Product line:
 
 ```text
 representation_version = represented_stdo_version
-2.5.0 = semantic_version(stdo://releases/v2.5.0-rc.1/)
+2.5.0 = semantic_version(stdo://releases/v2.5.0-rc.2/)
 ```
 
 This equality identifies what is represented; it does not collapse release
@@ -87,9 +89,9 @@ the same matched version line.
 
 ## Shared-source release profile
 
-Installed STDO `v2.5.0-rc.1` permits a project to choose alternate Git spelling
-when it preserves the mutable carrier, immutable cut, and mutable selector
-distinctions. The Product owner selects this local profile:
+Installed STDO `v2.5.0-rc.2` requires project-qualified future refs for an
+independently released Product in this shared source. The Product owner retains
+the stable profile already used by the accepted Representation RC1:
 
 ```text
 local_release_key = stdo_representation
@@ -97,15 +99,16 @@ RC branch = refs/heads/rc/stdo_representation/2.5.0
 immutable RC = refs/tags/stdo_representation/v2.5.0-rc.<n>
 version-line selector = refs/tags/stdo_representation/v2.5.0
 release branch = refs/heads/release/stdo_representation/2.5.0
-source_subtree_root = stdo_representation/
+Project Subtree root = stdo_representation
 ```
 
-This profile is a Product-local axiom, not imported mutable Specification
-Methodology law. Exact-cut identity remains the installed Release Method's
-annotated tag object, peeled commit, repository tree, declared Product member
-inventory, release claims, and predecessor relation. The source-subtree root
-and tree are additional carrier and reacquisition evidence only. They never
-become Product identity and never make sibling bytes Product members.
+The namespace binding is a Product-local selection under immutable released
+method; it is not inferred from the directory name or mutable Specification
+Methodology source. Exact-cut identity binds the qualified annotated tag
+object, peeled commit, repository tree, Project Subtree root and tree, declared
+Product member inventory, release claims, and predecessor relation. Project
+Subtree coordinates do not become Product meaning or membership and never make
+sibling bytes Product members.
 
 `a_c.STDO` does not claim a complete admitted `M_b`, the full
 `I/O/E/C/L/X/V/T/J` population, a total semantic interpretation, or a lossless
@@ -117,11 +120,11 @@ replacement for the corpus.
 
 ```text
 release_uri:
-  stdo://releases/v2.5.0-rc.1/
+  stdo://releases/v2.5.0-rc.2/
 installed_manifest_sha256:
-  3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338
+  313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a
 standards_member_set_sha256:
-  87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5
+  a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 ```
@@ -251,7 +254,7 @@ that code validates role independence or computes a deterministic role packet.
 The selected `2.5.0` Product contains exactly these eight repository entries:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.1/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/
   axiomatic-program.json
   logical-constraint-map.json
 skills/stdo-representation/
@@ -366,10 +369,20 @@ The exact-cut review and Product-owner decision accept only release claims
 `STDO-REP-0.1-C01` through `STDO-REP-0.1-C05` at their declared boundaries. It
 is not retargeted or renamed.
 
-The active source project is preparing STDO Representation `2.5.0` under its
-Product-owned shared-source release profile. Until that exact cut is published, independently
-qualified, and accepted, `2.5.0` is a candidate and the bootstrap cut remains
-the latest accepted Representation Product.
+The accepted current STDO Representation Product is annotated immutable tag
+`stdo_representation/v2.5.0-rc.1`, tag object
+`1eb81f90bcb2348027682b7d4d7e75285d7d917b`, peeled commit
+`5767f40a4d363067b2dbe8f47f6e288e3e5e9cd7`, repository tree
+`66ff1f256dd96e2fba84a009a1f83a1c969a3c2b`, Representation Project Subtree
+tree `c1a8221b525a292322d80543d7d4d3491c4fe5e0`, and eight-member inventory
+`08a13f8c160ec70e724d414260324923eba4187d9474aa434342098d9c45002a`.
+Its exact-cut review and Product-owner decision accept only release claims
+`STDO-REP-2.5-C01` through `STDO-REP-2.5-C05` for its RC1-based subject.
+
+The active source project retains semantic version `2.5.0` and reprices its
+represented basis to Source STDO `v2.5.0-rc.2`. No new Representation RC is
+published or accepted by this source reprice. The accepted RC1 refs, bytes,
+claims, decisions, and evidence remain unchanged.
 
 No GTL composition, complete admitted `M_b`, provider attestation, automatic
 frame selection, ABG runtime, or semantic-completeness claim is made.

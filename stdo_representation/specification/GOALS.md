@@ -2,10 +2,12 @@
 
 ## Current work wave
 
-Maintain the release-matched STDO compression and constraint index:
+Reprice the release-matched STDO compression and constraint index against exact
+published Source STDO `v2.5.0-rc.2` while preserving the accepted STDO
+Representation `2.5.0` RC1 Product and its evidence:
 
 ```text
-exact Source STDO prose 2.5.0
+exact Source STDO prose 2.5.0 (v2.5.0-rc.2)
   -> LLM-authored a_c.STDO 2.5.0 semantic compression
   -> Axiom Indexer validation and logical constraint index
   -> LLM-selected reference frames and ordered context
@@ -20,9 +22,11 @@ This Product has zero local engine code and adds no deterministic orchestration
 or GTL engine.
 
 The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
-historical `v0.1.0-rc.1`. The active Product line is `2.5.0`, matching the
-represented STDO Product line. Representation RC ordinals and content
-identities remain independently qualified.
+historical `v0.1.0-rc.1`. The accepted current Product is STDO Representation
+`2.5.0` RC1. The active source wave retains semantic version `2.5.0` and
+reprices only its exact represented Source STDO basis from RC1 to RC2.
+Representation RC ordinals and content identities remain independently
+qualified.
 
 ## GOAL-001 — Freeze the STDO semantic compression
 
@@ -192,3 +196,35 @@ cut, Product member count, compression, index, or Axiom Indexer dependency.
   `2a9f4e4c494ef1744347b28fe3fc135337d549cdd28cceb2c5d7c7646302afab`
   accepts the exact immutable RC and bounded claims `STDO-REP-2.5-C01`
   through `STDO-REP-2.5-C05`.
+
+## GOAL-007 — Reprice the represented Source STDO basis to RC2
+
+Status: active
+
+Adopt exact published Source STDO `v2.5.0-rc.2` as the represented and
+constitutional basis for the continuing STDO Representation `2.5.0` source
+project. This is a basis requirement reprice. It changes neither Product shape
+nor semantic version.
+
+### Completion conditions
+
+- The Product Definition selects
+  `stdo://releases/v2.5.0-rc.2/`, installed-manifest SHA-256
+  `313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`,
+  and the exact RC2 schema and method routes.
+- Active WHAT and use documentation bind the RC2 standards member aggregate
+  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`
+  and candidate artifact path
+  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/`.
+- Project frame basis revision 14 binds exact RC2 method hashes and is accepted
+  at SHA-256
+  `6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f`
+  by the separately retained Product-owner decision.
+- `stdo_representation.json` binds that exact basis and decision; it does not
+  infer acceptance from artifact presence, validation, or this Goal.
+- The RC2 compression and index are mechanically reproduced and semantically
+  reviewed against exact Source STDO without changing the eight-member Product
+  shape or Axiom Indexer dependency.
+- Published STDO Representation `2.5.0` RC1 refs, bytes, claims, decisions, and
+  evidence remain unchanged. This work wave grants no Representation
+  publication.

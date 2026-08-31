@@ -36,10 +36,16 @@ class ThinConstitutionTests(unittest.TestCase):
         release_target = target_root / CHECKER.CANDIDATE_RELEASE_PATH
         release_target.parent.mkdir(parents=True, exist_ok=True)
         release_target.write_bytes((ROOT / CHECKER.CANDIDATE_RELEASE_PATH).read_bytes())
-        for path in CHECKER.CANDIDATE_NATIVE_EVIDENCE:
-            target = target_root / path
+
+    def copy_native_layout(self, target_root: Path) -> None:
+        for relative in (
+            CHECKER.SKILL_ROOT / "SKILL.md",
+            CHECKER.SKILL_ROOT / "references/codex.md",
+            CHECKER.SKILL_ROOT / "references/claude.md",
+        ):
+            target = target_root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes((ROOT / path).read_bytes())
+            target.write_bytes((ROOT / relative).read_bytes())
 
     def test_current_tree_passes_focused_audit(self) -> None:
         result = CHECKER.audit(ROOT, self.axiom_root)
@@ -98,6 +104,7 @@ class ThinConstitutionTests(unittest.TestCase):
             CHECKER.validate_program_map(program, logical_map),
             [],
         )
+        self.assertEqual(CHECKER.validate_rc2_projection(program, logical_map), [])
 
     def test_program_drift_invalidates_map_binding(self) -> None:
         program = CHECKER.load_json(ROOT / CHECKER.PROGRAM_PATH)
@@ -204,7 +211,7 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "905313e0784ed15c717d04e432385f68e399e7155a59c31809475d291f4e28c6",
+                "8abcf51c1d4d94e8183618898f7ae84829c12fc50458d9cd8555fa0ba661f4ab",
                 "0" * 64,
                 1,
             )
@@ -222,8 +229,8 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "`STDO-REP-0.1-C01`: **superseded**",
-                "`STDO-REP-0.1-C01`: **refined**",
+                "`STDO-REP-2.5-C02`: **superseded**",
+                "`STDO-REP-2.5-C02`: **refined**",
                 1,
             )
             release_path.write_text(record, encoding="utf-8")
@@ -237,16 +244,74 @@ class ThinConstitutionTests(unittest.TestCase):
                 )
             )
 
-    def test_corrected_native_evidence_drift_is_rejected(self) -> None:
+    def test_rc2_projection_rejects_mutable_or_rc1_routes(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
+        changed = copy.deepcopy(compression)
+        changed["frame_refs"][0] = (
+            "repo://specification-methodology/candidates/v2.5.0-rc.2/"
+            "REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        )
+        changed["source_basis"] = "stdo://releases/v2.5.0-rc.1/standards/"
+        failures = CHECKER.validate_rc2_projection(changed, logical_index)
+        self.assertIn(
+            "Product compression has the wrong RC2 frame references", failures
+        )
+        self.assertIn("RC2 Product artifacts retain mutable candidate routes", failures)
+        self.assertIn("RC2 Product artifacts retain RC1 Source STDO routes", failures)
+
+    def test_required_frame_clause_semantics_cannot_drift(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
+        changed = copy.deepcopy(compression)
+        clause = next(
+            row
+            for row in changed["clauses"]
+            if row["uri"].endswith("engagement-return-topology")
+        )
+        clause["statement"] += " Reviewer assigns priority."
+        failures = CHECKER.validate_rc2_projection(changed, logical_index)
+        self.assertIn(
+            "RC2 Product compression changes frame clause: engagement-return-topology",
+            failures,
+        )
+
+    def test_native_layout_requires_open_space_and_action_last(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_root = Path(temp_dir)
-            self.copy_candidate_release_subject(temp_root)
-            evidence_path = next(iter(CHECKER.CANDIDATE_NATIVE_EVIDENCE))
-            target = temp_root / evidence_path
-            target.write_bytes(target.read_bytes() + b"\nchanged\n")
-            failures = CHECKER.validate_candidate_release(temp_root)
+            self.copy_native_layout(temp_root)
+            codex_path = temp_root / CHECKER.SKILL_ROOT / "references/codex.md"
+            text = codex_path.read_text(encoding="utf-8")
+            text = text.replace("7. `ACTION`", "0. `ACTION`", 1)
+            text = text.replace(
+                "not a prompt engine, schema, selector, or renderer",
+                "a prompt engine",
+                1,
+            )
+            codex_path.write_text(text, encoding="utf-8")
+            failures = CHECKER.validate_native_layout(temp_root)
             self.assertIn(
-                f"corrected native evidence changed: {evidence_path}", failures
+                "codex layout does not preserve the seven-part order", failures
+            )
+            self.assertIn("codex layout loses the no-prompt-engine boundary", failures)
+
+    def test_native_skill_preserves_reviewer_executive_split(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            self.copy_native_layout(temp_root)
+            skill_path = temp_root / CHECKER.SKILL_ROOT / "SKILL.md"
+            text = skill_path.read_text(encoding="utf-8").replace(
+                "Executive alone consumes the complete Product view",
+                "Reviewer assigns priority",
+                1,
+            )
+            skill_path.write_text(text, encoding="utf-8")
+            failures = CHECKER.validate_native_layout(temp_root)
+            self.assertTrue(
+                any(
+                    failure.startswith("native skill lacks RC2 projection claim")
+                    for failure in failures
+                )
             )
 
     def test_overlay_rejects_heavy_tenant_reactivation(self) -> None:
@@ -274,8 +339,22 @@ class ThinConstitutionTests(unittest.TestCase):
         failures = CHECKER.validate_overlay(overlay)
         self.assertIn("accepted project frame basis binding is not exact", failures)
 
-    def test_proposed_frame_basis_binds_exact_bytes(self) -> None:
+    def test_accepted_frame_basis_binds_exact_bytes(self) -> None:
         self.assertEqual(CHECKER.validate_frame_basis(ROOT), [])
+
+    def test_frame_acceptance_decision_drift_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            for relative in (CHECKER.FRAME_PATH, CHECKER.FRAME_DECISION_PATH):
+                target = temp_root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes((ROOT / relative).read_bytes())
+            decision_path = temp_root / CHECKER.FRAME_DECISION_PATH
+            decision_path.write_bytes(decision_path.read_bytes() + b"\n")
+            self.assertIn(
+                "project frame-basis acceptance record bytes changed",
+                CHECKER.validate_frame_basis(temp_root),
+            )
 
 
 if __name__ == "__main__":

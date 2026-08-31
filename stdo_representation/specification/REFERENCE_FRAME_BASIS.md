@@ -1,29 +1,37 @@
 # STDO Representation Project Reference-Frame Basis
 
-Status: proposed source-project basis, revision 13; Product-owner acceptance
+Status: proposed source-project basis, revision 14; Product-owner acceptance
 and overlay binding are pending.
+
+Accepted revision 13 remains exact historical authority for the published STDO
+Representation `2.5.0` RC1 subject. Its acceptance does not carry forward to
+this RC2-basis revision.
 
 ## Project frame basis
 
 ```text
 frame_set_uri =
-  "urn:stdo-representation:reference-frame-basis:source-project:13"
+  "urn:stdo-representation:reference-frame-basis:source-project:14"
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
 governed_outcome =
-  "qualify STDO Representation 2.5.0 as compression and index of STDO 2.5.0"
+  "reprice and qualify STDO Representation 2.5.0 against Source STDO v2.5.0-rc.2"
 frame_set_authority =
   "urn:stdo-representation:authority:product-owner"
 reference_frame_method =
-  "stdo://releases/v2.5.0-rc.1/standards/REFERENCE_FRAME_METHOD.md"
+  "stdo://releases/v2.5.0-rc.2/standards/REFERENCE_FRAME_METHOD.md"
 reference_frame_method_sha256 =
-  "sha256:90b5ea5e486c1c0e75883db5a15fba3f524cc5d5718c42108a548279e725d51f"
+  "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8"
+reference_frame_baseline =
+  "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md"
+reference_frame_baseline_sha256 =
+  "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e"
 release_method =
-  "stdo://releases/v2.5.0-rc.1/standards/RELEASE_METHOD.md"
+  "stdo://releases/v2.5.0-rc.2/standards/RELEASE_METHOD.md"
 release_method_sha256 =
-  "sha256:c690228adf680dc4ef0a391073a5d60e515fbd4b0150b778b6adb4723e3fa9a0"
+  "sha256:8e6de5a50ac06f5826fc90f8f8792fb0c7bbc61458c822affe019e10290a80cd"
 stdo_manifest_sha256 =
-  "sha256:3cd24c3196d8334fd9e87fe353e0c8039dbce9f15305cfc8474c7fd71d79d338"
+  "sha256:313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a"
 ```
 
 This basis governs project construction and release evaluation. It is not a
@@ -40,9 +48,9 @@ commit, tree, and remote refs.
 ## Exact dependency basis
 
 ```text
-Source STDO = v2.5.0-rc.1
+Source STDO = v2.5.0-rc.2
 Source STDO member set =
-  sha256:87dca989f2200e91406524b6b2a3e85b230bf201581425614b57a7e0469be1e5
+  sha256:a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
 Axiom Indexer tag object =
   e7afc8a42a7123aebe91cb7582cb037b1aae612d
 Axiom Indexer commit =
@@ -93,6 +101,63 @@ Each evaluation returns exactly one of:
 
 Every result names its frame, exact activation basis, actor, evidence, verdict,
 residuals, and invalidation conditions.
+
+## Technical triage and promotion policy
+
+The current promotion boundary is advancement of the RC2-based STDO
+Representation `2.5.0` source into one frozen publication-ready candidate or,
+under a separate publication grant, an immutable RC. Product shape, the
+accepted RC1 Product, and historical releases remain outside that boundary.
+
+Reviewer grades consequence under this descending severity scale:
+
+| Severity | Project meaning |
+|---|---|
+| `S0` | catastrophic, non-waivable authority, integrity, safety, or data-loss failure |
+| `S1` | critical mandatory-Product or method outcome, or hard-stop failure, without adequate containment |
+| `S2` | major semantic, authority, proportionality, dependency, or proof defect with a bounded workaround |
+| `S3` | minor or local ambiguity or evidence defect without mandatory-outcome loss |
+| `S4` | editorial, cosmetic, or otherwise non-material observation |
+
+For every finding, Reviewer returns the affected claim and observed failure,
+exact evidence routes, severity, causal assessment and confidence where
+supportable, blast radius, workaround or containment, repair complexity,
+regression and dependency risk, and residual uncertainty. Missing support stays
+explicit. An adjacent observation outside the evaluated claim is returned
+separately with claim-relative triage `not_applicable`; it does not replace the
+claim result or create a promotion block by severity alone.
+
+Executive alone assigns response priority under this descending scale:
+
+| Priority | Project meaning and current-boundary effect |
+|---|---|
+| `P0` | emergency; stop immediately and block the current promotion boundary |
+| `P1` | critical; block the current promotion boundary |
+| `P2` | high; block the current promotion boundary |
+| `P3` | planned; does not by itself block the current promotion boundary |
+| `P4` | backlog; does not block the current promotion boundary |
+| `P5` | observe or take no action; does not block the current promotion boundary |
+
+The project decision cutoff is `P2`: `P0` through `P2` block current
+promotion, while `P3` through `P5` do not automatically block it. Severity,
+priority, Reference Frame Method result, promotion-boundary effect, and
+disposition remain distinct; no numeric severity mechanically selects a
+priority or disposition.
+
+The cutoff cannot waive a non-waivable hard stop. Hard stops are
+`invalid_basis`; an unresolved authority, identity, Product-member,
+dependency, integrity, safety, or data-loss failure; falsification of a
+mandatory current-boundary claim; and `indeterminate` or `out_of_frame` on a
+mandatory current-boundary claim until a capable evaluation closes it.
+
+When evidence or evaluator capability cannot support technical triage,
+Reviewer returns `indeterminate`, names the missing evidence or capability,
+and preserves the residual. Executive may hold the boundary or activate or
+refine a capable evaluation; it may not invent, repair, or silently complete
+Reviewer triage. Acting under existing Product authority, Executive consumes
+the closed result and complete Product view, assigns priority, determines the
+promotion-boundary effect, and selects only an authorized disposition and next
+action.
 
 ## Selected frames
 
@@ -227,8 +292,8 @@ configuration, context boundary, access, and prior involvement.
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
 | exact frame-set acceptance and overlay binding | Reference Frame Method; Product owner | external acceptance relation | Product owner decides; overlay mutation separately granted | exact file digest, acceptance record, valid Product Definition; prerequisite to activation | separately covered; human acceptance and overlay binding pending |
-| compression-and-index Product boundary | Goals; Intent; Product; T-007 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
-| represented-version alignment | Product version relation; T-007; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, Representation candidate, historical bootstrap, local ref profile | conditionally covered; mismatch or identity collapse falsifies |
+| compression-and-index Product boundary | Goals; Intent; Product; T-008 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
+| represented-version alignment | Product version relation; T-008; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, accepted Representation RC1, historical bootstrap, local ref profile | conditionally covered; mismatch or identity collapse falsifies |
 | compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | compression, index, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
 | imported validator and join boundary | Product; candidate requirement; Axiom release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | exact dependency, reports, maps, joins, falsifiers | conditionally covered; proves mechanical properties only |
 | Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | skill inventory, target references, fresh pickups, selected frames | conditionally covered; each target requires observation |
@@ -285,7 +350,7 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
-Revision 13 may be accepted only through a Product-owner decision naming its
+Revision 14 may be accepted only through a Product-owner decision naming its
 exact SHA-256, frame-set URI, actor, authority, scope, and time. Only that
 external decision allows `stdo_representation.json` to bind this basis.
 
