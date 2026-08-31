@@ -1,0 +1,74 @@
+{
+  "kind": "stdo-representation.a-c-self-review-run",
+  "schema_version": 1,
+  "completed_at_utc": "2026-08-31T20:38:15Z",
+  "invocation_count": 1,
+  "invocation_status": "completed",
+  "reviewer_result": "satisfied",
+  "finding_counts": {
+    "S0": 0,
+    "S1": 0,
+    "S2": 0,
+    "S3": 0,
+    "S4": 0
+  },
+  "subject": {
+    "commit": "d75520ceef0ba3fdeb35903a470c02ce7200dd64",
+    "repository_tree": "85fdec2d7fd92f7d8c783cacfa7e164e351457e1",
+    "project_subtree_tree": "6a01ff2e7adb6f77a2f1313cf08bd35160d87858",
+    "standards_tree": "f636fd8dcc234e05b8aa464a35f24d843c258dc9",
+    "standards_member_stream_sha256": "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7",
+    "snapshot_kind": "git-archive",
+    "snapshot_root": "/tmp/stdo-rc2-final-review-fNp9Nm/subject/specification_methodology"
+  },
+  "axiom_indexer": {
+    "release_ref": "refs/tags/legacy/axiom_indexer/v0.1.0-rc.1",
+    "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+    "peeled_commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+    "joiner_sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672",
+    "join_command": "python3 /tmp/stdo-rc2-final-review-fNp9Nm/axiom/build_tenants/core/code/ac.py join --input stdo_representation/dogfood/rc2-self-review/final-lean-run-003/sections.json --output stdo_representation/dogfood/rc2-self-review/final-lean-run-003/reviewer-request.txt"
+  },
+  "representation": {
+    "source_basis": "repo://specification-methodology/stdo-v2.5.0-rc.2/a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7/standards/",
+    "program_file_sha256": "33628f2c1ec50df4d1b8dd9a42ab1734154c827898780df097d740b9f63521fc",
+    "program_canonical_sha256": "c6d820e9e4fcab916f7c1062b8fbb3628141ee5b839f49849bb800b482cc1f21",
+    "map_file_sha256": "be836132ebb8c6fc6db8baab809df9a186c017f60fc249a74066f8223513e594",
+    "map_intrinsic_sha256": "719587b53a7854f6b0498499e7b5e661c4cd5e75c2377a530952a9d803d3fc2a",
+    "validation_status": "valid",
+    "validation_diagnostics": 0,
+    "resolved_source_count": 70,
+    "derived_counts": {
+      "symbols": 16,
+      "clauses": 59,
+      "residuals": 6
+    }
+  },
+  "projection": {
+    "section_count": 7,
+    "action_last": true,
+    "sections_sha256": "29af565cfcd43f3336d45edcb8b343712a7f4a0e440e8700fe460613fddc2414",
+    "request_sha256": "28e28d3ffc88682e4da2445362050391f297ce2d3a7199619c1aa68bbee62270"
+  },
+  "model_invocation": {
+    "cli": "codex-cli 0.150.1",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "working_directory": "/tmp/stdo-rc2-final-review-fNp9Nm/subject/specification_methodology",
+    "command": "codex exec --model gpt-5.6-sol -c 'model_reasoning_effort=\"xhigh\"' --sandbox read-only --ephemeral --skip-git-repo-check --json --output-last-message /Users/jim/src/apps/specification_stack/stdo_representation/dogfood/rc2-self-review/final-lean-run-003/review-result.md -C /tmp/stdo-rc2-final-review-fNp9Nm/subject/specification_methodology -",
+    "thread_id": "01a05980-e2c0-7ac1-9e52-683981584f94",
+    "exit_code": 0,
+    "input_tokens": 1843386,
+    "cached_input_tokens": 1564416,
+    "output_tokens": 16128,
+    "reasoning_output_tokens": 8345
+  },
+  "outputs": {
+    "review_result_sha256": "edec926f7a31cc18aa80e4e28d08ea633d1665fe49971d33c03e4255821f55f0",
+    "invocation_jsonl_sha256": "be34c6adf3ff2ba641faaa64219a8354bf8a29a424d42d7c90520bd48c02cdcb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "result_carrier_normalization": "Removed one trailing blank line for repository diff hygiene; the raw final agent message remains exact in invocation.jsonl.",
+  "freshness_observation": "The model did not open candidate-specific dogfood, comments, or prior-result carriers. Platform memory bootstrap caused one read of the MEMORY.md registry, which exposed summaries of older v2.3.1 work but no current RC2 result; no linked rollout was opened and the registry was not admitted as review evidence. This carrier is a self-review result, not an independent-assurance claim."
+}
