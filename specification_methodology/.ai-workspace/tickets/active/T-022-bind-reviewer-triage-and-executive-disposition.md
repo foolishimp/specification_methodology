@@ -75,7 +75,9 @@ ticket. That result was later invalidated for the live candidate by an
 independent standards-schema change, but remains exact evidence for the subject
 it evaluated.
 
-Closure now requires repaired compression, executable branch and refusal
-coverage, and a fresh exact-subject Reviewer result that binds the current
-candidate, activation, evidence, scale direction, Reference Frame Method result,
-findings, and residuals. The ticket remains active until that evidence exists.
+Closure now requires repaired compression, mechanical branch/cardinality and
+refusal-boundary coverage, and a fresh exact-subject semantic Reviewer result
+that binds the current candidate, activation, evidence, scale direction,
+Reference Frame Method result, findings, and residuals. The tests do not
+substitute for that semantic result. The ticket remains active until both
+evidence classes exist.

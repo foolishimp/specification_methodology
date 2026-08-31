@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -19,6 +20,8 @@ BASIS_TEMPLATE = (
 
 
 def markdown_table(text: str, heading: str) -> list[dict[str, str]]:
+    if text.count(heading) != 1:
+        raise AssertionError(f"expected one {heading}")
     section = text.split(heading, 1)[1]
     lines = section.splitlines()
     table: list[list[str]] = []
@@ -32,6 +35,10 @@ def markdown_table(text: str, heading: str) -> list[dict[str, str]]:
     if len(table) < 3:
         raise AssertionError(f"missing table under {heading}")
     headers = table[0]
+    if any(len(row) != len(headers) for row in table):
+        raise AssertionError(f"inconsistent table width under {heading}")
+    if any(re.fullmatch(r":?-{3,}:?", cell) is None for cell in table[1]):
+        raise AssertionError(f"malformed delimiter under {heading}")
     return [dict(zip(headers, row, strict=True)) for row in table[2:]]
 
 
@@ -50,27 +57,13 @@ def indexed_markdown_table(
 def reviewer_projection(
     profile: str,
     result: str,
-    *,
-    out_of_frame_cause: str | None = None,
 ) -> dict[str, str]:
     results = indexed_markdown_table(
         profile,
         "### Reviewer Result And Triage Projection",
         "Reference Frame Method result",
     )
-    row = results[f"`{result}`"]
-    if result != "out_of_frame":
-        if out_of_frame_cause is not None:
-            raise AssertionError("out-of-frame cause supplied for another result")
-        return row
-    if out_of_frame_cause is None:
-        raise AssertionError("out_of_frame requires an exact cause")
-    branches = indexed_markdown_table(
-        profile,
-        "### Reviewer Out-Of-Frame Branch Projection",
-        "Out-of-frame cause",
-    )
-    return branches[out_of_frame_cause]
+    return results[f"`{result}`"]
 
 
 class ReferenceFrameBoundaryTests(unittest.TestCase):
@@ -163,6 +156,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             "Severity does not mechanically select priority or block promotion.",
             "Reviewer assigns priority, blocks promotion, directs repair",
             "current MVP or release mandate",
+            "They do not establish\nsemantic truth",
         ):
             self.assertIn(required, profile)
 
@@ -181,6 +175,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             "Executive consumes that technical triage",
             "the profile imposes no universal numeric scale",
             "Its payload projection is total",
+            "they do not supply semantic truth",
         ):
             self.assertIn(required, compression)
         self.assertNotIn(
@@ -227,7 +222,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             by_result["`indeterminate`"]["Finding and triage payload"],
         )
         self.assertIn(
-            "undeclared material relation or capability",
+            "undeclared material relation or evaluator capability",
             by_result["`out_of_frame`"]["Finding and triage payload"],
         )
         self.assertIn(
@@ -238,54 +233,33 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
     def test_reviewer_projection_executes_each_result_and_refusal_branch(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")
         cases = (
-            ("satisfied", None, "no-finding", "`not_applicable`"),
-            ("falsified", None, "exact findings", "mechanically mapping severity"),
-            ("indeterminate", None, "evidence gaps", "do not consume it"),
+            ("satisfied", "no-finding", "`not_applicable`"),
+            ("falsified", "exact findings", "mechanically mapping severity"),
+            ("indeterminate", "evidence gaps", "do not consume it"),
             (
                 "out_of_frame",
-                "observation outside the exact evaluated claim",
-                "`not_applicable`",
-                "do not create a claim-relative block",
-            ),
-            (
-                "out_of_frame",
-                "evaluated claim requires an undeclared material relation or "
-                "evaluator capability",
-                "same affected claim",
+                "evaluated claim requires an undeclared material relation",
                 "refine or reconfigure a capable activation",
             ),
-            ("invalid_basis", None, "basis failure", "refuse result consumption"),
+            ("invalid_basis", "basis failure", "refuse result consumption"),
         )
-        for result, cause, payload_text, constraint_text in cases:
-            with self.subTest(result=result, cause=cause):
-                row = reviewer_projection(
-                    profile,
-                    result,
-                    out_of_frame_cause=cause,
-                )
+        for result, payload_text, constraint_text in cases:
+            with self.subTest(result=result):
+                row = reviewer_projection(profile, result)
                 self.assertIn(payload_text, row["Finding and triage payload"])
                 self.assertIn(
                     constraint_text,
                     row["Executive consumption constraint"],
                 )
 
-        with self.assertRaisesRegex(AssertionError, "requires an exact cause"):
-            reviewer_projection(profile, "out_of_frame")
-        with self.assertRaisesRegex(AssertionError, "another result"):
-            reviewer_projection(
-                profile,
-                "satisfied",
-                out_of_frame_cause="observation outside the exact evaluated claim",
-            )
-
-    def test_projection_table_refuses_duplicate_result_rows(self) -> None:
+    def test_projection_table_refuses_malformed_or_duplicate_structure(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")
         heading = "### Reviewer Result And Triage Projection"
         rows = markdown_table(profile, heading)
         duplicate = "| " + " | ".join(rows[0].values()) + " |"
         mutated = profile.replace(
-            "\n\n### Reviewer Out-Of-Frame Branch Projection",
-            f"\n{duplicate}\n\n### Reviewer Out-Of-Frame Branch Projection",
+            "\n\nAn adjacent observation outside the evaluated claim",
+            f"\n{duplicate}\n\nAn adjacent observation outside the evaluated claim",
             1,
         )
         with self.assertRaisesRegex(AssertionError, "duplicate"):
@@ -294,6 +268,17 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
                 heading,
                 "Reference Frame Method result",
             )
+        with self.assertRaisesRegex(AssertionError, "malformed delimiter"):
+            table_start = (
+                "| Reference Frame Method result | Finding and triage payload | "
+                "Executive consumption constraint |\n|---|---|---|"
+            )
+            markdown_table(
+                profile.replace(table_start, table_start.replace("|---", "| x "), 1),
+                heading,
+            )
+        with self.assertRaisesRegex(AssertionError, "expected one"):
+            markdown_table(f"{profile}\n\n{heading}\n", heading)
 
     def test_executive_promotion_constraints_cover_negative_cases(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")

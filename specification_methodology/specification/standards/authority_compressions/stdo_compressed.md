@@ -28,7 +28,7 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
-  STDO_REFERENCE_FRAME_BASELINE.md: d25d7631f35d0a51394371a438f86be74e7a47a0aeb9571df3aad0185fee5f19
+  STDO_REFERENCE_FRAME_BASELINE.md: 6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e
   SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
@@ -776,10 +776,11 @@ layer that owns the missing truth.
   repair, or continuation. Its payload projection is total: `satisfied` carries
   an explicit no-finding state; `falsified` carries findings and supported or
   explicitly indeterminate triage; `indeterminate` carries the evidence gap;
-  `out_of_frame` preserves either an outside-claim observation with
-  not-applicable triage or an in-claim missing material relation or capability
-  with indeterminate triage and reconfiguration pressure; and `invalid_basis`
-  carries basis-repair pressure with triage not applicable.
+  `out_of_frame` carries an evaluated claim's missing material relation or
+  capability with indeterminate triage and reconfiguration pressure; and
+  `invalid_basis` carries basis-repair pressure with triage not applicable. An
+  adjacent outside-claim observation is returned separately and does not
+  replace the exact claim result.
 - Executive consumes that technical triage with the complete Product view and
   current MVP or release mandate. It assigns priority, determines the effect on
   the current promotion boundary, applies exactly one existing `STDO-UP-020`
@@ -816,6 +817,9 @@ layer that owns the missing truth.
   repair, apply an STDO disposition, or authorize continuation. Executive
   cannot exceed its existing grant or become another semantic, operation, or
   implementation owner.
+- Mechanical document checks protect declared structure and digest congruence;
+  they do not supply semantic truth or replace a capable source-linked
+  Reviewer result.
 - The minimum activation packet carries frame identity/revision, evaluation and
   result algebra, exact subject/basis, material specialist frames and
   invariants, semantic/evaluation/decision authority and operation authority

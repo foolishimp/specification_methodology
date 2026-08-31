@@ -1104,15 +1104,14 @@ dispositions, priorities, or lifecycle states.
 | `satisfied` | explicit no-finding state; triage `not_applicable`; evidence, residuals, and invalidation remain present | priority and current-boundary effect are `not_applicable` to this review result unless another exact consumed result supplies a finding |
 | `falsified` | one or more exact findings; triage is `complete` where supported and preserves `indeterminate` fields where evidence cannot close them | apply Product-owned priority and boundary policy without mechanically mapping severity to disposition |
 | `indeterminate` | partial finding or observation state; triage `indeterminate`; exact evidence gaps and residual uncertainty | retain uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or a closed finding |
-| `out_of_frame` | the evaluation requires an undeclared material relation or capability; the branch projection below preserves whether that gap is outside or inside the evaluated claim | do not consume the result as satisfaction or falsification; follow the branch-specific re-entry relation |
+| `out_of_frame` | the evaluated claim requires an undeclared material relation or evaluator capability; triage `indeterminate`; name the missing relation or capability and exact reconfiguration pressure | refine or reconfigure a capable activation and retain the claim as unresolved; do not consume the result as satisfaction or falsification |
 | `invalid_basis` | basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse result consumption and return through the declared basis re-entry relation |
 
-### Reviewer Out-Of-Frame Branch Projection
-
-| Out-of-frame cause | Finding and triage payload | Executive consumption constraint |
-|---|---|---|
-| observation outside the exact evaluated claim | adjacent observation; triage `not_applicable` to the evaluated claim; exact repricing or re-entry pressure | do not create a claim-relative block or another review round from severity alone; return the observation to its declared owner |
-| evaluated claim requires an undeclared material relation or evaluator capability | preserve the same affected claim; triage `indeterminate`; name the missing relation or capability and exact reconfiguration pressure | refine or reconfigure a capable activation and retain the claim as unresolved; do not treat the gap as an outside-claim observation or consume it as a closed finding |
+An adjacent observation outside the evaluated claim does not replace the
+claim-relative result. Reviewer returns it separately with triage
+`not_applicable` to that claim and exact repricing or re-entry pressure. The
+Executive returns it to its declared owner without creating a claim-relative
+block or another review round from severity alone.
 
 The Reviewer returns to Executive, not Worker. It does not edit the candidate,
 direct the repair, or authorize continuation.
@@ -1344,6 +1343,11 @@ The profile trial evaluates both this profile and its declared composition with
 the exact Reference Frame Method basis without reproducing either as peer
 authority. A valid pure-method trial does not prove this profile, and a valid
 profile trial does not prove the method's complete function population.
+
+Mechanical document checks may protect exact table shape, result cardinality,
+source-digest congruence, and named refusal boundaries. They do not establish
+semantic truth or replace a capable source-linked Reviewer evaluation. Profile
+qualification binds both kinds of evidence without claiming one as the other.
 
 A representative profile trial establishes at least:
 
