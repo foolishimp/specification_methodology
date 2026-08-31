@@ -1,0 +1,125 @@
+{
+  "kind": "stdo-representation.native-pickup-run",
+  "schema_version": 1,
+  "subject": {
+    "candidate_commit": "37e555de89320eafafefdcb529acfba05ad3b614",
+    "repository_tree": "8ac263fc4bc66df0626b734f6c580007efc5c994",
+    "project_subtree_tree": "ae9ab1273700e5845a9692fabeb46cba117a6ecf",
+    "product_inventory_sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d",
+    "skill_sha256": "8abcf51c1d4d94e8183618898f7ae84829c12fc50458d9cd8555fa0ba661f4ab",
+    "claude_reference_sha256": "57845ff31e6956f4ef89f028d7a2cae55eec4ce0d8bd10d5f318d7b97b483f9d",
+    "program_file_sha256": "b64c1fc9b90b5d9eb5bcbeae9dce920ede637286de58c4ce5da5deb89fa9f5fc",
+    "program_canonical_sha256": "72cce525acc26956b32f76e3d7b33061351d6d6118bc210a08d875537311f9d3",
+    "map_file_sha256": "8a08c82b0d15fdb17d2f17862ef7cfa808430875a0e8fa0d82494daeaa23da9f",
+    "map_intrinsic_sha256": "87346a4264aad378b3087f5fccc34610aa3cdff1a186af0c723bd47987b89828",
+    "frame_basis_sha256": "6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f",
+    "frame_basis_decision_sha256": "68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba"
+  },
+  "dependencies": {
+    "source_stdo": {
+      "qualified_ref": "refs/tags/specification_methodology/v2.5.0-rc.2",
+      "tag_object": "5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3",
+      "commit": "2c9a11701d567d01320482100979c9fcd54ab846",
+      "repository_tree": "374813552b319254d615de8b1c29fa0a99ec4e9b",
+      "project_subtree_tree": "b416e6f6819e8dbff7497a5ab92f32df131804f8",
+      "standards_tree": "f636fd8dcc234e05b8aa464a35f24d843c258dc9",
+      "installed_manifest_sha256": "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a",
+      "standards_member_set_sha256": "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7"
+    },
+    "axiom_indexer": {
+      "qualified_ref": "refs/tags/legacy/axiom_indexer/v0.1.0-rc.1",
+      "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+      "commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+      "repository_tree": "8c9ad5f5e99a60c18fb8c1802471753afb226272",
+      "product_inventory_sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6",
+      "ac_py_sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672"
+    }
+  },
+  "snapshot": {
+    "filter": "allow-listed candidate authority and Product members plus exact installed dependencies",
+    "prior_dogfood_paths": 0,
+    "comment_paths": 0,
+    "prior_review_paths": 0,
+    "mutable_sibling_paths": 0,
+    "receipt_path": "snapshot-receipt.json",
+    "receipt_sha256": "7e278ea601b31ef3352cba545a530d6c9a0dfcaa324184d28b7886464356987d"
+  },
+  "invocation": {
+    "count": 1,
+    "retries": 0,
+    "started_at_utc": "2026-08-31T22:52:08Z",
+    "completed_at_utc": "2026-08-31T22:56:15Z",
+    "exit_status": 0,
+    "terminal_subtype": "success",
+    "result_events": 1,
+    "session_id": "b6896eef-131a-449f-b908-8dece5ce6a98",
+    "cli": "Claude Code 2.1.252",
+    "model": "claude-fable-5",
+    "effort": "high",
+    "duration_ms": 246583,
+    "turns": 26,
+    "permission_mode": "bypassPermissions",
+    "session_persistence": false,
+    "fallback_model": false,
+    "web_search_requests": 0,
+    "web_fetch_requests": 0,
+    "subagents": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "selection": {
+    "frame_uri": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+    "purpose": "bounded independent evaluation of the exact candidate and evidence basis, returning one closed result and technical triage to Executive",
+    "source_route": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+    "source_reentry_path": "evidence/source-stdo-v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+    "source_reentry_section": "Derived Reviewer Frame",
+    "supporting_clause_count": 9,
+    "selected_residual_count": 2
+  },
+  "join": {
+    "section_count": 7,
+    "labels": [
+      "<role_and_outcome>",
+      "<reference_frame_and_exact_subject>",
+      "<hard_constraints>",
+      "<index_context_and_evidence_routes>",
+      "<open_solution_space>",
+      "<return_and_stop_contract>",
+      "<ACTION>"
+    ],
+    "action_last": true,
+    "open_solution_space_present": true,
+    "byte_for_byte_reproduction": true,
+    "terminal_newline": false,
+    "joined_byte_count": 9426
+  },
+  "evidence": {
+    "request.md": "137936d4c0b99ab6c9b9771ed7e2bf3bea584dfcb468bcfb906cc171860b3c82",
+    "invocation.jsonl": "c79ae3046a78391e3d964f88e06bce4332c418c8a7a045c38c06b19ca17d1fe2",
+    "invocation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result.md": "6dd147cfa9d61104041fd93252db851de1b5d8a91816530cd6cfa0313168b981",
+    "sections.json": "04debf65943bf7f608c878c57f3dcb85d5726ff96d3f17b29ab73e87d399bc2c",
+    "joined-request.txt": "fcce014813dabfdec8dc23946e578ac092d58d8707ce1fe9ff1e50dda27da3ad",
+    "snapshot-receipt.json": "7e278ea601b31ef3352cba545a530d6c9a0dfcaa324184d28b7886464356987d",
+    "unexpected-write-inventory.txt": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d"
+  },
+  "contamination": {
+    "prior_evidence_visible": false,
+    "mutable_sibling_visible": false,
+    "network_used": false,
+    "preexisting_outside_snapshot_input_read": false,
+    "runtime_outside_snapshot_path_access": true,
+    "unexpected_runtime_write": {
+      "path": "/tmp/inventory.txt",
+      "sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d",
+      "retained_as": "unexpected-write-inventory.txt",
+      "temporary_original_removed_after_capture": true,
+      "effect": "violated the request's dedicated-output write boundary; no candidate or authority bytes changed"
+    }
+  },
+  "result": {
+    "model_reported": "pass",
+    "trace_audit": "hold",
+    "native_pickup": "hold",
+    "reason": "The native skill was discovered and the request joined correctly, but the invocation created and read /tmp/inventory.txt outside the dedicated output directory and then incorrectly reported that no other file was created. The one-invocation/no-retry rule leaves this defect unrepaired."
+  }
+}

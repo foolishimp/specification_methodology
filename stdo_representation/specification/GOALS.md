@@ -23,8 +23,8 @@ or GTL engine.
 
 The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
 historical `v0.1.0-rc.1`. The accepted current Product is STDO Representation
-`2.5.0` RC1. The active source wave retains semantic version `2.5.0` and
-reprices only its exact represented Source STDO basis from RC1 to RC2.
+`2.5.0` RC1. This source wave retains semantic version `2.5.0` and reprices
+only its exact represented Source STDO basis from RC1 to RC2.
 Representation RC ordinals and content identities remain independently
 qualified.
 
@@ -199,7 +199,7 @@ cut, Product member count, compression, index, or Axiom Indexer dependency.
 
 ## GOAL-007 — Reprice the represented Source STDO basis to RC2
 
-Status: active
+Status: completed
 
 Adopt exact published Source STDO `v2.5.0-rc.2` as the represented and
 constitutional basis for the continuing STDO Representation `2.5.0` source
@@ -228,3 +228,26 @@ nor semantic version.
 - Published STDO Representation `2.5.0` RC1 refs, bytes, claims, decisions, and
   evidence remain unchanged. This work wave grants no Representation
   publication.
+
+### Completion
+
+- Commit `37e555de89320eafafefdcb529acfba05ad3b614` freezes the
+  RC2-basis source candidate after the Quickstart projection was reconciled.
+  The eight-member Product inventory remains
+  `a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d`.
+- Fresh Codex and Claude native runs discovered skill SHA-256
+  `8abcf51c1d4d94e8183618898f7ae84829c12fc50458d9cd8555fa0ba661f4ab`,
+  selected one real Reviewer frame, re-entered bounded Source STDO, authored
+  the seven ordered sections with open solution space and `ACTION` last, and
+  reproduced the immutable Axiom join.
+- The first full self-review returned `indeterminate` because fresh Claude
+  evidence was not yet in its population; it is retained as negative process
+  evidence and does not qualify the candidate.
+- A subsequent C05-only Reviewer activation over both fresh native traces
+  returned `satisfied` with zero claim findings. The Claude run's unexpected
+  temporary-file write and inaccurate no-write report remain an adjacent
+  run-local observation.
+- Executive assigns that adjacent observation `P5` for this promotion
+  boundary: observe and preserve the run-local HOLD, with no Product repair or
+  promotion block. The source candidate is frozen; no STDO Representation ref
+  was created or moved.

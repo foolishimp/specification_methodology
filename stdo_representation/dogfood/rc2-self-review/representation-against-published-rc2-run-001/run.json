@@ -1,0 +1,135 @@
+{
+  "kind": "stdo-representation.a-c-self-review-run",
+  "schema_version": 1,
+  "started_at_utc": "2026-08-31T22:26:14Z",
+  "completed_at_utc": "2026-08-31T22:42:07Z",
+  "duration_seconds": 953,
+  "invocation_count": 1,
+  "invocation_status": "completed",
+  "subject": {
+    "commit": "37e555de89320eafafefdcb529acfba05ad3b614",
+    "repository_tree": "8ac263fc4bc66df0626b734f6c580007efc5c994",
+    "project_subtree_root": "stdo_representation",
+    "project_subtree_tree": "ae9ab1273700e5845a9692fabeb46cba117a6ecf",
+    "release_record_sha256": "1e2f9cfa957d27babd2e843f99b9f6a80aa85cf90d6d7eb8b61b2e55b2466285",
+    "product_member_inventory_sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d",
+    "frame_basis_sha256": "6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f",
+    "frame_basis_acceptance_decision_sha256": "68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba",
+    "snapshot_kind": "filtered-git-archive"
+  },
+  "source_stdo": {
+    "release_uri": "stdo://releases/v2.5.0-rc.2/",
+    "tag_object": "5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3",
+    "peeled_commit": "2c9a11701d567d01320482100979c9fcd54ab846",
+    "repository_tree": "374813552b319254d615de8b1c29fa0a99ec4e9b",
+    "project_subtree_tree": "b416e6f6819e8dbff7497a5ab92f32df131804f8",
+    "standards_tree": "f636fd8dcc234e05b8aa464a35f24d843c258dc9",
+    "installed_manifest_sha256": "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a",
+    "standards_member_count": 52,
+    "standards_member_set_sha256": "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7",
+    "verification_status": "valid"
+  },
+  "axiom_indexer": {
+    "release_ref": "refs/tags/legacy/axiom_indexer/v0.1.0-rc.1",
+    "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+    "peeled_commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+    "repository_tree": "8c9ad5f5e99a60c18fb8c1802471753afb226272",
+    "product_member_inventory_sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6",
+    "joiner_sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672",
+    "join_command": "python3 /tmp/stdo-representation-rc2-e2e.xpgGLs/joiner/build_tenants/core/code/ac.py join --input stdo_representation/dogfood/rc2-self-review/representation-against-published-rc2-run-001/sections.json --output stdo_representation/dogfood/rc2-self-review/representation-against-published-rc2-run-001/reviewer-request.txt",
+    "join_reproduced_exact": true
+  },
+  "representation": {
+    "program_file_sha256": "b64c1fc9b90b5d9eb5bcbeae9dce920ede637286de58c4ce5da5deb89fa9f5fc",
+    "program_canonical_sha256": "72cce525acc26956b32f76e3d7b33061351d6d6118bc210a08d875537311f9d3",
+    "map_file_sha256": "8a08c82b0d15fdb17d2f17862ef7cfa808430875a0e8fa0d82494daeaa23da9f",
+    "map_intrinsic_sha256": "87346a4264aad378b3087f5fccc34610aa3cdff1a186af0c723bd47987b89828",
+    "validation_report_sha256": "8269c792bd5292f8496a6add5e9110ae0752e17d10454a731b08550b9750e264",
+    "validation_status": "valid",
+    "validation_diagnostics": 0,
+    "resolved_source_count": 70,
+    "source_member_coverage": "52/52",
+    "derived_counts": {
+      "symbols": 16,
+      "clauses": 59,
+      "residuals": 6
+    }
+  },
+  "projection": {
+    "section_count": 7,
+    "action_last": true,
+    "top_level_frame_count": 1,
+    "top_level_frame": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+    "selected_clause_count": 7,
+    "selected_residual_count": 3,
+    "sections_sha256": "4162c35418211f999fd984a54ab70ac42af8bd69a6b17c03de80b3c92ee731ad",
+    "request_sha256": "44e764705fd8b6fff0f8a0acbf403229a96c8c8a5b7433e2fe30bb58b43e491d",
+    "request_bytes": 10483
+  },
+  "evidence_snapshot": {
+    "working_directory": "/tmp/stdo-representation-rc2-e2e.xpgGLs/evidence",
+    "candidate_file_count": 31,
+    "source_stdo_file_count": 58,
+    "axiom_indexer_file_count": 26,
+    "excluded_from_snapshot": [
+      "candidate dogfood",
+      "prior review carriers",
+      "comments",
+      "Git worktree and history",
+      "mutable Axiom Indexer sibling source"
+    ],
+    "path_contamination_found": false
+  },
+  "model_invocation": {
+    "cli": "codex-cli 0.150.1",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "xhigh",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "skip_git_repo_check": true,
+    "command": "codex exec --model gpt-5.6-sol -c 'model_reasoning_effort=\"xhigh\"' --sandbox read-only --ephemeral --skip-git-repo-check --json --output-last-message /Users/jim/src/apps/specification_stack/stdo_representation/dogfood/rc2-self-review/representation-against-published-rc2-run-001/review-result.md -C /tmp/stdo-representation-rc2-e2e.xpgGLs/evidence -",
+    "thread_id": "01a059ee-2832-7261-9972-46e012bc7fa3",
+    "exit_code": 0,
+    "input_tokens": 4024384,
+    "cached_input_tokens": 3814400,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 32549,
+    "reasoning_output_tokens": 19332
+  },
+  "reviewer_return": {
+    "reference_frame_method_result": "indeterminate",
+    "triage": "indeterminate",
+    "exact_falsifying_findings": 0,
+    "supported_claims": [
+      "STDO-REP-2.5-C01",
+      "STDO-REP-2.5-C02",
+      "STDO-REP-2.5-C03",
+      "STDO-REP-2.5-C04"
+    ],
+    "partially_supported_claims": [
+      "STDO-REP-2.5-C05"
+    ],
+    "declared_gap": "Fresh target-native Codex and Claude discovery/use evidence and retained ordered join evidence were not admitted to the Reviewer population.",
+    "projection_total": true,
+    "priority_or_disposition_assigned": false
+  },
+  "contamination_audit": {
+    "outside_population_access_observed": true,
+    "completed_commands_reading_global_memory": 3,
+    "outside_paths": [
+      "/Users/jim/.codex/memories/MEMORY.md",
+      "/Users/jim/.codex/memories/rollout_summaries/2026-08-20T17-35-12-O9s1-abiogenesis_review_recovery_commentary_restore_four_dimensio.md"
+    ],
+    "candidate_specific_prior_result_exposed": false,
+    "reviewer_disclosure": "The Reviewer said procedural memory informed only read-only discipline and was excluded from substantive evidence.",
+    "declared_evidence_boundary_conformant": false,
+    "lawful_clean_independent_result": false,
+    "reason": "The process read global memory outside the activation's exact three-root evidence population. That exposure changes the actor context and violates the requested clean evidence boundary even though no current candidate verdict was found and the Reviewer did not cite it as substantive evidence."
+  },
+  "outputs": {
+    "review_result_sha256": "07e22d420804973e82534988847e7fe6d30601679b6b4d4dc917cebbd45602a9",
+    "invocation_jsonl_sha256": "0bb6568ce8a722de3bd43eb7b1d8cfad8bc50e65b824929425503241f488927b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "review_result_unmodified": true
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "kind": "stdo-representation.c05-native-evidence-review-run",
+  "schema_version": 1,
+  "status": "pass_with_adjacent_observation",
+  "scope": "Independent a_c-assisted review of STDO-REP-2.5-C05 only; no candidate, Product, authority, Executive disposition, or publication mutation",
+  "started_at_utc": "2026-08-31T23:06:43Z",
+  "completed_at_utc": "2026-08-31T23:13:03Z",
+  "duration_seconds": 380,
+  "invocation": {
+    "count": 1,
+    "retry_count": 0,
+    "exit_code": 0,
+    "cli_version": "codex-cli 0.150.1",
+    "configured_model": "gpt-5.6-sol",
+    "configured_reasoning_effort": "xhigh",
+    "thread_id": "01a05a13-3795-7020-8bf1-8318d7a82d7f",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "skip_git_repo_check": true,
+    "ignore_user_config": true,
+    "ignore_rules": true,
+    "working_root": "filtered temporary evidence root with no Git metadata",
+    "command": "codex exec --model gpt-5.6-sol -c model_reasoning_effort=xhigh --sandbox read-only --ephemeral --skip-git-repo-check --ignore-user-config --ignore-rules --json --output-last-message <review-result.md> -C <filtered-evidence-root> -",
+    "turn_completed_count": 1,
+    "command_execution_count": 24,
+    "command_nonzero_count": 1,
+    "command_nonzero_note": "One heading-search rg returned no match; the same source was then read directly. This was not a Reviewer retry.",
+    "usage": {
+      "input_tokens": 1928556,
+      "cached_input_tokens": 1793280,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 17857,
+      "reasoning_output_tokens": 9673
+    }
+  },
+  "subject": {
+    "claim": "STDO-REP-2.5-C05",
+    "claim_text": "one concise native skill lets Codex and Claude select visible reference frames, retain open solution space, join exact ordered sections, and re-enter Source STDO without treating the index as truth or authority",
+    "source_status": "frozen RC2-basis source candidate; no new immutable STDO Representation RC is published or accepted",
+    "candidate_commit": "37e555de89320eafafefdcb529acfba05ad3b614",
+    "repository_tree": "8ac263fc4bc66df0626b734f6c580007efc5c994",
+    "project_subtree_tree": "ae9ab1273700e5845a9692fabeb46cba117a6ecf",
+    "release_record_sha256": "1e2f9cfa957d27babd2e843f99b9f6a80aa85cf90d6d7eb8b61b2e55b2466285",
+    "product_member_count": 8,
+    "product_inventory_sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d",
+    "program_file_sha256": "b64c1fc9b90b5d9eb5bcbeae9dce920ede637286de58c4ce5da5deb89fa9f5fc",
+    "program_canonical_sha256": "72cce525acc26956b32f76e3d7b33061351d6d6118bc210a08d875537311f9d3",
+    "map_file_sha256": "8a08c82b0d15fdb17d2f17862ef7cfa808430875a0e8fa0d82494daeaa23da9f",
+    "map_intrinsic_sha256": "87346a4264aad378b3087f5fccc34610aa3cdff1a186af0c723bd47987b89828",
+    "frame_basis_sha256": "6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f",
+    "frame_basis_acceptance_decision_sha256": "68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba"
+  },
+  "source_stdo": {
+    "release_uri": "stdo://releases/v2.5.0-rc.2/",
+    "qualified_ref": "refs/tags/specification_methodology/v2.5.0-rc.2",
+    "tag_object": "5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3",
+    "peeled_commit": "2c9a11701d567d01320482100979c9fcd54ab846",
+    "repository_tree": "374813552b319254d615de8b1c29fa0a99ec4e9b",
+    "installed_manifest_sha256": "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a",
+    "standards_member_count": 52,
+    "standards_member_set_sha256": "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7",
+    "verified_member_failures": 0
+  },
+  "axiom_indexer": {
+    "release": "v0.1.0-rc.1",
+    "qualified_ref": "refs/tags/legacy/axiom_indexer/v0.1.0-rc.1",
+    "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+    "peeled_commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+    "repository_tree": "8c9ad5f5e99a60c18fb8c1802471753afb226272",
+    "product_member_count": 7,
+    "product_inventory_sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6",
+    "joiner_sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672"
+  },
+  "selection": {
+    "selected_top_level_frame_count": 1,
+    "selected_frame_uri": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+    "selected_frame_purpose": "bounded independent exact-claim evaluation with evidence-bound technical triage and no repair or Executive decision authority",
+    "selected_clause_ids": [
+      "engagement-return-topology",
+      "reviewer-result-triage-is-total",
+      "reviewer-adjacent-observation-preserves-claim-result",
+      "reference-frame-preserves-open-realization",
+      "compression-assets-are-read-models",
+      "profile-qualification-separates-mechanical-and-semantic-evidence"
+    ],
+    "selected_residual_ids": [
+      "semantic-acceptance-not-supplied",
+      "prompt-projection-does-not-select-solution",
+      "frame-adoption-not-claimed"
+    ]
+  },
+  "evidence_population": {
+    "codex_run_path": "stdo_representation/dogfood/native-pickup/release-2.5.0-rc.2/codex-run-001",
+    "codex_run_receipt_sha256": "a3a723e63a2f2076f454993da71c153678dd50a9b2c5f34f5e8a48a166838db1",
+    "codex_trace_sha256": "6ce9801d47066995f5229a3f5d5f3193fe66d8daf6b67b6a9e6eeb7c004d15d9",
+    "codex_result_sha256": "6ae45d09d1daedc4849488d99fae38618bed08ac5ee3c8412c920d9d1126f505",
+    "claude_run_path": "stdo_representation/dogfood/native-pickup/release-2.5.0-rc.2/claude-run-001",
+    "claude_run_receipt_sha256": "8cea975311702c03d9eea6419c66916b56ab6aaf7888260d1136613168e46eb5",
+    "claude_trace_sha256": "c79ae3046a78391e3d964f88e06bce4332c418c8a7a045c38c06b19ca17d1fe2",
+    "claude_result_sha256": "6dd147cfa9d61104041fd93252db851de1b5d8a91816530cd6cfa0313168b981",
+    "claude_unexpected_write_bytes_sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d"
+  },
+  "snapshot": {
+    "candidate_source": "git archive of exact candidate commit over explicit authority and eight-member allowlist",
+    "source_stdo_source": "copy of verified published v2.5.0-rc.2 Install",
+    "axiom_source": "git archive of exact immutable tag over seven Product members plus release record",
+    "native_evidence_source": "byte-identical copies of exactly the two named retained native runs",
+    "git_metadata_present": false,
+    "prior_review_present": false,
+    "expected_verdict_present": false,
+    "commentary_present": false,
+    "work_ticket_present": false,
+    "other_dogfood_present": false,
+    "mutable_sibling_present": false,
+    "candidate_inventory_matches": true,
+    "axiom_inventory_matches": true,
+    "source_manifest_matches": true,
+    "source_members_match_manifest": true,
+    "acceptance_decision_payload_present": true,
+    "acceptance_decision_payload_matches": true
+  },
+  "request": {
+    "section_count": 7,
+    "labels": [
+      "# Role and outcome",
+      "# Reviewer frame and exact subject",
+      "# Hard constraints",
+      "# Index context and evidence routes",
+      "# Open solution space",
+      "# Return and stop contract",
+      "# ACTION"
+    ],
+    "action_last": true,
+    "open_solution_space_present": true,
+    "joiner_reproduction_cmp_exit": 0,
+    "joined_request_has_terminal_newline": false,
+    "sections_sha256": "b5a6ebaad91e31189ede6d4422fc25fdb6e80d75b683e748e857b038d6aaf3ee",
+    "reviewer_request_sha256": "07293d81b635785f2aecd7b9e033d1b531d64d802ec6b425551ed0230df82f3c"
+  },
+  "contamination": {
+    "snapshot_unexpected_path_count": 0,
+    "reviewer_outside_snapshot_absolute_path_command_count": 0,
+    "reviewer_write_like_command_count": 0,
+    "reviewer_candidate_or_authority_mutation": false,
+    "reviewer_stderr_bytes": 0,
+    "source_note": "The retained Claude input contains its already-audited /tmp/inventory.txt write; this is evaluated evidence, not a write or contamination introduced by this Reviewer activation."
+  },
+  "review_result": {
+    "reference_frame_method_result": "satisfied",
+    "claim_finding_count": 0,
+    "claim_triage": "not_applicable",
+    "claim_severity": "not_applicable",
+    "adjacent_observation_count": 1,
+    "adjacent_observation": {
+      "id": "A-01",
+      "subject": "Claude output-boundary and reporting violation",
+      "claim_relative_triage": "not_applicable",
+      "severity": "not_assigned_outside_claim",
+      "causal_confidence": "high",
+      "effect": "The Claude run-local pickup status remains hold; the trace-proven violation neither erased nor materially impaired the C05 functional relations."
+    },
+    "reviewer_assigned_priority": false,
+    "reviewer_assigned_promotion_boundary_effect": false,
+    "reviewer_assigned_disposition": false,
+    "reviewer_assigned_next_action": false,
+    "result_sha256": "5a6424fa461913721c305b383dd7fef9f62d6ca2411c3ebd96836514deefd86d"
+  },
+  "trace_audit": {
+    "status": "accepted_with_two_nonmaterial_self_report_corrections",
+    "corrections": [
+      {
+        "reviewer_text": "The acceptance-decision payload is likewise not present in this isolated review snapshot.",
+        "trace_audit": "The payload was present at stdo_representation/.ai-workspace/decisions/20260901T074151_frame_basis_rev14_acceptance.json and reproduced SHA-256 68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba.",
+        "effect": "The Reviewer stated a conservative exact-coordinate residual that does not exist; correcting it strengthens rather than weakens basis validity and does not change the C05 result."
+      },
+      {
+        "reviewer_text": "Reviewer: OpenAI Codex, GPT-5; exact serving build/configuration is not exposed.",
+        "trace_audit": "The retained outer invocation binds configured model gpt-5.6-sol and reasoning effort xhigh; the provider serving build remains unexposed.",
+        "effect": "The generic model-family self-report does not change the configured invocation identity."
+      }
+    ]
+  },
+  "closure": {
+    "previous_c05_native_evidence_gap_closed": true,
+    "reason": "Fresh Codex and Claude observations over the exact changed skill support every frozen C05 relation, and one independent source-linked Reviewer returned a total satisfied result. The Claude output-boundary/reporting violation remains retained as an adjacent outside-C05 observation and as a hold on that run's broader self-report contract.",
+    "does_not_close": "full Product qualification, exact-cut publication review, Product-owner publication or acceptance, behavior of unobserved models/tasks, or any claim other than STDO-REP-2.5-C05"
+  },
+  "artifacts": {
+    "sections.json": {
+      "sha256": "b5a6ebaad91e31189ede6d4422fc25fdb6e80d75b683e748e857b038d6aaf3ee",
+      "bytes": 11766
+    },
+    "reviewer-request.txt": {
+      "sha256": "07293d81b635785f2aecd7b9e033d1b531d64d802ec6b425551ed0230df82f3c",
+      "bytes": 11456
+    },
+    "invocation.jsonl": {
+      "sha256": "2e7f39f3c7df8f235b5d144a2a3f67f14a18d7d93b4659551348791994cdf5db",
+      "bytes": 389889
+    },
+    "invocation.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "review-result.md": {
+      "sha256": "5a6424fa461913721c305b383dd7fef9f62d6ca2411c3ebd96836514deefd86d",
+      "bytes": 8390
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "kind": "stdo-representation.native-pickup-run-receipt",
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "Codex native pickup and Reviewer-request construction only; no semantic review or Executive disposition",
+  "started_at": "2026-09-01T08:48:22+10:00",
+  "completed_at": "2026-09-01T08:56:36+10:00",
+  "duration_seconds": 494,
+  "invocation": {
+    "count": 1,
+    "retry_count": 0,
+    "exit_code": 0,
+    "native_target": "Codex",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "xhigh",
+    "cli_version": "codex-cli 0.150.1",
+    "thread_id": "01a05a02-696b-7aa0-92a7-52d9e4a2d0b8",
+    "sandbox": "workspace-write over an OS-read-only filtered snapshot; only output/ was writable",
+    "ephemeral": true,
+    "skip_git_repo_check": true,
+    "command": "codex exec --model gpt-5.6-sol -c model_reasoning_effort=xhigh --sandbox workspace-write --ephemeral --skip-git-repo-check --json --output-last-message <result> -C <filtered-stdo-representation-root> -",
+    "usage": {
+      "input_tokens": 2744292,
+      "cached_input_tokens": 2606592,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 24187,
+      "reasoning_output_tokens": 9016
+    }
+  },
+  "subject": {
+    "source_status": "frozen RC2-basis source candidate; not a published or accepted new STDO Representation RC",
+    "original_commit": "37e555de89320eafafefdcb529acfba05ad3b614",
+    "repository_tree": "8ac263fc4bc66df0626b734f6c580007efc5c994",
+    "project_subtree_root": "stdo_representation",
+    "project_subtree_tree": "ae9ab1273700e5845a9692fabeb46cba117a6ecf",
+    "release_record_sha256": "1e2f9cfa957d27babd2e843f99b9f6a80aa85cf90d6d7eb8b61b2e55b2466285",
+    "product_member_count": 8,
+    "product_inventory_sha256": "a4a798b8206738c1dc966cf240590b6664472a57f928e0a9b4868b733f849c3d",
+    "program_file_sha256": "b64c1fc9b90b5d9eb5bcbeae9dce920ede637286de58c4ce5da5deb89fa9f5fc",
+    "program_canonical_sha256": "72cce525acc26956b32f76e3d7b33061351d6d6118bc210a08d875537311f9d3",
+    "map_file_sha256": "8a08c82b0d15fdb17d2f17862ef7cfa808430875a0e8fa0d82494daeaa23da9f",
+    "map_intrinsic_sha256": "87346a4264aad378b3087f5fccc34610aa3cdff1a186af0c723bd47987b89828",
+    "frame_basis_sha256": "6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f",
+    "frame_basis_acceptance_decision_sha256": "68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba"
+  },
+  "source_stdo": {
+    "release_uri": "stdo://releases/v2.5.0-rc.2/",
+    "qualified_ref": "refs/tags/specification_methodology/v2.5.0-rc.2",
+    "tag_object": "5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3",
+    "peeled_commit": "2c9a11701d567d01320482100979c9fcd54ab846",
+    "repository_tree": "374813552b319254d615de8b1c29fa0a99ec4e9b",
+    "project_subtree_tree": "b416e6f6819e8dbff7497a5ab92f32df131804f8",
+    "standards_tree": "f636fd8dcc234e05b8aa464a35f24d843c258dc9",
+    "installed_manifest_sha256": "313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a",
+    "standards_member_count": 52,
+    "standards_member_set_sha256": "a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7",
+    "verified_members": 52,
+    "member_failures": 0
+  },
+  "axiom_indexer": {
+    "release": "v0.1.0-rc.1",
+    "source_ref": "refs/tags/legacy/axiom_indexer/v0.1.0-rc.1",
+    "tag_object": "e7afc8a42a7123aebe91cb7582cb037b1aae612d",
+    "peeled_commit": "dc3e00998da36dae6ac7b76b340431a85096c83c",
+    "repository_tree": "8c9ad5f5e99a60c18fb8c1802471753afb226272",
+    "product_member_count": 7,
+    "product_inventory_sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6",
+    "joiner_sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672"
+  },
+  "native_discovery": {
+    "path": ".agents/skills/stdo-representation",
+    "symlink_target": "../../skills/stdo-representation",
+    "symlink_target_sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb",
+    "skill_sha256": "8abcf51c1d4d94e8183618898f7ae84829c12fc50458d9cd8555fa0ba661f4ab",
+    "openai_metadata_sha256": "31367869c7bf984c4b50c4fe36d32d1ef6f47a2d2b96adb87fbd6c2082381228",
+    "codex_reference_sha256": "d2a1e6e474329931c2b55fbe4f1a983200e64cb585480a2eeab733c3ed81d569",
+    "claude_reference_sha256": "57845ff31e6956f4ef89f028d7a2cae55eec4ce0d8bd10d5f318d7b97b483f9d"
+  },
+  "selection": {
+    "acting_role": "Executive",
+    "target_role": "Reviewer",
+    "selected_frame_count": 1,
+    "selected_frame_uri": "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+    "selected_frame_purpose": "exact-subject semantic evaluation with evidence-bound triage and no repair, priority, disposition, or continuation authority",
+    "request_source_routes": [
+      "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+      "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection",
+      "stdo://releases/v2.5.0-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation",
+      "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+    ],
+    "additional_trace_visible_source_inspection": [
+      {
+        "route": "stdo://releases/v2.5.0-rc.2/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws",
+        "purpose": "inspect generic frame laws while authoring; not represented as another selected frame"
+      }
+    ]
+  },
+  "snapshot": {
+    "candidate_source": "git archive of the exact original commit over an explicit active-candidate allowlist",
+    "axiom_source": "git archive of the exact annotated legacy tag over the seven Product members plus its release record",
+    "source_stdo_source": "copy of the verified published v2.5.0-rc.2 Install",
+    "git_object_store_present": false,
+    "prior_dogfood_present": false,
+    "prior_review_or_comment_present": false,
+    "work_tickets_present": false,
+    "mutable_sibling_source_present": false,
+    "unexpected_excluded_path_count": 0,
+    "writable_non_output_file_count": 0,
+    "authorized_output_files_created": 2,
+    "python_cache_file_count": 0,
+    "command_trace_mutable_or_prior_path_hits": 0
+  },
+  "checks": {
+    "candidate_inventory_matches": true,
+    "axiom_inventory_matches": true,
+    "source_manifest_matches": true,
+    "source_members_match_manifest": true,
+    "map_binds_program": true,
+    "selected_top_level_frame_count_is_one": true,
+    "section_count_is_seven": true,
+    "canonical_section_order": true,
+    "action_is_last": true,
+    "open_solution_space_present": true,
+    "immutable_joiner_exit_code": 0,
+    "independent_join_reproduction_cmp_exit": 0,
+    "joined_request_has_terminal_newline": false,
+    "stderr_bytes": 0,
+    "turn_completed_count": 1
+  },
+  "artifacts": {
+    "request.md": {
+      "sha256": "6f4936bea68b5db63d02473379a649973dae064c76206ef646f4ecfd3d326af4",
+      "bytes": 870
+    },
+    "events.jsonl": {
+      "sha256": "6ce9801d47066995f5229a3f5d5f3193fe66d8daf6b67b6a9e6eeb7c004d15d9",
+      "bytes": 325460
+    },
+    "result.md": {
+      "sha256": "6ae45d09d1daedc4849488d99fae38618bed08ac5ee3c8412c920d9d1126f505",
+      "bytes": 2970
+    },
+    "sections.json": {
+      "sha256": "8faf24a724220ee9daf41949e4f485fb193f0d91e7245e25afcd16c68eeeab91",
+      "bytes": 10136
+    },
+    "joined-request.txt": {
+      "sha256": "c5d755a139f17fc8249e1064f081b7eb8c0b48b9f9977db300af370c9d39fa03",
+      "bytes": 9857
+    },
+    "stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}
