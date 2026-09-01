@@ -4,8 +4,8 @@
 - title: Qualify and publish the aligned STDO 2.5.0 RC3 cut
 - type: release
 - ticket_category: release
-- status: active
-- review_status: pending_exact_cut
+- status: completed
+- review_status: satisfied_published
 - goal: >-
     Publish the closed T-024 and T-025 outcome as one immutable,
     project-qualified RC3 with the aligned dual-host plugin.
@@ -18,6 +18,7 @@
 - triaged_at: 2026-09-01
 - created_at: 2026-09-01
 - updated_at: 2026-09-01
+- completed_at: 2026-09-01
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct_human_authorization_2026-09-01
@@ -30,9 +31,9 @@
 - plugin_version: 2.5.0-rc.3
 - release_note: releases/v2.5.0.md
 - depends_on: T-024 and T-025 closed
-- published_tag_object: pending
-- published_commit: pending
-- published_manifest_sha256: pending
+- published_tag_object: 625e123572565a27a3953d07c6b883aa5e8f1ed2
+- published_commit: ece85fbce89e54afbccb9bd670b58650d23a007b
+- published_manifest_sha256: 7feb297337644bc8ba7fc350395c05bfa4f6ee364f906154d8b8c4ebc7bdafdf
 
 ## Admission Gate
 
@@ -85,3 +86,41 @@ qualified refs, remote parity, fresh public installation, and independent
 exact-cut review are recorded. Any qualifying-byte repair after publication
 advances to `specification_methodology/v2.5.0-rc.4`; RC1, RC2, and RC3
 immutable tags never move.
+
+## Completion Evidence
+
+- Immutable annotated RC3 tag object:
+  `625e123572565a27a3953d07c6b883aa5e8f1ed2`.
+- Peeled carrier commit:
+  `ece85fbce89e54afbccb9bd670b58650d23a007b`.
+- Repository tree: `78cdd5085e56b87fa0718c0131d36eb799383fc8`.
+- Specification Methodology subtree:
+  `9879ac893e7395431eca37573c2b2b9ecd456201`.
+- Standards tree: `25e42fdd4480491762faebd4d0aeb7fe034057de`.
+- Installed-manifest SHA-256:
+  `7feb297337644bc8ba7fc350395c05bfa4f6ee364f906154d8b8c4ebc7bdafdf`.
+- Standards reproduce as 52 members with aggregate
+  `8492f66bba93a1e4559b2275f01df277b5e49c24bc0a76feb028e85e4bdf5c2f`;
+  the subordinate plugin reproduces as 17 members with aggregate
+  `687d2be85872a839c581d5a53aa076f8cd3cfd57b3991b4a95365ce46cad9e61`.
+- The qualified selector tag object is
+  `0a8033a0024b25df34625b74aa71d2eb35e8bc07`; it peels to the RC3 commit.
+  Qualified `main`, RC, and release branches resolve to that same commit.
+  Immutable RC2 tag object
+  `5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3` remains unchanged.
+- A fresh public toolchain installation from the qualified RC3 ref installed
+  and verified product-local cut `v2.5.0-rc.3` with zero failures and the exact
+  manifest above.
+- The public cut passes 119 tests normally and 119 under Python optimization
+  after the exact qualified public branches are materialized as local refs.
+  Ruff, Black, Codex plugin and five skill validators, strict Claude plugin and
+  marketplace validators, JSON parsing, and diff hygiene pass.
+- Independent exact-public-cut review is `GO`; P0, P1, and P2 are all zero.
+  Its sole P3 is an auxiliary test-harness false negative: a tag-only clone
+  lacks the two local branch refs expected by the publication-topology test,
+  although the remote refs are exact and the unchanged test passes after those
+  public refs are fetched locally. No Product or release identity claim is
+  falsified, and no successor work is selected from that observation.
+
+Publication and exact-cut qualification are complete. Product acceptance,
+downstream frame-basis ratification, and consumer adoption are not inferred.

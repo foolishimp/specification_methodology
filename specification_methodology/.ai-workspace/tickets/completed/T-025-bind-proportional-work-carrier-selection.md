@@ -102,7 +102,7 @@ exact-cut qualification.
   compression-only Product-policy trigger or overlapping selector row remains.
 - The exact 52-member standards aggregate is
   `8492f66bba93a1e4559b2275f01df277b5e49c24bc0a76feb028e85e4bdf5c2f`.
-- The full candidate suite passes 118 tests normally and 118 under Python
+- The full candidate suite passes 119 tests normally and 119 under Python
   optimization, with only the expected unpublished-RC3 exact-tag check
   skipped. Ruff, Black, and diff hygiene pass.
 
