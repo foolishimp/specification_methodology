@@ -66,6 +66,15 @@ must match all five required assets:
 5. released `a_c.STDO` program and logical constraint map with complete exact
    source-member and digest closure.
 
+The first complete cohort is publicly frozen at `2.5.0-rc.4`. Source STDO and
+the `spec` plugin are identified by
+`specification_methodology/v2.5.0-rc.4` at commit
+`7a25668a8fecfd26f895759af3bec4708727964a`; Axiom Indexer, STDO
+Representation, and the released `a_c.STDO` program/map are identified by their
+project-qualified RC4 tags at coordinated commit
+`a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. The exact commit-B published gate
+verified the complete atomic 13-ref transaction.
+
 This relation does not make the root a Product or merge the three child
 Products. It makes publication incomplete if one required asset is stale,
 missing, differently versioned, or derived from another STDO cut. Read

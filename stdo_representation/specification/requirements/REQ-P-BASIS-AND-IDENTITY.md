@@ -31,10 +31,18 @@ Source STDO member-set SHA-256:
 Axiomatic Calculus SHA-256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
-Axiom Indexer coordinated candidate version:
+Axiom Indexer exact version:
   v2.5.0-rc.4
-Axiom Indexer intended qualified ref:
+Axiom Indexer qualified ref:
   refs/tags/axiom_indexer/v2.5.0-rc.4
+Axiom Indexer annotated tag object:
+  4750e09639c118f1097d4ea046fe23d26713f96b
+Axiom Indexer peeled commit:
+  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
+Axiom Indexer repository tree:
+  093302db57bfb2e7beeed7f02dfc6d7090921a15
+Axiom Indexer Project Subtree tree:
+  3f71c3c2df99008b9521e338a7837c553f87173a
 Axiom Indexer Product member inventory SHA-256:
   7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
 Axiom Indexer executable SHA-256:
@@ -45,11 +53,11 @@ Axiom Indexer output contract SHA-256:
   fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
 ```
 
-The Axiom coordinates above describe the coordinated construction candidate.
-Its immutable tag object, peeled commit, repository tree, and Project Subtree
-tree do not exist before the combined freeze and shall be bound before release
-qualification. Historical accepted Axiom Indexer `v0.1.0-rc.1` remains
-predecessor evidence and shall not substitute for the same-version dependency.
+The Axiom coordinates above identify the published immutable dependency from
+the atomic coordinated cohort. Historical accepted Axiom Indexer
+`v0.1.0-rc.1` remains predecessor evidence and shall not substitute for the
+same-version dependency. Mutable sibling bytes remain prepublication
+construction evidence only.
 
 ## Identity law
 
@@ -137,12 +145,14 @@ evidence rather than a Product member. A changed Source STDO member shall be
 semantically re-evaluated by an LLM before the compression is accepted;
 byte-identical members and unaffected compression entries shall be conserved.
 
-**REQ-P-BASIS-013**: A release-matched Representation candidate shall bind the
-same exact version of its Axiom Indexer Development Product. A mutable sibling
-candidate may supply construction evidence before the coordinated cohort is
+**REQ-P-BASIS-013**: A release-matched Representation cut shall bind the same
+exact version of its Axiom Indexer Development Product. A mutable sibling
+candidate may supply construction evidence before a coordinated cohort is
 published, but it is not the immutable dependency and cannot satisfy release
-qualification. Publication requires the exact qualified Axiom Indexer cut,
-member inventory, executable digest, and imported contract identities.
+qualification or released use. The published relation requires the exact
+qualified Axiom Indexer cut, tag object, peeled commit, repository and Project
+Subtree trees, member inventory, executable digest, and imported contract
+identities.
 
 **REQ-P-BASIS-014**: The release-matched cohort shall close over exact Source
 STDO and its plugin, same-version Axiom Indexer mechanics, the eight-member

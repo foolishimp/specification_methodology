@@ -55,6 +55,27 @@ class ThinConstitutionTests(unittest.TestCase):
         self.assertEqual(result["historical_bootstrap"]["status"], "conserved")
         self.assertEqual(result["candidate_release"]["status"], "frozen")
         self.assertEqual(result["frame_basis"]["status"], "accepted_and_bound")
+        self.assertEqual(result["published_cohort"]["status"], "verified")
+        self.assertEqual(
+            result["published_cohort"]["identities"]["axiom_indexer"]["tag_object"],
+            CHECKER.AXIOM_TAG_OBJECT,
+        )
+        self.assertEqual(
+            result["published_cohort"]["identities"]["stdo_representation"][
+                "tag_object"
+            ],
+            CHECKER.REPRESENTATION_TAG_OBJECT,
+        )
+        self.assertEqual(
+            result["published_cohort"]["identities"]["axiom_indexer"]["commit"],
+            CHECKER.COHORT_COMMIT,
+        )
+        self.assertEqual(
+            result["published_cohort"]["identities"]["stdo_representation"][
+                "project_subtree_tree"
+            ],
+            CHECKER.REPRESENTATION_SUBTREE_TREE,
+        )
         self.assertTrue(result["stdo_status"]["valid"])
         self.assertEqual(result["stdo_status"]["toolchain"], "stdo 0.1.2")
         self.assertEqual(

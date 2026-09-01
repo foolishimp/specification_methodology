@@ -1,8 +1,8 @@
 # STDO Representation Product
 
-Status: active source definition for release-matched `2.5.0-rc.4` against exact
-Source STDO `v2.5.0-rc.4`; accepted STDO Representation
-`stdo_representation/v2.5.0-rc.1` remains immutable.
+Status: active source definition after publication of release-matched
+`2.5.0-rc.4` against exact Source STDO `v2.5.0-rc.4`; accepted STDO
+Representation `stdo_representation/v2.5.0-rc.1` remains immutable.
 
 ## Product statement
 
@@ -41,9 +41,9 @@ it.
   authority.
 - **Axiom Indexer Dependency** is the exact same-version Axiom Indexer cut,
   qualified under its own Product namespace and used without copying its
-  Product members into this Product. During coordinated construction, exact
-  candidate mechanics may produce evidence but do not become the immutable
-  dependency before cohort publication.
+  Product members into this Product. Exact mutable mechanics supplied bounded
+  prepublication evidence; ordinary and release use bind the published
+  immutable dependency.
 - **Release-Matched Asset Cohort** is the explicitly declared closed relation
   among exact Source STDO and its plugin, same-version Axiom Indexer mechanics,
   this Product, its program and map, and the complete Source STDO member-digest
@@ -100,9 +100,9 @@ the release-matched relation.
 
 ## Shared-source release profile
 
-Installed STDO `v2.5.0-rc.4` requires project-qualified future refs for an
-independently released Product in this shared source. The Product owner retains
-the stable profile already used by the accepted Representation RC1:
+Installed STDO `v2.5.0-rc.4` requires project-qualified refs for an independently
+released Product in this shared source. The Product owner retains the stable
+profile already used by the accepted Representation RC1:
 
 ```text
 local_release_key = stdo_representation
@@ -155,9 +155,13 @@ axiomatic_calculus_sha256:
 ### Axiom Indexer
 
 ```text
-candidate_version: v2.5.0-rc.4
-intended_qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.4
-publication_state: coordinated candidate; immutable tag coordinates do not yet exist
+exact_version: v2.5.0-rc.4
+qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.4
+publication_state: published in the atomic coordinated RC4 cohort
+tag_object: 4750e09639c118f1097d4ea046fe23d26713f96b
+peeled_commit: a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
+repository_tree: 093302db57bfb2e7beeed7f02dfc6d7090921a15
+project_subtree_tree: 3f71c3c2df99008b9521e338a7837c553f87173a
 product_member_inventory_sha256:
   7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
 executable_sha256:
@@ -168,9 +172,9 @@ output_contract_sha256:
   fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
 ```
 
-The seven candidate member bytes are conserved from historical accepted Axiom
+The seven published member bytes are conserved from historical accepted Axiom
 Indexer `v0.1.0-rc.1`; that predecessor remains immutable evidence, not the
-active release dependency. The coordinated dependency contributes URI
+active release dependency. The coordinated RC4 dependency contributes URI
 resolution, released program validation, logical-map instantiation, exact
 diagnostics, and ordered string joining. This Product does not widen those
 claims.
@@ -191,10 +195,10 @@ in [Exact dependency bases](#exact-dependency-bases) verify. Its governing
 contracts are [Imported validation boundary](requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary)
 and [Frame-use relation](requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation).
 It is invalidated by target-definition, release, version, member-inventory,
-contract, or result drift. Exact mutable candidate bytes may supply bounded
-construction evidence under the coordinated two-commit flow, but mutable
-sibling source never substitutes for the selected Install during release
-qualification or released use.
+contract, or result drift. Exact mutable candidate bytes supplied bounded
+construction evidence under the completed coordinated two-commit flow, but
+mutable sibling source never substitutes for the selected Install during
+release qualification or released use.
 
 ## Authoring and validation relation
 
@@ -415,10 +419,22 @@ tree `c1a8221b525a292322d80543d7d4d3491c4fe5e0`, and eight-member inventory
 Its exact-cut review and Product-owner decision accept only release claims
 `STDO-REP-2.5-C01` through `STDO-REP-2.5-C05` for its RC1-based subject.
 
-The active source project retains semantic version `2.5.0` and reprices its
-represented basis to Source STDO `v2.5.0-rc.4`. No new Representation RC is
-published or accepted by this source reprice. The accepted RC1 refs, bytes,
-claims, decisions, and evidence remain unchanged.
+The active source project retains semantic version `2.5.0` and exact represented
+basis Source STDO `v2.5.0-rc.4`. The release-matched Representation cut is
+published at immutable annotated tag
+`stdo_representation/v2.5.0-rc.4`, tag object
+`d85d25482f9d9132147bea189b0fe0aca1929dff`, peeling to commit
+`a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`, repository tree
+`093302db57bfb2e7beeed7f02dfc6d7090921a15`, and Representation Project
+Subtree tree `44fb7bc673726a920552d7dd62b3b754953396e0`. Publication does not
+accept that Product subject. The accepted RC1 refs, bytes, claims, decisions,
+and evidence remain unchanged.
+
+Postpublication project frame basis revision 16 binds the exact published
+Axiom and Representation tag objects, common commit-B peel and repository tree,
+independent Project Subtree trees, and closed publication phase for continuing
+source. Its bounded-proxy acceptance neither mutates nor accepts either
+immutable Product subject.
 
 No GTL composition, complete admitted `M_b`, provider attestation, automatic
 frame selection, ABG runtime, or semantic-completeness claim is made.

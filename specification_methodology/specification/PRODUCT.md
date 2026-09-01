@@ -305,13 +305,13 @@ evidence boundary, and authority grant.
 
 This Product owns the complete current source-project configuration in
 [`REFERENCE_FRAME_BASIS.md`](REFERENCE_FRAME_BASIS.md). That separately
-accepted prior-cut declaration binds the exact method and profile acquisition
-bases; Executive, Worker, Reviewer, and Fundamental Invariant Conservation
-frames; actor and operation grants; all eleven prior-profile generic
-specialist-family dispositions; four testing frames; coverage and result
-relations; lifecycle triggers; and invalidation and revision law. Availability
-of the twelve-family successor profile does not retarget that accepted basis;
-adoption requires its own exact project-basis decision.
+accepted revision-2 declaration binds exact public RC4 method and profile
+acquisition bases; Executive, Worker, Reviewer, and Fundamental Invariant
+Conservation frames; actor and operation grants; all twelve current-profile
+generic specialist-family dispositions; four testing frames; coverage and
+result relations; lifecycle triggers; and invalidation and revision law. Any
+future method or profile basis still requires its own exact project-basis
+decision; selector movement or source availability cannot retarget it.
 
 The declaration governs the mutable source project. It is not a released
 standards member, does not alter an immutable release, and does not select or

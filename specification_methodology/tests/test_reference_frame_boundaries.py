@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import unittest
@@ -13,6 +14,11 @@ SPEC_METHOD = ROOT / "specification/standards/SPEC_METHOD.md"
 PRODUCT = ROOT / "specification/PRODUCT.md"
 BASIS = ROOT / "specification/REFERENCE_FRAME_BASIS.md"
 DEFINITION = ROOT / "stdo_default.json"
+DECISION = (
+    ROOT
+    / ".ai-workspace/decisions/20260901T163724Z_stdo_rc4_source_basis_acceptance.json"
+)
+DECISION_SHA256 = "08cb9738b486f6478ef538bafec616e57309cfc3ff57d792b532c250b27159fb"
 COMPRESSION = ROOT / "specification/standards/authority_compressions/stdo_compressed.md"
 BASIS_TEMPLATE = (
     ROOT / "specification/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
@@ -332,19 +338,26 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
     def test_project_basis_binds_exact_immutable_method_coordinates(self) -> None:
         text = BASIS.read_text(encoding="utf-8")
         for required in (
-            "stdo://releases/v2.4.3-rc.3/",
-            "312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551",
-            "a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174",
-            "9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9",
-            "50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c",
-            "mutable successor standards",
+            "stdo://releases/v2.5.0-rc.4/",
+            "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+            "032dac0c833111547f7dd4b290c5316ed9b70f97",
+            "7a25668a8fecfd26f895759af3bec4708727964a",
+            "737af9a7a2779dbf59e7c81232e7efd4dd98692a",
+            "a9565f923213759984f936d087cd7cebd0f44a74",
+            "d6642edac9fb509a68b2ffc81d3404f2360b34e4",
+            "504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656",
+            "80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+            "c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+            "6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+            "Mutable successor standards",
             "candidate subjects, not bootstrap authority",
-            "alter an immutable release",
-            "urn:stdo:decision:specification-methodology:reference-frame-basis:v1",
-            "direct_human_authorization_2026-08-29",
-            "urn:stdo:actor:specification-methodology:codex:t-016-pen-holder",
+            "alter an\nimmutable release",
+            "urn:stdo:decision:specification-methodology:reference-frame-basis:v2",
+            "20260901T163724Z_stdo_rc4_source_basis_acceptance.json",
+            "urn:openai:codex:delegated-rc4-source-adoption",
         ):
             self.assertIn(required, text)
+        self.assertNotIn("stdo://releases/v2.4.3-rc.3/", text)
 
         definition = json.loads(DEFINITION.read_text(encoding="utf-8"))
         self.assertEqual(
@@ -352,13 +365,88 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             [
                 {
                     "uri": "./specification/REFERENCE_FRAME_BASIS.md",
-                    "authority": ["./specification/PRODUCT.md"],
+                    "authority": [
+                        "./specification/PRODUCT.md#reference-frame-engagement",
+                        "./.ai-workspace/decisions/20260901T163724Z_stdo_rc4_source_basis_acceptance.json",
+                    ],
                     "applies_to": [
                         "urn:stdo:product-definition:specification-methodology"
                     ],
                 }
             ],
         )
+        decision = json.loads(DECISION.read_text(encoding="utf-8"))
+        self.assertEqual(
+            hashlib.sha256(DECISION.read_bytes()).hexdigest(), DECISION_SHA256
+        )
+        self.assertEqual(
+            decision["subject_sha256"],
+            "sha256:" + hashlib.sha256(BASIS.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(
+            decision["adoption_plan"]["plan_sha256"],
+            "sha256:bb38e6b613730ec2073f0b2072c054860c846d35c1cadcfc806bbefd1a38d6b4",
+        )
+        self.assertEqual(
+            decision["decision_id"],
+            "urn:stdo:decision:specification-methodology:reference-frame-basis:v2",
+        )
+        self.assertEqual(decision["change_class"], "product_reprice")
+        self.assertEqual(decision["proxy_grant"]["delegation_rights"], "none")
+        self.assertEqual(
+            decision["proxy_grant"]["validity"]["current_status"],
+            "exhausted-by-completed-decision-and-adoption",
+        )
+        self.assertEqual(
+            decision["proxy_grant"]["revocation"]["status"],
+            "not-revoked-before-completion",
+        )
+        operation_grant = decision["operation_grant"]
+        self.assertEqual(
+            operation_grant["operation"],
+            {
+                "kind": "stdo.product-definition.adopt",
+                "definition_ref": "./stdo_default.json",
+                "accepted_plan_sha256": decision["adoption_plan"]["plan_sha256"],
+                "tool_basis": "stdo://releases/v2.5.0-rc.4/",
+            },
+        )
+        self.assertEqual(
+            operation_grant["mutation_subject"],
+            {
+                "definition_id": "urn:stdo:product-definition:specification-methodology",
+                "preimage_sha256": decision["adoption_plan"]["definition_sha256"],
+                "postimage_sha256": "sha256:c8c84cc29516b3c541e59a1643d63b93f45bd6d3a9a7050aedbaa806a9293f96",
+            },
+        )
+        write_territory = operation_grant["write_territory"]
+        self.assertEqual(write_territory, ["/$schema", "/constitution/stdo/basis"])
+        self.assertEqual(
+            set(operation_grant["permitted_effects"]), set(write_territory)
+        )
+        for forbidden_pointer in (
+            "/constitution/stdo/selector",
+            "/reference_frame_bases",
+            "/what",
+            "/how",
+        ):
+            self.assertNotIn(forbidden_pointer, write_territory)
+            self.assertNotIn(forbidden_pointer, operation_grant["permitted_effects"])
+        self.assertIn(
+            "all-paths-outside-the-exact-write-territory",
+            operation_grant["excluded_effects"],
+        )
+        self.assertEqual(operation_grant["delegation_rights"], "none")
+        self.assertEqual(
+            operation_grant["validity"]["current_status"],
+            "exhausted-by-exact-postimage",
+        )
+        self.assertIn(
+            "stop-after-the-first-exact-atomic-postimage",
+            operation_grant["stop_conditions"],
+        )
+        self.assertTrue(decision["self_expansion_prohibited"])
+        self.assertFalse(decision["human_exact_byte_inspection_claimed"])
 
     def test_project_basis_dispositions_every_profile_family(self) -> None:
         text = BASIS.read_text(encoding="utf-8")
@@ -368,6 +456,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             "specification-methodology:reviewer:v1",
             "fundamental-invariant-conservation:v1",
             "specialist:product:v1",
+            "specialist:product-composition:v1",
             "specialist:design:v1",
             "specialist:design-component:v1",
             "specialist:public-boundary:v1",
@@ -386,6 +475,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
             self.assertIn(identity, text)
 
         for required in (
+            "All twelve baseline families",
             "## Evaluation Inventory And Coverage Ledger",
             "## Activation, Results, And Conjunction",
             "## Lifecycle Triggers, Invalidation, And Revision",
@@ -406,6 +496,7 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
         self.assertNotIn("no admission, publication, mutation", text)
 
         basis = BASIS.read_text(encoding="utf-8")
+        self.assertIn("STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame", basis)
         self.assertIn(
             "at activation produces `activation_refusal` and no Worker result",
             basis,

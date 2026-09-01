@@ -1,9 +1,9 @@
 # STDO Representation Quickstart
 
-This guide exercises the coordinated STDO Representation `2.5.0-rc.4`
-compression-and-index candidate against exact Source STDO `v2.5.0-rc.4`. It is
-not constitutional authority. Accepted project frame basis revision 15 governs
-this workflow.
+This guide exercises the published coordinated STDO Representation
+`2.5.0-rc.4` compression and index against exact Source STDO
+`v2.5.0-rc.4`. It is not constitutional authority. Accepted project frame
+basis revision 16 governs this workflow.
 
 ## 1. Verify the dependencies
 
@@ -19,12 +19,23 @@ The result must identify manifest SHA-256
 `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`
 with no failures.
 
-During the authorized coordinated prepublication construction, use the exact
-same-version sibling candidate and verify its frozen mechanics:
+Acquire the exact published same-version Axiom dependency and verify its frozen
+mechanics:
 
 ```sh
 STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
-AXIOM_INDEXER_ROOT=../axiom_indexer
+STACK_ROOT="$(git rev-parse --show-toplevel)"
+AXIOM_RELEASE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/axiom-indexer-rc4.XXXXXX")"
+test "$(git -C "$STACK_ROOT" rev-parse \
+  refs/tags/axiom_indexer/v2.5.0-rc.4)" = \
+  4750e09639c118f1097d4ea046fe23d26713f96b
+test "$(git -C "$STACK_ROOT" rev-parse \
+  refs/tags/axiom_indexer/v2.5.0-rc.4^{})" = \
+  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
+git -C "$STACK_ROOT" archive \
+  refs/tags/axiom_indexer/v2.5.0-rc.4 axiom_indexer |
+  tar -x -C "$AXIOM_RELEASE_ROOT"
+AXIOM_INDEXER_ROOT="$AXIOM_RELEASE_ROOT/axiom_indexer"
 python3 "$AXIOM_INDEXER_ROOT/scripts/check_constitution.py" \
   --stdo-store "$STDO_STORE"
 test "$(shasum -a 256 \
@@ -39,11 +50,10 @@ program-schema SHA-256
 and output-contract SHA-256
 `fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694`.
 
-After coordinated child-tag creation, ordinary and release qualification use
-only `refs/tags/axiom_indexer/v2.5.0-rc.4` and bind its annotated tag object,
-commit-B peel, tree, Project Subtree tree, and the same seven-member inventory.
-The mutable sibling is authorized construction evidence only. Stop on any
-mismatch or on use outside that boundary before the immutable cut exists.
+Ordinary and release use only `refs/tags/axiom_indexer/v2.5.0-rc.4` and bind its
+annotated tag object, commit-B peel, tree, Project Subtree tree, and the same
+seven-member inventory. The mutable sibling was authorized prepublication
+construction evidence only. Stop on any mismatch.
 
 ## 2. Validate the compression and index
 
@@ -71,11 +81,11 @@ portable Product member.
 
 ## 3. Use the native skill
 
-The native skill in this source candidate is repriced to the exact RC4
-compression and index and passes the project checker. Published STDO
-Representation `2.5.0` RC1 remains the accepted Product; repository discovery
-of these newer bytes is a source-project convenience, not another released RC.
-Native discovery remains:
+The native skill is part of the exact published RC4 cut and passes the project
+checker. Published STDO Representation `2.5.0` RC1 remains the accepted
+Product; RC4 publication identifies a qualified release subject but does not
+accept it. Repository discovery from mutable source remains a convenience;
+released use binds the immutable RC4 tag. Native discovery remains:
 
 Codex discovers:
 
@@ -161,10 +171,10 @@ stdo --store "$STDO_STORE" verify v2.5.0-rc.4 \
 python3 -m json.tool stdo_representation.json >/dev/null
 ```
 
-Revision 15 of the project frame basis is accepted at SHA-256
-`e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e`.
-Product-owner decision SHA-256
-`ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92`
+Revision 16 of the project frame basis is accepted at SHA-256
+`c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3`.
+Bounded-proxy decision SHA-256
+`116630d8b38fc2cda9462742f48d06b5605d69e50fe71902f4e78481bd1b82b0`
 binds those exact bytes. `stdo_representation.json` names that decision in its
 `reference_frame_bases` relation; it does not infer activation from this guide
 or reuse revision 13. Verify the binding with:
@@ -174,8 +184,15 @@ stdo --store "$STDO_STORE" status \
   --definition stdo_representation.json --verify
 ```
 
-This acceptance governs the continuing RC4-cohort source candidate. It does not
-publish or accept another immutable STDO Representation RC.
+This acceptance governs the continuing source after completed RC4 publication.
+Revision 15 remains the historical construction and prepublication basis. The
+atomic publication did not arise from revision-16 frame acceptance, and frame
+acceptance does not accept the immutable RC4 Product subject.
+
+The immutable skill intentionally retains the revision-15 basis and decision
+digests carried by RC4. Resolve those bytes within the immutable Representation
+tag. In a continuing source checkout, use the overlay-bound revision 16 for
+constitutional work; do not rewrite the skill without a higher RC.
 
 ## Historical paths
 

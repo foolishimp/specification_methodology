@@ -8,7 +8,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from stdo_toolchain.product_definition import definition_status
+from stdo_toolchain.product_definition import definition_status, install_bootstrap
 from stdo_toolchain.store import Store
 
 
@@ -153,7 +153,7 @@ class RepositoryDogfoodTests(unittest.TestCase):
             target_errors,
         )
 
-    def test_repository_product_definition_binds_the_rc3_builder_basis(
+    def test_repository_product_definition_binds_the_rc4_builder_basis(
         self,
     ) -> None:
         repository = Path(__file__).resolve().parents[1]
@@ -161,7 +161,30 @@ class RepositoryDogfoodTests(unittest.TestCase):
         definition = json.loads(definition_path.read_text(encoding="utf-8"))
         with tempfile.TemporaryDirectory() as temporary:
             store = Store(Path(temporary) / "store")
-            installed = store.install(str(git_repository(repository)), "v2.4.3-rc.3")
+            installed = store.install(str(git_repository(repository)), "v2.5.0-rc.4")
+            self.assertEqual(
+                installed.manifest_sha256,
+                "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+            )
+            self.assertEqual(
+                installed.manifest["release"],
+                {
+                    "cut": "v2.5.0-rc.4",
+                    "tag_object": "032dac0c833111547f7dd4b290c5316ed9b70f97",
+                    "commit": "7a25668a8fecfd26f895759af3bec4708727964a",
+                    "tree": "737af9a7a2779dbf59e7c81232e7efd4dd98692a",
+                    "standards_tree": "d6642edac9fb509a68b2ffc81d3404f2360b34e4",
+                    "project_release_namespace": "specification_methodology",
+                    "qualified_ref": "refs/tags/specification_methodology/v2.5.0-rc.4",
+                    "project_subtree_root": "specification_methodology",
+                    "project_subtree_tree": "a9565f923213759984f936d087cd7cebd0f44a74",
+                },
+            )
+            self.assertEqual(installed.manifest["standards"]["member_count"], 52)
+            self.assertEqual(
+                installed.manifest["standards"]["member_set_sha256"],
+                "504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656",
+            )
             self.assertEqual(
                 definition["constitution"]["stdo"]["basis"],
                 {
@@ -171,9 +194,26 @@ class RepositoryDogfoodTests(unittest.TestCase):
             )
             report = definition_status(definition_path, store, verify=True)
             self.assertTrue(report["valid"], report["failures"])
-            for entrypoint in definition["constitution"]["entrypoints"][:2]:
+            self.assertEqual(
+                [
+                    entrypoint["uri"]
+                    for entrypoint in definition["constitution"]["entrypoints"][:4]
+                ],
+                [
+                    "standards/authority_compressions/stdo_bootstrap.md",
+                    "standards/SPEC_METHOD.md",
+                    "standards/REFERENCE_FRAME_METHOD.md",
+                    "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+                ],
+            )
+            for entrypoint in definition["constitution"]["entrypoints"][:4]:
                 resolved = store.resolve(installed.uri + entrypoint["uri"])
                 self.assertTrue(resolved.is_file(), entrypoint)
+            bootstrap = install_bootstrap(definition_path, store, dry_run=True)
+            self.assertEqual(
+                [target["action"] for target in bootstrap["targets"]],
+                ["unchanged", "unchanged"],
+            )
 
         for reference in (
             definition["what"]["intent"],

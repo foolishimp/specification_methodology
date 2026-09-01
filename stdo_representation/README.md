@@ -1,10 +1,10 @@
 # STDO Representation
 
-STDO Representation `2.5.0-rc.4` is the coordinated candidate canonical
+STDO Representation `2.5.0-rc.4` is the published coordinated canonical
 `a_c.STDO` semantic compression of exact STDO `v2.5.0-rc.4`, a deterministic
 logical constraint index over that compression, and a concise native skill for
 using both. An LLM authors and reviews meaning. The exact same-version Axiom
-Indexer candidate supplies URI resolution, basic validation, index
+Indexer cut supplies URI resolution, basic validation, index
 instantiation, and exact ordered string joining.
 
 ```text
@@ -56,15 +56,19 @@ from Source STDO. A role label or prompt grants no external authority.
   `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`;
   standards member aggregate
   `504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656`.
-- Axiom Indexer: exact `v2.5.0-rc.4` candidate at intended ref
-  `refs/tags/axiom_indexer/v2.5.0-rc.4`, seven-member inventory SHA-256
+- Axiom Indexer: exact published `v2.5.0-rc.4` cut at
+  `refs/tags/axiom_indexer/v2.5.0-rc.4`, tag object
+  `4750e09639c118f1097d4ea046fe23d26713f96b`, peeling to commit
+  `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`, with seven-member inventory SHA-256
   `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`,
   and executable SHA-256
   `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
 
-The Axiom tag object and commit-B coordinates do not exist until coordinated
-child-tag creation. Candidate mechanics are construction evidence until that
-exact immutable cut is created and qualified.
+The Axiom repository tree is
+`093302db57bfb2e7beeed7f02dfc6d7090921a15`; its Project Subtree tree is
+`3f71c3c2df99008b9521e338a7837c553f87173a`. Mutable sibling mechanics remain
+historical construction evidence and cannot substitute for this immutable
+dependency.
 
 The bootstrap STDO Representation Product remains the accepted immutable
 [`v0.1.0-rc.1`](https://github.com/foolishimp/stdo_representation/releases/tag/v0.1.0-rc.1).
@@ -73,9 +77,10 @@ Its annotated tag object is
 `b127ee9a0362f85d4875ae59664ecfcd13028d9c` and tree
 `15f9beb360836386ce9607dd31e30d0c8b5cd830`. The annotated `v0.1.0` tag is
 the mutable highest-published-RC selector, not the immutable Product identity.
-The active source candidate is STDO Representation `2.5.0-rc.4`, exactly
-matching the represented STDO suffix while retaining its own Product and RC
-identity.
+The published STDO Representation `2.5.0-rc.4` cut exactly matches the
+represented STDO suffix while retaining its own Product and RC identity.
+Publication identifies the qualified cut; it does not by itself accept Product
+meaning, and the accepted RC1 Product remains unchanged.
 
 ## Evidence and boundary
 
@@ -99,17 +104,24 @@ dependencies.
 ## Product Definition
 
 `stdo_representation.json` selects the exact locally tagged and verified Source
-STDO `v2.5.0-rc.4` cut frozen by coordinated commit A. Project frame basis
-revision 15 is accepted at SHA-256
-`e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e`.
-Product-owner decision SHA-256
-`ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92`
+STDO `v2.5.0-rc.4` cut frozen by coordinated commit A. Postpublication project
+frame basis revision 16 is accepted at SHA-256
+`c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3`.
+Bounded-proxy decision SHA-256
+`116630d8b38fc2cda9462742f48d06b5605d69e50fe71902f4e78481bd1b82b0`
 accepts those exact bytes, and the overlay binds that decision and basis.
 
 Accepted revision 13 and its decision remain exact historical authority for
-the published STDO Representation `2.5.0` RC1 subject. Revision 15 separately
-governs the continuing RC4-cohort source candidate; it neither changes RC1 nor
-publishes or accepts another immutable Representation RC.
+the published STDO Representation `2.5.0` RC1 subject. Revision 15 remains
+historical authority for RC4 construction and prepublication qualification.
+Revision 16 governs the continuing source after completed publication; it
+neither changes RC1 nor accepts the published RC4 Product subject.
+
+The immutable RC4 native skill remains byte-for-byte frozen with its
+revision-15 construction-basis digests. Verify those digests inside the
+immutable RC4 tag. Mutable-source constitutional work uses the revision-16
+overlay binding above; changing the released skill would require a higher
+immutable RC.
 
 ## Authority order
 

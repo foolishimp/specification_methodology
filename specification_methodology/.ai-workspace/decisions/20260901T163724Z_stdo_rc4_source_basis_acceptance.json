@@ -1,0 +1,138 @@
+{
+  "kind": "stdo-specification-methodology.frame-and-adoption-acceptance",
+  "schema_version": 1,
+  "decision_id": "urn:stdo:decision:specification-methodology:reference-frame-basis:v2",
+  "subject_uri": "urn:stdo:reference-frame-basis:specification-methodology:v2",
+  "subject_ref": "./specification/REFERENCE_FRAME_BASIS.md",
+  "subject_sha256": "sha256:5990d6cccac24b0538ec6db89fa69744856d93b160e1cb06e34bf00b02ee9c66",
+  "method_basis_uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md",
+  "method_basis_sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+  "actor_identity": "urn:openai:codex:delegated-rc4-source-adoption",
+  "authority_identity": "urn:stdo:authority:specification-methodology:product-owner",
+  "authority_mode": "explicitly-user-granted-bounded-source-adoption-proxy",
+  "change_class": "product_reprice",
+  "decision": "accepted",
+  "scope": "Accept only the exact revision-2 Specification Methodology source-project frame basis and the separately presented digest-bound plan that adopts public immutable STDO v2.5.0-rc.4 for this mutable source Product Definition; excludes child Products, immutable release bytes, Product acceptance, tags, selectors, branches, publication, and any scope or authority expansion.",
+  "decided_at": "2026-09-01T16:37:24Z",
+  "grant_source_kind": "direct-human-product-owner-conversation",
+  "decision_source": "After coordinated RC4 publication, the Product owner directly instructed that every live source surface close on and consume RC4, explicitly including Specification Methodology self-adoption, ticket closure, and cleanup. This bounded proxy decision applies that later instruction; T-027 itself did not authorize adoption, and this record does not claim personal human inspection of these exact bytes.",
+  "self_expansion_prohibited": true,
+  "human_exact_byte_inspection_claimed": false,
+  "proxy_grant": {
+    "grantor_identity": "urn:stdo:authority:specification-methodology:product-owner",
+    "actor_identity": "urn:openai:codex:delegated-rc4-source-adoption",
+    "subject": {
+      "uri": "urn:stdo:reference-frame-basis:specification-methodology:v2",
+      "ref": "./specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "sha256:5990d6cccac24b0538ec6db89fa69744856d93b160e1cb06e34bf00b02ee9c66"
+    },
+    "scope": "Decide acceptance of only the exact revision-2 frame basis and exact digest-bound RC4 adoption plan for the mutable Specification Methodology source Product Definition.",
+    "permitted_decisions": [
+      "accept-or-refuse-the-exact-frame-basis-subject",
+      "accept-or-refuse-the-exact-digest-bound-adoption-plan"
+    ],
+    "excluded_decisions": [
+      "alter-any-immutable-release-or-ref",
+      "accept-any-released-product",
+      "act-for-any-child-product",
+      "widen-product-scope-or-authority",
+      "delegate-this-proxy-grant"
+    ],
+    "validity": {
+      "effective_at": "2026-09-01T16:37:24Z",
+      "expires_on": "recording-the-exact-decision-and-applying-or-refusing-the-exact-adoption-plan",
+      "current_status": "exhausted-by-completed-decision-and-adoption"
+    },
+    "delegation_rights": "none",
+    "revocation": {
+      "authority_identity": "urn:stdo:authority:specification-methodology:product-owner",
+      "condition": "direct revocation before completion, or any subject, basis, scope, or adoption-plan drift",
+      "status": "not-revoked-before-completion"
+    },
+    "provenance": "Direct Product-owner conversation instruction after coordinated public RC4 publication; no authority is inferred from T-027, repository access, or actor capability."
+  },
+  "operation_grant": {
+    "grant_id": "urn:stdo:operation-grant:specification-methodology:adopt-rc4:v1",
+    "grantor_identity": "urn:stdo:authority:specification-methodology:product-owner",
+    "actor_identity": "urn:openai:codex:delegated-rc4-source-adoption",
+    "operation": {
+      "kind": "stdo.product-definition.adopt",
+      "definition_ref": "./stdo_default.json",
+      "accepted_plan_sha256": "sha256:bb38e6b613730ec2073f0b2072c054860c846d35c1cadcfc806bbefd1a38d6b4",
+      "tool_basis": "stdo://releases/v2.5.0-rc.4/"
+    },
+    "mutation_subject": {
+      "definition_id": "urn:stdo:product-definition:specification-methodology",
+      "preimage_sha256": "sha256:0da9485e22f612c285f423716d97060f6455d1602bdb93fba2515110509feb44",
+      "postimage_sha256": "sha256:c8c84cc29516b3c541e59a1643d63b93f45bd6d3a9a7050aedbaa806a9293f96"
+    },
+    "write_territory": [
+      "/$schema",
+      "/constitution/stdo/basis"
+    ],
+    "permitted_effects": {
+      "/$schema": {
+        "from": "stdo://releases/v2.4.3-rc.3/standards/schemas/product-definition.schema.json",
+        "to": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+      },
+      "/constitution/stdo/basis": {
+        "from": {
+          "uri": "stdo://releases/v2.4.3-rc.3/",
+          "manifest_sha256": "312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551"
+        },
+        "to": {
+          "uri": "stdo://releases/v2.5.0-rc.4/",
+          "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
+        }
+      }
+    },
+    "excluded_effects": [
+      "all-paths-outside-the-exact-write-territory",
+      "selector-change",
+      "frame-basis-or-authority-change",
+      "immutable-release-or-ref-change",
+      "child-product-change"
+    ],
+    "validity": {
+      "effective_at": "2026-09-01T16:37:24Z",
+      "requires": "the exact preimage, accepted plan, verified target Install, actor, grantor, scope, and write territory above",
+      "expires_on": "the first successful atomic postimage, deterministic refusal, direct revocation, or any bound-coordinate drift",
+      "current_status": "exhausted-by-exact-postimage"
+    },
+    "delegation_rights": "none",
+    "stop_conditions": [
+      "stop-without-effect-on-any-preimage-plan-install-authority-or-territory-mismatch",
+      "stop-after-the-first-exact-atomic-postimage",
+      "no-continuation-or-authority-survives-grant-exhaustion"
+    ],
+    "provenance": "The later direct Product-owner instruction supplied the operation authority; the accepted deterministic adoption plan bounded its exact subject and effects."
+  },
+  "adoption_plan": {
+    "kind": "stdo.adoption-plan",
+    "schema_version": 1,
+    "definition_id": "urn:stdo:product-definition:specification-methodology",
+    "definition_sha256": "sha256:0da9485e22f612c285f423716d97060f6455d1602bdb93fba2515110509feb44",
+    "selector": "stdo://channels/2.5.0",
+    "from_basis": "stdo://releases/v2.4.3-rc.3/",
+    "from_manifest_sha256": "sha256:312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551",
+    "to_basis": "stdo://releases/v2.5.0-rc.4/",
+    "to_manifest_sha256": "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+    "to_tag_object": "032dac0c833111547f7dd4b290c5316ed9b70f97",
+    "to_commit": "7a25668a8fecfd26f895759af3bec4708727964a",
+    "to_tree": "737af9a7a2779dbf59e7c81232e7efd4dd98692a",
+    "plan_sha256": "sha256:bb38e6b613730ec2073f0b2072c054860c846d35c1cadcfc806bbefd1a38d6b4"
+  },
+  "supersession_record": {
+    "prior_subject_uri": "urn:stdo:reference-frame-basis:specification-methodology:v1",
+    "prior_subject_sha256": "sha256:348482c06d6c8ffd60fd4ca44bf4f2783fedbe032a7bbb7208e650e875b98ba4",
+    "change": "The mutable source now acquires exact public RC4, the congruent baseline Worker mapping, and all twelve current-profile specialist families.",
+    "disposition": "Revision 1 remains exact historical source authority for its prior activations and is superseded only for continuing mutable source work. No immutable STDO release is changed."
+  },
+  "evidence_refs": [
+    "./specification/PRODUCT.md#reference-frame-engagement",
+    "./specification/REFERENCE_FRAME_BASIS.md",
+    "./specification/GOALS.md",
+    "./stdo_default.json",
+    "../stack_release.json"
+  ]
+}

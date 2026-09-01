@@ -1,21 +1,23 @@
 # STDO Representation Project Reference-Frame Basis
 
-Status: accepted and bound source-project basis, revision 15, through the exact
+Status: accepted and bound source-project basis, revision 16, through the exact
 digest-bound bounded-proxy decision named in the Acceptance Gate.
 
-Accepted revision 13 remains exact historical authority for the published STDO
-Representation `2.5.0` RC1 subject. Its acceptance does not carry forward to
-this RC4-cohort revision.
+Accepted revision 15 and its decision remain exact historical authority for
+coordinated RC4 construction and prepublication qualification. Accepted
+revision 13 remains exact historical authority for the published STDO
+Representation `2.5.0` RC1 subject. Neither acceptance accepts the published
+RC4 Product subject or governs this postpublication successor basis.
 
 ## Project frame basis
 
 ```text
 frame_set_uri =
-  "urn:stdo-representation:reference-frame-basis:source-project:15"
+  "urn:stdo-representation:reference-frame-basis:source-project:16"
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
 governed_outcome =
-  "construct and qualify the coordinated STDO Representation 2.5.0-rc.4 cohort subject"
+  "maintain the continuing STDO Representation 2.5.0 source against the exact published 2.5.0-rc.4 cohort"
 frame_set_authority =
   "urn:stdo-representation:authority:product-owner"
 reference_frame_method =
@@ -34,16 +36,17 @@ stdo_manifest_sha256 =
   "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
 ```
 
-This basis governs project construction and release evaluation. It is not a
-consumer prompt, generated frame overlay, GTL composition, or grant of
-operation authority.
+This basis governs the continuing source after completed coordinated RC4
+publication. It is not a consumer prompt, generated frame overlay, GTL
+composition, Product acceptance, or grant of operation authority.
 
 Every activation binds the exact live WHAT inventory and digest, Product member
 bytes, dependency coordinates, actor and configuration, evidence boundary, and
-activation time. Pre-publication activation binds a deterministic candidate
-inventory and claim bytes; it does not require an RC tag. Post-publication
-exact-cut activation additionally binds the annotated tag object, peeled
-commit, tree, and remote refs.
+activation time. Released-use and exact-cut activation bind the immutable RC4
+tag objects, peeled commits, repository and Project Subtree trees, Product
+inventories, claim bytes, and remote refs below. Any qualifying-byte change is
+a new candidate and requires a higher immutable RC; it cannot be admitted into
+the published RC4 cut by editing this continuing source.
 
 ## Exact dependency basis
 
@@ -59,23 +62,45 @@ Source STDO installed manifest =
   sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
 Source STDO member set =
   sha256:504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
-Axiom Indexer candidate = v2.5.0-rc.4
-Axiom Indexer intended qualified ref =
+Axiom Indexer published cut = v2.5.0-rc.4
+Axiom Indexer qualified ref =
   refs/tags/axiom_indexer/v2.5.0-rc.4
-Axiom Indexer publication state =
-  exact seven-member candidate; tag object and commit-B coordinates pending
+Axiom Indexer tag object =
+  4750e09639c118f1097d4ea046fe23d26713f96b
+Axiom Indexer peeled commit =
+  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
+Axiom Indexer repository tree =
+  093302db57bfb2e7beeed7f02dfc6d7090921a15
+Axiom Indexer Project Subtree tree =
+  3f71c3c2df99008b9521e338a7837c553f87173a
 Axiom Indexer member inventory =
   sha256:7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
 Axiom Indexer executable =
   sha256:dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
 Representation exact version = 2.5.0-rc.4
 Represented STDO exact version = 2.5.0-rc.4
+Representation qualified ref =
+  refs/tags/stdo_representation/v2.5.0-rc.4
+Representation tag object =
+  d85d25482f9d9132147bea189b0fe0aca1929dff
+Representation peeled commit =
+  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
+Representation repository tree =
+  093302db57bfb2e7beeed7f02dfc6d7090921a15
+Representation Project Subtree tree =
+  44fb7bc673726a920552d7dd62b3b754953396e0
+Representation member inventory =
+  sha256:32dd04f5644a05c04c844a28d1978d1c1ffdd5e7f20473b7d7f8626e1e07e830
+publication state =
+  completed by one atomic 13-ref transaction and verified from a fresh public checkout
 ```
 
-The Axiom candidate may supply the authorized mechanical construction step.
-Release qualification additionally requires its exact annotated RC4 tag and
-commit-B identities. Historical accepted `v0.1.0-rc.1` remains predecessor
-evidence and cannot substitute for the release-matched dependency.
+The mutable Axiom sibling supplied bounded prepublication construction
+evidence. It cannot substitute for the published immutable dependency in
+ordinary or released use. Historical accepted `v0.1.0-rc.1` remains
+predecessor evidence and cannot substitute for the release-matched dependency.
+The publication phase is closed; this basis does not reopen, rewrite, move, or
+accept either immutable RC4 Product subject.
 
 ## Human authority
 
@@ -129,10 +154,12 @@ residuals, and invalidation conditions.
 
 ## Technical triage and promotion policy
 
-The current promotion boundary is advancement of the RC4-cohort STDO
-Representation `2.5.0` source into one frozen publication-ready candidate or,
-under a separate publication grant, an immutable RC. Product shape, the
-accepted RC1 Product, and historical releases remain outside that boundary.
+The current boundary is maintenance of the continuing STDO Representation
+`2.5.0` source against the exact published RC4 cohort. RC4 candidate
+construction and publication are closed historical phases. Any qualifying-byte
+change requires fresh intake, the smallest lawful re-entry, and a higher
+immutable RC. Product shape, Product acceptance, the accepted RC1 Product, and
+historical releases remain outside this boundary.
 
 Reviewer grades consequence under this descending severity scale:
 
@@ -216,20 +243,19 @@ action.
 
 ### F-COHORT-INTEGRITY
 
-- Evaluation: does one closed release-matched cohort bind the exact commit-A
-  STDO cut and plugin, exact Axiom mechanics, the eight-member Representation
-  subject, the program and map, and all 52 source-member digests before one
-  atomic publication transaction?
-- Evidence: local annotated STDO tag and verified install, complete
-  `source-corpus.json`, RC3-to-RC4 member delta and semantic dispositions,
-  exact Axiom candidate inventory and contracts, regenerated map and report,
-  coordinated release record, local child refs, fetched remote expected object
-  IDs or absence, and the closed push set.
-- Invariants: two-commit construction; 49 unchanged source members and all
-  unaffected program entries conserved; three changed members re-evaluated;
-  immutable tags create-only; every mutable ref protected by an explicit
-  compare-and-swap lease; no sequential or non-atomic fallback.
-- Actor envelope: `K-CANDIDATE` before publication and `K-EXACT-CUT` after it.
+- Evaluation: does the published release-matched cohort still bind the exact
+  commit-A STDO cut and plugin, exact Axiom mechanics, eight-member
+  Representation subject, program and map, and all 52 source-member digests as
+  one completed atomic publication?
+- Evidence: exact annotated STDO, Axiom, and Representation tag objects and
+  peels; repository and Project Subtree trees; verified Install; complete
+  `source-corpus.json`; RC3-to-RC4 delta; frozen inventories and reports; the
+  closed 13-ref push receipt; remote verification; and fresh public
+  reacquisition.
+- Invariants: the published tags are immutable; the two-commit carrier and
+  Product subtrees remain exact; no continuing-source edit enters RC4; and any
+  successor uses a higher immutable RC.
+- Actor envelope: `K-EXACT-CUT`.
 - Exclusions: equal version text, local path proximity, a green unit test, or a
   partial remote ref population cannot establish cohort integrity.
 
@@ -288,7 +314,7 @@ action.
   comparison required by `REQ-P-DOGFOOD-008` and its usefulness verdict; it
   does not consume that comparison as prerequisite evidence.
 
-### F-CANDIDATE-READINESS
+### F-CANDIDATE-READINESS — closed historical phase
 
 - Evaluation: is one frozen eight-member candidate ready for immutable RC
   publication under exact dependencies, claims, evidence, and exclusions?
@@ -300,11 +326,13 @@ action.
 - Actor envelope: `K-CANDIDATE`.
 - Exclusions: branch state, intended paths, test count, or intended tag name is
   not candidate identity.
+- Result: closed as the exact commit-B input to the completed RC4 publication;
+  later source changes do not reopen or amend that result.
 
 ### F-EXACT-CUT
 
-- Evaluation: does the published immutable RC exactly carry the ready candidate
-  and satisfy exact-cut qualification and acceptance prerequisites?
+- Evaluation: do the published immutable RC4 cuts exactly carry the ready
+  candidate and remain qualified without implying Product acceptance?
 - Evidence: annotated RC and selector objects, peeled commit and tree, remote
   refs, the closed candidate-readiness result, independently reacquired member
   and claim bytes, and the reacquired predecessor or genesis disposition.
@@ -314,7 +342,8 @@ action.
 - Exclusions: this frame is not activated before publication and cannot veto a
   candidate whose release subject does not yet exist.
 - Result: this separately activated frame produces the independent exact-cut
-  review; it does not consume that review as prerequisite evidence.
+  review; it does not consume that review as prerequisite evidence, accept the
+  Product, or admit later source bytes into RC4.
 
 ## Actor capability envelopes
 
@@ -336,17 +365,17 @@ configuration, context boundary, access, and prior involvement.
 
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
-| exact frame-set acceptance and overlay binding | Reference Frame Method; Product disposition authority; GOAL-008 | external acceptance relation | Product owner or exact explicitly user-granted bounded release-authority proxy; overlay mutation separately granted | exact file digest, direct grant source, acceptance record, valid Product Definition, and live `stdo status --verify`; prerequisite to activation | satisfied by revision-15 bounded-proxy decision and exact overlay binding |
-| compression-and-index Product boundary | Goals; Intent; Product; T-008 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
-| represented-version alignment | Product version relation; T-008; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, accepted Representation RC1, historical bootstrap, local ref profile | conditionally covered; mismatch or identity collapse falsifies |
-| coordinated cohort closure | GOAL-008; Release Method coordinated cohort law; basis requirements | `F-COHORT-INTEGRITY` | each Product retains its release authority; Stack transaction has bounded publication authority | commit-A tag and install, complete source corpus and delta, Axiom and Representation inventories, local ref graph, remote expected object IDs, atomic push set | conditionally covered; any missing, stale, mismatched, lease-unsafe, or partial member refuses |
-| compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | compression, index, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
-| imported validator and join boundary | Product; candidate requirement; Axiom release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | exact dependency, reports, maps, joins, falsifiers | conditionally covered; proves mechanical properties only |
-| Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | skill inventory, target references, fresh pickups, selected frames | conditionally covered; each target requires observation |
-| practical usefulness | dogfood requirement | `F-DOGFOOD-USEFULNESS` | Product owner disposes claim | comparable tasks, outputs, source re-entry, regressions | conditionally covered; unobserved tasks remain residual |
-| pre-publication candidate readiness | Release Method candidate phase; release record | `F-CANDIDATE-READINESS` | Product owner disposes candidate; publisher separately granted | closed Product results, frozen inventory, claims, dependencies | conditionally covered; no RC prerequisite |
-| immutable coordinated publication | Release Method Two-Commit Construction And One Publication Transaction | external publication relation | an exact Product-owner grant names the publisher and complete repository/ref mutation territory; this frame set grants none | frozen commit-B candidate, reconciled release assets, complete annotated child tags and mutable refs, post-tag local-ref-graph result, bound remote expected object IDs or absence, explicit leases, atomic-push result, and remote cohort verification | separately covered; unsupported atomic transport or any partial, drifted, lagging, mismatched, or unverified ref refuses |
-| post-publication exact-cut qualification | Release Method exact-cut phase | `F-EXACT-CUT` | Product owner accepts or rejects exact RC | published refs, clean reacquisition, closed candidate result | phase-conditional; not activated before publication |
+| exact frame-set acceptance and overlay binding | Reference Frame Method; Product disposition authority; GOAL-008 | external acceptance relation | Product owner or exact explicitly user-granted bounded release-authority proxy; overlay mutation separately granted | exact file digest, direct grant source, acceptance record, valid Product Definition, and live `stdo status --verify`; prerequisite to activation | satisfied by revision-16 bounded-proxy decision and exact overlay binding |
+| compression-and-index Product boundary | Goals; Intent; Product; T-008 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | closed for the immutable RC4 cut; later source change requires re-entry |
+| represented-version alignment | Product version relation; T-008; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO, Axiom, and Representation RC4 cuts; accepted Representation RC1; local ref profile | closed for the immutable RC4 cohort; mismatch or identity collapse falsifies |
+| coordinated cohort closure | GOAL-008; Release Method coordinated cohort law; basis requirements | `F-COHORT-INTEGRITY` | each Product retains its release authority; Stack transaction had bounded publication authority | exact commit-A and commit-B tags and trees, complete source corpus and delta, Product inventories, atomic push receipt, remote verification, and fresh public reacquisition | closed for the published RC4 cohort; any current identity mismatch returns `invalid_basis` |
+| compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | immutable compression and index, closed mechanical result, sources, residuals, counterexamples | closed for the RC4 cut; semantic uncertainty remains |
+| imported validator and join boundary | Product; candidate requirement; exact Axiom RC4 release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | immutable dependency, reports, maps, joins, falsifiers | closed for the RC4 cut; proves mechanical properties only |
+| Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | immutable skill inventory, target references, fresh pickups, selected frames | closed for observed RC4 tasks; unobserved targets remain residual |
+| practical usefulness | dogfood requirement | `F-DOGFOOD-USEFULNESS` | Product owner disposes claim | comparable tasks, outputs, source re-entry, regressions | closed for observed RC4 tasks; unobserved tasks remain residual |
+| prepublication candidate readiness | Release Method candidate phase; release record | `F-CANDIDATE-READINESS` | Product owner disposed the candidate; publisher was separately granted | closed Product results, frozen inventory, claims, dependencies | closed historical input to commit-B publication |
+| immutable coordinated publication | Release Method Two-Commit Construction And One Publication Transaction | external publication relation | exact Product-owner grant named the publisher and complete repository/ref mutation territory; this frame set grants none | frozen commit-B candidate, reconciled release assets, complete annotated child tags and mutable refs, post-tag local-ref-graph result, bound remote expected object IDs or absence, explicit leases, atomic-push result, and remote cohort verification | closed: one atomic 13-ref transaction completed and remote verification passed |
+| postpublication exact-cut qualification | Release Method exact-cut phase | `F-EXACT-CUT` | Product owner separately accepts or rejects an exact RC | published tag objects, commits and trees, clean public reacquisition, closed candidate result, frozen inventories and claims | closed for RC4 publication integrity; Product acceptance was not performed |
 
 ## Material interactions and conjunction
 
@@ -363,33 +392,32 @@ configuration, context boundary, access, and prior involvement.
   RC3-to-RC4 delta and conserved predecessor program; `F-COHORT-INTEGRITY`
   consumes its closed semantic result, the exact mechanical projection, and
   complete 52-member closure.
-- `Product frames -> candidate`: candidate readiness consumes closed Product,
-  version, cohort, map, mechanical, native, and dogfood results over one frozen
-  inventory.
+- `Product frames -> candidate`: the closed Product, version, cohort, map,
+  mechanical, native, and dogfood results produced the frozen commit-B
+  candidate inventory. That relation is historical and cannot consume later
+  source bytes.
 - `candidate -> publication`: the closed `F-CANDIDATE-READINESS` result and
-  exact complete ref graph and remote expected object IDs enter the separately
-  granted atomic Release Method publication relation; no frame result grants
-  publication authority.
-- `publication -> exact cut`: only publication evidence binding the frozen
-  candidate, annotated RC and selector objects, peeled commit and tree, and
-  remotely verified highest-RC refs may activate `F-EXACT-CUT`; partial or
-  mismatched publication refuses activation.
+  exact complete ref graph entered the separately granted atomic Release Method
+  publication relation. That publication completed once; no frame result
+  granted or now reopens publication authority.
+- `publication -> exact cut`: the exact tag and selector objects, peeled
+  commits and trees, remote verification, and fresh public reacquisition close
+  RC4 publication integrity. Any mismatch returns `invalid_basis`; matching
+  evidence does not imply Product acceptance.
 
 Only closed results cross frame boundaries. Unclosed working context and ambient
 conversation are not evidence.
 
-Before publication, the seven Product frames plus `F-CANDIDATE-READINESS` must
-return `satisfied` on one frozen candidate after the external acceptance and
-overlay prerequisite is satisfied. `F-EXACT-CUT` is not activated and cannot
-veto publication. After the separately authorized publication relation
-succeeds and remote verification closes, `F-EXACT-CUT` evaluates the immutable
-RC; its satisfied result supports but does not perform Product-owner
-acceptance.
+The prepublication conjunction is closed historical evidence for the immutable
+commit-B subject. Continuing-source work consumes the exact published RC4
+identities and reactivates only a frame made material by a new change. The
+closed publication and exact-cut results support but do not perform
+Product-owner acceptance.
 
 ## Residual uncertainty and revision
 
-- Final Product member digests and the release subject are assigned only after
-  exact bytes freeze.
+- Product acceptance of the immutable Representation RC4 subject remains a
+  separate human decision and is not inferred from publication or this basis.
 - Native usefulness beyond observed Codex and Claude tasks remains uncertain.
 - Semantic fidelity beyond the map's explicit source comparison and residuals
   remains probabilistic.
@@ -402,8 +430,8 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
-Revision 15 may be accepted only through the exact digest-bound decision at
-`../.ai-workspace/decisions/20260902T003317_frame_basis_rev15_acceptance.json`.
+Revision 16 may be accepted only through the exact digest-bound decision at
+`../.ai-workspace/decisions/20260902T030553_frame_basis_rev16_acceptance.json`.
 The Product owner may accept directly. An agent may record acceptance only as
 an explicitly user-granted bounded release-authority proxy whose durable
 decision names this frame-set URI and digest, actor and authority identities,

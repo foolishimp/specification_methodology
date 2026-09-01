@@ -42,9 +42,8 @@ When already inside the `specification_methodology/` project directory, use
 `pipx install --force .`. The explicit replacement avoids leaving an older
 manager in place when a qualified cut requires newer ref-resolution behavior.
 
-For this RC4 cohort candidate, install the manager from its qualified immutable
-ref after the coordinated cut is published rather than from the moving
-version-line alias:
+Install the published RC4 manager from its qualified immutable ref rather than
+from the moving version-line alias:
 
 ```sh
 pipx install --force \

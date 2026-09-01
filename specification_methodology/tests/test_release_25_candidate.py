@@ -359,13 +359,23 @@ class Release25RC3CandidateTests(unittest.TestCase):
         self.assertEqual(self.note.count("`pending-freeze`"), 6)
 
     @unittest.skipUnless(PUBLISHED, "qualified RC3 has not been published locally")
-    def test_published_rc3_is_annotated_and_subtree_bound(self) -> None:
+    def test_published_rc3_is_annotated_subtree_bound_and_retained(self) -> None:
         self.assertEqual(git_type(RELEASE_REF), "tag")
         self.assertEqual(git_type(SELECTOR_REF), "tag")
         released_commit = git_revision(f"{RELEASE_REF}^{{}}")
-        self.assertEqual(git_revision(f"{SELECTOR_REF}^{{}}"), released_commit)
-        self.assertEqual(git_revision(RC_BRANCH), released_commit)
-        self.assertEqual(git_revision(RELEASE_BRANCH), released_commit)
+        for moving_ref in (SELECTOR_REF, RC_BRANCH, RELEASE_BRANCH):
+            moving_commit = git_revision(f"{moving_ref}^{{}}")
+            self.assertEqual(
+                run_git(
+                    "merge-base",
+                    "--is-ancestor",
+                    released_commit,
+                    moving_commit,
+                    check=False,
+                ).returncode,
+                0,
+                moving_ref,
+            )
         self.assertEqual(git_type(f"{released_commit}:{PROJECT_SUBTREE}"), "tree")
         self.assertNotEqual(released_commit, IMMEDIATE_PREDECESSOR_COMMIT)
 

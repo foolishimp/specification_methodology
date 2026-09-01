@@ -1,30 +1,38 @@
 # Axiom Indexer Project Reference-Frame Basis
 
-Status: accepted source-project basis, revision 7, through the exact
+Status: accepted source-project basis, revision 8, through the exact
 digest-bound bounded-proxy decision named in the Acceptance Gate.
 
 ## Project Frame Basis
 
 ```text
-frame_set_uri = "urn:axiom-indexer:frame-set:release-readiness:7"
+frame_set_uri = "urn:axiom-indexer:frame-set:release-readiness:8"
 governed_workspace = "repo://axiom-indexer/"
 governed_subject = "urn:axiom-indexer:bounded-context:product"
-governed_outcome = "qualify and publish release-coupled Axiom Indexer v2.5.0-rc.4 mechanics in the coordinated stack cohort"
+governed_outcome = "adopt the published release-coupled Axiom Indexer v2.5.0-rc.4 mechanics as the source-project release baseline and close the coordinated RC4 publication phase without Product acceptance"
 method_basis = "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md"
 method_sha256 = "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8"
 release_method = "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md"
 release_method_sha256 = "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c"
 stdo_manifest_sha256 = "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
+published_axiom_ref = "refs/tags/axiom_indexer/v2.5.0-rc.4"
+published_axiom_tag_object = "4750e09639c118f1097d4ea046fe23d26713f96b"
+published_axiom_commit = "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+published_repository_tree = "093302db57bfb2e7beeed7f02dfc6d7090921a15"
+published_axiom_subtree_tree = "3f71c3c2df99008b9521e338a7837c553f87173a"
+publication_phase = "completed-and-closed"
 ```
 
-The declaration applies to the Axiom Indexer source project and its
-release-coupled RC4 candidate. Pre-publication activation binds a complete
-deterministic candidate inventory, Product members, claim bytes, dependencies,
-qualification basis, and activation time; it does not require an RC tag.
-Post-publication exact-cut activation binds the annotated RC tag object, peeled
-commit, tree, those same members and claim bytes, remote refs, and activation
-time. A mutable branch name, ambient conversation, path count, or passing test
-total is not an exact basis.
+The declaration applies to the Axiom Indexer source project after publication
+of its release-coupled RC4 cut. The completed pre-publication activation binds
+the deterministic candidate inventory, Product members, claim bytes,
+dependencies, qualification basis, and activation time. The completed
+post-publication activation binds the annotated RC tag object, peeled commit,
+repository and Project Subtree trees, those same members and claim bytes,
+remote refs, and activation time. The publication phase is closed. This source-
+project adoption does not rewrite the frozen release record, accept Product
+meaning, or grant ref movement. A mutable branch name, ambient conversation,
+path count, or passing test total is not an exact basis.
 
 ## Human Authority
 
@@ -45,10 +53,12 @@ ambient permission never admits agent self-acceptance.
 
 The sole proxy exception is an explicitly user-granted bounded release-authority
 proxy. Its durable decision must bind the exact declaration URI and digest, the
-unchanged seven-member Axiom mechanics and RC4 cohort scope, the direct human
-grant source, actor and authority identities, decision time, and evidence. The
-proxy may record only that bounded acceptance. It cannot enlarge Product scope,
-operation authority, publication authority, or its own decision authority.
+unchanged seven-member Axiom mechanics, published RC4 identities, closed cohort
+scope, direct human grant source, actor and authority identities, decision time,
+and evidence. The proxy may record only that bounded source-project basis
+acceptance and closure. It cannot accept Product meaning, enlarge Product
+scope, grant operation authority, move a ref, or enlarge its own decision
+authority.
 
 ## Shared Coordinates, Evidence, And Results
 
@@ -179,13 +189,13 @@ and Release methods.
 
 | ID and evaluation | Provenance | Subject and basis | Selected frame | Actor envelope | Semantic authority | Operation authority | Decision authority | Evidence | Dependencies | Status | Residual or re-entry |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `C0` exact frame-set acceptance and Product Definition binding | Reference Frame Method; Product disposition authority; GOAL-004 | exact declaration digest plus overlay bytes under STDO `v2.5.0-rc.4` | external governing acceptance relation; no frame self-accepts | `K-GOVERNANCE` | Product owner | separately granted overlay editor; none from evaluation | Product owner or exact explicitly user-granted bounded release-authority proxy | digest-bound acceptance record, direct grant source, and valid `stdo status --verify` | prerequisite to frame activation | covered | exact bounded-proxy decision and overlay binding recorded; no generic agent acceptance admitted |
+| `C0` exact frame-set acceptance and Product Definition binding | Reference Frame Method; Product disposition authority; GOAL-004 | exact declaration digest plus overlay bytes under STDO `v2.5.0-rc.4` | external governing acceptance relation; no frame self-accepts | `K-GOVERNANCE` | Product owner | separately granted overlay editor; none from evaluation | Product owner or exact explicitly user-granted bounded release-authority proxy | digest-bound acceptance record, direct grant source, and valid `stdo status --verify` | prerequisite to frame activation | covered | exact bounded-proxy decision and overlay binding recorded; no generic agent or Product acceptance admitted |
 | `C1` semantic compression and residual honesty | Goals; Intent; Product; `REQ-P-AUTHORING` | exact program, calculus, source, frames, and source bytes | `F-AUTHORING-ESSENCE` | `K-AUTHORING` | source and frame owners | none | Product owner disposes usefulness claim | program, sources, residuals, source comparison | `D-AR`, `D-AD` | conditionally covered | requires exact activation; semantic uncertainty remains explicit |
 | `C2` URI identity, resolution, and map closure | Product; `REQ-P-PROGRAM`; `REQ-P-RESOLUTION` | exact program, Binding Set, resources, report, and map | `F-SYMBOLIC-INTEGRITY` | `K-SYMBOLIC` | Product owns contract; source owners own bytes | none | Product owner | resolved digests, diagnostics, relocation and escape falsifiers | `D-AR`, `D-SV` | conditionally covered | missing or ambiguous binding returns failure or re-entry |
 | `C3` validator and joiner mechanical boundary | Product; `REQ-P-VALIDATION`; `REQ-P-JOINING` | exact requirements, implementation, tests, inputs, and outputs | `F-VALIDATION-BOUNDARY` | `K-VALIDATION` | Product owns mechanical contract | none | Product owner | normal and optimized tests, counterexamples, exact output comparisons | `D-SV`, `D-VD` | conditionally covered | environment drift or untested claim narrows evidence |
 | `C4` native pickup and practical consistency | Goal completion; Product dogfood predicate; retained dogfood | exact skill, map, request, result, initial-context boundary, and re-entry bytes | `F-DOGFOOD-USEFULNESS` | `K-DOGFOOD` | source owners; Product owns usefulness claim | none | Product owner | fresh-agent inputs/results, opened URIs, retained changes | `D-AD`, `D-VD`, `D-PC` | conditionally covered | broader usefulness and semantic truth remain unclaimed |
-| `C5` pre-publication candidate readiness | Release Method candidate/publication phases; GOAL-004; release record | deterministic candidate inventory, Product members, claim bytes, dependencies, qualification results, and publication plan | `F-CANDIDATE-READINESS` | `K-CANDIDATE` | Product and release-record owners | separately granted publisher after closed result; none from evaluation | Product owner disposes candidate | inventory, release record, dependency verification, closed `C1`-`C4` results, remote namespace observation | `D-PC`; `C0` prerequisite | conditionally covered | exact candidate activation and coordinated publication operation grant pending |
-| `C6` post-publication exact-cut qualification and acceptance readiness | Release Method exact-cut phase; release record | annotated RC and selector objects, peeled commit, tree, remote refs, reacquired members and claims | `F-EXACT-CUT` | `K-EXACT-CUT` | Product and release-record owners | none; evaluation is read-only | Product owner accepts or rejects exact RC | remote reacquisition, tag/tree/member comparison, independent review, closed `C5` result | `D-CX`; published RC prerequisite | conditionally covered by phase | not activated until publication; any qualifying-byte repair requires higher RC |
+| `C5` pre-publication candidate readiness | Release Method candidate/publication phases; GOAL-004; release record | deterministic candidate inventory, Product members, claim bytes, dependencies, qualification results, and publication plan | `F-CANDIDATE-READINESS` | `K-CANDIDATE` | Product and release-record owners | separately granted publisher after closed result; none from evaluation | Product owner disposes candidate | inventory, release record, dependency verification, closed `C1`-`C4` results, remote namespace observation | `D-PC`; `C0` prerequisite | satisfied and closed | the frozen candidate result was consumed by the separately authorized atomic publication; no continuing operation authority remains |
+| `C6` post-publication exact-cut qualification and acceptance readiness | Release Method exact-cut phase; release record | tag object `4750e09639c118f1097d4ea046fe23d26713f96b`, commit `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`, repository tree `093302db57bfb2e7beeed7f02dfc6d7090921a15`, Axiom subtree `3f71c3c2df99008b9521e338a7837c553f87173a`, remote refs, reacquired members, and claims | `F-EXACT-CUT` | `K-EXACT-CUT` | Product and release-record owners | none; evaluation is read-only | Product owner alone may accept or reject Product meaning | remote reacquisition, tag/tree/member comparison, independent review, closed `C5` result | `D-CX`; published RC prerequisite | satisfied and closed for publication | publication identity and qualification are closed; Product acceptance remains uninvoked; any qualifying-byte repair requires a higher coordinated RC |
 
 ## Material Interactions And Result Consumption
 
@@ -216,30 +226,32 @@ closed candidate results exposed after freeze.
 
 ## Phase Configurations And Conjunction
 
-### Pre-publication candidate readiness
+### Pre-publication candidate readiness — closed
 
-`C0` is a governance prerequisite. Once it is satisfied, activate
+`C0` was the governance prerequisite. Once satisfied, the release wave
+activated
 `F-AUTHORING-ESSENCE`, `F-SYMBOLIC-INTEGRITY`, `F-VALIDATION-BOUNDARY`,
 `F-DOGFOOD-USEFULNESS`, and `F-CANDIDATE-READINESS` over one frozen candidate.
-All five must return `satisfied`. The closed conjunction may be consumed by a
-separately authorized publisher. `F-EXACT-CUT` is not activated and cannot veto
-publication because its subject does not yet exist.
+All five returned `satisfied`. The closed conjunction was consumed by the
+separately authorized atomic publisher. That consumption grants no continuing
+operation authority.
 
-### Post-publication exact-cut qualification
+### Post-publication exact-cut qualification — closed
 
-After publication, activate `F-EXACT-CUT` over the immutable RC. It consumes
-the closed candidate-readiness identity and requires exact equality between the
-published tree and ready-candidate members, claims, dependencies, and evidence
-subjects. A `satisfied` result supports, but does not perform, Product-owner RC
-acceptance. Any qualifying-byte repair creates a higher RC and a new
-activation.
+After publication, `F-EXACT-CUT` was activated over the immutable RC. It
+consumed the closed candidate-readiness identity and established exact equality
+between the published tree and ready-candidate members, claims, dependencies,
+and evidence subjects. Its `satisfied` result closed publication qualification;
+it did not perform Product-owner RC acceptance. Any qualifying-byte repair
+creates a higher coordinated RC and a new activation.
 
 No lossy coordinate or result translation is admitted between phases.
 
 ## Residual Uncertainty
 
-- The exact RC tag object and post-publication activation do not exist during
-  candidate readiness; this is a phase condition, not a pre-publication gap.
+- The immutable RC4 identity and completed post-publication activation are
+  fixed historical inputs to this live source-project basis. They grant no
+  Product acceptance or future publication authority.
 - Python behavior is currently observed on the qualified host; broader runtime
   portability is not claimed without matching evidence.
 - Semantic truth, unique interpretation, complete `M_b` admission, GTL,
@@ -258,8 +270,8 @@ candidate result or higher immutable RC as applicable.
 
 ## Acceptance Gate
 
-Revision 7 is accepted only through the exact digest-bound decision at
-`../.ai-workspace/decisions/20260901T142728Z_frame_basis_v7_acceptance.json`.
+Revision 8 is accepted only through the exact digest-bound decision at
+`../.ai-workspace/decisions/20260901T170605Z_frame_basis_v8_acceptance.json`.
 The Product owner may accept directly. An agent may record acceptance only as an
 explicitly user-granted bounded release-authority proxy whose durable decision
 names this frame-set URI and digest, actor and authority identities, bounded

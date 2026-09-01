@@ -4,20 +4,22 @@
 
 | Coordinate | Binding |
 |---|---|
-| declaration | `urn:stdo:reference-frame-basis:specification-methodology:v1` |
+| declaration | `urn:stdo:reference-frame-basis:specification-methodology:v2` |
 | Product scope | `urn:stdo:product-definition:specification-methodology` |
 | owning authority | [`PRODUCT.md#reference-frame-engagement`](PRODUCT.md#reference-frame-engagement) |
 | work selection | current [`GOALS.md`](GOALS.md) and one exact admitted ticket or work instruction |
 | governed workspace | this `specification_methodology` source project |
 | governed outcome | preserve and evolve the STDO source toward one complete conforming immutable RC distribution |
-| admitting decision | `urn:stdo:decision:specification-methodology:reference-frame-basis:v1`; `adopted` under T-016 work authorization `direct_human_authorization_2026-08-29` |
-| admitting actor | `urn:stdo:actor:specification-methodology:codex:t-016-pen-holder`; exact bounded proxy named by T-016 under that direct Product-authority grant |
+| admitting decision | `urn:stdo:decision:specification-methodology:reference-frame-basis:v2`; `accepted` by `.ai-workspace/decisions/20260901T163724Z_stdo_rc4_source_basis_acceptance.json` under the direct Product-owner instruction to make the live source consume public RC4 |
+| admitting actor | `urn:openai:codex:delegated-rc4-source-adoption`; explicitly admitted bounded proxy for this exact frame-basis and adoption decision only |
 
 This is the Product-owned frame configuration for work over the mutable source
-project. It is not a member of an already released STDO distribution, does not
-alter an immutable release, and does not adopt frames for a consumer. Source
+project. It supersedes revision 1 only for continuing mutable source work. It
+is not a member of an already released STDO distribution, does not alter an
+immutable release, and does not adopt frames for another consumer. Source
 presence alone does not admit the declaration: the Product Definition Overlay
-must locate it and the cited Product authority must remain current.
+must locate it and the cited Product authority and exact decision must remain
+current.
 
 Each activation narrows the governed outcome to one exact Goal, ticket, claim,
 subject, checkpoint, and evidence population. The mutable workspace is the
@@ -28,25 +30,25 @@ installed distributions are distinct checkpoints or assurance subjects.
 
 | Basis | Exact identity |
 |---|---|
-| complete governing STDO cut | `stdo://releases/v2.4.3-rc.3/`; manifest SHA-256 `312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551` |
-| release coordinates | tag object `044208c82b741fa98aa1a6e34fcf2a3094a313b0`; commit `eb87a20247beeb93de394523ebdf8faecfd71949`; tree `d32b03c3f847e498a296d2b4dbb6ef97f441dcd8`; standards tree `4e581429bbd180e28c5cb21aef4f5b75d3c053fa`; 47 members; aggregate `127a6fb213eb5e12bcf6180cb73016a003ccfda80651b476055f19a22ca10275` |
-| Product-binding method | `stdo://releases/v2.4.3-rc.3/standards/SPEC_METHOD.md`; SHA-256 `50b825969ae23c5a42f7f3776fd2ab4146836349dfd4ef7a548dc2b6349b389c` |
-| frame method | `stdo://releases/v2.4.3-rc.3/standards/REFERENCE_FRAME_METHOD.md`; SHA-256 `a270453802ae03d6871c408d782094180b938aca22399ce817451fdd4551b174` |
-| profile acquisition source | `stdo://releases/v2.4.3-rc.3/standards/STDO_REFERENCE_FRAME_BASELINE.md`; SHA-256 `9a4c1d6743a7ddaab920f3323232f822f1a45dcbad5034b65b1c0859b47ba6b9` |
+| complete governing STDO cut | `stdo://releases/v2.5.0-rc.4/`; manifest SHA-256 `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e` |
+| release coordinates | tag object `032dac0c833111547f7dd4b290c5316ed9b70f97`; commit `7a25668a8fecfd26f895759af3bec4708727964a`; repository tree `737af9a7a2779dbf59e7c81232e7efd4dd98692a`; Project Subtree tree `a9565f923213759984f936d087cd7cebd0f44a74`; standards tree `d6642edac9fb509a68b2ffc81d3404f2360b34e4`; 52 members; aggregate `504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656` |
+| Product-binding method | `stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md`; SHA-256 `80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5` |
+| frame method | `stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md`; SHA-256 `c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8` |
+| profile acquisition source | `stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md`; SHA-256 `6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e` |
 
 Every installed-standard fragment cited below resolves against these exact
 member URIs and digests, never against the mutable source files of the same
 name.
 
-The configuration is project-defined under the exact Frame Method. It
-acquires the released baseline's Executive, Reviewer, specialist, testing, and
-closed-result mappings where they conform to their cited owning laws. Worker
-construction is declared below from `SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`.
-That owner permits bounded implementation while the released profile's Worker
-row also lists mutation among excluded authorities. The contradictory profile
-row is not acquired as governing Worker law. A future exact cut containing a
-congruent profile requires explicit basis revision; mutable successor standards
-are candidate subjects, not bootstrap authority.
+The configuration is project-defined under the exact Frame Method. It acquires
+the released baseline's Executive, Worker, Reviewer, specialist, testing, and
+closed-result mappings where they conform to their cited owning laws. The RC4
+Worker mapping is congruent with
+`SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`: mutation is
+permitted only through an exact inherited owner grant naming the subject and
+write territory. The project binding below specializes that acquired mapping
+without creating a second Worker authority. Mutable successor standards remain
+candidate subjects, not bootstrap authority.
 
 ## Coverage Tuple And Exactness
 
@@ -79,7 +81,7 @@ or source access supplies none of those fields.
 | Frame | Declaration or acquisition | Actor and capability envelope | Grant and result |
 |---|---|---|---|
 | Executive | `urn:stdo:reference-frame:specification-methodology:executive:v1`; acquire `STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame` from the exact profile basis | direct Product authority or a named bounded proxy able to resolve method, work authority, frame coverage, actor fit, and current results | exact activation and disposition grant only; returns one Frame Method result and, where authorized, `accept`, `local_repair`, `re_enter`, or `reject` |
-| Worker | `urn:stdo:reference-frame:specification-methodology:worker:v1`; complete declaration below | an exact human, agent, deterministic tool, or mixed actor with the required method, domain, implementation, tool, access, and finite-context capability | inherited construction or transformation operation grant and self-review only; returns one closed Worker result to Executive |
+| Worker | `urn:stdo:reference-frame:specification-methodology:worker:v1`; acquire `STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame` and apply the project binding below | an exact human, agent, deterministic tool, or mixed actor with the required method, domain, implementation, tool, access, and finite-context capability | inherited construction or transformation operation grant and self-review only; returns one closed Worker result to Executive |
 | Reviewer | `urn:stdo:reference-frame:specification-methodology:reviewer:v1`; acquire `STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame` from the exact profile basis | an exact actor capable of live-subject acquisition, applicable method/domain/assurance evaluation, counterexample search, and the independence required by the claim | evaluation only; returns one closed review result to Executive; no repair, mutation, disposition, acceptance, publication, or continuation authority |
 | Fundamental Invariant Conservation | `urn:stdo:reference-frame:fundamental-invariant-conservation:v1`; complete declaration below | an author-independent Reviewer capable of acquiring every exact owner in the invariant closure and evaluating the affected relation cone | evaluation only; returns one closed conservation result to Executive |
 
@@ -98,7 +100,7 @@ The authority classes remain disjoint:
 | decision | direct Product/work authority or a named bounded proxy acting inside its exact disposition envelope |
 | acceptance and publication | direct Product and release authority where their law requires it; never inferred from a frame result |
 
-### Worker Declaration
+### Worker Project Binding
 
 | Frame element | Product binding |
 |---|---|
@@ -150,7 +152,7 @@ repair, acceptance, or release decision.
 
 ## Generic Specialist Acquisition And Disposition
 
-All eleven baseline families are material to the source Product's complete
+All twelve baseline families are material to the source Product's complete
 authoring, toolchain, assurance, and release outcome. Each row is an
 authoritative acquisition rule from
 `STDO_REFERENCE_FRAME_BASELINE.md#derived-generic-specialist-frame-set`, not a
@@ -160,6 +162,7 @@ frame field required under `Engagement Frames, Actors, And Grants`.
 | Family | Local declaration | STDO source-project subject and activation trigger |
 |---|---|---|
 | Product | `urn:stdo:reference-frame:specification-methodology:specialist:product:v1` | exact Intent/Product/outcome; every substantive change or closure claim |
+| Product Composition | `urn:stdo:reference-frame:specification-methodology:specialist:product-composition:v1` | every exact relation among Source Project, Release Cut, Product, Install, Development Product role, or dependent Product; every material cross-Product edge or chain claim |
 | Design | `urn:stdo:reference-frame:specification-methodology:specialist:design:v1` | accepted realization structure; every material `HOW` or topology claim |
 | Design Component | `urn:stdo:reference-frame:specification-methodology:specialist:design-component:v1` | one bounded component and direct causal cone; component-local change or closure |
 | Public Boundary | `urn:stdo:reference-frame:specification-methodology:specialist:public-boundary:v1` | standards exchange boundary, schema, CLI, plugin, or supported entry/exit claim |
@@ -214,7 +217,7 @@ making that disposition. It cannot be silently omitted.
 |---|---|
 | exact method, Product, Goal, work, checkpoint, and proxy basis | Executive + Product and Owner |
 | Product meaning, boundary, lifecycle, and source/release distinction | Product + Fundamental Invariant Conservation |
-| affected causal cone, accepted design, components, and seams | Executive challenged by Worker/Reviewer + Design/Design Component/Public Boundary |
+| affected Product chain, causal cone, accepted design, components, and seams | Executive challenged by Worker/Reviewer + Product Composition/Design/Design Component/Public Boundary |
 | entity identity, operator domain, owner, and effect grant | Entity + Operator + Owner + Effect |
 | bounded construction, workspace mutation, transition evidence, and competing-path disposal | Worker + Effect + Proof |
 | exact candidate and independent live-surface assessment where required | Reviewer + Product/Owner/Install/Proof as material |

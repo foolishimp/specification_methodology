@@ -29,6 +29,13 @@ STDO_MEMBER_SET = "504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542
 CALCULUS_REF = "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
 AXIOM_VERSION = "2.5.0-rc.4"
 AXIOM_QUALIFIED_REF = "refs/tags/axiom_indexer/v2.5.0-rc.4"
+AXIOM_TAG_OBJECT = "4750e09639c118f1097d4ea046fe23d26713f96b"
+COHORT_COMMIT = "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+COHORT_REPOSITORY_TREE = "093302db57bfb2e7beeed7f02dfc6d7090921a15"
+AXIOM_SUBTREE_TREE = "3f71c3c2df99008b9521e338a7837c553f87173a"
+REPRESENTATION_QUALIFIED_REF = "refs/tags/stdo_representation/v2.5.0-rc.4"
+REPRESENTATION_TAG_OBJECT = "d85d25482f9d9132147bea189b0fe0aca1929dff"
+REPRESENTATION_SUBTREE_TREE = "44fb7bc673726a920552d7dd62b3b754953396e0"
 AXIOM_CANDIDATE_RELEASE_PATH = Path("releases/v2.5.0.md")
 AXIOM_CANDIDATE_RELEASE_SHA256 = (
     "2f4643a5b184a33ab9cd65c1de09b53ffee747012cd1108b795fc6df92263e8d"
@@ -54,59 +61,68 @@ AXIOM_SCHEMA_SHA256 = "61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7
 AXIOM_OUTPUT_CONTRACT_SHA256 = (
     "fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694"
 )
-FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:15"
+FRAME_URI = "urn:stdo-representation:reference-frame-basis:source-project:16"
 FRAME_PATH = Path("specification/REFERENCE_FRAME_BASIS.md")
-FRAME_SHA256 = "e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e"
+FRAME_SHA256 = "c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3"
 FRAME_DECISION_PATH = Path(
-    ".ai-workspace/decisions/20260902T003317_frame_basis_rev15_acceptance.json"
+    ".ai-workspace/decisions/20260902T030553_frame_basis_rev16_acceptance.json"
 )
 FRAME_DECISION_SHA256 = (
-    "ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92"
+    "116630d8b38fc2cda9462742f48d06b5605d69e50fe71902f4e78481bd1b82b0"
 )
 FRAME_DECISION_SCOPE = (
-    "Accept the exact revision-15 project frame basis for construction and "
-    "qualification of the coordinated STDO Representation 2.5.0-rc.4 cohort "
-    "subject against exact locally tagged Source STDO v2.5.0-rc.4 and the "
-    "exact seven-member Axiom Indexer v2.5.0-rc.4 candidate; this decision "
-    "grants no tag, push, remote-ref, or Product-acceptance effect."
+    "Accept the exact revision-16 project frame basis for the continuing STDO "
+    "Representation 2.5.0 source after completed publication of the coordinated "
+    "2.5.0-rc.4 cohort, binding exact published Source STDO, Axiom Indexer, and "
+    "Representation cut identities; this decision grants no Product acceptance, "
+    "tag or ref mutation, immutable-release-asset rewrite, or new publication effect."
 )
-FRAME_DECISION_TIME = "2026-09-02T00:33:17+10:00"
+FRAME_DECISION_TIME = "2026-09-02T03:05:53+10:00"
 FRAME_DECISION_SOURCE = (
-    "Delegated ratification by Codex under the Product owner's direct authority "
-    "grant in this collaboration to update STDO Representation so it stays "
-    "current with STDO, align the release-matched cohort under the exact STDO "
-    "version, and complete release only after qualification. This record does "
-    "not claim that the Product owner personally inspected these exact "
-    "revision-15 bytes."
+    "Delegated ratification by Codex under the Product owner's direct "
+    "instructions in this collaboration that all live surfaces close on and "
+    "consume RC4, after direct authorization to complete and publish the "
+    "coordinated release. This record does not claim that the Product owner "
+    "personally inspected these exact revision-16 bytes."
 )
 FRAME_DECISION_EVIDENCE_REFS = (
     "./specification/PRODUCT.md#product-disposition-authority",
-    "./specification/PRODUCT.md#version-relation",
+    "./specification/PRODUCT.md#exact-dependency-bases",
     "./specification/GOALS.md#goal-008--enter-the-coordinated-release-matched-cohort",
     "./specification/requirements/REQ-P-BASIS-AND-IDENTITY.md#requirements",
     "./specification/REFERENCE_FRAME_BASIS.md#acceptance-gate",
-    "../specification_methodology/releases/v2.5.0.md",
+    "./releases/v2.5.0.md",
     "../axiom_indexer/releases/v2.5.0.md",
+    "../specification_methodology/releases/v2.5.0.md",
+    "../STACK_RELEASE.md",
 )
 FRAME_DECISION_SUPERSESSION = {
     "prior_subject_sha256": (
-        "sha256:c20fd096436452e24bc4d4bc68e77c1024f790b50ec82ecfd22a07759ef7cb61"
+        "sha256:e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e"
     ),
     "prior_decision_sha256": (
-        "sha256:4462b28ebb5bc4fb4dfb7dc856e272321d5739fd48e2552b2b5fa23d4b19e224"
+        "sha256:ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92"
     ),
     "change": (
-        "The acceptance law now admits only an explicitly user-granted bounded "
-        "release-authority proxy and binds exact digest, scope, direct grant "
-        "source, time, evidence, no-self-expansion, and no-personal-byte-inspection "
-        "constraints."
+        "The postpublication successor binds the exact published Axiom Indexer "
+        "and STDO Representation tag objects, common peeled commit and repository "
+        "tree, independent Project Subtree trees, and completed RC4 publication "
+        "phase; it removes pending-candidate status from the live source basis."
     ),
     "disposition": (
-        "The prior frame and decision bytes are superseded before commit or "
-        "publication and do not accept this repaired subject."
+        "Revision 15 and its decision remain exact historical authority for "
+        "coordinated RC4 construction and prepublication qualification. Revision "
+        "16 governs the continuing source after completed publication; neither "
+        "decision accepts the immutable RC4 Product subject."
     ),
 }
 FRAME_STATUS = "accepted_and_bound"
+CANDIDATE_FRAME_SHA256 = (
+    "e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e"
+)
+CANDIDATE_FRAME_DECISION_SHA256 = (
+    "ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92"
+)
 HISTORICAL_BOOTSTRAP_VERSION = "0.1.0"
 HISTORICAL_BOOTSTRAP_RELEASE_PATH = Path("releases/v0.1.0.md")
 HISTORICAL_BOOTSTRAP_RELEASE_SHA256 = (
@@ -659,7 +675,7 @@ def validate_overlay(overlay: dict[str, Any]) -> list[str]:
             "authority": [
                 "./specification/PRODUCT.md#product-disposition-authority",
                 "./.ai-workspace/decisions/"
-                "20260902T003317_frame_basis_rev15_acceptance.json",
+                "20260902T030553_frame_basis_rev16_acceptance.json",
             ],
             "applies_to": ["urn:stdo:product-definition:stdo-representation"],
         }
@@ -731,7 +747,7 @@ def validate_frame_basis(root: Path) -> list[str]:
         failures.append("accepted project frame basis has the wrong identity")
     normalized_frame = " ".join(frame_text.split())
     expected_status = (
-        "Status: accepted and bound source-project basis, revision 15, through "
+        "Status: accepted and bound source-project basis, revision 16, through "
         "the exact digest-bound bounded-proxy decision named in the Acceptance Gate."
     )
     if expected_status not in normalized_frame:
@@ -1477,8 +1493,8 @@ def validate_candidate_release(root: Path) -> list[str]:
         AXIOM_SCHEMA_SHA256,
         AXIOM_OUTPUT_CONTRACT_SHA256,
         AXIOM_CANDIDATE_RELEASE_SHA256,
-        FRAME_SHA256,
-        FRAME_DECISION_SHA256,
+        CANDIDATE_FRAME_SHA256,
+        CANDIDATE_FRAME_DECISION_SHA256,
         "074fcb07258792008c31998ed2cf4f4234bec92f9e7be10b177569559387808d",
         "90400806e79cd09f350f285000c8579af81f621cdbe3753125ed9d74bcb6b466",
         "5b6a5df2e2429f7b1d463e2b9107ca58f5c482e9565e98e792650f41b222a4cf",
@@ -1524,6 +1540,73 @@ def git_value(root: Path, *args: str) -> str:
         text=True,
     )
     return result.stdout.strip()
+
+
+def validate_published_cohort_refs(
+    root: Path,
+) -> tuple[dict[str, dict[str, str]], list[str]]:
+    """Bind continuing source to the exact immutable public RC4 cohort."""
+
+    expected = {
+        "source_stdo": {
+            "ref": STDO_QUALIFIED_REF,
+            "tag_object": STDO_TAG_OBJECT,
+            "commit": STDO_COMMIT,
+            "repository_tree": STDO_TREE,
+            "project_subtree": "specification_methodology",
+            "project_subtree_tree": STDO_SUBTREE_TREE,
+        },
+        "axiom_indexer": {
+            "ref": AXIOM_QUALIFIED_REF,
+            "tag_object": AXIOM_TAG_OBJECT,
+            "commit": COHORT_COMMIT,
+            "repository_tree": COHORT_REPOSITORY_TREE,
+            "project_subtree": "axiom_indexer",
+            "project_subtree_tree": AXIOM_SUBTREE_TREE,
+        },
+        "stdo_representation": {
+            "ref": REPRESENTATION_QUALIFIED_REF,
+            "tag_object": REPRESENTATION_TAG_OBJECT,
+            "commit": COHORT_COMMIT,
+            "repository_tree": COHORT_REPOSITORY_TREE,
+            "project_subtree": "stdo_representation",
+            "project_subtree_tree": REPRESENTATION_SUBTREE_TREE,
+        },
+    }
+    identities: dict[str, dict[str, str]] = {}
+    failures: list[str] = []
+    try:
+        repository_root = Path(git_value(root, "rev-parse", "--show-toplevel"))
+        for label, identity in expected.items():
+            ref = identity["ref"]
+            observed = {
+                "ref": ref,
+                "object_type": git_value(repository_root, "cat-file", "-t", ref),
+                "tag_object": git_value(repository_root, "rev-parse", ref),
+                "commit": git_value(repository_root, "rev-parse", f"{ref}^{{}}"),
+                "repository_tree": git_value(
+                    repository_root, "rev-parse", f"{ref}^{{}}^{{tree}}"
+                ),
+                "project_subtree_tree": git_value(
+                    repository_root,
+                    "rev-parse",
+                    f"{ref}^{{}}:{identity['project_subtree']}",
+                ),
+            }
+            identities[label] = observed
+            if observed["object_type"] != "tag":
+                failures.append(f"published {label} RC4 ref is not annotated")
+            for field in (
+                "tag_object",
+                "commit",
+                "repository_tree",
+                "project_subtree_tree",
+            ):
+                if observed[field] != identity[field]:
+                    failures.append(f"published {label} RC4 {field} changed")
+    except subprocess.CalledProcessError:
+        failures.append("exact published RC4 cohort refs are unavailable")
+    return identities, failures
 
 
 def immutable_stdo_standards_members(
@@ -1604,6 +1687,8 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
     failures: list[str] = []
     overlay = load_json(root / "stdo_representation.json")
     failures.extend(validate_overlay(overlay))
+    published_cohort, published_cohort_failures = validate_published_cohort_refs(root)
+    failures.extend(published_cohort_failures)
 
     installed_manifest_path = (
         Path.home()
@@ -1754,7 +1839,13 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             failures.append(f"historical root is not explicitly excluded: {historical}")
 
     required_text = {
-        "specification/GOALS.md": ["zero local", "v0.1.0-rc.1"],
+        "specification/GOALS.md": [
+            "Status: no active work wave",
+            "published immutable `2.5.0-rc.4` cohort is the current",
+            "maintenance basis for Source STDO",
+            "zero local",
+            "v0.1.0-rc.1",
+        ],
         "specification/INTENT.md": [
             "LLM supplies every frame",
             "canonical semantic compression",
@@ -1836,6 +1927,11 @@ def audit(root: Path, axiom_root: Path) -> dict[str, Any]:
             "sha256": "sha256:" + FRAME_SHA256,
             "decision_sha256": "sha256:" + FRAME_DECISION_SHA256,
             "status": FRAME_STATUS,
+        },
+        "published_cohort": {
+            "exact_version": REPRESENTATION_VERSION,
+            "identities": published_cohort,
+            "status": "verified" if not published_cohort_failures else "invalid",
         },
         "stdo_status": stdo_status_evidence,
     }

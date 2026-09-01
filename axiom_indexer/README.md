@@ -68,17 +68,20 @@ The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
 `dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
 only the mutable highest-published-RC selector.
 
-The active source candidate reprices the same seven generic mechanics members
-as the release-coupled Axiom cut for exact Source STDO `v2.5.0-rc.4`. The
-candidate record is [`releases/v2.5.0.md`](releases/v2.5.0.md); no corresponding
-Axiom tag or accepted Product exists yet. The sibling STDO Representation owns
-the STDO-specific semantic program and logical map.
+The release-coupled seven-member mechanics cut for exact Source STDO
+`v2.5.0-rc.4` is published at annotated tag
+`axiom_indexer/v2.5.0-rc.4`, tag object
+`4750e09639c118f1097d4ea046fe23d26713f96b`, peeling to commit
+`a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. Its frozen prepublication record
+is [`releases/v2.5.0.md`](releases/v2.5.0.md). Publication identifies the
+qualified cut; it does not by itself accept Product meaning. The sibling STDO
+Representation owns the STDO-specific semantic program and logical map.
 
 `stdo_default.json` now binds the exact locally installed and verified Source
 STDO RC4 cut. The preceding RC3 adoption remains transition evidence only; RC3
 is not an Axiom release target.
 
-Check the candidate constitution and inventory with:
+Check the published cut's constitution and inventory with:
 
 ```sh
 STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
@@ -103,8 +106,9 @@ only concatenates the exact labels and text supplied by the LLM.
 
 Release publication is a separate lifecycle over this bounded Product; it does
 not become another Product capability. The active source-project frame basis is
-ratified at its exact revision-7 digest by the durable delegated release-
-authority decision bound in `stdo_default.json`.
+the exact revision-8 postpublication basis bound by the durable delegated
+release-authority decision in `stdo_default.json`. It closes publication and
+adopts the immutable RC4 coordinates without claiming Product acceptance.
 
 ## Authority order
 

@@ -135,5 +135,5 @@ canonical aggregate digests, and historical manifest bytes. Synthetic
 repository tests also prove the exact `specification_methodology/` monorepo
 prefix, repository-root and standards-subtree identities, project-relative
 logical members, and refusal of absent or ambiguous layouts. A second dogfood
-boundary binds the source Product Definition to the exact installed RC2 builder
-basis.
+boundary binds the source Product Definition to the exact installed public RC4
+builder basis.

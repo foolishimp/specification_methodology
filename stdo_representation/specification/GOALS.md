@@ -1,10 +1,13 @@
 # STDO Representation Goals
 
-## Current work wave
+## Current state
 
-Construct the first coordinated release-matched STDO compression and constraint
-index against exact Source STDO `v2.5.0-rc.4` while preserving the accepted
-STDO Representation `2.5.0` RC1 Product and all prior evidence:
+Status: no active work wave
+
+The first coordinated release-matched STDO compression and constraint index was
+completed and published against exact Source STDO `v2.5.0-rc.4` while
+preserving the accepted STDO Representation `2.5.0` RC1 Product and all prior
+evidence:
 
 ```text
 exact Source STDO prose v2.5.0-rc.4
@@ -16,19 +19,21 @@ exact Source STDO prose v2.5.0-rc.4
 ```
 
 The LLM interprets meaning, selects frames, writes context, consumes
-diagnostics, and revises. Exact same-version Axiom Indexer `v2.5.0-rc.4`
-candidate mechanics supply the URI resolver, basic validator, logical-map
-instantiation, and pure ordered joiner during authorized commit-B construction;
-the immutable coordinated Axiom cut becomes the release dependency. This
-Product has zero local engine code and adds no deterministic orchestration or
-GTL engine.
+diagnostics, and revises. During completed commit-B construction, exact
+same-version Axiom Indexer candidate mechanics supplied the URI resolver, basic
+validator, logical-map instantiation, and pure ordered joiner. Ordinary and
+released use now consume the published immutable coordinated Axiom
+`v2.5.0-rc.4` cut. This Product has zero local engine code and adds no
+deterministic orchestration or GTL engine.
 
 The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
 historical `v0.1.0-rc.1`. The accepted current Product is STDO Representation
-`2.5.0` RC1. This source wave targets exact matched version `2.5.0-rc.4` for
-Source STDO, Axiom Indexer mechanics, STDO Representation, and its derived
-program and index while preserving their separate Product identities,
-inventories, reviews, and acceptance.
+`2.5.0` RC1. The published immutable `2.5.0-rc.4` cohort is the current
+maintenance basis for Source STDO, Axiom Indexer mechanics, STDO
+Representation, and its derived program and index while preserving their
+separate Product identities, inventories, reviews, and acceptance. Publication
+did not accept the Representation RC4 Product subject. Any new work requires
+fresh intake and the smallest lawful re-entry.
 
 ## GOAL-001 — Freeze the STDO semantic compression
 
@@ -256,7 +261,7 @@ nor semantic version.
 
 ## GOAL-008 — Enter the coordinated release-matched cohort
 
-Status: in progress
+Status: completed
 
 Carry the exact Source STDO cut version through the same-suffix Axiom Indexer
 mechanics, STDO Representation Product, `a_c.STDO` program, logical constraint
@@ -280,9 +285,34 @@ seven-member Product and mechanical dependency.
   source before exact coordinated Axiom `v2.5.0-rc.4` regenerates the map.
 - Active Product, requirement, frame-basis, native skill, release record,
   checker, and Product Definition coordinates all name exact `2.5.0-rc.4`.
-- Candidate qualification binds the frozen eight-member inventory and exact
-  Axiom candidate mechanics. Release qualification additionally requires the
+- Prepublication qualification binds the frozen eight-member inventory and
+  exact Axiom mechanics. Release qualification additionally requires the
   immutable Axiom and Representation tags from commit B.
 - One atomic remote transaction publishes the carrier and complete STDO,
   Axiom, and Representation ref set. This Goal grants no tag, push, or Product
   acceptance authority by itself.
+
+### Completion evidence
+
+- commit A Source STDO tag object:
+  `032dac0c833111547f7dd4b290c5316ed9b70f97`;
+- coordinated commit B: `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`;
+- Axiom immutable tag object:
+  `4750e09639c118f1097d4ea046fe23d26713f96b`;
+- Representation immutable tag object:
+  `d85d25482f9d9132147bea189b0fe0aca1929dff`;
+- Representation Project Subtree tree:
+  `44fb7bc673726a920552d7dd62b3b754953396e0`;
+- frozen eight-member inventory SHA-256:
+  `32dd04f5644a05c04c844a28d1978d1c1ffdd5e7f20473b7d7f8626e1e07e830`;
+- Source STDO 52-member aggregate:
+  `504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656`;
+- one atomic 13-ref transaction published main, all three Product cut tags,
+  selectors, RC branches, and release branches; and
+- the exact commit-B published-cohort gate returned valid with zero failures.
+- postpublication frame basis revision 16 binds the exact published child tag,
+  commit, repository-tree, and Project-Subtree identities and closes the RC4
+  publication phase for continuing source.
+
+Publication identifies the qualified RC4 subjects. It does not accept Product
+meaning; the accepted Representation RC1 Product remains unchanged.

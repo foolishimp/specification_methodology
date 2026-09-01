@@ -110,7 +110,7 @@ the exact released dependency selected by another Product.
 
 ## GOAL-004 — Cut the release-coupled Axiom mechanics for STDO RC4
 
-Status: active
+Status: completed
 
 Reprice the continuing Axiom Indexer mechanics as a release-coupled asset for
 exact Source STDO `v2.5.0-rc.4`. Preserve the accepted `v0.1.0-rc.1` Product
@@ -141,15 +141,29 @@ and its evidence as immutable history. Do not absorb the sibling
 
 ### Release boundary
 
-The intended qualified immutable ref is
-`refs/tags/axiom_indexer/v2.5.0-rc.4`. This goal constructs and qualifies that
-candidate. It grants no tag, branch, selector, remote, or Product-acceptance
-effect. Before immutable publication, candidate qualifying-byte repair remains
-local to this coordinated RC4 construction and requires renewed qualification,
-not a higher cut. After immutable publication, any Axiom qualifying-byte repair
+The qualified immutable ref is
+`refs/tags/axiom_indexer/v2.5.0-rc.4`. This goal constructed and qualified that
+candidate but granted no tag, branch, selector, remote, or Product-acceptance
+effect. The later direct coordinated-release grant published the exact cut in
+one atomic Specification Stack transaction. Publication does not accept
+Product meaning. After immutable publication, any Axiom qualifying-byte repair
 requires another coordinated Source STDO and Axiom cut rather than an
 independently numbered Axiom RC.
 
 The verified RC3 Product Definition adoption is retained only as the completed
 construction transition from the accepted RC1 basis. It is not the release
 basis and no Axiom RC3 cut will be published.
+
+### Completion evidence
+
+- immutable tag: `refs/tags/axiom_indexer/v2.5.0-rc.4`;
+- tag object: `4750e09639c118f1097d4ea046fe23d26713f96b`;
+- peeled commit: `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`;
+- repository tree: `093302db57bfb2e7beeed7f02dfc6d7090921a15`;
+- Axiom subtree: `3f71c3c2df99008b9521e338a7837c553f87173a`;
+- seven-member Product inventory SHA-256:
+  `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`;
+- matched Source STDO tag:
+  `refs/tags/specification_methodology/v2.5.0-rc.4`; and
+- the root published-cohort gate returned valid with zero failures after the
+  atomic 13-ref transaction.

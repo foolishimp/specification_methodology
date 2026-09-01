@@ -1,7 +1,7 @@
 # Axiom Indexer Product
 
-Status: active source definition constructing a release-coupled successor;
-Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
+Status: active source definition after publication of the release-coupled RC4
+cut; Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
 
 ## Product statement
 
@@ -213,7 +213,11 @@ present-tense definition.
 
 The accepted released predecessor is the exact immutable `v0.1.0-rc.1` cut
 identified in `../releases/v0.1.0.md` and its durable acceptance record. The
-source project is constructing the release-coupled successor declared in
-`../releases/v2.5.0.md` without changing that predecessor. No sibling semantic
-program or map, GTL carrier, runtime authority, or capability outside the
-release claims is implied.
+release-coupled successor declared in `../releases/v2.5.0.md` is published at
+immutable annotated tag `axiom_indexer/v2.5.0-rc.4`, tag object
+`4750e09639c118f1097d4ea046fe23d26713f96b`, peeling to commit
+`a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. Publication identifies the
+qualified Product subject but is not Product acceptance. The source project
+continues from that release without changing the accepted predecessor. No
+sibling semantic program or map, GTL carrier, runtime authority, or capability
+outside the release claims is implied.

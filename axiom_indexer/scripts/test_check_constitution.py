@@ -69,8 +69,8 @@ class CutAlignmentTests(unittest.TestCase):
         )
 
 
-class CandidateConstitutionTests(unittest.TestCase):
-    def test_readme_passes_an_explicit_verified_store_to_candidate_check(self) -> None:
+class ConstitutionTests(unittest.TestCase):
+    def test_readme_passes_an_explicit_verified_store_to_check(self) -> None:
         readme = (subject.ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn(
             'STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"',
@@ -87,7 +87,7 @@ class CandidateConstitutionTests(unittest.TestCase):
         self.assertEqual([], failures)
         self.assertEqual(subject.PRODUCT_INVENTORY_SHA256, digest)
 
-    def test_current_candidate_constitution_is_valid(self) -> None:
+    def test_current_constitution_is_valid(self) -> None:
         result = subject.check_constitution(
             stdo_store=TEST_STORE,
             status_runner=valid_stdo_status,
@@ -98,6 +98,11 @@ class CandidateConstitutionTests(unittest.TestCase):
         self.assertTrue(result["release_ready"], result["failures"])
         self.assertTrue(result["stdo_status_valid"], result["failures"])
         self.assertEqual("target", result["basis_state"])
+        self.assertEqual("completed-and-closed", result["publication_phase"])
+        self.assertEqual(
+            subject.FRAME_DECISION_PUBLISHED_AXIOM,
+            result["published_axiom"],
+        )
 
     def test_missing_explicit_store_is_not_release_ready(self) -> None:
         result = subject.check_constitution(status_runner=valid_stdo_status)
@@ -125,6 +130,25 @@ class FrameDecisionTests(unittest.TestCase):
             with self.subTest(field=field):
                 decision = self._decision()
                 decision[field] = value
+                failures = subject.validate_frame_decision(decision)
+                self.assertIn(f"frame-basis decision mismatch: {field}", failures)
+
+    def test_publication_identity_and_acceptance_tamper_fail_closed(self) -> None:
+        cases = (
+            ("publication_phase", None, "open"),
+            ("product_acceptance", None, "accepted"),
+            ("published_axiom", "tag_object", "0" * 40),
+            ("source_stdo", "tag_object", "1" * 40),
+        )
+        for field, nested, value in cases:
+            with self.subTest(field=field, nested=nested):
+                decision = self._decision()
+                if nested is None:
+                    decision[field] = value
+                else:
+                    container = decision[field]
+                    self.assertIsInstance(container, dict)
+                    container[nested] = value
                 failures = subject.validate_frame_decision(decision)
                 self.assertIn(f"frame-basis decision mismatch: {field}", failures)
 

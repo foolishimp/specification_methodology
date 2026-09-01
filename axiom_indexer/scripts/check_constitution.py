@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the release-coupled Axiom Indexer candidate constitution."""
+"""Verify the release-coupled Axiom Indexer constitution."""
 
 from __future__ import annotations
 
@@ -28,6 +28,10 @@ TRANSITION_STDO_MANIFEST = (
 )
 AXIOM_CUT = "v2.5.0-rc.4"
 AXIOM_QUALIFIED_REF = "refs/tags/axiom_indexer/v2.5.0-rc.4"
+AXIOM_TAG_OBJECT = "4750e09639c118f1097d4ea046fe23d26713f96b"
+AXIOM_COMMIT = "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+AXIOM_REPOSITORY_TREE = "093302db57bfb2e7beeed7f02dfc6d7090921a15"
+AXIOM_SUBTREE_TREE = "3f71c3c2df99008b9521e338a7837c553f87173a"
 SOURCE_STDO_QUALIFIED_REF = "refs/tags/specification_methodology/v2.5.0-rc.4"
 SOURCE_STDO_TAG_OBJECT = "032dac0c833111547f7dd4b290c5316ed9b70f97"
 SOURCE_STDO_COMMIT = "7a25668a8fecfd26f895759af3bec4708727964a"
@@ -46,36 +50,77 @@ PRODUCT_INVENTORY_SHA256 = (
 RELEASE_PATH = Path("releases/v2.5.0.md")
 RELEASE_SHA256 = "2f4643a5b184a33ab9cd65c1de09b53ffee747012cd1108b795fc6df92263e8d"
 FRAME_BASIS_PATH = Path("specification/REFERENCE_FRAME_BASIS.md")
-FRAME_BASIS_SHA256 = "100c71ba8bd8f64a50efff656ef5004edf6b06f27fa2bc9dcd7dd1e7d039009a"
+FRAME_BASIS_SHA256 = "032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69"
 FRAME_DECISION_PATH = Path(
-    ".ai-workspace/decisions/20260901T142728Z_frame_basis_v7_acceptance.json"
+    ".ai-workspace/decisions/20260901T170605Z_frame_basis_v8_acceptance.json"
 )
 FRAME_DECISION_SHA256 = (
-    "951c8a40b9be8655e2e1a225d6c6db2f6be5e089b868375709fa168717e58f5c"
+    "26c68cf20df58d055f091eb148e098551065ae27f43085e2c22e7615b77f4d39"
 )
 FRAME_DECISION_SCOPE = (
-    "Qualify and publish only the unchanged seven-member Axiom Indexer mechanics "
-    "as the release-coupled v2.5.0-rc.4 member of the coordinated Specification "
-    "Stack cohort; excludes sibling semantic program or map bytes and any "
-    "Product-scope expansion."
+    "Adopt exact published Axiom Indexer v2.5.0-rc.4 mechanics as the source-"
+    "project release baseline and close GOAL-004 and its publication phase under "
+    "exact Source STDO v2.5.0-rc.4; excludes Product acceptance, release-record "
+    "mutation, Product-scope expansion, sibling semantic bytes, ref movement, and "
+    "future publication authority."
 )
-FRAME_DECISION_TIME = "2026-09-01T14:50:53Z"
+FRAME_DECISION_TIME = "2026-09-01T17:06:05Z"
 FRAME_DECISION_SOURCE = (
-    "Direct human Product-owner instruction in the active workstream granted "
-    "Codex authority, once completion and proportional qualification were "
-    "achieved, to release this same-version coordinated cohort. This proxy "
-    "decision applies that pre-existing bounded grant after accepted cold-review "
-    "findings; it does not claim separate human inspection or acceptance of the "
-    "exact repaired bytes."
+    "Direct human Product-owner instruction in the active workstream required "
+    "every live surface to close on RC4 and consume RC4 like STDO Representation, "
+    "after the exact coordinated RC4 cohort had been published under the prior "
+    "bounded release grant. This proxy decision records only the resulting "
+    "postpublication source-project basis and closure; it does not claim separate "
+    "human inspection or acceptance of the exact bytes."
 )
 FRAME_DECISION_EVIDENCE_REFS = (
     "./specification/PRODUCT.md#product-disposition-authority",
-    "./specification/PRODUCT.md#coordinated-release-identity",
+    "./specification/PRODUCT.md#current-boundary",
     "./specification/GOALS.md#goal-004--cut-the-release-coupled-axiom-mechanics-for-stdo-rc4",
     "./specification/REFERENCE_FRAME_BASIS.md#acceptance-gate",
+    "./README.md#release",
     "./releases/v2.5.0.md",
     "./stdo_default.json",
 )
+FRAME_DECISION_PUBLISHED_AXIOM = {
+    "qualified_ref": AXIOM_QUALIFIED_REF,
+    "tag_object": AXIOM_TAG_OBJECT,
+    "commit": AXIOM_COMMIT,
+    "repository_tree": AXIOM_REPOSITORY_TREE,
+    "project_subtree_tree": AXIOM_SUBTREE_TREE,
+}
+FRAME_DECISION_SOURCE_STDO = {
+    "basis": TARGET_STDO_BASIS,
+    "qualified_ref": SOURCE_STDO_QUALIFIED_REF,
+    "tag_object": SOURCE_STDO_TAG_OBJECT,
+    "commit": SOURCE_STDO_COMMIT,
+    "repository_tree": SOURCE_STDO_REPOSITORY_TREE,
+    "project_subtree_tree": SOURCE_STDO_SUBTREE_TREE,
+    "standards_tree": SOURCE_STDO_STANDARDS_TREE,
+    "manifest_sha256": TARGET_STDO_MANIFEST,
+}
+FRAME_DECISION_SUPERSESSION = {
+    "prior_subject_uri": "urn:axiom-indexer:frame-set:release-readiness:7",
+    "prior_subject_sha256": (
+        "sha256:100c71ba8bd8f64a50efff656ef5004edf6b06f27fa2bc9dcd7dd1e7d039009a"
+    ),
+    "prior_decision": (
+        "./.ai-workspace/decisions/" "20260901T142728Z_frame_basis_v7_acceptance.json"
+    ),
+    "prior_decision_sha256": (
+        "sha256:951c8a40b9be8655e2e1a225d6c6db2f6be5e089b868375709fa168717e58f5c"
+    ),
+    "change": (
+        "Publication completed. Revision 8 binds the immutable Axiom RC4 and "
+        "exact Source STDO RC4 identities, closes the publication phase, and "
+        "becomes the live source-project basis without changing the historical "
+        "revision-7 decision."
+    ),
+    "disposition": (
+        "Revision 7 remains historical prepublication evidence and is not the "
+        "live Product Definition frame binding."
+    ),
+}
 RELEASE_STATUS = (
     "Status: mutable coordinated candidate; no Axiom Indexer `2.5.0` cut is\n"
     "published or accepted by this record."
@@ -359,7 +404,7 @@ def validate_frame_decision(decision: Any) -> list[str]:
     expected_decision = {
         "kind": "axiom-indexer.frame-basis-acceptance",
         "schema_version": 2,
-        "subject_uri": "urn:axiom-indexer:frame-set:release-readiness:7",
+        "subject_uri": "urn:axiom-indexer:frame-set:release-readiness:8",
         "subject_ref": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
         "subject_sha256": f"sha256:{FRAME_BASIS_SHA256}",
         "method_basis_uri": (f"{TARGET_STDO_BASIS}standards/REFERENCE_FRAME_METHOD.md"),
@@ -376,6 +421,11 @@ def validate_frame_decision(decision: Any) -> list[str]:
         "decision_source": FRAME_DECISION_SOURCE,
         "self_expansion_prohibited": True,
         "human_exact_byte_inspection_claimed": False,
+        "publication_phase": "completed-and-closed",
+        "product_acceptance": "uninvoked",
+        "published_axiom": FRAME_DECISION_PUBLISHED_AXIOM,
+        "source_stdo": FRAME_DECISION_SOURCE_STDO,
+        "supersession_record": FRAME_DECISION_SUPERSESSION,
     }
     for key, value in expected_decision.items():
         if decision.get(key) != value:
@@ -528,14 +578,30 @@ def verify_release_record(failures: list[str]) -> None:
 
 def verify_live_law(failures: list[str]) -> None:
     surfaces = {
+        "README.md": (
+            AXIOM_QUALIFIED_REF.removeprefix("refs/tags/"),
+            AXIOM_TAG_OBJECT,
+            AXIOM_COMMIT,
+            "exact revision-8 postpublication basis",
+            "without claiming Product acceptance",
+        ),
         "specification/PRODUCT.md": (
             "## Coordinated release identity",
             "refs/tags/axiom_indexer/v<version>-rc.<n>",
             "does not claim, copy, or accept those sibling bytes.",
+            AXIOM_TAG_OBJECT,
+            AXIOM_COMMIT,
+            "Publication identifies the",
+            "qualified Product subject but is not Product acceptance.",
         ),
         "specification/GOALS.md": (
             "## GOAL-004 — Cut the release-coupled Axiom mechanics for STDO RC4",
+            "Status: completed",
             AXIOM_QUALIFIED_REF,
+            AXIOM_TAG_OBJECT,
+            AXIOM_COMMIT,
+            AXIOM_REPOSITORY_TREE,
+            AXIOM_SUBTREE_TREE,
         ),
         "specification/requirements/REQ-P-RELEASE-COUPLING.md": (
             "REQ-P-RELEASE-COUPLING-001",
@@ -547,10 +613,16 @@ def verify_live_law(failures: list[str]) -> None:
             "STDO Representation supplies and owns the corpus-specific Axiomatic Program.",
         ),
         "specification/REFERENCE_FRAME_BASIS.md": (
-            "urn:axiom-indexer:frame-set:release-readiness:7",
+            "urn:axiom-indexer:frame-set:release-readiness:8",
             f'method_basis = "{TARGET_STDO_BASIS}standards/REFERENCE_FRAME_METHOD.md"',
             f'release_method = "{TARGET_STDO_BASIS}standards/RELEASE_METHOD.md"',
             f'stdo_manifest_sha256 = "sha256:{TARGET_STDO_MANIFEST}"',
+            f'published_axiom_ref = "{AXIOM_QUALIFIED_REF}"',
+            f'published_axiom_tag_object = "{AXIOM_TAG_OBJECT}"',
+            f'published_axiom_commit = "{AXIOM_COMMIT}"',
+            f'published_repository_tree = "{AXIOM_REPOSITORY_TREE}"',
+            f'published_axiom_subtree_tree = "{AXIOM_SUBTREE_TREE}"',
+            'publication_phase = "completed-and-closed"',
         ),
     }
     for relative, fragments in surfaces.items():
@@ -595,6 +667,8 @@ def check_constitution(
         "mechanics_valid": not mechanics_failures,
         "product_member_count": len(PRODUCT_MEMBERS),
         "product_member_inventory_sha256": inventory,
+        "publication_phase": "completed-and-closed",
+        "published_axiom": FRAME_DECISION_PUBLISHED_AXIOM,
         "release_ready": not failures,
         "release_record": RELEASE_PATH.as_posix(),
         "stdo_basis": TARGET_STDO_BASIS,
@@ -609,7 +683,7 @@ def check_constitution(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Verify the release-coupled Axiom Indexer candidate"
+        description="Verify the release-coupled Axiom Indexer constitution"
     )
     parser.add_argument(
         "--stdo-store",

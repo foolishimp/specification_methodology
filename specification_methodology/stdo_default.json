@@ -1,5 +1,5 @@
 {
-  "$schema": "stdo://releases/v2.4.3-rc.3/standards/schemas/product-definition.schema.json",
+  "$schema": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json",
   "kind": "stdo.product-definition",
   "product": {
     "definition_id": "urn:stdo:product-definition:specification-methodology",
@@ -12,10 +12,10 @@
       "source": {
         "repository": "https://github.com/foolishimp/specification_methodology.git"
       },
-      "selector": "stdo://channels/2.4.3",
+      "selector": "stdo://channels/2.5.0",
       "basis": {
-        "uri": "stdo://releases/v2.4.3-rc.3/",
-        "manifest_sha256": "312c84609866a4b8ea665bbbc87eb16ef3a3bb28acc234da6d081065af40d551"
+        "uri": "stdo://releases/v2.5.0-rc.4/",
+        "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
       }
     },
     "additional_authorities": [
@@ -25,11 +25,19 @@
     "entrypoints": [
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/authority_compressions/stdo_compressed.md"
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
         "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/STDO_REFERENCE_FRAME_BASELINE.md"
       },
       {
         "basis": "#/constitution/additional_authorities/0",
@@ -57,7 +65,8 @@
     {
       "uri": "./specification/REFERENCE_FRAME_BASIS.md",
       "authority": [
-        "./specification/PRODUCT.md"
+        "./specification/PRODUCT.md#reference-frame-engagement",
+        "./.ai-workspace/decisions/20260901T163724Z_stdo_rc4_source_basis_acceptance.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:specification-methodology"
