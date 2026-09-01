@@ -2,14 +2,17 @@
 
 Authoring source repository for the shared specification methodology.
 
-New to the toolchain or adding STDO to an existing project? Start with the
-[STDO Quickstart](QUICKSTART.md).
+New to STDO? Read [Using STDO](plugins/spec/references/GETTING_STARTED.md) for
+the daily human and LLM workflow. Use the [Project Quickstart](QUICKSTART.md)
+when adding the toolchain and Product Definition to a project.
 
 Mutable future-method source lives under `specification/standards/`. Publication
 authority is one immutable released STDO RC cut identified by its annotated tag,
 commit, tree, and exact member inventory. A consumer is governed by the complete
-cut pinned in its Product Definition. The `v<version>` tag is only the mutable
-alias to the highest-ordinal published RC on that line.
+cut pinned in its Product Definition. The shared-source
+`specification_methodology/v<version>` tag is only the mutable alias to the
+highest-ordinal published RC on that line. Historical unqualified selectors
+remain frozen history.
 
 The standards library includes the domain-specific
 [`a_c` STDO Axiomatic Calculus for Governed Symbolic Systems](specification/standards/AXIOMATIC_CALCULUS.md).
@@ -28,18 +31,23 @@ store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
 already pinned Product Definitions, and performs explicit adoption and fleet
 updates. Projects do not need a copied standards tree or prescribed layout.
 
-During development, install the manager itself with an isolated Python
-application installer:
+During development from a Specification Stack checkout, install the manager
+itself with an isolated Python application installer:
 
 ```sh
-pipx install .
+pipx install --force ./specification_methodology
 ```
 
-For a released manager, install from an immutable RC tag rather than the moving
-version-line alias:
+When already inside the `specification_methodology/` project directory, use
+`pipx install --force .`. The explicit replacement avoids leaving an older
+manager in place when a qualified cut requires newer ref-resolution behavior.
+
+For the current released RC3 manager, install from its qualified immutable ref
+rather than the moving version-line alias:
 
 ```sh
-pipx install "git+https://github.com/foolishimp/specification_methodology.git@v<version>-rc.<n>"
+pipx install --force \
+  "git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.3#subdirectory=specification_methodology"
 ```
 
 Then install or inspect a cut:

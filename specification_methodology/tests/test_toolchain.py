@@ -64,9 +64,15 @@ class ReleaseFixture:
         run_git(self.repository, "config", "user.email", "stdo-test@example.invalid")
         (self.project_root / "specification" / "standards").mkdir(parents=True)
         (self.project_root / "specification" / "standards" / "schemas").mkdir()
-        (self.project_root / "plugins" / "spec" / "skills" / "refresh").mkdir(
+        (
+            self.project_root / "plugins" / "spec" / "skills" / "stdo-status" / "agents"
+        ).mkdir(parents=True)
+        (self.project_root / "plugins" / "spec" / "claude-skills" / "refresh").mkdir(
             parents=True
         )
+        (self.project_root / "plugins" / "spec" / ".claude-plugin").mkdir()
+        (self.project_root / "plugins" / "spec" / ".codex-plugin").mkdir()
+        (self.project_root / "plugins" / "spec" / "references").mkdir()
         (self.project_root / "releases").mkdir()
         (self.project_root / "LICENSE").write_text("test license\n", encoding="utf-8")
         (
@@ -97,8 +103,42 @@ class ReleaseFixture:
             encoding="utf-8",
         )
         (
-            self.project_root / "plugins" / "spec" / "skills" / "refresh" / "SKILL.md"
-        ).write_text("# Refresh\n", encoding="utf-8")
+            self.project_root / "plugins" / "spec" / ".claude-plugin" / "plugin.json"
+        ).write_text('{"name":"spec","skills":["./claude-skills/refresh"]}\n')
+        (
+            self.project_root / "plugins" / "spec" / ".codex-plugin" / "plugin.json"
+        ).write_text('{"name":"spec","skills":"./skills/"}\n')
+        (
+            self.project_root
+            / "plugins"
+            / "spec"
+            / "skills"
+            / "stdo-status"
+            / "SKILL.md"
+        ).write_text("# STDO Status\n", encoding="utf-8")
+        (
+            self.project_root
+            / "plugins"
+            / "spec"
+            / "skills"
+            / "stdo-status"
+            / "agents"
+            / "openai.yaml"
+        ).write_text('{"policy":{"allow_implicit_invocation":true}}\n')
+        (
+            self.project_root
+            / "plugins"
+            / "spec"
+            / "claude-skills"
+            / "refresh"
+            / "SKILL.md"
+        ).write_text("# Claude Refresh\n", encoding="utf-8")
+        (
+            self.project_root / "plugins" / "spec" / "references" / "GETTING_STARTED.md"
+        ).write_text("# Getting Started\n", encoding="utf-8")
+        (
+            self.project_root / "plugins" / "spec" / "references" / "REFRESH.md"
+        ).write_text("# Refresh Procedure\n", encoding="utf-8")
         (self.project_root / "releases" / "v1.0.0.md").write_text(
             "# Release\n", encoding="utf-8"
         )
@@ -561,6 +601,21 @@ class StoreTests(unittest.TestCase):
             self.assertEqual(
                 installed.manifest["auxiliary"]["plugin"]["source_root"],
                 "plugins/spec",
+            )
+            self.assertEqual(
+                {
+                    member["path"]
+                    for member in installed.manifest["auxiliary"]["plugin"]["members"]
+                },
+                {
+                    ".claude-plugin/plugin.json",
+                    ".codex-plugin/plugin.json",
+                    "claude-skills/refresh/SKILL.md",
+                    "references/GETTING_STARTED.md",
+                    "references/REFRESH.md",
+                    "skills/stdo-status/SKILL.md",
+                    "skills/stdo-status/agents/openai.yaml",
+                },
             )
             self.assertEqual(
                 installed.manifest["auxiliary"]["release_note"]["source_path"],

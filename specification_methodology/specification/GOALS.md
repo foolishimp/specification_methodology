@@ -2,49 +2,51 @@
 
 ## Goal
 
-Status: completed
+Status: active
 
-Qualify and publish the current STDO 2.5.0 successor as one immutable,
-project-qualified RC2 without moving the accepted RC1 or confusing the shared
-repository carrier with the STDO Product subject.
+Make the released STDO method directly usable by a new downstream human or LLM
+for project entry, requirement iteration, governed construction and testing,
+independent review, monitoring, and triage without creating another method or
+workflow engine.
 
 ## Selected Work
 
-- `T-023` completed release-record reconciliation, bounded executable
-  qualified-ref support, exact candidate qualification, immutable RC2
-  publication, and remote verification.
+- `T-026` owns exact-cut qualification and publication of the closed T-024 and
+  T-025 outcome as the aligned STDO and plugin `2.5.0-rc.3` successor.
 
-No further Product or method expansion, downstream adoption, interpreted
-`a_c.STDO` model, Axiom Indexer change, or STDO Representation release is
-selected by this Product goal.
+## Retained Product State
+
+- T-019 through T-025 remain closed.
+- STDO 2.5.0 RC2 remains published and unchanged at
+  `specification_methodology/v2.5.0-rc.2`.
+- RC2 contains the earlier three-member Claude plugin payload. The aligned
+  `2.5.0-rc.3` dual-host plugin is the exact T-026 release candidate, not an
+  RC2 member.
+- Product acceptance, plugin successor publication, and consumer adoption
+  remain separate.
 
 ## Governed Outcome
 
-- The exact 52-member standards successor and its protected claim inputs are
-  reproducible from the release record.
-- `stdo-toolchain 0.1.2` resolves historical and project-qualified STDO cuts,
-  preserves project-relative logical identity, and records the shared-source
-  transport coordinates needed to reacquire a qualified cut.
-- `specification_methodology/v2.5.0-rc.2` becomes one annotated immutable cut
-  under the `specification_methodology` Project Release Namespace and Project
-  Subtree.
-- The qualified selector, RC branch, and release branch align to RC2; all
-  historical RC1 refs and objects remain unchanged.
-- Publication, exact-cut review, Product acceptance, and consumer adoption
-  remain distinct.
-
-## Current Disposition
-
-T-019 through T-023 are closed. The exact-subject a_c-guided Reviewer result
-for T-022 is `satisfied` with no S0-S4 findings. STDO 2.5.0 RC2 is published
-under the qualified project namespace and independently verified from its
-public immutable cut with P0 through P3 all zero. Product acceptance and
-consumer adoption remain separate. No successor work is selected.
+- A new user can establish an exact basis, iterate requirements, activate code
+  and tests, understand role boundaries, monitor work, and help triage.
+- Claude and Codex expose `stdo help`, `stdo ticket`, `stdo work`, `stdo
+  review`, and `stdo status` through one shared set of workflow skill bytes.
+- Claude's full-standard refresh stays explicit and manual-only. Codex can read
+  the same exact standards directly without adding a sixth advertised verb.
+- Skills route to the smallest relevant authority and preserve open solution
+  space. They are not prompt, ticket, workflow, severity, or priority engines.
+- One-run work may draft, validate, admit, and execute one run-scoped contract
+  in the same invocation. Durable tickets exist only for work or obligations
+  whose independent identity, coordination, or closure must outlive the
+  applicable run-or-sprint boundary.
 
 ## Selection Boundary
 
-This wave may change the bounded release record, release qualification proof,
-toolchain realization needed for nested and qualified shared-source cuts, work
-tracking, and the authorized Git publication carriers. Any additional
-constitutional or Product change requires re-entry and creates a new release
-subject. Any qualifying-byte repair after RC2 publication advances to RC3.
+The construction scope is closed. This wave may now change only exact
+release-scoped records and work tracking required to qualify and publish the
+already-bound candidate. It does not change Ticket Method, its compressions,
+plugin bytes, other Specification Method law, Product meaning, toolchain
+semantics, a consumer Product Definition, an accepted frame basis, or an
+immutable RC1 or RC2 byte. Direct human Product authority authorizes
+publication of the exact aligned
+`specification_methodology/v2.5.0-rc.3` successor after exact qualification.

@@ -35,7 +35,7 @@ source_digests:
   DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
   ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
   WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
-  TICKET_METHOD.md: a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457
+  TICKET_METHOD.md: 6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
   RELEASE_METHOD.md: 8e6de5a50ac06f5826fc90f8f8792fb0c7bbc61458c822affe019e10290a80cd
@@ -322,6 +322,36 @@ layer that owns the missing truth.
   semantic-resolution completeness, and authority congruence. Every `stdo:`
   schema locator is parsed case-insensitively before loading and must select the
   same immutable cut as the operative basis.
+
+## Work Carrier And Execution Contract
+
+- Every governed execution uses one admitted run-scoped execution contract.
+  After upstream work authority is established, select the first applicable
+  source: reuse an exact admitted ticket; use a durable ticket only for state
+  beyond the admitted sprint or, outside a sprint, beyond the current run; use
+  a manifest-local entry for work ending inside its sprint; otherwise use an
+  intake draft for one-run work. Without upstream authority, stop rather than
+  creating a substitute ticket.
+- `Ticket-shaped` names required execution-contract fields, not durable ticket
+  identity. Absence of a durable ticket neither requires nor authorizes creating
+  one. Create or update a ticket only when work or an obligation outlives the
+  local carrier boundary: the admitted sprint when inside one, otherwise the
+  current run, and only under ticket-state authority.
+- Drafting and admission remain distinct relations; execution may occur in one
+  invocation. Ticket existence, lane placement, `active` status, a generic
+  work request, or the model's own draft cannot supply admission. Drafted or
+  rejected work stops before execution; deterministic admission or exact human
+  override of the bounded contract may continue without another ticket, turn,
+  or approval ceremony. The admitted result names its Product-bound mechanism
+  and authority, exact contract identity or digest, decision, and evidence.
+- Every admitted contract names one Product-bound durable result/evidence
+  surface. Record every result, withheld closure, and residual there before
+  return; a conversation return alone is insufficient. Without that authorized
+  surface, admission refuses.
+- Without authority to persist a required durable carrier, retain the
+  obligation in the contract's named durable result/evidence surface or an
+  already-authorized enclosing carrier, withhold closure, and return re-entry
+  pressure rather than manufacturing or losing a ticket.
 
 ## Bounded-Context Semantic Isolation
 

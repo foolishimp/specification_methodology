@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: a8fb5985ace1f10cab9fe6ac94c089351f1d9668891d47d50572a360a5bfe457
+source_digest: 6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-21
+generated_at: 2026-09-01
 stale_if_source_digest_changes: true
 ---
 
@@ -17,9 +17,11 @@ stale_if_source_digest_changes: true
 
 ## Governing Claim
 
-A ticket is a durable work contract with explicit intake, smallest lawful
-re-entry, target truth, superseded truth, closure law, non-closure conditions,
-proof, and current status.
+A ticket is a durable work carrier. Every execution uses a distinct run-scoped
+execution contract with explicit intake, smallest lawful re-entry, target truth,
+superseded truth, closure law, non-closure conditions, proof, and admission
+state. Required carrier lifetime decides whether that contract derives from a
+durable ticket, a sprint-local entry, or an intake draft.
 
 ## Carrier-Binding Compression
 
@@ -31,6 +33,20 @@ proof, and current status.
 - Another repository or tracker carrier is lawful only when it preserves stable
   identity, the complete required contract, history, state transitions,
   searchability, closure, and one authoritative record without a co-equal copy.
+- Reuse an existing admitted ticket when it covers the exact work. Use a
+  manifest-local iteration entry when admitted-sprint work needs no state after
+  sprint close. Use an intake-drafted run-scoped contract when work is outside
+  a sprint, bounded to one run, and needs no independent surviving state.
+- After upstream work authority is established, use the first applicable
+  carrier in this order: exact admitted ticket; durable ticket for state beyond
+  the admitted sprint or, outside a sprint, beyond the current run; sprint-local
+  entry; one-run intake draft. Create or update a durable ticket only under
+  ticket-state authority. Without upstream work authority, stop rather than
+  creating a ticket as substitute authority.
+- An explicit instruction from ticket-state authority may select a durable
+  record. It does not admit execution or widen upstream work authority.
+- `Ticket-shaped` describes execution-contract fields. It does not create
+  durable ticket identity, ticket-lane state, or execution admission.
 - Comment carriers may be local or external but remain commentary. Their
   visibility, recency, or location cannot turn them into ticket state or
   Product, requirement, or design truth.
@@ -68,6 +84,27 @@ proof, and current status.
   ticket; it does not become constitutional precedent.
 - Use tickets to identify active work scope, closure law, proof obligations,
   and open pressure.
+- Absence of a durable ticket neither requires nor authorizes creating one. A
+  generic request to work cannot admit model-widened scope or substitute for
+  upstream work-wave authority.
+- Draft, validate, admit, and execute may occur in one invocation. Drafting and
+  admission remain distinct; no separate turn, ticket, or approval ceremony is
+  required. A drafted or rejected contract stops before execution.
+- Ticket creation, lane placement, and `active` status do not admit an execution
+  contract. The drafting model cannot self-admit; deterministic admission or an
+  exact human override remains required. The admitted result names its
+  Product-bound mechanism and authority, exact contract identity or digest,
+  decision, and evidence.
+- Every admitted contract names one Product-bound durable result/evidence
+  surface. Record every result, withheld closure, and residual there before
+  return; a conversation return alone is insufficient. Without that authorized
+  surface, admission refuses.
+- A surviving obligation becomes durable only when it outlives the local
+  carrier boundary: the admitted sprint when inside one, otherwise the current
+  run. Without ticket-state authority, retain it in the contract's named durable
+  result/evidence surface or an already-authorized enclosing carrier, withhold
+  closure, and return re-entry pressure rather than manufacturing or losing a
+  ticket.
 - A ticket closes only when its closure law is met and every non-closure
   condition is avoided or explicitly repriced.
 - Review findings must cite current authority and code/proof paths, not only

@@ -178,6 +178,38 @@ class CompressionDigestTests(unittest.TestCase):
             ):
                 self.assertIn(claim, text, f"{name}: {claim}")
 
+    def test_ticket_compressions_preserve_proportional_carrier_selection(self) -> None:
+        texts = {
+            name: (COMPRESSIONS / name).read_text(encoding="utf-8")
+            for name in (
+                "ticket_method.compressed.md",
+                "stdo_compressed.md",
+            )
+        }
+        required = (
+            "run-scoped execution contract",
+            "manifest-local",
+            "intake draft",
+            "Absence of a durable ticket neither requires nor authorizes creating one",
+            "one invocation",
+            "Drafting and admission remain distinct",
+            "ticket-state authority",
+            "Product-bound mechanism",
+            "exact contract identity or digest",
+            "Product-bound durable result/evidence surface",
+            "conversation return alone",
+            "already-authorized enclosing carrier",
+            "withhold closure",
+        )
+        for name, text in texts.items():
+            normalized = " ".join(text.split())
+            for claim in required:
+                self.assertIn(claim, normalized, f"{name}: {claim}")
+        self.assertNotIn(
+            "when Product policy requires one",
+            texts["ticket_method.compressed.md"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

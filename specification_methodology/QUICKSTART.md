@@ -1,9 +1,12 @@
-# STDO Quickstart
+# STDO Project Quickstart
 
 This guide adds STDO governance to an existing project without changing that
 project's folder structure. The result is one Product Definition Overlay that
 selects an exact immutable STDO release, locates the project's existing `WHAT`
 and `HOW`, and gives agents a small stable discovery bootstrap.
+
+For requirement iteration, ticketing, code/test activation, review, and
+delivery status, continue with [Using STDO](plugins/spec/references/GETTING_STARTED.md).
 
 ## The Three Things To Keep Separate
 
@@ -12,8 +15,10 @@ and `HOW`, and gives agents a small stable discovery bootstrap.
 - The shared toolchain store contains verified installed bytes; its local path
   is derived machine state and never belongs in the Product Definition.
 
-The moving `v<version>` tag is the discovery selector for the highest-ordinal
-published immutable RC on that line. It never governs a project directly.
+The moving `specification_methodology/v<version>` tag is the shared-source Git
+discovery selector for the highest-ordinal published immutable RC on that line.
+It never governs a project directly. Historical unqualified selectors remain
+frozen history.
 
 ## Prerequisites
 
@@ -24,18 +29,23 @@ published immutable RC on that line. It never governs a project directly.
 
 ## 1. Install The Toolchain Manager
 
-From a checkout while developing the manager:
+From the Specification Stack repository root while developing the manager:
 
 ```sh
-pipx install .
+pipx install --force ./specification_methodology
 ```
 
-For normal use, install the manager from an exact immutable STDO RC tag that
-contains it:
+When already inside the `specification_methodology/` project directory, use
+`pipx install --force .`. The explicit replacement prevents an older manager
+from remaining active when the selected cut needs newer ref-resolution
+behavior.
+
+For the current published STDO 2.5.0 RC3 manager, install from its exact
+qualified Git ref and nested Python project:
 
 ```sh
-pipx install \
-  "git+https://github.com/foolishimp/specification_methodology.git@v<version>-rc.<n>"
+pipx install --force \
+  "git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.3#subdirectory=specification_methodology"
 ```
 
 Confirm the executable is available:
@@ -44,23 +54,24 @@ Confirm the executable is available:
 stdo --version
 ```
 
-Do not install from the moving `v<version>` selector when reproducibility
-matters.
+RC3 requires `stdo-toolchain 0.1.2`. Do not install from the moving qualified
+selector when reproducibility matters. Historical root-layout cuts use their
+historical unqualified refs and do not use the nested `subdirectory` fragment.
 
 ## 2. Install One Immutable STDO Cut
 
-Replace the two values below with the accepted cut and its version line:
+Keep the product-local cut distinct from its qualified Git transport ref:
 
 ```sh
-STDO_CUT='<immutable-cut>'
-STDO_VERSION='<version>'
+STDO_CUT='v2.5.0-rc.3'
 
 stdo install "$STDO_CUT"
 stdo verify "$STDO_CUT"
 ```
 
-For example, an immutable cut has the shape `v2.4.3-rc.2`, while its version
-line has the shape `2.4.3`.
+STDO 2.5.0 RC3 uses product-local cut `v2.5.0-rc.3` and qualified Git ref
+`specification_methodology/v2.5.0-rc.3`. Public `stdo:` URIs and `stdo
+install` continue to use the product-local cut.
 
 Keep the `manifest_sha256` returned by `install` or `verify`. The Product
 Definition pins both the immutable cut and that digest.
@@ -69,9 +80,9 @@ The default shared store is platform-specific. Override it when needed with
 `STDO_STORE` or the global `--store <path>` option. Never write the resulting
 machine-local path into a Product Definition.
 
-## 3. Copy The Product Definition Template
+## 3. Install Both Project Templates
 
-Resolve the template from the same installed cut:
+Resolve both templates from the same installed cut:
 
 ```sh
 STDO_TEMPLATE_PATH="$(
@@ -79,38 +90,24 @@ STDO_TEMPLATE_PATH="$(
     "stdo://releases/${STDO_CUT}/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json" |
     python3 -c 'import json, sys; print(json.load(sys.stdin)["path"])'
 )"
-
-cp "$STDO_TEMPLATE_PATH" ./stdo_default.json
-```
-
-Copy the Product-owned frame-basis starter from the same cut:
-
-```sh
 STDO_FRAME_BASIS_TEMPLATE="$(
   stdo resolve \
     "stdo://releases/${STDO_CUT}/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md" |
     python3 -c 'import json, sys; print(json.load(sys.stdin)["path"])'
 )"
-
-mkdir -p ./specification
-python3 - "$STDO_FRAME_BASIS_TEMPLATE" \
-  ./specification/REFERENCE_FRAME_BASIS.md <<'PY'
-import pathlib
-import sys
-
-source = pathlib.Path(sys.argv[1])
-target = pathlib.Path(sys.argv[2])
-try:
-    with target.open("xb") as output:
-        output.write(source.read_bytes())
-except FileExistsError:
-    raise SystemExit(f"refusing to overwrite existing frame basis: {target}")
-PY
 ```
 
-The copied file is not accepted merely because it exists. Replace every
-placeholder, bind it to the project's exact Product and work authorities, and
-record the accepting decision before treating it as the applicable basis.
+Do not copy either target separately. Run the single, tested two-target
+transaction under
+[New Project](plugins/spec/references/GETTING_STARTED.md#new-project) with these
+exact resolved paths. It preflights both sources and targets before writing,
+refuses every overwrite, and removes only its own staged or published outputs
+if either finalization fails.
+
+The installed frame-basis file is not accepted merely because it exists.
+Replace every placeholder, bind it to the project's exact Product and work
+authorities, and record the accepting decision before treating it as the
+applicable basis.
 
 Use:
 
@@ -204,18 +201,16 @@ is manager-owned. Existing prefix and suffix bytes remain project-owned.
 
 ## Daily Use
 
-Check the selected basis:
+The shell command `stdo status` checks the selected basis. It does not report
+Product delivery status:
 
 ```sh
 stdo status --definition stdo_default.json --verify
 ```
 
 Before governed work, resolve the accepted Project Reference-Frame Basis named
-by the Product Definition. Enter through its Executive frame or declared
-project equivalent: bind the exact outcome and basis, inspect the unresolved
-evaluation frontier, and activate only the smallest dependency-ready context
-needed for the next decision. Re-enter the owning source when the basis,
-authority, evidence, or frame does not resolve exactly.
+by the Product Definition, current Goals, affected authority, and admitted work
+carrier. Read only the context material to the requested action.
 
 Recreate the exact selected installation on another machine:
 
@@ -229,6 +224,19 @@ Resolve an owning standard:
 stdo resolve \
   "stdo://releases/${STDO_CUT}/standards/SPEC_METHOD.md"
 ```
+
+The shared Claude/Codex plugin provides these conversational shorthands:
+
+| Say | Skill |
+|---|---|
+| `stdo help` | `stdo-help` |
+| `stdo ticket` | `stdo-ticket` |
+| `stdo work` | `stdo-work` |
+| `stdo review` | `stdo-review` |
+| `stdo status` | `stdo-status` |
+
+See [Using STDO](plugins/spec/references/GETTING_STARTED.md) for the complete
+workflow, role split, triage boundary, and both host installation commands.
 
 ## Adopt The Latest Published RC
 
@@ -293,7 +301,7 @@ definition names its own basis and every composition edge explicitly.
 | Schema cut differs from basis | `$schema` and `constitution.stdo.basis.uri` must name the same immutable cut |
 | Manifest digest differs | Copy the digest for the exact selected cut; do not substitute another installation |
 | Adoption plan differs | The selector, target, manifest, or definition changed; create and review a new dry-run |
-| Version-line selector lags | Advance `v<version>` to the highest published immutable RC; the manager will not adopt the older alias target |
+| Version-line selector lags | Advance `specification_methodology/v<version>` to the highest published immutable RC; the manager will not adopt the older alias target |
 | Channel would downgrade | Retain an older immutable basis explicitly with `sync`, or advance through the latest channel; channel adoption never moves backward |
 | Bootstrap target escapes | Make the target relative to `product.source_project` and remove traversal or redirected components |
 | Duplicate definition identity | Give independently governed product-definition lines distinct `product.definition_id` values |

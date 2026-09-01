@@ -26,7 +26,7 @@ Each ticket is:
 - durable across sessions
 - typed, so bugs and features share one system
 
-Tickets are used for:
+Tickets are used when work needs independent durable identity for:
 
 - feature work
 - bug tracking
@@ -81,7 +81,7 @@ Tickets are durable work authority.
 
 Execution contracts are the run-scoped admitted work surface derived from a
 ticket, from a sprint manifest plus included ticket or iteration entry, or
-drafted during intake when no durable work surface exists yet.
+drafted during intake when no durable or sprint-local work identity is required.
 
 The important distinction is:
 
@@ -102,11 +102,12 @@ They exist so the system can:
 So the intended loop is:
 
 1. work arrives
-2. an agent drafts a ticket-shaped execution contract
-3. the system validates and admits or rejects it
-4. execution proceeds under the admitted contract
-5. closure is checked against that same contract
-6. resulting state still flows through normal proof, gap analysis, and repricing
+2. the system selects the smallest lawful work carrier for its required lifetime
+3. an agent drafts one run-scoped execution contract from that carrier
+4. the system validates and admits or rejects the contract
+5. execution may proceed in the same invocation under the admitted contract
+6. closure is checked against that same contract
+7. resulting state still flows through normal proof, gap analysis, and repricing
 
 ### Milestone And Phase-Scoped Truth (`STDO-UP-006`)
 
@@ -628,41 +629,66 @@ That means the ticket must record at least:
 - the lawful `re_entry_point`
 - when triage occurred via `triaged_at`
 
-### Ticket-As-Execution Rule
+### Work-Carrier-To-Execution Rule
 
-Tickets are not only planning notes.
+Every execution governed by this method uses one run-scoped execution contract.
+The required lifetime of the work or obligation selects the smallest lawful
+source carrier. First establish applicable upstream work authority, then select
+the first matching row. For work inside an admitted sprint, the local carrier
+boundary is that sprint; otherwise it is the current run.
 
-For substantive work, the ticket is the first-class human-readable draft of the
-execution contract.
+| Condition | Execution-contract source | Durable-ticket decision |
+|---|---|---|
+| no applicable upstream work authority exists | no execution contract is admitted | do not create a ticket as substitute authority; stop or re-enter |
+| applicable authority exists and an existing admitted ticket covers the exact work | derive the run-scoped contract from that ticket | reuse it; do not create another ticket |
+| applicable authority exists, no exact admitted ticket covers the work, and work or an open obligation needs independent state beyond the local carrier boundary | use one durable ticket plus the run-scoped contract | create or update the ticket only under ticket-state authority |
+| applicable authority exists, no exact admitted ticket covers the work, and work stays inside one admitted sprint with no state required after sprint close | use the sprint manifest plus one manifest-local iteration entry | do not create a durable ticket |
+| applicable authority exists, no exact admitted ticket or sprint covers the work, and work ends in the current run with no independent surviving state | use an intake-drafted run-scoped contract | do not create a durable ticket |
 
-For sprint-contained work, the sprint manifest supplies the batch-level portion
-of that contract and the included ticket or iteration entry supplies the
-item-level portion.
+`Ticket-shaped` describes the categorization, closure criteria, proof surface,
+non-closure conditions, and other required execution-contract fields. It does
+not create durable ticket identity or ticket-lane state.
 
-That means the runtime should be able to treat the ticket as:
+Absence of a durable ticket neither requires nor authorizes creating one. An
+exact Product-authorized work instruction may supply upstream work authority
+for a one-run contract; a generic request or model-widened scope cannot. Create
+or update a durable ticket only when the table requires surviving state and the
+actor holds ticket-state authority.
 
-- the categorization proposal
-- the closure-criteria proposal
-- the proof-surface proposal
-- the non-closure proposal
+An explicit instruction from ticket-state authority to create a durable record
+selects that durability. It does not admit an execution contract or widen its
+upstream work authority.
 
-before execution begins.
+The system may draft, validate, admit, and execute a contract in one invocation.
+Drafting and admission remain distinct relations within that invocation; no
+separate turn, ticket, or approval ceremony is implied. Execution begins only
+after deterministic admission or explicit human override of the exact contract.
+The drafting model must not infer admission from its own draft, ticket or sprint
+presence, lane placement, or `active` status.
 
-If no durable ticket or sprint entry exists yet, the system should draft a
-ticket-shaped execution contract or sprint-entry-shaped execution contract
-first, then validate it, then execute under the admitted result.
+The admitted result identifies the Product-bound admission mechanism and
+authority, exact contract identity or digest, decision, and evidence, including
+any exact human override. If those coordinates are absent, the contract remains
+drafted or rejected; prose asserting `admitted` is not admission evidence.
 
-This is the intended workflow:
+The admitted contract also names one Product-bound durable result/evidence
+surface. Every execution result, withheld closure, and residual obligation is
+recorded there before return. A conversation return alone is not durable
+evidence. If no such surface is authorized and available, contract admission
+refuses.
 
-- here is the work
-- categorize it
-- ticket it
-- validate the ticket/execution contract
-- keep working according to the admitted criteria
-- still send resulting state through proof, gap analysis, and repricing
+Absent or rejected admission returns the missing work authority without
+execution. Before return, an obligation that must survive the run becomes a
+sprint-local entry when its lifetime remains inside the admitted sprint;
+otherwise it is recorded as a durable ticket only under ticket-state authority.
+If that authority is absent, retain the obligation in the contract's named
+durable result/evidence surface or an already-authorized enclosing carrier,
+mark closure withheld on ticket-state authority, and return the required
+re-entry.
 
-The point is to prevent prompt-only work classification or silent execution
-under unstated closure conditions.
+Execution and closure use the same admitted categorization, criteria, proof
+surface, and non-closure conditions. Resulting state still flows through proof,
+gap analysis, and repricing.
 
 ### Execution Contract Admission
 
