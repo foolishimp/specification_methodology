@@ -31,3 +31,15 @@ Native skills available from this root:
 
 The skills route attention. They grant no semantic, mutation, acceptance, or
 release authority.
+
+## Coordinated Stack Release
+
+When work selects the explicit STDO release-matched cohort relation, read
+`STACK_RELEASE.md` and `stack_release.json`. One cohort version suffix covers
+the STDO corpus, distributed plugin, Axiom Indexer mechanics, STDO
+Representation, and generated `a_c.STDO` program/map index. Missing, stale,
+differently versioned, or source-digest-incongruent assets stop publication.
+
+Use `scripts/check_stack_release.py` at the content, local-ref-graph, and remote
+publication gates. The relation coordinates the peer Products; it does not
+merge their meaning, member sets, acceptance, or release authorities.

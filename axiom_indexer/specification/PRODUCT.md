@@ -1,6 +1,7 @@
 # Axiom Indexer Product
 
-Status: active source definition; Axiom Indexer 0.1.0 released.
+Status: active source definition constructing a release-coupled successor;
+Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
 
 ## Product statement
 
@@ -53,6 +54,11 @@ benefits, not the Product claim.
   `Join([{label, text}, ...]) -> string`. It preserves caller order and content.
   It performs no selection, resolution, interpretation, rewriting, budgeting,
   truncation, or orchestration.
+- **Release-Coupled Axiom Mechanics** is the generic validator, resolver,
+  map-instantiation, joiner, schema, and native-skill Product released under
+  the same product-local cut suffix as its exact selected Source STDO cut.
+  Equal suffixes preserve separate Product, Git namespace, member, claim,
+  review, and acceptance identities.
 
 ## Program law
 
@@ -70,6 +76,28 @@ Every program shall:
 
 The same program plus the same resolved bindings produces the same logical map
 and validation result.
+
+## Coordinated release identity
+
+Every successor Axiom Indexer cut shall select one exact immutable Source STDO
+cut and use the same product-local cut suffix:
+
+```text
+selected STDO cut:      v<version>-rc.<n>
+Axiom product cut:      v<version>-rc.<n>
+Axiom qualified Git ref: refs/tags/axiom_indexer/v<version>-rc.<n>
+```
+
+This relation couples release identity and qualification timing. It does not
+make Source STDO an Axiom Product member, collapse the two Products, or allow a
+mutable sibling checkout to replace either released dependency.
+
+The Axiom Product contains only its generic mechanics and native interface.
+STDO Representation owns its LLM-authored `a_c.STDO` semantic program and the
+deterministic logical map instantiated from that program. When Source STDO
+changes, Representation re-authors affected semantic entries and regenerates
+the map against the exact release-coupled Axiom mechanics. An Axiom release
+does not claim, copy, or accept those sibling bytes.
 
 ## LLM-first workflow
 
@@ -183,8 +211,9 @@ present-tense definition.
 
 ## Current boundary
 
-The released Product is the exact immutable `v0.1.0-rc.1` cut identified in
-`../releases/v0.1.0.md` and its durable acceptance record. The source project
-may build a successor without changing that Product. No accepted semantic
-program, GTL carrier, runtime authority, or capability outside the release
-claims is implied.
+The accepted released predecessor is the exact immutable `v0.1.0-rc.1` cut
+identified in `../releases/v0.1.0.md` and its durable acceptance record. The
+source project is constructing the release-coupled successor declared in
+`../releases/v2.5.0.md` without changing that predecessor. No sibling semantic
+program or map, GTL carrier, runtime authority, or capability outside the
+release claims is implied.

@@ -59,14 +59,33 @@ and by Claude through `.claude/skills/`.
 
 ## Release
 
-The released first Product line is `0.1.0`. Its exact subject, claims,
-dependencies, exclusions, and qualification boundary are declared in
+The accepted first Product remains immutable `v0.1.0-rc.1`. Its exact subject,
+claims, dependencies, exclusions, and qualification boundary are declared in
 [`releases/v0.1.0.md`](releases/v0.1.0.md).
 
 The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
 `e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeling to commit
 `dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
 only the mutable highest-published-RC selector.
+
+The active source candidate reprices the same seven generic mechanics members
+as the release-coupled Axiom cut for exact Source STDO `v2.5.0-rc.4`. The
+candidate record is [`releases/v2.5.0.md`](releases/v2.5.0.md); no corresponding
+Axiom tag or accepted Product exists yet. The sibling STDO Representation owns
+the STDO-specific semantic program and logical map.
+
+`stdo_default.json` now binds the exact locally installed and verified Source
+STDO RC4 cut. The preceding RC3 adoption remains transition evidence only; RC3
+is not an Axiom release target.
+
+Check the candidate constitution and inventory with:
+
+```sh
+STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
+stdo --store "$STDO_STORE" verify v2.5.0-rc.4 \
+  --manifest-sha256 4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
+python3 scripts/check_constitution.py --stdo-store "$STDO_STORE"
+```
 
 ## Boundary
 
@@ -83,8 +102,9 @@ semantic acceptance, and carrier admission remain deferred. The MVP joiner
 only concatenates the exact labels and text supplied by the LLM.
 
 Release publication is a separate lifecycle over this bounded Product; it does
-not become another Product capability. The active source-project frame basis
-is accepted at its exact revision-6 digest and bound in `stdo_default.json`.
+not become another Product capability. The active source-project frame basis is
+ratified at its exact revision-7 digest by the durable delegated release-
+authority decision bound in `stdo_default.json`.
 
 ## Authority order
 

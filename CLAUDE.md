@@ -22,3 +22,10 @@ Native skills:
   Source STDO re-entry.
 
 These skills route attention and grant no authority.
+
+For an explicitly selected coordinated STDO stack release, read
+`STACK_RELEASE.md` and `stack_release.json`. The exact normalized cohort version
+must match the STDO corpus, plugin, Axiom Indexer, STDO Representation, and
+generated `a_c.STDO` program/map. Run `scripts/check_stack_release.py` at the
+content, local-ref-graph, and remote gates. Any missing, stale, differently
+versioned, digest-incongruent, or partially published member stops release.

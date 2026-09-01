@@ -17,32 +17,47 @@ runtime observations into semantic identity.
 
 ```text
 Source STDO release:
-  stdo://releases/v2.5.0-rc.2/
+  stdo://releases/v2.5.0-rc.4/
+Source STDO qualified ref:
+  refs/tags/specification_methodology/v2.5.0-rc.4
+Source STDO annotated tag object:
+  032dac0c833111547f7dd4b290c5316ed9b70f97
+Source STDO peeled commit:
+  7a25668a8fecfd26f895759af3bec4708727964a
 Source STDO installed manifest SHA-256:
-  313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a
+  4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
 Source STDO member-set SHA-256:
-  a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
+  504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
 Axiomatic Calculus SHA-256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
-Axiom Indexer release tag:
-  v0.1.0-rc.1
-Axiom Indexer annotated tag object:
-  e7afc8a42a7123aebe91cb7582cb037b1aae612d
-Axiom Indexer peeled commit:
-  dc3e00998da36dae6ac7b76b340431a85096c83c
-Axiom Indexer repository tree:
-  8c9ad5f5e99a60c18fb8c1802471753afb226272
+Axiom Indexer coordinated candidate version:
+  v2.5.0-rc.4
+Axiom Indexer intended qualified ref:
+  refs/tags/axiom_indexer/v2.5.0-rc.4
 Axiom Indexer Product member inventory SHA-256:
   7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
+Axiom Indexer executable SHA-256:
+  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+Axiom Indexer program schema SHA-256:
+  61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b
+Axiom Indexer output contract SHA-256:
+  fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
 ```
+
+The Axiom coordinates above describe the coordinated construction candidate.
+Its immutable tag object, peeled commit, repository tree, and Project Subtree
+tree do not exist before the combined freeze and shall be bound before release
+qualification. Historical accepted Axiom Indexer `v0.1.0-rc.1` remains
+predecessor evidence and shall not substitute for the same-version dependency.
 
 ## Identity law
 
 - Program and logical-map identities use the exact released Axiom Indexer
   canonicalization and digest law.
-- Representation semantic version equals represented STDO semantic version;
-  equal version text does not equate their Products, cuts, or RC identities.
+- Representation exact version, including prerelease ordinal, equals the exact
+  represented STDO version; equal version text does not equate their Products,
+  cuts, member identities, review, or acceptance.
 - Skill identity binds its exact regular-file inventory and symlink target
   strings.
 - Joined-request identity is SHA-256 over exact UTF-8 output bytes.
@@ -61,7 +76,7 @@ local checkout, or unverified cache shall not substitute.
 **REQ-P-BASIS-002**: The selected Product artifact paths shall be:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/
   axiomatic-program.json
   logical-constraint-map.json
 ```
@@ -103,12 +118,44 @@ Product inventory, dependency bases, claim bytes, evidence, annotated immutable
 RC tag object, peeled commit, and tree. Publication or validation alone shall
 not imply Product acceptance.
 
-**REQ-P-BASIS-010**: STDO Representation `2.5.0` shall represent only exact
-STDO semantic version `2.5.0`. Its locally qualified RC ordinal, Product member
-identity, and acceptance remain independent of the represented STDO cut and of
-Axiom Indexer `0.1.0`.
+**REQ-P-BASIS-010**: A release-matched STDO Representation cut shall carry the
+exact represented STDO version, including prerelease ordinal. Its locally
+qualified RC ordinal shall equal the represented STDO RC ordinal while its
+Product identity, member inventory, review, acceptance, and Git object
+identities remain independent of Source STDO and Axiom Indexer.
 
 **REQ-P-BASIS-011**: The Product-owned Shared-Source Release Profile shall
 specialize only alternate Git spelling permitted by the installed Release
 Method. Its source-subtree root and tree are additional reacquisition evidence,
 not Product identity or authority imported from mutable method source.
+
+**REQ-P-BASIS-012**: Every release-matched source refresh shall carry one
+machine-readable `source-corpus.json` that binds the exact matched version,
+immutable Source STDO cut, installed-manifest digest, standards member-set
+digest, and every standards member path and digest. It is reproducibility
+evidence rather than a Product member. A changed Source STDO member shall be
+semantically re-evaluated by an LLM before the compression is accepted;
+byte-identical members and unaffected compression entries shall be conserved.
+
+**REQ-P-BASIS-013**: A release-matched Representation candidate shall bind the
+same exact version of its Axiom Indexer Development Product. A mutable sibling
+candidate may supply construction evidence before the coordinated cohort is
+published, but it is not the immutable dependency and cannot satisfy release
+qualification. Publication requires the exact qualified Axiom Indexer cut,
+member inventory, executable digest, and imported contract identities.
+
+**REQ-P-BASIS-014**: The release-matched cohort shall close over exact Source
+STDO and its plugin, same-version Axiom Indexer mechanics, the eight-member
+Representation Product, the released program and map, and all 52 Source STDO
+member paths and digests. A missing, stale, differently versioned, or
+source-digest-incongruent member shall block the cohort.
+
+**REQ-P-BASIS-015**: Coordinated construction shall freeze Source STDO and its
+plugin in commit A, create and verify its annotated local tag and Install,
+derive and freeze the child Products and source closure in commit B, and then
+publish the complete qualified Product ref set in one atomic transaction.
+Pre-push qualification shall bind every local tag object, peel, target, push
+ref, and fetched expected remote object ID or required absence. Immutable tags
+are create-only; mutable refs require explicit per-ref compare-and-swap leases;
+unsupported atomic transport, remote drift, lease mismatch, or a partial set
+shall refuse without sequential or force fallback.

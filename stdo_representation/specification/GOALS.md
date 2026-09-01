@@ -2,13 +2,13 @@
 
 ## Current work wave
 
-Reprice the release-matched STDO compression and constraint index against exact
-published Source STDO `v2.5.0-rc.2` while preserving the accepted STDO
-Representation `2.5.0` RC1 Product and its evidence:
+Construct the first coordinated release-matched STDO compression and constraint
+index against exact Source STDO `v2.5.0-rc.4` while preserving the accepted
+STDO Representation `2.5.0` RC1 Product and all prior evidence:
 
 ```text
-exact Source STDO prose 2.5.0 (v2.5.0-rc.2)
-  -> LLM-authored a_c.STDO 2.5.0 semantic compression
+exact Source STDO prose v2.5.0-rc.4
+  -> LLM-authored a_c.STDO 2.5.0-rc.4 semantic compression
   -> Axiom Indexer validation and logical constraint index
   -> LLM-selected reference frames and ordered context
   -> exact string join
@@ -16,17 +16,19 @@ exact Source STDO prose 2.5.0 (v2.5.0-rc.2)
 ```
 
 The LLM interprets meaning, selects frames, writes context, consumes
-diagnostics, and revises. Exact Axiom Indexer `v0.1.0-rc.1` supplies the URI
-resolver, basic validator, logical-map instantiation, and pure ordered joiner.
-This Product has zero local engine code and adds no deterministic orchestration
-or GTL engine.
+diagnostics, and revises. Exact same-version Axiom Indexer `v2.5.0-rc.4`
+candidate mechanics supply the URI resolver, basic validator, logical-map
+instantiation, and pure ordered joiner during authorized commit-B construction;
+the immutable coordinated Axiom cut becomes the release dependency. This
+Product has zero local engine code and adds no deterministic orchestration or
+GTL engine.
 
 The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
 historical `v0.1.0-rc.1`. The accepted current Product is STDO Representation
-`2.5.0` RC1. This source wave retains semantic version `2.5.0` and reprices
-only its exact represented Source STDO basis from RC1 to RC2.
-Representation RC ordinals and content identities remain independently
-qualified.
+`2.5.0` RC1. This source wave targets exact matched version `2.5.0-rc.4` for
+Source STDO, Axiom Indexer mechanics, STDO Representation, and its derived
+program and index while preserving their separate Product identities,
+inventories, reviews, and acceptance.
 
 ## GOAL-001 — Freeze the STDO semantic compression
 
@@ -251,3 +253,36 @@ nor semantic version.
   boundary: observe and preserve the run-local HOLD, with no Product repair or
   promotion block. The source candidate is frozen; no STDO Representation ref
   was created or moved.
+
+## GOAL-008 — Enter the coordinated release-matched cohort
+
+Status: in progress
+
+Carry the exact Source STDO cut version through the same-suffix Axiom Indexer
+mechanics, STDO Representation Product, `a_c.STDO` program, logical constraint
+map, and source-corpus provenance without collapsing their Product identities.
+The first normal cohort target is `v2.5.0-rc.4`; RC3 adoption and map work remain
+transition evidence because coordinated Release Method law post-dates RC3.
+
+This is a Product and basis requirement reprice. The eight-member
+Representation shape remains stable. Axiom Indexer remains a separate
+seven-member Product and mechanical dependency.
+
+### Completion conditions
+
+- Commit A freezes Source STDO `v2.5.0-rc.4` and its plugin, then a local
+  annotated STDO tag is installed and verified before Representation authors
+  any RC4 source identity.
+- The source-corpus record binds the exact installed manifest, complete
+  standards inventory, member digests, aggregate digest, and immutable cut.
+- The RC3 to RC4 member delta is explicit. An LLM conserves unaffected semantic
+  entries and re-authors every affected compression relation against exact RC4
+  source before exact coordinated Axiom `v2.5.0-rc.4` regenerates the map.
+- Active Product, requirement, frame-basis, native skill, release record,
+  checker, and Product Definition coordinates all name exact `2.5.0-rc.4`.
+- Candidate qualification binds the frozen eight-member inventory and exact
+  Axiom candidate mechanics. Release qualification additionally requires the
+  immutable Axiom and Representation tags from commit B.
+- One atomic remote transaction publishes the carrier and complete STDO,
+  Axiom, and Representation ref set. This Goal grants no tag, push, or Product
+  acceptance authority by itself.

@@ -1,37 +1,37 @@
 # STDO Representation Project Reference-Frame Basis
 
-Status: proposed source-project basis, revision 14; Product-owner acceptance
-and overlay binding are pending.
+Status: accepted and bound source-project basis, revision 15, through the exact
+digest-bound bounded-proxy decision named in the Acceptance Gate.
 
 Accepted revision 13 remains exact historical authority for the published STDO
 Representation `2.5.0` RC1 subject. Its acceptance does not carry forward to
-this RC2-basis revision.
+this RC4-cohort revision.
 
 ## Project frame basis
 
 ```text
 frame_set_uri =
-  "urn:stdo-representation:reference-frame-basis:source-project:14"
+  "urn:stdo-representation:reference-frame-basis:source-project:15"
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
 governed_outcome =
-  "reprice and qualify STDO Representation 2.5.0 against Source STDO v2.5.0-rc.2"
+  "construct and qualify the coordinated STDO Representation 2.5.0-rc.4 cohort subject"
 frame_set_authority =
   "urn:stdo-representation:authority:product-owner"
 reference_frame_method =
-  "stdo://releases/v2.5.0-rc.2/standards/REFERENCE_FRAME_METHOD.md"
+  "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md"
 reference_frame_method_sha256 =
   "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8"
 reference_frame_baseline =
-  "stdo://releases/v2.5.0-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md"
+  "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md"
 reference_frame_baseline_sha256 =
   "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e"
 release_method =
-  "stdo://releases/v2.5.0-rc.2/standards/RELEASE_METHOD.md"
+  "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md"
 release_method_sha256 =
-  "sha256:8e6de5a50ac06f5826fc90f8f8792fb0c7bbc61458c822affe019e10290a80cd"
+  "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c"
 stdo_manifest_sha256 =
-  "sha256:313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a"
+  "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
 ```
 
 This basis governs project construction and release evaluation. It is not a
@@ -48,34 +48,59 @@ commit, tree, and remote refs.
 ## Exact dependency basis
 
 ```text
-Source STDO = v2.5.0-rc.2
+Source STDO = v2.5.0-rc.4
+Source STDO qualified ref =
+  refs/tags/specification_methodology/v2.5.0-rc.4
+Source STDO tag object =
+  032dac0c833111547f7dd4b290c5316ed9b70f97
+Source STDO commit =
+  7a25668a8fecfd26f895759af3bec4708727964a
+Source STDO installed manifest =
+  sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
 Source STDO member set =
-  sha256:a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
-Axiom Indexer tag object =
-  e7afc8a42a7123aebe91cb7582cb037b1aae612d
-Axiom Indexer commit =
-  dc3e00998da36dae6ac7b76b340431a85096c83c
-Axiom Indexer tree =
-  8c9ad5f5e99a60c18fb8c1802471753afb226272
+  sha256:504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
+Axiom Indexer candidate = v2.5.0-rc.4
+Axiom Indexer intended qualified ref =
+  refs/tags/axiom_indexer/v2.5.0-rc.4
+Axiom Indexer publication state =
+  exact seven-member candidate; tag object and commit-B coordinates pending
 Axiom Indexer member inventory =
   sha256:7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
-Representation semantic version = 2.5.0
-Represented STDO semantic version = 2.5.0
+Axiom Indexer executable =
+  sha256:dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+Representation exact version = 2.5.0-rc.4
+Represented STDO exact version = 2.5.0-rc.4
 ```
+
+The Axiom candidate may supply the authorized mechanical construction step.
+Release qualification additionally requires its exact annotated RC4 tag and
+commit-B identities. Historical accepted `v0.1.0-rc.1` remains predecessor
+evidence and cannot substitute for the release-matched dependency.
 
 ## Human authority
 
-- The Product owner declares and accepts the frame set and disposes the release
-  candidate.
+- Frame-set declaration and acceptance authority is
+  `urn:stdo-representation:authority:product-owner`.
+- The Product owner disposes the release candidate and accepts or rejects an
+  exact immutable RC.
 - Source STDO owns STDO meaning and role definitions.
 - Axiom Indexer owns its released mechanical contracts.
 - An explicitly assigned evaluator may perform one read-only activation.
 - Construction, file mutation, publication, tag movement, and remote mutation
   require separate authority.
-- An agent may propose or evaluate this basis. It may not accept it merely by
-  authorship, visibility, validation, or use.
 
-Acceptance must bind this file's exact SHA-256 in a durable decision record.
+Agents may propose and evaluate this basis. A generic agent identity, assigned
+role, construction history, evaluation result, inferred intent, or ambient
+permission never admits agent self-acceptance.
+
+The sole proxy exception is an explicitly user-granted bounded
+release-authority proxy. Its durable decision must bind the exact declaration
+URI and digest, the eight-member Representation and RC4 cohort scope, the
+direct human grant source, actor and authority identities, decision time, and
+evidence. The proxy may record only that bounded acceptance. It cannot enlarge
+Product scope, operation authority, publication authority, or its own decision
+authority, and it must not claim that the Product owner personally inspected
+exact bytes when that did not occur.
 
 ## Shared coordinate, evidence, and result law
 
@@ -104,7 +129,7 @@ residuals, and invalidation conditions.
 
 ## Technical triage and promotion policy
 
-The current promotion boundary is advancement of the RC2-based STDO
+The current promotion boundary is advancement of the RC4-cohort STDO
 Representation `2.5.0` source into one frozen publication-ready candidate or,
 under a separate publication grant, an immutable RC. Product shape, the
 accepted RC1 Product, and historical releases remain outside that boundary.
@@ -163,7 +188,7 @@ action.
 
 ### F-PRODUCT-BOUNDARY
 
-- Evaluation: is `2.5.0` exactly the semantic compression, constraint index,
+- Evaluation: is `2.5.0-rc.4` exactly the semantic compression, constraint index,
   and native-instructions Product with no local engine or hidden
   heavy-prototype dependency?
 - Evidence: exact WHAT, member inventory, dependency basis, exclusions, and
@@ -176,18 +201,37 @@ action.
 
 ### F-VERSION-ALIGNMENT
 
-- Evaluation: does the Representation semantic version equal the represented
-  STDO semantic version while preserving distinct Product, RC, member, and Git
-  identities?
+- Evaluation: do Source STDO, Axiom Indexer, STDO Representation, the program,
+  and the map carry exact `2.5.0-rc.4` while preserving distinct Product, RC,
+  member, and Git identities?
 - Evidence: exact Source STDO cut and selector, Product version law, historical
   bootstrap release, Product-owned shared-source release profile, and dependency
   identities.
-- Invariants: `representation_version = represented_stdo_version = 2.5.0`;
-  Source STDO, STDO Representation, and Axiom Indexer remain different
-  Products; historical refs never move.
+- Invariants: every cohort suffix equals `2.5.0-rc.4`; Source STDO, STDO
+  Representation, and Axiom Indexer remain different Products; historical
+  refs never move.
 - Actor envelope: `K-PRODUCT`.
 - Exclusions: equal version text cannot substitute one Product, cut, install,
   source-subtree evidence coordinate, or release ref for another.
+
+### F-COHORT-INTEGRITY
+
+- Evaluation: does one closed release-matched cohort bind the exact commit-A
+  STDO cut and plugin, exact Axiom mechanics, the eight-member Representation
+  subject, the program and map, and all 52 source-member digests before one
+  atomic publication transaction?
+- Evidence: local annotated STDO tag and verified install, complete
+  `source-corpus.json`, RC3-to-RC4 member delta and semantic dispositions,
+  exact Axiom candidate inventory and contracts, regenerated map and report,
+  coordinated release record, local child refs, fetched remote expected object
+  IDs or absence, and the closed push set.
+- Invariants: two-commit construction; 49 unchanged source members and all
+  unaffected program entries conserved; three changed members re-evaluated;
+  immutable tags create-only; every mutable ref protected by an explicit
+  compare-and-swap lease; no sequential or non-atomic fallback.
+- Actor envelope: `K-CANDIDATE` before publication and `K-EXACT-CUT` after it.
+- Exclusions: equal version text, local path proximity, a green unit test, or a
+  partial remote ref population cannot establish cohort integrity.
 
 ### F-MAP-ESSENCE
 
@@ -279,27 +323,29 @@ configuration, context boundary, access, and prior involvement.
 
 | Envelope | Actor and configuration | Context, access, independence, and stop law |
 |---|---|---|
+| `K-GOVERNANCE` | Product owner or explicitly user-granted bounded release-authority proxy capable of exact-basis and digest-bound decision handling | exact frame bytes, Product disposition authority, direct grant source, overlay bytes, digest and schema tools, and durable decision surface; a generic agent may verify or present but not accept; a bounded proxy may record only the exact digest and scope explicitly granted by the user and cannot self-expand; stops on identity, digest, scope, source, time, evidence, or authority mismatch |
 | `K-PRODUCT` | Product evaluator competent in recursive Product boundaries, exact dependency identity, and release scope | read-only WHAT, member routes, tenant history, and Git evidence; discloses authorship; stops on missing authority, inventory, or dependency basis |
 | `K-MAP` | LLM semantic evaluator competent in `a_c.text`, URI reasoning, residual analysis, and source comparison | exact program, map, sources, and read-only re-entry; no independent-assurance claim when author; stops on missing source, unresolved semantics, or context limit |
 | `K-MECHANICAL` | Python/tool evaluator competent in Axiom Indexer validation, joining, canonical identity, and falsifier construction | exact dependency and inputs with temporary output space; does not repair the subject; stops on environment, dependency, input, or output drift |
 | `K-NATIVE` | fresh Codex or Claude actor competent in native skill pickup, map traversal, explicit frame selection, and source re-entry | initially bounded skill, map, and task; no expected answer or complete-corpus exposure; stops on unresolved map, frame, source, authority, or role boundary |
 | `K-DOGFOOD` | separately activated comparison assessor competent in task equivalence, Source STDO semantic review, evidence control, and regression reporting | activated only after both conditions freeze; did not author or repair the exact program, map, skill, task, or evaluated outputs and saw no expected verdict before evidence acquisition; independently reacquires exact Source STDO and both condition records under recorded actor and model configuration; preserves the same material task, workspace evidence, role, output contract, model capability, and evaluator across arms; does not discard negative results, select favorable cases, repair the subject, or dispose the Product claim; stops on any separation, equality, provenance, or evidence failure |
-| `K-CANDIDATE` | release-readiness evaluator competent in STDO release law, inventory, claim matching, and dependency verification | frozen candidate, closed frame results, local Git and read-only remote namespace; no publication authority; stops on incomplete or mutable subject |
+| `K-CANDIDATE` | release-readiness evaluator competent in STDO coordinated release law, inventory, claim matching, dependency verification, and ref-graph closure | frozen commit-B candidate, exact local commit-A STDO tag and install, closed frame results, local Product refs, and fetched remote namespace; no publication authority; stops on incomplete or mutable subject, stale expected object IDs, lease mismatch, or a non-atomic transport |
 | `K-EXACT-CUT` | separately activated assessor competent in remote reacquisition, annotated tags, tree comparison, and claim-to-evidence review | published refs, clean reacquisition, exact release record, and closed candidate result; no authorship or repair of the exact qualifying candidate; independently reacquires the published subject and evidence; stops on any tag, tree, member, claim, or provenance mismatch |
 
 ## Coverage ledger
 
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
-| exact frame-set acceptance and overlay binding | Reference Frame Method; Product owner | external acceptance relation | Product owner decides; overlay mutation separately granted | exact file digest, acceptance record, valid Product Definition; prerequisite to activation | separately covered; human acceptance and overlay binding pending |
+| exact frame-set acceptance and overlay binding | Reference Frame Method; Product disposition authority; GOAL-008 | external acceptance relation | Product owner or exact explicitly user-granted bounded release-authority proxy; overlay mutation separately granted | exact file digest, direct grant source, acceptance record, valid Product Definition, and live `stdo status --verify`; prerequisite to activation | satisfied by revision-15 bounded-proxy decision and exact overlay binding |
 | compression-and-index Product boundary | Goals; Intent; Product; T-008 | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered; requires frozen activation |
 | represented-version alignment | Product version relation; T-008; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO cut and version, accepted Representation RC1, historical bootstrap, local ref profile | conditionally covered; mismatch or identity collapse falsifies |
+| coordinated cohort closure | GOAL-008; Release Method coordinated cohort law; basis requirements | `F-COHORT-INTEGRITY` | each Product retains its release authority; Stack transaction has bounded publication authority | commit-A tag and install, complete source corpus and delta, Axiom and Representation inventories, local ref graph, remote expected object IDs, atomic push set | conditionally covered; any missing, stale, mismatched, lease-unsafe, or partial member refuses |
 | compression/index essence and source re-entry | Product; map requirement | `F-MAP-ESSENCE` | Source owners own meaning; Product owner disposes usefulness | compression, index, closed mechanical result, sources, residuals, counterexamples | conditionally covered; semantic uncertainty remains |
 | imported validator and join boundary | Product; candidate requirement; Axiom release | `F-MECHANICAL-BOUNDARY` | Axiom owns contract; Product owner owns dependency selection | exact dependency, reports, maps, joins, falsifiers | conditionally covered; proves mechanical properties only |
 | Codex and Claude frame use | native-use requirement | `F-NATIVE-USE` | Product owns instructions; LLM owns selection within supplied authority | skill inventory, target references, fresh pickups, selected frames | conditionally covered; each target requires observation |
 | practical usefulness | dogfood requirement | `F-DOGFOOD-USEFULNESS` | Product owner disposes claim | comparable tasks, outputs, source re-entry, regressions | conditionally covered; unobserved tasks remain residual |
 | pre-publication candidate readiness | Release Method candidate phase; release record | `F-CANDIDATE-READINESS` | Product owner disposes candidate; publisher separately granted | closed Product results, frozen inventory, claims, dependencies | conditionally covered; no RC prerequisite |
-| immutable RC publication and selector advancement | Release Method Immutable RC Publication and Monotonic Version-Line Advancement | external publication relation | an exact Product-owner grant names the publisher and repository/ref mutation territory; this frame set grants none | frozen candidate result, reconciled release assets, annotated RC and selector objects, atomic-push result where supported, and remote highest-RC verification | separately covered; any partial, lagging, mismatched, or unverified publication blocks exact-cut activation |
+| immutable coordinated publication | Release Method Two-Commit Construction And One Publication Transaction | external publication relation | an exact Product-owner grant names the publisher and complete repository/ref mutation territory; this frame set grants none | frozen commit-B candidate, reconciled release assets, complete annotated child tags and mutable refs, post-tag local-ref-graph result, bound remote expected object IDs or absence, explicit leases, atomic-push result, and remote cohort verification | separately covered; unsupported atomic transport or any partial, drifted, lagging, mismatched, or unverified ref refuses |
 | post-publication exact-cut qualification | Release Method exact-cut phase | `F-EXACT-CUT` | Product owner accepts or rejects exact RC | published refs, clean reacquisition, closed candidate result | phase-conditional; not activated before publication |
 
 ## Material interactions and conjunction
@@ -313,11 +359,17 @@ configuration, context boundary, access, and prior involvement.
   hidden repair or stale bytes refuse.
 - `native -> dogfood`: dogfood consumes exact native inputs, selected frames,
   source openings, and closed results without converting them into truth.
+- `source delta -> map -> cohort`: `F-MAP-ESSENCE` consumes the exact three-member
+  RC3-to-RC4 delta and conserved predecessor program; `F-COHORT-INTEGRITY`
+  consumes its closed semantic result, the exact mechanical projection, and
+  complete 52-member closure.
 - `Product frames -> candidate`: candidate readiness consumes closed Product,
-  map, mechanical, native, and dogfood results over one frozen inventory.
+  version, cohort, map, mechanical, native, and dogfood results over one frozen
+  inventory.
 - `candidate -> publication`: the closed `F-CANDIDATE-READINESS` result and
-  exact publication plan enter the separately granted Release Method
-  publication relation; no frame result grants publication authority.
+  exact complete ref graph and remote expected object IDs enter the separately
+  granted atomic Release Method publication relation; no frame result grants
+  publication authority.
 - `publication -> exact cut`: only publication evidence binding the frozen
   candidate, annotated RC and selector objects, peeled commit and tree, and
   remotely verified highest-RC refs may activate `F-EXACT-CUT`; partial or
@@ -326,7 +378,7 @@ configuration, context boundary, access, and prior involvement.
 Only closed results cross frame boundaries. Unclosed working context and ambient
 conversation are not evidence.
 
-Before publication, the six Product frames plus `F-CANDIDATE-READINESS` must
+Before publication, the seven Product frames plus `F-CANDIDATE-READINESS` must
 return `satisfied` on one frozen candidate after the external acceptance and
 overlay prerequisite is satisfied. `F-EXACT-CUT` is not activated and cannot
 veto publication. After the separately authorized publication relation
@@ -350,9 +402,16 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
-Revision 14 may be accepted only through a Product-owner decision naming its
-exact SHA-256, frame-set URI, actor, authority, scope, and time. Only that
-external decision allows `stdo_representation.json` to bind this basis.
+Revision 15 may be accepted only through the exact digest-bound decision at
+`../.ai-workspace/decisions/20260902T003317_frame_basis_rev15_acceptance.json`.
+The Product owner may accept directly. An agent may record acceptance only as
+an explicitly user-granted bounded release-authority proxy whose durable
+decision names this frame-set URI and digest, actor and authority identities,
+bounded scope, direct grant source, decision time, evidence, and the
+prohibition on self-expansion. Any omission or mismatch leaves the basis
+unaccepted. Only that record allows `stdo_representation.json` to bind this
+basis.
 
 Editing this file after presentation changes its subject and requires a new
-digest and decision.
+digest and decision. Neither the proxy nor this frame can infer or enlarge the
+grant.

@@ -1,0 +1,37 @@
+{
+  "kind": "axiom-indexer.frame-basis-acceptance",
+  "schema_version": 2,
+  "subject_uri": "urn:axiom-indexer:frame-set:release-readiness:7",
+  "subject_ref": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+  "subject_sha256": "sha256:100c71ba8bd8f64a50efff656ef5004edf6b06f27fa2bc9dcd7dd1e7d039009a",
+  "method_basis_uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md",
+  "method_basis_sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+  "actor_identity": "urn:openai:codex:delegated-release-authority",
+  "authority_identity": "urn:axiom-indexer:authority:product-owner",
+  "authority_mode": "explicitly-user-granted-bounded-release-authority-proxy",
+  "decision": "accepted",
+  "scope": "Qualify and publish only the unchanged seven-member Axiom Indexer mechanics as the release-coupled v2.5.0-rc.4 member of the coordinated Specification Stack cohort; excludes sibling semantic program or map bytes and any Product-scope expansion.",
+  "decided_at": "2026-09-01T14:50:53Z",
+  "grant_source_kind": "direct-human-product-owner-conversation",
+  "decision_source": "Direct human Product-owner instruction in the active workstream granted Codex authority, once completion and proportional qualification were achieved, to release this same-version coordinated cohort. This proxy decision applies that pre-existing bounded grant after accepted cold-review findings; it does not claim separate human inspection or acceptance of the exact repaired bytes.",
+  "self_expansion_prohibited": true,
+  "human_exact_byte_inspection_claimed": false,
+  "correction_record": {
+    "prior_presented_sha256": "sha256:2d254692814000ef6be47f9eac18f51c17895f3eb3f7b0519d9e92a69ea9638d",
+    "sole_change": "F-CANDIDATE wording changed from 'first-release relations' to 'successor relations'.",
+    "disposition": "The prior digest was superseded before commit or publication and is not the current accepted subject."
+  },
+  "supersession_record": {
+    "prior_subject_sha256": "sha256:659c3d8676b62bff1948fef2f3996f088e2de3603065d4fd8623f3a87aeb37d9",
+    "change": "The acceptance law now admits only an explicitly user-granted bounded release-authority proxy and binds exact digest, scope, grant source, time, evidence, and no-self-expansion constraints.",
+    "disposition": "The prior decision bytes are superseded before commit or publication; they do not accept this repaired frame-basis subject."
+  },
+  "evidence_refs": [
+    "./specification/PRODUCT.md#product-disposition-authority",
+    "./specification/PRODUCT.md#coordinated-release-identity",
+    "./specification/GOALS.md#goal-004--cut-the-release-coupled-axiom-mechanics-for-stdo-rc4",
+    "./specification/REFERENCE_FRAME_BASIS.md#acceptance-gate",
+    "./releases/v2.5.0.md",
+    "./stdo_default.json"
+  ]
+}

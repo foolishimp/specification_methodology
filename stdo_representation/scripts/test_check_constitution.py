@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import importlib.util
 import json
 import tempfile
@@ -19,10 +20,7 @@ SPEC.loader.exec_module(CHECKER)
 class ThinConstitutionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.axiom_root = (
-            Path.home()
-            / "Library/Application Support/Axiom Indexer/releases/v0.1.0-rc.1"
-        )
+        cls.axiom_root = ROOT.parent / "axiom_indexer"
 
     def copy_candidate_release_subject(self, target_root: Path) -> None:
         for path in CHECKER.PRODUCT_FILES:
@@ -51,11 +49,14 @@ class ThinConstitutionTests(unittest.TestCase):
         result = CHECKER.audit(ROOT, self.axiom_root)
         self.assertTrue(result["valid"], result["failures"])
         self.assertEqual(result["product"]["member_count"], 8)
+        self.assertEqual(result["product"]["exact_version"], "2.5.0-rc.4")
         self.assertEqual(result["product"]["version_line"], "2.5.0")
         self.assertEqual(result["product"]["represented_stdo_version"], "2.5.0")
         self.assertEqual(result["historical_bootstrap"]["status"], "conserved")
         self.assertEqual(result["candidate_release"]["status"], "frozen")
         self.assertEqual(result["frame_basis"]["status"], "accepted_and_bound")
+        self.assertTrue(result["stdo_status"]["valid"])
+        self.assertEqual(result["stdo_status"]["toolchain"], "stdo 0.1.2")
         self.assertEqual(
             result["frame_basis"]["decision_sha256"],
             "sha256:" + CHECKER.FRAME_DECISION_SHA256,
@@ -64,15 +65,19 @@ class ThinConstitutionTests(unittest.TestCase):
             result["candidate_release"]["inventory_sha256"],
             "sha256:" + CHECKER.CANDIDATE_INVENTORY_SHA256,
         )
+        self.assertEqual(
+            result["candidate_release"]["release_record_sha256"],
+            "sha256:" + CHECKER.CANDIDATE_RELEASE_SHA256,
+        )
 
     def test_representation_version_is_derived_from_represented_stdo(self) -> None:
         self.assertEqual(
             CHECKER.derive_represented_stdo_semver(CHECKER.STDO_BASIS),
-            CHECKER.REPRESENTATION_VERSION,
+            CHECKER.REPRESENTATION_VERSION_LINE,
         )
         self.assertEqual(
             CHECKER.validate_representation_version(
-                CHECKER.REPRESENTATION_VERSION, CHECKER.STDO_BASIS
+                CHECKER.REPRESENTATION_VERSION_LINE, CHECKER.STDO_BASIS
             ),
             [],
         )
@@ -84,14 +89,163 @@ class ThinConstitutionTests(unittest.TestCase):
             failures,
         )
 
+    def test_exact_cohort_versions_match_without_collapsing_products(self) -> None:
+        self.assertEqual(
+            CHECKER.validate_coordinated_versions(
+                "2.5.0-rc.4",
+                "stdo://releases/v2.5.0-rc.4/",
+                "2.5.0-rc.4",
+            ),
+            [],
+        )
+
+    def test_exact_cohort_rejects_any_suffix_mismatch(self) -> None:
+        failures = CHECKER.validate_coordinated_versions(
+            "2.5.0-rc.4",
+            "stdo://releases/v2.5.0-rc.3/",
+            "2.5.0-rc.2",
+        )
+        self.assertIn(
+            "Representation exact version does not match Source STDO", failures
+        )
+        self.assertIn(
+            "Axiom Indexer exact version does not match Representation", failures
+        )
+
+    def test_standards_delta_conserves_and_changes_by_exact_digest(self) -> None:
+        delta = CHECKER.standards_member_delta(
+            [
+                {"path": "A.md", "sha256": "a" * 64},
+                {"path": "B.md", "sha256": "b" * 64},
+            ],
+            [
+                {"path": "A.md", "sha256": "a" * 64},
+                {"path": "B.md", "sha256": "c" * 64},
+            ],
+        )
+        self.assertEqual(
+            delta,
+            {"conserved": ["A.md"], "changed": ["B.md"], "added": [], "removed": []},
+        )
+
+    def test_predecessor_delta_reacquires_only_immutable_stdo_tags(self) -> None:
+        rc2, rc2_failures = CHECKER.immutable_stdo_standards_members(ROOT, "RC2")
+        rc3, rc3_failures = CHECKER.immutable_stdo_standards_members(ROOT, "RC3")
+        self.assertEqual(rc2_failures, [])
+        self.assertEqual(rc3_failures, [])
+        self.assertEqual(len(rc2), 52)
+        self.assertEqual(len(rc3), 52)
+        self.assertFalse(
+            hasattr(CHECKER, "TRANSITION_SOURCE_CORPUS_PATH"),
+            "the candidate must not consume the excluded RC3 draft corpus",
+        )
+
+    def test_program_conservation_protects_entries_outside_changed_members(
+        self,
+    ) -> None:
+        previous = {
+            "source_basis": "stdo://releases/v2.5.0-rc.3/standards/",
+            "symbols": [
+                {
+                    "uri": "urn:test:stable",
+                    "label": "Stable",
+                    "source_refs": [
+                        "stdo://releases/v2.5.0-rc.3/standards/STABLE.md#law"
+                    ],
+                },
+                {
+                    "uri": "urn:test:changed",
+                    "label": "Before",
+                    "source_refs": [
+                        "stdo://releases/v2.5.0-rc.3/standards/CHANGED.md#law"
+                    ],
+                },
+            ],
+            "clauses": [],
+            "residuals": [],
+        }
+        current = copy.deepcopy(previous)
+        current["source_basis"] = "stdo://releases/v2.5.0-rc.4/standards/"
+        encoded = json.dumps(current).replace("v2.5.0-rc.3", "v2.5.0-rc.4")
+        current = json.loads(encoded)
+        current["symbols"][1]["label"] = "After"
+        self.assertEqual(
+            CHECKER.validate_program_conservation(previous, current, {"CHANGED.md"}),
+            [],
+        )
+        current["symbols"][0]["label"] = "Drift"
+        self.assertTrue(
+            any(
+                failure.startswith("unaffected symbols entry was not conserved")
+                for failure in CHECKER.validate_program_conservation(
+                    previous, current, {"CHANGED.md"}
+                )
+            )
+        )
+
+    def test_source_corpus_binds_overlay_manifest_and_derived_routes(self) -> None:
+        corpus_path = (
+            ROOT
+            / "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4"
+            / "source-corpus.json"
+        )
+        if not corpus_path.is_file():
+            self.skipTest("RC4 source corpus is not present")
+        overlay = json.loads((ROOT / "stdo_representation.json").read_text())
+        corpus = json.loads(corpus_path.read_text())
+        installed_path = (
+            Path.home()
+            / "Library/Application Support/STDO/releases/v2.5.0-rc.4/manifest.json"
+        )
+        installed_bytes = installed_path.read_bytes()
+        installed = json.loads(installed_bytes)
+        compression = json.loads(
+            (corpus_path.parent / "axiomatic-program.json").read_text()
+        )
+        logical_index = json.loads(
+            (corpus_path.parent / "logical-constraint-map.json").read_text()
+        )
+        self.assertEqual(
+            CHECKER.validate_source_corpus(
+                corpus,
+                overlay,
+                installed,
+                hashlib.sha256(installed_bytes).hexdigest(),
+                compression,
+                logical_index,
+            ),
+            [],
+        )
+
+    def test_same_version_axiom_candidate_binds_exact_conserved_mechanics(self) -> None:
+        axiom_root = ROOT.parent / "axiom_indexer"
+        self.assertEqual(CHECKER.validate_axiom_candidate(axiom_root, "2.5.0-rc.4"), [])
+
     def test_non_exact_represented_stdo_basis_is_rejected(self) -> None:
         failures = CHECKER.validate_representation_version(
-            CHECKER.REPRESENTATION_VERSION, "stdo://channels/2.5.0"
+            CHECKER.REPRESENTATION_VERSION_LINE, "stdo://channels/2.5.0"
         )
         self.assertIn(
             "Source STDO basis does not encode an exact RC semantic version",
             failures,
         )
+
+    def test_live_stdo_status_rejects_overlay_selector_drift(self) -> None:
+        overlay = json.loads((ROOT / "stdo_representation.json").read_text())
+        overlay["constitution"]["stdo"]["selector"] = "stdo://channels/9.9.9"
+        manifest_path = (
+            Path.home()
+            / "Library/Application Support/STDO/releases/v2.5.0-rc.4/manifest.json"
+        )
+        manifest_bytes = manifest_path.read_bytes()
+        failures, evidence = CHECKER.validate_live_stdo_status(
+            ROOT,
+            overlay,
+            json.loads(manifest_bytes),
+            hashlib.sha256(manifest_bytes).hexdigest(),
+        )
+        self.assertIn("live stdo status has wrong selector", failures)
+        self.assertFalse(evidence["valid"])
 
     def test_program_digest_matches_frozen_authoring_map(self) -> None:
         program = CHECKER.load_json(ROOT / CHECKER.PROGRAM_PATH)
@@ -104,7 +258,7 @@ class ThinConstitutionTests(unittest.TestCase):
             CHECKER.validate_program_map(program, logical_map),
             [],
         )
-        self.assertEqual(CHECKER.validate_rc2_projection(program, logical_map), [])
+        self.assertEqual(CHECKER.validate_current_projection(program, logical_map), [])
 
     def test_program_drift_invalidates_map_binding(self) -> None:
         program = CHECKER.load_json(ROOT / CHECKER.PROGRAM_PATH)
@@ -118,6 +272,41 @@ class ThinConstitutionTests(unittest.TestCase):
         self.assertIn(
             "Product index does not bind the canonical Product compression", failures
         )
+
+    def test_validation_report_material_tamper_is_rejected(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report_path = Path(temp_dir) / "validation-report.json"
+            report_path.write_bytes(
+                (ROOT / CHECKER.VALIDATION_REPORT_PATH).read_bytes()
+            )
+            self.assertEqual(
+                CHECKER.validate_validation_report(
+                    report_path,
+                    compression,
+                    logical_index,
+                ),
+                [],
+            )
+            report = CHECKER.load_json(report_path)
+            report["program_sha256"] = "sha256:" + "0" * 64
+            report["program_uri"] = "urn:wrong:program"
+            report["resolved_sources"] = []
+            report_path.write_text(json.dumps(report), encoding="utf-8")
+            failures = CHECKER.validate_validation_report(
+                report_path,
+                compression,
+                logical_index,
+            )
+            self.assertIn("exact RC4 validation report bytes changed", failures)
+            self.assertIn(
+                "RC4 validation report binds the wrong program digest", failures
+            )
+            self.assertIn("RC4 validation report binds the wrong program URI", failures)
+            self.assertIn(
+                "RC4 validation report changes the resolved source closure", failures
+            )
 
     def test_index_source_drift_invalidates_compression_binding(self) -> None:
         compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
@@ -211,7 +400,7 @@ class ThinConstitutionTests(unittest.TestCase):
             release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
             record = release_path.read_text(encoding="utf-8")
             record = record.replace(
-                "8abcf51c1d4d94e8183618898f7ae84829c12fc50458d9cd8555fa0ba661f4ab",
+                "1896829cf06a4fba45f6e8092fc54cf8e958ca5d15ba84f5542eaef966f2a4ab",
                 "0" * 64,
                 1,
             )
@@ -244,7 +433,26 @@ class ThinConstitutionTests(unittest.TestCase):
                 )
             )
 
-    def test_rc2_projection_rejects_mutable_or_rc1_routes(self) -> None:
+    def test_c04_semantic_inversion_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            self.copy_candidate_release_subject(temp_root)
+            release_path = temp_root / CHECKER.CANDIDATE_RELEASE_PATH
+            record = release_path.read_text(encoding="utf-8")
+            record = record.replace(
+                "Hashes prove identity and frontier membership, not semantic\n"
+                "  qualification.",
+                "Hashes alone prove semantic qualification.",
+                1,
+            )
+            release_path.write_text(record, encoding="utf-8")
+            failures = CHECKER.validate_candidate_release(temp_root)
+            self.assertIn("candidate release record bytes changed", failures)
+            self.assertIn(
+                "candidate release record lacks exact C04 semantics", failures
+            )
+
+    def test_current_projection_rejects_mutable_or_foreign_routes(self) -> None:
         compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
         logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
         changed = copy.deepcopy(compression)
@@ -253,12 +461,16 @@ class ThinConstitutionTests(unittest.TestCase):
             "REFERENCE_FRAME_METHOD.md#reference-frame-laws"
         )
         changed["source_basis"] = "stdo://releases/v2.5.0-rc.1/standards/"
-        failures = CHECKER.validate_rc2_projection(changed, logical_index)
+        failures = CHECKER.validate_current_projection(changed, logical_index)
         self.assertIn(
-            "Product compression has the wrong RC2 frame references", failures
+            "Product compression has the wrong current RC4 frame references", failures
         )
-        self.assertIn("RC2 Product artifacts retain mutable candidate routes", failures)
-        self.assertIn("RC2 Product artifacts retain RC1 Source STDO routes", failures)
+        self.assertIn(
+            "current RC4 Product artifacts retain mutable candidate routes", failures
+        )
+        self.assertIn(
+            "current RC4 Product artifacts retain foreign STDO routes", failures
+        )
 
     def test_required_frame_clause_semantics_cannot_drift(self) -> None:
         compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
@@ -270,10 +482,57 @@ class ThinConstitutionTests(unittest.TestCase):
             if row["uri"].endswith("engagement-return-topology")
         )
         clause["statement"] += " Reviewer assigns priority."
-        failures = CHECKER.validate_rc2_projection(changed, logical_index)
+        failures = CHECKER.validate_current_projection(changed, logical_index)
         self.assertIn(
-            "RC2 Product compression changes frame clause: engagement-return-topology",
+            "current RC4 Product compression changes required clause: engagement-return-topology",
             failures,
+        )
+
+    def test_required_cohort_clause_semantics_cannot_drift(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
+        changed = copy.deepcopy(compression)
+        clause = next(
+            row
+            for row in changed["clauses"]
+            if row["uri"].endswith("cohort-publication-fails-closed")
+        )
+        clause["statement"] = "Publish each Product sequentially."
+        failures = CHECKER.validate_current_projection(changed, logical_index)
+        self.assertIn(
+            "current RC4 Product compression changes required clause: "
+            "cohort-publication-fails-closed",
+            failures,
+        )
+
+    def test_changed_frontier_clause_route_cannot_drift(self) -> None:
+        compression = CHECKER.load_json(ROOT / CHECKER.COMPRESSION_PATH)
+        logical_index = CHECKER.load_json(ROOT / CHECKER.INDEX_PATH)
+        changed = copy.deepcopy(compression)
+        clause = next(
+            row
+            for row in changed["clauses"]
+            if row["uri"].endswith("bootstrap-resolves-exact-basis")
+        )
+        clause["source_refs"] = [
+            CHECKER.STDO_BASIS + "standards/RELEASE_METHOD.md#position"
+        ]
+        failures = CHECKER.validate_current_projection(changed, logical_index)
+        self.assertIn(
+            "current RC4 Product compression changes required source routes: "
+            "bootstrap-resolves-exact-basis",
+            failures,
+        )
+
+    def test_quickstart_passes_explicit_verified_store_to_axiom_checker(self) -> None:
+        quickstart = (ROOT / "QUICKSTART.md").read_text(encoding="utf-8")
+        self.assertIn(
+            'STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"',
+            quickstart,
+        )
+        self.assertIn(
+            '"$AXIOM_INDEXER_ROOT/scripts/check_constitution.py" \\\n  --stdo-store "$STDO_STORE"',
+            quickstart,
         )
 
     def test_native_layout_requires_open_space_and_action_last(self) -> None:
@@ -309,7 +568,7 @@ class ThinConstitutionTests(unittest.TestCase):
             failures = CHECKER.validate_native_layout(temp_root)
             self.assertTrue(
                 any(
-                    failure.startswith("native skill lacks RC2 projection claim")
+                    failure.startswith("native skill lacks current projection claim")
                     for failure in failures
                 )
             )

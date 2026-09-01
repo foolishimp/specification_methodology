@@ -5,7 +5,8 @@ Status: Active
 Category: Capability / Constraint
 
 Derives from: `../PRODUCT.md#product-terms`, exact Source STDO
-`AXIOMATIC_CALCULUS.md`, and the accepted Axiom Indexer `0.1.0` Product
+`AXIOMATIC_CALCULUS.md`, and the same-version Axiom Indexer `2.5.0-rc.4`
+mechanics Product
 
 ## Purpose
 
@@ -37,7 +38,7 @@ selection of Source STDO, the program content, and its bounded usefulness claim.
 
 **REQ-P-MAP-001**: `calculus_ref` shall resolve exact Source STDO
 `AXIOMATIC_CALCULUS.md`; `source_basis` shall identify exact Source STDO
-`v2.5.0-rc.2`; every selected frame shall be an absolute source URI.
+`v2.5.0-rc.4`; every selected frame shall be an absolute source URI.
 
 **REQ-P-MAP-002**: Every symbol shall name a concept essential to using the
 corpus. Every clause shall express one material relation or constraint with
@@ -71,6 +72,7 @@ authoring reprice.
 `M_b`, all `I/O/E/C/L/X/V/T/J` populations, a lossless carrier, a selected
 semantic baseline, or GTL.
 
-**REQ-P-MAP-009**: The Product semantic version shall equal the represented
-STDO semantic version. Equal version text shall not collapse their Product,
-release-cut, RC-ordinal, or content identities.
+**REQ-P-MAP-009**: The Product exact version, including prerelease ordinal,
+shall equal the represented STDO exact version. Equal version text shall not
+collapse their Product, release-cut, member, review, acceptance, or content
+identities.

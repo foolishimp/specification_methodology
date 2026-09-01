@@ -14,9 +14,9 @@ instantiation, and exact ordered string joining.
 ## Product relation
 
 ```text
-Source STDO 2.5.0 (exact cut v2.5.0-rc.2)
-  -> LLM authors source-linked a_c.STDO 2.5.0 compression
-  -> Axiom Indexer validates or returns diagnostics
+Source STDO 2.5.0 (exact cut v2.5.0-rc.4)
+  -> LLM authors source-linked a_c.STDO 2.5.0-rc.4 compression
+  -> exact same-version Axiom Indexer validates or returns diagnostics
   -> Axiom Indexer instantiates the logical constraint index over it
   -> LLM selects material frames and source re-entry
   -> LLM writes ordered labeled sections
@@ -41,7 +41,7 @@ task, residual, disagreement, or unresolved route requires it.
 
 ## Deterministic boundary
 
-Exact Axiom Indexer `v0.1.0-rc.1` owns the mechanical dependency:
+Exact same-version Axiom Indexer `v2.5.0-rc.4` owns the mechanical dependency:
 
 ```text
 validate(program, bindings) -> valid map | diagnostics
@@ -52,6 +52,13 @@ Validation checks only the released Axiom Indexer laws: closed shape, URI and
 reference closure, source grounding and resolution, residual re-entry,
 ordering, and deterministic content identity. It does not prove semantic
 truth, completeness, fidelity, unique interpretation, or frame applicability.
+
+During the coordinated two-commit construction flow, the exact seven-member
+Axiom Indexer RC4 candidate may supply these mechanics as bounded commit-B
+construction evidence. It becomes the release dependency only through its own
+qualified immutable `axiom_indexer/v2.5.0-rc.4` cut in the same atomic cohort
+publication. Mutable sibling source, an older accepted cut, or matching
+version text cannot substitute for that exact dependency.
 
 The joiner preserves caller order and content. The LLM supplies every frame,
 label, string, and ordering choice. No validator, renderer, GraphFunction,
@@ -83,6 +90,8 @@ external authority.
 ## Desired outcomes
 
 - a frozen, validated `a_c.STDO` authoring program and logical constraint map;
+- an exact release-matched cohort across Source STDO, Axiom Indexer, and this
+  Product without merging their identities or authorities;
 - exact URI-based source and frame re-entry without line numbers as identity;
 - concise native Codex and Claude pickup;
 - visible LLM-selected reference frames and exact ordered request bytes;

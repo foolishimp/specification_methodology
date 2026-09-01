@@ -1,17 +1,17 @@
 # STDO Representation Product
 
-Status: active source definition repricing release-matched `2.5.0` to exact
-Source STDO `v2.5.0-rc.2`; accepted STDO Representation
+Status: active source definition for release-matched `2.5.0-rc.4` against exact
+Source STDO `v2.5.0-rc.4`; accepted STDO Representation
 `stdo_representation/v2.5.0-rc.1` remains immutable.
 
 ## Product statement
 
-STDO Representation 2.5.0 is the canonical `a_c.STDO` semantic compression of
-exact Source STDO 2.5.0, the deterministic logical constraint index over that
+STDO Representation 2.5.0-rc.4 is the canonical `a_c.STDO` semantic compression
+of exact Source STDO `v2.5.0-rc.4`, the deterministic logical constraint index over that
 compression, and concise native instructions for using both. An LLM reads
-Source STDO, authors the compression, invokes the released Axiom Indexer
-validator, repairs diagnostics, and uses the index to select reference frames
-and prepare bounded work.
+Source STDO, authors the compression, invokes the exact same-version Axiom
+Indexer mechanics, repairs diagnostics, and uses the index to select reference
+frames and prepare bounded work.
 
 The Product adds no local semantic compiler, GTL engine, prompt orchestrator,
 or model runtime. Exact Axiom Indexer supplies all deterministic mechanics. The
@@ -21,8 +21,8 @@ and ordering choice.
 ## Product shape
 
 ```text
-exact Source STDO 2.5.0
-  -> a_c.STDO 2.5.0 Axiomatic Program (semantic compression)
+exact Source STDO v2.5.0-rc.4
+  -> a_c.STDO 2.5.0-rc.4 Axiomatic Program (semantic compression)
   -> Logical Constraint Map (deterministic index over the program)
   -> native STDO Representation skill
   -> LLM-selected visible frame details and ordered sections
@@ -35,12 +35,20 @@ it.
 
 ## Product terms
 
-- **Represented STDO Version** is semantic version line `2.5.0`; its exact
-  represented cut is immutable STDO `v2.5.0-rc.2`.
+- **Represented STDO Version** is exact version `2.5.0-rc.4`, including its
+  prerelease ordinal; its stable semantic version line is `2.5.0`.
 - **Source STDO** is that exact installed standards corpus and remains semantic
   authority.
-- **Axiom Indexer Dependency** is exact accepted Axiom Indexer
-  `v0.1.0-rc.1`, used without copying its Product members into this Product.
+- **Axiom Indexer Dependency** is the exact same-version Axiom Indexer cut,
+  qualified under its own Product namespace and used without copying its
+  Product members into this Product. During coordinated construction, exact
+  candidate mechanics may produce evidence but do not become the immutable
+  dependency before cohort publication.
+- **Release-Matched Asset Cohort** is the explicitly declared closed relation
+  among exact Source STDO and its plugin, same-version Axiom Indexer mechanics,
+  this Product, its program and map, and the complete Source STDO member-digest
+  closure. Equal version text coordinates release matching without merging
+  Product identities or authorities.
 - **Shared-Source Release Profile** is this Product's stable Project Release
   Namespace and project-qualified ref selection under the installed Release
   Method. It owns Git transport spelling and Project Subtree coordinates, not
@@ -72,31 +80,34 @@ it.
 
 ## Version relation
 
-STDO Representation inherits the semantic version of the represented STDO
-Product line:
+STDO Representation carries the exact version of the represented STDO cut,
+including its prerelease ordinal:
 
 ```text
-representation_version = represented_stdo_version
-2.5.0 = semantic_version(stdo://releases/v2.5.0-rc.2/)
+representation_exact_version = represented_stdo_exact_version
+2.5.0-rc.4 = exact_version(stdo://releases/v2.5.0-rc.4/)
+representation_version_line = represented_stdo_version_line = 2.5.0
 ```
 
 This equality identifies what is represented; it does not collapse release
-cuts. STDO Representation has its own RC ordinal, member identities, review,
-acceptance, and Product-owned shared-source Git refs. Axiom Indexer remains independently
-versioned. A new represented STDO version requires a new Representation version;
-an implementation-only Representation correction may publish a higher RC on
-the same matched version line.
+cuts. STDO Representation retains its own Product identity, member inventory,
+review, acceptance, and Product-owned shared-source Git refs, but its published
+RC ordinal must match the represented Source STDO RC ordinal. Axiom Indexer
+remains a distinct Product while carrying the same exact matched version. An
+implementation-only Representation repair stays a working candidate until it
+can retain the exact matched version or the Product owner explicitly reprices
+the release-matched relation.
 
 ## Shared-source release profile
 
-Installed STDO `v2.5.0-rc.2` requires project-qualified future refs for an
+Installed STDO `v2.5.0-rc.4` requires project-qualified future refs for an
 independently released Product in this shared source. The Product owner retains
 the stable profile already used by the accepted Representation RC1:
 
 ```text
 local_release_key = stdo_representation
 RC branch = refs/heads/rc/stdo_representation/2.5.0
-immutable RC = refs/tags/stdo_representation/v2.5.0-rc.<n>
+matched immutable RC = refs/tags/stdo_representation/v2.5.0-rc.4
 version-line selector = refs/tags/stdo_representation/v2.5.0
 release branch = refs/heads/release/stdo_representation/2.5.0
 Project Subtree root = stdo_representation
@@ -120,11 +131,23 @@ replacement for the corpus.
 
 ```text
 release_uri:
-  stdo://releases/v2.5.0-rc.2/
+  stdo://releases/v2.5.0-rc.4/
+qualified_ref:
+  refs/tags/specification_methodology/v2.5.0-rc.4
+tag_object:
+  032dac0c833111547f7dd4b290c5316ed9b70f97
+commit:
+  7a25668a8fecfd26f895759af3bec4708727964a
+repository_tree:
+  737af9a7a2779dbf59e7c81232e7efd4dd98692a
+project_subtree_tree:
+  a9565f923213759984f936d087cd7cebd0f44a74
+standards_tree:
+  d6642edac9fb509a68b2ffc81d3404f2360b34e4
 installed_manifest_sha256:
-  313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a
+  4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
 standards_member_set_sha256:
-  a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7
+  504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 ```
@@ -132,22 +155,30 @@ axiomatic_calculus_sha256:
 ### Axiom Indexer
 
 ```text
-release_tag: v0.1.0-rc.1
-annotated_tag_object: e7afc8a42a7123aebe91cb7582cb037b1aae612d
-peeled_commit: dc3e00998da36dae6ac7b76b340431a85096c83c
-repository_tree: 8c9ad5f5e99a60c18fb8c1802471753afb226272
+candidate_version: v2.5.0-rc.4
+intended_qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.4
+publication_state: coordinated candidate; immutable tag coordinates do not yet exist
 product_member_inventory_sha256:
   7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
+executable_sha256:
+  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+program_schema_sha256:
+  61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b
+output_contract_sha256:
+  fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
 ```
 
-The dependency contributes URI resolution, released program validation,
-logical-map instantiation, exact diagnostics, and ordered string joining. This
-Product does not widen those claims.
+The seven candidate member bytes are conserved from historical accepted Axiom
+Indexer `v0.1.0-rc.1`; that predecessor remains immutable evidence, not the
+active release dependency. The coordinated dependency contributes URI
+resolution, released program validation, logical-map instantiation, exact
+diagnostics, and ordered string joining. This Product does not widen those
+claims.
 
 ## Axiom Indexer Product dependency relation
 
-STDO Representation is the source Product and exact Axiom Indexer
-`v0.1.0-rc.1` is its mechanical Product dependency. The relation is owned by
+STDO Representation is the source Product and the exact same-version Axiom
+Indexer cut is its mechanical Product dependency. The relation is owned by
 `urn:stdo-representation:authority:product-owner` and is limited to mechanical
 validation, logical constraint index materialization, diagnostics, URI
 resolution, and exact joining under the contracts below. It imports no Axiom
@@ -159,8 +190,11 @@ The relation begins only when the target Product Definition resolves to
 in [Exact dependency bases](#exact-dependency-bases) verify. Its governing
 contracts are [Imported validation boundary](requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary)
 and [Frame-use relation](requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation).
-It is invalidated by target-definition, release, member-inventory, contract, or
-result drift. Mutable sibling source never substitutes for the selected Install.
+It is invalidated by target-definition, release, version, member-inventory,
+contract, or result drift. Exact mutable candidate bytes may supply bounded
+construction evidence under the coordinated two-commit flow, but mutable
+sibling source never substitutes for the selected Install during release
+qualification or released use.
 
 ## Authoring and validation relation
 
@@ -251,10 +285,10 @@ that code validates role independence or computes a deterministic role packet.
 
 ## Product member set
 
-The selected `2.5.0` Product contains exactly these eight repository entries:
+The selected release-matched Product contains exactly these eight repository entries:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/
   axiomatic-program.json
   logical-constraint-map.json
 skills/stdo-representation/
@@ -271,16 +305,18 @@ Member digests and the aggregate inventory identity are assigned only after the
 exact bytes and symlink targets are frozen. No digest is inferred from an
 intended path.
 
-Source specification, README files, runtime bindings, validation reports,
-dogfood results, tickets, decisions, release records, and historical prototypes
-are authority, configuration, evidence, or history. They are not Product
-members unless a later release record explicitly reprices the member set.
+Source specification, README files, `source-corpus.json`, runtime bindings,
+validation reports, dogfood results, tickets, decisions, release records, and
+historical prototypes are authority, provenance, configuration, evidence, or
+history. They are not Product members unless a later release record explicitly
+reprices the member set.
 
 ## Identity and provenance
 
 - Source identity binds the exact installed STDO release and member set.
-- Dependency identity binds the annotated Axiom Indexer tag object, peeled
-  commit, tree, and released member inventory.
+- Dependency identity binds the exact matched Axiom Indexer version, annotated
+  tag object, peeled commit, tree, released member inventory, executable,
+  schema, and output contract.
 - Program identity is the released Axiom Indexer canonical-value digest of the
   exact Axiomatic Program.
 - Map identity binds the exact program and resolved source evidence produced by
@@ -333,7 +369,7 @@ Loading a map or skill grants none of those authorities.
 
 ## Non-goals and exclusions
 
-The `2.5.0` Product excludes:
+The release-matched Product excludes:
 
 - the retained semantic-compilation and full-model prototypes;
 - the retained GTL codecs, profiles, carrier artifacts, and frozen tenant;
@@ -380,7 +416,7 @@ Its exact-cut review and Product-owner decision accept only release claims
 `STDO-REP-2.5-C01` through `STDO-REP-2.5-C05` for its RC1-based subject.
 
 The active source project retains semantic version `2.5.0` and reprices its
-represented basis to Source STDO `v2.5.0-rc.2`. No new Representation RC is
+represented basis to Source STDO `v2.5.0-rc.4`. No new Representation RC is
 published or accepted by this source reprice. The accepted RC1 refs, bytes,
 claims, decisions, and evidence remain unchanged.
 

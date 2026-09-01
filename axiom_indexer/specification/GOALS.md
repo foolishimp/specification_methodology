@@ -107,3 +107,49 @@ the exact released dependency selected by another Product.
 - The full MVP suite passes normally and under optimized Python from the
   nested child root.
 - Fleet verification preserves the independent Product Definition.
+
+## GOAL-004 — Cut the release-coupled Axiom mechanics for STDO RC4
+
+Status: active
+
+Reprice the continuing Axiom Indexer mechanics as a release-coupled asset for
+exact Source STDO `v2.5.0-rc.4`. Preserve the accepted `v0.1.0-rc.1` Product
+and its evidence as immutable history. Do not absorb the sibling
+`a_c.STDO` semantic program or logical map into this Product.
+
+### Completion
+
+- The Product Definition selects and verifies immutable
+  `stdo://releases/v2.5.0-rc.4/` with installed-manifest SHA-256
+  `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`.
+  Mutable source bytes or a provisional digest shall not substitute for that
+  basis.
+- Live Product and requirement law makes the Axiom product-local cut suffix
+  equal the exact selected STDO cut suffix while preserving distinct Product,
+  namespace, member, and acceptance identities.
+- `releases/v2.5.0.md` declares the exact coordinated candidate, its conserved
+  seven-member mechanics inventory, predecessor dispositions, dependency
+  basis, exclusions, and project-qualified future refs.
+- A deterministic project checker verifies the exact basis, coupled cut
+  identity, seven Product members, inventory digest, release claims, and
+  exclusion of sibling semantic program and map bytes.
+- The unchanged implementation passes its complete unit and falsifier suite
+  normally and under optimized Python from the nested child root.
+- STDO Representation separately re-authors affected RC4 semantic compression
+  entries, regenerates its deterministic map with this exact Axiom mechanics,
+  and binds the released Axiom cut as an explicit dependency.
+
+### Release boundary
+
+The intended qualified immutable ref is
+`refs/tags/axiom_indexer/v2.5.0-rc.4`. This goal constructs and qualifies that
+candidate. It grants no tag, branch, selector, remote, or Product-acceptance
+effect. Before immutable publication, candidate qualifying-byte repair remains
+local to this coordinated RC4 construction and requires renewed qualification,
+not a higher cut. After immutable publication, any Axiom qualifying-byte repair
+requires another coordinated Source STDO and Axiom cut rather than an
+independently numbered Axiom RC.
+
+The verified RC3 Product Definition adoption is retained only as the completed
+construction transition from the accepted RC1 basis. It is not the release
+basis and no Axiom RC3 cut will be published.

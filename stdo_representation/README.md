@@ -1,14 +1,15 @@
 # STDO Representation
 
-STDO Representation 2.5.0 is the canonical `a_c.STDO` semantic compression of
-STDO 2.5.0, a deterministic logical constraint index over that compression,
-and a concise native skill for using both. An LLM authors and reviews meaning.
-Accepted Axiom Indexer `v0.1.0-rc.1` supplies URI resolution, basic validation,
-index instantiation, and exact ordered string joining.
+STDO Representation `2.5.0-rc.4` is the coordinated candidate canonical
+`a_c.STDO` semantic compression of exact STDO `v2.5.0-rc.4`, a deterministic
+logical constraint index over that compression, and a concise native skill for
+using both. An LLM authors and reviews meaning. The exact same-version Axiom
+Indexer candidate supplies URI resolution, basic validation, index
+instantiation, and exact ordered string joining.
 
 ```text
-Source STDO 2.5.0 (exact cut v2.5.0-rc.2)
-  -> LLM-authored a_c.STDO 2.5.0 compression
+Source STDO v2.5.0-rc.4
+  -> LLM-authored a_c.STDO 2.5.0-rc.4 compression
   -> validated logical constraint index over the compression
   -> LLM-selected visible reference frames
   -> exact ordered join
@@ -24,7 +25,7 @@ remains semantic authority.
 The selected Product members are:
 
 - the STDO Axiomatic Program compression and logical constraint index under
-  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.2/`;
+  `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/`;
 - one canonical skill under `skills/stdo-representation/`;
 - concise Codex and Claude instruction references in that skill; and
 - native discovery symlinks under `.agents/skills/` and `.claude/skills/`.
@@ -51,14 +52,19 @@ from Source STDO. A role label or prompt grants no external authority.
 
 ## Exact bases
 
-- Source STDO: `v2.5.0-rc.2`, installed-manifest SHA-256
-  `313e23116623a3bfbe96d279e089489aac466584982e1c34171ef244f0ec680a`;
+- Source STDO: `v2.5.0-rc.4`, installed-manifest SHA-256
+  `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`;
   standards member aggregate
-  `a5910bc56b491b5c520910e7bdad0949c1283e8b71951f1079e1fd86f59d20e7`.
-- Axiom Indexer: annotated `v0.1.0-rc.1` tag object
-  `e7afc8a42a7123aebe91cb7582cb037b1aae612d`, peeled commit
-  `dc3e00998da36dae6ac7b76b340431a85096c83c`, tree
-  `8c9ad5f5e99a60c18fb8c1802471753afb226272`.
+  `504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656`.
+- Axiom Indexer: exact `v2.5.0-rc.4` candidate at intended ref
+  `refs/tags/axiom_indexer/v2.5.0-rc.4`, seven-member inventory SHA-256
+  `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`,
+  and executable SHA-256
+  `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
+
+The Axiom tag object and commit-B coordinates do not exist until coordinated
+child-tag creation. Candidate mechanics are construction evidence until that
+exact immutable cut is created and qualified.
 
 The bootstrap STDO Representation Product remains the accepted immutable
 [`v0.1.0-rc.1`](https://github.com/foolishimp/stdo_representation/releases/tag/v0.1.0-rc.1).
@@ -67,8 +73,9 @@ Its annotated tag object is
 `b127ee9a0362f85d4875ae59664ecfcd13028d9c` and tree
 `15f9beb360836386ce9607dd31e30d0c8b5cd830`. The annotated `v0.1.0` tag is
 the mutable highest-published-RC selector, not the immutable Product identity.
-The active source candidate is STDO Representation `2.5.0`, matching the
-represented STDO line while retaining its own RC and Product identities.
+The active source candidate is STDO Representation `2.5.0-rc.4`, exactly
+matching the represented STDO suffix while retaining its own Product and RC
+identity.
 
 ## Evidence and boundary
 
@@ -91,16 +98,17 @@ dependencies.
 
 ## Product Definition
 
-`stdo_representation.json` selects exact published Source STDO
-`v2.5.0-rc.2`. Project frame basis revision 14 is accepted at SHA-256
-`6cc05636ea00797e44f6ebb661d342d5b8cfb59cbde2a81059062dddf6eb106f`.
+`stdo_representation.json` selects the exact locally tagged and verified Source
+STDO `v2.5.0-rc.4` cut frozen by coordinated commit A. Project frame basis
+revision 15 is accepted at SHA-256
+`e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e`.
 Product-owner decision SHA-256
-`68394d5118a6250972aa06db995a5d020c2f09996c90b0dfe70d4d8e908e8eba`
+`ecad96e450c97bc3ad276bf1d541bda7fae860a88363451e851be689f6b57a92`
 accepts those exact bytes, and the overlay binds that decision and basis.
 
 Accepted revision 13 and its decision remain exact historical authority for
-the published STDO Representation `2.5.0` RC1 subject. Revision 14 separately
-governs the continuing RC2-basis source candidate; it neither changes RC1 nor
+the published STDO Representation `2.5.0` RC1 subject. Revision 15 separately
+governs the continuing RC4-cohort source candidate; it neither changes RC1 nor
 publishes or accepts another immutable Representation RC.
 
 ## Authority order
@@ -116,7 +124,8 @@ publishes or accepts another immutable Representation RC.
 ## Focused checks
 
 ```sh
-stdo verify v2.5.0-rc.2
+stdo verify v2.5.0-rc.4 \
+  --manifest-sha256 4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
 python3 -m json.tool stdo_representation.json >/dev/null
 ```
 

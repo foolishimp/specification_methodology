@@ -52,3 +52,23 @@ consumer until released and adopted. A child using the currently installed
 method must define any alternate Git spelling as its own Product-local release
 profile. Each child still requires its own frozen candidate, authority,
 qualification, and publication decision.
+
+## Coordinated Release-Matched Cohort
+
+The Product owners have declared one explicit release relation for STDO and its
+indexes. When that relation is selected, the exact normalized cohort version
+must match all five required assets:
+
+1. Specification Methodology/STDO standards corpus;
+2. distributed Claude and Codex `spec` plugin;
+3. Axiom Indexer mechanics Product;
+4. STDO Representation Product; and
+5. released `a_c.STDO` program and logical constraint map with complete exact
+   source-member and digest closure.
+
+This relation does not make the root a Product or merge the three child
+Products. It makes publication incomplete if one required asset is stale,
+missing, differently versioned, or derived from another STDO cut. Read
+[`STACK_RELEASE.md`](STACK_RELEASE.md) and qualify the active
+[`stack_release.json`](stack_release.json) with
+`scripts/check_stack_release.py`.
