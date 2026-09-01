@@ -346,6 +346,112 @@ Version-line branding does not belong in live present-tense Product or
 requirements surfaces merely to signal recency. Exact version and RC identity
 belong in release-scoped carriers and consumer basis bindings.
 
+## Coordinated Release-Matched Asset Cohorts
+
+A Product authority may declare an explicit cross-Product **Release-Matched
+Asset Cohort** when one source corpus and its required distributed or derived
+assets must remain usable as one versioned set. The declaring relation names
+every required Product and asset, the exact source dependency, its owning
+authorities, the qualification boundary, and the publication transaction. Path
+co-location, equal version text, or a common actor cannot infer the relation.
+
+Every required member of one cohort uses one exact cohort version suffix
+`<version>-rc.<n>`. Product-local cut names and refs render it as
+`v<version>-rc.<n>`; embedded asset-version fields render the same suffix
+without `v`. Qualification normalizes only that leading cut-name marker and
+requires exact suffix equality. Equal versions establish release matching
+only. They do not collapse Product identities, member inventories, tags,
+acceptance judgments, or release authorities.
+
+For a release-matched STDO stack, the closed cohort contains all of:
+
+1. the exact STDO standards corpus cut;
+2. the distributed `spec` plugin and host assets carried by that STDO cut;
+3. the exact Axiom Indexer mechanics Product used to validate and project the
+   index;
+4. the exact STDO Representation Product; and
+5. its released `a_c.STDO` axiomatic program and logical constraint map or
+   equivalent semantic index, with the complete source-STDO member inventory,
+   member digests, member-set digest, and exact cut identity used to derive it.
+
+The cohort is incomplete when a required member is missing, stale, differently
+versioned, built from another source cut, or unable to reproduce its declared
+source-member and digest closure. A change to any source member covered by the
+index invalidates the old derived candidate for the successor cohort. The
+index is regenerated, mechanically validated, independently qualified where
+required, and released under the same new cut name. A stale index may remain
+immutable history; it cannot accompany the changed source as the current
+cohort.
+
+### Two-Commit Construction And One Publication Transaction
+
+Exact installed-manifest identity includes the annotated STDO tag object, so a
+same-commit carrier containing both that identity and derived child bytes would
+be self-referential. A coordinated STDO cohort therefore uses this bounded
+two-commit construction:
+
+1. commit A freezes the exact STDO corpus, plugin, release record, and their
+   qualification bytes;
+2. the annotated STDO cut tag is created locally over commit A but is not
+   pushed;
+3. that exact local cut is installed and verified, producing the manifest
+   identity used by every derived Product and index;
+4. the Axiom Indexer, STDO Representation, semantic-index bytes, and cohort
+   record are derived and frozen in commit B;
+5. prepublication qualification evaluates commit B against the exact local
+   STDO tag before child immutable tags are created;
+6. annotated child cut tags and every Product-local RC branch, version-line
+   selector, and optional release branch are prepared locally; and
+7. a mandatory post-tag, pre-push gate re-runs qualification over every local
+   annotated tag object and peel, selector, RC and release branch, normalized
+   version mapping, target commit, and the exact closed ref set; it also fetches
+   and binds the expected remote object ID or required absence for every
+   destination ref; and
+8. one transport transaction atomically publishes only that qualified carrier
+   branch and
+   complete Product ref set.
+
+If the remote does not support atomic ref publication, publication refuses.
+The process has no sequential-push fallback. Every immutable cut tag is
+create-only and therefore requires bound remote absence. Every mutable carrier,
+RC branch, selector, and release branch uses an explicit per-ref
+compare-and-swap lease, such as `--force-with-lease=<ref>:<expected-oid>`, in
+that same atomic transaction. A missing expected ref, unexpected existing tag,
+or changed remote object ID stops publication; the operator refetches and
+repeats complete content and local-ref-graph qualification before constructing
+another push. A lease mismatch never falls back to an unguarded force, a
+partial push, or an in-place expectation update.
+
+Remote verification fails closed when any required cohort ref is absent,
+lightweight, differently versioned, points to the wrong Product commit, or has
+a selector or release branch that does not match its immutable cut.
+Post-publication bookkeeping may use a later commit, but it cannot move any
+immutable cohort tag.
+
+### Qualification And Recovery
+
+Prepublication content qualification binds the exact commit-A STDO tag and
+manifest, commit-B source tree, all Product-local target refs, version markers,
+Product member inventories, semantic-index bytes, and complete source-corpus
+digest closure. It proves that the frozen candidate can be tagged without
+changing a qualifying byte. After tag and mutable ref creation, local-ref-graph
+qualification binds their annotated objects, peels, target commits, exact push
+set, and every fetched remote expected object ID or required absence to that
+unchanged content result. Post-publication qualification
+verifies the same relation from remote refs and refuses a partial cohort.
+
+A historically published source cut may be the basis of a later same-version
+backfill only when separately authorized recovery law names that exception.
+Every recovered asset still binds the exact historical cut and same cut name,
+and remote completeness remains mandatory. Recovery cannot move the historical
+tag, add bytes to its Product subject, or be represented as an atomic cohort
+that existed at the original publication. Normal successor publication uses
+the atomic cohort process above.
+
+Adding or changing this cohort law changes qualifying Release Method bytes. It
+governs only a higher immutable RC that contains those bytes and cannot
+retroactively make an earlier cut a coordinated cohort.
+
 ## Product Subject And Repository Carrier
 
 Before qualification, the project declares:

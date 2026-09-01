@@ -38,7 +38,7 @@ source_digests:
   TICKET_METHOD.md: 6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
-  RELEASE_METHOD.md: 8e6de5a50ac06f5826fc90f8f8792fb0c7bbc61458c822affe019e10290a80cd
+  RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
   POSTING_GUIDE.md: 63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
@@ -715,6 +715,29 @@ layer that owns the missing truth.
   through its exact immutable basis. Any qualifying-byte change requires a
   higher immutable RC; selector advancement adds no second final carrier or
   semantic review.
+- An explicitly declared release-matched asset cohort may require one exact
+  cohort version suffix across the STDO corpus, its distributed plugin, Axiom
+  Indexer mechanics, STDO Representation, and the released `a_c.STDO` program
+  and constraint map. Product cut names add `v`; embedded asset fields do not,
+  and qualification requires exact suffix equality. Equal version text does
+  not merge their Product identities or authorities. Any missing, differently versioned, stale, or
+  source-digest-incongruent member blocks the cohort. Freeze STDO and plugin in
+  commit A, create and install its annotated tag locally, derive and freeze the
+  child Products and complete source-member/digest closure in commit B, qualify
+  B before child tags, create the local tags and mutable refs, then re-run a
+  mandatory local-ref-graph gate over every tag object, peel, target, version,
+  and exact push ref. Fetch and bind expected remote OID or required absence for
+  every destination: immutable tags are create-only, while every mutable ref
+  uses an explicit per-ref compare-and-swap lease; then atomically publish that
+  exact checked ref set in the same push.
+  Remote drift or lease mismatch requires refetch and complete requalification;
+  it never falls back to force or sequential publication. Unsupported atomic
+  transport and any partial remote cohort refuse. Later bookkeeping cannot move immutable tags;
+  historical backfill requires separately authorized recovery law, the exact
+  historical source cut and same normalized version suffix, and complete
+  remote verification. It cannot move the source tag, add Product bytes to its
+  subject, pretend the original publication was atomic, or make this cohort law
+  govern a cut older than the higher RC containing it.
 - Agentic development conforms by following the constitutional process from
   declared authority, with produced artifacts passing deterministic admission. A
   walkthrough a competent agent using declared authority cannot complete is a

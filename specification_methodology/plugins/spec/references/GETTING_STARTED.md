@@ -107,13 +107,13 @@ prescribing irrelevant internal procedure.
 ### New Project
 
 Select one immutable product-local cut and its qualified repository ref. For
-the published STDO 2.5.0 RC3 distribution:
+the coordinated STDO 2.5.0 RC4 distribution after publication:
 
 ```sh
-STDO_CUT='v2.5.0-rc.3'
-STDO_REF='specification_methodology/v2.5.0-rc.3'
+STDO_CUT='v2.5.0-rc.4'
+STDO_REF='specification_methodology/v2.5.0-rc.4'
 STDO_TOOLCHAIN_MIN='0.1.2'
-STDO_TOOLCHAIN_SPEC='git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.3#subdirectory=specification_methodology'
+STDO_TOOLCHAIN_SPEC='git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.4#subdirectory=specification_methodology'
 
 stdo_version_at_least() {
   python3 - "$1" "$2" <<'PY'
@@ -148,7 +148,7 @@ stdo install "$STDO_CUT"
 stdo verify "$STDO_CUT"
 ```
 
-The exact qualified RC3 install is the missing-tool path. The explicit
+The exact qualified RC4 install is the missing-tool path. The explicit
 `pipx install --force` branch upgrades an older installation. Do not continue
 to `stdo install` unless the final version check accepts `stdo-toolchain
 0.1.2` or newer.
@@ -314,13 +314,13 @@ file; this packaged guide remains sufficient after installation.
 ### Install The Shared Skills
 
 The `spec` plugin version and immutable repository cut are aligned at
-`2.5.0-rc.3`. RC2 retains its earlier Claude-only refresh payload and never
+`2.5.0-rc.4`. RC2 retains its earlier Claude-only refresh payload and never
 moves. The Specification Stack marketplace name is `specification_stack`.
 
 Claude Code:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.3'
+SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.4'
 claude plugin marketplace add \
   "foolishimp/specification_methodology@${SPEC_PLUGIN_REF}"
 claude plugin install spec@specification_stack
@@ -329,7 +329,7 @@ claude plugin install spec@specification_stack
 Codex:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.3'
+SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.4'
 codex plugin marketplace add foolishimp/specification_methodology \
   --ref "$SPEC_PLUGIN_REF"
 codex plugin add spec@specification_stack

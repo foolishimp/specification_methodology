@@ -82,6 +82,61 @@ class SharedSourceReleaseLawTests(unittest.TestCase):
         ):
             self.assertIn(claim, self.compression)
 
+    def test_release_matched_cohort_is_complete_and_same_versioned(self) -> None:
+        for claim in (
+            "Release-Matched Asset Cohort",
+            "one exact cohort version suffix",
+            "embedded asset-version fields render the same suffix",
+            "the exact STDO standards corpus cut",
+            "distributed `spec` plugin",
+            "exact Axiom Indexer mechanics Product",
+            "exact STDO Representation Product",
+            "released `a_c.STDO` axiomatic program and logical constraint map",
+            "complete source-STDO member inventory",
+            "missing, stale, differently\nversioned",
+        ):
+            self.assertIn(claim, self.method)
+
+    def test_coordinated_publication_uses_two_commits_and_one_atomic_push(self) -> None:
+        for claim in (
+            "commit A freezes the exact STDO corpus",
+            "created locally over commit A but is not\n   pushed",
+            "derived and frozen in commit B",
+            "evaluates commit B against the exact local\n   STDO tag",
+            "mandatory post-tag, pre-push gate",
+            "local-ref-graph\nqualification",
+            "expected remote object ID or required absence",
+            "Every immutable cut tag is\ncreate-only",
+            "explicit per-ref\ncompare-and-swap lease",
+            "refetches and\nrepeats complete content and local-ref-graph qualification",
+            "never falls back to an unguarded force",
+            "one transport transaction atomically publishes",
+            "no sequential-push fallback",
+            "Post-publication bookkeeping",
+            "cannot move any\nimmutable cohort tag",
+            "cannot\nretroactively make an earlier cut a coordinated cohort",
+        ):
+            self.assertIn(claim, self.method)
+
+    def test_cohort_compression_preserves_deciding_constraints(self) -> None:
+        for claim in (
+            "release-matched asset cohort",
+            "Axiom\n  Indexer mechanics",
+            "source-member/digest closure",
+            "commit A",
+            "commit B",
+            "atomically publish",
+            "partial remote cohort refuse",
+            "expected remote OID or required absence",
+            "immutable tags are create-only",
+            "per-ref compare-and-swap lease",
+            "refetch and complete requalification",
+            "separately authorized recovery law",
+            "same normalized version suffix",
+            "govern a cut older than the higher RC",
+        ):
+            self.assertIn(claim, self.compression)
+
 
 if __name__ == "__main__":
     unittest.main()
