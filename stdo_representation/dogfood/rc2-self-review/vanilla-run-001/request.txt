@@ -1,0 +1,39 @@
+Exact subject and evidence scope
+
+Working directory: /Users/jim/src/apps/specification_stack
+Owning Source Project: specification_methodology
+Candidate: current STDO v2.5.0-rc.2 methodology working-tree subject for T-022.
+Exact standards aggregate: 554646747e6ba2227b4d0ad2b714764e1014173ad18532266de738476a073d26. Recompute it with `cd /Users/jim/src/apps/specification_stack/specification_methodology && find specification/standards -type f | LC_ALL=C sort | xargs shasum -a 256 | shasum -a 256`, then return to /Users/jim/src/apps/specification_stack for the evidence paths below. The child-root-relative path preimage is material.
+
+The permitted evidence is exactly these current files and SHA-256 digests:
+- specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md — 71a18916939a343c13552797d3eb1e193aaeb5b9b85183b9bf5073fe0365c005
+- specification_methodology/specification/standards/REFERENCE_FRAME_METHOD.md — c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
+- specification_methodology/specification/standards/authority_compressions/README.md — ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88
+- specification_methodology/specification/standards/authority_compressions/stdo_compressed.md — e2ce4b489d45fba15b68b3453db8926e65245f7ff6265c823e92b2bfa33f4833
+- specification_methodology/specification/standards/authority_compressions/spec_method.compressed.md — 38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9
+- specification_methodology/specification/standards/authority_compressions/stdo_bootstrap.md — 4264e70751783a6b9e50ffc7aef2bcf4bcdc897ad26e5c1408fe629bbd678405
+- specification_methodology/specification/standards/templates/AGENTS_TEMPLATE.md — 717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f
+- specification_methodology/specification/standards/templates/CLAUDE_TEMPLATE.md — 717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f
+- specification_methodology/specification/standards/templates/README.md — 6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31
+- specification_methodology/specification/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json — e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34
+- specification_methodology/specification/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md — 33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21
+- specification_methodology/specification/standards/AXIOMATIC_CALCULUS.md — cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
+- specification_methodology/specification/GOALS.md — 9d46cb95f43ece4199ece9aaaa1ccb425a086ae08ff6b830e236b7d95bf7ef86
+- specification_methodology/tests/test_reference_frame_boundaries.py — 42b6b930bd49db8dd46244311846f15a29f27a80b72d1119f7ae63b9f58358a9
+- specification_methodology/.ai-workspace/tickets/completed/T-022-bind-reviewer-triage-and-executive-disposition.md — 92cfc1fa1fd0a63f117e64c8b97dff43bd893614fc6b86fb001f0a512f764e1f
+
+Verify the aggregate and every file digest before evaluation. You may execute the focused test module normally and with Python optimization. Do not read comments, prior reviews, dogfood outputs, conversation logs, or any file outside this list. Preserve every subject byte. If a material coordinate differs, return invalid_basis and stop semantic evaluation.
+
+Reviewer role
+
+Act only as Reviewer. Independently evaluate the exact subject against the permitted evidence. Do not edit, repair, reprioritize, accept, publish, activate another evaluation, choose continuation, or direct the next action. A role label grants no authority beyond this read-only evaluation. Return the closed result to Executive.
+
+Return contract
+
+Severity scale: S0 catastrophic/non-waivable authority, safety, integrity, or data-loss failure; S1 mandatory method outcome or hard-stop failure without adequate workaround; S2 material semantic, authority, proportionality, or proof defect with bounded workaround; S3 minor ambiguity/evidence defect without mandatory-outcome loss; S4 editorial/cosmetic.
+
+Return exactly one verdict: satisfied | falsified | indeterminate | out_of_frame | invalid_basis. For every finding, state the affected claim, exact evidence routes, severity, causal assessment and confidence where supportable, blast radius, workaround or containment, repair complexity, regression risk, and residual uncertainty. Separate findings from adjacent observations and state every material evaluation that could not be closed. If there are no findings, say so explicitly and still return one verdict with its evidence basis. Do not assign priority, promotion-boundary effect, disposition, acceptance, release status, repair direction, or continuation. Stop after the closed Reviewer return to Executive.
+
+Action
+
+Evaluate whether the exact candidate's Reviewer technical-triage and Executive priority/disposition contract is semantically coherent, complete, proportionate, consistently projected into its compressions and templates, and adequately evidenced by the focused tests. Compare every projection with its raw owning source. Check role and authority separation, result and return topology, severity versus priority and promotion effect, uncertainty handling, hard-stop preservation, source re-entry, invalidation, and whether tests exercise the material positive and refusal relations they claim. Do not infer semantic acceptance from test success. Do not seed or assume defects; return only the result supported by the bounded evidence.

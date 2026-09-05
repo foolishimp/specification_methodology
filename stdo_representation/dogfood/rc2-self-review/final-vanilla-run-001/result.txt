@@ -1,0 +1,99 @@
+# Frame Evaluation Result
+
+- **Frame identity/revision:** `urn:stdo:review-frame:exact-candidate-semantic-proof:v1`
+- **Activation identity:** `urn:stdo:review-activation:cfd1e3332cafadea6e2522fe7aaa0918163e5eca:t022:2026-09-01`
+- **Evaluation family:** exact-candidate semantic and proof review
+- **Result algebra:** `satisfied | falsified | indeterminate | out_of_frame | invalid_basis`
+- **Result:** `falsified`
+
+## Subject, basis, and scope
+
+- **Candidate:** Specification Methodology STDO 2.5.0 RC2
+- **Commit:** `cfd1e3332cafadea6e2522fe7aaa0918163e5eca`
+- **Repository tree:** `f9d45347022989d476027630bb9d78498888e508`
+- **Specification Methodology subtree:** `240e2ca6654db1f3e0a5acb08faaeb170944b610`
+- **Standards tree:** `002e9a81745412560a4c0300c6cbd5293f7a65d3`
+- **Declared standards population:** 52
+- **Declared aggregate SHA-256:** `01238f901426807b5350e1013c85b8e5f4ebe29cf89c62a858707dd705d6415b`
+- **Time basis:** immutable extracted bytes supplied for 2026-09-01.
+- **Claim:** the candidate coherently and completely defines the Reviewer technical-triage to Executive decision relation, preserves proportionality and authority separation across raw/compressed/template projections, and meaningfully proves all material result, negative, and refusal branches.
+- **Evaluated population:** five Reviewer result branches, four Executive constraint classes, technical-triage fields, authority-negative branches, activation/refusal/return relations, raw/compression/template projections, and the focused tests purporting to cover them.
+- **Exclusions:** T-022 lines 65–end; all other files and standards; prior reviews; representations, maps, overlays, mutable workspace content, test-run output, external sources, and implementation proposals.
+
+The commit/tree/population/aggregate coordinates were retained as supplied. They were not recomputed because that would require reading outside the six permitted routes.
+
+## Reviewer identity and independence
+
+- **Actor:** isolated read-only Reviewer activation performed by Codex.
+- **Capability:** exact-byte verification, source-level semantic comparison, result-algebra analysis, authority-boundary review, and static proof-test analysis.
+- **Conditions maintained:** no Worker or Executive acts; no edits; no other agents; no skills; no internet; no prior-review material; no T-022 content after line 64; no reliance on mutable copies or passing-test claims.
+- **Formal historical author-independence:** not independently provable from the admitted evidence because T-022 identifies its pen holder only as the coarse label `codex`. No shared authoring context or action was used in this activation.
+
+## Verified evidence
+
+All six full-file hashes matched exactly:
+
+- [STDO_REFERENCE_FRAME_BASELINE.md](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md:1) — `0f7257f8c2adf4341f1eb8075f822984a88cfcb9930e11440fa74defceea4f4c`
+- [stdo_compressed.md](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/authority_compressions/stdo_compressed.md:701) — `47addcb1dab04b0de0a686355fe23fe7839d76c20ace17437bf1003f18142e81`
+- [PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:1) — `33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21`
+- [test_reference_frame_boundaries.py](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/tests/test_reference_frame_boundaries.py:1) — `570d9e04b85f3a0115d3c9be378deb29a35fe2c7c96a5ee521244292c8802b89`
+- [T-022](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/.ai-workspace/tickets/active/T-022-bind-reviewer-triage-and-executive-disposition.md:1) — `023ed7f3b9f352354691cbc596987edf45c49ddd6cbc32f0c59a2806807f63fd`; only lines 1–64 admitted
+- [REFERENCE_FRAME_METHOD.md](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/REFERENCE_FRAME_METHOD.md:1) — `c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8`
+
+## Inference relation
+
+The evaluated claim is conjunctive. Finding 1 defeats semantic coherence, totality, and raw/compression congruence for `out_of_frame`. Finding 2 defeats the claimed meaningful qualification proof. Either counterexample defeats the complete claim; together they entail `falsified` under RF-012.
+
+## Finding 1 — `out_of_frame` is incorrectly collapsed into “out-of-claim”
+
+- **Defeated claim:** the Reviewer payload projection is total across, and congruent with, the Reference Frame Method result algebra.
+- **Evidence route:**  
+  [Baseline lines 310–313](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md:310) classifies missing material scope as `out_of_frame`; [lines 1095–1108](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md:1095) instead defines the entire branch as an “out-of-claim observation”; [lines 1137–1144](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md:1137) projects the outside-claim consumption rule. RF-003 and RF-012 define `out_of_frame` to include a material relation or capability missing from the evaluation itself ([Reference Frame Method lines 336–343](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/REFERENCE_FRAME_METHOD.md:336), [409–422](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/REFERENCE_FRAME_METHOD.md:409)). The compression generalizes both `out_of_frame` and `invalid_basis` as re-entry pressure ([lines 772–780](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/authority_compressions/stdo_compressed.md:772)).
+- **Severity:** S2
+- **Causal assessment:** the result category is overloaded with one narrower scenario—an adjacent observation outside the claim. A missing relation material to an in-claim evaluation is not outside that claim.
+- **Confidence:** high.
+- **Blast radius:** Reviewer evaluations that discover undeclared but claim-material dependencies or capability requirements, especially mandatory-claim evaluations.
+- **Workaround/containment:** bounded containment exists only when the missing relation’s claim-relative materiality is preserved separately from the projection row. The declared projection does not guarantee that distinction.
+- **Repair complexity:** indeterminate.
+- **Regression risk/dependencies:** depends on RF-003/RF-012 semantics, Reviewer payload projection, Executive constraint projection, compression, and table tests. Magnitude is indeterminate.
+- **Residual uncertainty:** a project-specific binding might carry the missing distinction, but none is required by the candidate projection and none is admissible here.
+
+**Counterexample:** A Reviewer assessing claim `C` discovers that dependency `D`, material to deciding `C`, was omitted from the frame. RF-003 makes the frame insufficient and RF-012 permits `out_of_frame`. Because `D` is material to `C`, this is not an out-of-claim observation. The candidate’s categorical row sends both cases through the same outside-claim semantics.
+
+## Finding 2 — focused tests do not establish the claimed semantic branches
+
+- **Defeated claim:** the candidate meaningfully proves all material result, negative, authority-separation, and refusal branches required by its profile qualification.
+- **Evidence route:**  
+  Profile qualification requires representative observations for the authority and consumption relation, including Reviewer inability to perform Executive acts and the outside-claim branch ([Baseline lines 1330–1408](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md:1330)). The pure method requires representative positive, boundary, falsifying, basis, authority, counterexample, and consumption observations ([Reference Frame Method lines 1090–1153](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/specification/standards/REFERENCE_FRAME_METHOD.md:1090)). The focused tests use phrase-presence assertions ([tests lines 115–155](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/tests/test_reference_frame_boundaries.py:115)), table-key inspection ([lines 157–193](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/tests/test_reference_frame_boundaries.py:157)), and fragment checks for four negative rows ([lines 195–221](/tmp/stdo-final-vanilla-snapshot.WXa4xq/snapshot/specification_methodology/tests/test_reference_frame_boundaries.py:195)).
+- **Severity:** S1
+- **Causal assessment:** the tests prove source shape and selected wording, not the declared inference or refusal behavior. The purported exclusivity test constructs a dictionary keyed by result, silently overwriting duplicate rows; it does not assert row uniqueness.
+- **Confidence:** high.
+- **Blast radius:** all five Reviewer result payloads; Reviewer activation refusal; forbidden Reviewer authority branches; evidence-preservation behavior; and the hard-stop, below-cutoff, outside-claim, and unsupported-assessment constraints.
+- **Workaround/containment:** no adequate proof substitute exists within the admitted evidence. The tests can be contained as structural smoke checks only; qualification cannot be inferred from them.
+- **Repair complexity:** indeterminate.
+- **Regression risk/dependencies:** depends on the profile qualification population, table parser, result projection, compression claim, and authority-negative cases. Magnitude is indeterminate.
+- **Residual uncertainty:** admissible evidence contains no representative semantic trial. Evidence outside the six routes, including excluded T-022 material, cannot close this finding.
+
+**Concrete proof counterexample:** Add a contradictory duplicate `falsified` table row before the current compliant row. `by_result = {...}` retains only the later row, so the “total and exclusive” test still passes while the specification is non-exclusive. Likewise, contradictory prose granting Reviewer decision authority can coexist with every required phrase and leave the presence tests green.
+
+## Meaningful unproved branches
+
+The evidence provides no representative observation for:
+
+- `satisfied` producing no finding without suppressed counterexamples;
+- `falsified` preserving unsupported triage fields as indeterminate;
+- `indeterminate` being rejected as satisfaction or a closed finding;
+- in-claim missing-scope `out_of_frame`;
+- `invalid_basis` refusing substantive result consumption;
+- Reviewer activation failure producing no Reviewer evaluation result;
+- attempted Reviewer decision-authority bleed refusing;
+- preservation of Reviewer evidence against silent rewriting; or
+- the four Executive constraint cases as distinct operational relations.
+
+## Residual uncertainty and invalidation
+
+Authority inheritance from `STDO-UP-007`, `STDO-UP-020`, and `STDO-UP-022` could not be audited against their owning files because those files were excluded. The template is congruent with the intended scale ownership and avoids a universal numeric scale; no independent proportionality or template-authority defect was established beyond the two findings.
+
+This result is invalidated by any change to the six admitted byte sequences, subject identities, evaluation claim, T-022 admissibility boundary, result algebra, relevant authority basis, or by admission of additional qualification evidence.
+
+**Closed return to Executive.**

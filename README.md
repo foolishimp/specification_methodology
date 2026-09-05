@@ -1,4 +1,9 @@
-# Specification Stack
+# Specification Methodology Repository
+
+The Git repository is `foolishimp/specification_methodology`. In this workspace,
+the checkout directory is `specification_methodology`; the STDO source project
+is its `specification_methodology/` child. Select a child Product before working
+on its source.
 
 This repository co-locates three peer source projects:
 

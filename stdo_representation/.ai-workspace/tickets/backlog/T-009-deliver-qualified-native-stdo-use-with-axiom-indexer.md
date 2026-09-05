@@ -1,0 +1,336 @@
+# T-009 - Deliver Qualified Native STDO Use With Axiom Indexer
+
+- id: T-009
+- title: Deliver qualified native STDO use through Axiom Indexer and STDO Representation
+- type: feature
+- ticket_category: ordinary
+- status: backlog
+- goal: qualified-proportionate-native-stdo-use
+- change_intent: >-
+    Baseline and improve the combined Axiom Indexer-to-STDO Representation
+    path so native agents recover applicable authority, perform bounded work,
+    resume, and evaluate completion with valid evidence and measured cost.
+- change_class: goal_reprice
+- re_entry_point: specification/GOALS.md#current-state
+- triaged_at: 2026-09-05T07:29:34Z
+- created_at: 2026-09-05T07:29:34Z
+- updated_at: 2026-09-05T07:34:56Z
+- owner: stdo_representation
+- contributing_product: axiom_indexer
+- pen_holder: codex
+- tracking_scope: upstream_cross_Product_delivery_relation
+- sequence: second_workstream_after_STDO_in_the_user_requested_strategy
+- affected_boundary: Axiom Indexer mechanical dependency and STDO Representation compression, native guidance, context use, and qualification
+- intake_source: direct_user_instruction_2026-09-05_create_combined_second_ticket_using_T-030
+- work_authorization: create_this_durable_ticket_only
+- execution_contract_state: drafted
+- execution_status: not_admitted
+- target_release: unselected_successor_after_v2.5.0-rc.4
+- dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
+- target_truth: >-
+    Native Codex and Claude use one source-linked STDO Representation over
+    exact Axiom Indexer mechanics, preserve semantic and authority boundaries,
+    and achieve the selected STDO use outcomes within qualified cost envelopes.
+- superseded_truth: >-
+    Existing RC4 compression, index, mechanics, and native skills provide a
+    bounded working path; their retained qualification does not establish all
+    thirteen strategy scenarios, material combinations, or successor cost claims.
+- closure_law: >-
+    All required milestone conditions hold for the exact combined native-use
+    candidate, each Product's contribution has valid applicable evidence and
+    required judgments, and no applicable non-closure condition remains.
+    Review occurrence, mechanical validity, or one Product's green result alone
+    cannot close the combined claim.
+- evaluation_criteria: Evaluation And Proof below
+- non_closure_conditions: Non-Closure Conditions below
+- proof_surface: existing Product-owned mechanical, source-comparison, and native-use evidence joined under this ticket
+
+## Intake And Authority
+
+The user requested one second ticket for the combined **Axiom Indexer -> STDO
+Representation** work, with [STDO T-030](../../../../specification_methodology/.ai-workspace/tickets/backlog/T-030-deliver-proportionate-stdo-product-use.md)
+as reference. T-030 owns the first workstream: STDO's logical use model,
+governing method, shared workflow plugin, and bounded STDO-owned tooling.
+
+This record belongs to STDO Representation because its native-use outcome
+consumes the Axiom Indexer dependency. It is one upstream delivery ticket for
+that explicit provider/consumer relation, not a merged Product or shared
+build-tenant lifecycle. Each Product retains its own authority, requirements,
+candidate, proof, acceptance, and release identity. Any later tenant execution
+records retain the independence required by the installed Ticket Method; this
+ticket does not claim their closure on their behalf.
+
+The current actor explicitly transitions from Executive to Writer under
+`urn:stdo:reference-frame:specification-methodology:worker:v1`. The user's grant
+authorizes creation and self-checking of this new Markdown file alone. It grants
+no change to T-030, Goals, Product Definitions, requirements, code, skills,
+installs, or release state. The written ticket is the durable result of this
+activation; the proposed delivery contract remains drafted and not admitted.
+
+Inputs are the [Product-separation strategy](../../../../../abiogenesis/.ai-workspace/comments/codex/20260905T060814Z_STRATEGY_stdo_representation_abg_product_separation.md)
+and its [original use model, ranking, and postmortem](../../../../../abiogenesis/.ai-workspace/comments/codex/20260905T032303Z_STRATEGY_postmortem_reference_frames_roles_method_tuning.md).
+They remain proposal commentary. T-030 will locate the accepted STDO scenario
+model; this ticket references its identities and supplies native realization
+and evidence, not a competing normative scenario catalog.
+
+The current [Representation Goals](../../../specification/GOALS.md#current-state)
+declare no active wave; [Axiom Goals](../../../../axiom_indexer/specification/GOALS.md)
+record completed RC4 work. Initial delivery selection therefore requires
+`goal_reprice` at the relevant owning Goals. Each selected increment then uses
+the smallest lawful Product, requirement, design, or realization re-entry.
+Existing Intent is conserved unless a demonstrated scope change requires its
+own upstream decision. No implementation is admitted by this ticket's creation.
+
+## Exact Current Basis And Product Relation
+
+- [Representation Product Definition](../../../stdo_representation.json):
+  `urn:stdo:product-definition:stdo-representation`.
+- [Axiom Indexer Product Definition](../../../../axiom_indexer/stdo_default.json):
+  `urn:stdo:product-definition:axiom-indexer`.
+- Both definitions select installed `stdo://releases/v2.5.0-rc.4/`, manifest
+  SHA-256 `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`,
+  source commit `7a25668a8fecfd26f895759af3bec4708727964a`. At intake,
+  `stdo status --definition <owning-definition> --verify` returned installed,
+  valid, and no failures for each definition.
+- [Representation frame basis](../../../specification/REFERENCE_FRAME_BASIS.md#project-frame-basis)
+  is accepted revision 16, SHA-256
+  `c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3`.
+  [Axiom frame basis](../../../../axiom_indexer/specification/REFERENCE_FRAME_BASIS.md#project-frame-basis)
+  is revision 8, SHA-256
+  `032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69`.
+  These current bases do not admit the proposed successor scope.
+- The [existing dependency relation](../../../specification/PRODUCT.md#axiom-indexer-product-dependency-relation)
+  binds exact published Axiom Indexer `v2.5.0-rc.4` mechanics at commit
+  `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`, inventory SHA-256
+  `7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`.
+  It transfers no semantic, acceptance, publication, or runtime authority.
+
+The current Products already supply generic authoring guidance, URI resolution,
+validation, map instantiation, exact ordered joining, STDO-specific compression,
+and native instructions. New work starts from those capabilities and their
+retained evidence, not an assumed missing framework. RC4 publication and
+historical Product acceptance remain distinct; neither is reopened here.
+
+Mutable sibling source is a possible later, explicitly granted construction
+subject, never an implicit substitute for the selected immutable dependency.
+Representation may qualify against an exact authorized Axiom working candidate
+as construction evidence; released-use claims require the selected release and
+Install. Changed STDO meaning must come from its owning accepted source and
+explicit basis selection, not from T-030's proposal text.
+
+## Ownership And Bounded Change Surfaces
+
+| Owner | Contribution and existing authoring surface | Boundary preserved |
+|---|---|---|
+| **Axiom Indexer** | Generic authoring guidance under `axiom_indexer/skills/axiomatize-corpus/`; program/validation/join contracts and `build_tenants/core/code/ac.py`; mechanical tests and diagnostics. | Source-linked authoring remains LLM work. Code resolves, validates, indexes, and joins exact caller inputs. It does not select frames, repair meaning, accept semantics, budget/truncate context, or invoke agents. |
+| **STDO Representation** | Its Product and five requirement families; `build_tenants/axiom_indexer/representation/`; `skills/stdo-representation/` and target references; Quickstart and native discovery; existing dogfood/proof surfaces. | Owns STDO-specific compression, index use, source navigation, instructional examples, and native-use qualification. It does not fork Axiom mechanics or author STDO law. |
+| **STDO, through T-030** | Accepted logical use conditions and changed normative rules; shared `help`, `ticket`, `work`, `review`, and `status` workflows. | Shared entry remains in STDO's plugin. Representation's skill owns map/frame use and consumes the selected law. |
+| **STDO, through T-029** | Complete explicitly selected consumer-cohort adoption. | This ticket supplies companion identities, native routes, freshness/refusal contracts, and their evidence. It does not build another updater. |
+| **Consumer, worksite, host, and proof owners** | Original grants/rulings/work state; scoped preimages and diagnostics; available usage observations; claim/evidence joins. | Representation consumes source-bound facts. It does not become a worksite service, usage authority, ticket executor, or rival state store. |
+
+Exact current requirements are [Representation requirements](../../../specification/requirements/README.md)
+and [Axiom requirements](../../../../axiom_indexer/specification/requirements/README.md).
+Current realization is the [Representation Axiom tenant](../../../build_tenants/axiom_indexer/README.md)
+and [Axiom core design](../../../../axiom_indexer/build_tenants/core/design/README.md).
+The listed surfaces route proposed work; they are not a blanket write grant.
+
+## Required Combined Outcomes
+
+R01-R10 retain the strategy identities. This allocation records the second
+workstream's contribution; it does not repeat or absorb T-030's method changes.
+
+| Revision | Required contribution and decisive condition |
+|---|---|
+| **R01 — Logical use model** | Representation maps its native capabilities and residuals to the one STDO model. Each selected logical outcome reaches an actual native path or an explicit owning gap; instructional examples do not become a second accepted model. |
+| **R02 — Proportionate treatment** | Native guidance consumes one valid source-bound computed classification result, applies sufficient declared rules, and resolves only residual judgment. Reuse survives a role change; material invalidation triggers bounded correction. Frame choice remains visible judgment. Index validity or retrieval order alone cannot select the work class, grant an effect, or force an actor count. |
+| **R03 — Condition-based closure** | Bounded requests and returns expose the exact claim, obligations, evidence, and outstanding conditions. Mechanical binding/freshness remains distinct from semantic sufficiency. A review event or successful join cannot establish consumer work completion. |
+| **R04 — Computation, judgment, and roles** | Axiom supplies its declared computed facts; Representation exposes remaining contextual judgments and owner rulings. Native instructions consume applicable accepted role law, including direct Writer use where sufficient and coordination/independence where required. Local role wording is reconciled through its owning re-entry, not silently bypassed. |
+| **R05 — Owner decisions, judgments, and status** | Agents recover the original ruling and separately recorded classification/materiality judgments from their existing owners, check scope and applicability, and consume them consistently. Fresh, stale, and unknown remain distinct. No copied summary becomes a second decision or status authority; an unchanged consumer does not repeat the judgment. |
+| **R06 — Applicability and reuse** | Compression, source routes, and examples preserve the selected law's triggers, limits, and invalidation conditions. Unchanged valid relations are reused; new material counterexamples survive. Missing authority causes source re-entry, not invented certainty. |
+| **R07 — Usability and cost** | Native qualification measures useful first action, task success, owner attention, resume, and recovery, alongside total elapsed time, activations, and available usage. Case limits are selected before qualification; the minimal local envelope derives from T-030's competent-developer reference, not prior agent churn. The claim is reduced reconstruction or drift without material semantic regression, not smaller files alone. |
+| **R08 — Native entry and bounded context** | Repair measured discovery, map/frame navigation, source-reentry, target-reference, and request/return gaps. A bounded request identifies outcome, exact subject/basis, grant, material sources, current evidence, exclusions, and stop/return conditions without automatically loading the whole history. |
+| **R09 — Owner-supplied mechanics** | First reuse the released resolver, validator, index, diagnostics, and pure joiner. Repair demonstrated mechanical gaps at Axiom's owner; Representation exposes their outputs and residual judgment. Expected-digest comparison is currently a caller check, not an unimplemented validator guarantee. A stronger contract requires explicit owner selection. |
+| **R10 — Complete adopted context** | Supply exact companion release/member/source identities, usable native routes, and truthful stale/partial-context behavior to T-029. Changed semantic entries require source-grounded LLM re-authoring; unaffected entries and usable prior context are conserved. A basis-only update cannot establish complete readiness. |
+
+Any generic read-only context assembly capability remains a **conditional
+Representation Product-scope proposal**. First establish a concrete gap that
+existing owner tools and caller-authored joins cannot sufficiently address.
+Select its owner, exact inputs, refusal behavior, and Product/member change
+before implementation. It must not hide frame selection, add semantic choices
+to Axiom's joiner, or create an executor. No new tool is required merely because
+the strategy lists an enhancement.
+
+The original nine ranked recommendations remain benefit hypotheses. The six
+enhancements are covered here by shared entry coordination (R08), compact
+source-linked context (R08/R09), source-grounded examples (R02/R06), mechanical
+checks (R09), continuation/evidence reuse (R03/R05), and behavioral qualification
+(R07 and Evaluation And Proof). Empirical call-policy tuning remains ranked
+recommendation 9 under R07/R08. Detailed rationale remains in the strategy. No
+universal model effort, actor count, review count, or measured saving is inferred.
+
+### T-030 Model Handoff
+
+T-030's refined M01-C1 through M01-C3 are required inputs for the corresponding
+successor claims, not additional semantics for this ticket to define:
+
+- **Computed classification:** consume declared authority/owner traversal,
+  exact Public serialization deltas, accepted-design coverage, applicable-rule
+  results, explicit unknowns, and their input/validity identities from selected
+  source, worksite, and proof owners. Axiom supplies only its declared generic
+  resolution/index mechanics; it does not become a Public/design analyzer by
+  implication. Representation exposes the joined facts and residual questions.
+- **Reusable judgments:** recover the original classification/materiality
+  judgment, exact subject/basis, supporting computed facts, actor/authority,
+  conclusion, uncertainty, and concrete revising observation from the existing
+  work carrier. Changed roles alone do not invalidate it. Judgment reuse is
+  neither an owner ruling nor a substitute for required independent assessment.
+- **Grounded cost:** bind the same-fix competent-developer reference,
+  provenance, comparable context/tools, and explicit derivation of agent time,
+  activations, usage, and owner-attention allowances. Prior agent runs diagnose
+  overhead but cannot establish this reference; a human has no token count to
+  copy. Any extra allowance needs its stated reason and owning acceptance.
+
+Native tests must distinguish unchanged reuse, a helper change that alters
+Public serialization, missing/invalidated design coverage, and triggered
+judgment revision. Missing owner-tool capability is an explicit dependency gap,
+not permission to move its implementation into Axiom or Representation. Current
+documentation gates remain operative until STDO accepts an evidenced change.
+
+## Native Scenario Coverage
+
+The thirteen identities refer to T-030's STDO use-model work and the original
+scenario definitions. Preserve their completion conditions, material
+alternatives, and computation/judgment/owner boundaries when the owning model
+is accepted. The following is this ticket's realization/evidence map only.
+
+| Scenario | Native-use discriminator |
+|---|---|
+| **STDO-USE-02 — Proportionate treatment** | Ordinary unclassified input consumes valid computed facts and residual judgment to reach sufficient local, information-only, governing-change, operational, or uncertain treatment; unchanged roles reuse it and a mistaken route is corrected within its allowance. |
+| **STDO-USE-12 — Applicability and readiness** | An agent explains applicability, prerequisites, limitations, and first useful action without automatically installing, adopting, or creating work. |
+| **STDO-USE-01 — Establish usable context** | Exact sources, dependency, compression/index relation, native entry, and material frames resolve; absent or mismatched inputs produce a truthful hold. |
+| **STDO-USE-03 — Bounded outcome and closure** | Exact grant and subject govern work, including an answer or no-change outcome; return distinguishes satisfied conditions, valid evidence, and unresolved obligations. |
+| **STDO-USE-04 — Governing revision** | A governing insufficiency reaches its actual owner and lawful re-entry; native support does not rewrite STDO by local precedent. |
+| **STDO-USE-05 — Evidence sufficiency** | Identity/freshness checks and semantic assessment produce distinct results; same-digest but inapplicable evidence cannot satisfy a claim. |
+| **STDO-USE-11 — Owner ruling** | A compact truthful account permits one scoped ruling; a later agent recovers and consumes that exact decision without broadening it or asking again unnecessarily. |
+| **STDO-USE-06 — Resume** | A fresh context recovers owning state, grants, computed classification, recorded judgments, owner decisions, valid evidence, and next permitted action without repeating unchanged reasoning or promoting stale summaries. |
+| **STDO-USE-07 — Coordination** | Material contexts receive sufficient attention and required independence; combined work retains every applicable constraint and material observation. |
+| **STDO-USE-08 — Recovery** | Mechanical diagnostics, original cause, known/unknown effects, and retry constraints survive; handling routes to the actual implementation, host, service, or authority owner. |
+| **STDO-USE-09 — Adopted-context evolution** | Changed source and companion identities invalidate affected context visibly; component contracts support T-029's complete adoption without a local updater or guessed semantic refresh. |
+| **STDO-USE-10 — Improve observed use** | Evidence distinguishes insufficient law, incorrect compression/guidance, missing mechanics, and incorrect use; repair lands at its owner and demonstrates attributable benefit. |
+| **STDO-USE-13 — Suspend or conclude** | A recoverable account preserves the chosen disposition, remaining obligations, authority limits, and resumption conditions without inventing runtime continuation. |
+
+## Milestones And Dependency Order
+
+All milestones are planned, not execution-admitted. They are conditions within
+this one work record, not instructions to create an artifact or actor per row.
+
+| Milestone | Required condition | Dependency and evidence |
+|---|---|---|
+| **M01 — Baseline and select gaps** | Current Indexer and native Representation capabilities/evidence are mapped to the selected scenarios; material gaps, preserved relations, exact owners/re-entry, computed/judged-result handoffs, and grounded qualification cost envelopes are explicit. | Existing installed RC4 path and both Products' authority. T-030's M01-C1 through M01-C3 for the corresponding successor claims. Declare the exact candidate claim and mandatory conditions before relying on qualification results. |
+| **M02 — Sufficient Axiom mechanics** | Every selected mechanical dependency is supplied under an exact contract with reproducible positive/refusal evidence; unsupported semantic claims remain excluded. | M01's actual mechanical gaps. Existing sufficient mechanics and still-applicable evidence may satisfy this milestone without code changes. Changed mechanics receive Axiom-owned requirement/design/code and candidate qualification. |
+| **M03 — Useful native Representation** | Source-linked compression/index, examples, native skill, target guidance, and bounded context consume sufficient mechanics and selected STDO law; required source re-entry, authority, uncertainty, and return conditions survive. | M02 only for changed mechanics actually needed by the path; T-030 only for changed governing relations. Semantic source comparison complements mechanical reproduction. Any new assembly scope is separately selected before construction. |
+| **M04 — Qualified combined candidate** | The exact joined native path satisfies all required scenario conditions and material combinations, with no material regression against direct prose and with its selected cost claims met. Each Product's evidence and required decisions remain distinct. | Exact M01-M03 results, fresh supported-host observations, independent source comparison where required, refusal/recovery evidence, and case-bound accounting. T-029 gates a complete consumer-adoption claim only, not native qualification or companion-contract evidence. |
+
+Dependency order is claim-specific. Native corrections under sufficient current
+authority need not wait for all of T-030, an unrelated Axiom change, T-029's
+complete updater, or any executable-profile decision. Full successor claims
+that consume changed STDO meaning wait for that exact owning acceptance and
+basis relation. Baseline tasks may proceed without pretending the proposed
+thirteen-scenario model is already ratified law.
+
+## Evaluation And Proof
+
+1. **Exact subjects and distinct owners.** Bind task, subject/grant, STDO
+   source, Axiom executable/contracts, compression, index, native skill,
+   candidate/Install, harness, environment, and claimed relation. Source
+   candidates, published cuts, installed Products, and observations are not
+   interchangeable. Reuse evidence only while every material binding survives.
+2. **Mechanical falsifiers.** Reuse and extend Axiom's existing tests for
+   malformed/duplicate/dangling references, unresolved or escaped bindings,
+   broken residual routes, relocation, deterministic index reproduction, and
+   exact ordered joins including empty, repeated, Unicode, and multiline input.
+   Preserve input bytes and actionable diagnostics. Run changed mechanics under
+   normal and optimized Python as required by their current qualification law.
+3. **Semantic source comparison.** Assess recovered obligations, omissions,
+   incorrect claims/routes, false confidence, residual honesty, unnecessary
+   source loading, and conserved relations against exact Source STDO. A valid
+   schema, reproducible map, or matching digest establishes no semantic verdict.
+4. **Actual native use.** Exercise fresh Codex and Claude discovery, map-first
+   use, visible frame selection, bounded source re-entry, bounded work and
+   return, owner continuity, interruption, and recovery. Include material
+   negative paths, read-only boundaries, and wrong/stale-basis refusal. Skill
+   discovery or fixture success cannot stand in for supported-host behavior.
+5. **Comparable outcomes.** Freeze representative ordinary inputs and case
+   oracles before exposure. Compare direct-prose and map-first conditions with
+   the same material task, evidence boundary, role, output contract, and model
+   capability; disclose context differences. Retain failed attempts,
+   corrections, and regressions. One host's result does not qualify another.
+6. **Cost as a separate claim.** Before qualification, record accepted expected
+   and maximum activations, elapsed and method-overhead time, available
+   input/cache/output usage, owner attention, and recovery allowance per case.
+   Derive the minimal local envelope from T-030's competent-developer reference
+   under the comparison conditions above; other limits remain explicit and
+   coherent with that anchor. Historical agent cost cannot set the standard.
+   Count all participating actors, attempts, and external waits. Missing usage
+   remains unknown. Functional success beyond its envelope fails the efficiency
+   claim; a hard cap is claimed only where an available mechanism enforces it.
+7. **Honest combined proof.** Use existing Axiom tests and dogfood, Representation
+   native-pickup/source-comparison evidence, and owning proof tools. Perform
+   short harness/identity/selector checks before expensive cases. Distinguish
+   UAT, exact installed-path E2E, integration, and unit claims. Assess material
+   combinations such as interrupted work after a ruling or a basis change.
+   Required independent assessment cannot be supplied by the candidate author;
+   its occurrence alone cannot establish closure.
+
+Numerical limits and any new Product contract remain open inputs to M01's
+bounded selection, not invented values in this intake. Use the existing proof
+carriers; a new framework or an artifact per obligation is not prescribed.
+
+## Non-Closure Conditions
+
+- A mandatory native outcome is unproved, or a Product-local failure is hidden
+  by another Product's passing evidence or by the combined ticket status.
+- Compression, index, skill, candidate, source, dependency, or evidence drift
+  is concealed; a partial adoption is presented as complete readiness.
+- Mechanical validity substitutes for semantic sufficiency, owner authority,
+  work completion, usefulness, or a complete admitted calculus model.
+- An applicable grant, source route, residual, owner ruling, independence
+  condition, or material constraint is lost during selection, joining, resume,
+  context reduction, or coordination.
+- Axiom selects or rewrites context, Representation forks its mechanics, or
+  either Product silently acquires STDO, worksite, updater, or runtime authority.
+- Native operation is materially worse than the comparable direct-prose path
+  on governing constraints or source recovery, or a required host lacks evidence.
+- A selected cost claim lacks its prior case envelope, exceeds that envelope,
+  lacks its required grounded developer reference, hides failed attempts, or
+  treats unavailable counters as zero.
+- A later role recomputes unchanged classification/materiality without a valid
+  invalidation, or a stale judgment is reused despite its revising observation.
+- Closure follows a review count, favorable narrative, or reclassification of
+  an unsatisfied mandatory condition without lawful owner disposition.
+
+The strategy's blanket nonclaim/debt question remains with its owner. This
+ticket selects neither blanket policy and applies the governing policy for each
+case. New adjacent gaps retain their owner and claim-relative disposition.
+
+## Exclusions And Handoff Boundary
+
+This work does not include a GTL encoding, GraphFunction catalog, complete
+admitted `a_c` model, automatic frame selector, prompt orchestrator, model
+runtime, or ABG/HoG execution, admission, events, or durable runtime continuation.
+Representation's future executable STDO-use profile remains separate Product
+work and is not a prerequisite for this native path. Historical GTL/compiler
+tenants gain no current Product status through this ticket.
+
+STDO T-030 retains normative and shared-workflow changes; [T-029](../../../../specification_methodology/.ai-workspace/tickets/backlog/T-029-complete-consumer-cohort-adoption.md)
+retains complete consumer adoption. This ticket closes on the qualified native
+candidate and owner-bound companion contracts/evidence, not on unperformed
+publication or consumer adoption. Any complete-adoption claim consumes T-029's
+actual result. Publication, when separately selected, must satisfy the existing
+coordinated release-matched cohort law and each Product's own release authority.
+No release ordinal, tag movement, commit, push, or consumer mutation is selected
+by this ticket.
+
+The next delivery decision is the bounded M01 scope and baseline selection for
+this combined native-use outcome. Ticket authoring ends with this durable
+backlog record; implementation remains not admitted.
