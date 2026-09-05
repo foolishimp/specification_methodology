@@ -25,7 +25,9 @@ is source-project revision 2, unchanged by this candidate.
 
 Paths below are relative to the STDO source project. These hashes freeze the
 first Writer candidate for independent assessment; they are not release or
-accepted-Product identities.
+accepted-Product identities. Repository checkpoint
+`61a63304c5b9cfcc907adc420822b871874ae6d1` preserves these exact candidate bytes,
+including the original ticket and proof record before result recording.
 
 | Candidate file | SHA-256 |
 |---|---|
@@ -52,9 +54,8 @@ members. These provenance observations are the assessor's reported evidence,
 not Writer-performed independent assessment.
 
 The mapping below routes the independent oracle set to the single model. It
-does not duplicate the model's input/output definitions or record a passing
-verdict. Every candidate assessment remains pending here until the separately
-activated assessor supplies its exact verdict.
+does not duplicate the model's input/output definitions. The returned
+assessment below records the verdict separately from this source mapping.
 
 | Independent oracle | Candidate model evidence to assess |
 |---|---|
@@ -83,7 +84,8 @@ Writer `/root/t030_m01_writer` inspected the changed Product relation, complete
 model, ticket, and Goal selection against the bounded contract. `git diff
 --check` found no whitespace errors. A read-only local link/anchor check covered
 32 existing relative references with zero failures before this evidence file
-was created; its newly created evidence link is checked at final freeze.
+was created. The final Writer check covered all 35 local links/anchors with
+zero failures; the independent assessor repeated that bounded check.
 All thirteen logical function headings occur once and MC01-MC15 are present.
 These inventory checks establish navigation/population, not functional success.
 
@@ -94,8 +96,9 @@ domain and its two expected outputs are explicitly declared so MC01 does not
 infer semantic sufficiency from an incomplete example population. This is
 logical model checking, not execution of a classifier or native workflow.
 
-One reusable Writer judgment is recorded here under this existing ticket's
-authorized proof carrier; it is not an independent verdict or owner ruling.
+The following Writer judgment is retained from the first freeze under this
+ticket's authorized proof carrier. The later independent verdict is recorded
+separately below; it does not rewrite the author's original judgment.
 
 | J-W-M01-01 coordinate | Recorded content |
 |---|---|
@@ -108,27 +111,66 @@ authorized proof carrier; it is not an independent verdict or owner ruling.
 | concrete revising observation | any changed candidate hash; a model clause letting consumers bypass their selected law; a new standards/plugin/tool/release/adoption mutation; an owner transfer; or a supplied material counterexample falsifying the stated boundary |
 | reuse and authority limit | unchanged consumers may use this bounded author judgment after applicability checking; it neither replaces the independent assessor's J nor supplies acceptance/O |
 
+## Returned Independent Assessment
+
+At 2026-09-05 16:08:53 UTC, `/root/t030_m01_review` returned its Product and
+Fundamental Invariant Conservation assessment against the pre-exposure O01-O18
+oracles. Its original conclusion is:
+
+> No material model defect found. M01-C1 and M01-C2 are satisfied at logical-model altitude. The missing empirical C3 reference and envelope derivation are the sole identified blockers to M01 readiness.
+
+The assessor independently verified all four subject hashes above and the first
+proof record's SHA-256
+`8e61f6d7dc9b7c497e9609752a35f8eaf401e1a0dcb25146c408d8b4bc142d7b`
+before reading and again at completion. The checkpoint above preserves those
+bytes. Subsequent result recording leaves Product, SCENARIOS, and GOALS intact.
+
+| Evaluation | Returned result and evidence |
+|---|---|
+| M01-C1 | satisfied for the logical contract; the explicit C contract and MC01-MC06 distinguish Public membership/value changes, absent candidate evidence, declared trace coverage versus semantic sufficiency, and governing-root changes |
+| M01-C2 | satisfied for the logical contract; MC07-MC09 distinguish unchanged reuse, affected judgment revision, and required independence with valid C reuse; MC12 preserves original owner scope |
+| M01-C3 | unmet: the same-fix competent-human reference and grounded envelope derivation are absent; O14's comparison contract passes without supplying empirical evidence |
+| Thirteen functions and lifecycles | satisfied as logical contracts, including owners, inputs, C/J/O, completion/refusal, cost conditions, and the alternatives in MC10-MC14 |
+| Fundamental Invariant Conservation | satisfied for the exact source-model change; singular released law, one detailed source model, external owners, conditional direct Writer use, independence, Executive mutation exclusion, reserved debt policy, and the current design-view gate survive |
+
+O01-O13 and O15-O18 pass this bounded assessment. The assessor found no material
+counterexample requiring model repair. It independently confirmed 35 valid
+local links/anchors and a passing tracked-diff whitespace check. No native or
+installed-path qualification, Product acceptance, publication, or adoption is
+established by this result.
+
+This independent judgment is recorded as `J-R-M01-01`. Its question is whether
+the exact M01 model satisfies its logical contract and conserves affected
+Product invariants. Its subject is the frozen candidate above; its basis is
+the verified RC4 definition, unchanged Intent/frame basis, original ticket,
+and pre-exposure oracles. The responsible actor is `/root/t030_m01_review`,
+with exact-source acquisition, method/domain evaluation, counterexample search,
+and author independence under evaluation authority only. The original
+conclusion and its bounded scope are recorded above. Residuals are empirical
+C3 and all later realization claims. A material change to the Product/model,
+governing basis, relevant authority or oracle, or a concrete counterexample
+requires affected reassessment. Recording this verdict does not itself change
+the reviewed semantics. This J supplies no owner ruling or M01 acceptance.
+
 ## Current Result And Residuals
 
-Writer result: a constructed, reviewable M01 candidate is returned to root.
-The author self-review's Frame Method result for full M01 satisfaction is
-`indeterminate`; no self-acceptance is issued. The unresolved conjunction is:
+Root consumed the independent evidence within its bounded Executive authority.
+C1 and C2 have satisfied logical-model results and the required assessment has
+returned without a material defect. M01 remains incomplete because C3 is
+**unmet**. No comparable same-fix human timing/provenance was found in existing
+records; the human-reference request remains pending. No timing, usage,
+benchmark, or agent envelope is invented.
 
-- C1 and C2 logical contracts/cases are constructed and await independent
-  assessment of the exact candidate.
-- C3 is **unmet**. No recorded competent-developer time/provenance for the same
-  fix under comparable starting context and tools is established. Root's
-  existing-record search found no such reference; the human-reference request
-  remains pending. No timing, usage, benchmark, or agent envelope is invented.
-- Required Product and Fundamental Invariant Conservation assessments remain
-  separately activated and unreturned at this first Writer freeze.
-- M01 acceptance and overall T-030 closure are withheld. M02-M05 and
-  T-028/T-029 execution, generic tool implementation, native UAT/E2E, publication,
-  and adoption are neither performed nor claimed.
+M01 acceptance and overall T-030 closure remain withheld. M02-M05, T-028/T-029
+execution, generic tool implementation, native UAT/E2E, publication, and adoption
+are neither performed nor claimed. C3 needs its recorded reference and justified
+owner-accepted envelope, not another model rewrite without a material change.
 
-Root's bounded Executive role selects/consumes the independent assessment and
-returns material findings for authorized Writer repair. It has no candidate
-byte-mutation or Product-acceptance authority in that role. The reviewer has
-evaluation authority only. A material candidate/evidence change invalidates
-the affected frozen assessment basis and is recorded as a successor before
-reliance. The unchanged original owner instruction remains in the active ticket.
+At 2026-09-05 16:13:21 UTC, `/root` explicitly returned to Worker/Writer as
+`urn:openai:codex:t030-m01-result-writer` to record this returned assessment in
+this proof carrier and T-030, and preserve the authorized M01 work in local Git
+checkpoints under the owner's earlier instruction to commit all work. Its text
+write territory is these two result records; Git effects cover only the
+declared M01 files. It grants no Product/model semantic repair, acceptance,
+later milestone, release, or adoption effect. The original owner instruction
+remains in the active ticket.

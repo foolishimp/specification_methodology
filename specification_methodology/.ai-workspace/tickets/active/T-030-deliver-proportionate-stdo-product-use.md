@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#goal
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-05T15:40:27Z
+- updated_at: 2026-09-05T16:13:21Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
@@ -23,7 +23,7 @@
 - work_authorization: direct_Product_owner_selection_and_construction_of_M01_only
 - execution_contract_state: admitted
 - execution_contract_scope: M01_only
-- execution_status: M01_candidate_returned_for_independent_assessment
+- execution_status: M01_model_assessed_waiting_for_C3
 - selected_milestone: M01
 - result_surface: M01 Current Result below
 - target_release: unselected_successor_after_v2.5.0-rc.4
@@ -470,10 +470,10 @@ retains its own existing authority.
 
 | Required condition | Current evidence and disposition |
 |---|---|
-| M01-C1 | logical computed-classification contract and concrete cases are constructed in SCENARIOS; independent evaluation of the exact candidate remains required |
-| M01-C2 | logical basis-bound judgment, reuse, revision, and independence contract and cases are constructed in SCENARIOS; a bounded Writer judgment is recorded in the proof record below; independent evaluation remains required |
+| M01-C1 | **satisfied at logical-model scope** by the author-independent assessment of the frozen candidate in commit `61a63304c5b9cfcc907adc420822b871874ae6d1`; the computed contract and concrete cases establish the declared model obligations, not an implemented classifier |
+| M01-C2 | **satisfied at logical-model scope** by that same assessment; recorded judgment, unchanged reuse, triggered revision, and required independence are distinguished in the contract and cases |
 | M01-C3 | **unmet**: no recorded competent-developer time/provenance for the same minimal fix and comparable context/tool access is established; no grounded agent envelope or efficiency acceptance is claimed |
-| Product/invariant assessment | pending a separately activated author-independent assessment; self-review cannot satisfy it |
+| Product/invariant assessment | returned at 2026-09-05 16:08:53 UTC by `/root/t030_m01_review`; no material model defect found, all thirteen functions satisfy their logical contracts, and Fundamental Invariant Conservation is satisfied for the exact source-model change; empirical C3 is the sole identified M01 blocker |
 | native/tool qualification | not performed or claimed by M01 model construction; later selected work owns those paths |
 
 The missing C3 input remains in this owning ticket. A supplied reference must
@@ -483,5 +483,8 @@ human duration, or the existence of cost-contract prose cannot substitute.
 
 The [M01 model proof record](../../comments/codex/20260905T154218Z_PROOF_t030_m01_model_candidate.md)
 binds exact source hashes, Writer self-review, the independent assessor's
-pre-exposure oracle provenance and case mapping, and current residuals. It is
-evidence, not another accepted model or an acceptance decision.
+pre-exposure oracle provenance, case mapping, returned verdict, and current
+residuals. The first reviewed ticket and proof bytes remain recoverable from
+the checkpoint above. Recording the returned assessment changes only these
+result records; the reviewed Product, model, and Goal bytes remain unchanged.
+This is evidence, not another accepted model or an acceptance decision.
