@@ -2,18 +2,25 @@
 
 ## Goal
 
-Status: completed
+Status: active
 
-Make one STDO release-matched cohort publish the exact STDO corpus, distributed
-plugin, Axiom Indexer mechanics, STDO Representation Product, and generated
-`a_c.STDO` semantic index under the same product-local cut version, with stale
-or missing derived assets blocking publication.
+Establish one logical STDO Product-use model that makes proportionate treatment,
+lawful action, evidence, owner interaction, and the complete use lifecycle
+recoverable from ordinary inputs and bounded by a grounded cost contract.
 
 ## Selected Work
 
-- No active work is selected.
-- `T-027` completed the permanent coordinated-cohort law and first complete
-  atomic cohort as `v2.5.0-rc.4`.
+- [T-030 M01](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#milestones-and-dependency-order)
+  is the sole selected increment, under the direct Product-owner instruction
+  to implement T-030 and its bounded first model selection.
+- Select the Product capability boundary and one detailed logical use model;
+  preserve Intent and the accepted source-project frame basis.
+- M01 acceptance requires all of M01-C1, M01-C2, and M01-C3, including required
+  independent Product/invariant assessment and a recorded competent-developer
+  reference for the same minimal fix. Current evidence and unmet conditions
+  belong to T-030; authoring the model does not satisfy those conditions.
+- M02-M05, T-028, T-029, executable classification, release, and consumer
+  adoption are not selected by this increment.
 
 ## Retained Product State
 
@@ -28,7 +35,7 @@ or missing derived assets blocking publication.
 - The complete RC4 cohort is published without moving RC1, RC2, or RC3.
 - Product acceptance and consumer adoption remain separate from publication.
 
-## Governed Outcome
+## Retained Native Outcome
 
 - A new user can establish an exact basis, iterate requirements, activate code
   and tests, understand role boundaries, monitor work, and help triage.
@@ -43,7 +50,7 @@ or missing derived assets blocking publication.
   whose independent identity, coordination, or closure must outlive the
   applicable run-or-sprint boundary.
 
-## Completion
+## Retained RC4 Completion
 
 - Commit A `7a25668a8fecfd26f895759af3bec4708727964a` and annotated tag object
   `032dac0c833111547f7dd4b290c5316ed9b70f97` freeze exact STDO RC4, installed
@@ -65,16 +72,16 @@ or missing derived assets blocking publication.
   then adopted and verified exact public RC4. That source adoption is not an
   immutable-cut mutation or Product-acceptance claim.
 
-## Completed Disposition
+## Prior Completed Disposition
 
 T-027 is closed. The first release-matched cohort is publicly reacquirable and
-the mutable Specification Methodology source now uses its exact RC4 Install as
-the development Product for continuing work. No next Goal is inferred.
+the mutable Specification Methodology source uses its exact RC4 Install as the
+development Product for the selected T-030 M01 work.
 
 ## Selection Boundary
 
-T-027 selects only coordinated release identity, stale-index invalidation,
-cohort qualification, and the required RC4 version alignment. It does not
-change the semantic meaning of `a_c`, an STDO standard other than Release
-Method, Axiom Indexer mechanics, or STDO Representation. RC1, RC2, and RC3
-never move.
+M01 changes only this Goal selection, T-030 admission and results, the Product
+capability boundary, and its single logical scenario model. Generic method law
+remains with the existing owning standards. The released standards member set,
+auxiliary tooling, peer Products, accepted frame basis, and immutable cuts are
+conserved. A source model is not a consumer waiver or a publication decision.

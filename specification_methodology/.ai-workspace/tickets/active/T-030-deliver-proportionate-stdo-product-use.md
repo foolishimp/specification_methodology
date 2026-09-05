@@ -4,7 +4,7 @@
 - title: Deliver proportionate STDO Product use through one logical model and coherent method projections
 - type: feature
 - ticket_category: ordinary
-- status: backlog
+- status: active
 - goal: stdo-proportionate-product-use
 - change_intent: >-
     Establish the logical STDO user lifecycle and completion conditions, then
@@ -14,15 +14,18 @@
 - re_entry_point: specification/GOALS.md#goal
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-05T07:27:46Z
+- updated_at: 2026-09-05T15:40:27Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
 - affected_boundary: STDO Product use model, owning standards, shared plugin, and bounded distribution/adoption tooling
 - intake_source: direct_user_instruction_2026-09-05
-- work_authorization: create_and_refine_this_durable_ticket_only
-- execution_contract_state: drafted
-- execution_status: not_admitted
+- work_authorization: direct_Product_owner_selection_and_construction_of_M01_only
+- execution_contract_state: admitted
+- execution_contract_scope: M01_only
+- execution_status: M01_candidate_returned_for_independent_assessment
+- selected_milestone: M01
+- result_surface: M01 Current Result below
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: T-028 for its distinct Executive-mutation clarification; T-029 for complete consumer adoption; applicability is bounded below
 - target_truth: >-
@@ -46,21 +49,37 @@
 
 ## Intake And Authority
 
-The user selected STDO as the first Product in the three-Product strategy and
-explicitly requested a ticket capturing its required changes and supplied
-follow-up review. The current activation is direct Writer refinement of this
-ticket alone, under
-`urn:stdo:reference-frame:specification-methodology:worker:v1` and the user's
-ticket-state grant. The durable record is the requested result. Creating or
-refining it does not admit the proposed implementation contract.
+The original instruction selected STDO as the first Product in the
+three-Product strategy and authorized drafting this ticket. The subsequent
+direct Product-owner instruction is: "I WANT YOU to implement t030". Together
+with the supplied review's bounded first M01 selection, that instruction selects
+and admits construction of the pre-existing exact M01 contract below. It does
+not admit the whole milestone sequence. The recorded interpretation is M01
+selection and construction only; the original ruling is not rewritten as a
+blanket implementation, acceptance, or release grant.
 
-[Current Goals](../../../specification/GOALS.md#goal) record completed RC4 work
-and no active selection. The first execution re-entry is therefore
-`goal_reprice`; subsequent admitted work follows `product_reprice` for the
-logical Product capability/model, `requirement_reprice` at affected owning
-standards, and the necessary design/realization re-entry for selected auxiliary
-changes. Current Intent is conserved. Each increment receives its exact scope
-and grant when admitted; this ticket is not a grant to edit every listed file.
+### M01 Admission And Writer Activation
+
+| Coordinate | Exact binding |
+|---|---|
+| admission mechanism and authority | exact human override by direct Product/work owner, through the instruction and bounded M01 selection recorded above |
+| pre-existing contract | this ticket at repository commit `f24d9cce10252cda51fd2a011644add0a59c6b4d`, path `specification_methodology/.ai-workspace/tickets/backlog/T-030-deliver-proportionate-stdo-product-use.md`, whole-file SHA-256 `245516399e481a26a0f0a69223b6cd315fa6dfd2bbb7799da29c8414a89df852` |
+| selected contract scope | M01 and its M01-C1/C2/C3 conjunction, applicable Evaluation Criteria, Non-Closure Conditions, and Proof Surface; the remaining milestones stay drafted |
+| admission result and evidence | admitted for that M01 scope by the direct owner instruction; this durable record preserves the original wording, interpretation, exact pre-existing contract, and grant |
+| work-wave authority and re-entry | direct owner selection recorded in [GOALS](../../../specification/GOALS.md#goal); `goal_reprice` then bounded `product_reprice`; Intent conserved |
+| activation and actor | `urn:openai:codex:t030-m01-writer` under `urn:stdo:reference-frame:specification-methodology:worker:v1`; delegated Writer `/root/t030_m01_writer`, with exact source and installed-authority read access, bounded text mutation, and self-review capability |
+| mutable construction subject | this STDO source project, starting at the exact commit above; no sibling Product is a mutation subject |
+| operation and write territory | select GOALS; move this existing ticket from backlog to active and record admission/results; state the Product capability boundary; create `specification/SCENARIOS.md` as the sole detailed model |
+| required assessment | separately activated author-independent Product and Fundamental Invariant Conservation assessment of the exact candidate; Writer supplies no acceptance or independent verdict |
+| assessment coordination | `/root` acts as bounded Executive for read-only assessment selection/consumption and returning material findings for local Writer repair only; no candidate mutation or Product acceptance |
+| independent assessor | `/root/t030_m01_review` applies the Product specialist and Fundamental Invariant Conservation evaluations from the accepted frame basis; this material Product-boundary assessment does not impose Executive appointment on ordinary single-context work |
+| exclusions and stop conditions | no standards/plugin/tool code, frame-basis or Intent change, T-028/T-029 execution, peer Product work, release/adoption effect, invented human baseline, or continuation beyond the returned M01 candidate |
+| durable result and residual carrier | this ticket's [M01 Current Result](#m01-current-result); no new judgment registry or ticket per result |
+
+Current [Goals](../../../specification/GOALS.md#goal) select M01. A later
+increment needs its own exact selection and grant before re-entering affected
+owning standards or auxiliary realization surfaces. Active ticket placement
+records admitted work state; it does not supply the admission authority.
 
 The selected [Product Definition](../../../stdo_default.json) is
 `urn:stdo:product-definition:specification-methodology`. Its governing basis is
@@ -93,13 +112,15 @@ Product decision. Axiom Indexer owns its exact mechanical dependency. ABIogenesi
 owns generic execution and runtime truth. This work does not introduce an STDO
 workflow engine, a second executor, or consumer-local updater law.
 
-The proposed detailed model carrier is `specification/SCENARIOS.md`, selected and
-accepted during M01. `PRODUCT.md` owns the functional capability boundary and
-references that model. Generic method rules remain in their existing owning
-standards. The model's distribution/qualification role must be explicit; source
-Product acceptance and released standards membership remain distinct. The
-proposal's thirteen identities become references to the accepted model, with no
-second maintained accepted copy in this ticket or the commentary.
+The selected detailed model carrier is
+[`specification/SCENARIOS.md`](../../../specification/SCENARIOS.md).
+`PRODUCT.md` owns the functional capability boundary and references that model
+through the Product Definition's existing `what.product` binding. The model
+owns source qualification conditions; generic method rules remain in their
+existing owning standards. Source Product acceptance and released standards
+membership remain distinct. The thirteen identities below reference the sole
+detailed model. Model acceptance is evaluated under M01's conditions rather
+than inferred from this carrier selection.
 
 The model covers both the relationship with STDO and individual work. The former
 includes understanding applicability, establishing context, use, evolution, and
@@ -135,29 +156,32 @@ apply to every activation.
 
 ## Scenario Coverage
 
-This is a scope and evidence map. The accepted model in M01 will own the detailed
-conditions, alternatives, and C/J/O steps once. Qualification starts with ordinary
-inputs; the practitioner is not supplied the expected classification.
+The [single logical model](../../../specification/SCENARIOS.md#logical-functions)
+owns the detailed inputs, alternatives, completion/refusal, C/J/O, and cost
+conditions. Its [model cases](../../../specification/SCENARIOS.md#model-cases-and-oracles)
+own the concrete model population. Qualification starts from ordinary inputs
+without supplying the practitioner the expected classification.
 
-| Identity and function | STDO qualification focus |
+| Identity | Owning function |
 |---|---|
-| STDO-USE-02 — Obtain proportionate treatment | Headline case: consume one valid computed classification result plus any recorded residual judgment; sufficient local work, material re-entry, operational handling, uncertainty, and bounded correction. Re-entering through another role alone does not trigger reclassification. |
-| STDO-USE-12 — Understand applicability and readiness | Relevant capability, prerequisites, limits, readiness, and first useful step without automatic adoption or mutation. |
-| STDO-USE-01 — Establish usable context | Exact authorized basis and owners are recoverable for an ordinary first task; ambiguity and incomplete setup remain explicit. |
-| STDO-USE-03 — Achieve and close a bounded outcome | Exact grant and subject; required conditions satisfied with valid evidence; no additional review event solely to close. |
-| STDO-USE-04 — Revise a governing outcome or relation | Re-entry addresses the actual insufficiency and conserves unaffected work; reserved changes remain with their owner. |
-| STDO-USE-05 — Establish evidence sufficiency | Mechanical binding checks and semantic assessment remain distinct; independence applies where required; counterexamples affect the correct claim. |
-| STDO-USE-11 — Understand and make an owner ruling | A short truthful decision surface produces one recoverable ruling with exact scope, authority, and consequences. |
-| STDO-USE-06 — Continue after interruption | Owning state, grants, computed classification, recorded judgments, owner rulings, and valid evidence survive; current/stale/unknown remain distinguishable without narrative reconstruction. |
-| STDO-USE-07 — Coordinate material work | All material observations and applicable constraints survive combination; actor count follows an applicable need. |
-| STDO-USE-08 — Recover valid progress | Original cause, attempted subject, effect state, and safe retry conditions survive; bounded recovery reaches the actual owner. |
-| STDO-USE-09 — Evolve the adopted context | T-029's complete explicit adoption condition, plus retained-basis/invalidation treatment for existing work. |
-| STDO-USE-10 — Improve STDO from observed use | Separate insufficient law, incorrect projection, missing computation, and incorrect use; demonstrate attributable functional/cost improvement. |
-| STDO-USE-13 — Suspend or conclude participation | Completion, suspension, withdrawal, pending obligations, and resumption conditions remain truthful and recoverable. |
+| STDO-USE-02 | [Obtain proportionate treatment](../../../specification/SCENARIOS.md#stdo-use-02-obtain-proportionate-treatment) |
+| STDO-USE-12 | [Understand applicability and readiness](../../../specification/SCENARIOS.md#stdo-use-12-understand-applicability-and-readiness) |
+| STDO-USE-01 | [Establish usable context](../../../specification/SCENARIOS.md#stdo-use-01-establish-usable-context) |
+| STDO-USE-03 | [Achieve and close a bounded outcome](../../../specification/SCENARIOS.md#stdo-use-03-achieve-and-close-a-bounded-outcome) |
+| STDO-USE-04 | [Revise a governing outcome or relation](../../../specification/SCENARIOS.md#stdo-use-04-revise-a-governing-outcome-or-relation) |
+| STDO-USE-05 | [Establish evidence sufficiency](../../../specification/SCENARIOS.md#stdo-use-05-establish-evidence-sufficiency) |
+| STDO-USE-11 | [Understand and make an owner ruling](../../../specification/SCENARIOS.md#stdo-use-11-understand-and-make-an-owner-ruling) |
+| STDO-USE-06 | [Continue after interruption](../../../specification/SCENARIOS.md#stdo-use-06-continue-after-interruption) |
+| STDO-USE-07 | [Coordinate material work](../../../specification/SCENARIOS.md#stdo-use-07-coordinate-material-work) |
+| STDO-USE-08 | [Recover valid progress](../../../specification/SCENARIOS.md#stdo-use-08-recover-valid-progress) |
+| STDO-USE-09 | [Evolve the adopted context](../../../specification/SCENARIOS.md#stdo-use-09-evolve-the-adopted-context) |
+| STDO-USE-10 | [Improve STDO from observed use](../../../specification/SCENARIOS.md#stdo-use-10-improve-stdo-from-observed-use) |
+| STDO-USE-13 | [Suspend or conclude participation](../../../specification/SCENARIOS.md#stdo-use-13-suspend-or-conclude-participation) |
 
 ## Milestones And Dependency Order
 
-All milestones are planned; none is execution-admitted by ticket creation.
+Only M01 is execution-admitted by the exact owner selection above. M02-M05
+remain planned and unadmitted; none was admitted by ticket creation.
 Each is closure-bearing for the overall STDO candidate claim. A milestone is a
 bounded condition in this ticket, not an instruction to create another ticket,
 diagram, agent, or review round.
@@ -271,12 +295,12 @@ the current gate for an accepted or promoted boundary.
   completed predecessors. Their native workflows, proportional carrier
   selection, refusal behavior, and valid applicable evidence are conserved and
   reused; this ticket addresses demonstrated successor gaps.
-- [T-028](T-028-make-executive-mutation-prohibition-explicit.md) owns the distinct
+- [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md) owns the distinct
   Executive byte-mutation prohibition. Direct Writer entry must remain coherent
   with that boundary. The existing prohibition still applies; completing T-028's
   stronger wording is not a blanket prerequisite for native work. Its amendment
   needs its own selection if the candidate claims that successor outcome.
-- [T-029](T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
+- [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
   complete-updater work carrier. Its condition is a dependency for M04/USE-09,
   not a second updater implementation in this ticket or in ABIogenesis.
 - Representation compression, source navigation, example packaging, additional
@@ -438,7 +462,26 @@ must satisfy the existing complete coordinated-cohort law under separately
 selected release authority; consumer adoption is separately evidenced. No RC
 ordinal is chosen here and immutable RC4 remains the governing development basis.
 
-The current authorized Writer result is this durable ticket and its bounded
-triage. The implementation contract remains drafted. The next decision is the
-bounded STDO Goal/Product-model selection, with independently authorized native
-work retaining its existing authority.
+## M01 Current Result
+
+M01 is selected and construction-admitted. M01 acceptance and overall T-030
+closure are withheld. M02-M05 remain unadmitted. Independently authorized work
+retains its own existing authority.
+
+| Required condition | Current evidence and disposition |
+|---|---|
+| M01-C1 | logical computed-classification contract and concrete cases are constructed in SCENARIOS; independent evaluation of the exact candidate remains required |
+| M01-C2 | logical basis-bound judgment, reuse, revision, and independence contract and cases are constructed in SCENARIOS; a bounded Writer judgment is recorded in the proof record below; independent evaluation remains required |
+| M01-C3 | **unmet**: no recorded competent-developer time/provenance for the same minimal fix and comparable context/tool access is established; no grounded agent envelope or efficiency acceptance is claimed |
+| Product/invariant assessment | pending a separately activated author-independent assessment; self-review cannot satisfy it |
+| native/tool qualification | not performed or claimed by M01 model construction; later selected work owns those paths |
+
+The missing C3 input remains in this owning ticket. A supplied reference must
+satisfy the model's comparison requirements and support an owner-accepted
+derivation before C3 can become satisfied. Historical agent activity, a guessed
+human duration, or the existence of cost-contract prose cannot substitute.
+
+The [M01 model proof record](../../comments/codex/20260905T154218Z_PROOF_t030_m01_model_candidate.md)
+binds exact source hashes, Writer self-review, the independent assessor's
+pre-exposure oracle provenance and case mapping, and current residuals. It is
+evidence, not another accepted model or an acceptance decision.

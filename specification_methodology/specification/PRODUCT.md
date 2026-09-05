@@ -66,6 +66,31 @@ The Product provides:
 - digest-bound compressed and bootstrap read models that project, but never
   replace, their deciding sources.
 
+## Logical Product Use
+
+The source Product defines proportionate STDO use across applicability,
+context establishment, bounded work, evidence, owner decisions, coordination,
+interruption, recovery, evolution, and conclusion. An ordinary request reaches
+the smallest sufficient lawful action through declared facts and applicable
+rules, with unresolved judgment and reserved authority visible. A later role
+can reuse valid classification, evidence, and recorded decisions without
+reconstructing unchanged work.
+
+The [logical Product-use model](SCENARIOS.md) is the single detailed owner of
+these functional outcomes, their lifecycle and access conditions, and their
+source qualification cases and cost contracts. It defines what a qualifying
+realization must let a user accomplish; it does not prescribe screens, prompts,
+actor stages, an executable classifier, or a workflow runtime. STDO owns the
+logical obligations. Selected source, worksite, qualification, and runtime
+capabilities retain their own computation and effect owners.
+
+This Product/model relation is a source qualification contract. Released
+standards membership remains singular and explicitly inventoried. A use-model
+obligation that changes generic method law must be expressed at its owning
+standard and accepted through release authority before consumers rely on that
+change. The source model neither adds released members nor replaces the law
+selected by a consumer's exact basis.
+
 ## Axiomatic Calculus Boundary
 
 `AXIOMATIC_CALCULUS.md` owns `a_c` in bounded context
