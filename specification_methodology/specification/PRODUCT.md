@@ -76,9 +76,14 @@ rules, with unresolved judgment and reserved authority visible. A later role
 can reuse valid classification, evidence, and recorded decisions without
 reconstructing unchanged work.
 
+Candidate nonconformance is distinguished from a justified change to governing
+meaning, so local repair can conserve a sufficient contract. Reference frames
+provide conditional evaluation and work scope while preserving applicable
+authority, evidence, and independence requirements.
+
 The [logical Product-use model](SCENARIOS.md) is the single detailed owner of
 these functional outcomes, their lifecycle and access conditions, and their
-source qualification cases and cost contracts. It defines what a qualifying
+source qualification cases. It defines what a qualifying
 realization must let a user accomplish; it does not prescribe screens, prompts,
 actor stages, an executable classifier, or a workflow runtime. STDO owns the
 logical obligations. Selected source, worksite, qualification, and runtime

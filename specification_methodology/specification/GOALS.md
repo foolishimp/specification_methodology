@@ -2,25 +2,26 @@
 
 ## Goal
 
-Status: active
+Status: complete for T-030 M01; no later increment selected
 
 Establish one logical STDO Product-use model that makes proportionate treatment,
 lawful action, evidence, owner interaction, and the complete use lifecycle
-recoverable from ordinary inputs and bounded by a grounded cost contract.
+recoverable from ordinary inputs without unnecessary process obligations.
 
 ## Selected Work
 
-- [T-030 M01](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#milestones-and-dependency-order)
-  is the sole selected increment, under the direct Product-owner instruction
-  to implement T-030 and its bounded first model selection.
-- Select the Product capability boundary and one detailed logical use model;
-  preserve Intent and the accepted source-project frame basis.
-- M01 acceptance requires all of M01-C1, M01-C2, and M01-C3, including required
-  independent Product/invariant assessment and a recorded competent-developer
-  reference for the same minimal fix. Current evidence and unmet conditions
-  belong to T-030; authoring the model does not satisfy those conditions.
-- M02-M05, T-028, T-029, executable classification, release, and consumer
-  adoption are not selected by this increment.
+- [T-030 M01](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#m01-current-result)
+  is complete at logical-model scope under the direct Product-owner selection
+  and evaluated correction. C1/C2, the functional scenario conditions, and the
+  required independent Product/invariant assessments are satisfied on the exact
+  repaired subject recorded in T-030's proof. Intent and the accepted
+  source-project frame basis are conserved.
+- The model and drafted T-009 handoff findings are resolved. Former C3 was
+  withdrawn by the owner; no empirical cost success is asserted. T-009 remains
+  drafted and unadmitted.
+- No later increment is selected. T-030 remains active for M02-M05; T-028,
+  T-029, executable classification, native qualification, release, and consumer
+  adoption receive no completion or execution grant from this M01 result.
 
 ## Retained Product State
 
@@ -83,5 +84,6 @@ development Product for the selected T-030 M01 work.
 M01 changes only this Goal selection, T-030 admission and results, the Product
 capability boundary, and its single logical scenario model. Generic method law
 remains with the existing owning standards. The released standards member set,
-auxiliary tooling, peer Products, accepted frame basis, and immutable cuts are
-conserved. A source model is not a consumer waiver or a publication decision.
+auxiliary tooling, peer Product meaning, accepted frame basis, and immutable
+cuts are conserved. T-009's drafted handoff is reconciled with this model
+correction. A source model is not a consumer waiver or a publication decision.

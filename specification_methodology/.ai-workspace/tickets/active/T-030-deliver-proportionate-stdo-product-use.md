@@ -9,22 +9,23 @@
 - change_intent: >-
     Establish the logical STDO user lifecycle and completion conditions, then
     correct the owning method, shared native guidance, and bounded tooling so
-    ordinary work follows a sufficient path within an explicit cost envelope.
+    ordinary work follows a sufficient path with conditional review and work scope.
 - change_class: goal_reprice
 - re_entry_point: specification/GOALS.md#goal
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-05T16:13:21Z
+- updated_at: 2026-09-05T20:00:21Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
 - affected_boundary: STDO Product use model, owning standards, shared plugin, and bounded distribution/adoption tooling
 - intake_source: direct_user_instruction_2026-09-05
-- work_authorization: direct_Product_owner_selection_and_construction_of_M01_only
+- work_authorization: direct_Product_owner_M01_repair_result_recording_and_local_commit
 - execution_contract_state: admitted
 - execution_contract_scope: M01_only
-- execution_status: M01_model_assessed_waiting_for_C3
-- selected_milestone: M01
+- execution_status: M01_complete_logical_model_no_later_increment_selected
+- selected_milestone: none
+- completed_milestones: M01
 - result_surface: M01 Current Result below
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: T-028 for its distinct Executive-mutation clarification; T-029 for complete consumer adoption; applicability is bounded below
@@ -33,7 +34,7 @@
     proportionate work, direct Writer use where sufficient, conditional
     coordination and assessment, truthful condition-based closure, reusable
     computed classification and recorded judgments, recoverable owner decisions,
-    and native operation with cost proof anchored to competent developer work.
+    and proportionate native operation through applicable reference frames.
 - superseded_truth: >-
     Implicit use outcomes, inconsistent applicability wording, repeated manual
     reconstruction, and unnecessary orchestration can make correct ordinary use
@@ -58,7 +59,7 @@ not admit the whole milestone sequence. The recorded interpretation is M01
 selection and construction only; the original ruling is not rewritten as a
 blanket implementation, acceptance, or release grant.
 
-### M01 Admission And Writer Activation
+### Original M01 Admission And Writer Activation
 
 | Coordinate | Exact binding |
 |---|---|
@@ -76,7 +77,8 @@ blanket implementation, acceptance, or release grant.
 | exclusions and stop conditions | no standards/plugin/tool code, frame-basis or Intent change, T-028/T-029 execution, peer Product work, release/adoption effect, invented human baseline, or continuation beyond the returned M01 candidate |
 | durable result and residual carrier | this ticket's [M01 Current Result](#m01-current-result); no new judgment registry or ticket per result |
 
-Current [Goals](../../../specification/GOALS.md#goal) select M01. A later
+Current [Goals](../../../specification/GOALS.md#goal) record M01 complete with no
+later increment selected. A later
 increment needs its own exact selection and grant before re-entering affected
 owning standards or auxiliary realization surfaces. Active ticket placement
 records admitted work state; it does not supply the admission authority.
@@ -101,6 +103,70 @@ work fits one context and existing authority is sufficient, an actor can enter
 directly as Writer. Executive coordination is used when multiple material
 contexts require it. Native improvements proceed under their sufficient current
 authority; executable-profile ownership and scope admission gate executable work.
+
+### Owner Correction: Conditional Controls
+
+At 2026-09-05 19:13:45 UTC, the owner rejected the proposed core cost
+requirements: "this is unmanageable in more core methodology". The owner then
+clarified: "ref frames are my tool for conditional review lenses and work scope,
+in the future id create those controls through ref frames".
+
+The bounded interpretation removes mandatory cost accounting, token budgets,
+human benchmarking, and their acceptance gates from this core model and its
+T-009 dependency. Future controls belong to explicitly selected reference frames
+with their own applicability and work scope. This correction creates no such
+frame. Functional proportionality, C1/C2, source authority, evidence sufficiency,
+and applicable independent assessment remain required. Former M01-C3 is removed
+by this owner repricing; it is not recorded as empirically satisfied.
+
+This is `product_reprice` at PRODUCT's Logical Product Use relation, within the
+selected M01 outcome; Intent and the accepted frame basis are conserved. Root
+transitions from assessment coordination to Writer for this correction under
+`urn:openai:codex:t030-m01-conditional-controls-writer`. The write territory is
+PRODUCT, SCENARIOS, GOALS, this ticket and its existing proof record, plus the
+drafted T-009 handoff. The original candidate at `acf8e79` and its assessment
+remain historical evidence. Required independent assessment applies to the
+corrected candidate before its M01 result is recorded. This correction selects
+no new execution framework, release, or consumer adoption.
+
+### Evaluated Repair Admission
+
+The owner instructs: "take the findings and resolve all the issues", clarified
+by "after evaluating them". Root evaluated the supplied findings and the
+earlier author/independent reviews against the current source and exact RC4.
+That evaluation admits this bounded repair of supported findings, preserving
+the four dirty source files at repository HEAD
+`acf8e79281a0d89b0e220c7e5162147d9bf13acc` rather than resetting them.
+
+Writer `/root/t030_m01_writer` activates as
+`urn:openai:codex:t030-m01-evaluated-repair-writer` under the existing Worker
+declaration. The grant covers the obsolete cost gate and drafted T-009 handoff;
+Public violation versus desired law change; finite conditional-frame cases;
+adoption law versus work tracking; the judgment/retry example; satisfied-
+obligation closure; and exact historical/current proof. It includes clarifying
+authorized candidate construction while its eventual classification is unknown.
+Write territory is PRODUCT, SCENARIOS, GOALS, this ticket, its existing proof
+record, and the existing drafted Representation T-009 only. This admits no
+T-009 execution, new frame/framework, standards/tool/code/frame-basis/Intent
+change, release/adoption effect, commit, or self-acceptance.
+
+The existing [proof record](../../comments/codex/20260905T154218Z_PROOF_t030_m01_model_candidate.md#current-repair-selection)
+binds the starting subject and separate pre-exposure repair oracles. Root
+coordinates and consumes the independent assessments; the Writer returns the
+repaired candidate before result disposition or further work.
+
+### M01 Result Recording And Local Commit Grant
+
+Root consumed the two separately returned independent assessments recorded in
+the existing proof and found the surviving M01 model conditions satisfied.
+Under the owner's evaluated repair instruction and standing instruction to
+commit the outstanding work, Writer `/root/t030_m01_writer` activates as
+`urn:openai:codex:t030-m01-repaired-result-writer` to record that established
+result in this ticket, GOALS, and the existing proof, then locally commit the
+six corrected files. PRODUCT, SCENARIOS, and drafted T-009 remain at their
+reviewed hashes. This is result projection under the returned disposition,
+with no author self-acceptance, later milestone selection, T-009 admission,
+push, tag, release, or adoption grant.
 
 ## Product Boundary And One Owning Model
 
@@ -137,16 +203,16 @@ there; this ticket references its result rather than duplicating its contract.
 
 | Revision | Required STDO outcome and owning surface | Decisive condition |
 |---|---|---|
-| **R01 — Logical use model** | Product capability and one accepted scenario surface cover the complete lifecycle, ordinary entry, required inputs, completion/refusal, owner interaction, and cost. | All thirteen cases below retain their logical outcomes and material alternatives; a user can reach a first useful action without reconstructing the full method. |
+| **R01 — Logical use model** | Product capability and one accepted scenario surface cover the complete lifecycle, ordinary entry, required inputs, completion/refusal, and owner interaction. | All thirteen functions retain their logical outcomes and material alternatives; a user can reach a first useful action without reconstructing the full method. |
 | **R02 — Proportionate treatment** | SPEC_METHOD, REFERENCE_FRAME_METHOD, and TICKET_METHOD bind the computed classification walk in M01-C1, its residual judgment, smallest lawful re-entry, cheapest useful falsifier, and bounded correction. Preserve T-025's carrier selection. | An ordinary request receives a reusable C result for declared authority, Public changes, and design coverage; J resolves only what those facts and applicable rules leave unsettled. Correct treatment and cheap correction precede reliance on an unlawful effect or promotion. |
 | **R03 — Condition-based closure** | TICKET_METHOD, SPEC_METHOD, and the baseline express closure as satisfied declared obligations, valid applicable evidence, and no active non-closure condition. Required judgment/acceptance remains an explicit input. | A review event cannot close an unmet condition. A sufficient local case acquires no review merely to create closure. Material invalidation reopens the affected claim; unrelated observations do not silently widen it. |
 | **R04 — Computation, judgment, roles, and frames** | Preserve calculus judgment/authority distinctions; make direct Writer entry under sufficient authority explicit in applicable frame/work guidance. Activate Executive coordination and separate actors according to material need. Retain T-028's distinct mutation prohibition. | The simple single-context case starts and finishes as Writer without an Executive activation solely to appoint it. An actor occupying Executive cannot implement under that label. Missing grants, necessary independence, and reserved rulings remain binding. Frame combination preserves all applicable constraints and material observations. |
 | **R05 — Owner decisions, judgments, and truthful projection** | TICKET_METHOD and the baseline preserve the exact original ruling once, separately from interpretation. M01-C2 also binds classification/materiality judgments to their basis, conclusion, uncertainty, and revising observation in the existing owning work carrier. | Later roles consume valid recorded J results and original owner rulings without repeating unchanged reasoning or authorization. Required independence and each result's authority remain explicit; stale or revised judgments cannot be silently reused. |
-| **R06 — Documentation applicability and reuse** | Correct the baseline's unconditional Reviewer overview versus its conditional branch. Investigate the three-view gate's attributable cost and material coverage before selecting any weakening. Clarify selected-function reconstruction/reuse while retaining new counterexamples. | Obligations state triggers, limits, and invalidation/reuse. M02 cannot accept a weaker gate without measured cost evidence and proof that required coverage survives. Insufficient evidence retains the current gate without claiming that optimization. |
-| **R07 — Usability and cost qualification** | The Product/use model defines functional and cost outcomes. M01-C3 anchors the minimal local envelope to competent developer work on the same fix. Owning proof rules retain distinct UAT, E2E, integration, and unit claims. | Use outcomes satisfy their conditions and declared envelopes. Prior agent runs cannot set the reference standard. Functional success does not fabricate efficiency success, and missing accounting remains unknown. |
+| **R06 — Documentation applicability and reuse** | Correct the baseline's unconditional Reviewer overview versus its conditional branch. Investigate design-view applicability against the affected question and required coverage. Clarify selected-function reconstruction/reuse while retaining new counterexamples. | Obligations state triggers, limits, and invalidation/reuse. The existing design-view gate applies until its owner accepts a justified successor preserving required coverage. This correction selects no weakened gate. |
+| **R07 — Usability and conditional evaluation** | The Product/use model defines functional outcomes. Reference frames supply conditional review lenses and declared work scope. Owning proof rules retain distinct UAT, E2E, integration, and unit claims. | Use outcomes satisfy their functional conditions. Future resource controls require their own explicitly selected applicable frame; this work creates no such frame or core accounting requirement. |
 | **R08 — Shared native entry and guidance** | Refine existing STDO `plugins/spec/skills/stdo-{help,ticket,work,review,status}/`, getting-started guidance, templates, bootstraps, and authority compressions where measured gaps require it. Reuse completed T-024/T-025. | Supported ordinary requests select the right effect boundary and sufficient path in both native hosts. No automatic ticket, redundant question, reviewer, or Executive ceremony is introduced for a case whose conditions require none. |
 | **R09 — Declared computation and tooling boundaries** | STDO requires the M01-C1 classification facts as a C output with explicit inputs, producer ownership, freshness, and residuals. Implement only the manager/distribution checks it owns; route worksite, proof, host, index, and runtime outputs to their actual owners. | Declared layer/owner traversal, exact Public serialization deltas, and accepted-design coverage checks are reproducible. Unknown coverage stays unknown; residual materiality, semantic sufficiency, and owner choices remain J/O. No generic ticket/context executor is added to the manager. |
-| **R10 — Complete consumer adoption** | Consume the shared successor contract and evidence owned by T-029 for the explicitly selected cohort, companion identities, bindings, native routes, and stale derived context. | Complete updating proves the selected relation or accurately refuses/retains prior usable state. Partial basis adoption cannot imply complete readiness. Semantic re-authoring remains explicit when mechanical refresh is insufficient. |
+| **R10 — Complete consumer adoption** | Apply the selected SPEC_METHOD/RELEASE_METHOD and actual Product selection owners; consume T-029's tracked successor work and evidence for the selected cohort, companions, bindings, native routes, and stale context. | Complete updating proves the selected relation or accurately refuses/retains prior usable state. T-029 supplies no normative adoption authority. Partial basis adoption cannot imply complete readiness; semantic re-authoring remains explicit where mechanical refresh is insufficient. |
 
 C (computed), J (judged), and O (owner ruling) annotate the logical model; they
 are not new calculus functor kinds or an assumed mapping to ABIogenesis regimes.
@@ -157,7 +223,7 @@ apply to every activation.
 ## Scenario Coverage
 
 The [single logical model](../../../specification/SCENARIOS.md#logical-functions)
-owns the detailed inputs, alternatives, completion/refusal, C/J/O, and cost
+owns the detailed inputs, alternatives, completion/refusal, and C/J/O
 conditions. Its [model cases](../../../specification/SCENARIOS.md#model-cases-and-oracles)
 own the concrete model population. Qualification starts from ordinary inputs
 without supplying the practitioner the expected classification.
@@ -180,19 +246,20 @@ without supplying the practitioner the expected classification.
 
 ## Milestones And Dependency Order
 
-Only M01 is execution-admitted by the exact owner selection above. M02-M05
-remain planned and unadmitted; none was admitted by ticket creation.
+Only M01 was execution-admitted by the exact owner selection above; it is now
+complete at logical-model scope. M02-M05 remain planned, unselected and
+unadmitted; none was admitted by ticket creation.
 Each is closure-bearing for the overall STDO candidate claim. A milestone is a
 bounded condition in this ticket, not an instruction to create another ticket,
 diagram, agent, or review round.
 
 | Milestone | Condition | Dependencies and proving evidence |
 |---|---|---|
-| **M01 — STDO Product use model** | Product capability and the single logical model satisfy all three acceptance conditions M01-C1 through M01-C3 below, together with scenario conditions, C/J/O boundaries, and distribution/qualification role. | Bounded Goal/Product re-entry. Exact model and Product relation; required independent Product/invariant assessment; model cases for computed classification and judgment reuse, and a grounded competent-developer reference for local cost. Missing any of the three conditions prevents M01 acceptance. |
-| **M02 — Coherent governing method** | Selected R02-R07 changes are expressed at their exact owners, with applicability, direct Writer entry, conditional coordination/assessment, closure, and reuse coherent. Any weaker three-view gate meets the measurement condition below. | M01 for newly selected meaning. Exact changed/conserved relations, material counterexamples, required judgments, and attributable gate-cost evidence before weakening. Retain the current gate if evidence is insufficient. T-028 retains its distinct owner. |
+| **M01 — STDO Product use model** | Product capability and the single logical model satisfy M01-C1 and M01-C2 below, together with functional scenario conditions, C/J/O boundaries, and distribution/qualification role. | Complete at logical-model scope; see [M01 Current Result](#m01-current-result). Exact model and Product relation; required independent Product/invariant assessment; model cases for computed classification, judgment reuse, and conditional frame applicability. |
+| **M02 — Coherent governing method** | Selected R02-R07 changes are expressed at their exact owners, with applicability, direct Writer entry, conditional coordination/assessment, closure, and reuse coherent. | M01 for newly selected meaning. Exact changed/conserved relations, material counterexamples, and required judgments. Retain existing design obligations until an owning successor establishes sufficient coverage. T-028 retains its distinct owner. |
 | **M03 — Usable native projections** | Shared skills, guide, bootstrap/template/compression projections, and bounded STDO-owned checks implement the selected outcomes through actual supported native paths. | M02 only for relations whose law changes. Sufficient current authority permits independent native corrections to proceed earlier. Exact source/projection congruence and fresh positive/negative native-use evidence. |
-| **M04 — Complete shared consumer adoption** | The complete-adoption condition owned by T-029 is met and usable through the selected shared path. | Consume T-029's exact contract, implementation, and qualifying evidence for USE-09 and affected setup/resume relations. This gates that capability and aggregate closure; it does not gate unrelated M01-M03 work. |
-| **M05 — Qualified STDO candidate** | The exact joined STDO source and packaged native candidate satisfies every selected scenario condition and cost envelope, with no unresolved applicable non-closure condition. | Exact M01-M04 results, required owner/independent judgments, scenario-bound UAT and installed-path evidence, material composition checks, and attributable accounting. Candidate qualification is distinct from publication and consumer adoption. |
+| **M04 — Complete shared consumer adoption** | The complete-adoption outcome tracked by T-029 is met under its actual governing law and usable through the selected shared path. | Consume T-029's exact work contract, implementation, and qualifying evidence for USE-09 and affected setup/resume relations. This gates that capability and aggregate closure; it does not gate unrelated M01-M03 work. |
+| **M05 — Qualified STDO candidate** | The exact joined STDO source and packaged native candidate satisfies every selected functional scenario condition, with no unresolved applicable non-closure condition. | Exact M01-M04 results, required owner/independent judgments, scenario-bound UAT and installed-path evidence, and material composition checks. Candidate qualification is distinct from publication and consumer adoption. |
 
 The substantive sequence is model first, then gaps at the owning method and
 realization surfaces, then qualified outcomes. It does not make independently
@@ -203,7 +270,8 @@ by editing all standards or expanding the manager.
 
 ### M01 Acceptance Conditions
 
-These conditions close the three gaps identified in the follow-up review. M01
+These conditions retain the computed-classification and judgment-reuse gaps
+identified in the follow-up review, under the owner correction above. M01
 defines and evaluates the logical contracts and their case oracles; the owning
 implementation follows later admission. Naming a future tool without defining
 its output, scope, reuse, and falsifiers does not satisfy the model condition.
@@ -230,6 +298,15 @@ incomplete Public enumeration, and uncertain design coverage produce an explicit
 unknown. A filename, matching digest, or listed design document cannot prove
 semantic coverage. New candidate/effect evidence updates the affected C inputs
 before dependent effects or promotion rely on the classification.
+
+A Public delta may establish candidate nonconformance without establishing a
+need to change the governing contract. Preserve and locally repair/reject under
+the current contract where it satisfies the authorized desired outcome; re-enter
+its actual owner where that selected outcome requires changed meaning or an
+applicable assessment establishes governing insufficiency. Unknown desired
+meaning remains residual J/O as applicable. A separately sufficient source
+construction grant can authorize obtaining the missing candidate evidence,
+without admitting its unknown behavior or widening the grant.
 
 The model cases must distinguish an unchanged repeat consumer, a helper change
 that alters Public serialization, and missing/invalidated design coverage. Roles
@@ -258,35 +335,13 @@ an independently required assessment by relabeling the author's result. The mode
 must demonstrate unchanged reuse, triggered revision, and the required-independent
 assessment case without discarding valid mechanical facts.
 
-**M01-C3 — A competent-developer reference for the minimal local envelope.**
-The minimal local case is calibrated against a competent developer's cost for
-the same fix and required quality/evidence under comparable starting context and
-tool access. M01 binds the reference case, recorded cost and provenance, comparison
-conditions, and a justified derivation of the proposed agent envelope. An absent
-or ungrounded reference leaves this condition unmet.
+### M02 Design-View Applicability Condition
 
-Prior agent runs never set that reference or normalize their churn into the
-allowance. They may diagnose overhead or compare subsequent improvements. Map
-developer time/effort to agent time, activations, usage, and owner attention
-explicitly; a human has no token count to copy. Any additional allowance has a
-stated reason and owner acceptance, not an inferred entitlement from historical
-agent cost. Other numeric case limits remain explicit qualification inputs under
-this anchor rule.
-
-### M02 Three-View Gate Measurement Condition
-
-R06 is an investigation until attributable evidence supports a change. Before
-M02 accepts a weaker gate, the candidate must show the current gate's measured
-incremental cost on relevant comparable cases, the proposed change's cost, and
-evidence that required identity, authority, behavior, lifecycle, and material
-counterexample coverage survive. Total delivery cost remains visible so apparent
-documentation savings cannot conceal downstream rework or escaped defects.
-
-The strategy identified the missing measurement; general review churn cannot
-substitute for it. If the evidence is insufficient, retain the current gate and
-record that bounded outcome. Other coherent M02 corrections may proceed without
-claiming a justified weakening. The investigation does not authorize bypassing
-the current gate for an accepted or promoted boundary.
+R06 investigates whether a design obligation applies to the affected question
+and whether a proposed successor preserves required identity, authority,
+behavior, lifecycle, and material counterexample coverage. The current owning
+gate remains operative until a justified successor is accepted. Removing the
+core cost requirements does not select or establish that successor.
 
 ## Existing Work And External Relations
 
@@ -320,14 +375,13 @@ the current gate for an accepted or promoted boundary.
 1. The model preserves all thirteen logical functions and their material
    alternatives, including applicability/readiness, a useful first action,
    owner interaction, resumption, evolution, and conclusion. Each function has
-   one owner, required inputs, completion/refusal conditions, C/J/O steps, and
-   a case-bound cost outcome. M01-C1, M01-C2, and M01-C3 are required model
-   acceptance conditions, not deferred tooling or calibration notes.
+   one owner, required inputs, completion/refusal conditions, and C/J/O steps.
+   M01-C1 and M01-C2 are required model acceptance conditions.
 2. Proportionality qualification includes a local realization that completes
    without unnecessary tickets, diagrams, Executive activation, or independent
    review; a material Public/authority delta caught before reliance; a governing
    relation change routed to its owner; and a mistaken route corrected within
-   its allowance. A later role consumes the valid computed classification and
+   the affected scope before dependent reliance. A later role consumes the valid computed classification and
    recorded residual judgment; unchanged inputs do not cause another walk.
    The case oracle is established independently before exposure.
 3. Direct Writer use conserves the exact grant and boundary. An actual
@@ -352,10 +406,10 @@ the current gate for an accepted or promoted boundary.
    independent assessment and owner authority preserved.
 7. The Reviewer overview, conditional assessment branch, design-view
    applicability, and closure reconstruction/reuse rules are mutually coherent.
-   Obligations, applicability triggers, cost limits, and invalidation conditions
-   are colocated at their owner and faithfully consumed by subordinate material.
-   A weaker three-view gate satisfies M02's measured-cost and preserved-coverage
-   condition; absent that evidence the current gate remains operative.
+   Obligations, applicability triggers, and invalidation conditions are
+   colocated at their owner and faithfully consumed by subordinate material.
+   M02 preserves required design coverage; the current gate remains operative
+   until its owner accepts an applicable successor.
 8. Shared native workflows retain actual positive and refusal behavior for both
    supported hosts, including read-only boundaries, existing-ticket reuse,
    no-ticket bounded work, drafted-contract refusal, and lawful same-invocation
@@ -363,29 +417,25 @@ the current gate for an accepted or promoted boundary.
 9. T-029 proves the complete selected update and its refusal/recovery cases.
    The manager does not infer arbitrary composition, manufacture semantic map
    acceptance, or report complete readiness from a basis-only update.
-10. Each qualifying case states expected and maximum activations, total and
-    method-overhead time, available input/cache/output usage, owner attention,
-    and recovery allowance before qualification. The minimal local envelope
-    derives from M01-C3's competent-developer reference for the same fix;
-    historical agent runs cannot supply its anchor. Retain end-to-end cost across
-    actors, host/subject conditions, required independence, and external waits.
-    Missing usage remains unknown; a valid functional result exceeding its
-    envelope fails the efficiency claim. A hard cap is claimed only where an
-    available mechanism enforces it.
+10. Reference frames supply conditional review lenses and work scope. A
+    frame's obligations apply within its declared applicability and authority.
+    Future resource controls require their own explicit frame selection; this
+    increment creates no such frame, tracking obligation, or completion gate.
+    Existing functional, authority, evidence, and independence conditions survive.
 
 ## Non-Closure Conditions
 
 - A required milestone remains unsatisfied, or evidence belongs to another
   subject, governing basis, environment, harness, or materially different claim.
 - M01 lacks its computed classification contract, basis-bound reusable judgment
-  contract, or grounded competent-developer cost reference.
+  contract.
 - A later role re-derives unchanged classification/materiality without an
   applicable invalidation or required independent judgment, or unknown design
   coverage is represented as mechanically established semantic sufficiency.
 - A dependent judgment lacks its recorded basis or revising observation, or
   reuse erases required independence or converts J into owner authority.
-- A minimal-local cost envelope is anchored to prior agent churn, or a weaker
-  three-view gate is accepted without its attributable cost and coverage evidence.
+- A design-view obligation is weakened without an accepted owning successor
+  preserving its applicable coverage.
 - The ticket, proposal, model, or projection silently becomes replacement law,
   or the same accepted rule/decision is maintained independently in multiple
   places.
@@ -399,8 +449,8 @@ the current gate for an accepted or promoted boundary.
 - The general nonclaim/debt relationship is decided by agent wording rather
   than an applicable owner ruling. Existing policy remains operative where the
   general question is unresolved.
-- A selected cost envelope is missing or exceeded while its bounded-cost claim
-  is asserted; moving work between actors hides total cost.
+- An unselected control frame is turned into a universal core obligation,
+  or frame scope is used to waive an applicable functional or authority condition.
 - Tests establish only phrases, counts, identities, or discovery while claiming
   supported ordinary use or a complete installed causal path.
 - Complete updating remains unproved under T-029, or partial/stale context is
@@ -415,15 +465,13 @@ candidate binding. Extend them only for the selected behavior; this ticket does
 not prescribe a new proof framework or artifact per rule.
 
 - The accepted Product/model relation and a mapping from each selected scenario
-  to owning rules, supplied evidence, judgments, and cost accounting.
+  to owning rules, supplied evidence, judgments, and applicable frame scope.
 - M01 model cases and later owner-tool evidence for the computed walk, unchanged
   C/J consumption across roles, Public-changing helper edits, missing/changed
   design coverage, and triggered judgment revision. Model acceptance does not
   itself prove the later implemented tool path.
-- The same-fix competent-developer reference, provenance and comparison
-  conditions, and explicit derivation of the minimal local envelope. Include
-  measured current/proposed gate cost and preserved coverage before any weaker
-  three-view gate is accepted.
+- Source-grounded evidence of design-view applicability and retained coverage
+  for any selected change to the existing owning gate.
 - Exact successor source changes, conserved relations, source-to-compression
   digests, and semantic-congruence evidence for affected guidance, templates,
   bootstrap, plugin, and declared release members.
@@ -442,19 +490,18 @@ not prescribe a new proof framework or artifact per rule.
   explicit owner judgments where their governing conditions call for them.
 
 Reuse existing proof only while its subject, harness, environment, applicability,
-and claimed relation remain valid. Native-host receipt counts alone are not a
-complete usage ledger. Qualification reports observed benefit and uncertainty;
-the postmortem does not establish quantified savings or a universal effort policy.
+and claimed relation remain valid. Qualification reports observed functional
+outcomes and uncertainty; receipt counts or the postmortem alone do not prove
+usefulness.
 
 ## Open Inputs And Release Boundary
 
-M01 must resolve the exact model carrier/distribution role and all three named
-acceptance conditions, including the competent-developer reference and derived
-minimal-local envelope. Remaining case-specific numbers must be supplied before
-their qualification; their calibration cannot contradict that anchor. Any
-genuinely reserved policy question is resolved only where a selected claim
-depends on it. The nonclaim/debt question stays separate from unrelated work.
-These are bounded contract inputs, not requests for another architecture cycle.
+M01 must establish the exact model carrier/distribution role, C1/C2, functional
+scenario conditions, and required independent assessment. The owner correction
+removes former C3 and its accounting prerequisites. Any reserved policy question
+is resolved only where a selected claim depends on it. The nonclaim/debt question
+stays separate from unrelated work. Future controls remain with explicitly
+selected reference frames; none is created or required by this increment.
 
 Ticket closure establishes the exact qualified STDO candidate described above.
 It does not itself publish a release or adopt it into a consumer. Publication
@@ -464,27 +511,37 @@ ordinal is chosen here and immutable RC4 remains the governing development basis
 
 ## M01 Current Result
 
-M01 is selected and construction-admitted. M01 acceptance and overall T-030
-closure are withheld. M02-M05 remain unadmitted. Independently authorized work
-retains its own existing authority.
+M01 is **complete at logical-model scope**. Root consumed the author-independent
+contract and semantic assessments of the exact repaired candidate. C1/C2, all
+thirteen functional scenario contracts and their fourteen model cases, the
+C/J/O and distribution boundaries, and the required Product/invariant
+assessments are satisfied; no unresolved material counterexample or active
+non-closure condition remains for this selected scope. This result follows
+from satisfied conditions and applicable evidence, not review occurrence or
+the removal of former C3 alone.
 
-| Required condition | Current evidence and disposition |
-|---|---|
-| M01-C1 | **satisfied at logical-model scope** by the author-independent assessment of the frozen candidate in commit `61a63304c5b9cfcc907adc420822b871874ae6d1`; the computed contract and concrete cases establish the declared model obligations, not an implemented classifier |
-| M01-C2 | **satisfied at logical-model scope** by that same assessment; recorded judgment, unchanged reuse, triggered revision, and required independence are distinguished in the contract and cases |
-| M01-C3 | **unmet**: no recorded competent-developer time/provenance for the same minimal fix and comparable context/tool access is established; no grounded agent envelope or efficiency acceptance is claimed |
-| Product/invariant assessment | returned at 2026-09-05 16:08:53 UTC by `/root/t030_m01_review`; no material model defect found, all thirteen functions satisfy their logical contracts, and Fundamental Invariant Conservation is satisfied for the exact source-model change; empirical C3 is the sole identified M01 blocker |
-| native/tool qualification | not performed or claimed by M01 model construction; later selected work owns those paths |
+Reviewer `/root/t030_m01_review` reports T030-FIX-O01–O06 all pass and the three
+prior contract/handoff/proof findings resolved. Reviewer
+`/root/t030_axiomatic_review` reports no actionable findings on the repaired
+subject and all five T030-M01-SEMANTIC-REPAIR-O1 checks satisfied. The proof
+records their exact subjects, basis, evidence, bounded conclusions, and revising
+observations separately from author self-review. The five supported issues
+and earlier closure/proof repairs are resolved; first-candidate handling was a
+clarification of existing grant/discriminator clauses, not a missing law.
 
-The missing C3 input remains in this owning ticket. A supplied reference must
-satisfy the model's comparison requirements and support an owner-accepted
-derivation before C3 can become satisfied. Historical agent activity, a guessed
-human duration, or the existence of cost-contract prose cannot substitute.
+The drafted T-009 handoff is reconciled and remains execution-unadmitted.
+Overall T-030 remains active and incomplete for M02-M05, which are unselected
+and unadmitted. No executable classifier, native/installed-path qualification,
+aggregate candidate qualification, release, or consumer adoption is established.
+
+The earlier candidate and assessment at `61a6330` and `acf8e79` remain historical
+evidence under their then-selected conditions. C3 was unmet on that subject; it
+is now removed by the recorded owner correction, not retroactively satisfied.
+No cost measurement or efficiency result is claimed.
 
 The [M01 model proof record](../../comments/codex/20260905T154218Z_PROOF_t030_m01_model_candidate.md)
-binds exact source hashes, Writer self-review, the independent assessor's
-pre-exposure oracle provenance, case mapping, returned verdict, and current
-residuals. The first reviewed ticket and proof bytes remain recoverable from
-the checkpoint above. Recording the returned assessment changes only these
-result records; the reviewed Product, model, and Goal bytes remain unchanged.
-This is evidence, not another accepted model or an acceptance decision.
+preserves the predecessor assessment and records the reviewed repaired subject,
+both returned independent judgments, and root's consumed result. The ticket,
+Goal, and proof now project that result; PRODUCT, SCENARIOS and T-009 retain
+their exact reviewed bytes. The proof owns evidence, not another model or
+method law.

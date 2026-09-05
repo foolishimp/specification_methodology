@@ -9,7 +9,7 @@ named method owners; the selected consumer Product retains its concrete
 meaning, operation grants, work state, judgment, and decision authority.
 
 This file is the single detailed source Product-use model and model-case owner.
-It specifies observable outcomes and qualification obligations, including cost.
+It specifies observable outcomes and their qualification obligations.
 It is not a second standards library, an executable workflow, a runtime schema,
 or evidence that the functions have been realized. Product/model acceptance,
 implementation, native qualification, publication, and consumer adoption are
@@ -155,12 +155,32 @@ owner, operational handling, and unresolved treatment. Conflicting rules or
 missing precedence remain unresolved. A partial settled route retains all
 residuals needed before dependent reliance.
 
+An observed Public delta and a change to governing meaning are separate facts.
+C can establish that a candidate violates an exact declared contract. If that
+contract still satisfies the authorized intended outcome, the candidate is
+rejected or locally repaired under the existing grant; the violation supplies
+no reason to rewrite its requirement. Re-entry is required when the explicitly
+selected desired outcome needs a governing change, or an applicable assessment
+establishes that the current governing relation is insufficient. C settles that
+route only from sufficient declared premises, including the desired outcome;
+remaining meaning or necessity is J, and a reserved choice is O. Unknown desired
+meaning stays unresolved. A changed candidate cannot decide its own target law.
+
 The treatment names the smallest lawful re-entry, permitted next action,
 required evidence/assessment or O, and existing carrier lifetime. It does not
 grant the action. A cheapest useful discriminator may resolve an unknown only
-inside an existing operation grant and its cost allowance. Unknown treatment
+inside an existing operation grant and its declared scope. Unknown treatment
 blocks the dependent effect or promotion; unrelated actions with sufficient
 authority need not inherit that blockage.
+
+An exact existing grant may separately authorize constructing and checking a
+source candidate to resolve those unknowns. That provisional action requires
+its own sufficient subject, territory, operations, and stopping conditions; it
+does not assert that the candidate preserves the contract. New candidate facts
+update C before accepted behavior, an operational effect, or promotion relies
+on them. Without that construction/evidence grant, candidate absence supplies
+no permission to edit. This distinction preserves a first useful action before
+candidate bytes exist without admitting unknown behavior.
 
 ### Validity And Reuse
 
@@ -217,72 +237,11 @@ changed or ambiguous reserved question returns to its owner with only the new
 decision need. General nonclaim/debt policy remains reserved; a local nonclaim
 or this model cannot decide or waive that policy.
 
-## Cost And Comparison Contract
-
-Every qualifying case binds an expected and maximum envelope before exposure
-and execution. Functional validity and efficiency are separate results: valid
-behavior beyond the envelope fails its efficiency claim; missing measurement
-or an absent envelope leaves efficiency unknown. A limit is a hard cap only
-when a named available mechanism actually enforces it.
-
-| Dimension | Required expected/maximum allowance and observation |
-|---|---|
-| time | end-to-end elapsed time from ordinary request to bounded result; active effort across all actors; separately attributable method overhead and external waits |
-| activations | count by actual role/actor and purpose, including coordination, required independence, retries, and handoffs |
-| usage | available input, cache, and output usage per actor/tool/model and aggregate; unit and collection source; unavailable values remain unknown |
-| owner attention | required reading/interaction time, decision requests, repeated questions, and manual reconstruction |
-| recovery | time, retries, extra activations/usage, owner attention, discarded work, and the stop/resumption condition |
-
-Total elapsed time is the observed wall interval, including external waits.
-Aggregate active effort sums actor effort while retaining overlap; it is not
-misreported as elapsed time. Overhead attribution does not omit necessary work
-or count the same interval twice. Moving work between actors or tools cannot
-hide cost. Required independent assessment and actual external waits remain
-visible even when separately attributed.
-
-### Competent-Developer Reference
-
-The minimal-local envelope requires a recorded competent human developer's cost
-for the **same fix and required quality/evidence**. Before comparison, bind:
-
-1. Exact original request, baseline/candidate fix identity, intended outcome,
-   accepted requirements/design, required verification and completion condition.
-   A model fixture or similar task is not the measured same-fix reference.
-2. Human identity or attributable role, demonstrated relevant competence,
-   record source and time, observed start/end/active time, interruptions,
-   assistance, failed attempts and recovery, and retained measurement evidence.
-   Distinguish measured/recorded observations from estimates and recollection.
-3. Comparable starting knowledge, preloaded context, source/cache/setup state,
-   hardware/environment, tool access, authority, and required independence.
-   Every material difference has a stated comparison effect or makes the
-   reference non-comparable; it is not silently priced into agent allowance.
-4. A justified derivation of agent expected/maximum time, activations, usage,
-   owner attention, and recovery from that reference and the declared work.
-   Any additional allowance names its cause, size, evidence, and owner acceptance.
-
-The derivation begins with recorded human delivery and overhead time. It exposes
-each justified context-acquisition, environment, tool, or required-assessment
-difference instead of applying an unexplained multiplier. Activation allowance
-comes from the sufficient work and independence relations; a local one-context
-case has no coordination activation solely to appoint its Writer. Usage is
-derived from the necessary context and outputs under the selected agent/tool
-conditions; human effort has no token count to copy. Owner attention and
-recovery receive their own justified bounds, not a residual unlimited budget.
-
-Prior agent runs can diagnose overhead or compare a later improvement; they
-never set the competent-developer reference or normalize agent churn. An absent,
-ungrounded, or non-comparable human record leaves the reference condition unmet.
-Prose defining how to collect it does not satisfy the empirical condition.
-Other case limits are supplied before their qualification and cannot contradict
-this anchor. Current measurements and missing inputs belong in the owning work
-result, not in this Product contract.
-
 ## Logical Functions
 
 All thirteen functions have the sole logical capability owner declared above.
 Their rule routes identify consumed authority, not another owner of the model.
-Each function includes the common identity, access, C/J/O, reuse, and cost
-contracts. Function-specific allowances are bound in its qualifying case.
+Each function includes the common identity, access, C/J/O, and reuse contracts.
 
 ### STDO-USE-02 Obtain Proportionate Treatment
 
@@ -297,8 +256,7 @@ dependent reliance on missing authority or unresolved material facts. Sufficient
 local work uses direct Writer entry where the governing basis permits it,
 without needless durable tickets, diagrams, Executive appointment, review, or
 invented J. Material re-entry and operational handling remain distinct.
-Cost: classification and any correction fit their case allowances; unchanged
-consumers incur applicability-check cost rather than another walk.
+Unchanged consumers check applicability rather than repeat the walk.
 
 ### STDO-USE-12 Understand Applicability And Readiness
 
@@ -308,8 +266,8 @@ C supplies supported capability and readiness facts; J explains relevance and
 limits; O selects adoption only if needed and requested. Completion gives
 supported, unsupported, or unresolved applicability and a useful first step.
 Missing prerequisites remain explicit; answering does not mutate or adopt.
-Cost: the case bounds time/attention to the first useful answer and requests
-only material missing inputs, without requiring full-method study.
+The first useful answer requests only material missing inputs, without
+requiring full-method study.
 
 ### STDO-USE-01 Establish Usable Context
 
@@ -320,22 +278,22 @@ verifies the selection; J handles residual contextual ambiguity; O supplies
 reserved selection. Completion makes the first ordinary task's basis and owners
 recoverable. Zero/multiple unresolved definitions, stale basis, or partial setup
 remain unready; preserve prior usable context and unrelated work.
-Cost: setup and first-task entry share one bounded envelope; unchanged setup
-does not recur and a reserved selection is consumed once.
+Unchanged setup does not recur and a reserved selection is consumed once.
 
 ### STDO-USE-03 Achieve And Close A Bounded Outcome
 
 Rule route: `SPEC_METHOD.md` STDO-UP-020 and `TICKET_METHOD.md` closure criteria.
 Inputs: valid treatment, admitted contract, exact grant/subject, applicable
-obligations, evidence and cost envelope. C supplies checks and factual condition
+obligations and evidence. C supplies checks and factual condition
 results; the authorized Writer constructs and self-assesses, using J where
 needed. USE-05 supplies required assessment; USE-11 supplies required O.
-Completion means all declared obligations have valid applicable evidence and
-no active non-closure condition remains. Missing or undecidable conditions
+Completion means every applicable declared obligation is satisfied through valid
+applicable evidence and its required judgments/rulings, and no active
+non-closure condition remains. Missing or undecidable conditions
 withhold closure; changed governing meaning returns through USE-02/04. A review
 event or conversational GO cannot substitute for a condition.
-Cost: execution and overhead fit the case envelope, with zero extra review
-rounds solely to close an otherwise sufficient no-review case.
+A sufficient case with no independent-assessment condition has no extra
+review round solely to create closure.
 
 ### STDO-USE-04 Revise A Governing Outcome Or Relation
 
@@ -346,8 +304,8 @@ bounded options/consequences; O selects, declines, or requests missing evidence.
 Completion binds any relied-on new meaning to its owner's accepted successor
 and conserves unaffected work. Decline or unresolved authority retains the prior
 basis and forbids dependent construction on the unaccepted change.
-Cost: decision preparation and re-entry fit the selected cone's envelope;
-naming a root or authority boundary does not authorize a wider redesign.
+Re-entry stays within the affected relation; naming a root or authority
+boundary does not authorize a wider redesign.
 
 ### STDO-USE-05 Establish Evidence Sufficiency
 
@@ -359,20 +317,20 @@ where required. Completion supports, falsifies, or leaves indeterminate the
 exact claim with coverage/residuals. Missing independence or evidence cannot
 pass. A material counterexample invalidates its affected claim; unrelated
 observations remain bounded repricing inputs. Assessment does not acquire O.
-Cost: required assessment fits its case allowance; unchanged valid evidence is
-reused and a no-finding result creates no automatic repair or triage round.
+Unchanged valid evidence is reused. A no-finding result creates no automatic
+repair or triage round.
 
 ### STDO-USE-11 Understand And Make An Owner Ruling
 
 Rule route: actual decision owner and `TICKET_METHOD.md` ruling continuity.
 Inputs: one reserved question, exact subject/basis, current condition, material
-uncertainty, options, consequences and cost. C supplies authoritative facts;
+uncertainty, options and consequences. C supplies authoritative facts;
 J prepares a compact truthful account; O rules, declines, or identifies specific
 missing evidence. Completion preserves the original ruling and its exact scope
 once, with permitted consequences recoverable by later consumers. Ambiguous or
 stale questions prevent reliance; interpretation cannot expand the decision.
-Cost: owner reading/interaction fits its allowance; an unchanged resolved
-question has zero repeated owner requests or manual rewriting across projections.
+An unchanged resolved question produces no renewed owner request or manual
+rewriting across projections.
 
 ### STDO-USE-06 Continue After Interruption
 
@@ -383,8 +341,8 @@ validity; J assesses only material new relations; O resolves only a missing
 reserved choice. Completion resumes from the last valid condition with surviving
 obligations and unrelated work intact. Missing, contradictory, or stale authority
 produces an explicit re-entry; narrative reconstruction cannot make it current.
-Cost: bounded resumption includes context/activations; unchanged C/J/O and
-applicable evidence are consumed without renewed walks or authorization.
+Unchanged C/J/O and applicable evidence are consumed without renewed walks
+or authorization.
 
 ### STDO-USE-07 Coordinate Material Work
 
@@ -398,26 +356,31 @@ conflict, or invalid translation prevents a satisfied composite. Frames do not
 imply separate actors; required independence remains real. An actor occupying
 Executive cannot mutate under that label and needs a separately declared Writer
 activation and grant for an effect.
-Cost: coordination is charged across all actors and requires an actual
-capability, relation, authority, or independence need in the case envelope.
+Reference frames supply conditional review lenses and declare work scope.
+Apply each selected frame within its applicability and authority; a frame name
+alone creates no additional actor or obligation outside that scope.
 
 ### STDO-USE-08 Recover Valid Progress
 
 Rule route: the failed relation's effect owner and `SPEC_METHOD.md` STDO-UP-020.
 Inputs: first causal diagnostic, attempted exact subject/operation, known effect
-state, retry conditions, valid prior work and recovery allowance. C preserves
+state, retry conditions, valid prior work and admitted recovery scope. C preserves
 those facts; J diagnoses residual causality and selects bounded recovery; O
 supplies any reserved change. The authorized performer executes only admitted
 recovery. Completion restores valid progress or returns an intelligible stop
 and resumption condition. Unknown effects forbid unsafe repetition; a later
 error cannot hide the original cause. An unchanged failed path is not progress.
-Cost: time/retries/activations/usage/discarded work remain inside the recovery
-allowance; exhaustion returns the stop rather than an unrelated redesign.
+Recovery stays within the admitted affected scope. If no lawful recovery
+action remains, return the stop and resolving condition rather than repeat
+the failed path or initiate an unrelated redesign.
 
 ### STDO-USE-09 Evolve The Adopted Context
 
-Rule route: explicit Product adoption/release owners and the complete-update
-contract owned by T-029. Inputs: current and proposed exact selection, declared
+Rule route: the selected exact-basis `SPEC_METHOD.md` Shared Installed Release
+Basis And Toolchain Manager, `RELEASE_METHOD.md` Selector And Consumer Adoption
+and applicable cohort law, plus the actual Product's selection/adoption owners.
+T-029 tracks the proposed complete-update successor and its evidence; it supplies
+no normative adoption authority. Inputs: current and proposed exact selection, declared
 cohort/companion relations, active work, effects, access and adoption grant.
 C supplies exact deltas and verified mechanics; J evaluates non-computable
 consequences; O selects the exact scope. Completion establishes the complete
@@ -425,13 +388,16 @@ selected usable context or accurately refuses while retaining usable prior
 state. Basis-only or partial updating cannot imply complete readiness. Active
 work receives explicit retained-basis or invalidation treatment, including
 semantic re-entry where mechanical refresh is insufficient.
-Cost: adoption and ordinary-task reorientation share an envelope; the same
-accepted scope is not selected again by each later agent.
+Where complete updating needs successor capability or law, it remains an
+explicit gap until the owning change and selected basis support it; the current
+basis-only command is not relabeled complete updating by this model or a ticket.
+The same accepted scope is consumed without renewed selection by each later
+agent; the resulting context supports ordinary work.
 
 ### STDO-USE-10 Improve STDO From Observed Use
 
 Rule route: STDO Product and the exact owning method or projection relation.
-Inputs: reproducible use shortfall, original outcomes/cost/context, candidate
+Inputs: reproducible use shortfall, original outcomes/context, candidate
 cause and comparable cases. C preserves attributable observations; J separates
 insufficient law, incorrect projection/use, and missing realization; O selects
 any shared change. Completion demonstrates a bounded improvement at one owner
@@ -439,9 +405,9 @@ against affected scenarios, or retains an explicit inconclusive/declined result.
 Local circumstances do not automatically become shared law. Publication and
 adoption require their separate authority and evidence. The general nonclaim/
 debt question and any weaker three-view gate remain with their owning decisions;
-absent M02's measured cost and preserved coverage, the existing gate applies.
-Cost: improvement effort and benefit use comparable case envelopes; document,
-test, or activation count alone proves no saving or Product improvement.
+the existing gate applies until its owner accepts an applicable successor.
+The improvement addresses the reproduced shortfall while preserving the
+applicable functional and evidence conditions.
 
 ### STDO-USE-13 Suspend Or Conclude Participation
 
@@ -452,13 +418,13 @@ unresolved consequences; O selects a reserved end state when required. Authorize
 effects record completion, suspension, or withdrawal with what remains and the
 resumption condition. No silent deletion, lost obligation, or false completion
 follows. Unknown in-flight effects stay explicit until their owner resolves them.
-Cost: ending or pausing and later status recovery fit the case envelope without
-full-history reconstruction or repeating an unchanged decision.
+Later status recovery preserves the recorded disposition without full-history
+reconstruction or repetition of an unchanged decision.
 
 ## Model Cases And Oracles
 
 These finite logical examples define inputs and expected relations. They do not
-claim real execution, a human benchmark, native UAT, installed E2E, or delivery
+claim real execution, native UAT, installed E2E, or delivery
 of future tooling. Model assessment binds exact case inputs and outputs. A
 separately authorized assessor establishes its required oracle before candidate
 exposure and records the provenance and assessment in the existing work proof
@@ -500,7 +466,7 @@ applicable independent-assessment or reserved O condition. Its declared rule
 settles local realization from the complete conserved upstream/Public facts,
 accepted trace, and successful finite checks. These explicit fixture premises
 do not waive a real Product's different governing conditions. Every case binds
-the common C input/output/producer identities and cost fields when qualified.
+the common C input/output/producer identities when qualified.
 
 ### MC01 Local Fix
 
@@ -512,20 +478,35 @@ successful two-case invariant check, and rule-determined local realization.
 There is no residual J or O to invent. Direct Writer entry uses the admitted
 run contract, zero new durable tickets, zero Executive appointment, zero new
 diagrams, and zero independent review solely for closure. Required grant,
-admission, evidence, and closure conditions remain intact. Cost is the
-minimal-local envelope with its actual same-fix human reference still required.
+admission, evidence, and closure conditions remain intact.
 
 ### MC02 Helper Changes A Public Value
 
-Ordinary input: "Tidy the export helper." Exact candidate H1 changes only the
-helper's declared `p.save` projection to
-`{"input":"Item","output":"Saved","timeout":45}`. `p.inspect` is unchanged.
-Expected output: no membership delta; one exact value change for `p.save`,
-`timeout: 30 -> 45`; helper-to-Public-to-requirement-to-Product owner traversal. The fixture
-declares timeout 30 as a required Public contract, so the old local route cannot
-authorize reliance. C identifies requirement re-entry; residual consequences
-belong to J and any reserved contract change to O. Correction cost is charged
-before any dependent Public effect or promotion.
+Ordinary input: "Tidy the export helper." Its exact case grant EH permits source
+helper cleanup and projection checks while preserving PublicRequirement0; it
+permits no publication or operational effect. Candidate H1 changes only the
+declared `p.save` projection to
+`{"input":"Item","output":"Saved","timeout":45}`; `p.inspect` is unchanged.
+Expected C: no membership delta; one value change, `timeout: 30 -> 45`, and
+the helper/Public/requirement/Product owner path. C proves a violation of the
+declared timeout-30 contract, so H1 cannot support conformance or reliance.
+
+Hold H1 and PublicRequirement0 fixed and vary the selected desired outcome
+and its applicable grant:
+
+- EH preserves timeout 30: reject H1 or locally restore 30 under EH, then
+  refresh its affected C/evidence. PublicRequirement0 remains unchanged.
+- The selected request explicitly requires timeout 45: C compares that exact
+  target with the required 30 and routes to PublicRequirement0's owner. EH
+  does not grant that change; its acceptance and downstream reliance require
+  the actual governing owner and applicable re-entry.
+- Only diagnostic access is granted and desired timeout is unresolved:
+  preserve the violation fact and withhold
+  reliance while J resolves the target question, with O only where reserved.
+  Neither local preservation nor a requirement change is inferred from H1.
+
+Any residual semantic need remains J. The explicit target premises above are
+what let the fixture's declared rules settle its first two routes as C.
 
 ### MC03 Helper Changes Public Membership
 
@@ -533,18 +514,33 @@ Candidate H2 preserves `p.save` exactly, removes `p.inspect`, and adds
 `p.cancel` with exact value `{"input":"Id","output":"Cancelled"}` through
 the helper. Expected output: removed `{p.inspect}`, added `{p.cancel}`, and no
 changed value for retained `p.save`. The former and new member values remain
-recoverable. This is Public/requirement re-entry under its owner even though no
-Public-named source file changed. It is a separate membership case, not a
-substitute for MC02's retained-member value comparison.
+recoverable. H2 violates the exact required member set even though no
+Public-named source file changed. Under EH's preserved-contract outcome,
+reject H2 or restore `p.inspect` and remove `p.cancel` through local repair.
+If the selected desired outcome explicitly replaces inspection with cancellation,
+re-enter PublicRequirement0 at its owner before relying on changed meaning.
+If that desired meaning is unknown, retain the violation and residual question.
+No branch rewrites requirements merely to accommodate H2. Membership and
+retained-member value comparison remain distinct checks.
 
 ### MC04 Candidate Initially Missing
 
-The same ordinary helper request arrives with no candidate or applicable
-projection. C returns the known helper/Public owner path and `Public delta:
-unknown — candidate unavailable`; it cannot return an empty delta or approved
-local treatment. When H1 becomes available, a successor C binds those exact
-bytes, retains the prior identity and uncertainty history, and obtains MC02's
-value change before dependent reliance. Only the affected facts/J are revisited.
+The helper request arrives with EH but no candidate or applicable projection.
+C returns the known helper/Public path and `Public delta: unknown — candidate
+unavailable`. EH permits provisional source cleanup and projection acquisition,
+so that is the first useful action; no candidate-conformance result or dependent
+operational effect is admitted. With EH absent, the same input supplies no edit
+authority. When H1 is produced, successor C binds those exact bytes and MC02's
+value change, preserving the prior result and uncertainty history. Under
+unchanged EH, MC02's local repair/reject follows. A changed desired-outcome input
+uses MC02's other branches without widening EH, before dependent reliance.
+Only affected C/J relations are revisited.
+
+The local-cache variant starts from the MC01 grant before L1 exists: construct
+L1 inside that source grant, then acquire the complete finite checks and Public
+projection. MC01's final conformance and closure follow only after those facts
+are supplied; the initial candidate absence neither forces a new owner request
+nor establishes the final result.
 
 ### MC05 Accepted-Design Coverage Variants
 
@@ -570,25 +566,39 @@ the unrelated valid cache result. O decides only the selected reserved change.
 
 ### MC07 Unchanged C And J Consumption
 
-An operational case has C7 over exact basis B0/effects E0 and J7: "No retry is
-needed: E0 records that the rejected attempt applied no effect." J7 binds that
-question, C7, its actor/evaluation authority, conclusion/scope/uncertainty, and
-revising observation: "E0 is superseded by evidence of an applied or unknown
-effect, or B0's retry law changes." A new role and a resumed conversation have
-the same inputs and no revising observation. Expected: applicability checks
-consume the same C7/J7 identities and original grant; no new walk, judgment,
-registry, ticket, or request for unchanged authorization. Required independent
-questions remain separately visible as in MC09.
+The exact requested outcome Q7 is: "Explain why validation rejected artifact
+A7; leave A7 unchanged." The grant permits validation and explanation, with no
+repair, publication, or other effect. C7 binds basis B0, A7, a diagnostic naming
+the missing required member `p.inspect`, and E0 proving no effect occurred.
+B0's case-owned retry rule requires a still-unmet authorized outcome, a corrected
+precondition, and either known no-effect or an owner-provided safe recovery
+condition together. A rejection by itself requires neither retry nor repair.
+
+J7 is assessor7's bounded semantic judgment that the diagnostic and explanation
+adequately answer Q7 for its stated audience. It cites C7/E0, the exact question,
+basis and evaluation grant, and the uncertainty that explanation adequacy is
+judged rather than proved by validation. Combined with E0's unchanged-artifact
+fact, this supports Q7 satisfaction; B0 then determines that retry is not needed
+for this satisfied request. No-effect alone does not establish that conclusion.
+The revising observation is a counterexample showing the explanation does not
+answer Q7, changed A7/B0, or replacement of E0 by applied/unknown effect evidence.
+
+A new role and resumed conversation with unchanged inputs consume C7/J7 after
+applicability checking, with no new walk, judgment, registry, ticket, or renewed
+grant. The separate independent question in MC09 cannot be discharged by reuse.
 
 ### MC08 Triggered Judgment Revision
 
-Replace E0 in MC07 with E1 reporting `effect state: unknown`; other subjects
-and obligations remain unchanged. Expected: affected C8 records E0 -> E1,
-invalidates the safe-no-retry conclusion, and preserves surviving facts. J8
-supersedes J7 for the same bounded question and withholds repetition until the
-effect owner supplies a safe retry condition. An unrelated UI observation does
-not revise J7/J8 or the valid cache claim. A changed basis or withdrawn design
-acceptance likewise invalidates only the claims that depend on it.
+Replace E0 in MC07 with E1 reporting `effect state: unknown`; Q7 and all other
+inputs remain fixed. C8 records E0 -> E1 and the loss of evidence for the
+unchanged-A7 obligation. J8, a bounded successor to J7, preserves the supported
+explanation-adequacy judgment but withholds the conclusion that all of Q7 is
+satisfied until the effect owner resolves that condition. B0 still withholds
+retry because its safe-recovery predicate is unresolved. Thus the outcome claim
+and its support change even though the immediate no-retry action survives.
+The records retain J7, J8, their successor relation and the precise changed
+evidence. An unrelated UI observation revises neither this judgment nor the
+valid cache claim; a changed basis/acceptance affects only dependent claims.
 
 ### MC09 Required Independent Assessment
 
@@ -598,20 +608,22 @@ author supplies J-author and self-review. Expected: the separately authorized
 assessor acquires sufficient exact authority/candidate/evidence and returns its
 own J-review, retaining required independence and exact verdict provenance.
 Valid C may be reused; relabeling J-author, changing its role label, or a human
-GO without the required assessment cannot satisfy the condition. The added
-assessment is charged explicitly to this case, not to MC01's local case.
+GO without the required assessment cannot satisfy the condition. That
+assessment applies to this case's governing condition; MC01 retains its
+no-independent-assessment premise.
 
 ### MC10 Correct A Mistaken Route
 
-An initial local hypothesis is recorded for the helper request while its
-candidate-dependent delta remains unknown. The cheap declared Public projection
-of H1 produces MC02's changed timeout before any dependent effect. Expected:
-the original hypothesis/diagnostic and attempted subject remain; effect state
-is `not_applied`; the affected C/J successor corrects to requirement re-entry,
-retaining unrelated work. No retry is performed without the owner's lawful
-condition. The correction consumes the predeclared recovery allowance; exceeding
-it fails efficiency even if the corrected route is functionally right. If effect
-state is unknown, the case must refuse repetition and route to its effect owner.
+An initial hypothesis that H1 can be used as a preserving cleanup is recorded
+while its projection is unknown. The cheap declared projection detects MC02's
+changed timeout before any dependent effect. Expected: preserve the original
+hypothesis, first diagnostic, attempted subject and `effect: not_applied`;
+withhold H1 reliance and correct to local repair/reject under EH's preserved
+contract. With the explicit desired-timeout-45 input instead, the corrected
+route is governing-owner re-entry under MC02; an unknown target retains J.
+The delta alone cannot choose among those desired outcomes or widen EH.
+Unrelated valid work survives. Unknown effect state withholds repetition and
+routes to its effect owner; no retry occurs without the applicable lawful rule.
 
 ### MC11 Closure And Counterexamples
 
@@ -637,14 +649,38 @@ original O survives as the predecessor rather than being overwritten.
 
 ### MC13 Material Coordination
 
-Two necessary evaluations observe the same candidate: one establishes Public
-membership conservation; the other finds an unresolved root-owner constraint.
-Expected composite: unresolved, retaining both observations and every applicable
-constraint; no intersection discards the second result. Distinct actors occur
-only for the actual capability/authority/independence need. Executive can
-coordinate and decide within its grant but cannot edit candidate bytes under
-that role. The one-context MC01 variant creates no coordination solely from
-specialist labels. All actors and handoffs contribute to the case's cost.
+The fixture owns conditional frame FR0 for the question "does this candidate
+preserve its accepted root/owner relation?", over exact candidate and basis.
+It inherits the selected Frame Method's constrained coverage and result
+conjunction; it introduces no general frame-selection framework. Its finite
+applicability predicate is `true` when the declared root relation changes,
+`false` when exact root equality is established, and `unknown` when either
+relation is missing or ambiguous. When true, FR0 requires a capable
+author-independent assessment result for this exact candidate/basis. False
+omits only FR0; other applicable conditions and grants survive. Unknown retains
+the resolving observation and withholds dependent root reliance.
+
+B0 is the shared root0-required basis. B1 conserves B0 except for fixture owner
+RootOwner0's accepted RootRequirement1/RootDesign1, acceptance A1, permitting
+root1. The Public evaluation below is satisfied for the exact stated
+candidate/basis; the positive B1 case includes the exact permitted root-change
+grant. Governing acceptance and operation authority remain separate inputs.
+
+| Finite input | FR0 applicability and supplied result | Expected conjunction |
+|---|---|---|
+| L1, root0 -> root0, B0 | false; no FR0 result | local result may complete when MC01's other conditions hold; an FR0 activation solely for its label is unnecessary |
+| G1, root0 -> root1, B0 | true; result missing | withheld: a required root assessment is missing despite Public conservation |
+| G1, root0 -> root1, B0 | true; FR0 finds RootRequirement0 violated | falsified; retain the constraint found only by FR0 and use the actual owner route |
+| G1, root0 -> root1, B1 | true; satisfied result names L1 or B0 instead | unavailable for this conjunction because its subject/basis is wrong; no satisfied composite |
+| G1, root0 -> root1, B1 | true; satisfied author-independent result names exactly G1/B1 | satisfied when all other applicable constraints are satisfied; required assessment is neither skipped nor repeated |
+| root candidate missing or ambiguous, B0 | unknown; no qualifying FR0 result | unresolved; acquire the missing root evidence under its grant before relying on a false or true applicability conclusion |
+
+An always-skip strategy fails the true/missing-result row; an always-activate
+strategy adds an unwarranted obligation in the false row and does not resolve
+unknown by naming it true. Actor separation follows this fixture's actual
+independence/capability need. Executive coordinates or decides within its grant
+and cannot mutate under that role. Unselected resource-control frames create
+no obligation here; required functional assessment and effect authority remain.
 
 ### MC14 Relationship Lifecycle Alternatives
 
@@ -653,30 +689,17 @@ specialist labels. All actors and handoffs contribute to the case's cost.
 | "Can STDO help with this work?"; USE-12 | relevant capability, limits and first step; unsupported/unknown remains explicit; no adoption effect |
 | "Start with this Product"; USE-01 | exactly selected verified basis and recoverable owners; zero/multiple unresolved selections or partial setup stay unready |
 | "Continue the interrupted work"; USE-06 | owning current state and unchanged C/J/O reused; changed basis/effect is invalidated as in MC08; no transcript dependency |
-| "Update the selected context"; USE-09 | consume T-029's complete selected-cohort contract; missing companion or stale semantic context refuses readiness and preserves the usable prior basis; no basis-only completion claim |
+| "Update the selected context"; USE-09 | apply exact-basis SPEC_METHOD/RELEASE_METHOD and the Product's selection authority; T-029 supplies tracking/evidence for a proposed successor only; missing companion or stale semantic context refuses complete readiness and preserves the usable prior basis; no basis-only completion claim |
 | "This use path wastes work"; USE-10 | attributable comparable evidence and correct owning law/projection/tool/use cause; absent evidence gives inconclusive benefit, not a weaker gate or invented saving |
 | "Pause this work" or "End participation"; USE-13 | explicit suspended/withdrawn/completed distinction, retained obligations/evidence and resumption conditions; unknown active effects prevent false completion or inferred deletion |
 
-Each row binds its own case envelope, including first-answer/setup, resume,
-adoption/reorientation, improvement, or conclusion cost. Rows share the same
-access and owner-continuity contracts; they are not a mandatory serial workflow.
-
-### MC15 Cost Reference And Outcome Separation
-
-Input alternatives are: a recorded comparable human same-fix reference with
-justified owner-accepted derivation; no human record; a guessed duration; a
-different fix; or prior agent churn. Only the first can support the minimal
-local reference condition. A complete functional MC01 result with no reference
-leaves that condition unmet. A qualifying result whose observed time or
-activation/usage/attention/recovery exceeds its bound fails efficiency. Missing
-usage stays unknown, external wait stays visible, and an unenforced limit cannot
-be called a hard cap. Concrete numbers and observed results belong to the exact
-work proof; this logical example supplies none.
+Rows share the same access and owner-continuity contracts; they are not a
+mandatory serial workflow.
 
 ## Qualification Boundary
 
-Model acceptance requires the computed-classification, recorded-judgment, and
-grounded competent-developer reference conditions together, all applicable
+Model acceptance requires the computed-classification and recorded-judgment
+conditions together, all applicable
 function conditions, exact Product/model distribution relation, and required
 independent Product/invariant assessment. Missing any required condition leaves
 acceptance withheld. Model coherence alone does not establish supported native
@@ -687,6 +710,6 @@ outcome), E2E (exact installed causal path), integration/combinatorial evidence
 (material composition), and module-owned unit evidence. One kind cannot close
 another by volume. Case evidence binds the exact subject, basis, harness,
 environment, ordinary entry, oracle, affected rules, supplied C, required J/O,
-cost envelope and observed cost, plus residuals and invalidators. Reuse is
+residuals and invalidators. Reuse is
 valid only while those claim relations survive; new material counterexamples
 reopen the affected condition.
