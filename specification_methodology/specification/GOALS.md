@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: delivery goal open; timeline and Goal alignment selected
+Status: delivery goal open; progressive-use instructions recorded
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -32,8 +32,8 @@ evidence. No fleet or successor release ordinal is selected by this goal.
   owns shared complete consumer updating. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
   retains its distinct conditional role-boundary change. Neither becomes an
   unconditional gate for unrelated native improvements.
-- The present instruction selects the planning edits recorded in
-  [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+- The current work-record refinement is recorded in
+  [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-use-selection).
   The next implementation frontier is T-030 M02 and T-009 M01. Their exact
   execution grants and current state remain in the tickets; a scheduled step
   is not a claim that execution is admitted or complete.
@@ -45,6 +45,11 @@ from the owning tickets and their exact evidence; do not redefine success as
 the last completed artifact. Use the existing thirteen-function model and its
 accepted cases through T-030, with affected reassessment only when material
 new evidence changes a relation.
+
+Apply the [progressive self-use loop](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-self-use-during-delivery):
+use each sufficiently checked increment on the next suitable authorized task,
+retain the actual observation, and repair failures at their owner. The ticket
+owns the loop and its evidence; candidate use preserves the operative basis.
 
 Select the smallest ready work under sufficient authority. Preserve valid
 judgments and original owner rulings, conditional review/work scope and direct

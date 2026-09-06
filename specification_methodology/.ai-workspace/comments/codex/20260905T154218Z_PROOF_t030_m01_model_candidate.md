@@ -5,6 +5,14 @@ method law, or acceptance decision. The detailed logical model and its concrete
 case inputs/expected outputs live only in
 [SCENARIOS](../../../specification/SCENARIOS.md).
 
+The repaired M01 result was recorded at repository commit
+`7a5048ce63885c4f161cd08c2950f862551a0763`. Its reviewed subject hashes and
+returned judgments below remain bound to that assessment. Subsequent planning
+and progressive-use edits change tickets and Goals, including T-009; this
+record does not claim those later whole-file bytes were reviewed under M01.
+Current work state belongs to the owning tickets. PRODUCT and SCENARIOS remain
+the conserved reviewed model; later work-record refinements are separate.
+
 ## Current Repair Selection
 
 The owner's instruction "take the findings and resolve all the issues",
@@ -378,11 +386,12 @@ the authorized local commit. Text mutation is limited to this existing proof,
 T-030 and GOALS. Git effects cover only the six corrected files above. The
 Writer records root's independently established disposition, supplies no
 author self-acceptance, and receives no later work or publication authority.
-The local commit binds the final result projections; the reviewed source model
-and T-009 hashes remain conserved.
+That local checkpoint bound the final result projections; the reviewed source
+model and T-009 hashes were conserved at that checkpoint.
 
 Final result-projection checks found exactly the six authorized changed files,
 no untracked files, all 55 local links/anchors valid, and no whitespace errors.
-PRODUCT, SCENARIOS and T-009 each retain their exact independently reviewed
-SHA-256 above. These checks verify the bounded recording and conserved subject;
-they add no native or executable qualification claim.
+At that M01 result checkpoint, PRODUCT, SCENARIOS and T-009 each retained their
+exact independently reviewed SHA-256 above. Those checks verified the bounded
+recording and conserved subject at that checkpoint; they add no native or
+executable qualification claim or assurance of later work-record edits.

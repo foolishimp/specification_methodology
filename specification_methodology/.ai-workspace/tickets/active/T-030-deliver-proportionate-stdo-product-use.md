@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#goal
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-06T02:43:24Z
+- updated_at: 2026-09-06T04:00:11Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
@@ -26,7 +26,7 @@
 - execution_status: M01_complete_logical_model_no_later_increment_selected
 - selected_milestone: none
 - completed_milestones: M01
-- planning_status: overall_delivery_timeline_recorded
+- planning_status: delivery_timeline_and_progressive_use_recorded
 - result_surface: M01 Current Result below
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: T-028 for its distinct Executive-mutation clarification; T-029 for complete consumer adoption; applicability is bounded below
@@ -192,6 +192,17 @@ Executive's outcome and scope. The timeline below owns the cross-ticket order;
 each referenced ticket retains its detailed work conditions and current state.
 The completed M01 result remains a model result, not whole-delivery completion.
 
+### Progressive Use Selection
+
+The owner's "ok implement" follows the readiness assessment proposing explicit
+progressive self-use and correction of stale review-subject statements. Root
+enters Writer as `urn:openai:codex:stdo-progressive-use-writer` for those bounded
+refinements in this ticket, Representation T-009, their two GOALS files and the
+existing M01 proof record. The grant includes consistency checks and a local
+commit under the standing owner instruction. Both Products' exact RC4 bases
+verify valid. This work records the operating loop and evidence scope; the
+existing milestone execution states and accepted Product/model remain conserved.
+
 ## Product Boundary And One Owning Model
 
 STDO retains one normative standards library and bounded subordinate manager and
@@ -335,6 +346,59 @@ reference those records; they do not maintain another milestone ledger. A
 missing relation returns to its actual owner while independent ready work can
 continue. Completing a document, model, mechanism or index is an intermediate
 result until the applicable delivery conditions are satisfied.
+
+### Progressive Self-Use During Delivery
+
+This section owns the shared operating loop for T-030 and the linked T-009
+delivery. It applies their existing scenario and proof conditions to the work
+itself. Use it for remaining implementation work; M01's accepted model result
+remains the starting point. The Executive uses the next suitable real task to
+exercise a changed capability during construction.
+
+1. **Bind the next task.** Resolve the exact operative basis, RC4 at the start
+   of this delivery, and its verified tools, representation and source routes.
+   Select the actual next
+   bounded task, relevant use-case conditions and applicable frames. Before
+   implementation effects, record the exact milestone, inherited authority,
+   subject, write territory, required evidence and stop/return condition in the
+   owning work carrier, and project the actual admission/selection into its
+   ticket. Reuse authorization already supplied; a draft or schedule does not
+   manufacture admission. Writer construction and Executive coordination retain
+   their separate effect boundaries.
+2. **Construct and use the increment.** Apply the changed capability's
+   sufficient checks, including its material falsifier. When those checks and
+   the exact operation grant support use, consume that bound candidate on the
+   next suitable authorized task. This may be a classification, frame/source
+   selection, bounded handoff, judgment reuse, resume, recovery or closure task;
+   only the affected relations need exercise. Candidate use does not require
+   waiting for all milestones or replacing a shared/global installation.
+3. **Retain the observation.** In the existing ticket/proof carrier, bind the
+   task, candidate and operative basis to the observed outcome and applicable
+   scenario. Keep computed facts, residual judgment and reserved owner rulings
+   distinct. Preserve failures, original diagnostics and known/unknown effects.
+   Reuse evidence and prior judgments only while their exact applicability
+   survives; preserve any independently required assessment. This loop adds no
+   automatic reviewer, ticket, telemetry or artifact per task.
+4. **Continue or repair.** Carry a supported improvement into subsequent
+   suitable work under its exact grant. A failed relation returns to its owner
+   and withholds affected reliance; keep the prior verified tool/context
+   available and preserve unrelated valid work. Retry or recovery follows the
+   effect owner's rule. Refresh only derived context whose source/input
+   relations changed. If no suitable task or sufficient use authority is yet
+   available, record that specific remaining qualification condition rather
+   than inventing successful self-use or blocking unrelated work.
+
+Candidate tools and guidance may be exercised as declared construction or
+qualification subjects under the operative law. A newly written constitutional
+rule does not govern this work merely because its candidate was used. Changing
+the operative constitution requires the owning acceptance and explicit exact
+basis adoption; until then RC4 remains governing. A qualification context binds
+its candidate subject and grant without silently retargeting the source project.
+
+Self-use observations contribute only the claims, subjects and environments
+they actually cover. Final native/installed-path and material-composition
+qualification still resolves the remaining conditions, including any supported
+host or refusal case not exercised by ordinary implementation work.
 
 ### M01 Acceptance Conditions
 
@@ -609,7 +673,10 @@ No cost measurement or efficiency result is claimed.
 
 The [M01 model proof record](../../comments/codex/20260905T154218Z_PROOF_t030_m01_model_candidate.md)
 preserves the predecessor assessment and records the reviewed repaired subject,
-both returned independent judgments, and root's consumed result. The ticket,
-Goal, and proof now project that result; PRODUCT, SCENARIOS and T-009 retain
-their exact reviewed bytes. The proof owns evidence, not another model or
-method law.
+both returned independent judgments, and root's consumed result, recorded at
+commit `7a5048ce63885c4f161cd08c2950f862551a0763`. PRODUCT and SCENARIOS retain
+their reviewed bytes. Later delivery-planning and progressive-use refinements
+change the work records, including T-009; their current whole-file hashes are
+not the reviewed M01 subject. The prior assessment remains bound to its recorded
+candidate and does not qualify those later edits or implementation. The proof
+owns evidence, not another model or method law.

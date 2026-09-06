@@ -20,6 +20,11 @@ The next implementation frontier is T-009 M01, which can run alongside STDO's
 owning-method corrections. The owner's planning grant is recorded in
 [T-030](../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
 
+Use [T-009's progressive-use application](../.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#progressive-use-in-this-ticket)
+to exercise checked mechanics and representation increments during the remaining
+work. Keep each observation with its exact task, candidate and operative basis;
+the final qualification still resolves conditions that self-use did not cover.
+
 The Executive follows that ticket's conditions and exact subjects. Model
 acceptance, semantic source comparison, deterministic index generation, native
 qualification, publication and consumer adoption remain distinct results.

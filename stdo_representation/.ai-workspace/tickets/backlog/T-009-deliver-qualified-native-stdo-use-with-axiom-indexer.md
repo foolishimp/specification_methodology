@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#current-state
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-06T02:43:24Z
+- updated_at: 2026-09-06T04:00:11Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - pen_holder: codex
@@ -22,10 +22,10 @@
 - sequence: second_workstream_after_STDO_in_the_user_requested_strategy
 - affected_boundary: Axiom Indexer mechanical dependency and STDO Representation compression, native guidance, context use, and qualification
 - intake_source: direct_user_instruction_2026-09-05_create_combined_second_ticket_using_T-030
-- work_authorization: refine_this_drafted_handoff_under_evaluated_T030_owner_correction_only
+- work_authorization: direct_owner_delivery_planning_and_progressive_use_refinement_only
 - execution_contract_state: drafted
 - execution_status: not_admitted
-- planning_status: native_delivery_timeline_recorded
+- planning_status: native_delivery_timeline_and_progressive_use_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
 - target_truth: >-
@@ -108,6 +108,12 @@ existing ticket and the associated Goals. It does not admit the implementation
 contract or change Product meaning. The [overall delivery goal](../../../../specification_methodology/specification/GOALS.md#goal)
 and [cross-ticket order](../../../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
 orient the Executive; this ticket owns the combined native work conditions.
+
+The subsequent [progressive-use selection](../../../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-use-selection)
+authorizes Writer `urn:openai:codex:stdo-progressive-use-writer` to make the
+operating loop explicit here. The delivery implementation remains drafted;
+its next actual bounded activation records selection and admission before
+dependent effects under the inherited authority.
 
 ## Exact Current Basis And Product Relation
 
@@ -302,6 +308,24 @@ not a new summary or a duplicate Indexer tracker. It preserves accepted model
 judgments, required independence and owner boundaries, records the smallest
 sufficient next grant, and continues work already authorized without renewed
 requests for the same permission. A missing owner decision remains explicit.
+
+### Progressive Use In This Ticket
+
+Apply the shared [T-030 progressive self-use loop](../../../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-self-use-during-delivery)
+throughout construction. This ticket owns the following application and its
+evidence; it does not define a second loop or constitutional rule.
+
+| Milestone | Use during the actual work |
+|---|---|
+| **M01 baseline** | Use the exact current RC4 representation, source routes and available mechanics on a suitable real T-030/T-009 task. Retain where they supply sufficient context or expose a specific missing relation. Do not assume the proposed classifier or a successor frame capability already exists. |
+| **M02 mechanics** | Once a selected mechanical increment passes its applicable checks, use that exact candidate for the next suitable resolution, validation, index-generation or join task under its grant. Existing sufficient mechanics continue in use; an unselected global tool replacement is not required. |
+| **M03 representation and guidance** | Use the source-compared program/index/guidance candidate on the next suitable bounded implementation or review task. Bind its source and operative basis, preserve residuals and source re-entry, and return observed omissions or misleading routes to their owner before dependent reliance. Candidate constitutional meaning is exercised only in its declared qualification context until properly adopted. |
+| **M04 qualification** | Reuse applicable observations from the preceding work and exercise remaining native-host, installed-path, refusal and composition conditions. An ordinary self-use result supports only its exact claim; it does not establish every scenario or both hosts. |
+
+Record those observations in the existing proof carriers with their task,
+candidate, basis and applicable case. Where an increment cannot yet be used,
+retain the specific outstanding condition and prior usable context. Required
+independence survives; no extra review round or accounting framework is imposed.
 
 ## Evaluation And Proof
 
