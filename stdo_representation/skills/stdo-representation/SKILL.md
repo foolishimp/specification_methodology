@@ -1,6 +1,6 @@
 ---
 name: stdo-representation
-description: Use the exact STDO 2.5.0-rc.4 semantic compression and its logical constraint index to frame source-grounded work for an Executive, Worker, or Reviewer. Use when Codex or Claude needs STDO guidance without loading the whole standards corpus, when selecting visible reference frames for an assignment, when re-entering exact STDO source, or when joining an ordered agent request. Do not use as proof of semantic truth or runtime authority.
+description: Use the exact selected STDO semantic compression, logical constraint index and available frame projections for source-grounded work. Use when Codex or Claude needs bounded STDO guidance, explicit reference-frame selection, source re-entry or an ordered agent request. A working candidate requires its explicit construction grant; a view supplies no semantic acceptance or runtime authority.
 ---
 
 # Use STDO Representation
@@ -31,7 +31,13 @@ do not replace that caller selection or admit a task.
 1. Preserve the layer order: Source STDO is semantic authority; the Axiomatic
    Program is canonical `a_c.STDO` compression; the Logical Constraint Map is
    the deterministic index over that unchanged compression.
-2. Verify the exact inputs before use:
+2. Bind one exact input set. Ordinary released use selects the RC4 set below.
+   An explicit T009 frame-index construction/qualification grant may instead
+   select the working subject through [frame-index use](references/frame-index-use.md).
+   That reference binds its source snapshot, program/map and exact Axiom
+   candidate. It does not replace the caller's operative STDO basis, and the
+   published RC4 executable cannot be assumed to implement `project`.
+   For the released RC4 set, verify:
    - Source STDO release `stdo://releases/v2.5.0-rc.4/`, installed-manifest
      SHA-256
      `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`,
@@ -89,8 +95,9 @@ do not replace that caller selection or admit a task.
    verifying the same seven-member inventory and exact file digests; that use
    is construction evidence and cannot satisfy release qualification or
    ordinary released use.
-3. Read
-   `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/logical-constraint-map.json`.
+3. Read the selected logical map. The published RC4 map is
+   `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/logical-constraint-map.json`;
+   the working subject binds its own map in its exact evidence manifest.
    Start from the index, not the full STDO corpus. Verify that its `program_uri`
    and `program_sha256` bind the exact compression before relying on it.
 4. Identify the requested role and outcome. The LLM remains the Executive,
@@ -101,8 +108,8 @@ do not replace that caller selection or admit a task.
    - Executive binds the task and evidence, selects frames and role, and
      receives and disposes the closed return;
    - Worker performs one bounded construction, self-validates, and returns to
-     Executive without promoting its result, creating Reviewer independence,
-     or choosing continuation; and
+     the declared consumer, first to Executive in the coordinated branch,
+     without promoting its result or creating Reviewer independence; and
    - Reviewer evaluates the exact subject and evidence without repair, grades
      evidence-bound technical severity, and returns its result and triage to
      Executive without assigning priority, promotion effect, disposition, or
@@ -113,6 +120,13 @@ do not replace that caller selection or admit a task.
    clauses or residuals separately and use their `source_routes` entries. Never
    label a clause, residual, symbol, or digest as a reference frame. Show each
    selected frame's URI, purpose, and source route so the choice is inspectable.
+   Where explicit `frame_indexes` are available, inspect their bound frame and
+   scope and select their index URIs yourself. Invoke the exact dependency's
+   reference-only or materialized view through the linked frame-index guide.
+   Both views retain the same declared supporting closure and uncertainty;
+   materialization changes how content is presented, not which rules apply.
+   A premise, condition or exception reference is a source-grounded rule to
+   evaluate against task evidence, not an already satisfied fact.
 7. Follow the selected constraints. Start from the ordinary request and its
    existing work carrier. Consume exact owner-supplied facts and sufficient
    declared rules before resolving residual judgment. Index resolution and
@@ -131,8 +145,9 @@ do not replace that caller selection or admit a task.
 8. Keep uncertainty explicit. Do not turn a structural index into semantic truth,
    acceptance, authority, or a runtime fact.
 9. If the compression, index, dependency, selected frame, source route, evidence boundary, or
-   task does not resolve exactly, stop and return a visible hold or source
-   re-entry request. Do not guess context.
+   task does not resolve exactly, withhold the dependent use and return its
+   visible hold or source re-entry. Preserve unrelated already-authorized work;
+   unknown inputs do not authorize a guess, map rewrite or broader operation.
 10. For Codex, read [the Codex layout](references/codex.md). For Claude Fable 5,
    read [the Claude layout](references/claude.md).
 11. To construct a request, follow the target reference's seven-section order:
@@ -143,7 +158,7 @@ do not replace that caller selection or admit a task.
    LLM. Author a bare ordered JSON array of
    `{"label": string, "text": string}` sections and choose every byte yourself.
    This is caller guidance, not a prompt engine, schema, selector, or renderer.
-   Resolve the exact Axiom Indexer `v2.5.0-rc.4` cut, then run its pure
+   Resolve the same exact selected Axiom dependency, then run its pure
    joiner:
 
    ```sh
@@ -157,9 +172,9 @@ role is selected, with the selected frame details, source re-entry, validation
 result, unresolved residuals and resulting request path or bounded answer.
 Do not load unrelated index regions merely because they are available.
 
-For this source project's T-009 successor work, the accepted T-030 source model
-supplies qualification questions and finite alternatives. The RC4 compression
-does not yet encode that successor handoff. Keep the selected source-model
-checkpoint explicit in the existing work carrier; use current RC4 authority
-for ordinary governed effects. Changed-law claims require their owning accepted
-source and exact successor construction/adoption relation before reliance.
+For this source project's T009 successor work, the selected source snapshot and
+authored frame indexes supply qualification questions and finite alternatives.
+The unchanged RC4 compression retains its original coverage. Keep the exact
+working subject and grant explicit; current RC4 authority governs ordinary
+effects. Changed-law claims require their owning source acceptance and exact
+successor construction/adoption relation before reliance.

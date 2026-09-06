@@ -1,0 +1,11 @@
+{
+  "kind": "t009.quickstart-released-acquisition-check",
+  "subject": "stdo_representation/QUICKSTART.md",
+  "subject_sha256": "6f914993895fc8ddc22c7b86b5e79b73baa137f242d2d3b318deb70b74b3eb3e",
+  "script": "set -euo pipefail\nSTDO_STORE=\"${STDO_STORE:-$HOME/Library/Application Support/STDO}\"\nSTACK_ROOT=\"$(git rev-parse --show-toplevel)\"\nAXIOM_RELEASE_ROOT=\"$(mktemp -d \"${TMPDIR:-/tmp}/axiom-indexer-rc4.XXXXXX\")\"\ntest \"$(git -C \"$STACK_ROOT\" cat-file -t \\\n  refs/tags/axiom_indexer/v2.5.0-rc.4)\" = tag\ntest \"$(git -C \"$STACK_ROOT\" rev-parse \\\n  refs/tags/axiom_indexer/v2.5.0-rc.4)\" = \\\n  4750e09639c118f1097d4ea046fe23d26713f96b\ntest \"$(git -C \"$STACK_ROOT\" rev-parse \\\n  refs/tags/axiom_indexer/v2.5.0-rc.4^{})\" = \\\n  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2\ngit -C \"$STACK_ROOT\" archive --format=tar \\\n  refs/tags/axiom_indexer/v2.5.0-rc.4:axiom_indexer |\n  tar -xf - -C \"$AXIOM_RELEASE_ROOT\"\nAXIOM_INDEXER_ROOT=\"$AXIOM_RELEASE_ROOT\"\ntest -f \"$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py\"\npython3 \"$AXIOM_INDEXER_ROOT/scripts/check_constitution.py\" \\\n  --stdo-store \"$STDO_STORE\"\ntest \"$(shasum -a 256 \\\n  \"$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py\" | cut -d ' ' -f 1)\" = \\\n  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672",
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_representation",
+  "exit_code": 0,
+  "stdout": "{\n  \"axiom_cut\": \"v2.5.0-rc.4\",\n  \"basis_state\": \"target\",\n  \"dependency_valid\": true,\n  \"failures\": [],\n  \"governance_valid\": true,\n  \"mechanics_valid\": true,\n  \"product_member_count\": 7,\n  \"product_member_inventory_sha256\": \"7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6\",\n  \"release_ready\": true,\n  \"release_record\": \"releases/v2.5.0.md\",\n  \"stdo_basis\": \"stdo://releases/v2.5.0-rc.4/\",\n  \"stdo_manifest_sha256\": \"4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e\",\n  \"stdo_status_store\": \"/Users/jim/Library/Application Support/STDO\",\n  \"stdo_status_valid\": true,\n  \"valid\": true\n}\n",
+  "stderr": "",
+  "scope": "Exact immutable RC4 archive identity and constitution checks only; no working Axiom candidate invocation."
+}

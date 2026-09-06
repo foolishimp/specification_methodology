@@ -10,11 +10,11 @@
     Baseline and improve the combined Axiom Indexer-to-STDO Representation
     path so native agents recover applicable authority, perform bounded work,
     resume, and evaluate completion with valid evidence and applicable frame scope.
-- change_class: goal_reprice
-- re_entry_point: specification/GOALS.md#current-state
+- change_class: product_reprice
+- re_entry_point: axiom_indexer/specification/PRODUCT.md#frame-index-projections
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-06T04:30:06Z
+- updated_at: 2026-09-06T06:38:45Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - pen_holder: codex
@@ -22,10 +22,10 @@
 - sequence: second_workstream_after_STDO_in_the_user_requested_strategy
 - affected_boundary: Axiom Indexer mechanical dependency and STDO Representation compression, native guidance, context use, and qualification
 - intake_source: direct_user_instruction_2026-09-05_create_combined_second_ticket_using_T-030
-- work_authorization: direct_owner_implementation_M01_M02_reuse_and_bounded_M03_guidance
-- execution_contract_state: M01_M02_complete_M03_current_law_guidance_admitted
-- completed_milestones: M01 M02
-- execution_status: M03_guidance_candidate_ready_successor_compression_and_M04_outstanding
+- work_authorization: direct_owner_delivery_and_frame_index_Product_selection
+- execution_contract_state: frame_projection_Product_increment_admitted; prior_M01_M02_baseline_retained
+- completed_milestones: M01; M02_mechanical_construction_and_evidence
+- execution_status: M02_mechanics_and_M03_source_constructed; native_FP04_local_repair; M04_in_progress
 - planning_status: native_delivery_timeline_and_progressive_use_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
@@ -168,6 +168,50 @@ retargeting RC4's existing program. No new native engine, Product member,
 accepted frame basis, publication or adoption is introduced by this repair.
 
 ## Exact Current Basis And Product Relation
+
+### Frame-Index Product Selection
+
+The owner's subsequent instruction is "further product definition to make the
+axiom indexer fulfill the use cases and to use ref frames", accompanied by the
+bounded frame-index projection proposal. Within the ongoing implementation
+instruction, this selects the previously conditional context-projection
+increment at its actual Product owners. The preceding M02 result remains
+complete for the narrower RC4 mechanics; it did not authorize or qualify this
+new capability. M02 now includes the explicitly selected successor increment.
+
+Root enters Writer as
+`urn:openai:codex:t009-frame-projection-contract-writer` to state the Axiom
+Product terms, owning requirements and Goals, and this exact work selection.
+The pre-existing source checkpoint is `ce31409`; exact RC4 remains operative
+for the outer construction work. The new source contract is a candidate for
+required independent Product/invariant assessment, not an adopted release.
+Write territory for this activation is this ticket, Axiom PRODUCT/requirements/
+GOALS, Representation PRODUCT and its affected authoring/native/validation
+requirements, and the two delivery Goals projections. A subsequent bounded Writer
+activation implements the complete selected design and generic mechanics in
+the existing core/skill/schema surfaces, preserving the joiner and unaffected
+MVP behavior. Representation separately authors source-grounded chains and
+frame membership after the exact program contract is supplied.
+
+The selected capability is a source-grounded frame index over explicitly
+authored clauses and logical dependencies, with reference-only and unchanged-
+content materialized projections of the same selection. A reference frame
+remains the source-owned evaluation contract. Its index and materializations
+remain derived views, preserving identity, scope, qualifications, residuals
+and source routes. The agent selects frames and authors premises, consequences,
+conditions, exceptions and supporting dependencies under the selected
+vocabulary. Code resolves and indexes those declarations without deriving
+implications, deciding applicability or accepting semantic truth.
+
+Qualification binds two overlapping frames sharing a rule, a multi-premise
+consequence and an exception. Both views carry the same declared closure;
+missing dependencies and changed source bindings refuse stale projection.
+A fresh native agent reaches the warranted result, including changed
+disposition for an unsatisfied premise or applicable exception, compared with
+the same source-based evaluation. These are functional conditions, not a token
+or accounting gate. Required independent assessment and exact subject binding
+remain applicable. T-029 continues within its own updater scope. This selects
+no STDO law, executor, automatic frame selector, publication or consumer adoption.
 
 - [Representation Product Definition](../../../stdo_representation.json):
   `urn:stdo:product-definition:stdo-representation`.
@@ -463,7 +507,7 @@ work and is not a prerequisite for this native path. Historical GTL/compiler
 tenants gain no current Product status through this ticket.
 
 STDO's owning standards retain normative meaning, with T-030 tracking successor
-method/shared-workflow changes. [T-029](../../../../specification_methodology/.ai-workspace/tickets/backlog/T-029-complete-consumer-cohort-adoption.md)
+method/shared-workflow changes. [T-029](../../../../specification_methodology/.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md)
 tracks the complete-adoption successor under the selected adoption/release law
 and Product authority. This ticket closes on the qualified native
 candidate and owner-bound companion contracts/evidence, not on unperformed
@@ -474,6 +518,54 @@ No release ordinal, tag movement, commit, push, or consumer mutation is selected
 by this ticket.
 
 ## Current Delivery Result
+
+### Selected Frame-Index Construction And Qualification
+
+The owner's subsequent frame-index Product selection is implemented in the
+two owning Products and their requirements. Axiom supplies the optional
+authored index and one generic projection command; Representation supplies
+STDO chains, membership and native use. The
+[exact contract review](../../../dogfood/t009-frame-projection/contract-review.json)
+retains the independent findings, repair, verdict and limits. The historical
+baseline below remains evidence of its narrower scope.
+
+Axiom's [repaired exact mechanics](../../../../axiom_indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json)
+pass 31 normal and 31 optimized tests. Independent review reproduced the
+original escaped-source/output-alias counterexample; the repaired command
+refuses while preserving source bytes. The final executable reproduces the
+immutable RC4 map byte-for-byte and conserves both successful projection views
+and the pure joiner. This satisfies the newly selected mechanical construction
+condition; native fidelity and required owner decisions remain separate.
+
+Representation's [exact source construction](../../../dogfood/t009-frame-projection/run-002/construction-subject.json)
+binds all 52 successor source members (aggregate
+`86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca`),
+the unchanged 97 authored statements, 23 explicit supporting references,
+three qualifications, two overlapping Worker/Reviewer indexes and all six
+reproduced projection views. The two closures share nine clauses and jointly
+contain eighteen. This is an unreleased source candidate; its operative
+method and ordinary immutable dependency remain RC4.
+
+Root consumes these closed results as Executive and selects the dependency-ready
+M04 native/source frontier under the standing delivery instructions. Reviewer
+`/root/t030_m01_writer` independently compares the changed authored relations
+and native instructions to the exact retained owning source. Writer
+`/root/t030_axiomatic_review` runs fresh isolated Codex and Claude conditions
+against direct source and the candidate projection/skill path. Seven frame-index
+cases and the previously prepared 32 finite ordinary-functional variants have
+source-derived oracles frozen before native exposure; expected answers are
+excluded from actor inputs. Only the ordinary local-cache fixture permits its
+disposable `cache.py` repair; all other cases are read-only evaluations. Exact
+inputs, model/host identities, raw traces, failures and bounded assessments
+belong in the existing dogfood proof territory. This activation grants no live
+consumer effects, publication or frame-set acceptance.
+
+Source comparison, native observations, shared-updater integration and exact
+successor frame-declaration proposals are the remaining current results. Live
+accepted frame bases 8/16 and both Product Definitions remain unchanged; their
+historical acceptance is not expanded by construction or test success.
+
+### Historical Baseline And Earlier Native Repair
 
 The [actual baseline and native repair evidence](../../../dogfood/t009-m01/run-001/README.md)
 supplies M01's thirteen-function/fourteen-case capability, gap and C/J/O owner

@@ -7,11 +7,12 @@ using both. An LLM authors and reviews meaning. The exact same-version Axiom
 Indexer cut supplies URI resolution, basic validation, index
 instantiation, and exact ordered string joining.
 
-The mutable native guidance is now a T-009 working candidate over the unchanged
-published RC4 program and map. Its archive routing and caller-basis handling
-are being qualified through actual delivery work. The immutable RC4 skill and
-eight-member inventory remain available in the exact published tag; the source
-guidance changes do not create a new release or accept either Product.
+The mutable source is a T-009 working candidate. Its selected frame-index
+increment authors explicit Worker and Reviewer membership and supporting clause
+relations, then uses the exact Axiom candidate to produce reference-only and
+unchanged-content materialized views. The published RC4 program, map, skill and
+eight-member inventory remain available in the exact published tag. Working
+source changes do not create a release or accept either Product.
 
 ```text
 Source STDO v2.5.0-rc.4
@@ -40,6 +41,14 @@ The Product contains no local engine code. The LLM selects every frame, label,
 text value, and ordering choice. The Axiom Indexer joiner only concatenates
 those exact strings.
 
+The selected T-009 source extension is described in the
+[frame-index semantic design](build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md).
+Its two evaluation scopes share source-owned rules while retaining different
+Worker and Reviewer return conditions. Supporting premises, conditions,
+exceptions and residuals remain visible. An index declares membership; the
+agent still chooses applicability and supplies actual task evidence. Axiom
+projects declared references and content without deciding semantic implication.
+
 ## Use
 
 Start with the [Quickstart](QUICKSTART.md). The normal agent loop is:
@@ -52,6 +61,13 @@ Start with the [Quickstart](QUICKSTART.md). The normal agent loop is:
 5. re-enter source when a residual, disagreement, or task requires it;
 6. write the ordered labeled context; and
 7. invoke the exact Axiom Indexer joiner.
+
+For explicitly selected T-009 construction or qualification, use the
+[frame-index guide](skills/stdo-representation/references/frame-index-use.md)
+to bind the exact working program, map, source snapshot and Axiom candidate.
+Choose the frame index yourself before generating either view. Both views keep
+the same supporting closure and uncertainty; they supply no task facts,
+judgment, owner ruling or authority to perform an operation.
 
 Executive, Worker, and Reviewer are instruction-level context roles imported
 from Source STDO. A role label or prompt grants no external authority.
@@ -70,11 +86,12 @@ from Source STDO. A role label or prompt grants no external authority.
   and executable SHA-256
   `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
 
-The Axiom repository tree is
+For the published RC4 dependency, the Axiom repository tree is
 `093302db57bfb2e7beeed7f02dfc6d7090921a15`; its Project Subtree tree is
-`3f71c3c2df99008b9521e338a7837c553f87173a`. Mutable sibling mechanics remain
-historical construction evidence and cannot substitute for this immutable
-dependency.
+`3f71c3c2df99008b9521e338a7837c553f87173a`. Mutable sibling mechanics cannot
+substitute for that immutable dependency. The new frame-index operation is a
+separately selected working candidate with its own exact evidence subject;
+RC4 does not acquire it from the continuing source.
 
 The bootstrap STDO Representation Product remains the accepted immutable
 [`v0.1.0-rc.1`](https://github.com/foolishimp/stdo_representation/releases/tag/v0.1.0-rc.1).
@@ -93,6 +110,14 @@ meaning, and the accepted RC1 Product remains unchanged.
 The initial map-authoring evidence is under
 `dogfood/axiom-indexer-v0.1.0-rc.1/stdo-v2.5.0-rc.1/run-001/`. Runtime bindings
 and reports are evidence, not portable Product members.
+
+The frame-index construction retains its predecessor, exact source snapshot,
+authored program, map, generated views and comparison results under
+`dogfood/t009-frame-projection/run-001/`. The current
+`dogfood/t009-frame-projection/run-002/construction-subject.json` binds the
+unchanged authored subject replayed with the repaired exact Axiom candidate.
+Those records qualify only their declared subject. Source fidelity, independent native use, successor release
+construction and adoption each retain their own required evidence.
 
 Validation proves declared mechanical structure and resolution only. This
 release does not claim:

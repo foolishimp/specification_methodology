@@ -40,6 +40,11 @@ The exact dependency checks:
 - residual subject and re-entry closure; and
 - deterministic program and logical-map identity.
 
+When its exact selected contract supplies frame projections, the dependency
+also checks explicit selection/reference closure, program/map binding and
+source freshness against the supplied index observations. Representation
+consumes these generic results and supplies no second projection validator.
+
 It does not check prose truth, completeness, unique interpretation, automatic
 frame applicability, or a complete admitted `a_c` algebra.
 
@@ -55,8 +60,13 @@ constraints, and uncertainty. It shall not satisfy the Product by mechanically
 restating every source paragraph or by claiming unsupported completeness.
 
 **REQ-P-CANDIDATE-003**: Validation shall invoke the exact released Axiom
-Indexer executable and preserve the candidate bytes. No STDO Representation
-script shall fork, widen, or silently patch the imported contract.
+Indexer executable for released-use and release-qualified claims and preserve
+the candidate bytes. Bounded source qualification may invoke an explicitly
+authorized Mechanical Construction Candidate with exact executable, contract
+and member identities. Its results remain construction evidence, and a
+capability absent from the fixed RC4 dependency shall not be attributed to that
+cut. No STDO Representation script shall fork, widen, or silently patch the
+imported contract.
 
 **REQ-P-CANDIDATE-004**: Every safely detectable diagnostic shall be returned
 to the LLM. A crash, unresolved dependency, invalid binding, parse failure, or

@@ -13,6 +13,12 @@ Source STDO, authors the compression, invokes the exact same-version Axiom
 Indexer mechanics, repairs diagnostics, and uses the index to select reference
 frames and prepare bounded work.
 
+The compression explicitly authors STDO logical dependencies and frame
+membership from its source. Native use selects a frame index and consumes the
+exact Axiom dependency's reference-only or materialized projection, preserving
+the governing conditions, exceptions and unresolved meaning needed for the
+selected evaluation.
+
 The Product adds no local semantic compiler, GTL engine, prompt orchestrator,
 or model runtime. Exact Axiom Indexer supplies all deterministic mechanics. The
 LLM remains the semantic harness and supplies every frame, label, text value,
@@ -44,6 +50,11 @@ it.
   Product members into this Product. Exact mutable mechanics supplied bounded
   prepublication evidence; ordinary and release use bind the published
   immutable dependency.
+- **Mechanical Construction Candidate** is one separately authorized exact
+  Axiom working subject used for bounded source qualification. Its program
+  contract, executable and member identities are bound before use. It supplies
+  construction evidence only; it does not replace an immutable dependency or
+  acquire ordinary released-use authority.
 - **Release-Matched Asset Cohort** is the explicitly declared closed relation
   among exact Source STDO and its plugin, same-version Axiom Indexer mechanics,
   this Product, its program and map, and the complete Source STDO member-digest
@@ -56,6 +67,14 @@ it.
 - **`a_c.STDO` Axiomatic Program** is the canonical semantic compression
   selected for the exact represented cut. It contains URI-identified symbols,
   clauses, and residuals grounded in Source STDO.
+- **STDO Frame Index** is STDO-specific, source-grounded frame membership authored
+  under Axiom Indexer's generic Frame Index contract. Its frame remains the
+  Source STDO evaluation contract; neither the index nor a materialization
+  replaces that contract or decides task applicability.
+- **Authored STDO Chain** expresses source-grounded premises, consequences,
+  conditions, exceptions and supporting dependencies through the selected
+  vocabulary and role-labelled clause references. It supplies no implication
+  beyond the source and retains unresolved meaning as a residual.
 - **Logical Constraint Map** is the deterministic Axiom Indexer index
   instantiated from the unchanged valid compression and invocation-local
   bindings. It adds no semantic interpretation.
@@ -184,10 +203,19 @@ claims.
 STDO Representation is the source Product and the exact same-version Axiom
 Indexer cut is its mechanical Product dependency. The relation is owned by
 `urn:stdo-representation:authority:product-owner` and is limited to mechanical
-validation, logical constraint index materialization, diagnostics, URI
-resolution, and exact joining under the contracts below. It imports no Axiom
+validation, logical constraint indexing, explicit frame-index projection,
+diagnostics, URI resolution, and exact joining under the contracts below. It imports no Axiom
 Indexer Product member and transfers no semantic, acceptance, publication, or
 runtime authority.
+
+The fixed RC4 dependency in Exact Dependency Bases supplies its narrower released validation,
+indexing and joining contract; it supplies no frame-index projection operation.
+The projection extension requires a capable exact dependency. Bounded source
+qualification may select a Mechanical Construction Candidate under its own
+explicit grant and exact subject binding. Released projection use requires the
+capable same-version immutable successor selected through the existing release
+and adoption relations. Neither path silently substitutes mutable source for
+the RC4 Install.
 
 The relation begins only when the target Product Definition resolves to
 `urn:stdo:product-definition:axiom-indexer` and the exact release coordinates
@@ -222,6 +250,12 @@ An invocation-local Binding Set maps logical prefixes to physical installed
 resources. Because those paths vary by installation, a concrete `bindings.json`
 is runtime configuration or retained evidence, not a portable Product member.
 
+The source qualification relation may use an explicitly selected exact source
+checkpoint and Mechanical Construction Candidate as its construction inputs.
+Their identities and unresolved release joins remain visible. This does not
+represent that checkpoint as an adopted STDO release or relax the exact
+same-version source/dependency relation for a released Product.
+
 Program or map validity does not prove semantic truth, completeness, fidelity,
 unique interpretation, frame applicability, usefulness, or acceptance. An LLM
 Reviewer compares material claims and omissions with exact Source STDO.
@@ -236,6 +270,9 @@ LLMSelect(
   evidence_boundary
 ) -> selected_frame_refs + ordered_sections | hold
 
+AxiomProject(exact_program, exact_map, selected_frame_indexes, bindings, view)
+  -> reference-only or unchanged-content materialized projection | diagnostics
+
 AxiomJoin(ordered_sections) -> exact_request_bytes | refusal
 ```
 
@@ -248,6 +285,15 @@ The LLM selects the frames and writes all section bytes. Each request exposes:
 - material constraints, dependencies, evidence, and residuals;
 - stop conditions; and
 - return relation.
+
+The agent uses authored frame membership and logical chains where available,
+then retains the complete declared supporting closure, qualifications and
+affected residuals in its bounded context. It consumes exact generic projection
+mechanics rather than implementing a Representation-local materializer. A
+missing premise or applicable exception changes the warranted judgment when
+source law requires it; code does not decide that outcome. Missing membership,
+incomplete source meaning or unknown applicability requires source re-entry or
+an explicit residual, not a guessed frame selection.
 
 The joiner emits `label + "\n" + text` for each row, separates rows with two
 newline characters, and adds no terminal newline. It does no selection,
@@ -267,7 +313,7 @@ The native skill instructs an LLM to:
 2. load the logical map before broad Source STDO prose;
 3. select and show material frame details;
 4. re-enter exact source when required;
-5. invoke Axiom Indexer validation or join directly;
+5. invoke Axiom Indexer validation, frame projection or join directly;
 6. preserve Executive, Worker, and Reviewer boundaries; and
 7. return residuals and unresolved diagnostics honestly.
 
@@ -276,13 +322,20 @@ template, or a grant of external authority.
 
 ## Engagement roles
 
+The exact selected Source STDO and the caller's accepted configuration govern
+applicability. A sufficient direct Writer activation returns to its declared
+work authority or existing result carrier. Material coordination selects the
+Executive branch below; role names do not themselves require coordination or
+review. Required independent assessment and reserved decisions remain required.
+
 - **Executive** binds the task and evidence boundary, selects frames and target
   role, writes the ordered context, and disposes returned results.
 - **Worker** performs one bounded construction, invokes declared validators,
-  and returns its result, diagnostics, residuals, or stop to Executive.
+  and returns its result, diagnostics, residuals, or stop through the selected
+  return relation, to Executive in the coordinated branch.
 - **Reviewer** evaluates an exact subject under an explicit evidence boundary,
   does not repair while retaining Reviewer status, and returns findings to
-  Executive.
+  the declared result consumer, including Executive in the coordinated branch.
 
 The native instructions preserve these relations. This release does not claim
 that code validates role independence or computes a deterministic role packet.

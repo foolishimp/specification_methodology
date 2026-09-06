@@ -59,3 +59,14 @@ these artifacts and the exact dependency.
 
 This tenant claims no complete admitted `a_c` model, GTL, GraphFunction,
 automatic frame selection, deterministic prompt packet, or model runtime.
+
+## Selected frame-index construction
+
+T009 now selects a bounded successor capability: this Product authors explicit
+STDO dependencies and frame membership, while the exact Axiom candidate owns
+generic reference-only and materialized views. The
+[semantic design](FRAME_INDEX_PROJECTIONS.md) binds two overlapping existing
+Worker/Reviewer contracts, shared rules, premises, exceptions and residuals.
+Its working source and generated evidence stay under the existing T009
+dogfood surface. Neither that source snapshot nor mutable sibling mechanics
+replace the immutable dependency and RC4 Product artifacts above.

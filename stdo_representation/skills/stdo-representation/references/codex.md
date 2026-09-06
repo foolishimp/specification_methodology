@@ -23,6 +23,13 @@ Keep the index excerpt source-linked. Do not copy the complete standards corpus,
 repeat a rule in several sections, or precompute a solution. This is
 presentation guidance, not a prompt engine, schema, selector, or renderer.
 
+For an explicitly selected frame-index candidate, put its exact index URI,
+bound frame/scope and program/map/source identity in part 2. Part 4 may use the
+reference-only or materialized view from the same selected dependency. Preserve
+ordered dependency roles, literal conditions, exceptions and residuals; do not
+present an authored premise as an observed C fact. The view changes neither
+the acting role nor the original operation grant.
+
 This layout follows the GPT-5.6 guidance to keep prompts lean, expose only
 relevant tools, and place the action after its constraints, evidence, and return
 boundary.

@@ -1,0 +1,84 @@
+{
+  "kind": "t009.representation-frame-projection-construction-subject",
+  "writer": "/root/t030_m01_review",
+  "status": "candidate_ready_for_independent_source_and_native_assessment",
+  "operative_stdo_release": "stdo://releases/v2.5.0-rc.4/",
+  "operative_stdo_manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+  "source_release": null,
+  "source_aggregate_sha256": "86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca",
+  "source_member_count": 52,
+  "program_file": "../run-001/axiomatic-program.json",
+  "map_file": "logical-constraint-map.json",
+  "bindings_file": "../run-001/bindings.json",
+  "axiom_candidate": {
+    "repository_root": "axiom_indexer",
+    "subject_file": "axiom-candidate-subject.json",
+    "ac_path": "build_tenants/core/code/ac.py",
+    "ac_sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+    "schema_sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+    "output_contract_sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+  },
+  "files": {
+    "logical-constraint-map.json": "d07c06ba997dded68eae85142941466b3c161f3a5f40517176d8cb2e543aa280",
+    "validation-report.json": "0c224a89aaa5015adb9512734725edbcd36de6c92ee1da5c1d56a6c8f6f163ac",
+    "commands.json": "d3e71ae5d5512db8c91150931f845b3bf9be1fe22a87e270759484431460376f",
+    "replay-result.json": "9d04849cb6b52c988fe0da19a37836225c63a1207366de292757c5ceca3040fc",
+    "axiom-candidate-subject.json": "9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053",
+    "projections/combined-materialized.json": "3cf955bb8db2888592c43bc14b9b45b30320f7cda919833f05ea8d13983039ab",
+    "projections/combined-reference-only.json": "7a12e283a0dfa96a212eb40ed87f8650cbe24a3c5e81a1726b69632758831aac",
+    "projections/reviewer-materialized.json": "e578f44f390305daa44122455f5893cc9510df536b71bedb8be2219f8a383a1c",
+    "projections/reviewer-reference-only.json": "f9b975c0cf9740189e0e1148626bec0f365aea93d349a53ce6e58495990511e7",
+    "projections/worker-materialized.json": "b0eafba59465179c184a7c9d4201ad4c6168fa61f0f8c28106ac2ff5733205cd",
+    "projections/worker-reference-only.json": "4080b4fb66843f2e8be7ab34461f6cc537298219759fbd3b2a8ced9e81880c16",
+    "../run-001/axiomatic-program.json": "b5206f049471ece63c16f3dcfb332fec1a250d45e3c732bc8152b9dbbd49bc66",
+    "../run-001/bindings.json": "5dafff84ea7f39beb2794c486924d810dc95f35e6c83c13529a60f42ad616952",
+    "../run-001/source/source-manifest.json": "cc0d92ce12b34eabf598f75775207b4406d74a6aac0a42062dabd985fbb4789d",
+    "../run-001/semantic-source-comparison.json": "cf9cb35ef5d835371107f1eb82231af0943db3c502c5b7ea23e5bea3be07f2e1",
+    "../run-001/projection-comparison.json": "76e303564d82152c35cd3102c311c3d5306a735727defbc82e2a064819cf3d87",
+    "../run-001/native-case-inputs/FP01.json": "513e157d68c0fa7e2810b59f773c2163b6368a6183d9f15dfd7e6e9bfc22af07",
+    "../run-001/native-case-inputs/FP02.json": "c87c4e340ee196a9acf019bc9a6400520f5a61193aac0ea41ec2adc5a8a0adf7",
+    "../run-001/native-case-inputs/FP03.json": "ac2b07e85d1db1b843f517e28f6057898e86418c416245e7ca9fbada3b40ad57",
+    "../run-001/native-case-inputs/FP04.json": "4ebe3e78877100e63833fcde6942e60fee399953fa27449ca50539a6656877bd",
+    "../run-001/native-case-inputs/FP05.json": "28e2f4c47e9187b395a4b7457847d2f98c652d115d89cc27474b66995bc04980",
+    "../run-001/native-case-inputs/FP06.json": "5448fc1b208d3d0528c8587fa8af8e16abfb4072ebe52f9b688156f0100257aa",
+    "../run-001/native-case-inputs/FP07.json": "2ccf818370915afa4ebe1af15a202d46c5bdc504dd8f8260a956c60ed3525bcd"
+  },
+  "construction_design": {
+    "repository_path": "stdo_representation/build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md",
+    "sha256": "89fdd767fcedc41b9a7e3ee23b4819a0cb77614740fad6f771637a234c05e61f",
+    "assessed_predecessor_sha256": "917f3eaf56723adf769959e581d4e157efa582c7c008902751230294a6f907fe"
+  },
+  "claims": {
+    "mechanical_validation": "Current repaired dependency validates the unchanged authored program and reproduces the previous map, validation report and all six view bytes exactly. Seven CLI invocations succeeded.",
+    "view_comparison": "Both modes conserve the same declared closure and ordered content; the combined selection deduplicates the two closures.",
+    "source_fidelity": "Author comparison with retained predecessor; final independent assessment pending.",
+    "native_qualification": "Inputs prepared; no fresh native result claimed.",
+    "release_adoption": "None. Published RC4 assets and ordinary dependency remain unchanged."
+  },
+  "local_bindings": "Physical binding paths are invocation-local evidence; rebinding requires an explicit matching source snapshot and regenerated evidence, not semantic source substitution.",
+  "predecessor_construction_subject": {
+    "path": "../run-001/construction-subject.json",
+    "sha256": "0bc5ce3a94a4aef015cbc11937945a8960436e28602c954d0d321a858c64509c"
+  },
+  "source_manifest_file": "../run-001/source/source-manifest.json",
+  "semantic_source_comparison_file": "../run-001/semantic-source-comparison.json",
+  "native_case_inputs": "../run-001/native-case-inputs/",
+  "native_source_files": {
+    "README.md": "ef74250490df9b8cc4b9f961b3be6814e447506e1ff6b67d41fef2b9fe83c3e9",
+    "QUICKSTART.md": "426c65a8ae5e818eb9008e9a7eb705de7eee796116b3549dd61c21fb105643ec",
+    "build_tenants/axiom_indexer/README.md": "5af1dac5b295e8180bb92fb39eabf3f11665ae0b8fbff5374b6cc6ebbb9eaaab",
+    "build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md": "89fdd767fcedc41b9a7e3ee23b4819a0cb77614740fad6f771637a234c05e61f",
+    "skills/stdo-representation/SKILL.md": "301842c25bf924040f01a78bf6f5e7da96e49de0a9dc247159e7add6a58f6130",
+    "skills/stdo-representation/agents/openai.yaml": "872aabc6e15b66dfcfe0f2d8c674a9d25511a94d74be781711304bc581619f5a",
+    "skills/stdo-representation/references/codex.md": "6acd41794d3db1789ce00a457a9a447ffb7a21ab586c3e2b0081705730ddb7a4",
+    "skills/stdo-representation/references/claude.md": "7d1ce2078598396c4ab05aac78e3e18863f085a89df7a52e2bceeacac4a5758b",
+    "skills/stdo-representation/references/frame-index-use.md": "852bc417541be480c298277cab20028e04ed3329f03b9524a78f4fcc1b2534bd"
+  },
+  "owning_representation_files": {
+    "specification/PRODUCT.md": "40b8512825263c3a18845fb6660c574432ad16df99937287d6f6bd6267bf5b61",
+    "specification/requirements/REQ-P-STDO-AUTHORING-MAP.md": "2d4d587d66f8b5d463545f4defbb862ebbfcd32b0827e21018924c4981321ceb",
+    "specification/requirements/REQ-P-CANDIDATE-VALIDATION.md": "0de254e414a773bc675ef0ff1c89e404ee4608ad5e28c94dddd024f635b74d52",
+    "specification/requirements/REQ-P-NATIVE-FRAME-USE.md": "15e573d4f5035ec3fa46f073f464f70c859282fb18f4eb075c598b06bc5d0040"
+  },
+  "replay_basis": "Axiom output-protection repair only; unchanged successful schema, map and view relation. Generic refusal repair evidence remains with the exact Axiom subject."
+}

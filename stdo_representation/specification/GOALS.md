@@ -2,8 +2,8 @@
 
 ## Current state
 
-Status: T-009 M01 and M02 complete; first M03 native guidance repair supported
-by independent review, successor compression and M04 outstanding
+Status: T-009 baseline complete; the owner-selected frame-index Product
+increment and successor source authoring are active, with qualification open
 
 Make the STDO axiomatic constraints useful in ordinary native Codex and Claude
 work: recover exact sources and applicable frames, obtain sufficient bounded
@@ -17,6 +17,12 @@ This Product contributes to the
 owns the combined Indexer/Representation work and current state: baseline the
 existing path, fill demonstrated mechanical gaps, refresh the semantic
 compression/index/native guidance, and qualify the combined native candidate.
+The subsequent [frame-index selection](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#frame-index-product-selection)
+adds explicit STDO logical chains and frame membership over Axiom's generic
+reference-only/materialized projections. Their source-grounded premises,
+conditions, exceptions and residuals must survive native use. Existing RC4
+mechanics evidence supports its narrower baseline; it does not qualify this
+new selected capability.
 The actual RC4 baseline identified sufficient existing Axiom mechanics and a
 Representation archive-route defect. The admitted M03 source guidance repair
 is constructed and its documented command succeeds. The exact grants, results,

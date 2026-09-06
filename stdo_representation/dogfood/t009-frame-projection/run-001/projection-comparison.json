@@ -1,0 +1,55 @@
+{
+  "kind": "t009.authored-view-mechanical-comparison",
+  "scope": "Exact authored program and frozen Axiom candidate only; no semantic adequacy or native claim.",
+  "axiom_ac_sha256": "728551c7e54e2445fda2807a5a7bd5e20cff6c2030eda812ec55f331cd7d1011",
+  "program_file_sha256": "b5206f049471ece63c16f3dcfb332fec1a250d45e3c732bc8152b9dbbd49bc66",
+  "map_file_sha256": "d07c06ba997dded68eae85142941466b3c161f3a5f40517176d8cb2e543aa280",
+  "checks": [
+    {
+      "selection": "worker",
+      "same_all_common_content": true,
+      "unchanged_materialized_rows": true,
+      "closure_counts": {
+        "clauses": 11,
+        "residuals": 11,
+        "symbols": 20
+      },
+      "source_observations": 25
+    },
+    {
+      "selection": "reviewer",
+      "same_all_common_content": true,
+      "unchanged_materialized_rows": true,
+      "closure_counts": {
+        "clauses": 16,
+        "residuals": 11,
+        "symbols": 20
+      },
+      "source_observations": 27
+    },
+    {
+      "selection": "combined",
+      "same_all_common_content": true,
+      "unchanged_materialized_rows": true,
+      "closure_counts": {
+        "clauses": 18,
+        "residuals": 11,
+        "symbols": 20
+      },
+      "source_observations": 28
+    }
+  ],
+  "shared_clause_uris": [
+    "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan",
+    "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal",
+    "urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects",
+    "urn:stdo-representation:a-c-text:clause:complete-update-selection-retains-owned-composition",
+    "urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects",
+    "urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners",
+    "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies",
+    "urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition",
+    "urn:stdo-representation:a-c-text:clause:unknown-treatment-bounds-dependent-effects"
+  ],
+  "combined_closure_is_deduplicated_union": true,
+  "all_commands_successful": true
+}

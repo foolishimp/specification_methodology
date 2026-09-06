@@ -11,8 +11,8 @@ Derives from: `../INTENT.md#native-agent-use`,
 ## Purpose
 
 Let Codex and Claude use the STDO logical constraint index natively while keeping semantic
-selection in the LLM and deterministic code limited to the released Axiom
-Indexer joiner.
+selection in the LLM and deterministic code in the exact selected Axiom
+Indexer dependency's validation, projection and pure-join contracts.
 
 ## Role bindings
 
@@ -47,6 +47,11 @@ AxiomJoin(ordered labeled sections)
 For every selected frame, the LLM exposes its URI, task-specific purpose, and
 Source STDO route. Selection remains visible and reviewable. The joiner performs
 no semantic work.
+
+Between selection and joining, the agent may request the dependency's
+reference-only or materialized view of explicit frame indexes. Both retain
+the same declared supporting closure and source basis. Projection does not
+select the frame or supply any request section, judgment or authority.
 
 ## Requirements
 
@@ -106,6 +111,20 @@ and reused author judgments cannot supply required independent assessment.
 The existing work/evidence carrier holds these records; no new schema,
 registry, classifier or actor is implied. Closure requires satisfaction of the
 applicable conditions, not merely evidence existence or a successful join.
+
+**REQ-P-NATIVE-012**: Native guidance shall select source-grounded frame indexes
+explicitly where available, invoke the exact dependency's projection operation,
+and preserve supporting premises, conditions, exceptions, qualifications and
+residuals. Missing or stale projection inputs shall withhold dependent reliance;
+missing semantic meaning shall return to its owner. Materialization shall not
+be interpreted as a semantic verdict or a new governing document.
+
+**REQ-P-NATIVE-013**: Qualification shall compare fresh native use of the exact
+frame projections with the same source-based evaluation. It shall include two
+overlapping frames, a shared rule, a multi-premise consequence and an exception.
+Missing support, an applicable exception and unknown evidence shall produce
+their warranted distinct judgments. Passing mechanical projection or joining
+shall not replace this semantic-use evidence or qualify an unexercised host.
 
 For T-009 successor qualification, these instructions consume the selected
 [STDO source use model](../../../specification_methodology/specification/SCENARIOS.md)

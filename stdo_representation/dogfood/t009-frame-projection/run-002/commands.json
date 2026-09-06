@@ -1,0 +1,160 @@
+{
+  "axiom_ac_sha256_before": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+  "axiom_ac_sha256_after": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+  "commands": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/validation-report.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/worker-reference-only.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-worker\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/worker-materialized.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-worker\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/reviewer-reference-only.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-reviewer\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/reviewer-materialized.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-reviewer\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/combined-reference-only.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-reviewer\",\"urn:stdo-representation:frame-index:t009:complete-update-worker\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-001/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/run-002/projections/combined-materialized.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-reviewer\",\"urn:stdo-representation:frame-index:t009:complete-update-worker\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": ""
+    }
+  ]
+}

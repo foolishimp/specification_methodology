@@ -1,0 +1,244 @@
+{
+  "kind": "t009.writer-semantic-delta",
+  "construction_only": true,
+  "base_program_uri": "urn:stdo-representation:program:a-c-text:t009-construction:d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910:repair-001",
+  "base_program_sha256": "47f40813fe281984b739fde2db91fec75a649b9bdccbf679124bbcb9a033888b",
+  "base_program_path": "/tmp/t009-semantic-construction-q77ryszc/repair-001/axiomatic-program.json",
+  "program_uri": "urn:stdo-representation:program:a-c-text:t009-construction:a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5:joined-t029-001",
+  "program_sha256": "90b0c25a66f0fe381fb2d8c0d2c43ac1cd093138ba79301407b273b444bea915",
+  "source_basis": "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/",
+  "source_set_sha256": "a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5",
+  "source_uri_rebind": {
+    "from": "repo://stdo-t009-construction/d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910/standards/",
+    "to": "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/",
+    "meaning": "The exact joined temporary source snapshot replaces the predecessor source namespace; no release identity or authority is asserted."
+  },
+  "source_changes": [
+    {
+      "path": "SPEC_METHOD.md",
+      "before_sha256": "0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95",
+      "after_sha256": "65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5"
+    },
+    {
+      "path": "authority_compressions/spec_method.compressed.md",
+      "before_sha256": "5ef9b384b597b4f74b3da65be4f96ac43eb388c67a977edd07bc89d8806f0fd2",
+      "after_sha256": "c31b7735d7a328b4516613ed4ea80e85870d96a0600a5b988be1325bc12b03d3"
+    },
+    {
+      "path": "authority_compressions/stdo_compressed.md",
+      "before_sha256": "de89793d62e3e6925886753a83587bb92a6bd7a34156c5f989425b12f7d8b654",
+      "after_sha256": "eca90d861f90b4b96fb075fd74b89c8fec7bf6ada52a1db59f02793e68bea266"
+    }
+  ],
+  "added_symbols": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan",
+      "kind": "urn:stdo-representation:vocabulary:kind:record",
+      "label": "Explicit complete consumer update plan and bound selection",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    }
+  ],
+  "replaced_clauses": [],
+  "added_clauses": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-selection-retains-owned-composition",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "A Complete Consumer Update Plan binds one explicitly selected Product Definition and the complete companion population of one exact release-matched cohort to the invocation-owner-selected consumer bindings. The Product Definition owns composition; the cohort and each Product release record own release and member identity. The caller selects every native route and derived context in the claimed update scope. Proximity or empty discovery supplies no selection; an empty derived-context population means the owner selected none, not that semantic context is absent. Invocation selection and its plan/result are operation evidence, not a new persistent dependency declaration, registry or lock."
+        }
+      ],
+      "statement": "A Complete Consumer Update Plan binds one explicitly selected Product Definition and the complete companion population of one exact release-matched cohort to the invocation-owner-selected consumer bindings. The Product Definition owns composition; the cohort and each Product release record own release and member identity. The caller selects every native route and derived context in the claimed update scope. Proximity or empty discovery supplies no selection; an empty derived-context population means the owner selected none, not that semantic context is absent. Invocation selection and its plan/result are operation evidence, not a new persistent dependency declaration, registry or lock.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "The separate cohort-update operation presents the whole plan without consumer effects. Its acceptance object binds physical effect destinations and binding preimages, exact selected cohort bytes, companion annotated tags/commits/subtrees and inventories, replacement dependency locators, native routes and declared derived-source observations under the same canonical JSON hashing rule as the Adoption Plan. Already-installed status adds no authority and does not change the plan digest."
+        }
+      ],
+      "statement": "The separate cohort-update operation presents the whole plan without consumer effects. Its acceptance object binds physical effect destinations and binding preimages, exact selected cohort bytes, companion annotated tags/commits/subtrees and inventories, replacement dependency locators, native routes and declared derived-source observations under the same canonical JSON hashing rule as the Adoption Plan. Already-installed status adds no authority and does not change the plan digest.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists."
+        }
+      ],
+      "statement": "Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated consumer content remain available and unchanged. The operation creates no consumer-local checker and changes no Product meaning or local semantic map."
+        }
+      ],
+      "statement": "Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated consumer content remain available and unchanged. The operation creates no consumer-local checker and changes no Product meaning or local semantic map.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "For each selected derived context, missing, ambiguous, changed or unavailable program/map/source evidence holds the complete update before consumer effects. Its source owner supplies any necessary semantic re-entry; the manager cannot mechanically relabel an older map as current. Exact source freshness supplies integrity evidence, not semantic conformance or an independent semantic verdict."
+        }
+      ],
+      "statement": "For each selected derived context, missing, ambiguous, changed or unavailable program/map/source evidence holds the complete update before consumer effects. Its source owner supplies any necessary semantic re-entry; the manager cannot mechanically relabel an older map as current. Exact source freshness supplies integrity evidence, not semantic conformance or an independent semantic verdict.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-rechecks-and-verifies-completion",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation."
+        }
+      ],
+      "statement": "After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation."
+        }
+      ],
+      "statement": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation.",
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    }
+  ],
+  "added_residuals": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:residual:complete-update-selection-and-evidence-remain-owned",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan",
+        "urn:stdo-representation:a-c-text:symbol:observed-effect-state",
+        "urn:stdo-representation:a-c-text:symbol:owner-ruling",
+        "urn:stdo-representation:a-c-text:symbol:source-corpus"
+      ],
+      "detail": "This program supplies no invocation-specific consumer selection, accepted complete update plan, companion verification, derived-source observation or observed application result. Obtain these from their actual invocation, source and effect owners. Empty selection does not establish absence; a valid plan digest does not grant effects; source integrity does not settle semantic sufficiency; unknown or unrecovered effects cannot support a complete-update claim.",
+      "re_entry_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ],
+      "source_refs": [
+        "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+      ]
+    }
+  ],
+  "replaced_residuals": [
+    {
+      "before": {
+        "uri": "urn:stdo-representation:a-c-text:residual:successor-construction-and-qualification-not-yet-joined",
+        "kind": "unresolved",
+        "subject_refs": [
+          "urn:stdo-representation:a-c-text:symbol:release-matched-cohort",
+          "urn:stdo-representation:a-c-text:symbol:source-corpus",
+          "urn:stdo-representation:a-c-text:symbol:working-authoring-surface"
+        ],
+        "detail": "This temporary semantic construction binds one exact 52-member source snapshot: the five reviewed T030 owners and eight reviewed subordinate source projections over 39 unchanged RC4 members. T029 owner-source additions and the authorized joined successor cut are not included. This is no released/adopted successor or final source-corpus closure; exact final rebinding, matching dependency construction, index generation, independent source comparison and native qualification remain outstanding.",
+        "re_entry_refs": [
+          "repo://stdo-t009-construction/d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+          "repo://stdo-t009-construction/d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        ],
+        "source_refs": [
+          "repo://stdo-t009-construction/d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+          "repo://stdo-t009-construction/d64a76f2e31cc123372ca4432b7dc38833155c3198995d7d135854c0474ba910/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        ]
+      },
+      "after": {
+        "uri": "urn:stdo-representation:a-c-text:residual:successor-construction-and-qualification-not-yet-joined",
+        "kind": "unresolved",
+        "subject_refs": [
+          "urn:stdo-representation:a-c-text:symbol:release-matched-cohort",
+          "urn:stdo-representation:a-c-text:symbol:source-corpus",
+          "urn:stdo-representation:a-c-text:symbol:working-authoring-surface"
+        ],
+        "detail": "This temporary semantic construction binds the exact 52-member joined source snapshot containing the T029 Explicit Complete Consumer Update owner subsection and its two refreshed compressions over the previously reviewed T030 source subject. The selected final successor cut, exact release-scoped rebinding, matching dependency construction, final index and native qualification remain outstanding. Independent comparison of the predecessor program does not accept this added delta. The newly selected conditional frame-index and authored consequential-chain capability awaits its exact owning contracts and is not encoded here. This is no released or adopted successor, installed authority, or complete final delivery.",
+        "re_entry_refs": [
+          "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+          "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        ],
+        "source_refs": [
+          "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+          "repo://stdo-t009-construction/a87201056d4c8a4ced9d3f5a35a584ab0002e503e97ebd45c047b01aed77a6a5/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        ]
+      }
+    }
+  ],
+  "conserved_semantic_populations": {
+    "symbols": 30,
+    "clauses": 90,
+    "residuals": 10
+  },
+  "qualification": "Author semantic construction and mechanical validation only. Independent delta comparison, new capability contract, final cut and final native qualification remain pending."
+}

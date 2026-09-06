@@ -5,6 +5,8 @@ This guide exercises the published coordinated STDO Representation
 `v2.5.0-rc.4`. It is not constitutional authority. Accepted project frame
 basis revision 16 governs work on this source project. The mutable native
 guidance is a T-009 working candidate; the RC4 program and map remain unchanged.
+The separately selected frame-index construction is covered in section 6 and
+requires its exact Axiom candidate, program and map.
 External callers resolve their own Product Definition and accepted frame basis.
 
 ## 1. Verify the dependencies
@@ -24,20 +26,24 @@ with no failures.
 Acquire the exact published same-version Axiom dependency and verify its frozen
 mechanics:
 
-```sh
+```bash
+set -euo pipefail
 STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
 STACK_ROOT="$(git rev-parse --show-toplevel)"
 AXIOM_RELEASE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/axiom-indexer-rc4.XXXXXX")"
+test "$(git -C "$STACK_ROOT" cat-file -t \
+  refs/tags/axiom_indexer/v2.5.0-rc.4)" = tag
 test "$(git -C "$STACK_ROOT" rev-parse \
   refs/tags/axiom_indexer/v2.5.0-rc.4)" = \
   4750e09639c118f1097d4ea046fe23d26713f96b
 test "$(git -C "$STACK_ROOT" rev-parse \
   refs/tags/axiom_indexer/v2.5.0-rc.4^{})" = \
   a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
-git -C "$STACK_ROOT" archive \
-  refs/tags/axiom_indexer/v2.5.0-rc.4 axiom_indexer |
-  tar -x -C "$AXIOM_RELEASE_ROOT"
-AXIOM_INDEXER_ROOT="$AXIOM_RELEASE_ROOT/axiom_indexer"
+git -C "$STACK_ROOT" archive --format=tar \
+  refs/tags/axiom_indexer/v2.5.0-rc.4:axiom_indexer |
+  tar -xf - -C "$AXIOM_RELEASE_ROOT"
+AXIOM_INDEXER_ROOT="$AXIOM_RELEASE_ROOT"
+test -f "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py"
 python3 "$AXIOM_INDEXER_ROOT/scripts/check_constitution.py" \
   --stdo-store "$STDO_STORE"
 test "$(shasum -a 256 \
@@ -54,8 +60,11 @@ and output-contract SHA-256
 
 Ordinary and release use only `refs/tags/axiom_indexer/v2.5.0-rc.4` and bind its
 annotated tag object, commit-B peel, tree, Project Subtree tree, and the same
-seven-member inventory. The mutable sibling was authorized prepublication
-construction evidence only. Stop on any mismatch.
+seven-member inventory. This released path cannot be replaced by mutable
+sibling mechanics. Execute the acquisition block as one Bash script; any
+identity or archive failure must stop it. The explicitly selected T-009
+candidate in section 6 is a separate construction path and does not change the
+RC4 dependency.
 
 ## 2. Validate the compression and index
 
@@ -115,7 +124,9 @@ agent to use `stdo-representation` for a bounded task. It should:
    existing carriers, retaining unknowns and affected invalidation; and
 7. return satisfied conditions, evidence, outstanding obligations and residuals.
 
-The agent, not code, owns frame selection.
+The agent, not code, owns frame selection. When the selected program declares
+frame indexes, follow section 6 to retain its supporting relations and
+residuals in either view. A projected rule is not a satisfied task condition.
 
 ## 4. Join an Executive request
 
@@ -200,6 +211,37 @@ by RC4. Resolve those historical bytes within the immutable Representation tag.
 The current source skill distinguishes them from the overlay-bound revision 16
 used for source work. It remains a working candidate until the exact successor
 cohort qualifies and is published; no immutable RC4 member is rewritten.
+
+## 6. Use explicitly selected frame-index construction
+
+Use this path only under the T-009 working-source construction or qualification
+grant. Start with the
+[frame-index guide](skills/stdo-representation/references/frame-index-use.md)
+and the exact evidence subject under `dogfood/t009-frame-projection/run-002/`.
+Bind that subject's source snapshot, program, map, local bindings and Axiom
+code/schema. The released RC4 executable in section 1 supplies no `project`
+operation and cannot satisfy this selection. The manifest retains the authored
+program/source from `run-001` and binds their replay with the repaired exact
+dependency; neither predecessor is silently overwritten.
+
+The authored example offers a Worker index for isolated complete-update
+construction and a Reviewer index for independent assessment of an exact
+completion claim. Choose an index by its declared frame and scope; neither
+chooses a role or creates a review requirement. Generate reference-only and
+materialized views from the same exact inputs when comparing them. Read the
+preserved ordered premise, condition, exception and support relations, their
+literal qualifications and affected residuals.
+
+For example, a plan digest without applicable acceptance does not permit an
+update, and a stale selected source prevents the complete update from starting.
+An attempted operation with unknown resulting state does not establish
+completion. Supply the actual C facts and applicable J/O separately; retain
+valid prior facts while supplying independent judgment where the chosen
+assessment requires it. The view establishes none of those task facts.
+
+The source-linked semantic cases and construction results remain evidence for
+this exact working candidate. They do not publish a successor, adopt changed
+source law or authorize an actual consumer operation.
 
 ## Historical paths
 
