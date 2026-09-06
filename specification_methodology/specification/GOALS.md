@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: completed for the selected RC5 delivery; exact cohort qualified, published and publicly reacquired
+Status: RC5 delivery completed; bounded RC6 release preparation selected
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -17,13 +17,18 @@ Representation path, including the shared capability for complete selected
 consumer updating. The model, edited prose and regenerated index are
 intermediate results. Qualification establishes the supported use outcomes;
 publication and actual consumer adoption retain their separate authority and
-evidence. The owner-selected coordinated RC5 publication is complete through T030/T009, with exact qualification and public reacquisition evidence. Fleet adoption remains outside this goal.
+evidence. The owner-selected coordinated RC5 publication is complete through
+T030/T009, with exact qualification and public reacquisition evidence. The
+owner's subsequent "can we release 2.5.0 rc6?" instruction selects the bounded
+RC6 successor containing the reviewed Executive steel-thread guidance and
+matching distributions. Fleet adoption remains outside this goal.
 
 ## Selected Work
 
+- [RC6 release work](../.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md) owns the current bounded source-cut preparation, affected qualification and coordinated publication. It preserves the operative RC4 source basis and does not reopen the completed delivery tickets.
 - [T-030](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline) closes the source model, owning methods, shared native guidance/updater and aggregate qualification.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) closes Axiom mechanics, faithful STDO chains/frame indexes, native use and the matched RC5 release.
-- [Release evidence](../.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) retains exact subjects, independent judgments, native limitations, installed checks and public receipts. No selected release work remains.
+- [RC5 release evidence](../.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) retains the completed predecessor's exact subjects, independent judgments, native limitations, installed checks and public receipts.
 - [T-029](../.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md) remains complete. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md) remains a distinct conditional clarification; it is no retroactive release gate.
 
 ## Executive Direction
