@@ -11,10 +11,10 @@
 - re_entry_point: specification/standards/SPEC_METHOD.md#change-management-rule
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-06T07:41:37Z
+- updated_at: 2026-09-06T08:36:46Z
 - owner: specification_methodology
 - work_authorization: direct owner implementation, progressive use and local commit; admitted
-- target_release: unselected successor after v2.5.0-rc.4
+- target_release: coordinated v2.5.0-rc.5; owner-selected release, subject to exact qualification
 - target_truth: Native agents complete bounded work under sufficient constraints, conditional frames and valid evidence.
 - superseded_truth: A correct model or edited guidance alone establishes no supported native outcome.
 - closure_law: Every M01-M05 condition holds on the exact candidate; no applicable non-closure condition remains.
@@ -31,7 +31,7 @@ Successor source is a construction/qualification subject, not an adopted Install
 
 ### M02 Implementation And Bounded M03 Admission
 
-Owner instructions “ok implement”, “actually start the work stop circling it” and “finish this work” authorize the selected delivery and local commits. Existing Writer activations/history remain in the prior Git ticket; no repeated permission is needed for their unchanged scope. The latest owner instruction selects this compact LLM execution record. Root acts as Writer for that projection only.
+Owner instructions “ok implement”, “actually start the work stop circling it” and “finish this work” authorize the selected delivery and local commits. Existing Writer activations/history remain in the prior Git ticket; no repeated permission is needed for their unchanged scope. The latest owner instruction selects release closure and parallel LLM UAT. Root is activated as release Writer for RC5 packaging, exact qualification, local commits and guarded atomic publication; delegated Writers and independent assessment remain bounded to that outcome.
 
 ## Scope
 
@@ -42,7 +42,7 @@ Owner instructions “ok implement”, “actually start the work stop circling 
 | [T029](../completed/T-029-complete-consumer-cohort-adoption.md) | Completed shared complete-update capability and its evidence. |
 | [T028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md) | Distinct Executive-mutation clarification; not an unconditional dependency. |
 
-No core cost/accounting gate, consumer-local checker, generic classifier/executor, ABIogenesis change, publication or fleet adoption is selected. Reference frames supply conditional review/work scope. The general nonclaim/debt ruling remains owner-reserved where applicable.
+No core cost/accounting gate, consumer-local checker, generic classifier/executor, ABIogenesis change or fleet adoption is selected. Coordinated RC5 publication is selected by the owner. Reference frames supply conditional review/work scope. The general nonclaim/debt ruling remains owner-reserved where applicable.
 
 ## Delivery Timeline
 
@@ -75,7 +75,7 @@ The [joined qualification assessment](../../../../stdo_representation/dogfood/t0
 
 Next runnable STDO work: qualify remaining shared-entry/refusal paths on the exact candidate, starting with direct Writer work and drafted-contract refusal in both hosts. Retain actual effects, source/skill identity and evidence; reuse sufficient existing observations. A finite Representation task does not prove every shared verb or an installed successor.
 
-T009 owns the reviewed but unaccepted Axiom/Representation frame declarations and its next owner decision. That decision gates dependent binding/qualification, not independently authorized STDO native work. M05 also needs a selected exact successor/cohort and its packaged-path evidence. No release ordinal is inferred.
+T009 owns the reviewed but unaccepted Axiom/Representation frame declarations and its next owner decision. That decision gates dependent binding/qualification, not independently authorized STDO native work. M05 also needs a selected exact successor/cohort and its packaged-path evidence. RC5 is the owner-selected next complete cohort; the remote inventory confirms RC4 is its latest predecessor.
 
 ## Progressive Self-Use During Delivery
 

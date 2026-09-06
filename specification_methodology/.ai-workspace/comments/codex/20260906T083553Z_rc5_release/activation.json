@@ -1,0 +1,34 @@
+{
+  "kind": "stdo.rc5-release-activation",
+  "time": "2026-09-06T08:36:46Z",
+  "actor": "/root",
+  "role": "Writer",
+  "governing_basis": "stdo://releases/v2.5.0-rc.4/",
+  "governing_manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+  "owner_instruction": "yes close this, i want to get released with a minimal but verified release path, the UAT tests can all be run in parallel, they are literally LLM tests",
+  "tickets": [
+    "T-030",
+    "stdo_representation/T-009"
+  ],
+  "target": "coordinated v2.5.0-rc.5",
+  "scope": [
+    "complete successor packaging and exact frame scope",
+    "parallel native UAT and independent assessment",
+    "isolated installed qualification",
+    "local commits and guarded atomic cohort publication",
+    "ticket and goal closure only for objectively met conditions"
+  ],
+  "exclusions": [
+    "unrelated Product changes",
+    "ABIogenesis or fleet adoption",
+    "changing immutable published cuts",
+    "inventing passing evidence",
+    "self-expansion of release authority"
+  ],
+  "stop_conditions": [
+    "material unresolved required failure",
+    "source or remote drift invalidating checked subject",
+    "unauthorized effects",
+    "failed exact publication checks"
+  ]
+}

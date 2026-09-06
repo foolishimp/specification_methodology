@@ -17,7 +17,7 @@ Representation path, including the shared capability for complete selected
 consumer updating. The model, edited prose and regenerated index are
 intermediate results. Qualification establishes the supported use outcomes;
 publication and actual consumer adoption retain their separate authority and
-evidence. No fleet or successor release ordinal is selected by this goal.
+evidence. The owner-selected delivery now includes coordinated RC5 publication through T030/T009 after exact qualification. Fleet adoption remains outside this goal.
 
 ## Selected Work
 

@@ -57,7 +57,7 @@ class PluginDistributionTests(unittest.TestCase):
         self.assertEqual(codex["skills"], "./skills/")
         self.assertEqual(claude["name"], codex["name"])
         self.assertEqual(claude["version"], codex["version"])
-        self.assertEqual(claude["version"], "2.5.0-rc.4")
+        self.assertEqual(claude["version"], "2.5.0-rc.5")
 
     def test_workflow_metadata_has_positive_and_negative_trigger_bounds(self) -> None:
         for name in sorted(WORKFLOW_SKILLS):
@@ -178,8 +178,8 @@ class PluginDistributionTests(unittest.TestCase):
         for name in WORKFLOW_SKILLS:
             self.assertIn(f"`{name}`", guide)
             self.assertIn(f"`{name.replace('-', ' ')}`", guide)
-        self.assertIn("STDO_CUT='v2.5.0-rc.4'", guide)
-        self.assertIn("STDO_REF='specification_methodology/v2.5.0-rc.4'", guide)
+        self.assertIn("STDO_CUT='v2.5.0-rc.5'", guide)
+        self.assertIn("STDO_REF='specification_methodology/v2.5.0-rc.5'", guide)
         self.assertIn("SPEC_PLUGIN_REF=", guide)
         self.assertIn("plugin version and immutable repository cut are aligned", guide)
         self.assertIn("spec@specification_stack", guide)
@@ -225,9 +225,9 @@ class PluginDistributionTests(unittest.TestCase):
     def test_quickstart_uses_rc4_coordinates_and_atomic_setup_route(self) -> None:
         quickstart = (ROOT / "QUICKSTART.md").read_text(encoding="utf-8")
 
-        self.assertIn("specification_methodology/v2.5.0-rc.4", quickstart)
+        self.assertIn("specification_methodology/v2.5.0-rc.5", quickstart)
         self.assertIn("#subdirectory=specification_methodology", quickstart)
-        self.assertIn("stdo-toolchain 0.1.2", quickstart)
+        self.assertIn("stdo-toolchain 0.1.3", quickstart)
         self.assertIn("Do not copy either target separately", quickstart)
         self.assertIn(
             "plugins/spec/references/GETTING_STARTED.md#new-project", quickstart
