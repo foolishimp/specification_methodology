@@ -2,14 +2,14 @@
 
 - id: T-029
 - type: bug
-- status: active
+- status: completed
 - owner: specification_methodology
 - created_at: 2026-09-05
-- updated_at: 2026-09-06T05:30:51Z
+- updated_at: 2026-09-06T06:28:40Z
 - change_class: requirement_reprice
 - re_entry_point: specification/standards/SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager
 - authority: user-reported updater gap during ABIogenesis RC4 consumption
-- execution_status: reviewed_RC4_capability_complete; new_T009_frame_index_source_join_pending
+- execution_status: shared_capability_and_frame_index_adapter_qualified
 - planning_status: shared_adoption_delivery_timeline_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 
@@ -123,7 +123,7 @@ grants; they are not implied by the plan or its qualifying observations.
 
 ## Disposition
 
-### Constructed and qualified candidate
+### Historical Writer Handoff
 
 The separate `cohort-update` path and its owner contract/design are constructed.
 The [frozen construction proof](../../comments/codex/20260906T053051Z_PROOF_t029_shared_cohort_update.md)
@@ -178,3 +178,40 @@ bounded join in this ticket; the accepted RC4 adapter result does not silently
 qualify that new input shape. This is the remaining work, with prior updater
 evidence retained. Publication, successor adoption and fleet execution remain
 separate unselected effects.
+
+### Frame-Index Adapter Activation
+
+Root continues as Writer `urn:openai:codex:t029-integration-writer` for the
+already selected T009 input join. The exact dependency is Axiom's repaired
+`run-002/candidate-subject.json`, SHA-256
+`9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053`,
+with optional authored `frame_indexes`. Add their declared source edges to
+the existing consumer evidence adapter, preserve the immutable-cohort checks,
+and qualify complete coverage, stale/omitted evidence and actual source-candidate
+input in isolated consumers. Code, adapter design, affected tests and this proof
+are the only construction territory. The updater does not evaluate a frame,
+reconstruct its closure, or acquire another source-of-truth surface.
+
+### Completed Shared Capability
+
+Executive root consumes the independent updater result and the affected
+frame-index adapter result. The final adapter requires each authored index's
+`source_refs` and `frame_ref` directly from the program. Missing source routes
+and observations cannot be hidden by recomputing a map digest. Source
+currentness, individual Markdown fragments and pre-effect holds retain their
+existing owner and behavior; no frame meaning or applicability is inferred.
+
+The final [23-case optimized regression](../../comments/codex/20260906T051049Z_t029_cohort_evidence/frame-index-focused-tests.txt)
+passes. The independent Reviewer reran the new complete-operation regression
+and the [actual candidate adapter replay](../../comments/codex/20260906T051049Z_t029_cohort_evidence/frame-index-run-001/result.json):
+the exact and restored 97-clause/two-index source candidate passes; changed
+sources and removed source evidence hold. The replay's 58 inputs remain
+unchanged and no actual consumer effects occur. The preceding actual immutable
+RC4 CLI replay still owns complete install/binding/native-route observations.
+
+These observations and the existing owner/source/effect contract satisfy this
+ticket's shared capability conditions, including the newly selected T009 input
+join. This ticket closes on those conditions, not on a review event. T030 M04
+may consume this result. T009 native semantics, successor frame acceptance,
+packaged successor qualification, release/publication and actual consumer
+adoption retain their distinct conditions and are not reported complete here.

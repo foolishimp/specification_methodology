@@ -305,6 +305,9 @@ def _source_coverage(program: dict[str, Any], mapping: dict[str, Any], evidence:
             required.update(row["source_refs"])
             if family == "residuals":
                 required.update(row["re_entry_refs"])
+    for row in program.get("frame_indexes", []):
+        required.update(row["source_refs"])
+        required.add(row["frame_ref"])
     for refs in mapping.get("source_routes", {}).values():
         required.update(refs)
     required.update(mapping.get("frame_refs", []))

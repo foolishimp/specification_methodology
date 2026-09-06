@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: delivery active; T-030 M02 complete and bounded M03 projections underway
+Status: delivery active; governing method and shared updater complete; native qualification underway
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -24,7 +24,8 @@ evidence. No fleet or successor release ordinal is selected by this goal.
 - [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
   owns the delivery sequence and STDO work: governing method, shared native
   projections, complete-update evidence and aggregate qualification. Its M01
-  model and M02 source-method results are complete; M03-M05 remain open.
+  model, M02 source method and M04 shared-updater capability are complete;
+  M03 and M05 retain native and aggregate qualification.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
   owns the combined Indexer/Representation work. Its baseline is supplied; the
   owner now selects generic frame-index projections in Axiom and source-authored
@@ -32,8 +33,9 @@ evidence. No fleet or successor release ordinal is selected by this goal.
   constraints and their supporting conditions usable without moving semantic
   judgment or authority into indexing code. Each Product retains its contracts,
   evidence and required assessment; this adds no constitutional framework.
-- [T-029](../.ai-workspace/tickets/active/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
-  owns shared complete consumer updating. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
+- [T-029](../.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
+  has completed the shared complete-update capability, including frame-index
+  source evidence. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
   retains its distinct conditional role-boundary change. Neither becomes an
   unconditional gate for unrelated native improvements.
 - [T-030's current admission](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#m02-implementation-and-bounded-m03-admission)
@@ -126,8 +128,8 @@ development Product for continuing source work.
 
 ## Selection Boundary
 
-The planning selection changes only the existing Goals and ticket records
-named by T-030. It conserves Intent, Product meaning, the accepted model,
-standards, tools, skills, frame bases and immutable cuts. Later implementation
-uses the exact grants and owning re-entry identified by those tickets. The
-released RC4 basis remains operative until an explicit successor adoption.
+The original planning selection changed the Goals and ticket records only.
+The subsequent implementation instructions select the bounded work and owning
+re-entry recorded in those tickets. Intent and the accepted functional model
+remain conserved; source construction does not change immutable cuts or adopt
+a successor. The released RC4 basis remains operative until explicit adoption.

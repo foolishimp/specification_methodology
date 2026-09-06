@@ -5,7 +5,7 @@
   `.ai-workspace/tickets/completed/T-014-make-version-line-selector-latest.md`,
   `.ai-workspace/tickets/completed/T-020-consolidate-specification-stack-monorepo.md`,
   `.ai-workspace/tickets/completed/T-021-qualify-monorepo-release-refs.md`,
-  `.ai-workspace/tickets/active/T-029-complete-consumer-cohort-adoption.md`
+  `.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
@@ -155,8 +155,10 @@ The temporary invocation selection uses `kind: stdo.cohort-update-selection`,
 The Axiom Indexer adapter reads its existing binding-set and logical-map
 carriers. It verifies the map's canonical intrinsic digest, the canonical
 program digest, and every declared `resolved_sources` digest. It uses
-the existing program's calculus, frame, record-source and residual re-entry
-edges and the map's source routes to require complete declared source coverage;
+the program's calculus, frame, record-source, residual re-entry and optional
+frame-index source edges and the map's source routes to require complete
+declared source coverage. Frame-index membership sources are required directly
+from the program even if the map omits their routes and observations;
 removing a stale observation and recomputing the map digest cannot establish
 readiness. Local URIs use
 whole-document digest coverage: distinct fragments of the same URI document

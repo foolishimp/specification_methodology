@@ -483,6 +483,60 @@ class CohortUpdateTests(unittest.TestCase):
             f.plan()
         self.assertFalse((f.root / "companions").exists())
 
+    def test_frame_index_sources_cannot_disappear_from_rehashed_evidence(self):
+        f = self.fixture
+        f.add_context()
+        source = f.consumer / "FRAME_INDEX.md"
+        source.write_text("# Selected membership\n")
+        source_uri = "repo://consumer/FRAME_INDEX.md#selected-membership"
+        program = json.loads((f.consumer / "program.json").read_text())
+        frame = "repo://consumer/PRODUCT.md#accepted-source"
+        program["frame_refs"] = [frame]
+        program["residuals"] = [{"uri": "urn:test:residual", "kind": "unresolved",
+                                 "subject_refs": [], "detail": "Frame applicability is judged",
+                                 "source_refs": [frame], "re_entry_refs": [frame]}]
+        program["frame_indexes"] = [{"uri": "urn:test:frame-index", "frame_ref": frame,
+                                     "scope": "Selected residual evaluation", "clause_refs": [],
+                                     "residual_refs": ["urn:test:residual"], "source_refs": [source_uri]}]
+        write_json(f.consumer / "program.json", program)
+        mapping = json.loads((f.consumer / "map.json").read_text())
+        mapping["program_sha256"] = _axiom_digest(program)
+        mapping["source_routes"] = {"urn:test:frame-index": [source_uri]}
+        mapping["resolved_sources"].append({"uri": source_uri, "sha256": "sha256:" + sha256_bytes(source.read_bytes())})
+
+        def save_map():
+            mapping["map_sha256"] = _axiom_digest({k: v for k, v in mapping.items() if k != "map_sha256"})
+            write_json(f.consumer / "map.json", mapping)
+
+        save_map()
+        self.assertTrue(f.plan()["ready"])
+        source.write_text("# Changed membership\n")
+        self.assertIn("Stale derived source digest", f.plan()["holds"][0])
+        mapping["source_routes"] = {}
+        mapping["resolved_sources"] = [r for r in mapping["resolved_sources"] if r["uri"] != source_uri]
+        save_map()
+        before = f.consumer_state()
+        plan = f.plan()
+        self.assertFalse(plan["ready"])
+        self.assertIn("Missing declared derived source coverage", plan["holds"][0])
+        with self.assertRaisesRegex(StdoError, "held before effects"):
+            f.apply(plan)
+        self.assertEqual(before, f.consumer_state())
+        self.assertFalse((f.root / "companions").exists())
+
+        # Restoring current document evidence does not restore the removed heading.
+        mapping["resolved_sources"].append({"uri": source_uri, "sha256": "sha256:" + sha256_bytes(source.read_bytes())})
+        save_map()
+        self.assertIn("Unresolved derived source fragment", f.plan()["holds"][0])
+        source.write_text("# Selected membership\n")
+        mapping["resolved_sources"][-1]["sha256"] = "sha256:" + sha256_bytes(source.read_bytes())
+        save_map()
+        program_before = (f.consumer / "program.json").read_bytes()
+        map_before = (f.consumer / "map.json").read_bytes()
+        self.assertTrue(f.apply(f.plan())["complete"])
+        self.assertEqual(program_before, (f.consumer / "program.json").read_bytes())
+        self.assertEqual(map_before, (f.consumer / "map.json").read_bytes())
+
     def test_document_digest_covers_distinct_reentry_fragment(self):
         f = self.fixture
         f.add_context()

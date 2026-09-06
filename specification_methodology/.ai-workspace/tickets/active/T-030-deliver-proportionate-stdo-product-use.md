@@ -332,7 +332,7 @@ diagram, agent, or review round.
 | **M01 — STDO Product use model** | Product capability and the single logical model satisfy M01-C1 and M01-C2 below, together with functional scenario conditions, C/J/O boundaries, and distribution/qualification role. | Complete at logical-model scope; see [M01 Current Result](#m01-current-result). Exact model and Product relation; required independent Product/invariant assessment; model cases for computed classification, judgment reuse, and conditional frame applicability. |
 | **M02 — Coherent governing method** | Selected R02-R07 changes are expressed at their exact owners, with applicability, direct Writer entry, conditional coordination/assessment, closure, and reuse coherent. | Complete at source-method scope on the five exact hashes in M02 And M03 Current Result. Independent semantic assessment passes; existing design obligations are conserved. T-028 retains its distinct owner and remaining projection/qualification scope. |
 | **M03 — Usable native projections** | Shared skills, guide, bootstrap/template/compression projections, and bounded STDO-owned checks implement the selected outcomes through actual supported native paths. | M02 only for relations whose law changes. Sufficient current authority permits independent native corrections to proceed earlier. Exact source/projection congruence and fresh positive/negative native-use evidence. |
-| **M04 — Complete shared consumer adoption** | The complete-adoption outcome tracked by T-029 is met under its actual governing law and usable through the selected shared path. | Consume T-029's exact work contract, implementation, and qualifying evidence for USE-09 and affected setup/resume relations. This gates that capability and aggregate closure; it does not gate unrelated M01-M03 work. |
+| **M04 — Complete shared consumer adoption** | The complete-adoption outcome tracked by T-029 is met under its actual governing law and usable through the selected shared path. | Complete at shared-capability scope: T-029 supplies the separate complete-update command, actual immutable RC4 isolated operation evidence, final 23-case regression and actual frame-index source-adapter join. Publication and actual consumer adoption are separate; unrelated M01-M03 work remains independent. |
 | **M05 — Qualified STDO candidate** | The exact joined STDO source and packaged native candidate satisfies every selected functional scenario condition, with no unresolved applicable non-closure condition. | Exact M01-M04 results, required owner/independent judgments, scenario-bound UAT and installed-path evidence, and material composition checks. Candidate qualification is distinct from publication and consumer adoption. |
 
 The substantive sequence is model first, then gaps at the owning method and
@@ -353,7 +353,7 @@ position does not itself admit an effect or add a review round.
 | Order | Owning work and task | Required result before dependent work relies on it |
 |---|---|---|
 | **0 — Complete: model** | T-030 M01, the thirteen use functions and fourteen model cases. | The accepted model and returned independent assessments are the retained starting point. Reopen only an affected relation with a material counterexample. |
-| **1 — Governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../active/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
+| **1 — Governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../completed/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
 | **2 — Realize the selected gaps, in parallel where sufficient** | T-030 M03 updates shared native skills, guidance, templates and bounded STDO checks. T-009 M02 supplies only selected generic Axiom gaps. T-029 implements the selected shared complete-update path. | Each changed path consumes sufficient accepted law and its exact grant. Retained implementations/evidence may satisfy a relation without code changes. Native corrections under current sufficient law can start before unrelated M02 work closes. |
 | **3 — Refresh the representation and index** | T-009 M03 reconciles Representation's affected requirements/guidance, re-authors changed source-linked compression, and regenerates the index with the exact qualified mechanics. | The program, index, source routes, native entry and dependency identities agree with the exact successor source subject. Semantic source comparison and mechanical reproduction both pass; model prose or unchanged RC4 artifacts cannot supply this result. |
 | **4 — Qualify the actual paths and join the results** | T-009 M04 qualifies the combined native path. T-029's complete-update evidence feeds T-030 M04. T-030 M05 joins the STDO-owned results with applicable companion evidence. | Supported Codex/Claude outcomes, material refusals/combinations, exact installed paths and required independent judgments satisfy their own conditions. USE-09/complete-adoption claims require T-029; unrelated native qualification does not wait for that claim. A model review or green index alone cannot close this stage. |
@@ -527,7 +527,7 @@ core cost requirements does not select or establish that successor.
   with that boundary. The existing prohibition still applies; completing T-028's
   stronger wording is not a blanket prerequisite for native work. Its amendment
   needs its own selection if the candidate claims that successor outcome.
-- [T-029](../active/T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
+- [T-029](../completed/T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
   complete-updater work carrier. Its condition is a dependency for M04/USE-09,
   not a second updater implementation in this ticket or in ABIogenesis.
 - Representation compression, source navigation, example packaging, additional
@@ -853,3 +853,22 @@ and combined native qualification, and M05 retains aggregate qualification.
 No unobserved scenario, new installed constitutional basis, release or consumer
 adoption is inferred from this result. Local commit follows the owner's
 standing instruction and does not widen these claims.
+
+
+### M04 Shared-Updater Result
+
+[T-029](../completed/T-029-complete-consumer-cohort-adoption.md#completed-shared-capability)
+is complete at its shared-capability condition. The separate `cohort-update`
+command verifies exact selected cohort members, companion relations, native
+routes and source-bound context, accepts one whole plan, preserves preimages,
+and holds stale or partial semantic context before consumer effects. Its
+actual immutable RC4 isolated replay and final 23-case optimized regression
+pass. Independent assessment also passes the new optional frame-index source
+coverage and actual 97-clause candidate adapter join. The unchanged narrow
+`adopt` command retains its existing contract.
+
+This satisfies M04 and supplies USE-09's shared updater result. It neither
+updates live ABIogenesis nor supplies T009's remaining native/acceptance joins.
+M03 and M05 retain their actual functional native, packaged-path and combined
+qualification conditions. The Executive continues those existing conditions;
+no new ticket, method framework, cost gate or release ordinal is introduced.

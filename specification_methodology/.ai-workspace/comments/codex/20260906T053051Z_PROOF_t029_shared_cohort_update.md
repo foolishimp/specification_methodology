@@ -134,3 +134,43 @@ This supports the RC4 shared capability and its governing/projection increment.
 The newly selected T009 frame-index source fields retain a bounded integration
 condition in the active ticket. No current ABI, native-host, publication or
 fleet qualification is inferred.
+## Frame-Index Adapter Join And Completed Capability
+
+The subsequent T009 Product selection introduced optional authored frame-index
+source edges. Root made the bounded three-line adapter change under T029's
+recorded integration grant. The final executable SHA-256 is
+`f7506470d64553470d42816d480b34d6ae06cf1eb48a214e577875be652e7aea`;
+the affected test file is
+`f6348df68e311ad06cb665498d011f10af12090ded88f2e4bd83a09b8b981b9d`.
+Shared upstream asset validation remains unchanged at `0ab00000697afb5bd5ab8bb71d56f310be466ac5a7782908f287374293747bff`.
+
+The [final focused run](20260906T051049Z_t029_cohort_evidence/frame-index-focused-tests.txt)
+passes all 23 cases under optimized Python. The new case exercises complete
+update with index-only source evidence, stale source, removal of both map route
+and observation with recomputed digest, missing fragment, no-effect refusal,
+and restored successful application with unchanged semantic carriers.
+
+The [actual T009 source-candidate adapter replay](20260906T051049Z_t029_cohort_evidence/frame-index-run-001/result.json)
+at SHA-256 `c7ae555a1830ce8ca570e3b41feb3b0cad6c470b3746c9e33347df6f0b22cbc3`
+exercises the frozen 97-clause/two-index program against all retained exact
+source bytes. Exact and restored inputs pass; changed sources and omitted
+source evidence hold. All 58 input files remain unchanged, with no actual
+consumer effects. The retained [driver](20260906T051049Z_t029_cohort_evidence/frame_index_replay.py)
+reacquires the immutable RC4 Git subject and creates only isolated copies.
+This complements the prior complete-operation replay; it does not relabel
+the source candidate as a released cohort.
+
+Author-independent Reviewer `/root/t030_m01_writer` consumed the prior closed
+updater assessment, read only this adapter/design/test delta, independently
+passed the new optimized complete-operation case and actual four-case replay,
+and reported no actionable finding. The exact code/test/design hashes held
+through that review. Root subsequently changed only the design's ticket locator
+from active to completed (final design
+`ebac283f735af704e0a53911472813eeebd6ffff6d73b89643ad56132cb848e9`).
+
+Executive root records T029 complete at its shared-capability condition and
+projects that result to T030 M04. Current carrier:
+[completed T029](../../tickets/completed/T-029-complete-consumer-cohort-adoption.md).
+Native semantic-use observations, successor frame acceptance, final packaged
+qualification, release/publication and actual consumer adoption retain their
+separate scope. No live ABI readiness or mutation is claimed.
