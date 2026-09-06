@@ -28,7 +28,7 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737
+  STDO_REFERENCE_FRAME_BASELINE.md: 3cfb24f507e6746d5263c7b866d2cd4dc4de2d9caf52bb7e90b9f66642208bf0
   SPEC_METHOD.md: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
@@ -884,6 +884,17 @@ layer that owns the missing truth.
   translations, applies declared conjunctions, and selects only the next
   already-authorized action. It does not load every frame or inherit their
   undocumented working contexts.
+- Executive sequences delivery around an early real end-to-end steel thread,
+  extending existing paths and selecting increments by consequential
+  uncertainty, dependency/interface reach, and failure impact. Integration
+  evidence prunes incompatible choices and settles exercised interfaces;
+  unexercised paths retain their proof obligations. Use focused deterministic
+  regression, module-law checks, and judgment probes during construction;
+  schedule substantial UAT near release or for a bounded capability complete
+  enough to qualify. Testing frames govern claims, scenarios, independence,
+  and repetitions; reuse valid evidence and rerun affected assurance on
+  material invalidation. See
+  `STDO_REFERENCE_FRAME_BASELINE.md#steel-thread-delivery`.
 - Reviewer owns evidence-bound technical triage for its exact finding: affected
   claim, severity, causal assessment and confidence, blast radius, workaround,
   repair complexity and regression risk, and residual uncertainty where

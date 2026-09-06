@@ -556,6 +556,38 @@ cannot rely on the supplied severity or technical assessment, it reactivates a
 capable evaluation or retains the uncertainty; it does not silently rewrite the
 Reviewer result.
 
+### Steel-Thread Delivery
+
+Executive sequences delivery around a steel thread: the smallest real,
+runnable path from a supported Product entry to a material outcome through
+the selected composition. Establish that path early and expand it in bounded
+increments. Where it already exists, extend or revalidate the affected
+thread. Select increments by consequential uncertainty, dependency and
+interface reach, and failure impact.
+
+Early end-to-end and integration evidence prunes incompatible construction
+choices before they spread. Use it to settle the exercised interfaces,
+preserve working composition, and concentrate construction on unresolved
+obligations. Each passing thread establishes only the relations and
+conditions actually exercised; untested branches, interaction combinations,
+refusal and recovery paths retain their material proof obligations. Revisit
+settled construction decisions when material counterevidence invalidates
+their basis.
+
+During construction, use focused deterministic regression and targeted
+judgment probes to resolve material uncertainty. Use unit evidence for
+module-owned laws under the testing frames. Schedule substantial,
+resource-intensive user-acceptance cycles near release or when a bounded
+capability is considered complete enough to qualify. An early focused user
+probe remains appropriate when it decides a material outcome uncertainty.
+
+The [Product testing frames](#derived-product-testing-frame-set) retain their
+distinct claims and govern the necessary scenarios, independent assessments,
+and repetitions. Reuse qualified results while their exact subject and basis
+remain valid; rerun affected assurance when a material change invalidates it.
+Executive selects this sequence under the existing mandate and activates
+construction through the existing operation grants.
+
 ---
 
 ## Derived Worker Frame
