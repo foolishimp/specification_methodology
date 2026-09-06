@@ -4,7 +4,7 @@ Identity: `urn:stdo-representation:build-tenant:axiom-indexer`
 
 ## Selected dependency
 
-Use the exact RC5 Axiom Indexer dependency and full seven-member inventory
+Use the exact RC6 Axiom Indexer dependency and full seven-member inventory
 bound by [the Representation release record](../../releases/v2.5.0.md) and
 [cohort carrier](../../../stack_release.json). Those records own the exact
 source, executable, schema, output contract and cut identities. This tenant
@@ -17,7 +17,7 @@ An LLM authors and selects semantics; code follows declared references.
 ## Product artifacts
 
 ```text
-representation/stdo-v2.5.0-rc.5/
+representation/stdo-v2.5.0-rc.6/
   axiomatic-program.json
   logical-constraint-map.json
 ```

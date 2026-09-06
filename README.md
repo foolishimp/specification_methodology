@@ -80,6 +80,12 @@ project-qualified RC4 tags at coordinated commit
 `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. The exact commit-B published gate
 verified the complete atomic 13-ref transaction.
 
+RC5 remains the exact published predecessor. The selected RC6 successor
+contains the reviewed Executive steel-thread guidance and its matched source,
+plugin and child indexes. Its bounded work and qualification are retained in
+the [RC6 release carrier](specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md).
+Current selection does not assert publication, Product acceptance or adoption.
+
 This relation does not make the root a Product or merge the three child
 Products. It makes publication incomplete if one required asset is stale,
 missing, differently versioned, or derived from another STDO cut. Read

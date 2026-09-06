@@ -1,0 +1,32 @@
+{
+  "kind": "stdo.rc6-qualification-observer-repair",
+  "actor": "/root/t030_m01_writer",
+  "authority": "root-recorded bounded three-literal test repair under direct owner RC6 release instruction",
+  "test": "specification_methodology/tests/test_getting_started_setup.py",
+  "preimage_commit": "842d05daf0be1215e99e640396e670cde4c03d31",
+  "preimage_sha256": "c1c9f95a5dc608aae8e445607b51ce21d5fbf4589158673bda0e20a863aafe70",
+  "postimage_sha256": "aa184acd8129e5383c747412ac8e2e055e9077a744ad42715a205f25cd682318",
+  "exact_delta": "three 2.5.0-rc.5 expected cut/ref literals become 2.5.0-rc.6",
+  "guide": "specification_methodology/plugins/spec/references/GETTING_STARTED.md",
+  "guide_tag_a_sha256": "4397b57726d21570fad255ee3c326ed41bb8188e254e50eb387ebff819999cef",
+  "guide_current_sha256": "4397b57726d21570fad255ee3c326ed41bb8188e254e50eb387ebff819999cef",
+  "guide_equal_tag_a": true,
+  "argv": [
+    "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_getting_started_setup.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.094,
+  "prior_full_suite": "stdo-full-suite.json and stdo-full-suite.stderr.txt retain 148 passes/1 stale-marker error",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "1c63e78334b6e4c6210e609d8e62928f261f3b59b8c0beefad55914880c507e1",
+  "other_suites_rerun": false,
+  "source_tag_changed": false
+}

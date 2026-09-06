@@ -1,0 +1,103 @@
+{
+  "kind": "stdo.rc6-remote-expectation-freeze",
+  "observed_at": "2026-09-06T13:24:51.113492+00:00",
+  "argv": [
+    "git",
+    "ls-remote",
+    "https://github.com/foolishimp/specification_methodology.git"
+  ],
+  "status": "satisfied",
+  "repository_url": "https://github.com/foolishimp/specification_methodology.git",
+  "configured_fetch_urls": [
+    "https://github.com/foolishimp/specification_methodology.git"
+  ],
+  "configured_push_urls": [
+    "https://github.com/foolishimp/specification_methodology.git"
+  ],
+  "raw_sha256": "7506858cc71d86a7e21d54cf6ce60c30353c05f4cb39fb23d0c898659a9e992f",
+  "expected_remote": {
+    "refs/heads/main": "89e39bfe48fec1e79519581a24ae9307dbe6299d",
+    "refs/heads/rc/axiom_indexer/2.5.0": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+    "refs/heads/rc/specification_methodology/2.5.0": "c7888bb2dc9aee1f5a217985f6d1547cfe6465f0",
+    "refs/heads/rc/stdo_representation/2.5.0": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+    "refs/heads/release/axiom_indexer/2.5.0": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+    "refs/heads/release/specification_methodology/2.5.0": "c7888bb2dc9aee1f5a217985f6d1547cfe6465f0",
+    "refs/heads/release/stdo_representation/2.5.0": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+    "refs/tags/axiom_indexer/v2.5.0": "d86a5cee2a831b68ab4d9ef7534d61095e4f47b9",
+    "refs/tags/axiom_indexer/v2.5.0-rc.6": null,
+    "refs/tags/specification_methodology/v2.5.0": "75b5e3167b717300f26979c00b11fe657ce9a774",
+    "refs/tags/specification_methodology/v2.5.0-rc.6": null,
+    "refs/tags/stdo_representation/v2.5.0": "a90b4678b4f39045f9fbcdab4520a1f6dbbd921d",
+    "refs/tags/stdo_representation/v2.5.0-rc.6": null
+  },
+  "expected_version_lines": {
+    "specification_methodology": [
+      {
+        "ordinal": 1,
+        "ref": "refs/tags/v2.5.0-rc.1",
+        "tag_object": "42f59b6cd24071d9c445a29ae2a691cf0828211e",
+        "peeled_commit": "ca6694314c4e9a56d3facae3eef06fe2792104c9"
+      },
+      {
+        "ordinal": 2,
+        "ref": "refs/tags/specification_methodology/v2.5.0-rc.2",
+        "tag_object": "5ebd2d87ff0c0d9fcca96ba42d90253ba6fec7e3",
+        "peeled_commit": "2c9a11701d567d01320482100979c9fcd54ab846"
+      },
+      {
+        "ordinal": 3,
+        "ref": "refs/tags/specification_methodology/v2.5.0-rc.3",
+        "tag_object": "625e123572565a27a3953d07c6b883aa5e8f1ed2",
+        "peeled_commit": "ece85fbce89e54afbccb9bd670b58650d23a007b"
+      },
+      {
+        "ordinal": 4,
+        "ref": "refs/tags/specification_methodology/v2.5.0-rc.4",
+        "tag_object": "032dac0c833111547f7dd4b290c5316ed9b70f97",
+        "peeled_commit": "7a25668a8fecfd26f895759af3bec4708727964a"
+      },
+      {
+        "ordinal": 5,
+        "ref": "refs/tags/specification_methodology/v2.5.0-rc.5",
+        "tag_object": "d4b7c7724944e02ce25c6e6ce69722491c349924",
+        "peeled_commit": "c7888bb2dc9aee1f5a217985f6d1547cfe6465f0"
+      }
+    ],
+    "axiom_indexer": [
+      {
+        "ordinal": 4,
+        "ref": "refs/tags/axiom_indexer/v2.5.0-rc.4",
+        "tag_object": "4750e09639c118f1097d4ea046fe23d26713f96b",
+        "peeled_commit": "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+      },
+      {
+        "ordinal": 5,
+        "ref": "refs/tags/axiom_indexer/v2.5.0-rc.5",
+        "tag_object": "7813c9555ddde8f649d70870dc6ab9dabdd1d80c",
+        "peeled_commit": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94"
+      }
+    ],
+    "stdo_representation": [
+      {
+        "ordinal": 1,
+        "ref": "refs/tags/stdo_representation/v2.5.0-rc.1",
+        "tag_object": "1eb81f90bcb2348027682b7d4d7e75285d7d917b",
+        "peeled_commit": "5767f40a4d363067b2dbe8f47f6e288e3e5e9cd7"
+      },
+      {
+        "ordinal": 4,
+        "ref": "refs/tags/stdo_representation/v2.5.0-rc.4",
+        "tag_object": "d85d25482f9d9132147bea189b0fe0aca1929dff",
+        "peeled_commit": "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+      },
+      {
+        "ordinal": 5,
+        "ref": "refs/tags/stdo_representation/v2.5.0-rc.5",
+        "tag_object": "5edeb22233fb9625fbf3b386a2fb1e2f8f88fead",
+        "peeled_commit": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94"
+      }
+    ]
+  },
+  "expected_version_lines_sha256": "b731e7941d31ca795add6c641488374d5fbcfda809fb3c0c66d8f64b8dc765bb",
+  "failures": []
+}

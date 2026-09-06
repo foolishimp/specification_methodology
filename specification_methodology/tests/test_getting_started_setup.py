@@ -162,14 +162,14 @@ class GettingStartedSetupTests(unittest.TestCase):
 
     def test_guide_stops_on_old_toolchain_and_for_owner_ratification(self) -> None:
         guide = GUIDE.read_text(encoding="utf-8")
-        shell_start = guide.index("STDO_CUT='v2.5.0-rc.5'")
+        shell_start = guide.index("STDO_CUT='v2.5.0-rc.6'")
         shell_end = guide.index("\n```", shell_start)
         toolchain_shell = guide[shell_start:shell_end]
 
         self.assertIn("STDO_TOOLCHAIN_MIN='0.1.3'", guide)
         self.assertIn(
             "git+https://github.com/foolishimp/specification_methodology.git@"
-            "specification_methodology/v2.5.0-rc.5"
+            "specification_methodology/v2.5.0-rc.6"
             "#subdirectory=specification_methodology",
             guide,
         )
@@ -179,7 +179,7 @@ class GettingStartedSetupTests(unittest.TestCase):
         self.assertIn("stop for Product-owner ratification", guide)
         self.assertIn("drafting agent cannot record", guide)
         self.assertIn(
-            "SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.5'",
+            "SPEC_PLUGIN_REF='specification_methodology/v2.5.0-rc.6'",
             guide,
         )
         self.assertIn("plugin version and immutable repository cut are aligned", guide)

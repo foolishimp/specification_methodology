@@ -1,0 +1,69 @@
+{
+  "kind": "stdo.rc6-cohort-construction-checks",
+  "status": "satisfied",
+  "cohort_subject_sha256": "94c902899306272b1d45976c9edc0e82de9c749613318cd5abd9a337fdc16443",
+  "outputs_held": [
+    {
+      "path": "stack_release.json",
+      "sha256": "746473f71f06c0c5475f88ee41e4ecf39af85c1ac3d75ef47822675eb051c299"
+    },
+    {
+      "path": "axiom_indexer/releases/v2.5.0.md",
+      "sha256": "e2dc10e066a111e3098deaa7b9190d4fe3ac752be1e6799f64861efc2674ecc3"
+    },
+    {
+      "path": "stdo_representation/releases/v2.5.0.md",
+      "sha256": "fbed3900458a0c5a1fb49079dd90e542886b5789ed0f27b6abeacb2592774884"
+    }
+  ],
+  "held_child_inputs_match": true,
+  "links": [
+    {
+      "source": "README.md",
+      "target": "specification_methodology/",
+      "valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "axiom_indexer/",
+      "valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "stdo_representation/",
+      "valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md",
+      "valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "STACK_RELEASE.md",
+      "valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "stack_release.json",
+      "valid": true
+    },
+    {
+      "source": "axiom_indexer/releases/v2.5.0.md",
+      "target": "../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md",
+      "valid": true
+    },
+    {
+      "source": "stdo_representation/releases/v2.5.0.md",
+      "target": "../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md",
+      "valid": true
+    }
+  ],
+  "link_count": 8,
+  "diff_check": {
+    "returncode": 0,
+    "output": ""
+  },
+  "failures": [],
+  "claim_boundary": "Construction identity/link checks only; semantic/native qualification and publication remain separate."
+}

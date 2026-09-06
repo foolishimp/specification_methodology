@@ -34,10 +34,11 @@ inventory, executable, program schema, and output contract. Presence or
 matching prose is not enough.
 
 The immutable RC4 subject retains seven Axiom and eight Representation members.
-The selected RC5 successor retains seven Axiom members and includes the
-Representation frame-index guide in its nine-member inventory. Neither those
-historical counts nor a recomputed smaller digest can excuse a missing native
-instruction file.
+RC5 includes the Representation frame-index guide in its nine-member inventory.
+The selected RC6 successor conserves the seven-member Axiom mechanics and
+nine-member Representation boundary while rebinding the changed source and
+its authored index. Neither historical counts nor a recomputed smaller digest
+can excuse a missing native instruction file.
 
 ## Coordinated Construction
 

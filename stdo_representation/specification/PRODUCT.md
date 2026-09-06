@@ -1,13 +1,16 @@
 # STDO Representation Product
 
-Status: active source definition for the selected release-matched RC5 successor.
+Status: active source definition. The [Product Definition](../stdo_representation.json)
+`constitution.stdo.basis` owns the continuing source project's operative STDO
+selection. The represented release and dependency subjects below retain their
+own exact release identities.
 The published RC4 cohort and accepted STDO Representation
 `stdo_representation/v2.5.0-rc.1` remain immutable historical subjects.
 
 ## Product statement
 
-STDO Representation 2.5.0-rc.5 is the canonical `a_c.STDO` semantic compression
-of exact Source STDO `v2.5.0-rc.5`, the deterministic logical constraint index over that
+STDO Representation 2.5.0-rc.6 is the canonical `a_c.STDO` semantic compression
+of exact Source STDO `v2.5.0-rc.6`, the deterministic logical constraint index over that
 compression, and concise native instructions for using both. An LLM reads
 Source STDO, authors the compression, invokes the exact same-version Axiom
 Indexer mechanics, repairs diagnostics, and uses the index to select reference
@@ -27,8 +30,8 @@ and ordering choice.
 ## Product shape
 
 ```text
-exact Source STDO v2.5.0-rc.5
-  -> a_c.STDO 2.5.0-rc.5 Axiomatic Program (semantic compression)
+exact Source STDO v2.5.0-rc.6
+  -> a_c.STDO 2.5.0-rc.6 Axiomatic Program (semantic compression)
   -> Logical Constraint Map (deterministic index over the program)
   -> native STDO Representation skill
   -> LLM-selected visible frame details and ordered sections
@@ -41,7 +44,7 @@ it.
 
 ## Product terms
 
-- **Represented STDO Version** is exact version `2.5.0-rc.5`, including its
+- **Represented STDO Version** is exact version `2.5.0-rc.6`, including its
   prerelease ordinal; its stable semantic version line is `2.5.0`.
 - **Source STDO** is that exact installed standards corpus and remains semantic
   authority.
@@ -104,7 +107,7 @@ including its prerelease ordinal:
 
 ```text
 representation_exact_version = represented_stdo_exact_version
-2.5.0-rc.5 = exact_version(stdo://releases/v2.5.0-rc.5/)
+2.5.0-rc.6 = exact_version(stdo://releases/v2.5.0-rc.6/)
 representation_version_line = represented_stdo_version_line = 2.5.0
 ```
 
@@ -119,14 +122,14 @@ the release-matched relation.
 
 ## Shared-source release profile
 
-Installed STDO `v2.5.0-rc.5` requires project-qualified refs for an independently
+Installed STDO `v2.5.0-rc.6` requires project-qualified refs for an independently
 released Product in this shared source. The Product owner retains the stable
 profile already used by the accepted Representation RC1:
 
 ```text
 local_release_key = stdo_representation
 RC branch = refs/heads/rc/stdo_representation/2.5.0
-matched immutable RC = refs/tags/stdo_representation/v2.5.0-rc.5
+matched immutable RC = refs/tags/stdo_representation/v2.5.0-rc.6
 version-line selector = refs/tags/stdo_representation/v2.5.0
 release branch = refs/heads/release/stdo_representation/2.5.0
 Project Subtree root = stdo_representation
@@ -150,23 +153,23 @@ replacement for the corpus.
 
 ```text
 release_uri:
-  stdo://releases/v2.5.0-rc.5/
+  stdo://releases/v2.5.0-rc.6/
 qualified_ref:
-  refs/tags/specification_methodology/v2.5.0-rc.5
+  refs/tags/specification_methodology/v2.5.0-rc.6
 tag_object:
-  d4b7c7724944e02ce25c6e6ce69722491c349924
+  27c11b4e6673b123b4117dea4e200f01fed2f947
 commit:
-  c7888bb2dc9aee1f5a217985f6d1547cfe6465f0
+  842d05daf0be1215e99e640396e670cde4c03d31
 repository_tree:
-  cb87e3e0bfaf033ee3cfa6b260d0d9ead0312b08
+  b0bedab11282019e86603c1561187918ee8b9957
 project_subtree_tree:
-  40dc632ee5185b2b29cfce43ef8b06f223ea27ea
+  9896c966e6b5f42d2d7498831a6b28ffa03b6efd
 standards_tree:
-  b04dee86bd8d4f272d215801257ddd7ae5d5d782
+  a9616a8cc8a6ae9e5591f7938a9b7b3796ef3f7f
 installed_manifest_sha256:
-  3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f
+  bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0
 standards_member_set_sha256:
-  22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb
+  7fef8c4de7a5f8b0ef2e02d5dbb33ef720f1c5402267875805feabe369e8ec7a
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 ```
@@ -174,8 +177,8 @@ axiomatic_calculus_sha256:
 ### Axiom Indexer
 
 ```text
-exact_version: v2.5.0-rc.5
-qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.5
+exact_version: v2.5.0-rc.6
+qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.6
 construction_state: exact seven-member candidate; child cut qualification remains required
 product_member_inventory_sha256:
   41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19
@@ -188,7 +191,7 @@ output_contract_sha256:
 ```
 
 The exact Axiom child tag object, peeled commit and trees are qualified through
-that immutable RC5 ref and its release record after candidate freeze. They are
+that immutable RC6 ref and its release record after candidate freeze. They are
 not guessed or copied from RC4 before the child cut exists. Before publication,
 only the expressly selected exact construction candidate supplies mechanics.
 Released use requires the qualified same-version immutable dependency.
@@ -198,7 +201,7 @@ Historical RC4 used the seven-member inventory
 and narrower executable
 `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
 Its release record and exact tag retain those coordinates; they do not qualify
-the RC5 projection capability or change accepted predecessor evidence.
+the RC6 projection capability or change accepted predecessor evidence.
 
 ## Axiom Indexer Product dependency relation
 
@@ -211,10 +214,10 @@ Indexer Product member and transfers no semantic, acceptance, publication, or
 runtime authority.
 
 The historical RC4 dependency supplies its narrower validation, indexing and
-joining contract without frame-index projection. The selected RC5 dependency
+joining contract without frame-index projection. The selected RC6 dependency
 supplies projection under its exact contract. Bounded source qualification may
 use the selected Mechanical Construction Candidate under its existing grant;
-released projection use requires the qualified same-version immutable RC5 cut.
+released projection use requires the qualified same-version immutable RC6 cut.
 Neither path silently substitutes mutable source for an Install or adopts a
 new governing basis for an external caller.
 
@@ -344,13 +347,13 @@ that code validates role independence or computes a deterministic role packet.
 
 ## Product member set
 
-The selected RC5 packaging successor contains nine repository entries. Its
+The selected RC6 packaging successor contains nine repository entries. Its
 program and map directory carries the exact represented cut; the immutable RC4
 inventory remains its original eight entries without the frame-index guide.
 The successor member set is:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/
   axiomatic-program.json
   logical-constraint-map.json
 skills/stdo-representation/
@@ -483,8 +486,8 @@ tree `c1a8221b525a292322d80543d7d4d3491c4fe5e0`, and eight-member inventory
 Its exact-cut review and Product-owner decision accept only release claims
 `STDO-REP-2.5-C01` through `STDO-REP-2.5-C05` for its RC1-based subject.
 
-The active source project retains semantic version `2.5.0` and exact represented
-basis Source STDO `v2.5.0-rc.4`. The release-matched Representation cut is
+At the historical RC4 source checkpoint, semantic version `2.5.0` represented
+exact Source STDO `v2.5.0-rc.4`. That release-matched Representation cut was
 published at immutable annotated tag
 `stdo_representation/v2.5.0-rc.4`, tag object
 `d85d25482f9d9132147bea189b0fe0aca1929dff`, peeling to commit
@@ -494,11 +497,15 @@ Subtree tree `44fb7bc673726a920552d7dd62b3b754953396e0`. Publication does not
 accept that Product subject. The accepted RC1 refs, bytes, claims, decisions,
 and evidence remain unchanged.
 
-Postpublication project frame basis revision 16 binds the exact published
+Historical postpublication project frame basis revision 16 bound the exact published
 Axiom and Representation tag objects, common commit-B peel and repository tree,
-independent Project Subtree trees, and closed publication phase for continuing
-source. Its bounded-proxy acceptance neither mutates nor accepts either
+independent Project Subtree trees, and closed RC4 publication phase for that
+source checkpoint. Its bounded-proxy acceptance neither mutates nor accepts either
 immutable Product subject.
+
+The current project frame basis is the declaration located by the live Product
+Definition. These historical RC4 coordinates do not select the continuing
+source's method or frame basis.
 
 No GTL composition, complete admitted `M_b`, provider attestation, automatic
 frame selection, ABG runtime, or semantic-completeness claim is made.

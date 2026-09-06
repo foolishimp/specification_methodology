@@ -2,7 +2,7 @@
 
 STDO Representation supplies the source-linked STDO axiomatic program, its
 deterministic logical map and a shared native skill for Codex and Claude.
-The selected coordinated release is RC5; its exact source, dependency,
+The selected coordinated release is RC6; its exact source, dependency,
 member inventory and claims are owned by [the release record](releases/v2.5.0.md)
 and [cohort carrier](../stack_release.json). Publication state is verified from
 the exact refs, rather than inferred from a source checkout.
@@ -14,7 +14,7 @@ views, and joins caller-authored text. STDO remains semantic authority.
 ## MVP
 
 The Product contains the program and map under
-`build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/`, the complete
+`build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/`, the complete
 canonical `skills/stdo-representation/` bundle and its two native discovery
 symlinks. The exact nine-member inventory lives in the release record.
 There is no Representation-local executor or projection engine.
@@ -41,7 +41,7 @@ names a literal file; file output requires the applicable write grant.
 
 ## Exact bases
 
-The release record and cohort carrier bind exact Source STDO RC5 and the
+The release record and cohort carrier bind exact Source STDO RC6 and the
 same-version Axiom dependency, including their member and source digests.
 The caller's operative method basis remains a separate selection. A working
 candidate requires its explicit construction grant; discovery, matching version

@@ -1,12 +1,12 @@
 # Explicit frame-index use
 
 Use this reference when the exact selected Axiom dependency supplies `project`
-and the selected STDO program declares frame indexes. For the RC5 successor,
+and the selected STDO program declares frame indexes. For the RC6 successor,
 resolve the exact cohort release record or manifest, its same-version Axiom
 Product dependency, and these paths from the Representation Product root:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/
   axiomatic-program.json
   logical-constraint-map.json
 ```

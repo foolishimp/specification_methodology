@@ -29,9 +29,9 @@ construction basis do not replace that caller selection or admit a task.
    Program is canonical `a_c.STDO` compression; the Logical Constraint Map is
    the deterministic index over that unchanged compression.
 2. Bind one exact input set from the selected cohort release record or manifest.
-   The RC5 successor uses Source STDO `stdo://releases/v2.5.0-rc.5/` and exact
-   Axiom Indexer `v2.5.0-rc.5` under
-   `refs/tags/axiom_indexer/v2.5.0-rc.5`. Verify the record's actual source
+   The RC6 successor uses Source STDO `stdo://releases/v2.5.0-rc.6/` and exact
+   Axiom Indexer `v2.5.0-rc.6` under
+   `refs/tags/axiom_indexer/v2.5.0-rc.6`. Verify the record's actual source
    manifest and standards-member digests, complete Representation inventory,
    program and map identities, and same-version Axiom inventory, executable,
    schema and output-contract digests. Obtain those exact values from the
@@ -46,10 +46,10 @@ construction basis do not replace that caller selection or admit a task.
    An explicitly selected working subject supplies its own exact manifest and
    path bases; do not substitute it for an installed release. Historical RC4
    artifacts and their narrower mechanics remain under their immutable record.
-3. Read the selected logical map. The RC5 Product paths are:
+3. Read the selected logical map. The RC6 Product paths are:
 
    ```text
-   build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/
+   build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/
      axiomatic-program.json
      logical-constraint-map.json
    ```
@@ -136,6 +136,6 @@ Do not load unrelated index regions merely because they are available.
 
 For explicitly selected source qualification, retain its exact working subject
 and grant. Ordinary effects remain governed by the caller's operative STDO
-basis. Representing RC5 does not adopt it for that caller; changed-law reliance
+basis. Representing RC6 does not adopt it for that caller; changed-law reliance
 requires its existing owning source and adoption relation. Historical RC4
 compression retains its original declared coverage.

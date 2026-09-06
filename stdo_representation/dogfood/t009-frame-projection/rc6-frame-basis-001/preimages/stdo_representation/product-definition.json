@@ -1,0 +1,199 @@
+{
+  "$schema": "stdo://releases/v2.5.0-rc.5/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:stdo-representation",
+    "name": "STDO Representation",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo-representation:bounded-context:product",
+      "definition": "./specification/PRODUCT.md#product-terms"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.5.0",
+      "basis": {
+        "uri": "stdo://releases/v2.5.0-rc.5/",
+        "manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
+      }
+    },
+    "additional_authorities": [],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/STDO_REFERENCE_FRAME_BASELINE.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/AXIOMATIC_CALCULUS.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/IDENTITY_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/RELEASE_METHOD.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [
+      {
+        "uri": "./specification/PRODUCT.md#shared-source-release-profile",
+        "authority": [
+          "./specification/PRODUCT.md#product-disposition-authority"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      }
+    ],
+    "overrides": [],
+    "disambiguations": [
+      {
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
+        "term": "Executive",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        ],
+        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+        "authority": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
+        "term": "Worker",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+        ],
+        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+        "authority": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      },
+      {
+        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
+        "term": "Reviewer",
+        "context": "urn:stdo-representation:bounded-context:product",
+        "disambiguates": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+        ],
+        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+        "authority": [
+          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+        ],
+        "basis": [
+          "#/constitution/stdo/basis"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-representation"
+        ]
+      }
+    ]
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+      "authority": [
+        "./specification/PRODUCT.md#product-disposition-authority",
+        "./.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:stdo-representation"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo-representation:build-tenant:axiom-indexer",
+        "root": "./build_tenants/axiom_indexer/",
+        "design": [
+          "./build_tenants/axiom_indexer/README.md"
+        ],
+        "implementation": [
+          "./build_tenants/axiom_indexer/representation/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    }
+  },
+  "composition": [
+    {
+      "product_definition": "../axiom_indexer/stdo_default.json",
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "relation": "./specification/PRODUCT.md#axiom-indexer-product-dependency-relation",
+      "contracts": [
+        "./specification/PRODUCT.md#exact-dependency-bases",
+        "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary",
+        "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation"
+      ]
+    }
+  ]
+}

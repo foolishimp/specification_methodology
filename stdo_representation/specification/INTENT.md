@@ -14,8 +14,8 @@ instantiation, and exact ordered string joining.
 ## Product relation
 
 ```text
-Source STDO 2.5.0 (exact cut v2.5.0-rc.4)
-  -> LLM authors source-linked a_c.STDO 2.5.0-rc.4 compression
+exact represented Source STDO cut selected by the release-matched source relation
+  -> LLM authors source-linked a_c.STDO compression for that exact cut
   -> exact same-version Axiom Indexer validates or returns diagnostics
   -> Axiom Indexer instantiates the logical constraint index over it
   -> LLM selects material frames and source re-entry
@@ -39,9 +39,16 @@ The map is a derived index projection. Source STDO remains semantic authority.
 Every material item retains source routes, and the LLM re-enters source when a
 task, residual, disagreement, or unresolved route requires it.
 
+The [Product Definition](../stdo_representation.json)
+`constitution.stdo.basis` owns the continuing source project's operative STDO
+selection. This Intent states the Product relation without selecting another
+version. Exact released program and dependency identities remain bound by
+their own release records.
+
 ## Deterministic boundary
 
-Exact same-version Axiom Indexer `v2.5.0-rc.4` owns the mechanical dependency:
+The exact same-version Axiom Indexer cut selected by the release-matched
+dependency relation owns the mechanical dependency:
 
 ```text
 validate(program, bindings) -> valid map | diagnostics
@@ -53,12 +60,12 @@ reference closure, source grounding and resolution, residual re-entry,
 ordering, and deterministic content identity. It does not prove semantic
 truth, completeness, fidelity, unique interpretation, or frame applicability.
 
-During the coordinated two-commit construction flow, the exact seven-member
-Axiom Indexer RC4 candidate may supply these mechanics as bounded commit-B
+During the coordinated two-commit construction flow, an expressly authorized
+exact Axiom Indexer candidate may supply these mechanics as bounded commit-B
 construction evidence. It becomes the release dependency only through its own
-qualified immutable `axiom_indexer/v2.5.0-rc.4` cut in the same atomic cohort
-publication. Mutable sibling source, an older accepted cut, or matching
-version text cannot substitute for that exact dependency.
+qualified immutable Product cut in the same atomic cohort publication.
+Mutable sibling source, an older accepted cut, or matching version text cannot
+substitute for that exact dependency.
 
 The joiner preserves caller order and content. The LLM supplies every frame,
 label, string, and ordering choice. No validator, renderer, GraphFunction,

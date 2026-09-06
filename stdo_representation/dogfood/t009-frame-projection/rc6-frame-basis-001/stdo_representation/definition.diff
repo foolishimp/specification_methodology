@@ -1,0 +1,74 @@
+--- stdo_representation/stdo_representation.json
++++ stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/product-definition.proposed.json
+@@ -1,5 +1,5 @@
+ {
+-  "$schema": "stdo://releases/v2.5.0-rc.5/standards/schemas/product-definition.schema.json",
++  "$schema": "stdo://releases/v2.5.0-rc.6/standards/schemas/product-definition.schema.json",
+   "kind": "stdo.product-definition",
+   "product": {
+     "definition_id": "urn:stdo:product-definition:stdo-representation",
+@@ -17,8 +17,8 @@
+       },
+       "selector": "stdo://channels/2.5.0",
+       "basis": {
+-        "uri": "stdo://releases/v2.5.0-rc.5/",
+-        "manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
++        "uri": "stdo://releases/v2.5.0-rc.6/",
++        "manifest_sha256": "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0"
+       }
+     },
+     "additional_authorities": [],
+@@ -79,11 +79,11 @@
+         "term": "Executive",
+         "context": "urn:stdo-representation:bounded-context:product",
+         "disambiguates": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+         ],
+-        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
++        "resolves_to": "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+         "authority": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+         ],
+         "basis": [
+@@ -98,11 +98,11 @@
+         "term": "Worker",
+         "context": "urn:stdo-representation:bounded-context:product",
+         "disambiguates": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+         ],
+-        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
++        "resolves_to": "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+         "authority": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+         ],
+         "basis": [
+@@ -117,11 +117,11 @@
+         "term": "Reviewer",
+         "context": "urn:stdo-representation:bounded-context:product",
+         "disambiguates": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+         ],
+-        "resolves_to": "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
++        "resolves_to": "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+         "authority": [
+-          "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
++          "stdo://releases/v2.5.0-rc.6/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
+         ],
+         "basis": [
+@@ -138,7 +138,7 @@
+       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+       "authority": [
+         "./specification/PRODUCT.md#product-disposition-authority",
+-        "./.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json"
++        "./.ai-workspace/decisions/20260906_rc6_frame_basis_acceptance.json"
+       ],
+       "applies_to": [
+         "urn:stdo:product-definition:stdo-representation"

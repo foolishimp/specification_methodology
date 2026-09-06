@@ -15,32 +15,32 @@ runtime observations into semantic identity.
 
 ## Selected bases
 
-The selected RC5 source and same-version mechanical dependency are:
+The selected RC6 source and same-version mechanical dependency are:
 
 ```text
 release_uri:
-  stdo://releases/v2.5.0-rc.5/
+  stdo://releases/v2.5.0-rc.6/
 qualified_ref:
-  refs/tags/specification_methodology/v2.5.0-rc.5
+  refs/tags/specification_methodology/v2.5.0-rc.6
 tag_object:
-  d4b7c7724944e02ce25c6e6ce69722491c349924
+  27c11b4e6673b123b4117dea4e200f01fed2f947
 commit:
-  c7888bb2dc9aee1f5a217985f6d1547cfe6465f0
+  842d05daf0be1215e99e640396e670cde4c03d31
 repository_tree:
-  cb87e3e0bfaf033ee3cfa6b260d0d9ead0312b08
+  b0bedab11282019e86603c1561187918ee8b9957
 project_subtree_tree:
-  40dc632ee5185b2b29cfce43ef8b06f223ea27ea
+  9896c966e6b5f42d2d7498831a6b28ffa03b6efd
 standards_tree:
-  b04dee86bd8d4f272d215801257ddd7ae5d5d782
+  a9616a8cc8a6ae9e5591f7938a9b7b3796ef3f7f
 installed_manifest_sha256:
-  3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f
+  bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0
 standards_member_set_sha256:
-  22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb
+  7fef8c4de7a5f8b0ef2e02d5dbb33ef720f1c5402267875805feabe369e8ec7a
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
-exact_version: v2.5.0-rc.5
-qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.5
+exact_version: v2.5.0-rc.6
+qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.6
 construction_state: exact seven-member candidate; child cut qualification remains required
 product_member_inventory_sha256:
   41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19
@@ -52,11 +52,11 @@ output_contract_sha256:
   c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b
 ```
 
-Source STDO's local annotated RC5 tag and verified Install are exact construction
+Source STDO's local annotated RC6 tag and verified Install are exact construction
 inputs. The Axiom child candidate is bound by its actual seven-member inventory
 and executable/contracts above; its immutable tag object, peeled commit and trees
-must be qualified from the selected RC5 ref and release record when that cut
-exists. No RC4 Git coordinate is relabelled as RC5. Prepublication candidate use
+must be qualified from the selected RC6 ref and release record when that cut
+exists. No RC4 Git coordinate is relabelled as RC6. Prepublication candidate use
 retains its explicit construction grant and cannot stand for released use.
 
 The exact RC4 cohort and accepted `v0.1.0-rc.1` Axiom predecessor remain preserved
@@ -129,7 +129,7 @@ not enter program, map, skill, or joined-request identity.
 **REQ-P-BASIS-009**: Release qualification shall bind the complete frozen
 Product inventory, dependency bases, claim bytes, evidence, annotated immutable
 RC tag object, peeled commit, and tree. Publication or validation alone shall
-not imply Product acceptance. The selected RC5 successor includes the native
+not imply Product acceptance. The selected RC6 successor includes the native
 frame-index guide and therefore has nine members; historical RC4 retains its
 exact eight-member inventory. Every canonical native file and required relative
 instruction reference shall be included, with the two discovery symlinks

@@ -1,7 +1,9 @@
 # Axiom Indexer Product
 
-Status: active source definition after publication of the release-coupled RC4
-cut; Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
+Status: active source definition. The [Product Definition](../stdo_default.json)
+`constitution.stdo.basis` owns the continuing source project's operative STDO
+selection. Published release-coupled cuts remain immutable checkpoints;
+Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
 
 ## Product statement
 

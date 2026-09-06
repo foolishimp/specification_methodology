@@ -68,11 +68,12 @@ The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
 `dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
 only the mutable highest-published-RC selector.
 
-The selected coordinated successor is `axiom_indexer/v2.5.0-rc.5`.
+The selected coordinated successor is `axiom_indexer/v2.5.0-rc.6`.
 [Its release record](releases/v2.5.0.md) and [cohort carrier](../stack_release.json)
 bind the exact seven-member mechanics, matched Source STDO and qualification
-claims. RC5 adds explicit authored frame-index dependency closure and
-reference-only/unchanged-content materialized projections. Original validation,
+claims. RC5 introduced explicit authored frame-index dependency closure and
+reference-only/unchanged-content materialized projections; RC6 conserves those
+mechanics against the matched successor Source STDO. Original validation,
 resolution and pure joining remain available. RC4's exact bytes and observations
 remain at its immutable tag.
 
@@ -84,8 +85,8 @@ stdo status --definition stdo_default.json --verify
 ```
 
 From the coordinated repository root, use the shared release checker against
-the exact RC5 carrier for content/ref/publication integrity. The retained
-`check_constitution.py` is an explicitly historical RC4 audit, not the RC5
+the exact RC6 carrier for content/ref/publication integrity. The retained
+`check_constitution.py` is an explicitly historical RC4 audit, not the RC6
 qualification command. Publication does not by itself accept Product meaning.
 
 ## Boundary

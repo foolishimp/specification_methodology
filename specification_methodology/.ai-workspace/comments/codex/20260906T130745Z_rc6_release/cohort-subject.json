@@ -1,0 +1,136 @@
+{
+  "kind": "stdo.rc6-cohort-preparation",
+  "status": "candidate_ready",
+  "source_freeze": {
+    "tag_object": "27c11b4e6673b123b4117dea4e200f01fed2f947",
+    "commit": "842d05daf0be1215e99e640396e670cde4c03d31",
+    "tree": "b0bedab11282019e86603c1561187918ee8b9957",
+    "project_subtree_tree": "9896c966e6b5f42d2d7498831a6b28ffa03b6efd",
+    "standards_tree": "a9616a8cc8a6ae9e5591f7938a9b7b3796ef3f7f",
+    "installed_manifest_sha256": "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0",
+    "standards_member_count": 52,
+    "standards_member_set_sha256": "7fef8c4de7a5f8b0ef2e02d5dbb33ef720f1c5402267875805feabe369e8ec7a",
+    "plugin_member_count": 17,
+    "plugin_member_set_sha256": "6772b66c68666b35596958b0544778c83efaa50bbc954a4b22bb299e9aa3d95e"
+  },
+  "axiom_subject": {
+    "member_count": 7,
+    "member_set_sha256": "41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19",
+    "members": [
+      {
+        "type": "symlink",
+        "path": ".agents/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "symlink",
+        "path": ".claude/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "file",
+        "path": "build_tenants/core/code/ac.py",
+        "sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/SKILL.md",
+        "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/agents/openai.yaml",
+        "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/output-contract.md",
+        "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/program.schema.json",
+        "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+      }
+    ]
+  },
+  "representation_subject": {
+    "member_count": 9,
+    "member_set_sha256": "9cb7a9b8901f303ce69011c4f7ba551e101712c2a8e03010eac2aa1dbf9ceb8b",
+    "members": [
+      {
+        "type": "symlink",
+        "path": ".agents/skills/stdo-representation",
+        "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb",
+        "target": "../../skills/stdo-representation"
+      },
+      {
+        "type": "symlink",
+        "path": ".claude/skills/stdo-representation",
+        "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb",
+        "target": "../../skills/stdo-representation"
+      },
+      {
+        "type": "file",
+        "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+        "sha256": "ea68d04a125e7a7035759b69dba063cd86dd72c0438254c7fabfee8134f0fc9e"
+      },
+      {
+        "type": "file",
+        "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+        "sha256": "7c2369251fbb6a480b25bafa8a2042c95114ac9df673364f5841c2c55f37137e"
+      },
+      {
+        "type": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "424785112fb70e9f0c0c484a2a074d6ecfd8f9478f33a6960b7ca86968c3828d"
+      },
+      {
+        "type": "file",
+        "path": "skills/stdo-representation/agents/openai.yaml",
+        "sha256": "872aabc6e15b66dfcfe0f2d8c674a9d25511a94d74be781711304bc581619f5a"
+      },
+      {
+        "type": "file",
+        "path": "skills/stdo-representation/references/claude.md",
+        "sha256": "584189012cb0c414392e381969a9b02eda2c3cae826cd310218d92a1a3212c20"
+      },
+      {
+        "type": "file",
+        "path": "skills/stdo-representation/references/codex.md",
+        "sha256": "4ddbe37bda55a3c8f9e8545f391a906754067ffc49d2d6f0299eae2d41559497"
+      },
+      {
+        "type": "file",
+        "path": "skills/stdo-representation/references/frame-index-use.md",
+        "sha256": "0e5ed60300e4355856df04b46760944827b77329f80d40600a4ebf014dc950c0"
+      }
+    ]
+  },
+  "held_child_inputs": {
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json": "ea68d04a125e7a7035759b69dba063cd86dd72c0438254c7fabfee8134f0fc9e",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json": "7c2369251fbb6a480b25bafa8a2042c95114ac9df673364f5841c2c55f37137e",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/source-corpus.json": "d79c4d97336c062ad58a677b3c304acfc218b30d5040ee723170243ca9ef2efb",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/validation-report.json": "d83573388b24d0cdd5c2ac7ccd61610c64c4693cbd45b69fb04a08ccdb26245a",
+    "stdo_representation/skills/stdo-representation/SKILL.md": "424785112fb70e9f0c0c484a2a074d6ecfd8f9478f33a6960b7ca86968c3828d",
+    "stdo_representation/skills/stdo-representation/references/frame-index-use.md": "0e5ed60300e4355856df04b46760944827b77329f80d40600a4ebf014dc950c0"
+  },
+  "remote_expectations_sha256": "017e6ca0e5b95e521b032fd233735336941fba34ac25f76681de28a5279451b2",
+  "outputs": [
+    {
+      "path": "stack_release.json",
+      "sha256": "746473f71f06c0c5475f88ee41e4ecf39af85c1ac3d75ef47822675eb051c299"
+    },
+    {
+      "path": "axiom_indexer/releases/v2.5.0.md",
+      "sha256": "e2dc10e066a111e3098deaa7b9190d4fe3ac752be1e6799f64861efc2674ecc3"
+    },
+    {
+      "path": "stdo_representation/releases/v2.5.0.md",
+      "sha256": "fbed3900458a0c5a1fb49079dd90e542886b5789ed0f27b6abeacb2592774884"
+    }
+  ],
+  "qualification": "Prepared content only; independent/native/installed/ref/publication results remain separate."
+}

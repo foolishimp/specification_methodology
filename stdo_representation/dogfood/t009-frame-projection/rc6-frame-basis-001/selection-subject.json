@@ -1,0 +1,177 @@
+{
+  "kind": "t009.rc6-frame-basis-exact-selection",
+  "writer": "/root/t030_m01_review",
+  "status": "frozen construction selection; acceptance and release results are separate external records",
+  "git_repository_root": "../../../..",
+  "path_rule": "Acquisition paths are Git-root-relative. Member paths resolve from their named product_root. Source STDO uses its logical URI and exact manifest.",
+  "source_stdo": {
+    "uri": "stdo://releases/v2.5.0-rc.6/",
+    "manifest_sha256": "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0",
+    "source_ref": "refs/tags/specification_methodology/v2.5.0-rc.6",
+    "freeze": {
+      "tag_object": "27c11b4e6673b123b4117dea4e200f01fed2f947",
+      "commit": "842d05daf0be1215e99e640396e670cde4c03d31",
+      "tree": "b0bedab11282019e86603c1561187918ee8b9957",
+      "project_subtree_tree": "9896c966e6b5f42d2d7498831a6b28ffa03b6efd",
+      "standards_tree": "a9616a8cc8a6ae9e5591f7938a9b7b3796ef3f7f",
+      "installed_manifest_sha256": "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0",
+      "standards_member_count": 52,
+      "standards_member_set_sha256": "7fef8c4de7a5f8b0ef2e02d5dbb33ef720f1c5402267875805feabe369e8ec7a",
+      "plugin_member_count": 17,
+      "plugin_member_set_sha256": "6772b66c68666b35596958b0544778c83efaa50bbc954a4b22bb299e9aa3d95e"
+    },
+    "method_sha256": {
+      "REFERENCE_FRAME_METHOD.md": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
+      "STDO_REFERENCE_FRAME_BASELINE.md": "3cfb24f507e6746d5263c7b866d2cd4dc4de2d9caf52bb7e90b9f66642208bf0",
+      "RELEASE_METHOD.md": "582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+      "AXIOMATIC_CALCULUS.md": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+    }
+  },
+  "product_subjects": {
+    "axiom_indexer": {
+      "product_root": "axiom_indexer",
+      "selected_ref": "refs/tags/axiom_indexer/v2.5.0-rc.6",
+      "member_count": 7,
+      "member_set_sha256": "41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19",
+      "members": [
+        {
+          "type": "symlink",
+          "path": ".agents/skills/axiomatize-corpus",
+          "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+          "target": "../../skills/axiomatize-corpus"
+        },
+        {
+          "type": "symlink",
+          "path": ".claude/skills/axiomatize-corpus",
+          "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+          "target": "../../skills/axiomatize-corpus"
+        },
+        {
+          "type": "file",
+          "path": "build_tenants/core/code/ac.py",
+          "sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931"
+        },
+        {
+          "type": "file",
+          "path": "skills/axiomatize-corpus/SKILL.md",
+          "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+        },
+        {
+          "type": "file",
+          "path": "skills/axiomatize-corpus/agents/openai.yaml",
+          "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+        },
+        {
+          "type": "file",
+          "path": "skills/axiomatize-corpus/references/output-contract.md",
+          "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+        },
+        {
+          "type": "file",
+          "path": "skills/axiomatize-corpus/references/program.schema.json",
+          "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+        }
+      ]
+    },
+    "stdo_representation": {
+      "product_root": "stdo_representation",
+      "selected_ref": "refs/tags/stdo_representation/v2.5.0-rc.6",
+      "member_count": 9,
+      "member_set_sha256": "9cb7a9b8901f303ce69011c4f7ba551e101712c2a8e03010eac2aa1dbf9ceb8b",
+      "members": [
+        {
+          "type": "symlink",
+          "path": ".agents/skills/stdo-representation",
+          "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb",
+          "target": "../../skills/stdo-representation"
+        },
+        {
+          "type": "symlink",
+          "path": ".claude/skills/stdo-representation",
+          "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb",
+          "target": "../../skills/stdo-representation"
+        },
+        {
+          "type": "file",
+          "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+          "sha256": "ea68d04a125e7a7035759b69dba063cd86dd72c0438254c7fabfee8134f0fc9e"
+        },
+        {
+          "type": "file",
+          "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+          "sha256": "7c2369251fbb6a480b25bafa8a2042c95114ac9df673364f5841c2c55f37137e"
+        },
+        {
+          "type": "file",
+          "path": "skills/stdo-representation/SKILL.md",
+          "sha256": "424785112fb70e9f0c0c484a2a074d6ecfd8f9478f33a6960b7ca86968c3828d"
+        },
+        {
+          "type": "file",
+          "path": "skills/stdo-representation/agents/openai.yaml",
+          "sha256": "872aabc6e15b66dfcfe0f2d8c674a9d25511a94d74be781711304bc581619f5a"
+        },
+        {
+          "type": "file",
+          "path": "skills/stdo-representation/references/claude.md",
+          "sha256": "584189012cb0c414392e381969a9b02eda2c3cae826cd310218d92a1a3212c20"
+        },
+        {
+          "type": "file",
+          "path": "skills/stdo-representation/references/codex.md",
+          "sha256": "4ddbe37bda55a3c8f9e8545f391a906754067ffc49d2d6f0299eae2d41559497"
+        },
+        {
+          "type": "file",
+          "path": "skills/stdo-representation/references/frame-index-use.md",
+          "sha256": "0e5ed60300e4355856df04b46760944827b77329f80d40600a4ebf014dc950c0"
+        }
+      ]
+    }
+  },
+  "release_assets": {
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json": "ea68d04a125e7a7035759b69dba063cd86dd72c0438254c7fabfee8134f0fc9e",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json": "7c2369251fbb6a480b25bafa8a2042c95114ac9df673364f5841c2c55f37137e",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/source-corpus.json": "d79c4d97336c062ad58a677b3c304acfc218b30d5040ee723170243ca9ef2efb",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/validation-report.json": "d83573388b24d0cdd5c2ac7ccd61610c64c4693cbd45b69fb04a08ccdb26245a"
+  },
+  "owning_product_and_requirement_files": {
+    "axiom_indexer/specification/PRODUCT.md": "0fda33bb1fbc911fc18bda6a423304acd312e7b44f8acc6844e79c52fae56419",
+    "stdo_representation/specification/PRODUCT.md": "c6fa4afbdf6b206e1969496282ad146a68b0a12e23e3d5ea78ae2928ed08b6ce",
+    "axiom_indexer/specification/requirements/REQ-P-AUTHORING.md": "116e424f0fd226dc207885a5b3f4f521dba238c445a2bbd7b0bfa4143e4d2f8b",
+    "axiom_indexer/specification/requirements/REQ-P-PROGRAM.md": "d3c43f3a37342eccc4ba30212157223670c466fdefbb6fcf807c744ba87c10f0",
+    "axiom_indexer/specification/requirements/REQ-P-RESOLUTION.md": "af4600ac4b2f54c77b1ee28e499cfe80ce0cd200c6d51bf0bc760757b84104ed",
+    "axiom_indexer/specification/requirements/REQ-P-VALIDATION.md": "97cde45a40e0d378122cd39bb647f7a315984c88069f25cd9a165d520b6c6026",
+    "axiom_indexer/specification/requirements/REQ-P-JOINING.md": "d2c6529111e1d6d3f26d3f69ea823ca40b19642fa7083b125f8beb6bc08223aa",
+    "axiom_indexer/specification/requirements/REQ-P-PROJECTION.md": "2ca0f0601702b6e1209c42cc6ea8847adc04fd2eca334d1328598fb4199898c1",
+    "stdo_representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md": "99f577de52436302b8f0c2d87125cef5c28842591238113c584097ddd3dfd61c",
+    "stdo_representation/specification/requirements/REQ-P-STDO-AUTHORING-MAP.md": "2d4d587d66f8b5d463545f4defbb862ebbfcd32b0827e21018924c4981321ceb",
+    "stdo_representation/specification/requirements/REQ-P-CANDIDATE-VALIDATION.md": "0de254e414a773bc675ef0ff1c89e404ee4608ad5e28c94dddd024f635b74d52",
+    "stdo_representation/specification/requirements/REQ-P-NATIVE-FRAME-USE.md": "09c4af272d17e8950825915b01764593d92efcfbd023bc62866e35114371dbbc",
+    "stdo_representation/specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md": "89d5e0d4488489db581568df826e1e155c5233668cad90499279fa2e60dee1d2",
+    "stdo_representation/specification/INTENT.md": "0b78a8b6fc313e72b157f2baacc484ceb201743cfb8c8706ec4257060a774823"
+  },
+  "onboarding_files": {
+    "axiom_indexer/README.md": "fd4c54d3a4d2883ad09866b23b2e8d0785a34aa6038ded6813a204bd5dcc93dc",
+    "stdo_representation/README.md": "5ea2268b457819ed96d8bb5307d5d80c7d342b4add6d2a3ae5b1f8678a81b82d",
+    "stdo_representation/QUICKSTART.md": "f7105a85ccb0d00760a9ed587dbb8119b5ad19962ebb1fbc959b336aaeb2bde1",
+    "stdo_representation/build_tenants/axiom_indexer/README.md": "00b693f750d73b088acc25eee72136db2697a3c9e9ed873e1f5b14b39c7670a9"
+  },
+  "construction_predecessors": {
+    "axiom_indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json": "9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053",
+    "stdo_representation/dogfood/t009-frame-projection/run-004/construction-subject.json": "1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903"
+  },
+  "governing_child_basis_relation": "The release-matched source relation selects the represented RC6 cut. Continuing child source authority is selected only by each live Product Definition. Proposed RC6 Definition bindings remain non-operative until the exact external configuration decision and authorized binding; source STDO commit A retains its distinct operative RC4 construction basis.",
+  "phase_boundary": "The local Source STDO annotated tag/Install and exact child inventories are construction inputs. Child tag objects, commit-B trees, publication receipts and remote equality are later exact-cut result coordinates. This manifest asserts no qualification result, Product acceptance or fleet effect.",
+  "exact_rc5_predecessor": {
+    "path": "stdo_representation/dogfood/t009-frame-projection/rc5-frame-basis-001/selection-subject.json",
+    "sha256": "5196cc1be27d5afa0bee5fb9357358366f10e1309bf12415c9188781f1ef4b01",
+    "scope": "Historical exact RC5 selection and results retain only their original subjects and limits."
+  },
+  "affected_construction_evidence": {
+    "specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/representation-index-conservation.json": "52dcfa3bd6d2c0ba3d3ff5c5bad698aa4bfe539a301122853417476c972eb0b2",
+    "specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/representation-index-commands.json": "1323408524ad8b23d89dd24edb50ce9930efd30db3aa0cb6137b92a52a1dda52",
+    "specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/construct_rc6_index.py": "f1cf25c69b5d3aede7bba5363ec7c17b47c8191ccdece6d244faea9662112b29"
+  },
+  "delta": "One source-grounded Executive steel-thread clause and explicit index; previous 97 clauses/two indexes conserved modulo RC5-to-RC6 URI rebinding. Eight mechanically generated views. Axiom seven-member mechanics are unchanged. Representation native instructions differ only in exact current RC6 selection routes. No new role, automatic frame selection, test lane, or runtime mechanism."
+}

@@ -1,0 +1,121 @@
+{
+  "kind": "t009.rc6-internal-configuration-application",
+  "recorded_at": "2026-09-06T13:55:25.669276+00:00",
+  "writer": "/root/t030_m01_review",
+  "executive_consumption": {
+    "path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/executive-consumption.json",
+    "sha256": "1b14caf9346a9d34978067135a666539641b322c081023fe027662854da04898"
+  },
+  "applied": [
+    {
+      "path": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "68548b3f1a3e5f10a3ec6b548a5fe10b4082f77f08d6b85c773e2580f2284d4d",
+      "reviewed_candidate_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/axiom_indexer/REFERENCE_FRAME_BASIS.proposed.md",
+      "reviewed_candidate_sha256": "68548b3f1a3e5f10a3ec6b548a5fe10b4082f77f08d6b85c773e2580f2284d4d"
+    },
+    {
+      "path": "axiom_indexer/stdo_default.json",
+      "sha256": "f3bd4f64bcd7ffb7424c96348536e1f00884bc85bd317d20e63baf0a138ac6bf",
+      "reviewed_candidate_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/axiom_indexer/product-definition.proposed.json",
+      "reviewed_candidate_sha256": "f3bd4f64bcd7ffb7424c96348536e1f00884bc85bd317d20e63baf0a138ac6bf"
+    },
+    {
+      "path": "axiom_indexer/.ai-workspace/decisions/20260906_rc6_frame_basis_acceptance.json",
+      "sha256": "ef4c4151c07188b2dec590d570984520fa610a3913d22445a35c39d4df46b366",
+      "reviewed_draft_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/axiom_indexer/frame-basis-decision.proposed.json",
+      "reviewed_draft_sha256": "59acfd3bf33a499cef0a1e1c5bc4d1940a1536e7d05b0db3b20e94a3b6b965b6",
+      "result_only_delta": [
+        "decision",
+        "decided_at",
+        "evidence_refs",
+        "required_result",
+        "executive_consumption"
+      ]
+    },
+    {
+      "path": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "ab900a6ad87547bb04f5b5c39bc5461e23dd379b721b85de91117d3c1bdb6b7c",
+      "reviewed_candidate_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/REFERENCE_FRAME_BASIS.proposed.md",
+      "reviewed_candidate_sha256": "ab900a6ad87547bb04f5b5c39bc5461e23dd379b721b85de91117d3c1bdb6b7c"
+    },
+    {
+      "path": "stdo_representation/stdo_representation.json",
+      "sha256": "c7e2a587b10f1f9dd501d1a7f74ba25ee3c468da74dca133a7a9b282ea673a9e",
+      "reviewed_candidate_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/product-definition.proposed.json",
+      "reviewed_candidate_sha256": "c7e2a587b10f1f9dd501d1a7f74ba25ee3c468da74dca133a7a9b282ea673a9e"
+    },
+    {
+      "path": "stdo_representation/.ai-workspace/decisions/20260906_rc6_frame_basis_acceptance.json",
+      "sha256": "d18a80e929e3a67cfa9db4d51a27c9be3ee42ee801b1f9768579aaf57e2b1da3",
+      "reviewed_draft_path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/frame-basis-decision.proposed.json",
+      "reviewed_draft_sha256": "caf863bb32ca108df86ef4b7d2b928427daa1167276abe47369451e94c5822ab",
+      "result_only_delta": [
+        "decision",
+        "decided_at",
+        "evidence_refs",
+        "required_result",
+        "executive_consumption"
+      ]
+    }
+  ],
+  "prior_decisions_conserved": [
+    {
+      "path": "axiom_indexer/.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json",
+      "sha256": "8b9bcfe62a19a8289620f5e52399516590bc98ba2d53bcea96def0dda90c4f7f"
+    },
+    {
+      "path": "stdo_representation/.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json",
+      "sha256": "dd7676bc0aef2e4503b32ecf5cbddfa1f59dc3490c72dbab205ec852acd1ff48"
+    }
+  ],
+  "installed_verification": [
+    {
+      "product": "axiom_indexer",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "axiom_indexer/stdo_default.json",
+        "--verify"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0,
+      "stdout": {
+        "path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/axiom_indexer/installed-status.stdout.json",
+        "sha256": "72570034d5fb7fefff06068ed13fce6df6d36d400e42ad1bd903a49818aec88b"
+      },
+      "stderr": {
+        "path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/axiom_indexer/installed-status.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "valid": true,
+      "installed": true,
+      "failures": []
+    },
+    {
+      "product": "stdo_representation",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "stdo_representation/stdo_representation.json",
+        "--verify"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0,
+      "stdout": {
+        "path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/installed-status.stdout.json",
+        "sha256": "8a2948187a7cec22ab20b6476e2a5fbce1e8e34d1362f994b14bf1328faaad60"
+      },
+      "stderr": {
+        "path": "stdo_representation/dogfood/t009-frame-projection/rc6-frame-basis-001/stdo_representation/installed-status.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "valid": true,
+      "installed": true,
+      "failures": []
+    }
+  ],
+  "construction_result": "candidate_ready",
+  "scope": "Internal exact RC6 source configuration and reviewed bindings are complete. Member/native bytes remain held. Commit B, native UAT, publication, Product acceptance and external/fleet adoption are separate results and effects."
+}
