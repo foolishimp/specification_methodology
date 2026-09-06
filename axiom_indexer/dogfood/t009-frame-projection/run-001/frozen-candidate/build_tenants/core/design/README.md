@@ -74,14 +74,14 @@ vocabulary. Their governing meaning comes from the cited Product requirements.
 | I2 | Closure follows all local argument refs without role interpretation, included residual subjects, and residuals whose subjects intersect closure. Fixed-point traversal terminates on cycles without judging soundness. | PROGRAM-009; PROJECTION-002/006 |
 | I3 | Both modes retain identical selection, identities, ordered role/ref/literal links, residual/source routes and provenance. Materialized items equal original Program values. | PROJECTION-003 |
 | I4 | The supplied Map equals deterministic instantiation of the valid Program and complete current observations, including its digest. A stale whole-map basis refuses projection even if some selected sources remain unchanged. | PROJECTION-004; RESOLUTION-005 |
-| I5 | Output cannot overwrite/remove Program, Map, Binding Set or any known attempted physical source target, including escaped paths and aliases. Refusal produces diagnostics, never a newly successful view. | PROJECTION-005 |
+| I5 | Output cannot overwrite/remove Program, Map, Binding Set or any resolved source, including aliases. Refusal produces diagnostics, never a newly successful view. | PROJECTION-005 |
 | I6 | Programs without indexes retain old reports and map bytes. Join remains unchanged. Projection supplies no applicability, implication evaluation, acceptance or authority. | PROGRAM-008; PROJECTION-006/007 |
 
 ## Function ontology and dependency views
 
 | Function | Inputs -> result or refusal | Authority and composition |
 |---|---|---|
-| F1 resolve-observe | URI + Binding Set -> confined file/fragment + digest, or diagnostic | Existing Resolver, read-only; protect known physical targets before confinement/fragment refusal. Failed physical-target resolution leaves output protection incomplete. |
+| F1 resolve-observe | URI + Binding Set -> confined file/fragment + digest, or diagnostic | Existing Resolver, read-only; retain attempted confined targets for output protection even when a fragment is invalid. |
 | F2 validate | Program + F1 -> complete mechanical report | Existing validation plus optional index shape/identity/kind/source checks. Indexed programs also observe residual re-entry files. |
 | F3 instantiate | Exact valid Program + F2 report -> Map | Existing projection plus `frame_indexes` only when declared. |
 | F4 admit-selection | Program + explicit index set + mode -> selected declarations, or diagnostics | Caller selects; code rejects missing, wrong-kind, unresolved and duplicate selections. |
@@ -270,9 +270,7 @@ stateDiagram-v2
 Invocation state is ephemeral. Input/source owners undergo no lifecycle
 transition. Refusal neither retries nor repairs meaning. Output protection
 compares paths and existing inode aliases with Program/Map/Binding Set and all
-known attempted physical source targets, including escaped and invalid-fragment
-files. Recording an escaped target for protection grants no permission to read
-or admit it. Failed physical-target resolution leaves protection incomplete. An unsafe
+attempted confined source targets, including invalid-fragment files. An unsafe
 or unresolved source-protection route is neither written nor removed and is
 explicitly diagnosed; other refusals remove the safe stale projection. Success
 uses temporary sibling-file replacement and cleans temporary files on failure.
@@ -291,7 +289,7 @@ design/requirements disposition; implementation evidence remains pending.
 | I2 closure | Closure, F5 | author owns edges | Item references Item | Bound -> Closed | finite visited set | explicit refs and affected-residual incidence | pass; implementation Writer |
 | I3 mode equivalence | Projection, F6 | author | Map -> Outcome | Closed -> Projected | shared closure and exact content copy | ordered argument/literal comparison | pass; implementation Writer |
 | I4 freshness | Observation, Map | source/resolver | BindingSet -> Source | Observed -> Bound/Refused | canonical digests | whole Map/observation equality | pass; implementation Writer |
-| I5 effects | Refusal, F7 | caller output grant | CLI effect edge | Projected -> Written/Refused | path/inode checks, atomic replacement | protect attempted sources before refusal; unknown physical protection withholds effects | pass; implementation Writer |
+| I5 effects | Refusal, F7 | caller output grant | CLI effect edge | Projected -> Written/Refused | path/inode checks, atomic replacement | protect inputs and attempted sources | pass; implementation Writer |
 | I6 conservation | F1-F3/F8, exclusions | existing owners | Core | no acceptance transition | optional-field and unchanged join behavior | old-map and 15-test comparison | pass; implementation Writer |
 | Semantic usefulness | external judgment | fresh agent | Agent | post-projection assessment | no interpreter | source/view disposition comparison | pending evidence; native Reviewer |
 | GTL/runtime/M_b | excluded | outside selected scope | no carrier | no transition | not applicable | not applicable | not_applicable: no runtime selected |

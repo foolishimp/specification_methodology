@@ -5,10 +5,12 @@ cut; Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
 
 ## Product statement
 
-Axiom Indexer is an LLM-first semantic-compression tool. An LLM turns exact
-documents into a source-linked axiomatic program. A small resolver and validator
-instantiate that program as a logical constraint map and return diagnostics the
-LLM can use to repair it.
+Axiom Indexer indexes source-grounded constraint prose and its explicitly
+authored logical dependencies. An LLM turns exact documents into a source-linked
+axiomatic program. The resolver and validator instantiate its logical map and
+frame-bound projections, preserving identity, scope, qualifications, residual
+uncertainty and source routes, and return diagnostics the LLM can use to repair
+its authored input.
 
 The same executable exposes a pure labeled-text joiner. An Executive LLM uses
 the map and reference frames, supplies every label, section, and ordering
@@ -24,14 +26,18 @@ benefits, not the Product claim.
   fragment. It is not a line number.
 - **Binding Set** maps logical URI prefixes to physical or immutable resources
   for one invocation.
-- **Frame URI** identifies vocabulary or operator guidance loaded only when
-  needed.
+- **Reference Frame** is the finite evaluation contract defined by the exact
+  selected Source STDO `REFERENCE_FRAME_METHOD.md`; its owner defines its
+  question, scope, constraints, evidence and result conditions. An index does
+  not define or replace that contract.
+- **Frame URI** identifies that source-owned contract or its governing guidance.
+  Resolving the URI does not decide applicability to a task.
 - **a_c.text Axiomatic Program** is the LLM-authored, source-facing semantic
   compression under one exact `a_c` source:
 
   ```text
   P = (uri, calculus_ref, source_basis, frame_refs, vocabulary_refs,
-       symbols, clauses, residuals)
+       symbols, clauses, residuals, optional frame_indexes)
   ```
 
   It is the MVP authoring surface for an axiomatic logical map. It does not by
@@ -43,8 +49,20 @@ benefits, not the Product claim.
   operands are URIs or literals and whose source refs ground the claim.
 - **Residual** records ambiguity, conflict, omission, or unresolved meaning with
   an explicit source or frame re-entry route.
-- **Logical Constraint Map** is the derived adjacency and constraint view of one
-  unchanged program.
+- **Logical Dependency** is an explicitly authored, role-labelled reference
+  relating clauses under the selected vocabulary. Its owner supplies meaning
+  such as premise, consequence, condition, exception or support; indexing does
+  not infer that meaning or establish that a premise holds.
+- **Frame Index** is the program's source-grounded declaration selecting clauses
+  and residuals for one frame and governed scope. It projects the evaluation
+  contract and preserves the dependencies and qualifications of its selection.
+- **Logical Constraint Map** is the derived adjacency, dependency and frame-index
+  view of one unchanged program.
+- **Reference-Only Projection** exposes selected identities, declared logical
+  links, qualifications, residual routes and source routes for exact resolution.
+- **Materialized Projection** resolves that same selection into unchanged
+  authored content. It is a derived view with the same basis and scope, never a
+  separately editable source of meaning.
 - **Resolver** late-binds symbolic URIs through a supplied Binding Set.
 - **Validator** checks declared mechanical laws and returns structured
   diagnostics. It never changes the program.
@@ -77,6 +95,28 @@ Every program shall:
 The same program plus the same resolved bindings produces the same logical map
 and validation result.
 
+## Frame-index projections
+
+The author declares frame membership and logical relationships from the source.
+Existing role-labelled clause arguments express references wherever sufficient;
+each selected vocabulary owns their interpretation. Code preserves those
+relationships without deriving unstated implications or evaluating conditions.
+
+For explicitly selected frame indexes, the Product provides reference-only and
+materialized views of the same declared content and supporting closure. Each
+view binds the exact program, frame, scope, source basis and source observations.
+Shared clauses retain one identity across overlapping selections. Supporting
+premises, conditions, exceptions, qualifications and affected residuals remain
+recoverable; selecting a conclusion cannot discard its authored dependencies.
+Missing dependencies, ambiguous selections or stale source bindings return
+diagnostics and withhold the affected projection.
+
+The agent selects frames, judges applicability, and determines warranted task
+disposition from evidence and source law. A missing premise or applicable
+exception can change that judgment; materialization supplies neither a semantic
+verdict nor authority to act. The pure joiner retains its existing exact-text
+contract and makes none of these choices.
+
 ## Coordinated release identity
 
 Every successor Axiom Indexer cut shall select one exact immutable Source STDO
@@ -106,6 +146,7 @@ author:      LLM reads sources and frames, then writes P*
 validate:    tool resolves URIs and reports valid | diagnostics
 repair:      LLM writes a new P* when diagnostics or source review require it
 instantiate: tool derives the logical map from unchanged valid bytes
+project:     tool resolves an explicit frame-index selection into either view
 use:         LLM applies the map to a task and re-enters source when needed
 compose:     Executive selects frames and authors ordered labeled text
 join:        tool concatenates those exact strings without semantic action
@@ -147,6 +188,11 @@ The MVP validator checks:
 - residual subject and re-entry closure; and
 - canonical serialization and a derived content digest.
 
+Frame projection additionally checks its declared selection and dependency
+closure, exact program/map binding and source freshness against the supplied
+index observations. This bounded comparison does not turn general validation
+into an inferred frame-rule interpreter.
+
 Validation does not prove that an authored claim is true, complete, useful, or
 the only interpretation. Those remain LLM review and dogfood questions.
 
@@ -187,10 +233,11 @@ or execution authority.
 
 ## Authority boundary
 
-Source owners own source meaning. Frame owners own their declared vocabulary
-and operators. This Product owns the program contract, URI resolution boundary,
-validator behavior, exact string-join law, native skill instructions, and MVP
-evidence.
+Source owners own source meaning. Frame owners own their evaluation contracts,
+vocabulary and operators. This Product owns the program and projection
+contracts, URI resolution boundary, validator behavior, exact string-join law,
+native skill instructions and evidence. STDO Representation owns STDO-specific
+authored chains, frame membership and native-use qualification.
 
 Loading a program or skill grants no operation, review, acceptance, release, or
 runtime authority.

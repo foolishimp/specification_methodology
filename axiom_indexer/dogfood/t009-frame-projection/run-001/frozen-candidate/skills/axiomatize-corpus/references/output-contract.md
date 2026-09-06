@@ -116,9 +116,8 @@ and item identity; it is never reconstructed by a template or interpreter.
 
 Success writes the projection to stdout, or to `--output` with a report on
 stdout. Refusal emits a structured report and nonzero status, clearing a safe
-stale output. Inputs and known attempted source targets, including escaped
-paths, aliases and invalid fragments, are protected from writing or removal.
-An escaped target is protected without admitting or reading it. An output route whose
+stale output. Inputs and resolved sources, including aliases and invalid-
+fragment targets, are protected from writing or removal. An output route whose
 source safety cannot be established is retained and explicitly diagnosed.
 Provide stable input files and exclusive output scope during an invocation.
 Projection does not change the pure joiner below.

@@ -1,0 +1,11 @@
+{
+  "kind": "t009.independent-implementation-finding",
+  "reviewer": "/root/t030_m01_writer",
+  "subject_sha256": "c2f30f109425cabdea406474f5ab3bd88d9cccbc455fed297b76fbd1d1e21238",
+  "ac_sha256": "728551c7e54e2445fda2807a5a7bd5e20cff6c2030eda812ec55f331cd7d1011",
+  "status": "LOCAL_REPAIR reported; root disposition pending",
+  "trigger": "Authored source repo://fixture/../outside.md#keep under a binding rooted at allowed/, with --output pointing at outside.md or its alias.",
+  "observed_result": "Reviewer temp-only replay returned binding_escape and deleted the attempted source.",
+  "cause": "Resolver.resolve checks confinement before recording the known target in protected_paths; protect_program_sources swallows binding_escape and project_cli permits stale-output deletion.",
+  "minimum_correction": "Protect known attempted physical source targets before confinement refusal without admitting or reading them; unresolved physical target protection must withhold output effects. Add direct and alias escape regression cases."
+}

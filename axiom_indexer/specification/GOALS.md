@@ -2,14 +2,18 @@
 
 ## Current Goal
 
-Status: exact RC4 mechanics baseline supplies T-009 M02's selected dependencies;
-no generic mechanics defect demonstrated and no Product code change required
+Status: T-009 selects the frame-index projection Product increment; exact RC4
+mechanics remain qualified for the preceding narrower scope
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
 diagnostics, map generation and exact joining are the starting point. A useful
-contribution may be validated reuse; a new capability requires a demonstrated
-mechanical gap and its own exact Product/requirement/design authority.
+contribution may be validated reuse; a new capability requires its own exact
+Product/requirement/design authority. The owner now selects source-grounded
+frame indexes and explicit logical dependencies with reference-only and
+unchanged-content materialized views. An agent authors the relationships and
+selects the frame; code preserves their declared closure and diagnoses missing
+or stale bindings. The reference frame remains its owner's evaluation contract.
 
 The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
 owns the shared outcome. The existing combined

@@ -1,0 +1,28 @@
+{
+  "kind": "t009.writer-reproduced-independent-counterexample",
+  "ac_sha256": "728551c7e54e2445fda2807a5a7bd5e20cff6c2030eda812ec55f331cd7d1011",
+  "temporary_fixture_only": true,
+  "source_before_sha256": "f789cd2ef247b325e2960fd11e2514fdd605ca46439ebcbf4f89f7ce2ce64f40",
+  "source_exists_after": false,
+  "exit_code": 1,
+  "stdout": {
+    "diagnostics": [
+      {
+        "code": "binding_escape",
+        "field": "source_refs",
+        "record": "urn:example:index:quarantine",
+        "ref": "repo://fixture/../outside.md#keep"
+      }
+    ],
+    "frame_index_refs": [
+      "urn:example:index:quarantine",
+      "urn:example:index:transfer"
+    ],
+    "kind": "axiom-indexer.projection-report",
+    "map_sha256": "sha256:05482a63bc7a34c4a9ddb00de0c02d294a4408e88c190c67730c4358f463e2e8",
+    "program_uri": "urn:example:program:mvp",
+    "schema_version": 1,
+    "status": "invalid"
+  },
+  "stderr": ""
+}

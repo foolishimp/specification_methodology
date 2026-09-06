@@ -32,3 +32,15 @@ and release records are not program fields.
 
 **REQ-P-PROGRAM-007**: Instantiation derives a logical adjacency and constraint
 view from unchanged program bytes. The view shall not become rival authority.
+
+**REQ-P-PROGRAM-008**: A program may declare source-grounded frame indexes with
+unique identities, one declared frame, exact scope, selected clause identities
+and retained residual identities. These declarations shall not replace their
+source-owned evaluation contracts or supply task applicability or authority.
+Programs without frame-index declarations retain their existing valid behavior.
+
+**REQ-P-PROGRAM-009**: Explicit logical dependencies shall use the existing
+role-labelled clause operands and URI references wherever sufficient. The
+selected vocabulary owns premise, consequence, condition, exception and support
+meaning. Code shall retain ordered roles, references and literal qualifications
+without inventing implications or evaluating their truth.

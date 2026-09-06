@@ -24,5 +24,9 @@ calculus, source, and frame bytes. Expected-digest comparison remains an
 external caller check until the program contract declares it. Digests do not
 replace logical URIs, and member counts remain derived observations.
 
+For the explicitly selected projection operation, `REQ-P-PROJECTION` owns the
+comparison with the supplied exact index's source observations. General
+validation still records observations without inventing expected identities.
+
 **REQ-P-RESOLUTION-006**: Relocating physical bytes while preserving the same
 logical URI binding shall not require rewriting the program.

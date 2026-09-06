@@ -143,7 +143,6 @@ class Resolver:
         seen: set[str] = set()
         self.bindings: list[tuple[str, Path]] = []
         self.protected_paths: set[Path] = set()
-        self.protection_complete = True
         for row in rows:
             if not isinstance(row, dict) or set(row) != {"uri_prefix", "path"}:
                 raise ValueError("invalid_binding_shape")
@@ -175,18 +174,12 @@ class Resolver:
             raise ValueError("ambiguous_uri")
         prefix, root = matches[0]
         relative = unquote(base_uri[len(prefix) :]).lstrip("/")
-        try:
-            target = (root / relative).resolve()
-        except (OSError, ValueError, RuntimeError):
-            self.protection_complete = False
-            raise
-        # Protect a known attempted source even when its binding must refuse.
-        # This records identity only; it does not admit or read escaped bytes.
-        self.protected_paths.add(target)
+        target = (root / relative).resolve()
         try:
             target.relative_to(root)
         except ValueError as exc:
             raise ValueError("binding_escape") from exc
+        self.protected_paths.add(target)
         if not target.exists():
             raise ValueError("missing_resource")
         if fragment:
@@ -833,8 +826,8 @@ def protect_program_sources(program: Any, resolver: Resolver) -> None:
         try:
             resolver.resolve(ref)
         except (OSError, UnicodeError, ValueError, RuntimeError):
-            # Known targets are protected before confinement/fragment refusal.
-            # A failed physical resolution leaves protection incomplete.
+            # Confined targets are recorded before existence/fragment checks.
+            # An unresolved URI has no resolved physical input to protect.
             pass
 
 
@@ -866,7 +859,7 @@ def project_cli(args: argparse.Namespace) -> int:
         program = load_json(args.program)
         resolver = Resolver(args.bindings, load_json(args.bindings))
         protect_program_sources(program, resolver)
-        source_safety = resolver.protection_complete
+        source_safety = True
         logical_map = load_json(args.map)
         evaluation, result = project_program(program, logical_map, resolver, selected, args.mode)
         issues.extend(evaluation["diagnostics"])
@@ -874,7 +867,6 @@ def project_cli(args: argparse.Namespace) -> int:
         diagnostic(issues, "input_error", root, "input", str(exc))
         exit_code = 2
 
-    source_safety = source_safety and resolver is not None and resolver.protection_complete
     safe_output = source_safety
     if args.output is not None:
         protected = inputs + list(resolver.protected_paths if resolver is not None else [])
@@ -885,7 +877,6 @@ def project_cli(args: argparse.Namespace) -> int:
                 exit_code = 2
             elif not source_safety:
                 diagnostic(issues, "output_safety_unresolved", root, "output", str(args.output))
-                exit_code = 2
         except (OSError, ValueError, RuntimeError) as exc:
             diagnostic(issues, "output_safety_unresolved", root, "output", str(exc))
             safe_output = False

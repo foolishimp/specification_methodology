@@ -26,3 +26,9 @@ candidate. The validator shall never perform that revision.
 
 **REQ-P-AUTHORING-006**: A valid program is structurally usable evidence, not a
 claim of truth, completeness, unique interpretation, or acceptance.
+
+**REQ-P-AUTHORING-007**: The author shall ground frame membership and logical
+dependencies in the selected source and vocabulary. It shall expose the
+supporting premises, conditions, exceptions, qualifications and residuals
+material to its selected conclusions. A frame projection or successful join
+shall not supply missing premises, task applicability, disposition or authority.

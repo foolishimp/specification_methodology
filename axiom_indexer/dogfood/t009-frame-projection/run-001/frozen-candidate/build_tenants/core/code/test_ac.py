@@ -724,53 +724,6 @@ class FrameProjectionTests(unittest.TestCase):
         self.assertEqual(output.read_bytes(), b"retained but explicitly unsafe")
         self.assertIn("output_safety_unresolved", {d["code"] for d in json.loads(result.stdout)["diagnostics"]})
 
-    def test_escaped_source_refusal_preserves_direct_and_aliased_targets(self) -> None:
-        allowed = self.root / "allowed"
-        allowed.mkdir()
-        for name in ("calculus.md", "docs.md", "details.md", "frame.md"):
-            (self.root / name).rename(allowed / name)
-        self.binding_value["bindings"][0]["path"] = "allowed"
-        self.binding_path.write_bytes(canonical_bytes(self.binding_value))
-        source = self.root / "outside.md"
-        original = b"# Keep\n\nAn escaped attempted source must remain unchanged.\n"
-        source.write_bytes(original)
-        symbolic = self.root / "escaped-symlink.json"
-        symbolic.symlink_to(source)
-        hard = self.root / "escaped-hardlink.json"
-        os.link(source, hard)
-        for uri in ("repo://fixture/../outside.md#keep", "repo://fixture/..%2Foutside.md#keep"):
-            changed = copy.deepcopy(self.value)
-            changed["frame_indexes"][0]["source_refs"] = [uri]
-            self.program_path.write_bytes(canonical_bytes(changed))
-            for output in (source, symbolic, hard):
-                with self.subTest(uri=uri, output=output.name):
-                    result = self.cli(output=output)
-                    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
-                    self.assertEqual(source.read_bytes(), original)
-                    self.assertTrue(output.exists())
-                    codes = {d["code"] for d in json.loads(result.stdout)["diagnostics"]}
-                    self.assertIn("binding_escape", codes)
-                    self.assertIn("input_output_path_alias", codes)
-        self.assertTrue(symbolic.is_symlink())
-
-    def test_unresolved_physical_target_withholds_output_cleanup(self) -> None:
-        first = self.root / "loop-a.md"
-        second = self.root / "loop-b.md"
-        first.symlink_to(second)
-        second.symlink_to(first)
-        changed = copy.deepcopy(self.value)
-        changed["frame_indexes"][0]["source_refs"] = ["repo://fixture/loop-a.md#unknown"]
-        self.program_path.write_bytes(canonical_bytes(changed))
-        output = self.root / "projection.json"
-        original = b"Old result retained and explicitly diagnosed as unsafe."
-        output.write_bytes(original)
-        result = self.cli(output=output)
-        self.assertEqual(result.returncode, 2)
-        self.assertEqual(output.read_bytes(), original)
-        self.assertIn("output_safety_unresolved", {d["code"] for d in json.loads(result.stdout)["diagnostics"]})
-        self.assertTrue(first.is_symlink())
-        self.assertTrue(second.is_symlink())
-
     def test_programs_without_indexes_keep_their_existing_map_shape(self) -> None:
         plain = program()
         valid = validate_program(plain, self.resolver)

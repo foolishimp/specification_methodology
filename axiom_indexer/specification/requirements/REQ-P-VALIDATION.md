@@ -14,6 +14,10 @@ record its observed digest. Machine interpretation of frame-declared operator,
 arity, or type rules is deferred until a separate exact frame-rule contract is
 selected; the validator shall not infer those rules from prose.
 
+The separately selected frame-index projection contract checks authored
+membership, reference closure and source freshness only. It does not select
+machine interpretation of frame-declared operator, arity, type or logical rules.
+
 **REQ-P-VALIDATION-003**: Diagnostics shall identify affected program items,
 fields, and references by symbolic URI. Array positions or line numbers may be
 included only as display hints.
