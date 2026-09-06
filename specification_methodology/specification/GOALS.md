@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: RC5 delivery completed; bounded RC6 release preparation selected
+Status: RC6 release completed; no successor work selected
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -19,13 +19,14 @@ intermediate results. Qualification establishes the supported use outcomes;
 publication and actual consumer adoption retain their separate authority and
 evidence. The owner-selected coordinated RC5 publication is complete through
 T030/T009, with exact qualification and public reacquisition evidence. The
-owner's subsequent "can we release 2.5.0 rc6?" instruction selects the bounded
-RC6 successor containing the reviewed Executive steel-thread guidance and
-matching distributions. Fleet adoption remains outside this goal.
+owner's subsequent "can we release 2.5.0 rc6?" instruction is complete at the
+bounded RC6 scope: reviewed Executive steel-thread guidance, matching
+distributions, four independently assessed native contexts and verified public
+reacquisition. Fleet adoption remains outside this goal.
 
 ## Selected Work
 
-- [RC6 release work](../.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md) owns the current bounded source-cut preparation, affected qualification and coordinated publication. It preserves the operative RC4 source basis and does not reopen the completed delivery tickets.
+- [RC6 release result](../.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) records the completed source cut, affected qualification, atomic publication and fresh public reacquisition. It preserves the operative RC4 source basis and does not reopen the completed delivery tickets.
 - [T-030](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline) closes the source model, owning methods, shared native guidance/updater and aggregate qualification.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) closes Axiom mechanics, faithful STDO chains/frame indexes, native use and the matched RC5 release.
 - [RC5 release evidence](../.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) retains the completed predecessor's exact subjects, independent judgments, native limitations, installed checks and public receipts.
@@ -66,7 +67,7 @@ sequence, conditions and progress.
   plugin is subordinate auxiliary tooling bound by the same release record.
 - RC3 remains the immutable STDO predecessor. Transitional RC3 Axiom Indexer
   and Representation work is evidence only and receives no child publication.
-- RC5 is the current published complete cohort; RC1 through RC4 retain their immutable identities and historical evidence.
+- RC6 is the current published complete cohort; RC5 is its exact predecessor. Earlier cuts retain their immutable identities and historical evidence.
 - Product acceptance and consumer adoption remain separate from publication.
 
 ## Retained Native Outcome

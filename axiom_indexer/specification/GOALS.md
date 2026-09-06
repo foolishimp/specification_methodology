@@ -2,7 +2,7 @@
 
 ## Current Goal
 
-Status: completed; exact RC5 frame-index mechanics and frame basis 9 are qualified, published and publicly reacquired through T-009
+Status: completed; exact RC6 mechanics and frame basis 10 are qualified, published and publicly reacquired
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -14,7 +14,7 @@ unchanged-content materialized views. An agent authors the relationships and
 selects the frame; code preserves their declared closure and diagnoses missing
 or stale bindings. The reference frame remains its owner's evaluation contract.
 
-The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) closes the selected delivery with exact evidence and preserved limitations.
+The [RC6 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) closes the separately selected successor with all seven mechanics members unchanged, exact RC6 source/frame bindings and public reacquisition. The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) and completed T-009 remain predecessor evidence with their original limitations. No successor work is selected.
 
 The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
 owns the shared outcome. The existing combined

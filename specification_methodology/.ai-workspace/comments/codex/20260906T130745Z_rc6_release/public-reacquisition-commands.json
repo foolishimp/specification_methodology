@@ -1,0 +1,302 @@
+[
+  {
+    "argv": [
+      "git",
+      "init",
+      "--bare",
+      "/private/tmp/stdo-rc6-public-5evsqtko/public.git"
+    ],
+    "finished_at": "2026-09-06T14:27:33.000954+00:00",
+    "name": "public-git-init",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:32.987549+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "5e3cae00141b1f6fe7c5dda0dcc21bd2708d4e6f6a12b71c07c3b315eb2ef4fd"
+  },
+  {
+    "argv": [
+      "git",
+      "--git-dir",
+      "/private/tmp/stdo-rc6-public-5evsqtko/public.git",
+      "fetch",
+      "--no-tags",
+      "--depth=1",
+      "https://github.com/foolishimp/specification_methodology.git",
+      "refs/tags/specification_methodology/v2.5.0-rc.6:refs/tags/specification_methodology/v2.5.0-rc.6",
+      "refs/tags/axiom_indexer/v2.5.0-rc.6:refs/tags/axiom_indexer/v2.5.0-rc.6",
+      "refs/tags/stdo_representation/v2.5.0-rc.6:refs/tags/stdo_representation/v2.5.0-rc.6"
+    ],
+    "finished_at": "2026-09-06T14:27:38.714581+00:00",
+    "name": "public-products-fetch",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:33.002671+00:00",
+    "stderr_sha256": "f3183d63da3c1989f4744e4655e1817267199fca8a85bae0196d7768dca1156c",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+      "--store",
+      "/private/tmp/stdo-rc6-public-5evsqtko/store",
+      "install",
+      "v2.5.0-rc.6",
+      "--repository",
+      "https://github.com/foolishimp/specification_methodology.git",
+      "--manifest-sha256",
+      "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0"
+    ],
+    "finished_at": "2026-09-06T14:27:41.870208+00:00",
+    "name": "public-stdo-install",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:33.003269+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "00dac363064996b834816f7bfcd9d44006cc38389b8e8c88b083eb27c2801f05"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+      "--store",
+      "/private/tmp/stdo-rc6-public-5evsqtko/store",
+      "verify",
+      "v2.5.0-rc.6",
+      "--manifest-sha256",
+      "bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0"
+    ],
+    "finished_at": "2026-09-06T14:27:41.916405+00:00",
+    "name": "public-stdo-verify",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:41.870559+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "08bfd3952cc62bfe07b784266e1066aab93948e25188c363c19f8954ce032b7b"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-I",
+      "-c",
+      "import importlib.metadata,json,pathlib,stdo_toolchain; print(json.dumps({'version':importlib.metadata.version('stdo-toolchain'),'root':str(pathlib.Path(stdo_toolchain.__file__).parent)}))"
+    ],
+    "finished_at": "2026-09-06T14:27:43.935652+00:00",
+    "name": "public-manager-location",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:43.891438+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "6038ed5b5ac30733c58a5a52d7ffd2350e226614a1e8d9b7026d0cbed4dd9b18"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--emit-map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/regenerated-map.json"
+    ],
+    "finished_at": "2026-09-06T14:27:44.211309+00:00",
+    "name": "public-index-validate",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:44.064529+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "d83573388b24d0cdd5c2ac7ccd61610c64c4693cbd45b69fb04a08ccdb26245a"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--mode",
+      "reference-only"
+    ],
+    "finished_at": "2026-09-06T14:27:44.418136+00:00",
+    "name": "public-index-worker-reference-only",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:44.235134+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "77b859756642c97f830e5af6260f26eddf5418ba298164a4c7af1901655a930d"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--mode",
+      "materialized"
+    ],
+    "finished_at": "2026-09-06T14:27:44.614199+00:00",
+    "name": "public-index-worker-materialized",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:44.430523+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "c014ed4bc2b691119c571ad1ce8fa88931772d08110e4b2b0f158b7aaa8d8d26"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "reference-only"
+    ],
+    "finished_at": "2026-09-06T14:27:44.813238+00:00",
+    "name": "public-index-reviewer-reference-only",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:44.626944+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "2f5e8ea512db61ec70c135b6201d0792822d0caa7baef6ce6ea74e7ac714f389"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "materialized"
+    ],
+    "finished_at": "2026-09-06T14:27:45.007816+00:00",
+    "name": "public-index-reviewer-materialized",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:44.825734+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "784e1466bc51d35d06f1fe9eb6c7b8b45fd0e7efa9e22b32d70b6fa453e976f3"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:executive-steel-thread-delivery",
+      "--mode",
+      "reference-only"
+    ],
+    "finished_at": "2026-09-06T14:27:45.206824+00:00",
+    "name": "public-index-executive-reference-only",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:45.020249+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4eaf83960d01db99d7d3e8f113787a994f8c16ca4db221e2bea553e3b77e601a"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:executive-steel-thread-delivery",
+      "--mode",
+      "materialized"
+    ],
+    "finished_at": "2026-09-06T14:27:45.404970+00:00",
+    "name": "public-index-executive-materialized",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:45.219844+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "5b7a971e9651d962f938d76c44dc15b7261ea6bcb82f1db4b76bfe074a8573e0"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "reference-only"
+    ],
+    "finished_at": "2026-09-06T14:27:45.601170+00:00",
+    "name": "public-index-combined-reference-only",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:45.417166+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "b46dd0347cb516b773339f446e0f231d03b32e371d60eb2aae33a51d693896b6"
+  },
+  {
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "-B",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/public-bindings.json",
+      "--map",
+      "/private/tmp/stdo-rc6-public-5evsqtko/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "materialized"
+    ],
+    "finished_at": "2026-09-06T14:27:45.797095+00:00",
+    "name": "public-index-combined-materialized",
+    "returncode": 0,
+    "started_at": "2026-09-06T14:27:45.614106+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "2a522758ff0f9c15986550b67ff7fc3bfad487662ff5f916a8d95f79e4306fee"
+  }
+]

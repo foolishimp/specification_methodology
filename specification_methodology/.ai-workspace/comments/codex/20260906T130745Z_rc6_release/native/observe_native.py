@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import json
+import re
 import subprocess
 
 HERE = Path(__file__).resolve().parent
@@ -14,9 +15,12 @@ def sha(path):
 
 def parse_final(text):
     value = text.strip()
-    if value.startswith('```') and value.endswith('```'):
-        value = value.split('\n', 1)[1].rsplit('```', 1)[0].strip()
-    return json.loads(value)
+    blocks = list(re.finditer(r'```(?:json)?[ \t]*\n(.*?)\n```', value, re.S))
+    if len(blocks) == 1:
+        block = blocks[0]
+        return json.loads(block.group(1)), {'kind': 'single_fenced_json',
+            'prefix': value[:block.start()].strip(), 'suffix': value[block.end():].strip()}
+    return json.loads(value), {'kind': 'bare_json'}
 
 
 def main():
@@ -33,7 +37,8 @@ def main():
                'worksite_unchanged': not result['snapshot_changes'],
                'semantic_disposition': 'Not computed. Independent oracle assessment is required.'}
         try:
-            final = parse_final((directory / 'final.txt').read_text())
+            final, presentation = parse_final((directory / 'final.txt').read_text())
+            row['presentation'] = presentation
             required = {'delivery_decision', 'evidence_disposition', 'qualification_sequence',
                         'handoff_sections', 'joined_request'}
             row['required_fields_present'] = required <= final.keys()

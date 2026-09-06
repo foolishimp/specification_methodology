@@ -2,24 +2,27 @@
 
 ## Current state
 
-Status: completed; exact RC5 source, frame indexes and native path qualified, published and publicly reacquired
+Status: completed; exact RC6 source, frame indexes and native path qualified, published and publicly reacquired
 
 Make STDO axiomatic constraints useful in ordinary native Codex and Claude work: recover exact sources and applicable frames, obtain sufficient bounded context, preserve reusable judgments and owner rulings, and support truthful completion, interruption and recovery. A regenerated index must remain source-faithful and usable for its selected outcomes.
 
 The [overall STDO goal](../../specification_methodology/specification/GOALS.md#goal) owns direction. [T-009](../.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md) closes the combined Indexer/Representation work. The [RC5 result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) binds all source, mechanical, native, installed and public evidence, including failed predecessors and bounded limitations.
+
+The separately selected [RC6 result](../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) adds the source-owned Executive constraint and index, conserves the prior 97 clauses and two indexes modulo exact source rebinding, and qualifies four fresh native contexts on both hosts. Its map, report and eight selected views reproduce from freshly reacquired public bytes. No successor work is selected; this result does not reopen T-009 or broaden historical native claims.
 
 The Executive consumes the closed result and preserves its exact scope. Source meaning remains with STDO, generic mechanics with Axiom, and STDO authoring/frame selection/native use with Representation. Model acceptance, qualification, publication and consumer adoption remain distinct. No new executor, resource-accounting framework or ABIogenesis work is implied.
 
 ## Selected release basis
 
 The continuing source Definitions and frame configuration bind exact Source
-STDO `v2.5.0-rc.5`. T009 owns qualification and coordinated publication of the
-same-cut seven-member Axiom mechanics and nine-member Representation bundle,
+STDO `v2.5.0-rc.6` and accepted frame basis 18. The RC6 result records the
+qualification and coordinated publication of the same-cut seven-member Axiom
+mechanics and nine-member Representation bundle,
 including its program, map and frame-index use guide. The LLM interprets
 meaning and selects frames; Axiom preserves explicitly authored dependencies
 and materializes selected unchanged content. Source STDO remains authority.
 
-RC5 is published through the guarded atomic transaction and verified public reacquisition; RC4 remains its immutable predecessor.
+RC6 is published through the guarded atomic transaction and verified public reacquisition; RC5 remains its exact immutable predecessor.
 Historical RC1 Product acceptance and RC4 publication evidence remain unchanged;
 release publication and frame acceptance do not assert Product acceptance.
 

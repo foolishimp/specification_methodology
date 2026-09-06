@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-09-06T14:00:53.254706+00:00",
+  "context": "executive-delivery-claude-source",
+  "runner_sha256": "bfbff5a48e9d98b58cbb5723eef82f9d1601a79c7d3f86efba2efcdc957bd46e",
+  "profile_sha256": "ddda0f97f4406e45ca378af166d6001f0ec017f168d9ae97d25be143016e2ca0",
+  "argv": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native/attempts/executive-delivery-claude-source/sandbox.sb",
+    "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+    "-c",
+    "import json,os,sys\nx=json.loads(sys.argv[1]);rows=[]\nfor p in x['canonicalize']:\n try:\n  resolved=os.path.realpath(p,strict=True);rows.append({'operation':'strict_canonicalization','path':p,'resolved':resolved,'pass':True})\n except OSError as e:rows.append({'operation':'strict_canonicalization','path':p,'pass':False,'error':str(e)})\nfor p in x['read_allowed']:\n try:\n  with open(p,'rb') as f:f.read(1)\n  rows.append({'operation':'allowed_read','path':p,'pass':True})\n except OSError as e:rows.append({'operation':'allowed_read','path':p,'pass':False,'error':str(e)})\nfor p in x['read_denied']:\n try:\n  with open(p,'rb') as f:f.read(1)\n  rows.append({'operation':'denied_read','path':p,'pass':False})\n except PermissionError as e:rows.append({'operation':'denied_read','path':p,'pass':True,'error':str(e)})\n except OSError as e:rows.append({'operation':'denied_read','path':p,'pass':False,'error':str(e)})\np=x['runtime_write']\ntry:\n with open(p,'w') as f:f.write('nonsemantic host transport probe\\n')\n os.unlink(p);rows.append({'operation':'runtime_write','path':p,'pass':True})\nexcept OSError as e:rows.append({'operation':'runtime_write','path':p,'pass':False,'error':str(e)})\nfor p in x['write_allowed']:\n existed=os.path.exists(p)\n try:\n  fd=os.open(p,os.O_WRONLY|os.O_CREAT,0o600);os.close(fd)\n  tmp=p+'.tmp.0.aa'\n  with open(tmp,'w') as f:f.write('nonsemantic atomic-editor path probe')\n  os.unlink(tmp)\n  if not existed:os.unlink(p)\n  rows.append({'operation':'allowed_write_open_without_data_change','path':p,'pass':True})\n except OSError as e:rows.append({'operation':'allowed_write_open_without_data_change','path':p,'pass':False,'error':str(e)})\np=x['write_denied']\ntry:\n fd=os.open(p,os.O_WRONLY);os.close(fd);rows.append({'operation':'denied_write_open','path':p,'pass':False})\nexcept PermissionError as e:rows.append({'operation':'denied_write_open','path':p,'pass':True,'error':str(e)})\nexcept OSError as e:rows.append({'operation':'denied_write_open','path':p,'pass':False,'error':str(e)})\nprint(json.dumps(rows));sys.exit(0 if all(r['pass'] for r in rows) else 2)\n",
+    "{\"read_allowed\": [\"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/task.md\", \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/native/stdo-store/releases/v2.5.0-rc.6/standards/SPEC_METHOD.md\"], \"canonicalize\": [\"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite\", \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/claude\"], \"read_denied\": [\"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native-oracle.json\", \"/Users/jim/src/apps/specification_methodology/specification_methodology/specification/SCENARIOS.md\", \"/private/tmp/stdo-rc6-native-20260906T130745Z/withheld-sibling.txt\"], \"runtime_write\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/preflight-write.txt\", \"write_denied\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/task.md\", \"write_allowed\": []}"
+  ],
+  "exit_code": 0,
+  "stdout": "[{\"operation\": \"strict_canonicalization\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite\", \"resolved\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite\", \"pass\": true}, {\"operation\": \"strict_canonicalization\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/claude\", \"resolved\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/claude\", \"pass\": true}, {\"operation\": \"allowed_read\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/task.md\", \"pass\": true}, {\"operation\": \"allowed_read\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/native/stdo-store/releases/v2.5.0-rc.6/standards/SPEC_METHOD.md\", \"pass\": true}, {\"operation\": \"denied_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native-oracle.json\", \"pass\": true, \"error\": \"[Errno 1] Operation not permitted: '/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native-oracle.json'\"}, {\"operation\": \"denied_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/specification/SCENARIOS.md\", \"pass\": true, \"error\": \"[Errno 1] Operation not permitted: '/Users/jim/src/apps/specification_methodology/specification_methodology/specification/SCENARIOS.md'\"}, {\"operation\": \"denied_read\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/withheld-sibling.txt\", \"pass\": true, \"error\": \"[Errno 1] Operation not permitted: '/private/tmp/stdo-rc6-native-20260906T130745Z/withheld-sibling.txt'\"}, {\"operation\": \"runtime_write\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/preflight-write.txt\", \"pass\": true}, {\"operation\": \"denied_write_open\", \"path\": \"/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/task.md\", \"pass\": true, \"error\": \"[Errno 1] Operation not permitted: '/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/task.md'\"}]\n",
+  "stderr": "",
+  "host_version_command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native/attempts/executive-delivery-claude-source/sandbox.sb",
+    "/Users/jim/.local/bin/claude",
+    "--version"
+  ],
+  "host_version_exit": 0,
+  "host_version_stdout": "2.1.263 (Claude Code)\n",
+  "host_version_stderr": "",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "STDO_STORE": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/native/stdo-store",
+    "ZDOTDIR": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/zsh",
+    "TMPDIR": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/tmp/",
+    "TMPPREFIX": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/tmp/zsh",
+    "PATH": "/private/tmp/stdo-rc5-installed-manager-20260906/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "CLAUDE_CONFIG_DIR": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/claude",
+    "CLAUDE_CODE_TMPDIR": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/tmp",
+    "CLAUDE_TMPDIR": "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/runtime/tmp",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "status": "pass",
+  "no_operator_exposure": true,
+  "physical_boundary": "One outer macOS process sandbox. Codex internal sandbox is deliberately disabled to avoid prohibited sandbox nesting; no user bypass wrapper is invoked.",
+  "join_preflight": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/native/attempts/executive-delivery-claude-source/sandbox.sb",
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+      "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-claude-source/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "PROBE\nread-only join",
+    "stderr": "",
+    "valid": true
+  }
+}

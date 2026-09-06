@@ -1,8 +1,9 @@
 # STDO 2.5.0 RC6 Release Work
 
-Status: STDO commit A is locally tagged and verified; the working RC6 cohort
-is `candidate_ready` with construction checks satisfied. Independent native,
-exact-cohort and publication results remain separate.
+Status: the exact coordinated RC6 cohort is qualified, atomically published
+and freshly reacquired from its public tags. The [closed result](#closed-rc6-result)
+binds the source, independent native, publication and reacquisition evidence.
+The preparation and activation sections below retain their historical scope.
 
 The Product owner directly requested, "can we release 2.5.0 rc6?". Under that
 instruction, `/root` activated `/root/t030_m01_writer` as the bounded Writer
@@ -13,13 +14,14 @@ its source projections, and matching distribution/version records. The
 coordinator owns the separately activated child construction, independent
 qualification, Git effects and publication path.
 
-The Writer may change this new carrier and its reproducible source evidence,
+The initial source Writer activation permitted this new carrier and its reproducible source evidence,
 the current STDO release note, plugin version/install references and their
 existing version assertions, and current Goal selection inside
 `specification_methodology/`. Manager `0.1.3`, implementation code,
 Product/Intent/frame declarations, immutable cuts, prior evidence, and completed
-T030/T029 remain conserved. This activation grants no Git commit, tag, push,
-consumer adoption, new method change, or author self-acceptance.
+T030/T029 were conserved by that initial activation. Its exclusions preceded
+the separately recorded Git, child configuration and publication grants below.
+No activation grants author self-acceptance or external consumer adoption.
 
 ## Operative Basis
 
@@ -226,6 +228,15 @@ The coordinator consumed that result and authorized commit B without a further
 wait. This records independent results and the actual internal transition;
 native outcomes and publication remain pending.
 
+Commit B is `adb25a35acad363823b4c0d05fecbf9a2f20d25d`.
+The [exact freeze](cohort-freeze.json) records its 128 scoped files, including
+the final native observer script, reviewed inputs and actual child binding
+receipts. The [exact-B content gate](cohort-content-b.stdout.json) is valid with
+no failures. The two preserved declaration-diff evidence files retain their
+literal unified-diff empty-context spaces; the
+[whitespace observation](cohort-whitespace-check.json) distinguishes those
+required evidence bytes from source and other evidence, which pass.
+
 The prepared [`reacquire_public.py`](reacquire_public.py) follows the RC5
 receipt/command pattern. After the exact published result, run it with
 `--revision <commit-B> --ref-result <passing-final-ref-result.json>`. It fetches
@@ -236,6 +247,23 @@ and all 11 installed manager modules, and reproduces the map/report and all
 eight selected views from those tagged bytes. It writes exact command outputs
 and a bounded public-reacquisition result. Preparation and a syntax check are
 the only observations so far; no public RC6 acquisition is claimed.
+
+The prepared [`publish_cohort.py`](publish_cohort.py) records the existing RC5
+publication sequence: exact annotated local child cuts and selectors, checked
+branch preimages, the existing shared `refs` gate, its unmodified emitted
+atomic `push_argv`, and the exact-B `published` gate. It is not executed before
+the coordinator consumes the closed independent native result. The final
+execution binds that exact review record and its digest. No new release policy
+or transport fallback is introduced.
+
+After successful publication and fresh public reacquisition, the same bounded
+Writer activation includes a later bookkeeping commit C. It reconciles the
+three current Goals with the actual RC6 result and this carrier, includes the
+completed selected proof scripts/assets and observer changes, and pushes only
+main with an exact lease on the previously observed B. The immediate
+published-at-B receipt is retained before that later effect. Immutable tags
+remain fixed, completed T030/T009 remain closed, and publication, internal
+frame configuration, Product acceptance and consumer adoption remain distinct.
 
 ## Separate Native Qualification Writer Activation
 
@@ -249,3 +277,67 @@ before native exposure. This grant excludes semantic candidate changes,
 source/index authorship, oracle edits, release refs, publication and actual
 consumer mutation. After those harness effects, `/root` returns to Executive
 to consume the independently assessed results.
+
+## Closed RC6 Result
+
+The coordinator `/root` consumed the four returned independent context
+assessments and the [closed native qualification](native/independent-native-qualification-review.md),
+SHA-256 `f2af3a28c54fde69fa5b857e43a783d90a421e8713f157a79928ecdaf301e733`,
+from `/root/rc5_installed_review`. All J1–J8 conditions and both paired host
+comparisons are satisfied at exact B. The previously closed source, index and
+frame results remain applicable. Under the direct owner RC6 release instruction,
+the coordinator accepted that qualification for candidate readiness and
+activated this Writer for the exact guarded publication and reacquisition.
+The [execution binding](publication-disposition-binding.json) retains this
+consumption and exact assessed subject; no author self-review substitutes for it.
+
+| Published Product | Annotated RC6 tag object | Peeled commit |
+|---|---|---|
+| STDO | `27c11b4e6673b123b4117dea4e200f01fed2f947` | `842d05daf0be1215e99e640396e670cde4c03d31` |
+| Axiom Indexer | `b75e25b4f1d34e405dbfb240ef8a148530bdecb4` | `adb25a35acad363823b4c0d05fecbf9a2f20d25d` |
+| STDO Representation | `9dffb7161e97d040b83ec4863826d3c32cf12ddd` | `adb25a35acad363823b4c0d05fecbf9a2f20d25d` |
+
+Each Product uses its qualified `<product>/v2.5.0-rc.6` ref. The
+[exact refs gate](cohort-refs-final.json) passed and supplied the unchanged
+13-ref argument vector used by the successful
+[atomic publication](atomic-publication.json). The qualified push digest is
+`55218372f26c97f483852d990dccfac894c50d5db44c2c8e7198e5659dca34de`.
+The [immediate published-at-B check](cohort-published.json) is valid with no
+failures. It remains the publication snapshot when later bookkeeping advances
+main; immutable Product cuts and selectors retain their qualified identities.
+
+The [fresh public reacquisition](public-reacquisition.json)
+fetches the three actual annotated tags into an isolated repository and creates
+a new STDO Install from the literal public endpoint. The manifest is exactly
+`bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0`.
+Complete tagged member checks pass, all 11 installed manager `0.1.3` source
+modules match, and the actual tagged Axiom executable reproduces the map,
+validation report and all eight selected views byte for byte. Exact
+[command outputs and identities](public-reacquisition-commands.json) are retained.
+
+The four native outcomes concern one matched Executive decision/handoff task
+per host and method presentation. Actual CLI invocations and repeated
+mechanical joins are observed; no repeated-J stability estimate or universal
+host reliability is claimed. The initial observer's fenced-JSON parsing error
+is retained in [its original observation](native/mechanical-observations-initial.json).
+The corrected [computed observation](native/mechanical-observations.json)
+changes presentation parsing only; inputs, oracle, native output and Product
+members remain unchanged. Prior RC5 limitations, including unqualified FP04
+advice, retain their original scope.
+
+All 432 copied input members are recoverable from
+[`native/input-snapshots.tar.gz`](native/input-snapshots.tar.gz), SHA-256
+`5cec1f2c63affdf99124ae00c98b79c872548294a3bf08178a63aab4625beb7e`.
+The [custody inventory](native/input-custody.json) preserves original paths,
+file hashes and symlink targets; the Writer's
+[archive check](final-custody-check.json) matches every member. Raw native
+traces, finals and results remain directly readable. Only duplicate input
+copies were compacted, and the observer repair remains separate from Product
+changes.
+
+The selected release is complete. The three Goal projections and this carrier
+record that result in later bookkeeping C. T030, T029 and T009 remain closed.
+STDO source continues under its exact RC4 Definition; the child source
+configuration uses the separately accepted frame-10/frame-18 RC6 bindings.
+Publication and those internal configuration decisions do not imply Product
+acceptance or fleet/consumer adoption.

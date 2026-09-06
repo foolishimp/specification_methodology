@@ -1,0 +1,16 @@
+**Closed result: satisfied, J1–J8.** Independent assessor `/root/rc5_installed_review`; exact commit-B candidate `adb25a35acad363823b4c0d05fecbf9a2f20d25d`, frozen oracle `503bd94a1048d8fba74b5d15dfd2bac9ba0f5974b53b3bb67c2813bee2bf8dce`. This is the matched Claude direct-source observation, with no Representation program/map supplied.
+
+| Condition | Independent assessment |
+|---|---|
+| J1 | Chooses I4 repair and actual P7 → table → X4 connection as one bounded path increment. Its witness must traverse the supported intake-to-download path; direct-supply entries cannot substitute for it. |
+| J2 | Preserves C2's excluded end and settled conversion; I4 is the localized realization defect, with no need to change C2 or adapt conforming P7. |
+| J3 | Distinguishes module-law checks, actual interface/path observations and the permitted small coordinator-recognition probe, available in parallel from now. |
+| J4 | Defers substantial UAT until the capability is ready near release and retains success, refusal, recovery, reopening, user judgment and independent assessment conditions. |
+| J5 | Reuses E1/E2 within their unchanged module boundaries and independence limits. E3/E4 remain historical; their former semantics cannot supply current expected values. Session change is no invalidator. |
+| J6 | Prepares one twelve-row Worker request with exact frames, authority, future source/candidate checkpoint binding, write territory, exclusions and a closed return. No Worker, user, Reviewer or publication operation is activated. |
+| J7 | Material changed basis or contrary evidence triggers affected reassessment/owner re-entry while preserving unaffected claims. Direct-supply entries are assessed only for their relation to the selected path; no removal beyond the grant is authorized. |
+| J8 | Reads exact owning RC6 source and the selected Axiom native/dependency surfaces. The two actual CLI join calls consume the same authored rows and return the exact final string. The full generated result object also equals the final object. |
+
+Evidence: `attempts/executive-delivery-claude-source/final.txt` SHA-256 `8afefe9d7b16445a4a37d01859138624a4de5e2fdb04ce688485a832de8b1b11`; raw `stdout.jsonl` SHA-256 `f439496db2b51d85ab08572f5ca9a48b3a5dabbd51aaaabc59c3d9792fb46e19`. Actual joins are tools `toolu_01AmE8tk2HviqFHWYDGUDq7y` and `toolu_01La6vHzCXEZQnG76E7Re3V7`, JSONL lines 426 and 470. Their complete captured outputs are preserved in `bbd093eaa.txt` and `b33ps79yb.txt`; joined request SHA-256 `fdb7daed39b747f61184d7fe10fb21ad682a827d3a5961efe9f2436968f0de8b`. [The fourth-context checks](../independent-completion-checks-increment-002.json), SHA-256 `116174c5a3b5321eb2f8cb9ddb8dabcdd8a947217c408bd4071dcf27663d52d9`, bind these observations and the reused final observer facts.
+
+No tool error or nonzero event was observed. Large outputs used the host's retained transport; the operator read the final transport file. The final contains one fenced JSON object with bounded evidence prose. Before/after worksite snapshots are identical. The request is extensive, but this predicate imposes no response-size or frame-count preference. It remains a prepared request for future separately bound construction, not observed Worker execution, Product acceptance, publication or measured native stability.

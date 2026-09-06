@@ -1,0 +1,54 @@
+{
+  "candidate_revision": "adb25a35acad363823b4c0d05fecbf9a2f20d25d",
+  "observer_sha256": "eb317d6ba2dc0a1b0d5c86351baeafdcf7569dfc7afbf7bf3324e1a1159e971b",
+  "scope": "Computable output and custody facts only; repeated CLI calls do not repeat stochastic judgments.",
+  "contexts": [
+    {
+      "context": "executive-delivery-codex-map-first",
+      "execution_result_sha256": "7a3894882075749405555599892643dfa4c3e286e9ee8334f14ff9744423176e",
+      "exit_code": 0,
+      "timed_out": false,
+      "worksite_unchanged": true,
+      "semantic_disposition": "Not computed. Independent oracle assessment is required.",
+      "required_fields_present": true,
+      "final_sha256": "7243d6a82de3decebe9468152f1c4b1d5d6d8b9556336129a6ee79cd9f66ccd0",
+      "executable_sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+        "/private/tmp/stdo-rc6-native-20260906T130745Z/executive-delivery-codex-map-first/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+        "join",
+        "--input",
+        "/dev/stdin"
+      ],
+      "join_exit_codes": [
+        0,
+        0
+      ],
+      "join_stderr": [
+        "",
+        ""
+      ],
+      "returned_join_matches_cli": true,
+      "repeated_cli_bytes_equal": true,
+      "observed_join_sha256": "e8ad6ce2faf03f78aae5ba3a21a43f88503d5fa85a2d31661bfb4af4b81be95e",
+      "actual_native_invocation": "Inspect retained raw tool trace independently; reproduction alone does not prove native use."
+    },
+    {
+      "context": "executive-delivery-codex-source",
+      "status": "execution_incomplete"
+    },
+    {
+      "context": "executive-delivery-claude-map-first",
+      "execution_result_sha256": "4b1dcf34d56c6b8b67de76bb8c2cf59542d6d972a47b99f527499cd68d497909",
+      "exit_code": 0,
+      "timed_out": false,
+      "worksite_unchanged": true,
+      "semantic_disposition": "Not computed. Independent oracle assessment is required.",
+      "final_observation_error": "JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"
+    },
+    {
+      "context": "executive-delivery-claude-source",
+      "status": "execution_incomplete"
+    }
+  ]
+}
