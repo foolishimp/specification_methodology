@@ -353,7 +353,7 @@ position does not itself admit an effect or add a review round.
 | Order | Owning work and task | Required result before dependent work relies on it |
 |---|---|---|
 | **0 — Complete: model** | T-030 M01, the thirteen use functions and fourteen model cases. | The accepted model and returned independent assessments are the retained starting point. Reopen only an affected relation with a material counterexample. |
-| **1 — Governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
+| **1 — Governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../active/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
 | **2 — Realize the selected gaps, in parallel where sufficient** | T-030 M03 updates shared native skills, guidance, templates and bounded STDO checks. T-009 M02 supplies only selected generic Axiom gaps. T-029 implements the selected shared complete-update path. | Each changed path consumes sufficient accepted law and its exact grant. Retained implementations/evidence may satisfy a relation without code changes. Native corrections under current sufficient law can start before unrelated M02 work closes. |
 | **3 — Refresh the representation and index** | T-009 M03 reconciles Representation's affected requirements/guidance, re-authors changed source-linked compression, and regenerates the index with the exact qualified mechanics. | The program, index, source routes, native entry and dependency identities agree with the exact successor source subject. Semantic source comparison and mechanical reproduction both pass; model prose or unchanged RC4 artifacts cannot supply this result. |
 | **4 — Qualify the actual paths and join the results** | T-009 M04 qualifies the combined native path. T-029's complete-update evidence feeds T-030 M04. T-030 M05 joins the STDO-owned results with applicable companion evidence. | Supported Codex/Claude outcomes, material refusals/combinations, exact installed paths and required independent judgments satisfy their own conditions. USE-09/complete-adoption claims require T-029; unrelated native qualification does not wait for that claim. A model review or green index alone cannot close this stage. |
@@ -527,7 +527,7 @@ core cost requirements does not select or establish that successor.
   with that boundary. The existing prohibition still applies; completing T-028's
   stronger wording is not a blanket prerequisite for native work. Its amendment
   needs its own selection if the candidate claims that successor outcome.
-- [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
+- [T-029](../active/T-029-complete-consumer-cohort-adoption.md) remains the sole detailed
   complete-updater work carrier. Its condition is a dependency for M04/USE-09,
   not a second updater implementation in this ticket or in ABIogenesis.
 - Representation compression, source navigation, example packaging, additional
@@ -812,6 +812,20 @@ the affected result. T-029's shared updater implementation is now separately
 selected under its own ticket; it is not supplied by this bootstrap result.
 
 ### M03 Source Projection And Native Observation Result
+
+For the joined updater increment, root enters Writer as
+`urn:openai:codex:t030-m03-updater-projection-writer` under the standing delivery
+grant. The exact T-029 owner subsection at SPEC_METHOD SHA-256
+`65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5`
+is the construction input. Write territory is this result record and the
+affected `spec_method.compressed.md` and `stdo_compressed.md` projections,
+including their source digests. The integrated suite additionally identified
+the bootstrap projection's affected SPEC source digest; the same Writer grant
+includes that digest-only refresh in `stdo_bootstrap.md`, with all bootstrap
+instruction bytes conserved. The existing T-029 independent Reviewer
+assesses their fidelity with the owning contract; this activation changes no
+owning law, Product Definition, immutable cut or consumer. Root returns to
+Executive after the bounded projection result.
 
 The [retained M03 proof](../../comments/codex/20260906T043141Z_t030_m03_native_evidence/README.md)
 binds five shared native skills, guidance, five authority compressions, three

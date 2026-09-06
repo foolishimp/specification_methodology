@@ -26,9 +26,13 @@ evidence. No fleet or successor release ordinal is selected by this goal.
   projections, complete-update evidence and aggregate qualification. Its M01
   model and M02 source-method results are complete; M03-M05 remain open.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
-  owns the combined Indexer/Representation work. Its first baseline can run
-  alongside T-030 M02; each Product keeps its own contracts and results.
-- [T-029](../.ai-workspace/tickets/backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
+  owns the combined Indexer/Representation work. Its baseline is supplied; the
+  owner now selects generic frame-index projections in Axiom and source-authored
+  STDO chains/frame membership in Representation. These make applicable
+  constraints and their supporting conditions usable without moving semantic
+  judgment or authority into indexing code. Each Product retains its contracts,
+  evidence and required assessment; this adds no constitutional framework.
+- [T-029](../.ai-workspace/tickets/active/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
   owns shared complete consumer updating. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
   retains its distinct conditional role-boundary change. Neither becomes an
   unconditional gate for unrelated native improvements.

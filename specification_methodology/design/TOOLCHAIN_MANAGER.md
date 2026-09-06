@@ -4,7 +4,8 @@
 - Implements: `.ai-workspace/tickets/completed/T-013-create-stdo-toolchain-manager.md`,
   `.ai-workspace/tickets/completed/T-014-make-version-line-selector-latest.md`,
   `.ai-workspace/tickets/completed/T-020-consolidate-specification-stack-monorepo.md`,
-  `.ai-workspace/tickets/completed/T-021-qualify-monorepo-release-refs.md`
+  `.ai-workspace/tickets/completed/T-021-qualify-monorepo-release-refs.md`,
+  `.ai-workspace/tickets/active/T-029-complete-consumer-cohort-adoption.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
@@ -61,6 +62,14 @@ exact basis.
 - `product_definition.py` discovers overlays, validates them against their
   exact schema, reports and synchronizes pinned bases, performs explicit
   selector adoption, and updates marker-bounded agent bootstraps.
+- `cohort_update.py` derives and applies one explicitly selected complete
+  consumer update using the existing upstream cohort and Product release
+  inventories. Temporary Git views and plan/result objects carry observations;
+  they do not become a second dependency registry.
+- `cohort_assets.py` owns the shared release-asset integrity checks used by
+  both this operation and the existing root stack-release checker. The root
+  checker imports the extracted functions; the manager supplies an exact Git
+  view and the verified STDO inventory to the same checks.
 - `cli.py` exposes singular and fleet operations without creating another
   authority surface.
 
@@ -111,6 +120,87 @@ special entries without following them; every undeclared entry is damage.
   dependency, generated, and managed-store directories. Every fleet write
   requires `--all`; adoption also requires its aggregate accepted plan digest,
   while bootstrap confines every source project to the fleet root.
+
+## Complete Consumer Update
+
+`cohort-update --definition <path> --selection <path> --dry-run` selects one
+consumer by exact definition ID and emits its complete plan. The mutually
+exclusive apply form requires `--accept-plan-sha256 <digest>`. A held dry-run
+returns exit 1 with explicit source re-entry reasons; an invalid or unaccepted
+operation returns exit 2. A successful dry-run is `planned`, never `complete`.
+Only a verified successful application is `updated` and `complete: true` for
+the explicitly selected relation.
+
+The temporary invocation selection uses `kind: stdo.cohort-update-selection`,
+`schema_version: 1`, the consumer `definition_id`, and three selections:
+
+- `cohort`: repository transport, exact project-qualified annotated RC `ref`,
+  accepted `tag_object`, and cohort-document `path`. The document supplies the
+  STDO cut, Product population, portable member inventories, dependencies and
+  publication repository. The existing GitHub publication convention supplies
+  immutable commit/member URLs; unsupported publication locators refuse rather
+  than infer a URL mapping.
+- `companions`: one row per non-STDO cohort Product, naming `product`, its
+  existing consumer `target_definition_id`, exact `definition_member`, proposed
+  immutable `product_definition` and `contracts` locators, external physical
+  `install_root`, and `links` (`path` relative to the consumer source project,
+  `member` within the exact Product subtree, or `.` for its root). Each selected
+  composition must already exist uniquely. Native routes are ordinary selected
+  links; the manager does not discover host policy or claim native-host trigger
+  qualification from a link check.
+- `derived_context`: the complete owner-selected list of `program`, `map` and
+  `bindings` paths relative to the consumer source project. An explicitly empty
+  list is a scope selection, not semantic absence inferred by the tool.
+
+The Axiom Indexer adapter reads its existing binding-set and logical-map
+carriers. It verifies the map's canonical intrinsic digest, the canonical
+program digest, and every declared `resolved_sources` digest. It uses
+the existing program's calculus, frame, record-source and residual re-entry
+edges and the map's source routes to require complete declared source coverage;
+removing a stale observation and recomputing the map digest cannot establish
+readiness. Local URIs use
+whole-document digest coverage: distinct fragments of the same URI document
+share its exact byte evidence, including residual re-entry routes. They use
+the existing Indexer Markdown heading convention to verify each required
+fragment separately; a whole-document digest cannot satisfy an absent heading.
+Physical resolution uses
+the longest unique explicit binding prefix, confined to its physical root;
+STDO URIs must select the target exact cut and are checked against its immutable
+source bytes. If the consumer definition is a source, its proposed bytes are
+used. This catches a map that would become stale through the update itself.
+This adapter checks existing evidence; it neither executes semantic judgments
+nor rewrites or regenerates a program or map. Source owners still own their
+completeness and meaning.
+
+Each companion install is the full exact Git Product subtree, with its portable
+subject inventory independently verified against the cohort. Installs are
+external to the consumer, nonoverlapping, and physically rooted. Files retain
+their executable distinction; escaping symlinks, extra directories, changed
+members and missing members refuse. Existing installs are never overwritten.
+Absent installs are staged and verified before rename. No companion registry
+or copied consumer dependency declaration is introduced.
+
+The declared plugin and semantic-index assets are mandatory. The operation
+verifies both native plugin manifests at the exact STDO cut and the exact
+Representation program, map, validation report and source-corpus carrier at
+the companion cut. The shared checker conserves their existing source-release
+identity and complete ordered inventory, canonical program/map/report digest
+relations, declared program-source coverage, resolved-source digests and exact
+release-note member bindings. Missing or stale assets refuse before effects;
+portable companion inventory alone cannot prove the complete cohort.
+
+The plan binds selection bytes, definition bytes, immutable source identities,
+all link preimages/targets, physical destinations and source observations. The
+definition's unrelated fields and every unselected consumer file survive.
+After staging, the operation rechecks source evidence and all consumer
+preimages. It replaces selected links and then writes the definition atomically
+as one file. A caught failure restores changed links and definition bytes and
+removes newly created empty consumer directories; immutable staged installs can
+remain for reuse. Callers must supply an exclusive consumer write scope. There
+is no claim of a multi-path crash transaction: abrupt interruption or rollback
+failure requires preimage-based owner recovery and cannot produce complete
+readiness. The returned acceptance object is reproducible evidence for that
+bounded operation, not a new workflow engine or persistent lock.
 
 ## Refusals
 

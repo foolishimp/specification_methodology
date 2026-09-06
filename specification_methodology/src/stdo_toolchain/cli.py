@@ -9,6 +9,7 @@ from typing import Any
 
 from . import __version__
 from .constants import OFFICIAL_REPOSITORY
+from .cohort_update import cohort_update
 from .errors import StdoError
 from .git_source import GitSnapshot
 from .manifest import build_manifest, manifest_sha256
@@ -92,6 +93,15 @@ def _parser() -> argparse.ArgumentParser:
         "--accept-plan-sha256",
         help="Digest emitted by a prior adoption dry-run",
     )
+
+    cohort = subparsers.add_parser(
+        "cohort-update", help="Plan or apply an explicitly selected complete consumer cohort"
+    )
+    cohort.add_argument("--definition", type=Path, required=True)
+    cohort.add_argument("--selection", type=Path, required=True)
+    cohort_mode = cohort.add_mutually_exclusive_group(required=True)
+    cohort_mode.add_argument("--dry-run", action="store_true")
+    cohort_mode.add_argument("--accept-plan-sha256")
 
     bootstrap = subparsers.add_parser(
         "bootstrap",
@@ -312,6 +322,13 @@ def run(arguments: argparse.Namespace) -> tuple[Any, int]:
             ),
             0,
         )
+    if arguments.command == "cohort-update":
+        report = cohort_update(
+            arguments.definition, store, arguments.selection,
+            dry_run=arguments.dry_run,
+            accepted_plan_sha256=arguments.accept_plan_sha256,
+        )
+        return report, 0 if report["ready"] else 1
     if arguments.command == "bootstrap":
         return (
             install_bootstrap(

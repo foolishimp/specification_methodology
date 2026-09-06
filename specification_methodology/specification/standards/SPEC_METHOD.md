@@ -534,6 +534,55 @@ dependency, generated, cache, or managed-store internals:
 symlinks. These exclusions are discovery law, not evidence that an excluded
 tree lacks another independently governed Product.
 
+#### Explicit Complete Consumer Update
+
+A **Complete Consumer Update Plan** binds one explicitly selected Product
+Definition and the complete companion population of one exact upstream
+release-matched cohort to the consumer bindings selected by the invocation's
+owner. The Product Definition continues to own composition; the upstream
+cohort and each Product's release record own release and member identity.
+An invocation selection and its derived plan/result are operation evidence,
+not another persistent dependency declaration, registry or lock. The caller
+must select every native route and derived context for the claimed update
+scope; directory proximity or an empty discovery result cannot supply that
+selection. An empty derived-context population means the owner selected none,
+not that the manager established the absence of semantic context.
+
+The separate `cohort-update` operation presents the whole plan without consumer
+effects. Unlike the basis-only Adoption Plan above, its acceptance object also
+binds physical effect destinations and binding preimages, exact selected
+cohort bytes, companion annotated tags/commits/subtrees and inventories,
+replacement dependency locators, native routes, and declared derived-source
+observations. It uses the same canonical JSON hashing rule. Already-installed
+status supplies no additional authority and does not change the digest.
+Mutation requires explicit acceptance of this exact plan and rederives it;
+possession of its digest alone grants no operation authority. Existing
+`adopt`, `sync` and fleet contracts retain their narrower boundaries.
+
+The complete operation verifies the selected cohort's dependency closure and
+each exact companion's definition, release record and admitted members before
+reliance. It stages absent immutable installs, verifies existing installs
+without repairing them in place, and preflights every consumer target. Only
+the selected basis/schema, existing composition locators/contracts and selected
+native/install links may change. Historical installs and unrelated consumer
+content remain available and unchanged. It creates no consumer-local checker
+and changes no Product meaning or local semantic map.
+
+For each selected derived context, missing, ambiguous, changed or unavailable
+program/map/source evidence holds the complete update before consumer effects.
+Its source owner must perform any necessary semantic re-entry; the manager
+cannot mechanically relabel an older map as current. Exact source freshness is
+integrity evidence, not semantic conformance or an independent semantic verdict.
+After immutable staging the manager rechecks the consumer preimages and source
+evidence. It reports completion only after verifying every selected resulting
+binding and companion. Refusal before consumer effects retains prior state;
+a caught application failure restores the affected consumer preimages and
+does not report completion. Newly staged immutable installs may remain unused.
+The operation requires an exclusive consumer write scope during application.
+It does not claim a crash-atomic transaction across independent filesystem
+paths: abrupt process/host loss or unavailable rollback storage requires
+recovery from the presented preimages before claiming the complete relation.
+
 ### Bounded-Context Semantic Resolution
 
 `SPEC_METHOD.md` owns this law in the semantic-resolution bounded context

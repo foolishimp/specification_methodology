@@ -1,0 +1,291 @@
+{
+  "actual_consumer_effects": [],
+  "candidate_files_after": {
+    "design/TOOLCHAIN_MANAGER.md": "a9eaf8e74c4ccf7fd68efb65d1090efb5acb5bbea413a98d6022b46c0bddb47e",
+    "specification/PRODUCT.md": "94c4678045ec7aa989196a0c4e33c4d35aec8ddbcd12a4af7ef0c0b58565b3d5",
+    "specification/standards/SPEC_METHOD.md": "65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5",
+    "src/stdo_toolchain/cli.py": "f9d3b63eddac620269be7d2d0e9debcf31bc0ebcbea8b860ef59e03bb278bebf",
+    "src/stdo_toolchain/cohort_assets.py": "0ab00000697afb5bd5ab8bb71d56f310be466ac5a7782908f287374293747bff",
+    "src/stdo_toolchain/cohort_update.py": "422e7b907c1f5762c7488eb97f8b8d899bf48e1bf87b655494535f8b798b898f",
+    "tests/test_cohort_update.py": "5c345605ad8d97a945d86e11a30fb9e7c1e8a865c037621e78dddf4fb81c8bd5"
+  },
+  "candidate_files_before": {
+    "design/TOOLCHAIN_MANAGER.md": "a9eaf8e74c4ccf7fd68efb65d1090efb5acb5bbea413a98d6022b46c0bddb47e",
+    "specification/PRODUCT.md": "94c4678045ec7aa989196a0c4e33c4d35aec8ddbcd12a4af7ef0c0b58565b3d5",
+    "specification/standards/SPEC_METHOD.md": "65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5",
+    "src/stdo_toolchain/cli.py": "f9d3b63eddac620269be7d2d0e9debcf31bc0ebcbea8b860ef59e03bb278bebf",
+    "src/stdo_toolchain/cohort_assets.py": "0ab00000697afb5bd5ab8bb71d56f310be466ac5a7782908f287374293747bff",
+    "src/stdo_toolchain/cohort_update.py": "422e7b907c1f5762c7488eb97f8b8d899bf48e1bf87b655494535f8b798b898f",
+    "tests/test_cohort_update.py": "5c345605ad8d97a945d86e11a30fb9e7c1e8a865c037621e78dddf4fb81c8bd5"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "status",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "label": "historical-basis-status"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--dry-run"
+      ],
+      "exit_code": 1,
+      "label": "historical-complete-held"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--accept-plan-sha256",
+        "094641ad548132e14e939be1d2e38932c62f0b7bf4f9a301011b81dabfcf65b7"
+      ],
+      "exit_code": 2,
+      "label": "historical-complete-refused"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--dry-run"
+      ],
+      "exit_code": 1,
+      "label": "current-owner-context-plan"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--accept-plan-sha256",
+        "88024a64fe1ee59450f86a1833b52c8fa2bfd36253dc865a34ae7efcffc64d54"
+      ],
+      "exit_code": 2,
+      "label": "current-owner-context-refused"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/stdo-store",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "label": "archived-source-snapshot-plan"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/stdo-store",
+        "cohort-update",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/consumer/stdo_abiogenesis.json",
+        "--selection",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-beql4rb_/selection.json",
+        "--accept-plan-sha256",
+        "2839799adc7ea22f6d4cff9dfeaec28baec51217e8514c0aa233ec209019dc78"
+      ],
+      "exit_code": 0,
+      "label": "isolated-exact-rc4-complete"
+    }
+  ],
+  "current_abi_context_held": [
+    "Semantic source re-entry required for .ai-workspace/context/axiomatic/logical-constraint-map.json: Stale derived source digest: repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#lawful-re-entry"
+  ],
+  "historical_complete_held": [
+    "Semantic source re-entry required for .ai-workspace/context/axiomatic/logical-constraint-map.json: Stale derived program digest"
+  ],
+  "historical_stdo_status_valid": true,
+  "isolated_rc4_complete": true,
+  "kind": "stdo.t029.isolated-actual-release-replay",
+  "live_links_unchanged": {
+    ".agents/skills/axiomatize-corpus": "../../.genesis/development-products/axiom-indexer/skills/axiomatize-corpus",
+    ".agents/skills/stdo-representation": "../../.genesis/development-products/stdo-representation/skills/stdo-representation",
+    ".claude/skills/axiomatize-corpus": "../../.genesis/development-products/axiom-indexer/skills/axiomatize-corpus",
+    ".claude/skills/stdo-representation": "../../.genesis/development-products/stdo-representation/skills/stdo-representation",
+    ".genesis/development-products/axiom-indexer": "/Users/jim/Library/Application Support/Axiom Indexer/releases/v2.5.0-rc.4",
+    ".genesis/development-products/stdo-representation": "/Users/jim/Library/Application Support/STDO Representation/releases/v2.5.0-rc.4"
+  },
+  "native_skill_members": {
+    ".agents/skills/axiomatize-corpus": "dcd2294e7de7ae5bfb4a70b3980594a36f9a3b28b42236523a86cbc42aa7babe",
+    ".agents/skills/stdo-representation": "1896829cf06a4fba45f6e8092fc54cf8e958ca5d15ba84f5542eaef966f2a4ab",
+    ".claude/skills/axiomatize-corpus": "dcd2294e7de7ae5bfb4a70b3980594a36f9a3b28b42236523a86cbc42aa7babe",
+    ".claude/skills/stdo-representation": "1896829cf06a4fba45f6e8092fc54cf8e958ca5d15ba84f5542eaef966f2a4ab"
+  },
+  "positive_fixture_scope": "Exact retained source snapshot with unchanged authored program/map and an isolated physical source binding; not current ABI readiness",
+  "positive_fixture_source_preimages": [
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md",
+      "sha256": "5eeecd413979141569ae050b0b4547b290d8d3a790d801f836de1b367076bc23",
+      "uri": "repo://abiogenesis/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md#lawful-re-entry"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md",
+      "sha256": "acfb53a92a7db573ebdb88df841d64dc567d250071f0e8b74b007f64fe6b90f6",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#f-worksite-causality"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md",
+      "sha256": "acfb53a92a7db573ebdb88df841d64dc567d250071f0e8b74b007f64fe6b90f6",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#governed-outcome-and-workspace"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md",
+      "sha256": "acfb53a92a7db573ebdb88df841d64dc567d250071f0e8b74b007f64fe6b90f6",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#local-extension-mutable-worksite-causality"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_REALIZATION_CONSTITUTION.md",
+      "sha256": "3002dfbf3f9b889b9c8c451cde7662170065b13b21f2d07b7e35ecaed9ffa940",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_REALIZATION_CONSTITUTION.md#53-six-frame-atlas"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md",
+      "sha256": "acc8406c352e7d1e61e4af5b15d348ba7e485a26a26b75ed706c3ecb0909c704",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md#fully-functional-traversal"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md",
+      "sha256": "acc8406c352e7d1e61e4af5b15d348ba7e485a26a26b75ed706c3ecb0909c704",
+      "uri": "repo://abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md#mandatory-falsifiers"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/GOALS.md",
+      "sha256": "c7d24e16297e54bb60ebb3d554d4e3013033acc7d721c4b0777ec1721321fb9c",
+      "uri": "repo://abiogenesis/specification/GOALS.md#current-selection"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/specification/INTENT.md",
+      "sha256": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+      "uri": "repo://abiogenesis/specification/INTENT.md#abg-owns-admitted-runtime-truth"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/specification/INTENT.md",
+      "sha256": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+      "uri": "repo://abiogenesis/specification/INTENT.md#gtl-owns-program-meaning"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/specification/INTENT.md",
+      "sha256": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+      "uri": "repo://abiogenesis/specification/INTENT.md#hog-owns-direct-traversal"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/specification/INTENT.md",
+      "sha256": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+      "uri": "repo://abiogenesis/specification/INTENT.md#int-006-programs-and-callable-graphfunctions"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/specification/INTENT.md",
+      "sha256": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+      "uri": "repo://abiogenesis/specification/INTENT.md#product-owns-readiness-and-catalog-construction"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md",
+      "sha256": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+      "uri": "repo://abiogenesis/specification/PRODUCT.md#definition-tool-and-runtime-authority"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md",
+      "sha256": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+      "uri": "repo://abiogenesis/specification/PRODUCT.md#governance-and-release-boundary"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md",
+      "sha256": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+      "uri": "repo://abiogenesis/specification/PRODUCT.md#graphfunction"
+    },
+    {
+      "input": "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md",
+      "sha256": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+      "uri": "repo://abiogenesis/specification/PRODUCT.md#hog"
+    }
+  ],
+  "semantic_carriers_preserved": true,
+  "source_files_after": {
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/axiomatic-program.json": "e302a9161c001f4726052483b18eeb09a4ef3b8a1f32ffdf45a1c0ea98962470",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/bindings.json": "49447415e55cd83b0343a837e036487ca92c7a9bc5b95c4b12ef5906ff04e8da",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/operation-record.json": "f8aec1d6a667bce2176c553bf1ee6610c9046b06905b01824dca8871eddbd1c9",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/axiomatic-program.json": "76b591197360741f97390cdec00c0e1e45b210d536ec24d98f2b24732730b623",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/bindings.json": "c1b4072389a3dfc4ebc87c293ea2de98654efcb27f81cd81800faa709f070416",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/logical-constraint-map.json": "37bfea095dd7dbb18457e79f94cfb6c6c18d3818555c79e55f2d172c59f8be5d",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md": "5eeecd413979141569ae050b0b4547b290d8d3a790d801f836de1b367076bc23",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md": "acfb53a92a7db573ebdb88df841d64dc567d250071f0e8b74b007f64fe6b90f6",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/GOALS.md": "c7d24e16297e54bb60ebb3d554d4e3013033acc7d721c4b0777ec1721321fb9c",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/stdo_abiogenesis.json": "61f5990a37c0e1aa1d4923174c315304a271d74a40f584b9ac380b3c91a08b9a",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/logical-constraint-map.json": "3ce3928fe7be1e9cbe79e900634c4dd77e78f8627bbd81089b1114462de6a777",
+    "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_REALIZATION_CONSTITUTION.md": "3002dfbf3f9b889b9c8c451cde7662170065b13b21f2d07b7e35ecaed9ffa940",
+    "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md": "acc8406c352e7d1e61e4af5b15d348ba7e485a26a26b75ed706c3ecb0909c704",
+    "/Users/jim/src/apps/abiogenesis/specification/INTENT.md": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+    "/Users/jim/src/apps/abiogenesis/stdo_abiogenesis.json": "7d3547c525f9744928e13b023aa5d1b8ebf3ffce195aab4fc4c7b698b18d51ef"
+  },
+  "source_files_before": {
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/axiomatic-program.json": "e302a9161c001f4726052483b18eeb09a4ef3b8a1f32ffdf45a1c0ea98962470",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/bindings.json": "49447415e55cd83b0343a837e036487ca92c7a9bc5b95c4b12ef5906ff04e8da",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/operation-record.json": "f8aec1d6a667bce2176c553bf1ee6610c9046b06905b01824dca8871eddbd1c9",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/axiomatic-program.json": "76b591197360741f97390cdec00c0e1e45b210d536ec24d98f2b24732730b623",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/bindings.json": "c1b4072389a3dfc4ebc87c293ea2de98654efcb27f81cd81800faa709f070416",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/context/axiomatic/logical-constraint-map.json": "37bfea095dd7dbb18457e79f94cfb6c6c18d3818555c79e55f2d172c59f8be5d",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/.ai-workspace/tickets/active/T-287-deliver-abiogenesis-5-feature-waves.md": "5eeecd413979141569ae050b0b4547b290d8d3a790d801f836de1b367076bc23",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md": "acfb53a92a7db573ebdb88df841d64dc567d250071f0e8b74b007f64fe6b90f6",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/GOALS.md": "c7d24e16297e54bb60ebb3d554d4e3013033acc7d721c4b0777ec1721321fb9c",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/specification/PRODUCT.md": "7ff2f1d2dd714acc5660c03b317abdf44516f368599fd6910762df6f09e528bf",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/history/20260905T025248Z-pre-rc4-adoption/preimages/stdo_abiogenesis.json": "61f5990a37c0e1aa1d4923174c315304a271d74a40f584b9ac380b3c91a08b9a",
+    "/Users/jim/src/apps/abiogenesis/.ai-workspace/context/axiomatic/logical-constraint-map.json": "3ce3928fe7be1e9cbe79e900634c4dd77e78f8627bbd81089b1114462de6a777",
+    "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_REALIZATION_CONSTITUTION.md": "3002dfbf3f9b889b9c8c451cde7662170065b13b21f2d07b7e35ecaed9ffa940",
+    "/Users/jim/src/apps/abiogenesis/build_tenants/abiogenesis/typescript/design/T287_W2_ODD_GLC_TYPED_WORKSPACE_ADMISSION_DESIGN.md": "acc8406c352e7d1e61e4af5b15d348ba7e485a26a26b75ed706c3ecb0909c704",
+    "/Users/jim/src/apps/abiogenesis/specification/INTENT.md": "6a5cdae93b27b4680957f44aa7a93fbe20bca06f7fdab170987126e4a5e0dec6",
+    "/Users/jim/src/apps/abiogenesis/stdo_abiogenesis.json": "7d3547c525f9744928e13b023aa5d1b8ebf3ffce195aab4fc4c7b698b18d51ef"
+  }
+}

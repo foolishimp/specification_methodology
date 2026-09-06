@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95
+source_digest: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -116,6 +116,25 @@ the aggregate STDO compression.
   additionally confines every source project to its authorized root. Exactly
   one ordered marker span is manager-owned, while prefix and suffix bytes remain
   exact project-owned bytes.
+- A separate complete consumer update binds one selected definition and the
+  complete companion population of one exact declared cohort. The owner selects
+  every native route and derived context in its claimed scope; an empty list is
+  a selection, not a discovered absence. Existing composition and upstream
+  release records retain authority; the invocation plan is no new registry.
+  Its separately accepted digest binds exact cohort/member identities, physical
+  destinations, preimages, replacement locators and source observations.
+  Possessing the digest grants no effects. Re-derive it before application,
+  stage and verify immutable installs, and recheck consumer preimages/sources.
+  Change only selected basis/schema, existing composition locators/contracts and
+  native/install links. Missing, stale, ambiguous or unavailable derived-source
+  evidence withholds the complete update before consumer effects and returns
+  semantic re-authoring to its owner. Freshness is not semantic assurance.
+  Verify every selected resulting relation before claiming completion. A caught
+  failure restores affected consumer preimages; unused immutable installs may
+  remain. Application needs exclusive consumer write scope and claims no
+  multi-path crash atomicity; abrupt loss or unavailable rollback needs owner
+  recovery from presented preimages. Narrow `adopt`, `sync` and fleet contracts
+  remain distinct.
 - Portable Draft 2020-12 JSON Schema proves structural shape. URI formats are
   annotations unless an assertion-capable validator is selected, so
   conformance separately asserts RFC 3986 syntax, resolution, target identity,

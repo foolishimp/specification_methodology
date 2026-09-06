@@ -21,8 +21,10 @@ orchestration machinery, tests, and executable conformance implementation.
 STDO may require a concrete representation only when that representation is an
 explicitly accepted method interoperability boundary. STDO includes a bounded
 toolchain manager that installs, inventories, resolves, and verifies exact
-released STDO distributions and updates explicit Product Definition basis
-bindings. That manager does not interpret semantic conformance, govern consumer
+released STDO distributions and explicitly selected companion Products. It
+updates owner-selected basis, dependency locators and native routes through
+explicitly accepted exact plans, and refuses unresolved semantic-source
+evidence for a complete selected update. That manager does not interpret semantic conformance, govern consumer
 workflow, execute consumer construction, or become a consumer Product.
 
 Method vocabulary names normative capability roles and algebra. It does not
@@ -379,9 +381,10 @@ which:
   projections express congruent relations at their respective authority
   levels;
 - the toolchain manager installs and resolves complete immutable releases,
-  verifies exact transport and inventory identity, and changes a consumer basis
-  only through a separately presented and explicitly accepted digest-bound
-  Product Definition adoption plan; and
+  verifies exact transport and inventory identity, and changes selected consumer
+  basis, dependency and native bindings only through a separately presented and
+  explicitly accepted exact plan; unresolved semantic-source evidence prevents
+  a complete selected update; and
 - every compression digest resolves to its deciding source or explicitly
   classified non-deciding index in the same selected cut.
 
@@ -403,7 +406,7 @@ this live Product surface.
 - no executable frame, ticket, schema, composition, build-tenancy,
   semantic-resolution, or semantic-conformance engine; the bounded toolchain
   manager executes only distribution, integrity, locator, bootstrap, and
-  explicit basis-adoption mechanics;
+  explicitly selected basis and companion-update mechanics;
 - no prohibition on lawful term reuse across bounded contexts and no mandatory
   repeated qualifier where an enclosing context resolves one meaning uniquely;
 - no required third-party package manager, registry vendor, runtime, scoring

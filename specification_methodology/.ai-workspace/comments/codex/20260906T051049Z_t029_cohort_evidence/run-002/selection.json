@@ -1,0 +1,68 @@
+{
+  "cohort": {
+    "path": "stack_release.json",
+    "ref": "refs/tags/stdo_representation/v2.5.0-rc.4",
+    "repository": "/Users/jim/src/apps/specification_methodology",
+    "tag_object": "d85d25482f9d9132147bea189b0fe0aca1929dff"
+  },
+  "companions": [
+    {
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2/axiom_indexer/releases/v2.5.0.md"
+      ],
+      "definition_member": "stdo_default.json",
+      "install_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-mg0bwsaz/companions/axiom_indexer/v2.5.0-rc.4",
+      "links": [
+        {
+          "member": ".",
+          "path": ".genesis/development-products/axiom-indexer"
+        },
+        {
+          "member": "skills/axiomatize-corpus",
+          "path": ".agents/skills/axiomatize-corpus"
+        },
+        {
+          "member": "skills/axiomatize-corpus",
+          "path": ".claude/skills/axiomatize-corpus"
+        }
+      ],
+      "product": "axiom_indexer",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2/axiom_indexer/stdo_default.json",
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer"
+    },
+    {
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2/stdo_representation/releases/v2.5.0.md"
+      ],
+      "definition_member": "stdo_representation.json",
+      "install_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t029-actual-rc4-mg0bwsaz/companions/stdo_representation/v2.5.0-rc.4",
+      "links": [
+        {
+          "member": ".",
+          "path": ".genesis/development-products/stdo-representation"
+        },
+        {
+          "member": "skills/stdo-representation",
+          "path": ".agents/skills/stdo-representation"
+        },
+        {
+          "member": "skills/stdo-representation",
+          "path": ".claude/skills/stdo-representation"
+        }
+      ],
+      "product": "stdo_representation",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2/stdo_representation/stdo_representation.json",
+      "target_definition_id": "urn:stdo:product-definition:stdo-representation"
+    }
+  ],
+  "definition_id": "urn:stdo:product-definition:abiogenesis",
+  "derived_context": [
+    {
+      "bindings": ".ai-workspace/context/axiomatic/bindings.json",
+      "map": ".ai-workspace/context/axiomatic/logical-constraint-map.json",
+      "program": ".ai-workspace/context/axiomatic/axiomatic-program.json"
+    }
+  ],
+  "kind": "stdo.cohort-update-selection",
+  "schema_version": 1
+}

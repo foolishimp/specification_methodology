@@ -1,0 +1,16 @@
+======================================================================
+FAIL: test_multi_source_compressions_match_every_declared_edge (test_compressions.CompressionDigestTests.test_multi_source_compressions_match_every_declared_edge)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/tests/test_compressions.py", line 90, in test_multi_source_compressions_match_every_declared_edge
+    self.assertEqual(digests[key], sha256(source), f"{name}: {reference}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95' != '65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5'
+- 0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95
++ 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
+ : stdo_bootstrap.md: ../SPEC_METHOD.md
+
+----------------------------------------------------------------------
+Ran 148 tests in 106.081s
+
+FAILED (failures=1)
