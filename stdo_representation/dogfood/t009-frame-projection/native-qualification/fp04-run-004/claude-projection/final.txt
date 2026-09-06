@@ -1,0 +1,40 @@
+**FP04 result: the claim is not supported. Completion is indeterminate as a fact and unlawful as a report, and automatic retry is falsified.** Details follow.
+
+## Verification performed
+
+- All 85 files listed in the snapshot manifest matched their declared SHA-256 digests, including the six retained run006 evidence files, the FP04 case input, the candidate projector and the relocated binding file.
+- The exact candidate projector ran in materialized mode against the run-003 program and map through the relocated bindings, to stdout, with no diagnostics. The projector re-instantiates the map from the program and the resolved source bytes and refuses on any mismatch, so a clean run establishes that the map binds this exact compression and that every cited source digest matches the snapshot bytes.
+- Map program binding and view identities:
+
+| Item | Canonical digest |
+|---|---|
+| Program | sha256:386e11c8…cccd1f4 |
+| Map | sha256:d9ca9b36…118f334 |
+| Worker view | sha256:ffc68eb5…494dfb9 |
+| Combined Worker+Reviewer view | sha256:ece47fce…065ad7a |
+
+- I re-entered the owning source sections cited by the selected clauses rather than relying on the projected literals alone.
+
+## Frame selection
+
+I selected both declared frame indexes, because the case asks two distinct questions. The Worker index binds the derived Worker frame for the isolated construction under the existing grant. The Reviewer index binds the derived Reviewer frame for evaluating the stated claim. Selecting both creates no two-actor workflow. Both indexes share the complete-update, source-refusal and owner-ruling clauses, and the projection's closure was identical in content across the two runs.
+
+## Evaluation
+
+**Computed facts from retained run006 evidence.** The selection digest ab924ecd… and the accepted isolated plan digest ed4f6fcd… bind one Product Definition, two companions and six native bindings, plus the definition itself, for seven physical effect targets. That plan recorded every binding preimage and the definition preimage. The retained isolated run reported complete with all seven effects and an updated definition. The two runs against the live store were held on stale derived-source digests and the acceptance attempts were refused, with no live consumer effects. This evidence establishes the shape of the grant, plan and preimages. It does not supply the FP04 effect state, because the case stipulates a different observation and I did not import the retained completion to fill that gap.
+
+**Stipulated facts.** The grant and accepted plan cover the isolated update. Preimages, sources and plan passed prechecks. The invocation was attempted. The resulting definition and one native companion binding cannot now be observed, and no verification result or proof of no effects exists.
+
+**Rule application.** The owning source requires that the manager rechecks preimages and source evidence after staging and reports completion only after verifying every selected resulting binding and companion. Two of seven effect targets are unverifiable, so the completion premise is absent. The same source states that abrupt loss or unavailable rollback storage requires recovery from the presented preimages before the complete relation is claimed, and that retry requires the applicable outcome, authority and safe-recovery conditions, with an unknown effect state never treated as no effect. The run-003 qualification on the failure clause adds that an observation gap holds completion claims and automatic retry while proving neither failure, changed preimages nor invalidation of the original grant. I confirmed that qualification is grounded in the source text at the complete-update and computed-classification sections. Separately, mutation requires explicit acceptance of the exact rederived plan, and the plan binds preimages. If the definition did change, the accepted plan no longer rederives, so a repeat of the same acceptance would be refused rather than applied.
+
+**Worker frame result.** Indeterminate, with the work-result variant `incomplete`. The Worker may not return candidate ready without the verification evidence, and refused does not apply because effects were attempted. Recorded progress remains valid: the prechecks, the accepted plan and the preimages it presented.
+
+**Reviewer frame result.** Falsified for the claim as stated. Finding one: completion is asserted without the required verification of the definition and one native binding. Finding two: automatic retry is asserted against a hold and against the acceptance rule. Triage is complete on the rule violation and indeterminate on actual effect state, cause and blast radius. Severity is evidence-bound: a retry without recovery could apply against changed preimages. Priority and disposition remain with Executive.
+
+**Residual judgment and owner authority.** Whether the observation gap is temporary or permanent is J. Whether read-only observation and preimage recovery fall inside the existing grant's isolated write territory is not stipulated; I assess observation as within it, and recovery as unresolved. The original grant and plan acceptance remain O in their original scope, neither established nor revoked. Any retry is a new acceptance of a rederived plan, owned by the same owner.
+
+**Permitted next work.** Report the Worker result as incomplete with the observation gap, attempted subject and valid progress. Then obtain actual effect evidence within the isolated territory before choosing any path. If every target verifies, completion follows. If a failure or partial state is found, or observation stays impossible, recover from the presented preimages before any complete claim. Return to the owner only if recovery authority or the acceptance is materially changed or newly ambiguous. No automatic retry is supported in any branch. Nothing here authorizes live consumer or fleet effects.
+
+**Invalidators.** New effect evidence, a changed preimage, or an owner ruling on recovery scope revises this result. The clauses applied are working-source law from the T009 candidate. The installed RC4 standards carry different digests for the methodology files, so I could not verify identical wording under the caller's operative basis from inside this snapshot. This qualifies reliance on the candidate view; it does not change the assessment.
+
+**Source routes.** SPEC_METHOD.md sections on explicit complete consumer update, computed classification and treatment, and construction assessment and delegation. TICKET_METHOD.md sections on recorded judgment and owner-ruling continuity and on condition-based closure. STDO_REFERENCE_FRAME_BASELINE.md sections on engagement applicability, derived Worker and Reviewer frames, Reviewer triage projection and closure. REFERENCE_FRAME_METHOD.md sections on applicability and result conjunction. Clauses relied on: complete-update-rechecks-and-verifies-completion, complete-update-failure-preserves-recovery-boundary, complete-update-acceptance-rederives-authorized-plan, unknown-treatment-bounds-dependent-effects, closure-is-satisfied-obligations-not-review-occurrence and reviewer-result-triage-is-total, with the residuals on owned selection and evidence and on outcome effects and retry.

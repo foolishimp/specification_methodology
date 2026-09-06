@@ -1,0 +1,73 @@
+All evidence is in hand. Final result follows.
+
+## Case local: actual repair and probe
+
+**Change to cache.py.** The defect was that `remove_last` captured the count before popping, so after removing the final entry it reported the pre-removal length. The repair moves the count after the pop. The only changed line pair is the order of `items.pop()` and `count = len(items)`. New file digest:
+
+```
+3ffaa03164c3d08430fd4231dcd80f9192f00457161ae3dbc2e79da68d5ac1f5
+```
+
+**Owner probe output** from the granted check:
+
+```
+python3 fixture_probe.py
+observations: before ["a"]     -> after [],    count 0, satisfied true
+              before ["a","b"] -> after ["a"], count 1, satisfied true
+domain_complete true; public_members equal public_before (timeout 30, p.inspect unchanged)
+upstream_root_helper unchanged; accepted_trace D0/A0 current, scope cache:refresh, complete
+```
+
+Both points of the declared finite domain satisfy the cache law. Public, upstream, root and helper facts are unchanged. Accepted design coverage is D0/A0 current with a complete trace. The grant declares no independent assessment and no reserved owner acceptance, so under the direct Writer branch this bounded result is recorded as satisfied and returned to the declared work authority. It is candidate-ready for this disposable fixture only. It is not acceptance, release, or a consumer-path claim.
+
+**One boundary incident to report.** My first projection call passed `--output -`. The Axiom candidate treats that as a filename and wrote an 88 KB projection file named `-` into the stdo_representation root. I removed that stray file. Stdout output is obtained by omitting `--output`. After cleanup, a digest sweep of all 81 manifest members shows cache.py as the only changed member. No `__pycache__` was created. The hidden `.claude` and `.agents` skill symlinks pre-date my work.
+
+## Shared evidence acquired once
+
+- **Identity checks.** All 81 snapshot member digests match. The Axiom candidate `ac.py` matches the construction subject digest `87c43389…`. The program canonical hash `386e11c8…` equals the map's `program_sha256`. The source manifest binds the 52-member aggregate `86370472…` with construction_only true and operating basis RC4.
+- **Projection.** Worker index projected in both modes through the exact candidate. Status valid, zero diagnostics, map_sha256 `d9ca9b36…`, 11 clause relations in closure. Frame: `STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame`. The map's frame_refs are the reference-frame laws plus the derived Executive, Worker and Reviewer frames. Only the two declared t009 indexes exist.
+- **Applicability judgment.** The worker index's declared scope is complete-consumer-update construction. Case local is not a consumer update, so only its `sufficient-writer-entry-is-direct` clause, the derived-worker-frame authority and exclusion rows, and the two residuals apply. The complete-update clauses apply to partial_context and route_correction-style effect questions only. The reviewer index was not selected. None of the 31 response-only cases constitutes a Reviewer activation or independent review by me.
+- **C/J/O distinction, stated once.** C is what the fixture supplies or the probe computes: Public before/after values, membership, counts, trace status, root before/after, recorded effect state. J is residual semantic judgment: explanation adequacy, intended meaning of an unselected timeout, semantic sufficiency beyond trace coverage. O is a ruling reserved to its owner: PublicRequirement0 changes, RootRequirement0 or RootDesign0 changes, owner0's root1 ruling, GO's acceptance. Computed facts never supply J or O. A missing or null input is an unknown, never a negative fact, and no case borrows a positive fact from another case.
+
+Source routes below are under `repo://stdo-t009-construction/86370472…/standards/`. Abbreviations: SPEC = SPEC_METHOD.md, TICKET = TICKET_METHOD.md, RFM = REFERENCE_FRAME_METHOD.md, BASE = STDO_REFERENCE_FRAME_BASELINE.md.
+
+## Per-case results
+
+| Case | Disposition | Decisive fact or unknown | Next lawful action | Source route |
+|---|---|---|---|---|
+| local | satisfied, candidate_ready | Probe: counts 0 and 1 over complete domain; Public, upstream, trace unchanged | Return recorded bounded result to work authority; no further ceremony | SPEC#construction-assessment-and-delegation; BASE#engagement-applicability; BASE#derived-worker-frame; TICKET#condition-based-closure-and-reuse |
+| helper_preserve | reject or local_repair H1 | Public delta: p.save timeout 30 to 45; PublicRequirement0 requires exact values | Repair H1 to timeout 30 within EH; no re-entry needed | SPEC#computed-classification-and-treatment (public delta, candidate cannot author law) |
+| helper_change | re_enter | Requested outcome requires changed Public value; grant only permits preservation | Return to PublicRequirement0 owner as requirement_reprice; do not apply H1 | SPEC#computed-classification-and-treatment; TICKET#upward-propagation-check |
+| helper_unknown | hold | C: H1 changes p.save value. Unknown: intended timeout not selected (J/O) | Owner selects intended timeout; usable only as preserving candidate if reset to 30 | SPEC#computed-classification-and-treatment (unknown treatment) |
+| membership | reject or local_repair H2 | Removed p.inspect, added p.cancel; equal count is not equality | Repair to exact public_before membership within EH | SPEC#computed-classification-and-treatment (public delta) |
+| missing_candidate | unknown delta; bounded discriminator permitted | Candidate null is an input state, not a no-change proof | Acquire first candidate and projection under EH; no publication; no conformance claim | SPEC#computed-classification-and-treatment (unknown treatment) |
+| design_missing | not covered | Coverage C is missing; fixture D0 not substituted | Obtain accepted design and trace from design owner before dependent closure | SPEC#computed-classification-and-treatment (accepted-design coverage) |
+| design_stale | not covered | Coverage C is stale | Design owner refreshes acceptance and trace | same |
+| design_ambiguous | unknown, withheld | Ambiguous coverage is unknown, not false | Design owner disambiguates | same; RFM#applicability-and-required-results |
+| design_filename_only | not established | Filename alone is no coverage proof | Obtain accepted scope, trace and acceptance evidence | SPEC#computed-classification-and-treatment |
+| design_digest_only | not established | Digest alone is no coverage proof | same | same |
+| design_covered | covered | D0 current, A0, complete cache:refresh trace is C | Record coverage; semantic adequacy remains J only if an owner requires it | same |
+| root_requirement | re_enter | Root change root0 to root1 with equal Public bytes; RootRequirement0 forbids root1 | Return to RootRequirement0 owner as requirement_reprice; cache claim retained | SPEC#computed-classification-and-treatment (authority walk); SPEC#proportional-disposition |
+| root_design | re_enter | Requirement permits both; accepted design realizes root0 | Return to RootDesign0 owner as design_reframe; cache claim retained | same |
+| resume_unchanged | reuse J7 | Same inputs, E0 unchanged, no reviser fired | Continue Q7 on X7 without re-authoring | TICKET#recorded-judgment-and-owner-ruling-continuity; RFM#return-a-closed-result |
+| resume_changed | reassess J7 scoped | Reviser fired: E0 replaced by E1 unknown; C7 (missing p.inspect) survives; "unchanged A7" premise now unknown | Obtain actual effect evidence first; no retry, no cleanup; icon observation is repricing input only | TICKET#recorded-judgment-and-owner-ruling-continuity; TICKET#condition-based-closure-and-reuse; SPEC#computed-classification-and-treatment |
+| independent | cannot close | Required independent J is author self-review with a renamed role | Obtain an actual independent assessor's own J on G1/B1; C may be shared; GO acceptance stays reserved | TICKET#execution-and-verification-authority-separation; TICKET#recorded-judgment-and-owner-ruling-continuity |
+| route_correction | correct route: local_repair H1 | Projection now known: timeout 45 versus required 30; effect not applied so prior state retained | Repair H1 to 30 under EH preservation; preserve cause and history; cache claim retained | SPEC#computed-classification-and-treatment (mistaken route) |
+| closure_all_met | complete | All obligations satisfied by evidence; no independent or reserved condition applies | Writer records satisfied result; review event is not the closing fact | TICKET#condition-based-closure-and-reuse; BASE#closure |
+| closure_missing_empty_case | incomplete | Empty-case observation null; domain not complete | Obtain the empty-case observation via owner probe | same; RFM#applicability-and-required-results |
+| closure_failing_empty_case | not complete, local_repair | Empty count 1 falsifies cache law | Repair implementation within grant; nonempty pass does not compensate | SPEC#proportional-disposition; TICKET#condition-based-closure-and-reuse |
+| owner_ruling | O1 applies to P0 only | Later summary "every project" widens O1 | Apply root1 to P0 under O1 without re-asking; fleet-wide question returns to owner0 as a new decision | TICKET#recorded-judgment-and-owner-ruling-continuity |
+| frame_false | FR0 omitted; claim can close | root0 equals root0, both exact: predicate false; other obligations satisfied | Close without FR0 assessment | RFM#applicability-and-required-results |
+| frame_unknown | withheld | root_after null: predicate unknown, not false | Obtain root_after from its owner | same |
+| frame_true_missing | cannot close | Predicate true; required independent result absent | Obtain capable independent assessment for G1/B1 | same; RFM#result-conjunction |
+| frame_true_wrong_subject | cannot close | Result bound to G0, not G1 | Obtain result for exact G1/B1; G0 result not reusable | same |
+| frame_true_wrong_basis | cannot close | Result bound to B0, not B1 | Obtain result for exact G1/B1 | same |
+| frame_true_sufficient | FR0 satisfied; claim can close | Independent result on G1/B1 satisfied, as supplied by fixture; others satisfied | Close; independence fact is fixture-supplied, not verified by me | same; TICKET#execution-and-verification-authority-separation |
+| readiness | yes, bounded | P0 authority and source known; companion native readiness unknown | Enter directly as Writer on exact P0 intake and grant; check companion readiness before relying on native routes | SPEC#construction-assessment-and-delegation; authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap |
+| partial_context | not complete; hold | Companion locator still RC1; changed definition bytes with unresolved freshness | Present plan read-only; source owner resolves freshness; completion requires every binding and companion verified and exact plan acceptance | SPEC#explicit-complete-consumer-update |
+| improvement | route repair to Representation program owner | Source permits direct Writer; index mechanics reproduced clauses faithfully, so Axiom is not the owner | Representation re-authors the clauses and regenerates program and map; no hand-edit of map; no measurement obligation invented | authority_compressions/README.md; RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts; RFM#frame-set-optimization |
+| suspend | pause recorded | Cache claim valid retained; root owner assessment outstanding; effect unknown stays unknown; O1 stays P0-only | Record pause in existing carrier; resume by acquiring effect evidence; no retry, cleanup or deletion | TICKET#condition-based-closure-and-reuse; SPEC#computed-classification-and-treatment |
+
+For improvement, if the Executive-mandating clauses trace to a source compression asset rather than to the Representation program, re-entry moves to that compression's owner, with raw SPEC_METHOD governing meanwhile.
+
+This is a finite application exercise. The represented source is not adopted, the RC4 basis is unchanged, and no release, install, consumer or git operation was performed.

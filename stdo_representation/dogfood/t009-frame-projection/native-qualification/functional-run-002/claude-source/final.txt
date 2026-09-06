@@ -1,0 +1,72 @@
+The repair is applied and the owner probe passes on both domain members. I now have the owning source text for every case, so here is the result.
+
+## Local repair (case local)
+
+The defect in cache.py was that the count was captured before the pop, so it was stale by one after removing the final entry. The fix moves the count after the pop. Diff:
+
+```diff
+     items = list(entries)
+-    count = len(items)
+     items.pop()
++    count = len(items)
+     return items, count
+```
+
+Owner probe output from `python3 fixture_probe.py`:
+
+```json
+{"accepted_trace": {"acceptance": "A0", "complete": true, "current": true, "design": "D0", "scope": "cache:refresh"},
+ "domain_complete": true,
+ "observations": [{"after": [], "before": ["a"], "count": 0, "satisfied": true},
+                  {"after": ["a"], "before": ["a", "b"], "count": 1, "satisfied": true}],
+ "producer": "P0 finite fixture probe v1",
+ "public_members": {"p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}", "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}"},
+ "upstream_root_helper": "unchanged"}
+```
+
+Both fixture domain members satisfy the cache law. Public members equal public_before byte for byte. Upstream, root and helper relations are unchanged. Accepted trace D0/A0 is current and complete for cache:refresh. Change class is realization_refactor with no upstream drift. The grant declared no independent assessment and no reserved owner acceptance, so the Writer may record the satisfied bounded result in the existing one-run carrier and stop. No other file was touched. One residual outside the declared domain: popping an empty list still raises, which no supplied law covers, so it was left alone.
+
+## Shared C/J/O reading used in every row
+
+C is what the supplied facts settle mechanically: byte and identity equality of Public members, fixture counts, trace status, FR0 predicate evaluation, and declared-rule matching. J is residual semantic judgment: unselected intended meaning, explanation adequacy, semantic sufficiency of a covered design. O is a ruling reserved to its owner: changing PublicRequirement0 or RootRequirement0, accepting a design, or widening an owner ruling. Where rules settle a question I invented no J. L1's shared facts apply only where the case names L1, and a case-local design_input or observations value overrides only that variable.
+
+Source route abbreviations: SM = SPEC_METHOD.md, TM = TICKET_METHOD.md, RF = REFERENCE_FRAME_METHOD.md, BL = STDO_REFERENCE_FRAME_BASELINE.md, DM = DESIGN_MODULE_METHOD.md. The central routes reused below are SM#computed-classification-and-treatment (public delta, coverage, rule treatment, unknown treatment, route correction), SM#construction-assessment-and-delegation and its disposition table, TM#recorded-judgment-and-owner-ruling-continuity, TM#condition-based-closure-and-reuse, RF#applicability-and-required-results, RF#result-conjunction, and BL#engagement-applicability.
+
+## Per-case results
+
+| Case | Disposition | Decisive fact or unknown | Next lawful action | Route |
+|---|---|---|---|---|
+| local | local_repair applied, satisfied, candidate_ready | Count taken before pop; probe now 0 and 1 on the complete domain; Public, upstream, trace unchanged | Record satisfied result in the one-run carrier; stop | SM#construction-assessment-and-delegation; TM#condition-based-closure-and-reuse; BL#engagement-applicability |
+| helper_preserve | reject H1, or local_repair within EH | C: retained p.save bytes changed, timeout 30 to 45; PublicRequirement0 requires exact values | Restore timeout 30 in a new helper candidate or reject; no requirement re-entry | SM#computed-classification-and-treatment item 2 and the contract-sufficiency paragraph |
+| helper_change | re_enter, requirement_reprice | C: same delta; the selected outcome requires changed Public meaning, which EH cannot grant | Return to PublicRequirement0 owner via Public0 path; O decides; no helper change under EH | SM#computed-classification-and-treatment re-entry paragraph; SM disposition table |
+| helper_unknown | unknown, reliance withheld | C: H1 nonconforming to current contract; intended timeout unselected is J/O, not a premise | Owner selects 30 or 45; then route as helper_preserve or helper_change | SM "unresolved intended meaning is J"; RF#applicability-and-required-results |
+| membership | reject H2, or local_repair within EH | C: p.inspect removed, p.cancel added, no owner identity-preserving relation, so rename law does not apply | Restore exact membership or reject; no re-entry | SM#computed-classification-and-treatment item 2 |
+| missing_candidate | indeterminate, incomplete | Public delta unknown; missing candidate is an input state, not a no-change claim | Produce the provisional cleanup candidate and acquire its projection under EH, then update C before any reliance; no publication | SM unknown-treatment paragraph; TM#work-carrier-to-execution-rule one-run row |
+| design_missing | coverage missing, closure withheld | C: no accepted scope, trace or acceptance | Re-enter design owner D0 path to supply accepted coverage; passing code facts do not substitute | SM item 3; TM#condition-based-closure-and-reuse; DM#11d |
+| design_stale | coverage stale, closure withheld | C: trace exists but is not current | Re-enter design owner for renewed acceptance; O on acceptance | SM item 3; DM#11d "stale is not a no-delta proof" |
+| design_ambiguous | applicability unresolved, withheld | Ambiguous coverage is unknown, not false | Resolve which accepted design governs at its owner; do not guess | RF#applicability-and-required-results; SM item 3 |
+| design_filename_only | coverage unestablished, withheld | cache-design.md alone establishes no accepted coverage | Acquire that artifact's accepted scope, trace and acceptance, then recompute | SM item 3 and item 4 "a label or filename cannot select the route" |
+| design_digest_only | coverage unestablished, withheld | A digest establishes subject identity, not acceptance | Join the digest to accepted scope and trace evidence, then recompute | SM item 3; DM#11d hashes establish identity only |
+| design_covered | covered | C: D0 current, A0, complete cache:refresh trace; L1 shows no semantic-boundary delta, so residual J is small | Proceed to dependent closure under remaining obligations | SM item 3; DM#6a unchanged realization_refactor |
+| root_requirement | re_enter, requirement_reprice; G1 unusable now | C: root changed root0 to root1 with equal Public bytes; RootRequirement0 requires root0; FR0 true so independent assessment is also required later | Return to RootRequirement0 owner; O decides root1; cache claim retained as independent | SM item 1; SM disposition table; RF#applicability-and-required-results |
+| root_design | re_enter, design_reframe | C: requirement permits both roots; RootDesign0 realizes root0 only; FR0 true | Return to RootDesign0 owner; O accepts new design; cache claim retained | SM item 3; SM disposition table; DM#6a |
+| resume_unchanged | reuse J7, continue | Same subject, basis and effect E0; no reviser observed; new conversation is not an invalidator | Deliver X7 with J7 provenance; no new judgment, no repair | TM#recorded-judgment-and-owner-ruling-continuity; RF#return-a-closed-result |
+| resume_changed | J7 invalidated for reliance, indeterminate | Reviser fired: effect E0 replaced by E1 unknown, so "unchanged A7" is no longer a premise; UI icon note is unrelated repricing input | Acquire A7 effect evidence; recompute C7 if applied; no retry while effect is unknown | TM#recorded-judgment continuity; SM "unknown effect state cannot be treated as no effect"; TM#condition-based-closure unrelated-observation rule |
+| independent | closure withheld | Required independent J is absent; author self-review relabeled reviewer is not independent; GO may accept or reject but cannot make it independent | Activate a capable independent assessor on exact G1/B1 who consumes valid C and supplies own J | TM#execution-and-verification-authority-separation; TM#recorded-judgment line on reusing author J; RF#result-conjunction |
+| route_correction | hypothesis falsified, local_repair | Projection now shows timeout 45 versus required 30; effect not_applied so nothing to recover; retry conditions hold | Restore 30 in a new candidate or reject H1; preserve the original hypothesis as predecessor; cache retained | SM "update affected C before reliance" and "correct a mistaken route at its smallest owner" |
+| closure_all_met | complete, accept | Whole domain observed as 0 and 1; L1 Public and upstream unchanged; D0/A0 covered; FR0 false; no assessment or acceptance reserved | Writer records satisfied result in the existing carrier | TM#condition-based-closure-and-reuse; BL#engagement-applicability |
+| closure_missing_empty_case | incomplete, withheld | The [a] member has no observation; evidence for the exact scope is insufficient; review occurrence is not closure | Obtain the [a] observation via the owner probe, then recompute | TM#condition-based-closure "evidence presence alone is not satisfaction" |
+| closure_failing_empty_case | falsified, local_repair required | Count 1 after emptying [a] contradicts the cache law | Local repair under a construction grant, new candidate, re-probe whole domain | SM disposition table local_repair; TM#condition-based-closure |
+| owner_ruling | continue P0 only; widening returned to owner0 | O1 original wording binds P0; "every project" is a materially changed decision; a later summary cannot widen a ruling | Proceed with root1 for P0 under O1, entering at RootRequirement0 as requirement_reprice; return only the fleet question to owner0 | TM#recorded-judgment-and-owner-ruling-continuity; BL bootstrap rule that a summary cannot replace source authority |
+| frame_false | FR0 omitted; claim can close | root0 equals root0, both exact, predicate false; other obligations satisfied | Close on supplied facts | RF#applicability "false predicate excludes only that obligation" |
+| frame_unknown | applicability unresolved, withheld | root_after missing, so predicate unknown, not false | Acquire exact root_after, then re-evaluate FR0 | RF#applicability "missing premises leave applicability unresolved" |
+| frame_true_missing | withheld | Predicate true; required independent result absent | Activate a capable independent assessment on G1/B1 | RF#applicability; RF#result-conjunction |
+| frame_true_wrong_subject | withheld | Result bound to G0, not G1 | Obtain the assessment for G1/B1; G0 result is not reusable for this claim | RF "bound to another subject/basis cannot satisfy" |
+| frame_true_wrong_basis | withheld | Result bound to B0, not B1; mixed-basis judgments cannot combine | Reassess on B1 | RF#applicability; SM#complete-enclosing-relation-admission mixed-basis rule |
+| frame_true_sufficient | satisfied; claim can close | Independent assessor, exact G1/B1, verdict satisfied, other obligations satisfied | Close, recording the result's carrier per STDO-UP-007 traceability | RF#result-conjunction; TM#execution-and-verification-authority-separation |
+| readiness | yes, direct Writer route available | Exact work authority and source are known; companion readiness is unknown but gates only reliance on companion outputs, not direct-source work | Run intake triage to produce C, confirm the one-run execution contract, then enter directly as Writer | SM#universal-intake-triage; SM#construction-assessment-and-delegation; BL#engagement-applicability; TM#work-carrier-to-execution-rule |
+| partial_context | not complete; indeterminate | Basis RC4 valid is C; Representation locator still RC1 is a cohort mismatch; map freshness unresolved holds the update before consumer effects | Present a cohort-update plan without effects; source owner performs semantic re-entry for the map; explicit plan acceptance is outside this grant | SM#explicit-complete-consumer-update |
+| improvement | repair owner is the authored source of the three clauses inside the representation, not the indexer and not exact STDO source | Exact source permits direct Writer; index mechanics reproduced the clauses faithfully; whether the clauses are stale inherited text or representation-authored overlay is unknown; "wastes work" is unmeasured J | Identify the clauses' authored origin; stale text routes to a basis refresh, authored text to the representation's own re-entry; meanwhile work directly from exact source, which outranks the representation | BL#engagement-applicability; SM#construction-assessment-and-delegation; BL failure row on compressions replacing source; SM#proportional-method-and-delivery |
+| suspend | incomplete, indeterminate, paused | Cache claim valid; root owner assessment open; effect unknown must stay unknown; O1 in original wording, P0 only | Record the pause account in the existing carrier with residuals and stop basis; no cleanup, no retry; resumption rechecks C, J and O applicability | SM "preserve original cause, attempted subject, observed effect state and valid progress"; TM#recorded-judgment continuity; BL work result incomplete |
+
+This was a finite application over the candidate aggregate under the caller's v2.5.0-rc.4 basis. It is not acceptance of the represented source or of any successor frame declaration.

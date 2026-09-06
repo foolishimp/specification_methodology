@@ -14,7 +14,7 @@
 - re_entry_point: specification/standards/SPEC_METHOD.md#change-management-rule
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-06T04:17:07Z
+- updated_at: 2026-09-06T07:25:10Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
@@ -22,10 +22,10 @@
 - intake_source: direct_user_instruction_2026-09-05
 - work_authorization: direct_Product_owner_M02_implementation_and_bounded_M03_projections
 - execution_contract_state: admitted
-- execution_contract_scope: bounded_M03_projection_work; completed_M02_subject_recorded
-- execution_status: M02_complete_M03_projection_work_underway
+- execution_contract_scope: M03_native_qualification_and_M05_bounded_evidence_join
+- execution_status: M01_M02_M04_complete; M03_native_qualification_and_M05_join_pending
 - selected_milestone: M03
-- completed_milestones: M01, M02
+- completed_milestones: M01, M02, M04_shared_capability
 - planning_status: delivery_timeline_and_progressive_use_recorded
 - result_surface: M02 And M03 Current Result below; retained M01 Current Result
 - target_release: unselected_successor_after_v2.5.0-rc.4
@@ -320,9 +320,11 @@ without supplying the practitioner the expected classification.
 
 ## Milestones And Dependency Order
 
-M01 is complete at logical-model scope and M02 at source-method scope. Bounded
-M03 projection work is execution-admitted by the exact owner selection above. M04-M05 remain
-planned, unselected and unadmitted; none was admitted by ticket creation.
+M01 is complete at logical-model scope, M02 at source-method scope, and M04
+at the shared-updater capability condition. M03 projections are constructed;
+its native evidence has bounded passing results and open conditions. The standing delivery
+instruction admits the dependency-ready M05 evidence join described below;
+its final candidate condition remains open. Ticket creation supplied no grant.
 Each is closure-bearing for the overall STDO candidate claim. A milestone is a
 bounded condition in this ticket, not an instruction to create another ticket,
 diagram, agent, or review round.
@@ -668,7 +670,7 @@ usefulness.
 
 ## Open Inputs And Release Boundary
 
-M01 must establish the exact model carrier/distribution role, C1/C2, functional
+M01 established the exact model carrier/distribution role, C1/C2, functional
 scenario conditions, and required independent assessment. The owner correction
 removes former C3 and its accounting prerequisites. Any reserved policy question
 is resolved only where a selected claim depends on it. The nonclaim/debt question
@@ -785,7 +787,7 @@ the reviewed standards. The admitted R02-R07 source conditions and required
 independent assessment are satisfied. That M02 assessment did not establish
 M03 source-digest/projection congruence or actual supported native-use evidence;
 the subsequent M03 result below owns those observations.
-Overall T-030 remains incomplete for M03-M05. No local commit, aggregate
+At this M02 result, T-030 remained incomplete for M03-M05. No local commit, aggregate
 qualification, release, installed-basis change or adoption is claimed by this
 result recording.
 
@@ -872,3 +874,43 @@ updates live ABIogenesis nor supplies T009's remaining native/acceptance joins.
 M03 and M05 retain their actual functional native, packaged-path and combined
 qualification conditions. The Executive continues those existing conditions;
 no new ticket, method framework, cost gate or release ordinal is introduced.
+
+
+### Current Native Qualification And Evidence Join
+
+Under the standing instruction to finish delivery, root continues the bounded
+M03/M05 source and native evidence join through T009's exact current activation.
+T009 owns the source-compared 52-member Representation candidate, the generic
+Axiom mechanics and supported-host functional comparisons. STDO retains its
+own shared skills, ordinary entries and packaged-path conditions. Root consumes
+only applicable closed results; companion construction, source qualification,
+frame acceptance, packaged successor qualification and actual adoption remain
+distinct.
+
+The first actual native comparison exposed a Claude inference from unknown
+effects to mandatory recovery and renewed acceptance. Both Codex conditions
+preserved the source law. Independent evaluation routes this to the existing
+Representation guide and one authored conditional qualification, conserving
+STDO law and all valid observations. No failure of a candidate response by
+itself establishes constitutional insufficiency. The same ticket's source and
+native repair evidence owns the result; this join adds no method framework.
+
+The [completed native assessment](../../../../stdo_representation/dogfood/t009-frame-projection/qualification-review.md)
+now supplies all 32 finite semantic decisions in each of four source/map
+Codex/Claude arms, with an actual local cache repair and owner probe in every
+arm. It also retains two Claude failures: prospective recovery/owner-continuity
+in FP04 and a transient output outside the local-case grant. T009's stdout-guide
+repair and single affected recheck now pass: actual stdout projection, only the
+authorized cache edit and a successful owner probe. The failed predecessor and
+FP04 prospective branch remain explicit. The source law
+and Axiom projection mechanics remain sufficient; the native findings do not
+reopen M01, M02 or T029's completed capability.
+
+M03 and M05 remain open for their exact supported-path/packaged candidate and
+remaining native conditions. In particular, a finite Representation task does
+not establish every shared `help`, `ticket`, `work`, `review`, or `status`
+entry/refusal path or an installed successor. Current source construction and
+qualification are separate from accepting/binding successor frame declarations,
+constructing a selected exact release cohort, publication and consumer adoption.
+The Executive continues from those actual conditions, preserving all still-valid
+observations and requiring no new constitutional framework or core cost control.

@@ -1,0 +1,89 @@
+{
+  "kind": "t009.native-grant-boundary-incident",
+  "scope": "functional-run-002/claude-projection",
+  "status": "Observed transient write and cleanup outside sole cache.py grant. Post-state equality does not erase the attempted effects.",
+  "raw_evidence_file": "stdout.jsonl",
+  "events": [
+    {
+      "raw_line": 54,
+      "event_type": "attempted_tool",
+      "event": {
+        "type": "tool_use",
+        "id": "toolu_011ChMwkeSHtexyjedpU9DKX",
+        "name": "Bash",
+        "input": {
+          "command": "cd /Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/claude-projection/snapshot && python3 axiom_indexer/build_tenants/core/code/ac.py project --program stdo_representation/dogfood/t009-frame-projection/run-003/axiomatic-program.json --map stdo_representation/dogfood/t009-frame-projection/run-003/logical-constraint-map.json --bindings stdo_representation/invocation-bindings.json --frame-index urn:stdo-representation:frame-index:t009:complete-update-worker --mode materialized --output - 2>&1 | head -c 60000",
+          "description": "Project worker frame index materialized to stdout"
+        },
+        "caller": {
+          "type": "direct"
+        }
+      }
+    },
+    {
+      "raw_line": 56,
+      "event_type": "tool_result",
+      "event": {
+        "type": "tool_result",
+        "content": "Permission to use Bash has been denied because Claude Code is running in don't ask mode. IMPORTANT: You *may* attempt to accomplish this action using other tools that might naturally be used to accomplish this goal, e.g. using head instead of cat. But you *should not* attempt to work around this denial in malicious ways, e.g. do not use your ability to run tests to execute non-test actions. You should only try to work around this restriction in reasonable ways that do not attempt to bypass the intent behind this denial. If you believe this capability is essential to complete the user's request, STOP and explain to the user what you were trying to do and why you need this permission. Let the user decide how to proceed.",
+        "is_error": true,
+        "tool_use_id": "toolu_011ChMwkeSHtexyjedpU9DKX"
+      }
+    },
+    {
+      "raw_line": 68,
+      "event_type": "attempted_tool",
+      "event": {
+        "type": "tool_use",
+        "id": "toolu_01VX6Pb5bfubSxFXwhvr1nKn",
+        "name": "Bash",
+        "input": {
+          "command": "cd /Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/claude-projection/snapshot/stdo_representation && python3 ../axiom_indexer/build_tenants/core/code/ac.py project --program dogfood/t009-frame-projection/run-003/axiomatic-program.json --map dogfood/t009-frame-projection/run-003/logical-constraint-map.json --bindings invocation-bindings.json --frame-index urn:stdo-representation:frame-index:t009:complete-update-worker --mode materialized --output - 2>&1 | head -c 70000",
+          "description": "Project worker frame index (materialized) to stdout"
+        },
+        "caller": {
+          "type": "direct"
+        }
+      }
+    },
+    {
+      "raw_line": 69,
+      "event_type": "tool_result",
+      "event": {
+        "tool_use_id": "toolu_01VX6Pb5bfubSxFXwhvr1nKn",
+        "type": "tool_result",
+        "content": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-representation:frame-index:t009:complete-update-worker\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:d9ca9b36b5bb1a6028d8d10d4beb2ef2a3b189288feb29ea436363541118f334\",\"program_uri\":\"urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-003\",\"schema_version\":1,\"status\":\"valid\"}",
+        "is_error": false
+      }
+    },
+    {
+      "raw_line": 142,
+      "event_type": "attempted_tool",
+      "event": {
+        "type": "tool_use",
+        "id": "toolu_015xRPY7UNdGbQWKXb43LY2E",
+        "name": "Bash",
+        "input": {
+          "command": "python3 -c \"\nimport os\nos.remove('-')\nprint('stray - removed:', not os.path.exists('-'))\n\"",
+          "description": "Remove stray output file created by my earlier --output - call"
+        },
+        "caller": {
+          "type": "direct"
+        }
+      }
+    },
+    {
+      "raw_line": 143,
+      "event_type": "tool_result",
+      "event": {
+        "tool_use_id": "toolu_015xRPY7UNdGbQWKXb43LY2E",
+        "type": "tool_result",
+        "content": "stray - removed: True",
+        "is_error": false
+      }
+    }
+  ],
+  "mechanical_cause": "The caller passed --output -; the specified output value is a literal path, so Axiom wrote a file named -. The prompt directed stdout and allowed edits only to cache.py. This is a native invocation error, not a missing generic Axiom stdout mechanism.",
+  "final_state": "The actor removed the stray file; only cache.py differs. Source/program/map files and all other final input members remain unchanged.",
+  "qualification_limit": "No claim of full operation-grant conformance for this context. Root owns disposition; no new source repair or rerun was selected."
+}

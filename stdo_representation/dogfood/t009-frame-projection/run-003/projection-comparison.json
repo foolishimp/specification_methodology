@@ -1,0 +1,51 @@
+{
+  "kind": "t009.fp04-repair-projection-comparison",
+  "axiom_ac_sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+  "program_sha256": "c39896e9c562bffe1f0632d3eb0dbefa71ab2aef5c92a5f576776408d6689a1d",
+  "map_sha256": "5638dcc7f10af09b5e48ea9681ce83b5a54d0d26162d8a5b9f698f19c76bdc3f",
+  "validation_status": "valid",
+  "diagnostics": [],
+  "source_observations_unchanged": true,
+  "checks": [
+    {
+      "selection": "worker",
+      "all_shared_view_fields_equal": true,
+      "materialized_rows_exact": true,
+      "closure_unchanged": true,
+      "source_observations_unchanged": true,
+      "frame_indexes_unchanged": true,
+      "closure_counts": {
+        "clauses": 11,
+        "residuals": 11,
+        "symbols": 20
+      }
+    },
+    {
+      "selection": "reviewer",
+      "all_shared_view_fields_equal": true,
+      "materialized_rows_exact": true,
+      "closure_unchanged": true,
+      "source_observations_unchanged": true,
+      "frame_indexes_unchanged": true,
+      "closure_counts": {
+        "clauses": 16,
+        "residuals": 11,
+        "symbols": 20
+      }
+    },
+    {
+      "selection": "combined",
+      "all_shared_view_fields_equal": true,
+      "materialized_rows_exact": true,
+      "closure_unchanged": true,
+      "source_observations_unchanged": true,
+      "frame_indexes_unchanged": true,
+      "closure_counts": {
+        "clauses": 18,
+        "residuals": 11,
+        "symbols": 20
+      }
+    }
+  ],
+  "scope": "Same frozen Axiom mechanics and source snapshot; one explicit qualification plus source grounding and new program identity. No native or independent verdict is asserted."
+}

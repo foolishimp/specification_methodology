@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "claude",
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--no-session-persistence",
+    "--permission-mode",
+    "dontAsk",
+    "--allowedTools",
+    "Read",
+    "Glob",
+    "Grep",
+    "Skill",
+    "Bash(python3 *)",
+    "Bash(rg *)",
+    "Bash(shasum *)",
+    "Bash(ls *)",
+    "Bash(cat *)",
+    "Bash(sed *)",
+    "Bash(pwd)",
+    "--",
+    "<role_and_outcome>\nYou are a fresh, bounded semantic evaluator. Evaluate seven independent logical cases from their stated facts and retained evidence, and return your own assessments.\n</role_and_outcome>\n\n<reference_frame_and_exact_subject>\nThis is explicitly authorized T009 read-only qualification of the frozen working-source subject, not ordinary released use or successor acceptance. The caller's operating STDO basis is v2.5.0-rc.4. The represented candidate source is the exact 52-member snapshot with aggregate 86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca. Read ../SNAPSHOT_INPUTS.json for identities and invocation relocation. All paths below are relative to the current stdo_representation directory unless stated otherwise. The cases describe retained isolated run006 evidence and explicit logical variants; their historical paths are evidence identities, not permission to inspect or operate on current external consumers. Select and explain the Worker and/or Reviewer source frame appropriate to each requested evaluation. Evaluation of a permitted next action is not execution of that action.\n</reference_frame_and_exact_subject>\n\n<hard_constraints>\nRead only within this snapshot. Do not perform consumer, updater, publication, source-edit or git mutation operations; do not change any files. Do not search the parent repository, network, author design, expected outcomes, past native answers or other actors' results. Treat each case's explicitly stipulated facts as inputs for that case; do not import another case's facts to fill its missing premises. Use exact evidence to assess the bounded claims, with uncertainty and qualification where warranted. This session is authorized to complete the logical evaluations and return; no additional operation effects are authorized.\n</hard_constraints>\n\n<index_context_and_evidence_routes>\nRead all seven dogfood/t009-frame-projection/run-001/native-case-inputs/FP01.json through FP07.json. Their retained_evidence.repository_path values resolve from the snapshot root (one directory above this working directory). Those six retained evidence files are copied byte-for-byte. The case facts and questions are the same in both evidence conditions. Use $stdo-representation (Claude: the stdo-representation skill) from this snapshot's native skill route. The exact current candidate is selected, through skills/stdo-representation/references/frame-index-use.md and dogfood/t009-frame-projection/run-002/construction-subject.json. Start from the map's declared indexes, judge the applicable selection, then invoke the exact candidate projector in materialized mode with your chosen index URI(s), using ../axiom_indexer/build_tenants/core/code/ac.py and invocation-bindings.json for this relocated snapshot. Use stdout (omit --output); the program is in run-001 and map in run-002. The original binding file is retained provenance; using its original absolute path would leave this snapshot and is outside the invocation. Read the resulting materialized clauses and their source routes; re-enter exact owning source when meaning requires. The manifest references author proof/design deliberately excluded from the snapshot; these are not required semantic case inputs. This exact candidate handoff supersedes ordinary released-map acquisition for this evaluation only; do not try to fetch tags or install a release.\n</index_context_and_evidence_routes>\n\n<open_solution_space>\nChoose your own bounded inspection tools and evidence reading order. Do not assume an authored rule's referenced premise is already observed evidence. Identify material contradictions if present.\n</open_solution_space>\n\n<return_and_stop_contract>\nReturn one concise result for each FP01..FP07: selected source frame(s) and why; exact supported/unsupported or indeterminate claim; material C facts, residual J and original O where applicable; satisfied or missing premises, conditions and exceptions; permitted next-work assessment, uncertainty and invalidators; and exact source routes. Your results must be your own evaluation, not a copied author verdict. Summarize the actual input/tool verification and stop after the response. Do not draft a prompt for another actor or defer these requested evaluations merely to propose doing them.\n</return_and_stop_contract>\n\n<action>\nEvaluate FP01 through FP07 now using the selected evidence condition and return the seven bounded results.\n</action>\n"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/fp-run-001/claude-projection/snapshot/stdo_representation",
+  "prompt_sha256": "69aec2a61429ab5a94886a877946b596eac226540d649674f1095cf1ac623f33",
+  "stdin": null,
+  "host_version": "2.1.263 (Claude Code)",
+  "host_version_stderr": "",
+  "started_at": "2026-09-06T06:23:43.143615+00:00",
+  "timeout_seconds": 720,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "model_selection": "Host configured default; no model override. Actual host metadata retained in raw output."
+}

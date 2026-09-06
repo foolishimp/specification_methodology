@@ -1,0 +1,500 @@
+{
+  "kind": "t009.native-functional-inputs",
+  "purpose": "Finite candidate-law native application and one actual disposable source repair; no generic execution framework or release/adoption claim",
+  "shared_fixture": {
+    "basis": "B0",
+    "product": "P0",
+    "public_before": {
+      "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}",
+      "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+    },
+    "owner_paths": {
+      "cache:refresh": [
+        "D0",
+        "R0",
+        "Product0"
+      ],
+      "export:helper": [
+        "Public0",
+        "PublicRequirement0",
+        "Product0"
+      ],
+      "root": [
+        "RootDesign0",
+        "RootRequirement0",
+        "Product0"
+      ]
+    },
+    "design": {
+      "id": "D0",
+      "acceptance": "A0",
+      "status": "current",
+      "scope": [
+        "cache:refresh"
+      ],
+      "complete_trace": true
+    },
+    "cache_law": "After removing the final entry, cache.count equals len(cache.entries). Entire fixture domain is [a] and [a,b]; counts must be0 and1 respectively.",
+    "public_law": "PublicRequirement0 requires exactly public_before identities and their UTF-8 serialized values.",
+    "root_law": "RootRequirement0 requires root0; RootDesign0 realizes root0.",
+    "retry_rule": "Retry requires a still-unmet authorized outcome, corrected precondition, and known no-effect or an owner-provided safe recovery condition together.",
+    "frame_rule": {
+      "id": "FR0",
+      "predicate": "root-before and root-after both exact and equal: false; both exact and unequal: true; missing or ambiguous: unknown",
+      "when_true": "Require capable author-independent assessment for exact candidate/basis",
+      "when_false": "Omit only FR0",
+      "case_other_obligations": "All other obligations retain their supplied status."
+    }
+  },
+  "cases": [
+    {
+      "id": "local",
+      "request": "After deleting the last cached entry the internal count is wrong; fix it under the current contract.",
+      "grant": {
+        "write": [
+          "cache.py"
+        ],
+        "checks": [
+          "python3 fixture_probe.py"
+        ],
+        "lifetime": "one-run",
+        "independent_assessment": false,
+        "reserved_owner_acceptance": false,
+        "admission": "explicit fixture construction grant"
+      },
+      "candidate": "initially absent; inspect cache.py",
+      "upstream": "All declared upstream/root/helper relations unchanged. Complete owner probe is fixture_probe.py."
+    },
+    {
+      "id": "helper_preserve",
+      "request": "Tidy the export helper while preserving its contract.",
+      "grant": "EH: helper repair/projection only; preserve PublicRequirement0",
+      "candidate": {
+        "id": "H1",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":45}",
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+        }
+      },
+      "effect": "not_applied",
+      "response_only": true
+    },
+    {
+      "id": "helper_change",
+      "request": "Set the exported save timeout to45.",
+      "grant": "EH: helper repair/projection only; preserve PublicRequirement0",
+      "candidate": {
+        "id": "H1",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":45}",
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+        }
+      },
+      "effect": "not_applied",
+      "response_only": true
+    },
+    {
+      "id": "helper_unknown",
+      "request": "Explain whether this helper candidate can be used; the intended timeout has not been selected.",
+      "grant": "diagnostic only",
+      "candidate": {
+        "id": "H1",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":45}",
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+        }
+      },
+      "effect": "not_applied",
+      "response_only": true
+    },
+    {
+      "id": "membership",
+      "request": "Tidy the export helper while preserving its public contract.",
+      "grant": "EH",
+      "candidate": {
+        "id": "H2",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}",
+          "p.cancel": "{\"input\":\"Id\",\"output\":\"Cancelled\"}"
+        }
+      },
+      "effect": "not_applied",
+      "response_only": true
+    },
+    {
+      "id": "missing_candidate",
+      "request": "Tidy the export helper; no candidate exists yet.",
+      "grant": "EH permits provisional helper source cleanup and projection acquisition; no publication or operational effect",
+      "candidate": null,
+      "response_only": true
+    },
+    {
+      "id": "design_missing",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "missing",
+        "filename": null,
+        "digest": null,
+        "trace": "missing"
+      },
+      "response_only": true
+    },
+    {
+      "id": "design_stale",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "stale",
+        "filename": null,
+        "digest": null,
+        "trace": "stale"
+      },
+      "response_only": true
+    },
+    {
+      "id": "design_ambiguous",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "ambiguous",
+        "filename": null,
+        "digest": null,
+        "trace": "ambiguous"
+      },
+      "response_only": true
+    },
+    {
+      "id": "design_filename_only",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "filename_only",
+        "filename": "cache-design.md",
+        "digest": null,
+        "trace": "filename_only"
+      },
+      "response_only": true
+    },
+    {
+      "id": "design_digest_only",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "digest_only",
+        "filename": null,
+        "digest": "D0 digest",
+        "trace": "digest_only"
+      },
+      "response_only": true
+    },
+    {
+      "id": "design_covered",
+      "request": "Determine whether the current cache candidate has accepted design coverage.",
+      "grant": "read/assess only",
+      "candidate": "L1: complete passing cache/public facts",
+      "design_input": {
+        "status": "covered",
+        "filename": null,
+        "digest": null,
+        "trace": "D0 current A0 complete cache:refresh trace"
+      },
+      "response_only": true
+    },
+    {
+      "id": "root_requirement",
+      "request": "Use the other root for this project.",
+      "grant": "diagnostic/re-entry only",
+      "candidate": {
+        "id": "G1",
+        "root_before": "root0",
+        "root_after": "root1",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}",
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+        }
+      },
+      "requirement": "root0 required",
+      "accepted_design": "root0",
+      "unrelated": "cache claim already valid",
+      "response_only": true
+    },
+    {
+      "id": "root_design",
+      "request": "Use the other root for this project.",
+      "grant": "diagnostic/re-entry only",
+      "candidate": {
+        "id": "G1",
+        "root_before": "root0",
+        "root_after": "root1",
+        "public": {
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}",
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}"
+        }
+      },
+      "requirement": "both roots permitted",
+      "accepted_design": "root0",
+      "unrelated": "cache claim already valid",
+      "response_only": true
+    },
+    {
+      "id": "resume_unchanged",
+      "request": "Continue the interrupted explanation request Q7: explain why validation rejected A7; leave it unchanged.",
+      "grant": "validation/explanation only; no repair/publication",
+      "recorded_judgment": {
+        "id": "J7",
+        "question": "Does explanation X7 adequately answer why validation rejected unchanged A7 for the stated audience?",
+        "actor": "assessor7",
+        "basis": "B0",
+        "subject": "A7",
+        "C": "C7 names missing required member p.inspect",
+        "effect": "E0 not_applied",
+        "conclusion": "Explanation X7 adequately answers Q7 for this audience",
+        "uncertainty": "Explanation adequacy is semantic judgment",
+        "revisers": [
+          "counterexample to explanation adequacy",
+          "changed A7/B0",
+          "E0 replaced by applied/unknown effect evidence"
+        ]
+      },
+      "current_effect": "E0 not_applied",
+      "same_inputs": true,
+      "response_only": true
+    },
+    {
+      "id": "resume_changed",
+      "request": "Continue Q7 after this new effect observation.",
+      "grant": "same Q7 validation/explanation grant",
+      "recorded_judgment": {
+        "id": "J7",
+        "question": "Does explanation X7 adequately answer why validation rejected unchanged A7 for the stated audience?",
+        "actor": "assessor7",
+        "basis": "B0",
+        "subject": "A7",
+        "C": "C7 names missing required member p.inspect",
+        "effect": "E0 not_applied",
+        "conclusion": "Explanation X7 adequately answers Q7 for this audience",
+        "uncertainty": "Explanation adequacy is semantic judgment",
+        "revisers": [
+          "counterexample to explanation adequacy",
+          "changed A7/B0",
+          "E0 replaced by applied/unknown effect evidence"
+        ]
+      },
+      "current_effect": "E1 unknown",
+      "same_inputs_except": "effect E0 -> E1",
+      "unrelated_observation": "UI icon looks odd",
+      "response_only": true
+    },
+    {
+      "id": "independent",
+      "request": "Can we close this Product/invariant assessment?",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "required": "capable author-independent J-review",
+      "evidence": {
+        "C": "valid exact mechanical facts",
+        "J": "author self-review, role field renamed reviewer",
+        "owner": "GO"
+      },
+      "response_only": true
+    },
+    {
+      "id": "route_correction",
+      "request": "Continue the helper cleanup after obtaining its projection.",
+      "grant": "EH preservation",
+      "history": {
+        "hypothesis": "H1 can be a preserving cleanup",
+        "then": "candidate projection initially unknown"
+      },
+      "now": {
+        "timeout": 45,
+        "required_timeout": 30,
+        "effect": "not_applied"
+      },
+      "unrelated": "cache valid",
+      "response_only": true
+    },
+    {
+      "id": "closure_all_met",
+      "request": "Is the cache repair complete?",
+      "grant": "read/assess only",
+      "candidate": "L1",
+      "design": "current D0/A0 complete trace",
+      "observations": {
+        "nonempty": 1,
+        "empty": 0
+      },
+      "review_event": "review performed",
+      "response_only": true
+    },
+    {
+      "id": "closure_missing_empty_case",
+      "request": "Is the cache repair complete?",
+      "grant": "read/assess only",
+      "candidate": "L1",
+      "design": "current D0/A0 complete trace",
+      "observations": {
+        "nonempty": 1,
+        "empty": null
+      },
+      "review_event": "review performed",
+      "response_only": true
+    },
+    {
+      "id": "closure_failing_empty_case",
+      "request": "Is the cache repair complete?",
+      "grant": "read/assess only",
+      "candidate": "L1",
+      "design": "current D0/A0 complete trace",
+      "observations": {
+        "nonempty": 1,
+        "empty": 1
+      },
+      "review_event": "review performed",
+      "response_only": true
+    },
+    {
+      "id": "owner_ruling",
+      "request": "Resume the selected project root change and explain what is authorized next.",
+      "ruling": {
+        "original": "Use root1 for this selected project only; do not change other projects.",
+        "owner": "owner0",
+        "subject": "P0",
+        "basis": "B0",
+        "source": "existing work record O1"
+      },
+      "request_from_later_summary": "Apply root1 to every project",
+      "response_only": true
+    },
+    {
+      "id": "frame_false",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": "root0",
+      "result": null,
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "frame_unknown",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": null,
+      "result": null,
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "frame_true_missing",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": "root1",
+      "result": null,
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "frame_true_wrong_subject",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": "root1",
+      "result": {
+        "actor": "independent_assessor",
+        "subject": "G0",
+        "basis": "B1",
+        "verdict": "satisfied"
+      },
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "frame_true_wrong_basis",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": "root1",
+      "result": {
+        "actor": "independent_assessor",
+        "subject": "G1",
+        "basis": "B0",
+        "verdict": "satisfied"
+      },
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "frame_true_sufficient",
+      "request": "Determine which root evaluation is required and whether the declared claim can close.",
+      "grant": "read/assess only",
+      "candidate": "G1",
+      "basis": "B1",
+      "root_before": "root0",
+      "root_after": "root1",
+      "result": {
+        "actor": "independent_assessor",
+        "subject": "G1",
+        "basis": "B1",
+        "verdict": "satisfied"
+      },
+      "other_obligations": "satisfied",
+      "response_only": true
+    },
+    {
+      "id": "readiness",
+      "request": "Can STDO help with this ordinary governed source repair; what is the first useful action?",
+      "selection": "P0 exact work authority/source known; companion native readiness not checked",
+      "grant": "information only",
+      "response_only": true
+    },
+    {
+      "id": "partial_context",
+      "request": "Update the selected context. Is it already complete?",
+      "basis": "RC4 verified valid",
+      "companions": "Representation locator still RC1",
+      "map": "sources include changed definition bytes; freshness unresolved",
+      "grant": "read-only planning only",
+      "response_only": true
+    },
+    {
+      "id": "improvement",
+      "request": "This use path wastes work. Which owner should receive the repair?",
+      "observations": "Three inherited representation clauses mandate Executive entry but exact source permits a sufficient direct Writer; index mechanics reproduced those unchanged clauses exactly.",
+      "grant": "analysis only",
+      "benefit_measurement": "none",
+      "response_only": true
+    },
+    {
+      "id": "suspend",
+      "request": "Pause this work.",
+      "work_state": {
+        "done": "cache claim valid",
+        "remaining": "root owner assessment",
+        "effect": "unknown",
+        "ruling": "O1 remains P0 only"
+      },
+      "grant": "record truthful pause account; no effect/cleanup/deletion",
+      "response_only": true
+    }
+  ]
+}

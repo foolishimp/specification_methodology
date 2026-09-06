@@ -33,15 +33,21 @@ def write(path, value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--construction-subject", type=Path,
+                        help="Explicit successor construction manifest; defaults to the original run-002 subject")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     repository = PROJECT.parent
     proof = repository / "stdo_representation/dogfood/t009-frame-projection"
-    run1, run2 = proof / "run-001", proof / "run-002"
-    manifest = json.loads((run2 / "construction-subject.json").read_text())
-    inputs = [run2 / "construction-subject.json", run1 / "axiomatic-program.json",
-              run2 / "logical-constraint-map.json", run1 / "bindings.json"]
-    inputs += sorted(path for path in (run1 / "source").rglob("*") if path.is_file())
+    subject = (args.construction_subject or proof / "run-002/construction-subject.json").resolve()
+    run2 = subject.parent
+    manifest = json.loads(subject.read_text())
+    program_input = (run2 / manifest["program_file"]).resolve()
+    map_input = (run2 / manifest["map_file"]).resolve()
+    bindings_input = (run2 / manifest["bindings_file"]).resolve()
+    source_directory = (run2 / manifest["source_manifest_file"]).resolve().parent
+    inputs = [subject, program_input, map_input, bindings_input]
+    inputs += sorted(path for path in source_directory.rglob("*") if path.is_file())
     inputs += [PROJECT / "src/stdo_toolchain/cohort_update.py"]
     before = {str(path.relative_to(repository)): digest(path) for path in inputs}
     for relative, expected in manifest["files"].items():
@@ -52,10 +58,10 @@ def main():
         root = Path(temporary).resolve()
         consumer = root / "isolated-consumer"
         consumer.mkdir()
-        shutil.copytree(run1 / "source", root / "source")
-        shutil.copyfile(run1 / "axiomatic-program.json", consumer / "program.json")
-        shutil.copyfile(run2 / "logical-constraint-map.json", consumer / "map.json")
-        bindings = json.loads((run1 / "bindings.json").read_text())
+        shutil.copytree(source_directory, root / "source")
+        shutil.copyfile(program_input, consumer / "program.json")
+        shutil.copyfile(map_input, consumer / "map.json")
+        bindings = json.loads(bindings_input.read_text())
         bindings["bindings"][0]["path"] = str(root / "source")
         write(consumer / "bindings.json", bindings)
         program = json.loads((consumer / "program.json").read_text())
@@ -85,7 +91,7 @@ def main():
             write(consumer / "map.json", mapping)
             evaluate("omitted-frame-source-routes-and-evidence", "Missing declared derived source coverage")
             target.write_bytes(original)
-            shutil.copyfile(run2 / "logical-constraint-map.json", consumer / "map.json")
+            shutil.copyfile(map_input, consumer / "map.json")
             evaluate("restored-exact-candidate")
             immutable_basis = {"ref": source.ref, "tag_object": source.tag_object, "commit": source.commit}
     after = {str(path.relative_to(repository)): digest(path) for path in inputs}

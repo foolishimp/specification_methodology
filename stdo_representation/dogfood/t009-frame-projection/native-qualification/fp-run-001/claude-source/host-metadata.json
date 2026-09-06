@@ -1,0 +1,1084 @@
+[
+  {
+    "type": "system",
+    "subtype": "init",
+    "cwd": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/fp-run-001/claude-source/snapshot/stdo_representation",
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "tools": [
+      "Task",
+      "Bash",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "DesignSync",
+      "Edit",
+      "EnterWorktree",
+      "ExitWorktree",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Monitor",
+      "NotebookEdit",
+      "PushNotification",
+      "Read",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "SendMessage",
+      "Skill",
+      "TaskOutput",
+      "TaskStop",
+      "ToolSearch",
+      "WebFetch",
+      "WebSearch",
+      "Workflow",
+      "Write"
+    ],
+    "mcp_servers": [],
+    "model": "claude-fable-5-1",
+    "permissionMode": "dontAsk",
+    "slash_commands": [
+      "deep-research",
+      "spec:stdo-help",
+      "spec:stdo-review",
+      "spec:stdo-status",
+      "spec:stdo-ticket",
+      "spec:stdo-work",
+      "spec:refresh",
+      "design-sync",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review",
+      "simplify",
+      "batch",
+      "fewer-permission-prompts",
+      "doctor",
+      "loop",
+      "schedule",
+      "claude-api",
+      "workflow-authoring",
+      "run",
+      "run-skill-generator",
+      "advisor",
+      "agents",
+      "auto-mode-setup",
+      "autocompact",
+      "clear",
+      "color",
+      "compact",
+      "config",
+      "context",
+      "effort",
+      "fast",
+      "heapdump",
+      "init",
+      "mcp",
+      "import",
+      "model",
+      "__remote-workflow",
+      "workflow-launch-exec",
+      "reload-plugins",
+      "reload-skills",
+      "rename",
+      "ultrareview",
+      "security-review",
+      "usage-credits",
+      "extra-usage",
+      "usage",
+      "insights",
+      "recap",
+      "skill-doctor",
+      "goal",
+      "design",
+      "design-consent",
+      "design-revoke",
+      "list-agents",
+      "team-onboarding"
+    ],
+    "terminal_slash_commands": [
+      "doctor",
+      "color",
+      "reload-plugins"
+    ],
+    "apiKeySource": "none",
+    "claude_code_version": "2.1.263",
+    "output_style": "default",
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "skills": [
+      "deep-research",
+      "spec:stdo-help",
+      "spec:stdo-review",
+      "spec:stdo-status",
+      "spec:stdo-ticket",
+      "spec:stdo-work",
+      "spec:refresh",
+      "design-sync",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review",
+      "simplify",
+      "batch",
+      "fewer-permission-prompts",
+      "doctor",
+      "loop",
+      "schedule",
+      "claude-api",
+      "workflow-authoring",
+      "run",
+      "run-skill-generator"
+    ],
+    "plugins": [
+      {
+        "name": "spec",
+        "path": "/Users/jim/.claude/plugins/cache/specification_stack/spec/2.5.0-rc.3",
+        "source": "spec@specification_stack",
+        "version": "2.5.0-rc.3"
+      }
+    ],
+    "capabilities": [
+      "interrupt_receipt_v1",
+      "interrupt_cancel_queued_v1",
+      "msg_lifecycle_v1"
+    ],
+    "analytics_disabled": false,
+    "product_feedback_disabled": false,
+    "uuid": "b0dabc11-fff8-4d75-b2fe-b7fd6e655ae9",
+    "memory_paths": {
+      "auto": "/Users/jim/.claude/projects/-Users-jim-src-apps-specification-methodology-stdo-representation-dogfood-t009-frame-projection-native-qualification-fp-run-001-claude-source-snapshot/memory/"
+    },
+    "messaging_socket_path": "/tmp/cc-socks/92719.sock",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required"
+  },
+  {
+    "type": "system",
+    "subtype": "permission_denied",
+    "tool_name": "Bash",
+    "tool_use_id": "toolu_01G1mtdDkKc7Gnnnnis6Ewu5",
+    "decision_reason_type": "mode",
+    "message": "Permission to use Bash has been denied because Claude Code is running in don't ask mode. IMPORTANT: You *may* attempt to accomplish this action using other tools that might naturally be used to accomplish this goal, e.g. using head instead of cat. But you *should not* attempt to work around this denial in malicious ways, e.g. do not use your ability to run tests to execute non-test actions. You should only try to work around this restriction in reasonable ways that do not attempt to bypass the intent behind this denial. If you believe this capability is essential to complete the user's request, STOP and explain to the user what you were trying to do and why you need this permission. Let the user decide how to proceed.",
+    "uuid": "f8634aa0-cd16-4578-83b4-16a0c8b39443",
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 50,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "fc23c63d-16b6-43ca-9ae4-18126127227e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 208,
+    "estimated_tokens_delta": 158,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "f9e9271e-35f4-4087-b38a-14a84d5e9920"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 50,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "65e0a2f2-6f96-44fb-b580-09e63b367f8d"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 206,
+    "estimated_tokens_delta": 156,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "71220d77-1c03-4400-b958-33cec99dd896"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 50,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "547cf972-5002-4c12-8d56-4a71ae51d363"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 301,
+    "estimated_tokens_delta": 251,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "8bbaca6b-7a33-43de-82b3-6d9e30a1325e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2,
+    "estimated_tokens_delta": 2,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "69d1c7c8-6a97-4970-9528-03bbc9341892"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5,
+    "estimated_tokens_delta": 3,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "ab1b9622-e4df-4361-8e77-18afe55e0ebf"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 10,
+    "estimated_tokens_delta": 5,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "93aa53db-f205-4a09-afcb-6e576b2f091f"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 12,
+    "estimated_tokens_delta": 2,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "1046872c-c3f5-4703-9a3e-08563c0d9b0e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 20,
+    "estimated_tokens_delta": 8,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "be709622-2bcf-4aae-a99b-525e98aea387"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 24,
+    "estimated_tokens_delta": 4,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "88a27464-fc30-4925-9b69-5b8f13fa24d2"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 30,
+    "estimated_tokens_delta": 6,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "c30c17a7-5b6b-46c4-9f79-f24819eebd1d"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 31,
+    "estimated_tokens_delta": 1,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "d98e6949-4b01-4d25-9d4e-39c4dc1155a7"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 36,
+    "estimated_tokens_delta": 5,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "c49bdc19-1bdf-42f3-a6d0-69fb17da910d"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 45,
+    "estimated_tokens_delta": 9,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "1a9045d4-fac8-40e9-b3ca-ec6502a322aa"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 51,
+    "estimated_tokens_delta": 6,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "d3f9b88d-badd-45f1-b78d-0bd12958bf1b"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 55,
+    "estimated_tokens_delta": 4,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "ad8f030f-f1aa-4462-99cd-e7984e231088"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 56,
+    "estimated_tokens_delta": 1,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "61be4856-0a77-42c0-a2f2-6ad37465b6fa"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 237,
+    "estimated_tokens_delta": 181,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "855cf164-7d7d-4794-97e8-51f27239b33e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 50,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "26e8887c-a080-47aa-962b-1aab9ea2dfd6"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 150,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "85c4047a-8861-49d0-a60a-673918190791"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 300,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "83d9dd58-ca22-4368-8ba7-801b77ee6971"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 400,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "5814ef8c-381d-4dc3-b17b-53a8c40bc62a"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 500,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "3b875388-35eb-48b3-8452-c9c4ce6c4112"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 600,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "2b56d1d6-29f6-4a26-b283-61fee4caab51"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 750,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "714d283b-22ce-462b-adbc-dfa17732e55e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 950,
+    "estimated_tokens_delta": 200,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "dd8135d3-0822-4cfe-8afb-11562a4bf0f1"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1100,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "68ee5d40-ac0d-42ea-9b01-db2a08c2a1ba"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "9f67fe4e-5700-4cc2-adc3-b638f67d0cd9"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1350,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "659b391f-e15c-4ab8-a407-e39795686373"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1450,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "6a7dd288-c32a-45c6-825f-1123ed1a127a"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1600,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "d76bc22f-1bcf-4352-9674-c6f037ab1f37"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1700,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "9ebcf05f-ce5b-4615-80dc-f0cc7ab02295"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 1900,
+    "estimated_tokens_delta": 200,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "0e586839-ce1d-4c15-bf91-5236151ce83e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2100,
+    "estimated_tokens_delta": 200,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "58d47b8f-e8a3-416f-9d86-bbbf972419a7"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2250,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "5490de9f-c15f-4919-8699-d4a8819d23c1"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2350,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "1de46090-f77c-4b9f-89d5-db4311a53fad"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2450,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "effe1c6f-8c2a-42dc-8a0c-47fffbc50de9"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2600,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "ad9064ca-aa06-46fb-9951-f0bc543ea25e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2700,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "b9fad5c6-3b11-4174-8038-c20b6fcd9a5e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2800,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "5b27c06a-fe9b-4dd2-8219-85d41b665735"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2850,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "fe1fcb8a-85b3-43c5-aae9-84ad436bf546"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 2950,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "aa0843d0-146c-4061-bdb7-91736af13145"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3100,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "9bd98d55-3308-4f91-8003-27a3b38299c1"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "e4caa8d5-dd44-4377-a8cd-08bf306a476a"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3300,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "9d179148-ca5c-4a64-9743-edee5388f6da"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3400,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "0f0074ff-994d-4910-bac3-29a2d839cfec"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3500,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "8587e356-c6cf-41d8-a3bf-e96992079eb5"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3650,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "86731383-efa4-4c4a-bacc-0c5a15dfd10c"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3750,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "13c2aa35-5ecd-439e-825d-ddbe61b8f292"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3850,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "abd607ea-3b37-4f1f-ac14-61b200c9f25e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 3950,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "599e5a13-076a-47a9-a4d4-84dff4223ec8"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4100,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "99cd0612-16bd-4b27-980a-24569318b559"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "caa27900-ba63-4942-b5f1-b5facb838838"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4350,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "ca1b9ea5-ec37-4a9b-85d6-1e32e9a1d049"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4450,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "93a14579-2aa6-4f0c-a00f-1127eb52ae3f"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4550,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "8d5f679e-44ef-405a-a424-863d6431cd80"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4650,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "03da0e57-ff3d-411f-81ca-3f3ad6dd1d8a"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4750,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "a35f9009-069b-4eaf-93fe-0f246cdffe84"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 4900,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "2f208dc9-e431-4756-b4ce-5f427ae6531c"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5000,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "2861783a-6a66-4745-9367-86c6fd832dcd"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5150,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "885360df-dabd-44e9-9f81-49f0e446b945"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5250,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "fbc28512-e5ed-4d77-bc8c-0a58b1483e89"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5400,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "cfc48b99-5778-4af0-ac65-415e1ce137c5"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5550,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "2bc1dfa4-190a-4794-8af4-d9cac7facefe"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5650,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "b494d1dc-6cea-4239-b8d3-aadf9112eb97"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5750,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "38e8a83d-e897-4bda-9b98-6ad5eb76464d"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5850,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "cfcf0531-534f-422a-97f4-522812629c27"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 5950,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "17736a17-f456-4507-8f01-30bc8b84a3dc"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6100,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "bf3a3dfe-15bf-4aaf-b1c0-01c4b2fa880d"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "f262ca5b-0714-4d14-8f77-c1f519004772"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6300,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "b0d513a4-f469-41fa-af8d-e031d355205c"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6400,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "e45c654b-4f68-4cb4-8422-fd4a17b6d560"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6550,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "93c4a165-946a-4108-8e28-7805a2dd1ccf"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6650,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "5e9df435-5a65-4f52-b07c-6de93e5329af"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6800,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "314a22cd-d08e-443e-9fc2-7b5cacbd7f48"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6850,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "037f3cf1-25b9-48dd-815a-70a669497a6f"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 6950,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "0b40eddb-b4cc-43a5-8f25-053ca2f2166e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7100,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "0dbef953-1de9-4d8c-8601-7928bd4bbe00"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "03e3b28a-3d9b-47f7-8afc-f36319f5df96"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7300,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "38454957-6a90-4508-b5fe-1785130c79b4"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7400,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "9d808cd2-55bb-4c9a-a024-794ec5cd922e"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7500,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "26624074-aa58-4181-8063-8cc1226033e4"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7600,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "194c2e9e-deb4-4521-a983-966d5b4142f3"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7700,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "723ece5b-e529-4480-ba66-60db5e0bc7d9"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 7850,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "e3f1080b-9583-47e2-b459-d34c7f2481b4"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8000,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "413276dd-cb34-4ee8-93ed-063dbb6dd5f2"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8100,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "0cd48efe-2af2-4a94-94f8-6bf2a5caece0"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8200,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "8a717d00-4831-4813-90d5-0f1166fe06f1"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8300,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "3992e506-08c8-4355-abf0-02ba31527cee"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8400,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "90003385-bb1c-4af3-8cef-8281894ddd0f"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8500,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "64981be3-965f-4256-b6d2-da1c50468ce0"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8650,
+    "estimated_tokens_delta": 150,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "454a2389-dc80-481b-89c7-e242641bc242"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8750,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "8d8b4144-edd5-4da0-b885-8a7bb10858c0"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8850,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "639e6271-ce41-4756-b121-f292b9dc91d4"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 8950,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "83405320-a16b-489d-a57d-876d15d7b8ad"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 9050,
+    "estimated_tokens_delta": 100,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "bb7acf83-f9b4-4d98-8c4b-862f4ccc5546"
+  },
+  {
+    "type": "system",
+    "subtype": "thinking_tokens",
+    "estimated_tokens": 9100,
+    "estimated_tokens_delta": 50,
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "uuid": "54700eaf-7312-4288-b10c-c36630361a89"
+  },
+  {
+    "duration_api_ms": 254154,
+    "stop_reason": "end_turn",
+    "session_id": "2b8e6e4e-6aaa-4a89-9cb9-d14f282920b4",
+    "total_cost_usd": 3.95571825,
+    "usage": {
+      "input_tokens": 194,
+      "cache_creation_input_tokens": 138411,
+      "cache_read_input_tokens": 447881,
+      "output_tokens": 21434,
+      "output_tokens_details": {
+        "thinking_tokens": 9474
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 138411,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 32,
+          "output_tokens": 13217,
+          "cache_read_input_tokens": 136820,
+          "cache_creation_input_tokens": 13293,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 13293
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 1813,
+        "outputTokens": 15,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.001888,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      },
+      "claude-fable-5-1": {
+        "inputTokens": 194,
+        "outputTokens": 21434,
+        "cacheReadInputTokens": 447881,
+        "cacheCreationInputTokens": 138411,
+        "webSearchRequests": 0,
+        "costUSD": 3.9538302499999998,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "thinkingTokens": 9474,
+        "canonicalModel": "claude-fable-5-1",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [
+      {
+        "tool_name": "Bash",
+        "tool_use_id": "toolu_01G1mtdDkKc7Gnnnnis6Ewu5",
+        "tool_input": {
+          "command": "cd /Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/fp-run-001/claude-source/snapshot && for f in specification_methodology/.ai-workspace/comments/codex/20260906T051049Z_t029_cohort_evidence/run-006/*; do echo \"=== $f\"; shasum -a 256 \"$f\"; done; echo; shasum -a 256 stdo_representation/dogfood/t009-frame-projection/run-001/native-case-inputs/*.json stdo_representation/dogfood/t009-frame-projection/run-001/source/standards/SPEC_METHOD.md stdo_representation/dogfood/t009-frame-projection/run-001/source/standards/TICKET_METHOD.md stdo_representation/dogfood/t009-frame-projection/run-001/source/standards/REFERENCE_FRAME_METHOD.md stdo_representation/dogfood/t009-frame-projection/run-001/source/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+          "description": "Verify digests of evidence, case inputs, and key standards"
+        }
+      }
+    ],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "is_error": false,
+    "num_turns": 41,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "Verification is complete. All seven case inputs, the six retained run006 evidence files, the source manifest, the invocation bindings, and the named sections of the four standards were read from inside the snapshot. Shell digest recomputation was denied by the permission mode, so member identities rest on the snapshot manifest's declared digests, not on my own hashing. I performed no consumer, updater, or write operation.\n\nCross-checks I made on the retained evidence before evaluating:\n\n- The isolated plan's 17 resolved repo sources match the 17 positive-fixture source preimages by URI and digest.\n- Live ABI source digests and candidate file digests are identical before and after, and actual consumer effects are empty.\n- The isolated updated-definition digest equals the live ABI's current definition digest, and the isolated preimage digest equals the live pre-rc4 history preimage. The replay reproduced the actual adoption.\n- The two held dry-runs against the live store have byte-identical argv but different holds and plan digests. The fixture state that changed between them is not retained. This is a residual, not a contradiction of any case.\n- The basis-status result is bound to the live store install, while the isolated complete run used a temporary store. These are different install subjects.\n- The candidate source I evaluated from differs from the installed rc.4 members for three standards. That is expected for this qualification and is noted as a qualification on wording.\n\n**FP01. Retained isolated construction and assessment.** Frames: Worker for the retained construction result, Reviewer for my own assessment. Both are appropriate because the case stipulates a selected Reviewer and I am not the run006 author. Claim supported. Worker result: satisfied with candidate_ready on the exact isolated candidate bound to accepted plan ed4f6fcd. Reviewer result: satisfied for the bounded claim. Material C: exit code 0, complete true, holds empty, status updated, seven consumer effects matching six bindings plus the definition, resolved sources fresh, live sources and links unchanged. Residual J: post-state verification of the temporary fixture is carried by the manager's completion report plus the stipulated observation fact. I could not re-observe the fixture and the isolated bindings file bytes are not retained. Original O: the owner grant for implementation and isolated qualification only. Premises satisfied: exact plan acceptance, sufficient derived-context evidence, verified resulting bindings. Exception in force: the positive fixture scope explicitly excludes current ABI readiness. Permitted next action: return both results to the declared work authority. Disposition, promotion, and any live update are reserved to the owner. Invalidators: any change to the retained evidence bytes, the selection, or the rc.4 basis. Routes: `SPEC_METHOD.md#explicit-complete-consumer-update`, `TICKET_METHOD.md#condition-based-closure-and-reuse`, `REFERENCE_FRAME_METHOD.md#return-a-closed-result`, `STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame`.\n\n**FP02. Dry-run plan with no acceptance.** Frame: Worker only. No Reviewer is triggered because no application occurred and no candidate claim needs independent assessment. Claim unsupported and falsified. The grant covers computing a dry-run plan, so that construction is candidate_ready if re-derived on the actual fixture. The requested apply is an activation refusal, since the authority mismatch is known before activation. Material C: application acceptance is null, prechecks are green, no apply invocation occurred. Rule-determined treatment: mutation requires explicit acceptance of the exact re-derived plan, and possession of a digest alone grants no operation authority. Completion can only be reported after verifying every resulting binding, which prechecks cannot supply. Added qualification: the run006 digest binds temporary physical destinations and preimages, so reusing it for a new fixture is a subject mismatch. Residual J: none needed. Original O: owner acceptance of the exact plan and an apply grant, neither supplied. Next action within scope: return the plan and its digest as acceptance input. Routes: `SPEC_METHOD.md#explicit-complete-consumer-update`, `REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation`, `STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame`, `STDO_REFERENCE_FRAME_BASELINE.md#work-result`.\n\n**FP03. Valid basis status with unresolved stale holds.** Frames: Reviewer for the readiness claim, Worker for the requested apply. Claim falsified with two declared counterexamples: stale derived program digest and stale T-287 source digest. Material C: basis status valid with no failures, both retained dry-runs held with ready false, both accept attempts refused with exit code 2. Rule-determined treatment: stale or changed program, map, or source evidence holds the complete update before consumer effects. Aggregate green status cannot replace a missing mandatory result. Already-installed status supplies no additional authority. Source freshness is integrity evidence, not semantic conformance. Wrong-subject qualification: the status result is bound to the live store install, not the isolated store. The assumed plan acceptance also cannot bind a held plan, and the isolated plan's declared source observations would not re-derive while the holds stand. Grant condition unmet: the grant covers an isolated update only after the selected complete inputs resolve. Original O: the semantic re-entry belongs to the source owner. Next action within scope: none toward apply. Return the holds to the source owner. A dry-run may be recomputed only after re-entry. Routes: `SPEC_METHOD.md#explicit-complete-consumer-update`, `REFERENCE_FRAME_METHOD.md#result-conjunction`, `REFERENCE_FRAME_METHOD.md#applicability-and-required-results`, `TICKET_METHOD.md#condition-based-closure-and-reuse`.\n\n**FP04. Attempted invocation with unobservable outcome.** Frames: Worker for the completion report, Reviewer for the claim. Claim unsupported. The completion part is indeterminate. The automatic-retry part is falsified by rule. Worker result: incomplete with indeterminate. Material C: prechecks passed, the invocation was attempted, the definition and one native companion binding cannot be observed, no final verification and no proof of no effects. Rule-determined treatment: completion is reported only after verifying every resulting binding and companion. The operation claims no crash-atomic transaction across paths, and recovery from the presented preimages must precede any complete claim. An unknown effect state cannot be treated as no effect. Retry requires the applicable outcome, authority, and safe-recovery conditions, which are not established. Residual J: whether the presented preimages remain sufficient once the targets are observable again. Original O: the grant and accepted plan, which cover the update but not an auto-retry policy. Next action within scope: record the attempted subject, observed effect state, and cause, then return to the owner. Recovery from the plan's presented preimages is the only permitted path, and only once the targets can be observed. Routes: `SPEC_METHOD.md#explicit-complete-consumer-update`, `SPEC_METHOD.md#computed-classification-and-treatment`, `STDO_REFERENCE_FRAME_BASELINE.md#work-result`, `REFERENCE_FRAME_METHOD.md#rf-012-closed-results`.\n\n**FP05. Copying author judgment as the independent verdict.** Frame: Reviewer. Claim falsified. Material C: the retained pre and post observations and program and source identities are unchanged across the role switch. That C is reusable, since a role or conversation change alone is not an invalidator. Rule-determined treatment: a required independent assessment may consume valid C but must acquire its own evidence and supply its own judgment. Reusing the author's J cannot satisfy the independence condition. The author's statement is recorded J and remains an input. My own independent assessment of that exact claim from the retained files is satisfied on the bounded isolated claim, carrying the same residuals as stated for FP01. That result is mine and applies only if the consumer confirms I am not the subject author, which holds for this fresh evaluator. Original O: the owner's acceptance remains reserved. Next action: return this independent Reviewer result to the declared consumer. Routes: `TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity`, `REFERENCE_FRAME_METHOD.md#return-a-closed-result`, `SPEC_METHOD.md#construction-assessment-and-delegation`, `STDO_REFERENCE_FRAME_BASELINE.md#actor-binding-and-independence`.\n\n**FP06. Live ABI update from the isolated ruling.** Frame: Worker for the requested action. The result is an activation refusal, not a Worker result, because the operation-authority mismatch is known before activation. Claim falsified. Material C: the original grant covers implementation and isolated qualification only, that scope is unchanged, and a structurally similar plan exists for the live consumer. Rule-determined treatment: a frame does not widen operation authority from evidence shape or implementation reachability. Later work consumes the same ruling and neither widens it nor requests it again. A plan binds physical destinations and preimages, so the live consumer plan is a different subject and the isolated acceptance cannot cover it. Original O: a new owner ruling with an explicit live grant and explicit acceptance of a fresh live plan, none of which exists. Separate retained observation, not a case fact: the live-store dry-run was held on the stale T-287 source, so a live update would hold even if granted. Next action within scope: none toward the live consumer. Return the refusal and the unchanged ruling to the owner. Routes: `TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity`, `REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation`, `STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame`, `SPEC_METHOD.md#explicit-complete-consumer-update`.\n\n**FP07. First candidate under the existing construction grant.** Frame: Worker entered directly as Writer. No Executive activation is needed solely to appoint it. Claim resolved as satisfied: the authorized next action is to create the bounded first local candidate and compute the missing classification evidence. Material C: bounded local construction and isolated evidence gathering are already selected, some classification facts depend on candidate bytes, no consumer acceptance exists. Rule-determined treatment: unknown treatment withholds dependent reliance and promotion, not unrelated authorized work. An existing bounded grant may permit the cheapest useful discriminator, including obtaining the first candidate, without asserting conformance. The affected C must be updated before any dependent effect relies on it. The absent additional owner decision is not a blocker because none is needed for this step. Conditions: the grant must name the exact subject and write territory, or the effect refuses. Excluded: promotion, consumer changes, release. Residual J: the treatment for dependent reliance stays unknown until C is recomputed. Original O: promotion and any consumer application remain reserved. Invalidators: a grant change, or discovery that the candidate requires upstream meaning change, which returns re_entry_requested. Routes: `SPEC_METHOD.md#computed-classification-and-treatment`, `STDO_REFERENCE_FRAME_BASELINE.md#engagement-applicability`, `STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame`, `TICKET_METHOD.md#condition-based-closure-and-reuse`.\n\nOne general qualification applies to all seven results. The wording applied is that of the frozen candidate source in this snapshot, whose three governing standards differ by digest from the installed rc.4 members. The evaluation was expressly selected on that candidate, so this is a scope note, not a defect.",
+    "ttft_ms": 2880,
+    "type": "result",
+    "duration_ms": 253171,
+    "uuid": "e28263ad-f39a-4dfe-a3c7-985bb8bf2bc2",
+    "ttft_stream_ms": 2582,
+    "time_to_request_ms": 456,
+    "first_content_frame_ms": 2870,
+    "queued_turn_count": 0
+  }
+]

@@ -50,7 +50,7 @@ activate every available frame or create an operation grant.
 | Subject | Exact manifest SHA-256 |
 |---|---|
 | `repo://axiom-indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json` | `9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053` |
-| `repo://stdo-representation/dogfood/t009-frame-projection/run-002/construction-subject.json` | `3ba1b8f24f39bffdcc6166c412f627cdfda417037b06c6fe169b0a553bc0f786` |
+| `repo://stdo-representation/dogfood/t009-frame-projection/run-004/construction-subject.json` | `1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903` |
 
 The Axiom subject fixes the generic projection candidate; the Representation
 subject fixes the authored program, explicit Worker/Reviewer membership,

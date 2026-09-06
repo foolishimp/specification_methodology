@@ -11,7 +11,7 @@
   "proposals": {
     "axiom": {
       "file": "AXIOM_INDEXER_REFERENCE_FRAME_BASIS_REV9.md",
-      "sha256": "c5e83c0948ce56d6e876947d1daad20574ea5dbe049889614e205ba3373b91fd",
+      "sha256": "e182e98f0777cdb65167486572f714846e0a4c37287e04f91bbbf511426cb146",
       "frame_set_uri": "urn:axiom-indexer:frame-set:release-readiness:9",
       "based_on": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
       "predecessor_sha256": "032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69",
@@ -24,7 +24,7 @@
     },
     "representation": {
       "file": "STDO_REPRESENTATION_REFERENCE_FRAME_BASIS_REV17.md",
-      "sha256": "60da96d6a070595f6dc32e5d018c5cd62d8bb568b637f0e3ded0317a98d78365",
+      "sha256": "df17036e99a5914c8e8834b3ed06f89a5fa329b30256d981423ea5e74a4a1aff",
       "frame_set_uri": "urn:stdo-representation:reference-frame-basis:source-project:17",
       "based_on": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
       "predecessor_sha256": "c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3",
@@ -39,7 +39,7 @@
   },
   "construction_subjects": {
     "axiom_indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json": "9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053",
-    "stdo_representation/dogfood/t009-frame-projection/run-002/construction-subject.json": "3ba1b8f24f39bffdcc6166c412f627cdfda417037b06c6fe169b0a553bc0f786"
+    "stdo_representation/dogfood/t009-frame-projection/run-004/construction-subject.json": "1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903"
   },
   "owning_product_and_requirement_files": {
     "axiom_indexer/specification/PRODUCT.md": "fa12b6a6faf81e4333112a733eb1f165c5b63b57e801b5f65c8e8c2282397fe3",
@@ -83,7 +83,6 @@
   "validation": {
     "status": "passed author document/identity checks; independent read-only assessment remains separate",
     "live_declarations_definitions_decisions_unchanged": 6,
-    "construction_manifest_digests_unchanged": 2,
     "owning_product_requirement_digests_unchanged": 13,
     "only_two_markdown_proposals_and_manifest": true,
     "conservation": {
@@ -111,6 +110,25 @@
     },
     "failures": [],
     "canonical_source_locators_and_digests_checked": 17,
-    "portable_source_coordinates": "Exact source tables use canonical owning Product repo URIs; manifest acquisition paths remain Git-root-relative and do not change if declaration carrier moves."
+    "portable_source_coordinates": "Exact source tables use canonical owning Product repo URIs; manifest acquisition paths remain Git-root-relative and do not change if declaration carrier moves.",
+    "construction_manifest_digests_verified": 2
+  },
+  "binding_refresh": {
+    "selection": "Bind only the output-scope usability repair; preserve all proposal evaluation and acceptance law and unaccepted status.",
+    "predecessor_manifest_sha256": "6ee411509e6b38ea6310a99ed540c5bbd960b93f43825f53659b9b0c8376fd71",
+    "changed_proposals": {
+      "AXIOM_INDEXER_REFERENCE_FRAME_BASIS_REV9.md": {
+        "before_sha256": "6f1b070eb4c8f7bf1dad7e3efd1eebbf3d13ea3bc3d2be9085490308fbded90f",
+        "after_sha256": "e182e98f0777cdb65167486572f714846e0a4c37287e04f91bbbf511426cb146",
+        "only_construction_path_and_digest_changed": true
+      },
+      "STDO_REPRESENTATION_REFERENCE_FRAME_BASIS_REV17.md": {
+        "before_sha256": "925ea462ff64b476b15f4660acfc29c6a317dedebeb821ea374ade3c1b51f792",
+        "after_sha256": "df17036e99a5914c8e8834b3ed06f89a5fa329b30256d981423ea5e74a4a1aff",
+        "only_construction_path_and_digest_changed": true
+      }
+    },
+    "old_representation_construction_subject_sha256": "907ea9d5e2400314c9c81e601b0c215142d98286b6d1f66f8e79403c2d86b84a",
+    "new_representation_construction_subject_sha256": "1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903"
   }
 }

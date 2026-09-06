@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-09-06T06:46:03.123020+00:00",
+  "argv": [
+    "python3",
+    "-B",
+    "fixture_probe.py"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-001/retained-preparation",
+  "exit_code": 0,
+  "stdout_sha256": "3d99a7e7bf5713097d98d258448f343af41f52fd8ec7f1fea072b836aa4a93fd",
+  "case_outcomes": [
+    {
+      "after": [],
+      "before": [
+        "a"
+      ],
+      "count": 1,
+      "satisfied": false
+    },
+    {
+      "after": [
+        "a"
+      ],
+      "before": [
+        "a",
+        "b"
+      ],
+      "count": 2,
+      "satisfied": false
+    }
+  ],
+  "interpretation": "The original disposable fixture violates both admitted finite count outcomes. Exit zero is only probe execution, not semantic satisfaction. Native actors must observe and repair their own exact copy.",
+  "native_exposure": "This preparation observation is outside actor snapshots."
+}

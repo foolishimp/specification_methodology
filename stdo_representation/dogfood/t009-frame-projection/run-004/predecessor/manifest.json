@@ -1,0 +1,134 @@
+{
+  "kind": "t009.proposed-project-frame-basis-pair",
+  "status": "proposed-unaccepted; review-only handoff; no live binding or decision changed",
+  "writer": "/root/t030_m01_review",
+  "operative_stdo": {
+    "uri": "stdo://releases/v2.5.0-rc.4/",
+    "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+    "reference_frame_method_sha256": "c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+    "reference_frame_baseline_sha256": "6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e"
+  },
+  "proposals": {
+    "axiom": {
+      "file": "AXIOM_INDEXER_REFERENCE_FRAME_BASIS_REV9.md",
+      "sha256": "6f1b070eb4c8f7bf1dad7e3efd1eebbf3d13ea3bc3d2be9085490308fbded90f",
+      "frame_set_uri": "urn:axiom-indexer:frame-set:release-readiness:9",
+      "based_on": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
+      "predecessor_sha256": "032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69",
+      "revised_frames": [
+        "F-AUTHORING-ESSENCE",
+        "F-SYMBOLIC-INTEGRITY",
+        "F-VALIDATION-BOUNDARY",
+        "F-DOGFOOD-USEFULNESS"
+      ]
+    },
+    "representation": {
+      "file": "STDO_REPRESENTATION_REFERENCE_FRAME_BASIS_REV17.md",
+      "sha256": "925ea462ff64b476b15f4660acfc29c6a317dedebeb821ea374ade3c1b51f792",
+      "frame_set_uri": "urn:stdo-representation:reference-frame-basis:source-project:17",
+      "based_on": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
+      "predecessor_sha256": "c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3",
+      "revised_frames": [
+        "F-PRODUCT-BOUNDARY",
+        "F-MAP-ESSENCE",
+        "F-MECHANICAL-BOUNDARY",
+        "F-NATIVE-USE",
+        "F-DOGFOOD-USEFULNESS"
+      ]
+    }
+  },
+  "construction_subjects": {
+    "axiom_indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json": "9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053",
+    "stdo_representation/dogfood/t009-frame-projection/run-003/construction-subject.json": "907ea9d5e2400314c9c81e601b0c215142d98286b6d1f66f8e79403c2d86b84a"
+  },
+  "owning_product_and_requirement_files": {
+    "axiom_indexer/specification/PRODUCT.md": "fa12b6a6faf81e4333112a733eb1f165c5b63b57e801b5f65c8e8c2282397fe3",
+    "stdo_representation/specification/PRODUCT.md": "40b8512825263c3a18845fb6660c574432ad16df99937287d6f6bd6267bf5b61",
+    "axiom_indexer/specification/requirements/REQ-P-AUTHORING.md": "116e424f0fd226dc207885a5b3f4f521dba238c445a2bbd7b0bfa4143e4d2f8b",
+    "axiom_indexer/specification/requirements/REQ-P-PROGRAM.md": "d3c43f3a37342eccc4ba30212157223670c466fdefbb6fcf807c744ba87c10f0",
+    "axiom_indexer/specification/requirements/REQ-P-RESOLUTION.md": "af4600ac4b2f54c77b1ee28e499cfe80ce0cd200c6d51bf0bc760757b84104ed",
+    "axiom_indexer/specification/requirements/REQ-P-VALIDATION.md": "97cde45a40e0d378122cd39bb647f7a315984c88069f25cd9a165d520b6c6026",
+    "axiom_indexer/specification/requirements/REQ-P-JOINING.md": "d2c6529111e1d6d3f26d3f69ea823ca40b19642fa7083b125f8beb6bc08223aa",
+    "axiom_indexer/specification/requirements/REQ-P-PROJECTION.md": "2ca0f0601702b6e1209c42cc6ea8847adc04fd2eca334d1328598fb4199898c1",
+    "stdo_representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md": "b8d7e50e65f6b9dc8a23357b8e4e325c5eccd8d4556eaf207c0434c5384742b3",
+    "stdo_representation/specification/requirements/REQ-P-STDO-AUTHORING-MAP.md": "2d4d587d66f8b5d463545f4defbb862ebbfcd32b0827e21018924c4981321ceb",
+    "stdo_representation/specification/requirements/REQ-P-CANDIDATE-VALIDATION.md": "0de254e414a773bc675ef0ff1c89e404ee4608ad5e28c94dddd024f635b74d52",
+    "stdo_representation/specification/requirements/REQ-P-NATIVE-FRAME-USE.md": "15e573d4f5035ec3fa46f073f464f70c859282fb18f4eb075c598b06bc5d0040",
+    "stdo_representation/specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md": "89d5e0d4488489db581568df826e1e155c5233668cad90499279fa2e60dee1d2"
+  },
+  "unchanged_live_subjects": {
+    "axiom_indexer/stdo_default.json": "005c2c05f1b39939e7551bd9e6c3c45dbf4dea015ab181197750ddc11406b838",
+    "stdo_representation/stdo_representation.json": "442104c457186b23cf558880daa0ded1384bfc9376f6a5eeb09ca6226fe7bb6a",
+    "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md": "032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69",
+    "stdo_representation/specification/REFERENCE_FRAME_BASIS.md": "c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3",
+    "axiom_indexer/.ai-workspace/decisions/20260901T170605Z_frame_basis_v8_acceptance.json": "26c68cf20df58d055f091eb148e098551065ae27f43085e2c22e7615b77f4d39",
+    "stdo_representation/.ai-workspace/decisions/20260902T030553_frame_basis_rev16_acceptance.json": "116630d8b38fc2cda9462742f48d06b5605d69e50fe71902f4e78481bd1b82b0"
+  },
+  "verified_live_definition_status": {
+    "axiom_indexer/stdo_default.json": {
+      "valid": true,
+      "failures": []
+    },
+    "stdo_representation/stdo_representation.json": {
+      "valid": true,
+      "failures": []
+    }
+  },
+  "required_ruling": "Product owner disposes each exact declaration URI/digest for its bounded source evaluation scope. Existing RC4 proxy grants remain historical and do not authorize the extension. Applicable exact acceptance and separately authorized binding work would be needed to replace a live declaration; none is performed here.",
+  "scope_exclusions": [
+    "No live declaration, Product Definition, prior decision, skill, ticket, Goal or code mutation.",
+    "No new generic frame law, universal metric or cost framework.",
+    "No new release inventory, successor publication, Product acceptance, STDO source adoption or actual consumer effect."
+  ],
+  "validation": {
+    "status": "passed author document/identity checks; independent read-only assessment remains separate",
+    "live_declarations_definitions_decisions_unchanged": 6,
+    "owning_product_requirement_digests_unchanged": 13,
+    "only_two_markdown_proposals_and_manifest": true,
+    "conservation": {
+      "axiom": {
+        "same_frame_id_sequence": true,
+        "frame_count": 6,
+        "shared_evidence_and_result_law_unchanged": true,
+        "unchanged_release_frame_declarations": {
+          "### F-CANDIDATE-READINESS": true,
+          "### F-EXACT-CUT": true
+        }
+      },
+      "representation": {
+        "same_frame_id_sequence": true,
+        "frame_count": 9,
+        "shared_evidence_and_result_law_unchanged": true,
+        "unchanged_release_frame_declarations": {
+          "### F-VERSION-ALIGNMENT": true,
+          "### F-COHORT-INTEGRITY": true,
+          "### F-CANDIDATE-READINESS \u2014 closed historical phase": true,
+          "### F-EXACT-CUT": true
+        },
+        "severity_priority_and_hard_stop_policy_unchanged": true
+      }
+    },
+    "failures": [],
+    "canonical_source_locators_and_digests_checked": 17,
+    "portable_source_coordinates": "Exact source tables use canonical owning Product repo URIs; manifest acquisition paths remain Git-root-relative and do not change if declaration carrier moves.",
+    "construction_manifest_digests_verified": 2
+  },
+  "binding_refresh": {
+    "selection": "Bind the LOCAL_REPAIR candidate only; preserve all proposal evaluation and acceptance law and unaccepted status.",
+    "predecessor_manifest_sha256": "1c11a31c6d32272ff10b2b48037fa02f3a0be6457d4570e27ac399de02623227",
+    "changed_proposals": {
+      "AXIOM_INDEXER_REFERENCE_FRAME_BASIS_REV9.md": {
+        "before_sha256": "c5e83c0948ce56d6e876947d1daad20574ea5dbe049889614e205ba3373b91fd",
+        "after_sha256": "6f1b070eb4c8f7bf1dad7e3efd1eebbf3d13ea3bc3d2be9085490308fbded90f",
+        "only_construction_path_and_digest_changed": true
+      },
+      "STDO_REPRESENTATION_REFERENCE_FRAME_BASIS_REV17.md": {
+        "before_sha256": "60da96d6a070595f6dc32e5d018c5cd62d8bb568b637f0e3ded0317a98d78365",
+        "after_sha256": "925ea462ff64b476b15f4660acfc29c6a317dedebeb821ea374ade3c1b51f792",
+        "only_construction_path_and_digest_changed": true
+      }
+    },
+    "old_representation_construction_subject_sha256": "3ba1b8f24f39bffdcc6166c412f627cdfda417037b06c6fe169b0a553bc0f786",
+    "new_representation_construction_subject_sha256": "907ea9d5e2400314c9c81e601b0c215142d98286b6d1f66f8e79403c2d86b84a"
+  }
+}

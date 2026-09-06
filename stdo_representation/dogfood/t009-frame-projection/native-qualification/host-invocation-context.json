@@ -1,0 +1,21 @@
+{
+  "path": "/Users/jim/.codex/config.toml",
+  "selected_nonsecret_settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "max"
+  },
+  "profiles": {},
+  "wrapper_chain": [
+    {
+      "path": "/Users/jim/bin/codex",
+      "sha256": "94226c0923bf7a090cb3855e215e943e021ec0b0896f6de58ec85ea56d22c7a8",
+      "text": "#!/bin/sh\nexec \"$HOME/bin/codex-main\" \"$@\"\n"
+    },
+    {
+      "path": "/Users/jim/bin/codex-main",
+      "sha256": "77dd6f521a0c9184d74e3299267ae65dd4d5800549042ab7c5aa09368d6acb28",
+      "text": "#!/bin/sh\nexport CODEX_HOME=\"${CODEX_MAIN_HOME:-$HOME/.codex}\"\nexec \"${CODEX_REAL_BIN:-/opt/homebrew/lib/node_modules/@openai/codex/bin/codex.js}\" --dangerously-bypass-approvals-and-sandbox \"$@\"\n"
+    }
+  ],
+  "environment_selector_names": {}
+}

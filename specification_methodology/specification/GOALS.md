@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: delivery active; governing method and shared updater complete; native qualification underway
+Status: delivery active; governing method, shared updater and reindexing supplied; qualification has bounded open conditions
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -28,8 +28,10 @@ evidence. No fleet or successor release ordinal is selected by this goal.
   M03 and M05 retain native and aggregate qualification.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
   owns the combined Indexer/Representation work. Its baseline is supplied; the
-  owner now selects generic frame-index projections in Axiom and source-authored
-  STDO chains/frame membership in Representation. These make applicable
+  selected generic frame-index projections in Axiom and source-authored STDO
+  chains/frame membership in Representation are implemented and source-compared.
+  The ticket retains the native results, remaining conditions and exact frame
+  declaration decisions. These make applicable
   constraints and their supporting conditions usable without moving semantic
   judgment or authority into indexing code. Each Product retains its contracts,
   evidence and required assessment; this adds no constitutional framework.

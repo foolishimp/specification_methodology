@@ -2,8 +2,8 @@
 
 ## Current Goal
 
-Status: T-009 selects the frame-index projection Product increment; exact RC4
-mechanics remain qualified for the preceding narrower scope
+Status: frame-index mechanics constructed and independently verified; combined
+native qualification and successor frame-basis decision remain with T-009
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -38,6 +38,15 @@ tests under normal and optimized Python, and refused eight malformed actual-
 program variants with stale maps removed. Representation consumes these exact
 results for M03. Its instruction repair remains at that Product; this Goal
 does not close native qualification, accept a Product or publish a successor.
+
+The [repaired frame-index mechanics](../dogfood/t009-frame-projection/run-002/README.md)
+now supply the selected projection contract, with 31 normal/optimized tests,
+independent source-preservation checks and unchanged released RC4 map bytes.
+T009 consumes the exact result for STDO authoring and native use. Its observed
+native mistakes are evaluated at their actual interface or use boundary; generic
+indexing does not acquire semantic evaluation to conceal them. The proposed
+successor frame declaration remains an explicit owner decision, distinct from
+this mechanical result.
 
 ## GOAL-001 — Dogfood the smallest useful Axiom Indexer
 

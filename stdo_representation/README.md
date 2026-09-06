@@ -114,8 +114,9 @@ and reports are evidence, not portable Product members.
 The frame-index construction retains its predecessor, exact source snapshot,
 authored program, map, generated views and comparison results under
 `dogfood/t009-frame-projection/run-001/`. The current
-`dogfood/t009-frame-projection/run-002/construction-subject.json` binds the
-unchanged authored subject replayed with the repaired exact Axiom candidate.
+`dogfood/t009-frame-projection/run-004/construction-subject.json` binds the
+output-scope guidance to the unchanged program, map and views in `run-003`,
+source snapshot and exact Axiom candidate; earlier subjects remain preserved.
 Those records qualify only their declared subject. Source fidelity, independent native use, successor release
 construction and adoption each retain their own required evidence.
 

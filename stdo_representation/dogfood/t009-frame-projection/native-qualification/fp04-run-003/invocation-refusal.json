@@ -1,0 +1,6 @@
+{
+  "recorded_at": "2026-09-06T06:59:15.031347+00:00",
+  "predecessor_runner_sha256": "30bdca4a30b9200b61b6c22631c32cb47b3f9589fac6a14203a726030607d4f3",
+  "cause": "Claude refused an authorized snapshot-local cd followed by read-only shasum/python because the runner did not allow Bash(cd *). It then used retained projections instead of invoking the projector.",
+  "repair": "Add Bash(cd *) to the same read-oriented allowlist for future fresh contexts. No change to source, program, guide, case facts, model, prompt or operation grant."
+}

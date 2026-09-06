@@ -1,0 +1,88 @@
+Repaired [cache.py](/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/codex-projection/snapshot/stdo_representation/cache.py:1) so the count is computed after removal:
+
+```diff
+ def remove_last(entries):
+     items = list(entries)
++    items.pop()
+     count = len(items)
+-    items.pop()
+     return items, count
+```
+
+The unchanged owner `fixture_probe.py` produced:
+
+| Input | Remaining entries | Count before repair | Count after repair | After repair |
+|---|---|---:|---:|---|
+| `[a]` | `[]` | 1 | 0 | Satisfied |
+| `[a,b]` | `[a]` | 2 | 1 | Satisfied |
+
+The probe declares this domain complete and reports exact `public_before` values, unchanged upstream/root/helper relations, and current, complete D0/A0 coverage of `cache:refresh`. Only `cache.py` was edited.
+
+I verified the selected 52-member aggregate, run-003 program/map binding, relocated inputs, and repaired Axiom dependency (`ac.py` SHA-256 `87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931`). These are bounded candidate-law qualification results; the caller’s operating basis remains **v2.5.0-rc.4**.
+
+All source routes below use this exact prefix:
+
+```text
+S = repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/
+```
+
+The selected frame URIs, also their source routes, are:
+
+- `S + REFERENCE_FRAME_METHOD.md#reference-frame-laws`: finite application to each exact case.
+- `S + STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame`: `local`’s authorized construction and self-validation.
+- `S + STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame`: `partial_context`’s claimed complete-update assessment.
+
+For `partial_context`, I generated `urn:stdo-representation:frame-index:t009:complete-update-reviewer` in materialized mode to stdout using run-003 and `invocation-bindings.json`; it exited successfully. The complete-update Worker projection’s scope does not apply to the ordinary cache repair.
+
+**C** consists of owner-supplied facts, reproduced observations, exact comparisons, and sufficient declared-rule application. **J** retains residual semantic judgment and applicable recorded judgments. **O** remains the original owner’s ruling within its original scope. Neither index success nor C/J supplies operation authority. L1’s shared Public, upstream, and other-obligation facts remain supplied; each case’s design coverage and observations retain their own values.
+
+For compactness, each route code below expands to `S` plus the listed source fragment.
+
+| Route | Exact source fragment |
+|---|---|
+| SC | `SPEC_METHOD.md#computed-classification-and-treatment` |
+| UP | `TICKET_METHOD.md#upward-propagation-check` |
+| WR | `SPEC_METHOD.md#construction-assessment-and-delegation` |
+| JO | `TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity` |
+| CL | `TICKET_METHOD.md#condition-based-closure-and-reuse` |
+| FR | `REFERENCE_FRAME_METHOD.md#applicability-and-required-results` and `#result-conjunction` |
+| CU | `SPEC_METHOD.md#explicit-complete-consumer-update` |
+| DC | `DESIGN_MODULE_METHOD.md#11d-post-ticket-design-review-rule` |
+| PR | `authority_compressions/README.md#authority-compression-assets` and `AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation` |
+
+The following are my decisions. Next actions for cases other than `local` are response-only.
+
+| Case ID | Disposition and decisive fact or unknown | Next lawful action | Route |
+|---|---|---|---|
+| `local` | **Satisfied; bounded repair complete.** Both owner-probe cases pass, Public is preserved, and D0/A0 covers the repair. Independent assessment and reserved acceptance are explicitly unnecessary. | Return this one-run result and stop. | SC, WR, CL |
+| `helper_preserve` | **Reject H1 as preserving cleanup.** Membership is unchanged, but serialized `p.save.timeout` changes 30→45. | Repair the helper under EH to preserve 30, then compare its complete projection. | SC, UP |
+| `helper_change` | **Governing-owner re-entry required.** Desired timeout 45 conflicts with PublicRequirement0 and EH’s preservation boundary. | Re-enter PublicRequirement0 through Public0; any accepted contract change needs corresponding realization authority. | SC, UP |
+| `helper_unknown` | **Current use refused; intended treatment indeterminate.** H1 violates the current timeout 30; intended timeout is unselected. | Resolve the intended outcome without treating H1’s bytes as its selection. Diagnostic authority permits neither repair nor contract change here. | SC, JO |
+| `membership` | **Reject H2 as preserving cleanup.** `p.inspect` is removed and `p.cancel` added; unchanged `p.save` does not preserve the required member universe. | Return for an EH repair restoring the exact required identities and values. | SC, UP |
+| `missing_candidate` | **Conformance indeterminate; provisional construction permitted.** No candidate means Public delta is unknown. | Use EH’s existing bounded cleanup/projection grant to obtain the first candidate; assess before dependent reliance. | SC, WR |
+| `design_missing` | **Coverage indeterminate.** Accepted-design evidence and trace are missing despite passing cache/Public facts. | Obtain applicable acceptance, scope, and trace evidence from the design owner; missing evidence does not prove absent design. | SC, UP |
+| `design_stale` | **Current coverage unestablished.** The supplied design evidence and trace are stale. | Obtain current applicable coverage evidence; preserve independently valid cache/Public facts. | SC, DC |
+| `design_ambiguous` | **Coverage indeterminate.** The accepted-design relation and trace are ambiguous. | Resolve the exact applicable acceptance and scope with its owner. | SC, UP |
+| `design_filename_only` | **Coverage unestablished.** `cache-design.md` identifies a filename, with no accepted trace. | Obtain the acceptance/scope/trace relation; the filename cannot establish it. | SC |
+| `design_digest_only` | **Coverage unestablished.** “D0 digest” supplies no accepted scope or trace relation. | Obtain applicable acceptance and trace evidence. | SC |
+| `design_covered` | **Coverage satisfied.** Current D0/A0 has a complete `cache:refresh` trace; the supplied cache/Public facts pass. | Reuse that coverage for this assessment. Missing filename/digest fields add no obligation. | SC, DC |
+| `root_requirement` | **Requirement re-entry required.** G1 changes root0→root1 while RootRequirement0 requires root0. Public equality does not remove this conflict. FR0 is true. | Re-enter RootRequirement0, then dependent design. The applicable independent root assessment remains required; preserve the valid cache claim. | SC, UP, FR |
+| `root_design` | **Design re-entry required.** Both roots are permitted by this variant’s requirement, but accepted design selects root0. FR0 is true. | Re-enter RootDesign0 for root1 and satisfy the applicable independent assessment; preserve the valid cache claim. | SC, UP, FR |
+| `resume_unchanged` | **Q7 satisfied.** Assessor7’s J7 remains applicable to A7/B0: C7 identifies missing required `p.inspect`, and E0 remains `not_applied`. | Return the rejection explanation and leave A7 unchanged. The explanation outcome requires no repair or retry. | JO, CL |
+| `resume_changed` | **Composite completion indeterminate.** Reassessing J7→J7′ preserves the rejection reason from C7; E1=`unknown` removes support for the no-effect claim. | Retain the supported explanation and obtain scoped effect evidence before claiming preservation/completion. No automatic retry; the odd UI icon is separate. | SC, JO, CL |
+| `independent` | **Closure withheld.** Valid C and owner GO do not satisfy the required independent G1/B1 judgment. Renaming the author’s role changes no independence relation. | Obtain capable author-independent J-review for exact G1/B1; valid C may be reused. | JO, FR |
+| `route_correction` | **Preservation hypothesis falsified.** Projection now shows timeout 45 against required 30; effect is `not_applied`. | Correct H1 under EH and recompute the projection. Preserve the original cleanup purpose and valid cache claim; no rollback is established as necessary. | SC, UP |
+| `closure_all_met` | **Complete.** Nonempty count 1 and empty count 0 satisfy the entire domain; current design and all shared L1 obligations are satisfied. | Return bounded closure. The review event adds no separate condition. | SC, CL |
+| `closure_missing_empty_case` | **Indeterminate; closure withheld.** Nonempty count passes, but the empty-result observation is `null`. | Obtain the exact L1 observation for input `[a]`; neither another case nor the local repair supplies it. | SC, CL |
+| `closure_failing_empty_case` | **Falsified; incomplete.** Empty-result count is 1 where the law requires 0; the nonempty case passes. | Return the counterexample for authorized local repair, then verify the corrected candidate’s complete domain. | SC, CL |
+| `owner_ruling` | **P0-only authority retained.** Owner0’s P0/B0 ruling in O1 is: “Use root1 for this selected project only; do not change other projects.” The later summary widens it unlawfully. | Reuse O1 for P0’s governed root-change steps without requesting unchanged authority again. Other projects remain outside its scope. | JO, UP |
+| `frame_false` | **Satisfied; claim can close.** root0=root0 makes FR0 false; every other obligation is supplied satisfied. | Omit only FR0 and return closure; its absent result is immaterial. | FR, CL |
+| `frame_unknown` | **Indeterminate.** Missing `root_after` makes FR0 unknown; other obligations remain satisfied. | Obtain the exact root-after fact. Unknown applicability cannot support closure or be treated as false. | FR, CL |
+| `frame_true_missing` | **Indeterminate; closure withheld.** root0→root1 makes FR0 true, but its result is absent. | Obtain the required capable independent result for G1/B1. | FR, CL |
+| `frame_true_wrong_subject` | **Indeterminate; closure withheld.** FR0 is true; the supplied satisfied result concerns G0/B1. | Obtain the required result for G1/B1. | FR, CL |
+| `frame_true_wrong_basis` | **Indeterminate; closure withheld.** FR0 is true; the supplied satisfied result concerns G1/B0. | Obtain the required result for G1/B1. | FR, CL |
+| `frame_true_sufficient` | **Satisfied; claim can close.** FR0 is true, the supplied independent assessment satisfies exact G1/B1, and every other obligation is satisfied. | Return closure with that exact result; add no further condition. | FR, CL |
+| `readiness` | **Yes, STDO can guide the repair.** Exact P0 authority/source are known; companion native readiness remains unchecked. | First inspect the governed repair target and its owner check under the existing authority. Tooling readiness remains separate from that source-grounded first step. | SC, WR |
+| `partial_context` | **Incomplete.** RC4 basis verification does not complete a context whose Representation locator remains RC1. Changed source bytes leave map freshness unresolved. | Continue read-only planning over the complete selected bindings and obtain source-owner freshness resolution; withhold dependent update effects. | CU |
+| `improvement` | **Route to the Representation semantic-compression owner.** The three inherited clauses contradict the supplied direct-Writer source rule; index mechanics faithfully reproduced them. Benefit is unmeasured. | Return those clauses for source-grounded re-authoring and subsequent map/projection regeneration under its own grant; measure benefit separately. | WR, PR |
+| `suspend` | **Paused, not globally complete.** Cache claim remains valid; root-owner assessment remains outstanding; effect state is unknown; O1 remains P0-only. | Preserve this truthful pause account and stop. The pause supplies no retry, cleanup, deletion, or enlarged effect authority. | SC, JO, CL |

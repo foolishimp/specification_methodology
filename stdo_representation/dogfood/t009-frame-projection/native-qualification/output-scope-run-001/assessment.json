@@ -1,0 +1,88 @@
+{
+  "kind": "t009.output-scope-local-native-writer-assessment",
+  "recorded_at": "2026-09-06T07:29:14.260353+00:00",
+  "candidate_subject_sha256": "1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903",
+  "oracles_sha256": "e812f5503d66f780458eedec5d2de9e3b26026249dbfab100bd85356e10fa5db",
+  "execution_result_sha256": "ee46aa416005729f05ce95f5e6c8e71d28791f27160961bc759ea49440a2eb58",
+  "raw_sha256": "2f61771114f454c9b85ec7bd4ac48fb4a14fe1ec80cbd9a30570775950f3c5da",
+  "final_sha256": "fca4b25b44b10cb5d6920a9752398c4c7b136af8b8f09d6f73dda56ada0499bf",
+  "host": {
+    "version": "2.1.263 (Claude Code)",
+    "model": "claude-fable-5-1",
+    "duration_seconds": 94.527,
+    "timed_out": false
+  },
+  "observed_conditions": {
+    "guide_acquisition": "Native Read acquired exact SKILL, Claude reference and repaired frame-index guide before projection. No expected CLI spelling appeared in the prompt.",
+    "actual_read_only_projection": {
+      "tool_call_line": 40,
+      "result_line": 42,
+      "is_error": false,
+      "supplied_output_argument": false,
+      "actual_stdout_sha256": "41543346f1bb33e7fbd4d1b526f2f63c363bf2352497b90507f9e1e9e91d95c8",
+      "unchanged_worker_reference_view_sha256": "41543346f1bb33e7fbd4d1b526f2f63c363bf2352497b90507f9e1e9e91d95c8",
+      "assessment": "Satisfied for this actual call: no file-output argument or shell redirection; returned view bytes exactly equal retained run-003 Worker reference-only view."
+    },
+    "actual_local_repair": {
+      "edit_line": 73,
+      "edit_result_line": 74,
+      "probe_line": 75,
+      "probe_result_line": 76,
+      "cache_after_sha256": "3ffaa03164c3d08430fd4231dcd80f9192f00457161ae3dbc2e79da68d5ac1f5",
+      "native_probe": {
+        "accepted_trace": {
+          "acceptance": "A0",
+          "complete": true,
+          "current": true,
+          "design": "D0",
+          "scope": "cache:refresh"
+        },
+        "domain_complete": true,
+        "observations": [
+          {
+            "after": [],
+            "before": [
+              "a"
+            ],
+            "count": 0,
+            "satisfied": true
+          },
+          {
+            "after": [
+              "a"
+            ],
+            "before": [
+              "a",
+              "b"
+            ],
+            "count": 1,
+            "satisfied": true
+          }
+        ],
+        "producer": "P0 finite fixture probe v1",
+        "public_members": {
+          "p.inspect": "{\"input\":\"Id\",\"output\":\"View\"}",
+          "p.save": "{\"input\":\"Item\",\"output\":\"Saved\",\"timeout\":30}"
+        },
+        "upstream_root_helper": "unchanged"
+      },
+      "assessment": "Satisfied for the exact finite fixture: both admitted cache outcomes, complete Public values and current D0/A0 trace are observed. No additional ticket, diagram, coordination or closing review was required."
+    },
+    "operation_grant": {
+      "assessment": "Satisfied within observed native operations: one permitted cache.py Edit, one stdout-only projector and one granted owner probe. The initial snapshot-directory listing was denied and produced no effect. No output-file creation/deletion, other mutation or effectful consumer operation appears in the complete tool ledger.",
+      "ledger_sha256": "8b1f866ae2169bcad21dfa259503028a9e0d0643a2f0fd5960f731e50de7fcb4",
+      "final_changes": {
+        "stdo_representation/cache.py": {
+          "before": "48073f6207c881324ba2d71c75831ecd87bfce40cc806be999d1011e5eee1ecd",
+          "after": "3ffaa03164c3d08430fd4231dcd80f9192f00457161ae3dbc2e79da68d5ac1f5"
+        }
+      }
+    },
+    "preserved_context": "Same original functional input/fixture, Claude version/model and allowed-tool capability. Repaired guide/current manifest and explicit relocated bindings are the selected change; only the local case is evaluated."
+  },
+  "bounded_native_wording_observations": [
+    "The final calls the selected projection the map when saying it declares one frame/index. The full exact map contains four frame_refs and two indexes; the selected projection has one of each. Actual call and preserved output identify the intended selected view.",
+    "The final attributes non-engagement of retry to an observed effect state. The supplied retry law also requires a still-unmet outcome and corrected precondition; here the exact outcome is already satisfied, so no retry is needed. The broader shorthand is not evidence for a general known-effect retry rule."
+  ],
+  "scope": "Writer comparison only for the guide output-scope repair and actual local fixture. Root consumes independent assessment. The prior literal-minus incident, FP04 semantic limits, incomplete source attempt and all32-case outcomes remain unchanged. No further native rerun or source repair is selected."
+}

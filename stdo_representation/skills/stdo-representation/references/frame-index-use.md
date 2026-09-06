@@ -6,11 +6,12 @@ MVP supplies no such operation. T009 working-source use requires its explicit
 construction/qualification selection; it is not an installed successor.
 
 From the Representation source root, the current construction subject is under
-`dogfood/t009-frame-projection/run-002/`. Read its `construction-subject.json` to
+`dogfood/t009-frame-projection/run-004/`. Read its `construction-subject.json` to
 bind the exact program, map, source snapshot, bindings and Axiom code/schema
-before use. The authored program and source remain in the preserved `run-001`;
-`run-002` replays them with the repaired exact Axiom candidate. Resolve each
-manifest member path relative to that manifest. A file location or successful command supplies no authority. If
+before use. `run-004` binds the output-scope guidance to the unchanged program,
+map and views in `run-003` and source in `run-001`. Earlier subjects remain
+preserved. Resolve each path using the manifest's explicit path bases. A file
+location or successful command supplies no authority. If
 that manifest or an exact matching dependency is unavailable, return that
 bounded missing input; do not substitute released RC4 or mutable sibling bytes.
 
@@ -29,7 +30,12 @@ and authority constraints. Selecting both does not create a two-actor workflow
 or grant construction to a Reviewer. Direct sufficient work keeps its declared
 consumer; coordinated work returns through its selected Executive relation.
 
-With the exact paths bound by that subject, invoke the dependency:
+For read-only use, omit `--output`: the dependency writes the view to stdout.
+Every supplied `--output` value is a file path, including `-`, which names a
+literal file and does not select stdout. File output requires an applicable
+write grant for that path.
+
+With the exact paths bound by that subject, inspect a view without file output:
 
 ```sh
 python3 <exact-axiom-ac.py> project \
@@ -37,8 +43,13 @@ python3 <exact-axiom-ac.py> project \
   --map <logical-constraint-map.json> \
   --bindings <bindings.json> \
   --frame-index urn:stdo-representation:frame-index:t009:complete-update-worker \
-  --mode reference-only --output <worker-references.json>
+  --mode reference-only
+```
 
+When the applicable grant includes the output file, a materialized view can be
+written to that path:
+
+```sh
 python3 <exact-axiom-ac.py> project \
   --program <axiomatic-program.json> \
   --map <logical-constraint-map.json> \
@@ -70,6 +81,21 @@ stale selected source evidence holds the update; and completion requires every
 selected resulting binding and companion to be verified. These rules must be
 evaluated from exact task evidence. The projection itself supplies none of that
 evidence and cannot authorize an actual consumer operation.
+
+If an invocation was attempted but its resulting state is unavailable, hold
+completion claims and automatic retry. That observation gap proves neither a
+caught failure, crash or lost rollback storage, changed preimages, nor invalid
+original authority or acceptance. Do not substitute any of those facts for the
+unknown effect state.
+
+Within an existing observation grant, obtain actual effect evidence first.
+Then apply the supported completion, recovery or retry conditions, preserving
+the original grant and exact acceptance while they remain applicable. Unknown
+applicability remains unknown; it is neither established validity nor proven
+revocation. Return to the owner only for a materially changed or newly ambiguous
+reserved decision. The existing failure/recovery clause and its source routes
+still govern an actual failure, changed preimages or unavailable rollback;
+an observation gap alone does not establish that those conditions occurred.
 
 On missing dependencies, stale source observations, a mismatched map or an
 unresolved selection, consume the dependency's diagnostic and withhold the

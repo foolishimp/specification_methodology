@@ -14,7 +14,7 @@
 - re_entry_point: axiom_indexer/specification/PRODUCT.md#frame-index-projections
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-06T06:38:45Z
+- updated_at: 2026-09-06T07:25:10Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - pen_holder: codex
@@ -25,7 +25,7 @@
 - work_authorization: direct_owner_delivery_and_frame_index_Product_selection
 - execution_contract_state: frame_projection_Product_increment_admitted; prior_M01_M02_baseline_retained
 - completed_milestones: M01; M02_mechanical_construction_and_evidence
-- execution_status: M02_mechanics_and_M03_source_constructed; native_FP04_local_repair; M04_in_progress
+- execution_status: M02_mechanics_verified; M03_source_construction_verified; M04_native_population_assessed_with_bounded_open_conditions
 - planning_status: native_delivery_timeline_and_progressive_use_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
@@ -255,7 +255,7 @@ explicit basis selection, not from T-030's proposal text.
 | **Axiom Indexer** | Generic authoring guidance under `axiom_indexer/skills/axiomatize-corpus/`; program/validation/join contracts and `build_tenants/core/code/ac.py`; mechanical tests and diagnostics. | Source-linked authoring remains LLM work. Code resolves, validates, indexes, and joins exact caller inputs. It does not select frames, repair meaning, accept semantics, budget/truncate context, or invoke agents. |
 | **STDO Representation** | Its Product and five requirement families; `build_tenants/axiom_indexer/representation/`; `skills/stdo-representation/` and target references; Quickstart and native discovery; existing dogfood/proof surfaces. | Owns STDO-specific compression, index use, source navigation, instructional examples, and native-use qualification. It does not fork Axiom mechanics or author STDO law. |
 | **STDO** | Its Product/source use model and owning standards define meaning; T-030 tracks the successor model/method and shared `help`, `ticket`, `work`, `review`, and `status` work. | Shared entry remains in STDO's plugin. Representation's skill consumes exact selected law; T-030's work state is not normative authority. |
-| **STDO and consumer Product adoption owners** | Exact-basis SPEC_METHOD/RELEASE_METHOD and Product selection authority govern adoption; T-029 tracks the proposed complete-update successor. | This ticket supplies companion identities, native routes, freshness/refusal contracts, and evidence. Neither ticket supplies adoption law or builds a second updater. |
+| **STDO and consumer Product adoption owners** | Exact-basis SPEC_METHOD/RELEASE_METHOD and Product selection authority govern adoption; T-029 tracks the implemented shared complete-update capability. | This ticket supplies companion identities, native routes, freshness/refusal contracts, and evidence. Neither ticket supplies adoption law or builds a second updater. |
 | **Consumer, worksite, host, and proof owners** | Original grants/rulings/work state; scoped preimages and diagnostics; available usage observations; claim/evidence joins. | Representation consumes source-bound facts. It does not become a worksite service, usage authority, ticket executor, or rival state store. |
 
 Exact current requirements are [Representation requirements](../../../specification/requirements/README.md)
@@ -282,8 +282,9 @@ workstream's contribution; it does not repeat or absorb T-030's method changes.
 | **R09 — Owner-supplied mechanics** | First reuse the released resolver, validator, index, diagnostics, and pure joiner. Repair demonstrated mechanical gaps at Axiom's owner; Representation exposes their outputs and residual judgment. Expected-digest comparison is currently a caller check, not an unimplemented validator guarantee. A stronger contract requires explicit owner selection. |
 | **R10 — Complete adopted context** | Supply exact companion release/member/source identities, usable native routes, and truthful stale/partial-context behavior to T-029. Changed semantic entries require source-grounded LLM re-authoring; unaffected entries and usable prior context are conserved. A basis-only update cannot establish complete readiness. |
 
-Any generic read-only context assembly capability remains a **conditional
-Representation Product-scope proposal**. First establish a concrete gap that
+Beyond the explicitly selected frame-index projection increment, additional
+generic read-only context assembly remains a **conditional Product-scope
+proposal**. First establish a concrete gap that
 existing owner tools and caller-authored joins cannot sufficiently address.
 Select its owner, exact inputs, refusal behavior, and Product/member change
 before implementation. It must not hide frame selection, add semantic choices
@@ -355,10 +356,11 @@ is accepted. The following is this ticket's realization/evidence map only.
 
 ## Milestones And Dependency Order
 
-M01 is execution-admitted by the bounded activation above. M02 is limited to
-its demonstrated mechanical dependencies. M03's current-law guidance repair is
-selected by its subsequent activation; successor compression and M04 remain
-outstanding under their exact dependent inputs.
+M01's baseline and M02's selected mechanical construction are complete. M03's
+successor source compression, derived map and native guidance are constructed
+and independently source-compared. M04's completed native population has
+bounded passing results and retained failures; its remaining conditions and
+selected local repair are recorded in Current Delivery Result.
 These are conditions within one work record, not an artifact or actor per row.
 
 | Milestone | Required condition | Dependency and evidence |
@@ -377,8 +379,9 @@ thirteen-scenario model is already ratified law.
 
 ### Delivery Timeline
 
-The activations above select the first stage, sufficient mechanical reuse and
-the demonstrated M03 native guidance repair. Remaining stages identify the dependent work; they do not
+The activations above select the baseline, frame-index Product increment,
+source authoring and native qualification. The rows identify dependency order;
+Current Delivery Result owns their observed state. They do not
 prescribe calendar dates or add an artifact, actor or review for every row.
 
 | Order | Owning work and task | Completion and next handoff |
@@ -537,11 +540,11 @@ immutable RC4 map byte-for-byte and conserves both successful projection views
 and the pure joiner. This satisfies the newly selected mechanical construction
 condition; native fidelity and required owner decisions remain separate.
 
-Representation's [exact source construction](../../../dogfood/t009-frame-projection/run-002/construction-subject.json)
+Representation's [current exact construction](../../../dogfood/t009-frame-projection/run-004/construction-subject.json)
 binds all 52 successor source members (aggregate
 `86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca`),
 the unchanged 97 authored statements, 23 explicit supporting references,
-three qualifications, two overlapping Worker/Reviewer indexes and all six
+four qualifications, two overlapping Worker/Reviewer indexes and all six
 reproduced projection views. The two closures share nine clauses and jointly
 contain eighteen. This is an unreleased source candidate; its operative
 method and ordinary immutable dependency remain RC4.
@@ -560,10 +563,123 @@ inputs, model/host identities, raw traces, failures and bounded assessments
 belong in the existing dogfood proof territory. This activation grants no live
 consumer effects, publication or frame-set acceptance.
 
-Source comparison, native observations, shared-updater integration and exact
-successor frame-declaration proposals are the remaining current results. Live
-accepted frame bases 8/16 and both Product Definitions remain unchanged; their
-historical acceptance is not expanded by construction or test success.
+Independent source comparison, generic mechanics and shared-updater integration
+have closed applicable results. The [qualification assessment](../../../dogfood/t009-frame-projection/qualification-review.md)
+joins the completed finite native population and its bounded failures. The
+owner disposition of the successor declarations remains an input. Live accepted frame bases 8/16 and both
+Product Definitions remain unchanged; their historical acceptance is not
+expanded by construction or test success.
+
+### Observed Native Repair And Current Frontier
+
+The first fresh FP01-FP07 comparison produced correct material results for both
+Codex conditions. Claude source and projection conditions correctly withheld
+FP04 completion/retry but additionally inferred recovery triggers and changed
+preimages that the case did not supply. Independent evaluation confirmed the
+bounded native inference failure. Source law and generic indexing remained
+sufficient; a failing candidate response did not select constitutional change.
+
+Writer `/root/t030_m01_review` performed the Executive's `local_repair` over
+committed predecessor `0f1b1ab`: the existing native guide and one qualification
+on the authored failure clause now distinguish the observation gap from a
+proved exception trigger or invalidated acceptance. It preserves applicable
+original authority, permits only granted observation and leaves unknown
+applicability unresolved. No automatic retry or renewed approval is inferred.
+The [independent affected result](../../../dogfood/t009-frame-projection/run-003/independent-review.json)
+passes source fidelity, exact regenerated report/map/six views and the proposal
+binding refresh. All 97 statements, 23 links, frame membership, source bytes
+and original FP04 facts remain unchanged. The prior candidates and failed
+answers remain evidence.
+
+The recovery-qualification construction manifest is SHA-256
+`907ea9d5e2400314c9c81e601b0c215142d98286b6d1f66f8e79403c2d86b84a`.
+Its affected FP04 projection observations and the 32 ordinary-functional
+variants are complete. Independent assessment passes all 32 semantic decisions
+and the actual cache repair/probe in each of four Codex/Claude source/map arms.
+Codex FP04 passes. Claude FP04 preserves the immediate hold but still invents
+prospective recovery/new-acceptance conditions; those claims remain unqualified.
+Claude functional projection also creates and deletes a literal `-` outside
+its write grant, selecting the interface repair below. The functional L1 fixture states
+its shared unchanged Public/upstream premises explicitly; that clarification
+was frozen before exposure and changes no Product rule. A timed-out native
+attempt without a final result supplies no scenario pass. Wrapper and direct
+CLI capabilities are retained distinctly; observed nonmutation does not claim
+an operating-system enforcement property.
+
+The [exact proposed frame declarations](../../../dogfood/t009-frame-projection/frame-basis-proposals/manifest.json)
+remain unaccepted, with full current digests in that manifest. Their source
+evaluation contracts passed independent assessment; construction-binding
+changes receive only the affected identity check. The old RC4 proxy grants do
+not cover this new source-capability scope. The exact owning disposition and
+required packaged-successor joins remain distinct from publication or
+actual consumer adoption. No declaration or Product Definition is silently
+rebound here.
+
+### Observed Output-Scope Usability Repair
+
+The completed Claude functional projection trace passed `--output -`, created
+a literal file named `-`, and then deleted it outside the sole `cache.py` write
+grant. Final-state equality does not erase that transient effect. Root's
+evaluation identifies a bounded native-interface omission: the guide shows
+file-output examples but does not state the already implemented stdout form.
+This observation does not change the program, projection semantics, source
+law, or the Indexer's documented file-path interpretation.
+
+Root enters Writer `urn:openai:codex:t009-native-output-scope-selection-writer`
+under the standing delivery and local-commit grant to record this exact
+selection, then returns to Executive. Writer `/root/t030_m01_review` supplies
+one guide clarification: omit `--output` for stdout; every supplied value is
+a file path, including `-`; file output needs an applicable write grant. Its
+territory is that guide, its current README/Quickstart routes, a new exact
+native construction manifest reusing the unchanged run-003 program/map/source,
+and the two unaccepted proposal construction bindings. Historical bytes remain
+retained. Source law, Axiom code, projection contents, case facts and oracles
+are excluded from mutation.
+
+Independent Reviewer `/root/t030_m01_writer` assesses the interface clarification
+and exact binding delta. Native Writer `/root/t030_axiomatic_review` then runs
+one affected fresh Claude projector/local-cache use with the same output scope
+and pre-exposure oracle. It verifies the actual operation trace as well as
+before/after files. The existing 32-case comparisons and all failed attempts
+remain evidence; this narrow repair does not repeat that population or claim
+to repair unrelated FP04 prospective recovery judgments.
+
+The repair is complete under [run-004's exact native subject](../../../dogfood/t009-frame-projection/run-004/construction-subject.json),
+SHA-256 `1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903`.
+Independent source/interface review passes. Its one fresh Claude invocation
+actually projects to stdout, makes only the authorized cache edit and passes
+the owner probe. Independent operation-history assessment finds no extra
+output creation or deletion. The exact result and preserved failed predecessor
+are joined in the [qualification assessment](../../../dogfood/t009-frame-projection/qualification-review.md#closed-output-scope-repair).
+The unchanged source program/map/six views are reused; no mechanics or 32-case
+battery was repeated for this guide-only change.
+
+### Remaining Conditions And Next Owning Decision
+
+- The current declaration pair is proposed Axiom revision 9 at SHA-256
+  `e182e98f0777cdb65167486572f714846e0a4c37287e04f91bbbf511426cb146`
+  and Representation revision 17 at
+  `df17036e99a5914c8e8834b3ed06f89a5fa329b30256d981423ea5e74a4a1aff`.
+  Both exact proposals passed independent assessment. Their existing owning
+  acceptance gates require the Product owner's disposition before binding;
+  prior RC4 proxy grants cannot expand to this source capability.
+- Claude FP04's prospective recovery/new-acceptance condition remains
+  unqualified. Preserve the supported immediate hold and observation result,
+  the passing Codex result and the failed Claude branches. The evaluated law
+  and guide are already sufficient; this observation selects no further
+  constitutional or Indexer change.
+- The exact successor source/cohort selection and remaining supported native
+  and packaged-path claims retain their own conditions. Current finite source
+  qualification does not establish unseen paths or an installed successor.
+  T030 owns its shared-entry/aggregate joins; T029's supplied updater capability
+  and Axiom's supplied mechanical result are not reopened by this boundary.
+
+Root returns the concrete declaration pair for the required owner disposition
+after integrating and locally committing the authorized source work and its
+retained evidence. Acceptance/binding, candidate qualification, publication and
+actual adoption remain distinct facts; this ticket is active until its stated
+conditions hold. Continued work reuses sufficient closed results and the
+existing tracker rather than selecting another architecture or framework.
 
 ### Historical Baseline And Earlier Native Repair
 

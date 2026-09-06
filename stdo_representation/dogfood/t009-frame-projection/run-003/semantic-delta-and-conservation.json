@@ -1,0 +1,42 @@
+{
+  "kind": "t009.fp04-observation-gap-qualification-repair",
+  "writer": "/root/t030_m01_review",
+  "selection": "Executive LOCAL_REPAIR after independent actual native FP04 finding; no Product or Source STDO reprice.",
+  "predecessor_commit": "0f1b1ab1e2cfb6a7baace4a4df0d2ba03478b65f",
+  "predecessor_construction_subject_sha256": "3ba1b8f24f39bffdcc6166c412f627cdfda417037b06c6fe169b0a553bc0f786",
+  "predecessor_program_sha256": "b5206f049471ece63c16f3dcfb332fec1a250d45e3c732bc8152b9dbbd49bc66",
+  "program_sha256": "c39896e9c562bffe1f0632d3eb0dbefa71ab2aef5c92a5f576776408d6689a1d",
+  "program_uri_change": {
+    "before": "urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-001",
+    "after": "urn:stdo-representation:program:a-c-text:t009-construction:86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca:frame-projection-003"
+  },
+  "clause_uri": "urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary",
+  "statement_unchanged": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation.",
+  "appended_qualification": {
+    "role": "urn:stdo-representation:vocabulary:role:qualification",
+    "literal": "An observation gap about an attempted operation holds completion claims and automatic retry; it proves neither a caught failure, crash or lost rollback storage, changed preimages, nor invalidation of the original grant or exact acceptance. Within an existing observation grant, acquire actual effect evidence before choosing the applicable completion, recovery or retry path. Preserve the original grant and acceptance while still applicable, retaining any unknown applicability as unknown. Return only a materially changed or newly ambiguous reserved decision to its owner. Actual failure or changed preimages retains its governing recovery, rederivation and acceptance conditions; those conditions cannot be inferred as triggered from an observation gap alone."
+  },
+  "source_refs_before": [
+    "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+  ],
+  "source_refs_after": [
+    "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+    "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+    "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+  ],
+  "source_grounding": "SPEC_METHOD computed classification preserves unknown effect state, affected invalidation, the existing evidence grant and applicable safe retry. TICKET_METHOD continuity preserves original scoped authority and returns only materially changed or newly ambiguous owner decisions. Existing complete-update law retains its actual-failure and recovery conditions.",
+  "counts": {
+    "clauses": 97,
+    "clause_dependency_links": 23,
+    "literal_qualifications": 4
+  },
+  "conservation": {
+    "all_97_statements_unchanged": true,
+    "all_other_clauses_unchanged": true,
+    "original_failure_arguments_unchanged": true,
+    "symbols_frames_indexes_vocabulary_residuals_and_source_basis_unchanged": true,
+    "clause_dependency_links_unchanged": true,
+    "fp04_input_unchanged": true
+  },
+  "independent_assessment": "pending for this exact repair; no new native result claimed"
+}

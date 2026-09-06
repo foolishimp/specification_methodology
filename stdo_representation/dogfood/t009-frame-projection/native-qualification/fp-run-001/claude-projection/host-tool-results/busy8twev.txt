@@ -1,0 +1,151 @@
+MAP intrinsic map_sha256: sha256:e738a812cc5e918621477bfa7b485786b26aa8c4ba6361e33c65cc3e11f0c431
+PROJ frame_refs: [
+ "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+ "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+]
+PROJ frame_indexes: [
+ {
+  "clause_refs": [
+   "urn:stdo-representation:a-c-text:clause:closure-is-satisfied-obligations-not-review-occurrence",
+   "urn:stdo-representation:a-c-text:clause:complete-update-rechecks-and-verifies-completion",
+   "urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total"
+  ],
+  "frame_ref": "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+  "residual_refs": [
+   "urn:stdo-representation:a-c-text:residual:complete-update-selection-and-evidence-remain-owned",
+   "urn:stdo-representation:a-c-text:residual:task-frame-obligations-require-owned-applicability"
+  ],
+  "scope": "Independently assess an exact claimed complete-consumer-update result and its current evidence under the explicitly selected assessment and independence conditions. Return an evidence-bound evaluation and triage to the declared consumer, first to Executive when coordinated. This evaluation grants no repair, priority, promotion, continuation or actual consumer/fleet effects.",
+  "source_refs": [
+   "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+   "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#closure",
+   "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb9443539
+CLOSURE clauses: 18 residuals: 11
+
+===== CLAUSES (materialized) =====
+
+## urn:stdo-representation:a-c-text:clause:closure-is-satisfied-obligations-not-review-occurrence
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:work-outcome", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "A claim completes only when every applicable declared obligation is satisfied 
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#result-conjunction", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#closure", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#condi
+  statement: A claim completes only when every applicable declared obligation is satisfied by valid evidence for its exact subject/basis/scope, required J/O is present and applicable, and no active non-closure condition remains. Evidence existence, closed indeterminacy, a successful tool or a review event cannot satisfy a missing condition. Existing owners decide reserved acceptance; an authorized Writer may record a sufficient bounded result when no independent/reserved condition applies, retaining actual sprint-close and design obligations.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists.", "role": "urn:stdo-representation:vocabulary:role:requirement"}, {"ref": "urn:stdo-representat
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "For each selected derived context, missing, ambiguous, changed or unavailable program/map/source evidence holds the complete update before consumer effects. Its source owner supplies any necessary semantic re-entry; the manager cannot mechanically relabel an older map as current. Exact source freshness supplies integrity evidence, not semantic conformance or an independent semantic verdict.", "role": "urn:stdo-representation:vocabulary:role:
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"]
+  statement: For each selected derived context, missing, ambiguous, changed or unavailable program/map/source evidence holds the complete update before consumer effects. Its source owner supplies any necessary semantic re-entry; the manager cannot mechanically relabel an older map as current. Exact source freshness supplies integrity evidence, not semantic conformance or an independent semantic verdict.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages 
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"]
+  statement: Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "The separate cohort-update operation presents the whole plan without consumer effects. Its acceptance object binds physical effect destinations and binding preimages, exact selected cohort bytes, companion annotated tags/commits/subtrees and inventories, replacement dependency locators, native routes and declared derived-source observations under the same canonical JSON hashing rule as the Adoption Plan. Already-installed status adds no auth
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"]
+  statement: The separate cohort-update operation presents the whole plan without consumer effects. Its acceptance object binds physical effect destinations and binding preimages, exact selected cohort bytes, companion annotated tags/commits/subtrees and inventories, replacement dependency locators, native routes and declared derived-source observations under the same canonical JSON hashing rule as the Adoption Plan. Already-installed status adds no authority and does not change the plan digest.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-rechecks-and-verifies-completion
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation.", "role": "urn:stdo-representation:vocabulary:role:requirement"}, {"ref": "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-p
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-selection-retains-owned-composition
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "A Complete Consumer Update Plan binds one explicitly selected Product Definition and the complete companion population of one exact release-matched cohort to the invocation-owner-selected consumer bindings. The Product Definition owns composition; the cohort and each Product release record own release and member identity. The caller selects every native route and derived context in the claimed update scope. Proximity or empty discovery suppl
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:distinguishes
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"]
+  statement: A Complete Consumer Update Plan binds one explicitly selected Product Definition and the complete companion population of one exact release-matched cohort to the invocation-owner-selected consumer bindings. The Product Definition owns composition; the cohort and each Product release record own release and member identity. The caller selects every native route and derived context in the claimed update scope. Proximity or empty discovery supplies no selection; an empty derived-context population means the owner selected none, not that semantic context is absent. Invocation selection and its plan/result are operation evidence, not a new persistent dependency declaration, registry or lock.
+
+## urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated consumer content remain available and unchanged. The operation creates no consumer-local checker and changes no Product meaning or local semantic map.
+
+## urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:computed-classification", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "C records reproducible facts and sufficient declared rule application; J records only unresolved semantics or materiality; O remains a ruling of its actual owner. None creates operation, admission o
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:distinguishes
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: C records reproducible facts and sufficient declared rule application; J records only unresolved semantics or materiality; O remains a ruling of its actual owner. None creates operation, admission or decision authority or a new calculus kind.
+
+## urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:computed-classification", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "After checking exact applicability, reuse valid C across roles, conversations and resumptions. Changed request, candidate, basis, owner/root, projection, accepted trace, rule, configuration or material evidence invalidates affected claims before reliance. Retain predecessor/successor identities, changed inputs, surviving
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:preserves
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment"]
+  statement: After checking exact applicability, reuse valid C across roles, conversations and resumptions. Changed request, candidate, basis, owner/root, projection, accepted trace, rule, configuration or material evidence invalidates affected claims before reliance. Retain predecessor/successor identities, changed inputs, surviving facts and affected J dependencies; recompute the wider frontier where independence is unproved.
+
+## urn:stdo-representation:a-c-text:clause:declared-rules-settle-only-supported-treatment
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:computed-classification", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:declared-treatment-rule", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:governed-treatment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Apply only owner-declared rules with sufficient facts; record owners, matched predicates and consequences for smallest lawful re-entry, next action, evidence/assessment, reserved ruling 
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#upward-propagation-check"]
+  statement: Apply only owner-declared rules with sufficient facts; record owners, matched predicates and consequences for smallest lawful re-entry, next action, evidence/assessment, reserved ruling and carrier lifetime. Keep conflicting rules or missing premises unresolved. A label or filename cannot select treatment, and a rule-settled question needs no invented J.
+
+## urn:stdo-representation:a-c-text:clause:frame-applicability-preserves-true-false-and-unknown
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:reference-frame", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Owning evaluation/scope predicates select obligations for the exact subject. True requires its evaluation and exact result; false excludes only that obligation under cited authority. Missing or amb
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results"]
+  statement: Owning evaluation/scope predicates select obligations for the exact subject. True requires its evaluation and exact result; false excludes only that obligation under cited authority. Missing or ambiguous premises leave applicability unknown, never false. Available tools, frame names or families activate nothing by themselves; residual semantic applicability remains supported J.
+
+## urn:stdo-representation:a-c-text:clause:judgment-revision-is-scoped-and-does-not-invent-rulings
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:computed-classification", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Changed material evidence, basis or the revising observation causes affected reassessment with original/successor continuity. Preserve unrelated conclusions only where independence is supported. Reu
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: Changed material evidence, basis or the revising observation causes affected reassessment with original/successor continuity. Preserve unrelated conclusions only where independence is supported. Reusing the author J cannot satisfy required independent assessment; recording or reusing J does not supply O, admission, acceptance, effects or continuation.
+
+## urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:execution-contract", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Retain a direct or lawful-proxy ruling in original wording with owner, exact subject/basis, permitted scope/effects, conditions and source, separate from interpretation. Consume sufficient existing authority while applicable without requesting it again. Only a materially changed or newly ambiguous decision returns its affected que
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:preserves
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"]
+  statement: Retain a direct or lawful-proxy ruling in original wording with owner, exact subject/basis, permitted scope/effects, conditions and source, separate from interpretation. Consume sufficient existing authority while applicable without requesting it again. Only a materially changed or newly ambiguous decision returns its affected question to the owner; a record creates no extra authority or registry.
+
+## urn:stdo-representation:a-c-text:clause:required-frame-conjunction-retains-every-constraint
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:work-outcome", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Under the declared conjunction rule, every mandatory constraint must be satisfied with valid applicable evidence. Absent, stale, wrong-subject/basis, incapable, conflicted or indeterminate required re
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#result-conjunction", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_MET
+  statement: Under the declared conjunction rule, every mandatory constraint must be satisfied with valid applicable evidence. Absent, stale, wrong-subject/basis, incapable, conflicted or indeterminate required results cannot establish dependent satisfaction. Agreement cannot discard a material constraint/counterexample found by one contributor, and a caller-selected list does not establish that every owning obligation was included.
+
+## urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:reference-frame", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_b
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"]
+  statement: Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_basis carries basis failure and refuses consumption.
+
+## urn:stdo-representation:a-c-text:clause:sufficient-writer-entry-is-direct
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:worker", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:execution-contract", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capabil
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#construction-assessment-and-delegation", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#engagement-applicability", "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICK
+  statement: One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capability or independence needs; role/frame names alone create none. Preserve admission, smallest lawful carrier, required assessment, reserved decisions and result consumer. Sufficient direct work adds no Executive appointment, review, ticket or diagram recreation merely to finish.
+
+## urn:stdo-representation:a-c-text:clause:unknown-treatment-bounds-dependent-effects
+  arguments: [{"ref": "urn:stdo-representation:a-c-text:symbol:computed-classification", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:governed-treatment", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"ref": "urn:stdo-representation:a-c-text:symbol:worker", "role": "urn:stdo-representation:vocabulary:role:subject"}, {"literal": "Withhold reliance or promotion that depends on unknown treatment. An existing exact construction/evidence grant may permit a bounded discriminator, including the first candidate, with its own subject, te
+  clause_type: constraint
+  operator: urn:stdo-representation:vocabulary:operator:requires
+  source_refs: ["repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment"]
+  statement: Withhold reliance or promotion that depends on unknown treatment. An existing exact construction/evidence grant may permit a bounded discriminator, including the first candidate, with its own subject, territory, operations and stops. Update affected C before dependent reliance; unrelated authorized work remains permitted. Obtaining candidate bytes is not conformance or admission.

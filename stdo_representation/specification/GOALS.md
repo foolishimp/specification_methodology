@@ -2,8 +2,8 @@
 
 ## Current state
 
-Status: T-009 baseline complete; the owner-selected frame-index Product
-increment and successor source authoring are active, with qualification open
+Status: T-009 frame-index mechanics and successor source authoring supplied;
+native evidence is assessed, with bounded qualification conditions open
 
 Make the STDO axiomatic constraints useful in ordinary native Codex and Claude
 work: recover exact sources and applicable frames, obtain sufficient bounded
@@ -23,10 +23,11 @@ reference-only/materialized projections. Their source-grounded premises,
 conditions, exceptions and residuals must survive native use. Existing RC4
 mechanics evidence supports its narrower baseline; it does not qualify this
 new selected capability.
-The actual RC4 baseline identified sufficient existing Axiom mechanics and a
-Representation archive-route defect. The admitted M03 source guidance repair
-is constructed and its documented command succeeds. The exact grants, results,
-remaining native evidence and successor compression frontier are recorded in
+The selected successor now supplies explicit frame projections, a source-linked
+compression over the current constitutional corpus, and updated native guidance.
+Source/mechanical assessment and finite ordinary native outcomes have retained
+results; failures, affected repairs and unobserved paths remain explicit. The
+exact grants, results and remaining qualification conditions are recorded in
 [T-009](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#current-delivery-result).
 
 Use [T-009's progressive-use application](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#progressive-use-in-this-ticket)

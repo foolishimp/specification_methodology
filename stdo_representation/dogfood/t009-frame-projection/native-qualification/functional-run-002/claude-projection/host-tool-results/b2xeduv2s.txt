@@ -1,0 +1,466 @@
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:accepted-design-trace-does-not-settle-semantic-sufficiency",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:distinguishes",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:accepted-design-coverage"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Join changed bytes/relations to explicit accepted scope, traces and acceptance evidence; distinguish covered, missing, stale, ambiguous and outside-scope evidence. A filename, artifact or digest alone is no accepted coverage proof. Current trace coverage is C; remaining semantic adequacy is J."
+  }
+ ],
+ "statement": "Join changed bytes/relations to explicit accepted scope, traces and acceptance evidence; distinguish covered, missing, stale, ambiguous and outside-scope evidence. A filename, artifact or digest alone is no accepted coverage proof. Current trace coverage is C; remaining semantic adequacy is J.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:applicability-qualification-discriminates-finite-alternatives",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Qualify an applicability rule against declared finite alternatives that distinguish true, false and unknown premises, required missing/wrong-subject results and the sufficient positive result. Always skipping or always activating cannot satisfy their different expected outcomes; the fixture supplies its own predicates and expected branches."
+  }
+ ],
+ "statement": "Qualify an applicability rule against declared finite alternatives that distinguish true, false and unknown premises, required missing/wrong-subject results and the sufficient positive result. Always skipping or always activating cannot satisfy their different expected outcomes; the fixture supplies its own predicates and expected branches.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:candidate-nonconformance-does-not-author-governing-law",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:governed-treatment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:public-serialization"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "When existing governing law remains sufficient for the authorized outcome, reject or locally repair a violating candidate within its grant. Re-enter its actual governing owner only when the explicitly selected desired outcome needs changed meaning or an applicable assessment establishes governing insufficiency. Unresolved target meaning or necessity stays J and any reserved choice stays O; candidate bytes choose neither law nor grant."
+  }
+ ],
+ "statement": "When existing governing law remains sufficient for the authorized outcome, reject or locally repair a violating candidate within its grant. Re-enter its actual governing owner only when the explicitly selected desired outcome needs changed meaning or an applicable assessment establishes governing insufficiency. Unresolved target meaning or necessity stays J and any reserved choice stays O; candidate bytes choose neither law nor grant.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#upward-propagation-check"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:classification-binds-reproducible-inputs-and-unknowns",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Bind the exact request and desired outcome, known targets/effects, grant/lifetime, Product Definition/basis, baseline/available candidate, declared relations, accepted design/traces, evidence and rules. The result names producer/procedure revision, inputs, output, scope, source routes, reproduction, unknowns and invalidators. Missing candidate or evidence is an input state, not no-change proof."
+  }
+ ],
+ "statement": "Bind the exact request and desired outcome, known targets/effects, grant/lifetime, Product Definition/basis, baseline/available candidate, declared relations, accepted design/traces, evidence and rules. The result names producer/procedure revision, inputs, output, scope, source routes, reproduction, unknowns and invalidators. Missing candidate or evidence is an input state, not no-change proof.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:closed-result-reuse-preserves-required-independence",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Reuse an unchanged closed result only after checking exact applicability. A material input change or declared revising observation invalidates the affected result before reliance, preserving predecessor/successor and demonstrably independent survivors. Required independent evaluations may share valid mechanical evidence but still acquire sufficient exact evidence and supply their own judgment under the actual independence conditions."
+  }
+ ],
+ "statement": "Reuse an unchanged closed result only after checking exact applicability. A material input change or declared revising observation invalidates the affected result before reliance, preserving predecessor/successor and demonstrably independent survivors. Required independent evaluations may share valid mechanical evidence but still acquire sufficient exact evidence and supply their own judgment under the actual independence conditions.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#return-a-closed-result",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:closure-is-satisfied-obligations-not-review-occurrence",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "A claim completes only when every applicable declared obligation is satisfied by valid evidence for its exact subject/basis/scope, required J/O is present and applicable, and no active non-closure condition remains. Evidence existence, closed indeterminacy, a successful tool or a review event cannot satisfy a missing condition. Existing owners decide reserved acceptance; an authorized Writer may record a sufficient bounded result when no independent/reserved condition applies, retaining actual sprint-close and design obligations."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:required-frame-conjunction-retains-every-constraint"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:frame-applicability-preserves-true-false-and-unknown"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:support",
+   "ref": "urn:stdo-representation:a-c-text:clause:judgment-revision-is-scoped-and-does-not-invent-rulings"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:qualification",
+   "literal": "Judgment, owner rulings and independent assessment are conditions only where the exact selected work authority makes them applicable. Existing satisfied conditions do not require another owner ceremony; this generic closure rule does not add a universal complete-consumer-update prerequisite."
+  }
+ ],
+ "statement": "A claim completes only when every applicable declared obligation is satisfied by valid evidence for its exact subject/basis/scope, required J/O is present and applicable, and no active non-closure condition remains. Evidence existence, closed indeterminacy, a successful tool or a review event cannot satisfy a missing condition. Existing owners decide reserved acceptance; an authorized Writer may record a sufficient bounded result when no independent/reserved condition applies, retaining actual sprint-close and design obligations.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#result-conjunction",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#closure",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#condition-based-closure-and-reuse",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:closure-reuse-retains-independent-progress",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:preserves",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:owner-ruling"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Reuse valid evidence and J/O for unchanged obligations. A material counterexample or changed evidence/basis invalidates the affected claim and dependent results before reliance. Retain unrelated observations as bounded repricing input without automatic reopening or work expansion. Closure recording preserves exact evaluated scope, satisfied conditions, evidence and surviving residual obligations."
+  }
+ ],
+ "statement": "Reuse valid evidence and J/O for unchanged obligations. A material counterexample or changed evidence/basis invalidates the affected claim and dependent results before reliance. Retain unrelated observations as bounded repricing input without automatic reopening or work expansion. Closure recording preserves exact evaluated scope, satisfied conditions, evidence and surviving residual obligations.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#condition-based-closure-and-reuse"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-selection-retains-owned-composition"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:qualification",
+   "literal": "Where an owner ruling exists or is required, recover its original applicable scope once. This conditional relation does not add a new universal owner-ruling requirement; complete-update operation authority and exact plan acceptance still come from the owning contract."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:exception",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal"
+  }
+ ],
+ "statement": "Complete consumer update mutation requires explicit acceptance of the exact presented plan and rederivation of that plan. Possession of its digest alone grants no operation authority. Existing adopt, sync and fleet contracts retain their narrower boundaries; their authorization cannot be widened merely because the complete-update operation exists.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:qualification",
+   "literal": "An observation gap about an attempted operation holds completion claims and automatic retry; it proves neither a caught failure, crash or lost rollback storage, changed preimages, nor invalidation of the original grant or exact acceptance. Within an existing observation grant, acquire actual effect evidence before choosing the applicable completion, recovery or retry path. Preserve the original grant and acceptance while still applicable, retaining any unknown applicability as unknown. Return only a materially changed or newly ambiguous reserved decision to its owner. Actual failure or changed preimages retains its governing recovery, rederivation and acceptance conditions; those conditions cannot be inferred as triggered from an observation gap alone."
+  }
+ ],
+ "statement": "Refusal before consumer effects retains prior state. A caught application failure restores affected consumer preimages and does not report completion; newly staged immutable installs may remain unused. Application requires exclusive consumer write scope. The operation claims no crash-atomic transaction across independent filesystem paths: abrupt process/host loss or unavailable rollback storage requires recovery from the presented preimages before claiming the complete relation.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:complete-update-rechecks-and-verifies-completion",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:exception",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:exception",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary"
+  }
+ ],
+ "statement": "After immutable staging, the complete update rechecks the consumer preimages and source evidence. It reports completion only after verifying every selected resulting binding and companion. Staging success or partial binding success cannot establish the complete selected relation.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated consumer content remain available and unchanged. The operation creates no consumer-local checker and changes no Product meaning or local semantic map."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:premise",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:support",
+   "ref": "urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:exception",
+   "ref": "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal"
+  }
+ ],
+ "statement": "Before reliance, the complete update verifies the selected cohort dependency closure and each exact companion definition, release record and admitted members. It stages absent immutable installs, verifies existing installs without repairing them in place, and preflights every consumer target. Only the selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated consumer content remain available and unchanged. The operation creates no consumer-local checker and changes no Product meaning or local semantic map.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_basis carries basis failure and refuses consumption."
+  }
+ ],
+ "statement": "Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_basis carries basis failure and refuses consumption.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:clause:sufficient-writer-entry-is-direct",
+ "clause_type": "constraint",
+ "operator": "urn:stdo-representation:vocabulary:operator:requires",
+ "arguments": [
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:worker"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:execution-contract"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:subject",
+   "ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:requirement",
+   "literal": "One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capability or independence needs; role/frame names alone create none. Preserve admission, smallest lawful carrier, required assessment, reserved decisions and result consumer. Sufficient direct work adds no Executive appointment, review, ticket or diagram recreation merely to finish."
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:declared-rules-settle-only-supported-treatment"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:condition",
+   "ref": "urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:support",
+   "ref": "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:exception",
+   "ref": "urn:stdo-representation:a-c-text:clause:unknown-treatment-bounds-dependent-effects"
+  },
+  {
+   "role": "urn:stdo-representation:vocabulary:role:qualification",
+   "literal": "Sufficient declared treatment supports the settled direct branch. Unknown treatment holds dependent reliance, while an exact existing evidence or construction grant may still authorize the bounded discriminator or first candidate. Recover O only where it exists or is required, without widening its original scope or demanding a new ruling merely for this branch."
+  }
+ ],
+ "statement": "One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capability or independence needs; role/frame names alone create none. Preserve admission, smallest lawful carrier, required assessment, reserved decisions and result consumer. Sufficient direct work adds no Executive appointment, review, ticket or diagram recreation merely to finish.",
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#construction-assessment-and-delegation",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/STDO_REFERENCE_FRAME_BASELINE.md#engagement-applicability",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#condition-based-closure-and-reuse",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/TICKET_METHOD.md#upward-propagation-check"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:residual:complete-update-selection-and-evidence-remain-owned",
+ "kind": "unresolved",
+ "subject_refs": [
+  "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan",
+  "urn:stdo-representation:a-c-text:symbol:observed-effect-state",
+  "urn:stdo-representation:a-c-text:symbol:owner-ruling",
+  "urn:stdo-representation:a-c-text:symbol:source-corpus"
+ ],
+ "detail": "This program supplies no invocation-specific consumer selection, accepted complete update plan, companion verification, derived-source observation or observed application result. Obtain these from their actual invocation, source and effect owners. Empty selection does not establish absence; a valid plan digest does not grant effects; source integrity does not settle semantic sufficiency; unknown or unrecovered effects cannot support a complete-update claim.",
+ "re_entry_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+ ],
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/SPEC_METHOD.md#explicit-complete-consumer-update"
+ ]
+}
+=====
+{
+ "uri": "urn:stdo-representation:a-c-text:residual:task-frame-obligations-require-owned-applicability",
+ "kind": "unresolved",
+ "subject_refs": [
+  "urn:stdo-representation:a-c-text:symbol:closed-frame-result",
+  "urn:stdo-representation:a-c-text:symbol:frame-applicability"
+ ],
+ "detail": "Frame URIs and available evaluators are not a complete task-specific obligation inventory. Obtain the actual owners predicates, sufficient premises, required-result identities, conjunction and independence rules; unknown applicability or an absent exact required result remains unresolved.",
+ "re_entry_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#result-conjunction"
+ ],
+ "source_refs": [
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results",
+  "repo://stdo-t009-construction/86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca/standards/REFERENCE_FRAME_METHOD.md#result-conjunction"
+ ]
+}
+=====

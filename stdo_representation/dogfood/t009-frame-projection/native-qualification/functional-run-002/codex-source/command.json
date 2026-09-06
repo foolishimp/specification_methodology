@@ -1,0 +1,34 @@
+{
+  "argv": [
+    "/opt/homebrew/lib/node_modules/@openai/codex/bin/codex.js",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "workspace-write",
+    "--json",
+    "--color",
+    "never",
+    "--model",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"max\"",
+    "-C",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/codex-source/snapshot/stdo_representation",
+    "-o",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/codex-source/final.txt",
+    "-"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/native-qualification/functional-run-002/codex-source/snapshot/stdo_representation",
+  "prompt_sha256": "2b88532d441790ec4c236dd912fa34277b6f284ed661d303ab2267d3d722e4a0",
+  "stdin": "prompt.txt",
+  "host_version": "codex-cli 0.153.4",
+  "host_version_stderr": "",
+  "started_at": "2026-09-06T06:50:13.653648+00:00",
+  "timeout_seconds": 1800,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "CODEX_HOME": "/Users/jim/.codex"
+  },
+  "model_selection": "Codex explicitly binds the wrapper's configured gpt-6-astra/max; Claude uses configured default recorded in raw metadata.",
+  "runner_sha256": "30bdca4a30b9200b61b6c22631c32cb47b3f9589fac6a14203a726030607d4f3"
+}

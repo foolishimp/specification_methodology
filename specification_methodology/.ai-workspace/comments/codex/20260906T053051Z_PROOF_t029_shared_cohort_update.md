@@ -174,3 +174,13 @@ projects that result to T030 M04. Current carrier:
 Native semantic-use observations, successor frame acceptance, final packaged
 qualification, release/publication and actual consumer adoption retain their
 separate scope. No live ABI readiness or mutation is claimed.
+
+The later Representation FP04 native qualification adds only an existing-law
+qualification and two source routes to its program; the updater and Source
+STDO bytes stay unchanged. The same replay driver now accepts an explicit
+construction manifest, retaining run002 as its default historical subject.
+Invoked with the exact repaired Representation run003 manifest, its
+[new four-case result](20260906T051049Z_t029_cohort_evidence/frame-index-run-002/result.json)
+again passes exact/restored input and holds changed/omitted source evidence,
+with unchanged inputs and no consumer effects. This maintains the actual
+source-candidate join without reopening the closed updater contract.

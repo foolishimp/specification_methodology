@@ -217,12 +217,12 @@ cohort qualifies and is published; no immutable RC4 member is rewritten.
 Use this path only under the T-009 working-source construction or qualification
 grant. Start with the
 [frame-index guide](skills/stdo-representation/references/frame-index-use.md)
-and the exact evidence subject under `dogfood/t009-frame-projection/run-002/`.
+and the exact evidence subject under `dogfood/t009-frame-projection/run-004/`.
 Bind that subject's source snapshot, program, map, local bindings and Axiom
 code/schema. The released RC4 executable in section 1 supplies no `project`
-operation and cannot satisfy this selection. The manifest retains the authored
-program/source from `run-001` and binds their replay with the repaired exact
-dependency; neither predecessor is silently overwritten.
+operation and cannot satisfy this selection. The manifest binds the output-scope
+guidance to the unchanged program, map and views in `run-003`, source snapshot
+and same exact dependency; earlier construction subjects remain preserved.
 
 The authored example offers a Worker index for isolated complete-update
 construction and a Reviewer index for independent assessment of an exact

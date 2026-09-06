@@ -1,0 +1,39 @@
+**FP04 result**
+
+**Verification status first.** Bash was denied in this session, so I could not run the candidate projector or recompute any SHA-256. I used the retained run-003 views instead. Their declared program identity matches the map's, so the content is the same materialized output the guide would have produced, but this substitution is a limitation of my run, not an exact invocation. I read the snapshot's own skill files rather than invoking the harness skill, to stay inside the snapshot. All six retained evidence files, the FP04 case, both index declarations, and the owning source sections were read directly.
+
+| Identity | Value |
+|---|---|
+| Map program_uri | urn:stdo-representation:program:a-c-text:t009-construction:86370472…:frame-projection-003 |
+| Map program_sha256 | sha256:386e11c862e4ac4bd7903d1a20efdc53bf8eabb6d6cde4cbc273d5f14cccd1f4 |
+| Views' program_sha256 | same |
+| Files' digests | taken from the snapshot manifest, not recomputed |
+
+**Selected frames and why.** I selected both indexes, with the Reviewer index operative for the claim and the Worker index for the next-action question.
+
+- **Reviewer index** binds the Derived Reviewer Frame. Its roots are the closure clause, the rechecks-and-verifies-completion clause, and total triage. Only through this index does the closure reach the failure-recovery clause with the observation-gap qualification. The Worker view alone never reaches that clause, so it cannot evaluate this claim.
+- **Worker index** binds the Derived Worker Frame. Its roots are acceptance-rederives-plan, verifies-and-bounds-effects, and sufficient-writer-entry-is-direct, reaching unknown-treatment-bounds-dependent-effects. This governs what the Worker may still do under the existing grant.
+- Selecting both creates no two-actor workflow. The Reviewer evaluation grants no repair or continuation.
+
+**Claim assessment.** The compound claim is unsupported.
+
+- "The attempted invocation completed" is **indeterminate**, not falsified. The completion clause reports completion only after verifying every selected resulting binding and companion. The stipulated facts remove two of the seven selected effect destinations from observation, the definition and one native companion binding, and supply no usable final verification result. An absent premise blocks the dependent conclusion. The gap also proves no failure, crash, changed preimage, or lost grant.
+- "May be automatically retried if needed" is **contradicted by the governing rule**. The failure-recovery clause's qualification holds automatic retry on an observation gap, and the owning source states that retry requires the applicable outcome, authority, and safe-recovery conditions, and that an unknown effect state cannot be treated as no effect. A retry is also a new mutation requiring explicit acceptance of the rederived exact plan and exclusive write scope. Nothing in the stipulated facts or retained evidence supplies those.
+
+**C, J, and O.**
+
+- **C from retained evidence:** the selection digest matches the plan's selection_sha256; the accepted plan digest equals the presented plan digest; the plan binds seven effect destinations with their symlink preimages, the definition preimage, and companion inventories; the isolated prechecks passed with no holds. These facts establish what completion requires and that recovery preimages are recorded.
+- **C from stipulation only:** the attempt occurred, two destinations are unobservable, and no final verification exists. The retained isolated result file records `complete: true`, but FP04 stipulates that no such usable result is available, so I did not import it to fill the gap. If that file were in fact the final verification, FP04's premise would not hold and the case would collapse into the retained run.
+- **Residual J:** whether read-only re-observation of the seven destinations falls inside the existing grant. My judgment is yes, because verification is part of the operation and the destinations are the grant's own write territory, but the case never states a distinct observation grant, and the guide's "observation grant" phrase has no direct source sentence beyond the evidence-grant discriminator rule. Cause of the unobservability remains unknown, not J.
+- **Original O:** the owner's explicit acceptance of the exact plan digest. It stays applicable while preimages are unchanged. Unknown applicability stays unknown. A new ruling is needed only if effect evidence shows changed preimages, which forces a rederived plan and a new digest under the owning contract.
+
+**Supported completion report and next action.**
+
+1. Report the Worker result as `incomplete`, with the observation gap as the stated cause. Neither `candidate_ready` nor a completion claim is supported. The Reviewer projection is indeterminate for completion and falsified for the retry entitlement.
+2. Within the existing grant, obtain actual effect evidence as a bounded discriminator: read the resulting definition and compare to the updated or preimage digest, read each of the six binding targets, and verify the staged companions.
+3. Apply the path the evidence selects. All seven verified against the plan supports completion. Preimages intact means refusal or no effect, and a retry needs a rederived plan and explicit acceptance, not an automatic re-run. Partial or mixed state enters the recovery path, restoring from the presented preimages before any complete claim. Unavailable rollback storage also requires recovery from those preimages.
+4. If observation stays impossible, hold and return to Executive with the gap and this result. That return is not a new owner ruling request unless preimages prove changed.
+
+**Invalidators.** Any observed effect state, a changed preimage digest, expiry of the grant's lifetime, or a different map or program identity invalidates this result.
+
+**Source routes.** SPEC_METHOD.md `#explicit-complete-consumer-update` lines 576 to 584 and `#computed-classification-and-treatment` lines 1283 to 1292 in the run-001 source snapshot. TICKET_METHOD.md `#recorded-judgment-and-owner-ruling-continuity` and `#condition-based-closure-and-reuse`. REFERENCE_FRAME_METHOD.md `#applicability-and-required-results`. STDO_REFERENCE_FRAME_BASELINE.md `#derived-worker-frame`, `#derived-reviewer-frame`, and `#closure`. Retained evidence at the six run-006 paths listed in FP04.json, read by their snapshot copies only.
