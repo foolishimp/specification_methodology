@@ -1,0 +1,106 @@
+{
+  "$schema": "stdo://releases/v2.5.0-rc.5/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:p0:product-definition:isolated-update",
+    "name": "Isolated P0",
+    "source_project": "./",
+    "bounded_context": null
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "/Users/jim/src/apps/specification_methodology"
+      },
+      "selector": "stdo://channels/2.5.0",
+      "basis": {
+        "uri": "stdo://releases/v2.5.0-rc.5/",
+        "manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
+      }
+    },
+    "additional_authorities": [],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./PRODUCT.md#frames",
+      "authority": [
+        "./PRODUCT.md"
+      ],
+      "applies_to": [
+        "urn:p0:product-definition:isolated-update"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./INTENT.md",
+    "product": "./PRODUCT.md",
+    "specification": [
+      "./requirements/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:p0:build-tenant:fixture",
+        "root": "./",
+        "design": [
+          "./design/"
+        ],
+        "implementation": [
+          "./src/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./PRODUCT.md",
+    "tickets": {
+      "root": "./tickets/",
+      "lanes": {
+        "backlog": "./tickets/backlog/",
+        "active": "./tickets/active/",
+        "completed": "./tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./comments/"
+    }
+  },
+  "composition": [
+    {
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "relation": "./PRODUCT.md",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/axiom_indexer/stdo_default.json",
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/axiom_indexer/releases/v2.5.0.md"
+      ]
+    },
+    {
+      "target_definition_id": "urn:stdo:product-definition:stdo-representation",
+      "relation": "./PRODUCT.md",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/stdo_representation/stdo_representation.json",
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/stdo_representation/releases/v2.5.0.md"
+      ]
+    }
+  ]
+}

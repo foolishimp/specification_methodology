@@ -1,0 +1,68 @@
+{
+  "kind": "stdo.cohort-update-selection",
+  "schema_version": 1,
+  "definition_id": "urn:p0:product-definition:isolated-update",
+  "cohort": {
+    "repository": "/Users/jim/src/apps/specification_methodology",
+    "ref": "refs/tags/stdo_representation/v2.5.0-rc.5",
+    "tag_object": "5edeb22233fb9625fbf3b386a2fb1e2f8f88fead",
+    "path": "stack_release.json"
+  },
+  "companions": [
+    {
+      "product": "axiom_indexer",
+      "definition_member": "stdo_default.json",
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/axiom_indexer/stdo_default.json",
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/axiom_indexer/releases/v2.5.0.md"
+      ],
+      "install_root": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/rc5-installed-update-001/rc5-installs/axiom_indexer",
+      "links": [
+        {
+          "path": ".products/axiom-indexer",
+          "member": "."
+        },
+        {
+          "path": ".agents/skills/axiomatize-corpus",
+          "member": "skills/axiomatize-corpus"
+        },
+        {
+          "path": ".claude/skills/axiomatize-corpus",
+          "member": "skills/axiomatize-corpus"
+        }
+      ]
+    },
+    {
+      "product": "stdo_representation",
+      "definition_member": "stdo_representation.json",
+      "target_definition_id": "urn:stdo:product-definition:stdo-representation",
+      "product_definition": "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/stdo_representation/stdo_representation.json",
+      "contracts": [
+        "https://raw.githubusercontent.com/foolishimp/specification_methodology/4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94/stdo_representation/releases/v2.5.0.md"
+      ],
+      "install_root": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/rc5-installed-update-001/rc5-installs/stdo_representation",
+      "links": [
+        {
+          "path": ".products/stdo-representation",
+          "member": "."
+        },
+        {
+          "path": ".agents/skills/stdo-representation",
+          "member": "skills/stdo-representation"
+        },
+        {
+          "path": ".claude/skills/stdo-representation",
+          "member": "skills/stdo-representation"
+        }
+      ]
+    }
+  ],
+  "derived_context": [
+    {
+      "program": "context/program.json",
+      "map": "context/map.json",
+      "bindings": "context/bindings.json"
+    }
+  ]
+}

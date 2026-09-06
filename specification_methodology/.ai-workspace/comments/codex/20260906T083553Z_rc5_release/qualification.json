@@ -1,0 +1,535 @@
+{
+  "kind": "stdo.rc5.joined-release-qualification",
+  "status": "satisfied",
+  "recorded_at": "2026-09-06T10:18:27.080904+00:00",
+  "actor": "/root",
+  "role": "Executive: consume closed bounded results and project condition-based disposition",
+  "effect_activation": "activation.json",
+  "source_commit": "c7888bb2dc9aee1f5a217985f6d1547cfe6465f0",
+  "child_commit": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+  "source_manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f",
+  "program_file_sha256": "933f72d9f6c13969b3705d69ea555e713120fa3d7abef6b90629b4a91ca0fb74",
+  "map_file_sha256": "b0f23d81162ce06bdf93bdc15799384b7c6cb9d16aad76ba28855772a2993e39",
+  "native_index_sha256": "1f8007ea7f7cba1df27f3fa5f415c0535581b22991c72739250f0b2e0bffe570",
+  "native_archive_sha256": "bdab15ff0bc69d6b6dd3f36c89a6eb05f4e4590fb55474137cced0b743d378a4",
+  "reviews": {
+    "independent-native-codex-part-001.md": "e4d8d33afbcf45c6d24c972458dd29c2905a5595120e535278c5863b084355e5",
+    "independent-native-codex-part-002.md": "13d99435e3b78dc2f8a9607f25e554b83296c14d28b3daf815ab1744495afa37",
+    "independent-native-codex-part-003.md": "1e2134ceefb5d52a809b5cf09d5c6d6b1b4d8cb465fa305f141d0c7f61b66122",
+    "independent-native-claude-review.md": "0c05da4f4736d342abaab1c0db21b10d92bc42b322fadf33eb33b9fc19eb5a4b",
+    "independent-native-update-review.md": "e62290ec538bbe8ce2f165d12191de087429b308664bd6393b7f8cdc5616b232",
+    "independent-owner-interaction-review.md": "aff547282da4003cc373ae52f9aae3e0f53ac1223deee973525bcd2366bae8c1",
+    "independent-shared-entry-review.md": "c101f272a8b4e581957597efef1e6fc8057e14b8408d85aac2b979370c737805",
+    "independent-source-index-review.md": "2bf721a0a27179c74182999ad043d6f17fc413a429f98a4225b484388e01ba79",
+    "independent-child-packaging-review.md": "6fff7286c0f1f65974889e937644bc3a1c06c00cc8bc9c5cab4b2f83e2cd833b",
+    "independent-frame-binding-review.md": "802d79213f68994b3eadacc1d7bae28a9873e5b235ee2809a109391428be7081",
+    "independent-installed-update-review.md": "2510e573b20e697d8de8be0105b8652a23c6ead2d45df92833fcebfac0a762d9",
+    "independent-index-applicability-adjudication.md": "566033ca94aa4e3a3a3b8a03a020b1d12b7a517c45a9ef76f709fc0988ae1c6f",
+    "independent-native-custody-checks.json": "db250b590224b647c446f8a8de0e732e1eb5baaae27286342a02ae5a2a6b596c",
+    "cohort-content-commit-b.json": "f2743521a1664a061f8b9dd35ad92d471ed5acf41fb54dc01a3bd08afa05bb6d",
+    "stack-release-tests.json": "ae1af6fb3f36d0fe6887c3272da8075e5d718acd42db113fa8d7eecbbd0201a8"
+  },
+  "assessed_completed_contexts": [
+    {
+      "name": "uat-01-a-codex-map-first-harness-002",
+      "case_id": "UAT-01-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "44db3273c3279023c09cb85a7d151b56fbf539be6ca118651c0bf8a6a5e4b60c",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-01-c-codex-map-first-harness-002",
+      "case_id": "UAT-01-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "e5d6798acfef658d5ae625525b026e628edef753742af3f866037bcb956d4d28",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-02-b-codex-map-first-harness-002",
+      "case_id": "UAT-02-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "5bf8afaa3381dc1d11f4cd1e7f2ef67c412ecffba2c90e78adcb539296ceef88",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-02-b-codex-source-harness-002",
+      "case_id": "UAT-02-B",
+      "host": "codex",
+      "arm": "source",
+      "execution_result_sha256": "abd6d3842f0fa55f7abd71a13440cfdf012afbc4cb7017b6e74cdbba16703fdc",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-03-a-codex-map-first-harness-002",
+      "case_id": "UAT-03-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "df51aa6fe525ce5101e5c74a3f60f901c677a23976d98cc6c28ed9edc0519c42",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-03-c-codex-map-first-harness-002",
+      "case_id": "UAT-03-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "1db41d5d53820ebf98381af422ef75b95658dac584625329895af6d4930e6308",
+      "assessment": "independent-native-codex-part-001.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-04-b-codex-map-first-harness-002",
+      "case_id": "UAT-04-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "2f5cb558d12ce8a78862b69cb54cb725797b0c618942a3e6504949e201755cac",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-05-a-codex-map-first-harness-002",
+      "case_id": "UAT-05-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "d632ea92ff30563514fcd014b1cfffb80efbcc9d8e8e88287a188e1f7a47c087",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-05-c-codex-map-first-harness-002",
+      "case_id": "UAT-05-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "785f4d5e915cf0a0f26f9087df75807d5aa99fb86f819b502a2871575e85d6bb",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-05-c-codex-source-harness-002",
+      "case_id": "UAT-05-C",
+      "host": "codex",
+      "arm": "source",
+      "execution_result_sha256": "b4cf936f5ea78e3975bb52ded7fedf24e6386555cb81c361706e9e17bea54cfa",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-06-b-codex-map-first-harness-002",
+      "case_id": "UAT-06-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "1702438fa30611d7dcfd3d30a8786018f3faac0d805054b1b49d726820a8a081",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-06-b-codex-source-harness-002",
+      "case_id": "UAT-06-B",
+      "host": "codex",
+      "arm": "source",
+      "execution_result_sha256": "3f75994ad524a10eee2ac42078191f09d78883f9f88b32c5f4814ade92baca5a",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-07-c-codex-map-first-harness-002",
+      "case_id": "UAT-07-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "bc4a1f02149c758c3399119eeb5b9bc6ca111ef3d1c53475b46ba1286407a385",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-08-b-codex-map-first-harness-002",
+      "case_id": "UAT-08-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "c32d6c903fa5659a390d489999c268d48a5b68f971ef0bf2cbe66b93b4afe271",
+      "assessment": "independent-native-codex-part-002.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-12-b-codex-map-first-harness-002",
+      "case_id": "UAT-12-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "74a2e9db59985b6771dd8d8ca679ce8afd87417a7c3216eaaefca5aaa3374ee5",
+      "assessment": "independent-native-codex-part-003.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-13-a-codex-map-first-harness-002",
+      "case_id": "UAT-13-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "c2348697041334b1e2424f5315f556b9d1fc417bc3126178a9dfd43ae33e8ae3",
+      "assessment": "independent-native-codex-part-003.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-13-b-codex-map-first-harness-002",
+      "case_id": "UAT-13-B",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "b284ea8ec220697c4277cb35e0ecf448362797867a079b494781a159f5280662",
+      "assessment": "independent-native-codex-part-003.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-07-a-codex-map-first-harness-002",
+      "case_id": "UAT-07-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "20b6c8272e5dd8c5a26881386d838e55bf696e44adaf590d0eb306e3cb8a8a0d",
+      "assessment": "independent-native-codex-part-003.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-01-b-claude-map-first-harness-002",
+      "case_id": "UAT-01-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "9a2517cf7bc98da7f0ac723a9a791d48f024c950b1cf516b4974f4a9ae2b38d0",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-02-a-claude-map-first-harness-002",
+      "case_id": "UAT-02-A",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "7526be026cc7ede208aa3d0c3b634bf27b997c31e9ebc892f9db9cf8125feaad",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-02-a-claude-source-harness-002",
+      "case_id": "UAT-02-A",
+      "host": "claude",
+      "arm": "source",
+      "execution_result_sha256": "45aad4a655c595e5482883e50d6e110612433a5c2fa3065175bbe4344cf8b781",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-02-c-claude-map-first-harness-002",
+      "case_id": "UAT-02-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "b1577b51dabea25ef04a0f44d1eb097a3fdd1b236f19dd0067c27b7eb7ba1fdd",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-03-b-claude-map-first-harness-002",
+      "case_id": "UAT-03-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "265b471545982a9011c0bc2ee63d91cfd6c05c6f928dbfc4b48e453775a4b66f",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-04-a-claude-map-first-harness-002",
+      "case_id": "UAT-04-A",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "648e8eb7fec86797b692c25105d1a572985f258fc5e66c4876195876982e7326",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-05-b-claude-map-first-harness-002",
+      "case_id": "UAT-05-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "8412bd8fa8d9e9c072942981d1b7153485f0d45818d1c155354c252883ac0675",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-06-a-claude-map-first-harness-002",
+      "case_id": "UAT-06-A",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "d1d1988aaff7d84667738357f0e16394a1c19a0e8c354dc8debb9b7d2b3d13f0",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-06-c-claude-map-first-harness-002",
+      "case_id": "UAT-06-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "bc48365cbd07bdbb05b118374546431c0952c43d59957eaec317e2516b6464b3",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-08-a-claude-map-first-harness-002",
+      "case_id": "UAT-08-A",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "223c25273db4dd36360a54613d913fa4e306cde3e85e3786490ab3638e5ba56f",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-08-c-claude-map-first-harness-002",
+      "case_id": "UAT-08-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "76cbb0232420c80d1a93a65b04f8189881e05e33d6a07b56f398381fae46bd23",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-12-a-claude-map-first-harness-002",
+      "case_id": "UAT-12-A",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "fd2c1e9a57e455922ab37cdc869bcbf0d4c8e346400ed43910841c02dd47ebb8",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-12-c-claude-map-first-harness-002",
+      "case_id": "UAT-12-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "2bd0be2afdf9f5d3d4ae19604fbff9d86b68adc017f0207ac568d0746b587b89",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-07-b-claude-map-first-harness-002",
+      "case_id": "UAT-07-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "5e81a43e99794dc4d79196045d0ba1f656299e10dfaab1f042a1fb9cca418648",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-10-c-claude-map-first-harness-002",
+      "case_id": "UAT-10-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "364d5dd92396b7c33207a9f02a24a548a8daaebfb5c7bb8442a3937a9e861abc",
+      "assessment": "independent-native-claude-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-a-codex-map-first-materialized-installed",
+      "case_id": "UAT-09-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "964b7a62b61f0d190102d08cae166fae4d970dd9429ecea973f427cbfabcad6d",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-a-codex-map-first-reference-only-installed",
+      "case_id": "UAT-09-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "631501a8c7bd418aadcf889ee302d83831de0219e0fe25aff5034e4d7ca740fb",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-a-codex-source-installed",
+      "case_id": "UAT-09-A",
+      "host": "codex",
+      "arm": "source",
+      "execution_result_sha256": "62ae0cbf90a30304e322d881065b281a05455acd37b0a8aec02c7939131b8523",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-b-claude-map-first-reference-only-installed",
+      "case_id": "UAT-09-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "420422e9bb4fe3128ce86854910e5744c9ba28ecb93f84d8aa5255d862660faf",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-b-claude-source-installed",
+      "case_id": "UAT-09-B",
+      "host": "claude",
+      "arm": "source",
+      "execution_result_sha256": "3ea60db2176797985e6502e259d07a57d0ee7dae4ca276d6729b5e22a8f8de11",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-c-codex-map-first-materialized-installed",
+      "case_id": "UAT-09-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "80478e7256a2438714a81ca778aa24bef0abf18cfcf3656d48c5970e90e7a633",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-c-codex-map-first-reference-only-installed",
+      "case_id": "UAT-09-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "20682f3c0d1a4701ff33176a3bf272960b2b09174a39aa9e551044b98b465060",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-c-codex-source-installed",
+      "case_id": "UAT-09-C",
+      "host": "codex",
+      "arm": "source",
+      "execution_result_sha256": "b41d2a2acec49f7e568b4647b78ca76a5e8490f93abebb0126bc29a43fd82f47",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-13-c-claude-source-installed",
+      "case_id": "UAT-13-C",
+      "host": "claude",
+      "arm": "source",
+      "execution_result_sha256": "04a4fd37f09f7eeeb657a2eebee579e162c8ee90f8cdba0add0fae28643b0747",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-09-b-claude-map-first-materialized-installed",
+      "case_id": "UAT-09-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "035d6e5130143825e76ae370925ff9e894847ac2c5340864f30a71f9c9646025",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-13-c-claude-map-first-reference-only-installed",
+      "case_id": "UAT-13-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "fe6912e5a4230029e89ef00e8025f614c52f8bd382780140927b3a86a78fe84d",
+      "assessment": "independent-native-update-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-04-c-claude-map-first-harness-002",
+      "case_id": "UAT-04-C",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "48e8ddf1ac2796e967df3f1a6d408d331842182672ec27ef4853005e688d69b0",
+      "assessment": "independent-owner-interaction-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-11-a-codex-map-first-harness-002",
+      "case_id": "UAT-11-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "a3f4646ec2901c72d6b3fb4d5ab6e00a6ef429c2bf272904996582bfac63755f",
+      "assessment": "independent-owner-interaction-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-11-a-codex-map-first-phase2",
+      "case_id": "UAT-11-A",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "69800da396a3f8eadef73ada0ab38fba401f35b9a1f5fb4746837d1b1dcba7d0",
+      "assessment": "independent-owner-interaction-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-11-b-claude-map-first-harness-002",
+      "case_id": "UAT-11-B",
+      "host": "claude",
+      "arm": "map-first",
+      "execution_result_sha256": "d5516290122ddeb2d82f1625f9219dbd2104fa5fa0b2d3eb4612994a529b39a4",
+      "assessment": "independent-owner-interaction-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "uat-11-c-codex-map-first-harness-002",
+      "case_id": "UAT-11-C",
+      "host": "codex",
+      "arm": "map-first",
+      "execution_result_sha256": "84c611cfbecb68bd12e2111f4bf5738035e28b1bf93a8809382634004064a2b2",
+      "assessment": "independent-owner-interaction-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "t030-direct-work-claude",
+      "case_id": "T030-direct-work",
+      "host": "claude",
+      "arm": "shared-native",
+      "execution_result_sha256": "913858a56987eaa03aac540b96a0b58606bbd892b0b6de457c112819cef34aca",
+      "assessment": "independent-shared-entry-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "t030-direct-work-codex",
+      "case_id": "T030-direct-work",
+      "host": "codex",
+      "arm": "shared-native",
+      "execution_result_sha256": "85892c8170bf2e820f7e013dbe8e1e275ee6950dea101d01da37207257a13633",
+      "assessment": "independent-shared-entry-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "t030-drafted-refusal-claude",
+      "case_id": "T030-drafted-refusal",
+      "host": "claude",
+      "arm": "shared-native",
+      "execution_result_sha256": "0bfc34cddc15d0b8a34e0480e71b8d5cff3769c547b795a97f16c65dce3cf0d4",
+      "assessment": "independent-shared-entry-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    },
+    {
+      "name": "t030-drafted-refusal-codex",
+      "case_id": "T030-drafted-refusal",
+      "host": "codex",
+      "arm": "shared-native",
+      "execution_result_sha256": "686e192e25f74410631b6f23612eae6e788924704d2392f0f05284aa4318a8bb",
+      "assessment": "independent-shared-entry-review.md",
+      "disposition": "satisfied bounded task conditions; review-specific limitations retained"
+    }
+  ],
+  "unresolved_material_selected_conditions": [],
+  "unexecuted_recipes": [
+    {
+      "case_id": "UAT-10-A",
+      "status": "blocked_preparation",
+      "reason": "The exact matching actual native Public-value/membership miss required by this original recipe was not established. No native result is claimed.",
+      "underlying_function": "Earlier real stdout-interface shortfall, diagnosis, repair and fresh recheck are retained and assessed separately; they are not relabeled as these original recipe inputs."
+    },
+    {
+      "case_id": "UAT-10-B",
+      "status": "blocked_preparation",
+      "reason": "The exact matching actual native Public-value/membership miss required by this original recipe was not established. No native result is claimed.",
+      "underlying_function": "Earlier real stdout-interface shortfall, diagnosis, repair and fresh recheck are retained and assessed separately; they are not relabeled as these original recipe inputs."
+    }
+  ],
+  "limits": [
+    "53 means completed and assessed exact task contexts, not 53 distinct use cases or blanket host reliability.",
+    "37 initial harness-limited attempts remain retained, not passes.",
+    "Original10A/B incident recipes are blocked_preparation; USE10 is supported only by the separately adjudicated real stdout incident/repair and10C evidence.",
+    "Unnecessary index inspection, verbose answers, failed checks and denied temporary-file attempts remain limits; no unrestricted effect safety, minimal interaction or cost advantage is claimed.",
+    "Historical FP04 prospective recovery/new-acceptance claim remains unqualified; present observation/withdrawal conditions are separately assessed.",
+    "Qualification, actual publication, immutable Product acceptance and consumer adoption remain distinct."
+  ],
+  "publication_status": "not established by this qualification record"
+}

@@ -49,7 +49,7 @@ text or mechanical validation does not establish release or acceptance.
 
 ## Evidence and boundary
 
-[T009](.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md)
+[T009](.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md)
 links the current result and exact evidence. Reviewed authored predecessors,
 failed native attempts and repairs remain under `dogfood/t009-frame-projection/`.
 They are reacquirable evidence, not prerequisites of ordinary installed use.

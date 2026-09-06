@@ -1,0 +1,29 @@
+{
+  "actor": "/root/t030_m01_review",
+  "role": "bounded fixture Writer; candidate author",
+  "subject": "P0-local",
+  "scope": "The exact complete-update relation selected by this case; no Product, fleet or native-host qualification.",
+  "operation_result": {
+    "path": "observations/complete-apply.stdout",
+    "sha256": "71faeb594d6cb1a0b4cd69c3244cb65b8c09b68acc40f19a4fd95c910651b25f"
+  },
+  "plan_sha256": "9a7528f5aca9308e331ac390a0943b5adbe8d57e18c1aab3c43a797c537051d5",
+  "acceptance": "plan-acceptance.json",
+  "source_comparison": {
+    "judgment": "The selected P0 source handoff rule is represented without changing its content in the authored clause and native entry. The operation preserved those source/semantic bytes. This is the author assessment for this one synthetic rule; a required independent assessment supplies its own verdict.",
+    "evidence": [
+      "P0/SOURCE.md",
+      "P0/context/program.json",
+      "P0/context/native-entry.md",
+      "observations/pre-update-state.json",
+      "observations/post-update-state.json"
+    ]
+  },
+  "observed_mechanics": [
+    "observations/resulting-basis-status.stdout",
+    "observations/installed-indexer-context-validation.stdout",
+    "observations/installed-indexer-map.json",
+    "observations/selected-native-routes.json"
+  ],
+  "independent_review_verdict": null
+}

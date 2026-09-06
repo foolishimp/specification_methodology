@@ -2,49 +2,13 @@
 
 ## Current state
 
-Status: T-009 frame-index mechanics and successor source authoring supplied;
-native evidence is assessed, with bounded qualification conditions open
+Status: completed; exact RC5 source, frame indexes and native path qualified, published and publicly reacquired
 
-Make the STDO axiomatic constraints useful in ordinary native Codex and Claude
-work: recover exact sources and applicable frames, obtain sufficient bounded
-context, preserve reusable judgments and owner rulings, and support truthful
-completion, interruption and recovery. A regenerated index must be both
-source-faithful and demonstrably usable for the selected functional outcomes.
+Make STDO axiomatic constraints useful in ordinary native Codex and Claude work: recover exact sources and applicable frames, obtain sufficient bounded context, preserve reusable judgments and owner rulings, and support truthful completion, interruption and recovery. A regenerated index must remain source-faithful and usable for its selected outcomes.
 
-This Product contributes to the
-[overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal).
-[T-009](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
-owns the combined Indexer/Representation work and current state: baseline the
-existing path, fill demonstrated mechanical gaps, refresh the semantic
-compression/index/native guidance, and qualify the combined native candidate.
-The subsequent [frame-index selection](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#frame-index-product-selection)
-adds explicit STDO logical chains and frame membership over Axiom's generic
-reference-only/materialized projections. Their source-grounded premises,
-conditions, exceptions and residuals must survive native use. Existing RC4
-mechanics evidence supports its narrower baseline; it does not qualify this
-new selected capability.
-The selected successor now supplies explicit frame projections, a source-linked
-compression over the current constitutional corpus, and updated native guidance.
-Source/mechanical assessment and finite ordinary native outcomes have retained
-results; failures, affected repairs and unobserved paths remain explicit. The
-exact grants, results and remaining qualification conditions are recorded in
-[T-009](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#current-delivery-result).
+The [overall STDO goal](../../specification_methodology/specification/GOALS.md#goal) owns direction. [T-009](../.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md) closes the combined Indexer/Representation work. The [RC5 result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) binds all source, mechanical, native, installed and public evidence, including failed predecessors and bounded limitations.
 
-Use [T-009's progressive-use application](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#progressive-use-in-this-ticket)
-to exercise checked mechanics and representation increments during the remaining
-work. Keep each observation with its exact task, candidate and operative basis;
-the final qualification still resolves conditions that self-use did not cover.
-
-The Executive follows that ticket's conditions and exact subjects. Model
-acceptance, semantic source comparison, deterministic index generation, native
-qualification, publication and consumer adoption remain distinct results.
-Reuse sufficient Axiom mechanics; repair generic gaps at that owner. Axiom
-does not acquire STDO meaning, and Representation acquires no second executor.
-The thirteen functions remain owned by STDO's one source model. Changed law
-must be supplied by its owner before a native claim relies on it; independent
-corrections under current sufficient law can proceed without waiting for an
-unrelated successor. ABIogenesis execution and the optional executable profile
-are outside this delivery goal.
+The Executive consumes the closed result and preserves its exact scope. Source meaning remains with STDO, generic mechanics with Axiom, and STDO authoring/frame selection/native use with Representation. Model acceptance, qualification, publication and consumer adoption remain distinct. No new executor, resource-accounting framework or ABIogenesis work is implied.
 
 ## Selected release basis
 
@@ -55,7 +19,7 @@ including its program, map and frame-index use guide. The LLM interprets
 meaning and selects frames; Axiom preserves explicitly authored dependencies
 and materializes selected unchanged content. Source STDO remains authority.
 
-RC4 is the published predecessor until the guarded RC5 transaction succeeds.
+RC5 is published through the guarded atomic transaction and verified public reacquisition; RC4 remains its immutable predecessor.
 Historical RC1 Product acceptance and RC4 publication evidence remain unchanged;
 release publication and frame acceptance do not assert Product acceptance.
 

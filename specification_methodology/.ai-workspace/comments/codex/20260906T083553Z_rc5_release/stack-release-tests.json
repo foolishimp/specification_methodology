@@ -1,0 +1,22 @@
+{
+  "reason": "Retain replayable exact frozen-cohort checker qualification alongside the release proof.",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_stack_release.py"
+  ],
+  "returncode": 0,
+  "time": "2026-09-06T09:26:50.406786+00:00",
+  "git_commit": "4560b4ec1ac18f7ff3dab09c5ca4e7629d467a94",
+  "source_sha256": {
+    "scripts/check_stack_release.py": "2ac9a03eb3e245380c6981158e70a1266fb28618b30d0f0cd0f145ca2a392081",
+    "tests/test_stack_release.py": "03ede2d7e526c128310e0a4b8d5375c424a21dd7defc38a5ab2ede92db681a27"
+  },
+  "stdout": "stack-release-tests.stdout.txt",
+  "stderr": "stack-release-tests.stderr.txt"
+}

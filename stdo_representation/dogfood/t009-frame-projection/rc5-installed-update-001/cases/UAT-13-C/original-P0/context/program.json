@@ -1,0 +1,31 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:p0:program:native-handoff",
+  "calculus_ref": "stdo://releases/v2.5.0-rc.5/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "repo://p0/",
+  "frame_refs": [],
+  "vocabulary_refs": [
+    "urn:p0:operator:requires",
+    "urn:p0:role:requirement"
+  ],
+  "symbols": [],
+  "residuals": [],
+  "clauses": [
+    {
+      "uri": "urn:p0:clause:handoff-note",
+      "clause_type": "constraint",
+      "operator": "urn:p0:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:p0:role:requirement",
+          "literal": "The P0 handoff note must list the selected source and companion identities."
+        }
+      ],
+      "statement": "The P0 handoff note must list the selected source and companion identities.",
+      "source_refs": [
+        "repo://p0/SOURCE.md#handoff-note"
+      ]
+    }
+  ]
+}

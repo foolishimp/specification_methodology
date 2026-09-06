@@ -1,0 +1,19 @@
+{
+  "kind": "rc5.isolated-update-fixture-preparation",
+  "manager": "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+  "manager_launcher_sha256": "66743bbb6e3581fade225d6e2d7a48895e3a9fd6739a4e14cf94316d4d806d85",
+  "source_indexer_sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+  "cases": [
+    "UAT-09-A",
+    "UAT-09-B",
+    "UAT-09-C",
+    "UAT-13-C",
+    "source-digest-refusal"
+  ],
+  "case_facts": {
+    "UAT-09-C": "Source changed; original authored clause and native entry retained; actual Indexer reindex uses changed source.",
+    "source-digest-refusal": "Source changed after map generation; actual current map retains earlier source observations."
+  },
+  "effect_scope": "/Users/jim/src/apps/specification_methodology/stdo_representation/dogfood/t009-frame-projection/rc5-installed-update-001",
+  "live_consumers_read_or_mutated": []
+}

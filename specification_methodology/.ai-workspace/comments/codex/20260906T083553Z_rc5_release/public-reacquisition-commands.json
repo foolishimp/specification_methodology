@@ -1,0 +1,92 @@
+[
+  {
+    "name": "public-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--bare",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/public.git"
+    ],
+    "returncode": 0,
+    "started_at": "2026-09-06T10:21:01.245833+00:00",
+    "finished_at": "2026-09-06T10:21:01.260041+00:00",
+    "stdout_sha256": "f68bd7f2ced355d4b93772177b6db32d39e77d49163c770392697c0a9fbd4566",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "public-products-fetch",
+    "argv": [
+      "git",
+      "--git-dir",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/public.git",
+      "fetch",
+      "--no-tags",
+      "--depth=1",
+      "https://github.com/foolishimp/specification_methodology.git",
+      "refs/tags/specification_methodology/v2.5.0-rc.5:refs/tags/specification_methodology/v2.5.0-rc.5",
+      "refs/tags/axiom_indexer/v2.5.0-rc.5:refs/tags/axiom_indexer/v2.5.0-rc.5",
+      "refs/tags/stdo_representation/v2.5.0-rc.5:refs/tags/stdo_representation/v2.5.0-rc.5"
+    ],
+    "returncode": 0,
+    "started_at": "2026-09-06T10:21:01.261584+00:00",
+    "finished_at": "2026-09-06T10:22:30.824565+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "7c22fa25ee2bfe77617b9ebc7fe9a6b62bd17b40979a9b37c1247625dcc5c249"
+  },
+  {
+    "name": "public-stdo-install",
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+      "--store",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/store",
+      "install",
+      "v2.5.0-rc.5",
+      "--repository",
+      "https://github.com/foolishimp/specification_methodology.git",
+      "--manifest-sha256",
+      "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
+    ],
+    "returncode": 0,
+    "started_at": "2026-09-06T10:21:01.261488+00:00",
+    "finished_at": "2026-09-06T10:22:32.708448+00:00",
+    "stdout_sha256": "8a04583edb6a35f83ef3457fe0f07823efae353cfc597ce39a84e2c68e181f3f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "public-stdo-verify",
+    "argv": [
+      "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+      "--store",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/store",
+      "verify",
+      "v2.5.0-rc.5",
+      "--manifest-sha256",
+      "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
+    ],
+    "returncode": 0,
+    "started_at": "2026-09-06T10:22:32.708674+00:00",
+    "finished_at": "2026-09-06T10:22:32.751162+00:00",
+    "stdout_sha256": "9201b58785c563ee3c4e6dfa02c5d47f3aa942a78dec20c4be0eac978b2501ee",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "public-index-validate",
+    "argv": [
+      "python3",
+      "-B",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/members/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/members/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/public-bindings.json",
+      "--emit-map",
+      "/private/tmp/stdo-rc5-public-y5erbg6x/regenerated-map.json"
+    ],
+    "returncode": 0,
+    "started_at": "2026-09-06T10:22:33.055471+00:00",
+    "finished_at": "2026-09-06T10:22:33.193169+00:00",
+    "stdout_sha256": "df48bdd227a45629de544042937e219163a0f17131961ddc0c7508b03e42850f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

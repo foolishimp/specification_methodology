@@ -9,17 +9,20 @@ configuration; a represented rule does not silently replace that basis.
 
 ## 1. Verify the dependencies
 
-From the coordinated Git source, the shared release checker verifies the
-selected content, full member inventories and published refs:
+From the coordinated Git source, the shared release checker verifies exact
+content, full member inventories and source closure:
 
 ```sh
-python3 scripts/check_stack_release.py --phase published \
-  --revision refs/tags/stdo_representation/v2.5.0-rc.5 --remote origin
+python3 scripts/check_stack_release.py --phase content \
+  --revision refs/tags/stdo_representation/v2.5.0-rc.5
 ```
 
 Run that command at the repository root with the exact annotated cohort tags
-available. Prepublication construction uses the content and local-ref phases
-under its explicit grant; it must not report published success.
+available. Bind their acquired identities to the retained publication receipt.
+The `published` phase verifies the immediate publication snapshot, including
+`main == commit B`. A permitted later bookkeeping commit changes that snapshot
+without invalidating the immutable releases. Prepublication construction uses
+the content and local-ref phases under its explicit grant.
 
 The shared manager verifies the exact Source STDO Install:
 

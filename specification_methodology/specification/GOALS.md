@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: delivery active; governing method, shared updater and reindexing supplied; qualification has bounded open conditions
+Status: completed for the selected RC5 delivery; exact cohort qualified, published and publicly reacquired
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -17,45 +17,24 @@ Representation path, including the shared capability for complete selected
 consumer updating. The model, edited prose and regenerated index are
 intermediate results. Qualification establishes the supported use outcomes;
 publication and actual consumer adoption retain their separate authority and
-evidence. The owner-selected delivery now includes coordinated RC5 publication through T030/T009 after exact qualification. Fleet adoption remains outside this goal.
+evidence. The owner-selected coordinated RC5 publication is complete through T030/T009, with exact qualification and public reacquisition evidence. Fleet adoption remains outside this goal.
 
 ## Selected Work
 
-- [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
-  owns the delivery sequence and STDO work: governing method, shared native
-  projections, complete-update evidence and aggregate qualification. Its M01
-  model, M02 source method and M04 shared-updater capability are complete;
-  M03 and M05 retain native and aggregate qualification.
-- [Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
-  owns the combined Indexer/Representation work. Its baseline is supplied; the
-  selected generic frame-index projections in Axiom and source-authored STDO
-  chains/frame membership in Representation are implemented and source-compared.
-  The ticket retains the native results, remaining conditions and exact frame
-  declaration decisions. These make applicable
-  constraints and their supporting conditions usable without moving semantic
-  judgment or authority into indexing code. Each Product retains its contracts,
-  evidence and required assessment; this adds no constitutional framework.
-- [T-029](../.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
-  has completed the shared complete-update capability, including frame-index
-  source evidence. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
-  retains its distinct conditional role-boundary change. Neither becomes an
-  unconditional gate for unrelated native improvements.
-- [T-030's current admission](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#m02-implementation-and-bounded-m03-admission)
-  selects actual owning-standard construction and bounded M03 native projections
-  under the owner's implementation instruction. M02's exact source and required
-  independent assessment now satisfy its bounded conditions. The accepted M01
-  model and exact RC4 governing basis remain conserved. Peer execution grants
-  and current state remain in their owning tickets.
+- [T-030](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline) closes the source model, owning methods, shared native guidance/updater and aggregate qualification.
+- [Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) closes Axiom mechanics, faithful STDO chains/frame indexes, native use and the matched RC5 release.
+- [Release evidence](../.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) retains exact subjects, independent judgments, native limitations, installed checks and public receipts. No selected release work remains.
+- [T-029](../.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md) remains complete. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md) remains a distinct conditional clarification; it is no retroactive release gate.
 
 ## Executive Direction
 
-Follow the linked delivery sequence toward the whole outcome above. Resume
+The selected delivery satisfies the whole outcome above at its recorded finite scope. Preserve that outcome when selecting subsequent work. Resume
 from the owning tickets and their exact evidence; do not redefine success as
 the last completed artifact. Use the existing thirteen-function model and its
 accepted cases through T-030, with affected reassessment only when material
 new evidence changes a relation.
 
-Apply the [progressive self-use loop](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-self-use-during-delivery):
+Apply the [progressive self-use loop](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#progressive-self-use-during-delivery):
 use each sufficiently checked increment on the next suitable authorized task,
 retain the actual observation, and repair failures at their owner. The ticket
 owns the loop and its evidence; candidate use preserves the operative basis.
@@ -82,7 +61,7 @@ sequence, conditions and progress.
   plugin is subordinate auxiliary tooling bound by the same release record.
 - RC3 remains the immutable STDO predecessor. Transitional RC3 Axiom Indexer
   and Representation work is evidence only and receives no child publication.
-- The complete RC4 cohort is published without moving RC1, RC2, or RC3.
+- RC5 is the current published complete cohort; RC1 through RC4 retain their immutable identities and historical evidence.
 - Product acceptance and consumer adoption remain separate from publication.
 
 ## Retained Native Outcome

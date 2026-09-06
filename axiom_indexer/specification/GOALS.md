@@ -2,8 +2,7 @@
 
 ## Current Goal
 
-Status: frame-index mechanics constructed and independently verified; combined
-frame basis 9 is bound to exact RC5; combined native qualification and release remain with T-009
+Status: completed; exact RC5 frame-index mechanics and frame basis 9 are qualified, published and publicly reacquired through T-009
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -15,15 +14,17 @@ unchanged-content materialized views. An agent authors the relationships and
 selects the frame; code preserves their declared closure and diagnoses missing
 or stale bindings. The reference frame remains its owner's evaluation contract.
 
+The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) closes the selected delivery with exact evidence and preserved limitations.
+
 The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
 owns the shared outcome. The existing combined
-[Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+[Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
 owns delivery tracking for this provider/consumer relation: M01 identifies
 actual gaps, M02 supplies the selected mechanics, and M03/M04 consume their
 exact results for regeneration and native qualification. This creates no
 duplicate Indexer ticket or independent milestone ledger. The owner's direct
 implementation grant and bounded Writer activation are recorded in
-[T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#implementation-admission-and-writer-activation).
+[T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#implementation-admission-and-writer-activation).
 
 The Executive keeps mechanical facts distinct from semantic judgments and
 owner rulings. STDO-specific authoring and frame use stay with Representation;
