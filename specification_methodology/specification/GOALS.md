@@ -2,26 +2,61 @@
 
 ## Goal
 
-Status: complete for T-030 M01; no later increment selected
+Status: delivery goal open; timeline and Goal alignment selected
 
-Establish one logical STDO Product-use model that makes proportionate treatment,
-lawful action, evidence, owner interaction, and the complete use lifecycle
-recoverable from ordinary inputs without unnecessary process obligations.
+Deliver proportionate STDO use that a native agent can carry through from an
+ordinary request to a truthful completed, refused or recoverable outcome.
+Applicable axiomatic constraints must be coherent in their owning standards,
+faithfully available through shared guidance and the source-linked
+Representation, and usable with sufficient computed facts, conditional frames,
+recorded judgments and owner rulings. Ordinary local work must remain simple;
+material authority, evidence and independence conditions must survive.
+
+The delivery target is a qualified STDO successor and its applicable native
+Representation path, including the shared capability for complete selected
+consumer updating. The model, edited prose and regenerated index are
+intermediate results. Qualification establishes the supported use outcomes;
+publication and actual consumer adoption retain their separate authority and
+evidence. No fleet or successor release ordinal is selected by this goal.
 
 ## Selected Work
 
-- [T-030 M01](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#m01-current-result)
-  is complete at logical-model scope under the direct Product-owner selection
-  and evaluated correction. C1/C2, the functional scenario conditions, and the
-  required independent Product/invariant assessments are satisfied on the exact
-  repaired subject recorded in T-030's proof. Intent and the accepted
-  source-project frame basis are conserved.
-- The model and drafted T-009 handoff findings are resolved. Former C3 was
-  withdrawn by the owner; no empirical cost success is asserted. T-009 remains
-  drafted and unadmitted.
-- No later increment is selected. T-030 remains active for M02-M05; T-028,
-  T-029, executable classification, native qualification, release, and consumer
-  adoption receive no completion or execution grant from this M01 result.
+- [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
+  owns the delivery sequence and STDO work: governing method, shared native
+  projections, complete-update evidence and aggregate qualification. Its M01
+  model result is complete; its later milestones remain open.
+- [Representation T-009](../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+  owns the combined Indexer/Representation work. Its first baseline can run
+  alongside T-030 M02; each Product keeps its own contracts and results.
+- [T-029](../.ai-workspace/tickets/backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
+  owns shared complete consumer updating. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
+  retains its distinct conditional role-boundary change. Neither becomes an
+  unconditional gate for unrelated native improvements.
+- The present instruction selects the planning edits recorded in
+  [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+  The next implementation frontier is T-030 M02 and T-009 M01. Their exact
+  execution grants and current state remain in the tickets; a scheduled step
+  is not a claim that execution is admitted or complete.
+
+## Executive Direction
+
+Follow the linked delivery sequence toward the whole outcome above. Resume
+from the owning tickets and their exact evidence; do not redefine success as
+the last completed artifact. Use the existing thirteen-function model and its
+accepted cases through T-030, with affected reassessment only when material
+new evidence changes a relation.
+
+Select the smallest ready work under sufficient authority. Preserve valid
+judgments and original owner rulings, conditional review/work scope and direct
+Writer use where sufficient. Former core cost gates remain withdrawn; this
+goal creates no resource-control frame or universal accounting obligation.
+
+Keep STDO meaning in its owning standards, generic mechanics with Axiom
+Indexer, and STDO compression/index/native use with Representation. Source,
+worksite, host and proof tools retain their declared outputs and effects.
+ABIogenesis runtime and any future executable profile are outside this native
+delivery goal. Goals orient the work; the linked tickets own its detailed
+sequence, conditions and progress.
 
 ## Retained Product State
 
@@ -77,13 +112,12 @@ recoverable from ordinary inputs without unnecessary process obligations.
 
 T-027 is closed. The first release-matched cohort is publicly reacquirable and
 the mutable Specification Methodology source uses its exact RC4 Install as the
-development Product for the selected T-030 M01 work.
+development Product for continuing source work.
 
 ## Selection Boundary
 
-M01 changes only this Goal selection, T-030 admission and results, the Product
-capability boundary, and its single logical scenario model. Generic method law
-remains with the existing owning standards. The released standards member set,
-auxiliary tooling, peer Product meaning, accepted frame basis, and immutable
-cuts are conserved. T-009's drafted handoff is reconciled with this model
-correction. A source model is not a consumer waiver or a publication decision.
+The planning selection changes only the existing Goals and ticket records
+named by T-030. It conserves Intent, Product meaning, the accepted model,
+standards, tools, skills, frame bases and immutable cuts. Later implementation
+uses the exact grants and owning re-entry identified by those tickets. The
+released RC4 basis remains operative until an explicit successor adoption.

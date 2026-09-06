@@ -2,7 +2,36 @@
 
 ## Current state
 
-Status: no active work wave
+Status: delivery planning selected; T-009 implementation remains drafted
+
+Make the STDO axiomatic constraints useful in ordinary native Codex and Claude
+work: recover exact sources and applicable frames, obtain sufficient bounded
+context, preserve reusable judgments and owner rulings, and support truthful
+completion, interruption and recovery. A regenerated index must be both
+source-faithful and demonstrably usable for the selected functional outcomes.
+
+This Product contributes to the
+[overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal).
+[T-009](../.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+owns the combined Indexer/Representation work and current state: baseline the
+existing path, fill demonstrated mechanical gaps, refresh the semantic
+compression/index/native guidance, and qualify the combined native candidate.
+The next implementation frontier is T-009 M01, which can run alongside STDO's
+owning-method corrections. The owner's planning grant is recorded in
+[T-030](../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+
+The Executive follows that ticket's conditions and exact subjects. Model
+acceptance, semantic source comparison, deterministic index generation, native
+qualification, publication and consumer adoption remain distinct results.
+Reuse sufficient Axiom mechanics; repair generic gaps at that owner. Axiom
+does not acquire STDO meaning, and Representation acquires no second executor.
+The thirteen functions remain owned by STDO's one source model. Changed law
+must be supplied by its owner before a native claim relies on it; independent
+corrections under current sufficient law can proceed without waiting for an
+unrelated successor. ABIogenesis execution and the optional executable profile
+are outside this delivery goal.
+
+## Retained Current Basis
 
 The first coordinated release-matched STDO compression and constraint index was
 completed and published against exact Source STDO `v2.5.0-rc.4` while

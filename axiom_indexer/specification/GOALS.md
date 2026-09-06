@@ -1,5 +1,33 @@
 # Axiom Indexer Goals
 
+## Current Goal
+
+Status: contribution planned through Representation T-009; no implementation
+increment admitted by this planning edit
+
+Supply the smallest sufficient generic mechanics for faithful, reproducible
+axiomatic indexing and native STDO use. Existing resolution, validation,
+diagnostics, map generation and exact joining are the starting point. A useful
+contribution may be validated reuse; a new capability requires a demonstrated
+mechanical gap and its own exact Product/requirement/design authority.
+
+The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
+owns the shared outcome. The existing combined
+[Representation T-009](../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+owns delivery tracking for this provider/consumer relation: M01 identifies
+actual gaps, M02 supplies the selected mechanics, and M03/M04 consume their
+exact results for regeneration and native qualification. This creates no
+duplicate Indexer ticket or independent milestone ledger. The owner's bounded
+planning grant is recorded in
+[T-030](../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+
+The Executive keeps mechanical facts distinct from semantic judgments and
+owner rulings. STDO-specific authoring and frame use stay with Representation;
+worksite classification producers remain with their declared owners. No
+semantic acceptance, automatic frame selection, context-budget engine or
+runtime is selected. Qualification and any release identity stay Product-local;
+published RC4 mechanics and their valid evidence remain available throughout.
+
 ## GOAL-001 — Dogfood the smallest useful Axiom Indexer
 
 Status: completed

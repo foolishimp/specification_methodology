@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#goal
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-05T20:00:21Z
+- updated_at: 2026-09-06T02:43:24Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
@@ -26,6 +26,7 @@
 - execution_status: M01_complete_logical_model_no_later_increment_selected
 - selected_milestone: none
 - completed_milestones: M01
+- planning_status: overall_delivery_timeline_recorded
 - result_surface: M01 Current Result below
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: T-028 for its distinct Executive-mutation clarification; T-029 for complete consumer adoption; applicability is bounded below
@@ -77,8 +78,8 @@ blanket implementation, acceptance, or release grant.
 | exclusions and stop conditions | no standards/plugin/tool code, frame-basis or Intent change, T-028/T-029 execution, peer Product work, release/adoption effect, invented human baseline, or continuation beyond the returned M01 candidate |
 | durable result and residual carrier | this ticket's [M01 Current Result](#m01-current-result); no new judgment registry or ticket per result |
 
-Current [Goals](../../../specification/GOALS.md#goal) record M01 complete with no
-later increment selected. A later
+Current [Goals](../../../specification/GOALS.md#goal) state the whole delivery
+outcome and retain M01's completed result. The timeline is planning; a later
 increment needs its own exact selection and grant before re-entering affected
 owning standards or auxiliary realization surfaces. Active ticket placement
 records admitted work state; it does not supply the admission authority.
@@ -167,6 +168,29 @@ six corrected files. PRODUCT, SCENARIOS, and drafted T-009 remain at their
 reviewed hashes. This is result projection under the returned disposition,
 with no author self-acceptance, later milestone selection, T-009 admission,
 push, tag, release, or adoption grant.
+
+### Delivery Planning Selection
+
+The owner's next instruction is: "give me a task timeline for this, it should
+be reflected in the respeective tickets with the goals refing the tickets but
+providing the actual overall goal for the executive such that it doesnt drift".
+This selects `goal_reprice` for delivery orientation and refinement of the
+existing work records. It preserves Intent, Product meaning, the accepted M01
+model, and the exact RC4 development basis, verified for all three Products.
+
+Root explicitly enters Writer as
+`urn:openai:codex:stdo-delivery-planning-writer`. The bounded grant is to update
+this ticket, STDO T-028/T-029, Representation T-009, and the three Products'
+GOALS files; check their scope, dependency and link consistency; and commit
+those planning edits locally under the standing owner instruction. No new
+ticket, standards/model/code/skill change, frame, release or adoption effect
+is part of this run. Future implementation remains subject to its exact
+existing or subsequently admitted work grant; planning does not supply it.
+
+The [overall delivery goal](../../../specification/GOALS.md#goal) owns the
+Executive's outcome and scope. The timeline below owns the cross-ticket order;
+each referenced ticket retains its detailed work conditions and current state.
+The completed M01 result remains a model result, not whole-delivery completion.
 
 ## Product Boundary And One Owning Model
 
@@ -267,6 +291,50 @@ authorized corrections wait for unrelated model choices or Representation's
 future executable-profile ownership. The first implementation selection should
 bind the common STDO model and affected capability boundary; it should not begin
 by editing all standards or expanding the manager.
+
+### Delivery Timeline
+
+The timeline gives dependency order and explicit overlap. Calendar dates are
+not yet estimated. Only M01 is complete. Every remaining stage is planned;
+the next implementation frontier is M02 alongside Representation T-009 M01. Stage
+position does not itself admit an effect or add a review round.
+
+| Order | Owning work and task | Required result before dependent work relies on it |
+|---|---|---|
+| **0 — Complete: model** | T-030 M01, the thirteen use functions and fourteen model cases. | The accepted model and returned independent assessments are the retained starting point. Reopen only an affected relation with a material counterexample. |
+| **1 — Next: governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
+| **2 — Realize the selected gaps, in parallel where sufficient** | T-030 M03 updates shared native skills, guidance, templates and bounded STDO checks. T-009 M02 supplies only selected generic Axiom gaps. T-029 implements the selected shared complete-update path. | Each changed path consumes sufficient accepted law and its exact grant. Retained implementations/evidence may satisfy a relation without code changes. Native corrections under current sufficient law can start before unrelated M02 work closes. |
+| **3 — Refresh the representation and index** | T-009 M03 reconciles Representation's affected requirements/guidance, re-authors changed source-linked compression, and regenerates the index with the exact qualified mechanics. | The program, index, source routes, native entry and dependency identities agree with the exact successor source subject. Semantic source comparison and mechanical reproduction both pass; model prose or unchanged RC4 artifacts cannot supply this result. |
+| **4 — Qualify the actual paths and join the results** | T-009 M04 qualifies the combined native path. T-029's complete-update evidence feeds T-030 M04. T-030 M05 joins the STDO-owned results with applicable companion evidence. | Supported Codex/Claude outcomes, material refusals/combinations, exact installed paths and required independent judgments satisfy their own conditions. USE-09/complete-adoption claims require T-029; unrelated native qualification does not wait for that claim. A model review or green index alone cannot close this stage. |
+| **5 — Separate release and adoption follow-through** | The existing owning release process and an explicitly selected consumer cohort consume the qualified results. T-029 provides the shared adoption capability. | Publication and actual consumer adoption each have their exact subject, authority and evidence. Neither ticket closure nor this timeline projects those effects as performed. No successor ordinal or consumer fleet is selected here. |
+
+T-030 M05 retains its existing STDO closure law. T-009 M04 is needed only for
+claims that actually consume the combined native path; it is not a blanket
+prerequisite for accepting STDO law. T-029 needs exact companion contracts and
+candidates for complete-update evidence, not T-009's final ticket closure.
+These are evidence joins, not a circular all-tickets-first gate.
+
+Representation construction follows the installed coordinated-release law:
+freeze and verify the exact local successor Source STDO cut before producing
+its matched companion assets, then qualify the complete cohort before any
+publication. Local release-cut effects need their own exact selection; no
+public STDO-only release is required to unblock companion construction. RC4
+continues to govern development until a successor is explicitly adopted.
+
+### Executive Continuation
+
+For the next ready milestone, bind its exact outcome, authority, subject,
+permitted effects, evidence and stop/return condition in the existing work
+carrier. Reuse valid model results, judgments and owner rulings; use existing
+authorization without requesting the same permission again. A
+reserved unresolved choice stays with its owner. Work occupying Executive
+coordinates and assesses; construction uses a separately bound Writer.
+
+Keep each result with its owning ticket. Goals retain the overall outcome and
+reference those records; they do not maintain another milestone ledger. A
+missing relation returns to its actual owner while independent ready work can
+continue. Completing a document, model, mechanism or index is an intermediate
+result until the applicable delivery conditions are satisfied.
 
 ### M01 Acceptance Conditions
 

@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#current-state
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-05T19:38:19Z
+- updated_at: 2026-09-06T02:43:24Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - pen_holder: codex
@@ -25,6 +25,7 @@
 - work_authorization: refine_this_drafted_handoff_under_evaluated_T030_owner_correction_only
 - execution_contract_state: drafted
 - execution_status: not_admitted
+- planning_status: native_delivery_timeline_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
 - target_truth: >-
@@ -74,13 +75,14 @@ They remain proposal commentary. T-030 locates the sole
 and records its acceptance state; this ticket references its identities and supplies native realization
 and evidence, not a competing normative scenario catalog.
 
-The current [Representation Goals](../../../specification/GOALS.md#current-state)
-declare no active wave; [Axiom Goals](../../../../axiom_indexer/specification/GOALS.md)
-record completed RC4 work. Initial delivery selection therefore requires
-`goal_reprice` at the relevant owning Goals. Each selected increment then uses
-the smallest lawful Product, requirement, design, or realization re-entry.
-Existing Intent is conserved unless a demonstrated scope change requires its
-own upstream decision. No implementation is admitted by this ticket's creation.
+At intake, Representation Goals declared no active wave and Axiom Goals
+recorded completed RC4 work. The subsequent planning selection now records the
+native delivery outcome in [Representation Goals](../../../specification/GOALS.md#current-state)
+and the bounded mechanical contribution in
+[Axiom Goals](../../../../axiom_indexer/specification/GOALS.md#current-goal).
+The implementation contract remains drafted. Each selected increment uses the
+smallest lawful owning re-entry and an exact work grant; Intent is conserved
+unless a demonstrated scope change requires its own upstream decision.
 
 ### Evaluated Handoff Correction
 
@@ -97,6 +99,15 @@ Product/requirement/code change, new frame, release or adoption is selected.
 Former T-030 C3 and its human/token/cost gates are removed from this proposed
 handoff. Future resource controls require their own explicitly selected
 applicable frame and do not become universal native-use prerequisites.
+
+### Delivery Planning Relation
+
+The [owner's delivery-planning instruction](../../../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection)
+authorizes Writer `urn:openai:codex:stdo-delivery-planning-writer` to refine this
+existing ticket and the associated Goals. It does not admit the implementation
+contract or change Product meaning. The [overall delivery goal](../../../../specification_methodology/specification/GOALS.md#goal)
+and [cross-ticket order](../../../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
+orient the Executive; this ticket owns the combined native work conditions.
 
 ## Exact Current Basis And Product Relation
 
@@ -258,6 +269,39 @@ complete updater, or any executable-profile decision. Full successor claims
 that consume changed STDO meaning wait for that exact owning acceptance and
 basis relation. Baseline tasks may proceed without pretending the proposed
 thirteen-scenario model is already ratified law.
+
+### Delivery Timeline
+
+All stages below are planned. They expand the existing milestones into the
+next tasks and their dependent results; they do not prescribe calendar dates
+or add an artifact, actor or review for every row.
+
+| Order | Owning work and task | Completion and next handoff |
+|---|---|---|
+| **1 — Next: M01 baseline** | Map the thirteen STDO use functions and their model cases to existing native paths, exact Axiom capabilities, owner-supplied C/J/O inputs and retained evidence. Record supported relations, missing evidence and actual gaps in this ticket's existing proof surface. | Every selected outcome has its actual owner, sufficient current path or specific gap, and required qualification observation. This can run alongside T-030 M02 using current RC4; changed-law claims remain identified as successor work. |
+| **2 — M02 mechanics, only where the baseline finds a gap** | Reuse the exact resolver, validator, diagnostics, map generator and joiner. For a demonstrated generic gap, select its Axiom-owned requirement/design/realization change and meaningful positive/refusal checks. Route source/worksite classification or effect facts to their own owners. | The selected mechanical dependency is sufficient and qualified on exact bytes. Existing sufficient mechanics may satisfy this stage without code changes. Shared STDO guidance and T-029 contract work can proceed in parallel within their own territory. |
+| **3 — M03 representation, index and native guidance** | Reconcile affected Representation requirements and native instructions with accepted STDO meaning; freeze exact source and mechanics construction subjects under the existing cohort law; re-author changed semantic compression entries while retaining valid ones; generate and validate the derived index; update source routes and native entry together. | Source/program/index/mechanics/skill identities agree. Source comparison supports semantic fidelity, generation is reproducible, and changed or missing sources refuse reliance. A changed constitution is not represented merely by rerunning the indexer over the prior program. This stage consumes only the T-030 law/shared-path results it actually needs. |
+| **4 — M04 native qualification** | Exercise the selected ordinary entries and material alternatives in fresh Codex and Claude use, including proportionate classification, frame applicability, owner continuity, interrupted work, recovery and closure. Retain required independent source assessment and material composition evidence. | All applicable native conditions and owner-bound companion contracts/evidence hold for the exact combined candidate. Return the relevant evidence to T-030 M05 and T-029; neither generation success nor historical RC4 qualification closes this stage. |
+
+The exact local successor Source STDO cut is a construction input under the
+coordinated-release law; public STDO-only publication is not a prerequisite.
+The selected source-cut effects and same-version companion construction need
+their own exact grants. Final publication and actual consumer adoption follow
+their separate owning processes after the necessary qualification results.
+
+T-029 requires companion identities, routes, freshness/refusal behavior and
+evidence from this work, not T-009's final closure. T-009 qualifies native use
+and those component contracts without waiting for fleet adoption; a claim of
+complete consumer updating consumes T-029's actual result. An unresolved join
+does not block unrelated native scenarios. No ABIogenesis executor, executable
+profile, automatic frame selector or universal resource-control framework is
+selected by this sequence.
+
+The Executive resumes from these milestone conditions and their exact evidence,
+not a new summary or a duplicate Indexer tracker. It preserves accepted model
+judgments, required independence and owner boundaries, records the smallest
+sufficient next grant, and continues work already authorized without renewed
+requests for the same permission. A missing owner decision remains explicit.
 
 ## Evaluation And Proof
 

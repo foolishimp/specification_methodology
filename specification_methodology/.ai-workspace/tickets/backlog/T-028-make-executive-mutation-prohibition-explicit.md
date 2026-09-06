@@ -17,7 +17,7 @@
 - re_entry_point: specification/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action
 - triaged_at: 2026-09-02
 - created_at: 2026-09-02
-- updated_at: 2026-09-02
+- updated_at: 2026-09-06T02:43:24Z
 - priority: P3
 - owner: specification_methodology
 - work_authorization: direct_human_product_owner_instruction_2026-09-02
@@ -76,12 +76,27 @@ permits or leaves this case ambiguous fails the target truth.
 - the successor is claimed without exact-cut qualification and separately
   authorized publication.
 
+## Delivery Sequence
+
+This distinct role-boundary clarification is a conditional contribution to
+[T-030 M02](../active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
+under the [overall STDO goal](../../../specification/GOALS.md#goal). If that
+increment selects this successor wording, make the change in its owning
+standard and track it here. T-030 M03 consumes the congruent projections and
+existing falsifier evidence. The existing RC4 prohibition remains operative; this ticket
+is not a blanket prerequisite for direct Writer use or unrelated native work.
+
+The [owner's delivery-planning grant](../active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection)
+authorizes this sequence note and its local checkpoint only. The requirement
+implementation, its qualification and any publication remain separately scoped.
+
 ## Release Boundary
 
 This is deferred P3 work for an unselected successor release after RC4. The
-ticket records a future requirement re-entry only. It does not select a current
-Goal, amend mutable methodology source, start a release candidate, or authorize
-commit, tag, publication, or adoption. RC4 and all of its immutable records
+ticket records a future requirement re-entry. The planning relation above does
+not select its implementation, amend mutable standards, start a release
+candidate, or authorize source implementation commits, tags, publication, or
+adoption. RC4 and all of its immutable records
 remain unchanged.
 
 ## Proof Surface

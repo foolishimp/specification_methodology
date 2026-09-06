@@ -5,10 +5,12 @@
 - status: backlog
 - owner: specification_methodology
 - created_at: 2026-09-05
+- updated_at: 2026-09-06T02:43:24Z
 - change_class: requirement_reprice
 - re_entry_point: specification/standards/SPEC_METHOD.md#shared-installed-release-basis-and-toolchain-manager
 - authority: user-reported updater gap during ABIogenesis RC4 consumption
 - execution_status: not_admitted
+- planning_status: shared_adoption_delivery_timeline_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 
 ## Reported Failure
@@ -67,9 +69,28 @@ released RC4 law.
 6. Establish that ordinary consumer updating requires no new consumer-local
    verification implementation or Product-definition prose edits.
 
+## Delivery Timeline
+
+This ticket contributes the complete-update capability to the
+[overall STDO delivery goal](../../../specification/GOALS.md#goal) and
+[T-030 delivery sequence](../active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline).
+The [owner's planning grant](../active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection)
+authorizes this work-record refinement only; implementation remains unadmitted.
+
+| Order | Planned task | Required result and dependency |
+|---|---|---|
+| **1 — Alongside T-030 M02: select the owning contract** | Reproduce the basis-only success with stale companions and define the sufficient shared update contract at the existing method/toolchain owner. Coordinate edits to any shared standard with T-030's owning-method work. | The exact authorized update population, semantic versus mechanical boundary, effects, refusal and retained-state conditions are explicit. This ticket tracks the work; the standard owns the law. |
+| **2 — Alongside native/mechanical work: implement the shared path** | Implement the selected manager/distribution changes and consume explicit consumer selections plus companion identities/routes supplied by Representation and Axiom. | The path performs only granted updates, detects partial/stale context, preserves unrelated work and exposes source-grounded re-authoring where needed. No consumer-local checker, duplicate lock or second updater is introduced. |
+| **3 — Join exact companion evidence: qualify complete updating** | Exercise the Required Evidence cases on the selected complete candidate, including missing/mismatched companions, changed semantic context and retained usable state on refusal. | Return subject-bound complete-update/refusal evidence to T-030 M04 and USE-09. Exact companion contracts/candidates from T-009 are inputs; final T-009 closure is not a prerequisite. Unrelated native qualification can proceed independently. |
+
+This work qualifies a shared capability. Publication and actual consumer/fleet
+adoption require their separately selected exact cuts, targets and operation
+grants; they are not implied by the plan or its qualifying observations.
+
 ## Disposition
 
-Recorded for shared-method selection. Implementation, source-standard changes,
+Delivery order is recorded under the owner's planning instruction.
+Implementation, source-standard changes,
 release, and fleet propagation remain unselected. ABIogenesis's immediate
 RC4 install and binding repair is a separate, user-authorized consumption
 action; it does not close this updater obligation.
