@@ -24,29 +24,37 @@ One complete cohort requires:
   exact source-corpus record containing every STDO standards member and digest.
 
 `stack_release.json` names these assets and every Product-local release ref.
-The checker recomputes the exact seven-member Axiom and eight-member
-Representation Product subjects, including symlink target bytes, as well as
+The checker recomputes each exact Product subject from its complete canonical
+native bundle, required local instruction references, discovery symlinks, and
+owned executable or selected program/map artifacts. It checks the declared
+member set and count against that closure, including symlink target bytes, as well as
 the STDO/plugin and semantic-index inventories and digests. It also binds the
 Representation dependency to the same-version Axiom ref and exact Product
 inventory, executable, program schema, and output contract. Presence or
 matching prose is not enough.
 
-## RC4 Construction
+The immutable RC4 subject retains seven Axiom and eight Representation members.
+The selected RC5 successor retains seven Axiom members and includes the
+Representation frame-index guide in its nine-member inventory. Neither those
+historical counts nor a recomputed smaller digest can excuse a missing native
+instruction file.
 
-RC3 remains the immutable STDO predecessor. Transitional RC3 index work is
-evidence only and receives no child publication. The first complete coordinated
-cohort targets `v2.5.0-rc.4`.
+## Coordinated Construction
+
+The first complete coordinated cohort was `v2.5.0-rc.4`; transitional RC3 index
+work remains historical evidence without child publication. Each successor
+selects one exact cohort cut and preserves all immutable predecessor records.
 
 Construction has two commits because the installed STDO manifest includes its
 annotated tag object:
 
-1. Freeze commit A containing RC4 STDO, plugin, release note, and qualification
+1. Freeze commit A containing the selected STDO, plugin, release note, and qualification
    bytes.
-2. Create the annotated `specification_methodology/v2.5.0-rc.4` tag locally.
+2. Create the selected annotated `specification_methodology/v<version>-rc.<n>` tag locally.
    Do not push it.
 3. Install and verify that exact local tag. Record its manifest digest and Git
    identities in `stack_release.json`.
-4. Generate and validate RC4 Axiom Indexer and STDO Representation assets from
+4. Generate and validate the same-version Axiom Indexer and STDO Representation assets from
    that exact Install. Pin the literal repository endpoint in
    `publication.repository_url`. Fetch that endpoint and record the expected
    direct object ID or required absence for every destination ref in

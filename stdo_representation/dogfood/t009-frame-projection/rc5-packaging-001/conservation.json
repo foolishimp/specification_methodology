@@ -1,0 +1,67 @@
+{
+  "kind": "t009.rc5-packaging-route-conservation",
+  "writer": "/root/t030_m01_review",
+  "predecessor_native_subject_sha256": "b754f180f0edab763a5daedbc9e0670da9ed498435b3b837e2288be1021f3585",
+  "native_member_inventory": [
+    {
+      "type": "symlink",
+      "path": ".agents/skills/stdo-representation",
+      "target": "../../skills/stdo-representation",
+      "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb"
+    },
+    {
+      "type": "symlink",
+      "path": ".claude/skills/stdo-representation",
+      "target": "../../skills/stdo-representation",
+      "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb"
+    },
+    {
+      "type": "file",
+      "path": "skills/stdo-representation/SKILL.md",
+      "sha256": "79d9c2e0ce9d02435c755b9a598da66ef8f0c0937a72ac4bb481b4729ca8f86f"
+    },
+    {
+      "type": "file",
+      "path": "skills/stdo-representation/agents/openai.yaml",
+      "sha256": "872aabc6e15b66dfcfe0f2d8c674a9d25511a94d74be781711304bc581619f5a"
+    },
+    {
+      "type": "file",
+      "path": "skills/stdo-representation/references/claude.md",
+      "sha256": "584189012cb0c414392e381969a9b02eda2c3cae826cd310218d92a1a3212c20"
+    },
+    {
+      "type": "file",
+      "path": "skills/stdo-representation/references/codex.md",
+      "sha256": "4ddbe37bda55a3c8f9e8545f391a906754067ffc49d2d6f0299eae2d41559497"
+    },
+    {
+      "type": "file",
+      "path": "skills/stdo-representation/references/frame-index-use.md",
+      "sha256": "236c728b9ee1749f1b758f6ea5bb82de037737d0281c6979bd19eea7bcc203c6"
+    }
+  ],
+  "native_route_diff_sha256": "335f7a5e0daf7741b7367eebb459e0d9549f37064d78b323d6a1e5c77b8cef88",
+  "unchanged_relations": {
+    "skill_role_constraint_and_return_sequence": true,
+    "guide_frame_selection_dependencies_C_J_O_FP04_output_scope_and_return_sequence": true,
+    "host_references_except_candidate_to_subject_routing_word": true,
+    "Axiom_executable_sha256": "87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931",
+    "run_004_construction_manifest_sha256": "1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903"
+  },
+  "checks": {
+    "focused_checker_tests": {
+      "command": "python3 -m unittest discover -s tests -p test_stack_release.py -v",
+      "count": 23,
+      "exit_code": 0,
+      "elapsed_seconds": 39.029
+    },
+    "historical_RC4_content": {
+      "command": "python3 scripts/check_stack_release.py --phase content --revision a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2",
+      "status": "valid",
+      "exit_code": 0,
+      "failures": []
+    }
+  },
+  "remaining_join": "Root supplies the exact RC5 released program/map and source/dependency release records, performs final cohort qualification and owns publication. Native UAT and independent assessment remain separate."
+}

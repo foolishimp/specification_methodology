@@ -18,57 +18,91 @@ frame_set_uri =
 governed_workspace = "repo://stdo-representation/"
 governed_subject = "urn:stdo-representation:bounded-context:product"
 governed_outcome =
-  "evaluate selected source construction of authored STDO frame membership, supporting chains and native two-view use under operative RC4, preserving the closed RC4 cohort and separate acceptance"
+  "evaluate exact RC5 configuration, authored STDO frame use, complete candidate readiness and coordinated release qualification under the verified RC5 basis, preserving closed RC4 results and separate Product acceptance"
 frame_set_authority =
   "urn:stdo-representation:authority:product-owner"
 reference_frame_method =
-  "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md"
+  "stdo://releases/v2.5.0-rc.5/standards/REFERENCE_FRAME_METHOD.md"
 reference_frame_method_sha256 =
-  "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8"
+  "sha256:6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7"
 reference_frame_baseline =
-  "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md"
+  "stdo://releases/v2.5.0-rc.5/standards/STDO_REFERENCE_FRAME_BASELINE.md"
 reference_frame_baseline_sha256 =
-  "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e"
+  "sha256:df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737"
 release_method =
-  "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md"
+  "stdo://releases/v2.5.0-rc.5/standards/RELEASE_METHOD.md"
 release_method_sha256 =
   "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c"
 stdo_manifest_sha256 =
-  "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
+  "sha256:3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
 ```
 
-This proposed basis covers the selected T009 source construction and its
-bounded qualification. It preserves source-owned frame law and authored STDO
-meaning, the generic Axiom dependency boundary and exact native-use claims.
-An authored frame index projects an existing frame contract; it does not create
-that frame, choose applicability or supply task facts, judgment or authority.
+This proposed basis covers the selected T009 RC5 configuration, construction,
+qualification, native use and coordinated release evaluation. It preserves
+source-owned frame law and authored STDO meaning, the generic Axiom dependency
+boundary and exact native-use claims. An authored frame index projects an
+existing frame contract; it does not create that frame, choose applicability
+or supply task facts, judgment or authority.
 
-Each source activation binds exact WHAT, construction program/map, selected
-frame indexes and view mode, source snapshot, mechanical dependency, native
-instructions, actor, evidence and result conditions. Existing work grants
-remain the authority for their own construction. This proposal is unaccepted
-and supplies no new grant or completed qualification result.
+Each activation binds exact WHAT, program/map, selected indexes and view mode,
+source Install, mechanical dependency, native instructions, actor, evidence and
+result conditions. Existing grants remain the authority for their own effects.
+This unaccepted declaration supplies no grant or completed qualification result.
+RC4 publication and exact-cut results remain closed for their original bytes;
+they are historical evidence, not a new RC5 verdict. The owner has selected the
+RC5 release successor; Product acceptance and fleet adoption remain distinct.
 
-The following RC4 coordinates remain historical and released-use inputs.
-Closed RC4 publication and exact-cut results do not qualify a later source
-candidate. A successor release inventory, suffix, publication and Product
-acceptance are unselected here; later qualifying bytes cannot enter RC4.
+## Exact selected RC5 qualification subject
 
-## Exact selected construction subjects
+The governing and represented Source STDO basis is the verified local RC5
+Install, manifest
+`3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f`,
+from annotated tag `d4b7c7724944e02ce25c6e6ce69722491c349924` and
+commit `c7888bb2dc9aee1f5a217985f6d1547cfe6465f0`. Its complete
+52-member standards aggregate is
+`22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb`.
+The child Product Definition basis must bind this exact RC5 URI and manifest
+before the child is qualified as part of that release cohort. The STDO source
+project's own commit-A construction basis is a separate relation.
 
-These are working-source construction and qualification coordinates under
-operative installed STDO `v2.5.0-rc.4`. They are not released dependencies,
-accepted Product subjects or adopted STDO law. Each activation binds only the
-exact subjects and claims material to its work; the declarations below do not
-activate every available frame or create an operation grant.
+| Selected subject | Exact manifest SHA-256 |
+|---|---|
+| `repo://stdo-representation/dogfood/t009-frame-projection/rc5-frame-basis-001/selection-subject.json` | `5196cc1be27d5afa0bee5fb9357358366f10e1309bf12415c9188781f1ef4b01` |
+
+This record binds the actual seven-member Axiom candidate, nine-member
+Representation candidate, RC5 program/map and source-corpus evidence, and
+current owning Product, requirement and native bytes. The Axiom candidate
+inventory is `41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19`;
+its executable remains
+`87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931`.
+The selected child refs are `refs/tags/axiom_indexer/v2.5.0-rc.5` and
+`refs/tags/stdo_representation/v2.5.0-rc.5`. Their future tag objects and
+commit-B trees are exact-cut result coordinates; they are not fabricated
+inputs or prerequisites for obtaining the prepublication candidate.
+
+The owner has selected bounded RC5 completion and release work. This frame
+configuration governs its evaluation, qualification and use; it supplies no
+operation grant, fleet adoption or blanket Product acceptance. Each effect
+uses the existing exact owner grant. Source comparison, mechanical checks,
+native UAT, candidate readiness and published-cut verification remain distinct
+results. Earlier valid evidence may be reused where exact conservation proves
+its original supported relation still applies; changed routes, inputs or
+claims require their affected checks. No earlier result is renamed RC5 merely
+because the logical statements were conserved.
+
+## Preserved construction evidence
+
+The following exact source-construction subjects were obtained under operative
+RC4 before this RC5 configuration. They remain predecessor evidence, not the
+current released dependency or a substitute for the RC5 selection above.
 
 | Subject | Exact manifest SHA-256 |
 |---|---|
 | `repo://axiom-indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json` | `9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053` |
 | `repo://stdo-representation/dogfood/t009-frame-projection/run-004/construction-subject.json` | `1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903` |
 
-The Axiom subject fixes the generic projection candidate; the Representation
-subject fixes the authored program, explicit Worker/Reviewer membership,
+The preserved Axiom subject fixes the earlier generic projection candidate; the Representation
+subject fixes the earlier authored program, explicit Worker/Reviewer membership,
 supporting relations, native instructions and the exact working source snapshot
 `86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca`.
 Source comparison, mechanical replay and fresh native task comparison are
@@ -77,11 +111,11 @@ their unevaluated conditions.
 
 | Owning source | SHA-256 |
 |---|---|
-| `repo://stdo-representation/specification/PRODUCT.md` | `40b8512825263c3a18845fb6660c574432ad16df99937287d6f6bd6267bf5b61` |
-| `repo://stdo-representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md` | `b8d7e50e65f6b9dc8a23357b8e4e325c5eccd8d4556eaf207c0434c5384742b3` |
+| `repo://stdo-representation/specification/PRODUCT.md` | `7edd86e760f27f1d80ec8170130cfd135b5d7c20d65f8a08a30120d314dc69a9` |
+| `repo://stdo-representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md` | `62cf138e89aa1389c4e34b06686e1529d694c23ee44d3203ec4096d9bc2450bd` |
 | `repo://stdo-representation/specification/requirements/REQ-P-STDO-AUTHORING-MAP.md` | `2d4d587d66f8b5d463545f4defbb862ebbfcd32b0827e21018924c4981321ceb` |
 | `repo://stdo-representation/specification/requirements/REQ-P-CANDIDATE-VALIDATION.md` | `0de254e414a773bc675ef0ff1c89e404ee4608ad5e28c94dddd024f635b74d52` |
-| `repo://stdo-representation/specification/requirements/REQ-P-NATIVE-FRAME-USE.md` | `15e573d4f5035ec3fa46f073f464f70c859282fb18f4eb075c598b06bc5d0040` |
+| `repo://stdo-representation/specification/requirements/REQ-P-NATIVE-FRAME-USE.md` | `09c4af272d17e8950825915b01764593d92efcfbd023bc62866e35114371dbbc` |
 | `repo://stdo-representation/specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md` | `89d5e0d4488489db581568df826e1e155c5233668cad90499279fa2e60dee1d2` |
 
 The existing named frames and result relations are reused. Applicability and
@@ -102,7 +136,7 @@ paths and digests. Inline Product-relative locators inherited below resolve
 from the owning child root. Moving a declaration carrier does not retarget
 these logical source coordinates or admit different bytes.
 
-## Exact dependency basis
+## Historical RC4 dependency basis
 
 ```text
 Source STDO = v2.5.0-rc.4
@@ -209,15 +243,14 @@ residuals, and invalidation conditions.
 
 ## Technical triage and promotion policy
 
-The proposed current evaluation boundary is the selected T009 source
-construction and qualification above under operative RC4. RC4 candidate
-construction and publication remain closed historical phases. Source changes
-use the smallest lawful owner re-entry and revise affected evidence; a later
-release containing changed qualifying bytes requires a higher immutable RC.
-No published successor is required to obtain this bounded source candidate.
-Product-boundary evaluation follows the already selected owning Product and
-requirements. Product acceptance, publication, the accepted RC1 Product and
-historical release mutation remain outside this evaluation authority.
+The proposed current evaluation boundary is the selected RC5 configuration,
+qualification and release above under the verified RC5 basis. RC4 construction
+and publication remain closed historical phases. Changes use the smallest
+lawful owner re-entry and revise affected evidence. No published successor is
+required to obtain or qualify its prepublication candidate. Product-boundary
+evaluation follows the selected owning Product and requirements. The existing
+owner release grant remains separate from evaluation; Product acceptance,
+fleet adoption and mutation of historical releases are not implied.
 
 Reviewer grades consequence under this descending severity scale:
 
@@ -289,12 +322,12 @@ action.
 ### F-VERSION-ALIGNMENT
 
 - Evaluation: do Source STDO, Axiom Indexer, STDO Representation, the program,
-  and the map carry exact `2.5.0-rc.4` while preserving distinct Product, RC,
+  and the map carry exact `2.5.0-rc.5` while preserving distinct Product, RC,
   member, and Git identities?
 - Evidence: exact Source STDO cut and selector, Product version law, historical
   bootstrap release, Product-owned shared-source release profile, and dependency
   identities.
-- Invariants: every cohort suffix equals `2.5.0-rc.4`; Source STDO, STDO
+- Invariants: every cohort suffix equals `2.5.0-rc.5`; Source STDO, STDO
   Representation, and Axiom Indexer remain different Products; historical
   refs never move.
 - Actor envelope: `K-PRODUCT`.
@@ -303,21 +336,27 @@ action.
 
 ### F-COHORT-INTEGRITY
 
-- Evaluation: does the published release-matched cohort still bind the exact
-  commit-A STDO cut and plugin, exact Axiom mechanics, eight-member
-  Representation subject, program and map, and all 52 source-member digests as
-  one completed atomic publication?
-- Evidence: exact annotated STDO, Axiom, and Representation tag objects and
-  peels; repository and Project Subtree trees; verified Install; complete
-  `source-corpus.json`; RC3-to-RC4 delta; frozen inventories and reports; the
-  closed 13-ref push receipt; remote verification; and fresh public
-  reacquisition.
-- Invariants: the published tags are immutable; the two-commit carrier and
-  Product subtrees remain exact; no continuing-source edit enters RC4; and any
-  successor uses a higher immutable RC.
-- Actor envelope: `K-EXACT-CUT`.
-- Exclusions: equal version text, local path proximity, a green unit test, or a
-  partial remote ref population cannot establish cohort integrity.
+- Evaluation: does the exact selected RC5 cohort close over commit-A Source
+  STDO and plugin, seven-member Axiom mechanics, nine-member Representation,
+  the program/map and all 52 source-member digests under its declared phase?
+- Evidence: the verified local Source STDO tag/Install, exact candidate member
+  inventories, `source-corpus.json`, source conservation/rebinding assessment,
+  mechanical reports, child Definition bases and complete release record.
+  Published-cut evaluation additionally acquires actual annotated child tags,
+  trees, atomic publication evidence and the complete remote ref population.
+- Invariants: the exact same-version relation and member/source closure hold;
+  child Definitions bind the RC5 URI and installed-manifest digest; no source
+  edit enters an immutable predecessor. Candidate integrity does not require
+  unpublished child tag objects or pretend they already exist.
+- Actor envelope: `K-CANDIDATE` for prepublication integrity;
+  `K-EXACT-CUT` for published-cut integrity.
+- Exclusions: version text, path proximity, test count or a partial remote
+  population cannot establish the claimed phase. A candidate result is not a
+  publication receipt or a Product-acceptance decision.
+- Result: candidate integrity supplies its exact closed input to candidate
+  readiness. Published integrity requires the later actual cut evidence;
+  keeping those phase coordinates distinct prevents a circular prerequisite.
+  Historical RC4 cohort results remain closed under their original basis.
 
 ### F-MAP-ESSENCE
 
@@ -395,24 +434,26 @@ action.
   `F-MAP-ESSENCE` authored-source assessment and the Axiom mechanical result are
   distinct prior claims; neither substitutes for this observed native result.
 
-### F-CANDIDATE-READINESS — closed historical phase
+### F-CANDIDATE-READINESS
 
-- Evaluation: is one frozen eight-member candidate ready for immutable RC
-  publication under exact dependencies, claims, evidence, and exclusions?
-- Evidence: deterministic member inventory, release record, closed Product
-  frame results, dependency verification, explicit predecessor or genesis
-  disposition, publication plan, and remote namespace observation.
-- Invariants: no RC tag is required before publication; a satisfied result
-  grants no publication authority.
+- Evaluation: is the exact frozen nine-member RC5 candidate ready for immutable
+  publication under its complete dependencies, claims, evidence and exclusions?
+- Evidence: deterministic member inventory, current release record, applicable
+  closed Product-frame results, verified RC5 source and child Definition bases,
+  explicit predecessor disposition, publication plan and remote namespace.
+- Invariants: no published child tag is required before publication; every
+  applicable mandatory result must be current and sufficient for its claim;
+  satisfied readiness supplies no publication authority itself.
 - Actor envelope: `K-CANDIDATE`.
-- Exclusions: branch state, intended paths, test count, or intended tag name is
-  not candidate identity.
-- Result: closed as the exact commit-B input to the completed RC4 publication;
-  later source changes do not reopen or amend that result.
+- Exclusions: branch state, intended paths, test count or an intended tag name
+  is not candidate identity. Old RC4 readiness is not an RC5 verdict.
+- Result: produces current RC5 readiness from the closed applicable inputs.
+  Historical RC4 readiness remains its completed commit-B result; current
+  readiness is pending until its exact conditions are actually fulfilled.
 
 ### F-EXACT-CUT
 
-- Evaluation: do the published immutable RC4 cuts exactly carry the ready
+- Evaluation: do the published immutable RC5 cuts exactly carry the ready
   candidate and remain qualified without implying Product acceptance?
 - Evidence: annotated RC and selector objects, peeled commit and tree, remote
   refs, the closed candidate-readiness result, independently reacquired member
@@ -424,7 +465,7 @@ action.
   candidate whose release subject does not yet exist.
 - Result: this separately activated frame produces the independent exact-cut
   review; it does not consume that review as prerequisite evidence, accept the
-  Product, or admit later source bytes into RC4.
+  Product, or admit changed source bytes into either immutable cut.
 
 ## Actor capability envelopes
 
@@ -444,9 +485,12 @@ configuration, context boundary, access, and prior involvement.
 
 ## Coverage ledger
 
+Statuses record proposal handoff or the named immutable historical subject;
+actual later closed results and configuration decisions retain their own exact carriers.
+
 | Evaluation | Provenance | Selected frame | Authority | Evidence and dependencies | Status and residual |
 |---|---|---|---|---|---|
-| exact frame-set acceptance and overlay binding | Reference Frame Method; Product disposition authority; selected T009 source scope | external acceptance relation | Product owner or exact explicitly user-granted bounded release-authority proxy; overlay mutation separately granted | exact file digest, direct grant source, acceptance record, valid Product Definition, and live `stdo status --verify`; prerequisite to activation | revision 17 is proposed and unaccepted; revision-16 decision and live binding remain unchanged; the old proxy does not cover this extension |
+| exact frame-set acceptance and overlay binding | Reference Frame Method; Product disposition authority; selected T009 RC5 configuration and release scope | external acceptance relation | Product owner or exact explicitly user-granted bounded release-authority proxy; overlay mutation separately granted | exact file digest, direct grant source, acceptance record, valid Product Definition, and live `stdo status --verify`; prerequisite to activation | revision 17 is proposed and unaccepted; revision-16 decision and live binding remain unchanged; the old proxy does not cover this extension |
 | compression-and-index Product boundary | Goals; Intent; Product; T-009 selected source contract | `F-PRODUCT-BOUNDARY` | Product owner | WHAT, member set, dependencies, excluded tenant routes | conditionally covered for the selected source construction; RC4 closure remains historical |
 | represented-version alignment | Product version relation; T-008; installed Release Method; Product-local release profile | `F-VERSION-ALIGNMENT` | Product owner | exact STDO, Axiom, and Representation RC4 cuts; accepted Representation RC1; local ref profile | closed for the immutable RC4 cohort; mismatch or identity collapse falsifies |
 | coordinated cohort closure | GOAL-008; Release Method coordinated cohort law; basis requirements | `F-COHORT-INTEGRITY` | each Product retains its release authority; Stack transaction had bounded publication authority | exact commit-A and commit-B tags and trees, complete source corpus and delta, Product inventories, atomic push receipt, remote verification, and fresh public reacquisition | closed for the published RC4 cohort; any current identity mismatch returns `invalid_basis` |
@@ -457,8 +501,14 @@ configuration, context boundary, access, and prior involvement.
 | prepublication candidate readiness | Release Method candidate phase; release record | `F-CANDIDATE-READINESS` | Product owner disposed the candidate; publisher was separately granted | closed Product results, frozen inventory, claims, dependencies | closed historical input to commit-B publication |
 | immutable coordinated publication | Release Method Two-Commit Construction And One Publication Transaction | external publication relation | exact Product-owner grant named the publisher and complete repository/ref mutation territory; this frame set grants none | frozen commit-B candidate, reconciled release assets, complete annotated child tags and mutable refs, post-tag local-ref-graph result, bound remote expected object IDs or absence, explicit leases, atomic-push result, and remote cohort verification | closed: one atomic 13-ref transaction completed and remote verification passed |
 | postpublication exact-cut qualification | Release Method exact-cut phase | `F-EXACT-CUT` | Product owner separately accepts or rejects an exact RC | published tag objects, commits and trees, clean public reacquisition, closed candidate result, frozen inventories and claims | closed for RC4 publication integrity; Product acceptance was not performed |
+| current RC5 version and candidate cohort integrity | selected RC5 Product/release scope; exact installed RC5 method | `F-VERSION-ALIGNMENT`, `F-COHORT-INTEGRITY` in candidate phase | respective Product and release owners | exact RC5 source Install, child Definition bases, seven/nine-member subjects, source52 and current program/map | pending current result; no published child tags required |
+| current RC5 candidate readiness | selected release record and applicable Product conditions | `F-CANDIDATE-READINESS` | owner disposes candidate; publisher's grant stays separate | current applicable closed Product/source/mechanical/native results, complete exact inventory, claims and dependencies | pending current result; historical RC4 conjunction cannot close it |
+| current RC5 publication and published-cut integrity | owner-selected release and Release Method | external publication relation; then `F-EXACT-CUT` and published `F-COHORT-INTEGRITY` | existing exact owner publication grant; independent evaluator grants no effects | closed current candidate, actual checked ref graph and leases, atomic transport, complete remote reacquisition | pending; published-cut evaluation activates only after actual publication and produces its own verdict |
 
 ## Material interactions and conjunction
+
+The following closed interactions retain their exact RC4 historical subjects.
+The current RC5 configuration is stated separately below.
 
 - `mechanical -> map`: `F-MECHANICAL-BOUNDARY` produces the closed validation
   and map/projection result over the exact program, selected indexes, bindings,
@@ -491,31 +541,39 @@ configuration, context boundary, access, and prior involvement.
 Only closed results cross frame boundaries. Unclosed working context and ambient
 conversation are not evidence.
 
-For the newly selected source-qualification claim, the existing Product,
-mechanical, map, native and dogfood evaluations contribute only where the exact
-owning requirements make them applicable. The declaration does not activate
-all frames merely because they are available. Each contributing closed result
-retains its subject, scope, actor, authority, evidence and invalidators; missing,
-conflicting or indeterminate support withholds the dependent conclusion.
-Source comparison cannot be supplied by projection success, and native
-comparison cannot be supplied by authored-source review. Valid exact earlier
-facts or judgments may survive with their original limits; a required
-independent result still comes from a qualifying independent evaluator.
+### Current RC5 configuration and conjunction
 
-The `source delta -> map` relation also applies to the selected working snapshot
-and new authored links, using their exact frozen construction identities. It
-does not advance through `-> cohort` until an exact successor release subject
-is selected. `F-VERSION-ALIGNMENT`, `F-COHORT-INTEGRITY`, release-candidate and
-exact-cut results below retain their completed RC4 scopes; they are not new
-release prerequisites for obtaining this bounded source candidate. A successor
-release configuration must separately bind its real member set and claims.
-No successor publication or Product acceptance is selected by this proposal.
+After exact declaration acceptance and child Definition binding to RC5, each
+owning predicate selects only its applicable evaluation and result. The
+Product, version, source/map, mechanical, native and dogfood questions retain
+their separate meanings and existing producer/consumer relations. A complete
+release claim consumes all applicable mandatory results; absent, stale,
+conflicting, indeterminate or out-of-frame mandatory support withholds its
+dependent conclusion. An available frame name activates nothing by itself.
 
-The prepublication conjunction is closed historical evidence for the immutable
-commit-B subject. Continuing-source work consumes the exact published RC4
-identities and reactivates only a frame made material by a new change. The
-closed publication and exact-cut results support but do not perform
-Product-owner acceptance.
+The current `source delta -> mechanical -> map -> native` relation binds the
+actual RC5 Install and unchanged-content URI rebind, then the exact packaged
+native routes. Previous valid facts and judgments may survive proven
+conservation within their original limits; changed bindings and acquisition
+routes receive their affected checks. Source comparison is not supplied by
+projection success, and observed native judgment is not supplied by author
+source review. A required independent evaluator retains the declared separation.
+
+Current candidate-phase `F-COHORT-INTEGRITY` closes the source/member and child
+basis relation without requiring published child tags. Current Product-frame
+results then feed `F-CANDIDATE-READINESS`. Its closed result and the exact
+qualified ref graph may enter the separately authorized atomic publication.
+Only after that event do independently reacquired tag/tree/member and remote
+facts support `F-EXACT-CUT` and published cohort integrity. Those evaluations
+produce their own verdicts; they do not require the same verdict beforehand.
+Their actual results remain pending at proposal handoff.
+
+Previously authorized construction can obtain the candidate and evidence under
+its original grant while this configuration remains proposed. Acceptance of
+this exact frame declaration and its authorized child-basis binding governs
+use of the revision; it neither creates a circular construction prerequisite
+nor performs Product acceptance or fleet adoption. Historical RC4 closure is
+conserved, and qualifying-byte repair never mutates that published subject.
 
 ## Residual uncertainty and revision
 
@@ -533,6 +591,12 @@ capability, or known material failure changes.
 
 ## Acceptance gate
 
+The handoff status below is historical. Later acceptance is resolved from the
+exact external decision at
+`.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json`
+under this owning Product root; that record must bind this declaration URI and
+digest. Recording the decision does not require editing these declared bytes.
+
 This revision-17 object is proposed and unaccepted at handoff. The live accepted
 declaration remains revision 16 at `specification/REFERENCE_FRAME_BASIS.md`,
 SHA-256 `c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3`;
@@ -540,7 +604,7 @@ its decision is `.ai-workspace/decisions/20260902T030553_frame_basis_rev16_accep
 That decision and `stdo_representation.json` remain unchanged.
 
 The requested ruling is Product-owner acceptance or rejection of this exact
-revision-17 digest and the bounded source evaluation configuration it declares.
+revision-17 digest and the bounded RC5 configuration, use and release-evaluation scope it declares.
 The historical RC4 proxy cannot decide this extension. A valid new acceptance
 record must name the exact frame-set URI/digest, Product-owner authority and
 actual decision actor, scope, direct grant/decision source, time and evidence,

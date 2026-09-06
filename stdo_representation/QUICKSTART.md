@@ -1,260 +1,126 @@
 # STDO Representation Quickstart
 
-This guide exercises the published coordinated STDO Representation
-`2.5.0-rc.4` compression and index against exact Source STDO
-`v2.5.0-rc.4`. It is not constitutional authority. Accepted project frame
-basis revision 16 governs work on this source project. The mutable native
-guidance is a T-009 working candidate; the RC4 program and map remain unchanged.
-The separately selected frame-index construction is covered in section 6 and
-requires its exact Axiom candidate, program and map.
-External callers resolve their own Product Definition and accepted frame basis.
+Use the RC5 program, map, complete native bundle and exact Axiom dependency
+bound by [the release record](releases/v2.5.0.md). The instructions below assume
+those exact Products have been provisioned through the selected cohort. A
+source checkout is a construction subject until its exact release is verified.
+External callers retain their own Product Definition and accepted work/frame
+configuration; a represented rule does not silently replace that basis.
 
 ## 1. Verify the dependencies
 
-Verify Source STDO:
+From the coordinated Git source, the shared release checker verifies the
+selected content, full member inventories and published refs:
 
 ```sh
-STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
-stdo --store "$STDO_STORE" verify v2.5.0-rc.4 \
-  --manifest-sha256 4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
+python3 scripts/check_stack_release.py --phase published \
+  --revision refs/tags/stdo_representation/v2.5.0-rc.5 --remote origin
 ```
 
-The result must identify manifest SHA-256
-`4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`
-with no failures.
+Run that command at the repository root with the exact annotated cohort tags
+available. Prepublication construction uses the content and local-ref phases
+under its explicit grant; it must not report published success.
 
-Acquire the exact published same-version Axiom dependency and verify its frozen
-mechanics:
+The shared manager verifies the exact Source STDO Install:
 
-```bash
-set -euo pipefail
-STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
-STACK_ROOT="$(git rev-parse --show-toplevel)"
-AXIOM_RELEASE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/axiom-indexer-rc4.XXXXXX")"
-test "$(git -C "$STACK_ROOT" cat-file -t \
-  refs/tags/axiom_indexer/v2.5.0-rc.4)" = tag
-test "$(git -C "$STACK_ROOT" rev-parse \
-  refs/tags/axiom_indexer/v2.5.0-rc.4)" = \
-  4750e09639c118f1097d4ea046fe23d26713f96b
-test "$(git -C "$STACK_ROOT" rev-parse \
-  refs/tags/axiom_indexer/v2.5.0-rc.4^{})" = \
-  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
-git -C "$STACK_ROOT" archive --format=tar \
-  refs/tags/axiom_indexer/v2.5.0-rc.4:axiom_indexer |
-  tar -xf - -C "$AXIOM_RELEASE_ROOT"
-AXIOM_INDEXER_ROOT="$AXIOM_RELEASE_ROOT"
-test -f "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py"
-python3 "$AXIOM_INDEXER_ROOT/scripts/check_constitution.py" \
-  --stdo-store "$STDO_STORE"
-test "$(shasum -a 256 \
-  "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" | cut -d ' ' -f 1)" = \
-  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+```sh
+stdo verify v2.5.0-rc.5 \
+  --manifest-sha256 3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f
 ```
 
-Require Product inventory SHA-256
-`7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`,
-program-schema SHA-256
-`61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b`,
-and output-contract SHA-256
-`fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694`.
-
-Ordinary and release use only `refs/tags/axiom_indexer/v2.5.0-rc.4` and bind its
-annotated tag object, commit-B peel, tree, Project Subtree tree, and the same
-seven-member inventory. This released path cannot be replaced by mutable
-sibling mechanics. Execute the acquisition block as one Bash script; any
-identity or archive failure must stop it. The explicitly selected T-009
-candidate in section 6 is a separate construction path and does not change the
-RC4 dependency.
+Use the Axiom Product root selected by the caller's dependency record, verify
+its seven-member inventory and executable/schema/contract digests against the
+release record, and set `AXIOM_INDEXER_ROOT` to that exact installation. Use
+`REPRESENTATION_ROOT` for the corresponding nine-member Representation Install.
+Source archives contain additional authority and evidence; only the declared
+members constitute each Product. Mutable sibling code does not substitute for
+the selected dependency.
 
 ## 2. Validate the compression and index
 
-Validate the selected `a_c.STDO` compression using invocation-local bindings:
+Prepare an invocation-local Binding Set in an authorized work directory:
+
+```json
+{
+  "kind": "axiom-indexer.binding-set",
+  "schema_version": 1,
+  "bindings": [{
+    "uri_prefix": "stdo://releases/v2.5.0-rc.5/",
+    "path": "/absolute/path/to/the/verified/RC5/Install"
+  }]
+}
+```
+
+The path is the Install root containing `standards/`. Set `STDO_BINDINGS` to
+that file. From the selected Representation Product root, validate to stdout:
 
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
-  --program \
-    build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/axiomatic-program.json \
-  --bindings \
-    build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/bindings.json \
-  --emit-map /tmp/stdo-representation-map.json
+  --program build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json \
+  --bindings "$STDO_BINDINGS"
 ```
 
-Compare the emitted logical constraint index with:
-
-```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/
-  logical-constraint-map.json
-```
-
-Identical compression, bindings, and dependency bytes must reproduce the same index.
-The dogfood binding file contains installation-local physical paths and is not a
-portable Product member.
+To reproduce the map, add `--emit-map` with an explicitly writable destination
+and compare its bytes with the released `logical-constraint-map.json` beside
+the program. Binding Sets are local evidence, not portable Product members.
 
 ## 3. Use the native skill
 
-The immutable RC4 tag contains the published native skill. The mutable source
-skill contains the T-009 routing and evidence-consumption candidate and is not
-qualified by RC4's frozen member inventory. Published STDO Representation
-`2.5.0` RC1 remains the accepted Product; RC4 publication does not accept that
-later Product subject. Use the source candidate under its exact work grant;
-released use binds the immutable RC4 tag. Native discovery remains:
+Codex discovers `.agents/skills/stdo-representation`; Claude discovers
+`.claude/skills/stdo-representation`. Both resolve the same canonical bundle.
+Ask the agent to use `stdo-representation` for the bounded task. It verifies
+identities, reads the map, selects visible source-grounded frames, recovers
+sufficient task facts and valid judgments/rulings, re-enters source as needed,
+and returns the warranted result under the existing grant.
 
-Codex discovers:
-
-```text
-.agents/skills/stdo-representation
-```
-
-Claude discovers:
-
-```text
-.claude/skills/stdo-representation
-```
-
-Both resolve to the canonical `skills/stdo-representation/` bundle. Ask the
-agent to use `stdo-representation` for a bounded task. It should:
-
-1. load the logical constraint index and verify it binds the exact compression;
-2. select material frame URIs;
-3. show each frame URI, purpose, and source route;
-4. re-enter Source STDO only when required;
-5. apply the caller's sufficient role/grant and preserve any selected Executive,
-   Worker, or Reviewer boundary;
-6. recover applicable owner-supplied facts, judgments and rulings from their
-   existing carriers, retaining unknowns and affected invalidation; and
-7. return satisfied conditions, evidence, outstanding obligations and residuals.
-
-The agent, not code, owns frame selection. When the selected program declares
-frame indexes, follow section 6 to retain its supporting relations and
-residuals in either view. A projected rule is not a satisfied task condition.
+Direct sufficient work does not require an Executive appointment, new ticket
+or review round. Required independent assessment and reserved owner decisions
+remain conditions when their actual reference frames apply.
 
 ## 4. Join an Executive request
 
-Write a bare ordered JSON array:
-
-```json
-[
-  {
-    "label": "Role and outcome",
-    "text": "<acting role and intended result>"
-  },
-  {
-    "label": "Reference frame and exact subject",
-    "text": "<frame URI, purpose, source route, subject, and evidence boundary>"
-  },
-  {
-    "label": "Hard constraints",
-    "text": "<only material governing and forbidden relations>"
-  },
-  {
-    "label": "Index context and evidence routes",
-    "text": "<selected clauses, residuals, evidence, and source routes>"
-  },
-  {
-    "label": "Open solution space",
-    "text": "<choices left to the acting model unless prohibited>"
-  },
-  {
-    "label": "Return and stop contract",
-    "text": "<result, evidence, residual, and stop requirements>"
-  },
-  {
-    "label": "ACTION",
-    "text": "<bounded requested action>"
-  }
-]
-```
-
-Then invoke the exact joiner:
+For an actual bounded handoff, write an ordered array of caller-authored
+`{"label": "...", "text": "..."}` rows in an authorized work directory:
 
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" join \
-  --input /path/to/ordered-sections.json \
-  --output /path/to/request.txt
+  --input /authorized/path/ordered-sections.json
 ```
 
-The joiner preserves every supplied label, text value, and row order. It does
-not select frames, rewrite instructions, enforce a token budget, invoke a model,
-or decide authority. The seven rows are caller guidance, not a prompt schema or
-engine; include only material constraints and leave unowned realization choices
-open.
+The pure joiner returns the exact labeled text to stdout. It selects no
+frames, rewrites no content and invokes no model. File output requires the
+applicable grant; omit `--output` for read-only use.
 
 ## 5. Check the accepted basis
 
-```sh
-STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
-stdo --store "$STDO_STORE" verify v2.5.0-rc.4 \
-  --manifest-sha256 4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
-python3 -m json.tool stdo_representation.json >/dev/null
-```
-
-Revision 16 of the project frame basis is accepted at SHA-256
-`c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3`.
-Bounded-proxy decision SHA-256
-`116630d8b38fc2cda9462742f48d06b5605d69e50fe71902f4e78481bd1b82b0`
-binds those exact bytes. `stdo_representation.json` names that decision in its
-`reference_frame_bases` relation; it does not infer activation from this guide
-or reuse revision 13. Verify the binding with:
+For this source project:
 
 ```sh
-stdo --store "$STDO_STORE" status \
-  --definition stdo_representation.json --verify
+stdo status --definition stdo_representation.json --verify
 ```
 
-This acceptance governs the continuing source after completed RC4 publication.
-Revision 15 remains the historical construction and prepublication basis. The
-atomic publication did not arise from revision-16 frame acceptance, and frame
-acceptance does not accept the immutable RC4 Product subject.
+Follow that Definition's exact frame declaration and digest-bound decision.
+For an external project use its own Definition. Frame acceptance, exact-cut
+Product acceptance, publication and consumer adoption are separate relations;
+this guide does not create any of them.
 
-The immutable skill retains the revision-15 basis and decision digests carried
-by RC4. Resolve those historical bytes within the immutable Representation tag.
-The current source skill distinguishes them from the overlay-bound revision 16
-used for source work. It remains a working candidate until the exact successor
-cohort qualifies and is published; no immutable RC4 member is rewritten.
+## 6. Use explicitly selected frame indexes
 
-## 6. Use explicitly selected frame-index construction
+The [frame-index guide](skills/stdo-representation/references/frame-index-use.md)
+provides the released RC5 commands. Select the complete-update Worker or
+Reviewer index only when its declared question and scope apply. Ordinary tasks
+use relevant actual source frames and map entries. Both views preserve the
+same selected supporting closure and uncertainty; the materialized view
+resolves unchanged authored content.
 
-Use this path only under the T-009 working-source construction or qualification
-grant. Start with the
-[frame-index guide](skills/stdo-representation/references/frame-index-use.md)
-and the exact evidence subject under `dogfood/t009-frame-projection/run-004/`.
-Bind that subject's source snapshot, program, map, local bindings and Axiom
-code/schema. The released RC4 executable in section 1 supplies no `project`
-operation and cannot satisfy this selection. The manifest binds the output-scope
-guidance to the unchanged program, map and views in `run-003`, source snapshot
-and same exact dependency; earlier construction subjects remain preserved.
-
-The authored example offers a Worker index for isolated complete-update
-construction and a Reviewer index for independent assessment of an exact
-completion claim. Choose an index by its declared frame and scope; neither
-chooses a role or creates a review requirement. Generate reference-only and
-materialized views from the same exact inputs when comparing them. Read the
-preserved ordered premise, condition, exception and support relations, their
-literal qualifications and affected residuals.
-
-For example, a plan digest without applicable acceptance does not permit an
-update, and a stale selected source prevents the complete update from starting.
-An attempted operation with unknown resulting state does not establish
-completion. Supply the actual C facts and applicable J/O separately; retain
-valid prior facts while supplying independent judgment where the chosen
-assessment requires it. The view establishes none of those task facts.
-
-The source-linked semantic cases and construction results remain evidence for
-this exact working candidate. They do not publish a successor, adopt changed
-source law or authorize an actual consumer operation.
+Supply actual task facts, residual judgments and owner rulings separately.
+A plan digest does not grant operation acceptance; stale source evidence does
+not complete an update. Unknown effects require permitted observation before
+dependent completion or unsafe retry, without inventing a new failure or
+revoking still-applicable original authority.
 
 ## Historical paths
 
-Do not use these as the current Product:
-
-```text
-build_tenants/semantic_compile/
-build_tenants/gtl/
-build_tenants/json_schema/
-scripts/prepare_stdo_gtl_candidate.py
-scripts/finalize_stdo_gtl_product.py
-scripts/test_frozen_gtl_tenant.py
-```
-
-They remain retained prior-WHAT history and evidence. The active Product
-contains no local engine and makes no GTL or deterministic-orchestration claim.
+Earlier RC4 cuts and `dogfood/t009-frame-projection/run-001` through `run-004`
+remain exact historical evidence. The semantic_compile, GTL, JSON Schema and
+prior carrier tools remain outside the current Product and installed path.

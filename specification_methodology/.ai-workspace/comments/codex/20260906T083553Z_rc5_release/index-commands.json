@@ -1,0 +1,149 @@
+[
+  {
+    "label": "validate",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/validation-report.json",
+      "--emit-map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "worker-reference-only",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--mode",
+      "reference-only",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/worker-reference-only.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "worker-materialized",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--mode",
+      "materialized",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/worker-materialized.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "reviewer-reference-only",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "reference-only",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/reviewer-reference-only.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "reviewer-materialized",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "materialized",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/reviewer-materialized.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "combined-reference-only",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "reference-only",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/combined-reference-only.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "combined-materialized",
+    "argv": [
+      "/usr/local/bin/python3",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/rc5-bindings.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/logical-constraint-map.json",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "--frame-index",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+      "--mode",
+      "materialized",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/projections/combined-materialized.json"
+    ],
+    "exit_code": 0
+  }
+]

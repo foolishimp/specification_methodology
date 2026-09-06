@@ -89,10 +89,14 @@ semantic pass.
 
 ## Clean-Room Operator Boundary
 
-The operator receives only one extracted task card, a neutral access/effect
-envelope, its fixture and the selected native subject. The envelope names the
-native skill, arm, exact mounts, ordinary return destination and available
-tools. It contains no expected route or suggested conclusion.
+The operator receives only one extracted task card (or one phase of staged
+UAT-11-A), a neutral access/effect envelope and its fixture. The map-first arm
+also receives the selected native subject. The envelope names the arm,
+exact mounts, requester identity/authority, ordinary return destination and
+available tools. It contains no expected route or suggested conclusion.
+An ordinary request from an actor without reserved decision authority is not
+the omitted owner ruling; an actually sufficient scoped owner instruction is
+not made to repeat approval.
 
 Use a fresh process/conversation and isolated workspace for each arm and
 attempt. Physically withhold this suite, expected_results.md, other cards,
@@ -108,14 +112,26 @@ routes without its expected-route prose. Source re-entry reaches the exact
 represented standards and relevant owner records, not the hidden case oracle.
 Do not rewrite source law to make the fixture pass.
 
-The same subject, ordinary task, domain evidence, authority/effect boundary,
-role, output request, host/model configuration, tools and assessor apply to a
-paired comparison. Only the context entry differs:
+The same exact domain subject, ordinary task, domain evidence, authority/effect
+boundary, role, output request, host/model configuration, applicable domain
+tools and assessor apply to a paired comparison. The context treatment differs
+and is explicitly disclosed:
 
-- Direct-source control starts from the exact owning source prose. It does not
-  receive expected_results.md or the MC oracle text.
+- Direct-source control receives the exact owning source prose and equivalent
+  neutral host/task/domain-tool instructions. It does not consume candidate
+  compression, map, projections, map-first Representation instructions,
+  expected_results.md or the MC oracle text.
 - Map-first starts from the native skill and exact map, selects actual frames,
   and uses logged bounded source re-entry as needed.
+
+When a compression/map is itself the task-owned artifact being diagnosed or
+repaired (notably UAT-09-C/10-A), a source control may inspect those exact
+artifact bytes as subject data, not consume them as method guidance. Record
+that exposure. If no clean comparable treatment can be defined, mark that
+pairing inapplicable/unproved rather than invent source-only equivalence.
+The 39 cases do not require every variant to have a paired control.
+UAT-10-A may freeze its repaired candidate and use fresh UAT-02-B/05-C paired
+regressions for the affected behavior.
 
 Keep arm order and any unavoidable configuration/access differences visible.
 A different host or model is a separately identified observation. Codex
@@ -132,14 +148,17 @@ new attempt. Do not retrofit expected answers to candidate behavior.
 
 The map-first trace shows native discovery, exact binding checks, map loading,
 LLM-selected frame URIs/purposes/source routes, relevant rule and evidence
-recovery, caller-authored ordered sections, exact join invocation and output,
-and the bounded task result. A correct unsupported guess without the required
-tool use does not pass native-use UAT. Do not force a join or projection after
-a deliberate unresolved identity/authority boundary: the trace must show
-where reliance stops.
+recovery, and the bounded task result. When the task actually requests a
+bounded handoff, retain caller-authored ordered sections and the exact join
+invocation/output. UAT-07-A explicitly requests that handoff; ordinary answers
+do not acquire join ceremony. A correct unsupported guess without the
+required tool use does not pass native-use UAT. Do not force a join or
+projection after a deliberate unresolved identity/authority boundary: the
+trace must show where reliance stops.
 
-The source arm uses the same task evidence and applicable mechanical tools,
-with its lawful source selection visible. Record actual source reads in both
+The source arm uses the same task evidence and domain tools, with lawful
+source selection visible. A requested exact handoff uses the same pure
+joiner, without consuming compression or projections. Record source reads in both
 arms. Whole-corpus reading may recover the right answer but does not
 demonstrate useful compressed context; report that limitation separately from
 semantic correctness. No fixed token/time budget, accounting ledger,
@@ -158,11 +177,15 @@ Released RC4 Axiom has no frame-index projection operation. Projection cases
 require a separately frozen capable candidate and bounded qualification grant.
 
 UAT-09-A exercises both overlapping update frames, their shared rules and
-multi-premise completion in reference-only and materialized views from the
-same subject. UAT-09-B changes a required premise; UAT-09-C supplies the stale
-source exception; UAT-13-C tests unavailable outcome evidence. Axiom exposes
-closure, while the LLM evaluates the supplied facts and independent assessor
-checks the original source meaning.
+multi-premise completion. UAT-09-B changes a required premise; UAT-09-C
+supplies the stale source exception; UAT-13-C tests unavailable outcome
+evidence. For a claim covering both projection modes across the 09 A/B/C
+family, run reference-only and materialized as separate fresh map-first
+variants from the same exact subject/selection. Each operator sees one mode
+only; the second view cannot rescue the first context. The assessor compares
+the independent observations. These remain variants of the same 39 cases,
+not new source scenarios. Axiom exposes closure, while the LLM evaluates
+facts and the independent assessor checks original source meaning.
 
 For read-only projection, omit --output: stdout is the output surface.
 --output - creates a literal file named "-", not stdout. An output file or
@@ -220,7 +243,7 @@ entry for the same ID. All entries are not_run.
 | STDO-USE-08 Recover Valid Progress | UAT-08-A, UAT-08-B, UAT-08-C | MC10, MC02, MC08 |
 | STDO-USE-09 Evolve The Adopted Context | UAT-09-A, UAT-09-B, UAT-09-C | MC14, MC12; update frame design |
 | STDO-USE-10 Improve STDO From Observed Use | UAT-10-A, UAT-10-B, UAT-10-C | MC14, MC02, MC03 |
-| STDO-USE-11 Understand And Make An Owner Ruling | UAT-11-A, UAT-11-B, UAT-11-C | MC12, MC06 |
+| STDO-USE-11 Understand And Make An Owner Ruling | UAT-11-A, UAT-11-B, UAT-11-C | MC12, MC06; staged account/ruling/recovery |
 | STDO-USE-12 Understand Applicability And Readiness | UAT-12-A, UAT-12-B, UAT-12-C | MC14, MC01, MC13 |
 | STDO-USE-13 Suspend Or Conclude Participation | UAT-13-A, UAT-13-B, UAT-13-C | MC14, MC11, MC08 |
 
@@ -268,11 +291,18 @@ rerun:
 
 Historical documentation activation, 2026-09-06: root delegated Writer
 /root/write_llm_uat to author only new Markdown under this llm_uat directory.
-The re-entry is a realization-level qualification-documentation addition;
-source meaning, Product requirements, code, fixtures and live work remain
+The selected re-entry is design_reframe at tenant qualification documentation,
+realizing existing native-use/dogfood requirements and imported scenarios.
+Source meaning, Product requirements, code, fixtures and live work remain
 unchanged. The grant excludes execution, installs, real LLM runs, ticket
 changes, commits and sibling edits. This records authorship, not Product law
 or authority for a future test run.
+
+Authoring observation only: the dirty checkout's HEAD is
+0f1b1ab1e2cfb6a7baace4a4df0d2ba03478b65f; the source SCENARIOS.md SHA-256 is
+b282b63ca37172212f7c7e59496335f92b5b2ab640141d7e3b9431721a8bd5b4.
+These identify the model read for this draft, not a qualified execution subject.
+A later custodian checks source drift before freezing its oracle.
 
 [source]: ../../../../../specification_methodology/specification/SCENARIOS.md
 [native]: ../../../../specification/requirements/REQ-P-NATIVE-FRAME-USE.md
@@ -281,4 +311,4 @@ or authority for a future test run.
 [product]: ../../../../specification/PRODUCT.md#exact-dependency-bases
 [tenant]: ../../README.md
 [design]: ../../FRAME_INDEX_PROJECTIONS.md
-[ticket]: ../../../../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#native-scenario-coverage
+[ticket]: ../../../../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md

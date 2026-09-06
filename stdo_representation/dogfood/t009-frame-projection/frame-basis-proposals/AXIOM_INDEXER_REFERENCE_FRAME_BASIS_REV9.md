@@ -10,50 +10,81 @@ This proposal grants no activation, construction, acceptance or publication auth
 frame_set_uri = "urn:axiom-indexer:frame-set:release-readiness:9"
 governed_workspace = "repo://axiom-indexer/"
 governed_subject = "urn:axiom-indexer:bounded-context:product"
-governed_outcome = "evaluate the selected source construction and qualification of explicit frame-index dependency projections under operative RC4 while preserving the completed RC4 release and separate Product acceptance"
-method_basis = "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md"
-method_sha256 = "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8"
-release_method = "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md"
+governed_outcome = "evaluate exact RC5 configuration, frame-index use, candidate readiness and coordinated release qualification under the verified RC5 basis while preserving closed RC4 results and separate Product acceptance"
+method_basis = "stdo://releases/v2.5.0-rc.5/standards/REFERENCE_FRAME_METHOD.md"
+method_sha256 = "sha256:6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7"
+release_method = "stdo://releases/v2.5.0-rc.5/standards/RELEASE_METHOD.md"
 release_method_sha256 = "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c"
-stdo_manifest_sha256 = "sha256:4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e"
-published_axiom_ref = "refs/tags/axiom_indexer/v2.5.0-rc.4"
-published_axiom_tag_object = "4750e09639c118f1097d4ea046fe23d26713f96b"
-published_axiom_commit = "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
-published_repository_tree = "093302db57bfb2e7beeed7f02dfc6d7090921a15"
-published_axiom_subtree_tree = "3f71c3c2df99008b9521e338a7837c553f87173a"
+stdo_manifest_sha256 = "sha256:3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f"
+historical_rc4_published_axiom_ref = "refs/tags/axiom_indexer/v2.5.0-rc.4"
+historical_rc4_published_axiom_tag_object = "4750e09639c118f1097d4ea046fe23d26713f96b"
+historical_rc4_published_axiom_commit = "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2"
+historical_rc4_published_repository_tree = "093302db57bfb2e7beeed7f02dfc6d7090921a15"
+historical_rc4_published_axiom_subtree_tree = "3f71c3c2df99008b9521e338a7837c553f87173a"
 historical_rc4_publication_phase = "completed-and-closed"
-successor_release_candidate = "unselected"
-successor_publication = "unselected"
+successor_release_candidate = "selected exact v2.5.0-rc.5 candidate"
+successor_publication = "selected by owner; pending required exact release gates"
 successor_product_acceptance = "not-performed"
 ```
 
-The proposed declaration concerns the now-selected T009 source construction,
-including generic explicit frame membership, authored-reference closure and two
-projection views. It retains the exact published RC4 coordinates above as
-historical and released-use inputs. Existing work grants admit only their own
-bounded construction; this unaccepted proposal does not enlarge them.
+The proposed declaration covers the owner-selected RC5 configuration, source
+qualification, native use and coordinated release evaluation. Existing work
+grants admit their own construction and release effects; this unaccepted
+proposal enlarges none of them. The RC4 prepublication, publication and exact-cut
+results remain closed for their original bytes and cannot qualify new bytes by
+inheritance. Product acceptance remains a distinct decision.
 
-RC4 prepublication, publication and exact-cut results remain closed for their
-original bytes. They do not qualify the new source candidate. No successor
-release inventory, suffix, publication operation or Product acceptance is
-selected by this declaration. A mutable branch, test total or source snapshot
-cannot substitute for an exact adopted or released basis.
+## Exact selected RC5 qualification subject
 
-## Exact selected construction subjects
+The governing and represented Source STDO basis is the verified local RC5
+Install, manifest
+`3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f`,
+from annotated tag `d4b7c7724944e02ce25c6e6ce69722491c349924` and
+commit `c7888bb2dc9aee1f5a217985f6d1547cfe6465f0`. Its complete
+52-member standards aggregate is
+`22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb`.
+The child Product Definition basis must bind this exact RC5 URI and manifest
+before the child is qualified as part of that release cohort. The STDO source
+project's own commit-A construction basis is a separate relation.
 
-These are working-source construction and qualification coordinates under
-operative installed STDO `v2.5.0-rc.4`. They are not released dependencies,
-accepted Product subjects or adopted STDO law. Each activation binds only the
-exact subjects and claims material to its work; the declarations below do not
-activate every available frame or create an operation grant.
+| Selected subject | Exact manifest SHA-256 |
+|---|---|
+| `repo://stdo-representation/dogfood/t009-frame-projection/rc5-frame-basis-001/selection-subject.json` | `5196cc1be27d5afa0bee5fb9357358366f10e1309bf12415c9188781f1ef4b01` |
+
+This record binds the actual seven-member Axiom candidate, nine-member
+Representation candidate, RC5 program/map and source-corpus evidence, and
+current owning Product, requirement and native bytes. The Axiom candidate
+inventory is `41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19`;
+its executable remains
+`87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931`.
+The selected child refs are `refs/tags/axiom_indexer/v2.5.0-rc.5` and
+`refs/tags/stdo_representation/v2.5.0-rc.5`. Their future tag objects and
+commit-B trees are exact-cut result coordinates; they are not fabricated
+inputs or prerequisites for obtaining the prepublication candidate.
+
+The owner has selected bounded RC5 completion and release work. This frame
+configuration governs its evaluation, qualification and use; it supplies no
+operation grant, fleet adoption or blanket Product acceptance. Each effect
+uses the existing exact owner grant. Source comparison, mechanical checks,
+native UAT, candidate readiness and published-cut verification remain distinct
+results. Earlier valid evidence may be reused where exact conservation proves
+its original supported relation still applies; changed routes, inputs or
+claims require their affected checks. No earlier result is renamed RC5 merely
+because the logical statements were conserved.
+
+## Preserved construction evidence
+
+The following exact source-construction subjects were obtained under operative
+RC4 before this RC5 configuration. They remain predecessor evidence, not the
+current released dependency or a substitute for the RC5 selection above.
 
 | Subject | Exact manifest SHA-256 |
 |---|---|
 | `repo://axiom-indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json` | `9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053` |
 | `repo://stdo-representation/dogfood/t009-frame-projection/run-004/construction-subject.json` | `1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903` |
 
-The Axiom subject fixes the generic projection candidate; the Representation
-subject fixes the authored program, explicit Worker/Reviewer membership,
+The preserved Axiom subject fixes the earlier generic projection candidate; the Representation
+subject fixes the earlier authored program, explicit Worker/Reviewer membership,
 supporting relations, native instructions and the exact working source snapshot
 `86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca`.
 Source comparison, mechanical replay and fresh native task comparison are
@@ -107,7 +138,7 @@ ambient permission never admits agent self-acceptance.
 
 The revision-8 bounded proxy and its acceptance decision are exact historical
 authority for the unchanged RC4 mechanics and completed publication scope.
-They do not authorize acceptance of this source-capability extension. The
+They do not authorize acceptance of this RC5 configuration and source-capability extension. The
 Product owner must dispose this exact proposed declaration under the existing
 Product disposition authority. No new proxy grant is inferred, and this
 proposal does not alter the old grant or claim personal inspection of bytes.
@@ -254,6 +285,9 @@ configuration, context boundary, access, and prior involvement.
 
 ## Coverage Ledger
 
+Statuses record proposal handoff or the named immutable historical subject;
+actual later closed results and configuration decisions retain their own exact carriers.
+
 The inventory derives from Goals, Intent, Product, active requirements, the
 release record, core realization and tests, retained self and ABIogenesis
 dogfood, prior frame-basis replacement, and the installed STDO Reference Frame
@@ -261,13 +295,15 @@ and Release methods.
 
 | ID and evaluation | Provenance | Subject and basis | Selected frame | Actor envelope | Semantic authority | Operation authority | Decision authority | Evidence | Dependencies | Status | Residual or re-entry |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `C0` exact frame-set acceptance and Product Definition binding | Reference Frame Method; Product disposition authority; selected T009 source scope | exact declaration digest plus overlay bytes under STDO `v2.5.0-rc.4` | external governing acceptance relation; no frame self-accepts | `K-GOVERNANCE` | Product owner | separately granted overlay editor; none from evaluation | Product owner or exact explicitly user-granted bounded release-authority proxy | digest-bound acceptance record, direct grant source, and valid `stdo status --verify` | prerequisite to activating this proposed revision | uncovered | revision 9 is unaccepted; revision-8 acceptance and live overlay remain unchanged; old proxy does not cover the new source scope |
+| `C0` exact frame-set acceptance and Product Definition binding | Reference Frame Method; Product disposition authority; selected T009 RC5 configuration and release scope | exact declaration digest plus overlay bytes under STDO `v2.5.0-rc.5` | external governing acceptance relation; no frame self-accepts | `K-GOVERNANCE` | Product owner | separately granted overlay editor; none from evaluation | Product owner or exact explicitly user-granted bounded release-authority proxy | digest-bound acceptance record, direct grant source, and valid `stdo status --verify` | prerequisite to activating this proposed revision | uncovered | revision 9 is unaccepted; revision-8 acceptance and live overlay remain unchanged; old proxy does not cover the selected RC5 scope |
 | `C1` semantic compression, authored membership/support and residual honesty | Goals; Intent; Product; `REQ-P-AUTHORING` | exact program, calculus, source, frames, and source bytes | `F-AUTHORING-ESSENCE` | `K-AUTHORING` | source and frame owners | none | Product owner disposes usefulness claim | program, sources, residuals, source comparison | `D-AR`, `D-AD` | conditionally covered | requires exact activation; semantic uncertainty remains explicit |
 | `C2` URI identity, resolution, map and projection closure | Product; `REQ-P-PROGRAM`; `REQ-P-RESOLUTION`; `REQ-P-PROJECTION` | exact program, Binding Set, resources, report, map, selected indexes and both views | `F-SYMBOLIC-INTEGRITY` | `K-SYMBOLIC` | Product owns contract; source owners own bytes | none | Product owner | resolved digests, diagnostics, relocation and escape falsifiers | `D-AR`, `D-SV` | conditionally covered | missing or ambiguous binding returns failure or re-entry |
 | `C3` validator, projection and joiner mechanical boundary | Product; `REQ-P-VALIDATION`; `REQ-P-JOINING`; `REQ-P-PROJECTION` | exact requirements, implementation, tests, inputs, and outputs | `F-VALIDATION-BOUNDARY` | `K-VALIDATION` | Product owns mechanical contract | none | Product owner | normal and optimized tests, counterexamples, exact output comparisons | `D-SV`, `D-VD` | conditionally covered | environment drift or untested claim narrows evidence |
 | `C4` native pickup and practical consistency | Goal completion; Product dogfood predicate; retained dogfood | exact skill, map, selected views, request, result, initial-context boundary, and re-entry bytes | `F-DOGFOOD-USEFULNESS` | `K-DOGFOOD` | source owners; Product owns usefulness claim | none | Product owner | fresh-agent inputs/results, opened URIs, retained changes | `D-AD`, `D-VD`, `D-PC` | conditionally covered | broader usefulness and semantic truth remain unclaimed |
 | `C5` pre-publication candidate readiness | Release Method candidate/publication phases; GOAL-004; release record | deterministic candidate inventory, Product members, claim bytes, dependencies, qualification results, and publication plan | `F-CANDIDATE-READINESS` | `K-CANDIDATE` | Product and release-record owners | separately granted publisher after closed result; none from evaluation | Product owner disposes candidate | inventory, release record, dependency verification, closed `C1`-`C4` results, remote namespace observation | `D-PC`; historical `C0` prerequisite | satisfied and closed for RC4 only | the frozen candidate result was consumed by the separately authorized atomic publication; no continuing operation authority remains |
 | `C6` post-publication exact-cut qualification and acceptance readiness | Release Method exact-cut phase; release record | tag object `4750e09639c118f1097d4ea046fe23d26713f96b`, commit `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`, repository tree `093302db57bfb2e7beeed7f02dfc6d7090921a15`, Axiom subtree `3f71c3c2df99008b9521e338a7837c553f87173a`, remote refs, reacquired members, and claims | `F-EXACT-CUT` | `K-EXACT-CUT` | Product and release-record owners | none; evaluation is read-only | Product owner alone may accept or reject Product meaning | remote reacquisition, tag/tree/member comparison, independent review, closed `C5` result | `D-CX`; published RC prerequisite | satisfied and closed for RC4 publication | publication identity and qualification are closed; Product acceptance remains uninvoked; any qualifying-byte repair requires a higher coordinated RC |
+| `C5-RC5` current candidate readiness | selected RC5 release; current Product/member and dependency laws | exact frozen RC5 candidate, current seven-member inventory and applicable qualification results | `F-CANDIDATE-READINESS` | `K-CANDIDATE` | Product/release owners | existing explicit publisher grant only after gates | Product owner disposes candidate | current closed Product results, source Install, child bases, complete member and dependency evidence | `D-PC`; accepted current configuration | pending current result | old `C5` is RC4 evidence; published child tags are not a precondition |
+| `C6-RC5` current published-cut qualification | selected RC5 release; exact-cut law | actual published RC5 tag objects, commit, trees, members and claims | `F-EXACT-CUT` | `K-EXACT-CUT` | Product/release owners | none from read-only evaluation | Product owner retains separate Product acceptance | independent published reacquisition and candidate comparison | `D-CX`; actual publication | pending and inapplicable before publication | produces its own exact-cut verdict; old `C6` cannot close it |
 
 ## Material Interactions And Result Consumption
 
@@ -298,25 +334,38 @@ closed candidate results exposed after freeze.
 
 ## Phase Configurations And Conjunction
 
-### Selected source construction and qualification — proposed configuration
+### Selected RC5 configuration and release qualification
 
-After exact declaration acceptance, an activation uses the existing
+After exact declaration acceptance and child Definition binding to the RC5
+Install, activate only the existing frames whose owning conditions apply to
+the selected claim. The exact RC5 subject above replaces no historical result.
 `F-AUTHORING-ESSENCE`, `F-SYMBOLIC-INTEGRITY`, `F-VALIDATION-BOUNDARY` and
-`F-DOGFOOD-USEFULNESS` only where the owning Product/requirement/work claim makes
-their questions material. Their shared subject is the exact construction
-selection above, not the immutable RC4 program or a hypothetical published cut.
-For the complete projection-qualification claim, every applicable declared
-condition must have its own valid closed result; missing, conflicting or
-indeterminate support holds only the dependent conclusion. A satisfied
-mechanical result cannot substitute for the required source or native judgment.
+`F-DOGFOOD-USEFULNESS` return their distinct supported results over that subject.
+Preserved code or source meaning can retain prior valid evidence under its
+original limits; URI rebinding and changed native routes retain their required
+current checks. Mechanical success never supplies the source or native verdict.
 
-The original `D-AR`, `D-SV`, `D-AD` and `D-VD` producer/consumer relations remain
-in force over the enlarged exact content coordinates. Separately selected
-construction may obtain the first candidate and evidence under its existing
-grant; this proposed evaluation configuration adds no circular prerequisite to
-creating that subject. `D-PC` and `D-CX` concern a release candidate only after
-that separate exact release scope is selected. No current successor publication
-or Product-acceptance result is asserted.
+The original `D-AR`, `D-SV`, `D-AD` and `D-VD` relations are conserved. `D-PC`
+now consumes the applicable closed Product results, exact seven-member Axiom
+inventory, nine-member dependent Representation closure, verified RC5 source
+Install, child Definition bases and release claims for the selected RC5
+`F-CANDIDATE-READINESS` result. Missing, stale, conflicting or indeterminate
+mandatory support withholds that conclusion. No published child tag is needed
+to obtain or qualify the prepublication candidate.
+
+A satisfied candidate result may be consumed by the separately authorized
+publisher only with the exact complete local ref graph, leases and atomic
+transport required by the Release Method. After publication, `D-CX` and
+`F-EXACT-CUT` compare the reacquired immutable RC5 tag/tree/member identities
+with that closed candidate. This frame produces its independent exact-cut
+result; it does not require that same verdict as an input. The publication and
+postpublication conditions are pending at proposal handoff. None of these
+results accepts Product meaning or admits a fleet consumer update.
+
+Previously authorized construction may continue under its original exact
+grant while the new configuration is proposed. Declaration acceptance is a
+prerequisite for using this revision as governing configuration, not a circular
+prerequisite for producing its candidate or acceptance evidence.
 
 ### Pre-publication candidate readiness — closed
 
@@ -368,6 +417,12 @@ release cut or supply another actor's required independent judgment.
 
 ## Acceptance Gate
 
+The handoff status below is historical. Later acceptance is resolved from the
+exact external decision at
+`.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json`
+under this owning Product root; that record must bind this declaration URI and
+digest. Recording the decision does not require editing these declared bytes.
+
 This revision-9 object is proposed and unaccepted at handoff. The current
 accepted declaration is revision 8 at
 `specification/REFERENCE_FRAME_BASIS.md`, SHA-256
@@ -376,7 +431,7 @@ its decision is `.ai-workspace/decisions/20260901T170605Z_frame_basis_v8_accepta
 That decision and `stdo_default.json` remain unchanged.
 
 The requested ruling is Product-owner acceptance or rejection of the exact
-revision-9 declaration digest and its bounded source evaluation scope. The
+revision-9 declaration digest and its bounded RC5 configuration, use and release-evaluation scope. The
 existing RC4 proxy cannot decide this extension. A valid acceptance record must
 name this frame-set URI/digest, the Product-owner authority and actual decision
 actor, scope, direct grant/decision source, time and evidence; it must preserve

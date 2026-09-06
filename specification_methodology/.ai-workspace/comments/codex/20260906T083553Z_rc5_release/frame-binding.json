@@ -1,0 +1,109 @@
+{
+  "kind": "rc5.source-project-frame-and-definition-binding",
+  "actor": "/root release Writer",
+  "effect_time": "2026-09-06T09:19:56.032872+00:00",
+  "grant_text": "yes close this, i want to get released with a minimal but verified release path, the UAT tests can all be run in parallel, they are literally LLM tests",
+  "operation": "Explicit release Definition construction and exact frame decision/binding, followed by installed shared-manager verification and bootstrap projection; not a consumer cohort-update plan or fleet adoption.",
+  "products": [
+    {
+      "product": "axiom_indexer",
+      "definition": "axiom_indexer/stdo_default.json",
+      "definition_preimage_sha256": "005c2c05f1b39939e7551bd9e6c3c45dbf4dea015ab181197750ddc11406b838",
+      "definition_sha256": "290dcae955942856c9dfeb38dddb5035209e637b638ef270a04fa34d5080748e",
+      "declaration": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
+      "declaration_sha256": "bb75525c38d84e13a04df4ac174c4a6a07809a70c6553b6b028b030a9826e235",
+      "decision": "axiom_indexer/.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json",
+      "decision_sha256": "8b9bcfe62a19a8289620f5e52399516590bc98ba2d53bcea96def0dda90c4f7f",
+      "preimage_directory": "specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/frame-binding-preimages/axiom_indexer"
+    },
+    {
+      "product": "stdo_representation",
+      "definition": "stdo_representation/stdo_representation.json",
+      "definition_preimage_sha256": "442104c457186b23cf558880daa0ded1384bfc9376f6a5eeb09ca6226fe7bb6a",
+      "definition_sha256": "1ef49acefd397f89573dd7949edc565716703ada8bbcd44838c0d9d51000e3b2",
+      "declaration": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
+      "declaration_sha256": "7114e063cab060b16cb242926436e63df22e8b4bfb89a47d3bb5bebd500dd084",
+      "decision": "stdo_representation/.ai-workspace/decisions/20260906_rc5_frame_basis_acceptance.json",
+      "decision_sha256": "dd7676bc0aef2e4503b32ecf5cbddfa1f59dc3490c72dbab205ec852acd1ff48",
+      "preimage_directory": "specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/frame-binding-preimages/stdo_representation"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/stdo_default.json",
+        "--verify"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-0-axiom_indexer-status.json",
+      "stdout_sha256": "334f02b579cc69474d55f59e66b6dbe9209731233d66384993a39432a2b09c51",
+      "stderr": "frame-binding-0.stderr.txt"
+    },
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "bootstrap",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/stdo_default.json"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-1-axiom_indexer-bootstrap.json",
+      "stdout_sha256": "2d495657019044967ab21a8edc1e49c02be71c78d66cccab697fd8625aeb8236",
+      "stderr": "frame-binding-1.stderr.txt"
+    },
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/stdo_default.json",
+        "--verify"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-2-axiom_indexer-status.json",
+      "stdout_sha256": "334f02b579cc69474d55f59e66b6dbe9209731233d66384993a39432a2b09c51",
+      "stderr": "frame-binding-2.stderr.txt"
+    },
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/stdo_representation.json",
+        "--verify"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-3-stdo_representation-status.json",
+      "stdout_sha256": "2dadc53c6ec7552b8fd78c76bbbdabf1c30c0861c42718deabb90f51d2440570",
+      "stderr": "frame-binding-3.stderr.txt"
+    },
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "bootstrap",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/stdo_representation.json"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-4-stdo_representation-bootstrap.json",
+      "stdout_sha256": "0fd6ef2d666f047432035f06f042c00057fd7763fc51ef5226a2bed6426c0686",
+      "stderr": "frame-binding-4.stderr.txt"
+    },
+    {
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/stdo",
+        "status",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/stdo_representation.json",
+        "--verify"
+      ],
+      "returncode": 0,
+      "stdout": "frame-binding-5-stdo_representation-status.json",
+      "stdout_sha256": "2dadc53c6ec7552b8fd78c76bbbdabf1c30c0861c42718deabb90f51d2440570",
+      "stderr": "frame-binding-5.stderr.txt"
+    }
+  ]
+}

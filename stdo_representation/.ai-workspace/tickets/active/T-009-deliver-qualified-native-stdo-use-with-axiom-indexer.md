@@ -11,11 +11,11 @@
 - re_entry_point: axiom_indexer/specification/PRODUCT.md#frame-index-projections
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-06T07:41:37Z
+- updated_at: 2026-09-06T09:20:58Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - work_authorization: direct owner delivery/frame-index selection and local commit; admitted
-- target_release: unselected successor after v2.5.0-rc.4
+- target_release: coordinated v2.5.0-rc.5; owner-selected release, subject to exact qualification
 - target_truth: Native agents use exact source-grounded constraints and sufficient facts to reach warranted bounded outcomes.
 - superseded_truth: The narrower RC4 index and green mechanical tests do not qualify this successor capability.
 - closure_law: M01-M04 hold on the exact combined candidate, with required Product decisions and no applicable non-closure condition.
@@ -29,17 +29,16 @@
 
 | Exact input | Route / identity |
 |---|---|
-| Operative STDO | `stdo://releases/v2.5.0-rc.4/`; manifest `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`. |
-| Live authority | [Axiom Definition](../../../../axiom_indexer/stdo_default.json), accepted frame basis 8; [Representation Definition](../../../stdo_representation.json), accepted frame basis 16. Their RC4 proxy grants do not accept successor scope. |
-| Current Axiom mechanics | [Exact subject](../../../../axiom_indexer/dogfood/t009-frame-projection/run-002/candidate-subject.json), SHA-256 `9f279fafccf78e9809a8bab418b8f3d44936a6bf078b75ff77479b744710b053`. |
-| Current native construction | [run-004 manifest](../../../dogfood/t009-frame-projection/run-004/construction-subject.json), SHA-256 `1d13124c1c298d6cde9f0193c3160532658401b90d9db24f6a5fd0cd57d88903`. Follow its explicit path bases. |
-| Program/source | The manifest reuses run-003 program/map/views and run-001's 52-member source snapshot; source aggregate `86370472a9b7eabe52933d5bcd8093bb94435392420d38e8d145976317a4d2ca`. Unreleased construction, not substituted RC4. |
+| Operative child STDO | `stdo://releases/v2.5.0-rc.5/`; verified manifest `3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f`. |
+| Live authority | [Axiom Definition](../../../../axiom_indexer/stdo_default.json), accepted frame 9; [Representation Definition](../../../stdo_representation.json), accepted frame 17. Each binds its owning `20260906_rc5_frame_basis_acceptance.json` under the current owner grant. |
+| Exact candidate | [RC5 selection](../../../dogfood/t009-frame-projection/rc5-frame-basis-001/selection-subject.json), SHA-256 `5196cc1be27d5afa0bee5fb9357358366f10e1309bf12415c9188781f1ef4b01`; seven Axiom and nine Representation members. |
+| Program/source | [RC5 assets](../../../build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/); exact installed 52-member source. Reviewed run-003 meaning is conserved under the explicit RC5 identity rebind. |
 | Current use route | [Canonical skill](../../../skills/stdo-representation/SKILL.md) and [frame-index guide](../../../skills/stdo-representation/references/frame-index-use.md). Omit `--output` for stdout; a supplied `-` is a file path. |
-| Proposed frame pair | [Manifest](../../../dogfood/t009-frame-projection/frame-basis-proposals/manifest.json), SHA-256 `d6ed1dbf822e839bace00dc210b74039b558c5398dc2ebcece0c6a90d5996903`: Axiom 9 / Representation 17, reviewed, unaccepted. |
+| Frame evidence | [Independent review](../../../dogfood/t009-frame-projection/rc5-frame-basis-001/independent-frame-review.md) and [actual binding](../../../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/frame-binding.json). Predecessor decisions remain historical. |
 
 ## Implementation Admission And Writer Activation
 
-Owner's “ok implement”, “actually start the work stop circling it” and subsequent frame-index instruction admit this delivery. Prior exact grants/Writer activations remain in this ticket at Git `d93b36ebd91afcec2d5781623a8c5ddd8c21feb3`, same repository path. No renewed permission is needed for unchanged scope. Root acts as Writer for this owner-requested compaction; it changes no admission, law, evidence or acceptance.
+Owner's “ok implement”, “actually start the work stop circling it” and subsequent frame-index instruction admit this delivery. Prior exact grants/Writer activations remain in this ticket at Git `d93b36ebd91afcec2d5781623a8c5ddd8c21feb3`, same repository path. No renewed permission is needed for unchanged scope. Root is activated as release Writer for the owner-selected RC5 packaging, exact qualification, local commits and guarded atomic publication. The latest owner release instruction supplies that bounded grant; required evidence and independent assessment remain conditions.
 
 ## Frame-Index Product Selection
 
@@ -50,7 +49,7 @@ Owner's “ok implement”, “actually start the work stop circling it” and s
 | STDO / T030 | Source model, method meaning and shared native workflows. |
 | STDO / [T029](../../../../specification_methodology/.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md) | Shared complete-update capability, consumed only by relevant claims. |
 
-Frames remain source-owned evaluation contracts; indexes/materializations are derived. Agents author/select/judge; code follows declared references without inventing implications or applicability. Pure joining stays unchanged. No second executor, Public/design analyzer, consumer-local updater, cost framework, ABIogenesis change, publication or adoption is selected. Further context-assembly scope needs its own concrete gap and Product selection.
+Frames remain source-owned evaluation contracts; indexes/materializations are derived. Agents author/select/judge; code follows declared references without inventing implications or applicability. Pure joining stays unchanged. No second executor, Public/design analyzer, consumer-local updater, cost framework, ABIogenesis change or consumer adoption is selected. Coordinated RC5 publication is selected by the owner. Further context-assembly scope needs its own concrete gap and Product selection.
 
 ## Delivery Timeline
 
@@ -59,7 +58,7 @@ Frames remain source-owned evaluation contracts; indexes/materializations are de
 | M01 | Map current capabilities/gaps, owners and C/J/O handoffs to the source model. | Complete; [RC4 baseline](../../../dogfood/t009-m01/run-001/README.md). |
 | M02 | Exact mechanics satisfy selected positive/refusal contracts; semantic limits remain explicit. | Supplied and independently verified: 31 normal/optimized tests; escaped-source alias repaired; RC4 map and join conserved. |
 | M03 | Faithful source-linked program/map, frame indexes and native guidance consume exact sufficient inputs. | Source construction/independent comparison supplied: 97 statements, 23 supporting links, 4 qualifications, 2 overlapping indexes, 6 reproduced views. |
-| M04 | Joined native path meets applicable scenarios/combinations without material regression; required decisions and evidence hold. | Finite results below supplied; Claude FP04 prospective claim and successor/frame/packaged conditions remain open. |
+| M04 | Joined native path meets applicable scenarios/combinations without material regression; required decisions and evidence hold. | Finite results below supplied; RC5 frames and exact source are bound. Parallel native and packaged-path qualification remain in progress. |
 
 ## Completion conditions
 
@@ -85,9 +84,10 @@ Native evidence is frozen in increments [001](../../../dogfood/t009-frame-projec
 
 ## Next actions and holds
 
-1. Obtain the owner decision on the exact reviewed frame pair before dependent acceptance/binding. Existing [Axiom gate](../../../../axiom_indexer/specification/REFERENCE_FRAME_BASIS.md#acceptance-gate) and [Representation gate](../../../specification/REFERENCE_FRAME_BASIS.md#acceptance-gate) reserve that decision; the prior proxy cannot expand itself.
-2. Keep Claude FP04's prospective claim open. Reopen only with changed relevant instructions/harness or material new evidence; do not repeat runs to discard failures or expand sufficient law.
-3. Select the exact successor/cohort and close remaining supported native/packaged-path conditions. T030 owns its shared-entry/aggregate qualification. Publication and actual consumer adoption are separate selections.
+1. Complete parallel RC5 LLM UAT and actual installed complete-update checks; assess failures at their actual source, instruction, host or harness boundary. Reuse sufficient exact prior evidence and retain failed attempts.
+2. Close candidate/ref qualification and publish the exact cohort atomically under the owner grant. T030 owns shared-entry/aggregate conditions. Product acceptance and consumer adoption remain separate.
+
+Claude FP04's earlier prospective claim remains unqualified at that historical subject; changed relevant inputs or new evidence revise only the affected claim.
 
 Frame acceptance does not manufacture native evidence. T029's complete updater and Axiom's exact mechanical result are reusable; neither waits for this ticket's final closure. Independently authorized native improvements proceed under sufficient current authority.
 

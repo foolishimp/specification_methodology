@@ -24,7 +24,7 @@ prescribe hidden reasoning, ask Claude to reproduce it, or precompute a
 solution. This is presentation guidance, not a prompt engine, schema, selector,
 or renderer.
 
-For an explicitly selected frame-index candidate, bind its exact index URI,
+For an explicitly selected frame-index subject, bind its exact index URI,
 frame/scope and program/map/source identity in the reference-frame section.
 Place the selected reference-only or materialized view in index context. Retain
 all dependency roles, literal qualifications, exceptions and residuals. Keep

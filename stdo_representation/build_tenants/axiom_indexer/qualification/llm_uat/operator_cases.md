@@ -13,6 +13,16 @@ Each card's return request goes to its existing work/result carrier. Evidence
 capture by the host adds no operator write grant. Unless a card explicitly
 grants a sandbox change, the task is read-only.
 
+Custodian arm adaptation: map/index/skill/projection instructions below are
+map-first-only. A direct-source card retains the same ordinary domain task,
+facts, grant and result request, but receives exact governing prose and
+neutral domain-tool instructions instead of candidate compression, maps,
+projections or map-first guidance. The requested pure join in UAT-07-A
+remains available in both arms.
+An exact compression/map being diagnosed or repaired is inspectable as
+task-owned subject data, not method guidance; the custodian records that
+exception and does not invent a clean pairing when none is supportable.
+
 ## UAT-01-A — Start In The Selected Project
 
 Initial state: P0 is explicitly selected. Its definition, current exact basis,
@@ -294,13 +304,17 @@ satisfied result naming exactly G1/B1. Its declaration, predicate and
 dependency joins are supplied. All other applicable conditions are satisfied.
 
 Task: "Combine the evaluations for this selected root change and tell me
-whether its declared conditions are satisfied."
+whether its declared conditions are satisfied. Prepare a bounded read-only
+handoff request so a fresh consumer can recover this exact result."
 
-Access and effects: Executive evaluation only; read and check existing
-results, with no root edit or new operation.
+Access and effects: Executive evaluation reads/checks existing results
+without candidate effects. A separately declared request-Writer activation
+permits only sandbox handoff/sections.json and handoff/request.txt, containing
+caller-authored sections and the exact native join output. Do not invoke the
+recipient, change the root or create another assessment.
 
 Return: the applicable conjunction, exact result identities, material
-constraints and any remaining condition.
+constraints, any remaining condition and those two exact handoff artifacts.
 
 ## UAT-07-B — Combine A Public Result With Author Review
 
@@ -390,9 +404,11 @@ authorized independent Reviewer; author J is available only as evidence.
 Task: "Assess whether this isolated update supplies the complete selected
 usable context. Do not change the result or any consumer."
 
-Access and effects: read-only independent assessment. Inspect both declared
-update-frame projections in reference-only and materialized modes from the
-same exact subject; no output files are granted.
+Access and effects: read-only independent assessment. In the map-first arm,
+inspect both declared update frames using only the projection mode selected
+in the neutral envelope;
+the alternative mode is not exposed in this context. No output files are
+granted.
 
 Return: your exact claim assessment and useful-context evidence, showing
 which Worker facts and Reviewer conditions apply and what remains outside
@@ -407,8 +423,11 @@ apply grant is supplied.
 
 Task: "Use this plan to update P0's selected context."
 
-Access and effects: inspect the selected plan, owner records and update Worker
-index. Available access does not add an apply grant; no file output is granted.
+Access and effects: inspect the selected plan and owner records. In the
+map-first arm, inspect the update Worker index in the envelope's selected
+projection mode. The requester lacks reserved
+plan-acceptance authority. Available access does not add an apply grant; no
+file output is granted.
 
 Return: readiness, the action you can perform now and the condition needed
 for any further effect.
@@ -423,8 +442,9 @@ scope covers only this isolated P0 update and its checks.
 
 Task: "Update this selected context using the proposed complete bundle."
 
-Access and effects: inspect the Worker index, actual source/companion
-identities and readiness under the existing sandbox grant. It does not grant
+Access and effects: inspect actual source/companion identities and readiness
+under the existing sandbox grant. In the map-first arm, inspect the Worker
+index in the envelope's selected projection mode. The grant does not permit
 semantic re-authoring, new acceptance or real consumer/fleet changes.
 
 Return: the exact usable-context status, affected companion relation and
@@ -434,8 +454,8 @@ smallest resolving action. Preserve the prior usable context.
 
 Initial state: comparable retained native observations show a trial
 compression omits the Public value-comparison constraint: its mechanical
-validation passes, yet its H1 account misses timeout 30 -> 45. Exact source law,
-the pre-exposure original-source criterion, old artifact identities and
+validation passes, yet its H1 account misses timeout 30 -> 45. The original
+governing source contract, old artifact identities and
 neutral H1/H2 fixture facts are available, but no assessor answer text is.
 The declared affected entry and its source route are identified by provenance.
 
@@ -480,25 +500,46 @@ read-only. No relaxed gate, adoption or publication is granted.
 Return: what benefit is established, what remains unresolved and the smallest
 evidence request that would discriminate the claimed improvement.
 
-## UAT-11-A — Recover The Existing Root Ruling
+## UAT-11-A — Support A Root Decision And Its Later Use
 
-Initial state: the owning P0 record preserves the original owner ruling:
-"Use root1 for this selected project only; do not change other projects."
-Its actor, exact P0 subject/basis, source and permitted relation still apply.
-The later consumer has no new reserved question.
+Custodian-only staging: extract phase 1 alone initially. Freeze that account
+before releasing the actual fixture owner's response from the assessor
+recipe. Record the response in the owning carrier, then extract phase 2 into
+a fresh context. Do not expose the later ruling or phase to phase 1.
 
-Task: "What did the owner authorize, and can we use that decision for P0's
-unchanged root request?"
+Phase 1 initial state: P0 currently binds root0. G1 proposes root1 under B0;
+its exact governing root requirement/design, unchanged Public projection and
+affected owner relations are available. The requester is the actual fixture
+root decision owner. No root ruling has yet been made for this question.
 
-Access and effects: recover and inspect the existing ruling; no root change
-or rewritten decision record is granted.
+Phase 1 task: "Help me decide whether P0 should use root1. Give me a short
+account of the current condition, material uncertainty, options and
+consequences. Do not change the project."
 
-Return: the original wording and scope, separately marked interpretation and
-the permitted next action.
+Phase 1 access and effects: inspect exact current/proposed relations; read-only
+decision support. No constitutional acceptance or root operation is granted.
+
+Phase 1 return: one decision-ready account for the actual owner.
+
+Phase 2 initial state: the existing owning carrier now contains the actual
+owner response, original source, actor/authority, exact P0 subject/basis,
+scope and consequences. The fresh consumer receives this record and current
+task evidence, not the earlier conversation or assessor text.
+
+Phase 2 task: "Continue from the recorded decision. What did the owner
+authorize for the unchanged P0 root request, and what can happen next?"
+
+Phase 2 access and effects: read and check the owning ruling and its current
+applicability. No root edit or rewritten decision record is granted.
+
+Phase 2 return: the original wording/scope, separately marked interpretation,
+and any remaining governing or operation condition for the permitted next
+action.
 
 ## UAT-11-B — Extend A Project Ruling To Other Projects
 
-Initial state: the exact original P0 ruling from UAT-11-A is the only decision.
+Initial state: the exact original ruling is the only decision: "Use root1
+for this selected project only; do not change other projects."
 The new requested target includes P-other and additional fleet projects.
 No composition, proxy or fleet authority is supplied.
 
@@ -612,8 +653,9 @@ owner permits withdrawal with explicitly retained unresolved obligations.
 Task: "End my participation. Is the interrupted context update complete,
 and what remains after I leave?"
 
-Access and effects: inspect the complete-update Reviewer frame and permitted
-effect records; record withdrawal and pending obligations only in the
+Access and effects: inspect permitted effect records and exact source rules;
+in the map-first arm inspect the complete-update Reviewer frame. Record
+withdrawal and pending obligations only in the
 existing sandbox carrier. No retry, rollback, deletion, new approval or
 actual consumer change is granted.
 

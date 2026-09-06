@@ -1,0 +1,72 @@
+{
+  "kind": "axiom-indexer.frame-basis-acceptance",
+  "schema_version": 2,
+  "subject_uri": "urn:axiom-indexer:frame-set:release-readiness:9",
+  "subject_ref": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
+  "subject_sha256": "sha256:bb75525c38d84e13a04df4ac174c4a6a07809a70c6553b6b028b030a9826e235",
+  "method_basis_uri": "stdo://releases/v2.5.0-rc.5/standards/REFERENCE_FRAME_METHOD.md",
+  "method_basis_sha256": "sha256:6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
+  "actor_identity": "urn:openai:codex:delegated-release-authority",
+  "authority_identity": "urn:axiom-indexer:authority:product-owner",
+  "authority_mode": "current-direct-owner-granted-bounded-rc5-decision",
+  "decision": "accepted",
+  "decided_at": "2026-09-06T09:19:56.032872+00:00",
+  "grant_source_kind": "direct-human-product-owner-conversation",
+  "grant_text": "yes close this, i want to get released with a minimal but verified release path, the UAT tests can all be run in parallel, they are literally LLM tests",
+  "scope": "Accept this exact frame declaration for the selected RC5 configuration, use and release evaluations and construct its source-project Definition binding to the exact verified RC5 Install. This is a bounded decision under the current direct delivery/release instruction; it is not an enlargement of a predecessor proxy.",
+  "exclusions": [
+    "Product meaning acceptance",
+    "immutable Product acceptance",
+    "blanket native reliability",
+    "consumer or fleet adoption",
+    "unselected operation effects",
+    "future release authority"
+  ],
+  "self_expansion_prohibited": true,
+  "human_exact_byte_inspection_claimed": false,
+  "product_acceptance": "uninvoked",
+  "source_stdo": {
+    "uri": "stdo://releases/v2.5.0-rc.5/",
+    "manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f",
+    "source_ref": "refs/tags/specification_methodology/v2.5.0-rc.5",
+    "freeze": {
+      "tag_object": "d4b7c7724944e02ce25c6e6ce69722491c349924",
+      "commit": "c7888bb2dc9aee1f5a217985f6d1547cfe6465f0",
+      "tree": "cb87e3e0bfaf033ee3cfa6b260d0d9ead0312b08",
+      "project_subtree_tree": "40dc632ee5185b2b29cfce43ef8b06f223ea27ea",
+      "standards_tree": "b04dee86bd8d4f272d215801257ddd7ae5d5d782",
+      "installed_manifest_sha256": "3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f",
+      "standards_member_count": 52,
+      "standards_member_set_sha256": "22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb",
+      "plugin_member_count": 17,
+      "plugin_member_set_sha256": "4798a8d191e34bf660869d4e9ce60f5b03bfeb2f04cb658c4eb0bedbdefa6fba"
+    },
+    "method_sha256": {
+      "REFERENCE_FRAME_METHOD.md": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
+      "STDO_REFERENCE_FRAME_BASELINE.md": "df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737",
+      "RELEASE_METHOD.md": "582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+      "AXIOMATIC_CALCULUS.md": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+    }
+  },
+  "selected_subject": {
+    "path": "../stdo_representation/dogfood/t009-frame-projection/rc5-frame-basis-001/selection-subject.json",
+    "sha256": "5196cc1be27d5afa0bee5fb9357358366f10e1309bf12415c9188781f1ef4b01"
+  },
+  "supersession_record": {
+    "prior_subject_sha256": "sha256:032f0d63807ccffc615a948f9481560d8664b3b448760b7a96864be6b433cd69",
+    "prior_decision": "./.ai-workspace/decisions/20260901T170605Z_frame_basis_v8_acceptance.json",
+    "prior_decision_sha256": "sha256:26c68cf20df58d055f091eb148e098551065ae27f43085e2c22e7615b77f4d39",
+    "disposition": "The predecessor decision and declaration preimage remain historical; this exact decision governs the successor configuration after authorized Definition binding."
+  },
+  "evidence_refs": [
+    {
+      "path": "../stdo_representation/dogfood/t009-frame-projection/rc5-frame-basis-001/independent-frame-review.md",
+      "sha256": "ed600016e6c1a049cd113ba8b736aa58879d3ae09fa9ef274f2b5f07841104f5"
+    },
+    {
+      "path": "../stdo_representation/dogfood/t009-frame-projection/rc5-frame-basis-001/independent-currentness-addendum.md",
+      "sha256": "c78104fddf4a90d0090650d6ea80ea0f6a1972c5639c1275f7d84450cfddabd0"
+    }
+  ],
+  "release_relation": "Candidate readiness and actual publication remain separate evidence conditions. The current owner release grant authorizes the publication operation after those conditions; this declaration decision does not replace them."
+}

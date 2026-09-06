@@ -2,71 +2,40 @@
 
 Identity: `urn:stdo-representation:build-tenant:axiom-indexer`
 
-Status: active STDO Representation `2.5.0` tenant; no local executable code
-
 ## Selected dependency
 
-```text
-Axiom Indexer exact immutable cut:
-  v2.5.0-rc.4
-qualified ref:
-  refs/tags/axiom_indexer/v2.5.0-rc.4
-publication state:
-  published in the coordinated atomic RC4 cohort
-tag object:
-  4750e09639c118f1097d4ea046fe23d26713f96b
-peeled commit:
-  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
-repository tree:
-  093302db57bfb2e7beeed7f02dfc6d7090921a15
-Project Subtree tree:
-  3f71c3c2df99008b9521e338a7837c553f87173a
-Product member inventory SHA-256:
-  7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
-executable SHA-256:
-  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
-```
+Use the exact RC5 Axiom Indexer dependency and full seven-member inventory
+bound by [the Representation release record](../../releases/v2.5.0.md) and
+[cohort carrier](../../../stack_release.json). Those records own the exact
+source, executable, schema, output contract and cut identities. This tenant
+contains no local executable, copied validator or second materializer.
 
-The dependency owns URI resolution, released validation, logical-index
-instantiation, and pure ordered joining. This tenant does not copy or fork that
-code.
-
-During the completed coordinated two-commit construction, the sibling
-`../../../axiom_indexer/` checkout supplied the exact seven-member candidate
-mechanics above. That bounded use is construction evidence, not the immutable
-dependency. Ordinary and release use require the annotated cut, its exact
-commit-B coordinates, and the same member inventory.
+Axiom owns resolution, validation, logical-index generation, explicit
+reference-only/materialized projections and exact ordered text joining.
+An LLM authors and selects semantics; code follows declared references.
 
 ## Product artifacts
 
 ```text
-representation/stdo-v2.5.0-rc.4/
+representation/stdo-v2.5.0-rc.5/
   axiomatic-program.json
   logical-constraint-map.json
 ```
 
-The program is the LLM-authored STDO specialization of the Axiom Indexer
-`a_c.text` surface and is the semantic compression. The map is the exact
-deterministic constraint index produced from the unchanged valid compression
-and invocation-local bindings. These published-cut artifacts represent exact
-Source STDO `v2.5.0-rc.4`; publication and validation do not by themselves
-accept the Product.
-
-Runtime Binding Sets and validation reports contain installation-specific
-evidence and remain outside the portable Product member set. The native skill
-under `../../skills/stdo-representation/` tells Codex and Claude how to use
-these artifacts and the exact dependency.
-
-This tenant claims no complete admitted `a_c` model, GTL, GraphFunction,
-automatic frame selection, deterministic prompt packet, or model runtime.
+The program is the canonical authored semantic compression; its map is a
+deterministic index over that unchanged program. Local bindings, source-corpus
+records and validation reports supply external exact-source evidence.
+The complete [native skill](../../skills/stdo-representation/SKILL.md) provides
+the installed route. A dogfood directory is not a runtime dependency.
 
 ## Selected frame-index construction
 
-T009 now selects a bounded successor capability: this Product authors explicit
-STDO dependencies and frame membership, while the exact Axiom candidate owns
-generic reference-only and materialized views. The
-[semantic design](FRAME_INDEX_PROJECTIONS.md) binds two overlapping existing
-Worker/Reviewer contracts, shared rules, premises, exceptions and residuals.
-Its working source and generated evidence stay under the existing T009
-dogfood surface. Neither that source snapshot nor mutable sibling mechanics
-replace the immutable dependency and RC4 Product artifacts above.
+The [semantic design](FRAME_INDEX_PROJECTIONS.md) binds two overlapping
+complete-update Worker/Reviewer indexes, shared rules, supporting premises,
+conditions, exceptions and residuals. The current published/candidate subject
+is identified by the exact release record; earlier authored runs retain their
+own evidence. Applicable task facts, semantic judgments, independent review
+and owner rulings remain external to the deterministic projections.
+
+No complete admitted `a_c` model, automatic frame selection, GTL,
+GraphFunction or model runtime is claimed by this tenant.

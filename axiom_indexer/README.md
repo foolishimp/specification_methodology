@@ -68,27 +68,25 @@ The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
 `dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
 only the mutable highest-published-RC selector.
 
-The release-coupled seven-member mechanics cut for exact Source STDO
-`v2.5.0-rc.4` is published at annotated tag
-`axiom_indexer/v2.5.0-rc.4`, tag object
-`4750e09639c118f1097d4ea046fe23d26713f96b`, peeling to commit
-`a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. Its frozen prepublication record
-is [`releases/v2.5.0.md`](releases/v2.5.0.md). Publication identifies the
-qualified cut; it does not by itself accept Product meaning. The sibling STDO
-Representation owns the STDO-specific semantic program and logical map.
+The selected coordinated successor is `axiom_indexer/v2.5.0-rc.5`.
+[Its release record](releases/v2.5.0.md) and [cohort carrier](../stack_release.json)
+bind the exact seven-member mechanics, matched Source STDO and qualification
+claims. RC5 adds explicit authored frame-index dependency closure and
+reference-only/unchanged-content materialized projections. Original validation,
+resolution and pure joining remain available. RC4's exact bytes and observations
+remain at its immutable tag.
 
-`stdo_default.json` now binds the exact locally installed and verified Source
-STDO RC4 cut. The preceding RC3 adoption remains transition evidence only; RC3
-is not an Axiom release target.
-
-Check the published cut's constitution and inventory with:
+The caller's Product Definition identifies its own operative basis. For this
+source project, use the shared manager:
 
 ```sh
-STDO_STORE="${STDO_STORE:-$HOME/Library/Application Support/STDO}"
-stdo --store "$STDO_STORE" verify v2.5.0-rc.4 \
-  --manifest-sha256 4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
-python3 scripts/check_constitution.py --stdo-store "$STDO_STORE"
+stdo status --definition stdo_default.json --verify
 ```
+
+From the coordinated repository root, use the shared release checker against
+the exact RC5 carrier for content/ref/publication integrity. The retained
+`check_constitution.py` is an explicitly historical RC4 audit, not the RC5
+qualification command. Publication does not by itself accept Product meaning.
 
 ## Boundary
 
@@ -105,10 +103,9 @@ semantic acceptance, and carrier admission remain deferred. The MVP joiner
 only concatenates the exact labels and text supplied by the LLM.
 
 Release publication is a separate lifecycle over this bounded Product; it does
-not become another Product capability. The active source-project frame basis is
-the exact revision-8 postpublication basis bound by the durable delegated
-release-authority decision in `stdo_default.json`. It closes publication and
-adopts the immutable RC4 coordinates without claiming Product acceptance.
+not become another Product capability. The source-project frame basis and exact decision are bound by
+`stdo_default.json`; this README does not separately maintain their identities.
+Frame acceptance does not establish Product acceptance or publication.
 
 ## Authority order
 

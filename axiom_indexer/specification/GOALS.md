@@ -3,7 +3,7 @@
 ## Current Goal
 
 Status: frame-index mechanics constructed and independently verified; combined
-native qualification and successor frame-basis decision remain with T-009
+frame basis 9 is bound to exact RC5; combined native qualification and release remain with T-009
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -44,9 +44,8 @@ now supply the selected projection contract, with 31 normal/optimized tests,
 independent source-preservation checks and unchanged released RC4 map bytes.
 T009 consumes the exact result for STDO authoring and native use. Its observed
 native mistakes are evaluated at their actual interface or use boundary; generic
-indexing does not acquire semantic evaluation to conceal them. The proposed
-successor frame declaration remains an explicit owner decision, distinct from
-this mechanical result.
+indexing does not acquire semantic evaluation to conceal them. The exact successor frame declaration is accepted and bound under the current
+owner release grant. Its decision is distinct from this mechanical result.
 
 ## GOAL-001 — Dogfood the smallest useful Axiom Indexer
 

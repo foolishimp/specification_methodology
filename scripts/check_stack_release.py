@@ -13,6 +13,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import unquote, urlsplit
 
 
 # One packaged asset-integrity implementation is shared with cohort-update.
@@ -67,7 +68,7 @@ class View:
             return sorted(
                 path.relative_to(self.root).as_posix()
                 for path in base.rglob("*")
-                if path.is_file()
+                if path.is_file() or path.is_symlink()
             )
         result = git(
             self.root,
@@ -99,7 +100,7 @@ class View:
         if result.returncode or not result.stdout.strip():
             return None
         mode = result.stdout.split(maxsplit=1)[0]
-        return "symlink" if mode == "120000" else "file"
+        return {"120000": "symlink", "100644": "file", "100755": "file"}.get(mode)
 
     def read_member_bytes(self, relative: str, kind: str) -> bytes:
         if self.revision is None and kind == "symlink":
@@ -251,11 +252,11 @@ def validate_shape(manifest: dict[str, Any], failures: list[str]) -> None:
 
         if key != "specification_methodology":
             subject = product.get("subject", {})
-            expected_count = 7 if key == "axiom_indexer" else 8
+            expected_count = subject.get("member_count")
             members = subject.get("members")
             require(
-                subject.get("member_count") == expected_count,
-                f"{key}: Product member count must be {expected_count}",
+                type(expected_count) is int and expected_count > 0,
+                f"{key}: Product member count must be a positive integer",
                 failures,
             )
             require(
@@ -274,7 +275,8 @@ def validate_shape(manifest: dict[str, Any], failures: list[str]) -> None:
                     member.get("path") for member in members if isinstance(member, dict)
                 ]
                 require(
-                    len(paths) == expected_count
+                    len(paths) == len(members) == expected_count
+                    and all(isinstance(path, str) for path in paths)
                     and paths == sorted(paths)
                     and len(set(paths)) == expected_count,
                     f"{key}: Product member paths must be unique and sorted",
@@ -595,6 +597,55 @@ def validate_release_notes(
             )
 
 
+def required_child_members(
+    view: View, key: str, product: dict[str, Any], failures: list[str]
+) -> dict[str, str]:
+    """Close the owned native bundle and its local references at this exact cut."""
+    skill = "axiomatize-corpus" if key == "axiom_indexer" else "stdo-representation"
+    skill_root = f"skills/{skill}"
+    subtree = product["subtree"]
+    required = {
+        f"{skill_root}/SKILL.md": "file",
+        f"{skill_root}/agents/openai.yaml": "file",
+        f".agents/skills/{skill}": "symlink",
+        f".claude/skills/{skill}": "symlink",
+    }
+    if key == "axiom_indexer":
+        required.update({
+            "build_tenants/core/code/ac.py": "file",
+            f"{skill_root}/references/output-contract.md": "file",
+            f"{skill_root}/references/program.schema.json": "file",
+        })
+    else:
+        artifact_root = (
+            "build_tenants/axiom_indexer/representation/"
+            f"stdo-v{normalize_version(product['version'])}"
+        )
+        required.update({
+            f"{artifact_root}/axiomatic-program.json": "file",
+            f"{artifact_root}/logical-constraint-map.json": "file",
+            f"{skill_root}/references/codex.md": "file",
+            f"{skill_root}/references/claude.md": "file",
+        })
+    for path in view.files(f"{subtree}/{skill_root}"):
+        relative = path.removeprefix(f"{subtree}/")
+        required[relative] = "file"
+        if not path.endswith(".md") or view.member_kind(path) != "file":
+            continue
+        text = view.read_bytes(path).decode("utf-8")
+        for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", text):
+            target = target.split(' "', 1)[0].strip("<>")
+            parts = urlsplit(target)
+            if parts.scheme or parts.netloc or not parts.path:
+                continue
+            joined = Path(os.path.normpath(Path(relative).parent / unquote(parts.path)))
+            if not joined.is_relative_to(skill_root):
+                failures.append(f"{key}: native reference escapes Product skill: {target}")
+                continue
+            required[joined.as_posix()] = "file"
+    return required
+
+
 def validate_child_product_subjects(
     view: View, manifest: dict[str, Any], failures: list[str]
 ) -> None:
@@ -602,11 +653,22 @@ def validate_child_product_subjects(
         product = manifest["products"][key]
         subject = product["subject"]
         declared = subject["members"]
+        required = required_child_members(view, key, product, failures)
+        declared_paths = {member["path"] for member in declared}
+        for path in sorted(set(required) - declared_paths):
+            failures.append(f"{key}: Product inventory omits required member: {path}")
+        for path in sorted(declared_paths - set(required)):
+            failures.append(f"{key}: Product inventory includes nonmember: {path}")
         observed: list[dict[str, str]] = []
         note = view.read_bytes(product["release_note"]).decode("utf-8")
         for member in declared:
             relative = f"{product['subtree']}/{member['path']}"
             kind = view.member_kind(relative)
+            require(
+                member["type"] == required.get(member["path"]),
+                f"{key}: Product member violates owned type: {member['path']}",
+                failures,
+            )
             require(
                 kind == member["type"],
                 f"{key}: Product member type mismatch: {member['path']}",
@@ -629,6 +691,12 @@ def validate_child_product_subjects(
             if kind == "symlink":
                 target = value.decode("utf-8")
                 row["target"] = target
+                skill = "axiomatize-corpus" if key == "axiom_indexer" else "stdo-representation"
+                require(
+                    target == f"../../skills/{skill}",
+                    f"{key}: Product discovery link leaves canonical skill: {member['path']}",
+                    failures,
+                )
                 require(
                     target == member.get("target"),
                     f"{key}: Product symlink target mismatch: {member['path']}",
@@ -711,7 +779,10 @@ def validate_representation_axiom_dependency(
             continue
         role = mechanic["role"]
         path = roles[role]
-        expected_member = axiom_members[path]
+        expected_member = axiom_members.get(path)
+        if expected_member is None:
+            failures.append(f"Representation Axiom dependency member is absent: {path}")
+            continue
         require(
             mechanic.get("path") == path,
             f"Representation Axiom {role} path mismatch",

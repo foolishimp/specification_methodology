@@ -46,38 +46,18 @@ corrections under current sufficient law can proceed without waiting for an
 unrelated successor. ABIogenesis execution and the optional executable profile
 are outside this delivery goal.
 
-## Retained Current Basis
+## Selected release basis
 
-The first coordinated release-matched STDO compression and constraint index was
-completed and published against exact Source STDO `v2.5.0-rc.4` while
-preserving the accepted STDO Representation `2.5.0` RC1 Product and all prior
-evidence:
+The continuing source Definitions and frame configuration bind exact Source
+STDO `v2.5.0-rc.5`. T009 owns qualification and coordinated publication of the
+same-cut seven-member Axiom mechanics and nine-member Representation bundle,
+including its program, map and frame-index use guide. The LLM interprets
+meaning and selects frames; Axiom preserves explicitly authored dependencies
+and materializes selected unchanged content. Source STDO remains authority.
 
-```text
-exact Source STDO prose v2.5.0-rc.4
-  -> LLM-authored a_c.STDO 2.5.0-rc.4 semantic compression
-  -> Axiom Indexer validation and logical constraint index
-  -> LLM-selected reference frames and ordered context
-  -> exact string join
-  -> native Codex or Claude use with source re-entry
-```
-
-The LLM interprets meaning, selects frames, writes context, consumes
-diagnostics, and revises. During completed commit-B construction, exact
-same-version Axiom Indexer candidate mechanics supplied the URI resolver, basic
-validator, logical-map instantiation, and pure ordered joiner. Ordinary and
-released use now consume the published immutable coordinated Axiom
-`v2.5.0-rc.4` cut. This Product has zero local engine code and adds no
-deterministic orchestration or GTL engine.
-
-The bootstrap Product line was `0.1.0`; its accepted immutable Product remains
-historical `v0.1.0-rc.1`. The accepted current Product is STDO Representation
-`2.5.0` RC1. The published immutable `2.5.0-rc.4` cohort is the current
-maintenance basis for Source STDO, Axiom Indexer mechanics, STDO
-Representation, and its derived program and index while preserving their
-separate Product identities, inventories, reviews, and acceptance. Publication
-did not accept the Representation RC4 Product subject. Any new work requires
-fresh intake and the smallest lawful re-entry.
+RC4 is the published predecessor until the guarded RC5 transaction succeeds.
+Historical RC1 Product acceptance and RC4 publication evidence remain unchanged;
+release publication and frame acceptance do not assert Product acceptance.
 
 ## GOAL-001 — Freeze the STDO semantic compression
 

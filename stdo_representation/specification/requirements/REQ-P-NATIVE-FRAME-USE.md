@@ -28,6 +28,7 @@ skills/stdo-representation/
   agents/openai.yaml
   references/codex.md
   references/claude.md
+  references/frame-index-use.md
 ```
 
 Codex and Claude discover that same canonical skill through relative repository

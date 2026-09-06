@@ -15,49 +15,53 @@ runtime observations into semantic identity.
 
 ## Selected bases
 
+The selected RC5 source and same-version mechanical dependency are:
+
 ```text
-Source STDO release:
-  stdo://releases/v2.5.0-rc.4/
-Source STDO qualified ref:
-  refs/tags/specification_methodology/v2.5.0-rc.4
-Source STDO annotated tag object:
-  032dac0c833111547f7dd4b290c5316ed9b70f97
-Source STDO peeled commit:
-  7a25668a8fecfd26f895759af3bec4708727964a
-Source STDO installed manifest SHA-256:
-  4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
-Source STDO member-set SHA-256:
-  504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
-Axiomatic Calculus SHA-256:
+release_uri:
+  stdo://releases/v2.5.0-rc.5/
+qualified_ref:
+  refs/tags/specification_methodology/v2.5.0-rc.5
+tag_object:
+  d4b7c7724944e02ce25c6e6ce69722491c349924
+commit:
+  c7888bb2dc9aee1f5a217985f6d1547cfe6465f0
+repository_tree:
+  cb87e3e0bfaf033ee3cfa6b260d0d9ead0312b08
+project_subtree_tree:
+  40dc632ee5185b2b29cfce43ef8b06f223ea27ea
+standards_tree:
+  b04dee86bd8d4f272d215801257ddd7ae5d5d782
+installed_manifest_sha256:
+  3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f
+standards_member_set_sha256:
+  22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb
+axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
-Axiom Indexer exact version:
-  v2.5.0-rc.4
-Axiom Indexer qualified ref:
-  refs/tags/axiom_indexer/v2.5.0-rc.4
-Axiom Indexer annotated tag object:
-  4750e09639c118f1097d4ea046fe23d26713f96b
-Axiom Indexer peeled commit:
-  a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
-Axiom Indexer repository tree:
-  093302db57bfb2e7beeed7f02dfc6d7090921a15
-Axiom Indexer Project Subtree tree:
-  3f71c3c2df99008b9521e338a7837c553f87173a
-Axiom Indexer Product member inventory SHA-256:
-  7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
-Axiom Indexer executable SHA-256:
-  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
-Axiom Indexer program schema SHA-256:
-  61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b
-Axiom Indexer output contract SHA-256:
-  fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
+exact_version: v2.5.0-rc.5
+qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.5
+construction_state: exact seven-member candidate; child cut qualification remains required
+product_member_inventory_sha256:
+  41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19
+executable_sha256:
+  87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931
+program_schema_sha256:
+  43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7
+output_contract_sha256:
+  c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b
 ```
 
-The Axiom coordinates above identify the published immutable dependency from
-the atomic coordinated cohort. Historical accepted Axiom Indexer
-`v0.1.0-rc.1` remains predecessor evidence and shall not substitute for the
-same-version dependency. Mutable sibling bytes remain prepublication
-construction evidence only.
+Source STDO's local annotated RC5 tag and verified Install are exact construction
+inputs. The Axiom child candidate is bound by its actual seven-member inventory
+and executable/contracts above; its immutable tag object, peeled commit and trees
+must be qualified from the selected RC5 ref and release record when that cut
+exists. No RC4 Git coordinate is relabelled as RC5. Prepublication candidate use
+retains its explicit construction grant and cannot stand for released use.
+
+The exact RC4 cohort and accepted `v0.1.0-rc.1` Axiom predecessor remain preserved
+in their immutable release records. Equal version text never replaces exact
+subject verification or adopts a new basis for an external caller.
 
 ## Identity law
 
@@ -81,10 +85,11 @@ construction evidence only.
 and Axiom Indexer coordinates above. A branch, mutable selector, compatible
 local checkout, or unverified cache shall not substitute.
 
-**REQ-P-BASIS-002**: The selected Product artifact paths shall be:
+**REQ-P-BASIS-002**: The selected Product artifact directory shall carry the
+exact represented cut from its release record:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/
+build_tenants/axiom_indexer/representation/stdo-v<represented-exact-version>/
   axiomatic-program.json
   logical-constraint-map.json
 ```
@@ -121,10 +126,14 @@ request identity.
 inputs, outputs, usage, and evidence boundary. They remain observations and do
 not enter program, map, skill, or joined-request identity.
 
-**REQ-P-BASIS-009**: Release qualification shall bind the frozen eight-member
+**REQ-P-BASIS-009**: Release qualification shall bind the complete frozen
 Product inventory, dependency bases, claim bytes, evidence, annotated immutable
 RC tag object, peeled commit, and tree. Publication or validation alone shall
-not imply Product acceptance.
+not imply Product acceptance. The selected RC5 successor includes the native
+frame-index guide and therefore has nine members; historical RC4 retains its
+exact eight-member inventory. Every canonical native file and required relative
+instruction reference shall be included, with the two discovery symlinks
+retaining their declared targets.
 
 **REQ-P-BASIS-010**: A release-matched STDO Representation cut shall carry the
 exact represented STDO version, including prerelease ordinal. Its locally
@@ -155,9 +164,9 @@ Subtree trees, member inventory, executable digest, and imported contract
 identities.
 
 **REQ-P-BASIS-014**: The release-matched cohort shall close over exact Source
-STDO and its plugin, same-version Axiom Indexer mechanics, the eight-member
-Representation Product, the released program and map, and all 52 Source STDO
-member paths and digests. A missing, stale, differently versioned, or
+STDO and its plugin, same-version Axiom Indexer mechanics, the complete selected
+Representation Product inventory, the released program and map, and every
+Source STDO member path and digest. A missing, stale, differently versioned, or
 source-digest-incongruent member shall block the cohort.
 
 **REQ-P-BASIS-015**: Coordinated construction shall freeze Source STDO and its

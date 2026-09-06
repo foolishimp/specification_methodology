@@ -534,6 +534,99 @@ class StackReleaseCheckerTests(unittest.TestCase):
     def test_content_gate_accepts_exact_complete_cohort(self) -> None:
         self.assertEqual(self.check(), [])
 
+    def replace_representation_members(self, members: list[dict[str, str]]) -> None:
+        manifest_path = self.fixture.root / "stack_release.json"
+        manifest = json.loads(manifest_path.read_text())
+        product = manifest["products"]["stdo_representation"]
+        old_rows = "\n".join(release_inventory_rows(product["subject"]))
+        product["subject"] = {
+            "member_count": len(members),
+            "member_set_sha256": checker.product_member_stream(members),
+            "members": sorted(members, key=lambda row: row["path"]),
+        }
+        note_path = self.fixture.root / product["release_note"]
+        note = note_path.read_text()
+        self.assertIn(old_rows, note)
+        note_path.write_text(note.replace(
+            old_rows, "\n".join(release_inventory_rows(product["subject"]))
+        ))
+        write_json(manifest_path, manifest)
+
+    def representation_members(self) -> list[dict[str, str]]:
+        manifest = json.loads((self.fixture.root / "stack_release.json").read_text())
+        return manifest["products"]["stdo_representation"]["subject"]["members"]
+
+    def test_successor_complete_native_bundle_accepts_nine_members(self) -> None:
+        relative = "skills/stdo-representation/references/frame-index-use.md"
+        path = self.fixture.root / "stdo_representation" / relative
+        write_text(path, "# Frame-index use\n")
+        members = self.representation_members()
+        members.append({"type": "file", "path": relative,
+                        "sha256": checker.sha256(path.read_bytes())})
+        self.replace_representation_members(members)
+        self.assertEqual(self.check(), [])
+
+    def test_native_file_omitted_from_recomputed_inventory_refuses(self) -> None:
+        relative = "skills/stdo-representation/references/frame-index-use.md"
+        write_text(self.fixture.root / "stdo_representation" / relative, "# Guide\n")
+        self.assertIn(
+            f"stdo_representation: Product inventory omits required member: {relative}",
+            self.check(),
+        )
+
+    def test_missing_referenced_native_file_refuses_even_without_descriptor(self) -> None:
+        relative = "skills/stdo-representation/SKILL.md"
+        path = self.fixture.root / "stdo_representation" / relative
+        write_text(path, "Read [frame use](references/frame-index-use.md).\n")
+        members = self.representation_members()
+        for member in members:
+            if member["path"] == relative:
+                member["sha256"] = checker.sha256(path.read_bytes())
+        self.replace_representation_members(members)
+        self.assertIn(
+            "stdo_representation: Product inventory omits required member: "
+            "skills/stdo-representation/references/frame-index-use.md",
+            self.check(),
+        )
+
+    def test_nested_native_bundle_member_cannot_hide_behind_old_count(self) -> None:
+        relative = "skills/stdo-representation/references/support/selection.md"
+        write_text(self.fixture.root / "stdo_representation" / relative, "# Support\n")
+        self.assertIn(
+            f"stdo_representation: Product inventory omits required member: {relative}",
+            self.check(),
+        )
+
+    def test_recomputed_inventory_cannot_add_excluded_source_document(self) -> None:
+        relative = "specification/PRODUCT.md"
+        path = self.fixture.root / "stdo_representation" / relative
+        write_text(path, "# Product source\n")
+        members = self.representation_members()
+        members.append({"type": "file", "path": relative,
+                        "sha256": checker.sha256(path.read_bytes())})
+        self.replace_representation_members(members)
+        self.assertIn(
+            f"stdo_representation: Product inventory includes nonmember: {relative}",
+            self.check(),
+        )
+
+    def test_recomputed_discovery_link_cannot_leave_canonical_native_bundle(self) -> None:
+        relative = ".claude/skills/stdo-representation"
+        path = self.fixture.root / "stdo_representation" / relative
+        path.unlink()
+        target = "../../other-skill"
+        path.symlink_to(target)
+        members = self.representation_members()
+        for member in members:
+            if member["path"] == relative:
+                member["target"] = target
+                member["sha256"] = checker.sha256(target.encode())
+        self.replace_representation_members(members)
+        self.assertIn(
+            f"stdo_representation: Product discovery link leaves canonical skill: {relative}",
+            self.check(),
+        )
+
     def test_version_mismatch_fails_closed(self) -> None:
         path = self.fixture.root / "stack_release.json"
         payload = json.loads(path.read_text())

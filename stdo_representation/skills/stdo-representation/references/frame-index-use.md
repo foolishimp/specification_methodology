@@ -1,19 +1,25 @@
 # Explicit frame-index use
 
 Use this reference when the exact selected Axiom dependency supplies `project`
-and the selected STDO program declares frame indexes. The published RC4 Axiom
-MVP supplies no such operation. T009 working-source use requires its explicit
-construction/qualification selection; it is not an installed successor.
+and the selected STDO program declares frame indexes. For the RC5 successor,
+resolve the exact cohort release record or manifest, its same-version Axiom
+Product dependency, and these paths from the Representation Product root:
 
-From the Representation source root, the current construction subject is under
-`dogfood/t009-frame-projection/run-004/`. Read its `construction-subject.json` to
-bind the exact program, map, source snapshot, bindings and Axiom code/schema
-before use. `run-004` binds the output-scope guidance to the unchanged program,
-map and views in `run-003` and source in `run-001`. Earlier subjects remain
-preserved. Resolve each path using the manifest's explicit path bases. A file
-location or successful command supplies no authority. If
-that manifest or an exact matching dependency is unavailable, return that
-bounded missing input; do not substitute released RC4 or mutable sibling bytes.
+```text
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/
+  axiomatic-program.json
+  logical-constraint-map.json
+```
+
+Verify the selected record's program, map, source and dependency digests before
+use. Supply invocation-local bindings to the exact represented Source STDO
+Install. Released use needs no dogfood directory or construction manifest.
+An explicitly selected working candidate instead supplies its own exact subject,
+path bases and construction grant; it cannot replace an installed dependency.
+Before the immutable child cut exists, use only the selected exact construction
+candidate under that grant. Historical RC4 supplies no `project` operation.
+A file location or successful command supplies no authority. Missing or
+mismatched inputs return a bounded hold, not a mutable sibling substitution.
 
 Start from the map's explicit `frame_indexes` declarations. Inspect the bound
 frame URI, governed scope, selected clause/residual roots and source routes.

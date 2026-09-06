@@ -1,13 +1,13 @@
 # STDO Representation Product
 
-Status: active source definition after publication of release-matched
-`2.5.0-rc.4` against exact Source STDO `v2.5.0-rc.4`; accepted STDO
-Representation `stdo_representation/v2.5.0-rc.1` remains immutable.
+Status: active source definition for the selected release-matched RC5 successor.
+The published RC4 cohort and accepted STDO Representation
+`stdo_representation/v2.5.0-rc.1` remain immutable historical subjects.
 
 ## Product statement
 
-STDO Representation 2.5.0-rc.4 is the canonical `a_c.STDO` semantic compression
-of exact Source STDO `v2.5.0-rc.4`, the deterministic logical constraint index over that
+STDO Representation 2.5.0-rc.5 is the canonical `a_c.STDO` semantic compression
+of exact Source STDO `v2.5.0-rc.5`, the deterministic logical constraint index over that
 compression, and concise native instructions for using both. An LLM reads
 Source STDO, authors the compression, invokes the exact same-version Axiom
 Indexer mechanics, repairs diagnostics, and uses the index to select reference
@@ -27,8 +27,8 @@ and ordering choice.
 ## Product shape
 
 ```text
-exact Source STDO v2.5.0-rc.4
-  -> a_c.STDO 2.5.0-rc.4 Axiomatic Program (semantic compression)
+exact Source STDO v2.5.0-rc.5
+  -> a_c.STDO 2.5.0-rc.5 Axiomatic Program (semantic compression)
   -> Logical Constraint Map (deterministic index over the program)
   -> native STDO Representation skill
   -> LLM-selected visible frame details and ordered sections
@@ -41,7 +41,7 @@ it.
 
 ## Product terms
 
-- **Represented STDO Version** is exact version `2.5.0-rc.4`, including its
+- **Represented STDO Version** is exact version `2.5.0-rc.5`, including its
   prerelease ordinal; its stable semantic version line is `2.5.0`.
 - **Source STDO** is that exact installed standards corpus and remains semantic
   authority.
@@ -104,7 +104,7 @@ including its prerelease ordinal:
 
 ```text
 representation_exact_version = represented_stdo_exact_version
-2.5.0-rc.4 = exact_version(stdo://releases/v2.5.0-rc.4/)
+2.5.0-rc.5 = exact_version(stdo://releases/v2.5.0-rc.5/)
 representation_version_line = represented_stdo_version_line = 2.5.0
 ```
 
@@ -119,14 +119,14 @@ the release-matched relation.
 
 ## Shared-source release profile
 
-Installed STDO `v2.5.0-rc.4` requires project-qualified refs for an independently
+Installed STDO `v2.5.0-rc.5` requires project-qualified refs for an independently
 released Product in this shared source. The Product owner retains the stable
 profile already used by the accepted Representation RC1:
 
 ```text
 local_release_key = stdo_representation
 RC branch = refs/heads/rc/stdo_representation/2.5.0
-matched immutable RC = refs/tags/stdo_representation/v2.5.0-rc.4
+matched immutable RC = refs/tags/stdo_representation/v2.5.0-rc.5
 version-line selector = refs/tags/stdo_representation/v2.5.0
 release branch = refs/heads/release/stdo_representation/2.5.0
 Project Subtree root = stdo_representation
@@ -150,23 +150,23 @@ replacement for the corpus.
 
 ```text
 release_uri:
-  stdo://releases/v2.5.0-rc.4/
+  stdo://releases/v2.5.0-rc.5/
 qualified_ref:
-  refs/tags/specification_methodology/v2.5.0-rc.4
+  refs/tags/specification_methodology/v2.5.0-rc.5
 tag_object:
-  032dac0c833111547f7dd4b290c5316ed9b70f97
+  d4b7c7724944e02ce25c6e6ce69722491c349924
 commit:
-  7a25668a8fecfd26f895759af3bec4708727964a
+  c7888bb2dc9aee1f5a217985f6d1547cfe6465f0
 repository_tree:
-  737af9a7a2779dbf59e7c81232e7efd4dd98692a
+  cb87e3e0bfaf033ee3cfa6b260d0d9ead0312b08
 project_subtree_tree:
-  a9565f923213759984f936d087cd7cebd0f44a74
+  40dc632ee5185b2b29cfce43ef8b06f223ea27ea
 standards_tree:
-  d6642edac9fb509a68b2ffc81d3404f2360b34e4
+  b04dee86bd8d4f272d215801257ddd7ae5d5d782
 installed_manifest_sha256:
-  4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e
+  3fb89aeb80c65403debf1eba1705fde614556520bf1ce1a08a39033b6d98a50f
 standards_member_set_sha256:
-  504db879867f60e46ed4dea60509d12056d10cdd8c3460dc94abf7bc56542656
+  22c3fb78e2c6817b080986c9f265237429043a2af2ff4769b12eed5a499d11eb
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 ```
@@ -174,29 +174,31 @@ axiomatic_calculus_sha256:
 ### Axiom Indexer
 
 ```text
-exact_version: v2.5.0-rc.4
-qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.4
-publication_state: published in the atomic coordinated RC4 cohort
-tag_object: 4750e09639c118f1097d4ea046fe23d26713f96b
-peeled_commit: a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2
-repository_tree: 093302db57bfb2e7beeed7f02dfc6d7090921a15
-project_subtree_tree: 3f71c3c2df99008b9521e338a7837c553f87173a
+exact_version: v2.5.0-rc.5
+qualified_ref: refs/tags/axiom_indexer/v2.5.0-rc.5
+construction_state: exact seven-member candidate; child cut qualification remains required
 product_member_inventory_sha256:
-  7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6
+  41350ccf7b10173f36cab011cb85e9c0b552c9af6d6efe2f2f2782125df00c19
 executable_sha256:
-  dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672
+  87c43389c619d9ca0e2d930a10e471a17545be9a0394d1c0f47db7e8e2c6d931
 program_schema_sha256:
-  61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b
+  43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7
 output_contract_sha256:
-  fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694
+  c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b
 ```
 
-The seven published member bytes are conserved from historical accepted Axiom
-Indexer `v0.1.0-rc.1`; that predecessor remains immutable evidence, not the
-active release dependency. The coordinated RC4 dependency contributes URI
-resolution, released program validation, logical-map instantiation, exact
-diagnostics, and ordered string joining. This Product does not widen those
-claims.
+The exact Axiom child tag object, peeled commit and trees are qualified through
+that immutable RC5 ref and its release record after candidate freeze. They are
+not guessed or copied from RC4 before the child cut exists. Before publication,
+only the expressly selected exact construction candidate supplies mechanics.
+Released use requires the qualified same-version immutable dependency.
+
+Historical RC4 used the seven-member inventory
+`7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6`
+and narrower executable
+`dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
+Its release record and exact tag retain those coordinates; they do not qualify
+the RC5 projection capability or change accepted predecessor evidence.
 
 ## Axiom Indexer Product dependency relation
 
@@ -208,14 +210,13 @@ diagnostics, URI resolution, and exact joining under the contracts below. It imp
 Indexer Product member and transfers no semantic, acceptance, publication, or
 runtime authority.
 
-The fixed RC4 dependency in Exact Dependency Bases supplies its narrower released validation,
-indexing and joining contract; it supplies no frame-index projection operation.
-The projection extension requires a capable exact dependency. Bounded source
-qualification may select a Mechanical Construction Candidate under its own
-explicit grant and exact subject binding. Released projection use requires the
-capable same-version immutable successor selected through the existing release
-and adoption relations. Neither path silently substitutes mutable source for
-the RC4 Install.
+The historical RC4 dependency supplies its narrower validation, indexing and
+joining contract without frame-index projection. The selected RC5 dependency
+supplies projection under its exact contract. Bounded source qualification may
+use the selected Mechanical Construction Candidate under its existing grant;
+released projection use requires the qualified same-version immutable RC5 cut.
+Neither path silently substitutes mutable source for an Install or adopts a
+new governing basis for an external caller.
 
 The relation begins only when the target Product Definition resolves to
 `urn:stdo:product-definition:axiom-indexer` and the exact release coordinates
@@ -224,7 +225,7 @@ contracts are [Imported validation boundary](requirements/REQ-P-CANDIDATE-VALIDA
 and [Frame-use relation](requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation).
 It is invalidated by target-definition, release, version, member-inventory,
 contract, or result drift. Exact mutable candidate bytes supplied bounded
-construction evidence under the completed coordinated two-commit flow, but
+construction evidence under the coordinated two-commit flow, but
 mutable sibling source never substitutes for the selected Install during
 release qualification or released use.
 
@@ -304,8 +305,9 @@ resolution, interpretation, rewriting, budgeting, truncation, or invocation.
 One canonical skill is carried at `skills/stdo-representation/`. Relative
 repository symlinks expose it to Codex and Claude. The common skill owns the
 semantic use sequence. `references/codex.md` and `references/claude.md` own only
-target-specific instruction presentation. `agents/openai.yaml` supplies Codex
-metadata.
+target-specific instruction presentation. `references/frame-index-use.md`
+explains use of the exact dependency's two frame-index views.
+`agents/openai.yaml` supplies Codex metadata.
 
 The native skill instructs an LLM to:
 
@@ -342,10 +344,13 @@ that code validates role independence or computes a deterministic role packet.
 
 ## Product member set
 
-The selected release-matched Product contains exactly these eight repository entries:
+The selected RC5 packaging successor contains nine repository entries. Its
+program and map directory carries the exact represented cut; the immutable RC4
+inventory remains its original eight entries without the frame-index guide.
+The successor member set is:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/
+build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.5/
   axiomatic-program.json
   logical-constraint-map.json
 skills/stdo-representation/
@@ -353,11 +358,17 @@ skills/stdo-representation/
   agents/openai.yaml
   references/codex.md
   references/claude.md
+  references/frame-index-use.md
 .agents/skills/stdo-representation
 .claude/skills/stdo-representation
 ```
 
 The last two entries are symlinks to `../../skills/stdo-representation`.
+The inventory closes over the complete canonical native instruction bundle,
+including its required relative instruction references, and the two selected
+program/map artifacts. An omitted native file cannot be qualified by preserving
+an earlier member count. Any later member change retains its Product-owned
+release selection and exact inventory qualification.
 Member digests and the aggregate inventory identity are assigned only after the
 exact bytes and symlink targets are frozen. No digest is inferred from an
 intended path.
@@ -408,7 +419,7 @@ one favorable response, or artifact presence does not establish usefulness.
 project frame set, release scope, candidate disposition, and immutable RC
 subject. Frame-set acceptance binds the exact declaration digest. Product
 acceptance binds the annotated immutable RC tag object, peeled commit, tree,
-eight-member inventory, and claim bytes. Proposal, validation, dogfood,
+exact member inventory, and claim bytes. Proposal, validation, dogfood,
 publication, or tag visibility performs neither decision.
 
 ## Authority boundary

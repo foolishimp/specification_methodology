@@ -23,7 +23,7 @@ Keep the index excerpt source-linked. Do not copy the complete standards corpus,
 repeat a rule in several sections, or precompute a solution. This is
 presentation guidance, not a prompt engine, schema, selector, or renderer.
 
-For an explicitly selected frame-index candidate, put its exact index URI,
+For an explicitly selected frame-index subject, put its exact index URI,
 bound frame/scope and program/map/source identity in part 2. Part 4 may use the
 reference-only or materialized view from the same selected dependency. Preserve
 ordered dependency roles, literal conditions, exceptions and residuals; do not
