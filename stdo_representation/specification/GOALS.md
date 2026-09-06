@@ -2,7 +2,8 @@
 
 ## Current state
 
-Status: delivery planning selected; T-009 implementation remains drafted
+Status: T-009 M01 and M02 complete; first M03 native guidance repair supported
+by independent review, successor compression and M04 outstanding
 
 Make the STDO axiomatic constraints useful in ordinary native Codex and Claude
 work: recover exact sources and applicable frames, obtain sufficient bounded
@@ -12,15 +13,17 @@ source-faithful and demonstrably usable for the selected functional outcomes.
 
 This Product contributes to the
 [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal).
-[T-009](../.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+[T-009](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
 owns the combined Indexer/Representation work and current state: baseline the
 existing path, fill demonstrated mechanical gaps, refresh the semantic
 compression/index/native guidance, and qualify the combined native candidate.
-The next implementation frontier is T-009 M01, which can run alongside STDO's
-owning-method corrections. The owner's planning grant is recorded in
-[T-030](../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+The actual RC4 baseline identified sufficient existing Axiom mechanics and a
+Representation archive-route defect. The admitted M03 source guidance repair
+is constructed and its documented command succeeds. The exact grants, results,
+remaining native evidence and successor compression frontier are recorded in
+[T-009](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#current-delivery-result).
 
-Use [T-009's progressive-use application](../.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#progressive-use-in-this-ticket)
+Use [T-009's progressive-use application](../.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#progressive-use-in-this-ticket)
 to exercise checked mechanics and representation increments during the remaining
 work. Keep each observation with its exact task, candidate and operative basis;
 the final qualification still resolves conditions that self-use did not cover.

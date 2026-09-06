@@ -1,0 +1,36 @@
+**Skill applied:** `spec:stdo-status` (candidate plugin at `specification_methodology/plugins/spec`), with its `PRODUCT_BASIS.md` selection procedure. Read-only throughout: no files, tickets, or Git state were changed, and no install or adoption was requested.
+
+**Commands actually run**
+
+```
+stdo status --definition <checkout>/specification_methodology/stdo_default.json --verify
+git status --porcelain --branch ; git log --oneline -5 ; git rev-parse HEAD
+git show --stat HEAD HEAD~1 ; git show HEAD -- plugins/spec/skills/stdo-status/SKILL.md
+git cat-file -t e8a19fb… ; git cat-file -t 7a5048c… ; git remote -v
+shasum -a 256 <M02/M03 source targets, candidate skills, installed RC4 skill>
+```
+
+**Product outcome and boundary**
+
+Selected definition is `urn:stdo:product-definition:specification-methodology` at `./specification_methodology/stdo_default.json`, the only definition binding this scope. Basis `stdo://releases/v2.5.0-rc.4/` verified installed and valid, manifest SHA-256 `4fa2556d…5049e`, zero failures. RC4 remains the governing basis. This checkout is a detached, clean qualification snapshot at commit `ddfaad4`, cloned from the bundle `…/20260906T043141Z_t030_m03_native_evidence/native-repaired-subject.bundle`. It is not an accepted or released Product.
+
+**Actually complete**
+
+- T-030 M01 is complete at logical-model scope. The ticket's M01 Current Result and the proof record `20260905T154218Z_PROOF_t030_m01_model_candidate.md` both record the two independent assessments consumed and no active non-closure condition. This reuses the recorded result; I did not re-review it.
+- RC4 cohort publication and T-019 through T-027 closure, per GOALS Retained state.
+
+**Candidate work, not established**
+
+- M02 owning-standard construction is admitted and present as candidate bytes. All four targets differ from their installed RC4 digests: SPEC_METHOD, TICKET_METHOD, REFERENCE_FRAME_METHOD, STDO_REFERENCE_FRAME_BASELINE. The ticket's M02 And M03 Current Result still reads "admitted and underway". No returned Reviewer result from `/root/t030_axiomatic_review` on M02 exists in this snapshot, so the M02 result is unestablished.
+- M03 projections are present as candidates: the four authority compressions, the three templates, and all five shared skills differ from RC4. The five skills are byte-identical between the Claude plugin and the Codex `.agents/skills` mirror. The snapshot's HEAD commit "Repair observed stale status projection in candidate skill" adds the carrier-resolution paragraph to the stdo-status skill in both hosts. Per the ticket, dependent projections stay unqualified until sufficient M02 source assessment.
+- No T-030 native-proof carrier exists inside this snapshot. The one comment carrier is the M01 proof. The M03 native-evidence directory named by the bundle origin is outside this checkout and unobserved.
+- The commits the ticket cites (`f24d9cc`, `acf8e79`, `7a5048c`, `e8a19fb`) are not objects in this snapshot's history, which is squashed into two freeze commits. Those bindings are unverifiable here, not wrong.
+- T-028 and T-029 remain in backlog, T-029 explicitly `not_admitted`. M04 and M05 remain unselected.
+
+**Interrupted operation**
+
+Requested outcome: M03 native qualification of the frozen candidate skills. Observed effect here: a frozen subject plus one local repair commit by the qualification actor. Whether that repair, any host-run evidence, or a Reviewer result was carried back into the source repository is unknown from this checkout. No observed effect here means neither completion nor a need to rerun. Tests exist under `specification_methodology/tests/` that reference the status skill; they were not run and no outcome is claimed.
+
+**Next already-authorized action**
+
+Under the existing M02/M03 admission, the M02 Writer returns the exact changed and conserved clauses with the frozen candidate to the separately activated Reviewer `/root/t030_axiomatic_review`, and the progressive self-use loop retains this snapshot's observation, including the `ddfaad4` skill repair and its bound candidate, in the T-030 ticket or existing proof carrier of the source repository. Both are writes in the source checkout and were not performed in this read-only run. No fresh review is an automatic gate and no new authorization is required for either step.

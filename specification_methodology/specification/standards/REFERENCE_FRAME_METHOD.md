@@ -531,6 +531,12 @@ The method does not prescribe an optimization algorithm. Human authority may
 accept a non-minimal frame set where its additional cost buys material risk
 reduction or better actor fit.
 
+These selection considerations create no universal resource ledger, benchmark,
+budget or measurement gate. A resource control applies only through an
+explicitly selected frame and its owning applicability and work scope. Frame
+selection cannot waive another applicable semantic, authority, evidence or
+independence constraint.
+
 ---
 
 ## Method Functions
@@ -580,6 +586,27 @@ An engagement names:
 - the available actor capability envelopes; and
 - the conditions that make the result stale or out of scope.
 
+### Applicability And Required Results
+
+The owning evaluation and scope declarations determine which frame obligations
+apply to the exact subject. Evaluate their declared predicates from sufficient
+basis-bound facts. A true predicate requires the applicable evaluation and
+result; a false predicate excludes only that obligation under its cited
+authority. Missing or ambiguous premises leave applicability unresolved, not
+false. A frame name, available tool or listed family is no activation trigger
+by itself. Where applicability needs residual semantic judgment, retain that
+judgment and its evidence rather than representing it as a computed fact.
+
+A required result that is absent, stale, bound to another subject/basis or
+incapable of establishing its claim cannot satisfy a dependent conjunction.
+Unresolved applicability withholds the dependent claim until sufficient
+evidence or the owning decision resolves it. Other applicable constraints
+remain in force even if only one evaluation detects them. Qualification of an
+applicability rule must distinguish true, false and unknown premises, required
+missing or wrong-subject results, and a sufficient positive result under a
+finite declared fixture; always skipping or always activating cannot satisfy
+those different expected outcomes.
+
 ### Select And Activate
 
 The actor or assigning authority selects one frame or one declared active frame
@@ -604,6 +631,15 @@ The result identifies the frame and activation, subject, basis, evaluation,
 actor, evidence, verdict, residual uncertainty, and invalidation conditions.
 The frame's internal working context does not need to be transferred when its
 closed result and provenance are sufficient for the consuming decision.
+
+An unchanged consumer checks exact applicability and reuses a valid closed
+result. Role, conversation or resumption changes alone do not invalidate it.
+Changed material inputs or a declared revising observation invalidates the
+affected result before reliance; preserve its predecessor/successor relation
+and any demonstrably independent surviving results. Required independent
+evaluations may share valid mechanical evidence but must still supply their
+own sufficiently acquired evidence and judgments under the declared
+independence conditions.
 
 ### Reconfigure When Necessary
 
@@ -646,6 +682,12 @@ A declared decision rule consumes closed frame results. The rule states:
 - whether any result may veto or defer the decision.
 
 Conjunction does not transfer the semantic authority of a contributing frame.
+
+Every mandatory constraint must be satisfied with valid applicable evidence.
+Common agreement cannot discard a constraint or material counterexample found
+by only one contributor. Missing, wrong-subject, conflicted or indeterminate
+mandatory results remain unresolved under the declared rule; aggregate green
+status cannot replace them.
 
 ### Evidence Or Coordinate Translation
 

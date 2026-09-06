@@ -15,6 +15,30 @@ Read and apply
 execution contract or changing any surface. Continue only from its exactly-one
 verified selection; that selection grants no work or mutation authority.
 
+## Classify From The Available Evidence
+
+Apply the selected basis's `SPEC_METHOD.md` intake and agentic-construction
+rules. Use declared source/worksite/proof tools to compute the affected owner
+and authority-layer routes, the complete relevant Public serialized membership
+and value delta, and accepted-design trace coverage. Bind their exact inputs,
+producer, output and freshness. A file diff alone is not a Public comparison;
+an existing trace is not a judgment of semantic sufficiency. Missing targets,
+serialization or trace mappings remain explicit unknowns. Do not invent a
+tool result or make the STDO distribution manager a worksite analyzer.
+
+Reuse applicable computed facts and recorded classification/materiality
+judgments from the existing work carrier. Check the question, subject, basis,
+support and revising observation; a different role alone does not require
+reclassification. Judge only the residual needed to select the smallest lawful
+path and record its basis once. An unresolved owner choice stays with its owner.
+Use one bounded discriminator when it can resolve a material unknown.
+
+Distinguish a failed candidate from a changed requested outcome. If a helper
+edit violates an unchanged Public requirement, reject or repair the candidate
+inside the existing grant. Re-enter the requirement owner when the selected
+outcome needs changed governing meaning. Candidate bytes cannot choose that
+outcome or enlarge the grant.
+
 ## Establish The Work Basis
 
 1. Establish applicable upstream work authority under the verified definition
@@ -47,6 +71,9 @@ verified selection; that selection grants no work or mutation authority.
    mechanism and authority, exact contract identity or digest, decision, and
    evidence. If those coordinates are absent, return the missing authority and
    stop.
+   Consume an existing exact owner instruction or admitted grant when it
+   already covers this contract; cite it instead of requesting the same
+   authorization again. Record the binding, not another approval round.
 4. Re-enter at the first changed layer and flow forward:
 
    - requirement change: establish the successor/current requirement as the
@@ -67,6 +94,19 @@ verified selection; that selection grants no work or mutation authority.
 
 ## Construct And Prove
 
+Use the accepted Project Reference-Frame Basis to determine applicable
+evaluations, including those required by an affected owner. A known false
+condition omits that evaluation; an unknown condition needs a bounded
+resolution or explicit residual. Missing required results cannot count as
+satisfied. Availability of a frame does not require activating it.
+
+When that basis permits direct Writer use and one sufficient context/grant
+covers the outcome, construct directly without an additional Executive,
+Reviewer or durable ticket. Activate coordination for a material dependency,
+authority or context boundary. While occupying Executive, do not edit files or
+Git state; the same actor must first enter a separately bound Writer activation.
+An actual independence requirement still needs an independent capable actor.
+
 1. Work inside the smallest coherent causal cone and exact write territory.
    Preserve solution space where variation cannot change a governed property.
 2. Implement and self-review the bounded change.
@@ -82,14 +122,30 @@ verified selection; that selection grants no work or mutation authority.
    a live lane.
 5. Reconcile authority, design, implementation, tests, and displaced rival
    paths before claiming a candidate.
-6. Return the exact candidate and stop. Product-owned decision authority, or an
+6. Return the exact candidate and stop at a delegated return boundary.
+   Product-owned decision authority, or an
    authorized Executive when that profile is adopted, decides whether Product,
    qualification, release, risk, or admitted-work law requires independence
    and separately activates `stdo-review`.
+
+Keep reusable judgments and owner rulings in the existing carrier: exact
+question, subject/basis, supporting computed evidence, actor and authority,
+conclusion, scope, uncertainty and revising observation. Preserve the original
+owner ruling separately from interpretation. Invalidate the affected claim
+when its support changes; retain unrelated valid results. Reuse does not
+manufacture an owner ruling or satisfy required independent assessment.
+
+Evaluate closure as the conjunction of satisfied applicable obligations,
+valid supporting evidence, required judgments/rulings and absence of an active
+non-closure condition. A review event is not completion. Record a satisfied
+bounded result under the existing state-mutation grant; withhold only the
+affected claim when a condition is missing. Qualification, publication and
+consumer adoption retain their separate conditions.
 
 ## Return
 
 Return the exact candidate/checkpoint, changed paths, affected authority,
 execution-contract admission mechanism/result/evidence, focused and broader
 proof, non-changes, residuals, and closed or withheld work result. Do not
-self-accept, discard a surviving obligation, or silently continue after return.
+claim acceptance beyond the grant, discard a surviving obligation, or silently
+continue beyond a delegated return boundary.

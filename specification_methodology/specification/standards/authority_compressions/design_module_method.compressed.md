@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
+source_digest: 95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-21
+generated_at: 2026-09-06
 stale_if_source_digest_changes: true
 ---
 
@@ -102,6 +102,15 @@ remain open only when they are semantically equivalent under that network.
 It confirms, but does not invent, the operational lifecycle signal supplied by
 `SPEC_METHOD.md`, requirements, design, release, deployment, or operational
 surfaces.
+
+The post-ticket review reconstructs the complete selected function's causal
+closure. It does not require recreating the whole Product or construction
+history. Reuse current accepted Ontology, design verdict and sufficient
+reconstruction evidence after checking exact scope, trace, applicability and
+invalidators under 4B, 5E and 11D. Missing or ambiguous coverage is not no-delta
+proof. Material changed relations or counterexamples require affected
+reconstruction and the applicable gate; complete Ontology and three-view
+coverage remains required for a new or materially changed boundary.
 
 ## Prime Rules
 

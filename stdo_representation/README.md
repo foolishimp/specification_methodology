@@ -7,6 +7,12 @@ using both. An LLM authors and reviews meaning. The exact same-version Axiom
 Indexer cut supplies URI resolution, basic validation, index
 instantiation, and exact ordered string joining.
 
+The mutable native guidance is now a T-009 working candidate over the unchanged
+published RC4 program and map. Its archive routing and caller-basis handling
+are being qualified through actual delivery work. The immutable RC4 skill and
+eight-member inventory remain available in the exact published tag; the source
+guidance changes do not create a new release or accept either Product.
+
 ```text
 Source STDO v2.5.0-rc.4
   -> LLM-authored a_c.STDO 2.5.0-rc.4 compression
@@ -120,8 +126,8 @@ neither changes RC1 nor accepts the published RC4 Product subject.
 The immutable RC4 native skill remains byte-for-byte frozen with its
 revision-15 construction-basis digests. Verify those digests inside the
 immutable RC4 tag. Mutable-source constitutional work uses the revision-16
-overlay binding above; changing the released skill would require a higher
-immutable RC.
+overlay binding above. The T-009 source skill distinguishes these coordinates;
+publishing its changes requires the exact successor cohort and qualification.
 
 ## Authority order
 

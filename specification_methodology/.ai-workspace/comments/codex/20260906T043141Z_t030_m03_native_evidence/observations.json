@@ -1,0 +1,48 @@
+{
+  "source_suite": {
+    "tests": 126,
+    "exit_code": 0,
+    "log": "stdo-suite.txt"
+  },
+  "observations": [
+    {
+      "host": "codex",
+      "case": "repaired-status",
+      "exit_code": 0,
+      "post_status": "",
+      "snapshot_commit": "ddfaad40b75173bde3c9b624a52231e745c11f5a",
+      "log": "codex-repaired-status.jsonl"
+    },
+    {
+      "host": "codex",
+      "case": "generic",
+      "exit_code": 0,
+      "post_status": "",
+      "log": "codex-generic.jsonl"
+    },
+    {
+      "host": "claude",
+      "case": "repaired-status",
+      "exit_code": 0,
+      "post_status": "",
+      "snapshot_commit": "ddfaad40b75173bde3c9b624a52231e745c11f5a",
+      "log": "claude-repaired-status.jsonl"
+    },
+    {
+      "host": "claude",
+      "case": "generic",
+      "exit_code": 0,
+      "post_status": "",
+      "log": "claude-generic.jsonl"
+    }
+  ],
+  "excluded_observation": {
+    "host": "codex",
+    "case": "status",
+    "reason": "240-second fixture timeout; no completed result and original shared snapshot revised before its process completion was observed"
+  },
+  "first_claude_observation": {
+    "result": "local_repair",
+    "reason": "reported T009 backlog/drafted from stale context despite current active/admitted carrier; status guidance corrected and both hosts re-exercised on separately frozen snapshots"
+  }
+}

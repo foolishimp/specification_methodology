@@ -1,0 +1,2716 @@
+[
+  {
+    "case": "duplicate_identity",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 19
+      },
+      "diagnostics": [
+        {
+          "code": "duplicate_identity",
+          "field": "uri",
+          "record": "urn:stdo-representation:a-c-text:symbol:a-c",
+          "ref": "urn:stdo-representation:a-c-text:symbol:a-c"
+        },
+        {
+          "code": "noncanonical_order",
+          "field": "symbols",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:51de894d840c888afdd20576e1ad681ec1948a3bfa4b796ff31a9c44c19861c8",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#position"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "dangling_ref",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "dangling_ref",
+          "field": "arguments.ref",
+          "record": "urn:stdo-representation:a-c-text:clause:agents-template-fails-closed",
+          "ref": "urn:t009:missing"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:fb71c69bcb37f87d953356f2524eab26629bb07e249b296d0d8ae87967c61bd6",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#position"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "unresolved_fragment",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "unresolved_fragment",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:a-c",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#t009-missing"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:d0ce82a72e5c67cde7085f22b758d3bcd5a3064fd7f2bd56686e01b6bbd30f0d",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "ungrounded",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "empty_set",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:a-c"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:e3702aac91366db95f1490452be8d46131034e6d62af716023dbc8bc9108e493",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "broken_residual",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "unresolved_fragment",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:compression-overlap-needs-source-reentry",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#t009-missing"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:f0d35b45e7d7a3a5404b4205a6358a124f2c53686d139bbaf1017b60fb54f764",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#position"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "escaped_binding",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "binding_escape",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:a-c",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/../outside.md"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:10b8cc923804ff5147a13530d23dc431927de4e891b38c598c56b1d51d1818d1",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "sha256": "sha256:cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "sha256": "sha256:6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "sha256": "sha256:da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "sha256": "sha256:e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "sha256": "sha256:b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "sha256": "sha256:63ee8b6fde9803e38970e85fb2c4e0aa398632720b6a5f1cff8fb1291398c59a",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "sha256": "sha256:7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "sha256": "sha256:c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "sha256": "sha256:582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "sha256": "sha256:80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "sha256": "sha256:6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "sha256": "sha256:6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "sha256": "sha256:618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "sha256": "sha256:a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "sha256": "sha256:123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "sha256": "sha256:29e50edc00997b76c20fad74724991b8cfffbe692ee6cabab208ad7a0c1b63fd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "sha256": "sha256:ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "sha256": "sha256:30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "sha256": "sha256:384740484d37bffbd6fe2e0e7b9bb9c231b1b297b1dd4f5fd744b3dbba78d7de",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:38f15316e99777c866f50e6ddbc47a101e2d5541ccf84fbcd3b280acc0a695d9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "sha256": "sha256:f75e2cda82d1c2b0166b89e6006c0818e3d9a4a3f43e3e6d20a648005bed91f6",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "sha256": "sha256:c40d1b264bbc752928b03d3460079dd5bc26bdf0e5cfca80dd1c163e4bf4ecbc",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "sha256": "sha256:c551c3fd8851c2a1a2f885eb41b5694886c3ade38948d6caf5fdf895351d91ff",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "sha256": "sha256:bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "sha256": "sha256:f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "sha256": "sha256:711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "sha256": "sha256:e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "sha256": "sha256:2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "sha256": "sha256:85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "sha256": "sha256:e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "sha256": "sha256:33770a4f0b5d7ad61db09e3b1079633c110df44f69d595379cf10fa76e0d1b21",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "sha256": "sha256:6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "sha256": "sha256:8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "sha256": "sha256:e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "sha256": "sha256:7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "sha256": "sha256:07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "sha256": "sha256:da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "sha256": "sha256:d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "sha256": "sha256:ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "sha256": "sha256:76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "sha256": "sha256:4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "sha256": "sha256:996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "sha256": "sha256:1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "sha256": "sha256:9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "sha256": "sha256:4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "sha256": "sha256:67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd",
+          "uri": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        }
+      ],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "duplicate_binding",
+    "exit": 2,
+    "report": {
+      "derived_counts": {
+        "clauses": 0,
+        "residuals": 0,
+        "symbols": 0
+      },
+      "diagnostics": [
+        {
+          "code": "input_error",
+          "field": "input",
+          "record": "urn:axiom-indexer:diagnostic:input",
+          "ref": "duplicate_binding_prefix"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "unavailable",
+      "program_uri": null,
+      "resolved_sources": [],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  },
+  {
+    "case": "unresolved_binding",
+    "exit": 1,
+    "report": {
+      "derived_counts": {
+        "clauses": 67,
+        "residuals": 6,
+        "symbols": 18
+      },
+      "diagnostics": [
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:agents-template-fails-closed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/AGENTS_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:aggregate-compression-reenters-source",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:axiomatic-calculus-layer-separation",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:bootstrap-resolves-exact-basis",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:claude-template-fails-closed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/CLAUDE_TEMPLATE.md#stdo-bootstrap"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-exact-version-preserves-product-identity",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-exact-version-preserves-product-identity",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-law-applies-only-to-higher-cut",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#qualification-and-recovery"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-publication-fails-closed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-publication-fails-closed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-source-change-invalidates-index",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-two-commit-construction-is-one-publication",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:cohort-two-commit-construction-is-one-publication",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#prime-operating-rules"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:common-adr-scope-is-multiple-tenants",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:common-adr-template-separates-requirements",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:common-design-is-cross-tenant",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/design/README_TEMPLATE.md#adrs"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:common-root-holds-shared-realization",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/common/README_TEMPLATE.md#common-build-tenant-surfaces"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-calculus-does-not-interpret",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/axiomatic_calculus.compressed.md#identity-and-boundary"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-design-requires-decision-closure",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-occurrence-preserves-admission-boundary",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/traversal_occurrence_profile.compressed.md#identity-admission-and-causality"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-odd-preserves-carrier-ownership",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/odd_method.compressed.md#governing-claim"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-spec-preserves-authority-flow",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-ticket-preserves-carrier-binding",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compressed-ux-preserves-reducer",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/ux_method.compressed.md#process-model"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:design-module-derivation",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:development-product-is-install-role",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:docs-template-is-supporting",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/docs/README_TEMPLATE.md#project-docs"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:edge-override-template-is-explicit",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:edge-overrides-are-one-per-edge",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#tenant-edge-overrides"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:engagement-return-topology",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:execution-contract-admission-is-distinct",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:execution-contract-records-durable-result",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:executive-promotion-constraints",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:fp-intent-bounds-constructive-tuning",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#boundaries"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:fp-readme-selects-exact-template",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#tenant-f_p-customization"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:glossary-is-nondeciding-index",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/GLOSSARY_GUIDE.md#index-contract"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:goals-template-bounds-current-wave",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/GOALS_TEMPLATE.md#current-goals"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:identity-is-scoped",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:intent-template-states-direction",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/INTENT_TEMPLATE.md#purpose"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:manifest-schema-closes-release-shape",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:occurrence-separates-records",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#candidate-judgment-event-and-relation-separation"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:odd-uses-graph-functions",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:posts-remain-commentary",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/POSTING_GUIDE.md#boundary"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:product-definition-schema-closes-routing-shape",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/schemas/product-definition.schema.json"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:product-definition-template-is-one-product-overlay",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:product-template-defines-contextual-terms",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/PRODUCT_TEMPLATE.md#product-terms"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:profile-qualification-forces-result-and-refusal-branches",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:profile-qualification-forces-result-and-refusal-branches",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#reference-frame-engagement-compression"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:profile-qualification-separates-mechanical-and-semantic-evidence",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:profile-qualification-separates-mechanical-and-semantic-evidence",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:project-reference-frame-basis-binds-product-chain",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#product-role-and-composition-map"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:reference-frame-is-bounded",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:reference-frame-preserves-open-realization",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:reference-frame-preserves-open-realization",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:release-rc-is-immutable",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:requirements-template-declares-metadata",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/README_TEMPLATE.md#rules"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:reviewer-adjacent-observation-preserves-claim-result",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:specification-chain-governs",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#constitutional-chain"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:standards-cut-is-complete-basis",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:starter-requirement-remains-deferred",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#req-proj-starter-001-replace-me"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:templates-are-starters",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:tenant-registry-is-read-model",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#shared-surface"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:ticket-binds-change",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:ux-reducer-law",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/UX_METHOD.md#4-process-model-elm-architecture"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:variant-adr-scope-is-local",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#boundary-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:variant-adr-template-is-one-decision",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#decision"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:variant-design-declares-common-adoption",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#adopted-common-surfaces"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:variant-root-is-one-tenant",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/build_tenants/variant/README_TEMPLATE.md#tenant-root"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:work-carrier-selects-smallest-lawful-lifetime",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#work-carrier-to-execution-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:work-carrier-selects-smallest-lawful-lifetime",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_compressed.md#work-carrier-and-execution-contract"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:world-model-source-sovereignty",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#core-claims"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:clause:writing-states-claim-and-reason",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/WRITING_GUIDE.md#core-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:compression-overlap-needs-source-reentry",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:compression-overlap-needs-source-reentry",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:frame-adoption-not-claimed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:frame-adoption-not-claimed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:full-m-b-not-constructed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:full-m-b-not-constructed",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#core-signature"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:prompt-projection-does-not-select-solution",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:prompt-projection-does-not-select-solution",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#core-claims"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:prompt-projection-does-not-select-solution",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#position"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:semantic-acceptance-not-supplied",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:semantic-acceptance-not-supplied",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "re_entry_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:template-placeholders-are-not-decisions",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:residual:template-placeholders-are-not-decisions",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:a-c",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#position"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:authority-compression",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/authority_compressions/README.md#authority-compression-assets"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:design",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/DESIGN_MODULE_METHOD.md#3-core-rule"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:development-product",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/SPEC_METHOD.md#recursive-product-taxonomy"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:execution-contract",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#execution-contract-admission"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:executive",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:graph-function",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/ODD_METHOD.md#graph-functions"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:identity",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/IDENTITY_METHOD.md#core-law"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:install",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/schemas/installed-release-manifest.schema.json"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:product-definition",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/templates/README.md#product-definition-overlay"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:reference-frame",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:release-cut",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#immutable-rc-publication"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:release-matched-cohort",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:source-corpus",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/README.md#standards-library"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:ticket",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TICKET_METHOD.md#core-model"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:traversal-occurrence",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/TRAVERSAL_OCCURRENCE_PROFILE.md#occurrence-identity"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:working-authoring-surface",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md#subject-and-carrier-boundaries"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_refs",
+          "record": "urn:stdo-representation:a-c-text:symbol:world-model",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/WORLD_MODEL_METHOD.md#single-truth-surface"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "calculus_ref",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/AXIOMATIC_CALCULUS.md"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "frame_refs",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "frame_refs",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "frame_refs",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "frame_refs",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+        },
+        {
+          "code": "unresolved_uri",
+          "field": "source_basis",
+          "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+          "ref": "stdo://releases/v2.5.0-rc.4/standards/"
+        }
+      ],
+      "kind": "axiom-indexer.validation-report",
+      "program_sha256": "sha256:5b6a5df2e2429f7b1d463e2b9107ca58f5c482e9565e98e792650f41b222a4cf",
+      "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.0-rc.4:run-001",
+      "resolved_sources": [],
+      "schema_version": 1,
+      "status": "invalid"
+    },
+    "stale_map_removed": true
+  }
+]

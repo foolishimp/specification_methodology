@@ -2,8 +2,8 @@
 
 ## Current Goal
 
-Status: contribution planned through Representation T-009; no implementation
-increment admitted by this planning edit
+Status: exact RC4 mechanics baseline supplies T-009 M02's selected dependencies;
+no generic mechanics defect demonstrated and no Product code change required
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -13,13 +13,13 @@ mechanical gap and its own exact Product/requirement/design authority.
 
 The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
 owns the shared outcome. The existing combined
-[Representation T-009](../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+[Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
 owns delivery tracking for this provider/consumer relation: M01 identifies
 actual gaps, M02 supplies the selected mechanics, and M03/M04 consume their
 exact results for regeneration and native qualification. This creates no
-duplicate Indexer ticket or independent milestone ledger. The owner's bounded
-planning grant is recorded in
-[T-030](../../specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection).
+duplicate Indexer ticket or independent milestone ledger. The owner's direct
+implementation grant and bounded Writer activation are recorded in
+[T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#implementation-admission-and-writer-activation).
 
 The Executive keeps mechanical facts distinct from semantic judgments and
 owner rulings. STDO-specific authoring and frame use stay with Representation;
@@ -27,6 +27,13 @@ worksite classification producers remain with their declared owners. No
 semantic acceptance, automatic frame selection, context-budget engine or
 runtime is selected. Qualification and any release identity stay Product-local;
 published RC4 mechanics and their valid evidence remain available throughout.
+
+The [actual T-009 baseline](../../stdo_representation/dogfood/t009-m01/run-001/README.md)
+reproduced the exact Representation index, passed all 15 existing mechanical
+tests under normal and optimized Python, and refused eight malformed actual-
+program variants with stale maps removed. Representation consumes these exact
+results for M03. Its instruction repair remains at that Product; this Goal
+does not close native qualification, accept a Product or publish a successor.
 
 ## GOAL-001 — Dogfood the smallest useful Axiom Indexer
 

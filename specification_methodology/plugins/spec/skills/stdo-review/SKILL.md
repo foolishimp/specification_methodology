@@ -26,6 +26,12 @@ read-only.
 2. Reacquire live authority, implementation, tests, fixtures, installed or
    runtime evidence, and material history. Do not use the Worker summary as
    evidence.
+   Reuse exact applicable computed facts and traceable prior judgments after
+   checking their support and invalidation. This does not replace your own
+   assessment where the claim requires independence. Determine required
+   evaluations from the owning applicability conditions, not only the caller's
+   selected frame list; unknown applicability or a missing required exact
+   result prevents a satisfied conjunction.
 3. Return the exact invalid, out-of-frame, or indeterminate result when subject,
    basis, capability, independence, or evidence cannot support evaluation.
 
@@ -41,6 +47,10 @@ read-only.
 - Use only the Product-bound scale. Keep adjacent observations separate.
 - Never turn technical severity into Executive priority or promotion-boundary
   effect.
+- Distinguish repair of a nonconforming candidate under unchanged law from an
+  intentional governing change. A failure alone does not require repricing.
+- Check satisfied closure conditions; your review event cannot establish them
+  or create an additional closing ceremony.
 
 Keep the result projection total:
 
@@ -56,5 +66,8 @@ Keep the result projection total:
 Return one closed result containing exact subject and basis, claim, scope and
 exclusions, evidence, verdict, findings and counterexamples, triage, residuals,
 adjacent observations, uncertainty, invalidation, and owning re-entry point.
+Bind each reusable judgment to its question, subject/basis, supporting facts,
+actor/authority, conclusion/scope and revising observation in the existing
+result carrier. Preserve original owner rulings separately from interpretation.
 Return to Executive when the Project Reference-Frame Basis adopts that frame;
 otherwise return to the Product-owned decision authority. Stop.

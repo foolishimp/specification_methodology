@@ -17,10 +17,11 @@
 - re_entry_point: specification/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action
 - triaged_at: 2026-09-02
 - created_at: 2026-09-02
-- updated_at: 2026-09-06T02:43:24Z
+- updated_at: 2026-09-06T04:17:07Z
 - priority: P3
 - owner: specification_methodology
 - work_authorization: direct_human_product_owner_instruction_2026-09-02
+- execution_status: source_candidate_contributed_under_T030_M02; remaining_qualification_open
 - target_release: future_successor_after_v2.5.0-rc.4
 
 ## Current Gap
@@ -87,17 +88,35 @@ existing falsifier evidence. The existing RC4 prohibition remains operative; thi
 is not a blanket prerequisite for direct Writer use or unrelated native work.
 
 The [owner's delivery-planning grant](../active/T-030-deliver-proportionate-stdo-product-use.md#delivery-planning-selection)
-authorizes this sequence note and its local checkpoint only. The requirement
-implementation, its qualification and any publication remain separately scoped.
+authorizes that sequence note and its local checkpoint only. The later M02
+implementation grant below selects the source contribution; qualification and
+publication remain separately scoped.
+
+## M02 Source Contribution
+
+The owner's actual implementation instruction and
+[T-030 M02 admission](../active/T-030-deliver-proportionate-stdo-product-use.md#m02-implementation-and-bounded-m03-admission)
+select this bounded source contribution. Writer `/root/t030_m01_writer`,
+activation `urn:openai:codex:t030-m02-writer`, has implemented the explicit
+prohibition in STDO_REFERENCE_FRAME_BASELINE's Executive Attention, Evaluation,
+And Action and its Derived Executive Frame exclusions. The candidate refuses
+Executive byte mutation irrespective of tool access, edit size, reversibility,
+test-only scope or apparent obviousness; a recorded exact Worker/Writer
+activation precedes a same-actor implementation effect.
+
+T-030 owns this construction run and its frozen-source evidence. This ticket
+retains the distinct six criteria and remaining projection, tiny-fixture
+falsifier and exact-candidate qualification conditions. Its broader candidate
+is not complete merely because the source contribution is constructed.
+T-030's returned author-independent M02 assessment passes the exact source
+contribution; that result does not project the remaining conditions as met.
 
 ## Release Boundary
 
-This is deferred P3 work for an unselected successor release after RC4. The
-ticket records a future requirement re-entry. The planning relation above does
-not select its implementation, amend mutable standards, start a release
-candidate, or authorize source implementation commits, tags, publication, or
-adoption. RC4 and all of its immutable records
-remain unchanged.
+The release target remains an unselected successor after RC4. The M02 source
+contribution above is selected; its wider qualification remains open. That
+construction grant starts no release candidate and authorizes no tags,
+publication or adoption. RC4 and all of its immutable records remain unchanged.
 
 ## Proof Surface
 

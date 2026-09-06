@@ -12,17 +12,17 @@ existing project authority
   + selected complete STDO and Reference Frame Method basis
   + exact governed Product or Product-chain outcome and workspace basis
   + known evaluation inventory, dependencies, and residuals
-  -> Executive outcome and basis lock
-  -> smallest finite dependency-ready activation frontier
-  -> independently activated Worker, Reviewer, and specialist evaluations
-  -> closed results, Reviewer technical triage, and declared conjunction
-  -> Executive priority, boundary effect, disposition, and next bounded action
+  -> sufficient direct Worker activation, or materially required coordination
+  -> where coordinated: Executive outcome/basis lock and finite ready frontier
+  -> Worker and applicable specialist evaluations; Reviewer only where required
+  -> closed results, applicable technical triage, and declared conjunction
+  -> existing bounded decision authority, result recording, and next lawful action
   -> updated basis, coverage, residuals, and frontier
   -> repeat or stop
 ```
 
-The three frames are overlapping evaluation contexts, not a hierarchy or actor
-topology. The Worker supplies the candidate subject but never activates the
+The three available frames are overlapping evaluation contexts, not a hierarchy
+or actor topology. The Worker supplies the candidate subject but never activates the
 Reviewer. The Reviewer evaluates but does not implement. The Executive applies
 only decision authority already granted by Product, Goals, requirements,
 accepted design, ticket, identity, or release law. The Worker carries only the
@@ -41,7 +41,7 @@ any material family it cannot cover.
 
 This profile also derives four Product-testing specialist-frame families:
 user acceptance, end to end, integration, and unit. They are activated inside
-the same Executive, Worker, and Reviewer engagement relation; they are not new
+the same conditionally selected engagement relation; they are not new
 roles, stages, authorities, or a testing hierarchy. Their ordinary evidence
 topology is:
 
@@ -116,6 +116,34 @@ neither select nor adopt it.
 
 ---
 
+## Engagement Applicability
+
+This profile applies `SPEC_METHOD.md#construction-assessment-and-delegation`
+and the selected Product-owned frame configuration. One capable context with
+sufficient work authority, intake and operation grant may enter directly as
+Worker (Writer). It needs no Executive activation solely to appoint it.
+Coordination activates when material contexts, authority, capability or
+required independence cannot be covered by that sufficient direct activation.
+A role or frame name alone creates no coordination or review obligation.
+
+The direct route binds the same exact intake, operation territory, applicable
+obligations, evidence, stop conditions and declared result consumer. It uses
+the smallest existing carrier under `TICKET_METHOD.md`, retaining admission
+distinct from drafting. A sufficient local outcome with no required independent
+assessment or reserved acceptance may finish as Writer and record its satisfied
+conditions there. It gains no review, ticket, diagram recreation or owner
+ceremony solely from using this profile. Any required assessment or owner
+decision remains required; newly discovered insufficiency withholds the
+dependent effect and returns the affected question to its existing owner.
+
+The Executive transition and handoff clauses below apply when that coordinated
+branch is selected. Direct work returns its closed result to the declared work
+authority or existing result carrier, preserving the same result algebra and
+operation/decision separation. In either branch, apply
+`REFERENCE_FRAME_METHOD.md#applicability-and-required-results` and reuse valid
+C/J/O through their owning SPEC_METHOD and TICKET_METHOD clauses. None of these
+routes alters a Product's exact adopted basis or supplies missing authority.
+
 ## Empirical Revision Boundary
 
 Accumulated delivery practice and observed failure may inform frame selection,
@@ -128,12 +156,13 @@ The profile's engagement relation requires:
 - one bounded authority selects the active work and the finite frames needed to
   evaluate it;
 - a Worker constructs one exact candidate, self-reviews, reports, and stops;
-- an independently activated Reviewer reacquires live authority, code, tests,
-  and proof rather than accepting the Worker summary;
-- the Reviewer returns evidence-bound severity and technical implications
-  without becoming a second implementation loop;
-- the Executive assigns priority and adjudicates the current Product mandate
-  under an existing bounded grant; and
+- where independent assessment is required, a separately activated Reviewer
+  acquires sufficient exact live authority, subject and evidence, retaining
+  valid computed facts while supplying its own judgment;
+- an activated Reviewer returns evidence-bound severity and technical
+  implications without becoming a second implementation loop;
+- where coordination is required, Executive assigns priority and adjudicates
+  the current Product mandate under an existing bounded grant; and
 - inability to perceive a known violation is evidence of a missing,
   misactivated, oversized, or capability-incompatible frame.
 
@@ -251,6 +280,15 @@ Executive does not contain the complete workspace, perform every evaluation,
 or acquire Product meaning, implementation, mutation, acceptance, publication,
 or other operation authority from the role. A material effect remains owned by
 the actor carrying its exact operation grant.
+
+An actor occupying Executive must not modify candidate, Product or worktree
+bytes or perform an implementation effect. Filesystem or tool access and an
+edit being small, test-only, reversible or apparently obvious supply no
+exception. Mutation requires a separately activated Worker or Writer relation
+with the exact operation grant, subject and write territory. A same-actor role
+transition is explicit and recorded in the existing work carrier before the
+effect; the actor is no longer acting as Executive for that effect. Recording
+or delegating after an Executive edit cannot authorize it retroactively.
 
 The attention cycle is:
 
@@ -392,9 +430,10 @@ create another review round merely by receiving a severe label.
 
 ### Work result
 
-A **work result** is the closed Worker-to-Executive output used by this profile.
-It exists only after successful Worker activation. An `activation_refusal`
-returns directly to Executive and creates neither a Worker activation nor a
+A **work result** is the closed Worker output to its declared consumer; in the
+coordinated branch that consumer is Executive. It exists only after successful
+Worker activation. An `activation_refusal` returns to the assigning authority
+or declared result carrier and creates neither a Worker activation nor a
 Worker result.
 
 The work-result variants are profile carriers, not new STDO semantic
@@ -420,6 +459,13 @@ activation is an `activation_refusal`, not a synthetic Worker result.
 
 Consumers choose the representation. `STDO-UP-020` remains the owner of the
 execution relation and its semantic dispositions.
+
+The result references current computed classification, supporting evidence,
+residual judgments and original rulings through their existing owning carriers.
+It does not reconstruct unchanged C/J/O for each handoff. The consumer checks
+applicability and concrete invalidators; changed evidence revises only affected
+results, preserving originals and supported surviving claims under
+`TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity`.
 
 ### Exact candidate
 
@@ -495,7 +541,7 @@ This notation requires no Cartesian-product schema or universal frame runtime.
 | authority | existing Product/work frame-set and decision authority or its admitted bounded proxy; no operation authority or other authority arises from the Executive label |
 | evidence | live authority surfaces, frame results, Reviewer technical triage, exact candidate identity, transition evidence, coverage residuals, and specialist-frame results |
 | capability envelope | enough method, Product, release or MVP, authority, workspace, triage, and actor-selection competence to configure, prioritize, and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
-| exclusions | implementation ownership, silently rewriting Reviewer evidence or severity, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
+| exclusions | candidate/Product/worktree byte mutation and implementation effects while occupying Executive, implementation ownership, silently rewriting Reviewer evidence or severity, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
 | result | one Reference Frame Method result, assigned priority and current-boundary effect, plus an existing `STDO-UP-020` disposition where the basis is decidable |
 | invalidation | material method, authority, outcome, mandate, triage policy, checkpoint, candidate, evidence, finding, capability, or topology change |
 
@@ -561,9 +607,9 @@ freeze requirements. This profile adds neither a universal review round nor a
 new independence test.
 
 `STDO-UP-020` remains the owner of assessment and semantic disposition. This
-profile uses the Reviewer result as independent live-surface evaluation input
-and the Executive as the already-authorized assessor or bounded proxy that
-applies the one existing disposition. It creates no second verdict or
+profile uses an activated Reviewer result as independent live-surface evaluation
+input and, in the coordinated branch, Executive as the authorized assessor or
+proxy that applies the one existing disposition. It creates no second verdict or
 disposition family.
 
 Reviewer may assess likely repair complexity and regression risk without
@@ -981,6 +1027,11 @@ re-entry relation.
 
 ## Complete Engagement Transition
 
+The following steps describe the coordinated branch selected under Engagement
+Applicability. Direct Worker engagement preserves the same sufficient intake,
+work-result algebra, closure conditions and owner boundaries without inserting
+Executive appointment or a review that no applicable condition requires.
+
 ### 1. Existing Authority Selects The Basis
 
 Goals, Product, requirements, accepted design, ticket, release, or an admitted
@@ -989,8 +1040,8 @@ owner. The Product-owned Project Reference-Frame Basis projects that decision.
 
 ### 2. Executive Activates Worker
 
-The Executive applies `REFERENCE_FRAME_METHOD.md` activation to the
-`STDO-UP-020` sufficient execution intake. The activation identifies:
+In the coordinated branch, Executive applies `REFERENCE_FRAME_METHOD.md`
+activation to the `STDO-UP-020` sufficient execution intake. The activation identifies:
 
 - selected complete STDO and project authority;
 - exact governed outcome and checkpoint;
@@ -1013,8 +1064,8 @@ manufacture a Worker result to represent the failed activation.
 
 ### 3. Worker Returns To Executive
 
-Every Worker activation terminates in one closed work result sent to the
-Executive:
+Every coordinated Worker activation terminates in one closed work result sent
+to Executive. Direct work uses its declared result consumer:
 
 ```text
 WorkerResult
@@ -1051,8 +1102,8 @@ missing, bound to another subject, or contradicted by a material frame result.
 
 ### 5A. Candidate Does Not Require Independent Review
 
-When independent review is not required, the Executive consumes the exact
-candidate, Worker self-review, transition evidence, and any mandatory
+In the coordinated branch, when independent review is not required, Executive
+consumes the exact candidate, Worker self-review, transition evidence, and any mandatory
 specialist-frame results. It applies `STDO-UP-020` disposition within its
 decision envelope.
 
@@ -1153,8 +1204,8 @@ through a new or refined activation rather than silently rewritten.
 
 ## Handoff Projection
 
-The profile uses three bounded projections. They may be fields in existing
-Goals, tickets, design assets, commentary, qualification, release evidence, or
+The coordinated branch uses the following bounded projections. They may be
+fields in existing Goals, tickets, design assets, commentary, qualification, release evidence, or
 other admitted carriers. This profile requires no new artifact type.
 
 | Projection | Producer -> consumer | Minimum material content | Owning law |
@@ -1172,6 +1223,11 @@ Flattening these projections across candidates, processes, episodes,
 configurations, evidence populations, or bases does not establish their
 relation. Equality or translation is declared under
 `REFERENCE_FRAME_METHOD.md` where needed.
+
+Direct engagement carries the same material intake and result coordinates in
+its existing work carrier. It substitutes the actual granting/result authority
+for Executive where that branch has no Executive activation; it does not
+silently activate Reviewer or acquire any new decision authority.
 
 ---
 
@@ -1361,9 +1417,12 @@ A representative profile trial establishes at least:
    under that exact grant and an out-of-territory mutation refuses, without
    granting operation authority to another frame;
 5. every Worker work-result variant is disjointly mapped from its Reference
-   Frame Method result and returns to Executive;
-6. `candidate_ready` reaches Executive disposition without Reviewer activation
-   when independent review is not required;
+   Frame Method result and returns to its declared consumer, Executive in the
+   coordinated branch;
+6. a sufficient direct local case starts and finishes as Writer in its existing
+   carrier without Executive appointment or independent review; a coordinated
+   `candidate_ready` also reaches disposition without Reviewer activation when
+   independent review is not required;
 7. review-required `candidate_ready` causes Executive, not Worker, to activate
    Reviewer;
 8. Reviewer reacquires the exact subject and live production and assurance
@@ -1573,22 +1632,31 @@ This profile is misapplied when:
 
 ## Closure
 
+Evaluate only the obligations applicable to the exact selected outcome and
+engagement branch. A listed frame or available testing family does not make
+its claim applicable. Every applicable obligation must be satisfied with valid
+evidence and required J/O, with no active non-closure condition under
+`TICKET_METHOD.md#condition-based-closure-and-reuse`. A closed indeterminate
+result or a review event does not satisfy an unresolved obligation.
+
 A project has applied this baseline to one outcome when:
 
 1. existing project authority admits and projects the exact frame basis;
 2. the complete selected STDO and Reference Frame Method remain the governing
    sources;
-3. Executive, Worker, and Reviewer are finite evaluation frames, not hierarchy
-   or actor identities;
+3. Executive, Worker, and Reviewer are available finite evaluation frames,
+   activated only where applicable, not hierarchy or actor identities;
 4. activation refusal remains distinct from Worker results, and every Worker
    result maps exclusively from one closed Reference Frame Method result and
-   returns first to Executive;
-5. Executive alone determines whether an exact candidate enters a Reviewer
-   activation under the applicable existing authority;
+   returns to its declared consumer, first to Executive in the coordinated
+   branch;
+5. existing work authority determines whether an exact candidate requires
+   independent review; the coordinated Executive activates Reviewer where
+   required, while the sufficient direct branch adds no such activation;
 6. required Reviewer assessment binds the exact subject, evidence population,
    verdict, evidence-bound technical triage, and independence conditions;
-7. Executive consumes closed results and technical triage against the complete
-   Product view and current MVP or release mandate, keeps severity, priority,
+7. an activated Executive consumes closed results and technical triage against
+   the complete Product view and current MVP or release mandate, keeps severity, priority,
    frame result, and boundary effect distinct, and applies only the existing
    `STDO-UP-020` disposition and continuation relation;
 8. specialist frames and result relations cover every known material

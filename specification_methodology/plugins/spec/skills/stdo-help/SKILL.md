@@ -32,12 +32,24 @@ guidance. This skill remains read-only.
    Fail closed on a missing, ambiguous, damaged, or placeholder basis.
 2. Read the smallest relevant project surface: Goals, Intent, Product, affected
    requirements, accepted design, work carrier, then the owning standard.
+   Start from available source routes, exact computed status and still-valid
+   recorded judgments. Load additional context only for a material unknown or
+   applicable evaluation. An installed-basis verification establishes that
+   basis's integrity; it does not establish work completion or companion readiness.
 3. If no Product Definition exists and setup is authorized, point to
    [`../../references/GETTING_STARTED.md`](../../references/GETTING_STARTED.md)
    from **New Project** without performing setup.
 4. When installation is authorized, return the exact `stdo sync --definition
    <definition>` next action for a missing selected cut; do not execute it from
    this read-only skill or adopt a newer cut implicitly.
+
+Explain the next functional outcome in the user's terms. Determine whether
+they need orientation, construction, evidence assessment, an owner ruling,
+continuation, recovery, adoption or conclusion; route only the affected part.
+A sufficient local instruction may use a direct Writer where the accepted
+frame basis permits it. Do not add an Executive, ticket or review merely to
+answer a help request. Ask for a missing owner choice only when the next action
+depends on it; reuse a sufficient existing ruling.
 
 ## Return
 

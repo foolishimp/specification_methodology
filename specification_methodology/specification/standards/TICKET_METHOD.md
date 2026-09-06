@@ -599,22 +599,27 @@ without contradiction.
 
 ### Upward Propagation Check
 
-Before declaring `realization_refactor` for a bug, triage must check backwards
-through the constitutional chain:
+Triage consumes `SPEC_METHOD.md#computed-classification-and-treatment` for the
+declared owner/layer traversal, complete relevant Public membership and value
+delta, accepted-design scope and trace coverage, and rule-determined treatment.
+The owning work carrier references that exact result and its residuals; a new
+role does not repeat an unchanged walk.
 
-1. Is there a live requirement that governs this behavior?
-2. If yes, is there a design decision that realizes it?
-3. If both exist, did the code deviate from them?
+Before declaring `realization_refactor` for a bug, establish that the current
+requirement and accepted realizing design govern the affected behavior and
+remain sufficient for the authorized outcome. Their mere presence proves no
+coverage. Missing or ambiguous evidence leaves the affected treatment unknown;
+it is not proof that the governing layer itself is absent.
 
-The re-entry point is the **first missing layer**, not the layer where the
-symptom appeared.
-
-- If the requirement is absent → `requirement_reprice`
-- If the requirement exists but no design decision realizes it → `design_reframe`
-- If both exist and code deviated → `realization_refactor`
-
-`realization_refactor` is only lawful for a bug when both the governing
-requirement and the realizing design decision are already present.
+If the governing requirement is actually missing or insufficient, re-enter its
+owner; if that requirement is sufficient but the realizing design is missing or
+insufficient, re-enter Design. Follow any actual upstream Goal, Intent or
+Product change to its owner rather than stopping at a familiar file. When the
+current requirement and accepted design suffice and implementation deviates,
+repair or reject the candidate under `realization_refactor`. A candidate's
+Public violation does not select a new contract. An explicitly changed desired
+outcome or established governing insufficiency follows the owning re-entry;
+unresolved meaning remains J and reserved choice O.
 
 ### Triage Metadata
 
@@ -769,6 +774,40 @@ document type, review round, or approval ceremony is required. Ticket Method
 carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
 
+### Recorded Judgment And Owner-Ruling Continuity
+
+A residual judgment needed by another activation is recorded once with its
+owning work in the existing carrier selected by Work-Carrier-To-Execution Rule.
+It identifies the question, exact subject and governing basis, supporting
+computed facts/evidence, responsible actor and authority, conclusion and
+scope, uncertainty, and a concrete revising observation. That observation must
+let a consumer determine whether the conclusion still applies. A rule-settled
+question needs no invented J record.
+
+Later roles and resumed runs recover the result and check applicability rather
+than re-author unchanged judgment. Changed material evidence, basis or the
+stated revising observation causes affected reassessment, preserving the
+original result and its successor relation. Retain unrelated conclusions only
+where their independence from the change is supported. A new role or
+conversation alone is not an invalidator. The result may reference current C
+outputs; reuse cannot silently turn unknown facts into established premises.
+
+Required independent assessment may consume valid C, but its assessor acquires
+sufficient exact evidence and supplies its own judgment under the actual
+independence condition. Reusing the author's J cannot satisfy that condition.
+
+Record a direct or lawfully proxied owner ruling in its original wording, with
+its owner, exact subject/basis, permitted scope and effects, conditions and
+source, separately from agent interpretation. Later work consumes that same
+ruling while applicable; it neither widens it nor requests unchanged authority
+again. New ambiguity or a materially changed decision returns only the affected
+question to its owner. J is not O, and recording either cannot create admission,
+acceptance, effects or continuation beyond the original grant.
+
+These results follow the existing run, sprint or durable-ticket lifetime and
+named result/evidence surface. They require no separate judgment registry,
+ticket per judgment, or additional approval ceremony.
+
 ### Bounded-Context Term Binding
 
 Ticket and work-instruction terms resolve under `SPEC_METHOD.md`'s
@@ -819,6 +858,29 @@ Residual implementation debt outside the claimed acceptance path is not a
 non-closure condition by itself. It may be deferred only under the
 path-relative authority and explicit disposition rules in `SPEC_METHOD.md`.
 
+### Condition-Based Closure And Reuse
+
+A work claim is complete only when every applicable declared obligation is
+satisfied by valid evidence for its exact subject, basis and scope, all required
+judgments and owner rulings are present and applicable, and no active
+non-closure condition remains. A mandatory but unknown applicability or
+insufficient-evidence result withholds the dependent claim; evidence presence
+alone is not satisfaction. The existing owner decides any reserved acceptance.
+
+Review evaluates these conditions; its occurrence is not the closing event.
+Where applicable law requires no independent review or reserved acceptance,
+the authorized Writer may record the satisfied bounded result in the existing
+carrier without adding a ticket, Executive appointment, review or design-view
+recreation solely to mark completion. This does not waive a condition that
+actually applies, including sprint-close or design-method law.
+
+An unchanged obligation reuses valid applicable evidence and recorded J/O.
+A material counterexample, changed evidence or basis invalidates the affected
+claim and its dependent results before further reliance. An unrelated
+observation is retained as bounded repricing input; it does not reopen a
+satisfied claim or expand work automatically. Closure recording preserves the
+exact evaluated scope, satisfied conditions, evidence and remaining residuals.
+
 ### Test Case Authority
 
 Tests are proof projections from admitted work authority.
@@ -841,7 +903,7 @@ and test expectation, review must reconcile the mismatch in this order:
 1. the ticket's `change_intent`, `change_class`, `re_entry_point`,
    `target_truth`, `superseded_truth`, `closure_law`,
    `evaluation_criteria`, and `non_closure_conditions`
-2. the ticket's intake triage and first missing layer
+2. the ticket's intake triage and lawful owning re-entry
 3. the governing requirement, design, module, graph-function, carrier, or
    other cited authority surface
 4. the test case expectation

@@ -1,0 +1,28 @@
+**Product outcome and boundary.** T-030 stands at M01 complete at logical-model scope, with M02 and bounded M03 admitted and underway. Nothing beyond M01 is accepted. This checkout is a single-commit qualification freeze of that in-progress state, not an accepted or released Product.
+
+**Skill and commands used.** Native skill `spec:stdo-status` from the snapshot plugin, with its Product Basis procedure. Read-only commands:
+
+```
+stdo status --definition <snapshot>/specification_methodology/stdo_default.json --verify
+git status --short --branch
+git rev-parse HEAD
+git log --oneline -5 / git log --oneline -20 --all / git log -1 --format=... 2cc57fc
+```
+
+Two commands were denied by the permission mode and not retried: a `git -C` form of status/log, and `git diff --no-index` between the installed RC4 standards and the snapshot source standards. Digest-level source-to-RC4 congruence is therefore unverified here.
+
+**Basis health.** Exactly one applicable definition: `urn:stdo:product-definition:specification-methodology` at `specification_methodology/stdo_default.json`. Verification reported basis `stdo://releases/v2.5.0-rc.4/`, manifest SHA-256 `4fa2556d...5049e`, installed true, valid true, failures empty, 52 standard members. Working tree clean on `main` at `2cc57fc` ("Freeze T030 native qualification subject", author "STDO Qualification"). The history has this one commit only, so no delta against a prior checkpoint can be computed from Git.
+
+**Actually complete.**
+- M01: recorded complete in the ticket and the M01 proof record, backed by two returned author-independent judgments (J-R-M01-02 contract/invariant, J-R-M01-03 semantic) over exact reviewed hashes at commit `7a5048c`. Former C3 was withdrawn by owner ruling, not satisfied.
+- Delivery planning and progressive-use records: written into T-030, GOALS, and the proof carrier under recorded Writer activations.
+
+**Candidate work, not complete.**
+- M02 (R02–R07 at SPEC_METHOD, TICKET_METHOD, REFERENCE_FRAME_METHOD, baseline) and bounded M03 projections (four compressions, templates, five `stdo-*` skills, GETTING_STARTED) are admitted at ticket commit `e8a19fb`. The ticket's "M02 And M03 Current Result" says only "admitted and underway".
+- Observed evidence that construction bytes exist: R02–R07 vocabulary ("direct Writer", "revising observation", "non-closure condition", etc.) appears 29 times across 12 snapshot source standards/templates/compressions and 15 times across the snapshot plugin skills, versus 7 occurrences in 3 installed RC4 standards. This is discovery evidence only, not a hash-bound candidate or assessment.
+- No frozen M02 candidate hash table, no exact changed/conserved clause list, no returned Reviewer result from `/root/t030_axiomatic_review`, and no T-030 native-proof carrier were found in the ticket, comments, tests, or plugin. Absence in this snapshot is reported as unknown execution state, not as "not done".
+- This status run itself exercised the snapshot's candidate `stdo-status` skill on the frozen subject. That is a progressive self-use observation the owning ticket may retain. It was not recorded here.
+
+**Blockers and uncertainty.** No basis blocker. M03 projections remain unqualified until sufficient M02 source assessment returns. Source-to-RC4 digest congruence and the freeze commit's parent state are unverified. Peer T-009, T-028, T-029 remain backlog/drafted and are not gates for this step.
+
+**Next already-authorized action.** Under the M02 admission, the M02 Writer returns the exact changed/conserved law and a frozen candidate to the separately activated author-independent Reviewer `/root/t030_axiomatic_review`, recorded in T-030 and the existing proof carrier. No commit before the returned candidate, no self-acceptance, no new grant request, no M04/M05 selection, no release or adoption.

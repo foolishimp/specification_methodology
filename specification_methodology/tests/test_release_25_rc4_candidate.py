@@ -22,19 +22,55 @@ PROJECT_SUBTREE = PROJECT_ROOT.relative_to(GIT_ROOT).as_posix()
 PREDECESSOR = "refs/tags/specification_methodology/v2.5.0-rc.3^{}"
 TARGET_VERSION = "2.5.0-rc.4"
 TARGET_CUT = f"v{TARGET_VERSION}"
-RELEASE_NOTE = PROJECT_ROOT / "releases/v2.5.0.md"
-STANDARDS = PROJECT_ROOT / "specification/standards"
-PLUGIN = PROJECT_ROOT / "plugins/spec"
+TARGET_REF = f"refs/tags/specification_methodology/{TARGET_CUT}"
+SUBJECT_REVISION = (
+    f"{TARGET_REF}^{{}}"
+    if subprocess.run(
+        ["git", "show-ref", "--verify", "--quiet", TARGET_REF], cwd=GIT_ROOT
+    ).returncode == 0
+    else None
+)
+
+
+def qualified_path(project_relative: str) -> str:
+    if PROJECT_SUBTREE == ".":
+        return project_relative
+    return f"{PROJECT_SUBTREE}/{project_relative}"
 
 
 def git_bytes(revision: str, project_relative: str) -> bytes:
-    repository_relative = f"{PROJECT_SUBTREE}/{project_relative}"
+    repository_relative = qualified_path(project_relative)
     return subprocess.run(
         ["git", "show", f"{revision}:{repository_relative}"],
         cwd=GIT_ROOT,
         check=True,
         capture_output=True,
     ).stdout
+
+
+def subject_bytes(project_relative: str) -> bytes:
+    if SUBJECT_REVISION is not None:
+        return git_bytes(SUBJECT_REVISION, project_relative)
+    return (PROJECT_ROOT / project_relative).read_bytes()
+
+
+def subject_members(project_prefix: str) -> list[str]:
+    if SUBJECT_REVISION is not None:
+        prefix = qualified_path(project_prefix) + "/"
+        paths = subprocess.run(
+            ["git", "ls-tree", "-r", "--name-only", SUBJECT_REVISION, prefix],
+            cwd=GIT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.splitlines()
+        return sorted(path.removeprefix(prefix) for path in paths)
+    root = PROJECT_ROOT / project_prefix
+    return sorted(
+        path.relative_to(root).as_posix()
+        for path in root.rglob("*")
+        if path.is_file()
+    )
 
 
 def aggregate(rows: list[tuple[str, str]]) -> str:
@@ -45,7 +81,9 @@ def aggregate(rows: list[tuple[str, str]]) -> str:
 class Release25RC4CandidateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.note = RELEASE_NOTE.read_text(encoding="utf-8")
+        # Published RC4 remains the subject while mutable source evolves.
+        # This follows the RC3 release test's existing construction/release split.
+        cls.note = subject_bytes("releases/v2.5.0.md").decode("utf-8")
 
     def test_release_identity_is_successor_not_rc3_rewrite(self) -> None:
         for value in (
@@ -66,18 +104,14 @@ class Release25RC4CandidateTests(unittest.TestCase):
         inventory = {
             member: (disposition, digest) for disposition, member, digest in rows
         }
-        members = sorted(
-            path.relative_to(STANDARDS).as_posix()
-            for path in STANDARDS.rglob("*")
-            if path.is_file()
-        )
+        members = subject_members("specification/standards")
         self.assertEqual(len(inventory), 52)
         self.assertEqual(sorted(inventory), members)
 
         counts = {"conserved": 0, "changed": 0, "added": 0}
         stream_rows: list[tuple[str, str]] = []
         for member in members:
-            current = (STANDARDS / member).read_bytes()
+            current = subject_bytes(f"specification/standards/{member}")
             digest = hashlib.sha256(current).hexdigest()
             self.assertEqual(inventory[member][1], digest, member)
             prior = git_bytes(PREDECESSOR, f"specification/standards/{member}")
@@ -96,18 +130,14 @@ class Release25RC4CandidateTests(unittest.TestCase):
             flags=re.MULTILINE,
         )
         inventory = dict(rows)
-        members = sorted(
-            path.relative_to(PLUGIN).as_posix()
-            for path in PLUGIN.rglob("*")
-            if path.is_file()
-        )
+        members = subject_members("plugins/spec")
         self.assertEqual(len(inventory), 17)
         self.assertEqual(sorted(inventory), members)
 
         stream_rows: list[tuple[str, str]] = []
         changed = 0
         for member in members:
-            current = (PLUGIN / member).read_bytes()
+            current = subject_bytes(f"plugins/spec/{member}")
             digest = hashlib.sha256(current).hexdigest()
             self.assertEqual(inventory[member], digest, member)
             prior = git_bytes(PREDECESSOR, f"plugins/spec/{member}")
@@ -121,7 +151,8 @@ class Release25RC4CandidateTests(unittest.TestCase):
             ".codex-plugin/plugin.json",
         ):
             self.assertEqual(
-                json.loads((PLUGIN / relative).read_bytes())["version"], TARGET_VERSION
+                json.loads(subject_bytes(f"plugins/spec/{relative}"))["version"],
+                TARGET_VERSION,
             )
 
     def test_release_method_and_owned_compression_are_the_only_standard_changes(

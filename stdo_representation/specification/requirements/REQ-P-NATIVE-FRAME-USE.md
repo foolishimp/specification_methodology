@@ -88,3 +88,29 @@ re-entry request rather than guessed context.
 **REQ-P-NATIVE-009**: This release shall not claim a GTL composition,
 GraphFunction, deterministic assignment packet, tokenizer-budget engine,
 renderer, skill generator, model invocation, or ABG runtime.
+
+**REQ-P-NATIVE-010**: Native instructions shall distinguish the exact represented
+release and its historical construction basis from the caller's current
+Product Definition, accepted frame basis and task grant. In a monorepo, archive
+routing shall select the dependency's declared Project Subtree and verify its
+exact executable and inventory. Source guidance changed after publication is
+a working candidate; a historical release inventory shall not qualify it.
+
+**REQ-P-NATIVE-011**: When a selected task consumes computed facts, recorded
+judgments or owner rulings, guidance shall preserve their actual owners,
+subject/basis, evidence, scope, authority and invalidation. Sufficient declared
+rules settle rule-decidable questions; missing premises remain unknown and
+only residual semantics require judgment. A role/context change alone does
+not invalidate an applicable result. Original rulings retain their exact scope,
+and reused author judgments cannot supply required independent assessment.
+The existing work/evidence carrier holds these records; no new schema,
+registry, classifier or actor is implied. Closure requires satisfaction of the
+applicable conditions, not merely evidence existence or a successful join.
+
+For T-009 successor qualification, these instructions consume the selected
+[STDO source use model](../../../specification_methodology/specification/SCENARIOS.md)
+through the exact source/task binding in T-009. That model does not relabel RC4
+compression or silently change a caller's operative STDO basis. A changed-law
+native claim requires the actual owning source acceptance and exact successor
+construction/adoption relation. The unchanged RC4 program and map retain their
+original declared coverage and residuals until that source is supplied.

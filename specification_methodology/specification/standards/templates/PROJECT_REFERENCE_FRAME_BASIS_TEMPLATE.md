@@ -51,6 +51,13 @@ For every known material evaluation record:
 - dependencies and affected Product edges:
 - disposition: `activate | non_material | residual`
 - non-material evidence or residual and re-entry condition:
+- owning applicability predicate and true/false/unknown premises:
+- required-result identity and current satisfied/missing/invalid evidence:
+
+Determine applicable evaluations from their owners, not only a caller's list.
+A false predicate excludes only its own obligation; an unknown predicate does
+not mean false. Retain every required constraining result in the declared
+conjunction. Frame availability alone does not activate it.
 
 ## Frame Declarations And Actor Binding
 
@@ -110,6 +117,13 @@ the Executive label.
 
 ## Activation And Return Topology
 
+Bind the sufficient direct Writer path and the material conditions requiring
+coordination under the selected law. Direct entry still needs exact work
+authority, admission, operation scope and closure conditions. It does not add
+a ticket, Executive appointment or review when none is applicable.
+
+For coordinated work:
+
 ```text
 existing authority
   -> Executive basis and outcome lock
@@ -122,6 +136,10 @@ existing authority
 
 No child result, tool output, model response, shared actor, or lateral handoff
 implicitly activates another frame or authorizes continuation.
+
+Executive performs no file or Git mutation. The same actor may construct only
+after entering a separately bound Writer activation with the inherited exact
+grant. Changing roles does not create authority or independent assessment.
 
 ## Coverage And Residuals
 
@@ -137,6 +155,15 @@ Coverage is complete only when every mandatory material evaluation and
 interaction is closed, or governing authority explicitly retains its residual
 consistently with the claim. Available frame count and Executive visibility are
 not coverage.
+
+Reuse a valid result after checking its question, subject/basis, evidence and
+invalidators. Record reusable judgments and original owner rulings through the
+existing work carrier under Ticket Method, separately from interpretation.
+Changed material premises invalidate affected claims; a new role or session
+alone does not. Required independent assessments still supply their own
+judgment. Closure requires satisfied applicable obligations, valid evidence,
+required judgments/rulings and no active non-closure condition; review is not
+itself the closing event.
 
 ## Drift Locks, Invalidation, And Revision
 

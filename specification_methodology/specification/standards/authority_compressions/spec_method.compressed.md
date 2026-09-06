@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
+source_digest: 0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-08-31
+generated_at: 2026-09-06
 stale_if_source_digest_changes: true
 ---
 
@@ -349,6 +349,31 @@ the aggregate STDO compression.
   execution may remain only outside that closure or under an explicitly
   specified, deterministically routed, non-overlapping Product or compatibility
   scope.
+
+## Proportionate Treatment And Continuity
+
+- `SPEC_METHOD.md#computed-classification-and-treatment` owns the reusable C
+  walk: exact request/targets, producer and procedure, governing basis, declared
+  owner/layer edges and unknown frontier, complete relevant Public membership
+  and value delta, accepted scope/trace evidence, and rule-determined treatment.
+  Missing candidate, projection or coverage stays unknown. C grants no effects
+  and cannot establish residual semantic sufficiency or an owner ruling.
+- Separate nonconformance from changed intent. Repair or reject a candidate
+  under sufficient unchanged law and its existing grant; a selected changed
+  outcome or established governing insufficiency re-enters its actual owner.
+  A bounded authorized discriminator may resolve an unknown. Candidate behavior
+  cannot select its governing contract or widen authority.
+- A sufficient single-context grant permits direct constructor/Writer entry
+  under the applicable frame basis. Material context, authority, capability or
+  independence needs determine coordination. Preserve admission, required
+  assessment and reserved decisions; role names create no ceremony or grant.
+- Closure requires satisfied applicable obligations, valid exact evidence,
+  required judgments/rulings and no active non-closure condition. A review
+  event or completed artifact cannot substitute for that condition.
+- Reuse exact current reconstruction and classification support; role or
+  resumption changes alone do not invalidate it. Reassess affected dependencies
+  on material change or counterexample. Ticket Method owns J/O recording;
+  Design Module Method retains its complete applicable design-view gate.
 
 ## Compression Use
 

@@ -8,16 +8,16 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
-  REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
-  STDO_REFERENCE_FRAME_BASELINE.md: 6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e
+  SPEC_METHOD.md: 0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95
+  REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
+  STDO_REFERENCE_FRAME_BASELINE.md: df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737
   RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-09-01
+generated_at: 2026-09-06
 stale_if_source_digest_changes: true
 ---
 
@@ -45,15 +45,23 @@ owning standards remain constitutional authority.
    named basis. Load raw owning standards whenever this projection is
    insufficient or its source digests are stale.
 6. Resolve the applicable accepted Project Reference-Frame Basis or its
-   declared composition. Enter governed work through its Executive frame or
-   declared project equivalent: bind the exact outcome and basis, inspect the
-   unresolved evaluation frontier, and activate only the smallest
-   dependency-ready context needed for the next decision.
+   declared composition. Bind the exact outcome, basis and existing work grant.
+   Use direct Writer entry when that configuration permits it and one capable
+   context is sufficient. For material coordination, use its Executive frame
+   or declared project equivalent and activate only the smallest dependency-ready
+   frontier. Determine required evaluations from their owning applicability
+   conditions; unknown applicability remains unresolved. A role name grants no
+   effects and Executive performs no file or Git mutation.
 7. Load the Product Definition's bound `WHAT`, local constitutional relations,
    `HOW`, work carriers, composition contracts, and exact source material only
    as required by that activation and governed scope. A prompt, summary,
    symbolic map, or prior result may route attention but cannot replace current
    source authority or a closed frame result.
+8. Reuse applicable computed facts, recorded judgments and original owner
+   rulings through their exact source/evidence routes. Refresh affected support
+   on a material invalidator; do not reclassify merely because a session or role
+   changed. Closure requires satisfied applicable conditions, not a review
+   event. The raw owning standards decide sufficiency and reserved authority.
 
 `sync` materializes only the already selected exact basis. `adopt --dry-run`
 presents a digest-bound plan to the highest-ordinal published immutable RC and

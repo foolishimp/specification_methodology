@@ -2147,6 +2147,18 @@ and artifact presence establish location; green tests establish only the
 properties they actually assert. None supplies a missing semantic relation or
 substitutes a weaker property for the governed claim.
 
+The complete selected function is the causal closure of the declared claim,
+not the whole Product or the whole history of its construction. The existing
+4B and 5E unchanged-boundary rules permit reuse of a current accepted Ontology,
+design verdict and sufficient reconstruction evidence after checking their
+exact scope, traces, applicability and invalidators. A new role, conversation
+or review occurrence does not itself require re-authoring that evidence or
+recreating the three views. Missing, stale or ambiguous coverage is not a
+no-delta proof. A material changed relation or new counterexample requires
+affected reconstruction and the applicable design gate, conserving supported
+unaffected relations. This reuse does not weaken 5E's complete Ontology and
+three-view coverage for a new or materially changed boundary.
+
 The required consequence is:
 
 - an issue that falsifies the current claim or applicable hard stop blocks the

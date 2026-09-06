@@ -356,6 +356,23 @@ Every feature, bug, failed test, operator finding, scenario failure, or release
 concern begins with intake triage. The intake label does not decide where work
 starts.
 
+Start with available facts: declared authority and owner routes, complete
+relevant Public serialization changes, and accepted-design trace coverage.
+Their tools report exact inputs, outputs and explicit unknowns. Judge the
+remaining question of meaning or materiality and record that judgment with its
+support in the existing work carrier. Reuse it while the question, subject,
+basis and supporting premises still apply; a role change alone is no reason to
+repeat the classification. The owning rule is `SPEC_METHOD.md`, **Computed
+Classification And Treatment**, in a basis that contains that successor rule.
+On an earlier basis, re-enter its owning intake and construction law; this
+guide does not adopt a successor.
+
+A helper change that violates an unchanged requirement can be repaired within
+its existing grant. Repricing is needed when the selected outcome needs new
+governing meaning. Candidate bytes do not make that choice. When the intended
+outcome is unclear, keep the owner question explicit and resolve only what
+the next action needs.
+
 ### Find The First Changed Layer
 
 | First changed layer | Change class | Re-entry point |
@@ -391,6 +408,9 @@ supply those coordinates by assertion. The contract also names an authorized
 Product-bound durable result/evidence surface. Every result, withheld closure,
 and residual is recorded there before return; a conversation return alone is
 not durable evidence.
+An exact owner instruction or admitted grant that already covers the bounded
+work is consumed once and cited. Establishing that binding does not require
+the owner to repeat the same authorization.
 If the run discovers an obligation that needs state beyond the local carrier
 boundary, persist it only when the current exact grant already includes the
 required ticket-state mutation. Otherwise retain it in the contract's named
@@ -453,6 +473,17 @@ invalidation law. One person or agent may occupy different frames across
 different claims only when every grant and any claimed independence remain
 valid.
 
+Select frames by their applicability conditions. A known false condition omits
+that evaluation; a true condition requires its exact result; an unknown
+condition remains unresolved until sufficient evidence or judgment resolves
+it. A caller's list is not proof that every required owner evaluation was
+included. The accepted frame basis may allow a direct Writer to finish a
+single-context outcome under an existing exact grant. Use that path when
+sufficient. Material dependencies, authority boundaries or context limits can
+require Executive coordination; applicable independence can require Reviewer.
+Neither is an automatic step for every change. An actor occupying Executive
+must enter a separately bound Writer activation before editing files or Git.
+
 ### Derive Tests From Authority
 
 ```text
@@ -475,10 +506,19 @@ Run broader qualification at the candidate boundary or earlier when risk
 requires it. Green evidence does not close a claim when it exercised the wrong
 subject, fixture, route, authority, or external-boundary substitute.
 
-Worker returns one exact candidate and evidence, then stops. Product-owned
-authority decides whether independent review is required. Reviewer returns one
-closed result. Executive, when adopted and authorized, applies priority and
-disposition. Repair creates a new candidate and invalidates affected results.
+A delegated Worker returns one exact candidate and evidence, then stops at its
+return boundary. Product-owned authority determines required assessment under
+the applicable law. Where required, Reviewer returns one closed result and
+the authorized consumer applies disposition. A sufficient direct Writer path
+records the bounded result without adding a review event.
+
+Closure means all applicable obligations are satisfied, supporting evidence
+is valid, required judgments and owner rulings are present, and no active
+non-closure condition remains. Review checks those conditions; holding a review
+does not close the work. Record state only under the existing mutation grant.
+Repair invalidates affected claims and support, while unrelated valid results
+remain usable. Candidate qualification, publication and adoption are distinct
+outcomes with their own conditions.
 
 ## 4. Monitor And Help Triage
 
@@ -491,6 +531,22 @@ Read in this order:
 4. identify the accepted checkpoint and current workspace delta;
 5. inspect observed tests, installed/runtime evidence, and exact reviews; and
 6. compare claims only when they share the same subject and basis.
+
+Let tools produce identity, declared state, delta and freshness facts; retain
+an explicit unknown when the necessary producer or input is absent. Keep
+semantic sufficiency as a supported judgment. For continuation, consume the
+existing outcome, grant, facts, judgments and owner rulings, then refresh only
+changed inputs and affected support. Preserve each owner's original ruling
+separately from interpretations. The existing ticket or proof carrier holds
+the question, exact subject/basis, supporting evidence, actor/authority,
+conclusion, uncertainty and observation that would revise a reusable judgment.
+
+For recovery, distinguish the requested outcome, observed effects and the
+effect owner's retry rule. A refusal with no effect may leave work unfinished;
+it does not alone justify either completion or repetition. Unknown effects
+stay unknown until sufficient evidence resolves them. Suspend or conclude by
+recording the actual outcome and any surviving obligation under the existing
+grant; do not lose that obligation when a session ends.
 
 Default commands apply only when the Product Definition binds the default
 layout:

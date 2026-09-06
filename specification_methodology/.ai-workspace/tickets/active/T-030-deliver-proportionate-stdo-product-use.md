@@ -10,24 +10,24 @@
     Establish the logical STDO user lifecycle and completion conditions, then
     correct the owning method, shared native guidance, and bounded tooling so
     ordinary work follows a sufficient path with conditional review and work scope.
-- change_class: goal_reprice
-- re_entry_point: specification/GOALS.md#goal
+- change_class: requirement_reprice
+- re_entry_point: specification/standards/SPEC_METHOD.md#change-management-rule
 - triaged_at: 2026-09-05T07:03:11Z
 - created_at: 2026-09-05T07:03:11Z
-- updated_at: 2026-09-06T04:00:11Z
+- updated_at: 2026-09-06T04:17:07Z
 - owner: specification_methodology
 - pen_holder: codex
 - sequence: first_Product_in_the_user_requested_strategy
 - affected_boundary: STDO Product use model, owning standards, shared plugin, and bounded distribution/adoption tooling
 - intake_source: direct_user_instruction_2026-09-05
-- work_authorization: direct_Product_owner_M01_repair_result_recording_and_local_commit
+- work_authorization: direct_Product_owner_M02_implementation_and_bounded_M03_projections
 - execution_contract_state: admitted
-- execution_contract_scope: M01_only
-- execution_status: M01_complete_logical_model_no_later_increment_selected
-- selected_milestone: none
-- completed_milestones: M01
+- execution_contract_scope: bounded_M03_projection_work; completed_M02_subject_recorded
+- execution_status: M02_complete_M03_projection_work_underway
+- selected_milestone: M03
+- completed_milestones: M01, M02
 - planning_status: delivery_timeline_and_progressive_use_recorded
-- result_surface: M01 Current Result below
+- result_surface: M02 And M03 Current Result below; retained M01 Current Result
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: T-028 for its distinct Executive-mutation clarification; T-029 for complete consumer adoption; applicability is bounded below
 - target_truth: >-
@@ -203,6 +203,45 @@ commit under the standing owner instruction. Both Products' exact RC4 bases
 verify valid. This work records the operating loop and evidence scope; the
 existing milestone execution states and accepted Product/model remain conserved.
 
+### M02 Implementation And Bounded M03 Admission
+
+The owner's "actually start the work stop circling it", following "ok
+implement", selects and admits actual M02 construction and its bounded M03
+projections. This exact human override applies to the existing M02/R02-R07 and
+M03 contracts in this ticket at commit
+`e8a19fbcf60926818172a9eefd48f4fcafea157f`. M01's accepted Product/model and
+the verified exact RC4 basis above are conserved. The mutable source standards
+are successor construction subjects, not an adopted replacement for RC4.
+
+| Activation | Exact construction territory and authority |
+|---|---|
+| M02 Writer `/root/t030_m01_writer`, `urn:openai:codex:t030-m02-writer` under the existing Worker declaration | implement R02-R07 in SPEC_METHOD, TICKET_METHOD, REFERENCE_FRAME_METHOD and STDO_REFERENCE_FRAME_BASELINE; DESIGN_MODULE_METHOD's selected-function reconstruction/reuse clarification; this ticket and STDO GOALS selection/results. The explicit Executive nonmutation contribution remains distinctly tracked in T-028. |
+| M03 Writer `/root`, `urn:openai:codex:t030-m03-projection-writer` | explicit Executive-to-Writer transition before mutation; affected authority compressions (`spec_method`, `ticket_method`, `design_module_method`, `stdo_bootstrap`, `stdo_compressed`); AGENTS_TEMPLATE, CLAUDE_TEMPLATE, PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE; shared five `plugins/spec/skills/stdo-*` and GETTING_STARTED; necessary existing test expectations; one T-030 native-proof carrier. The generated bootstrap's existing `src/stdo_toolchain/constants.py::BOOTSTRAP_TEXT` projection constant is included to match the templates; this admits no manager analyzer or state machine. Return to Executive after the bounded Writer result. |
+
+Both activations inherit the direct owner construction grant, exact mutable
+checkpoint, M01 scenario conditions and this ticket's applicable criteria,
+non-closure conditions and proof surface. M02 returns exact changed/conserved
+law and a frozen candidate to the separately activated author-independent
+Reviewer `/root/t030_axiomatic_review`. M03 consumes those exact clauses;
+dependent projections remain unqualified until sufficient source assessment.
+Current-law fixes may proceed under their already sufficient basis. Neither
+Writer self-accepts. No new core cost control, frame/framework, model rewrite,
+weakened design gate, peer Product mutation, installed-basis or immutable-release
+change, publication, or adoption is admitted. Project bootstrap was initially
+excluded; the bounded progressive-use extension below supersedes that exclusion
+for its two exact targets only. Local commits
+remain authorized by the standing owner instruction and follow integration
+disposition; neither activation commits before its returned candidate.
+
+Under the same direct implementation and progressive-self-use grant, root's
+M03 Writer activation extends to this STDO source Product's `AGENTS.md` and
+`CLAUDE.md` only. The reviewed candidate manager applies the reviewed bootstrap
+projection to these declared targets under the unchanged Product Definition
+and operative RC4 basis. This is bounded candidate self-use, not a global
+installation, a successor adoption, or a grant over another Product. The exact
+command, before/after identities and repeated dry-run result are retained in
+the existing [bootstrap self-use evidence](../../comments/codex/20260906T043141Z_t030_m03_native_evidence/bootstrap-self-use.json).
+
 ## Product Boundary And One Owning Model
 
 STDO retains one normative standards library and bounded subordinate manager and
@@ -281,9 +320,9 @@ without supplying the practitioner the expected classification.
 
 ## Milestones And Dependency Order
 
-Only M01 was execution-admitted by the exact owner selection above; it is now
-complete at logical-model scope. M02-M05 remain planned, unselected and
-unadmitted; none was admitted by ticket creation.
+M01 is complete at logical-model scope and M02 at source-method scope. Bounded
+M03 projection work is execution-admitted by the exact owner selection above. M04-M05 remain
+planned, unselected and unadmitted; none was admitted by ticket creation.
 Each is closure-bearing for the overall STDO candidate claim. A milestone is a
 bounded condition in this ticket, not an instruction to create another ticket,
 diagram, agent, or review round.
@@ -291,7 +330,7 @@ diagram, agent, or review round.
 | Milestone | Condition | Dependencies and proving evidence |
 |---|---|---|
 | **M01 — STDO Product use model** | Product capability and the single logical model satisfy M01-C1 and M01-C2 below, together with functional scenario conditions, C/J/O boundaries, and distribution/qualification role. | Complete at logical-model scope; see [M01 Current Result](#m01-current-result). Exact model and Product relation; required independent Product/invariant assessment; model cases for computed classification, judgment reuse, and conditional frame applicability. |
-| **M02 — Coherent governing method** | Selected R02-R07 changes are expressed at their exact owners, with applicability, direct Writer entry, conditional coordination/assessment, closure, and reuse coherent. | M01 for newly selected meaning. Exact changed/conserved relations, material counterexamples, and required judgments. Retain existing design obligations until an owning successor establishes sufficient coverage. T-028 retains its distinct owner. |
+| **M02 — Coherent governing method** | Selected R02-R07 changes are expressed at their exact owners, with applicability, direct Writer entry, conditional coordination/assessment, closure, and reuse coherent. | Complete at source-method scope on the five exact hashes in M02 And M03 Current Result. Independent semantic assessment passes; existing design obligations are conserved. T-028 retains its distinct owner and remaining projection/qualification scope. |
 | **M03 — Usable native projections** | Shared skills, guide, bootstrap/template/compression projections, and bounded STDO-owned checks implement the selected outcomes through actual supported native paths. | M02 only for relations whose law changes. Sufficient current authority permits independent native corrections to proceed earlier. Exact source/projection congruence and fresh positive/negative native-use evidence. |
 | **M04 — Complete shared consumer adoption** | The complete-adoption outcome tracked by T-029 is met under its actual governing law and usable through the selected shared path. | Consume T-029's exact work contract, implementation, and qualifying evidence for USE-09 and affected setup/resume relations. This gates that capability and aggregate closure; it does not gate unrelated M01-M03 work. |
 | **M05 — Qualified STDO candidate** | The exact joined STDO source and packaged native candidate satisfies every selected functional scenario condition, with no unresolved applicable non-closure condition. | Exact M01-M04 results, required owner/independent judgments, scenario-bound UAT and installed-path evidence, and material composition checks. Candidate qualification is distinct from publication and consumer adoption. |
@@ -306,14 +345,15 @@ by editing all standards or expanding the manager.
 ### Delivery Timeline
 
 The timeline gives dependency order and explicit overlap. Calendar dates are
-not yet estimated. Only M01 is complete. Every remaining stage is planned;
-the next implementation frontier is M02 alongside Representation T-009 M01. Stage
+not yet estimated. M01 and M02 are complete at their declared model and
+source-method scopes. Bounded M03 projection work is admitted; peer work retains
+its own execution state. Stage
 position does not itself admit an effect or add a review round.
 
 | Order | Owning work and task | Required result before dependent work relies on it |
 |---|---|---|
 | **0 — Complete: model** | T-030 M01, the thirteen use functions and fourteen model cases. | The accepted model and returned independent assessments are the retained starting point. Reopen only an affected relation with a material counterexample. |
-| **1 — Next: governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
+| **1 — Governing constraints and baseline, in parallel** | T-030 M02 applies R02-R07 at their owning standards. [T-028](../backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence) retains its distinct role-boundary clarification. [T-009 M01](../../../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) maps current capabilities and evidence to the use model. [T-029](../backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline) selects the shared complete-update contract alongside the affected method work. | Exact changed/conserved law, applicable frames and residual questions are explicit. The baseline identifies existing sufficient paths and demonstrated gaps at their actual owners; a tool is not invented merely because the model names a computation. |
 | **2 — Realize the selected gaps, in parallel where sufficient** | T-030 M03 updates shared native skills, guidance, templates and bounded STDO checks. T-009 M02 supplies only selected generic Axiom gaps. T-029 implements the selected shared complete-update path. | Each changed path consumes sufficient accepted law and its exact grant. Retained implementations/evidence may satisfy a relation without code changes. Native corrections under current sufficient law can start before unrelated M02 work closes. |
 | **3 — Refresh the representation and index** | T-009 M03 reconciles Representation's affected requirements/guidance, re-authors changed source-linked compression, and regenerates the index with the exact qualified mechanics. | The program, index, source routes, native entry and dependency identities agree with the exact successor source subject. Semantic source comparison and mechanical reproduction both pass; model prose or unchanged RC4 artifacts cannot supply this result. |
 | **4 — Qualify the actual paths and join the results** | T-009 M04 qualifies the combined native path. T-029's complete-update evidence feeds T-030 M04. T-030 M05 joins the STDO-owned results with applicable companion evidence. | Supported Codex/Claude outcomes, material refusals/combinations, exact installed paths and required independent judgments satisfy their own conditions. USE-09/complete-adoption claims require T-029; unrelated native qualification does not wait for that claim. A model review or green index alone cannot close this stage. |
@@ -661,9 +701,10 @@ observations separately from author self-review. The five supported issues
 and earlier closure/proof repairs are resolved; first-candidate handling was a
 clarification of existing grant/discriminator clauses, not a missing law.
 
-The drafted T-009 handoff is reconciled and remains execution-unadmitted.
-Overall T-030 remains active and incomplete for M02-M05, which are unselected
-and unadmitted. No executable classifier, native/installed-path qualification,
+At M01 completion, the reconciled T-009 handoff remained execution-unadmitted;
+its subsequent execution state belongs to its current owning ticket.
+At M01 completion, M02-M05 were unselected and unadmitted. Their subsequent
+selection is recorded above. No executable classifier, native/installed-path qualification,
 aggregate candidate qualification, release, or consumer adoption is established.
 
 The earlier candidate and assessment at `61a6330` and `acf8e79` remain historical
@@ -680,3 +721,121 @@ change the work records, including T-009; their current whole-file hashes are
 not the reviewed M01 subject. The prior assessment remains bound to its recorded
 candidate and does not qualify those later edits or implementation. The proof
 owns evidence, not another model or method law.
+
+## M02 And M03 Current Result
+
+M02 is **complete at source-method scope** after the separately returned
+independent semantic assessment and root's consumed disposition. Bounded M03
+projection work is underway under its separate Writer activation.
+M01 remains complete on its exact reviewed model. The five owning files below
+started as exact RC4 bytes at `e8a19fbcf60926818172a9eefd48f4fcafea157f`.
+Their frozen SHA-256 identities bind this source result, not an installed or
+released successor.
+
+| Owning source under `specification/standards/` | Frozen SHA-256 |
+|---|---|
+| SPEC_METHOD.md | `0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95` |
+| TICKET_METHOD.md | `2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91` |
+| REFERENCE_FRAME_METHOD.md | `6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7` |
+| STDO_REFERENCE_FRAME_BASELINE.md | `df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737` |
+| DESIGN_MODULE_METHOD.md | `95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f` |
+
+| Selected relation | Changed owner and conserved law | Model evidence route |
+|---|---|---|
+| R02 classification and re-entry | SPEC_METHOD's Computed Classification And Treatment owns exact C inputs/outputs, traversal, Public membership/value delta, coverage, unknowns and rule application. TICKET_METHOD consumes it; violation/local repair remains distinct from changed intended meaning. | MC01-MC06 and MC10 |
+| R03 closure | TICKET_METHOD's Condition-Based Closure And Reuse owns satisfied obligations, valid evidence/J/O and no active non-closure; SPEC_METHOD and the profile consume that conjunction. Review occurrence supplies no closure. | MC01 and MC11 |
+| R04 engagement | SPEC_METHOD permits sufficient direct Writer entry; Frame Method owns conditional applicability and required results; baseline overview, work result, coordinated transition, qualification and closure agree. T-028 retains the distinct explicit Executive nonmutation contribution. | MC01, MC09 and MC13; T-028 tiny-fixture falsifier |
+| R05 judgment and ruling continuity | TICKET_METHOD owns exact recorded residual J, concrete revisers, successor history and original O scope in existing carriers; the baseline consumes those results. Real independence and reserved decisions remain binding. | MC07-MC09 and MC12 |
+| R06 design and reconstruction | SPEC_METHOD's litmus and DESIGN_MODULE_METHOD 11D clarify selected-function scope and current-evidence reuse. Complete 4B and 5E sections, including the Ontology/three-view gate, are byte-conserved. | MC01, MC05, MC06 and MC11 |
+| R07 conditional controls | Frame Method binds applicability, missing/wrong-subject results and conjunction. Resource controls require explicit applicable frame selection; no core measurement gate, registry or new frame is introduced. | MC13 |
+
+Writer self-review applied those concrete cases and checked the complete changed
+clauses, including the baseline's former unconditional Executive/Reviewer
+projections. Read-only checks verified all five starting owners against RC4 and
+all five frozen hashes; Intent, Product, SCENARIOS and the accepted frame basis
+are unchanged. DESIGN_MODULE_METHOD 4B/5E and TICKET_METHOD's carrier, admission
+and independent-assessment clauses are byte-conserved. All 50 local Markdown
+and new source-clause references resolve; source whitespace checks pass.
+These are source/conservation checks, not native or executable qualification.
+
+`J-W-M02-01` is `/root/t030_m01_writer`'s bounded author judgment that this exact
+candidate implements the selected R02-R07 relations under the recorded grant
+and verified RC4 basis sufficiently to return for assessment. The changed-law
+map, exact sources, accepted model cases and checks above support it. A changed
+subject/basis/grant or a material counterexample to a changed or conserved
+relation requires affected reassessment. This is self-review, not independent
+assurance or acceptance.
+
+Reviewer `/root/t030_axiomatic_review` froze T030-M02-SEMANTIC-O1 from the
+prechange ticket, accepted M01 model and exact RC4 before candidate exposure;
+its returned `J-R-M02-01` reports **no actionable finding** on the frozen
+five-file subject. The Reviewer independently confirmed all five hashes before
+and after and the unchanged HEAD above. Its bounded evaluation finds C/rule
+identities, preserving Public repair versus intended re-entry, sufficient direct
+Writer and grants, conditional exact frame results/independence, actual J/O
+reuse, satisfied closure and scoped reconstruction conformant; DESIGN 5E is
+byte-conserved. This is independent source-method assessment under evaluation
+authority, not the author's J or native qualification. A material changed
+subject, basis, grant or concrete counterexample to a covered relation requires
+affected reassessment; no such unresolved finding was returned.
+
+Root consumed that result and returned the disposition to record M02 complete;
+the Writer projects the established result here and in GOALS without changing
+the reviewed standards. The admitted R02-R07 source conditions and required
+independent assessment are satisfied. That M02 assessment did not establish
+M03 source-digest/projection congruence or actual supported native-use evidence;
+the subsequent M03 result below owns those observations.
+Overall T-030 remains incomplete for M03-M05. No local commit, aggregate
+qualification, release, installed-basis change or adoption is claimed by this
+result recording.
+
+### Bounded M03 Bootstrap Self-Use Result
+
+Root's M03 Writer applied the candidate manager bootstrap only to the two
+admitted STDO targets. The [retained command and observations](../../comments/codex/20260906T043141Z_t030_m03_native_evidence/bootstrap-self-use.json),
+SHA-256 `9787120a5b97e8e7678e998839421bd1e018e3edf6147d7cbc38246dca00e7b5`,
+bind candidate constants
+`865976bc3726e27a3f48c6f895d9238b507d1ccf132cfc3cd3622e88db3313e1`.
+Both targets changed from
+`717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f`
+to the reviewed template bytes
+`e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e`.
+A repeated bootstrap dry-run reports `unchanged` for both; Product Definition
+bytes are conserved and exact RC4 remains operative. The result-recording
+Writer independently checked those identities against the current files and
+the starting checkpoint. The [existing source suite](../../comments/codex/20260906T043141Z_t030_m03_native_evidence/stdo-suite.txt)
+records 126 passing tests, including the source bootstrap parity/dogfood path.
+These observations supply this bounded self-use result; they do not close
+the remaining native-host or aggregate M03-M05 conditions. Changed targets,
+manager/template bytes, definition or a contrary repeat observation invalidate
+the affected result. T-029's shared updater implementation is now separately
+selected under its own ticket; it is not supplied by this bootstrap result.
+
+### M03 Source Projection And Native Observation Result
+
+The [retained M03 proof](../../comments/codex/20260906T043141Z_t030_m03_native_evidence/README.md)
+binds five shared native skills, guidance, five authority compressions, three
+templates and the manager bootstrap constant to the exact reviewed source.
+Author-independent `/root/t030_axiomatic_review` returned no actionable
+findings under `T030-M03-PROJECTION-O1` and its added mechanical oracle.
+The 21-file source/projection aggregate is
+`fef0bf59f335a4d23febb4bb00ee4059701124470c0c91048137b70f3aa44629`;
+the proof owns the individual subjects, source comparison and limitations.
+
+Actual repaired Codex and Claude status/resume runs selected their native
+candidate skills, verified exact RC4, reported the snapshot's completed versus
+candidate work truthfully, and stayed read-only. Both generic Git requests
+selected no STDO workflow. The first Claude stale-peer-state failure caused a
+bounded skill repair; the timed-out first Codex probe supplies no qualification
+credit. Commands, raw observations and both exact snapshot commits are retained
+in the proof's replayable bundle. These observations are reused only for their
+affected context/resume/status relations and generic-request nontrigger.
+
+The shared projections are implemented and independently source-compared;
+126 existing STDO tests and the bounded bootstrap/native observations pass.
+M03 remains open for the other required functional native paths. T029 supplies
+the separate complete-update work, T009 supplies successor compression/index
+and combined native qualification, and M05 retains aggregate qualification.
+No unobserved scenario, new installed constitutional basis, release or consumer
+adoption is inferred from this result. Local commit follows the owner's
+standing instruction and does not widen these claims.

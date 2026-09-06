@@ -1,0 +1,23 @@
+**T-030 remains active: M01 is complete; M02 and bounded M03 are admitted candidate work.** Applied the native [stdo-status skill](/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t030-codex-repaired-5fajawqq/subject/.agents/skills/stdo-status/SKILL.md).
+
+The checkout is clean and detached at `ddfaad40`. It remains a qualification snapshot. The selected definition, `urn:stdo:product-definition:specification-methodology`, verifies installed and valid against `stdo://releases/v2.5.0-rc.4/`, with no failures and matching manifest SHA-256 `4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e`.
+
+- **Complete:** M01’s logical model and required independent assessments. Current PRODUCT and SCENARIOS bytes still match their reviewed hashes. The owner withdrew the former cost condition; it was never empirically satisfied.
+- **Candidate:** Changed owning standards, compressions, templates, guidance and five native skills are present. All four affected compressions have stale source-digest bindings. No returned M02 assessment or completed T-030 native qualification result was located. The interrupted execution’s final outcome remains unverified.
+- **Peer evidence:** T-009’s current carrier is **active**, with M01 admitted and M02 conditionally bounded. Retained records report successful RC4 mechanics, map reproduction and refusal checks; they do not establish native-host completion. Older backlog references are stale. `e8a19fbc` identifies the starting checkpoint, separately from later admission records and this candidate snapshot.
+- **Remaining boundary:** M04/M05 remain planned and unadmitted. T-029’s complete-update implementation remains unadmitted; T-028 remains deferred and conditional. Neither creates a blanket gate for unrelated native work.
+
+**Next already-authorized action:** finish and return the existing M02 R02–R07 candidate with its changed/conserved-law evidence for the independent assessment already required by [T-030’s admission](/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t030-codex-repaired-5fajawqq/subject/specification_methodology/.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md:206). Preserve M01 and refresh only affected results.
+
+Commands used included:
+
+```sh
+stdo status --definition specification_methodology/stdo_default.json --verify
+stdo resolve stdo://releases/v2.5.0-rc.4/standards/authority_compressions/stdo_bootstrap.md
+git --no-optional-locks status --short --branch
+git rev-parse HEAD
+git log -3 --format='%H %s'
+git show --stat --oneline HEAD
+```
+
+Also used `rg`, `cat`, `sed`, `nl`, and read-only `python3` JSON, hash and diff checks. No tests were rerun; files and Git state remain unchanged.

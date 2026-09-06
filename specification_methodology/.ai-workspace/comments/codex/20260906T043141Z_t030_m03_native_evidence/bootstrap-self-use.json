@@ -1,0 +1,52 @@
+{
+  "authority": "T030 M03 bounded progressive use; direct owner implementation instruction",
+  "operative_basis": "stdo://releases/v2.5.0-rc.4/",
+  "candidate_constants_sha256": "865976bc3726e27a3f48c6f895d9238b507d1ccf132cfc3cd3622e88db3313e1",
+  "command": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-m",
+    "stdo_toolchain.cli",
+    "bootstrap",
+    "--definition",
+    "stdo_default.json"
+  ],
+  "applied": {
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/stdo_default.json",
+    "dry_run": false,
+    "targets": [
+      {
+        "action": "updated",
+        "target": "/Users/jim/src/apps/specification_methodology/specification_methodology/AGENTS.md"
+      },
+      {
+        "action": "updated",
+        "target": "/Users/jim/src/apps/specification_methodology/specification_methodology/CLAUDE.md"
+      }
+    ]
+  },
+  "confirmed": {
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/stdo_default.json",
+    "dry_run": true,
+    "targets": [
+      {
+        "action": "unchanged",
+        "target": "/Users/jim/src/apps/specification_methodology/specification_methodology/AGENTS.md"
+      },
+      {
+        "action": "unchanged",
+        "target": "/Users/jim/src/apps/specification_methodology/specification_methodology/CLAUDE.md"
+      }
+    ]
+  },
+  "targets": {
+    "AGENTS.md": {
+      "before_sha256": "717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+      "after_sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "CLAUDE.md": {
+      "before_sha256": "717205bfed56ae6e4c496b7b5dc6ab5779fbc599ed02d929fbd064750f7ba32f",
+      "after_sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    }
+  },
+  "definition_unchanged": true
+}

@@ -1,0 +1,225 @@
+{
+  "actor": "/root/t030_m01_review",
+  "actual_task_join": {
+    "exact_bytes": true,
+    "exit": 0,
+    "sha256": "9087a43dfea561a1545801f5b142678dc891fe3fbe4cf9a7ec37b0a4dc403e9a"
+  },
+  "axiom_inventory": {
+    "members": [
+      {
+        "kind": "symlink",
+        "path": ".agents/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40"
+      },
+      {
+        "kind": "symlink",
+        "path": ".claude/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40"
+      },
+      {
+        "kind": "file",
+        "path": "build_tenants/core/code/ac.py",
+        "sha256": "dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672"
+      },
+      {
+        "kind": "file",
+        "path": "skills/axiomatize-corpus/SKILL.md",
+        "sha256": "dcd2294e7de7ae5bfb4a70b3980594a36f9a3b28b42236523a86cbc42aa7babe"
+      },
+      {
+        "kind": "file",
+        "path": "skills/axiomatize-corpus/agents/openai.yaml",
+        "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+      },
+      {
+        "kind": "file",
+        "path": "skills/axiomatize-corpus/references/output-contract.md",
+        "sha256": "fd0996009b890e464399863e1f16bb9b9ca7820cb5aa04e95244618849983694"
+      },
+      {
+        "kind": "file",
+        "path": "skills/axiomatize-corpus/references/program.schema.json",
+        "sha256": "61c9d26fabb1d844f643712632f6a6551a1c6f7f8ddfef604673e57b7c6b3b7b"
+      }
+    ],
+    "sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6"
+  },
+  "claim": "T009 M01 actual RC4 mechanics and source-route baseline",
+  "existing_tests": [
+    {
+      "exit": 0,
+      "mode": "normal",
+      "test_file_sha256": "7a4e9e2c3806591499927cce31f342f81357f1602c321260e981534f7463b03f"
+    },
+    {
+      "exit": 0,
+      "mode": "optimized",
+      "test_file_sha256": "7a4e9e2c3806591499927cce31f342f81357f1602c321260e981534f7463b03f"
+    }
+  ],
+  "frame_basis_distinction": {
+    "current_source": "c4cfe1f9ee636214f3a359465812e629239e38a88758ac4b1d6356aeead715f3",
+    "released_construction": "e55baf9e244be377140374636b2ec8bde361aec38ee27f260daba02baef2342e",
+    "source_skill_at_start_matches_release": true
+  },
+  "head_at_execution": "e8a19fbcf60926818172a9eefd48f4fcafea157f",
+  "product_status": {
+    "axiom_indexer": {
+      "basis": "stdo://releases/v2.5.0-rc.4/",
+      "definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "failures": [],
+      "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+      "valid": true
+    },
+    "stdo_representation": {
+      "basis": "stdo://releases/v2.5.0-rc.4/",
+      "definition_id": "urn:stdo:product-definition:stdo-representation",
+      "failures": [],
+      "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+      "valid": true
+    }
+  },
+  "python": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "refs": {
+    "refs/tags/axiom_indexer/v2.5.0-rc.4": {
+      "commit": "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2",
+      "tag_object": "4750e09639c118f1097d4ea046fe23d26713f96b",
+      "type": "tag"
+    },
+    "refs/tags/stdo_representation/v2.5.0-rc.4": {
+      "commit": "a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2",
+      "tag_object": "d85d25482f9d9132147bea189b0fe0aca1929dff",
+      "type": "tag"
+    }
+  },
+  "refusals": [
+    {
+      "case": "duplicate_identity",
+      "codes": [
+        "duplicate_identity",
+        "noncanonical_order"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "dangling_ref",
+      "codes": [
+        "dangling_ref"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "unresolved_fragment",
+      "codes": [
+        "unresolved_fragment"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "ungrounded",
+      "codes": [
+        "empty_set"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "broken_residual",
+      "codes": [
+        "unresolved_fragment"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "escaped_binding",
+      "codes": [
+        "binding_escape"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    },
+    {
+      "case": "duplicate_binding",
+      "codes": [
+        "input_error"
+      ],
+      "exit": 2,
+      "stale_map_removed": true
+    },
+    {
+      "case": "unresolved_binding",
+      "codes": [
+        "unresolved_uri"
+      ],
+      "exit": 1,
+      "stale_map_removed": true
+    }
+  ],
+  "representation_inventory": {
+    "members": [
+      {
+        "kind": "symlink",
+        "path": ".agents/skills/stdo-representation",
+        "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb"
+      },
+      {
+        "kind": "symlink",
+        "path": ".claude/skills/stdo-representation",
+        "sha256": "92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb"
+      },
+      {
+        "kind": "file",
+        "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/axiomatic-program.json",
+        "sha256": "90400806e79cd09f350f285000c8579af81f621cdbe3753125ed9d74bcb6b466"
+      },
+      {
+        "kind": "file",
+        "path": "build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.4/logical-constraint-map.json",
+        "sha256": "5237339d919d352944c42ea201ae49c48b885db02255f5ca1a67173c2b0c1c3f"
+      },
+      {
+        "kind": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "1896829cf06a4fba45f6e8092fc54cf8e958ca5d15ba84f5542eaef966f2a4ab"
+      },
+      {
+        "kind": "file",
+        "path": "skills/stdo-representation/agents/openai.yaml",
+        "sha256": "fec4aebb2dc53c4b9d744d9bacd0ff0eec276fefcbd4481e5c839e1695949907"
+      },
+      {
+        "kind": "file",
+        "path": "skills/stdo-representation/references/claude.md",
+        "sha256": "57845ff31e6956f4ef89f028d7a2cae55eec4ce0d8bd10d5f318d7b97b483f9d"
+      },
+      {
+        "kind": "file",
+        "path": "skills/stdo-representation/references/codex.md",
+        "sha256": "d2a1e6e474329931c2b55fbe4f1a983200e64cb585480a2eeab733c3ed81d569"
+      }
+    ],
+    "sha256": "32dd04f5644a05c04c844a28d1978d1c1ffdd5e7f20473b7d7f8626e1e07e830"
+  },
+  "reproduction": {
+    "exit": 0,
+    "map_byte_equal": true,
+    "map_file_sha256": "5237339d919d352944c42ea201ae49c48b885db02255f5ca1a67173c2b0c1c3f",
+    "map_intrinsic_sha256": "sha256:bdfe3c09fe196a7c1f1634d0441c616e96049961356d41f85bdead2d3a0fa8ce",
+    "program_unchanged": true,
+    "status": "valid"
+  },
+  "result": "mechanics_sufficient_for_selected_M01_dependencies",
+  "role": "Writer/Worker",
+  "skill_archive_path_probe": {
+    "archive_from": "refs/tags/axiom_indexer/v2.5.0-rc.4",
+    "declared_project_subtree_executable_exists": true,
+    "disposition": "Representation M03 routing repair; use exact declared Axiom subtree for this baseline",
+    "documented_executable_exists": false
+  },
+  "start_checkpoint": "e8a19fbcf60926818172a9eefd48f4fcafea157f"
+}

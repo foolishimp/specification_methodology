@@ -3,7 +3,9 @@
 This guide exercises the published coordinated STDO Representation
 `2.5.0-rc.4` compression and index against exact Source STDO
 `v2.5.0-rc.4`. It is not constitutional authority. Accepted project frame
-basis revision 16 governs this workflow.
+basis revision 16 governs work on this source project. The mutable native
+guidance is a T-009 working candidate; the RC4 program and map remain unchanged.
+External callers resolve their own Product Definition and accepted frame basis.
 
 ## 1. Verify the dependencies
 
@@ -81,10 +83,11 @@ portable Product member.
 
 ## 3. Use the native skill
 
-The native skill is part of the exact published RC4 cut and passes the project
-checker. Published STDO Representation `2.5.0` RC1 remains the accepted
-Product; RC4 publication identifies a qualified release subject but does not
-accept it. Repository discovery from mutable source remains a convenience;
+The immutable RC4 tag contains the published native skill. The mutable source
+skill contains the T-009 routing and evidence-consumption candidate and is not
+qualified by RC4's frozen member inventory. Published STDO Representation
+`2.5.0` RC1 remains the accepted Product; RC4 publication does not accept that
+later Product subject. Use the source candidate under its exact work grant;
 released use binds the immutable RC4 tag. Native discovery remains:
 
 Codex discovers:
@@ -106,8 +109,11 @@ agent to use `stdo-representation` for a bounded task. It should:
 2. select material frame URIs;
 3. show each frame URI, purpose, and source route;
 4. re-enter Source STDO only when required;
-5. preserve its Executive, Worker, or Reviewer boundary; and
-6. report unresolved residuals.
+5. apply the caller's sufficient role/grant and preserve any selected Executive,
+   Worker, or Reviewer boundary;
+6. recover applicable owner-supplied facts, judgments and rulings from their
+   existing carriers, retaining unknowns and affected invalidation; and
+7. return satisfied conditions, evidence, outstanding obligations and residuals.
 
 The agent, not code, owns frame selection.
 
@@ -189,10 +195,11 @@ Revision 15 remains the historical construction and prepublication basis. The
 atomic publication did not arise from revision-16 frame acceptance, and frame
 acceptance does not accept the immutable RC4 Product subject.
 
-The immutable skill intentionally retains the revision-15 basis and decision
-digests carried by RC4. Resolve those bytes within the immutable Representation
-tag. In a continuing source checkout, use the overlay-bound revision 16 for
-constitutional work; do not rewrite the skill without a higher RC.
+The immutable skill retains the revision-15 basis and decision digests carried
+by RC4. Resolve those historical bytes within the immutable Representation tag.
+The current source skill distinguishes them from the overlay-bound revision 16
+used for source work. It remains a working candidate until the exact successor
+cohort qualifies and is published; no immutable RC4 member is rewritten.
 
 ## Historical paths
 

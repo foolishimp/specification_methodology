@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: delivery goal open; progressive-use instructions recorded
+Status: delivery active; T-030 M02 complete and bounded M03 projections underway
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -24,19 +24,20 @@ evidence. No fleet or successor release ordinal is selected by this goal.
 - [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline)
   owns the delivery sequence and STDO work: governing method, shared native
   projections, complete-update evidence and aggregate qualification. Its M01
-  model result is complete; its later milestones remain open.
-- [Representation T-009](../../stdo_representation/.ai-workspace/tickets/backlog/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
+  model and M02 source-method results are complete; M03-M05 remain open.
+- [Representation T-009](../../stdo_representation/.ai-workspace/tickets/active/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
   owns the combined Indexer/Representation work. Its first baseline can run
   alongside T-030 M02; each Product keeps its own contracts and results.
 - [T-029](../.ai-workspace/tickets/backlog/T-029-complete-consumer-cohort-adoption.md#delivery-timeline)
   owns shared complete consumer updating. [T-028](../.ai-workspace/tickets/backlog/T-028-make-executive-mutation-prohibition-explicit.md#delivery-sequence)
   retains its distinct conditional role-boundary change. Neither becomes an
   unconditional gate for unrelated native improvements.
-- The current work-record refinement is recorded in
-  [T-030](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#progressive-use-selection).
-  The next implementation frontier is T-030 M02 and T-009 M01. Their exact
-  execution grants and current state remain in the tickets; a scheduled step
-  is not a claim that execution is admitted or complete.
+- [T-030's current admission](../.ai-workspace/tickets/active/T-030-deliver-proportionate-stdo-product-use.md#m02-implementation-and-bounded-m03-admission)
+  selects actual owning-standard construction and bounded M03 native projections
+  under the owner's implementation instruction. M02's exact source and required
+  independent assessment now satisfy its bounded conditions. The accepted M01
+  model and exact RC4 governing basis remain conserved. Peer execution grants
+  and current state remain in their owning tickets.
 
 ## Executive Direction
 

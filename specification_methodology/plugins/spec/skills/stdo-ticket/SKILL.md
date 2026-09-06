@@ -27,6 +27,13 @@ that selection grants no ticket-state authority.
    current run, or when the user explicitly requests that durable record. Do
    not create a ticket merely because execution needs a run-scoped contract.
 4. Identify the affected Product boundary and first changed layer.
+   Consume source-bound computed owner/layer routes, complete relevant Public
+   membership/value comparison and accepted-design trace coverage where
+   available. Keep absent mappings or evidence explicitly unknown. Reuse a
+   still-applicable classification judgment; record any residual judgment and
+   its supporting facts once in this carrier. A nonconforming candidate can
+   require repair under unchanged law; it does not itself select requirement
+   repricing.
 5. Select the smallest lawful change class: `goal_reprice`, `intent_reprice`,
    `product_reprice`, `requirement_reprice`, `design_reframe`, or
    `realization_refactor`.
@@ -54,7 +61,16 @@ that selection grants no ticket-state authority.
 9. Keep commentary and generated summaries subordinate to the ticket. Assign
    priority only under Product-owned policy and decision authority. When the
    STDO engagement profile is adopted, do not turn Reviewer technical severity
-   directly into Executive Product priority.
+  directly into Executive Product priority.
+
+For an authorized state update, evaluate the ticket's actual closure condition:
+satisfied obligations, valid applicable evidence, required judgments and owner
+rulings, and no active non-closure condition. Review checks that evidence when
+required; occurrence of review is not the closing event. Record reusable
+judgments with their question, subject/basis, support, actor/authority,
+conclusion, uncertainty and revising observation. Preserve an owner's original
+ruling separately from interpretation and invalidate only affected support.
+Use this ticket's existing proof/result routes; do not create a judgment registry.
 
 ## Return
 

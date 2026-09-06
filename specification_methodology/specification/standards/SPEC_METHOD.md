@@ -1175,6 +1175,81 @@ upstream constitutional surface is changing.
 
 The absence of a declared change class is process drift.
 
+### Computed Classification And Treatment
+
+Intake supplies one reusable classification result rather than requiring each
+role to reconstruct the same facts. `C` denotes reproducible facts and declared
+rule application; `J` denotes residual semantic or materiality judgment; `O`
+denotes a ruling reserved to its actual owner. These annotations grant no
+authority and introduce no calculus kind, runtime, classifier interface, or
+mandatory document.
+
+The explicitly selected source, worksite, or qualification capability produces
+C over the exact request and desired outcome, known targets and effects,
+operation grant and work lifetime, Product Definition and governing basis,
+baseline and available candidate, declared relations, accepted design and
+trace bindings, evidence, and applicable rules. Its output identifies the
+producer and procedure revision, inputs, result, scope, source routes,
+reproduction relation, unknowns and invalidators. Missing candidate or evidence
+is an input state, not a claim that nothing changed.
+
+The computed result must expose:
+
+1. **Authority traversal.** Follow explicit source, ownership, dependency,
+   composition and projection declarations from the affected targets and
+   effects. Identify each reached layer and owner, its exact basis and
+   changed/unchanged/unknown relation, the traversed edges, and the unresolved
+   frontier. Include root, authority and grant changes even when Public bytes
+   are equal. An absent edge does not prove irrelevance; undeclared or
+   semantically uncertain materiality remains J.
+2. **Public delta.** Enumerate the complete relevant serialized member universe
+   under its owning declaration and applicable projection, including helper and
+   generated dependencies. Report added and removed identities and every
+   retained member with changed typed value or bytes, with exact before/after
+   values. A rename is removal plus addition unless its owner supplies an
+   identity-preserving relation. Missing candidate, incomplete enumeration,
+   ambiguous identity or unavailable projection leaves the affected delta
+   unknown; membership equality alone proves no value equality.
+3. **Accepted-design coverage.** Join changed bytes and relations to explicit
+   accepted scope, traces and acceptance evidence. Distinguish covered,
+   missing, stale, ambiguous and outside-scope evidence. A filename, listed
+   artifact or digest alone establishes no accepted coverage. Current trace
+   coverage is a computed fact; residual semantic sufficiency remains J.
+4. **Rule-determined treatment.** Apply only declared rules with sufficient
+   input facts, recording their owners, matched predicates and consequences.
+   Expose the smallest lawful re-entry, next action, applicable evidence or
+   assessment, reserved ruling and carrier lifetime, with any conflict or
+   missing premise still unresolved. A label or filename cannot select the
+   route. When rules settle the question, invent no residual judgment.
+
+A Public delta or other nonconformance does not itself require changing the
+governing contract. If that contract remains sufficient for the authorized
+outcome, reject or locally repair the candidate within its grant. Re-enter
+the actual governing owner when the explicitly selected desired outcome
+requires changed meaning or an applicable assessment establishes governing
+insufficiency. C determines that consequence only from sufficient declared
+premises; unresolved intended meaning or necessity is J and any reserved
+decision remains O. Candidate behavior cannot author its own target law.
+
+Unknown treatment withholds dependent reliance or promotion, not unrelated
+authorized work. An existing bounded construction or evidence grant may permit
+the cheapest useful discriminator, including obtaining the first candidate,
+without asserting that the candidate is conformant. It carries its own exact subject,
+territory, operations and stop conditions. Update the affected C result before
+dependent effects or promotion rely on newly available evidence. Correct a
+mistaken route at its smallest affected owner; preserve the original cause,
+attempted subject, observed effect state and valid progress. Retry requires
+the applicable outcome, authority and safe-recovery conditions; an unknown
+effect state cannot be silently treated as no effect.
+
+A new role, conversation or resumption reuses valid C after checking exact
+applicability. Changed request, candidate, basis, owner/root relation,
+projection, design trace/acceptance, rule, configuration or material evidence
+invalidates its affected claims before reliance. Preserve predecessor and
+successor identities, changed inputs, surviving facts and affected J
+dependencies; recompute the wider frontier where independence is unproved.
+`TICKET_METHOD.md` owns the existing carrier and recorded-J/O continuity rules.
+
 ---
 
 ## Consistency Gate Rule
@@ -1188,6 +1263,12 @@ For the declared change span, the framework must prove:
 - tests and qualification prove the active intended behavior rather than stale precedent
 
 If that proof is missing, the change remains open even if one local artifact already looks correct.
+
+Closure requires every applicable declared obligation satisfied by valid,
+applicable evidence and every required judgment or ruling, with no active
+non-closure condition. `TICKET_METHOD.md` owns work-state recording and reuse.
+A review event, passing aggregate, completed artifact or status change cannot
+substitute for that conjunction.
 
 When a code/test mismatch appears during ticketed work, implementation behavior
 is evidence but not authority. The mismatch is reconciled through the admitted
@@ -1409,6 +1490,16 @@ Human ceremony is not required at every transition when the governing basis,
 affected cone, decision envelope, and re-entry conditions are already
 accepted. This delegation does not weaken direct-human acceptance where
 Product or release law requires it.
+
+When one capable context has sufficient existing work authority, exact intake
+and operation grant, it may enter directly as constructor or Writer. No
+Executive activation is required solely to appoint that Writer. The applicable
+frame configuration selects coordination when material contexts, authority,
+capability or required independence need it; a role or frame name alone does
+not create that need. Direct entry preserves execution-contract admission,
+the smallest lawful carrier, required assessment and reserved decisions. It
+permits bounded work and condition-based result recording, not self-acceptance
+at a boundary owned elsewhere.
 
 ### Proportional Disposition
 
@@ -2208,6 +2299,14 @@ The purpose of ADRs and design documents is therefore not decorative explanation
 Reconstruction sufficiency also depends on ambiguity governance. If a boundary
 can be crossed only by hiding a major unresolved ambiguity, the upstream surface
 is not yet sufficient even if some downstream artifact can be produced.
+
+For an already accepted relation, reconstruction may reuse its exact current
+basis and sufficient evidence after checking applicability and invalidation.
+The claim determines the reconstruction span; a local selected function does
+not require recreating the whole Product. New material counterexamples still
+challenge the affected relation. `DESIGN_MODULE_METHOD.md` owns design-view
+coverage, its material-change gate and unchanged-boundary reuse; this litmus
+does not waive that gate or require recreating unchanged accepted views.
 
 ## Design Rule
 

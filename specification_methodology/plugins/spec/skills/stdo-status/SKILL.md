@@ -22,8 +22,22 @@ read-only.
    exact checkpoint/workspace,
    accepted design, proof, and exact review results. Comments and dashboards
    are projections.
+   Resolve each reported ticket to its unique current authoritative carrier,
+   including a referenced peer ticket. A historical link, predecessor section
+   or another ticket's summary cannot establish its current lane or admission.
+   If the carrier is unavailable, report that state as unverified or omit the
+   adjacent claim. Distinguish the starting source commit from the later
+   admission record and the candidate/evidence checkpoint; do not assign an
+   uncommitted decision to the starting commit.
 2. Compare with the user's baseline, last accepted checkpoint, or prior durable
    work state. Without one, report current state without inventing a delta.
+   Obtain file/checkpoint identities, declared state and evidence freshness
+   from their actual tools and carriers. Report explicit unknowns where those
+   outputs are unavailable. Judge claim sufficiency separately; do not narrate
+   missing computation as if it ran or infer work truth from basis integrity.
+   Reuse supported judgments and owner rulings while their exact applicability
+   holds. On resume, refresh changed inputs and affected results only; preserve
+   unrelated valid progress and the original owner decision.
 3. Separate accepted Product movement, active construction, prerequisite
    readiness, preservation/regression evidence, rejected or superseded churn,
    blockers, uncertainty, drift, and next authorized action.
@@ -35,6 +49,14 @@ read-only.
    Executive separation. Use only Product-bound scales, cutoff, and hard stops.
    Never infer percentage completion from prose, commits, test counts, or
    review counts.
+
+For an interrupted or refused operation, report the requested outcome,
+observed effect state and the effect owner's retry rule separately. No observed
+effect alone does not mean the request is complete or that retry is needed.
+Keep unknown effects unknown and withhold repetition until its rule permits it.
+For completion, evaluate satisfied obligations, current evidence, required
+judgments/rulings and active non-closure conditions. Report missing conditions
+without making a fresh review an automatic gate.
 
 ## Return
 

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3
+source_digest: 2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-01
+generated_at: 2026-09-06
 stale_if_source_digest_changes: true
 ---
 
@@ -107,6 +107,27 @@ durable ticket, a sprint-local entry, or an intake draft.
   ticket.
 - A ticket closes only when its closure law is met and every non-closure
   condition is avoided or explicitly repriced.
+  Every applicable obligation must actually be satisfied by valid exact
+  evidence, required judgments and owner rulings; evidence presence and review
+  occurrence alone do not close it. An authorized Writer may record a
+  sufficient bounded result directly when no independent or reserved condition
+  applies. Preserve applicable sprint-close and design-method obligations.
+- Triage consumes the source-bound computed walk owned by
+  `SPEC_METHOD.md#computed-classification-and-treatment`; missing coverage
+  evidence is unknown, not proof that a requirement or design is absent.
+  Candidate nonconformance permits repair/rejection under sufficient unchanged
+  law; changed desired meaning or established insufficiency re-enters its owner.
+- Record a reusable residual judgment once in the existing carrier with its
+  question, exact subject/basis, supporting C/evidence, actor/authority,
+  conclusion/scope, uncertainty and revising observation. A rule-settled
+  question needs no invented J. Preserve original owner rulings and their
+  conditions separately from interpretations; consume sufficient existing
+  authority without asking for it again. Neither record creates authority.
+- Reuse valid support across roles and resumption. A material invalidator
+  revises affected claims; preserve unrelated support only where independence
+  is established. Shared C does not replace a required assessor's independent
+  acquisition and judgment. Use the existing carrier lifetime and proof route,
+  with no new judgment registry or ticket per decision.
 - Review findings must cite current authority and code/proof paths, not only
   historical commentary.
 - Prompt migration work must update tickets when the prompt contract itself is

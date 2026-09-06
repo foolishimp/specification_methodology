@@ -4,7 +4,7 @@
 - title: Deliver qualified native STDO use through Axiom Indexer and STDO Representation
 - type: feature
 - ticket_category: ordinary
-- status: backlog
+- status: active
 - goal: qualified-proportionate-native-stdo-use
 - change_intent: >-
     Baseline and improve the combined Axiom Indexer-to-STDO Representation
@@ -14,7 +14,7 @@
 - re_entry_point: specification/GOALS.md#current-state
 - triaged_at: 2026-09-05T07:29:34Z
 - created_at: 2026-09-05T07:29:34Z
-- updated_at: 2026-09-06T04:00:11Z
+- updated_at: 2026-09-06T04:30:06Z
 - owner: stdo_representation
 - contributing_product: axiom_indexer
 - pen_holder: codex
@@ -22,9 +22,10 @@
 - sequence: second_workstream_after_STDO_in_the_user_requested_strategy
 - affected_boundary: Axiom Indexer mechanical dependency and STDO Representation compression, native guidance, context use, and qualification
 - intake_source: direct_user_instruction_2026-09-05_create_combined_second_ticket_using_T-030
-- work_authorization: direct_owner_delivery_planning_and_progressive_use_refinement_only
-- execution_contract_state: drafted
-- execution_status: not_admitted
+- work_authorization: direct_owner_implementation_M01_M02_reuse_and_bounded_M03_guidance
+- execution_contract_state: M01_M02_complete_M03_current_law_guidance_admitted
+- completed_milestones: M01 M02
+- execution_status: M03_guidance_candidate_ready_successor_compression_and_M04_outstanding
 - planning_status: native_delivery_timeline_and_progressive_use_recorded
 - target_release: unselected_successor_after_v2.5.0-rc.4
 - dependencies: specification_methodology/T-030 for changed STDO meaning and shared entry; specification_methodology/T-029 for complete consumer adoption; claim-specific only
@@ -80,7 +81,7 @@ recorded completed RC4 work. The subsequent planning selection now records the
 native delivery outcome in [Representation Goals](../../../specification/GOALS.md#current-state)
 and the bounded mechanical contribution in
 [Axiom Goals](../../../../axiom_indexer/specification/GOALS.md#current-goal).
-The implementation contract remains drafted. Each selected increment uses the
+That planning did not admit implementation. Each selected increment uses the
 smallest lawful owning re-entry and an exact work grant; Intent is conserved
 unless a demonstrated scope change requires its own upstream decision.
 
@@ -114,6 +115,57 @@ authorizes Writer `urn:openai:codex:stdo-progressive-use-writer` to make the
 operating loop explicit here. The delivery implementation remains drafted;
 its next actual bounded activation records selection and admission before
 dependent effects under the inherited authority.
+
+### Implementation Admission And Writer Activation
+
+At 2026-09-06 04:18:41 UTC, the direct owner instructions "ok implement" and
+"actually start the work stop circling it" select actual delivery. Executive
+`/root` delegates Writer/Worker `/root/t030_m01_review`, activation
+`urn:openai:codex:t009-m01-baseline-writer`, over the explicit Axiom Indexer to
+STDO Representation relation. The actor's earlier T-030 assessment is history;
+this activation supplies construction and self-checking, not independent
+assessment of its own results.
+
+The pre-existing contract is this backlog ticket at Git checkpoint
+`e8a19fbcf60926818172a9eefd48f4fcafea157f`. The admitted first increment is M01:
+exercise exact current RC4 skills, source routes and immutable Axiom mechanics
+on the actual T-030/T-009 work; bind the thirteen functions and fourteen model
+cases to sufficient current paths or concrete gaps; retain actual computed
+facts and existing judgment/owner carriers. The grant includes activation and
+results in this ticket, minimal Representation/Axiom Goals, and existing
+Product-owned proof/dogfood surfaces. It creates no duplicate Indexer tracker.
+
+M02 is bounded to the resulting mechanical dependency: reuse sufficient exact
+mechanics with reproducible positive/refusal evidence, or repair a demonstrated
+generic defect under Axiom-owned requirement/design/code and meaningful tests.
+No STDO-specific classifier, Public/design analyzer, semantic frame selector,
+executor, or new framework is admitted. Representation M03 gaps return to
+Executive for the already authorized next selection. This activation changes
+no STDO file, immutable release, Product Definition, accepted frame basis,
+publication or consumer adoption, and performs no commit before integration.
+
+The source-project grants and current revision-16/revision-8 frame bases govern
+construction. Released RC4 artifacts retain their exact historical construction
+coordinates. The durable result is this ticket joined to the M01 baseline
+record under `dogfood/t009-m01/`; neither a passing tool nor this work status
+accepts either Product or qualifies both native hosts.
+
+### M03 Current-Law Guidance Activation
+
+After consuming the concrete baseline observations, Executive `/root` activates
+the same Writer for the demonstrated M03 source guidance repair under the
+standing delivery grant. The exact work is the failed full-archive root route,
+released construction basis versus current caller basis, and affected native
+requirements/instructions for scoped C/J/O consumption. Representation source
+skill, README, Quickstart and native requirements join this ticket and proof as
+write territory. The actor remains an author and claims no independent verdict.
+
+The immutable RC4 program, map, source-corpus record, release inventory and refs
+are conserved. Changed source guidance is an unpromoted working candidate.
+Semantic compression refresh requires the exact authorized successor Source
+STDO cut after T030's owning-method change freezes; it is not admitted by
+retargeting RC4's existing program. No new native engine, Product member,
+accepted frame basis, publication or adoption is introduced by this repair.
 
 ## Exact Current Basis And Product Relation
 
@@ -259,8 +311,11 @@ is accepted. The following is this ticket's realization/evidence map only.
 
 ## Milestones And Dependency Order
 
-All milestones are planned, not execution-admitted. They are conditions within
-this one work record, not instructions to create an artifact or actor per row.
+M01 is execution-admitted by the bounded activation above. M02 is limited to
+its demonstrated mechanical dependencies. M03's current-law guidance repair is
+selected by its subsequent activation; successor compression and M04 remain
+outstanding under their exact dependent inputs.
+These are conditions within one work record, not an artifact or actor per row.
 
 | Milestone | Required condition | Dependency and evidence |
 |---|---|---|
@@ -278,13 +333,13 @@ thirteen-scenario model is already ratified law.
 
 ### Delivery Timeline
 
-All stages below are planned. They expand the existing milestones into the
-next tasks and their dependent results; they do not prescribe calendar dates
-or add an artifact, actor or review for every row.
+The activations above select the first stage, sufficient mechanical reuse and
+the demonstrated M03 native guidance repair. Remaining stages identify the dependent work; they do not
+prescribe calendar dates or add an artifact, actor or review for every row.
 
 | Order | Owning work and task | Completion and next handoff |
 |---|---|---|
-| **1 — Next: M01 baseline** | Map the thirteen STDO use functions and their model cases to existing native paths, exact Axiom capabilities, owner-supplied C/J/O inputs and retained evidence. Record supported relations, missing evidence and actual gaps in this ticket's existing proof surface. | Every selected outcome has its actual owner, sufficient current path or specific gap, and required qualification observation. This can run alongside T-030 M02 using current RC4; changed-law claims remain identified as successor work. |
+| **1 — M01 baseline supplied** | Map the thirteen STDO use functions and their model cases to existing native paths, exact Axiom capabilities, owner-supplied C/J/O inputs and retained evidence. Record supported relations, missing evidence and actual gaps in this ticket's existing proof surface. | Every selected outcome has its actual owner, sufficient current path or specific gap, and required qualification observation. This runs alongside T-030 M02 using current RC4; changed-law claims remain identified as successor work. |
 | **2 — M02 mechanics, only where the baseline finds a gap** | Reuse the exact resolver, validator, diagnostics, map generator and joiner. For a demonstrated generic gap, select its Axiom-owned requirement/design/realization change and meaningful positive/refusal checks. Route source/worksite classification or effect facts to their own owners. | The selected mechanical dependency is sufficient and qualified on exact bytes. Existing sufficient mechanics may satisfy this stage without code changes. Shared STDO guidance and T-029 contract work can proceed in parallel within their own territory. |
 | **3 — M03 representation, index and native guidance** | Reconcile affected Representation requirements and native instructions with accepted STDO meaning; freeze exact source and mechanics construction subjects under the existing cohort law; re-author changed semantic compression entries while retaining valid ones; generate and validate the derived index; update source routes and native entry together. | Source/program/index/mechanics/skill identities agree. Source comparison supports semantic fidelity, generation is reproducible, and changed or missing sources refuse reliance. A changed constitution is not represented merely by rerunning the indexer over the prior program. This stage consumes only the T-030 law/shared-path results it actually needs. |
 | **4 — M04 native qualification** | Exercise the selected ordinary entries and material alternatives in fresh Codex and Claude use, including proportionate classification, frame applicability, owner continuity, interrupted work, recovery and closure. Retain required independent source assessment and material composition evidence. | All applicable native conditions and owner-bound companion contracts/evidence hold for the exact combined candidate. Return the relevant evidence to T-030 M05 and T-029; neither generation success nor historical RC4 qualification closes this stage. |
@@ -418,6 +473,47 @@ coordinated release-matched cohort law and each Product's own release authority.
 No release ordinal, tag movement, commit, push, or consumer mutation is selected
 by this ticket.
 
-The next delivery decision is the bounded M01 scope and baseline selection for
-this combined native-use outcome. Ticket authoring ends with this durable
-backlog record; implementation remains not admitted.
+## Current Delivery Result
+
+The [actual baseline and native repair evidence](../../../dogfood/t009-m01/run-001/README.md)
+supplies M01's thirteen-function/fourteen-case capability, gap and C/J/O owner
+mapping. Both Product Definitions verify RC4; the exact immutable Axiom
+mechanics reproduce the unchanged Representation map byte-for-byte. All 15
+existing tests pass under normal and optimized Python, and eight additional
+actual-program refusal variants reject invalid input and remove stale maps.
+The actual T009 context joins exactly. These results supply M02's selected
+mechanical dependencies with no Axiom code or contract change.
+
+The demonstrated M03 archive-path defect is repaired in source guidance and
+the corrected command succeeds from the actual Representation child root.
+The extracted immutable Axiom constitution check is valid with no failures.
+Native guidance and requirements now distinguish artifact construction from
+caller authority, retain C/J/O scope and invalidation, and identify changed
+instructions as a working candidate over the unchanged RC4 program and map.
+
+The author-independent native-guidance assessment confirmed those boundaries
+and found a shell-guard fallthrough in the acquisition sequence. The bounded
+repair uses one fail-fast Bash script. Its exact positive dependency check and
+wrong-tag, wrong-commit and missing-subtree refusal observations are retained
+in the [guard repair](../../../dogfood/t009-m01/run-001/README.md#independent-guard-finding-and-repair).
+The predecessor candidate manifest is historical; the repaired guard subject
+was assessed separately by author-independent `/root/t030_m01_writer` under
+manifest SHA-256
+`1808630f2f3fd22dd8da3c98c553b902d0e62191d1e1b828ddba6cdc0d1a6ca8`.
+Its returned judgment reports no actionable finding; independent execution
+confirmed all four guard outcomes and unchanged assessed hashes. The earlier
+authority/ownership assessment remains valid for its unchanged relations.
+Root consumes these results: M01's baseline and M02's selected mechanical
+sufficiency conditions are complete; the first M03 native guidance repair is
+supported. Changing the dependency identity, subtree, script or observing a
+failed guard followed by successful acquisition invalidates affected reliance.
+
+The next semantic-authoring frontier and remaining native observations are
+explicit in the baseline record. Exact successor Source STDO selection,
+affected compression re-authoring and derived-index qualification, fresh Codex
+and Claude evidence, required independent source comparison, and remaining
+material composition cases are outstanding. This actor's progressive self-use
+is not those independent or fresh-host results. M03/M04 and overall T009 remain
+incomplete; no Product acceptance, publication or adoption is claimed. The
+owner's separate standing instruction authorizes local commits of verified
+work; committing does not establish any remaining qualification condition.

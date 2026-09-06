@@ -1,0 +1,56 @@
+{
+  "skill_sha256": "613c6cdcaddd352c6f0eb023fbaa660ebbde2462579d51cc6462bc2cef54545d",
+  "predecessor_manifest_sha256": "7e410936bc8d27b9ca665dcad4681e7ca59eee44634d9c9452b00a16131c87a6",
+  "cases": [
+    {
+      "case": "exact-identity",
+      "exit_code": 0,
+      "stdout": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t009-guard-29yak991/axiom-indexer-v2.5.0-rc.4.Rb1rM1\n",
+      "stderr": "",
+      "ac_files": 1,
+      "script_sha256": "95423f2218aa60a460239e3cbbd2d25e8379b127be6c0018ed3734eaf18e7367",
+      "checker_exit_code": 0,
+      "checker": {
+        "axiom_cut": "v2.5.0-rc.4",
+        "basis_state": "target",
+        "dependency_valid": true,
+        "failures": [],
+        "governance_valid": true,
+        "mechanics_valid": true,
+        "product_member_count": 7,
+        "product_member_inventory_sha256": "7df380d5c41be4482f06668c5fe1043cd08643daa9f40d83be3c0ff40a8ff7e6",
+        "release_ready": true,
+        "release_record": "releases/v2.5.0.md",
+        "stdo_basis": "stdo://releases/v2.5.0-rc.4/",
+        "stdo_manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+        "stdo_status_store": "/Users/jim/Library/Application Support/STDO",
+        "stdo_status_valid": true,
+        "valid": true
+      }
+    },
+    {
+      "case": "wrong-tag-object",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "",
+      "ac_files": 0,
+      "script_sha256": "df1041ef6109bb7f42cca480b5a4574be1f8d54fdd7ba4b2b540e3b307abb543"
+    },
+    {
+      "case": "wrong-peeled-commit",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "",
+      "ac_files": 0,
+      "script_sha256": "3e8bbf277121fe78397c4007c4b2afba8f2b8bce31b43efac347a19e21cc490a"
+    },
+    {
+      "case": "missing-subtree",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a valid object name: refs/tags/axiom_indexer/v2.5.0-rc.4:absent_subtree\n",
+      "ac_files": 0,
+      "script_sha256": "27c014074eb8480d50cbeb9b17b88db8f2a94ded9e65fd18104f7cec8a85b5bf"
+    }
+  ]
+}

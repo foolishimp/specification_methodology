@@ -27,15 +27,15 @@ index_refs:
 source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
-  REFERENCE_FRAME_METHOD.md: c7f7abfa620d73e209463605517075ac375d8e79e0273d3f435c4e36155de5d8
-  STDO_REFERENCE_FRAME_BASELINE.md: 6013e42693066127d729580ac3d01d31c2a82f00adea9d0fb1af3494b4ad9c3e
-  SPEC_METHOD.md: 80a66946d4767b1ff857aad4bbaba696b591cd7e7529324c2ece8ced9754ced5
+  REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
+  STDO_REFERENCE_FRAME_BASELINE.md: df7b8ae6c6099ee6923875317820d53c71f0398a859c667ed0f184b5559a2737
+  SPEC_METHOD.md: 0d620e7d4ffd08e48fc483fc481738ec53dc5f539d9a39fa4e7899619cb84b95
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 6fb49e186c15a3ebd48dec6b2728a397f1cd5199c4c0d112a0d0c70a2d6346fc
+  DESIGN_MODULE_METHOD.md: 95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f
   ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
   WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
-  TICKET_METHOD.md: 6924e3284be3375af3514cdf0f810b53e8ac282cb96116ea2d721e9b84b75ba3
+  TICKET_METHOD.md: 2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
   RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
@@ -43,7 +43,7 @@ source_digests:
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
-generated_at: 2026-09-01
+generated_at: 2026-09-06
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -352,6 +352,38 @@ layer that owns the missing truth.
   obligation in the contract's named durable result/evidence surface or an
   already-authorized enclosing carrier, withhold closure, and return re-entry
   pressure rather than manufacturing or losing a ticket.
+
+## Treatment, Judgment, And Closure
+
+- Spec Method owns reproducible classification: source-bound declared
+  owner/layer traversal and unknown frontier, complete relevant Public
+  membership and value comparison, accepted-design scope/trace evidence, and
+  consequences of declared rules with sufficient premises. Bind producer,
+  procedure, inputs, output, reproduction and invalidators. Missing data stays
+  unknown; trace coverage is not residual semantic sufficiency. Computed C
+  grants no effects; residual judgment J and reserved owner ruling O retain
+  their actual owners and introduce no calculus kinds or runtime.
+- Nonconforming candidate behavior does not author its target law. Repair or
+  reject under sufficient unchanged law and the existing grant; selected
+  changed meaning or established governing insufficiency re-enters its owner.
+  A bounded authorized discriminator can resolve material unknowns without
+  admitting the candidate as conformant.
+- Ticket Method owns reusable J/O in the existing work/result carrier: question,
+  exact subject/basis, supporting C/evidence, actor/authority, conclusion/scope,
+  uncertainty and revising observation. Preserve original owner wording and
+  conditions separately from interpretation. Consume applicable authority
+  once; no new registry or owner ceremony is implied.
+- Reuse current facts, judgments and reconstruction across roles or resumption.
+  Material changed premises invalidate affected claims; preserve independent
+  surviving support. Required independent assessment still acquires sufficient
+  evidence and supplies its own judgment. Design Module Method retains complete
+  Ontology and three-view coverage for new or materially changed boundaries;
+  checked unchanged coverage is reusable.
+- Closure is satisfied applicable obligations plus valid exact evidence and
+  required J/O, with no active non-closure condition. Neither a review event nor
+  evidence presence supplies that conjunction. The Writer may record a
+  sufficient bounded result under its grant when no reserved condition applies.
+  Qualification, publication and consumer adoption remain separate claims.
 
 ## Bounded-Context Semantic Isolation
 
@@ -814,6 +846,19 @@ layer that owns the missing truth.
   independent live-surface evaluation governed by `STDO-UP-007` and
   `STDO-UP-022` where `STDO-UP-020` requires it. The profile creates no peer
   execution, review, disposition, checkpoint, or continuation law.
+- The accepted frame configuration permits direct Writer entry when one
+  capable context and exact grant suffice. Coordinate material dependencies,
+  authority, context or capability boundaries and preserve applicable
+  independence. Role names do not add a ticket, Executive or review gate.
+  Executive may not mutate files or Git; the same actor first changes into a
+  separately bound Writer activation. This creates no new authority or
+  independence.
+- Owning applicability predicates select required evaluations: true requires
+  an exact valid result, false excludes only that obligation, unknown remains
+  unresolved. A caller's frame list or family availability proves no coverage.
+  Missing/wrong-subject mandatory results and conflicts cannot satisfy a
+  conjunction; preserve every constraining observation. No universal budget,
+  benchmark or measurement gate is introduced.
 - Executive owns attention management, evaluation orchestration, and
   authorized-action selection inside its existing grant. It maintains the
   exact outcome/basis, Product-role map, evaluation inventory, smallest finite
@@ -851,11 +896,11 @@ layer that owns the missing truth.
   not make the mutable Source Project immutable. Changed outcome, basis,
   Product role, authority, coverage, or return topology refuses, invalidates,
   or re-enters rather than enlarging the Executive frame.
-- The complete baseline route is: Executive attempts Worker activation; an
+- For work requiring coordinated engagement, Executive attempts Worker activation; an
   activation refusal returns directly to Executive and creates no Worker result;
   after lawful activation, `satisfied`, `falsified`, `indeterminate`, and
   `out_of_frame | invalid_basis` map exclusively to `candidate_ready`,
-  `refused`, `incomplete`, and `re_entry_requested`. Every Worker result returns
+  `refused`, `incomplete`, and `re_entry_requested`. Its Worker result returns
   to Executive. For a candidate, Executive either dispositions directly when
   independent review is not required or activates Reviewer, receives the closed
   review result, and then applies exactly one existing `STDO-UP-020`
