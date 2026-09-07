@@ -42,12 +42,14 @@ When already inside the `specification_methodology/` project directory, use
 `pipx install --force .`. The explicit replacement avoids leaving an older
 manager in place when a qualified cut requires newer ref-resolution behavior.
 
-After RC6 publication, install its manager from the qualified immutable ref
-rather than from the moving version-line alias:
+To install a released manager, select its qualified immutable ref from the
+[release records](releases/). The [cohort record](../stack_release.json) locates
+the selected release and its matching assets. Use that exact ref:
 
 ```sh
+STDO_REF='<qualified-immutable-ref>'
 pipx install --force \
-  "git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.6#subdirectory=specification_methodology"
+  "git+https://github.com/foolishimp/specification_methodology.git@${STDO_REF}#subdirectory=specification_methodology"
 ```
 
 Then install or inspect a cut:
