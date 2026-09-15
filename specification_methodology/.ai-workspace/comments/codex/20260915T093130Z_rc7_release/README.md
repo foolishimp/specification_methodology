@@ -1,8 +1,7 @@
 # STDO 2.5.0 RC7 Release Work
 
-Status: source and companion candidate qualification are complete; independent
-review is satisfied. Guarded publication and public reacquisition remain pending.
-No public availability or external consumer adoption is claimed before those gates.
+Status: complete RC7 cohort qualified, atomically published and freshly
+reacquired from the public repository. External consumer adoption is not performed.
 
 ## Stage A Writer Activation
 
@@ -341,3 +340,29 @@ Executive consumes the closed source/code/configuration/native result and
 authorizes the existing checked commit-B/ref/atomic-publication procedure.
 The two internal source-project Definitions verify against RC7; STDO source
 continues on its separately selected RC4 and external consumers remain unchanged.
+
+## Closed RC7 Result
+
+The complete matched `v2.5.0-rc.7` cohort is published. Source commit A is
+`ddeb971da89ee47065359c99897a825b803eedd4`; qualified companion/carrier commit B
+is `4824d5a05619e6957110b7ac97464b42ac84c096`. Each Product has its own annotated
+immutable RC7 tag; discovery selectors and release branches identify those cuts.
+
+- [Independent source/code/configuration/native review](independent-final-review.md): satisfied, no S0–S2 findings; contained S3 observations retained.
+- Source tests: 152 passing; Axiom: 31 passing normally and optimized on each of Python 3.12.8 and 3.13.7, plus direct output-preservation regressions.
+- Fresh native completion: Codex and Claude map-first tasks, correct S0–S7 decisions and exact actual seven-section joins; no actual worksite changes.
+- [Atomic publication](atomic-publication.json): the shared checker-emitted 13-ref transaction succeeds with exact leases and create-only immutable tags.
+- [Public topology](cohort-published.json): valid, no failures.
+- [Independent published-cut review](independent-public-review.md): satisfied, no findings.
+- [Fresh public reacquisition](public-reacquisition.json): all three exact cuts, 52 source members, 17 plugin members, seven Axiom members, nine Representation members, installed manager conservation, map/report and ten selected projections verify.
+
+The first public-install attempt used an absent historical helper default and
+did not execute an installer. Its [failure](public-reacquisition-attempt1.json)
+is retained. The successful command explicitly selects the already verified
+current manager; no Product or tag repair occurs.
+
+Final release status and public evidence are recorded in the subsequent
+bookkeeping commit without moving immutable tags. STDO source retains its
+separately selected RC4 basis; both internal companion Definitions use accepted
+RC7 configurations. No ABG, fleet, marketplace or external consumer migration
+is performed. No future work is selected by this release closure.

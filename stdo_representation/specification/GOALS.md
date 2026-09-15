@@ -2,7 +2,7 @@
 
 ## Current state
 
-Status: active RC7 release qualification; accepted frame basis 19 is operative and exact RC6 predecessor evidence remains conserved
+Status: RC7 qualified, atomically published and publicly reacquired; accepted frame basis 19 is operative and exact RC6 predecessor evidence remains conserved
 
 Make STDO axiomatic constraints useful in ordinary native Codex and Claude work: recover exact sources and applicable frames, obtain sufficient bounded context, preserve reusable judgments and owner rulings, and support truthful completion, interruption and recovery. A regenerated index must remain source-faithful and usable for its selected outcomes.
 
@@ -22,7 +22,7 @@ including its program, map and frame-index use guide. The LLM interprets
 meaning and selects frames; Axiom preserves explicitly authored dependencies
 and materializes selected unchanged content. Source STDO remains authority.
 
-RC6 is published through the guarded atomic transaction and verified public reacquisition; RC5 remains its exact immutable predecessor. RC7 is a construction candidate from the verified local Stage A Install. Internal RC7 frame/Definition bindings are accepted following independent conservation assessment and the exact bounded decision; publication and public reacquisition remain pending.
+RC7 is atomically published and freshly reacquired from the public repository; RC6 and RC5 remain exact immutable predecessors. Internal RC7 frame/Definition bindings are accepted following independent conservation assessment and the bounded decision. The closed result and exact evidence remain with the RC7 release record.
 Historical RC1 Product acceptance and RC4 publication evidence remain unchanged;
 release publication and frame acceptance do not assert Product acceptance.
 

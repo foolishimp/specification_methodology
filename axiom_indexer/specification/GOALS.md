@@ -2,7 +2,7 @@
 
 ## Current Goal
 
-Status: active RC7 release qualification with bounded output-preservation repair; accepted frame basis 11 is operative
+Status: RC7 qualified, atomically published and publicly reacquired; accepted frame basis 11 is operative
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,

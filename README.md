@@ -60,9 +60,9 @@ For the default scope of an owner instruction to release STDO, follow
 [`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
 
 The [RC7 release work](specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
-has frozen and verified the local STDO cut and prepares the matched child
-candidates. RC6 remains the published predecessor until
-RC7's complete publication and public reacquisition are verified.
+records the published and publicly reacquired complete RC7 cohort. STDO,
+Axiom Indexer and STDO Representation retain distinct immutable RC7 cuts;
+RC6 remains their immutable predecessor.
 
 The Product owners have declared one explicit release relation for STDO and its
 indexes. When that relation is selected, the exact normalized cohort version

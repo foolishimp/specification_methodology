@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: RC7 complete-cohort release selected; Stage A source preparation active
+Status: RC7 complete-cohort release qualified, atomically published and publicly reacquired
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -31,6 +31,12 @@ amendment supplies the bounded semantic delta; required assurance and effective
 supervision remain conserved. Source freeze, dependency construction,
 qualification, guarded atomic publication and public reacquisition are distinct
 steps of that one release request. External consumer adoption is not selected.
+
+The [closed RC7 result](../.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md#closed-rc7-result)
+records completion of every selected release phase. The three Products and
+critical plugin/program/map dependencies are published at their matched RC7
+cuts. Interrupted native attempts and bounded observed limitations remain
+visible. No successor work or external consumer migration is selected here.
 
 ## Selected Work
 

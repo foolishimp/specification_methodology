@@ -2,12 +2,12 @@
 
 STDO Representation supplies the source-linked STDO axiomatic program, its
 deterministic logical map and a shared native skill for Codex and Claude.
-The selected coordinated successor candidate is RC7; its exact source, dependency,
+The published coordinated release is RC7; its exact source, dependency,
 member inventory and claims are owned by [the release record](releases/v2.5.0.md)
 and [cohort carrier](../stack_release.json). Publication state is verified from
-the exact refs, rather than inferred from a source checkout. RC6 remains the
-published predecessor until complete RC7 publication and public reacquisition
-verify. The source-project RC7 frame/Definition configuration is separately
+the exact refs, rather than inferred from a source checkout. Complete RC7
+publication and public reacquisition are verified; RC6 remains the immutable
+predecessor. The source-project RC7 frame/Definition configuration is separately
 accepted and verified; this does not claim publication or external adoption.
 
 An LLM authors and judges meaning. Axiom Indexer resolves and validates declared

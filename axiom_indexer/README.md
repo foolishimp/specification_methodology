@@ -68,7 +68,7 @@ The immutable Product identity is annotated tag `v0.1.0-rc.1`, tag object
 `dc3e00998da36dae6ac7b76b340431a85096c83c`. The unqualified `v0.1.0` tag is
 only the mutable highest-published-RC selector.
 
-The selected coordinated successor candidate is `axiom_indexer/v2.5.0-rc.7`.
+The published coordinated release is `axiom_indexer/v2.5.0-rc.7`.
 [Its release record](releases/v2.5.0.md) and [cohort carrier](../stack_release.json)
 bind the exact seven-member mechanics, matched Source STDO and qualification
 claims. RC5 introduced explicit authored frame-index dependency closure and
@@ -76,8 +76,8 @@ reference-only/unchanged-content materialized projections; RC6 conserves those
 mechanics against its matched Source STDO. RC7 retains those contracts and
 corrects the demonstrated unresolved-symlink-loop output-preservation defect
 on Python 3.13.7, checked alongside Python 3.12.8. The remaining six Product
-members are conserved. RC6 remains the published
-predecessor until complete RC7 publication and public reacquisition verify.
+members are conserved. Complete RC7 publication and public reacquisition are
+verified; RC6 remains the immutable predecessor.
 Original validation,
 resolution and pure joining remain available. RC4's exact bytes and observations
 remain at its immutable tag.

@@ -85,11 +85,11 @@ its authored index. Neither historical counts nor a recomputed smaller digest
 can excuse a missing native instruction file.
 
 The [RC7 release work](specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
-selects the next complete cohort. Its exact local STDO cut is frozen and
-verified; `stack_release.json` carries the successor child construction
-candidate. RC6 remains the published predecessor. Candidate preparation does
-not close independent semantic/native review, internal frame adoption or the
-remaining commit-B, ref, publication and reacquisition gates.
+records the completed RC7 cohort. Source and companion qualification,
+independent semantic/native review, internal frame binding, atomic publication
+and fresh public reacquisition are verified. `stack_release.json` retains its
+frozen commit-B candidate identity; the linked publication evidence records
+the completed transition. RC6 remains the immutable predecessor.
 
 ## Coordinated Construction
 

@@ -1,0 +1,37 @@
+[
+  {
+    "argv": [
+      "git",
+      "init",
+      "--bare",
+      "/private/tmp/stdo-rc7-public-us95f4lu/public.git"
+    ],
+    "finished_at": "2026-09-15T11:10:55.664704+00:00",
+    "name": "public-git-init",
+    "returncode": 0,
+    "started_at": "2026-09-15T11:10:55.650296+00:00",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "16f83498f79d366f13bec5e78049e28ae188e7200ad3a7a96571d04fcc37f62b"
+  },
+  {
+    "argv": [
+      "git",
+      "--git-dir",
+      "/private/tmp/stdo-rc7-public-us95f4lu/public.git",
+      "fetch",
+      "--no-tags",
+      "--depth=1",
+      "https://github.com/foolishimp/specification_methodology.git",
+      "refs/tags/specification_methodology/v2.5.0-rc.7:refs/tags/specification_methodology/v2.5.0-rc.7",
+      "refs/tags/axiom_indexer/v2.5.0-rc.7:refs/tags/axiom_indexer/v2.5.0-rc.7",
+      "refs/tags/stdo_representation/v2.5.0-rc.7:refs/tags/stdo_representation/v2.5.0-rc.7"
+    ],
+    "finished_at": "2026-09-15T11:11:02.534660+00:00",
+    "name": "public-products-fetch",
+    "returncode": 0,
+    "started_at": "2026-09-15T11:10:55.669051+00:00",
+    "stderr_sha256": "d60529faaa9f0ac115280468c16bf8889abcc38a85fc6194597cce4a4f6b1675",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
+
