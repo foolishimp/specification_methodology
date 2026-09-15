@@ -186,13 +186,20 @@ class CohortFixture:
         return {p.relative_to(self.consumer).as_posix(): ("link", os.readlink(p)) if p.is_symlink() else ("file", p.read_bytes())
                 for p in self.consumer.rglob("*") if p.is_symlink() or p.is_file()}
 
-    def republish_fixture(self):
-        for name in self.names:
-            base = self.repository / name
-            members = [{"type": "file", "path": p.relative_to(base).as_posix(), "sha256": sha256_bytes(p.read_bytes())}
-                       for p in sorted(base.rglob("*")) if p.is_file()]
-            self.cohort["products"][name]["subject"] = {"members": members, "member_count": len(members),
-                "member_set_sha256": sha256_bytes("".join(f"{m['sha256']}  file  {m['path']}\n" for m in members).encode())}
+    def republish_fixture(self, *, refresh_inventory=True):
+        if refresh_inventory:
+            for name in self.names:
+                base = self.repository / name
+                members = []
+                for path in sorted(base.rglob("*")):
+                    if path.is_symlink():
+                        target = os.readlink(path)
+                        members.append({"type": "symlink", "path": path.relative_to(base).as_posix(),
+                                        "sha256": sha256_bytes(target.encode()), "target": target})
+                    elif path.is_file():
+                        members.append({"type": "file", "path": path.relative_to(base).as_posix(),
+                                        "sha256": sha256_bytes(path.read_bytes())})
+                self.set_members(name, members)
         write_json(self.repository / "stack_release.json", self.cohort)
         run_git(self.repository, "add", "-A")
         run_git(self.repository, "commit", "-qm", "new explicit test selection")
@@ -205,6 +212,11 @@ class CohortFixture:
             row["contracts"] = [value.replace(self.commit, commit) for value in row["contracts"]]
         self.commit = commit
         self.save()
+
+    def set_members(self, name, members):
+        members = sorted(members, key=lambda row: row["path"])
+        self.cohort["products"][name]["subject"] = {"members": members, "member_count": len(members),
+            "member_set_sha256": sha256_bytes("".join(f"{m['sha256']}  {m['type']}  {m['path']}\n" for m in members).encode())}
 
 
 class CohortUpdateTests(unittest.TestCase):
@@ -480,6 +492,119 @@ class CohortUpdateTests(unittest.TestCase):
         (f.repository / "axiom_indexer/absolute").symlink_to("/product/outside")
         f.republish_fixture()
         with self.assertRaisesRegex(StdoError, "Absolute upstream Product symlink"):
+            f.plan()
+        self.assertFalse((f.root / "companions").exists())
+
+    def test_unselected_historical_fixture_is_not_acquired_or_installed(self):
+        f = self.fixture
+        fixture = f.repository / "axiom_indexer/dogfood"
+        fixture.mkdir()
+        (fixture / "absolute").symlink_to("/unrelated/historical/machine")
+        (fixture / "unselected.txt").write_text("Historical fixture only\n")
+        # Keep the published subject unchanged: these files were never admitted.
+        f.republish_fixture(refresh_inventory=False)
+        plan = f.plan()
+        self.assertTrue(plan["ready"])
+        self.assertTrue(f.apply(plan)["complete"])
+        for companion in plan["companions"]:
+            installed = Path(companion["install_root"])
+            self.assertFalse((installed / "dogfood").exists())
+            self.assertEqual({row["path"] for row in companion["install_members"]},
+                             {p.relative_to(installed).as_posix() for p in installed.rglob("*") if p.is_file() or p.is_symlink()})
+
+    def test_declared_metadata_and_assets_complete_a_smaller_qualified_inventory(self):
+        f = self.fixture
+        for name in f.names:
+            members = f.cohort["products"][name]["subject"]["members"]
+            f.set_members(name, [m for m in members if m["path"] != "stdo.json"
+                                and not m["path"].startswith("releases/")
+                                and not m["path"].endswith(("source-corpus.json", "validation-report.json"))])
+        f.cohort["products"]["stdo_representation"]["dependencies"]["axiom_indexer"]["product_member_set_sha256"] = f.cohort["products"]["axiom_indexer"]["subject"]["member_set_sha256"]
+        f.republish_fixture(refresh_inventory=False)
+        result = f.apply(f.plan())
+        self.assertTrue(result["complete"])
+        for companion in result["companions"]:
+            installed = Path(companion["install_root"])
+            self.assertTrue((installed / "stdo.json").is_file())
+            self.assertTrue((installed / "releases/v1.0.0.md").is_file())
+        rep = Path(f.selection["companions"][1]["install_root"])
+        self.assertTrue((rep / "representation/stdo-v1.0.0-rc.2/source-corpus.json").is_file())
+        self.assertTrue((rep / "representation/stdo-v1.0.0-rc.2/validation-report.json").is_file())
+
+    def test_admitted_escaping_and_missing_target_links_refuse(self):
+        f = self.fixture
+        path = f.repository / "axiom_indexer/route"
+        for target, error in [("../outside", "escapes its Product"),
+                              ("unadmitted", "outside the declared install closure"),
+                              ("route", "Cyclic upstream Product symlink")]:
+            with self.subTest(target=target):
+                path.unlink(missing_ok=True)
+                path.symlink_to(target)
+                f.republish_fixture()
+                before = f.consumer_state()
+                with self.assertRaisesRegex(StdoError, error):
+                    f.plan()
+                self.assertEqual(before, f.consumer_state())
+                self.assertFalse((f.root / "companions").exists())
+
+    def test_declared_member_missing_from_exact_commit_refuses(self):
+        f = self.fixture
+        (f.repository / "axiom_indexer/skills/axiom_indexer/SKILL.md").unlink()
+        f.republish_fixture(refresh_inventory=False)
+        with self.assertRaisesRegex(StdoError, "Missing upstream install members"):
+            f.plan()
+        self.assertFalse((f.root / "companions").exists())
+
+    def test_symlink_regular_file_prefix_and_terminal_directory_syntax_refuse(self):
+        f = self.fixture
+        base = f.repository / "axiom_indexer"
+        (base / "file-alias").symlink_to("stdo.json")
+        route = base / "route"
+        for target in ("stdo.json/../skills/axiom_indexer", "stdo.json/", "stdo.json/.",
+                       "file-alias/../skills/axiom_indexer", "file-alias/"):
+            with self.subTest(target=target):
+                route.unlink(missing_ok=True)
+                route.symlink_to(target)
+                f.republish_fixture()
+                before = f.consumer_state()
+                with self.assertRaisesRegex(StdoError, "symlink traverses a non-directory"):
+                    f.plan()
+                self.assertEqual(before, f.consumer_state())
+                self.assertFalse((f.root / "companions").exists())
+
+    def test_admitted_file_directory_and_indirect_links_remain_usable(self):
+        f = self.fixture
+        base = f.repository / "axiom_indexer"
+        for name, target in [("file-alias", "stdo.json"),
+                             ("directory-alias", "skills/axiom_indexer/"),
+                             ("indirect-file", "directory-alias/./SKILL.md")]:
+            (base / name).symlink_to(target)
+        f.republish_fixture()
+        f.cohort["products"]["stdo_representation"]["dependencies"]["axiom_indexer"]["product_member_set_sha256"] = f.cohort["products"]["axiom_indexer"]["subject"]["member_set_sha256"]
+        f.republish_fixture(refresh_inventory=False)
+        self.assertTrue(f.apply(f.plan())["complete"])
+        installed = Path(f.selection["companions"][0]["install_root"])
+        self.assertEqual((installed / "file-alias").read_bytes(), (base / "stdo.json").read_bytes())
+        self.assertTrue((installed / "directory-alias").is_dir())
+        self.assertEqual((installed / "indirect-file").read_bytes(), (base / "skills/axiom_indexer/SKILL.md").read_bytes())
+
+    def test_missing_definition_outside_qualified_inventory_refuses(self):
+        f = self.fixture
+        members = f.cohort["products"]["axiom_indexer"]["subject"]["members"]
+        f.set_members("axiom_indexer", [m for m in members if m["path"] != "stdo.json"])
+        (f.repository / "axiom_indexer/stdo.json").unlink()
+        f.republish_fixture(refresh_inventory=False)
+        with self.assertRaisesRegex(StdoError, "Missing upstream install members"):
+            f.plan()
+        self.assertFalse((f.root / "companions").exists())
+
+    def test_native_route_cannot_import_an_unadmitted_subtree(self):
+        f = self.fixture
+        (f.repository / "axiom_indexer/dogfood").mkdir()
+        (f.repository / "axiom_indexer/dogfood/SKILL.md").write_text("Not released\n")
+        f.selection["companions"][0]["links"][1]["member"] = "dogfood"
+        f.republish_fixture(refresh_inventory=False)
+        with self.assertRaisesRegex(StdoError, "Native route is absent"):
             f.plan()
         self.assertFalse((f.root / "companions").exists())
 

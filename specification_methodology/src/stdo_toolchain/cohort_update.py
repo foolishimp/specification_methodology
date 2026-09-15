@@ -113,9 +113,11 @@ class _Cohort:
         self.releases[ref] = value
         return value
 
-    def entries(self, commit: str, subtree: str) -> dict[str, tuple[str, bytes]]:
+    def entries(self, commit: str, subtree: str, members: set[str]) -> dict[str, tuple[str, bytes]]:
         root = _relative(subtree)
-        raw = _git(["--git-dir", str(self.git), "ls-tree", "-r", "-z", commit, "--", root], text=False)
+        selected = {_relative(member) for member in members}
+        paths = [f":(literal){root}/{member}" for member in sorted(selected)]
+        raw = _git(["--git-dir", str(self.git), "ls-tree", "-r", "-z", commit, "--", *paths], text=False)
         if not isinstance(raw, bytes):
             raise StdoError("Git returned invalid inventory")
         result = {}
@@ -127,9 +129,11 @@ class _Cohort:
             if kind != "blob" or mode not in {"100644", "100755", "120000"} or not name.startswith(root + "/"):
                 raise StdoError(f"Unsupported upstream entry: {name}")
             rel = _relative(name[len(root) + 1:])
+            if rel not in selected:
+                raise StdoError(f"Undeclared upstream install member: {rel}")
             result[rel] = (mode, self.read(commit, name))
-        if not result:
-            raise StdoError(f"Empty upstream Product subtree: {subtree}")
+        if set(result) != selected:
+            raise StdoError(f"Missing upstream install members: {sorted(selected - set(result))}")
         for rel, (mode, raw) in result.items():
             if mode == "120000":
                 target = raw.decode()
@@ -139,6 +143,36 @@ class _Cohort:
                 normalized = Path(os.path.normpath(absolute))
                 if not normalized.is_relative_to("/product"):
                     raise StdoError(f"Upstream symlink escapes its Product: {rel}")
+        directories = {p.as_posix() for rel in result for p in Path(rel).parents}
+
+        def resolve(parts: tuple[str, ...], active: frozenset[str]) -> tuple[str, ...]:
+            resolved: list[str] = []
+            for part in parts:
+                if resolved and "/".join(resolved) not in directories:
+                    raise StdoError(f"Upstream symlink traverses a non-directory: {'/'.join(resolved)}")
+                if part in {"", "."}:
+                    continue
+                if part == "..":
+                    if not resolved:
+                        raise StdoError("Upstream symlink escapes its Product")
+                    resolved.pop()
+                    continue
+                member = "/".join([*resolved, part])
+                entry = result.get(member)
+                if entry is not None and entry[0] == "120000":
+                    if member in active:
+                        raise StdoError(f"Cyclic upstream Product symlink: {member}")
+                    # Keep trailing slash/dot components: they require a directory.
+                    resolved = list(resolve((*resolved, *entry[1].decode().split("/")), active | {member}))
+                else:
+                    if entry is None and member not in directories:
+                        raise StdoError(f"Symlink target is outside the declared install closure: {member}")
+                    resolved.append(part)
+            return tuple(resolved)
+
+        for rel, (mode, _) in result.items():
+            if mode == "120000":
+                resolve(Path(rel).parts, frozenset())
         return result
 
 
@@ -212,6 +246,25 @@ def _inventory(product: dict[str, Any], entries: dict[str, tuple[str, bytes]]) -
     if len(rows) != subject["member_count"] or digest != subject["member_set_sha256"]:
         raise StdoError("Upstream Product inventory mismatch")
     return digest
+
+
+def _install_members(document: dict[str, Any], product: dict[str, Any], definition_member: str) -> set[str]:
+    """The released inventory and explicit metadata/assets own install closure."""
+    members = {_relative(row["path"]) for row in product["subject"]["members"]}
+    members.add(_relative(definition_member))
+    prefix = _relative(product["subtree"]) + "/"
+    release_record = _relative(product["release_note"])
+    if not release_record.startswith(prefix):
+        raise StdoError("Companion release record escapes its exact Product")
+    members.add(release_record[len(prefix):])
+    semantic = document["assets"]["stdo_semantic_index"]
+    asset_root = _relative(semantic["root"])
+    if product is document["products"]["stdo_representation"]:
+        if not asset_root.startswith(prefix):
+            raise StdoError("Semantic asset escapes its owning Representation Product")
+        for key in ("source_corpus", "program", "map", "validation_report"):
+            members.add(asset_root[len(prefix):] + "/" + _relative(semantic[key]))
+    return members
 
 
 def _installed(root: Path, entries: dict[str, tuple[str, bytes]]) -> bool:
@@ -429,7 +482,8 @@ def _cohort_update(definition: Path | str, store: Store, selection_path: Path | 
             release = cohort.release(product["release_ref"])
             if release["commit"] != cohort.commit:
                 raise StdoError("Companion is not in the exact selected cohort commit")
-            entries = cohort.entries(release["commit"], product["subtree"])
+            entries = cohort.entries(release["commit"], product["subtree"],
+                                     _install_members(document, product, row["definition_member"]))
             inventory = _inventory(product, entries)
             definition_member = _relative(row["definition_member"])
             upstream = json.loads(entries[definition_member][1])
@@ -482,6 +536,8 @@ def _cohort_update(definition: Path | str, store: Store, selection_path: Path | 
                                "subtree_tree": cohort.text("rev-parse", release["commit"] + ":" + product["subtree"]),
                                "product_definition": locator, "contracts": row["contracts"],
                                "definition_member_sha256": sha256_bytes(entries[definition_member][1]),
+                               "install_members": [{"path": path, "mode": mode, "sha256": sha256_bytes(raw)}
+                                                   for path, (mode, raw) in sorted(entries.items())],
                                "basis_manifest_sha256": upstream["constitution"]["stdo"]["basis"]["manifest_sha256"],
                                "install_root": str(install), "installed": installed})
             payloads.append((install, entries))

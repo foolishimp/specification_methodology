@@ -174,8 +174,13 @@ This adapter checks existing evidence; it neither executes semantic judgments
 nor rewrites or regenerates a program or map. Source owners still own their
 completeness and meaning.
 
-Each companion install is the full exact Git Product subtree, with its portable
-subject inventory independently verified against the cohort. Installs are
+Each companion install contains the cohort's exact qualified inventory, the
+selected Product Definition and release record, and its declared semantic-index
+assets. All are acquired at the exact companion commit; the plan binds this
+install closure separately from the independently verified qualified inventory.
+Unselected historical fixtures and other subtree content are not installed.
+Selected native routes and symlink targets must resolve within this closure;
+missing members, unsafe links and traversal refuse. Installs are
 external to the consumer, nonoverlapping, and physically rooted. Files retain
 their executable distinction; escaping symlinks, extra directories, changed
 members and missing members refuse. Existing installs are never overwritten.
