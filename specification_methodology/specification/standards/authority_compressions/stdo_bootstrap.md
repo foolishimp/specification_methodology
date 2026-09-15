@@ -10,14 +10,14 @@ source_refs:
 source_digests:
   SPEC_METHOD.md: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: 3cfb24f507e6746d5263c7b866d2cd4dc4de2d9caf52bb7e90b9f66642208bf0
+  STDO_REFERENCE_FRAME_BASELINE.md: 234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1
   RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-09-06
+generated_at: 2026-09-15
 stale_if_source_digest_changes: true
 ---
 
@@ -52,6 +52,9 @@ owning standards remain constitutional authority.
    frontier. Determine required evaluations from their owning applicability
    conditions; unknown applicability remains unresolved. A role name grants no
    effects and Executive performs no file or Git mutation.
+   Executive attention is event-driven by default; supervision exceptions and
+   conserved assurance remain owned by
+   `STDO_REFERENCE_FRAME_BASELINE.md#event-driven-executive-attention`.
 7. Load the Product Definition's bound `WHAT`, local constitutional relations,
    `HOW`, work carriers, composition contracts, and exact source material only
    as required by that activation and governed scope. A prompt, summary,

@@ -26,6 +26,9 @@ Native skills:
 
 These skills route attention and grant no authority.
 
+Interpret an owner's STDO release request through
+[`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
+
 For an explicitly selected coordinated STDO stack release, read
 `STACK_RELEASE.md` and `stack_release.json`. The exact normalized cohort version
 must match the STDO corpus, plugin, Axiom Indexer, STDO Representation, and

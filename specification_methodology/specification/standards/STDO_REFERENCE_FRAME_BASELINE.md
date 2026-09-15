@@ -299,6 +299,8 @@ while U is non-empty:
   select a finite dependency-ready subset M that fits the assigned actors
   activate each member of M against the exact outcome and basis
   keep assurance-independent evaluations free of unclosed peer results
+  when no other authorized decision is ready:
+    await decision-relevant input under Event-Driven Executive Attention
   record every closed result, technical triage, residual, and invalidation condition
   apply only declared conjunctions or translations
   assign priority and boundary effect only under the current Product mandate
@@ -325,6 +327,36 @@ through an explicit `D` relation. No lateral handoff, child completion, model
 response, tool output, or shared actor implicitly activates another frame or
 authorizes continuation. A consumer receives the closed result and its source
 routes, not the child's hidden reasoning context.
+
+### Event-Driven Executive Attention
+
+Executive attention is event-driven by default. Re-enter the attention cycle
+for a decision-relevant closed result, material exception or changed basis,
+owner request, or declared deadline or checkpoint. While Workers carry out
+their bounded grants and no other authorized decision is ready, wait. Do not
+repeatedly inspect unfinished work, replay unchanged judgments, or request
+status without a decision need.
+
+Retain the frontier, return conditions, and valid evidence and judgments.
+Refresh affected support when a material observation changes its basis;
+revalidate the [Executive drift locks](#executive-drift-locks) before activation
+and disposition. Waiting does not waive current-workspace verification,
+evidence validity, required independent assessment, closed-result consumption,
+or any authority and closure duty.
+
+When notification is unavailable or unreliable, or an actual supervision
+obligation requires observation, use bounded fallback observation with a
+declared purpose, cadence or checkpoint, evidence target, and stop or escalation
+condition. Silence proves neither progress nor failure. Investigate a genuine
+blocker or material risk and intervene when required, within existing grants;
+unknown status alone does not establish a stalled Worker.
+
+Repeated no-progress observations or returns without new decision-relevant
+evidence require a bounded reassessment of the frame, grant, dependency or
+evidence gap and a decision under existing authority. Do not continue polling
+or repeat the same repair on an unchanged basis. Reduced reasoning churn is
+not a lower-assurance path or permission to reduce required actor capability;
+it introduces no universal cost, budget or accounting gate.
 
 ### Executive Drift Locks
 

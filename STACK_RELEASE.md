@@ -12,6 +12,50 @@ names and refs add `v`; embedded plugin and index fields do not. For example,
 cut `v2.5.0-rc.4` and plugin version `2.5.0-rc.4` match after removing only the
 cut-name `v`.
 
+## Meaning Of A Release Request
+
+In this repository, an owner's instruction to **release STDO** selects the
+complete multi-step release of the [required cohort](#complete-cohort), unless
+the owner explicitly narrows the requested operation. Dependency phases belong
+to that same request; they are not optional follow-ups requiring another user
+request merely because they cross peer Product boundaries. Explicitly narrowed
+work is not a completed STDO release.
+
+`a_c` remains the calculus. Axiom Indexer, STDO Representation and the released
+`a_c.STDO` corpus are the concrete critical dependencies in this relation; their
+availability, matching labels or old release bytes do not establish a complete
+successor cohort.
+
+The selected work includes:
+
+- matching cohort versions and exact dependency bindings across all required
+  Products and assets;
+- affected semantic re-authoring of the Representation and `a_c.STDO` program,
+  source-digest rebinding, and regeneration of the logical map and affected
+  projections; changing digests alone does not qualify changed meaning;
+- matching native skills, plugin/distribution assets, release documentation and
+  links, complete member inventories and source routes;
+- proportionate qualification of the changed subjects and affected relations,
+  including required independent semantic, invariant and native-use checks;
+  valid unchanged evidence remains reusable on its exact basis; and
+- completion of the single [Coordinated Construction](#coordinated-construction)
+  procedure: exact staged commits A/B, annotated Product tags, selectors and
+  branches, checked atomic publication of `main` and the complete cohort ref
+  set, public verification and fresh reacquisition of the released subjects,
+  followed by final release/work records under its bookkeeping boundary.
+
+The release request selects this whole work scope. Existing owner decisions,
+exact operation grants, invariant checks, qualification and refusal conditions
+still govern each effect and promotion. It does not permit skipping a gate,
+overwriting unrelated work, moving an immutable cut or inventing missing
+authority. A genuine missing decision or failed gate remains explicit; crossing
+an already selected dependency phase alone is not such a blocker.
+
+Discussing or amending release instructions does not activate a release.
+A source-only amendment remains distinct from release execution. External
+consumer migration or adoption is outside default publication scope unless
+explicitly selected by its owner.
+
 ## Complete Cohort
 
 One complete cohort requires:
@@ -35,10 +79,15 @@ matching prose is not enough.
 
 The immutable RC4 subject retains seven Axiom and eight Representation members.
 RC5 includes the Representation frame-index guide in its nine-member inventory.
-The selected RC6 successor conserves the seven-member Axiom mechanics and
+RC6 conserves the seven-member Axiom mechanics and
 nine-member Representation boundary while rebinding the changed source and
 its authored index. Neither historical counts nor a recomputed smaller digest
 can excuse a missing native instruction file.
+
+The [RC7 release work](specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
+selects the next complete cohort. Its exact successor inventory and dependency
+bindings require qualification before publication; the RC6 cohort record
+remains the predecessor until the successor freeze is recorded.
 
 ## Coordinated Construction
 

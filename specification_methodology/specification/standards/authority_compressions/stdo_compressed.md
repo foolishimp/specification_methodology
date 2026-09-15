@@ -28,7 +28,7 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: 3cfb24f507e6746d5263c7b866d2cd4dc4de2d9caf52bb7e90b9f66642208bf0
+  STDO_REFERENCE_FRAME_BASELINE.md: 234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1
   SPEC_METHOD.md: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
@@ -43,7 +43,7 @@ source_digests:
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
-generated_at: 2026-09-06
+generated_at: 2026-09-15
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -884,6 +884,21 @@ layer that owns the missing truth.
   translations, applies declared conjunctions, and selects only the next
   already-authorized action. It does not load every frame or inherit their
   undocumented working contexts.
+- Executive attention is event-driven by default: decision-relevant closed
+  results, material exceptions or changed basis, owner requests, and declared
+  deadlines or checkpoints reopen attention. When no other authorized decision
+  is ready, wait while Workers act within grants; do not replay unchanged
+  judgments or inspect unfinished work without a decision need. Preserve drift
+  locks, current-workspace/evidence validity, required independence, closed
+  returns and closure duties. Bounded
+  fallback observation serves unavailable/unreliable notification or an actual
+  supervision obligation; declare its purpose, cadence/checkpoint, evidence
+  target and stop/escalation condition. Silence proves neither progress nor
+  failure. Handle genuine blockers and risks within grants; repeated no-progress
+  without new evidence requires bounded reassessment and decision, not polling
+  or unchanged repair loops. No lower assurance, reduced required capability
+  or universal cost/accounting gate follows. See
+  `STDO_REFERENCE_FRAME_BASELINE.md#event-driven-executive-attention`.
 - Executive sequences delivery around an early real end-to-end steel thread,
   extending existing paths and selecting increments by consequential
   uncertainty, dependency/interface reach, and failure impact. Integration

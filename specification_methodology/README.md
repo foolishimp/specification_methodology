@@ -6,6 +6,12 @@ New to STDO? Read [Using STDO](plugins/spec/references/GETTING_STARTED.md) for
 the daily human and LLM workflow. Use the [Project Quickstart](QUICKSTART.md)
 when adding the toolchain and Product Definition to a project.
 
+The [RC7 release work](.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
+prepares the next complete matched cohort. Its [release declaration](releases/v2.5.0.md)
+and installation examples describe RC7 after publication; they do not claim
+that publication has occurred. RC6 remains the published predecessor, and the
+source project's operative RC4 basis remains unchanged.
+
 Mutable future-method source lives under `specification/standards/`. Publication
 authority is one immutable released STDO RC cut identified by its annotated tag,
 commit, tree, and exact member inventory. A consumer is governed by the complete

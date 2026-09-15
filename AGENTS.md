@@ -38,6 +38,9 @@ release authority.
 
 ## Coordinated Stack Release
 
+Interpret an owner's STDO release request through
+[`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
+
 When work selects the explicit STDO release-matched cohort relation, read
 `STACK_RELEASE.md` and `stack_release.json`. One cohort version suffix covers
 the STDO corpus, distributed plugin, Axiom Indexer mechanics, STDO

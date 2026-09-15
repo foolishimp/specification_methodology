@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: RC6 release completed; no successor work selected
+Status: RC7 complete-cohort release selected; Stage A source preparation active
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -24,8 +24,17 @@ bounded RC6 scope: reviewed Executive steel-thread guidance, matching
 distributions, four independently assessed native contexts and verified public
 reacquisition. Fleet adoption remains outside this goal.
 
+The owner's "release stdo - this would be RC7 ?" instruction selects the
+complete RC7 cohort workflow, including its required Axiom Indexer,
+Representation and `a_c.STDO` dependencies. The accepted event-driven Executive
+amendment supplies the bounded semantic delta; required assurance and effective
+supervision remain conserved. Source freeze, dependency construction,
+qualification, guarded atomic publication and public reacquisition are distinct
+steps of that one release request. External consumer adoption is not selected.
+
 ## Selected Work
 
+- [RC7 release work](../.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md) owns the selected release instructions, exact phase grants, source and dependency qualification, immutable cuts, publication and final evidence. Earlier completed delivery tickets remain closed.
 - [RC6 release result](../.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) records the completed source cut, affected qualification, atomic publication and fresh public reacquisition. It preserves the operative RC4 source basis and does not reopen the completed delivery tickets.
 - [T-030](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline) closes the source model, owning methods, shared native guidance/updater and aggregate qualification.
 - [Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline) closes Axiom mechanics, faithful STDO chains/frame indexes, native use and the matched RC5 release.
@@ -34,7 +43,8 @@ reacquisition. Fleet adoption remains outside this goal.
 
 ## Executive Direction
 
-The selected delivery satisfies the whole outcome above at its recorded finite scope. Preserve that outcome when selecting subsequent work. Resume
+The completed RC6 delivery satisfies its recorded finite scope. Preserve that
+outcome through the selected RC7 release. Resume
 from the owning tickets and their exact evidence; do not redefine success as
 the last completed artifact. Use the existing thirteen-function model and its
 accepted cases through T-030, with affected reassessment only when material

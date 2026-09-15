@@ -20,6 +20,7 @@ DECISION = (
 )
 DECISION_SHA256 = "08cb9738b486f6478ef538bafec616e57309cfc3ff57d792b532c250b27159fb"
 COMPRESSION = ROOT / "specification/standards/authority_compressions/stdo_compressed.md"
+BOOTSTRAP = ROOT / "specification/standards/authority_compressions/stdo_bootstrap.md"
 BASIS_TEMPLATE = (
     ROOT / "specification/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
 )
@@ -148,6 +149,87 @@ class ReferenceFrameBoundaryTests(unittest.TestCase):
 
         for forbidden in ("ABIogenesis", "ABG", "HoG", "GTL"):
             self.assertNotIn(forbidden, text)
+
+    def test_event_driven_attention_retains_triggers_waiting_and_assurance(self) -> None:
+        # Prose regression checks; these do not qualify Executive behavior.
+        profile = PROFILE.read_text(encoding="utf-8")
+        heading = "### Event-Driven Executive Attention"
+        self.assertEqual(profile.count(heading), 1)
+        section = profile.split(heading, 1)[1].split("\n### ", 1)[0]
+        normalized = " ".join(section.split())
+        for required in (
+            "event-driven by default",
+            "decision-relevant closed result",
+            "material exception or changed basis",
+            "owner request, or declared deadline or checkpoint",
+            "no other authorized decision is ready, wait",
+            "Do not repeatedly inspect unfinished work, replay unchanged judgments",
+            "Refresh affected support",
+            "[Executive drift locks](#executive-drift-locks)",
+            "before activation and disposition",
+            "Waiting does not waive current-workspace verification",
+            "evidence validity, required independent assessment",
+            "closed-result consumption, or any authority and closure duty",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, normalized)
+        self.assertIn(
+            "await decision-relevant input under Event-Driven Executive Attention",
+            profile.split(heading, 1)[0],
+        )
+
+    def test_event_driven_attention_retains_bounded_supervision_and_reframe(self) -> None:
+        profile = PROFILE.read_text(encoding="utf-8")
+        section = profile.split("### Event-Driven Executive Attention", 1)[1].split(
+            "\n### ", 1
+        )[0]
+        normalized = " ".join(section.split())
+        for required in (
+            "notification is unavailable or unreliable",
+            "an actual supervision obligation requires observation",
+            "bounded fallback observation",
+            "declared purpose, cadence or checkpoint, evidence target",
+            "stop or escalation condition",
+            "Silence proves neither progress nor failure",
+            "Investigate a genuine blocker or material risk",
+            "intervene when required, within existing grants",
+            "unknown status alone does not establish a stalled Worker",
+            "Repeated no-progress observations or returns",
+            "without new decision-relevant evidence require a bounded reassessment",
+            "a decision under existing authority",
+            "Do not continue polling or repeat the same repair on an unchanged basis",
+            "not a lower-assurance path",
+            "permission to reduce required actor capability",
+            "no universal cost, budget or accounting gate",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, normalized)
+
+    def test_event_driven_projections_route_to_the_single_owner(self) -> None:
+        route = "STDO_REFERENCE_FRAME_BASELINE.md#event-driven-executive-attention"
+        compression = " ".join(COMPRESSION.read_text(encoding="utf-8").split())
+        bootstrap = " ".join(BOOTSTRAP.read_text(encoding="utf-8").split())
+        for text in (compression, bootstrap):
+            self.assertIn(route, text)
+            self.assertIn("Executive attention is event-driven by default", text)
+        for required in (
+            "decision-relevant closed results",
+            "owner requests",
+            "deadlines or checkpoints",
+            "When no other authorized decision is ready, "
+            "wait while Workers act within grants",
+            "current-workspace/evidence validity, required independence",
+            "Bounded fallback observation",
+            "Silence proves neither progress nor failure",
+            "bounded reassessment and decision",
+            "No lower assurance, reduced required capability",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, compression)
+        self.assertIn(
+            "supervision exceptions and conserved assurance remain owned by", bootstrap
+        )
+        self.assertNotIn("### Event-Driven Executive Attention", bootstrap)
 
     def test_reviewer_triages_and_executive_dispositions(self) -> None:
         profile = PROFILE.read_text(encoding="utf-8")

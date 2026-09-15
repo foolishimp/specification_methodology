@@ -1,0 +1,69 @@
+{
+  "kind": "stdo.rc7-stage-a-qualification",
+  "status": "satisfied",
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+  "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "src",
+    "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/test-tmp.E2C10k"
+  },
+  "targeted": {
+    "args": [
+      "-m",
+      "unittest",
+      "tests.test_reference_frame_boundaries",
+      "tests.test_compressions",
+      "tests.test_plugin_distribution",
+      "tests.test_getting_started_setup",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tests": 35,
+    "elapsed_seconds": 0.058,
+    "evidence": "targeted-source-tests.txt"
+  },
+  "full_source": {
+    "args": [
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tests": 152,
+    "elapsed_seconds": 129.04,
+    "evidence": "full-source-tests.txt"
+  },
+  "earlier_attempts": [
+    {
+      "kind": "interpreter_probe",
+      "result": "system python lacks jsonschema; used existing verified manager environment without installation"
+    },
+    {
+      "kind": "targeted_source_tests",
+      "exit_code": 1,
+      "tests": 35,
+      "failures": 2,
+      "cause": "one new guide line wrap split an exact phrase asserted by two existing tests",
+      "repair": "retained original phrase and put post-publication qualifier in its own sentence; regenerated exact note/inventory before passing rerun"
+    }
+  ],
+  "source_conformance": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/check_source.py",
+    "exit_code": 0,
+    "local_links": 46,
+    "failures": [],
+    "evidence": "source-checks.json"
+  },
+  "limits": [
+    "structural/digest/local-source observations only",
+    "no new native qualification",
+    "no cohort-content, ref-graph or publication claim",
+    "independent source judgments reused only for conserved exact accepted bytes"
+  ]
+}
