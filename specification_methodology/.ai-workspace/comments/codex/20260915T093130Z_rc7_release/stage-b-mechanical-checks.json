@@ -1,0 +1,395 @@
+{
+  "status": "satisfied",
+  "commands": [
+    {
+      "label": "axiom-tests-python312-normal",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build_tenants/core/code",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "exit_code": 0
+    },
+    {
+      "label": "axiom-tests-python312-optimized",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build_tenants/core/code",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "exit_code": 0
+    },
+    {
+      "label": "direct-regression-python312",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime_discriminator.py",
+        "--repaired"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "axiom-tests-python313-normal",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build_tenants/core/code",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "exit_code": 0
+    },
+    {
+      "label": "axiom-tests-python313-optimized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build_tenants/core/code",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "exit_code": 0
+    },
+    {
+      "label": "direct-regression-python313",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime_discriminator.py",
+        "--repaired"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "skill-structure",
+      "argv": [
+        "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+        "-B",
+        "/Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/skills/stdo-representation"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "cohort-content",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/scripts/check_stack_release.py",
+        "--phase",
+        "content"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "index-replay",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/report.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-executive-reference-only",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:executive-event-driven-attention",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/executive-reference-only.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-executive-materialized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:executive-event-driven-attention",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/executive-materialized.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-steel-reference-only",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:executive-steel-thread-delivery",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/steel-reference-only.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-steel-materialized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:executive-steel-thread-delivery",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/steel-materialized.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-worker-reference-only",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/worker-reference-only.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-worker-materialized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/worker-materialized.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-reviewer-reference-only",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/reviewer-reference-only.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-reviewer-materialized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/reviewer-materialized.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-combined-reference-only",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/combined-reference-only.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "projection-replay-combined-materialized",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/representation-rc7-bindings.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/map.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/mechanical-temp.4zpgnn82/combined-materialized.json"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    },
+    {
+      "label": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "exit_code": 0
+    }
+  ],
+  "input_sha256": {
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json": "d1bd16268cf434db984c9e6c3ebfd119110f9de211dbe69b952794cf9f13dc68",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/logical-constraint-map.json": "d0685a7548812610cda9aa9369f423e2d9944f194a5cd5c5b61e92c374b675af",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/validation-report.json": "8330717085c0a4072aed5f0c26978691b16f6ea65d6da633b7fdd20863ee74cf",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/source-corpus.json": "97ec14964df30f3d9203a052aa03170c65ce599d0dd6a0ed110dcd6282b28582"
+  },
+  "input_preservation": true,
+  "report_and_map_byte_reproduction": true,
+  "projection_byte_reproductions": 10,
+  "same_closure_both_modes": true,
+  "semantic_acceptance": false,
+  "native_qualification": false
+}

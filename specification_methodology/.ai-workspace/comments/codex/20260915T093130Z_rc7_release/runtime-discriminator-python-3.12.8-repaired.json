@@ -1,0 +1,39 @@
+{
+  "python": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "executable": "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "test_route": "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/test_ac.py#test_unresolved_physical_target_withholds_output_cleanup",
+  "test_sha256": "2a8804aacffe4decddfa14a213d8b8696acb29c97606c950919d126096137d3b",
+  "ac_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+  "argv": [
+    "/private/tmp/stdo-rc5-installed-manager-20260906/bin/python",
+    "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+    "project",
+    "--program",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/program.json",
+    "--map",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/map.json",
+    "--bindings",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/bindings.json",
+    "--mode",
+    "reference-only",
+    "--frame-index",
+    "urn:example:index:quarantine",
+    "--frame-index",
+    "urn:example:index:transfer",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/projection.json"
+  ],
+  "returncode": 2,
+  "stdout": "{\"diagnostics\":[{\"code\":\"input_error\",\"field\":\"input\",\"record\":\"urn:axiom-indexer:diagnostic:projection\",\"ref\":\"Symlink loop from '/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/loop-a.md'\"},{\"code\":\"output_safety_unresolved\",\"field\":\"output\",\"record\":\"urn:axiom-indexer:diagnostic:projection\",\"ref\":\"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/projection.json\"}],\"frame_index_refs\":[\"urn:example:index:quarantine\",\"urn:example:index:transfer\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:05482a63bc7a34c4a9ddb00de0c02d294a4408e88c190c67730c4358f463e2e8\",\"program_uri\":\"urn:example:program:mvp\",\"schema_version\":1,\"status\":\"invalid\"}\n",
+  "stderr": "",
+  "output_preimage_sha256": "ae981e9c564ca2a15fc18567dcae38c22ee54a6943995f31abf600127849c789",
+  "output_exists_after": true,
+  "output_preimage_retained": true,
+  "ordinary_source_and_inputs_preserved": true,
+  "loop_links_preserved": true,
+  "loop_resolution": {
+    "raised": "RuntimeError",
+    "detail": "Symlink loop from '/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/runtime-discriminator.3s73hklo/tmp4kivxf25/loop-a.md'"
+  }
+}

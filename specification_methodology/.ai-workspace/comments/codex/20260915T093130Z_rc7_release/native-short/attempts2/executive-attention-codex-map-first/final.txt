@@ -1,0 +1,116 @@
+{
+  "delivery_decision": {
+    "S0": "Wait for the reliable return: W remains within grant, with no checkpoint, exception or ready decision. Preserve judgments/H0; completion remains unresolved.",
+    "S1": "Tell owner: not finished; W continues, then candidate evidence and required independent review inform disposition. Unchanged S0 facts warrant no status polling.",
+    "S2": "Consume C1 candidate_ready/E1/H0/J1 and prepare independent C1 review. L7 stays open because mechanical checks and self-review do not satisfy independence.",
+    "S3": "At the expired checkpoint, obtain one bounded observation of W status and the return store. Stop on a closed return or report the remaining status gap for Executive reassessment; infer neither progress nor failure and do not retry blindly.",
+    "S4a": "Direct an affected pause before further writes and obtain M's missing write-set observation. Reliable notification does not discharge this supervision duty.",
+    "S4b": "Refuse the proposed historical-file write and redirect continuation to draft/current.md within W's grant. The write has not occurred; continuation awaits correction.",
+    "S5": "Keep L7 open and prepare independent C2 review: current C2/E2/H0 are valid, but R1's rendering assessment cannot cover the changed markup.",
+    "S6": "Stop repeating the unchanged repair; reassess frame, grant, dependency and rendering-evidence gap. Hold identical reactivation pending a resolving evidence path; retain required capability and assurance.",
+    "S7": "Accept C2 and close bounded L7 using current C2/E2/H0 and independent R2: all conditions hold, with no residuals. Review priority/boundary effect: not_applicable; Product acceptance/publication remain ungranted."
+  },
+  "evidence_disposition": {
+    "retained": "Evaluate rows independently. Preserve applicable owner rulings, H0 and unchanged judgments; E1/J1 remain C1-bound, E2/J2 C2-bound. J1/J2 remain self-review.",
+    "invalidated": "R1's rendering assessment loses applicability to C2; preserve its C1 history and independently surviving evidence.",
+    "still_required": "S5 needs a closed author-independent C2 assessment and current evidence/drift-lock checks before disposition; R2 exists only in S7.",
+    "observed": "C1/C2 hashes match evidence.json; draft/current.md equals exact C2. Source manifest and 52 members, Axiom's 7 members and Representation's 9 members match their declared digests.",
+    "source_root": "native/stdo-store/releases/v2.5.0-rc.7/standards/",
+    "source_reentry": {
+      "STDO_REFERENCE_FRAME_BASELINE.md": [
+        "#executive-attention-evaluation-and-action",
+        "#event-driven-executive-attention",
+        "#executive-drift-locks",
+        "#product-chain-basis",
+        "#work-result",
+        "#exact-candidate",
+        "#derived-executive-frame",
+        "#derived-reviewer-frame",
+        "#6-reviewer-returns-to-executive",
+        "#reviewer-result-and-triage-projection",
+        "#7-executive-disposes-and-checkpoints",
+        "#actor-binding-and-independence",
+        "#closure"
+      ],
+      "REFERENCE_FRAME_METHOD.md": [
+        "#applicability-and-required-results",
+        "#return-a-closed-result",
+        "#result-conjunction"
+      ],
+      "TICKET_METHOD.md": [
+        "#execution-and-verification-authority-separation-stdo-up-007",
+        "#recorded-judgment-and-owner-ruling-continuity",
+        "#condition-based-closure-and-reuse"
+      ],
+      "SPEC_METHOD.md": ["#construction-assessment-and-delegation"],
+      "authority_compressions/stdo_bootstrap.md": []
+    },
+    "tool_status": {
+      "artifact_directory": "native/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/",
+      "program": "axiomatic-program.json",
+      "program_sha256": "sha256:2659590e90d130283f51cc1ea39150fcfc491822bae274fcada6f739f9266e40",
+      "map": "logical-constraint-map.json",
+      "map_sha256": "sha256:893b4aaa4a4863aec80cfef56ea24c175d9f91a709a618bf8a1225942c191e14",
+      "project": {
+        "exit": 0,
+        "mode": "materialized",
+        "output": "stdout"
+      },
+      "join": {
+        "executable": "native/axiom_indexer/build_tenants/core/code/ac.py",
+        "arguments": ["join", "--input", "/dev/stdin"],
+        "exit": 0,
+        "output": "stdout; exact match; no terminal LF"
+      },
+      "effects": "Read-only qualification; no files written, actors launched, tests run or request sent."
+    }
+  },
+  "qualification_sequence": "Prepared path only: Executive revalidates outcome, basis, Product-role, authority and coverage/return locks; issues this request to a capable non-author; consumes the closed review; rechecks current C2/E2/H0 and all L7 conditions. Satisfaction permits bounded accept/closure; gaps hold, findings receive authorized disposition. Repair creates a successor and refreshes affected evidence/review.",
+  "selected_frames": [
+    {
+      "uri": "stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame",
+      "purpose": "Snapshot decisions, supervision, evidence reuse and bounded closure.",
+      "source_route": "stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-executive-frame",
+      "index": "urn:stdo-representation:frame-index:executive-event-driven-attention",
+      "scope": "Attention and result consumption under existing Executive authority."
+    },
+    {
+      "uri": "stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+      "purpose": "Independent read-only C2 assessment and closed return.",
+      "source_route": "stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+      "index": null,
+      "index_note": "The available T009 complete-consumer-update Reviewer index does not apply."
+    }
+  ],
+  "handoff_sections": [
+    {
+      "label": "Role and outcome",
+      "text": "Act as competent non-author Reviewer R-other for L7/S5; independently assess C2's Current-link correctness and historical preservation."
+    },
+    {
+      "label": "Reference frame and exact subject",
+      "text": "Frame/source: stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame, for independent assessment. Bind fixtures/C2/current.md and current draft/current.md to SHA-256 cc9fefd50ec3312bcfcd5f57309758da51d1074fb18f2b18d2702f63d556da4c, under stdo_task.json and qualification-basis.md."
+    },
+    {
+      "label": "Hard constraints",
+      "text": "Retain required frame capabilities and author independence; read-only inspection only, without repairs, tests, further activations, priority, disposition or publication."
+    },
+    {
+      "label": "Index context and evidence routes",
+      "text": "Routes are relative to task.md: independently acquire task.md#work-and-authority, C2, evidence.json entries E2/H0/J2/R1, and governing source through native/bindings.json, including the baseline's #reviewer-result-and-triage-projection. E2/H0 remain usable; J2 is self-review, and R1's C1 rendering judgment is invalid for C2."
+    },
+    {
+      "label": "Open solution space",
+      "text": "Choose inspection order, read-only tools, decomposition, source re-entry and counterexample search within the exact claim."
+    },
+    {
+      "label": "Return and stop contract",
+      "text": "Return one closed review-L7-C2 result to Executive with frame/activation, actor/independence, exact subject/basis/claim/scope/exclusions, acquired evidence, verdict, findings/technical triage, residuals and invalidators; satisfied requires explicit no-findings and not_applicable triage. Otherwise preserve the applicable result and gaps, naming any re-entry owner; then stop."
+    },
+    {
+      "label": "ACTION",
+      "text": "Assess exact C2 against the RC7 Current target and unchanged RC6 historical link; return your own evidence-bound judgment."
+    }
+  ],
+  "joined_request": "Role and outcome\nAct as competent non-author Reviewer R-other for L7/S5; independently assess C2's Current-link correctness and historical preservation.\n\nReference frame and exact subject\nFrame/source: stdo://releases/v2.5.0-rc.7/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame, for independent assessment. Bind fixtures/C2/current.md and current draft/current.md to SHA-256 cc9fefd50ec3312bcfcd5f57309758da51d1074fb18f2b18d2702f63d556da4c, under stdo_task.json and qualification-basis.md.\n\nHard constraints\nRetain required frame capabilities and author independence; read-only inspection only, without repairs, tests, further activations, priority, disposition or publication.\n\nIndex context and evidence routes\nRoutes are relative to task.md: independently acquire task.md#work-and-authority, C2, evidence.json entries E2/H0/J2/R1, and governing source through native/bindings.json, including the baseline's #reviewer-result-and-triage-projection. E2/H0 remain usable; J2 is self-review, and R1's C1 rendering judgment is invalid for C2.\n\nOpen solution space\nChoose inspection order, read-only tools, decomposition, source re-entry and counterexample search within the exact claim.\n\nReturn and stop contract\nReturn one closed review-L7-C2 result to Executive with frame/activation, actor/independence, exact subject/basis/claim/scope/exclusions, acquired evidence, verdict, findings/technical triage, residuals and invalidators; satisfied requires explicit no-findings and not_applicable triage. Otherwise preserve the applicable result and gaps, naming any re-entry owner; then stop.\n\nACTION\nAssess exact C2 against the RC7 Current target and unchanged RC6 historical link; return your own evidence-bound judgment."
+}

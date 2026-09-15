@@ -1,0 +1,130 @@
+# STDO Representation 2.5.0 RC7
+
+This record declares the exact coordinated candidate. It does not supply
+publication, Product acceptance or consumer adoption by its own existence.
+
+| Coordinate | Value |
+|---|---|
+| release version | `2.5.0-rc.7` |
+| product-local cut | `v2.5.0-rc.7` |
+| Project Release Namespace | `stdo_representation` |
+| Project Subtree root | `stdo_representation` |
+| qualified immutable tag ref | `refs/tags/stdo_representation/v2.5.0-rc.7` |
+| qualified version-line selector | `refs/tags/stdo_representation/v2.5.0` |
+| qualified RC branch | `refs/heads/rc/stdo_representation/2.5.0` |
+| qualified release branch | `refs/heads/release/stdo_representation/2.5.0` |
+| matched Source STDO ref | `refs/tags/specification_methodology/v2.5.0-rc.7` |
+| public Source STDO basis | `stdo://releases/v2.5.0-rc.7/` |
+
+## Exact Source STDO
+
+The matched source is commit `ddeb971da89ee47065359c99897a825b803eedd4`, annotated tag object
+`ac0e72b49814c30caf373fe87cedce585bdd36b8`, repository tree `14792247cc305f830f5c6bd62797d0fc2b70961d`,
+STDO subtree tree `3637df6d1e4d1cba4b7882c3a6c9b84ddd041aef` and standards tree
+`3c34d4324cb3f7188d03e4aff434715a785094f9`. Its installed manifest is
+`1f56029380604b0879fe322047fa8b38060297ba86b54bc8db8450d01ec034ae`. Exactly
+52 standards members have aggregate
+`b4769e7e689274f29b9d5b48674bf2d774392cab7aeebfd93834e008d309ba1b`. Three reviewed standards/projections
+change from RC6; the remaining 49 and manager 0.1.3 are byte-conserved.
+The future child tag, carrier and subtree identities are bound externally by
+qualification; this note cannot embed its own future identity.
+
+## Exact Product Inventory
+
+Exactly 9 entries. File digests cover bytes;
+symlink digests cover UTF-8 targets without a terminal newline. The aggregate
+sorts paths and emits SHA-256, two spaces, type, two spaces, path and newline:
+`cd42f90929ebaf6b4f7d8d983bffcb729ee38f173ca5cfb0d74a9be4f08feb26`.
+
+| Type | Member | SHA-256 |
+|---|---|---|
+| symlink | `.agents/skills/stdo-representation` -> `../../skills/stdo-representation` | `92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb` |
+| symlink | `.claude/skills/stdo-representation` -> `../../skills/stdo-representation` | `92c6b8eb455f6bd656501d9496179af39f331ebf5df7114ee5e53825d91a6ddb` |
+| file | `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json` | `d1bd16268cf434db984c9e6c3ebfd119110f9de211dbe69b952794cf9f13dc68` |
+| file | `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/logical-constraint-map.json` | `d0685a7548812610cda9aa9369f423e2d9944f194a5cd5c5b61e92c374b675af` |
+| file | `skills/stdo-representation/SKILL.md` | `d58d79380411f5c9980bc369e4bbe6255b72af7a908832a27b0bafae67f8c49d` |
+| file | `skills/stdo-representation/agents/openai.yaml` | `872aabc6e15b66dfcfe0f2d8c674a9d25511a94d74be781711304bc581619f5a` |
+| file | `skills/stdo-representation/references/claude.md` | `584189012cb0c414392e381969a9b02eda2c3cae826cd310218d92a1a3212c20` |
+| file | `skills/stdo-representation/references/codex.md` | `4ddbe37bda55a3c8f9e8545f391a906754067ffc49d2d6f0299eae2d41559497` |
+| file | `skills/stdo-representation/references/frame-index-use.md` | `3e7274395b1ea085e0397ab684f6ce7caba5524e39bb8c4a234dcc0272ade3ed` |
+
+Authority documents, release records, source-project Definitions/frame
+configuration and proof remain external to this Product member set. Their
+exact dependency and cohort records remain available for installation checks;
+co-location does not make a mutable checkout Product truth.
+
+## Exact Dependency And Generated Assets
+
+| exact Axiom dependency | `refs/tags/axiom_indexer/v2.5.0-rc.7` |
+
+Axiom version `2.5.0-rc.7` has 7 members,
+aggregate `55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1`. Its external release
+record `axiom_indexer/releases/v2.5.0.md` has SHA-256
+`d56528364f59265b2128b03af8abbae07ca1256acef19b11885c1fb11663c878`.
+
+| Role | Axiom member | SHA-256 |
+|---|---|---|
+| executable | `build_tenants/core/code/ac.py` | `5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8` |
+| output_contract | `skills/axiomatize-corpus/references/output-contract.md` | `c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b` |
+| schema | `skills/axiomatize-corpus/references/program.schema.json` | `43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7` |
+
+| Representation artifact / external source evidence | SHA-256 |
+|---|---|
+| `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/source-corpus.json` | `97ec14964df30f3d9203a052aa03170c65ce599d0dd6a0ed110dcd6282b28582` |
+| `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json` | `d1bd16268cf434db984c9e6c3ebfd119110f9de211dbe69b952794cf9f13dc68` |
+| `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/logical-constraint-map.json` | `d0685a7548812610cda9aa9369f423e2d9944f194a5cd5c5b61e92c374b675af` |
+| `build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/validation-report.json` | `8330717085c0a4072aed5f0c26978691b16f6ea65d6da633b7fdd20863ee74cf` |
+
+## Selected Claims And Predecessor Dispositions
+
+The exact published predecessor is `stdo_representation/v2.5.0-rc.6`,
+annotated tag `9dffb7161e97d040b83ec4863826d3c32cf12ddd`, commit
+`adb25a35acad363823b4c0d05fecbf9a2f20d25d`, nine-member aggregate
+`9cb7a9b8901f303ce69011c4f7ba551e101712c2a8e03010eac2aa1dbf9ceb8b`.
+
+- `STDO-REP-2.5-RC7-C01`: RC6 C01 is superseded only by exact RC7 source
+  rebinding and three authored event-driven Executive constraints. The 98 prior
+  statements and all residuals are conserved; only the steel-thread clause's
+  supporting closure gains the attention rule. The other 97 complete clauses
+  are conserved modulo source URI/program-identity translation.
+- `STDO-REP-2.5-RC7-C02`: RC6 C02 is conserved and extended by one explicit
+  event-driven Executive index. All three preceding index declarations are
+  conserved; the steel-thread view gains its declared attention support. The
+  exact repaired Axiom mechanics reproduce the unchanged map and both views of
+  all four indexes; only the demonstrated loop/refusal path changes.
+- `STDO-REP-2.5-RC7-C03`: RC6 C03's native interface is conserved, with
+  selection routes rebound to the exact RC7 package. The new Executive path
+  requires its own bounded fresh source/map qualification on Codex and Claude;
+  prior native observations do not supply that result.
+- `STDO-REP-2.5-RC7-C04`: RC6 C04's exact cohort identity is superseded by
+  RC7. Complete source/member/dependency closure and installed-path requirements
+  are conserved and checked against the successor.
+
+Earlier predecessor claim and acceptance dispositions remain unchanged history.
+The changed member bytes are the program, map and two native selection-route
+files. The remaining five members are byte-conserved. Source-project
+continuation bindings are separately owned and are not new Product members.
+
+## Qualification Boundary
+
+The candidate has 101 clauses and four explicit frame indexes. Source
+conservation compares 97 whole prior clauses, all 98 prior statements and all
+three preceding indexes by inverse source rebinding, then separately evaluates
+the three attention rules, their condition/exception/support closure and the
+steel-thread support bridge against the exact RC7 owner. Mechanical regeneration
+retains both views of every index and the overlapping update pair.
+The source-corpus record binds all 52 installed RC7 standards members.
+
+The [RC7 release carrier](../../specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
+binds the exact semantic review, mechanical checks, four fresh source/map
+native contexts and subsequent installed/cohort results. Those results remain
+outside these self-reference-sensitive note bytes. Source, mechanical, native,
+installed and publication evidence retain their distinct claims.
+
+Conserved RC6 evidence remains bounded by its original inputs and observed
+tasks. Failed attempts, blocked 10A/B preparations, unnecessary index use and
+historical Claude FP04 prospective overreach remain visible. No repeated-J or
+universal LLM reliability, minimal interaction/cost advantage, new accounting
+rule, automatic frame selection, semantic decision or executor is claimed.
+Publication requires the exact content/ref/remote gates and the affected
+qualified outcomes; Product acceptance and real consumer adoption are separate.

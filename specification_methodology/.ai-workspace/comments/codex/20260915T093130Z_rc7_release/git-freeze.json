@@ -1,0 +1,122 @@
+{
+  "kind": "stdo.rc7-stage-a-local-freeze",
+  "status": "satisfied",
+  "activation": "urn:stdo:activation:20260915:rc7:stage-a-worker:1",
+  "promotion_owner": "/root; conditional exact-source/mechanical grant under direct owner release instruction",
+  "initial_commit": "0a0cd85229ed5290b14459d727121ba3c987861f",
+  "commit_a": "ddeb971da89ee47065359c99897a825b803eedd4",
+  "tag_object": "ac0e72b49814c30caf373fe87cedce585bdd36b8",
+  "peeled_commit": "ddeb971da89ee47065359c99897a825b803eedd4",
+  "tree": "14792247cc305f830f5c6bd62797d0fc2b70961d",
+  "project_subtree_tree": "3637df6d1e4d1cba4b7882c3a6c9b84ddd041aef",
+  "standards_tree": "3c34d4324cb3f7188d03e4aff434715a785094f9",
+  "qualified_ref": "refs/tags/specification_methodology/v2.5.0-rc.7",
+  "staged_paths": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "STACK_RELEASE.md",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/check_source.py",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/full-source-tests.txt",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/prepare_stdo_note.py",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/qualification.json",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/release-note.candidate.md",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/remote-preflight.txt",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/source-checks.json",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/source-inventory.json",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/staged-paths.txt",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/targeted-source-tests.txt",
+    "specification_methodology/.ai-workspace/comments/codex/20260915_EXECUTIVE_EVENT_DRIVEN_POSTURE.md",
+    "specification_methodology/.ai-workspace/comments/codex/20260915_STDO_RELEASE_REQUEST_SCOPE.md",
+    "specification_methodology/QUICKSTART.md",
+    "specification_methodology/README.md",
+    "specification_methodology/plugins/spec/.claude-plugin/plugin.json",
+    "specification_methodology/plugins/spec/.codex-plugin/plugin.json",
+    "specification_methodology/plugins/spec/references/GETTING_STARTED.md",
+    "specification_methodology/releases/v2.5.0.md",
+    "specification_methodology/specification/GOALS.md",
+    "specification_methodology/specification/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+    "specification_methodology/specification/standards/authority_compressions/stdo_bootstrap.md",
+    "specification_methodology/specification/standards/authority_compressions/stdo_compressed.md",
+    "specification_methodology/tests/test_getting_started_setup.py",
+    "specification_methodology/tests/test_plugin_distribution.py",
+    "specification_methodology/tests/test_reference_frame_boundaries.py"
+  ],
+  "operations": [
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Release STDO 2.5.0-rc.7 source cut"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "-a",
+        "specification_methodology/v2.5.0-rc.7",
+        "ddeb971da89ee47065359c99897a825b803eedd4",
+        "-m",
+        "STDO 2.5.0 RC7: exact source and plugin cut; local cohort construction, publication pending"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "stdo",
+        "install",
+        "v2.5.0-rc.7",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "exit_code": 0,
+      "evidence": "stdo-install.json"
+    },
+    {
+      "argv": [
+        "stdo",
+        "verify",
+        "v2.5.0-rc.7",
+        "--manifest-sha256",
+        "1f56029380604b0879fe322047fa8b38060297ba86b54bc8db8450d01ec034ae"
+      ],
+      "exit_code": 0,
+      "valid": true,
+      "failures": [],
+      "evidence": "stdo-verify.json"
+    }
+  ],
+  "installed_manifest_sha256": "1f56029380604b0879fe322047fa8b38060297ba86b54bc8db8450d01ec034ae",
+  "install_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.0-rc.7",
+  "standards_member_count": 52,
+  "standards_member_set_sha256": "b4769e7e689274f29b9d5b48674bf2d774392cab7aeebfd93834e008d309ba1b",
+  "plugin_member_count": 17,
+  "plugin_member_set_sha256": "6bbf0eb583375f535dd3fcabd92397590a1843793ca57265571e435e9f4ad8fd",
+  "release_note_sha256": "f3e09e4fe81d6031b64f084d41bafa41b6b9192b57c68ad76c018c15ce7dd6e0",
+  "source_basis": {
+    "cut": "v2.5.0-rc.4",
+    "manifest_sha256": "4fa2556d0127bebce8f7184cc4a3cb708a175b2e40552c55cb211f2426d5049e",
+    "verified": true,
+    "adopted": false
+  },
+  "post_freeze_evidence_only": [
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/git-freeze.json",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/stdo-install.json",
+    "specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/stdo-verify.json"
+  ],
+  "unperformed": [
+    "peer construction",
+    "native qualification",
+    "commit B",
+    "child tags",
+    "mutable selector/release-branch moves",
+    "publication",
+    "consumer adoption"
+  ],
+  "limits": "Stage A local source cut and exact Install only; not complete cohort release readiness or public availability."
+}

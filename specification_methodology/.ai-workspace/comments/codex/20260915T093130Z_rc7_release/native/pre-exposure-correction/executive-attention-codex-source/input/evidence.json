@@ -1,0 +1,49 @@
+{
+  "kind": "controlled-fixture-observations",
+  "authority": "task.md",
+  "not_live_test_or_review_results": true,
+  "snapshots": "task.md#work-record-snapshots",
+  "C1": {
+    "path": "fixtures/C1/current.md",
+    "sha256": "72c73b1d5d2dff91ac9ebc6fe4d44a11326e80e3f2a96128fdcd27918373fd6d"
+  },
+  "C2": {
+    "path": "fixtures/C2/current.md",
+    "current_path": "draft/current.md",
+    "sha256": "a3e819ecbfafa0e5cd17f737b05eeb9560f67c6ea265e06fab95787b6bac639a"
+  },
+  "E1": {
+    "candidate": "C1",
+    "observation": "passing mechanical rendering/link check",
+    "independent": false
+  },
+  "E2": {
+    "candidate": "C2",
+    "observation": "passing mechanical rendering/link check",
+    "independent": false
+  },
+  "H0": {
+    "observation": "historical RC6 link unchanged",
+    "valid": true
+  },
+  "J1": {
+    "candidate": "C1",
+    "actor": "W",
+    "class": "author self-review"
+  },
+  "J2": {
+    "candidate": "C2",
+    "actor": "W",
+    "class": "author self-review"
+  },
+  "R1": {
+    "candidate": "C1",
+    "class": "independent review",
+    "rendering_assessment": "invalidated for C2 by material markup change"
+  },
+  "R2": {
+    "availability": "S7 only; not available in S5",
+    "exact_record": "task.md#work-record-snapshots"
+  },
+  "row_independence": "Consume only the evidence supplied by each task snapshot; do not import another row."
+}

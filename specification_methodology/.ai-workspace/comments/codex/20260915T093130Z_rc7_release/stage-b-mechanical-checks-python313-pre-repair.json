@@ -1,0 +1,22 @@
+{
+  "commands": [
+    {
+      "label": "axiom-tests-normal",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "build_tenants/core/code",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "exit_code": 1
+    }
+  ],
+  "semantic_acceptance": false
+}

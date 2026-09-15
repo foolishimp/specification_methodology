@@ -763,13 +763,21 @@ class FrameProjectionTests(unittest.TestCase):
         self.program_path.write_bytes(canonical_bytes(changed))
         output = self.root / "projection.json"
         original = b"Old result retained and explicitly diagnosed as unsafe."
-        output.write_bytes(original)
-        result = self.cli(output=output)
-        self.assertEqual(result.returncode, 2)
-        self.assertEqual(output.read_bytes(), original)
-        self.assertIn("output_safety_unresolved", {d["code"] for d in json.loads(result.stdout)["diagnostics"]})
-        self.assertTrue(first.is_symlink())
-        self.assertTrue(second.is_symlink())
+        inputs = {path: path.read_bytes() for path in
+                  (self.program_path, self.map_path, self.binding_path, self.root / "docs.md")}
+        for mode in ("reference-only", "materialized"):
+            with self.subTest(mode=mode):
+                output.write_bytes(original)
+                result = self.cli(output=output, mode=mode)
+                self.assertTrue(output.exists(), result.stdout + result.stderr)
+                self.assertEqual(output.read_bytes(), original)
+                self.assertEqual(result.returncode, 2)
+                self.assertIn("output_safety_unresolved", {d["code"] for d in json.loads(result.stdout)["diagnostics"]})
+                self.assertEqual({path: path.read_bytes() for path in inputs}, inputs)
+                self.assertTrue(first.is_symlink())
+                self.assertTrue(second.is_symlink())
+                self.assertEqual(first.readlink(), second)
+                self.assertEqual(second.readlink(), first)
 
     def test_programs_without_indexes_keep_their_existing_map_shape(self) -> None:
         plain = program()

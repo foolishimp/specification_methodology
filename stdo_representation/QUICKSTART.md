@@ -1,8 +1,10 @@
 # STDO Representation Quickstart
 
-Use the RC6 program, map, complete native bundle and exact Axiom dependency
+Use the RC7 program, map, complete native bundle and exact Axiom dependency
 bound by [the release record](releases/v2.5.0.md). The instructions below assume
-those exact Products have been provisioned through the selected cohort. A
+those exact Products have been published and provisioned through the selected
+cohort. RC7 is currently a local construction candidate; RC6 remains the
+published predecessor until the complete publication is verified. A
 source checkout is a construction subject until its exact release is verified.
 External callers retain their own Product Definition and accepted work/frame
 configuration; a represented rule does not silently replace that basis.
@@ -14,7 +16,7 @@ content, full member inventories and source closure:
 
 ```sh
 python3 scripts/check_stack_release.py --phase content \
-  --revision refs/tags/stdo_representation/v2.5.0-rc.6
+  --revision refs/tags/stdo_representation/v2.5.0-rc.7
 ```
 
 Run that command at the repository root with the exact annotated cohort tags
@@ -27,8 +29,8 @@ the content and local-ref phases under its explicit grant.
 The shared manager verifies the exact Source STDO Install:
 
 ```sh
-stdo verify v2.5.0-rc.6 \
-  --manifest-sha256 bed7535a5feddc5e874993ff96d1f5f27e2a0fff63f366fc3b1fec3e301dd9e0
+stdo verify v2.5.0-rc.7 \
+  --manifest-sha256 1f56029380604b0879fe322047fa8b38060297ba86b54bc8db8450d01ec034ae
 ```
 
 Use the Axiom Product root selected by the caller's dependency record, verify
@@ -48,8 +50,8 @@ Prepare an invocation-local Binding Set in an authorized work directory:
   "kind": "axiom-indexer.binding-set",
   "schema_version": 1,
   "bindings": [{
-    "uri_prefix": "stdo://releases/v2.5.0-rc.6/",
-    "path": "/absolute/path/to/the/verified/RC6/Install"
+    "uri_prefix": "stdo://releases/v2.5.0-rc.7/",
+    "path": "/absolute/path/to/the/verified/RC7/Install"
   }]
 }
 ```
@@ -59,7 +61,7 @@ that file. From the selected Representation Product root, validate to stdout:
 
 ```sh
 python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
-  --program build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/axiomatic-program.json \
+  --program build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json \
   --bindings "$STDO_BINDINGS"
 ```
 
@@ -110,7 +112,7 @@ this guide does not create any of them.
 ## 6. Use explicitly selected frame indexes
 
 The [frame-index guide](skills/stdo-representation/references/frame-index-use.md)
-provides the released RC6 commands. Select the complete-update Worker or
+provides the released RC7 commands. Select the complete-update Worker or
 Reviewer index only when its declared question and scope apply. Ordinary tasks
 use relevant actual source frames and map entries. Both views preserve the
 same selected supporting closure and uncertainty; the materialized view

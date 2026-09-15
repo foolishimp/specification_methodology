@@ -2,7 +2,7 @@
 
 ## Current Goal
 
-Status: completed; exact RC6 mechanics and frame basis 10 are qualified, published and publicly reacquired
+Status: active RC7 release qualification with bounded output-preservation repair; accepted frame basis 11 is operative
 
 Supply the smallest sufficient generic mechanics for faithful, reproducible
 axiomatic indexing and native STDO use. Existing resolution, validation,
@@ -14,7 +14,7 @@ unchanged-content materialized views. An agent authors the relationships and
 selects the frame; code preserves their declared closure and diagnoses missing
 or stale bindings. The reference frame remains its owner's evaluation contract.
 
-The [RC6 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) closes the separately selected successor with all seven mechanics members unchanged, exact RC6 source/frame bindings and public reacquisition. The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) and completed T-009 remain predecessor evidence with their original limitations. No successor work is selected.
+The [RC6 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) closes that successor with all seven mechanics members unchanged, exact RC6 source/frame bindings and public reacquisition. The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) and completed T-009 remain predecessor evidence with their original limitations. The owner-selected [RC7 release work](../../specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md#stage-b-worker-activation) qualifies the seven-member mechanics against exact RC7 source and the affected Representation/native path. The separately granted executable repair restores the existing unresolved-symlink-loop/output-preservation contract on observed Python 3.12.8 and 3.13.7; six Product members remain byte-conserved. The exact RC7 internal frame/Definition configuration is accepted after independent conservation assessment and the bounded decision; no Product acceptance is inferred.
 
 The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
 owns the shared outcome. The existing combined

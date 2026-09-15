@@ -2,10 +2,13 @@
 
 STDO Representation supplies the source-linked STDO axiomatic program, its
 deterministic logical map and a shared native skill for Codex and Claude.
-The selected coordinated release is RC6; its exact source, dependency,
+The selected coordinated successor candidate is RC7; its exact source, dependency,
 member inventory and claims are owned by [the release record](releases/v2.5.0.md)
 and [cohort carrier](../stack_release.json). Publication state is verified from
-the exact refs, rather than inferred from a source checkout.
+the exact refs, rather than inferred from a source checkout. RC6 remains the
+published predecessor until complete RC7 publication and public reacquisition
+verify. The source-project RC7 frame/Definition configuration is separately
+accepted and verified; this does not claim publication or external adoption.
 
 An LLM authors and judges meaning. Axiom Indexer resolves and validates declared
 references, produces reference-only or unchanged-content materialized frame
@@ -14,7 +17,7 @@ views, and joins caller-authored text. STDO remains semantic authority.
 ## MVP
 
 The Product contains the program and map under
-`build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.6/`, the complete
+`build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/`, the complete
 canonical `skills/stdo-representation/` bundle and its two native discovery
 symlinks. The exact nine-member inventory lives in the release record.
 There is no Representation-local executor or projection engine.
@@ -23,7 +26,9 @@ The [frame-index design](build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md)
 explains the two overlapping complete-update Worker/Reviewer indexes. They
 retain shared rules, supporting premises, conditions, exceptions and residuals.
 The agent selects applicability and supplies actual task evidence; an indexed
-rule is not an already satisfied condition.
+rule is not an already satisfied condition. The RC7 program also declares the
+Executive steel-thread and event-driven attention indexes, grounded in the exact
+baseline; they do not appoint Executive or supply operation authority.
 
 ## Use
 
@@ -41,7 +46,7 @@ names a literal file; file output requires the applicable write grant.
 
 ## Exact bases
 
-The release record and cohort carrier bind exact Source STDO RC6 and the
+The release record and cohort carrier bind exact Source STDO RC7 and the
 same-version Axiom dependency, including their member and source digests.
 The caller's operative method basis remains a separate selection. A working
 candidate requires its explicit construction grant; discovery, matching version

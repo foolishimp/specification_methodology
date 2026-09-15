@@ -1,0 +1,1 @@
+[Current][current]\n[RC6](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md)\n\n[current]: stdo://releases/v2.5.0-rc.7/standards/SPEC_METHOD.md\n
