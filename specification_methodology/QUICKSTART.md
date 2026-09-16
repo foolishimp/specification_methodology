@@ -54,8 +54,13 @@ Confirm the executable is available:
 stdo --version
 ```
 
-RC7 retains `stdo-toolchain 0.1.3`. Do not install from the moving qualified
-selector when reproducibility matters. Historical root-layout cuts use their
+RC7 retains `stdo-toolchain 0.1.3`. Its cohort updater refuses any companion
+Product whose subtree holds an unadmitted absolute symlink, even when that
+entry is outside the declared release inventory. The repaired manager is
+`stdo-toolchain 0.1.4`: it selects the declared install closure before
+validating and installing it. Until a later cut publishes 0.1.4, install it
+from a `main` checkout with `pipx install --force ./specification_methodology`.
+Do not install from the moving qualified selector when reproducibility matters. Historical root-layout cuts use their
 historical unqualified refs and do not use the nested `subdirectory` fragment.
 
 ## 2. Install One Immutable STDO Cut
