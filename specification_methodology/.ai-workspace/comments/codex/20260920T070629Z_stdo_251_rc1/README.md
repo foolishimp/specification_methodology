@@ -1,7 +1,8 @@
 # STDO 2.5.1 RC1 preparation
 
-Status: active candidate preparation. Independent of T-288 and all ABI delivery
-or closure work. No publication or external consumer adoption selected.
+Status: the complete STDO 2.5.1 RC1 cohort is published. See the
+[release result](RELEASED.md) for exact cuts, evidence and retained native limits.
+T-288 and ABI delivery are independent; external consumer adoption is unselected.
 
 ## Intake and authority
 
@@ -9,7 +10,7 @@ Owner instruction: “we can prepare 2.5.1 RC1 without any dependency”.
 This selects local preparation of the complete matched candidate under
 [STACK_RELEASE.md](../../../../../STACK_RELEASE.md), following the shared
 recommendations and accepted T-031 source work. It creates no ABI repair gate.
-[T-032](../../../tickets/active/T-032-prepare-stdo-251-rc1.md) tracks this work.
+[T-032](../../../tickets/completed/T-032-prepare-stdo-251-rc1.md) tracks this work.
 
 Owning method re-entry is `requirement_reprice` for changed normative relations;
 derived profile/frame realization is `design_reframe`. Existing clauses absorb
@@ -339,3 +340,17 @@ Its bounded evidence Writer territory is this directory's `public-review/`;
 disposable acquisition/store effects serve only that exact assessment. It may
 not repair source, change refs, adopt consumers or upgrade the native verdict.
 The root consumes its exact published-cut return before completion bookkeeping.
+
+## Closed RC1 release result
+
+The root consumes the independent fresh public exact-cut result: satisfied for
+the mechanical cut/member/installation claim. The source/plugin and both peer
+inventories match, and public installation verifies the frozen manifest. The
+original acquisition-locator failure and all native limits remain retained.
+
+The complete owner-selected RC1 release is finished. The root enters its
+existing Writer grant for commit-C publication receipts, current release-status
+documentation, Goals and T-032 closure. Commit B is
+`4e83fdc4e31ad2161ab70a9759cecbbae5390b69`; source A and every immutable Product
+tag remain unchanged. Commit C advances only bookkeeping on `main`, with a
+lease against B and an explicit ancestor check. See [the release result](RELEASED.md).

@@ -1,9 +1,10 @@
-# T-032 — Prepare STDO 2.5.1 RC1
+# T-032 — Prepare and release STDO 2.5.1 RC1
 
 - id: T-032
 - type: enhancement
 - ticket_category: ordinary
-- status: active
+- status: completed
+- completed_at: 2026-09-20
 - owner: specification_methodology
 - created_at: 2026-09-20
 - change_class: requirement_reprice
@@ -55,3 +56,15 @@ Commit B, checked atomic publication, public verification and fresh reacquisitio
 precede final completion bookkeeping. External consumer migration remains outside
 scope. This owner disposition changes the release consequence of the retained
 results; it does not rewrite those results.
+
+## Completion
+
+The complete matched RC1 cohort is published atomically and verified through
+public topology, exact inventories and a fresh public install. Source A is
+`dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a`; companion/cohort B is
+`4e83fdc4e31ad2161ab70a9759cecbbae5390b69`. The 167 package tests and mechanical
+release gates passed. [The release result](../../comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+records all evidence and the two retained Representation native reporting
+limits. The independent complete native comparison remains indeterminate; the
+owner selected this RC publication with those disclosed limits. No further
+native refinement or external consumer adoption belongs to this completed work.

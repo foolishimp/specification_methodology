@@ -6,9 +6,10 @@ New to STDO? Read [Using STDO](plugins/spec/references/GETTING_STARTED.md) for
 the daily human and LLM workflow. Use the [Project Quickstart](QUICKSTART.md)
 when adding the toolchain and Product Definition to a project.
 
-The [2.5.1 RC1 preparation](.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md)
-constructs the local successor candidate. Its [release declaration](releases/v2.5.1.md)
-and installation examples describe the candidate and apply after publication.
+The [2.5.1 RC1 release](.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+records the published matched cohort and its qualification limits. The exact
+[release declaration](releases/v2.5.1.md) and installation examples identify
+the available cut.
 The [RC7 release work](.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
 and [2.5.0 declaration](releases/v2.5.0.md) preserve the published predecessor.
 The source project's separately selected operative RC4 basis remains unchanged.

@@ -2,14 +2,15 @@
 
 ## Current goal
 
-Status: local complete 2.5.1 RC1 candidate preparation; publication and external
-adoption are unselected. RC7 remains the published immutable predecessor.
+Status: the complete 2.5.1 RC1 cohort is published with its recorded native
+qualification limits. External consumer adoption is unselected. RC7 remains
+the immutable predecessor.
 
 Conserve the seven-member generic Axiom Product while qualifying the
 new exact source/program/map relation through its existing contracts.
-The [selected shared preparation](../../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md) and
-[T-032](../../specification_methodology/.ai-workspace/tickets/active/T-032-prepare-stdo-251-rc1.md)
-own this bounded matched-cohort work, independently of ABIogenesis T-288.
+The [completed shared release](../../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) and
+[T-032](../../specification_methodology/.ai-workspace/tickets/completed/T-032-prepare-stdo-251-rc1.md)
+record this bounded matched-cohort release, independently of ABIogenesis T-288.
 No completed predecessor ticket or result is reopened.
 
 Source STDO owns meaning, Axiom owns generic resolution/validation/projection
@@ -20,9 +21,9 @@ refresh the affected relation and retain negative outcomes.
 
 ## Selected basis
 
-The candidate represents exact Source STDO `v2.5.1-rc.1`, manifest
+The release represents exact Source STDO `v2.5.1-rc.1`, manifest
 `5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64`,
-with same-version child candidates. The live Product Definition and its exact
+with same-version child cuts. The live Product Definition and its exact
 decision remain the sole operative source-configuration selection; candidate
 construction does not promote a proposed frame or adopt an external caller.
 Historical RC7 and earlier records retain their own immutable claims and limits.

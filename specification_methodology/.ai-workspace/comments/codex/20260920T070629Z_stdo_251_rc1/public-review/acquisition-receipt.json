@@ -1,0 +1,96 @@
+{
+  "literal_repository_url": "https://github.com/foolishimp/specification_methodology.git",
+  "temporary_root": "/tmp/stdo-251-rc1-public-review-l53r1mfx",
+  "repository": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+  "store": "/tmp/stdo-251-rc1-public-review-l53r1mfx/store",
+  "exact_requested_refs": [
+    "refs/heads/main",
+    "refs/heads/rc/axiom_indexer/2.5.1",
+    "refs/heads/rc/specification_methodology/2.5.1",
+    "refs/heads/rc/stdo_representation/2.5.1",
+    "refs/heads/release/axiom_indexer/2.5.1",
+    "refs/heads/release/specification_methodology/2.5.1",
+    "refs/heads/release/stdo_representation/2.5.1",
+    "refs/tags/axiom_indexer/v2.5.1",
+    "refs/tags/axiom_indexer/v2.5.1-rc.1",
+    "refs/tags/specification_methodology/v2.5.1",
+    "refs/tags/specification_methodology/v2.5.1-rc.1",
+    "refs/tags/stdo_representation/v2.5.1",
+    "refs/tags/stdo_representation/v2.5.1-rc.1"
+  ],
+  "git_configuration_isolated": true,
+  "commands": [
+    {
+      "name": "git-init",
+      "argv": [
+        "git",
+        "init",
+        "-b",
+        "assessment"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:19:19.954390+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d9d0dc75e2f216d25bbce43959db4becdddf2260d99a14ff2edd1e7a2525261f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "git-origin",
+      "argv": [
+        "git",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/foolishimp/specification_methodology.git"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:19:19.970781+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "git-fetch",
+      "argv": [
+        "git",
+        "fetch",
+        "--depth=1",
+        "--no-tags",
+        "--no-recurse-submodules",
+        "https://github.com/foolishimp/specification_methodology.git",
+        "refs/heads/main:refs/heads/main",
+        "refs/heads/rc/axiom_indexer/2.5.1:refs/heads/rc/axiom_indexer/2.5.1",
+        "refs/heads/rc/specification_methodology/2.5.1:refs/heads/rc/specification_methodology/2.5.1",
+        "refs/heads/rc/stdo_representation/2.5.1:refs/heads/rc/stdo_representation/2.5.1",
+        "refs/heads/release/axiom_indexer/2.5.1:refs/heads/release/axiom_indexer/2.5.1",
+        "refs/heads/release/specification_methodology/2.5.1:refs/heads/release/specification_methodology/2.5.1",
+        "refs/heads/release/stdo_representation/2.5.1:refs/heads/release/stdo_representation/2.5.1",
+        "refs/tags/axiom_indexer/v2.5.1:refs/tags/axiom_indexer/v2.5.1",
+        "refs/tags/axiom_indexer/v2.5.1-rc.1:refs/tags/axiom_indexer/v2.5.1-rc.1",
+        "refs/tags/specification_methodology/v2.5.1:refs/tags/specification_methodology/v2.5.1",
+        "refs/tags/specification_methodology/v2.5.1-rc.1:refs/tags/specification_methodology/v2.5.1-rc.1",
+        "refs/tags/stdo_representation/v2.5.1:refs/tags/stdo_representation/v2.5.1",
+        "refs/tags/stdo_representation/v2.5.1-rc.1:refs/tags/stdo_representation/v2.5.1-rc.1"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:19:19.981900+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4726b7e5ca3f97a59ad33c4ff346fe9a9d42abd408a16f5acbdc42bf18498e28"
+    },
+    {
+      "name": "git-checkout",
+      "argv": [
+        "git",
+        "checkout",
+        "--detach",
+        "4e83fdc4e31ad2161ab70a9759cecbbae5390b69"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:19:25.778918+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6ca8f6ff9738026eef2d720a5de68e4cabf7629bb7fc53e804af6718641f1ec"
+    }
+  ]
+}

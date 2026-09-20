@@ -1,0 +1,53 @@
+{
+  "initial_store_absent": true,
+  "store": "/tmp/stdo-251-rc1-public-review-l53r1mfx/store-public-url",
+  "launcher": "/Users/jim/.local/bin/stdo",
+  "resolved_launcher": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/stdo",
+  "launcher_sha256": "dd2fb1a3e5e946dc09132a180e3d8fbb4db1f09aa9c2958a802cf56d439c2fb4",
+  "environment_overrides": {
+    "GIT_CONFIG_NOSYSTEM": "1",
+    "GIT_CONFIG_GLOBAL": "/dev/null",
+    "GIT_CONFIG_SYSTEM": "/dev/null",
+    "GIT_TERMINAL_PROMPT": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/tmp/stdo-251-rc1-public-review-l53r1mfx"
+  },
+  "commands": [
+    {
+      "name": "public-url-stdo-install",
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/tmp/stdo-251-rc1-public-review-l53r1mfx/store-public-url",
+        "install",
+        "v2.5.1-rc.1",
+        "--repository",
+        "https://github.com/foolishimp/specification_methodology.git",
+        "--manifest-sha256",
+        "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:23:19.960243+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6e5a7fc0f47ab8872ac53a4db3b3b42644192b68c60656be1f3b54baa5e8f7bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "public-url-stdo-verify",
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/tmp/stdo-251-rc1-public-review-l53r1mfx/store-public-url",
+        "verify",
+        "v2.5.1-rc.1",
+        "--manifest-sha256",
+        "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+      ],
+      "cwd": "/tmp/stdo-251-rc1-public-review-l53r1mfx/repository",
+      "started_utc": "2026-09-20T09:23:27.306767+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "5557af51d411b2d80782d0decbed2ed0d47ee7f1c86e71f27d4c768bc4cb69fa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

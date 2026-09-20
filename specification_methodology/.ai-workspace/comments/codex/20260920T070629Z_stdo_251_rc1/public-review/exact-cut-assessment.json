@@ -1,0 +1,122 @@
+{
+  "kind": "stdo.public-exact-cut-assessment",
+  "schema_version": 1,
+  "closed_utc": "2026-09-20T09:25:12.059227+00:00",
+  "result": "satisfied",
+  "scope": "Independent public exact-cut identities, complete cohort/member/source bindings and fresh Source STDO install/verify; mechanical scope only",
+  "assessor": "independent_native_comparison",
+  "independence": "Did not author qualifying Product bytes; no Product, native-output, task, oracle or remote-ref effects. Native judgment not reopened.",
+  "repository_url": "https://github.com/foolishimp/specification_methodology.git",
+  "source_cut": {
+    "ref": "refs/tags/specification_methodology/v2.5.1-rc.1",
+    "tag_object": "b80e82e123f7f88eb0dffd9339f8ead9c733d153",
+    "commit": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a",
+    "tree": "eaf8358b09d3defcc5c85dd812961849480ab0c7"
+  },
+  "companion_cut": {
+    "axiom_tag_object": "46d58d9d0b4d8b6aa104ae1278092dc62a81a022",
+    "representation_tag_object": "864718069fd28d00b8d5c9c98e050c2a8541a8d2",
+    "commit": "4e83fdc4e31ad2161ab70a9759cecbbae5390b69",
+    "tree": "0f694f57e614d99cb2d66de20dec6e2a9db27ba6",
+    "cohort_sha256": "53d6f06fa4f873f1986e5368613992a11bb6d8d58eac17888663b0e165860a7f"
+  },
+  "member_counts": {
+    "standards": 52,
+    "spec_plugin": 17,
+    "axiom_indexer": 7,
+    "stdo_representation": 9
+  },
+  "member_set_sha256": {
+    "standards": "c6a3189ef79aeb4e3f75eb8fd8fba2f1126ea450df3ec59087273c56c03e3795",
+    "spec_plugin": "0421ec091b5f1cec91ba3fa347d5580f8f7d9dcce8be2d42f086381152c2927b",
+    "axiom_indexer": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "stdo_representation": "74bdd3d0feb149b5a9abc72f66de2f00a619a083f3599b8328ee24a72d1ebf37"
+  },
+  "program_file_sha256": "f45bac9323a3058625325e6791ef8355f45c1bf8a3f8018203f3daf14db4e612",
+  "map_file_sha256": "a0c68f7a4cebf8166c7e436737d8fe5de68ac8f871dcd6a29196d719af89f9b1",
+  "installed_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "checks": {
+    "public_identities": true,
+    "complete_member_inventories": true,
+    "published_content_checker": true,
+    "install_and_verify_exit_zero": true,
+    "fresh_public_store_verified": true,
+    "pinned_installed_manifest": true,
+    "installed_source_inventory_matches_public_cut": true,
+    "installed_plugin_inventory_matches_public_cut": true,
+    "installed_source_bytes_match_public_cut": true,
+    "installed_plugin_bytes_match_public_cut": true,
+    "public_checkout_clean_after_checks": true
+  },
+  "all_checks_pass": true,
+  "preserved_acquisition_failure": {
+    "receipt": {
+      "path": "fresh-install-verification.receipt.json",
+      "sha256": "87842a2e6eefebcc69274101fa422615a3c69012befe73547f7279bf945b8f3b"
+    },
+    "exit_code": 2,
+    "observed_error": "Manager temporary bare fetch did not establish refs/tags/specification_methodology/v2.5.1-rc.1 from the shallow disposable checkout.",
+    "disposition": "Root authorized one repository-locator change to the literal public URL and a new fresh store. Install and verify passed. No manager repair, release change or independent history reconstruction."
+  },
+  "findings": [],
+  "native_result_unchanged": {
+    "result": "indeterminate",
+    "findings": [
+      "RT-C01",
+      "RT-C02"
+    ],
+    "severity": "S3",
+    "report": "../native-review/role-transition-comparison-return.json",
+    "report_sha256": "991efd4c017603417ac53de192c3f9062efc3eaf0769438070b83f176683e10c",
+    "publication_does_not_upgrade": true
+  },
+  "limitations": [
+    "Mechanical inventory and source-binding qualification is distinct from substantive full member-content review and semantic correctness.",
+    "No new native observations or qualification claim.",
+    "No consumer adoption or Product-acceptance decision.",
+    "Remote publication topology gate is separately owned by root."
+  ],
+  "evidence": [
+    {
+      "path": "assessment-activation.json",
+      "sha256": "686130663194fe97b2d546f38243dee32b0a39cb42c0b48775cccb0dab79380a"
+    },
+    {
+      "path": "acquisition-receipt.json",
+      "sha256": "8a5fccac776645a1a05fb781735ed1e3e8260cc7a286f84e2e4c12e0ea93fe1d"
+    },
+    {
+      "path": "exact-public-identities.json",
+      "sha256": "5521efbfb676814f498d54748329aaa08709195c99c33d1907c8898a5eb67f0d"
+    },
+    {
+      "path": "exact-public-member-inventory.json",
+      "sha256": "8b043a280d5d93421096e8eaf2cbe07cfa3e81ae412fd8bd5769a80009177021"
+    },
+    {
+      "path": "published-content-check.receipt.json",
+      "sha256": "0ccfa365fd48eb7f82622b5d6cbc11564b8cc347b9ec41ea6f7cc311fb452daa"
+    },
+    {
+      "path": "public-url-install-activation.json",
+      "sha256": "c11793002491ef311bb8656391e6aa8807be8696483a23f7f95c7d3c4380a5cf"
+    },
+    {
+      "path": "public-url-install-verification.receipt.json",
+      "sha256": "6884d77096fe4c39b2e57eb81c9fbc4fc915ac2951d4b4914d46541ab1cc4ef1"
+    },
+    {
+      "path": "public-url-stdo-install.stdout.txt",
+      "sha256": "6e5a7fc0f47ab8872ac53a4db3b3b42644192b68c60656be1f3b54baa5e8f7bc"
+    },
+    {
+      "path": "public-url-stdo-verify.stdout.txt",
+      "sha256": "5557af51d411b2d80782d0decbed2ed0d47ee7f1c86e71f27d4c768bc4cb69fa"
+    },
+    {
+      "path": "exact-cut-assessment.md",
+      "sha256": "3270224378598f49bfcca9d0549ac3aabe7d705b8e78a6473e60ad6bebb86809"
+    }
+  ],
+  "role_close": "Bounded Writer activation ends with this report and evidence inventory; public-review writes cease."
+}
