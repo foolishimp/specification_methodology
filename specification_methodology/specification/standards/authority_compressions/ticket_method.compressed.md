@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91
+source_digest: f031ce7fb3b5b366ffaee5996ae76e861697ad86897cc04c06b67da249fe0eca
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-06
+generated_at: 2026-09-20
 stale_if_source_digest_changes: true
 ---
 
@@ -128,6 +128,17 @@ durable ticket, a sprint-local entry, or an intake draft.
   is established. Shared C does not replace a required assessor's independent
   acquisition and judgment. Use the existing carrier lifetime and proof route,
   with no new judgment registry or ticket per decision.
+- Repricing dispositions each affected obligation as retained, superseded,
+  deferred or withdrawn in the existing carrier with owner/evidence links.
+  Preserve surviving work and changed dependencies without copying unaffected
+  history. Present a short consequence delta for decision; preserve original
+  owner wording separately. "Continue" accepts no undisclosed architecture or
+  scope change.
+- A test predicate needs a supported entry/state and governing obligation under
+  the operating/threat model. Audit affected predicates when responsibility
+  changes; existing tests cannot authorize an excluded threat or retain a
+  superseded guard. Unsupported expectations need no replacement guard; a
+  conflict in live authority returns to its owner.
 - Review findings must cite current authority and code/proof paths, not only
   historical commentary.
 - Prompt migration work must update tickets when the prompt contract itself is

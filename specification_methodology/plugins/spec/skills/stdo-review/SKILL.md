@@ -41,6 +41,17 @@ read-only.
   proof masking, failure/recovery, installed behavior, and reconstruction.
 - Inspect tests, fixtures, mutations, environment, and interpretation where
   they can change the proof.
+- Bind findings and affected acceptance predicates to a violated property,
+  supported entry/state, governing operating/threat model and credible causal
+  path. An excluded threat gives no guard a retention claim; test presence
+  creates no authority. Internal location alone does not establish trust.
+  Preserve supported input, mutable-state, authority and effect checks.
+- For material computational composition or recurrence, evaluate one complete
+  producer-to-consumer path, including established facts, invalidators, effects,
+  retained alternatives and accumulated work. Require the claimed operational
+  observations; local passes or semantic agreement cannot establish them.
+  Reuse still-valid support without substituting another actor's judgment for
+  the required independent assessment.
 - Under an adopted STDO engagement profile, return technical severity, causal
   assessment and confidence where supportable, blast radius, workaround or
   containment, repair complexity, regression risk, and residual uncertainty.

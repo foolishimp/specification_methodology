@@ -91,6 +91,11 @@ and fresh public reacquisition are verified. `stack_release.json` retains its
 frozen commit-B candidate identity; the linked publication evidence records
 the completed transition. RC6 remains the immutable predecessor.
 
+The [2.5.1 RC1 preparation](specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md)
+selects a local successor candidate with its own source, companion and native
+qualification. T-288 and ABI delivery supply no release dependency. Local
+preparation does not claim publication or external consumer adoption.
+
 ## Coordinated Construction
 
 The first complete coordinated cohort was `v2.5.0-rc.4`; transitional RC3 index

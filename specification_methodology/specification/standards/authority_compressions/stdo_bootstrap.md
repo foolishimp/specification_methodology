@@ -8,16 +8,16 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  SPEC_METHOD.md: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
+  SPEC_METHOD.md: ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: 234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1
+  STDO_REFERENCE_FRAME_BASELINE.md: 29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d
   RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-09-15
+generated_at: 2026-09-20
 stale_if_source_digest_changes: true
 ---
 
@@ -60,11 +60,25 @@ owning standards remain constitutional authority.
    as required by that activation and governed scope. A prompt, summary,
    symbolic map, or prior result may route attention but cannot replace current
    source authority or a closed frame result.
+   When the selected evaluation needs the cross-interface refinement, acquire
+   `STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame`;
+   it separates design, actual-boundary, runnable-path and user-usability claims.
+   Its computational whole-path refinement covers material composition and
+   recurrence; inspect the causal cone within access authority even when the
+   mutation grant names narrower write territory.
 8. Reuse applicable computed facts, recorded judgments and original owner
    rulings through their exact source/evidence routes. Refresh affected support
    on a material invalidator; do not reclassify merely because a session or role
    changed. Closure requires satisfied applicable conditions, not a review
    event. The raw owning standards decide sufficiency and reserved authority.
+
+Derived guidance preserves source permissions and conditions as well as
+prohibitions. A digest does not establish that fidelity. Complete enclosing
+admission permits applicable established facts; a function or role boundary
+alone does not require repeating their derivation. Material invalidation and
+required independent judgment retain their own checks. Bind findings and test
+predicates to the supported operating/threat model. Retirement is the default
+for superseded responsibility; source law places the burden on retention.
 
 `sync` materializes only the already selected exact basis. `adopt --dry-run`
 presents a digest-bound plan to the highest-ordinal published immutable RC and

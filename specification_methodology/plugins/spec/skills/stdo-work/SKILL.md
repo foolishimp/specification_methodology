@@ -106,8 +106,14 @@ Reviewer or durable ticket. Activate coordination for a material dependency,
 authority or context boundary. While occupying Executive, do not edit files or
 Git state; the same actor must first enter a separately bound Writer activation.
 An actual independence requirement still needs an independent capable actor.
+One exact Writer grant may cover its declared construction, status and checkpoint
+sequence. Record actual role transitions; unchanged status alone does not need
+a new activation or wholesale rehash. Refresh bindings on material change.
 
 1. Work inside the smallest coherent causal cone and exact write territory.
+   Read material producers, consumers and owners across that cone within the
+   access grant; narrow write territory is not a narrower reasoning boundary.
+   Return cross-territory repairs to their owner.
    Preserve solution space where variation cannot change a governed property.
 2. Implement and self-review the bounded change.
 3. Derive tests through:
@@ -122,6 +128,17 @@ An actual independence requirement still needs an independent capable actor.
    a live lane.
 5. Reconcile authority, design, implementation, tests, and displaced rival
    paths before claiming a candidate.
+   Consume established facts while their exact subject, basis, scope,
+   provenance and validity apply. Function boundaries alone do not invalidate
+   them; mutation, rollback, authority/basis change and actual trust boundaries
+   retain their applicable checks. For material computational composition or
+   recurrence, inspect the complete path and its accumulated work under the
+   owning design and optional frame refinement. Qualify declared workloads and
+   operational assumptions rather than inferring adequacy from local green.
+   Retire superseded responsibility; retained mechanisms need a supported
+   obligation, owner, purpose, scope and cost, and temporary ones a removal
+   trigger. Audit affected test predicates against the supported operating and
+   threat model; an excluded threat cannot require a replacement guard.
 6. Return the exact candidate and stop at a delegated return boundary.
    Product-owned decision authority, or an
    authorized Executive when that profile is adopted, decides whether Product,
@@ -134,6 +151,13 @@ conclusion, scope, uncertainty and revising observation. Preserve the original
 owner ruling separately from interpretation. Invalidate the affected claim
 when its support changes; retain unrelated valid results. Reuse does not
 manufacture an owner ruling or satisfy required independent assessment.
+
+On repricing, retain, supersede, defer or withdraw each affected obligation with
+its owner/evidence links in this carrier. Present the short consequence delta;
+"continue" does not accept an undisclosed architectural change. An authorized
+preservation checkpoint can keep unfinished work with its predecessor,
+territory, concurrent-writer disposition and durable evidence; it claims no
+acceptance or publication.
 
 Evaluate closure as the conjunction of satisfied applicable obligations,
 valid supporting evidence, required judgments/rulings and absence of an active

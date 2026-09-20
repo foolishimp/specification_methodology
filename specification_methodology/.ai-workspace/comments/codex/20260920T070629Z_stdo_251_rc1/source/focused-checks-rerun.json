@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "-v",
+    "tests.test_compressions",
+    "tests.test_reference_frame_boundaries",
+    "tests.test_interface_integration_frame",
+    "tests.test_ticket_method"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+  "pythonpath": [
+    "src",
+    "tests"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.046,
+  "stdout": "focused-checks-rerun.stdout.txt",
+  "stderr": "focused-checks-rerun.stderr.txt",
+  "previous_attempt": "focused-checks.json",
+  "cause": "The first invocation omitted tests from PYTHONPATH; the existing interface test imports its peer test module."
+}

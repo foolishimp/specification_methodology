@@ -808,6 +808,14 @@ These results follow the existing run, sprint or durable-ticket lifetime and
 named result/evidence surface. They require no separate judgment registry,
 ticket per judgment, or additional approval ceremony.
 
+Repricing gives each affected obligation a disposition in that same carrier:
+retained, superseded, deferred or withdrawn, with its owning authority and
+applicable evidence links. Preserve surviving work and explain changed
+dependencies; copy no unaffected history into a parallel ledger. Present an
+owner decision as the short consequence delta needed to decide it while
+preserving the original ruling separately. A general instruction to continue
+does not accept an undisclosed architectural or scope change.
+
 ### Bounded-Context Term Binding
 
 Ticket and work-instruction terms resolve under `SPEC_METHOD.md`'s
@@ -893,6 +901,13 @@ design, module, graph, carrier, or closure surface -> test expectation
 ```
 
 Tests do not derive authority from the current implementation.
+
+An acceptance predicate also needs an applicable supported entry or state and
+an obligation under the governing operating/threat model. Existing test presence
+cannot authorize an excluded threat or retain a superseded guard. Audit the
+affected predicates when changing that responsibility; retire unsupported
+expectations under the owning basis without inventing a replacement guard.
+An actual conflict in live authority requires re-entry, not a test-only waiver.
 
 Implementation behavior is evidence. It is not the arbiter of the expected
 result when code and tests disagree.

@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
+source_digest: ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-06
+generated_at: 2026-09-20
 stale_if_source_digest_changes: true
 ---
 
@@ -207,6 +207,13 @@ the aggregate STDO compression.
   precedent, prompt prose, local convention, or test fixtures.
 - Select one complete immutable STDO version. Mutable source, partial standard
   sets, compressions, and installed mirrors do not create another constitution.
+- Within their scope, derived instructions preserve source applicability,
+  obligations, permissions, exclusions, owners and invalidators. A correct
+  digest cannot qualify a projected prohibition's lost condition or lawful
+  alternative. References must be resolvable by the declared actor or required
+  content is supplied directly. Changed
+  native guidance needs source-derived ordinary-use qualification; semantic
+  agreement cannot establish mechanical or operational claims.
 - Identify the exact proof target and its nearest weaker excluded property;
   never substitute packaging, presence, or local green for a stronger claim.
 - Keep semantic basis, evidence basis, and state projection distinct.
@@ -301,14 +308,22 @@ the aggregate STDO compression.
   test.
 - Prioritize fast Product feedback under that same relation; this is not a
   global scheduler or fixed execution sequence.
-- For a material admission, each owner independently derives the causally
-  complete enclosing relation and binds one exact admission-valid basis through
-  validation and admission. Basis advancement causes effect-free re-entry;
+- For a material admission, each owner independently owns derivation and
+  validation of the causally complete enclosing relation and binds one exact
+  admission-valid basis through validation and admission. Basis advancement
+  causes effect-free re-entry;
   participating owners use an equal or declared coherent composite basis. All
   participants and joins validate before effects, and the complete transition
   is one semantic commit: complete or none, never a subset. Caller assertions,
   mixed bases, partial results, and competing same-scope paths cannot establish
   truth.
+- Consume established facts when exact subject, basis, scope, provenance and
+  validity apply and their production/invalidation are recoverable. Function,
+  component, role, conversation and status boundaries alone require no repeated
+  derivation. Material mutation, rollback, changed authority/basis, expired
+  validity or a real trust boundary triggers the applicable validation. Reuse
+  transfers no admission responsibility and supplies no required independent
+  judgment; unsupported prior-success assertions remain insufficient.
 - Qualify every owner and supported boundary with direct, supported
   composite/nested, forged, ambiguous enclosing relation, stale or preflight-
   advanced basis, incoherent multi-owner basis, competing same-scope authority,
@@ -320,6 +335,10 @@ the aggregate STDO compression.
   observed immediately on both sides. Unsupported composite/nested forms
   require design-grounded non-applicability and no weaker path. Final-
   participant validation failure is not atomic-publication evidence.
+  Case applicability follows the supported operating/threat model; an excluded
+  threat creates no acceptance predicate. Supported malformed inputs, stale
+  state and effect boundaries retain their checks; scope changes need their
+  owner and cannot be inferred from a test.
 - For probabilistic or agentic construction, execute one bounded causal cone
   from a reconstruction-sufficient governing basis supplied by `STDO-UP-016`
   through `STDO-UP-019`. Identify the affected relations, selected computational
@@ -368,6 +387,14 @@ the aggregate STDO compression.
   execution may remain only outside that closure or under an explicitly
   specified, deterministically routed, non-overlapping Product or compatibility
   scope.
+- Retire superseded production responsibility by default. Retention requires
+  a current supported obligation, owner, purpose, execution scope and material
+  cost; temporary compatibility/comparison work has an expiry or removal
+  trigger. Existing tests, oracle labels and nominal demotion do not justify
+  duplication. Distinct required cold reconstruction or independent oracles
+  may be enduring. Preserve the surviving obligation's owner, but invent no
+  replacement guard for an unsupported obligation. Local retirement need not
+  await unrelated Product closure.
 
 ## Proportionate Treatment And Continuity
 
@@ -393,6 +420,18 @@ the aggregate STDO compression.
   resumption changes alone do not invalidate it. Reassess affected dependencies
   on material change or counterexample. Ticket Method owns J/O recording;
   Design Module Method retains its complete applicable design-view gate.
+- Apply proportionality to method work: repeated acquisition, hashing, context,
+  activation, status, review and evidence work serves a change, decision or
+  assurance need. Qualify material operational assumptions under DMM; no
+  universal resource quota or additional accounting carrier follows.
+- One exact Writer grant can cover its declared construction/status/checkpoint
+  sequence; record actual role transitions and refresh changed bindings, not
+  unchanged status alone. Executive mutation restrictions remain. Preservation
+  may retain unaccepted work with predecessor, territory, concurrent-writer
+  disposition and durable evidence, without acceptance or publication. A restart
+  explains why retained repair is insufficient and which obligations, evidence
+  and causal assumptions survive or change. Reconstructability alone selects
+  neither reconstruction at every use nor a restart.
 
 ## Compression Use
 

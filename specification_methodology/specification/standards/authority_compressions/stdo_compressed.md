@@ -28,14 +28,14 @@ source_digests:
   AXIOMATIC_CALCULUS.md: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: 234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1
-  SPEC_METHOD.md: 65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5
+  STDO_REFERENCE_FRAME_BASELINE.md: 29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d
+  SPEC_METHOD.md: ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f
+  DESIGN_MODULE_METHOD.md: 5cb69556bba1171ec347cac96811c50071f0648a367103aa215070239b93785e
   ODD_METHOD.md: b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d
   WORLD_MODEL_METHOD.md: 123ddcd05130aa95508c9fcfa194bf083caae3657baedaba0ce9214009453762
-  TICKET_METHOD.md: 2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91
+  TICKET_METHOD.md: f031ce7fb3b5b366ffaee5996ae76e861697ad86897cc04c06b67da249fe0eca
   UX_METHOD.md: a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7
   IDENTITY_METHOD.md: e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd
   RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
@@ -43,7 +43,7 @@ source_digests:
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
-generated_at: 2026-09-15
+generated_at: 2026-09-20
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -72,6 +72,13 @@ Specification is constitutional source. Design and realization are subordinate
 implementation surfaces. Code, prompts, tests, generated views, dashboards,
 archives, and comments are projections or realization proof, not independent
 truth.
+
+Within its scope, derived guidance preserves source applicability, obligations,
+permissions, exclusions, owners and invalidators. Correct digests cannot qualify
+a projected prohibition's lost condition or lawful alternative. References must
+be resolvable within the actor's access or the necessary content is supplied.
+Changed native guidance needs source-derived ordinary-use qualification;
+semantic agreement cannot prove mechanical or operational behavior.
 
 Products, applications, modules, graph functions, build tenants, and runtime
 surfaces implement constitutional documents; they do not replace them.
@@ -396,6 +403,11 @@ layer that owns the missing truth.
   evidence and supplies its own judgment. Design Module Method retains complete
   Ontology and three-view coverage for new or materially changed boundaries;
   checked unchanged coverage is reusable.
+- Repricing dispositions affected obligations as retained, superseded, deferred
+  or withdrawn in the existing carrier with owner/evidence links. Preserve
+  surviving work and changed dependencies; copy no unaffected history. Present
+  a short consequence delta, retaining original owner wording separately.
+  "Continue" accepts no undisclosed architectural or scope change.
 - Closure is satisfied applicable obligations plus valid exact evidence and
   required J/O, with no active non-closure condition. Neither a review event nor
   evidence presence supplies that conjunction. The Writer may record a
@@ -482,16 +494,25 @@ layer that owns the missing truth.
 - Disposition every equivalent competing path explicitly as a constituent, a
   replica, a replacement, or a deliberately independent realization of the
   admission law. Disposition does not mean deletion; an undisposed equivalent
-  path is the defect, not the equivalence itself.
-- For a material transition, each admission owner independently derives the
-  causally complete enclosing relation, including every relevant participant,
-  equality join, and crossing seam, from one exact admission-valid basis.
+  path is the defect, not the equivalence itself. Superseded responsibility
+  remains subject to the retention relation below.
+- For a material transition, each admission owner independently owns derivation
+  and validation of the causally complete enclosing relation, including every
+  relevant participant, equality join, and crossing seam, from one exact
+  admission-valid basis.
   Basis continuity holds through admission: advancement after preflight causes
   a declared predecessor/currentness check or effect-free re-entry, and
   participating owners use an equal or design-declared coherent composite
   basis, never mixed independently valid bases. Every participant and join is
   validated before effect; the semantic commit is the complete transition,
   admitting all or none. Caller or owner assertions cannot establish this law.
+- An owner may consume established facts whose exact subject, basis, scope,
+  provenance and validity remain applicable, with recoverable production and
+  invalidation. A function, component, role, conversation or status boundary
+  alone requires no repeated derivation. Material mutation, rollback, changed
+  authority/basis, expired validity or a real trust boundary triggers applicable
+  validation. Reuse transfers no admission responsibility, omits no participant
+  and supplies no separately required independent judgment.
 - Direct and every supported composite or nested boundary preserve the same
   law; competing same-scope paths cannot bypass it, and fresh reconstruction or
   replay reproduces the exact relation, basis, and outcome or refusal. Qualify
@@ -505,6 +526,10 @@ layer that owns the missing truth.
   the complete partial-failure surface, and follow each with fresh
   reconstruction. An indivisible unit is observed immediately on both sides;
   final-participant validation failure is not atomic-failure evidence.
+  Case applicability follows the supported input/state and operating/threat
+  model. An excluded threat alone creates no acceptance predicate or defensive
+  work. Supported malformed inputs, stale state and effect checks remain;
+  wider scope needs its owner's decision, not an existing test.
 - For each material admission relation, accepted design compactly declares the
   owner and supported boundary; exact basis and continuity, including any
   coherent multi-owner basis; enclosing relation, participants, and joins;
@@ -543,6 +568,15 @@ layer that owns the missing truth.
   adjudication. Materially non-equivalent identity, ownership, ordering,
   mutation, consistency, retention, failure, access, lifecycle, or authority law
   requires separation; a difference alone does not discharge Prime contraction.
+- Project complete material producer-to-consumer paths: fact establishment,
+  consumers, basis/invalidation, effects, alternatives and accumulated work,
+  including material method/assurance operations. Local successes and different
+  names cannot establish the complete-path claim. Declare the workload, growth
+  and operational assumptions required by the outcome; bind Product-owned
+  limits before qualification. Challenge representative supported paths and
+  growth, observe work without repeating it to count it, and separate material
+  startup, framework, external compute, transport and assurance costs. No
+  universal resource quota, fixed complexity or accounting system follows.
 - Dispose every material algorithmic obligation twice. Semantically it is an
   existing accepted relation, an extension of one, or a new candidate relation.
   In realization it is consume, implement locally, optimize, adapt, or
@@ -698,6 +732,11 @@ layer that owns the missing truth.
   independent numerator. Do not prescribe internal agent procedure when its
   variation has no governed effect, and do not create per-clause rationale
   carriers.
+- Apply proportionality to method execution itself. Repeated acquisition,
+  hashing, context, activation, status, review and evidence work serves an
+  identified change, decision or assurance need. Qualify its material
+  operational assumptions through DMM; repetition does not establish validity
+  or independence.
 - For probabilistic or agentic construction, begin from a reconstruction-
   sufficient governing basis and execute the smallest coherent causal cone.
   Bind selected computational relations, construction and assessment authority,
@@ -724,6 +763,24 @@ layer that owns the missing truth.
   progress; rejected or superseded work is churn; repeated proof is evidence;
   discovery of hidden distance revises forecast. No numeric progress algorithm
   is prescribed.
+- One exact Writer grant may cover its declared construction/status/checkpoint
+  sequence. Record actual role transitions and refresh changed bindings;
+  unchanged status alone requires no new grant or rehash. Executive mutation
+  restrictions remain. An unaccepted preservation checkpoint identifies its
+  predecessor, territory, concurrent-writer disposition and durable evidence;
+  it grants no acceptance or publication. A restart explains why retained
+  repair is insufficient, surviving obligations/evidence and changed causal
+  assumptions. Reconstructability does not select a restart or reconstruction
+  at every use.
+- Retire superseded production responsibility by default. Retention requires
+  a supported obligation, owner, purpose, execution scope and material cost;
+  temporary compatibility or comparison has an expiry/removal trigger. Test
+  presence, oracle labels and nominal demotion do not justify duplication.
+  Required cold reconstruction and independent test oracles may serve enduring
+  distinct obligations. Identify the surviving obligation's owner, invent no
+  replacement guard for an unsupported obligation, and defer no local retirement
+  to unrelated whole-Product closure. Commonization must remove actual work
+  from the selected path; names and deleted lines cannot prove contraction.
 - When both strategies are lawful and feasible, bounded evolution is the
   rebuttable selection presumption when a working predecessor can reach the
   admitted outcome without competing or ambiguous authority. It never requires
@@ -922,6 +979,11 @@ layer that owns the missing truth.
   `invalid_basis` carries basis-repair pressure with triage not applicable. An
   adjacent outside-claim observation is returned separately and does not
   replace the exact claim result.
+- Findings and affected acceptance predicates bind a violated property,
+  supported entry/state, governing operating/threat model and credible causal
+  path. Excluded threats give no retention claim; hypothetical hostility and
+  internal location alone establish neither applicability nor trust. A repair
+  proposal acquires obligation only through its owner.
 - Executive consumes that technical triage with the complete Product view and
   current MVP or release mandate. It assigns priority, determines the effect on
   the current promotion boundary, applies exactly one existing `STDO-UP-020`
@@ -958,6 +1020,9 @@ layer that owns the missing truth.
   repair, apply an STDO disposition, or authorize continuation. Executive
   cannot exceed its existing grant or become another semantic, operation, or
   implementation owner.
+- Worker read scope follows the causal cone within its access grant, while
+  effects remain confined to write territory. Inspect material producers,
+  consumers and owners; return cross-territory repairs to their owners.
 - Mechanical document checks protect declared structure and digest congruence;
   they do not supply semantic truth or replace a capable source-linked
   Reviewer result.
@@ -991,6 +1056,25 @@ layer that owns the missing truth.
 - Integration proves one declared participant composition and interaction
   population. A substitute proves only its explicitly narrower equivalence
   claim.
+- For material cross-interface outcomes, the derived composite at
+  `STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame`
+  separates contract sufficiency, boundary congruence, path realization and
+  user usability. It refines existing families, not their counts or authority.
+  Bind actual participant context, functional domains and temporal meaning,
+  lawful translations, current workspace and callable path; retain candidate
+  output distinct from admission, owner facts distinct from semantic judgment
+  and reserved rulings, and cause-preserving diagnostics. Design-only evidence
+  cannot claim runtime/UAT success, and validator-aware fixtures cannot prove
+  ordinary LLM usability. Adequate candidate interfaces may lawfully refuse;
+  the owning section sets claim-relative evidence, qualification and residuals
+  without a universal gate or exhaustive-hardening prerequisite.
+  Its computational whole-path refinement composes Operator, Owner,
+  Reuse/Foundation and Proof for material composition/recurrence. Return an
+  identifiable result over fact production/consumption, invalidation, effects,
+  alternatives and total work; local green cannot replace it. Actual work
+  claims need selected-path observations, and changed path/basis/workload
+  reactivates affected assessment. No permanent actor, per-helper review or
+  additional family follows.
 - Every coded module retains its DMM-owned module-derived unit lane. Unit
   evidence proves module-owned laws, including public module contracts;
   internal combinatorial complexity determines evidence volume and strategy,

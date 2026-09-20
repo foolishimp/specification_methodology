@@ -40,12 +40,12 @@ When already inside the `specification_methodology/` project directory, use
 from remaining active when the selected cut needs newer ref-resolution
 behavior.
 
-For the coordinated STDO 2.5.0 RC7 cut, install from its exact qualified Git
+For the coordinated STDO 2.5.1 RC1 cut, install from its exact qualified Git
 ref and nested Python project after publication:
 
 ```sh
 pipx install --force \
-  "git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.0-rc.7#subdirectory=specification_methodology"
+  "git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v2.5.1-rc.1#subdirectory=specification_methodology"
 ```
 
 Confirm the executable is available:
@@ -54,14 +54,14 @@ Confirm the executable is available:
 stdo --version
 ```
 
-RC7 retains `stdo-toolchain 0.1.3`. Its cohort updater refuses any companion
-Product whose subtree holds an unadmitted absolute symlink, even when that
-entry is outside the declared release inventory. The repaired manager is
-`stdo-toolchain 0.1.4`: it selects the declared install closure before
-validating and installing it. Until a later cut publishes 0.1.4, install it
-from a `main` checkout with `pipx install --force ./specification_methodology`.
-Do not install from the moving qualified selector when reproducibility matters. Historical root-layout cuts use their
-historical unqualified refs and do not use the nested `subdirectory` fragment.
+The RC1 candidate includes `stdo-toolchain 0.1.4`. Its cohort updater selects
+the declared install closure before validating and installing companion files.
+Unselected historical fixtures do not block installation; unsafe or unresolved
+links in the selected closure still refuse. These release commands apply after
+publication. During local preparation, use the source installation above.
+Select an immutable ref when reproducibility matters. Historical root-layout
+cuts use their historical unqualified refs without the nested `subdirectory`
+fragment.
 
 ## 2. Install One Immutable STDO Cut
 
@@ -69,14 +69,14 @@ After coordinated publication, keep the product-local cut distinct from its
 qualified Git transport ref:
 
 ```sh
-STDO_CUT='v2.5.0-rc.7'
+STDO_CUT='v2.5.1-rc.1'
 
 stdo install "$STDO_CUT"
 stdo verify "$STDO_CUT"
 ```
 
-STDO 2.5.0 RC7 uses product-local cut `v2.5.0-rc.7` and qualified Git ref
-`specification_methodology/v2.5.0-rc.7`. Public `stdo:` URIs and `stdo
+STDO 2.5.1 RC1 uses product-local cut `v2.5.1-rc.1` and qualified Git ref
+`specification_methodology/v2.5.1-rc.1`. Public `stdo:` URIs and `stdo
 install` continue to use the product-local cut.
 
 Keep the `manifest_sha256` returned by `install` or `verify`. The Product

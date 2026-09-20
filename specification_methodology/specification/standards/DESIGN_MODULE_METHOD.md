@@ -820,7 +820,9 @@ adjudication law are declared.
 Competing-path disposition does not imply deletion. An equivalent path may be a
 lawful constituent, replica, replacement, or deliberately independent
 realization, provided its relationship to the singular admission law is
-explicit.
+explicit. A superseded responsibility remains subject to `SPEC_METHOD.md`'s
+Core Interface Migration Rule: retention requires a distinct supported purpose,
+not merely a path label or an existing test.
 
 A projection may produce a candidate transformation, but projection status does
 not confer admission authority. Any consequential result must re-enter the
@@ -1534,6 +1536,26 @@ boundaries, selected implementations, and domain-to-computational mappings. The
 cross-view evaluation extends to prove the domain views and this projection
 describe one system.
 
+For a material producer-to-consumer path, this projection identifies fact
+establishment, consuming operations, applicable basis and invalidators, effect
+boundaries, retained alternatives and accumulated work. Use the validity and
+reuse relation owned by `SPEC_METHOD.md` `STDO-UP-021`; method and assurance
+operations are included where material. Component-local success cannot
+establish the complete-path claim, and different names do not establish
+different computational responsibilities.
+
+**Operational assumptions.** Material algorithmic work declares the supported
+input dimensions, workload and growth, and operational assumptions needed for
+the selected outcome. Bind any acceptance limits and their owning authority
+before qualification; limits and workloads are Product-owned, not universal
+method constants. Challenge the assumptions on representative supported paths
+and material growth. Observe work directly where elapsed time cannot locate it,
+without repeating the operation merely to count it. Separate material startup,
+framework processing, external computation, transport and assurance costs so
+that one cannot conceal another. Existing design and proof surfaces carry these
+relations; no additional accounting system or fixed algorithmic complexity is
+required.
+
 **The projection is subordinate.** It reveals repeated implementation
 structure; it cannot decide semantic identity, ownership, or authority.
 Computational similarity produces a candidate, never an adjudication:
@@ -2109,6 +2131,12 @@ recreated inside each module.
 If commonization would change ownership, public carriers, module boundaries, or
 shared/common law, it is no longer recurrence extraction. It is a separate
 design decision and must be treated that way.
+
+Commonization closes only when the selected path consumes the accepted relation
+and superseded production responsibility is retired or satisfies
+`SPEC_METHOD.md`'s retention relation. Compare removed work and maintained
+responsibilities across the path; shared names, fewer lines or an unused common
+helper do not establish contraction.
 
 ---
 

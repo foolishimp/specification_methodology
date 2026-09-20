@@ -1,0 +1,88 @@
+[
+  {
+    "name": "frame-boundaries",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_reference_frame_boundaries.py",
+      "-v"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+    "startedAt": "2026-09-16T12:59:51.553Z",
+    "elapsedMs": 39,
+    "pid": 24168,
+    "code": 0,
+    "signal": null,
+    "outputSha256": "d35449bb0ea902e19afda5ad98af8e5362bad99a3998d38961b4448f185541a2"
+  },
+  {
+    "name": "interface-frame",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_interface_integration_frame.py",
+      "-v"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+    "startedAt": "2026-09-16T12:59:51.593Z",
+    "elapsedMs": 35,
+    "pid": 24169,
+    "code": 0,
+    "signal": null,
+    "outputSha256": "acbc3b188307346af58da39cad70d6ca8436f46190ccc4a70af5d434c457e6e6"
+  },
+  {
+    "name": "compression",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_compressions.py",
+      "-v"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+    "startedAt": "2026-09-16T12:59:51.628Z",
+    "elapsedMs": 33,
+    "pid": 24170,
+    "code": 0,
+    "signal": null,
+    "outputSha256": "dd5de01a5c05c2f8807fae7dbc714c20f8310b77996628d39fd19a00f03144ea"
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "specification/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "specification/standards/authority_compressions/stdo_compressed.md",
+      "specification/standards/authority_compressions/stdo_bootstrap.md",
+      "tests/test_reference_frame_boundaries.py"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology",
+    "startedAt": "2026-09-16T12:59:51.662Z",
+    "elapsedMs": 13,
+    "pid": 24173,
+    "code": 0,
+    "signal": null,
+    "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

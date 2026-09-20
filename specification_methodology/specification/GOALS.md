@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: RC7 complete-cohort release qualified, atomically published and publicly reacquired
+Status: STDO 2.5.1 RC1 preparation selected; published RC7 remains preserved
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -36,10 +36,13 @@ The [closed RC7 result](../.ai-workspace/comments/codex/20260915T093130Z_rc7_rel
 records completion of every selected release phase. The three Products and
 critical plugin/program/map dependencies are published at their matched RC7
 cuts. Interrupted native attempts and bounded observed limitations remain
-visible. No successor work or external consumer migration is selected here.
+visible. That release record selects no successor work or external consumer
+migration. The separately selected source refinement below preserves the release.
 
 ## Selected Work
 
+- [T-032](../.ai-workspace/tickets/active/T-032-prepare-stdo-251-rc1.md) prepares the independent STDO 2.5.1 RC1 candidate, shared postmortem refinements, accepted T-031 carry-forward, matched distributions and bounded qualification. T-288 and ABI delivery supply no dependency. Preparation selects no publication or external consumer adoption.
+- [T-031](../.ai-workspace/tickets/completed/T-031-bind-end-to-end-interface-integration-frame.md) closes the reusable end-to-end interface integration source frame, affected source projections and bounded qualification. ABIogenesis owns its accepted local frame application under existing RC7. Released availability retains the ticket's complete-cohort dependency; no new release, cohort regeneration or consumer method adoption is selected.
 - [RC7 release work](../.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md) owns the selected release instructions, exact phase grants, source and dependency qualification, immutable cuts, publication and final evidence. Earlier completed delivery tickets remain closed.
 - [RC6 release result](../.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) records the completed source cut, affected qualification, atomic publication and fresh public reacquisition. It preserves the operative RC4 source basis and does not reopen the completed delivery tickets.
 - [T-030](../.ai-workspace/tickets/completed/T-030-deliver-proportionate-stdo-product-use.md#delivery-timeline) closes the source model, owning methods, shared native guidance/updater and aggregate qualification.
@@ -49,10 +52,10 @@ visible. No successor work or external consumer migration is selected here.
 
 ## Executive Direction
 
-The completed RC6 delivery satisfies its recorded finite scope. Preserve that
-outcome through the selected RC7 release. Resume
-from the owning tickets and their exact evidence; do not redefine success as
-the last completed artifact. Use the existing thirteen-function model and its
+Preserve the completed RC7 cohort and predecessor evidence. T-031 owns the
+accepted source refinement and its exact acceptance boundary. Resume from
+the owning tickets and their evidence; do not redefine success as the last
+completed artifact. Use the existing thirteen-function model and its
 accepted cases through T-030, with affected reassessment only when material
 new evidence changes a relation.
 
@@ -83,7 +86,7 @@ sequence, conditions and progress.
   plugin is subordinate auxiliary tooling bound by the same release record.
 - RC3 remains the immutable STDO predecessor. Transitional RC3 Axiom Indexer
   and Representation work is evidence only and receives no child publication.
-- RC6 is the current published complete cohort; RC5 is its exact predecessor. Earlier cuts retain their immutable identities and historical evidence.
+- RC7 is the current published complete cohort; RC6 is its exact predecessor. Earlier cuts retain their immutable identities and historical evidence.
 - Product acceptance and consumer adoption remain separate from publication.
 
 ## Retained Native Outcome

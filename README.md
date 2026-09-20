@@ -64,6 +64,11 @@ records the published and publicly reacquired complete RC7 cohort. STDO,
 Axiom Indexer and STDO Representation retain distinct immutable RC7 cuts;
 RC6 remains their immutable predecessor.
 
+The [2.5.1 RC1 preparation](specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md)
+selects a local successor candidate with its own source, companion and native
+qualification. T-288 and ABI delivery supply no release dependency. Local
+preparation does not claim publication or external consumer adoption.
+
 The Product owners have declared one explicit release relation for STDO and its
 indexes. When that relation is selected, the exact normalized cohort version
 must match all five required assets:

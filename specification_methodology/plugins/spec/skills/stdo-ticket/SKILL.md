@@ -71,6 +71,11 @@ judgments with their question, subject/basis, support, actor/authority,
 conclusion, uncertainty and revising observation. Preserve an owner's original
 ruling separately from interpretation and invalidate only affected support.
 Use this ticket's existing proof/result routes; do not create a judgment registry.
+When repricing, give each affected obligation a retained, superseded, deferred
+or withdrawn disposition with its owner and applicable evidence. Preserve
+surviving work and changed dependencies without duplicating unaffected history.
+Present a short consequence delta for the owner decision; a general instruction
+to continue does not accept undisclosed architecture or scope changes.
 
 ## Return
 

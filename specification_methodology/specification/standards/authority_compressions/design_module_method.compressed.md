@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f
+source_digest: 5cb69556bba1171ec347cac96811c50071f0648a367103aa215070239b93785e
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-06
+generated_at: 2026-09-20
 stale_if_source_digest_changes: true
 ---
 
@@ -136,6 +136,8 @@ coverage remains required for a new or materially changed boundary.
 - Competing-path disposition does not mean deletion. An equivalent path may be a
   lawful constituent, replica, replacement, or deliberately independent
   realization when its relationship to the admission law is explicit.
+  Superseded responsibility still satisfies SPEC's retention relation; a label
+  or existing test supplies no distinct supported purpose.
 - A projection may produce a candidate transformation; projection status confers
   no admission authority, and reconstructed projection state is not
   self-authenticating admission evidence. Consequential results re-enter the
@@ -270,6 +272,17 @@ coverage remains required for a new or materially changed boundary.
   types, identity and key structures, algorithms, algebraic laws, mutation and
   effect boundaries, and domain-to-computational mappings; extend the cross-view
   evaluation to prove one system.
+- Project material producer-to-consumer paths through fact establishment,
+  consumers, valid basis and invalidators, effects, alternatives and total
+  work, including material method/assurance work. Local successes and different
+  names cannot establish the whole-path claim. Consume SPEC `STDO-UP-021`
+  validity-preserving reuse without transferring admission responsibility.
+- Declare material input dimensions, workload/growth and operational assumptions
+  needed by the outcome. Bind Product-owned limits before qualification and
+  challenge representative paths and growth. Observe work without repeating it
+  merely to count it; separate material startup, framework, external compute,
+  transport and assurance costs. Existing surfaces suffice; no universal quota,
+  fixed complexity or additional accounting system follows.
 - That projection is subordinate. Computational similarity yields a
   commonization candidate, never an adjudication of semantic identity,
   ownership, or authority. Materially non-equivalent identity, ownership,
@@ -325,6 +338,9 @@ coverage remains required for a new or materially changed boundary.
 - The retained recurrence rule remains distinct: a second credible recurrence
   requires commonization review, and a third local rebuild requires an explicit
   consume, extend, or do-not-commonize disposition.
+  Closure requires the selected path to consume the accepted relation and
+  superseded responsibility to retire or meet SPEC's retention relation.
+  Compare removed work and maintained responsibilities, not names or lines.
 - Preferred commonization order is boundary-local cleanup, then a tenant-local
   reusable surface, then shared/common propagation only through separate design
   re-entry. Similarity does not itself promote tenant-local meaning, ownership,

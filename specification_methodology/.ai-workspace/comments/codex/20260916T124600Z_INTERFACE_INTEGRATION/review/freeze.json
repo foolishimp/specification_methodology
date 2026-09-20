@@ -1,0 +1,44 @@
+{
+  "activation": "STDO_ABG_E2E_INTERFACE_FRAME_REVIEW_01",
+  "actor": "/root/rc7_waste_review",
+  "consumer": "/root",
+  "startedAt": "2026-09-16T13:06:00Z",
+  "closedAt": "2026-09-16T13:23:10.484Z",
+  "elapsedMinutesFromRecordedStart": 17.174733333333332,
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "710548c89c23f87d55015d14837caec9ff430bbc7dd050fbe3594e1a652c0f9c",
+    "members": 12
+  },
+  "sourceSubject": {
+    "freezeSha256": "5a86eca7e202af8c99310555f99c645c13c6327e5eba6668df67a0c964428625",
+    "manifestSha256": "a1cd65d95afedce1857ecc43ced0e91b4e4780116680b607ae21e12c35947e0f"
+  },
+  "abiSubject": {
+    "freezeSha256": "79ea5c50a208830d4ea1b30dc2314372403e21f438382b5aaa03e013564a0f41",
+    "manifestSha256": "d0b3f73d1e068c685a865a690815a8c51ed121a7e50a84822f46962de30a387c"
+  },
+  "verdicts": {
+    "genericSourceFrame": "satisfied",
+    "sourceCompressions": "satisfied",
+    "abiLocalDerivation": "satisfied",
+    "retainedCaseApplication": "satisfied",
+    "newNativeOrLLMUAT": "unknown",
+    "predecessorImplementationAcceptance": "unknown",
+    "oneBClosure": "unknown"
+  },
+  "report": {
+    "path": "review.md",
+    "sha256": "e76c29fd78a7bda49a867a99601c54599b914a40fb254dc89d9623ff4c171434"
+  },
+  "findings": [],
+  "nonclaims": [
+    "acceptance",
+    "runtime implementation qualification",
+    "new native execution",
+    "live LLM usability",
+    "1B closure",
+    "release/install promotion"
+  ],
+  "stopped": true
+}
