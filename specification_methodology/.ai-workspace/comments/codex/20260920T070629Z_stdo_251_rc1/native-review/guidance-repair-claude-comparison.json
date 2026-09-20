@@ -1,0 +1,125 @@
+{
+  "kind": "stdo.independent-changed-guidance-comparison-result",
+  "frame": "F-DOGFOOD-USEFULNESS",
+  "actor": "/root/independent_native_comparison",
+  "capability_envelope": "K-DOGFOOD",
+  "claim": "Claude changed-guidance map-first native use preserves material constraints and source recovery relative to the fixed first source observation",
+  "result": "falsified",
+  "claim_scope": "Only this frozen changed map observation and the fixed first source control; no general reliability, preference, context-cost or Product acceptance result",
+  "subject": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-claude.json",
+    "sha256": "bd8a567ce945742a0f154cb774656e075d108608ba6d3b79955a53e196e05c67"
+  },
+  "cohort_sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4",
+  "skill_sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c",
+  "source_basis": {
+    "uri": "stdo://releases/v2.5.1-rc.1/",
+    "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+  },
+  "governing_frame_basis": {
+    "uri": "urn:stdo-representation:reference-frame-basis:source-project:20",
+    "sha256": "24744043087a128605e1b43bb917361694f1f422ac0855cff7ea202d0681c732"
+  },
+  "fixed_source_controls": {
+    "path": "../native/fixed-source-controls.json",
+    "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a",
+    "context_equals_original": true
+  },
+  "independence": {
+    "authored_or_repaired_subject": false,
+    "saw_expected_verdict_before_acquisition": false,
+    "oracle_or_parent_semantic_review_opened": false,
+    "source_acquired_before_native_finals": true,
+    "evaluated_outputs_modified": false,
+    "own_original_source_judgments_reused": true,
+    "same_assessor_across_conditions": true
+  },
+  "mechanics": {
+    "path": "guidance-repair-claude-evidence.json",
+    "sha256": "5064082ceb47fa721691865da67fabacf935d8b054e7ea13050325bc98486c15",
+    "semantic_judgment_computed_by_script": false
+  },
+  "report": {
+    "path": "guidance-repair-claude-comparison.md",
+    "sha256": "b715bff6acd77dc11e3c5102b9918f0ae0b2a3e51b349ab3235c243b40d065f0"
+  },
+  "original_report_retained": {
+    "path": "claude-comparison.json",
+    "sha256": "f12de07b07cd684a47b630ec77ff2f6a7f9a00b6f8a2c30a99dcfb542ea1ab26"
+  },
+  "findings": [
+    {
+      "id": "GN-C01",
+      "severity": "S2",
+      "claim": "Read-only effect boundary",
+      "failure": "After reading revised skill, one three-index projection loop attempts stderr file creation without a write grant",
+      "evidence": [
+        "../native/attempt-04/delivery-claude-map-first/evidence/stdout.jsonl:17",
+        "../native/attempt-04/delivery-claude-map-first/evidence/stdout.jsonl:64",
+        "../native/attempt-04/delivery-claude-map-first/evidence/stdout.jsonl:65",
+        "../native/attempt-04/delivery-claude-map-first/evidence/final.txt"
+      ],
+      "authority": [
+        "../native/attempt-04/delivery-claude-map-first/worksite/task.md:5",
+        "../native/attempt-04/delivery-claude-map-first/worksite/native/stdo_representation/skills/stdo-representation/SKILL.md:149"
+      ],
+      "attempted_path": "/tmp/err_59956.txt",
+      "attempted_command_fragment": "2>/tmp/err_$$.txt",
+      "observed_denials": 3,
+      "cause": "Observed native command ignores available effect restriction; deeper attribution indeterminate",
+      "confidence": "high for occurrence and containment; deeper cause indeterminate",
+      "blast_radius": "affected Claude native-use qualification; no Product/task mutation or sent handoff observed",
+      "workaround": "Retain sandbox containment and withhold positive native qualification; containment is not instruction-conformance proof",
+      "repair_complexity": "indeterminate until owner selects a bounded remedy",
+      "regression_risk": "indeterminate across hosts and other tasks",
+      "repair_scope": "native effect-scope adherence and affected qualification; no source/program/map reauthoring established",
+      "trigger_probability": "realized in one revised invocation; general rate unknown",
+      "realized_harm": "none observed; OS denial and unchanged snapshots",
+      "containment": "OS denied all three file opens; absent-file diagnostic; final discloses failure"
+    }
+  ],
+  "retained_positive_results": [
+    "same material task, evidence, role, output contract and model capability",
+    "unchanged fixed first source control",
+    "all referenced evidence hashes verified",
+    "all 52 source standards equal exact installed Source STDO",
+    "frozen worksite snapshots unchanged",
+    "main A/B/C governing constraints recovered",
+    "explicit Executive-to-Writer transition in S4",
+    "all five result cases in final handoff",
+    "actual seven-section final array and exact joined text",
+    "independently replayed exact final join"
+  ],
+  "limits": [
+    "one changed observation per host; original negatives retained",
+    "no general reliability, preference or measured reconstruction-cost inference",
+    "no actual downstream Reviewer execution",
+    "native skill filesystem discovery does not prove automatic host Skill invocation",
+    "no source/program/map omission established by the observed native defect"
+  ],
+  "priority": "reserved to Executive",
+  "product_disposition": "reserved to Executive/Product owner",
+  "role_transition": {
+    "from": "independent read-only assessor",
+    "to": "Writer solely for new report/evidence",
+    "territory": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native-review",
+    "after_recording": "resume independent read-only assessor; no further observation selected"
+  },
+  "invalidators": [
+    "source",
+    "program/map",
+    "skill",
+    "task/evidence",
+    "model/host/configuration",
+    "operation grant",
+    "evaluation scope"
+  ],
+  "triage": "finding-relative evidence-bound triage supplied; priority remains Executive-owned",
+  "secondary_observations": [
+    "Five-case algebra, actual array and joined-text values recover the prior CN-01/CN-03 omissions for this changed observation",
+    "Final has prose and fenced JSON rather than a standalone JSON carrier; not the decisive comparative regression",
+    "N3 wording implies inability to satisfy eligibility from missing context, although empty references remain lawful; no universal impossibility established",
+    "Some displayed literals are truncated and actual residual_routes content is not extracted; no additional wrong final case decision established"
+  ],
+  "required_boundary_consequence_source": "REQ-P-DOGFOOD-009: native qualification hold remains for this materially worse map observation"
+}

@@ -1,0 +1,213 @@
+{
+  "kind": "stdo.native-appended-execution-observations",
+  "recorded_at": "2026-09-20T09:02:57.096596+00:00",
+  "status": "Both selected attempt-06 processes closed; factual Worker return only",
+  "subject": {
+    "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+    "cohort_sha256": "53d6f06fa4f873f1986e5368613992a11bb6d8d58eac17888663b0e165860a7f",
+    "skill_sha256": "7ee7d150ac4584959ca4f3ab6d52245bc36124255a013351111650543a0dfd18"
+  },
+  "prior_complete_observation_population": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/execution-summary.json",
+      "sha256": "577451f6ae9b9d16acb8fe60c1d5a41437ae5814b16114711512a317b6e24359"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/execution-summary-attempt-05.json",
+      "sha256": "d639615322c4733f3e6774fa6d05ace846e13bfe3604e0458f1b10152e07e3a2"
+    }
+  ],
+  "prior_generation_freeze": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/output-freeze.json",
+    "sha256": "b28e9bd37e1705ff410872e4119702d9369a41a0d2e3eba0899a15c66e217df4"
+  },
+  "prior_appended_generation_freeze": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/output-freeze-attempt-05.json",
+    "sha256": "109cda4fda5051a02139e83227f07ea925c2219fd6615f9d1326c88fd3cb835c"
+  },
+  "attempt_class": "Two fresh explicit role-transition guidance map observations, with the fixed first source controls reused and every earlier result preserved",
+  "pre_exposure_preparation_readiness": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06-preparation/readiness.json",
+    "sha256": "99d72a0d38499c0a542935366b10b17d0ac3b3ef51fd1d559e7bce9587e6cc19"
+  },
+  "observations": [
+    {
+      "attempt": "attempt-06",
+      "context": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 502.483,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 969838,
+            "cached_input_tokens": 822784,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 15057,
+            "reasoning_output_tokens": 3118
+          }
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/evidence/execution-result.json",
+        "sha256": "65adff52d342549ad0985460f2e929f60e62c2d374ea87bb556955c514be4ade"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/evidence/host-metadata.json",
+        "sha256": "32ed4a95c7c4edd017c0f59169c09a606157e1fba7e5b275806efe526bb0c179"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/evidence/return-mechanics.json",
+        "sha256": "6266780c6a54d0dae1f4132513c8d73e593bdfe2939f1ad13c2276b6968ff074",
+        "status": "mechanically_consistent"
+      }
+    },
+    {
+      "attempt": "attempt-06",
+      "context": "delivery-claude-map-first",
+      "host": "claude",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "host_version": "2.1.278 (Claude Code)",
+      "host_reported_identity": [
+        {
+          "type": "system",
+          "subtype": "init",
+          "model": "claude-fable-5-1",
+          "claude_code_version": "2.1.278"
+        }
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 296.686,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "result",
+          "usage": {
+            "input_tokens": 290,
+            "cache_creation_input_tokens": 88347,
+            "cache_read_input_tokens": 426414,
+            "output_tokens": 25400,
+            "output_tokens_details": {
+              "thinking_tokens": 8549
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 88347,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 32,
+                "output_tokens": 6710,
+                "cache_read_input_tokens": 94552,
+                "cache_creation_input_tokens": 1029,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1029
+                },
+                "type": "message",
+                "model": null
+              }
+            ],
+            "speed": "standard"
+          },
+          "total_cost_usd": 3.1464435,
+          "modelUsage": {
+            "claude-fable-5-1": {
+              "inputTokens": 290,
+              "outputTokens": 25400,
+              "cacheReadInputTokens": 426414,
+              "cacheCreationInputTokens": 88347,
+              "webSearchRequests": 0,
+              "costUSD": 3.1464435,
+              "contextWindow": 1000000,
+              "maxOutputTokens": 64000,
+              "thinkingTokens": 8549,
+              "canonicalModel": "claude-fable-5-1",
+              "provider": "firstParty",
+              "costBasis": "list"
+            }
+          },
+          "num_turns": 30,
+          "duration_ms": 295952,
+          "duration_api_ms": 295099
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/execution-result.json",
+        "sha256": "64dc76375fedcf87f95b999cb9f7e80d4d34db6348e6b6b3e3a3542593f896c6"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/host-metadata.json",
+        "sha256": "9743150faddf8ac6ca4b8a5d486925caf21a89f30327c99b5cf9e553728b5917"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/return-mechanics.json",
+        "sha256": "c0d779260a1e16f5179e59a4aee200306690e387ff7169145e53751342844cfd",
+        "status": "mechanically_consistent"
+      }
+    }
+  ],
+  "frozen_input_subject": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-role-transition-inputs.json",
+    "sha256": "ec010694c0827381ffc70b176c38f03862e9cf71cb0c4751b4a001103771eeba"
+  },
+  "fixed_source_controls": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+    "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+  },
+  "closed_comparison_subjects": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-role-transition-codex.json",
+      "sha256": "da20a5c947c23c2cd689f0d725d9dc255f7eb5e8a0ba96bb9855146cee86f9fb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-role-transition-claude.json",
+      "sha256": "0f9b4160c1ac3a613eb7f72d368b7aeb24b4b26b30458dd2aed1e4f28ab85521"
+    }
+  ],
+  "runtime_ignore_check": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/runtime-ignore-check-attempt-06.json",
+    "sha256": "966a2099938db9338b9d04451010815d7733ce097cfd5557422bdc71e803ac0a"
+  },
+  "custody": {
+    "prior_1607_members_unchanged": true,
+    "prior_268_appended_members_unchanged": true,
+    "both_prior_freeze_manifests_unchanged": true,
+    "all_selected_processes_closed": true,
+    "installation_identity_unchanged": true,
+    "credentials_copied": false,
+    "HOME_or_CODEX_HOME_repurposed": false,
+    "private_runtime_directories_ignored": 18
+  },
+  "limits": [
+    "Return structure and exact join replay are mechanical observations, not semantic acceptance or read-only-grant compliance judgments.",
+    "Independent comparison assessment owns semantic disposition. No Product acceptance, general reliability claim or automatic plugin-trigger claim is made.",
+    "Usage fields retain native host meanings and are not normalized across providers; cached Codex input is included within input_tokens.",
+    "No further native observation is selected by this Worker return."
+  ]
+}

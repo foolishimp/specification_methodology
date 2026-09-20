@@ -82,6 +82,13 @@ Original validation,
 resolution and pure joining remain available. RC4's exact bytes and observations
 remain at its immutable tag.
 
+The selected successor is the local `2.5.1-rc.1` candidate recorded in
+[releases/v2.5.1.md](releases/v2.5.1.md). All seven RC7 Product members remain
+byte-identical; new STDO meaning and frame membership are authored by
+Representation. Exact new-source map/projection reproduction and refusal
+observations qualify that new use. No publication or external adoption is
+selected by candidate preparation.
+
 The caller's Product Definition identifies its own operative basis. For this
 source project, use the shared manager:
 

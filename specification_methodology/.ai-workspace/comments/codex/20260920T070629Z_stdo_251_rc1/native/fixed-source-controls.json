@@ -1,0 +1,197 @@
+{
+  "kind": "stdo.native-fixed-source-controls",
+  "purpose": "Reuse valid original source observations for a changed-map-guidance comparison; no source observation is rerun or selected by favorable outcome.",
+  "controls": [
+    {
+      "host": "claude",
+      "selected_context": "delivery-claude-source",
+      "attempt": "attempt-02",
+      "selection_relation": "Fixed first task-emitting source observation; selected before new map guidance exposure, with all earlier transport observations retained.",
+      "model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "context_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-source/evidence",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-source/worksite",
+      "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+      "task_packet": {
+        "fixture.py": {
+          "type": "file",
+          "sha256": "9912c3db2dacc98240125cc9785cebd3fae4d4f301fd80737415dc1f262d1b37"
+        },
+        "project.md": {
+          "type": "file",
+          "sha256": "cd8daa7f0772939a4bf828721e512a112d64db871d7056d59dd6ecda096ace31"
+        },
+        "records/C1.md": {
+          "type": "file",
+          "sha256": "703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0"
+        },
+        "records/C2.md": {
+          "type": "file",
+          "sha256": "87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420"
+        },
+        "records/evidence.json": {
+          "type": "file",
+          "sha256": "9b9072b834646b155799767bca2f6619bd278f34555f2cc6e78222b26cc84ba8"
+        },
+        "task.md": {
+          "type": "file",
+          "sha256": "20f8cae04dd9e8163630ac26eaac5a9e1290d824398e9255225267f7ec69b883"
+        }
+      },
+      "axiom_subject": {
+        "member_count": 7,
+        "member_set_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+        "members": [
+          {
+            "type": "symlink",
+            "path": ".agents/skills/axiomatize-corpus",
+            "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+            "target": "../../skills/axiomatize-corpus"
+          },
+          {
+            "type": "symlink",
+            "path": ".claude/skills/axiomatize-corpus",
+            "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+            "target": "../../skills/axiomatize-corpus"
+          },
+          {
+            "type": "file",
+            "path": "build_tenants/core/code/ac.py",
+            "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/SKILL.md",
+            "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/agents/openai.yaml",
+            "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/references/output-contract.md",
+            "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/references/program.schema.json",
+            "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+          }
+        ]
+      },
+      "prompt_sha256": "0a9c2d491634cea48ab510de8b8878681d58172ed95c15b236228b5ba4974b1d",
+      "definition_sha256": "f04684fdacd6c3f3ccd466cbb99f27e989b0c4df4235348a92f43cb0c002ecc4",
+      "qualification_basis_sha256": "606f0afcb61322c7d70be5084dbd663a8efbb8dd72c45ebc8777fae5c55e07b3",
+      "role_and_effect_grant": "Unchanged read-only decision-preparation task; no actor launch, Product acceptance or filesystem effects.",
+      "pair_evidence": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+        "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+      },
+      "final_sha256": "6b55495367096645f2fb034b9073180b0ac602c151991891d8c21a3f01c321ea",
+      "execution_receipt_sha256": "f338fa542fe2c4b18a3b9b6ab566120d99a8fcc8ddd4d0df8855d5208f199d89",
+      "input_relation_at_selection": "Packet, exact installed source and complete Axiom mechanics equal current unchanged inputs; context worksite remains equal its original frozen snapshot."
+    },
+    {
+      "host": "codex",
+      "selected_context": "delivery-codex-source",
+      "attempt": "attempt-03",
+      "selection_relation": "Fixed first task-emitting source observation; selected before new map guidance exposure, with all earlier transport observations retained.",
+      "model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "context_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/evidence",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/worksite",
+      "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+      "task_packet": {
+        "fixture.py": {
+          "type": "file",
+          "sha256": "9912c3db2dacc98240125cc9785cebd3fae4d4f301fd80737415dc1f262d1b37"
+        },
+        "project.md": {
+          "type": "file",
+          "sha256": "cd8daa7f0772939a4bf828721e512a112d64db871d7056d59dd6ecda096ace31"
+        },
+        "records/C1.md": {
+          "type": "file",
+          "sha256": "703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0"
+        },
+        "records/C2.md": {
+          "type": "file",
+          "sha256": "87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420"
+        },
+        "records/evidence.json": {
+          "type": "file",
+          "sha256": "9b9072b834646b155799767bca2f6619bd278f34555f2cc6e78222b26cc84ba8"
+        },
+        "task.md": {
+          "type": "file",
+          "sha256": "20f8cae04dd9e8163630ac26eaac5a9e1290d824398e9255225267f7ec69b883"
+        }
+      },
+      "axiom_subject": {
+        "member_count": 7,
+        "member_set_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+        "members": [
+          {
+            "type": "symlink",
+            "path": ".agents/skills/axiomatize-corpus",
+            "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+            "target": "../../skills/axiomatize-corpus"
+          },
+          {
+            "type": "symlink",
+            "path": ".claude/skills/axiomatize-corpus",
+            "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+            "target": "../../skills/axiomatize-corpus"
+          },
+          {
+            "type": "file",
+            "path": "build_tenants/core/code/ac.py",
+            "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/SKILL.md",
+            "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/agents/openai.yaml",
+            "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/references/output-contract.md",
+            "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+          },
+          {
+            "type": "file",
+            "path": "skills/axiomatize-corpus/references/program.schema.json",
+            "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+          }
+        ]
+      },
+      "prompt_sha256": "0a9c2d491634cea48ab510de8b8878681d58172ed95c15b236228b5ba4974b1d",
+      "definition_sha256": "f04684fdacd6c3f3ccd466cbb99f27e989b0c4df4235348a92f43cb0c002ecc4",
+      "qualification_basis_sha256": "606f0afcb61322c7d70be5084dbd663a8efbb8dd72c45ebc8777fae5c55e07b3",
+      "role_and_effect_grant": "Unchanged read-only decision-preparation task; no actor launch, Product acceptance or filesystem effects.",
+      "pair_evidence": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+        "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+      },
+      "final_sha256": "bd4ad2e34ed9b7c7c370e17cc57462dfda0e484a4754f079607036b778a3df92",
+      "execution_receipt_sha256": "6d935e4f8fc044a99e9193fc7db0af7d0c8ee670808b49c90544c45d8bdfdd9f",
+      "input_relation_at_selection": "Packet, exact installed source and complete Axiom mechanics equal current unchanged inputs; context worksite remains equal its original frozen snapshot."
+    }
+  ],
+  "prior_population": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/prior-transport-observations.json",
+    "sha256": "97cedc0ac099bb64731e9157737871497ceaf046d417ec11779a5668949d6457"
+  },
+  "required_new_context_check": "Before exposure, compare the new map task, source, Axiom, model/effort, read-only grant, output contract and host-capability relation with the selected source control. Disclose changed Representation/cohort members and fresh runtime path coordinates; do not claim complete-worksite byte equality."
+}

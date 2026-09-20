@@ -1,0 +1,196 @@
+{
+  "kind": "stdo.rc1-companion-preimage",
+  "schema_version": 1,
+  "basis": "v2.5.0-rc.7",
+  "candidate_version": "2.5.1-rc.1",
+  "axiom_product": {
+    "member_count": 7,
+    "member_set_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "members": [
+      {
+        "type": "symlink",
+        "path": ".agents/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "symlink",
+        "path": ".claude/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "file",
+        "path": "build_tenants/core/code/ac.py",
+        "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/SKILL.md",
+        "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/agents/openai.yaml",
+        "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/output-contract.md",
+        "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/program.schema.json",
+        "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+      }
+    ]
+  },
+  "axiom_disposition": "All seven members must remain byte-identical, including symlink targets.",
+  "files": [
+    {
+      "path": "axiom_indexer/.ai-workspace/decisions/20260915_rc7_frame_basis_acceptance.json",
+      "sha256": "f1c6663f142246bbd60ad8859d278e70e8144b60044781b5123bf635cc317dfa",
+      "bytes": 3610,
+      "preimage": "preimages/axiom_indexer/.ai-workspace/decisions/20260915_rc7_frame_basis_acceptance.json"
+    },
+    {
+      "path": "axiom_indexer/QUICKSTART.md",
+      "absent": true
+    },
+    {
+      "path": "axiom_indexer/README.md",
+      "sha256": "ed865cacf75b9280025db67b597a39b0a68b2f6c4a469980eee13d59ff4ef01b",
+      "bytes": 5362,
+      "preimage": "preimages/axiom_indexer/README.md"
+    },
+    {
+      "path": "axiom_indexer/specification/GOALS.md",
+      "sha256": "623a991932521deee0a02ef502447921f4b5e757fc07e7d7bcea0c3db2bb881d",
+      "bytes": 11899,
+      "preimage": "preimages/axiom_indexer/specification/GOALS.md"
+    },
+    {
+      "path": "axiom_indexer/specification/PRODUCT.md",
+      "sha256": "a9093f0def3ad575322ee2d9f6e970822020a7d9bcbcbeb52a10e6479eefb088",
+      "bytes": 13821,
+      "preimage": "preimages/axiom_indexer/specification/PRODUCT.md"
+    },
+    {
+      "path": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "ecba4bb7007ff728352a5eb6bd476919b8bbcd79e4b485edd42b3475638366be",
+      "bytes": 36262,
+      "preimage": "preimages/axiom_indexer/specification/REFERENCE_FRAME_BASIS.md"
+    },
+    {
+      "path": "axiom_indexer/stdo_default.json",
+      "sha256": "2ce6b94f2c1c17f0ab3d1508b0f1bea78ce27ba6cf89034ad265f79321cd1b34",
+      "bytes": 3132,
+      "preimage": "preimages/axiom_indexer/stdo_default.json"
+    },
+    {
+      "path": "stack_release.json",
+      "sha256": "8658c9bfdb6540960b1fbb0510d8c4123b982e7818841318ed46f844e0afa587",
+      "bytes": 14147,
+      "preimage": "preimages/stack_release.json"
+    },
+    {
+      "path": "stdo_representation/.ai-workspace/decisions/20260915_rc7_frame_basis_acceptance.json",
+      "sha256": "c560b5755775a000878186257b55ea029ad365de00e5791273930ea978a3c686",
+      "bytes": 3637,
+      "preimage": "preimages/stdo_representation/.ai-workspace/decisions/20260915_rc7_frame_basis_acceptance.json"
+    },
+    {
+      "path": "stdo_representation/QUICKSTART.md",
+      "sha256": "9a019df16cc58ee093888bd58654d71ec70faf7b0cbb7b3bda73de9ea190b2d8",
+      "bytes": 5627,
+      "preimage": "preimages/stdo_representation/QUICKSTART.md"
+    },
+    {
+      "path": "stdo_representation/README.md",
+      "sha256": "cbb3103893997da1fb036cf5f4bc538992414c97fbaf2e5ff4a741d451175403",
+      "bytes": 4778,
+      "preimage": "preimages/stdo_representation/README.md"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md",
+      "sha256": "89fdd767fcedc41b9a7e3ee23b4819a0cb77614740fad6f771637a234c05e61f",
+      "bytes": 10000,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/README.md",
+      "sha256": "00b693f750d73b088acc25eee72136db2697a3c9e9ed873e1f5b14b39c7670a9",
+      "bytes": 1813,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/README.md"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json",
+      "sha256": "d1bd16268cf434db984c9e6c3ebfd119110f9de211dbe69b952794cf9f13dc68",
+      "bytes": 185754,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/axiomatic-program.json"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/logical-constraint-map.json",
+      "sha256": "d0685a7548812610cda9aa9369f423e2d9944f194a5cd5c5b61e92c374b675af",
+      "bytes": 241516,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/logical-constraint-map.json"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/source-corpus.json",
+      "sha256": "97ec14964df30f3d9203a052aa03170c65ce599d0dd6a0ed110dcd6282b28582",
+      "bytes": 9359,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/source-corpus.json"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/validation-report.json",
+      "sha256": "8330717085c0a4072aed5f0c26978691b16f6ea65d6da633b7fdd20863ee74cf",
+      "bytes": 18866,
+      "preimage": "preimages/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.0-rc.7/validation-report.json"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/SKILL.md",
+      "sha256": "d58d79380411f5c9980bc369e4bbe6255b72af7a908832a27b0bafae67f8c49d",
+      "bytes": 9129,
+      "preimage": "preimages/stdo_representation/skills/stdo-representation/SKILL.md"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/references/frame-index-use.md",
+      "sha256": "3e7274395b1ea085e0397ab684f6ce7caba5524e39bb8c4a234dcc0272ade3ed",
+      "bytes": 6227,
+      "preimage": "preimages/stdo_representation/skills/stdo-representation/references/frame-index-use.md"
+    },
+    {
+      "path": "stdo_representation/specification/GOALS.md",
+      "sha256": "2b9b5d293dea500174313a115157d56d638d42a1321be2e5965c88cc3e84083d",
+      "bytes": 16623,
+      "preimage": "preimages/stdo_representation/specification/GOALS.md"
+    },
+    {
+      "path": "stdo_representation/specification/PRODUCT.md",
+      "sha256": "4b2ffbf263e9337c8c11f64ab465e34a411a38108c6d1ac7b06afb90487385c4",
+      "bytes": 24616,
+      "preimage": "preimages/stdo_representation/specification/PRODUCT.md"
+    },
+    {
+      "path": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "68b8dd6881c4f871ba2acccd3747c9a57991114de6ff845a487a3e48d5eeb448",
+      "bytes": 44652,
+      "preimage": "preimages/stdo_representation/specification/REFERENCE_FRAME_BASIS.md"
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+      "sha256": "a368acbf6fb63cafea31d05686454cbd338878189d3fba4c8d36206b90d7638f",
+      "bytes": 8668,
+      "preimage": "preimages/stdo_representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md"
+    },
+    {
+      "path": "stdo_representation/stdo_representation.json",
+      "sha256": "9552a95d0363e18a6de610980996e61f7d3c4216c0ab9510dd4998c656e885cf",
+      "bytes": 6569,
+      "preimage": "preimages/stdo_representation/stdo_representation.json"
+    }
+  ],
+  "configuration_disposition": "Live child Definitions and accepted frame declarations remain unchanged until separately assessed successor proposals and a recorded exact configuration decision.",
+  "claim": "Preimage and conservation subject only; no semantic or Product acceptance."
+}

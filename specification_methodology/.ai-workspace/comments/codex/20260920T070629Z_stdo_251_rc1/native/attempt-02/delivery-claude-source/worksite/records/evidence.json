@@ -1,0 +1,13 @@
+{
+  "kind": "controlled_work_record",
+  "not_actual_project_review_results": true,
+  "C1": "records/C1.md",
+  "C2": "records/C2.md",
+  "E1": {"subject": "C1", "result": "title renders Shipment summary; quantity 10", "independent": false},
+  "E2": {"subject": "C2", "result": "title renders Shipment summary; quantity 10", "independent": false},
+  "Q1": {"subject": "quantity relation", "reviewer": "quantity-reviewer", "independent": true, "result": "satisfied", "invalidator": "quantity computation or inputs change", "current_in_C2": true},
+  "J1": {"subject": "C1", "actor": "author", "role": "self-review"},
+  "J2": {"subject": "C2", "actor": "author", "role": "self-review"},
+  "R1": {"subject": "C1 title markup", "actor": "other-reviewer", "independent": true, "result": "satisfied", "availability": "S2 onward; unavailable in S1"},
+  "R2": {"subject": "C2 title markup", "actor": "other-reviewer", "independent": true, "result": "satisfied", "availability": "S5 only", "findings": [], "return": "Executive"}
+}

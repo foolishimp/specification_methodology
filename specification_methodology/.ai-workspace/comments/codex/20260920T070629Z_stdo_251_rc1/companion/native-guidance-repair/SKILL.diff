@@ -1,0 +1,47 @@
+--- stdo-representation/SKILL.md@frozen-native-subject
++++ stdo-representation/SKILL.md@proposed-guidance-repair
+@@ -130,20 +130,38 @@
+    choice not prohibited by authority or the selected frame open to the target
+    LLM. Author a bare ordered JSON array of
+    `{"label": string, "text": string}` sections and choose every byte yourself.
+-   This is caller guidance, not a prompt engine, schema, selector, or renderer.
+-   Resolve the same exact selected Axiom dependency, then run its pure
+-   joiner:
++   Preserve every case and discriminator in the selected declared result and
++   stop contracts. Do not paraphrase them into a different result algebra or
++   collapse distinct refusal, uncertainty, scope or basis outcomes into a
++   generic status. Before joining, compare the authored handoff with the
++   selected clauses and the caller's requested return contract; repair omitted
++   conditions, changed meanings or unsupported additions. Re-enter the exact
++   source when those contracts are unresolved.
++
++   Resolve the same exact selected Axiom dependency. Supply the authored JSON
++   array directly on stdin and receive the exact joined text on stdout:
+ 
+    ```sh
+    python3 <axiom-indexer-root>/build_tenants/core/code/ac.py join \
+-     --input <sections.json> \
+-     --output <request.txt>
++     --input /dev/stdin
+    ```
++
++   In a read-only activation, keep this computation on stdin/stdout; create no
++   scratch input or output files and do not redirect stdout to a file. Every
++   file output path, including `--output`, requires an applicable write grant.
++   The caller authors and checks the request; the pure joiner only concatenates
++   its supplied strings and cannot establish semantic fidelity.
+ 
+ Return through the caller's declared return relation, to Executive when that
+ role is selected, with the selected frame details, source re-entry, validation
+ result, unresolved residuals and resulting request path or bounded answer.
+-Do not load unrelated index regions merely because they are available.
++Preserve the requested return format and field types. When ordered sections
++and joined text are requested, return the actual ordered label/text array and
++exact joiner stdout in their declared fields, with correct escaping when the
++carrier is JSON. A prose summary, placeholder or pointer to another block does
++not supply those values. If bare structured output is requested, do not add
++Markdown fences or substitute prose. Do not load unrelated index regions
++merely because they are available.
+ 
+ For explicitly selected source qualification, retain its exact working subject
+ and grant. Ordinary effects remain governed by the caller's operative STDO

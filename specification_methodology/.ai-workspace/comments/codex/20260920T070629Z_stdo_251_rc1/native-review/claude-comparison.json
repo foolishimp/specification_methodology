@@ -1,0 +1,133 @@
+{
+  "kind": "stdo.independent-native-comparison-result",
+  "frame": "F-DOGFOOD-USEFULNESS",
+  "actor": "/root/independent_native_comparison",
+  "capability_envelope": "K-DOGFOOD",
+  "claim": "Claude map-first native use preserves material constraints and source recovery relative to the matched direct-source observation",
+  "result": "falsified",
+  "claim_scope": "Only the frozen completed attempt-02 Claude pair; no Product acceptance or global model reliability disposition",
+  "subject": {
+    "path": "../native/evaluation-subject-claude.json",
+    "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+  },
+  "source_basis": {
+    "uri": "stdo://releases/v2.5.1-rc.1/",
+    "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+  },
+  "governing_frame_basis": {
+    "uri": "urn:stdo-representation:reference-frame-basis:source-project:20",
+    "sha256": "24744043087a128605e1b43bb917361694f1f422ac0855cff7ea202d0681c732"
+  },
+  "independence": {
+    "authored_or_repaired_subject": false,
+    "saw_expected_verdict_before_acquisition": false,
+    "oracle_or_parent_semantic_review_opened": false,
+    "source_acquired_before_native_finals": true,
+    "evaluated_outputs_modified": false
+  },
+  "mechanics": {
+    "path": "claude-evidence.json",
+    "sha256": "f5e3541a2732de7cc8a7d1b0a8316de62fa78fbe51f8eff8fe4e384d1e3ee28a",
+    "semantic_judgment_computed_by_script": false
+  },
+  "report": {
+    "path": "claude-comparison.md",
+    "sha256": "6e691938cfebc38704f5242ba1dfbd19c6d5af49248d29b5853b2762b5b7bb6b"
+  },
+  "findings": [
+    {
+      "id": "CN-01",
+      "severity": "S2",
+      "claim": "Exact Reviewer return law in the prepared handoff",
+      "failure": "Map arm uses satisfied/unsatisfied/indeterminate, without a declared compatible extension; source preserves all five governing outcomes",
+      "evidence": [
+        "../native/attempt-02/delivery-claude-map-first/evidence/stdout.jsonl:138",
+        "../native/attempt-02/delivery-claude-map-first/evidence/stdout.jsonl:139",
+        "../native/attempt-02/delivery-claude-map-first/evidence/final.txt"
+      ],
+      "source": "stdo://releases/v2.5.1-rc.1/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results",
+      "cause": "Observed native selection/return failure after the correct clause was available; no source/map omission established",
+      "containment": "Handoff not sent; withhold reliance",
+      "repair_scope": "Native guidance/use and affected qualification; no source/program/map reauthoring supported by this finding",
+      "repair_complexity": "bounded local; effectiveness unmeasured",
+      "regression_risk": "unmeasured across hosts and other tasks",
+      "trigger_probability": "one realized observed invocation; general rate unknown",
+      "realized_harm": "none downstream observed",
+      "confidence": "high"
+    },
+    {
+      "id": "CN-02",
+      "severity": "S2",
+      "claim": "Read-only effect boundary",
+      "failure": "Map arm attempted /tmp/proj_rc1.json redirection without a write grant",
+      "evidence": [
+        "../native/attempt-02/delivery-claude-map-first/evidence/stdout.jsonl:103",
+        "../native/attempt-02/delivery-claude-map-first/evidence/stdout.jsonl:104"
+      ],
+      "containment": "OS refused; snapshots unchanged; failure disclosed",
+      "repair_scope": "Native effect-scope adherence; retain containment",
+      "cause": "Native command violated available task/guide restriction; deeper attribution unknown",
+      "repair_complexity": "local use/guidance or host qualification; effectiveness unmeasured",
+      "regression_risk": "unmeasured",
+      "trigger_probability": "one realized attempt; general rate unknown",
+      "realized_harm": "no file creation or subject mutation observed",
+      "confidence": "high"
+    },
+    {
+      "id": "CN-03",
+      "severity": "S3",
+      "claim": "Required JSON return contract",
+      "failure": "Both final handoff_sections values are strings; map joined_request is an external-block pointer",
+      "evidence": [
+        "../native/attempt-02/delivery-claude-source/evidence/final.txt",
+        "../native/attempt-02/delivery-claude-map-first/evidence/final.txt"
+      ],
+      "containment": "Exact ordered arrays and matching join bytes retained in original traces",
+      "repair_scope": "Final return formatting/use; not a map-only regression",
+      "cause": "Observed final serialization deviation; no missing underlying array",
+      "repair_complexity": "local; qualification still needed",
+      "regression_risk": "low semantic risk but instruction reliability unmeasured",
+      "confidence": "high"
+    }
+  ],
+  "retained_positive_results": [
+    "same material task and evidence/model configuration",
+    "all frozen input and actual-evidence hashes verified",
+    "exact installed Source STDO reacquired",
+    "main A/B/C distinctions recovered in both arms",
+    "canonical skill/map-first use and bounded source re-entry observed",
+    "seven native join rows with ACTION last in both traces",
+    "exact independent join replay"
+  ],
+  "secondary_observations": [
+    "Map S4 omits explicit Executive-to-Writer transition; S3 ambiguity without actual checkpoint",
+    "Map absence-of-oracle assertion not established by records",
+    "Map display truncates some literals and does not display residual_routes content",
+    "Local skill read manually; automatic native Skill discovery trigger not established"
+  ],
+  "limits": [
+    "one observation per presentation",
+    "Codex outside this result",
+    "no preference study or repeated-use reliability inference",
+    "no source/map causation established from native failure",
+    "no actual downstream Reviewer execution"
+  ],
+  "priority": "reserved to Executive",
+  "product_disposition": "reserved to Executive/Product owner",
+  "required_boundary_consequence_source": "REQ-P-DOGFOOD-009; positive native non-inferiority is not established",
+  "role_transition": {
+    "from": "independent read-only assessor",
+    "to": "Writer solely for report/evidence",
+    "territory": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native-review/",
+    "after_recording": "resume read-only assessor for closed Codex pair"
+  },
+  "invalidators": [
+    "source",
+    "program/map",
+    "skill",
+    "task/evidence",
+    "model/host/configuration",
+    "operation grant",
+    "evaluation scope"
+  ]
+}

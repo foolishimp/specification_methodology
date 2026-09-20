@@ -1,0 +1,108 @@
+{
+  "kind": "stdo.native-comparison-input-subject",
+  "scope": "Factual frozen inputs for two new map observations compared with fixed first source controls; no semantic grade or expected-answer material. Outputs are supplied only after each host process closes.",
+  "contexts": [
+    {
+      "name": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/worksite",
+      "frozen_inputs": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/evidence/snapshot-before.json",
+        "sha256": "8b8557ef2b6607f960cb710b21e484286cdc1d10d1355e3ea403260bf7a10352"
+      },
+      "preflight": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/evidence/confinement-preflight.json",
+        "sha256": "4deb4007201970816050bbf333f45d10d5874a633e7b19d5f65c88bb3cf53592"
+      }
+    },
+    {
+      "name": "delivery-claude-map-first",
+      "host": "claude",
+      "presentation": "map-first",
+      "model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/worksite",
+      "frozen_inputs": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/snapshot-before.json",
+        "sha256": "1fa8ea65cae072426e61af0386f88930cc2b1b94989108e3f44f2ee9a04cac21"
+      },
+      "preflight": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/confinement-preflight.json",
+        "sha256": "e9c3eb8fdf192a6b414b16213b51cf05860ca012b8de1d531c2707658d5942b9"
+      }
+    }
+  ],
+  "fixed_source_controls": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+    "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+  },
+  "input_equivalence": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/input-equivalence.json",
+    "sha256": "861dadf8f9b4e93c50ff4099478899cfb811c26ed6eaeb7fe39cbba06dff603a"
+  },
+  "original_cohort_locators": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/original-cohort-locators.json",
+    "sha256": "cf9eb117900b8b26ea5dc316a6c6ba2b1b68884c9036376f1675c3cace124519"
+  },
+  "changed_members_from_previous_map_generation": [
+    {
+      "path": "skills/stdo-representation/SKILL.md",
+      "before": {
+        "type": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "60d29af40c5820b081c8e0f39f3f637bf51dbc596d5aac5885a9d65854e8aae2"
+      },
+      "after": {
+        "type": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "7ee7d150ac4584959ca4f3ab6d52245bc36124255a013351111650543a0dfd18"
+      }
+    }
+  ],
+  "prior_pair_manifests": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+      "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+      "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-claude.json",
+      "sha256": "bd8a567ce945742a0f154cb774656e075d108608ba6d3b79955a53e196e05c67"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-codex.json",
+      "sha256": "aa39338430b7eab6aad2d26c1371dc5d93f1bfdc6044da6beca75b4f334366f4"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-read-only-streams-claude.json",
+      "sha256": "bc655b397d0552e47fdf1689fc465691b9046daa5285a7bcc75d34bf7945d6e6"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-read-only-streams-codex.json",
+      "sha256": "59abecdab31a364d7ec13ed617a500f08b64775f76589023bde3cef73f12c632"
+    }
+  ],
+  "previous_map_cohort": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-codex-map-first/worksite/native/cohort.json",
+    "sha256": "a1bfcf45734dfe2543352d6e16b48c3efc41e9385363e2967103678c02bca9b6"
+  },
+  "cohort": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-codex-map-first/worksite/native/cohort.json",
+    "sha256": "53d6f06fa4f873f1986e5368613992a11bb6d8d58eac17888663b0e165860a7f"
+  },
+  "source_basis": {
+    "root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1",
+    "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+    "revision": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a"
+  }
+}

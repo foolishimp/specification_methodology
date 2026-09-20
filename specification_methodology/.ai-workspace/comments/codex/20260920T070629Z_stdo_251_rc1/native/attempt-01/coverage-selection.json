@@ -1,0 +1,121 @@
+{
+  "binding_sha256": "9726a6fce3bb1a11b5fae28bc89b6504c93ebaadab3c07278fc86e1ba36298f6",
+  "cohort_sha256": "6f0bcb8fdc1e19904dff67421884062555a56166ea53197dbac759acfb6172da",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "oracle_sha256": "6fd9af0b33b5dacf59ced8522ae1db0247d885532bd6a0b53350472688679517",
+  "oracle_binding_sha256": "d850532f747546c5aa6d87836796ff19b9f5b6a51f0f01cb05e8b4b3b48ea5d8",
+  "packet": {
+    "fixture.py": {
+      "type": "file",
+      "sha256": "9912c3db2dacc98240125cc9785cebd3fae4d4f301fd80737415dc1f262d1b37"
+    },
+    "project.md": {
+      "type": "file",
+      "sha256": "cd8daa7f0772939a4bf828721e512a112d64db871d7056d59dd6ecda096ace31"
+    },
+    "records/C1.md": {
+      "type": "file",
+      "sha256": "703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0"
+    },
+    "records/C2.md": {
+      "type": "file",
+      "sha256": "87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420"
+    },
+    "records/evidence.json": {
+      "type": "file",
+      "sha256": "9b9072b834646b155799767bca2f6619bd278f34555f2cc6e78222b26cc84ba8"
+    },
+    "task.md": {
+      "type": "file",
+      "sha256": "20f8cae04dd9e8163630ac26eaac5a9e1290d824398e9255225267f7ec69b883"
+    }
+  },
+  "prepare_sha256": "d223da890d7aaa1cacd875e46b69e7a98583757e991118cce0dcd60c8c3f23d7",
+  "contexts": [
+    {
+      "name": "delivery-codex-source",
+      "host": "codex",
+      "arm": "source",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-source/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-source/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-source/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-source/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "status": "ready_for_mechanical_preflight"
+    },
+    {
+      "name": "delivery-codex-map-first",
+      "host": "codex",
+      "arm": "map-first",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-map-first/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-map-first/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-map-first/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-codex-map-first/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "status": "ready_for_mechanical_preflight"
+    },
+    {
+      "name": "delivery-claude-source",
+      "host": "claude",
+      "arm": "source",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-source/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-source/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-source/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-source/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "status": "ready_for_mechanical_preflight"
+    },
+    {
+      "name": "delivery-claude-map-first",
+      "host": "claude",
+      "arm": "map-first",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-map-first/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-map-first/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-map-first/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-01/delivery-claude-map-first/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "status": "ready_for_mechanical_preflight"
+    }
+  ],
+  "native_execution": "not started; parent acceptance and trigger required"
+}

@@ -1,0 +1,6 @@
+Initial discriminator preparation copied the immutable Install with copytree's
+default copy2, which preserved read-only file modes. An attempted mutation of
+the private copied SPEC_METHOD.md raised PermissionError before any projection
+ran. The actual Install and candidate inputs were unchanged. The retained
+check_source_drift.py makes only that copied file writable, then observes the
+exact projection refusal; this preparation failure supplies no negative credit.

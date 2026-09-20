@@ -1,0 +1,100 @@
+{
+  "kind": "stdo.native-comparison-input-subject",
+  "scope": "Factual frozen inputs for two new map observations compared with fixed first source controls; no semantic grade or expected-answer material. Outputs are supplied only after each host process closes.",
+  "contexts": [
+    {
+      "name": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-codex-map-first/worksite",
+      "frozen_inputs": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-codex-map-first/evidence/snapshot-before.json",
+        "sha256": "1446b2002a8bd34439ae910f7ed4b133abe6f8e75a83a17cea4c508a6270b167"
+      },
+      "preflight": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-codex-map-first/evidence/confinement-preflight.json",
+        "sha256": "4997c21b40110783b78b9f394ba38a7cb6e97d8b052d6764e51b71e1f36bb0de"
+      }
+    },
+    {
+      "name": "delivery-claude-map-first",
+      "host": "claude",
+      "presentation": "map-first",
+      "model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-claude-map-first/worksite",
+      "frozen_inputs": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-claude-map-first/evidence/snapshot-before.json",
+        "sha256": "af935a8d2d97dee7cf585094d6ec1ad0d5983223d82f60368c101782b8f7de4f"
+      },
+      "preflight": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-claude-map-first/evidence/confinement-preflight.json",
+        "sha256": "7cd3a41f809513dac07892d3292006bec1be76186dc3903a1d3657b3908c27ec"
+      }
+    }
+  ],
+  "fixed_source_controls": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+    "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+  },
+  "input_equivalence": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/input-equivalence.json",
+    "sha256": "fe0632a7f72d4e48d8b093f5166b4857d3969cd989494944145a0a6b4dfb2a5e"
+  },
+  "original_cohort_locators": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/original-cohort-locators.json",
+    "sha256": "cf9eb117900b8b26ea5dc316a6c6ba2b1b68884c9036376f1675c3cace124519"
+  },
+  "changed_members_from_previous_map_generation": [
+    {
+      "path": "skills/stdo-representation/SKILL.md",
+      "before": {
+        "type": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c"
+      },
+      "after": {
+        "type": "file",
+        "path": "skills/stdo-representation/SKILL.md",
+        "sha256": "60d29af40c5820b081c8e0f39f3f637bf51dbc596d5aac5885a9d65854e8aae2"
+      }
+    }
+  ],
+  "prior_pair_manifests": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+      "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+      "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-claude.json",
+      "sha256": "bd8a567ce945742a0f154cb774656e075d108608ba6d3b79955a53e196e05c67"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-codex.json",
+      "sha256": "aa39338430b7eab6aad2d26c1371dc5d93f1bfdc6044da6beca75b4f334366f4"
+    }
+  ],
+  "previous_map_cohort": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/worksite/native/cohort.json",
+    "sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4"
+  },
+  "cohort": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-codex-map-first/worksite/native/cohort.json",
+    "sha256": "a1bfcf45734dfe2543352d6e16b48c3efc41e9385363e2967103678c02bca9b6"
+  },
+  "source_basis": {
+    "root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1",
+    "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+    "revision": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a"
+  }
+}

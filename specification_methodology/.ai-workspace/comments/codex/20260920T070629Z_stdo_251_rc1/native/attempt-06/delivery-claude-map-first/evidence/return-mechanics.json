@@ -1,0 +1,41 @@
+{
+  "context": "delivery-claude-map-first",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "84d3b68948c6a9d312824bbca005291318d738239e2cd687594f8577ca63a54d",
+  "presentation": "unique_fenced_json; surrounding prose retained in raw final",
+  "join_replay": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/evidence/sandbox.sb",
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-06/delivery-claude-map-first/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "Role and outcome\nYou are the independent Reviewer for ticket W17. Outcome: one Reference Frame Method result for claim L1 (title correctness) over exact candidate C2, supplying obligation L3 (author-independent assessment). Bounded evaluation only: no repair, priority, disposition, continuation or acceptance.\n\nReference frame and exact subject\nFrame: stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame, selected through index urn:stdo-representation:frame-index:t009:complete-update-reviewer (program urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1, program sha256:7b922250c3fa601fa2cc9ef81084eac1ffbf8be74b7e4db2b53cb0c2a14b069f, map sha256:84443abb79c93ef7148cbb1a817afd8ad0ce5eeee986f09a3169241713c8806f). Subject: records/C2.md, sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420. Claim: the report title of C2 is exactly 'Shipment summary' and the exported quantity 10 is preserved. Basis: ticket W17 under method basis M1. Owner ruling O1, original wording: 'Continue the selected title change; preserve the quantity and existing history. A separately recorded Writer may preserve this work as WIP. Do not publish or change the Product or method basis.'\n\nHard constraints\nRead scope: records/C2.md, records/C1.md, records/candidate-identities.json, records/evidence.json and the M1 basis. Effects: none; do not edit C2, repair, change ticket status, checkpoint, publish, accept the Product or adopt M2. Independence: you are not the author; J2 is author self-review and cannot supply your judgment. R1 reviewed C1 title markup only and is invalidated for C2 by the material markup change; do not rely on it. Q1 (independent L2 result, invalidator unchanged in C2) is reusable evidence, not your subject. Do not widen O1.\n\nIndex context and evidence routes\nEvidence: E2 is mechanical, non-independent rendering evidence for C2; J2 is self-review; Q1 covers quantity only. Source routes: stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007 (self-review is not independent; a verdict is bounded by the reviewed claim); TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity; TICKET_METHOD.md#condition-based-closure-and-reuse; STDO_REFERENCE_FRAME_BASELINE.md#closure; STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection. Residual task-frame-obligations-require-owned-applicability: the applicable obligations are L1, L2, L3 as declared by W17.\n\nOpen solution space\nState your title oracle before inspecting C2, including whether bold markup in the heading satisfies 'Shipment summary' under M1 and W17. Inspection order, rendering method and tools are yours. You may consume E2 and Q1 as valid evidence while forming your own judgment.\n\nReturn and stop contract\nReturn to Executive in the W17 carrier: exact subject digest, basis, scope, exclusions, evidence population and exactly one result: satisfied (explicit no-finding state, triage not applicable); falsified (each finding with violated property, cause, blast radius, workaround, repair complexity and regression risk, or explicitly indeterminate fields); indeterminate (named evidence gaps); out_of_frame (undeclared required relation or capability, indeterminate triage, reconfiguration pressure); or invalid_basis (basis failure, refuse consumption). Include residuals and invalidators. Stop after returning. Stop with a hold if the C2 digest does not match, O1 or M1 is unresolved, or independence cannot be kept. Assign no priority, disposition or next action.\n\nACTION\nEvaluate exact C2 (sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420) against claim L1 under O1 and M1, and return your independent result to Executive.",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": true
+    },
+    {
+      "claim": "action_is_last",
+      "pass": true
+    },
+    {
+      "claim": "native_joined_request_matches_exact_replay",
+      "pass": true
+    }
+  ],
+  "status": "mechanically_consistent"
+}

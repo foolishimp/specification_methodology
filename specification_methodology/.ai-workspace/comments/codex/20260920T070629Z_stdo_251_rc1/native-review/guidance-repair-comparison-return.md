@@ -1,0 +1,7 @@
+# Changed-guidance comparison return
+
+The revised two-host comparison is `falsified` for preservation of material governing constraints. [Claude GN-C01 / S2](guidance-repair-claude-comparison.md) records three denied stderr-file writes in one projection loop after the revised skill was read. The fixed source control has no corresponding attempt. Containment prevented effects; it does not establish instruction adherence. The [Codex comparison](guidance-repair-codex-comparison.md) is satisfied for its exact observed task and cannot cancel the Claude result.
+
+Both revised handoffs preserve all five result cases and return actual arrays with exactly replayable joined text. Both retain the main A/B/C decisions and explicit S4 Writer transition. No source/program/map omission is established. Remaining owning scope is native effect-scope adherence and affected qualification. Under REQ-P-DOGFOOD-009 this evidence cannot close positive cross-host native qualification; priority, repair selection and Product disposition remain with Executive.
+
+This separate result binds changed cohort `7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4`, skill `b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c`, both closed revised map observations and the unchanged first source controls. The [original aggregate](comparison-return.md) and every original negative remain intact. No further run, repair or favorable selection was performed by this assessor.

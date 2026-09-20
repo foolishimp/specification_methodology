@@ -1,0 +1,48 @@
+{
+  "cut": "v2.5.1-rc.1",
+  "source_release_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "source_revision": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a",
+  "source_tag_object": "b80e82e123f7f88eb0dffd9339f8ead9c733d153",
+  "cohort_manifest": "/Users/jim/src/apps/specification_methodology/stack_release.json",
+  "cohort_sha256": "6f0bcb8fdc1e19904dff67421884062555a56166ea53197dbac759acfb6172da",
+  "products": {
+    "axiom_indexer": {
+      "root": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "support_members": [
+        {
+          "path": "releases/v2.5.1.md",
+          "type": "file",
+          "sha256": "d7075ec17d1a5c62cae4665abb80a44fc4661378b067daa77afbc77c2a57f654"
+        }
+      ]
+    },
+    "stdo_representation": {
+      "root": "/Users/jim/src/apps/specification_methodology/stdo_representation",
+      "support_members": [
+        {
+          "path": "releases/v2.5.1.md",
+          "type": "file",
+          "sha256": "07acf7ffe317fc5745de4b84f0e26f8b31812af8ee59d972f7a6e94ea0ce1543"
+        },
+        {
+          "path": "specification/GOALS.md",
+          "type": "file",
+          "sha256": "25fdb2d47c99141661b4940f0171980e9a329d43c9e88276e2e96516ce62d606"
+        }
+      ]
+    }
+  },
+  "models": {
+    "codex": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh"
+    },
+    "claude": {
+      "model": "claude-fable-5-1",
+      "effort": "high"
+    }
+  },
+  "qualification_grant": "../README.md#native-qualification-preparation-grant",
+  "effect_boundary": "Native read-only task, fixture computations and stdout projection/join under exact candidate construction selection. No Product acceptance, publication, or adoption."
+}

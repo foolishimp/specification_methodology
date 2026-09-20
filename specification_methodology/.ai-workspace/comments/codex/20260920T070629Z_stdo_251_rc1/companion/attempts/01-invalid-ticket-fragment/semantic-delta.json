@@ -1,0 +1,968 @@
+{
+  "kind": "stdo-representation.authored-semantic-delta",
+  "schema_version": 1,
+  "installed_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "source_changes": {
+    "DESIGN_MODULE_METHOD.md": {
+      "before_sha256": "95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f",
+      "after_sha256": "5cb69556bba1171ec347cac96811c50071f0648a367103aa215070239b93785e"
+    },
+    "SPEC_METHOD.md": {
+      "before_sha256": "65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5",
+      "after_sha256": "ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3"
+    },
+    "STDO_REFERENCE_FRAME_BASELINE.md": {
+      "before_sha256": "234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1",
+      "after_sha256": "29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d"
+    },
+    "TICKET_METHOD.md": {
+      "before_sha256": "2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91",
+      "after_sha256": "f031ce7fb3b5b366ffaee5996ae76e861697ad86897cc04c06b67da249fe0eca"
+    },
+    "authority_compressions/design_module_method.compressed.md": {
+      "before_sha256": "db52b86a76fc8cbe664c1d95e6d0c54e139ad1b5dd5f161904b1c5a38a7ecb89",
+      "after_sha256": "a6edc3a5fdde1946e9e47f08841b34e1e0a6ea6b937a42e2a7d9b132f53692ee"
+    },
+    "authority_compressions/spec_method.compressed.md": {
+      "before_sha256": "c31b7735d7a328b4516613ed4ea80e85870d96a0600a5b988be1325bc12b03d3",
+      "after_sha256": "304840d327a7e372ad347dc6184b69458d293a547b9aa81d9aabccb0af7742bc"
+    },
+    "authority_compressions/stdo_bootstrap.md": {
+      "before_sha256": "9542d4c95dba044a08e2f17b84a3b6ab513fac6d96b7600a32baa45646c8d410",
+      "after_sha256": "5e63a0f13665fe5b0bcacdeff1514cb36194079d076065f6227af73ca691aca7"
+    },
+    "authority_compressions/stdo_compressed.md": {
+      "before_sha256": "8d30240a4d1323d838aad19051326ec6126040313f580c5a7ebeb8c146d56fcf",
+      "after_sha256": "422f5b5882e62228db4397b69763090288e54ccdf69876cbb457bfeecfecca30"
+    },
+    "authority_compressions/ticket_method.compressed.md": {
+      "before_sha256": "26f37b9b8d07a4e02c62dc17b61d72669b1c572cb3ac68c751dc01f682861f3b",
+      "after_sha256": "d7ad2a08f71a0f4f4ac9478e2f9f3c08ca22d947b27e30f08476dbbb926745d8"
+    }
+  },
+  "source_assessments": {
+    "SPEC_METHOD.md": "R1 validity/admission and reconstruction; R3 method overhead; R4 supported threat applicability; R5 guidance fidelity; R6 retention burden; R7 grants/checkpoints; R8 retained repair. New owning constraints and four affected existing statements carry these relations.",
+    "DESIGN_MODULE_METHOD.md": "Material computational path, operational assumptions and recurrence closure are authored as workload and whole-path clauses consuming the singular SPEC validity/retention owners.",
+    "STDO_REFERENCE_FRAME_BASELINE.md": "Preserve existing frame identities and roles; add the accepted T031 composite and its R2 computational refinement, Worker causal read scope and Reviewer supported-model applicability. Two explicit indexes expose these existing source contracts.",
+    "TICKET_METHOD.md": "Affected repricing obligations and consequence deltas extend existing J/O continuity; supported acceptance predicates use the shared applicability constraint. Existing carriers and authority remain.",
+    "authority_compressions/design_module_method.compressed.md": "The existing design compression clause retains its old claim and gains explicit workload/retention supporting dependencies corresponding to the changed digest-bound projection.",
+    "authority_compressions/spec_method.compressed.md": "The existing authority-flow clause retains its claim and links scoped fidelity, validity, retention and material method work; exact raw owners retain meaning.",
+    "authority_compressions/stdo_bootstrap.md": "Keep original discovery/authority statement; add the material shared fidelity, bounded grant and causal-read support projected by the new bootstrap. No caller adoption is inferred.",
+    "authority_compressions/stdo_compressed.md": "Existing aggregate re-entry remains; explicit scoped-fidelity support and new source-owned interface/path relations cover affected meaning, without promoting compression into source authority.",
+    "authority_compressions/ticket_method.compressed.md": "Keep carrier-binding statement; link current obligation-continuity and supported-test applicability constraints. No new ledger or admission source."
+  },
+  "replace_clauses": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:aggregate-compression-reenters-source",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:authority-compression"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Use aggregate compression as bounded prompt authority and re-enter exact raw owners for stale, missing, conflicting, or unresolved method meaning."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models"
+        }
+      ],
+      "statement": "Use aggregate compression as bounded prompt authority and re-enter exact raw owners for stale, missing, conflicting, or unresolved method meaning.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/stdo_compressed.md#re-entry-compression"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:bootstrap-resolves-exact-basis",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:product-definition"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Discover exactly one Product Definition, verify its immutable STDO basis, resolve the applicable accepted Project Reference-Frame Basis or composition, and bind the exact outcome, basis and existing work grant. Use direct Writer entry when that configuration permits it and one capable context is sufficient. Use Executive or the declared project equivalent for material coordination and select the smallest applicable dependency-ready frontier; owning conditions determine required evaluations and unknown applicability remains unresolved. A role name grants no effects and Executive performs no file or Git mutation. Prompts, summaries, maps and prior results may route attention but cannot replace current source authority or a closed frame result."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:bounded-grant-preserves-status-and-checkpoint-continuity"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:worker-read-scope-follows-complete-causal-cone"
+        }
+      ],
+      "statement": "Discover exactly one Product Definition, verify its immutable STDO basis, resolve the applicable accepted Project Reference-Frame Basis or composition, and bind the exact outcome, basis and existing work grant. Use direct Writer entry when that configuration permits it and one capable context is sufficient. Use Executive or the declared project equivalent for material coordination and select the smallest applicable dependency-ready frontier; owning conditions determine required evaluations and unknown applicability remains unresolved. A role name grants no effects and Executive performs no file or Git mutation. Prompts, summaries, maps and prior results may route attention but cannot replace current source authority or a closed frame result.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/stdo_bootstrap.md#stdo-discovery-bootstrap"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:compressed-design-requires-decision-closure",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:authority-compression"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Before design acceptance, close the complete material-relation network and retain implementation evidence as feedback rather than reverse semantic authority."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:superseded-retention-bears-its-own-burden"
+        }
+      ],
+      "statement": "Before design acceptance, close the complete material-relation network and retain implementation evidence as feedback rather than reverse semantic authority.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/design_module_method.compressed.md#governing-claim"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:compressed-spec-preserves-authority-flow",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:authority-compression"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Use compressed specification law only as a digest-bound projection of the complete selected method and preserve WHAT-over-HOW authority flow."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:superseded-retention-bears-its-own-burden"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:method-work-serves-decision-or-assurance-need"
+        }
+      ],
+      "statement": "Use compressed specification law only as a digest-bound projection of the complete selected method and preserve WHAT-over-HOW authority flow.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/spec_method.compressed.md#governing-claim"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:compressed-ticket-preserves-carrier-binding",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:authority-compression"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Preserve the distinction between a durable ticket, sprint-local entry, one-run intake draft, and admitted execution contract; carrier presence, lane state, or model-authored prose cannot substitute for upstream authority or admission."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:recorded-judgment-binds-semantic-question-and-reviser"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:findings-and-tests-require-supported-operating-model"
+        }
+      ],
+      "statement": "Preserve the distinction between a durable ticket, sprint-local entry, one-run intake draft, and admitted execution contract; carrier presence, lane state, or model-authored prose cannot substitute for upstream authority or admission.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/ticket_method.compressed.md#carrier-binding-compression"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:authority-compression"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Do not treat authority compressions as replacement constitutional authority or independently selectable method editions; re-enter raw selected-cut owners when stale or insufficient. Within their scope, derived instructions preserve applicability, obligations, permissions, exclusions, decision owners and invalidators. A projected prohibition retains its condition and lawful alternative; correct digests cannot justify stricter or weaker meaning. References must resolve within the actor's access or the required meaning must be supplied directly."
+        }
+      ],
+      "statement": "Do not treat authority compressions as replacement constitutional authority or independently selectable method editions; re-enter raw selected-cut owners when stale or insufficient. Within their scope, derived instructions preserve applicability, obligations, permissions, exclusions, decision owners and invalidators. A projected prohibition retains its condition and lawful alternative; correct digests cannot justify stricter or weaker meaning. References must resolve within the actor's access or the required meaning must be supplied directly.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001",
+        "stdo://releases/v2.5.1-rc.1/standards/authority_compressions/README.md#authority-compression-assets"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "After checking exact applicability, reuse valid C across roles, conversations and resumptions. Changed request, candidate, basis, owner/root, projection, accepted trace, rule, configuration or material evidence invalidates affected claims before reliance. Retain predecessor/successor identities, changed inputs, surviving facts and affected J dependencies; recompute the wider frontier where independence is unproved."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        }
+      ],
+      "statement": "After checking exact applicability, reuse valid C across roles, conversations and resumptions. Changed request, candidate, basis, owner/root, projection, accepted trace, rule, configuration or material evidence invalidates affected claims before reliance. Retain predecessor/successor identities, changed inputs, surviving facts and affected J dependencies; recompute the wider frontier where independence is unproved.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#computed-classification-and-treatment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:profile-qualification-separates-mechanical-and-semantic-evidence",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Mechanical document checks may protect exact table shape, result cardinality, source-digest congruence, and named refusal boundaries, but remain structural evidence only; semantic truth and profile qualification require a capable source-linked Reviewer evaluation, and qualification binds both evidence kinds without claiming either as the other. Changed derived guidance is qualified against source-derived expected permissions, exclusions and invalidators. Native-use claims require an ordinary actor through its declared entry/context; mechanical and operational claims require executable observations, including applicable workload assumptions. Semantic agreement substitutes for neither."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions"
+        }
+      ],
+      "statement": "Mechanical document checks may protect exact table shape, result cardinality, source-digest congruence, and named refusal boundaries, but remain structural evidence only; semantic truth and profile qualification require a capable source-linked Reviewer evaluation, and qualification binds both evidence kinds without claiming either as the other. Changed derived guidance is qualified against source-derived expected permissions, exclusions and invalidators. Native-use claims require an ordinary actor through its declared entry/context; mechanical and operational claims require executable observations, including applicable workload assumptions. Semantic agreement substitutes for neither.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:recorded-judgment-binds-semantic-question-and-reviser",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:residual-judgment"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Record a reusable residual judgment once in the existing owning carrier: question, exact subject/basis, supporting C/evidence, actor/authority, conclusion/scope, uncertainty and concrete revising observation sufficient for checking applicability. Recover it across roles/resumption; an unchanged question is not re-authored. Do not invent J for a rule-settled conclusion or turn unknown facts into premises. Repricing dispositions each affected obligation as retained, superseded, deferred or withdrawn in that same carrier, with owner and evidence. Preserve surviving work and changed dependencies without a parallel ledger of unaffected history. Present the short consequence delta while retaining the original ruling; a general continue instruction accepts no undisclosed architecture or scope change."
+        }
+      ],
+      "statement": "Record a reusable residual judgment once in the existing owning carrier: question, exact subject/basis, supporting C/evidence, actor/authority, conclusion/scope, uncertainty and concrete revising observation sufficient for checking applicability. Recover it across roles/resumption; an unchanged question is not re-authored. Do not invent J for a rule-settled conclusion or turn unknown facts into premises. Repricing dispositions each affected obligation as retained, superseded, deferred or withdrawn in that same carrier, with owner and evidence. Preserve surviving work and changed dependencies without a parallel ledger of unaffected history. Present the short consequence delta while retaining the original ruling; a general continue instruction accepts no undisclosed architecture or scope change.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_basis carries basis failure and refuses consumption."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:findings-and-tests-require-supported-operating-model"
+        }
+      ],
+      "statement": "Reviewer projection is total across the Reference Frame Method result algebra: satisfied carries an explicit no-finding state and not-applicable triage; falsified carries exact findings with complete or explicitly indeterminate triage fields; indeterminate preserves evidence gaps; out_of_frame means the evaluated claim requires an undeclared material relation or evaluator capability and carries indeterminate triage plus reconfiguration pressure; invalid_basis carries basis failure and refuses consumption.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:selected-design-reconstruction-reuses-current-coverage",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:design"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:accepted-design-coverage"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Reconstruct the complete selected function causal to the exact closure claim, rather than the whole Product or construction history. Reuse current accepted Ontology, design verdict and sufficient reconstruction after checking scope, traces, applicability and invalidators. A role/conversation/review change alone requires no view recreation; missing/stale/ambiguous evidence is no no-delta proof. Material change or counterexample requires affected reconstruction and the applicable gate, preserving supported unaffected relations and complete Ontology/three-view coverage for new or materially changed boundaries. Reconstructability requires a correct reconstruction route, not execution at every use; it grants no restart authority and cannot excuse stale success."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        }
+      ],
+      "statement": "Reconstruct the complete selected function causal to the exact closure claim, rather than the whole Product or construction history. Reuse current accepted Ontology, design verdict and sufficient reconstruction after checking scope, traces, applicability and invalidators. A role/conversation/review change alone requires no view recreation; missing/stale/ambiguous evidence is no no-delta proof. Material change or counterexample requires affected reconstruction and the applicable gate, preserving supported unaffected relations and complete Ontology/three-view coverage for new or materially changed boundaries. Reconstructability requires a correct reconstruction route, not execution at every use; it grants no restart authority and cannot excuse stale success.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#11d-post-ticket-design-review-rule",
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#4b-ontology-first-design-rule",
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#5e-ontology-and-three-view-behavioral-design-gate",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#reconstruction-litmus"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:sufficient-writer-entry-is-direct",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:worker"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:execution-contract"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:frame-applicability"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capability or independence needs; role/frame names alone create none. Preserve admission, smallest lawful carrier, required assessment, reserved decisions and result consumer. Sufficient direct work adds no Executive appointment, review, ticket or diagram recreation merely to finish."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:declared-rules-settle-only-supported-treatment"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:exception",
+          "ref": "urn:stdo-representation:a-c-text:clause:unknown-treatment-bounds-dependent-effects"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:qualification",
+          "literal": "Sufficient declared treatment supports the settled direct branch. Unknown treatment holds dependent reliance, while an exact existing evidence or construction grant may still authorize the bounded discriminator or first candidate. Recover O only where it exists or is required, without widening its original scope or demanding a new ruling merely for this branch."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:bounded-grant-preserves-status-and-checkpoint-continuity"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:worker-read-scope-follows-complete-causal-cone"
+        }
+      ],
+      "statement": "One capable context with sufficient existing work authority, exact intake and operation grant may construct directly when the applicable configuration permits. Coordinate material context, authority, capability or independence needs; role/frame names alone create none. Preserve admission, smallest lawful carrier, required assessment, reserved decisions and result consumer. Sufficient direct work adds no Executive appointment, review, ticket or diagram recreation merely to finish.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#computed-classification-and-treatment",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#construction-assessment-and-delegation",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#engagement-applicability",
+        "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#condition-based-closure-and-reuse",
+        "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity",
+        "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#upward-propagation-check"
+      ]
+    }
+  ],
+  "add_clauses": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:bounded-grant-preserves-status-and-checkpoint-continuity",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:execution-contract"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "One bounded operation grant may cover its declared construction, status and checkpoint sequence. Record actual role transitions in the existing carrier; a status change alone needs no fresh grant or rehash of an unchanged subject. Resolve changed operation, subject, territory, authority or validity conditions before the affected effect, and preserve Executive mutation restrictions. A preservation checkpoint may retain unfinished or unaccepted work under its exact grant with predecessor, included territory, concurrent-writer disposition and durable evidence location; it supplies no acceptance, promotion or publication. A restart explains why retained repair is insufficient, which obligations and evidence survive and which causal assumptions change. Reconstructability supplies no restart authority."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:executive-mutation-needs-prior-writer-transition"
+        }
+      ],
+      "statement": "One bounded operation grant may cover its declared construction, status and checkpoint sequence. Record actual role transitions in the existing carrier; a status change alone needs no fresh grant or rehash of an unchanged subject. Resolve changed operation, subject, territory, authority or validity conditions before the affected effect, and preserve Executive mutation restrictions. A preservation checkpoint may retain unfinished or unaccepted work under its exact grant with predecessor, included territory, concurrent-writer disposition and durable evidence location; it supplies no acceptance, promotion or publication. A restart explains why retained repair is insufficient, which obligations and evidence survive and which causal assumptions change. Reconstructability supplies no restart authority.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#checkpoint-continuation-progress-and-churn",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#construction-assessment-and-delegation",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#reconstruction-litmus"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:design"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "For material algorithmic work, the computational realization projection binds supported input dimensions, workload, growth and operational assumptions for the selected outcome. Product authority owns any acceptance limits before qualification. Challenge representative supported paths and material growth, observing work directly where elapsed time cannot locate it and without repeating work merely to count it. Separate material startup, framework, external computation, transport and assurance costs. Existing design and proof carriers suffice; no universal quota, complexity requirement or extra accounting system follows. Different domain names establish no distinct computational responsibility, and similarity alone proves no semantic equivalence."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        }
+      ],
+      "statement": "For material algorithmic work, the computational realization projection binds supported input dimensions, workload, growth and operational assumptions for the selected outcome. Product authority owns any acceptance limits before qualification. Challenge representative supported paths and material growth, observing work directly where elapsed time cannot locate it and without repeating work merely to count it. Separate material startup, framework, external computation, transport and assurance costs. Existing design and proof carriers suffice; no universal quota, complexity requirement or extra accounting system follows. Different domain names establish no distinct computational responsibility, and similarity alone proves no semantic equivalence.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:computational-whole-path-evaluation",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:design"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "For material computational composition or recurrence, compose the selected interface claims with existing Operator, Owner, Reuse/Foundation and Proof frames to evaluate one complete producer-to-consumer path. Bind fact establishment, each consumer, applicable basis and invalidators, effect boundaries, retained alternatives and accumulated work, including material method/assurance work. Evaluate equivalent computation across different domain names without inferring semantic equivalence, and preserve distinct supported scope, freshness and effect checks. Return one identifiable complete-path result and its evidence; local successes cannot substitute. Design evidence establishes only design, and actual-work claims require observations on the selected path under its declared workload and operational assumptions. Reuse unchanged valid results and reassess affected support after material path, basis or workload changes. This is bounded composition, not a permanent actor, per-helper review or new accounting ledger."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-integration-distinguishes-four-claims"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:worker-read-scope-follows-complete-causal-cone"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:method-work-serves-decision-or-assurance-need"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:superseded-retention-bears-its-own-burden"
+        }
+      ],
+      "statement": "For material computational composition or recurrence, compose the selected interface claims with existing Operator, Owner, Reuse/Foundation and Proof frames to evaluate one complete producer-to-consumer path. Bind fact establishment, each consumer, applicable basis and invalidators, effect boundaries, retained alternatives and accumulated work, including material method/assurance work. Evaluate equivalent computation across different domain names without inferring semantic equivalence, and preserve distinct supported scope, freshness and effect checks. Return one identifiable complete-path result and its evidence; local successes cannot substitute. Design evidence establishes only design, and actual-work claims require observations on the selected path under its declared workload and operational assumptions. Reuse unchanged valid results and reassess affected support after material path, basis or workload changes. This is bounded composition, not a permanent actor, per-helper review or new accounting ledger.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#11c-recurrence-extraction-rule",
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#computational-whole-path-evaluation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Each admission owner remains independently responsible for deriving and validating its complete enclosing relation. It may consume established facts whose exact subject, basis, scope, provenance and validity remain applicable, with recoverable production and invalidation. A function, component, role, conversation or status boundary alone requires no repeated derivation. Unsupported assertions of prior success establish nothing. Material mutation, rollback, changed authority or basis, expired validity and actual trust crossings require applicable validation before reliance or effect. Reuse transfers no admission responsibility, omits no participant and supplies no separately required independent judgment. All participants and joins remain bound to one admission-valid basis or declared coherent composite basis through one all-or-none semantic commit; if support can advance, revalidate or use a design-declared concurrency mechanism."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:closed-result-reuse-preserves-required-independence"
+        }
+      ],
+      "statement": "Each admission owner remains independently responsible for deriving and validating its complete enclosing relation. It may consume established facts whose exact subject, basis, scope, provenance and validity remain applicable, with recoverable production and invalidation. A function, component, role, conversation or status boundary alone requires no repeated derivation. Unsupported assertions of prior success establish nothing. Material mutation, rollback, changed authority or basis, expired validity and actual trust crossings require applicable validation before reliance or effect. Reuse transfers no admission responsibility, omits no participant and supplies no separately required independent judgment. All participants and joins remain bound to one admission-valid basis or declared coherent composite basis through one all-or-none semantic commit; if support can advance, revalidate or use a design-declared concurrency mechanism.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:findings-and-tests-require-supported-operating-model",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:design"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "A finding or acceptance predicate binds a violated obligation, supported input or state, governing operating/threat model and credible causal path. An excluded threat alone authorizes neither a predicate nor retained defensive work; existing tests and hypothetical hostility supply no standing. Exclusion itself requires the governing owner, not a helper's inability to construct a case, and internal location alone establishes no trust. Preserve supported malformed-input, mutable-state, authority, freshness and effect checks. Audit affected predicates when replacing the responsibility; retire unsupported expectations without inventing a replacement guard. Live authority conflicts or a proposed wider model re-enter their actual owner rather than receiving a test-only waiver."
+        }
+      ],
+      "statement": "A finding or acceptance predicate binds a violated obligation, supported input or state, governing operating/threat model and credible causal path. An excluded threat alone authorizes neither a predicate nor retained defensive work; existing tests and hypothetical hostility supply no standing. Exclusion itself requires the governing owner, not a helper's inability to construct a case, and internal location alone establishes no trust. Preserve supported malformed-input, mutable-state, authority, freshness and effect checks. Audit affected predicates when replacing the responsibility; retire unsupported expectations without inventing a replacement guard. Live authority conflicts or a proposed wider model re-enter their actual owner rather than receiving a test-only waiver.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#standing-structural-qualification",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame",
+        "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#test-authority-rule"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-boundaries-preserve-domain-and-temporal-meaning",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:identity"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:public-serialization"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Across serialization, parsing, normalization and adaptation, preserve domain, units, identity, cardinality, order, empty/null/default meaning and lifecycle validity. A lawful translation binds source/target coordinates, preserved meaning, accepted loss, provenance, owner and refusal. Distinguish proposed, admitted, assessed and completed states, active input from history, and current validity from available bytes. Equal wire shape or output proves neither translation nor equal meaning, provenance or authority."
+        }
+      ],
+      "statement": "Across serialization, parsing, normalization and adaptation, preserve domain, units, identity, cardinality, order, empty/null/default meaning and lifecycle validity. A lawful translation binds source/target coordinates, preserved meaning, accepted loss, provenance, owner and refusal. Distinguish proposed, admitted, assessed and completed states, active input from history, and current validity from available bytes. Equal wire shape or output proves neither translation nor equal meaning, provenance or authority.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-causal-diagnostics-retain-frontier-and-uncertainty",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:observed-effect-state"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Preserve the supported originating causal frontier through wrappers and projections: material seam, bounded field/path, expected domain or basis, observed mismatch and evidence locator where available, together with downstream symptoms, successful work and declared continuation or block. Clock or log order alone identifies no cause. Preserve joint causes, alternative frontiers and indeterminacy instead of inventing a unique cause; honor Product redaction and name required diagnostic gaps. Return the smallest supported owner/re-entry without granting repair or retry."
+        }
+      ],
+      "statement": "Preserve the supported originating causal frontier through wrappers and projections: material seam, bounded field/path, expected domain or basis, observed mismatch and evidence locator where available, together with downstream symptoms, successful work and declared continuation or block. Clock or log order alone identifies no cause. Preserve joint causes, alternative frontiers and indeterminacy instead of inventing a unique cause; honor Product redaction and name required diagnostic gaps. Return the smallest supported owner/re-entry without granting repair or retry.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#counterexample-localization",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-contract-exposes-domains-and-owned-facts",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "At each material interface, bind input domain, producer guarantees, consumer preconditions, permitted effects, refusals and observable exit. A direct successful handoff meets consumer preconditions; candidate output, later admission and semantic assessment remain distinct when that is the declared contract. Refusal of an inadmissible candidate does not alone falsify an adequate candidate interface. Supply material actor obligations and domains in the actual context or through an exact lawfully accessible locator, including material LLM role, instructions, tools and transport/model configuration. Generic governance access cannot replace the Product contract or license hidden-validator inference. Deterministic owners expose their owned facts through reuse or equivalent projections; semantic judgment and reserved owner admission remain separately owned."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners"
+        }
+      ],
+      "statement": "At each material interface, bind input domain, producer guarantees, consumer preconditions, permitted effects, refusals and observable exit. A direct successful handoff meets consumer preconditions; candidate output, later admission and semantic assessment remain distinct when that is the declared contract. Refusal of an inadmissible candidate does not alone falsify an adequate candidate interface. Supply material actor obligations and domains in the actual context or through an exact lawfully accessible locator, including material LLM role, instructions, tools and transport/model configuration. Generic governance access cannot replace the Product contract or license hidden-validator inference. Deterministic owners expose their owned facts through reuse or equivalent projections; semantic judgment and reserved owner admission remain separately owned.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-integration-distinguishes-four-claims",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:closed-frame-result"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "For one exact outcome and independently stated oracle, select the applicable interface claims and state why others are unselected: contract sufficiency from declared interfaces and available participant context; boundary congruence from actual participants and exchanges; path realization from the authoritative runnable entry-to-outcome path; and user usability from ordinary caller evidence. Design may establish a bounded contract claim while implementation and user facts remain unresolved or unclaimed. Unknown material support leaves its dependent claim unresolved. Full end-to-end usability requires all four distinct results joined on the same basis or a lawful translation. Transport, parse, admission, semantic satisfaction, completion and user success are not interchangeable. The composite refines existing specialist/testing frames without a new family, role, universal gate, ledger or automatic extra actor. Return exact claim dispositions, evidence, exercised path, substitutions, retained work, causal findings, residuals and invalidators to the declared consumer; no acceptance or next-operation grant follows."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:required-frame-conjunction-retains-every-constraint"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-contract-exposes-domains-and-owned-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-boundaries-preserve-domain-and-temporal-meaning"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-path-binds-actual-subject-and-effect-owners"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-causal-diagnostics-retain-frontier-and-uncertainty"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-usability-requires-ordinary-context-evidence"
+        }
+      ],
+      "statement": "For one exact outcome and independently stated oracle, select the applicable interface claims and state why others are unselected: contract sufficiency from declared interfaces and available participant context; boundary congruence from actual participants and exchanges; path realization from the authoritative runnable entry-to-outcome path; and user usability from ordinary caller evidence. Design may establish a bounded contract claim while implementation and user facts remain unresolved or unclaimed. Unknown material support leaves its dependent claim unresolved. Full end-to-end usability requires all four distinct results joined on the same basis or a lawful translation. Transport, parse, admission, semantic satisfaction, completion and user success are not interchangeable. The composite refines existing specialist/testing frames without a new family, role, universal gate, ledger or automatic extra actor. Return exact claim dispositions, evidence, exercised path, substitutions, retained work, causal findings, residuals and invalidators to the declared consumer; no acceptance or next-operation grant follows.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-claim-boundaries",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-qualification"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-path-binds-actual-subject-and-effect-owners",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:install"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:observed-effect-state"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "A realized interface claim acquires both selected participants and their exchanges, the exact runnable artifact/install, supported callable entry-to-outcome path, configuration, relevant current mutable workspace and actual state/effect/observation boundaries. Bind current observations separately from immutable authority, history and prior candidates. Refresh affected evidence after changed support while preserving unaffected valid work; actor change alone invalidates nothing. Matching output via hidden fallback, state injection, repaired response, private entry or undeclared retry cannot prove the ordinary path. A pure function acquires no event lifecycle from this evaluation."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-boundaries-preserve-domain-and-temporal-meaning"
+        }
+      ],
+      "statement": "A realized interface claim acquires both selected participants and their exchanges, the exact runnable artifact/install, supported callable entry-to-outcome path, configuration, relevant current mutable workspace and actual state/effect/observation boundaries. Bind current observations separately from immutable authority, history and prior candidates. Refresh affected evidence after changed support while preserving unaffected valid work; actor change alone invalidates nothing. Matching output via hidden fallback, state injection, repaired response, private entry or undeclared retry cannot prove the ordinary path. A pure function acquires no event lifecycle from this evaluation.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-claim-boundaries",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:interface-usability-requires-ordinary-context-evidence",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:reference-frame"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "User usability requires the ordinary human, LLM or software caller to obtain the selected outcome through its declared context, access and supported surface. Internal success and private-validator-aware fixtures prove no such claim. LLM usability uses clean-room UAT with ordinary context/tools and expected outcomes fixed before response inspection, covering the sunny and material ambiguity/negative cases. Disclose substitutes: replayed/fabricated responses prove only their narrower relation. Preserve failures, unedited responses and actual attempts; no silent retry until green. Live claims require live evidence under existing UAT law, while design-only work acquires no universal live-provider prerequisite. Mechanical, semantic and native-user evidence qualify their own claims."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:interface-contract-exposes-domains-and-owned-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:profile-qualification-separates-mechanical-and-semantic-evidence"
+        }
+      ],
+      "statement": "User usability requires the ordinary human, LLM or software caller to obtain the selected outcome through its declared context, access and supported surface. Internal success and private-validator-aware fixtures prove no such claim. LLM usability uses clean-room UAT with ordinary context/tools and expected outcomes fixed before response inspection, covering the sunny and material ambiguity/negative cases. Disclose substitutes: replayed/fabricated responses prove only their narrower relation. Preserve failures, unedited responses and actual attempts; no silent retry until green. Live claims require live evidence under existing UAT law, while design-only work acquires no universal live-provider prerequisite. Mechanical, semantic and native-user evidence qualify their own claims.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-claim-boundaries",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:method-work-serves-decision-or-assurance-need",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:computed-classification"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Method execution obeys the same proportionality relation as Product construction: repeated source acquisition, context assembly, hashing, activation preparation, status recording, review and evidence generation serve an identified change, decision or assurance need. Repetition alone establishes neither validity nor independence. Reuse current applicable evidence, and qualify material method overhead under the Product-owned computational workload and operational assumptions. No universal resource quota or separate accounting carrier is introduced."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:support",
+          "ref": "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions"
+        }
+      ],
+      "statement": "Method execution obeys the same proportionality relation as Product construction: repeated source acquisition, context assembly, hashing, activation preparation, status recording, review and evidence generation serve an identified change, decision or assurance need. Repetition alone establishes neither validity nor independence. Reuse current applicable evidence, and qualify material method overhead under the Product-owned computational workload and operational assumptions. No universal resource quota or separate accounting carrier is introduced.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:superseded-retention-bears-its-own-burden",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:design"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:work-outcome"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Retire superseded production responsibility unless retention identifies a distinct current supported obligation, owner, purpose, execution scope and material cost. Temporary compatibility or comparison has an expiry or removal trigger; existing tests, an oracle label or nominal demotion cannot justify duplicate production work. A required cold reconstruction route or independent test oracle may serve an enduring distinct obligation without an invented expiry. Identify the surviving owner where an obligation remains; no replacement guard is required where no governing obligation exists. Retirement in a closed affected cone need not await unrelated whole-Product closure. Commonization closes when the selected path consumes the accepted relation and superseded work is retired or justifiably retained; shared names, fewer lines or an unused helper prove no contraction."
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:condition",
+          "ref": "urn:stdo-representation:a-c-text:clause:findings-and-tests-require-supported-operating-model"
+        }
+      ],
+      "statement": "Retire superseded production responsibility unless retention identifies a distinct current supported obligation, owner, purpose, execution scope and material cost. Temporary compatibility or comparison has an expiry or removal trigger; existing tests, an oracle label or nominal demotion cannot justify duplicate production work. A required cold reconstruction route or independent test oracle may serve an enduring distinct obligation without an invented expiry. Identify the surviving owner where an obligation remains; no replacement guard is required where no governing obligation exists. Retirement in a closed affected cone need not await unrelated whole-Product closure. Commonization closes when the selected path consumes the accepted relation and superseded work is retired or justifiably retained; shared names, fewer lines or an unused helper prove no contraction.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#11c-recurrence-extraction-rule",
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#closure-criterion",
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#live-surface-immutability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:a-c-text:clause:worker-read-scope-follows-complete-causal-cone",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-representation:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:worker"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:subject",
+          "ref": "urn:stdo-representation:a-c-text:symbol:execution-contract"
+        },
+        {
+          "role": "urn:stdo-representation:vocabulary:role:requirement",
+          "literal": "Within its declared access grant, a Worker inspects the complete causal cone, including material producers, consumers and governing owners even when they lie outside its write territory. Narrow mutation scope cannot justify omitted causal context. A required repair beyond that territory returns to its owner; inspection and understanding confer no cross-boundary effect authority."
+        }
+      ],
+      "statement": "Within its declared access grant, a Worker inspects the complete causal cone, including material producers, consumers and governing owners even when they lie outside its write territory. Narrow mutation scope cannot justify omitted causal context. A required repair beyond that territory returns to its owner; inspection and understanding confer no cross-boundary effect authority.",
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#bounded-causal-construction",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame"
+      ]
+    }
+  ],
+  "replace_residuals": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:residual:successor-construction-and-qualification-not-yet-joined",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-representation:a-c-text:symbol:release-matched-cohort",
+        "urn:stdo-representation:a-c-text:symbol:source-corpus",
+        "urn:stdo-representation:a-c-text:symbol:working-authoring-surface"
+      ],
+      "detail": "This program binds the exact complete STDO 2.5.1 RC1 source and conserved generic Axiom mechanics. It represents T031 interface integration and the bounded shared validity, complete-path, operational, applicability, fidelity, retention and continuity amendments. Mechanical validation/projections supply neither independent semantic comparison nor native-use qualification. Matched child construction, exact configuration decisions, native observations, release disposition and any later publication/adoption retain separate owning evidence and authority. Product presence is not acceptance.",
+      "re_entry_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+        "stdo://releases/v2.5.1-rc.1/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+      ],
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts",
+        "stdo://releases/v2.5.1-rc.1/standards/RELEASE_METHOD.md#two-commit-construction-and-one-publication-transaction"
+      ]
+    }
+  ],
+  "add_residuals": [
+    {
+      "uri": "urn:stdo-representation:a-c-text:residual:interface-and-workload-observations-remain-owner-supplied",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-representation:a-c-text:symbol:closed-frame-result",
+        "urn:stdo-representation:a-c-text:symbol:observed-effect-state",
+        "urn:stdo-representation:a-c-text:symbol:reference-frame",
+        "urn:stdo-representation:a-c-text:symbol:work-outcome"
+      ],
+      "detail": "No task-specific interface contract, supported operating/threat model, actor context, runnable path, current mutable observation, workload limit, retention obligation or work measurement is supplied by this program. Their actual owners provide them. Unavailable facts remain unknown; design correspondence, view closure and a fixture that knows private rules establish neither live behavior nor ordinary usability. Existing grants and required independent evaluations retain their own boundaries.",
+      "re_entry_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#computational-whole-path-evaluation",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations"
+      ],
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame"
+      ]
+    }
+  ],
+  "add_frame_refs": [
+    "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame"
+  ],
+  "add_frame_indexes": [
+    {
+      "uri": "urn:stdo-representation:frame-index:computational-whole-path-evaluation",
+      "frame_ref": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame",
+      "scope": "Evaluate one material computational composition or recurrence path through existing interface, Operator, Owner, Reuse/Foundation and Proof relations. Expose fact reuse/invalidation, supported distinct checks, justified retention and Product-owned workload/cost observations. Select applicable claims; a design result establishes no runtime work or usability, and this index supplies no new actor, quota or effect grant.",
+      "clause_refs": [
+        "urn:stdo-representation:a-c-text:clause:computational-whole-path-evaluation"
+      ],
+      "residual_refs": [
+        "urn:stdo-representation:a-c-text:residual:frame-adoption-not-claimed",
+        "urn:stdo-representation:a-c-text:residual:interface-and-workload-observations-remain-owner-supplied",
+        "urn:stdo-representation:a-c-text:residual:task-frame-obligations-require-owned-applicability"
+      ],
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#computational-whole-path-evaluation",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame"
+      ]
+    },
+    {
+      "uri": "urn:stdo-representation:frame-index:end-to-end-interface-integration",
+      "frame_ref": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame",
+      "scope": "Evaluate explicitly selected contract sufficiency, boundary congruence, actual path realization and ordinary-user usability for one outcome. Their evidence and applicability remain separate; full end-to-end usability needs all four. The index grants no activation, construction, acceptance, retry or new universal assurance prerequisite.",
+      "clause_refs": [
+        "urn:stdo-representation:a-c-text:clause:interface-integration-distinguishes-four-claims"
+      ],
+      "residual_refs": [
+        "urn:stdo-representation:a-c-text:residual:frame-adoption-not-claimed",
+        "urn:stdo-representation:a-c-text:residual:interface-and-workload-observations-remain-owner-supplied",
+        "urn:stdo-representation:a-c-text:residual:task-frame-obligations-require-owned-applicability"
+      ],
+      "source_refs": [
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-claim-boundaries",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-obligations",
+        "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-qualification"
+      ]
+    }
+  ],
+  "combined_projection_selections": {
+    "combined-worker-reviewer": [
+      "urn:stdo-representation:frame-index:t009:complete-update-worker",
+      "urn:stdo-representation:frame-index:t009:complete-update-reviewer"
+    ],
+    "combined-interface-computational": [
+      "urn:stdo-representation:frame-index:end-to-end-interface-integration",
+      "urn:stdo-representation:frame-index:computational-whole-path-evaluation"
+    ]
+  },
+  "claim": "Writer-authored candidate interpretation of the frozen nine-member source delta; independent source-fidelity disposition remains external. No Axiom semantic mechanics are added."
+}

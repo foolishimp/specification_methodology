@@ -1,0 +1,66 @@
+{
+  "status": "qualified_for_local_freeze",
+  "scope": "Exact RC source/construction/integrity candidate for owner-selected publication with the disclosed native limitations; no positive complete-task native verdict is asserted",
+  "owner_instruction": "this needs to be commited and released now 2.5.1 RC1 yes?",
+  "cohort_sha256": "53d6f06fa4f873f1986e5368613992a11bb6d8d58eac17888663b0e165860a7f",
+  "source_commit": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a",
+  "source_tag_object": "b80e82e123f7f88eb0dffd9339f8ead9c733d153",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "accepted_evidence": [
+    {
+      "path": "source-review.json",
+      "sha256": "1d3902c07772eac32c1a455dc7094804267e32769cdf1d327cb351f7e6b7c878"
+    },
+    {
+      "path": "source-tests.json",
+      "sha256": "686c45111de21195545af2c8be8024e79291479cb6fe072a569c249139826a4b"
+    },
+    {
+      "path": "source-checks.json",
+      "sha256": "e049c4992f52707a749dab7c419587229a94918f3e5d257d02705712d6ac5f32"
+    },
+    {
+      "path": "stdo-verify.json",
+      "sha256": "45baeda1e12c13084455a69daecfa10ec3e894c01b462ca13b2dace2eef72f4d"
+    },
+    {
+      "path": "representation-semantic-review.json",
+      "sha256": "9d5596ea4438ac7ee0d24e1035ca2a9ebe113e040c1c10262c0fc905a9a423c6"
+    },
+    {
+      "path": "companion-role-transition-review.json",
+      "sha256": "546264d816bcb6483bc03cf9a927ac6cd1ffe7a2d9296e9504a3fbe89b913b6c"
+    },
+    {
+      "path": "internal-configuration-verification.json",
+      "sha256": "8f1fd37ad850ef26134af42140fa07d04cbab32f0b64a7dd9becf3ab147c3628"
+    },
+    {
+      "path": "cohort-content-role-transition-workspace.json",
+      "sha256": "f2743521a1664a061f8b9dd35ad92d471ed5acf41fb54dc01a3bd08afa05bb6d"
+    }
+  ],
+  "native_comparison": {
+    "path": "native-review/role-transition-comparison-return.json",
+    "sha256": "991efd4c017603417ac53de192c3f9062efc3eaf0769438070b83f176683e10c"
+  },
+  "native_result": "indeterminate",
+  "native_findings": [
+    "RT-C01 / S3: Claude reports index URNs as frame URIs; fixed source frame metadata also has a retained precision limitation",
+    "RT-C02 / S3: Claude inaccurately attributes same-stdout confirmation to a one-row discarded-output probe"
+  ],
+  "native_consequence": "No unqualified positive complete-task REQ-P-DOGFOOD-010 result; no new demonstrated material source-law or Executive authority regression",
+  "publication_disposition": "Proceed with RC1 under the current direct owner instruction, preserving the independent indeterminate result and explicit release-note limits. No additional native trial or skill repair. Mechanical/content/ref/public-reacquisition gates remain required.",
+  "representation_release_note": {
+    "path": "stdo_representation/releases/v2.5.1.md",
+    "sha256": "f81c6cba9c8a582e41ee8d4463eb7376ec1255aca0953cd11575bdcff5f4c147"
+  },
+  "no_claims": [
+    "satisfied complete Claude native-task comparison",
+    "general model reliability",
+    "immutable Product acceptance",
+    "external consumer adoption",
+    "ABI or T-288 delivery"
+  ],
+  "earlier_observations": "All original and intervening negative, indeterminate and successful observations remain retained on their exact subjects."
+}

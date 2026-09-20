@@ -1,0 +1,566 @@
+{
+  "kind": "stdo.native-execution-observations",
+  "status": "selected processes closed; factual Worker return only",
+  "subject": {
+    "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+    "original_cohort_sha256": "6f0bcb8fdc1e19904dff67421884062555a56166ea53197dbac759acfb6172da",
+    "repaired_cohort_sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4",
+    "original_skill_sha256": "e25ab254c3f2329f3a93264328c373b8355ea8eb9855dfebbb451f91b467b674",
+    "repaired_skill_sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c"
+  },
+  "attempt_classes": [
+    {
+      "path": "source-preflight",
+      "class": "two no-provider source custody probes"
+    },
+    {
+      "path": "attempt-01",
+      "class": "four no-provider preflight failures from a relative sibling-sentinel path; unchanged worksites"
+    },
+    {
+      "path": "attempt-02",
+      "class": "two Codex startup failures without native output plus the completed original Claude source/map pair"
+    },
+    {
+      "path": "attempt-03",
+      "class": "completed fresh original Codex pair after separately granted existing-installation-file access"
+    },
+    {
+      "path": "attempt-04",
+      "class": "completed fresh changed-guidance map contexts on both hosts, with fixed first source controls reused"
+    }
+  ],
+  "observations": [
+    {
+      "attempt": "attempt-02",
+      "context": "delivery-codex-source",
+      "host": "codex",
+      "presentation": "source",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.442,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": null,
+      "final_present": false,
+      "reported_usage": [],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/execution-result.json",
+        "sha256": "c27e3816b5aced35514f28529171e90360deb57f76ab90d2785581b8db4c7f71"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/host-metadata.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "mechanical_return_receipt": null
+    },
+    {
+      "attempt": "attempt-02",
+      "context": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.433,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": null,
+      "final_present": false,
+      "reported_usage": [],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-map-first/evidence/execution-result.json",
+        "sha256": "562f44f6d8e0d2080c4a2e1890c1cf906139b6988a6f26f9cc5475054b92b22d"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-map-first/evidence/host-metadata.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "mechanical_return_receipt": null
+    },
+    {
+      "attempt": "attempt-02",
+      "context": "delivery-claude-source",
+      "host": "claude",
+      "presentation": "source",
+      "requested_model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "host_version": "2.1.278 (Claude Code)",
+      "host_reported_identity": [
+        {
+          "type": "system",
+          "subtype": "init",
+          "model": "claude-fable-5-1",
+          "claude_code_version": "2.1.278"
+        }
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 263.536,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": null,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "result",
+          "usage": {
+            "input_tokens": 258,
+            "cache_creation_input_tokens": 109856,
+            "cache_read_input_tokens": 472003,
+            "output_tokens": 22233,
+            "output_tokens_details": {
+              "thinking_tokens": 7249
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 109856,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 32,
+                "output_tokens": 6134,
+                "cache_read_input_tokens": 98962,
+                "cache_creation_input_tokens": 10894,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 10894
+                },
+                "type": "message",
+                "model": null
+              }
+            ],
+            "speed": "standard"
+          },
+          "total_cost_usd": 3.4293507500000002,
+          "modelUsage": {
+            "claude-fable-5-1": {
+              "inputTokens": 258,
+              "outputTokens": 22233,
+              "cacheReadInputTokens": 472003,
+              "cacheCreationInputTokens": 109856,
+              "webSearchRequests": 0,
+              "costUSD": 3.4293507500000002,
+              "contextWindow": 1000000,
+              "maxOutputTokens": 64000,
+              "thinkingTokens": 7249,
+              "canonicalModel": "claude-fable-5-1",
+              "provider": "firstParty",
+              "costBasis": "list"
+            }
+          },
+          "num_turns": 29,
+          "duration_ms": 262803,
+          "duration_api_ms": 262071
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-source/evidence/execution-result.json",
+        "sha256": "f338fa542fe2c4b18a3b9b6ab566120d99a8fcc8ddd4d0df8855d5208f199d89"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-source/evidence/host-metadata.json",
+        "sha256": "b28405e29cb4d6542d5bfb8eb65ef5cbb0a8b8b0846abad4ff81a47b29210e27"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-source/evidence/return-mechanics.json",
+        "sha256": "a0999212cf952fd1b60029d04ce90b8861971238ad975577f6da7b7cf84af515",
+        "status": "structure_or_join_failed"
+      }
+    },
+    {
+      "attempt": "attempt-02",
+      "context": "delivery-claude-map-first",
+      "host": "claude",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "host_version": "2.1.278 (Claude Code)",
+      "host_reported_identity": [
+        {
+          "type": "system",
+          "subtype": "init",
+          "model": "claude-fable-5-1",
+          "claude_code_version": "2.1.278"
+        }
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 208.506,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": null,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "result",
+          "usage": {
+            "input_tokens": 290,
+            "cache_creation_input_tokens": 71805,
+            "cache_read_input_tokens": 348119,
+            "output_tokens": 17114,
+            "output_tokens_details": {
+              "thinking_tokens": 2180
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 71805,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 32,
+                "output_tokens": 4899,
+                "cache_read_input_tokens": 71335,
+                "cache_creation_input_tokens": 470,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 470
+                },
+                "type": "message",
+                "model": null
+              }
+            ],
+            "speed": "standard"
+          },
+          "total_cost_usd": 2.3817297499999994,
+          "modelUsage": {
+            "claude-fable-5-1": {
+              "inputTokens": 290,
+              "outputTokens": 17114,
+              "cacheReadInputTokens": 348119,
+              "cacheCreationInputTokens": 71805,
+              "webSearchRequests": 0,
+              "costUSD": 2.3817297499999994,
+              "contextWindow": 1000000,
+              "maxOutputTokens": 64000,
+              "thinkingTokens": 2180,
+              "canonicalModel": "claude-fable-5-1",
+              "provider": "firstParty",
+              "costBasis": "list"
+            }
+          },
+          "num_turns": 31,
+          "duration_ms": 207787,
+          "duration_api_ms": 206783
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-map-first/evidence/execution-result.json",
+        "sha256": "92669eecfbf9fa7f781e56de1e02caf854019d0faac90697690f4b082a7b86a5"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-map-first/evidence/host-metadata.json",
+        "sha256": "2ab3fc9300be572184599ef88cc3570fbca22a5fe946c983ce9068df0190042f"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-claude-map-first/evidence/return-mechanics-fenced.json",
+        "sha256": "1f6ea7deb535ef251ab4c98de83c04b068d153fcf79dbbd4b132eac7f611393c",
+        "status": "structure_or_join_failed"
+      }
+    },
+    {
+      "attempt": "attempt-03",
+      "context": "delivery-codex-source",
+      "host": "codex",
+      "presentation": "source",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 374.642,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 593493,
+            "cached_input_tokens": 525824,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 11362,
+            "reasoning_output_tokens": 2648
+          }
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/evidence/execution-result.json",
+        "sha256": "6d935e4f8fc044a99e9193fc7db0af7d0c8ee670808b49c90544c45d8bdfdd9f"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/evidence/host-metadata.json",
+        "sha256": "4abb072b9cf93085008c770c383bcafb94d4676228de2ac0cc00c68488fcb5b5"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/evidence/return-mechanics.json",
+        "sha256": "0fa801e605df6b4e543ef2ce672e04ced4d8ebd2d14865f4400abfa94dcda3ef",
+        "status": "mechanically_consistent"
+      }
+    },
+    {
+      "attempt": "attempt-03",
+      "context": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 553.209,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 951300,
+            "cached_input_tokens": 863744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16976,
+            "reasoning_output_tokens": 4694
+          }
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-map-first/evidence/execution-result.json",
+        "sha256": "7a8170e36ea20744d284846894def6c7cce51ec13ee8712798c2f80a420d6bac"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-map-first/evidence/host-metadata.json",
+        "sha256": "3858ac4577987a509a69c3d28b0b1495c4ea0df2ff17a59e0a05a9d2be91e7fd"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-map-first/evidence/return-mechanics.json",
+        "sha256": "9e23581220d3f41f9918d9e0ff80bbcd586871211b04ad99c111d77c909a5748",
+        "status": "mechanically_consistent"
+      }
+    },
+    {
+      "attempt": "attempt-04",
+      "context": "delivery-codex-map-first",
+      "host": "codex",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh"
+      },
+      "host_version": "codex-cli 0.155.1",
+      "host_reported_identity": [],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 401.02,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 985801,
+            "cached_input_tokens": 899456,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 11692,
+            "reasoning_output_tokens": 2817
+          }
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/evidence/execution-result.json",
+        "sha256": "dc49068fee4e97ae9ecfacde9e97e4c1b3cdc2809cc6eafeefffd32c82a07620"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/evidence/host-metadata.json",
+        "sha256": "a7864a1f6d6c9d6d5b42f62e4bcb8cf566241b49540d613dcf472d81a7102b7a"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/evidence/return-mechanics.json",
+        "sha256": "ee5463a71a4c5e720e338be89b5fbaf2f6f9ea925185164ed14dc81da7816c82",
+        "status": "mechanically_consistent"
+      }
+    },
+    {
+      "attempt": "attempt-04",
+      "context": "delivery-claude-map-first",
+      "host": "claude",
+      "presentation": "map-first",
+      "requested_model_configuration": {
+        "model": "claude-fable-5-1",
+        "effort": "high"
+      },
+      "host_version": "2.1.278 (Claude Code)",
+      "host_reported_identity": [
+        {
+          "type": "system",
+          "subtype": "init",
+          "model": "claude-fable-5-1",
+          "claude_code_version": "2.1.278"
+        }
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 263.445,
+      "worksite_changes": {},
+      "nonsemantic_transport_unchanged": true,
+      "final_present": true,
+      "reported_usage": [
+        {
+          "type": "result",
+          "usage": {
+            "input_tokens": 290,
+            "cache_creation_input_tokens": 78864,
+            "cache_read_input_tokens": 423147,
+            "output_tokens": 21953,
+            "output_tokens_details": {
+              "thinking_tokens": 5468
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 78864,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 32,
+                "output_tokens": 5942,
+                "cache_read_input_tokens": 79820,
+                "cache_creation_input_tokens": 6278,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6278
+                },
+                "type": "message",
+                "model": null
+              }
+            ],
+            "speed": "standard"
+          },
+          "total_cost_usd": 2.7836167499999998,
+          "modelUsage": {
+            "claude-fable-5-1": {
+              "inputTokens": 290,
+              "outputTokens": 21953,
+              "cacheReadInputTokens": 423147,
+              "cacheCreationInputTokens": 78864,
+              "webSearchRequests": 0,
+              "costUSD": 2.7836167499999998,
+              "contextWindow": 1000000,
+              "maxOutputTokens": 64000,
+              "thinkingTokens": 5468,
+              "canonicalModel": "claude-fable-5-1",
+              "provider": "firstParty",
+              "costBasis": "list"
+            }
+          },
+          "num_turns": 20,
+          "duration_ms": 262763,
+          "duration_api_ms": 261629
+        }
+      ],
+      "execution_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence/execution-result.json",
+        "sha256": "31073c317694b152d943cb794b2f4468ba2aa15e6bf5626ca64afe2d1578b388"
+      },
+      "host_metadata": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence/host-metadata.json",
+        "sha256": "d2ebd8724b02cf31a7a9bf374a68fefae5e84d9c05278c6f059316c6119b9b32"
+      },
+      "mechanical_return_receipt": {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence/return-mechanics.json",
+        "sha256": "6d0d1e9f6cbfa08ee6c5d4443f09242585fd53c0e5ba7edd45f2802b33943685",
+        "status": "mechanically_consistent"
+      }
+    }
+  ],
+  "evaluator_subjects": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+      "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+      "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-inputs.json",
+      "sha256": "9223c8b853befe5a09aa647e767535413d7398c52cd820afff7b139e45d798a9"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-claude.json",
+      "sha256": "bd8a567ce945742a0f154cb774656e075d108608ba6d3b79955a53e196e05c67"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-codex.json",
+      "sha256": "aa39338430b7eab6aad2d26c1371dc5d93f1bfdc6044da6beca75b4f334366f4"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+      "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/prior-transport-observations.json",
+      "sha256": "97cedc0ac099bb64731e9157737871497ceaf046d417ec11779a5668949d6457"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/original-cohort-locators.json",
+      "sha256": "cf9eb117900b8b26ea5dc316a6c6ba2b1b68884c9036376f1675c3cace124519"
+    }
+  ],
+  "custody": {
+    "all_observed_worksite_changes_empty": true,
+    "installation_identity_final": [
+      {
+        "path": "/Users/jim/.codex-alt/installation_id",
+        "sha256": "27bdf920ece83dc25297b5bec97693086f082c3e3e48c1caa776c369ca7e2816",
+        "device": 16777230,
+        "inode": 246462899,
+        "mode": 420,
+        "size": 36
+      }
+    ],
+    "installation_identity_matches_preimage": true,
+    "private_runtime_ignore_record": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/runtime-ignore-check.json",
+      "sha256": "4a7f01ffd9c841b7429ab9e1f87affb37ae9a8e01918c105470d2f14343bc2af"
+    },
+    "credentials_copied": false,
+    "HOME_and_CODEX_HOME": "inherited unchanged"
+  },
+  "limits": "Usage is copied from local host reports, with each host's original cache/token fields; no cross-host normalization, billing, reliability, automatic plugin-trigger, Product acceptance or publication claim. Native semantic disposition belongs to the independent assessor. No additional observation is selected."
+}

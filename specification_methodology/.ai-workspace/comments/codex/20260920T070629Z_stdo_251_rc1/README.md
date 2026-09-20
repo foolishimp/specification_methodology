@@ -140,3 +140,202 @@ binds the included territory, accepted T-031 evidence, strategy and current
 source checks. Companion/native workers write only their separate evidence
 territory at this point and are excluded from this commit. Future work consumes
 this source identity; no immutable ref will be moved.
+
+## Exact local Source STDO
+
+Source commit A is `dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a`; annotated tag object
+`b80e82e123f7f88eb0dffd9339f8ead9c733d153`. The exact local `v2.5.1-rc.1` Install verifies
+with manifest `5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64` and all 52 standards members.
+[Install](stdo-install.json) and [verification](stdo-verify.json) retain the
+coordinates. The source tag remains local and immutable.
+
+The stage-A whitespace check found only space-only context lines in the retained
+historical T-031 unified-diff artifact. Its bytes were preserved; all other
+staged files passed. [The exact disposition](stage-a-checks.json) records that
+format-specific exception. No source or test failure was suppressed.
+
+Companion construction now consumes this exact Install. Native preparation uses
+four fresh host/presentation contexts over one common three-case packet. Before
+exposure, fixture review required actual callable-path instrumentation, a
+non-vacuous result count, a common output contract and unambiguous snapshot
+availability. Preparation failures remain separate from actual native attempts.
+
+## Native comparison and evidence custody
+
+The fresh `independent_native_comparison` assessor has no forked construction
+context and independently acquires exact source and closed condition records.
+It has not authored or repaired the evaluated program, map, skill, task or
+outputs and receives no oracle or expected verdict. Its bounded Writer
+territory is `native-review/` for its own assessment record; it cannot repair
+native answers or dispose the Product. The root actor and source reviewer have
+seen preparation expectations and do not occupy this comparison role.
+
+The Root Writer excludes private native `runtime/` directories from the durable
+Git record. Explicit invocation, output, custody and digest evidence remains
+retained. Provider outcomes and mechanical checks keep their separate claims.
+
+## Internal configuration decision and Writer activation
+
+The Executive consumes the Source Worker's separate read-only
+[configuration review](independent-configuration-review.md): satisfied for the
+exact six-object proposal and selected support. Its earlier source authorship
+and oracle exposure are excluded from this judgment's scope.
+
+The owner's local cohort preparation instruction authorizes this bounded
+internal configuration decision. The root actor enters Writer for the exact
+reviewed companion frame declarations and Definitions, their two named
+`20260920_251_rc1_frame_basis_acceptance.json` decisions, and this evidence.
+`promote_configuration.py` checks all preimages before effects and copies the
+reviewed bytes unchanged. This accepts only the internal construction and
+qualification configuration. Native usefulness, immutable Product acceptance,
+publication and external adoption remain separate; STDO source stays on RC4.
+
+## Native finding and bounded guidance repair
+
+The independent [first Claude comparison](native-review/claude-comparison.md)
+returns `falsified` for that frozen observation. Its map handoff substitutes a
+different result algebra after reading the correct clause and attempts a
+scratch-file write that the sandbox refuses. Both Claude finals also replace
+the requested handoff array with prose; the exact arrays survive in tool
+traces. These failures remain evidence and do not qualify positive native use.
+
+The Executive selects a local native-guidance repair. The Companion Worker may
+prepare only a replacement `SKILL.md` in `companion/native-guidance-repair/`.
+Parent independently assesses it before a separately recorded Writer promotion.
+The scope is fidelity to the selected result/stop cases, stdin/stdout in a
+read-only grant, and exact structured returns. Source, program, map, mechanics,
+task, fixture and oracle remain the same qualified subjects.
+
+The Native Worker may prepare two fresh map contexts after the repaired skill
+and cohort are frozen. Execution still needs their exact root trigger and
+passing custody preflight. The fixed first Claude and Codex source observations
+remain controls where source/task/Axiom/model/grant inputs are unchanged; both
+original map observations and all prior failures remain retained. This selects
+a changed guidance subject and carries valid source evidence forward. It does
+not rerun an unchanged failed subject until a favorable answer appears.
+
+### Guidance promotion
+
+The root Reviewer finds the exact proposed instruction passage consistent
+with its unchanged source obligations in [native-guidance-review.md](native-guidance-review.md).
+The root actor enters Writer for that exact live `SKILL.md` replacement, the
+updated companion inventory/release record/cohort and their new evidence
+snapshots. Original native inputs, results and earlier cohort snapshots remain
+preserved. The existing internal configuration's actual four objects and source
+basis remain unchanged; its scope supplies no native-use verdict.
+
+## Final local preservation boundary
+
+After qualification, the existing Root Writer grant covers the exact commit-B
+stage set and the absent annotated companion cuts, selectors and branches.
+`create_local_refs.py` binds the frozen candidate disposition and content check
+and creates the new local refs in one create-only transaction. The mandatory
+ref gate then records the exact unexecuted publication arguments.
+
+The Root Writer may preserve the resulting receipts and T-032/three-Goals
+preparation closure on `codex/stdo-251-rc1-preparation-20260920`, based on commit
+B. That separate local record leaves `main` and the checked cohort ref graph
+at their qualified commits and all immutable cuts unchanged. Its territory is
+this evidence directory, T-032's completion record and those current Goals
+status/link passages. No push, external adoption or Product acceptance is
+selected by that preservation effect.
+
+## Remaining diagnostic-stream finding
+
+The [revised comparison](native-review/guidance-repair-comparison-return.md)
+retains a Claude `falsified` result: projection attempted stderr redirection to
+a scratch file, which the sandbox refused. The five-case result algebra and
+actual handoff array are recovered; the Codex comparison is satisfied. The
+parent keeps the complete native qualification open for this remaining issue.
+
+The root independently reviews the Companion Worker's one-paragraph
+[all-command stream refinement](read-only-streams-review.md), then enters
+Writer for that exact skill promotion and its updated companion inventory,
+release note, cohort and new snapshots. All source/mechanical subjects and
+fixed controls stay unchanged. The Native Worker may append two fresh map
+observations for this exact subject only after current-binding/equivalence and
+custody preflight, under a recorded root trigger. Its generation through
+attempt-04 remains frozen. No prior answer or failure is rewritten.
+
+## Explicit role-transition refinement
+
+The attempt-05 independent Claude comparison is indeterminate for the complete
+selected task: checkpoint wording admits a compliant reading but omits the
+mandatory explicit recorded transition before the same actor performs a Writer
+effect. No Executive mutation is demonstrated. The all-command read-only
+boundary, actual ordered array and five result cases are recovered. Its literal
+`ACTION` check also retains a failure for the target reference's permitted
+`<ACTION>` label. These observations remain unchanged.
+
+The Executive retains the indeterminate result under `REQ-P-DOGFOOD-010` and
+selects the smallest owning guidance repair. The existing item-5 role summary
+does not state the explicit same-actor transition. The Companion Worker may
+prepare only that source-grounded clarification in
+`companion/role-transition-repair/`, with its exact source and preimage. No
+source, map, program, test task, oracle, mechanics or existing observation may
+change. The root independently assesses and then enters Writer for the exact
+reviewed skill promotion, cohort inventory/release note and new snapshots.
+The Native Worker may prepare two fresh map contexts for the changed subject,
+retaining the first source controls. A separately recorded exact trigger and
+passing binding/custody preflight are required before those two launches.
+Attempt-05 and all preceding native generations remain frozen.
+
+## Finite qualification stop and preservation
+
+Both selected attempt-06 observations are closed. The independent assessor
+reports Codex materially conforming and Claude indeterminate for the complete
+native-task claim: selected-frame identifiers use index identifiers, and one
+probe description overstates the observed replay evidence. The actual full
+joined bytes replay exactly. These are retained reporting/qualification limits,
+not a demonstrated new source-law or authority regression. No further guidance
+repair or provider run is selected.
+
+The Executive preserves the source, construction and installed checks on their
+actual bases. Complete Representation native-use qualification remains
+unresolved; no satisfied readiness, Product acceptance or publication is
+inferred. The current task state is reviewable preparation with this explicit
+remaining qualification, not a prewritten release pass.
+
+The root enters Writer for a preservation checkpoint of the exact selected
+companion/cohort/configuration/evidence territory, this record, current Goals
+status passages and T-032 on the absent local branch
+`codex/stdo-251-rc1-preparation-20260920`, starting from source commit A. This
+narrows the earlier final-preservation sequence: `main` and the source cut stay
+at A; complete-cohort candidate readiness and companion ref construction are
+not claimed. Preserve the frozen assessor/native returns, record the actual
+commit content gate, and stop. No existing immutable ref is moved.
+
+## Owner-selected RC1 publication
+
+The owner subsequently instructs: “this needs to be commited and released now
+2.5.1 RC1 yes?” This supersedes the local-only stop and selects completion of
+the complete matched RC1 release under `STACK_RELEASE.md`. The preceding
+native limitations are known in this instruction's context. Release RC1 with
+those explicit bounded limitations; do not change the indeterminate comparison
+into a satisfied claim or select another native refinement cycle.
+
+The root Executive disposes this exact candidate for RC publication under that
+owner instruction. The source and construction claims remain supported; complete
+Representation native-task correctness remains unqualified for the two retained
+reporting defects. No material new source-law or authority regression is claimed.
+This RC disposition is not an immutable Product-acceptance decision and selects
+no external consumer migration.
+
+The root enters Writer for the exact selected stage-B subject on `main`, local
+cohort refs, checked atomic publication, fresh public reacquisition, and later
+commit-C release/ticket/Goals bookkeeping. The source cut A remains immutable.
+The previously proposed separate local preservation branch is not needed for
+this selected publication sequence. Only the successful frozen ref gate's exact
+push argument vector may publish; mandatory mechanical/content/identity/refusal
+conditions remain intact. This is the final bounded release sequence.
+
+### Public exact-cut assessment
+
+After the checked atomic publication, the independent assessor may acquire the
+exact public source and companion refs in a fresh disposable checkout, verify
+complete cohort/member/source bindings and install/verify the public STDO cut
+in a fresh temporary store. It did not author the qualifying Product bytes.
+Its bounded evidence Writer territory is this directory's `public-review/`;
+disposable acquisition/store effects serve only that exact assessment. It may
+not repair source, change refs, adopt consumers or upgrade the native verdict.
+The root consumes its exact published-cut return before completion bookkeeping.

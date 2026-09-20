@@ -1,0 +1,360 @@
+{
+  "kind": "stdo.rc1-companion-conservation",
+  "schema_version": 1,
+  "install_record": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/stdo-install.json",
+  "install_record_sha256": "993d9f0f9b3b0da19fac0be7f6dbc54a7ac940b6c41960a95360093967cf13a5",
+  "installed_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "authored_delta_sha256": "8965c2ad11ad9ef88b3ac56f98f062148d07c204488b38d0802be2b4f8e0eaa8",
+  "predecessor_program_sha256": "d1bd16268cf434db984c9e6c3ebfd119110f9de211dbe69b952794cf9f13dc68",
+  "source_changes": {
+    "DESIGN_MODULE_METHOD.md": {
+      "before_sha256": "95374ea3f78c4d27e939a67c8b4aa3a071d745f29d4c773a7804896a335cb55f",
+      "after_sha256": "5cb69556bba1171ec347cac96811c50071f0648a367103aa215070239b93785e"
+    },
+    "SPEC_METHOD.md": {
+      "before_sha256": "65d08af92cf850dcee4d1f012151baadcd5759c837a876c2dfb2161f1955fcc5",
+      "after_sha256": "ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3"
+    },
+    "STDO_REFERENCE_FRAME_BASELINE.md": {
+      "before_sha256": "234172dd0d403d28a3fdee9dfe740ba35b1c7656e92c249aa6f70af67c408ee1",
+      "after_sha256": "29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d"
+    },
+    "TICKET_METHOD.md": {
+      "before_sha256": "2dddefd1efaef26ef3c6c5232e67bee9a5755781d2f44570875228b9d8089b91",
+      "after_sha256": "f031ce7fb3b5b366ffaee5996ae76e861697ad86897cc04c06b67da249fe0eca"
+    },
+    "authority_compressions/design_module_method.compressed.md": {
+      "before_sha256": "db52b86a76fc8cbe664c1d95e6d0c54e139ad1b5dd5f161904b1c5a38a7ecb89",
+      "after_sha256": "a6edc3a5fdde1946e9e47f08841b34e1e0a6ea6b937a42e2a7d9b132f53692ee"
+    },
+    "authority_compressions/spec_method.compressed.md": {
+      "before_sha256": "c31b7735d7a328b4516613ed4ea80e85870d96a0600a5b988be1325bc12b03d3",
+      "after_sha256": "304840d327a7e372ad347dc6184b69458d293a547b9aa81d9aabccb0af7742bc"
+    },
+    "authority_compressions/stdo_bootstrap.md": {
+      "before_sha256": "9542d4c95dba044a08e2f17b84a3b6ab513fac6d96b7600a32baa45646c8d410",
+      "after_sha256": "5e63a0f13665fe5b0bcacdeff1514cb36194079d076065f6227af73ca691aca7"
+    },
+    "authority_compressions/stdo_compressed.md": {
+      "before_sha256": "8d30240a4d1323d838aad19051326ec6126040313f580c5a7ebeb8c146d56fcf",
+      "after_sha256": "422f5b5882e62228db4397b69763090288e54ccdf69876cbb457bfeecfecca30"
+    },
+    "authority_compressions/ticket_method.compressed.md": {
+      "before_sha256": "26f37b9b8d07a4e02c62dc17b61d72669b1c572cb3ac68c751dc01f682861f3b",
+      "after_sha256": "d7ad2a08f71a0f4f4ac9478e2f9f3c08ca22d947b27e30f08476dbbb926745d8"
+    }
+  },
+  "authored_content": {
+    "symbols": {
+      "unchanged_after_source_uri_rebinding": [
+        "urn:stdo-representation:a-c-text:symbol:a-c",
+        "urn:stdo-representation:a-c-text:symbol:accepted-design-coverage",
+        "urn:stdo-representation:a-c-text:symbol:authority-compression",
+        "urn:stdo-representation:a-c-text:symbol:closed-frame-result",
+        "urn:stdo-representation:a-c-text:symbol:complete-consumer-update-plan",
+        "urn:stdo-representation:a-c-text:symbol:computed-classification",
+        "urn:stdo-representation:a-c-text:symbol:declared-treatment-rule",
+        "urn:stdo-representation:a-c-text:symbol:design",
+        "urn:stdo-representation:a-c-text:symbol:development-product",
+        "urn:stdo-representation:a-c-text:symbol:execution-contract",
+        "urn:stdo-representation:a-c-text:symbol:executive",
+        "urn:stdo-representation:a-c-text:symbol:frame-applicability",
+        "urn:stdo-representation:a-c-text:symbol:governed-treatment",
+        "urn:stdo-representation:a-c-text:symbol:graph-function",
+        "urn:stdo-representation:a-c-text:symbol:identity",
+        "urn:stdo-representation:a-c-text:symbol:install",
+        "urn:stdo-representation:a-c-text:symbol:observed-effect-state",
+        "urn:stdo-representation:a-c-text:symbol:owner-ruling",
+        "urn:stdo-representation:a-c-text:symbol:product-definition",
+        "urn:stdo-representation:a-c-text:symbol:public-serialization",
+        "urn:stdo-representation:a-c-text:symbol:reference-frame",
+        "urn:stdo-representation:a-c-text:symbol:release-cut",
+        "urn:stdo-representation:a-c-text:symbol:release-matched-cohort",
+        "urn:stdo-representation:a-c-text:symbol:residual-judgment",
+        "urn:stdo-representation:a-c-text:symbol:source-corpus",
+        "urn:stdo-representation:a-c-text:symbol:ticket",
+        "urn:stdo-representation:a-c-text:symbol:traversal-occurrence",
+        "urn:stdo-representation:a-c-text:symbol:work-outcome",
+        "urn:stdo-representation:a-c-text:symbol:worker",
+        "urn:stdo-representation:a-c-text:symbol:working-authoring-surface",
+        "urn:stdo-representation:a-c-text:symbol:world-model"
+      ],
+      "replaced": [],
+      "added": []
+    },
+    "clauses": {
+      "unchanged_after_source_uri_rebinding": [
+        "urn:stdo-representation:a-c-text:clause:accepted-design-trace-does-not-settle-semantic-sufficiency",
+        "urn:stdo-representation:a-c-text:clause:agents-template-fails-closed",
+        "urn:stdo-representation:a-c-text:clause:applicability-qualification-discriminates-finite-alternatives",
+        "urn:stdo-representation:a-c-text:clause:authority-walk-retains-root-changes-and-frontier",
+        "urn:stdo-representation:a-c-text:clause:axiomatic-calculus-layer-separation",
+        "urn:stdo-representation:a-c-text:clause:candidate-nonconformance-does-not-author-governing-law",
+        "urn:stdo-representation:a-c-text:clause:classification-binds-reproducible-inputs-and-unknowns",
+        "urn:stdo-representation:a-c-text:clause:claude-template-fails-closed",
+        "urn:stdo-representation:a-c-text:clause:closed-result-reuse-preserves-required-independence",
+        "urn:stdo-representation:a-c-text:clause:closure-is-satisfied-obligations-not-review-occurrence",
+        "urn:stdo-representation:a-c-text:clause:closure-reuse-retains-independent-progress",
+        "urn:stdo-representation:a-c-text:clause:cohort-exact-version-preserves-product-identity",
+        "urn:stdo-representation:a-c-text:clause:cohort-law-applies-only-to-higher-cut",
+        "urn:stdo-representation:a-c-text:clause:cohort-publication-fails-closed",
+        "urn:stdo-representation:a-c-text:clause:cohort-source-change-invalidates-index",
+        "urn:stdo-representation:a-c-text:clause:cohort-two-commit-construction-is-one-publication",
+        "urn:stdo-representation:a-c-text:clause:common-adr-scope-is-multiple-tenants",
+        "urn:stdo-representation:a-c-text:clause:common-adr-template-separates-requirements",
+        "urn:stdo-representation:a-c-text:clause:common-design-is-cross-tenant",
+        "urn:stdo-representation:a-c-text:clause:common-root-holds-shared-realization",
+        "urn:stdo-representation:a-c-text:clause:complete-update-acceptance-rederives-authorized-plan",
+        "urn:stdo-representation:a-c-text:clause:complete-update-derived-source-refusal",
+        "urn:stdo-representation:a-c-text:clause:complete-update-failure-preserves-recovery-boundary",
+        "urn:stdo-representation:a-c-text:clause:complete-update-plan-binds-exact-effects",
+        "urn:stdo-representation:a-c-text:clause:complete-update-rechecks-and-verifies-completion",
+        "urn:stdo-representation:a-c-text:clause:complete-update-selection-retains-owned-composition",
+        "urn:stdo-representation:a-c-text:clause:complete-update-verifies-and-bounds-effects",
+        "urn:stdo-representation:a-c-text:clause:compressed-calculus-does-not-interpret",
+        "urn:stdo-representation:a-c-text:clause:compressed-occurrence-preserves-admission-boundary",
+        "urn:stdo-representation:a-c-text:clause:compressed-odd-preserves-carrier-ownership",
+        "urn:stdo-representation:a-c-text:clause:compressed-ux-preserves-reducer",
+        "urn:stdo-representation:a-c-text:clause:computed-facts-judgments-and-rulings-retain-owners",
+        "urn:stdo-representation:a-c-text:clause:declared-rules-settle-only-supported-treatment",
+        "urn:stdo-representation:a-c-text:clause:design-module-derivation",
+        "urn:stdo-representation:a-c-text:clause:development-product-is-install-role",
+        "urn:stdo-representation:a-c-text:clause:docs-template-is-supporting",
+        "urn:stdo-representation:a-c-text:clause:edge-override-template-is-explicit",
+        "urn:stdo-representation:a-c-text:clause:edge-overrides-are-one-per-edge",
+        "urn:stdo-representation:a-c-text:clause:engagement-return-topology",
+        "urn:stdo-representation:a-c-text:clause:execution-contract-admission-is-distinct",
+        "urn:stdo-representation:a-c-text:clause:execution-contract-records-durable-result",
+        "urn:stdo-representation:a-c-text:clause:executive-bounded-fallback-observation",
+        "urn:stdo-representation:a-c-text:clause:executive-event-driven-attention",
+        "urn:stdo-representation:a-c-text:clause:executive-mutation-needs-prior-writer-transition",
+        "urn:stdo-representation:a-c-text:clause:executive-no-progress-reassessment",
+        "urn:stdo-representation:a-c-text:clause:executive-promotion-constraints",
+        "urn:stdo-representation:a-c-text:clause:executive-steel-thread-delivery",
+        "urn:stdo-representation:a-c-text:clause:fp-intent-bounds-constructive-tuning",
+        "urn:stdo-representation:a-c-text:clause:fp-readme-selects-exact-template",
+        "urn:stdo-representation:a-c-text:clause:frame-applicability-preserves-true-false-and-unknown",
+        "urn:stdo-representation:a-c-text:clause:glossary-is-nondeciding-index",
+        "urn:stdo-representation:a-c-text:clause:goals-template-bounds-current-wave",
+        "urn:stdo-representation:a-c-text:clause:identity-is-scoped",
+        "urn:stdo-representation:a-c-text:clause:intent-template-states-direction",
+        "urn:stdo-representation:a-c-text:clause:judgment-revision-is-scoped-and-does-not-invent-rulings",
+        "urn:stdo-representation:a-c-text:clause:manifest-schema-closes-release-shape",
+        "urn:stdo-representation:a-c-text:clause:occurrence-separates-records",
+        "urn:stdo-representation:a-c-text:clause:odd-uses-graph-functions",
+        "urn:stdo-representation:a-c-text:clause:owner-ruling-is-recovered-without-widening-or-repetition",
+        "urn:stdo-representation:a-c-text:clause:posts-remain-commentary",
+        "urn:stdo-representation:a-c-text:clause:product-definition-schema-closes-routing-shape",
+        "urn:stdo-representation:a-c-text:clause:product-definition-template-is-one-product-overlay",
+        "urn:stdo-representation:a-c-text:clause:product-template-defines-contextual-terms",
+        "urn:stdo-representation:a-c-text:clause:profile-qualification-forces-result-and-refusal-branches",
+        "urn:stdo-representation:a-c-text:clause:project-reference-frame-basis-binds-product-chain",
+        "urn:stdo-representation:a-c-text:clause:public-delta-includes-membership-and-values",
+        "urn:stdo-representation:a-c-text:clause:recovery-preserves-cause-effects-and-safe-retry",
+        "urn:stdo-representation:a-c-text:clause:reference-frame-is-bounded",
+        "urn:stdo-representation:a-c-text:clause:reference-frame-preserves-open-realization",
+        "urn:stdo-representation:a-c-text:clause:release-rc-is-immutable",
+        "urn:stdo-representation:a-c-text:clause:required-frame-conjunction-retains-every-constraint",
+        "urn:stdo-representation:a-c-text:clause:requirements-template-declares-metadata",
+        "urn:stdo-representation:a-c-text:clause:resource-controls-require-explicit-applicable-frame",
+        "urn:stdo-representation:a-c-text:clause:reviewer-adjacent-observation-preserves-claim-result",
+        "urn:stdo-representation:a-c-text:clause:specification-chain-governs",
+        "urn:stdo-representation:a-c-text:clause:standards-cut-is-complete-basis",
+        "urn:stdo-representation:a-c-text:clause:starter-requirement-remains-deferred",
+        "urn:stdo-representation:a-c-text:clause:templates-are-starters",
+        "urn:stdo-representation:a-c-text:clause:tenant-registry-is-read-model",
+        "urn:stdo-representation:a-c-text:clause:ticket-binds-change",
+        "urn:stdo-representation:a-c-text:clause:unknown-treatment-bounds-dependent-effects",
+        "urn:stdo-representation:a-c-text:clause:ux-reducer-law",
+        "urn:stdo-representation:a-c-text:clause:variant-adr-scope-is-local",
+        "urn:stdo-representation:a-c-text:clause:variant-adr-template-is-one-decision",
+        "urn:stdo-representation:a-c-text:clause:variant-design-declares-common-adoption",
+        "urn:stdo-representation:a-c-text:clause:variant-root-is-one-tenant",
+        "urn:stdo-representation:a-c-text:clause:work-carrier-selects-smallest-lawful-lifetime",
+        "urn:stdo-representation:a-c-text:clause:world-model-source-sovereignty",
+        "urn:stdo-representation:a-c-text:clause:writing-states-claim-and-reason"
+      ],
+      "replaced": [
+        "urn:stdo-representation:a-c-text:clause:aggregate-compression-reenters-source",
+        "urn:stdo-representation:a-c-text:clause:bootstrap-resolves-exact-basis",
+        "urn:stdo-representation:a-c-text:clause:compressed-design-requires-decision-closure",
+        "urn:stdo-representation:a-c-text:clause:compressed-spec-preserves-authority-flow",
+        "urn:stdo-representation:a-c-text:clause:compressed-ticket-preserves-carrier-binding",
+        "urn:stdo-representation:a-c-text:clause:compression-assets-are-read-models",
+        "urn:stdo-representation:a-c-text:clause:computed-result-reuse-invalidates-affected-dependencies",
+        "urn:stdo-representation:a-c-text:clause:profile-qualification-separates-mechanical-and-semantic-evidence",
+        "urn:stdo-representation:a-c-text:clause:recorded-judgment-binds-semantic-question-and-reviser",
+        "urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total",
+        "urn:stdo-representation:a-c-text:clause:selected-design-reconstruction-reuses-current-coverage",
+        "urn:stdo-representation:a-c-text:clause:sufficient-writer-entry-is-direct"
+      ],
+      "added": [
+        "urn:stdo-representation:a-c-text:clause:bounded-grant-preserves-status-and-checkpoint-continuity",
+        "urn:stdo-representation:a-c-text:clause:computational-path-operational-assumptions",
+        "urn:stdo-representation:a-c-text:clause:computational-whole-path-evaluation",
+        "urn:stdo-representation:a-c-text:clause:enclosing-admission-reuses-valid-established-facts",
+        "urn:stdo-representation:a-c-text:clause:findings-and-tests-require-supported-operating-model",
+        "urn:stdo-representation:a-c-text:clause:interface-boundaries-preserve-domain-and-temporal-meaning",
+        "urn:stdo-representation:a-c-text:clause:interface-causal-diagnostics-retain-frontier-and-uncertainty",
+        "urn:stdo-representation:a-c-text:clause:interface-contract-exposes-domains-and-owned-facts",
+        "urn:stdo-representation:a-c-text:clause:interface-integration-distinguishes-four-claims",
+        "urn:stdo-representation:a-c-text:clause:interface-path-binds-actual-subject-and-effect-owners",
+        "urn:stdo-representation:a-c-text:clause:interface-usability-requires-ordinary-context-evidence",
+        "urn:stdo-representation:a-c-text:clause:method-work-serves-decision-or-assurance-need",
+        "urn:stdo-representation:a-c-text:clause:superseded-retention-bears-its-own-burden",
+        "urn:stdo-representation:a-c-text:clause:worker-read-scope-follows-complete-causal-cone"
+      ]
+    },
+    "residuals": {
+      "unchanged_after_source_uri_rebinding": [
+        "urn:stdo-representation:a-c-text:residual:complete-update-selection-and-evidence-remain-owned",
+        "urn:stdo-representation:a-c-text:residual:compression-overlap-needs-source-reentry",
+        "urn:stdo-representation:a-c-text:residual:frame-adoption-not-claimed",
+        "urn:stdo-representation:a-c-text:residual:full-m-b-not-constructed",
+        "urn:stdo-representation:a-c-text:residual:outcome-effects-and-retry-need-exact-task-evidence",
+        "urn:stdo-representation:a-c-text:residual:prompt-projection-does-not-select-solution",
+        "urn:stdo-representation:a-c-text:residual:rule-conflict-and-intended-meaning-require-owned-resolution",
+        "urn:stdo-representation:a-c-text:residual:semantic-acceptance-not-supplied",
+        "urn:stdo-representation:a-c-text:residual:task-classification-inputs-remain-owner-supplied",
+        "urn:stdo-representation:a-c-text:residual:task-frame-obligations-require-owned-applicability",
+        "urn:stdo-representation:a-c-text:residual:template-placeholders-are-not-decisions"
+      ],
+      "replaced": [
+        "urn:stdo-representation:a-c-text:residual:successor-construction-and-qualification-not-yet-joined"
+      ],
+      "added": [
+        "urn:stdo-representation:a-c-text:residual:interface-and-workload-observations-remain-owner-supplied"
+      ]
+    },
+    "frame_indexes": {
+      "unchanged_after_source_uri_rebinding": [
+        "urn:stdo-representation:frame-index:executive-event-driven-attention",
+        "urn:stdo-representation:frame-index:executive-steel-thread-delivery",
+        "urn:stdo-representation:frame-index:t009:complete-update-reviewer",
+        "urn:stdo-representation:frame-index:t009:complete-update-worker"
+      ],
+      "replaced": [],
+      "added": [
+        "urn:stdo-representation:frame-index:computational-whole-path-evaluation",
+        "urn:stdo-representation:frame-index:end-to-end-interface-integration"
+      ]
+    }
+  },
+  "all_seven_axiom_members_preserved": {
+    "member_count": 7,
+    "member_set_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "members": [
+      {
+        "type": "symlink",
+        "path": ".agents/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "symlink",
+        "path": ".claude/skills/axiomatize-corpus",
+        "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+        "target": "../../skills/axiomatize-corpus"
+      },
+      {
+        "type": "file",
+        "path": "build_tenants/core/code/ac.py",
+        "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/SKILL.md",
+        "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/agents/openai.yaml",
+        "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/output-contract.md",
+        "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+      },
+      {
+        "type": "file",
+        "path": "skills/axiomatize-corpus/references/program.schema.json",
+        "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7"
+      }
+    ]
+  },
+  "report_and_map_reproduced_byte_identically": true,
+  "projections": [
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/computational-whole-path-evaluation-reference-only.json",
+      "sha256": "ad9981bc39731bde236ef9d98b442acbc44b7914dfb1d9633e27e86f7b193ddf"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/computational-whole-path-evaluation-materialized.json",
+      "sha256": "666c0a7a46bd2b4850eec58f9971c81c0aa0549517a36eda6b81f9f478052e58"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/end-to-end-interface-integration-reference-only.json",
+      "sha256": "60aa4da243080f722304076f6e87e52a5d73c9b65de5ddf9b4723c3cf4e09436"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/end-to-end-interface-integration-materialized.json",
+      "sha256": "1aaebf8d1ece207b514d1836af145ee475ca0e018a38f2a279d6e14681fe8143"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/executive-event-driven-attention-reference-only.json",
+      "sha256": "5f5a546a51bb4448d051d03d8063d4b880c9bb05879f4c9a5bc026ca0e104317"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/executive-event-driven-attention-materialized.json",
+      "sha256": "7613de841923bc237987ddbda361b91117657abb1f6b7e58bfd60d2cba10c23a"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/executive-steel-thread-delivery-reference-only.json",
+      "sha256": "d96edcaed1214fb4033e6de653d192123b48e25cb6f3130cf66c3b570ad5ad11"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/executive-steel-thread-delivery-materialized.json",
+      "sha256": "3b92e606e7b7583e260da5f43f25b685034e817cf9ea9243a983647d2b082a8a"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/complete-update-reviewer-reference-only.json",
+      "sha256": "c5a73eac252c04b81ab8ac87d6217d10e2e95898a49fda7c95b94168eb55c650"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/complete-update-reviewer-materialized.json",
+      "sha256": "0fb01be98bb29bb3646a7a883a24921d87f12260d262eacb138fa815e9eea1a5"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/complete-update-worker-reference-only.json",
+      "sha256": "11b9b3f5b0c66e3262a1eb8d89418f2bf4175df8b41ac6e18253752fcd1bccf2"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/complete-update-worker-materialized.json",
+      "sha256": "4577844dd7d9da4eed2bed6329316619eb203ecf2c6e3ca609907a08cce10fe8"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/combined-worker-reviewer-reference-only.json",
+      "sha256": "c0ba0149645304b8081a09599156cf4d3979126732aae1d01e2ae6c7228d6aa3"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/combined-worker-reviewer-materialized.json",
+      "sha256": "71daa50b27a65db7bb688c15351af7447bd712d10421e215ae4d5c5efa90e6fc"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/combined-interface-computational-reference-only.json",
+      "sha256": "850eea0d462bc01be044097487177a5eb83eb4634adaa037e0a8288f66de9f11"
+    },
+    {
+      "path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/projections/combined-interface-computational-materialized.json",
+      "sha256": "439ec72dc7588d2f02dc7227ac004c61f7eca697b2d6d32ad9a8432d49899a1e"
+    }
+  ],
+  "generated_files": {
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/axiomatic-program.json": "f45bac9323a3058625325e6791ef8355f45c1bf8a3f8018203f3daf14db4e612",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/logical-constraint-map.json": "a0c68f7a4cebf8166c7e436737d8fe5de68ac8f871dcd6a29196d719af89f9b1",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/source-corpus.json": "2fe2f40dda56983e6617785f6cdda906dd5c5400e566346cdbdc3b6730a090e6",
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/validation-report.json": "602d511f2d8b03663235ab7dc8e867e34b7b9c6f0b0dc28b4affb87fdf4371c8"
+  },
+  "claim": "Exact construction and mechanical reproduction only. Independent source fidelity, native usefulness and configuration disposition remain separate."
+}

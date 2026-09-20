@@ -1,0 +1,48 @@
+{
+  "kind": "stdo.independent-native-comparison-conjunction",
+  "actor": "/root/independent_native_comparison",
+  "frame": "F-DOGFOOD-USEFULNESS",
+  "result": "falsified",
+  "claim": "The frozen four-context native subject supplies positive qualification with no material map-first regression on either host",
+  "basis": "REQ-P-DOGFOOD-009 and exact accepted K-DOGFOOD comparison relation",
+  "conditions": [
+    {
+      "host": "Claude",
+      "path": "claude-comparison.json",
+      "sha256": "f12de07b07cd684a47b630ec77ff2f6a7f9a00b6f8a2c30a99dcfb542ea1ab26",
+      "result": "falsified"
+    },
+    {
+      "host": "Codex",
+      "path": "codex-comparison.json",
+      "sha256": "f6864182d3ed4270a52dc1513a3cd2c9b4b8fff69c57df7c347341bb35616721",
+      "result": "satisfied",
+      "scope": "observed task constraints and handoff; broader efficiency/preference unestablished"
+    }
+  ],
+  "findings": [
+    "CN-01",
+    "CN-02",
+    "CN-03"
+  ],
+  "material_counterexamples": [
+    "CN-01",
+    "CN-02"
+  ],
+  "return": {
+    "path": "comparison-return.md",
+    "sha256": "360a5dcd220aa9e931f0c4d7c4749d617c74088135b63777feb249b383c4392d"
+  },
+  "owner_action_boundary": "Native guidance/use and affected qualification; no source/program/map reauthoring justified by these findings",
+  "closed_negative_results_preserved": true,
+  "priority": "reserved to Executive",
+  "product_disposition": "reserved to Executive/Product owner",
+  "nonclaims": [
+    "Product acceptance",
+    "publication",
+    "external adoption",
+    "ABI/T-288 dependency",
+    "global model reliability",
+    "universal or repeated-use efficiency"
+  ]
+}

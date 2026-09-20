@@ -1,0 +1,41 @@
+{
+  "context": "delivery-codex-map-first",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "1f403dd4bf0482f33591099012cb24078f4f2426dcb0689c37e0a33aa30df0b2",
+  "presentation": "plain_json",
+  "join_replay": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-map-first/evidence/sandbox.sb",
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-map-first/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "Role and outcome\nIndependent Reviewer: assess whether exact C2 correctly renders W17 title 'Shipment summary', supplying the missing author-independent L3 judgment.\n\nReference frame and exact subject\nFrame/source route: stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame; purpose: independent title assessment. Subject: records/C2.md, SHA-256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420; snapshot S2, W17/M1. stdo_task.json and qualification-basis.md bind the exact RC1 source basis.\n\nHard constraints\nDraft authorized by task.md under project.md/O1; dispatch is unperformed. Read-only evaluation; no repair, file effects, actors, checkpoint, status edit, acceptance, publication or adoption. Independence from C2's author and J2 is required.\n\nIndex context and evidence routes\nRead project.md, records/C1.md, records/C2.md, records/evidence.json, native-context.json, stdo_task.json and qualification-basis.md. Map: native/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/logical-constraint-map.json; clauses: urn:stdo-representation:a-c-text:clause:closed-result-reuse-preserves-required-independence and urn:stdo-representation:a-c-text:clause:reviewer-result-triage-is-total. Re-enter stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity through native/bindings.json. E2 and unaffected Q1 remain usable; J2 is author judgment, R1 covers C1 only, and R2 is unavailable in S2.\n\nOpen solution space\nChoose inspection order, read-only tools and counterexamples within this claim.\n\nReturn and stop contract\nReturn to W17 Executive: exact claim/subject/basis, result, evidence, findings or explicit none, technical triage, gaps and invalidators. Missing evidence, changed bytes/basis or independence failure stops dependent judgment. Assign no priority, disposition or continuation; then stop.\n\nACTION\nReview exact C2 from S2 and return one closed, evidence-bound title assessment.",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": true
+    },
+    {
+      "claim": "action_is_last",
+      "pass": true
+    },
+    {
+      "claim": "native_joined_request_matches_exact_replay",
+      "pass": true
+    }
+  ],
+  "status": "mechanically_consistent"
+}

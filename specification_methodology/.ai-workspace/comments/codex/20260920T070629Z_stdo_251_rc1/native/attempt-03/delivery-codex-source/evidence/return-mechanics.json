@@ -1,0 +1,41 @@
+{
+  "context": "delivery-codex-source",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "bd4ad2e34ed9b7c7c370e17cc57462dfda0e484a4754f079607036b778a3df92",
+  "presentation": "plain_json",
+  "join_replay": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/evidence/sandbox.sb",
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "Role and outcome\nIndependent Reviewer for W17 from S2: assess L1 title correctness and supply L3 author-independent judgment. Return evidence to W17 Executive.\n\nReference frame and exact subject\nFrame: stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame; purpose: exact-candidate assessment; source: native/stdo-store/releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md. Subject: records/C2.md, SHA256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420. Claim: its title renders 'Shipment summary'. Retain W17 method M1 and the RC1 basis pinned by stdo_task.json.\n\nHard constraints\nAuthority: task.md, qualification-basis.md and original O1 in project.md. Read-only evaluation; no file/Git/status/checkpoint effects, actor launches, repair, publication, acceptance or adoption. Reviewer must not be C2's author. J2 and C1-only R1 cannot satisfy L3.\n\nIndex context and evidence routes\nNo Representation map. Read stdo_task.json, native-context.json, native/bindings.json, qualification-basis.md, project.md, records/C1.md, records/C2.md and records/evidence.json; inspect fixture.py only if causally necessary. Resolve REFERENCE_FRAME_METHOD.md and TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity within the pinned standards basis. E2 supports L1; Q1 remains applicable to L2; R2 is unavailable in S2.\n\nOpen solution space\nChoose sufficient read-only title inspection and counterexamples. Reuse applicable E2/Q1, acquire your own evidence and judgment, preserve O1 separately from interpretation, and keep L1-L3 visible.\n\nReturn and stop contract\nReturn a closed result to W17 Executive for the existing carrier: actor/independence, exact subject/basis, scope, evidence, verdict, findings or explicit none, gaps and invalidators. Stop on subject/basis drift, inadequate authority/evidence/independence or required effects; return the affected gap. No inferred continuation.\n\nACTION\nOn lawful activation, independently evaluate C2's title and return. This request is prepared only; do not send or activate it here.",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": true
+    },
+    {
+      "claim": "action_is_last",
+      "pass": true
+    },
+    {
+      "claim": "native_joined_request_matches_exact_replay",
+      "pass": true
+    }
+  ],
+  "status": "mechanically_consistent"
+}

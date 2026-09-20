@@ -1,0 +1,2 @@
+Fresh qualification worksite. Read task.md and native-context.json, then the selected Product Definition and frame basis. Discover stdo-representation and begin from its selected map; explicitly select material frames and re-enter exact source where needed.
+Use the discovered Axiom skill for the exact pure joiner. Read-only inspection and stdout computation are allowed; no file effects or other actors. Return actual source/tool observations and the bounded result.

@@ -1,3 +1,40 @@
+# STDO frame-index semantic design
+
+## Current 2.5.1 RC1 construction
+
+The exact frozen STDO `v2.5.1-rc.1` source, nine changed standards members,
+authored delta, conservation and mechanical results are bound in
+[the companion record](../../../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/construction-conservation.json).
+This is candidate construction under the recorded grant; native qualification
+and configuration disposition retain their own results.
+
+All seven generic Axiom Product members remain byte-identical to RC7. The
+program keeps 31 symbols and all four earlier indexes, adds 14 clauses and two
+indexes, and changes 12 existing clauses only for the affected meaning or
+explicit support. Unchanged rows retain their identities and content after
+exact source-URI rebinding. The new uncertainty record keeps task-specific
+interface, threat, mutable-state and workload observations owner-supplied.
+
+| Explicit index suffix | Source contract and retained distinctions |
+|---|---|
+| `end-to-end-interface-integration` | Existing T-031 composite frame. Four distinct claims, available participant context, domain/lifecycle preservation, actual callable/effect path, causal diagnostic frontier and ordinary-user evidence. Full usability requires the applicable four-result conjunction; design selects no universal runtime/UAT prerequisite. |
+| `computational-whole-path-evaluation` | That frame's computational refinement plus DMM UP-019/recurrence. One complete producer-to-consumer result links valid fact reuse, complete causal read scope, supported threat/test predicates, justified retention, operational assumptions and material method work. |
+
+Ordered support edges make the consequential closure inspectable. They express
+source-owned rules to evaluate, not satisfied premises. Applicability, unknown
+evidence, lawful translation, independent judgment, and effect authority remain
+explicit. The source grants no new frame family, permanent actor, universal
+quota, ledger or semantic engine. The existing six indexes are caller-selected;
+neither materialization nor the two new index names activate an evaluation.
+
+Validation and map/report replay bind identity and structure; 16 individual and
+overlapping views preserve their common closure. A changed source observation
+refuses the exact new view. Source comparison and fresh native comparison remain
+distinct from those executable properties. The prior T009 author design below
+is historical provenance and is not the current release coordinate selection.
+
+---
+
 # T009 STDO frame-index semantic design
 
 Status: bounded author design candidate for the owner-selected T009 increment.

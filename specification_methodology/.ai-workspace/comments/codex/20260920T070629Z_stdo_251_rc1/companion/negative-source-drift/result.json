@@ -1,0 +1,50 @@
+{
+  "kind": "stdo.rc1-exact-subject-source-drift-refusal",
+  "argv": [
+    "/usr/local/bin/python3",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+    "project",
+    "--program",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/axiomatic-program.json",
+    "--map",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/logical-constraint-map.json",
+    "--bindings",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/negative-source-drift/bindings.json",
+    "--frame-index",
+    "urn:stdo-representation:frame-index:computational-whole-path-evaluation",
+    "--mode",
+    "materialized"
+  ],
+  "exit_code": 1,
+  "source_copy_original_sha256": "ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3",
+  "source_copy_mutated_sha256": "ee6fe91b57c47ca48e31c068b23aca5005f8e1a9efbf531971a16ffb9c66fc0a",
+  "report": {
+    "diagnostics": [
+      {
+        "code": "map_mismatch",
+        "field": "map",
+        "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1"
+      },
+      {
+        "code": "source_observation_mismatch",
+        "field": "map.resolved_sources",
+        "record": "urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1"
+      }
+    ],
+    "frame_index_refs": [
+      "urn:stdo-representation:frame-index:computational-whole-path-evaluation"
+    ],
+    "kind": "axiom-indexer.projection-report",
+    "map_sha256": "sha256:84443abb79c93ef7148cbb1a817afd8ad0ce5eeee986f09a3169241713c8806f",
+    "program_uri": "urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1",
+    "schema_version": 1,
+    "status": "invalid"
+  },
+  "original_inputs_preserved": true,
+  "input_hashes": {
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/axiomatic-program.json": "f45bac9323a3058625325e6791ef8355f45c1bf8a3f8018203f3daf14db4e612",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/logical-constraint-map.json": "a0c68f7a4cebf8166c7e436737d8fe5de68ac8f871dcd6a29196d719af89f9b1",
+    "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1/standards/SPEC_METHOD.md": "ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3"
+  }
+}

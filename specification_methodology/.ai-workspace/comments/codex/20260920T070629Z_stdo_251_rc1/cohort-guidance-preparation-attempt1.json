@@ -1,0 +1,9 @@
+{
+  "status": "preparation_error",
+  "exit_code": 1,
+  "error": "AttributeError: 'tuple' object has no attribute 'record_suffix'",
+  "cause": "Existing endpoint loop shadowed the newly added argparse namespace.",
+  "effect": "No regenerated cohort, release-note or snapshot output was written by this invocation. The separately reviewed skill promotion had already completed.",
+  "repair": "Rename the endpoint loop variable; rerun the content preparation helper.",
+  "native_exposure": "none for the revised subject"
+}

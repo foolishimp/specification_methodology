@@ -1,0 +1,74 @@
+```json
+{
+  "basis": {"stdo": "stdo://releases/v2.5.1-rc.1/", "manifest_sha256_verified": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64", "joiner_sha256_verified": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8", "bootstrap_source_digests": "all five match", "fixture_run": "python3 -B fixture.py exit 0"},
+
+  "case_a": {
+    "decision": "falsified for the bounded operational condition; retained behavior satisfied; refusals satisfied",
+    "evidence": [
+      "Envelope: 1 construction + 3 deliveries with one generation observation each. Observed n=4: constructions 10, item_visits 40, generation_observations 3, effects 3. n=200: constructions 10, item_visits 2000. Per handoff: 3 constructions and 3n validation-loop visits after the immutable Inventory exists.",
+      "Cause: prepare_report (fixture.py:61) and resolve_delivery (fixture.py:68) rebuild from raw instead of consuming inventory.basis/total; deliver's witness (fixture.py:90) is a third rebuild and lies outside the proposed territory.",
+      "Retained behavior correct: reports basis inventory/17, quantity 10 and 20100, generation advanced to 3.",
+      "Exception basis 17 vs selected 18: Refused basis_changed by select_inventory before any handoff construction or generation observation; no effect.",
+      "Exception destination advanced: Refused destination_advanced, no effect, reports empty; but 3 constructions (12 visits) were spent before the generation check."
+    ],
+    "retained_responsibilities": ["construct_inventory validation on first construction and fresh-process start", "basis_changed and destination_advanced refusals", "malformed-input refusals manifest_*/item_*", "immutable Inventory identity", "compare-and-append in commit_report"],
+    "owner_decisions": [
+      "Permanent comparison oracle: SPEC_METHOD#closure-criterion puts the burden on retention; 'another check is safer' names no obligation, owner, or removal trigger, so retirement is the warranted default. Owner rules.",
+      "Forged-native-object tests: hostile in-process reflection is excluded and no supported raw entry uses those objects; no retention basis. Owner rules.",
+      "The deliver witness returns to deliver's owner (outside territory)."
+    ],
+    "next_work": "Worker activation over prepare_report/resolve_delivery to consume owner facts without revisiting items; target 0 constructions per handoff while keeping both refusal conditions. Not performed here."
+  },
+
+  "case_b": {
+    "claim": "All six observations demonstrate that ordinary LLM users can write valid notes through the installed public interface.",
+    "unsupported": ["No LLM producer: responses are recorded software values (fixture.py:148-153). No installed release. No clean-room UAT, so user usability is unestablished (baseline#interface-integration-claim-boundaries excludes fixture success as user evidence).", "Not all six succeed: N3, N5, N6 are composition_failed.", "N4 uses private_preview, a private path with hardcoded basis and no admission; it evidences nothing about the public interface."],
+    "supported_narrower": ["Path realization for N1 and N2: public_note -> admit_note -> render_note observed, nonempty and empty eligible domains both usable.", "Typed refusal with cause for N3/N5/N6 (ineligible_reference, issueRefs[0], basis), matching the public promise.", "Contract sufficiency for N1/N2/N6 where the eligible set was supplied."],
+    "causal_frontiers": {
+      "N3": "Originating seam: supplied context has a task but no eligibleIssueRefs or locator; contract sufficiency fails upstream of the correct refusal. Joint cause: invented same-response ISS-NEW. Gap: unknown what an author with the set would produce.",
+      "N5": "Basis seam: produced under issues/4 (ISS-7), admitted under issues/6 (ISS-9); temporally mismatched carriers. Indeterminate whether basis advanced or was misselected. Gap: selection record.",
+      "N6": "Adequate context, response used ISS-NEW: legitimate refusal, not interface failure; cannot be attributed to LLM behavior since the producer is recorded.",
+      "N4": "Forbidden path; output equality does not discharge path realization."
+    },
+    "next_work": "Owner narrows the release claim to the supported relations, or acquires clean-room LLM UAT on the installed release with expected outcomes stated first. N3 context/locator gap and N5 basis seam return to their owners."
+  },
+
+  "case_c": {
+    "S1": "Not closable. Q1 reusable (invalidator unchanged); E1/J1 are author evidence; L3 absent, R1/R2 unavailable. Conversation change is not an invalidator. Continue under O1: activate Reviewer for L3 on exact C1.",
+    "S2": "Not closable. Q1 reusable; E2/J2 author evidence; R1 is bound to C1 and the C2 title markup change is material, so it does not transfer. Smallest lawful continuation: Executive activates an independent Reviewer for L3 on exact C2 (sha 87c1c652...). No status edit, no checkpoint.",
+    "S3": "Refuse the status edit. A bare 'continue' neither drops L3 nor accepts the Product (TICKET_METHOD#recorded-judgment-and-owner-ruling-continuity). Obligation change returns to the owner.",
+    "S4": "A WIP preservation checkpoint with the status sequence is lawful under that Writer grant, but only for a separately activated Writer; the actor occupying Executive performs no mutation. It is neither acceptance nor publication.",
+    "S5": "All W17 conditions hold: L1 via E2+R2, L2 via Q1, L3 via R2. Executive may record accept for the W17 checkpoint within its grant; Product/release acceptance and publication remain undelegated.",
+    "restart_proposal": "Withdrawn as repricing input: it names no failed repair or changed causal assumption; reconstructability selects no reconstruction (SPEC_METHOD#checkpoint-continuation-progress-and-churn, #reconstruction-litmus); M2 availability selects no adoption; O1 forbids basis change.",
+    "obligations_from_S2": {"L1": "retained; author evidence only", "L2": "retained, satisfied via Q1", "L3": "retained, open; Reviewer activation", "O1": "retained verbatim in the handoff, separate from interpretation"}
+  },
+
+  "selected_frames": [
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame", "purpose": "Reviewer envelope", "route": "native/bindings.json -> native/stdo-store/releases/v2.5.1-rc.1"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#5b-candidate-requires-independent-review", "purpose": "activation content"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#6-reviewer-returns-to-executive", "purpose": "return content"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#handoff-projection", "purpose": "Reviewer activation minimum content"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#actor-binding-and-independence", "purpose": "S4 Executive no-mutation"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-claim-boundaries", "purpose": "Case B claim split"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#interface-integration-qualification", "purpose": "Case B discriminators"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#computational-whole-path-evaluation", "purpose": "Case A whole path"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007", "purpose": "independence"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity", "purpose": "O1/J/Q reuse, S3"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#condition-based-closure-and-reuse", "purpose": "S5 closure"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#checkpoint-continuation-progress-and-churn", "purpose": "S4 checkpoint, restart"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#closure-criterion", "purpose": "Case A retention burden"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/SPEC_METHOD.md#reconstruction-litmus", "purpose": "restart authority"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/RELEASE_METHOD.md#selector-and-consumer-adoption", "purpose": "M2 non-adoption"}
+  ],
+  "source_reentry": "All 15 URIs above resolved through the joiner's own Resolver against native/bindings.json (all OK). Also read: authority_compressions/stdo_bootstrap.md (entrypoint), axiomatize-corpus SKILL.md and output-contract.md (joiner contract), ac.py join_sections (exact concatenation), records/*, native/cohort.json, DESIGN_MODULE_METHOD.md lines 820-825 (superseded responsibility). Reason: each cited decision needed its owning law, not the compression.",
+
+  "handoff_sections": "the seven ordered {label,text} rows exactly as joined below: Role and outcome; Reference frame and exact subject; Hard constraints; Index context and evidence routes; Open solution space; Return and stop contract; ACTION",
+  "joined_request": {"command": "python3 build_tenants/core/code/ac.py join --input /dev/stdin (run in native/axiom_indexer, no --output)", "exit": 0, "stdout_sha256": "6334e367dd9a5908e7192de3891054c7ed6ce63c6d16b67b2e96b6750e1a19a6", "stdout": "Role and outcome\nYou are an independent Reviewer for ticket W17 obligation L3: author-independent assessment of the exact title-bearing candidate. Outcome: one closed Reference Frame Method result on whether C2's title reads and renders as \"Shipment summary\" with title markup that preserves title correctness (L1) and does not alter the exported quantity relation (L2). You do not repair, edit, dispose, checkpoint, publish or accept.\n\nReference frame and exact subject\nFrames (URI; purpose; source route via native/bindings.json -> native/stdo-store/releases/v2.5.1-rc.1): stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame; Reviewer activation envelope. stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007; independence and exact-verdict traceability. stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#6-reviewer-returns-to-executive; required return content. Exact subject: records/C2.md, sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420 (records/candidate-identities.json). Predecessor C1 sha256 703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0 is history, not the subject. Basis: stdo://releases/v2.5.1-rc.1/ manifest 5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64; method basis M1; owner ruling O1 verbatim: \"Continue the selected title change; preserve the quantity and existing history. A separately recorded Writer may preserve this work as WIP. Do not publish or change the Product or method basis.\"\n\nHard constraints\nAuthority: bounded evaluation only. Read scope: records/C1.md, records/C2.md, records/evidence.json, records/candidate-identities.json, project.md section C, and the exact basis above. Effect restrictions: no file, Git, ticket-status, checkpoint, publication, adoption or actor-launch effects; do not alter the reviewed subject. Independence: you are not the author of C2; J2 (author self-review) and E2 (author-run mechanical check) are inputs you may inspect but cannot adopt as your verdict. R1 is bound to C1 only and does not transfer. Q1 (independent quantity result) remains applicable because its invalidator, a change to the quantity computation or inputs, has not occurred; do not re-derive it, consume it.\n\nIndex context and evidence routes\nEvidence available: E2 result \"title renders Shipment summary; quantity 10\" (independent:false); J2 author self-review; Q1 satisfied, independent, current_in_C2 true; R1 satisfied for C1 title markup only. C2 differs from C1 by bold markup on the H1 title. Expected relation, stated before inspection: the H1 heading text after markup equals \"Shipment summary\" and the Quantity line equals \"Quantity: 10\". Acquire the C2 bytes yourself; the digest above is your identity check.\n\nOpen solution space\nDecide satisfied, falsified, indeterminate, out_of_frame or invalid_basis for L3 on C2. Adjacent observations outside the title claim return separately with triage not_applicable. Do not propose a restart or a method basis change; M2 availability selects no adoption.\n\nReturn and stop contract\nReturn to the Executive of W17, not to the author, one closed evaluation with: frame and activation identity; exact subject digest; claim, scope and exclusions; independence conditions; evidence acquired; result; findings with severity and residuals if any; invalidation conditions (any byte change to C2, or a Q1 invalidator). Stop on: subject digest mismatch (invalid_basis); missing read access (indeterminate); any requirement to mutate. No priority, disposition or continuation authority is returned.\n\nACTION\nAcquire records/C2.md, confirm its sha256, evaluate the stated expected relation against the exact bytes, and return the closed L3 result to Executive."},
+  "handoff_sent": false,
+
+  "limits": {
+    "qualification": ["Fixture observations are in-memory executions, not an installed release or live LLM; Case B user-usability stays unresolved.", "Case A meter excludes identity-set, summation and serialization work; the falsification rests on constructions and validation-loop visits only.", "No Representation map in this arm; frames were selected from raw source, not a validated projection.", "Owner rulings on oracle retention, forged-object tests, the restart proposal and any Reviewer activation remain outstanding; nothing here is acceptance, checkpoint or publication."],
+    "tool_failures": ["git log/status/rev-parse failed: the worksite is not a git repository despite the session context claiming one.", "No other failures; no files were written (python3 -B used throughout, joiner run without --output)."]
+  }
+}
+```

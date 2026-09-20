@@ -1,0 +1,41 @@
+{
+  "context": "delivery-claude-map-first",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "9606dff79e57ebb53a9b2cb6862b0c766ab09963734185eada4aac4d57200d53",
+  "presentation": "plain_json",
+  "join_replay": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-claude-map-first/evidence/sandbox.sb",
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-05/delivery-claude-map-first/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "<role_and_outcome>\nYou act as independent Reviewer for ticket W17 obligation L3. Outcome: one closed Reference Frame Method result on the exact title-bearing candidate C2, returned to Executive. No repair, priority, disposition, continuation, publication or acceptance authority follows from this activation.\n\n<reference_frame_and_exact_subject>\nFrame: stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame (purpose: bounded independent evaluation; source route: same URI). Governing law: stdo://releases/v2.5.1-rc.1/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws. Basis: stdo://releases/v2.5.1-rc.1/ manifest 5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64; method basis M1. Exact subject: records/C2.md sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420 (identity record: records/candidate-identities.json). Claim under review: C2 renders the title \"Shipment summary\" correctly (L1) under materially changed title markup, and its exported quantity 10 is preserved (L2 context only). Predecessor: C1 sha256 703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0; R1 reviewed C1 title markup only and is invalidated for C2.\n\n<hard_constraints>\nOwner ruling O1, original wording: \"Continue the selected title change; preserve the quantity and existing history. A separately recorded Writer may preserve this work as WIP. Do not publish or change the Product or method basis.\" Read scope: records/C1.md, records/C2.md, records/evidence.json, records/candidate-identities.json, and the cited STDO source routes. Effect restrictions: read-only; no candidate edit, file write, status edit, checkpoint, actor launch, publication, Product or method-basis change, and no adoption of M2. Independence: you are not the author; author judgments J1/J2 are context, not evidence you may adopt; supply your own judgment. Do not copy R1 to C2.\n\n<index_context_and_evidence_routes>\nSelected clauses (program urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1): closed-result-reuse-preserves-required-independence; judgment-revision-is-scoped-and-does-not-invent-rulings; closure-is-satisfied-obligations-not-review-occurrence; findings-and-tests-require-supported-operating-model. Residual: task-frame-obligations-require-owned-applicability. Source re-entry: stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity; stdo://releases/v2.5.1-rc.1/standards/TICKET_METHOD.md#condition-based-closure-and-reuse; STDO_REFERENCE_FRAME_BASELINE.md#6-reviewer-returns-to-executive. Evidence population: E2 (mechanical, not independent: title renders Shipment summary; quantity 10); Q1 (independent quantity relation satisfied; invalidator: quantity computation or inputs change; unchanged in C2); R1 (C1 title markup only; predecessor, invalidated for C2). No L3 result exists for C2.\n\n<open_solution_space>\nInspection order, rendering method for the markdown title, comparison technique between C1 and C2 markup, and how you acquire your own evidence remain your choice within the read scope. You may consume E2 and Q1 as valid mechanical facts after checking their exact applicability.\n\n<return_and_stop_contract>\nReturn to Executive one result from the algebra satisfied | falsified | indeterminate | out_of_frame | invalid_basis, with: frame and activation identity; exact subject sha256 and basis; independence conditions; evidence acquired; findings with violated obligation, supported entry, causal path, severity and confidence, or an explicit no-finding state with triage not_applicable; adjacent observations reported separately; residuals; invalidation conditions. Stop and return invalid_basis if the C2 bytes do not match the stated sha256 or O1 is contradicted; return indeterminate if evidence is insufficient; return out_of_frame if the claim needs an undeclared relation. Do not assign priority, disposition or next action, and do not send this result anywhere but Executive.\n\n<ACTION>\nEvaluate exact C2 against obligation L3 (author-independent assessment of the title-bearing candidate) and return your closed result to Executive.",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": true
+    },
+    {
+      "claim": "action_is_last",
+      "pass": false
+    },
+    {
+      "claim": "native_joined_request_matches_exact_replay",
+      "pass": true
+    }
+  ],
+  "status": "structure_or_join_failed"
+}

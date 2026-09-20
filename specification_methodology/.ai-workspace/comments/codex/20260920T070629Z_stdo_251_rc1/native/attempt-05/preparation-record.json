@@ -1,0 +1,15 @@
+{
+  "kind": "stdo.native-pre-exposure-preparation-correction",
+  "provider_calls": 0,
+  "original_helper": {
+    "path": "attempt-05/bind-execution.py",
+    "sha256": "c77772eedd636092a5890289d76d0fc674423448fa228380d14926732fcfaaa5"
+  },
+  "observed_error": "AssertionError at command equivalence: the record helper prepended the sandbox prefix twice although native_command already includes it. Actual normalized native commands match the fixed controls for both hosts.",
+  "effects_before_failure": "No input-equivalence, input-manifest, execution-authority or provider command record had been written. Contexts and native preflights are unchanged.",
+  "corrected_separate_helper": {
+    "path": "attempt-05/bind-execution-v2.py",
+    "sha256": "6fd3e6b6e08b3b5f15cb261ddf8930972e5fedd08c21043aa8df75b09125bb6b"
+  },
+  "correction": "Compare native_command directly to the recorded original argv; all substantive equality checks retained."
+}

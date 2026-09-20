@@ -1,0 +1,85 @@
+{
+  "at": "2026-09-20T07:42:08.748753+00:00",
+  "context": "delivery-codex-source",
+  "selection_sha256": "df5767aac1e2aa7ea51fb836dcac178c72f77c86e707ed795b424cf998c07319",
+  "runner_sha256": "2caf0447dc5210f026befd3d8bc9f2a3c1c70d592cb46d4b121af58f9b333390",
+  "profile_sha256": "9476c2118730a1ca4b51c699a3a2fa7801980b8d8a67e83dcf95555d2da6c510",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "STDO_STORE": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/native/stdo-store",
+    "ZDOTDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/runtime/zsh",
+    "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/runtime/tmp/",
+    "TMPPREFIX": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/runtime/tmp/zsh",
+    "PATH": "/Users/jim/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  },
+  "checks": [
+    {
+      "operation": "confinement",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/sandbox.sb",
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import json,os,sys\nx=json.loads(sys.argv[1]);rows=[]\nfor p in x['read_allowed']:\n try:\n  with open(p,'rb') as f:f.read(1)\n  rows.append({'operation':'allowed_read','path':p,'pass':True})\n except OSError as e:rows.append({'operation':'allowed_read','path':p,'pass':False,'error':str(e)})\nfor p in x['read_denied']:\n try:\n  with open(p,'rb') as f:f.read(1)\n  rows.append({'operation':'denied_read','path':p,'pass':False})\n except PermissionError:rows.append({'operation':'denied_read','path':p,'pass':True})\n except OSError as e:rows.append({'operation':'denied_read','path':p,'pass':False,'error':str(e)})\ntry:\n with open(x['runtime_write'],'w') as f:f.write('transport probe')\n os.unlink(x['runtime_write']);rows.append({'operation':'runtime_write','pass':True})\nexcept OSError as e:rows.append({'operation':'runtime_write','pass':False,'error':str(e)})\ntry:\n fd=os.open(x['write_denied'],os.O_WRONLY);os.close(fd);rows.append({'operation':'denied_write','pass':False})\nexcept PermissionError:rows.append({'operation':'denied_write','pass':True})\nexcept OSError as e:rows.append({'operation':'denied_write','pass':False,'error':str(e)})\nprint(json.dumps(rows));sys.exit(0 if all(r['pass'] for r in rows) else 2)\n",
+        "{\"read_allowed\": [\"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/task.md\", \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/native/stdo-store/releases/v2.5.1-rc.1/standards/SPEC_METHOD.md\"], \"read_denied\": [\"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/oracle.md\", \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/oracle-binding.json\", \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/withheld.txt\"], \"runtime_write\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/runtime/preflight-probe\", \"write_denied\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/task.md\"}"
+      ],
+      "exit_code": 0,
+      "stdout": "[{\"operation\": \"allowed_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/task.md\", \"pass\": true}, {\"operation\": \"allowed_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/native/stdo-store/releases/v2.5.1-rc.1/standards/SPEC_METHOD.md\", \"pass\": true}, {\"operation\": \"denied_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/oracle.md\", \"pass\": true}, {\"operation\": \"denied_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/oracle-binding.json\", \"pass\": true}, {\"operation\": \"denied_read\", \"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/withheld.txt\", \"pass\": true}, {\"operation\": \"runtime_write\", \"pass\": true}, {\"operation\": \"denied_write\", \"pass\": true}]\n",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "operation": "host_version",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/sandbox.sb",
+        "/opt/homebrew/lib/node_modules/@openai/codex/bin/codex.js",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "codex-cli 0.155.1\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\n",
+      "pass": true
+    },
+    {
+      "operation": "fixture",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/sandbox.sb",
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/fixture.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"importer\": [\n    {\n      \"items\": 4,\n      \"handoffs\": 3,\n      \"meter\": {\n        \"constructions\": 10,\n        \"item_visits\": 40,\n        \"generation_observations\": 3,\n        \"effects\": 3\n      },\n      \"reports\": [\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 10\n        },\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 10\n        },\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 10\n        }\n      ],\n      \"destination_generation\": 3\n    },\n    {\n      \"items\": 200,\n      \"handoffs\": 3,\n      \"meter\": {\n        \"constructions\": 10,\n        \"item_visits\": 2000,\n        \"generation_observations\": 3,\n        \"effects\": 3\n      },\n      \"reports\": [\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 20100\n        },\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 20100\n        },\n        {\n          \"basis\": \"inventory/17\",\n          \"quantity\": 20100\n        }\n      ],\n      \"destination_generation\": 3\n    }\n  ],\n  \"notes\": [\n    {\n      \"id\": \"N1\",\n      \"producer\": \"recorded software fixture\",\n      \"actor_context\": {\n        \"basis\": \"issues/4\",\n        \"eligibleIssueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"response\": {\n        \"summary\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"observed\": {\n        \"kind\": \"note_report\",\n        \"text\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-7\"\n        ],\n        \"basis\": \"issues/4\",\n        \"path\": [\n          \"public_note\",\n          \"admit_note\",\n          \"render_note\"\n        ]\n      }\n    },\n    {\n      \"id\": \"N2\",\n      \"producer\": \"recorded software fixture\",\n      \"actor_context\": {\n        \"basis\": \"issues/5\",\n        \"eligibleIssueRefs\": []\n      },\n      \"response\": {\n        \"summary\": \"Editorial update.\",\n        \"issueRefs\": []\n      },\n      \"observed\": {\n        \"kind\": \"note_report\",\n        \"text\": \"Editorial update.\",\n        \"issueRefs\": [],\n        \"basis\": \"issues/5\",\n        \"path\": [\n          \"public_note\",\n          \"admit_note\",\n          \"render_note\"\n        ]\n      }\n    },\n    {\n      \"id\": \"N3\",\n      \"producer\": \"recorded software fixture\",\n      \"actor_context\": {\n        \"basis\": \"issues/4\",\n        \"task\": \"Propose a release note about the export improvement.\"\n      },\n      \"response\": {\n        \"summary\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-NEW\"\n        ]\n      },\n      \"observed\": {\n        \"kind\": \"composition_failed\",\n        \"cause\": {\n          \"kind\": \"refused\",\n          \"code\": \"ineligible_reference\",\n          \"path\": \"issueRefs[0]\",\n          \"basis\": \"issues/4\"\n        },\n        \"path\": [\n          \"public_note\",\n          \"admit_note\"\n        ]\n      }\n    },\n    {\n      \"id\": \"N4\",\n      \"producer\": \"private test helper\",\n      \"actor_context\": {\n        \"basis\": \"issues/4\",\n        \"eligibleIssueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"response\": {\n        \"summary\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"observed\": {\n        \"kind\": \"note_report\",\n        \"text\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-7\"\n        ],\n        \"basis\": \"issues/4\",\n        \"path\": [\n          \"private_preview\"\n        ]\n      }\n    },\n    {\n      \"id\": \"N5\",\n      \"producer\": \"recorded software fixture\",\n      \"actor_context\": {\n        \"basis\": \"issues/4\",\n        \"eligibleIssueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"response\": {\n        \"summary\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"consumer_basis\": \"issues/6\",\n      \"consumer_eligible\": [\n        \"ISS-9\"\n      ],\n      \"observed\": {\n        \"kind\": \"composition_failed\",\n        \"cause\": {\n          \"kind\": \"refused\",\n          \"code\": \"ineligible_reference\",\n          \"path\": \"issueRefs[0]\",\n          \"basis\": \"issues/6\"\n        },\n        \"path\": [\n          \"public_note\",\n          \"admit_note\"\n        ]\n      }\n    },\n    {\n      \"id\": \"N6\",\n      \"producer\": \"recorded software fixture\",\n      \"actor_context\": {\n        \"basis\": \"issues/4\",\n        \"eligibleIssueRefs\": [\n          \"ISS-7\"\n        ]\n      },\n      \"response\": {\n        \"summary\": \"Improved export.\",\n        \"issueRefs\": [\n          \"ISS-NEW\"\n        ]\n      },\n      \"observed\": {\n        \"kind\": \"composition_failed\",\n        \"cause\": {\n          \"kind\": \"refused\",\n          \"code\": \"ineligible_reference\",\n          \"path\": \"issueRefs[0]\",\n          \"basis\": \"issues/4\"\n        },\n        \"path\": [\n          \"public_note\",\n          \"admit_note\"\n        ]\n      }\n    }\n  ]\n}\n",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "operation": "join",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/evidence/sandbox.sb",
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-02/delivery-codex-source/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+        "join",
+        "--input",
+        "/dev/stdin"
+      ],
+      "exit_code": 0,
+      "stdout": "PROBE\nread-only join",
+      "stderr": "",
+      "pass": true
+    }
+  ],
+  "worksite_unchanged": true,
+  "status": "pass",
+  "provider_calls": 0,
+  "scope": "OS custody, local runtime/version and pure fixture/join commands only; full authenticated host turn remains unobserved"
+}

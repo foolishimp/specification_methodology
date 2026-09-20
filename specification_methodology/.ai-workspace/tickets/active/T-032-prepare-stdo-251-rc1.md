@@ -44,3 +44,14 @@ Preserve all immutable cuts and the source project's RC4 authoring basis.
 
 This ticket tracks the direct work instruction; its authored state does not
 create execution authority. The execution record declares the exact grants.
+
+## Owner-selected publication scope
+
+The subsequent owner instruction “this needs to be commited and released now
+2.5.1 RC1 yes?” extends this work to the complete matched RC1 publication.
+Publish with the disclosed Representation native reporting limits; do not
+assert a satisfied complete-task comparison or run further refinement cycles.
+Commit B, checked atomic publication, public verification and fresh reacquisition
+precede final completion bookkeeping. External consumer migration remains outside
+scope. This owner disposition changes the release consequence of the retained
+results; it does not rewrite those results.

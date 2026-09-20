@@ -1,0 +1,41 @@
+{
+  "context": "delivery-claude-map-first",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "539ede5c7e50aaf2928d0b5e676c9fd337e747b30ce653e11303ed609bdac2cb",
+  "presentation": "unique_fenced_json; surrounding prose retained in raw final",
+  "join_replay": {
+    "argv": [
+      "/usr/bin/sandbox-exec",
+      "-f",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence/sandbox.sb",
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/worksite/native/axiom_indexer/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/dev/stdin"
+    ],
+    "exit_code": 0,
+    "stdout": "role_and_outcome\nYou are Reviewer under the derived Reviewer frame. Outcome: one independent evidence-bound evaluation of exact candidate C2 for W17 obligation L3 (author-independent assessment of the title-bearing candidate) and L1 (title correctness), returned to Executive. No repair, priority, disposition or continuation.\n\nreference_frame_and_exact_subject\nFrame: stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame (purpose: exact-subject independent assessment; source route same URI). Subject: records/C2.md, sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420, ticket W17, method basis M1, STDO basis stdo://releases/v2.5.1-rc.1/ manifest 5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64. Claim under review: C2 title renders exactly \"Shipment summary\" with quantity 10 preserved. Evidence boundary: records/C1.md, records/C2.md, records/evidence.json, records/candidate-identities.json, project.md section C.\n\nhard_constraints\nOwner ruling O1, original wording: \"Continue the selected title change; preserve the quantity and existing history. A separately recorded Writer may preserve this work as WIP. Do not publish or change the Product or method basis.\" Read-only: do not edit C2, repair, checkpoint, change ticket status, publish, adopt M2 or restart. Independence (TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007): you are not the author; author judgments J1/J2 and mechanical E1/E2 may be consumed as evidence but cannot supply your verdict. R1 reviewed C1 title markup only; C2 changed title markup materially, so R1 is not reusable for C2.\n\nindex_context_and_evidence_routes\nApplicable clauses: closure-is-satisfied-obligations-not-review-occurrence (TICKET_METHOD.md#condition-based-closure-and-reuse); closed-result-reuse-preserves-required-independence and judgment-revision-is-scoped-and-does-not-invent-rulings (TICKET_METHOD.md#recorded-judgment-and-owner-ruling-continuity); reviewer-result-triage-is-total (STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection). Evidence: E2 mechanical, non-independent, states title renders Shipment summary and quantity 10; Q1 independent L2 result satisfied, invalidator is a change to quantity computation or inputs, unchanged in C2; J2 author self-review. Missing: any independent L3 result for C2.\n\nopen_solution_space\nInspection order, tools, rendering method for the bold title markup, and how you derive the expected title relation are yours. You may acquire further read-only evidence inside the boundary. Do not assume a universal rendering rule; state the one you applied.\n\nreturn_and_stop_contract\nReturn to Executive exactly one Reference Frame Method result for the claim: satisfied (explicit no-finding state), falsified (exact findings with evidence-bound severity, cause, blast radius, uncertainty), indeterminate (evidence gaps named), out_of_frame (undeclared relation or capability named) or invalid_basis (basis failure named). Include subject digest, evidence consulted, independence statement, residuals and whether Q1 applicability was observed intact. Stop and return immediately if C2 bytes differ from the stated digest, if the basis or O1 changes, or if the claim requires evidence outside the boundary. Do not close W17, assign priority or propose continuation.\n\nACTION\nIndependently evaluate records/C2.md at the stated digest against L1 and L3 under the constraints above and return the bounded result to Executive.",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": true
+    },
+    {
+      "claim": "action_is_last",
+      "pass": true
+    },
+    {
+      "claim": "native_joined_request_matches_exact_replay",
+      "pass": true
+    }
+  ],
+  "status": "mechanically_consistent"
+}

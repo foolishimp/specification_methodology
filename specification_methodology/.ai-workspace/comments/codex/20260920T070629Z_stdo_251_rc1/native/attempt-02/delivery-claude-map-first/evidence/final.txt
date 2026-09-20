@@ -1,0 +1,107 @@
+Both digests match. The bounded result follows. The fixture ran clean, the three frame projections resolved against the exact program and map, the joiner ran on stdin, and no files were written.
+
+```json
+{
+  "case_a": {
+    "decision": "Does not meet the bounded outcome. Correct results, refusals and generation guard are retained; the work envelope is violated inside the proposed territory.",
+    "evidence": {
+      "fixture": "python3 -B fixture.py rc=0. 4 items x 3 handoffs: constructions 10, item_visits 40, generation_observations 3, effects 3. 200 items x 3 handoffs: constructions 10, item_visits 2000, generation_observations 3, effects 3. All reports basis inventory/17, quantities 10 and 20100.",
+      "cause": "Accepted envelope is 1 construction then 3 deliveries with no item revisit after immutable facts exist. Each deliver() runs construct_inventory three times (fixture.py:62 prepare_report, :69 resolve_delivery, :90 witness), so 9 revalidations and 9n item visits occur per unchanged manifest after the owner facts exist.",
+      "retained_behavior": "Malformed serialized input refusals (manifest_shape/basis/population, item_shape/id/quantity/identity) and destination_advanced refusal (commit_report, :77) are supported obligations and remain useful.",
+      "basis_17_vs_18": "select_inventory (:55) refuses basis_changed before any construction; correct, no revisit.",
+      "advancing_destination": "commit_report observes generation once per commit and refuses destination_advanced with no append; correct, one observation per attempt as the envelope requires."
+    },
+    "necessary_retained_responsibilities": [
+      "construct_inventory as the single owner of untrusted-input validation on first construction and fresh-process start",
+      "select_inventory basis check",
+      "commit_report generation observation and refusal"
+    ],
+    "unsupported_retention": [
+      "Migration-note witness comparison (:90): no owner, workload purpose or removal trigger; superseded-retention-bears-its-own-burden clause says an oracle label alone cannot justify duplicate production work.",
+      "Proposed forged-native-object tests: excluded threat (hostile in-process reflection) with no supported raw entry; findings-and-tests-require-supported-operating-model clause gives them no standing."
+    ],
+    "next_work": "Owner decisions, not performed here: retire the witness or give it an owner and trigger; decline the forged-object tests; rework prepare_report and resolve_delivery to consume the immutable Inventory without reconstruction. The raw manifest reuse in deliver() is outside the two-function territory and returns to its owner."
+  },
+  "case_b": {
+    "supported_claims": [
+      "N1 and N2: the public path public_note->admit_note->render_note admits and renders a nonempty-eligible and an empty-eligible candidate when the actor context supplies the eligible set (contract sufficiency and path realization for a recorded software producer).",
+      "N3, N5, N6: the public interface returns a typed refusal ineligible_reference with path issueRefs[0] and basis, satisfying the refusal half of the promise.",
+      "N5 also shows boundary incongruence detection: a valid response under basis issues/4 refused under consumer basis issues/6."
+    ],
+    "unsupported_claims": [
+      "'All six observations demonstrate' is false: N3, N5, N6 exit composition_failed and N4 never enters the public path.",
+      "'Ordinary LLM users': every producer is a recorded software value (fixture.py:148-153); no live LLM, no clean-room UAT, no ordinary-context evidence exists, so the usability claim is unclaimed under interface-usability-requires-ordinary-context-evidence.",
+      "'Installed public interface': the subject is a runnable fixture, not an install."
+    ],
+    "causes": {
+      "N3": "Actor context supplied a task but no eligibleIssueRefs (:150); the response invented ISS-NEW. Supported frontier: missing ordinary actor context at the producer seam, not a validator defect.",
+      "N4": "Producer is a private test helper through private_preview (:139); output equality proves nothing about the ordinary path.",
+      "N5": "Temporal or basis mismatch between producer context issues/4 and consumer basis issues/6; each carrier is individually valid.",
+      "N6": "Eligible set was supplied yet ISS-NEW was produced; the frontier is the recorded response itself. Whether that reflects model behavior is unknown because no actual producer ran."
+    },
+    "gaps": ["No live producer observations", "No expected-outcome oracle fixed before inspection", "No installed release subject"],
+    "next_work": "Narrow the release claim to the supported contract and refusal results; obtain clean-room UAT with ordinary context for any user-usability claim; owner decides the N3 context obligation."
+  },
+  "case_c": {
+    "S1": "Continue under O1 with E1/Q1/J1; L3 remains open. J1 cannot supply independent assessment. No closure.",
+    "S2": "Continue. E2 and Q1 valid (Q1 invalidator unchanged). J2 is author-only. R1 covered C1 title markup and C2 changed that markup materially, so R1 does not transfer. L3 remains open. Bounded continuation is a Reviewer request for exact C2, prepared below, not sent.",
+    "S3": "Refuse the status edit. 'Continue' recovers only O1's original scope; dropping L3 and calling the Product accepted exceeds it and O1 forbids Product change.",
+    "S4": "A WIP checkpoint and its ticket status sequence for C2 are lawful under that declared Writer grant, preserving evidence. Not part of this task; Executive occupancy grants nothing beyond it and no publication.",
+    "S5": "With R2 closed on exact C2, E2/Q1 current and all W17 conditions holding, W17 may close under its work authority. Product and release acceptance stay with their owners.",
+    "restart_proposal": "Rejected for now. M1 is selected; M2 availability selects no adoption; re-derivability alone is not a changed causal assumption or failed repair. Returns to the authority owner.",
+    "digests_verified": "C1 703a49be..., C2 87c1c652... match records/candidate-identities.json"
+  },
+  "selected_frames": [
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-end-to-end-interface-integration-frame", "purpose": "Cases A and B via indexes computational-whole-path-evaluation and end-to-end-interface-integration", "source_route": "same URI"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame", "purpose": "Case C handoff via index t009:complete-update-reviewer; only its shared closure, reuse-independence and total-triage clauses apply", "source_route": "same URI"},
+    {"uri": "stdo://releases/v2.5.1-rc.1/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws", "purpose": "Result algebra", "source_route": "same URI"}
+  ],
+  "source_reentry": [
+    "STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame: Reviewer authority, exclusions, independence for the handoff",
+    "STDO_REFERENCE_FRAME_BASELINE.md#computational-whole-path-evaluation and #interface-integration-qualification: case A envelope reasoning and the case B discriminator table",
+    "STDO_REFERENCE_FRAME_BASELINE.md#closure: S3 and S5 reasoning",
+    "fixture.py whole causal path, records/*, cohort.json, bindings.json, ac.py join_sections and CLI"
+  ],
+  "handoff_sections": "Seven ordered sections, labels <role_and_outcome>, <reference_frame_and_exact_subject>, <hard_constraints>, <index_context_and_evidence_routes>, <open_solution_space>, <return_and_stop_contract>, <ACTION>. Exact text is the joined_request below.",
+  "joined_request": "See fenced block",
+  "limits": [
+    "Method qualification not graded; fixture not repaired, per task.",
+    "Map program_sha256 is a canonical-bytes digest, not the file digest f45bac93...; the projection tool accepted the pair, which is structural evidence only.",
+    "Tool failure: redirecting projection stdout to /tmp/proj_rc1.json was refused (operation not permitted); rerun by pipe. No file effects occurred.",
+    "Handoff not sent; no checkpoint, status edit, actor launch, publication or M2 adoption performed."
+  ]
+}
+```
+
+Joined request, exact joiner stdout:
+
+```text
+<role_and_outcome>
+You are the independent Reviewer for ticket W17 candidate C2 in snapshot S2. Outcome: one evidence-bound evaluation of the exact claim below, returned to Executive. You do not repair, edit, checkpoint, publish, accept, or choose the next action.
+
+<reference_frame_and_exact_subject>
+Frames (map frame_refs, source routes are the URIs): stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-reviewer-frame (your evaluation, authority, exclusions, independence); stdo://releases/v2.5.1-rc.1/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws (result algebra). Index: urn:stdo-representation:frame-index:t009:complete-update-reviewer over program urn:stdo-representation:program:a-c-text:stdo-v2.5.1-rc.1, map sha256:a0c68f7a4cebf8166c7e436737d8fe5de68ac8f871dcd6a29196d719af89f9b1; its complete-consumer-update scope does not apply to W17, only its shared closure, reuse-independence and total-triage clauses are selected. Claim under review: obligation L3, author-independent assessment that the exact title-bearing candidate C2 renders the title 'Shipment summary' correctly under W17 and method basis M1. Exact subject: records/C2.md, sha256 87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420. Predecessor for context only: records/C1.md, sha256 703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0. Method basis M1 is selected; M2 exists and is not adopted.
+
+<hard_constraints>
+Authority: owner ruling O1 verbatim: 'Continue the selected title change; preserve the quantity and existing history. A separately recorded Writer may preserve this work as WIP. Do not publish or change the Product or method basis.' Read scope: records/C1.md, records/C2.md, records/evidence.json, records/candidate-identities.json, project.md section C, fixture.py read-only. Effects: none. No file writes, no checkpoint, no ticket status edit, no actor launch, no publication, no Product or release acceptance, no M2 adoption, no candidate repair. Independence: you are not the author; author judgment J2 is context, not evidence you may adopt; R1 covers C1 markup only and does not transfer to C2 because C2 changed title markup materially. Do not assign priority, disposition, promotion or continuation.
+
+<index_context_and_evidence_routes>
+Selected clauses: closure-is-satisfied-obligations-not-review-occurrence (a review event alone closes nothing; L3 closes only if your evidence-bound result satisfies it); closed-result-reuse-preserves-required-independence (reuse Q1 only after checking its invalidator: quantity computation or inputs unchanged in C2; supply your own title judgment); reviewer-result-triage-is-total (every finding carries evidence-bound severity or recorded uncertainty). Available evidence: E2 mechanical result for C2 (not independent); Q1 independent L2 result, current in C2; J2 author self-review; R1 independent C1 title-markup review, satisfied; no L3 result exists for C2. Evidence gaps to keep explicit: no rendered output of C2 is retained, only bytes; R2 does not exist in S2. Source re-entry route if needed: STDO_REFERENCE_FRAME_BASELINE.md#closure.
+
+<open_solution_space>
+Inspection order, tools, and how you establish what 'title renders Shipment summary' means for the bold markup in C2 versus C1 are yours. You may reproduce a rendering observation read-only. You may report that the claim is indeterminate with the missing evidence named.
+
+<return_and_stop_contract>
+Return to Executive: (1) one Reference Frame Method result for L3 on exact C2: satisfied, unsatisfied, or indeterminate; (2) findings with violated property, causal path, evidence, and technical severity; (3) whether Q1 reuse remains valid on your reading of C2; (4) residuals and evidence you could not obtain. Stop and return a hold, without proceeding, if C2 bytes do not match the stated digest, if O1 or M1 authority appears changed, if the read scope is insufficient, or if any step would require an effect.
+
+<ACTION>
+Evaluate exact records/C2.md against obligation L3 now and return the result above. Do not repair or continue the work.
+```
+
+Command used for the join, from the worksite root:
+
+```sh
+python3 native/axiom_indexer/build_tenants/core/code/ac.py join --input /dev/stdin
+```
+
+Exact dependency identities verified against native/cohort.json before use: ac.py 5a2e0cb5..., output-contract c124264d..., program.schema 43326dba..., map a0c68f7a..., program file f45bac93..., source manifest 5d306da1.... The handoff is prepared and not sent. Remaining decisions belong to the fixture owner (case A retention and territory), the release-claim owner (case B narrowing and UAT), and the W17 Executive (activating the Reviewer from S2).

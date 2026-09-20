@@ -1,0 +1,13 @@
+{
+  "status": "startup_requirement_conflicts_with_profile",
+  "host": "codex-cli 0.155.1",
+  "existing_path": "/Users/jim/.codex-alt/installation_id",
+  "existing_valid_uuid": true,
+  "existing_mode": "0o644",
+  "existing_sha256": "27bdf920ece83dc25297b5bec97693086f082c3e3e48c1caa776c369ca7e2816",
+  "probe_exit_code": 1,
+  "probe_stderr": "Traceback (most recent call last):\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1322, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 1262, in _find_spec\n  File \"<frozen importlib._bootstrap_external>\", line 1559, in find_spec\n  File \"<frozen importlib._bootstrap_external>\", line 1531, in _get_spec\n  File \"<frozen importlib._bootstrap_external>\", line 1510, in _path_importer_cache\nPermissionError: [Errno 1] Operation not permitted\n",
+  "probe_scope": "Attempted existing-file read/write open only; no write syscall, no provider, no contents retained",
+  "source": "https://raw.githubusercontent.com/openai/codex/rust-v0.155.1/codex-rs/core/src/installation_id.rs",
+  "relation": "Startup opens installation_id read/write/create before reusing a valid existing ID. The outer profile denies that open. This identifies a necessary conflict; exact full-turn recovery remains unobserved."
+}

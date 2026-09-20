@@ -1,52 +1,32 @@
 # Axiom Indexer Goals
 
-## Current Goal
+## Current goal
 
-Status: RC7 qualified, atomically published and publicly reacquired; accepted frame basis 11 is operative
+Status: local complete 2.5.1 RC1 candidate preparation; publication and external
+adoption are unselected. RC7 remains the published immutable predecessor.
 
-Supply the smallest sufficient generic mechanics for faithful, reproducible
-axiomatic indexing and native STDO use. Existing resolution, validation,
-diagnostics, map generation and exact joining are the starting point. A useful
-contribution may be validated reuse; a new capability requires its own exact
-Product/requirement/design authority. The owner now selects source-grounded
-frame indexes and explicit logical dependencies with reference-only and
-unchanged-content materialized views. An agent authors the relationships and
-selects the frame; code preserves their declared closure and diagnoses missing
-or stale bindings. The reference frame remains its owner's evaluation contract.
+Conserve the seven-member generic Axiom Product while qualifying the
+new exact source/program/map relation through its existing contracts.
+The [selected shared preparation](../../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md) and
+[T-032](../../specification_methodology/.ai-workspace/tickets/active/T-032-prepare-stdo-251-rc1.md)
+own this bounded matched-cohort work, independently of ABIogenesis T-288.
+No completed predecessor ticket or result is reopened.
 
-The [RC6 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T130745Z_rc6_release/README.md#closed-rc6-result) closes that successor with all seven mechanics members unchanged, exact RC6 source/frame bindings and public reacquisition. The [RC5 release result](../../specification_methodology/.ai-workspace/comments/codex/20260906T083553Z_rc5_release/README.md) and completed T-009 remain predecessor evidence with their original limitations. The owner-selected [RC7 release work](../../specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md#stage-b-worker-activation) qualifies the seven-member mechanics against exact RC7 source and the affected Representation/native path. The separately granted executable repair restores the existing unresolved-symlink-loop/output-preservation contract on observed Python 3.12.8 and 3.13.7; six Product members remain byte-conserved. The exact RC7 internal frame/Definition configuration is accepted after independent conservation assessment and the bounded decision; no Product acceptance is inferred.
+Source STDO owns meaning, Axiom owns generic resolution/validation/projection
+and joining, and Representation owns authored STDO chains and native guidance.
+Mechanical observations, source fidelity, native usefulness, configuration
+decisions and release effects remain separate. Reuse valid unchanged evidence;
+refresh the affected relation and retain negative outcomes.
 
-The [overall STDO delivery goal](../../specification_methodology/specification/GOALS.md#goal)
-owns the shared outcome. The existing combined
-[Representation T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#delivery-timeline)
-owns delivery tracking for this provider/consumer relation: M01 identifies
-actual gaps, M02 supplies the selected mechanics, and M03/M04 consume their
-exact results for regeneration and native qualification. This creates no
-duplicate Indexer ticket or independent milestone ledger. The owner's direct
-implementation grant and bounded Writer activation are recorded in
-[T-009](../../stdo_representation/.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md#implementation-admission-and-writer-activation).
+## Selected basis
 
-The Executive keeps mechanical facts distinct from semantic judgments and
-owner rulings. STDO-specific authoring and frame use stay with Representation;
-worksite classification producers remain with their declared owners. No
-semantic acceptance, automatic frame selection, context-budget engine or
-runtime is selected. Qualification and any release identity stay Product-local;
-published RC4 mechanics and their valid evidence remain available throughout.
-
-The [actual T-009 baseline](../../stdo_representation/dogfood/t009-m01/run-001/README.md)
-reproduced the exact Representation index, passed all 15 existing mechanical
-tests under normal and optimized Python, and refused eight malformed actual-
-program variants with stale maps removed. Representation consumes these exact
-results for M03. Its instruction repair remains at that Product; this Goal
-does not close native qualification, accept a Product or publish a successor.
-
-The [repaired frame-index mechanics](../dogfood/t009-frame-projection/run-002/README.md)
-now supply the selected projection contract, with 31 normal/optimized tests,
-independent source-preservation checks and unchanged released RC4 map bytes.
-T009 consumes the exact result for STDO authoring and native use. Its observed
-native mistakes are evaluated at their actual interface or use boundary; generic
-indexing does not acquire semantic evaluation to conceal them. The exact successor frame declaration is accepted and bound under the current
-owner release grant. Its decision is distinct from this mechanical result.
+The candidate represents exact Source STDO `v2.5.1-rc.1`, manifest
+`5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64`,
+with same-version child candidates. The live Product Definition and its exact
+decision remain the sole operative source-configuration selection; candidate
+construction does not promote a proposed frame or adopt an external caller.
+Historical RC7 and earlier records retain their own immutable claims and limits.
+The continuing STDO source project's authoring basis remains RC4.
 
 ## GOAL-001 — Dogfood the smallest useful Axiom Indexer
 

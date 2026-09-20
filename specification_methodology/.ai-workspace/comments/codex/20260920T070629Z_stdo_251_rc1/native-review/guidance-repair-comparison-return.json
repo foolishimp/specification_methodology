@@ -1,0 +1,46 @@
+{
+  "kind": "stdo.independent-changed-guidance-comparison-aggregate",
+  "frame": "F-DOGFOOD-USEFULNESS",
+  "actor": "/root/independent_native_comparison",
+  "capability_envelope": "K-DOGFOOD",
+  "claim": "Changed native skill preserves material governing constraints across both observed hosts against fixed first source controls",
+  "result": "falsified",
+  "cohort_sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4",
+  "skill_sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "reports": [
+    {
+      "path": "guidance-repair-claude-comparison.json",
+      "sha256": "0f60b1b3bb153da8065e060d6391c67cc24f345a305076633b21a4cd0947ef70",
+      "result": "falsified"
+    },
+    {
+      "path": "guidance-repair-codex-comparison.json",
+      "sha256": "d663e38ac4254fecdb467a441a9a886d996d4b4683e4cf87574b57f700d0f693",
+      "result": "satisfied"
+    }
+  ],
+  "material_findings": [
+    "GN-C01 / S2: revised Claude attempted three denied stderr file writes in one read-only projection loop after reading changed guidance"
+  ],
+  "boundary_consequence": "REQ-P-DOGFOOD-009 requires hold of dependent positive cross-host native qualification; full cohort readiness is not supplied by these observations",
+  "retained_recovery": [
+    "five-case result algebra",
+    "actual handoff section arrays",
+    "exact joined text",
+    "explicit S4 Writer transition"
+  ],
+  "owning_scope": "Native effect-scope adherence and affected qualification; no missing source/program/map law established",
+  "priority": "reserved to Executive",
+  "product_disposition": "reserved to Executive/Product owner",
+  "original_aggregate_retained": {
+    "path": "comparison-return.json",
+    "sha256": "22e06e2be77841b023c83f842a63d2fc7c896849919da8649be8e5155f98fad3"
+  },
+  "writer_effect_scope": "Only new evidence/report files under native-review; original reports and all native outputs unchanged",
+  "further_run_selected": false,
+  "report": {
+    "path": "guidance-repair-comparison-return.md",
+    "sha256": "395a616ef2cc17dca8ef6d7e3825f12a1b53563e683334a9416690f67f35c165"
+  }
+}

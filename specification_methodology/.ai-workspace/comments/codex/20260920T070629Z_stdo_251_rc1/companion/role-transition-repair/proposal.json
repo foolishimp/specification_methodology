@@ -1,0 +1,35 @@
+{
+  "kind": "stdo.rc1-explicit-role-transition-guidance-proposal",
+  "schema_version": 1,
+  "status": "proposed-only",
+  "role": "Worker",
+  "re_entry": "realization_refactor",
+  "grant": {
+    "record": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/README.md",
+    "section": "Explicit role-transition refinement",
+    "write_territory": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/role-transition-repair"
+  },
+  "live_path": "stdo_representation/skills/stdo-representation/SKILL.md",
+  "preimage_sha256": "60d29af40c5820b081c8e0f39f3f637bf51dbc596d5aac5885a9d65854e8aae2",
+  "proposed_path": "specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion/role-transition-repair/SKILL.md",
+  "proposed_sha256": "7ee7d150ac4584959ca4f3ab6d52245bc36124255a013351111650543a0dfd18",
+  "source": {
+    "uri": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action",
+    "install_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+    "member_sha256": "29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d",
+    "lines": [
+      284,
+      291
+    ],
+    "excerpt": "An actor occupying Executive must not modify candidate, Product or worktree\nbytes or perform an implementation effect. Filesystem or tool access and an\nedit being small, test-only, reversible or apparently obvious supply no\nexception. Mutation requires a separately activated Worker or Writer relation\nwith the exact operation grant, subject and write territory. A same-actor role\ntransition is explicit and recorded in the existing work carrier before the\neffect; the actor is no longer acting as Executive for that effect. Recording\nor delegating after an Executive edit cannot authorize it retroactively."
+  },
+  "delta": "One paragraph at item 5 makes the explicit recorded same-actor transition to a separately activated Worker or Writer with exact operation grant, subject and write territory mandatory before effects. Naming an actor alone does not change its active role. Existing bounded repeated effects require no new per-effect approvals.",
+  "conservation": {
+    "only_item_5_insertion": true,
+    "removing_insertion_restores_preimage_byte_for_byte": true,
+    "all_other_skill_bytes_preserved": true,
+    "prior_result_contract_and_structured_return_and_read_only_streams_repairs_preserved": true,
+    "live_product_cohort_and_native_records_unchanged": true
+  },
+  "qualification": "Exact preparation checks only; no native effectiveness or Product acceptance result is inferred from this proposed wording."
+}

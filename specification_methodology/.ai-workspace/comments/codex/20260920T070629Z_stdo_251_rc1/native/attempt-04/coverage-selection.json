@@ -1,0 +1,126 @@
+{
+  "binding_sha256": "647c43798a2e3c20268903b53b19276ad24d8c41b6c91b1805376d6e5469799b",
+  "cohort_sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "oracle_sha256": "6fd9af0b33b5dacf59ced8522ae1db0247d885532bd6a0b53350472688679517",
+  "oracle_binding_sha256": "d850532f747546c5aa6d87836796ff19b9f5b6a51f0f01cb05e8b4b3b48ea5d8",
+  "packet": {
+    "fixture.py": {
+      "type": "file",
+      "sha256": "9912c3db2dacc98240125cc9785cebd3fae4d4f301fd80737415dc1f262d1b37"
+    },
+    "project.md": {
+      "type": "file",
+      "sha256": "cd8daa7f0772939a4bf828721e512a112d64db871d7056d59dd6ecda096ace31"
+    },
+    "records/C1.md": {
+      "type": "file",
+      "sha256": "703a49be8abeb07dc18df04475a96f5195633a9ec66734c3c5322010f8ef3fc0"
+    },
+    "records/C2.md": {
+      "type": "file",
+      "sha256": "87c1c6527309863c7b66f553cd90e5af103f9d9822e36ef7ac7dd2003ce1a420"
+    },
+    "records/evidence.json": {
+      "type": "file",
+      "sha256": "9b9072b834646b155799767bca2f6619bd278f34555f2cc6e78222b26cc84ba8"
+    },
+    "task.md": {
+      "type": "file",
+      "sha256": "20f8cae04dd9e8163630ac26eaac5a9e1290d824398e9255225267f7ec69b883"
+    }
+  },
+  "prepare_sha256": "0021d8df121b01c86f1bdb40d39be268bd4b65d19e2329805d7a85cd38496a12",
+  "comparison": {
+    "fixed_source_controls": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+      "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+    },
+    "changed_representation_members": [
+      {
+        "path": "skills/stdo-representation/SKILL.md",
+        "before": {
+          "type": "file",
+          "path": "skills/stdo-representation/SKILL.md",
+          "sha256": "e25ab254c3f2329f3a93264328c373b8355ea8eb9855dfebbb451f91b467b674"
+        },
+        "after": {
+          "type": "file",
+          "path": "skills/stdo-representation/SKILL.md",
+          "sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c"
+        }
+      }
+    ],
+    "original_cohort": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/worksite/native/cohort.json",
+      "sha256": "6f0bcb8fdc1e19904dff67421884062555a56166ea53197dbac759acfb6172da"
+    },
+    "prior_pair_manifests": [
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+        "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+        "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+      }
+    ],
+    "relation": "Two fresh changed-guidance map contexts compared with fixed first source observations. Preserve all earlier outcomes; no source-arm rerun, answer repair or case-specific prompt delta."
+  },
+  "contexts": [
+    {
+      "name": "delivery-codex-map-first",
+      "host": "codex",
+      "arm": "map-first",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "nonsemantic_transport": [
+        {
+          "path": "/Users/jim/.codex-alt/installation_id",
+          "sha256": "27bdf920ece83dc25297b5bec97693086f082c3e3e48c1caa776c369ca7e2816",
+          "device": 16777230,
+          "inode": 246462899,
+          "mode": 420,
+          "size": 36
+        }
+      ],
+      "status": "ready_for_mechanical_preflight"
+    },
+    {
+      "name": "delivery-claude-map-first",
+      "host": "claude",
+      "arm": "map-first",
+      "worksite": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/worksite",
+      "runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/runtime",
+      "directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence",
+      "outer_profile": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-claude-map-first/evidence/sandbox.sb",
+      "models": {
+        "codex": {
+          "model": "gpt-6-astra",
+          "effort": "xhigh"
+        },
+        "claude": {
+          "model": "claude-fable-5-1",
+          "effort": "high"
+        }
+      },
+      "allowed_writes": [],
+      "nonsemantic_transport": [],
+      "status": "ready_for_mechanical_preflight"
+    }
+  ],
+  "native_execution": "not started; parent acceptance and trigger required"
+}

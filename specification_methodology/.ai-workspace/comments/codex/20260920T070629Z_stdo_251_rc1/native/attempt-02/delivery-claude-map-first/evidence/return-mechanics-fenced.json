@@ -1,0 +1,21 @@
+{
+  "context": "delivery-claude-map-first",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "12a788240856107dd88fce9bc90b03889bf3ec217688f0849a7027f6fbbfaddd",
+  "presentation": "unique_fenced_json; surrounding prose retained in raw final",
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": false
+    },
+    {
+      "claim": "action_is_last",
+      "pass": false
+    }
+  ],
+  "status": "structure_or_join_failed"
+}

@@ -1,0 +1,118 @@
+{
+  "cut": "v2.5.1-rc.1",
+  "source_release_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.1",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "source_revision": "dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a",
+  "source_tag_object": "b80e82e123f7f88eb0dffd9339f8ead9c733d153",
+  "cohort_manifest": "/Users/jim/src/apps/specification_methodology/stack_release.json",
+  "cohort_sha256": "a1bfcf45734dfe2543352d6e16b48c3efc41e9385363e2967103678c02bca9b6",
+  "products": {
+    "axiom_indexer": {
+      "root": "/Users/jim/src/apps/specification_methodology/axiom_indexer",
+      "support_members": [
+        {
+          "path": "releases/v2.5.1.md",
+          "type": "file",
+          "sha256": "d7075ec17d1a5c62cae4665abb80a44fc4661378b067daa77afbc77c2a57f654"
+        }
+      ]
+    },
+    "stdo_representation": {
+      "root": "/Users/jim/src/apps/specification_methodology/stdo_representation",
+      "support_members": [
+        {
+          "path": "releases/v2.5.1.md",
+          "type": "file",
+          "sha256": "4cad0d63bc5f2b01345c7a1d165037e27fa40fc008b986e2f35ca8c7b661e253"
+        },
+        {
+          "path": "specification/GOALS.md",
+          "type": "file",
+          "sha256": "25fdb2d47c99141661b4940f0171980e9a329d43c9e88276e2e96516ce62d606"
+        }
+      ]
+    }
+  },
+  "models": {
+    "codex": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh"
+    },
+    "claude": {
+      "model": "claude-fable-5-1",
+      "effort": "high"
+    }
+  },
+  "qualification_grant": "../README.md#native-qualification-preparation-grant",
+  "effect_boundary": "Native read-only task, fixture computations and stdout projection/join under exact candidate construction selection. No Product acceptance, publication, or adoption.",
+  "nonsemantic_transport": [
+    {
+      "path": "/Users/jim/.codex-alt/installation_id",
+      "sha256": "27bdf920ece83dc25297b5bec97693086f082c3e3e48c1caa776c369ca7e2816",
+      "device": 16777230,
+      "inode": 246462899,
+      "mode": 420,
+      "size": 36
+    }
+  ],
+  "transport_grant": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/codex-transport-activation.md",
+    "sha256": "9592c711966d3e192a1057f1ead3153acbbbd459c086f69d47492f51bf9fb6da"
+  },
+  "comparison": {
+    "fixed_source_controls": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/fixed-source-controls.json",
+      "sha256": "323f03dab595d6809d220499d705faca8a41fd62e3c192bcd759cfe0c1bff93a"
+    },
+    "changed_representation_members": [
+      {
+        "path": "skills/stdo-representation/SKILL.md",
+        "before": {
+          "type": "file",
+          "path": "skills/stdo-representation/SKILL.md",
+          "sha256": "b7182655903f13aa2b6ba77fa8ca773afe3bea02a641e1c17e1ef2660b343e5c"
+        },
+        "after": {
+          "type": "file",
+          "path": "skills/stdo-representation/SKILL.md",
+          "sha256": "60d29af40c5820b081c8e0f39f3f637bf51dbc596d5aac5885a9d65854e8aae2"
+        }
+      }
+    ],
+    "original_cohort": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-03/delivery-codex-source/worksite/native/cohort.json",
+      "sha256": "6f0bcb8fdc1e19904dff67421884062555a56166ea53197dbac759acfb6172da"
+    },
+    "prior_pair_manifests": [
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-claude.json",
+        "sha256": "ede4a2cc9e565dcfa6ebc3684aa97a088073e3a6b94169b087a05f8a50506531"
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-codex.json",
+        "sha256": "d9fc37e859fdb1bcd14f5502517cde533c190f435876d8615cf4df261d7ba02b"
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-claude.json",
+        "sha256": "bd8a567ce945742a0f154cb774656e075d108608ba6d3b79955a53e196e05c67"
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/evaluation-subject-guidance-repair-codex.json",
+        "sha256": "aa39338430b7eab6aad2d26c1371dc5d93f1bfdc6044da6beca75b4f334366f4"
+      }
+    ],
+    "relation": "Two fresh all-command read-only guidance map contexts against fixed first source observations. Preserve all prior results and the frozen through-attempt-04 generation; no source rerun, answer repair or task-specific prompt change.",
+    "previous_map_cohort": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/attempt-04/delivery-codex-map-first/worksite/native/cohort.json",
+      "sha256": "7d4529b788f4b1f13052b8e3bc56bdcb131715d7f529f6173373079f994d92a4"
+    }
+  },
+  "guidance_review": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/companion-read-only-review.json",
+    "sha256": "8d75f60e8d0b5fa157a9538a281b4eb51e743e9f5866ea2559c43104a370e2be"
+  },
+  "activation": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/native/activation-attempt-05.md",
+    "sha256": "bf5b6a12694db16ceabf025521cb08a8f124e67fbaa16564b67c17661de2266a"
+  }
+}

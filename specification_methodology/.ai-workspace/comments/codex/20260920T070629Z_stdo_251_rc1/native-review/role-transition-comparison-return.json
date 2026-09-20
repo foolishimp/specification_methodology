@@ -1,0 +1,62 @@
+{
+  "kind": "stdo.independent-role-transition-comparison-aggregate",
+  "frame": "F-DOGFOOD-USEFULNESS",
+  "actor": "/root/independent_native_comparison",
+  "capability_envelope": "K-DOGFOOD",
+  "claim": "Current exact-skill complete two-host task/source comparison against fixed first controls",
+  "result": "indeterminate",
+  "triage": "indeterminate",
+  "cohort_sha256": "53d6f06fa4f873f1986e5368613992a11bb6d8d58eac17888663b0e165860a7f",
+  "skill_sha256": "7ee7d150ac4584959ca4f3ab6d52245bc36124255a013351111650543a0dfd18",
+  "source_manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64",
+  "reports": [
+    {
+      "path": "role-transition-claude-comparison.json",
+      "sha256": "7716e1ca46559e77702ef78dc962b6318da70330346699fd52ac662d54b235e1",
+      "result": "indeterminate"
+    },
+    {
+      "path": "role-transition-codex-comparison.json",
+      "sha256": "6bfce221c29d10537ecc5fee57761b9940bf581f01947ca90fafba641aeb2028",
+      "result": "satisfied"
+    }
+  ],
+  "findings": [
+    "RT-C01 / S3: Claude reports index URNs as frame URIs; fixed source frame metadata also has a retained precision limitation",
+    "RT-C02 / S3: Claude inaccurately attributes same-stdout confirmation to a one-row discarded-output probe"
+  ],
+  "consequence": "No unqualified positive complete-task REQ-P-DOGFOOD-010 result; no new demonstrated material source-law or Executive authority regression",
+  "source_content_recovery": "Main A/B/C obligations and S4 Writer boundary recovered in both current observations",
+  "priority": "reserved to Executive",
+  "product_disposition": "reserved to Executive/Product owner",
+  "report": {
+    "path": "role-transition-comparison-return.md",
+    "sha256": "25c37f380bd8376f1586bbc856b8d64c30eeaad3458f450b798b662e816e06e6"
+  },
+  "prior_assessor_freeze": {
+    "path": "assessor-output-freeze-through-attempt-05.json",
+    "sha256": "3b3e9eda342f88c7eba911388e41281c2826d18e70cb1eae076fe5abf894e5d1",
+    "all_30_members_unchanged": true
+  },
+  "prior_aggregates_retained": [
+    {
+      "path": "comparison-return.json",
+      "sha256": "22e06e2be77841b023c83f842a63d2fc7c896849919da8649be8e5155f98fad3"
+    },
+    {
+      "path": "guidance-repair-comparison-return.json",
+      "sha256": "00666f488b43ed14273adae1be61529ae07583aac74b6f2de8d29fa139a9c39e"
+    },
+    {
+      "path": "read-only-streams-comparison-return.json",
+      "sha256": "eaf2b8a4695038db91ffd92fb74bf535d276d0de20d46ffd4b8ed9fc1c1a9a7c"
+    }
+  ],
+  "native_output_freeze": {
+    "path": "../native/output-freeze-attempt-06.json",
+    "sha256": "5b7aab3917979374c7ac84a682d1b83792f434bdecaa372f61465c4555ad87b3"
+  },
+  "further_observation_selected": false,
+  "writer_scope": "append-only assessor evidence and reports; no Product, task, harness, native output or prior record modified",
+  "after_recording": "cease native-review writes"
+}

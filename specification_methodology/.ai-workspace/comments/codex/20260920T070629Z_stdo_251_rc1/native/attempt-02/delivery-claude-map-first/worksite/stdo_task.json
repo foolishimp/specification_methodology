@@ -1,0 +1,92 @@
+{
+  "$schema": "stdo://releases/v2.5.1-rc.1/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo-251-qualification:delivery",
+    "name": "Delivery work packet",
+    "source_project": "./",
+    "bounded_context": null
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.5.1",
+      "basis": {
+        "uri": "stdo://releases/v2.5.1-rc.1/",
+        "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+      }
+    },
+    "additional_authorities": [
+      "./project.md",
+      "./task.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./qualification-basis.md",
+      "authority": [
+        "./task.md"
+      ],
+      "applies_to": [
+        "urn:stdo-251-qualification:delivery"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./project.md",
+    "product": "./project.md",
+    "specification": [
+      "./project.md"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo-251-qualification:fixture",
+        "root": "./",
+        "design": [
+          "./project.md"
+        ],
+        "implementation": [
+          "./fixture.py"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./task.md",
+    "tickets": {
+      "root": "./records/",
+      "lanes": {
+        "backlog": "./records/",
+        "active": "./records/",
+        "completed": "./records/"
+      }
+    },
+    "comments": {
+      "root": "./records/"
+    }
+  },
+  "composition": []
+}

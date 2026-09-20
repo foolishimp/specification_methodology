@@ -1,0 +1,21 @@
+{
+  "context": "delivery-claude-source",
+  "scope": "Output structure and exact join replay only; independent semantic assessment required",
+  "final_sha256": "6b55495367096645f2fb034b9073180b0ac602c151991891d8c21a3f01c321ea",
+  "presentation": "unique_fenced_json; surrounding prose retained in raw final",
+  "checks": [
+    {
+      "claim": "required_top_level_fields",
+      "pass": true
+    },
+    {
+      "claim": "seven_native_authored_section_rows",
+      "pass": false
+    },
+    {
+      "claim": "action_is_last",
+      "pass": false
+    }
+  ],
+  "status": "structure_or_join_failed"
+}
