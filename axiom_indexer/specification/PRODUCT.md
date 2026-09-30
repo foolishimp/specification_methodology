@@ -268,7 +268,7 @@ immutable annotated tag `axiom_indexer/v2.5.0-rc.4`, tag object
 `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. Publication identifies the
 qualified Product subject but is not Product acceptance. The source project
 continues without changing the accepted predecessor. The current
-`../releases/v2.5.1.md` selects local `2.5.1-rc.1` preparation against exact
+`../releases/v2.5.1.md` selects the current matched cohort against exact
 Source STDO of the same version. All seven generic Axiom Product members are
 byte-conserved from the published RC7 predecessor. Semantic changes and new
 STDO frame indexes remain with Representation. The live Product Definition and

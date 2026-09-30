@@ -82,9 +82,9 @@ Original validation,
 resolution and pure joining remain available. RC4's exact bytes and observations
 remain at its immutable tag.
 
-The published successor is `2.5.1-rc.1`, recorded in
-[releases/v2.5.1.md](releases/v2.5.1.md) and the
-[completed release](../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md).
+The current release is selected by
+[releases/v2.5.1.md](releases/v2.5.1.md). The
+[completed RC1 release](../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) retains its historical evidence.
 All seven RC7 Product members remain byte-identical; new STDO meaning and frame
 membership are authored by Representation. Exact map/projection reproduction
 and refusal observations qualify the changed mechanical input relation. The

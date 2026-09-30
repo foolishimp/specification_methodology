@@ -1,6 +1,12 @@
 # Axiom Indexer Goals
 
-## Current goal
+Current selection: T-033 in the STDO source project selects the complete 2.5.1 RC2
+cohort. Its [release record](../../specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/README.md)
+owns current work and final publication. RC1 results below remain historical
+evidence with their original limits. The accepted authoring Definition and frame
+basis remain separate from the represented source and release target.
+
+## Retained RC1 outcome
 
 Status: the complete 2.5.1 RC1 cohort is published with its recorded native
 qualification limits. External consumer adoption is unselected. RC7 remains
@@ -19,7 +25,7 @@ Mechanical observations, source fidelity, native usefulness, configuration
 decisions and release effects remain separate. Reuse valid unchanged evidence;
 refresh the affected relation and retain negative outcomes.
 
-## Selected basis
+## Retained RC1 basis
 
 The release represents exact Source STDO `v2.5.1-rc.1`, manifest
 `5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64`,

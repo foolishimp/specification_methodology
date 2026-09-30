@@ -2,7 +2,7 @@
 
 Status: active source definition. The [Product Definition](../stdo_representation.json)
 `constitution.stdo.basis` owns the continuing source project's operative STDO
-selection. The 2.5.1 RC1 construction subject and dependency below retain their own exact
+selection. The 2.5.1 RC2 construction subject and dependency below retain their own exact
 identities. The live source-project frame/Definition binding remains the operative
 selection until a separate exact successor configuration decision is consumed.
 The published RC4 cohort and accepted STDO Representation
@@ -10,8 +10,8 @@ The published RC4 cohort and accepted STDO Representation
 
 ## Product statement
 
-STDO Representation 2.5.1-rc.1 is the canonical `a_c.STDO` semantic compression
-of exact Source STDO `v2.5.1-rc.1`, the deterministic logical constraint index over that
+STDO Representation 2.5.1-rc.2 is the canonical `a_c.STDO` semantic compression
+of exact Source STDO `v2.5.1-rc.2`, the deterministic logical constraint index over that
 compression, and concise native instructions for using both. An LLM reads
 Source STDO, authors the compression, invokes the exact same-version Axiom
 Indexer mechanics, repairs diagnostics, and uses the index to select reference
@@ -31,8 +31,8 @@ and ordering choice.
 ## Product shape
 
 ```text
-exact Source STDO v2.5.1-rc.1
-  -> a_c.STDO 2.5.1-rc.1 Axiomatic Program (semantic compression)
+exact Source STDO v2.5.1-rc.2
+  -> a_c.STDO 2.5.1-rc.2 Axiomatic Program (semantic compression)
   -> Logical Constraint Map (deterministic index over the program)
   -> native STDO Representation skill
   -> LLM-selected visible frame details and ordered sections
@@ -45,7 +45,7 @@ it.
 
 ## Product terms
 
-- **Represented STDO Version** is exact version `2.5.1-rc.1`, including its
+- **Represented STDO Version** is exact version `2.5.1-rc.2`, including its
   prerelease ordinal; its stable semantic version line is `2.5.1`.
 - **Source STDO** is that exact installed standards corpus and remains semantic
   authority.
@@ -108,7 +108,7 @@ including its prerelease ordinal:
 
 ```text
 representation_exact_version = represented_stdo_exact_version
-2.5.1-rc.1 = exact_version(stdo://releases/v2.5.1-rc.1/)
+2.5.1-rc.2 = exact_version(stdo://releases/v2.5.1-rc.2/)
 representation_version_line = represented_stdo_version_line = 2.5.1
 ```
 
@@ -130,7 +130,7 @@ profile already used by the accepted Representation RC1:
 ```text
 local_release_key = stdo_representation
 RC branch = refs/heads/rc/stdo_representation/2.5.1
-matched immutable RC = refs/tags/stdo_representation/v2.5.1-rc.1
+matched immutable RC = refs/tags/stdo_representation/v2.5.1-rc.2
 version-line selector = refs/tags/stdo_representation/v2.5.1
 release branch = refs/heads/release/stdo_representation/2.5.1
 Project Subtree root = stdo_representation
@@ -154,23 +154,23 @@ replacement for the corpus.
 
 ```text
 release_uri:
-  stdo://releases/v2.5.1-rc.1/
+  stdo://releases/v2.5.1-rc.2/
 qualified_ref:
-  refs/tags/specification_methodology/v2.5.1-rc.1
+  refs/tags/specification_methodology/v2.5.1-rc.2
 tag_object:
-  b80e82e123f7f88eb0dffd9339f8ead9c733d153
+  84883bb69b616dcc4dbeeac877e57ba8be586efd
 commit:
-  dc4742d08af0a1c42c437a4ce645ea7ca55f3a3a
+  c45a6c6739c72c47974d7435424d3db2dc2662a9
 repository_tree:
-  eaf8358b09d3defcc5c85dd812961849480ab0c7
+  c43a00617fd40361f3626cad6af4de5e7355bb58
 project_subtree_tree:
-  00d7144449ca85af8746bbc7912e344dce55f80e
+  7c36d648b120215ac46700fa89296b11f7083ce1
 standards_tree:
-  5d16a82623e9e9450585d877e3d9ed49f132d250
+  ce049b3fe27b2546494d6a0657f4f8450fec4429
 installed_manifest_sha256:
-  5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64
+  3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782
 standards_member_set_sha256:
-  c6a3189ef79aeb4e3f75eb8fd8fba2f1126ea450df3ec59087273c56c03e3795
+  2f54671dfde54a6ad87347ac7190028af5e21021988247edf8068ab6248ef7e8
 axiomatic_calculus_sha256:
   cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 ```
@@ -178,8 +178,8 @@ axiomatic_calculus_sha256:
 ### Axiom Indexer
 
 ```text
-exact_version: v2.5.1-rc.1
-qualified_ref: refs/tags/axiom_indexer/v2.5.1-rc.1
+exact_version: v2.5.1-rc.2
+qualified_ref: refs/tags/axiom_indexer/v2.5.1-rc.2
 construction_state: exact seven-member candidate; child cut qualification remains required
 product_member_inventory_sha256:
   55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1
@@ -192,7 +192,7 @@ output_contract_sha256:
 ```
 
 The exact Axiom child tag object, peeled commit and trees are qualified through
-that immutable 2.5.1 RC1 ref and its release record after candidate freeze. They are
+that immutable 2.5.1 RC2 ref and its release record after candidate freeze. They are
 not guessed or copied from RC4 before the child cut exists. Before publication,
 only the expressly selected exact construction candidate supplies mechanics.
 Released use requires the qualified same-version immutable dependency.
@@ -202,7 +202,7 @@ Historical RC4 used the seven-member inventory
 and narrower executable
 `dfb4d7f1e6b06b9c215154a00b689ce82d7cd36e1ec80ee8f93da9c20798b672`.
 Its release record and exact tag retain those coordinates; they do not qualify
-the 2.5.1 RC1 projection capability or change accepted predecessor evidence.
+the 2.5.1 RC2 projection capability or change accepted predecessor evidence.
 
 ## Axiom Indexer Product dependency relation
 
@@ -215,10 +215,10 @@ Indexer Product member and transfers no semantic, acceptance, publication, or
 runtime authority.
 
 The historical RC4 dependency supplies its narrower validation, indexing and
-joining contract without frame-index projection. The selected 2.5.1 RC1 dependency
+joining contract without frame-index projection. The selected 2.5.1 RC2 dependency
 supplies projection under its exact contract. Bounded source qualification may
 use the selected Mechanical Construction Candidate under its existing grant;
-released projection use requires the qualified same-version immutable 2.5.1 RC1 cut.
+released projection use requires the qualified same-version immutable 2.5.1 RC2 cut.
 Neither path silently substitutes mutable source for an Install or adopts a
 new governing basis for an external caller.
 
@@ -348,13 +348,13 @@ that code validates role independence or computes a deterministic role packet.
 
 ## Product member set
 
-The selected 2.5.1 RC1 packaging successor contains nine repository entries. Its
+The selected 2.5.1 RC2 packaging successor contains nine repository entries. Its
 program and map directory carries the exact represented cut; the immutable RC4
 inventory remains its original eight entries without the frame-index guide.
 The successor member set is:
 
 ```text
-build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/
+build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.2/
   axiomatic-program.json
   logical-constraint-map.json
 skills/stdo-representation/
