@@ -57,7 +57,7 @@ class PluginDistributionTests(unittest.TestCase):
         self.assertEqual(codex["skills"], "./skills/")
         self.assertEqual(claude["name"], codex["name"])
         self.assertEqual(claude["version"], codex["version"])
-        self.assertEqual(claude["version"], "2.5.1-rc.1")
+        self.assertEqual(claude["version"], "2.5.1-rc.2")
 
     def test_workflow_metadata_has_positive_and_negative_trigger_bounds(self) -> None:
         for name in sorted(WORKFLOW_SKILLS):

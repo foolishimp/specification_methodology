@@ -29,7 +29,7 @@ source_digests:
   TRAVERSAL_OCCURRENCE_PROFILE.md: 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1
   REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
   STDO_REFERENCE_FRAME_BASELINE.md: 29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d
-  SPEC_METHOD.md: ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3
+  SPEC_METHOD.md: 7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
   DESIGN_MODULE_METHOD.md: 5cb69556bba1171ec347cac96811c50071f0648a367103aa215070239b93785e
@@ -43,7 +43,7 @@ source_digests:
 index_digests:
   GLOSSARY_GUIDE.md: da6d81df61d61e685bcf1ef69187839a52d72af7f1d61af050244f856efe0cd0
 generated_by: codex
-generated_at: 2026-09-20
+generated_at: 2026-09-30
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -967,6 +967,13 @@ layer that owns the missing truth.
   and repetitions; reuse valid evidence and rerun affected assurance on
   material invalidation. See
   `STDO_REFERENCE_FRAME_BASELINE.md#steel-thread-delivery`.
+- Intake triage triangulates candidate diagnoses through applicable frames over
+  the same subject and basis. Their distinct material variables, governing
+  relations and evidence constrain the supported cause and smallest lawful
+  repair scope. Preserve unresolved alternatives; duplicated analysis under
+  different frame names adds no evidence. Use the smallest sufficient frame
+  configuration, preserve required independence, and infer neither a new review
+  round nor repair authority. See `SPEC_METHOD.md#universal-intake-triage`.
 - Reviewer owns evidence-bound technical triage for its exact finding: affected
   claim, severity, causal assessment and confidence, blast radius, workaround,
   repair complexity and regression risk, and residual uncertainty where

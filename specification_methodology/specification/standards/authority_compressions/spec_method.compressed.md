@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: ff93375a862cd3c31b27a2cc79f8f6a4111586ca7e31e5514b8af88d3fbb99e3
+source_digest: 7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-20
+generated_at: 2026-09-30
 stale_if_source_digest_changes: true
 ---
 
@@ -33,6 +33,15 @@ This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
 decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
 For that decision, route to the digest-current DMM source or compression, or to
 the aggregate STDO compression.
+
+## Intake Triage Compression
+
+- Intake triage triangulates candidate diagnoses through the smallest sufficient
+  applicable frame configuration over the same subject and basis. Distinct
+  material variables, governing relations and evidence constrain cause and lawful
+  repair scope; duplicated analysis adds no evidence. Preserve uncertainty and
+  required independence. Diagnosis neither grants effects nor requires changing
+  sufficient law. See `SPEC_METHOD.md#universal-intake-triage`.
 
 ## Recursive Product Taxonomy Compression
 

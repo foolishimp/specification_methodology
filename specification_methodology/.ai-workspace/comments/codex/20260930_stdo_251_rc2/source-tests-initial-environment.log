@@ -1,0 +1,63 @@
+..........E...................F..............................................E..E.............
+======================================================================
+ERROR: test_cohort_update (unittest.loader._FailedTest.test_cohort_update)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_cohort_update
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/tests/test_cohort_update.py", line 13, in <module>
+    from stdo_toolchain.cohort_update import cohort_update, _axiom_digest, _materialize
+ModuleNotFoundError: No module named 'stdo_toolchain'
+
+
+======================================================================
+ERROR: test_repository_dogfood (unittest.loader._FailedTest.test_repository_dogfood)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_repository_dogfood
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/tests/test_repository_dogfood.py", line 9, in <module>
+    from jsonschema import Draft202012Validator, FormatChecker
+ModuleNotFoundError: No module named 'jsonschema'
+
+
+======================================================================
+ERROR: test_toolchain (unittest.loader._FailedTest.test_toolchain)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_toolchain
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/tests/test_toolchain.py", line 9, in <module>
+    from stdo_toolchain.errors import StdoError
+ModuleNotFoundError: No module named 'stdo_toolchain'
+
+
+======================================================================
+FAIL: test_hosts_share_five_workflows_and_claude_refresh_is_explicit (test_plugin_distribution.PluginDistributionTests.test_hosts_share_five_workflows_and_claude_refresh_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/tests/test_plugin_distribution.py", line 60, in test_hosts_share_five_workflows_and_claude_refresh_is_explicit
+    self.assertEqual(claude["version"], "2.5.1-rc.1")
+AssertionError: '2.5.1-rc.2' != '2.5.1-rc.1'
+- 2.5.1-rc.2
+?          ^
++ 2.5.1-rc.1
+?          ^
+
+
+----------------------------------------------------------------------
+Ran 94 tests in 4.872s
+
+FAILED (failures=1, errors=3)

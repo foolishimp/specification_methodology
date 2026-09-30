@@ -1,0 +1,14 @@
+[
+  {
+    "id": "local",
+    "request": "Tidy the export helper. Governing Public timeout remains 30 seconds. Candidate emits 45. Accepted design requires preserving the declared timeout and permits the local repair. One capable actor has an existing local realization grant; no independent-review condition applies. No other mismatch is observed. Diagnose and choose the lawful next action."
+  },
+  {
+    "id": "cross_boundary",
+    "request": "A completed operation remains valid under the Product across successive Runs of one mutable workspace. After a Run fails, two different readers report that operation absent. Storage evidence retains its successful result; each reader correctly consumes the shared projection. Current projection design unconditionally expires all facts when a Run ends, and code matches that design. Diagnose the failure, identify which observations distinguish consumer symptoms from cause, and choose the smallest lawful re-entry."
+  },
+  {
+    "id": "uncertain",
+    "request": "Two consumers show missing workspace evidence. Either the producer never appended it or the projection discarded it. Available traces contain only consumer output; the producer log and projection transitions are unavailable. Two reviews repeat the same consumer trace under different frame names. A proposed repair patches both readers and declares a unique producer cause. Evaluate that proposal and identify the next necessary evidence without inventing facts."
+  }
+]
