@@ -1,7 +1,7 @@
 # Axiom Indexer Goals
 
-Current selection: T-033 in the STDO source project selects the complete 2.5.1 RC2
-cohort. Its [release record](../../specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/README.md)
+Current release: T-033 in the STDO source project completes the published and
+freshly verified 2.5.1 RC2 cohort. Its [release record](../../specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/README.md)
 owns current work and final publication. RC1 results below remain historical
 evidence with their original limits. The accepted authoring Definition and frame
 basis remain separate from the represented source and release target.

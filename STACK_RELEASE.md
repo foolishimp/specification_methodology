@@ -96,6 +96,11 @@ records the published matched cohort, verified public installation and retained
 Representation native qualification limits. T-288 and ABI delivery supply no
 release dependency. External consumer adoption remains unselected.
 
+The [2.5.1 RC2 release](specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/RELEASED.md)
+records the published triage clarification, targeted semantic/index update,
+bounded native assessment, atomic cohort publication and fresh public
+reacquisition. RC1 remains immutable; external consumer adoption is unselected.
+
 ## Coordinated Construction
 
 The first complete coordinated cohort was `v2.5.0-rc.4`; transitional RC3 index

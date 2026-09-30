@@ -2,7 +2,7 @@
 
 ## Goal
 
-Status: STDO 2.5.1 RC2 selected through T-033; RC1 remains published
+Status: STDO 2.5.1 RC2 published; RC1 remains its preserved predecessor
 
 Deliver proportionate STDO use that a native agent can carry through from an
 ordinary request to a truthful completed, refused or recoverable outcome.
@@ -41,7 +41,7 @@ migration. The separately selected source refinement below preserves the release
 
 ## Selected Work
 
-- [T-033](../.ai-workspace/tickets/active/T-033-release-stdo-251-rc2-triage-triangulation.md) clarifies triage triangulation and delivers the complete RC2 cohort through targeted semantic revision, mechanical rebinding and bounded qualification. Preserve existing authority and proportionality; external consumer adoption is unselected.
+- [T-033](../.ai-workspace/tickets/completed/T-033-release-stdo-251-rc2-triage-triangulation.md) completes triage triangulation and the published, freshly verified RC2 cohort through targeted semantic revision, mechanical rebinding and bounded qualification. Preserve existing authority and proportionality; external consumer adoption is unselected.
 
 - [T-032](../.ai-workspace/tickets/completed/T-032-prepare-stdo-251-rc1.md) completes the independent STDO 2.5.1 RC1 matched-cohort release. [The release result](../.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) records shared postmortem refinements, accepted T-031 carry-forward, exact publication and retained Representation native limitations. T-288 and ABI delivery supply no dependency; external consumer adoption remains unselected.
 - [T-031](../.ai-workspace/tickets/completed/T-031-bind-end-to-end-interface-integration-frame.md) closes the reusable end-to-end interface integration source frame, affected source projections and bounded qualification. ABIogenesis owns its accepted local frame application under existing RC7. Released availability retains the ticket's complete-cohort dependency; no new release, cohort regeneration or consumer method adoption is selected.
@@ -88,7 +88,7 @@ sequence, conditions and progress.
   plugin is subordinate auxiliary tooling bound by the same release record.
 - RC3 remains the immutable STDO predecessor. Transitional RC3 Axiom Indexer
   and Representation work is evidence only and receives no child publication.
-- STDO 2.5.1 RC1 is the current published complete cohort; RC7 is its exact predecessor. Earlier cuts retain their immutable identities and historical evidence.
+- STDO 2.5.1 RC2 is the current published complete cohort; RC1 is its exact predecessor. Earlier cuts retain their immutable identities and historical evidence.
 - Product acceptance and consumer adoption remain separate from publication.
 
 ## Retained Native Outcome

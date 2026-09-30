@@ -1,6 +1,7 @@
 # T-033 — Clarify triage triangulation and release STDO 2.5.1 RC2
 
-- status: active
+- status: completed
+- completed_at: 2026-09-30
 - owner: specification_methodology
 - change_class: requirement_reprice
 - re_entry_point: SPEC_METHOD Universal Intake Triage
@@ -17,11 +18,15 @@ count, extra review round or automatic constitutional re-entry.
 
 ## Completion
 
-- [ ] Source and affected guidance independently reviewed on exact bytes.
-- [ ] Targeted a_c semantic delta, complete RC2 source rebinding and deterministic
+- [x] Source and affected guidance independently reviewed on exact bytes.
+- [x] Targeted a_c semantic delta, complete RC2 source rebinding and deterministic
       map/projections verified; bounded changed-use qualification assessed.
-- [ ] Complete RC2 cohort published through STACK_RELEASE gates and freshly
+- [x] Complete RC2 cohort published through STACK_RELEASE gates and freshly
       reacquired; immutable RC1 and unrelated work preserved.
 
 Reuse unaffected RC1 evidence with its retained limitations. Generic Axiom
 mechanics and external consumer adoption are outside the change.
+
+[Published result](../../comments/codex/20260930_stdo_251_rc2/RELEASED.md) binds
+source A, cohort B, final gates and fresh public acquisition. One Codex context
+with targeted readback is bounded native evidence, not repeated reliability.

@@ -31,3 +31,9 @@ Release-check maintenance includes the existing plugin-version assertion in
 `specification_methodology/tests/test_plugin_distribution.py`; its sole delta
 selects RC2. Internal authoring Definitions and accepted frame bases remain
 unchanged; represented-source and release coordinates advance independently.
+
+## Completion
+
+The complete RC2 cohort is published and verified. [RELEASED.md](RELEASED.md)
+records exact identities, bounded qualification, measured reconstruction time
+and preserved limitations. T-033 is complete; no external adoption is selected.
