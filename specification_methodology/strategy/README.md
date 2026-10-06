@@ -36,3 +36,4 @@ Content that is already constitutional should not live here. Use this folder for
 ## Current contents
 
 - `OODD_future_strategy.md` — Organisation Outcome-Driven Development. The organisational operating model built on ODD cells. Working model for what a graph-native electronic organisation could look like. Author-labelled *"supporting future-strategy surface; not constitutional method yet."*
+- [Relational Meaning: Nearness, Reference Frames and Functional Equivalence](relational_meaning_model.md) — Working paper defining a predictive relational model, its implementation mappings, resource bounds and experimental tests.
