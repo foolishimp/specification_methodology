@@ -89,9 +89,11 @@ A work item closes by the condition it stated, not by a reviewer's approval;
 a reviewer result is an input to closure, never the closure. Green labels,
 document counts, review counts and historical outcomes are not acceptance.
 A human decision may be exercised directly or through an explicitly admitted
-bounded proxy whose grant names its scope and exclusions; a proxy cannot
-change Product meaning, requirements, authority or accepted design
-([UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004)).
+bounded proxy whose grant names its scope and exclusions
+([UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004));
+a proxy cannot change Product meaning, requirements, governing authority
+or accepted design, and such a change re-enters at its owning relation
+([UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
 
 ## 6. Conformance of realisations
 
@@ -103,20 +105,31 @@ separate claims with separate evidence. Several realisations may conform to
 one Σ; sufficiency does not require unique derivation or equality with an
 incumbent (conserves the
 [Reconstruction Litmus](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#reconstruction-litmus)
-and UP-022's comparison rule). A weak Σ that admits materially different
+and
+[UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
+comparison rule, under which unique derivation, determinism and incumbent
+equality are not generic comparison criteria). A weak Σ that admits materially different
 behaviours either declares the latitude or is repaired before a
 decision-complete design is claimed.
 
 ## 7. Qualification of the method itself
 
 The method is qualified the way it qualifies anything else: a fresh
-competent constructor, inside a declared envelope, using only the method's
-published surfaces and declared trial subjects, with author material and
-reference outcomes withheld until freeze; then an independent evaluator
-compares the frozen result with the method's mandatory relation population
-(conserves
+competent constructor, inside a declared envelope, using only the declared
+ordinary method and authority surfaces and declared trial subjects, with
+material reference outcomes, incumbent realisations, author memory and ad
+hoc rescue withheld until freeze wherever earlier exposure would
+compromise reconstructive independence; then an independent evaluator
+compares the frozen result with the method's mandatory relation
+population. This conserves
 [Method Self-Qualification](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#method-self-qualification),
-[RF-013](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-013-reconstructable-activation)).
+which leaves the constructor, freeze and assessor protocols to the
+governing authority, and
+[RF-013](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-013-reconstructable-activation)
+for the reconstructability of the activation; the surfaces rule and the
+conditional withholding conserve
+[UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
+qualification protocol.
 
 Recoverability benchmark (new; derived from P0 with the actor-change
 premise). For a selected activation, measure whether a fresh actor given
@@ -136,8 +149,8 @@ detected and the cost.
 | UP-001, UP-022 | conserved; §1, §3, §6 |
 | UP-008, RF-007, AC-018, AC-019 | conserved; §2 |
 | UP-007 | conserved; §3 |
-| RF-013, Method Self-Qualification | conserved; §7; the benchmark is new |
-| UP-013 acceptance interval, AC-014, UP-004 proxy | conserved; §5 |
+| RF-013, Method Self-Qualification, UP-022 qualification protocol | conserved; §7; the benchmark is new |
+| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5 |
 | Reconstruction Litmus | conserved; §6 |
 | TICKET judgment continuity | conserved via CALCULUS §7 |
 | Baseline Reviewer and technical triage | conserved by reference; §4 states the result shape |

@@ -2,8 +2,10 @@
 
 Tier 2. The cases this corpus must pass before it is qualified. A case names
 its subject, the mechanism under test, the independently specified expected
-distinction, and its status. No case has been run; status is recorded when
-an actor other than the author runs it under EVALUATION §3 and §7.
+distinction, and its status. A status names what exists: a fixture
+designed, runs by a fresh constructor, or an assessment by an independent
+assessor under EVALUATION §3 and §7. A run is not a pass; only an
+assessment records one.
 
 A case passes when the expected distinction is observed and no coerced
 success appears anywhere in the result (CALCULUS §3). A case that cannot be
@@ -35,11 +37,11 @@ that must catch it.
 
 | Case | Shared task | Expected distinction | Status |
 |---|---|---|---|
-| T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission | first fixture run twice and reviewed; successor fixture [CASE-2](../qualification/cases/T-01/CASE-2.md) |
+| T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission | first fixture run twice and reviewed; successor fixture [CASE-2](../qualification/cases/T-01/CASE-2.md) run twice; not assessed |
 | T-02 Intent to usable result | a small feature from a sufficient but ambiguous intent | the ambiguity is resolved or kept explicit; the result satisfies independently owned acceptance | not run |
-| T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) designed |
-| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) designed |
-| T-05 Compaction and actor change | pause, clear context, resume with a new actor | valid progress and basis recovered; unsupported completion claims and unnecessary restarts detected | not run |
+| T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) run twice; not assessed |
+| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) run twice; not assessed |
+| T-05 Compaction and actor change | pause, clear context, resume with a new actor | valid progress and basis recovered; unsupported completion claims and unnecessary restarts detected | fixture [T-05](../qualification/cases/T-05/CASE.md) designed |
 | T-06 Changed governing requirement | one requirement revised after partial construction | affected claims reopened; unaffected results reused with explicit dependencies | not run |
 | T-07 Defective acceptance oracle | a candidate passing structural checks but violating required behaviour | assessment detects the defect or reports its evidential limit; structural green is not acceptance | not run |
 | T-08 Broader process use | a sourced decision analysis with uncertainty and stale evidence | facts, assumptions, judgments and authority stay distinct; the result is independently assessable | not run |
