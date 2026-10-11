@@ -85,7 +85,7 @@ These are document relations, not six new runtime APIs or universal phases.
 | T4: publication/use | Actual candidate and RC2 readers produce adequate outputs. Resolving index and faulty guidance receive separate judgments; [fresh repaired-entry confirmation](T2_T6/assessments/READER_REPAIR.md) supports useful use under its filtered exposure. Whole-path efficiency remains unproved. |
 | T5: separately bound a_c | Complete seven-member pinned Install verified before use. Both actual carriers mechanically validate; wrong interpretation is independently falsified. Corrected quote fidelity and selected finite provider branches are separately assessed. |
 | T6: qualification/successor | Current [case/capability ledger](CASE_LEDGER.md) exposes every selected discriminator and limit. Four-duty successor omission is detected/repaired/confirmed; full 2.x migration remains owner-unselected in [predecessor scope](PREDECESSOR_SCOPE.md). |
-| Cross-tenant comparison | Separate next activation after this own candidate/proof checkpoint; authorized peer acquisition reads a named commit and writes only Codex's review. |
+| Cross-tenant comparison | Subsequent [closed comparison](../reviews/20261011T161438Z_REVIEW_CLAUDE_CODEX_COMPLETED_BUILD.md) reads this completed subject at 7445f1e and Claude at 5a8a996c. It writes only Codex's review and changes no method member. |
 
 ## Actual Failures And Owning Repairs
 

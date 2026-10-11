@@ -16,6 +16,8 @@ Current build: the [method entry](standards/README.md) supplies five core owners
 
 [Design](design/README.md), [standards](standards/README.md), [a_c](a_c/README.md) and [qualification](qualification/README.md) route the separate HOW and evidence territories. Presence of a proposal is not implementation, actual-use qualification or release.
 
+The authorized [completed-build comparison](reviews/20261011T161438Z_REVIEW_CLAUDE_CODEX_COMPLETED_BUILD.md) reads Codex at 7445f1e and Claude at 5a8a996c. It compares design and actual evidence, records the peer's bounded qualification findings, and preserves Jim's canonical/release decisions. The frozen Codex method was not revised from peer exposure.
+
 ## Historical C1 Evidence
 
 The [response and author disposition](reviews/20261011T075016Z_RESPONSE_claude_c1_principles.md) record the bounded repair. The [initial manuscript](qualification/C1_INITIAL_PRINCIPLES.md) remains byte-identical; its [historical independent review](qualification/C1_REVIEW.md) assesses that initial subject. The successor is a declared post-exposure intervention, not a retroactive initial pass. The [outside-tenant C1 ticket](../../.ai-workspace/tickets/active/T-001-CODEX-principles.md) preserves the earlier work record; tenant returns now remain here and are mirrored by the common pen.
