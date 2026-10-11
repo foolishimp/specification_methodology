@@ -333,3 +333,69 @@ T2 is not closed: closure needs an authorised independent assessment of
 runs A and B under CASE.md's six expected distinctions and an
 author-independent fidelity judgment of the T2 program. Next: T3
 (EVALUATION §5–8, CONFORMANCE, PROFILES; case T-05).
+
+## T3 thread return, 2026-10-11T15:16:40Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+the same authorisation as T2. Start bounded below by the T2 return stamp,
+2026-10-11T14:58:32Z.
+
+Delivered, in two commits:
+
+- `c539daa`: the T3 increment frozen (EVALUATION `a9310f0c…a310` with
+  §1–4 byte identical to T1.2; CONFORMANCE `2f6409b7…fc2d`; PROFILES
+  `c83c9365…1865`; the T2 files unchanged) after the author's pre-freeze
+  route check over EVALUATION §5–7 and PROFILES: first pass 14 satisfied,
+  1 falsified, 1 out_of_frame, 1 indeterminate; repairs (proxy limits to
+  UP-020, UP-022's comparison rule linked, the qualification protocol to
+  UP-022, PROFILES §3 routed to its DESIGN_MODULE sections with the
+  per-boundary exemption turned into a residual, §5 routes added); second
+  pass 22 satisfied, 3 falsified on precise points (RF-013 scoping,
+  UP-022's conditional withholding, ODD's ownership of F_P and F_H);
+  repaired; third pass on the two sections all satisfied. The T3 program
+  `urn:stdo-3:claude:program:a-c-text:t3` (127 symbols, 161 clauses, 7
+  residuals; canonical `41afde44…082e`) validated with zero diagnostics;
+  three frames projected. Case T-05 designed with a real interrupted work
+  state (five steps completed by step actors, one natural refusal, one
+  step killed six seconds after `actor_started`, USD 0.28) and the
+  predecessor's draft. Case R-01 designed (card, task subject, five
+  variants, operator).
+- this commit: two T-05 constructor runs by fresh coordinator contexts of
+  this model family, each copying the work state and continuing its
+  lifecycle log in one file:
+  A `d8d14bf9…9e26`: composite out_of_frame, 23 of 23 covered, 21
+  satisfied, R09 out_of_frame and R10 indeterminate carried as the P4a
+  actor judged; five steps reused after a recorded applicability check
+  (section, card and instrument digests, every rc.2 block re-measured by
+  dry run), none re-run; three draft claims disposed with evidence; P4b-2
+  reconciled and closed as interrupted with its effect unknown before any
+  repetition; three new steps; 7 min 41 s.
+  B `0642f7dc…ba17`: the same shape with the prescribed reverse order
+  (P6, P5, then the interrupted routes last); three new steps; 9 min 57 s.
+
+Author's structural check over both logs: no problems; the fixture is
+byte identical after both runs. Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the predecessor's draft carried
+a third unsupported claim the case owner had not declared (the P4a row),
+caught by both constructors and now corrected in CASE.md; a fresh step
+actor on the whole FOUNDATIONS §3 judged AC-016 out_of_frame and RF-010
+indeterminate for P4a where the T-01 A2 run, with the paragraph alone,
+judged both satisfied, a candidate finding against P4a's attribution of
+RF-010 and an observation about the context sensitivity of route
+judgments; the instrument does not log its own digest.
+
+Resource observation: step actors for the fixture and the two runs, 12
+starts, USD 0.55 list, all `claude-sonnet-5-5`; pre-freeze checks 11
+starts. Coordinator spend as the harness reports it, definition
+unverified: A 132,455 tokens, 22 tool uses; B 163,979 tokens, 26 tool
+uses; the two ran in parallel, 9 min 57 s wall. The author's own
+generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 30 files, 361 links
+including every `stdo://` fragment, no trailing whitespace.
+
+Work result: `candidate_ready` / `satisfied` for the declared T3 outputs.
+T3 is not closed: closure needs an authorised independent assessment of
+runs A and B under CASE.md's six expected distinctions and an
+author-independent fidelity judgment of the T3 program. Next: T4.

@@ -155,3 +155,31 @@ independence (EVALUATION §3).
 
 | Run | Constructor | Record | Assessment |
 |---|---|---|---|
+| A, `20261012-A-claude-fresh-001` | fresh Claude context (claude-fable-5-1); subject at `c539daa`; step actors claude-sonnet-5-5 through the instrument; order its own | [RETURN.md](../../runs/T-05/20261012-A-claude-fresh-001/RETURN.md), SHA-256 `d8d14bf9642f398786ef2e3872fdcc66c4ee9b0dcf0ed4055b1b7edcf6359e26`; `work_state/lifecycle.jsonl` 36 events, the fixture's 19 first and unchanged; constructor's own composite: out_of_frame over 23 of 23 covered (21 satisfied, R09 out_of_frame, R10 indeterminate as P4a's actor judged); five completed steps reused after a recorded applicability check, none re-run, eight dry-run re-measurements; three draft claims disposed; P4b-2 closed as interrupted with its effect unknown before any repetition, R14 and R15 covered by a new step; 3 actor starts (P4b-2-resume, P5, P6), 37,154 context tokens, USD 0.171; stop state out_of_frame; 7 min 41 s | not assessed; awaiting an authorised assessor |
+| B, `20261012-B-claude-fresh-001` | as above; order prescribed (P6, P5, then the interrupted routes) | [RETURN.md](../../runs/T-05/20261012-B-claude-fresh-001/RETURN.md), SHA-256 `0642f7dc556194d69dc1acf89a3c9fab6be945241309cdf5ad48bd763b1fba17`; `work_state/lifecycle.jsonl` 28 events, the fixture's 19 first and unchanged; constructor's own composite: out_of_frame over 23 of 23 covered (21 satisfied, R09, R10 as judged); five steps reused after a recorded check, none re-run; three draft claims disposed; P4b-2 closed as interrupted with its effect unknown, then R14 and R15 covered by a new step last, as prescribed; 3 actor starts in the order P6, P5, P4b-2b, USD 0.102; stop state candidate_ready with the contract's predicate out_of_frame; 9 min 57 s | not assessed; awaiting an authorised assessor |
+
+The run records are the constructors' construction output and self-review;
+nothing in them is assessment, and the author has not repaired, re-run or
+annotated them. The author ran the structural check over both lifecycle
+logs (chronology, caps, sizes, echoes, file digests): no problems; the
+fixture directory is byte identical to its committed state after both
+runs. Mechanical evidence only.
+
+Corrections to this design recorded after the runs, without altering the
+text the constructors read: the draft carries a third unsupported claim
+the case owner did not declare. Its step table marks P4a "done, 2
+satisfied" while `steps/P4a.out.md` records R09 out_of_frame and R10
+indeterminate; the owner wrote the row from the plan, not from the file.
+Both constructors detected it alongside the two declared claims. The
+seeded-conditions list above should read three claims, not two.
+
+Observations the constructors recorded, carried here without repair: the
+instrument's own digest is not logged by the instrument, so its identity
+at production rests on the current file (both runs); the rc.2 sections of
+the reused steps were authenticated against the logged block digests by
+re-measurement, since the install may not be opened (both); the P4a
+judgments stand as a candidate finding against FOUNDATIONS P4a's
+attribution of RF-010, and any repair of P4a changes the section digest
+and re-opens all 23 routes under the contract (both handoffs); the
+possible charge of the killed call is bounded at about USD 0.06 and
+unknowable from the workspace (both).
