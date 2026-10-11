@@ -114,3 +114,77 @@ Work result: `candidate_ready` / `satisfied` for the declared output. Next:
 T1 (FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4) frozen as a thread
 increment, a_c encoding, and the T-01 context-cap case run by an actor other
 than the author under an authorised review.
+
+## T1 thread return, 2026-10-11T11:28:41Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`,
+continuing the C3 activation on Jim's "continue". Start not stamped
+separately; bounded below by the C3 return end, 2026-10-11T09:42:50Z.
+
+Delivered, in two commits:
+
+- `e984e48`: the T1 increment frozen at `cc1d29d` (FOUNDATIONS
+  `5f5e7ab3…ed80`, CALCULUS `879fb9dd…82ad` §1–3, EVALUATION
+  `fc063460…246d` §1–4); the pinned Axiom Indexer subject verified member by
+  member from the tag commit's tree against its release record, seven of
+  seven plus the inventory aggregate; the a_c.text program
+  `urn:stdo-3:claude:program:a-c-text:t1` (74 symbols, 80 clauses, 8
+  residuals; file `9dfa2e06…bd4c`, canonical `743e07fa…e0c0`) validated with
+  zero diagnostics and its map; the bounded-activation frame projected in
+  both modes; the T-01 case design (`cases/T-01/CASE.md` as read by the
+  constructors `53cd9f6f…082a`; `fragment.py` `02c71289…3eda`). Record:
+  `a_c/t1/README.md`.
+- this commit: two T-01 constructor runs by fresh contexts of this model
+  family, one per cap, each writing one record and nothing else:
+  run A (160,000 bytes) `96fb0350…01ca`, composite satisfied, 22 of 22
+  routes, 57,047 bytes charged, 9 min 23 s; run B (6,000 bytes)
+  `16106f3f…2e58`, composite out_of_frame, existence 22 of 22, consistency
+  19 of 22, three pairs measured over the cap and not read, escalation named,
+  26,091 bytes charged, 12 min 23 s. CASE.md now carries the run table and a
+  correction note (`27c7a1b7…d1da`).
+
+Candidate findings the runs raised against the frozen documents, recorded
+and not repaired, so the assessor sees the subject the constructors saw:
+
+- one clause, two standings: P5 says it conserves RF-012 and AC-007 while
+  CALCULUS §3 and §8 say the core algebra supersedes them; P4b says conserves
+  and, in the same sentence, reframed. FOUNDATIONS §1 gives a clause one
+  standing and says an undisposed standing blocks qualification. This is the
+  first finding for the T1 successor.
+- P4a's retained list omits "provenance", which AC-016 retains.
+- CALCULUS §3 says RF-012 and AC-007 "name the same five outcomes"; AC-007
+  names result conditions, not the five members.
+- the case's "exceed 600,000 bytes" figure is wrong for the §3 route set
+  (423,548 bytes); the discriminator's premise holds unchanged.
+
+Rulings the runs request from the case owner: whether a resident tenant
+paragraph is charged again per step (run B R-1; it decides two of the three
+out_of_frame routes); the order among non-satisfied members for a composite
+stop state (run B R-2); whether the step or human authority selects among
+the fit options, since RF-014 vests it in human authority and CALCULUS §2
+lists it as the step's own choice.
+
+Encoding residuals (8, in the program): T1 boundary forward references;
+'material' undefined; fit test not operationalised; independence arguments
+one sentence each; formal fragment carried not constructed; indeterminate
+versus out_of_frame boundary; judge of lawful compression unnamed; rc.2
+routes outside the program basis.
+
+Resource observation: the C3 allowance (150,000 generated tokens, 4 hours)
+remains the declared one. Constructor spend as reported by the harness:
+run A 164,925 tokens, 41 tool uses; run B 176,621 tokens, 27 tool uses;
+the two ran in parallel, 12 min 23 s wall. The author's own generated-token
+counter is unavailable on this host; wall for this pass is at most
+1 h 45 min 51 s from the lower bound above to this stamp, including a
+context compaction.
+
+Verification at freeze: tenant gate green over 16 files, 271 links
+including every `stdo://` fragment, no trailing whitespace; run records
+are excluded from the gate as constructor output.
+
+Work result: `candidate_ready` / `satisfied` for the declared T1 outputs.
+T1 is not closed: closure needs an authorised independent assessment of
+runs A and B under the case's five expected distinctions, an
+author-independent fidelity judgment of the program, and Jim's rulings
+above. Next after that: the T1 successor applying accepted findings, then
+T2 (SPEC_METHOD, CALCULUS §4–7).

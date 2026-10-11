@@ -127,4 +127,21 @@ governing basis states otherwise.
 
 | Run | Constructor | Record | Assessment |
 |---|---|---|---|
-| none yet | | | |
+| A, `20261011-A-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject at `e984e48` (standards unchanged since `cc1d29d`) | [RETURN.md](../../runs/T-01/20261011-A-claude-fresh-001/RETURN.md), SHA-256 `96fb0350846319b1efa36c574fc74164cbd6017a561e7d77f64b20feeb4f01ca`; constructor's own composite: satisfied, 22 of 22 routes, 57,047 bytes charged, 9 min 23 s | not assessed; awaiting an authorised assessor |
+| B, `20261011-B-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject as above | [RETURN.md](../../runs/T-01/20261011-B-claude-fresh-001/RETURN.md), SHA-256 `16106f3f6a6f5ff77b6e0d13a683474bfe9d9ec4f0453b9d0eaef61568892e58`; constructor's own composite: out_of_frame, existence 22 of 22, consistency 19 of 22, three pairs (7,348 / 6,851 / 6,191 bytes) not read, escalation named, 26,091 bytes charged, 12 min 23 s | not assessed; awaiting an authorised assessor |
+
+Both constructors are fresh contexts of the author's model family; the
+constructor role needs freshness, not independence (EVALUATION §3). The
+run records are the constructors' construction output and self-review;
+nothing in them is assessment, and the author has not repaired, re-run or
+annotated them. Rulings the runs request from the case owner: whether a
+tenant paragraph already resident as standing basis is charged again in
+each step (run B, R-1); the order among non-satisfied members for a
+composite stop state (run B, R-2); whether the step or human authority
+selects among the fit options (both runs; RF-014 against CALCULUS §2).
+
+Corrections to this design recorded after the runs, without altering the
+text the constructors read: the sentence "The cited members together exceed
+600,000 bytes" is wrong for the §3 route set; the five rc.2 members cited
+in FOUNDATIONS §3 total 423,548 bytes (run A, residual RS-1). The
+discriminator's premise holds unchanged, since that total exceeds both caps.
