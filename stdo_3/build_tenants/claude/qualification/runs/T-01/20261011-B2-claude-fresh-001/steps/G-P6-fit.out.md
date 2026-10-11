@@ -1,0 +1,4 @@
+ROUTE SPEC_METHOD.md#semantic-evidence-and-projection-separation-stdo-up-008 | satisfied | by reference | evidence: "semantic basis", "evidence basis", "state projection" are distinguished; P6 gives "distinct standing" to definitions, observations and accepted claims, and says "evidence supports a claim on a basis" | residual: none
+ROUTE REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation | satisfied | by reference | evidence: a frame "does not mint, widen, transfer, or reconstruct" authority from "evidence shape"; P6 says "authority permits or disposes within scope; neither is minted by the other" | residual: none
+ROUTE REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation | satisfied | by reference | evidence: "Evidence supplies observations" and "Decision authority disposes the result"; P6 says "evidence supports a claim on a basis; authority permits or disposes within scope" | residual: none
+STEP G-P6-fit | routes 3 | bytes_seen 5557

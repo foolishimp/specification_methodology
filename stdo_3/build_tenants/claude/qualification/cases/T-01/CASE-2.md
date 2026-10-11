@@ -221,3 +221,27 @@ but not assessor independence (EVALUATION §3).
 
 | Run | Constructor | Record | Assessment |
 |---|---|---|---|
+| A2, `20261011-A2-claude-fresh-001` | fresh Claude context (claude-fable-5-1) as coordinator; step actors claude-sonnet-5-5 through the instrument; subject at `cee1157` | [RETURN.md](../../runs/T-01/20261011-A2-claude-fresh-001/RETURN.md), SHA-256 `584bc3d04e069ca857eddb2932ad525bfbaff02b44f385f32d59913903109219`; `lifecycle.jsonl` 38 events; constructor's own composite: satisfied, 23 of 23; single-step closure 49,948 bytes refused with no actor started; 8 actor steps, largest 12,996 bytes; 70,046 bytes into step actors; 8 min 35 s | not assessed; awaiting an authorised assessor |
+| B2, `20261011-B2-claude-fresh-001` | as above | [RETURN.md](../../runs/T-01/20261011-B2-claude-fresh-001/RETURN.md), SHA-256 `e2ca852b24c195616c3f52836b2091a3044f0db59138dfde9374231655215ecc`; `lifecycle.jsonl` 68 events; constructor's own composite: out_of_frame; 20 routes satisfied, 3 out_of_frame (R12 10,352, R15 9,896, R21 9,145 bytes, each refused before any actor); 9 actor steps, largest 7,765 bytes; 54,631 bytes into step actors; 9 min 38 s | not assessed; awaiting an authorised assessor |
+
+The run records are the constructors' construction output and self-review;
+nothing in them is assessment, and the author has not repaired, re-run or
+annotated them. The author ran one structural check over each
+`lifecycle.jsonl` (every `actor_started` preceded by a fitting, non-dry
+measurement of the same step; no start after a `refused` without a new
+measurement; every started step's input file size plus the system line
+equals the logged total; every actor's echoed `bytes_seen` equals the
+logged total; output digests match): no problems in either run. That check
+is mechanical evidence under EVALUATION §2, not a judgment on E1–E5.
+
+Observations the constructors recorded against the fixture, carried here
+without repair: the headless CLI's framework overhead came out near 7,100
+to 7,300 tokens per step by their regression, against about 2,300 on the
+trivial design-time input, so the byte-to-token ratio of this material is
+uncalibrated; the instrument hashes the actor's raw result while the
+`.out.md` file carries an appended newline, so file digests differ from the
+log (smallest correction: hash the file bytes); A2 notes that P4b's claim
+that five clauses' nine statements "become one obligation" is not judged by
+any single route step and would need the five sections together (20,364
+bytes, over cap A2), which it named as an escalation; the eight steps B2
+launched together ran serially, so concurrent logging was not exercised.

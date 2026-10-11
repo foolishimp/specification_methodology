@@ -188,3 +188,77 @@ runs A and B under the case's five expected distinctions, an
 author-independent fidelity judgment of the program, and Jim's rulings
 above. Next after that: the T1 successor applying accepted findings, then
 T2 (SPEC_METHOD, CALCULUS §4–7).
+
+## T1.2 thread return, 2026-10-11T13:25:58Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, on
+Jim's relay of the review of `eca8cef` (receipt processed
+2026-10-11T13:06:07Z, which bounds the start).
+
+Delivered, in two commits:
+
+- `cee1157`: the received review recorded verbatim with per-finding
+  dispositions under `qualification/received/`; all four findings and the
+  three ruling narrowings accepted after source checks; FOUNDATIONS and
+  CALCULUS repaired at source (one standing per clause, provenance in P4a,
+  conjunctive step-produced-fact definition, material defined, context fit
+  measured before any read, fit options combinable with selection vested
+  in the step under its grant, compression preservation a claim,
+  out_of_frame against indeterminate, composite by declared conjunction,
+  formal fragment new with its interpretation); EVALUATION unchanged.
+  T1.2 identified by digest (FOUNDATIONS `2f15c6c1…38a22`, CALCULUS
+  `d708e76c…aee0c`, EVALUATION `fc063460…246d`). Program regenerated
+  (75 symbols, 86 clauses, 5 residuals; file `f5d653e2…1f43`, canonical
+  `c3f482ab…8d49`), validated with zero diagnostics against the same
+  byte-verified pinned subject, both projections regenerated. Successor
+  fixture `cases/T-01/CASE-2.md` with `step_actor.py` (a fresh headless
+  actor per reading step, whole context measured and logged before the
+  actor exists) and `STEP_CARD.md` (the judgment contract); caps reset
+  against the measured single-step closure of 49,938 bytes: A2 20,000,
+  B2 8,000.
+- this commit: two CASE-2 runs by fresh coordinator contexts of this model
+  family, step actors `claude-sonnet-5-5`, each writing one record beside
+  the instrument's log and step files:
+  A2 `584bc3d0…9219`, composite satisfied, 23 of 23 routes; closure refused
+  at 49,948 bytes with no actor started; 8 actor steps, largest 12,996
+  bytes; 70,046 bytes into step actors; 8 min 35 s.
+  B2 `e2ca852b…5ecc`, composite out_of_frame; 20 satisfied, 3 out_of_frame
+  (R12 10,352, R15 9,896, R21 9,145 bytes, refused before any actor, no
+  lawful refinement under the card's section-as-unit contract, escalation
+  to an envelope of at least 10,352 bytes named); 9 actor steps, largest
+  7,765 bytes; 54,631 bytes into step actors; 9 min 38 s.
+
+Author's structural check over both lifecycle logs (chronology of
+measurement, refusal and start; input sizes; echoed byte counts; output
+digests): no problems. Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the fixture's framework-overhead
+figure is uncalibrated (constructors' regression 7,100–7,300 tokens per
+step against 2,300 measured on a trivial input); the instrument's logged
+output digest is over the raw result, not the file; P4b's "nine statements
+become one obligation" is a paragraph-level claim no route step judges
+(A2); route-level residuals from the step actors are listed in the records
+(A2 nine, B2 eleven), none reported as a contradiction.
+
+Resource observation: declared allowance per run 30 actor starts and 60
+minutes; used 8 and 9 starts, under 10 minutes each. Step-actor spend from
+the CLI usage records: A2 87,241 tokens (79,271 context, 7,970 output),
+USD 0.3666 list; B2 89,542 tokens (81,084 context, 8,458 output), USD
+0.3750 list. Coordinator spend as the harness reports it, definition
+unverified: A2 150,541 tokens, 33 tool uses; B2 127,801 tokens, 30 tool
+uses; the two ran in parallel, 9 min 38 s wall. The author's own
+generated-token counter is unavailable on this host; wall for this pass is
+at most 19 min 51 s from the receipt stamp to this stamp, after the
+earlier verification and drafting that preceded the receipt stamp.
+
+Verification at freeze: tenant gate green over 19 files, 284 links
+including every `stdo://` fragment, no trailing whitespace; run
+directories and `received/` verbatim text are excluded from the gate as
+constructor and reviewer output respectively.
+
+Work result: `candidate_ready` / `satisfied` for the declared T1.2
+outputs. T1.2 is not closed: closure needs an authorised independent
+assessment of runs A2 and B2 under CASE-2's five expected distinctions, an
+author-independent fidelity judgment of the regenerated program, and Jim's
+selection of the Axiom Indexer dependency use. Next after that: T2
+(SPEC_METHOD, CALCULUS §4–7).

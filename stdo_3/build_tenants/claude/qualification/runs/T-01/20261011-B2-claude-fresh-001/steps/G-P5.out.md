@@ -1,0 +1,9 @@
+ROUTE REFERENCE_FRAME_METHOD.md#rf-012-closed-results | satisfied | by reference | evidence: "preserving explicit indeterminate, out-of-frame, and invalid-basis pressure" bears on "result algebra carries indeterminate, out_of_frame and invalid_basis as first-class outcomes" | residual: RF-012 does not mention a control model or a next move. The paragraph presents that as its own derivation (P0, P6), not as RF-012 content.
+
+ROUTE REFERENCE_FRAME_METHOD.md#rf-014-capability-fit | satisfied | by reference | evidence: "The actor may not silently omit material relations to fit context" bears on "A step can meet a condition outside its context; it cannot report success on one" | residual: RF-014's subject is actor capability fit. Its next moves (select another actor, refine the frame, sequence activations, compress) fit "control model names the next move" without contradicting it.
+
+ROUTE AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal | satisfied | by reference | evidence: "follows the declared result algebra rather than being coerced to success" bears on "cannot report success on one" and "first-class outcomes" | residual: AC-007 says "out-of-scope" where the paragraph says out_of_frame, but this is not a contradiction. The CALCULUS §3 restatement is not given, so it was not judged.
+
+ROUTE DESIGN_MODULE_METHOD.md#8-totality-rule | satisfied | by reference | evidence: "failure is returned in a typed and explicit form when practical" bears on "result algebra carries ... first-class outcomes" | residual: The section's subject is semantic functions in design modules, stated as "should" guidance. It does not name indeterminate, out_of_frame or invalid_basis. The paragraph conserves it only as the totality principle, so this is not a contradiction.
+
+STEP G-P5 | routes 4 | bytes_seen 5888
