@@ -37,8 +37,8 @@ that must catch it.
 |---|---|---|---|
 | T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission | first fixture run twice and reviewed; successor fixture [CASE-2](../qualification/cases/T-01/CASE-2.md) |
 | T-02 Intent to usable result | a small feature from a sufficient but ambiguous intent | the ambiguity is resolved or kept explicit; the result satisfies independently owned acceptance | not run |
-| T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | not run |
-| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | not run |
+| T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) designed |
+| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) designed |
 | T-05 Compaction and actor change | pause, clear context, resume with a new actor | valid progress and basis recovered; unsupported completion claims and unnecessary restarts detected | not run |
 | T-06 Changed governing requirement | one requirement revised after partial construction | affected claims reopened; unaffected results reused with explicit dependencies | not run |
 | T-07 Defective acceptance oracle | a candidate passing structural checks but violating required behaviour | assessment detects the defect or reports its evidential limit; structural green is not acceptance | not run |

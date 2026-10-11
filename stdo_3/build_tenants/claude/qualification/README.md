@@ -10,5 +10,10 @@ nothing is written here by another tenant; `received/` holds verbatim copies of 
 Codex review of the initial candidate `329fe422…d0bb`, written into this
 directory before that rule and retained unchanged.
 
+`instruments/` holds the generic bounded-step instrument and route card
+used by the T2 and later fixtures; `cases/` holds each case design with its
+fixture material; `runs/` holds constructor output, never assessed by the
+author.
+
 Future actual-use, mechanical, fidelity and release claims retain their
 separate boundaries. Nothing here is acceptance.

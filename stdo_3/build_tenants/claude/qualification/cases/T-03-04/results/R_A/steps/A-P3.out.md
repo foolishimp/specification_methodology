@@ -1,0 +1,3 @@
+ROUTE SPEC_METHOD.md#recursive-product-taxonomy | satisfied | by reference | evidence: "The role creates no new Product identity" and "do not confuse an immutable RC release cut or installed product with the mutable source project" bear on P3's "Conserves ... the recursive Product taxonomy" under Identity | residual: none
+ROUTE WORLD_MODEL_METHOD.md#entity-cut-construction-law | satisfied | by reference | evidence: "identity, boundary, authority, state, evidence, treatment, covariance, and ambiguity" and "Boundary is interventional in character" bear on P3's "Conserves ... Entity Cut Construction Law" and "a boundary is a claim with a proof obligation" | residual: none
+STEP A-P3 | routes 2 | bytes_seen 15662

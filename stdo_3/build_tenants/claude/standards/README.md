@@ -19,7 +19,7 @@ current state under explicit uncertainty.
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
-| load it into a model's context | the T1.2 program and projected frame under [../a_c/t1/](../a_c/t1/README.md) for FOUNDATIONS, CALCULUS §1–3 and EVALUATION §1–4; the rest of the set has no program yet |
+| load it into a model's context | the T2 program and its two projected frames under [../a_c/t2/](../a_c/t2/README.md) for FOUNDATIONS, CALCULUS, EVALUATION §1–4 and SPEC_METHOD; the T1.2 program under [../a_c/t1/](../a_c/t1/README.md) is its frozen predecessor; EVALUATION §5–8, CONFORMANCE and PROFILES have no program yet |
 
 ## Documents
 

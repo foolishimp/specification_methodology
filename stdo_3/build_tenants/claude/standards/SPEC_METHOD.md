@@ -51,8 +51,10 @@ verifiable outcome and its acceptance interval. Progress is judged only
 against it: material advance is progress; prerequisite work names the
 obligation it enables; preservation is evidence; regression blocks the
 affected path. An evidence surface, proof, matrix, coverage record or test
-suite cannot select, enlarge or replace the outcome. Acceptance exhausts the
-instance and interval; further work against it is preservation, a named
+suite cannot by itself select, enlarge or replace the outcome; where an
+assurance capability is itself defined as product behaviour, its delivery is
+progress and its evidence still does not author the claim. Acceptance
+exhausts the instance and interval; further work against it is preservation, a named
 prerequisite for another admitted outcome, or a new change requiring
 repricing. Authority for material growth derives from the selected outcome,
 an admitted bounded prerequisite or an admitted experiment, each with a
@@ -62,8 +64,9 @@ continuation or active status (P2; conserves
 
 ## 4. Change classes and re-entry
 
-Every substantive change starts with intake triage that names the smallest
-lawful re-entry point:
+Every substantive change, whatever its intake label, enters through one
+intake triage that names the smallest lawful re-entry point
+([Universal Intake Triage](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#universal-intake-triage)):
 
 | Class | Re-enters at |
 |---|---|
@@ -85,43 +88,51 @@ consumer, migrate each, and chase every downstream effect before declaring
 completion
 ([Core Interface Migration Rule](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#core-interface-migration-rule)).
 
-The carrier of a work item is a HOW choice made by proportionality: a durable
+The carrier of a work item is selected for its required lifetime: a durable
 ticket where the work needs identity across sessions; a sprint-local entry
 where its only value is traceability inside a batch; a run or return record
-where the work lives and dies with one activation. The triage fields are
-required; a ticket per change is not (P4b, P2; conserves the change classes
-and
-[triage metadata](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#triage-metadata);
-reframes
-[TICKET_METHOD](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#core-model)
-carriers as selected rather than default).
+(the rc.2 run-scoped execution contract) where the work lives and dies with
+one activation. The triage fields are required wherever substantive work
+begins; a ticket per change is not (P4b, P2; conserves the change classes,
+the
+[triage metadata](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#triage-metadata)
+and the
+[TICKET_METHOD core model](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#core-model)'s
+selection of the smallest lawful carrier; reframes its default, so that no
+carrier is the default here and the triage fields, not the ticket, are the
+required minimum).
 
 ## 5. Activation, checkpoint and continuation
 
 Work is activated as steps under CALCULUS §1. A step's return goes to its
 declared consumer; in a coordinated configuration that consumer is the
-executive relation, which selects the next already-authorised action and
-applies disposition under existing decision authority without widening the
-outcome. Acceptance binds one exact checkpoint; the next authorised step may
-begin without renewed human ceremony when basis, affected set, decision
-envelope and re-entry conditions are already accepted. Direct human
-acceptance is not weakened where Product or release law requires it. A
-preservation checkpoint, restart and the progress and churn categories are
-as in CALCULUS §5 (conserves
-[UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)
-and the baseline's
+executive relation, which consumes closed results, applies disposition under
+existing decision authority and selects the next authorised action
+([Executive](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive)).
+Acceptance binds one exact checkpoint and does not widen the outcome; the
+next already-authorised step may begin without renewed human approval when
+basis, affected set, decision envelope and re-entry conditions are already
+accepted. Direct human acceptance is not weakened where Product or release
+law requires it. A preservation checkpoint, restart and the progress and
+churn categories are as in CALCULUS §5 (conserves
+[UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
+The baseline's
 [Executive](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive),
 [Worker](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker)
 and
 [Reviewer](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer)
-relations as relations, not actors).
+are conserved by reference as labels for UP-020's roles; that a role is a
+relation an actor occupies is this corpus's ontology (FOUNDATIONS §2), not
+a claim about the baseline text.
 
 Delivery is sequenced around the smallest real path from a supported entry
 to a material outcome, established early and widened by increments chosen
 for consequential uncertainty, interface reach and failure impact. A passing
-path establishes only the relations it exercised
-([Steel-Thread Delivery](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#steel-thread-delivery),
-conserved as a sequencing heuristic, not law).
+path establishes only the relations it exercised. This restates the
+baseline's
+[Steel-Thread Delivery](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#steel-thread-delivery),
+which governs its profile unchanged; here it is reframed as a sequencing
+heuristic for any realisation, not law (P2).
 
 ## 6. Lineage and release
 
@@ -136,18 +147,25 @@ surface, not the release (P3; conserves the
 A successor names the exact predecessor immutable cut whose claims it
 evolves, and gives every predecessor claim capable of affecting it one
 disposition: conserved, superseded, intentionally removed, or not applicable
-with a bounded reason. An undisposed claim blocks qualification. Conservation
-is semantic: patch absence does not prove loss and name similarity does not
-prove conservation (P3, P6; conserves
+with a bounded reason. An undisposed claim blocks qualification of the affected
+claim. Conservation is semantic: patch absence does not prove loss when a
+successor-native realisation preserves behaviour, and naming or code
+similarity does not prove conservation without relevant evidence (P3, P6;
+conserves
 [UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)).
 This corpus's own dispositions are in each document's last section.
 
-Cuts, tags, branches, cohorts and publication follow
-[RELEASE_METHOD](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+Release identities, phases, naming, cohorts and publication follow
+[RELEASE_METHOD](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#release-identities)
+([phases](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#phases),
+[naming](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#naming),
+[cohorts](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#coordinated-release-matched-asset-cohorts))
 by reference; they are not restated here. Layer and release separation
 ([AC-020](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-020-layer-and-release-separation))
 holds: a calculus, its interpretation of a subject and its carrier encoding
-keep distinct identities and release lines.
+keep independent content identities, judgments, supersession relations and
+proof obligations, and none is automatically an independently released
+product.
 
 ## 7. Governance of tenants in this source project
 
@@ -165,9 +183,10 @@ and imported here by reference.
 | Constitutional chain, Ambiguity Governance, Reconstruction Litmus | conserved; §1 |
 | WHAT/HOW tenant bindings | conserved; §2 |
 | UP-013 | conserved; §3 |
-| Change classes, Core Interface Migration Rule, TICKET triage metadata | conserved; §4 |
-| TICKET core model (goals, tickets, sprints, comments) | reframed; carriers are selected by proportionality; the lanes and fields are conserved where a ticket is selected |
-| UP-020, baseline Executive, Worker, Reviewer, Steel-Thread Delivery | conserved; §5; roles stated as relations |
+| Universal Intake Triage and its change classes, Core Interface Migration Rule, TICKET triage metadata | conserved; §4 |
+| TICKET core model (goals, tickets, sprints, comments) | reframed; carrier selection by lifetime is conserved, the ticket as default carrier is not; the lanes and fields are conserved where a ticket is selected |
+| UP-020, baseline Executive, Worker, Reviewer | conserved; §5; the baseline labels are conserved by reference, roles as relations is this corpus's ontology |
+| Steel-Thread Delivery | reframed; §5 restates it as a sequencing heuristic for any realisation; it governs the baseline profile unchanged |
 | Recursive Product taxonomy, UP-015, AC-020, RELEASE_METHOD | conserved; §6 |
 | UP-012 shared method adoption and propagation | conserved by reference; adoption of this corpus by a consumer is a consumer Product decision |
 | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE | conserved by reference; a tenant guide may restate them for its readers |

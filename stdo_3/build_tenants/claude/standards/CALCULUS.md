@@ -163,11 +163,12 @@ outside the selected context. Every seam crossing the affected set includes
 its far side or states why it cannot participate
 ([UP-017](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)).
 Admission of a material transition is one semantic commit of the complete
-relation or none
+transition within its enclosing relation, or none
 ([UP-021](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021)).
-This generalises
-[graph functions](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#graph-functions)
-from the graph profile to any realisation.
+This generalises ODD
+[graph functions](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#graph-functions),
+which refine one outer vector into a small inner workflow, to any
+realisation; PROFILES §2 keeps the ODD binding.
 
 ## 5. Work state and restart
 
@@ -177,18 +178,21 @@ the residuals; and the known uncertainty over external effects. It is an
 object (P3); its carrier (files, an event stream, another admitted owner) is
 a profile or realisation choice.
 
-Restart is re-entry of the same method over current work state by a possibly
-different actor. It recovers applicable progress, re-checks the invalidators
-of each reused result, reopens only affected support, and reconciles
-uncertain external effects before any repetition. Restart does not imply
-idempotence: an action whose external effect may have occurred is not
-repeated blindly; the lawful results are reconciliation, yield or stop. A
-preservation checkpoint may retain unfinished work under an existing grant;
-a proposed reconstruction states why repair of retained work is insufficient,
-what survives and which causal assumptions change; reconstructability alone
-does not select reconstruction. Conserves
+Resumption is re-entry of the same method over current work state by a
+possibly different actor. It recovers applicable progress, re-checks the
+invalidators of each reused result (§7), reopens only affected support, and
+reconciles uncertain external effects before any repetition. Resumption does
+not imply idempotence: an action whose external effect may have occurred is
+not repeated blindly; the lawful results are reconciliation, yield or stop.
+A preservation checkpoint may retain unfinished work under an existing
+grant; a proposed restart, which reconstructs from less than the retained
+work, states why repair of retained work is insufficient, what survives and
+which causal assumptions change; reconstructability alone does not select
+reconstruction. Conserves
 [UP-020 checkpoint and continuation](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020);
-the generic work-state object is new.
+the generic work-state object, the reconciliation of uncertain external
+effects and the non-idempotence rule are new (P0, P5 with the open-world
+premise).
 
 Progress is accepted material movement toward the selected outcome;
 prerequisite work names what it enables; preservation and repeated proof are
@@ -211,8 +215,8 @@ and review serve an identified decision or assurance need. Conserves
 
 Cost is selected, not universal. Where capability fit or a cost claim is the
 governed question, the activation declares its allowance and reports spend
-with its measurement source, or records that the counter is unavailable.
-Separate startup, framework, external computation, transport and assurance
+with its measurement source, or records that the counter is unavailable
+(new; P0 with UP-014's selection rule). Separate startup, framework, external computation, transport and assurance
 costs so that one cannot conceal another; declare supported input dimensions
 and workloads before qualification
 ([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019)).
@@ -224,9 +228,11 @@ count, actor count or accounting carrier follows.
 
 A closed result is reused by an unchanged consumer after an applicability
 check; a role, conversation or resumption change alone invalidates nothing.
-Changed material inputs, basis or a declared revising observation invalidate
-the affected result before reliance, preserving the predecessor and any
-demonstrably independent surviving results. A reused judgment does not
+Changed material inputs or a declared revising observation invalidate the
+affected result before reliance, preserving the predecessor and any
+demonstrably independent surviving results; a changed basis invalidates
+likewise (judgment continuity names basis; Return A Closed Result names
+inputs and observation). A reused judgment does not
 satisfy a separately required independent judgment; the independent assessor
 acquires its own evidence and supplies its own judgment. Conserves
 [Return A Closed Result](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#return-a-closed-result),
@@ -236,14 +242,14 @@ acquires its own evidence and supplies its own judgment. Conserves
 
 | rc.2 clause | Disposition |
 |---|---|
-| UP-020 intake, cone, dispositions, checkpoint and continuation | conserved; §1, §3, §5 |
+| UP-020 intake, cone, dispositions, checkpoint and continuation | conserved; §1, §3, §5; the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new |
 | UP-018 | conserved; §1 |
 | Probabilistic Work Boundary | conserved; §1 |
 | RF engagement functions (establish basis, select and activate, evaluate, return, reconfigure) | conserved; §1–§4 |
 | AC-010, AC-011, RF-002, RF-003, RF-004, RF-014, RF-017 | conserved; joined into the §2 operation (new); the step's local selection among fit options under an admitted grant is reframed from RF-014 |
 | RF-012, AC-007 | conserved; restated once in §3 |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
-| ODD graph functions | generalised in §4; the profile keeps its binding |
+| ODD graph functions | conserved; generalised in §4 to any realisation; PROFILES §2 keeps the ODD binding |
 | UP-017, UP-021 | conserved; §4 |
-| UP-014, UP-005, UP-019 | conserved; §6 |
+| UP-014, UP-005, UP-019 | conserved; §6; the allowance rule is new |
 | Return A Closed Result, TICKET judgment continuity | conserved; §7 |

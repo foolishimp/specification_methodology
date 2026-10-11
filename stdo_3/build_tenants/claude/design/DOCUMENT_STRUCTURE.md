@@ -44,9 +44,9 @@ views are derived from these files later, never authored separately.
 |---|---|---|---|
 | Bounded activation with intake, grant, territory | CALCULUS §1 | P0, P6 | UP-020 conserved; RF engagement functions conserved |
 | Context construction under an envelope | CALCULUS §2 | P0 | AC-010/011, RF-002/003/004/014/017 conserved; the operation that joins them is new |
-| One core result algebra with declared refinements | CALCULUS §3 | totality (P0, open world, P6) | RF-012 and AC-007 superseded by one statement; work result, UP-020 dispositions, ambiguity outcomes conserved as refinements |
+| One core result algebra with declared refinements | CALCULUS §3 | totality (P0, open world, P6) | RF-012 and AC-007 conserved, restated once (T1.2); work result, UP-020 dispositions, ambiguity outcomes conserved as refinements |
 | Faithful refinement A → B → … → X | CALCULUS §4 | P0, P4 | ODD graph functions generalised; UP-017/021 conserved |
-| Work state and restart | CALCULUS §5 | P0, P5 | UP-020 checkpoint clause conserved; generic work state new |
+| Work state, resumption and restart | CALCULUS §5 | P0, P5 | UP-020 checkpoint clause conserved; generic work state, reconciliation of uncertain effects and non-idempotence new |
 | Proportionality and selected cost | CALCULUS §6 | P0, P2 | UP-014, UP-019, UP-005 conserved |
 | Independent assessment with freeze | EVALUATION §3 | P6, probabilistic construction | UP-007, UP-022, RF-007 conserved |
 | Conformance of realisations | EVALUATION §6 | P1, P6 | reconstruction litmus and UP-022 conserved |
