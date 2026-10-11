@@ -3,8 +3,8 @@
 ## Work Records
 
 - [T-001](tickets/active/T-001-common-definition-and-checkpoints.md): common bootstrap, C1/C2 decisions and later sequencing.
-- [T-001-CODEX](tickets/backlog/T-001-CODEX-principles.md): independent Codex principles attempt, READY / NOT_STARTED.
-- [T-001-CLAUDE](tickets/backlog/T-001-CLAUDE-principles.md): independent Claude principles attempt, READY / NOT_STARTED.
+- [T-001-CODEX](tickets/active/T-001-CODEX-principles.md): activated independent Codex principles attempt; current state is owned by that ticket.
+- [T-001-CLAUDE](tickets/backlog/T-001-CLAUDE-principles.md): independent Claude principles attempt; consult its owning ticket for state.
 
 Active, backlog and completed lanes, comments, decisions and sprints are scoped here. Use the smallest existing carrier required by work lifetime. These scaffold tickets do not make ticket-first a universal method requirement.
 

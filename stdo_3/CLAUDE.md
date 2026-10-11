@@ -4,7 +4,7 @@ This scope is the peer source project located by [stdo_3.json](stdo_3.json). Rea
 
 Common WHAT is owned by Jim; Codex currently holds its construction pen under [T-001](.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md). Working principles and tentative capability questions do not alter the installed builder law or become accepted through presence.
 
-C1 is principles-first. Codex and Claude make independent initial attempts in their own tenant territory. Do not read the peer's realisation before the initial frozen returns. Shared input posts, source clauses and working common principles are available to both. Tenant implementations, wording and a_c encodings are HOW; neither tenant can redefine shared meaning or select itself as canonical.
+C1 is principles-first. Codex and Claude make independent initial attempts in their own tenant territory. Do not read the peer's realisation before the initial frozen returns. Shared input posts, source clauses and working common principles are available to both. Tenant implementations, wording and a_c encodings are HOW; neither tenant can redefine shared meaning or select itself as canonical. Tenant work and reviews follow [Development Isolation](specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory; reviews between tenants only when Jim authorises them, read at a named commit, written in the reviewer's tenant.
 
 An Executive coordinates and decides only inside its grant. It does not mutate files or Git. A separately declared Writer performs effects in exact granted territory. Independent source-first reviewers inspect a frozen subject, do not repair it and cannot assess their own authorship.
 

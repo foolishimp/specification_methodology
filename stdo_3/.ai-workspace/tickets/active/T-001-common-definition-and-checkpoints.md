@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: stdo_3/specification/PRODUCT.md
 triaged_at: 2026-10-11T04:13:29Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-11T05:12:15Z
+updated_at: 2026-10-11T05:55:55Z
 dependencies: []
 ---
 
@@ -30,14 +30,14 @@ Target truth: one separate stdo_3 root, installed STDO 2.5.1 RC2 builder basis, 
 
 Superseded truth: no legacy method law or released bytes. Earlier planning placement suggestions are inputs, not authority over this new root.
 
-Common pen: Codex. The initial Writer created the named bootstrap files and root routing; bounded successors corrected configuration and recorded C0 readiness. Jim's latest repair/checkpoint instruction authorises these eleven existing-file source corrections; Git checkpoint effects remain outside this source Writer activation. Executive coordinates without FS/Git mutation. Preserve existing 2.*, input posts, Axiom/Representation, stack_release.json and unrelated work.
+Common pen: Codex. Checkpoint c91cc10b386539b301cd1a9717ec535afee50c23 preserves the corrected setup. The present administrative Writer activates the existing Codex ticket and routes its state; the following tenant Writer owns only its C1 candidate and ticket return. Executive coordinates without FS/Git mutation. Preserve existing 2.*, input posts, Axiom/Representation, stack_release.json and unrelated work.
 
 ## Milestones And Closure
 
 | Milestone | State | Closure condition |
 |---|---|---|
 | C0 | READY / setup complete following independent focused GO reviews and Executive conjunction | Exact scope/basis and common/tenant entry documents exist; native and semantic routing checks passed; Executive consumed independent focused reviews of the frozen corrected setup. |
-| C1 | OPEN; both tenant tasks READY / NOT_STARTED | Both independent attempts and source-first reviews returned; Jim resolves material conflicts and accepts or withholds one common principles basis. |
+| C1 | OPEN; Codex initial attempt activated; each tenant ticket owns its state | Both independent attempts and source-first reviews returned; Jim resolves material conflicts and accepts or withholds one common principles basis. |
 | C2 | OPEN; dependent on C1 | Selected capabilities and common conformance expectations derive from that basis; Jim accepts their scope. |
 | C3+ | NOT_SELECTED | Actual document steel threads and their evidence are selected after C2. |
 
@@ -51,9 +51,9 @@ Non-closure: unresolved common principles, unselected capabilities, missing inde
 
 ## Ready Independent Tasks
 
-[Codex](../backlog/T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) may be selected for separately declared C1 Writer activation. Each writes only its own design/PRINCIPLES.md and existing ticket state. After BOTH initial returns freeze, Claude assesses Codex and Codex assesses Claude under separately declared review grants. Each writes the reviewed tenant's qualification/C1_REVIEW.md and its allowed existing return carrier; no candidate repair or self-review is permitted.
+[Codex](T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) were selected for separately declared C1 Writer activation; each wrote only its own design/PRINCIPLES.md and ticket state. The reciprocal C1 cross-reviews that followed were executed under the then-current grants and are historical. From 2026-10-11 all tenant work and reviews follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation): tenant branch and sparse worktree, own territory only, reviews authorised by Jim one at a time, read at a named commit and written in the reviewer's own tenant; no candidate repair or self-review is permitted. Tenant returns live in the tenant and are mirrored to these tickets by the common pen.
 
-Current state: READY / NOT_STARTED. The administrative C0 precondition is satisfied; each separately selected activation now binds the common source and C1-inputs-20261011-02 snapshot. The prior -01 tuple is retired for future activations. Neither task depends on full T-001 completion. Setup executes neither attempt and accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
+Codex's initial author activation is selected against C1-inputs-20261011-02; current author state belongs to T-001-CODEX. Consult the peer's owning ticket for its state. The C0 precondition is satisfied, and the prior -01 tuple remains retired. Neither task depends on full T-001 completion. Authoring accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
 
 ## Common C1 Input Snapshot
 
@@ -146,3 +146,5 @@ Executive independently confirmed all ten basis-relative targets, the local rela
 2026-10-11T05:07:15Z — Jim asked to evaluate the six setup points, fix the setup and checkpoint the work. This source Writer grants no Git effect or C1 attempt. The disposition neutralises pre-decided derivation/independence claims, adds the frozen documented-coverage matrix, defers bound ABG C2 inputs, assigns actual cross-review actors/destinations after both freezes, places specific resource planning/accounting only in the excluded tenant tickets, and records the OPEN audience/release decisions. Root wording now identifies the current STDO 2.* source.
 
 2026-10-11T05:12:15Z — Common source was frozen once as C1-inputs-20261011-02 with sixteen members, including the unchanged matrix; -01 remains historical only. Native status/schema/exact RC2 verification passed. All 126 new-root Markdown targets/fragments resolved, including 25 installed heading links; sixteen current pins, retained fifteen-member history, both cross-review destination/prerequisite joins and task-only resource fields checked consistently. Whitespace/fences and `git diff --check` passed. The eleven-file correction leaves twenty-one other initial scope files, original inputs/matrix, deferred ABG posts, the old Definition and cohort unchanged. Main/HEAD and the empty index remain unchanged. The planned checkpoint is exactly thirty-four paths: the new twenty-nine files, three root routes and two preserved untracked planning posts. C0 remains READY; C1/C2 are OPEN and both attempts are READY / NOT_STARTED. Git effects await the separate checkpoint Writer activation.
+
+2026-10-11T05:55:55Z — Jim instructed “start work”. The administrative common-pen Writer activates the existing logical T-001-CODEX ticket in the active lane and updates only its routing/progress projections, preserving all sixteen C1-inputs-20261011-02 members. The separately declared Codex tenant author then develops its principles candidate and existing return under that tuple and installed RC2. Activation started 2026-10-11T05:54:05Z; C1/C2 remain open, and cross-review/common acceptance remain later decisions. Other tenant state is owned by its own ticket.

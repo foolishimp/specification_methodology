@@ -7,16 +7,16 @@ GOAL-001: establish one useful common structure and review its foundations befor
 | Checkpoint | Current state | Required result |
 |---|---|---|
 | C0 structure/bootstrap | READY / setup complete after focused GO reviews and Executive conjunction | A separate exact scope, usable common WHAT and independent C1 entry contracts. |
-| C1 principles | OPEN; both tenant tasks READY / NOT_STARTED | Independent frozen principles attempts, source-first reviews and Jim's decision on one common basis. |
+| C1 principles | OPEN; Codex initial attempt activated; tenant state is owned by each ticket | Independent frozen principles attempts, source-first reviews and Jim's decision on one common basis. |
 | C2 capabilities/conformance | OPEN; dependency on C1 | Derived capability selection and common acceptance criteria accepted by Jim. |
 | C3+ steel threads | NOT_SELECTED | Actual document construction and observed use against selected common criteria. |
 | Release/adoption | NOT_SELECTED | Exact corpus, dependency, acceptance and separately authorised publication/adoption evidence. |
 
-[T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) owns checkpoint state. [Codex C1](../.ai-workspace/tickets/backlog/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md) have separate lifecycle and territory.
+[T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) owns checkpoint state. [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md) have separate lifecycle and territory.
 
-This wave builds the structure and prepares independent principles work. It creates no observed tenant implementation, a_c output or trial result. Changed checkpoint state is recorded through its actual owner; a setup pass cannot be projected as accepted foundations.
+This wave performs independently activated principles work against the frozen common inputs. It supplies no common principle acceptance, a_c output or trial result. Changed checkpoint state is recorded through its actual owner; a setup pass cannot be projected as accepted foundations.
 
-The C0 administrative precondition is satisfied. Select each independent C1 activation against the common source and C1-inputs-20261011-02 snapshot; shared input selection remains part of its grant. Setup itself executes neither attempt and supplies no common principle or capability acceptance.
+The C0 administrative precondition is satisfied. Codex's selected C1 activation binds the common source and C1-inputs-20261011-02 snapshot; live author state and the eventual frozen return remain at its own ticket. Other tenant state remains at its owner. Setup and author self-check supply no common principle or capability acceptance.
 
 ## Open Owner Decisions
 
