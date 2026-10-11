@@ -1,0 +1,301 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:codex-stdo3:program:repaired",
+  "calculus_ref": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "repo://codex-stdo3/",
+  "frame_refs": [
+    "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1",
+    "repo://codex-stdo3/qualification/T2_T6/TASKS.md#n-separate-mechanical-fidelity-and-finite-fragment-proof"
+  ],
+  "vocabulary_refs": [
+    "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#consequence",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#conserves",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#divisor",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#equation",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#output",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#predicate",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#premise",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#requires",
+    "repo://codex-stdo3/a_c/SIGNATURE.md#transfer"
+  ],
+  "symbols": [
+    {
+      "uri": "urn:codex-stdo3:symbol:assessment",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Authenticated assessment set and coverage",
+      "source_refs": [
+        "repo://codex-stdo3/standards/EVIDENCE_METHOD.md#e-04-conjoin-without-losing-findings"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:symbol:join",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Selected typed producer-consumer join",
+      "source_refs": [
+        "repo://codex-stdo3/standards/FOUNDATIONS.md#f-03-typed-composition"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:symbol:quote",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Harbor source-v1 quote",
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:symbol:tokens",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Finite tokens/source-v1 ownership and permission",
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#n-separate-mechanical-fidelity-and-finite-fragment-proof"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:symbol:what",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Common obligations allowing distinct HOWs",
+      "source_refs": [
+        "repo://codex-stdo3/standards/SPEC_METHOD.md#s-02-one-common-what-independent-hows"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:symbol:work",
+      "kind": "repo://codex-stdo3/a_c/SIGNATURE.md#concept",
+      "label": "Persistent current work and applicability",
+      "source_refs": [
+        "repo://codex-stdo3/standards/WORK_METHOD.md#w-06-re-enter-current-persistent-work"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:codex-stdo3:clause:assessment-admission",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:symbol:assessment"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#consequence",
+          "literal": "every planned judgment slot is authenticated"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "uncovered required coverage is a different relation"
+        }
+      ],
+      "statement": "Authenticate planned assessment slots before complete-set conjunction; do not substitute uncovered coverage for a missing planned judgment.",
+      "source_refs": [
+        "repo://codex-stdo3/standards/EVIDENCE_METHOD.md#e-04-conjoin-without-losing-findings"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:assessment-conservation",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#conserves",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:clause:assessment-admission"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#predicate",
+          "literal": "A actual failure and original citations survive; required B uncovered remains distinct"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "non-green even when both pressures coexist; no effect/acceptance grant follows"
+        }
+      ],
+      "statement": "The admitted A-fails/B-uncovered conjunction retains both coordinates without granting further operations.",
+      "source_refs": [
+        "repo://codex-stdo3/standards/EVIDENCE_METHOD.md#e-04-conjoin-without-losing-findings"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:quote-unit",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#equation",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+          "literal": 6
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#divisor",
+          "literal": 100
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#output",
+          "literal": 0.06
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "AUD cents/node-hour -> AUD dollars/node-hour; Harbor/source-v1"
+        }
+      ],
+      "statement": "6 AUD cents per node-hour divided by 100 equals 0.06 AUD dollars per node-hour.",
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:token-transfer",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#transfer",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:symbol:tokens"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#premise",
+          "literal": "current-owner permission bound to token/destination/operation"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#consequence",
+          "literal": "only transferred token changes owner; same token set and single-valued ownership"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "unavailable current state remains unresolved; no blind repeat after possible effect"
+        }
+      ],
+      "statement": "The selected neutral transfer preserves ownership/conservation and does not invent permission.",
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#n-separate-mechanical-fidelity-and-finite-fragment-proof"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:typed-join",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:symbol:join"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:clause:quote-unit"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#consequence",
+          "literal": "compatible interpretation, source/basis and preconditions; shape equality alone is insufficient"
+        }
+      ],
+      "statement": "The selected numeric quote crosses the join only with the supported unit translation and compatible source/basis.",
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1",
+        "repo://codex-stdo3/standards/FOUNDATIONS.md#f-03-typed-composition"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:what-hows",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#conserves",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:symbol:what"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#predicate",
+          "literal": "each HOW satisfies common WHAT"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "equal algorithms, layouts, unselected behavior and costs are not required"
+        }
+      ],
+      "statement": "Distinct HOWs conform separately to the selected common obligations.",
+      "source_refs": [
+        "repo://codex-stdo3/standards/SPEC_METHOD.md#s-02-one-common-what-independent-hows"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:clause:work-reentry",
+      "clause_type": "constraint",
+      "operator": "repo://codex-stdo3/a_c/SIGNATURE.md#conserves",
+      "arguments": [
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:symbol:work"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#predicate",
+          "literal": "unchanged valid authored work and original applicable producer support"
+        },
+        {
+          "role": "repo://codex-stdo3/a_c/SIGNATURE.md#qualification",
+          "literal": "refresh affected dependencies; unfinished assessment stays unfinished; reconcile possible external effects before repetition"
+        }
+      ],
+      "statement": "Re-entry uses current persistent work; it is not a full-history RAM requirement or universal idempotence theorem.",
+      "source_refs": [
+        "repo://codex-stdo3/standards/WORK_METHOD.md#w-06-re-enter-current-persistent-work"
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "uri": "urn:codex-stdo3:residual:mechanical-limits",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:codex-stdo3:symbol:assessment"
+      ],
+      "detail": "Mechanical structure/resolution is not independent source fidelity, truth, complete operator/arity/type checking or actual finite behavior.",
+      "re_entry_refs": [
+        "repo://codex-stdo3/standards/QUALIFICATION_METHOD.md#k-05-verify-the-selected-dependency-before-use"
+      ],
+      "source_refs": [
+        "repo://codex-stdo3/standards/QUALIFICATION_METHOD.md#k-05-verify-the-selected-dependency-before-use"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:residual:unmodeled-method",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:codex-stdo3:symbol:what",
+        "urn:codex-stdo3:symbol:work"
+      ],
+      "detail": "This small interpretation covers only the selected clauses above, not the whole corpus, predecessor obligations, categorical or HoG/Markov laws, method effectiveness, acceptance or release.",
+      "re_entry_refs": [
+        "repo://codex-stdo3/standards/FOUNDATIONS.md#f-07-orthogonal-accounts-and-proof-limits"
+      ],
+      "source_refs": [
+        "repo://codex-stdo3/standards/FOUNDATIONS.md#f-07-orthogonal-accounts-and-proof-limits"
+      ]
+    }
+  ],
+  "frame_indexes": [
+    {
+      "uri": "urn:codex-stdo3:index:selected",
+      "frame_ref": "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1",
+      "scope": "Use the selected quote conversion and method conservation relations; finite behavior and fidelity remain separate.",
+      "clause_refs": [
+        "urn:codex-stdo3:clause:assessment-admission",
+        "urn:codex-stdo3:clause:assessment-conservation",
+        "urn:codex-stdo3:clause:quote-unit",
+        "urn:codex-stdo3:clause:token-transfer",
+        "urn:codex-stdo3:clause:typed-join",
+        "urn:codex-stdo3:clause:what-hows",
+        "urn:codex-stdo3:clause:work-reentry"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:residual:mechanical-limits",
+        "urn:codex-stdo3:residual:unmodeled-method"
+      ],
+      "source_refs": [
+        "repo://codex-stdo3/qualification/T2_T6/TASKS.md#d-source-revision-1"
+      ]
+    }
+  ]
+}

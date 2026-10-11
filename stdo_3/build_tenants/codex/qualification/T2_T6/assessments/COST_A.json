@@ -1,0 +1,103 @@
+{
+  "slot": "A",
+  "producer": "/root/assess_cost_defect",
+  "predicate": "cost_and_dimensions",
+  "coverage": [
+    "cost_and_dimensions"
+  ],
+  "subject": {
+    "commit": "fe0861fca52dd66f62c00b5584fc3c39eab2b62f",
+    "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/defective/BRIEF.md",
+    "sha256": "85922afcddeec53d68a9f3da66f211e8792e14eef2d814b6fd4f52cc7a2d7536"
+  },
+  "source": {
+    "commit": "e5ac730699afcd1fc6a1f610d2186c63ac328ca3",
+    "path": "stdo_3/build_tenants/codex/qualification/T2_T6/TASKS.md",
+    "sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+    "revision": "cost-brief/source-v1"
+  },
+  "judgment": "falsified",
+  "citations": [
+    {
+      "kind": "source",
+      "commit": "e5ac730699afcd1fc6a1f610d2186c63ac328ca3",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/TASKS.md",
+      "sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+      "lines": [
+        89,
+        100
+      ],
+      "fragment": "one dollar is 100 cents; Harbor 6 AUD cents per node-hour"
+    },
+    {
+      "kind": "source",
+      "commit": "e5ac730699afcd1fc6a1f610d2186c63ac328ca3",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/TASKS.md",
+      "sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+      "lines": [
+        118,
+        123
+      ],
+      "fragment": "cent-rate producer versus dollar-rate consumer; supported translation allowed"
+    },
+    {
+      "kind": "expectations",
+      "commit": "e5ac730699afcd1fc6a1f610d2186c63ac328ca3",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/EXPECTATIONS.md",
+      "sha256": "e1a8f9ff0ef098cd89c6c1be4d7c5712b3ed8074ff2f39712c8b59f363936849",
+      "lines": [
+        38,
+        50
+      ],
+      "fragment": "Harbor compute AUD 86.40 and total AUD 106; numeric 6 is not six dollars"
+    },
+    {
+      "kind": "subject",
+      "commit": "fe0861fca52dd66f62c00b5584fc3c39eab2b62f",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/defective/BRIEF.md",
+      "sha256": "85922afcddeec53d68a9f3da66f211e8792e14eef2d814b6fd4f52cc7a2d7536",
+      "lines": [
+        15,
+        15
+      ],
+      "fragment": "Harbor: 6 AUD cents per node-hour | 6 AUD dollars per node-hour"
+    },
+    {
+      "kind": "subject",
+      "commit": "fe0861fca52dd66f62c00b5584fc3c39eab2b62f",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/defective/BRIEF.md",
+      "sha256": "85922afcddeec53d68a9f3da66f211e8792e14eef2d814b6fd4f52cc7a2d7536",
+      "lines": [
+        25,
+        39
+      ],
+      "fragment": "producer AUD_cent / node_hour; rate = 6 AUD_dollar / node_hour; direct numeric reuse"
+    },
+    {
+      "kind": "subject",
+      "commit": "fe0861fca52dd66f62c00b5584fc3c39eab2b62f",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/defective/BRIEF.md",
+      "sha256": "85922afcddeec53d68a9f3da66f211e8792e14eef2d814b6fd4f52cc7a2d7536",
+      "lines": [
+        56,
+        57
+      ],
+      "fragment": "Harbor compute AUD 8,640.00; total AUD 8,659.60; Over by AUD 8,499.60; Cove remains AUD 148.00"
+    },
+    {
+      "kind": "subject",
+      "commit": "fe0861fca52dd66f62c00b5584fc3c39eab2b62f",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/defective/BRIEF.md",
+      "sha256": "85922afcddeec53d68a9f3da66f211e8792e14eef2d814b6fd4f52cc7a2d7536",
+      "lines": [
+        63,
+        63
+      ],
+      "fragment": "Harbor is AUD 8,511.60 higher"
+    }
+  ],
+  "report": {
+    "path": "stdo_3/build_tenants/codex/qualification/T2_T6/assessments/COST_A.md",
+    "sha256": "5fbd4a686b842b910aec06bfbdcfdc4eb3656a310531f848d01b136eda25265b"
+  }
+}

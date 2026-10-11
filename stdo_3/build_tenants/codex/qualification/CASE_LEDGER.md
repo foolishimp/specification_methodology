@@ -1,0 +1,57 @@
+# Current Codex Case And Capability Ledger
+
+Subject: twelve documentary members, 69,151 bytes, frozen at ea43ca8996f05f8d32e5ad6ab6f2327c39f773ab and enumerated in [CANDIDATE.json](CANDIDATE.json). Construction basis: installed STDO 2.5.1 RC2; common WHAT at 00be6b8e674d61d96ed31e744e1d85adcd456df4. The [completion return](BUILD_RETURN.md) supplies current standing and proof checkpoint.
+
+The historical [C2 cases](C2_CASES.md) retain their original dated proposal standing. The later [tasks](T2_T6/TASKS.md) and [expectations](T2_T6/EXPECTATIONS.md) were independently specified and frozen at e5ac730 before their consumers. This ledger records observations against those expectations; it does not redefine them or turn every case into whole-method qualification. “Supported” below means the named bounded documentary/fixture relation, with the stated limit.
+
+## Cases
+
+| Case | Current observed relation | Evidence and practical limit |
+|---|---|---|
+| Q01 | Supported: dollars/cents meaning requires conversion. | [Actual cost failure](T2_T6/assessments/COST_A.md) detects an internally consistent 100× rate error; [repaired confirmation](T2_T6/assessments/REPAIRS_D_N_S.md) checks the correct translation. |
+| Q02 | Supported selected unready bindings and refusals. | [State readback](T2_T6/assessments/STATE_AND_READBACK.md) preserves wrong revision, missing current authority/access and failed acquisition; no exhaustive world-state claim. |
+| Q03 | Supported: two different legal HOWs. | [Baseline](T2_T6/assessments/DEPLOYMENT_BASELINE.md) checks A's cents-first and B's normalization-first construction; [cost assessor](T2_T6/assessments/COST_A.md) independently reconfirms adequate B. Same obligations, distinct internal arithmetic. |
+| Q04 | Supported selected fixture/core boundary. | A/B actual returns detect and repair the supplied provider-specific generic-guide draft; [baseline](T2_T6/assessments/DEPLOYMENT_BASELINE.md) checks it. Cloud rates remain qualification material, outside the method corpus. |
+| Q05 | Supported direct bounded use. | [T1](T1/RETURN.md) binds a fresh construction task and sufficient context; later [reader assessment](T2_T6/assessments/READER_USE.md) checks actual useful documentary use. |
+| Q06 | Supported contractual refinement and coupled seams. | [T1](T1/RETURN.md) retains the actual selected access/body envelope and seam proof. This was not a native model-context exhaustion or large-body stress test. |
+| Q07 | Supported truthful infeasible-refinement result. | [T1](T1/RETURN.md) retains the missing coupled S4 relation and out-of-frame result; omission does not obtain success. |
+| Q08 | Supported inaccessible/invalid evidence refusal. | [T1](T1/RETURN.md) exercises unavailable body/bad digest. A reference alone does not supply the missing material. |
+| Q09 | Supported: local arithmetic green does not prove a typed join. | [Defective local checks](T2_T6/runs/deployment/defective/LOCAL_CHECKS.json) pass; [actual independent judgment](T2_T6/assessments/COST_A.md) falsifies source-unit fidelity. |
+| Q10 | Supported actual promotion refusal. | [Authority refusal](T2_T6/assessments/AUTHORITY_REFUSAL.md) withholds the requested common edit and acceptance while retaining the correct scoped cost result. Common bytes remain unchanged. |
+| Q11 | Supported actual failure plus uncovered coverage. | [Conjunction](T2_T6/runs/conjunction/COMPOSITE.json) uses the real authenticated A judgment and original citation reference; [fresh readback](T2_T6/assessments/STATE_AND_READBACK.md) preserves A's failure and distinct uncovered B. B was not a missing planned slot. |
+| Q12 | Supported earlier missing-slot rejection. | [Admission](T2_T6/runs/conjunction/ADMISSION.json) actually omits planned A; admission refuses before conjunction. The Q11 guard is retained. This is a local qualification fixture, not an installed ABG change. |
+| Q13 | Supported selected result-pressure distinctions. | [T1](T1/RETURN.md) exercises its declared judgment/coverage pressures and separates next action. Supplied wiring cases do not prove actual defect detection or all possible environments. |
+| Q14 | Supported fresh occurrence over useful persistent work. | [T1](T1/RETURN.md) retains unfinished assessment and valid authored output through planned interruption. This is not an OS-crash or arbitrary-failure experiment. |
+| Q15 | Supported affected refresh with independent work retained. | [State readback](T2_T6/assessments/STATE_AND_READBACK.md) checks source-v2 Harbor at AUD 134.80, Cove at AUD 148.00, unchanged guide and original source-v1 receipt. |
+| Q16 | Supported actual post-write loss, uncertainty and later observation. | [State readback](T2_T6/assessments/STATE_AND_READBACK.md) checks the actual persisted receipt/lost response and no blind repeat. [Later reconciliation](T2_T6/assessments/STATE_RECONCILIATION.md) supports the neutral endpoint; earlier lack of access stays indeterminate. No exactly-once/security guarantee. |
+| Q17 | Supported actual advance, regression and unchanged rejection. | [State return](T2_T6/runs/state/RETURN.md) records a real reversible regression, repeated failure, diagnosis and repair; [independent readback](T2_T6/assessments/STATE_AND_READBACK.md) checks reconstruction. No claim of an ABG churn detector. |
+| Q18 | Supported distinct suspension, withdrawal and exact completion. | [Owner actions](T2_T6/fixtures/lifecycle/OWNER_ACTIONS.json) complete only the v1 fixture interval and actually refuse exhausted grants without another write. Source-v2 receipt remains suspended; its resumption was not executed. |
+| Q19 | Supported selected fresh-reader jobs. | [T1](T1/RETURN.md), [candidate/RC2 reader assessment](T2_T6/assessments/READER_USE.md) and [repaired-entry confirmation](T2_T6/assessments/READER_REPAIR.md) bind actual output. Readers share a model family; broader audience/cross-family independence remains unproved. |
+| Q20 | Supported separate index resolution and useful guidance. | [Reader assessment](T2_T6/assessments/READER_USE.md) finds four valid routes while falsifying the supplied entry's permission guidance. The corrected entry and a new restricted-exposure reader receive [affected confirmation](T2_T6/assessments/READER_REPAIR.md); useful original cost work remains retained. |
+| Q21 | Supported actual source-linked detection and affected repair. | [T1 V2](T1/RETURN.md), [real dimensional defect](T2_T6/assessments/COST_A.md) and [wrong model](T2_T6/assessments/MODEL_SUCCESSOR.md) preserve genuine negatives. Original T1 defect-isolation failure and first-review miss remain historical failures. |
+| Q22 | Limited operational evidence; no efficiency claim. | [Reader comparison](T2_T6/assessments/READER_USE.md) checks equal adequate outcomes and reports acquisition/replays with differing counter definitions. Full preparation/dispatch/assurance/human work, provider tokens and RSS are unavailable; no whole-path gain is established. |
+| Q23 | Supported selected causal ownership before retry. | [Cost](T2_T6/assessments/COST_A.md), [model](T2_T6/assessments/MODEL_SUCCESSOR.md), [materialized-source and changed-basis readback](T2_T6/assessments/STATE_AND_READBACK.md) and [reader guidance](T2_T6/assessments/READER_USE.md) distinguish typed translation, projection, fixture, governing successor and derived guide. No generic law was added from these failures. |
+| Q24 | Supported selected mechanics/fidelity/finite-outcome separation. | [Mechanical receipts](../a_c/MECHANICAL_RECEIPTS.json) record both programs validating; [independent fidelity](T2_T6/assessments/MODEL_SUCCESSOR.md) falsifies the wrong quote; [repaired confirmation](T2_T6/assessments/REPAIRS_D_N_S.md) supports the fixed relation. Actual finite provider branches are separate evidence, not a full calculus theorem. |
+| Q25 | Supported four-duty fixture; full migration unselected. | [Incomplete P1](T2_T6/runs/successor/P1_INCOMPLETE.md) is independently falsified; [repaired P1 confirmation](T2_T6/assessments/REPAIRS_D_N_S.md) supports its exact four duties. [Predecessor scope](PREDECESSOR_SCOPE.md) keeps the full 2.x inventory and owner-selected migration unresolved. |
+| Q26 | Supported document-library instances; executable consolidation unproved. | A/B Writers and independent evaluators import the same core transformation definitions while preserving different effects and responsibilities. No shared runtime helper, universal primitive-minimality proof or implementation-size reduction is claimed. |
+
+## Capability Coverage
+
+| Capability | Relevant current cases | Standing |
+|---|---|---|
+| CAP-01: governed interpretation | Q01, Q02, Q20 | Supported selected units, source/basis and reader relations. |
+| CAP-02: distinct realizations/composition | Q03, Q04, Q09, Q26 | Supported documentary derivation and actual typed join; executable library consolidation remains separate. |
+| CAP-03: bounded sufficient context | Q05–Q08 | Supported contractual fit/refinement/refusal; native capacity stress remains separate. |
+| CAP-04: truthful construction/evaluation | Q10–Q13, Q21 | Supported actual negative/conjunction and planned-slot guard; no universal observer model. |
+| CAP-05: current-state continuation | Q14–Q18 | Supported selected persistent fixtures and permissions; no universal idempotence/termination guarantee. |
+| CAP-06: usable publication | Q19, Q20, Q22 | Selected fresh use supported; whole-path efficiency unproved. |
+| CAP-07: responsible repair | Q23, Q25 | Selected causal repairs and four-duty successor supported; full migration awaits owner selection. |
+| CAP-08: separate qualification claims | Q21, Q24, Q25 | Actual defects, tool/fidelity boundary and fixture conservation supported; acceptance/release remain separate. |
+
+## Evidence Limits That Remain Visible
+
+Independent means a distinct source-first activation without repair authorship for its named subject. It does not imply another model family or cryptographic identity. The closed corpus, cost, reader and state assessors recover fixed source/criteria before subjects. The original deployment and model reports disclose a stricter input-ordering deviation while retaining source/criteria-before-subject evidence; later affected checks do not retroactively erase it.
+
+Historical failed payload/acquisition envelopes remain failed. Explicit forward rebindings permitted completion with measured limits; they do not manufacture a result within the original bound. The current return attributes those exceptions. Candidate/T1 expectations, original negative subjects, actual producer references and failed reports remain preserved.
+
+This ledger supports owner review of a documentary candidate. It does not assert that all 26 cases have unrestricted passes, that all profiles are behaviorally qualified in every domain, or that STDO 3.0 is accepted, released, installed for consumers or adopted.

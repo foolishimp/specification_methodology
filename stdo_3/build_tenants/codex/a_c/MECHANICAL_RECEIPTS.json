@@ -1,0 +1,113 @@
+[
+  {
+    "variant": "wrong",
+    "args": [
+      "python3",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/program-wrong.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/bindings.json",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/validation-wrong.json",
+      "--emit-map",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/map-wrong.json"
+    ],
+    "started_utc": "2026-10-11T14:52:25.503098+00:00",
+    "elapsed_seconds": 0.04005175002384931,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "variant": "repaired",
+    "args": [
+      "python3",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/program-repaired.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/bindings.json",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/validation-repaired.json",
+      "--emit-map",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/map-repaired.json"
+    ],
+    "started_utc": "2026-10-11T14:52:25.543385+00:00",
+    "elapsed_seconds": 0.035151541931554675,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "operation": "project",
+    "variant": "wrong",
+    "args": [
+      "python3",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/program-wrong.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/map-wrong.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/bindings.json",
+      "--frame-index",
+      "urn:codex-stdo3:index:selected",
+      "--mode",
+      "materialized",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/projection-wrong.json"
+    ],
+    "started_utc": "2026-10-11T14:54:16.307874+00:00",
+    "elapsed_seconds": 0.04292533406987786,
+    "returncode": 0,
+    "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:index:selected\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:58d243911d42d88411593ba785276ef7eac5718ed756779a8cd866efcb5bf038\",\"program_uri\":\"urn:codex-stdo3:program:wrong-units\",\"schema_version\":1,\"status\":\"valid\"}\n",
+    "stderr": ""
+  },
+  {
+    "operation": "project",
+    "variant": "repaired",
+    "args": [
+      "python3",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+      "project",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/program-repaired.json",
+      "--map",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/map-repaired.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/bindings.json",
+      "--frame-index",
+      "urn:codex-stdo3:index:selected",
+      "--mode",
+      "materialized",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/projection-repaired.json"
+    ],
+    "started_utc": "2026-10-11T14:54:16.350962+00:00",
+    "elapsed_seconds": 0.035592167056165636,
+    "returncode": 0,
+    "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:index:selected\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:8546a6756184b442b6b893702d983ca3eebd9d1c9197db8268ce5db16ebb098a\",\"program_uri\":\"urn:codex-stdo3:program:repaired\",\"schema_version\":1,\"status\":\"valid\"}\n",
+    "stderr": ""
+  },
+  {
+    "operation": "join",
+    "args": [
+      "python3",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+      "join",
+      "--input",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/sections.json",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/REQUEST.txt"
+    ],
+    "started_utc": "2026-10-11T14:54:16.386881+00:00",
+    "elapsed_seconds": 0.02949924999848008,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]
