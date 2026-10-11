@@ -1,0 +1,90 @@
+{
+  "status": "VERIFIED",
+  "procedure": "explicit-targeted-member-install-verification",
+  "operation": "read-only-verify",
+  "started_utc": "2026-10-11T14:47:12.410067+00:00",
+  "finished_utc": "2026-10-11T14:47:12.632896+00:00",
+  "elapsed_seconds": 0.222681,
+  "install_root": "/Users/jim/src/apps/specification_methodology-codex/stdo_3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2",
+  "release_ref": "refs/tags/axiom_indexer/v2.5.1-rc.2",
+  "identity": {
+    "tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+    "commit": "9a9c479776ffd974fbcafcf48341980918209aef",
+    "tree": "3a553ceb8db2e8de4ac779abdc2a2ceae5708c7d",
+    "subtree": "6dae168d0a258ca506f4d6b9d5cd0a0c835fb546"
+  },
+  "member_count": 7,
+  "inventory_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+  "release_note_sha256": "ae59529d285cd4bcbee1f3fb65807d66a3774fca14d76f8edad826a0aaa2d9c9",
+  "member_body_bytes": 52496,
+  "regular_file_bytes": 52436,
+  "symlink_target_bytes": 60,
+  "members": [
+    {
+      "type": "symlink",
+      "path": ".agents/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "target": "../../skills/axiomatize-corpus",
+      "source_git_mode": "120000",
+      "source_git_blob": "921d5e79b3d05688bbbd63967bd419c2ce07f1a1",
+      "installed_mode": "0o755",
+      "bytes": 30
+    },
+    {
+      "type": "symlink",
+      "path": ".claude/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "target": "../../skills/axiomatize-corpus",
+      "source_git_mode": "120000",
+      "source_git_blob": "921d5e79b3d05688bbbd63967bd419c2ce07f1a1",
+      "installed_mode": "0o755",
+      "bytes": 30
+    },
+    {
+      "type": "file",
+      "path": "build_tenants/core/code/ac.py",
+      "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "source_git_mode": "100644",
+      "source_git_blob": "7e2796d469be5988154b2568ca896c628140d367",
+      "installed_mode": "0o644",
+      "bytes": 38113
+    },
+    {
+      "type": "file",
+      "path": "skills/axiomatize-corpus/SKILL.md",
+      "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d",
+      "source_git_mode": "100644",
+      "source_git_blob": "75bb0a20e128313f4c25cd1e2830e10c4a53ad7a",
+      "installed_mode": "0o644",
+      "bytes": 3962
+    },
+    {
+      "type": "file",
+      "path": "skills/axiomatize-corpus/agents/openai.yaml",
+      "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990",
+      "source_git_mode": "100644",
+      "source_git_blob": "b63d738fe88c98fa0f0b3002f9cb50941a7bf162",
+      "installed_mode": "0o644",
+      "bytes": 284
+    },
+    {
+      "type": "file",
+      "path": "skills/axiomatize-corpus/references/output-contract.md",
+      "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b",
+      "source_git_mode": "100644",
+      "source_git_blob": "697f919e5700ada4267402504be577ca42be6417",
+      "installed_mode": "0o644",
+      "bytes": 5835
+    },
+    {
+      "type": "file",
+      "path": "skills/axiomatize-corpus/references/program.schema.json",
+      "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+      "source_git_mode": "100644",
+      "source_git_blob": "ca7da18119e7ea7b8d68a06c42150e4baa7687dc",
+      "installed_mode": "0o644",
+      "bytes": 4242
+    }
+  ],
+  "ac_executed": false
+}
