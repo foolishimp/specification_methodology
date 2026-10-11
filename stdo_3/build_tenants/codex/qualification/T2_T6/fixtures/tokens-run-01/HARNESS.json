@@ -1,0 +1,52 @@
+{
+  "finished_utc": "2026-10-11T14:56:08.311533+00:00",
+  "operations": [
+    {
+      "branch": "positive",
+      "current_sha256": "1103eda0b640c52e55cd88b98840b61f0b9ef694163e770bdb4a876b4fbb3474",
+      "provider_result": {
+        "effect": true,
+        "judgment": "satisfied"
+      },
+      "request": {
+        "destination": "Bea",
+        "operation": "positive-t1",
+        "source": "Ada",
+        "token": "t1"
+      }
+    },
+    {
+      "branch": "refusal",
+      "current_sha256": "9ba41dabf89e4c6725307653921ed8da315da6354212bd38d02a9f40151558ce",
+      "provider_result": {
+        "cause": "current-owner permission absent",
+        "effect": false,
+        "judgment": "falsified"
+      },
+      "request": {
+        "destination": "Ada",
+        "operation": "unpermitted-t2",
+        "source": "Ada",
+        "token": "t2"
+      }
+    },
+    {
+      "branch": "uncertain",
+      "consumer_access": "authoritative current locator withheld for selected interval",
+      "current_sha256": "69233191ed37905104b03fb45d1a8a7e7f06c46cbdcd758f700f557ed8a58dd1",
+      "provider_result": {
+        "effect": true,
+        "judgment": "satisfied"
+      },
+      "request": {
+        "destination": "Bea",
+        "operation": "uncertain-t0",
+        "source": "Ada",
+        "token": "t0"
+      },
+      "transport": "controlled response loss after persistent ownership write"
+    }
+  ],
+  "source_sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+  "started_utc": "2026-10-11T14:56:08.309879+00:00"
+}
