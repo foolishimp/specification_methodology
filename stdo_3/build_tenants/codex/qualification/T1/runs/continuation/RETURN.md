@@ -1,148 +1,181 @@
-# Setup return — incomplete workspace
+# T1 continuation return — candidate ready for freeze and assessment
 
-Setup Writer creates only the task-declared 170-byte HANDOFF seed and this return.
-Source identity: urn:stdo-3:trial:codex:t1:handoff:v1; SOURCE SHA256
-e338f776d73ea41f9b9e53b157c5d9680ac4b8b36ec121f7fe4713a8bc12c065.
-Seed HANDOFF SHA256: 4931107105c0b0f5a444271583ae3f316951eb71d2d62e14b3ed6c63b6ce41f9.
+The selected remaining O3–O6 construction is complete in these two current
+files, with applicable O1/O2 and the intake paragraph retained. This is a closed
+Writer result for document construction and author observation. Independent
+assessment remains unfinished; no human release decision or owner acceptance
+is supplied. Trial qualification remains unresolved.
 
-This is setup content, not completed O1/O2 construction or an assessment.
-The intake paragraph is retained work; instructions and release authority remain
-incomplete. No time, signature, release, external effect or acceptance is supplied.
-Next admitted action: separately granted fresh Writer continues O1/O2 over this
-workspace and stops before O3/O4; its actual output needs a named freeze.
+## Activation, source and current preimages
 
-# O1/O2 continuation — deliberate pause
+Actor: fresh native Codex Writer coordinated by the selected Executive.
+Trial: `urn:stdo-3:trial:codex:t1:handoff:v1`, `T1/runs/continuation`, in
+`/Users/jim/src/apps/specification_methodology-codex`, branch `tenant/codex/c1`.
+The selected action retained correct current O1/O2 and the intake paragraph
+byte-for-byte, then completed O3–O6 in the same HANDOFF.md and RETURN.md.
+Only these two existing paths are granted effects.
 
-The setup record above is the retained predecessor record, not a completed
-producer assessment. This current Writer activation continues only O1/O2 and
-ends before O3/O4. Whole-task result: incomplete / indeterminate. The bounded
-construction is a candidate with author observations; no independent judgment,
-owner acceptance or earlier producer judgment is invented.
+Frozen partial checkpoint: `e9a1b032d63b20d21295c2074bce784ed40deb70`.
+Current preimages were read, their hashes matched the grant, and they were
+rechecked immediately before these writes:
 
-## Activation and bound preimages
+| Current file | Bytes | SHA256 |
+|---|---:|---|
+| HANDOFF.md | 1808 | 7a0b37d7cfd116102600c38f8c20a18de4c24fae27fde4664c31a9db3f2a98c6 |
+| RETURN.md | 8922 | 129729635b3f048e6309c4418e07c3131c63a4cab4e52ef35e6dd34ec63cceca |
 
-- Actor: fresh native Codex Writer, coordinated by the selected Executive.
-- Trial: T1 / runs/continuation, in
-  `/Users/jim/src/apps/specification_methodology-codex`, selected branch
-  `tenant/codex/c1`. No Git operation was performed in this activation.
-- Selected action: retain the seed intake paragraph byte-for-byte; construct
-  actual O1/O2 in the existing HANDOFF; preserve all remaining obligations as
-  unresolved and pause before constructing O3/O4.
-- Effects grant: only this existing RETURN.md and its sibling HANDOFF.md.
-- HANDOFF preimage: 170 bytes; SHA256
-  `4931107105c0b0f5a444271583ae3f316951eb71d2d62e14b3ed6c63b6ce41f9`.
-- RETURN preimage: 740 bytes; SHA256
-  `7577934df085d4a3b39e8038f5b19eee10447c3a6035639e8d8e2f746383f635`.
-- Both current preimages were observed before construction and rechecked
-  unchanged immediately before the permitted writes.
-- Executive-supplied frozen coordinates: common input
-  `00be6b8e674d61d96ed31e744e1d85adcd456df4`; source/method/trial seed input
-  `6f0412c234afe9f668338c9b3be70268c92c718a`. Those commit coordinates are
-  inherited bindings, not independently Git-verified claims here. Current
-  deciding file hashes and SOURCE body were checked directly.
+Common input binding: `00be6b8e674d61d96ed31e744e1d85adcd456df4`.
+Method/task source was acquired by read-only `git show` from
+`6f0412c234afe9f668338c9b3be70268c92c718a`. Current branch and HEAD were
+observed without Git mutation. The deciding current Product Definition,
+Product and frame hashes matched TASK's pins:
 
-## Source and method acquisition
+- stdo_3.json: `f02262f7de41fc35b7aa563367a154ce32f7384ae600edfec2ecb83c900f3894`;
+- specification/PRODUCT.md: `13960cda69c7738a27f8784825898f1262900d0dc7551071d08883e7611d0c1f`;
+- specification/REFERENCE_FRAME_BASIS.md: `af908180f74d5ee38c91420661656531ffff9dfd8a8204302204ffcdf4374e49`.
 
-Source: `urn:stdo-3:trial:codex:t1:handoff:v1`, Full view S0–S7 from
-`../../TASK.md`; UTF-8/LF body including final LF, 1420 bytes; SHA256
+SOURCE view: Full, S0–S7, from the frozen `../../TASK.md` (path relative to
+this run). Source identity is the trial URN above. Its exact fenced body,
+fences excluded and final LF included, was observed as 1420 bytes, SHA256
 `e338f776d73ea41f9b9e53b157c5d9680ac4b8b36ec121f7fe4713a8bc12c065`.
-The body digest was checked from the task's exact fenced source body. This
-source is fictitious trial content, not general method law.
+TASK is 6278 bytes, SHA256
+`3c4b7279655b650b875a544e26110b47c2c795450e1165bc42d4bd60a8321faa`.
+The source is available through that exact frozen route; a digest or draft
+alone was not substituted for its deciding body. Fixture particulars remain
+fictitious trial content.
 
-Construction basis: `stdo://releases/v2.5.1-rc.2/`; manifest SHA256
+## Acquired method and governing basis
+
+Construction basis: `stdo://releases/v2.5.1-rc.2/`, manifest SHA256
 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
-Read-only installed verification returned `valid: true`, `failures: []`.
-The Product Definition, Product and frame hashes matched the TASK pins.
+The coordinating Executive supplied current installed verification:
+`valid: true`, `failures: []`. This activation acquired the installed entry and
+owning clauses from `/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2`;
+it did not repeat that toolchain verification or claim a new release.
 
-The published tenant entry and its deciding owners were acquired directly:
+The tenant's published entry and relevant owners were directly read at the
+frozen method/task source commit:
 
-| Method path relative to Codex tenant | UTF-8 bytes | SHA256 |
+| Method path relative to Codex tenant | Bytes | SHA256 |
 |---|---:|---|
 | standards/README.md | 2851 | a75a40324d52ae1e55ee3f1b664c61ccfd03583157cd04b0c33f8630d54f91bd |
 | standards/WORK_METHOD.md | 8554 | b4fa5923f652585c734fcc9b9d2a3b4489c86972a543080898974bfafc89b1d8 |
 | standards/EVIDENCE_METHOD.md | 6600 | 71f1702903b5b6bb3fd16cedcf0e14a58247571ef3c86259f1a42d339ac2db37 |
 | standards/FOUNDATIONS.md | 7054 | b8be02c6b7c29487205132ed735184c675a9aa854d3efeb17dc9204997eb0908 |
 
-W-01/W-02/W-04 bound current work, acquired source and observed the actual
-effect; W-05/W-06 preserve the deliberate stop and valid seed. F-04 conserves
-identity, retained work and unresolved obligations. E-01/E-03/E-04/E-05 keep
-candidate, author observations, unfinished assessment and authority distinct.
-TASK SHA256:
-`3c4b7279655b650b875a544e26110b47c2c795450e1165bc42d4bd60a8321faa`.
+W-01/W-02 bound the exact continuation and sufficient current source. W-04/W-06
+require observing saved effects and retaining valid persistent work. W-05
+limits the next action. F-04 preserves original producer/support coordinates,
+uncertainty and the still-unfinished judgment. E-01/E-03/E-05 distinguish this
+candidate and author checks from independent assessment and owner authority.
 
-Installed bootstrap, RF-001–RF-017 plus Select/Activate, Evaluate and Return A
-Closed Result, and the baseline's Executive/Worker activation and return clauses
-were acquired from the verified Install. Its source digests are:
+Installed materials acquired were standards/README.md and bootstrap in full,
+REFERENCE_FRAME_METHOD's RF-001–RF-017, Select And Activate, Evaluate and Return
+A Closed Result, plus the baseline's Executive Activates Worker and Worker
+Returns To Executive. Observed owning-file SHA256 values:
 
+- standards/README.md: `7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659`;
 - bootstrap: `f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a`;
 - REFERENCE_FRAME_METHOD: `6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7`;
 - STDO_REFERENCE_FRAME_BASELINE: `29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d`.
 
 No EXPECTATIONS, peer realisation, author conversation or other trial working
-result was read. Source and method files remained read-only.
+result was read. The only acquired prior trial work was this exact current
+continuation pair, selected for retention. Source and method stayed read-only.
 
-## Coverage and unfinished assessment
+## Retention and author-observed coverage
 
-| Obligation | Current standing |
+The frozen predecessor remains recoverable as
+`e9a1b032d63b20d21295c2074bce784ed40deb70:stdo_3/build_tenants/codex/qualification/T1/runs/continuation/HANDOFF.md`
+and its sibling `RETURN.md`, with the preimage hashes above. Its setup Writer
+record and fresh native O1/O2 Writer return retain their original historical
+standing: candidate construction and limited author observations, with the
+whole-task assessment unfinished. This current return references those bodies
+rather than copying or reminting their support as independent judgment.
+
+The intake paragraph and the entire raw-record/formula/band section plus
+receive/record/compare steps 1–4 are retained byte-for-byte. The obsolete
+partial title, incomplete-instructions warning, pause-only step 5 and terminal
+pause note are superseded by current instructions; applicable HOLD and
+unresolved-release facts survive. Historical pause labels remain historical
+at the frozen predecessor, not the current disposition.
+
+| Obligation | Current candidate and support |
 |---|---|
-| O1 | Constructed in HANDOFF: all three raw readings/units/seals, formula, inclusive band; A-17 = 5 C, B-18 = 10 C, C-19 unresolved. Author observation only; independent assessment pending. |
-| O2 | Constructed in HANDOFF: receive/record/compare/HOLD steps; A eligible/HOLD, B outside-band/HOLD, C unknown/HOLD; receipt times remain not supplied. Author observation only; independent assessment pending. |
-| O3 | Intentionally unimplemented at this pause; unresolved. |
-| O4 | Intentionally unimplemented at this pause; unresolved. |
-| O5 | This pause record supplies current source/method/preimages and limited support; the required separate named output freeze and final whole-task coverage remain pending. |
-| O6 | This pause record preserves current effects, retained work, uncertainty and next-action limits; final continuation, assessment and decision remain unresolved. |
+| O1 | Retained raw records, units, seals, formula and inclusive band; A-17 = 5 C, B-18 = 10 C, C-19 unresolved. Author arithmetic and exact-byte retention check. |
+| O2 | Retained receive/record/compare steps; all statuses remain HOLD, A eligible, B outside-band, C unknown. No receipt times invented. Saved-content retention check. |
+| O3 | New Release control requires correct same-batch identity AND known in-band temperature AND intact seal AND Mira's signed decision. Eligibility, checks, judgment and authorship grant no release; no override. Source S4/S5. |
+| O4 | New HOLD and seek Mira's resolution covers unknown, conflicting, outside-band and absent signed decision; forbids guessing, fabricated times/signatures, shipping and override. Source S4/S5/S7. |
+| O5 | This current return binds source/view/digest, exact method and trial/preimages, original support and whole-task coverage. Actual output hashes are returned separately to Executive; the next named freeze records them without a self-referential RETURN digest. |
+| O6 | This return records exact effects, retained work, unfinished assessment/decisions, uncertainty, invalidators and the next allowed assessment path. Source S6/S7 and W-04/W-06/E-03/E-05. |
 
-Author arithmetic check: (41 - 32) × 5 / 9 = 5; (50 - 32) × 5 / 9 = 10.
-Comparison uses inclusive bounds: 5 is in [2, 8]; 10 is outside. C-19 lacks
-units and was not converted. The original intake paragraph remains unchanged.
-All statuses remain HOLD. Actual saved content and output hashes are observed
-after writing; hashes are returned separately, avoiding a self-referential
-RETURN digest. These checks do not supply the required independent judgment.
+Author self-check: (41 - 32) × 5 / 9 = 5 and (50 - 32) × 5 / 9 = 10;
+5 is within inclusive [2, 8], 10 is outside. C-19 has no supplied unit and no
+conversion was guessed. Current raw records and HOLD states remain correct.
+All four release conditions are coupled to the same batch; no signed decision
+or receipt time is supplied. The actual saved files are reread after writing
+for exact retention, current text and output-hash observation.
 
-## Effects, residuals and re-entry
+Closed Writer result: candidate_ready for freeze and separately granted
+assessment; satisfied only for the selected document construction and author
+observation predicate. No independent assessment has completed in this
+activation or been inherited as complete. Required independent assessment and
+trial acceptance remain unresolved; the earlier unfinished assessment is not
+invented, erased or promoted by this return.
 
-Only the two existing continuation documents were changed. The correct seed
-intake paragraph and predecessor setup return were retained; the HANDOFF's
-incomplete-instructions warning remains. No code/runtime/Git, external handling,
-shipping, release or notification action was performed.
+## Effects, residuals and next permitted action
 
-Receipt times, C-19's unit, release-control/escalation instructions, any owner
-decision and independent assessment remain unresolved. No write uncertainty
-was observed after reading the saved documents; source or output changes would
-invalidate the affected current author observations before reuse.
+Actual effects: only the existing continuation HANDOFF.md and RETURN.md.
+No Git mutation, application runtime, external/common/peer/other-file mutation,
+handling, shipping, release or notification was performed. The updated HOLD
+instructions are documentary, including the instruction to seek Mira.
 
-The next step returns to the Executive for a named freeze of these exact current
-files. A separately granted fresh successor may retain the intake and applicable
-O1/O2, acquire the current deciding source/method, then construct O3/O4 and finish
-the remaining obligations. No continuation, assessment, repair, acceptance or
-decision is performed by this stopped activation.
+No uncertain write was observed after the saved-byte checks. Missing receipt
+times, C-19's unit, Mira's signed decisions, independent assessment and owner
+acceptance remain unresolved. Changed source, method, current output, preimage
+or another deciding premise invalidates affected current author observations;
+reacquire/rebind before their dependent reuse while retaining historical facts.
 
-## Observed work accounting
+Next allowed action: return these closed current outputs and hashes to the
+Executive for a separately named freeze. A separately granted author-independent
+assessor acquires the deciding source and independently specified expectations
+before opening that exact frozen candidate, then returns its own closed result.
+The Executive consumes applicable results and seeks only a decision within the
+owner's grant. This stopped Writer performs no assessment, further repair,
+acceptance, owner decision or external operation after return.
 
-UTC start: 2026-10-11 11:23:50. Planned envelope: at most 10 minutes. UTC close
-and elapsed are recorded below after the final observation.
+## Observed accounting
 
-The complete SOURCE body acquired was 1420 bytes, embedded once in the
-6278-byte TASK read; it is not added again to the task-prose total. The four
-tenant method bodies above total 25,059 unique bytes. FOUNDATIONS was read
-again (7054 filesystem body bytes) after combined output was truncated; no
-source-body reacquisition was needed. Installed governing text read was
-15,543 bytes: bootstrap 5772, RF selected clauses 7689 and baseline activation/
-return clauses 2082. Current seed workspace reads totalled 910 bytes.
+UTC start: 2026-10-11 11:30:08. Planned envelope: at most 10 minutes.
+The observed close and elapsed are appended after saved-document self-check.
 
-Repository cat calls submitted 90,460 unique filesystem body bytes, including
-the TASK/source, tenant methods, governance, proposed design/conformance material
-and seed workspace. A selected ticket authority excerpt added 1502 bytes.
-Combined-output truncation prevents claiming that every submitted byte was
-visible or used; this is a command-body byte account, not an effective context
-or efficiency measure. Hash/heading/tool-manager outputs and final self-check
-reads are additional preparation/observation and are not included in these body
-totals. Provider token counters, preparation memory, independent assessment cost
-and human-work counters were unavailable. Bytes are not tokens. No native-window,
-universal-fit or efficiency claim is made.
+Visible acquired input bodies, counted once: TASK/source 6278 bytes (Full SOURCE
+1420 bytes embedded, not added again); four tenant method bodies 25,059 bytes;
+current predecessor pair 10,730 bytes; selected governance bodies 29,121 bytes;
+installed entry/bootstrap/owning clauses 17,873 bytes (2330 + 5772 + 7689 + 2082).
+These total 89,061 distinct input body bytes. No input body output was truncated.
+Hash-only local reads and metadata/heading/discovery outputs are additional
+preparation/observation, not additional context-body acquisition. The current
+pair is reread for immediate preimage checks and saved-output self-checks;
+those observation reads are additional to the once-counted predecessor bodies.
+A quick required memory registry search found no trial source and supplied no
+trial obligation or prior trial support; no rollout/conversation body was read.
+Tokens, provider counters, independent-assessment cost and human-work counters
+were unavailable. Bytes are not tokens. No native-window, universal-fit or
+efficiency claim is made.
 
-Substantive construction/self-check close: 2026-10-11 11:28:00 UTC; elapsed
-4 minutes 10 seconds from the observed start. Saved-document body bytes read
-for that self-check totalled 10,344. This close-record append and final hash
-observation follow that interval; the final activation UTC end/elapsed and
-closed output hashes are returned to the Executive. All effects stop on return.
+Observed saved-document self-checks passed. The 75-byte intake paragraph and
+1395-byte applicable O1/O2 block retain their exact predecessor bytes; their
+SHA256 values are, respectively,
+`633c77f73c66f45adc4ee6f081243a5338fbb9bffe96757acad8bcf768881a70` and
+`0a8c5cf79d8012e8fd628472c0ff47984014524cb3363153cd1d770fd70242d4`.
+New release control, escalation, coverage, preserved standing and residuals
+were inspected in the actual saved documents. Two saved-output self-check
+reads observed 28,746 body bytes before this close record.
+
+UTC end: 2026-10-11 11:35:33 UTC; elapsed 325 seconds
+(5 minutes 25 seconds) from the observed start. Final close-record
+write and hash observation occur at this boundary. HANDOFF SHA256 is
+`5af71a1f6f8df1b73d987352c21072cc56bfe0c34ac3174d4885b72b37d59fba`.
+The final RETURN SHA256 is reported separately to Executive with the exact
+output bytes for the named freeze. All document effects stop after this record.

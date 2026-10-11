@@ -1,8 +1,10 @@
-# Sample handoff (partial)
+# Sample handoff (trial candidate)
 
 Intake record: A-17; logger entry 41 F; seal intact. Current status: HOLD.
 
-Instructions are incomplete; release authorization is unresolved.
+The trial instructions below cover receiving, comparison, release control and
+escalation. Release authorization remains unresolved: no signed decision from
+human owner Mira Finch has been supplied for any batch.
 
 ## Raw records and temperature comparison
 
@@ -27,8 +29,44 @@ unit beside its conversion. A missing unit remains unknown.
 4. Compare each known converted temperature with the inclusive 2–8 C band.
    Record A-17 as eligible/HOLD, B-18 as outside-band/HOLD and C-19 as
    unknown/HOLD. Retain the unresolved unit and receipt-time facts.
-5. Keep all three batches on HOLD at this pause. The release-control and
-   escalation instructions have not yet been constructed.
+5. Keep each batch on HOLD until every release requirement below is verified
+   together for that same batch. Record unresolved facts; the current records
+   supply no signed release decision for any batch.
 
-This partial document is paused after O1/O2. O3/O4 and the remaining assessment
-and decisions are unresolved.
+## Release control
+
+RELEASE requires all of the following together, for the same batch:
+
+- Correct batch identity, matched between label, raw record and decision.
+- A known temperature in the inclusive 2–8 C band, using the recorded unit and
+  the stated conversion when labelled F.
+- An intact seal.
+- Human owner Mira Finch's signed release decision for that batch.
+
+In-band temperature establishes eligibility only. Eligibility, successful
+checks, an author's instructions or an assessment do not authorize release.
+Obtain and verify Mira's signed batch decision before a release can be
+considered; no instruction author may decide release or invent a signature.
+A signature alone is insufficient when another required fact is absent,
+conflicting or outside the band. This contract grants no override.
+
+All three current batches remain HOLD. A-17 is eligible at 5 C but has no
+supplied signed decision. B-18 is outside the band at 10 C. C-19's missing unit
+makes its temperature unresolved. The seals are recorded intact, but this does
+not satisfy the other release requirements.
+
+## HOLD and seek Mira's resolution
+
+Keep HOLD and seek Mira's resolution whenever identity, unit, temperature,
+seal or decision is unknown or conflicting; when temperature is outside the
+band; or when the signed decision for the exact batch is absent. Record the
+unresolved or conflicting facts beside the raw record. Do not guess units,
+invent receipt times or signatures, ship a held batch, or override any release
+requirement. A-17 needs Mira's batch decision; B-18's outside-band reading and
+C-19's missing unit also require her resolution while those batches stay HOLD.
+
+## Trial effects
+
+These are fictitious trial instructions. This activation writes documents
+only; it performs no handling, shipping, release, notification or production
+operation. The instruction to seek Mira's resolution does not send a message.
