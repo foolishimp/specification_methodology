@@ -9,7 +9,7 @@ GOAL-001: establish one useful common structure and review its foundations befor
 | C0 structure/bootstrap | READY / setup complete after focused GO reviews and Executive conjunction | A separate exact scope, usable common WHAT and independent C1 entry contracts. |
 | C1 principles | CLOSED 2026-10-11; each tenant's realisation accepted separately, recorded in [requirements/PRINCIPLES.md](requirements/PRINCIPLES.md#c1-disposition) | Independent frozen principles attempts, source-first reviews and Jim's acceptance of each tenant's realisation. |
 | C2 capabilities/conformance | OPEN; next; derives from the common WHAT and the accepted tenant realisations | Derived capability selection and common acceptance criteria accepted by Jim. |
-| C3+ steel threads | NOT_SELECTED | Actual document construction and observed use against selected common criteria. |
+| C3+ successor construction | NOT_SELECTED; a contract is PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract) on branch `common/c3-contract`, awaiting Jim's review | Each tenant's successor candidate: axioms plus the full predecessor corpus restated, every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md) disposed under UP-015, members accepted under Executive coordination with independent review, frames as the activation unit. |
 | Release/adoption | NOT_SELECTED | Exact corpus, dependency, acceptance and separately authorised publication/adoption evidence. |
 
 [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) owns checkpoint state. [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md) have separate lifecycle and territory.
@@ -18,7 +18,11 @@ C1 is closed. Both tenants' repaired candidates, the source-first reviews of the
 
 ## Open Owner Decisions
 
-Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed. Release lineage, candidate/RC version and ref naming (including proposed rc/stdo_3/3.0.0), and cohort relation remain OPEN before an RC cut. No identity or current cohort is changed.
+Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed; a selection and per-member acceptance criteria are PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract). Release lineage, candidate/RC version and ref naming (including proposed rc/stdo_3/3.0.0), and cohort relation remain OPEN before an RC cut. No identity or current cohort is changed.
+
+## Revision Record
+
+2026-10-12: Jim's finding that the Claude C3 build routed to the predecessor instead of restating it, and ran as one self-directed Writer with no Executive, ticket, triage or independent review. He instructed the common WHAT be revised on a branch for review. This revision states the successor outcome in INTENT, pins the predecessor and adds the C3 Construction Contract, disposition grant and work-carrier rule in PRODUCT, adds C3 activation rows to the frame basis, aligns the requirements vocabulary to UP-015 and adds the predecessor-claims frontier. Nothing in it is selected until reviewed and merged.
 
 ## Deferred ABG C2 Case Inputs
 

@@ -9,7 +9,7 @@ Which capabilities follow from the accepted principles, and with which assumptio
 - Bounded work: can an actor obtain sufficient context, refine work, compose results and select a truthful unknown/stop?
 - Evidence/authority: can actual claims be evaluated, material failures conserved and owner decisions reused without widening scope?
 - Progress/recovery: can interruption, changed dependencies, persistent work state and unknown effects be handled without discarding valid progress?
-- Method usability: can fresh actors apply the documents without private validator knowledge or unnecessary whole-corpus loading?
+- Method usability: can a fresh actor, given one projected reference frame and a subject, apply the method without private validator knowledge or author memory? The frame is the activation unit; the corpus is as large as the law requires and is never the thing loaded.
 - Optional profiles: can domains add necessary meaning while keeping generic semantics and test subjects separate?
 - Self-improvement: can observations identify the correct repair owner, then support an independently evaluated successor?
 

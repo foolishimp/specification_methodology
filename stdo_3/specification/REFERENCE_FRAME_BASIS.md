@@ -23,6 +23,15 @@ The exact installed [Frame Method](stdo://releases/v2.5.1-rc.2/standards/REFEREN
 | Independent assessment | One frozen subject, governing source and independently acquired expectations; source-first closed result | Author-independent Reviewer; no repair or candidate mutation. |
 | Conjunction/disposition | Closed tenant and reviewer returns, conflicts and residuals | Executive coordinates without FS/Git mutation; Jim owns common C1/C2 decisions. |
 
+The rows above are the C1 configuration. The rows below are PROPOSED for C3 under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and bind nothing until Jim accepts them.
+
+| C3 activation | Subject and result | Actor binding and envelope |
+|---|---|---|
+| C3 Executive | The tenant's frontier (`PREDECESSOR_CLAIMS.md` rows and required evaluations), the ticket ledger, closed Writer and Reviewer results; selects `M`, activates, consumes, disposes within the grant, issues the next authorised activation | Jim, or one activation he selects (the common pen or a Claude context); no write grant to tenant, common or peer territory beyond the ticket ledger; context held to the frontier and closed results, never the candidate text |
+| C3 Writer | One member or declared cone: the restated text, its dispositions, its frames and their measured activations; returns `candidate_ready`, `refused`, `incomplete` or `re_entry_requested` with transition evidence | The tenant's own actor family; own territory only; context, wall and spend envelope declared in the activation and measured before read |
+| C3 Reviewer | One frozen member at a named commit, the predecessor source and independently acquired expectations; one closed Reference Frame Method result per acceptance criterion, findings with severity, no repair | Author-independent; a different model family from the Writer by default; same family only as a declared exception with reason; writes only in its own tenant |
+| C3 fresh actor | One projected frame and one subject; the actual-use evidence for criterion 4 | Any family; cold context outside any repository or instruction-file load path; context measured before read and recorded |
+
 Each activation binds its purpose, exact subject/preimage, governing basis and source routes, capability/access, permitted effects, preserved relations, evidence, stop conditions and return. These coordinates apply within actual selected scope; labels alone confer no authority.
 
 ## Conservation And Stops
