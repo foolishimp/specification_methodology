@@ -1,17 +1,17 @@
 # Predecessor Claims (STDO-UP-015 frontier)
 
-Status: PROPOSED on branch `common/c3-contract`; mechanical enumeration, no disposition recorded. Awaits Jim's review before merge.
+Status: PROPOSED on branch `common/c3-contract`; mechanical enumeration from the installed manifest, no disposition recorded. Awaits Jim's review before merge.
 
-STDO 3 is the successor of the installed `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`). Under [Successor Baseline Conservation (STDO-UP-015)](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) every predecessor claim capable of affecting the successor receives exactly one semantic disposition, and an unresolved disposition blocks qualification of the affected claim. This file is the frontier an Executive holds: the enumeration of what must be disposed, at a selected granularity, with each row's current state.
+STDO 3 is the successor of the installed `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`). Under [Successor Baseline Conservation (STDO-UP-015)](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) every predecessor claim capable of affecting the successor receives exactly one semantic disposition, and an unresolved disposition blocks qualification of the affected claim. This file is the frontier an Executive holds: the enumeration of what must be disposed, at a selected granularity, with each row's current state. Coverage: all 52 standards members of the manifest (member set SHA-256 `2f54671dfde54a6ad87347ac7190028af5e21021988247edf8068ab6248ef7e8`): the 16 Markdown bodies at heading-section granularity and the 36 compression, schema and template members at member granularity; plus the 19 auxiliary members the manifest publishes (licence, plugin, release note) at member granularity.
 
 ## Granularity and rules
 
 - One row per heading section of each rc.2 standard, at the member's digest below. A section's row covers the text under that heading up to the next heading of any level; a parent's row does not cover its children. Finer claims inside a section are disposed with it unless a tenant splits the row, which is recorded as a child row.
 - Identifiers (`UP-nnn`, `AC-nnn`, `RF-nnn`, `OP-nnn`, `STDO-SURFACE-nnn`) are listed where the heading carries them. A row without an identifier is still a claim.
-- Disposition takes exactly one of UP-015's four values: `conserved` (the successor restates the claim in its own text), `superseded` (an accepted successor relation replaces it, named), `intentionally removed` (Jim as Product authority removes it, with the reason), `not applicable` (no successor effect, with a bounded reason). `unresolved` is the only other state and it blocks qualification.
-- A route to the predecessor is not a disposition. Conservation is semantic and is evidenced by an author-independent source comparison, never by naming similarity or by the absence of a patch.
+- Disposition takes exactly one of UP-015's four values: `conserved` (the successor retains the claim; under the Product's [standalone successor requirement](README.md#standalone-successor-requirement), restated in the successor's own text), `superseded` (an accepted successor relation replaces it, named), `intentionally removed` (Jim as Product authority removes it, with the reason), `not applicable` (no successor effect, with a bounded reason). `unresolved` is the only other state and it blocks qualification.
+- A route to the predecessor is not a disposition. Conservation is semantic (UP-015) and is evidenced by an author-independent source comparison, never by naming similarity or by the absence of a patch.
 - Successor locus names where the disposition lands in a tenant's realisation (document and section). Each tenant keeps its own copy of the disposition and locus columns; this common file records the Executive's consolidated state after acceptance.
-- Non-standard members (compressions, schemas, templates, plugin, manifest, release note) are listed last. Their disposition may remain `unresolved` during construction and must be resolved before any RC cut.
+- The 36 non-body standards members and the auxiliary members are listed last, one row each at the manifest digest. A compression carries the claims of the body it compresses and is disposed with reference to that body's rows; a schema, template or plugin member carries its own claims. Their disposition may remain `unresolved` during construction and must be resolved before any RC cut.
 
 ## Members
 
@@ -785,27 +785,75 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md`
 | Practical Layer Checks | `#practical-layer-checks` |  | 310 | unresolved | |
 | Current-Surface Writing | `#current-surface-writing` |  | 486 | unresolved | |
 
-## Non-standard members
+## Standards members beyond the sixteen bodies
 
-| Member | Kind | Disposition | Successor locus |
-|---|---|---|---|
-| `LICENSE` | other | unresolved | |
-| `manifest.json` | manifest | unresolved | |
-| `plugins/spec/.claude-plugin/plugin.json` | plugin | unresolved | |
-| `plugins/spec/.codex-plugin/plugin.json` | plugin | unresolved | |
-| `plugins/spec/LICENSE` | plugin | unresolved | |
-| `plugins/spec/claude-skills/refresh/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/references/GETTING_STARTED.md` | plugin | unresolved | |
-| `plugins/spec/references/PRODUCT_BASIS.md` | plugin | unresolved | |
-| `plugins/spec/references/REFRESH.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-help/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-help/agents/openai.yaml` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-review/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-review/agents/openai.yaml` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-status/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-status/agents/openai.yaml` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-ticket/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-ticket/agents/openai.yaml` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-work/SKILL.md` | plugin | unresolved | |
-| `plugins/spec/skills/stdo-work/agents/openai.yaml` | plugin | unresolved | |
-| `release/release-note.md` | release note | unresolved | |
+Base route: `stdo://releases/v2.5.1-rc.2/standards/`
+
+| Member | Kind | SHA-256 | Disposition | Successor locus |
+|---|---|---|---|---|
+| `authority_compressions/README.md` | compression | `ac695b50fbe503e65fd8cb50c69ebe14ec818cc19bdb24941f514cc3c403eb88` | unresolved | |
+| `authority_compressions/axiomatic_calculus.compressed.md` | compression | `30d8615f171298e8b40d112eff4fee56e302b63f9e5968272b7e7291f76c7bda` | unresolved | |
+| `authority_compressions/design_module_method.compressed.md` | compression | `a6edc3a5fdde1946e9e47f08841b34e1e0a6ea6b937a42e2a7d9b132f53692ee` | unresolved | |
+| `authority_compressions/odd_method.compressed.md` | compression | `49968bace86260d6ffa25433598245ec89a23646b3743872aaf40bc99dbc1c6b` | unresolved | |
+| `authority_compressions/spec_method.compressed.md` | compression | `fe309ca1397ca7073ed9775bcb4da3c293678ce835fc26d4cd05bffd732091c0` | unresolved | |
+| `authority_compressions/stdo_bootstrap.md` | compression | `f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a` | unresolved | |
+| `authority_compressions/stdo_compressed.md` | compression | `3dfe3bf0913925f5daac497cef7920fdfd0a4f3d4afea1bfc996b0715119819e` | unresolved | |
+| `authority_compressions/ticket_method.compressed.md` | compression | `d7ad2a08f71a0f4f4ac9478e2f9f3c08ca22d947b27e30f08476dbbb926745d8` | unresolved | |
+| `authority_compressions/traversal_occurrence_profile.compressed.md` | compression | `bfecda2c2e2f1c2f9e1ad97713d6a708227c2f47d4d95ce380d978b0df3877ce` | unresolved | |
+| `authority_compressions/ux_method.compressed.md` | compression | `f3323f1f4704360f59fea6d7a8a7ba92be3e1c7d0bc921725da97fdeaf44ad54` | unresolved | |
+| `schemas/installed-release-manifest.schema.json` | schema | `711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2` | unresolved | |
+| `schemas/product-definition.schema.json` | schema | `e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf` | unresolved | |
+| `templates/AGENTS_TEMPLATE.md` | template | `e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e` | unresolved | |
+| `templates/CLAUDE_TEMPLATE.md` | template | `e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e` | unresolved | |
+| `templates/GOALS_TEMPLATE.md` | template | `2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d` | unresolved | |
+| `templates/INTENT_TEMPLATE.md` | template | `85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26` | unresolved | |
+| `templates/PRODUCT_DEFINITION_TEMPLATE.json` | template | `e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34` | unresolved | |
+| `templates/PRODUCT_TEMPLATE.md` | template | `0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9` | unresolved | |
+| `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` | template | `82ffcba100061fa4d63ef8b282815add4f85ae499530ea7f56b38befd5a68d8c` | unresolved | |
+| `templates/README.md` | template | `6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31` | unresolved | |
+| `templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md` | template | `8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9` | unresolved | |
+| `templates/build_tenants/common/README_TEMPLATE.md` | template | `e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8` | unresolved | |
+| `templates/build_tenants/common/design/README_TEMPLATE.md` | template | `7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd` | unresolved | |
+| `templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md` | template | `07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd` | unresolved | |
+| `templates/build_tenants/common/design/adrs/README_TEMPLATE.md` | template | `57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7` | unresolved | |
+| `templates/build_tenants/variant/README_TEMPLATE.md` | template | `0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96` | unresolved | |
+| `templates/build_tenants/variant/design/README_TEMPLATE.md` | template | `da70241069c9f98d09f6e179c2687966fca70a4546b9c52d2e8aee78644626e1` | unresolved | |
+| `templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md` | template | `d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b` | unresolved | |
+| `templates/build_tenants/variant/design/adrs/README_TEMPLATE.md` | template | `ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591` | unresolved | |
+| `templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md` | template | `76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490` | unresolved | |
+| `templates/build_tenants/variant/design/fp/README_TEMPLATE.md` | template | `4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c` | unresolved | |
+| `templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json` | template | `996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4` | unresolved | |
+| `templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md` | template | `1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991` | unresolved | |
+| `templates/docs/README_TEMPLATE.md` | template | `9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f` | unresolved | |
+| `templates/requirements/README_TEMPLATE.md` | template | `4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9` | unresolved | |
+| `templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md` | template | `67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd` | unresolved | |
+
+36 rows.
+
+## Auxiliary members
+
+Published with the release outside `standards/`, per the manifest's `auxiliary` section.
+
+| Member | Kind | SHA-256 | Disposition | Successor locus |
+|---|---|---|---|---|
+| `LICENSE` | licence | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` | unresolved | |
+| `plugins/spec/.claude-plugin/plugin.json` | plugin | `b67bcd1c104ac7ccf962e47bc45b274f58cb3045a2c6e63a8f280f932038e593` | unresolved | |
+| `plugins/spec/.codex-plugin/plugin.json` | plugin | `8287f192470a23cea9a70fa95086962718b932f2e9c2bcb19f8a708f44612667` | unresolved | |
+| `plugins/spec/LICENSE` | plugin | `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30` | unresolved | |
+| `plugins/spec/claude-skills/refresh/SKILL.md` | plugin | `a501d0d6df6e6736a33180d876f8c83a157f5f0248f195d1687bce876f3a2b79` | unresolved | |
+| `plugins/spec/references/GETTING_STARTED.md` | plugin | `bfde7bb046086e99f77bcb84bbb432fb814c8a1b9962297c6834c28e68bbdcc6` | unresolved | |
+| `plugins/spec/references/PRODUCT_BASIS.md` | plugin | `4dcf0bb305732dcb280187804889426bd5abcd7188d9bb8df8b16af265a0b23f` | unresolved | |
+| `plugins/spec/references/REFRESH.md` | plugin | `ced18a9ba499843f4321148d2d8df3ec0da7ebe8ecdb95ca282ff7dba5d53a8c` | unresolved | |
+| `plugins/spec/skills/stdo-help/SKILL.md` | plugin | `3a77b5a010f4a30debce45e4b6cd846bc84a135358c0d7369178a9512d693ee2` | unresolved | |
+| `plugins/spec/skills/stdo-help/agents/openai.yaml` | plugin | `af3add1ac0464524f1fbb33dd63c49787c1c905e883a3cbd0d48a8075474a20e` | unresolved | |
+| `plugins/spec/skills/stdo-review/SKILL.md` | plugin | `99f3d12012c7c3a39fc6ac5b80f4cc54c40d2709c536ec17a535647608ecf4db` | unresolved | |
+| `plugins/spec/skills/stdo-review/agents/openai.yaml` | plugin | `e736f9789012d0365e5dec0973cd394a48009aa06548b83cea5912643eb7d9d4` | unresolved | |
+| `plugins/spec/skills/stdo-status/SKILL.md` | plugin | `eef2081ec8a3db8a4f76db6408aa563c34c26b1e65e24417967956cc65655678` | unresolved | |
+| `plugins/spec/skills/stdo-status/agents/openai.yaml` | plugin | `b8a9e5843fcb27d5a774ae34ebabe91b039d1999af1b4efd57dcdc5a16383e37` | unresolved | |
+| `plugins/spec/skills/stdo-ticket/SKILL.md` | plugin | `419f12c3339e70ab3c02aa391e619463ebd20f2602287e1028a91bfe2cdeff85` | unresolved | |
+| `plugins/spec/skills/stdo-ticket/agents/openai.yaml` | plugin | `0ca0733a5bf692cf9b9318c1eb1a64d66262b60b2357b59e24fa4d6dfc4d0d99` | unresolved | |
+| `plugins/spec/skills/stdo-work/SKILL.md` | plugin | `39d9f88af4b574c4e30f45adc3b19ed324c25ae453d7359112af71aa9d4d4d8f` | unresolved | |
+| `plugins/spec/skills/stdo-work/agents/openai.yaml` | plugin | `88995a63dc11355deb2f72948a84702f555cc52a4398843f391c7901c0bf7d3f` | unresolved | |
+| `release/release-note.md` | release note | `2593a003a5cddccc225bfdd450f71be627453bc48dd80fbad55e298f5fbc34fe` | unresolved | |
+
+19 rows.

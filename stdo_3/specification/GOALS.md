@@ -18,11 +18,13 @@ C1 is closed. Both tenants' repaired candidates, the source-first reviews of the
 
 ## Open Owner Decisions
 
-Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed; a selection and per-member acceptance criteria are PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract). Release lineage, candidate/RC version and ref naming (including proposed rc/stdo_3/3.0.0), and cohort relation remain OPEN before an RC cut. No identity or current cohort is changed.
+Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed; a selection and per-member acceptance criteria are PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract). Release lineage is decided: the target is v3.0.0 of the STDO Specification Methodology, continuing the existing line ([PRODUCT.md](PRODUCT.md#product-identity-and-lineage)). Candidate ref naming follows that namespace and is fixed before an RC cut; the cohort relation remains OPEN. A rename of the construction scope is PROPOSED. No installed identity or current cohort is changed.
 
 ## Revision Record
 
 2026-10-12: Jim's finding that the Claude C3 build routed to the predecessor instead of restating it, and ran as one self-directed Writer with no Executive, ticket, triage or independent review. He instructed the common WHAT be revised on a branch for review. This revision states the successor outcome in INTENT, pins the predecessor and adds the C3 Construction Contract, disposition grant and work-carrier rule in PRODUCT, adds C3 activation rows to the frame basis, aligns the requirements vocabulary to UP-015 and adds the predecessor-claims frontier. Nothing in it is selected until reviewed and merged.
+
+2026-10-12, later: Codex reviewed commit `db6abcd` and returned four changes required. Repaired on the same branch: Product identity and lineage stated per Jim's decision (STDO Specification Methodology, target v3.0.0, continuing line, `stdo_3/` as construction scope) in PRODUCT, INTENT and the machine-readable definition; the frontier extended to all 52 manifest members and the 19 auxiliary members; the Executive stripped of every write and the common pen made the single ticket Writer; UP-015's dispositions separated from the Product's own standalone successor requirement.
 
 ## Deferred ABG C2 Case Inputs
 
