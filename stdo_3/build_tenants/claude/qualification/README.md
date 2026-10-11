@@ -13,7 +13,8 @@ directory before that rule and retained unchanged.
 `instruments/` holds the generic bounded-step instrument and route card
 used by the T2 and later fixtures; `cases/` holds each case design with its
 fixture material; `runs/` holds constructor output, never assessed by the
-author.
+author; [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md) routes a reviewer to what
+exists and what is open.
 
 Future actual-use, mechanical, fidelity and release claims retain their
 separate boundaries. Nothing here is acceptance.

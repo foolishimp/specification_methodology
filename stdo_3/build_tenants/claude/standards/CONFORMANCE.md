@@ -41,7 +41,7 @@ that must catch it.
 | T-02 Intent to usable result | a small feature from a sufficient but ambiguous intent | the ambiguity is resolved or kept explicit; the result satisfies independently owned acceptance | not run |
 | T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) run twice; not assessed |
 | T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) run twice; not assessed |
-| T-05 Compaction and actor change | pause, clear context, resume with a new actor | valid progress and basis recovered; unsupported completion claims and unnecessary restarts detected | fixture [T-05](../qualification/cases/T-05/CASE.md) designed |
+| T-05 Compaction and actor change | pause, clear context, resume with a new actor | valid progress and basis recovered; unsupported completion claims and unnecessary restarts detected | fixture [T-05](../qualification/cases/T-05/CASE.md) run twice; not assessed |
 | T-06 Changed governing requirement | one requirement revised after partial construction | affected claims reopened; unaffected results reused with explicit dependencies | not run |
 | T-07 Defective acceptance oracle | a candidate passing structural checks but violating required behaviour | assessment detects the defect or reports its evidential limit; structural green is not acceptance | not run |
 | T-08 Broader process use | a sourced decision analysis with uncertainty and stale evidence | facts, assumptions, judgments and authority stay distinct; the result is independently assessable | not run |
@@ -55,8 +55,8 @@ constructing actor, and repeat probabilistic trials with varied task order.
 
 | Case | Subject | Expected distinction | Status |
 |---|---|---|---|
-| R-01 Fresh-context activation | a fresh actor given only this corpus performs a bounded activation on a declared subject; the same task against the rc.2 corpus as baseline | the governing relations are recovered with fidelity judged independently; reconstruction cost is lower than baseline or the difference is explained | not run |
-| R-02 No private knowledge | the same with validator folklore, author memory and whole-corpus loading withheld | the activation still succeeds or returns out_of_frame truthfully | not run |
+| R-01 Fresh-context activation | a fresh actor given only this corpus performs a bounded activation on a declared subject; the same task against the rc.2 corpus as baseline | the governing relations are recovered with fidelity judged independently; reconstruction cost is lower than baseline or the difference is explained | fixture [R-01](../qualification/cases/R-01/CASE.md) designed |
+| R-02 No private knowledge | the same with validator folklore, author memory and whole-corpus loading withheld | the activation still succeeds or returns out_of_frame truthfully | fixture [R-01](../qualification/cases/R-01/CASE.md) designed (variant V1) |
 
 ## 4. Source dispositions
 

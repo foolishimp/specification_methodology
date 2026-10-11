@@ -61,17 +61,18 @@ views are derived from these files later, never authored separately.
 Each thread freezes a document increment, encodes it in a_c, and has a fresh
 actor use it against a CONFORMANCE case under independent assessment.
 
-| Thread | Increment | Discriminating case |
-|---|---|---|
-| T1 | FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4 | an activation whose required basis exceeds a declared context cap; a coupled case that cannot fit; the result is refinement or a truthful out_of_frame, never omission |
-| T2 | SPEC_METHOD, CALCULUS §4–7 | two bounded results join under an outer contract; a detected failure and an uncovered obligation both survive |
-| T3 | CONFORMANCE complete; PROFILES | an interrupted construction resumes over current work state with an uncertain external effect; no blind repetition |
-| T4 | README route, a_c program for the set, recoverability trial against 2.5.1 as baseline | a fresh actor recovers a bounded activation from the documents; fidelity and reconstruction cost measured |
+| Thread | Increment | Discriminating case | State (2026-10-11) |
+|---|---|---|---|
+| T1 | FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4 | an activation whose required basis exceeds a declared context cap; a coupled case that cannot fit; the result is refinement or a truthful out_of_frame, never omission | first fixture run twice and reviewed; T1.2 frozen (`cee1157`), encoded, run twice under CASE-2 (`eb9b935`); unassessed |
+| T2 | SPEC_METHOD, CALCULUS §4–7 | two bounded results join under an outer contract; a detected failure and an uncovered obligation both survive | frozen (`97f1259`), encoded, run twice under T-03-04 (`f33e6ae`); unassessed |
+| T3 | EVALUATION §5–8, CONFORMANCE complete, PROFILES | an interrupted construction resumes over current work state with an uncertain external effect; no blind repetition | frozen (`c539daa`), encoded, run twice under T-05; unassessed |
+| T4 | README route, a_c program for the set, recoverability trial against 2.5.1 as baseline | a fresh actor recovers a bounded activation from the documents; fidelity and reconstruction cost measured | frozen, encoded as the set program, trial R-01 run; unassessed; see `qualification/RETURNS.md` for commits |
 
-This build pass constructs the seven files as a first complete draft so that
-T1 can be cut from a whole, not from fragments; threads then revise. Authored
-documents are not steel-thread execution; execution begins when T1's case is
-run by an actor other than the author.
+The C3 build pass constructed the seven files as a first complete draft so
+that T1 could be cut from a whole, not from fragments; the threads then
+revised them, each after the author's pre-freeze route check by fresh step
+actors. Authored documents are not steel-thread execution; execution is the
+cases' runs, and nothing is passed until an independent assessor says so.
 
 ## Proof plan
 

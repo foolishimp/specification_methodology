@@ -1,6 +1,7 @@
 # STDO 3 Standards (Claude tenant realisation)
 
-Status: C3 draft of the Claude tenant's document realisation. Not released,
+Status: the Claude tenant's document realisation, constructed through four
+steel threads (T1–T4) and awaiting independent assessment. Not released,
 not installed, not common WHAT. Builder basis `stdo://releases/v2.5.1-rc.2/`.
 
 STDO 3 is a specification methodology for construction and evaluation by
@@ -16,10 +17,11 @@ current state under explicit uncertainty.
 |---|---|
 | understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [CALCULUS](CALCULUS.md) → [SPEC_METHOD](SPEC_METHOD.md) |
 | do a bounded piece of work | [CALCULUS §1–3](CALCULUS.md) for the step and its result algebra, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
+| resume work someone else left | [CALCULUS §5 and §7](CALCULUS.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
-| load it into a model's context | the T3 program and its three projected frames under [../a_c/t3/](../a_c/t3/README.md) for the six law documents; [../a_c/t2/](../a_c/t2/README.md) and [../a_c/t1/](../a_c/t1/README.md) are its frozen predecessors |
+| load it into a model's context | the set program and its five projected frames under [../a_c/set/](../a_c/set/README.md): one frame per route above (bounded activation, composition, work state, recoverability, review); [../a_c/t3/](../a_c/t3/README.md), [../a_c/t2/](../a_c/t2/README.md) and [../a_c/t1/](../a_c/t1/README.md) are its frozen predecessors |
 
 ## Documents
 
