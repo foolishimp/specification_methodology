@@ -59,14 +59,27 @@ the actor's envelope B:
    Material not in the closure stays out; adjacent material does not enter
    because it exists
    ([RF-004](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion)).
-3. Test fit against B. If the context fits, activate. If it does not, one of:
+3. Test fit against B. For the context dimension the test is a measurement:
+   the bytes of the selected context are measured before any read and
+   compared with the declared cap, and the measurement, the cap and the
+   outcome are step-produced facts recorded before the read. If the context
+   fits, activate. If it does not, one or more of these, in combination:
    refine the outer contract into steps whose contexts fit (§4); sequence
-   activations; select another actor whose envelope fits; apply a lawful
-   compression that preserves the material distinctions and failure
-   detections the evaluation needs
+   activations; apply a lawful compression that preserves the material
+   distinctions and failure detections the evaluation needs
    ([RF-017](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-017-proportional-compression));
-   or return out_of_frame. Silent omission to fit is never one of them
+   select another actor whose envelope fits; or return out_of_frame. Silent
+   omission to fit is never one of them
    ([RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit)).
+   Within its grant a step selects refinement, sequencing and compression
+   itself; selecting another actor or enlarging the envelope re-enters the
+   owner of the grant or envelope, who may delegate that choice in the grant
+   (RF-014 vests the selection in human authority; a grant is that authority
+   exercised in advance). Whether a compression preserved what the
+   evaluation needs is a claim with the standing of any other (EVALUATION
+   §1): the compressing step records the compression and its preservation
+   argument, and the claim is assessed independently only where the
+   promotion it serves needs independent assessment (EVALUATION §3).
 4. Acquire declared inputs by their exact identity. A declared input absent
    from the actor's materialised view is neither licence to read elsewhere
    nor evidence that it is absent.
@@ -89,12 +102,25 @@ One core algebra for every evaluation and every step's stop state (P5):
 | invalid_basis | the subject or basis cannot support the evaluation |
 
 Nothing is coerced to success; a missing, failed or out-of-scope result
-returns its member, never satisfied. This single statement supersedes the two
-rc.2 statements
-[RF-012](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results)
-and
+returns its member, never satisfied. This conserves
+[RF-012](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results),
+whose five members the table restates unchanged, and
 [AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
-which name the same five outcomes.
+whose rule that a failed, missing, indeterminate, out-of-scope or
+invalid-basis result follows the declared algebra rather than being coerced
+to success is the sentence above; both are restated here once and continue
+to govern.
+
+Where evidence is missing because a relation or capability needed to obtain
+it was not declared, the result is out_of_frame; indeterminate is reserved
+for the case where the declared capability was exercised and the admissible
+evidence still cannot decide.
+
+A composite over several results declares its conjunction (FOUNDATIONS §4).
+The member it reports is chosen by that declared rule; every known failure
+and uncovered obligation survives the join and is carried with the
+composite. No universal order among the non-satisfied members exists; an
+application declares its own.
 
 Declared refinements answer different questions and keep their own
 vocabulary, each with a total mapping to the core:
@@ -214,8 +240,8 @@ acquires its own evidence and supplies its own judgment. Conserves
 | UP-018 | conserved; §1 |
 | Probabilistic Work Boundary | conserved; §1 |
 | RF engagement functions (establish basis, select and activate, evaluate, return, reconfigure) | conserved; §1–§4 |
-| AC-010, AC-011, RF-002, RF-003, RF-004, RF-014, RF-017 | conserved; joined into the §2 operation (new) |
-| RF-012, AC-007 | superseded by the §3 core algebra, which restates both without change of members |
+| AC-010, AC-011, RF-002, RF-003, RF-004, RF-014, RF-017 | conserved; joined into the §2 operation (new); the step's local selection among fit options under an admitted grant is reframed from RF-014 |
+| RF-012, AC-007 | conserved; restated once in §3 |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
 | ODD graph functions | generalised in §4; the profile keeps its binding |
 | UP-017, UP-021 | conserved; §4 |

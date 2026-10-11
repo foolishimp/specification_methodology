@@ -3,7 +3,10 @@
 Identity: urn:stdo-3:claude:case:T-01. Tenant case design for the trial
 named in [CONFORMANCE §2](../../../standards/CONFORMANCE.md) and the thread
 T1 discriminating case in
-[DOCUMENT_STRUCTURE](../../../design/DOCUMENT_STRUCTURE.md). Status: designed;
+[DOCUMENT_STRUCTURE](../../../design/DOCUMENT_STRUCTURE.md). Status: run
+twice and reviewed; superseded as the fixture by [CASE-2.md](CASE-2.md)
+after the
+[received review](../../received/20261011T130607Z_REVIEW_T1_eca8cef.md);
 runs and assessments are listed at the end.
 
 ## Expectations owner
@@ -127,8 +130,8 @@ governing basis states otherwise.
 
 | Run | Constructor | Record | Assessment |
 |---|---|---|---|
-| A, `20261011-A-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject at `e984e48` (standards unchanged since `cc1d29d`) | [RETURN.md](../../runs/T-01/20261011-A-claude-fresh-001/RETURN.md), SHA-256 `96fb0350846319b1efa36c574fc74164cbd6017a561e7d77f64b20feeb4f01ca`; constructor's own composite: satisfied, 22 of 22 routes, 57,047 bytes charged, 9 min 23 s | not assessed; awaiting an authorised assessor |
-| B, `20261011-B-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject as above | [RETURN.md](../../runs/T-01/20261011-B-claude-fresh-001/RETURN.md), SHA-256 `16106f3f6a6f5ff77b6e0d13a683474bfe9d9ec4f0453b9d0eaef61568892e58`; constructor's own composite: out_of_frame, existence 22 of 22, consistency 19 of 22, three pairs (7,348 / 6,851 / 6,191 bytes) not read, escalation named, 26,091 bytes charged, 12 min 23 s | not assessed; awaiting an authorised assessor |
+| A, `20261011-A-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject at `e984e48` (standards unchanged since `cc1d29d`) | [RETURN.md](../../runs/T-01/20261011-A-claude-fresh-001/RETURN.md), SHA-256 `96fb0350846319b1efa36c574fc74164cbd6017a561e7d77f64b20feeb4f01ca`; constructor's own composite: satisfied, 22 of 22 routes, 57,047 bytes charged, 9 min 23 s | received review relayed by Jim 2026-10-11: E1 indeterminate (execution chronology), E2 satisfied for the narrow route check, E4 counts verified with execution indeterminate, E5 satisfied; finding 1 (high): the 43,780-byte closure fits the cap, so capacity did not force decomposition |
+| B, `20261011-B-claude-fresh-001` | fresh Claude context (claude-fable-5-1), subject as above | [RETURN.md](../../runs/T-01/20261011-B-claude-fresh-001/RETURN.md), SHA-256 `16106f3f6a6f5ff77b6e0d13a683474bfe9d9ec4f0453b9d0eaef61568892e58`; constructor's own composite: out_of_frame, existence 22 of 22, consistency 19 of 22, three pairs (7,348 / 6,851 / 6,191 bytes) not read, escalation named, 26,091 bytes charged, 12 min 23 s | received review relayed by Jim 2026-10-11: E1 indeterminate (execution chronology), E3 satisfied, E4 counts verified with execution indeterminate, E5 falsified for the residency-only branch (R11's fragment alone is 6,411 bytes); finding 2 (high): the cap bounded transfer into one 130,793-byte context, not an actor context |
 
 Both constructors are fresh contexts of the author's model family; the
 constructor role needs freshness, not independence (EVALUATION §3). The
@@ -143,5 +146,8 @@ selects among the fit options (both runs; RF-014 against CALCULUS §2).
 Corrections to this design recorded after the runs, without altering the
 text the constructors read: the sentence "The cited members together exceed
 600,000 bytes" is wrong for the §3 route set; the five rc.2 members cited
-in FOUNDATIONS §3 total 423,548 bytes (run A, residual RS-1). The
-discriminator's premise holds unchanged, since that total exceeds both caps.
+in FOUNDATIONS §3 total 423,548 bytes (run A, residual RS-1). The claim
+first recorded here that the premise held unchanged is withdrawn: the
+required basis is the cited sections, 43,780 bytes, which fits the
+160,000-byte cap, so run A never faced the discriminator (received review,
+finding 1). CASE-2 resets the caps against the measured closure.

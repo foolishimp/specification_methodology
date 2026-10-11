@@ -10,7 +10,8 @@ A clause in this corpus has one standing relative to the rc.2 builder:
 
 - conserved: the rc.2 clause governs unchanged; the route is given;
 - reframed: the obligation is kept and restated at a different scope or
-  owner; the route and the change are given;
+  owner; the rc.2 clause continues to govern its own scope; the route and
+  the change are given;
 - superseded: an accepted successor relation replaces it; the route and the
   successor are given;
 - new: no rc.2 clause states it; the requiring principle is given.
@@ -34,13 +35,14 @@ qualification.
 | Object O | a subject with scoped identity (authority, kind, value), a boundary, current state and declared material relations; identity survives admissible state and encoding change | P3 |
 | Actor | whoever performs a step within a declared capability envelope (context, attention, time, capability); roles (constructor, reviewer, executive) are relations an actor occupies, not kinds of actor | P0, P6 |
 | Step | one bounded unit of work: intake, selected context, grant, execution, output | P0 |
-| Step-produced fact | a judgment, residual, observation or authority decision produced by a step and not re-acquirable from sources | P0, P4b |
+| Step-produced fact | a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable and is not one | P0, P4b |
 | Claim | an assertion with subject, property, basis, witness relation and falsifier | P6 |
 | Evidence | artifacts, events, observations used to evaluate a claim on a basis | P6 |
 | Judgment | a recorded evaluation over an unchanged subject, with evaluator, decision, evidence, scope and revising observation | P6 |
 | Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability | P6 |
 | Residual | a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition | P4b |
 | Basis | the exact immutable set of definitions a step, claim or result binds; mixed bases need an explicit composite relation | P6 |
+| Material | of a relation, uncertainty or closure: its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of CALCULUS §2 is the material relations of a step | P2, P6 |
 
 Dispositions: subject, representation and interpretation conserve
 [AC Interpretation And Models](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#interpretation-and-models)
@@ -108,7 +110,7 @@ digest. Conserves AC-002, AC-014, the
 P4a Typed composition. Two steps compose only when the first's result type
 and judgment satisfy the second's domain and preconditions; composition
 retains both identities, intermediate results, judgments, evidence,
-authority and stop states. Independent. Conserves
+authority, provenance and stop states. Independent. Conserves
 [AC-016](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition),
 [RF-010](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-010-composition-on-demand).
 
@@ -116,14 +118,15 @@ P4b Conservation of step-produced facts. Judgments, residuals, observations
 and authority decisions the outer contract needs are recorded by the step
 that produced them; sources a later step can re-acquire are governed by
 sufficiency, not conservation. Derived from P0 with P2 and the
-step-produced-facts premise. Conserves AC-009,
+step-produced-facts premise. Reframed from
+[AC-009](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-009-residual-conservation),
 [AC-013](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-013-transformation),
 [AC-005](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-005-authority-conservation),
 [UP-017](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017),
-[UP-021](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021);
-the nine rc.2 statements of conservation are reframed as one obligation with
-typed instances (authority, residual, judgment, frame, transition, successor
-claim, evidence by reference).
+[UP-021](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021),
+whose nine statements of conservation become one obligation with typed
+instances (authority, residual, judgment, frame, transition, successor
+claim, evidence by reference); each continues to govern its own scope.
 
 P5 Totality. A step can meet a condition outside its context; it cannot
 report success on one; so its result algebra carries indeterminate,
@@ -133,7 +136,8 @@ Conserves
 [RF-012](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results),
 [RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit),
 [AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
-[Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule).
+[Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule);
+RF-012 and AC-007 are restated once in CALCULUS §3 and continue to govern.
 
 P6 Justification and authority. Definitions, assumptions, observations,
 candidate judgments and accepted claims have distinct standing; evidence
@@ -180,12 +184,14 @@ many instances while each instance keeps its responsibility and binding
 ([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019),
 [UP-023](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#capability-and-foundation-selection-stdo-up-023)).
 
-Formal fragment. Where 𝒜 is the free category on typed primitives, ℐ the
-selected carrier sets with total functions and 𝒞_H pairs of functions with
-additive costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H are functors and S is not
-faithful; that S is not an equivalence. Any further categorical claim defines
-its objects, arrows, identities and composition and proves preservation
-([functor kinds](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds)).
+Formal fragment (new in this corpus; P1). Where 𝒜 is the free category on
+typed primitives, ℐ the selected carrier sets with total functions and 𝒞_H
+pairs of functions with additive costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H are
+functors and S is not faithful; that S is not an equivalence. Any further
+categorical claim defines its objects, arrows, identities and composition and
+proves preservation (conserves
+[functor kinds](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds),
+which states that obligation and asserts no categorical functor itself).
 H names an architecture, never a runtime.
 
 ## 5. Hypotheses
@@ -208,7 +214,7 @@ traversal composition laws of any runtime.
 | UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and CALCULUS §6 |
 | UP-015 | conserved; applied to this corpus in §1 |
 | UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by CALCULUS §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
-| UP-017, UP-021 | conserved; consumed by P4b |
+| UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation |
 | UP-020 | conserved; consumed by CALCULUS §1, §3, §5 |
 | Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by CALCULUS §1 and §3 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |

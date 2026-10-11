@@ -35,7 +35,7 @@ that must catch it.
 
 | Case | Shared task | Expected distinction | Status |
 |---|---|---|---|
-| T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission | not run |
+| T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission | first fixture run twice and reviewed; successor fixture [CASE-2](../qualification/cases/T-01/CASE-2.md) |
 | T-02 Intent to usable result | a small feature from a sufficient but ambiguous intent | the ambiguity is resolved or kept explicit; the result satisfies independently owned acceptance | not run |
 | T-03 Composition conservation | two valid bounded results under one outer contract | all inputs, constraints, judgments and evidence survive; an incompatible join is refused | not run |
 | T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | not run |

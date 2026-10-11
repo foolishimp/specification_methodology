@@ -21,7 +21,6 @@
     "urn:stdo-3:claude:vocabulary:operator:maps-to",
     "urn:stdo-3:claude:vocabulary:operator:preserves",
     "urn:stdo-3:claude:vocabulary:operator:requires",
-    "urn:stdo-3:claude:vocabulary:operator:supersedes",
     "urn:stdo-3:claude:vocabulary:role:condition",
     "urn:stdo-3:claude:vocabulary:role:consequence",
     "urn:stdo-3:claude:vocabulary:role:exception",
@@ -318,6 +317,15 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:material",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Material: of a relation, uncertainty or closure, that its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:symbol:material-closure",
       "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
       "label": "Material closure of Z under R on the exact basis",
@@ -594,7 +602,7 @@
     {
       "uri": "urn:stdo-3:claude:a-c-text:symbol:step-produced-fact",
       "kind": "urn:stdo-3:claude:vocabulary:kind:record",
-      "label": "Step-produced fact: a judgment, residual, observation or authority decision produced by a step and not re-acquirable from sources",
+      "label": "Step-produced fact: a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; a reproducible observation is not one",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
       ]
@@ -946,6 +954,34 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:composite-reports-by-declared-conjunction",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:coverage"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A composite over several results declares its conjunction; the member it reports is chosen by that declared rule; every known failure and uncovered obligation survives the join and is carried with the composite; no universal order among the non-satisfied members exists."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:failure-and-uncovered-obligation-survive-join"
+        }
+      ],
+      "statement": "A composite reports by its declared conjunction; failures and uncovered obligations survive; no universal order exists.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:composition-exists-only-under-p4a",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
@@ -988,6 +1024,35 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:compression-preservation-is-a-claim",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:lawful-compression"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Whether a compression preserved what the evaluation needs is a claim with the standing of any other; the compressing step records the compression and its preservation argument; the claim is assessed independently only where the promotion it serves needs independent assessment."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:lawful-compression-preserves-distinctions"
+        }
+      ],
+      "statement": "Compression preservation is a recorded claim, assessed independently only where the promotion needs it.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:construction-availability-maps-to-core",
       "clause_type": "relation",
       "operator": "urn:stdo-3:claude:vocabulary:operator:maps-to",
@@ -1015,9 +1080,36 @@
       ]
     },
     {
-      "uri": "urn:stdo-3:claude:a-c-text:clause:core-algebra-supersedes-rf012-and-ac007",
+      "uri": "urn:stdo-3:claude:a-c-text:clause:context-fit-is-measured-before-read",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:envelope"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "For the context dimension the fit test is a measurement: the bytes of the selected context are measured before any read and compared with the declared cap; the measurement, the cap and the outcome are step-produced facts recorded before the read."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope"
+        }
+      ],
+      "statement": "Context fit is measured in bytes before any read and recorded as a step-produced fact.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:core-algebra-conserves-rf012-and-ac007",
       "clause_type": "relation",
-      "operator": "urn:stdo-3:claude:vocabulary:operator:supersedes",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:preserves",
       "arguments": [
         {
           "role": "urn:stdo-3:claude:vocabulary:role:subject",
@@ -1029,12 +1121,17 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:qualification",
-          "literal": "The single statement supersedes the two rc.2 statements RF-012 and AC-007, which name the same five outcomes; members are unchanged."
+          "literal": "The table restates RF-012's five members unchanged; the no-coercion sentence restates AC-007's rule that a failed, missing, indeterminate, out-of-scope or invalid-basis result follows the declared algebra; both are conserved, restated once, and continue to govern."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:nothing-is-coerced-to-success"
         }
       ],
-      "statement": "The core algebra supersedes RF-012 and AC-007 without change of members.",
+      "statement": "The core algebra conserves RF-012 and AC-007, restating both once.",
       "source_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
       ]
     },
     {
@@ -1207,6 +1304,33 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:fit-selection-within-grant",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:grant"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Within its grant a step selects refinement, sequencing and compression itself; selecting another actor or enlarging the envelope re-enters the owner of the grant or envelope, who may delegate that choice in the grant."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope"
+        }
+      ],
+      "statement": "A step selects refinement, sequencing and compression within its grant; actor change and envelope enlargement re-enter their owner.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
@@ -1229,14 +1353,14 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:exception",
-          "literal": "If it does not fit, exactly one of: refine the outer contract into steps whose contexts fit; sequence activations; select another actor whose envelope fits; apply a lawful compression; or return out_of_frame."
+          "literal": "If it does not fit, one or more of these, in combination: refine the outer contract into steps whose contexts fit; sequence activations; apply a lawful compression; select another actor whose envelope fits; or return out_of_frame."
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:support",
           "ref": "urn:stdo-3:claude:a-c-text:clause:projection-records-boundary"
         }
       ],
-      "statement": "If the context fits, activate; otherwise refine, sequence, change actor, compress lawfully or return out_of_frame.",
+      "statement": "If the context fits, activate; otherwise refine, sequence, compress lawfully, change actor or return out_of_frame, in any combination.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
       ]
@@ -1252,14 +1376,14 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:requirement",
-          "literal": "S: A -> I and R_H: A -> C_H are functors; S is not faithful; S is not an equivalence."
+          "literal": "Where A is the free category on typed primitives, I the selected carrier sets with total functions and C_H pairs of functions with additive costs, S: A -> I and R_H: A -> C_H are functors; S is not faithful; S is not an equivalence."
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:qualification",
-          "literal": "Any further categorical claim defines its objects, arrows, identities and composition and proves preservation. H names an architecture, never a runtime."
+          "literal": "Standing: new in this corpus (P1); rc.2 states only the obligation that a categorical claim defines its objects, arrows, identities and composition and proves preservation, and asserts no categorical functor itself. H names an architecture, never a runtime."
         }
       ],
-      "statement": "The established fragment: S and R_H are functors, S is not faithful and not an equivalence; further categorical claims must be constructed and proved.",
+      "statement": "The fragment, new in this corpus: under the stated interpretation S and R_H are functors, S is not faithful and not an equivalence; further categorical claims must be constructed and proved.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
       ]
@@ -1587,6 +1711,57 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:material-means-can-alter",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:material"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:relation-family"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A relation, uncertainty or closure is material when its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of a step is its material relations."
+        }
+      ],
+      "statement": "Material means able to alter a result, basis validity, evidence sufficiency or authority.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:missing-capability-is-out-of-frame",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-out-of-frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Where evidence is missing because a relation or capability needed to obtain it was not declared, the result is out_of_frame; indeterminate is reserved for the case where the declared capability was exercised and the admissible evidence still cannot decide."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members"
+        }
+      ],
+      "statement": "Missing evidence from an undeclared capability is out_of_frame; indeterminate needs the declared capability exercised.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:mixed-bases-need-composite-relation",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
@@ -1848,7 +2023,7 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:requirement",
-          "literal": "Two steps compose only when the first's result type and judgment satisfy the second's domain and preconditions; composition retains both identities, intermediate results, judgments, evidence, authority and stop states."
+          "literal": "Two steps compose only when the first's result type and judgment satisfy the second's domain and preconditions; composition retains both identities, intermediate results, judgments, evidence, authority, provenance and stop states."
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:qualification",
@@ -1887,7 +2062,7 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:qualification",
-          "literal": "Standing: derived. The nine rc.2 statements of conservation are reframed as one obligation with typed instances: authority, residual, judgment, frame, transition, successor claim, evidence by reference."
+          "literal": "Standing: derived; reframed from AC-009, AC-013, AC-005, UP-017 and UP-021, whose nine statements of conservation become one obligation with typed instances (authority, residual, judgment, frame, transition, successor claim, evidence by reference); each source clause continues to govern its own scope."
         }
       ],
       "statement": "P4b derives from P0, P2 and the step-produced-facts premise: the producing step records what the outer contract needs.",
@@ -2484,10 +2659,10 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:requirement",
-          "literal": "A judgment, residual, observation or authority decision produced by a step cannot be re-acquired from sources; sources a later step can re-acquire are governed by sufficiency, not conservation."
+          "literal": "A step-produced fact is a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable, is not a step-produced fact, and is governed by sufficiency, not conservation."
         }
       ],
-      "statement": "Step-produced facts are not re-acquirable from sources; re-acquirable sources are governed by sufficiency.",
+      "statement": "A step-produced fact is one that cannot be re-acquired from declared sources; reproducible observations are re-acquirable and governed by sufficiency.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology",
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
@@ -2586,7 +2761,7 @@
         "urn:stdo-3:claude:a-c-text:symbol:envelope",
         "urn:stdo-3:claude:a-c-text:symbol:fit-test"
       ],
-      "detail": "The envelope has four dimensions (context, attention, time, capability) and the fit test is stated as a predicate over them, but no measure or declaration format for fit is given. Context size is measurable; attention and capability are not, and the documents do not say how a step records that the test was performed or by what observation it passed.",
+      "detail": "The envelope has four dimensions (context, attention, time, capability). The context dimension is measured in bytes before any read; attention, time and capability have no measure or declaration format, and the documents do not say how a step records that the test was performed on those dimensions.",
       "re_entry_refs": [
         "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
       ],
@@ -2600,7 +2775,7 @@
       "subject_refs": [
         "urn:stdo-3:claude:a-c-text:symbol:formal-fragment"
       ],
-      "detail": "The categories A, I and C_H and the functors S and R_H are named with their established properties but not constructed in this corpus; the non-faithfulness result is conserved from the rc.2 calculus by route. The program records the claim's shape, not a proof.",
+      "detail": "The categories A, I and C_H and the functors S and R_H are named with their interpretation and established properties but not constructed in this corpus; the fragment and its non-faithfulness result are new here and rest on the accepted C1 realisation's argument, which the standard does not carry; rc.2 states only the proof obligation. The program records the claim's shape, not a proof.",
       "re_entry_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
       ],
@@ -2624,56 +2799,6 @@
       ],
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
-      ]
-    },
-    {
-      "uri": "urn:stdo-3:claude:a-c-text:residual:indeterminate-versus-out-of-frame-boundary",
-      "kind": "ambiguity",
-      "subject_refs": [
-        "urn:stdo-3:claude:a-c-text:symbol:r-indeterminate",
-        "urn:stdo-3:claude:a-c-text:symbol:r-out-of-frame",
-        "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
-      ],
-      "detail": "indeterminate (admissible evidence cannot decide) and out_of_frame (the evaluation needs an undeclared material relation or capability) overlap when evidence is missing because the capability to obtain it was not declared. The documents do not state which member governs that case.",
-      "re_entry_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
-      ],
-      "source_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
-      ]
-    },
-    {
-      "uri": "urn:stdo-3:claude:a-c-text:residual:lawful-compression-judge-is-unnamed",
-      "kind": "omission",
-      "subject_refs": [
-        "urn:stdo-3:claude:a-c-text:symbol:fit-test",
-        "urn:stdo-3:claude:a-c-text:symbol:lawful-compression"
-      ],
-      "detail": "Lawful compression must preserve the distinctions and failure detections the evaluation needs, but the documents do not say which relation judges that preservation or what evidence the judgment needs; under the separation law it cannot be the compressing actor alone.",
-      "re_entry_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
-        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
-      ],
-      "source_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
-      ]
-    },
-    {
-      "uri": "urn:stdo-3:claude:a-c-text:residual:material-is-undefined-in-ontology",
-      "kind": "ambiguity",
-      "subject_refs": [
-        "urn:stdo-3:claude:a-c-text:symbol:material-closure",
-        "urn:stdo-3:claude:a-c-text:symbol:object",
-        "urn:stdo-3:claude:a-c-text:symbol:relation-family",
-        "urn:stdo-3:claude:a-c-text:symbol:residual"
-      ],
-      "detail": "The ontology uses 'material' (material relations, material closure, material uncertainty) without defining it. CALCULUS section 2 characterises the relation family by effect (change can alter the result, basis validity, evidence sufficiency or authority), which is the nearest operational definition. Whether that characterisation is the definition of materiality is not stated.",
-      "re_entry_refs": [
-        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
-        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
-      ],
-      "source_refs": [
-        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
       ]
     },
     {
@@ -2726,8 +2851,12 @@
       "clause_refs": [
         "urn:stdo-3:claude:a-c-text:clause:allowance-declared-where-cost-is-governed",
         "urn:stdo-3:claude:a-c-text:clause:closure-is-computed-on-exact-basis",
+        "urn:stdo-3:claude:a-c-text:clause:composite-reports-by-declared-conjunction",
+        "urn:stdo-3:claude:a-c-text:clause:compression-preservation-is-a-claim",
         "urn:stdo-3:claude:a-c-text:clause:construction-availability-maps-to-core",
+        "urn:stdo-3:claude:a-c-text:clause:context-fit-is-measured-before-read",
         "urn:stdo-3:claude:a-c-text:clause:direct-entry-unless-coordination-needed",
+        "urn:stdo-3:claude:a-c-text:clause:fit-selection-within-grant",
         "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope",
         "urn:stdo-3:claude:a-c-text:clause:grant-names-operations-territory-reservations",
         "urn:stdo-3:claude:a-c-text:clause:inputs-acquired-by-exact-identity",
@@ -2735,6 +2864,7 @@
         "urn:stdo-3:claude:a-c-text:clause:intake-names-its-fields",
         "urn:stdo-3:claude:a-c-text:clause:internal-path-is-not-governed",
         "urn:stdo-3:claude:a-c-text:clause:lawful-compression-preserves-distinctions",
+        "urn:stdo-3:claude:a-c-text:clause:missing-capability-is-out-of-frame",
         "urn:stdo-3:claude:a-c-text:clause:no-proof-of-no-undiscovered-relation",
         "urn:stdo-3:claude:a-c-text:clause:nothing-is-coerced-to-success",
         "urn:stdo-3:claude:a-c-text:clause:p0-statement",
@@ -2749,10 +2879,7 @@
         "urn:stdo-3:claude:a-c-text:clause:step-output-is-candidate-plus-facts"
       ],
       "residual_refs": [
-        "urn:stdo-3:claude:a-c-text:residual:fit-test-is-not-operationalised",
-        "urn:stdo-3:claude:a-c-text:residual:indeterminate-versus-out-of-frame-boundary",
-        "urn:stdo-3:claude:a-c-text:residual:lawful-compression-judge-is-unnamed",
-        "urn:stdo-3:claude:a-c-text:residual:material-is-undefined-in-ontology"
+        "urn:stdo-3:claude:a-c-text:residual:fit-test-is-not-operationalised"
       ],
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
