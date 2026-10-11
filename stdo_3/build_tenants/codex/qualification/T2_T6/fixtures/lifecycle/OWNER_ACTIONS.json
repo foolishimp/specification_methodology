@@ -1,0 +1,90 @@
+{
+  "original_owner_state_commit": "b43af1c149deb487b9daa87d083a649831203e96",
+  "original_owner_state_path": "stdo_3/build_tenants/codex/qualification/T2_T6/fixtures/receipt-run-01/WORK_STATE.json",
+  "current_suspended_instance": {
+    "instance": "receipt/source-v2",
+    "disposition": "suspended",
+    "resumption_condition": "Actual live exact operation/source-v2/current-brief receipt grant plus sufficient current observations",
+    "condition_currently_true": false
+  },
+  "actual_withdrawn_grant": {
+    "amounts": {
+      "Cove": "148.00",
+      "Harbor": "106.00"
+    },
+    "brief_sha256": "6a1c84882c8afd469c1b3b1e63a5f57c0229b5a1cfa5d5dbdd296ac7ca22fd56",
+    "currency": "AUD",
+    "live": false,
+    "operation": "cost-v1-receipt",
+    "revision": "cost-brief/source-v1",
+    "standing": "withdrawn"
+  },
+  "actual_request_after_withdrawal": {
+    "amounts": {
+      "Cove": "148.00",
+      "Harbor": "106.00"
+    },
+    "brief_sha256": "6a1c84882c8afd469c1b3b1e63a5f57c0229b5a1cfa5d5dbdd296ac7ca22fd56",
+    "currency": "AUD",
+    "operation": "cost-v1-receipt",
+    "revision": "cost-brief/source-v1",
+    "run_label": "active-successor-label"
+  },
+  "actual_withdrawal_response": {
+    "admitted": false,
+    "cause": "no live exact operation/revision/subject grant",
+    "effect": false
+  },
+  "actual_owner_completion": {
+    "actor": "root fixture owner under Jim's own-tenant trial grant",
+    "issued_utc": "2026-10-11T15:27:54.583377+00:00",
+    "instance": "cost-v1-document-and-receipt",
+    "disposition": "completed",
+    "interval": "D/source-v1 exact B document plus one original cost-v1-receipt acknowledgement",
+    "subject": {
+      "commit": "457ba021b680251b4f9127e0f75b7652e4313792",
+      "path": "stdo_3/build_tenants/codex/qualification/T2_T6/runs/deployment/b/BRIEF.md",
+      "sha256": "6a1c84882c8afd469c1b3b1e63a5f57c0229b5a1cfa5d5dbdd296ac7ca22fd56"
+    },
+    "evidence": {
+      "independent_cost_report_sha256": "dae2f1693833946179f39f446974090cc022597d2c82354bd70542e22967f920",
+      "actual_current_receipt_store_sha256": "86610a6a70d8909680b95e23d77c206b9758de35bc4de52f433b5a8e9075ff5d",
+      "fresh_current_state_observation_sha256": "d3e91fc4527a8128886572c8c369d4e50ddf19de3a8e84d0cfe122df5da1c3ee"
+    },
+    "criterion": "Adequate exact source-v1 comparison and truthful observation of its single original issued receipt; no outstanding effect uncertainty for this selected receipt",
+    "consequences": "Close only this selected fictional document/receipt interval. Source-v2 receipt grant remains suspended/unissued. No method acceptance, common selection, release, adoption or cloud effect authorized."
+  },
+  "actual_completed_grant": {
+    "amounts": {
+      "Cove": "148.00",
+      "Harbor": "106.00"
+    },
+    "brief_sha256": "6a1c84882c8afd469c1b3b1e63a5f57c0229b5a1cfa5d5dbdd296ac7ca22fd56",
+    "currency": "AUD",
+    "live": false,
+    "operation": "cost-v1-receipt",
+    "revision": "cost-brief/source-v1",
+    "standing": "completed"
+  },
+  "actual_request_after_completion": {
+    "amounts": {
+      "Cove": "148.00",
+      "Harbor": "106.00"
+    },
+    "brief_sha256": "6a1c84882c8afd469c1b3b1e63a5f57c0229b5a1cfa5d5dbdd296ac7ca22fd56",
+    "currency": "AUD",
+    "operation": "cost-v1-receipt",
+    "revision": "cost-brief/source-v1",
+    "run_label": "active-successor-label"
+  },
+  "actual_completion_response": {
+    "admitted": false,
+    "cause": "no live exact operation/revision/subject grant",
+    "effect": false
+  },
+  "store_before_sha256": "86610a6a70d8909680b95e23d77c206b9758de35bc4de52f433b5a8e9075ff5d",
+  "store_after_sha256": "86610a6a70d8909680b95e23d77c206b9758de35bc4de52f433b5a8e9075ff5d",
+  "rows_after": 1,
+  "provider_sha256": "cee08adb9b473093ef37002c6df669da5a18f5ef993bfcfd717bbc96388d0d4a",
+  "limits": "Trusted sequential local fixture, not distributed exactly-once or security containment. Active label made no authority. Original grant/store/baseline/current-state snapshots preserved."
+}
