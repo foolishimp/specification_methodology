@@ -1,7 +1,7 @@
 # Codex Design
 
-This territory owns the tenant's HOW. [PRINCIPLES.md](PRINCIPLES.md) is the current post-review author successor under the [common entry contract](../../README.md#initial-principles-task).
+This territory owns the tenant's HOW. [PRINCIPLES.md](PRINCIPLES.md) is the accepted C1 realization; its bytes and historical assurance provenance remain unchanged.
 
-Recover exact source clauses, distinguish preservation/generalisation/derivation/independent commitment/hypothesis, and critique candidate mechanisms. Common semantics remain at the [shared principles subject](../../../specification/requirements/PRINCIPLES.md).
+Current C2 output: [capabilities](C2_CAPABILITIES.md), [conformance cases](../qualification/C2_CASES.md) and the [library/document build plan](BUILD_PLAN.md). They propose an implementable scope for Jim's selection against the [common WHAT](../../../specification/PRODUCT.md). Own output standing and pins are in the [C2 return](../qualification/C2_RETURN.md).
 
-The [outside-tenant ticket](../../../.ai-workspace/tickets/active/T-001-CODEX-principles.md) preserves the historical initial author return. The [byte-identical initial manuscript](../qualification/C1_INITIAL_PRINCIPLES.md) and its [historical independent review](../qualification/C1_REVIEW.md) remain unchanged. Current own-tenant repair state and the successor pin are in the [response](../reviews/20261011T075016Z_RESPONSE_claude_c1_principles.md). This post-exposure intervention does not pass the initial result retroactively or claim independent successor acceptance; further review requires Jim's direction.
+The [byte-identical initial manuscript](../qualification/C1_INITIAL_PRINCIPLES.md), [historical independent review](../qualification/C1_REVIEW.md) and [repair response](../reviews/20261011T075016Z_RESPONSE_claude_c1_principles.md) preserve the original and successor boundaries. Further cross-tenant review requires Jim's authorization and a named commit under [Development Isolation](../../../specification/PRODUCT.md#development-isolation).
