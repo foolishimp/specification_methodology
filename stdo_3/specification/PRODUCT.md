@@ -69,12 +69,12 @@ The frozen [6 October coverage matrix](../../specification_methodology/.ai-works
 
 Initial attempts are independent. Both can read common input posts and installed source; neither consumes the peer's realisation before the initial frozen returns. Reviews between tenants are authorised by Jim and conducted under [Development Isolation](#development-isolation): the reviewer reads the reviewed tenant's branch at a named commit and writes only in its own tenant. The C1 reciprocal reviews performed before that rule, and their returns in the tenant tickets, are historical records. A review result informs Jim's decision; it does not itself adopt common principles.
 
-There is one accepted common basis after C1 disposition, not two competing tenant WHATs. Selection or combination of later tenant outputs requires Jim's explicit common-owner decision.
+Each tenant's C1 principles realisation is reviewed and accepted separately; realisations may differ while answering the common questions. The common WHAT is not replaced by a merged tenant basis. Selection or combination of tenant outputs for a release requires Jim's explicit common-owner decision.
 
 ## Checkpoints
 
 - C0: bootstrap the separate scope, common contract and independent entry routes; mechanical readiness and review only.
-- C1: independent deep principles attempts and source-first critique; Jim resolves material conflicts and accepts or withholds one common basis.
+- C1: independent deep principles attempts and source-first critique; Jim accepts or withholds each tenant's realisation after review. Closed 2026-10-11 with both accepted.
 - C2: derive capabilities and a common conformance contract from that basis; Jim selects their scope and acceptance criteria.
 - C3 onward: construct selected documents through actual-use steel threads, independent evaluation and separately bound a_c tests.
 - Release and adoption: later explicit selections over an exact accepted corpus and dependencies.

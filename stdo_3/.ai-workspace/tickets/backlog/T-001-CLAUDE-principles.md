@@ -18,7 +18,7 @@ dependencies: []
 
 # T-001-CLAUDE — Independent Principles Attempt
 
-State: C1 CLOSED 2026-10-11 (second successor `28c9b127…b7ec` consumed into the accepted common basis; Jim waived post-repair confirmation). Parent: [T-001](../active/T-001-common-definition-and-checkpoints.md). Builder basis: installed STDO 2.5.1 RC2, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
+State: C1 CLOSED 2026-10-11 (second successor `28c9b127…b7ec` accepted as this tenant's C1 realisation; Jim waived post-repair confirmation). Parent: [T-001](../active/T-001-common-definition-and-checkpoints.md). Builder basis: installed STDO 2.5.1 RC2, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
 
 C0 setup readiness is satisfied; activation still selects [C1-inputs-20261011-02](../active/T-001-common-definition-and-checkpoints.md#common-c1-input-snapshot); completion of the full parent ticket is not required. This setup correction does not activate the attempt.
 
