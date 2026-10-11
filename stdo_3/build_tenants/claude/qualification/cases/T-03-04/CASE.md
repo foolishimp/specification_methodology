@@ -177,3 +177,31 @@ independence (EVALUATION §3).
 
 | Run | Constructor | Record | Assessment |
 |---|---|---|---|
+| A, `20261012-A-claude-fresh-001` | fresh Claude context (claude-fable-5-1); subject at `97f1259`; zero actor starts | [RETURN.md](../../runs/T-03-04/20261012-A-claude-fresh-001/RETURN.md), SHA-256 `bc31d8eaf8d6e1d17ddcc1409dbcd4e42e54d374ab4accd9e85b3025cfdd0ea1`; constructor's own composite: falsified; C = 18 routes; failure set {R05} carried with its evidence; R minus C = {R16, R17, R18, R19, R21} with reasons (B-P5 digest mismatch, R21 not executed); R_C refused on basis `d654d395…`; triage realization_refactor at V's P2; stop state falsified; 8 min 8 s | not assessed; awaiting an authorised assessor |
+| B, `20261012-B-claude-fresh-001` | as above; subject at `97f1259`; step actors claude-sonnet-5-5 through the instrument | [RETURN.md](../../runs/T-03-04/20261012-B-claude-fresh-001/RETURN.md), SHA-256 `e7e0c3be92f96f510cddf1d378fb7108c967ca13a9a723c504887f36e4641f33`; `lifecycle.jsonl` 6 events; constructor's own composite: falsified; R minus C before its steps {R16–R19, R21}, after two new authenticated steps (N-P5, N-P6-R21; 25,938 bytes; 23,607 context tokens; USD 0.107) empty; R05 carried; R_C refused; triage requirement_reprice at FOUNDATIONS §3 P2; stop state satisfied (candidate_ready) with the composite falsified; 8 min 46 s | not assessed; awaiting an authorised assessor |
+
+The run records are the constructors' construction output and self-review;
+nothing in them is assessment, and the author has not repaired, re-run or
+annotated them. The author ran the structural check over run B's
+`lifecycle.jsonl` (chronology, sizes, echoes, file digests): no problems;
+run A started no actor and has no log. Mechanical evidence only.
+
+Corrections to this design recorded after the runs, without altering the
+text the constructors read: the sentence above that R_C's step actor
+"judged all ten routes satisfied" is wrong; `R_C/steps/C-P4a.out.md`
+records AC-016 (R09) out_of_frame, as run A observed. R_C's other nine
+routes are satisfied. The seeded condition (a different basis) is
+unaffected. Run A also observed that C-P4a's ROUTE lines carry a
+`FOUNDATIONS.md#3-commitments→` prefix before the member and slug; the
+contract's condition 3 asks only that the line name the route's section.
+
+Observations the constructors recorded against the fixture and the
+documents, carried here without repair: the rc.2 manifest digest named in
+the contract cannot be verified under the constructor's grant, which
+forbids reading the install (both runs); the two constructors triaged the
+same failure into different classes (realization_refactor at the test
+subject's paragraph; requirement_reprice at the standard's P2 sentence),
+each with a stated reason, which is an observation about how SPEC_METHOD
+§4's classes decide a defect in a fixture copy of a standard; run B notes
+that CALCULUS §6 already states the allowance rule as new and selected,
+so V's seed contradicts the corpus as well as rc.2.

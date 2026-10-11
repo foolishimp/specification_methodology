@@ -262,3 +262,74 @@ assessment of runs A2 and B2 under CASE-2's five expected distinctions, an
 author-independent fidelity judgment of the regenerated program, and Jim's
 selection of the Axiom Indexer dependency use. Next after that: T2
 (SPEC_METHOD, CALCULUS §4–7).
+
+## T2 thread return, 2026-10-11T14:58:32Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+Jim's authorisation to complete STDO 3.0 ready for review ("i authorise you
+finish the work to completetion"). Start bounded below by the T1.2 return
+stamp, 2026-10-11T13:25:58Z.
+
+Delivered, in two commits:
+
+- `97f1259`: the T2 increment frozen (CALCULUS `b5fb31de…3821` with §1–3
+  byte identical to T1.2; SPEC_METHOD `c30b9946…ddf4`; FOUNDATIONS and
+  EVALUATION unchanged) after the author's pre-freeze route check: 29
+  routes of SPEC_METHOD and CALCULUS §4–7 judged by fresh step actors
+  through the new generic instrument (`qualification/instruments/`), first
+  pass 19 satisfied, 3 out_of_frame, 2 indeterminate, five wording
+  residuals; every non-satisfied route and residual repaired at source
+  (UP-021 wording, graph functions, resumption against restart, allowance
+  rule marked new, basis invalidator attribution, UP-013 "by itself",
+  Universal Intake Triage cited, carrier default reframed only, Executive
+  and non-widening attributed, Steel-Thread reframed, UP-015 qualifiers,
+  RELEASE_METHOD anchors, AC-020 in its own words); second pass 28 of 29
+  satisfied, third pass on §4 all satisfied. The T2 program
+  `urn:stdo-3:claude:program:a-c-text:t2` (108 symbols, 135 clauses, 6
+  residuals; file `bbc624e2…5524`, canonical `13338baa…7f8b`) validated
+  with zero diagnostics; two frames projected (bounded-activation,
+  composition-conservation). Case T-03-04 designed with its outer
+  contract, the variant subject V and three result bundles produced by
+  real step actors (11 starts, USD 0.62), with the seeded conditions
+  declared in one place.
+- this commit: two T-03-04 constructor runs by fresh coordinator contexts
+  of this model family, each writing one record:
+  A `bc31d8ea…0ea1`, zero actor starts: composite falsified; 18 routes
+  covered and carried unchanged; failure set {R05} with the actor's quoted
+  evidence; R minus C = {R16–R19 (B-P5 digest mismatch, the alteration
+  located exactly), R21 (not executed)}; R_C refused on its basis digest;
+  triage realization_refactor; stop state falsified; 8 min 8 s.
+  B `e7e0c3be…1f33`, two actor starts of four allowed: the same join, then
+  R16–R19 and R21 covered by two new authenticated steps on basis V
+  (25,938 bytes, 23,607 context tokens, USD 0.107); R minus C empty after;
+  R05 still carried; composite falsified; R_C refused; triage
+  requirement_reprice; stop state satisfied (candidate_ready) with the
+  composite falsified; 8 min 46 s.
+
+Author's structural check over run B's lifecycle log: no problems.
+Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the case design's claim that
+R_C's actor judged all ten routes satisfied was wrong (R09 out_of_frame in
+C-P4a), corrected in CASE.md after the runs; the rc.2 manifest digest
+named in the contract is unverifiable under the constructor's grant; the
+two constructors triaged the same defect into different change classes
+with reasons, an observation about SPEC_METHOD §4 against a fixture copy
+of a standard; a step actor's ROUTE line format varies (a tenant-section
+prefix) without breaking authentication.
+
+Resource observation: step actors, bundles plus run B, 13 starts, USD
+0.73 list, all `claude-sonnet-5-5`. Coordinator spend as the harness
+reports it, definition unverified: A 139,910 tokens, 18 tool uses; B
+161,129 tokens, 23 tool uses; the two ran in parallel, 8 min 46 s wall.
+The author's own generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 24 files, 329 links
+including every `stdo://` fragment, no trailing whitespace; run
+directories, bundle output and received text excluded from the gate.
+
+Work result: `candidate_ready` / `satisfied` for the declared T2 outputs.
+T2 is not closed: closure needs an authorised independent assessment of
+runs A and B under CASE.md's six expected distinctions and an
+author-independent fidelity judgment of the T2 program. Next: T3
+(EVALUATION §5–8, CONFORMANCE, PROFILES; case T-05).
