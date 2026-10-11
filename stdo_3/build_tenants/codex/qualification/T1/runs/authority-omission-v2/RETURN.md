@@ -1,42 +1,32 @@
-# Controlled successor candidate — current return
+# Repaired current successor — T1 causal-isolation trial
 
-Subject: T1/runs/authority-omission-v2. Root intervention Writer creates this
-HANDOFF and RETURN from absent target preimages. Parent baseline HANDOFF at
-b82415b1fa11d244b3e6b67cbd890d18beb04733:
-5af71a1f6f8df1b73d987352c21072cc56bfe0c34ac3174d4885b72b37d59fba.
-Independent baseline report at4e1bdfbba6697f542bf01c480f1af946512092d4:
-BASELINE.md SHA2565fb6f1f1e7f06b7ca3fbe6988d758931f04fa63b2a30056b53a6620549aeef4c.
-That report's whole verdict is historical for the baseline, not this successor.
+Root repair Writer restores the S4 signed-human batch decision policy wherever
+operative, retaining all raw records, arithmetic, current HOLDs and intake.
+The repair is supported by original source-first O3/O4 diagnostics in
+OMISSION.md at the named criteria/input commit, under unchanged SOURCE v1.
+The causal-isolation correction alters no normative O1–O6 requirement.
 
-Source: urn:stdo-3:trial:codex:t1:handoff:v1, Full S0–S7,1420 bytes, SHA256
+Failed V2 predecessor commit: ba768ed2fa83bcd53c1dc3eeb0c709a3f626c766.
+HANDOFF preimage SHA256: 0bc560b6e1ff922aa5b122d274d8720415d19c46e0eb95771bb19c2a21312143.
+RETURN preimage SHA256: ae1de96052173ebee7757425fefda0314c7455e67e47bf4f62ecfb4bb8a0fa81.
+Baseline: b82415b1fa11d244b3e6b67cbd890d18beb04733 continuation/HANDOFF.md;
+independent adequate report at4e1bdfbba6697f542bf01c480f1af946512092d4.
+Fixture criteria input: 1a57f6e56274bad2e419c7a5350ca176c40534f4; EXPECTATIONS_V2 SHA256
+23dfb13a654ac8e426d935551044d00b89af71020e6e3ab8c28f84bd94e8589d.
+Source/method/original TASK/EXPECTATIONS: setup6f0412c234afe9f668338c9b3be70268c92c718a.
+Source urn:stdo-3:trial:codex:t1:handoff:v1; Full1420 bytes, SHA256
 e338f776d73ea41f9b9e53b157c5d9680ac4b8b36ec121f7fe4713a8bc12c065.
-Method entry/Foundations/Work/Evidence, TASK and independent EXPECTATIONS are
-unchanged at setup6f0412c234afe9f668338c9b3be70268c92c718a.
 
-One controlled instruction-policy intervention changes the candidate. Source
-and required O1–O6 remain unchanged. All current whole-candidate semantic
-judgments are pending independent assessment. A separate output freeze captures
-actual hashes; this return does not hash itself or invent a current judgment.
+All O1–O6 remain required. Author observations: source-faithful O3/O4 decision
+and absence/conflict/HOLD rules restored; all unrelated instructions unchanged.
+These are author observations only. New independent assessment of both frozen
+negative and repaired material under the already-frozen criteria remains pending.
+No old failed subject becomes green; no supplied judgment counts as detection.
 
-Author observations: raw records, unit/formula/inclusive band, table and receive/
-record/compare/HOLD steps are byte-identical to the baseline; A-17=5 C, B-18=10 C,
-C-19 stays unresolved. All three current HOLD statuses and missing receipt times
-remain. These local observations do not establish whole contract fidelity.
-
-Effects: only this run's containing directory and HANDOFF/RETURN files created.
-No handling, shipping, release, message or production operation occurs. The
-baseline and applicable unchanged material remain recoverable at named commits.
-No write uncertainty observed on readback. No signed decision has been supplied;
-no unknown fact or owner acceptance is fabricated.
-
-Required coverage remains O1–O6. Local structural/numeric observations are
-limited support; current policy/whole coverage needs actual independent source
-assessment. Next permitted action: freeze and assess this exact successor,
-then choose a bounded repair or other actual causal disposition from that
-judgment. No dependent release or completion is authorized by this candidate.
-
-Fixture successor EXPECTATIONS_V2 SHA25623dfb13a654ac8e426d935551044d00b89af71020e6e3ab8c28f84bd94e8589d
-frozen before this new intervention at 1a57f6e56274bad2e419c7a5350ca176c40534f4.
-Declared one causal intervention: omit the signed-human batch decision policy;
-its declared affected closure is O3/O4, with all other material unchanged.
-Original isolated-O3 result remains unfulfilled; no old proof is relabelled.
+Actual effects: the two existing files only. No handling/shipping/release/message/
+production operation. No write uncertainty observed. Valid unchanged work and
+failed predecessors remain recoverable at named commits. No receipt time/unit/
+signed decision or acceptance fabricated. Next admitted action: freeze current
+bytes, independently assess actual frozen negative before this successor, then
+reassess O1–O6 under unchanged SOURCE and frozen criteria. Operation/acceptance
+requires its owning authority; document construction grants none.
