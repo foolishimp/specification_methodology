@@ -55,9 +55,38 @@ Non-closure: unresolved common principles, unselected capabilities, missing inde
 
 Codex's initial author activation is selected against C1-inputs-20261011-02; current author state belongs to T-001-CODEX. Consult the peer's owning ticket for its state. The C0 precondition is satisfied, and the prior -01 tuple remains retired. Neither task depends on full T-001 completion. Authoring accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
 
-## Common C1 Input Snapshot
+## Current C1 Input Snapshot
 
-Snapshot ID: C1-inputs-20261011-02. This is the sole current tuple for future activations; -01 is retired below.
+Snapshot ID: C1-inputs-20261011-03. Sole current tuple for activations after 2026-10-11T09:25:23Z; -02 is retired below and remains the historical input contract of both C1 initial attempts, their successors and their reviews.
+
+Input commit: `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1` on `main`. Every member hash below is read from that commit's tree (`git show 80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1:<path>`), per [Development Isolation](../../../specification/PRODUCT.md#development-isolation). This record is written in a descendant commit and is excluded from its own tuple.
+
+Builder basis: stdo://releases/v2.5.1-rc.2/; manifest SHA256: 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
+
+Members outside a tenant's sparse cone (the three plan posts and the matrix under `specification_methodology/.ai-workspace/comments/`) are read with `git show 80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1:<path>`. T-001, tenant task/status/resource fields, Goals, commentary, peer outputs and deferred ABG C2 inputs stay excluded.
+
+| Repository-relative path | SHA256 |
+|---|---|
+| `specification_methodology/.ai-workspace/comments/claude/20261011T033759Z_STRATEGY_stdo_3_0_steel_thread_implementation_plan.md` | `7fc3e28a6eae7170ffa32a3e9e4d77a35f43ba75c10eee4c33654785bd5480b8` |
+| `specification_methodology/.ai-workspace/comments/codex/20261006T010215Z_STRATEGY_STDO_3_0_WORKING_PRODUCT_DEFINITION.md` | `8c39c833f6c32630d765c669be88baa6eb9e6c0143a41c3438ee7cc2f431f7bf` |
+| `specification_methodology/.ai-workspace/comments/codex/20261006T015451Z_MATRIX_AI_DEVELOPMENT_METHODS_STDO_251_BASELINE.md` | `ff74fe1dae6eb85db27d1fd76ca54e4c2c3d1edef100e344504dae6ff029f0d0` |
+| `specification_methodology/.ai-workspace/comments/codex/20261011T033457Z_STRATEGY_STDO_3_0_FOUNDATIONS_STRUCTURE_AND_PLAN.md` | `b2bf4e258401eab58b993659b9569b795734a1f28620e2f2d0cf5f0792421eda` |
+| `stdo_3/AGENTS.md` | `5ca2d2e1b07ea5cf2c5d6cc318084480aaf330bcef22807b7934bc4c6c8243d2` |
+| `stdo_3/CLAUDE.md` | `5ca2d2e1b07ea5cf2c5d6cc318084480aaf330bcef22807b7934bc4c6c8243d2` |
+| `stdo_3/build_tenants/README.md` | `a0bcd6e1538f42e918ff65d6c416d3619ce0c75171b0477dae3d2afb191003c1` |
+| `stdo_3/specification/INTENT.md` | `7d377950e1291029909c161d6f00dd5dde0915418c3630d9be437102271f72d9` |
+| `stdo_3/specification/PRODUCT.md` | `ad598a1e862dad4c3d02bcae9e916217b53891fd6e4e9a06d130b4df5b6c3ceb` |
+| `stdo_3/specification/REFERENCE_FRAME_BASIS.md` | `af908180f74d5ee38c91420661656531ffff9dfd8a8204302204ffcdf4374e49` |
+| `stdo_3/specification/conformance/README.md` | `ba8b9da82a5e45d19d6919c14416e816e082c8fb97bf846c06d530aff80454ce` |
+| `stdo_3/specification/requirements/A_C_DEPENDENCY.md` | `8c8857d7ee495065f44149623b08fe2a7b6d6d6cf54376e6500853fe05000efd` |
+| `stdo_3/specification/requirements/CAPABILITIES.md` | `499fa2dc8a2554b3a5d313941d790328d3b4f2fc49871f034c81108bddfc03b6` |
+| `stdo_3/specification/requirements/PRINCIPLES.md` | `3ea0af7c56a2cbf4f5f9578728aee63afe262bf5119d3d0624a446f3b7df5ec8` |
+| `stdo_3/specification/requirements/README.md` | `433ca6e0d0b8e155a2bfc7bcd3cd454fd6fe1c9cf69cc0eb2c502a916d690ed2` |
+| `stdo_3/stdo_3.json` | `f02262f7de41fc35b7aa563367a154ce32f7384ae600edfec2ecb83c900f3894` |
+
+## Common C1 Input Snapshot (-02)
+
+Snapshot ID: C1-inputs-20261011-02. RETIRED for future activations on 2026-10-11; superseded by -03 above and retained as the historical input contract of the C1 attempts and reviews. -01 is retired below.
 
 Builder basis: stdo://releases/v2.5.1-rc.2/; manifest SHA256: 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
 
