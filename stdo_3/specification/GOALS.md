@@ -7,14 +7,14 @@ GOAL-001: establish one useful common structure and review its foundations befor
 | Checkpoint | Current state | Required result |
 |---|---|---|
 | C0 structure/bootstrap | READY / setup complete after focused GO reviews and Executive conjunction | A separate exact scope, usable common WHAT and independent C1 entry contracts. |
-| C1 principles | CLOSED 2026-10-11; accepted common basis at [requirements/PRINCIPLES.md](requirements/PRINCIPLES.md) | Independent frozen principles attempts, source-first reviews and Jim's decision on one common basis. |
-| C2 capabilities/conformance | OPEN; next; derives from the accepted C1 basis | Derived capability selection and common acceptance criteria accepted by Jim. |
+| C1 principles | CLOSED 2026-10-11; each tenant's realisation accepted separately, recorded in [requirements/PRINCIPLES.md](requirements/PRINCIPLES.md#c1-disposition) | Independent frozen principles attempts, source-first reviews and Jim's acceptance of each tenant's realisation. |
+| C2 capabilities/conformance | OPEN; next; derives from the common WHAT and the accepted tenant realisations | Derived capability selection and common acceptance criteria accepted by Jim. |
 | C3+ steel threads | NOT_SELECTED | Actual document construction and observed use against selected common criteria. |
 | Release/adoption | NOT_SELECTED | Exact corpus, dependency, acceptance and separately authorised publication/adoption evidence. |
 
 [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) owns checkpoint state. [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md) have separate lifecycle and territory.
 
-C1 is closed. Both tenants' repaired candidates, the source-first reviews of their initial candidates and the authors' repair returns were consumed; Jim waived post-repair confirmation checks and accepted one common basis, recorded in `requirements/PRINCIPLES.md` with its C1 disposition. The current wave is C2: derive capabilities and a common conformance contract from that basis. Tenant work proceeds under [Development Isolation](PRODUCT.md#development-isolation) on `tenant/claude/c1` and `tenant/codex/c1` against snapshot C1-inputs-20261011-03; the next common freeze follows the C2 contract.
+C1 is closed. Both tenants' repaired candidates, the source-first reviews of their initial candidates and the authors' repair returns were consumed; Jim waived post-repair confirmation checks and accepted each tenant's realisation separately, recorded in `requirements/PRINCIPLES.md#c1-disposition`. Tenant principles may differ; the common WHAT is unchanged. A merged synthesis is retained as commentary for C2. The current wave is C2: derive capabilities and a common conformance contract from that basis. Tenant work proceeds under [Development Isolation](PRODUCT.md#development-isolation) on `tenant/claude/c1` and `tenant/codex/c1` against snapshot C1-inputs-20261011-03; the next common freeze follows the C2 contract.
 
 ## Open Owner Decisions
 
