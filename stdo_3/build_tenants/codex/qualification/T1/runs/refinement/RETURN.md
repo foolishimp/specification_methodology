@@ -146,7 +146,7 @@ documentary claim; the union alone does not establish acceptance.
 |---|---|---|
 | O1 | A plus Full S2/S3/S5; all raw records/units/intact seals retained; F defined, formula and inclusive 2–8 C band present. Exact arithmetic: A=5 C; B=10 C; C unresolved. | C's missing unit remains unknown. |
 | O2 | A plus Full S1/S3/S5; receive/record/convert/compare/hold steps; A eligible/HOLD, B outside-band/HOLD, C unknown/HOLD. Receipt times explicitly not supplied. | No physical receipt, verification or operator use observed. |
-| O3 | B plus coupled Full S2/S3/S4; same-batch correct identity, known in-band temperature, intact seal AND Mira Finch's signed decision. Eligibility/checks/judgments grant no decision. | No signed decision exists; every batch remains HOLD. |
+| O3 | B plus coupled Full S2/S3/S4; same-batch correct identity, known in-band temperature, intact seal AND Mira Finch's signed decision. Eligibility/checks/judgments grant no decision. | No signed decision is supplied; every batch remains HOLD. |
 | O4 | A plus Full S4/S5; missing/unknown/conflicting/outside facts or absent decision preserve HOLD and seek Mira; no guessing, shipping or override. A signature cannot override a failed gate. | New material facts require affected reassessment. |
 | O5 | This current RETURN binds source/view/custody/method/trial/preimages and exact closed inputs, support and coverage. HANDOFF digest above; closing native readback provides RETURN's final digest. | Body/reference fidelity is bounded by these admitted coordinates; no independent verdict is fabricated. |
 | O6 | Full S6/S7 and this RETURN preserve correct partial work/raw records, unfinished assessment, source availability, write reconciliation, actual effects, uncertainty and next action. | Independent assessment and authorized acceptance remain pending. |
@@ -213,3 +213,21 @@ Tokens/provider counters: **unavailable**. Other actors, fixture extraction,
 root verification, independent assessment and human decisions are outside this
 local elapsed/body envelope. No native-window stress, security containment,
 comparative efficiency, complete effectiveness or whole-method claim is made.
+
+## Current successor — bounded evidence wording repair
+
+Root Writer repairs one unsupported claim in the frozen predecessor RETURN at
+21609e382e5a70c4e2a9ffb7b313fd9c9fa8b087, SHA256
+70d2ef78adbe9d43dd8313858a85d5904440501d872d177469289a73387dec37.
+SOURCE S3 establishes no supplied signed decision; it does not establish that no
+decision exists anywhere. The prior claim/self-check cannot be consumed as
+current support. Historical failed material remains at that named commit.
+
+Only that O3 table wording and this successor record change. HANDOFF and the
+source, method and independent expectations remain unchanged. This is an output
+report defect at its owning projection, not missing governing meaning. Applicable
+A/B work is retained. Current author observation supports the corrected wording;
+frozen predecessor review and independent affected reassessment remain pending.
+Effects: this RETURN file only. No handling, release, notification or other
+domain effects. No effect uncertainty observed. Next permitted action: freeze
+current bytes and independently reassess exact affected claims.
