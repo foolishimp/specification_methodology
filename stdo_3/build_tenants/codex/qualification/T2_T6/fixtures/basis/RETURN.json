@@ -1,0 +1,25 @@
+{
+  "source_commit": "e5ac730699afcd1fc6a1f610d2186c63ac328ca3",
+  "source_path": "stdo_3/build_tenants/codex/qualification/T2_T6/TASKS.md",
+  "started_utc": "2026-10-11T15:19:50.877981+00:00",
+  "finished_utc": "2026-10-11T15:19:50.878327+00:00",
+  "source_digest": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+  "controlled_difference": "Harbor quote cell 6 -> 8, with source-v1 declaration unchanged",
+  "first_actual_admission": {
+    "standing": "invalid_basis",
+    "admitted": false,
+    "actual_sha256": "f20a8ef3aa21a41cd9ce21ff4e87d1e6e78525d1428746adcecea9ac9e8f3ef2",
+    "expected_sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+    "effect": "no dependent cost construction invoked"
+  },
+  "causal_diagnosis_before_repair": "Materialized TASKS contains an unowned Harbor 8-cent quote under source-v1; pinned D/source-v1 still contains 6 cents. Same declared identity cannot authenticate changed bytes. Repair is fixture materialization, not generic law or an authorized quote revision.",
+  "repair": "Restore exact pinned source bytes in CURRENT_TASKS.md; original wrong body retained separately",
+  "affected_actual_readmission": {
+    "standing": "satisfied",
+    "admitted": true,
+    "actual_sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+    "expected_sha256": "a97e1308b02b2bee9037f30b16b3826917feb8cb9f63bda4b0ff9467c380409a",
+    "effect": "input available; no cost/conformance judgment implied"
+  },
+  "limits": "Local actual fixture-byte admission. Does not run a new runtime or authorize external effects. Wrong/repair artifacts outside the published method."
+}
