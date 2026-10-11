@@ -1,0 +1,22 @@
+# Common Conformance Questions
+
+Status: C1 logical review expectations; runnable trials and complete acceptance criteria await C2.
+
+Both tenants are evaluated against independently specified common expectations. The reviewer acquires these expectations and the actual source before inspecting the candidate. No observed green result is recorded here.
+
+| Discriminator | Expected distinction |
+|---|---|
+| A claimed derivation or independence argument | Each claimed derivation exposes its premises; claimed independence is argued, not assumed. |
+| Information and representation differ | Structural agreement cannot establish identical meaning or semantic fidelity. |
+| Identity is unchanged while content changes | Current state and observation applicability are considered separately. |
+| Typed producers and consumers disagree | The incompatible domain/precondition is explicit; equal field shapes do not supply a valid join. |
+| Actual failed assessment A and uncovered required B | A's failure and citations survive with B unresolved. Every planned assessment slot is authenticated; B is uncovered required coverage, not an omitted planned judgment. |
+| Required coupled context cannot fit | Lawful refinement, another supported actor or a truthful stop preserves material obligations. |
+| Basis or evidence changes | Affected applicability is refreshed; unchanged supported work is retained. |
+| Interruption leaves authored progress | Recovery uses the current workspace and applicable work state; it does not erase progress or fabricate completed assessment. |
+| A parse or map succeeds | The claim remains mechanical until independently sufficient semantic and practical evidence exists. |
+| Carrier/process churn is proposed as new law | The claimed obligation is justified by purpose and material relation, or identified as unsupported overhead. |
+
+C1 can find logical counterexamples and contradictions without executing a runtime. C3+ actual-use cases must perform real construction, observe genuine defects, preserve effect uncertainty and re-enter lawfully.
+
+A later neutral finite token-transfer case tests the selected a_c fragment separately from STDO interpretation fidelity. Author-independent source comparison, mechanical checks, formal derivations and practical adequacy remain different evidence.

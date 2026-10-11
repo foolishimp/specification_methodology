@@ -1,19 +1,20 @@
 # Specification Methodology Repository
 
 The Git repository is `foolishimp/specification_methodology`. In this workspace,
-the checkout directory is `specification_methodology`; the STDO source project
-is its `specification_methodology/` child. Select a child Product before working
-on its source.
+the checkout directory is `specification_methodology`. Its
+`specification_methodology/` child owns the current STDO 2.* source; `stdo_3/`
+is the new STDO 3 peer. Select a child Product before working on its source.
 
-This repository co-locates three peer source projects:
+This repository co-locates four peer source projects:
 
 | Project | Purpose |
 |---|---|
 | [`specification_methodology/`](specification_methodology/) | Specification Methodology and the STDO toolchain manager |
 | [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
 | [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
+| [`stdo_3/`](stdo_3/) | STDO 3 common principles and construction contract, with independent Codex and Claude document build tenants |
 
-The repository root is coordination only. It is not a fourth Product, has no
+The repository root is coordination only. It is not a Product, has no
 Product Definition, and grants no constitutional, composition, execution, or
 release authority. Each child retains its own WHAT, HOW, Product identity,
 release records, licence boundary, tickets, and accepted dependencies.

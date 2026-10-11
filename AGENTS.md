@@ -1,11 +1,11 @@
 # Specification Methodology Repository Bootstrap
 
-This root coordinates three peer source projects. It is not a Product and owns
+This root coordinates four peer source projects. It is not a Product and owns
 no Product meaning.
 
-The Git checkout is `specification_methodology`. STDO authoring belongs in the
-`./specification_methodology/` child; the other children retain their own Product
-Definitions and source boundaries.
+The Git checkout is `specification_methodology`. STDO 2.* authoring belongs in
+the `./specification_methodology/` child; STDO 3 construction belongs in
+`./stdo_3/`. Each child retains its own Product Definition and source boundary.
 
 Before work:
 
