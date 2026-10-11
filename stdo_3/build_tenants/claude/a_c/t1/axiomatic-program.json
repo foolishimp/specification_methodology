@@ -1,0 +1,2889 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:stdo-3:claude:program:a-c-text:t1",
+  "calculus_ref": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "stdo-3://build_tenants/claude/standards/",
+  "frame_refs": [
+    "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+  ],
+  "vocabulary_refs": [
+    "urn:stdo-3:claude:vocabulary:kind:concept",
+    "urn:stdo-3:claude:vocabulary:kind:hypothesis",
+    "urn:stdo-3:claude:vocabulary:kind:law",
+    "urn:stdo-3:claude:vocabulary:kind:operation",
+    "urn:stdo-3:claude:vocabulary:kind:record",
+    "urn:stdo-3:claude:vocabulary:kind:result",
+    "urn:stdo-3:claude:vocabulary:kind:role",
+    "urn:stdo-3:claude:vocabulary:operator:derives",
+    "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+    "urn:stdo-3:claude:vocabulary:operator:forbids",
+    "urn:stdo-3:claude:vocabulary:operator:maps-to",
+    "urn:stdo-3:claude:vocabulary:operator:preserves",
+    "urn:stdo-3:claude:vocabulary:operator:requires",
+    "urn:stdo-3:claude:vocabulary:role:condition",
+    "urn:stdo-3:claude:vocabulary:role:consequence",
+    "urn:stdo-3:claude:vocabulary:role:exception",
+    "urn:stdo-3:claude:vocabulary:role:premise",
+    "urn:stdo-3:claude:vocabulary:role:qualification",
+    "urn:stdo-3:claude:vocabulary:role:requirement",
+    "urn:stdo-3:claude:vocabulary:role:subject",
+    "urn:stdo-3:claude:vocabulary:role:support",
+    "urn:stdo-3:claude:vocabulary:role:target"
+  ],
+  "symbols": [
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:actor",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Actor: whoever performs a step within a declared capability envelope (context, attention, time, capability)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:allowance",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Allowance: declared resource bound and spend measurement where capability fit or cost is the governed question",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:assessment-protocol",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Independent assessment protocol: freeze, expectations, named identity, no repair, no own authorship",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:assessor",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Assessor: the relation that evaluates a frozen candidate independently",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:authority",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Authority: an identity-bearing permission to operate or to dispose acceptance within a scope",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:basis",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Basis: the exact immutable set of definitions a step, claim or result binds",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:candidate",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Candidate: a step's output before evaluation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:checker",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Checker: a mechanical decider of the structural subset",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:claim",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Claim: an assertion with subject, property, basis, witness relation and falsifier",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:clause-standing",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Standing of a corpus clause relative to the rc.2 builder: conserved, reframed, superseded or new",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:commitment-standing",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Standing of a commitment relative to the others: recovered, derived, independent or hypothesis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:composition",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Composition of steps s2 after s1",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:conservation-accounting",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Transformation record: preserved, introduced, removed, external resolution witnesses, residuals",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:constructor",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Constructor: the relation that produces the candidate and self-review",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:context",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Context: the declared scope under which an interpretation holds (subject, definitions, basis, admissible observations)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:coverage",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Required obligation set R, admitted coverage C and uncovered coverage R minus C",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:decision-owner",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Decision owner: the relation that disposes",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#5-acceptance"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:envelope",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Envelope B: the actor's declared capability bound (context, attention, time, capability)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:evaluator",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:role",
+      "label": "Evaluator: the relation that applies the declared relation between law and evidence",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:evidence",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Evidence: artifacts, events, observations used to evaluate a claim on a basis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:falsifier",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Falsifier: the observation that would defeat a claim, named before a witness is selected",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:finding",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Finding: an evidence-bearing item of a review with its smallest bounded correction",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#4-review-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:fit-test",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Fit test of the selected context against the envelope",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:formal-fragment",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "The established categorical fragment: free category A on typed primitives, carrier sets I, cost pairs C_H, functors S and R_H",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:grant",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Grant: operations permitted, territory that may change, decisions reserved to others",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:h-categorical-equivalence",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:hypothesis",
+      "label": "Hypothesis: categorical equivalence of A and I under some reformulation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#5-hypotheses"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:h-runtime-traversal-composition",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:hypothesis",
+      "label": "Hypothesis: traversal composition laws of any runtime",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#5-hypotheses"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:h-statistical-boundary",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:hypothesis",
+      "label": "Hypothesis: the statistical boundary construct at candidate status",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#5-hypotheses"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:h-universal-algorithmic-meaning",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:hypothesis",
+      "label": "Hypothesis: universal algorithmic capture of meaning",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#5-hypotheses"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:independence-policy",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Declared policy on whether two activations of one actor family are independent for a semantic judgment",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:intake",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Intake: the activation record from which a step's governing relations are reconstructed",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:interpretation",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Interpretation: a declared contract from representation to meaning within a context",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:judgment",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Judgment: a recorded evaluation over an unchanged subject, with evaluator, decision, evidence, scope and revising observation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:latitude",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "A declared latitude or transformation relation under which two values may differ lawfully",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:lawful-compression",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Compression that preserves the material distinctions and failure detections the evaluation needs",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:material",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Material: of a relation, uncertainty or closure, that its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:material-closure",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Material closure of Z under R on the exact basis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:object",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Object O: a subject with scoped identity (authority, kind, value), boundary, current state and declared material relations",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:outcome",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Outcome U: a selected, owner-defined, directly verifiable state with an acceptance interval",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P0 Bounded construction",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p1-interpretation",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P1 Interpretation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p2-purpose",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P2 Purpose",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p3-identity",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P3 Identity",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p4a-typed-composition",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P4a Typed composition",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p4b-conservation",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P4b Conservation of step-produced facts",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p5-totality",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P5 Totality",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:p6-justification-authority",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:law",
+      "label": "P6 Justification and authority",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:r-falsified",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "falsified: a declared counterexample defeats it",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:r-indeterminate",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "indeterminate: admissible evidence cannot decide it",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:r-invalid-basis",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "invalid_basis: the subject or basis cannot support the evaluation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:r-out-of-frame",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "out_of_frame: the evaluation needs an undeclared material relation or capability",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:r-satisfied",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "satisfied: the declared predicate holds on the exact basis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:rc2-builder",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "The rc.2 builder corpus whose clauses this corpus conserves, reframes or supersedes",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#6-source-dispositions"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:reference",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "A reference standing for a relation in place of its body",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:refinement-ambiguity-outcome",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Refinement: ambiguity outcome (resolved, carried, escalated, blocked)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:refinement-construction-availability",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Refinement: construction availability (candidate_ready, refused, incomplete, re_entry_requested)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:refinement-disposition",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Refinement: disposition (accept, local_repair, re_enter, reject)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:refinement-profile-closure",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Refinement: profile-defined closure decisions",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:relation-family",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Relation family R: dependency relations whose change can alter the result, basis validity, evidence sufficiency or authority",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:representation",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Representation: bytes, text, a model or a program standing for a subject",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:residual",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Residual: a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:result-algebra",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "The one core result algebra for every evaluation and stop state",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:review-result",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Review result: one core result per declared predicate with subject, basis, evidence, ranked findings, residual uncertainty, invalidation conditions and a recommended disposition",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#4-review-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:seed-set",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Seed set Z: subject, outcome and affected relations named in the intake",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:selected-context",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Selected context: the projection of the closure with its recorded boundary seams",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:self-review",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Self-review: a constructor's own review of its candidate",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:semantic-fidelity",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Semantic fidelity: meaning and materiality",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:semantic-law",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Semantic law: what an evaluation means",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:shared-machinery",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "One implementation serving many instances",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:step",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:operation",
+      "label": "Step: one bounded unit of work: intake, selected context, grant, execution, output",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:step-produced-fact",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Step-produced fact: a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; a reproducible observation is not one",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:stop-state",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:result",
+      "label": "Stop state: the one core result a step returns",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step",
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:structural-conformance",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Structural conformance: closed syntax, types, identities, references, bases and mechanically decidable predicates",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:subject",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:concept",
+      "label": "Subject: the thing a claim, representation or transformation is about; exact, with inventory and bytes or semantic addresses",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:symbol:witness",
+      "kind": "urn:stdo-3:claude:vocabulary:kind:record",
+      "label": "Witness: the evidence selected to support a claim under a declared relation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:algorithmic-means-structurally-checkable",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:structural-conformance"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:semantic-fidelity"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "'Algorithmic' means explicit and structurally checkable; a semantic decision is lawful only under an exact decision contract; structural success never establishes fidelity."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p1-statement"
+        }
+      ],
+      "statement": "Algorithmic means structurally checkable; semantic decisions need an exact contract; structural success never establishes fidelity.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:allowance-declared-where-cost-is-governed",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:allowance"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "The governed question is capability fit or a cost claim."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The activation declares its allowance and how spend will be measured."
+        }
+      ],
+      "statement": "Where capability fit or cost is the governed question, the allowance and its measurement are declared.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:ambiguity-outcome-is-policy-over-core",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-ambiguity-outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "resolved, carried, escalated and blocked are policy states over a core result."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:refinements-map-totally-to-core"
+        }
+      ],
+      "statement": "An ambiguity outcome is a policy state over a core result.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:assessment-protocol-steps",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessment-protocol"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The subject is frozen by identity before material reference exposure; the assessor records its expectations from the governing source before opening the candidate; it reads the subject at a named immutable identity, never a working tree; it makes no repair; it does not assess its own authorship."
+        }
+      ],
+      "statement": "Freeze before exposure; expectations before opening; named immutable identity; no repair; no own authorship.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:assessor-evaluates-the-live-subject",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "Promotion needs independent assessment."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p6-statement"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-candidate-until-evaluated"
+        }
+      ],
+      "statement": "The assessor evaluates the exact live subject, not the constructor's summary.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:authority-is-never-minted",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Authority is never minted from capability, a label or reachability."
+        }
+      ],
+      "statement": "Authority is never minted from capability, label or reachability.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:change-classes-have-distinct-effects",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:semantic-law"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:judgment"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Evidence change may invalidate a verdict without changing law; projection change may invalidate a view without changing truth; semantic change requires re-entry and invalidates dependent acceptance."
+        }
+      ],
+      "statement": "Evidence, projection and semantic change have distinct invalidation effects.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:checker-decides-structural-subset-only",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:checker"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:structural-conformance"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:semantic-fidelity"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A checker decides the structural subset; it claims a semantic or authority subset only under an exact lawful decision contract supplied by the model."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:algorithmic-means-structurally-checkable"
+        }
+      ],
+      "statement": "A checker decides structure; it claims semantics or authority only under an exact supplied contract.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:claim-has-shape",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A claim names its subject, the property claimed, its basis, the relation between witness and claim, and its falsifier."
+        }
+      ],
+      "statement": "A claim has subject, property, basis, witness relation and falsifier.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:claim-scope-cannot-exceed-evidence",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A claim's quantifier, population and scope cannot exceed its evaluated evidence; generalising a local observation needs a declared inference relation, the comparable population and explicit counterexample treatment."
+        }
+      ],
+      "statement": "Claim scope cannot exceed evaluated evidence; generalisation needs a declared inference relation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:clause-standing-is-disposed",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:clause-standing"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Every clause in this corpus has exactly one standing relative to the rc.2 builder: conserved (the rc.2 clause governs unchanged; route given), reframed (obligation kept, restated at a different scope or owner; route and change given), superseded (an accepted successor replaces it; route and successor given) or new (no rc.2 clause states it; requiring principle given)."
+        }
+      ],
+      "statement": "Every clause has exactly one standing relative to the rc.2 builder, with its route or requiring principle.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:closure-is-computed-on-exact-basis",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:material-closure"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:seed-set"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:relation-family"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Compute the material closure of the seed set under the relation family on the exact basis; if the closure is not finite and unique, the step returns a gap or refusal and does not guess."
+        }
+      ],
+      "statement": "The material closure is computed on the exact basis; a non-finite or non-unique closure returns a gap or refusal, never a guess.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:commitment-standing-is-declared",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:commitment-standing"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Every commitment has one standing relative to the others: recovered, derived with named premises, independent by an argued non-entailment, or hypothesis."
+        }
+      ],
+      "statement": "Every commitment is recovered, derived with named premises, independent by argued non-entailment, or a hypothesis.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:composite-reports-by-declared-conjunction",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:coverage"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A composite over several results declares its conjunction; the member it reports is chosen by that declared rule; every known failure and uncovered obligation survives the join and is carried with the composite; no universal order among the non-satisfied members exists."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:failure-and-uncovered-obligation-survive-join"
+        }
+      ],
+      "statement": "A composite reports by its declared conjunction; failures and uncovered obligations survive; no universal order exists.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:composition-exists-only-under-p4a",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:composition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "For steps s1: X -> Y and s2: Y -> Z, the composite s2 after s1 exists only under P4a; its output carries both steps' step-produced facts."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p4a-statement"
+        }
+      ],
+      "statement": "A composite exists only under P4a and carries both steps' step-produced facts.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:composition-law-only-where-needed",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:composition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A composition law is required only where the governing evaluation combines internal variables or transports values across steps; independent closed results may instead go to one declared conjunction."
+        }
+      ],
+      "statement": "Composition law is required only where values cross steps; independent closed results may go to one declared conjunction.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:compression-preservation-is-a-claim",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:lawful-compression"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Whether a compression preserved what the evaluation needs is a claim with the standing of any other; the compressing step records the compression and its preservation argument; the claim is assessed independently only where the promotion it serves needs independent assessment."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:lawful-compression-preserves-distinctions"
+        }
+      ],
+      "statement": "Compression preservation is a recorded claim, assessed independently only where the promotion needs it.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:construction-availability-maps-to-core",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-construction-availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "candidate_ready -> satisfied; refused -> falsified; incomplete -> indeterminate; re_entry_requested -> out_of_frame or invalid_basis."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:refinements-map-totally-to-core"
+        }
+      ],
+      "statement": "Construction availability maps candidate_ready, refused, incomplete and re_entry_requested onto the core.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:context-fit-is-measured-before-read",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:envelope"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "For the context dimension the fit test is a measurement: the bytes of the selected context are measured before any read and compared with the declared cap; the measurement, the cap and the outcome are step-produced facts recorded before the read."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope"
+        }
+      ],
+      "statement": "Context fit is measured in bytes before any read and recorded as a step-produced fact.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:core-algebra-conserves-rf012-and-ac007",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:rc2-builder"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "The table restates RF-012's five members unchanged; the no-coercion sentence restates AC-007's rule that a failed, missing, indeterminate, out-of-scope or invalid-basis result follows the declared algebra; both are conserved, restated once, and continue to govern."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:nothing-is-coerced-to-success"
+        }
+      ],
+      "statement": "The core algebra conserves RF-012 and AC-007, restating both once.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:counterevidence-invalidates-dependents",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "Later counterevidence arrives."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:consequence",
+          "literal": "Every dependent verdict is invalidated until the claim-evidence relation is requalified."
+        }
+      ],
+      "statement": "Later counterevidence invalidates every dependent verdict until requalification.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:direct-entry-unless-coordination-needed",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:constructor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "One capable context has sufficient authority and intake."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "It enters directly as constructor; coordination is selected only when material contexts, authority or required independence need it."
+        }
+      ],
+      "statement": "A capable context with authority and intake enters directly; coordination only when contexts, authority or independence require it.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:disposition-consumes-a-core-result",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "accept, local_repair, re_enter and reject are what the decision owner does with an assessed candidate; a disposition consumes a core result and is not one."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:refinements-map-totally-to-core"
+        }
+      ],
+      "statement": "A disposition consumes a core result and is not one.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:each-artifact-establishes-its-own-claim",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A valid parse, a valid map, a green test and a historical judgment each establish exactly their own claim."
+        }
+      ],
+      "statement": "A parse, a map, a green test and a historical judgment each establish exactly their own claim.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:evidence-and-authority-do-not-mint-each-other",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Neither evidence nor authority is minted by the other."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p6-statement"
+        }
+      ],
+      "statement": "Evidence and authority do not mint each other.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:failure-and-uncovered-obligation-survive-join",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:coverage"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A composite with a known failure or an uncovered required obligation cannot project success; a known failure A and an uncovered obligation B survive every join."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:uncovered-coverage-is-r-minus-c"
+        }
+      ],
+      "statement": "A composite with a known failure or uncovered required obligation cannot project success; both survive every join.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:finding-without-evidence-is-commentary",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:finding"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A finding without evidence a consumer can chase is commentary."
+        }
+      ],
+      "statement": "A finding without chaseable evidence is commentary.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#4-review-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:fit-selection-within-grant",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:grant"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Within its grant a step selects refinement, sequencing and compression itself; selecting another actor or enlarging the envelope re-enters the owner of the grant or envelope, who may delegate that choice in the grant."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope"
+        }
+      ],
+      "statement": "A step selects refinement, sequencing and compression within its grant; actor change and envelope enlargement re-enter their owner.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:envelope"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "The selected context fits the envelope."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:consequence",
+          "literal": "Activate."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:exception",
+          "literal": "If it does not fit, one or more of these, in combination: refine the outer contract into steps whose contexts fit; sequence activations; apply a lawful compression; select another actor whose envelope fits; or return out_of_frame."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:projection-records-boundary"
+        }
+      ],
+      "statement": "If the context fits, activate; otherwise refine, sequence, compress lawfully, change actor or return out_of_frame, in any combination.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:formal-fragment-established",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:formal-fragment"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Where A is the free category on typed primitives, I the selected carrier sets with total functions and C_H pairs of functions with additive costs, S: A -> I and R_H: A -> C_H are functors; S is not faithful; S is not an equivalence."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: new in this corpus (P1); rc.2 states only the obligation that a categorical claim defines its objects, arrows, identities and composition and proves preservation, and asserts no categorical functor itself. H names an architecture, never a runtime."
+        }
+      ],
+      "statement": "The fragment, new in this corpus: under the stated interpretation S and R_H are functors, S is not faithful and not an equivalence; further categorical claims must be constructed and proved.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:grant-names-operations-territory-reservations",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:grant"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The grant names the operations permitted, the territory that may change, and the decisions reserved to others."
+        }
+      ],
+      "statement": "A grant names permitted operations, mutable territory and reserved decisions.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:hypotheses-are-not-law",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:h-categorical-equivalence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:h-universal-algorithmic-meaning"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:h-statistical-boundary"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:h-runtime-traversal-composition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "These are carried for falsification and are not law; nothing in the core depends on any of them being established."
+        }
+      ],
+      "statement": "The four hypotheses are carried for falsification and are not law.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#5-hypotheses"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:identity-survives-admissible-change",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:object"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "An object's scoped identity (authority, kind, value) survives admissible state change and encoding change."
+        }
+      ],
+      "statement": "Scoped identity survives admissible state and encoding change.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:independence-across-families-is-declared",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:independence-policy"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Whether two activations of one actor family are independent for a semantic judgment is a policy the governing basis states for the claim."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:exception",
+          "literal": "Where no policy is stated, the default is that they are not independent."
+        }
+      ],
+      "statement": "Independence across actor families is declared; the default is not independent.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:inputs-acquired-by-exact-identity",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:intake"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Declared inputs are acquired by their exact identity; a declared input absent from the actor's materialised view is neither licence to read elsewhere nor evidence that it is absent."
+        }
+      ],
+      "statement": "Inputs are acquired by exact identity; an absent declared input is neither licence to read elsewhere nor evidence of absence.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:intake-is-sufficient-without-history",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:intake"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A step is activated from an intake sufficient to reconstruct its governing relations without conversation history, commentary or a prior actor's memory."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-actor-change"
+        }
+      ],
+      "statement": "An intake reconstructs the governing relations without history, commentary or a prior actor's memory.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:intake-names-its-fields",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:intake"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The intake names: the selected outcome, admitted prerequisite or experiment it serves; the affected relation set and its invariants; the exact basis and the inputs it may acquire, each by identity and hash or by an input commit; the grant; the conditions that require re-entry at an owning relation; and, where the governed question is capability fit or a cost claim, the allowance and how spend will be measured."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:intake-is-sufficient-without-history"
+        }
+      ],
+      "statement": "The intake names outcome, affected set, basis and inputs by identity, grant, re-entry conditions and, where governed, the allowance.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:internal-path-is-not-governed",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:step"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:actor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The actor's internal path within a step is not part of the output and is not governed."
+        }
+      ],
+      "statement": "The actor's internal path is not output and is not governed.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:interpretation-declares-reliable-distinctions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:interpretation"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "An interpretation says which distinctions a consumer may rely on and which are residual."
+        }
+      ],
+      "statement": "An interpretation names the distinctions a consumer may rely on and the residual ones.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:judgment-is-over-unchanged-subject",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:judgment"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A judgment is recorded over an unchanged subject with evaluator, decision, evidence, scope and revising observation."
+        }
+      ],
+      "statement": "A judgment is over an unchanged subject with evaluator, decision, evidence, scope and revising observation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:latitude-must-be-declared",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:latitude"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Two values differ lawfully only through a declared latitude or transformation relation; preference, probabilistic choice and human presence are not implicit latitude."
+        }
+      ],
+      "statement": "Values differ lawfully only under declared latitude; preference, probabilistic choice and human presence are not implicit latitude.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:law-evidence-evaluator-authority-are-distinguishable",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:semantic-law"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evaluator"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Semantic law defines what an evaluation means; evidence supplies observations; the evaluator applies the declared relation; decision authority disposes; one actor may perform several and the record keeps them distinguishable."
+        }
+      ],
+      "statement": "Law, evidence, evaluator and authority stay distinguishable in the record.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#2-separation"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:lawful-compression-preserves-distinctions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:lawful-compression"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A compression is lawful only when it preserves the material distinctions and failure detections the evaluation needs."
+        }
+      ],
+      "statement": "Compression is lawful only when it preserves the distinctions and failure detections the evaluation needs.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:load-bearing-claim-before-witness",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:falsifier"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:witness"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A load-bearing claim names its exact subject, the property, the governing basis, the witness relation, the nearest weaker property it excludes, and its falsifier, before a witness is selected; without these it is evidence discovery, not proof."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:claim-has-shape"
+        }
+      ],
+      "statement": "A load-bearing claim is fully shaped, including its falsifier and nearest weaker property, before a witness is selected.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:material-means-can-alter",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:material"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:relation-family"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A relation, uncertainty or closure is material when its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of a step is its material relations."
+        }
+      ],
+      "statement": "Material means able to alter a result, basis validity, evidence sufficiency or authority.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:missing-capability-is-out-of-frame",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-out-of-frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Where evidence is missing because a relation or capability needed to obtain it was not declared, the result is out_of_frame; indeterminate is reserved for the case where the declared capability was exercised and the admissible evidence still cannot decide."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members"
+        }
+      ],
+      "statement": "Missing evidence from an undeclared capability is out_of_frame; indeterminate needs the declared capability exercised.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:mixed-bases-need-composite-relation",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A step, claim or result binds one exact immutable basis; mixed bases need an explicit composite relation."
+        }
+      ],
+      "statement": "Mixed bases need an explicit composite relation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:no-proof-of-no-undiscovered-relation",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:material-closure"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "The method does not require proving that no undiscovered material relation exists."
+        }
+      ],
+      "statement": "No proof that no undiscovered material relation exists is required.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:nothing-is-coerced-to-success",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A missing, failed or out-of-scope result returns its own member, never satisfied."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members"
+        }
+      ],
+      "statement": "Nothing is coerced to success.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:obligation-without-route-is-unjustified",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p2-purpose"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "An obligation with no route to the selected outcome is unjustified."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p2-statement"
+        }
+      ],
+      "statement": "An obligation with no route to the outcome is unjustified.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:one-actor-may-hold-several-roles",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:actor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "Independence for the assessed claim is preserved."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "One actor may hold several roles."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:roles-are-relations-not-actor-kinds"
+        }
+      ],
+      "statement": "One actor may hold several roles where independence for the assessed claim is preserved.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:outcome-defines-adequacy",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Adequacy of a transformation is judged against a selected, owner-defined, directly verifiable outcome with an acceptance interval."
+        }
+      ],
+      "statement": "Adequacy is judged against the selected outcome and its interval.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p0-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A finite actor realises a selected outer contract through steps; each step's selected context fits the actor's envelope; the actor's internal path within a step is its own."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-selected-outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-actor-change"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:step-produced-facts-are-not-reacquirable"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-open-world"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-candidate-until-evaluated"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: recovered as a composite; the generic statement is reframed from the graph profile's graph functions."
+        }
+      ],
+      "statement": "P0: a finite actor realises a selected outer contract through steps whose selected contexts fit its envelope.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p1-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p1-interpretation"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: independent. With purpose, identity, evidence and authority fixed, two contracts give one representation two meanings."
+        }
+      ],
+      "statement": "P1: subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p2-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p2-purpose"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A selected outcome defines adequacy; interfaces inherit material obligations from the transformation they serve."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: independent. Identical capacity serves opposite purposes."
+        }
+      ],
+      "statement": "P2: a selected outcome defines adequacy; interfaces inherit obligations from the transformation they serve.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p3-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p3-identity"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "An object's identity is declared (authority, kind, value) and survives admissible change; current state, historical observation and representation identity stay separate; a boundary is a claim with a proof obligation."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: independent. Equal capacity admits identity by persistence or by digest."
+        }
+      ],
+      "statement": "P3: identity is declared and survives admissible change; state, observation and representation identity stay separate; a boundary is a claim with a proof obligation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p4a-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p4a-typed-composition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:composition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Two steps compose only when the first's result type and judgment satisfy the second's domain and preconditions; composition retains both identities, intermediate results, judgments, evidence, authority, provenance and stop states."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: independent."
+        }
+      ],
+      "statement": "P4a: steps compose only under type and judgment satisfaction, retaining both identities and their facts.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p4b-derivation",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:derives",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p4b-conservation"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p0-statement"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p2-statement"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:step-produced-facts-are-not-reacquirable"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:consequence",
+          "literal": "Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produced them."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: derived; reframed from AC-009, AC-013, AC-005, UP-017 and UP-021, whose nine statements of conservation become one obligation with typed instances (authority, residual, judgment, frame, transition, successor claim, evidence by reference); each source clause continues to govern its own scope."
+        }
+      ],
+      "statement": "P4b derives from P0, P2 and the step-produced-facts premise: the producing step records what the outer contract needs.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p5-derivation",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:derives",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p5-totality"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p0-statement"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:premise-open-world"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p6-statement"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:consequence",
+          "literal": "A step can meet a condition outside its context and cannot report success on one; its result algebra carries indeterminate, out_of_frame and invalid_basis as first-class outcomes and its control model names the next move."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: derived."
+        }
+      ],
+      "statement": "P5 derives from P0, the open-world premise and P6: the result algebra carries non-success outcomes as first class and the control model names the next move.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:p6-statement",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p6-justification-authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Definitions, assumptions, observations, candidate judgments and accepted claims have distinct standing; evidence supports a claim on a basis; authority permits or disposes within scope."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "Standing: independent. A bounded actor satisfying all else can still take a green label as acceptance."
+        }
+      ],
+      "statement": "P6: standings are distinct; evidence supports on a basis; authority permits or disposes within scope.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:post-exposure-revision-is-new-subject",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessment-protocol"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:subject"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "The candidate is revised after exposure to the assessor."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:consequence",
+          "literal": "The revision is a declared intervention and a new subject."
+        }
+      ],
+      "statement": "Any post-exposure revision is a declared intervention and a new subject.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:premise-actor-change",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "literal": "The actor of one step need not be the actor of the next; a later actor may re-acquire declared sources but not a prior actor's private memory."
+        }
+      ],
+      "statement": "The actor of one step need not be the actor of the next and cannot re-acquire private memory.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:premise-candidate-until-evaluated",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "literal": "A step's output is a candidate until evaluated."
+        }
+      ],
+      "statement": "A step's output is a candidate until evaluated.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:premise-open-world",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "literal": "The world is open: a step may meet conditions outside its selected context."
+        }
+      ],
+      "statement": "The world is open.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:premise-selected-outcome",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:p0-bounded-construction"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:premise",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "P0 presupposes a selected outcome (P2)."
+        }
+      ],
+      "statement": "P0 presupposes a selected outcome.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:profile-closure-declares-mapping",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-profile-closure"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A profile declares its closure decisions' mapping to the core and may not add a core member."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:refinements-map-totally-to-core"
+        }
+      ],
+      "statement": "A profile declares its mapping to the core and may not add a member.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:projection-cannot-trim-required-member",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:selected-context"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A projection cannot trim a required member to fit a carrier or budget."
+        }
+      ],
+      "statement": "A projection cannot trim a required member to fit a carrier or budget.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:projection-records-boundary",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:selected-context"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Project the closure to the selected context, recording its boundary: the excluded, external, unresolved, translated and invalidation-sensitive seams; material not in the closure stays out; adjacent material does not enter because it exists."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:closure-is-computed-on-exact-basis"
+        }
+      ],
+      "statement": "The projection records its boundary seams; material outside the closure stays out.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:reference-conserves-under-conditions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:reference"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:condition",
+          "literal": "The reference's owner, exact selector, authenticity, availability and completeness support the same consuming decision as the body."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Only then does a reference conserve the relation; an inaccessible or insufficient reference is a residual, not success."
+        }
+      ],
+      "statement": "A reference conserves a relation only when it supports the same consuming decision; otherwise it is a residual.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:refinements-map-totally-to-core",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-construction-availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-ambiguity-outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-profile-closure"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A declared refinement answers a different question, keeps its own vocabulary and declares a total mapping to the core; no refinement adds a core member."
+        }
+      ],
+      "statement": "Each refinement keeps its vocabulary and maps totally to the core; none adds a core member.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:representation-does-not-establish-meaning",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:representation"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:interpretation"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Equal representations do not establish equal meaning; meaning is supplied by a declared interpretation contract within a declared context."
+        }
+      ],
+      "statement": "Equal representations do not establish equal meaning.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:residual-remains-until-disposition",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:preserves",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:residual"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A material uncertainty, omission, loss or unproven relation remains a residual until an authorised disposition."
+        }
+      ],
+      "statement": "A residual remains until an authorised disposition.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:result-algebra"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-out-of-frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:target",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:r-invalid-basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "One core algebra of exactly these five members serves every evaluation and every step's stop state."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:p5-derivation"
+        }
+      ],
+      "statement": "One core algebra of five members serves every evaluation and stop state.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#3-result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:reused-judgment-does-not-satisfy-independence",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:judgment"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Reusing the constructor's judgment does not satisfy independence; shared mechanical evidence may be reused, judgment may not."
+        }
+      ],
+      "statement": "Mechanical evidence may be reused; judgment may not.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:review-recommends-not-applies",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:review-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:decision-owner"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A review recommends a disposition; it does not apply one."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:disposition-consumes-a-core-result"
+        }
+      ],
+      "statement": "A review recommends a disposition and does not apply one.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#4-review-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:review-result-shape",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:review-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A review returns one core result for each declared predicate it evaluated, with the exact subject and basis, the evidence consulted, the findings ranked by consequence, each finding's evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members"
+        }
+      ],
+      "statement": "A review returns one core result per predicate with subject, basis, evidence, ranked findings, residual uncertainty and invalidation conditions.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#4-review-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:roles-are-relations-not-actor-kinds",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:actor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:constructor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:decision-owner"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Constructor, assessor and decision owner are relations an actor occupies over steps, not kinds of actor; no role name confers an operation."
+        }
+      ],
+      "statement": "Roles are relations an actor occupies, not kinds of actor; no role name confers an operation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:self-review-is-construction-output",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:self-review"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:assessor"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A constructor's self-review is construction output, not assessment."
+        }
+      ],
+      "statement": "Self-review is construction output, not assessment.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#3-independent-assessment"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:shared-machinery-is-not-identity",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:shared-machinery"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:object"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Computational similarity yields a commonisation candidate, never an adjudication of identity or authority; one implementation may serve many instances while each instance keeps its responsibility and binding."
+        }
+      ],
+      "statement": "Shared machinery is a commonisation candidate, never an adjudication of identity or authority.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:silent-omission-is-never-a-fit-option",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Silent omission of required material to fit the envelope is never a lawful option."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:projection-cannot-trim-required-member"
+        }
+      ],
+      "statement": "Silent omission to fit is never one of the options.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:step-output-is-candidate-plus-facts",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:step"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:candidate"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:stop-state"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A step's output is a candidate plus its step-produced facts (judgments with evidence, residuals, observations, authority decisions, provenance) and one stop state from the result algebra."
+        }
+      ],
+      "statement": "A step outputs a candidate, its step-produced facts and one stop state.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#1-the-step"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:step-produced-facts-are-not-reacquirable",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:distinguishes",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:step-produced-fact"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:evidence"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "A step-produced fact is a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable, is not a step-produced fact, and is governed by sufficiency, not conservation."
+        }
+      ],
+      "statement": "A step-produced fact is one that cannot be re-acquired from declared sources; reproducible observations are re-acquirable and governed by sufficiency.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#2-ontology",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:transformation-records-accounting",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:conservation-accounting"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Every transformation records what it preserved, introduced and removed, its external resolution witnesses and its residuals."
+        }
+      ],
+      "statement": "Every transformation records preserved, introduced, removed, witnesses and residuals.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:uncovered-coverage-is-r-minus-c",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:coverage"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "For required obligations R and admitted coverage C, uncovered coverage is R minus C; combining results takes the union of known failures and recomputes uncovered coverage."
+        }
+      ],
+      "statement": "Uncovered coverage is R minus C; combination unions failures and recomputes uncovered coverage.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:undisposed-rc2-obligation-blocks-qualification",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:rc2-builder"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "An rc.2 obligation capable of affecting this corpus that has no disposition blocks qualification of the corpus."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:clause-standing-is-disposed"
+        }
+      ],
+      "statement": "An undisposed rc.2 obligation blocks qualification; this is UP-015 applied to the corpus itself.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:weaker-property-is-no-substitute",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Packaging, syntax, compilation, presence, invocation or local behaviour never substitutes for a semantic, authority-bearing, installed or end-to-end claim because the weaker property is easier to measure."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:load-bearing-claim-before-witness"
+        }
+      ],
+      "statement": "A weaker property never substitutes for the claimed one because it is easier to measure.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#1-claims"
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:fit-test-is-not-operationalised",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:envelope",
+        "urn:stdo-3:claude:a-c-text:symbol:fit-test"
+      ],
+      "detail": "The envelope has four dimensions (context, attention, time, capability). The context dimension is measured in bytes before any read; attention, time and capability have no measure or declaration format, and the documents do not say how a step records that the test was performed on those dimensions.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:formal-fragment-is-carried-not-constructed",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:formal-fragment"
+      ],
+      "detail": "The categories A, I and C_H and the functors S and R_H are named with their interpretation and established properties but not constructed in this corpus; the fragment and its non-faithfulness result are new here and rest on the accepted C1 realisation's argument, which the standard does not carry; rc.2 states only the proof obligation. The program records the claim's shape, not a proof.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#4-algebra"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:independence-arguments-are-one-sentence",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:p1-interpretation",
+        "urn:stdo-3:claude:a-c-text:symbol:p2-purpose",
+        "urn:stdo-3:claude:a-c-text:symbol:p3-identity",
+        "urn:stdo-3:claude:a-c-text:symbol:p4a-typed-composition",
+        "urn:stdo-3:claude:a-c-text:symbol:p6-justification-authority"
+      ],
+      "detail": "Each independent commitment carries a one-sentence non-entailment argument in its qualification. These are claims of independence with an informal witness each; none is formalised and P4a states none. The accepted C1 realisation argues them at greater length; the standard conserves only the sentence.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:rc2-routes-are-outside-program-basis",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:clause-standing",
+        "urn:stdo-3:claude:a-c-text:symbol:rc2-builder"
+      ],
+      "detail": "Every encoded clause's rc.2 disposition is carried in the documents as a route, not in this program: the program's source basis is the tenant standards directory and rc.2 members are outside it. Conservation of an rc.2 clause therefore cannot be checked by this program's validation; it remains a semantic judgment over the documents and their routes.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#8-source-dispositions",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#8-source-dispositions",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#6-source-dispositions"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#1-vocabulary-of-standing"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:t1-boundary-forward-references",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:allowance",
+        "urn:stdo-3:claude:a-c-text:symbol:decision-owner",
+        "urn:stdo-3:claude:a-c-text:symbol:refinement-disposition",
+        "urn:stdo-3:claude:a-c-text:symbol:step"
+      ],
+      "detail": "This program encodes FOUNDATIONS, CALCULUS sections 1 to 3 and EVALUATION sections 1 to 4 only. Encoded clauses refer forward to CALCULUS sections 4 to 7 (refinement, work state and restart, cost, reuse) and EVALUATION sections 5 to 7 (acceptance, conformance, self-qualification). Those obligations are not represented here and must be re-entered in the documents.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#4-totality-and-refinement",
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#5-work-state-and-restart",
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#6-cost-and-proportionality",
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#7-reuse",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#5-acceptance",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#6-conformance-of-realisations",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#7-qualification-of-the-method-itself"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#calculus",
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#evaluation"
+      ]
+    }
+  ],
+  "frame_indexes": [
+    {
+      "uri": "urn:stdo-3:claude:a-c-text:frame-index:bounded-activation",
+      "frame_ref": "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope",
+      "scope": "Activate one bounded step under a declared envelope: intake, context construction, fit test, acquisition and the stop state it returns. Selected for the T-01 context-cap case.",
+      "clause_refs": [
+        "urn:stdo-3:claude:a-c-text:clause:allowance-declared-where-cost-is-governed",
+        "urn:stdo-3:claude:a-c-text:clause:closure-is-computed-on-exact-basis",
+        "urn:stdo-3:claude:a-c-text:clause:composite-reports-by-declared-conjunction",
+        "urn:stdo-3:claude:a-c-text:clause:compression-preservation-is-a-claim",
+        "urn:stdo-3:claude:a-c-text:clause:construction-availability-maps-to-core",
+        "urn:stdo-3:claude:a-c-text:clause:context-fit-is-measured-before-read",
+        "urn:stdo-3:claude:a-c-text:clause:direct-entry-unless-coordination-needed",
+        "urn:stdo-3:claude:a-c-text:clause:fit-selection-within-grant",
+        "urn:stdo-3:claude:a-c-text:clause:fit-test-against-envelope",
+        "urn:stdo-3:claude:a-c-text:clause:grant-names-operations-territory-reservations",
+        "urn:stdo-3:claude:a-c-text:clause:inputs-acquired-by-exact-identity",
+        "urn:stdo-3:claude:a-c-text:clause:intake-is-sufficient-without-history",
+        "urn:stdo-3:claude:a-c-text:clause:intake-names-its-fields",
+        "urn:stdo-3:claude:a-c-text:clause:internal-path-is-not-governed",
+        "urn:stdo-3:claude:a-c-text:clause:lawful-compression-preserves-distinctions",
+        "urn:stdo-3:claude:a-c-text:clause:missing-capability-is-out-of-frame",
+        "urn:stdo-3:claude:a-c-text:clause:no-proof-of-no-undiscovered-relation",
+        "urn:stdo-3:claude:a-c-text:clause:nothing-is-coerced-to-success",
+        "urn:stdo-3:claude:a-c-text:clause:p0-statement",
+        "urn:stdo-3:claude:a-c-text:clause:p5-derivation",
+        "urn:stdo-3:claude:a-c-text:clause:premise-actor-change",
+        "urn:stdo-3:claude:a-c-text:clause:premise-open-world",
+        "urn:stdo-3:claude:a-c-text:clause:projection-cannot-trim-required-member",
+        "urn:stdo-3:claude:a-c-text:clause:projection-records-boundary",
+        "urn:stdo-3:claude:a-c-text:clause:reference-conserves-under-conditions",
+        "urn:stdo-3:claude:a-c-text:clause:result-algebra-has-five-members",
+        "urn:stdo-3:claude:a-c-text:clause:silent-omission-is-never-a-fit-option",
+        "urn:stdo-3:claude:a-c-text:clause:step-output-is-candidate-plus-facts"
+      ],
+      "residual_refs": [
+        "urn:stdo-3:claude:a-c-text:residual:fit-test-is-not-operationalised"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/CALCULUS.md#2-context-construction-under-an-envelope"
+      ]
+    }
+  ]
+}

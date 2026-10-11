@@ -73,3 +73,396 @@ verbatim in this tenant at
 `satisfied` on derivations, hypotheses, mechanisms, boundaries, prose and cost
 reporting; `falsified` on source-recovery completeness for seven items;
 recommended `local_repair`. 4 minutes 43 seconds wall.
+
+## C3 build pass return, 2026-10-11T09:42:50Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3` cut from
+`main` at `00be6b8` in the Claude sparse worktree, authorised by Jim
+("ok build it out stdo 3.0"). Snapshot `C1-inputs-20261011-03` verified from
+input commit `80b46944f1c1` at activation (16/16). Builder basis verified
+valid.
+
+Delivered: the tenant HOW (`design/DOCUMENT_STRUCTURE.md`) and a first
+complete draft of the seven-file document set under `standards/`, 1031
+lines in all. Every clause names its requiring principle and its rc.2
+disposition (conserved, reframed, superseded, new) per UP-015 applied to the
+corpus; each document ends with a source-dispositions table.
+
+| File | SHA-256 | Lines |
+|---|---|---|
+| `standards/CALCULUS.md` | `879fb9dd7c8f59c866f2e9564e685dd57611bbeabd2806dc40d9b0ea5fb582ad` | 223 |
+| `standards/CONFORMANCE.md` | `d588fdab7ee6f0875697e6e49493bf98a572e43ec6ccab38ee6c9ed2eecb8df2` | 65 |
+| `standards/EVALUATION.md` | `fc063460e6834c190bcc5fe045d4a5a8f45a2ffd96a0ec2cad4fa82b677f246d` | 143 |
+| `standards/FOUNDATIONS.md` | `5f5e7ab3b820657ec5992aa3eb9c0bc7a6f937dbe9ec0f36eb75014429efed80` | 214 |
+| `standards/PROFILES.md` | `d84af888b321b096872c6db6910cf6c8980b733170ae82be9bda453a99446a41` | 83 |
+| `standards/README.md` | `333f4924f379ea909d29dcdd7fecbb05c064fee718718c0d030154ba7d5249d2` | 38 |
+| `standards/SPEC_METHOD.md` | `453970e8e879f36ad78e1c2e8b71a9791f7fac86397a6208602a823a00278851` | 173 |
+| `design/DOCUMENT_STRUCTURE.md` | `dbba88c7a7f75ae60a3d0d0e21bcc63e54af44c4adf8cc3bf868aae943a0172d` | 92 |
+
+Verification at freeze: 162 links resolve across the set and the tenant
+README, including every `stdo://` fragment against the installed rc.2
+headings; no trailing whitespace; profile-term boundary holds in tier 1 and
+2 outside disposition tables and the hypotheses list. No a_c program, trial
+or independent review exists for this draft; nothing here is executed
+steel-thread work. Conformance cases are all `not run`.
+
+Resource observation: declared allowance 150,000 generated tokens / 4 hours;
+start 2026-10-11T09:35:30Z, end 2026-10-11T09:42:50Z, elapsed 7 min 20 s wall by `date -u`;
+generated-token counters unavailable on this host.
+
+Work result: `candidate_ready` / `satisfied` for the declared output. Next:
+T1 (FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4) frozen as a thread
+increment, a_c encoding, and the T-01 context-cap case run by an actor other
+than the author under an authorised review.
+
+## T1 thread return, 2026-10-11T11:28:41Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`,
+continuing the C3 activation on Jim's "continue". Start not stamped
+separately; bounded below by the C3 return end, 2026-10-11T09:42:50Z.
+
+Delivered, in two commits:
+
+- `e984e48`: the T1 increment frozen at `cc1d29d` (FOUNDATIONS
+  `5f5e7ab3…ed80`, CALCULUS `879fb9dd…82ad` §1–3, EVALUATION
+  `fc063460…246d` §1–4); the pinned Axiom Indexer subject verified member by
+  member from the tag commit's tree against its release record, seven of
+  seven plus the inventory aggregate; the a_c.text program
+  `urn:stdo-3:claude:program:a-c-text:t1` (74 symbols, 80 clauses, 8
+  residuals; file `9dfa2e06…bd4c`, canonical `743e07fa…e0c0`) validated with
+  zero diagnostics and its map; the bounded-activation frame projected in
+  both modes; the T-01 case design (`cases/T-01/CASE.md` as read by the
+  constructors `53cd9f6f…082a`; `fragment.py` `02c71289…3eda`). Record:
+  `a_c/t1/README.md`.
+- this commit: two T-01 constructor runs by fresh contexts of this model
+  family, one per cap, each writing one record and nothing else:
+  run A (160,000 bytes) `96fb0350…01ca`, composite satisfied, 22 of 22
+  routes, 57,047 bytes charged, 9 min 23 s; run B (6,000 bytes)
+  `16106f3f…2e58`, composite out_of_frame, existence 22 of 22, consistency
+  19 of 22, three pairs measured over the cap and not read, escalation named,
+  26,091 bytes charged, 12 min 23 s. CASE.md now carries the run table and a
+  correction note (`27c7a1b7…d1da`).
+
+Candidate findings the runs raised against the frozen documents, recorded
+and not repaired, so the assessor sees the subject the constructors saw:
+
+- one clause, two standings: P5 says it conserves RF-012 and AC-007 while
+  CALCULUS §3 and §8 say the core algebra supersedes them; P4b says conserves
+  and, in the same sentence, reframed. FOUNDATIONS §1 gives a clause one
+  standing and says an undisposed standing blocks qualification. This is the
+  first finding for the T1 successor.
+- P4a's retained list omits "provenance", which AC-016 retains.
+- CALCULUS §3 says RF-012 and AC-007 "name the same five outcomes"; AC-007
+  names result conditions, not the five members.
+- the case's "exceed 600,000 bytes" figure is wrong for the §3 route set
+  (423,548 bytes); the discriminator's premise holds unchanged.
+
+Rulings the runs request from the case owner: whether a resident tenant
+paragraph is charged again per step (run B R-1; it decides two of the three
+out_of_frame routes); the order among non-satisfied members for a composite
+stop state (run B R-2); whether the step or human authority selects among
+the fit options, since RF-014 vests it in human authority and CALCULUS §2
+lists it as the step's own choice.
+
+Encoding residuals (8, in the program): T1 boundary forward references;
+'material' undefined; fit test not operationalised; independence arguments
+one sentence each; formal fragment carried not constructed; indeterminate
+versus out_of_frame boundary; judge of lawful compression unnamed; rc.2
+routes outside the program basis.
+
+Resource observation: the C3 allowance (150,000 generated tokens, 4 hours)
+remains the declared one. Constructor spend as reported by the harness:
+run A 164,925 tokens, 41 tool uses; run B 176,621 tokens, 27 tool uses;
+the two ran in parallel, 12 min 23 s wall. The author's own generated-token
+counter is unavailable on this host; wall for this pass is at most
+1 h 45 min 51 s from the lower bound above to this stamp, including a
+context compaction.
+
+Verification at freeze: tenant gate green over 16 files, 271 links
+including every `stdo://` fragment, no trailing whitespace; run records
+are excluded from the gate as constructor output.
+
+Work result: `candidate_ready` / `satisfied` for the declared T1 outputs.
+T1 is not closed: closure needs an authorised independent assessment of
+runs A and B under the case's five expected distinctions, an
+author-independent fidelity judgment of the program, and Jim's rulings
+above. Next after that: the T1 successor applying accepted findings, then
+T2 (SPEC_METHOD, CALCULUS §4–7).
+
+## T1.2 thread return, 2026-10-11T13:25:58Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, on
+Jim's relay of the review of `eca8cef` (receipt processed
+2026-10-11T13:06:07Z, which bounds the start).
+
+Delivered, in two commits:
+
+- `cee1157`: the received review recorded verbatim with per-finding
+  dispositions under `qualification/received/`; all four findings and the
+  three ruling narrowings accepted after source checks; FOUNDATIONS and
+  CALCULUS repaired at source (one standing per clause, provenance in P4a,
+  conjunctive step-produced-fact definition, material defined, context fit
+  measured before any read, fit options combinable with selection vested
+  in the step under its grant, compression preservation a claim,
+  out_of_frame against indeterminate, composite by declared conjunction,
+  formal fragment new with its interpretation); EVALUATION unchanged.
+  T1.2 identified by digest (FOUNDATIONS `2f15c6c1…38a22`, CALCULUS
+  `d708e76c…aee0c`, EVALUATION `fc063460…246d`). Program regenerated
+  (75 symbols, 86 clauses, 5 residuals; file `f5d653e2…1f43`, canonical
+  `c3f482ab…8d49`), validated with zero diagnostics against the same
+  byte-verified pinned subject, both projections regenerated. Successor
+  fixture `cases/T-01/CASE-2.md` with `step_actor.py` (a fresh headless
+  actor per reading step, whole context measured and logged before the
+  actor exists) and `STEP_CARD.md` (the judgment contract); caps reset
+  against the measured single-step closure of 49,938 bytes: A2 20,000,
+  B2 8,000.
+- this commit: two CASE-2 runs by fresh coordinator contexts of this model
+  family, step actors `claude-sonnet-5-5`, each writing one record beside
+  the instrument's log and step files:
+  A2 `584bc3d0…9219`, composite satisfied, 23 of 23 routes; closure refused
+  at 49,948 bytes with no actor started; 8 actor steps, largest 12,996
+  bytes; 70,046 bytes into step actors; 8 min 35 s.
+  B2 `e2ca852b…5ecc`, composite out_of_frame; 20 satisfied, 3 out_of_frame
+  (R12 10,352, R15 9,896, R21 9,145 bytes, refused before any actor, no
+  lawful refinement under the card's section-as-unit contract, escalation
+  to an envelope of at least 10,352 bytes named); 9 actor steps, largest
+  7,765 bytes; 54,631 bytes into step actors; 9 min 38 s.
+
+Author's structural check over both lifecycle logs (chronology of
+measurement, refusal and start; input sizes; echoed byte counts; output
+digests): no problems. Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the fixture's framework-overhead
+figure is uncalibrated (constructors' regression 7,100–7,300 tokens per
+step against 2,300 measured on a trivial input); the instrument's logged
+output digest is over the raw result, not the file; P4b's "nine statements
+become one obligation" is a paragraph-level claim no route step judges
+(A2); route-level residuals from the step actors are listed in the records
+(A2 nine, B2 eleven), none reported as a contradiction.
+
+Resource observation: declared allowance per run 30 actor starts and 60
+minutes; used 8 and 9 starts, under 10 minutes each. Step-actor spend from
+the CLI usage records: A2 87,241 tokens (79,271 context, 7,970 output),
+USD 0.3666 list; B2 89,542 tokens (81,084 context, 8,458 output), USD
+0.3750 list. Coordinator spend as the harness reports it, definition
+unverified: A2 150,541 tokens, 33 tool uses; B2 127,801 tokens, 30 tool
+uses; the two ran in parallel, 9 min 38 s wall. The author's own
+generated-token counter is unavailable on this host; wall for this pass is
+at most 19 min 51 s from the receipt stamp to this stamp, after the
+earlier verification and drafting that preceded the receipt stamp.
+
+Verification at freeze: tenant gate green over 19 files, 284 links
+including every `stdo://` fragment, no trailing whitespace; run
+directories and `received/` verbatim text are excluded from the gate as
+constructor and reviewer output respectively.
+
+Work result: `candidate_ready` / `satisfied` for the declared T1.2
+outputs. T1.2 is not closed: closure needs an authorised independent
+assessment of runs A2 and B2 under CASE-2's five expected distinctions, an
+author-independent fidelity judgment of the regenerated program, and Jim's
+selection of the Axiom Indexer dependency use. Next after that: T2
+(SPEC_METHOD, CALCULUS §4–7).
+
+## T2 thread return, 2026-10-11T14:58:32Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+Jim's authorisation to complete STDO 3.0 ready for review ("i authorise you
+finish the work to completetion"). Start bounded below by the T1.2 return
+stamp, 2026-10-11T13:25:58Z.
+
+Delivered, in two commits:
+
+- `97f1259`: the T2 increment frozen (CALCULUS `b5fb31de…3821` with §1–3
+  byte identical to T1.2; SPEC_METHOD `c30b9946…ddf4`; FOUNDATIONS and
+  EVALUATION unchanged) after the author's pre-freeze route check: 29
+  routes of SPEC_METHOD and CALCULUS §4–7 judged by fresh step actors
+  through the new generic instrument (`qualification/instruments/`), first
+  pass 19 satisfied, 3 out_of_frame, 2 indeterminate, five wording
+  residuals; every non-satisfied route and residual repaired at source
+  (UP-021 wording, graph functions, resumption against restart, allowance
+  rule marked new, basis invalidator attribution, UP-013 "by itself",
+  Universal Intake Triage cited, carrier default reframed only, Executive
+  and non-widening attributed, Steel-Thread reframed, UP-015 qualifiers,
+  RELEASE_METHOD anchors, AC-020 in its own words); second pass 28 of 29
+  satisfied, third pass on §4 all satisfied. The T2 program
+  `urn:stdo-3:claude:program:a-c-text:t2` (108 symbols, 135 clauses, 6
+  residuals; file `bbc624e2…5524`, canonical `13338baa…7f8b`) validated
+  with zero diagnostics; two frames projected (bounded-activation,
+  composition-conservation). Case T-03-04 designed with its outer
+  contract, the variant subject V and three result bundles produced by
+  real step actors (11 starts, USD 0.62), with the seeded conditions
+  declared in one place.
+- this commit: two T-03-04 constructor runs by fresh coordinator contexts
+  of this model family, each writing one record:
+  A `bc31d8ea…0ea1`, zero actor starts: composite falsified; 18 routes
+  covered and carried unchanged; failure set {R05} with the actor's quoted
+  evidence; R minus C = {R16–R19 (B-P5 digest mismatch, the alteration
+  located exactly), R21 (not executed)}; R_C refused on its basis digest;
+  triage realization_refactor; stop state falsified; 8 min 8 s.
+  B `e7e0c3be…1f33`, two actor starts of four allowed: the same join, then
+  R16–R19 and R21 covered by two new authenticated steps on basis V
+  (25,938 bytes, 23,607 context tokens, USD 0.107); R minus C empty after;
+  R05 still carried; composite falsified; R_C refused; triage
+  requirement_reprice; stop state satisfied (candidate_ready) with the
+  composite falsified; 8 min 46 s.
+
+Author's structural check over run B's lifecycle log: no problems.
+Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the case design's claim that
+R_C's actor judged all ten routes satisfied was wrong (R09 out_of_frame in
+C-P4a), corrected in CASE.md after the runs; the rc.2 manifest digest
+named in the contract is unverifiable under the constructor's grant; the
+two constructors triaged the same defect into different change classes
+with reasons, an observation about SPEC_METHOD §4 against a fixture copy
+of a standard; a step actor's ROUTE line format varies (a tenant-section
+prefix) without breaking authentication.
+
+Resource observation: step actors, bundles plus run B, 13 starts, USD
+0.73 list, all `claude-sonnet-5-5`. Coordinator spend as the harness
+reports it, definition unverified: A 139,910 tokens, 18 tool uses; B
+161,129 tokens, 23 tool uses; the two ran in parallel, 8 min 46 s wall.
+The author's own generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 24 files, 329 links
+including every `stdo://` fragment, no trailing whitespace; run
+directories, bundle output and received text excluded from the gate.
+
+Work result: `candidate_ready` / `satisfied` for the declared T2 outputs.
+T2 is not closed: closure needs an authorised independent assessment of
+runs A and B under CASE.md's six expected distinctions and an
+author-independent fidelity judgment of the T2 program. Next: T3
+(EVALUATION §5–8, CONFORMANCE, PROFILES; case T-05).
+
+## T3 thread return, 2026-10-11T15:16:40Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+the same authorisation as T2. Start bounded below by the T2 return stamp,
+2026-10-11T14:58:32Z.
+
+Delivered, in two commits:
+
+- `c539daa`: the T3 increment frozen (EVALUATION `a9310f0c…a310` with
+  §1–4 byte identical to T1.2; CONFORMANCE `2f6409b7…fc2d`; PROFILES
+  `c83c9365…1865`; the T2 files unchanged) after the author's pre-freeze
+  route check over EVALUATION §5–7 and PROFILES: first pass 14 satisfied,
+  1 falsified, 1 out_of_frame, 1 indeterminate; repairs (proxy limits to
+  UP-020, UP-022's comparison rule linked, the qualification protocol to
+  UP-022, PROFILES §3 routed to its DESIGN_MODULE sections with the
+  per-boundary exemption turned into a residual, §5 routes added); second
+  pass 22 satisfied, 3 falsified on precise points (RF-013 scoping,
+  UP-022's conditional withholding, ODD's ownership of F_P and F_H);
+  repaired; third pass on the two sections all satisfied. The T3 program
+  `urn:stdo-3:claude:program:a-c-text:t3` (127 symbols, 161 clauses, 7
+  residuals; canonical `41afde44…082e`) validated with zero diagnostics;
+  three frames projected. Case T-05 designed with a real interrupted work
+  state (five steps completed by step actors, one natural refusal, one
+  step killed six seconds after `actor_started`, USD 0.28) and the
+  predecessor's draft. Case R-01 designed (card, task subject, five
+  variants, operator).
+- this commit: two T-05 constructor runs by fresh coordinator contexts of
+  this model family, each copying the work state and continuing its
+  lifecycle log in one file:
+  A `d8d14bf9…9e26`: composite out_of_frame, 23 of 23 covered, 21
+  satisfied, R09 out_of_frame and R10 indeterminate carried as the P4a
+  actor judged; five steps reused after a recorded applicability check
+  (section, card and instrument digests, every rc.2 block re-measured by
+  dry run), none re-run; three draft claims disposed with evidence; P4b-2
+  reconciled and closed as interrupted with its effect unknown before any
+  repetition; three new steps; 7 min 41 s.
+  B `0642f7dc…ba17`: the same shape with the prescribed reverse order
+  (P6, P5, then the interrupted routes last); three new steps; 9 min 57 s.
+
+Author's structural check over both logs: no problems; the fixture is
+byte identical after both runs. Mechanical evidence only; not assessment.
+
+Candidate findings carried, not repaired: the predecessor's draft carried
+a third unsupported claim the case owner had not declared (the P4a row),
+caught by both constructors and now corrected in CASE.md; a fresh step
+actor on the whole FOUNDATIONS §3 judged AC-016 out_of_frame and RF-010
+indeterminate for P4a where the T-01 A2 run, with the paragraph alone,
+judged both satisfied, a candidate finding against P4a's attribution of
+RF-010 and an observation about the context sensitivity of route
+judgments; the instrument does not log its own digest.
+
+Resource observation: step actors for the fixture and the two runs, 12
+starts, USD 0.55 list, all `claude-sonnet-5-5`; pre-freeze checks 11
+starts. Coordinator spend as the harness reports it, definition
+unverified: A 132,455 tokens, 22 tool uses; B 163,979 tokens, 26 tool
+uses; the two ran in parallel, 9 min 57 s wall. The author's own
+generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 30 files, 361 links
+including every `stdo://` fragment, no trailing whitespace.
+
+Work result: `candidate_ready` / `satisfied` for the declared T3 outputs.
+T3 is not closed: closure needs an authorised independent assessment of
+runs A and B under CASE.md's six expected distinctions and an
+author-independent fidelity judgment of the T3 program. Next: T4.
+
+## T4 thread return, 2026-10-11T15:30:00Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+the same authorisation. Start bounded below by the T3 return stamp.
+
+Delivered, in two commits:
+
+- `6bc1692`: README routes finalised (a resumption route added; the set
+  program as the route into a model's context); CONFORMANCE statuses
+  record what exists for every case; the set program
+  `urn:stdo-3:claude:program:a-c-text:set` over all seven files (130
+  symbols, 164 clauses, 6 residuals; canonical `df4701d9…dfad`) validated
+  with zero diagnostics against the byte-verified pinned subject, five
+  frames projected, one per README route; case R-01 ready; the review
+  handoff `qualification/REVIEW_HANDOFF.md`; thread states in
+  DOCUMENT_STRUCTURE.
+- this commit: the R-01 recoverability trial run by the case owner as
+  operator through `run_variants.py`: five variants (no method; the STDO 3
+  route; the whole STDO 3 set; an author-selected rc.2 section set; the
+  four rc.2 members a README reader would open) twice each, every variant
+  one fresh headless step actor with its whole context measured and
+  logged; eleven starts, no refusals, 4 min 13 s, USD 1.86 list, contexts
+  from 3,551 to 129,631 tokens; no record reports claim K satisfied; the
+  records are in the case's runs table, unjudged. A first run was stopped
+  after six steps and kept as evidence: its calibration logged 6,907
+  context tokens on a 235-byte input, which exposed that the headless CLI
+  loads CLAUDE.md files from the actor's working directory and ancestors.
+  The generic instrument is repaired (actor in an empty directory outside
+  any repository; instrument digest logged in every measurement),
+  calibration 2,248 tokens. The finding is recorded at the end of T-01
+  CASE-2, T-03-04 and T-05: every step actor of those cases received the
+  workspace's three CLAUDE.md files (about 12 KB) beside the measured
+  context. The judgments stand; the "whole context measured" claim of
+  those fixtures is false by that amount. Also in this commit: the
+  received review's author identified as Codex (its
+  `reviews/20261011T125957Z_REVIEW_CLAUDE_CODEX_BUILD.md` at `bfe4173`);
+  the comparison review Jim authorised, written in this tenant from a
+  source-first read of the Codex tenant at `67217a4`:
+  `reviews/20261011T153000Z_REVIEW_claude_and_codex_c3_comparison.md`.
+
+Candidate findings carried, not repaired: the CLAUDE.md contamination
+above (material against E1 and E4 of the three earlier cases; the
+assessor weighs it); the R-01 records give the same facts different
+non-success members across variants (out_of_frame, indeterminate,
+invalid_basis), an observation about the CALCULUS §3 boundary as read by
+fresh actors; the V0 control records reach the same disposition (return
+to the owner, claim not supported) without the algebra or any citation,
+which bounds what the documents add on this task to vocabulary, intake
+shape, fit measurement, citation and the handling of labels, and which
+only the assessor can weigh.
+
+Resource observation: step actors 11 starts USD 1.86 (run 002) plus the
+abandoned run's six starts; pre-freeze and fixture production across T2–T4
+about 60 starts; whole pass since the T1.2 return at most 2 h 5 min wall
+by the return stamps, including four constructor runs in parallel pairs.
+The author's own generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 32 files, 388 links
+including every `stdo://` fragment, no trailing whitespace.
+
+Work result: `candidate_ready` / `satisfied` for the declared T4 outputs.
+The C3 construction is complete to the author's declared outputs. Nothing
+is closed: every run of every case awaits an authorised independent
+assessment; every program awaits an author-independent fidelity judgment;
+the Axiom Indexer dependency use awaits Jim's selection; the independence
+policy and the C2 contract are Jim's; merge is on his acceptance.

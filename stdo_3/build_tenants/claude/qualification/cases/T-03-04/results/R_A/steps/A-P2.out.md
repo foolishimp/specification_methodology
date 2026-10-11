@@ -1,0 +1,4 @@
+ROUTE SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014 | falsified | restated | evidence: rc.2 says "No universal resource quota or separate accounting carrier follows." The tenant says "every activation declares a token allowance before it begins, as UP-014 requires." | residual: The rc.2 section states no per-activation allowance obligation. It says the method's own execution work serves "an identified change, decision or assurance need" and that reuse is subject to "exact applicability and invalidation". The seeded obligation is not stated there, and the section's "No universal resource quota" statement contradicts it.
+ROUTE DESIGN_MODULE_METHOD.md#boundary-and-governance-cost-stdo-up-005 | satisfied | by reference | evidence: rc.2 says "Prime review accounts for governance cost as well as implementation count." The tenant only lists UP-005 under P2's "Conserves" with no restated content. | residual: none
+
+STEP A-P2 | routes 2 | bytes_seen 14189

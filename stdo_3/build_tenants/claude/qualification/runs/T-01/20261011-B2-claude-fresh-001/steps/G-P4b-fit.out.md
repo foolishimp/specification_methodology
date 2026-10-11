@@ -1,0 +1,4 @@
+ROUTE AXIOMATIC_CALCULUS.md#ac-009-residual-conservation | satisfied | by reference | evidence: "remains in `X` until an authorized disposition creates an exact successor model" bears on the "residual" instance of conservation | residual: none
+ROUTE AXIOMATIC_CALCULUS.md#ac-005-authority-conservation | satisfied | by reference | evidence: "retain their declared semantic, operation, evaluation, and decision authority" bears on the "authority" instance of conservation | residual: none
+ROUTE DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017 | satisfied | by reference | evidence: "A bounded local action conserves governing truth; it does not rewrite it" bears on the "frame" instance of conservation | residual: the paragraph's count of "nine statements" across five clauses cannot be checked from the given sections. It does not affect this route.
+STEP G-P4b-fit | routes 3 | bytes_seen 7765
