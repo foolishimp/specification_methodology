@@ -18,7 +18,7 @@ dependencies: []
 
 # T-001-CODEX — Independent Principles Attempt
 
-State: INITIAL AUTHOR RETURN FROZEN / AWAITING INDEPENDENT CROSS-REVIEW. The ticket remains active; neither C1 nor C2 is accepted. Parent: [T-001](T-001-common-definition-and-checkpoints.md). Builder basis: installed STDO 2.5.1 RC2, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
+State: C1 CLOSED 2026-10-11 (successor `2a148a0c…68d89` consumed into the accepted common basis; Jim waived post-repair confirmation). The ticket remains active for C2 work; C2 is not accepted. Parent: [T-001](T-001-common-definition-and-checkpoints.md). Builder basis: installed STDO 2.5.1 RC2, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
 
 C0 setup readiness is satisfied; this activation selects [C1-inputs-20261011-02](T-001-common-definition-and-checkpoints.md#common-c1-input-snapshot); completion of the full parent ticket is not required. The common-pen administrative phase moves this existing logical ticket to the active lane; the following tenant Writer phase owns its candidate and return.
 

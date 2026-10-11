@@ -7,16 +7,14 @@ GOAL-001: establish one useful common structure and review its foundations befor
 | Checkpoint | Current state | Required result |
 |---|---|---|
 | C0 structure/bootstrap | READY / setup complete after focused GO reviews and Executive conjunction | A separate exact scope, usable common WHAT and independent C1 entry contracts. |
-| C1 principles | OPEN; Codex initial attempt activated; tenant state is owned by each ticket | Independent frozen principles attempts, source-first reviews and Jim's decision on one common basis. |
-| C2 capabilities/conformance | OPEN; dependency on C1 | Derived capability selection and common acceptance criteria accepted by Jim. |
+| C1 principles | CLOSED 2026-10-11; accepted common basis at [requirements/PRINCIPLES.md](requirements/PRINCIPLES.md) | Independent frozen principles attempts, source-first reviews and Jim's decision on one common basis. |
+| C2 capabilities/conformance | OPEN; next; derives from the accepted C1 basis | Derived capability selection and common acceptance criteria accepted by Jim. |
 | C3+ steel threads | NOT_SELECTED | Actual document construction and observed use against selected common criteria. |
 | Release/adoption | NOT_SELECTED | Exact corpus, dependency, acceptance and separately authorised publication/adoption evidence. |
 
 [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) owns checkpoint state. [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md) have separate lifecycle and territory.
 
-This wave performs independently activated principles work against the frozen common inputs. It supplies no common principle acceptance, a_c output or trial result. Changed checkpoint state is recorded through its actual owner; a setup pass cannot be projected as accepted foundations.
-
-The C0 administrative precondition is satisfied. Codex's selected C1 activation binds the common source and C1-inputs-20261011-02 snapshot; live author state and the eventual frozen return remain at its own ticket. Other tenant state remains at its owner. Setup and author self-check supply no common principle or capability acceptance.
+C1 is closed. Both tenants' repaired candidates, the source-first reviews of their initial candidates and the authors' repair returns were consumed; Jim waived post-repair confirmation checks and accepted one common basis, recorded in `requirements/PRINCIPLES.md` with its C1 disposition. The current wave is C2: derive capabilities and a common conformance contract from that basis. Tenant work proceeds under [Development Isolation](PRODUCT.md#development-isolation) on `tenant/claude/c1` and `tenant/codex/c1` against snapshot C1-inputs-20261011-03; the next common freeze follows the C2 contract.
 
 ## Open Owner Decisions
 
