@@ -19,7 +19,7 @@ current state under explicit uncertainty.
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
-| load it into a model's context | the a_c program under `../a_c/` once a thread has produced it; until then, FOUNDATIONS and CALCULUS §1–3 are the minimum sufficient set |
+| load it into a model's context | the T1 program and projected frame under [../a_c/t1/](../a_c/t1/README.md) for FOUNDATIONS, CALCULUS §1–3 and EVALUATION §1–4; the rest of the set has no program yet |
 
 ## Documents
 
