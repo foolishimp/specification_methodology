@@ -49,6 +49,40 @@ def issue_receipt(store, request, grant, lose_response=False):
     return {"admitted": True, "effect": True, "receipt": request}
 
 
+
+def admit_assessment_set(planned_slots, submitted, trusted_returns):
+    """Fixture admission from actual trusted local dispatch-to-return custody.
+
+    trusted_returns is provided by the root after consuming the real actor return;
+    a claimed producer/path/digest alone cannot populate it.
+    """
+    seen = [item.get("slot") for item in submitted]
+    missing = sorted(set(planned_slots) - set(seen))
+    if missing or len(seen) != len(set(seen)) or set(seen) != set(planned_slots):
+        return {"admitted": False, "cause": "planned assessment set not complete/exact", "missing_slots": missing}
+    for item in submitted:
+        expected = trusted_returns.get(item["slot"])
+        if expected is None or item != expected:
+            return {"admitted": False, "cause": "no matching actual returned assessment custody"}
+    return {"admitted": True}
+
+
+def conjoin_assessments(required_obligations, submitted, assessment_refs):
+    """Pure fixture conjunction after admission of this exact returned set.
+
+    Immutable judgments/citations remain at their actual owner. References have
+    verified selectors/digests; this result copies no assessment or evidence body.
+    """
+    coverage = set().union(*(set(item["coverage"]) for item in submitted)) if submitted else set()
+    uncovered = sorted(set(required_obligations) - coverage)
+    failed = [deepcopy(assessment_refs[item["slot"]]) for item in submitted if item["judgment"] == "falsified"]
+    unresolved = [item for item in submitted if item["judgment"] != "satisfied"]
+    standing = "falsified" if failed else "indeterminate" if uncovered or unresolved else "satisfied"
+    return {"judgment": standing, "known_failure_refs": failed, "uncovered_required_obligations": uncovered,
+            "original_assessment_refs": [deepcopy(assessment_refs[item["slot"]]) for item in submitted],
+            "operation_authority": "none supplied"}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--case", choices=("tokens", "receipt"), required=True)
