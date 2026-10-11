@@ -55,7 +55,7 @@ Non-closure: unresolved common principles, unselected capabilities, missing inde
 
 Codex's initial author activation is selected against C1-inputs-20261011-02; current author state belongs to T-001-CODEX. Consult the peer's owning ticket for its state. The C0 precondition is satisfied, and the prior -01 tuple remains retired. Neither task depends on full T-001 completion. Authoring accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
 
-## Current C1 Input Snapshot
+## Common C1 Input Snapshot
 
 Snapshot ID: C1-inputs-20261011-03. Sole current tuple for activations after 2026-10-11T09:25:23Z; -02 is retired below and remains the historical input contract of both C1 initial attempts, their successors and their reviews.
 
@@ -84,7 +84,7 @@ Members outside a tenant's sparse cone (the three plan posts and the matrix unde
 | `stdo_3/specification/requirements/README.md` | `433ca6e0d0b8e155a2bfc7bcd3cd454fd6fe1c9cf69cc0eb2c502a916d690ed2` |
 | `stdo_3/stdo_3.json` | `f02262f7de41fc35b7aa563367a154ce32f7384ae600edfec2ecb83c900f3894` |
 
-## Common C1 Input Snapshot (-02)
+## Retired C1 Input Snapshot (-02)
 
 Snapshot ID: C1-inputs-20261011-02. RETIRED for future activations on 2026-10-11; superseded by -03 above and retained as the historical input contract of the C1 attempts and reviews. -01 is retired below.
 
