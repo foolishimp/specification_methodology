@@ -399,3 +399,70 @@ Work result: `candidate_ready` / `satisfied` for the declared T3 outputs.
 T3 is not closed: closure needs an authorised independent assessment of
 runs A and B under CASE.md's six expected distinctions and an
 author-independent fidelity judgment of the T3 program. Next: T4.
+
+## T4 thread return, 2026-10-11T15:30:00Z
+
+Activation: Claude Writer, own tenant only, on `tenant/claude/c3`, under
+the same authorisation. Start bounded below by the T3 return stamp.
+
+Delivered, in two commits:
+
+- `6bc1692`: README routes finalised (a resumption route added; the set
+  program as the route into a model's context); CONFORMANCE statuses
+  record what exists for every case; the set program
+  `urn:stdo-3:claude:program:a-c-text:set` over all seven files (130
+  symbols, 164 clauses, 6 residuals; canonical `df4701d9…dfad`) validated
+  with zero diagnostics against the byte-verified pinned subject, five
+  frames projected, one per README route; case R-01 ready; the review
+  handoff `qualification/REVIEW_HANDOFF.md`; thread states in
+  DOCUMENT_STRUCTURE.
+- this commit: the R-01 recoverability trial run by the case owner as
+  operator through `run_variants.py`: five variants (no method; the STDO 3
+  route; the whole STDO 3 set; an author-selected rc.2 section set; the
+  four rc.2 members a README reader would open) twice each, every variant
+  one fresh headless step actor with its whole context measured and
+  logged; eleven starts, no refusals, 4 min 13 s, USD 1.86 list, contexts
+  from 3,551 to 129,631 tokens; no record reports claim K satisfied; the
+  records are in the case's runs table, unjudged. A first run was stopped
+  after six steps and kept as evidence: its calibration logged 6,907
+  context tokens on a 235-byte input, which exposed that the headless CLI
+  loads CLAUDE.md files from the actor's working directory and ancestors.
+  The generic instrument is repaired (actor in an empty directory outside
+  any repository; instrument digest logged in every measurement),
+  calibration 2,248 tokens. The finding is recorded at the end of T-01
+  CASE-2, T-03-04 and T-05: every step actor of those cases received the
+  workspace's three CLAUDE.md files (about 12 KB) beside the measured
+  context. The judgments stand; the "whole context measured" claim of
+  those fixtures is false by that amount. Also in this commit: the
+  received review's author identified as Codex (its
+  `reviews/20261011T125957Z_REVIEW_CLAUDE_CODEX_BUILD.md` at `bfe4173`);
+  the comparison review Jim authorised, written in this tenant from a
+  source-first read of the Codex tenant at `67217a4`:
+  `reviews/20261011T153000Z_REVIEW_claude_and_codex_c3_comparison.md`.
+
+Candidate findings carried, not repaired: the CLAUDE.md contamination
+above (material against E1 and E4 of the three earlier cases; the
+assessor weighs it); the R-01 records give the same facts different
+non-success members across variants (out_of_frame, indeterminate,
+invalid_basis), an observation about the CALCULUS §3 boundary as read by
+fresh actors; the V0 control records reach the same disposition (return
+to the owner, claim not supported) without the algebra or any citation,
+which bounds what the documents add on this task to vocabulary, intake
+shape, fit measurement, citation and the handling of labels, and which
+only the assessor can weigh.
+
+Resource observation: step actors 11 starts USD 1.86 (run 002) plus the
+abandoned run's six starts; pre-freeze and fixture production across T2–T4
+about 60 starts; whole pass since the T1.2 return at most 2 h 5 min wall
+by the return stamps, including four constructor runs in parallel pairs.
+The author's own generated-token counter is unavailable on this host.
+
+Verification at freeze: tenant gate green over 32 files, 388 links
+including every `stdo://` fragment, no trailing whitespace.
+
+Work result: `candidate_ready` / `satisfied` for the declared T4 outputs.
+The C3 construction is complete to the author's declared outputs. Nothing
+is closed: every run of every case awaits an authorised independent
+assessment; every program awaits an author-independent fidelity judgment;
+the Axiom Indexer dependency use awaits Jim's selection; the independence
+policy and the C2 contract are Jim's; merge is on his acceptance.

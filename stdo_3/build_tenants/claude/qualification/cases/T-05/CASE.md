@@ -183,3 +183,18 @@ attribution of RF-010, and any repair of P4a changes the section digest
 and re-opens all 23 routes under the contract (both handoffs); the
 possible charge of the killed call is bounded at about USD 0.06 and
 unknowable from the workspace (both).
+
+Finding recorded after T4, without altering the text the constructors
+read: the headless CLI loads CLAUDE.md files from the actor process's
+working directory and its ancestors into the actor's context. Every step
+actor of this case (the fixture's six and the runs' six) ran with its working directory under the run directory,
+inside the repository, so each received the workspace's three CLAUDE.md
+files (about 12 KB; one carries an STDO 2.x method compression) beside the
+measured context. That text was not measured, not subject material, and
+not declared. It explains the framework overhead the constructors observed
+(about 7,100 to 7,300 tokens per step against 2,300 measured outside the
+repository). The judgments stand as recorded; the claim that the measured
+bytes were the actor's whole context is false by that amount, and the
+assessor should weigh it. The generic instrument was repaired for the R-01
+run (actor in an empty directory outside any repository; overhead 2,247
+tokens); the T-01 instrument is left as the constructors used it.

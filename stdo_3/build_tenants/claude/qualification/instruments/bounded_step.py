@@ -17,7 +17,12 @@ rule); every block's SHA-256 is logged in the measurement so a later actor
 can re-check invalidators; the logged output digest is over the bytes of
 the written .out.md file; --calibrate runs one minimal step and logs the
 framework overhead the headless CLI adds, in tokens, as a `calibration`
-event.
+event; the actor process runs in a fresh empty directory outside any
+repository, because the headless CLI loads CLAUDE.md files from its
+working directory and its ancestors into the actor's context (observed:
+about 6,900 context tokens on a trivial input inside this repository
+against about 2,260 outside it), and that text is not subject material;
+the instrument's own SHA-256 is logged in every measurement.
 
 Usage:
   bounded_step.py --cap BYTES --run-dir DIR --step-id ID --card PATH
@@ -32,11 +37,13 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 
 SYSTEM = ("You are a bounded step actor with no tools and no memory. Your whole "
           "context is this line and the card that follows. Do only what the card "
           "instructs and return only what it asks for.")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
+SELF_SHA256 = hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()
 CALIBRATION_INPUT = "CALIBRATION | reply with exactly the single word: ok\n"
 
 
@@ -109,10 +116,15 @@ def run_actor(run_dir, step_id, model, context):
     cmd = ["claude", "-p", "--model", model, "--output-format", "json", "--tools", "",
            "--system-prompt", SYSTEM, "--no-session-persistence",
            "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}']
+    actor_cwd = tempfile.mkdtemp(prefix="bounded-step-")  # outside any repository: no CLAUDE.md is loaded
     log(run_dir, {"event": "actor_started", "step": step_id, "model_requested": model,
                   "input_sha256": sha256(context.encode()),
-                  "input_bytes": len(context.encode()) + len(SYSTEM.encode())})
-    r = subprocess.run(cmd, input=context, capture_output=True, text=True, cwd=steps)
+                  "input_bytes": len(context.encode()) + len(SYSTEM.encode()), "actor_cwd": actor_cwd})
+    r = subprocess.run(cmd, input=context, capture_output=True, text=True, cwd=actor_cwd)
+    try:
+        os.rmdir(actor_cwd)
+    except OSError:
+        pass
     try:
         d = json.loads(r.stdout)
     except json.JSONDecodeError:
@@ -161,7 +173,8 @@ def main():
                         "total_bytes": len(context.encode()) + len(SYSTEM.encode()), "fits": True,
                         "components": [{"name": "system", "bytes": len(SYSTEM.encode())},
                                        {"name": "calibration", "bytes": len(context.encode())}],
-                        "blocks": [], "model": a.model, "dry_run": False, "calibration": True})
+                        "blocks": [], "model": a.model, "dry_run": False, "calibration": True,
+                        "instrument_sha256": SELF_SHA256})
         code, result = run_actor(a.run_dir, step_id, a.model, context)
         if result is not None:
             ended = [json.loads(l) for l in open(os.path.join(a.run_dir, "lifecycle.jsonl"))][-1]
@@ -204,7 +217,7 @@ def main():
         "event": "measured", "step": a.step_id, "cap": a.cap, "total_bytes": total, "fits": fits,
         "components": [{"name": n, "bytes": len(b), "sha256": h} for n, b, h in components]
                       + [{"name": "header", "bytes": len(header.encode()), "sha256": None}],
-        "blocks": a.block, "model": a.model, "dry_run": a.dry_run,
+        "blocks": a.block, "model": a.model, "dry_run": a.dry_run, "instrument_sha256": SELF_SHA256,
     })
     if not fits:
         log(a.run_dir, {"event": "refused", "step": a.step_id, "reason": f"measured {total} > cap {a.cap}"})

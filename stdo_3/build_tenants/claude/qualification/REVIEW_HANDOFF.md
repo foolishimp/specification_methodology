@@ -12,7 +12,7 @@ named in each row; the working tree is not the subject.
 | T1.2 | FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4 | `cee1157` | [a_c/t1](../a_c/t1/README.md) | [T-01 CASE-2](cases/T-01/CASE-2.md) | A2 satisfied 23/23 after the closure was refused; B2 out_of_frame with three routes refused before any actor | `eb9b935` |
 | T2 | CALCULUS §4–7, SPEC_METHOD | `97f1259` | [a_c/t2](../a_c/t2/README.md) | [T-03-04](cases/T-03-04/CASE.md) | A and B both falsified with R05 carried, uncovered routes listed, R_C refused | `f33e6ae` |
 | T3 | EVALUATION §5–8, CONFORMANCE, PROFILES | `c539daa` | [a_c/t3](../a_c/t3/README.md) | [T-05](cases/T-05/CASE.md) | see the case's runs table | see RETURNS |
-| T4 | README route; the set program | see RETURNS | [a_c/set](../a_c/set/README.md) | [R-01](cases/R-01/CASE.md) | see the case's runs table | see RETURNS |
+| T4 | README route; the set program | `6bc1692` | [a_c/set](../a_c/set/README.md) | [R-01](cases/R-01/CASE.md) | five variants twice; no record reports the claim satisfied; one earlier run abandoned and kept as evidence of the CLAUDE.md finding | the commit after `6bc1692`, named in RETURNS |
 
 T1's first fixture and its two runs (`eca8cef`) were reviewed; the review
 and its dispositions are under [received/](received/). Every later thread
@@ -63,10 +63,16 @@ Four kinds of judgment are open, in this order of consequence:
 
 ## Known open observations, carried not repaired
 
-- Framework overhead of the headless actor is now calibrated per run
-  (about 2,260 context tokens on a trivial input) but the byte-to-token
-  ratio of the material still varies by step; the records report tokens
-  as the CLI does.
+- Every step actor of T-01 CASE-2, T-03-04 and T-05 received the
+  workspace's three CLAUDE.md files (about 12 KB, one carrying an STDO 2.x
+  method compression) in its context beside the measured bytes, because
+  the headless CLI loads them from the actor process's working directory,
+  which was inside the repository. Found at T4 by the calibration step
+  (6,907 tokens inside the repository against 2,247 outside). The
+  judgments stand; the "whole context measured" claim of those fixtures
+  is false by that amount; each case carries the finding at its end. The
+  generic instrument is repaired for R-01; the T-01 instrument is left as
+  used.
 - The two T-03-04 constructors triaged the same seeded defect into
   different change classes with reasons; SPEC_METHOD §4 may need to say
   how a defect in a fixture copy of a standard is classed.

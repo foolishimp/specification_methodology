@@ -238,10 +238,25 @@ Observations the constructors recorded against the fixture, carried here
 without repair: the headless CLI's framework overhead came out near 7,100
 to 7,300 tokens per step by their regression, against about 2,300 on the
 trivial design-time input, so the byte-to-token ratio of this material is
-uncalibrated; the instrument hashes the actor's raw result while the
+uncalibrated (explained after T4, see the finding at the end); the instrument hashes the actor's raw result while the
 `.out.md` file carries an appended newline, so file digests differ from the
 log (smallest correction: hash the file bytes); A2 notes that P4b's claim
 that five clauses' nine statements "become one obligation" is not judged by
 any single route step and would need the five sections together (20,364
 bytes, over cap A2), which it named as an escalation; the eight steps B2
 launched together ran serially, so concurrent logging was not exercised.
+
+Finding recorded after T4, without altering the text the constructors
+read: the headless CLI loads CLAUDE.md files from the actor process's
+working directory and its ancestors into the actor's context. Every step
+actor of this case ran with its working directory under the run directory,
+inside the repository, so each received the workspace's three CLAUDE.md
+files (about 12 KB; one carries an STDO 2.x method compression) beside the
+measured context. That text was not measured, not subject material, and
+not declared. It explains the framework overhead the constructors observed
+(about 7,100 to 7,300 tokens per step against 2,300 measured outside the
+repository). The judgments stand as recorded; the claim that the measured
+bytes were the actor's whole context is false by that amount, and the
+assessor should weigh it. The generic instrument was repaired for the R-01
+run (actor in an empty directory outside any repository; overhead 2,247
+tokens); the T-01 instrument is left as the constructors used it.

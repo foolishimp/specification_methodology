@@ -110,3 +110,21 @@ counts) is mechanical evidence under EVALUATION §2, not assessment.
 
 | Run | Operator | Record | Assessment |
 |---|---|---|---|
+| `20261012-R01-sonnet-001-abandoned` | the case owner through `run_variants.py`, instrument `aebcc671…5938`; subject at `6bc1692` | stopped after six steps when the calibration logged 6,907 context tokens on a 235-byte input: the actor's working directory was inside the repository and the headless CLI loaded the workspace's CLAUDE.md files into its context; kept with `NOTE.md` as evidence of that finding; outputs unjudged | not assessed |
+| `20261012-R01-sonnet-002` | the case owner through `run_variants.py`, instrument repaired to `f92ca26b…e81d` (actor in an empty directory outside any repository); subject at `6bc1692`; step actors claude-sonnet-5-5 | `lifecycle.jsonl` 34 events, calibration 2,248 tokens; eleven starts, no refusals; per variant (bytes measured, context tokens, output tokens, USD list): V0 4,069 / 3,551 / 1,559–1,579 / 0.026; V1 39,458 / 17,697 / 3,605–3,722 / 0.104; V2 72,471 / 30,025 / 4,076–4,588 / 0.160; V3 38,354 / 15,550 / 2,958–3,375 / 0.090; V4 391,516 / 129,631 / 3,220–3,442 / 0.548; totals 1,091,971 bytes, 395,155 context tokens, 32,128 output tokens, USD 1.86; 4 min 13 s wall | not assessed; awaiting an authorised assessor |
+
+The ten records are the step actors' output; the operator judged nothing.
+The author's structural check (log chronology, sizes, digests; the seven
+headings present in every record) found no problems; it is mechanical
+evidence. Observations the author records from reading the records,
+without judging fidelity: no record reports claim K satisfied; the V0
+records use their own result words ("not established", "supported but
+wrong build") and cite nothing; the V1 and V2 records use the five-member
+algebra and cite CALCULUS and EVALUATION sections; the V3 and V4 records
+cite rc.2 clauses (UP-001, UP-007, UP-008, UP-022, RF-005) and use the
+same five words; the records differ in which non-success member they give
+the same facts (out_of_frame in V1 and V2, indeterminate in V3,
+invalid_basis and indeterminate in V4, with V2-1 noting both readings),
+which is an observation about how the readers decided the boundary
+CALCULUS §3 draws between out_of_frame and indeterminate; every record
+returns the release decision to the owner.
