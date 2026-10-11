@@ -10,7 +10,9 @@ Worktree: specification_methodology-codex; branch: tenant/codex/c1. Writes and c
 
 C1: the [principles successor](design/PRINCIPLES.md), SHA256 2a148a0ce3460533446c678a06aee809c3dabf8e99a95ad1eeb5d08169e68d89, was accepted as this tenant's realization by Jim on 2026-10-11. The [common C1 disposition](../../specification/requirements/PRINCIPLES.md#c1-disposition) records the owner decision and waived post-repair confirmation. The manuscript's dated standing is preserved; it is not silently rewritten to manufacture an independent successor review.
 
-C2: [eight capability proposals](design/C2_CAPABILITIES.md), [26 proposed cases](qualification/C2_CASES.md) and the [document/library build plan](design/BUILD_PLAN.md) are the current bounded output. The [C2 return](qualification/C2_RETURN.md) binds source, pins, checks and residuals. Common C2 selection remains Jim's under [Product Checkpoints](../../specification/PRODUCT.md#checkpoints); actual-use threads follow that selection.
+C2: Jim's “continue” accepts the [eight capabilities](design/C2_CAPABILITIES.md), [26 case expectations](qualification/C2_CASES.md) and first-thread scope frozen at 65fd45b. The [C2 return](qualification/C2_RETURN.md) retains its original proposal standing and pins; owner activation is recorded in the [T1 return](qualification/T1/RETURN.md). The common main registry is not edited by this tenant.
+
+Current build: the [published method slice](standards/README.md) supplies Foundations, Work and Evidence. [T1](qualification/T1/RETURN.md) exercises actual construction, assessment, a real defect, repair and fresh-actor re-entry. Its results do not establish all 26 cases or whole-method qualification.
 
 [Design](design/README.md), [standards](standards/README.md), [a_c](a_c/README.md) and [qualification](qualification/README.md) route the separate HOW and evidence territories. Presence of a proposal is not implementation, actual-use qualification or release.
 

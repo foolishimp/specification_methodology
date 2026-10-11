@@ -6,7 +6,7 @@ The [historical C1 review](C1_REVIEW.md) was written by Claude before Developmen
 
 The [principles successor](../design/PRINCIPLES.md) is a post-review author revision accepted as this tenant's C1 realization by Jim on 2026-10-11. The [common C1 disposition](../../../specification/requirements/PRINCIPLES.md#c1-disposition) records the owner acceptance and waived post-repair confirmation; the initial review still does not assess that successor. Its [response](../reviews/20261011T075016Z_RESPONSE_claude_c1_principles.md) preserves the repairs and author checks.
 
-The [C2 cases](C2_CASES.md) are proposed source-derived expectations, all NOT RUN. The [C2 return](C2_RETURN.md) binds the current proposal and its author checks. Shared C2 selection and actual-use activation remain separate conditions.
+The [C2 cases](C2_CASES.md) are source-derived expectations frozen at 65fd45b. Their dated proposal standing is retained. Jim's subsequent “continue” selects that scope and activates the first actual-use thread; [T1](T1/RETURN.md) owns its source, actual phases, judgments and limits. The [C2 return](C2_RETURN.md) remains the original proposal return. Later cases are not credited from the first thread.
 
 New cross-tenant reviews follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation). Jim authorizes each review; the reviewer recovers governing source and expectations, reads the subject at a named commit, and writes only in its own tenant. Codex posts its reviews in [reviews/](../reviews/). The common pen owns ticket updates.
 
