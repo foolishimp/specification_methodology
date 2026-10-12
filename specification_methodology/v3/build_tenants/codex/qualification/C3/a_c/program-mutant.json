@@ -89,7 +89,7 @@
         },
         {
           "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
-          "literal": "Exactly planned slot A is admitted/authenticated, bound to source-v1 and its one original producer; B is required uncovered coverage."
+          "literal": "Exactly planned slot A is supplied and authenticated, bound to source-v1 and its one original producer; B is required uncovered coverage, not an omitted planned slot."
         },
         {
           "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#consequence",
@@ -97,7 +97,7 @@
         },
         {
           "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
-          "literal": "A missing planned judgment invalidates a complete planned-set claim; never invent the judgment."
+          "literal": "Missing or supplied-but-unauthenticated A invalidates a complete planned-set claim; never invent the judgment."
         }
       ],
       "statement": "Known failure and uncovered responsibility coexist without loss of lineage or coverage.",
@@ -258,9 +258,12 @@
       "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation",
       "scope": "Conserve A falsified and B uncovered under an exact admitted planned set.",
       "clause_refs": [
+        "urn:codex-stdo3:c3:clause:finding-conservation",
         "urn:codex-stdo3:c3:clause:role-boundary"
       ],
-      "residual_refs": [],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
       "source_refs": [
         "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation"
       ]
@@ -271,6 +274,7 @@
       "scope": "Evaluate exact permission, observation and ownership preservation in the finite token state.",
       "clause_refs": [
         "urn:codex-stdo3:c3:clause:effect-recovery",
+        "urn:codex-stdo3:c3:clause:permission",
         "urn:codex-stdo3:c3:clause:token-transfer"
       ],
       "residual_refs": [

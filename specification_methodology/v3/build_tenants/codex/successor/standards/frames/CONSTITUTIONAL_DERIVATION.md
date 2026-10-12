@@ -18,7 +18,8 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `61262847f8d715f440e22092aed4a23092a0868b4d96258a85181c1e3ddf83f0`.
+
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -96,7 +97,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `61262847f8d715f440e22092aed4a23092a0868b4d96258a85181c1e3ddf83f0`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
 
 ## Test Authority Rule
 
@@ -240,7 +241,7 @@ Projects using this method should avoid:
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-003 Material Sufficiency
 
@@ -253,7 +254,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -263,7 +264,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-006 Authority Conservation
 
@@ -273,7 +274,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-014 Capability Fit
 
@@ -283,7 +284,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Bind
 
@@ -292,7 +293,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Acquire
 
@@ -303,7 +304,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Transform
 
@@ -316,7 +317,7 @@ before repeating them. The worker's internal search is its HOW; it cannot widen
 the outer outcome or effect grant.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-012 Closed Results
 
@@ -334,7 +335,7 @@ An externally owned compatible extension may refine this algebra while
 preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Minimal Evaluation Result
 

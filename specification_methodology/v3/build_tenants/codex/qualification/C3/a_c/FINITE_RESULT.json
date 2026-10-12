@@ -1,7 +1,9 @@
 {
   "kind": "finite_token_interpretation_check",
   "source_sha256": "0161d2526a348fb2d94bc2f22cb855b9647428d2025efce30edb7e57b2a5c312",
-  "executable_sha256": "009321dea34b60a6b72ea97fae50f88508d2ff82637ae668579809dbc9c210f3",
+  "model_program_sha256": "0b0fc30fc15d76ba4dabc15ff0aed8ea091a8aab3d0ba35db2d9642a8217139f",
+  "mutant_program_sha256": "0147676086c88b099c5c69be1b992e76e67992e0b2f8f91b4d2fd01d8b8f6a43",
+  "executable_sha256": "63e868dcdc0981fb65397a13d4f41031d093d01d45ea3f536491829d33a8929e",
   "cases": 608,
   "grant_variants": 19,
   "outcomes": {
@@ -10,7 +12,7 @@
     "unresolved": 304
   },
   "invariants_valid": true,
-  "unauthorized_mutant_counterexamples": 288,
+  "unauthorized_mutant_counterexamples": 32,
   "state_changing_counterexample": {
     "owners": [
       "A",
@@ -18,7 +20,7 @@
     ],
     "token": 0,
     "destination": "B",
-    "grant": null,
+    "grant": "label:A",
     "observed": true,
     "correct_result": "refused",
     "mutant_result": "completed",
@@ -32,7 +34,11 @@
   },
   "limits": [
     "Hand-authored token interpretation requires separate fidelity review",
+    "Program hashes bind reviewed correspondence; this helper does not execute a_c clauses",
     "Qualitative join/finding/authority clauses are not executed by this script",
+    "Unknown observation is modeled, not an already-issued effect with unknown completion",
+    "Grants are not consumed; single-step enumeration plus one resumption trace only",
+    "A failed invocation emits no current success; an older receipt remains historical",
     "ac.py validates structure and source resolution, not these predicates",
     "No distributed transport, whole-corpus or universal category proof"
   ]

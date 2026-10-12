@@ -14,15 +14,15 @@ lifecycle. [ODD Method](ODD_METHOD.md) and
 [World Model Method](WORLD_MODEL_METHOD.md) retain their separate selected
 carrier and domain meanings.
 
-The shared foundation's typed
-transformations and authority separation are realized by State, Msg, pure
-Update, pure View and Cmd/Sub interpreted at a declared effect membrane. The
+Foundations and the library describe correspondences to the following
+UX-owned contracts without adding a signature or specialization. Those contracts
+are State, Msg, pure Update, pure View and Cmd/Sub interpreted at a declared effect membrane. The
 Elm process model remains constitutional within adoption, while language,
 framework and concrete stack choices remain in the project design. A
 product-truth-changing message resolves an admitted typed Product carrier;
 view-local ephemera retain their limited scope and unmount test.
 
-| Shared transformation | UX refinement and preserved distinction |
+| Explanatory family | UX owner contract and preserved distinction |
 |---|---|
 | Bind | Declare the covered surface, adopted method, State/Msg/Update/Cmd/Sub algebras, shared AssetSurface or equivalent typed contracts, runtime ownership, stack justification and any bounded exemption. |
 | Acquire | Derive State from the admitted typed contracts, import shared types and runtime-validate every untrusted or out-of-process payload before it enters UX state. Inputs to a View remain explicitly declared. |

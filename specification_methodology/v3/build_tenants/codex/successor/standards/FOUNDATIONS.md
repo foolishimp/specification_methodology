@@ -1,8 +1,11 @@
 # STDO Foundations
 
-STDO specifies purposeful construction by actors with finite resources. A method
-claim is scoped to a purpose, interpreted subject, governing basis, actor and
-evidence. These foundations organise the method. The explanatory direction abstracts
+STDO specifies purposeful construction by actors with finite resources. In a
+selected construction or evaluation engagement, purpose, subject interpretation,
+governing basis, actor and evidence are material bindings under their respective
+owners. They are not dependencies of every calculus definition. These foundations
+are a non-deciding explanatory account. They introduce no duties, grants or
+acceptance conditions beyond the named owning contracts. The explanatory direction abstracts
 recurring relations from the detailed owners, then maps instances back to those
 exact contracts. It creates no normative hierarchy, derivation provenance or
 constitutional specialization relation. [Spec Method](SPEC_METHOD.md)
@@ -54,13 +57,14 @@ validator or successful join does not establish interpretation fidelity.
 An operational algorithm can make an interpretation testable. Universal claims
 that every meaning has an algorithmic encoding require a defined domain,
 adequacy relation and argument; they remain hypotheses outside that domain.
-Within an adopted a_c interpretation, the
+For an a_c subject interpretation, the
 [calculus fidelity law](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
 owns that calculus-specific obligation. In reference-frame evaluation,
 [RF-007](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)
 owns separation of semantics, evidence and verdict. These examples supply no
-universal authority for interpretations outside their declared domains. Loss or abstraction is admissible only when the governing contract permits it
-and the required consumer distinctions remain recoverable.
+universal authority for interpretations outside their declared domains. The
+governing contract determines admissible loss, abstraction and which consumer
+distinctions must remain recoverable; this account supplies no additional loss law.
 
 ## Purpose and interfaces
 
@@ -113,8 +117,9 @@ envelope materially needed by its claim. No universal numeric budget, resource
 ledger or measurement gate follows.
 Before acting, establish sufficient material context and capability. If the
 coupled relation does not fit, the actor reports the misfit. The existing
-human or delegated configuration authority selects refinement, another actor,
-sequencing or lawful compression under RF-014. The actor acts on an already
+human configuration authority may select refinement, another actor,
+sequencing or lawful compression under RF-014. Any delegation must come from a
+separate applicable grant; RF-014 itself supplies none. The actor acts on an already
 authorized response, requests the owning decision, or stops with an explicit
 unresolved result; capacity supplies no configuration grant. Never replace a difficult
 required relation with an easier claim merely to report success.
@@ -132,9 +137,10 @@ and affected dependencies, retain applicable progress, then choose a permitted
 action. This does not imply every side effect is idempotent. An uncertain effect
 must be observed, reconciled or returned unresolved before any repetition that
 could duplicate it. General logging supplies observability and audit and may support reconstruction.
-An adopted domain may assign stronger standing: ODD owns RuntimeEventLog as
-runtime truth and its admitted ledger/evidence relations. Those duties remain
-within ODD scope. Reloading all history is not a generic method requirement.
+An adopted domain may assign stronger standing: within ODD, the bound ABG role
+owns runtime truth and event replay; ledger and evidence admission retain the
+ABG/product owners declared by ODD. Those duties remain within ODD scope.
+Reloading all history is not a generic method requirement.
 
 ## Judgment and authority
 
@@ -184,12 +190,14 @@ Their domains, laws and falsifiers must be supplied before using them as proof.
 
 ## Canonical transformations
 
-The [transformation library](TRANSFORMATION_LIBRARY.md) expresses Bind, Acquire,
-Transform, Evaluate, Conjoin and Dispose. Instances bind contracts and owners;
+The [transformation library](TRANSFORMATION_LIBRARY.md) describes Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose. Correspondences name existing contracts and owners;
 they are not six compulsory stages or six runtime APIs. The detailed method
 members determine their domain contracts, which the library describes through
-shared families; no authority derives from that description. A new primitive needs a material distinction the existing algebra
-cannot preserve.
+shared families; no authority derives from that description. This candidate's
+design tests a proposed additional family against a material distinction the
+existing account cannot express. That is a realization choice, not a new law
+for every consuming Product.
 
 ## Construction and use
 

@@ -18,6 +18,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
 
 ## Release Identities
@@ -179,7 +180,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `61262847f8d715f440e22092aed4a23092a0868b4d96258a85181c1e3ddf83f0`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
 
 #### Explicit Complete Consumer Update
 
@@ -231,7 +232,7 @@ paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -241,7 +242,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-006 Authority Conservation
 
@@ -251,7 +252,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### RF-012 Closed Results
 

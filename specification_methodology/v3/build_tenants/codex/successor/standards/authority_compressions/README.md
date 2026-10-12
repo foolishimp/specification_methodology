@@ -4,7 +4,9 @@ These files are source-maintained compressed read models over one complete
 released STDO cut. They are prompt-construction inputs, not replacement
 constitutional authority and not independently selectable method versions.
 
-The source method, profile, and schema documents remain the deciding sources:
+The watched source account, method, profile and schema members follow. Each
+retains its declared standing: Foundations and the library are non-deciding
+explanations; the detailed owners retain deciding law.
 
 - `../FOUNDATIONS.md`
 - `../TRANSFORMATION_LIBRARY.md`
@@ -38,7 +40,7 @@ compression watches it through separate `index_refs` and `index_digests` fields
 so locator drift makes the aggregate stale without promoting the index to an
 owner of meaning.
 
-Each compression file carries the deciding source path and digest it was
+Each compression file carries the watched source path and digest it was
 derived from. The aggregate also carries watched index paths and digests. If a
 source or watched-index digest changes, the compression is stale and must be
 regenerated or explicitly reaccepted before installation treats it as current.

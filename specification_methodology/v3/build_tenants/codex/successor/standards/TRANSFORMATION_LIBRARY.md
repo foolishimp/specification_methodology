@@ -1,9 +1,12 @@
 # Transformation Library
 
-An instance is bound by purpose, exact subject and state, interpretation,
-governing basis, actor capability, inputs, required constraints, permitted
-effects, output predicate, failures and consumer. This is a logical contract,
-not a mandatory record schema. A sufficient existing carrier can express it.
+This non-deciding account groups recurring responsibilities without defining a
+new normative hierarchy, specialization or universal instance signature. In a
+construction engagement the applicable owner may require purpose, exact subject
+and state, interpretation, governing basis, actor capability, inputs, constraints,
+permitted effects, output predicate, failures and consumer. Calculus definitions
+and other domains retain their own signatures and dependencies. This is neither
+a mandatory record schema nor a requirement to add fields to existing records.
 
 These are shared explanatory families. [Spec Method](SPEC_METHOD.md) owns
 construction and outcome law; [Frame Method](REFERENCE_FRAME_METHOD.md) owns
@@ -38,9 +41,10 @@ the outer outcome or effect grant.
 ## Evaluate
 
 Judge a declared predicate on an exact subject using sufficient admissible
-evidence. For a reference-frame evaluation, return satisfied, falsified,
-indeterminate, out_of_frame or invalid_basis with original citations and residual
-coverage. Other judgment domains retain their admitted result algebras. Where required,
+evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
+or invalid_basis; its externally owned compatible extensions retain the owning
+contract's conditions. Preserve original citations and residual coverage.
+Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A judgment supplies no repair,
 acceptance or next-action authority.
 
@@ -58,9 +62,12 @@ uncovered coverage separately. For an instance whose admission contract declares
 planned assessment slots, authenticate each planned slot; an omitted planned
 judgment is handled by that owner's declared admission/result rule; no generic
 falsification or rejection is inferred from absence alone. An authenticated set
-can still leave a different required responsibility uncovered. Satisfaction requires
-every applicable material predicate and seam to be supported. An incompatible
-basis or unknown applicability prevents a wider satisfied claim.
+can still leave a different required responsibility uncovered. The declared
+conjunction or decision rule determines the aggregate result. A conjunctive
+whole-outcome claim requires every applicable required predicate and seam;
+unknown applicability prevents that wider conjunctive satisfaction. A declared
+disjunctive rule retains its own semantics. No result may silently erase a
+known failure or uncovered responsibility from the evidence it consumed.
 
 ## Dispose
 

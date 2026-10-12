@@ -57,8 +57,8 @@ The [foundations](FOUNDATIONS.md) explain the finite-actor premise and distingui
 purpose, interpretation, identity, evidence and authority. This member owns the
 bounded frame declaration, activation, evaluation, result, coverage and revision
 relations. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
-organizes recurring contract responsibilities; the method functions below
-supply concrete instances while retaining their exact applicability, result algebras,
+describes recurring contract responsibilities; these are explanatory
+correspondences to the method functions below, which retain their exact applicability, result algebras,
 owner boundaries and qualification obligations.
 
 This is an engagement meta-method. It does not define an application profile,

@@ -39,6 +39,23 @@ def anchors(text):
     return found
 
 
+def link_text(text):
+    """Exclude fenced and inline code before recognizing Markdown links."""
+    lines = []
+    fence = None
+    for line in text.splitlines():
+        marker = re.match(r"^\s*(`{3,}|~{3,})", line)
+        if marker:
+            if fence is None:
+                fence = (marker[1][0], len(marker[1]))
+            elif marker[1][0] == fence[0] and len(marker[1]) >= fence[1]:
+                fence = None
+            continue
+        if fence is None:
+            lines.append(line)
+    return re.sub(r"(`+).*?\1", "", "\n".join(lines), flags=re.S)
+
+
 def check(root, partial=False):
     failures = []
     checks = {"relative_links": 0, "frontier_rows": 0, "json_files": 0}
@@ -55,7 +72,7 @@ def check(root, partial=False):
                 failures.append(f"invalid JSON: {path.relative_to(root)}: {error}")
         if path.suffix != ".md":
             continue
-        for match in re.finditer(r"(?<!!)\[[^\]]*\]\(([^\n]+?)\)", text):
+        for match in re.finditer(r"(?<!!)\[[^\]]*\]\(([^\n]+?)\)", link_text(text)):
             target = match[1].strip().strip("<>").split(' "')[0]
             if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
                 continue
@@ -69,12 +86,19 @@ def check(root, partial=False):
                 failures.append(f"missing anchor: {path.relative_to(root)} -> {target}")
     conservation = root / "CONSERVATION.json"
     if conservation.exists():
-        rows = json.loads(conservation.read_text())["rows"]
+        mapping = json.loads(conservation.read_text())
+        rows = mapping["rows"]
         checks["frontier_rows"] = len(rows)
         if len(rows) != 690 or len({row["id"] for row in rows}) != 690:
             failures.append("frontier must contain exactly 690 distinct selected rows")
+        for name, pin in mapping.get("successor_member_pins", {}).items():
+            path = root / name
+            if not path.is_file() or digest(path) != pin["sha256"]:
+                failures.append(f"conservation member pin mismatch: {name}")
         for row in rows:
             locus = row.get("successor_locus")
+            if row["disposition"] not in {"conserved", "superseded", "intentionally removed", "not applicable", "unresolved"}:
+                failures.append(f"unknown conservation disposition: {row['id']}")
             if row["disposition"] == "unresolved":
                 if not partial:
                     failures.append(f"unresolved author disposition: {row['id']}")
@@ -94,7 +118,14 @@ def check(root, partial=False):
         failures.append("missing conservation map")
     manifest = root / "CANDIDATE.json"
     if manifest.exists():
-        for member in json.loads(manifest.read_text())["members"]:
+        members = json.loads(manifest.read_text())["members"]
+        if len({member["path"] for member in members}) != len(members):
+            failures.append("duplicate candidate inventory path")
+        declared = {member["path"] for member in members} | {"CANDIDATE.json"}
+        present = {str(path.relative_to(root)) for path in root.rglob("*") if path.is_file()}
+        if present != declared:
+            failures.append("candidate inventory differs from complete current tree")
+        for member in members:
             path = root / member["path"]
             if not path.is_file() or digest(path) != member["sha256"]:
                 failures.append(f"candidate pin mismatch: {member['path']}")

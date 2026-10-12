@@ -3,32 +3,39 @@
     {
       "operation": "finite-token-check",
       "exit": 0,
-      "cases": 608
+      "cases": 608,
+      "label_permission_counterexamples": 32
     },
     {
       "operation": "assertions-disabled",
       "exit": 1,
+      "refused": true,
+      "old_receipt_unchanged": true
+    },
+    {
+      "operation": "validate",
+      "exit": 0,
+      "program_suffix": ""
+    },
+    {
+      "operation": "validate",
+      "exit": 0,
+      "program_suffix": "-mutant"
+    },
+    {
+      "operation": "empty-frame-selection",
+      "exit": 1,
       "refused": true
     },
     {
-      "operation": "validate",
-      "program_suffix": "",
-      "exit": 0
-    },
-    {
-      "operation": "validate",
-      "program_suffix": "-mutant",
-      "exit": 0
+      "operation": "project",
+      "exit": 0,
+      "mode": "reference-only"
     },
     {
       "operation": "project",
-      "mode": "reference-only",
-      "exit": 0
-    },
-    {
-      "operation": "project",
-      "mode": "materialized",
-      "exit": 0
+      "exit": 0,
+      "mode": "materialized"
     },
     {
       "operation": "wrong-program-old-map",
@@ -41,14 +48,28 @@
       "exact": true
     }
   ],
+  "tool_dependency_members_verified": 7,
   "projection_relations_equal": true,
+  "complete_selected_clause_closure": true,
   "compared_keys": [
     "closure",
     "clause_relations",
     "residual_routes",
     "source_routes"
   ],
+  "pins": {
+    "SOURCE.md": "0161d2526a348fb2d94bc2f22cb855b9647428d2025efce30edb7e57b2a5c312",
+    "ENCODING.md": "1fedb4ac7896239c04706c5c23df5ab9ac2508942cf6e1bd23cdb0fc3e7b5463",
+    "program.json": "0b0fc30fc15d76ba4dabc15ff0aed8ea091a8aab3d0ba35db2d9642a8217139f",
+    "program-mutant.json": "0147676086c88b099c5c69be1b992e76e67992e0b2f8f91b4d2fd01d8b8f6a43",
+    "finite_check.py": "63e868dcdc0981fb65397a13d4f41031d093d01d45ea3f536491829d33a8929e",
+    "FINITE_RESULT.json": "5c46b06b5fcb869bb973cf0d628d8c37dce876d4a610a1581530dc94c689dd6f",
+    "map.json": "33dc0b949fbf56f06ddfe393dafd474bd9dcd1f372dddcd6bd8373ebf5680fcf",
+    "projection-reference-only.json": "4a8eb635dc3e19816b7be9d8f6de0656e9d476994f13bf015caa827ff0c7a03a",
+    "REQUEST.txt": "4d7512401728d47faba229678a7215a2d61f641c88aa70c9c5daf4006de4ff00"
+  },
   "limits": [
-    "No semantic predicate or fidelity inference from validation/projection/join"
+    "No semantic predicate or fidelity inference from validation/projection/join",
+    "Token executable is a separately reviewed interpretation; ac.py does not execute it"
   ]
 }

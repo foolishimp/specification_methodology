@@ -18,7 +18,8 @@ def operation(owners, token, destination, grant, observed, infer_permission=Fals
     admitted = isinstance(grant, dict) and (
         grant['issuer'] == owners[token] and grant['token'] == token and
         grant['destination'] == destination and grant['operation'] == 'assign')
-    if not admitted and not infer_permission:
+    label_permission = infer_permission and isinstance(grant, str)
+    if not admitted and not label_permission:
         return 'refused', owners
     output = list(owners)
     output[token] = destination
@@ -57,8 +58,9 @@ for owners in itertools.product(['A', 'B'], repeat=2):
 # known operation has 18 nonmatching grant values; half the domain is unknown.
 assert cases == 608
 assert counts == {'completed': 16, 'refused': 288, 'unresolved': 304}
-assert len(violations) == 288
+assert len(violations) == 32
 harm = next(v for v in violations if v['state_changed_by_mutant'])
+assert harm['grant'] in {'label:A', 'label:B'}
 
 first_grant = {'issuer': 'A', 'token': 0, 'destination': 'B', 'operation': 'assign'}
 first_result, changed = operation(('A', 'A'), 0, 'B', first_grant, True)
@@ -73,6 +75,8 @@ assert resumed_result == 'completed' and resumed_state == ('A', 'A')
 
 report = {'kind': 'finite_token_interpretation_check',
           'source_sha256': hashlib.sha256((root/'SOURCE.md').read_bytes()).hexdigest(),
+          'model_program_sha256': hashlib.sha256((root/'program.json').read_bytes()).hexdigest(),
+          'mutant_program_sha256': hashlib.sha256((root/'program-mutant.json').read_bytes()).hexdigest(),
           'executable_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
           'cases': cases, 'grant_variants': len(grants), 'outcomes': counts,
           'invariants_valid': True, 'unauthorized_mutant_counterexamples': len(violations),
@@ -80,7 +84,11 @@ report = {'kind': 'finite_token_interpretation_check',
           'resumption': {'original_effect': first_result, 'unknown_observation': unknown_result,
                          'old_issuer_after_state_change': stale_result, 'current_owner_grant': resumed_result},
           'limits': ['Hand-authored token interpretation requires separate fidelity review',
+                     'Program hashes bind reviewed correspondence; this helper does not execute a_c clauses',
                      'Qualitative join/finding/authority clauses are not executed by this script',
+                     'Unknown observation is modeled, not an already-issued effect with unknown completion',
+                     'Grants are not consumed; single-step enumeration plus one resumption trace only',
+                     'A failed invocation emits no current success; an older receipt remains historical',
                      'ac.py validates structure and source resolution, not these predicates',
                      'No distributed transport, whole-corpus or universal category proof']}
 (root/'FINITE_RESULT.json').write_text(json.dumps(report, indent=2)+'\n')

@@ -10,8 +10,8 @@ The [foundations](FOUNDATIONS.md) explain shared premises of
 interpretation, identity, typed composition, finite material context, evidence
 and authority. This member specifies the concrete calculus contract through the
 signature, records and AC laws below. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
-names recurring contract responsibilities; calculus applications express them
-through these exact records and laws. Its vocabulary does not replace AC-013's
+names explanatory correspondences to the exact calculus records and laws below.
+It adds no fields, dependencies or obligations to those records. Its vocabulary does not replace AC-013's
 transformation contract or establish category-theoretic functor laws.
 
 Its stable concept identity is:

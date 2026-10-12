@@ -37,6 +37,14 @@ registry and stops. With neither, load `SPEC_METHOD.md`.
 | `identity` | `IDENTITY_METHOD.md` |
 | `world` | `WORLD_MODEL_METHOD.md` |
 | `glossary` | `GLOSSARY_GUIDE.md` |
+| `work-recovery-view` | `frames/WORK_RECOVERY.md` |
+| `evaluation-conjunction-view` | `frames/EVALUATION_CONJUNCTION.md` |
+| `constitutional-derivation-view` | `frames/CONSTITUTIONAL_DERIVATION.md` |
+| `domain-binding-view` | `frames/DOMAIN_BINDING.md` |
+| `release-adoption-view` | `frames/RELEASE_ADOPTION.md` |
+
+The five views project bounded source clauses. They are not a Project
+Reference-Frame Basis, a grant or an independently selectable method version.
 
 ## Procedure
 
@@ -50,7 +58,9 @@ registry and stops. With neither, load `SPEC_METHOD.md`.
    [CANDIDATE] Mutable STDO authoring source loaded. This is not released consumer law.
    ```
 
-2. Resolve the selected member. Refuse unknown names and any fallback to a
+2. Resolve the selected member. Refuse unknown names and a known member absent
+   from the selected basis, including a successor-only member on a predecessor
+   cut. Refuse any fallback to a
    different install, local copy, mutable source, or nearby Product.
 3. Read and surface the full member with its name, exact basis, resolved source,
    full content, and explicit end marker.

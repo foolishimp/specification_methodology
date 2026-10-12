@@ -9,13 +9,13 @@ owner grants supply the premises of the constitutional chain below. Finite
 capacity explains bounded work; it does not alone establish those premises or
 confer authority.
 
-Bind is refined here by Product-definition routing, semantic resolution and
-lawful intake. Acquire is refined by constitutional and execution sufficiency.
-Transform is refined by bounded construction, change classes and migration.
-Evaluate and Conjoin are refined by the evidence, assurance and consistency
-laws. Dispose is refined by owner decisions, exact checkpoints and lawful
+Bind corresponds here to Product-definition routing, semantic resolution and
+lawful intake. Acquire corresponds to constitutional and execution sufficiency.
+Transform corresponds to bounded construction, change classes and migration.
+Evaluate and Conjoin correspond to the evidence, assurance and consistency
+laws. Dispose corresponds to owner decisions, exact checkpoints and lawful
 continuation. These associations explain the detailed laws; the transformations
-remain reusable relations, rather than compulsory workflow stages or runtime
+remain explanatory families, rather than compulsory workflow stages or runtime
 APIs. The following clauses retain their owners, predicates, permissions,
 refusals, lifecycle and invalidation conditions.
 

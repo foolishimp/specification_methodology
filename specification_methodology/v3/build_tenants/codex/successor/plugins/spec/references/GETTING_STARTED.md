@@ -112,7 +112,7 @@ the owner-selected coordinated STDO distribution after publication (substitute i
 ```sh
 STDO_CUT='<exact-published-immutable-cut>'
 STDO_REF='specification_methodology/<exact-published-immutable-cut>'
-STDO_TOOLCHAIN_MIN='0.1.4'
+STDO_TOOLCHAIN_MIN='<minimum-version-qualified-for-selected-cohort>'
 STDO_TOOLCHAIN_SPEC='<exact-authorized-toolchain-install-coordinate>'
 
 stdo_version_at_least() {
@@ -150,8 +150,9 @@ stdo verify "$STDO_CUT"
 
 The exact authorized toolchain installation coordinate is the missing-tool path. The explicit
 `pipx install --force` branch upgrades an older installation. Do not continue
-to `stdo install` unless the final version check accepts `stdo-toolchain
-0.1.4` or newer.
+to `stdo install` unless the final version check accepts the minimum toolchain
+version independently qualified for the selected cohort. This candidate has
+not established that minimum; the unchanged schema alone cannot establish it.
 
 Resolve and copy the Product Definition and Project Reference-Frame Basis
 templates from that same installed cut:
@@ -317,7 +318,10 @@ The following install commands apply after coordinated publication.
 The plugin and selected immutable repository cut must be one declared,
 release-matched cohort. Substitute its exact authorized published coordinate
 in the examples below. Target-version metadata in mutable source is not a
-published cut or permission to install a different cohort.
+published cut or permission to install a different cohort. The commands assume
+the coordinated repository marketplace catalog declares the name
+`specification_stack`; that catalog is a separately required distribution
+input, not a member owned by this plugin candidate.
 
 Claude Code:
 

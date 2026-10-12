@@ -18,7 +18,8 @@ Availability of either method leaves its adoption and operation authority with
 the declared owners.
 
 World-model scoped identity,
-interpretation and typed composition refine the shared foundation: source
+interpretation and typed composition have explanatory correspondences in
+Foundations; the detailed contracts below decide their meaning. Source
 systems retain operational sovereignty; qualified claims enter an attribute
 ledger; immutable entity cuts publish bounded semantic understanding; treatments,
 covariance, adjoint interpretation, uncertainty and declared loss remain
@@ -27,7 +28,7 @@ below, with no inverse or equivalence to every Source Project. Query,
 probabilistic overlays and compiled execution remain downstream under their own
 roles and authority.
 
-| Shared transformation | World-model refinement and preserved distinction |
+| Explanatory family | World-model owner contract and preserved distinction |
 |---|---|
 | Bind | Establish the selected world-model scope, source authority, fully qualified concepts, recursive Product identities, Builder-Project specialization and publication/adoption basis. Identity, representation and current content retain separate meanings. |
 | Acquire | Observe the strongest available source evidence, trace concrete source surfaces, qualify claims under assurance and retain the attribute-ledger support, evidence limits and residual ambiguity required by the entity claim. Code availability is not a prerequisite. |

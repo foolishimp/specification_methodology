@@ -2,8 +2,10 @@
 
 This directory contains the deciding methods, explanatory account and
 non-deciding views of the STDO Specification Methodology. The complete cut also includes its declared
-projections, schemas, templates, frames and interaction assets. A selectable STDO Product is one complete immutable released RC cut
-with exact identity, manifest and membership. Its subordinate executable and
+projections, schemas, templates, frames and interaction assets. A selectable
+release has one complete immutable constitutional member set with exact cut
+identity, manifest and membership. The Methodology Product retains its identity
+across releases. Its subordinate executable and
 interaction tooling retain separately declared responsibilities.
 
 ## Foundations and shared library
@@ -23,7 +25,7 @@ no view is sufficient for every task.
 
 ## Method owners
 
-| Responsibility | Deciding text |
+| Responsibility | Owning or locating member |
 |---|---|
 | Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
 | Context, evaluation and frame composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md) |
@@ -46,8 +48,9 @@ and optional Traversal profile retain their own signatures; the Baseline is a
 derived application profile; Design, Ticket, Release, Posting and Writing are
 companion governance/operating surfaces; UX owns its adopted realization
 process; the Glossary is a non-deciding locator. Foundations and the library
-are explanatory organization and contract families under the Methodology
-Product authority; they preserve the detailed owning determinations.
+are non-deciding explanatory organization and contract families under the
+Methodology Product authority; they preserve the detailed owning determinations
+and create no additional obligation or grant.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
@@ -57,7 +60,8 @@ Traversal adoption is optional and binds an exact signature and basis.
 ## Distribution and entry
 
 [Compressions](authority_compressions/README.md) are digest-bound, non-deciding
-read models. Raw members retain deciding authority at all times; a sufficient
+read models. Each raw member retains its declared standing; the detailed
+deciding owners remain authoritative. A sufficient
 current projection conveys their duties without acquiring authority, and stale
 or insufficient views require acquisition of their exact owners. [Templates](templates/README.md)
 provide starter realizations: a single per-Product Definition, project specification
@@ -78,8 +82,10 @@ Under [Frame Method sufficiency](REFERENCE_FRAME_METHOD.md#rf-003-material-suffi
 and [irrelevance exclusion](REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion),
 acquire the sufficient responsibility frame, exact subject and material
 dependencies for one action. The entire corpus is acquired only when material
-to the selected claim. The frame's result,
-required independent assessment and owner's disposition determine supported
-continuation. The projected frames are declared members of the complete
+to the selected claim. The applicable owner determines how the frame's result,
+required independent assessment and existing disposition/control contract are
+consumed. In ODD, the next work decision remains the exact evaluate_next path;
+this entry creates no alternative continuation owner. The projected frames are
+declared members of the complete
 documentary member set. Their source owners, exact bytes and fidelity remain
 required; a frame is not an independently selectable method version.

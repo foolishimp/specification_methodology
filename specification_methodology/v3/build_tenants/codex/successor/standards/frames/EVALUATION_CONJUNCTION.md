@@ -18,7 +18,8 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Reference Frame Laws
 
@@ -179,7 +180,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ### Applicability And Required Results
 
@@ -203,7 +204,7 @@ finite declared fixture; always skipping or always activating cannot satisfy
 those different expected outcomes.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Using Frames In Conjunction
 
@@ -254,7 +255,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Minimal Evaluation Result
 
@@ -278,7 +279,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Bind
 
@@ -287,7 +288,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Acquire
 
@@ -298,14 +299,15 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Evaluate
 
 Judge a declared predicate on an exact subject using sufficient admissible
-evidence. For a reference-frame evaluation, return satisfied, falsified,
-indeterminate, out_of_frame or invalid_basis with original citations and residual
-coverage. Other judgment domains retain their admitted result algebras. Where required,
+evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
+or invalid_basis; its externally owned compatible extensions retain the owning
+contract's conditions. Preserve original citations and residual coverage.
+Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A judgment supplies no repair,
 acceptance or next-action authority.
 
@@ -316,7 +318,7 @@ needs re-entry or a competing truth path violates the basis. This is assessment
 evidence; the decision owner alone performs the authoritative disposition.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
 
 ## Conjoin
 
@@ -326,6 +328,9 @@ uncovered coverage separately. For an instance whose admission contract declares
 planned assessment slots, authenticate each planned slot; an omitted planned
 judgment is handled by that owner's declared admission/result rule; no generic
 falsification or rejection is inferred from absence alone. An authenticated set
-can still leave a different required responsibility uncovered. Satisfaction requires
-every applicable material predicate and seam to be supported. An incompatible
-basis or unknown applicability prevents a wider satisfied claim.
+can still leave a different required responsibility uncovered. The declared
+conjunction or decision rule determines the aggregate result. A conjunctive
+whole-outcome claim requires every applicable required predicate and seam;
+unknown applicability prevents that wider conjunctive satisfaction. A declared
+disjunctive rule retains its own semantics. No result may silently erase a
+known failure or uncovered responsibility from the evidence it consumed.
