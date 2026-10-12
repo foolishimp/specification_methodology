@@ -181,3 +181,50 @@ structural check of a record is mechanical evidence, not assessment.
 | Run | Operator | Record | Assessment |
 |---|---|---|---|
 | none | | | |
+
+## Subject revision (2026-10-13)
+
+The standards at commit `4425993` on `tenant/claude/c3-v3`, with two
+members advanced during the W27 derivation on the Executive's
+instruction: TRAVERSAL_OCCURRENCE to `188bc81` and ACTIVATION to
+`9be9f57`; the other twenty-one members are byte-identical to `4425993`.
+Their digests are recorded under [a_c/set-6/](../../../a_c/set-6/README.md).
+They are encoded as program `urn:stdo-3:claude:program:a-c-text:set-6`,
+canonical digest `sha256:9aa2e6521fa1a0fcf0262270b3838ef9c5b1064e0f4edb3fed0c1a3ab1537cbb`, zero diagnostics against the pinned Axiom
+Indexer, after the fidelity pass recorded in
+[a_c/set-6/FIDELITY.md](../../../a_c/set-6/FIDELITY.md) corrected 106
+set-5 clauses and removed two. The actor receives the bytes of these frame
+files:
+
+| Frame file | SHA-256 | Bytes |
+|---|---|---|
+| `a_c/set-6/projection-transformation-and-judgment-materialized.json` | `b9ad330161ef4fbd6bcaede8c08ae323af1f050b5a849f3b9c81ea14215bb986` | 57,023 |
+| `a_c/set-6/projection-triage-and-reentry-materialized.json` | `66e2d166b558b34215e6dd84c4fac7cde1f9d1bb3687ea0b00ea5c3b636a0e4c` | 68,419 |
+| `a_c/set-6/projection-carrier-and-admission-materialized.json` | `87fc5b9ff9577c3e1afe8d267ce2dc6762460d26cc73c934fa294e089d4b8649` | 66,596 |
+| `a_c/set-6/projection-executive-disposition-materialized.json` | `3a90354277797377bfba02a6fbc840863943aff01df59252fa91227bca698f22` | 94,970 |
+
+The four frames keep their set-4 roots; corrected clauses change their
+bytes. Of the clauses in each closure, 1 of 19, 2 of 21, 3 of 19 and 7 of
+24 (tasks A to D) are corrected clauses listed in the set-6 FIDELITY.md.
+
+Invocations as in "Instrument invocations" above with `a_c/set-6/` in
+place of the earlier set directory in the METHOD block path and the step
+ids `A-0R2`, `B-0R2` and so on (five characters, so the header line is the
+length the earlier dry runs measured). CARD.md and the TASK files are
+unchanged. The W27 commit introduces the set-6 files; a run names that
+commit in the runs table.
+
+Dry-run measurement at these digests with `--dry-run`, into a scratch run
+directory outside the repository; no actor was started:
+
+| Step | Total bytes | System | Card | METHOD block | TASK block | Header |
+|---|---|---|---|---|---|---|
+| A-0R2 | 62,097 | 182 | 455 | 57,071 | 4,280 | 109 |
+| B-0R2 | 72,135 | 182 | 455 | 68,458 | 2,940 | 100 |
+| C-0R2 | 70,344 | 182 | 455 | 66,638 | 2,966 | 103 |
+| D-0R2 | 99,719 | 182 | 455 | 95,012 | 3,967 | 103 |
+
+All 4 fit the cap; the total over 4 steps is 304,295 bytes. The
+`measured` events carried the METHOD block digests `b9ad330161ef…`, `66e2d166b558…`, `87fc5b9ff957…`, `3a9035427779…`
+(the frame file digests above), the card digest `237ea8f915ca…` and
+instrument SHA-256 `f92ca26b3e4f…`.

@@ -247,3 +247,63 @@ structural check of a record is mechanical evidence, not assessment.
 | Run | Operator | Record | Assessment |
 |---|---|---|---|
 | none | | | |
+
+## Subject revision (2026-10-13)
+
+The standards at commit `4425993` on `tenant/claude/c3-v3`, with two
+members advanced during the W27 derivation on the Executive's
+instruction: TRAVERSAL_OCCURRENCE to `188bc81` and ACTIVATION to
+`9be9f57`; the other twenty-one members are byte-identical to `4425993`.
+Their digests are recorded under [a_c/set-6/](../../../a_c/set-6/README.md).
+They are encoded as program `urn:stdo-3:claude:program:a-c-text:set-6`,
+canonical digest `sha256:9aa2e6521fa1a0fcf0262270b3838ef9c5b1064e0f4edb3fed0c1a3ab1537cbb`, zero diagnostics against the pinned Axiom
+Indexer, after the fidelity pass recorded in
+[a_c/set-6/FIDELITY.md](../../../a_c/set-6/FIDELITY.md) corrected 106
+set-5 clauses and removed two. The actor receives the bytes of these frame
+files:
+
+| Frame file | SHA-256 | Bytes |
+|---|---|---|
+| `a_c/set-6/projection-carrier-retention-materialized.json` | `ba23003706d64216c705938b9a85a664b0b062803baa1eeadc347533d8d3d1bb` | 56,917 |
+| `a_c/set-6/projection-release-and-successor-materialized.json` | `312e66fde6a68f7d3382992ca8d14353c5dd735ba218c672c171dd56bc2c03bf` | 63,667 |
+| `a_c/set-6/projection-identity-scoped-materialized.json` | `d39d94f047a97b1da9255f66a7b85d27dca6afe61193c543d80d74a77b1bd9ee` | 38,689 |
+| `a_c/set-6/projection-design-gate-materialized.json` | `a9f281366215a44b4309dc4ff4ef979715c54e4e419d11b386001c9a1830f919` | 83,896 |
+| `a_c/set-6/projection-odd-closure-materialized.json` | `15a9992925613843b86b5e668982250faa4c26b5e5fe14f303177bf7a2c0f7a8` | 86,307 |
+| `a_c/set-6/projection-traversal-lineage-materialized.json` | `a3020d2ede2b390f996c4bd8db9b070266bfe1cad077f7b066e13c4a7e281057` | 67,499 |
+| `a_c/set-6/projection-ux-replay-materialized.json` | `4a6afe9e69996ce1fbaad2aea3614555e6ef7f9ed61a5db7218b3e0a15a37816` | 46,356 |
+| `a_c/set-6/projection-world-model-cut-materialized.json` | `1682ca9d88fd38f1167e70afec609bf9b5ef8e5e8632e7a9dfa2efafe6c6430c` | 40,333 |
+| `a_c/set-6/projection-bind-and-resolve-materialized.json` | `9d125ccc66ab161af07340ad1f19bb09f740bd921d0bdba05b734b8e58f04bc6` | 54,126 |
+
+The nine frames keep their set-5 roots except `odd-closure`, which gains
+the ODD section 5 graph-function binding of refinement (task E's composition
+question). `traversal-lineage` carries the TRAVERSAL_OCCURRENCE mapping
+encoded from `188bc81`, and `world-model-cut` the new WORLD_MODEL
+section 14 row. The candidate `bootstrap` frame in the same directory is
+not part of this fixture.
+
+Invocations as in "Instrument invocations" above with `a_c/set-6/` in
+place of the earlier set directory in the METHOD block path and the step
+ids `A-0R2`, `B-0R2` and so on (five characters, so the header line is the
+length the earlier dry runs measured). CARD.md and the TASK files are
+unchanged. The W27 commit introduces the set-6 files; a run names that
+commit in the runs table.
+
+Dry-run measurement at these digests with `--dry-run`, into a scratch run
+directory outside the repository; no actor was started:
+
+| Step | Total bytes | System | Card | METHOD block | TASK block | Header |
+|---|---|---|---|---|---|---|
+| A-0R2 | 61,191 | 182 | 455 | 56,955 | 3,500 | 99 |
+| B-0R2 | 68,003 | 182 | 455 | 63,709 | 3,554 | 103 |
+| C-0R2 | 42,570 | 182 | 455 | 38,725 | 3,111 | 97 |
+| D-0R2 | 88,113 | 182 | 455 | 83,928 | 3,455 | 93 |
+| E-0R2 | 90,186 | 182 | 455 | 86,339 | 3,117 | 93 |
+| F-0R2 | 70,909 | 182 | 455 | 67,537 | 2,636 | 99 |
+| G-0R2 | 50,336 | 182 | 455 | 46,386 | 3,222 | 91 |
+| H-0R2 | 44,039 | 182 | 455 | 40,369 | 2,936 | 97 |
+| I-0R2 | 58,611 | 182 | 455 | 54,163 | 3,713 | 98 |
+
+All 9 fit the cap; the total over 9 steps is 573,958 bytes. The
+`measured` events carried the METHOD block digests `ba23003706d6…`, `312e66fde6a6…`, `d39d94f047a9…`, `a9f281366215…`, `15a999292561…`, `a3020d2ede2b…`, `4a6afe9e6999…`, `1682ca9d88fd…`, `9d125ccc66ab…`
+(the frame file digests above), the card digest `237ea8f915ca…` and
+instrument SHA-256 `f92ca26b3e4f…`.
