@@ -74,6 +74,17 @@ revision and qualification. A same-spelled profile, product, role or
 runtime carrier is not imported by proximity or nominal match (P3, P1;
 rc.2 #position).
 
+Statement of ownership, new in this corpus. The reference-frame-evaluation
+context explicitly includes, as concepts of that context owned at their
+defining loci, the frame objects of
+[FOUNDATIONS §2](FOUNDATIONS.md#frame-objects), the frame tuple included,
+and the result algebra of [ACTIVATION §3](ACTIVATION.md#3-result-algebra),
+its refinements and dispositions included. Where the list above names
+evaluation or result, it names these included concepts and defines neither
+a second time. This inclusion is the explicit owner relation that
+[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)
+requires for a concept of this context defined in another member (P1, P3).
+
 Substrate. A reference frame may be represented in prose, structured data,
 a prompt, a design asset, a typed carrier, a runtime context or any other
 form its consumer selects. No class, aggregate, actor, controller, service,
