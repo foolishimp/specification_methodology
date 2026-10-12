@@ -656,6 +656,7 @@ violation whatever the size of the delta (ACTIVATION §1; provenance rc.2
 DESIGN_MODULE_METHOD #invariant-reconstruction-sufficiency-stdo-up-018).
 Triage records the change intent, the class, the re-entry point and when
 triage occurred, wherever substantive work begins.
+[TICKETS §4](TICKETS.md#change-class) records the class on the carrier.
 
 ### Computed classification and treatment
 
@@ -738,9 +739,10 @@ projection, design trace or acceptance, rule, configuration or material
 evidence invalidates its affected claims before reliance. Predecessor and
 successor identities, changed inputs, surviving facts and affected J
 dependencies are preserved; the wider frontier is recomputed where
-independence is unproved (ACTIVATION §7). TICKETS owns the existing carrier
-and the recorded J and O continuity rules (provenance rc.2 TICKET_METHOD
-#recorded-judgment-and-owner-ruling-continuity).
+independence is unproved (ACTIVATION §7).
+[TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) owns
+the existing carrier and the recorded J and O continuity rules (provenance
+rc.2 TICKET_METHOD #recorded-judgment-and-owner-ruling-continuity).
 
 ### Consistency gate
 
@@ -755,16 +757,18 @@ correct.
 
 Closure requires every applicable declared obligation satisfied by valid,
 applicable evidence and every required judgment or ruling, with no active
-non-closure condition. TICKETS owns work-state recording and reuse. A
+non-closure condition.
+[TICKETS §7](TICKETS.md#condition-based-closure-and-reuse) owns work-state
+recording and reuse. A
 review event, a passing aggregate, a completed artifact or a status change
 cannot substitute for that conjunction (EVALUATION §5).
 
 When a code and test mismatch appears during ticketed work, implementation
 behaviour is evidence but not authority. The mismatch is reconciled through
 the admitted ticket, its intake triage, its lawful re-entry point and the
-governing requirement, design, module, carrier or closure surface. TICKETS
-defines the ticket-local test-case authority rule (ASSURANCE §3 states the
-test authority rule).
+governing requirement, design, module, carrier or closure surface.
+[TICKETS §7](TICKETS.md#test-case-authority) defines the ticket-local
+test-case authority rule (ASSURANCE §3 states the test authority rule).
 
 ### Sprint execution boundary
 
@@ -805,9 +809,11 @@ for local debt, and escalates any authority drift through the lawful
 change class. If a sprint discovers a goal, intent, product, requirement,
 design, runtime, data-contract, governance or other product-truth change,
 the sprint manifest does not authorise landing it; the work is split,
-escalated, repriced or carried as explicit paydown. TICKETS defines the
-sprint and ticket mechanics; a profile may define when sprint compliance
-escrow is an appropriate cost optimisation for its domain (PROFILES).
+escalated, repriced or carried as explicit paydown.
+[TICKETS §3](TICKETS.md#3-sprint-rules) defines the sprint mechanics,
+including compliance escrow, and §4 the ticket mechanics; a profile may
+define when sprint compliance escrow is an appropriate cost optimisation
+for its domain (PROFILES).
 
 ### Carriers
 
@@ -816,8 +822,10 @@ durable ticket where the work needs identity across sessions; a
 sprint-local entry where its only value is traceability inside a batch; a
 run or return record where the work lives and dies with one activation.
 The triage fields are required wherever substantive work begins; a ticket
-per change is not (P2, P4b; TICKETS owns the carrier model and the
-selection of the smallest lawful carrier; provenance rc.2 TICKET_METHOD
+per change is not (P2, P4b; [TICKETS §1](TICKETS.md#1-work-carriers) owns
+the carrier model and
+[TICKETS §5](TICKETS.md#carrier-selection) the selection of the smallest
+lawful carrier; provenance rc.2 TICKET_METHOD
 #core-model and #triage-metadata).
 
 ### Procedures
@@ -1440,7 +1448,7 @@ Method's design-module co-evolution predicate is named without its symbol
 | #spec-drivenness-litmus | conserved | §2 Spec-drivenness litmus |
 | #process-constitution | conserved; the definition overlay's binding is PRODUCT_DEFINITION §1 | §1 Process constitution |
 | #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8 | §2 Constitutional chain |
-| #sprint-execution-boundary | conserved; mechanics at TICKETS | §4 Sprint execution boundary |
+| #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
 | #ambiguity-governance-rule | conserved; the outcome refinement is ACTIVATION §3, the hard stops ACTIVATION §4 | §5 |
 | #operational-lifecycle-sufficiency-rule | conserved | §2 Operational lifecycle sufficiency |
 | #change-management-rule | conserved | §4 |
@@ -1496,8 +1504,9 @@ receiving members: the overlay, STDO-SURFACE-001 and bootstrap rows at
 PRODUCT_DEFINITION; the verification, testing, test authority, scenario
 bundle, installed proof and path coverage rows at ASSURANCE; TICKET_METHOD's
 core model, triage metadata, judgment continuity and carrier rules at
-TICKETS; the baseline's Executive, Worker, Reviewer, steel-thread delivery
-and counterexample localisation at EXECUTIVE_BASELINE and ASSURANCE;
+[TICKETS §10](TICKETS.md#10-source-dispositions); the baseline's Executive,
+Worker, Reviewer, steel-thread delivery and counterexample localisation at
+EXECUTIVE_BASELINE and ASSURANCE;
 RELEASE_METHOD's identities, phases, naming, cohorts and UP-015 at RELEASE
 and FOUNDATIONS §1; UP-018 at the design profile; AC-020 at
 AXIOMATIC_CALCULUS §7; POSTING_GUIDE's UP-012 (shared method adoption and

@@ -570,55 +570,55 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Core Model | `#core-model` |  | 14 | unresolved | |
-| &nbsp;&nbsp;Goals | `#goals` |  | 336 | unresolved | |
-| &nbsp;&nbsp;Tickets | `#tickets` |  | 367 | unresolved | |
-| &nbsp;&nbsp;Sprints | `#sprints` |  | 949 | unresolved | |
-| &nbsp;&nbsp;Comments | `#comments` |  | 380 | unresolved | |
-| &nbsp;&nbsp;Execution Contracts | `#execution-contracts` |  | 1,388 | unresolved | |
-| &nbsp;&nbsp;Milestone And Phase-Scoped Truth (`STDO-UP-006`) | `#milestone-and-phase-scoped-truth-stdo-up-006` | UP-006 | 671 | unresolved | |
-| Default Layout | `#default-layout` |  | 747 | unresolved | |
-| Authority | `#authority` |  | 858 | unresolved | |
-| Sprint Rules | `#sprint-rules` |  | 16 | unresolved | |
-| &nbsp;&nbsp;One Durable Record Per Sprint | `#one-durable-record-per-sprint` |  | 431 | unresolved | |
-| &nbsp;&nbsp;Sprint Manifest Required Fields | `#sprint-manifest-required-fields` |  | 1,031 | unresolved | |
-| &nbsp;&nbsp;Sprint Status | `#sprint-status` |  | 589 | unresolved | |
-| &nbsp;&nbsp;Sprint Admission | `#sprint-admission` |  | 688 | unresolved | |
-| &nbsp;&nbsp;Sprint Compliance Escrow | `#sprint-compliance-escrow` |  | 1,298 | unresolved | |
-| &nbsp;&nbsp;Sprint Close Review | `#sprint-close-review` |  | 1,174 | unresolved | |
-| Ticket Rules | `#ticket-rules` |  | 16 | unresolved | |
-| &nbsp;&nbsp;One Durable Record Per Ticket | `#one-durable-record-per-ticket` |  | 592 | unresolved | |
-| &nbsp;&nbsp;Multi-Build-Tenant Ticket Independence | `#multi-build-tenant-ticket-independence` |  | 2,874 | unresolved | |
-| &nbsp;&nbsp;Required Fields | `#required-fields` |  | 1,201 | unresolved | |
-| &nbsp;&nbsp;Allowed Types | `#allowed-types` |  | 158 | unresolved | |
-| &nbsp;&nbsp;Ticket Category | `#ticket-category` |  | 1,026 | unresolved | |
-| &nbsp;&nbsp;Inside-Out First Ticket Sequencing | `#inside-out-first-ticket-sequencing` |  | 958 | unresolved | |
-| &nbsp;&nbsp;Change Class | `#change-class` |  | 1,143 | unresolved | |
-| &nbsp;&nbsp;Upward Propagation Check | `#upward-propagation-check` |  | 1,424 | unresolved | |
-| &nbsp;&nbsp;Triage Metadata | `#triage-metadata` |  | 371 | unresolved | |
-| &nbsp;&nbsp;Work-Carrier-To-Execution Rule | `#work-carrier-to-execution-rule` |  | 4,127 | unresolved | |
-| &nbsp;&nbsp;Execution Contract Admission | `#execution-contract-admission` |  | 1,064 | unresolved | |
-| &nbsp;&nbsp;Execution And Verification Authority Separation (`STDO-UP-007`) | `#execution-and-verification-authority-separation-stdo-up-007` | UP-007 | 2,835 | unresolved | |
-| &nbsp;&nbsp;Recorded Judgment And Owner-Ruling Continuity | `#recorded-judgment-and-owner-ruling-continuity` |  | 2,560 | unresolved | |
-| &nbsp;&nbsp;Bounded-Context Term Binding | `#bounded-context-term-binding` |  | 1,020 | unresolved | |
-| &nbsp;&nbsp;Evaluation Criteria And Non-Closure Conditions | `#evaluation-criteria-and-non-closure-conditions` |  | 1,132 | unresolved | |
-| &nbsp;&nbsp;Condition-Based Closure And Reuse | `#condition-based-closure-and-reuse` |  | 1,395 | unresolved | |
-| &nbsp;&nbsp;Test Case Authority | `#test-case-authority` |  | 2,215 | unresolved | |
-| &nbsp;&nbsp;Implementation Migration Category | `#implementation-migration-category` |  | 4,944 | unresolved | |
-| &nbsp;&nbsp;Migration Strategy Requirements | `#migration-strategy-requirements` |  | 1,097 | unresolved | |
-| &nbsp;&nbsp;Recurring Realization And Library Declaration | `#recurring-realization-and-library-declaration` |  | 1,322 | unresolved | |
-| &nbsp;&nbsp;Multi-Build-Tenant Review Rule | `#multi-build-tenant-review-rule` |  | 517 | unresolved | |
-| &nbsp;&nbsp;Implementation Migration Review Disambiguation | `#implementation-migration-review-disambiguation` |  | 2,243 | unresolved | |
-| &nbsp;&nbsp;Impacted Interface Review Checklist | `#impacted-interface-review-checklist` |  | 1,922 | unresolved | |
-| &nbsp;&nbsp;Required Break Order And Break-To-Closure Map | `#required-break-order-and-break-to-closure-map` |  | 1,435 | unresolved | |
-| &nbsp;&nbsp;Mixed-State Negative Proof | `#mixed-state-negative-proof` |  | 1,699 | unresolved | |
-| &nbsp;&nbsp;Allowed Status | `#allowed-status` |  | 240 | unresolved | |
-| &nbsp;&nbsp;Ticket Lanes | `#ticket-lanes` |  | 766 | unresolved | |
-| &nbsp;&nbsp;One-Truth State Projection And Drift Refusal (`STDO-UP-009`) | `#one-truth-state-projection-and-drift-refusal-stdo-up-009` | UP-009 | 635 | unresolved | |
-| Recommended Ticket Shape | `#recommended-ticket-shape` |  | 4,934 | unresolved | |
-| Operating Mode | `#operating-mode` |  | 557 | unresolved | |
-| Relationship To Other Surfaces | `#relationship-to-other-surfaces` |  | 742 | unresolved | |
-| Future Extensions | `#future-extensions` |  | 508 | unresolved | |
+| Core Model | `#core-model` |  | 14 | not applicable: heading with no claim text (14 bytes); its children are disposed individually | `TICKETS.md#1-work-carriers` |
+| &nbsp;&nbsp;Goals | `#goals` |  | 336 | conserved | `TICKETS.md#goals` |
+| &nbsp;&nbsp;Tickets | `#tickets` |  | 367 | conserved | `TICKETS.md#ticket-records` |
+| &nbsp;&nbsp;Sprints | `#sprints` |  | 949 | conserved; the sprint boundary is SPEC_METHOD §4, the mechanics and the ticket-versus-iteration-entry rule here | `TICKETS.md#sprints` |
+| &nbsp;&nbsp;Comments | `#comments` |  | 380 | conserved | `TICKETS.md#comments` |
+| &nbsp;&nbsp;Execution Contracts | `#execution-contracts` |  | 1,388 | conserved; the three lifetimes, the five purposes and the seven-step loop | `TICKETS.md#execution-contracts` |
+| &nbsp;&nbsp;Milestone And Phase-Scoped Truth (`STDO-UP-006`) | `#milestone-and-phase-scoped-truth-stdo-up-006` | UP-006 | 671 | conserved | `TICKETS.md#milestones-and-phase-scoped-truth-up-006` |
+| Default Layout | `#default-layout` |  | 747 | conserved | `TICKETS.md#default-layout` |
+| Authority | `#authority` |  | 858 | conserved; the four bindings, no mandatory ACTIVE_TASKS.md, the board as projection unless rebound with no rival | `TICKETS.md#bindings-and-projections` |
+| Sprint Rules | `#sprint-rules` |  | 16 | not applicable: heading with no claim text (16 bytes); its children are disposed individually | `TICKETS.md#3-sprint-rules` |
+| &nbsp;&nbsp;One Durable Record Per Sprint | `#one-durable-record-per-sprint` |  | 431 | conserved | `TICKETS.md#one-durable-record-per-sprint` |
+| &nbsp;&nbsp;Sprint Manifest Required Fields | `#sprint-manifest-required-fields` |  | 1,031 | conserved; all seventeen fields and the four field meanings | `TICKETS.md#manifest-fields` |
+| &nbsp;&nbsp;Sprint Status | `#sprint-status` |  | 589 | conserved | `TICKETS.md#sprint-status` |
+| &nbsp;&nbsp;Sprint Admission | `#sprint-admission` |  | 688 | conserved | `TICKETS.md#sprint-admission` |
+| &nbsp;&nbsp;Sprint Compliance Escrow | `#sprint-compliance-escrow` |  | 1,298 | conserved in full; the five conditions, the eligible and never-hidden lists and the exit rule; "public graph functions or AssetSurface contracts" generalised to "public published-function or public carrier contracts", "UX" to "user-interface" | `TICKETS.md#compliance-escrow` |
+| &nbsp;&nbsp;Sprint Close Review | `#sprint-close-review` |  | 1,174 | conserved | `TICKETS.md#close-review` |
+| Ticket Rules | `#ticket-rules` |  | 16 | not applicable: heading with no claim text (16 bytes); its children are disposed individually | `TICKETS.md#4-ticket-rules` |
+| &nbsp;&nbsp;One Durable Record Per Ticket | `#one-durable-record-per-ticket` |  | 592 | conserved | `TICKETS.md#one-durable-record-per-ticket` |
+| &nbsp;&nbsp;Multi-Build-Tenant Ticket Independence | `#multi-build-tenant-ticket-independence` |  | 2,874 | conserved; the build-tenancy bounded context is cited at PRODUCT_DEFINITION §8, where the tenant places rc.2's what-how-and-work-carriers | `TICKETS.md#multi-build-tenant-independence` |
+| &nbsp;&nbsp;Required Fields | `#required-fields` |  | 1,201 | conserved | `TICKETS.md#required-fields` |
+| &nbsp;&nbsp;Allowed Types | `#allowed-types` |  | 158 | conserved | `TICKETS.md#types` |
+| &nbsp;&nbsp;Ticket Category | `#ticket-category` |  | 1,026 | conserved | `TICKETS.md#category` |
+| &nbsp;&nbsp;Inside-Out First Ticket Sequencing | `#inside-out-first-ticket-sequencing` |  | 958 | conserved | `TICKETS.md#inside-out-sequencing` |
+| &nbsp;&nbsp;Change Class | `#change-class` |  | 1,143 | conserved; the classes themselves are SPEC_METHOD §4, which names them the triage target of every carrier | `TICKETS.md#change-class` |
+| &nbsp;&nbsp;Upward Propagation Check | `#upward-propagation-check` |  | 1,424 | conserved in full; consumption of the computed classification, the realization_refactor precondition and the upward walk to the first missing layer | `TICKETS.md#upward-propagation-check` |
+| &nbsp;&nbsp;Triage Metadata | `#triage-metadata` |  | 371 | conserved | `TICKETS.md#triage-metadata` |
+| &nbsp;&nbsp;Work-Carrier-To-Execution Rule | `#work-carrier-to-execution-rule` |  | 4,127 | conserved; the table, the ticket-shaped rule, the creation rules and the obligation-retention order here; the step-side admission relation (drafting versus admission, the admitted-result coordinates, the durable result surface) is ACTIVATION §1, defined once there | `TICKETS.md#carrier-selection`; `ACTIVATION.md#admission` |
+| &nbsp;&nbsp;Execution Contract Admission | `#execution-contract-admission` |  | 1,064 | conserved; logging and availability here; the states and the self-certification rule at ACTIVATION §1; basis admission at SPEC_METHOD §3 | `TICKETS.md#execution-contract-admission`; `ACTIVATION.md#admission`; `SPEC_METHOD.md#3-outcome-conservation` |
+| &nbsp;&nbsp;Execution And Verification Authority Separation (`STDO-UP-007`) | `#execution-and-verification-authority-separation-stdo-up-007` | UP-007 | 2,835 | conserved; the generic assessment protocol is EVALUATION §3 | `TICKETS.md#execution-and-verification-authority-separation-up-007` |
+| &nbsp;&nbsp;Recorded Judgment And Owner-Ruling Continuity | `#recorded-judgment-and-owner-ruling-continuity` |  | 2,560 | conserved; the generic reuse law is ACTIVATION §7 | `TICKETS.md#recorded-judgment-and-owner-ruling-continuity` |
+| &nbsp;&nbsp;Bounded-Context Term Binding | `#bounded-context-term-binding` |  | 1,020 | conserved; the resolution law is PRODUCT_DEFINITION §5 | `TICKETS.md#bounded-context-term-binding` |
+| &nbsp;&nbsp;Evaluation Criteria And Non-Closure Conditions | `#evaluation-criteria-and-non-closure-conditions` |  | 1,132 | conserved | `TICKETS.md#evaluation-criteria-and-non-closure-conditions` |
+| &nbsp;&nbsp;Condition-Based Closure And Reuse | `#condition-based-closure-and-reuse` |  | 1,395 | conserved; "Executive appointment" generalised to "coordinating appointment" | `TICKETS.md#condition-based-closure-and-reuse` |
+| &nbsp;&nbsp;Test Case Authority | `#test-case-authority` |  | 2,215 | conserved in full; the derivation chain, the predicate rules, the five-step order with its eight fields, the defect and re-triage rules; "graph" and "graph-function" generalised to "published function"; ASSURANCE §3 points here | `TICKETS.md#test-case-authority` |
+| &nbsp;&nbsp;Implementation Migration Category | `#implementation-migration-category` |  | 4,944 | conserved; the declaration, the checklist, the fields and the closure rules here; the slice-promotion rule is SPEC_METHOD §7, its ticket-local consequence here | `TICKETS.md#declaration-and-checklist`; `TICKETS.md#closure-of-a-migration-ticket`; `SPEC_METHOD.md#constitutional-migration-options` |
+| &nbsp;&nbsp;Migration Strategy Requirements | `#migration-strategy-requirements` |  | 1,097 | conserved | `TICKETS.md#strategy-requirements` |
+| &nbsp;&nbsp;Recurring Realization And Library Declaration | `#recurring-realization-and-library-declaration` |  | 1,322 | conserved | `TICKETS.md#recurring-realisation-and-library-declaration` |
+| &nbsp;&nbsp;Multi-Build-Tenant Review Rule | `#multi-build-tenant-review-rule` |  | 517 | conserved | `TICKETS.md#multi-build-tenant-review` |
+| &nbsp;&nbsp;Implementation Migration Review Disambiguation | `#implementation-migration-review-disambiguation` |  | 2,243 | conserved; question 8's "F_D-like checks" and "F_P-like path" generalised to "other deterministic checks" and "constructive or probabilistic path" | `TICKETS.md#review-disambiguation` |
+| &nbsp;&nbsp;Impacted Interface Review Checklist | `#impacted-interface-review-checklist` |  | 1,922 | conserved | `TICKETS.md#impacted-interface-review-checklist` |
+| &nbsp;&nbsp;Required Break Order And Break-To-Closure Map | `#required-break-order-and-break-to-closure-map` |  | 1,435 | conserved | `TICKETS.md#break-order-and-break-to-closure-map` |
+| &nbsp;&nbsp;Mixed-State Negative Proof | `#mixed-state-negative-proof` |  | 1,699 | conserved; "graph function" generalised to "published function" | `TICKETS.md#mixed-state-negative-proof` |
+| &nbsp;&nbsp;Allowed Status | `#allowed-status` |  | 240 | conserved | `TICKETS.md#status` |
+| &nbsp;&nbsp;Ticket Lanes | `#ticket-lanes` |  | 766 | conserved | `TICKETS.md#lanes` |
+| &nbsp;&nbsp;One-Truth State Projection And Drift Refusal (`STDO-UP-009`) | `#one-truth-state-projection-and-drift-refusal-stdo-up-009` | UP-009 | 635 | conserved | `TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009` |
+| Recommended Ticket Shape | `#recommended-ticket-shape` |  | 4,934 | conserved; the sprint, ordinary and migration shapes carried verbatim | `TICKETS.md#8-recommended-shapes` |
+| Operating Mode | `#operating-mode` |  | 557 | conserved | `TICKETS.md#operating-mode` |
+| Relationship To Other Surfaces | `#relationship-to-other-surfaces` |  | 742 | conserved | `TICKETS.md#relationship-to-other-surfaces` |
+| Future Extensions | `#future-extensions` |  | 508 | conserved; the listed growths, the default-carrier rule and the substitution law | `TICKETS.md#carrier-substitution` |
 
 ## TRAVERSAL_OCCURRENCE_PROFILE.md
 
