@@ -1,0 +1,67 @@
+# console log for qualification/runs/F-03/20261012T110826Z-H-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T11:08:26Z
+# step H-001: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T110826Z-H-001 --step-id H-001 --card qualification/cases/F-03/CARD.md --block "METHOD world-model-cut=a_c/set-5/projection-world-model-cut-materialized.json" --block "TASK=qualification/cases/F-03/TASK-H.md" --model sonnet
+**1. Surfaces and discrimination**
+
+**C-1 "Berth"**
+
+| Surface | Classification |
+|---|---|
+| identity | stated value (berth code, register 2026-3) |
+| boundary | stated value (quay length between two bollards) |
+| authority | stated value (harbour master's office) |
+| state | stated value (`available`, `allocated`, `closed`) |
+| evidence | stated value (register 2026-3, allocation berth table) |
+| treatment | stated value (pilotage manual s2: berth as destination) |
+| covariance | stated absence ("no study performed; none claimed") |
+| ambiguity | stated value (B-07 and B-08 share bollard 41; unresolved). This is a declared residual. |
+
+- **Discrimination:** C-1 is discriminated. It uses a null-peer comparison: lay-by quays are physically similar but are never allocated, so they are not berths.
+- **Kind of evidence:** the evidence is declarative (register text). No intervention was made, and the cut says so. That is a stated bound on evidence altitude, which is lawful.
+
+**C-2 "Vessel call"**
+
+| Surface | Classification |
+|---|---|
+| identity | stated value (call id) |
+| boundary | stated value, but only a list of source columns |
+| authority | none of these. An empty field is not a stated absence. |
+| state | stated value |
+| evidence | stated value (`calls` table) |
+| treatment | none of these. The customs treatment was written from general knowledge, with no source consulted. It is manufactured and untraceable. |
+| covariance | none of these. The field does not exist. |
+| ambiguity | formally a stated absence ("none"), but it is unsubstantiated. |
+
+- **Discrimination:** C-2 is undiscriminated. It names no alternative boundary and no peer. Its boundary is stated only as source fields, which is the weaker claim.
+- **Kind of evidence:** the evidence is declarative, from table data only.
+
+**2. Attributes**
+
+- **`max_draught`:** it has a lawful claim record. The record gives the value, source, authority, observed date and publication date. The effective coordinate is missing. It should be stated as a value or an absence, and I carry it as a residual.
+- **`tug_required`:** it has no lawful claim record. A pilot conversation is not a traceable ledger entry. This is an unsupported attribute on a published cut, which the saturation law forbids. C-1 is therefore not sufficiently saturated. To repair it, give the attribute a ledger entry with provenance and authority, or remove it, or state it as an explicit ambiguity. Because the cut is already published, the repair must go in a new superseding cut.
+
+**3. The 2026-10-05 edit**
+
+- **Lawful?** No. Published cuts are immutable.
+- **What publication requires:** moving the B-07 boundary to end at bollard 42 changes the boundary. That must be published as a new cut that supersedes C-1, with the discrimination basis recorded again. The B-07/B-08 bollard-41 ambiguity should be restated for the new boundary.
+
+**4. Verdicts**
+
+| Item | Verdict | Core member | Counterexample |
+|---|---|---|---|
+| C-1 admissible entity cut | satisfied | satisfied | none. The covariance absence and the evidence-altitude bound are stated. |
+| C-2 entity cut not admissible | falsified | falsified | authority (empty), covariance (no field), treatment (untraceable), and no discrimination (boundary is only source columns) |
+| C-1 saturation | falsified | falsified | `tug_required` has no support |
+| `max_draught` saturation | satisfied | satisfied | none. The missing effective coordinate is carried as a residual. |
+| Edit of 2026-10-05 | no profile verdict reached | none assigned | The edit breaks the immutability requirement. I have not coerced it to satisfied. |
+
+**No method source**
+
+- The METHOD block gives no verdict, and so no core member, for an in-place edit of a published cut. It states only the immutability requirement.
+- It does not say whether a ledger entry that lacks an effective coordinate fails the "fully qualified" requirement. It says only that entries "should" carry the coordinates.
+- It does not say whether a formally stated "none" in the ambiguity surface can be rejected when it is unsubstantiated.
+- It does not say how to weigh a pilot's conversation as evidence.
+- It does not say whether a cut-level result is affected when a separate attribute fails saturation. I kept the two verdicts separate.
+# step exit 0
+# end 2026-10-12T11:08:50Z
