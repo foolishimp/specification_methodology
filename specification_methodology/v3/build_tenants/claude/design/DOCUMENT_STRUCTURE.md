@@ -17,10 +17,11 @@ with the predecessor no longer operative. Every frontier row receives one
 UP-015 disposition and, where conserved or superseded, a locus that
 resolves to the tenant's text.
 
-Two first-pass errors are retired: the corpus is as large as the law
-requires; what fits an activation is a projected frame, never the corpus;
-and a route to the rc.2 clause (FOUNDATIONS §1) is provenance under the
-standalone successor requirement, not a disposition. The first-pass files
+Two first-pass errors are retired: sizing the corpus to one activation,
+and counting a route to the rc.2 clause (FOUNDATIONS §1) as a disposition.
+The corpus is as large as the law requires and an activation reads a
+projected frame; a route is provenance under the standalone successor
+requirement. The first-pass files
 are starting text where they already restate; each is rewritten at its
 member's activation; nothing is accepted by presence.
 
@@ -34,8 +35,8 @@ new exists only after its activation.
 
 | Member | Owes | Why a member |
 |---|---|---|
-| FOUNDATIONS.md | ontology, C (proposed as P0) and P1 to P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 |
-| REFERENCE_FRAME.md, new | the frame as a first-class object: basis, manifold, envelope, frame, frame set, configuration, lens; RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |
+| FOUNDATIONS.md | ontology with the frame objects (§2), C (proposed as P0) and P1 to P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 |
+| REFERENCE_FRAME.md, new | the frame law: RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |
 | ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality (UP-014), reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |
 | AXIOMATIC_CALCULUS.md, new | the a_c theory in full: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, exact identity, conformance obligations | the projection that produces every frame is defined here |
 | IDENTITY.md, new | scoped identity, uniqueness, type and stability, hierarchy, authority split, UP-004, parsing, version boundary | the tier receives IDENTITY_METHOD; cited too widely for a subsection |
@@ -90,7 +91,7 @@ mechanical.
 | POSTING_GUIDE.md | POSTING_GUIDE; SPEC_METHOD (UP-012) |
 | REFERENCE_FRAME_METHOD.md | REFERENCE_FRAME; FOUNDATIONS (ontology objects); ACTIVATION (engagement as the step); EVALUATION (qualification) |
 | RELEASE_METHOD.md | RELEASE; FOUNDATIONS (recursive product objects); EVALUATION (UP-015 as acceptance evidence) |
-| SPEC_METHOD.md | SPEC_METHOD; PRODUCT_DEFINITION (overlay, SURFACE-001, bootstrap); ACTIVATION (work boundary, UP-014, UP-020, UP-021); FOUNDATIONS (product taxonomy); EVALUATION (evidence rules, litmus); ASSURANCE (testing law) |
+| SPEC_METHOD.md | SPEC_METHOD; PRODUCT_DEFINITION (overlay, SURFACE-001, bootstrap); ACTIVATION (UP-014, UP-020, UP-021; consumes the work boundary); FOUNDATIONS (work boundary, product taxonomy); EVALUATION (evidence rules, litmus); ASSURANCE (testing law) |
 | STDO_REFERENCE_FRAME_BASELINE.md | EXECUTIVE_BASELINE; ASSURANCE (testing frames, interface integration); EVALUATION (reviewer result, triage projection) |
 | TICKET_METHOD.md | TICKETS; SPEC_METHOD (change classes as the triage target) |
 | TRAVERSAL_OCCURRENCE_PROFILE.md | TRAVERSAL_OCCURRENCE |

@@ -111,7 +111,7 @@ defines the structural how, and ADRs are one durable form of that record
 boundary reduces the space of lawful interpretations and surfaces major
 ambiguity explicitly; detection is mandatory; blocking or escalation is
 policy under declared risk appetite, except for hard-stop prerequisite
-failures (§5). Products, applications, modules, published functions, build
+failures (§5). Products, applications, modules, functions, build
 tenants and runtime surfaces are implementations of the constitutional
 documents, not substitutes for them. Scenarios verify operational meaning
 where capability claims need end-to-end proof (ASSURANCE §4). Code realises
@@ -190,11 +190,9 @@ layout: the definition's WHAT bindings locate the shared constitutional
 WHAT; its build-tenant bindings locate one or more independent HOW
 realisations of that shared WHAT; tenant-local realisation is derivative
 unless and until the governing truth is ratified in specification
-(PRODUCT_DEFINITION §8). Each tenant works in its own territory; a shared
-change returns to the WHAT's pen; a tenant never patches common WHAT or a
-peer realisation. Conformance of a tenant is judged under EVALUATION §6; two
-conforming tenants need not behave identically outside the contract (P2,
-P4b).
+(PRODUCT_DEFINITION §8). Conformance of a tenant is judged under
+EVALUATION §6; two conforming tenants need not behave identically outside
+the contract (P2, P4b).
 
 ### Manifesto
 
@@ -487,7 +485,7 @@ constitutional history.
 
 Constitutional specification treats a designed thing as more than its build
 shape (P2; rc.2 #operational-lifecycle-sufficiency-rule). Any material
-product, application, module, published function, runtime surface, plugin
+product, application, module, function, runtime surface, plugin
 surface, public interface, data surface or capability has an operational
 lifecycle, whose canonical chain is intent, requirement, build, assurance,
 release, deployment, live usage, observed telemetry, retirement. The
@@ -939,10 +937,11 @@ higher one permits more bounded probabilistic decision-making. In either
 case the ambiguity and the decision are recorded.
 
 Some conditions are not optional ambiguity decisions and remain hard stops
-regardless of risk appetite: a violated invariant or guarantee; an absent
-required authority surface; a missing declared capability for an
-executional or operational stage; an undeclared irreversible side effect;
-an explicit policy gate requiring human approval (ACTIVATION §4). The
+regardless of risk appetite. Typical hard-stop classes include: a violated
+invariant or guarantee; an absent required authority surface; a missing
+declared capability for an executional or operational stage; an undeclared
+irreversible side effect; an explicit policy gate requiring human approval
+(ACTIVATION §4). The
 method is therefore not "eliminate all ambiguity before work"; it is "make
 ambiguity visible, govern it explicitly, and reduce it progressively until
 downstream realisation is sufficiently constrained".
@@ -1398,20 +1397,37 @@ Definition
 ([Development Isolation](../../../specification/PRODUCT.md#development-isolation))
 and imported here by reference.
 
+Tenant territory is imported from the same source, its Territory rule, and
+is not law of this method: a tenant commits only in its own territory; a
+needed common change is requested from the common WHAT's writing owner and
+reaches the tenant by merging the main lineage inward; a tenant does not
+edit tickets, common files or a peer tenant's realisation.
+
 ## 12. Source dispositions
 
 Rows of rc.2 SPEC_METHOD.md received by this member or placed by it in a
 tier-1 member. Anchors are into rc.2 SPEC_METHOD.md; a locus is a section
 of this file unless another member is named. Every conserved row is
 restated in the receiving member's own text; a route is provenance only.
-Generalisations recorded here: "graph functions" is written "published
-functions" (§1, §2); the ambiguity-governance clause that named a profile's
-runtime shorthands names "a profile's runtime shorthands" (§5); the
-probabilistic work boundary's profile binding to one traversal is kept by
-PROFILES §2 (FOUNDATIONS §2); UP-014's design-view examples are written "a
-detailed algebra or semantic design view" (ACTIVATION §6); UP-013's "Prime"
-law is written "the prime law of a design profile" (§3); the Method's
-design-module co-evolution predicate is named without its symbol (§4).
+Generalisations recorded here: "graph functions" is written "functions" (§1,
+§2); "graph" is dropped from the consistency gate's reconciliation surfaces,
+which design and module cover (§4); "graph-native meaning" is written
+"realisation meaning" in the method identity (§1); the sprint boundary's
+`UX_METHOD.md` is written "a profile" (§4); the procedures' `GOALS.md`,
+`INTENT.md`, `PRODUCT.md` and `requirements/` are written as surfaces and
+"installed STDO basis" as "installed basis" (§4); the ADR conventions'
+`REQ-*` and `INT-*` prefixes are written "requirement identifiers" and
+"intent identifier" (§10); the overlay fields `what`, `how.build_tenants`,
+`how.build_tenants[].design` and `how.common` are written in prose as WHAT
+bindings, build-tenant bindings, the tenant design surface and the common
+surface (§1, §2, §10); the ambiguity-governance clause that named a
+profile's runtime shorthands names "a profile's runtime shorthands" (§5);
+the probabilistic work boundary's profile binding to one traversal is kept
+by PROFILES §2 (FOUNDATIONS §2); UP-014's design-view examples are written
+"a detailed algebra or semantic design view" (ACTIVATION §6); UP-013's
+"Prime" law is written "the prime law of a design profile" (§3); the
+Method's design-module co-evolution predicate is named without its symbol
+(§4).
 
 | Anchor | Disposition | Locus |
 |---|---|---|

@@ -169,7 +169,7 @@ already accepted; this delegation does not weaken direct human acceptance
 where the governing product or release law requires it (P6).
 
 When one capable context has sufficient existing work authority, exact
-intake and operation grant, it enters directly as constructor or Writer. No
+intake and operation grant, it may enter directly as constructor or Writer. No
 coordinating activation is required solely to appoint that Writer. The
 applicable frame configuration selects coordination when material
 contexts, authority, capability or required independence need it; a role
@@ -185,8 +185,7 @@ work carrier; a status change alone requires neither a new grant nor
 rehashing an unchanged subject. A material change to the operation, the
 subject, the territory, the authority or the validity conditions requires
 the affected binding to be resolved before effect. The restriction that a
-coordinating role mutates nothing remains applicable wherever a governing
-basis declares it (P6, P3).
+coordinating role mutates nothing remains applicable (P6, P3).
 
 ## 2. Context construction under an envelope
 
