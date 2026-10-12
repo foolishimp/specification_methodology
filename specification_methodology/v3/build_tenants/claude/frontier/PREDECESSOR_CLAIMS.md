@@ -81,7 +81,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`
 | &nbsp;&nbsp;AC-014 Judgment Separation | `#ac-014-judgment-separation` | AC-014 | 448 | conserved; the judgment object is defined at FOUNDATIONS.md §2, the record and the law are in the locus | `AXIOMATIC_CALCULUS.md#ac-014-judgment-separation` |
 | Traversals And Functor Kinds | `#traversals-and-functor-kinds` |  | 1,875 | conserved; the stop algebra is tied to the one result algebra of ACTIVATION.md §3 (tightening); the traversal record's ownership against same-spelled terms is made explicit | `AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds` |
 | &nbsp;&nbsp;AC-015 Functor Classification | `#ac-015-functor-classification` | AC-015 | 202 | conserved | `AXIOMATIC_CALCULUS.md#ac-015-functor-classification` |
-| &nbsp;&nbsp;AC-016 Typed Composition | `#ac-016-typed-composition` | AC-016 | 556 | conserved; P4a at FOUNDATIONS.md §3 is its generic form over steps | `AXIOMATIC_CALCULUS.md#ac-016-typed-composition` |
+| &nbsp;&nbsp;AC-016 Typed Composition | `#ac-016-typed-composition` | AC-016 | 556 | conserved; P4a states AC-016's generic form over steps under the cumulative reading (ACTIVATION §4) | `AXIOMATIC_CALCULUS.md#ac-016-typed-composition` |
 | Interpretation And Models | `#interpretation-and-models` |  | 1,235 | conserved | `AXIOMATIC_CALCULUS.md#6-interpretation-and-models` |
 | &nbsp;&nbsp;AC-017 Interpretation Fidelity | `#ac-017-interpretation-fidelity` | AC-017 | 377 | conserved | `AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity` |
 | &nbsp;&nbsp;AC-018 Structural And Semantic Separation | `#ac-018-structural-and-semantic-separation` | AC-018 | 324 | conserved; generic form over every review at EVALUATION.md §2 | `AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation` |
@@ -220,54 +220,54 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| 1. Position | `#1-position` |  | 2,827 | unresolved | |
-| 2. Method Role | `#2-method-role` |  | 906 | unresolved | |
-| 3. Method Composition | `#3-method-composition` |  | 1,456 | unresolved | |
-| 4. Method Folder Semantics | `#4-method-folder-semantics` |  | 1,660 | unresolved | |
-| 5. Graph Model | `#5-graph-model` |  | 125 | unresolved | |
-| &nbsp;&nbsp;Nodes | `#nodes` |  | 458 | unresolved | |
-| &nbsp;&nbsp;Vectors | `#vectors` |  | 232 | unresolved | |
-| &nbsp;&nbsp;Probabilistic Compute | `#probabilistic-compute` |  | 3,160 | unresolved | |
-| &nbsp;&nbsp;Graph Functions | `#graph-functions` |  | 379 | unresolved | |
-| &nbsp;&nbsp;Traversal | `#traversal` |  | 323 | unresolved | |
-| 6. Product Boundary | `#6-product-boundary` |  | 1,576 | unresolved | |
-| 7. Self-Host Boundary Rule | `#7-self-host-boundary-rule` |  | 756 | unresolved | |
-| 8. Responsibility Layers And Local Binding | `#8-responsibility-layers-and-local-binding` |  | 1,347 | unresolved | |
-| 9. Method Governance And Audit | `#9-method-governance-and-audit` |  | 1,926 | unresolved | |
-| 10. What An ODD Product Is | `#10-what-an-odd-product-is` |  | 1,464 | unresolved | |
-| &nbsp;&nbsp;Product Specification (software-development topology) | `#product-specification-software-development-topology` |  | 281 | unresolved | |
-| &nbsp;&nbsp;Product Realization (software-development topology) | `#product-realization-software-development-topology` |  | 280 | unresolved | |
-| &nbsp;&nbsp;ABG | `#abg` |  | 313 | unresolved | |
-| &nbsp;&nbsp;ODD Product | `#odd-product` |  | 210 | unresolved | |
-| &nbsp;&nbsp;Query And Service Layers | `#query-and-service-layers` |  | 287 | unresolved | |
-| 11. Core Law | `#11-core-law` |  | 92 | unresolved | |
-| &nbsp;&nbsp;11.1 Typed Assets And Nodes Are Explicit | `#111-typed-assets-and-nodes-are-explicit` |  | 384 | unresolved | |
-| &nbsp;&nbsp;11.2 Graph Functions Are The Primary Constructive Carrier | `#112-graph-functions-are-the-primary-constructive-carrier` |  | 366 | unresolved | |
-| &nbsp;&nbsp;11.2A Outcome-First Realization Order | `#112a-outcome-first-realization-order` |  | 1,502 | unresolved | |
-| &nbsp;&nbsp;11.3 The Function Catalog Is Published | `#113-the-function-catalog-is-published` |  | 311 | unresolved | |
-| &nbsp;&nbsp;11.4 The GTL Module Is The Operative Publication Surface | `#114-the-gtl-module-is-the-operative-publication-surface` |  | 602 | unresolved | |
-| &nbsp;&nbsp;11.5 Current State Is A Projection Over Constructive History | `#115-current-state-is-a-projection-over-constructive-history` |  | 348 | unresolved | |
-| &nbsp;&nbsp;11.5A ABG Owns Continuation And Re-Entry | `#115a-abg-owns-continuation-and-re-entry` |  | 1,057 | unresolved | |
-| &nbsp;&nbsp;11.5B Execution Authority Audit | `#115b-execution-authority-audit` |  | 3,352 | unresolved | |
-| &nbsp;&nbsp;11.5C Projection-Source Coherence | `#115c-projection-source-coherence` |  | 1,078 | unresolved | |
-| &nbsp;&nbsp;11.5D Constructive Evaluation And Yield Loop | `#115d-constructive-evaluation-and-yield-loop` |  | 23,882 | unresolved | |
-| &nbsp;&nbsp;11.6 Product-Specific Semantics Sit Above The Shared Carrier | `#116-product-specific-semantics-sit-above-the-shared-carrier` |  | 363 | unresolved | |
-| &nbsp;&nbsp;11.7 Manual Walkthrough Must Still Be Lawful | `#117-manual-walkthrough-must-still-be-lawful` |  | 1,544 | unresolved | |
-| &nbsp;&nbsp;11.7A Conforming Agentic Development | `#117a-conforming-agentic-development` |  | 4,380 | unresolved | |
-| &nbsp;&nbsp;11.7B Real Authority-Path Negative Proof (`STDO-UP-010`) | `#117b-real-authority-path-negative-proof-stdo-up-010` | UP-010 | 1,274 | unresolved | |
-| &nbsp;&nbsp;11.8 Cumulative Environment Law Is Mandatory | `#118-cumulative-environment-law-is-mandatory` |  | 559 | unresolved | |
-| &nbsp;&nbsp;11.9 Global Convergence Must Be Stable Under Zoom | `#119-global-convergence-must-be-stable-under-zoom` |  | 846 | unresolved | |
-| 12. Scenario Rule | `#12-scenario-rule` |  | 649 | unresolved | |
-| 13. Installed-Dev Rule | `#13-installed-dev-rule` |  | 433 | unresolved | |
-| 14. Dogfooding Rule | `#14-dogfooding-rule` |  | 599 | unresolved | |
-| 15. Release Boundary | `#15-release-boundary` |  | 383 | unresolved | |
-| 16. Failure Pattern | `#16-failure-pattern` |  | 1,849 | unresolved | |
-| 17. Invocation Rule | `#17-invocation-rule` |  | 1,816 | unresolved | |
-| 18. Cold-Start Reading Order | `#18-cold-start-reading-order` |  | 95 | unresolved | |
-| &nbsp;&nbsp;General ODD Product | `#general-odd-product` |  | 391 | unresolved | |
-| &nbsp;&nbsp;World-Model Product | `#world-model-product` |  | 789 | unresolved | |
-| 19. Ramp-Up Checklist | `#19-ramp-up-checklist` |  | 1,293 | unresolved | |
-| 20. Canonical Compression | `#20-canonical-compression` |  | 1,063 | unresolved | |
+| 1. Position | `#1-position` |  | 2,827 | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated | `ODD.md#1-position` |
+| 2. Method Role | `#2-method-role` |  | 906 | conserved; WORLD_MODEL_METHOD written as the world-model profile (WORLD_MODEL, tier 3) | `ODD.md#2-method-role` |
+| 3. Method Composition | `#3-method-composition` |  | 1,456 | conserved | `ODD.md#3-method-composition` |
+| 4. Method Folder Semantics | `#4-method-folder-semantics` |  | 1,660 | conserved; the three classes and the rule that only method members are constitutional restated generically, the class named by its predecessor membership (`*_METHOD.md`) and in this corpus by the method members the standards README names (the tier 1 and tier 2 standards and, when a project selects them, the tier 3 profiles); the authoring path `specification/standards/` written generically, its successor path bound at packaging | `ODD.md#4-method-library-classes` |
+| 5. Graph Model | `#5-graph-model` |  | 125 | conserved | `ODD.md#5-graph-model` |
+| &nbsp;&nbsp;Nodes | `#nodes` |  | 458 | conserved; the ten example names kept as illustrative | `ODD.md#nodes` |
+| &nbsp;&nbsp;Vectors | `#vectors` |  | 232 | conserved | `ODD.md#vectors` |
+| &nbsp;&nbsp;Probabilistic Compute | `#probabilistic-compute` |  | 3,160 | conserved; the three graph-native URNs, both directional specialisations with their preservation, exclusion and invalidation law; the source concepts' owner written SPEC_METHOD §5; kept distinct from the a_c functor kinds of AXIOMATIC_CALCULUS §5 | `ODD.md#probabilistic-compute` |
+| &nbsp;&nbsp;Graph Functions | `#graph-functions` |  | 379 | conserved; the three forms and the outer-contract rule | `ODD.md#graph-functions` |
+| &nbsp;&nbsp;Traversal | `#traversal` |  | 323 | conserved | `ODD.md#traversal` |
+| 6. Product Boundary | `#6-product-boundary` |  | 1,576 | conserved | `ODD.md#6-product-boundary` |
+| 7. Self-Host Boundary Rule | `#7-self-host-boundary-rule` |  | 756 | conserved | `ODD.md#7-self-host-boundary` |
+| 8. Responsibility Layers And Local Binding | `#8-responsibility-layers-and-local-binding` |  | 1,347 | conserved | `ODD.md#8-responsibility-layers-and-local-binding` |
+| 9. Method Governance And Audit | `#9-method-governance-and-audit` |  | 1,926 | conserved; "ODD_METHOD.md" written as this profile | `ODD.md#9-method-governance-and-audit` |
+| 10. What An ODD Product Is | `#10-what-an-odd-product-is` |  | 1,464 | conserved; the application boundary block carried exactly; the `reference_frame_bases` meaning routed to REFERENCE_FRAME | `ODD.md#10-what-an-odd-product-is` |
+| &nbsp;&nbsp;Product Specification (software-development topology) | `#product-specification-software-development-topology` |  | 281 | conserved | `ODD.md#product-specification-software-development-topology` |
+| &nbsp;&nbsp;Product Realization (software-development topology) | `#product-realization-software-development-topology` |  | 280 | conserved | `ODD.md#product-realisation-software-development-topology` |
+| &nbsp;&nbsp;ABG | `#abg` |  | 313 | conserved; all thirteen ABG ownerships | `ODD.md#abg` |
+| &nbsp;&nbsp;ODD Product | `#odd-product` |  | 210 | conserved | `ODD.md#odd-product` |
+| &nbsp;&nbsp;Query And Service Layers | `#query-and-service-layers` |  | 287 | conserved | `ODD.md#query-and-service-layers` |
+| 11. Core Law | `#11-core-law` |  | 92 | conserved; the all-clauses condition | `ODD.md#11-core-law` |
+| &nbsp;&nbsp;11.1 Typed Assets And Nodes Are Explicit | `#111-typed-assets-and-nodes-are-explicit` |  | 384 | conserved | `ODD.md#111-typed-assets-and-nodes-are-explicit` |
+| &nbsp;&nbsp;11.2 Graph Functions Are The Primary Constructive Carrier | `#112-graph-functions-are-the-primary-constructive-carrier` |  | 366 | conserved | `ODD.md#112-graph-functions-are-the-primary-constructive-carrier` |
+| &nbsp;&nbsp;11.2A Outcome-First Realization Order | `#112a-outcome-first-realization-order` |  | 1,502 | conserved | `ODD.md#112a-outcome-first-realisation-order` |
+| &nbsp;&nbsp;11.3 The Function Catalog Is Published | `#113-the-function-catalog-is-published` |  | 311 | conserved; "at minimum" and "should" kept | `ODD.md#113-the-function-catalogue-is-published` |
+| &nbsp;&nbsp;11.4 The GTL Module Is The Operative Publication Surface | `#114-the-gtl-module-is-the-operative-publication-surface` |  | 602 | conserved | `ODD.md#114-the-gtl-module-is-the-operative-publication-surface` |
+| &nbsp;&nbsp;11.5 Current State Is A Projection Over Constructive History | `#115-current-state-is-a-projection-over-constructive-history` |  | 348 | conserved | `ODD.md#115-current-state-is-a-projection-over-constructive-history` |
+| &nbsp;&nbsp;11.5A ABG Owns Continuation And Re-Entry | `#115a-abg-owns-continuation-and-re-entry` |  | 1,057 | conserved | `ODD.md#115a-abg-owns-continuation-and-re-entry` |
+| &nbsp;&nbsp;11.5B Execution Authority Audit | `#115b-execution-authority-audit` |  | 3,352 | conserved; the five-surface inventory carried exactly; UP-016 keeps its rc.2 route, its successor home being the software-design profile | `ODD.md#115b-execution-authority-audit` |
+| &nbsp;&nbsp;11.5C Projection-Source Coherence | `#115c-projection-source-coherence` |  | 1,078 | conserved | `ODD.md#115c-projection-source-coherence` |
+| &nbsp;&nbsp;11.5D Constructive Evaluation And Yield Loop | `#115d-constructive-evaluation-and-yield-loop` |  | 23,882 | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile | `ODD.md#115d-constructive-evaluation-and-yield-loop` |
+| &nbsp;&nbsp;11.6 Product-Specific Semantics Sit Above The Shared Carrier | `#116-product-specific-semantics-sit-above-the-shared-carrier` |  | 363 | conserved | `ODD.md#116-product-specific-semantics-sit-above-the-shared-carrier` |
+| &nbsp;&nbsp;11.7 Manual Walkthrough Must Still Be Lawful | `#117-manual-walkthrough-must-still-be-lawful` |  | 1,544 | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | `ODD.md#117-manual-walkthrough-must-still-be-lawful` |
+| &nbsp;&nbsp;11.7A Conforming Agentic Development | `#117a-conforming-agentic-development` |  | 4,380 | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | `ODD.md#117a-conforming-agentic-development` |
+| &nbsp;&nbsp;11.7B Real Authority-Path Negative Proof (`STDO-UP-010`) | `#117b-real-authority-path-negative-proof-stdo-up-010` | UP-010 | 1,274 | conserved in full, with the supported-relation block carried exactly; this section is UP-010's only successor home | `ODD.md#117b-real-authority-path-negative-proof-stdo-up-010` |
+| &nbsp;&nbsp;11.8 Cumulative Environment Law Is Mandatory | `#118-cumulative-environment-law-is-mandatory` |  | 559 | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; ACTIVATION §4 states the generic cumulative input this law specialises, and §5 Graph functions binds the two | `ODD.md#118-cumulative-environment-law-is-mandatory` |
+| &nbsp;&nbsp;11.9 Global Convergence Must Be Stable Under Zoom | `#119-global-convergence-must-be-stable-under-zoom` |  | 846 | conserved; "usually" kept | `ODD.md#119-global-convergence-must-be-stable-under-zoom` |
+| 12. Scenario Rule | `#12-scenario-rule` |  | 649 | conserved | `ODD.md#12-scenario-rule` |
+| 13. Installed-Dev Rule | `#13-installed-dev-rule` |  | 433 | conserved | `ODD.md#13-installed-dev-rule` |
+| 14. Dogfooding Rule | `#14-dogfooding-rule` |  | 599 | conserved | `ODD.md#14-dogfooding-rule` |
+| 15. Release Boundary | `#15-release-boundary` |  | 383 | conserved | `ODD.md#15-release-boundary` |
+| 16. Failure Pattern | `#16-failure-pattern` |  | 1,849 | conserved; all fifteen patterns | `ODD.md#16-failure-pattern` |
+| 17. Invocation Rule | `#17-invocation-rule` |  | 1,816 | conserved; all fourteen steps and the three exclusions | `ODD.md#17-invocation-rule` |
+| 18. Cold-Start Reading Order | `#18-cold-start-reading-order` |  | 95 | conserved; "usually" kept | `ODD.md#18-cold-start-reading-order` |
+| &nbsp;&nbsp;General ODD Product | `#general-odd-product` |  | 391 | conserved; nine steps with successor member names | `ODD.md#general-odd-product` |
+| &nbsp;&nbsp;World-Model Product | `#world-model-product` |  | 789 | conserved; ten steps with successor member names | `ODD.md#world-model-product` |
+| 19. Ramp-Up Checklist | `#19-ramp-up-checklist` |  | 1,293 | conserved; all fourteen questions | `ODD.md#19-ramp-up-checklist` |
+| 20. Canonical Compression | `#20-canonical-compression` |  | 1,063 | conserved | `ODD.md#20-canonical-compression` |
 
 ## POSTING_GUIDE.md
 
@@ -626,31 +626,32 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/TRAVERSAL_OCCURRENCE_PROFILE.
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Position | `#position` |  | 892 | unresolved | |
-| Scope | `#scope` |  | 721 | unresolved | |
-| Imported Calculus Boundary | `#imported-calculus-boundary` |  | 2,544 | unresolved | |
-| Closed Semantic-Object Sorts | `#closed-semantic-object-sorts` |  | 4,521 | unresolved | |
-| &nbsp;&nbsp;Finite Reference-Domain Table | `#finite-reference-domain-table` |  | 16,318 | unresolved | |
-| Closed Event-Kind Population | `#closed-event-kind-population` |  | 1,504 | unresolved | |
-| Closed Relation Families | `#closed-relation-families` |  | 8,905 | unresolved | |
-| Closed Constraint, Judgment, Residual, And Stop Kinds | `#closed-constraint-judgment-residual-and-stop-kinds` |  | 6,798 | unresolved | |
-| Occurrence Identity | `#occurrence-identity` |  | 1,781 | unresolved | |
-| &nbsp;&nbsp;OP-001 Seed Acyclicity | `#op-001-seed-acyclicity` | OP-001 | 248 | unresolved | |
-| Candidate, Judgment, Event, And Relation Separation | `#candidate-judgment-event-and-relation-separation` |  | 3,758 | unresolved | |
-| &nbsp;&nbsp;OP-002 Atomic Semantic Admission | `#op-002-atomic-semantic-admission` | OP-002 | 581 | unresolved | |
-| &nbsp;&nbsp;OP-003 Correction Without Erasure | `#op-003-correction-without-erasure` | OP-003 | 253 | unresolved | |
-| Causality And Typed Lineage | `#causality-and-typed-lineage` |  | 748 | unresolved | |
-| &nbsp;&nbsp;OP-004 Precedence Is Not Authority | `#op-004-precedence-is-not-authority` | OP-004 | 303 | unresolved | |
-| Mutable-Subject Effect Relation | `#mutable-subject-effect-relation` |  | 3,806 | unresolved | |
-| &nbsp;&nbsp;OP-005 Mutable Reality Conservation | `#op-005-mutable-reality-conservation` | OP-005 | 496 | unresolved | |
-| &nbsp;&nbsp;OP-006 Immutable Iteration History | `#op-006-immutable-iteration-history` | OP-006 | 298 | unresolved | |
-| Event Frontier And Projection | `#event-frontier-and-projection` |  | 1,024 | unresolved | |
-| &nbsp;&nbsp;OP-007 Scope Conservation | `#op-007-scope-conservation` | OP-007 | 246 | unresolved | |
-| Authority And Adoption | `#authority-and-adoption` |  | 966 | unresolved | |
-| Exact Profile Identity | `#exact-profile-identity` |  | 172 | unresolved | |
-| &nbsp;&nbsp;Closed Profile Signature | `#closed-profile-signature` |  | 5,576 | unresolved | |
-| Exclusions | `#exclusions` |  | 563 | unresolved | |
-| Conformance Obligations | `#conformance-obligations` |  | 2,222 | unresolved | |
+| Position | `#position` |  | 892 | conserved; both URN blocks carried exactly | `TRAVERSAL_OCCURRENCE.md#position` |
+| Scope | `#scope` |  | 721 | conserved | `TRAVERSAL_OCCURRENCE.md#scope` |
+| Imported Calculus Boundary | `#imported-calculus-boundary` |  | 2,544 | conserved; `RecordKind_ac` and `Population_M` pointed to AXIOMATIC_CALCULUS §2 | `TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary` |
+| Closed Semantic-Object Sorts | `#closed-semantic-object-sorts` |  | 4,521 | conserved; the nineteen-sort table carried exactly | `TRAVERSAL_OCCURRENCE.md#closed-semantic-object-sorts` |
+| &nbsp;&nbsp;Finite Reference-Domain Table | `#finite-reference-domain-table` |  | 16,318 | conserved; the basis codes, every table row, the external-resolution expansion and `ResolutionRefDomain` carried exactly | `TRAVERSAL_OCCURRENCE.md#finite-reference-domain-table` |
+| Closed Event-Kind Population | `#closed-event-kind-population` |  | 1,504 | conserved | `TRAVERSAL_OCCURRENCE.md#closed-event-kind-population` |
+| Closed Relation Families | `#closed-relation-families` |  | 8,905 | conserved; the twenty-four relation kinds, qualifier record, value domains, contract, cardinality function and congruence law carried exactly | `TRAVERSAL_OCCURRENCE.md#closed-relation-families` |
+| Closed Constraint, Judgment, Residual, And Stop Kinds | `#closed-constraint-judgment-residual-and-stop-kinds` |  | 6,798 | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core result algebra is new, stated under Mapping to the core result algebra in this section as the profile's default, with `partial` and `partial_effect` mapped to falsified and the loss stated | `TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds` |
+| Occurrence Identity | `#occurrence-identity` |  | 1,781 | conserved | `TRAVERSAL_OCCURRENCE.md#occurrence-identity` |
+| &nbsp;&nbsp;OP-001 Seed Acyclicity | `#op-001-seed-acyclicity` | OP-001 | 248 | conserved | `TRAVERSAL_OCCURRENCE.md#op-001-seed-acyclicity` |
+| Candidate, Judgment, Event, And Relation Separation | `#candidate-judgment-event-and-relation-separation` |  | 3,758 | conserved | `TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation` |
+| &nbsp;&nbsp;OP-002 Atomic Semantic Admission | `#op-002-atomic-semantic-admission` | OP-002 | 581 | conserved | `TRAVERSAL_OCCURRENCE.md#op-002-atomic-semantic-admission` |
+| &nbsp;&nbsp;OP-003 Correction Without Erasure | `#op-003-correction-without-erasure` | OP-003 | 253 | conserved | `TRAVERSAL_OCCURRENCE.md#op-003-correction-without-erasure` |
+| Causality And Typed Lineage | `#causality-and-typed-lineage` |  | 748 | conserved | `TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage` |
+| &nbsp;&nbsp;OP-004 Precedence Is Not Authority | `#op-004-precedence-is-not-authority` | OP-004 | 303 | conserved | `TRAVERSAL_OCCURRENCE.md#op-004-precedence-is-not-authority` |
+| Mutable-Subject Effect Relation | `#mutable-subject-effect-relation` |  | 3,806 | conserved | `TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation` |
+| &nbsp;&nbsp;OP-005 Mutable Reality Conservation | `#op-005-mutable-reality-conservation` | OP-005 | 496 | conserved | `TRAVERSAL_OCCURRENCE.md#op-005-mutable-reality-conservation` |
+| &nbsp;&nbsp;OP-006 Immutable Iteration History | `#op-006-immutable-iteration-history` | OP-006 | 298 | conserved | `TRAVERSAL_OCCURRENCE.md#op-006-immutable-iteration-history` |
+| Event Frontier And Projection | `#event-frontier-and-projection` |  | 1,024 | conserved | `TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection` |
+| &nbsp;&nbsp;OP-007 Scope Conservation | `#op-007-scope-conservation` | OP-007 | 246 | conserved | `TRAVERSAL_OCCURRENCE.md#op-007-scope-conservation` |
+| Authority And Adoption | `#authority-and-adoption` |  | 966 | conserved | `TRAVERSAL_OCCURRENCE.md#authority-and-adoption` |
+| Exact Profile Identity | `#exact-profile-identity` |  | 172 | conserved | `TRAVERSAL_OCCURRENCE.md#exact-profile-identity` |
+| &nbsp;&nbsp;Closed Profile Signature | `#closed-profile-signature` |  | 5,576 | conserved, save the sentence split to the child row below; the signature, basis and identity blocks and the ten-fragment list carried exactly, the fragments resolving to this member's headings; the member path written `standards/TRAVERSAL_OCCURRENCE.md` and the calculus clause `#2-signature`, the carried block's "Core Signature clause" being AXIOMATIC_CALCULUS §2 Signature | `TRAVERSAL_OCCURRENCE.md#closed-profile-signature` |
+| &nbsp;&nbsp;&nbsp;&nbsp;Closed Profile Signature: fourteen members | `#closed-profile-signature-fourteen-members` |  | 107 | superseded by AXIOMATIC_CALCULUS §8; the rc.2 sentence "For the calculus edition bound by this profile publication candidate, that population has fourteen members" counted the derivation account of the rc.2 calculus edition; §8 retains the principle-ref population as the exact expansion of the bound calculus member's derivation account, without a hard-coded count and recomputed when that account changes, so the population law stays and the edition count is replaced by the size that account yields; child row of `#closed-profile-signature`, its anchor synthetic | `AXIOMATIC_CALCULUS.md#8-calculus-identity` |
+| Exclusions | `#exclusions` |  | 563 | conserved | `TRAVERSAL_OCCURRENCE.md#exclusions` |
+| Conformance Obligations | `#conformance-obligations` |  | 2,222 | conserved; all twenty-one obligations | `TRAVERSAL_OCCURRENCE.md#conformance-obligations` |
 
 ## UX_METHOD.md
 

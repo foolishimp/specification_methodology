@@ -60,6 +60,9 @@ current state under explicit uncertainty.
 | [WRITING_GUIDE.md](WRITING_GUIDE.md) | guide | writing discipline: core rule, style rules, habits to remove, good and bad prose, tone by authority layer, specification artifact practice, layer checks, current-surface writing |
 | [GLOSSARY.md](GLOSSARY.md) | guide | the non-deciding locator index: index contract, locator law, rows by bounded context, terms awaiting a context declaration or an owning member |
 
+The constitutional method members of this corpus are its tier 1 and tier 2
+standards and, when a project selects them, its tier 3 profiles (P6, P3).
+
 Each clause names the principle that requires it (P0 to P6, defined in
 FOUNDATIONS §3) and, where it restates or supersedes an rc.2 clause, may
 carry that clause's route as provenance; a route is never the disposition
