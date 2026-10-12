@@ -1418,8 +1418,8 @@ and significant path coverage are ASSURANCE §1 to §6 (P6; rc.2
 Closure requires authority trace, realisation proof, negative proof where
 drift is plausible, and a present-tense statement of the residual open
 pressure (P6, P4b, P5; provenance rc.2
-authority_compressions/stdo_compressed.md, proof compression; the
-residual-pressure statement is a claim no rc.2 body states).
+authority_compressions/stdo_compressed.md, proof compression, a claim no
+rc.2 body states).
 
 ## 10. Design records
 

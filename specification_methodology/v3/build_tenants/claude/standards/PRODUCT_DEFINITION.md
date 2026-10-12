@@ -734,9 +734,9 @@ Staleness binding. A derived surface or projected frame carries the path
 and digest of each deciding source it was derived from, and of each index
 it watches (GLOSSARY §2). A change to any of those digests makes it stale,
 and it must be regenerated or explicitly re-accepted before an
-installation treats it as current. The binding runs one way: a matching
-digest establishes neither currency of meaning nor fidelity (above;
-EVALUATION §7). The raw owning members of the same selected cut remain
+installation treats it as current. A matching digest establishes
+identity, not fidelity or sufficiency (above; EVALUATION §7). The raw
+owning members of the same selected cut remain
 the deciding authority and decide when a derived surface or frame is
 stale or insufficient for a question (P3, P5, P6; provenance rc.2
 authority_compressions/README.md and stdo_bootstrap.md step 5, a claim no
