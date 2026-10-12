@@ -168,3 +168,25 @@ I5 Glossary. Sat: rows 1, 2 valid, non-deciding locators; row 3 invalid, its cla
 8. Meaning chosen by order, frequency or unauthorised disambiguation.
 9. Closure, compliance or admissibility claimed beside a named counterexample.
 10. Falsified for a structural refusal or stale basis.
+
+## Amendment after the cross-family review (2026-10-13)
+
+Written by an independent context from TASK-E, TASK-F and v2.5.1-rc.2 (TO, OM, RF); tenant text used for locus names only. Each result is derived from rc.2's meaning applied to the subject's stated facts. The sections above stand; where this section differs, it governs.
+
+F5 occ-24: superseded. Stop partial_effect, core indeterminate; the dispatched invocation, bounded evidence, the partial_effect residual and re-entry before any further effect survive beside it. "The observed post-state defeats the intended outcome" shows the outcome is not reached; that holds for every partial effect and is why rc.2 decides `partial`, a decision distinct from `falsified` in transition_evaluation. The subject gives an error return but no recorded disposition, no evidence the invocation has ended and no settled observation of the other two SKUs, so the transition has not settled and the evidence cannot decide it. Decided by: evidence the invocation has ended, a bounded post-observation of all five SKUs under the subject binding, and an explicit EffectDisposition. Sat: as stated; saying the outcome is not met is allowed. Fals: falsified or satisfied as the stop's member; residual or re-entry dropped; no effect; rollback inferred; further effect before disposition. rc.2: TO closed judgment domains (transition_evaluation), residual table (partial_effect), mutable-subject effect relation, OP-005; RF-012.
+
+F3: superseded on the member. L-9 unlawful, decided by the closed relation table; stop refusal; core falsified. L-9 is an identifiable edge whose source ev-107 fails the required Occurrence sort, a failed required condition; rc.2 makes refusal the image of a falsified constraint and maps invalid_basis only to invalid_basis. Fals: lawful; edge retyped; invalid_basis or indeterminate as the edge's member. rc.2: TO closed relation families (a mismatched edge refuses occurrence_admission), constraint table; RF-012.
+
+F5 occ-25: partly superseded. Stop gap, core invalid_basis, unresolved r-77 surviving with repair re-entry. The occurrence cannot be identified because its identity input does not resolve, so the subject cannot support the evaluation; this differs from L-9, whose subject exists. Fals: hold or indeterminate; refusal or falsified. rc.2: TO model_validation row (unresolved refs retain gap until repaired); RF-012.
+
+F5 occ-23: confirmed. Hold, indeterminate, residual naming the frontier observation; out_of_frame is excluded because every needed relation and capability is declared and exercised. Decided by observing F-9's newest frontier. rc.2: TO frontier_projection row; RF-012.
+
+Task F required result now reads: no cause; edit unlawful; L-9 refusal, falsified; precedence orders only; occ-23 indeterminate, occ-24 indeterminate, occ-25 invalid_basis.
+
+E1 to E4: confirmed as written. E-13 yield, indeterminate: progress admitted, no evidence against the obligations (OM A9, A10). E-14 repair, falsified: 17 postcodes fail O-2. E-15 re-enter, invalid_basis: R-7 v3 supersedes the basis. E-16 reprice, out_of_frame: no selected outcome or admitted bound covers Ireland. rc.2: OM 11.5D selected-outcome paragraph, A8; RF-012.
+
+G4, H5: confirmed; each falsified member rests on a counterexample or failed required condition the expectation states.
+
+F1, F2, F4, E5, E6 map no value to a core member and are unchanged.
+
+Failure signature 10 now reads: falsified for a stale basis or an unresolvable subject. Added 11: falsified for a begun effect whose disposition is not established.
