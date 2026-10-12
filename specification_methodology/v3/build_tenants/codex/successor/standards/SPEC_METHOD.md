@@ -1,22 +1,20 @@
 # Spec-Driven Homeostatic Methodology
 
-This member owns its particular constitutional contracts.
-[Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md) organise recurring premises
-and responsibilities abstracted from the detailed owners. The constitutional
-chain below retains its own authority direction from Goals and its own exact
-premises. Foundations supplies no replacement derivation or additional
-dependency. Finite capacity explains bounded work; it confers no authority.
+This member owns the particular constitutional contracts of Spec Method.
+The [foundational commitments](FOUNDATIONS.md#foundational-commitments) supply
+its declared premise layer. The [shared contract](TRANSFORMATION_LIBRARY.md#foundational-contract)
+provides generic transformation vocabulary. The
+[work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+relates those premises to this member's UP-020 and computed-treatment rules,
+identifying which consequences are conditional and which are independent
+purpose, policy or authority choices.
 
-Bind corresponds here to Product-definition routing, semantic resolution and
-lawful intake. Acquire corresponds to constitutional and execution sufficiency.
-Transform corresponds to bounded construction, change classes and migration.
-Evaluate and Conjoin correspond to the evidence, assurance and consistency
-laws. Dispose corresponds to owner decisions, exact checkpoints and lawful
-continuation. These associations explain the detailed laws; the transformations
-remain explanatory families, rather than compulsory workflow stages or runtime
-APIs. The following clauses retain their owners, predicates, permissions,
-refusals, lifecycle and invalidation conditions.
+The constitutional chain retains its direction from Goals. That selection,
+its grants, concrete result domains and other particular determinations are not
+derived from finite capacity. Existing clauses below state the complete local
+contracts; neither a foundation argument nor a shared helper supplies permission.
+Bind, Acquire, Transform, Evaluate, Conjoin and Dispose can be composed within
+these contracts without imposing six stages or a new runtime API.
 
 The detailed members retain their own declared standing and applicability.
 Graph-native constitutional meanings remain owned by `ODD_METHOD.md`;

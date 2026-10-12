@@ -1,24 +1,23 @@
 # Transformation Library
 
-This non-deciding account groups recurring responsibilities without defining a
-new normative hierarchy, specialization or universal instance signature. In a
-construction engagement the applicable owner may require purpose, exact subject
-and state, interpretation, governing basis, actor capability, inputs, constraints,
-permitted effects, output predicate, failures and consumer. Calculus definitions
-and other domains retain their own signatures and dependencies. This is neither
-a mandatory record schema nor a requirement to add fields to existing records.
+This member owns the shared transformation contract vocabulary for the
+purposeful, specification-governed construction domain declared by
+[Foundations](FOUNDATIONS.md#foundational-commitments). Bind, Acquire, Transform,
+Evaluate, Conjoin and Dispose are responsibilities that can be composed or
+co-located, not compulsory stages, actors or runtime APIs.
 
-These are shared explanatory families. [Spec Method](SPEC_METHOD.md) owns
-construction and outcome law; [Frame Method](REFERENCE_FRAME_METHOD.md) owns
-reference-frame evaluation and composition. The calculus and domain members
-retain their own composition and judgment laws. Domain members determine their admitted outcome and
-disposition sets. The library does not supersede those meanings.
+The contracts below are conditional on selected foundational premises and
+instance choices. Particular methods retain ownership of their concrete types,
+result algebras, applicability, adoption, admission and operation grants.
+A contract definition does not supersede an owner determination or authorize
+its use. The candidate remains subject to the installed construction basis.
 
-Its explanatory vocabulary resolves in bounded context
+Its shared contract vocabulary resolves in bounded context
 `urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
 Methodology Product authority. The basis is this exact member digest and its
 cited source-owned contracts under the activation's governing cut; its scope
-is the explanatory families and the explicitly imported authority vocabulary.
+is the generic contract vocabulary, conditional specialization arguments and
+the explicitly imported authority vocabulary.
 Named domain examples retain their source context; their role labels, types and
 outcome enums are not local definitions or a shared library contract. A linked family correspondence
 uses that context, while each named source function keeps its own context and
@@ -29,7 +28,7 @@ several correspondences: this account is neither a partition nor a hierarchy.
 
 The target context is urn:stdo:bounded-context:transformation-library and its
 semantic owner is the STDO Specification Methodology Product authority.
-Direction is source to this explanation; meanings are unchanged owner-qualified
+Direction is source to this contract account; meanings are unchanged owner-qualified
 references, with no translation, loss, inverse or ownership transfer. The source
 context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
 Its exact source member SHA256 is
@@ -56,6 +55,66 @@ Missing meaning or authority bindings remain unresolved before dependent use.
 The named Baseline Reviewer and WorkerResult cases below are owner-qualified
 domain examples, not imported local role labels, aliases or outcome types.
 Their source contracts retain applicability, adoption and activation conditions.
+
+## Foundational contract
+
+Premise owner: FOUNDATIONS.md, context urn:stdo:bounded-context:foundations,
+under the selected complete candidate basis. F1–F6 retain their exact definitions
+at that source. Direction is source premises to the library's conditional
+contracts; no meaning is translated or lost and no authority is transferred.
+The target is this member's context and its Product owner declared above. The
+activation or installed manifest binds both exact member digests. A changed
+premise, basis or adoption condition reopens the affected argument before use.
+
+For one selected operation, let X and Y be its declared input and output
+domains, K its interpretation, P its required outcome predicate, I its material
+identity/state relations and G its actual effect or decision grant. These are
+parameters, not serialized fields or a universal schema. The instance owns its
+admitted outcome set, including how it represents unknown or refused handling.
+
+- F1 and F2 require P to be about the intended subject under K; satisfying a
+  different predicate cannot establish that outcome.
+- F3 and F4 require I and the outer contract's material support to survive a
+  handoff. Permitted variation or loss is an explicit instance choice.
+- F2 and F5 require a truthful unknown when material support is insufficient;
+  they do not require stopping unrelated authorized work.
+- F6 requires an actual G before a dependent effect or disposition. Sufficient
+  evidence for P cannot supply G.
+
+An instance of Acquire returns support adequate for its selected predicate, or
+its admitted insufficient/unknown outcome; Transform preserves the material
+relations of the selected X-to-Y contract; Evaluate judges P rather than granting
+effects; Conjoin uses the selected composite rule; Dispose chooses only from
+already permitted actions. Bind supplies their current instance coordinates.
+A single function can discharge several responsibilities. Each admitted result
+algebra and independent assessment condition stays with the particular owner.
+
+## Work/recovery specialization
+
+This chain specializes the generic contract for interrupted, purposeful work.
+It assumes an admitted work identity, persistent workspace, selected outcome,
+actual grants and a material uncertain effect. These are explicit instance
+premises; they do not follow from finite capacity alone.
+
+| Premises | Conditional consequence | Particular contract and independent choice |
+|---|---|---|
+| F1, F2; selected outcome and current subject | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
+| F2, F5; coupled material obligations and finite actor | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
+| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | Computed Classification And Treatment and Ticket condition-based reuse choose applicability, invalidation and the wider frontier when independence is unproved. Their concrete freshness rules are domain policy. |
+| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | Computed Classification And Treatment supplies the unknown-effect rule; the operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
+| F1, F4, F6; required results and current mandate | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
+
+The consequences are arguments about the stated premises, not proofs of every
+source clause. Concrete work-carrier layout, number of actors, numeric budgets,
+optional Baseline adoption, release procedure and all domain result enums are
+independent choices. They are not inferred from the foundational commitments.
+This chain leaves those choices at their owners and adds no mandatory ledger.
+
+A recovery activation uses the sufficient projected clauses and actual subject.
+It need not load this entire argument, every method or historical event bodies.
+The [ordinary work entry](../plugins/spec/skills/stdo-work/SKILL.md#acquire-the-responsibility-frame)
+locates that material after basis selection. Its projection does not become a
+rival authority or guarantee sufficiency for a different task.
 
 ## Bind
 

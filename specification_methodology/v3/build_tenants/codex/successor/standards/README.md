@@ -48,9 +48,10 @@ does not reclassify a constitutional method as a guide or profile. The calculus
 and optional Traversal profile retain their own signatures; the Baseline
 retains its adoption boundary; the Glossary is a non-deciding locator.
 Foundations and the library
-are non-deciding explanatory organization and contract families under the
-Methodology Product authority; they preserve the detailed owning determinations
-and create no additional obligation or grant.
+declare the premise layer and shared conditional contracts under the Methodology
+Product authority. Particular methods retain their concrete decisions and
+grants. The work/recovery specialization is implemented; whole-corpus
+reconstruction remains open.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from

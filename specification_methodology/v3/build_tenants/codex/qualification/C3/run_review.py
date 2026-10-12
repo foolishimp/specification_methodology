@@ -15,18 +15,19 @@ parser = argparse.ArgumentParser()
 parser.add_argument("directory", type=Path)
 parser.add_argument("--subject", required=True)
 parser.add_argument("--seconds", type=int, default=480)
+parser.add_argument("--budget-usd", type=float, default=6)
 args = parser.parse_args()
 directory = args.directory
 prompt = (directory / "PROMPT.txt").read_bytes()
 subject = subprocess.check_output(["git", "rev-parse", args.subject], text=True).strip()
 argv = ["claude", "-p", "--safe-mode", "--tools", "", "--permission-mode", "dontAsk",
         "--output-format", "json", "--no-session-persistence", "--model", "opus",
-        "--effort", "medium", "--max-budget-usd", "6"]
+        "--effort", "medium", "--max-budget-usd", str(args.budget_usd)]
 started = time.monotonic()
 report = {"subject_commit": subject, "argv": argv, "prompt_bytes": len(prompt),
           "prompt_sha256": hashlib.sha256(prompt).hexdigest(),
           "context_allowance_bytes": 600000, "wall_allowance_seconds": args.seconds,
-          "spend_allowance_usd": 6, "role": "author-independent Reviewer"}
+          "spend_allowance_usd": args.budget_usd, "role": "author-independent Reviewer"}
 report["provider_cwd"] = "/private/tmp"
 if len(prompt) > report["context_allowance_bytes"]:
     raise SystemExit("context envelope exceeded before dispatch")

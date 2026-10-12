@@ -1,0 +1,9 @@
+# Matched work/recovery task
+
+Interpret the selected method's ordinary work entry and recommend the next bounded lawful action for each supplied work state. Use exact material clauses and observed facts; report uncertainty and the action's authority. This is a read-only qualification study, not execution of the hypothetical worker's effects. Do not edit files or contact any service. Both method variants receive this identical task.
+
+The Host has already resolved the actual construction Product and verified its installed builder: urn:stdo:product-definition:stdo-3, constitution basis stdo://releases/v2.5.1-rc.2/, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782; stdo verify returned valid with no failures. For this acquisition study, the METHOD_ROOT supplied in your activation is the frozen documentary method under examination. The v3 variant is unreleased candidate source, not an operative install. Reading it cannot authorize worksite actions. This controlled study starts after Product/builder verification; it tests the following ordinary acquisition and interpretation path, not native plugin discovery or consumer adoption.
+
+Start at METHOD_ROOT/plugins/spec/skills/stdo-work/SKILL.md, acquire relevant material by its own routes, then examine STATES.json. Do not assume a prescribed view or load the whole corpus. Sources outside METHOD_ROOT and this task directory are not available to this activation. You are a fresh reader, not the author or accepting owner.
+
+Return each state's next action and retained work, unsupported claims or unresolved conditions, and exact source paths/clauses used. Distinguish judgment from a permission or completion claim. Also report acquisition limits you encounter. The expected results are assessed independently; they are not supplied to you.

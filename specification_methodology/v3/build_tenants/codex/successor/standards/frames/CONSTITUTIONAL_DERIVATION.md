@@ -25,7 +25,8 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -103,7 +104,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
 
 ## Test Authority Rule
 
@@ -290,7 +291,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `4be1f033a4fbf2d978a15a873affddaefc7b7b96cf8d6665a9982a27938333ad`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
 
 ## Bind
 
@@ -299,7 +300,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `4be1f033a4fbf2d978a15a873affddaefc7b7b96cf8d6665a9982a27938333ad`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
 
 ## Acquire
 
@@ -310,7 +311,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `4be1f033a4fbf2d978a15a873affddaefc7b7b96cf8d6665a9982a27938333ad`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
 
 ## Transform
 

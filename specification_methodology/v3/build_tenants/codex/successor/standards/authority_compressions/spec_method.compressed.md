@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d
+source_digest: c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform

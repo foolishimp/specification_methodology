@@ -15,6 +15,26 @@ Read and apply
 execution contract or changing any surface. Continue only from its exactly-one
 verified selection; that selection grants no work or mutation authority.
 
+## Acquire The Responsibility Frame
+
+After the exact Product basis is selected, resolve the selected cut's
+[standards index](../../../../standards/README.md) and the accepted Project
+Reference-Frame Basis for the responsibility named by the task. This is material
+acquisition within the current work grant, not another admission or actor stage.
+
+For interrupted work or uncertain effects, the index's work/recovery route
+projects current-state, applicability, authority and continuation clauses.
+For another task use its relevant route or directly acquire the deciding owners.
+Select only available material in the verified basis: a cut without a curated
+view still uses its exact owner clauses; a mutable candidate is no fallback.
+
+Read the selected frame and the actual subject. Follow material source and
+coupled-obligation references when the task needs them. The view alone makes no
+universal sufficiency claim and supplies no role, effect or decision grant.
+Do not load the corpus merely because it is present. If coupled material does
+not fit the capable activation, retain the unknown and use an already-authorized
+refinement, support or stop; do not silently reduce the required predicate.
+
 ## Classify From The Available Evidence
 
 Apply the selected basis's `SPEC_METHOD.md` intake and agentic-construction

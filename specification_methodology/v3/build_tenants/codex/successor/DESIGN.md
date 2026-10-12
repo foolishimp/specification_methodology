@@ -12,8 +12,8 @@ needed by a future v3 consumer.
 
 | Owner | Material responsibility | Foundation/library relation |
 |---|---|---|
-| FOUNDATIONS | Explicit premises, contextual meaning, purpose, identity, composition, finite capacity and separate judgment/authority | Defines the governing distinctions and scoped hypotheses. |
-| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | One logical contract family with parameterized instances, not a mandatory workflow or runtime API. |
+| FOUNDATIONS | Explicit premises, contextual meaning, purpose, identity, composition, finite capacity and separate judgment/authority | Owns declared premises and standing; particular rules require the stated specialization arguments. |
+| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and the implemented work/recovery specialization; concrete types, policy and grants stay with method owners. |
 | AXIOMATIC_CALCULUS | Formal entities, claims, interpretations and typed calculus | Formal refinement of interpretation and conservation; mechanics remain a separate Product. |
 | REFERENCE_FRAME_METHOD | Material context, frame coverage, capability and evaluation law | Acquire/Evaluate/Conjoin over bounded responsibility. |
 | STDO_REFERENCE_FRAME_BASELINE | Optional generic specialist and Executive/Worker/Reviewer configurations | Operational instances, preserving role grants and independence. |
@@ -40,6 +40,13 @@ semantic determinations at their current owner. Do not combine independent
 assessment with author judgment, F11-like aggregation with acceptance, or evidence
 with permission. A new helper, frame or serialized carrier is justified only by
 a material distinction the existing contracts cannot preserve.
+
+The first repaired branch is premises -> generic transformation contract ->
+Spec Method work/recovery specialization -> ordinary stdo-work acquisition ->
+actual task interpretation. Foundations defines the premises, the library owns
+the generic contract vocabulary, and detailed methods retain concrete policy
+and authority. This is a conditional dependency argument, not an assertion that
+all rules follow from finite capacity or that every method has been rebuilt.
 
 This increment conserves predecessor determinations. It introduces the explicitly
 scoped foundation/library account and standalone organization required by the

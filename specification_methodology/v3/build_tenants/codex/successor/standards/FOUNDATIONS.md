@@ -1,17 +1,18 @@
 # STDO Foundations
 
-STDO specifies purposeful construction by actors with finite resources. In a
-selected construction or evaluation engagement, purpose, subject interpretation,
-governing basis, actor and evidence are material bindings under their respective
-owners. They are not dependencies of every calculus definition. These foundations
-are a non-deciding explanatory account. They introduce no duties, grants or
-acceptance conditions beyond the named owning contracts. The explanatory direction abstracts
-recurring relations from the detailed owners, then maps instances back to those
-exact contracts. It creates no normative hierarchy, derivation provenance or
-constitutional specialization relation. [Spec Method](SPEC_METHOD.md)
-owns constitutional construction and [Frame Method](REFERENCE_FRAME_METHOD.md)
-owns material evaluation context; explanatory consolidation preserves their
-source-owned determinations.
+STDO specifies purposeful construction by actors with finite resources. This
+member declares the foundational commitments for that method domain and the
+premises on which its conditional construction contracts depend. The
+[Transformation Library](TRANSFORMATION_LIBRARY.md) defines their shared
+contract vocabulary; particular methods bind their types, predicates, result
+algebras and authority. Neither adopted premises nor an entailment argument
+appoints an actor or supplies an operation grant.
+
+These are candidate definitions for the v3 realization, not operative builder
+law. STDO 2.5.1 RC2 governs this construction. Existing deciding clauses remain
+owned by their named methods; the relationship below explains their conditional
+specialization without assigning all software or calculus definitions a common
+purpose, signature or workflow.
 
 ## Premises and standing
 
@@ -44,11 +45,39 @@ traversal, ticket, world-model or calculus contexts.
 [Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
 governs cross-context use; no shared default interpretation is inferred.
 
-These premises explain how the source-owned obligations fit together: preserve
-the selected outcome and constraints, supply material context, conserve identity
-and authority, and report supported outcomes. This is an explanatory account,
-not an entailment proof or replacement derivation basis for those laws. Finite
-capacity alone does not select the other premises or confer authority.
+The premises below are adopted commitments for the selected methodology domain,
+not theorems derived from finite capacity alone. Particular method rules need
+these premises plus their stated domain and policy choices. A conditional
+argument preserves that distinction; it does not manufacture authority.
+
+## Foundational commitments
+
+The context and owner declared above own F1–F6 in this method realization.
+They do not rename the separately scoped authority concepts imported below.
+
+| Commitment | Premise and standing | Distinction retained |
+|---|---|---|
+| F1 Purpose | Adopt a selected outcome and adequacy relation for purposeful construction. Value choices come from the purpose owner. | A local successful operation need not satisfy the selected outcome. |
+| F2 Interpretation | Claims are interpreted on a declared subject and basis; unsupported interpretation remains unresolved. | Encoding or structural validity is not semantic evidence. |
+| F3 Identity and current state | Work has scoped identity and observable persistent state; representation and historical observation are separate. | Re-entry need not recreate completed work, and history need not describe current effects. |
+| F4 Typed composition | A composite conserves its outer contract's material relations under declared compatibility and loss. | Shared machinery does not merge owners, findings or authority. |
+| F5 Finite capacity and total handling | Actor resources are finite; the selected control domain admits truthful handling of unknown, inadequate and interrupted conditions. | Total handling is not omniscience, universal idempotence or guaranteed solution. |
+| F6 Evidence and authority | Evidence supports claims; operation and decision authority come from their bound owners. | A judgment or available tool is not permission. |
+
+For this domain, these premises require a transformation contract to explain
+what counts as an adequate result, which subject and interpretation it uses,
+what state and material relations survive, which unknown outcomes it admits,
+and which effects or dispositions are authorized. Only material bindings are
+required by the selected instance. The contract vocabulary is defined once in
+[the library's foundational contract](TRANSFORMATION_LIBRARY.md#foundational-contract).
+A function in another domain retains its own dependencies; these commitments do
+not add a purpose field or a mandatory record to every calculus entity.
+
+A specialization fixes additional types, predicates, policy and adoption
+conditions without discarding its selected generic contract's guarantees. The
+[work/recovery argument](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+shows the premises, consequences and independent choices for one complete chain.
+It is not a claim that every existing method has already been reconstructed.
 
 ## Interpretation and representation
 
@@ -237,12 +266,11 @@ Their domains, laws and falsifiers must be supplied before using them as proof.
 ## Canonical transformations
 
 The [transformation library](TRANSFORMATION_LIBRARY.md) describes Bind, Acquire,
-Transform, Evaluate, Conjoin and Dispose. Correspondences name existing contracts and owners;
-they are not six compulsory stages or six runtime APIs. The detailed method
-members determine their domain contracts, which the library describes through
-shared families; no authority derives from that description. Any proposed
-normative change returns to its detailed owning contract; adding an explanatory
-family cannot make that change implicitly.
+Transform, Evaluate, Conjoin and Dispose. The library defines a shared contract vocabulary with conditional obligations
+for this selected method domain. Particular methods specialize it through their
+own types, predicates and authority; it is not six compulsory stages or six
+runtime APIs. No operation authority follows from a contract definition.
+A changed detailed determination still returns to its owning contract.
 
 ## Construction and use
 

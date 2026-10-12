@@ -1,8 +1,10 @@
 # STDO v3.0.0 Codex successor execution
 
-State: candidate_ready for owner review. Independent confirmation satisfies the
-final authority and recovery-excerpt claims at c10d70f; no common checkpoint
-acceptance or release. Earlier failed returns and the overrun remain literal.
+State: foundation-based work/recovery repair is in progress under Jim's
+continue. The previous reviewable candidate is b4310c0. Its bounded authority
+and recovery findings remain closed at that subject; changed architectural and
+ordinary-acquisition claims await fresh review. Common checkpoint and release
+acceptance remain open.
 
 Envelope overrun: the three-hour planning allowance was exceeded. Source
 summary churn and insufficient early abstraction/condition preservation are
@@ -85,3 +87,5 @@ Exit: complete self-contained documentary candidate, exact 690-row mapping, reso
 2026-10-12T10:13:13.257127+00:00 — Executive consumed the independent resumed-final-confirmation at frozen c10d70f. Both assigned claims are satisfied with no findings: source-defined authority relations and exact current recovery excerpts. The three earlier authority counterexamples are closed for this subject; prior failed returns remain historical. Decision: accept only these bounded repaired relations for candidate readiness, retaining transport, source-scope, section-boundary, coupled-material and independence limits. Whole-member conservation acceptance, common C3 closure, main integration and release are not inferred. Separately activated own-tenant recording Writer updates the return, applicability, counters and exact conservation pins, rechecks affected a_c bindings and artifact controls, freezes the inventory from a named input commit, and checkpoints the own branch. No Product body change, peer/common effect or additional broad review is selected.
 
 2026-10-12T10:15:03.795008+00:00 — Recording Writer sealed the 84-member inventory from input 21dd2c4213ea01334cacb1303b99aec7d175ed04, keeping Product input c10d70f. Strict checks passed: 322 local routes, all 690 distinct conservation rows, complete exact inventory, and three actual corrupt/missing/unlisted controls refused with the unchanged baseline restored. Affected a_c bindings were requalified: seven pinned tool members, both structural programs, equal projections, one-index closure, diagnostic-specific refusals, exact join and 608 finite cases remain valid in their bounded domain. The independent call took 152.094 seconds; aggregate 34 calls report USD 24.349782, below USD 30. The earlier three-hour convergence failure remains recorded. Own documentary construction returns ready for owner review here; no background review, common/peer work, main merge, publication or release continues from this return.
+
+2026-10-12T14:31:39.050949+00:00 — Executive re-enters under Jim’s continue after the three accepted feedback findings. Select the foundation-based work/recovery chain and ordinary acquisition repair in foundation-repair/PLAN.md. Existing closed authority/excerpt predicates remain at their frozen subject; changed architectural claims need fresh judgment. Separate own-tenant Writer is now activated for the exact documentary, qualification and checkpoint effects in that plan. Common/peer/main and release remain outside the grant.

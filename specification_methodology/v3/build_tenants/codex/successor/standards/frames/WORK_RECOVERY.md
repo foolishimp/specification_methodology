@@ -16,7 +16,38 @@ to insufficient capability; this preface supplies no response or selection grant
 
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+
+## Work/recovery specialization
+
+This chain specializes the generic contract for interrupted, purposeful work.
+It assumes an admitted work identity, persistent workspace, selected outcome,
+actual grants and a material uncertain effect. These are explicit instance
+premises; they do not follow from finite capacity alone.
+
+| Premises | Conditional consequence | Particular contract and independent choice |
+|---|---|---|
+| F1, F2; selected outcome and current subject | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
+| F2, F5; coupled material obligations and finite actor | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
+| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | Computed Classification And Treatment and Ticket condition-based reuse choose applicability, invalidation and the wider frontier when independence is unproved. Their concrete freshness rules are domain policy. |
+| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | Computed Classification And Treatment supplies the unknown-effect rule; the operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
+| F1, F4, F6; required results and current mandate | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
+
+The consequences are arguments about the stated premises, not proofs of every
+source clause. Concrete work-carrier layout, number of actors, numeric budgets,
+optional Baseline adoption, release procedure and all domain result enums are
+independent choices. They are not inferred from the foundational commitments.
+This chain leaves those choices at their owners and adds no mandatory ledger.
+
+A recovery activation uses the sufficient projected clauses and actual subject.
+It need not load this entire argument, every method or historical event bodies.
+The [ordinary work entry](../../plugins/spec/skills/stdo-work/SKILL.md#acquire-the-responsibility-frame)
+locates that material after basis selection. Its projection does not become a
+rival authority or guarantee sufficiency for a different task.
+
+
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -182,7 +213,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
 
 ### Computed Classification And Treatment
 
