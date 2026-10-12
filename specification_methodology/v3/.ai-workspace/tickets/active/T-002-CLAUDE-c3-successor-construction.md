@@ -143,3 +143,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 2026-10-12T06:57:04Z — Merges done as Writer: 212ea4d (m3b), 501e64c (m3a) into tenant/claude/c3-v3; frontier resolved row by row with zero clashes, returns log by union; 491 rows unresolved. Merged branches and worktrees removed. Role returned to Executive.
 
 2026-10-12T06:58:06Z — W9 returned candidate_ready at a2c37ee (TICKETS.md 72 KB, 49 rows: 46 conserved, 3 heading-only not applicable). One Reviewer R9 activated. W11 (member 5, STDO_REFERENCE_FRAME_BASELINE, 69 rows) activated on the main tenant line. Open: W11, R9.
+
+2026-10-12T07:08:51Z — R9 on TICKETS (10 min wall): X1, X3, X5 satisfied; X2 falsified on modal force (recommendations restated as plain statements) and one minimum list made closed; X4 one normative sentence added in SPEC_METHOD section 4. Disposition: local_repair W9b. Executive rule issued to all Writers from now: preserve the predecessor's modal force; minimum lists stay minimum. Added to the closing plan: one modality sweep over members 1 to 3 before the close review. Open: W11, W9b.
