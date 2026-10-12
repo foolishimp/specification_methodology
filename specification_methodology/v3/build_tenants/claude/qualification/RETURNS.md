@@ -917,3 +917,31 @@ CHECKS (scripted): em-dashes in added Markdown lines 0; every successor path and
 RESIDUALS: (1) The "today" clauses of the compression rows still describe the set-3 program at ac3ec5f. At e5e590e the standards README routes model loading to a_c/set/ (T4: seven files, five frames). The set-3 statements still resolve and were not rewritten here. Whether set/ (which encodes SPEC_METHOD and a CALCULUS text) changes any row's "no frame projects it" clause was not checked. (2) Section loads in the registry read whole sections, not whole members. If whole-member loading is required, every section-qualified cell widens to its member. (3) The placeholder's set and path shape are undetermined until the bootstrap frame exists.
 MEASURED: input bytes read about 95,000 (frontier header and the two packaging sections, REFRESH, refresh SKILL, the GETTING_STARTED owning references, the template and schema excerpts, RELEASE sections 6 and 7, PRODUCT_DEFINITION sections 11 and 12, the rc.2 REFRESH registry, a_c/set README head, the standards README routes, heading lists, script output, RETURNS tail; envelope 200 KB); wall 2026-10-12T09:58:29Z to 2026-10-12T10:11:12Z; spend unavailable
 STOP BASIS: complete
+
+## W22 return, 2026-10-12T10:39:16Z
+
+RESULT: complete. set-5 encodes what nine task frames and one bootstrap candidate need from the ten listed members, validates with zero diagnostics, and every frame meets the 100,000-byte limit by clause selection. F-03 is written and dry-run, with no expectations and no runs. No STOP: every needed locus grounded.
+COMMIT: 731c24e (a_c/set-5), 9885ae4 (F-03 fixture), cc5b30c (TASK-A drops the write-permission facts that would have answered F-02's gap from the subject; CASE re-measured); this RETURNS entry follows in its own W22 commit.
+PROGRAM: urn:stdo-3:claude:program:a-c-text:set-5 over the 23 members at 3824752. 301 symbols (65 added, 1 label rewritten), 417 clauses (86 added, 2 rewritten in place), 6 residuals (1 disposed), 21 frame indexes. Zero diagnostics against ac.py 5a2e0cb5… (tag axiom_indexer/v2.5.1-rc.2). Program digest sha256:b12b31216456f375c2a2e24aefbd16c897d92c1a7b469b50c52ee89b450e4a42; map sha256:64e1240a662f…. Encoded (partially): TICKETS §1 Goals plus the set-4 §5 carrier and retention rows, ACTIVATION §1 Admission, RELEASE §2-§4 and §9, IDENTITY §2, §5, §6, DESIGN_MODULE §5 four parts and §7 gate, ODD 11.5D A8-A11, 11.7B, 11.8, TRAVERSAL_OCCURRENCE causality, lineage, OP-001-007, stop kinds and core mapping, UX §4, §6, §8, §12 scaffold, §15, WORLD_MODEL §8 ledger, §9, §11 saturation, §14, PRODUCT_DEFINITION §2, §4, §5, §6, §9, §10, §12 (parts), GLOSSARY §1, §2, README Routes. The per-member table is in a_c/set-5/README.md.
+SWEEP: set-4 unchanged against 3824752 gave zero diagnostics, so no anchor moved. Rewritten to the swept text: drafting-and-admission-are-distinct and the contract-state label (ACTIVATION §1 now states the four states as a minimum) and faithful-refinement-definition (ACTIVATION §4 cumulative input; in no set-5 frame).
+FRAMES (materialized bytes | sha256 first 12 | under 100,000):
+  carrier-retention (A) | 55,905 | 16bc90d75e96 | yes
+  release-and-successor (B) | 62,813 | 42a33da6a01e | yes
+  identity-scoped (C) | 37,612 | 2148de3efe8a | yes
+  design-gate (D) | 83,252 | 82bbd09ca1b4 | yes (2 residuals via proportionality)
+  odd-closure (E) | 47,936 | ec4402605256 | yes
+  traversal-lineage (F) | 62,598 | 6c017de3956e | yes
+  ux-replay (G) | 46,256 | c923a607c7fa | yes
+  world-model-cut (H) | 38,558 | b85f70562d36 | yes
+  bind-and-resolve (I) | 53,088 | 871c6d663f66 | yes
+BOOTSTRAP FRAME: 9,571 bytes materialized (6,073 reference-only), sha256 d69e175d44cc, 1 symbol, 3 clauses. It carries rc.2 bootstrap claims 1 (except the prune list itself) and 3, part of 4 and of the sync/adopt paragraph, route-not-override, and a member route. It does not carry claim 2 (select exactly one definition; no tenant locus found), 6 (frame basis, Executive entry, attention), 8 (reuse), the derived-guidance paragraph or fleet and marker rules. The claim table is in the set-5 README.
+FIXTURE: qualification/cases/F-03/ holds CASE.md, CARD.md (byte copy, 237ea8f9…) and TASK-A to TASK-I. Dry-run totals, cap 400,000, sonnet, no actor started: A 60,179; B 67,149; C 41,493; D 87,469; E 51,815; F 66,008; G 50,236; H 42,264; I 57,573 (524,186 in all). Instrument f92ca26b…. Run dirs were in scratch.
+RESIDUALS:
+  1. The Writer disposed residual contract-state-set-closed-or-minimum on the swept text (ACTIVATION §1 now cites TICKETS §5's minimum). W13 routed that conflict to the Executive, which should confirm the disposal.
+  2. 193 set-4 records sit under headings whose text the sweep changed. Only those in set-5 frame closures were read against the current text; the rest were not re-derived.
+  3. The standards README "load it into a model's context" route still names set-4. Updating it is outside W22's territory.
+  4. calculus_ref stays on rc.2, as in set-4.
+  5. Program, frames and fixture are same-author: one Writer and four forks, one per two frames. No fidelity judgment exists.
+  6. For the expectations writer: TASK-F occ-25 reads as either a stop gap or a structural refusal, and both map to invalid_basis. The UX frame carries both compliance readings, because UX §15 leaves the stricter one to Jim's pending ruling.
+  7. The derivation script and per-frame fragments are uncommitted scratch, as in earlier sets.
+MEASURED: about 300 KB read against the 600 KB envelope (about 165 KB by the Writer: set-4 README, F-02 case, targeted TICKETS, ACTIVATION, PRODUCT_DEFINITION, GLOSSARY and README ranges, diffs, rc.2 bootstrap, nine TASK reviews; about 136 KB across the four forks). Wall time 2026-10-12T10:21:38Z to 2026-10-12T10:39:16Z. Zero actor starts; nineteen dry runs: two nine-step passes (the first in a scratch directory shared with fork trials, discarded) and one re-run of A after the TASK-A fix.
