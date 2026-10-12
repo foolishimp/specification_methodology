@@ -12,7 +12,8 @@ them to constitutional construction; optional profiles refine particular domains
 An actor receives a sufficient projected frame and exact subject. It does not
 load the complete corpus merely because the corpus is the source authority.
 [The work/recovery frame](standards/frames/WORK_RECOVERY.md) is the first bounded example.
-Its scope and independent use are recorded in the tenant's C3 qualification.
+Its exact-source pins and the limits of historical use evidence are recorded
+in the tenant's C3 qualification.
 
 [Design](DESIGN.md) explains ownership and contraction. [The conservation map](CONSERVATION.json)
 records every predecessor claim and exact successor locus. A claimed disposition

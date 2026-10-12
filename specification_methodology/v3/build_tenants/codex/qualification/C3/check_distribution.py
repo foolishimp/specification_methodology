@@ -13,6 +13,7 @@ import re
 import subprocess
 import sys
 import time
+import unicodedata
 
 base = Path(__file__).resolve().parents[2]
 root = base / 'successor'
@@ -62,12 +63,71 @@ for path in (root/'standards/authority_compressions').glob('*.md'):
 
 view_index = json.loads((base/'qualification/C3/FRAME_INPUTS.json').read_text())
 views = view_index['frames'] + view_index.get('source_linked_summaries', [])
+exact_excerpt_sections = 0
+
+def heading_slug(value):
+    value = re.sub(r'<[^>]*>', '', value).replace('`', '').lower()
+    value = unicodedata.normalize('NFC', value)
+    return re.sub(r'\s', '-', re.sub(r'[^\w\-\s]', '', value))
+
+def restore_source_link(match):
+    target = match[2]
+    if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
+        return match[0]
+    if not target.startswith('../'):
+        raise ValueError('excerpt link lacks its one-level relocation')
+    return match[1] + target[3:] + match[3]
+
 for view in views:
     if sha(root/view['path']) != view['sha256']:
         failures.append('view pin mismatch ' + view['path'])
     for route in view['routes']:
         if sha(root/route['owner']) != route['owner_sha256']:
             failures.append('view owner changed ' + route['owner'])
+    if view in view_index['frames']:
+        chunks = (root/view['path']).read_text().split('\nSource:')[1:]
+        if len(chunks) != len(view['routes']):
+            failures.append('excerpt count differs ' + view['path'])
+            continue
+        for route, chunk in zip(view['routes'], chunks):
+            owner_text = (root/route['owner']).read_text()
+            headings = list(re.finditer(r'^(#{2,6}) (.+)$', owner_text, re.M))
+            selected = [(i,h) for i,h in enumerate(headings) if heading_slug(h[2]) == route['anchor']]
+            if len(selected) != 1:
+                failures.append('ambiguous excerpt source ' + route['anchor'])
+                continue
+            i,h = selected[0]
+            end = next((n.start() for n in headings[i+1:] if len(n[1]) <= len(h[1])), len(owner_text))
+            original = owner_text[h.start():end].rstrip() + '\n'
+            if hashlib.sha256(original.encode()).hexdigest() != route['section_sha256']:
+                failures.append('section digest differs ' + route['anchor'])
+            try:
+                displayed = chunk.split('\n\n',1)[1].rstrip() + '\n'
+                restored = re.sub(r'(\[[^\]]*\]\()([^\n]+?)(\))', restore_source_link, displayed)
+            except (ValueError, IndexError) as error:
+                failures.append('invalid excerpt ' + view['path'] + ': ' + str(error))
+                continue
+            if restored != original:
+                failures.append('excerpt differs from source ' + route['anchor'])
+            else:
+                exact_excerpt_sections += 1
+
+# Literal references are checked as references, not accepted semantic imports.
+authority = (root/'standards/REFERENCE_FRAME_METHOD.md').read_text().split('### Authority\n',1)[1].split('### Disjointness',1)[0]
+literal_rows = []
+for match in re.finditer(r'^- \*\*([^*]+)\*\*: (.*?)(?=\n- \*\*|\n\nThese relations)', authority, re.M|re.S):
+    meaning = re.sub(r';(?: and)?$', '', ' '.join(match[2].split()))
+    literal_rows.append('| '+match[1]+' | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): '+meaning+' |')
+authority_literal_rows = 0
+if len(literal_rows) != 6:
+    failures.append('authority reference source lacks six relations')
+for member in ['FOUNDATIONS.md','TRANSFORMATION_LIBRARY.md']:
+    text = (root/'standards'/member).read_text()
+    for row in literal_rows:
+        if text.count(row) != 1:
+            failures.append('authority literal reference differs ' + member)
+        else:
+            authority_literal_rows += 1
 
 # Compare the JSON Schema instance in a local, explicitly hypothetical release
 # envelope. It chooses no actual cut/ref and performs no installation.
@@ -140,6 +200,8 @@ report = {'kind':'standalone_distribution_artifact_check',
           'builder_manifest_sha256':'3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782',
           'predecessor_members_verified':len(pins), 'operative_carry':carry,
           'compression_source_and_index_pins':compression_pins, 'derived_views_checked':len(views),
+          'selected_excerpt_sections_exact':exact_excerpt_sections,
+          'authority_literal_reference_rows_exact':authority_literal_rows,
           'hypothetical_inventory_members':len(installed_members),
           'manifest_schema_valid':not errors, 'extra_auxiliary_category_refused':extra_category_refused,
           'template_definition_schema_valid':not definition_errors,
