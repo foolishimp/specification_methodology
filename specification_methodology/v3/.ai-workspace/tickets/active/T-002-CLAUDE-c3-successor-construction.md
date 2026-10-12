@@ -129,3 +129,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 2026-10-12T03:42:33Z — Member 4 (TICKET_METHOD, 49 rows) selected as dependency-ready on the restated change classes; W9 activated on branch tenant/claude/c3-v3-m4 cut from 63a63cd, SPEC_METHOD limited to pointer edits, ASSURANCE untouched. Open: W8 (member 2 frames), R7a1 to R7a3 (member 3 core reviews), W7b2 (member 3 tier-2 repair), W9.
 
 2026-10-12T03:43:50Z — W7b2 returned candidate_ready at 3df0924 (AC-012 reference corrected; "should" restored in ASSURANCE sections 4 and 5). Member 3 tier-2 cone (20 rows, PRODUCT_DEFINITION and ASSURANCE): criteria 1, 2, 3, 5, 6 satisfied; merge of tenant/claude/c3-v3-m3b queued behind W8, which holds the member-1 worktree.
+
+2026-10-12T06:06:10Z — R7a3 (migration and rule rows): 27 of 27 satisfied, V1 to V5 satisfied; recording items: SPEC_METHOD preamble names only two unbuilt members where four are unbuilt; filename and identifier-prefix generalisations unrecorded in section 12; Release Version Boundary routes release mechanics until RELEASE exists (lawful for the row). Held for one combined repair with R7a1 and R7a2.
