@@ -1606,7 +1606,7 @@ with its own closure vocabulary (P0, P1, P5).
 | #117-manual-walkthrough-must-still-be-lawful | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | §11.7 |
 | #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | §11.7A |
 | #117b-real-authority-path-negative-proof-stdo-up-010 | conserved in full, with the supported-relation block carried exactly; this section is UP-010's only successor home | §11.7B |
-| #118-cumulative-environment-law-is-mandatory | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; ACTIVATION §4 states the generic cumulative input this law specialises, and §5 Graph functions binds the two | §11.8 |
+| #118-cumulative-environment-law-is-mandatory | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; profile law, not generalised into the core; §5 Graph functions declares this environment as the specialised contract through which ACTIVATION §4 lets a refinement carry earlier outputs | §11.8 |
 | #119-global-convergence-must-be-stable-under-zoom | conserved; "usually" kept | §11.9 |
 | #12-scenario-rule | conserved | §12 |
 | #13-installed-dev-rule | conserved | §13 |
