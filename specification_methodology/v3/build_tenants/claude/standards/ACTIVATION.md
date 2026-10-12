@@ -383,10 +383,15 @@ difficult evaluation alone does not prove that another frame is required
 (P5, P2; rc.2 RF #reconfigure-when-necessary).
 
 Refinement. An outer transformation T: A → X with success predicates P₀ … Pₙ
-is refined by steps Tᵢ. The input of a step is the outer input together
-with every earlier output retained for it; passing only the previous
-output is the special case in which nothing else is retained, and each Pᵢ
-ranges over the cumulative input after i steps. The refinement is faithful
+is refined by steps Tᵢ. The input of a step is its cumulative input, the
+cumulative carried result of AC-016's reading: the outer input, which is
+retained for every step, the last included, together with the earlier
+outputs retained up to that step; the chained reading is the special case
+in which no earlier output but the last is retained, and each Pᵢ ranges
+over the cumulative input after i steps.
+The composite's output is X, which the last step's postcondition, ranging
+over its cumulative input, yields (P4a; AXIOMATIC_CALCULUS §5 AC-016
+states the same reading for traversals). The refinement is faithful
 when each admitted input satisfying Pᵢ yields an output with which the next
 step's input satisfies Pᵢ₊₁, retains every applicable invariant, exposes
 other outcomes without coercion, and each step's input satisfies that

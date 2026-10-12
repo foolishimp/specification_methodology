@@ -770,44 +770,57 @@ which a profile with its own decision or stop vocabulary declares a total
 mapping to the five core members and adds none, and the requirement of
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
 that a traversal's stop algebra map totally to that algebra (P5). Material
-relation: each stop kind and each judgment decision to exactly one core
-member, the value keeping its own vocabulary, residual and re-entry law.
-This signature's stop contract thereby fixes, for every traversal of a
-model under this profile, the per-traversal `stop_states` mapping that
-AXIOMATIC_CALCULUS §5 otherwise leaves to each traversal record, and such
-a record declares `stop_states` consistent with this table (P5, P3). A
+relation: each stop kind and each judgment decision, read with the source
+of a refusal, to exactly one core member, the value keeping its own
+vocabulary, residual and re-entry law. This mapping is the profile's
+default. A traversal record's `stop_states` may refine it for that
+traversal, as AXIOMATIC_CALCULUS §5 leaves to the record which of `hold`,
+`gap` and `refusal` map to which non-satisfied core member, by a binding
+declared in the shape of [PROFILES §1](PROFILES.md#1-the-boundary): its
+direction, preserved meaning, narrowed scope and invalidation; the other
+stops and every judgment decision keep this mapping's member, and a
+record that declares no binding takes the default (P5, P3, P1). A
 judgment decision is the evaluation's result and a stop is the step's;
 where values emitted together map to different members, as `stale` with
-`hold` and an `invalid_basis` decision with `refusal` do, each answers its
-own question (ACTIVATION §3).
+`hold` does, each answers its own question (ACTIVATION §3).
 
 | Value | Core member | Reason |
 |---|---|---|
-| stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state); it reaches indeterminate by the stop-state route of construction availability's `incomplete`, not as the evaluation's result, and its residual names the evidence that would decide |
+| stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state) while every relation and capability the judgment requires is declared by this closed signature and was exercised, which is the second case of ACTIVATION §3; its residual names the evidence that would decide |
 | stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
-| stop `refusal` | falsified | every refusal in the constraint table is the stop of a falsified constraint, as construction availability maps `refused` to falsified; the structural loss is stated below |
+| stop `refusal` | falsified or invalid_basis | falsified for a refusal in the constraint table, which is the stop of a falsified constraint, as construction availability maps `refused` to falsified; invalid_basis for a structural refusal, named below, whose subject or basis cannot support the judgment (ACTIVATION §3) |
 | stop `invalid_basis` | invalid_basis | the same member; the constraint rule above maps `invalid_basis` only to it |
-| stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an undeclared scope is `hold` plus `unresolved_scope`, so the ground of out_of_frame, a missing declaration, is absent, and the spelling is not the core's out_of_frame |
+| stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an event scope not yet declared is `hold` plus `unresolved_scope` while the signature declares the scope relation, so the ground of out_of_frame, a missing declaration in the frame, is absent, and the spelling is not the core's out_of_frame |
 | stop `partial_effect` | falsified | the observed post-state defeats the intended outcome as a whole; the loss is stated below |
 | `transition_evaluation` `partial` | falsified | the ground of stop `partial_effect`, which it yields; the loss is stated below |
-| `transition_evaluation` `refused` | falsified | it is the image of a falsified `transition_subject_complete` under the constraint table and yields `refusal`, so it maps back to the constraint's member |
+| `transition_evaluation` `refused` | falsified or invalid_basis | falsified as the image of a falsified `transition_subject_complete` under the constraint table, which yields `refusal`, so it maps back to the constraint's member; invalid_basis for a structural refusal, as for stop `refusal` |
 
 The remaining judgment decisions follow the constraint rule above: the
 first decision each judgment lists maps to satisfied; `refused`,
 `out_of_scope`, `unauthorized` and `stale`, which the constraint table
-makes the images of a falsified constraint, map to falsified, `refused`
-carrying the structural loss stated below; `hold`, the image of an indeterminate
+makes the images of a falsified constraint, map to falsified, save that
+`refused` maps to invalid_basis when it follows a structural refusal; `hold`, the image of an indeterminate
 constraint, maps to indeterminate; `gap` maps to invalid_basis on the
 ground of the stop so named; and `invalid_basis` and the `falsified` and
 `indeterminate` of `transition_evaluation` map to the members so named
 (P5, P6).
 
-Stop `refusal` and decision `refused` also follow a structural refusal:
-an unknown or missing field under the closed value contract, a reference
-that fails AC-003, or a basis, cardinality or type mismatch. Under
-ACTIVATION §3 such a case reads as invalid_basis. This mapping reports it
-falsified; where an `invalid_basis` decision is emitted with the refusal,
-that decision is the evaluation's result and governs (P5, P6).
+A structural refusal is one whose source is this profile's closed
+structure rather than a row of the constraint table: an unknown or missing
+required field under the closed value contract
+([Closed semantic-object sorts](#closed-semantic-object-sorts)); a
+missing population, hidden record, ambiguous ref, unknown record kind or
+undeclared field domain
+([Imported calculus boundary](#imported-calculus-boundary)); a missing
+row, target outside its row, wrong population or sort, unresolved
+external target, cardinality violation, basis-relation mismatch or nested
+coordinate or witness defect refused at model validation
+([Finite reference-domain table](#finite-reference-domain-table)); a
+qualifier-record defect refused at structural admission
+([Closed relation families](#closed-relation-families)); and a reference
+that fails AC-003. Stop `refusal` and decision `refused` from such a
+source map to invalid_basis, the member an `invalid_basis` decision
+emitted with the refusal states as the evaluation's result (P5, P6).
 
 Falsified for `partial` and `partial_effect` does not record that the
 subject changed. The `partial_effect` residual and its re-entry carry

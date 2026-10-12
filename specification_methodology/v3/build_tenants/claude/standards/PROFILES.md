@@ -36,7 +36,7 @@ predecessor in full in its own text and declares its bindings under §1
 | Member | Receives | Binds or adds |
 |---|---|---|
 | [ODD](ODD.md) | rc.2 ODD_METHOD, all 48 rows | the bounded step of FOUNDATIONS P0 to one vector or edge traversal and the graph-native F_P, F_D and F_H shorthands, with F_P and F_H as declared specialisations of SPEC_METHOD §5 ([§5 Probabilistic compute](ODD.md#probabilistic-compute)); the refinement of ACTIVATION §4 to graph functions under the cumulative environment law ([§5 Graph functions](ODD.md#graph-functions), [§11.8](ODD.md#118-cumulative-environment-law-is-mandatory)) |
-| [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md) | rc.2 TRAVERSAL_OCCURRENCE_PROFILE, all 25 rows | an optional closed model-family signature over one exact `a_c` basis of AXIOMATIC_CALCULUS for immutable occurrence histories over a mutable subject, with OP-001 to OP-007 |
+| [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md) | rc.2 TRAVERSAL_OCCURRENCE_PROFILE, all 26 rows, 25 conserved and 1 superseded | an optional closed model-family signature over one exact `a_c` basis of AXIOMATIC_CALCULUS for immutable occurrence histories over a mutable subject, with OP-001 to OP-007 |
 
 The ownership split of graph execution (runtime, product, service layers)
 is [ODD §10](ODD.md#10-what-an-odd-product-is); the worker's internal

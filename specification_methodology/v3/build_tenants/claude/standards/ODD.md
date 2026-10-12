@@ -933,26 +933,22 @@ Mapping of the closure decision to the core result algebra, new in this
 corpus. Purpose: the one-algebra rule of
 [ACTIVATION §3](ACTIVATION.md#3-result-algebra), under which a profile
 with its own decision vocabulary declares a total mapping to the five core
-members and adds none. Material relation: each closure decision to exactly
-one core member, which is what a composite over the edge joins; the
-decision keeps its own vocabulary and its basis and reason refs (P5, P6).
+members and adds none. Material relation: each closure decision, read with
+the cause or evidence its basis and reason refs record, to exactly one core
+member, which is what a composite over the edge joins; the decision keeps
+its own vocabulary and its basis and reason refs, which A8 requires to be
+sufficient to reproduce it and which therefore carry that cause or
+evidence (P5, P6).
 
 | Decision | Core member | Reason |
 |---|---|---|
 | `close` | satisfied | the ledger's admitted evidence fulfils the edge's obligations on the exact basis |
-| `yield` | indeterminate | the edge stays lawful and its closure is not yet decided; it reaches indeterminate by the stop-state route of construction availability's `incomplete`, without failure classification, as A9 requires |
-| `retry` | falsified | admitted evidence shows that this attempt did not fulfil the edge while the same action stays lawful; A9 separates this failure-classified re-attempt from yield |
+| `yield` | indeterminate | the edge stays lawful and its closure is not yet decided; it reaches indeterminate by the stop-state route of construction availability's `incomplete`, not as the evaluation's result, without failure classification, as A9 requires |
+| `retry` | falsified or indeterminate | falsified only when admissible evidence defeats the edge for this attempt while the same action stays lawful, otherwise indeterminate; a liveness interruption alone never yields falsified (A10); A9 separates this failure-classified re-attempt from yield |
 | `repair` | falsified | the result is locally defective against the edge's obligations while the governing relation stays coherent (ACTIVATION §3 Disposition, `local_repair`) |
-| `re-enter` | invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change; the loss is stated below |
+| `re-enter` | out_of_frame or invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change; the member follows the cause in the decision's reason refs, as construction availability maps `re_entry_requested` under ACTIVATION §3: out_of_frame when the cause is an undeclared relation, capability or authority, and invalid_basis for every other cause, the current basis being unable to support the edge, as when it is stale, substituted or unrepairable |
 | `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame (ACTIVATION §4) |
-| `block` | invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis; A8 states no cause, so the nearest member is taken and the loss is stated below |
-
-`re-enter` and `block` have no single member under ACTIVATION §3: a
-re-entry or a block caused by an undeclared relation, capability or
-authority would be out_of_frame, as construction availability maps
-`re_entry_requested` to out_of_frame or invalid_basis. This mapping takes
-invalid_basis for both and so loses that distinction in the core member;
-the decision's basis and reason refs keep the cause (P5, P6).
+| `block` | out_of_frame or invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis; the member follows the cause in the decision's reason refs, as for `re-enter` |
 
 A9 Yield is lawful iterate. `yield` is the lawful iteration boundary (P5):
 
