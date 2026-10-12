@@ -14,9 +14,9 @@ names the principle that requires it (P0 to P6, FOUNDATIONS §3), and each
 mechanism could be realised differently under the same principles. The
 tier's other members carry what this one points to:
 [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md) (how one project binds to the
-method), [ASSURANCE](ASSURANCE.md) (testing law), TICKETS (work carriers)
-and RELEASE (release mechanics), the last two existing only after their
-activations. A route written `rc.2 #anchor` is into
+method), [ASSURANCE](ASSURANCE.md) (testing law),
+[TICKETS](TICKETS.md) (work carriers) and [RELEASE](RELEASE.md) (release
+mechanics). A route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`; a route written
 `rc.2 MEMBER #anchor` is into that member of the same cut. Routes are
 provenance only; nothing here depends on that cut to be applied.
@@ -55,10 +55,12 @@ of the mutable source project; a requirement surface, conventionally
 `specification/requirements/`, is the live requirement surface derived from
 the product definition; a shared design surface plus any tenant-local design
 surfaces choose the concrete mechanism. The product's definition binds the
-actual authority locations (PRODUCT_DEFINITION §1); the conventional names
+actual authority locations
+([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)); the conventional names
 require no existing project to move or duplicate its files, and the
 definition's build-tenant bindings locate the project-owned realisations
-beneath one shared specification (PRODUCT_DEFINITION §8).
+beneath one shared specification
+([PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)).
 
 The authoritative split is strict: the surfaces bound as WHAT define WHAT;
 design and realisation surfaces define HOW; no build tenant, design, code,
@@ -80,13 +82,13 @@ This member owns the method-identity bounded context
 `urn:stdo:bounded-context:method-identity` under the selected complete
 basis (P3; rc.2 #stdo-method-identity). Within that context STDO is the
 shorthand for the method's four pillars: S, Specification, owned by this
-member; T, Ticketing, owned by TICKETS; D, Design, owned by the design
-profile member (PROFILES §3); and O, Outcome-Driven Development, the
-complete pillar whose identity and realisation meaning are owned by its
-profile member (PROFILES §2). The expansion does not make the four owning
+member; T, Ticketing, owned by [TICKETS](TICKETS.md); D, Design, owned by
+the design profile member [DESIGN_MODULE](DESIGN_MODULE.md); and O,
+Outcome-Driven Development, the complete pillar whose identity and
+realisation meaning are owned by its profile member [ODD](ODD.md). The expansion does not make the four owning
 members independently selectable and does not reduce the released product
 to four members: consumer authority remains one complete immutable released
-cut with its exact member inventory (RELEASE; until that member exists, §6).
+cut with its exact member inventory ([RELEASE](RELEASE.md)).
 
 ### Canonical statement
 
@@ -99,12 +101,13 @@ product under this method publishes a layout-neutral definition that locates
 its governing constitution, local constitutional decisions, collective
 reference-frame bases, WHAT, independent build-tenant HOW realisations, work
 surfaces and explicit product composition; the definition is a routing
-overlay, not a rival truth surface (PRODUCT_DEFINITION §1). A material term
+overlay, not a rival truth surface
+([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)). A material term
 resolves only under its bounded-context identity, owning authority, selected
 basis and governed scope; equal spelling creates no cross-context meaning or
 authority; explicit imports, translations, equivalences and disambiguations
 govern those seams, and zero or multiple applicable meanings fail closed
-(PRODUCT_DEFINITION §5). Requirements define the full constitutional what:
+([PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)). Requirements define the full constitutional what:
 capabilities, guarantees, governance and verification obligations; design
 defines the structural how, and ADRs are one durable form of that record
 (§2, §10). The lifecycle is a governed disambiguation pipeline: each major
@@ -114,7 +117,7 @@ policy under declared risk appetite, except for hard-stop prerequisite
 failures (§5). Products, applications, modules, functions, build
 tenants and runtime surfaces are implementations of the constitutional
 documents, not substitutes for them. Scenarios verify operational meaning
-where capability claims need end-to-end proof (ASSURANCE §4). Code realises
+where capability claims need end-to-end proof ([ASSURANCE §4](ASSURANCE.md#4-scenario-bundle)). Code realises
 decisions. Design is derivable from requirements, which are derivable from
 goals, intent and product definition; code is derivable from requirements
 and design (§2). Iteration is cumulative repricing, not waterfall. Events,
@@ -292,7 +295,7 @@ selected function does not require recreating the whole product. New
 material counterexamples still challenge the affected relation. The design
 profile owns design-view coverage, its material-change gate and
 unchanged-boundary reuse; this litmus neither waives that gate nor requires
-recreating unchanged accepted views (PROFILES §3).
+recreating unchanged accepted views ([DESIGN_MODULE](DESIGN_MODULE.md)).
 
 ### Renewal path
 
@@ -409,7 +412,7 @@ asserts, so that the requirement surface is not treated as a feature list
 | Category | Meaning | Typical question |
 |---|---|---|
 | Capability | a behaviour, function or surface the system must provide | what can the system do |
-| Constraint or guarantee | an invariant, law, safety property, portability rule or semantic guarantee that bounds how the system may behave | what must always remain true |
+| Constraint / Guarantee | an invariant, law, safety property, portability rule or semantic guarantee that bounds how the system may behave | what must always remain true |
 | Governance | a policy or control rule over lifecycle, authority, visibility, release or operator action | what governs use and change |
 | Verification | a requirement on tests, evidence, traceability, qualification or forensic surfaces | how do we know the claim is true |
 
@@ -869,7 +872,8 @@ under the design profile its decision-completeness rule applies (design,
 implementation and tests co-evolve only when its co-evolution predicate
 holds, otherwise the smallest causally closed affected design set is
 accepted before retained implementation establishes an unresolved,
-contradictory or materially non-equivalent relation; PROFILES §3), and
+contradictory or materially non-equivalent relation;
+[DESIGN_MODULE](DESIGN_MODULE.md)), and
 where that profile does not apply design, implementation and tests may
 co-evolve when upstream truth leaves no unresolved material design
 decision, and when such a decision remains the affected design is accepted
@@ -1007,16 +1011,11 @@ release belong to [RELEASE §2 to §8](RELEASE.md#2-release-identities)
 (provenance rc.2 RELEASE_METHOD #release-identities, #phases, #naming,
 #coordinated-release-matched-asset-cohorts).
 
-A successor names the exact predecessor immutable cut whose claims it
-evolves and gives every predecessor claim capable of affecting it one
-disposition: conserved, superseded, intentionally removed, or not
-applicable with a bounded reason. An undisposed claim blocks qualification
-of the affected claim. Conservation is semantic: patch absence does not
-prove loss when a successor-native realisation preserves behaviour, and
-naming or code similarity does not prove conservation without relevant
-evidence (P3, P6; FOUNDATIONS §1 applies this to the corpus itself;
-provenance rc.2 RELEASE_METHOD #successor-baseline-conservation-stdo-up-015).
-This corpus's own dispositions are in each member's last section.
+Successor baseline conservation is
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+(P3, P6; provenance rc.2 RELEASE_METHOD
+#successor-baseline-conservation-stdo-up-015). FOUNDATIONS §1 applies it
+to this corpus, whose own dispositions are in each member's last section.
 
 Layer and release separation holds
 ([AXIOMATIC_CALCULUS §7](AXIOMATIC_CALCULUS.md#ac-020-layer-and-release-separation)):
@@ -1024,7 +1023,8 @@ a calculus, its interpretation of a subject and its carrier encoding keep
 independent content identities, judgments, supersession relations and
 proof obligations, and none is automatically an independently released
 product. One constitutional surface and its version boundary for a project
-are PRODUCT_DEFINITION §11.
+are
+[PRODUCT_DEFINITION §11](PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary).
 
 ### Shared method adoption and propagation (STDO-UP-012)
 
@@ -1050,7 +1050,8 @@ assurance implementation cannot enter the method merely because it
 accompanies a method lesson; it requires its own Product authorisation
 (P6). Other standards consume admitted law by reference (P3, P6), and a
 consumer selects a complete released version rather than mixing members from different cuts (P3;
-the release version boundary above, PRODUCT_DEFINITION §4).
+the release version boundary above,
+[PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager)).
 
 ## 7. Migration
 
@@ -1380,7 +1381,8 @@ configuration that consumer is the executive relation, which consumes
 closed results, applies disposition under existing decision authority and
 selects the next authorised action. Executive, Worker and Reviewer are
 labels for the roles ACTIVATION §1 defines as relations an actor occupies;
-their catalogue is the executive-baseline profile (PROFILES; provenance
+their catalogue is the executive-baseline profile
+([EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md); provenance
 rc.2 STDO_REFERENCE_FRAME_BASELINE #executive, #worker, #reviewer).
 Delivery is sequenced around the smallest real path from a supported entry
 to a material outcome, established early and widened by increments chosen
@@ -1552,7 +1554,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #adr-folder-convention | conserved | §10 |
 | DESIGN_MODULE_METHOD #3-core-rule | conserved; the core rule at "should" force and the too-imperative, too-coupled test, scoped to boundaries the design profile governs; DESIGN_MODULE §1 Core rule points here | §2 Realisation shape |
 | DESIGN_MODULE_METHOD #17-non-goals | conserved; the four non-requirements, the readability requirement, the required composition and effect algebra with its five laws, vocabulary optional and law not; DESIGN_MODULE §12 Non-goals points here | §2 Realisation shape |
-| POSTING_GUIDE #shared-method-adoption-and-propagation-stdo-up-012 | conserved; the eight-step authority chain verbatim, causality not workflow or artifact set, no entry by accompaniment and the separate Product authorisation, consumption by reference, complete-version selection without mixing; POSTING_GUIDE §10 points here | §6 Shared method adoption and propagation (STDO-UP-012) |
+| POSTING_GUIDE #shared-method-adoption-and-propagation-stdo-up-012 | conserved; the eight-step authority chain verbatim except that "realization" is written "realisation", causality not workflow or artifact set, no entry by accompaniment and the separate Product authorisation, consumption by reference, complete-version selection without mixing; POSTING_GUIDE §10 points here | §6 Shared method adoption and propagation (STDO-UP-012) |
 
 Rows of other rc.2 members that this member touches are disposed at their
 receiving members: the overlay, STDO-SURFACE-001 and bootstrap rows at

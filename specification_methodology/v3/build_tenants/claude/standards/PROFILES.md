@@ -95,13 +95,21 @@ the core algebra (WORLD_MODEL §14). Its binding of FOUNDATIONS §2 Object
 and P3's boundary claim to the entity cut is declared in its lead.
 Nothing in the core depends on the construct being established (P3, P6).
 
-## 6. Source dispositions
+## 6. Engagement baseline
+
+[EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) is the optional
+engagement-baseline profile. It imports the core and maps three engagement
+frames (Executive, Worker, Reviewer) and a catalogue of specialist frames
+onto the law of tiers 1 and 2; its role names bind the tier-1 roles of
+ACTIVATION §1, as its lead declares (P1, P6).
+
+## 7. Source dispositions
 
 | rc.2 member | Disposition |
 |---|---|
 | ODD_METHOD | conserved in full in ODD (all 48 rows; its §21), indexed in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
 | TRAVERSAL_OCCURRENCE_PROFILE | restated in TRAVERSAL_OCCURRENCE (all 26 rows, 25 conserved and 1 superseded; its Source dispositions), indexed in §2 |
-| baseline runtime bindings | received with STDO_REFERENCE_FRAME_BASELINE by EXECUTIVE_BASELINE and disposed there |
+| baseline runtime bindings | received with STDO_REFERENCE_FRAME_BASELINE by EXECUTIVE_BASELINE and disposed there; §6 is its index entry |
 | DESIGN_MODULE_METHOD | restated in full in DESIGN_MODULE, which disposes its rows, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
 | UX_METHOD | restated in full in UX, which disposes its rows; §4 is its index entry; the first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance had no source in UX_METHOD and is withdrawn |
 | WORLD_MODEL_METHOD | restated in full in WORLD_MODEL, which disposes its rows; §5 is its index entry; the generic identity and boundary law stays FOUNDATIONS §2 and P3 and IDENTITY, and the entity-cut law is WORLD_MODEL §9, bound to P3 by WORLD_MODEL's declared binding |

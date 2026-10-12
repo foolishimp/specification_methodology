@@ -22,8 +22,7 @@ admission ACTIVATION §4, authority identity IDENTITY §6, shared machinery
 FOUNDATIONS §4, the realisation core rule and the non-goals SPEC_METHOD §2,
 and the design-to-module evidence route, module-derived unit tests and
 module lifecycle confirmation ASSURANCE §14 to §16. The graph-execution and
-UX profiles (PROFILES §2 and §4; the ODD and UX members, not yet built, are
-named without a link) refine or bound this one where their own scope
+UX profiles ([ODD](ODD.md) and [UX](UX.md)) refine or bound this one where their own scope
 applies.
 
 This profile's own terms are Ontology (the engineering Ontology of one
@@ -459,11 +458,9 @@ governing frame is lawful where the structure is genuinely hierarchical,
 and is not required. Governing frames form a constraint network for the
 same reason `M(B)` does (P4b, P6).
 
-The seam rule is ACTIVATION §1 Execution unit and §4 Refinement: every seam
-crossing the affected set includes its causally relevant far-side relation
-or states why that relation cannot affect, and cannot be affected by, the
-bounded action. Applied to a design frame, this makes the declared set
-testable against its own declared seams without a closure algorithm or
+The seam rule is [ACTIVATION §1 Execution unit](ACTIVATION.md#execution-unit)
+and [§4](ACTIVATION.md#4-totality-and-refinement). Applied to a design
+frame, it makes the declared set testable against its own declared seams without a closure algorithm or
 recursive expansion through irrelevant relations (P0).
 
 The result is evaluated against every affected governing frame, preserves
@@ -517,11 +514,9 @@ mechanism is the best realisation. Before constructing a material generic
 capability, common mechanic or algorithm, or selecting a material
 dependency, the active design boundary performs a proportional
 foundation-selection pass (P2, P6;
-rc.2 #capability-and-foundation-selection-stdo-up-023). The governing law that
-computational similarity yields a candidate and never an adjudication, and
-that one implementation may serve many instances while each keeps its
-responsibility, is FOUNDATIONS §4 Shared machinery; this section is its
-selection procedure.
+rc.2 #capability-and-foundation-selection-stdo-up-023). Its governing law
+is [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery; this
+section is its selection procedure.
 
 The pass first states the required capability without Product, domain,
 module, vendor, file or incumbent-implementation labels. It then
@@ -1172,9 +1167,8 @@ reasoning state a bounded actor needs, because the actor selecting a local
 action generally does not hold the reasoning that produced the governing
 frames. Dialogue, commentary, prior-agent memory and implementation
 folklore are not that state (P0, P4b;
-rc.2 #invariant-reconstruction-sufficiency-stdo-up-018). The general rule that a
-step's intake reconstructs its governing relations without conversation
-history, commentary or a prior actor's memory is ACTIVATION §1 Intake; this
+rc.2 #invariant-reconstruction-sufficiency-stdo-up-018). The general
+reconstruction rule is [ACTIVATION §1 Intake](ACTIVATION.md#intake); this
 clause states what design evidence supplies to it.
 
 Given an accepted material-frame basis, as determined by the material
@@ -1446,7 +1440,7 @@ is the engineering Ontology of one designed boundary; it does not require
 adoption of the Constraint-Emergence Ontology, a world-model theory, or
 any other metaphysical or empirical claim.
 
-The world-model profile (PROFILES §5) does provide a useful theoretical
+The world-model profile ([WORLD_MODEL](WORLD_MODEL.md)) does provide a useful theoretical
 framing for why these rules are shaped this way. It treats a Markov object
 as a candidate identity-bearing cut: a stable self-bounding pattern whose
 effective blanket separates what is load-bearing for identity from what is
@@ -2123,9 +2117,9 @@ needed to audit, refactor or reconstruct the realised boundary (P6, P2).
 SPEC_METHOD governs constitutional process, authority flow, repricing and
 migration law; RELEASE governs release cut, Product, install,
 qualification and version-line promotion evaluation; the graph-execution
-profile (PROFILES §2) governs graph-native constructive carrier law; this
+profile ([ODD](ODD.md)) governs graph-native constructive carrier law; this
 profile governs preferred realisation structure inside implementation and
-design modules; the UX profile (PROFILES §4) refines this profile for UX
+design modules; the UX profile ([UX](UX.md)) refines this profile for UX
 surfaces with rendering, state-transition and effect-membrane rules and is
 loaded only when the work realises a UX surface (P6;
 rc.2 #16-relationship-to-other-method-surfaces). So SPEC_METHOD answers what is
@@ -2160,11 +2154,10 @@ profile may publish default identity generators, validators and
 normalisers for its own runtime surfaces and for the default ODD surface
 kinds used by default `F_D` helpers; the permission is scoped to that role
 and does not extend to other runtime realisations (P3, P6; provenance rc.2
-IDENTITY_METHOD #defaults-from-a-bound-abg-realization). These defaults are starter
-conventions and convenience contracts, not universal doctrine, and they are
-lawful only so long as derived domains may override them; the identity law
-of that override, its preservation conditions and its publication surface
-are [IDENTITY §7](IDENTITY.md#7-default-formats-and-overrides).
+IDENTITY_METHOD #defaults-from-a-bound-abg-realization). Their standing as
+defaults and the identity law of their override, its preservation
+conditions and its publication surface are
+[IDENTITY §7](IDENTITY.md#7-default-formats-and-overrides).
 
 ### Non-goals
 
@@ -2187,7 +2180,7 @@ is restated in the receiving member's own text; a route is provenance
 only. Generalisations recorded here: "SPEC_METHOD.md", "RELEASE_METHOD.md",
 "TICKET_METHOD.md" and "UX_METHOD.md" are written as the tenant members
 SPEC_METHOD, RELEASE, TICKETS and the UX profile; "ODD_METHOD.md" and
-"ODD-governed" as the graph-execution profile (PROFILES §2), whose own
+"ODD-governed" as the graph-execution profile ([ODD](ODD.md)), whose own
 terms (GTL, ABG, `F_D`, graph function, edge traversal) this tier-3
 profile keeps; "STDO-UP-021" as ACTIVATION §4, "STDO-UP-022" as
 EVALUATION §1 and §3, "STDO-UP-004" as IDENTITY §6, "Agentic Construction
@@ -2268,4 +2261,4 @@ pointed to, not repeated.
 | #15-adoption-guidance | conserved; the four "may" adoption means, consistent application across six areas, "should make" the evaluators explicit, the four completion obligations, partial adoption "allowed" and "should be named", narrowing without skipped evidence | §12 Adoption |
 | #16-relationship-to-other-method-surfaces | conserved; the five governances, the five answers, the graph-profile split, the UX refinement, lifecycle confirmation versus release decisions | §12 Relationship to other members |
 | #17-non-goals | conserved; stated once in SPEC_METHOD §2 Realisation shape, scoped to boundaries this profile governs: the four non-requirements, the readability requirement, the required composition and effect algebra, vocabulary optional and law not | SPEC_METHOD §2 Realisation shape; §12 Non-goals |
-| IDENTITY_METHOD #defaults-from-a-bound-abg-realization | conserved; the "may publish" permission for runtime surfaces and default surface kinds (with its graph-profile reading), starter conventions and convenience contracts, not universal doctrine, lawful only while overridable; the override law is IDENTITY §7 | §12 Identity defaults from a bound runtime realisation; IDENTITY §7 |
+| IDENTITY_METHOD #defaults-from-a-bound-abg-realization | conserved; the "may publish" permission for runtime surfaces and default surface kinds (with its graph-profile reading) is restated here; starter conventions and convenience contracts, not universal doctrine, lawful only while overridable, with the override law, are IDENTITY §7 | §12 Identity defaults from a bound runtime realisation; IDENTITY §7 |

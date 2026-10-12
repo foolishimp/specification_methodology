@@ -65,7 +65,7 @@ completeness, invariant-reconstruction sufficiency and
 computational-realisation projection laws supply the affected set, the
 admission relations, the invariants and the computational dispositions;
 this section consumes those laws and creates no second design package
-(PROFILES §3). Conserves
+([DESIGN_MODULE](DESIGN_MODULE.md)). Conserves
 [UP-020 intake](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#sufficient-execution-intake),
 [UP-018](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#invariant-reconstruction-sufficiency-stdo-up-018)
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
@@ -87,8 +87,9 @@ claim. The cone is the seed set Z of §2; the context is its projection.
 Drafting a step's contract and admitting it are distinct relations, even
 inside one invocation that drafts, validates, admits and executes; no
 separate turn, carrier or approval ceremony is implied by the distinction.
-A contract is in one of the states drafted, admitted, rejected or
-superseded. Execution begins only after deterministic admission or an
+A contract carries at minimum the states drafted, admitted, rejected and
+superseded ([TICKETS §5](TICKETS.md#execution-contract-admission)).
+Execution begins only after deterministic admission or an
 explicit human override of the exact contract. The drafting actor never
 infers admission from its own draft, from the presence of a carrier
 (ticket, sprint entry, work contract), from lane placement or from an
@@ -110,7 +111,7 @@ the missing work authority without execution. Provenance:
 and
 [execution contract admission](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-contract-admission);
 the selection of the carrier (ticket, sprint entry, run-scoped contract)
-is tier-2 law and lands in the TICKETS member, which disposes those rows.
+is tier-2 law in the [TICKETS](TICKETS.md) member, which disposes those rows.
 
 ### Applicability
 
@@ -369,9 +370,10 @@ cases and none is solved by adding a value to the algebra.
 Ambiguity is carried or decided by lawful probabilistic processing where
 policy allows, escalated to human adjudication where policy or risk appetite
 requires, and recorded either way. Some conditions are hard stops regardless
-of appetite: a violated invariant, an absent required authority, a missing
-declared capability, an undeclared irreversible effect, an explicit human
-gate (Ambiguity Governance, conserved).
+of appetite; typical hard-stop classes include a violated invariant, an
+absent required authority, a missing declared capability, an undeclared
+irreversible effect and an explicit human gate (Ambiguity Governance,
+conserved; [SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle)).
 
 Reconfiguration. An out_of_frame, invalid_basis, repeated indeterminate or
 incompatible result causes one of: supply the missing admissible evidence;
@@ -665,7 +667,7 @@ reconstructed semantic outcomes (P5, P6).
 | rc.2 clause | Disposition |
 |---|---|
 | UP-020 and its six subsections | conserved in full; §1 (relation, intake, execution unit, roles and delegation), §3 (disposition), §5 (checkpoint, continuation, progress, churn, falsifiers), §7 (transition evidence and proof cadence); the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new; rows in the table below |
-| UP-018 | conserved; §1 |
+| UP-018 | conserved; restated in DESIGN_MODULE §7 Invariant reconstruction sufficiency, which disposes its row; its general reconstruction-without-history rule is §1 Intake |
 | Probabilistic Work Boundary | conserved; the object and commitment are FOUNDATIONS §2 and §3; §1 consumes them |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
 | AC-010, AC-011 | conserved; the laws themselves are restated in AXIOMATIC_CALCULUS §4, which disposes their rows; §2 applies them, joined with RF-002/003/004/014/017 into one operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
@@ -673,10 +675,11 @@ reconstructed semantic outcomes (P5, P6).
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
 | ODD graph functions, ODD 11.8 | conserved; graph functions generalised in §4 to any realisation; the generic part of 11.8, a step's input as the outer input with every earlier output retained for it, conserved in §4 as the refinement input, the 11.8 row itself disposed in ODD §11.8; PROFILES §2 keeps the ODD binding |
-| UP-017 | conserved; §4 |
+| UP-017 | conserved; restated in DESIGN_MODULE §5 Bounded frame conservation, which disposes its row; its seam rule is §1 Execution unit and §4 |
 | UP-021 and Standing Structural Qualification | conserved in full; §4; rows in the table below |
-| UP-014, UP-005, UP-019 | conserved; §6 in full for UP-014's relation and method execution, its delivery priority in SPEC_METHOD §8; the allowance rule is new; rows in the table below |
-| Return A Closed Result, TICKET judgment continuity | conserved; §7 |
+| UP-014, UP-005, UP-019 | conserved; §6 in full for UP-014's relation and method execution, its delivery priority in SPEC_METHOD §8; UP-005 and UP-019 restated in DESIGN_MODULE §6 and §7, which dispose their rows, §6 carrying their proportionality and cost relation; the allowance rule is new; rows in the table below |
+| Return A Closed Result | conserved; §7 |
+| TICKET judgment continuity | conserved; restated in [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity), which disposes its row; the generic reuse law is §7 |
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):
@@ -697,7 +700,7 @@ SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
 |---|---|---|
 | #proportional-method-and-delivery-stdo-up-014 | conserved; the relation, effective reasoning complexity, the constraint test, the symbolic-design paragraph, the disproportion test and the method's own execution are here; the delivery priority is SPEC_METHOD §8; "Ontology, IACS, Prime" generalised to "a detailed algebra or semantic design view" | §6 |
 | #agentic-construction-execution-stdo-up-020 | conserved; the normative relation and the non-prescription of worker internals | §1 The step |
-| #sufficient-execution-intake | conserved; all six items; the design-profile input laws are consumed by reference to PROFILES §3 | §1 Intake |
+| #sufficient-execution-intake | conserved; all six items; the design-profile input laws are consumed by reference to DESIGN_MODULE | §1 Intake |
 | #bounded-causal-construction | conserved | §1 Execution unit |
 | #construction-assessment-and-delegation | conserved; "Executive" is written "coordinating role" in tier 1; the proxy limits are also EVALUATION §5 | §1 Roles and delegation |
 | #proportional-disposition | conserved | §3 Disposition |

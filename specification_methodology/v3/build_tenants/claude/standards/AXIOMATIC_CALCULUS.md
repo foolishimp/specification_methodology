@@ -1054,9 +1054,8 @@ identities or replace them with mutable locators (P3).
 
 Binding of this edition. The identity of this corpus's calculus is bound
 at its own release and nowhere earlier: the `AxiomaticCalculusBasis` for
-this member is issued under the tier-2 RELEASE member (constructed at its
-own activation; until then SPEC_METHOD §6 carries release law by
-reference) and under AC-020, after the release bytes exist, with
+this member is issued under the tier-2
+[RELEASE](RELEASE.md) member and under AC-020, after the release bytes exist, with
 `publication_basis` naming that release and this member's bytes in it and
 `derivation_basis` naming the predecessor cut and the derivation account
 of §1. This authoring text is a source project surface, not the

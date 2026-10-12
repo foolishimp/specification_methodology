@@ -72,7 +72,10 @@ supplied by the model
 ([AC-018](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation),
 [AC-019](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-019-valid-model)).
 A valid parse, a valid map, a green test and a historical judgment each
-establish exactly their own claim.
+establish exactly their own claim. Evidence bound to a basis other than
+the evaluated one is excluded by basis; it is not admitted with a narrower
+scope (P3;
+[RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 ## 3. Independent assessment
 
@@ -106,7 +109,8 @@ A review returns one core result (ACTIVATION §3) for each declared predicate it
 evaluated, with: the exact subject and basis, the evidence consulted, the
 findings ranked by consequence, each finding's evidence and the smallest
 bounded correction, the residual uncertainty, and the invalidation
-conditions. It recommends a disposition; it does not apply one. A finding
+conditions. It may recommend a disposition, which is evidence only and
+never a disposition; it does not apply one. A finding
 without evidence a consumer can chase is commentary.
 
 ### Result and triage projection
@@ -117,8 +121,8 @@ evaluated claim and basis. Severity, the assessor's grade of consequence,
 is evaluation evidence. Priority, the effect on the current promotion
 boundary and the disposition are the decision owner's (ACTIVATION §1,
 Roles and delegation) and stay distinct values even where a
-Product-defined policy maps one to another. The recommended disposition
-above is evidence for the decision owner: it is not a disposition, a
+Product-defined policy maps one to another. A recommended disposition
+is evidence for the decision owner: it is not a disposition, a
 priority or a boundary effect, and it is never adopted mechanically (P6,
 RF-007). The fields of a triage are declared by the profile that adopts it, and
 the scales it uses are bound by the adopting Product (P2, P6; provenance
@@ -361,14 +365,15 @@ detected and the cost.
 |---|---|
 | UP-001 | conserved; §1; row in the table below |
 | UP-022 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, the qualification protocol, derived guidance and the falsifiers in §7; row in the table below |
-| UP-008, RF-007, AC-018, AC-019 | conserved; §2; UP-008's row in the table below |
+| UP-008, RF-007 | conserved; §2; UP-008's row in the table below |
+| AC-018, AC-019 | conserved; restated in [AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models), which disposes their rows; §2 states their generic form |
 | UP-007 | conserved; §3 |
 | RF-013 | conserved; §7; the benchmark is new |
 | RF frame qualification, method self-qualification | conserved; §7; rows in the table below |
 | UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3, UP-004 in full in IDENTITY §6 and UP-020's delegation in ACTIVATION §1 |
 | UP-015 as acceptance evidence | conserved; §5 states what acceptance requires of the successor disposition record; the law is restated in full in RELEASE §9 and applied to this corpus in FOUNDATIONS §1 |
 | Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
-| TICKET judgment continuity | conserved via ACTIVATION §7 |
+| TICKET judgment continuity | conserved; restated in [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity), its generic reuse law in ACTIVATION §7 |
 | Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |
 
 RF rows received by this member (anchors into rc.2

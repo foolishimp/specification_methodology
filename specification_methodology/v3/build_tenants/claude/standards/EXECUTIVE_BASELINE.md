@@ -18,9 +18,7 @@ ASSURANCE §7 to §13. Every clause names the principle that requires it (P0
 to P6, FOUNDATIONS §3). A route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md`
 and is provenance only; every predecessor row received here is restated in
-this text, and nothing here depends on that cut to be applied. Members of
-tier 2 and 3 not yet built (TICKETS, IDENTITY, RELEASE, DESIGN_MODULE) are
-named without a link.
+this text, and nothing here depends on that cut to be applied.
 
 Role names used here bind the tier-1 roles of ACTIVATION §1: Worker is the
 constructor, Reviewer the assessor, Executive the coordinating role that
@@ -98,18 +96,18 @@ mappings this profile uses are ASSURANCE's.
 | Relation | Owner in this method | Use in this profile |
 |---|---|---|
 | frame declaration, activation, result algebra, conjunction, translation, coverage and revision | REFERENCE_FRAME; ACTIVATION §1 and §3 | defines each engagement frame and the active configuration |
-| bounded-frame conservation and execution intake | ACTIVATION §1 Intake, consuming the design profile's bounded-frame conservation laws (DESIGN_MODULE) | supplies the Worker activation basis |
+| bounded-frame conservation and execution intake | ACTIVATION §1 Intake, consuming the design profile's bounded-frame conservation laws ([DESIGN_MODULE](DESIGN_MODULE.md)) | supplies the Worker activation basis |
 | construction, self-review, assessment, disposition, checkpoint and continuation | ACTIVATION §1, §3 and §5 | supplies the complete execution transition |
 | constructor and independent-assessor separation | EVALUATION §3 | supplies Reviewer independence and traceability of the exact verdict |
 | exact assurance subject, evidence population and freeze for generic method qualification | EVALUATION §1, §3 and §7 | supplies review-boundary and qualification constraints |
-| module-derived unit proof | the design profile's design-to-module evidence route and module-derived unit-test law (DESIGN_MODULE) | supplies the unit frame's module-ownership basis, while ASSURANCE §7 limits its claim and evidence altitude |
-| capability and foundation selection before material generic construction | the design profile's capability-and-foundation selection law (DESIGN_MODULE) | supplies the Worker's proportional reuse comparison; reuse is no authority transfer, and an assigned foundation role keeps its declared relation and owner |
+| module-derived unit proof | the design profile's design-to-module evidence route and module-derived unit-test law ([ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route) and [§15](ASSURANCE.md#15-module-derived-unit-tests)) | supplies the unit frame's module-ownership basis, while ASSURANCE §7 limits its claim and evidence altitude |
+| capability and foundation selection before material generic construction | the design profile's capability-and-foundation selection law ([DESIGN_MODULE](DESIGN_MODULE.md)) | supplies the Worker's proportional reuse comparison; reuse is no authority transfer, and an assigned foundation role keeps its declared relation and owner |
 | Product testing taxonomy, claim, ordinary user path and acceptance meaning | ASSURANCE §1 to §3 and §7; the current Product, requirements, accepted design and release authority where applicable | selects user outcomes, supported interfaces, material compositions, runnable Product subjects, harnessed or live mode and required testing populations |
-| the twelve generic families | current Product and requirements; SPEC_METHOD composition law; accepted design; the design profile; identity and release law (IDENTITY, RELEASE); applicable domain, effect, interface, dependency and assurance owners | supplies recurring specialist evaluation families without moving their owners or requiring one architecture |
+| the twelve generic families | current Product and requirements; SPEC_METHOD composition law; accepted design; the design profile; identity and release law ([IDENTITY](IDENTITY.md), [RELEASE](RELEASE.md)); applicable domain, effect, interface, dependency and assurance owners | supplies recurring specialist evaluation families without moving their owners or requiring one architecture |
 | work selection and growth authority | current Goals, Product, requirements and an admitted ticket or equivalent work authority | selects the governed outcome and admits the local frame configuration |
 | design structure and local realisation frame decisions | accepted design under its governing Product and requirements | supplies specialist frames and material relations |
-| human and proxy identity | identity law (IDENTITY) with project authority; EVALUATION §5 for the proxy grant | binds the Executive actor and its decision envelope |
-| Product and release acceptance | the current Product and release law (RELEASE); EVALUATION §5 | keeps direct acceptance where those owners require it |
+| human and proxy identity | identity law ([IDENTITY](IDENTITY.md)) with project authority; EVALUATION §5 for the proxy grant | binds the Executive actor and its decision envelope |
+| Product and release acceptance | the current Product and release law ([RELEASE](RELEASE.md)); EVALUATION §5 | keeps direct acceptance where those owners require it |
 
 Every requirement of this profile is one of two kinds: an exact
 application of a cited owning relation, or a condition for claiming
@@ -125,13 +123,12 @@ summaries and commentary neither select nor adopt it (P6, P3).
 
 ## 3. Engagement applicability
 
-Direct entry is ACTIVATION §1 (Roles and delegation): one capable context
-with sufficient work authority, intake and operation grant may enter
-directly as Worker (Writer), and no Executive activation is needed solely to appoint
-it. Coordination activates when material contexts, authority, capability
-or required independence cannot be covered by that direct activation; a
-role or frame name alone creates no coordination or review obligation (P0,
-P6; rc.2 #engagement-applicability).
+Direct entry, and the coordination that activates when it cannot cover
+the material contexts, authority, capability or required independence, are
+[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation);
+here the directly entering role is Worker (Writer) and the coordinating
+role Executive. A role or frame name alone creates no review obligation
+either (P0, P6; rc.2 #engagement-applicability).
 
 This profile adds to direct entry (P2, P6):
 
@@ -944,8 +941,9 @@ which here contains (P6, P5; rc.2 #6-reviewer-returns-to-executive):
 The finding-level triage payload projects over the result algebra as
 EVALUATION §4 (Result and triage projection) states; in this profile the
 assessor there is the Reviewer and the decision owner is the Executive. The
-Reviewer returns to the Executive, not to the Worker. It does not edit the
-candidate, direct the repair or authorise continuation (P6; rc.2
+Reviewer returns to the Executive, not to the Worker, and returns no
+disposition; a recommendation is evidence only (EVALUATION §4). It does not
+edit the candidate, direct the repair or authorise continuation (P6; rc.2
 #reviewer-result-and-triage-projection).
 
 ### 7. Executive disposes and checkpoints
@@ -995,7 +993,7 @@ artifact type (P2, P6; rc.2 #handoff-projection).
 | activation refusal | the activation relation to Executive | attempted frame, subject and basis, actor, the failed capability or authority predicate, evidence and reconfiguration pressure; no Worker result | REFERENCE_FRAME §5; ACTIVATION §1 |
 | work result | Worker to Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | ACTIVATION §3 and §7 |
 | Reviewer activation | Executive to Reviewer | exact subject, claim, composition boundary, evidence population, Product-selected severity scale, authority, independence, invalidation | REFERENCE_FRAME §11; EVALUATION §3 and §7 |
-| review result | Reviewer to Executive | exact verdict basis, evidence, findings, counterexamples, technical triage, residuals, invalidation; no priority and no disposition | EVALUATION §3 and §4; ACTIVATION §3 |
+| review result | Reviewer to Executive | exact verdict basis, evidence, findings, counterexamples, technical triage, residuals, invalidation; no priority and no disposition, a recommendation being evidence only | EVALUATION §3 and §4; ACTIVATION §3 |
 | specialist activation | Executive or a declared parent relation to a capable evaluator | exact evaluation, subject and basis, bounded map of material relations, actor envelope, evidence, authority, dependencies, exclusions, result consumer, invalidation | REFERENCE_FRAME §11; the exact specialist owner |
 | specialist result | evaluator to Executive, a declared conjunction or the exact parent relation | closed result, exact activation and basis, evidence and source routes, residuals, invalidation, no implicit continuation | ACTIVATION §7; the exact specialist owner |
 | disposition and checkpoint | Executive to the existing work authority and any next activation | the exact consumed results and technical triage, current Product and MVP or release mandate, priority, promotion-boundary effect, decision grant, disposition, checkpoint, residuals, next already-authorised action | ACTIVATION §3 and §5; the Product-owned triage policy |
@@ -1507,7 +1505,7 @@ and in those members' tables.
 | Anchor | Disposition | Locus |
 |---|---|---|
 | #canonical-compression | conserved; the testing-frame evidence topology moves to ASSURANCE §7 with the frames | §1; ASSURANCE §7 |
-| #status-and-authority-boundary | conserved; the ownership table is rewritten onto tenant members, and owners not yet built (DESIGN_MODULE, IDENTITY, RELEASE) are named without a link | §2 |
+| #status-and-authority-boundary | conserved; the ownership table is rewritten onto tenant members, and the owners DESIGN_MODULE, IDENTITY and RELEASE are linked | §2 |
 | #engagement-applicability | conserved; direct entry itself is ACTIVATION §1, and the profile's additions are restated here | §3 |
 | #empirical-revision-boundary | conserved | §4 |
 | #profile-terms | not applicable: heading with no claim text (17 bytes); its children are disposed individually | §5 |

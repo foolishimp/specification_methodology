@@ -9,8 +9,10 @@ these definitions by reference and adds none of its own.
 Every claim of the predecessor cut `stdo://releases/v2.5.1-rc.2/` receives
 exactly one disposition in this corpus. The frontier is the tenant copy of
 [PREDECESSOR_CLAIMS](../frontier/PREDECESSOR_CLAIMS.md), one row per
-predecessor section; the values are those of
-[UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+predecessor section; the values are those of UP-015,
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+(provenance
+[rc.2 UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)),
 applied to the corpus itself:
 
 - conserved: the claim is restated in this corpus's own text with every
@@ -61,7 +63,8 @@ Dispositions: subject, representation and interpretation conserve
 and
 [bounded-context semantic resolution](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#bounded-context-semantic-resolution);
 identity conserves
-[IDENTITY_METHOD](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#1-scoped-identity)
+[IDENTITY_METHOD](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#1-scoped-identity),
+restated in [IDENTITY §2](IDENTITY.md#scoped-identity),
 and
 [AC-002](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-002-scoped-identity);
 outcome conserves
@@ -71,7 +74,8 @@ actor and envelope conserve
 claim, judgment and authority conserve
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001),
 [AC-014](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-014-judgment-separation),
-[UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004);
+[UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004),
+restated in [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004);
 residual and basis conserve
 [AC-009](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-009-residual-conservation)
 and
@@ -282,7 +286,8 @@ representation identity stay separate; a boundary is a claim with a proof
 obligation. Independent: equal capacity admits identity by persistence or by
 digest. Conserves AC-002, AC-014, the
 [recursive Product taxonomy](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#recursive-product-taxonomy),
-[Entity Cut Construction Law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law).
+[Entity Cut Construction Law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law),
+restated in [WORLD_MODEL §9](WORLD_MODEL.md#9-entity-cut-construction).
 
 P4a Typed composition. Two steps compose only when the first's result type
 and judgment satisfy the second's domain and preconditions; composition
@@ -328,7 +333,7 @@ neither is minted by the other. Independent: a bounded actor satisfying all
 else can still take a green label as acceptance. Conserves UP-001,
 [UP-008](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#semantic-evidence-and-projection-separation-stdo-up-008),
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022),
-UP-004,
+UP-004 ([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)),
 [RF-006](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation),
 [RF-007](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation).
 
@@ -381,6 +386,7 @@ H names an architecture, never a runtime.
 Not law; carried for falsification: categorical equivalence of 𝒜 and ℐ under
 some reformulation; universal algorithmic capture of meaning; the statistical
 Markov boundary (candidate status under
+[WORLD_MODEL §4](WORLD_MODEL.md#epistemic-status); provenance
 [WORLD_MODEL_METHOD](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#epistemic-status-of-the-construct));
 traversal composition laws of any runtime.
 
@@ -406,21 +412,17 @@ traversal composition laws of any runtime.
 | RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
-| UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; P2 consumes them; UP-005 is disposed at the design profile |
+| UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; UP-005 restated in DESIGN_MODULE §6 Boundary and governance cost, its proportionality relation ACTIVATION §6; P2 consumes them |
 | UP-015 | conserved; restated in full in RELEASE §9, applied to this corpus in §1 and to acceptance evidence in EVALUATION §5 |
 | RM Release Identities | conserved; candidate source, release subject and version-line selector restated in §2 Release objects beside the release cut; their realisation as refs, with the namespace, subtree and branch carriers, in RELEASE §2, whose §11 lists the RELEASE_METHOD rows |
 | IDENTITY_METHOD scoped identity | conserved; the Object of §2 carries scoped identity, whose laws are IDENTITY §2 |
-| UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by ACTIVATION §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
-| UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation; UP-021 and its standing structural qualification are restated in full in ACTIVATION §4 |
+| UP-016, UP-018, UP-019, UP-023 | conserved; all four restated in DESIGN_MODULE §5 and §7, which disposes their rows; UP-016's admission semantics are ACTIVATION §4, UP-018's general reconstruction rule ACTIVATION §1 Intake, and UP-019's and UP-023's shared machinery §4 above, each pointed to |
+| UP-017, UP-021 | conserved; UP-017 restated in DESIGN_MODULE §5 Bounded frame conservation, which disposes its row, its frame instance being P4b's one obligation (reframed with AC-005, AC-009 and AC-013) and its seam rule ACTIVATION §1 and §4; UP-021 and its standing structural qualification are restated in full in ACTIVATION §4 |
 | UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
 | SM Probabilistic Work Boundary | conserved; restated in §2 Work boundary and §3 under P0; ACTIVATION §1 consumes it; row in the table below |
 | SM Recursive Product Taxonomy | conserved; restated in §2 Product lineage objects; SPEC_METHOD §6 consumes it; row in the table below |
 | SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement is ACTIVATION §3 and its hard stops ACTIVATION §4 |
-| ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |
-
-Rows of other members above still read "conserved by reference" from the
-first pass; each is rewritten to the §1 vocabulary at its member's
-activation.
+| ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved; restated in full in the ODD, DESIGN_MODULE, UX and WORLD_MODEL members, which dispose their rows and are indexed in PROFILES §2 to §5; nothing imported into tier 1 |
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):

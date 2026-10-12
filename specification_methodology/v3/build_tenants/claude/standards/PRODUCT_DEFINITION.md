@@ -16,7 +16,7 @@ the result algebra) and [EVALUATION](EVALUATION.md) (claims, separation,
 conformance); adds no definition to tier 1. The generic WHAT and HOW law
 and the recursive product taxonomy are [SPEC_METHOD §2 and
 §6](SPEC_METHOD.md); release identities, cohorts and selectors are the
-release law (the RELEASE member); assurance and testing law is
+release law (the [RELEASE](RELEASE.md) member); assurance and testing law is
 [ASSURANCE](ASSURANCE.md). The schemas, templates, filenames, manifest
 fields and commands named here are this Product's own realisation shapes,
 accepted as interoperability boundaries under §11; they are not profile
@@ -66,7 +66,7 @@ the definition identity as release identity (P3; SPEC_METHOD §6).
 
 Product-definition, immutable Product, bounded-context and build-tenant
 identity URIs are identity carriers, not self-authorising strings. They
-stay subject to the identity law (the IDENTITY member) and to the owning
+stay subject to the identity law (the [IDENTITY](IDENTITY.md) member) and to the owning
 Product, release or domain authority. A URI locator, filename, path or
 display label cannot mint or widen identity authority (P6, P3).
 
@@ -229,7 +229,7 @@ unmanifested alias (P5, P3).
 `constitution.stdo.source.repository` identifies the transport source.
 `constitution.stdo.selector` is a mutable `stdo://channels/<version>`
 discovery selector whose alias semantics are owned by the release law (the
-RELEASE member). Neither is operative authority.
+[RELEASE](RELEASE.md) member). Neither is operative authority.
 `constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`
 are the sole authored STDO selection for that Product Definition (P6, P3).
 
@@ -402,7 +402,7 @@ implementation, test, translation or reviewer must not select one by
 familiarity, frequency, recency, nominal match or a context-free glossary
 fallback (P5, P1).
 
-The glossary (the GLOSSARY member) is a non-deciding locator index. Each
+The glossary (the [GLOSSARY](GLOSSARY.md) member) is a non-deciding locator index. Each
 record points to an exact source clause that declares the bounded context
 and owns the indexed concept. The glossary defines neither and cannot
 repair a missing declaration. An indexed concept applies only when the
@@ -605,7 +605,7 @@ execution-batch manifests. These bindings may resolve to directories,
 repository resources, tracker collections, API endpoints or product-scoped
 queries. Goals own the bounded work wave, ticket state stays ticket
 authority, and comments stay non-authoritative commentary (P6, P3). Which
-carrier a given work item takes is SPEC_METHOD §4 and the TICKETS member;
+carrier a given work item takes is SPEC_METHOD §4 and the [TICKETS](TICKETS.md) member;
 this section binds where each carrier kind lives.
 
 ## 9. Recursive discovery and explicit composition
@@ -893,15 +893,15 @@ disposition, and is recorded in the row.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #stdo-product-definition-overlay-and-layout-independence | conserved; the owner of the product-definition-routing bounded context is this member rather than SPEC_METHOD; `IDENTITY_METHOD.md` is carried as the IDENTITY member | §1 |
+| #stdo-product-definition-overlay-and-layout-independence | conserved; the owner of the product-definition-routing bounded context is this member rather than SPEC_METHOD; `IDENTITY_METHOD.md` is carried as the [IDENTITY](IDENTITY.md) member | §1 |
 | #required-definition-relations | conserved | §2 |
 | #constitutional-set-sufficiency | conserved; "the accepted Design Module Method Ontology" is carried as the design profile's accepted design ontology of a realisation boundary, losing no determination | §3 |
-| #shared-installed-release-basis-and-toolchain-manager | conserved in full: the basis pair, the manifest binding, the Adoption and Fleet Adoption Plans, the hashing rule, the seven manager functions, the store and registry law, the physical-entry rule, the selector and basis fields, the six command boundaries, the fail-closed list, the schema-locator rule, the agent bootstrap marker law and the exact prune list; `RELEASE_METHOD.md` as owner of the selector's alias semantics is carried as the RELEASE member | §4 |
+| #shared-installed-release-basis-and-toolchain-manager | conserved in full: the basis pair, the manifest binding, the Adoption and Fleet Adoption Plans, the hashing rule, the seven manager functions, the store and registry law, the physical-entry rule, the selector and basis fields, the six command boundaries, the fail-closed list, the schema-locator rule, the agent bootstrap marker law and the exact prune list; `RELEASE_METHOD.md` as owner of the selector's alias semantics is carried as the [RELEASE](RELEASE.md) member | §4 |
 | #explicit-complete-consumer-update | conserved in full | §4 Explicit complete consumer update |
-| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the GLOSSARY member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined | §5 |
+| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the [GLOSSARY](GLOSSARY.md) member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined | §5 |
 | #local-constitutional-binding | conserved | §6 |
 | #collective-reference-frame-basis | conserved; `REFERENCE_FRAME_METHOD.md` is carried as REFERENCE_FRAME and `STDO_REFERENCE_FRAME_BASELINE.md` as the Executive baseline profile member; the activation packet and the step are pointed to REFERENCE_FRAME §11 and ACTIVATION §1, which define them | §7 |
-| #what-how-and-work-carriers | conserved; the owner of the build-tenancy bounded context is this member; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection is SPEC_METHOD §4 and TICKETS, neither restated here | §8 |
+| #what-how-and-work-carriers | conserved; the owner of the build-tenancy bounded context is this member; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection is SPEC_METHOD §4 and [TICKETS](TICKETS.md), neither restated here | §8 |
 | #recursive-discovery-and-explicit-composition | conserved | §9 |
 | #semantic-resolution-conformance-cases | conserved; "Reference Frame Method evaluation context" is carried as the reference-frame-evaluation bounded context owned by REFERENCE_FRAME §1 | §10 |
 | #one-constitutional-surface-and-version-boundary-stdo-surface-001 | conserved; "standard" is carried as "member" | §11 |

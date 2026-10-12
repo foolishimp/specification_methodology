@@ -15,11 +15,10 @@ declaration shape, conjunction and coverage),
 assessment, acceptance, conformance) and [ACTIVATION §3](ACTIVATION.md)
 (the result algebra); adds no definition to tier 1. The particular
 method's chain and change classes are [SPEC_METHOD](SPEC_METHOD.md); the
-project's bindings are [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md). Later
-members add to this one without changing what is here: the design
-profile's module-derived unit-proof law (its 6A to 6C) and the ticket law's
-test-case authority each land in a section of their own when their member
-is activated, and this text pre-empts neither. The testing frames and
+project's bindings are [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md). The
+design profile's module-derived unit-proof law (its 6A to 6C) is §14 to
+§16, and the ticket law's test-case authority is
+[TICKETS §7](TICKETS.md#test-case-authority); this text pre-empts neither. The testing frames and
 interface-integration law received from the predecessor baseline profile
 are §7 to §13; the profile that maps engagement roles and specialist
 families onto them is [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md), tier 3,
@@ -174,7 +173,9 @@ ordered test-case sequences, negative or control cases and other explicit
 evidence cases appropriate to the kind of truth being proved; it exists in
 written form and is traceable. No live requirement is fully proved on
 informal operator confidence, ambient habit or an unlabelled test corpus
-(P6; EVALUATION §5, green labels are not acceptance).
+(P6; EVALUATION §5, green labels are not acceptance). The derivation of
+each test case from admitted work authority is
+[TICKETS §7 Test case authority](TICKETS.md#test-case-authority).
 
 ## 4. Scenario bundle
 
