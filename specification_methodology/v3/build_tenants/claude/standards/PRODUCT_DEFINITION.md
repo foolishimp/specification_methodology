@@ -43,8 +43,9 @@ second semantic owner (P6; rc.2
 Every product defined under this method publishes one JSON definition for
 each distinct current product WHAT. Its conventional filename is
 `stdo_<label>.json`; `stdo_default.json` is the default for a source
-project with one product definition. A directory holds more than one
-definition only when it hosts more than one distinct product WHAT. Several
+project with one product definition. A directory may hold more than one
+definition when it hosts more than one distinct product WHAT, and only
+then. Several
 build tenants realising the same WHAT are entries in one definition and
 never add definition files (P3).
 
@@ -878,7 +879,7 @@ The bootstrap sequence is (P3, P6, P2):
     constitutional-sufficiency and authority-congruence checks.
 
 Once a bound requirement set is the live constitutional surface, no rival
-monolithic requirements document remains co-equal authority with it. This
+monolithic requirements document should remain co-equal authority with it. This
 keeps requirement truth structurally clear, derivable and non-monolithic
 without prescribing its folder (P6, P2).
 

@@ -596,8 +596,8 @@ design altitude is proportional even when the model is detailed. A prior
 design surface that removes no material semantic alternative is
 disproportionate. A method addition is disproportionate when it duplicates
 truth, increases reconciliation paths or expands the bounded reasoning
-surface without materially reducing ambiguity; existing obligations absorb
-new detail where they can without weakening ownership or meaning.
+surface without materially reducing ambiguity; existing obligations should
+absorb new detail where they can without weakening ownership or meaning.
 
 Apply this relation to the method's own execution: repeated source
 acquisition, context assembly, hashing, activation preparation, status

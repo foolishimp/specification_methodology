@@ -28,9 +28,10 @@ provenance only; nothing here depends on that cut to be applied.
 Spec-driven development treats specification as constitutional source, not
 as commentary on code after the fact. Its point is to make software
 re-derivable, auditable and correctable under explicit authority. Its
-overriding bias is declarative rather than imperative: the system primarily
-declares truths, structures, interfaces, constraints and evidence surfaces,
-and lawful processing derives and realises work from that declared surface.
+overriding bias is declarative rather than imperative: the system should
+primarily declare truths, structures, interfaces, constraints and evidence
+surfaces, and let lawful processing derive and realise work from that
+declared surface.
 Imperative procedure still exists and is subordinate to declared authority
 (P6, P1; rc.2 #position).
 
@@ -42,7 +43,8 @@ Its role is meta-constitutional: it defines how goals, intent, product,
 requirements, design, code, evidence and repricing relate; what counts as
 specification sufficiency; what kinds of requirement truth exist; and how
 authority flows during iterative delivery. If a project's implementation
-disappears, the method is sufficient to bootstrap a new spec-driven project
+disappears, the method should still be sufficient to bootstrap a new
+spec-driven project
 process from scratch; the method plus the surviving domain specification
 can reconstruct the project (P2, P0; rc.2 #process-constitution).
 
@@ -262,7 +264,8 @@ sufficient, and that an accepted relation may be reused on its exact basis
 after checking applicability and invalidation, is EVALUATION §6. Applied to
 this chain (P2, P1; rc.2 #reconstruction-litmus), the method is
 specification-driven only if the layers are reconstructable in order: given
-goals, a competent team can derive a conformant intent surface; given
+goals, a competent team should be able to derive a conformant intent
+surface; given
 intent, a conformant product definition; given product, conformant
 requirements; given requirements, a conformant design; given requirements
 plus design, conformant code. Different designs may satisfy the same
@@ -421,10 +424,11 @@ category is not a priority label and not a claim that the requirement is
 user-facing; it states what kind of project truth the requirement owns.
 Requirements describe the full constitutional what; design describes the
 structural how, with ADRs one durable design form; scenarios validate the
-operational meaning of capability claims. Not every requirement is
+operational meaning of capability claims. Not every requirement should be
 translated into a marketed feature; some are better expressed as
 guarantees, constraints, governance rules or verification obligations.
-Requirements also avoid freezing concrete realisation choices prematurely:
+Requirements should also avoid freezing concrete realisation choices
+prematurely:
 unless a path, filename or packaging rule is itself constitutional, it
 belongs to design.
 
@@ -489,7 +493,7 @@ intent, not a code hack.
 
 ### Live surface immutability
 
-A project accumulates multiple live domain surfaces over time. A live
+A project may accumulate multiple live domain surfaces over time. A live
 surface is versioned constitutional history, not scratch space (P3; rc.2
 #live-surface-immutability). Engine code, design documents, tests and
 tooling may be refactored aggressively while they remain mutable
@@ -869,7 +873,7 @@ product definition, including any lifecycle obligations or named lifecycle
 ambiguity gaps, and classify each new or changed requirement by category;
 establish or update design so it owns the governing structural HOW, where
 under the design profile its decision-completeness rule applies (design,
-implementation and tests co-evolve only when its co-evolution predicate
+implementation and tests may co-evolve only when its co-evolution predicate
 holds, otherwise the smallest causally closed affected design set is
 accepted before retained implementation establishes an unresolved,
 contradictory or materially non-equivalent relation;
@@ -907,8 +911,8 @@ surface the sole live requirement authority before proceeding to design and
 code; prefer declarative structure over procedural workaround while shaping
 the new surface; record any major ambiguity that remains at the current
 boundary before downstream realisation proceeds; only after that surface
-exists treat downstream design and implementation as constitutionally
-grounded.
+exists should downstream design and implementation be treated as
+constitutionally grounded.
 
 When a real use case reveals a gap: run intake triage first and classify
 the report as a lawful change; then write the scenario as the first
@@ -1003,7 +1007,7 @@ it is not part of the live project specification. The mutable `v<version>`
 tag is a version-line discovery selector to the highest-ordinal published
 immutable cut; it is not an exact dependency, evidence or constitutional
 basis and cannot silently change a consumer selection. Active
-constitutional and shared realisation surfaces therefore describe current
+constitutional and shared realisation surfaces should therefore describe current
 truth by role, boundary and status rather than by release-line version
 labels (§2, specification surface rule). Release criteria, immutable
 release-cut publication, selector advancement and the process for cutting a
@@ -1285,8 +1289,8 @@ source material, not live authority in the new line; it is lawful to zero
 inherited constitutional surfaces on the migration line and rebuild them
 from first principles; nothing carries forward by default, and every
 retained statement, requirement, design choice or guide rule is explicitly
-re-adopted; every carry-forward is intentional and lands in the correct
-layer, goals, intent, product, requirements, design, guide or template; old
+re-adopted; every carry-forward is intentional and should land in the
+correct layer, goals, intent, product, requirements, design, guide or template; old
 design and code may be used as reference implementations but do not govern
 the new constitutional surface unless explicitly re-derived and re-adopted;
 absence from the new constitutional surface means not yet adopted and
@@ -1324,7 +1328,8 @@ silently mutating the old one.
 
 ### Transformation wave
 
-Refactor and migration are a transformation wave over mutable
+Refactor and migration should be understood as a transformation wave over
+mutable
 implementation surfaces (P3, P6; rc.2 #transformation-wave-rule). While
 the wave is in flight: temporary mixed-state implementation may exist only
 below the current break boundary and only as explicitly non-authoritative

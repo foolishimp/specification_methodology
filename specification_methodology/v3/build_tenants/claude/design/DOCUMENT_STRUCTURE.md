@@ -82,15 +82,15 @@ mechanical.
 
 | rc.2 member or group | Tenant members that receive it |
 |---|---|
-| README.md | README; RELEASE (installed cut, store, manifest) |
+| README.md | README; PRODUCT_DEFINITION §4, §12 (installed cut, store, manifest) |
 | AXIOMATIC_CALCULUS.md | AXIOMATIC_CALCULUS |
 | DESIGN_MODULE_METHOD.md | DESIGN_MODULE; SPEC_METHOD (core rule, non-goals); ASSURANCE (6A to 6C) |
 | GLOSSARY_GUIDE.md | GLOSSARY |
 | IDENTITY_METHOD.md | IDENTITY; DESIGN_MODULE (defaults from a bound realisation) |
 | ODD_METHOD.md | ODD; ACTIVATION (graph-function refinement, by note) |
 | POSTING_GUIDE.md | POSTING_GUIDE; SPEC_METHOD (UP-012) |
-| REFERENCE_FRAME_METHOD.md | REFERENCE_FRAME; FOUNDATIONS (ontology objects); ACTIVATION (engagement as the step); EVALUATION (qualification) |
-| RELEASE_METHOD.md | RELEASE; FOUNDATIONS (recursive product objects); EVALUATION (UP-015 as acceptance evidence) |
+| REFERENCE_FRAME_METHOD.md | REFERENCE_FRAME; FOUNDATIONS (frame objects); ACTIVATION (engagement as the step); EVALUATION (qualification) |
+| RELEASE_METHOD.md | RELEASE; FOUNDATIONS (release objects); EVALUATION (UP-015 as acceptance evidence) |
 | SPEC_METHOD.md | SPEC_METHOD; PRODUCT_DEFINITION (overlay, SURFACE-001, bootstrap); ACTIVATION (UP-014, UP-020, UP-021; consumes the work boundary); FOUNDATIONS (work boundary, product taxonomy); EVALUATION (evidence rules, litmus); ASSURANCE (testing law) |
 | STDO_REFERENCE_FRAME_BASELINE.md | EXECUTIVE_BASELINE; ASSURANCE (testing frames, interface integration); EVALUATION (reviewer result, triage projection) |
 | TICKET_METHOD.md | TICKETS; SPEC_METHOD (change classes as the triage target) |

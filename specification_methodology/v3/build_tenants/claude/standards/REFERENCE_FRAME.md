@@ -63,7 +63,7 @@ construction, assurance and mixed work wherever the governing product or
 method permits them. It is engagement law only: it defines no application
 profile, role mapping, product-owned frame-basis binding, domain product,
 specification taxonomy, design ontology, runtime, workflow, adoption
-relation or assurance implementation. Other members and products import or
+relation or assurance implementation. Other members and products may import or
 specialise its relations under their own authority, and that external
 relation neither enters nor amends this member (P2: an obligation stops
 where its purpose stops). This member owns the reference-frame-evaluation
