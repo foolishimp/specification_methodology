@@ -55,9 +55,9 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
 | Position | `#position` |  | 1,866 | conserved | `AXIOMATIC_CALCULUS.md#1-position` |
-| Derivation Provenance | `#derivation-provenance` |  | 3,724 | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" generalised to profile, realisation and carrier | `AXIOMATIC_CALCULUS.md#derivation-provenance` |
+| Derivation Provenance | `#derivation-provenance` |  | 3,724 | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" generalised to profile, realisation and carrier; "graph, runtime, ODD, or application shorthand" generalised to a runtime, a profile, a realisation or an application, which include the graph case; field correction: the predecessor says the resolved address array is recorded under `derivation_basis.release_uri`, the locus says `derivation_basis.principle_refs`, the array field that the record shape in both editions actually declares for it (`release_uri` holds one URI); a correction that tightens the text to the record, not a change of law | `AXIOMATIC_CALCULUS.md#derivation-provenance` |
 | Scope | `#scope` |  | 659 | conserved | `AXIOMATIC_CALCULUS.md#scope` |
-| Core Signature | `#core-signature` |  | 4,767 | conserved | `AXIOMATIC_CALCULUS.md#2-signature` |
+| Core Signature | `#core-signature` |  | 4,767 | conserved; the carrier list "records, tables, graphs, terms" generalised to records, tables, terms, clauses, code or any other representation, which includes graphs | `AXIOMATIC_CALCULUS.md#2-signature` |
 | Typed Records | `#typed-records` |  | 560 | conserved | `AXIOMATIC_CALCULUS.md#3-typed-records` |
 | &nbsp;&nbsp;Semantic Object | `#semantic-object` |  | 333 | conserved | `AXIOMATIC_CALCULUS.md#semantic-object` |
 | &nbsp;&nbsp;Typed Relation | `#typed-relation` |  | 396 | conserved | `AXIOMATIC_CALCULUS.md#typed-relation` |
@@ -66,7 +66,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`
 | &nbsp;&nbsp;Residual | `#residual` |  | 611 | conserved | `AXIOMATIC_CALCULUS.md#residual` |
 | Fundamental Laws | `#fundamental-laws` |  | 20 | not applicable: heading with no claim text (20 bytes); its children are disposed individually | `AXIOMATIC_CALCULUS.md#4-fundamental-laws` |
 | &nbsp;&nbsp;AC-001 Closed Signature | `#ac-001-closed-signature` | AC-001 | 390 | conserved | `AXIOMATIC_CALCULUS.md#ac-001-closed-signature` |
-| &nbsp;&nbsp;AC-002 Scoped Identity | `#ac-002-scoped-identity` | AC-002 | 218 | conserved; scoped identity is defined at FOUNDATIONS.md §2 Object, the law is in the locus | `AXIOMATIC_CALCULUS.md#ac-002-scoped-identity` |
+| &nbsp;&nbsp;AC-002 Scoped Identity | `#ac-002-scoped-identity` | AC-002 | 218 | conserved; scoped identity is defined at FOUNDATIONS.md §2 Object, the law is in the locus; "graph position" generalised to position in any structure, which includes it | `AXIOMATIC_CALCULUS.md#ac-002-scoped-identity` |
 | &nbsp;&nbsp;AC-003 Reference Closure | `#ac-003-reference-closure` | AC-003 | 426 | conserved | `AXIOMATIC_CALCULUS.md#ac-003-reference-closure` |
 | &nbsp;&nbsp;AC-004 Relation Typing | `#ac-004-relation-typing` | AC-004 | 227 | conserved | `AXIOMATIC_CALCULUS.md#ac-004-relation-typing` |
 | &nbsp;&nbsp;AC-005 Authority Conservation | `#ac-005-authority-conservation` | AC-005 | 323 | conserved; authority kinds are defined at FOUNDATIONS.md §2, the law is in the locus | `AXIOMATIC_CALCULUS.md#ac-005-authority-conservation` |

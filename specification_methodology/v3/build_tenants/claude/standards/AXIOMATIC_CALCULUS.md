@@ -457,11 +457,11 @@ failed, missing, indeterminate, out-of-scope or invalid-basis result
 returns its member under that algebra and is never coerced to satisfied.
 ACTIVATION §3 defines the members, the no-coercion rule and the boundary
 among out_of_frame, indeterminate and a judgment that was not performed;
-this law uses that definition and adds nothing to it. Where this member
-says that a condition refuses, the applicable structural or semantic
-evaluation returns a non-satisfied member naming the condition; the
-record, model or carrier is not admitted, and nothing is dropped silently
-(P5, P6; rc.2 #ac-007-constraint-and-refusal).
+this law uses that definition and adds nothing to the algebra. Where this
+member says that a condition refuses, the applicable structural or
+semantic evaluation returns a non-satisfied member naming the condition;
+the record, model or carrier is not admitted, and nothing is dropped
+silently (P5, P6; rc.2 #ac-007-constraint-and-refusal).
 
 ### AC-008 Explicit latitude
 
@@ -781,8 +781,11 @@ where `F_K` is one functor kind, `v` is one exact traversal identity,
 its closed stop algebra. `Omega_v` is declared by the signature's stop
 contract as a refinement of the core result algebra of ACTIVATION §3 with
 a total mapping to it; it adds no core member and coerces none to
-satisfied. The stop members this member writes, `hold`, `gap` and
-`refusal`, are non-satisfied members under that mapping (P5).
+satisfied. The signature's stop contract constrains the kinds; the
+traversal record's `stop_states` declares, per traversal, which of `hold`,
+`gap` and `refusal` map to which non-satisfied core member. The stop
+members this member writes, `hold`, `gap` and `refusal`, are
+non-satisfied members under that mapping (P5).
 
 - `F_D` classifies deterministic evaluation or proof over declared
   properties. It returns a judgment and does not perform the domain
@@ -1135,9 +1138,9 @@ is provenance only.
 | Anchor | Disposition | Locus |
 |---|---|---|
 | #position | conserved; the derivation diagram is written with plain arrows | §1 |
-| #derivation-provenance | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" are generalised to profile, realisation and carrier, losing no determination | §1 Derivation provenance |
+| #derivation-provenance | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" are generalised to profile, realisation and carrier, losing no determination; "graph, runtime, ODD, or application shorthand" is generalised to a runtime, a profile, a realisation or an application, which include the graph case; field correction: the predecessor says the resolved address array is recorded under `derivation_basis.release_uri`, this member says `derivation_basis.principle_refs`, the array field that the record shape in both editions actually declares for it (`release_uri` holds one URI); that is a correction that tightens the text to the record, not a change of law | §1 Derivation provenance |
 | #scope | conserved | §1 Scope |
-| #core-signature | conserved | §2 |
+| #core-signature | conserved; the carrier list "records, tables, graphs, terms" is generalised to records, tables, terms, clauses, code or any other representation, which includes graphs | §2 |
 | #typed-records | conserved | §3 |
 | #semantic-object | conserved; related to FOUNDATIONS §2 Object | §3 Semantic object |
 | #typed-relation | conserved | §3 Typed relation |
@@ -1146,7 +1149,7 @@ is provenance only.
 | #residual | conserved; related to FOUNDATIONS §2 Residual | §3 Residual |
 | #fundamental-laws | not applicable: heading with no claim text (20 bytes); its children are disposed individually | §4 |
 | #ac-001-closed-signature | conserved | §4 AC-001 |
-| #ac-002-scoped-identity | conserved; scoped identity is defined at FOUNDATIONS §2 Object and P3, the law is here | §4 AC-002 |
+| #ac-002-scoped-identity | conserved; scoped identity is defined at FOUNDATIONS §2 Object and P3, the law is here; "graph position" is generalised to position in any structure, which includes it | §4 AC-002 |
 | #ac-003-reference-closure | conserved | §4 AC-003 |
 | #ac-004-relation-typing | conserved | §4 AC-004 |
 | #ac-005-authority-conservation | conserved; authority kinds are defined at FOUNDATIONS §2, the law is here; P4b consumes it | §4 AC-005 |
