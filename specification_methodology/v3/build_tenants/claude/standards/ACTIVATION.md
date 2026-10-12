@@ -597,8 +597,8 @@ priority this relation yields for a product outcome is SPEC_METHOD §8.
 Cost is selected, not universal. Where capability fit or a cost claim is the
 governed question, the activation declares its allowance and reports spend
 with its measurement source, or records that the counter is unavailable
-(new; P0 with UP-014's selection rule). Separate startup, framework, external computation, transport and assurance
-costs so that one cannot conceal another; declare supported input dimensions
+(new; P0 with UP-014's selection rule). Separate material startup, framework processing, external computation,
+transport and assurance costs so that one cannot conceal another; declare supported input dimensions
 and workloads before qualification
 ([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019)).
 Report volume is not model traffic; transferred context is counted across

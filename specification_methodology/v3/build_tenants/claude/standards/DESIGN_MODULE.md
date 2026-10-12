@@ -1385,8 +1385,9 @@ evaluation).
 
 Operational assumptions. Material algorithmic work declares the supported
 input dimensions, workload and growth, and the operational assumptions
-needed for the selected outcome; the separation of startup, framework,
-external computation, transport and assurance costs is ACTIVATION §6. Bind
+needed for the selected outcome; the separation of material startup, framework
+processing, external computation, transport and assurance costs is
+ACTIVATION §6. Bind
 any acceptance limits and their owning authority before qualification;
 limits and workloads are Product-owned, not universal method constants.
 Challenge the assumptions on representative supported paths and material
@@ -2154,12 +2155,11 @@ RELEASE and project-owned release, deployment or operational surfaces
 
 ### Identity defaults from a bound runtime realisation
 
-A consumer-bound runtime realisation may publish default identity
-generators, validators and normalisers for its own runtime surfaces and
-for the common default surface kinds used by its default deterministic
-helpers; under the graph-execution profile this is a consumer-bound
-realisation of the ABG role publishing for default ODD surface kinds used
-by default `F_D` helpers (P3, P6; provenance rc.2
+A consumer-bound realisation of the ABG role under the graph-execution
+profile may publish default identity generators, validators and
+normalisers for its own runtime surfaces and for the default ODD surface
+kinds used by default `F_D` helpers; the permission is scoped to that role
+and does not extend to other runtime realisations (P3, P6; provenance rc.2
 IDENTITY_METHOD #defaults-from-a-bound-abg-realization). These defaults are starter
 conventions and convenience contracts, not universal doctrine, and they are
 lawful only so long as derived domains may override them; the identity law
