@@ -431,8 +431,9 @@ direction. Semantic Equivalence requires the governing authorities to
 establish the claimed equality; neither identical spelling nor two opposing
 translations proves it automatically. A Semantic Disambiguation selects one
 meaning for one scope and does not make competing concepts equal. No
-relation widens its source or target authority (P1, P6; these are the
-typed relation kinds of AC-012, AXIOMATIC_CALCULUS §4, applied to terms).
+relation widens its source or target authority (P1, P6; these four kinds
+are related to the typed relations that AC-012, AXIOMATIC_CALCULUS §4,
+names, with Semantic Import defined here).
 
 A specialisation is a directional translation whose target preserves the
 declared source meaning while narrowing its admissible instances or adding

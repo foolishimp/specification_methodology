@@ -168,7 +168,7 @@ informal operator confidence, ambient habit or an unlabelled test corpus
 ## 4. Scenario bundle
 
 Features are not proved by isolated assertions alone. Where a requirement
-claims meaningful system behaviour, the proving surface is a scenario
+claims meaningful system behaviour, the proving surface should be a scenario
 bundle or an equivalent ordered set of test cases that exercises that
 behaviour through a coherent sequence rather than as disconnected
 fragments (P2, P6; rc.2 #scenario-bundle-rule).
@@ -191,7 +191,7 @@ Where a system has an installable or runnable development form, the
 decisive proving lane runs against an installed development version as if
 it were an independent project or an externalised target, not only against
 the source tree in place (P6, P3; rc.2 #installed-dev-proof-rule). That
-proof prefers a fresh sandbox or equivalent isolated environment, an
+proof should prefer a fresh sandbox or equivalent isolated environment, an
 installed or built development artifact, and execution through the same
 declared entry, control and runtime surfaces the real product uses. Direct
 source-level or unit-level checks may stay useful; they do not replace
