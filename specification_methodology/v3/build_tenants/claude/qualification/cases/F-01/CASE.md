@@ -142,3 +142,30 @@ EVALUATION §2, not assessment.
 | Run | Operator | Record | Assessment |
 |---|---|---|---|
 | none | | | |
+
+## Subject revision 2 (2026-10-12)
+
+Standards at commit `ac3ec5f` on `tenant/claude/c3-v3` (the three W2c
+repairs: ACTIVATION §3 boundary, REFERENCE_FRAME §10 family-inclusion test
+and reopen rule, RF-011 cross-reference), encoded as program
+`urn:stdo-3:claude:program:a-c-text:set-3` under
+[a_c/set-3/](../../../a_c/set-3/README.md) (canonical digest
+`sha256:18f58f7e939b05bafa8d1957c12abc999b9733beb731c2f4f98438bfa13ea38f`),
+and the two frame files projected from it, which are the bytes the actor
+receives in runs against this revision. The set-3 files are introduced by
+the W5 phase 1 commit; a run names that commit in the runs table.
+
+| Frame file | SHA-256 | Bytes |
+|---|---|---|
+| `a_c/set-3/projection-frame-declaration-and-activation-materialized.json` | `545c293146a95b8fcace05180e59ca9d5b53bebc72de7a4e61297bbb7c21ecbc` | 271,966 |
+| `a_c/set-3/projection-coverage-and-revision-materialized.json` | `c4ec41584efb48d8fa15de214b3f88d4bd3f3d2aa43b9116dbca1938cd778757` | 223,594 |
+
+Invocations as in "Instrument invocations" above with `a_c/set-3/` in
+place of `a_c/set-2/` in the METHOD block path and the step ids `A-003`,
+`A-004`, `B-003`, `B-004` (five characters, so the header line is the
+length the original dry run measured). Dry-run measurement at these
+digests, no actor started: task A (`A-003`) 275,925 bytes (system 182,
+card 455, METHOD block 272,019, TASK block 3,154, header 115); task B
+(`B-003`) 228,380 bytes (system 182, card 455, METHOD block 223,636, TASK
+block 4,003, header 104). Both fit the cap. CARD.md, TASK-A.md and
+TASK-B.md are unchanged (`237ea8f9…`, `93b314b2…`, `48b2ebd6…`).
