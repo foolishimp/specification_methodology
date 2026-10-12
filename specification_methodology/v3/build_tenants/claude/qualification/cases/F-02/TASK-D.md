@@ -34,7 +34,9 @@ candidate commit `4be19f02`, build `b-77`; transition evidence: user
 acceptance `UA-5` (guest checkout outcome) green, end to end `E2E-3`
 (checkout path from cart to confirmation) green, integration `INT-8`
 (payment-provider seam) green and the unit suite green, all on `b-77` with
-r41. Self-review attached.
+r41. Self-review attached. Commit `4be19f02` changes the card-payment step
+(the payment-provider client and its retry handling) and the address step
+(it adds the `autofill_v2` code path).
 
 Reviewer result `RR-9` (Reviewer Hana, independent of Ada, 2026-10-12T08:00Z):
 claim "guest checkout on `b-77` with r41 meets requirements R-C1 to R-C6,

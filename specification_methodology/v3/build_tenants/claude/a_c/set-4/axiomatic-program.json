@@ -4844,6 +4844,37 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:dispositions-are-selected-by-their-conditions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:refinement-disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:candidate"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "Assessment of a candidate returns one of four semantic dispositions: accept when the candidate closes its declared cone and preserves every affected governing relation; local_repair when implementation or proof is locally defective while the governing relation remains coherent; re_enter when the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change; reject when the candidate violates a governing relation or leaves an undisposed competing truth path. Global correctness means conserving every global relation affected by the bounded action; it does not require proving the whole product inside every local action. Repeated rejection against one unchanged boundary requires reassessment of the frame altitude, the causal cone, the common components, the design-versus-code placement and the authority sufficiency; the method sets no rejection-count threshold, mandatory review-round count or review state machine, and prohibits repeating an unchanged failed construction relation as if iteration alone could close it."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "P6, P5, P4b, P2"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:a-c-text:clause:disposition-consumes-a-core-result"
+        }
+      ],
+      "statement": "accept, local_repair, re_enter and reject each have their condition; repeated rejection on an unchanged boundary forces reassessment, not iteration.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#disposition"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:dispositions-named-in-advance",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
@@ -11061,6 +11092,23 @@
   ],
   "residuals": [
     {
+      "uri": "urn:stdo-3:claude:a-c-text:residual:contract-state-set-closed-or-minimum",
+      "kind": "conflict",
+      "subject_refs": [
+        "urn:stdo-3:claude:a-c-text:symbol:contract-state",
+        "urn:stdo-3:claude:a-c-text:symbol:execution-contract"
+      ],
+      "detail": "ACTIVATION section 1 (Admission) states a closed set: a contract is in one of the states drafted, admitted, rejected or superseded. TICKETS section 5 (Execution contract admission) states that the contract carries at minimum those states. Whether a carrier may add further contract states is not decided by the corpus; the conflict sits in ACTIVATION and was routed to the Executive by the W9b return.",
+      "re_entry_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#admission",
+        "stdo-3://build_tenants/claude/standards/TICKETS.md#execution-contract-admission"
+      ],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#admission",
+        "stdo-3://build_tenants/claude/standards/TICKETS.md#execution-contract-admission"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:residual:derivation-chain-cost-per-boundary",
       "kind": "unresolved",
       "subject_refs": [
@@ -11371,6 +11419,7 @@
       "scope": "Dispose a Worker result and a Reviewer result as Executive: steps 4 to 7 of the complete engagement transition, the five drift locks and their failure results, severity versus priority versus boundary effect, the promotion constraint projection, and the ASSURANCE testing-frame law step 4 relies on. Selected for F-02 task D.",
       "clause_refs": [
         "urn:stdo-3:claude:a-c-text:clause:boundary-effect-precedes-exactly-one-disposition",
+        "urn:stdo-3:claude:a-c-text:clause:dispositions-are-selected-by-their-conditions",
         "urn:stdo-3:claude:a-c-text:clause:exact-candidate-is-a-stabilised-subject-identity",
         "urn:stdo-3:claude:a-c-text:clause:executive-mutates-nothing",
         "urn:stdo-3:claude:a-c-text:clause:failed-drift-lock-maps-to-its-result",

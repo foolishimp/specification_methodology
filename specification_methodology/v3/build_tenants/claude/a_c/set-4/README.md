@@ -38,7 +38,7 @@ The thirteen files under `standards/` at `978d324`, identified by digest.
 CONFORMANCE.md and PROFILES.md are byte-identical to set-3's subject.
 FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, SPEC_METHOD and
 README changed between `ac3ec5f` and `978d324`, and the other five are new
-members. The validation report records 145 resolved sources: every tenant
+members. The validation report records 146 resolved sources: every tenant
 source carries one of the digests above, and the one rc.2 source is the
 calculus.
 
@@ -65,17 +65,17 @@ the recipe, and that decision is not this Writer's to make.
 <!-- artifacts -->
 | File | SHA-256 | Role |
 |---|---|---|
-| `axiomatic-program.json` | `bd837f1ab430caa23ec32d957c76e027b232ac3548871cd6c88f78c38d8eebc1` | the authored a_c.text program `urn:stdo-3:claude:program:a-c-text:set-4`; canonical program digest `sha256:10fc52ad07e5730e378dd18ed07819b2d1dd41fd8549a5f67ac7fd4f40fe760c` |
-| `logical-constraint-map.json` | `b781bc008efc188988d949b3443ce2e4ed1e884be624c2729c9dffd519b1da98` | deterministic index over the program; intrinsic digest `sha256:5e4c871db46dfec9a2d35efdd30ab72da5fbc4fc6f32a9d3f2ac772280cf9cb3` |
-| `validation-report.json` | `3b859b23bdeaed5713589dce4d20b604a06839a859a19e505bba9b8edca87d88` | status `valid`, zero diagnostics; 236 symbols, 330 clauses, 6 residuals; 145 resolved sources |
-| `projection-transformation-and-judgment-materialized.json` | `a2beaabab3ed1917d1786d665eafa33083d6cd3b812c9112605c4d6e0e2bb1cd` | frame `transformation-and-judgment`, materialized; projection digest `sha256:325bca71c25e431bc0480dea20c8d402e4cbe43d14e2031b357c728ffb8e30a3` |
-| `projection-transformation-and-judgment-reference-only.json` | `cb1e25a955c122359f1f3331cbbe91aeefab09b54707321565b367d38a99d209` | the same frame, reference-only; `sha256:87c236b68a47fabe1052296943aa35f01bbc2ebc6b153056b7285ff7babdceb3` |
-| `projection-triage-and-reentry-materialized.json` | `6cc0e3affd153f7c3c022ff3c932a06f40e648d6732edff686d62b77d07027a2` | frame `triage-and-reentry`, materialized; `sha256:c61f5d0d8f3dbe3e898be6ad2d96749151b808494328069eab3c6f6643627253` |
-| `projection-triage-and-reentry-reference-only.json` | `8fc3f13527e9f4b9d09a7f988549726da94b4f886f39d00b7323ca611c95fd9f` | the same frame, reference-only; `sha256:7c0d7f7fb39fb49369fe0beb8f027b0895eece256028e63ae3d05d803cdb4d4d` |
-| `projection-carrier-and-admission-materialized.json` | `bd1e71191f9e005ced31672debe396bf15afe5244528a948ddde1e1fc88522d9` | frame `carrier-and-admission`, materialized; `sha256:beec3c4b79273b55610d5f2dc1ef77d329257b2f05ef959b7e73663dfca6fd12` |
-| `projection-carrier-and-admission-reference-only.json` | `eb64bc39d2a33eb077a87bb3682f29eb0d5e69c2a09eae0fc160eac60b0297a0` | the same frame, reference-only; `sha256:2cf418d7eb62c1b6987aec17e8652b26141ab709e29874ecff3becca9a00698c` |
-| `projection-executive-disposition-materialized.json` | `18fad1848de8f5f544309ea497204aeb5ce9b72998a7b06a3a32d0dedcdde285` | frame `executive-disposition`, materialized; `sha256:8fc3703afe1746c5564d0a5fb58c26d4f69d6877675f9e4e8d95a110f68938c7` |
-| `projection-executive-disposition-reference-only.json` | `e89acb03e9799650bbc3b427620b2c779910e309e7f3cc2c9c6ec45aa5b55631` | the same frame, reference-only; `sha256:24418167ef7c9f1cf3955836ed22957a36f51d8e997f3ce4ae58d52ffbc80d92` |
+| `axiomatic-program.json` | `8c7984e8fcad67480f232f85ac8823e97266ecc1069f9cebefa0ffec9a18b74b` | the authored a_c.text program `urn:stdo-3:claude:program:a-c-text:set-4`; canonical program digest `sha256:16f840cb501b0df497d7a7747142e756108d031e6c0db2fbd8d3f69003325025` |
+| `logical-constraint-map.json` | `3f77d7f745786317ec5f07910b8408c8aa21488b31a7316428564cec8f163bcf` | deterministic index over the program; intrinsic digest `sha256:7e14668bb7e08c8349bbb7cde96faa0df15616b57ae3776c7b6642488c8802a9` |
+| `validation-report.json` | `7b86542f8f9ffc01d04ae7ebf0778e766dfbf7a4990286f468216a8c0e984a7b` | status `valid`, zero diagnostics; 236 symbols, 331 clauses, 7 residuals; 146 resolved sources |
+| `projection-transformation-and-judgment-materialized.json` | `839dff0bba028508132270a61e8fad73f18e7824b01294fe85fdd3b945455ea6` | frame `transformation-and-judgment`, materialized; projection digest `sha256:5100f10c416b2bfcb6d8f4fa4bde805bf28c215b73b53e4227f2a26ba20522e3` |
+| `projection-transformation-and-judgment-reference-only.json` | `d3183da29112cf8e6160a26f0e0ba1c8bfa638c6b18448dc6055224e26eb9f50` | the same frame, reference-only; `sha256:fb1a340ece545701cda9b9285e119c1e2a31cdf5ff99d8b632672a2a2f43a126` |
+| `projection-triage-and-reentry-materialized.json` | `90336a8f9e269dc70bb128e41605b51141d6d438cf45b740f433d10c06685ac1` | frame `triage-and-reentry`, materialized; `sha256:eec09cd9ab699669c892dfd72cc3e4bd6ceb52c3d86999fef8fe0a65d4ced273` |
+| `projection-triage-and-reentry-reference-only.json` | `f9727fab7201604bd687296793d804120d606270f17c85bc35749ae4c8e01b3d` | the same frame, reference-only; `sha256:0cadb9d57d68c15c02d756b151b0d53d16e126be5bb0b9613c7e0da5398d1313` |
+| `projection-carrier-and-admission-materialized.json` | `5ee0fb61ab65aa130d5950bdb974cfbff37f852f53de322e3bf9227c16fec163` | frame `carrier-and-admission`, materialized; `sha256:7d7f47cc72dbf4ee2d9396949ee9d2ce677050d0f14792dbc0c402d49b3f7133` |
+| `projection-carrier-and-admission-reference-only.json` | `cc4867e0f2820bd1fc58131d1cb0583f4df2b07dc07809c8ae4aec27c770d433` | the same frame, reference-only; `sha256:55d2e04edd633adb48ccdc01915291d6e428bd914ff5a30595f1019048b701c2` |
+| `projection-executive-disposition-materialized.json` | `b9b2f361b40ecbff80e59ac43755a9647acc0b4646759e8dfa5e3ddd6c562c75` | frame `executive-disposition`, materialized; `sha256:2ce52d38ea8417b402ffedd7cb58a0556c54e7dc402f353bd9ed66d876f1296f` |
+| `projection-executive-disposition-reference-only.json` | `1c8bb57f4383b5d005b239655464201628b89c295ae517e9327129615cafb7a3` | the same frame, reference-only; `sha256:d5d2d0ff1cd1a5ac4c4d2a901d64b545cf4a83a6150dc55bbe9a932e4c3448ca` |
 | `bindings.json` | `816d211c2a92c3e3d2e8adc13d07fb1ae5ecc9fb8b8b4ba593b6f7f6009e201f` | byte-identical to set-3's |
 <!-- /artifacts -->
 
@@ -90,10 +90,10 @@ support references pull in transitively.
 
 | Frame | Materialized bytes | SHA-256 (materialized file) | Reference-only bytes | Closure (symbols, clauses, residuals) | Under limit |
 |---|---|---|---|---|---|
-| `transformation-and-judgment` | 56,993 | `a2beaabab3ed…` | 29,680 | 16, 19, 0 | yes |
-| `triage-and-reentry` | 68,182 | `6cc0e3affd15…` | 36,269 | 16, 21, 0 | yes |
-| `carrier-and-admission` | 65,847 | `bd1e71191f9e…` | 34,777 | 20, 19, 2 | yes |
-| `executive-disposition` | 89,104 | `18fad1848de8…` | 47,183 | 28, 23, 0 | yes |
+| `transformation-and-judgment` | 56,993 | `839dff0bba02…` | 29,680 | 16, 19, 0 | yes |
+| `triage-and-reentry` | 68,182 | `90336a8f9e26…` | 36,269 | 16, 21, 0 | yes |
+| `carrier-and-admission` | 67,504 | `5ee0fb61ab65…` | 35,467 | 20, 19, 3 | yes |
+| `executive-disposition` | 93,412 | `b9b2f361b40e…` | 49,451 | 28, 24, 0 | yes |
 
 `transformation-and-judgment` (frame ref AXIOMATIC_CALCULUS
 `#ac-013-transformation`; F-02 task A). 19 clauses:
@@ -153,13 +153,15 @@ admitted-result-identifies-mechanism-contract-decision-and-evidence and
 admitted-contract-names-a-durable-result-surface; the set-3 SPEC_METHOD
 carriers row carrier-is-selected-by-proportionality; pulled in by support:
 proportionality-definition, no-universal-quota-follows,
-obligation-without-route-is-unjustified and p2-statement. Two residuals are
-carried in through the proportionality and principle symbols:
-derivation-chain-cost-per-boundary and
-independence-arguments-are-one-sentence.
+obligation-without-route-is-unjustified and p2-statement. Three residuals
+are carried in by the affected-subject rule. The set-4 conflict residual
+contract-state-set-closed-or-minimum comes in through `contract-state` and
+`execution-contract`. derivation-chain-cost-per-boundary and
+independence-arguments-are-one-sentence come in through the proportionality
+and principle symbols.
 
 `executive-disposition` (frame ref EXECUTIVE_BASELINE
-`#12-complete-engagement-transition`; F-02 task D). 23 clauses:
+`#12-complete-engagement-transition`; F-02 task D). 24 clauses:
 technical-triage-records-supportable-finding-fields,
 severity-priority-result-and-boundary-effect-are-four-values,
 boundary-effect-precedes-exactly-one-disposition,
@@ -178,18 +180,22 @@ step-7-severity-neither-selects-priority-nor-blocks,
 promotion-constraint-projection,
 testing-frame-authority-is-bounded-by-the-claim,
 product-testing-frame-set-assigns-claims-not-authority,
-testing-evidence-stays-claim-bound; pulled in by support:
+testing-evidence-stays-claim-bound,
+dispositions-are-selected-by-their-conditions (ACTIVATION §3
+Disposition); pulled in by support:
 construction-availability-maps-to-core, disposition-consumes-a-core-result,
 refinements-map-totally-to-core.
 
 What the size limit kept out: `executive-disposition` does not carry
-`result-algebra-has-five-members`, whose closure of nine clauses would add
-about 24 KB materialized and put the frame over the limit. The core members
+`result-algebra-has-five-members`. It closes over nine clauses, and with it
+added to the index a scratch projection measured 118,120 bytes
+materialized, over the limit. The core members
 `satisfied`, `falsified`, `indeterminate`, `out_of_frame` and
 `invalid_basis` reach the actor through the construction-availability
 mapping, the drift-lock failure clause and the work-result clause, not
-through the algebra's own definition. The frame also carries no
-ACTIVATION §3 or §5 checkpoint law beyond what step 7 restates.
+through the algebra's own definition. The frame carries the ACTIVATION §3
+Disposition conditions but no ACTIVATION §5 checkpoint law beyond what
+step 7 restates.
 
 ## Departures from the set-3 recipe
 
@@ -198,15 +204,15 @@ ACTIVATION §3 or §5 checkpoint law beyond what step 7 restates.
   re-projected: each would exceed the 100,000-byte limit, since their
   set-3 frames ran 144 to 272 KB. The set-3 recipe projected every index
   in one loop.
-- Validation now enforces sorted `source_refs`. Re-anchored rows and the
-  new rows have their reference lists sorted, while set-3 rows that were
-  already sorted are unchanged.
+- The re-anchored rows and the new rows have sorted `source_refs` and
+  `re_entry_refs`, because the pinned validator requires that order. set-3
+  rows that were already sorted are unchanged.
 
 ## Changes between set-3 and set-4
 
-Counts: symbols 209 to 236 (27 added), clauses 269 to 330 (61 added, one
-rewritten in place), residuals 6 (one detail rewritten), frame indexes 7 to
-11, frame refs 7 to 11. Nothing was retired.
+Counts: symbols 209 to 236 (27 added), clauses 269 to 331 (62 added, one
+rewritten in place), residuals 6 to 7 (one added, one detail rewritten),
+frame indexes 7 to 11, frame refs 7 to 11. Nothing was retired.
 
 ### Re-anchored (stale anchors from the restatements)
 
@@ -257,13 +263,17 @@ prohibition. Both rows are unreferenced by any of the four new frames.
 
 ### Added
 
-There are 27 symbols and 61 clauses, listed by frame above. Each new clause cites the
+There are 27 symbols and 62 clauses, listed by frame above. Each new clause cites the
 section it encodes and names its principles in a qualification literal. A
 new clause carries a support reference only where its source cites the
 supported law: AC-013 cites FOUNDATIONS §4, AC-008 cites FOUNDATIONS §4,
 the computed-classification reuse cites ACTIVATION §7, the work-result
 mapping cites ACTIVATION §3, step 4 cites ASSURANCE §10, and the boundary
-effect and step 7 cite ACTIVATION §3 Disposition. No residual was added.
+effect, step 7 and the Disposition conditions cite ACTIVATION §3. One
+residual was added: `residual:contract-state-set-closed-or-minimum`
+(kind `conflict`). ACTIVATION §1 Admission states a closed set of four
+contract states, and TICKETS §5 states those four as a minimum. The W9b
+return routed this conflict to the Executive.
 Four frame refs were added: AXIOMATIC_CALCULUS `#ac-013-transformation`,
 SPEC_METHOD `#universal-intake-triage`, TICKETS `#carrier-selection` and
 EXECUTIVE_BASELINE `#12-complete-engagement-transition`.
@@ -278,7 +288,8 @@ EXECUTIVE_BASELINE `#12-complete-engagement-transition`.
 | ASSURANCE (new) | §7 Terms (testing frame, authoritative Product path), §7 The set, §10 | §1 to §6, §7 user-acceptance, end-to-end, integration and unit frame declarations, §8, §9, §11 to §14 |
 | TICKETS (new) | §1 Execution contracts; §4 Change class, Upward propagation check, Triage metadata; §5 Carrier selection, Execution contract admission | §1 goals, records, sprints, comments, milestones; §2; §3; §4 other rules; §5 evaluation criteria and term binding; §6 to §10 |
 | EXECUTIVE_BASELINE (new) | §5 technical triage, severity, priority and boundary effect, work result, exact candidate; §6 no mutation, drift locks; §12 steps 4, 5A, 5B, 6 and 7 and the promotion constraint projection | §1 to §4; §5 other terms; §6 duties, attention cycle, event-driven attention, product-chain basis; §7 to §11; §12 steps 1 to 3; §13 to §23 |
-| FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION (changed since `ac3ec5f`: 648 insertions, 114 deletions) | set-3 rows carried; only the ACTIVATION `#output-and-roles` anchors changed | the changes between `ac3ec5f` and `978d324` have not been read against the set-3 rows; their fidelity to the current text is unknown |
+| ACTIVATION (changed since `ac3ec5f`) | §3 Disposition (one clause added); set-3 rows carried, `#output-and-roles` anchors moved. The diff hunks were mapped: §1 Admission has no hunk, so its five set-3 rows face unchanged text; §3 gained cross-references, the three-way out_of_frame wording and the new Disposition subsection, which is consistent with the set-3 refinement rows | §1 intake and roles changes, §4 Complete enclosing-relation admission and Standing structural qualification, the §5 checkpoint, progress and falsifier text, the §6 proportionality text and §7 Transition evidence; none of these is compared with the set-3 rows |
+| FOUNDATIONS, REFERENCE_FRAME, EVALUATION (changed since `ac3ec5f`) | set-3 rows carried unchanged | the changes between `ac3ec5f` and `978d324` have not been read against the set-3 rows; their fidelity to the current text is unknown |
 
 As in set-3, the source-dispositions tables of every member are not
 encoded.

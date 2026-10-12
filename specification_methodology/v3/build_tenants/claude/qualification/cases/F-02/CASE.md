@@ -34,16 +34,16 @@ The subject is the standards at commit `978d324` on
 `tenant/claude/c3-v3-evA`, whose digests are recorded under
 [a_c/set-4/](../../../a_c/set-4/README.md). They are encoded as program
 `urn:stdo-3:claude:program:a-c-text:set-4`, with canonical digest
-`sha256:10fc52ad07e5730e378dd18ed07819b2d1dd41fd8549a5f67ac7fd4f40fe760c`
+`sha256:16f840cb501b0df497d7a7747142e756108d031e6c0db2fbd8d3f69003325025`
 and zero diagnostics against the pinned Axiom Indexer. The actor receives
 the bytes of the four frame files projected from that program:
 
 | Frame file | SHA-256 | Bytes |
 |---|---|---|
-| `a_c/set-4/projection-transformation-and-judgment-materialized.json` | `a2beaabab3ed1917d1786d665eafa33083d6cd3b812c9112605c4d6e0e2bb1cd` | 56,993 |
-| `a_c/set-4/projection-triage-and-reentry-materialized.json` | `6cc0e3affd153f7c3c022ff3c932a06f40e648d6732edff686d62b77d07027a2` | 68,182 |
-| `a_c/set-4/projection-carrier-and-admission-materialized.json` | `bd1e71191f9e005ced31672debe396bf15afe5244528a948ddde1e1fc88522d9` | 65,847 |
-| `a_c/set-4/projection-executive-disposition-materialized.json` | `18fad1848de8f5f544309ea497204aeb5ce9b72998a7b06a3a32d0dedcdde285` | 89,104 |
+| `a_c/set-4/projection-transformation-and-judgment-materialized.json` | `839dff0bba028508132270a61e8fad73f18e7824b01294fe85fdd3b945455ea6` | 56,993 |
+| `a_c/set-4/projection-triage-and-reentry-materialized.json` | `90336a8f9e269dc70bb128e41605b51141d6d438cf45b740f433d10c06685ac1` | 68,182 |
+| `a_c/set-4/projection-carrier-and-admission-materialized.json` | `5ee0fb61ab65aa130d5950bdb974cfbff37f852f53de322e3bf9227c16fec163` | 67,504 |
+| `a_c/set-4/projection-executive-disposition-materialized.json` | `b9b2f361b40ecbff80e59ac43755a9647acc0b4646759e8dfa5e3ddd6c562c75` | 93,412 |
 
 The W13 commit introduced the frame files, and a run names that commit in
 the runs table. The set-4 program is a partial encoding: what each frame
@@ -82,11 +82,11 @@ fixture.
   admission record. The acting agent holds no ticket-state authority. The
   actor names the matching carrier row, the contract state with the
   coordinates present or missing, and whether execution may begin.
-- [TASK-D.md](TASK-D.md) (`d04e6844…6244`, 3,788 bytes): product
+- [TASK-D.md](TASK-D.md) (`ae864060…804f`, 3,949 bytes): product
   `shopfront`. The task gives the release mandate, the Product-owned
   severity scale, priority scale, cutoff and hard stop, the Executive's
-  grant, a `candidate_ready` Worker result and an independent Reviewer
-  result. The Reviewer result is `falsified`, with one severity-high
+  grant, a `candidate_ready` Worker result whose commit changes the
+  payment step and the address step, and an independent Reviewer result. The Reviewer result is `falsified`, with one severity-high
   finding on a path outside the mandate. A configuration revision changed
   after the review, and that revision falls within the Reviewer result's
   stated invalidation conditions. Acting as Executive, the actor checks the
@@ -156,11 +156,11 @@ actor was started.
 |---|---|---|---|---|---|---|
 | A-001 | 62,067 | 182 | 455 | 57,041 | 4,280 | 109 |
 | B-001 | 71,898 | 182 | 455 | 68,221 | 2,940 | 100 |
-| C-001 | 69,595 | 182 | 455 | 65,889 | 2,966 | 103 |
-| D-001 | 93,692 | 182 | 455 | 89,146 | 3,806 | 103 |
+| C-001 | 71,252 | 182 | 455 | 67,546 | 2,966 | 103 |
+| D-001 | 98,161 | 182 | 455 | 93,454 | 3,967 | 103 |
 
 All four fit the cap. The `measured` events carried the frame digests
-`a2beaabab3ed…`, `6cc0e3affd15…`, `bd1e71191f9e…` and `18fad1848de8…`, the
+`839dff0bba02…`, `90336a8f9e26…`, `5ee0fb61ab65…` and `b9b2f361b40e…`, the
 card digest `237ea8f915ca…`, and instrument SHA-256 `f92ca26b3e4f…`.
 
 ## Expectations
