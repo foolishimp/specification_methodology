@@ -379,6 +379,27 @@ filenames and placement are hardcoded in requirements without
 constitutional necessity, the requirement surface has absorbed design
 detail and made re-derivation harder.
 
+### Realisation shape
+
+For a realisation boundary that the design profile governs (DESIGN_MODULE,
+tier 3, adopted under its own adoption rule), the core rule is: semantic
+steps should read as transforms over admitted truth; effects should be
+explicit and pushed to the edge. If a reader has to inspect orchestration
+code, mutable workspace state, service methods or fallback defaults to
+determine what the system means, the design is too imperative and too
+coupled (P1, P6; provenance rc.2 DESIGN_MODULE_METHOD #3-core-rule).
+
+Non-goals of that profile (P1, P4a; provenance rc.2
+DESIGN_MODULE_METHOD #17-non-goals): it does not require one specific programming language,
+elimination of all imperative code, monadic or category-theory vocabulary,
+or replacing every exception with a custom algebraic type. It does require
+that the implementation shape remain readable, modular and honest about
+where meaning lives and where effects happen. Where a boundary composes
+higher-order functions or effectful computation, it does require an
+explicit composition and effect algebra with its applicable identity,
+closure, cardinality, effect and authority-conservation laws (FOUNDATIONS
+§4 Composition). The vocabulary is optional; the law is not.
+
 ### Requirement categories and classification
 
 Every live requirement family is categorised by the kind of truth it
@@ -1435,7 +1456,10 @@ by PROFILES §2 (FOUNDATIONS §2); UP-014's design-view examples are written
 "a detailed algebra or semantic design view" (ACTIVATION §6); UP-013's
 "Prime" law is written "the prime law of a design profile" (§3); the
 Method's design-module co-evolution predicate is named without its symbol
-(§4).
+(§4). The table's last two rows are of rc.2 DESIGN_MODULE_METHOD.md, whose
+core rule and non-goals the member map places here; "this method" is
+written "the design profile" and its scope, boundaries that profile
+governs, is kept.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
@@ -1498,6 +1522,8 @@ Method's design-module co-evolution predicate is named without its symbol
 | #method | conserved; the four procedures in full | §4 Procedures |
 | #adr-conventions | conserved | §10 |
 | #adr-folder-convention | conserved | §10 |
+| DESIGN_MODULE_METHOD #3-core-rule | conserved; the core rule at "should" force and the too-imperative, too-coupled test, scoped to boundaries the design profile governs; DESIGN_MODULE §1 Core rule points here | §2 Realisation shape |
+| DESIGN_MODULE_METHOD #17-non-goals | conserved; the four non-requirements, the readability requirement, the required composition and effect algebra with its five laws, vocabulary optional and law not; DESIGN_MODULE §12 Non-goals points here | §2 Realisation shape |
 
 Rows of other rc.2 members that this member touches are disposed at their
 receiving members: the overlay, STDO-SURFACE-001 and bootstrap rows at
@@ -1508,6 +1534,7 @@ core model, triage metadata, judgment continuity and carrier rules at
 Worker, Reviewer, steel-thread delivery and counterexample localisation at
 EXECUTIVE_BASELINE and ASSURANCE;
 RELEASE_METHOD's identities, phases, naming, cohorts and UP-015 at RELEASE
-and FOUNDATIONS §1; UP-018 at the design profile; AC-020 at
+and FOUNDATIONS §1; UP-018 at
+[DESIGN_MODULE §7](DESIGN_MODULE.md#invariant-reconstruction-sufficiency-up-018); AC-020 at
 AXIOMATIC_CALCULUS §7; POSTING_GUIDE's UP-012 (shared method adoption and
 propagation) at the guides member, where this member receives it.

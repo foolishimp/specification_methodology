@@ -100,68 +100,68 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| 1. Purpose | `#1-purpose` |  | 2,536 | unresolved | |
-| 2. Position | `#2-position` |  | 653 | unresolved | |
-| 3. Core Rule | `#3-core-rule` |  | 343 | unresolved | |
-| 3A. ODD Alignment And Escalation Rule | `#3a-odd-alignment-and-escalation-rule` |  | 1,404 | unresolved | |
-| 3B. Boundary Closure Evaluators | `#3b-boundary-closure-evaluators` |  | 356 | unresolved | |
-| &nbsp;&nbsp;1. Authority Seam Closure | `#1-authority-seam-closure` |  | 1,200 | unresolved | |
-| &nbsp;&nbsp;2. Essential Carrier Consolidation | `#2-essential-carrier-consolidation` |  | 613 | unresolved | |
-| &nbsp;&nbsp;3. Enforcement After Proof | `#3-enforcement-after-proof` |  | 743 | unresolved | |
-| 3B. Ingress Collapse Rule | `#3b-ingress-collapse-rule` |  | 758 | unresolved | |
-| 4. Functional Bias Without Language Mandate | `#4-functional-bias-without-language-mandate` |  | 934 | unresolved | |
-| 4A. Python Typing Rule | `#4a-python-typing-rule` |  | 1,778 | unresolved | |
-| 4B. Ontology-First Design Rule | `#4b-ontology-first-design-rule` |  | 2,538 | unresolved | |
-| &nbsp;&nbsp;Proportional Design Sequencing | `#proportional-design-sequencing` |  | 3,794 | unresolved | |
-| &nbsp;&nbsp;Decision-Complete Symbolic Design | `#decision-complete-symbolic-design` |  | 1,870 | unresolved | |
-| &nbsp;&nbsp;Bounded Frame Conservation (`STDO-UP-017`) | `#bounded-frame-conservation-stdo-up-017` | UP-017 | 2,941 | unresolved | |
-| &nbsp;&nbsp;Native Constructability Before Design Acceptance (`STDO-UP-002`) | `#native-constructability-before-design-acceptance-stdo-up-002` | UP-002 | 660 | unresolved | |
-| &nbsp;&nbsp;Capability And Foundation Selection (`STDO-UP-023`) | `#capability-and-foundation-selection-stdo-up-023` | UP-023 | 6,741 | unresolved | |
-| &nbsp;&nbsp;Entity And Lifecycle Completeness | `#entity-and-lifecycle-completeness` |  | 1,664 | unresolved | |
-| &nbsp;&nbsp;Authority Model | `#authority-model` |  | 1,659 | unresolved | |
-| &nbsp;&nbsp;Transformation Admission Completeness (`STDO-UP-016`) | `#transformation-admission-completeness-stdo-up-016` | UP-016 | 4,144 | unresolved | |
-| &nbsp;&nbsp;Atomic Functions And Higher-Order Composition | `#atomic-functions-and-higher-order-composition` |  | 2,012 | unresolved | |
-| &nbsp;&nbsp;Prime Semantic Atoms And Universal Domain | `#prime-semantic-atoms-and-universal-domain` |  | 1,526 | unresolved | |
-| &nbsp;&nbsp;Whole-Family Prime Contraction | `#whole-family-prime-contraction` |  | 1,380 | unresolved | |
-| &nbsp;&nbsp;Recursive Prime And Root Conservation (`STDO-UP-003`) | `#recursive-prime-and-root-conservation-stdo-up-003` | UP-003 | 1,159 | unresolved | |
-| &nbsp;&nbsp;Ontology Projection Law | `#ontology-projection-law` |  | 1,420 | unresolved | |
-| 5. Prime Law | `#5-prime-law` |  | 2,910 | unresolved | |
-| &nbsp;&nbsp;Boundary And Governance Cost (`STDO-UP-005`) | `#boundary-and-governance-cost-stdo-up-005` | UP-005 | 652 | unresolved | |
-| 5A. Irreducible Architectural Carrier Set Rule | `#5a-irreducible-architectural-carrier-set-rule` |  | 2,466 | unresolved | |
-| &nbsp;&nbsp;IACS Revision Obligation | `#iacs-revision-obligation` |  | 951 | unresolved | |
-| 5B. Promotion Test | `#5b-promotion-test` |  | 1,299 | unresolved | |
-| 5C. Boundary Inflation Prohibition | `#5c-boundary-inflation-prohibition` |  | 1,087 | unresolved | |
-| 5D. Reference-Derived Module Design Rule | `#5d-reference-derived-module-design-rule` |  | 1,623 | unresolved | |
-| 5E. Ontology And Three-View Behavioral Design Gate | `#5e-ontology-and-three-view-behavioral-design-gate` |  | 1,517 | unresolved | |
-| &nbsp;&nbsp;Ontology evidence | `#ontology-evidence` |  | 865 | unresolved | |
-| &nbsp;&nbsp;Invariant Reconstruction Sufficiency (`STDO-UP-018`) | `#invariant-reconstruction-sufficiency-stdo-up-018` | UP-018 | 3,117 | unresolved | |
-| &nbsp;&nbsp;Domain model | `#domain-model` |  | 1,261 | unresolved | |
-| &nbsp;&nbsp;Sequence model | `#sequence-model` |  | 935 | unresolved | |
-| &nbsp;&nbsp;State model | `#state-model` |  | 560 | unresolved | |
-| &nbsp;&nbsp;Cross-view axiom evaluation | `#cross-view-axiom-evaluation` |  | 1,777 | unresolved | |
-| &nbsp;&nbsp;Gate and retrospective work | `#gate-and-retrospective-work` |  | 2,373 | unresolved | |
-| &nbsp;&nbsp;Computational Realization Projection (`STDO-UP-019`) | `#computational-realization-projection-stdo-up-019` | UP-019 | 5,091 | unresolved | |
-| 5F. Theoretical Framing For Boundary Law | `#5f-theoretical-framing-for-boundary-law` |  | 1,897 | unresolved | |
-| 6. Design Module Taxonomy | `#6-design-module-taxonomy` |  | 1,757 | unresolved | |
-| 6A. Design To Module To (Implementation, Unit Tests) Evidence Route | `#6a-design-to-module-to-implementation-unit-tests-evidence-route` |  | 3,379 | unresolved | |
-| 6B. Module-Derived Unit Test Rule | `#6b-module-derived-unit-test-rule` |  | 1,759 | unresolved | |
-| 6C. Module Lifecycle Confirmation Rule | `#6c-module-lifecycle-confirmation-rule` |  | 2,201 | unresolved | |
-| 7. Immutable Carrier Rule | `#7-immutable-carrier-rule` |  | 585 | unresolved | |
-| 8. Totality Rule | `#8-totality-rule` |  | 659 | unresolved | |
-| 9. Effect-Edge Rule | `#9-effect-edge-rule` |  | 660 | unresolved | |
-| 10. No Semantic Center Rule | `#10-no-semantic-center-rule` |  | 705 | unresolved | |
-| 11. Coupling Rule | `#11-coupling-rule` |  | 643 | unresolved | |
-| 11A. Governance/Strategy Separation Rule | `#11a-governancestrategy-separation-rule` |  | 1,320 | unresolved | |
-| 11B. Opportunistic Optimization Rule | `#11b-opportunistic-optimization-rule` |  | 2,411 | unresolved | |
-| 11C. Recurrence Extraction Rule | `#11c-recurrence-extraction-rule` |  | 2,564 | unresolved | |
-| 11D. Post-Ticket Design Review Rule | `#11d-post-ticket-design-review-rule` |  | 3,775 | unresolved | |
-| 12. Interface Bleed Prohibition | `#12-interface-bleed-prohibition` |  | 669 | unresolved | |
-| 13. Proxy Interface Prohibition | `#13-proxy-interface-prohibition` |  | 640 | unresolved | |
-| 14. Design Review Questions | `#14-design-review-questions` |  | 8,641 | unresolved | |
-| 14A. Functional Realization Review Checklist | `#14a-functional-realization-review-checklist` |  | 8,895 | unresolved | |
-| 15. Adoption Guidance | `#15-adoption-guidance` |  | 2,160 | unresolved | |
-| 16. Relationship To Other Method Surfaces | `#16-relationship-to-other-method-surfaces` |  | 2,090 | unresolved | |
-| 17. Non-Goals | `#17-non-goals` |  | 627 | unresolved | |
+| 1. Purpose | `#1-purpose` |  | 2,536 | conserved; the biases, goals, co-evolution condition on same-pass derivation, bounded traversal, non-replacement and scope | `DESIGN_MODULE.md#purpose` |
+| 2. Position | `#2-position` |  | 653 | conserved; the four "should" clauses and functional discipline without a functional language | `DESIGN_MODULE.md#position` |
+| 3. Core Rule | `#3-core-rule` |  | 343 | conserved; stated once in SPEC_METHOD §2 Realisation shape at "should" force, scoped to boundaries the design profile governs; DESIGN_MODULE points there | `SPEC_METHOD.md#realisation-shape`; `DESIGN_MODULE.md#core-rule` |
+| 3A. ODD Alignment And Escalation Rule | `#3a-odd-alignment-and-escalation-rule` |  | 1,404 | conserved; the graph-execution profile named for ODD, its own terms kept in this tier-3 profile | `DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation` |
+| 3B. Boundary Closure Evaluators | `#3b-boundary-closure-evaluators` |  | 356 | conserved | `DESIGN_MODULE.md#3-boundary-closure-evaluators` |
+| &nbsp;&nbsp;1. Authority Seam Closure | `#1-authority-seam-closure` |  | 1,200 | conserved; with the four source-coherence requirements | `DESIGN_MODULE.md#authority-seam-closure` |
+| &nbsp;&nbsp;2. Essential Carrier Consolidation | `#2-essential-carrier-consolidation` |  | 613 | conserved | `DESIGN_MODULE.md#essential-carrier-consolidation` |
+| &nbsp;&nbsp;3. Enforcement After Proof | `#3-enforcement-after-proof` |  | 743 | conserved | `DESIGN_MODULE.md#enforcement-after-proof` |
+| 3B. Ingress Collapse Rule | `#3b-ingress-collapse-rule` |  | 758 | conserved | `DESIGN_MODULE.md#ingress-collapse` |
+| 4. Functional Bias Without Language Mandate | `#4-functional-bias-without-language-mandate` |  | 934 | conserved | `DESIGN_MODULE.md#functional-bias-without-language-mandate` |
+| 4A. Python Typing Rule | `#4a-python-typing-rule` |  | 1,778 | conserved | `DESIGN_MODULE.md#python-typing` |
+| 4B. Ontology-First Design Rule | `#4b-ontology-first-design-rule` |  | 2,538 | conserved; the proportionality relation it applies is ACTIVATION §6 | `DESIGN_MODULE.md#5-ontology-first-design` |
+| &nbsp;&nbsp;Proportional Design Sequencing | `#proportional-design-sequencing` |  | 3,794 | conserved in full; the four definitions, both modes, counterfactual evidence, no prior gate where no material alternative remains, evidence not authority, one bounded design_reframe; the general proportionality relation is ACTIVATION §6, pointed to | `DESIGN_MODULE.md#proportional-design-sequencing`; `ACTIVATION.md#6-cost-and-proportionality` |
+| &nbsp;&nbsp;Decision-Complete Symbolic Design | `#decision-complete-symbolic-design` |  | 1,870 | conserved in full; the nineteen-term M(B) and the decision-complete criterion as the design-gate acceptance criterion | `DESIGN_MODULE.md#decision-complete-symbolic-design` |
+| &nbsp;&nbsp;Bounded Frame Conservation (`STDO-UP-017`) | `#bounded-frame-conservation-stdo-up-017` | UP-017 | 2,941 | conserved; the five frame items, several governing frames, evaluation and re-entry, subordinate frames, falsifier, derivation order; the seam rule is ACTIVATION §1 Execution unit and §4 Refinement, P4b's frame instance FOUNDATIONS §3, both pointed to | `DESIGN_MODULE.md#bounded-frame-conservation-up-017`; `ACTIVATION.md#execution-unit`; `ACTIVATION.md#4-totality-and-refinement` |
+| &nbsp;&nbsp;Native Constructability Before Design Acceptance (`STDO-UP-002`) | `#native-constructability-before-design-acceptance-stdo-up-002` | UP-002 | 660 | conserved | `DESIGN_MODULE.md#native-constructability-up-002` |
+| &nbsp;&nbsp;Capability And Foundation Selection (`STDO-UP-023`) | `#capability-and-foundation-selection-stdo-up-023` | UP-023 | 6,741 | conserved in full; discovery record, comparison, elimination, dominance, frontier, trade-off owner, role preservation, recursion, proportional application; the candidate-not-adjudication law is FOUNDATIONS §4 Shared machinery, pointed to | `DESIGN_MODULE.md#capability-and-foundation-selection-up-023`; `FOUNDATIONS.md#4-algebra` |
+| &nbsp;&nbsp;Entity And Lifecycle Completeness | `#entity-and-lifecycle-completeness` |  | 1,664 | conserved | `DESIGN_MODULE.md#entity-and-lifecycle-completeness` |
+| &nbsp;&nbsp;Authority Model | `#authority-model` |  | 1,659 | conserved | `DESIGN_MODULE.md#authority-model` |
+| &nbsp;&nbsp;Transformation Admission Completeness (`STDO-UP-016`) | `#transformation-admission-completeness-stdo-up-016` | UP-016 | 4,144 | conserved in full; binds ACTIVATION §4 as sole owner of the admission and standing-test semantics (UP-021) | `DESIGN_MODULE.md#transformation-admission-completeness-up-016`; `ACTIVATION.md#complete-enclosing-relation-admission` |
+| &nbsp;&nbsp;Atomic Functions And Higher-Order Composition | `#atomic-functions-and-higher-order-composition` |  | 2,012 | conserved | `DESIGN_MODULE.md#atomic-functions-and-higher-order-composition` |
+| &nbsp;&nbsp;Prime Semantic Atoms And Universal Domain | `#prime-semantic-atoms-and-universal-domain` |  | 1,526 | conserved | `DESIGN_MODULE.md#prime-semantic-atoms-and-admitted-domain` |
+| &nbsp;&nbsp;Whole-Family Prime Contraction | `#whole-family-prime-contraction` |  | 1,380 | conserved in full | `DESIGN_MODULE.md#whole-family-prime-contraction` |
+| &nbsp;&nbsp;Recursive Prime And Root Conservation (`STDO-UP-003`) | `#recursive-prime-and-root-conservation-stdo-up-003` | UP-003 | 1,159 | conserved in full | `DESIGN_MODULE.md#recursive-prime-and-root-conservation-up-003` |
+| &nbsp;&nbsp;Ontology Projection Law | `#ontology-projection-law` |  | 1,420 | conserved | `DESIGN_MODULE.md#ontology-projection` |
+| 5. Prime Law | `#5-prime-law` |  | 2,910 | conserved | `DESIGN_MODULE.md#6-prime-law` |
+| &nbsp;&nbsp;Boundary And Governance Cost (`STDO-UP-005`) | `#boundary-and-governance-cost-stdo-up-005` | UP-005 | 652 | conserved; the distinct boundaries and the six contraction failures restated; the proportionality relation is ACTIVATION §6, pointed to | `DESIGN_MODULE.md#boundary-and-governance-cost-up-005`; `ACTIVATION.md#6-cost-and-proportionality` |
+| 5A. Irreducible Architectural Carrier Set Rule | `#5a-irreducible-architectural-carrier-set-rule` |  | 2,466 | conserved; the IACS is the carrier inventory ASSURANCE §2, §7 and §15 bind | `DESIGN_MODULE.md#irreducible-architectural-carrier-set` |
+| &nbsp;&nbsp;IACS Revision Obligation | `#iacs-revision-obligation` |  | 951 | conserved; the assurance-congruence law (UP-022) written as EVALUATION §1 and §3 | `DESIGN_MODULE.md#iacs-revision` |
+| 5B. Promotion Test | `#5b-promotion-test` |  | 1,299 | conserved | `DESIGN_MODULE.md#promotion-test` |
+| 5C. Boundary Inflation Prohibition | `#5c-boundary-inflation-prohibition` |  | 1,087 | conserved | `DESIGN_MODULE.md#boundary-inflation-prohibition` |
+| 5D. Reference-Derived Module Design Rule | `#5d-reference-derived-module-design-rule` |  | 1,623 | conserved | `DESIGN_MODULE.md#reference-derived-module-design` |
+| 5E. Ontology And Three-View Behavioral Design Gate | `#5e-ontology-and-three-view-behavioral-design-gate` |  | 1,517 | conserved | `DESIGN_MODULE.md#7-ontology-and-three-view-design-gate` |
+| &nbsp;&nbsp;Ontology evidence | `#ontology-evidence` |  | 865 | conserved | `DESIGN_MODULE.md#ontology-evidence` |
+| &nbsp;&nbsp;Invariant Reconstruction Sufficiency (`STDO-UP-018`) | `#invariant-reconstruction-sufficiency-stdo-up-018` | UP-018 | 3,117 | conserved in full; the four-decision table, both boundaries, the falsifier and the withheld-history test; the general reconstruction-without-history rule is ACTIVATION §1 Intake, pointed to | `DESIGN_MODULE.md#invariant-reconstruction-sufficiency-up-018`; `ACTIVATION.md#intake` |
+| &nbsp;&nbsp;Domain model | `#domain-model` |  | 1,261 | conserved | `DESIGN_MODULE.md#domain-model` |
+| &nbsp;&nbsp;Sequence model | `#sequence-model` |  | 935 | conserved | `DESIGN_MODULE.md#sequence-model` |
+| &nbsp;&nbsp;State model | `#state-model` |  | 560 | conserved | `DESIGN_MODULE.md#state-model` |
+| &nbsp;&nbsp;Cross-view axiom evaluation | `#cross-view-axiom-evaluation` |  | 1,777 | conserved | `DESIGN_MODULE.md#cross-view-axiom-evaluation` |
+| &nbsp;&nbsp;Gate and retrospective work | `#gate-and-retrospective-work` |  | 2,373 | conserved | `DESIGN_MODULE.md#gate-and-retrospective-work` |
+| &nbsp;&nbsp;Computational Realization Projection (`STDO-UP-019`) | `#computational-realization-projection-stdo-up-019` | UP-019 | 5,091 | conserved in full; cost separation and dimension declaration are ACTIVATION §6, shared machinery FOUNDATIONS §4, both pointed to | `DESIGN_MODULE.md#computational-realisation-projection-up-019`; `ACTIVATION.md#6-cost-and-proportionality`; `FOUNDATIONS.md#4-algebra` |
+| 5F. Theoretical Framing For Boundary Law | `#5f-theoretical-framing-for-boundary-law` |  | 1,897 | conserved | `DESIGN_MODULE.md#8-theoretical-framing` |
+| 6. Design Module Taxonomy | `#6-design-module-taxonomy` |  | 1,757 | conserved | `DESIGN_MODULE.md#9-module-taxonomy` |
+| 6A. Design To Module To (Implementation, Unit Tests) Evidence Route | `#6a-design-to-module-to-implementation-unit-tests-evidence-route` |  | 3,379 | conserved in full; restated in tier-2 terms under the binding DESIGN_MODULE declares | `ASSURANCE.md#14-design-to-module-evidence-route` |
+| 6B. Module-Derived Unit Test Rule | `#6b-module-derived-unit-test-rule` |  | 1,759 | conserved in full; ownership written as the authority-source split of ASSURANCE §2 | `ASSURANCE.md#15-module-derived-unit-tests` |
+| 6C. Module Lifecycle Confirmation Rule | `#6c-module-lifecycle-confirmation-rule` |  | 2,201 | conserved in full | `ASSURANCE.md#16-module-lifecycle-confirmation` |
+| 7. Immutable Carrier Rule | `#7-immutable-carrier-rule` |  | 585 | conserved | `DESIGN_MODULE.md#immutable-carriers` |
+| 8. Totality Rule | `#8-totality-rule` |  | 659 | conserved; P5 and the result algebra are FOUNDATIONS §3 and ACTIVATION §3, pointed to | `DESIGN_MODULE.md#totality` |
+| 9. Effect-Edge Rule | `#9-effect-edge-rule` |  | 660 | conserved | `DESIGN_MODULE.md#effect-edge` |
+| 10. No Semantic Center Rule | `#10-no-semantic-center-rule` |  | 705 | conserved | `DESIGN_MODULE.md#no-semantic-centre` |
+| 11. Coupling Rule | `#11-coupling-rule` |  | 643 | conserved | `DESIGN_MODULE.md#coupling` |
+| 11A. Governance/Strategy Separation Rule | `#11a-governancestrategy-separation-rule` |  | 1,320 | conserved | `DESIGN_MODULE.md#governance-and-strategy-separation` |
+| 11B. Opportunistic Optimization Rule | `#11b-opportunistic-optimization-rule` |  | 2,411 | conserved | `DESIGN_MODULE.md#opportunistic-optimisation` |
+| 11C. Recurrence Extraction Rule | `#11c-recurrence-extraction-rule` |  | 2,564 | conserved; ticket-level recording at TICKETS §6 | `DESIGN_MODULE.md#recurrence-extraction` |
+| 11D. Post-Ticket Design Review Rule | `#11d-post-ticket-design-review-rule` |  | 3,775 | conserved | `DESIGN_MODULE.md#post-ticket-design-review` |
+| 12. Interface Bleed Prohibition | `#12-interface-bleed-prohibition` |  | 669 | conserved | `DESIGN_MODULE.md#interface-bleed-prohibition` |
+| 13. Proxy Interface Prohibition | `#13-proxy-interface-prohibition` |  | 640 | conserved | `DESIGN_MODULE.md#proxy-interface-prohibition` |
+| 14. Design Review Questions | `#14-design-review-questions` |  | 8,641 | conserved; all 56 questions | `DESIGN_MODULE.md#design-review-questions` |
+| 14A. Functional Realization Review Checklist | `#14a-functional-realization-review-checklist` |  | 8,895 | conserved; all 43 checks and the 14 hard-gate checks | `DESIGN_MODULE.md#functional-realisation-checklist` |
+| 15. Adoption Guidance | `#15-adoption-guidance` |  | 2,160 | conserved | `DESIGN_MODULE.md#adoption` |
+| 16. Relationship To Other Method Surfaces | `#16-relationship-to-other-method-surfaces` |  | 2,090 | conserved | `DESIGN_MODULE.md#relationship-to-other-members` |
+| 17. Non-Goals | `#17-non-goals` |  | 627 | conserved; stated once in SPEC_METHOD §2 Realisation shape, scoped to boundaries the design profile governs; DESIGN_MODULE points there | `SPEC_METHOD.md#realisation-shape`; `DESIGN_MODULE.md#non-goals` |
 
 ## GLOSSARY_GUIDE.md
 
@@ -203,7 +203,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md`
 | &nbsp;&nbsp;Domain-Owned Identity | `#domain-owned-identity` |  | 488 | conserved | `IDENTITY.md#domain-owned-identity` |
 | Authority Identity And Conservation (`STDO-UP-004`) | `#authority-identity-and-conservation-stdo-up-004` | UP-004 | 1,363 | conserved in full; the F_H projection generalised to a profile term; applied to acceptance in EVALUATION §5 | `IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004` |
 | Default Formats And Overrides | `#default-formats-and-overrides` |  | 33 | not applicable: heading with no claim text (33 bytes); its three children are disposed individually | `IDENTITY.md#7-default-formats-and-overrides` |
-| &nbsp;&nbsp;Defaults From A Bound ABG Realization | `#defaults-from-a-bound-abg-realization` |  | 419 | unresolved; member 7, DESIGN_MODULE; its identity-law determinations (starter conventions, not doctrine, lawful only while overridable) are already restated in IDENTITY §7 | `IDENTITY.md#derived-domain-overrides` |
+| &nbsp;&nbsp;Defaults From A Bound ABG Realization | `#defaults-from-a-bound-abg-realization` |  | 419 | conserved; the "may publish" permission and its graph-profile reading restated in DESIGN_MODULE §12; starter conventions and convenience contracts, not universal doctrine, lawful only while overridable, in IDENTITY §7 | `DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation`; `IDENTITY.md#derived-domain-overrides` |
 | &nbsp;&nbsp;Derived Domain Overrides | `#derived-domain-overrides` |  | 459 | conserved | `IDENTITY.md#derived-domain-overrides` |
 | &nbsp;&nbsp;Override Publication Surface | `#override-publication-surface` |  | 1,060 | conserved; "bound ABG realization" generalised to "bound runtime realisation" | `IDENTITY.md#override-publication-surface` |
 | Parsing Law | `#parsing-law` |  | 838 | conserved | `IDENTITY.md#8-parsing` |

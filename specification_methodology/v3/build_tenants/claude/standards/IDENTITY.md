@@ -181,7 +181,8 @@ Default identity formats that a bound runtime realisation publishes are
 starter conventions and convenience contracts, not universal doctrine;
 they are lawful only so long as derived domains may override them (P3,
 P6). What such a realisation publishes, and for which surfaces, is
-realisation law outside this member (DESIGN_MODULE).
+realisation law outside this member
+([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)).
 
 Derived domains may override identity format and structure for their own
 kinds. An override is lawful only if it preserves (P3;
@@ -364,7 +365,7 @@ RELEASE §1, not in this tier-1 member.
 | #domain-owned-identity | conserved; the six domain-owned examples, the four things the domain defines, transport without invented meaning | §5 Domain-owned identity |
 | #authority-identity-and-conservation-stdo-up-004 | conserved in full; authority as an identity-bearing relation and its five preserved coordinates, restriction or faithful carriage only, the six prohibitions, the seven explicit-decision transitions, direct or proxied human authority, distinct proxy identity (the profile projection generalised), the nine grant fields, the eight preserved decision coordinates, no widening by recording, the two proxy limits | §6; EVALUATION §5 applies it; FOUNDATIONS §2 Authority kinds |
 | #default-formats-and-overrides | not applicable: heading with no claim text (33 bytes, the heading line); its three children are disposed individually | §7 |
-| #defaults-from-a-bound-abg-realization | unresolved; member 7, DESIGN_MODULE: what a consumer-bound realisation of the substrate role publishes for its runtime surfaces and default surface kinds is realisation default; its identity-law determinations (starter conventions and convenience contracts, not universal doctrine, lawful only while overridable) are already restated in §7 Derived domain overrides | §7 Derived domain overrides (partial) |
+| #defaults-from-a-bound-abg-realization | conserved; the "may publish" permission for a consumer-bound runtime realisation's own runtime surfaces and default surface kinds is restated in DESIGN_MODULE §12 Identity defaults from a bound runtime realisation; its identity-law determinations (starter conventions and convenience contracts, not universal doctrine, lawful only while overridable) are in §7 Derived domain overrides | DESIGN_MODULE §12 Identity defaults from a bound runtime realisation; §7 Derived domain overrides |
 | #derived-domain-overrides | conserved; override permission, the five preservation conditions, publication in domain authority, no hidden regex assumptions | §7 Derived domain overrides |
 | #override-publication-surface | conserved; publication in domain authority, the four "at minimum ... should publish" items, the four suitable surfaces, the visibility rule | §7 Override publication surface |
 | #parsing-law | conserved; regex not a complete model, "at most ... may be a provisional extractor", the three parser rules, "should publish them explicitly as `requirement_family`" | §8 |

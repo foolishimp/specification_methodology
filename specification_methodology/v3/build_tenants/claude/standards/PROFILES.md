@@ -10,9 +10,12 @@ and restates none of them.
 
 The core names no runtime, no carrier and no executor. Terms owned outside
 the core, by a profile, a realisation or an rc.2 member, never enter tier
-1 or 2 except in a disposition table: graph, edge, vector, traversal,
-ledger, event log, worksite, HoG, F_D, F_P, F_H, Markov overlay, module,
-screen, entity cut. A profile may bind a core mechanism to one of these;
+1 or 2 except in a disposition table: graph, edge, vector, ledger, event
+log, worksite, HoG, Markov overlay, screen, entity cut, and the design
+profile's IACS and Prime. The traversal record and the functor kinds F_D,
+F_P and F_H are tier-1 calculus terms owned by AXIOMATIC_CALCULUS §5, and
+"module" is a generic term, as the predecessor's generic testing law uses
+it; neither is restricted here. A profile may bind a core mechanism to one of these;
 the binding is declared in the profile with its direction, preserved
 meaning, narrowed scope and invalidation. The declared-binding rule is new
 (P0 boundary, P1); its shape follows ODD's specialisations of F_P and F_H,
@@ -44,27 +47,21 @@ this section indexes (P0, P1).
 
 ## 3. Software design
 
-Imports the core and binds: the derivation of operation identities from
-discovered functionality through an ontology, logical completeness, prime
-contraction, the irreducible carrier set and projections
-([ontology-first design](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#4b-ontology-first-design-rule),
-[prime law](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#5-prime-law),
-[carrier set](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#5a-irreducible-architectural-carrier-set-rule),
-[ontology projection](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#ontology-projection-law));
-transformation admission completeness
-([UP-016](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016));
-invariant reconstruction sufficiency
-([UP-018](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#invariant-reconstruction-sufficiency-stdo-up-018));
-computational realisation projection
-([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019));
-foundation selection
-([UP-023](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#capability-and-foundation-selection-stdo-up-023)).
-All of DESIGN_MODULE_METHOD is conserved by reference. The derivation chain
-is the profile's largest reasoning cost; the profile requires it where it
-applies, and ACTIVATION §6 asks every obligation to pay for the ambiguity it
-removes. Whether a design boundary with no material alternative must still
-pay the full chain is a question for the profile's owner, carried here as a
-residual and not decided by this corpus.
+[DESIGN_MODULE](DESIGN_MODULE.md) is the software-design profile. It
+imports the core and binds: ontology-first derivation of operation
+identities from discovered functionality through logical completeness,
+Prime contraction, the irreducible architectural carrier set and its
+projections; proportional design sequencing with the decision-complete
+design gate; bounded frame conservation; native constructability;
+capability and foundation selection; transformation admission
+completeness; invariant reconstruction sufficiency; computational
+realisation projection; the module taxonomy and realisation rules; and
+the design review questions and checklist. Its design-to-module evidence
+route, module-derived unit tests and module lifecycle confirmation are
+ASSURANCE §14 to §16, and its core rule and non-goals SPEC_METHOD §2
+Realisation shape. The per-boundary cost of the derivation chain is
+decided there (DESIGN_MODULE §5 Proportional design sequencing, §7 Gate
+and retrospective work) (P2, P0).
 
 ## 4. UX
 
@@ -93,7 +90,7 @@ Nothing in the core depends on the construct being established.
 | ODD_METHOD | conserved in full in ODD (all 48 rows; its §21), indexed in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
 | TRAVERSAL_OCCURRENCE_PROFILE | conserved in full in TRAVERSAL_OCCURRENCE (all 25 rows; its Source dispositions), indexed in §2 |
 | baseline runtime bindings | received with STDO_REFERENCE_FRAME_BASELINE by EXECUTIVE_BASELINE and disposed there |
-| DESIGN_MODULE_METHOD | conserved by reference in §3; UP-005, UP-017, UP-018, UP-019, UP-023 and the totality rule are consumed by tier 1; the per-boundary cost of the derivation chain is a residual question for the profile's owner |
+| DESIGN_MODULE_METHOD | restated in full in DESIGN_MODULE, which disposes its rows, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
 | UX_METHOD | conserved by reference in §4 |
 | WORLD_MODEL_METHOD | conserved by reference in §5; identity and entity-cut law consumed by FOUNDATIONS P3 |
 | Authority compressions, schemas, templates | not applicable in this draft; derived views are produced from the tier 1–2 documents when a thread selects them |
