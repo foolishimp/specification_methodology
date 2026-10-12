@@ -31,8 +31,9 @@ The declared bounded context is `urn:stdo:bounded-context:foundations`.
 Its owner is the STDO Specification Methodology Product authority. Its selected
 basis is this member's definitions at the exact member digest together with the
 cited source-owned clauses, bound under the activation's governing cut. Its scope
-is the whole member's explanatory terms, symbols and explicitly scoped hypotheses,
-including the account in Orthogonal descriptions. The context identity is stable
+is the locally defined explanatory symbols and explicitly scoped hypotheses,
+including the account in Orthogonal descriptions. Source-owned role and authority
+terms keep the explicit import addresses below. The context identity is stable
 across location or permitted representation changes; a new digest still changes
 content and may change applicability.
 
@@ -93,6 +94,26 @@ decision. None of these substitutes for another. Historical evidence remains
 historical when current premises change. Reuse requires supported applicability,
 including identity, basis, freshness and the predicate actually assessed.
 
+## Reference-only semantic imports
+
+Source and target meanings are identical owner-qualified references, not new
+local definitions. Direction is from the named source to this explanatory
+context; loss is none and no translation or ownership transfer is asserted.
+Source owners remain the named methods; the target explanation remains with its
+Methodology authoring authority. Source and target basis are the same exact
+activation-bound governing cut and member coordinates. Lifecycle and adoption
+conditions remain those of the source; changed basis requires fresh applicability.
+
+| Referenced concept | Source context | Exact source concept and owner |
+|---|---|---|
+| Construction Reviewer | urn:stdo:bounded-context:reference-frame-evaluation | [Baseline complete engagement](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), in an adopted, lawfully activated construction engagement |
+| Decision and operation authority; existing grant | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority) and [RF-006](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation) |
+
+These are reference-only imports into urn:stdo:bounded-context:foundations.
+They provide no operation grant. An activation lacking the source meaning,
+adoption or authority binding reports that unresolved relation before dependent
+reliance rather than interpreting it from equal spelling.
+
 ## Typed composition and conservation
 
 Relations compose only when their source and destination types, interpretation,
@@ -136,7 +157,7 @@ work, refusal, recovery and exhausted authority truthfully.
 
 Process resumption is another iteration over the current work state under
 [agentic construction law](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). Observe the workspace
-and affected dependencies, retain applicable progress, then choose a permitted
+and affected dependencies under [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment), retain applicable progress, then choose a permitted
 action. This does not imply every side effect is idempotent. An uncertain effect
 must be observed, reconciled or returned unresolved before any repetition that
 could duplicate it. General logging supplies observability and audit and may support reconstruction.

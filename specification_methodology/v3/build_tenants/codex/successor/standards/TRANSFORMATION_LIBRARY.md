@@ -23,6 +23,16 @@ uses that context, while each named source function keeps its own context and
 contract. Equal spelling is no equivalence or import. One function may have
 several correspondences: this account is neither a partition nor a hierarchy.
 
+The reference-only imports of Construction Reviewer and decision/operation
+authority use the source concepts, contexts and owners in
+[Foundations' import table](FOUNDATIONS.md#reference-only-semantic-imports).
+Their target is urn:stdo:bounded-context:transformation-library; source and target
+meanings are identical owner-qualified references. Direction is source to
+explanation, loss is none, basis is the same exact activation-bound cut/member,
+source ownership and lifecycle/adoption remain unchanged. The target is owned
+by this explanatory account's Methodology authoring authority. Missing bindings
+remain unresolved; the import supplies no grant or local replacement definition.
+
 ## Bind
 
 Recover the current purpose, subject identity, governing specification, role,
@@ -136,6 +146,9 @@ composition obligation nor a universal category theorem for arbitrary software.
 
 [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) owns the
 construction, progress, checkpoint and proof determinations summarized here.
+[Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment)
+owns retained-fact applicability, invalidation before reliance, unknown effect
+handling and recomputation of the wider frontier where independence is unproved.
 After interruption, bind the same work identity to its observed current state.
 Reassess materially affected premises and retain applicable work. Where
 independence is unproved, recompute the governing wider frontier. Reconstruct

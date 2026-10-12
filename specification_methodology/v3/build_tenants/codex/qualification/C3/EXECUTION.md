@@ -2,6 +2,12 @@
 
 State: active construction; no checkpoint acceptance or release.
 
+Envelope overrun: the three-hour planning allowance was exceeded. Source
+summary churn and insufficient early abstraction/condition preservation are
+Executive control failures, not net Product progress. Final closure is bounded
+to exact source conservation, the return and own checkpoint; no new method
+redesign or release claim is added.
+
 ## Authority and exact intake
 
 Jim instructed: "ok i approve this work, but i want it done under stdo 2.5.1 executive process", then "within the build tenant using git workspaces i want you to do the work". This selects Codex tenant construction of the standalone successor and its reviewable evidence. The common pen remains Claude. This tenant return records the instruction without changing common WHAT, common tickets or peer work.

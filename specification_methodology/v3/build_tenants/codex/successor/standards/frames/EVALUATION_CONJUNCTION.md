@@ -20,6 +20,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Reference Frame Laws
@@ -280,7 +281,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `eb2987755928a6298f64896b1edc1cadc377111342c2fd5975a895720a15b083`.
 
 ## Bind
 
@@ -289,7 +290,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `eb2987755928a6298f64896b1edc1cadc377111342c2fd5975a895720a15b083`.
 
 ## Acquire
 
@@ -300,7 +301,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `eb2987755928a6298f64896b1edc1cadc377111342c2fd5975a895720a15b083`.
 
 ## Evaluate
 
@@ -322,7 +323,7 @@ needs re-entry or a competing truth path violates the basis. This is assessment
 evidence; the decision owner alone performs the authoritative disposition.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `eb2987755928a6298f64896b1edc1cadc377111342c2fd5975a895720a15b083`.
 
 ## Conjoin
 
