@@ -1,0 +1,59 @@
+# console log for qualification/runs/F-02/20261012T075335Z-C-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude-evA/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T07:53:35Z
+# step C-001: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-02/20261012T075335Z-C-001 --step-id C-001 --card qualification/cases/F-02/CARD.md --block "METHOD carrier-and-admission=a_c/set-4/projection-carrier-and-admission-materialized.json" --block "TASK=qualification/cases/F-02/TASK-C.md" --model sonnet
+## Work 1
+
+1. **Carrier selection.**
+   - Upstream work authority exists. Sofia's exact work instruction WI-14 is a product-authorised instruction.
+   - No ticket covers the work, and no sprint is open.
+   - The work ends in this run with no surviving state.
+   - Row 5 matches.
+   - The execution-contract source is the intake-drafted run-scoped contract EC-1.
+   - Durable-ticket decision: no ticket is created.
+2. **State: admitted.** All the coordinates are present in `runs/2026-10-12-ec1/admission.json`, which is the bound durable surface:
+   - Mechanism `admit.py 2.1`.
+   - Authority `docs-admission`.
+   - Contract digest `sha256:3c…41`, matching EC-1.
+   - Decision `admitted`.
+   - Evidence: the `admit.py` log line 7.
+3. **Execution may begin now.**
+   - It is limited to EC-1's scope: the one link on the install page, with nothing else touched.
+   - The agent records the result and the link-check evidence in `runs/2026-10-12-ec1/` before returning.
+   - No obligation survives the run.
+
+## Work 2
+
+1. **Carrier selection.**
+   - The upstream work authority is the selected outcome in GW-7, owned by Sofia. I read that as applicable authority, but the METHOD block does not say so outright (see below).
+   - No ticket covers the work, and no sprint is open.
+   - The work spans three sessions, and the migrated and remaining pages must be known at the start of each later session. That is independent state beyond the current run.
+   - Row 3 matches.
+   - The execution-contract source is one durable ticket plus the run-scoped contract EC-2.
+   - Durable-ticket decision: a ticket is required. Only Marco may create it. The agent lacks ticket-state authority, so it must not create one.
+2. **State: drafted.** EC-2 is not admitted.
+   - Present: only the digest `sha256:9a…07`.
+   - Missing: the mechanism `admit.py` and its version.
+   - Missing: the authority `docs-admission`.
+   - Missing: a decision.
+   - Missing: evidence, such as an `admit.py` log line. No `admit.py` output exists.
+   - Missing: an admission record on a bound surface. No file under `runs/` or `tickets/` refers to EC-2.
+   - The `status: admitted` text in the contract and the board card in the `In progress` lane are the agent's own prose and lane placement. They are not admission evidence, and the agent may not self-certify.
+   - EC-2 also names the conversation as its durable surface. That alone would make admission refuse, because a conversation return is not durable evidence.
+3. **Execution may not begin.**
+   - **Return:** the agent returns the missing work authority and admission. That means no admission by `admit.py` under `docs-admission`, and no ticket from Marco. It also returns the re-entry: Marco creates the ticket, and the contract is redrafted with a `runs/` result surface and submitted to `admit.py`.
+   - **Carrying the surviving obligation:**
+     - No sprint is open, so a sprint-local entry is unavailable.
+     - Because the agent lacks ticket-state authority, it records the obligation in a `runs/` record (the bound surface for run-scoped work) before returning. The record covers:
+       - the need for a durable ticket;
+       - the migration scope of 40 pages, with the migrated and remaining sets, currently none migrated;
+       - closure marked withheld on ticket-state authority.
+     - The agent corrects `status: admitted` to `drafted`.
+     - The agent withdraws the `In progress` board card, or marks it as not admitted.
+
+## No method source
+
+- Whether a goals work wave's selected outcome, as opposed to an exact work instruction, counts as "applicable upstream work authority" for row 3 is not stated. The METHOD block names only an exact product-authorised work instruction as an example.
+- The Work 2 record in `runs/` is not itself an admitted contract's result surface. The block does not say whether the agent may write a record under `runs/` before any contract is admitted. I assumed the product binding of `runs/` permits it.
+# step exit 0
+# end 2026-10-12T07:53:53Z
