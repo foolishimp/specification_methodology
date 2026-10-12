@@ -1,12 +1,13 @@
 # Specification Methodology Repository Bootstrap
 
 This repository contains four peer source projects:
-`specification_methodology`, `axiom_indexer`, `stdo_representation`, and `stdo_3`.
-The root is coordination only and is not a Product.
+`specification_methodology/v2`, `specification_methodology/v3`, `axiom_indexer`
+and `stdo_representation`. The root is coordination only and is not a Product.
 
-The Git checkout is `specification_methodology`. STDO 2.* authoring belongs in
-its `./specification_methodology/` child; STDO 3 construction belongs in
-`./stdo_3/`. Each has its own Product Definition.
+The Git checkout is `specification_methodology`. The STDO Specification
+Methodology product has two version lines side by side: STDO 2.* authoring
+belongs in `./specification_methodology/v2/`; v3.0.0 construction belongs in
+`./specification_methodology/v3/`. Each has its own Product Definition.
 
 Select the applicable child, load its local instructions and Product
 Definition, and preserve its exact authority and dependency boundaries.

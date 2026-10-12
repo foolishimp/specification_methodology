@@ -84,22 +84,32 @@ nine-member Representation boundary while rebinding the changed source and
 its authored index. Neither historical counts nor a recomputed smaller digest
 can excuse a missing native instruction file.
 
-The [RC7 release work](specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
+The [RC7 release work](specification_methodology/v2/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
 records the completed RC7 cohort. Source and companion qualification,
 independent semantic/native review, internal frame binding, atomic publication
 and fresh public reacquisition are verified. `stack_release.json` retains its
 frozen commit-B candidate identity; the linked publication evidence records
 the completed transition. RC6 remains the immutable predecessor.
 
-The [2.5.1 RC1 release](specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+The [2.5.1 RC1 release](specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
 records the published matched cohort, verified public installation and retained
 Representation native qualification limits. T-288 and ABI delivery supply no
 release dependency. External consumer adoption remains unselected.
 
-The [2.5.1 RC2 release](specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/RELEASED.md)
+The [2.5.1 RC2 release](specification_methodology/v2/.ai-workspace/comments/codex/20260930_stdo_251_rc2/RELEASED.md)
 records the published triage clarification, targeted semantic/index update,
 bounded native assessment, atomic cohort publication and fresh public
 reacquisition. RC1 remains immutable; external consumer adoption is unselected.
+
+Since the side-by-side layout (2026-10-12) the STDO 2.* source lives at
+`specification_methodology/v2/` and v3.0.0 construction at
+`specification_methodology/v3/`. A product's `subtree` in `stack_release.json`
+remains the coordinate recorded against its frozen tag and is verified against
+that tag unchanged. Where the carrier revision holds the same product at a
+different path, `source_subtree` names that location and the checker reads
+carrier-revision content (release notes, native members) there. A future cohort
+cut from the new layout records the new path as its `subtree` directly and
+needs no `source_subtree`.
 
 ## Coordinated Construction
 

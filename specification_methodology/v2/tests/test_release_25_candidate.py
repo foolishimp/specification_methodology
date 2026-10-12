@@ -18,7 +18,10 @@ GIT_REPOSITORY = Path(
         text=True,
     ).stdout.strip()
 )
-PROJECT_SUBTREE = PROJECT_ROOT.relative_to(GIT_REPOSITORY).as_posix()
+# The published cuts this test binds were tagged before the side-by-side
+# v2/v3 layout. Their subtree coordinate is frozen with the tag and is not
+# derived from where the source lives now; working-tree reads use PROJECT_ROOT.
+PROJECT_SUBTREE = "specification_methodology"
 PROJECT_NAMESPACE = "specification_methodology"
 RELEASE_REF = "refs/tags/specification_methodology/v2.5.0-rc.3"
 SELECTOR_REF = "refs/tags/specification_methodology/v2.5.0"

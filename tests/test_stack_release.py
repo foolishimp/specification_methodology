@@ -534,6 +534,49 @@ class StackReleaseCheckerTests(unittest.TestCase):
     def test_content_gate_accepts_exact_complete_cohort(self) -> None:
         self.assertEqual(self.check(), [])
 
+    def relocate_stdo_source(self, source_subtree: str | None) -> None:
+        """Move the STDO source to the side-by-side layout at the carrier.
+
+        The frozen tag keeps the old layout; only the working tree moves.
+        """
+        root = self.fixture.root
+        run(root, "git", "mv", "specification_methodology", "_relocating")
+        (root / "specification_methodology").mkdir()
+        run(root, "git", "mv", "_relocating", "specification_methodology/v2")
+        manifest_path = root / "stack_release.json"
+        manifest = json.loads(manifest_path.read_text())
+        product = manifest["products"]["specification_methodology"]
+        product.pop("source_subtree", None)
+        if source_subtree is not None:
+            product["source_subtree"] = source_subtree
+        write_json(manifest_path, manifest)
+
+    def test_relocated_source_without_carrier_location_fails(self) -> None:
+        self.relocate_stdo_source(None)
+        failures = self.check()
+        self.assertTrue(
+            any(
+                "missing release note specification_methodology/releases" in row
+                for row in failures
+            ),
+            failures,
+        )
+
+    def test_relocated_source_subtree_keeps_frozen_tag_and_reads_carrier(
+        self,
+    ) -> None:
+        self.relocate_stdo_source("specification_methodology/v2")
+        self.assertEqual(self.check(), [])
+
+    def test_source_subtree_equal_to_frozen_subtree_is_rejected(self) -> None:
+        manifest_path = self.fixture.root / "stack_release.json"
+        manifest = json.loads(manifest_path.read_text())
+        manifest["products"]["specification_methodology"]["source_subtree"] = (
+            "specification_methodology"
+        )
+        write_json(manifest_path, manifest)
+        self.assertTrue(any("source_subtree" in row for row in self.check()))
+
     def replace_representation_members(self, members: list[dict[str, str]]) -> None:
         manifest_path = self.fixture.root / "stack_release.json"
         manifest = json.loads(manifest_path.read_text())

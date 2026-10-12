@@ -65,7 +65,7 @@ installed STDO law and no release cut.
 
 The [working principles](requirements/PRINCIPLES.md) are the common questions for C1. Each tenant recovers existing source clauses, exposes each proposed derivation's premises, argues claimed independence, preserves hypotheses and critiques possible Spec Method mechanisms. The setup does not decide which proposed foundational derivations succeed.
 
-The frozen [6 October coverage matrix](../../specification_methodology/.ai-workspace/comments/codex/20261006T015451Z_MATRIX_AI_DEVELOPMENT_METHODS_STDO_251_BASELINE.md) joins the common C1-inputs-20261011-02 snapshot. Its F27–F30 4/12 score concerns documented coverage on that date, not current effectiveness or automatically selected 3.0 requirements.
+The frozen [6 October coverage matrix](../../v2/.ai-workspace/comments/codex/20261006T015451Z_MATRIX_AI_DEVELOPMENT_METHODS_STDO_251_BASELINE.md) joins the common C1-inputs-20261011-02 snapshot. Its F27–F30 4/12 score concerns documented coverage on that date, not current effectiveness or automatically selected 3.0 requirements.
 
 Initial attempts are independent. Both can read common input posts and installed source; neither consumes the peer's realisation before the initial frozen returns. Reviews between tenants are authorised by Jim and conducted under [Development Isolation](#development-isolation): the reviewer reads the reviewed tenant's branch at a named commit and writes only in its own tenant. The C1 reciprocal reviews performed before that rule, and their returns in the tenant tickets, are historical records. A review result informs Jim's decision; it does not itself adopt common principles.
 

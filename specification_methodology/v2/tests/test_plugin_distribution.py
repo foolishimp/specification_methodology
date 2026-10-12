@@ -1,13 +1,22 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import re
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-STACK_ROOT = ROOT.parent
+STACK_ROOT = Path(
+    subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+)
 PLUGIN = ROOT / "plugins" / "spec"
 WORKFLOW_SKILLS = {
     "stdo-help",
