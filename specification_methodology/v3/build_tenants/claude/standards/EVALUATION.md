@@ -160,7 +160,7 @@ a reviewer result is an input to closure, never the closure. Green labels,
 document counts, review counts and historical outcomes are not acceptance.
 A human decision may be exercised directly or through an explicitly admitted
 bounded proxy whose grant names its scope and exclusions
-([UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004));
+([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); provenance rc.2 IDENTITY_METHOD #authority-identity-and-conservation-stdo-up-004);
 a proxy cannot change Product meaning, requirements, governing authority
 or accepted design, and such a change re-enters at its owning relation
 ([UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
@@ -170,10 +170,8 @@ successor disposition record of [RELEASE §9](RELEASE.md#9-successor-baseline-co
 (STDO-UP-015), which states the law: the exact predecessor immutable cut
 the successor evolves, and one semantic disposition for every predecessor
 claim capable of affecting the successor. A claim whose disposition is
-unresolved cannot be qualified and so cannot be accepted. The record is
-evaluated semantically: the absence of a patch does not prove loss where
-a successor-native realisation preserves the behaviour, and naming or
-code similarity does not prove conservation without relevant evidence.
+unresolved cannot be qualified and so cannot be accepted; how the record
+is evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).
 An intentionally removed disposition is a decision of the current Product
 authority, and its record is that decision (P6, P3, P4b).
 

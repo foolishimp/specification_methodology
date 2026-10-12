@@ -211,8 +211,9 @@ release cut binds, described by that cut's release-scoped claims; a
 carrier that holds it does not thereby make co-located material a
 member. A version-line selector is a mutable
 alias naming the highest-ordinal published release cut on one version
-line of one project; it is convenient discovery, never immutable identity
-and never an exact constitutional, dependency, evidence or replay basis.
+line of one project; it is convenient discovery, not immutable identity,
+and not sufficient as an exact basis ([RELEASE §1](RELEASE.md#1-context-and-position)
+states which).
 Equal version text does not collapse these objects. A selector or a
 mutable carrier may move; a release cut never moves. RELEASE §2 realises
 them, with the carriers that hold them, as refs of one release source.

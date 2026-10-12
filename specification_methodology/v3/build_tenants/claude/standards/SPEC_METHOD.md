@@ -982,9 +982,9 @@ constitutional and shared realisation surfaces therefore describe current
 truth by role, boundary and status rather than by release-line version
 labels (§2, specification surface rule). Release criteria, immutable
 release-cut publication, selector advancement and the process for cutting a
-release belong to RELEASE; until that member exists this section carries
-them by provenance (rc.2 RELEASE_METHOD #release-identities, #phases,
-#naming, #coordinated-release-matched-asset-cohorts).
+release belong to [RELEASE §2 to §8](RELEASE.md#2-release-identities)
+(provenance rc.2 RELEASE_METHOD #release-identities, #phases, #naming,
+#coordinated-release-matched-asset-cohorts).
 
 A successor names the exact predecessor immutable cut whose claims it
 evolves and gives every predecessor claim capable of affecting it one
