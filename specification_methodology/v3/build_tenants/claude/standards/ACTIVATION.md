@@ -123,14 +123,16 @@ intake), a relation family R (the dependency relations whose change can
 alter the result, basis validity, evidence sufficiency or authority), and
 the actor's envelope B:
 
-1. Compute the material closure of Z under R
-   ([AC-010](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-010-material-closure)).
+1. Compute the material closure of Z under R (AC-010,
+   [AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-010-material-closure);
+   provenance rc.2 AXIOMATIC_CALCULUS #ac-010-material-closure).
    If the closure is not finite and unique on the exact basis, the step
    returns a gap or refusal; it does not guess.
 2. Project the closure to the selected context, recording its boundary: the
    excluded, external, unresolved, translated and invalidation-sensitive
-   seams
-   ([AC-011](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-011-projection)).
+   seams (AC-011,
+   [AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-011-projection);
+   provenance rc.2 AXIOMATIC_CALCULUS #ac-011-projection).
    Material not in the closure stays out; adjacent material does not enter
    because it exists
    ([RF-004](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion)).
@@ -194,7 +196,10 @@ whose five members the table restates unchanged, and
 whose rule that a failed, missing, indeterminate, out-of-scope or
 invalid-basis result follows the declared algebra rather than being coerced
 to success is the sentence above; both are restated here once and continue
-to govern.
+to govern. REFERENCE_FRAME §3 states RF-012 as a law over frames and
+[AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
+states AC-007 as a law over constraints; each uses this algebra and neither
+defines it again.
 
 The boundary between out_of_frame and indeterminate is drawn on what the
 activated frame declares and on what the step did with it (P5, finite
@@ -388,8 +393,8 @@ acquires its own evidence and supplies its own judgment. Conserves
 | UP-018 | conserved; §1 |
 | Probabilistic Work Boundary | conserved; §1 |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
-| AC-010, AC-011 | conserved; joined with RF-002/003/004/014/017 into the §2 operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
-| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and points here; the tenant text carries labelled tightenings: undefined term, unexercised capability |
+| AC-010, AC-011 | conserved; the laws themselves are restated in AXIOMATIC_CALCULUS §4, which disposes their rows; §2 applies them, joined with RF-002/003/004/014/017 into one operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
+| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and AXIOMATIC_CALCULUS §4 states AC-007 as law, and each points here; their rows are disposed in those members; the tenant text carries labelled tightenings: undefined term, unexercised capability |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
 | ODD graph functions | conserved; generalised in §4 to any realisation; PROFILES §2 keeps the ODD binding |

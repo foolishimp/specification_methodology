@@ -17,7 +17,8 @@ current state under explicit uncertainty.
 
 | You want to | Read, in order |
 |---|---|
-| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [REFERENCE_FRAME](REFERENCE_FRAME.md) → [ACTIVATION](ACTIVATION.md) → [SPEC_METHOD](SPEC_METHOD.md) |
+| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [REFERENCE_FRAME](REFERENCE_FRAME.md) → [ACTIVATION](ACTIVATION.md) → [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) → [SPEC_METHOD](SPEC_METHOD.md) |
+| interpret a subject as a model, project a frame from it, or encode an accepted model | [AXIOMATIC_CALCULUS §2–4](AXIOMATIC_CALCULUS.md) for the signature, records and laws, [§6–8](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) for interpretation, the three layers and identity, then [EVALUATION §2](EVALUATION.md) for the structural and semantic split of its review |
 | do a bounded piece of work | [ACTIVATION §1–3](ACTIVATION.md) for the step, its admission and its result algebra, [REFERENCE_FRAME §11](REFERENCE_FRAME.md) for the packet you are activated on, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
 | declare, audit or revise a project's frame set | [REFERENCE_FRAME §4, §8 and §10](REFERENCE_FRAME.md), then [EVALUATION §7](EVALUATION.md) to qualify a frame |
 | resume work someone else left | [ACTIVATION §5 and §7](ACTIVATION.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
@@ -33,6 +34,7 @@ current state under explicit uncertainty.
 | [FOUNDATIONS.md](FOUNDATIONS.md) | 1 | ontology including the frame objects, commitments, algebra, hypotheses, the UP-015 disposition vocabulary |
 | [REFERENCE_FRAME.md](REFERENCE_FRAME.md) | 1 | the reference frame as a first-class object: laws RF-001 to RF-017, frame sets, method functions, conjunction, relations, coverage, revision, the activation packet, declarations |
 | [ACTIVATION.md](ACTIVATION.md) | 1 | the bounded step: intake, admission, applicability, context construction, the single result algebra, totality, refinement, work state, cost, closed result and reuse |
+| [AXIOMATIC_CALCULUS.md](AXIOMATIC_CALCULUS.md) | 1 | the a_c theory: signature, typed records, laws AC-001 to AC-020, traversals and functor kinds, interpretation and models, the three layers, the law of calculus identity, exclusions, conformance obligations |
 | [EVALUATION.md](EVALUATION.md) | 1 | claims, evidence, assessment, acceptance, conformance, qualification of frames and of the method |
 | [SPEC_METHOD.md](SPEC_METHOD.md) | 2 | the particular method: chain, WHAT/HOW, outcomes, change classes, roles, checkpoints, lineage |
 | [CONFORMANCE.md](CONFORMANCE.md) | 2 | cases the method must pass |
