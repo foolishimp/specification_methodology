@@ -59,9 +59,9 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 
 | Milestone | State | Closure condition |
 |---|---|---|
-| M1 design reframed and EC-CLAUDE-001 admitted | OPEN | design restated; member map declared; contract `admitted` and ledgered |
-| M2 member 1 accepted | OPEN | Reviewer `satisfied` on all six criteria; `accept` ledgered |
-| M3 all members accepted | OPEN | every frontier row disposed; every member accepted |
+| M1 design reframed and EC-CLAUDE-001 admitted | DONE 2026-10-12 | design restated; member map declared; contract `admitted` and ledgered |
+| M2 member 1 accepted | DONE 2026-10-12 | Reviewer `satisfied` on all six criteria; `accept` ledgered |
+| M3 all members accepted | DONE 2026-10-12 except the 11 rows pending Jim's compression ruling | every frontier row disposed; every member accepted |
 | C3 closure for this tenant | OPEN; Jim's | Jim accepts |
 
 ## Execution Record
@@ -219,3 +219,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 2026-10-12T11:11:39Z — Re-acceptance recorded as Writer (770c7f4); role back to Executive. W24 returned at ccc60ab: nine F-03 runs, measured totals and digests equal to the case, actors outside any repository, USD 1.29. R24 (assessment against the 3f7c1a5 oracle) activated. Fresh-actor spend to date USD 6.08. Open: R24.
 
 2026-10-12T11:21:23Z — R24 (checkpoint B, 85 judgments): 80 satisfied, 5 indeterminate, 0 falsified; 9 of 9 required results reached; failure signatures clean. Executive adjudication by inspection of the four indeterminate sub-points (not an independent review result): B and F are frame-selection gaps (release frame shows only the stdo:// locator form; traversal frame lacks the no-retype rule); G and H are actor errors (unmapped fails-closed row; invented per-attribute saturation row); none is a member text defect. Executive dispositions: ACCEPT member 4 (TICKET_METHOD, criterion 4 closed by task A), member 6 (RELEASE_METHOD and IDENTITY_METHOD), member 7 (DESIGN_MODULE_METHOD), member 8 (ODD, TRAVERSAL, UX, WORLD_MODEL), member 9 (guides and README) and PRODUCT_DEFINITION. Packaging rows accepted on text (no cold-actor criterion applies to schemas, templates, plugin, licence). Fully accepted: 679 of 690 rows. Unresolved: 11 (10 compressions, requirements template entrypoint), pending Jim. Frame-gap residuals recorded for the next frame projection. Entering close: frontier consolidation (pen), review handoff for Codex, report to Jim.
+
+2026-10-12T11:22:04Z — Common pen consolidated the Claude tenant's accepted state into specification/requirements/PREDECESSOR_CLAIMS.md (691 rows including the TRAVERSAL child row; 680 dispositioned, 11 unresolved pending Jim); loci relative to specification_methodology/v3/. Milestones M1 to M3 marked. Remaining: Codex cross-family review (Jim authorises), Jim's compression ruling, Jim's checkpoint acceptance and merges.
