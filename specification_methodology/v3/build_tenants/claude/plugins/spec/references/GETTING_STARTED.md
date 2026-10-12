@@ -614,13 +614,13 @@ Definition:
   authority, and projection;
 - `RELEASE.md`: immutable cuts, qualified transport refs, publication,
   successor identity, and release evidence;
-- `REFERENCE_FRAME.md` and `ACTIVATION.md` section 3: bounded evaluation and
-  result law; and
+- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` section 2 and `ACTIVATION.md`
+  section 3: bounded evaluation and result law; and
 - `EXECUTIVE_BASELINE.md`: optional Executive, Worker, Reviewer,
   technical-triage, and disposition profile, with its testing frames in
   `ASSURANCE.md`.
 
-Claude retains the legacy manual-only `refresh` loader for a full exact owning
-document. Codex should resolve and read that exact installed member directly;
-the five daily workflow skills remain byte-shared. Daily work should read the
-smallest relevant source surface.
+Claude retains the legacy manual-only `refresh` loader for the full exact
+owning members of one registry entry. Codex should resolve and read those
+exact installed members directly; the five daily workflow skills remain
+byte-shared. Daily work should read the smallest relevant source surface.
