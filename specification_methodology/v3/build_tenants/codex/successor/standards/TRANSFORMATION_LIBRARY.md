@@ -34,8 +34,9 @@ references, with no translation, loss, inverse or ownership transfer. The source
 context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
 Its exact source member SHA256 is
 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
-The target has its own separately inventoried member digest in
-[CANDIDATE.json](../CANDIDATE.json). An activation binds
+The target has its own exact member digest supplied by the frozen activation
+or selected installed manifest. A review carrier is not an installed dependency
+and supplies no authority. An activation binds
 each member's distinct coordinates in its selected complete governing basis.
 The candidate selects no operative construction basis. Changed member, basis,
 source declaration or adoption premise invalidates reliance until applicability

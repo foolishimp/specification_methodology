@@ -106,8 +106,9 @@ the same owner declared above. The source context is declared by
 [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position), whose owner is
 REFERENCE_FRAME_METHOD.md. The source basis is that member at SHA256
 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
-The target basis is this member at its separately inventoried digest in
-[CANDIDATE.json](../CANDIDATE.json).
+The target basis is this member at its exact member digest supplied by the
+frozen activation or selected installed manifest. A review carrier is not an
+installed dependency and supplies no authority.
 An activation binds each member's distinct coordinates in its selected complete
 governing basis; equal cut selection does not mean equal member coordinates.
 This unreleased candidate does not itself select an operative construction basis.

@@ -13,6 +13,8 @@ to insufficient capability; this preface supplies no response or selection grant
 
 
 
+
+
 Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
