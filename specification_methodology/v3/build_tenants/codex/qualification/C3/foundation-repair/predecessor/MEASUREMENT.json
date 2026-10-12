@@ -1,0 +1,215 @@
+{
+  "variant": "predecessor",
+  "subject_commit": "83ccb1fd0a4b45b77d39aeef843ae5e699a721cb",
+  "method_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+  "argv": [
+    "claude",
+    "-p",
+    "--safe-mode",
+    "--restricted",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowedTools",
+    "Read",
+    "Glob",
+    "Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--add-dir",
+    "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--no-session-persistence",
+    "--model",
+    "opus",
+    "--effort",
+    "medium",
+    "--max-turns",
+    "12",
+    "--max-budget-usd",
+    "0.95"
+  ],
+  "prompt_bytes": 1075,
+  "prompt_sha256": "60a15227d41e8cb9b1581ea332d2dd5631bb9a06e54731c4213dddb6c34294b3",
+  "context_allowance_bytes": 200000,
+  "wall_allowance_seconds": 360,
+  "spend_allowance_usd": 0.95,
+  "role": "fresh read-only method reader",
+  "provider_cwd": "/private/tmp",
+  "limits": [
+    "Source-package acquisition after Host basis verification",
+    "No native installation, host skill discovery or actual effects",
+    "Rendered tool-result bytes exclude provider system/internal prompts"
+  ],
+  "exit_code": 0,
+  "is_error": false,
+  "total_cost_usd": 0.3812006,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 30912,
+    "cache_read_input_tokens": 107843,
+    "output_tokens": 5614,
+    "output_tokens_details": {
+      "thinking_tokens": 1789
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 30912,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3877,
+        "cache_read_input_tokens": 32574,
+        "cache_creation_input_tokens": 1343,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1343
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 14,
+      "outputTokens": 5614,
+      "cacheReadInputTokens": 107843,
+      "cacheCreationInputTokens": 30912,
+      "webSearchRequests": 0,
+      "costUSD": 0.3812006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1789,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "session_id": "e2b33f94-1112-4296-aced-b9e8d0b78f02",
+  "num_turns": 12,
+  "provider_subtype": "success",
+  "read_requests": [
+    {
+      "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+    },
+    {
+      "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-work/SKILL.md"
+    },
+    {
+      "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+    },
+    {
+      "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/references/PRODUCT_BASIS.md"
+    },
+    {
+      "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+      "offset": 1185,
+      "limit": 145
+    },
+    {
+      "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+      "offset": 1503,
+      "limit": 165
+    },
+    {
+      "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "offset": 1180,
+      "limit": 40
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+      }
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-work/SKILL.md"
+      }
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task"
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/references/PRODUCT_BASIS.md"
+      }
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "^#{1,4} ",
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+        "output_mode": "content"
+      }
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "(?i)(uncertain|timeout|idempot|revok|revocation|retry|replay|reconcil.*effect|unknown outcome)",
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+        "output_mode": "content",
+        "head_limit": 80
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+        "offset": 1185,
+        "limit": 145
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+        "offset": 1503,
+        "limit": 165
+      }
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "offset": 1180,
+        "limit": 40
+      }
+    }
+  ],
+  "rendered_tool_result_bytes": 67958,
+  "context_allowance_observed": true,
+  "elapsed_seconds": 60.119
+}

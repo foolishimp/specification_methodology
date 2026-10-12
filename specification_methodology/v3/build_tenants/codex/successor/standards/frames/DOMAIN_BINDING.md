@@ -27,6 +27,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry

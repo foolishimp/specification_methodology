@@ -27,6 +27,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `4a0bdfc9591843353d34ba2530cff504b7891f157b2fd8e73f9e695bf34fdd87`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
@@ -292,7 +293,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `376ad962aa872c7d72ed8360258dd290525ee2bc5d1f3143ff0beb5fe9c5d044`.
 
 ## Bind
 
@@ -301,7 +302,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `376ad962aa872c7d72ed8360258dd290525ee2bc5d1f3143ff0beb5fe9c5d044`.
 
 ## Acquire
 
@@ -312,7 +313,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `376ad962aa872c7d72ed8360258dd290525ee2bc5d1f3143ff0beb5fe9c5d044`.
 
 ## Transform
 

@@ -13,7 +13,7 @@ needed by a future v3 consumer.
 | Owner | Material responsibility | Foundation/library relation |
 |---|---|---|
 | FOUNDATIONS | Explicit premises, contextual meaning, purpose, identity, composition, finite capacity and separate judgment/authority | Owns declared premises and standing; particular rules require the stated specialization arguments. |
-| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and the implemented work/recovery specialization; concrete types, policy and grants stay with method owners. |
+| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and the authored work/recovery specialization; concrete types, policy and grants stay with method owners. |
 | AXIOMATIC_CALCULUS | Formal entities, claims, interpretations and typed calculus | Formal refinement of interpretation and conservation; mechanics remain a separate Product. |
 | REFERENCE_FRAME_METHOD | Material context, frame coverage, capability and evaluation law | Acquire/Evaluate/Conjoin over bounded responsibility. |
 | STDO_REFERENCE_FRAME_BASELINE | Optional generic specialist and Executive/Worker/Reviewer configurations | Operational instances, preserving role grants and independence. |

@@ -9,13 +9,14 @@ import time
 parser = argparse.ArgumentParser()
 parser.add_argument("variant", choices=["predecessor", "successor"])
 parser.add_argument("--subject", required=True)
+parser.add_argument("--retest", action="store_true")
 args = parser.parse_args()
 root = Path(__file__).resolve().parent
 base = root.parents[2]
 method = (Path('/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2')
           if args.variant == 'predecessor' else base / 'successor')
 task = root / 'task'
-out = root / args.variant
+out = root / (args.variant + ('-retest' if args.retest else ''))
 out.mkdir(exist_ok=True)
 prompt = ('You are a fresh read-only method reader in a controlled acquisition study. '
           'No prior history, advisor, peer or oracle is available. Read the ordinary '

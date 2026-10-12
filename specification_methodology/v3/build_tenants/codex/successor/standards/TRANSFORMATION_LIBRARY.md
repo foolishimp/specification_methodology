@@ -145,7 +145,7 @@ the outer outcome or effect grant.
 
 Judge a declared predicate on an exact subject using sufficient admissible
 evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
-or invalid_basis; compatible extensions preserve RF-012's explicit indeterminate,
+or invalid_basis; externally owned compatible extensions preserve RF-012's explicit indeterminate,
 out-of-frame and invalid-basis pressure under their declared contracts. Preserve original citations and residual coverage.
 Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A result mints no new grant. A
