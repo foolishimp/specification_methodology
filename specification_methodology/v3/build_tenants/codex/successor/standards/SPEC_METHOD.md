@@ -3,11 +3,10 @@
 This member owns its particular constitutional contracts.
 [Foundations](FOUNDATIONS.md) and the
 [Transformation Library](TRANSFORMATION_LIBRARY.md) organise recurring premises
-and responsibilities abstracted from the detailed owners. A selected purpose,
-interpreted subject, governing specification, sufficient evidence and actual
-owner grants supply the premises of the constitutional chain below. Finite
-capacity explains bounded work; it does not alone establish those premises or
-confer authority.
+and responsibilities abstracted from the detailed owners. The constitutional
+chain below retains its own authority direction from Goals and its own exact
+premises. Foundations supplies no replacement derivation or additional
+dependency. Finite capacity explains bounded work; it confers no authority.
 
 Bind corresponds here to Product-definition routing, semantic resolution and
 lawful intake. Acquire corresponds to constitutional and execution sufficiency.
@@ -19,8 +18,8 @@ remain explanatory families, rather than compulsory workflow stages or runtime
 APIs. The following clauses retain their owners, predicates, permissions,
 refusals, lifecycle and invalidation conditions.
 
-The general method and conditionally applicable realization profiles retain
-their separate scopes. Graph-native meanings remain owned by `ODD_METHOD.md`;
+The detailed members retain their own declared standing and applicability.
+Graph-native constitutional meanings remain owned by `ODD_METHOD.md`;
 module realization remains owned by `DESIGN_MODULE_METHOD.md`. Each detailed
 relation remains owned by its declared standard. Cross-member references
 consume that owner without transferring authority.

@@ -1,5 +1,16 @@
 # Codex a_c Interpretation
 
+Current C3 interpretation: [source](../qualification/C3/a_c/SOURCE.md),
+[encoding dispositions](../qualification/C3/a_c/ENCODING.md),
+[six-clause program](../qualification/C3/a_c/program.json),
+[native structural/projection/join checks](../qualification/C3/a_c/MECHANICAL_RESULT.json)
+and [608-case finite token check](../qualification/C3/a_c/FINITE_RESULT.json).
+Independent interpretation and exact applicability are in the
+[C3 return](../qualification/C3/RETURN.md). The executable tests a separately
+authored finite interpretation; ac.py does not execute the program's predicates.
+
+## Preserved Earlier Interpretation
+
 This territory holds a small separately bound interpretation of the frozen tenant candidate and the independently specified cost/ownership fixture. It encodes six symbols, seven clauses and two residuals; it is not a whole-STDO encoding or a proof of categorical equivalence.
 
 Use the [dependency and proof contract](../../../specification/requirements/A_C_DEPENDENCY.md). Keep source-to-model dispositions, signature, program/maps/bindings, mechanical output, independent fidelity judgment and actual-use claim distinct.

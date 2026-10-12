@@ -4,15 +4,17 @@
 ## Foundation And Transformation Binding
 
 This member is the graph-native ODD constitutional method surface of STDO;
-its declared obligations apply in a Product-selected ODD scope.
+its declared obligations apply in a Product-declared ODD scope under lawful activation.
 It maps [Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md). Selection of this method
-activates its declared ODD obligations in the consumer's governed scope;
+[Transformation Library](TRANSFORMATION_LIBRARY.md). Availability, Product
+adoption and execution-scoped activation remain distinct relations;
 availability supplies no Product semantics, concrete runtime identity or grant.
-Its constitutional composition uses [Spec Method](SPEC_METHOD.md),
+Related owner routes are [Spec Method](SPEC_METHOD.md),
 [Design Module Method](DESIGN_MODULE_METHOD.md),
 [Reference Frame Method](REFERENCE_FRAME_METHOD.md),
-[Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md).
+[Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md), each
+under its own applicability. This list adds no dependency to the composition
+declared below; release remains a separate process surface.
 [World Model Method](WORLD_MODEL_METHOD.md) and [UX Method](UX_METHOD.md)
 retain their separate applicability and semantic owners.
 

@@ -38,9 +38,14 @@
       "mode": "materialized"
     },
     {
+      "operation": "partial-frame-transitive-closure",
+      "exit": 0
+    },
+    {
       "operation": "wrong-program-old-map",
       "exit": 1,
-      "refused": true
+      "refused": true,
+      "diagnostic": "map_mismatch"
     },
     {
       "operation": "exact-join",
@@ -57,17 +62,59 @@
     "residual_routes",
     "source_routes"
   ],
+  "partial_selection_transitive_closure": true,
   "pins": {
     "SOURCE.md": "0161d2526a348fb2d94bc2f22cb855b9647428d2025efce30edb7e57b2a5c312",
-    "ENCODING.md": "1fedb4ac7896239c04706c5c23df5ab9ac2508942cf6e1bd23cdb0fc3e7b5463",
+    "ENCODING.md": "7090de8eeed6d344e0e73648a68a0d42d039efff31a44d91a25cba896d3d298f",
     "program.json": "0b0fc30fc15d76ba4dabc15ff0aed8ea091a8aab3d0ba35db2d9642a8217139f",
     "program-mutant.json": "0147676086c88b099c5c69be1b992e76e67992e0b2f8f91b4d2fd01d8b8f6a43",
     "finite_check.py": "63e868dcdc0981fb65397a13d4f41031d093d01d45ea3f536491829d33a8929e",
+    "qualify.py": "52282daeee7dca4b6407dee7bcb43db3fc1fcdc9fdf8b36d10c34736acf93bdd",
+    "bindings.json": "3341b7727bdd525442ec0e2b5bad00ae27caef5c973e08fed5deae36fc0c7f2d",
+    "INSTALL_VERIFICATION.json": "8d7c0622a32e9c23abcbe338fbc51fbdd013abc78af717e466b527a8081ee53c",
     "FINITE_RESULT.json": "5c46b06b5fcb869bb973cf0d628d8c37dce876d4a610a1581530dc94c689dd6f",
-    "map.json": "33dc0b949fbf56f06ddfe393dafd474bd9dcd1f372dddcd6bd8373ebf5680fcf",
-    "projection-reference-only.json": "4a8eb635dc3e19816b7be9d8f6de0656e9d476994f13bf015caa827ff0c7a03a",
-    "REQUEST.txt": "4d7512401728d47faba229678a7215a2d61f641c88aa70c9c5daf4006de4ff00"
+    "map.json": "1f34b732532d6789e7aab85183d953993243ed00192eff13114a194520756275",
+    "projection-reference-only.json": "f6764959eb61fca4e5efb930c9a3cd162fdc68144e131abfcf43f4be85cbc6aa",
+    "projection-authority-only.json": "2a3ef2309efc941e2948751020b3cc0b7fdffd9ad237582ab7bbbe14f9516d02",
+    "REQUEST.txt": "2922594dcd0b451409df22426b8966378738dd6245892aa0324e9a49debc9597"
   },
+  "tool_member_pins": [
+    {
+      "path": ".agents/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "type": "symlink"
+    },
+    {
+      "path": ".claude/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "type": "symlink"
+    },
+    {
+      "path": "build_tenants/core/code/ac.py",
+      "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/SKILL.md",
+      "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/agents/openai.yaml",
+      "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/output-contract.md",
+      "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/program.schema.json",
+      "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+      "type": "file"
+    }
+  ],
   "limits": [
     "No semantic predicate or fidelity inference from validation/projection/join",
     "Token executable is a separately reviewed interpretation; ac.py does not execute it"

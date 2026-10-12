@@ -14,10 +14,14 @@ load the complete corpus merely because the corpus is the source authority.
 [The work/recovery frame](standards/frames/WORK_RECOVERY.md) is the first bounded example.
 Its scope and independent use are recorded in the tenant's C3 qualification.
 
-[Design](DESIGN.md) explains ownership and contraction. The conservation map
+[Design](DESIGN.md) explains ownership and contraction. [The conservation map](CONSERVATION.json)
 records every predecessor claim and exact successor locus. A claimed disposition
 and a resolving link are author traceability; independent semantic comparison
 and applicable use evidence remain separate acceptance conditions.
+
+[The candidate inventory](CANDIDATE.json) pins Product members separately from
+review carriers. [The construction return](../qualification/C3/RETURN.md)
+records exact review subjects, practical exercises, measurements and residuals.
 
 The old tenant standards and proof receipts retain their historical subjects.
 They are not retroactively evidence for this whole successor. The common Product,

@@ -4,8 +4,9 @@ This directory contains the deciding methods, explanatory account and
 non-deciding views of the STDO Specification Methodology. The complete cut also includes its declared
 projections, schemas, templates, frames and interaction assets. A selectable
 release has one complete immutable constitutional member set with exact cut
-identity, manifest and membership. The Methodology Product retains its identity
-across releases. Its subordinate executable and
+identity, manifest and membership. The source-line Product Definition identity
+and each immutable Product/release identity retain their distinct source-owned
+relations. Subordinate executable and
 interaction tooling retain separately declared responsibilities.
 
 ## Foundations and shared library
@@ -28,7 +29,7 @@ no view is sufficient for every task.
 | Responsibility | Owning or locating member |
 |---|---|
 | Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
-| Context, evaluation and frame composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md) |
+| Frame declaration, evaluation and composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md); [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution) owns bounded-context term resolution |
 | Operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
 | Constitutional WHAT and lawful construction | [Spec Method](SPEC_METHOD.md) |
 | Structural HOW, transformation admission and realization | [Design Module Method](DESIGN_MODULE_METHOD.md) |
@@ -38,16 +39,15 @@ no view is sufficient for every task.
 | State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
 | UX surface realization | [UX Method](UX_METHOD.md) |
 | Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
-| Exact cuts, conservation, publication and adoption | [Release Method](RELEASE_METHOD.md) |
+| Exact cuts, successor conservation and publication | [Release Method](RELEASE_METHOD.md); [Spec Method](SPEC_METHOD.md) owns Product-definition routing and consumer adoption |
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
 | Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
 
-The source-standing distinctions are retained: constitutional method surfaces
-include Spec, Frame, ODD, Identity and World Model; the carrier-neutral calculus
-and optional Traversal profile retain their own signatures; the Baseline is a
-derived application profile; Design, Ticket, Release, Posting and Writing are
-companion governance/operating surfaces; UX owns its adopted realization
-process; the Glossary is a non-deciding locator. Foundations and the library
+Each member's declared standing and scope remain at that owner; this table
+does not reclassify a constitutional method as a guide or profile. The calculus
+and optional Traversal profile retain their own signatures; the Baseline
+retains its adoption boundary; the Glossary is a non-deciding locator.
+Foundations and the library
 are non-deciding explanatory organization and contract families under the
 Methodology Product authority; they preserve the detailed owning determinations
 and create no additional obligation or grant.

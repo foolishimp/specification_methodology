@@ -19,7 +19,8 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `fb64e07df4cffc7868b257a6e3d643c46c036fa704d6a21f192232b198e32014`.
+
+Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry
 
@@ -55,7 +56,7 @@ has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
 
-Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `fb64e07df4cffc7868b257a6e3d643c46c036fa704d6a21f192232b198e32014`.
+Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc`.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 

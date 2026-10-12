@@ -2,6 +2,12 @@
 
 This directory retains qualification evidence bound to its exact subject, basis and scope.
 
+Current complete successor: [C3 return](C3/RETURN.md), with its exact source
+subject and applicability limits. [C3 execution](C3/EXECUTION.md) separates
+Executive decisions, Writer effects, independent returns and local repairs.
+Earlier returns below keep their historical subjects and do not acquire C3
+qualification by association.
+
 The [historical C1 review](C1_REVIEW.md) was written by Claude before Development Isolation and assesses the preserved [initial manuscript](C1_INITIAL_PRINCIPLES.md). It remains a historical result, rather than a destination for future peer writes.
 
 The [principles successor](../design/PRINCIPLES.md) is a post-review author revision accepted as this tenant's C1 realization by Jim on 2026-10-11. The [common C1 disposition](../../../specification/requirements/PRINCIPLES.md#c1-disposition) records the owner acceptance and waived post-repair confirmation; the initial review still does not assess that successor. Its [response](../reviews/20261011T075016Z_RESPONSE_claude_c1_principles.md) preserves the repairs and author checks.

@@ -19,6 +19,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
 
 ## Release Identities
@@ -180,7 +181,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
 
 #### Explicit Complete Consumer Update
 

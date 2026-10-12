@@ -75,8 +75,8 @@ owns justification of method burden. The purpose owner fixes the observable adeq
 because a transformation needs to acquire, convey, judge or effect a material
 relation. Its obligations derive from that relation and the outer contract.
 A convenient signature, existing function or local test cannot invent Product
-meaning. An obligation with no requiring purpose or invariant must be justified
-or removed by its owner.
+meaning. Within UP-014's scope, the method owner justifies material method burden.
+This does not add a purpose dependency to calculus definitions or constraints.
 
 ## Identity, state and evidence
 
@@ -115,8 +115,11 @@ sufficiency and capability; the [totality rule](DESIGN_MODULE_METHOD.md#8-totali
 owns closed design handling. Each activation binds the actor and capability
 envelope materially needed by its claim. No universal numeric budget, resource
 ledger or measurement gate follows.
-Before acting, establish sufficient material context and capability. If the
-coupled relation does not fit, the actor reports the misfit. The existing
+Dependent reliance needs sufficient material context and capability for its
+selected claim. An authorized useful discriminator, first candidate or unrelated
+work can proceed under its own sufficient grant while another relation is
+unresolved; uncertainty is not universal paralysis. If a coupled required
+relation does not fit, the actor reports the misfit. The existing
 human configuration authority may select refinement, another actor,
 sequencing or lawful compression under RF-014. Any delegation must come from a
 separate applicable grant; RF-014 itself supplies none. The actor acts on an already
@@ -147,7 +150,8 @@ Reloading all history is not a generic method requirement.
 The [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
 owns authority conservation for frame evaluation. Within a_c,
 [AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
-judgment separation. Where the construction engagement profile is selected,
+judgment separation. Where a consumer has adopted the construction engagement
+profile and lawfully activated the applicable engagement,
 [the Baseline](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
 owns its exact Reviewer/Executive application of the detailed laws. Other
 domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
@@ -194,10 +198,9 @@ The [transformation library](TRANSFORMATION_LIBRARY.md) describes Bind, Acquire,
 Transform, Evaluate, Conjoin and Dispose. Correspondences name existing contracts and owners;
 they are not six compulsory stages or six runtime APIs. The detailed method
 members determine their domain contracts, which the library describes through
-shared families; no authority derives from that description. This candidate's
-design tests a proposed additional family against a material distinction the
-existing account cannot express. That is a realization choice, not a new law
-for every consuming Product.
+shared families; no authority derives from that description. Any proposed
+normative change returns to its detailed owning contract; adding an explanatory
+family cannot make that change implicitly.
 
 ## Construction and use
 

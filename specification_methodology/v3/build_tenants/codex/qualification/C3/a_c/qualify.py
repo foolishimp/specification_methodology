@@ -94,10 +94,27 @@ report['projection_relations_equal'] = True
 report['complete_selected_clause_closure'] = True
 report['compared_keys'] = keys
 
+# A partial index has only two direct clauses; its role-boundary premise needs
+# finding, transfer, permission and typed-join transitively. Check that computed
+# closure separately from the all-index union.
+partial_selection = ['--frame-index', 'urn:codex-stdo3:c3:index:authority']
+partial = run([tool, 'project', '--program', root/'program.json', '--map', root/'map.json',
+               '--bindings', root/'bindings.json', '--mode', 'reference-only',
+               '--output', root/'projection-authority-only.json'] + partial_selection)
+record(report, 'partial-frame-transitive-closure', partial)
+assert partial.returncode == 0, partial.stdout + partial.stderr
+partial_view = json.loads((root/'projection-authority-only.json').read_text())
+assert partial_view['closure']['clauses'] == views[0]['closure']['clauses']
+assert len(partial_view['frame_indexes']) == 1
+report['partial_selection_transitive_closure'] = True
+(root/'project-authority-only.report.json').write_text(partial.stdout)
+
 wrong = run([tool, 'project', '--program', root/'program-mutant.json', '--map', root/'map.json',
              '--bindings', root/'bindings.json', '--mode', 'reference-only'] + selection)
 record(report, 'wrong-program-old-map', wrong, refused=wrong.returncode != 0)
-assert wrong.returncode != 0
+wrong_report = json.loads(wrong.stdout)
+assert wrong.returncode != 0 and any(d['code'] == 'map_mismatch' for d in wrong_report['diagnostics'])
+report['operations'][-1]['diagnostic'] = 'map_mismatch'
 (root/'MISMATCH_REFUSAL.json').write_text(json.dumps({
     'exit': wrong.returncode, 'stdout': wrong.stdout, 'stderr': wrong.stderr,
     'normal_program_sha256': sha(root/'program.json'),
@@ -118,7 +135,9 @@ assert (root/'REQUEST.txt').read_text() == expected
 report['operations'][-1]['exact'] = True
 report['pins'] = {name: sha(root/name) for name in [
     'SOURCE.md', 'ENCODING.md', 'program.json', 'program-mutant.json', 'finite_check.py',
-    'FINITE_RESULT.json', 'map.json', 'projection-reference-only.json', 'REQUEST.txt']}
+    'qualify.py', 'bindings.json', 'INSTALL_VERIFICATION.json', 'FINITE_RESULT.json',
+    'map.json', 'projection-reference-only.json', 'projection-authority-only.json', 'REQUEST.txt']}
+report['tool_member_pins'] = pins['members']
 report['limits'] = ['No semantic predicate or fidelity inference from validation/projection/join',
                     'Token executable is a separately reviewed interpretation; ac.py does not execute it']
 (root/'MECHANICAL_RESULT.json').write_text(json.dumps(report, indent=2)+'\n')

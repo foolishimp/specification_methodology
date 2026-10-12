@@ -4,15 +4,25 @@ Identity: urn:stdo-3:build-tenant:codex
 
 Implement the shared [Intent](../../specification/INTENT.md) and [Product](../../specification/PRODUCT.md) through an independent document HOW.
 
-Worktree: specification_methodology-codex; branch: tenant/codex/c1. Writes and commits stay in this tenant. Shared inputs are read at their bound commits; common changes arrive by merging main inward. Cross-tenant reviews require Jim's authorization and a named subject commit.
+Worktree: /Users/jim/src/apps/specification_methodology-codex; branch: tenant/codex/c3-v3. Writes and commits stay in this tenant. Shared inputs are read at their bound commits; common changes arrive by merging main inward. Cross-tenant reviews require Jim's authorization and a named subject commit.
 
 ## Current Work
+
+C3: the complete [STDO v3.0.0 successor candidate](successor/README.md) follows
+Jim's tenant/worktree construction instruction under exact installed STDO
+2.5.1 RC2. [The execution return](qualification/C3/RETURN.md) names the frozen
+subject, complete predecessor conservation, independent source comparisons,
+actual bounded exercises, a_c evidence, measurements and remaining limits.
+Claude retains the common pen; this tenant makes no canonical selection,
+main merge, publication or release decision.
+
+## Preserved C1/C2 And Earlier Bounded Build
 
 C1: the [principles successor](design/PRINCIPLES.md), SHA256 2a148a0ce3460533446c678a06aee809c3dabf8e99a95ad1eeb5d08169e68d89, was accepted as this tenant's realization by Jim on 2026-10-11. The [common C1 disposition](../../specification/requirements/PRINCIPLES.md#c1-disposition) records the owner decision and waived post-repair confirmation. The manuscript's dated standing is preserved; it is not silently rewritten to manufacture an independent successor review.
 
 C2: Jim's “continue” accepts the [eight capabilities](design/C2_CAPABILITIES.md), [26 case expectations](qualification/C2_CASES.md) and first-thread scope frozen at 65fd45b. The [C2 return](qualification/C2_RETURN.md) retains its original proposal standing and pins; owner activation is recorded in the [T1 return](qualification/T1/RETURN.md). The common main registry is not edited by this tenant.
 
-Current build: the [method entry](standards/README.md) supplies five core owners and four optional domain profiles, with a source recovery index. The twelve-document candidate is frozen at ea43ca8996f05f8d32e5ad6ab6f2327c39f773ab. The [completion return](qualification/BUILD_RETURN.md) and [current case ledger](qualification/CASE_LEDGER.md) bind later actual-use joins, independent assessments, repairs and limits. [T1](qualification/T1/RETURN.md) retains its original bounded work/re-entry evidence. T2–T6 supply typed derivation, two lawful HOWs, actual defect detection, truthful conjunction, uncertain-effect recovery, fresh-reader use and a separately bound small a_c interpretation. This is a documentary candidate for Jim's review; owner acceptance, canonical selection and release remain separate.
+Earlier bounded build: the [method entry](standards/README.md) supplies five core owners and four optional domain profiles, with a source recovery index. The twelve-document candidate is frozen at ea43ca8996f05f8d32e5ad6ab6f2327c39f773ab. The [completion return](qualification/BUILD_RETURN.md) and [case ledger](qualification/CASE_LEDGER.md) bind its later actual-use joins, independent assessments, repairs and limits. [T1](qualification/T1/RETURN.md) retains its original bounded work/re-entry evidence. T2–T6 supply typed derivation, two lawful HOWs, actual defect detection, truthful conjunction, uncertain-effect recovery, fresh-reader use and a separately bound small a_c interpretation. These historical subjects are not substituted for C3 whole-successor evidence.
 
 [Design](design/README.md), [standards](standards/README.md), [a_c](a_c/README.md) and [qualification](qualification/README.md) route the separate HOW and evidence territories. Presence of a proposal is not implementation, actual-use qualification or release.
 

@@ -111,7 +111,7 @@ the owner-selected coordinated STDO distribution after publication (substitute i
 
 ```sh
 STDO_CUT='<exact-published-immutable-cut>'
-STDO_REF='specification_methodology/<exact-published-immutable-cut>'
+STDO_REF='refs/tags/specification_methodology/<exact-published-immutable-cut>'
 STDO_TOOLCHAIN_MIN='<minimum-version-qualified-for-selected-cohort>'
 STDO_TOOLCHAIN_SPEC='<exact-authorized-toolchain-install-coordinate>'
 
@@ -326,7 +326,7 @@ input, not a member owned by this plugin candidate.
 Claude Code:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/<exact-published-immutable-cut>'
+SPEC_PLUGIN_REF='refs/tags/specification_methodology/<exact-published-immutable-cut>'
 claude plugin marketplace add \
   "foolishimp/specification_methodology@${SPEC_PLUGIN_REF}"
 claude plugin install spec@specification_stack
@@ -335,13 +335,19 @@ claude plugin install spec@specification_stack
 Codex:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/<exact-published-immutable-cut>'
+SPEC_PLUGIN_REF='refs/tags/specification_methodology/<exact-published-immutable-cut>'
 codex plugin marketplace add foolishimp/specification_methodology \
   --ref "$SPEC_PLUGIN_REF"
 codex plugin add spec@specification_stack
 ```
 
-Both hosts consume the same workflow skill bytes. Use this conversational
+Before treating a host installation as the selected cohort, verify its installed
+plugin members against that cut's `auxiliary.plugin` inventory and digests;
+the host's successful install command alone does not establish identity. Host
+ref syntax, skill discovery and this readback are qualification of the selected
+cohort, not established by the mutable candidate examples.
+
+The intended shared workflow bytes are identical across hosts. Use this conversational
 convention:
 
 | Say | Portable skill | Claude | Codex |

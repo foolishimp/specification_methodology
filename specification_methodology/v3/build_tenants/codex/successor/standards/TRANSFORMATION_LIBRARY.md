@@ -14,6 +14,15 @@ reference-frame evaluation and composition. The calculus and domain members
 retain their own composition and judgment laws. Domain members determine their admitted outcome and
 disposition sets. The library does not supersede those meanings.
 
+Its explanatory vocabulary resolves in bounded context
+`urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
+Methodology Product authority. The basis is this exact member digest and its
+cited source-owned contracts under the activation's governing cut; its scope
+is the whole member's explanatory families. A linked family correspondence
+uses that context, while each named source function keeps its own context and
+contract. Equal spelling is no equivalence or import. One function may have
+several correspondences: this account is neither a partition nor a hierarchy.
+
 ## Bind
 
 Recover the current purpose, subject identity, governing specification, role,
@@ -31,7 +40,7 @@ truthful stop. Acquisition cannot silently drop a governing obligation.
 ## Transform
 
 Construct output or perform effects within the bound contract. Preserve the
-original producer, material inputs and observed effects. Return the instance-owned outcome. A selected Baseline WorkerResult instance
+original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated Baseline WorkerResult instance
 uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
 retains M_b_prime*/hold/gap/refusal. These are domain examples, not a common
 mandatory enum. Observe uncertain external effects
@@ -45,8 +54,11 @@ evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_fr
 or invalid_basis; its externally owned compatible extensions retain the owning
 contract's conditions. Preserve original citations and residual coverage.
 Other judgment domains retain their admitted result algebras. Where required,
-the assessor is independent of authorship. A judgment supplies no repair,
-acceptance or next-action authority.
+the assessor is independent of authorship. A result mints no new grant. A
+domain-owned judgment or control function may exercise acceptance, closure or
+next-action authority already bound by its contract, as in a_c admission or ODD
+evaluate_action/evaluate_next. A Reviewer instance retains its evaluation-only
+grant and cannot perform a reserved owner decision.
 
 For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
@@ -56,7 +68,10 @@ evidence; the decision owner alone performs the authoritative disposition.
 
 ## Conjoin
 
-Combine only compatible, authenticated results on a declared common outcome.
+Consume results under the declared authentication, conjunction or decision rule
+on a declared common outcome. Preserve incompatible/conflicting cases so the
+owning rule can return conflict or its other admitted outcome; incompatibility
+is not a reason to silently omit a result.
 Retain each applicable known failure, its producer and citations. Retain required
 uncovered coverage separately. For an instance whose admission contract declares
 planned assessment slots, authenticate each planned slot; an omitted planned
@@ -103,24 +118,27 @@ owns its typed traversal composition. The account below preserves each owning
 contract's restrictions; an explicit translation is lawful only where that
 contract admits it.
 
-For T: X -> Y and S: Y -> Z, S after T is admitted only when carried meaning,
-identity, basis, lifecycle, effects and authority match or have a lawful explicit
-translation. Composition preserves the outer predicate and material invariant
-set. A shared helper may implement several instances; differing semantic owners
-remain parameters or distinct contracts. Independent judgment cannot be
-compressed into author self-assessment.
+For a selected construction handoff T: X -> Y and S: Y -> Z, the applicable
+owner determines admission and the conserved meaning, identity, basis,
+lifecycle, effects and authorities. A coherent composite basis can join distinct
+bases under its declared topology; distinct authorities remain distinct and
+conserved. Neither matching every field nor translating every difference is a
+universal precondition. The outer contract determines required invariants. A
+shared helper may serve several contracts without changing their owners.
+Where independent judgment is required, author self-assessment does not replace it.
 
-An identity transformation preserves the selected subject and interpretation;
-associative regrouping is valid only when it preserves observable effects,
-failure, material context and decision boundaries. This states a bounded
-composition obligation, not a universal category theorem for arbitrary software.
+Identity and associative-composition claims follow their declared owner and
+domain laws. For an algorithmic/categorical model, those laws and their proof
+are separately required; this explanatory family establishes neither a new
+composition obligation nor a universal category theorem for arbitrary software.
 
 ## Recovery law
 
 [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) owns the
 construction, progress, checkpoint and proof determinations summarized here.
 After interruption, bind the same work identity to its observed current state.
-Reassess only materially affected premises and retain applicable work. Reconstruct
+Reassess materially affected premises and retain applicable work. Where
+independence is unproved, recompute the governing wider frontier. Reconstruct
 needed authority and observations from their declared owners, not private memory.
 Uncertainty about effects, freshness or evidence remains explicit. Rejected or
 superseded construction is churn. Repeating an unchanged failed
@@ -139,8 +157,9 @@ no additional discard law. Each actual operation still needs its existing grant.
 
 Use the cheapest focused proof that can falsify the active relation. Whole-
 candidate qualification belongs at a declared boundary unless affected risk
-requires it earlier. When reconstructability matters, destroy or exclude the
-incidental process state and compare reconstructed semantic outcomes; a same-
+requires it earlier. For a durable or reconstructable authority claim, where loss
+of incidental process state is a material counterexample, destroy or exclude
+that state and compare reconstructed semantic outcomes; a same-
 process check cannot prove durable authority.
 
 ## Cost and contraction

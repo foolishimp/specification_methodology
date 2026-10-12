@@ -64,5 +64,19 @@ for frame in index['frames']:
     target.write_text('\n'.join(parts).rstrip() + '\n')
     frame['sha256'] = sha(target)
     frame['bytes'] = target.stat().st_size
+for view in index.get('source_linked_summaries', []):
+    target = root / view['path']
+    links = []
+    for entry in view['routes']:
+        owner = root / entry['owner']
+        entry['owner_sha256'] = sha(owner)
+        location = str(Path(entry['owner']).relative_to('standards'))
+        links.append(f"- [{owner.name} — {entry['anchor']}](../{location}#{entry['anchor']}); member SHA256 `{sha(owner)}`.")
+    text = re.sub(r'<!-- SOURCE_PINS_START -->.*?<!-- SOURCE_PINS_END -->',
+                  '<!-- SOURCE_PINS_START -->\n'+'\n'.join(links)+'\n<!-- SOURCE_PINS_END -->',
+                  target.read_text(), flags=re.S)
+    target.write_text(text)
+    view['sha256'] = sha(target)
+    view['bytes'] = target.stat().st_size
 index_path.write_text(json.dumps(index, indent=2) + '\n')
-print('Compression pins and four source-owned views refreshed; no semantic verdict inferred.')
+print('Compression pins, four excerpt views and source-linked summary refreshed; no semantic verdict inferred.')

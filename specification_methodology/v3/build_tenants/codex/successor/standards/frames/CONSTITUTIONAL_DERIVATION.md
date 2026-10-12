@@ -19,7 +19,8 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
+
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -97,7 +98,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `5b088f10f0c3ecac1a87bcd0b4c566a20a9a76a06fda80742e9267b96250b3a1`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
 
 ## Test Authority Rule
 
@@ -284,7 +285,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
 
 ## Bind
 
@@ -293,7 +294,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
 
 ## Acquire
 
@@ -304,12 +305,12 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `5910b79414819a968ce3b441ae3c8a6860c297ed0a8d892cccbfdd43d018a0df`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `53a7ca66b0adfb6ebf49e99e602caa90e11b575edb82efe3e9639a415a0aa783`.
 
 ## Transform
 
 Construct output or perform effects within the bound contract. Preserve the
-original producer, material inputs and observed effects. Return the instance-owned outcome. A selected Baseline WorkerResult instance
+original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated Baseline WorkerResult instance
 uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
 retains M_b_prime*/hold/gap/refusal. These are domain examples, not a common
 mandatory enum. Observe uncertain external effects

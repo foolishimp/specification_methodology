@@ -60,7 +60,8 @@ for path in (root/'standards/authority_compressions').glob('*.md'):
             failures.append('stale watched source ' + path.name + ':' + match[1])
         compression_pins += 1
 
-views = json.loads((base/'qualification/C3/FRAME_INPUTS.json').read_text())['frames']
+view_index = json.loads((base/'qualification/C3/FRAME_INPUTS.json').read_text())
+views = view_index['frames'] + view_index.get('source_linked_summaries', [])
 for view in views:
     if sha(root/view['path']) != view['sha256']:
         failures.append('view pin mismatch ' + view['path'])

@@ -1,5 +1,11 @@
 # Bounded Work and Recovery Frame
 
+This is a non-deciding, source-linked summary view, not a Project Reference-Frame
+Basis or activation grant. Its actual task, subject, actor, envelope and existing
+authority are bound by the separate activation. It is sufficient only with the
+material source and subject needed for that claim; references alone supply no
+unread evidence. Its owning clauses and current member digests follow below.
+
 Subject: one named current document construction task. Its exact admitted
 governing basis and grant determine permitted work and reserved decisions.
 The activation consumes this frame, its exact task/subject and sufficient supplied
@@ -28,8 +34,8 @@ material. Full-corpus acquisition is not required by this bounded claim.
 6. An author-independent Reviewer assesses the frozen subject and sufficient
    source. Preserve known failures and their citations alongside uncovered
    requirements. Authenticate planned judgments; do not invent a missing one.
-7. This coordinated instance selects an Executive because several material
-   responsibilities and independent assessment must join. The Executive consumes
+7. Where the adopted engagement configuration lawfully activates an Executive
+   for material coordination, that Executive consumes
    those closed results and the current mandate. It may
    select accept/local_repair/re_enter/reject and a next already-authorized action
    within its grant. It performs no file or Git mutation under that role. A
@@ -39,7 +45,7 @@ material. Full-corpus acquisition is not required by this bounded claim.
    its existing grant; an Executive is not required solely to appoint it. Status
    changes alone require neither a new grant nor rehashing an unchanged subject.
 
-Recovery is a new activation over observed current state. Preserve valid
+Recovery is a new activation over observed current state. Preserve applicable
 authored progress; disclose affected evidence and unknown effects. No historical
 green result broadens a grant. Unknown causes remain unknown. Before retrying a
 failed relation, triangulate the requirement, design, producer/consumer seam,
@@ -66,3 +72,18 @@ Focused proof first attempts to falsify the active relation. At a declared wider
 boundary, perform necessary integration and whole-candidate qualification.
 Recovery evidence excludes incidental process state and compares reconstructed
 semantic outcomes whenever durable authority is claimed.
+
+## Source bindings
+
+The source clauses retain deciding authority and their conditions and lawful
+alternatives. A changed owner digest makes this view stale pending supported
+applicability or refresh; the view never supersedes an owner.
+
+<!-- SOURCE_PINS_START -->
+- [SPEC_METHOD.md — agentic-construction-execution-stdo-up-020](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); member SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+- [SPEC_METHOD.md — product-outcome-conservation-stdo-up-013](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); member SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.
+- [DESIGN_MODULE_METHOD.md — bounded-frame-conservation-stdo-up-017](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); member SHA256 `d965d70f416955ade2a2ce995cc2368d809020cb5f53fffc73eef136fb4a2298`.
+- [REFERENCE_FRAME_METHOD.md — rf-003-material-sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); member SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+- [REFERENCE_FRAME_METHOD.md — rf-006-authority-conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); member SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+- [STDO_REFERENCE_FRAME_BASELINE.md — complete-engagement-transition](../STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition); member SHA256 `ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b`.
+<!-- SOURCE_PINS_END -->
