@@ -25,8 +25,10 @@ A selected purpose U_foundation supplies an adequacy predicate and reserved valu
 An object O_subject supplies a scoped identity, boundary, current state and material
 relations. An interpretation context kappa_interpretation determines the meaning available to
 a consumer. A governing specification Sigma_contract declares obligations and admissible
-variation. Operation authority bounds permitted effects; decision authority
-bounds disposition. These remain distinct source-owned relations. Observations and arguments
+variation. For an evaluation performing operations, the imported operation authority bounds
+its permitted effects. Other operations retain the grants of their owning
+contracts. Decision authority bounds disposition. These remain distinct
+source-owned relations. Observations and arguments
 support claims only on their declared subject and basis.
 
 The declared bounded context is `urn:stdo:bounded-context:foundations`.

@@ -6,8 +6,9 @@ its declared premise layer. The [shared contract](TRANSFORMATION_LIBRARY.md#foun
 provides generic transformation vocabulary. The
 [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
 relates those premises to this member's UP-020 and computed-treatment rules,
-identifying which consequences are conditional and which are independent
-purpose, policy or authority choices.
+identifying conditional consequences and independent purpose, policy or
+authority choices for the rows mapped there. Other UP-020 clauses remain
+unmapped by this initial branch.
 
 The constitutional chain retains its direction from Goals. That selection,
 its grants, concrete result domains and other particular determinations are not

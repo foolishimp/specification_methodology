@@ -42,7 +42,8 @@ with permission. A new helper, frame or serialized carrier is justified only by
 a material distinction the existing contracts cannot preserve.
 
 The first repaired branch is premises -> generic transformation contract ->
-Spec Method work/recovery specialization -> ordinary stdo-work acquisition ->
+library work/recovery specialization -> particular Spec Method rules ->
+ordinary stdo-work acquisition ->
 actual task interpretation. Foundations defines the premises, the library owns
 the generic contract vocabulary, and detailed methods retain concrete policy
 and authority. This is a conditional dependency argument, not an assertion that

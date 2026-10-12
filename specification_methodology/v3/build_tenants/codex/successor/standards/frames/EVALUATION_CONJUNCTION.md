@@ -26,6 +26,7 @@ owner, not proof that this selection suffices for another task.
 
 
 
+
 Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
 
 ## Reference Frame Laws
@@ -286,7 +287,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
 
 ## Bind
 
@@ -295,7 +296,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
 
 ## Acquire
 
@@ -306,14 +307,14 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
 
 ## Evaluate
 
 Judge a declared predicate on an exact subject using sufficient admissible
 evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
-or invalid_basis; its externally owned compatible extensions retain the owning
-contract's conditions. Preserve original citations and residual coverage.
+or invalid_basis; compatible extensions preserve RF-012's explicit indeterminate,
+out-of-frame and invalid-basis pressure under their declared contracts. Preserve original citations and residual coverage.
 Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A result mints no new grant. A
 domain-owned judgment or control function may exercise acceptance, closure or
@@ -324,11 +325,12 @@ source-defined evaluation authority and cannot perform a reserved owner decision
 For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
 the cone is preserved, a local realization is defective, an owning relation
-needs re-entry or a competing truth path violates the basis. This is assessment
+needs re-entry, a governing relation is violated, or an undisposed competing truth
+path remains. This is assessment
 evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
 
 ## Conjoin
 

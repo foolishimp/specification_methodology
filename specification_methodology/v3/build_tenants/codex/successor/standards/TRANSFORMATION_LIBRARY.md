@@ -76,8 +76,9 @@ admitted outcome set, including how it represents unknown or refused handling.
   different predicate cannot establish that outcome.
 - F3 and F4 require I and the outer contract's material support to survive a
   handoff. Permitted variation or loss is an explicit instance choice.
-- F2 and F5 require a truthful unknown when material support is insufficient;
-  they do not require stopping unrelated authorized work.
+- F2 requires a truthful unknown when material support is insufficient; F5
+  supplies the selected domain's handling alternatives. Neither requires
+  stopping unrelated authorized work.
 - F6 requires an actual G before a dependent effect or disposition. Sufficient
   evidence for P cannot supply G.
 
@@ -144,8 +145,8 @@ the outer outcome or effect grant.
 
 Judge a declared predicate on an exact subject using sufficient admissible
 evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
-or invalid_basis; its externally owned compatible extensions retain the owning
-contract's conditions. Preserve original citations and residual coverage.
+or invalid_basis; compatible extensions preserve RF-012's explicit indeterminate,
+out-of-frame and invalid-basis pressure under their declared contracts. Preserve original citations and residual coverage.
 Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A result mints no new grant. A
 domain-owned judgment or control function may exercise acceptance, closure or
@@ -156,7 +157,8 @@ source-defined evaluation authority and cannot perform a reserved owner decision
 For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
 the cone is preserved, a local realization is defective, an owning relation
-needs re-entry or a competing truth path violates the basis. This is assessment
+needs re-entry, a governing relation is violated, or an undisposed competing truth
+path remains. This is assessment
 evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
 
 ## Conjoin

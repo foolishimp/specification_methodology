@@ -50,7 +50,7 @@ retains its adoption boundary; the Glossary is a non-deciding locator.
 Foundations and the library
 declare the premise layer and shared conditional contracts under the Methodology
 Product authority. Particular methods retain their concrete decisions and
-grants. The work/recovery specialization is implemented; whole-corpus
+grants. The work/recovery specialization is authored; whole-corpus
 reconstruction remains open.
 
 A derived profile retains its owning determinations under the

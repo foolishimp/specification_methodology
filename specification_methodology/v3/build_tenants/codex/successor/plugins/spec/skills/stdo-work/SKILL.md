@@ -19,8 +19,11 @@ verified selection; that selection grants no work or mutation authority.
 
 After the exact Product basis is selected, resolve the selected cut's
 [standards index](../../../../standards/README.md) and the accepted Project
-Reference-Frame Basis for the responsibility named by the task. This is material
-acquisition within the current work grant, not another admission or actor stage.
+Reference-Frame Basis for the responsibility named by the task. This is read-only
+acquisition inside an already-authorized inspection scope. Effectful work still
+needs its separately admitted work contract; acquisition is not another admission
+or actor stage. If a required frame basis is absent or unverified, return that
+missing binding before dependent action. Inspection supplies no adopted role.
 
 For interrupted work or uncertain effects, the index's work/recovery route
 projects current-state, applicability, authority and continuation clauses.

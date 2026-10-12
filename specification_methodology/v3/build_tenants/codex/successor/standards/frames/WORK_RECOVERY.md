@@ -17,7 +17,8 @@ to insufficient capability; this preface supplies no response or selection grant
 
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `40ed8ff021d3429b9a2273a0d5d8204e7d8f9255b0a0fa58f02fb29402ed5159`.
+
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `48d17db3b805661947474009d06135c0ba33dedbdd48759cfc5c0631be8f8507`.
 
 ## Work/recovery specialization
 
@@ -47,7 +48,7 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `4a0bdfc9591843353d34ba2530cff504b7891f157b2fd8e73f9e695bf34fdd87`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -213,7 +214,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `c30eebcecfbef4a00902e905cb0b45547ee035d032e77093cf4b5a49d0dffcf3`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `4a0bdfc9591843353d34ba2530cff504b7891f157b2fd8e73f9e695bf34fdd87`.
 
 ### Computed Classification And Treatment
 
@@ -641,3 +642,23 @@ claim and its dependent results before further reliance. An unrelated
 observation is retained as bounded repricing input; it does not reopen a
 satisfied claim or expand work automatically. Closure recording preserves the
 exact evaluated scope, satisfied conditions, evidence and remaining residuals.
+
+
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+### RF-005 Exact Basis And Coordinates
+
+Every result binds its exact subject, basis, coordinates, and evidence scope.
+A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
+requires reactivation. Apparent equality does not substitute for declared
+coordinate equality.
+
+
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+### RF-014 Capability Fit
+
+Frame adequacy includes actor usability. When the material manifold exceeds an
+actor's capability envelope, human authority may select another actor, refine
+the frame, sequence activations, or provide a lawful compression. The actor may
+not silently omit material relations to fit context.
