@@ -1,6 +1,7 @@
 # STDO v3.0.0 Codex successor execution
 
-State: active construction; no checkpoint acceptance or release.
+State: candidate_ready returned for owner review. Final local authority
+corrections await independent confirmation; no checkpoint acceptance or release.
 
 Envelope overrun: the three-hour planning allowance was exceeded. Source
 summary churn and insufficient early abstraction/condition preservation are
@@ -75,3 +76,5 @@ Exit: complete self-contained documentary candidate, exact 690-row mapping, reso
 2026-10-12 — Final narrow review at 23de110 remains falsified: one import row merged actor identity with operation authority, decision-owner aliases invented a second meaning, and a Baseline Reviewer occurrence lost its immediate adoption qualifier. RCA remains lossy aliasing in the explanatory account. Executive rejects that claim and selects a final literal local correction, not another broad review cycle. Separate Writer replaces both authority tables with the six exact source-defined relations, removes the decision-owner alias, qualifies the adopted Baseline roles, and labels the derivation commit as historical rather than a current byte coordinate. The final author repair has no independent confirmation; this limit remains open in the candidate return. Exact excerpt reconstruction is a Host artifact check, not an independent semantic verdict. The candidate is returned for review rather than promoted as accepted.
 
 2026-10-12T07:35:13.535286+00:00 — Executive closes the own construction activation as candidate_ready for owner review, with final changed authority relations indeterminate pending independent confirmation. The last falsified review remains literal. A separately activated own Writer records applicability, closure, provider counters, literal conservation and artifact controls, then freezes the exact inventory and checkpoints the tenant. No common/peer/main edit, publication, selection or release action follows.
+
+2026-10-12T07:40:01.416165+00:00 — Recording Writer verified the exact 84-member inventory (80 Product members and four review carriers) against input commit 0e70f007b51808d8c667c2b7f3c76c8d48ec9c1b. Strict artifact checks resolve 322 local links and all 690 rows. Actual changed-member, missing-row and unlisted-member controls refuse; the baseline is restored. The recording checkpoint is a descendant of the inventory input. Own construction returns here with the open independent confirmation; no additional retry or release action is selected.

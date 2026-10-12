@@ -1,0 +1,40 @@
+{
+  "kind": "documentary_artifact_negative_controls",
+  "subject_body_commit": "f6f1ec2227eb596cea06426905bf54c0aeb76f3b",
+  "inventory_input_commit": "0e70f007b51808d8c667c2b7f3c76c8d48ec9c1b",
+  "baseline_valid": true,
+  "controls": [
+    {
+      "control": "changed pinned authority member",
+      "refused": true,
+      "expected_diagnostic_present": true,
+      "failures": [
+        "conservation member pin mismatch: standards/FOUNDATIONS.md",
+        "candidate pin mismatch: standards/FOUNDATIONS.md"
+      ]
+    },
+    {
+      "control": "missing required predecessor row",
+      "refused": true,
+      "expected_diagnostic_present": true,
+      "failures": [
+        "frontier must contain exactly 690 distinct selected rows",
+        "candidate pin mismatch: CONSERVATION.json"
+      ]
+    },
+    {
+      "control": "unlisted tree member",
+      "refused": true,
+      "expected_diagnostic_present": true,
+      "failures": [
+        "candidate inventory differs from complete current tree"
+      ]
+    }
+  ],
+  "all_selected_controls_refused": true,
+  "restored_baseline_valid": true,
+  "limits": [
+    "Artifact identity/coverage controls only",
+    "No semantic assessment, independent acceptance or release inference"
+  ]
+}
