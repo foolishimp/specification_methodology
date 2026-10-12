@@ -18,7 +18,7 @@ C1 is closed. Both tenants' repaired candidates, the source-first reviews of the
 
 ## Open Owner Decisions
 
-Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed; a selection and per-member acceptance criteria are PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract). Release lineage is decided: the target is v3.0.0 of the STDO Specification Methodology, continuing the existing line ([PRODUCT.md](PRODUCT.md#product-identity-and-lineage)). Candidate ref naming follows that namespace and is fixed before an RC cut; the cohort relation remains OPEN. A rename of the construction scope is PROPOSED. No installed identity or current cohort is changed.
+Audiences, tasks and assumed knowledge remain OPEN and must be selected before C2 acceptance criteria are fixed; a selection and per-member acceptance criteria are PROPOSED in [PRODUCT.md](PRODUCT.md#c3-construction-contract). Release lineage is decided: the target is v3.0.0 of the STDO Specification Methodology, continuing the existing line ([PRODUCT.md](PRODUCT.md#product-identity-and-lineage)). Candidate ref naming follows that namespace and is fixed before an RC cut; the cohort relation remains OPEN. The side-by-side `v2/` and `v3/` layout is decided and is its own bounded change; identifiers do not change with it. No installed identity or current cohort is changed.
 
 ## Revision Record
 

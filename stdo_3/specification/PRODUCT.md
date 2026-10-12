@@ -25,8 +25,8 @@ Decided by Jim on 2026-10-12.
 | Product | STDO Specification Methodology, the existing product line whose source project is `../specification_methodology/` (`urn:stdo:product-definition:specification-methodology`) and whose release namespace is `specification_methodology` |
 | Target version | v3.0.0, continuing that line; its release identities follow the installed RELEASE_METHOD in the same namespace (`refs/tags/specification_methodology/v3.0.0…`) |
 | Predecessor | `stdo://releases/v2.5.1-rc.2/`, immutable, operative as builder until a release decision |
-| Construction scope | this directory, `stdo_3/`, a separate source-project scope kept apart so the 2.5.1 source project is not overwritten; Codex and Claude are independent build tenants for the same target version |
-| Scope names | `stdo_3`, `urn:stdo:product-definition:stdo-3` and the `urn:stdo-3:` tenant identities name the construction scope and its definition, not the Product. A rename of the scope to something like `specification_methodology/v3/`, with the corresponding identity changes, is PROPOSED for Jim's decision and is not performed on this branch because it touches both tenants' territories and the toolchain registry. |
+| Construction scope | a separate source-project scope kept apart so the 2.5.1 source project is not overwritten; Codex and Claude are independent build tenants for the same target version. Jim decided on 2026-10-12 that the two source projects live side by side as `specification_methodology/v2/` and `specification_methodology/v3/`; until that layout change lands on `main` this scope is `stdo_3/`. |
+| Identifiers | `urn:stdo:product-definition:stdo-3`, `urn:stdo-3:bounded-context:method` and the `urn:stdo-3:` tenant identities are identifiers, not names. They do not change with the directory. Only paths and display names change. |
 
 The machine-readable definition [stdo_3.json](../stdo_3.json) carries this identity in its product name and in a local-constitution axiom routed to this section; its schema admits no version field, so the version is stated here.
 
@@ -157,7 +157,7 @@ Closure. C3 closes for a tenant when every row of its frontier is disposed and e
 - C2 acceptance criteria: OPEN; the per-member criteria in the same contract are PROPOSED for the same decision.
 - Release lineage: DECIDED 2026-10-12, see [Product Identity And Lineage](#product-identity-and-lineage); the target version continues the existing STDO Specification Methodology line.
 - Candidate/RC ref naming: follows the existing `specification_methodology` release namespace under RELEASE_METHOD; the exact candidate ordinal and cut are selected before an RC cut. The earlier `rc/stdo_3/3.0.0` proposal is withdrawn by the lineage decision.
-- Construction-scope rename (`stdo_3/` to something like `specification_methodology/v3/`, with identity changes): PROPOSED; Jim decides.
+- Construction-scope layout: DECIDED 2026-10-12; `specification_methodology/v2/` and `specification_methodology/v3/` side by side, identifiers unchanged. Performed as its own bounded change, independent of this contract.
 - Cohort relation: OPEN before an RC cut. Existing Product IDs and the current cohort remain unchanged; RC2 remains the operative builder basis.
 
 ## Dependencies And Acceptance
