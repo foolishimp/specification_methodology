@@ -1078,6 +1078,7 @@ its own question; nothing is coerced to satisfied.
 | verified overlay direction (§10) | is at least one acceptable verification recorded with identity preserved under held-out treatment, for a direction built by an admissible extraction | satisfied |
 | inadmissible extraction (§10) | is the direction built by a principal-component or maximum-variance construction | falsified, whatever its verification result: such a construction is not admissible as an identity direction |
 | failed verification (§10) | does a recorded verification show identity not preserved | falsified |
+| inconclusive verification (§10) | did a recorded verification run without establishing either an acceptable preservation or a demonstrated loss of identity | indeterminate, naming the held-out treatment or verification that would decide (ACTIVATION §3, second case) |
 | candidate direction, no verification run (§10) | none performed | no evaluation result: the claim is unresolved under ACTIVATION §3's third case, and the step that left it unrun stops `incomplete`, core indeterminate; publishing the direction is a Representation law violation, falsified for the publication claim |
 | not yet a lawful Markov object (§10 Null-peer discrimination) | do the uniqueness and transfer tests pass | satisfied when both pass; falsified when either fails |
 | overlay with no declared representation space, or directions composed across spaces (§10) | can the overlay be evaluated | invalid_basis: the subject or basis cannot support the evaluation |
