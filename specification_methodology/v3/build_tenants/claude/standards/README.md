@@ -39,7 +39,7 @@ current state under explicit uncertainty.
 | write or revise a specification artifact | [WRITING_GUIDE](WRITING_GUIDE.md), then [SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain) for the layer a sentence belongs to |
 | publish analysis, a review, a handoff or a proposed change | [POSTING_GUIDE](POSTING_GUIDE.md), then [SPEC_METHOD §6](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012) for how a reusable method change is adopted |
 | find the clause that owns a term | [GLOSSARY](GLOSSARY.md), then [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) to resolve the occurrence |
-| load it into a model's context | the current set program under [../a_c/set-4/](../a_c/set-4/README.md), a partial encoding over thirteen members at `978d324` with four projected frames (transformation and judgment, triage and re-entry, carrier and admission, executive disposition): it carries set-3's encoding of FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, SPEC_METHOD, CONFORMANCE, PROFILES and README, adds parts of AXIOMATIC_CALCULUS, SPEC_METHOD, TICKETS, EXECUTIVE_BASELINE and ASSURANCE, and encodes nothing of PRODUCT_DEFINITION or of the members written after it; [../a_c/set-3/](../a_c/set-3/README.md) and the earlier sets are history |
+| load it into a model's context | the current set program under [../a_c/set-4/](../a_c/set-4/README.md), a partial encoding over thirteen members at `978d324` with four projected frames (transformation and judgment, triage and re-entry, carrier and admission, executive disposition): it carries set-3's encoding of FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, SPEC_METHOD, CONFORMANCE, PROFILES and README, adds parts of AXIOMATIC_CALCULUS, SPEC_METHOD, TICKETS, EXECUTIVE_BASELINE and ASSURANCE, and encodes nothing of PRODUCT_DEFINITION or of the members added after `978d324`; [../a_c/set-3/](../a_c/set-3/README.md) and the earlier sets are history |
 
 ## Documents
 
@@ -141,8 +141,8 @@ method surfaces ODD_METHOD and WORLD_MODEL_METHOD are tier 3 profiles here
 (ODD, WORLD_MODEL), constitutional members when a project selects them;
 the compressed read models under `authority_compressions/` are restated as
 a member kind only, their carrier staying unresolved at the compression
-rows pending Jim's ruling; the installed cut, store and manifest claims that the
-member map sends to RELEASE are owned by PRODUCT_DEFINITION §4 and §12,
+rows pending Jim's ruling; the installed cut, store and manifest claims are owned by
+PRODUCT_DEFINITION §4 and §12, as the member map records,
 which RELEASE §1 consumes, and are restated above with those owners
 named.
 

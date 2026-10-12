@@ -864,48 +864,44 @@ MEASURED: about 215 KB read against the 500 KB envelope, mostly targeted standar
 
 ## W21 return, 2026-10-12T10:16Z
 
-RESULT: candidate_ready. Residual sweep of the 37 brief items on `tenant/claude/c3-v3` from `e5e590e`; 33 done, 4 not needed, 0 left; two observations under NEEDS RULING.
-COMMITS: `424c490` (items 30, 23, 31, 33); `0ed6afd` (1 to 4, 6, 7, 9 to 21, 26, 34, 36); `3e14bf6` (8, 24, 27, 29, 32, 35, 37); `1740390` (22, 28); this return with two line reflows.
-ITEMS:
-1 done: SPEC_METHOD lead and §1 link TICKETS, RELEASE, DESIGN_MODULE, ODD, PRODUCT_DEFINITION, ASSURANCE; §6 UP-015 reduced to a pointer to RELEASE §9 (RELEASE §9 carries every determination cut).
+RESULT: candidate_ready on `tenant/claude/c3-v3` from `e5e590e`: 34 items done, item 30 done except two row groups (NEEDS RULING 1), items 5 and 25 not needed. Commits `424c490` (30, 23, 31, 33), `0ed6afd` (1 to 4, 6, 7, 9 to 21, 26, 34, 36), `3e14bf6` (8, 24, 27, 29, 32, 35, 37), `1740390` (22, 28), `74c56eb` and the next `W21:` commit (return, item 28 consistency, reflows).
+ITEMS: 1 done: SPEC_METHOD lead and §1 link TICKETS, RELEASE, DESIGN_MODULE, ODD, PRODUCT_DEFINITION, ASSURANCE; §6 UP-015 is a pointer to RELEASE §9, which carries every determination cut.
 2 done: AXIOMATIC_CALCULUS §8 links RELEASE, drops "constructed at its own activation".
 3 done: PRODUCT_DEFINITION (9 sites) and EXECUTIVE_BASELINE (lead note removed, 7 sites, §23 row) link RELEASE, IDENTITY, TICKETS, DESIGN_MODULE, GLOSSARY.
-4 done: FOUNDATIONS §1, §2, P3, P6, §5 route UP-015, scoped identity, UP-004, entity cut, Markov status to RELEASE §9, IDENTITY §2/§6, WORLD_MODEL §9/§4, rc.2 kept as provenance; EVALUATION §5 already routed (no edit).
-5 not needed: no "no baseline locus exists" note in ACTIVATION §1 at e5e590e.
+4 done: FOUNDATIONS §1, §2, P3, P6, §5 route UP-015, scoped identity, UP-004, entity cut, Markov status to RELEASE §9, IDENTITY §2/§6, WORLD_MODEL §9/§4, rc.2 as provenance; EVALUATION §5 was already routed.
+5 not needed: no "no baseline locus exists" note in ACTIVATION §1 at `e5e590e`.
 6 done: SPEC_METHOD §1, §2 litmus, §4, §8 and ACTIVATION §1 (and its §8 intake row) point to DESIGN_MODULE, ODD, EXECUTIVE_BASELINE directly.
 7 done: PROFILES §6 Engagement baseline indexes EXECUTIVE_BASELINE; dispositions renumbered §7 (no inbound links).
-8 done: README rows TICKETS, ODD, TRAVERSAL_OCCURRENCE, UX, WORLD_MODEL; ASSURANCE row §1 to §16 (§17 is its dispositions); the Writers' routes (TICKETS §4 to §7, ODD §17 and §18, TRAVERSAL_OCCURRENCE adoption, UX §4, §8, §12, WORLD_MODEL §7, §9, §10).
+8 done: README rows TICKETS, ODD, TRAVERSAL_OCCURRENCE, UX, WORLD_MODEL; ASSURANCE row §1 to §16 (§17 is its dispositions, which no row lists); the Writers' routes (TICKETS §4 to §7, ODD §17 and §18, TRAVERSAL_OCCURRENCE adoption, UX §4, §8, §12, WORLD_MODEL §7, §9, §10).
 9 done: ASSURANCE lead names §14 to §16 and TICKETS §7; §3 links TICKETS#test-case-authority.
 10 done: EXECUTIVE_BASELINE §2 unit-proof row cites ASSURANCE §14 and §15.
 11 done: DESIGN_MODULE lead, §8, §12, §13 link ODD, UX, WORLD_MODEL.
 12 done: ACTIVATION §8 and EVALUATION §8 judgment-continuity rows point to TICKETS §7 (EVALUATION's row is in §8, not §3).
-13 done: FOUNDATIONS §6 and ACTIVATION §8 place UP-005, 016, 017, 018, 019, 023 at DESIGN_MODULE, tier-1 loci as pointers, matching the frontier.
+13 done: FOUNDATIONS §6 and ACTIVATION §8 place UP-005, 016, 017, 018, 019, 023 at DESIGN_MODULE with tier-1 loci as pointers, matching the frontier.
 14 done: the "conserved by reference" profile row replaced; the first-pass note under it removed.
 15 done: DESIGN_MODULE seam rule, shared machinery and intake rule cut to pointers (tier 1 carries each whole; the design-frame application sentence kept).
 16 done: DESIGN_MODULE §12 points to IDENTITY §7 for default standing and override law; §13 row agrees with the frontier.
 17 done: EXECUTIVE_BASELINE §3 keeps the pointer, the Worker/Executive binding and "no review obligation either".
 18 done: EVALUATION §8 AC-018/019 row cites AXIOMATIC_CALCULUS §6, §2 as generic form.
-19 done: ACTIVATION §1 contract states "at minimum" (predecessor "Minimum expected states"), linked to TICKETS §5.
+19 done: ACTIVATION §1 contract states "at minimum" (rc.2 "Minimum expected states"), linked to TICKETS §5.
 20 done: ACTIVATION §4 "typical hard-stop classes include", linked to SPEC_METHOD §5.
 21 done: EVALUATION §4 "may recommend a disposition, which is evidence only and never a disposition"; EXECUTIVE_BASELINE §12 step 6 and §13 row say the same.
 22 done: see MODAL SWEEP.
-23 done: GLOSSARY §14 graph-native ODD (8 rows at ODD §1 and §5) and §15 traversal occurrence (7 rows at TRAVERSAL_OCCURRENCE); both frontier cells conserved.
-24 done: TICKETS §3 "Standing of the close classifications, new in this corpus": close-review decisions that consume core results like ACTIVATION §3 dispositions; no mapping, no member added.
-25 not needed: rc.2 SPEC_METHOD's sentence (derived artifacts are read models, never constitutional truth) is in SPEC_METHOD §2 Manifesto; rc.2's transition-evidence read-model sentence is in ACTIVATION §7.
+23 done: GLOSSARY §14 graph-native ODD (8 rows at ODD §1 and §5) and §15 traversal occurrence (7 rows); both frontier cells conserved.
+24 done: TICKETS §3 "Standing of the close classifications, new in this corpus": close-review decisions consuming core results, like ACTIVATION §3 dispositions; no mapping, no member added; UX §15 already says they are not mapped there.
+25 not needed: rc.2 SPEC_METHOD's read-model sentence is in SPEC_METHOD §2 Manifesto; rc.2's transition-evidence read-model sentence is in ACTIVATION §7.
 26 done: EVALUATION §2: evidence bound to another basis is excluded by basis, not admitted with a narrower scope (RF-005).
 27 done: REFERENCE_FRAME §13 template gains the out_of_frame residual field (labelled new; frontier cell notes it).
-28 done: member map rows for README (PRODUCT_DEFINITION §4, §12), REFERENCE_FRAME_METHOD (frame objects), RELEASE_METHOD (release objects); profiles were already separate members. 12,285 bytes.
+28 done: member map rows for README (PRODUCT_DEFINITION §4, §12), REFERENCE_FRAME_METHOD (frame objects), RELEASE_METHOD (release objects); README preamble and frontier `#standards-library` cell aligned; profiles were already separate members; 12,285 bytes.
 29 done: TRAVERSAL_OCCURRENCE lead scopes occurrence, lineage, frontier, cut to `Occurrence`, `lineage_refs`, `EventFrontier`, `SemanticAdmissionCut`.
-30 done (Executive ruling): REFERENCE_FRAME §1 statement of ownership; GLOSSARY §1 restored to "declared by the cited owning clause"; split sentence deleted; included concepts cite REFERENCE_FRAME §1 with the defining locus as relation clause; former §14 rows moved into §8; Evaluation clash resolved by the inclusion.
-31 done: §15 pending list replaced (item 23); the `O` row keeps the method-identity context and its relation returns to ODD §1, as in rc.2 (moving the row would change its context identity).
-32 done: README generalisation note, "not yet on this branch" paragraph removed, compressions counted as a member kind only (README row and frontier cell).
-33 done: GLOSSARY "loci were generated" removed.
-34 done: SPEC_METHOD §12 UP-012 row records "realization" written "realisation".
-35 done: POSTING_GUIDE §7 "Use `Status` to make the discussion state explicit".
-36 done: SPEC_METHOD §2 table cell restored to the token `Constraint / Guarantee` (rc.2 spelling).
+30 done except two row groups: REFERENCE_FRAME §1 statement of ownership; GLOSSARY §1 restored to "declared by the cited owning clause", split sentence deleted; included concepts cite REFERENCE_FRAME §1 with the defining locus as relation clause; former §14 rows moved into §8; Evaluation clash resolved by the inclusion. The `Product`/`Owner` rows (EXECUTIVE_BASELINE §11) and `Multi-Build-Tenant Work Item` (TICKETS §4) cite clauses that name, not declare, their context, so they fail §2 read literally.
+31 done: the `O` row keeps the method-identity context; its relation returns to ODD §1 as in rc.2 (moving the row would change its context identity).
+32 done: README generalisation note; "not yet on this branch" removed; compressions counted as a member kind only (README row, frontier cell).
+33 done: GLOSSARY "loci were generated" removed. 34 done: SPEC_METHOD §12 UP-012 row records realization/realisation (frontier and POSTING_GUIDE rows never said verbatim).
+35 done: POSTING_GUIDE §7 "Use `Status` to make the discussion state explicit". 36 done: SPEC_METHOD §2 cell restored to the token `Constraint / Guarantee`.
 37 done: README model-loading route points to a_c/set-4 and names what it encodes; set-3 and earlier are history.
-MODAL SWEEP: 235 frontier section pairs, 256 predecessor sentences with a keyword; 77 flagged; 17 true flattenings found, 17 fixed (SPEC_METHOD 11, FOUNDATIONS 2, PRODUCT_DEFINITION 2, ACTIVATION 1, REFERENCE_FRAME 1). The other 60: prohibitions ("no X may") in the indicative, modal carried in an adjacent sentence, or locus outside members 1 to 3.
-CHECKS: relative links and anchors in standards/, frontier and DOCUMENT_STRUCTURE resolve except the frontier header's byte-copied `README.md#standalone-successor-requirement` (pre-existing, common text); frontier locus code spans resolve (one span holds two valid anchors); no em- or en-dash in added lines; no heading deeper than ###; DOCUMENT_STRUCTURE 12,285 bytes.
+MODAL SWEEP: 235 frontier section pairs, 256 predecessor sentences with a keyword, 77 flagged; 17 true flattenings found and fixed (SPEC_METHOD 11, FOUNDATIONS 2, PRODUCT_DEFINITION 2, ACTIVATION 1, REFERENCE_FRAME 1). The other 60 are "no X may" prohibitions in the indicative, modals carried in an adjacent sentence, or loci outside members 1 to 3. A rerun with tight equivalents flagged nothing new: 17 confirmed.
+CHECKS: relative links and anchors in standards/, frontier and DOCUMENT_STRUCTURE resolve except the frontier header's byte-copied `README.md#standalone-successor-requirement` (pre-existing common text); no em- or en-dash in added lines; no heading deeper than ###; DOCUMENT_STRUCTURE 12,285 bytes.
 UNRESOLVED ROWS: 10, all compressions.
-NEEDS RULING: (1) GLOSSARY keeps the `Product`/`Owner` family rows at EXECUTIVE_BASELINE §11 and `Multi-Build-Tenant Work Item` at TICKETS §4 as rc.2 had them: each clause names its context and owns the term inside it, but no context owner includes them as REFERENCE_FRAME §1 now includes FOUNDATIONS and ACTIVATION. If PRODUCT_DEFINITION §5 needs the owner's inclusion, the sentences are: REFERENCE_FRAME §1 "...and the specialist frame families of EXECUTIVE_BASELINE §11"; PRODUCT_DEFINITION §8 "The multi-build-tenant work-item relation of TICKETS §4 is a concept of this context owned there." (2) PROFILES §7 compressions row reads "not applicable in this draft", against the unresolved frontier rows (out of sweep scope).
-MEASURED: start 09:51:32Z, end 10:16Z, about 25 minutes; input read about 270 KB; spend unavailable.
+NEEDS RULING: (1) Item 30 remainder: either the owners include the rows, by REFERENCE_FRAME §1 adding "and the specialist frame families of EXECUTIVE_BASELINE §11" and PRODUCT_DEFINITION §8 adding "The multi-build-tenant work-item relation of TICKETS §4 is a concept of this context owned there.", or naming the context in a consumer clause is ruled sufficient. (2) PROFILES §7's compressions row reads "not applicable in this draft", against the unresolved frontier rows (outside the sweep).
+MEASURED: start 09:51:32Z, end about 10:22Z (31 minutes); input read about 280 KB; spend unavailable.
