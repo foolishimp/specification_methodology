@@ -1,12 +1,12 @@
-# Codex successor design
+# Method Structure
 
 ## Boundary
 
-One documentary realization implements the common v3 WHAT at input commit
-b83ed1cc0b65842874bb3d7cabcb76492a4c0d48. The predecessor and construction builder
-are exact installed STDO 2.5.1 RC2. Candidate prose contains its operative duties;
-the predecessor is provenance and comparison material, not a fallback authority
-needed by a future v3 consumer.
+The realization implements the shared Intent, Product and requirements.
+The standards contain the method contracts. Design, review, provenance,
+conservation and qualification records remain outside the package.
+The package entry records authorship; standards begin with a title and the
+current method text.
 
 ## Ownership
 

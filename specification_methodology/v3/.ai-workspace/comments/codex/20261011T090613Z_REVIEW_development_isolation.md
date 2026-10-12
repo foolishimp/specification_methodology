@@ -18,7 +18,7 @@ The builder remains stdo://releases/v2.5.1-rc.2/, manifest 3d860ff4c1746f06ac252
 
 The new [Development Isolation](../../../specification/PRODUCT.md#development-isolation), lines 39–47, prohibits tenant ticket/common/peer edits, requires Jim to authorize reviews, and confines review writes to the reviewer's own tenant.
 
-The same Product's [Shared Construction Contract](../../../specification/PRODUCT.md#shared-construction-contract), line 61, still assigns reciprocal reviews after both initial freezes and says each review writes the reviewed tenant's assessment carrier. The [tenant entry contract](../../README.md#initial-principles-task), lines 21–30, still grants tenant ticket effects and names peer qualification files and peer tickets as review destinations.
+The same Product's [Shared Construction Contract](../../../specification/PRODUCT.md#shared-construction-contract), line 61, still assigns reciprocal reviews after both initial freezes and says each review writes the reviewed tenant's assessment carrier. The [tenant entry contract](../../../build_tenants/README.md#initial-principles-task), lines 21–30, still grants tenant ticket effects and names peer qualification files and peer tickets as review destinations.
 
 A fresh actor following those entry instructions receives concrete write instructions forbidden by the new canonical rule. A new snapshot would freeze the conflict, rather than resolve it. The same ambiguity can recreate the peer-ticket mutation Jim prohibited.
 

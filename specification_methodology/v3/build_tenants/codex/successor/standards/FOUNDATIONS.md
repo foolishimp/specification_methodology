@@ -8,11 +8,9 @@ contract vocabulary; particular methods bind their types, predicates, result
 algebras and authority. Neither adopted premises nor an entailment argument
 appoints an actor or supplies an operation grant.
 
-These are candidate definitions for the v3 realization, not operative builder
-law. STDO 2.5.1 RC2 governs this construction. Existing deciding clauses remain
-owned by their named methods; the relationship below explains their conditional
-specialization without assigning all software or calculus definitions a common
-purpose, signature or workflow.
+Particular methods own their deciding clauses. Their conditional specialization
+does not assign all software or calculus definitions a common purpose,
+signature or workflow.
 
 ## Premises and standing
 
@@ -142,7 +140,6 @@ frozen activation or selected installed manifest. A review carrier is not an
 installed dependency and supplies no authority.
 An activation binds each member's distinct coordinates in its selected complete
 governing basis; equal cut selection does not mean equal member coordinates.
-This unreleased candidate does not itself select an operative construction basis.
 Lifecycle and adoption remain source-owned. A changed member, selected basis,
 source declaration or adoption premise requires fresh applicability before use.
 

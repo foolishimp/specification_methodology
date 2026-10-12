@@ -146,7 +146,7 @@ for key, folder in [('standards','standards'), ('plugin','plugins/spec')]:
 manifest['auxiliary']['license']['sha256'] = sha(root/'LICENSE')
 manifest['auxiliary']['release_note'] = {'source_path':'releases/v0.0.0.md',
                                        'installed_path':'release/release-note.md',
-                                       'sha256':sha(root/'release/release-note.md')}
+                                       'sha256':sha(base/'qualification/C3/surface-repair/release-note-fixture.md')}
 schema = json.loads((root/'standards/schemas/installed-release-manifest.schema.json').read_text())
 validator = Draft202012Validator(schema)
 errors = list(validator.iter_errors(manifest))
@@ -162,11 +162,10 @@ installed_members = ({'standards/'+m['path'] for m in manifest['standards']['mem
                      {'LICENSE','release/release-note.md'})
 product_files = {str(p.relative_to(root)) for p in root.rglob('*') if p.is_file()
                  and (str(p.relative_to(root)).startswith(('standards/','plugins/spec/'))
-                      or str(p.relative_to(root)) in {'LICENSE','release/release-note.md'})}
-if product_files != installed_members:
+                      or str(p.relative_to(root)) == 'LICENSE')}
+if product_files | {'release/release-note.md'} != installed_members:
     failures.append('hypothetical installer inventory differs from complete Product member set')
-for path in ['standards/frames/WORK_RECOVERY.md',
-             'plugins/spec/references/provenance/predecessor-release-note.txt']:
+for path in ['standards/frames/WORK_RECOVERY.md']:
     if path not in installed_members:
         failures.append('new material not inventory-covered '+path)
 
@@ -189,7 +188,7 @@ for key, value in [('uri','stdo://channels/2.5.1'),('manifest_sha256','1'*63)]:
     if not refused:
         failures.append('wrong definition basis accepted '+key)
 
-for path in [root/'check_candidate.py', base/'qualification/C3/refresh_views.py',
+for path in [base/'qualification/C3/check_candidate.py', base/'qualification/C3/refresh_views.py',
              base/'qualification/C3/run_review.py', base/'qualification/C3/a_c/finite_check.py']:
     try:
         ast.parse(path.read_text(), feature_version=(3,8))
@@ -203,12 +202,14 @@ report = {'kind':'standalone_distribution_artifact_check',
           'selected_excerpt_sections_exact':exact_excerpt_sections,
           'authority_literal_reference_rows_exact':authority_literal_rows,
           'hypothetical_inventory_members':len(installed_members),
+          'product_package_members':len(product_files),
+          'release_note_is_hypothetical_fixture':True,
           'manifest_schema_valid':not errors, 'extra_auxiliary_category_refused':extra_category_refused,
           'template_definition_schema_valid':not definition_errors,
           'negative_definition_controls':negative_definition_controls,
           'failures':failures,'valid':not failures,'elapsed_seconds':round(time.monotonic()-started,3),
           'limits':['No semantic fidelity from structural success',
-                    'No published cut, native v3 install or plugin-host qualification',
+                    'No published cut, native v3 install or plugin-host qualification; actual release note remains an owner-selected publication obligation',
                     'Python 3.8 syntax only, not an executed Python 3.8 compatibility test']}
 (base/'qualification/C3/DISTRIBUTION_CHECK.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='operative_carry'},indent=2))

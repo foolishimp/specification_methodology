@@ -1,5 +1,9 @@
 # C3 evidence applicability
 
+## Current-surface correction
+
+The current package and placement repair are recorded in [surface-repair/RETURN.md](surface-repair/RETURN.md). The earlier judgments below retain their named source subjects; they are not new whole-member acceptance for changed bytes.
+
 Current Product subject: edc884f49fcd137d9a34e73f2660158c6df8795a. The
 80 Product members are individually pinned in successor/CONSERVATION.json.
 The later candidate inventory pins review carriers separately. Builder and
@@ -8,7 +12,7 @@ predecessor are exact installed STDO v2.5.1-rc.2, manifest
 
 ## Current architecture and acquisition repair
 
-[Final repair review](foundation-repair/final-review/REVIEW.md) satisfies the
+[Final repair review](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/foundation-repair/final-review/REVIEW.md) satisfies the
 bounded premise/contract/work-recovery relationship, current authority imports,
 source projection and profile gate at edc884f. The affected reader retest satisfies
 lawful-effect and profile criteria in one run, retaining the documented low
@@ -28,23 +32,23 @@ method/guide bodies other than README: every nonblank original line survives
 in order. README is an explicit restatement. This establishes literal carry,
 not semantic adequacy of the introduced introductions or practical efficacy.
 
-[Foundation](reviews/foundations/REVIEW.md),
-[specification](reviews/specification/REVIEW.md),
-[design](reviews/design/REVIEW.md), [profile](reviews/profiles/REVIEW.md) and
-[delivery](reviews/delivery-confirmation/REVIEW.md) comparisons judged named
+[Foundation](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/foundations/REVIEW.md),
+[specification](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/specification/REVIEW.md),
+[design](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/design/REVIEW.md), [profile](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/profiles/REVIEW.md) and
+[delivery](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/delivery-confirmation/REVIEW.md) comparisons judged named
 frozen members. Their predicates and limits remain at those subjects. Unchanged
 owner clauses can reuse that support; subsequently repaired explanatory text
 does not inherit a whole-member green result from a prior review.
 
-The [cross-owner review](reviews/owner-conservation-closed/REVIEW.md) at 804b396
+The [cross-owner review](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/owner-conservation-closed/REVIEW.md) at 804b396
 falsified introduced summaries and classified unchanged relations separately.
-The [distribution review](reviews/distribution-closed/REVIEW.md) identified one
+The [distribution review](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/distribution-closed/REVIEW.md) identified one
 unbound view and conditional host-ref issues. Both remain literal historical
-results. [Earlier confirmation](reviews/closure-confirmation/REVIEW.md) is falsified
-at 69f61d7. [Earlier authority review](reviews/authority-final/REVIEW.md) is
+results. [Earlier confirmation](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/closure-confirmation/REVIEW.md) is falsified
+at 69f61d7. [Earlier authority review](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/authority-final/REVIEW.md) is
 falsified at 23de110 on three authority-vocabulary relations and leaves
 WORK_RECOVERY indeterminate against its pinned successor source.
-[Resumed confirmation](reviews/resumed-final-confirmation/REVIEW.md) satisfies
+[Resumed confirmation](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/reviews/resumed-final-confirmation/REVIEW.md) satisfies
 both repaired claims at c10d70f, having received the actual pinned successor and
 predecessor clauses. All three authority counterexamples are closed for this
 subject. The Host's separate 52-section byte comparison is artifact evidence.
@@ -78,10 +82,10 @@ relocation nor a refreshed digest by itself establishes new semantic fidelity.
 
 | Exercise and exact return | Supported relation | Limit retained |
 |---|---|---|
-| [Evaluation/conjunction](use/evaluation/final/REVIEW.md) | Adequate documentary baseline; actual source-linked failure retained with producer/citation; B stays uncovered; defective summary falsified | The fixture explicitly declares its conjunctive rule. It proves no universal aggregation precedence. |
-| [Derivation](use/derivation/closed/REVIEW.md) | Separate baseline source/contract satisfied as documents; actual dimension, conversion, authority and test-contract defects falsified | No application execution. Earlier ambiguous intake and noncanonical labels remain preserved. |
-| [Domain binding](use/domain/final/REVIEW.md) | Truthful candidate-state baseline; wrong continuation ownership and unsupported statistical promotion falsified | Empirical state sufficiency remains indeterminate; positive categorical equivalence is out_of_frame. |
-| [Release/adoption](use/release/final/REVIEW.md) | Truthful documentary baseline; moving-selector, source/installed identity and release/authority defects falsified | Installed exact-RC qualification and the symbolic receipts remain unproved. |
+| [Evaluation/conjunction](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/use/evaluation/final/REVIEW.md) | Adequate documentary baseline; actual source-linked failure retained with producer/citation; B stays uncovered; defective summary falsified | The fixture explicitly declares its conjunctive rule. It proves no universal aggregation precedence. |
+| [Derivation](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/use/derivation/closed/REVIEW.md) | Separate baseline source/contract satisfied as documents; actual dimension, conversion, authority and test-contract defects falsified | No application execution. Earlier ambiguous intake and noncanonical labels remain preserved. |
+| [Domain binding](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/use/domain/final/REVIEW.md) | Truthful candidate-state baseline; wrong continuation ownership and unsupported statistical promotion falsified | Empirical state sufficiency remains indeterminate; positive categorical equivalence is out_of_frame. |
+| [Release/adoption](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/use/release/final/REVIEW.md) | Truthful documentary baseline; moving-selector, source/installed identity and release/authority defects falsified | Installed exact-RC qualification and the symbolic receipts remain unproved. |
 
 The final repairs retain the detailed deciding source clauses used by these
 fixtures. They narrow the explanatory account's standing and restore lawful
@@ -91,7 +95,7 @@ made. The current five-view source/pin checks are mechanical evidence only.
 
 ## a_c
 
-[Independent interpretation](a_c/closed/REVIEW.md) judges SOURCE.md, the intended
+[Independent interpretation](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/a_c/closed/REVIEW.md) judges SOURCE.md, the intended
 program and actual permission mutant at 804b396. The source, both programs and
 finite token helper remain byte-identical in the final Product input. Its satisfied qualitative
 predicates and token-helper correspondence therefore retain their exact subject.

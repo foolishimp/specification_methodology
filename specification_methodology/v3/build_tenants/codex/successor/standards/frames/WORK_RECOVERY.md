@@ -11,14 +11,6 @@ This selection makes no material-sufficiency claim. Its separate activation and
 the source owners determine required coupled material and any lawful response
 to insufficient capability; this preface supplies no response or selection grant.
 
-
-
-
-
-
-
-
-
 This default view projects the generic work/recovery contracts. It does not
 project or adopt the optional Baseline engagement. Use the instance's actually
 bound outcome domain; no WorkerResult enum or falsified-to-refused mapping
@@ -28,7 +20,9 @@ its roles or outcomes. An absent basis remains unresolved; this view supplies
 none. The source owners and original work/attempt coordinates remain material
 where the selected recovery contract requires them.
 
-Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `376ad962aa872c7d72ed8360258dd290525ee2bc5d1f3143ff0beb5fe9c5d044`.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a`.
 
 ## Work/recovery specialization
 
@@ -58,7 +52,7 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `4a0bdfc9591843353d34ba2530cff504b7891f157b2fd8e73f9e695bf34fdd87`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -224,7 +218,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `4a0bdfc9591843353d34ba2530cff504b7891f157b2fd8e73f9e695bf34fdd87`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
 
 ### Computed Classification And Treatment
 

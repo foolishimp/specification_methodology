@@ -10,7 +10,7 @@ The contracts below are conditional on selected foundational premises and
 instance choices. Particular methods retain ownership of their concrete types,
 result algebras, applicability, adoption, admission and operation grants.
 A contract definition does not supersede an owner determination or authorize
-its use. The candidate remains subject to the installed construction basis.
+its use.
 
 Its shared contract vocabulary resolves in bounded context
 `urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
@@ -37,7 +37,7 @@ The target has its own exact member digest supplied by the frozen activation
 or selected installed manifest. A review carrier is not an installed dependency
 and supplies no authority. An activation binds
 each member's distinct coordinates in its selected complete governing basis.
-The candidate selects no operative construction basis. Changed member, basis,
+Changed member, basis,
 source declaration or adoption premise invalidates reliance until applicability
 is re-established. Source lifecycle and adoption conditions remain unchanged.
 
@@ -59,7 +59,7 @@ Their source contracts retain applicability, adoption and activation conditions.
 ## Foundational contract
 
 Premise owner: FOUNDATIONS.md, context urn:stdo:bounded-context:foundations,
-under the selected complete candidate basis. F1–F6 retain their exact definitions
+under the selected complete STDO basis. F1–F6 retain their exact definitions
 at that source. Direction is source premises to the library's conditional
 contracts; no meaning is translated or lost and no authority is transferred.
 The target is this member's context and its Product owner declared above. The

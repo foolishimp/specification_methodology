@@ -1,13 +1,13 @@
 # Response to Claude's Review of Codex C1
 
-The bounded author repair is complete in the current [principles successor](../design/PRINCIPLES.md). Root accepted the source-recovery and standing repairs described below. This is root/author evaluation and repair, not an independent review or Jim's acceptance. The initial frozen construction remains the subject of its historical verdict; it has not been passed retroactively.
+The bounded author repair is complete in the current [principles successor](20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/PRINCIPLES.md). Root accepted the source-recovery and standing repairs described below. This is root/author evaluation and repair, not an independent review or Jim's acceptance. The initial frozen construction remains the subject of its historical verdict; it has not been passed retroactively.
 
 ## Inputs And Provenance
 
-- Initial candidate: SHA256 `52fbd93ad31476823d5bed7a991ee85b5d8e8e188037fcdb80ac052540051611`, preserved byte-identically as [C1_INITIAL_PRINCIPLES.md](../qualification/C1_INITIAL_PRINCIPLES.md).
+- Initial candidate: SHA256 `52fbd93ad31476823d5bed7a991ee85b5d8e8e188037fcdb80ac052540051611`, preserved byte-identically as [C1_INITIAL_PRINCIPLES.md](../../../build_tenants/codex/qualification/C1_INITIAL_PRINCIPLES.md).
 - Supplied feedback: `stdo_3/build_tenants/claude/reviews/20261011T065337Z_REVIEW_codex_c1_principles.md`, SHA256 `351e8e86f7927431f0475d02f34da2564a474fbba7702287ef764b027dcf46ef`. Root consumed that report and supplied its evaluation; this Writer did not acquire peer files.
-- Historical [C1_REVIEW.md](../qualification/C1_REVIEW.md): SHA256 `40700da54763fdeac4103c2f3c0530e2266070ce6bcb57cd2c3a8d3eab9ba8be`, unchanged. The supplied outcome was source-recovery completeness `falsified`, other assessed derivations/fragment/etc `satisfied`, and `local_repair`; acceptance remains Jim's.
-- Successor: [design/PRINCIPLES.md](../design/PRINCIPLES.md), SHA256 `2a148a0ce3460533446c678a06aee809c3dabf8e99a95ad1eeb5d08169e68d89`.
+- Historical [C1_REVIEW.md](20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C1_REVIEW.md): SHA256 `40700da54763fdeac4103c2f3c0530e2266070ce6bcb57cd2c3a8d3eab9ba8be`, unchanged. The supplied outcome was source-recovery completeness `falsified`, other assessed derivations/fragment/etc `satisfied`, and `local_repair`; acceptance remains Jim's.
+- Successor: [design/PRINCIPLES.md](20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/PRINCIPLES.md), SHA256 `2a148a0ce3460533446c678a06aee809c3dabf8e99a95ad1eeb5d08169e68d89`.
 - Builder: `stdo://releases/v2.5.1-rc.2/`, manifest SHA256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`. Root supplied exact installed verification: valid true, failures empty. This Writer imported the named owning clauses without repeating whole-basis verification.
 - Original author date remains 2026-10-11T06:05:49Z; revision provenance is 2026-10-11T07:55:18Z. Under UP-022 this is a declared post-exposure intervention/new qualification subject, not fresh clean-room authorship.
 

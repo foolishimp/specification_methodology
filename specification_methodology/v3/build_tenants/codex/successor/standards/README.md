@@ -43,15 +43,14 @@ no view is sufficient for every task.
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
 | Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
 
-Each member's declared standing and scope remain at that owner; this table
+Each member's declared applicability and scope remain at that owner; this table
 does not reclassify a constitutional method as a guide or profile. The calculus
 and optional Traversal profile retain their own signatures; the Baseline
 retains its adoption boundary; the Glossary is a non-deciding locator.
 Foundations and the library
 declare the premise layer and shared conditional contracts under the Methodology
 Product authority. Particular methods retain their concrete decisions and
-grants. The work/recovery specialization is authored; whole-corpus
-reconstruction remains open.
+grants.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
@@ -61,7 +60,7 @@ Traversal adoption is optional and binds an exact signature and basis.
 ## Distribution and entry
 
 [Compressions](authority_compressions/README.md) are digest-bound, non-deciding
-read models. Each raw member retains its declared standing; the detailed
+read models. Each raw member retains its source-owned semantic standing; the detailed
 deciding owners remain authoritative. A sufficient
 current projection conveys their duties without acquiring authority, and stale
 or insufficient views require acquisition of their exact owners. [Templates](templates/README.md)
@@ -88,5 +87,5 @@ required independent assessment and existing disposition/control contract are
 consumed. In ODD, the next work decision remains the exact evaluate_next path;
 this entry creates no alternative continuation owner. The projected frames are
 declared members of the complete
-documentary member set. Their source owners, exact bytes and fidelity remain
+constitutional member set. Their source owners, exact bytes and fidelity remain
 required; a frame is not an independently selectable method version.

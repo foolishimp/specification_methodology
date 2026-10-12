@@ -17,7 +17,10 @@ parser.add_argument("--subject", required=True)
 parser.add_argument("--seconds", type=int, default=480)
 parser.add_argument("--budget-usd", type=float, default=6)
 args = parser.parse_args()
-directory = args.directory
+directory = args.directory.resolve()
+comments_root = Path(__file__).resolve().parents[4] / ".ai-workspace/comments/codex"
+if directory != comments_root and comments_root not in directory.parents:
+    raise SystemExit("Reviewer output belongs under the Codex comments namespace.")
 prompt = (directory / "PROMPT.txt").read_bytes()
 subject = subprocess.check_output(["git", "rev-parse", args.subject], text=True).strip()
 argv = ["claude", "-p", "--safe-mode", "--tools", "", "--permission-mode", "dontAsk",

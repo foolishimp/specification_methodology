@@ -4,7 +4,7 @@ State: CLOSED bounded trial; its exit evidence is supported within the limits
 below and ready for Jim's review. This is the single current trial/return record.
 Task-specific content belongs to
 [TASK](TASK.md), independent expected distinctions to [EXPECTATIONS](EXPECTATIONS.md),
-method semantics to the [published entry](../../standards/README.md).
+method semantics to the [published entry](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/standards/README.md).
 
 ## Authority And Subject
 
@@ -110,13 +110,13 @@ remain in its returned material.
 
 ## Genuine Policy Defect And Fixture Correction
 
-Independent baseline report [BASELINE](assessments/BASELINE.md), SHA256
+Independent baseline report [BASELINE](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T1/assessments/BASELINE.md), SHA256
 5fb6f1f1e7f06b7ca3fbe6988d758931f04fa63b2a30056b53a6620549aeef4c, was frozen
 at 4e1bdfbba6697f542bf01c480f1af946512092d4 before the original policy mutation.
 Its final O1–O6 and retained-progress claims are satisfied within declared limits.
 Native assessment elapsed 472 s.
 
-[COMPOSITION_PRESSURE](assessments/COMPOSITION_PRESSURE.md), SHA256
+[COMPOSITION_PRESSURE](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T1/assessments/COMPOSITION_PRESSURE.md), SHA256
 99395ad35733e179852d1c24652a0adf467913b1b431e4674c64ed9851073aa0, was frozen
 at 12442d370db0e7c6fc00c1dcd4e0ea087868987a. It retains original report failure
 and the reviewer's initial miss, separately supports the corrected successor,
@@ -124,7 +124,7 @@ and checks all three pressure paths. Native elapsed 492 s.
 
 Original intervention cbcd42ad5ea4d53d52c62d4b788f6cf098cd207c removed the
 operative signed-human decision policy while preserving the raw/intake/handling
-prefix. Independent [OMISSION](assessments/OMISSION.md), SHA256
+prefix. Independent [OMISSION](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T1/assessments/OMISSION.md), SHA256
 f9e58bef234a72a227e06815cc1deda01073f9906bfb83e178e11be15ac5a7fb, detected
 actual O3 and O4 failures, with O1/O2/O5/O6 supported. Native elapsed 445 s.
 Initial source-first findings preceded disclosed later agent-status exposure.
@@ -150,7 +150,7 @@ RETURN 1c99cb9ed1176ed16ad8da7c8d5765536c6d61d9193ffba540423e1d890cc4cd.
 
 ## Final Independent Result And Executive Conjunction
 
-[FINAL_V2](assessments/FINAL_V2.md), SHA256
+[FINAL_V2](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T1/assessments/FINAL_V2.md), SHA256
 adcfb2316acb72e2074f5b6ed0bf4a12c07f8f9a2848e1b586aedf3ca9352cb3,
 closed at 12:03:56Z after 332.520 s. Its fresh assessor recovered the source and
 both criteria before candidate material, judged the actual negative before
@@ -212,7 +212,7 @@ include parallel activations and cannot be summed as critical-path elapsed.
 Provider token/cost and framework RSS counters were unavailable. The measured
 source/view/return bodies expose displaced work; they establish no improvement.
 
-Next dependency-ready build scope is T2 in the [build plan](../../design/BUILD_PLAN.md):
+Next dependency-ready build scope is T2 in the [build plan](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/BUILD_PLAN.md):
 typed Spec derivation, different conforming HOWs, incompatible composition and
 test/authority boundaries. Jim retains owner acceptance and peer-review/release
 authority. This tenant does not amend the common registry, merge to main or read

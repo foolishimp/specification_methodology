@@ -61,7 +61,7 @@ without an adequate comparable outcome.
 
 ## Delivered Candidate
 
-The [method entry](../standards/README.md) routes five canonical core owners:
+The [method entry](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/standards/README.md) routes five canonical core owners:
 Foundations, Spec, Work, Evidence and Qualification. Four optional profiles add
 software design, graph execution, work records and world-model meaning. Entry,
 source index and profile entry complete the twelve-member, 69,151-byte corpus
@@ -69,7 +69,7 @@ frozen at ea43ca8996f05f8d32e5ad6ab6f2327c39f773ab. [CANDIDATE.json](CANDIDATE.j
 binds every member; those bytes remain unchanged through the later proofs.
 
 The common WHAT and historical accepted C1, C2 expectations and T1 proofs are
-unchanged. The [independent corpus assessment](T2_T6/assessments/CORPUS.md)
+unchanged. The [independent corpus assessment](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/CORPUS.md)
 supports this bounded documentary composition. The library shares Bind,
 Acquire, Transform, Evaluate, Conjoin and Dispose definitions while preserving
 responsibility, meaning, effect authority and required independent assessment.
@@ -82,21 +82,21 @@ These are document relations, not six new runtime APIs or universal phases.
 | T1: bounded work/re-entry | Applicable unchanged evidence retained in [original return](T1/RETURN.md); original isolation failure and review miss preserved. |
 | T2: typed derivation/composition | Two materially different adequate HOWs. Actual locally valid unit defect independently falsified, repaired and affected-confirmed. |
 | T3: evidence/effects/next action | Actual A failure plus uncovered B survives conjunction/fresh readback; missing planned A is rejected earlier. Actual post-write loss, changed dependency, no-repeat and exhausted-grant refusals are observed. |
-| T4: publication/use | Actual candidate and RC2 readers produce adequate outputs. Resolving index and faulty guidance receive separate judgments; [fresh repaired-entry confirmation](T2_T6/assessments/READER_REPAIR.md) supports useful use under its filtered exposure. Whole-path efficiency remains unproved. |
+| T4: publication/use | Actual candidate and RC2 readers produce adequate outputs. Resolving index and faulty guidance receive separate judgments; [fresh repaired-entry confirmation](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/READER_REPAIR.md) supports useful use under its filtered exposure. Whole-path efficiency remains unproved. |
 | T5: separately bound a_c | Complete seven-member pinned Install verified before use. Both actual carriers mechanically validate; wrong interpretation is independently falsified. Corrected quote fidelity and selected finite provider branches are separately assessed. |
 | T6: qualification/successor | Current [case/capability ledger](CASE_LEDGER.md) exposes every selected discriminator and limit. Four-duty successor omission is detected/repaired/confirmed; full 2.x migration remains owner-unselected in [predecessor scope](PREDECESSOR_SCOPE.md). |
-| Cross-tenant comparison | Subsequent [closed comparison](../reviews/20261011T161438Z_REVIEW_CLAUDE_CODEX_COMPLETED_BUILD.md) reads this completed subject at 7445f1e and Claude at 5a8a996c. It writes only Codex's review and changes no method member. |
+| Cross-tenant comparison | Subsequent [closed comparison](../../../.ai-workspace/comments/codex/20261011T161438Z_REVIEW_CLAUDE_CODEX_COMPLETED_BUILD.md) reads this completed subject at 7445f1e and Claude at 5a8a996c. It writes only Codex's review and changes no method member. |
 
 ## Actual Failures And Owning Repairs
 
 | Observed failure | Supported root cause and bounded action | Closed evidence |
 |---|---|---|
-| A shape/arithmetic-valid cost brief charges Harbor at AUD 6 instead of 6 cents. | Producer/consumer unit translation omitted the factor 1/100. Repair the fixture brief, not generic law; original citations remain historical. | [Actual A judgment](T2_T6/assessments/COST_A.md), [affected confirmation](T2_T6/assessments/REPAIRS_D_N_S.md). |
-| Native a_c validation accepts the wrong quote equation. | Native mechanics checks the carrier, not arithmetic/source truth. The supplied wrong projection is falsified; the pre-existing correction is separately confirmed. | [Mechanical receipts](../a_c/MECHANICAL_RECEIPTS.json), [model assessment](T2_T6/assessments/MODEL_SUCCESSOR.md). |
-| P1 claims complete conservation but drops original issued/uncertain effects. | Successor projection omits the fourth fixture duty. Add its actual custody/state disposition; do not relabel v1 receipt as v2. | [Negative](T2_T6/assessments/MODEL_SUCCESSOR.md), [fixed confirmation](T2_T6/assessments/REPAIRS_D_N_S.md). |
-| Index resolves but derived entry promotes a cost check into deployment permission. | Reader guidance loses the owning binding/authority contract. Repair the derived entry, retain valid routes and useful work, then use a fresh restricted-exposure reader. | [Reader assessment](T2_T6/assessments/READER_USE.md), [new actual note](T2_T6/runs/reader/repaired/OPERATOR_NOTE.md), [affected confirmation](T2_T6/assessments/READER_REPAIR.md). |
-| Materialized v1 source silently carries the v2 Harbor rate. | Fixture/source identity mismatch. Readmit the exact bound source; genuine source-v2 is a separate governing successor. | [Actual source repair](T2_T6/fixtures/basis/RETURN.json), [independent readback](T2_T6/assessments/STATE_AND_READBACK.md). |
-| Persistent effect succeeds before response is lost. | Observation capability and effect outcome are distinct. Retain possible effect; reconcile current state when granted access returns; withhold repetition. | [State readback](T2_T6/assessments/STATE_AND_READBACK.md), [later reconciliation](T2_T6/assessments/STATE_RECONCILIATION.md). |
+| A shape/arithmetic-valid cost brief charges Harbor at AUD 6 instead of 6 cents. | Producer/consumer unit translation omitted the factor 1/100. Repair the fixture brief, not generic law; original citations remain historical. | [Actual A judgment](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/COST_A.md), [affected confirmation](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/REPAIRS_D_N_S.md). |
+| Native a_c validation accepts the wrong quote equation. | Native mechanics checks the carrier, not arithmetic/source truth. The supplied wrong projection is falsified; the pre-existing correction is separately confirmed. | [Mechanical receipts](../a_c/MECHANICAL_RECEIPTS.json), [model assessment](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/MODEL_SUCCESSOR.md). |
+| P1 claims complete conservation but drops original issued/uncertain effects. | Successor projection omits the fourth fixture duty. Add its actual custody/state disposition; do not relabel v1 receipt as v2. | [Negative](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/MODEL_SUCCESSOR.md), [fixed confirmation](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/REPAIRS_D_N_S.md). |
+| Index resolves but derived entry promotes a cost check into deployment permission. | Reader guidance loses the owning binding/authority contract. Repair the derived entry, retain valid routes and useful work, then use a fresh restricted-exposure reader. | [Reader assessment](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/READER_USE.md), [new actual note](T2_T6/runs/reader/repaired/OPERATOR_NOTE.md), [affected confirmation](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/READER_REPAIR.md). |
+| Materialized v1 source silently carries the v2 Harbor rate. | Fixture/source identity mismatch. Readmit the exact bound source; genuine source-v2 is a separate governing successor. | [Actual source repair](T2_T6/fixtures/basis/RETURN.json), [independent readback](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/STATE_AND_READBACK.md). |
+| Persistent effect succeeds before response is lost. | Observation capability and effect outcome are distinct. Retain possible effect; reconcile current state when granted access returns; withhold repetition. | [State readback](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/STATE_AND_READBACK.md), [later reconciliation](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/T2_T6/assessments/STATE_RECONCILIATION.md). |
 
 No failed counterexample was replaced by a supplied false judgment. Source
 expectations were fixed before the actual trials; author checks, source-first

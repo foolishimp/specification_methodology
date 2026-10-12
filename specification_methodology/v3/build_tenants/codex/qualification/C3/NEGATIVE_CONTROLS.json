@@ -1,11 +1,38 @@
 {
-  "kind": "documentary_artifact_negative_controls",
-  "candidate_body_input_commit": "edc884f49fcd137d9a34e73f2660158c6df8795a",
-  "inventory_input_commit": "635ebb06f1ae84c049f4b740abf55b972182e390",
+  "kind": "current-surface-and-artifact-negative-controls",
   "controls": [
+    {
+      "control": "construction header in current standard",
+      "refused": true,
+      "specific_failure": "construction header in standard: FOUNDATIONS.md",
+      "failures": [
+        "construction header in standard: FOUNDATIONS.md",
+        "conservation member pin mismatch: standards/FOUNDATIONS.md",
+        "candidate pin mismatch: standards/FOUNDATIONS.md"
+      ]
+    },
+    {
+      "control": "duplicate package attribution",
+      "refused": true,
+      "specific_failure": "package attribution must name Dimitar Popov once",
+      "failures": [
+        "package attribution must name Dimitar Popov once",
+        "candidate pin mismatch: README.md"
+      ]
+    },
+    {
+      "control": "support carrier inside Product package",
+      "refused": true,
+      "specific_failure": "support carrier inside Product package: DESIGN.md",
+      "failures": [
+        "support carrier inside Product package: DESIGN.md",
+        "candidate inventory differs from complete current tree"
+      ]
+    },
     {
       "control": "changed admitted member",
       "refused": true,
+      "specific_failure": "conservation member pin mismatch: standards/FOUNDATIONS.md",
       "failures": [
         "conservation member pin mismatch: standards/FOUNDATIONS.md",
         "candidate pin mismatch: standards/FOUNDATIONS.md"
@@ -14,14 +41,15 @@
     {
       "control": "missing conservation row",
       "refused": true,
+      "specific_failure": "frontier must contain exactly 690 distinct selected rows",
       "failures": [
-        "frontier must contain exactly 690 distinct selected rows",
-        "candidate pin mismatch: CONSERVATION.json"
+        "frontier must contain exactly 690 distinct selected rows"
       ]
     },
     {
       "control": "unlisted member",
       "refused": true,
+      "specific_failure": "candidate inventory differs from complete current tree",
       "failures": [
         "candidate inventory differs from complete current tree"
       ]

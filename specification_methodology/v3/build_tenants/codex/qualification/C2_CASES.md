@@ -6,8 +6,8 @@ and the exact sources named below; they are specified before the documentary
 implementation. Independent evaluators recover governing source and expectations
 before opening the frozen subject. They do not assess their own authorship.
 
-[Capabilities](../design/C2_CAPABILITIES.md) declare the claims; the
-[build plan](../design/BUILD_PLAN.md) selects proposed thread groupings.
+[Capabilities](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/C2_CAPABILITIES.md) declare the claims; the
+[build plan](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/BUILD_PLAN.md) selects proposed thread groupings.
 Selecting these expectations does not require all cases to run in every task.
 Each actual trial binds its relevant claims, source, current subject and operating
 envelope. Supplied judgments can test wiring; they cannot prove actual detection.
@@ -128,7 +128,7 @@ improvement claim.
 | Q22, Q26 | SPEC UP-014 and DESIGN UP-019; C1 D8 |
 | Q24-Q25 | A_C_DEPENDENCY; AC-017/018; SPEC UP-022; RELEASE UP-015 and the selected dependency/release contract |
 
-Exact source links are recovered in [C1](../design/PRINCIPLES.md#exact-source-recovery)
+Exact source links are recovered in [C1](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/PRINCIPLES.md#exact-source-recovery)
 and [A_C_DEPENDENCY](../../../specification/requirements/A_C_DEPENDENCY.md).
 The frozen predecessor logical model and the 6 October matrix are historical
 case-design inputs. The acquired 2 October ABG handoff supplies historical

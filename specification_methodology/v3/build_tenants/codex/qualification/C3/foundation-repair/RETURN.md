@@ -10,9 +10,9 @@ The [ordinary work entry](../../../successor/plugins/spec/skills/stdo-work/SKILL
 
 ## Observed failure, root cause and repair
 
-The first v3 reader found the new view itself but used Baseline WorkerResult labels while declaring no profile adoption. [Independent comparison](comparison-review/REVIEW.md) falsified that criterion. The source clauses were sufficient; the projection included optional profile material irrelevant to this task. Salience or causal attribution is not proved by one run. The bounded repair changed projection membership and its scope statement, preserving the profile's own law. This repaired the method material rather than editing the reader's result or supplying an answer.
+The first v3 reader found the new view itself but used Baseline WorkerResult labels while declaring no profile adoption. [Independent comparison](../../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/foundation-repair/comparison-review/REVIEW.md) falsified that criterion. The source clauses were sufficient; the projection included optional profile material irrelevant to this task. Salience or causal attribution is not proved by one run. The bounded repair changed projection membership and its scope statement, preserving the profile's own law. This repaired the method material rather than editing the reader's result or supplying an answer.
 
-The failed output and its exact transcript remain under successor/. The fresh [retest](successor-retest/RESULT.md) used the identical task and initial prompt, acquired its own material and avoided the unadopted mapping. [Final independent review](final-review/REVIEW.md) satisfies the source repair and that observed criterion. It does not prove a universal causal or efficacy claim.
+The failed output and its exact transcript remain under successor/. The fresh [retest](successor-retest/RESULT.md) used the identical task and initial prompt, acquired its own material and avoided the unadopted mapping. [Final independent review](../../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/reviews/qualification/C3/foundation-repair/final-review/REVIEW.md) satisfies the source repair and that observed criterion. It does not prove a universal causal or efficacy claim.
 
 ## Comparative acquisition evidence
 

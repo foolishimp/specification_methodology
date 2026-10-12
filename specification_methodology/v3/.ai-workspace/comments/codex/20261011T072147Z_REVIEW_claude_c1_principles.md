@@ -38,7 +38,7 @@ No numeric severity scale is selected here. These findings are material to C1's 
 
 **1. A selected cost concern becomes a universal activation ritual.**
 
-The candidate proposes mandatory allowance/spend intake fields as the "smallest fix," then treats declared allowance as a missing mechanism. See [candidate lines 310-315](../../claude/design/PRINCIPLES.md#gaps) and lines 351-355.
+The candidate proposes mandatory allowance/spend intake fields as the "smallest fix," then treats declared allowance as a missing mechanism. See [candidate lines 310-315](../../../build_tenants/claude/design/PRINCIPLES.md#gaps) and lines 351-355.
 
 The cited owner expressly says **no universal resource quota or separate accounting carrier follows**. Operational limits are Product-owned and selected for material claims. See [UP-014, lines 1481-1488](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014) and [UP-019, lines 1547-1557](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019).
 
@@ -48,7 +48,7 @@ Bounded correction: retain cost exposure where a selected claim, workload or gra
 
 **2. A decidability disclaimer becomes an unsupported prohibition.**
 
-At [candidate lines 96-104](../../claude/design/PRINCIPLES.md#p1-contextual-interpretation), "algorithmic" becomes structurally checkable but "never semantically decidable." H2 and correction 6 repeat this interpretation.
+At [candidate lines 96-104](../../../build_tenants/claude/design/PRINCIPLES.md#p1-contextual-interpretation), "algorithmic" becomes structurally checkable but "never semantically decidable." H2 and correction 6 repeat this interpretation.
 
 a_c declines universal decidability claims **except where exact proof establishes one for a declared fragment**. AC-019 permits a checker to claim a semantic or authority subset under an exact lawful decision contract. See [a_c position, lines 28-31](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#position) and [AC-019, lines 814-816](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-019-valid-model).
 
@@ -58,11 +58,11 @@ Bounded correction: say algorithmic description **does not by itself establish s
 
 **3. Source attribution does not consistently match the pinned -02 subject.**
 
-The candidate says P5's standing declares that finiteness cannot derive composition. Current [common P5, line 59](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) instead leaves that derivation question open. See candidate lines 194-196 and [255-258](../../claude/design/PRINCIPLES.md#contradictions).
+The candidate says P5's standing declares that finiteness cannot derive composition. Current [common P5, line 59](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) instead leaves that derivation question open. See candidate lines 194-196 and [255-258](../../../build_tenants/claude/design/PRINCIPLES.md#contradictions).
 
 The alleged `S(a_j)`/`H` notation overload at candidate lines 262-264 is also absent from [current formalisation, lines 81-87](../../../specification/requirements/PRINCIPLES.md#proposed-formalisation-and-open-claims).
 
-Additionally, [candidate lines 305-309](../../claude/design/PRINCIPLES.md#gaps) call the 2 October ABG handoff a tuple member, and lines 355-357 similarly describe ABG post-mortems "in the tuple." The [snapshot declaration, line 64](../../../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#common-c1-input-snapshot) explicitly excludes these deferred sources; lines 115-124 identify them as later C2 locators.
+Additionally, [candidate lines 305-309](../../../build_tenants/claude/design/PRINCIPLES.md#gaps) call the 2 October ABG handoff a tuple member, and lines 355-357 similarly describe ABG post-mortems "in the tuple." The [snapshot declaration, line 64](../../tickets/active/T-001-common-definition-and-checkpoints.md#common-c1-input-snapshot) explicitly excludes these deferred sources; lines 115-124 identify them as later C2 locators.
 
 The candidate's own residual at lines 395-396 correctly states that its ABG lessons came indirectly through the shared proposals and matrix. That disclosure should govern the earlier claims.
 
@@ -70,7 +70,7 @@ Bounded correction: remove the absent source contradictions or restate them as w
 
 **4. Conservation substitutes a stronger premise and overstates its classification.**
 
-Pr2 initially excludes reliance on the previous actor's private memory. At [candidate lines 164-171](../../claude/design/PRINCIPLES.md#p4-typed-composition-and-conservation), it becomes "a step's output is all the next step receives."
+Pr2 initially excludes reliance on the previous actor's private memory. At [candidate lines 164-171](../../../build_tenants/claude/design/PRINCIPLES.md#p4-typed-composition-and-conservation), it becomes "a step's output is all the next step receives."
 
 RF-003 permits declared authoritative inputs. RF-013 permits reconstruction from declaration, subject, basis and admissible inputs. Neither makes the preceding output the sole input.
 

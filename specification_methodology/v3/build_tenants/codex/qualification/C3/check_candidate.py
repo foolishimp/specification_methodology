@@ -84,7 +84,20 @@ def check(root, partial=False):
                     failures.append(f"missing target: {path.relative_to(root)} -> {target}")
             elif fragment and destination.suffix == ".md" and unquote(fragment) not in anchors(destination.read_text()):
                 failures.append(f"missing anchor: {path.relative_to(root)} -> {target}")
-    conservation = root / "CONSERVATION.json"
+    support = root.parent / "qualification/C3"
+    # These checks enforce the existing current-surface rule and owner placement.
+    for path in (root / "standards").rglob("*.md"):
+        if path.parent != root / "standards":
+            continue
+        opening = "\n".join(path.read_text().splitlines()[:16])
+        if re.search(r"^(?:Author|Status|Standing|Date|Revision):", opening, re.M):
+            failures.append(f"construction header in standard: {path.name}")
+    if sum(path.read_text(errors="ignore").count("Dimitar Popov") for path in root.rglob("*") if path.is_file()) != 1:
+        failures.append("package attribution must name Dimitar Popov once")
+    for name in ["CONSERVATION.json", "CANDIDATE.json", "DESIGN.md", "check_candidate.py"]:
+        if (root / name).exists():
+            failures.append("support carrier inside Product package: " + name)
+    conservation = support / "CONSERVATION.json"
     if conservation.exists():
         mapping = json.loads(conservation.read_text())
         rows = mapping["rows"]
@@ -116,12 +129,12 @@ def check(root, partial=False):
                 failures.append(f"changed mapped member: {row['id']}")
     elif not partial:
         failures.append("missing conservation map")
-    manifest = root / "CANDIDATE.json"
+    manifest = support / "CANDIDATE.json"
     if manifest.exists():
         members = json.loads(manifest.read_text())["members"]
         if len({member["path"] for member in members}) != len(members):
             failures.append("duplicate candidate inventory path")
-        declared = {member["path"] for member in members} | {"CANDIDATE.json"}
+        declared = {member["path"] for member in members}
         present = {str(path.relative_to(root)) for path in root.rglob("*") if path.is_file()}
         if present != declared:
             failures.append("candidate inventory differs from complete current tree")
@@ -141,6 +154,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--partial", action="store_true")
     args = parser.parse_args()
-    report = check(Path(__file__).resolve().parent, args.partial)
+    report = check(Path(__file__).resolve().parents[2] / "successor", args.partial)
     print(json.dumps(report, indent=2))
     raise SystemExit(0 if report["valid"] else 1)

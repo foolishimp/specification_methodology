@@ -7,8 +7,7 @@ provides generic transformation vocabulary. The
 [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
 relates those premises to this member's UP-020 and computed-treatment rules,
 identifying conditional consequences and independent purpose, policy or
-authority choices for the rows mapped there. Other UP-020 clauses remain
-unmapped by this initial branch.
+authority choices for the rows mapped there.
 
 The constitutional chain retains its direction from Goals. That selection,
 its grants, concrete result domains and other particular determinations are not

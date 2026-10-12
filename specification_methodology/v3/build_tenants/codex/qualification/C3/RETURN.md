@@ -1,13 +1,26 @@
-# STDO v3.0.0 Codex tenant construction return
+# Codex C3 Construction Return
 
-Current Product subject: edc884f49fcd137d9a34e73f2660158c6df8795a. Standing: the foundation-based work/recovery repair is independently satisfied within its declared cone and is ready for owner review. Full C3 and release acceptance remain open. Earlier candidate b4310c0 and its failed and satisfied results remain in Git and the qualification record.
+Current subject: the package inventory in [CANDIDATE.json](CANDIDATE.json).
+The [current-surface correction](surface-repair/RETURN.md) records the owner
+ruling, exact changed boundary and artifact evidence.
 
-The [current repair return](foundation-repair/RETURN.md) records the implemented premise → shared contract → particular method → ordinary acquisition chain, observed profile-result failure, projection repair, actual matched readers and independent retest confirmation. [Final review](foundation-repair/final-review/REVIEW.md) separates source satisfaction, observed non-recurrence, presentation residuals and unproved efficacy.
+The package contains one [standards corpus](../../successor/standards/README.md).
+Its [entry](../../successor/README.md) names the package author once. Earlier
+manuscripts, construction provenance and reviews are commentary outside the
+package. Design and qualification carriers remain outside it.
 
-The [successor](../../successor/README.md) contains 80 Product members. The [690-row conservation map](../../successor/CONSERVATION.json) records resolving author dispositions; these are not owner-accepted UP-015 dispositions. All fifteen original deciding method/guide bodies other than README retain their nonblank text; README is separately restated. [Distribution check](DISTRIBUTION_CHECK.json) verifies 71 predecessor pins, five views, 53 exact selected sections, 12 authority rows and 80 manifest-covered Product members. No native installation is inferred.
+The [conservation map](CONSERVATION.json) records all 690 author dispositions
+and resolving loci; it supplies no authoritative per-member acceptance.
+The source-package inventory has 77 method/distribution members and one package
+entry. Actual release notes remain an owner-selected publication obligation;
+the manifest-schema exercise uses a separate hypothetical fixture.
 
-Builder/predecessor: stdo://releases/v2.5.1-rc.2/, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782. Worktree /Users/jim/src/apps/specification_methodology-codex, branch tenant/codex/c3-v3; exact effects territory specification_methodology/v3/build_tenants/codex/. Claude retains the common pen. Jim's continue selects this bounded repair under the existing STDO 2.5.1 Executive/Writer process; [execution](EXECUTION.md) records decisions and separate effects. Same-model-family fresh-session exception is declared only for reader-output assessment.
+Previous source comparisons and reader exercises retain their frozen subjects,
+including the foundation recovery source at edc884f. Their judgments and
+limitations are preserved in the [prior return](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/PRIOR_C3_RETURN.md).
+The correction changes placement and construction narration. It supplies no
+new independent whole-member or whole-method judgment.
 
-[Applicability](APPLICABILITY.md) and [closure](CLOSURE.md) retain historical evidence boundaries. The [a_c checks](a_c/MECHANICAL_RESULT.json) bind the current source and exact tool; 608 finite cases remain a bounded token interpretation, not execution of the methodology or proof of unknown external effects. Current [inventory](../../successor/CANDIDATE.json), [artifact checks](CANDIDATE_CHECK.json), [negative controls](NEGATIVE_CONTROLS.json) and [measurements](MEASUREMENTS.json) are structural/effect records. They mint no acceptance or grant.
-
-Remaining: reconstruct other method branches on explicit premises, independent per-member conservation/use acceptance, pen-owned integration and canonical selection, exact native/cohort and host qualification, owner acceptance and release. Common/peer/main, v2, cohort and release bytes are unchanged by this tenant work.
+Whole-corpus foundation reconstruction, per-member acceptance, common
+integration, installed qualification, release and owner selection remain open.
+No provider call or background worker is selected for this correction.

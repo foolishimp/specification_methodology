@@ -49,7 +49,7 @@ is not a silent -03 refreeze or a claim that old common bytes are current.
 | stdo_3/specification/conformance/README.md | ba8b9da82a5e45d19d6919c14416e816e082c8fb97bf846c06d530aff80454ce |
 | stdo_3/specification/requirements/A_C_DEPENDENCY.md | 8c8857d7ee495065f44149623b08fe2a7b6d6d6cf54376e6500853fe05000efd |
 
-Own accepted C1 subject: [design/PRINCIPLES.md](../design/PRINCIPLES.md), SHA256
+Own accepted C1 subject: [design/PRINCIPLES.md](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/PRINCIPLES.md), SHA256
 2a148a0ce3460533446c678a06aee809c3dabf8e99a95ad1eeb5d08169e68d89. Its bytes
 are unchanged. Owner acceptance and waived post-repair confirmation are taken
 from the named common C1 disposition; no new independent review is asserted.
@@ -86,9 +86,9 @@ A future review reads the named tenant checkpoint commit, not a working tree.
 
 | Output | SHA256 | Bytes | Lines |
 |---|---|---:|---:|
-| [design/C2_CAPABILITIES.md](../design/C2_CAPABILITIES.md) | bec6e4cd7c3568b516d8c4b86407d768359270e049f79b3123880941df0cfbe4 | 11663 | 196 |
+| [design/C2_CAPABILITIES.md](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/C2_CAPABILITIES.md) | bec6e4cd7c3568b516d8c4b86407d768359270e049f79b3123880941df0cfbe4 | 11663 | 196 |
 | [qualification/C2_CASES.md](C2_CASES.md) | 723ee23ddbda74163ea336018c149ee76c0ad56eabf56b88bf4374f93c25ec35 | 13386 | 141 |
-| [design/BUILD_PLAN.md](../design/BUILD_PLAN.md) | efe1285e5f7e88ce00fe9fea3678cdcc6be2797f94ae46afc0654d6c1d382ba0 | 11328 | 132 |
+| [design/BUILD_PLAN.md](../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/historical-drafts/design/BUILD_PLAN.md) | efe1285e5f7e88ce00fe9fea3678cdcc6be2797f94ae46afc0654d6c1d382ba0 | 11328 | 132 |
 
 ## Checks And Observations
 
