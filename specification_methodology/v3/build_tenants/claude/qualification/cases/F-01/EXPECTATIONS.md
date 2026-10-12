@@ -193,3 +193,75 @@ gap, not a failure.
 - new frame, F-D, another frame
 - stop at question 6, question 8
 - pass, fail, partial, engine, registry
+
+## Amendment for subject revision 2 (ac3ec5f)
+
+Dated 2026-10-12. Derived from the member at ac3ec5f (ACTIVATION §3 three
+cases, §7; REFERENCE_FRAME RF-011, §10 family-inclusion and reopen
+paragraphs) and rc.2 #rf-012-closed-results, #return-a-closed-result,
+#applicability-and-required-results, #diagnostic-order, #revision-actions.
+Supersedes A12, B9, B11, B12; every other item stands. No frame file or
+run output read.
+
+### Task A
+
+A12a (supersedes A12). Result: out_of_frame, required. E1 depends on "the
+source table's row count at export time"; after CHG-2026-1009 the subject
+leaves open whether that is the primary's state or the replica's state
+read by D-3's transaction, Mara owns the meaning, and the actor may not fix
+it (A10). Under §3 a term the claim depends on and the frame leaves
+undefined is an undeclared material relation, and indeterminate requires
+every required relation declared, so indeterminate is no longer accepted.
+Sat: out_of_frame; the result names the undefined term as the missing
+relation, Mara as owner, and the reconfiguration pressure (Mara's ruling,
+then a refined E1 frame reactivated on b-120 with an export whose
+source-table count is recorded under the ruled meaning); it may also name
+the capability the record-holder lacks. Under Claim K, A14 stands and K is
+retained unresolved, waiting on that ruling. Fals: indeterminate, even with
+the gap stated; satisfied, falsified; invalid_basis (b-120's coordinates
+are exact); out_of_frame naming only missing tools or evidence with the
+term left undefined; no result word, or `incomplete` offered as the result
+(the record was exercised; the ground is the missing declaration); the
+term fixed by the actor's own assumption. ACTIVATION §3 cases 1 and 2; RF-003, RF-006; rc.2
+#rf-012-closed-results, #reconfigure-when-necessary.
+
+### Task B
+
+B9a (supersedes B9). Question 1 is answered by family inclusion. Sat: the
+output tests each E4 activation by asking whether the question E4 decides,
+queue state at a named time, is one the frame's declared family states at
+its coordinates: F-C's family states it (yes); F-A's, sender delivery
+behaviour on one commit, does not (no); Q1 is no for the F-A activation and
+the list stops there with that reason. Fals: Q1 yes because F-A and F-C are
+both in S, because the engineer "evaluated delivery", or because the frame
+is named delivery; Q1 unknown (both families are in the subject verbatim);
+stop at Q6 or Q8 with Q1 yes or unanswered. RF §10 family-inclusion
+paragraph; RF-001; rc.2 #diagnostic-order, #evaluation.
+
+B11a (supersedes B11). The reopened set follows the action. If the action
+revises a frame's declaration (any change to F-A or F-C), that frame gets a
+new revision coordinate and the revision lists every result bound to its prior
+revision as reopened: for F-A, E1, E3 and the F-A E4 result; for F-C, the
+F-C E4 result; plus the E4 coverage row. A result leaves the list only by a
+recorded re-check finding it independent of the change or by
+re-evaluation. If the action changes no frame declaration (E4
+rerouted to F-C by clarifying activation, or the inventory revised), the
+output says so and reopens the two E4 activations and results and the E4
+row. Fals, denial of reopen: a frame revised with only E4 listed; "E1 and
+E3 are unaffected" without a recorded re-check; "nothing reopened"; a
+revised frame with no new revision coordinate; silence on prior results.
+RF §10 reopen paragraph, RF-005, RF-011; ACTIVATION §7; rc.2
+#revision-actions, #return-a-closed-result.
+
+B12a (supersedes B12). F-B unchanged and E2 stands; a frame whose
+declaration is unchanged keeps identity and results; a revised frame keeps
+no prior result closed until re-checked. Fals: every frame re-versioned;
+results under a revised frame carried as standing by silence. RF §10,
+RF-017.
+
+### Failure signatures added
+
+- result: indeterminate (Task A)
+- incomplete as the result, no result word
+- both in S, both declared, evaluated delivery (as the Q1 ground)
+- E1 and E3 unaffected, only E4 reopened (after a frame revision)
