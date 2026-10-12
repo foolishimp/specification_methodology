@@ -10,9 +10,12 @@ and restates none of them.
 
 The core names no runtime, no carrier and no executor. Terms owned outside
 the core, by a profile, a realisation or an rc.2 member, never enter tier
-1 or 2 except in a disposition table: graph, edge, vector, traversal,
-ledger, event log, worksite, HoG, F_D, F_P, F_H, Markov overlay, module,
-screen, entity cut. A profile may bind a core mechanism to one of these;
+1 or 2 except in a disposition table: graph, edge, vector, ledger, event
+log, worksite, HoG, Markov overlay, screen, entity cut, and the design
+profile's IACS and Prime. The traversal record and the functor kinds F_D,
+F_P and F_H are tier-1 calculus terms owned by AXIOMATIC_CALCULUS §5, and
+"module" is a generic term, as the predecessor's generic testing law uses
+it; neither is restricted here. A profile may bind a core mechanism to one of these;
 the binding is declared in the profile with its direction, preserved
 meaning, narrowed scope and invalidation. The declared-binding rule is new
 (P0 boundary, P1); its shape follows ODD's specialisations of F_P and F_H,
