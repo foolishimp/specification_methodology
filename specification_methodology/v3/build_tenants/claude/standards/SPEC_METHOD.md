@@ -1026,6 +1026,32 @@ proof obligations, and none is automatically an independently released
 product. One constitutional surface and its version boundary for a project
 are PRODUCT_DEFINITION §11.
 
+### Shared method adoption and propagation (STDO-UP-012)
+
+A reusable change to this method keeps one authority relation from the
+evidence that prompts it to the consumer that realises it (P6, P3;
+provenance rc.2 POSTING_GUIDE
+#shared-method-adoption-and-propagation-stdo-up-012):
+
+```text
+incident or review evidence
+  -> shared-method intake
+  -> one owning standard
+  -> consistency and independent review
+  -> human-authority acceptance
+  -> one complete released STDO version
+  -> explicit consumer selection
+  -> consumer-owned realisation and evidence
+```
+
+The chain states authority causality. It prescribes no intake workflow and
+no artifact set (P2). An executable tool, runtime, carrier schema or
+assurance implementation cannot enter the method merely because it
+accompanies a method lesson; it requires its own Product authorisation
+(P6). Other standards consume admitted law by reference (P3, P6), and a
+consumer selects a complete released version rather than mixing members from different cuts (P3;
+the release version boundary above, PRODUCT_DEFINITION §4).
+
 ## 7. Migration
 
 ### Core interface migration
@@ -1456,10 +1482,12 @@ by PROFILES §2 (FOUNDATIONS §2); UP-014's design-view examples are written
 "a detailed algebra or semantic design view" (ACTIVATION §6); UP-013's
 "Prime" law is written "the prime law of a design profile" (§3); the
 Method's design-module co-evolution predicate is named without its symbol
-(§4). The table's last two rows are of rc.2 DESIGN_MODULE_METHOD.md, whose
-core rule and non-goals the member map places here; "this method" is
-written "the design profile" and its scope, boundaries that profile
-governs, is kept.
+(§4). The table's last three rows are of other rc.2 members: two of
+DESIGN_MODULE_METHOD.md, whose core rule and non-goals the member map
+places here, where "this method" is written "the design profile" and its
+scope, boundaries that profile governs, is kept; and one of
+POSTING_GUIDE.md, whose UP-012 the member map places here, where
+"Product authorization" is written "Product authorisation".
 
 | Anchor | Disposition | Locus |
 |---|---|---|
@@ -1524,6 +1552,7 @@ governs, is kept.
 | #adr-folder-convention | conserved | §10 |
 | DESIGN_MODULE_METHOD #3-core-rule | conserved; the core rule at "should" force and the too-imperative, too-coupled test, scoped to boundaries the design profile governs; DESIGN_MODULE §1 Core rule points here | §2 Realisation shape |
 | DESIGN_MODULE_METHOD #17-non-goals | conserved; the four non-requirements, the readability requirement, the required composition and effect algebra with its five laws, vocabulary optional and law not; DESIGN_MODULE §12 Non-goals points here | §2 Realisation shape |
+| POSTING_GUIDE #shared-method-adoption-and-propagation-stdo-up-012 | conserved; the eight-step authority chain verbatim, causality not workflow or artifact set, no entry by accompaniment and the separate Product authorisation, consumption by reference, complete-version selection without mixing; POSTING_GUIDE §10 points here | §6 Shared method adoption and propagation (STDO-UP-012) |
 
 Rows of other rc.2 members that this member touches are disposed at their
 receiving members: the overlay, STDO-SURFACE-001 and bootstrap rows at
@@ -1536,5 +1565,6 @@ EXECUTIVE_BASELINE and ASSURANCE;
 RELEASE_METHOD's identities, phases, naming, cohorts and UP-015 at RELEASE
 and FOUNDATIONS §1; UP-018 at
 [DESIGN_MODULE §7](DESIGN_MODULE.md#invariant-reconstruction-sufficiency-up-018); AC-020 at
-AXIOMATIC_CALCULUS §7; POSTING_GUIDE's UP-012 (shared method adoption and
-propagation) at the guides member, where this member receives it.
+AXIOMATIC_CALCULUS §7; POSTING_GUIDE's other rows at
+[POSTING_GUIDE §11](POSTING_GUIDE.md#11-source-dispositions), its UP-012
+received here (§6, the table's last row).

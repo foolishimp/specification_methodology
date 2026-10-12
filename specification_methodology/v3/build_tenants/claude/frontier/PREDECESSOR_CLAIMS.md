@@ -46,7 +46,7 @@ A member with no sub-headings is one row for its whole text.
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Standards Library (whole member) | `#standards-library` |  | 2,330 | unresolved | |
+| Standards Library (whole member) | `#standards-library` |  | 2,330 | conserved; the cut as the constitutional member set with subordinate tooling at "may", the nine member kinds with the calculus separation, the traversal profile's neutrality and optional adoption, the non-deciding index, compact read models as projected frames, schemas and templates with their named members, the shared versioned store, logical URIs and no machine-local paths, the non-default project-local copy, the four authority sources and the two non-replacements; the member map's RELEASE share is owned by PRODUCT_DEFINITION §4 and §12, which RELEASE consumes | `README.md#library-and-installed-basis`; `PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager`; `PRODUCT_DEFINITION.md#12-bootstrap`; `RELEASE.md#exact-cut-qualification`; `RELEASE.md#4-selector-and-consumer-adoption` |
 
 ## AXIOMATIC_CALCULUS.md
 
@@ -169,20 +169,20 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/GLOSSARY_GUIDE.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Index Contract | `#index-contract` |  | 948 | unresolved | |
-| Method Identity Index | `#method-identity-index` |  | 474 | unresolved | |
-| Axiomatic-Calculus Index | `#axiomatic-calculus-index` |  | 2,556 | unresolved | |
-| Traversal-Occurrence-Profile Index | `#traversal-occurrence-profile-index` |  | 1,787 | unresolved | |
-| Semantic Resolution Index | `#semantic-resolution-index` |  | 1,562 | unresolved | |
-| Product-Definition Routing Index | `#product-definition-routing-index` |  | 2,520 | unresolved | |
-| Release-Publication Index | `#release-publication-index` |  | 1,187 | unresolved | |
-| Reference-Frame Evaluation Index | `#reference-frame-evaluation-index` |  | 777 | unresolved | |
-| Build-Tenancy Index | `#build-tenancy-index` |  | 957 | unresolved | |
-| Recursive Product Index | `#recursive-product-index` |  | 1,435 | unresolved | |
-| Product-Assurance Index | `#product-assurance-index` |  | 1,110 | unresolved | |
-| Graph-Native ODD Index | `#graph-native-odd-index` |  | 1,477 | unresolved | |
-| Ambiguity-Governance Index | `#ambiguity-governance-index` |  | 454 | unresolved | |
-| World-Model Index | `#world-model-index` |  | 1,661 | unresolved | |
+| Index Contract | `#index-contract` |  | 948 | conserved; no definitions and the seven things not declared, non-deciding index into the selected basis, the three row elements, candidate meaning and governed scope, invalid unresolvable rows, intentional repetition and its five non-implications, resolution with no fallback (now PRODUCT_DEFINITION §5); the locator law stated in §2 | `GLOSSARY.md#1-index-contract`; `GLOSSARY.md#2-locator-law` |
+| Method Identity Index | `#method-identity-index` |  | 474 | conserved; both terms in the method-identity context at SPEC_METHOD §1; the `O` relation clause moves to PROFILES §2 | `GLOSSARY.md#3-method-identity` |
+| Axiomatic-Calculus Index | `#axiomatic-calculus-index` |  | 2,556 | conserved; all fourteen rows in the axiomatic-calculus context at AXIOMATIC_CALCULUS's sections | `GLOSSARY.md#4-axiomatic-calculus` |
+| Traversal-Occurrence-Profile Index | `#traversal-occurrence-profile-index` |  | 1,787 | unresolved; the receiving member TRAVERSAL_OCCURRENCE is not yet written and no tenant clause declares `urn:stdo:bounded-context:traversal-occurrence-profile`, so no row can resolve under the index contract; the terms are listed pending | `GLOSSARY.md#15-terms-awaiting-an-owning-member` |
+| Semantic Resolution Index | `#semantic-resolution-index` |  | 1,562 | conserved; all eight terms, owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §5 | `GLOSSARY.md#5-semantic-resolution` |
+| Product-Definition Routing Index | `#product-definition-routing-index` |  | 2,520 | conserved; all eleven terms, owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §1, §3, §4 and §7 | `GLOSSARY.md#6-product-definition-routing` |
+| Release-Publication Index | `#release-publication-index` |  | 1,187 | conserved; all seven terms at RELEASE §2 | `GLOSSARY.md#7-release-publication` |
+| Reference-Frame Evaluation Index | `#reference-frame-evaluation-index` |  | 777 | conserved; the reference frame at FOUNDATIONS §2 Frame objects with REFERENCE_FRAME §1 declaring the context, both specialist families at EXECUTIVE_BASELINE §11; the successor's frame objects and result algebra added, those without a declared context listed in §14 | `GLOSSARY.md#8-reference-frame-evaluation` |
+| Build-Tenancy Index | `#build-tenancy-index` |  | 957 | conserved; four terms owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §8, the work item at TICKETS §4 | `GLOSSARY.md#9-build-tenancy` |
+| Recursive Product Index | `#recursive-product-index` |  | 1,435 | conserved; all eight terms, owner moved from rc.2 SPEC_METHOD to FOUNDATIONS §2 Product lineage objects | `GLOSSARY.md#10-recursive-product` |
+| Product-Assurance Index | `#product-assurance-index` |  | 1,110 | conserved; five terms owner moved from rc.2 SPEC_METHOD to ASSURANCE §2, `Unit Test` to ASSURANCE §15 with DESIGN_MODULE as relation | `GLOSSARY.md#11-product-assurance` |
+| Graph-Native ODD Index | `#graph-native-odd-index` |  | 1,477 | unresolved; the receiving member ODD is not yet written and no tenant clause declares `urn:stdo:bounded-context:graph-native-odd`, so no row can resolve under the index contract; the terms are listed pending and F_D, F_P, F_H keep their axiomatic-calculus row | `GLOSSARY.md#15-terms-awaiting-an-owning-member` |
+| Ambiguity-Governance Index | `#ambiguity-governance-index` |  | 454 | conserved; both terms at SPEC_METHOD §5 | `GLOSSARY.md#12-ambiguity-governance` |
+| World-Model Index | `#world-model-index` |  | 1,661 | conserved; all nine terms at WORLD_MODEL §6, the Builder Project relation at its specialisation clause | `GLOSSARY.md#13-world-model` |
 
 ## IDENTITY_METHOD.md
 
@@ -275,15 +275,15 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/POSTING_GUIDE.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Boundary | `#boundary` |  | 294 | unresolved | |
-| Location | `#location` |  | 557 | unresolved | |
-| Carrier Identity | `#carrier-identity` |  | 416 | unresolved | |
-| Categories | `#categories` |  | 411 | unresolved | |
-| Structure | `#structure` |  | 415 | unresolved | |
-| Discussion State And Mutability | `#discussion-state-and-mutability` |  | 1,117 | unresolved | |
-| Posting Rules | `#posting-rules` |  | 450 | unresolved | |
-| Ratification | `#ratification` |  | 205 | unresolved | |
-| Shared Method Adoption And Propagation (`STDO-UP-012`) | `#shared-method-adoption-and-propagation-stdo-up-012` | UP-012 | 808 | unresolved | |
+| Boundary | `#boundary` |  | 294 | conserved; the five content kinds, the three excluded kinds and their home in bound WHAT or ratified design | `POSTING_GUIDE.md#2-boundary` |
+| Location | `#location` |  | 557 | conserved; the `ticketing.comments.root` binding, the default path and example, alternative carriers at "may", the must-preserve rule, no truth from location or visibility | `POSTING_GUIDE.md#3-location` |
+| Carrier Identity | `#carrier-identity` |  | 416 | conserved; the filename pattern and example, the subject at "should", the seven elements a non-file carrier must preserve | `POSTING_GUIDE.md#4-carrier-identity` |
+| Categories | `#categories` |  | 411 | conserved; the six categories with their uses | `POSTING_GUIDE.md#5-categories` |
+| Structure | `#structure` |  | 415 | conserved; the base shape verbatim, the MATRIX decision table | `POSTING_GUIDE.md#6-structure` |
+| Discussion State And Mutability | `#discussion-state-and-mutability` |  | 1,117 | conserved; the three states, in-place updates with the five kinds, preserved `Date` and optional `Updated`, "discouraged" and "prefer" for closed posts with three conditions, closed posts as commentary until adopted | `POSTING_GUIDE.md#7-discussion-state-and-mutability` |
+| Posting Rules | `#posting-rules` |  | 450 | conserved; the six rules, "should normally" kept | `POSTING_GUIDE.md#8-posting-rules` |
+| Ratification | `#ratification` |  | 205 | conserved; the three adopting surfaces, commentary not law | `POSTING_GUIDE.md#9-ratification` |
+| Shared Method Adoption And Propagation (`STDO-UP-012`) | `#shared-method-adoption-and-propagation-stdo-up-012` | UP-012 | 808 | conserved; the member map places UP-012 in SPEC_METHOD, restated there in full: the eight-step chain, causality not workflow or artifact set, no entry by accompaniment and separate Product authorisation, consumption by reference, complete-version selection without mixing; POSTING_GUIDE §10 points to it | `SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012`; `POSTING_GUIDE.md#10-shared-method-adoption` |
 
 ## REFERENCE_FRAME_METHOD.md
 
@@ -777,15 +777,15 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Core Rule | `#core-rule` |  | 153 | unresolved | |
-| Style Rules | `#style-rules` |  | 452 | unresolved | |
-| Remove These Habits | `#remove-these-habits` |  | 277 | unresolved | |
-| Good Prose | `#good-prose` |  | 230 | unresolved | |
-| Bad Prose | `#bad-prose` |  | 316 | unresolved | |
-| Method Alignment | `#method-alignment` |  | 241 | unresolved | |
-| Specification Artifact Practice | `#specification-artifact-practice` |  | 602 | unresolved | |
-| Practical Layer Checks | `#practical-layer-checks` |  | 310 | unresolved | |
-| Current-Surface Writing | `#current-surface-writing` |  | 486 | unresolved | |
+| Core Rule | `#core-rule` |  | 153 | conserved; the reader, claim, reason and removal of performance | `WRITING_GUIDE.md#1-core-rule` |
+| Style Rules | `#style-rules` |  | 452 | conserved; the seven rules, "prefer" and "when possible" kept | `WRITING_GUIDE.md#2-style-rules` |
+| Remove These Habits | `#remove-these-habits` |  | 277 | conserved; all eleven habits, "usually" kept | `WRITING_GUIDE.md#3-habits-to-remove` |
+| Good Prose | `#good-prose` |  | 230 | conserved; the five marks and the cut rule | `WRITING_GUIDE.md#4-good-prose` |
+| Bad Prose | `#bad-prose` |  | 316 | conserved; the five marks | `WRITING_GUIDE.md#5-bad-prose` |
+| Method Alignment | `#method-alignment` |  | 241 | conserved; the four layers at "should", the rewrite rule | `WRITING_GUIDE.md#6-tone-and-authority-layer` |
+| Specification Artifact Practice | `#specification-artifact-practice` |  | 602 | conserved; the authority split, the four practices, the cut rule | `WRITING_GUIDE.md#7-specification-artifact-practice` |
+| Practical Layer Checks | `#practical-layer-checks` |  | 310 | conserved; the three questions, rewrite or delete | `WRITING_GUIDE.md#8-layer-checks` |
+| Current-Surface Writing | `#current-surface-writing` |  | 486 | conserved; present tense at "should", the three dispositions of non-live material, no dead law, the six preferred terms, the three uses of version labels | `WRITING_GUIDE.md#9-current-surface-writing` |
 
 ## Standards members beyond the sixteen bodies
 

@@ -33,6 +33,9 @@ current state under explicit uncertainty.
 | coordinate work as Executive, Worker or Reviewer, or adopt the baseline profile | [EXECUTIVE_BASELINE §3](EXECUTIVE_BASELINE.md#3-engagement-applicability) for direct versus coordinated entry, [§6](EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) and [§12](EXECUTIVE_BASELINE.md#12-complete-engagement-transition) for the Executive's duties and the transition, then [§16](EXECUTIVE_BASELINE.md#16-adoption-or-project-defined-configuration) to adopt or replace it |
 | design or review a software realisation boundary | [DESIGN_MODULE §5](DESIGN_MODULE.md#5-ontology-first-design) for ontology-first derivation, proportional sequencing and the decision-complete gate, [§6](DESIGN_MODULE.md#6-prime-law) and [§7](DESIGN_MODULE.md#7-ontology-and-three-view-design-gate) for Prime, the carrier set and the three-view gate, [§11](DESIGN_MODULE.md#11-review) for the review questions, then [ASSURANCE §14 to §16](ASSURANCE.md#14-design-to-module-evidence-route) for module evidence, unit tests and lifecycle confirmation |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
+| write or revise a specification artifact | [WRITING_GUIDE](WRITING_GUIDE.md), then [SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain) for the layer a sentence belongs to |
+| publish analysis, a review, a handoff or a proposed change | [POSTING_GUIDE](POSTING_GUIDE.md), then [SPEC_METHOD §6](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012) for how a reusable method change is adopted |
+| find the clause that owns a term | [GLOSSARY](GLOSSARY.md), then [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) to resolve the occurrence |
 | load it into a model's context | the set program and its five projected frames under [../a_c/set/](../a_c/set/README.md): one frame per route above (bounded activation, composition, work state, recoverability, review); [../a_c/t3/](../a_c/t3/README.md), [../a_c/t2/](../a_c/t2/README.md) and [../a_c/t1/](../a_c/t1/README.md) are its frozen predecessors |
 
 ## Documents
@@ -53,6 +56,9 @@ current state under explicit uncertainty.
 | [PROFILES.md](PROFILES.md) | 3 | profile imports and the core boundary |
 | [EXECUTIVE_BASELINE.md](EXECUTIVE_BASELINE.md) | 3 | the optional Executive, Worker and Reviewer profile: canonical compression, authority boundary, engagement applicability, profile terms, Executive attention with its drift locks and no-mutation rule, the derived Executive, Worker and Reviewer frames, steel-thread delivery, the twelve generic specialist families, the engagement transition with the promotion constraint projection, handoff and coverage application, adoption or project configuration, actor binding, profile qualification, failure classification, anti-patterns, closure |
 | [DESIGN_MODULE.md](DESIGN_MODULE.md) | 3 | the optional software-design profile: purpose, position and graph-execution alignment; boundary closure evaluators and ingress collapse; functional bias and Python typing; ontology-first design with proportional design sequencing, decision-complete symbolic design, bounded frame conservation (UP-017), native constructability (UP-002), capability and foundation selection (UP-023), entity, authority, transformation-admission (UP-016) and function completeness, Prime atoms, whole-family contraction and root conservation (UP-003), ontology projection; Prime law with governance cost (UP-005), the carrier set, promotion and inflation; the three-view gate with invariant reconstruction (UP-018) and computational realisation (UP-019); theoretical framing; module taxonomy; realisation rules; review questions and checklist; adoption, relations and identity defaults |
+| [POSTING_GUIDE.md](POSTING_GUIDE.md) | guide | the commentary layer: a post's purposes and boundary, location binding, carrier identity, categories, structure, discussion state, posting rules and ratification |
+| [WRITING_GUIDE.md](WRITING_GUIDE.md) | guide | writing discipline: core rule, style rules, habits to remove, good and bad prose, tone by authority layer, specification artifact practice, layer checks, current-surface writing |
+| [GLOSSARY.md](GLOSSARY.md) | guide | the non-deciding locator index: index contract, locator law, rows by bounded context, terms awaiting a context declaration or an owning member |
 
 Each clause names the principle that requires it (P0 to P6, defined in
 FOUNDATIONS §3) and, where it restates or supersedes an rc.2 clause, may
@@ -61,3 +67,75 @@ carry that clause's route as provenance; a route is never the disposition
 tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md). The corpus is
 applicable without the rc.2 cut, which remains the operative builder of
 this construction until STDO 3 is released.
+
+## Library and installed basis
+
+One complete immutable released RC cut of this standards tree is the
+constitutional member set of the selectable STDO Product. The release may
+also carry subordinate executable and interaction tooling (P6, P3;
+provenance rc.2 README #standards-library). A cut carries (P3, P2):
+
+- the constitutional members of tiers 1 and 2 above;
+- the carrier-neutral [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md), whose
+  a_c theory stays separate from interpreted subject models and carrier
+  encodings ([AC-020](AXIOMATIC_CALCULUS.md#ac-020-layer-and-release-separation));
+- the application-neutral traversal occurrence profile, which instantiates
+  one closed model-family signature under an exact a_c basis without
+  changing the calculus or selecting a consumer, and whose adoption stays
+  optional;
+- derived application profiles such as
+  [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md);
+- the companion guides [POSTING_GUIDE](POSTING_GUIDE.md) and
+  [WRITING_GUIDE](WRITING_GUIDE.md);
+- the non-deciding semantic locator index [GLOSSARY](GLOSSARY.md), whose
+  rows point to context-declaring owning clauses and never define a shared
+  default;
+- compact read models for activations that need a compact method basis:
+  the projected frames of the set program under
+  [../a_c/set/](../a_c/set/README.md);
+- normative interoperability schemas under `schemas/`, among them the
+  layout-neutral product definition overlay and the deterministic
+  installed-release manifest; and
+- starter templates under `templates/`: the single per-product product
+  definition template, project specification templates, the project
+  reference-frame basis template and agent bootstrap templates.
+
+The traversal occurrence and graph-execution profile members, the schemas
+and the templates are not yet on this branch; they land at steps 8 and 10
+of [DOCUMENT_STRUCTURE](../design/DOCUMENT_STRUCTURE.md#construction-order)
+(P6).
+
+The STDO toolchain manager installs each complete immutable cut once in a
+shared versioned store and resolves logical release URIs, so a product
+definition names its basis by logical URI and manifest digest and carries
+no machine-local path
+([PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager))
+(P3, P6). A project-local copy stays possible when it is explicitly bound
+and verified; it is not the default
+([PRODUCT_DEFINITION §12](PRODUCT_DEFINITION.md#12-bootstrap)) (P6, P3).
+Installed bytes take their authority from the exact RC cut, the product
+definition's basis URI, the manifest digest and the member inventory
+([PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager),
+[RELEASE §3](RELEASE.md#exact-cut-qualification)) (P3, P6). Neither the
+mutable authoring head nor the moving version-line selector silently
+replaces that consumer basis
+([RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption)) (P6, P3).
+
+## Source dispositions
+
+The row of rc.2 README.md, received by this member. A route is provenance
+only. Generalisations recorded here: "this tree" is this tenant's
+standards tree; the predecessor's companion governance and operating
+surfaces RELEASE_METHOD, TICKET_METHOD and DESIGN_MODULE_METHOD are tier 2
+and tier 3 members here (RELEASE, TICKETS, DESIGN_MODULE), so the
+companion item names the two guides; the compressed read models under
+`authority_compressions/` are carried as the projected frames of the set
+program, whose relation to the compressions is disposed at the
+compression rows; the installed cut, store and manifest claims that the
+member map sends to RELEASE are owned by PRODUCT_DEFINITION §4 and §12,
+which RELEASE §1 consumes, and are restated above with those owners
+named.
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #standards-library | conserved; the cut as the constitutional member set, subordinate tooling at "may", the nine member kinds with the calculus separation, the traversal profile's neutrality and optional adoption, the non-deciding index, compact read models, schemas and templates with their named members, the shared versioned store, logical URIs and no machine-local paths, the non-default project-local copy, the four authority sources and the two non-replacements | Library and installed basis; PRODUCT_DEFINITION §4, §12; RELEASE §3, §4 |
