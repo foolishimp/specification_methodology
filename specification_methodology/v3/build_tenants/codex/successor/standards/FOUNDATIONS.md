@@ -117,11 +117,11 @@ source declaration or adoption premise requires fresh applicability before use.
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|
 | frame-set authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human authority that declares or accepts the project frame set |
-| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relatio |
-| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluatio |
-| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operatio |
+| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relation |
+| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluation |
+| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operation |
 | decision authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to accept, reject, or otherwise dispose its result |
-| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work |
+| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work. |
 
 These are reference-only imports into urn:stdo:bounded-context:foundations.
 They provide no semantic, evaluation, operation or decision authority. Baseline
