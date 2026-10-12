@@ -45,8 +45,7 @@ each distinct current product WHAT. Its conventional filename is
 `stdo_<label>.json`; `stdo_default.json` is the default for a source
 project with one product definition. A directory may hold more than one
 definition when it hosts more than one distinct product WHAT, and only
-then. Several
-build tenants realising the same WHAT are entries in one definition and
+then. Several build tenants realising the same WHAT are entries in one definition and
 never add definition files (P3).
 
 The suffix `<label>` is the Definition Label: a stable lowercase local

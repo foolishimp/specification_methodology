@@ -44,8 +44,7 @@ requirements, design, code, evidence and repricing relate; what counts as
 specification sufficiency; what kinds of requirement truth exist; and how
 authority flows during iterative delivery. If a project's implementation
 disappears, the method should still be sufficient to bootstrap a new
-spec-driven project
-process from scratch; the method plus the surviving domain specification
+spec-driven project process from scratch; the method plus the surviving domain specification
 can reconstruct the project (P2, P0; rc.2 #process-constitution).
 
 The boundary between surfaces is this: this member defines the process
