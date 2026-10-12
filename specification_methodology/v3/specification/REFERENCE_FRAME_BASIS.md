@@ -23,7 +23,7 @@ The exact installed [Frame Method](stdo://releases/v2.5.1-rc.2/standards/REFEREN
 | Independent assessment | One frozen subject, governing source and independently acquired expectations; source-first closed result | Author-independent Reviewer; no repair or candidate mutation. |
 | Conjunction/disposition | Closed tenant and reviewer returns, conflicts and residuals | Executive coordinates without FS/Git mutation; Jim owns common C1/C2 decisions. |
 
-The rows above are the C1 configuration. The rows below are PROPOSED for C3 under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and bind nothing until Jim accepts them.
+The rows above are the C1 configuration. The rows below are the C3 configuration accepted by Jim on 2026-10-12 under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract); they bind the installed baseline frames. The Executive and Reviewer actors per tenant are not yet named; an unbound actor admits no activation.
 
 | C3 activation | Subject and result | Actor binding and envelope |
 |---|---|---|
