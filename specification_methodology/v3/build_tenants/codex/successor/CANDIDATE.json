@@ -2,16 +2,16 @@
   "kind": "stdo.documentary-candidate",
   "product": "STDO Specification Methodology",
   "target_version": "3.0.0",
-  "standing": "Author candidate ready for review; final changed authority relations await independent confirmation; no acceptance or published cut.",
+  "standing": "Author candidate ready for review; independent confirmation satisfies the two repaired authority/recovery claims at the body input; no common checkpoint acceptance or published cut.",
   "source_input_commit": "b83ed1cc0b65842874bb3d7cabcb76492a4c0d48",
   "builder_basis": "stdo://releases/v2.5.1-rc.2/",
   "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
-  "candidate_body_input_commit": "f6f1ec2227eb596cea06426905bf54c0aeb76f3b",
+  "candidate_body_input_commit": "c10d70f4048157c4755b3c2ca6766cc429f7fbd2",
   "members": [
     {
       "path": "CONSERVATION.json",
-      "sha256": "f5720a2f5874429dc98c928c19cbc23c9de64d37c6838e528ea7018df950fc92",
-      "bytes": 381319,
+      "sha256": "100a6cad8de1f34517f009f7e2c1ac0b7adec9287a594f92324d86a00dd00484",
+      "bytes": 381372,
       "role": "review carrier"
     },
     {
@@ -272,8 +272,8 @@
     },
     {
       "path": "standards/TRANSFORMATION_LIBRARY.md",
-      "sha256": "93037f084556f72e5645a9a75f11602ec4400f86798d9529a7564ee8c938cfab",
-      "bytes": 14291,
+      "sha256": "4be1f033a4fbf2d978a15a873affddaefc7b7b96cf8d6665a9982a27938333ad",
+      "bytes": 14355,
       "role": "Product member",
       "expected_installed_path": "standards/TRANSFORMATION_LIBRARY.md"
     },
@@ -342,14 +342,14 @@
     },
     {
       "path": "standards/authority_compressions/stdo_bootstrap.md",
-      "sha256": "7882207c67b0b20bd3b10175a883184c86b32479ce7291bbb3ced43be28539c4",
+      "sha256": "b9fdc2bab32aaba9f57f6e256e316758a72ca90cf4a2d44ca70b4d4f30852109",
       "bytes": 6382,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/stdo_bootstrap.md"
     },
     {
       "path": "standards/authority_compressions/stdo_compressed.md",
-      "sha256": "528a76c7e0410a20a769c17aab51e6a1a5ab194edf8e34bef24868b0a2585b65",
+      "sha256": "cdfc41e0e5fa404d9aa7f6f44abeacdee6d86f0d900e8b62b8dde522adb1a03b",
       "bytes": 75446,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/stdo_compressed.md"
@@ -377,36 +377,36 @@
     },
     {
       "path": "standards/frames/CONSTITUTIONAL_DERIVATION.md",
-      "sha256": "e73d49872d7dcd9035b11757c3da6c066c3fdca765dc4c356073b6085aeaa961",
-      "bytes": 16647,
+      "sha256": "159a7ef34ec135016101079d5001d100c7a7e7dcb2c5811d8d72cd28dfca522a",
+      "bytes": 16648,
       "role": "Product member",
       "expected_installed_path": "standards/frames/CONSTITUTIONAL_DERIVATION.md"
     },
     {
       "path": "standards/frames/DOMAIN_BINDING.md",
-      "sha256": "65ef17a549c7ba63c7a72cde31c3bef909441533b3418c23ff179f4d6875d2e2",
-      "bytes": 19688,
+      "sha256": "25b70f0f7b5082d0c8fce7f9b99ee52ec92280f1f00ebfc47d57e1d5a17343ad",
+      "bytes": 19689,
       "role": "Product member",
       "expected_installed_path": "standards/frames/DOMAIN_BINDING.md"
     },
     {
       "path": "standards/frames/EVALUATION_CONJUNCTION.md",
-      "sha256": "d6475e2cb127a1ae0b1e4b956da08aaef44b62526b919933c438d7e1fca3857e",
-      "bytes": 15641,
+      "sha256": "7fd0f1cb3e0ce246b5f15da885fa8c09882249f3931705d83e66cb96885f4247",
+      "bytes": 15642,
       "role": "Product member",
       "expected_installed_path": "standards/frames/EVALUATION_CONJUNCTION.md"
     },
     {
       "path": "standards/frames/RELEASE_ADOPTION.md",
-      "sha256": "903893cf180b55f2e21556d62fd33016ecec2046ba1a85fb2cc1bedf6e659cae",
-      "bytes": 14420,
+      "sha256": "395d25d374f2b0c1b0cf25ea36110e54109fd74a7a0a0f3d6d5a60b2d8a07b63",
+      "bytes": 14421,
       "role": "Product member",
       "expected_installed_path": "standards/frames/RELEASE_ADOPTION.md"
     },
     {
       "path": "standards/frames/WORK_RECOVERY.md",
-      "sha256": "d9ad73e946d3e5fe43867b99ac5029a013eb1aa56c37b5623c68252d0b46f68e",
-      "bytes": 35234,
+      "sha256": "9642e7521207e9999f30d17d7b403316b1ac0a7e32374f45b93363e1cd63f58e",
+      "bytes": 35235,
       "role": "Product member",
       "expected_installed_path": "standards/frames/WORK_RECOVERY.md"
     },
@@ -602,6 +602,6 @@
     "release/release-note.md": "owner-selected releases/v<version>.md -> release/release-note.md"
   },
   "publication_decisions": "Common pen and Jim select the accepted tenant, exact cut/cohort and source materialization; this local inventory chooses none.",
-  "inventory_input_commit": "0e70f007b51808d8c667c2b7f3c76c8d48ec9c1b",
+  "inventory_input_commit": "21dd2c4213ea01334cacb1303b99aec7d175ed04",
   "snapshot_order": "Every listed byte is read from inventory_input_commit; the recording commit is a descendant. The inventory excludes itself to avoid recursive hashing."
 }
