@@ -22,8 +22,9 @@ guidance. This skill remains read-only.
 - Authorized requirements, design, code, or test work: `stdo-work`.
 - Independent exact-candidate evaluation: `stdo-review`.
 - Product progress, monitoring, or triage help: `stdo-status`.
-- Full owning-standard reload: use Claude's manual-only `refresh` where
-  available, or resolve and read the exact installed member directly.
+- Full owning-member reload of one registry entry: use Claude's manual-only
+  `refresh` where available, or resolve and read the exact installed members
+  directly.
 
 ## Establish The Basis
 
