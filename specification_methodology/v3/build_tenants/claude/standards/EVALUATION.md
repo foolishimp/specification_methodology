@@ -165,6 +165,18 @@ a proxy cannot change Product meaning, requirements, governing authority
 or accepted design, and such a change re-enters at its owning relation
 ([UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
 
+Where the subject is a successor, its acceptance evidence includes the
+successor disposition record of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+(STDO-UP-015), which states the law: the exact predecessor immutable cut
+the successor evolves, and one semantic disposition for every predecessor
+claim capable of affecting the successor. A claim whose disposition is
+unresolved cannot be qualified and so cannot be accepted. The record is
+evaluated semantically: the absence of a patch does not prove loss where
+a successor-native realisation preserves the behaviour, and naming or
+code similarity does not prove conservation without relevant evidence.
+An intentionally removed disposition is a decision of the current Product
+authority, and its record is that decision (P6, P3, P4b).
+
 ## 6. Conformance of realisations
 
 A realisation aⱼ conforms to a specification Σ when its interpreted behaviour
@@ -355,7 +367,8 @@ detected and the cost.
 | UP-007 | conserved; §3 |
 | RF-013 | conserved; §7; the benchmark is new |
 | RF frame qualification, method self-qualification | conserved; §7; rows in the table below |
-| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3 and UP-020's delegation in ACTIVATION §1 |
+| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3, UP-004 in full in IDENTITY §6 and UP-020's delegation in ACTIVATION §1 |
+| UP-015 as acceptance evidence | conserved; §5 states what acceptance requires of the successor disposition record; the law is restated in full in RELEASE §9 and applied to this corpus in FOUNDATIONS §1 |
 | Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
 | TICKET judgment continuity | conserved via ACTIVATION §7 |
 | Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |

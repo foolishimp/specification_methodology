@@ -190,29 +190,29 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Position | `#position` |  | 657 | unresolved | |
-| Core Law | `#core-law` |  | 12 | unresolved | |
-| &nbsp;&nbsp;1. Scoped Identity | `#1-scoped-identity` |  | 326 | unresolved | |
-| &nbsp;&nbsp;2. Uniqueness Law | `#2-uniqueness-law` |  | 404 | unresolved | |
-| &nbsp;&nbsp;3. Type Law | `#3-type-law` |  | 499 | unresolved | |
-| &nbsp;&nbsp;4. Stability Law | `#4-stability-law` |  | 411 | unresolved | |
-| Human-Readable vs Opaque Identity | `#human-readable-vs-opaque-identity` |  | 604 | unresolved | |
-| Identity Hierarchy | `#identity-hierarchy` |  | 759 | unresolved | |
-| Authority Split | `#authority-split` |  | 19 | unresolved | |
-| &nbsp;&nbsp;Engine-Owned Identity | `#engine-owned-identity` |  | 435 | unresolved | |
-| &nbsp;&nbsp;Domain-Owned Identity | `#domain-owned-identity` |  | 488 | unresolved | |
-| Authority Identity And Conservation (`STDO-UP-004`) | `#authority-identity-and-conservation-stdo-up-004` | UP-004 | 1,363 | unresolved | |
-| Default Formats And Overrides | `#default-formats-and-overrides` |  | 33 | unresolved | |
-| &nbsp;&nbsp;Defaults From A Bound ABG Realization | `#defaults-from-a-bound-abg-realization` |  | 419 | unresolved | |
-| &nbsp;&nbsp;Derived Domain Overrides | `#derived-domain-overrides` |  | 459 | unresolved | |
-| &nbsp;&nbsp;Override Publication Surface | `#override-publication-surface` |  | 1,060 | unresolved | |
-| Parsing Law | `#parsing-law` |  | 838 | unresolved | |
-| Release Version Boundary | `#release-version-boundary` |  | 639 | unresolved | |
-| Minimum Questions | `#minimum-questions` |  | 573 | unresolved | |
-| Examples | `#examples` |  | 12 | unresolved | |
-| &nbsp;&nbsp;Lawful | `#lawful` |  | 470 | unresolved | |
-| &nbsp;&nbsp;Unlawful | `#unlawful` |  | 288 | unresolved | |
-| Consequence For Implementations | `#consequence-for-implementations` |  | 541 | unresolved | |
+| Position | `#position` |  | 657 | conserved | `IDENTITY.md#1-position` |
+| Core Law | `#core-law` |  | 12 | not applicable: heading with no claim text (12 bytes); its four children are disposed individually | `IDENTITY.md#2-core-law` |
+| &nbsp;&nbsp;1. Scoped Identity | `#1-scoped-identity` |  | 326 | conserved | `IDENTITY.md#scoped-identity` |
+| &nbsp;&nbsp;2. Uniqueness Law | `#2-uniqueness-law` |  | 404 | conserved | `IDENTITY.md#uniqueness` |
+| &nbsp;&nbsp;3. Type Law | `#3-type-law` |  | 499 | conserved; three example kinds generalised to remove profile terms (graph_function, asset_surface, graph_call) | `IDENTITY.md#type` |
+| &nbsp;&nbsp;4. Stability Law | `#4-stability-law` |  | 411 | conserved | `IDENTITY.md#stability` |
+| Human-Readable vs Opaque Identity | `#human-readable-vs-opaque-identity` |  | 604 | conserved | `IDENTITY.md#3-readable-and-opaque-identity` |
+| Identity Hierarchy | `#identity-hierarchy` |  | 759 | conserved | `IDENTITY.md#4-identity-hierarchy` |
+| Authority Split | `#authority-split` |  | 19 | not applicable: heading with no claim text (19 bytes); its two children are disposed individually | `IDENTITY.md#5-authority-split` |
+| &nbsp;&nbsp;Engine-Owned Identity | `#engine-owned-identity` |  | 435 | conserved; "graph calls" generalised to "function calls" and "frames" to "execution frames" | `IDENTITY.md#engine-owned-identity` |
+| &nbsp;&nbsp;Domain-Owned Identity | `#domain-owned-identity` |  | 488 | conserved | `IDENTITY.md#domain-owned-identity` |
+| Authority Identity And Conservation (`STDO-UP-004`) | `#authority-identity-and-conservation-stdo-up-004` | UP-004 | 1,363 | conserved in full; the F_H projection generalised to a profile term; applied to acceptance in EVALUATION §5 | `IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004` |
+| Default Formats And Overrides | `#default-formats-and-overrides` |  | 33 | not applicable: heading with no claim text (33 bytes); its three children are disposed individually | `IDENTITY.md#7-default-formats-and-overrides` |
+| &nbsp;&nbsp;Defaults From A Bound ABG Realization | `#defaults-from-a-bound-abg-realization` |  | 419 | unresolved; member 7, DESIGN_MODULE; its identity-law determinations (starter conventions, not doctrine, lawful only while overridable) are already restated in IDENTITY §7 | `IDENTITY.md#derived-domain-overrides` |
+| &nbsp;&nbsp;Derived Domain Overrides | `#derived-domain-overrides` |  | 459 | conserved | `IDENTITY.md#derived-domain-overrides` |
+| &nbsp;&nbsp;Override Publication Surface | `#override-publication-surface` |  | 1,060 | conserved; "bound ABG realization" generalised to "bound runtime realisation" | `IDENTITY.md#override-publication-surface` |
+| Parsing Law | `#parsing-law` |  | 838 | conserved | `IDENTITY.md#8-parsing` |
+| Release Version Boundary | `#release-version-boundary` |  | 639 | superseded; the "latest-accepted" selector is replaced by the release law the clause cites (RELEASE §1 selector paragraph, §3 Exact-cut qualification, §8 Acceptance criteria: highest-ordinal published, never moved by acceptance); the row's other determinations are restated unchanged in IDENTITY §9 | `IDENTITY.md#9-release-version-boundary`; `RELEASE.md#1-context-and-position`; `RELEASE.md#exact-cut-qualification`; `RELEASE.md#acceptance-criteria` |
+| Minimum Questions | `#minimum-questions` |  | 573 | conserved | `IDENTITY.md#10-minimum-questions` |
+| Examples | `#examples` |  | 12 | not applicable: heading with no claim text (12 bytes); its two children are disposed individually | `IDENTITY.md#11-examples` |
+| &nbsp;&nbsp;Lawful | `#lawful` |  | 470 | conserved; the ABG realisation generalised to a runtime realisation | `IDENTITY.md#lawful` |
+| &nbsp;&nbsp;Unlawful | `#unlawful` |  | 288 | conserved | `IDENTITY.md#unlawful` |
+| Consequence For Implementations | `#consequence-for-implementations` |  | 541 | conserved | `IDENTITY.md#12-consequence-for-implementations` |
 
 ## ODD_METHOD.md
 
@@ -379,28 +379,28 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Release-Publication Context | `#release-publication-context` |  | 329 | unresolved | |
-| Position | `#position` |  | 1,357 | unresolved | |
-| Release Identities | `#release-identities` |  | 1,168 | unresolved | |
-| Project-Qualified Git Refs | `#project-qualified-git-refs` |  | 1,529 | unresolved | |
-| Project-Subtree Release Identity | `#project-subtree-release-identity` |  | 1,479 | unresolved | |
-| Historical Ref And Public-URI Conservation | `#historical-ref-and-public-uri-conservation` |  | 1,251 | unresolved | |
-| Phases | `#phases` |  | 619 | unresolved | |
-| Mutable Candidate Construction | `#mutable-candidate-construction` |  | 541 | unresolved | |
-| Immutable RC Publication | `#immutable-rc-publication` |  | 1,563 | unresolved | |
-| Exact-Cut Qualification | `#exact-cut-qualification` |  | 1,117 | unresolved | |
-| Monotonic Version-Line Advancement | `#monotonic-version-line-advancement` |  | 1,429 | unresolved | |
-| Selector And Consumer Adoption | `#selector-and-consumer-adoption` |  | 2,440 | unresolved | |
-| Naming | `#naming` |  | 898 | unresolved | |
-| Release-Scoped Assets | `#release-scoped-assets` |  | 804 | unresolved | |
-| Coordinated Release-Matched Asset Cohorts | `#coordinated-release-matched-asset-cohorts` |  | 2,089 | unresolved | |
-| &nbsp;&nbsp;Two-Commit Construction And One Publication Transaction | `#two-commit-construction-and-one-publication-transaction` |  | 2,527 | unresolved | |
-| &nbsp;&nbsp;Qualification And Recovery | `#qualification-and-recovery` |  | 1,410 | unresolved | |
-| Product Subject And Repository Carrier | `#product-subject-and-repository-carrier` |  | 836 | unresolved | |
-| Acceptance Criteria | `#acceptance-criteria` |  | 748 | unresolved | |
-| External Qualification Dependencies | `#external-qualification-dependencies` |  | 537 | unresolved | |
-| Successor Baseline Conservation (`STDO-UP-015`) | `#successor-baseline-conservation-stdo-up-015` | UP-015 | 1,185 | unresolved | |
-| Open Questions | `#open-questions` |  | 191 | unresolved | |
+| Release-Publication Context | `#release-publication-context` |  | 329 | conserved | `RELEASE.md#1-context-and-position` |
+| Position | `#position` |  | 1,357 | conserved | `RELEASE.md#1-context-and-position` |
+| Release Identities | `#release-identities` |  | 1,168 | conserved; the generic release objects are restated in FOUNDATIONS §2 Release objects | `RELEASE.md#2-release-identities`; `FOUNDATIONS.md#product-lineage-objects` |
+| Project-Qualified Git Refs | `#project-qualified-git-refs` |  | 1,529 | conserved | `RELEASE.md#project-qualified-git-refs` |
+| Project-Subtree Release Identity | `#project-subtree-release-identity` |  | 1,479 | conserved | `RELEASE.md#project-subtree-release-identity` |
+| Historical Ref And Public-URI Conservation | `#historical-ref-and-public-uri-conservation` |  | 1,251 | conserved | `RELEASE.md#historical-ref-and-public-uri-conservation` |
+| Phases | `#phases` |  | 619 | conserved | `RELEASE.md#3-phases` |
+| Mutable Candidate Construction | `#mutable-candidate-construction` |  | 541 | conserved | `RELEASE.md#mutable-candidate-construction` |
+| Immutable RC Publication | `#immutable-rc-publication` |  | 1,563 | conserved | `RELEASE.md#immutable-rc-publication` |
+| Exact-Cut Qualification | `#exact-cut-qualification` |  | 1,117 | conserved | `RELEASE.md#exact-cut-qualification` |
+| Monotonic Version-Line Advancement | `#monotonic-version-line-advancement` |  | 1,429 | conserved | `RELEASE.md#monotonic-version-line-advancement` |
+| Selector And Consumer Adoption | `#selector-and-consumer-adoption` |  | 2,440 | conserved; the plan object, its hashing and the manager commands are defined once in PRODUCT_DEFINITION §4 | `RELEASE.md#4-selector-and-consumer-adoption`; `PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager` |
+| Naming | `#naming` |  | 898 | conserved | `RELEASE.md#5-naming` |
+| Release-Scoped Assets | `#release-scoped-assets` |  | 804 | conserved | `RELEASE.md#release-scoped-assets` |
+| Coordinated Release-Matched Asset Cohorts | `#coordinated-release-matched-asset-cohorts` |  | 2,089 | conserved | `RELEASE.md#7-coordinated-release-matched-asset-cohorts` |
+| &nbsp;&nbsp;Two-Commit Construction And One Publication Transaction | `#two-commit-construction-and-one-publication-transaction` |  | 2,527 | conserved | `RELEASE.md#two-commit-construction-and-one-publication-transaction` |
+| &nbsp;&nbsp;Qualification And Recovery | `#qualification-and-recovery` |  | 1,410 | conserved | `RELEASE.md#qualification-and-recovery` |
+| Product Subject And Repository Carrier | `#product-subject-and-repository-carrier` |  | 836 | conserved | `RELEASE.md#product-subject-and-repository-carrier` |
+| Acceptance Criteria | `#acceptance-criteria` |  | 748 | conserved | `RELEASE.md#acceptance-criteria` |
+| External Qualification Dependencies | `#external-qualification-dependencies` |  | 537 | conserved | `RELEASE.md#external-qualification-dependencies` |
+| Successor Baseline Conservation (`STDO-UP-015`) | `#successor-baseline-conservation-stdo-up-015` | UP-015 | 1,185 | conserved in full; applied to this corpus in FOUNDATIONS §1 and to acceptance evidence in EVALUATION §5 | `RELEASE.md#9-successor-baseline-conservation-stdo-up-015`; `FOUNDATIONS.md#1-vocabulary-of-standing`; `EVALUATION.md#5-acceptance` |
+| Open Questions | `#open-questions` |  | 191 | conserved; both questions carried as open | `RELEASE.md#10-open-questions` |
 
 ## SPEC_METHOD.md
 

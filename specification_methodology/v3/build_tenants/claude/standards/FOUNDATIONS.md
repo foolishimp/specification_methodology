@@ -201,6 +201,22 @@ blurred, dependency and self-hosting errors compound quickly and are
 expensive to unwind. SPEC_METHOD §6 applies these objects to lineage and
 release.
 
+Release objects. A release cut has three neighbours that release keeps
+distinct from it and from each other (P3, P6; provenance
+`stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#release-identities`).
+A candidate source is the mutable source-project state constructing a
+possible successor; it is non-operative for released consumers. A release
+subject is the exact declared product member set or artifact that one
+release cut binds, described by that cut's release-scoped claims; a
+carrier that holds it does not thereby make co-located material a
+member. A version-line selector is a mutable
+alias naming the highest-ordinal published release cut on one version
+line of one project; it is convenient discovery, never immutable identity
+and never an exact constitutional, dependency, evidence or replay basis.
+Equal version text does not collapse these objects. A selector or a
+mutable carrier may move; a release cut never moves. RELEASE §2 realises
+them, with the carriers that hold them, as refs of one release source.
+
 ### Work boundary
 
 The method governs the boundary around a probabilistic, agentic or
@@ -383,9 +399,11 @@ traversal composition laws of any runtime.
 | RF definitions (#definitions and its 17 children) | conserved; restated in §2 (amended rows, frame objects, authority kinds, disjointness and independence, the frame tuple); rows in the table below |
 | RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
-| UP-001, UP-004, UP-008, UP-022 | conserved; consumed by EVALUATION |
+| UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
 | UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; P2 consumes them; UP-005 is disposed at the design profile |
-| UP-015 | conserved; applied to this corpus in §1 |
+| UP-015 | conserved; restated in full in RELEASE §9, applied to this corpus in §1 and to acceptance evidence in EVALUATION §5 |
+| RM Release Identities | conserved; candidate source, release subject and version-line selector restated in §2 Release objects beside the release cut; their realisation as refs, with the namespace, subtree and branch carriers, in RELEASE §2, whose §11 lists the RELEASE_METHOD rows |
+| IDENTITY_METHOD scoped identity | conserved; the Object of §2 carries scoped identity, whose laws are IDENTITY §2 |
 | UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by ACTIVATION §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
 | UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation; UP-021 and its standing structural qualification are restated in full in ACTIVATION §4 |
 | UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
