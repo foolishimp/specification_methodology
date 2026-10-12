@@ -774,7 +774,7 @@ mapping to the five core members and adds none, and the requirement of
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
 that a traversal's stop algebra map totally to that algebra (P5). Material
 relation: each stop kind and each judgment decision, read with the source
-of a refusal and, for stop `partial_effect` and decision `partial`, with
+and qualifier of a refusal and, for stop `partial_effect` and decision `partial`, with
 what the effect evidence and the bounded post-observation establish, to
 exactly one core member, the value keeping its own vocabulary, residual
 and re-entry law. This mapping is the profile's
@@ -794,19 +794,21 @@ where values emitted together map to different members, as `stale` with
 |---|---|---|
 | stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state) while every relation and capability the judgment requires is declared by this closed signature and was exercised, which is the second case of ACTIVATION §3; its residual names the evidence that would decide |
 | stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
-| stop `refusal` | falsified or invalid_basis | falsified for a refusal in the constraint table, which is the stop of a falsified constraint, as construction availability maps `refused` to falsified; invalid_basis for a structural refusal, named below, whose subject or basis cannot support the judgment (ACTIVATION §3); invalid_basis for a refusal of admission under the `unresolved_scope` re-entry, which follows an indeterminate `event_scope_compatible` and no counterexample: the event's scope, which `event_admission` requires as evidence, stays undeclared, so the subject cannot support the admission judgment; the `unresolved_scope` residual is retained, naming the undeclared scope as what the basis lacks, and re-entry is a new event candidate with a lawful declared scope (P5, P6) |
+| stop `refusal` | falsified or invalid_basis | invalid_basis only when the refusal carries `refuse_invalid_basis` or is emitted with an `invalid_basis` decision, as `model_validation`'s "refusal or invalid basis" allows: the constraint rule above maps `invalid_basis` only to that member, and the judgment table lists `refused` and `invalid_basis` as distinct decisions; falsified for every other refusal, which follows a falsified constraint and carries `refuse_missing`, `refuse_duplicate`, `refuse_wrong_type` or `refuse_out_of_scope`, the defect it names being the counterexample (ACTIVATION §3): a row of the constraint table, which maps `falsified` to `refused` plus `refusal`, as construction availability maps `refused` to falsified; a structural constraint, named below; or the requirement that an admitted event carry a lawful declared scope, whose refusal of admission under the `unresolved_scope` re-entry carries `refuse_missing`: `event_admission` requires the event's scope authority as evidence and the re-entry names the lawful scope declaration as what must be supplied, so the event candidate still lacking it when the re-entry closes is the counterexample; the `unresolved_scope` residual is retained, naming the undeclared scope, and re-entry is a new event candidate with a lawful declared scope (P5, P6) |
 | stop `invalid_basis` | invalid_basis | the same member; the constraint rule above maps `invalid_basis` only to it |
-| stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an event scope not yet declared is `hold` plus `unresolved_scope` while the signature declares the scope relation, so the ground of out_of_frame, a missing declaration in the frame, is absent, and the spelling is not the core's out_of_frame |
+| stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an event scope not yet declared is `hold` plus `unresolved_scope` while the signature declares the scope relation, so the ground of out_of_frame, a missing declaration in the frame, is absent, and the spelling is not the core's out_of_frame; a refusal of admission once that re-entry closes without the declaration is stop `refusal` carrying `refuse_missing`, not this stop (P5, P6) |
 | stop `partial_effect` | falsified or indeterminate | falsified when the effect evidence establishes that the effect has ended and the bounded post-observation shows part of the intended outcome not reached, the unreached part being the counterexample; otherwise indeterminate, as the effect law of [Mutable-subject effect relation](#mutable-subject-effect-relation) names: an effect that has begun and cannot establish its complete disposition supplies no counterexample. Where the bounded post-observation that law then requires is not yet acquired, the stop reaches indeterminate by the stop-state route of construction availability's `incomplete` (ACTIVATION §3, third case); where it is acquired and still cannot decide, as ACTIVATION §3's second case. The `partial_effect` residual names the post-observation and explicit disposition that would decide; the loss is stated below (P5, P6) |
 | `transition_evaluation` `partial` | falsified or indeterminate | the ground of stop `partial_effect`, which it yields, under the same rule: falsified when the effect evidence establishes that the effect has ended and the post-observation shows part of the intended outcome not reached; otherwise indeterminate, as ACTIVATION §3's second case, since the decision's required evidence includes the post-observation and a missing one is `indeterminate` plus `unobserved_subject_state` under `transition_subject_complete`. The `partial_effect` residual names the explicit disposition that would decide; the loss is stated below (P5, P6) |
-| `transition_evaluation` `refused` | falsified or invalid_basis | falsified as the image of a falsified `transition_subject_complete` under the constraint table, which yields `refusal`, so it maps back to the constraint's member; invalid_basis for a structural refusal, as for stop `refusal` |
+| `transition_evaluation` `refused` | falsified or invalid_basis | under the rule of stop `refusal`, which it yields: invalid_basis only when its refusal carries `refuse_invalid_basis`; otherwise falsified, as the image of a falsified `transition_subject_complete` under the constraint table or of a falsified structural constraint named below, carrying `refuse_missing`, `refuse_duplicate`, `refuse_wrong_type` or `refuse_out_of_scope` (P5, P6) |
 
 The remaining judgment decisions follow the constraint rule above: the
 first decision each judgment lists maps to satisfied; `refused`,
 `out_of_scope`, `unauthorized` and `stale`, which the constraint table
 makes the images of a falsified constraint, map to falsified, save that
-`refused` maps to invalid_basis when it follows a structural refusal or a
-refusal under the `unresolved_scope` re-entry, as for stop `refusal`;
+`refused` maps to invalid_basis only when its refusal carries
+`refuse_invalid_basis`, as for stop `refusal`, a `refused` that follows a
+falsified structural constraint or closes the `unresolved_scope` re-entry
+mapping to falsified with them;
 `hold`, the image of an indeterminate constraint, maps to indeterminate; `gap` maps to invalid_basis on the
 ground of the stop so named; and `invalid_basis` and the `falsified` and
 `indeterminate` of `transition_evaluation` map to the members so named
@@ -822,12 +824,31 @@ undeclared field domain
 row, target outside its row, wrong population or sort, unresolved
 external target, cardinality violation, basis-relation mismatch or nested
 coordinate or witness defect refused at model validation
-([Finite reference-domain table](#finite-reference-domain-table)); a
-qualifier-record defect refused at structural admission
-([Closed relation families](#closed-relation-families)); and a reference
-that fails AC-003. Stop `refusal` and decision `refused` from such a
-source map to invalid_basis, the member an `invalid_basis` decision
-emitted with the refusal states as the evaluation's result (P5, P6).
+([Finite reference-domain table](#finite-reference-domain-table)); an
+unknown event kind, wrong payload sort, mismatched payload digest or
+forbidden claim or occurrence field refused at event admission
+([Closed event-kind population](#closed-event-kind-population)); and a
+qualifier-record defect refused at structural admission, a ref outside
+the closed `ProfileRecordRef` union, resolved under a wrong population or
+sort or absent from its declared external domain, and a duplicate,
+missing, extra, reversed or mismatched edge refused at occurrence
+admission ([Closed relation families](#closed-relation-families)). Each
+is the refusal of a falsified structural constraint: the closed structure
+is the declared predicate, and the unknown kind, unknown or missing
+field, wrong type or mismatched edge is the counterexample that defeats
+it (ACTIVATION §3). Stop `refusal` and decision `refused` from such a
+source therefore map to falsified, and to invalid_basis only when the
+refusal carries `refuse_invalid_basis` or is emitted with an
+`invalid_basis` decision, as for every refusal: the constraint rule above
+maps `invalid_basis` only to that member and the judgment table keeps
+`refused` and `invalid_basis` distinct, so a source in the closed
+structure does not make a refusal an invalid basis (P5, P6). A required
+reference that `model_validation` leaves unresolved is not refused: it
+retains `gap` until repaired and maps to invalid_basis by that stop's row
+(P5). The refusal qualifier, not the core member, records whether the
+defect is a missing, duplicate, wrong-typed or out-of-scope input or an
+invalid basis; the stop keeps it in its own vocabulary, so the mapping
+drops none of the distinctions the qualifier draws (P5, P4b).
 
 Neither member to which `partial` and `partial_effect` map records that
 the subject changed. The `partial_effect` residual and its re-entry carry
@@ -1418,7 +1439,7 @@ AXIOMATIC_CALCULUS §5 require (P5).
 | #finite-reference-domain-table | conserved; the basis codes, every table row, the external-resolution expansion and `ResolutionRefDomain` carried exactly | Closed semantic-object sorts, Finite reference-domain table |
 | #closed-event-kind-population | conserved | Closed event-kind population |
 | #closed-relation-families | conserved; the twenty-four relation kinds, qualifier record, value domains, contract, cardinality function and congruence law carried exactly | Closed relation families |
-| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core algebra is new, as the profile's default, refinable per traversal by `stop_states` in the PROFILES §1 binding shape; `partial` and `partial_effect` map by the effect evidence, to falsified when the effect has ended and the post-observation shows part of the intended outcome not reached and otherwise to indeterminate under the conserved effect law, the loss stated for both; a constraint-table refusal maps to falsified, and a structural refusal or a refusal under the `unresolved_scope` re-entry to invalid_basis | Closed constraint, judgment, residual and stop kinds |
+| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core algebra is new, as the profile's default, refinable per traversal by `stop_states` in the PROFILES §1 binding shape; `partial` and `partial_effect` map by the effect evidence, to falsified when the effect has ended and the post-observation shows part of the intended outcome not reached and otherwise to indeterminate under the conserved effect law, the loss stated for both; a refusal maps to falsified when it follows a falsified constraint, a row of the constraint table or a structural constraint, or closes the `unresolved_scope` re-entry carrying `refuse_missing`, and to invalid_basis only when it carries `refuse_invalid_basis` or is emitted with an `invalid_basis` decision | Closed constraint, judgment, residual and stop kinds |
 | #occurrence-identity | conserved | Occurrence identity |
 | #op-001-seed-acyclicity | conserved | OP-001 |
 | #candidate-judgment-event-and-relation-separation | conserved | Candidate, judgment, event and relation separation |
