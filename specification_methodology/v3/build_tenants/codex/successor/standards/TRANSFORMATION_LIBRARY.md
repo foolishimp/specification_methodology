@@ -35,6 +35,12 @@ invalid_basis with original citations and residual coverage. Where required,
 the assessor is independent of authorship. A judgment supplies no repair,
 acceptance or next-action authority.
 
+If an assessment protocol carries an assessor-disposition field, retain its
+evidence classification alongside the predicate result. It can describe that
+the cone is preserved, a local realization is defective, an owning relation
+needs re-entry or a competing truth path violates the basis. This is assessment
+evidence; the decision owner alone performs the authoritative disposition.
+
 ## Conjoin
 
 Combine only compatible, authenticated results on a declared common outcome.
@@ -52,6 +58,14 @@ current mandate. It selects accept, local_repair, re_enter or reject for the
 declared cone. It may select a next already-authorized action, yield or terminate
 truthfully. It cannot change upstream meaning or take a reserved owner decision.
 Accept binds an exact checkpoint and interval; it does not imply release.
+
+Accept requires closure of the declared cone and preservation of every affected
+governing relation. Local repair applies when realization or proof is defective
+and the governing relation remains coherent. Re-entry applies when Product,
+requirement, identity, lifecycle, authority, public contract or accepted design
+must change. Reject applies to a violated governing relation or an undisposed
+competing truth path. These conditions preserve the evidence classification
+without transferring decision authority to an assessor.
 
 ## Composition law
 
@@ -73,7 +87,22 @@ After interruption, bind the same work identity to its observed current state.
 Reassess only materially affected premises and retain applicable work. Reconstruct
 needed authority and observations from their declared owners, not private memory.
 Uncertainty about effects, freshness or evidence remains explicit. Churn is an
-unchanged failed relation attempted again without a supported change in its cause.
+instance of rejected or superseded construction. Repeating an unchanged failed
+relation without a supported causal change is a prohibited retry practice;
+it is not the definition of all churn.
+
+Accepted material movement toward the selected Product is progress. Prerequisite
+work names the Product obligation it enables. Preservation and repeated proof
+are evidence, not new Product progress. Discovered distance revises the forecast;
+it is not negative progress. File, event, commit and token volume do not measure
+progress. Discarding retained work requires an owning decision explaining why
+repair is insufficient, what survives and which causal assumptions change.
+
+Use the cheapest focused proof that can falsify the active relation. Whole-
+candidate qualification belongs at a declared boundary unless affected risk
+requires it earlier. When reconstructability matters, destroy or exclude the
+incidental process state and compare reconstructed semantic outcomes; a same-
+process check cannot prove durable authority.
 
 ## Cost and contraction
 
