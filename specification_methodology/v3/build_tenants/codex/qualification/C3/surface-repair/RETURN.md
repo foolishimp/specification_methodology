@@ -53,3 +53,9 @@ excerpts. Six [negative controls](NEGATIVE_CONTROLS.json) refuse the actual head
 duplicate attribution, misplaced support, changed content, missing row and
 unlisted-member defects; the baseline is restored. These are artifact results,
 not independent semantic acceptance.
+
+## Frozen subject
+
+Package input and inventory input: b2d083143ee512672f123102ad016ee58d99767e. The recording checkpoint is a
+descendant. Common input imported from main: 0239be7d12d5cde24734ad5e8ef3fe9767a35d74. The package bytes
+match that named input exactly; supporting records are outside the tuple.
