@@ -88,8 +88,9 @@ primary authorities (P6, P1):
 
 Design or module conformance tests derive from realisation authority: the
 governing design, module ownership, the carrier inventory the design
-declares (the design profile's interface-and-carrier set or an
-equivalent), structural carrier diagrams where present, and boundary-local
+declares (the design profile's irreducible architectural carrier set,
+[DESIGN_MODULE §6](DESIGN_MODULE.md#irreducible-architectural-carrier-set),
+or an equivalent), structural carrier diagrams where present, and boundary-local
 fail-closed law. They answer one question: did the implementation realise
 the module or design boundary correctly? Unit tests are design or module
 conformance tests. Module integration tests, negative tests and
@@ -808,15 +809,200 @@ P5; provenance #interface-integration-qualification; EVALUATION §7).
 | wrapped or ambiguous failure | The supported originating causal frontier and its uncertainty are kept, not replaced by a downstream symptom or an invented unique cause. |
 | design-only sufficient contract | A bounded contract result can close while runtime and user claims stay unclaimed or unresolved according to their applicability; no runtime or UAT satisfaction is inferred. |
 
-## 14. Source dispositions
+## 14. Design-to-module evidence route
+
+For a new or materially changed realisation boundary governed by a design
+profile (DESIGN_MODULE, tier 3, whose binding of the objects named here is
+declared in that profile), the canonical evidence relation is (P6, P4b;
+provenance rc.2
+DESIGN_MODULE_METHOD #6a-design-to-module-to-implementation-unit-tests-evidence-route):
+
+```text
+constitutional WHAT and owning requirements
+  -> accepted ontology, the carrier inventory the design declares,
+     target design, and the design's domain, sequence and state evidence
+  -> implementation and module-derived unit tests
+  -> reconciliation and acceptance
+  -> promotion and design-method closure
+
+implementation and module-derived unit tests
+  -> evidence, counterexample or falsification input
+  -> affected ontology or design relation
+```
+
+The first chain is semantic derivation. The second is evidence feedback
+and cannot select or accept the affected semantic answer (P6). When the
+design's co-evolution condition holds, the two chains may proceed together
+without making implementation semantic authority; design still owns the
+structural HOW. Where the design is not decision-complete, the relation is
+design-gated at the smallest causally closed affected decision set and
+retained implementation follows its acceptance. An unchanged
+`realization_refactor` (SPEC_METHOD §4 Change classes) cites the accepted
+relation and proves no material semantic-boundary delta; it does not
+recreate the evidence (P2, P6).
+
+Where construction is probabilistic or agentic, the execution relation of
+ACTIVATION §1 governs the handoff from this accepted design basis into
+bounded construction, assessment, disposition, checkpoint and
+continuation. The design profile supplies the governing-frame,
+transformation-admission, invariant-reconstruction,
+computational-realisation and module evidence that relation consumes; it
+does not define a second execution protocol (P0, P6).
+
+Completeness requires (P6, P4b):
+
+- the final implementation is traceable to the accepted ontology;
+- the final implementation is traceable to design and module boundary
+  assets;
+- unit tests are traceable to module ownership, not only to helper
+  layout;
+- implementation-first discoveries are reconciled into the ontology and
+  the design's domain, sequence and state evidence before promotion or
+  closure; and
+- implementation may not compensate for an unrealised declared
+  constructor by introducing a hidden controller or alternative authority
+  path.
+
+Unit tests may be discovered from implementation behaviour, but the
+closure proof is re-expressed against module ownership rather than code
+helper shape. The module boundary is the intermediate reasoning surface
+that lets implementation and unit tests be audited against the same
+ownership cut; it does not outrank constitutional truth or ratified design
+(P6).
+
+The minimum complete evidence chain is (P6, P4b):
+
+1. constitutional WHAT;
+2. accepted ontology;
+3. target design;
+4. target module boundary assets and the ontology-derived carrier
+   inventory;
+5. accepted domain, sequence and state projections with axiom evaluation;
+6. implementation; and
+7. unit tests derived from the same ontology and module boundary.
+
+Where a reference realisation exists, the complete evidence chain becomes
+(P6, P4b):
+
+1. constitutional WHAT;
+2. reference design;
+3. accepted target ontology and reference-to-ontology mapping;
+4. target design mapping;
+5. target module boundary assets and the ontology-derived carrier
+   inventory;
+6. accepted domain, sequence and state projections with axiom evaluation;
+   and
+7. implementation and unit tests derived from the same ontology.
+
+If a change jumps from design or code straight to tests and never
+reconstructs the module boundary, the proof surface is too weak (P6).
+
+## 15. Module-derived unit tests
+
+Within the product-assurance bounded context of §2, the two authority
+sources stay distinct: the module-derived unit test and its proof relation
+derive from realisation authority, which the design profile owns
+(DESIGN_MODULE), and this section states that relation so both sources sit
+in one member; that ownership does not extend to Product-level UAT or
+acceptance meaning, which stays with Product authority under §2 (P6;
+provenance rc.2 DESIGN_MODULE_METHOD #6b-module-derived-unit-test-rule).
+
+Unit tests under the design profile are module-owned proof lanes. They
+derive from module ownership evidence, not from code shape alone. A unit
+test should be traceable to (P6, P2):
+
+- the accepted ontology and the applicable entity, lifecycle, authority,
+  function, effect or projection law;
+- the governing module design;
+- the active carrier inventory the design declares, or an equivalent
+  carrier inventory;
+- the module-bounded domain, sequence and state projections; and
+- the requirement families the module owns.
+
+Unit tests are not authored primarily from helper function boundaries,
+private method layout, incidental branch structure, temporary
+implementation decomposition, or mock convenience that hides the real
+module contract. The required question is not "what functions exist to
+test?" but "what does this module own, and what proof does that ownership
+require?" This does not prohibit helper-level tests; it prohibits
+helper-level tests from becoming the canonical proof surface for a module
+boundary (P6, P1).
+
+Canonical rule (P6): module-owned unit tests are authoritative for module
+proof; broader integration, scenario and sandbox lanes remain downstream
+proof families; transitional slice-gating tests may exist, but they do not
+replace module-derived unit proof. If a module has code but no
+module-derived unit test lane, the module is not closure-ready under the
+design profile. What such a lane claims, and what it never closes, is
+the unit frame of §7.
+
+## 16. Module lifecycle confirmation
+
+Every designed module, function, application surface, runtime surface,
+plugin surface, public interface, data surface, and published function or
+module of a profile exists inside an operational lifecycle. Under the
+design profile that lifecycle signal is confirmed at the realisation
+boundary before design-method closure (P2, P6; provenance rc.2
+DESIGN_MODULE_METHOD #6c-module-lifecycle-confirmation-rule). The
+canonical operational lifecycle chain is SPEC_METHOD §2 Operational
+lifecycle sufficiency; this section consumes that chain and does not
+redefine its phases. The checklist is not a release plan and does not
+replace RELEASE; it is an ambiguity detector for ultimate intended use.
+
+For each governed boundary, the design evidence states, or points to a
+surface that states (P6, P5):
+
+- the upstream intent and requirement authority;
+- the build or realisation surface;
+- the assurance and proof surface;
+- the release or packaging posture;
+- the deployment or install posture;
+- the live usage or invocation posture;
+- the observed telemetry, projection or monitoring posture;
+- the retirement, revocation, supersession or decommission posture; and
+- the owner, source truth and authority boundary for the lifecycle
+  decisions.
+
+Each lifecycle phase is one of: answered by the active design,
+requirement, release, deployment or telemetry surface; declared not
+applicable with a reason; or recorded as a named `Gap:` or `Unanswered:`
+item with an owning follow-up. A phase list without answers,
+not-applicable reasons or named gaps is not design-method evidence (P5,
+P6).
+
+Implementation proves the selected lifecycle path only within the
+authority it owns. Code, tests, generated artifacts or runtime fixtures may
+confirm that a lifecycle claim is real, but they may not invent lifecycle
+authority that the product, requirements, design, release or operational
+surface did not declare (P6). If the checklist exposes missing release,
+deployment, live-use, telemetry or retirement truth, the module may still
+proceed only when that gap is explicitly governed; it may not close by
+relying on local convention, implementation precedent, mutable runtime
+state, prompt prose or test-only fixture behaviour (P6, P5).
+
+## 17. Source dispositions
 
 Rows received by this member. In the first table anchors are into rc.2
-SPEC_METHOD.md; in the second, into rc.2 STDO_REFERENCE_FRAME_BASELINE.md.
-A locus is a section of this file. Every row is restated in this member's
-own text; a route is provenance only. Rows of other predecessor members
-that land here (the design profile's 6A to 6C, the ticket law's test-case
-authority) are disposed at their members' activations and listed here
-then.
+SPEC_METHOD.md; in the second, into rc.2 STDO_REFERENCE_FRAME_BASELINE.md;
+in the third, into rc.2 DESIGN_MODULE_METHOD.md. A locus is a section of
+this file. Every row is restated in this member's own text; a route is
+provenance only. The ticket law's test-case authority is disposed at its
+member's activation and listed here then. Generalisations recorded for the
+third table, each keeping a profile term out of tier 2: "Ontology" is
+written "ontology", "IACS" "the carrier inventory the design declares",
+"three-view evidence" "the design's domain, sequence and state evidence",
+`co_evolution_admissible(B)` and `decision_complete(B)` "the design's
+co-evolution condition" and "decision-complete", "graph function, or GTL
+module" "published function or module of a profile", "this method" "the
+design profile", "SPEC_METHOD.md's Agentic Construction Execution
+relation" "the execution relation of ACTIVATION §1", and
+"RELEASE_METHOD.md" "RELEASE"; the binding of each written term to the
+profile's object is declared in DESIGN_MODULE. 6B's ownership sentence is
+written as the authority-source split of §2: the design profile owns the
+realisation-authority relation stated here, and Product-level UAT and
+acceptance meaning stay with Product authority. The predecessor's "must"
+is written in the indicative; "should", "may" and "minimum" keep their
+force.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
@@ -849,3 +1035,9 @@ then.
 | #interface-integration-obligations | conserved; six obligations; "Apply Steel-Thread Delivery" written as the sequencing heuristic of SPEC_METHOD §8 | §13 Obligations |
 | #computational-whole-path-evaluation | conserved; the families Operator, Owner, Reuse/Foundation and Proof written as evaluations of operators, owners, reused foundations and proof, mapped in EXECUTIVE_BASELINE §11; "STDO-UP-019" written as the design profile's computational realisation law | §13 Computational whole-path evaluation |
 | #interface-integration-qualification | conserved; ten cases | §13 Qualification |
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #6a-design-to-module-to-implementation-unit-tests-evidence-route | conserved in full; both chains, derivation versus feedback, co-evolution and design-gated cases, the unchanged-refactor rule, the agentic handoff without a second protocol, the five completeness requirements, re-expression against module ownership, the module boundary as reasoning surface, both seven-step chains, the too-weak proof surface | §14 |
+| #6b-module-derived-unit-test-rule | conserved in full; the authority-source split, module-owned proof lanes, the five "should be traceable" sources, the five forbidden primary sources, the required question, helper tests permitted but not canonical, the three-part canonical rule with "may exist", not closure-ready without the lane | §15 |
+| #6c-module-lifecycle-confirmation-rule | conserved in full; the lifecycle of every designed surface, confirmation before closure, the chain consumed not redefined, not a release plan, the nine stated items, the three phase dispositions, the bare list is not evidence, implementation proves only within its authority, the governed-gap rule and the five forbidden closure bases | §16 |
