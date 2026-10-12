@@ -18,6 +18,10 @@ current state under explicit uncertainty.
 | You want to | Read, in order |
 |---|---|
 | understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [REFERENCE_FRAME](REFERENCE_FRAME.md) → [ACTIVATION](ACTIVATION.md) → [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) → [SPEC_METHOD](SPEC_METHOD.md) |
+| bind one project to the method | [SPEC_METHOD §1](SPEC_METHOD.md) for the process constitution and its surfaces, then [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md) for the definition overlay, its required relations, bounded-context resolution, the one constitutional surface and bootstrap |
+| triage a report, select its change class and re-enter | [SPEC_METHOD §4](SPEC_METHOD.md) for the front door, the six determinations, the computed classification and the classes, [SPEC_METHOD §5](SPEC_METHOD.md) for the ambiguity it must record |
+| migrate a core interface or reset a constitutional line | [SPEC_METHOD §7](SPEC_METHOD.md) |
+| prove a realisation | [EVALUATION §1–2](EVALUATION.md) for what a proof names, then [ASSURANCE](ASSURANCE.md) for verification layers, the testing taxonomy, test authority, scenario bundles, installed proof and path coverage |
 | interpret a subject as a model, project a frame from it, or encode an accepted model | [AXIOMATIC_CALCULUS §2–4](AXIOMATIC_CALCULUS.md) for the signature, records and laws, [§6–8](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) for interpretation, the three layers and identity, then [EVALUATION §2](EVALUATION.md) for the structural and semantic split of its review |
 | do a bounded piece of work | [ACTIVATION §1–3](ACTIVATION.md) for the step, its admission and its result algebra, [REFERENCE_FRAME §11](REFERENCE_FRAME.md) for the packet you are activated on, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
 | declare, audit or revise a project's frame set | [REFERENCE_FRAME §4, §8 and §10](REFERENCE_FRAME.md), then [EVALUATION §7](EVALUATION.md) to qualify a frame |
@@ -36,7 +40,9 @@ current state under explicit uncertainty.
 | [ACTIVATION.md](ACTIVATION.md) | 1 | the bounded step: intake, admission, applicability, context construction, the single result algebra, totality, refinement, work state, cost, closed result and reuse |
 | [AXIOMATIC_CALCULUS.md](AXIOMATIC_CALCULUS.md) | 1 | the a_c theory: signature, typed records, laws AC-001 to AC-020, traversals and functor kinds, interpretation and models, the three layers, the law of calculus identity, exclusions, conformance obligations |
 | [EVALUATION.md](EVALUATION.md) | 1 | claims, evidence, assessment, acceptance, conformance, qualification of frames and of the method |
-| [SPEC_METHOD.md](SPEC_METHOD.md) | 2 | the particular method: chain, WHAT/HOW, outcomes, change classes, roles, checkpoints, lineage |
+| [SPEC_METHOD.md](SPEC_METHOD.md) | 2 | the particular method: position, process constitution and method identity; the constitutional chain, manifesto, litmus tests, renewal path, specification surfaces, requirement categories and classification, trace closure, live-surface immutability, lifecycle sufficiency; outcome conservation; change management with universal intake triage, change classes, computed classification, consistency gate, sprint boundary, carriers and procedures; ambiguity governance; lineage and the release version boundary; core-interface, fundamental and wave migration; bounded execution and delivery priority; ADR conventions |
+| [PRODUCT_DEFINITION.md](PRODUCT_DEFINITION.md) | 2 | how one project binds to the method: 1 overlay and layout independence; 2 required definition relations; 3 constitutional-set sufficiency; 4 shared installed release basis and toolchain manager; 5 bounded-context semantic resolution; 6 local constitutional binding; 7 collective reference-frame basis; 8 WHAT, HOW and work carriers; 9 recursive discovery and explicit composition; 10 semantic-resolution conformance cases; 11 one constitutional surface and version boundary; 12 bootstrap |
+| [ASSURANCE.md](ASSURANCE.md) | 2 | testing and proof law: 1 verification layers; 2 testing strategy taxonomy with fixture and proof portability; 3 test authority; 4 scenario bundle; 5 installed dev proof; 6 significant path coverage |
 | [CONFORMANCE.md](CONFORMANCE.md) | 2 | cases the method must pass |
 | [PROFILES.md](PROFILES.md) | 3 | profile imports and the core boundary |
 
