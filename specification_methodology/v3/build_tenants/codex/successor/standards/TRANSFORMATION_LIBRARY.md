@@ -34,7 +34,8 @@ references, with no translation, loss, inverse or ownership transfer. The source
 context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
 Its exact source member SHA256 is
 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
-The target has its own separately inventoried member digest. An activation binds
+The target has its own separately inventoried member digest in
+[CANDIDATE.json](../CANDIDATE.json). An activation binds
 each member's distinct coordinates in its selected complete governing basis.
 The candidate selects no operative construction basis. Changed member, basis,
 source declaration or adoption premise invalidates reliance until applicability
@@ -42,9 +43,12 @@ is re-established. Source lifecycle and adoption conditions remain unchanged.
 
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|
-| Evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to evaluate |
-| Operation authority; operation grant; authorized effectful actor | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): actor carrying the existing owner's exact permission for the specified effects |
-| Decision authority; decision owner | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to dispose a result and its existing owner |
+| frame-set authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human authority that declares or accepts the project frame set |
+| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relatio |
+| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluatio |
+| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operatio |
+| decision authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to accept, reject, or otherwise dispose its result |
+| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work |
 
 These imports provide no semantic, evaluation, operation or decision authority.
 Missing meaning or authority bindings remain unresolved before dependent use.
@@ -93,7 +97,7 @@ For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
 the cone is preserved, a local realization is defective, an owning relation
 needs re-entry or a competing truth path violates the basis. This is assessment
-evidence; the decision owner alone performs the authoritative disposition.
+evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
 
 ## Conjoin
 

@@ -106,7 +106,8 @@ the same owner declared above. The source context is declared by
 [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position), whose owner is
 REFERENCE_FRAME_METHOD.md. The source basis is that member at SHA256
 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
-The target basis is this member at its separately inventoried candidate digest.
+The target basis is this member at its separately inventoried digest in
+[CANDIDATE.json](../CANDIDATE.json).
 An activation binds each member's distinct coordinates in its selected complete
 governing basis; equal cut selection does not mean equal member coordinates.
 This unreleased candidate does not itself select an operative construction basis.
@@ -115,10 +116,12 @@ source declaration or adoption premise requires fresh applicability before use.
 
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|
-| Evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to evaluate |
-| Operation authority; operation grant | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): owner-issued permission for the specified material effects |
-| Decision authority; decision owner | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to dispose a result; "decision owner" names that authority's existing owner, not another role |
-| Human configuration authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority), [Human Frame-Set Declaration](REFERENCE_FRAME_METHOD.md#human-frame-set-declaration) and [RF-014](REFERENCE_FRAME_METHOD.md#rf-014-capability-fit): the existing frame-set authority, with no new permission implied |
+| frame-set authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human authority that declares or accepts the project frame set |
+| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relatio |
+| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluatio |
+| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operatio |
+| decision authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to accept, reject, or otherwise dispose its result |
+| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work |
 
 These are reference-only imports into urn:stdo:bounded-context:foundations.
 They provide no semantic, evaluation, operation or decision authority. Baseline
@@ -156,7 +159,7 @@ selected claim. An authorized useful discriminator, first candidate or unrelated
 work can proceed under its own sufficient grant while another relation is
 unresolved; uncertainty is not universal paralysis. If a coupled required
 relation does not fit, the actor reports the misfit. The existing
-human configuration authority may select refinement, another actor,
+human authority named in RF-014 may select refinement, another actor,
 sequencing or lawful compression under RF-014. Any delegation must come from a
 separate applicable grant; RF-014 itself supplies none. The actor acts on an already
 authorized response, requests the owning decision, or stops with an explicit
@@ -195,8 +198,9 @@ have distinct standing. A judgment binds a predicate, exact subject, basis,
 evidence, assessor and any required independence. An operation grant permits
 specified effects; decision authority retains its separately bound mandate.
 Neither evidence shape nor actor capability
-mints a grant. In the selected construction engagement, a Reviewer judges and a decision
-owner disposes under its existing decision mandate. Domain control such as ODD next-action
+mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
+Reviewer and Executive retain their exact roles from that profile. This account
+assigns neither role or its authority. Domain control such as ODD next-action
 selection remains with its own named function; the explanation appoints none.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
