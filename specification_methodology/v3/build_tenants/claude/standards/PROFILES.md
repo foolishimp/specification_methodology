@@ -69,23 +69,35 @@ and retrospective work) (P2, P0).
 
 ## 4. UX
 
-Imports the core and binds reader and task obligations, operational
-projection and screen-level acceptance. Conserved by reference:
-[UX_METHOD](stdo://releases/v2.5.1-rc.2/standards/UX_METHOD.md).
+[UX](UX.md) is the UX profile. It refines DESIGN_MODULE for modules that
+realise a UX surface, imports the core, and binds: the Elm process model
+with typed State, Msg, Update, View, Cmd and Sub; the boundary between UX
+messages and admitted product carriers; the state transition law; the
+effect membrane; binding to AssetSurface or an equivalent typed contract;
+view continuation and the Msg-replay proof; view shape; type sharing with
+runtime validation at untrusted seams; the accessibility minimum;
+realisation discretion; adoption with the scaffold and exemption law and
+UX sprint compliance escrow; the failure patterns and review questions;
+and the total mapping of its verdicts to the core algebra (UX §15). Its
+binding of TICKETS §3's generalised escrow terms is declared in its lead
+(P6, P2).
 
 ## 5. World model
 
-Imports the core and binds entity recovery and the entity cut as the
-published identity-bearing unit
-([entity cut](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law)),
-the attribute ledger
-([attribute ledger law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#attribute-ledger-law)),
-composition of local artifacts
-([composition law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#composition-law)),
-and the Markov-object construct at candidate status
-([epistemic status](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#epistemic-status-of-the-construct)).
-All of WORLD_MODEL_METHOD is conserved by reference.
-Nothing in the core depends on the construct being established.
+[WORLD_MODEL](WORLD_MODEL.md) is the world-model profile. It imports the
+core and binds: the imported product-lineage concepts and the Builder
+Project specialisation; the Markov-object construct at candidate status
+with its effective blanket, working refinements, epistemic status and
+promotion gate; the core claims and units; entity recovery and the entity
+cut as the published identity-bearing unit, with its admissibility,
+discrimination and publication law; the attribute ledger; the
+representation, materialisation and publication laws; Markov-object
+overlay construction; saturation; composition of local artifacts;
+projection; the control and data planes; the proof law and
+world-model-driven development; and the total mapping of its verdicts to
+the core algebra (WORLD_MODEL §14). Its binding of FOUNDATIONS §2 Object
+and P3's boundary claim to the entity cut is declared in its lead.
+Nothing in the core depends on the construct being established (P3, P6).
 
 ## 6. Source dispositions
 
@@ -93,6 +105,6 @@ Nothing in the core depends on the construct being established.
 |---|---|
 | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, baseline runtime bindings | conserved by reference in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
 | DESIGN_MODULE_METHOD | restated in full in DESIGN_MODULE, which disposes its rows, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
-| UX_METHOD | conserved by reference in §4 |
-| WORLD_MODEL_METHOD | conserved by reference in §5; identity and entity-cut law consumed by FOUNDATIONS P3 |
+| UX_METHOD | restated in full in UX, which disposes its rows; §4 is its index entry; the first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance had no source in UX_METHOD and is withdrawn |
+| WORLD_MODEL_METHOD | restated in full in WORLD_MODEL, which disposes its rows; §5 is its index entry; the generic identity and boundary law stays FOUNDATIONS §2 and P3 and IDENTITY, and the entity-cut law is WORLD_MODEL §9, bound to P3 by WORLD_MODEL's declared binding |
 | Authority compressions, schemas, templates | not applicable in this draft; derived views are produced from the tier 1–2 documents when a thread selects them |

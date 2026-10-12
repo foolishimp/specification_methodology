@@ -658,30 +658,30 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/UX_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| 1. Position | `#1-position` |  | 709 | unresolved | |
-| &nbsp;&nbsp;1A. Constitutional Authority Rule | `#1a-constitutional-authority-rule` |  | 736 | unresolved | |
-| 2. Method Role | `#2-method-role` |  | 871 | unresolved | |
-| 3. Method Composition | `#3-method-composition` |  | 684 | unresolved | |
-| &nbsp;&nbsp;3A. UX Projection And Constructive Carrier Boundary | `#3a-ux-projection-and-constructive-carrier-boundary` |  | 1,349 | unresolved | |
-| 4. Process Model — Elm Architecture | `#4-process-model-elm-architecture` |  | 926 | unresolved | |
-| 4A. Process Model Without Language Or Framework Mandate | `#4a-process-model-without-language-or-framework-mandate` |  | 1,781 | unresolved | |
-| 5. State Transition Law | `#5-state-transition-law` |  | 1,389 | unresolved | |
-| 6. Effect Membrane Rule | `#6-effect-membrane-rule` |  | 1,202 | unresolved | |
-| 7. AssetSurface Binding Rule | `#7-assetsurface-binding-rule` |  | 1,328 | unresolved | |
-| 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation | `#8-ux-twin-of-odd-115a-view-does-not-own-continuation` |  | 997 | unresolved | |
-| &nbsp;&nbsp;8A. Msg-Replay Proof Requirement | `#8a-msg-replay-proof-requirement` |  | 925 | unresolved | |
-| 9. View Shape Rule | `#9-view-shape-rule` |  | 981 | unresolved | |
-| 10. Type Sharing Rule | `#10-type-sharing-rule` |  | 928 | unresolved | |
-| 11. Accessibility Minimum | `#11-accessibility-minimum` |  | 925 | unresolved | |
-| 12. Realization Discretion | `#12-realization-discretion` |  | 705 | unresolved | |
-| 13. Adoption Guidance | `#13-adoption-guidance` |  | 1,060 | unresolved | |
-| &nbsp;&nbsp;13A. Scaffold And Exemption Law | `#13a-scaffold-and-exemption-law` |  | 1,022 | unresolved | |
-| &nbsp;&nbsp;13B. UX Sprint Compliance Escrow | `#13b-ux-sprint-compliance-escrow` |  | 2,821 | unresolved | |
-| 14. Failure Pattern | `#14-failure-pattern` |  | 1,833 | unresolved | |
-| 15. Review Questions | `#15-review-questions` |  | 1,305 | unresolved | |
-| 16. Relationship To Other Method Surfaces | `#16-relationship-to-other-method-surfaces` |  | 977 | unresolved | |
-| 17. Non-Goals | `#17-non-goals` |  | 378 | unresolved | |
-| 18. Canonical Compression | `#18-canonical-compression` |  | 1,349 | unresolved | |
+| 1. Position | `#1-position` |  | 709 | conserved; the one instruction, the four TEA statements, the view not a state owner, the three violations even where conventionally accepted | `UX.md#1-position` |
+| &nbsp;&nbsp;1A. Constitutional Authority Rule | `#1a-constitutional-authority-rule` |  | 736 | conserved; sole UX realisation authority, ADRs choose the stack and may not weaken the model, the seven evidence-only kinds, fail closed with its three exits; ambiguity governance is SPEC_METHOD §5, pointed to | `UX.md#authority`; `UX.md#15-results-of-this-profile` |
+| 2. Method Role | `#2-method-role` |  | 871 | conserved; the three roles, the refinement with its four additions, no duplication with the five parent rules, the four UX-only concerns | `UX.md#2-role-and-composition` |
+| 3. Method Composition | `#3-method-composition` |  | 684 | conserved; the three per-surface cases, the three-answer composition rule | `UX.md#2-role-and-composition` |
+| &nbsp;&nbsp;3A. UX Projection And Constructive Carrier Boundary | `#3a-ux-projection-and-constructive-carrier-boundary` |  | 1,349 | conserved; projection and control surfaces, the five view-local concerns, the six product-truth changes, the five admitted carriers, no hidden constructive carrier, blocked until authored or repriced | `UX.md#3-product-truth-and-admitted-carriers`; `UX.md#15-results-of-this-profile` |
+| 4. Process Model — Elm Architecture | `#4-process-model-elm-architecture` |  | 926 | conserved; the five elements with both signatures, the runtime-owned loop | `UX.md#4-process-model` |
+| 4A. Process Model Without Language Or Framework Mandate | `#4a-process-model-without-language-or-framework-mandate` |  | 1,781 | conserved; model constitutional and stack free, the DESIGN_MODULE §4 mirror, compliance for preserving §4 to §8, the four non-normative examples, the four rejected realisations and three stack-independent violations, framework choice recorded with justification, no ranking | `UX.md#process-model-without-stack-mandate` |
+| 5. State Transition Law | `#5-state-transition-law` |  | 1,389 | conserved; the five declarations, the six Cmd fields, the pure reducer, view-local ephemera with its three conditions at "may" force, product-meaningful state without exception, the unmount discipline test | `UX.md#5-state-transitions` |
+| 6. Effect Membrane Rule | `#6-effect-membrane-rule` |  | 1,202 | conserved; the membrane's two translations, the three allowed inside, the three forbidden outside, one job, logic in the reducer, the named handlers, the violation and its repair; stated as the UX refinement of DESIGN_MODULE §10 Effect edge | `UX.md#6-effect-membrane` |
+| 7. AssetSurface Binding Rule | `#7-assetsurface-binding-rule` |  | 1,328 | conserved; the five binding requirements, the same contract on both sides, the equivalent typed contract, absence blocks | `UX.md#7-carrier-binding` |
+| 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation | `#8-ux-twin-of-odd-115a-view-does-not-own-continuation` |  | 997 | conserved; the parent rule named through PROFILES §2, the three prohibitions, the state machine in the reducer, the Msg-replay test | `UX.md#8-continuation-and-replay` |
+| &nbsp;&nbsp;8A. Msg-Replay Proof Requirement | `#8a-msg-replay-proof-requirement` |  | 925 | conserved; at least one proof per product-meaningful interaction family before closure, the six contents, the four failure dependencies, the no-effect proof at "may" force | `UX.md#msg-replay-proof`; `UX.md#15-results-of-this-profile` |
+| 9. View Shape Rule | `#9-view-shape-rule` |  | 981 | conserved; the five view properties, shape as a stack decision, the signature and no side effects, the out-of-render mutation violation and its membrane exception | `UX.md#9-view-shape` |
+| 10. Type Sharing Rule | `#10-type-sharing-rule` |  | 928 | conserved; shared contract, no re-declaration, "typically", mandatory runtime validation at the six seams, the typed-schema mechanism, compile-time TypeScript not sufficient, UX-local types allowed and not shadowing | `UX.md#10-type-sharing` |
+| 11. Accessibility Minimum | `#11-accessibility-minimum` |  | 925 | conserved; the five declarations with WCAG AA as the recommended default, not optional for product capabilities, optional for debug surfaces with the exemption recorded, intentionally minimal, project-local refinement | `UX.md#11-accessibility-minimum` |
+| 12. Realization Discretion | `#12-realization-discretion` |  | 705 | conserved; opinionated about the model only, the six choices, recorded with justification against §4 and §6, no ranking, the compliance test over §4 to §10 and the failure patterns | `UX.md#realisation-discretion`; `UX.md#15-results-of-this-profile` |
+| 13. Adoption Guidance | `#13-adoption-guidance` |  | 1,060 | conserved; the nine adoption steps, per-project adoption at "may" with the scope recorded; step 3's structural carrier diagram is pointed to DESIGN_MODULE §6 and §7 | `UX.md#12-adoption` |
+| &nbsp;&nbsp;13A. Scaffold And Exemption Law | `#13a-scaffold-and-exemption-law` |  | 1,022 | conserved; the five default-governance conditions, the seven exemption record items at "may be exempt only when", no production UX by accumulation and its three exits | `UX.md#scaffold-and-exemption` |
+| &nbsp;&nbsp;13B. UX Sprint Compliance Escrow | `#13b-ux-sprint-compliance-escrow` |  | 2,821 | conserved; the primary use case, the cost condition at "may", not weakening the model, the seven escrowable and five non-escrowable items, the exit and the hidden-carrier rule, the "should close" condition and five triggers, the forensic walkthrough, the six classifications pointed to TICKETS §3 with the UX reading of `accepted`, the paydown and no-close conditions, defer but not erase; the generic escrow law is TICKETS §3 and SPEC_METHOD §4, pointed to | `UX.md#ux-sprint-compliance-escrow`; `TICKETS.md#3-sprint-rules` |
+| 14. Failure Pattern | `#14-failure-pattern` |  | 1,833 | conserved; the seventeen patterns, any one a violation, repair or reprice | `UX.md#13-failure-patterns`; `UX.md#15-results-of-this-profile` |
+| 15. Review Questions | `#15-review-questions` |  | 1,305 | conserved; the fourteen questions at "should answer", an unanswerable question makes the design module incomplete | `UX.md#14-review-questions`; `UX.md#15-results-of-this-profile` |
+| 16. Relationship To Other Method Surfaces | `#16-relationship-to-other-method-surfaces` |  | 977 | conserved; the five relationships, the escrow condition, the world-model binding through §7, the read and ignore rule | `UX.md#relationship-to-other-members`; `UX.md#2-role-and-composition` |
+| 17. Non-Goals | `#17-non-goals` |  | 378 | conserved; the six non-goals and their product-local home | `UX.md#non-goals` |
+| 18. Canonical Compression | `#18-canonical-compression` |  | 1,349 | conserved; every determination of the compression is stated once where it governs: Elm model and DESIGN_MODULE refinement §1, §2; the model §4; view continuation and the replay test §8; stack recorded with justification and tested against §4 to §10 and the failure patterns §4, §13; sole authority §1; carriers and no hidden carrier §3; runtime validation §10; scaffolds §12; escrow and close review §12 | `UX.md#1-position`; `UX.md#2-role-and-composition`; `UX.md#3-product-truth-and-admitted-carriers`; `UX.md#4-process-model`; `UX.md#5-state-transitions`; `UX.md#6-effect-membrane`; `UX.md#7-carrier-binding`; `UX.md#8-continuation-and-replay`; `UX.md#9-view-shape`; `UX.md#10-type-sharing`; `UX.md#11-accessibility-minimum`; `UX.md#12-adoption`; `UX.md#13-failure-patterns` |
 
 ## WORLD_MODEL_METHOD.md
 
@@ -689,87 +689,87 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Position | `#position` |  | 1,093 | unresolved | |
-| Method Role | `#method-role` |  | 2,639 | unresolved | |
-| &nbsp;&nbsp;Builder-Project Specialization Relation | `#builder-project-specialization-relation` |  | 2,004 | unresolved | |
-| Constitutional Intents | `#constitutional-intents` |  | 453 | unresolved | |
-| Manifesto | `#manifesto` |  | 1,766 | unresolved | |
-| What A World Model Is | `#what-a-world-model-is` |  | 1,080 | unresolved | |
-| Theoretical Underpinnings Of The Markov Object | `#theoretical-underpinnings-of-the-markov-object` |  | 1,020 | unresolved | |
-| &nbsp;&nbsp;What An Effective Blanket Actually Is | `#what-an-effective-blanket-actually-is` |  | 1,473 | unresolved | |
-| &nbsp;&nbsp;Four Working Refinements Indicated By The Empirical Program | `#four-working-refinements-indicated-by-the-empirical-program` |  | 2,562 | unresolved | |
-| &nbsp;&nbsp;Epistemic Status Of The Construct | `#epistemic-status-of-the-construct` |  | 2,051 | unresolved | |
-| &nbsp;&nbsp;Relation To Design Module Method | `#relation-to-design-module-method` |  | 1,048 | unresolved | |
-| Method Objectives | `#method-objectives` |  | 675 | unresolved | |
-| Core Claims | `#core-claims` |  | 15 | unresolved | |
-| &nbsp;&nbsp;Source Systems Remain Sovereign | `#source-systems-remain-sovereign` |  | 204 | unresolved | |
-| &nbsp;&nbsp;Domains Are Functional Surfaces | `#domains-are-functional-surfaces` |  | 196 | unresolved | |
-| &nbsp;&nbsp;Data Is Evidence, Not Meaning By Itself | `#data-is-evidence-not-meaning-by-itself` |  | 138 | unresolved | |
-| &nbsp;&nbsp;World Models Externalize Expert Cognition | `#world-models-externalize-expert-cognition` |  | 154 | unresolved | |
-| &nbsp;&nbsp;Mappings Are Semantic Treatments | `#mappings-are-semantic-treatments` |  | 197 | unresolved | |
-| &nbsp;&nbsp;Fully Qualified Naming Is Mandatory | `#fully-qualified-naming-is-mandatory` |  | 204 | unresolved | |
-| &nbsp;&nbsp;Value Lists Are Domain Artifacts Too | `#value-lists-are-domain-artifacts-too` |  | 167 | unresolved | |
-| &nbsp;&nbsp;The World Model Sits Above APIs And Schemas | `#the-world-model-sits-above-apis-and-schemas` |  | 229 | unresolved | |
-| &nbsp;&nbsp;Probability Belongs In The Epistemic Overlay | `#probability-belongs-in-the-epistemic-overlay` |  | 833 | unresolved | |
-| Single Truth Surface | `#single-truth-surface` |  | 613 | unresolved | |
-| Evidence Hierarchy | `#evidence-hierarchy` |  | 674 | unresolved | |
-| Method Units | `#method-units` |  | 16 | unresolved | |
-| &nbsp;&nbsp;App | `#app` |  | 44 | unresolved | |
-| &nbsp;&nbsp;Builder Project | `#builder-project` |  | 423 | unresolved | |
-| &nbsp;&nbsp;Published Domain Artifact | `#published-domain-artifact` |  | 100 | unresolved | |
-| &nbsp;&nbsp;Fragment | `#fragment` |  | 76 | unresolved | |
-| &nbsp;&nbsp;World Model Object | `#world-model-object` |  | 373 | unresolved | |
-| &nbsp;&nbsp;Assurance | `#assurance` |  | 211 | unresolved | |
-| &nbsp;&nbsp;Attribute Ledger | `#attribute-ledger` |  | 352 | unresolved | |
-| &nbsp;&nbsp;Markov Object | `#markov-object` |  | 1,224 | unresolved | |
-| &nbsp;&nbsp;Entity Cut | `#entity-cut` |  | 620 | unresolved | |
-| &nbsp;&nbsp;Markov-Object Overlay | `#markov-object-overlay` |  | 352 | unresolved | |
-| &nbsp;&nbsp;Treatment Surface | `#treatment-surface` |  | 81 | unresolved | |
-| &nbsp;&nbsp;Covariance Edge | `#covariance-edge` |  | 109 | unresolved | |
-| &nbsp;&nbsp;Adjoint Mapping | `#adjoint-mapping` |  | 66 | unresolved | |
-| &nbsp;&nbsp;Temporal Reference Artifact | `#temporal-reference-artifact` |  | 138 | unresolved | |
-| &nbsp;&nbsp;Composed World Model | `#composed-world-model` |  | 178 | unresolved | |
-| &nbsp;&nbsp;Projection | `#projection` |  | 94 | unresolved | |
-| &nbsp;&nbsp;Query Plane | `#query-plane` |  | 208 | unresolved | |
-| Method Flow | `#method-flow` |  | 58 | unresolved | |
-| &nbsp;&nbsp;1. Observe | `#1-observe` |  | 211 | unresolved | |
-| &nbsp;&nbsp;2. Trace | `#2-trace` |  | 257 | unresolved | |
-| &nbsp;&nbsp;3. Extract | `#3-extract` |  | 304 | unresolved | |
-| &nbsp;&nbsp;4. Assure | `#4-assure` |  | 337 | unresolved | |
-| &nbsp;&nbsp;5. Ledger | `#5-ledger` |  | 232 | unresolved | |
-| &nbsp;&nbsp;6. Bound | `#6-bound` |  | 244 | unresolved | |
-| &nbsp;&nbsp;7. Materialize | `#7-materialize` |  | 224 | unresolved | |
-| &nbsp;&nbsp;8. Relate | `#8-relate` |  | 163 | unresolved | |
-| &nbsp;&nbsp;9. Publish | `#9-publish` |  | 209 | unresolved | |
-| &nbsp;&nbsp;10. Compose | `#10-compose` |  | 218 | unresolved | |
-| &nbsp;&nbsp;11. Align (Optional) | `#11-align-optional` |  | 379 | unresolved | |
-| &nbsp;&nbsp;12. Project | `#12-project` |  | 259 | unresolved | |
-| &nbsp;&nbsp;13. Compile (Optional) | `#13-compile-optional` |  | 594 | unresolved | |
-| &nbsp;&nbsp;14. Serve Or Query (Optional) | `#14-serve-or-query-optional` |  | 269 | unresolved | |
-| Representation Law | `#representation-law` |  | 1,040 | unresolved | |
-| Materialization Law | `#materialization-law` |  | 1,870 | unresolved | |
-| Publication Law | `#publication-law` |  | 777 | unresolved | |
-| Attribute Ledger Law | `#attribute-ledger-law` |  | 692 | unresolved | |
-| Entity Cut Construction Law | `#entity-cut-construction-law` |  | 257 | unresolved | |
-| &nbsp;&nbsp;Admissibility | `#admissibility` |  | 1,039 | unresolved | |
-| &nbsp;&nbsp;Discrimination | `#discrimination` |  | 1,571 | unresolved | |
-| &nbsp;&nbsp;Publication | `#publication` |  | 615 | unresolved | |
-| Markov Object Construction Law | `#markov-object-construction-law` |  | 832 | unresolved | |
-| &nbsp;&nbsp;1. Paired Evidence Collection | `#1-paired-evidence-collection` |  | 633 | unresolved | |
-| &nbsp;&nbsp;2. Identity-Direction Extraction | `#2-identity-direction-extraction` |  | 672 | unresolved | |
-| &nbsp;&nbsp;3. Verification By Treatment | `#3-verification-by-treatment` |  | 1,213 | unresolved | |
-| &nbsp;&nbsp;4. Core And Coat Decomposition | `#4-core-and-coat-decomposition` |  | 514 | unresolved | |
-| &nbsp;&nbsp;5. Null-Peer Discrimination | `#5-null-peer-discrimination` |  | 666 | unresolved | |
-| &nbsp;&nbsp;6. Overlay Publication | `#6-overlay-publication` |  | 1,217 | unresolved | |
-| &nbsp;&nbsp;7. Storage Shape | `#7-storage-shape` |  | 760 | unresolved | |
-| Saturation Law | `#saturation-law` |  | 549 | unresolved | |
-| Composition Law | `#composition-law` |  | 655 | unresolved | |
-| Projection Law | `#projection-law` |  | 765 | unresolved | |
-| Control Plane And Data Plane | `#control-plane-and-data-plane` |  | 1,121 | unresolved | |
-| Proof Law | `#proof-law` |  | 891 | unresolved | |
-| World-Model-Driven Development | `#world-model-driven-development` |  | 893 | unresolved | |
-| Method Output | `#method-output` |  | 770 | unresolved | |
-| Companion Surfaces | `#companion-surfaces` |  | 972 | unresolved | |
+| Position | `#position` |  | 1,093 | conserved; the lost-context premise, the eight enacting surfaces, the seven starting claims, inspectable versioned machine-reasonable truth | `WORLD_MODEL.md#1-position` |
+| Method Role | `#method-role` |  | 2,639 | conserved; the role split, primary surface, the owned bounded context, narrower Product contexts, graph-execution composition, the four imports with invalidation and the no-alias rule, the five "in particular" meanings; the import's owner is FOUNDATIONS §2 (generalisation) | `WORLD_MODEL.md#2-role-and-imports` |
+| &nbsp;&nbsp;Builder-Project Specialization Relation | `#builder-project-specialization-relation` |  | 2,004 | conserved; all ten coordinates, stated against PRODUCT_DEFINITION §5's relation carrier | `WORLD_MODEL.md#builder-project-specialisation` |
+| Constitutional Intents | `#constitutional-intents` |  | 453 | conserved; the two intents, query and serving not constitutional, a later plane at "may" | `WORLD_MODEL.md#constitutional-intents` |
+| Manifesto | `#manifesto` |  | 1,766 | conserved; the fifteen commitments and the not-world-model-driven condition | `WORLD_MODEL.md#manifesto` |
+| What A World Model Is | `#what-a-world-model-is` |  | 1,080 | conserved; descriptive before generative, the entity cut as primary unit and the shorthand rule, the eight "should make explicit" items, the five negations | `WORLD_MODEL.md#3-what-a-world-model-is` |
+| Theoretical Underpinnings Of The Markov Object | `#theoretical-underpinnings-of-the-markov-object` |  | 1,020 | conserved; load-bearing not borrowed, the definition, substrate neutrality across the four substrates, the propagation claim, recovery as practice | `WORLD_MODEL.md#4-the-markov-object-construct` |
+| &nbsp;&nbsp;What An Effective Blanket Actually Is | `#what-an-effective-blanket-actually-is` |  | 1,473 | conserved; the set-theoretic reading rejected with its two grounds, the three geometric statements, candidate evidence and the failed promotion condition | `WORLD_MODEL.md#effective-blanket` |
+| &nbsp;&nbsp;Four Working Refinements Indicated By The Empirical Program | `#four-working-refinements-indicated-by-the-empirical-program` |  | 2,562 | conserved; the four refinements with their experiments, adoption as working reading, the pin rule, sharpening not weakening, not entity-cut admissibility | `WORLD_MODEL.md#four-working-refinements` |
+| &nbsp;&nbsp;Epistemic Status Of The Construct | `#epistemic-status-of-the-construct` |  | 2,051 | conserved; working vocabulary, candidate program, no completion prerequisite, working commitments, the promotion gate not met and not relocated, candidate-class overlays, entity cuts not inheriting the status, the "should default" publication kind; the formal object is FOUNDATIONS §5's hypothesis, pointed to | `WORLD_MODEL.md#epistemic-status`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| &nbsp;&nbsp;Relation To Design Module Method | `#relation-to-design-module-method` |  | 1,048 | conserved; the four "should prefer" preferences, not a prerequisite, the direction of the relation; DESIGN_MODULE §8 carries the analogues from its side | `WORLD_MODEL.md#relation-to-the-design-profile` |
+| Method Objectives | `#method-objectives` |  | 675 | conserved; the eight "should" qualities and eight answerable questions | `WORLD_MODEL.md#objectives` |
+| Core Claims | `#core-claims` |  | 15 | not applicable: heading with no claim text (15 bytes); its nine children are disposed individually | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Source Systems Remain Sovereign | `#source-systems-remain-sovereign` |  | 204 | conserved | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Domains Are Functional Surfaces | `#domains-are-functional-surfaces` |  | 196 | conserved; the six functional coordinates | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Data Is Evidence, Not Meaning By Itself | `#data-is-evidence-not-meaning-by-itself` |  | 138 | conserved | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;World Models Externalize Expert Cognition | `#world-models-externalize-expert-cognition` |  | 154 | conserved | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Mappings Are Semantic Treatments | `#mappings-are-semantic-treatments` |  | 197 | conserved; the five declarations of every treatment | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Fully Qualified Naming Is Mandatory | `#fully-qualified-naming-is-mandatory` |  | 204 | conserved; "mandatory" kept | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Value Lists Are Domain Artifacts Too | `#value-lists-are-domain-artifacts-too` |  | 167 | conserved | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;The World Model Sits Above APIs And Schemas | `#the-world-model-sits-above-apis-and-schemas` |  | 229 | conserved | `WORLD_MODEL.md#5-core-claims` |
+| &nbsp;&nbsp;Probability Belongs In The Epistemic Overlay | `#probability-belongs-in-the-epistemic-overlay` |  | 833 | conserved; "should remain", the four overlay kinds, the five "may include" items, the substrate rationale, overlay not truth, the three distinct artifacts | `WORLD_MODEL.md#5-core-claims` |
+| Single Truth Surface | `#single-truth-surface` |  | 613 | conserved; the four layer constituents, the four supporting surfaces, no second truth surface | `WORLD_MODEL.md#single-truth-surface` |
+| Evidence Hierarchy | `#evidence-hierarchy` |  | 674 | conserved; the five-level preferred hierarchy, code high-fidelity, behaviour broader, no code prerequisite | `WORLD_MODEL.md#evidence-hierarchy` |
+| Method Units | `#method-units` |  | 16 | not applicable: heading with no claim text (16 bytes); its seventeen children are disposed individually | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;App | `#app` |  | 44 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Builder Project | `#builder-project` |  | 423 | conserved; the concept identity, the definition, the directional specialisation and its non-equivalence | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Published Domain Artifact | `#published-domain-artifact` |  | 100 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Fragment | `#fragment` |  | 76 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;World Model Object | `#world-model-object` |  | 373 | conserved; weaker than Markov Object, its uses, not the preferred published name | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Assurance | `#assurance` |  | 211 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Attribute Ledger | `#attribute-ledger` |  | 352 | conserved; the seven "may carry" entry kinds | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Markov Object | `#markov-object` |  | 1,224 | conserved; the definition, immutable cut projected from the ledger, direction with evidence not columns, recovery not invention, entity cut with optional overlay, the three routes | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Entity Cut | `#entity-cut` |  | 620 | conserved; primary unit, lawful without direction, the eight published surfaces traced to ledger and assurance, convergence of looser candidates | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Markov-Object Overlay | `#markov-object-overlay` |  | 352 | conserved; optional, admissible only with a declared space, the three additions, strengthens and its absence does not weaken | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Treatment Surface | `#treatment-surface` |  | 81 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Covariance Edge | `#covariance-edge` |  | 109 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Adjoint Mapping | `#adjoint-mapping` |  | 66 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Temporal Reference Artifact | `#temporal-reference-artifact` |  | 138 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Composed World Model | `#composed-world-model` |  | 178 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Projection | `#projection` |  | 94 | conserved | `WORLD_MODEL.md#6-units` |
+| &nbsp;&nbsp;Query Plane | `#query-plane` |  | 208 | conserved | `WORLD_MODEL.md#6-units` |
+| Method Flow | `#method-flow` |  | 58 | conserved; the profile proceeds through the stages | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;1. Observe | `#1-observe` |  | 211 | conserved; the five surfaces | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;2. Trace | `#2-trace` |  | 257 | conserved; the "should" traceability to source span, field, locator, code path or record | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;3. Extract | `#3-extract` |  | 304 | conserved; the six intermediate surfaces, not yet the world model, the auditable path | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;4. Assure | `#4-assure` |  | 337 | conserved; the five "should make explicit" items | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;5. Ledger | `#5-ledger` |  | 232 | conserved; append-only, new claims and later cuts, no in-place mutation | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;6. Bound | `#6-bound` |  | 244 | conserved; bounded contexts and coherent candidates, the two rejected modellings, the four boundary terms | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;7. Materialize | `#7-materialize` |  | 224 | conserved; projection with enough context, sparse first publication under its three conditions | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;8. Relate | `#8-relate` |  | 163 | conserved | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;9. Publish | `#9-publish` |  | 209 | conserved; immutable cuts, no in-place mutation, Git and filesystem sufficient in the low-volume lane | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;10. Compose | `#10-compose` |  | 218 | conserved; recursive, inspectable, bounded, without erasing local authority | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;11. Align (Optional) | `#11-align-optional` |  | 379 | conserved; optional, the five "may produce" outputs, overlays not truth | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;12. Project | `#12-project` |  | 259 | conserved; the eight outputs | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;13. Compile (Optional) | `#13-compile-optional` |  | 594 | conserved; optional, the five "may include" examples, the three-part rule with "should run" | `WORLD_MODEL.md#7-flow` |
+| &nbsp;&nbsp;14. Serve Or Query (Optional) | `#14-serve-or-query-optional` |  | 269 | conserved; optional, "if delivery needs justify it", filesystem-first or a later plane at "may" | `WORLD_MODEL.md#7-flow` |
+| Representation Law | `#representation-law` |  | 1,040 | conserved; prompt-sufficient, the eight "at minimum" surfaces, the blanket as surviving boundary, interventional not structural, the geometric form and the "should expose" overlay, semantic discharge under §9 | `WORLD_MODEL.md#representation-law` |
+| Materialization Law | `#materialization-law` |  | 1,870 | conserved; builder artifact, the four-part split, "should be versioned", the derivation chain, literal projection, many cuts per ledger state, the four-step recoverability and the three "should" prohibitions | `WORLD_MODEL.md#materialisation-law` |
+| Publication Law | `#publication-law` |  | 777 | conserved; the four "should be" properties, Git and filesystem sufficient, a later database as query plane, the two ledgers distinct, both "should remain" append-only and replayable | `WORLD_MODEL.md#publication-law` |
+| Attribute Ledger Law | `#attribute-ledger-law` |  | 692 | conserved; immediate source, the six "should be" claim parts, the three "may be supported" evidence surfaces, one lawful claim record per fact | `WORLD_MODEL.md#attribute-ledger-law` |
+| Entity Cut Construction Law | `#entity-cut-construction-law` |  | 257 | conserved; recovered not invented, trawling then qualifying; the generic identity and boundary law is FOUNDATIONS §2 and P3, bound to the entity cut by this member's declared binding | `WORLD_MODEL.md#9-entity-cut-construction`; `FOUNDATIONS.md#3-commitments` |
+| &nbsp;&nbsp;Admissibility | `#admissibility` |  | 1,039 | conserved; the whole test with its eight surfaces and proportional altitude, not prescribing method, the three explicit values, no manufactured treatment, sparse first publication with the five entity kinds and the bound on altitude | `WORLD_MODEL.md#admissibility`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| &nbsp;&nbsp;Discrimination | `#discrimination` |  | 1,571 | conserved; the meaning, stronger claim stronger discrimination, the five non-mandatory techniques, adjoint round-trip as semantic analogue, interventional over declarative at "should say", interventional boundary and the weaker field-set claim at "should be read" | `WORLD_MODEL.md#discrimination` |
+| &nbsp;&nbsp;Publication | `#publication` |  | 615 | conserved; the eight surfaces visible and traceable with three values and the discrimination basis, immutable cuts and supersession, storage form as consumer realisation | `WORLD_MODEL.md#publishing-a-cut` |
+| Markov Object Construction Law | `#markov-object-construction-law` |  | 832 | conserved; representation-substrate specialisation, its applicability and the three space kinds, not required otherwise, built and stored minimum, the space part of the overlay, no composition across spaces | `WORLD_MODEL.md#10-markov-object-overlay-construction` |
+| &nbsp;&nbsp;1. Paired Evidence Collection | `#1-paired-evidence-collection` |  | 633 | conserved; at least one null peer, the three evidence items, distributed entries not the object | `WORLD_MODEL.md#paired-evidence-collection` |
+| &nbsp;&nbsp;2. Identity-Direction Extraction | `#2-identity-direction-extraction` |  | 672 | conserved; low-rank projection, the mean-offset formula, the three admissible supervised variants, principal-component and maximum-variance inadmissible, not a column | `WORLD_MODEL.md#identity-direction-extraction` |
+| &nbsp;&nbsp;3. Verification By Treatment | `#3-verification-by-treatment` |  | 1,213 | conserved; acceptance condition, at least one of the three verifications, unverified is candidate, publishing it violates the Representation law, the cut stays lawful, battery not a closed blanket | `WORLD_MODEL.md#verification-by-treatment`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| &nbsp;&nbsp;4. Core And Coat Decomposition | `#4-core-and-coat-decomposition` |  | 514 | conserved; core across ≥ N of N contexts, coat, both evidence, ratio a characterisation | `WORLD_MODEL.md#core-and-coat-decomposition` |
+| &nbsp;&nbsp;5. Null-Peer Discrimination | `#5-null-peer-discrimination` |  | 666 | conserved; the three questions with their expected answers, failure meaning not yet lawful | `WORLD_MODEL.md#null-peer-discrimination`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| &nbsp;&nbsp;6. Overlay Publication | `#6-overlay-publication` |  | 1,217 | conserved; the seven "at minimum" items, immutable projection, revision supersedes, space change is supersession, no in-place mutation | `WORLD_MODEL.md#overlay-publication` |
+| &nbsp;&nbsp;7. Storage Shape | `#7-storage-shape` |  | 760 | conserved; not a row or list, the six package items, a lossy layout unlawful, derived planes no substitute | `WORLD_MODEL.md#storage-shape`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| Saturation Law | `#saturation-law` |  | 549 | conserved; iterative, repeated work at "may", the three saturation conditions, sparse lawful, silent unsupported attribute unlawful | `WORLD_MODEL.md#saturation-law`; `WORLD_MODEL.md#14-results-of-this-profile` |
+| Composition Law | `#composition-law` |  | 655 | conserved; no monolith first, local then stitch, the five preserved items, compose not erase, the preferred mesh, mesh topology product-local at "may", mesh law ratified at "should" only when stable | `WORLD_MODEL.md#composition-law` |
+| Projection Law | `#projection-law` |  | 765 | conserved; convenience not authority, kernel primary, the six "should remain traceable" targets, publication forms, the preferred order, query and traversal at "may" | `WORLD_MODEL.md#projection-law` |
+| Control Plane And Data Plane | `#control-plane-and-data-plane` |  | 1,121 | conserved; the four control-plane members, the data plane, the three carriers, plane not truth split, LLMs on the control plane with the four "should help" and the "should not" execution rule | `WORLD_MODEL.md#control-plane-and-data-plane` |
+| Proof Law | `#proof-law` |  | 891 | conserved; "should not depend", the five-step preferred wedge, incremental capture, the practical obligation, the "should also show" compilation proof | `WORLD_MODEL.md#proof-law` |
+| World-Model-Driven Development | `#world-model-driven-development` |  | 893 | conserved; parallel to spec-driven development, the two "usually", projection without re-authoring, the preferred and shorter relations, the four normative-spec cases, world model as substrate | `WORLD_MODEL.md#world-model-driven-development` |
+| Method Output | `#method-output` |  | 770 | conserved; the ten results | `WORLD_MODEL.md#output` |
+| Companion Surfaces | `#companion-surfaces` |  | 972 | conserved; the three method companions and the empirical program with its scope, findings, commit and document SHA-256 pin, research evidence not authority | `WORLD_MODEL.md#companion-surfaces` |
 
 ## WRITING_GUIDE.md
 
