@@ -1,0 +1,29 @@
+# STDO v3.0.0 Codex successor execution
+
+State: active construction; no checkpoint acceptance or release.
+
+## Authority and exact intake
+
+Jim instructed: "ok i approve this work, but i want it done under stdo 2.5.1 executive process", then "within the build tenant using git workspaces i want you to do the work". This selects Codex tenant construction of the standalone successor and its reviewable evidence. The common pen remains Claude. This tenant return records the instruction without changing common WHAT, common tickets or peer work.
+
+Input commit: b83ed1cc0b65842874bb3d7cabcb76492a4c0d48. Product: STDO Specification Methodology; target v3.0.0. Governing builder/predecessor: stdo://releases/v2.5.1-rc.2/, manifest SHA256 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782. Native verification returned valid, no failures. Common Product, Intent, principles, frontier and conformance at the input commit govern the subject; draft v3 text governs no construction action.
+
+Worktree: /Users/jim/src/apps/specification_methodology-codex. Branch: tenant/codex/c3-v3. Cone: common specification and workspace plus this tenant. Exact write territory: specification_methodology/v3/build_tenants/codex/ only. Own branch creation, sparse configuration, tenant-only checkpoints and ordinary local qualification effects are included. Merge, publication, release, common/peer edits and removal dispositions remain Jim's decisions. Common ticket projection is for Claude's pen; this qualification return is the tenant carrier under Jim's direct instruction, not a replacement common ticket grant.
+
+Triage: design_reframe and documentary realization extension. The old twelve-member candidate proved a bounded selection; it did not restate all predecessor claims. Repair is in this tenant's successor realization, preserving earlier candidates and evidence. The frontier is 635 sections plus 55 additional published members, 690 rows. No row is removed or marked inapplicable merely to reduce work.
+
+## Selected realization and exit
+
+Create successor/ as a new candidate territory. Foundations and a shared transformation library precede complete restatement of the sixteen method bodies and their schema/template/compression/plugin obligations. A predecessor-to-successor map records every row, exact loci, provisional author dispositions, independent review and residuals. Source links are provenance; operative clauses and material supporting artifacts live in the successor. The prior standards/, accepted C1 and prior proof receipts remain historical.
+
+First causal cone: foundations, shared transformations, one bounded work/recovery frame and actual independent use. Once this closes, expand dependency-ready member groups. Each Writer receives exact files, frozen inputs, conserved relations, envelope and an observable return. Author-independent Reviewers inspect a frozen commit, not an author's summary. Prefer fresh Claude CLI reviewers; if unavailable, report that limit rather than substitute author self-checks. Root has previously read historical Claude outputs and does not claim a new whole-corpus clean-room initial attempt; newly delegated Writers do not acquire the peer tenant.
+
+Executive consumes closed returns and applies accept/local_repair/re_enter/reject within the construction grant. It has no mutation grant. A separately declared tenant Writer records decisions and performs the exact file/Git operations. Candidate-readiness decisions permit subsequent construction, not common checkpoint acceptance or release. A governing contradiction returns to the common pen; uncertain causes remain unresolved. Repeated unchanged failures require re-triangulation before retry.
+
+Envelope: planning allowance three hours wall time for this increment, with progress review on material pressure; not universal law or an automatic stop. Each bounded worker declares actual acquired bytes and its smaller allowance. Provider spend ceiling for local Claude qualification calls: USD 30 aggregate; OAuth billing applicability and token counters must be reported with their actual semantics. No efficiency gain is claimed from shorter prose alone.
+
+Exit: complete self-contained documentary candidate, exact 690-row mapping, resolved introduced local defects, independent semantic reviews, one practical recovery thread and responsibility-frame use, meaningful mechanical checks, truthful residuals and tenant checkpoint ready for Jim's review. Canonical selection, release cohort and publication remain separate.
+
+## Execution record
+
+2026-10-12T01:34Z — Executive selected the first foundations/library/recovery cone under Jim's instruction. Tenant setup Writer created the own branch/worktree from the input commit, configured its cone and recorded this intake. Common and peer worktrees were not changed. Next: bounded tenant Writer authors the first cone; an author-independent assessor evaluates its frozen return.
