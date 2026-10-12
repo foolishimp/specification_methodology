@@ -3862,6 +3862,29 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:a-c-text:clause:bootstrap-agent-targets",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:a-c-text:symbol:bootstrap-route"
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:requirement",
+          "literal": "`constitution.agent_bootstrap` embeds no other constitution. It names one basis-qualified bootstrap entrypoint and the local instruction files (such as `AGENTS.md` or `CLAUDE.md` targets) whose small discovery block the manager owns between explicit markers. Each target is a portable relative path resolved against `product.source_project`; absolute paths, parent traversal, redirected path components and escape from that boundary fail closed. A fleet additionally confines every resolved source project to its explicitly authorised fleet root and preflights every target before the first write. Exactly one correctly ordered marker span may be replaced; the bytes before and after it, trailing whitespace included, stay project-owned and byte-identical, and appending a new span preserves all existing bytes as an exact prefix."
+        },
+        {
+          "role": "urn:stdo-3:claude:vocabulary:role:qualification",
+          "literal": "PRODUCT_DEFINITION section 4, constitution.agent_bootstrap; P6, P3, P5"
+        }
+      ],
+      "statement": "agent_bootstrap names one basis-qualified entrypoint; targets resolve inside product.source_project or fail closed; only one ordered marker span is replaced and all other bytes stay exact.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:a-c-text:clause:bootstrap-basis",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
@@ -3879,7 +3902,7 @@
           "literal": "PRODUCT_DEFINITION sections 4, 12; P6, P3"
         }
       ],
-      "statement": "The basis URI and manifest digest alone select; nothing may silently replace them.",
+      "statement": "basis.uri and manifest_sha256 are the sole authored STDO selection; source and selector are not operative authority; nothing may silently replace the selected basis.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#12-bootstrap",
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager"
@@ -3903,14 +3926,14 @@
           "literal": "PRODUCT_DEFINITION sections 4, 9; P3, P5, P6"
         }
       ],
-      "statement": "Discover definitions recursively; fleet discovery prunes the listed internals; no symlinked definition; nesting relates nothing.",
+      "statement": "Discover definitions recursively; fleet discovery prunes the listed internals; a discovered definition may not be a symlink; nesting creates no implicit inheritance, ownership, composition or override.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager",
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition"
       ]
     },
     {
-      "uri": "urn:stdo-3:claude:a-c-text:clause:bootstrap-entrypoint-and-targets",
+      "uri": "urn:stdo-3:claude:a-c-text:clause:bootstrap-entrypoint",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:vocabulary:operator:requires",
       "arguments": [
@@ -3920,16 +3943,15 @@
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:requirement",
-          "literal": "When bootstrapping a project or repricing a requirement surface: resolve the applicable product definition, verify its exact installed basis, load its declared bootstrap entrypoint (PRODUCT_DEFINITION §12), then load the goals surface or the bound equivalent current work-wave carrier; `constitution.agent_bootstrap` embeds no other constitution. It names one basis-qualified bootstrap entrypoint and the local instruction files (such as `AGENTS.md` or `CLAUDE.md` targets) whose small discovery block the manager owns between explicit markers. Each target is a portable relative path resolved against `product.source_project`; absolute paths, parent traversal, redirected path components and escape from that boundary fail closed. A fleet additionally confines every resolved source project to its explicitly authorised fleet root and preflights every target before the first write. Exactly one correctly ordered marker span may be replaced;"
+          "literal": "When bootstrapping a project or repricing a requirement surface: resolve the applicable product definition, verify its exact installed basis, load its declared bootstrap entrypoint (PRODUCT_DEFINITION §12), then load the goals surface or the bound equivalent current work-wave carrier;"
         },
         {
           "role": "urn:stdo-3:claude:vocabulary:role:qualification",
-          "literal": "SPEC_METHOD section 4 Procedures (the sequence continues there); PRODUCT_DEFINITION section 4; P6, P3, P5"
+          "literal": "SPEC_METHOD section 4 Procedures, the first four steps of the bootstrapping sequence (the sequence continues there); P6"
         }
       ],
-      "statement": "Resolve the definition, verify its basis, load its bootstrap entrypoint; targets stay inside the source project.",
+      "statement": "When bootstrapping: resolve the applicable product definition, verify its exact installed basis, load its declared bootstrap entrypoint, then the goals surface or bound work-wave carrier.",
       "source_refs": [
-        "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager",
         "stdo-3://build_tenants/claude/standards/SPEC_METHOD.md#procedures"
       ]
     },
@@ -3998,7 +4020,7 @@
           "literal": "PRODUCT_DEFINITION section 9; P6, P5"
         }
       ],
-      "statement": "Exactly one applicable definition; zero or several fail closed.",
+      "statement": "For a requested Product scope exactly one applicable definition is selected; zero or several unresolved definitions fail closed.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition"
       ]
@@ -4021,7 +4043,7 @@
           "literal": "PRODUCT_DEFINITION section 11 Staleness binding; P3, P5, P6, P4b"
         }
       ],
-      "statement": "A watched digest change makes a derived surface stale; owning members decide.",
+      "statement": "A change to any source or watched index digest makes a derived surface stale until regenerated or re-accepted; a matching digest establishes identity, not fidelity; the raw owning members decide.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary"
       ]
@@ -4044,7 +4066,7 @@
           "literal": "ACTIVATION section 2 Standalone scope and Prompt construction; P6, P1, P0, P5"
         }
       ],
-      "statement": "A derived surface decides only what its sources own; raw members are the fallback.",
+      "statement": "A derived surface decides standalone only what its own source members own; a prompt is rendered contract, not source law; raw owning members are the fallback when it is stale, missing or insufficient for a named unresolved question.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/ACTIVATION.md#2-context-construction-under-an-envelope"
       ]
@@ -4067,7 +4089,7 @@
           "literal": "PRODUCT_DEFINITION section 4 command boundaries; P6, P5"
         }
       ],
-      "statement": "sync never consults the selector; mutating adopt needs the exact dry-run plan digest.",
+      "statement": "sync verifies only the selected basis and never consults the selector; adopt --dry-run presents a plan digest without mutation; mutating adopt requires that exact digest and changes only the basis and its schema locator.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager"
       ]
@@ -14423,9 +14445,10 @@
       "frame_ref": "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#12-bootstrap",
       "scope": "Bootstrap: from discovery of a product definition to the exact basis, the derived-surface staleness and scope law, and the first members to load.",
       "clause_refs": [
+        "urn:stdo-3:claude:a-c-text:clause:bootstrap-agent-targets",
         "urn:stdo-3:claude:a-c-text:clause:bootstrap-basis",
         "urn:stdo-3:claude:a-c-text:clause:bootstrap-discovery",
-        "urn:stdo-3:claude:a-c-text:clause:bootstrap-entrypoint-and-targets",
+        "urn:stdo-3:claude:a-c-text:clause:bootstrap-entrypoint",
         "urn:stdo-3:claude:a-c-text:clause:bootstrap-executive-attention",
         "urn:stdo-3:claude:a-c-text:clause:bootstrap-routes",
         "urn:stdo-3:claude:a-c-text:clause:bootstrap-select-exactly-one-definition",
@@ -14440,7 +14463,8 @@
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#12-bootstrap",
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager",
         "stdo-3://build_tenants/claude/standards/PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition",
-        "stdo-3://build_tenants/claude/standards/README.md#routes"
+        "stdo-3://build_tenants/claude/standards/README.md#routes",
+        "stdo-3://build_tenants/claude/standards/SPEC_METHOD.md#procedures"
       ]
     },
     {
@@ -14721,6 +14745,7 @@
       "scope": "Declare a frame, activate it on an exact subject and basis, and return a minimal evaluation result with one member of the result algebra (REFERENCE_FRAME section 13, ACTIVATION sections 1 to 3 and 7). Reselected in set-6 under the 100,000-byte limit for F-01 task A.",
       "clause_refs": [
         "urn:stdo-3:claude:a-c-text:clause:activation-binds-the-declaration-and-loads-the-packet",
+        "urn:stdo-3:claude:a-c-text:clause:basis-is-immutable-or-moving-with-declared-detection",
         "urn:stdo-3:claude:a-c-text:clause:closed-result-identifies-its-coordinates",
         "urn:stdo-3:claude:a-c-text:clause:evaluator-applies-the-frame-and-records-assumptions",
         "urn:stdo-3:claude:a-c-text:clause:frame-is-bound-when-every-coordinate-resolves",

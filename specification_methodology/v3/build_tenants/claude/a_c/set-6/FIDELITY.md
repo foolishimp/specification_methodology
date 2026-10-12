@@ -86,19 +86,31 @@ touched. Of the 106 corrections, the three set-5 bootstrap clauses and the
 two TRAVERSAL mapping clauses and `missing-capability-is-out-of-frame` were rewritten by the Writer rather than
 taken from the reviewer fix (README, "Bootstrap" and "TRAVERSAL").
 
-Self-check of the corrections (script): of the literal sentences in the
-corrected clauses, 245 are verbatim at the cited locus, 3 verbatim
-elsewhere in the member and 98 not verbatim; the not-verbatim ones are
-field lists, tables and code-block lines recast as prose, and the
-abridged bootstrap route rows. Three clauses had a literal sentence
+Self-check of the corrections (script, on the committed program): a
+literal sentence counts as verbatim only when it occurs at the cited locus
+and ends where a member sentence or clause ends (a dropped trailing
+citation in parentheses is allowed). Of the literal sentences in the 105
+reviewer-corrected clauses, 243 are verbatim, 7 match only part of a
+member sentence (table cells and one definition row) and 98 are not
+verbatim (field lists, tables and code-block lines recast as prose). The
+14 clauses the Writer wrote itself (ten bootstrap clauses, the ODD
+binding, the two TRAVERSAL clauses and `missing-capability-is-out-of-frame`)
+were put through the same rubric by the Writer after a first version of
+them spliced a SPEC_METHOD sentence onto PRODUCT_DEFINITION text, cut the
+marker-span sentence short and dropped qualifiers from four statements;
+those were fixed. Their literal sentences: 48 verbatim, 5 partial (the
+abridged README route rows) and 8 not verbatim (the joined
+PRODUCT_DEFINITION command bullets, the ACTIVATION three-case bullets and
+TRAVERSAL sentences with their mid-sentence section links dropped). Three clauses had a literal sentence
 verbatim only outside their cited heading; the containing heading was
 added to their `source_refs`:
 `binding-fields-resolve-through-stable-identities` (REFERENCE_FRAME
 `#stop-and-change`), `design-decision-complete-is-the-gate-criterion`
 (DESIGN_MODULE `#proportional-design-sequencing`) and
 `minimal-evaluation-result-fields` (REFERENCE_FRAME
-`#frame-evaluation-result`). Four symbol labels that carried a corrected
-strengthening or a stale count were rewritten: `formal-fragment` (now a
+`#frame-evaluation-result`). Five symbol labels were rewritten:
+`bootstrap-route` (now the member's "owning sources") and four that carried
+a corrected strengthening or a stale count: `formal-fragment` (now a
 hypothesis, not established), `minimal-evaluation-result` (no field
 count), `scoped-identity-kind` ("should not be collapsed") and
 `coverage-ledger` ("at least").
@@ -237,6 +249,16 @@ claims; these are recorded and left for the fidelity judge.
 
 Clauses whose cited span changed between `3824752` and `4425993`
 (mechanical, before judgment): `activation-binds-the-declaration-and-loads-the-packet`, `algorithmic-means-structurally-checkable`, `ambiguity-carried-decided-or-escalated`, `ambiguity-outcome-is-policy-over-core`, `bootstrap-discovery`, `closure-is-computed-on-exact-basis`, `composite-reports-by-declared-conjunction`, `composition-exists-only-under-p4a`, `composition-law-only-where-needed`, `compression-preservation-is-a-claim`, `construction-availability-maps-to-core`, `context-fit-is-measured-before-read`, `core-algebra-conserves-rf012-and-ac007`, `coupled-relations-fit-together`, `disposition-consumes-a-core-result`, `dispositions-named-in-advance`, `evaluator-applies-the-frame-and-records-assumptions`, `evidence-and-authority-do-not-mint-each-other`, `explicit-admits-three-lawful-surface-values`, `failure-and-uncovered-obligation-survive-join`, `faithful-refinement-definition`, `fit-selection-within-grant`, `fit-test-against-envelope`, `formal-fragment-established`, `glossary-locates-and-never-decides`, `graph-execution-profile-bindings`, `hard-stops-regardless-of-appetite`, `indeterminate-result-names-the-deciding-evidence`, `inputs-acquired-by-exact-identity`, `latitude-must-be-declared`, `lawful-compression-preserves-distinctions`, `material-means-can-alter`, `missing-capability-is-out-of-frame`, `no-capable-pairing-returns-refusal-or-out-of-frame`, `no-proof-of-no-undiscovered-relation`, `nothing-is-coerced-to-success`, `obligation-without-route-is-unjustified`, `odd-closure-decision-is-a-closed-sum-type`, `odd-closure-decisions-map-to-core`, `odd-yield-is-lawful-iterate-not-failure`, `out-of-frame-result-names-the-missing-declaration`, `outcome-defines-adequacy`, `p0-statement`, `p1-statement`, `p2-statement`, `p3-statement`, `p4a-statement`, `p4b-derivation`, `p5-derivation`, `p6-statement`, `premise-actor-change`, `premise-candidate-until-evaluated`, `premise-open-world`, `premise-selected-outcome`, `profile-closure-declares-mapping`, `profile-imports-core-by-reference`, `projection-cannot-trim-required-member`, `projection-records-boundary`, `reconfiguration-follows-the-cause`, `reference-conserves-under-conditions`, `refinement-generalises-graph-functions`, `refinement-premises-are-not-conclusions`, `refinements-map-totally-to-core`, `result-algebra-has-five-members`, `seam-includes-far-side`, `shared-machinery-is-not-identity`, `silent-omission-is-never-a-fit-option`, `step-produced-facts-are-not-reacquirable`, `structural-refusal-and-partial-effect-losses`, `total-handling-claims-no-omniscience`, `transformation-records-accounting`, `transition-admission-is-one-commit`, `traversal-stop-kinds-and-constraint-results`, `traversal-stops-and-decisions-map-to-core`, `uncovered-coverage-is-r-minus-c`, `undefined-term-is-an-undeclared-material-relation`, `unexercised-declared-capability-yields-no-evaluation-result`, `world-model-verdicts-map-to-core`.
+
+## Inconsistency between members found while encoding
+
+TRAVERSAL_OCCURRENCE's stop `hold` row still maps to indeterminate "while
+every relation and capability the judgment requires is declared by this
+closed signature and was exercised, which is the second case of ACTIVATION
+§3". ACTIVATION at `9be9f57` dropped that precondition from its second
+case. `traversal-stops-and-decisions-map-to-core` carries TRAVERSAL's own
+wording; the members disagree on what the cited case requires. Not
+malformed for encoding; left for the Executive.
 
 ## What this pass does not show
 

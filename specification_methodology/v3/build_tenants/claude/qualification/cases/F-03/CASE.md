@@ -256,7 +256,7 @@ instruction: TRAVERSAL_OCCURRENCE to `188bc81` and ACTIVATION to
 `9be9f57`; the other twenty-one members are byte-identical to `4425993`.
 Their digests are recorded under [a_c/set-6/](../../../a_c/set-6/README.md).
 They are encoded as program `urn:stdo-3:claude:program:a-c-text:set-6`,
-canonical digest `sha256:9aa2e6521fa1a0fcf0262270b3838ef9c5b1064e0f4edb3fed0c1a3ab1537cbb`, zero diagnostics against the pinned Axiom
+canonical digest `sha256:d8a1d086508c96036641f13d21e6f1e923d2a65de56d1a8c3814983e5c1bbc83`, zero diagnostics against the pinned Axiom
 Indexer, after the fidelity pass recorded in
 [a_c/set-6/FIDELITY.md](../../../a_c/set-6/FIDELITY.md) corrected 106
 set-5 clauses and removed two. The actor receives the bytes of these frame
@@ -264,15 +264,15 @@ files:
 
 | Frame file | SHA-256 | Bytes |
 |---|---|---|
-| `a_c/set-6/projection-carrier-retention-materialized.json` | `ba23003706d64216c705938b9a85a664b0b062803baa1eeadc347533d8d3d1bb` | 56,917 |
-| `a_c/set-6/projection-release-and-successor-materialized.json` | `312e66fde6a68f7d3382992ca8d14353c5dd735ba218c672c171dd56bc2c03bf` | 63,667 |
-| `a_c/set-6/projection-identity-scoped-materialized.json` | `d39d94f047a97b1da9255f66a7b85d27dca6afe61193c543d80d74a77b1bd9ee` | 38,689 |
-| `a_c/set-6/projection-design-gate-materialized.json` | `a9f281366215a44b4309dc4ff4ef979715c54e4e419d11b386001c9a1830f919` | 83,896 |
-| `a_c/set-6/projection-odd-closure-materialized.json` | `15a9992925613843b86b5e668982250faa4c26b5e5fe14f303177bf7a2c0f7a8` | 86,307 |
-| `a_c/set-6/projection-traversal-lineage-materialized.json` | `a3020d2ede2b390f996c4bd8db9b070266bfe1cad077f7b066e13c4a7e281057` | 67,499 |
-| `a_c/set-6/projection-ux-replay-materialized.json` | `4a6afe9e69996ce1fbaad2aea3614555e6ef7f9ed61a5db7218b3e0a15a37816` | 46,356 |
-| `a_c/set-6/projection-world-model-cut-materialized.json` | `1682ca9d88fd38f1167e70afec609bf9b5ef8e5e8632e7a9dfa2efafe6c6430c` | 40,333 |
-| `a_c/set-6/projection-bind-and-resolve-materialized.json` | `9d125ccc66ab161af07340ad1f19bb09f740bd921d0bdba05b734b8e58f04bc6` | 54,126 |
+| `a_c/set-6/projection-carrier-retention-materialized.json` | `f5143057f1165f4bce9e26abf5e14fe6cf56d76d9cbb8546587e501c3c924252` | 56,917 |
+| `a_c/set-6/projection-release-and-successor-materialized.json` | `af39df59999a78c2bfd9d298b5fdc45859a7c4550c945e3f5c560d076e9e4313` | 63,667 |
+| `a_c/set-6/projection-identity-scoped-materialized.json` | `527e964a5bb8244c70e5ef3c40e0e13ce50d601cb4feb2560a1613fc0e4a63b6` | 38,689 |
+| `a_c/set-6/projection-design-gate-materialized.json` | `1597668f08b330a18abc2edc9919a6f5389fce71fb5308379f5b8cfb54a0b9a2` | 83,896 |
+| `a_c/set-6/projection-odd-closure-materialized.json` | `6469ff43ecf78cd825b7181dda34b9fe72f7c08644d64ae249a84f02f78bd81d` | 86,307 |
+| `a_c/set-6/projection-traversal-lineage-materialized.json` | `55c8a9ee1ddcfbd29db99b2e70fb4e0d75498a7e513ed58da505239dfd696cd9` | 67,499 |
+| `a_c/set-6/projection-ux-replay-materialized.json` | `a187d82fb7c8ed98a377c489c1d7d86e8c70e3aecad97f4c3407fee22a57c512` | 46,356 |
+| `a_c/set-6/projection-world-model-cut-materialized.json` | `a36d998a6de19985e7d617be9ec62fdef3d71fbf1c0f1a5598d56a62034741e6` | 40,333 |
+| `a_c/set-6/projection-bind-and-resolve-materialized.json` | `90e1819c22d763f6d4bc9ab98d19361f92ead6929653f34ce7b425ffb5bb6193` | 54,126 |
 
 The nine frames keep their set-5 roots except `odd-closure`, which gains
 the ODD section 5 graph-function binding of refinement (task E's composition
@@ -285,8 +285,8 @@ Invocations as in "Instrument invocations" above with `a_c/set-6/` in
 place of the earlier set directory in the METHOD block path and the step
 ids `A-0R2`, `B-0R2` and so on (five characters, so the header line is the
 length the earlier dry runs measured). CARD.md and the TASK files are
-unchanged. The W27 commit introduces the set-6 files; a run names that
-commit in the runs table.
+unchanged. The W27 commits introduce the set-6 files; a run names the
+commit it used in the runs table.
 
 Dry-run measurement at these digests with `--dry-run`, into a scratch run
 directory outside the repository; no actor was started:
@@ -304,6 +304,6 @@ directory outside the repository; no actor was started:
 | I-0R2 | 58,611 | 182 | 455 | 54,163 | 3,713 | 98 |
 
 All 9 fit the cap; the total over 9 steps is 573,958 bytes. The
-`measured` events carried the METHOD block digests `ba23003706d6…`, `312e66fde6a6…`, `d39d94f047a9…`, `a9f281366215…`, `15a999292561…`, `a3020d2ede2b…`, `4a6afe9e6999…`, `1682ca9d88fd…`, `9d125ccc66ab…`
+`measured` events carried the METHOD block digests `f5143057f116…`, `af39df59999a…`, `527e964a5bb8…`, `1597668f08b3…`, `6469ff43ecf7…`, `55c8a9ee1ddc…`, `a187d82fb7c8…`, `a36d998a6de1…`, `90e1819c22d7…`
 (the frame file digests above), the card digest `237ea8f915ca…` and
 instrument SHA-256 `f92ca26b3e4f…`.

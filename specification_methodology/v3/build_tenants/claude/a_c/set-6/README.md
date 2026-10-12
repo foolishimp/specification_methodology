@@ -9,7 +9,7 @@ ODD clause a task needs, and projects sixteen frames: the fifteen task
 frames of F-01, F-02 and F-03 and the bootstrap frame. The program
 validates with zero diagnostics against the byte-verified pinned Axiom
 Indexer. Every task frame is under the 100,000-byte limit; the bootstrap
-frame is over its 10,000-byte target. It is still a partial encoding. The
+frame, at 33,579 bytes, is over its 10,000-byte target. It is still a partial encoding. The
 fidelity pass is a Writer self-check, not an author-independent judgment;
 nothing here is accepted, and set-5/ is frozen history that this
 derivation did not edit.
@@ -68,41 +68,41 @@ invoked from a scratch copy with `python3 -I`. `calculus_ref` stays
 <!-- artifacts -->
 | File | SHA-256 | Role |
 |---|---|---|
-| `axiomatic-program.json` | `64aa7d208a456511c38356386d6ffb5569bb6e282c192ff7d23b14a3a9d3cff7` | the authored a_c.text program `urn:stdo-3:claude:program:a-c-text:set-6`; canonical program digest `sha256:9aa2e6521fa1a0fcf0262270b3838ef9c5b1064e0f4edb3fed0c1a3ab1537cbb` |
-| `logical-constraint-map.json` | `286ea76502567944c8856a5242fc29244a2c4b7b20b4230c595942b10c9ed538` | deterministic index over the program; intrinsic digest `sha256:9dfd22266042132d0cf4b0ed4d23a8ccc3164a0049e4db437d320a981983e98d` |
-| `validation-report.json` | `7a63ffab697e39e06e4ffd53e02e22cceb3a159e8622fd186820984f2bba56cc` | status `valid`, 0 diagnostics; 302 symbols, 422 clauses, 6 residuals; 216 resolved sources |
-| `projection-frame-declaration-and-activation-materialized.json` | `31484102c53bc81acbef49c56fe83d9345f125988c0ac966b244916670421f41` | frame `frame-declaration-and-activation`, materialized; projection digest `sha256:7267b522591519444d94eb97258523aeae61c61dfda17fce32bbfe9c807fde36` |
-| `projection-frame-declaration-and-activation-reference-only.json` | `3cfa7cc208b89d35a5a83488f4c57164aba5f4935c3368b7142617d6f406de5b` | frame `frame-declaration-and-activation`, reference-only; projection digest `sha256:4352758ba341de7323d0b9ed3c9a06f29c30071ac16235662d3db0e4337ba54c` |
-| `projection-coverage-and-revision-materialized.json` | `f4f054c94232e6bbbef50bcc1fd0fcf279c1ae7525ca9a156d4aecec65e1db4c` | frame `coverage-and-revision`, materialized; projection digest `sha256:462369156d9660c54bb434a0cc0c8707c04c6d6c2bb5f6e7ccb3ab588730c5ed` |
-| `projection-coverage-and-revision-reference-only.json` | `abaf2f6762d4976eddb08170bc12095192075fcec8a6a7c12e68d1f12d1c7f43` | frame `coverage-and-revision`, reference-only; projection digest `sha256:25b1171d6498b7be374a9d5174d546e084a4bf1f5311fd596bab09c70a0d12cc` |
-| `projection-transformation-and-judgment-materialized.json` | `b9ad330161ef4fbd6bcaede8c08ae323af1f050b5a849f3b9c81ea14215bb986` | frame `transformation-and-judgment`, materialized; projection digest `sha256:869d9143b8d9c08f1cc48ee4390af223c2bf6333cce9c89af2668c5979758624` |
-| `projection-transformation-and-judgment-reference-only.json` | `f9bb0930e8badfb85b5d34f720c949df56432a7f5b846a411204af354b59b464` | frame `transformation-and-judgment`, reference-only; projection digest `sha256:fec4554e7dcf8e3f4c5654e185e803a4f4cb3b632c4abeafd86c97dc6921569d` |
-| `projection-triage-and-reentry-materialized.json` | `66e2d166b558b34215e6dd84c4fac7cde1f9d1bb3687ea0b00ea5c3b636a0e4c` | frame `triage-and-reentry`, materialized; projection digest `sha256:bebcfafefafb3ab078472b545dae1fd06bdfa7498853bc439fc78bb617851019` |
-| `projection-triage-and-reentry-reference-only.json` | `31136187008c477b03d812c0fa952e759b1b2ccdca8f06ea30c3f1973a13b77c` | frame `triage-and-reentry`, reference-only; projection digest `sha256:6e4e40a698821794a1e4405d65e2407efeb48a18e5451189468d3c4a3ad9bb81` |
-| `projection-carrier-and-admission-materialized.json` | `87fc5b9ff9577c3e1afe8d267ce2dc6762460d26cc73c934fa294e089d4b8649` | frame `carrier-and-admission`, materialized; projection digest `sha256:17a5a9bfefb167392675c2163776736da26a9b88c055de3f48697150b16a58a1` |
-| `projection-carrier-and-admission-reference-only.json` | `0d7fc4f89f23b0d0a8e97237aedbaa2aa56a4b2274d621d9b8c1efbd392c8092` | frame `carrier-and-admission`, reference-only; projection digest `sha256:16b847e5cba77cf10110300459c2824be757704d2ce45be59d7125dd6f7b74dd` |
-| `projection-executive-disposition-materialized.json` | `3a90354277797377bfba02a6fbc840863943aff01df59252fa91227bca698f22` | frame `executive-disposition`, materialized; projection digest `sha256:a4ece427bdaa9d4c0c402aaa78ecd03d07004f59a7ad81c9a77d51b1a1c6eca1` |
-| `projection-executive-disposition-reference-only.json` | `b12f57e7e1cc4bac819d6ab58d63f374d379b2ca52f6c18e207fd98e88c9d1eb` | frame `executive-disposition`, reference-only; projection digest `sha256:aa7f6e754feb8c42262f5409d15095255d5d26f550b23f0dd3b1b33b11a6b2e7` |
-| `projection-carrier-retention-materialized.json` | `ba23003706d64216c705938b9a85a664b0b062803baa1eeadc347533d8d3d1bb` | frame `carrier-retention`, materialized; projection digest `sha256:5c0b1f0c9b5801a3c15011281b7fc1f510687d38f6b2d40d6a62cb76c0e6d78c` |
-| `projection-carrier-retention-reference-only.json` | `c890b0088ab6ae312e76d7d82eba0724b326002ce63a22c0101ada7883f144da` | frame `carrier-retention`, reference-only; projection digest `sha256:8d7a17fdbb85f18e5beaecc7b4a3b0f6cb8e0216d48adaa0be0a767072e65de2` |
-| `projection-release-and-successor-materialized.json` | `312e66fde6a68f7d3382992ca8d14353c5dd735ba218c672c171dd56bc2c03bf` | frame `release-and-successor`, materialized; projection digest `sha256:5ecd0f325035fac4bd216b6f0f44cebcb46ec6ee00912a09b2dee3d6ec971704` |
-| `projection-release-and-successor-reference-only.json` | `dffc6d7503842de1729785f9e0363c2a11bacde19933f5ddba9fcaf914939b77` | frame `release-and-successor`, reference-only; projection digest `sha256:e59a97c6543d55175e04d482b8ab46a133bfe96fe5c0e5bc1536cfbe695e27fd` |
-| `projection-identity-scoped-materialized.json` | `d39d94f047a97b1da9255f66a7b85d27dca6afe61193c543d80d74a77b1bd9ee` | frame `identity-scoped`, materialized; projection digest `sha256:8cd69d62674a133d12111be3193d3e10a86277e69cc8a6d8bd6d2ef74bb5755d` |
-| `projection-identity-scoped-reference-only.json` | `9d6c168b6a8476ec95b7ec63d50d77b08a29b3871b10aeaca77609ec4a274118` | frame `identity-scoped`, reference-only; projection digest `sha256:afb786f64a5e928d48869ae80363edb8267ba4d94c9a3ed8dc6beeb6a40dde88` |
-| `projection-design-gate-materialized.json` | `a9f281366215a44b4309dc4ff4ef979715c54e4e419d11b386001c9a1830f919` | frame `design-gate`, materialized; projection digest `sha256:8f0b47ed86cf52fe8349e75bc853f0f13007ddab5b17c1aeebebc646246306dc` |
-| `projection-design-gate-reference-only.json` | `40753ab72929e2de2bcdfc350e51168924aa39774243530b59ffd9b50a7035c9` | frame `design-gate`, reference-only; projection digest `sha256:00ab5306192a617cfaae094bd338424a6f98acd8107397922123d3b3e6d05d0b` |
-| `projection-odd-closure-materialized.json` | `15a9992925613843b86b5e668982250faa4c26b5e5fe14f303177bf7a2c0f7a8` | frame `odd-closure`, materialized; projection digest `sha256:4db90d60c60feef781bff613192cf694b5c75ced474e8d171456a9b5edf89463` |
-| `projection-odd-closure-reference-only.json` | `1bbaa4260d491313abd10bddb02b80ede6c917b1154b4ec42bc5246c0a487f28` | frame `odd-closure`, reference-only; projection digest `sha256:45316e61d4dcbacff529487824a1e868083c47372acb329ac2ea876750a62b17` |
-| `projection-traversal-lineage-materialized.json` | `a3020d2ede2b390f996c4bd8db9b070266bfe1cad077f7b066e13c4a7e281057` | frame `traversal-lineage`, materialized; projection digest `sha256:962b8573b368659d5bc07cc4cdc986c733a19075aec89921e1679f103ce20d89` |
-| `projection-traversal-lineage-reference-only.json` | `e4433b4c7994642c6fe735ab2dcc89be3d3712d5efcbb54698a6175f4d5a8a72` | frame `traversal-lineage`, reference-only; projection digest `sha256:7e70c6b79e1d1ebe75de2ccb289a8286931ca04661ecb5be8c55588a6329bbbd` |
-| `projection-ux-replay-materialized.json` | `4a6afe9e69996ce1fbaad2aea3614555e6ef7f9ed61a5db7218b3e0a15a37816` | frame `ux-replay`, materialized; projection digest `sha256:f89db61ca7fd357771007e1d24a5d7901c4b3f85352b2c373b1809466e6566d3` |
-| `projection-ux-replay-reference-only.json` | `a2d074c73f90f45f36758cee067ea06f2054598b1f36263e6f25ff9da8cf1e1e` | frame `ux-replay`, reference-only; projection digest `sha256:4104e4d6f656c3cf92976ff1938e9f374864b06d0a3e7bfcb5fef414a9d3f16b` |
-| `projection-world-model-cut-materialized.json` | `1682ca9d88fd38f1167e70afec609bf9b5ef8e5e8632e7a9dfa2efafe6c6430c` | frame `world-model-cut`, materialized; projection digest `sha256:c44ce1440bf9f700f969cbed18e26a9db0d82f631829c61447a5af91f9915c93` |
-| `projection-world-model-cut-reference-only.json` | `f5f69500063cbda082a9305af25f78a4cc8e135dd62f4dce9e76510d43ee0bc4` | frame `world-model-cut`, reference-only; projection digest `sha256:3d64262fc279d70cc04766878609a299e7a362e1aa6c957f75fd7498cd489acd` |
-| `projection-bind-and-resolve-materialized.json` | `9d125ccc66ab161af07340ad1f19bb09f740bd921d0bdba05b734b8e58f04bc6` | frame `bind-and-resolve`, materialized; projection digest `sha256:7df22c9c79c6a4f1a328b59306c771ad45942acc398b0900f40d6cd4a2b715c7` |
-| `projection-bind-and-resolve-reference-only.json` | `46bcecc10ad667cc4c2c299a2b57c5662f85bf066b9752455b22732be50f5a27` | frame `bind-and-resolve`, reference-only; projection digest `sha256:3d5f90d9ea880327bb3ab1d58ebbcb51aee11dbf3e9464f9eb7234efb0a2bde8` |
-| `projection-bootstrap-materialized.json` | `d7830320595d58923d0f65094125d015c93de627a4e1334287afa6c18b2ca757` | frame `bootstrap`, materialized; projection digest `sha256:1b99cf5adce442651267c88372f984467c90d4d3504863f30acc4263f538b3ca` |
-| `projection-bootstrap-reference-only.json` | `6889a95ca2f0c9f3b61509146d12d447dc4c600bf5d0690935830b8685dd18b3` | frame `bootstrap`, reference-only; projection digest `sha256:fad856ae0acf4f66e4f74cbd522fbc59d3e619964d018a2813e32deca2144571` |
+| `axiomatic-program.json` | `858009be137170f4a6bd8e9932bc4134d3f9a04050c723a6353c3e61e61fad97` | the authored a_c.text program `urn:stdo-3:claude:program:a-c-text:set-6`; canonical program digest `sha256:d8a1d086508c96036641f13d21e6f1e923d2a65de56d1a8c3814983e5c1bbc83` |
+| `logical-constraint-map.json` | `09257fc7f72710939400a579e7ded87fe98238e852bb34f7a12517623b632e5b` | deterministic index over the program; intrinsic digest `sha256:4789fee708a5f10f598c54d81c07a8e58ecda27b086e2ca10f2ed3c1cc2ad697` |
+| `validation-report.json` | `8ed4247e35c61c1d55dd37b92b2a3bfaadc17cdab788ecc78abba5624f10396d` | status `valid`, 0 diagnostics; 302 symbols, 423 clauses, 6 residuals; 216 resolved sources |
+| `projection-frame-declaration-and-activation-materialized.json` | `f4a8fb6bbf617dde7a1f7b3ec5794906124ebc90098e6644f4b577076e858a80` | frame `frame-declaration-and-activation`, materialized; projection digest `sha256:e91920bd2032ebdb37769f51c74143282eaa3f9d093bd96fe2b1da3fd67bd7be` |
+| `projection-frame-declaration-and-activation-reference-only.json` | `dca49c522d4a16e70a3b18c2bb66ec0b70bbfe5a0f76139438e0cc639ce4cc5a` | frame `frame-declaration-and-activation`, reference-only; projection digest `sha256:735603423420fbe840e6747f82f2fba84cffc773a385fe9761980c6a3d7ac3a2` |
+| `projection-coverage-and-revision-materialized.json` | `1ccc9c8663a51bc613fd22571808fc1bc791dc58f1475335fbc952198656d0bb` | frame `coverage-and-revision`, materialized; projection digest `sha256:644d64546a38ea5aae1a8f31febd76e3221da7bda5b7930e2f5d29440b7688e2` |
+| `projection-coverage-and-revision-reference-only.json` | `fe87582613d0a596c570e477ec88b858b10f74f63da046c3f7ae0f179784e3eb` | frame `coverage-and-revision`, reference-only; projection digest `sha256:ebdf086dcd4ca6386654f84319d604613f99555d75249c8b779b6975801c9b40` |
+| `projection-transformation-and-judgment-materialized.json` | `03417731c067d63cd91b9febee09db43aed88551711d47ea230071e35af3dacf` | frame `transformation-and-judgment`, materialized; projection digest `sha256:dc83e175b2b32010e39593439c993ea72228665ac471a8a167ac4ec007301e00` |
+| `projection-transformation-and-judgment-reference-only.json` | `82090c8b8f4c203c16b4307ff6e99e5fea9b24b63f22d8269296a565a7a3971f` | frame `transformation-and-judgment`, reference-only; projection digest `sha256:09f061cb86f42239db9d5a54ed252ee5a18fac2035e3f1409e66d1ff042bad40` |
+| `projection-triage-and-reentry-materialized.json` | `5d79b49b7530739444ee6fab451b8cc0377592223298cfb5cebf40afb1a84619` | frame `triage-and-reentry`, materialized; projection digest `sha256:54d9078f39597e243db93ffc8d8c962bc0cf8e495409ae4559b38fe63b5e4c7f` |
+| `projection-triage-and-reentry-reference-only.json` | `7cace69b1374a6baaa2669ba920516e37fe08a6e14ab0443e26d6ff96ad81643` | frame `triage-and-reentry`, reference-only; projection digest `sha256:8d515068e7f308e1338e3ddaa8cd2645409104a31634cb5e44a8f4215be4cd95` |
+| `projection-carrier-and-admission-materialized.json` | `764e0e3a88775ed32ebdf8d4ec2555659a1473ec62f208a60fccd771b2add7f9` | frame `carrier-and-admission`, materialized; projection digest `sha256:d0daa90bec6faf086a43fa8ecbf9040d80ebb455f4d603f89eb253c213a45084` |
+| `projection-carrier-and-admission-reference-only.json` | `5583c78baefc2545bd27bec400e35ff3dddc5b3786da22721c77de44d82722d4` | frame `carrier-and-admission`, reference-only; projection digest `sha256:ce81ec06cd20be31b9284ca481096ea37c0c80074850e685989d9848e0b6069a` |
+| `projection-executive-disposition-materialized.json` | `4dc07e6693b96177ab2899362bf5b0b1667b1be8875df7d2a9b90357988c1dc2` | frame `executive-disposition`, materialized; projection digest `sha256:445d78d480a988a1e5a619e164ab9be563f88718015f690df845f34c3619a51f` |
+| `projection-executive-disposition-reference-only.json` | `503329f8f8f2261998822ab53a99f39e027afdd49b7d4c07a395c88df3c85612` | frame `executive-disposition`, reference-only; projection digest `sha256:e4295dfaba0e57d4cebeaac29fb0451efe0c79fc9e9e7bf0e08c521a02d0a288` |
+| `projection-carrier-retention-materialized.json` | `f5143057f1165f4bce9e26abf5e14fe6cf56d76d9cbb8546587e501c3c924252` | frame `carrier-retention`, materialized; projection digest `sha256:bea3c9057e10bffe9e76e0eeaad336ecb71d388b5132f12cf5eec39b14e1cafe` |
+| `projection-carrier-retention-reference-only.json` | `99d9bc85f656e0f70c33cf37fdb829b889c9499a1497b36cffd2e21c427c017f` | frame `carrier-retention`, reference-only; projection digest `sha256:62e870a6d6df94bb206c8bb180bec54703100a77cbb1056a38b2b8dd18b72c51` |
+| `projection-release-and-successor-materialized.json` | `af39df59999a78c2bfd9d298b5fdc45859a7c4550c945e3f5c560d076e9e4313` | frame `release-and-successor`, materialized; projection digest `sha256:a02be452b3d2395199a0b247336c0cc9adb5ff8b5909bb56c48ffbe4e93f48d5` |
+| `projection-release-and-successor-reference-only.json` | `52254b0b20ad97f4f26ad0fc5c44156c81cf28309bac98bf35d7646b88a06b0f` | frame `release-and-successor`, reference-only; projection digest `sha256:c28dc7c9b45452de55e4d9a0cfe3a27c09962b1da32fc2e34b5f51cbb49cf0da` |
+| `projection-identity-scoped-materialized.json` | `527e964a5bb8244c70e5ef3c40e0e13ce50d601cb4feb2560a1613fc0e4a63b6` | frame `identity-scoped`, materialized; projection digest `sha256:eb5db7a5b30dbdcbe549c387a0bd68173bee0d1919198d945ab7de96a91c3326` |
+| `projection-identity-scoped-reference-only.json` | `92914caafef4b4aff60bb6f1823a5f9390b05e1f504648490593a52ca5b3be99` | frame `identity-scoped`, reference-only; projection digest `sha256:76465799a6667f30615c145139cf262e1ba91bcd5c300326f36ce312b8b8a399` |
+| `projection-design-gate-materialized.json` | `1597668f08b330a18abc2edc9919a6f5389fce71fb5308379f5b8cfb54a0b9a2` | frame `design-gate`, materialized; projection digest `sha256:50cdb695497f62a4edf720086d8beb3abd3c1c3745b1048bb62eaeffee6ebf59` |
+| `projection-design-gate-reference-only.json` | `a245798fd011aae5fa7aae6568493178ee36391a76a51508efba00dade90e4e7` | frame `design-gate`, reference-only; projection digest `sha256:cbe47dc230f10c15ddc1dba063de8ae4558213ad96fc8c8d2c0d6ab01564612c` |
+| `projection-odd-closure-materialized.json` | `6469ff43ecf78cd825b7181dda34b9fe72f7c08644d64ae249a84f02f78bd81d` | frame `odd-closure`, materialized; projection digest `sha256:79f6e7f793631ee22c933ef29a47aa96289d1cf6857f0c7869e21d609f2b7fa6` |
+| `projection-odd-closure-reference-only.json` | `aa2d3a36948ff378396b5dd9387603327d17be648a517cb8f03fabe76aa1d25d` | frame `odd-closure`, reference-only; projection digest `sha256:c83c2447e62fa33b747d53ad2625da8b085fe41c0cebf6477537e4bde9da6a77` |
+| `projection-traversal-lineage-materialized.json` | `55c8a9ee1ddcfbd29db99b2e70fb4e0d75498a7e513ed58da505239dfd696cd9` | frame `traversal-lineage`, materialized; projection digest `sha256:7b22e62a95ce60ba0afc190488f0a5477395ac3202812dbd3f7afcffe8724fff` |
+| `projection-traversal-lineage-reference-only.json` | `87a5348592a9f7613a0e11a6a2c8869144131b4aaf83579cec711ad68d9a8c03` | frame `traversal-lineage`, reference-only; projection digest `sha256:48761ee1ed0cb77578d112a00221f00dae9aad9b269250846794d12725c1f12d` |
+| `projection-ux-replay-materialized.json` | `a187d82fb7c8ed98a377c489c1d7d86e8c70e3aecad97f4c3407fee22a57c512` | frame `ux-replay`, materialized; projection digest `sha256:91171a2b4ffaf8a5d54beb1ce66b40984815b165a4fc6bd3f57a9bd913ca4420` |
+| `projection-ux-replay-reference-only.json` | `b5ec58a8f00ef4dfc17922ee415e2da3cb7b6483da5e734a8310c338a4848485` | frame `ux-replay`, reference-only; projection digest `sha256:9ea813d6775b861db6bdb59451bcbdf10056dc0778fe49263f9cc2ff106c242f` |
+| `projection-world-model-cut-materialized.json` | `a36d998a6de19985e7d617be9ec62fdef3d71fbf1c0f1a5598d56a62034741e6` | frame `world-model-cut`, materialized; projection digest `sha256:27c8133aacd582f6754b3675f4b8d8af6bc758722ea8c26064254a12664304be` |
+| `projection-world-model-cut-reference-only.json` | `371006b876b5fcc0b8ece69fb30056b62e58ebc733c39f3155fc7b58c8cdc1da` | frame `world-model-cut`, reference-only; projection digest `sha256:171664e44d7a5683e773b8970107f9c19a08479e2769822af48283c465472150` |
+| `projection-bind-and-resolve-materialized.json` | `90e1819c22d763f6d4bc9ab98d19361f92ead6929653f34ce7b425ffb5bb6193` | frame `bind-and-resolve`, materialized; projection digest `sha256:9f84131b33e906b5bdf84a7ab939b4fcdba413376d1cb1e8393ab4bb68741f0a` |
+| `projection-bind-and-resolve-reference-only.json` | `afb23888fb018e941a95663b4ba8f9cae318ccb7b3cae7e2aad8ce9f18205666` | frame `bind-and-resolve`, reference-only; projection digest `sha256:d3e71f82de359c11a447acd3192c267c2d163221a0e875472236fa3430c8a202` |
+| `projection-bootstrap-materialized.json` | `ab2bc8c57852efe56ef758b974f64609e37a73526bf169ccec3480b02cce5433` | frame `bootstrap`, materialized; projection digest `sha256:cfc3f9e9aead8f3b08dcbc155d47564950507b00e18b5efc1a7c8d3dc7ef72f1` |
+| `projection-bootstrap-reference-only.json` | `c2e5e18314a08a79f12397b76ec77a4d0e675435e36562516e184594ac2889c5` | frame `bootstrap`, reference-only; projection digest `sha256:b13b24199c7edb1a76a6f0dd365ed07bf73f4835ddb9e80fbf28de2782c586ab` |
 | `bindings.json` | `816d211c2a92c3e3d2e8adc13d07fb1ae5ecc9fb8b8b4ba593b6f7f6009e201f` | byte-identical to set-5's |
 | `FIDELITY.md` | | the W27 fidelity self-check over set-5 |
 
@@ -116,22 +116,22 @@ clauses, never by truncating them.
 
 | Frame | Task | Materialized bytes | SHA-256 (materialized file) | Reference-only bytes | Closure (symbols, clauses, residuals) | Under 100,000 |
 |---|---|---|---|---|---|---|
-| `frame-declaration-and-activation` | F-01 A | 94,689 | `31484102c53bc81acbef49c56fe83d9345f125988c0ac966b244916670421f41` | 47,566 | 38, 25, 2 | yes |
-| `coverage-and-revision` | F-01 B | 94,166 | `f4f054c94232e6bbbef50bcc1fd0fcf279c1ae7525ca9a156d4aecec65e1db4c` | 48,117 | 33, 25, 0 | yes |
-| `transformation-and-judgment` | F-02 A | 57,023 | `b9ad330161ef4fbd6bcaede8c08ae323af1f050b5a849f3b9c81ea14215bb986` | 29,680 | 16, 19, 0 | yes |
-| `triage-and-reentry` | F-02 B | 68,419 | `66e2d166b558b34215e6dd84c4fac7cde1f9d1bb3687ea0b00ea5c3b636a0e4c` | 36,313 | 16, 21, 0 | yes |
-| `carrier-and-admission` | F-02 C | 66,596 | `87fc5b9ff9577c3e1afe8d267ce2dc6762460d26cc73c934fa294e089d4b8649` | 35,046 | 20, 19, 2 | yes |
-| `executive-disposition` | F-02 D | 94,970 | `3a90354277797377bfba02a6fbc840863943aff01df59252fa91227bca698f22` | 50,000 | 28, 24, 0 | yes |
-| `carrier-retention` | F-03 A | 56,917 | `ba23003706d64216c705938b9a85a664b0b062803baa1eeadc347533d8d3d1bb` | 30,324 | 14, 17, 0 | yes |
-| `release-and-successor` | F-03 B | 63,667 | `312e66fde6a68f7d3382992ca8d14353c5dd735ba218c672c171dd56bc2c03bf` | 34,244 | 14, 12, 0 | yes |
-| `identity-scoped` | F-03 C | 38,689 | `d39d94f047a97b1da9255f66a7b85d27dca6afe61193c543d80d74a77b1bd9ee` | 21,003 | 11, 11, 0 | yes |
-| `design-gate` | F-03 D | 83,896 | `a9f281366215a44b4309dc4ff4ef979715c54e4e419d11b386001c9a1830f919` | 43,398 | 24, 19, 2 | yes |
-| `odd-closure` | F-03 E | 86,307 | `15a9992925613843b86b5e668982250faa4c26b5e5fe14f303177bf7a2c0f7a8` | 43,574 | 30, 24, 1 | yes |
-| `traversal-lineage` | F-03 F | 67,499 | `a3020d2ede2b390f996c4bd8db9b070266bfe1cad077f7b066e13c4a7e281057` | 35,652 | 21, 15, 0 | yes |
-| `ux-replay` | F-03 G | 46,356 | `4a6afe9e69996ce1fbaad2aea3614555e6ef7f9ed61a5db7218b3e0a15a37816` | 24,994 | 12, 11, 0 | yes |
-| `world-model-cut` | F-03 H | 40,333 | `1682ca9d88fd38f1167e70afec609bf9b5ef8e5e8632e7a9dfa2efafe6c6430c` | 21,954 | 10, 10, 0 | yes |
-| `bind-and-resolve` | F-03 I | 54,126 | `9d125ccc66ab161af07340ad1f19bb09f740bd921d0bdba05b734b8e58f04bc6` | 28,928 | 10, 11, 0 | yes |
-| `bootstrap` | none | 31,045 | `d7830320595d58923d0f65094125d015c93de627a4e1334287afa6c18b2ca757` | 17,852 | 2, 9, 0 | yes |
+| `frame-declaration-and-activation` | F-01 A | 98,438 | `f4a8fb6bbf617dde7a1f7b3ec5794906124ebc90098e6644f4b577076e858a80` | 49,546 | 38, 27, 2 | yes |
+| `coverage-and-revision` | F-01 B | 94,166 | `1ccc9c8663a51bc613fd22571808fc1bc791dc58f1475335fbc952198656d0bb` | 48,117 | 33, 25, 0 | yes |
+| `transformation-and-judgment` | F-02 A | 57,023 | `03417731c067d63cd91b9febee09db43aed88551711d47ea230071e35af3dacf` | 29,680 | 16, 19, 0 | yes |
+| `triage-and-reentry` | F-02 B | 68,419 | `5d79b49b7530739444ee6fab451b8cc0377592223298cfb5cebf40afb1a84619` | 36,313 | 16, 21, 0 | yes |
+| `carrier-and-admission` | F-02 C | 66,596 | `764e0e3a88775ed32ebdf8d4ec2555659a1473ec62f208a60fccd771b2add7f9` | 35,046 | 20, 19, 2 | yes |
+| `executive-disposition` | F-02 D | 94,970 | `4dc07e6693b96177ab2899362bf5b0b1667b1be8875df7d2a9b90357988c1dc2` | 50,000 | 28, 24, 0 | yes |
+| `carrier-retention` | F-03 A | 56,917 | `f5143057f1165f4bce9e26abf5e14fe6cf56d76d9cbb8546587e501c3c924252` | 30,324 | 14, 17, 0 | yes |
+| `release-and-successor` | F-03 B | 63,667 | `af39df59999a78c2bfd9d298b5fdc45859a7c4550c945e3f5c560d076e9e4313` | 34,244 | 14, 12, 0 | yes |
+| `identity-scoped` | F-03 C | 38,689 | `527e964a5bb8244c70e5ef3c40e0e13ce50d601cb4feb2560a1613fc0e4a63b6` | 21,003 | 11, 11, 0 | yes |
+| `design-gate` | F-03 D | 83,896 | `1597668f08b330a18abc2edc9919a6f5389fce71fb5308379f5b8cfb54a0b9a2` | 43,398 | 24, 19, 2 | yes |
+| `odd-closure` | F-03 E | 86,307 | `6469ff43ecf78cd825b7181dda34b9fe72f7c08644d64ae249a84f02f78bd81d` | 43,574 | 30, 24, 1 | yes |
+| `traversal-lineage` | F-03 F | 67,499 | `55c8a9ee1ddcfbd29db99b2e70fb4e0d75498a7e513ed58da505239dfd696cd9` | 35,652 | 21, 15, 0 | yes |
+| `ux-replay` | F-03 G | 46,356 | `a187d82fb7c8ed98a377c489c1d7d86e8c70e3aecad97f4c3407fee22a57c512` | 24,994 | 12, 11, 0 | yes |
+| `world-model-cut` | F-03 H | 40,333 | `a36d998a6de19985e7d617be9ec62fdef3d71fbf1c0f1a5598d56a62034741e6` | 21,954 | 10, 10, 0 | yes |
+| `bind-and-resolve` | F-03 I | 54,126 | `90e1819c22d763f6d4bc9ab98d19361f92ead6929653f34ce7b425ffb5bb6193` | 28,928 | 10, 11, 0 | yes |
+| `bootstrap` | none | 33,579 | `ab2bc8c57852efe56ef758b974f64609e37a73526bf169ccec3480b02cce5433` | 18,801 | 2, 10, 0 | yes |
 
 F-02 and F-03 frames keep their set-4 and set-5 roots; their bytes and
 closures moved only where corrected clauses changed length or support.
@@ -153,8 +153,8 @@ The F-01 frames had 59 and 47 roots and measured 271,966 and 223,594 bytes
 from set-3. Set-6 keeps the frame names and selects roots against the
 F-01 task instructions only (no expectations were read):
 
-- `frame-declaration-and-activation` (task A), 13 roots, 25 clauses in
-  closure: minimal-frame-declaration-sections, minimal-activation-binding-shape,
+- `frame-declaration-and-activation` (task A), 14 roots, 27 clauses in
+  closure: minimal-frame-declaration-sections, basis-is-immutable-or-moving-with-declared-detection (task A's subject moves reads to a replica), minimal-activation-binding-shape,
   minimal-evaluation-result-fields, result-algebra-has-five-members,
   indeterminate-result-names-the-deciding-evidence, nothing-is-coerced-to-success,
   rf-012-every-evaluation-returns-an-algebra-member,
@@ -172,7 +172,7 @@ F-01 task instructions only (no expectations were read):
   intake-is-sufficient-without-history (ACTIVATION section 1 intake),
   step-is-the-activation-of-one-frame, context-fit-is-measured-before-read
   and fit-test-against-envelope (ACTIVATION section 2), the FOUNDATIONS section 2
-  frame-object and authority-kind rows, RF-001 to RF-004, RF-006 to RF-008
+  frame-object and authority-kind rows (the basis row is kept), RF-001 to RF-004, RF-006 to RF-008
   and RF-013 to RF-016, frame-violations-enumerated and
   frame-qualification-asks-nine-tests. The last root cut was
   out-of-frame-result-names-the-missing-declaration, at 103,936 bytes.
@@ -206,18 +206,26 @@ adopt, given the exact plan digest, changes it", which no member states
 explicit complete consumer update also changes a consumer's basis);
 `bootstrap-discovery` omitted the definition-selection rule; and
 `bootstrap-routes` stitched three README rows into one order. Set-6 has
-nine clauses, each literal made of member sentences (the route rows
+ten clauses, each literal made of member sentences (the route rows
 abridged to their member references), two symbols and no residuals:
 bootstrap-discovery, bootstrap-select-exactly-one-definition,
-bootstrap-basis, bootstrap-sync-and-adopt, bootstrap-entrypoint-and-targets,
+bootstrap-basis, bootstrap-sync-and-adopt, bootstrap-entrypoint,
+bootstrap-agent-targets,
 bootstrap-routes, bootstrap-staleness-binding,
 bootstrap-standalone-scope-and-prompt-construction and
 bootstrap-executive-attention.
 
-Size: 31,045 bytes materialized, 17,593 reference-only, against the
+The Writer wrote these clauses itself, so after the reviewers finished it
+put them through the same rubric with a sentence-boundary check: a first
+version spliced the SPEC_METHOD bootstrapping sentence onto
+PRODUCT_DEFINITION text, stopped the marker-span sentence before its
+byte-preservation rule and dropped qualifiers from four statements. Those
+are fixed (FIDELITY.md, "Self-check").
+
+Size: 33,579 bytes materialized, 18,801 reference-only, against the
 10,000-byte target, which it misses. A materialized frame carries each
 literal twice (in `clauses` and `clause_relations`) plus about 1.5 KB of
-URIs and routes per clause, so nine claims stated in member sentences
+URIs and routes per clause, so ten claims stated in member sentences
 cannot meet 10,000 bytes. Set-5 met 9,571 bytes with three clauses whose
 literals were the Writer's compression, which is where the unfaithful
 "only adopt" claim came from. Meeting the target means carrying fewer
@@ -232,13 +240,13 @@ claim by claim (same split as set-5; loci at `188bc81`):
 | 2. select exactly one applicable definition; zero or multiple unresolved fail closed | yes | PRODUCT_DEFINITION section 9 (added by `8f5276b`); `bootstrap-select-exactly-one-definition` |
 | 3. basis URI and manifest digest are the sole operative selection; source and selector are discovery inputs only | yes | PRODUCT_DEFINITION section 4 ("sole authored STDO selection", "Neither is operative authority"); `bootstrap-basis` |
 | 4. sync and verify through the manager; no mutable source, other cut, alias, cache or proximity copy | in part: sync, cache, registry, source checkout, version alias, schema or agent file, proximity; "another installed cut" and the mutable authoring source are not in the clause | PRODUCT_DEFINITION section 4 and section 12; `bootstrap-basis`, `bootstrap-sync-and-adopt`; the mutable source rule is PRODUCT_DEFINITION section 12, not carried |
-| 5. resolve the declared bootstrap entrypoint against its named basis; load raw owning standards when the projection is insufficient or stale | yes | SPEC_METHOD section 4 Procedures and PRODUCT_DEFINITION section 4 (basis-qualified entrypoint); PRODUCT_DEFINITION section 11 Staleness binding; ACTIVATION section 2 Prompt construction; `bootstrap-entrypoint-and-targets`, `bootstrap-staleness-binding`, `bootstrap-standalone-scope-and-prompt-construction` |
+| 5. resolve the declared bootstrap entrypoint against its named basis; load raw owning standards when the projection is insufficient or stale | yes | SPEC_METHOD section 4 Procedures and PRODUCT_DEFINITION section 4 (basis-qualified entrypoint); PRODUCT_DEFINITION section 11 Staleness binding; ACTIVATION section 2 Prompt construction; `bootstrap-entrypoint`, `bootstrap-agent-targets`, `bootstrap-staleness-binding`, `bootstrap-standalone-scope-and-prompt-construction` |
 | 6. reference-frame basis; direct versus Executive entry; smallest frontier; unknown applicability unresolved; a role grants no effects; Executive performs no mutation; event-driven attention | in part: event-driven attention as a clause; direct versus coordinated entry as a route only | EXECUTIVE_BASELINE section 6 Event-driven attention (`bootstrap-executive-attention`); README Routes to EXECUTIVE_BASELINE sections 3, 6, 12 and 16 (`bootstrap-routes`); not carried though stated: PRODUCT_DEFINITION section 7 (collective basis), EXECUTIVE_BASELINE's smallest dependency-ready activation set and no-mutation rule, ACTIVATION section 1 Applicability |
 | 7. load WHAT, HOW and carriers only as required; a summary or prior result routes but never replaces source authority; the end-to-end interface frame | in part: route-not-override and standalone scope | PRODUCT_DEFINITION section 4 (`bootstrap-routes`), ACTIVATION section 2 Standalone scope; not carried: PRODUCT_DEFINITION section 8 loading, and no tenant locus was established for the end-to-end interface frame |
 | 8. reuse computed facts, judgments and rulings by route; refresh on invalidation; closure by condition | in part: as a route only | README Routes "resume work" row to ACTIVATION sections 5 and 7 and TICKETS section 7 (`bootstrap-routes`) |
 | derived guidance preserves permissions and conditions; a digest does not establish fidelity; retirement default | in part: the first two | PRODUCT_DEFINITION section 11 ("derived instructions preserve ... permissions ...", "A matching digest establishes identity, not fidelity or sufficiency"); `bootstrap-staleness-binding`; no tenant locus found for the retirement default |
 | sync, adopt dry-run, plan digest; adopt the sole operation that changes a basis; selector alone never changes a consumer | in part: sync, dry-run and mutating adopt with the plan digest; the selector is not operative | PRODUCT_DEFINITION section 4 command boundaries (`bootstrap-sync-and-adopt`, `bootstrap-basis`); not carried because no member states it: adopt as the sole basis-changing operation; not carried though stated: the fleet aggregate plan digest (PRODUCT_DEFINITION section 4); the lagging-selector and downgrade refusals have no locus established in this pass |
-| bootstrap targets relative to the source project; fleet confinement; marker spans | yes | PRODUCT_DEFINITION section 4 (`constitution.agent_bootstrap`); `bootstrap-entrypoint-and-targets` |
+| bootstrap targets relative to the source project; fleet confinement; marker spans | yes | PRODUCT_DEFINITION section 4 (`constitution.agent_bootstrap`, including the marker-span byte rule); `bootstrap-agent-targets` |
 
 The four rules the Executive named are carried: definition selection and
 exactly one applicable definition (claim 2), the staleness binding of
@@ -279,8 +287,8 @@ exercised, because TRAVERSAL_OCCURRENCE's own row says so.
 
 Counts: symbols 301 to 302 (one added: `derived-surface`; five labels
 rewritten: `bootstrap-route`, `formal-fragment`, `minimal-evaluation-result`,
-`scoped-identity-kind`, `coverage-ledger`), clauses 417 to 422 (106
-corrected in place, 2 removed, 7 added), residuals 6 unchanged, frame
+`scoped-identity-kind`, `coverage-ledger`), clauses 417 to 423 (106
+corrected in place, 2 removed, 8 added), residuals 6 unchanged, frame
 indexes 21 unchanged. The program URI is
 `urn:stdo-3:claude:program:a-c-text:set-6`.
 
@@ -292,10 +300,10 @@ indexes 21 unchanged. The program URI is
   longer states them; it points to RELEASE section 9, which
   `release-successor-disposes-every-predecessor-claim` encodes). No frame
   index or support reference cited them.
-- Added: six bootstrap clauses (above) and
+- Added: seven bootstrap clauses (above) and
   `odd-graph-function-binding-declares-the-environment-contract`.
 - Frame indexes: the two F-01 frames reselected (above), `odd-closure`
-  one root added, `bootstrap` re-rooted on nine clauses with its sources.
+  one root added, `bootstrap` re-rooted on ten clauses with its sources.
 
 Newly conserved member text not encoded, because no task needs it: the
 DESIGN_MODULE preference for one algebraic primitive and its prompt

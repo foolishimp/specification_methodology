@@ -178,7 +178,7 @@ instruction: TRAVERSAL_OCCURRENCE to `188bc81` and ACTIVATION to
 `9be9f57`; the other twenty-one members are byte-identical to `4425993`.
 Their digests are recorded under [a_c/set-6/](../../../a_c/set-6/README.md).
 They are encoded as program `urn:stdo-3:claude:program:a-c-text:set-6`,
-canonical digest `sha256:9aa2e6521fa1a0fcf0262270b3838ef9c5b1064e0f4edb3fed0c1a3ab1537cbb`, zero diagnostics against the pinned Axiom
+canonical digest `sha256:d8a1d086508c96036641f13d21e6f1e923d2a65de56d1a8c3814983e5c1bbc83`, zero diagnostics against the pinned Axiom
 Indexer, after the fidelity pass recorded in
 [a_c/set-6/FIDELITY.md](../../../a_c/set-6/FIDELITY.md) corrected 106
 set-5 clauses and removed two. The actor receives the bytes of these frame
@@ -186,31 +186,31 @@ files:
 
 | Frame file | SHA-256 | Bytes |
 |---|---|---|
-| `a_c/set-6/projection-frame-declaration-and-activation-materialized.json` | `31484102c53bc81acbef49c56fe83d9345f125988c0ac966b244916670421f41` | 94,689 |
-| `a_c/set-6/projection-coverage-and-revision-materialized.json` | `f4f054c94232e6bbbef50bcc1fd0fcf279c1ae7525ca9a156d4aecec65e1db4c` | 94,166 |
+| `a_c/set-6/projection-frame-declaration-and-activation-materialized.json` | `f4a8fb6bbf617dde7a1f7b3ec5794906124ebc90098e6644f4b577076e858a80` | 98,438 |
+| `a_c/set-6/projection-coverage-and-revision-materialized.json` | `1ccc9c8663a51bc613fd22571808fc1bc791dc58f1475335fbc952198656d0bb` | 94,166 |
 
 The F-01 frames are reselected under the 100,000-byte limit (set-6
-README, "F-01 frames reselected"): fewer relations than the set-2 and set-3
-frames carried, so a run against this revision tests a narrower frame, and
-the relations left out are listed there. The cap of 400,000 bytes is
-unchanged.
+README, "F-01 frames reselected"). They carry fewer relations than the
+set-2 and set-3 frames, so a run against this revision tests a narrower
+frame; the relations left out are listed there. The cap of 400,000 bytes
+is unchanged.
 
 Invocations as in "Instrument invocations" above with `a_c/set-6/` in
 place of the earlier set directory in the METHOD block path and the step
 ids `A-0R2`, `B-0R2` and so on (five characters, so the header line is the
 length the earlier dry runs measured). CARD.md and the TASK files are
-unchanged. The W27 commit introduces the set-6 files; a run names that
-commit in the runs table.
+unchanged. The W27 commits introduce the set-6 files; a run names the
+commit it used in the runs table.
 
 Dry-run measurement at these digests with `--dry-run`, into a scratch run
 directory outside the repository; no actor was started:
 
 | Step | Total bytes | System | Card | METHOD block | TASK block | Header |
 |---|---|---|---|---|---|---|
-| A-0R2 | 98,647 | 182 | 455 | 94,742 | 3,154 | 114 |
+| A-0R2 | 102,397 | 182 | 455 | 98,491 | 3,154 | 115 |
 | B-0R2 | 98,951 | 182 | 455 | 94,208 | 4,003 | 103 |
 
-All 2 fit the cap; the total over 2 steps is 197,598 bytes. The
-`measured` events carried the METHOD block digests `31484102c53b…`, `f4f054c94232…`
+All 2 fit the cap; the total over 2 steps is 201,348 bytes. The
+`measured` events carried the METHOD block digests `f4a8fb6bbf61…`, `1ccc9c8663a5…`
 (the frame file digests above), the card digest `237ea8f915ca…` and
 instrument SHA-256 `f92ca26b3e4f…`.
