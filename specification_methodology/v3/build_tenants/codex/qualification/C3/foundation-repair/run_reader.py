@@ -11,6 +11,7 @@ parser.add_argument("variant", choices=["predecessor", "successor"])
 parser.add_argument("--subject", required=True)
 parser.add_argument("--retest", action="store_true")
 args = parser.parse_args()
+subject = subprocess.check_output(['git', 'rev-parse', args.subject], text=True).strip()
 root = Path(__file__).resolve().parent
 base = root.parents[2]
 method = (Path('/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2')
@@ -37,7 +38,7 @@ argv = ['claude', '-p', '--safe-mode', '--restricted', '--tools', 'Read,Glob,Gre
         '--add-dir', str(method), str(task), '--output-format', 'stream-json',
         '--verbose', '--no-session-persistence', '--model', 'opus', '--effort',
         'medium', '--max-turns', '12', '--max-budget-usd', '0.95']
-report = {'variant': args.variant, 'subject_commit': args.subject,
+report = {'variant': args.variant, 'subject_commit': subject, 'subject_selector': args.subject,
           'method_root': str(method), 'argv': argv, 'prompt_bytes': len(prompt.encode()),
           'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
           'context_allowance_bytes': 200000, 'wall_allowance_seconds': 360,

@@ -1,45 +1,45 @@
 {
   "kind": "construction_measurement_report",
-  "recorded_at_utc": "2026-10-12T10:13:13.257127+00:00",
+  "recorded_at_utc": "2026-10-12T15:10:02.946131+00:00",
   "planning_allowance_hours": 3,
   "recorded_start_utc": "2026-10-12T01:34:00Z",
   "wall_allowance_status": "exceeded; acknowledged Executive control failure",
   "cost_allowance_usd": 30,
-  "call_count": 34,
+  "call_count": 40,
   "totals": {
-    "provider_reported_cost_usd": 24.349782,
-    "provider_elapsed_seconds_sum": 4187.766,
-    "prompt_bytes_sum": 5221835,
-    "input_tokens": 70,
-    "output_tokens": 437577,
-    "cache_read_input_tokens": 90805,
-    "cache_creation_input_tokens": 1913332
+    "provider_reported_cost_usd": 28.036242,
+    "provider_elapsed_seconds_sum": 4879.649,
+    "prompt_bytes_sum": 5788246,
+    "input_tokens": 108,
+    "output_tokens": 507607,
+    "cache_read_input_tokens": 287704,
+    "cache_creation_input_tokens": 2194123
   },
   "views": [
     {
       "path": "standards/frames/EVALUATION_CONJUNCTION.md",
-      "bytes": 15642,
-      "sha256": "7fd0f1cb3e0ce246b5f15da885fa8c09882249f3931705d83e66cb96885f4247"
+      "bytes": 15750,
+      "sha256": "ff325581f98c97fe8d8a8fcf9e26904489b2ab110f7979b2949393929699b8d6"
     },
     {
       "path": "standards/frames/CONSTITUTIONAL_DERIVATION.md",
-      "bytes": 16648,
-      "sha256": "159a7ef34ec135016101079d5001d100c7a7e7dcb2c5811d8d72cd28dfca522a"
+      "bytes": 16651,
+      "sha256": "ee257c619bcee3ffaeb54ea136e699e87f99de3812ba94cd637f185d34353523"
     },
     {
       "path": "standards/frames/DOMAIN_BINDING.md",
-      "bytes": 19689,
-      "sha256": "25b70f0f7b5082d0c8fce7f9b99ee52ec92280f1f00ebfc47d57e1d5a17343ad"
+      "bytes": 19692,
+      "sha256": "e9d6c7c3058dd12ad7cca1506d2b9cd9df9868b78a3889194e85f7033b95d77c"
     },
     {
       "path": "standards/frames/RELEASE_ADOPTION.md",
-      "bytes": 14421,
-      "sha256": "395d25d374f2b0c1b0cf25ea36110e54109fd74a7a0a0f3d6d5a60b2d8a07b63"
+      "bytes": 14424,
+      "sha256": "8477fc733ba40f47321505492311fe1a0e3a1f2986c304d540f5ee61525156ea"
     },
     {
       "path": "standards/frames/WORK_RECOVERY.md",
-      "bytes": 35235,
-      "sha256": "9642e7521207e9999f30d17d7b403316b1ac0a7e32374f45b93363e1cd63f58e"
+      "bytes": 25689,
+      "sha256": "736c6adc1fef23130783f52954dba289b1ee823f4cdc84a875374859c91ccd41"
     }
   ],
   "calls": [
@@ -378,6 +378,828 @@
       "session_id": "a6a5aa7b-0cd3-4009-8fe8-7aa5bfc3d177",
       "num_turns": 1,
       "elapsed_seconds": 68.467
+    },
+    {
+      "path": "foundation-repair/comparison-review/MEASUREMENT.json",
+      "subject_commit": "83ccb1fd0a4b45b77d39aeef843ae5e699a721cb",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--tools",
+        "",
+        "--permission-mode",
+        "dontAsk",
+        "--output-format",
+        "json",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-budget-usd",
+        "1.3"
+      ],
+      "prompt_bytes": 218891,
+      "prompt_sha256": "eff8d1c3026789068a7e2042d970b2da7158f9da8a00d5aa66e7aa019ca8b7c0",
+      "context_allowance_bytes": 600000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 1.3,
+      "role": "author-independent Reviewer",
+      "provider_cwd": "/private/tmp",
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.8846994,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 75817,
+        "cache_read_input_tokens": 2377,
+        "output_tokens": 13884,
+        "output_tokens_details": {
+          "thinking_tokens": 9396
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 75817,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 13884,
+            "cache_read_input_tokens": 2377,
+            "cache_creation_input_tokens": 75817,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 75817
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 13884,
+          "cacheReadInputTokens": 2377,
+          "cacheCreationInputTokens": 75817,
+          "webSearchRequests": 0,
+          "costUSD": 0.8846994,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 9396,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "152024b6-a421-424f-983a-ea568eccdacf",
+      "num_turns": 1,
+      "elapsed_seconds": 139.167
+    },
+    {
+      "path": "foundation-repair/final-review/MEASUREMENT.json",
+      "subject_commit": "edc884f49fcd137d9a34e73f2660158c6df8795a",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--tools",
+        "",
+        "--permission-mode",
+        "dontAsk",
+        "--output-format",
+        "json",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-budget-usd",
+        "1.3"
+      ],
+      "prompt_bytes": 210863,
+      "prompt_sha256": "6c15920c28c4f0d3a9e4716fb321b27eefee5116e1207f25d20c3c2199772e83",
+      "context_allowance_bytes": 600000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 1.3,
+      "role": "author-independent Reviewer",
+      "provider_cwd": "/private/tmp",
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.9424914,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 72266,
+        "cache_read_input_tokens": 2377,
+        "output_tokens": 18194,
+        "output_tokens_details": {
+          "thinking_tokens": 13341
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 72266,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 18194,
+            "cache_read_input_tokens": 2377,
+            "cache_creation_input_tokens": 72266,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 72266
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 18194,
+          "cacheReadInputTokens": 2377,
+          "cacheCreationInputTokens": 72266,
+          "webSearchRequests": 0,
+          "costUSD": 0.9424914,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 13341,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "c80ef671-bfd6-4b4e-98bf-d7d4229c154b",
+      "num_turns": 1,
+      "elapsed_seconds": 175.932
+    },
+    {
+      "path": "foundation-repair/predecessor/MEASUREMENT.json",
+      "variant": "predecessor",
+      "subject_commit": "83ccb1fd0a4b45b77d39aeef843ae5e699a721cb",
+      "method_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--restricted",
+        "--tools",
+        "Read,Glob,Grep",
+        "--allowedTools",
+        "Read",
+        "Glob",
+        "Grep",
+        "--permission-mode",
+        "dontAsk",
+        "--add-dir",
+        "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-turns",
+        "12",
+        "--max-budget-usd",
+        "0.95"
+      ],
+      "prompt_bytes": 1075,
+      "prompt_sha256": "60a15227d41e8cb9b1581ea332d2dd5631bb9a06e54731c4213dddb6c34294b3",
+      "context_allowance_bytes": 200000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 0.95,
+      "role": "fresh read-only method reader",
+      "provider_cwd": "/private/tmp",
+      "limits": [
+        "Source-package acquisition after Host basis verification",
+        "No native installation, host skill discovery or actual effects",
+        "Rendered tool-result bytes exclude provider system/internal prompts"
+      ],
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.3812006,
+      "usage": {
+        "input_tokens": 14,
+        "cache_creation_input_tokens": 30912,
+        "cache_read_input_tokens": 107843,
+        "output_tokens": 5614,
+        "output_tokens_details": {
+          "thinking_tokens": 1789
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 30912,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3877,
+            "cache_read_input_tokens": 32574,
+            "cache_creation_input_tokens": 1343,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1343
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 14,
+          "outputTokens": 5614,
+          "cacheReadInputTokens": 107843,
+          "cacheCreationInputTokens": 30912,
+          "webSearchRequests": 0,
+          "costUSD": 0.3812006,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 1789,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "e2b33f94-1112-4296-aced-b9e8d0b78f02",
+      "num_turns": 12,
+      "provider_subtype": "success",
+      "read_requests": [
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+        },
+        {
+          "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-work/SKILL.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+        },
+        {
+          "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/references/PRODUCT_BASIS.md"
+        },
+        {
+          "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+          "offset": 1185,
+          "limit": 145
+        },
+        {
+          "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+          "offset": 1503,
+          "limit": 165
+        },
+        {
+          "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+          "offset": 1180,
+          "limit": 40
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+          }
+        },
+        {
+          "name": "Glob",
+          "input": {
+            "pattern": "**/*",
+            "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-work/SKILL.md"
+          }
+        },
+        {
+          "name": "Glob",
+          "input": {
+            "pattern": "**/*",
+            "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/references/PRODUCT_BASIS.md"
+          }
+        },
+        {
+          "name": "Grep",
+          "input": {
+            "pattern": "^#{1,4} ",
+            "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+            "output_mode": "content"
+          }
+        },
+        {
+          "name": "Grep",
+          "input": {
+            "pattern": "(?i)(uncertain|timeout|idempot|revok|revocation|retry|replay|reconcil.*effect|unknown outcome)",
+            "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+            "output_mode": "content",
+            "head_limit": 80
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+            "offset": 1185,
+            "limit": 145
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+            "offset": 1503,
+            "limit": 165
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+            "offset": 1180,
+            "limit": 40
+          }
+        }
+      ],
+      "rendered_tool_result_bytes": 67958,
+      "context_allowance_observed": true,
+      "elapsed_seconds": 60.119
+    },
+    {
+      "path": "foundation-repair/review/MEASUREMENT.json",
+      "subject_commit": "bde7bc76fd03adec62af81963a4b7509fe9fa2d3",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--tools",
+        "",
+        "--permission-mode",
+        "dontAsk",
+        "--output-format",
+        "json",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-budget-usd",
+        "2.0"
+      ],
+      "prompt_bytes": 133340,
+      "prompt_sha256": "ded09ea7762161128423aaccb3a3aad509d33a4d300e8d44be23abbbe7929967",
+      "context_allowance_bytes": 600000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 2.0,
+      "role": "author-independent Reviewer",
+      "provider_cwd": "/private/tmp",
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.810737,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 47185,
+        "cache_read_input_tokens": 1445,
+        "output_tokens": 21648,
+        "output_tokens_details": {
+          "thinking_tokens": 16880
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 47185,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 21648,
+            "cache_read_input_tokens": 1445,
+            "cache_creation_input_tokens": 47185,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 47185
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 2,
+          "outputTokens": 21648,
+          "cacheReadInputTokens": 1445,
+          "cacheCreationInputTokens": 47185,
+          "webSearchRequests": 0,
+          "costUSD": 0.810737,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 16880,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "6093093f-ff59-4f4e-a198-1a9aa157f19c",
+      "num_turns": 1,
+      "elapsed_seconds": 203.149
+    },
+    {
+      "path": "foundation-repair/successor/MEASUREMENT.json",
+      "variant": "successor",
+      "subject_commit": "83ccb1fd0a4b45b77d39aeef843ae5e699a721cb",
+      "method_root": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--restricted",
+        "--tools",
+        "Read,Glob,Grep",
+        "--allowedTools",
+        "Read",
+        "Glob",
+        "Grep",
+        "--permission-mode",
+        "dontAsk",
+        "--add-dir",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-turns",
+        "12",
+        "--max-budget-usd",
+        "0.95"
+      ],
+      "prompt_bytes": 1121,
+      "prompt_sha256": "801e315edeac7805e9ef4818b1469989c450822d6fa6253d9f0bd54bc800afb8",
+      "context_allowance_bytes": 200000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 0.95,
+      "role": "fresh read-only method reader",
+      "provider_cwd": "/private/tmp",
+      "limits": [
+        "Source-package acquisition after Host basis verification",
+        "No native installation, host skill discovery or actual effects",
+        "Rendered tool-result bytes exclude provider system/internal prompts"
+      ],
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.3565482,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 28385,
+        "cache_read_input_tokens": 43341,
+        "output_tokens": 6038,
+        "output_tokens_details": {
+          "thinking_tokens": 2378
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 28385,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5011,
+            "cache_read_input_tokens": 16193,
+            "cache_creation_input_tokens": 15197,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 15197
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 10,
+          "outputTokens": 6038,
+          "cacheReadInputTokens": 43341,
+          "cacheCreationInputTokens": 28385,
+          "webSearchRequests": 0,
+          "costUSD": 0.3565482,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 2378,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "ba931c87-1ee0-45e8-bb79-3f67797054ec",
+      "num_turns": 9,
+      "provider_subtype": "success",
+      "read_requests": [
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/README.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+          }
+        },
+        {
+          "name": "Glob",
+          "input": {
+            "pattern": "**/*stdo*",
+            "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor"
+          }
+        },
+        {
+          "name": "Glob",
+          "input": {
+            "pattern": "**/*",
+            "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/README.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md"
+          }
+        }
+      ],
+      "rendered_tool_result_bytes": 70456,
+      "context_allowance_observed": true,
+      "elapsed_seconds": 62.032
+    },
+    {
+      "path": "foundation-repair/successor-retest/MEASUREMENT.json",
+      "variant": "successor",
+      "subject_commit": "edc884f49fcd137d9a34e73f2660158c6df8795a",
+      "method_root": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor",
+      "argv": [
+        "claude",
+        "-p",
+        "--safe-mode",
+        "--restricted",
+        "--tools",
+        "Read,Glob,Grep",
+        "--allowedTools",
+        "Read",
+        "Glob",
+        "Grep",
+        "--permission-mode",
+        "dontAsk",
+        "--add-dir",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--no-session-persistence",
+        "--model",
+        "opus",
+        "--effort",
+        "medium",
+        "--max-turns",
+        "12",
+        "--max-budget-usd",
+        "0.95"
+      ],
+      "prompt_bytes": 1121,
+      "prompt_sha256": "801e315edeac7805e9ef4818b1469989c450822d6fa6253d9f0bd54bc800afb8",
+      "context_allowance_bytes": 200000,
+      "wall_allowance_seconds": 360,
+      "spend_allowance_usd": 0.95,
+      "role": "fresh read-only method reader",
+      "provider_cwd": "/private/tmp",
+      "limits": [
+        "Source-package acquisition after Host basis verification",
+        "No native installation, host skill discovery or actual effects",
+        "Rendered tool-result bytes exclude provider system/internal prompts"
+      ],
+      "exit_code": 0,
+      "is_error": false,
+      "total_cost_usd": 0.31078320000000004,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 26226,
+        "cache_read_input_tokens": 39516,
+        "output_tokens": 4652,
+        "output_tokens_details": {
+          "thinking_tokens": 1876
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 26226,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3753,
+            "cache_read_input_tokens": 17841,
+            "cache_creation_input_tokens": 13420,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 13420
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "modelUsage": {
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 4652,
+          "cacheReadInputTokens": 39516,
+          "cacheCreationInputTokens": 26226,
+          "webSearchRequests": 0,
+          "costUSD": 0.31078320000000004,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 1876,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "session_id": "ed9cbe20-12c8-4007-b9ab-8c76ff1ef467",
+      "num_turns": 8,
+      "provider_subtype": "success",
+      "read_requests": [
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/README.md"
+        },
+        {
+          "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/TASK.md"
+          }
+        },
+        {
+          "name": "Glob",
+          "input": {
+            "pattern": "**/*",
+            "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/foundation-repair/task/STATES.json"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/README.md"
+          }
+        },
+        {
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md"
+          }
+        }
+      ],
+      "rendered_tool_result_bytes": 68440,
+      "context_allowance_observed": true,
+      "elapsed_seconds": 51.484,
+      "subject_selector": "HEAD",
+      "subject_binding_note": "Host normalized the literal selector immediately after return: own HEAD was edc884f before dispatch and after return; every successor byte still equals that committed tree. Original unnormalized measurement is preserved separately. No source write occurred during the invocation."
     },
     {
       "path": "pilot/MEASUREMENT.json",
@@ -2896,12 +3718,12 @@
     "Token counters are reported fields, not independently measured reasoning spend",
     "Whole-corpus efficacy or speed improvement is not inferred"
   ],
-  "product_subject_commit": "c10d70f4048157c4755b3c2ca6766cc429f7fbd2",
-  "recorded_wall_seconds": 31153.257,
+  "product_subject_commit": "edc884f49fcd137d9a34e73f2660158c6df8795a",
+  "recorded_wall_seconds": 48962.946,
   "previous_closure_measurement": {
-    "recorded_at_utc": "2026-10-12T07:35:13.535286+00:00",
-    "call_count": 33,
-    "recorded_wall_seconds": 21673.535
+    "recorded_at_utc": "2026-10-12T10:13:13.257127+00:00",
+    "call_count": 34,
+    "recorded_wall_seconds": 31153.257
   },
   "wall_measurement_scope": "Elapsed clock time from first construction activation through this record, including stopped work and user/re-entry gaps; not continuous active work or provider duration.",
   "resumed_confirmation": {
@@ -2909,5 +3731,15 @@
     "elapsed_seconds": 152.094,
     "provider_reported_cost_usd": 1.133413,
     "result": "Both assigned claims satisfied with no findings; limits retained"
+  },
+  "foundation_repair": "foundation-repair/RETURN.md",
+  "comparison_metrics": "foundation-repair/COMPARISON_METRICS.json",
+  "foundation_repair_envelope": {
+    "start_utc": "2026-10-12T14:31:39.050949+00:00",
+    "recorded_end_utc": "2026-10-12T15:12:27.391669+00:00",
+    "elapsed_seconds": 2448.341,
+    "planning_allowance_seconds": 5400,
+    "within_planning_allowance": true,
+    "scope": "Clock time for this repair increment; previous three-hour overrun remains historical"
   }
 }

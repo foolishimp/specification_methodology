@@ -1,10 +1,9 @@
 # STDO v3.0.0 Codex successor execution
 
-State: foundation-based work/recovery repair is in progress under Jim's
-continue. The previous reviewable candidate is b4310c0. Its bounded authority
-and recovery findings remain closed at that subject; changed architectural and
-ordinary-acquisition claims await fresh review. Common checkpoint and release
-acceptance remain open.
+State: the foundation-based work/recovery increment returns candidate_ready at
+edc884f after independent source and affected-reader confirmation. Whole-corpus
+reconstruction, common C3 checkpoint acceptance and release remain open. Prior
+failures and the acknowledged convergence overrun remain literal.
 
 Envelope overrun: the three-hour planning allowance was exceeded. Source
 summary churn and insufficient early abstraction/condition preservation are
@@ -95,3 +94,5 @@ Exit: complete self-contained documentary candidate, exact 690-row mapping, reso
 2026-10-12T14:49:34.214526+00:00 — Both matched readers completed within their acquisition/spend envelopes. V3 selected the recovery view through ordinary entry; its transcript uses Baseline-only result labels while declaring no adopted frame basis. Executive activates independent adjudication before repair or acceptance. A fresh-session same-model-family exception for reader-output assessment is declared: neither output is authored by the assessor; reader model is held constant and cross-family robustness is unproved. Source assessment remains Codex-author/Claude-Reviewer independent. Frozen source stays 83ccb1f.
 
 2026-10-12T14:54:44.515810+00:00 — Independent comparison review at 83ccb1f confirms ordinary v3 route discovery but falsifies its reader on unadopted Baseline result labels. Both readers retain lawful-effect guards; presentation and lineage completeness residuals remain. Source clauses are sufficient, and one sample does not establish the cause. Executive selects a materiality repair: the default generic recovery projection excludes optional Baseline sections; adopted profiles remain fully available through their accepted basis and source owner. Restore externally-owned RF-012 extension wording and narrow remaining authored-standing language. Separate Writer performs those view/wording changes, preserves the failed run and authorizes one affected-reader retest with unchanged cases and independent oracle. Known provider aggregate USD 26.7829672; retest maximum USD 0.95 plus final confirmation USD 1.3 remain below USD 30. Fresh source/reader assessment retains the declared same-family exception for reader outputs. No private oracle is exposed to the reader.
+
+2026-10-12T15:10:02.946131+00:00 — Executive consumed final review at edc884f: bounded source repair satisfied, profile mapping defect satisfied at source and absent in one retest; efficacy/robustness indeterminate. Retain low presentation and fixture ambiguities and the review’s invalid_basis corrections to earlier oracle assumptions. Accept only this cone as candidate_ready; other reconstruction branches and per-member/common acceptance remain open. Separate recording Writer updates current returns, applicable pins, measurements and complete inventory, verifies artifact controls and checkpoints the own branch. No broad rerun, main/common/peer effect or release is selected.

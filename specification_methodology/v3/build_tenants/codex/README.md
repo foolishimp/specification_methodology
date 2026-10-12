@@ -8,12 +8,14 @@ Worktree: /Users/jim/src/apps/specification_methodology-codex; branch: tenant/co
 
 ## Current Work
 
-C3: the complete [STDO v3.0.0 successor candidate](successor/README.md) follows
+C3: the [STDO v3.0.0 documentary successor candidate](successor/README.md) follows
 Jim's tenant/worktree construction instruction under exact installed STDO
 2.5.1 RC2. [The execution return](qualification/C3/RETURN.md) names the frozen
 subject, complete predecessor conservation, independent source comparisons,
 actual bounded exercises, a_c evidence, measurements and remaining limits.
-Claude retains the common pen; this tenant makes no canonical selection,
+The foundation-based work/recovery branch is independently assessed; other
+branches and per-member acceptance remain open. Claude retains the common pen;
+this tenant makes no canonical selection,
 main merge, publication or release decision.
 
 ## Preserved C1/C2 And Earlier Bounded Build

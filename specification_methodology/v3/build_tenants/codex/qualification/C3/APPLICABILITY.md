@@ -1,10 +1,25 @@
 # C3 evidence applicability
 
-Current Product subject: c10d70f4048157c4755b3c2ca6766cc429f7fbd2. The
+Current Product subject: edc884f49fcd137d9a34e73f2660158c6df8795a. The
 80 Product members are individually pinned in successor/CONSERVATION.json.
 The later candidate inventory pins review carriers separately. Builder and
 predecessor are exact installed STDO v2.5.1-rc.2, manifest
 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782.
+
+## Current architecture and acquisition repair
+
+[Final repair review](foundation-repair/final-review/REVIEW.md) satisfies the
+bounded premise/contract/work-recovery relationship, current authority imports,
+source projection and profile gate at edc884f. The affected reader retest satisfies
+lawful-effect and profile criteria in one run, retaining the documented low
+presentation and fixture ambiguities. The initial failed profile result remains
+literal. The new view excludes optional Baseline material; older actual-use
+judgments remain on their supplied excerpts and cannot qualify this whole view.
+Comparative superiority, causal attribution and robustness remain indeterminate.
+
+The c10d70f confirmation below is historical support for its exact repaired
+relations. It is not promoted onto changed whole-member bytes; current affected
+support comes from the final repair review and Host artifact checks.
 
 ## Source comparison
 

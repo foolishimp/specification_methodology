@@ -5,9 +5,10 @@ for review, not an installed release. STDO 2.5.1 RC2 remains the construction
 builder until an owner selects a different exact released basis.
 
 Start at [the standards entry](standards/README.md). The method is organised by
-semantic owner, not by a mandatory sequence of files or actors. Foundations and
-a shared transformation library explain the principles; Spec Method applies
-them to constitutional construction; optional profiles refine particular domains.
+semantic owner, not by a mandatory sequence of files or actors. Foundations declares adopted premises and a shared library owns conditional
+transformation contracts. The work/recovery specialization relates them to
+particular Spec Method rules. Other branches still need reconstruction and
+per-member acceptance; optional profiles retain their own adoption and grants.
 
 An actor receives a sufficient projected frame and exact subject. It does not
 load the complete corpus merely because the corpus is the source authority.
