@@ -1,6 +1,6 @@
 # Identity Method
 
-This member refines [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
+This member relates [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
 and the [Transformation Library](TRANSFORMATION_LIBRARY.md) for scoped,
 typed identity and authority conservation. The scoped identity minimum is
 authority, kind and value. Governing basis and lifecycle qualify authority or

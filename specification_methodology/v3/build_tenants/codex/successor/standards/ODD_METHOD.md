@@ -3,8 +3,9 @@
 <!-- STDO3_PROFILE_BINDING_START -->
 ## Foundation And Transformation Binding
 
-This member is the optional graph-native ODD profile of STDO.
-It refines [Foundations](FOUNDATIONS.md) and the
+This member is the graph-native ODD constitutional method surface of STDO;
+its declared obligations apply in a Product-selected ODD scope.
+It maps [Foundations](FOUNDATIONS.md) and the
 [Transformation Library](TRANSFORMATION_LIBRARY.md). Selection of this profile
 activates its declared ODD obligations in the consumer's governed scope;
 availability supplies no Product semantics, concrete runtime identity or grant.
@@ -15,7 +16,8 @@ Its constitutional composition uses [Spec Method](SPEC_METHOD.md),
 [World Model Method](WORLD_MODEL_METHOD.md) and [UX Method](UX_METHOD.md)
 retain their separate applicability and semantic owners.
 
-The foundation's scoped identity and authority law is realized here through
+The scoped identity and authority distinctions explained in Foundations and
+owned by the detailed method members are realized here through
 consumer-bound ODD, GTL and ABG capability roles, exact typed assets and published
 carriers. A method role does not select a package or transfer a concrete
 Product's meaning. A cumulative typed environment conserves more than the most
@@ -27,14 +29,14 @@ lineage, failure and continuation law.
 |---|---|
 | Bind | Recover the selected Product outcome, any admitted bounded prerequisite or experiment, IntentLineage, exact target obligations, published action contract, execution basis and consumer-bound authorities. A target or controller label supplies no authority. |
 | Acquire | Observe the worksite, runtime facts and admitted source truth; retain current gap pressure, structural source coherence and lineage-reachable evidence. Observation, model synthesis and admitted evidence remain different relations. |
-| Transform | One published GraphFunction or lawful composition performs bounded construction under the admitted vector contract. The worker retains internal HOW, publishes the required evidence and returns control to the bound ABG authority. |
-| Evaluate | The four domain functions in §11.5D retain their own contracts. Model, gap and action-result judgments remain separate from evaluate_next selecting the next action and evaluate_action deciding disposition; those latter responsibilities are domain control, not Reviewer authority conferred by this row. Fulfillment, liveness and worker reports preserve their predicates; closure uses the admitted ledger and closure decision. |
+| Transform | One published GraphFunction or lawful composition performs bounded construction under the admitted vector contract. The worker retains internal HOW, produces required evidence for owning native admission and returns control to the bound ABG authority. This row grants no runtime-event or ledger mutation. |
+| Evaluate | §11.5D retains one synthesis function and three evaluation functions: synthesize_model produces CurrentModelProjection; evaluate_gap supplies GapProjection; evaluate_action evaluates action closure and returns EdgeClosureDecision; evaluate_next selects NextActionProjection. These are distinct domain contracts spanning several shared families, not four Reviewer judgments. Fulfillment and liveness retain their own predicates. |
 | Conjoin | Compatible published refinements and cumulative environments preserve their outer contract, exact producer coordinates, admitted evidence, unresolved obligations and zoom-stable closure. A local green path does not decide enclosing acceptance. |
-| Dispose | The existing competent owner selects the admitted closure or next-action consequence. The profile's exact close/yield/retry/repair/re-enter/reprice/block vocabulary, replay-visible basis and constitutional re-entry restrictions remain operative. |
+| Dispose | Closure truth remains under F_D/ABG/product admission: evaluate_action returns EdgeClosureDecision; evaluate_next selects the invocational NextActionProjection. Admission of a ConstructionIntent is its separate owning step. The exact close/yield/retry/repair/re-enter/reprice/block laws and no-rival-control-path restriction remain where §11.5D puts them; this row appoints no generic replacement owner. |
 
 These correspondences preserve the profile's individual contracts and owners.
 They add no six-stage workflow, runtime API or categorical-equivalence claim.
-The observation-to-yield loop applies within a selected ODD scope.
+The IntentLineage-to-NextActionProjection loop applies within a selected ODD scope.
 
 <!-- STDO3_PROFILE_BINDING_END -->
 

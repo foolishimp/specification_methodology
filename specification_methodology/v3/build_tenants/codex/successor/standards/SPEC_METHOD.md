@@ -1,8 +1,9 @@
 # Spec-Driven Homeostatic Methodology
 
-This member is the particular Spec Method refinement of
+This member owns its particular constitutional contracts.
 [Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md). A selected purpose,
+[Transformation Library](TRANSFORMATION_LIBRARY.md) organise recurring premises
+and responsibilities abstracted from the detailed owners. A selected purpose,
 interpreted subject, governing specification, sufficient evidence and actual
 owner grants supply the premises of the constitutional chain below. Finite
 capacity explains bounded work; it does not alone establish those premises or

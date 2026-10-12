@@ -34,7 +34,7 @@ no view is sufficient for every task.
 | Graph-native domain | [ODD Method](ODD_METHOD.md) |
 | Application-neutral traversal model family (adoption optional) | [Traversal Occurrence Profile](TRAVERSAL_OCCURRENCE_PROFILE.md) |
 | State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
-| User-outcome design | [UX Method](UX_METHOD.md) |
+| UX surface realization | [UX Method](UX_METHOD.md) |
 | Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
 | Exact cuts, conservation, publication and adoption | [Release Method](RELEASE_METHOD.md) |
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
@@ -44,8 +44,10 @@ The source-standing distinctions are retained: constitutional method surfaces
 include Spec, Frame, ODD, Identity and World Model; the carrier-neutral calculus
 and optional Traversal profile retain their own signatures; the Baseline is a
 derived application profile; Design, Ticket, Release, Posting and Writing are
-companion governance/operating surfaces; the Glossary is a non-deciding locator.
-The new foundation/library account preserves the detailed owners.
+companion governance/operating surfaces; UX owns its adopted realization
+process; the Glossary is a non-deciding locator. Foundations and the library
+are explanatory organization and contract families under the Methodology
+Product authority; they preserve the detailed owning determinations.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
@@ -54,8 +56,10 @@ Traversal adoption is optional and binds an exact signature and basis.
 
 ## Distribution and entry
 
-[Compressions](authority_compressions/README.md) are digest-bound read models;
-raw members decide when projections are stale or insufficient. [Templates](templates/README.md)
+[Compressions](authority_compressions/README.md) are digest-bound, non-deciding
+read models. Raw members retain deciding authority at all times; a sufficient
+current projection conveys their duties without acquiring authority, and stale
+or insufficient views require acquisition of their exact owners. [Templates](templates/README.md)
 provide starter realizations: a single per-Product Definition, project specification
 templates, a project frame basis and agent bootstrap templates. Normative
 interoperability schemas under `schemas/` define the layout-neutral Product

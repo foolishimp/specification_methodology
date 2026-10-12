@@ -1,6 +1,6 @@
 # Ticket Method
 
-This work-carrier member refines Bind, Transform, Evaluate and Dispose from the shared [transformation library](TRANSFORMATION_LIBRARY.md). It preserves durable identity, current work and owner decisions under [Foundations](FOUNDATIONS.md); the selected work lifetime determines the carrier. The concrete file layouts below are default realizations, not additional universal stages.
+This work-carrier member supplies concrete Bind, Transform, Evaluate and Dispose contracts described by the shared [transformation library](TRANSFORMATION_LIBRARY.md). It preserves durable identity, current work and owner decisions as explained in [Foundations](FOUNDATIONS.md); the selected work lifetime determines the carrier. The concrete file layouts below are default realizations, not additional universal stages.
 
 ## Core Model
 

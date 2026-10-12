@@ -6,9 +6,9 @@ The **STDO Axiomatic Calculus for Governed Symbolic Systems**, written `a_c`,
 is STDO's domain-specific, carrier-neutral constitutional calculus for
 representing and relating governed symbolic systems.
 
-The [foundations](FOUNDATIONS.md) supply the general premises of
+The [foundations](FOUNDATIONS.md) explain shared premises of
 interpretation, identity, typed composition, finite material context, evidence
-and authority. This member specifies their calculus specialization through the
+and authority. This member specifies the concrete calculus contract through the
 signature, records and AC laws below. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
 names recurring contract responsibilities; calculus applications express them
 through these exact records and laws. Its vocabulary does not replace AC-013's

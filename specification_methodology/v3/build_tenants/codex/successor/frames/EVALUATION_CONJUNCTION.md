@@ -12,7 +12,11 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+
+
+
+
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ## Reference Frame Laws
 
@@ -173,7 +177,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../standards/REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### Applicability And Required Results
 
@@ -197,7 +201,7 @@ finite declared fixture; always skipping or always activating cannot satisfy
 those different expected outcomes.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../standards/REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../standards/REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ## Using Frames In Conjunction
 
@@ -248,7 +252,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../standards/REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../standards/REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ## Minimal Evaluation Result
 
@@ -272,7 +276,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../standards/R
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../standards/TRANSFORMATION_LIBRARY.md#bind); SHA256 `7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../standards/TRANSFORMATION_LIBRARY.md#bind); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
 
 ## Bind
 
@@ -281,7 +285,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../standards/TRANSFORMATION_LIBRARY.md#acquire); SHA256 `7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../standards/TRANSFORMATION_LIBRARY.md#acquire); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
 
 ## Acquire
 
@@ -292,7 +296,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../standards/TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../standards/TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
 
 ## Evaluate
 
@@ -310,7 +314,7 @@ needs re-entry or a competing truth path violates the basis. This is assessment
 evidence; the decision owner alone performs the authoritative disposition.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../standards/TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../standards/TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64`.
 
 ## Conjoin
 
@@ -318,7 +322,8 @@ Combine only compatible, authenticated results on a declared common outcome.
 Retain each applicable known failure, its producer and citations. Retain required
 uncovered coverage separately. For an instance whose admission contract declares
 planned assessment slots, authenticate each planned slot; an omitted planned
-judgment violates that contract, while an authenticated set can
-still leave a different required responsibility uncovered. Satisfaction requires
+judgment is handled by that owner's declared admission/result rule; no generic
+falsification or rejection is inferred from absence alone. An authenticated set
+can still leave a different required responsibility uncovered. Satisfaction requires
 every applicable material predicate and seam to be supported. An incompatible
 basis or unknown applicability prevents a wider satisfied claim.

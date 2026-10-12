@@ -1,6 +1,6 @@
 # Design Module Method
 
-This member refines the [Foundations](FOUNDATIONS.md) and
+This member relates the [Foundations](FOUNDATIONS.md) and
 [Transformation Library](TRANSFORMATION_LIBRARY.md) for realization design
 under `SPEC_METHOD.md`. Given a governed Product outcome, constitutional
 requirements and an actual design grant, its Ontology and material constraint

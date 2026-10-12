@@ -1,12 +1,13 @@
 {
   "kind": "axiom-indexer.axiomatic-program",
   "schema_version": 1,
-  "uri": "urn:codex-stdo3:c3:program:finite",
+  "uri": "urn:codex-stdo3:c3:program:permission-mutant",
   "calculus_ref": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
   "source_basis": "repo://codex-v3/",
   "frame_refs": [
     "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation",
-    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join"
   ],
   "vocabulary_refs": [
     "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
@@ -61,6 +62,22 @@
   ],
   "clauses": [
     {
+      "uri": "urn:codex-stdo3:c3:clause:effect-recovery",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "After an unknown possible effect, observe/reconcile actual state or stop unresolved before a potentially duplicating retry; no operation authority follows."
+        }
+      ],
+      "statement": "Unknown external effects do not permit blind repetition.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#transform"
+      ]
+    },
+    {
       "uri": "urn:codex-stdo3:c3:clause:finding-conservation",
       "clause_type": "constraint",
       "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#conserves",
@@ -71,7 +88,7 @@
         },
         {
           "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
-          "literal": "Only planned slot A is admitted/authenticated; B is required uncovered coverage."
+          "literal": "Exactly planned slot A is admitted/authenticated, bound to source-v1 and its one original producer; B is required uncovered coverage."
         },
         {
           "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#consequence",
@@ -194,10 +211,14 @@
       "uri": "urn:codex-stdo3:c3:residual:scope",
       "kind": "unresolved",
       "subject_refs": [
+        "urn:codex-stdo3:c3:clause:effect-recovery",
+        "urn:codex-stdo3:c3:clause:finding-conservation",
+        "urn:codex-stdo3:c3:clause:permission",
+        "urn:codex-stdo3:c3:clause:role-boundary",
         "urn:codex-stdo3:c3:clause:token-transfer",
         "urn:codex-stdo3:c3:clause:typed-join"
       ],
-      "detail": "No category equivalence, statistical Markov closure, distributed transport guarantee or whole-corpus interpretation fidelity is established.",
+      "detail": "No universal categorical equivalence, statistical Markov property, distributed exactly-once effect, runtime capacity, practical adequacy, complete-corpus fidelity or release is proved. The executable interpretation models token states only, not the other qualitative relations.",
       "re_entry_refs": [
         "repo://codex-v3/qualification/C3/a_c/SOURCE.md#residuals"
       ],
@@ -225,6 +246,7 @@
       "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
       "scope": "Evaluate exact permission, observation and ownership preservation in the finite token state.",
       "clause_refs": [
+        "urn:codex-stdo3:c3:clause:effect-recovery",
         "urn:codex-stdo3:c3:clause:token-transfer"
       ],
       "residual_refs": [
@@ -232,6 +254,20 @@
       ],
       "source_refs": [
         "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:index:typed",
+      "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join",
+      "scope": "Judge semantic unit compatibility without minting an operation grant.",
+      "clause_refs": [
+        "urn:codex-stdo3:c3:clause:typed-join"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join"
       ]
     }
   ]

@@ -1,0 +1,83 @@
+{
+  "subject_commit": "b0ec615c9ebe8da80e9852df3968233155a432b7",
+  "argv": [
+    "claude",
+    "-p",
+    "--safe-mode",
+    "--tools",
+    "",
+    "--permission-mode",
+    "dontAsk",
+    "--output-format",
+    "json",
+    "--no-session-persistence",
+    "--model",
+    "opus",
+    "--effort",
+    "medium",
+    "--max-budget-usd",
+    "6"
+  ],
+  "prompt_bytes": 331110,
+  "prompt_sha256": "feb2960aa612b5a74a8aa9f4b3a4723ff9a7e01ea8fa8f8650d873e49d8180b6",
+  "context_allowance_bytes": 600000,
+  "wall_allowance_seconds": 480,
+  "spend_allowance_usd": 6,
+  "role": "author-independent Reviewer",
+  "exit_code": 0,
+  "is_error": false,
+  "total_cost_usd": 1.1421794,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 124782,
+    "cache_read_input_tokens": 2377,
+    "output_tokens": 7172,
+    "output_tokens_details": {
+      "thinking_tokens": 4380
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 124782,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7172,
+        "cache_read_input_tokens": 2377,
+        "cache_creation_input_tokens": 124782,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 124782
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 7172,
+      "cacheReadInputTokens": 2377,
+      "cacheCreationInputTokens": 124782,
+      "webSearchRequests": 0,
+      "costUSD": 1.1421794,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 4380,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "session_id": "44d2fb4b-d1f7-4a9f-b199-5c5d1f87a4f8",
+  "num_turns": 1,
+  "elapsed_seconds": 68.714
+}

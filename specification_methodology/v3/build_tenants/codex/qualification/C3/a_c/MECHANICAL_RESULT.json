@@ -21,9 +21,14 @@
       "exit": 0
     },
     {
-      "operation": "changed-program-old-map",
+      "operation": "wrong-program-old-map",
       "exit": 1,
       "refused": true
+    },
+    {
+      "operation": "exact-join",
+      "exit": 0,
+      "exact": true
     }
   ],
   "projection_relations_equal": true,
@@ -34,6 +39,6 @@
     "source_routes"
   ],
   "limits": [
-    "No semantic predicate or fidelity inference from validation/projection"
+    "No semantic predicate or fidelity inference from validation/projection/join"
   ]
 }

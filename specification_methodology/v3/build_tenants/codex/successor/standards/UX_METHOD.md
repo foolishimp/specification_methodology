@@ -3,8 +3,8 @@
 <!-- STDO3_PROFILE_BINDING_START -->
 ## Foundation And Transformation Binding
 
-This member is the optional UX realization profile of STDO. It
-refines [Foundations](FOUNDATIONS.md), the
+This member owns the adopted UX realization process of STDO. It
+maps [Foundations](FOUNDATIONS.md), the
 [Transformation Library](TRANSFORMATION_LIBRARY.md) and
 [Design Module Method](DESIGN_MODULE_METHOD.md). Its own adoption, default
 coverage, scaffold and exemption clauses determine the covered surface. The

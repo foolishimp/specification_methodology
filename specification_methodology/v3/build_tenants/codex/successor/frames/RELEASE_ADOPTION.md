@@ -12,7 +12,11 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../standards/RELEASE_METHOD.md#release-identities); SHA256 `5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675`.
+
+
+
+
+Source: [RELEASE_METHOD.md — Release Identities](../standards/RELEASE_METHOD.md#release-identities); SHA256 `c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11`.
 
 ## Release Identities
 
@@ -39,7 +43,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../standards/RELEASE_METHOD.md#immutable-rc-publication); SHA256 `5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../standards/RELEASE_METHOD.md#immutable-rc-publication); SHA256 `c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11`.
 
 ## Immutable RC Publication
 
@@ -71,7 +75,7 @@ fail-closed release state; it never authorizes resolution of the older cut as
 the version-line latest.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../standards/RELEASE_METHOD.md#exact-cut-qualification); SHA256 `5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../standards/RELEASE_METHOD.md#exact-cut-qualification); SHA256 `c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11`.
 
 ## Exact-Cut Qualification
 
@@ -98,7 +102,7 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../standards/RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../standards/RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11`.
 
 ## Selector And Consumer Adoption
 
@@ -148,7 +152,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -173,7 +177,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../standards/SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `077f43af7ef92a01397e5a89881e7b3e0ef8eac7dba6294b82690b4b58322b27`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../standards/SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `61262847f8d715f440e22092aed4a23092a0868b4d96258a85181c1e3ddf83f0`.
 
 #### Explicit Complete Consumer Update
 
@@ -225,7 +229,7 @@ paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../standards/REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../standards/REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -235,7 +239,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-006 Authority Conservation
 
@@ -245,7 +249,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-012 Closed Results
 

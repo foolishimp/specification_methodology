@@ -1,29 +1,38 @@
 {
-  "kind": "finite_source_interpretation_check",
-  "source_sha256": "abe74a73c7bdcdf7ebe93b71ead42679697955d2110e4ee5d0fd064345c42c10",
-  "executable_sha256": "7919327cce405d34f825475133a679981a86658494371223808d5c9209a44b62",
-  "cases": 512,
+  "kind": "finite_token_interpretation_check",
+  "source_sha256": "0161d2526a348fb2d94bc2f22cb855b9647428d2025efce30edb7e57b2a5c312",
+  "executable_sha256": "f95b5c83981c4ffdbea1e3ff2e9be08544354a8e8c3eb34a7bdd56c596a6516e",
+  "cases": 608,
+  "grant_variants": 19,
   "outcomes": {
-    "completed": 128,
-    "refused": 128,
-    "unresolved": 256
+    "completed": 16,
+    "refused": 288,
+    "unresolved": 304
   },
   "invariants_valid": true,
-  "unauthorized_mutant_counterexamples": 128,
-  "first_counterexample": {
+  "unauthorized_mutant_counterexamples": 288,
+  "state_changing_counterexample": {
     "owners": [
       "A",
       "A"
     ],
     "token": 0,
-    "destination": "A",
-    "grant_mask": 0,
+    "destination": "B",
+    "grant": null,
     "observed": true,
-    "expected": "refused",
-    "mutant_result": "completed"
+    "correct_result": "refused",
+    "mutant_result": "completed",
+    "state_changed_by_mutant": true
+  },
+  "resumption": {
+    "original_effect": "completed",
+    "unknown_observation": "unresolved",
+    "old_issuer_after_state_change": "refused",
+    "current_owner_grant": "completed"
   },
   "limits": [
-    "Hand-authored interpretation requires separate fidelity review",
+    "Hand-authored token interpretation requires separate fidelity review",
+    "Qualitative join/finding/authority clauses are not executed by this script",
     "ac.py validates structure and source resolution, not these predicates",
     "No distributed transport, whole-corpus or universal category proof"
   ]

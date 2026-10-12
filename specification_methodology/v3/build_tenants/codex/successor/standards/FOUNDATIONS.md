@@ -2,7 +2,10 @@
 
 STDO specifies purposeful construction by actors with finite resources. A method
 claim is scoped to a purpose, interpreted subject, governing basis, actor and
-evidence. These foundations organise the method. [Spec Method](SPEC_METHOD.md)
+evidence. These foundations organise the method. The explanatory direction abstracts
+recurring relations from the detailed owners, then maps instances back to those
+exact contracts. It creates no normative hierarchy, derivation provenance or
+constitutional specialization relation. [Spec Method](SPEC_METHOD.md)
 owns constitutional construction and [Frame Method](REFERENCE_FRAME_METHOD.md)
 owns material evaluation context; explanatory consolidation preserves their
 source-owned determinations.
@@ -21,11 +24,18 @@ a consumer. A governing specification Sigma_contract declares obligations and ad
 variation. A grant bounds who may act and decide. Observations and arguments
 support claims only on their declared subject and basis.
 
-The bounded context is the selected exact member URI of this document plus
-`#premises-and-standing`, bound by the activation subject and basis. These
-symbols belong only to that account. They differ from
-similarly spelled symbols in method-identity, traversal, ticket and world-model
-contexts. [Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+The declared bounded context is `urn:stdo:bounded-context:foundations`.
+Its owner is the STDO Specification Methodology Product authority. Its selected
+basis is this member's definitions at the exact member digest together with the
+cited source-owned clauses, bound under the activation's governing cut. Its scope
+is the whole member's explanatory terms, symbols and explicitly scoped hypotheses,
+including the account in Orthogonal descriptions. The context identity is stable
+across location or permitted representation changes; a new digest still changes
+content and may change applicability.
+
+These symbols do not define similarly spelled symbols in method-identity,
+traversal, ticket, world-model or calculus contexts.
+[Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
 governs cross-context use; no shared default interpretation is inferred.
 
 The method's obligations follow from these premises together: preserve the
@@ -98,9 +108,11 @@ owns closed design handling. Each activation binds the actor and capability
 envelope materially needed by its claim. No universal numeric budget, resource
 ledger or measurement gate follows.
 Before acting, establish sufficient material context and capability. If the
-coupled relation does not fit, refine it without losing the outer contract,
-acquire support, reconfigure within authority, request owning-layer re-entry,
-yield or stop with an explicit unresolved result. Never replace a difficult
+coupled relation does not fit, the actor reports the misfit. The existing
+human or delegated configuration authority selects refinement, another actor,
+sequencing or lawful compression under RF-014. The actor acts on an already
+authorized response, requests the owning decision, or stops with an explicit
+unresolved result; capacity supplies no configuration grant. Never replace a difficult
 required relation with an easier claim merely to report success.
 
 A total control function has a defined response for every input in its declared
@@ -132,8 +144,8 @@ action within existing authority.
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,
 disposition, selected action and promotion effect remain distinct; their
-assignment follows the applicable mandate. Those are distinct from the
-semantic result and from the decision to repair, re-enter, reject or accept.
+assignment follows the applicable mandate. The semantic result remains separate from the authoritative construction
+disposition to repair, re-enter, reject or accept.
 
 ## Orthogonal descriptions
 
@@ -164,8 +176,8 @@ Their domains, laws and falsifiers must be supplied before using them as proof.
 The [transformation library](TRANSFORMATION_LIBRARY.md) expresses Bind, Acquire,
 Transform, Evaluate, Conjoin and Dispose. Instances bind contracts and owners;
 they are not six compulsory stages or six runtime APIs. The detailed method
-members refine the relations for their domains without acquiring authority from
-the library. A new primitive needs a material distinction the existing algebra
+members determine their domain contracts, which the library describes through
+shared families; no authority derives from that description. A new primitive needs a material distinction the existing algebra
 cannot preserve.
 
 ## Construction and use

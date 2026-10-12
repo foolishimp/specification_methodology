@@ -53,12 +53,12 @@ execution contexts over a changing body of work. It applies to human work,
 agentic work, deterministic evaluation, probabilistic construction, assurance,
 and mixed work where the governing product or method permits them.
 
-The [foundations](FOUNDATIONS.md) supply the finite-actor premise and distinguish
+The [foundations](FOUNDATIONS.md) explain the finite-actor premise and distinguish
 purpose, interpretation, identity, evidence and authority. This member owns the
 bounded frame declaration, activation, evaluation, result, coverage and revision
 relations. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
 organizes recurring contract responsibilities; the method functions below
-specialize them while retaining their exact applicability, result algebras,
+supply concrete instances while retaining their exact applicability, result algebras,
 owner boundaries and qualification obligations.
 
 This is an engagement meta-method. It does not define an application profile,

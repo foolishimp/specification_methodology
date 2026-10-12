@@ -11,7 +11,15 @@
       "producer": "make_duration() -> LengthMetres",
       "consumer": "render_time(value: DurationSeconds)",
       "joining_code": "render_time(make_duration())"
+    },
+    "test_authority": {
+      "normal": "1000 DurationMilliseconds -> 1 DurationSeconds",
+      "wrong_dimension": "LengthMetres -> boundary refusal; no duration invented",
+      "unknown_unit": "Unknown unit -> explicit unsupported/unresolved"
     }
   },
-  "subject_sha256": "ab39d3b3b3b4e9e8ee544a7139b072edf8123fe121d0866b8a3641d857a4f91e"
+  "subject_sha256": "ab39d3b3b3b4e9e8ee544a7139b072edf8123fe121d0866b8a3641d857a4f91e",
+  "fixture_owner": "Codex C3 fixture Writer under the tenant-only grant",
+  "consuming_decision": "Codex C3 Executive may accept/repair this bounded fixture proof only; common acceptance, upstream changes and publication remain reserved.",
+  "measurement_limit": "The host Writer checks Git membership/digests before dispatch. The tool-free consumer evaluates supplied bytes and cannot independently reacquire or compute those digests."
 }

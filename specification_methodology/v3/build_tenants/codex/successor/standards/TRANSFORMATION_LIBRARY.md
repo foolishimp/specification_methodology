@@ -28,8 +28,10 @@ truthful stop. Acquisition cannot silently drop a governing obligation.
 ## Transform
 
 Construct output or perform effects within the bound contract. Preserve the
-original producer, material inputs and observed effects. Return candidate work,
-refusal, incomplete work or a re-entry request. Observe uncertain external effects
+original producer, material inputs and observed effects. Return the instance-owned outcome. A selected Baseline WorkerResult instance
+uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
+retains M_b_prime*/hold/gap/refusal. These are domain examples, not a common
+mandatory enum. Observe uncertain external effects
 before repeating them. The worker's internal search is its HOW; it cannot widen
 the outer outcome or effect grant.
 
@@ -54,8 +56,9 @@ Combine only compatible, authenticated results on a declared common outcome.
 Retain each applicable known failure, its producer and citations. Retain required
 uncovered coverage separately. For an instance whose admission contract declares
 planned assessment slots, authenticate each planned slot; an omitted planned
-judgment violates that contract, while an authenticated set can
-still leave a different required responsibility uncovered. Satisfaction requires
+judgment is handled by that owner's declared admission/result rule; no generic
+falsification or rejection is inferred from absence alone. An authenticated set
+can still leave a different required responsibility uncovered. Satisfaction requires
 every applicable material predicate and seam to be supported. An incompatible
 basis or unknown applicability prevents a wider satisfied claim.
 
@@ -63,9 +66,11 @@ basis or unknown applicability prevents a wider satisfied claim.
 
 The decision owner consumes exact closed work and evaluation results with the
 current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
-or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action, yield or terminate
-truthfully. It cannot change upstream meaning or take a reserved owner decision.
-Accept binds an exact checkpoint and interval; it does not imply release.
+or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action or stop under the instance's
+permitted outcomes. Domain-specific yield remains with its declared owner. It cannot change upstream meaning or take a reserved owner decision.
+Accept binds an exact checkpoint; it does not imply release. A Product-outcome
+acceptance interval is separately governed by
+[UP-013](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
 
 Other instances retain their own result domains. [Ticket Method](TICKET_METHOD.md)
 owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
@@ -119,9 +124,11 @@ Accepted material movement toward the selected Product is progress. Prerequisite
 work names the Product obligation it enables. Preservation and repeated proof
 are evidence, not new Product progress. Discovered distance revises the forecast;
 it is not negative progress. File, event, commit and token volume do not measure
-progress. A proposed discard or restart identifies why repair is insufficient, what
-survives and which causal assumptions change. Performing it still requires the
-existing operation grant; the proposal supplies no additional decision owner.
+progress. A proposed construction restart identifies why repair is insufficient, what
+survives and which causal assumptions change under UP-020. This is distinct from
+process resumption over retained current work. Deletion, archival, quarantine
+and salvage mechanics remain consumer-owned under UP-013; this summary imposes
+no additional discard law. Each actual operation still needs its existing grant.
 
 Use the cheapest focused proof that can falsify the active relation. Whole-
 candidate qualification belongs at a declared boundary unless affected risk
@@ -131,9 +138,15 @@ process check cannot prove durable authority.
 
 ## Cost and contraction
 
-For a cost or improvement claim, measure its material costs: acquired and transferred bytes, required
-attention, I/O, CPU, addressable memory, elapsed critical-path time, aggregate
-work and displaced human assurance. This creates no universal cost or accounting gate. A reference reduces storage only when its
-resolution preserves adequacy. A smaller document or faster local preparation
-does not prove whole-path improvement. Contract duplicated meaning and authority
-only while preserving required distinctions and independent evaluations.
+[Method proportionality](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+is ambiguity removed relative to effective reasoning complexity; raw counts alone
+cannot establish it. For a computational or handoff cost claim, select those
+measures material to that claim. Possible measures include transferred/acquired
+bytes, attention, I/O, CPU, addressable memory, critical-path elapsed time,
+aggregate work or displaced human assurance. This is an illustrative choice,
+not an all-fields obligation, universal quota or separate accounting carrier.
+
+A reference reduces storage only when its resolution preserves adequacy. A
+smaller document or faster local preparation does not prove whole-path
+improvement. Contract duplicated meaning and authority only while preserving
+required distinctions and independent evaluations.

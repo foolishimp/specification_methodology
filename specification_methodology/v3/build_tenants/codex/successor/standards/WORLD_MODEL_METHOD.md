@@ -3,8 +3,8 @@
 <!-- STDO3_PROFILE_BINDING_START -->
 ## Foundation And Transformation Binding
 
-This member is the optional world-model profile of STDO. It
-refines [Foundations](FOUNDATIONS.md) and the
+This member is the world-model constitutional method surface of STDO. It
+maps [Foundations](FOUNDATIONS.md) and the
 [Transformation Library](TRANSFORMATION_LIBRARY.md), with
 [Spec Method](SPEC_METHOD.md), [Identity Method](IDENTITY_METHOD.md),
 [Design Module Method](DESIGN_MODULE_METHOD.md),

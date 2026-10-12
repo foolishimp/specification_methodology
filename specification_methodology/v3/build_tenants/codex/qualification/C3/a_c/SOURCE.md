@@ -2,9 +2,11 @@
 
 ## Standing
 
-This source selects two bounded proof domains. It is an authored qualification
-contract, not new STDO law. a_c validation checks structure and source resolution;
-finite enumeration checks the interpretation below. Independent source comparison
+This source selects one finite token-state proof and three scoped qualitative
+relations: typed joins, finding conservation and authority/recovery. It is an
+authored qualification contract, not new STDO law. a_c validation checks structure
+and source resolution; finite enumeration checks token-state behavior only.
+Independent source comparison
 must still judge whether the encoded model conserves the declared relations.
 
 ## Token state
@@ -12,7 +14,10 @@ must still judge whether the encoded model conserves the declared relations.
 There are exactly two distinguishable tokens t0 and t1 and two owners A and B.
 A complete state assigns exactly one owner to each token. An operation names one
 token and destination. Permission is issued by that token's current owner for
-that exact token/destination/operation. A display label grants no permission.
+that exact token/destination/operation. For the finite executable domain, a
+case supplies either no grant, a display label, or one typed grant naming issuer,
+token, destination and operation (assign or inspect). The tested operation is
+assign. A display label grants no permission.
 An unknown current owner observation returns unresolved without an effect.
 Known current state plus missing permission returns refused without an effect.
 Known current state plus exact permission performs the selected assignment;

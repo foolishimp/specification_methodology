@@ -1,6 +1,6 @@
 # Glossary Semantic Index
 
-This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning under [Foundations](FOUNDATIONS.md); a glossary row is no new definition or default interpretation.
+This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. a glossary row is no new definition or default interpretation.
 
 ## Index Contract
 

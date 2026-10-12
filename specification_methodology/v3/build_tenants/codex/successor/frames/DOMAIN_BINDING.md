@@ -12,7 +12,11 @@ owner, not proof that this selection suffices for another task.
 
 
 
-Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../standards/ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `bc20645547951a1751f5610685f58eeaa2b598da5f7ed6f1604c7930ef99ee03`.
+
+
+
+
+Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../standards/ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `0aacb582c806e61dd857adbf9c5f0926db221e83d5fae8129ec02564cd4a58c4`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry
 
@@ -48,7 +52,7 @@ has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
 
-Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../standards/ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `bc20645547951a1751f5610685f58eeaa2b598da5f7ed6f1604c7930ef99ee03`.
+Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../standards/ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `0aacb582c806e61dd857adbf9c5f0926db221e83d5fae8129ec02564cd4a58c4`.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
@@ -65,7 +69,7 @@ Do not confuse:
 - product-specific semantic law
 
 
-Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../standards/UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `d2b4c75168c7e00ce8cc98d6e085ee217a0c860a16207ca20e27367d7245721c`.
+Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../standards/UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `93e50b67975106b097f16e986edc4e674d3a3bc6da50ff138863958333d96186`.
 
 ## 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation
 
@@ -111,7 +115,7 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../standards/WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `3caa0d1d1c8ea22d214ecc97717696509dfd231e7c84775f84f0b2ce1052d74f`.
+Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../standards/WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `bd3e937d884125d4673ba87f49c4dec5a99d00d0b9d8ee420ffdcecf535f54d3`.
 
 ## Theoretical Underpinnings Of The Markov Object
 
@@ -284,7 +288,7 @@ for all design work. The relation runs the other way:
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Markov Object](../standards/WORLD_MODEL_METHOD.md#markov-object); SHA256 `3caa0d1d1c8ea22d214ecc97717696509dfd231e7c84775f84f0b2ce1052d74f`.
+Source: [WORLD_MODEL_METHOD.md — Markov Object](../standards/WORLD_MODEL_METHOD.md#markov-object); SHA256 `bd3e937d884125d4673ba87f49c4dec5a99d00d0b9d8ee420ffdcecf535f54d3`.
 
 ### Markov Object
 
@@ -312,7 +316,7 @@ Object*. Discovery obligations in *Entity Cut Construction Law*.
 Representation-substrate obligations in *Markov Object Construction Law*.
 
 
-Source: [WORLD_MODEL_METHOD.md — Proof Law](../standards/WORLD_MODEL_METHOD.md#proof-law); SHA256 `3caa0d1d1c8ea22d214ecc97717696509dfd231e7c84775f84f0b2ce1052d74f`.
+Source: [WORLD_MODEL_METHOD.md — Proof Law](../standards/WORLD_MODEL_METHOD.md#proof-law); SHA256 `bd3e937d884125d4673ba87f49c4dec5a99d00d0b9d8ee420ffdcecf535f54d3`.
 
 ## Proof Law
 
@@ -379,7 +383,7 @@ An absent or incomplete adoption means the profile is available but inactive
 for that Product.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../standards/REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../standards/REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-003 Material Sufficiency
 
@@ -392,7 +396,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../standards/REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../standards/REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -402,7 +406,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-006 Authority Conservation
 
@@ -412,7 +416,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb`.
 
 ### RF-012 Closed Results
 

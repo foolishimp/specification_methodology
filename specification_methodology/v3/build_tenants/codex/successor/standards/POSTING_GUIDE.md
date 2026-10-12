@@ -1,6 +1,6 @@
 # Posting Guide
 
-This commentary profile refines representation and standing from [Foundations](FOUNDATIONS.md). A post conveys observations and proposals through the shared [transformation library](TRANSFORMATION_LIBRARY.md); adoption remains an owning decision.
+This commentary guide applies the representation and standing distinctions explained in [Foundations](FOUNDATIONS.md). A post conveys observations and proposals through the shared [transformation library](TRANSFORMATION_LIBRARY.md); adoption remains an owning decision.
 
 Posting is the commentary layer of the repo.
 
