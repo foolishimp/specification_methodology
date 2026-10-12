@@ -1,9 +1,9 @@
 # Standards Library
 
 This tree is the complete documentary realization of the STDO Specification
-Methodology. A selectable released Product is one complete immutable accepted
-cut with exact identity, manifest and membership. This tenant tree is a candidate;
-its source presence conveys no consumer authority or publication.
+Methodology. A selectable STDO Product is one complete immutable released RC cut
+with exact identity, manifest and membership. Its subordinate executable and
+interaction tooling retain separately declared responsibilities.
 
 ## Foundations and shared library
 
@@ -20,15 +20,15 @@ material contracts and owners; these are not compulsory phases or a runtime API.
 |---|---|
 | Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
 | Context, evaluation and frame composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md) |
-| Optional operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
+| Operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
 | Constitutional WHAT and lawful construction | [Spec Method](SPEC_METHOD.md) |
 | Structural HOW, transformation admission and realization | [Design Module Method](DESIGN_MODULE_METHOD.md) |
 | Scoped names and exact identities | [Identity Method](IDENTITY_METHOD.md) |
-| Optional graph-native domain | [ODD Method](ODD_METHOD.md) |
-| Optional application-neutral traversal model family | [Traversal Occurrence Profile](TRAVERSAL_OCCURRENCE_PROFILE.md) |
-| Optional state, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
-| Optional user-outcome design | [UX Method](UX_METHOD.md) |
-| Selected durable work-carrier profile | [Ticket Method](TICKET_METHOD.md) |
+| Graph-native domain | [ODD Method](ODD_METHOD.md) |
+| Application-neutral traversal model family (adoption optional) | [Traversal Occurrence Profile](TRAVERSAL_OCCURRENCE_PROFILE.md) |
+| State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
+| User-outcome design | [UX Method](UX_METHOD.md) |
+| Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
 | Exact cuts, conservation, publication and adoption | [Release Method](RELEASE_METHOD.md) |
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
 | Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
@@ -42,20 +42,23 @@ Traversal adoption is optional and binds an exact signature and basis.
 
 [Compressions](authority_compressions/README.md) are digest-bound read models;
 raw members decide when projections are stale or insufficient. [Templates](templates/README.md)
-provide starter realizations, including the per-Product Definition and project
-frame basis. Interoperability schemas define the Product Definition Overlay and
-deterministic installed-release manifest. Plugin interaction assets route work;
+provide starter realizations: a single per-Product Definition, project specification
+templates, a project frame basis and agent bootstrap templates. Normative
+interoperability schemas under `schemas/` define the layout-neutral Product
+Definition Overlay and deterministic installed-release manifest. Plugin interaction assets route work;
 they mint no authority or workflow engine.
 
 The toolchain installs a complete immutable cut in a shared versioned store and
-resolves logical release URIs. A local copy is operative only when explicitly
-bound and verified. An exact cut, Product Definition basis URI, manifest digest
+resolves logical release URIs without machine-local paths in Product Definitions.
+A local copy is operative only when explicitly bound and verified; it is not
+the default. An exact cut, Product Definition basis URI, manifest digest
 and member inventory establish consumer basis. A mutable source head or moving
-selector cannot replace it. None of these release operations is performed by
-this candidate merely because its distribution artifacts exist.
+selector cannot replace it. Distribution artifact presence conveys no release
+or operation authority.
 
 For one action, acquire the sufficient responsibility frame plus exact subject
 and material dependencies, rather than the entire corpus. The frame's result,
 required independent assessment and owner's disposition determine supported
-continuation. Every restated duty is local to this corpus; predecessor routes
-are provenance for construction and semantic comparison.
+continuation. The projected frames are declared members of the complete
+documentary member set. Their source owners, exact bytes and fidelity remain
+required; a frame is not an independently selectable method version.

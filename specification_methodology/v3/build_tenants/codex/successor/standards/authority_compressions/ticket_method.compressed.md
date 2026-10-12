@@ -2,14 +2,14 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: f031ce7fb3b5b366ffaee5996ae76e861697ad86897cc04c06b67da249fe0eca
+source_digest: 1a8f77a211ae4f4abcebcd551271ff7fc470043dd976c5ad04873b7cfeeb1a9e
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
 generated_by: codex
-generated_at: 2026-09-20
+generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 

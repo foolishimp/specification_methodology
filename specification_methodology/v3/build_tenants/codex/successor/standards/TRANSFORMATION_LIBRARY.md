@@ -5,6 +5,11 @@ governing basis, actor capability, inputs, required constraints, permitted
 effects, output predicate, failures and consumer. This is a logical contract,
 not a mandatory record schema. A sufficient existing carrier can express it.
 
+These are shared explanatory families. [Spec Method](SPEC_METHOD.md) owns
+construction and outcome law; [Frame Method](REFERENCE_FRAME_METHOD.md) owns
+evaluation and composition. Domain members determine their admitted outcome and
+disposition sets. The library does not supersede those meanings.
+
 ## Bind
 
 Recover the current purpose, subject identity, governing specification, role,
@@ -45,8 +50,9 @@ evidence; the decision owner alone performs the authoritative disposition.
 
 Combine only compatible, authenticated results on a declared common outcome.
 Retain each applicable known failure, its producer and citations. Retain required
-uncovered coverage separately. Authenticate every planned assessment slot; an
-omitted planned judgment is an admission defect, while an authenticated set can
+uncovered coverage separately. For an instance whose admission contract declares
+planned assessment slots, authenticate each planned slot; an omitted planned
+judgment violates that contract, while an authenticated set can
 still leave a different required responsibility uncovered. Satisfaction requires
 every applicable material predicate and seam to be supported. An incompatible
 basis or unknown applicability prevents a wider satisfied claim.
@@ -54,10 +60,16 @@ basis or unknown applicability prevents a wider satisfied claim.
 ## Dispose
 
 The decision owner consumes exact closed work and evaluation results with the
-current mandate. It selects accept, local_repair, re_enter or reject for the
-declared cone. It may select a next already-authorized action, yield or terminate
+current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
+or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action, yield or terminate
 truthfully. It cannot change upstream meaning or take a reserved owner decision.
 Accept binds an exact checkpoint and interval; it does not imply release.
+
+Other instances retain their own result domains. [Ticket Method](TICKET_METHOD.md)
+owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+owns conserved/superseded/intentionally removed/not applicable. An authorized
+Writer may record condition-based closure when that owning contract permits it.
+Sharing Dispose machinery changes none of those grants or classifications.
 
 Accept requires closure of the declared cone and preservation of every affected
 governing relation. Local repair applies when realization or proof is defective
@@ -83,6 +95,8 @@ composition obligation, not a universal category theorem for arbitrary software.
 
 ## Recovery law
 
+[UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) owns the
+construction, progress, checkpoint and proof determinations summarized here.
 After interruption, bind the same work identity to its observed current state.
 Reassess only materially affected premises and retain applicable work. Reconstruct
 needed authority and observations from their declared owners, not private memory.

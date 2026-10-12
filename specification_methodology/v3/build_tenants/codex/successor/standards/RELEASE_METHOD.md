@@ -1,6 +1,6 @@
 # Release Method
 
-This member refines scoped identity, justified claims and authority from [Foundations](FOUNDATIONS.md), and Evaluate, Conjoin and Dispose from the [transformation library](TRANSFORMATION_LIBRARY.md). Candidate preservation, acceptance, publication and consumer adoption remain distinct decisions. Its version/ref examples are examples, not selection of a v3 release cut.
+This member refines scoped identity, justified claims and authority from [Foundations](FOUNDATIONS.md), and Evaluate, Conjoin and Dispose from the [transformation library](TRANSFORMATION_LIBRARY.md). Candidate preservation, acceptance, publication and consumer adoption remain distinct decisions. Its version/ref examples illustrate the declared release identities; each actual cut requires its own authorized exact binding.
 
 ## Release-Publication Context
 

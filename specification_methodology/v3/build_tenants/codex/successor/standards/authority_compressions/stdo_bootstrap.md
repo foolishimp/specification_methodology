@@ -8,16 +8,16 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  SPEC_METHOD.md: 7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4
-  REFERENCE_FRAME_METHOD.md: 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7
-  STDO_REFERENCE_FRAME_BASELINE.md: 29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d
-  RELEASE_METHOD.md: 582bc15451855670495e559db3ae6a89ba37edaa3656f33499d02220cbdb141c
+  SPEC_METHOD.md: 077f43af7ef92a01397e5a89881e7b3e0ef8eac7dba6294b82690b4b58322b27
+  REFERENCE_FRAME_METHOD.md: e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d
+  STDO_REFERENCE_FRAME_BASELINE.md: 9405c5ca32b84a16ffe470f281c678f2f9791c6741c41b42f71e4ab0c7ba5d76
+  RELEASE_METHOD.md: 5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
 generated_by: codex
-generated_at: 2026-09-30
+generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 

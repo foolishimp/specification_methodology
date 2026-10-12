@@ -1,7 +1,7 @@
 # Bounded Work and Recovery Frame
 
-Subject: one named current document construction task. Builder law during this
-construction is installed STDO 2.5.1 RC2; this is candidate v3 method content.
+Subject: one named current document construction task. Its exact admitted
+governing basis and grant determine permitted work and reserved decisions.
 The activation consumes this frame, its exact task/subject and sufficient supplied
 material. Full-corpus acquisition is not required by this bounded claim.
 
