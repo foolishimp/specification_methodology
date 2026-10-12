@@ -416,3 +416,13 @@ is not committed, as with the earlier sets: it applied the rewrites and the
 disposal above, then merged ten fragments, one per frame, each authored and
 validated separately. The program is the artefact, and this file records
 every class of change.
+
+## Re-acceptance 2026-10-12
+
+The frames above were projected from the members at 3824752. Later commits
+up to e1cca7c changed eight members by additions only: 124 lines added and three
+lines extended by an appended sentence; no text these frames carry was
+removed or altered (`git diff 3824752 e1cca7c` over standards/). Under
+PRODUCT_DEFINITION section 11 the frames are explicitly re-accepted as
+current for checkpoint B by the Executive of T-002-CLAUDE, without
+regeneration. A later change to any carried text makes them stale again.
