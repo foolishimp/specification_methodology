@@ -147,8 +147,8 @@ Available read-only at this correction, selected as historical case-design locat
 
 | Source | Selected historical SHA256 |
 |---|---|
-| [March–September post-mortem](../../../../../abiogenesis/.ai-workspace/comments/claude/20260920T041441Z_REVIEW_postmortem_march_to_september_week_by_week.md) | 478435ce71c5402c18224393e4b4d01220dffec9829de4f66af69ce67c5cd5cc |
-| [2 October RC1 handoff](../../../../../abiogenesis/.ai-workspace/comments/codex/20261002_HANDOFF_ABG_5_RC1_STEEL_THREAD.md) | c9ea23d8bc67f0931bc2031b722934edda62e72477f8dff6c99b3fafa38cb35a |
+| [March–September post-mortem](../../../../../../abiogenesis/.ai-workspace/comments/claude/20260920T041441Z_REVIEW_postmortem_march_to_september_week_by_week.md) | 478435ce71c5402c18224393e4b4d01220dffec9829de4f66af69ce67c5cd5cc |
+| [2 October RC1 handoff](../../../../../../abiogenesis/.ai-workspace/comments/codex/20261002_HANDOFF_ABG_5_RC1_STEEL_THREAD.md) | c9ea23d8bc67f0931bc2031b722934edda62e72477f8dff6c99b3fafa38cb35a |
 
 Reacquire/bind these posts and the material primary evidence for selected C2 cases. Their historical standing is not current runtime qualification, and no ABG effects are selected.
 

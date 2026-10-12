@@ -403,9 +403,26 @@ class GitSnapshot:
             return None
         return completed.stdout.strip()
 
+    def _versioned_project_root(self) -> str:
+        """The side-by-side version-line root this cut selects.
+
+        Since the v2/v3 layout, each STDO version line is its own source
+        project under ``specification_methodology/v<major>/``. The root is
+        derived from the cut's major version so that a commit carrying
+        several version lines selects exactly one.
+        """
+        version, _ordinal = cut_coordinates(self.cut)
+        major = version.split(".", 1)[0]
+        return f"{_MONOREPO_PROJECT_ROOT}/v{major}"
+
     def _detect_project_root(self) -> str:
+        versioned_root = self._versioned_project_root()
         candidates = []
-        for project_root in (_LEGACY_PROJECT_ROOT, _MONOREPO_PROJECT_ROOT):
+        for project_root in (
+            _LEGACY_PROJECT_ROOT,
+            _MONOREPO_PROJECT_ROOT,
+            versioned_root,
+        ):
             standards_path = "/".join(
                 part for part in (project_root, _STANDARDS_ROOT) if part
             )
@@ -413,11 +430,16 @@ class GitSnapshot:
                 candidates.append(project_root)
 
         if len(candidates) != 1:
-            found = "none" if not candidates else "legacy root and nested root"
+            found = (
+                "none"
+                if not candidates
+                else ", ".join(root or "legacy root" for root in candidates)
+            )
             raise StdoError(
                 f"Cut {self.cut} must contain exactly one STDO project layout at "
-                "specification/standards or "
-                "specification_methodology/specification/standards; "
+                f"{_STANDARDS_ROOT}, "
+                f"{_MONOREPO_PROJECT_ROOT}/{_STANDARDS_ROOT} or "
+                f"{versioned_root}/{_STANDARDS_ROOT}; "
                 f"found {found}"
             )
         return candidates[0]

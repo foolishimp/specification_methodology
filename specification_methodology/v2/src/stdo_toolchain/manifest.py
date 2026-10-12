@@ -314,7 +314,13 @@ def verify_materialization(release_root: Path, manifest: dict[str, Any]) -> list
         if release.get("qualified_ref") != expected_ref:
             failures.append("qualified release ref does not match namespace and cut")
         subtree_root = release.get("project_subtree_root")
-        if subtree_root != "specification_methodology":
+        accepted_subtree_roots = {"specification_methodology"}
+        major = re.match(r"^v?(\d+)\.", str(cut or ""))
+        if major:
+            # Side-by-side version lines live under
+            # specification_methodology/v<major>/ since the v2/v3 layout.
+            accepted_subtree_roots.add(f"specification_methodology/v{major.group(1)}")
+        if subtree_root not in accepted_subtree_roots:
             failures.append("unexpected STDO Project Subtree root")
         subtree_tree = release.get("project_subtree_tree")
         if (

@@ -685,7 +685,7 @@ class StoreTests(unittest.TestCase):
 
             with self.assertRaisesRegex(
                 StdoError,
-                "exactly one STDO project layout.*legacy root and nested root",
+                "exactly one STDO project layout.*legacy root, specification_methodology",
             ):
                 Store(root / "store").install(
                     str(fixture.repository),

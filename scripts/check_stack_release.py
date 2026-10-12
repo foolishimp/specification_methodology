@@ -17,7 +17,10 @@ from urllib.parse import unquote, urlsplit
 
 
 # One packaged asset-integrity implementation is shared with cohort-update.
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "specification_methodology" / "src"))
+sys.path.insert(
+    0,
+    str(Path(__file__).resolve().parents[1] / "specification_methodology" / "v2" / "src"),
+)
 from stdo_toolchain.cohort_assets import (
     iter_strings, resolved_source_path, validate_semantic_index, validate_source_routes,
 )
@@ -247,6 +250,14 @@ def validate_shape(manifest: dict[str, Any], failures: list[str]) -> None:
             require(
                 product.get(field) == value,
                 f"{key}: invalid {field}; expected {value}",
+                failures,
+            )
+        if "source_subtree" in product:
+            require(
+                isinstance(product["source_subtree"], str)
+                and bool(product["source_subtree"])
+                and product["source_subtree"] != product.get("subtree"),
+                f"{key}: source_subtree must name a carrier location that differs from the frozen subtree",
                 failures,
             )
 
@@ -580,11 +591,31 @@ def expected_installed_manifest(
     }
 
 
+def carrier_subtree(product: dict[str, Any]) -> str:
+    """Where the Product's source lives at the carrier revision.
+
+    ``subtree`` is the frozen-tag coordinate and stays bound to the tag it was
+    recorded against. ``source_subtree`` names the same Product's location at
+    the carrier revision after a layout change (the side-by-side v2/v3
+    layout); when it is absent the two agree.
+    """
+    return str(product.get("source_subtree", product["subtree"]))
+
+
+def carrier_path(product: dict[str, Any], path: str) -> str:
+    """Map a path recorded against the frozen subtree to the carrier layout."""
+    frozen = str(product["subtree"])
+    source = carrier_subtree(product)
+    if source == frozen or not path.startswith(f"{frozen}/"):
+        return path
+    return f"{source}/{path[len(frozen) + 1:]}"
+
+
 def validate_release_notes(
     view: View, manifest: dict[str, Any], failures: list[str]
 ) -> None:
     for key, product in manifest["products"].items():
-        note_path = product["release_note"]
+        note_path = carrier_path(product, product["release_note"])
         if not view.exists(note_path):
             failures.append(f"{key}: missing release note {note_path}")
             continue
@@ -603,7 +634,7 @@ def required_child_members(
     """Close the owned native bundle and its local references at this exact cut."""
     skill = "axiomatize-corpus" if key == "axiom_indexer" else "stdo-representation"
     skill_root = f"skills/{skill}"
-    subtree = product["subtree"]
+    subtree = carrier_subtree(product)
     required = {
         f"{skill_root}/SKILL.md": "file",
         f"{skill_root}/agents/openai.yaml": "file",
@@ -660,9 +691,9 @@ def validate_child_product_subjects(
         for path in sorted(declared_paths - set(required)):
             failures.append(f"{key}: Product inventory includes nonmember: {path}")
         observed: list[dict[str, str]] = []
-        note = view.read_bytes(product["release_note"]).decode("utf-8")
+        note = view.read_bytes(carrier_path(product, product["release_note"])).decode("utf-8")
         for member in declared:
-            relative = f"{product['subtree']}/{member['path']}"
+            relative = f"{carrier_subtree(product)}/{member['path']}"
             kind = view.member_kind(relative)
             require(
                 member["type"] == required.get(member["path"]),

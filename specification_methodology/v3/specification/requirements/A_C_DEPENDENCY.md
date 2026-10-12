@@ -40,10 +40,10 @@ A later selected Install must verify exact subject membership and bytes before c
 
 For each selected frozen tenant output, retain source-to-model dispositions, signature, exact program/maps/bindings, reproducible mechanical results, author-independent source-first fidelity judgment and actual-use evidence.
 
-[AC-017/018](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity) separate fidelity from structure. [Axiom validation](../../../axiom_indexer/specification/requirements/REQ-P-VALIDATION.md) does not interpret all logical/operator/arity/type rules without a separately selected contract and does not prove truth, satisfiability, acceptance or full admitted-model/theorem claims.
+[AC-017/018](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity) separate fidelity from structure. [Axiom validation](../../../../axiom_indexer/specification/requirements/REQ-P-VALIDATION.md) does not interpret all logical/operator/arity/type rules without a separately selected contract and does not prove truth, satisfiability, acceptance or full admitted-model/theorem claims.
 
 a_c is derived from STDO principles. Independent procedures are not independent axiomatic provenance. A neutral finite token-transfer subject may later test a selected calculus fragment against independent ownership/conservation/permission expectations, including positive, refusal and uncertainty cases. It does not establish complete calculus or STDO 3 qualification.
 
 Triangulate a disagreement across method meaning, interpretation/signature, carrier/tooling and calculus; causes may be uncertain or plural. Tool incapacity alone does not prove a calculus defect. Any repair follows its actual owner and an explicit successor; keep the comparison checker fixed.
 
-Tenant a_c outputs do not become the released canonical STDO Representation. [The existing Representation](../../../stdo_representation/specification/PRODUCT.md) remains bound to its exact RC2 subject, with its own acceptance and release conditions.
+Tenant a_c outputs do not become the released canonical STDO Representation. [The existing Representation](../../../../stdo_representation/specification/PRODUCT.md) remains bound to its exact RC2 subject, with its own acceptance and release conditions.

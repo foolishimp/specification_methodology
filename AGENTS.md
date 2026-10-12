@@ -3,9 +3,11 @@
 This root coordinates four peer source projects. It is not a Product and owns
 no Product meaning.
 
-The Git checkout is `specification_methodology`. STDO 2.* authoring belongs in
-the `./specification_methodology/` child; STDO 3 construction belongs in
-`./stdo_3/`. Each child retains its own Product Definition and source boundary.
+The Git checkout is `specification_methodology`. The STDO Specification
+Methodology product has two version lines side by side: STDO 2.* authoring
+belongs in `./specification_methodology/v2/`; v3.0.0 construction belongs in
+`./specification_methodology/v3/`. Each child retains its own Product
+Definition and source boundary.
 
 Before work:
 
