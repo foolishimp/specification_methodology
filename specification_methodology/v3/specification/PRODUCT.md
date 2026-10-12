@@ -22,17 +22,17 @@ Decided by Jim on 2026-10-12.
 
 | Coordinate | Binding |
 |---|---|
-| Product | STDO Specification Methodology, the existing product line whose source project is `../specification_methodology/` (`urn:stdo:product-definition:specification-methodology`) and whose release namespace is `specification_methodology` |
+| Product | STDO Specification Methodology, the existing product line whose 2.* source project is the sibling `../v2/` (repository path `specification_methodology/v2/`, `urn:stdo:product-definition:specification-methodology`) and whose release namespace is `specification_methodology` |
 | Target version | v3.0.0, continuing that line; its release identities follow the installed RELEASE_METHOD in the same namespace (`refs/tags/specification_methodology/v3.0.0…`) |
 | Predecessor | `stdo://releases/v2.5.1-rc.2/`, immutable, operative as builder until a release decision |
-| Construction scope | a separate source-project scope kept apart so the 2.5.1 source project is not overwritten; Codex and Claude are independent build tenants for the same target version. Jim decided on 2026-10-12 that the two source projects live side by side as `specification_methodology/v2/` and `specification_methodology/v3/`; until that layout change lands on `main` this scope is `stdo_3/`. |
+| Construction scope | a separate source-project scope kept apart so the 2.5.1 source project is not overwritten; Codex and Claude are independent build tenants for the same target version. Jim decided on 2026-10-12 that the two source projects live side by side as `specification_methodology/v2/` and `specification_methodology/v3/`; this scope is `specification_methodology/v3/`. |
 | Identifiers | `urn:stdo:product-definition:stdo-3`, `urn:stdo-3:bounded-context:method` and the `urn:stdo-3:` tenant identities are identifiers, not names. They do not change with the directory. Only paths and display names change. |
 
 The machine-readable definition [stdo_3.json](../stdo_3.json) carries this identity in its product name and in a local-constitution axiom routed to this section; its schema admits no version field, so the version is stated here.
 
 ## Construction Authority
 
-Jim's [recorded instruction](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#owner-instruction) authorises the new structure and independent C1 preparation/attempts. Codex holds the common construction pen. The [frame basis](REFERENCE_FRAME_BASIS.md) binds that setup grant to installed STDO 2.5.1 RC2.
+Jim's [recorded instruction](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#owner-instruction) authorises the new structure and independent C1 preparation/attempts. Codex held the common construction pen for setup and C1. From 2026-10-12 Claude holds the common pen and Codex reviews every common change before Jim merges it; a review result informs Jim's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md) binds that setup grant to installed STDO 2.5.1 RC2.
 
 This authorisation admits construction boundaries and initial review work. It does not accept the working foundations, future capabilities, implementation, release or adoption. Jim retains the C1 common-principles and C2 capability/acceptance decisions.
 
@@ -51,8 +51,9 @@ installed STDO law and no release cut.
   authored on `main` by the common pen.
 - Tenant branches. Each build tenant works on a short-lived topic branch
   `tenant/<tenant>/<checkpoint>` cut from `main`, in its own git worktree,
-  with a sparse checkout limited to `stdo_3/specification/`,
-  `stdo_3/.ai-workspace/` and its own `stdo_3/build_tenants/<tenant>/`. The
+  with a sparse checkout limited to `specification_methodology/v3/specification/`,
+  `specification_methodology/v3/.ai-workspace/` and its own
+  `specification_methodology/v3/build_tenants/<tenant>/`. The
   peer tenant's directory is not materialised in that worktree.
 - Territory. A tenant commits only under its own `build_tenants/<tenant>/`.
   A needed common change is requested from the pen and reaches the tenant by
@@ -73,7 +74,7 @@ installed STDO law and no release cut.
   one, and no disposition exists until the pen has ledgered it.
 - Inputs. Tenant worktrees use cone mode. A declared shared input outside
   the cone (the plan posts and the matrix under
-  `specification_methodology/.ai-workspace/comments/`, the sibling Axiom
+  `specification_methodology/v2/.ai-workspace/comments/`, the sibling Axiom
   Indexer definition) is read from the snapshot's input commit with
   `git show <input-commit>:<path>`, never from an ambient working tree. A
   file absent from the cone is neither licence to read elsewhere nor

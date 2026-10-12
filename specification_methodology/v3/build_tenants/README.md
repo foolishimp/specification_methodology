@@ -2,7 +2,7 @@
 
 [Codex](codex/README.md) and [Claude](claude/README.md) implement one common [Product](../specification/PRODUCT.md) as documents. Their designs, prose organisation, optional a_c encodings and proof differ lawfully within shared semantics.
 
-Jim owns common C1/C2 decisions. Codex currently holds the common construction pen. Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests shared changes through the pen and never patches common WHAT, tickets or its peer's implementation.
+Jim owns common C1/C2 decisions. Claude holds the common construction pen (assigned 2026-10-12; Codex penned setup and C1) and Codex reviews common changes before Jim merges them. Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests shared changes through the pen and never patches common WHAT, tickets or its peer's implementation.
 
 ## Initial Principles Task
 
