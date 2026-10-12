@@ -32,14 +32,47 @@ on branch `common/c3-executive-setup`.
 
 ## State of the frontier
 
+Revised 2026-10-13 after the first cross-family review (changes requested) and the repair round below.
+
 | Rows | Count |
 |---|---|
-| Text accepted on author-independent same-family review | 680 |
-| of which cold-actor evidence is current (checkpoint B: TICKET carrier and retention, RELEASE, IDENTITY, DESIGN_MODULE, ODD, TRAVERSAL, UX, WORLD_MODEL, PRODUCT_DEFINITION with GLOSSARY) | 412 |
-| of which cold-actor evidence is stale (REFERENCE_FRAME, AXIOMATIC_CALCULUS, SPEC_METHOD core, STDO_REFERENCE_FRAME_BASELINE with its ASSURANCE parts: carried text was edited after their runs at ac3ec5f and 978d324) | 268 |
+| Text accepted on same-family review, subject to this re-review | 680 |
 | Unresolved, pending Jim: ten compressions and the requirements template's bootstrap entrypoint | 11 |
 
-The current-evidence count includes rows with no cold-actor task (POSTING_GUIDE, WRITING_GUIDE, README and the packaging members), for which the contract's frame criterion was not exercised. Stale evidence becomes current again by re-running the frames against the current text or by an explicit clause-level re-acceptance; neither has been done.
+Actual-use evidence, judged strictly (any falsifier hit is falsified; frame attribution never excuses), from one cold-actor run per task on the set-6 frames after a fidelity pass:
+
+| Member | Task | Result |
+|---|---|---|
+| SPEC_METHOD triage and change classes | F-02 B | satisfied |
+| TICKETS carrier and retention | F-03 A; F-02 C | satisfied; indeterminate (runs/ as carrier for a ticket-carried obligation) |
+| RELEASE | F-03 B | satisfied |
+| IDENTITY | F-03 C | satisfied |
+| ODD | F-03 E | satisfied |
+| UX | F-03 G | satisfied |
+| WORLD_MODEL | F-03 H | satisfied |
+| PRODUCT_DEFINITION with GLOSSARY | F-03 I | satisfied |
+| REFERENCE_FRAME | F-01 A, B | falsified (build-mismatched evidence admitted; operation authority slot filled; reopen set "none") |
+| AXIOMATIC_CALCULUS | F-02 A | falsified (traversal scope, witness evidence and residual re-entry elements missing; required result reached) |
+| STDO_REFERENCE_FRAME_BASELINE | F-02 D | falsified (invented residual owner; required result reached) |
+| DESIGN_MODULE | F-03 D | falsified (no sequencing mode named for a decision-complete change) |
+| TRAVERSAL_OCCURRENCE | F-03 F | falsified against the amended oracle on occ-24; contested: the task states the observed post-state defeats the intended outcome, which supports falsified under the review's own rule |
+
+Single runs on one model; independence of oracle and frames rests on commit order and the writers' read declarations. Several member corrections in this round moved toward the amended oracles after they were written, so matches on those points are weaker evidence.
+
+## Repair round 2026-10-13 (for re-review)
+
+| Commits | Change | Review finding |
+|---|---|---|
+| e4c745c, 1f2dfeb, 7d6bf39 | AC-016 restored as plain conservation; refinement judged against each step's declared domain; earlier outputs carried only by a declared adapter or specialised contract; ODD declares 11.8 as that contract; statement-of-reading label retracted at five loci | 2 (composition) |
+| e4c745c, 9be9f57 | unexercised-capability case: a supported result survives, the unexercised part is uncovered required coverage; indeterminate restated from RF-012 without a precondition | 3; same class |
+| e4c745c | formal fragment returned to hypothesis H1 | 6 |
+| e4c745c, 1f2dfeb | 18 labelled tier-1 tightenings audited: 2 retracted, 2 reduced, 14 kept with basis (table in RETURNS, W25) | recurring defect |
+| 2f3c46f, d8a1f20, 188bc81, 332d7a5, 4425993 | mappings: partial_effect and partial falsified only on demonstrated non-attainment, else indeterminate; refusal falsified for falsified constraints including structural, invalid_basis only with refuse_invalid_basis; ODD repair conditional; WORLD_MODEL inconclusive verification row | 1; same class |
+| 2e481f7, ab3c312 | encoding fidelity pass over all 417 set-5 clauses: 108 flagged (40 claims absent from members, 69 modal changes), corrected in set-6; corrected bootstrap frame 33,579 bytes | 4 |
+| bf188da, b58d96b | oracle amendments derived from rc.2 by independent authors | 5 |
+| records on common/c3-executive-setup | text and actual-use acceptance separated; milestones reopened | 5 |
+
+One reading for the reviewer to judge: an admission refused because the event scope stays undeclared is treated as `refuse_missing` and so falsified; rc.2 attaches no qualifier to that refusal.
 
 ## Changed after its last review
 
