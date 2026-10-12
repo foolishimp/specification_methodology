@@ -230,12 +230,13 @@ rc.2 #rf-013-reconstructable-activation).
 ### RF-014 Capability fit
 
 Frame adequacy includes actor usability. When the material manifold
-exceeds an actor's capability envelope, the holder of the grant may select
+exceeds an actor's capability envelope, human authority may select
 another actor, refine the frame, sequence activations or provide a lawful
-compression (RF-017); ACTIVATION §2 says which of these a step selects
-itself and which re-enter the grant's owner. The actor may not silently
-omit material relations to fit its context (P0, P5; rc.2
-#rf-014-capability-fit).
+compression (RF-017); the selection is human authority's, exercised
+directly or in advance through the grant, and ACTIVATION §2 says which of
+these a step selects itself and which re-enter the grant's owner. The
+actor may not silently omit material relations to fit its context (P0, P5;
+rc.2 #rf-014-capability-fit).
 
 ### RF-015 Residual uncertainty
 

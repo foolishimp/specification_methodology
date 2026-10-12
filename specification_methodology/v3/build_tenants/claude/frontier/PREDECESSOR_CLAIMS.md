@@ -306,7 +306,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md`
 | &nbsp;&nbsp;Authority | `#authority` |  | 1,207 | conserved | `FOUNDATIONS.md#authority-kinds` |
 | &nbsp;&nbsp;Disjointness And Independence | `#disjointness-and-independence` |  | 964 | conserved | `FOUNDATIONS.md#disjointness-and-independence` |
 | &nbsp;&nbsp;Capability envelope | `#capability-envelope` |  | 439 | conserved | `FOUNDATIONS.md#frame-objects` |
-| &nbsp;&nbsp;Reference frame | `#reference-frame` |  | 1,573 | conserved | `FOUNDATIONS.md#the-frame-tuple` |
+| &nbsp;&nbsp;Reference frame | `#reference-frame` |  | 1,573 | conserved | `FOUNDATIONS.md#frame-objects; FOUNDATIONS.md#the-frame-tuple` |
 | &nbsp;&nbsp;Activated frame | `#activated-frame` |  | 251 | conserved | `FOUNDATIONS.md#frame-objects` |
 | &nbsp;&nbsp;Frame set | `#frame-set` |  | 343 | conserved | `FOUNDATIONS.md#frame-objects` |
 | &nbsp;&nbsp;Active frame configuration | `#active-frame-configuration` |  | 309 | conserved | `FOUNDATIONS.md#frame-objects` |

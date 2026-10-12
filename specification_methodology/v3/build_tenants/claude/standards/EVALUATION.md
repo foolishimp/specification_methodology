@@ -165,7 +165,9 @@ governing authority, and
 for the reconstructability of the activation; the surfaces rule and the
 conditional withholding conserve
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
-qualification protocol.
+qualification protocol. The constructor, freeze, assessor, acceptance and
+release protocols are supplied by the governing authority; this member
+defines none of them.
 
 The qualification population is every function and failure relation the
 method claims (REFERENCE_FRAME §5), each with its required representative

@@ -54,7 +54,7 @@ stays the builder of this construction until a release decision.
 | Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability; its kinds are defined under Authority kinds below | P6 |
 | Residual | a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition | P4b |
 | Basis | the exact state a step, claim, result or evaluation binds: every version, identity, time, topology, authority, configuration or evidence coordinate whose change can alter it; immutable, or moving with a declared way of detecting advancement and a declared condition for reevaluation; mixed bases need an explicit composite relation | P6, P3 |
-| Material | of a relation: its lawful change can change an evaluation's result, invalidate its basis, change the admissible evidence, or change who may perform or who may decide a material operation; of an uncertainty or closure: likewise; materiality is evaluation-relative, so a relation material in one frame may be irrelevant in another; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
+| Material | of a relation: its lawful change can change an evaluation's result, invalidate its basis, change the admissible evidence, change who may perform a material operation, or change who may decide the evaluation or a material operation; of an uncertainty or closure: likewise; materiality is evaluation-relative, so a relation material in one frame may be irrelevant in another; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
 
 Dispositions: subject, representation and interpretation conserve
 [AC Interpretation And Models](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#interpretation-and-models)
@@ -336,7 +336,7 @@ REFERENCE_FRAME_METHOD.md):
 | #authority | conserved | §2 Authority kinds |
 | #disjointness-and-independence | conserved | §2 Disjointness and independence |
 | #capability-envelope | conserved | §2 Frame objects |
-| #reference-frame | conserved | §2 Frame objects and The frame tuple |
+| #reference-frame | conserved | §2 Frame objects; §2 The frame tuple |
 | #activated-frame | conserved | §2 Frame objects |
 | #frame-set | conserved | §2 Frame objects |
 | #active-frame-configuration | conserved | §2 Frame objects |

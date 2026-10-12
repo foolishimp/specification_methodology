@@ -199,7 +199,9 @@ to govern.
 Where evidence is missing because a relation or capability needed to obtain
 it was not declared, the result is out_of_frame; indeterminate is reserved
 for the case where the declared capability was exercised and the admissible
-evidence still cannot decide.
+evidence still cannot decide (P5, finite capacity and graceful total
+handling; the material relation drawn is the out_of_frame boundary,
+capability declared and exercised versus capability not declared).
 
 Evaluation. The evaluator applies the activated frame's declared
 invariants, evidence rules and result algebra. It distinguishes semantic
@@ -332,11 +334,12 @@ REFERENCE_FRAME §13). The frame's internal working context is not
 transferred when the closed result and its provenance are sufficient for
 the consuming decision (P4b, P0; rc.2 RF #return-a-closed-result).
 
-A closed result is reused by an unchanged consumer after an applicability
-check; a role, conversation or resumption change alone invalidates nothing.
-Changed material inputs or a declared revising observation invalidate the
-affected result before reliance, preserving the predecessor and any
-demonstrably independent surviving results; a changed basis invalidates
+A closed result is reused by an unchanged consumer that checks exact
+applicability; a role, conversation or resumption change alone invalidates
+nothing. Changed material inputs or a declared revising observation
+invalidate the affected result before reliance, preserving its
+predecessor/successor relation and any demonstrably independent surviving
+results; a changed basis invalidates
 likewise (judgment continuity names basis; Return A Closed Result names
 inputs and observation). A reused judgment does not
 satisfy a separately required independent judgment; the independent assessor
