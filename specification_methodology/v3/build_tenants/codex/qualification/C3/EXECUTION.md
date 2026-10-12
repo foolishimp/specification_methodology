@@ -1,7 +1,8 @@
 # STDO v3.0.0 Codex successor execution
 
-State: candidate_ready returned for owner review. Final local authority
-corrections await independent confirmation; no checkpoint acceptance or release.
+State: candidate_ready for owner review. Independent confirmation satisfies the
+final authority and recovery-excerpt claims at c10d70f; no common checkpoint
+acceptance or release. Earlier failed returns and the overrun remain literal.
 
 Envelope overrun: the three-hour planning allowance was exceeded. Source
 summary churn and insufficient early abstraction/condition preservation are
@@ -80,3 +81,5 @@ Exit: complete self-contained documentary candidate, exact 690-row mapping, reso
 2026-10-12T07:40:01.416165+00:00 — Recording Writer verified the exact 84-member inventory (80 Product members and four review carriers) against input commit 0e70f007b51808d8c667c2b7f3c76c8d48ec9c1b. Strict artifact checks resolve 322 local links and all 690 rows. Actual changed-member, missing-row and unlisted-member controls refuse; the baseline is restored. The recording checkpoint is a descendant of the inventory input. Own construction returns here with the open independent confirmation; no additional retry or release action is selected.
 
 2026-10-12T10:02:22.931637+00:00 — Jim asked whether work continues. Executive re-enters the still-authorized final confirmation from frozen checkpoint 5a9e951. Outcome: resolve the three last introduced authority findings and assess exact current recovery excerpts; no whole-corpus/native acceptance is inferred. Intake audit found one residual decision-owner alias in Dispose and one unqualified Writer reference. The separately activated own Writer removes those aliases, refreshes affected source/view pins and freezes the changed subject. Fresh Reviewer receives both exact builder clauses and pinned successor source sections, outside any repository working directory. Envelope: 600,000 supplied bytes, 480 seconds, USD 6 for this call; recorded prior provider total USD 23.216369 keeps the maximum aggregate below USD 30. No governing-law or common/peer effect is admitted. Failed earlier reviews and the overrun remain historical.
+
+2026-10-12T10:13:13.257127+00:00 — Executive consumed the independent resumed-final-confirmation at frozen c10d70f. Both assigned claims are satisfied with no findings: source-defined authority relations and exact current recovery excerpts. The three earlier authority counterexamples are closed for this subject; prior failed returns remain historical. Decision: accept only these bounded repaired relations for candidate readiness, retaining transport, source-scope, section-boundary, coupled-material and independence limits. Whole-member conservation acceptance, common C3 closure, main integration and release are not inferred. Separately activated own-tenant recording Writer updates the return, applicability, counters and exact conservation pins, rechecks affected a_c bindings and artifact controls, freezes the inventory from a named input commit, and checkpoints the own branch. No Product body change, peer/common effect or additional broad review is selected.

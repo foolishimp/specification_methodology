@@ -1,6 +1,6 @@
 # C3 evidence applicability
 
-Current Product subject: f6f1ec2227eb596cea06426905bf54c0aeb76f3b. The
+Current Product subject: c10d70f4048157c4755b3c2ca6766cc429f7fbd2. The
 80 Product members are individually pinned in successor/CONSERVATION.json.
 The later candidate inventory pins review carriers separately. Builder and
 predecessor are exact installed STDO v2.5.1-rc.2, manifest
@@ -26,12 +26,24 @@ falsified introduced summaries and classified unchanged relations separately.
 The [distribution review](reviews/distribution-closed/REVIEW.md) identified one
 unbound view and conditional host-ref issues. Both remain literal historical
 results. [Earlier confirmation](reviews/closure-confirmation/REVIEW.md) is falsified
-at 69f61d7. [Last independent review](reviews/authority-final/REVIEW.md) is
-falsified at 23de110 on three authority-vocabulary relations. Final literal
-local corrections have no independent confirmation. No green verdict is carried
-onto their changed bytes. WORK_RECOVERY is indeterminate against pinned
-successor source in that review; the final 52-section byte comparison is a Host
-artifact check only. None supplies native installation or whole-corpus use.
+at 69f61d7. [Earlier authority review](reviews/authority-final/REVIEW.md) is
+falsified at 23de110 on three authority-vocabulary relations and leaves
+WORK_RECOVERY indeterminate against its pinned successor source.
+[Resumed confirmation](reviews/resumed-final-confirmation/REVIEW.md) satisfies
+both repaired claims at c10d70f, having received the actual pinned successor and
+predecessor clauses. All three authority counterexamples are closed for this
+subject. The Host's separate 52-section byte comparison is artifact evidence.
+Neither result supplies native installation or whole-corpus use.
+
+The new judgment remains limited to supplied text and by-eye source comparison;
+digests and section boundaries are Host transport facts. The inherited source
+context's scope wording, peripheral denied-authority terms and differently
+expressed source-owner routes remain bounded residuals, not new findings. The
+recovery view makes no sufficiency claim: references to Work result and Engagement
+Applicability still require acquisition when material to an activation. No reviewed
+target byte was authored by the independent Reviewer or copied from the Claude
+tenant; historical deciding source is shared builder material. Any subject,
+basis, pin, section-boundary or authorship change reopens affected applicability.
 
 ## Actual bounded use
 

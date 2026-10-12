@@ -1,7 +1,8 @@
 # STDO v3.0.0 Codex tenant construction return
 
-Standing: candidate_ready for owner review; final local authority corrections
-await independent confirmation. No acceptance or release is claimed.
+Standing: candidate_ready for owner review. Independent confirmation satisfies
+the repaired authority and recovery-excerpt claims at the frozen subject below.
+No common checkpoint acceptance or release is claimed.
 
 The complete documentary successor is built in [successor/](../../successor/README.md).
 Its 80 Product members contain the sixteen method/guide members, two explanatory
@@ -11,7 +12,7 @@ names every predecessor section/member and exact successor locus. These are
 author conservation claims for independent and owner review, not accepted
 UP-015 dispositions.
 
-Product subject: f6f1ec2227eb596cea06426905bf54c0aeb76f3b. Worktree:
+Product subject: c10d70f4048157c4755b3c2ca6766cc429f7fbd2. Worktree:
 /Users/jim/src/apps/specification_methodology-codex. Branch: tenant/codex/c3-v3.
 The [candidate inventory](../../successor/CANDIDATE.json) separately pins the
 Product and review carriers from their recording inputs. Current closure
@@ -85,14 +86,18 @@ Executive should have resolved the shared abstraction defect earlier instead
 of repeatedly patching sentences. File, event, commit and review counts are
 not delivery progress.
 
-The last [focused review](reviews/authority-final/REVIEW.md) falsifies the
+The earlier [focused review](reviews/authority-final/REVIEW.md) falsifies the
 authority vocabulary at 23de110 and leaves pinned-source excerpt fidelity
 indeterminate. The final local correction replaces aliases with exact source
 definitions, retains the Baseline adoption qualifier and repairs provenance.
-These changed bytes have no independent confirmation. The current artifact
-check compares all 52 selected excerpts and 12 authority-reference rows
-literally; this closes a Host byte check, not the semantic review. The
-[closure record](CLOSURE.md) retains the failed verdict and open confirmation.
+The [resumed independent confirmation](reviews/resumed-final-confirmation/REVIEW.md)
+satisfies both repaired claims at c10d70f, including comparison against the
+pinned successor and predecessor clauses. It has no findings. The failed earlier
+verdict remains historical; the new result is bound to its changed subject and
+supplied material. The current artifact check separately compares all 52 selected
+excerpts and 12 authority-reference rows literally. The [closure record](CLOSURE.md)
+retains source-scope, acquisition, boundary and coupled-material residuals, and
+the absence of whole-corpus, installed/native or release acceptance.
 
 ## Bounded actual use
 
