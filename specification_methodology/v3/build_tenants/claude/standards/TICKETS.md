@@ -168,9 +168,10 @@ durable record). Growth the model admits includes a generated active board,
 ticket dependency checks, links from tickets to scenario, requirement or
 ADR surfaces, external sync with a real ticketing system, and message-board
 integration through a standard tool-protocol capability. Under the bindings
-above, a generated board is a projection and a tracker that holds tickets
-is a rebinding of the ticket authority, so neither growth changes the
-authority or refusal laws (P2, P6; rc.2 #future-extensions).
+above, a generated board is a projection, and a tracker that holds tickets
+is lawful only as an explicit rebinding of the ticket authority by the
+product definition with no rival surface remaining, so neither growth
+changes the authority or refusal laws (P2, P6; rc.2 #future-extensions).
 
 ## 3. Sprint rules
 
@@ -179,8 +180,8 @@ authority or refusal laws (P2, P6; rc.2 #future-extensions).
 Each sprint has one durable manifest record; the default carrier is one
 markdown file. Another bound carrier preserves the same identity, required
 fields, history, closure law and one-truth relation (P3, P4b; rc.2
-#one-durable-record-per-sprint). Recommended local-file naming carries a
-stable id and a short slug, for example
+#one-durable-record-per-sprint). For a local file, the filename should
+carry a stable id and a short slug. Recommended local-file naming:
 `SPRINT-2026-04-30-process-navigator.md` and
 `SPRINT-2026-05-12-dashboard-density.md`.
 
@@ -242,10 +243,12 @@ silent debt: it is escrow held by the sprint, and
 escrow satisfies no method, release or product closure until paid down,
 accepted or repriced (P2, P4b, P6; rc.2 #sprint-compliance-escrow).
 
-Eligible for escrow when the governing method allows it: screenshots or
+The following may be eligible for escrow when the governing method allows
+it: screenshots or
 walkthrough capture; visual review; accessibility cleanup; replay proof for
 product-meaningful user-interface interactions; design wording cleanup; trace cleanup;
-local realisation cleanup. Never hidden in escrow: new product truth; new
+local realisation cleanup. The following may not be hidden in escrow: new
+product truth; new
 or changed data contracts; new runtime, governance, closure, provenance or
 evidence semantics; missing constructive carriers; changed public
 published-function or public carrier contracts; law-changing work that
@@ -270,7 +273,7 @@ sprint authority), `local_paydown` (local debt remains and is captured by a
 paydown ticket), `design_reframe` (the work needs design repricing),
 `requirement_reprice` (the work needs requirement repricing),
 `product_reprice` (the work changes product definition) or `remove` (the
-work is backed out or kept out of closure) (P5). A sprint may move to
+work should be backed out or kept out of closure) (P5). A sprint may move to
 `closed` only when every item and every debt entry is classified and the
 resulting paydown or repricing work is durable. Sprint close can accept
 local paydown debt only when the governing method allows that debt to
@@ -285,8 +288,9 @@ Each ticket has one durable authoritative record; the default carrier is
 one markdown file. A repository or external tracker carrier is lawful only
 when it preserves the required ticket contract, history, state transition,
 stable identity, searchability and closure semantics without a co-equal
-local copy (P3, P4b; rc.2 #one-durable-record-per-ticket). Recommended
-local-file naming carries a stable id and a short slug:
+local copy (P3, P4b; rc.2 #one-durable-record-per-ticket). For a local
+file, the filename should carry a stable id and a short slug. Recommended
+local-file naming:
 `T-001-add-product-layer.md`, `B-002-fix-reset-manifest-id.md`,
 `S-003-evaluate-integration-capability.md`,
 `C-004-clean-up-trace-tags.md`.
@@ -318,16 +322,18 @@ ticket per tenant execution line). For the multi-tenant case: keep the
 upstream source, product or design ticket as its own authority surface;
 duplicate the work item into one tenant-local ticket per build tenant;
 append a build-tenant mnemonic to the base ticket id and filename; keep
-status, proof, closure and reopen logic independent for each tenant. For
-example `B-030-publish-capability-profile...` as the source ticket,
+status, proof, closure and reopen logic independent for each tenant.
+Recommended examples: `B-030-publish-capability-profile...` as the
+source ticket,
 `B-030-T1-publish-capability-profile...` and
 `B-030-T2-publish-capability-profile...` as the tenant tickets.
 
 The law: one ticket does not claim closure for more than one build-tenant
 lifecycle; a tenant-local blocker or false closure in one tenant is not
 hidden by green status in another; tenant-local proof, repricing and
-reopening remain tenant-local (P3, P6). A tenant-local duplicate records
-`source_ticket` and `build_tenant`. The `build_tenant` value identifies the
+reopening remain tenant-local (P3, P6). If a tenant-local duplicate
+exists, it should record `source_ticket` and `build_tenant`. The
+`build_tenant` value identifies the
 applicable entry in the product's `how.build_tenants` definition; a path
 name, display alias or tracker label does not replace that identity unless
 the product definition binds it as the identity. The unsuffixed base ticket
@@ -353,15 +359,16 @@ For `ticket_category: implementation_migration` the ticket also carries
 also carries `build_tenant`, and `source_ticket` when it duplicates or
 derives from an upstream source, product or design ticket.
 
-For execution-contract admission the runtime-drafted contract also carries,
-at minimum, `target_truth`, `superseded_truth` when relevant,
+For execution-contract admission the runtime-drafted contract should also
+carry, at minimum, `target_truth`, `superseded_truth` when relevant,
 `closure_law`, `evaluation_criteria`, `non_closure_conditions` and
 `proof_surface` (§5).
 
 ### Types
 
 The minimum common set of ticket types is `feature`, `bug`, `spike` and
-`chore`. A project may add more; the default set is enough for most cases
+`chore`. A project may add more; the default set should be enough for
+most cases
 (P3; rc.2 #allowed-types).
 
 ### Category
@@ -409,9 +416,9 @@ Common pairings: `feature` with `goal_reprice`, `intent_reprice`,
 `product_reprice`, `requirement_reprice` or `design_reframe`; `bug` with
 `requirement_reprice`, `design_reframe` or `realization_refactor`; `chore`
 with `design_reframe` or `realization_refactor`; `spike` as exploratory
-work that still carries the current triage class and terminates either in a
-more specific downstream ticket or in an explicit decision that no further
-substantive change is required.
+work that still carries the current triage class and should terminate
+either in a more specific downstream ticket or in an explicit decision
+that no further substantive change is required.
 
 Ticket category and change class are also orthogonal: `change_class`
 governs lawful constitutional re-entry; `ticket_category` governs ticket
@@ -472,7 +479,7 @@ Backlog tickets live at the product definition's
 `ticketing.tickets.lanes.active`, by default `.ai-workspace/tickets/active/`;
 completed tickets move to `ticketing.tickets.lanes.completed`, by default
 `.ai-workspace/tickets/completed/` (P0, P3; rc.2 #ticket-lanes). `backlog`
-is accepted durable work that remains visible but is not part of the
+is accepted durable work that should remain visible but is not part of the
 current execution focus; `active` is the current bounded execution set;
 `completed` is closed work retained as history. The lanes keep the live
 execution set small enough that `rg` remains fast and readable without
@@ -541,12 +548,13 @@ through proof, gap analysis and repricing (P6, P2).
 
 ### Execution contract admission
 
-The runtime execution flow treats a ticket, a sprint entry or a drafted
-work contract as an admission candidate, never as automatic truth; its
-states are those of ACTIVATION §1 (drafted, admitted, rejected,
-superseded). An admitted execution contract is logged in runtime and event
-truth, available to prompt assembly, and available to later closure
-checking, so that execution and closure read the same admitted basis (P6,
+The runtime execution flow should treat a ticket, a sprint entry or a
+drafted work contract as an admission candidate, never as automatic truth;
+the contract carries at minimum the states named in ACTIVATION §1
+(drafted, admitted, rejected, superseded). An admitted execution contract
+should be logged in runtime and event truth, available to prompt assembly,
+and available to later closure checking, so that execution and closure
+read the same admitted basis (P6,
 P4b; rc.2 #execution-contract-admission). The refusal of self-certification
 is ACTIVATION §1.
 
@@ -561,10 +569,11 @@ never the admission of a growth basis (P6, P2).
 
 ### Evaluation criteria and non-closure conditions
 
-An execution contract exposes both what counts as progress or completion
-and what still counts as failure even when some local proof is green. At
-minimum it makes `evaluation_criteria` and `non_closure_conditions`
-visible. These are the local gain function for the work (P6, P2; rc.2
+An execution contract should expose both what counts as progress or
+completion and what still counts as failure even when some local proof is
+green. At minimum it should make `evaluation_criteria` and
+`non_closure_conditions` visible. These are the local gain function for
+the work (P6, P2; rc.2
 #evaluation-criteria-and-non-closure-conditions).
 
 For implementation migrations, typical non-closure conditions are: the old
@@ -666,7 +675,7 @@ normal execution within the declared affected scope, unless the ticket
 explicitly declares a retained compatibility feature. A deterministically
 routed, non-overlapping product scope outside the declared affected scope
 remains governed by its own current authority (P6, P3). Accordingly: the
-old path does not remain silently authoritative within the affected scope;
+old path may not remain silently authoritative within the affected scope;
 mixed old and new green tests do not count as migration completion; any
 retained old path within the affected scope is named as compatibility
 rather than current native truth; retained compatibility is justified in
@@ -685,7 +694,7 @@ consequence: the ticket remains active and does not claim migration
 closure until the migration checklist and the final closure law are
 satisfied; its `active` status renews none of the accepted slice's
 exhausted growth authority; and removal, demotion and closure-proof work
-continues only within the bound SPEC_METHOD §7 states, further material
+may continue within the bound SPEC_METHOD §7 states, further material
 producer or consumer growth requiring another basis admitted under
 SPEC_METHOD §3 (P2, P6; §1, Milestones).
 
@@ -752,9 +761,9 @@ An implementation migration ticket makes the review problem concrete enough
 that an implementor cannot land a rename, adapter, wrapper or happy-path
 proof and claim source-truth migration (P6, P1; rc.2
 #implementation-migration-review-disambiguation). For a core-interface or
-carrier migration the ticket includes a `Functional Review Criteria`
-section, specific to the ticket, such that a reviewer can answer these
-generic questions:
+carrier migration the ticket should include a `Functional Review Criteria`
+section, specific to the ticket, such that a reviewer should be able to
+answer these generic questions:
 
 1. Did the change replace control-flow-owned meaning with carrier-owned,
    algebra-owned, event-owned or otherwise admitted source truth?
@@ -794,7 +803,7 @@ ticket includes an `Impacted Interface Review Checklist` before tests can be
 used as closure evidence. The checklist is a named walk of every live
 interface that can still bypass, reinterpret, replay or project the
 migrating truth path (P4b, P6; rc.2 #impacted-interface-review-checklist).
-At minimum it enumerates, where they exist: the source-carrier builder;
+At minimum it should enumerate, where they exist: the source-carrier builder;
 closure, register and projection builders; the deepest semantic kernel and
 adapter boundaries; public wrappers and the bootstrap, replay, ingest,
 resume and query entrypoints; prompt, report, projection and read-model
@@ -854,8 +863,8 @@ passes while upstream source-carrier work remains open (P6, P3).
 ### Mixed-state negative proof
 
 For a migration ticket, positive behaviour proof is not enough. The proof
-surface includes at least one negative or structural proof that the old
-path can no longer satisfy the closure law (P6, P5; rc.2
+surface should include at least one negative or structural proof that
+the old path can no longer satisfy the closure law (P6, P5; rc.2
 #mixed-state-negative-proof). Examples: the severed seam in the current
 break is rejected before downstream repair is accepted as progress;
 removing the new carrier makes advancement, closure, prompt assembly or
@@ -905,7 +914,7 @@ make implementer self-review independent. Independent review is required at
 product, qualification, release and explicitly risk-bearing boundaries that
 claim it, not for every local implementation step (P6, P2).
 
-A claimed independent review supports promotion or closure only when its
+A claimed independent review may support promotion or closure only when its
 exact subject and verdict are durably traceable through an existing ticket,
 commentary, qualification or release-evidence carrier. A statement that
 review occurred, an unbound conversation summary or an unavailable draft is
@@ -1006,7 +1015,7 @@ conjunction as the gate over the affected span).
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved
-acceptance, the authorised Writer records the satisfied bounded result in
+acceptance, the authorised Writer may record the satisfied bounded result in
 the existing carrier, without adding a ticket, a coordinating appointment,
 a review or a recreated design view solely to mark completion. This waives
 no condition that actually applies, including sprint-close law (§3) and the
@@ -1023,7 +1032,7 @@ conditions, the evidence and the remaining residuals (P4b, P2).
 ### Test case authority
 
 Tests are proof projections from admitted work authority. Every
-substantive test case derives along this chain (P6, P2; rc.2
+substantive test case should derive along this chain (P6, P2; rc.2
 #test-case-authority):
 
 ```text
@@ -1042,8 +1051,8 @@ requires re-entry, not a test-only waiver (P6, P2).
 
 Implementation behaviour is evidence. The code is never the arbiter of a
 test's expected result when code and test disagree (P6). When a ticket is
-being fixed and implementation behaviour and test expectation disagree,
-review reconciles the mismatch in this order:
+fixed and a mismatch appears between implementation behaviour and test
+expectation, review reconciles the mismatch in this order:
 
 1. the ticket's `change_intent`, `change_class`, `re_entry_point`,
    `target_truth`, `superseded_truth`, `closure_law`,
@@ -1085,8 +1094,7 @@ evidence remains history and cannot be projected as current acceptance
 
 These shapes are the recommended carriers of the fields and sections the
 rules above require; a project may bind another shape that carries the
-same fields (§2). They are determinations of shape, not illustrations to
-discard (P3, P4b; rc.2 #recommended-ticket-shape).
+same fields (§2; P3, P4b; rc.2 #recommended-ticket-shape).
 
 The sprint manifest, carrying the fields of §3:
 

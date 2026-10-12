@@ -657,10 +657,8 @@ accepted only at its owner; accepting it inside the acting frame is a
 violation whatever the size of the delta (ACTIVATION §1; provenance rc.2
 DESIGN_MODULE_METHOD #invariant-reconstruction-sufficiency-stdo-up-018).
 Triage records the change intent, the class, the re-entry point and when
-triage occurred, wherever substantive work begins. These classes are the
-triage target of every work carrier: a ticket records its class, with the
-upward walk to the first missing layer that selected it, under
-[TICKETS §4](TICKETS.md#upward-propagation-check).
+triage occurred, wherever substantive work begins.
+[TICKETS §4](TICKETS.md#change-class) records the class on the carrier.
 
 ### Computed classification and treatment
 
