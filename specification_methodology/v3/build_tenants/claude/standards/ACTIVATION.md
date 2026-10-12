@@ -309,8 +309,8 @@ activated frame declares and on what the step did with it (P5, finite
 capacity and graceful total handling; the material relation drawn is the
 out_of_frame boundary, three-way: capability not declared, capability
 declared and exercised, capability declared and not exercised; rc.2 RF
-#rf-012-closed-results). Three cases, and only the
-first two are members of the algebra:
+#rf-012-closed-results). Three cases; the first two name members of the
+algebra, and the third names none of its own:
 
 - out_of_frame when the claim requires a material relation or an evaluator
   capability that the activated frame does not declare. The result names the
@@ -318,31 +318,45 @@ first two are members of the algebra:
   the reconfiguration pressure it creates (§4; rc.2 RF
   #reconfigure-when-necessary). A term the claim depends on and the frame
   leaves undefined is an undeclared material relation: its meaning can alter
-  the result and it enters through no declared input (RF-003; P1). Whether
-  the step exercised anything is irrelevant to this member; the ground is
-  the missing declaration.
+  the result and it enters through no declared input (rc.2 RF
+  #material-relation, RF-003; P1). Whether the step exercised anything is
+  irrelevant to this member; the ground is the missing declaration.
 - indeterminate when every relation and capability the claim requires is
   declared and was exercised in the step, and the admissible evidence still
   cannot decide. The result names the evidence that would decide, as its
   residual uncertainty (rc.2 RF #return-a-closed-result).
-- A declared capability that the step did not exercise yields no Reference
-  Frame Method result for the evaluation at all: the claim is unresolved,
-  not out of frame and not indeterminate, as a missing premise leaves a
-  question unresolved rather than false (rc.2 RF
-  #applicability-and-required-results). The step's stop state is
-  `incomplete` under the construction availability refinement below, its
-  work state (§5) carries the unexercised capability as a residual, and the
-  actor says so rather than selecting a core member (P6; an actor cannot
-  report an evaluation it did not perform). The evaluation's result and the
-  step's stop state answer different questions (§1, Output), so the mapping
-  of `incomplete` to the core does not make the evaluation indeterminate.
+- no member of its own when the step did not exercise a declared
+  capability the evaluation requires. A result is returned wherever a
+  sufficient evaluation or an applicable judgment exists without that
+  capability, identifying its evidence, verdict and residual uncertainty
+  like any closed result (rc.2 RF #rf-012-closed-results,
+  #return-a-closed-result): a counterexample found by what was exercised,
+  as when source inspection falsifies A in a claim of A and B, returns
+  falsified, and common agreement cannot discard it (rc.2 RF
+  #result-conjunction). Where none exists because the capability was not
+  exercised, there is no result for that evaluation: the step's stop state
+  carries it, `incomplete` under the construction availability refinement
+  below, and its work state (§5) carries the unexercised capability as a
+  residual (P6; an actor cannot report an evaluation it did not perform).
+  In either case the unexercised part, B above, is an uncovered required
+  obligation, never a result: an absent required result cannot satisfy a
+  dependent conjunction, and a missing mandatory result remains unresolved
+  (rc.2 RF #applicability-and-required-results, #result-conjunction); a
+  known failure A and an uncovered obligation B survive every join
+  (FOUNDATIONS §4). The evaluation's result and the step's stop state
+  answer different questions (§1, Output), so the mapping of `incomplete`
+  to the core does not make the evaluation indeterminate.
 
 The first two cases restate RF-012's members with the boundary made
-explicit, save the undefined-term clause of the first, which is a
-tightening because it decides a boundary the predecessor leaves open; the
-third is a tightening RF-012 does not name (P5, P6). The relation drawn is
-three-way: capability not declared; declared and exercised; declared and
-not exercised.
+explicit. The undefined-term clause of the first is a tightening the
+predecessor implies and does not state: a relation is material when its
+lawful change can change the evaluation result, which a term's meaning can,
+and an undefined term neither appears in the frame nor enters through a
+declared input (rc.2 RF #material-relation, #rf-003-material-sufficiency;
+P1). The third is a tightening the predecessor implies and does not state:
+RF-012, Return A Closed Result, Applicability And Required Results and
+Result Conjunction together return what a sufficient evaluation supports
+and leave the unexercised part open (P5, P6).
 
 Evaluation. The evaluator applies the activated frame's declared
 invariants, evidence rules and result algebra. It distinguishes semantic
@@ -416,23 +430,19 @@ difficult evaluation alone does not prove that another frame is required
 (P5, P2; rc.2 RF #reconfigure-when-necessary).
 
 Refinement. An outer transformation T: A → X with success predicates P₀ … Pₙ
-is refined by steps Tᵢ. The input of a step is its cumulative input, the
-cumulative carried result of AC-016's reading: the outer input, which is
-retained for every step, the last included, together with the earlier
-outputs retained up to that step; the chained reading is the special case
-in which no earlier output but the last is retained, and each Pᵢ ranges
-over the cumulative input after i steps.
-The composite's output is X, which the last step's postcondition, ranging
-over its cumulative input, yields (P4a; AXIOMATIC_CALCULUS §5 AC-016
-states the same reading for traversals). The refinement is faithful
-when each admitted input satisfying Pᵢ yields an output with which the next
-step's input satisfies Pᵢ₊₁, retains every applicable invariant, exposes
-other outcomes without coercion, and each step's input satisfies that
-step's domain and preconditions, the preconditions ranging over that
-cumulative input (P4a). Then a successful composite carries P₀ to Pₙ by
-induction. The cumulative input conserves the generic law that ODD §11.8
-specialises (P4a, P4b; provenance rc.2
-[ODD_METHOD §11.8](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#118-cumulative-environment-law-is-mandatory)).
+is faithfully refined by steps Tᵢ when each admitted input satisfying Pᵢ
+yields an output satisfying Pᵢ₊₁, retains every applicable invariant, exposes
+other outcomes without coercion, and each output satisfies the next step's
+declared domain and preconditions, as typed composition requires (P4a;
+[AXIOMATIC_CALCULUS §5 AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)).
+Then a successful composite carries P₀ to Pₙ by induction. A refinement
+carries an earlier output or the outer input to a later step only through a
+declared adapter, itself a step composed under AC-016, or a declared
+specialised contract, in either case one whose declared domain names what is
+carried; a specialised contract is declared under its owner's exact
+authority, context, basis, scope, preservation, loss, refusal and
+invalidation law (P4a, P4b; provenance rc.2
+[AC External Imports And Specializations](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#external-imports-and-specializations)).
 Coverage of the outer obligations, correctness of the local
 implications and legitimate authority are premises, not conclusions; "each
 step passed" is weaker than "the outer contract was conserved". Required
@@ -445,7 +455,8 @@ transition within its enclosing relation, or none (the law below). This
 generalises ODD
 [graph functions](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#graph-functions),
 which refine one outer vector into a small inner workflow, to any
-realisation; PROFILES §2 keeps the ODD binding.
+realisation; PROFILES §2 keeps the ODD binding, which declares that
+profile's cumulative environment law as such a specialised contract.
 
 ### Complete enclosing-relation admission
 
@@ -702,10 +713,10 @@ reconstructed semantic outcomes (P5, P6).
 | Probabilistic Work Boundary | conserved; the object and commitment are FOUNDATIONS §2 and §3; §1 consumes them |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
 | AC-010, AC-011 | conserved; the laws themselves are restated in AXIOMATIC_CALCULUS §4, which disposes their rows; §2 applies them, joined with RF-002/003/004/014/017 into one operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
-| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and AXIOMATIC_CALCULUS §4 states AC-007 as law, and each points here; their rows are disposed in those members; the tenant text carries labelled tightenings: undefined term, unexercised capability |
+| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and AXIOMATIC_CALCULUS §4 states AC-007 as law, and each points here; their rows are disposed in those members; the tenant text carries two labelled tightenings the predecessor implies, each derived in §3: undefined term (rc.2 #material-relation, RF-003), unexercised capability (RF-012, Return A Closed Result, Applicability And Required Results, Result Conjunction) |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
-| ODD graph functions, ODD 11.8 | conserved; graph functions generalised in §4 to any realisation; the generic part of 11.8, a step's input as the outer input with every earlier output retained for it, conserved in §4 as the refinement input, the 11.8 row itself disposed in ODD §11.8; PROFILES §2 keeps the ODD binding |
+| ODD graph functions, ODD 11.8 | conserved; graph functions generalised in §4 to any realisation as typed refinement; 11.8 is not generalised: it stays profile law, its row disposed in ODD §11.8, and ODD §5 Graph functions declares its cumulative carried environment as the specialised contract through which §4 lets a refinement carry earlier outputs; PROFILES §2 keeps the ODD binding |
 | UP-017 | conserved; restated in DESIGN_MODULE §5 Bounded frame conservation, which disposes its row; its seam rule is §1 Execution unit and §4 |
 | UP-021 and Standing Structural Qualification | conserved in full; §4; rows in the table below |
 | UP-014, UP-005, UP-019 | conserved; §6 in full for UP-014's relation and method execution, its delivery priority in SPEC_METHOD §8; UP-005 and UP-019 restated in DESIGN_MODULE §6 and §7, which dispose their rows, §6 carrying their proportionality and cost relation; the allowance rule is new; rows in the table below |

@@ -290,14 +290,9 @@ digest. Conserves AC-002, AC-014, the
 restated in [WORLD_MODEL §9](WORLD_MODEL.md#9-entity-cut-construction).
 
 P4a Typed composition. Two steps compose only when the first's result type
-and judgment satisfy the second's domain and preconditions; composition
-retains both identities, intermediate results, judgments, evidence,
-authority, provenance and stop states. The first's result may be the
-cumulative carried result of the steps before the second, so this rule
-and the cumulative input of ACTIVATION §4 are the same law; the chained
-reading, in which nothing but the last output is carried, is the special
-case. P4a states AC-016's generic form over steps under the cumulative reading (ACTIVATION §4), which is a statement of
-reading, not new law. Independent. Conserves
+and judgment satisfy the second's exact declared domain and preconditions;
+composition retains both identities, intermediate results, judgments,
+evidence, authority, provenance and stop states. Independent. Conserves
 [AC-016](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition),
 [RF-010](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-010-composition-on-demand).
 
@@ -371,12 +366,18 @@ many instances while each instance keeps its responsibility and binding
 ([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019),
 [UP-023](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#capability-and-foundation-selection-stdo-up-023)).
 
-Formal fragment (new in this corpus; P1). Where 𝒜 is the free category on
-typed primitives, ℐ the selected carrier sets with total functions and 𝒞_H
-pairs of functions with additive costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H are
-functors and S is not faithful; that S is not an equivalence. Any further
-categorical claim defines its objects, arrows, identities and composition and
-proves preservation (conserves
+Formal fragment (hypothesis; P1). Hypothesis H1 of the accepted
+[principles](../design/PRINCIPLES.md#4-derivation-graph), categorical
+structure: with 𝒜 the free category on typed primitives, ℐ the selected
+carrier sets with total functions and 𝒞_H pairs of functions with additive
+costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H would be
+functors, S neither faithful nor an equivalence. No rc.2 clause and no
+argument in this corpus establishes it: S and R_H are not defined on
+arrows, and no preservation of identities or composition is proved. Until
+someone writes the objects, arrows and laws and proves them, the diagram is
+notation; it is not law and is carried for falsification with §5. A
+categorical claim, this one included, defines its objects, arrows,
+identities and composition and proves preservation (conserves
 [functor kinds](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds),
 which states that obligation and asserts no categorical functor itself).
 H names an architecture, never a runtime.
@@ -403,7 +404,7 @@ traversal composition laws of any runtime.
 | AC-010 | conserved; restated in AXIOMATIC_CALCULUS §4; applied by ACTIVATION §2 |
 | AC-013 transformation | conserved; restated in full in AXIOMATIC_CALCULUS §4; its delta fields are the conservation accounting of §4 above |
 | AC Fundamental Laws heading | not applicable: heading with no claim text (20 bytes); listed in AXIOMATIC_CALCULUS §11 |
-| AC Traversals And Functor Kinds, AC-015, AC-016 | conserved; restated in AXIOMATIC_CALCULUS §5; P4a and the formal fragment of §4 above consume them; P4a states AC-016's generic form over steps under the cumulative reading (ACTIVATION §4) |
+| AC Traversals And Functor Kinds, AC-015, AC-016 | conserved; restated in AXIOMATIC_CALCULUS §5; P4a consumes AC-016; the formal fragment of §4 above is a hypothesis held to the functor-kind proof obligation |
 | AC Interpretation And Models, AC-017, AC-018, AC-019 | conserved; restated in AXIOMATIC_CALCULUS §6; P1 consumes them; the generic structural-and-semantic separation is EVALUATION §2 |
 | AC Subject And Carrier Boundaries, AC-020 | conserved; restated in AXIOMATIC_CALCULUS §7; applied to release lineage in SPEC_METHOD §6 |
 | AC Exact Calculus Identity | conserved; the identity law is restated in AXIOMATIC_CALCULUS §8; the record instance is a release artefact issued under RELEASE and AC-020 at this corpus's own release |

@@ -256,22 +256,28 @@ P0).
 
 Binding of refinement, new in this corpus.
 [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) generalises the
-refinement of one outer vector into an inner workflow to any realisation
+refinement of one outer vector into an inner workflow to any realisation,
+lets a refinement carry an earlier output to a later step only through a
+declared adapter or specialised contract whose declared domain names it,
 and names [PROFILES §2](PROFILES.md#2-graph-execution), which indexes this
-profile, as the keeper of the ODD binding. Direction: from the refinement
-of ACTIVATION §4 to a graph function that refines one outer vector.
-Preserved meaning: the outer vector stays the callable contract; the inner
-steps conserve it and every applicable invariant; and an inner step's
-input is the outer input together with every earlier output retained for
-it, its preconditions ranging over that cumulative input, as ACTIVATION §4
-states. Narrowed scope: one published outer vector and its declared inner
-workflow, with the cumulative input of ACTIVATION §4 bound to the
-cumulative carried environment of §11.8, so that what is retained for a
-later inner function is what that environment carries and its
-preconditions are its `environment.requires` over that environment.
-Invalidation: a change to ACTIVATION §4, to the outer vector or to a
-function's environment declaration invalidates the binding until it is
-evaluated again (P4a, P4b, P1).
+profile, as the keeper of the ODD binding. This profile declares the
+cumulative carried environment of
+[§11.8](#118-cumulative-environment-law-is-mandatory) as that specialised
+contract; §11.8 is conserved as profile law and is not generalised into
+the core. Direction: from the typed refinement of ACTIVATION §4 to a graph
+function that refines one outer vector, with the §11.8 environment as its
+specialised contract. Preserved meaning: the outer vector stays the
+callable contract; the inner steps conserve it and every applicable
+invariant; and each inner function's input satisfies its declared domain
+and preconditions, as AC-016 requires. Narrowed scope: one published outer
+vector and its declared inner workflow, whose retained functions should
+declare `environment.requires`, `environment.provides` and
+`environment.carries` (§11.8); a later function's declared domain is its
+`environment.requires`, which may require any typed binding available in
+the cumulative carried environment, not only the immediately previous
+output. Invalidation: a change to ACTIVATION §4, to §11.8, to the outer
+vector or to a function's environment declaration invalidates the binding
+until it is evaluated again (P4a, P4b, P1).
 
 ### Traversal
 

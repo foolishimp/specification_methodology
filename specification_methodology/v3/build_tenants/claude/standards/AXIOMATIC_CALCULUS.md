@@ -827,20 +827,12 @@ satisfy the second traversal's exact domain and preconditions (P4a; rc.2
 F_K2[w] compose F_K1[v]
 ```
 
-Statement of reading, not new law (P4a): the first result of a binary
-composition may be the cumulative carried result of the traversals before
-the second, so this binary rule and the cumulative input of
-[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) are the same law;
-the chained reading, in which nothing but the last output is carried, is
-the special case.
-
 Composition retains both traversal identities, intermediate results,
 judgments, evidence, authority, provenance and stop states. It cannot
 flatten probabilistic proposal, deterministic evaluation and human
 decision into one undifferentiated operation. `a_c` prescribes no
 universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
-topology (P4a, P4b, P6). FOUNDATIONS §3 P4a states AC-016's generic form over steps under the cumulative reading (ACTIVATION §4); this
-clause is its form over traversals.
+topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
 
 ## 6. Interpretation and models
 
@@ -1170,7 +1162,7 @@ is provenance only.
 | #ac-014-judgment-separation | conserved; the judgment object is defined at FOUNDATIONS §2, the record and the law are here | §4 AC-014 |
 | #traversals-and-functor-kinds | conserved; the stop algebra is tied to the one result algebra of ACTIVATION §3 (tightening, P5); the traversal record's ownership against same-spelled terms is made explicit (P3) | §5 |
 | #ac-015-functor-classification | conserved | §5 AC-015 |
-| #ac-016-typed-composition | conserved; P4a states AC-016's generic form over steps under the cumulative reading (ACTIVATION §4) | §5 AC-016 |
+| #ac-016-typed-composition | conserved; P4a consumes it | §5 AC-016 |
 | #interpretation-and-models | conserved; the interpretation contract is related to FOUNDATIONS §2 Interpretation | §6 |
 | #ac-017-interpretation-fidelity | conserved; P1 consumes it | §6 AC-017 |
 | #ac-018-structural-and-semantic-separation | conserved; the generic form over every review is EVALUATION §2 | §6 AC-018 |
