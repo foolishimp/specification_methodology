@@ -1,0 +1,58 @@
+# console log for qualification/runs/F-01/20261012T152009Z-B-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:20:09Z
+# step B-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-01/20261012T152009Z-B-0R2 --step-id B-0R2 --card qualification/cases/F-01/CARD.md --block "METHOD coverage-and-revision=a_c/set-6/projection-coverage-and-revision-materialized.json" --block "TASK=qualification/cases/F-01/TASK-B.md" --model sonnet
+## 1. Coverage ledger
+
+Tuple: Coverage(W-notify, G, B = commit `9e1d2f44` + config rev 41, E = E1–E6, S = {F-A, F-B, F-C}, T = 2026-10-11T12:00Z).
+
+Operation authority is `none` on every row, because the subject says no evaluation performs a mutation. The decision authority is Tomas for the release on every row except E6.
+
+Status definitions are not in the METHOD block, so each status below is my judgment from its name.
+
+| Id | Evaluation | Provenance | Subject and basis | Selected frames | Actor envelope | Semantic authority | Decision authority | Evidence | Dependencies | Status | Residual |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| E1 | no message is sent twice for one event | NR-2 | Commit `9e1d2f44`. The prior result is bound to config rev 39. The current basis is rev 41. | F-A | Engineer with repo access and the staging replay harness | Lena | Tomas | Replay of 10,000 events on 2026-10-10 with zero duplicates, bound to rev 39. No evidence exists on rev 41. | The retry window changed from 60 s to 300 s at 08:00Z on 2026-10-11. E3 shares the config change. | **uncovered** at B. The rev-39 result is mismatched under RF-005 and is not reusable. | Whether the retry change is material to E1 is a judgment that has not been recorded. No recorded re-check shows independence. Re-entry is a replay on rev 41. F-A's declared family names a commit, not a config revision, so whether the family states this coordinate is not in the subject. |
+| E2 | schema v7 consumers accept v8 payloads | NR-5 | Schema revisions 7 and 8 | F-B | Any actor with the two schema files | Lena | Tomas | Contract test on 2026-10-09 | None stated | **covered** on schema revs 7 and 8 | Not in the subject: whether the schema files at commit `9e1d2f44` are revisions 7 and 8, and the materiality of E2 to G. The config change is not a coordinate of F-B's basis, but no independence re-check is recorded. |
+| E3 | the retry policy bounds total sends to three per event | D-9 | Config rev 39 (result). The current basis is rev 41. | F-A | Engineer with repo access and the staging replay harness | Platform team | Tomas | `satisfied` result from 2026-10-10, bound to rev 39 | The retry window changed in rev 41. The retry policy is the very thing that changed. | **uncovered** at B. The result is invalidated before reliance. | Re-entry is re-evaluation on rev 41. Whether D-9's disposition has a separate decision owner is not recorded. |
+| E4 | the dead-letter queue is empty before release | Release checklist item 7 | Config rev 41 (both activations are after 08:00Z). Named times are 09:00Z for F-C and 09:30Z for F-A. | F-C (family: queue state at a named time). F-A was also activated but is outside its declared family. | Ops lead with dashboard access (F-C). Engineer with repo and replay harness (F-A). | Not recorded: the owner of checklist item 7's meaning. | Tomas for the release. No combining rule is declared. | F-C: dashboard shows 0 messages at 09:00Z. F-A: log inspection shows 12 messages stuck in `dlq-shadow` at 09:30Z. | F-C and F-A results on one basis with no declared conjunction. Whether the dashboard covers `dlq-shadow` is not stated. | **conflicted** | The `falsified` observation survives the join and blocks success. The semantic owner and the decision rule (mandatory results, conflict handling, veto) are missing. The 09:00Z and 09:30Z times differ, and nothing says whether the queue state changed in between. |
+| E5 | the rate limiter drops no events under a burst of 500/s | Post-mortem of INC-77 | Not stated. No activation exists, so no basis is bound. | None. No declared family is shown to include it. | Not determined | Not recorded | Not recorded for this item. Tomas holds the release decision. | None | None stated | **uncovered** | Materiality to G (duplicate sends) is not in the subject. Whether any frame is capable of E5 is undetermined. |
+| E6 | every consumer verifies webhook signatures | SEC-3 | Not bound. No activation exists. | None. No frame's family includes it. | Not determined | Ari | **Unrecorded** | None | None stated | **uncovered**. The authority coverage is also not closed, because the decision owner is missing. | Needs a decision owner. Needs a frame that includes it. Materiality to G is not stated. |
+
+**Composite.** It cannot project success. E4 carries a known failure. E1, E3, E5 and E6 are uncovered obligations. All of them survive the join. The authority coverage is not closed for E4's semantic owner and conjunction owner, or for E6's decision owner. This coverage claim is relative to the stated tuple only. Nothing here claims completeness beyond the known inventory, and undiscovered evaluations stay as residual.
+
+## 2. Diagnostic order on the observed signal
+
+The signal is that reviewers asked twice for a wider log window on E4 and reached no decidable question. The engineer and the ops lead each said "evaluated delivery."
+
+1. **Was the correct declared frame activated?** **No**, for the F-A activation on E4.
+   - Question 1 is answered by family inclusion, not by set membership, the frame name or similar wording.
+   - E4 asks about the state of the dead-letter queue before release. That is queue state at a named time, which is F-C's declared family.
+   - F-A's declared family is "delivery behaviour of the sender on one commit." It does not state E4.
+   - "Evaluated delivery" is the same word covering two different material relations. This is the missing-frame signal "same name, different relations."
+   - The F-C activation is within its family.
+   - I stopped here because the defect is located at question 1. Questions 2–8 are not answered: they are `unknown` or not reached. The missing conjunction (question 6) is real but is not reached in this order.
+
+## 3. Revision action
+
+**Action:** clarify activation or evidence acquisition.
+- **What it changes:** the activation of E4 only. E4 is activated under F-C, and the F-A activation is withdrawn as outside F-A's family. The evidence-acquisition clarification covers whether F-C's evidence reaches `dlq-shadow`.
+- **Frames and inventory:** no frame declaration and no inventory entry changes.
+- **Materiality:** the revision record states it is **non-material**. It produces no new frame revision coordinate and reopens no result.
+
+**Reopened by this revision:** none.
+
+Three things stay open for other reasons, not because of this revision:
+- **E1 and E3 results (config rev 39).** They are invalidated by the changed basis (rev 41) under the changed-inputs clause and RF-005. They stay out of reuse until re-evaluated, or until a recorded re-check finds them independent.
+- **E4's F-C `satisfied` result.** The 12 stuck messages are counterevidence. Dependent verdicts are invalidated until the claim-evidence relation is requalified. The withdrawn F-A activation does not remove that observation.
+- **E4 conjunction.** It remains undeclared, and E4 stays `conflicted`. The revision actions "add or revise a conjunction" and "revise the inventory" are not chosen here, because the order stopped before question 6.
+
+## No method source
+
+- The meaning of each of the seven coverage statuses, and the rule for assigning a status to a result invalidated by a changed basis. I used `uncovered`; `unknown` or `conditionally_covered` could be argued.
+- A test for whether a config change is material to E1, E2 or E3. The METHOD block says to retain it as judgment, but supplies no criteria.
+- A rule for whether two results taken at different named times (09:00Z and 09:30Z) are on the same basis for conjunction.
+- The minimal closed-result shape (REFERENCE_FRAME §13, only cited) and the full definition of "non-material" beyond the one example.
+- The owners of E4's checklist item 7 meaning, of E5's semantic and decision authority, and of E6's decision authority. These are subject gaps. The method only requires that they be named.
+# step exit 0
+# end 2026-10-12T15:20:57Z

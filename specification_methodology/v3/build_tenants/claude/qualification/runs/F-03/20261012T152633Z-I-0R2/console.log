@@ -1,0 +1,56 @@
+# console log for qualification/runs/F-03/20261012T152633Z-I-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:26:33Z
+# step I-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152633Z-I-0R2 --step-id I-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD bind-and-resolve=a_c/set-6/projection-bind-and-resolve-materialized.json" --block "TASK=qualification/cases/F-03/TASK-I.md" --model sonnet
+## Definition
+
+- **`product.bounded_context`**: it is a list of three contexts. The field must name the single enclosing context of the product's own WHAT, or be null. It is not a registry, and it must not flatten peer or other-owned contexts into one namespace. Billing is owned by Ravi, and patient-records has no existing owner or spec. The field should name only the context the product's WHAT sits in. By the facts given, that is `urn:clinic:ctx:booking`.
+- **`constitution.stdo`**: it has only the mutable `v3.*` discovery selector. The exact installed release basis and its deterministic manifest digest are missing.
+- **`reference_frame_bases`**: the key is absent. The definition requires one or more accepted basis declarations, each with its admitting authority and governed scope. Omission is not a declaration.
+- **`what`**: `requirements_text` copies R-1 to R-9. The overlay may only locate source truth. A copy creates a rival authority and is non-conformant.
+- **`composition`**: the key is absent. The product calls the billing product's API, so an explicit relation to the billing product definition is required.
+- **`local_constitution.disambiguations`**: the single entry is defective (see D-3). `axioms: []` and `overrides: []` are lawful explicit empties.
+
+## Visit in R-7
+
+1. **Governed scope and nearest context**: R-7 is in booking-spec §3. The document-level declaration in §1 gives the context `urn:clinic:ctx:booking`, which covers every subordinate occurrence.
+2. **Basis and authorities**: the basis is booking-spec v4 and the authority is Ana.
+3. **Collect candidates**: the context-local definition is booking-spec §2, "reserved time slot with one clinician". No import is admitted, because no relation between the two specs is recorded. Billing's "Visit" is therefore not a candidate.
+4. **Overrides and disambiguations**: there are no overrides. D-3 is not owner-authorised (see D-3) and is not needed here.
+5. **Admit**: exactly one concept remains.
+
+- **Semantic address**: (Visit, `urn:clinic:ctx:booking`, Ana, booking-spec v4, booking-spec.md, the R-7 occurrence under the §1 document scope).
+- **Result**: exactly one concept, `booking-spec.md#visit`.
+- **Lee's selection**: it is not lawful. Billing's meaning belongs to a different context and owner, and no import, translation or equivalence admits it. Lee chose it by glossary order and code-file frequency, and neither of those may decide meaning. Even if the behaviour happens to be right, a guessed meaning fails semantic conformance.
+
+## D-3
+
+- **Does it resolve anything?** No, not as it stands.
+- **Coordinates it has**: `term`, `context`, a `disambiguates` list, and `resolves_to`, which is a member of that list. It also has a `uri`.
+- **Coordinates it lacks**:
+  - **`authority`**: D-3.md names no author or lawful authority, so no owner is established. The overlay listing gives it none.
+  - **`basis`**: the selected bases (booking-spec v4 and billing-spec v2.1) are missing.
+  - **`applies_to`**: the exact governed scope is missing.
+  - **Exact concept references**: the `disambiguates` and `resolves_to` values are bare file fragments, not exact references.
+  - **Candidate completeness and basis**: the candidates are not shown to be complete or tied to a basis.
+  - **Carrier content**: D-3's one sentence does not state candidates, basis or scope.
+- **Cross-context relation**: yes. The candidates span booking and billing, so the carrier must also declare the complete relation. It must state the kind (here a disambiguation), source and target concepts and contexts, direction, preserved and lost meaning, both owners, both bases, scope, and lifecycle and invalidation. It must not widen either authority, and Ana cannot decide for Ravi's context. A disambiguation does not make the two Visits equal.
+- **Need for R-7**: the local resolution of R-7 is already unique, so R-7 does not depend on D-3.
+
+## Glossary
+
+The glossary is a locator only and decides nothing. Row order creates no priority.
+
+- **Row 1, Visit → billing → `billing-spec.md#visit`**: it is a valid row, because both the context and the owning clause resolve. It locates a candidate in a different context. It contributes nothing to R-7, because R-7's address selects booking and no import exists.
+- **Row 2, Visit → booking → `booking-spec.md#visit`**: it is a valid row. It locates the owning clause that the address selects. The meaning comes from that clause under booking-spec v4, not from the row.
+- **Row 3, Patient → patient-records → `patient-records-spec.md#patient`**: it is invalid, because the owning clause does not exist and the context has no declaring owner. The index cannot repair that. It contributes nothing, so "Patient" is unresolved.
+
+## No method source
+
+- The method does not say when a `bounded_context` list is invalid, beyond saying the field names one enclosing context or null. I inferred the defect from "not a registry".
+- It does not say whether bare `file#fragment` strings count as exact concept references.
+- It does not set the content requirements for `constitution.entrypoints` and `constitution.agent_bootstrap`, so I could not check them.
+- It does not say when `composition` must be non-empty, or how to relate a product to an API call. I took the API call as evidence that a relation is needed.
+- It does not say whether a document like D-3 can ever count as an accepted design by itself.
+# step exit 0
+# end 2026-10-12T15:27:01Z

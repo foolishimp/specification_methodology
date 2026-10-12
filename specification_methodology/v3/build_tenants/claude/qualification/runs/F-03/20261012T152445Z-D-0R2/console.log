@@ -1,0 +1,40 @@
+# console log for qualification/runs/F-03/20261012T152445Z-D-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:24:45Z
+# step D-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152445Z-D-0R2 --step-id D-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD design-gate=a_c/set-6/projection-design-gate-materialized.json" --block "TASK=qualification/cases/F-03/TASK-D.md" --model sonnet
+# Change 1
+
+1. **Decision-complete:** Yes, as far as the facts show. The note states no delta to entities, relationships, lifecycle, authority, function signatures, effects or public messages. The facts show no unresolved, contradictory or materially non-equivalent relation. The class is `realization_refactor`, which re-enters at the realised surface only. Triage must record the intent, class, re-entry point and time. No co-evolution-versus-gated choice is live, because no semantic decision is open. The gate is the proportional unchanged-refactor gate. Its affected set is the touched projection set: `door_driver.py`, `door_io.py`, `door_retry.py` and the four renamed private functions.
+2. **Gate requirement:** The change must cite the accepted `locker-door` Ontology, three-view asset and verdict (2026-09-30), name the touched projection set, and prove no delta in entities, relationships, lifecycle, authority, functions, effects and public semantics. It creates no new Ontology and no new acceptance ceremony.
+   - **Present:** the accepted basis, the touched-file list, the no-delta statement, and unchanged test expectations.
+   - **Missing:** the proof is only the author's assertion. The facts do not show that someone checked it against the accepted design, for example that the retry behaviour moved to `door_retry.py` has no effect or authority delta. A triage record is also not shown.
+3. **Promotion:** Yes, it may be promoted once the no-delta proof is stated against the accepted basis and triage is recorded. It reuses the existing verdict. The retained code is ordinary realised code under the accepted design, not provisional.
+
+# Change 2
+
+1. **Decision-complete:** No. `reservation-hold` is a new boundary, so its design is non-closed. The facts show these relations:
+   - **Unresolved:** the authority for releasing an expired hold. The options are controller firmware or the reservation service, and the note says "owner to be decided". R-12 admits both, so two materially non-equivalent networks remain admissible. They differ in authority, topology, effect and failure routes.
+   - **Unresolved:** the expiry mechanism. The substrate has no timers, and the "nightly cron on a developer laptop" cannot give a 30-minute expiry.
+   - **Contradictory:** Hold and LockerLock both carry the 30-minute expiry and an `expired` state. That is duplicated identity, lifecycle and authority.
+   - **Contradictory:** the controller keeps its own hold-state copy, updated without reading the reservation service. This is a second authority and truth path.
+   - **Contradictory:** the nightly cron cannot satisfy the 30-minute expiry.
+   - **Missing:** the sequence and lifecycle views, and any decision on failure and refusal routes, such as a deposit racing expiry or a release that fails.
+
+   Sequencing mode: design-gated. Implementation would otherwise choose between non-equivalent networks with durable consequences. The affected set is the smallest causally closed set: the release-authority decision, the Hold/LockerLock lifecycle and authority, the controller's state copy, the expiry mechanism and its substrate, and the sequence and state views for them.
+2. **Gate requirement:** A new boundary needs an accepted Ontology, a complete three-view asset (class, sequence and state, with cross-view checks) and an accepted design verdict, all before promotion or design-method closure. Ines accepts them.
+   - **Present:** the entity, identity, state and message lists, which are a partial Ontology draft, and a `classDiagram`.
+   - **Missing:** the owner decision, the `sequenceDiagram` and `stateDiagram-v2` (one `flowchart` covering both does not substitute), the cross-view evaluation, the Ontology verdict and the design verdict. Each of these blocks closure.
+3. **Promotion:** No, not in release 4.2 as things stand.
+   - **Standing of the code:** the three days of option-1 code, with its tests, is provisional evidence only. It does not author semantic truth, earn publication authority, or satisfy promotion or closure. Keeping it is a team intention, not a ratification. Implementation may not select the missing answer or ratify it after establishing it.
+   - **Reconciliation:** the design chooses the owner on its own merits, against prior authority. If the design accepts option 1, the code can be reconciled and retained. If not, the code is replaced. The design may not be rewritten to fit the code.
+4. **Substrate:** Not acceptable as selected. A stateless platform with no timers cannot natively construct the time-driven expiry lifecycle or an owner-side release triggered by expiry. Under option 2 the reservation service would be the releasing owner, so the gap sits squarely on it. The laptop cron is a bridge or promised future feature, and it is prohibited. The capability gap must be carried as an explicit design gap, or as a lawful re-entry. The re-entry could change the runtime selection, which is a design_reframe, or move expiry authority to a substrate that has timers. If the decision stays open, "scheduled triggers next quarter" cannot close the gate. Not carrying the gap explicitly is a defect.
+5. **Prime:** No. Local Prime-conformance of every module does not prove the family is globally Prime. Hold and LockerLock duplicate expiry, the `expired` state, lifecycle and authority, so the family is not contracted. The evidence is also incomplete: it lacks the whole-family contraction relation, retained meaning and authority before and after, accepted loss, and a total mapping from every projection (including the controller's state copy) to its atoms. Root authority is not conserved. The controller's own hold-state copy, updated without reading the service, introduces a second authority source and truth path. Contraction must be redone so that one atom owns hold lifecycle and expiry authority, with LockerLock and the controller copy as projections of it.
+
+# No method source
+
+- The test-level meaning of "no delta" proof (what counts as sufficient evidence for Change 1) is not supplied.
+- Which party records the triage, and the format of the design-gate acceptance record, are not supplied.
+- Whether Ines's accepted Ontology covers the retry behaviour inside `locker-door` is a fact the METHOD block cannot supply.
+- Whether a boundary with no material alternative must pay the full ontology-first chain is left unresolved. The residual is `derivation-chain-cost-per-boundary`. It does not affect these two changes: Change 1 reuses the verdict, and Change 2 has real alternatives.
+# step exit 0
+# end 2026-10-12T15:25:04Z
