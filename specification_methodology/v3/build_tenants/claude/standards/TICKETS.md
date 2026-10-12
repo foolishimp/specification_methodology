@@ -512,24 +512,18 @@ selects that durability; it does not admit an execution contract or widen
 its upstream work authority (P6, P2).
 
 The step side of admission is [ACTIVATION §1](ACTIVATION.md#admission) and
-is defined there once: drafting and admission are distinct relations even
-when one invocation drafts, validates, admits and executes; execution
-begins only after deterministic admission or an explicit human override of
-the exact contract; the drafting actor infers no admission from its own
-draft, from ticket or sprint presence, from lane placement or from `active`
-status; the admitted result carries the admission mechanism and its
-authority, the exact contract identity or digest, the decision and the
-evidence, including any human override; every result, withheld closure
-and residual obligation is recorded on the contract's named durable result
-and evidence surface before return, a conversation return alone not being
-durable evidence; and admission refuses when no such surface is authorised
-and available. This member adds the carrier side (P6, P4b). The admission mechanism and the
+is defined there once: drafting versus admission inside one invocation, the
+condition under which execution may begin, what admission may never be
+inferred from (including ticket or sprint presence, lane placement and
+`active` status), the coordinates an admitted result carries, the recording
+of every result, withheld closure and residual obligation before return,
+and refusal when no durable result and evidence surface is available. This
+member adds the carrier side (P6, P4b). The admission mechanism and the
 durable result and evidence surface are the ones the product definition
 binds. When that surface is the ticket or the sprint manifest, the admitted
-result with its coordinates is recorded there; otherwise the ticket or
-manifest references it. A carrier's lane, status or prose that asserts
-admission without those coordinates is not admission evidence, and the
-contract it describes remains drafted or rejected.
+result with its coordinates is recorded there. A carrier's lane, status or
+prose that asserts admission without those coordinates is not admission
+evidence, and the contract it describes remains drafted or rejected.
 
 When admission is absent or rejected, ACTIVATION §1 returns the missing
 work authority without execution. Before that return, an obligation that
@@ -553,9 +547,8 @@ states are those of ACTIVATION §1 (drafted, admitted, rejected,
 superseded). An admitted execution contract is logged in runtime and event
 truth, available to prompt assembly, and available to later closure
 checking, so that execution and closure read the same admitted basis (P6,
-P4b; rc.2 #execution-contract-admission). The model never self-certifies
-its own execution basis without deterministic admission or explicit human
-override (ACTIVATION §1).
+P4b; rc.2 #execution-contract-admission). The refusal of self-certification
+is ACTIVATION §1.
 
 Admission validates a contract against its cited product outcome,
 prerequisite or experiment basis and does not admit that basis (ACTIVATION
@@ -1315,14 +1308,14 @@ are carried verbatim, including their American spellings and the word
 | #upward-propagation-check | conserved in full; the walk upward to the first missing layer | §4 Upward propagation check |
 | #triage-metadata | conserved | §4 Triage metadata |
 | #work-carrier-to-execution-rule | conserved; the table, the carrier rules and the obligation-retention order here; the step-side admission relation is ACTIVATION §1, defined once there | §5 Carrier selection; ACTIVATION §1 Admission |
-| #execution-contract-admission | conserved; logging and availability here; the states and self-certification rule at ACTIVATION §1; basis admission at SPEC_METHOD §3 | §5 Execution contract admission |
+| #execution-contract-admission | conserved; logging and availability here; the states and self-certification rule at ACTIVATION §1; basis admission at SPEC_METHOD §3 | §5 Execution contract admission; ACTIVATION §1 Admission; SPEC_METHOD §3 |
 | #execution-and-verification-authority-separation-stdo-up-007 | conserved; the generic assessment protocol is EVALUATION §3 | §7 Execution and verification authority separation (UP-007) |
 | #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7 | §7 Recorded judgment and owner-ruling continuity |
 | #bounded-context-term-binding | conserved; the resolution law is PRODUCT_DEFINITION §5 | §5 Bounded-context term binding |
 | #evaluation-criteria-and-non-closure-conditions | conserved | §5 Evaluation criteria and non-closure conditions |
 | #condition-based-closure-and-reuse | conserved; one term generalised (above) | §7 Condition-based closure and reuse |
 | #test-case-authority | conserved in full; ASSURANCE §3 points here for the ticket-local rule | §7 Test case authority |
-| #implementation-migration-category | conserved; the slice-promotion rule is SPEC_METHOD §7, its ticket-local consequence here | §6 Declaration and checklist; §6 Closure of a migration ticket |
+| #implementation-migration-category | conserved; the slice-promotion rule and the slice derivation are SPEC_METHOD §7, the ticket-local consequence here | §6 Declaration and checklist; §6 Closure of a migration ticket; SPEC_METHOD §7 Constitutional migration options |
 | #migration-strategy-requirements | conserved | §6 Strategy requirements |
 | #recurring-realization-and-library-declaration | conserved | §6 Recurring realisation and library declaration |
 | #multi-build-tenant-review-rule | conserved | §6 Multi-build-tenant review |
