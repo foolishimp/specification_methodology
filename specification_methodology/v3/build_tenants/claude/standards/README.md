@@ -28,6 +28,7 @@ current state under explicit uncertainty.
 | resume work someone else left | [ACTIVATION §5 and §7](ACTIVATION.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
+| coordinate work as Executive, Worker or Reviewer, or adopt the baseline profile | [EXECUTIVE_BASELINE §3](EXECUTIVE_BASELINE.md#3-engagement-applicability) for direct versus coordinated entry, [§6](EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) and [§12](EXECUTIVE_BASELINE.md#12-complete-engagement-transition) for the Executive's duties and the transition, then [§16](EXECUTIVE_BASELINE.md#16-adoption-or-project-defined-configuration) to adopt or replace it |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
 | load it into a model's context | the set program and its five projected frames under [../a_c/set/](../a_c/set/README.md): one frame per route above (bounded activation, composition, work state, recoverability, review); [../a_c/t3/](../a_c/t3/README.md), [../a_c/t2/](../a_c/t2/README.md) and [../a_c/t1/](../a_c/t1/README.md) are its frozen predecessors |
 
@@ -45,6 +46,7 @@ current state under explicit uncertainty.
 | [ASSURANCE.md](ASSURANCE.md) | 2 | testing and proof law: 1 verification layers; 2 testing strategy taxonomy with fixture and proof portability; 3 test authority; 4 scenario bundle; 5 installed dev proof; 6 significant path coverage |
 | [CONFORMANCE.md](CONFORMANCE.md) | 2 | cases the method must pass |
 | [PROFILES.md](PROFILES.md) | 3 | profile imports and the core boundary |
+| [EXECUTIVE_BASELINE.md](EXECUTIVE_BASELINE.md) | 3 | the optional Executive, Worker and Reviewer profile: canonical compression, authority boundary, engagement applicability, profile terms, Executive attention with its drift locks and no-mutation rule, the derived Executive, Worker and Reviewer frames, steel-thread delivery, the twelve generic specialist families, the engagement transition with the promotion constraint projection, handoff and coverage application, adoption or project configuration, actor binding, profile qualification, failure classification, anti-patterns, closure |
 
 Each clause names the principle that requires it (P0 to P6, defined in
 FOUNDATIONS §3) and, where it restates or supersedes an rc.2 clause, may

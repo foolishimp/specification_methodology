@@ -494,75 +494,75 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Canonical Compression | `#canonical-compression` |  | 3,571 | unresolved | |
-| Status And Authority Boundary | `#status-and-authority-boundary` |  | 4,292 | unresolved | |
-| Engagement Applicability | `#engagement-applicability` |  | 1,767 | unresolved | |
-| Empirical Revision Boundary | `#empirical-revision-boundary` |  | 1,789 | unresolved | |
-| Profile Terms | `#profile-terms` |  | 17 | unresolved | |
-| &nbsp;&nbsp;Engagement frame | `#engagement-frame` |  | 258 | unresolved | |
-| &nbsp;&nbsp;Specialist frame | `#specialist-frame` |  | 407 | unresolved | |
-| &nbsp;&nbsp;Generic specialist-frame family | `#generic-specialist-frame-family` |  | 699 | unresolved | |
-| &nbsp;&nbsp;Testing frame | `#testing-frame` |  | 562 | unresolved | |
-| &nbsp;&nbsp;Authoritative Product path | `#authoritative-product-path` |  | 504 | unresolved | |
-| &nbsp;&nbsp;Material combinatorial complexity | `#material-combinatorial-complexity` |  | 691 | unresolved | |
-| &nbsp;&nbsp;Executive | `#executive` |  | 630 | unresolved | |
-| Executive Attention, Evaluation, And Action | `#executive-attention-evaluation-and-action` |  | 3,774 | unresolved | |
-| &nbsp;&nbsp;Event-Driven Executive Attention | `#event-driven-executive-attention` |  | 1,749 | unresolved | |
-| &nbsp;&nbsp;Executive Drift Locks | `#executive-drift-locks` |  | 1,307 | unresolved | |
-| &nbsp;&nbsp;Product-Chain Basis | `#product-chain-basis` |  | 1,435 | unresolved | |
-| &nbsp;&nbsp;Worker | `#worker` |  | 346 | unresolved | |
-| &nbsp;&nbsp;Reviewer | `#reviewer` |  | 444 | unresolved | |
-| &nbsp;&nbsp;Technical triage, severity, priority, and boundary effect | `#technical-triage-severity-priority-and-boundary-effect` |  | 1,947 | unresolved | |
-| &nbsp;&nbsp;Work result | `#work-result` |  | 2,021 | unresolved | |
-| &nbsp;&nbsp;Exact candidate | `#exact-candidate` |  | 551 | unresolved | |
-| &nbsp;&nbsp;Baseline-adoption projection | `#baseline-adoption-projection` |  | 492 | unresolved | |
-| Non-Hierarchical Frame Configuration | `#non-hierarchical-frame-configuration` |  | 1,391 | unresolved | |
-| Derived Executive Frame | `#derived-executive-frame` |  | 3,017 | unresolved | |
-| &nbsp;&nbsp;Steel-Thread Delivery | `#steel-thread-delivery` |  | 1,827 | unresolved | |
-| Derived Worker Frame | `#derived-worker-frame` |  | 2,854 | unresolved | |
-| Derived Reviewer Frame | `#derived-reviewer-frame` |  | 4,236 | unresolved | |
-| Derived Generic Specialist Frame Set | `#derived-generic-specialist-frame-set` |  | 10,024 | unresolved | |
-| Derived Product Testing Frame Set | `#derived-product-testing-frame-set` |  | 1,395 | unresolved | |
-| &nbsp;&nbsp;Derived User-Acceptance Frame | `#derived-user-acceptance-frame` |  | 3,431 | unresolved | |
-| &nbsp;&nbsp;Derived End-To-End Frame | `#derived-end-to-end-frame` |  | 2,767 | unresolved | |
-| &nbsp;&nbsp;Derived Integration Frame | `#derived-integration-frame` |  | 2,522 | unresolved | |
-| &nbsp;&nbsp;Derived Unit-Test Frame | `#derived-unit-test-frame` |  | 4,046 | unresolved | |
-| &nbsp;&nbsp;Combinatorial Coverage And Testing-Value Index | `#combinatorial-coverage-and-testing-value-index` |  | 2,916 | unresolved | |
-| &nbsp;&nbsp;Legitimate-Path And Technical-Debt Erasure | `#legitimate-path-and-technical-debt-erasure` |  | 2,528 | unresolved | |
-| &nbsp;&nbsp;Testing Evidence Composition | `#testing-evidence-composition` |  | 1,186 | unresolved | |
-| &nbsp;&nbsp;Assurance Subject Acquisition And Evaluation | `#assurance-subject-acquisition-and-evaluation` |  | 1,609 | unresolved | |
-| &nbsp;&nbsp;Counterexample Localization | `#counterexample-localization` |  | 1,327 | unresolved | |
-| Derived End-To-End Interface Integration Frame | `#derived-end-to-end-interface-integration-frame` |  | 4,400 | unresolved | |
-| &nbsp;&nbsp;Interface Integration Claim Boundaries | `#interface-integration-claim-boundaries` |  | 1,665 | unresolved | |
-| &nbsp;&nbsp;Interface Integration Obligations | `#interface-integration-obligations` |  | 5,074 | unresolved | |
-| &nbsp;&nbsp;Computational Whole-Path Evaluation | `#computational-whole-path-evaluation` |  | 1,244 | unresolved | |
-| &nbsp;&nbsp;Interface Integration Qualification | `#interface-integration-qualification` |  | 2,144 | unresolved | |
-| Complete Engagement Transition | `#complete-engagement-transition` |  | 343 | unresolved | |
-| &nbsp;&nbsp;1. Existing Authority Selects The Basis | `#1-existing-authority-selects-the-basis` |  | 280 | unresolved | |
-| &nbsp;&nbsp;2. Executive Activates Worker | `#2-executive-activates-worker` |  | 1,192 | unresolved | |
-| &nbsp;&nbsp;3. Worker Returns To Executive | `#3-worker-returns-to-executive` |  | 888 | unresolved | |
-| &nbsp;&nbsp;4. Executive Evaluates The Work Result | `#4-executive-evaluates-the-work-result` |  | 848 | unresolved | |
-| &nbsp;&nbsp;5A. Candidate Does Not Require Independent Review | `#5a-candidate-does-not-require-independent-review` |  | 405 | unresolved | |
-| &nbsp;&nbsp;5B. Candidate Requires Independent Review | `#5b-candidate-requires-independent-review` |  | 843 | unresolved | |
-| &nbsp;&nbsp;6. Reviewer Returns To Executive | `#6-reviewer-returns-to-executive` |  | 644 | unresolved | |
-| &nbsp;&nbsp;Reviewer Result And Triage Projection | `#reviewer-result-and-triage-projection` |  | 2,199 | unresolved | |
-| &nbsp;&nbsp;7. Executive Disposes And Checkpoints | `#7-executive-disposes-and-checkpoints` |  | 1,134 | unresolved | |
-| &nbsp;&nbsp;Executive Promotion Constraint Projection | `#executive-promotion-constraint-projection` |  | 801 | unresolved | |
-| Handoff Projection | `#handoff-projection` |  | 2,964 | unresolved | |
-| Coverage Application | `#coverage-application` |  | 3,905 | unresolved | |
-| Missing-Frame And Re-Entry Application | `#missing-frame-and-re-entry-application` |  | 997 | unresolved | |
-| Product-Owned Adoption Or Project-Defined Configuration | `#product-owned-adoption-or-project-defined-configuration` |  | 59 | unresolved | |
-| &nbsp;&nbsp;Existing Authority Selects The Configuration | `#existing-authority-selects-the-configuration` |  | 767 | unresolved | |
-| &nbsp;&nbsp;Adopt This Baseline | `#adopt-this-baseline` |  | 1,157 | unresolved | |
-| &nbsp;&nbsp;Define A Project Configuration | `#define-a-project-configuration` |  | 1,154 | unresolved | |
-| &nbsp;&nbsp;Extension Versus Replacement | `#extension-versus-replacement` |  | 555 | unresolved | |
-| Actor Binding And Independence | `#actor-binding-and-independence` |  | 861 | unresolved | |
-| Profile Qualification | `#profile-qualification` |  | 5,304 | unresolved | |
-| Baseline-Specific Project-Basis Additions | `#baseline-specific-project-basis-additions` |  | 1,192 | unresolved | |
-| Baseline-Specific Activation Additions | `#baseline-specific-activation-additions` |  | 887 | unresolved | |
-| Failure Classification | `#failure-classification` |  | 4,272 | unresolved | |
-| Anti-Patterns | `#anti-patterns` |  | 3,945 | unresolved | |
-| Closure | `#closure` |  | 5,131 | unresolved | |
+| Canonical Compression | `#canonical-compression` |  | 3,571 | conserved; the testing-frame evidence topology is stated with the testing frames | `EXECUTIVE_BASELINE.md#1-canonical-compression`; `ASSURANCE.md#the-set` |
+| Status And Authority Boundary | `#status-and-authority-boundary` |  | 4,292 | conserved; the ownership table is rewritten onto tenant members | `EXECUTIVE_BASELINE.md#2-status-and-authority-boundary` |
+| Engagement Applicability | `#engagement-applicability` |  | 1,767 | conserved; direct entry itself is ACTIVATION §1 Roles and delegation, the profile additions are restated here | `EXECUTIVE_BASELINE.md#3-engagement-applicability` |
+| Empirical Revision Boundary | `#empirical-revision-boundary` |  | 1,789 | conserved | `EXECUTIVE_BASELINE.md#4-empirical-revision-boundary` |
+| Profile Terms | `#profile-terms` |  | 17 | not applicable: heading with no claim text (17 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Engagement frame | `#engagement-frame` |  | 258 | conserved | `EXECUTIVE_BASELINE.md#engagement-frame` |
+| &nbsp;&nbsp;Specialist frame | `#specialist-frame` |  | 407 | conserved | `EXECUTIVE_BASELINE.md#specialist-frame` |
+| &nbsp;&nbsp;Generic specialist-frame family | `#generic-specialist-frame-family` |  | 699 | conserved | `EXECUTIVE_BASELINE.md#generic-specialist-frame-family` |
+| &nbsp;&nbsp;Testing frame | `#testing-frame` |  | 562 | conserved; defined in tier 2 because the testing frames use it | `ASSURANCE.md#terms` |
+| &nbsp;&nbsp;Authoritative Product path | `#authoritative-product-path` |  | 504 | conserved; defined in tier 2 because the testing frames use it | `ASSURANCE.md#terms` |
+| &nbsp;&nbsp;Material combinatorial complexity | `#material-combinatorial-complexity` |  | 691 | conserved; defined in tier 2 because the testing frames use it | `ASSURANCE.md#terms` |
+| &nbsp;&nbsp;Executive | `#executive` |  | 630 | conserved | `EXECUTIVE_BASELINE.md#executive` |
+| Executive Attention, Evaluation, And Action | `#executive-attention-evaluation-and-action` |  | 3,774 | conserved; three duties, no-mutation rule, attention cycle | `EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action` |
+| &nbsp;&nbsp;Event-Driven Executive Attention | `#event-driven-executive-attention` |  | 1,749 | conserved | `EXECUTIVE_BASELINE.md#event-driven-attention` |
+| &nbsp;&nbsp;Executive Drift Locks | `#executive-drift-locks` |  | 1,307 | conserved; the five locks as a table with their failure consequences | `EXECUTIVE_BASELINE.md#drift-locks` |
+| &nbsp;&nbsp;Product-Chain Basis | `#product-chain-basis` |  | 1,435 | conserved; the role map in the basis is PRODUCT_DEFINITION §7 | `EXECUTIVE_BASELINE.md#product-chain-basis` |
+| &nbsp;&nbsp;Worker | `#worker` |  | 346 | conserved | `EXECUTIVE_BASELINE.md#worker` |
+| &nbsp;&nbsp;Reviewer | `#reviewer` |  | 444 | conserved | `EXECUTIVE_BASELINE.md#reviewer` |
+| &nbsp;&nbsp;Technical triage, severity, priority, and boundary effect | `#technical-triage-severity-priority-and-boundary-effect` |  | 1,947 | conserved; severity, priority, frame result and boundary effect kept distinct; the per-result projection is EVALUATION §4 | `EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect` |
+| &nbsp;&nbsp;Work result | `#work-result` |  | 2,021 | conserved; the total mapping is ACTIVATION §3 construction availability, the variant readings and refusal exclusion restated here | `EXECUTIVE_BASELINE.md#work-result` |
+| &nbsp;&nbsp;Exact candidate | `#exact-candidate` |  | 551 | conserved | `EXECUTIVE_BASELINE.md#exact-candidate` |
+| &nbsp;&nbsp;Baseline-adoption projection | `#baseline-adoption-projection` |  | 492 | conserved | `EXECUTIVE_BASELINE.md#baseline-adoption-projection` |
+| Non-Hierarchical Frame Configuration | `#non-hierarchical-frame-configuration` |  | 1,391 | conserved | `EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration` |
+| Derived Executive Frame | `#derived-executive-frame` |  | 3,017 | conserved; eleven-element table | `EXECUTIVE_BASELINE.md#8-derived-executive-frame` |
+| &nbsp;&nbsp;Steel-Thread Delivery | `#steel-thread-delivery` |  | 1,827 | conserved | `EXECUTIVE_BASELINE.md#steel-thread-delivery` |
+| Derived Worker Frame | `#derived-worker-frame` |  | 2,854 | conserved; eleven-element table | `EXECUTIVE_BASELINE.md#9-derived-worker-frame` |
+| Derived Reviewer Frame | `#derived-reviewer-frame` |  | 4,236 | conserved; eleven-element table | `EXECUTIVE_BASELINE.md#10-derived-reviewer-frame` |
+| Derived Generic Specialist Frame Set | `#derived-generic-specialist-frame-set` |  | 10,024 | conserved; all twelve families as a table | `EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set` |
+| Derived Product Testing Frame Set | `#derived-product-testing-frame-set` |  | 1,395 | conserved; the set in tier 2, its relation to the Proof family in the profile | `ASSURANCE.md#the-set`; `EXECUTIVE_BASELINE.md#relation-to-the-testing-and-interface-frames` |
+| &nbsp;&nbsp;Derived User-Acceptance Frame | `#derived-user-acceptance-frame` |  | 3,431 | conserved | `ASSURANCE.md#user-acceptance-frame` |
+| &nbsp;&nbsp;Derived End-To-End Frame | `#derived-end-to-end-frame` |  | 2,767 | conserved | `ASSURANCE.md#end-to-end-frame` |
+| &nbsp;&nbsp;Derived Integration Frame | `#derived-integration-frame` |  | 2,522 | conserved | `ASSURANCE.md#integration-frame` |
+| &nbsp;&nbsp;Derived Unit-Test Frame | `#derived-unit-test-frame` |  | 4,046 | conserved | `ASSURANCE.md#unit-frame` |
+| &nbsp;&nbsp;Combinatorial Coverage And Testing-Value Index | `#combinatorial-coverage-and-testing-value-index` |  | 2,916 | conserved | `ASSURANCE.md#8-combinatorial-coverage-and-testing-value` |
+| &nbsp;&nbsp;Legitimate-Path And Technical-Debt Erasure | `#legitimate-path-and-technical-debt-erasure` |  | 2,528 | conserved | `ASSURANCE.md#9-legitimate-path-and-technical-debt-erasure` |
+| &nbsp;&nbsp;Testing Evidence Composition | `#testing-evidence-composition` |  | 1,186 | conserved | `ASSURANCE.md#10-testing-evidence-composition` |
+| &nbsp;&nbsp;Assurance Subject Acquisition And Evaluation | `#assurance-subject-acquisition-and-evaluation` |  | 1,609 | conserved | `ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation` |
+| &nbsp;&nbsp;Counterexample Localization | `#counterexample-localization` |  | 1,327 | conserved | `ASSURANCE.md#12-counterexample-localisation` |
+| Derived End-To-End Interface Integration Frame | `#derived-end-to-end-interface-integration-frame` |  | 4,400 | conserved; frame identity unchanged, resolving in the reference-frame-evaluation context; its family relation in the profile | `ASSURANCE.md#13-end-to-end-interface-integration-frame`; `EXECUTIVE_BASELINE.md#relation-to-the-testing-and-interface-frames` |
+| &nbsp;&nbsp;Interface Integration Claim Boundaries | `#interface-integration-claim-boundaries` |  | 1,665 | conserved | `ASSURANCE.md#claim-boundaries` |
+| &nbsp;&nbsp;Interface Integration Obligations | `#interface-integration-obligations` |  | 5,074 | conserved | `ASSURANCE.md#obligations` |
+| &nbsp;&nbsp;Computational Whole-Path Evaluation | `#computational-whole-path-evaluation` |  | 1,244 | conserved; the family names of the composition in the profile | `ASSURANCE.md#computational-whole-path-evaluation`; `EXECUTIVE_BASELINE.md#relation-to-the-testing-and-interface-frames` |
+| &nbsp;&nbsp;Interface Integration Qualification | `#interface-integration-qualification` |  | 2,144 | conserved; all ten cases | `ASSURANCE.md#qualification` |
+| Complete Engagement Transition | `#complete-engagement-transition` |  | 343 | conserved | `EXECUTIVE_BASELINE.md#12-complete-engagement-transition` |
+| &nbsp;&nbsp;1. Existing Authority Selects The Basis | `#1-existing-authority-selects-the-basis` |  | 280 | conserved | `EXECUTIVE_BASELINE.md#1-existing-authority-selects-the-basis` |
+| &nbsp;&nbsp;2. Executive Activates Worker | `#2-executive-activates-worker` |  | 1,192 | conserved | `EXECUTIVE_BASELINE.md#2-executive-activates-worker` |
+| &nbsp;&nbsp;3. Worker Returns To Executive | `#3-worker-returns-to-executive` |  | 888 | conserved | `EXECUTIVE_BASELINE.md#3-worker-returns-to-executive` |
+| &nbsp;&nbsp;4. Executive Evaluates The Work Result | `#4-executive-evaluates-the-work-result` |  | 848 | conserved | `EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result` |
+| &nbsp;&nbsp;5A. Candidate Does Not Require Independent Review | `#5a-candidate-does-not-require-independent-review` |  | 405 | conserved | `EXECUTIVE_BASELINE.md#5a-candidate-does-not-require-independent-review` |
+| &nbsp;&nbsp;5B. Candidate Requires Independent Review | `#5b-candidate-requires-independent-review` |  | 843 | conserved | `EXECUTIVE_BASELINE.md#5b-candidate-requires-independent-review` |
+| &nbsp;&nbsp;6. Reviewer Returns To Executive | `#6-reviewer-returns-to-executive` |  | 644 | conserved | `EXECUTIVE_BASELINE.md#6-reviewer-returns-to-executive` |
+| &nbsp;&nbsp;Reviewer Result And Triage Projection | `#reviewer-result-and-triage-projection` |  | 2,199 | conserved; tier-1 law with assessor and decision owner | `EVALUATION.md#result-and-triage-projection`; `EXECUTIVE_BASELINE.md#6-reviewer-returns-to-executive` |
+| &nbsp;&nbsp;7. Executive Disposes And Checkpoints | `#7-executive-disposes-and-checkpoints` |  | 1,134 | conserved | `EXECUTIVE_BASELINE.md#7-executive-disposes-and-checkpoints` |
+| &nbsp;&nbsp;Executive Promotion Constraint Projection | `#executive-promotion-constraint-projection` |  | 801 | conserved; all four rows | `EXECUTIVE_BASELINE.md#promotion-constraint-projection` |
+| Handoff Projection | `#handoff-projection` |  | 2,964 | conserved; all eight projections | `EXECUTIVE_BASELINE.md#13-handoff-projection` |
+| Coverage Application | `#coverage-application` |  | 3,905 | conserved; all fourteen rows | `EXECUTIVE_BASELINE.md#14-coverage-application` |
+| Missing-Frame And Re-Entry Application | `#missing-frame-and-re-entry-application` |  | 997 | conserved; REFERENCE_FRAME §10 order with the two profile-specific steps stated | `EXECUTIVE_BASELINE.md#15-missing-frame-and-re-entry-application` |
+| Product-Owned Adoption Or Project-Defined Configuration | `#product-owned-adoption-or-project-defined-configuration` |  | 59 | not applicable: heading with no claim text (59 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Existing Authority Selects The Configuration | `#existing-authority-selects-the-configuration` |  | 767 | conserved | `EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration` |
+| &nbsp;&nbsp;Adopt This Baseline | `#adopt-this-baseline` |  | 1,157 | conserved | `EXECUTIVE_BASELINE.md#adopt-this-baseline` |
+| &nbsp;&nbsp;Define A Project Configuration | `#define-a-project-configuration` |  | 1,154 | conserved | `EXECUTIVE_BASELINE.md#define-a-project-configuration` |
+| &nbsp;&nbsp;Extension Versus Replacement | `#extension-versus-replacement` |  | 555 | conserved | `EXECUTIVE_BASELINE.md#extension-versus-replacement` |
+| Actor Binding And Independence | `#actor-binding-and-independence` |  | 861 | conserved | `EXECUTIVE_BASELINE.md#17-actor-binding-and-independence` |
+| Profile Qualification | `#profile-qualification` |  | 5,304 | conserved; all twenty-six trial obligations | `EXECUTIVE_BASELINE.md#18-profile-qualification` |
+| Baseline-Specific Project-Basis Additions | `#baseline-specific-project-basis-additions` |  | 1,192 | conserved | `EXECUTIVE_BASELINE.md#project-basis-additions` |
+| Baseline-Specific Activation Additions | `#baseline-specific-activation-additions` |  | 887 | conserved | `EXECUTIVE_BASELINE.md#activation-additions` |
+| Failure Classification | `#failure-classification` |  | 4,272 | conserved; all twenty-eight rows | `EXECUTIVE_BASELINE.md#20-failure-classification` |
+| Anti-Patterns | `#anti-patterns` |  | 3,945 | conserved; all thirty-two | `EXECUTIVE_BASELINE.md#21-anti-patterns` |
+| Closure | `#closure` |  | 5,131 | conserved; all twenty-four conditions | `EXECUTIVE_BASELINE.md#22-closure` |
 
 ## TICKET_METHOD.md
 

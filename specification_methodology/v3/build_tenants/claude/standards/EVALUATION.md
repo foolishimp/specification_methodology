@@ -109,6 +109,45 @@ bounded correction, the residual uncertainty, and the invalidation
 conditions. It recommends a disposition; it does not apply one. A finding
 without evidence a consumer can chase is commentary.
 
+### Result and triage projection
+
+Where a review returns findings with technical triage, the triage is the
+assessor's evidence-bound assessment of each finding against the exact
+evaluated claim and basis. Severity, the assessor's grade of consequence,
+is evaluation evidence. Priority, the effect on the current promotion
+boundary and the disposition are the decision owner's (ACTIVATION §1,
+Roles and delegation) and stay distinct values even where a
+Product-defined policy maps one to another. The recommended disposition
+above is evidence for the decision owner: it is not a disposition, a
+priority or a boundary effect, and it is never adopted mechanically (P6,
+RF-007). The fields of a triage are declared by the profile that adopts it, and
+the scales it uses are bound by the adopting Product (P2, P6; provenance
+[reviewer result and triage projection](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection)).
+
+The projection of the finding-level triage payload is total over the result
+algebra of ACTIVATION §3. The payload classes `complete`, `indeterminate`
+and `not_applicable` classify the triage only; they are not new results,
+dispositions, priorities or lifecycle states (P5, P1).
+
+| Core result | Finding and triage payload | Decision-owner consumption constraint |
+|---|---|---|
+| satisfied | an explicit no-finding state; triage `not_applicable`; evidence, residuals and invalidation stay present | priority and boundary effect are `not_applicable` to this result unless another exact consumed result supplies a finding |
+| falsified | one or more exact findings; triage `complete` where supported, keeping `indeterminate` fields where evidence cannot close them | apply the Product-owned priority and boundary policy without mapping severity mechanically to a disposition |
+| indeterminate | a partial finding or observation state; triage `indeterminate`; the exact evidence gaps and residual uncertainty | keep the uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or as a closed finding |
+| out_of_frame | the evaluated claim needs an undeclared material relation or evaluator capability; triage `indeterminate`; the missing relation or capability and the exact reconfiguration pressure are named | refine or reconfigure a capable activation and keep the claim unresolved; do not consume the result as satisfaction or falsification |
+| invalid_basis | a basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse to consume the result and return through the declared basis re-entry relation |
+
+An adjacent observation outside the evaluated claim does not replace the
+claim-relative result. The assessor returns it separately, with triage
+`not_applicable` to that claim and the exact repricing or re-entry
+pressure; the decision owner returns it to its declared owner without
+creating a claim-relative block, or another review round, from its
+severity alone (P6, P2).
+
+The assessor returns to the decision owner, not to the constructor. It does
+not edit the candidate, direct the repair or authorise continuation (P6,
+§3).
+
 ## 5. Acceptance
 
 Acceptance is the decision owner's disposition over an unchanged subject;
@@ -319,7 +358,7 @@ detected and the cost.
 | UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3 and UP-020's delegation in ACTIVATION §1 |
 | Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
 | TICKET judgment continuity | conserved via ACTIVATION §7 |
-| Baseline Reviewer and technical triage | conserved by reference; §4 states the result shape |
+| Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):
@@ -337,3 +376,10 @@ SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
 | #semantic-evidence-and-projection-separation-stdo-up-008 | conserved; the three bases, the three invalidation cases and the digest rule | §2 |
 | #assurance-boundary-congruence-and-method-qualification-stdo-up-022 | conserved in full; the nine falsifiers are split between §1 (boundary, enforcement, quantifier) and §7 (qualification) | §1, §3, §6, §7 |
 | #reconstruction-litmus | conserved; the generic law here, the five layer derivations and the per-layer diagnoses in SPEC_METHOD §2; the design-view coverage gate stays with the design profile | §6 Layered sufficiency; SPEC_METHOD §2 Reconstruction litmus |
+
+Baseline rows received by this member (anchors into rc.2
+STDO_REFERENCE_FRAME_BASELINE.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #reviewer-result-and-triage-projection | conserved; all five result rows and the adjacent-observation rule; "Reviewer" written as assessor and "Executive" as decision owner; the sentence on the recommended disposition reconciles §4's "recommends a disposition" with the predecessor's "no priority or disposition" | §4 Result and triage projection |
