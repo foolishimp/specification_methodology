@@ -46,6 +46,15 @@ index states no relation itself (P1, P6).
 A term without such an owning clause is not a valid row under §1, and
 this index carries no such row (P5, P6).
 
+Index watch. A derived surface or projected frame that relies on this
+index to locate meaning watches it through the index's path and digest,
+recorded separately from the deciding sources it was derived from. Locator
+drift in this index then makes that surface or frame stale
+([PRODUCT_DEFINITION §11](PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary),
+staleness binding), and the watch does not make this index an owner of
+meaning (P3, P6; provenance rc.2 authority_compressions/README.md, a claim
+no rc.2 body states).
+
 ## 3. Method identity
 
 Context declared by

@@ -320,6 +320,17 @@ contracts, the design module names the equivalent typed contract and
 applies the same binding law to that contract. Absence of an admitted
 contract blocks product-truth-changing UX actions (P6, P5).
 
+A prompt for UI or operator-surface work must carry the governing UX law
+as a derived surface or projected frame of this member, rather than
+require the worker to rediscover it from the raw member. If a worker
+changes product truth through UI behaviour, the prompt must name the
+admitted carrier and action path. If the prompt cannot identify that
+carrier and action path, the correct result is a block or re-entry, not
+local UI invention (P6, P5; provenance rc.2
+authority_compressions/ux_method.compressed.md, a claim no rc.2 body
+states; prompt construction is
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)).
+
 ## 8. Continuation and replay
 
 In the graph-execution profile the runtime owns continuation (PROFILES

@@ -243,6 +243,37 @@ perform the evaluation, activation returns a refusal or out_of_frame; work
 does not proceed through implied context (P0, P5; rc.2 RF
 #select-and-activate).
 
+Standalone scope. A derived surface or projected frame decides standalone
+only the questions that its own source members own. It refuses to close a
+question owned by another member, or one that joins the law of several
+owners; the step returns out_of_frame (§3) naming the owning members, and
+the question is decided from those members at their current digests or
+from a derived surface whose declared sources include every owner of it
+(P6, P1; provenance rc.2 authority_compressions/stdo_compressed.md,
+spec_method.compressed.md and design_module_method.compressed.md, a claim
+no rc.2 body states).
+
+Prompt construction. A prompt is rendered contract over typed authority;
+it is not source law. Prompt text must project the current authority
+references, obligations, contracts, boundaries, proof expectations and
+fallback conditions the step needs. A prompt body must not carry
+historical workaround prose unless the current requirement, design,
+runtime or test still needs that constraint. Construction starts from the
+highest live authority surface the question needs. If the prompt needs an
+upstream ambiguity resolved, it names the unresolved authority gap before
+fallback context is read. The raw owning members are the fallback when a
+derived surface or projected frame is stale, missing or insufficient for
+a named unresolved question (P6, P0, P5; provenance rc.2
+authority_compressions/stdo_compressed.md and spec_method.compressed.md, a
+claim no rc.2 body states). The design, ODD, UX and ticket
+specialisations are
+[DESIGN_MODULE §11](DESIGN_MODULE.md#11-review),
+[ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop) A5 and
+[§11.7A](ODD.md#117a-conforming-agentic-development),
+[UX §7](UX.md#7-carrier-binding) and
+[TICKETS §5](TICKETS.md#5-from-carrier-to-execution) and
+[§7](TICKETS.md#7-authority-judgment-closure-and-state) (P6).
+
 The operation that joins AC-010, AC-011 and RF-002/003/004/014/017 into one
 procedure is new in this corpus (P0). The method does not require proving
 that no undiscovered material relation exists

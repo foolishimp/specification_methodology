@@ -35,6 +35,13 @@ declared surface.
 Imperative procedure still exists and is subordinate to declared authority
 (P6, P1; rc.2 #position).
 
+Constitutional examples use neutral capability and authority identities:
+they demonstrate enabled capabilities rather than cite a consumer as
+precedent, whose particulars cannot become method law
+([PROFILES §1](PROFILES.md#1-the-boundary)) (P1, P6; provenance rc.2
+authority_compressions/stdo_compressed.md, spec_method.compressed.md and
+ticket_method.compressed.md, a claim no rc.2 body states).
+
 ### Process constitution
 
 This method is the process constitution for building projects by
@@ -1407,6 +1414,12 @@ Verification layers, the testing strategy taxonomy with fixture and proof
 portability, test authority, scenario bundles, installed development proof
 and significant path coverage are ASSURANCE §1 to §6 (P6; rc.2
 #evidence-rules is the heading over the first three).
+
+Closure requires authority trace, realisation proof, negative proof where
+drift is plausible, and a present-tense statement of the residual open
+pressure (P6, P4b, P5; provenance rc.2
+authority_compressions/stdo_compressed.md, proof compression; the
+residual-pressure statement is a claim no rc.2 body states).
 
 ## 10. Design records
 

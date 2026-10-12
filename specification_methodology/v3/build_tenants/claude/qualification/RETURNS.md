@@ -945,3 +945,23 @@ RESIDUALS:
   6. For the expectations writer: TASK-F occ-25 reads as either a stop gap or a structural refusal, and both map to invalid_basis. The UX frame carries both compliance readings, because UX §15 leaves the stricter one to Jim's pending ruling.
   7. The derivation script and per-frame fragments are uncommitted scratch, as in earlier sets.
 MEASURED: about 300 KB read against the 600 KB envelope (about 165 KB by the Writer: set-4 README, F-02 case, targeted TICKETS, ACTIVATION, PRODUCT_DEFINITION, GLOSSARY and README ranges, diffs, rc.2 bootstrap, nine TASK reviews; about 136 KB across the four forks). Wall time 2026-10-12T10:21:38Z to 2026-10-12T10:39:16Z. Zero actor starts; nineteen dry runs: two nine-step passes (the first in a scratch directory shared with fork trials, discarded) and one re-run of A after the TASK-A fix.
+
+## W23 return, 2026-10-12T11:06:42Z
+
+RESULT: complete. The claims the r23 audit found in rc.2 authority_compressions that no rc.2 standards body states, and that the tenant did not carry, now have homes in the members, each labelled with its principle and its compression provenance. The ten compression rows in frontier/PREDECESSOR_CLAIMS.md keep "unresolved" and the proposal; only their notes changed, naming the new loci. No STOP.
+COMMIT: this commit ("W23: conserve compression-only claims").
+INSERTED:
+  1. PRODUCT_DEFINITION section 11, staleness binding: source and watched-index path and digest; any digest change makes the surface stale; regenerate or explicitly re-accept before an installation treats it as current; a matching digest establishes neither currency nor fidelity; raw owners of the same cut decide stale or insufficient.
+  2. GLOSSARY section 2, index watch: a surface that relies on the index watches its path and digest separately from its deciding sources; locator drift makes the watcher stale; the index gains no ownership. Written from the README text, which makes the watching surface, not the index, carry the refs and digests.
+  3. ACTIVATION section 2, standalone scope: a surface or frame decides standalone only questions its source members own, refuses cross-member closure, returns out_of_frame naming the owners.
+  4. ACTIVATION section 2, prompt construction (full projection list, the requirement/design/runtime/test exception, stale, missing or insufficient fallback), with specialisations at DESIGN_MODULE section 11, ODD 11.5D A5 and 11.7A, UX section 7, TICKETS section 5 and section 7 (UP-007 subsection).
+  5. SPEC_METHOD section 1 Position: neutral capability and authority identities in constitutional examples, citing PROFILES section 1 for the precedent half.
+  6. SPEC_METHOD section 9: closure requires authority trace, realisation proof, negative proof where drift is plausible and a present-tense residual open pressure statement.
+  7. DESIGN_MODULE section 10 head: prefer one algebraic primitive plus projections; prefer total functions, closed enums, explicit state, deterministic folds.
+  8. PRODUCT_DEFINITION section 9 provenance corrected: several-definitions and symlink halves are rc.2 SPEC_METHOD #shared-installed-release-basis-and-toolchain-manager (restated in section 4); zero is rc.2 CLAUDE and AGENTS template item 7.
+NOT INSERTED: adopt as sole basis-changing operation (contradicts rc.2 cohort update); TRAVERSAL fourteen count (superseded). Already carried: bootstrap B20 permission (tenant templates verbatim); B5 (PRODUCT_DEFINITION sections 4 and 9); "downstream Product is not constitutional precedent" (PROFILES section 1).
+OUTSIDE THE BRIEF, NOT VERIFIED AS CARRIED: spec_method "do not use README, bootstrap, comments, tickets or run history as product truth when Product, requirements or design decide" is only partly carried (TICKETS UP-009 subsection: comments, dashboards, indexes, summaries are projections); DMM "prompts may reference design obligations and boundaries but must not become design authority" is only near DESIGN_MODULE section 10 governance and strategy separation (prompt surfaces that become hidden strategy doctrine). The audit scored both as body-stated; neither was inserted.
+PLACEMENT: the spec_method product-specific-behaviour claim went to ODD 11.7A beside "Compression is prompt input", not to ODD section 20, so the canonical compression gains no clause.
+CHECKS: no em-dash or header deeper than ### in added lines; every added paragraph carries a principle and provenance label; every new or touched .md# fragment resolves (GLOSSARY line 289 names an rc.2 anchor in backticks, not a link).
+MEASURED: wall 2026-10-12T10:58:50Z to 2026-10-12T11:06:42Z at entry; about 120 KB read against the 350 KB envelope.
+STOP BASIS: complete

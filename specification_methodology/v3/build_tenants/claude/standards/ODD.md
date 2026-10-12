@@ -885,7 +885,11 @@ and violates A0 (P6).
 A5 F_P freedom, F_D authority. F_P may inspect, discover, reason, draft,
 transform and propose within the bounded action. F_P must not close the
 edge, emit runtime events, mutate ledgers or decide re-entry. F_D, ABG and
-product admission own durable evidence and closure truth (P0, P6).
+product admission own durable evidence and closure truth (P0, P6). An F_P
+worker must not be given an F_D-authored semantic extraction recipe when
+the edge requires F_P judgment (P0, P6; provenance rc.2
+authority_compressions/design_module_method.compressed.md, a claim no
+rc.2 body states).
 
 A6 Evidence before closure. No edge closes from raw artifact presence, a
 raw worker report, raw process success or a CLI summary. Closure is a fold
@@ -1222,7 +1226,12 @@ packet carries only the smallest declared authority sufficient to decide
 the step, with its source refs, and that conformance is enforced by
 admitting the produced artifact rather than by enlarging what the agent
 must hold. Compression is prompt input and never the deciding authority
-(P0, P6).
+(P0, P6). A derived surface or projected frame of the general method may
+orient the agent to source precedence, lawful re-entry and traceability;
+it must not be used to decide product-specific behaviour, which must come
+from the current product authority packet (P6, P1; provenance rc.2
+authority_compressions/spec_method.compressed.md, a claim no rc.2 body
+states).
 
 The walkthrough proves at two levels. The work it produces must be lawful:
 correct change class, traceable, admitted. A point where the walkthrough

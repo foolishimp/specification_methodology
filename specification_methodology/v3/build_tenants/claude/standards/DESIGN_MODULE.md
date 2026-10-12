@@ -1505,6 +1505,12 @@ member (P6, P1).
 
 ## 10. Realisation rules
 
+Projects using this profile prefer one algebraic primitive plus
+projections over several local decision systems, and prefer total
+functions, closed enums, explicit state and deterministic folds (P2, P5,
+P6; provenance rc.2 authority_compressions/stdo_compressed.md and
+design_module_method.compressed.md, a claim no rc.2 body states).
+
 ### Immutable carriers
 
 Source truth should be carried in typed immutable values unless mutation
@@ -1763,6 +1769,15 @@ an explicit feature with its own bounded authority and proof; otherwise
 the proxy path is removed.
 
 ## 11. Review
+
+Prompts under this profile follow
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+prompt construction. A worker may be told where to inspect and what
+contract to satisfy. A prompt clause that exists to enforce design law
+needs provenance and a proof that the clause still causes or prevents the
+intended behaviour (P6, P1; provenance rc.2
+authority_compressions/design_module_method.compressed.md, a claim no rc.2
+body states).
 
 ### Design review questions
 

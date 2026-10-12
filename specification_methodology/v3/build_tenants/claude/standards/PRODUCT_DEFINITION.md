@@ -619,9 +619,13 @@ deep nested project roots (P3; rc.2
 
 For a requested Product scope exactly one applicable definition is
 selected; zero or several unresolved definitions fail closed, and a
-symlinked definition is refused (P6, P5; provenance rc.2
-authority_compressions/stdo_bootstrap.md, discovery claims 1 and 2, a
-compression claim no rc.2 body states).
+symlinked definition is refused (P6, P5; provenance: several unresolved
+definitions and the symlink refusal are rc.2
+#shared-installed-release-basis-and-toolchain-manager, restated in §4
+here; zero definitions is rc.2 templates/CLAUDE_TEMPLATE.md and
+templates/AGENTS_TEMPLATE.md item 7, a missing Product Definition fails
+closed; rc.2 authority_compressions/stdo_bootstrap.md discovery claims 1
+and 2 state the whole rule).
 
 Directory nesting creates no implicit inheritance, ownership, composition
 or constitutional override. Parent and child definitions stay independent
@@ -725,6 +729,18 @@ summary, bootstrap or index cannot require a stricter or weaker relation by
 compression. Its references are resolvable within the declared actor's
 access; otherwise the required meaning is supplied directly (P4b, P1;
 FOUNDATIONS §4, reference versus body).
+
+Staleness binding. A derived surface or projected frame carries the path
+and digest of each deciding source it was derived from, and of each index
+it watches (GLOSSARY §2). A change to any of those digests makes it stale,
+and it must be regenerated or explicitly re-accepted before an
+installation treats it as current. The binding runs one way: a matching
+digest establishes neither currency of meaning nor fidelity (above;
+EVALUATION §7). The raw owning members of the same selected cut remain
+the deciding authority and decide when a derived surface or frame is
+stale or insufficient for a question (P3, P5, P6; provenance rc.2
+authority_compressions/README.md and stdo_bootstrap.md step 5, a claim no
+rc.2 body states).
 
 The method owns normative construction algebra, authority relations,
 abstract state and transition laws, admissibility conditions, necessary

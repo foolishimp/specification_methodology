@@ -494,6 +494,13 @@ forcing deferred work into comments or goals.
 
 ## 5. From carrier to execution
 
+If a derived surface or projected frame of this member is insufficient,
+the actor reads this member only for the named unresolved lifecycle or
+proof question and cites the clauses used (P2, P6; provenance rc.2
+authority_compressions/ticket_method.compressed.md, a claim no rc.2 body
+states; prompt construction is
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)).
+
 ### Carrier selection
 
 Every execution governed by this method uses one run-scoped execution
@@ -913,7 +920,11 @@ Authority to author or implement a change is not independent authority to
 verify it. Where independent review is required, the reviewer is not the
 author of the reviewed subject and identifies the exact subject, basis,
 scope, exclusions, evidence, verdict and unresolved findings (P6; rc.2
-#execution-and-verification-authority-separation-stdo-up-007).
+#execution-and-verification-authority-separation-stdo-up-007). Review
+findings must cite current authority and the code or proof paths they
+rest on, not only historical commentary (P6, P1; provenance rc.2
+authority_compressions/ticket_method.compressed.md, a claim no rc.2 body
+states).
 
 Self-review remains useful authoring evidence and cannot be relabelled as
 independent. Human authority may accept or reject the claim; it does not
