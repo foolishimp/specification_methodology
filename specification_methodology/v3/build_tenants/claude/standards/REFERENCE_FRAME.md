@@ -78,8 +78,9 @@ Statement of ownership, new in this corpus. The reference-frame-evaluation
 context explicitly includes, as concepts of that context owned at their
 defining loci, the frame objects of
 [FOUNDATIONS §2](FOUNDATIONS.md#frame-objects), the frame tuple included,
-and the result algebra of [ACTIVATION §3](ACTIVATION.md#3-result-algebra),
-its refinements and dispositions included. Where the list above names
+the result algebra of [ACTIVATION §3](ACTIVATION.md#3-result-algebra),
+its refinements and dispositions included, and the specialist frame
+families of [EXECUTIVE_BASELINE §11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set). Where the list above names
 evaluation or result, it names these included concepts and defines neither
 a second time. This inclusion is the explicit owner relation that
 [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)

@@ -575,7 +575,9 @@ evaluation and authority relations (P1, P3).
 
 This member owns the build-tenancy bounded context,
 `urn:stdo:bounded-context:build-tenancy`, under the selected complete STDO
-basis. It governs the realisation relation that SPEC_METHOD §2 states
+basis. The multi-build-tenant work-item relation of
+[TICKETS §4](TICKETS.md#multi-build-tenant-independence) is a
+concept of this context owned there (statement of ownership, P1, P3). It governs the realisation relation that SPEC_METHOD §2 states
 generically: one constitutional product WHAT is realised by one or more
 independent project-owned HOW tenants. A build tenant is one such
 realisation. Build tenancy is the one-or-more relation; one tenant is its
