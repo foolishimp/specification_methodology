@@ -3,7 +3,7 @@ id: T-002-CLAUDE
 title: v3.0.0 successor construction, Claude tenant execution line
 type: feature
 ticket_category: ordinary
-status: backlog
+status: active
 goal: GOAL-002
 source_ticket: T-002
 build_tenant: urn:stdo-3:build-tenant:claude
@@ -29,9 +29,9 @@ The tenant's design must be reframed before realisation: the first-pass design c
 
 | Frame | Actor | State |
 |---|---|---|
-| Executive | to be named by Jim; recommended from the Codex family, no write grant | unbound |
+| Executive | Claude, the session holding the pen, bound by Jim on 2026-10-12 ("you hold executive and will manage your writers and reviewers"); no write grant to candidate bytes; manages Writer and Reviewer frames and attention | bound |
 | Writer | the Claude tenant context, territory `build_tenants/claude/` only | ready |
-| Reviewer | author-independent, Codex family by default; same family only as a declared exception with reason | unbound |
+| Reviewer | fresh Claude contexts that did not author the subject, declared same-family exception by Jim's binding; expectations recorded before opening the candidate; Codex reviews cross-family at merge | bound by exception |
 | Ledger Writer | the common pen (Claude), ticket writes only | ready |
 | Fresh actor for usability evidence | any family, cold context outside any repository or instruction-file load path | per activation |
 
@@ -51,7 +51,7 @@ Contracts derive from this ticket per T-002's Admission Mechanism. State is one 
 - envelope: context, wall and spend allowances set by the Executive at admission and recorded here; measured context and spend reported in the return
 - stop and re-entry: if restating the member requires changing an axiom or principle, stop and return `re_entry_requested` naming the clause; if a row cannot be disposed within the grant, return `incomplete` with the residual; never dispose `intentionally removed` without Jim's recorded decision
 - result consumer: the Executive, through this ticket's execution record
-- state: drafted; admission requires a bound Executive
+- state: admitted 2026-10-12T01:39:03Z by the Executive on Jim's instruction "begin"; authority T-002 and the C3 Construction Contract; contract text as committed in c9924e1; durable result surface build_tenants/claude/qualification/RETURNS.md and this record
 
 Later contracts follow T-002's member sequencing, one per member or declared cone, and are drafted by the pen on the Executive's selection.
 
@@ -67,3 +67,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 ## Execution Record
 
 2026-10-12T01:32:20Z — Drafted by the common pen with T-002. No actor bound beyond the Writer, nothing admitted, no construction started.
+
+2026-10-12T01:39:03Z — Jim bound the Executive to Claude and waived further paperwork: "the purpose is to manage everyone's reference frames such that you can manage attention, begin". EC-CLAUDE-001 admitted. Activation W1 (design reframe, member map, tenant frontier copy) issued to a fresh Writer context on `tenant/claude/c3-v3`.
