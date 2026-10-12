@@ -280,6 +280,13 @@ local paydown debt only when the governing method allows that debt to
 survive as explicit follow-up; it cannot accept hidden authority drift
 (P6).
 
+Standing of the close classifications, new in this corpus. Purpose: the
+one-algebra rule of [ACTIVATION §3](ACTIVATION.md#3-result-algebra). The
+six classifications are close-review decisions over reviewed items, not
+evaluation results: like the dispositions of ACTIVATION §3, each consumes
+the core results of the item's review and is not one, so they declare no
+core mapping and add no core member (P5, P6).
+
 ## 4. Ticket rules
 
 ### One durable record per ticket

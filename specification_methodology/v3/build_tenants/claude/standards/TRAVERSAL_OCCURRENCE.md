@@ -13,8 +13,11 @@ record and the functor kinds F_D, F_P and F_H are
 composition at [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition);
 the calculus basis is [§8](AXIOMATIC_CALCULUS.md#8-calculus-identity). The
 core result algebra is [ACTIVATION §3](ACTIVATION.md#3-result-algebra).
-Occurrence, lineage, frontier and cut are this profile's own terms, named
-by its sorts and relations. A route written `rc.2 #anchor` is into
+Here occurrence, lineage, frontier and cut name only this profile's sorts
+and relations: `Occurrence`, its `lineage_refs` and typed lineage
+relations, `EventFrontier` and `SemanticAdmissionCut`. They claim neither
+the core's release cut nor its product lineage, nor any other member's
+frontier. A route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/TRAVERSAL_OCCURRENCE_PROFILE.md` and
 is provenance only (P3, P1).
 

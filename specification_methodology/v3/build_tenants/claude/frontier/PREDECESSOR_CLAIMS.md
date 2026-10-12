@@ -46,7 +46,7 @@ A member with no sub-headings is one row for its whole text.
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Standards Library (whole member) | `#standards-library` |  | 2,330 | conserved; the cut as the constitutional member set with subordinate tooling at "may", the nine member kinds with the calculus separation, the traversal profile's neutrality and optional adoption, the non-deciding index, compact read models as projected frames, schemas and templates with their named members, the shared versioned store, logical URIs and no machine-local paths, the non-default project-local copy, the four authority sources and the two non-replacements; the member map's RELEASE share is owned by PRODUCT_DEFINITION §4 and §12, which RELEASE consumes | `README.md#library-and-installed-basis`; `PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager`; `PRODUCT_DEFINITION.md#12-bootstrap`; `RELEASE.md#exact-cut-qualification`; `RELEASE.md#4-selector-and-consumer-adoption` |
+| Standards Library (whole member) | `#standards-library` |  | 2,330 | conserved; the cut as the constitutional member set with subordinate tooling at "may", the nine member kinds with the calculus separation, the traversal profile's neutrality and optional adoption, the non-deciding index, compact read models as a member kind (their carrier unresolved at the compression rows), schemas and templates with their named members, the shared versioned store, logical URIs and no machine-local paths, the non-default project-local copy, the four authority sources and the two non-replacements; the member map's RELEASE share is owned by PRODUCT_DEFINITION §4 and §12, which RELEASE consumes | `README.md#library-and-installed-basis`; `PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager`; `PRODUCT_DEFINITION.md#12-bootstrap`; `RELEASE.md#exact-cut-qualification`; `RELEASE.md#4-selector-and-consumer-adoption` |
 
 ## AXIOMATIC_CALCULUS.md
 
@@ -370,7 +370,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md`
 | Anti-Patterns | `#anti-patterns` |  | 1,485 | conserved | `REFERENCE_FRAME.md#12-violations` |
 | Minimal Frame Declaration | `#minimal-frame-declaration` |  | 1,086 | conserved | `REFERENCE_FRAME.md#minimal-frame-declaration` |
 | Minimal Frame-Set Declaration | `#minimal-frame-set-declaration` |  | 814 | conserved | `REFERENCE_FRAME.md#minimal-frame-set-declaration` |
-| Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | conserved | `REFERENCE_FRAME.md#minimal-evaluation-result` |
+| Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | conserved; the out_of_frame residual field is new | `REFERENCE_FRAME.md#minimal-evaluation-result` |
 | Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure` |
 
 ## RELEASE_METHOD.md

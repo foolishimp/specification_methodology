@@ -116,8 +116,8 @@ free prose (P3).
 
 ## 7. Discussion state and mutability
 
-A post is mutable while it is part of an open discussion, and its `Status`
-makes the discussion state explicit (P3, P4b; rc.2
+A post is mutable while it is part of an open discussion. Use `Status` to
+make the discussion state explicit (P3, P4b; rc.2
 #discussion-state-and-mutability):
 
 - `Draft`: the author is still shaping the post;

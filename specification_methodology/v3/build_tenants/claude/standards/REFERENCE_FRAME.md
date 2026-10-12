@@ -872,9 +872,14 @@ RF-016).
 - result:
 - inference relation:
 - residual uncertainty:
+- out_of_frame residual (missing relation or capability, owner, reconfiguration pressure):
 - invalidation conditions:
 - consuming decision or conjunction:
 ```
+
+The out_of_frame residual field is new in this corpus; it carries what
+[ACTIVATION §3](ACTIVATION.md#3-result-algebra) requires an out_of_frame
+result to name, and reads `none` for any other result (P5).
 
 ## 14. Closure
 
@@ -956,5 +961,5 @@ REFERENCE_FRAME_METHOD.md; a locus is a section of this file.
 | #anti-patterns | conserved | §12 |
 | #minimal-frame-declaration | conserved | §13 |
 | #minimal-frame-set-declaration | conserved | §13 |
-| #minimal-evaluation-result | conserved | §13 |
+| #minimal-evaluation-result | conserved; the out_of_frame residual field is new | §13 |
 | #closure | conserved | §14 |
