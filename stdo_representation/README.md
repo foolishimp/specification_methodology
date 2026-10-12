@@ -5,7 +5,7 @@ deterministic logical map and a shared native skill for Codex and Claude.
 The published release is 2.5.1 RC1; its source, dependency, member inventory
 and claims are bound by [the release record](releases/v2.5.1.md) and
 [cohort carrier](../stack_release.json). The
-[completed release](../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+[completed release](../specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
 retains the native qualification limits. RC7 remains the immutable predecessor;
 external adoption is unselected. The live Product Definition identifies the
 operative source configuration and its exact decision.
@@ -58,7 +58,7 @@ text or mechanical validation does not establish release or acceptance.
 
 [T009](.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md)
 links its completed predecessor result and exact evidence. The
-[current release record](../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+[current release record](../specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
 binds the separate published 2.5.1 RC1 cohort. Reviewed authored predecessors,
 failed native attempts and repairs remain under `dogfood/t009-frame-projection/`.
 They are reacquirable evidence, not prerequisites of ordinary installed use.

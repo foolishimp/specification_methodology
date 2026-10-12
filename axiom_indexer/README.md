@@ -84,7 +84,7 @@ remain at its immutable tag.
 
 The current release is selected by
 [releases/v2.5.1.md](releases/v2.5.1.md). The
-[completed RC1 release](../specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) retains its historical evidence.
+[completed RC1 release](../specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) retains its historical evidence.
 All seven RC7 Product members remain byte-identical; new STDO meaning and frame
 membership are authored by Representation. Exact map/projection reproduction
 and refusal observations qualify the changed mechanical input relation. The

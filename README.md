@@ -1,18 +1,24 @@
 # Specification Methodology Repository
 
 The Git repository is `foolishimp/specification_methodology`. In this workspace,
-the checkout directory is `specification_methodology`. Its
-`specification_methodology/` child owns the current STDO 2.* source; `stdo_3/`
-is the new STDO 3 peer. Select a child Product before working on its source.
+the checkout directory is `specification_methodology`. The STDO Specification
+Methodology product has two source projects side by side under its
+`specification_methodology/` child: `v2/` owns the current STDO 2.* source and
+the toolchain manager; `v3/` constructs v3.0.0 of the same product. Select a
+child Product before working on its source.
 
 This repository co-locates four peer source projects:
 
 | Project | Purpose |
 |---|---|
-| [`specification_methodology/`](specification_methodology/) | Specification Methodology and the STDO toolchain manager |
+| [`specification_methodology/v2/`](specification_methodology/v2/) | Specification Methodology 2.* source and the STDO toolchain manager |
+| [`specification_methodology/v3/`](specification_methodology/v3/) | Specification Methodology v3.0.0 construction: common principles and construction contract, with independent Codex and Claude document build tenants |
 | [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
 | [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
-| [`stdo_3/`](stdo_3/) | STDO 3 common principles and construction contract, with independent Codex and Claude document build tenants |
+
+Both STDO source projects share one release namespace, `specification_methodology`,
+and one Product identity. Release tags and rc/release branches keep that
+namespace; only the source paths carry the version line.
 
 The repository root is coordination only. It is not a Product, has no
 Product Definition, and grants no constitutional, composition, execution, or
@@ -48,7 +54,7 @@ stdo fleet verify --root .
 Install the current source toolchain for development with:
 
 ```sh
-pipx install --force ./specification_methodology
+pipx install --force ./specification_methodology/v2
 ```
 
 Each child owns its release profile, qualification, and publication decision.
@@ -60,12 +66,12 @@ Product Definition selects its exact governing cut.
 For the default scope of an owner instruction to release STDO, follow
 [`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
 
-The [RC7 release work](specification_methodology/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
+The [RC7 release work](specification_methodology/v2/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
 records the published and publicly reacquired complete RC7 cohort. STDO,
 Axiom Indexer and STDO Representation retain distinct immutable RC7 cuts;
 RC6 remains their immutable predecessor.
 
-The [2.5.1 RC1 release](specification_methodology/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
+The [2.5.1 RC1 release](specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
 records the published matched cohort, verified public installation and retained
 Representation native qualification limits. T-288 and ABI delivery supply no
 release dependency. External consumer adoption remains unselected.
