@@ -321,10 +321,12 @@ algebra, and the third names none of its own:
   the result and it enters through no declared input (rc.2 RF
   #material-relation, RF-003; P1). Whether the step exercised anything is
   irrelevant to this member; the ground is the missing declaration.
-- indeterminate when every relation and capability the claim requires is
-  declared and was exercised in the step, and the admissible evidence still
-  cannot decide. The result names the evidence that would decide, as its
-  residual uncertainty (rc.2 RF #return-a-closed-result).
+- indeterminate when the available admissible evidence cannot decide the
+  claim (rc.2 RF-012). The result names the evidence that would decide, as
+  its residual uncertainty (rc.2 RF #return-a-closed-result). Where the
+  claim also depends on an undeclared relation or capability, out_of_frame
+  and indeterminate each have a lawful ground; the result names the member
+  it returns and that ground, and this boundary excludes neither (P5).
 - no member of its own when the step did not exercise a declared
   capability the evaluation requires. A result is returned wherever a
   sufficient evaluation or an applicable judgment exists without that
@@ -347,8 +349,7 @@ algebra, and the third names none of its own:
   answer different questions (§1, Output), so the mapping of `incomplete`
   to the core does not make the evaluation indeterminate.
 
-The first two cases restate RF-012's members with the boundary made
-explicit. The undefined-term clause of the first is a tightening the
+The first two cases restate RF-012's members. The undefined-term clause of the first is a tightening the
 predecessor implies and does not state: a relation is material when its
 lawful change can change the evaluation result, which a term's meaning can,
 and an undefined term neither appears in the frame nor enters through a
