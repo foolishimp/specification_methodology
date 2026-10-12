@@ -27,10 +27,12 @@ report = {"subject_commit": subject, "argv": argv, "prompt_bytes": len(prompt),
           "prompt_sha256": hashlib.sha256(prompt).hexdigest(),
           "context_allowance_bytes": 600000, "wall_allowance_seconds": args.seconds,
           "spend_allowance_usd": 6, "role": "author-independent Reviewer"}
+report["provider_cwd"] = "/private/tmp"
 if len(prompt) > report["context_allowance_bytes"]:
     raise SystemExit("context envelope exceeded before dispatch")
 try:
-    result = subprocess.run(argv, input=prompt, capture_output=True, timeout=args.seconds)
+    result = subprocess.run(argv, input=prompt, capture_output=True,
+                            timeout=args.seconds, cwd=report["provider_cwd"])
     (directory / "REVIEW.raw.json").write_bytes(result.stdout)
     (directory / "REVIEW.stderr.txt").write_bytes(result.stderr)
     report["exit_code"] = result.returncode

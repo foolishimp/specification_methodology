@@ -120,7 +120,7 @@ known failure or uncovered responsibility from the evidence it consumed.
 
 ## Dispose
 
-The decision owner consumes exact closed work and evaluation results with the
+The actor carrying bound decision authority consumes exact closed work and evaluation results with the
 current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
 or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action or stop under the instance's
 permitted outcomes. Domain-specific yield remains with its declared owner. It cannot change upstream meaning or take a reserved owner decision.
@@ -130,8 +130,9 @@ acceptance interval is separately governed by
 
 Other instances retain their own result domains. [Ticket Method](TICKET_METHOD.md)
 owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
-owns conserved/superseded/intentionally removed/not applicable. An authorized
-Writer may record condition-based closure when that owning contract permits it.
+owns conserved/superseded/intentionally removed/not applicable. An actor carrying
+that contract's bound operation authority may record condition-based closure
+when that owning contract permits it.
 Sharing Dispose machinery changes none of those grants or classifications.
 
 Accept requires closure of the declared cone and preservation of every affected
