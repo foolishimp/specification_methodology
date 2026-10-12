@@ -15,9 +15,9 @@ current state under explicit uncertainty.
 
 | You want to | Read, in order |
 |---|---|
-| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [CALCULUS](CALCULUS.md) → [SPEC_METHOD](SPEC_METHOD.md) |
-| do a bounded piece of work | [CALCULUS §1–3](CALCULUS.md) for the step and its result algebra, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
-| resume work someone else left | [CALCULUS §5 and §7](CALCULUS.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
+| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [ACTIVATION](ACTIVATION.md) → [SPEC_METHOD](SPEC_METHOD.md) |
+| do a bounded piece of work | [ACTIVATION §1–3](ACTIVATION.md) for the step and its result algebra, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
+| resume work someone else left | [ACTIVATION §5 and §7](ACTIVATION.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
 | apply the method to code, graphs, UX or world models | [PROFILES](PROFILES.md) |
@@ -28,7 +28,7 @@ current state under explicit uncertainty.
 | File | Tier | Owns |
 |---|---|---|
 | [FOUNDATIONS.md](FOUNDATIONS.md) | 1 | ontology, commitments, algebra, hypotheses |
-| [CALCULUS.md](CALCULUS.md) | 1 | the bounded step, result algebra, totality, refinement, work state, cost, reuse |
+| [ACTIVATION.md](ACTIVATION.md) | 1 | the bounded step, result algebra, totality, refinement, work state, cost, reuse |
 | [EVALUATION.md](EVALUATION.md) | 1 | claims, evidence, assessment, acceptance, conformance, self-qualification |
 | [SPEC_METHOD.md](SPEC_METHOD.md) | 2 | the particular method: chain, WHAT/HOW, outcomes, change classes, roles, checkpoints, lineage |
 | [CONFORMANCE.md](CONFORMANCE.md) | 2 | cases the method must pass |

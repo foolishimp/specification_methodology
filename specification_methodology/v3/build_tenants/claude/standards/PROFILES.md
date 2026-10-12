@@ -2,7 +2,7 @@
 
 Tier 3. How domain profiles import the core and what stays out of it. A
 profile adds domain obligations, bindings and vocabulary; it imports
-[FOUNDATIONS](FOUNDATIONS.md), [CALCULUS](CALCULUS.md),
+[FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md),
 [EVALUATION](EVALUATION.md) and [SPEC_METHOD](SPEC_METHOD.md) by reference
 and restates none of them.
 
@@ -43,7 +43,7 @@ reference:
 [constructive evaluation and yield loop](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#115d-constructive-evaluation-and-yield-loop),
 TRAVERSAL_OCCURRENCE_PROFILE and the baseline's runtime bindings. The loop's
 four functions (synthesise model, evaluate gap, evaluate next, evaluate
-action) are the profile's realisation of CALCULUS §4–§5 and keep their
+action) are the profile's realisation of ACTIVATION §4–§5 and keep their
 distinct authority.
 
 ## 3. Software design
@@ -65,7 +65,7 @@ foundation selection
 ([UP-023](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#capability-and-foundation-selection-stdo-up-023)).
 All of DESIGN_MODULE_METHOD is conserved by reference. The derivation chain
 is the profile's largest reasoning cost; the profile requires it where it
-applies, and CALCULUS §6 asks every obligation to pay for the ambiguity it
+applies, and ACTIVATION §6 asks every obligation to pay for the ambiguity it
 removes. Whether a design boundary with no material alternative must still
 pay the full chain is a question for the profile's owner, carried here as a
 residual and not decided by this corpus.
@@ -94,7 +94,7 @@ Nothing in the core depends on the construct being established.
 
 | rc.2 member | Disposition |
 |---|---|
-| ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, baseline runtime bindings | conserved by reference in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into CALCULUS; the declared-binding rule of §1 is new |
+| ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, baseline runtime bindings | conserved by reference in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
 | DESIGN_MODULE_METHOD | conserved by reference in §3; UP-005, UP-017, UP-018, UP-019, UP-023 and the totality rule are consumed by tier 1; the per-boundary cost of the derivation chain is a residual question for the profile's owner |
 | UX_METHOD | conserved by reference in §4 |
 | WORLD_MODEL_METHOD | conserved by reference in §5; identity and entity-cut law consumed by FOUNDATIONS P3 |

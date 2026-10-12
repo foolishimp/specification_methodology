@@ -42,7 +42,7 @@ qualification.
 | Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability | P6 |
 | Residual | a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition | P4b |
 | Basis | the exact immutable set of definitions a step, claim or result binds; mixed bases need an explicit composite relation | P6 |
-| Material | of a relation, uncertainty or closure: its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of CALCULUS §2 is the material relations of a step | P2, P6 |
+| Material | of a relation, uncertainty or closure: its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
 
 Dispositions: subject, representation and interpretation conserve
 [AC Interpretation And Models](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#interpretation-and-models)
@@ -137,7 +137,7 @@ Conserves
 [RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit),
 [AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
 [Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule);
-RF-012 and AC-007 are restated once in CALCULUS §3 and continue to govern.
+RF-012 and AC-007 are restated once in ACTIVATION §3 and continue to govern.
 
 P6 Justification and authority. Definitions, assumptions, observations,
 candidate judgments and accepted claims have distinct standing; evidence
@@ -206,15 +206,15 @@ traversal composition laws of any runtime.
 
 | rc.2 clause family | Disposition in this corpus |
 |---|---|
-| AC-001 to AC-012, AC-014 to AC-019 | conserved by reference; AC-007 is restated in CALCULUS §3 as the one result algebra |
+| AC-001 to AC-012, AC-014 to AC-019 | conserved by reference; AC-007 is restated in ACTIVATION §3 as the one result algebra |
 | AC-013 transformation record | conserved; its fields are the conservation accounting above |
 | AC-020 layer and release separation | conserved by reference; applied in SPEC_METHOD §6 |
-| RF-001 to RF-017 | conserved by reference; RF-012 restated in CALCULUS §3; RF-002/003/014/017 consumed by CALCULUS §2 |
+| RF-001 to RF-017 | conserved by reference; RF-012 restated in ACTIVATION §3; RF-002/003/014/017 consumed by ACTIVATION §2 |
 | UP-001, UP-004, UP-008, UP-022 | conserved; consumed by EVALUATION |
-| UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and CALCULUS §6 |
+| UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and ACTIVATION §6 |
 | UP-015 | conserved; applied to this corpus in §1 |
-| UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by CALCULUS §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
+| UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by ACTIVATION §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
 | UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation |
-| UP-020 | conserved; consumed by CALCULUS §1, §3, §5 |
-| Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by CALCULUS §1 and §3 |
+| UP-020 | conserved; consumed by ACTIVATION §1, §3, §5 |
+| Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by ACTIVATION §1 and §3 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |

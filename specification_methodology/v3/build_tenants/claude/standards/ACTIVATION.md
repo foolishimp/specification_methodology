@@ -1,4 +1,4 @@
-# CALCULUS
+# ACTIVATION
 
 Tier 1. Owns how bounded work proceeds: the step, context construction under
 an envelope, the result algebra, totality, refinement, work state and

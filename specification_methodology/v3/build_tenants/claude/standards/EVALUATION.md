@@ -4,7 +4,7 @@ Tier 1. Owns how claims are justified and accepted: claims, evidence,
 independent assessment, review results, acceptance, conformance of
 realisations, and the method's own qualification. Consumes
 [FOUNDATIONS](FOUNDATIONS.md) and the result algebra in
-[CALCULUS §3](CALCULUS.md).
+[ACTIVATION §3](ACTIVATION.md).
 
 ## 1. Claims
 
@@ -61,7 +61,7 @@ before opening the candidate; it reads the subject at a named immutable
 identity, never a working tree; it makes no repair; it does not assess its
 own authorship. Reusing the constructor's judgment does not satisfy
 independence; shared mechanical evidence may be reused, judgment may not
-(CALCULUS §7). Any post-exposure revision is a declared intervention and a
+(ACTIVATION §7). Any post-exposure revision is a declared intervention and a
 new subject (UP-022).
 
 Independence across actor families is declared, not assumed. Whether two
@@ -71,7 +71,7 @@ stated is that they are not independent.
 
 ## 4. Review results
 
-A review returns one core result (CALCULUS §3) for each declared predicate it
+A review returns one core result (ACTIVATION §3) for each declared predicate it
 evaluated, with: the exact subject and basis, the evidence consulted, the
 findings ranked by consequence, each finding's evidence and the smallest
 bounded correction, the residual uncertainty, and the invalidation
@@ -152,5 +152,5 @@ detected and the cost.
 | RF-013, Method Self-Qualification, UP-022 qualification protocol | conserved; §7; the benchmark is new |
 | UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5 |
 | Reconstruction Litmus | conserved; §6 |
-| TICKET judgment continuity | conserved via CALCULUS §7 |
+| TICKET judgment continuity | conserved via ACTIVATION §7 |
 | Baseline Reviewer and technical triage | conserved by reference; §4 states the result shape |

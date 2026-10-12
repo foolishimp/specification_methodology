@@ -1,7 +1,7 @@
 # SPEC_METHOD
 
 Tier 2. One particular methodology for governed construction, realised from
-[FOUNDATIONS](FOUNDATIONS.md), [CALCULUS](CALCULUS.md) and
+[FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md) and
 [EVALUATION](EVALUATION.md). Nothing here is foundational; every mechanism
 names the principle that requires it and could be realised differently
 under the same principles.
@@ -104,7 +104,7 @@ required minimum).
 
 ## 5. Activation, checkpoint and continuation
 
-Work is activated as steps under CALCULUS §1. A step's return goes to its
+Work is activated as steps under ACTIVATION §1. A step's return goes to its
 declared consumer; in a coordinated configuration that consumer is the
 executive relation, which consumes closed results, applies disposition under
 existing decision authority and selects the next authorised action
@@ -114,7 +114,7 @@ next already-authorised step may begin without renewed human approval when
 basis, affected set, decision envelope and re-entry conditions are already
 accepted. Direct human acceptance is not weakened where Product or release
 law requires it. A preservation checkpoint, restart and the progress and
-churn categories are as in CALCULUS §5 (conserves
+churn categories are as in ACTIVATION §5 (conserves
 [UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
 The baseline's
 [Executive](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive),

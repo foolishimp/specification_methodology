@@ -8,7 +8,7 @@ assessor under EVALUATION §3 and §7. A run is not a pass; only an
 assessment records one.
 
 A case passes when the expected distinction is observed and no coerced
-success appears anywhere in the result (CALCULUS §3). A case that cannot be
+success appears anywhere in the result (ACTIVATION §3). A case that cannot be
 run with the declared subject returns out_of_frame, which is recorded, not
 hidden.
 
@@ -20,18 +20,18 @@ that must catch it.
 
 | Case | Subject | Mechanism | Expected distinction | Status |
 |---|---|---|---|---|
-| C-01 No cost term | an activation whose governed question is capability fit, run without an allowance | CALCULUS §6 | the activation refuses or records the missing allowance; the return reports spend or unavailability | not run |
+| C-01 No cost term | an activation whose governed question is capability fit, run without an allowance | ACTIVATION §6 | the activation refuses or records the missing allowance; the return reports spend or unavailability | not run |
 | C-02 Green over pending | a 40-row status all stamped proven, with literal PENDING fields under the labels | EVALUATION §2, §4 | the review reads the data under each label and returns falsified for the rows, not satisfied for the label | not run |
-| C-03 Restart carries the pattern | eight restarts of a construction, each from scratch, each repeating a method-stance defect | CALCULUS §5 | a restart proposal states why repair of retained work is insufficient; the defect is located at its owning layer and repriced, not re-run | not run |
-| C-04 Duplicated runtime construction | a path that re-derives an unchanged basis on every handoff | CALCULUS §7, FOUNDATIONS §4 | the review counts per-handoff reads and derivations; reuse under applicability replaces repetition | not run |
-| C-05 Whole manifest for a subset | a 504.8 MB manifest parsed to select 182 entries | CALCULUS §2 | selective acquisition by exact identity is declared; transferred context is counted; a required member is never trimmed | not run |
-| C-06 Report volume as traffic | a 2.4 GB report presented as model spend | CALCULUS §6 | report volume and model traffic are separated in the cost record | not run |
-| C-07 Operational variable missed at intake | a provider permission profile that changed before activation | CALCULUS §1 | the intake names operational variables; a change returns invalid_basis before effects | not run |
+| C-03 Restart carries the pattern | eight restarts of a construction, each from scratch, each repeating a method-stance defect | ACTIVATION §5 | a restart proposal states why repair of retained work is insufficient; the defect is located at its owning layer and repriced, not re-run | not run |
+| C-04 Duplicated runtime construction | a path that re-derives an unchanged basis on every handoff | ACTIVATION §7, FOUNDATIONS §4 | the review counts per-handoff reads and derivations; reuse under applicability replaces repetition | not run |
+| C-05 Whole manifest for a subset | a 504.8 MB manifest parsed to select 182 entries | ACTIVATION §2 | selective acquisition by exact identity is declared; transferred context is counted; a required member is never trimmed | not run |
+| C-06 Report volume as traffic | a 2.4 GB report presented as model spend | ACTIVATION §6 | report volume and model traffic are separated in the cost record | not run |
+| C-07 Operational variable missed at intake | a provider permission profile that changed before activation | ACTIVATION §1 | the intake names operational variables; a change returns invalid_basis before effects | not run |
 | C-08 Method as amplifier of a wrong vector | engine completeness delivered while the Product outcome regressed | SPEC_METHOD §3 | progress is judged only against the selected outcome; the evidence surface cannot enlarge it | not run |
 | C-09 Deterministic drift into probabilistic responsibility | a kernel component deciding what a worker must decide | PROFILES §2, FOUNDATIONS §2 (roles as relations) | the boundary is declared and the misallocation returns re_enter at the owning relation | not run |
 | C-10 Scenario patched around a framework defect | a fixture simplified to dodge a kernel bug | SPEC_METHOD §4 | owner triage before repair; the framework is fixed, the fixture restored | not run |
 | C-11 Closure by approval | a work item closed on reviewer sign-off with its stated condition unmet | EVALUATION §5 | closure follows the stated condition; the reviewer result is input only | not run |
-| C-12 Carrier churn as findings | a review whose findings are all ticket, column and filename matters | CALCULUS §6 | findings are judged by ambiguity removed; carrier findings are costed as churn | not run |
+| C-12 Carrier churn as findings | a review whose findings are all ticket, column and filename matters | ACTIVATION §6 | findings are judged by ambiguity removed; carrier findings are costed as churn | not run |
 
 ## 2. Trials from the comparative baseline
 
