@@ -640,12 +640,12 @@ nothing is coerced to satisfied.
 
 | Profile verdict | Question | Core member |
 |---|---|---|
-| compliant | do §4 to §10 hold under inspection with no §13 failure pattern present (§4 Realisation discretion) | satisfied |
+| compliant | do §4 to §10 hold under inspection with no §13 failure pattern present (§4 Realisation discretion) | satisfied; this row applies the stricter of the two compliance tests the predecessor states, which disagree (§4 Realisation discretion against the §12 compliance criterion); the choice is pending Jim's ruling and is not settled by this mapping |
 | violation, including "constitutionally rejected" (§4) | is a §13 failure pattern present | falsified; the pattern present is the counterexample |
 | replay proof passes or fails (§8) | does the proof reproduce the expected final State and Cmd sequence without a dependency §8 lists | satisfied when it passes; falsified when it fails |
 | closure claimed without the §8 proof or the §11 obligations (§12) | does every product-meaningful interaction family carry its proof and the surface its accessibility declarations, absent a recorded exemption | falsified; the family or obligation without proof is the counterexample; inside an open UX sprint the gap is escrow and closure is not claimed |
 | blocked for want of a carrier (§3, §7) | does a product-truth-changing message or action have an admitted carrier or typed contract | the surface's evaluation is falsified (§13 pattern 13); the construction step stops as ACTIVATION §3's `re_entry_requested`, core out_of_frame, naming the missing carrier, its owner in the product's design, and the re-entry (author the carrier or reprice the requirement) |
-| fails closed (§1 Authority) | is the surface compliant where this profile is ambiguous for the case | the result of the stricter interpretation, satisfied or falsified; indeterminate where even the stricter reading cannot be decided, the ambiguity carried as residual; never satisfied by the ambiguity alone |
+| fails closed (§1 Authority) | is the surface compliant where this profile is ambiguous for the case | the result of the stricter interpretation where that reading is fixed, satisfied or falsified; out_of_frame where the ambiguity leaves a term the claim depends on undefined, naming the term and its owner (ACTIVATION §3, first case); indeterminate only where the stricter reading is fixed and the admissible evidence cannot decide, naming the evidence that would; never satisfied by the ambiguity alone |
 | design module incomplete (§14) | can each review question be answered from the design module | invalid_basis: the design module cannot support the review evaluation |
 
 Two collisions are resolved here (P1): "blocked" for want of a carrier is

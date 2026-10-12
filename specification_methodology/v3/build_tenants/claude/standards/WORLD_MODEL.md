@@ -1075,7 +1075,8 @@ its own question; nothing is coerced to satisfied.
 |---|---|---|
 | admissible entity cut (§9) | are the eight surfaces explicit, traceable and discriminated at evidence altitude proportional to the claim | satisfied; a stated bound on evidence altitude with its residual ambiguity declared satisfies the test (sparse first publication) |
 | entity cut not admissible (§9) | is a surface neither a stated value, a stated absence nor a stated non-applicability, or untraceable, or undiscriminated | falsified, the surface being the counterexample; indeterminate only where the discrimination the cut itself claims cannot be decided at its stated altitude |
-| verified overlay direction (§10) | is at least one acceptable verification recorded with identity preserved under held-out treatment | satisfied |
+| verified overlay direction (§10) | is at least one acceptable verification recorded with identity preserved under held-out treatment, for a direction built by an admissible extraction | satisfied |
+| inadmissible extraction (§10) | is the direction built by a principal-component or maximum-variance construction | falsified, whatever its verification result: such a construction is not admissible as an identity direction |
 | failed verification (§10) | does a recorded verification show identity not preserved | falsified |
 | candidate direction, no verification run (§10) | none performed | no evaluation result: the claim is unresolved under ACTIVATION §3's third case, and the step that left it unrun stops `incomplete`, core indeterminate; publishing the direction is a Representation law violation, falsified for the publication claim |
 | not yet a lawful Markov object (§10 Null-peer discrimination) | do the uniqueness and transfer tests pass | satisfied when both pass; falsified when either fails |
