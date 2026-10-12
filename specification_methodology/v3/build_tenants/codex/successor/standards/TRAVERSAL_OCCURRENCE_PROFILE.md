@@ -34,8 +34,8 @@ These correspondences neither mint a grant nor weaken the closed signature.
 Semantic atomicity retains its profile meaning and imposes no storage
 transaction. Reapplication retains the evolving subject and prior immutable
 history; it supplies no universal side-effect idempotence or rollback guarantee.
-The exact imported calculus's derivation provenance remains evidence of that
-basis's identity.
+The exact imported calculus's derivation basis is an identity-bearing part of
+AxiomaticCalculusBasis; its exact resolution remains an admission/refusal condition.
 
 <!-- STDO3_PROFILE_BINDING_END -->
 

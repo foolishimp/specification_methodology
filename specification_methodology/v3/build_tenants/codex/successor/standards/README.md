@@ -1,7 +1,8 @@
 # Standards Library
 
-This tree is the complete documentary realization of the STDO Specification
-Methodology. A selectable STDO Product is one complete immutable released RC cut
+These standards are the deciding documentary surfaces of the STDO
+Specification Methodology. The complete cut also includes its declared
+projections, schemas, templates, frames and interaction assets. A selectable STDO Product is one complete immutable released RC cut
 with exact identity, manifest and membership. Its subordinate executable and
 interaction tooling retain separately declared responsibilities.
 
@@ -12,7 +13,13 @@ identity, typed composition, total handling and separate judgment/authority.
 [Transformation Library](TRANSFORMATION_LIBRARY.md) supplies Bind, Acquire,
 Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
 material contracts and owners; these are not compulsory phases or a runtime API.
-[The work/recovery frame](../frames/WORK_RECOVERY.md) projects one bounded task.
+Responsibility views project selected material clauses:
+[work/recovery](../frames/WORK_RECOVERY.md),
+[evaluation/conjunction](../frames/EVALUATION_CONJUNCTION.md),
+[constitutional derivation](../frames/CONSTITUTIONAL_DERIVATION.md),
+[domain binding](../frames/DOMAIN_BINDING.md), and
+[release/adoption](../frames/RELEASE_ADOPTION.md). Each has an explicit scope;
+no view is sufficient for every task.
 
 ## Method owners
 
@@ -33,8 +40,15 @@ material contracts and owners; these are not compulsory phases or a runtime API.
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
 | Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
 
-A profile adds only its material domain relations. It cannot redefine generic
-meaning, authority or another Product's runtime. The calculus is distinct from
+The source-standing distinctions are retained: constitutional method surfaces
+include Spec, Frame, ODD, Identity and World Model; the carrier-neutral calculus
+and optional Traversal profile retain their own signatures; the Baseline is a
+derived application profile; Design, Ticket, Release, Posting and Writing are
+companion governance/operating surfaces; the Glossary is a non-deciding locator.
+The new foundation/library account preserves the detailed owners.
+
+A derived profile retains its owning determinations under the
+[Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
 interpreted a_c subject models and separately owned mechanical encodings.
 Traversal adoption is optional and binds an exact signature and basis.
 
@@ -56,8 +70,11 @@ and member inventory establish consumer basis. A mutable source head or moving
 selector cannot replace it. Distribution artifact presence conveys no release
 or operation authority.
 
-For one action, acquire the sufficient responsibility frame plus exact subject
-and material dependencies, rather than the entire corpus. The frame's result,
+Under [Frame Method sufficiency](REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency)
+and [irrelevance exclusion](REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion),
+acquire the sufficient responsibility frame, exact subject and material
+dependencies for one action. The entire corpus is acquired only when material
+to the selected claim. The frame's result,
 required independent assessment and owner's disposition determine supported
 continuation. The projected frames are declared members of the complete
 documentary member set. Their source owners, exact bytes and fidelity remain

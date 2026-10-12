@@ -7,7 +7,8 @@ not a mandatory record schema. A sufficient existing carrier can express it.
 
 These are shared explanatory families. [Spec Method](SPEC_METHOD.md) owns
 construction and outcome law; [Frame Method](REFERENCE_FRAME_METHOD.md) owns
-evaluation and composition. Domain members determine their admitted outcome and
+reference-frame evaluation and composition. The calculus and domain members
+retain their own composition and judgment laws. Domain members determine their admitted outcome and
 disposition sets. The library does not supersede those meanings.
 
 ## Bind
@@ -35,8 +36,9 @@ the outer outcome or effect grant.
 ## Evaluate
 
 Judge a declared predicate on an exact subject using sufficient admissible
-evidence. Return satisfied, falsified, indeterminate, out_of_frame or
-invalid_basis with original citations and residual coverage. Where required,
+evidence. For a reference-frame evaluation, return satisfied, falsified,
+indeterminate, out_of_frame or invalid_basis with original citations and residual
+coverage. Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A judgment supplies no repair,
 acceptance or next-action authority.
 
@@ -81,6 +83,14 @@ without transferring decision authority to an assessor.
 
 ## Composition law
 
+[Transformation admission](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+and [bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+own design composition; [Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction)
+owns frame conjunction, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+owns its typed traversal composition. The account below preserves each owning
+contract's restrictions; an explicit translation is lawful only where that
+contract admits it.
+
 For T: X -> Y and S: Y -> Z, S after T is admitted only when carried meaning,
 identity, basis, lifecycle, effects and authority match or have a lawful explicit
 translation. Composition preserves the outer predicate and material invariant
@@ -109,8 +119,9 @@ Accepted material movement toward the selected Product is progress. Prerequisite
 work names the Product obligation it enables. Preservation and repeated proof
 are evidence, not new Product progress. Discovered distance revises the forecast;
 it is not negative progress. File, event, commit and token volume do not measure
-progress. Discarding retained work requires an owning decision explaining why
-repair is insufficient, what survives and which causal assumptions change.
+progress. A proposed discard or restart identifies why repair is insufficient, what
+survives and which causal assumptions change. Performing it still requires the
+existing operation grant; the proposal supplies no additional decision owner.
 
 Use the cheapest focused proof that can falsify the active relation. Whole-
 candidate qualification belongs at a declared boundary unless affected risk
@@ -120,9 +131,9 @@ process check cannot prove durable authority.
 
 ## Cost and contraction
 
-Measure costs appropriate to the claim: acquired and transferred bytes, required
+For a cost or improvement claim, measure its material costs: acquired and transferred bytes, required
 attention, I/O, CPU, addressable memory, elapsed critical-path time, aggregate
-work and displaced human assurance. A reference reduces storage only when its
+work and displaced human assurance. This creates no universal cost or accounting gate. A reference reduces storage only when its
 resolution preserves adequacy. A smaller document or faster local preparation
 does not prove whole-path improvement. Contract duplicated meaning and authority
 only while preserving required distinctions and independent evaluations.

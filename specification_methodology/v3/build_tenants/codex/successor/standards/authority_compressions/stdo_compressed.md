@@ -7,6 +7,8 @@ target_prompt_families:
   - evaluate_design_depth
   - evaluate_review_grade
 source_refs:
+  - ../FOUNDATIONS.md
+  - ../TRANSFORMATION_LIBRARY.md
   - ../AXIOMATIC_CALCULUS.md
   - ../TRAVERSAL_OCCURRENCE_PROFILE.md
   - ../REFERENCE_FRAME_METHOD.md
@@ -25,19 +27,21 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
+  FOUNDATIONS.md: 13e9c41d322767ec5c523ffb54c662d68dcfc72327b67aee7592a4fe16248b9a
+  TRANSFORMATION_LIBRARY.md: 7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8
   AXIOMATIC_CALCULUS.md: d64006db9591a3ad678abe4c0e56cffca14ef08f7aa4e3562391fde799625809
-  TRAVERSAL_OCCURRENCE_PROFILE.md: b07031db38eb0475d5e482a69403b31ffbab39e3e3d75e749a5db01d19d2e86c
+  TRAVERSAL_OCCURRENCE_PROFILE.md: 009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9
   REFERENCE_FRAME_METHOD.md: e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d
-  STDO_REFERENCE_FRAME_BASELINE.md: 9405c5ca32b84a16ffe470f281c678f2f9791c6741c41b42f71e4ab0c7ba5d76
+  STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
   SPEC_METHOD.md: 077f43af7ef92a01397e5a89881e7b3e0ef8eac7dba6294b82690b4b58322b27
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
   DESIGN_MODULE_METHOD.md: 79815dae457d67e92bf63674a12b754d1ba7741d8551d4d3934a75b148f1a798
-  ODD_METHOD.md: ad793cd47750365f949bf198efc979390cb545024a26bcf7d33e45fe85363c7b
-  WORLD_MODEL_METHOD.md: c9d93fecad8c5407ee774d1e521b0597995bd2809a63d75f2ee259eb896614c5
+  ODD_METHOD.md: bc20645547951a1751f5610685f58eeaa2b598da5f7ed6f1604c7930ef99ee03
+  WORLD_MODEL_METHOD.md: 3caa0d1d1c8ea22d214ecc97717696509dfd231e7c84775f84f0b2ce1052d74f
   TICKET_METHOD.md: 1a8f77a211ae4f4abcebcd551271ff7fc470043dd976c5ad04873b7cfeeb1a9e
-  UX_METHOD.md: 6565589de9b7e3aa1d0160a75dfd2811076b599d1db6414597a8db21048aa5a5
-  IDENTITY_METHOD.md: eb906597adb363b03a9f76148a504b220cb4c9fd6e2e2ef45db21526a769bc47
+  UX_METHOD.md: d2b4c75168c7e00ce8cc98d6e085ee217a0c860a16207ca20e27367d7245721c
+  IDENTITY_METHOD.md: ac81bf9f3419ed7db6c4fdb00a74ffde5122241f33d23d9cb9ad19fc971e8475
   RELEASE_METHOD.md: 5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675
   POSTING_GUIDE.md: 50c8b336b4dafd7acad57d187438422b03a2b1ff62490a7282489676b939a640
 index_digests:
@@ -49,6 +53,12 @@ stale_if_index_digest_changes: true
 ---
 
 # STDO Compressed Authority
+
+The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
+organise shared premises and transformation families. Detailed owners retain
+their exact applicability, result domains and operation grants. Use a sufficient
+responsibility frame for the selected claim; these names supply no compulsory
+stages, new record schema or automatic authority.
 
 ## Method Identity
 

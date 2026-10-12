@@ -1,0 +1,17 @@
+{
+  "id": "derivation",
+  "frame": "CONSTITUTIONAL_DERIVATION",
+  "task": "Evaluate this actual design contract and function signature against the selected Product. Return exact causal owner and re-entry/local-realization distinction. Propose only a bounded repair to this design, not a Product amendment.",
+  "subject": "contract.md",
+  "material": {
+    "Product": "Convert a duration stated in milliseconds to seconds. Preserve unknown or unsupported input units explicitly; do not return invented durations. The Product admits multiple implementations.",
+    "accepted_design": "Producer output type DurationMilliseconds; consumer input DurationSeconds; a declared conversion divides by 1000. Unknown external units return an explicit unresolved/unsupported outcome.",
+    "grant": "Assess and propose this local design contract. Product meaning, namespace policy and acceptance remain reserved.",
+    "actual_source": {
+      "producer": "make_duration() -> LengthMetres",
+      "consumer": "render_time(value: DurationSeconds)",
+      "joining_code": "render_time(make_duration())"
+    }
+  },
+  "subject_sha256": "ab39d3b3b3b4e9e8ee544a7139b072edf8123fe121d0866b8a3641d857a4f91e"
+}

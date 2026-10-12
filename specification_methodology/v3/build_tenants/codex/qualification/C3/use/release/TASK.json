@@ -1,0 +1,14 @@
+{
+  "id": "release",
+  "frame": "RELEASE_ADOPTION",
+  "task": "Evaluate this actual publication/adoption plan against the exact retained cut and current consumer definition. Identify identity/predicate defects and return the next permitted review action without publishing or adopting.",
+  "subject": "plan.md",
+  "material": {
+    "published_cut": "v2.5.1-rc.2, member A SHA256 OLD (fixture symbolic identity)",
+    "local_successor": "member A SHA256 NEW, not published",
+    "consumer_definition": "basis pinned v2.5.1-rc.1 at manifest digest RC1; selector discovers rc.2 without permission to alter basis",
+    "qualification_evidence": "No exact rc.2 installed candidate execution is supplied. Green checks refer to current mutable local bytes.",
+    "grant": "Review this plan. No RC materialization, ref update, consumer update, publication, merge or acceptance grant."
+  },
+  "subject_sha256": "4bc09e574bf16f59fdda80bb9257a0308b083a9ea433e94a5d458a72a08e1980"
+}

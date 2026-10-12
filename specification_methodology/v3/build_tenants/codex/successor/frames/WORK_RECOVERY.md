@@ -56,9 +56,9 @@ The causal cone includes a far-side seam that can affect, or be affected by, the
 action unless the basis excludes it. Unrelated incompleteness is repricing input
 and does not block a bounded claim. A preservation checkpoint records parent or
 predecessor, exact territory, concurrent-writer disposition and evidence location;
-it establishes no promotion, acceptance or publication. Discarding retained work
-needs the owner's explanation of why repair is insufficient, what survives and
-which causal assumptions change.
+it establishes no promotion, acceptance or publication. A proposed discard or restart
+identifies why repair is insufficient, what survives and which causal assumptions
+change; performing it requires the existing operation grant.
 
 Focused proof first attempts to falsify the active relation. At a declared wider
 boundary, perform necessary integration and whole-candidate qualification.

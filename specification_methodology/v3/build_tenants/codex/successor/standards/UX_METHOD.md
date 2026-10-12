@@ -29,7 +29,7 @@ view-local ephemera retain their limited scope and unmount test.
 | Transform | Pure Update describes State transitions and Cmd values; pure View projects State. The declared runtime membrane interprets effects and returns success or failure Msg values, preserving deterministic replay correlations. |
 | Evaluate | Executable Msg replay checks initial and final State, ordered Cmd values and typed effect outcomes with injected deterministic values. Render/effect discipline, admitted carriers, accessibility and exemption predicates retain the exact closure rules below. |
 | Conjoin | The covered module satisfies applicable Design Module and UX law together. Shared front-end/back-end contracts, replay evidence and product-meaningful interaction families remain sufficient across the declared surface. |
-| Dispose | Existing design and constitutional owners classify sprint-close findings, pay down permitted local debt, reframe or reprice the owning relation, or remove the affected realization under their grants. Escrow defers selected local proof during iteration and retains method-closure obligations. |
+| Dispose | The sprint-close forensic walkthrough classifies findings under its complete six-class list below, including accepted. Existing competent owners act on those findings only under their own grants. Escrow defers selected local proof during iteration and retains method-closure obligations. |
 
 These correspondences preserve the profile's process model and scoped authority.
 They supply no new UI stack mandate or six-stage UX workflow. UX commands do not

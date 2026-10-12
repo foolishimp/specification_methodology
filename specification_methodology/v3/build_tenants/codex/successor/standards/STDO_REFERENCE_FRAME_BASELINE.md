@@ -7,12 +7,6 @@ complete STDO cut defines specification, design, construction, assessment,
 disposition, checkpoint, continuation, identity, and release law. This profile
 maps three practical engagement frames onto those existing owners:
 
-The [foundations](FOUNDATIONS.md) and [shared transformation library](TRANSFORMATION_LIBRARY.md)
-provide the general premises and recurring contract vocabulary.
-This optional profile refines activation, construction, assessment, conjunction
-and decision responsibilities through the existing owners below. The pure
-Frame Method, execution and assurance owners, exact operation grants and
-Product-owned profile adoption retain their distinct responsibilities.
 
 ```text
 existing project authority
@@ -27,6 +21,13 @@ existing project authority
   -> updated basis, coverage, residuals, and frontier
   -> repeat or stop
 ```
+
+The [foundations](FOUNDATIONS.md) and [shared transformation library](TRANSFORMATION_LIBRARY.md)
+provide the general premises and recurring contract vocabulary.
+This optional profile refines activation, construction, assessment, conjunction
+and decision responsibilities through the existing owners below. The pure
+Frame Method, execution and assurance owners, exact operation grants and
+Product-owned profile adoption retain their distinct responsibilities.
 
 The three available frames are overlapping evaluation contexts, not a hierarchy
 or actor topology. The Worker supplies the candidate subject but never activates the

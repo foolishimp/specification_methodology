@@ -6,6 +6,8 @@ constitutional authority and not independently selectable method versions.
 
 The source method, profile, and schema documents remain the deciding sources:
 
+- `../FOUNDATIONS.md`
+- `../TRANSFORMATION_LIBRARY.md`
 - `../AXIOMATIC_CALCULUS.md`
 - `../TRAVERSAL_OCCURRENCE_PROFILE.md`
 - `../REFERENCE_FRAME_METHOD.md`

@@ -2,15 +2,19 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/bootstrap/v1
 source_refs:
+  - ../FOUNDATIONS.md
+  - ../TRANSFORMATION_LIBRARY.md
   - ../SPEC_METHOD.md
   - ../REFERENCE_FRAME_METHOD.md
   - ../STDO_REFERENCE_FRAME_BASELINE.md
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
+  FOUNDATIONS.md: 13e9c41d322767ec5c523ffb54c662d68dcfc72327b67aee7592a4fe16248b9a
+  TRANSFORMATION_LIBRARY.md: 7515a652f00a234be4586bbd73c9d7ac60460aa8268eb7a653ff0c6cca96f1b8
   SPEC_METHOD.md: 077f43af7ef92a01397e5a89881e7b3e0ef8eac7dba6294b82690b4b58322b27
   REFERENCE_FRAME_METHOD.md: e305e2fa10103513d3aace89df24117e9d0f7e11c24b743790aafdc96ab38e7d
-  STDO_REFERENCE_FRAME_BASELINE.md: 9405c5ca32b84a16ffe470f281c678f2f9791c6741c41b42f71e4ab0c7ba5d76
+  STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
   RELEASE_METHOD.md: 5f023a4db3d9b21154682720493ead08cd79910a8ea9bccee5babe3c005fb675
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
@@ -22,6 +26,12 @@ stale_if_source_digest_changes: true
 ---
 
 # STDO Discovery Bootstrap
+
+The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
+organise shared premises and transformation families. Detailed owners retain
+their exact applicability, result domains and operation grants. Use a sufficient
+responsibility frame for the selected claim; these names supply no compulsory
+stages, new record schema or automatic authority.
 
 This is a small routing projection. The exact installed release and its raw
 owning standards remain constitutional authority.

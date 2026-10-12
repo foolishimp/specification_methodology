@@ -1,0 +1,39 @@
+{
+  "operations": [
+    {
+      "operation": "validate",
+      "program_suffix": "",
+      "exit": 0
+    },
+    {
+      "operation": "validate",
+      "program_suffix": "-mutant",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "reference-only",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "materialized",
+      "exit": 0
+    },
+    {
+      "operation": "changed-program-old-map",
+      "exit": 1,
+      "refused": true
+    }
+  ],
+  "projection_relations_equal": true,
+  "compared_keys": [
+    "closure",
+    "clause_relations",
+    "residual_routes",
+    "source_routes"
+  ],
+  "limits": [
+    "No semantic predicate or fidelity inference from validation/projection"
+  ]
+}

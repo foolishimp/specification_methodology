@@ -21,7 +21,9 @@ a consumer. A governing specification Sigma_contract declares obligations and ad
 variation. A grant bounds who may act and decide. Observations and arguments
 support claims only on their declared subject and basis.
 
-These symbols belong only to this foundational account. They differ from
+The bounded context is the selected exact member URI of this document plus
+`#premises-and-standing`, bound by the activation subject and basis. These
+symbols belong only to that account. They differ from
 similarly spelled symbols in method-identity, traversal, ticket and world-model
 contexts. [Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
 governs cross-context use; no shared default interpretation is inferred.
@@ -49,7 +51,9 @@ and the required consumer distinctions remain recoverable.
 ## Purpose and interfaces
 
 The [Product outcome law](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013)
-owns the requiring relation. The purpose owner fixes the observable adequate outcome. An interface exists
+owns the requiring relation for Product-outcome-bearing work;
+[proportional method law](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+owns justification of method burden. The purpose owner fixes the observable adequate outcome. An interface exists
 because a transformation needs to acquire, convey, judge or effect a material
 relation. Its obligations derive from that relation and the outer contract.
 A convenient signature, existing function or local test cannot invent Product
@@ -90,8 +94,9 @@ their semantic owners, responsibility and independence remain distinct.
 
 The [frame laws](REFERENCE_FRAME_METHOD.md#reference-frame-laws) own material
 sufficiency and capability; the [totality rule](DESIGN_MODULE_METHOD.md#8-totality-rule)
-owns closed design handling. Each activation declares the actor and resource
-envelope needed by its claim.
+owns closed design handling. Each activation binds the actor and capability
+envelope materially needed by its claim. No universal numeric budget, resource
+ledger or measurement gate follows.
 Before acting, establish sufficient material context and capability. If the
 coupled relation does not fit, refine it without losing the outer contract,
 acquire support, reconfigure within authority, request owning-layer re-entry,
@@ -125,8 +130,9 @@ mints a grant. A Reviewer judges; a decision owner accepts or selects the next
 action within existing authority.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
-remain observable. Severity describes evidenced harm; priority selects work;
-promotion effect follows the applicable mandate. Those are distinct from the
+remain observable. Severity grades the supported consequence if a finding manifests. Priority,
+disposition, selected action and promotion effect remain distinct; their
+assignment follows the applicable mandate. Those are distinct from the
 semantic result and from the decision to repair, re-enter, reject or accept.
 
 ## Orthogonal descriptions
@@ -139,7 +145,11 @@ simultaneous descriptions, not successive SDLC stages.
 
 To assert a category, specify objects, typed arrows, identities and associative
 composition. To assert a functor, show identity and composition preservation.
-For a proposed span A -> I and A -> C_H, conformance to Sigma_contract, semantic
+For a proposed categorical model, A names the algorithmic account, I the
+interpreted informational account, and C_H the computational realization on a
+declared architecture H. They name categories only after the required objects,
+arrows and laws have been supplied. For a proposed span A -> I and A -> C_H,
+conformance to Sigma_contract, semantic
 equivalence and computational equivalence remain different claims. Categorical
 equivalence additionally requires the appropriate quasi-inverse and natural
 isomorphisms on a stated domain; an analogy or matching result is insufficient.

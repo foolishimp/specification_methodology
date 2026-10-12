@@ -1,0 +1,30 @@
+{
+  "kind": "finite_source_interpretation_check",
+  "source_sha256": "abe74a73c7bdcdf7ebe93b71ead42679697955d2110e4ee5d0fd064345c42c10",
+  "executable_sha256": "7919327cce405d34f825475133a679981a86658494371223808d5c9209a44b62",
+  "cases": 512,
+  "outcomes": {
+    "completed": 128,
+    "refused": 128,
+    "unresolved": 256
+  },
+  "invariants_valid": true,
+  "unauthorized_mutant_counterexamples": 128,
+  "first_counterexample": {
+    "owners": [
+      "A",
+      "A"
+    ],
+    "token": 0,
+    "destination": "A",
+    "grant_mask": 0,
+    "observed": true,
+    "expected": "refused",
+    "mutant_result": "completed"
+  },
+  "limits": [
+    "Hand-authored interpretation requires separate fidelity review",
+    "ac.py validates structure and source resolution, not these predicates",
+    "No distributed transport, whole-corpus or universal category proof"
+  ]
+}

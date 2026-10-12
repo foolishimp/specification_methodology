@@ -9,7 +9,9 @@ refines [Foundations](FOUNDATIONS.md) and the
 [Spec Method](SPEC_METHOD.md), [Identity Method](IDENTITY_METHOD.md),
 [Design Module Method](DESIGN_MODULE_METHOD.md),
 [Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md)
-as its applicable common method surfaces. Where the consuming Product also
+as common surfaces under their own applicability conditions. These links create
+no new prerequisite; the theoretical Design Module relation below remains
+non-prerequisite. Where the consuming Product also
 selects graph-native realization, [ODD Method](ODD_METHOD.md) retains execution
 shape and traversal law while this member retains world-model meaning.
 Availability of either profile leaves its adoption and operation authority with
@@ -31,7 +33,7 @@ roles and authority.
 | Acquire | Observe the strongest available source evidence, trace concrete source surfaces, qualify claims under assurance and retain the attribute-ledger support, evidence limits and residual ambiguity required by the entity claim. Code availability is not a prerequisite. |
 | Transform | Construct bounded entity cuts, explicit treatments and immutable published artifacts from the qualified ledger; derive projections and compile accepted semantics where delivery requires execution. The semantic layer and source operational truth retain their separate owners. |
 | Evaluate | Apply the eight-surface entity-cut admissibility test and proportionate discrimination. In a declared representation space, verify an optional identity direction under held-out treatment and null-peer discrimination. Overlay-publication verification and the unclosed statistical promotion gate remain different predicates. |
-| Conjoin | Compose published domain artifacts without erasing local identity, basis, bounded-context authority, treatment meaning, declared loss or ambiguity. Geometric directions retain their declared representation space and cannot compose across different spaces by nominal equality. |
+| Conjoin | Compose published domain artifacts without erasing local identity, basis, bounded-context authority, treatment meaning, declared loss or ambiguity. Geometric directions computed in different representation spaces do not compose. A changed space supersedes the prior overlay; generic translation vocabulary does not waive that rule. |
 | Dispose | Competent owners publish, supersede or retain unresolved claims under the declared assurance and publication law. Refit evidence or a changed representation space produces a new overlay; prior accepted ledger facts and published cuts retain their immutable history. |
 
 Markov-object and geometric-overlay claims retain the epistemic standing,

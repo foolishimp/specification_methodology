@@ -2,8 +2,10 @@
 
 This member refines [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
 and the [Transformation Library](TRANSFORMATION_LIBRARY.md) for scoped,
-typed identity and authority conservation. A declared owner, kind, scope,
-governing basis and lifecycle supply identity meaning. Equal representation
+typed identity and authority conservation. The scoped identity minimum is
+authority, kind and value. Governing basis and lifecycle qualify authority or
+applicability where their owning contract requires them; they are not universal
+object-identity fields. Equal representation
 alone supplies neither identity equality nor permission; continuing identity
 alone supplies no claim that content or evidence is current.
 
