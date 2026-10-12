@@ -199,8 +199,9 @@ to govern.
 The boundary between out_of_frame and indeterminate is drawn on what the
 activated frame declares and on what the step did with it (P5, finite
 capacity and graceful total handling; the material relation drawn is the
-out_of_frame boundary, capability declared and exercised versus capability
-not declared; rc.2 RF #rf-012-closed-results). Three cases, and only the
+out_of_frame boundary, three-way: capability not declared, capability
+declared and exercised, capability declared and not exercised; rc.2 RF
+#rf-012-closed-results). Three cases, and only the
 first two are members of the algebra:
 
 - out_of_frame when the claim requires a material relation or an evaluator
@@ -229,7 +230,11 @@ first two are members of the algebra:
   of `incomplete` to the core does not make the evaluation indeterminate.
 
 The first two cases restate RF-012's members with the boundary made
-explicit; the third is a tightening RF-012 does not name (P5, P6).
+explicit, save the undefined-term clause of the first, which is a
+tightening because it decides a boundary the predecessor leaves open; the
+third is a tightening RF-012 does not name (P5, P6). The relation drawn is
+three-way: capability not declared; declared and exercised; declared and
+not exercised.
 
 Evaluation. The evaluator applies the activated frame's declared
 invariants, evidence rules and result algebra. It distinguishes semantic
@@ -384,7 +389,7 @@ acquires its own evidence and supplies its own judgment. Conserves
 | Probabilistic Work Boundary | conserved; §1 |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
 | AC-010, AC-011 | conserved; joined with RF-002/003/004/014/017 into the §2 operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
-| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and points here |
+| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and points here; the tenant text carries labelled tightenings: undefined term, unexercised capability |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
 | ODD graph functions | conserved; generalised in §4 to any realisation; PROFILES §2 keeps the ODD binding |

@@ -205,14 +205,17 @@ conjunction or decision rule (P4a; §6; rc.2
 An activated frame declares the topology changes capable of invalidating
 its coordinates or its materiality judgment. A detected material topology
 mutation causes reevaluation, frame revision or recharting before the
-previous result is reused. Revision of the frame itself invalidates for
-reuse every result bound to the prior revision coordinate; §10 Revision
-actions states that rule (P3, P4b; rc.2
+previous result is reused. Material revision of the frame itself
+invalidates for reuse every result bound to the prior revision coordinate;
+§10 Revision actions states that rule (P3, P4b; rc.2
 #rf-011-topology-mutation-and-recharting).
 
 ### RF-012 Closed results
 
-Every evaluation returns a member of its declared result algebra. The core
+Every evaluation returns a member of its declared result algebra. A
+performed evaluation returns a member; an evaluation not performed because
+a declared capability was not exercised owes the step's stop state, not a
+member (ACTIVATION §3, third case). The core
 algebra is defined once, in ACTIVATION §3: `satisfied`, `falsified`,
 `indeterminate`, `out_of_frame` and `invalid_basis`, with the meanings and
 the no-coercion rule given there; this member does not define it a second
@@ -631,15 +634,19 @@ material revision changes frame identity or revision coordinates and states
 which prior activations, results and coverage claims require reevaluation
 (P3, P4b).
 
-Stated plainly: revising a frame produces a new frame revision coordinate.
-Every prior closed result bound to the previous revision is bound to a
-mismatched coordinate (RF-005) and is invalidated for reuse until it is
-re-checked against the new revision (RF-011; ACTIVATION §7). The revision
-record lists those results as reopened; a result leaves that list only by a
-recorded re-check that finds it demonstrably independent of the change, or
-by re-evaluation on the new revision. A revision does not select which of
-the results bound to the prior revision it reopens, and silence does not
-keep a result closed. This restates what RF-005, RF-011 and the sentence
+Stated plainly: a material revision of a frame produces a new frame
+revision coordinate. Every prior closed result bound to the previous
+revision of a materially revised frame is bound to a mismatched coordinate
+(RF-005) and is invalidated for reuse until it is re-checked against the
+new revision (RF-011; ACTIVATION §7). The revision record lists those
+results as reopened; a result leaves that list only by a recorded re-check
+that finds it demonstrably independent of the change, or by re-evaluation
+on the new revision. A material revision does not select which of the
+results bound to the prior revision it reopens, and silence does not keep
+a result closed. A non-material revision, for example one that clarifies an
+activation or acquires evidence without changing any declaration, produces
+no new coordinate and reopens no result; the revision record states that
+the revision is non-material. This restates what RF-005, RF-011 and the sentence
 above carry in combination (P3, P4b; rc.2 #revision-actions,
 #rf-005-exact-basis-and-coordinates, #return-a-closed-result, whose
 demonstrably independent surviving results are the re-check's one
@@ -901,7 +908,7 @@ REFERENCE_FRAME_METHOD.md; a locus is a section of this file.
 | #rf-009-no-assumed-hierarchy | conserved | §3 RF-009 |
 | #rf-010-composition-on-demand | conserved | §3 RF-010; §6 |
 | #rf-011-topology-mutation-and-recharting | conserved | §3 RF-011 |
-| #rf-012-closed-results | conserved | §3 RF-012; the algebra itself is defined once in ACTIVATION §3 |
+| #rf-012-closed-results | conserved; the tenant text carries a labelled tightening: unexercised capability owes stop state | §3 RF-012; the algebra itself is defined once in ACTIVATION §3 |
 | #rf-013-reconstructable-activation | conserved | §3 RF-013 |
 | #rf-014-capability-fit | conserved | §3 RF-014; the step's own selection among fit options is ACTIVATION §2 |
 | #rf-015-residual-uncertainty | conserved | §3 RF-015 |
@@ -930,8 +937,8 @@ REFERENCE_FRAME_METHOD.md; a locus is a section of this file.
 | #completeness-boundary | conserved | §9 |
 | #discovery-and-revision | not applicable: heading with no claim text (26 bytes); its children are disposed individually | §10 |
 | #missing-frame-signals | conserved | §10 |
-| #diagnostic-order | conserved | §10 |
-| #revision-actions | conserved | §10 |
+| #diagnostic-order | conserved; the tenant text carries a labelled tightening: family inclusion, not membership | §10 |
+| #revision-actions | conserved; the tenant text carries a labelled tightening: prior results reopen by default | §10 |
 | #agentic-use | conserved | §11 |
 | #minimal-frame-activation-binding | conserved | §11 |
 | #worked-binding-product-chain-drift-evaluation | not applicable: a non-normative worked example by its own statement; it carries no determination beyond the binding of §11, which is conserved; its subject (product-chain drift) is tier-2 matter, and a worked binding for the successor is produced by a qualification case against the tier-2 member that owns the subject | none |
