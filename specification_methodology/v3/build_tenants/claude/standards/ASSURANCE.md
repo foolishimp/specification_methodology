@@ -323,7 +323,7 @@ member of ACTIVATION §3.
 | subject and basis | the exact deployed, installed or otherwise runnable Product form the claim names; current Product, requirement, UX, identity, policy and acceptance authority; the declared user role, environment, and harnessed or live sandbox mode (§2) |
 | material manifold | user goal, supported entry surfaces, permissions, inputs, Product configuration, ordinary dependencies, any declared external-worker or transport substitution boundary, user-visible state and outputs, refusal and recovery behaviour, and the acceptance interval |
 | coordinates | exact Product and artifact identity, install, user role, capability, configuration, dependency realisation, harnessed or live mode, data, workspace, invocation, time, outcome and scenario identity |
-| governing invariants | the applicable Product and requirement outcomes; supported-interface, identity, UX, safety, persistence and release law; RF-001 to RF-017; EVALUATION §1 and §2 (proof target, evidence separation, assurance-boundary congruence) |
+| governing invariants | the applicable Product and requirement outcomes; supported-interface, identity, UX, safety, persistence and release law; RF-001 to RF-017; EVALUATION §1, §2, §3, §6 and §7 (proof target, evidence separation, assurance-boundary congruence, freeze and post-exposure revision, comparison, method qualification) |
 | authority | bounded evaluation only; the frame mints no Product meaning or acceptance authority, and an automated actor does not become the human or Product acceptance owner |
 | evidence | actual supported-surface requests and responses, user-visible projections, durable side effects where claimed, refusals, recovery observations, scenario records, exact-subject identity, and the declared live or substituted dependency identity |
 | capability envelope | ability to operate the Product as the declared user would, perceive the material outcome and refusal surfaces, and distinguish hidden setup or unsupported assistance |
@@ -727,7 +727,7 @@ not become another contract owner (P6, P2; provenance
    acquires no new event lifecycle because this frame evaluates it (P6,
    P3).
 6. Preserve diagnostic cause through wrappers and projections. Apply §12:
-   report the supported causal frontier, not the first log or clock
+   report the supported causal frontier, not merely the first log or clock
    occurrence. Keep the originating seam, bounded field or path, expected
    domain or basis, observed mismatch and evidence locator where available,
    with downstream symptoms, successful work and the declared continuation
@@ -835,7 +835,7 @@ then.
 | #authoritative-product-path | conserved | §7 Terms |
 | #material-combinatorial-complexity | conserved | §7 Terms |
 | #derived-product-testing-frame-set | conserved; the predecessor's condition "when this profile supports" is carried as selection by the governing frame configuration or work authority, so placement in tier 2 makes the set available and adopts nothing; the sentence relating the set to the profile's Proof family is EXECUTIVE_BASELINE §11 | §7 The set |
-| #derived-user-acceptance-frame | conserved; eleven elements; "UP-001, UP-008 and UP-022" written as EVALUATION §1 and §2 | §7 User-acceptance frame |
+| #derived-user-acceptance-frame | conserved; eleven elements; "UP-001, UP-008 and UP-022" written as EVALUATION §1, §2, §3, §6 and §7, the full successor loci of those laws | §7 User-acceptance frame |
 | #derived-end-to-end-frame | conserved; eleven elements | §7 End-to-end frame |
 | #derived-integration-frame | conserved; eleven elements | §7 Integration frame |
 | #derived-unit-test-frame | conserved; eleven elements; "IACS" written as the carrier inventory the design declares, and the design profile's unit-proof law named as DESIGN_MODULE | §7 Unit frame |
