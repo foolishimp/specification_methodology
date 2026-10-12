@@ -9,6 +9,8 @@ import json
 from pathlib import Path
 
 root = Path(__file__).resolve().parent
+if not __debug__:
+    raise SystemExit('Finite proof refuses disabled assertions; run without -O/PYTHONOPTIMIZE.')
 
 def operation(owners, token, destination, grant, observed, infer_permission=False):
     if not observed:

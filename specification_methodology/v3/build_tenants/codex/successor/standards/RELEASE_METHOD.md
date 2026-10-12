@@ -1,6 +1,6 @@
 # Release Method
 
-This member owns release contracts for scoped identity, justified claims and authority explained in [Foundations](FOUNDATIONS.md), and Evaluate, Conjoin and Dispose from the [transformation library](TRANSFORMATION_LIBRARY.md). Candidate preservation, acceptance, publication and consumer adoption remain distinct decisions. Its version/ref examples illustrate the declared release identities; each actual cut requires its own authorized exact binding.
+This member owns its release-specific identity, qualification, publication and selection contracts. [Foundations](FOUNDATIONS.md) and the [transformation library](TRANSFORMATION_LIBRARY.md) explain the recurring distinctions and Evaluate/Conjoin/Dispose families; this member does not own those shared families in other domains. Candidate preservation, acceptance, publication and consumer adoption remain distinct decisions. Its version/ref examples illustrate the declared release identities; each actual cut requires its own authorized exact binding.
 
 ## Release-Publication Context
 

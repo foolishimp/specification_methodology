@@ -1,7 +1,7 @@
 # Standards Library
 
-These standards are the deciding documentary surfaces of the STDO
-Specification Methodology. The complete cut also includes its declared
+This directory contains the deciding methods, explanatory account and
+non-deciding views of the STDO Specification Methodology. The complete cut also includes its declared
 projections, schemas, templates, frames and interaction assets. A selectable STDO Product is one complete immutable released RC cut
 with exact identity, manifest and membership. Its subordinate executable and
 interaction tooling retain separately declared responsibilities.
@@ -14,11 +14,11 @@ identity, typed composition, total handling and separate judgment/authority.
 Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
 material contracts and owners; these are not compulsory phases or a runtime API.
 Responsibility views project selected material clauses:
-[work/recovery](../frames/WORK_RECOVERY.md),
-[evaluation/conjunction](../frames/EVALUATION_CONJUNCTION.md),
-[constitutional derivation](../frames/CONSTITUTIONAL_DERIVATION.md),
-[domain binding](../frames/DOMAIN_BINDING.md), and
-[release/adoption](../frames/RELEASE_ADOPTION.md). Each has an explicit scope;
+[work/recovery](frames/WORK_RECOVERY.md),
+[evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md),
+[constitutional derivation](frames/CONSTITUTIONAL_DERIVATION.md),
+[domain binding](frames/DOMAIN_BINDING.md), and
+[release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
 no view is sufficient for every task.
 
 ## Method owners

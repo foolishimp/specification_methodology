@@ -6,7 +6,7 @@
 This member is the graph-native ODD constitutional method surface of STDO;
 its declared obligations apply in a Product-selected ODD scope.
 It maps [Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md). Selection of this profile
+[Transformation Library](TRANSFORMATION_LIBRARY.md). Selection of this method
 activates its declared ODD obligations in the consumer's governed scope;
 availability supplies no Product semantics, concrete runtime identity or grant.
 Its constitutional composition uses [Spec Method](SPEC_METHOD.md),
@@ -30,11 +30,11 @@ lineage, failure and continuation law.
 | Bind | Recover the selected Product outcome, any admitted bounded prerequisite or experiment, IntentLineage, exact target obligations, published action contract, execution basis and consumer-bound authorities. A target or controller label supplies no authority. |
 | Acquire | Observe the worksite, runtime facts and admitted source truth; retain current gap pressure, structural source coherence and lineage-reachable evidence. Observation, model synthesis and admitted evidence remain different relations. |
 | Transform | One published GraphFunction or lawful composition performs bounded construction under the admitted vector contract. The worker retains internal HOW, produces required evidence for owning native admission and returns control to the bound ABG authority. This row grants no runtime-event or ledger mutation. |
-| Evaluate | §11.5D retains one synthesis function and three evaluation functions: synthesize_model produces CurrentModelProjection; evaluate_gap supplies GapProjection; evaluate_action evaluates action closure and returns EdgeClosureDecision; evaluate_next selects NextActionProjection. These are distinct domain contracts spanning several shared families, not four Reviewer judgments. Fulfillment and liveness retain their own predicates. |
+| Evaluate | The exact §11.5D function table owns one synthesis and three evaluation functions: synthesize_model -> ProductAssetModel; eval_gap -> ObservationSnapshot + GapPressureRow; evaluate_action -> EdgeFulfillmentLedger + EdgeClosureDecision; evaluate_next -> PriorityProjection + NextActionProjection + selected_action, including the typed no-action result while post_reprice is unresolved. No name or partial output in this account replaces that table or confers Reviewer control. |
 | Conjoin | Compatible published refinements and cumulative environments preserve their outer contract, exact producer coordinates, admitted evidence, unresolved obligations and zoom-stable closure. A local green path does not decide enclosing acceptance. |
-| Dispose | Closure truth remains under F_D/ABG/product admission: evaluate_action returns EdgeClosureDecision; evaluate_next selects the invocational NextActionProjection. Admission of a ConstructionIntent is its separate owning step. The exact close/yield/retry/repair/re-enter/reprice/block laws and no-rival-control-path restriction remain where §11.5D puts them; this row appoints no generic replacement owner. |
+| Dispose | evaluate_action folds admitted evidence into EdgeFulfillmentLedger and EdgeClosureDecision under F_D/ABG/product admission. Separately, evaluate_next consumes that admitted decision and fresh eval_gap truth to produce its exact next-action outputs; it cannot decide prior closure. ABG admission/traversal authority separately admits ConstructionIntent. A11's conceptual disposition versus invocational selection and the no-rival-control-path law remain operative; this row appoints no replacement owner. |
 
-These correspondences preserve the profile's individual contracts and owners.
+These correspondences preserve this method's individual contracts and owners.
 They add no six-stage workflow, runtime API or categorical-equivalence claim.
 The IntentLineage-to-NextActionProjection loop applies within a selected ODD scope.
 

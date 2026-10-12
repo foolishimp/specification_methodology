@@ -23,7 +23,7 @@ def relocate(match):
         return match[0]
     if value.startswith('#'):
         raise ValueError('Local fragment needs an owning member coordinate')
-    return match[1] + '../standards/' + value + match[3]
+    return match[1] + '../' + value + match[3]
 
 for path in (std / 'authority_compressions').glob('*.md'):
     text = path.read_text()
@@ -57,7 +57,7 @@ for frame in index['frames']:
         end = next((n.start() for n in headings[i + 1:] if len(n[1]) <= len(h[1])), len(text))
         raw = text[h.start():end].rstrip() + '\n'
         rendered = re.sub(r'(\[[^\]]*\]\()([^\n]+?)(\))', relocate, raw)
-        parts.append(f"\nSource: [{owner.name} — {h[2]}](../{entry['owner']}#{entry['anchor']}); "
+        parts.append(f"\nSource: [{owner.name} — {h[2]}](../{str(Path(entry['owner']).relative_to('standards'))}#{entry['anchor']}); "
                      f"SHA256 `{sha(owner)}`.\n\n" + rendered)
         entry['owner_sha256'] = sha(owner)
         entry['section_sha256'] = hashlib.sha256(raw.encode()).hexdigest()

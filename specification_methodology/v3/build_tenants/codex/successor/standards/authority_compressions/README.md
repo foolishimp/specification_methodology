@@ -50,7 +50,9 @@ insufficient or stale.
 
 `stdo_bootstrap.md` is the smallest discovery projection. Marker-managed agent
 files route to it through the applicable Product Definition; it then routes to
-the exact installed basis and raw owners. It is digest-bound to Specification
+the exact installed basis and raw owners. It is digest-bound to Foundations, the Transformation Library, Specification
 Method, Reference Frame Method, the optional STDO Reference Frame Baseline,
-Release Method, and the Product Definition schema and cannot select or replace
-them.
+Release Method, and the Product Definition schema. The exact header lists all
+watched sources; the bootstrap cannot select or replace them. Foundations and
+the library organise explanations; detailed deciding law remains at its named
+owner.

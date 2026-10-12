@@ -20,6 +20,10 @@ registry and stops. With neither, load `SPEC_METHOD.md`.
 
 | Name | Member |
 |---|---|
+| `foundations` | `FOUNDATIONS.md` |
+| `transformations` | `TRANSFORMATION_LIBRARY.md` |
+| `calculus` | `AXIOMATIC_CALCULUS.md` |
+| `occurrence` | `TRAVERSAL_OCCURRENCE_PROFILE.md` |
 | `frame` | `REFERENCE_FRAME_METHOD.md` |
 | `frame-baseline` | `STDO_REFERENCE_FRAME_BASELINE.md` |
 | `spec` | `SPEC_METHOD.md` |

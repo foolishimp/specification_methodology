@@ -38,11 +38,11 @@ traversal, ticket, world-model or calculus contexts.
 [Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
 governs cross-context use; no shared default interpretation is inferred.
 
-The method's obligations follow from these premises together: preserve the
-selected outcome and constraints; supply sufficient context for each material
-relation; conserve identity and authority through composition; and report an
-honest supported result when construction or evaluation cannot complete.
-Finite capacity alone does not prove all those obligations.
+These premises explain how the source-owned obligations fit together: preserve
+the selected outcome and constraints, supply material context, conserve identity
+and authority, and report supported outcomes. This is an explanatory account,
+not an entailment proof or replacement derivation basis for those laws. Finite
+capacity alone does not select the other premises or confer authority.
 
 ## Interpretation and representation
 
@@ -54,8 +54,12 @@ validator or successful join does not establish interpretation fidelity.
 An operational algorithm can make an interpretation testable. Universal claims
 that every meaning has an algorithmic encoding require a defined domain,
 adequacy relation and argument; they remain hypotheses outside that domain.
-The [calculus fidelity law](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
-owns the interpretation obligation. Loss or abstraction is admissible only when the governing contract permits it
+Within an adopted a_c interpretation, the
+[calculus fidelity law](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+owns that calculus-specific obligation. In reference-frame evaluation,
+[RF-007](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)
+owns separation of semantics, evidence and verdict. These examples supply no
+universal authority for interpretations outside their declared domains. Loss or abstraction is admissible only when the governing contract permits it
 and the required consumer distinctions remain recoverable.
 
 ## Purpose and interfaces
@@ -127,19 +131,26 @@ Process resumption is another iteration over the current work state under
 and affected dependencies, retain applicable progress, then choose a permitted
 action. This does not imply every side effect is idempotent. An uncertain effect
 must be observed, reconciled or returned unresolved before any repetition that
-could duplicate it. Logs supply observability and audit, and may support
-reconstruction; requiring an actor to reload all history is not a generic law.
+could duplicate it. General logging supplies observability and audit and may support reconstruction.
+An adopted domain may assign stronger standing: ODD owns RuntimeEventLog as
+runtime truth and its admitted ledger/evidence relations. Those duties remain
+within ODD scope. Reloading all history is not a generic method requirement.
 
 ## Judgment and authority
 
-The [judgment separation law](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation)
-and [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
-own these distinctions. Definitions, assumptions, observations, candidate judgments and accepted claims
+The [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+owns authority conservation for frame evaluation. Within a_c,
+[AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
+judgment separation. Where the construction engagement profile is selected,
+[the Baseline](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
+owns its exact Reviewer/Executive application of the detailed laws. Other
+domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
 have distinct standing. A judgment binds a predicate, exact subject, basis,
 evidence, assessor and any required independence. An authority grant permits
 specified operations or decisions. Neither evidence shape nor actor capability
-mints a grant. A Reviewer judges; a decision owner accepts or selects the next
-action within existing authority.
+mints a grant. In the selected construction engagement, a Reviewer judges and a decision
+owner disposes under its existing grant. Domain control such as ODD next-action
+selection remains with its own named function; the explanation appoints none.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,

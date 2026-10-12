@@ -27,7 +27,7 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 5f2fb8f98fe341e2ff0252d26ae81a24ff369304efd93a457dd9a560e1c2f087
+  FOUNDATIONS.md: fecc71e606100b7f8b934b7f8f48ea82104f0c433814c55f8181c523c97b61e2
   TRANSFORMATION_LIBRARY.md: 1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64
   AXIOMATIC_CALCULUS.md: 54bfe9965136020387beafd441369fd57c045c5b5b42f474e64426415751d1ee
   TRAVERSAL_OCCURRENCE_PROFILE.md: 009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9
@@ -37,12 +37,12 @@ source_digests:
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
   DESIGN_MODULE_METHOD.md: d965d70f416955ade2a2ce995cc2368d809020cb5f53fffc73eef136fb4a2298
-  ODD_METHOD.md: 0aacb582c806e61dd857adbf9c5f0926db221e83d5fae8129ec02564cd4a58c4
-  WORLD_MODEL_METHOD.md: bd3e937d884125d4673ba87f49c4dec5a99d00d0b9d8ee420ffdcecf535f54d3
+  ODD_METHOD.md: 4e69681c04464d5d851d661fd7826ee40da0c86371e19305a0dab8994f509ff2
+  WORLD_MODEL_METHOD.md: a93e2bd27b19d3c057ea24a3f5900cbed8b99c20e43c6d029d0db6860836aa48
   TICKET_METHOD.md: 2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417
-  UX_METHOD.md: 93e50b67975106b097f16e986edc4e674d3a3bc6da50ff138863958333d96186
+  UX_METHOD.md: c3ac3861dcd293010eb0638b4c9aadcb273ca28f5defc22f3dac9a5d23bed860
   IDENTITY_METHOD.md: 4f871945701a38566df32dd73de1c589de7b73d2addf2949f4bffc5b9e43e8f7
-  RELEASE_METHOD.md: c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11
+  RELEASE_METHOD.md: 26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373
   POSTING_GUIDE.md: a9d67e70aa1dd8390f82ab44da7bb72f9240545efc30bf2873b1f7165a273cc1
 index_digests:
   GLOSSARY_GUIDE.md: b2771ac69fd47d45d436c87bc35b57062e457f422c4df008f5caf5d441af18db
@@ -57,7 +57,7 @@ stale_if_index_digest_changes: true
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
 organise shared premises and transformation families. Detailed owners retain
 their exact applicability, result domains and operation grants. Use a sufficient
-responsibility frame for the selected claim; these names supply no compulsory
+reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
 
 ## Method Identity

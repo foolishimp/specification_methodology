@@ -10,12 +10,12 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: 5f2fb8f98fe341e2ff0252d26ae81a24ff369304efd93a457dd9a560e1c2f087
+  FOUNDATIONS.md: fecc71e606100b7f8b934b7f8f48ea82104f0c433814c55f8181c523c97b61e2
   TRANSFORMATION_LIBRARY.md: 1b843ed81f3423226fa8c0eee93b2958c1d6f63a2094fd6dbc53782d8e885b64
   SPEC_METHOD.md: 61262847f8d715f440e22092aed4a23092a0868b4d96258a85181c1e3ddf83f0
   REFERENCE_FRAME_METHOD.md: b2fe9139fd3a09a495b6dee4d3233c561b326cf7b2b4333bbfca6c0217f2eccb
   STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
-  RELEASE_METHOD.md: c061ad3d6684ed9227272cdf81546f6a62e0bf3f87f0d7bde3181f6f0d247d11
+  RELEASE_METHOD.md: 26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
@@ -30,7 +30,7 @@ stale_if_source_digest_changes: true
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
 organise shared premises and transformation families. Detailed owners retain
 their exact applicability, result domains and operation grants. Use a sufficient
-responsibility frame for the selected claim; these names supply no compulsory
+reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
 
 This is a small routing projection. The exact installed release and its raw

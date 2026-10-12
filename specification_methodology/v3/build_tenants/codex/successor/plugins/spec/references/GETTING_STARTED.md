@@ -148,7 +148,7 @@ stdo install "$STDO_CUT"
 stdo verify "$STDO_CUT"
 ```
 
-The exact qualified RC1 install is the missing-tool path. The explicit
+The exact authorized toolchain installation coordinate is the missing-tool path. The explicit
 `pipx install --force` branch upgrades an older installation. Do not continue
 to `stdo install` unless the final version check accepts `stdo-toolchain
 0.1.4` or newer.
@@ -314,14 +314,15 @@ file; this packaged guide remains sufficient after installation.
 ### Install The Shared Skills
 
 The following install commands apply after coordinated publication.
-The `spec` plugin version and immutable repository cut are aligned at
-`2.5.1-rc.1`. RC2 retains its earlier Claude-only refresh payload and never
-moves. The Specification Stack marketplace name is `specification_stack`.
+The plugin and selected immutable repository cut must be one declared,
+release-matched cohort. Substitute its exact authorized published coordinate
+in the examples below. Target-version metadata in mutable source is not a
+published cut or permission to install a different cohort.
 
 Claude Code:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v2.5.1-rc.1'
+SPEC_PLUGIN_REF='specification_methodology/<exact-published-immutable-cut>'
 claude plugin marketplace add \
   "foolishimp/specification_methodology@${SPEC_PLUGIN_REF}"
 claude plugin install spec@specification_stack
@@ -330,7 +331,7 @@ claude plugin install spec@specification_stack
 Codex:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v2.5.1-rc.1'
+SPEC_PLUGIN_REF='specification_methodology/<exact-published-immutable-cut>'
 codex plugin marketplace add foolishimp/specification_methodology \
   --ref "$SPEC_PLUGIN_REF"
 codex plugin add spec@specification_stack

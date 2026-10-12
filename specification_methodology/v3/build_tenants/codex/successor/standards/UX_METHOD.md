@@ -31,7 +31,7 @@ view-local ephemera retain their limited scope and unmount test.
 | Conjoin | The covered module satisfies applicable Design Module and UX law together. Shared front-end/back-end contracts, replay evidence and product-meaningful interaction families remain sufficient across the declared surface. |
 | Dispose | The sprint-close forensic walkthrough classifies findings under its complete six-class list below, including accepted. Existing competent owners act on those findings only under their own grants. Escrow defers selected local proof during iteration and retains method-closure obligations. |
 
-These correspondences preserve the profile's process model and scoped authority.
+These correspondences preserve this method's process model and scoped authority.
 They supply no new UI stack mandate or six-stage UX workflow. UX commands do not
 acquire runtime continuation or product-truth authority merely by being emitted.
 

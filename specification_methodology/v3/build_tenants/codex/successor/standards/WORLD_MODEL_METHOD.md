@@ -14,7 +14,7 @@ no new prerequisite; the theoretical Design Module relation below remains
 non-prerequisite. Where the consuming Product also
 selects graph-native realization, [ODD Method](ODD_METHOD.md) retains execution
 shape and traversal law while this member retains world-model meaning.
-Availability of either profile leaves its adoption and operation authority with
+Availability of either method leaves its adoption and operation authority with
 the declared owners.
 
 World-model scoped identity,
@@ -37,7 +37,7 @@ roles and authority.
 | Dispose | Competent owners publish, supersede or retain unresolved claims under the declared assurance and publication law. Refit evidence or a changed representation space produces a new overlay; prior accepted ledger facts and published cuts retain their immutable history. |
 
 Markov-object and geometric-overlay claims retain the epistemic standing,
-empirical limits and promotion predicate stated in this profile. An ordinary
+empirical limits and promotion predicate stated in this method. An ordinary
 entity cut uses its own admissibility test. Held-out treatment verification and
 formal conditional-independence closure remain separate judgments with separate
 evidence. The pinned empirical companion supplies research evidence under its

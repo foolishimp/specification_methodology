@@ -7,19 +7,29 @@
     "Product": "Convert a duration stated in milliseconds to seconds. Preserve unknown or unsupported input units explicitly; do not return invented durations. The Product admits multiple implementations.",
     "accepted_design": "Producer output type DurationMilliseconds; consumer input DurationSeconds; a declared conversion divides by 1000. Unknown external units return an explicit unresolved/unsupported outcome.",
     "grant": "Assess and propose this local design contract. Product meaning, namespace policy and acceptance remain reserved.",
-    "actual_source": {
-      "producer": "make_duration() -> LengthMetres",
-      "consumer": "render_time(value: DurationSeconds)",
-      "joining_code": "render_time(make_duration())"
-    },
     "test_authority": {
       "normal": "1000 DurationMilliseconds -> 1 DurationSeconds",
       "wrong_dimension": "LengthMetres -> boundary refusal; no duration invented",
       "unknown_unit": "Unknown unit -> explicit unsupported/unresolved"
+    },
+    "defective_source": {
+      "producer": "make_duration() -> LengthMetres",
+      "consumer": "render_time(value: DurationSeconds)",
+      "joining_code": "render_time(make_duration())"
+    },
+    "baseline_source": {
+      "producer": "make_duration() -> DurationMilliseconds",
+      "conversion": "milliseconds_to_seconds(value) divides by 1000; wrong/unknown units refuse or remain unsupported",
+      "consumer": "render_time(value: DurationSeconds)",
+      "joining_code": "render_time(milliseconds_to_seconds(make_duration()))"
     }
   },
   "subject_sha256": "ab39d3b3b3b4e9e8ee544a7139b072edf8123fe121d0866b8a3641d857a4f91e",
   "fixture_owner": "Codex C3 fixture Writer under the tenant-only grant",
   "consuming_decision": "Codex C3 Executive may accept/repair this bounded fixture proof only; common acceptance, upstream changes and publication remain reserved.",
-  "measurement_limit": "The host Writer checks Git membership/digests before dispatch. The tool-free consumer evaluates supplied bytes and cannot independently reacquire or compute those digests."
+  "measurement_limit": "The host Writer checks Git membership/digests before dispatch. The tool-free consumer evaluates supplied bytes and cannot independently reacquire or compute those digests.",
+  "subject_predicates": {
+    "baseline": "Does the baseline written design contract and its associated baseline_source conform to the supplied Product and accepted design? This is documentary adequacy, not executed application proof.",
+    "defective_subject": "Does contract.md and its associated defective_source conform? Do not use defective_source as the baseline subject."
+  }
 }
