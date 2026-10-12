@@ -1,8 +1,10 @@
 # STDO 3 Standards (Claude tenant realisation)
 
-Status: the Claude tenant's document realisation, constructed through four
-steel threads (T1–T4) and awaiting independent assessment. Not released,
-not installed, not common WHAT. Builder basis `stdo://releases/v2.5.1-rc.2/`.
+Status: the Claude tenant's STDO 3 candidate, under construction member by
+member on the order of [DOCUMENT_STRUCTURE](../design/DOCUMENT_STRUCTURE.md);
+the first pass (steel threads T1 to T4) is its starting text. Not
+released, not installed, not common WHAT. Builder basis
+`stdo://releases/v2.5.1-rc.2/`.
 
 STDO 3 is a specification methodology for construction and evaluation by
 actors with finite context, attention, time and capability. Its core
@@ -15,8 +17,9 @@ current state under explicit uncertainty.
 
 | You want to | Read, in order |
 |---|---|
-| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [ACTIVATION](ACTIVATION.md) → [SPEC_METHOD](SPEC_METHOD.md) |
-| do a bounded piece of work | [ACTIVATION §1–3](ACTIVATION.md) for the step and its result algebra, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
+| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [REFERENCE_FRAME](REFERENCE_FRAME.md) → [ACTIVATION](ACTIVATION.md) → [SPEC_METHOD](SPEC_METHOD.md) |
+| do a bounded piece of work | [ACTIVATION §1–3](ACTIVATION.md) for the step, its admission and its result algebra, [REFERENCE_FRAME §11](REFERENCE_FRAME.md) for the packet you are activated on, then [SPEC_METHOD §4](SPEC_METHOD.md) for where your change re-enters |
+| declare, audit or revise a project's frame set | [REFERENCE_FRAME §4, §8 and §10](REFERENCE_FRAME.md), then [EVALUATION §7](EVALUATION.md) to qualify a frame |
 | resume work someone else left | [ACTIVATION §5 and §7](ACTIVATION.md) for work state, resumption and reuse, then the [T-05 case](../qualification/cases/T-05/CASE.md) for a worked resumption |
 | review someone's work | [EVALUATION](EVALUATION.md), then the [CONFORMANCE](CONFORMANCE.md) case nearest your subject |
 | decide acceptance or release | [EVALUATION §5](EVALUATION.md), [SPEC_METHOD §6](SPEC_METHOD.md) |
@@ -27,14 +30,18 @@ current state under explicit uncertainty.
 
 | File | Tier | Owns |
 |---|---|---|
-| [FOUNDATIONS.md](FOUNDATIONS.md) | 1 | ontology, commitments, algebra, hypotheses |
-| [ACTIVATION.md](ACTIVATION.md) | 1 | the bounded step, result algebra, totality, refinement, work state, cost, reuse |
-| [EVALUATION.md](EVALUATION.md) | 1 | claims, evidence, assessment, acceptance, conformance, self-qualification |
+| [FOUNDATIONS.md](FOUNDATIONS.md) | 1 | ontology including the frame objects, commitments, algebra, hypotheses, the UP-015 disposition vocabulary |
+| [REFERENCE_FRAME.md](REFERENCE_FRAME.md) | 1 | the reference frame as a first-class object: laws RF-001 to RF-017, frame sets, method functions, conjunction, relations, coverage, revision, the activation packet, declarations |
+| [ACTIVATION.md](ACTIVATION.md) | 1 | the bounded step: intake, admission, applicability, context construction, the single result algebra, totality, refinement, work state, cost, closed result and reuse |
+| [EVALUATION.md](EVALUATION.md) | 1 | claims, evidence, assessment, acceptance, conformance, qualification of frames and of the method |
 | [SPEC_METHOD.md](SPEC_METHOD.md) | 2 | the particular method: chain, WHAT/HOW, outcomes, change classes, roles, checkpoints, lineage |
 | [CONFORMANCE.md](CONFORMANCE.md) | 2 | cases the method must pass |
 | [PROFILES.md](PROFILES.md) | 3 | profile imports and the core boundary |
 
-Each clause names the principle that requires it (P0–P6, defined in
-FOUNDATIONS) and, where it conserves, reframes or supersedes an rc.2 clause,
-that clause's route. A reader needing the rc.2 wording follows the route; the
-rc.2 cut remains the operative builder until STDO 3 is released.
+Each clause names the principle that requires it (P0 to P6, defined in
+FOUNDATIONS §3) and, where it restates or supersedes an rc.2 clause, may
+carry that clause's route as provenance; a route is never the disposition
+(FOUNDATIONS §1). Every predecessor row's disposition and locus are in the
+tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md). The corpus is
+applicable without the rc.2 cut, which remains the operative builder of
+this construction until STDO 3 is released.

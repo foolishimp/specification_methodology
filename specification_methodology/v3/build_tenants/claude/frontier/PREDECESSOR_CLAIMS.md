@@ -291,87 +291,87 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Canonical Compression | `#canonical-compression` |  | 1,658 | unresolved | |
-| Position | `#position` |  | 1,445 | unresolved | |
-| Core Claims | `#core-claims` |  | 1,196 | unresolved | |
-| Definitions | `#definitions` |  | 15 | unresolved | |
-| &nbsp;&nbsp;Evaluation | `#evaluation` |  | 535 | unresolved | |
-| &nbsp;&nbsp;Workspace | `#workspace` |  | 357 | unresolved | |
-| &nbsp;&nbsp;Basis | `#basis` |  | 356 | unresolved | |
-| &nbsp;&nbsp;Material relation | `#material-relation` |  | 371 | unresolved | |
-| &nbsp;&nbsp;Material-relation manifold | `#material-relation-manifold` |  | 418 | unresolved | |
-| &nbsp;&nbsp;Coordinate | `#coordinate` |  | 401 | unresolved | |
-| &nbsp;&nbsp;Topology | `#topology` |  | 530 | unresolved | |
-| &nbsp;&nbsp;Evidence | `#evidence` |  | 266 | unresolved | |
-| &nbsp;&nbsp;Authority | `#authority` |  | 1,207 | unresolved | |
-| &nbsp;&nbsp;Disjointness And Independence | `#disjointness-and-independence` |  | 964 | unresolved | |
-| &nbsp;&nbsp;Capability envelope | `#capability-envelope` |  | 439 | unresolved | |
-| &nbsp;&nbsp;Reference frame | `#reference-frame` |  | 1,573 | unresolved | |
-| &nbsp;&nbsp;Activated frame | `#activated-frame` |  | 251 | unresolved | |
-| &nbsp;&nbsp;Frame set | `#frame-set` |  | 343 | unresolved | |
-| &nbsp;&nbsp;Active frame configuration | `#active-frame-configuration` |  | 309 | unresolved | |
-| &nbsp;&nbsp;Lens | `#lens` |  | 382 | unresolved | |
-| &nbsp;&nbsp;Role, persona, abstraction, and component | `#role-persona-abstraction-and-component` |  | 432 | unresolved | |
-| Reference Frame Laws | `#reference-frame-laws` |  | 24 | unresolved | |
-| &nbsp;&nbsp;RF-001 Evaluation Relativity | `#rf-001-evaluation-relativity` | RF-001 | 171 | unresolved | |
-| &nbsp;&nbsp;RF-002 Finite Attention | `#rf-002-finite-attention` | RF-002 | 298 | unresolved | |
-| &nbsp;&nbsp;RF-003 Material Sufficiency | `#rf-003-material-sufficiency` | RF-003 | 402 | unresolved | |
-| &nbsp;&nbsp;RF-004 Irrelevance Exclusion | `#rf-004-irrelevance-exclusion` | RF-004 | 245 | unresolved | |
-| &nbsp;&nbsp;RF-005 Exact Basis And Coordinates | `#rf-005-exact-basis-and-coordinates` | RF-005 | 290 | unresolved | |
-| &nbsp;&nbsp;RF-006 Authority Conservation | `#rf-006-authority-conservation` | RF-006 | 296 | unresolved | |
-| &nbsp;&nbsp;RF-007 Semantic, Evidence, And Verdict Separation | `#rf-007-semantic-evidence-and-verdict-separation` | RF-007 | 436 | unresolved | |
-| &nbsp;&nbsp;RF-008 Overlap Without Identity Collapse | `#rf-008-overlap-without-identity-collapse` | RF-008 | 289 | unresolved | |
-| &nbsp;&nbsp;RF-009 No Assumed Hierarchy | `#rf-009-no-assumed-hierarchy` | RF-009 | 497 | unresolved | |
-| &nbsp;&nbsp;RF-010 Composition On Demand | `#rf-010-composition-on-demand` | RF-010 | 429 | unresolved | |
-| &nbsp;&nbsp;RF-011 Topology Mutation And Recharting | `#rf-011-topology-mutation-and-recharting` | RF-011 | 286 | unresolved | |
-| &nbsp;&nbsp;RF-012 Closed Results | `#rf-012-closed-results` | RF-012 | 623 | unresolved | |
-| &nbsp;&nbsp;RF-013 Reconstructable Activation | `#rf-013-reconstructable-activation` | RF-013 | 275 | unresolved | |
-| &nbsp;&nbsp;RF-014 Capability Fit | `#rf-014-capability-fit` | RF-014 | 317 | unresolved | |
-| &nbsp;&nbsp;RF-015 Residual Uncertainty | `#rf-015-residual-uncertainty` | RF-015 | 276 | unresolved | |
-| &nbsp;&nbsp;RF-016 Implementation Neutrality | `#rf-016-implementation-neutrality` | RF-016 | 280 | unresolved | |
-| &nbsp;&nbsp;RF-017 Proportional Compression | `#rf-017-proportional-compression` | RF-017 | 588 | unresolved | |
-| &nbsp;&nbsp;Engagement Atom And Semantic Prime | `#engagement-atom-and-semantic-prime` |  | 784 | unresolved | |
-| Human Frame-Set Declaration | `#human-frame-set-declaration` |  | 899 | unresolved | |
-| &nbsp;&nbsp;Frame-Set Optimization | `#frame-set-optimization` |  | 1,283 | unresolved | |
-| Method Functions | `#method-functions` |  | 945 | unresolved | |
-| Engagement | `#engagement` |  | 14 | unresolved | |
-| &nbsp;&nbsp;Establish The Evaluation Basis | `#establish-the-evaluation-basis` |  | 385 | unresolved | |
-| &nbsp;&nbsp;Applicability And Required Results | `#applicability-and-required-results` |  | 1,293 | unresolved | |
-| &nbsp;&nbsp;Select And Activate | `#select-and-activate` |  | 521 | unresolved | |
-| &nbsp;&nbsp;Evaluate | `#evaluate` |  | 247 | unresolved | |
-| &nbsp;&nbsp;Return A Closed Result | `#return-a-closed-result` |  | 878 | unresolved | |
-| &nbsp;&nbsp;Reconfigure When Necessary | `#reconfigure-when-necessary` |  | 527 | unresolved | |
-| Using Frames In Conjunction | `#using-frames-in-conjunction` |  | 93 | unresolved | |
-| &nbsp;&nbsp;Independently Activated Co-Evaluation | `#independently-activated-co-evaluation` |  | 394 | unresolved | |
-| &nbsp;&nbsp;Result Conjunction | `#result-conjunction` |  | 733 | unresolved | |
-| &nbsp;&nbsp;Evidence Or Coordinate Translation | `#evidence-or-coordinate-translation` |  | 250 | unresolved | |
-| &nbsp;&nbsp;Material Composition | `#material-composition` |  | 459 | unresolved | |
-| Frame Relations | `#frame-relations` |  | 1,131 | unresolved | |
-| Workspace Coverage | `#workspace-coverage` |  | 22 | unresolved | |
-| &nbsp;&nbsp;Coverage Basis | `#coverage-basis` |  | 404 | unresolved | |
-| &nbsp;&nbsp;Evaluation Inventory | `#evaluation-inventory` |  | 1,025 | unresolved | |
-| &nbsp;&nbsp;Coverage Dimensions | `#coverage-dimensions` |  | 518 | unresolved | |
-| &nbsp;&nbsp;Coverage Ledger | `#coverage-ledger` |  | 983 | unresolved | |
-| &nbsp;&nbsp;Interaction Coverage | `#interaction-coverage` |  | 282 | unresolved | |
-| &nbsp;&nbsp;Authority Coverage | `#authority-coverage` |  | 363 | unresolved | |
-| &nbsp;&nbsp;Failure Coverage | `#failure-coverage` |  | 279 | unresolved | |
-| &nbsp;&nbsp;High-Risk Separately Activated Coverage | `#high-risk-separately-activated-coverage` |  | 424 | unresolved | |
-| &nbsp;&nbsp;Operational Full Coverage | `#operational-full-coverage` |  | 905 | unresolved | |
-| Completeness Boundary | `#completeness-boundary` |  | 1,109 | unresolved | |
-| Discovery And Revision | `#discovery-and-revision` |  | 26 | unresolved | |
-| &nbsp;&nbsp;Missing-Frame Signals | `#missing-frame-signals` |  | 680 | unresolved | |
-| &nbsp;&nbsp;Diagnostic Order | `#diagnostic-order` |  | 496 | unresolved | |
-| &nbsp;&nbsp;Revision Actions | `#revision-actions` |  | 604 | unresolved | |
-| Agentic Use | `#agentic-use` |  | 1,143 | unresolved | |
-| &nbsp;&nbsp;Minimal Frame Activation Binding | `#minimal-frame-activation-binding` |  | 1,458 | unresolved | |
-| &nbsp;&nbsp;Worked Binding: Product-Chain Drift Evaluation | `#worked-binding-product-chain-drift-evaluation` |  | 4,368 | unresolved | |
-| Frame Qualification | `#frame-qualification` |  | 1,467 | unresolved | |
-| &nbsp;&nbsp;Method Self-Qualification | `#method-self-qualification` |  | 3,430 | unresolved | |
-| Anti-Patterns | `#anti-patterns` |  | 1,485 | unresolved | |
-| Minimal Frame Declaration | `#minimal-frame-declaration` |  | 1,086 | unresolved | |
-| Minimal Frame-Set Declaration | `#minimal-frame-set-declaration` |  | 814 | unresolved | |
-| Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | unresolved | |
-| Closure | `#closure` |  | 918 | unresolved | |
+| Canonical Compression | `#canonical-compression` |  | 1,658 | conserved | `REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit` |
+| Position | `#position` |  | 1,445 | conserved | `REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit` |
+| Core Claims | `#core-claims` |  | 1,196 | conserved | `REFERENCE_FRAME.md#2-core-claims` |
+| Definitions | `#definitions` |  | 15 | not applicable: heading with no claim text (15 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Evaluation | `#evaluation` |  | 535 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Workspace | `#workspace` |  | 357 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Basis | `#basis` |  | 356 | conserved | `FOUNDATIONS.md#2-ontology` |
+| &nbsp;&nbsp;Material relation | `#material-relation` |  | 371 | conserved | `FOUNDATIONS.md#2-ontology` |
+| &nbsp;&nbsp;Material-relation manifold | `#material-relation-manifold` |  | 418 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Coordinate | `#coordinate` |  | 401 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Topology | `#topology` |  | 530 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Evidence | `#evidence` |  | 266 | conserved | `FOUNDATIONS.md#2-ontology` |
+| &nbsp;&nbsp;Authority | `#authority` |  | 1,207 | conserved | `FOUNDATIONS.md#authority-kinds` |
+| &nbsp;&nbsp;Disjointness And Independence | `#disjointness-and-independence` |  | 964 | conserved | `FOUNDATIONS.md#disjointness-and-independence` |
+| &nbsp;&nbsp;Capability envelope | `#capability-envelope` |  | 439 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Reference frame | `#reference-frame` |  | 1,573 | conserved | `FOUNDATIONS.md#the-frame-tuple` |
+| &nbsp;&nbsp;Activated frame | `#activated-frame` |  | 251 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Frame set | `#frame-set` |  | 343 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Active frame configuration | `#active-frame-configuration` |  | 309 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Lens | `#lens` |  | 382 | conserved | `FOUNDATIONS.md#frame-objects` |
+| &nbsp;&nbsp;Role, persona, abstraction, and component | `#role-persona-abstraction-and-component` |  | 432 | conserved | `FOUNDATIONS.md#frame-objects` |
+| Reference Frame Laws | `#reference-frame-laws` |  | 24 | not applicable: heading with no claim text (24 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;RF-001 Evaluation Relativity | `#rf-001-evaluation-relativity` | RF-001 | 171 | conserved | `REFERENCE_FRAME.md#rf-001-evaluation-relativity` |
+| &nbsp;&nbsp;RF-002 Finite Attention | `#rf-002-finite-attention` | RF-002 | 298 | conserved | `REFERENCE_FRAME.md#rf-002-finite-attention` |
+| &nbsp;&nbsp;RF-003 Material Sufficiency | `#rf-003-material-sufficiency` | RF-003 | 402 | conserved | `REFERENCE_FRAME.md#rf-003-material-sufficiency` |
+| &nbsp;&nbsp;RF-004 Irrelevance Exclusion | `#rf-004-irrelevance-exclusion` | RF-004 | 245 | conserved | `REFERENCE_FRAME.md#rf-004-irrelevance-exclusion` |
+| &nbsp;&nbsp;RF-005 Exact Basis And Coordinates | `#rf-005-exact-basis-and-coordinates` | RF-005 | 290 | conserved | `REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates` |
+| &nbsp;&nbsp;RF-006 Authority Conservation | `#rf-006-authority-conservation` | RF-006 | 296 | conserved | `REFERENCE_FRAME.md#rf-006-authority-conservation` |
+| &nbsp;&nbsp;RF-007 Semantic, Evidence, And Verdict Separation | `#rf-007-semantic-evidence-and-verdict-separation` | RF-007 | 436 | conserved | `REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation` |
+| &nbsp;&nbsp;RF-008 Overlap Without Identity Collapse | `#rf-008-overlap-without-identity-collapse` | RF-008 | 289 | conserved | `REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse` |
+| &nbsp;&nbsp;RF-009 No Assumed Hierarchy | `#rf-009-no-assumed-hierarchy` | RF-009 | 497 | conserved | `REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy` |
+| &nbsp;&nbsp;RF-010 Composition On Demand | `#rf-010-composition-on-demand` | RF-010 | 429 | conserved | `REFERENCE_FRAME.md#rf-010-composition-on-demand` |
+| &nbsp;&nbsp;RF-011 Topology Mutation And Recharting | `#rf-011-topology-mutation-and-recharting` | RF-011 | 286 | conserved | `REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting` |
+| &nbsp;&nbsp;RF-012 Closed Results | `#rf-012-closed-results` | RF-012 | 623 | conserved | `REFERENCE_FRAME.md#rf-012-closed-results` |
+| &nbsp;&nbsp;RF-013 Reconstructable Activation | `#rf-013-reconstructable-activation` | RF-013 | 275 | conserved | `REFERENCE_FRAME.md#rf-013-reconstructable-activation` |
+| &nbsp;&nbsp;RF-014 Capability Fit | `#rf-014-capability-fit` | RF-014 | 317 | conserved | `REFERENCE_FRAME.md#rf-014-capability-fit` |
+| &nbsp;&nbsp;RF-015 Residual Uncertainty | `#rf-015-residual-uncertainty` | RF-015 | 276 | conserved | `REFERENCE_FRAME.md#rf-015-residual-uncertainty` |
+| &nbsp;&nbsp;RF-016 Implementation Neutrality | `#rf-016-implementation-neutrality` | RF-016 | 280 | conserved | `REFERENCE_FRAME.md#rf-016-implementation-neutrality` |
+| &nbsp;&nbsp;RF-017 Proportional Compression | `#rf-017-proportional-compression` | RF-017 | 588 | conserved | `REFERENCE_FRAME.md#rf-017-proportional-compression` |
+| &nbsp;&nbsp;Engagement Atom And Semantic Prime | `#engagement-atom-and-semantic-prime` |  | 784 | conserved | `REFERENCE_FRAME.md#engagement-atom-and-semantic-atom` |
+| Human Frame-Set Declaration | `#human-frame-set-declaration` |  | 899 | conserved | `REFERENCE_FRAME.md#4-frame-set-declaration` |
+| &nbsp;&nbsp;Frame-Set Optimization | `#frame-set-optimization` |  | 1,283 | conserved | `REFERENCE_FRAME.md#frame-set-selection` |
+| Method Functions | `#method-functions` |  | 945 | conserved | `REFERENCE_FRAME.md#5-method-functions` |
+| Engagement | `#engagement` |  | 14 | not applicable: heading with no claim text (14 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Establish The Evaluation Basis | `#establish-the-evaluation-basis` |  | 385 | conserved | `ACTIVATION.md#intake` |
+| &nbsp;&nbsp;Applicability And Required Results | `#applicability-and-required-results` |  | 1,293 | conserved | `ACTIVATION.md#applicability` |
+| &nbsp;&nbsp;Select And Activate | `#select-and-activate` |  | 521 | conserved | `ACTIVATION.md#2-context-construction-under-an-envelope` |
+| &nbsp;&nbsp;Evaluate | `#evaluate` |  | 247 | conserved | `ACTIVATION.md#3-result-algebra` |
+| &nbsp;&nbsp;Return A Closed Result | `#return-a-closed-result` |  | 878 | conserved | `ACTIVATION.md#7-closed-result-and-reuse` |
+| &nbsp;&nbsp;Reconfigure When Necessary | `#reconfigure-when-necessary` |  | 527 | conserved | `ACTIVATION.md#4-totality-and-refinement` |
+| Using Frames In Conjunction | `#using-frames-in-conjunction` |  | 93 | conserved | `REFERENCE_FRAME.md#6-frames-in-conjunction` |
+| &nbsp;&nbsp;Independently Activated Co-Evaluation | `#independently-activated-co-evaluation` |  | 394 | conserved | `REFERENCE_FRAME.md#independently-activated-co-evaluation` |
+| &nbsp;&nbsp;Result Conjunction | `#result-conjunction` |  | 733 | conserved | `REFERENCE_FRAME.md#result-conjunction` |
+| &nbsp;&nbsp;Evidence Or Coordinate Translation | `#evidence-or-coordinate-translation` |  | 250 | conserved | `REFERENCE_FRAME.md#evidence-or-coordinate-translation` |
+| &nbsp;&nbsp;Material Composition | `#material-composition` |  | 459 | conserved | `REFERENCE_FRAME.md#material-composition` |
+| Frame Relations | `#frame-relations` |  | 1,131 | conserved | `REFERENCE_FRAME.md#7-frame-relations` |
+| Workspace Coverage | `#workspace-coverage` |  | 22 | not applicable: heading with no claim text (22 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Coverage Basis | `#coverage-basis` |  | 404 | conserved | `REFERENCE_FRAME.md#coverage-basis` |
+| &nbsp;&nbsp;Evaluation Inventory | `#evaluation-inventory` |  | 1,025 | conserved | `REFERENCE_FRAME.md#evaluation-inventory` |
+| &nbsp;&nbsp;Coverage Dimensions | `#coverage-dimensions` |  | 518 | conserved | `REFERENCE_FRAME.md#coverage-dimensions` |
+| &nbsp;&nbsp;Coverage Ledger | `#coverage-ledger` |  | 983 | conserved | `REFERENCE_FRAME.md#coverage-ledger` |
+| &nbsp;&nbsp;Interaction Coverage | `#interaction-coverage` |  | 282 | conserved | `REFERENCE_FRAME.md#interaction-coverage` |
+| &nbsp;&nbsp;Authority Coverage | `#authority-coverage` |  | 363 | conserved | `REFERENCE_FRAME.md#authority-coverage` |
+| &nbsp;&nbsp;Failure Coverage | `#failure-coverage` |  | 279 | conserved | `REFERENCE_FRAME.md#failure-coverage` |
+| &nbsp;&nbsp;High-Risk Separately Activated Coverage | `#high-risk-separately-activated-coverage` |  | 424 | conserved | `REFERENCE_FRAME.md#high-risk-separately-activated-coverage` |
+| &nbsp;&nbsp;Operational Full Coverage | `#operational-full-coverage` |  | 905 | conserved | `REFERENCE_FRAME.md#operational-full-coverage` |
+| Completeness Boundary | `#completeness-boundary` |  | 1,109 | conserved | `REFERENCE_FRAME.md#9-completeness-boundary` |
+| Discovery And Revision | `#discovery-and-revision` |  | 26 | not applicable: heading with no claim text (26 bytes); its children are disposed individually |  |
+| &nbsp;&nbsp;Missing-Frame Signals | `#missing-frame-signals` |  | 680 | conserved | `REFERENCE_FRAME.md#missing-frame-signals` |
+| &nbsp;&nbsp;Diagnostic Order | `#diagnostic-order` |  | 496 | conserved | `REFERENCE_FRAME.md#diagnostic-order` |
+| &nbsp;&nbsp;Revision Actions | `#revision-actions` |  | 604 | conserved | `REFERENCE_FRAME.md#revision-actions` |
+| Agentic Use | `#agentic-use` |  | 1,143 | conserved | `REFERENCE_FRAME.md#11-the-activation-packet` |
+| &nbsp;&nbsp;Minimal Frame Activation Binding | `#minimal-frame-activation-binding` |  | 1,458 | conserved | `REFERENCE_FRAME.md#minimal-activation-binding` |
+| &nbsp;&nbsp;Worked Binding: Product-Chain Drift Evaluation | `#worked-binding-product-chain-drift-evaluation` |  | 4,368 | not applicable: a non-normative worked example by its own statement; it carries no determination beyond the binding shape, which is conserved at REFERENCE_FRAME.md#minimal-activation-binding; its subject (product-chain drift) is tier-2 matter and a successor worked binding is produced by a qualification case against the owning tier-2 member |  |
+| Frame Qualification | `#frame-qualification` |  | 1,467 | conserved | `EVALUATION.md#frame-qualification` |
+| &nbsp;&nbsp;Method Self-Qualification | `#method-self-qualification` |  | 3,430 | conserved | `EVALUATION.md#method-self-qualification` |
+| Anti-Patterns | `#anti-patterns` |  | 1,485 | conserved | `REFERENCE_FRAME.md#12-violations` |
+| Minimal Frame Declaration | `#minimal-frame-declaration` |  | 1,086 | conserved | `REFERENCE_FRAME.md#minimal-frame-declaration` |
+| Minimal Frame-Set Declaration | `#minimal-frame-set-declaration` |  | 814 | conserved | `REFERENCE_FRAME.md#minimal-frame-set-declaration` |
+| Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | conserved | `REFERENCE_FRAME.md#minimal-evaluation-result` |
+| Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure` |
 
 ## RELEASE_METHOD.md
 

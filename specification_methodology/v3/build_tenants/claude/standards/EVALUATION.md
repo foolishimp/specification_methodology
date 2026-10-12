@@ -2,7 +2,8 @@
 
 Tier 1. Owns how claims are justified and accepted: claims, evidence,
 independent assessment, review results, acceptance, conformance of
-realisations, and the method's own qualification. Consumes
+realisations, and the qualification of frames and of the method itself.
+Consumes
 [FOUNDATIONS](FOUNDATIONS.md) and the result algebra in
 [ACTIVATION §3](ACTIVATION.md).
 
@@ -112,7 +113,42 @@ equality are not generic comparison criteria). A weak Σ that admits materially 
 behaviours either declares the latitude or is repaired before a
 decision-complete design is claimed.
 
-## 7. Qualification of the method itself
+## 7. Qualification of frames and of the method
+
+### Frame qualification
+
+A candidate frame ([REFERENCE_FRAME](REFERENCE_FRAME.md)) is qualified in
+proportion to its claims (P6, P2; provenance
+`stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#frame-qualification`).
+The minimum evaluation asks:
+
+1. Decision test: can a competent actor produce a result in the declared
+   algebra for representative in-domain evaluations?
+2. Reconstruction test: can a fresh competent actor activate the frame
+   from the declared packet without hidden history (RF-013)?
+3. Sensitivity test: do changes to declared material relations affect the
+   result where expected?
+4. Irrelevance test: do excluded unrelated changes leave the result stable
+   where expected?
+5. Basis test: does stale, mismatched or ambiguous basis information
+   invalidate or refuse the evaluation?
+6. Authority test: does frame selection preserve semantic and decision
+   authority and the exact inherited operation authority for every
+   material construction, transformation, admission, publication or
+   mutation?
+7. Counterexample test: does the frame detect the representative
+   historical or constructed violations it claims to cover?
+8. Capability test: can the declared actor class hold and operate the
+   frame within its envelope?
+9. Result-consumption test: can a declared consumer use the closed result
+   without importing hidden frame context?
+
+Qualification binds the exact frame revision, actor envelope, evaluation
+family, basis class and evidence conditions evaluated. It does not
+generalise to an unevaluated population by naming the frame generically
+(§1, the quantifier rule).
+
+### Method self-qualification
 
 The method is qualified the way it qualifies anything else: a fresh
 competent constructor, inside a declared envelope, using only the declared
@@ -130,6 +166,35 @@ for the reconstructability of the activation; the surfaces rule and the
 conditional withholding conserve
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
 qualification protocol.
+
+The qualification population is every function and failure relation the
+method claims (REFERENCE_FRAME §5), each with its required representative
+observations (P6):
+
+| Relation under qualification | Required representative observations |
+|---|---|
+| `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority and residual boundary; missing authority or evaluation basis refuses |
+| `activate` | activation with an exact subject and basis and a capable actor succeeds; stale, ambiguous, topology-mismatched, unauthorised and capability-incompatible activations refuse or return the applicable closed pressure |
+| `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame` and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |
+| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy and a declared veto return conflict, indeterminate or refusal without flattening frame meaning |
+| `translate` | preserved coordinates and provenance reach the target; declared loss stays explicit; identity, basis, authority or equality mismatch refuses |
+| `audit_coverage` | evaluation, interaction, semantic, operation and decision authority, failure, capability and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
+| `revise` | historical failure, topology mutation, evidence change and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction and coverage claim requiring reevaluation |
+| result consumption | a declared consumer uses one closed result without importing hidden frame context or authority; insufficient output produces a reconstructability failure |
+| material composition | a case requiring cross-frame execution declares composition, order where material, closure, failure and the conservation of semantic, operation and decision authority; a case not requiring composition stays uncomposed |
+
+One valid frame-set declaration and coverage result establishes only the
+`declare` and evaluated `audit_coverage` population; it proves activation,
+evaluation, conjunction, translation, revision, result consumption and
+material composition by no implication. Each relation is exercised through
+representative positive, boundary and falsifying cases. Qualification may
+be staged, and every verdict states the exact functions, frame revisions,
+actor envelopes, basis classes, result branches and evidence populations
+evaluated; an unevaluated function or branch stays open rather than
+inheriting a whole-method verdict (P6; §1). Prior exemplar frame sets or
+outcomes may serve as optional comparison evidence after freeze; they are
+not mandatory target answers unless the governing basis explicitly requires
+equivalence (§6).
 
 Recoverability benchmark (new; derived from P0 with the actor-change
 premise). For a selected activation, measure whether a fresh actor given
@@ -149,8 +214,17 @@ detected and the cost.
 | UP-001, UP-022 | conserved; §1, §3, §6 |
 | UP-008, RF-007, AC-018, AC-019 | conserved; §2 |
 | UP-007 | conserved; §3 |
-| RF-013, Method Self-Qualification, UP-022 qualification protocol | conserved; §7; the benchmark is new |
+| RF-013, UP-022 qualification protocol | conserved; §7; the benchmark is new |
+| RF frame qualification, method self-qualification | conserved; §7; rows in the table below |
 | UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5 |
 | Reconstruction Litmus | conserved; §6 |
 | TICKET judgment continuity | conserved via ACTIVATION §7 |
 | Baseline Reviewer and technical triage | conserved by reference; §4 states the result shape |
+
+RF rows received by this member (anchors into rc.2
+REFERENCE_FRAME_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #frame-qualification | conserved | §7 Frame qualification |
+| #method-self-qualification | conserved | §7 Method self-qualification |

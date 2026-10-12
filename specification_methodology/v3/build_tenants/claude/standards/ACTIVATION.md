@@ -1,30 +1,105 @@
 # ACTIVATION
 
-Tier 1. Owns how bounded work proceeds: the step, context construction under
-an envelope, the result algebra, totality, refinement, work state and
-restart, cost, and reuse. Consumes [FOUNDATIONS](FOUNDATIONS.md); adds no
-definitions.
+Tier 1. Owns how bounded work proceeds: the step (intake, admission,
+applicability, activation), context construction under an envelope, the
+result algebra, totality, refinement, work state and restart, cost, the
+closed result and reuse. Consumes [FOUNDATIONS](FOUNDATIONS.md) and the
+frame object of [REFERENCE_FRAME](REFERENCE_FRAME.md); adds no
+definitions. A route written `rc.2 RF #anchor` is into
+`stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md` and is
+provenance only.
 
 ## 1. The step
+
+A step is the activation of one reference frame, or one declared active
+frame configuration, on an exact subject (REFERENCE_FRAME §1, §11). Its
+context is the projection of that activated frame to the actor; the corpus
+or the workspace is never the context (P0; RF-002). Intake, admission,
+applicability and activation are distinct relations inside the step even
+when one invocation performs all of them.
+
+### Intake
 
 A step is activated from an intake sufficient to reconstruct its governing
 relations without conversation history, commentary or a prior actor's memory
 (P0, actor-change premise). The intake names:
 
-- the selected outcome, admitted prerequisite or experiment it serves (P2);
+- the governed outcome or decision: the selected outcome, admitted
+  prerequisite or experiment it serves (P2);
+- the exact workspace subject and basis, and the inputs it may acquire,
+  each by identity and hash or by an input commit;
+- the evaluation or evaluation family the step performs and its result
+  algebra (§3);
 - the affected relation set and the invariants that govern it;
-- the exact basis and the inputs it may acquire, each by identity and hash
-  or by an input commit;
-- the grant: the operations permitted, the territory that may change, and
-  the decisions reserved to others (P6);
-- the conditions that require re-entry at an owning relation;
+- the applicable frame-set, semantic, evaluation, operation where material,
+  and decision authority (FOUNDATIONS §2, authority kinds), and the grant:
+  the operations permitted, the territory that may change, and the
+  decisions reserved to others (P6);
+- the available actor capability envelopes;
+- the conditions that make the result stale or out of scope, and the
+  conditions that require re-entry at an owning relation;
 - where the governed question is capability fit or a cost claim, the
   allowance and how spend will be measured (§6).
 
 Conserves
-[UP-020 intake](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)
+[UP-020 intake](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020),
+[UP-018](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#invariant-reconstruction-sufficiency-stdo-up-018)
+and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
+
+### Admission
+
+Drafting a step's contract and admitting it are distinct relations, even
+inside one invocation that drafts, validates, admits and executes; no
+separate turn, carrier or approval ceremony is implied by the distinction.
+A contract is in one of the states drafted, admitted, rejected or
+superseded. Execution begins only after deterministic admission or an
+explicit human override of the exact contract. The drafting actor never
+infers admission from its own draft, from the presence of a carrier
+(ticket, sprint entry, work contract), from lane placement or from an
+`active` label. The admitted result identifies the admission mechanism and
+its authority, the exact contract identity or digest, the decision and the
+evidence, including any human override; absent those coordinates the
+contract stays drafted or rejected, and prose asserting admission is not
+admission evidence (P6; the actor cannot self-certify its own execution
+basis). Admission validates the contract against its cited outcome,
+prerequisite or experiment basis; it does not admit that basis, and
+drafting, admitting or retaining a contract creates or renews no authority
+its owner has not admitted (P6, P2). The admitted contract names one
+durable result and evidence surface; every result, withheld closure and
+residual obligation is recorded there before return, a conversation return
+alone is not durable evidence, and if no such surface is authorised and
+available, admission refuses (P4b). Absent or rejected admission returns
+the missing work authority without execution. Provenance:
+[work-carrier-to-execution rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule)
 and
-[UP-018](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#invariant-reconstruction-sufficiency-stdo-up-018).
+[execution contract admission](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-contract-admission);
+the selection of the carrier (ticket, sprint entry, run-scoped contract)
+is tier-2 law and lands in the TICKETS member, which disposes those rows.
+
+### Applicability
+
+The owning evaluation and scope declarations determine which frame
+obligations apply to the exact subject. Their declared predicates are
+evaluated from sufficient basis-bound facts: a true predicate requires the
+applicable evaluation and its result; a false predicate excludes only that
+obligation, under its cited authority; a missing or ambiguous premise
+leaves applicability unresolved, not false. A frame name, an available
+tool or a listed family triggers no activation by itself. Where
+applicability needs residual semantic judgment, that judgment and its
+evidence are retained as a judgment, never represented as a computed fact
+(P6, P1). A required result that is absent, stale, bound to another subject
+or basis, or incapable of establishing its claim cannot satisfy a dependent
+conjunction; unresolved applicability withholds the dependent claim until
+sufficient evidence or the owning decision resolves it; other applicable
+constraints stay in force even if only one evaluation detects them (P4b,
+P5). Qualification of an applicability rule distinguishes true, false and
+unknown premises, required results that are missing or bound to the wrong
+subject, and a sufficient positive result, under a finite declared fixture;
+a rule that always skips or always activates cannot satisfy those distinct
+expected outcomes (EVALUATION §7; rc.2 RF
+#applicability-and-required-results).
+
+### Output and roles
 
 The step's output is a candidate plus its step-produced facts: judgments with
 their evidence, residuals, observations, authority decisions, provenance, and
@@ -84,6 +159,16 @@ the actor's envelope B:
    from the actor's materialised view is neither licence to read elsewhere
    nor evidence that it is absent.
 
+Activation. The actor or the assigning authority selects one frame or one
+declared active frame configuration capable of the evaluation. Activation
+binds each reusable frame declaration to the exact subject and basis and
+loads the declared material relations and evidence sources, never an
+undifferentiated workspace dump; what the actor receives is the packet of
+REFERENCE_FRAME §11. When no available frame and actor pairing can lawfully
+perform the evaluation, activation returns a refusal or out_of_frame; work
+does not proceed through implied context (P0, P5; rc.2 RF
+#select-and-activate).
+
 The operation that joins AC-010, AC-011 and RF-002/003/004/014/017 into one
 procedure is new in this corpus (P0). The method does not require proving
 that no undiscovered material relation exists
@@ -115,6 +200,11 @@ Where evidence is missing because a relation or capability needed to obtain
 it was not declared, the result is out_of_frame; indeterminate is reserved
 for the case where the declared capability was exercised and the admissible
 evidence still cannot decide.
+
+Evaluation. The evaluator applies the activated frame's declared
+invariants, evidence rules and result algebra. It distinguishes semantic
+law, observed evidence, inference and decision, and records every
+assumption whose failure could change the result (P6; rc.2 RF #evaluate).
 
 A composite over several results declares its conjunction (FOUNDATIONS §4).
 The member it reports is chosen by that declared rule; every known failure
@@ -149,6 +239,15 @@ requires, and recorded either way. Some conditions are hard stops regardless
 of appetite: a violated invariant, an absent required authority, a missing
 declared capability, an undeclared irreversible effect, an explicit human
 gate (Ambiguity Governance, conserved).
+
+Reconfiguration. An out_of_frame, invalid_basis, repeated indeterminate or
+incompatible result causes one of: supply the missing admissible evidence;
+select another actor inside the frame's capability envelope; activate
+another existing frame; refine or extend a frame declaration; revise the
+frame set (REFERENCE_FRAME §10); change the evaluation; or re-enter the
+governing product or method relation. The disposition follows the cause; a
+difficult evaluation alone does not prove that another frame is required
+(P5, P2; rc.2 RF #reconfigure-when-necessary).
 
 Refinement. An outer transformation T: A → X with success predicates P₀ … Pₙ
 is faithfully refined by steps Tᵢ when each admitted input satisfying Pᵢ
@@ -224,7 +323,14 @@ Report volume is not model traffic; transferred context is counted across
 every delegated actor, not only the coordinator. No universal quota, ticket
 count, actor count or accounting carrier follows.
 
-## 7. Reuse
+## 7. Closed result and reuse
+
+A closed result identifies the frame and its activation, the subject, the
+basis, the evaluation, the actor, the evidence, the verdict, the residual
+uncertainty and the invalidation conditions (the minimal shape is
+REFERENCE_FRAME §13). The frame's internal working context is not
+transferred when the closed result and its provenance are sufficient for
+the consuming decision (P4b, P0; rc.2 RF #return-a-closed-result).
 
 A closed result is reused by an unchanged consumer after an applicability
 check; a role, conversation or resumption change alone invalidates nothing.
@@ -245,11 +351,25 @@ acquires its own evidence and supplies its own judgment. Conserves
 | UP-020 intake, cone, dispositions, checkpoint and continuation | conserved; §1, §3, §5; the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new |
 | UP-018 | conserved; §1 |
 | Probabilistic Work Boundary | conserved; §1 |
-| RF engagement functions (establish basis, select and activate, evaluate, return, reconfigure) | conserved; §1–§4 |
-| AC-010, AC-011, RF-002, RF-003, RF-004, RF-014, RF-017 | conserved; joined into the §2 operation (new); the step's local selection among fit options under an admitted grant is reframed from RF-014 |
-| RF-012, AC-007 | conserved; restated once in §3 |
+| RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
+| AC-010, AC-011 | conserved; joined with RF-002/003/004/014/017 into the §2 operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
+| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and points here |
+| TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
 | ODD graph functions | conserved; generalised in §4 to any realisation; PROFILES §2 keeps the ODD binding |
 | UP-017, UP-021 | conserved; §4 |
 | UP-014, UP-005, UP-019 | conserved; §6; the allowance rule is new |
 | Return A Closed Result, TICKET judgment continuity | conserved; §7 |
+
+RF rows received by this member (anchors into rc.2
+REFERENCE_FRAME_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #engagement | not applicable: heading with no claim text (14 bytes); its children are disposed individually | §1 |
+| #establish-the-evaluation-basis | conserved | §1 Intake |
+| #applicability-and-required-results | conserved | §1 Applicability |
+| #select-and-activate | conserved | §2 (Activation paragraph) |
+| #evaluate | conserved | §3 (Evaluation paragraph) |
+| #return-a-closed-result | conserved | §7 |
+| #reconfigure-when-necessary | conserved | §4 (Reconfiguration paragraph) |

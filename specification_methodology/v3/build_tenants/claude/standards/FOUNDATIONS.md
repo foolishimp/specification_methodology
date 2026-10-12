@@ -6,22 +6,34 @@ these definitions by reference and adds none of its own.
 
 ## 1. Vocabulary of standing
 
-A clause in this corpus has one standing relative to the rc.2 builder:
-
-- conserved: the rc.2 clause governs unchanged; the route is given;
-- reframed: the obligation is kept and restated at a different scope or
-  owner; the rc.2 clause continues to govern its own scope; the route and
-  the change are given;
-- superseded: an accepted successor relation replaces it; the route and the
-  successor are given;
-- new: no rc.2 clause states it; the requiring principle is given.
-
-A commitment has one standing relative to the others: recovered, derived
-(with named premises), independent (argued by non-entailment) or hypothesis.
-This is
+Every claim of the predecessor cut `stdo://releases/v2.5.1-rc.2/` receives
+exactly one disposition in this corpus. The frontier is the tenant copy of
+[PREDECESSOR_CLAIMS](../frontier/PREDECESSOR_CLAIMS.md), one row per
+predecessor section; the values are those of
 [UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
-applied to the corpus itself: an undisposed rc.2 obligation blocks
-qualification.
+applied to the corpus itself:
+
+- conserved: the claim is restated in this corpus's own text with every
+  determination the predecessor makes, and the locus names where; a route
+  to the predecessor is provenance, never the disposition;
+- superseded: an accepted successor relation replaces the claim; the
+  successor clause and what changed are named;
+- intentionally removed: Jim's decision as Product authority, with the
+  reason; no Writer records this value;
+- not applicable: the claim has no successor effect; the bounded reason is
+  given;
+- unresolved: the only other state; it blocks qualification of the
+  affected claim.
+
+A note that a conserved claim was reframed, carried at a different scope
+or by a different owner, is commentary on the carrying, never a
+disposition. A clause with no predecessor row is new law and names the
+purpose and material relation that require it. A commitment has one
+standing relative to the others: recovered, derived (with named premises),
+independent (argued by non-entailment) or hypothesis. Every clause names
+the principle (P0 to P6, §3) that requires it. This corpus is complete and
+applicable without the predecessor remaining operative; the predecessor
+stays the builder of this construction until a release decision.
 
 ## 2. Ontology
 
@@ -37,12 +49,12 @@ qualification.
 | Step | one bounded unit of work: intake, selected context, grant, execution, output | P0 |
 | Step-produced fact | a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable and is not one | P0, P4b |
 | Claim | an assertion with subject, property, basis, witness relation and falsifier | P6 |
-| Evidence | artifacts, events, observations used to evaluate a claim on a basis | P6 |
+| Evidence | the exact observations or artifacts admitted to evaluate a claim on a basis; each carries provenance, subject identity, basis and scope; evidence becomes neither semantic truth nor decision authority by being available inside a frame | P6 |
 | Judgment | a recorded evaluation over an unchanged subject, with evaluator, decision, evidence, scope and revising observation | P6 |
-| Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability | P6 |
+| Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability; its kinds are defined under Authority kinds below | P6 |
 | Residual | a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition | P4b |
-| Basis | the exact immutable set of definitions a step, claim or result binds; mixed bases need an explicit composite relation | P6 |
-| Material | of a relation, uncertainty or closure: its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
+| Basis | the exact state a step, claim, result or evaluation binds: every version, identity, time, topology, authority, configuration or evidence coordinate whose change can alter it; immutable, or moving with a declared way of detecting advancement and a declared condition for reevaluation; mixed bases need an explicit composite relation | P6, P3 |
+| Material | of a relation: its lawful change can change an evaluation's result, invalidate its basis, change the admissible evidence, or change who may perform or who may decide a material operation; of an uncertainty or closure: likewise; materiality is evaluation-relative, so a relation material in one frame may be irrelevant in another; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
 
 Dispositions: subject, representation and interpretation conserve
 [AC Interpretation And Models](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#interpretation-and-models)
@@ -69,6 +81,88 @@ Step and step-produced fact are reframed from the
 and
 [Return A Closed Result](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#return-a-closed-result)
 to the generic unit.
+
+### Frame objects
+
+The reference frame and the objects it binds are first-class in this
+corpus. Each is defined here once; [REFERENCE_FRAME](REFERENCE_FRAME.md)
+states the laws over them and [ACTIVATION](ACTIVATION.md) the step that
+activates one. Provenance for this subsection and the three that follow is
+`stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#definitions`
+and its child sections.
+
+| Term | Definition | Requires |
+|---|---|---|
+| Evaluation | a declared question whose admissible result family, evidence basis, decision authority and, where it performs a material action, operation authority are known; it may ask for a judgment, prediction, construction, comparison, proof, refusal, classification or action recommendation | P6, P2 |
+| Evaluation family | evaluations that need the same material-relation manifold, authority basis and result algebra; similar wording does not prove that two evaluations share a family | P1, P2 |
+| Workspace | the bounded body of material reasoned over or acted upon: constitutional sources, domain assets, designs, implementations, tools, runtime state, evidence, historical records, external dependencies and human decisions; broader than a repository, which is one possible carrier | P3 |
+| Material-relation manifold | the finite, jointly interpretable set of variables, entities, identities, states, relations, invariants, authorities, observations and exclusions an evaluation family needs; a bounded relation space whose coordinate charts may overlap; no geometric mathematics or runtime abstraction is implied | P0, P2 |
+| Coordinate | the complete local position from which a value, event, decision, observation or action is interpreted: the basis, identity, lineage, input, evidence and authority information the evaluation requires; equal names, values, shapes, locations or apparent topology positions do not establish coordinate equality, which follows a declared relation | P1, P3 |
+| Topology | the relation structure among the material entities, capabilities, authorities, lifecycle state spaces, adjacencies and seams visible to a frame at one basis; a frame need not hold the workspace's complete topology; a state-value change preserves the frame topology only when it preserves every such entity, relation, lifecycle, authority, capability, adjacency and seam, and a transition that changes any of them is a topology mutation that may invalidate the frame's coordinates | P3 |
+| Capability envelope | the competence, context capacity, tools, access, applicable evaluation- or assurance-independence conditions and configuration required to activate a frame and perform its evaluations; the same frame may be usable by one actor and unusable by another; actor capability may justify a different frame size or activation sequence and can neither waive an invariant nor widen authority | P0, P6 |
+| Reference frame | a finite specification of the attention, coordinates, authority, evidence and result relations required to perform one declared evaluation family over a stated basis; its components are the frame tuple below | P0 |
+| Activated frame | one frame declaration bound to an exact evaluation, workspace subject, basis, actor and evidence-acquisition boundary; a reusable declaration is not evidence that a particular activation was correct | P3, P6 |
+| Frame set | the human-declared family of frames available for a governed outcome or workspace; it may intentionally hold overlaps, alternatives, specialist frames, broad exploratory frames and separately activated assurance frames; it is not required to be a partition, tree, stack or exhaustive ontology | P6 |
+| Active frame configuration | the set of frame activations and declared result relations used for one evaluation or decision; one frame, or several disjoint, overlapping or composed frames; separately activated evaluations may be disjoint or overlapping | P4a |
+| Lens | a reusable family of questions applied across a frame configuration; authority, capability and reuse, temporal behaviour, transport and proof are lenses when named abstractly; a lens becomes a frame only when instantiated with a bounded evaluation, basis, material manifold, evidence, authorities, result algebra and capability envelope | P2 |
+| Role, persona, abstraction, component | a role allocates responsibility or authority; a persona alters an actor's approach or salience; an abstraction hides or contracts detail; a component is a structural part of a subject; each may help construct or activate a frame and none is a reference frame by identity alone; one component may appear in several frames and one frame may cross several components | P3, P6 |
+
+### Authority kinds
+
+Authority takes these kinds (P6): frame-set authority, the human authority
+that declares or accepts a project frame set; semantic authority, the
+owner of meaning for a material relation; evaluation authority, the role
+permitted to perform an evaluation; operation authority, the owner-issued
+grant to construct, transform, admit, publish or mutate a material subject
+where an evaluation performs such an operation; decision authority, the
+role permitted to accept, reject or otherwise dispose a result; and actor
+identity, the human, agent, tool or process performing the work, which is
+an identity and not an authority. These may coincide in a lawful case and
+never collapse by default. Declaring, selecting, activating or executing a
+frame grants no semantic, operation or decision authority. A read-only
+evaluation declares no operation authority; an effectful evaluation
+inherits the exact operation grant from its existing owner, and the frame
+does not create that grant. Human authority may act directly or through an
+explicitly admitted bounded proxy where the governing identity and
+authority law permits it; proxy identity and human-authority identity stay
+distinct (P6, P3).
+
+### Disjointness and independence
+
+Three relations stay distinct (P6, P1). Frame disjointness is structural:
+two frames share no material variable, coordinate, evidence or result
+dependency for the declared evaluations. Evaluation independence is
+procedural: separately activated evaluations neither consume nor influence
+one another's unclosed working results, although they may inspect the same
+subject, overlap in their manifolds and later supply closed results to one
+conjunction. Assurance independence is claim-relative: the governing
+assurance law states the non-authorship, evidence-acquisition,
+reference-exposure, actor and configuration separation a verdict needs to
+count as independent assurance (EVALUATION §3). Disjoint frames need not
+be independently evaluated; independently activated evaluations need not
+be disjoint; and the unqualified word "independent" establishes none of
+the three.
+
+### The frame tuple
+
+A reference frame F is the tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩
+(P0): Q the evaluation family; B the workspace and topology basis; M the
+material-relation manifold; C the coordinate and equality law; I the
+applicable invariant set; A the authority relation; E the admissible
+evidence and provenance law; X the exclusion and prohibited-assumption set;
+R the closed result algebra (ACTIVATION §3); J the invalidation and rechart
+condition; K the actor capability envelope; and D the optional set of
+declared dependencies, overlaps, inputs and outputs involving other frames.
+The tuple specifies the relation; it is not a required schema or runtime
+carrier (P2). Operationally a frame is an evaluation contract that defines
+the finite attention scope one evaluation family requires. A prompt, a
+context packet, a symbolic program or any other representation is a
+projection of an activated frame, not the frame (P1). A frame is bound
+when every material coordinate above resolves to an exact source, subject,
+basis, authority, evidence route, actor envelope, result relation and
+invalidation condition; the binding may be expressed entirely in
+source-linked prose, and representation cannot create, widen or replace it
+(P3, P6).
 
 ## 3. Commitments
 
@@ -209,7 +303,9 @@ traversal composition laws of any runtime.
 | AC-001 to AC-012, AC-014 to AC-019 | conserved by reference; AC-007 is restated in ACTIVATION §3 as the one result algebra |
 | AC-013 transformation record | conserved; its fields are the conservation accounting above |
 | AC-020 layer and release separation | conserved by reference; applied in SPEC_METHOD §6 |
-| RF-001 to RF-017 | conserved by reference; RF-012 restated in ACTIVATION §3; RF-002/003/014/017 consumed by ACTIVATION §2 |
+| RF definitions (#definitions and its 17 children) | conserved; restated in §2 (amended rows, frame objects, authority kinds, disjointness and independence, the frame tuple); rows in the table below |
+| RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
+| RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; consumed by EVALUATION |
 | UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and ACTIVATION §6 |
 | UP-015 | conserved; applied to this corpus in §1 |
@@ -218,3 +314,31 @@ traversal composition laws of any runtime.
 | UP-020 | conserved; consumed by ACTIVATION §1, §3, §5 |
 | Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by ACTIVATION §1 and §3 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |
+
+Rows of other members above still read "conserved by reference" from the
+first pass; each is rewritten to the §1 vocabulary at its member's
+activation.
+
+RF rows received by this member (anchors into rc.2
+REFERENCE_FRAME_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #definitions | not applicable: heading with no claim text (15 bytes); its children are disposed individually | §2 |
+| #evaluation | conserved | §2 Frame objects (Evaluation, Evaluation family) |
+| #workspace | conserved | §2 Frame objects |
+| #basis | conserved | §2 ontology table, Basis |
+| #material-relation | conserved | §2 ontology table, Material |
+| #material-relation-manifold | conserved | §2 Frame objects |
+| #coordinate | conserved | §2 Frame objects |
+| #topology | conserved | §2 Frame objects |
+| #evidence | conserved | §2 ontology table, Evidence |
+| #authority | conserved | §2 Authority kinds |
+| #disjointness-and-independence | conserved | §2 Disjointness and independence |
+| #capability-envelope | conserved | §2 Frame objects |
+| #reference-frame | conserved | §2 Frame objects and The frame tuple |
+| #activated-frame | conserved | §2 Frame objects |
+| #frame-set | conserved | §2 Frame objects |
+| #active-frame-configuration | conserved | §2 Frame objects |
+| #lens | conserved | §2 Frame objects |
+| #role-persona-abstraction-and-component | conserved | §2 Frame objects |
