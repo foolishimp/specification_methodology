@@ -17,15 +17,12 @@ with the predecessor no longer operative. Every frontier row receives one
 UP-015 disposition and, where conserved or superseded, a locus that
 resolves to the tenant's text.
 
-Two first-pass errors are retired. First, the governed question "does a
-whole-corpus draft fit one bounded activation" was a misunderstanding: the
-corpus is as large as the law requires; what fits an activation is a
-projected reference frame, never the corpus. Second, a route to the rc.2
-clause was treated as conservation (FOUNDATIONS §1: "conserved: the rc.2
-clause governs unchanged; the route is given"); under the standalone
-successor requirement a route is provenance and satisfies no disposition.
-The first-pass files are starting text where they already restate; each is
-rewritten at its member's activation; nothing is accepted by presence.
+Two first-pass errors are retired: the corpus is as large as the law
+requires; what fits an activation is a projected frame, never the corpus;
+and a route to the rc.2 clause (FOUNDATIONS §1) is provenance under the
+standalone successor requirement, not a disposition. The first-pass files
+are starting text where they already restate; each is rewritten at its
+member's activation; nothing is accepted by presence.
 
 ## Tiers and members
 
@@ -37,18 +34,24 @@ new exists only after its activation.
 
 | Member | Owes | Why a member |
 |---|---|---|
-| FOUNDATIONS.md | ontology, P0–P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 (construction order) |
+| FOUNDATIONS.md | ontology, C (proposed as P0) and P1 to P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 |
 | REFERENCE_FRAME.md, new | the frame as a first-class object: basis, manifold, envelope, frame, frame set, configuration, lens; RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |
-| ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality, reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |
+| ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality (UP-014), reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |
 | AXIOMATIC_CALCULUS.md, new | the a_c theory in full: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, exact identity, conformance obligations | the projection that produces every frame is defined here |
 | IDENTITY.md, new | scoped identity, uniqueness, type and stability, hierarchy, authority split, UP-004, parsing, version boundary | the tier receives IDENTITY_METHOD; cited too widely for a subsection |
-| EVALUATION.md | claims, evidence and authority law, independent assessment, review results, acceptance, conformance, qualification of the method | keeps its role; receives the generic evidence law and the reviewer-result law |
+| EVALUATION.md | claims, evidence and authority law, litmus, independent assessment, review results, acceptance, conformance, qualification of the method | keeps its role; receives the generic evidence law and the reviewer-result law |
+
+ACTIVATION section 3 is the one definition of the result algebra; RF-012
+(REFERENCE_FRAME) and AC-007 (AXIOMATIC_CALCULUS) restate their laws on it
+in their own words and define it nowhere else: two distinct predecessor
+claims over one definition, not a merged law; their unification stays the
+C2 question PRINCIPLES names.
 
 ### Tier 2, Spec Method
 
 | Member | Owes | Why a member |
 |---|---|---|
-| SPEC_METHOD.md | the particular method: constitutional chain, process constitution, manifesto, litmus, ambiguity governance, requirement and design law, change classes and re-entry, migration, UP-012 to UP-014 | keeps its role; carries every SPEC_METHOD clause that is not generic |
+| SPEC_METHOD.md | the particular method: constitutional chain, process constitution, manifesto, ambiguity governance, requirement and design law, change classes and re-entry, migration, UP-012, UP-013 | keeps its role; carries every SPEC_METHOD clause that is not generic |
 | PRODUCT_DEFINITION.md, new | the overlay and layout independence, STDO-SURFACE-001, bootstrap rule, a project's version boundary | a fifth of SPEC_METHOD; how one project binds to the method; the semantics the schemas and templates realise |
 | TICKETS.md, new | work carriers: ticket and sprint model, layout, authority, triage-first intake, closure by condition, migration, ticket shape | the tier owes carriers and triage; the first pass reduced 60 KB to one section |
 | ASSURANCE.md, new | evidence rules, verification layers, testing taxonomy, test authority, scenario bundles, path coverage, trace closure, the testing frame set, counterexample localisation, module-derived unit tests | the tier owes assurance and testing law; spread over three rc.2 members with no home |
@@ -76,7 +79,7 @@ mechanical.
 
 ## Member map
 
-| rc.2 member or group | Tenant member(s) that receive it |
+| rc.2 member or group | Tenant members that receive it |
 |---|---|
 | README.md | README; RELEASE (installed cut, store, manifest) |
 | AXIOMATIC_CALCULUS.md | AXIOMATIC_CALCULUS |
@@ -100,6 +103,7 @@ mechanical.
 | plugin (17) | `plugins/spec/`, each skill re-routed to its successor frames |
 | licence (1) | `LICENSE` at the candidate root |
 | release note (1) | `release/release-note.md`, written at the RC cut under RELEASE |
+| manifest (1) | written at the RC cut under RELEASE; schema in the schemas row |
 
 ## Disposition vocabulary
 
@@ -109,9 +113,9 @@ comparison finds the determination present), `superseded` (an accepted
 successor relation, named), `intentionally removed` (Jim's decision and
 reason) or `not applicable` (bounded reason); `unresolved` is the only
 other state and blocks qualification. Every clause carries the principle
-that requires it, P0 to P6 of [PRINCIPLES](PRINCIPLES.md) (P0 is the
-generative statement C), and may carry a provenance route into
-`stdo://releases/v2.5.1-rc.2/`; a route is provenance only. A clause with
+that requires it, C (proposed as P0) and P1 to P6 of
+[PRINCIPLES](PRINCIPLES.md), and may carry a provenance route into
+`stdo://releases/v2.5.1-rc.2/`. A clause with
 no predecessor row is new law, admitted only with the purpose and material
 relation that require it (criterion 6). `reframed` is a note on how a
 conserved claim was carried, never a disposition. A member's Writer fills the
@@ -154,14 +158,16 @@ One Writer activation per member or declared cone, in this sequence:
    and boundary.
 9. Guides, GLOSSARY and README.
 10. Packaging: the compressions' successor, schemas, templates, plugin,
-    licence, release note; closes before any RC cut.
+    licence, release note, manifest (RELEASE); closes before any RC cut.
 
 Each step: the Writer returns one closed result and disposes its cone's
-rows in the tenant frontier copy; a Reviewer of another model family is
-activated on every `candidate_ready`; the Executive disposes; the pen
-ledgers. Per-member proof is the contract's six criteria plus: links and
-anchors resolve; every clause has its principle; no profile term in tier 1
-or 2 outside a disposition note.
+rows in the tenant frontier copy; a Reviewer who is not the author, by
+default of another model family (same family is a declared exception,
+reason in the activation, marked on the result), is activated on every
+`candidate_ready`; the Executive disposes; the pen ledgers. Per-member
+proof is the contract's six criteria plus: links and anchors resolve; every
+clause has its principle; no profile term in tier 1 or 2 outside a
+disposition note.
 
 ## Cost
 
