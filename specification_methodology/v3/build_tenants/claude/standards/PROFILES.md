@@ -88,7 +88,7 @@ Nothing in the core depends on the construct being established.
 | rc.2 member | Disposition |
 |---|---|
 | ODD_METHOD | conserved in full in ODD (all 48 rows; its §21), indexed in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
-| TRAVERSAL_OCCURRENCE_PROFILE | conserved in full in TRAVERSAL_OCCURRENCE (all 25 rows; its Source dispositions), indexed in §2 |
+| TRAVERSAL_OCCURRENCE_PROFILE | restated in TRAVERSAL_OCCURRENCE (all 26 rows, 25 conserved and 1 superseded; its Source dispositions), indexed in §2 |
 | baseline runtime bindings | received with STDO_REFERENCE_FRAME_BASELINE by EXECUTIVE_BASELINE and disposed there |
 | DESIGN_MODULE_METHOD | restated in full in DESIGN_MODULE, which disposes its rows, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
 | UX_METHOD | conserved by reference in §4 |
