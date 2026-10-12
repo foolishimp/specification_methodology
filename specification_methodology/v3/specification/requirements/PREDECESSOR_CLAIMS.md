@@ -7,6 +7,8 @@ STDO 3 is the successor of the installed `stdo://releases/v2.5.1-rc.2/` (manifes
 
 Consolidated state: the Disposition and Successor locus cells below record the Claude tenant's accepted state at tenant commit `770c7f4` on `tenant/claude/c3-v3`, consolidated by the common pen after the Executive's acceptance recorded in [T-002-CLAUDE](../../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md). Loci are relative to `specification_methodology/v3/`. The Codex tenant's state is consolidated beside it when its line closes.
 
+Status of that state: each Claude-tenant disposition is text accepted on same-family review only. A cross-family review of tenant commit `195c6c6` returned changes requested (findings on shared result mappings, composition, the unexercised-capability rule, frame fidelity, actual-use acceptance and the formal fragment). Actual-use acceptance by a fresh actor is established only where checkpoint B tasks A, C, D, E and I were satisfied, and those become stale when the text they carry changes. No disposition here is accepted as final until that review's corrections land and are re-reviewed.
+
 ## Granularity and rules
 
 - One row per heading section of each rc.2 standard, at the member's digest below. A section's row covers the text under that heading up to the next heading of any level; a parent's row does not cover its children. Finer claims inside a section are disposed with it unless a tenant splits the row, which is recorded as a child row.
