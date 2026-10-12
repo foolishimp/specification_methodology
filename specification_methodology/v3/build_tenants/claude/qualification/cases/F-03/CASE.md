@@ -69,9 +69,8 @@ activation and its forks.
 - [CARD.md](CARD.md) (`237ea8f9…47b23`, 455 bytes): a byte-identical copy
   of F-02's routing card, itself a copy of F-01's. It carries no method
   content.
-- [TASK-A.md](TASK-A.md) (`2c545726bcf2…`, 3,589 bytes): project
-  `docs-site`, the F-02 task C subject with the write permissions and the
-  goals carrier stated. Work 1 is an exact one-run instruction with a
+- [TASK-A.md](TASK-A.md) (`c58fadb1dab3…`, 3,482 bytes): project
+  `docs-site`, the F-02 task C subject with the goals carrier stated. Work 1 is an exact one-run instruction with a
   complete admission record; Work 2 is a goals-wave outcome needing state
   across three sessions, with a self-labelled `admitted` contract naming
   the conversation as its result surface, a board card and no admission.
@@ -214,7 +213,7 @@ actor was started.
 
 | Step | Total bytes | System | Card | METHOD block | TASK block | Header |
 |---|---|---|---|---|---|---|
-| A-001 | 60,286 | 182 | 455 | 55,943 | 3,607 | 99 |
+| A-001 | 60,179 | 182 | 455 | 55,943 | 3,500 | 99 |
 | B-001 | 67,149 | 182 | 455 | 62,855 | 3,554 | 103 |
 | C-001 | 41,493 | 182 | 455 | 37,648 | 3,111 | 97 |
 | D-001 | 87,469 | 182 | 455 | 83,284 | 3,455 | 93 |
@@ -224,7 +223,7 @@ actor was started.
 | H-001 | 42,264 | 182 | 455 | 38,594 | 2,936 | 97 |
 | I-001 | 57,573 | 182 | 455 | 53,125 | 3,713 | 98 |
 
-All nine fit the cap; the total over nine steps is 524,293 bytes. The
+All nine fit the cap; the total over nine steps is 524,186 bytes. The
 `measured` events carried the frame digests `16bc90d75e96…`,
 `42a33da6a01e…`, `2148de3efe8a…`, `82bbd09ca1b4…`, `ec4402605256…`,
 `6c017de3956e…`, `c923a607c7fa…`, `b85f70562d36…` and `871c6d663f66…`, the
