@@ -24,7 +24,8 @@ A selected purpose U_foundation supplies an adequacy predicate and reserved valu
 An object O_subject supplies a scoped identity, boundary, current state and material
 relations. An interpretation context kappa_interpretation determines the meaning available to
 a consumer. A governing specification Sigma_contract declares obligations and admissible
-variation. A grant bounds who may act and decide. Observations and arguments
+variation. Operation authority bounds permitted effects; decision authority
+bounds disposition. These remain distinct source-owned relations. Observations and arguments
 support claims only on their declared subject and basis.
 
 The declared bounded context is `urn:stdo:bounded-context:foundations`.
@@ -32,8 +33,9 @@ Its owner is the STDO Specification Methodology Product authority. Its selected
 basis is this member's definitions at the exact member digest together with the
 cited source-owned clauses, bound under the activation's governing cut. Its scope
 is the locally defined explanatory symbols and explicitly scoped hypotheses,
-including the account in Orthogonal descriptions. Source-owned role and authority
-terms keep the explicit import addresses below. The context identity is stable
+including the account in Orthogonal descriptions. The authority vocabulary
+uses the explicit imports below. Named domain cases retain their source context
+and do not become local role or outcome definitions. The context identity is stable
 across location or permitted representation changes; a new digest still changes
 content and may change applicability.
 
@@ -99,18 +101,31 @@ including identity, basis, freshness and the predicate actually assessed.
 Source and target meanings are identical owner-qualified references, not new
 local definitions. Direction is from the named source to this explanatory
 context; loss is none and no translation or ownership transfer is asserted.
-Source owners remain the named methods; the target explanation remains with its
-Methodology authoring authority. Source and target basis are the same exact
-activation-bound governing cut and member coordinates. Lifecycle and adoption
-conditions remain those of the source; changed basis requires fresh applicability.
+The target semantic owner is the STDO Specification Methodology Product authority,
+the same owner declared above. The source context is declared by
+[Frame Method's Position](REFERENCE_FRAME_METHOD.md#position), whose owner is
+REFERENCE_FRAME_METHOD.md. The source basis is that member at SHA256
+`44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+The target basis is this member at its separately inventoried candidate digest.
+An activation binds each member's distinct coordinates in its selected complete
+governing basis; equal cut selection does not mean equal member coordinates.
+This unreleased candidate does not itself select an operative construction basis.
+Lifecycle and adoption remain source-owned. A changed member, selected basis,
+source declaration or adoption premise requires fresh applicability before use.
 
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|
-| Construction Reviewer | urn:stdo:bounded-context:reference-frame-evaluation | [Baseline complete engagement](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), in an adopted, lawfully activated construction engagement |
-| Decision and operation authority; existing grant | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority) and [RF-006](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation) |
+| Evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to evaluate |
+| Operation authority; operation grant | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): owner-issued permission for the specified material effects |
+| Decision authority; decision owner | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to dispose a result; "decision owner" names that authority's existing owner, not another role |
+| Human configuration authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority), [Human Frame-Set Declaration](REFERENCE_FRAME_METHOD.md#human-frame-set-declaration) and [RF-014](REFERENCE_FRAME_METHOD.md#rf-014-capability-fit): the existing frame-set authority, with no new permission implied |
 
 These are reference-only imports into urn:stdo:bounded-context:foundations.
-They provide no operation grant. An activation lacking the source meaning,
+They provide no semantic, evaluation, operation or decision authority. Baseline
+Reviewer/Worker examples and ODD runtime roles are direct, owner-qualified
+domain references; this context neither imports their role labels nor creates
+aliases or a common outcome type. Their linked contracts and adoption conditions
+remain necessary for any material domain use. An activation lacking the source meaning,
 adoption or authority binding reports that unresolved relation before dependent
 reliance rather than interpreting it from equal spelling.
 
@@ -161,7 +176,7 @@ and affected dependencies under [Computed Classification And Treatment](SPEC_MET
 action. This does not imply every side effect is idempotent. An uncertain effect
 must be observed, reconciled or returned unresolved before any repetition that
 could duplicate it. General logging supplies observability and audit and may support reconstruction.
-An adopted domain may assign stronger standing: within ODD, the bound ABG role
+An adopted domain may assign stronger standing: within [ODD](ODD_METHOD.md), the bound ABG role
 owns runtime truth and event replay; ledger and evidence admission retain the
 ABG/product owners declared by ODD. Those duties remain within ODD scope.
 Reloading all history is not a generic method requirement.
@@ -177,10 +192,11 @@ profile and lawfully activated the applicable engagement,
 owns its exact Reviewer/Executive application of the detailed laws. Other
 domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
 have distinct standing. A judgment binds a predicate, exact subject, basis,
-evidence, assessor and any required independence. An authority grant permits
-specified operations or decisions. Neither evidence shape nor actor capability
+evidence, assessor and any required independence. An operation grant permits
+specified effects; decision authority retains its separately bound mandate.
+Neither evidence shape nor actor capability
 mints a grant. In the selected construction engagement, a Reviewer judges and a decision
-owner disposes under its existing grant. Domain control such as ODD next-action
+owner disposes under its existing decision mandate. Domain control such as ODD next-action
 selection remains with its own named function; the explanation appoints none.
 
 Unknown applicability, missing context, incompatible basis and failed predicates

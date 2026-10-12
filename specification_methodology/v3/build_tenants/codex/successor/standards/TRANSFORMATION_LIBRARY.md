@@ -18,20 +18,39 @@ Its explanatory vocabulary resolves in bounded context
 `urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
 Methodology Product authority. The basis is this exact member digest and its
 cited source-owned contracts under the activation's governing cut; its scope
-is the whole member's explanatory families. A linked family correspondence
+is the explanatory families and the explicitly imported authority vocabulary.
+Named domain examples retain their source context; their role labels, types and
+outcome enums are not local definitions or a shared library contract. A linked family correspondence
 uses that context, while each named source function keeps its own context and
 contract. Equal spelling is no equivalence or import. One function may have
 several correspondences: this account is neither a partition nor a hierarchy.
 
-The reference-only imports of Construction Reviewer and decision/operation
-authority use the source concepts, contexts and owners in
-[Foundations' import table](FOUNDATIONS.md#reference-only-semantic-imports).
-Their target is urn:stdo:bounded-context:transformation-library; source and target
-meanings are identical owner-qualified references. Direction is source to
-explanation, loss is none, basis is the same exact activation-bound cut/member,
-source ownership and lifecycle/adoption remain unchanged. The target is owned
-by this explanatory account's Methodology authoring authority. Missing bindings
-remain unresolved; the import supplies no grant or local replacement definition.
+## Reference-only semantic imports
+
+The target context is urn:stdo:bounded-context:transformation-library and its
+semantic owner is the STDO Specification Methodology Product authority.
+Direction is source to this explanation; meanings are unchanged owner-qualified
+references, with no translation, loss, inverse or ownership transfer. The source
+context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
+Its exact source member SHA256 is
+`44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+The target has its own separately inventoried member digest. An activation binds
+each member's distinct coordinates in its selected complete governing basis.
+The candidate selects no operative construction basis. Changed member, basis,
+source declaration or adoption premise invalidates reliance until applicability
+is re-established. Source lifecycle and adoption conditions remain unchanged.
+
+| Referenced concept | Source context | Exact source concept and owner |
+|---|---|---|
+| Evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to evaluate |
+| Operation authority; operation grant; authorized effectful actor | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): actor carrying the existing owner's exact permission for the specified effects |
+| Decision authority; decision owner | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): role permitted to dispose a result and its existing owner |
+
+These imports provide no semantic, evaluation, operation or decision authority.
+Missing meaning or authority bindings remain unresolved before dependent use.
+The named Baseline Reviewer and WorkerResult cases below are owner-qualified
+domain examples, not imported local role labels, aliases or outcome types.
+Their source contracts retain applicability, adoption and activation conditions.
 
 ## Bind
 
@@ -67,8 +86,8 @@ Other judgment domains retain their admitted result algebras. Where required,
 the assessor is independent of authorship. A result mints no new grant. A
 domain-owned judgment or control function may exercise acceptance, closure or
 next-action authority already bound by its contract, as in a_c admission or ODD
-evaluate_action/evaluate_next. A Reviewer instance retains its evaluation-only
-grant and cannot perform a reserved owner decision.
+evaluate_action/evaluate_next. A Baseline Reviewer instance retains only its
+source-defined evaluation authority and cannot perform a reserved owner decision.
 
 For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that

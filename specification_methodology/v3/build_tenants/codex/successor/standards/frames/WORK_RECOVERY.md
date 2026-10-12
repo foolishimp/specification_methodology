@@ -7,9 +7,10 @@ Every excerpt keeps its source adoption, independence, result, frontier, closure
 and proof conditions. A digest-bound view conveys no operation or acceptance
 authority; changed source pins require refresh or supported applicability.
 
-Acquire only the material owner relations for the selected claim. If this view
-exceeds the available context, report the pressure and use a lawfully configured
-smaller relation or sufficient actor; do not omit a coupled requirement.
+This selection makes no material-sufficiency claim. Its separate activation and
+the source owners determine required coupled material and any lawful response
+to insufficient capability; this preface supplies no response or selection grant.
+
 
 
 Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `76897691b91a05c4a3756d8c6d0bae336684c09096daa67166e0b4e785f0626d`.

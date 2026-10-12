@@ -79,4 +79,4 @@ for view in index.get('source_linked_summaries', []):
     view['sha256'] = sha(target)
     view['bytes'] = target.stat().st_size
 index_path.write_text(json.dumps(index, indent=2) + '\n')
-print('Compression pins, four excerpt views and source-linked summary refreshed; no semantic verdict inferred.')
+print('Compression pins and five excerpt views refreshed; no semantic verdict inferred.')
