@@ -1,0 +1,74 @@
+# console log for qualification/runs/F-03/20261012T152535Z-G-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:25:35Z
+# step G-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152535Z-G-0R2 --step-id G-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD ux-replay=a_c/set-6/projection-ux-replay-materialized.json" --block "TASK=qualification/cases/F-03/TASK-G.md" --model sonnet
+**1. B1, B2, B3**
+
+- **B1 goes through the membrane.**
+  - Update is pure: it returns `selected = id` and the Cmd `FetchTides(id)`. `fx.ts` interprets that one declared Cmd and delivers `TidesLoaded(result)` as a Msg.
+  - The rules are the Elm process model, effects only at the membrane, and the membrane interpreting one declared Cmd.
+  - Nothing needs to move.
+- **B2 is outside the membrane.**
+  - The view's click handler performs I/O (`api.saveFavourite`) and then sets a view-local signal `isFav`. No Msg is emitted, and State has no favourites field.
+  - Three rules decide it:
+    - The effects-only-at-the-membrane rule, because the I/O is outside the membrane.
+    - The view-does-not-own-continuation rule, because `isFav` is hidden state that a Msg replay cannot reproduce.
+    - The rejected-realisation list, because the view mutates state outside the typed reducer.
+  - The fix has four parts:
+    1. The view emits `FavouriteToggled(id)`.
+    2. Update adds a favourites field to State and returns the Cmd `SaveFavourite(id)`.
+    3. `fx.ts` interprets that Cmd and returns the outcome as a Msg. The declared Msg set has no save-outcome Msg yet, so one must be added.
+    4. The view projects the star from State, and `isFav` is deleted.
+- **B3 is outside the membrane.**
+  - The `createEffect` is not interpreting a declared Cmd. It branches on the offline flag to decide a state transition, and it calls `fetch` itself, which duplicates `FetchTides`.
+  - The rules are the one-declared-Cmd rule (a handler that decides state transitions is a violation) and the effects-only-at-the-membrane rule.
+  - The branch moves into Update's `StationChosen` handling:
+    - If the station is offline, Update sets an offline-banner field in State and returns no Cmd.
+    - Otherwise it returns `FetchTides(id)`.
+    - The `createEffect` is removed. The fetch stays in `fx.ts`.
+  - `ShowOfflineBanner` is not in the declared Msg set, so either it is declared or the banner becomes State.
+
+**2. The replay proof**
+
+- **What it establishes:** For the choose-station path, Update reproduces the expected final State and the Cmd sequence `FetchStations`, `FetchTides(s-12)`. The proof includes the success and failure Msgs and a fixed clock. This is a pass for that path.
+- **Whether continuation has not leaked:** The proof does not show this for the surface.
+  - It exercises only the reducer and `fx.ts`.
+  - It never touches the B2 click handler or `isFav`.
+  - It never touches the B3 effect, whose own `fetch` and offline branch bypass Msg.
+  - Replaying the log against an empty State cannot reproduce the favourite star or the B3 behaviour, so the Msg-replay test fails for those parts.
+- **Coverage:** Only one of the two interaction families, choosing a station, is covered. The favourites family has no proof, and `replay/` holds no other file.
+
+**3. The debug pane**
+
+- **Governed or exempt:** It is governed by default, and it is not lawfully exempt. It is reachable from the product shell, and it can mutate data the station-picker reads, which is product truth. Either trigger alone governs it.
+- **Exemption records present (six of the seven items):**
+  1. Scope ("debug pane only").
+  2. Permitted operations (view cache, clear cache).
+  3. Mutation bounded (to cache clear).
+  4. Visible `DEBUG` label.
+  5. Superseding surface ("Cache settings").
+  6. Retirement condition ("when Cache settings ships") with owning ticket `T-55`.
+- **Exemption record missing:** The non-closure condition that stops release while the scaffold remains.
+- **Behaviour against the record:** The pane can overwrite cached tide data, which exceeds the recorded "view cache, clear cache" operations and the "bounded to cache clear" mutation limit. So the bounded-mutation record does not match the behaviour.
+- **Consequence:** Without all seven records the pane stays governed. Evaluations of it proceed under the §15 table.
+
+**4. Verdicts the closure claim reaches**
+
+| Verdict | Core member | Counterexample |
+|---|---|---|
+| Violation (§13 pattern present) | falsified | B2 (view I/O and local state, no Msg) and B3 (effect-handler controller with a conditional state decision and its own fetch) |
+| Compliant (§4 to §10 hold, no pattern present) | satisfied only if it holds, so it fails | Not reached: B2 and B3 defeat it. The pending ruling between the two compliance tests does not matter, because the failure holds under either. |
+| Replay proof passes (§8) | satisfied | None. The pass is real but covers only the choose-station family and cannot support closure alone. |
+| Closure claimed without the §8 proof (§12) | falsified | The favourites family, which has no replay proof. No UX sprint is open and no exemption is recorded, so this is not escrow. The §11 accessibility declarations are not stated in the facts, so no verdict is given on them. |
+| Debug pane, if it is claimed in scope | falsified (no proof, no valid exemption) | Its cache overwrite, which has no Msg-replay proof and no valid exemption. |
+
+Overall, the closure claim for release 1.4 is **falsified**.
+
+**No method source**
+
+- The §13 failure-pattern list is referenced but not supplied. I could not map B2 and B3 to numbered patterns, and I could not check whether "pattern 13" or any other pattern applies.
+- The §11 accessibility obligations and §14 review questions are not supplied. I could not decide whether the design module is incomplete (`invalid_basis`).
+- The method does not say whether saving a favourite is "product-truth-changing". It also does not say whether the typed-contract bindings of §7 are declared. I could not evaluate the blocked-for-want-of-a-carrier verdict.
+- The ruling on which compliance test applies (§4 Realisation discretion or §12) is pending with Jim and is not supplied.
+# step exit 0
+# end 2026-10-12T15:26:07Z

@@ -1,0 +1,34 @@
+# console log for qualification/runs/F-02/20261012T152211Z-C-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:22:11Z
+# step C-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-02/20261012T152211Z-C-0R2 --step-id C-0R2 --card qualification/cases/F-02/CARD.md --block "METHOD carrier-and-admission=a_c/set-6/projection-carrier-and-admission-materialized.json" --block "TASK=qualification/cases/F-02/TASK-C.md" --model sonnet
+## Work 1
+1. **Carrier selection.** WI-14 is an exact work instruction from Sofia, so upstream work authority exists. No ticket or sprint covers the work, and it ends in this run with nothing surviving, so row 5 applies. The execution-contract source is an intake-drafted run-scoped contract (EC-1). The durable-ticket decision is no durable ticket.
+2. **Contract state.** EC-1 is admitted. All the coordinates are present in `runs/2026-10-12-ec1/admission.json`, which is the surface the product definition binds for run-scoped work:
+   - Mechanism: `admit.py 2.1`.
+   - Authority: `docs-admission`, delegated by Sofia.
+   - Contract identity: digest `sha256:3c…41`, which matches EC-1.
+   - Decision: `admitted`.
+   - Evidence: `admit.py` log line 7.
+3. **Execution.** Execution may begin now, within EC-1's territory only: the one link on the install page. The method does not require a ticket here, so the agent creates none.
+
+## Work 2
+1. **Carrier selection.** I take GW-7 (owner Sofia, current) as the upstream work authority; see the gap below. No ticket covers the work, and no sprint is open. The migration spans three sessions and the migrated and remaining pages must be known at the start of each later session. That is independent state beyond the run, so row 3 applies. The execution-contract source is one durable ticket plus the run-scoped contract EC-2. The durable-ticket decision is that the ticket is created only under ticket-state authority, which is Marco's. The agent has none and must not create it.
+2. **Contract state.** EC-2 is drafted, not admitted. Its own `status: admitted` text, its card in the `In progress` lane, and the drafting agent's own view are not admission evidence, and the agent cannot self-certify. Only the digest `sha256:9a…07` exists, and nothing records it as admitted. These coordinates are missing:
+   - Admission mechanism: no `admit.py` output exists.
+   - Authority: `docs-admission` has not acted.
+   - Decision: none is recorded.
+   - Evidence: none exists.
+   - A valid admitted-result record: no file under `runs/` or `tickets/` refers to EC-2.
+
+   The contract's named result surface is this conversation, which is not a durable surface. Admission would refuse on that ground alone.
+3. **Execution.** Execution may not begin. The agent returns the missing work authority and admission without executing. It must not rely on the board card; it should withdraw the card or mark it as non-evidence. Before returning, the agent carries the surviving obligation, which is the record of which pages are migrated and which remain. No sprint is open and the agent lacks ticket-state authority, so it records the obligation in an already-authorised enclosing carrier: a record under `runs/`, the bound surface for run-scoped work. It marks closure as withheld on ticket-state authority. It returns the re-entry in two steps:
+   - Marco creates the durable ticket for the 40-page migration.
+   - EC-2 is redrafted with a durable result surface under `runs/` or `tickets/` and then run through `admit.py` under `docs-admission`.
+
+## No method source
+- Whether a goals-wave outcome such as GW-7 counts as upstream work authority for specific work. The method names only an "exact product-authorised work instruction" as sufficient and a generic request as insufficient. If GW-7 does not qualify, Work 2 falls to row 1: no contract is admitted and no ticket is created.
+- Whether `runs/` counts as the "already-authorised enclosing carrier" when the contract's own named surface (the conversation) is invalid. I assumed it does because the product definition binds it.
+- The tracker's lane semantics and how to withdraw the board card. The method only says a lane is not admission evidence.
+# step exit 0
+# end 2026-10-12T15:22:31Z

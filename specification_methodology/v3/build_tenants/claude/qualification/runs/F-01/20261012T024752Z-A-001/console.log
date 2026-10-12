@@ -1,0 +1,143 @@
+# console log for qualification/runs/F-01/20261012T024752Z-A-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T02:47:52Z
+# calibrate: python3 -I qualification/instruments/bounded_step.py --run-dir qualification/runs/F-01/20261012T024752Z-A-001 --calibrate --model sonnet
+CALIBRATION calibrate: context_tokens=2247 on 235 input bytes; reply='ok'
+# calibrate exit 0
+# step A-1: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-01/20261012T024752Z-A-001 --step-id A-1 --card qualification/cases/F-01/CARD.md --block "METHOD frame-declaration-and-activation=a_c/set-2/projection-frame-declaration-and-activation-materialized.json" --block "TASK=qualification/cases/F-01/TASK-A.md" --model sonnet
+## Part 1: Frame declaration
+
+**Frame: F-ledger-export-E1 (revision 1)**
+
+**Evaluation Family**
+- Question: on build `b-120`, does the trailer count equal the source table's row count at export time?
+- Predicate: trailer count = row count of `ledger_rows` at export time, under R-3 as Mara owns its meaning.
+- Result algebra: satisfied, falsified, indeterminate, out_of_frame, invalid_basis.
+
+**Subject And Basis**
+- Workspace: `W-ledger-export`, service `ledger-export`.
+- Subject: the exporter at `b-120`.
+  - Commit `c0ffee12`, file `exporter.py`, SHA-256 `5f1a…9c2e`.
+  - The hash is truncated in the record, so it cannot be fully resolved.
+- Configuration: `export.yaml` revision 14.
+- Database: production table `ledger_rows`, reads served by a read replica since 2026-10-09 (lag up to 30 s).
+- Time of the claim: 2026-10-11T16:00Z.
+- The basis is moving (the table and replica state change). The subject does not state a way to detect advancement.
+- Missing: the isolation level of the read transaction, and the export time for any export of `b-120`.
+
+**Material Manifold**
+- Entities: the exporter, the read transaction, the streamed rows, the `SELECT COUNT(*)` result, the trailer line, the primary, the replica, the table.
+- Relations:
+  - R-3: the trailer carries the source count at export time.
+  - D-3: the count is taken after streaming, inside the read transaction.
+  - CHG-2026-1009: reads moved to the replica.
+- States: replica lag ≤ 30 s.
+- Interaction: the count's table state depends on which database is read and when.
+
+**Coordinates And Equality**
+- Equality is by declared identity only: commit `c0ffee12` = build `b-120`.
+- Build `b-118` (commit `b7a1d3e0`) is a different coordinate.
+- The "source table" in R-3 is not declared as primary or replica.
+- "At export time" is not declared as the transaction start, the stream end, or the count time.
+
+**Invariants**
+- R-3 (owner: Mara).
+- D-3 as a design statement (owner: Deon for the code).
+- Evidence about one build is not evidence about another.
+- Nothing is coerced to satisfied.
+
+**Authorities**
+- Frame-set authority: not stated in the subject.
+- Semantic authority: Mara, for the meaning of R-3.
+- Evaluation authority: not stated in the subject. This actor is invoked to evaluate.
+- Operation authority: none. The evaluation is read-only.
+  - Changes to `exporter.py` or `export.yaml` belong to Deon.
+  - Database configuration belongs to Priya.
+- Decision authority: Mara, for the release decision.
+
+**Evidence**
+- Admissible sources: V1, V2 and V3 as provenance-bearing records.
+- Exclusions:
+  - V1 for `b-120`: it was run on `b-118`.
+  - V2 as a comparison: no primary count was recorded and the build is not named.
+  - Claim K itself as evidence.
+
+**Capability Envelope**
+- Competence and context: the record in this frame (measured 250,977 bytes against a cap of 400,000, so it fits).
+- Access and tools: read-only access to the record.
+  - No access to run `b-120`, no database access, no CI.
+  - No access to `exporter.py` contents beyond the commit and hash identity.
+- Independence: not stated.
+- Configuration: not stated.
+- Missing: the attention and time dimensions.
+
+**Boundary And Exclusions**
+- Irrelevant material: other tables, other services, the CSV body rows beyond the trailer.
+- Prohibited assumptions:
+  - That `b-118` tests carry over to `b-120`.
+  - That the 2026-10-10 export came from `b-120`.
+  - That the replica count equals the primary count.
+  - That the isolation level is snapshot.
+- Out-of-frame conditions:
+  - Evidence is needed from running `b-120` or from querying the primary or replica.
+  - R-3's meaning is needed on primary versus replica.
+
+**Optional Frame Relations**
+- Used: none.
+- E2 and E3 are separate evaluations. They are not conjoined here, and their outputs are not assumed.
+
+**Invalidation And Recharting**
+- Any new build or commit.
+- A change to `export.yaml` (the current revision is 14).
+- A change of replica or primary routing, or of lag.
+- A new export record naming its build together with a paired same-time source count.
+- Mara's clarification of "source table" and "export time".
+
+**Qualification**
+- Representative cases: the three V1 tests, V2.
+- Known residuals:
+  - The tests check a 25-row fixture.
+  - The trailer in V2 is unverified against any source.
+  - No qualification tests have been run against this frame.
+- Counterexamples: none recorded. Their absence is not evidence of completeness.
+
+## Part 2: Frame Evaluation Result
+
+**Frame Evaluation Result**
+- Frame identity and revision: F-ledger-export-E1, revision 1.
+- Activation identity: ACT-E1-b120-2026-10-11T16:00Z.
+- Evaluation: E1, as declared above.
+- Subject and basis: the exporter at `b-120`, commit `c0ffee12`, `export.yaml` revision 14, production `ledger_rows` read via the replica, time 2026-10-11T16:00Z.
+- Actor and capability envelope: a bounded actor with read-only access to the record and no ability to run the build or query the databases.
+- Semantic authority: Mara. Evaluation authority: not stated. Operation authority: none (read-only). Decision authority: Mara.
+- Admissible evidence:
+  - V3, which is true of the replica move and its lag.
+  - V1 as a record that three tests passed on `b-118`.
+  - V2 as a record that one trailer value was produced.
+- Result: **out_of_frame**
+- Inference relation:
+  - V1 binds `b-118` on a 25-row fixture, so it does not bear on `b-120` or on production.
+  - V2 names no build and gives no source count to compare with, so it cannot show equality or inequality.
+  - V3 shows that the table state read now comes from a lagging replica. D-3's count and R-3's "source table at export time" both depend on that state, but whether they agree needs the isolation level and the meaning of the terms, which are not declared.
+  - Deciding E1 needs a `b-120` export paired with a same-time source count. Obtaining that needs capability this frame does not declare, so the result is out_of_frame, not indeterminate.
+  - Neither satisfied nor falsified is supported.
+- Residual uncertainty:
+  - The build behind V2 is unknown.
+  - The isolation level is unknown.
+  - Whether R-3 means primary or replica is unknown.
+  - The truncated hash is unverified.
+  - Whether the code at `c0ffee12` implements D-3 as written is unverified.
+- Invalidation conditions: as declared in Invalidation And Recharting.
+- Consuming decision or conjunction: Mara's release decision. No conjunction with E2 or E3 is declared.
+
+## Claim K
+
+This result says that claim K, "R-3 is satisfied on `b-120`; the export is ready to ship", cannot be supported on the evidence in this frame. It does not say that R-3 is violated, and it does not make a release judgement. Mara disposes claim K, the meaning of R-3 and the release; the code and configuration remain with Deon, and the database configuration with Priya.
+
+## No method source
+
+- The METHOD block does not give the actor's envelope values or the evaluation and frame-set authority holders. The subject does not either, so they are marked as not stated.
+- The METHOD block does not say how to record the fit test for the attention, time and capability dimensions. This is its own declared residual. I recorded only the byte measurement for the context.
+- Stable local identities (`F-ledger-export-E1`, `ACT-E1-…`) were composed by me, because the method asks for stable identities but supplies none.
+# step exit 0
+# end 2026-10-12T02:48:27Z

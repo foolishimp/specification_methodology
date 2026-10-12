@@ -1,0 +1,78 @@
+# console log for qualification/runs/F-03/20261012T152420Z-C-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:24:20Z
+# step C-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152420Z-C-0R2 --step-id C-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD identity-scoped=a_c/set-6/projection-identity-scoped-materialized.json" --block "TASK=qualification/cases/F-03/TASK-C.md" --model sonnet
+**Part 1: Lawfulness of identity use (facts 1 to 4)**
+
+1. **Unlawful.** The engine would be imposing a domain grammar on domain-owned objects, and it would be silently inventing meaning.
+   - The current identity is authority `field-notes` domain (and the owning lab scope), kind `requirement`, value `REQ-7`.
+   - The proposed `runloop:req:<uuid>` puts the engine in the authority position for a requirement. That changes the authority coordinate.
+   - Parsing the digits of `REQ-7` into a priority field gives the value a semantic reading that the domain never defined. The domain defines how its ids are parsed or read.
+   - The old id is replaced with no explicit relation between old and new. This breaks the stability clause.
+   - A lawful alternative is for the engine to transport `REQ-7` unchanged. A domain-defined mapping, with the old-to-new relation made explicit, could also be used.
+
+2. **Unlawful.** The scope coordinate is collapsed.
+   - The two identities are (`lab-a`, requirement, `REQ-7`) and (`lab-b`, requirement, `REQ-7`). Both are live, they are the same kind, and they sit in different authority scopes.
+   - Each is lawful inside its own scope. The flat file keyed only by `REQ-7` drops the authority coordinate. That creates an accidental collision and makes the two indistinguishable.
+   - The serialisation must keep the hierarchy, for example by including the lab scope in the key. Any aliasing across scopes must be explicit.
+
+3. **Unlawful.** Kinds are collapsed in two ways.
+   - `REQ-F2` is a requirement_family identity (authority `field-notes`, kind `requirement_family`, value `REQ-F2`). The report treats it as a concrete requirement ("requirement REQ-F2 satisfied"). The method does not treat a family identity as a concrete requirement identity.
+   - `2.1.0` is a release version. It is used as the identity of the dashboard object. A release version is not object identity.
+   - The dashboard object needs its own scoped identity. The kind that applies is not given in the facts. The release can be identified separately as kind `release`, value `2.1.0`.
+   - The report also leaves out the authority and scope for both identities.
+
+4. **Unlawful.** The relation between the old and new objects is missing.
+   - The identities are (`field-notes`, requirement, `REQ-9`) for the retired object and (`field-notes`, requirement, `REQ-9`) for the new one.
+   - The same authority, kind and value now name two different objects. Identity was silently reused for a different object.
+   - The id must not be reused. If the new requirement needs a link to the old one, the relation (supersession or retirement) must be explicit. Otherwise a new value should be issued.
+   - The scope is not given in the facts. If it is a lab scope, that coordinate is also unstated.
+
+**Part 2: Ownership**
+
+- **Run ids** (`r-8f3a2c`): the engine `runloop` owns them. Runs are runtime-owned objects. `runloop` may generate opaque ids with its own rules, optimised for uniqueness, replay safety and event-stream integrity. The domain may carry and reference them. It may not impose a semantic grammar on them, and it should not reinterpret them.
+- **Event ids** (`e-000193`): the engine `runloop` owns them, on the same basis as run ids. The counter-based generation is lawful. The domain may transport and reference them. It should not invent meaning from the counter.
+- **Requirement ids** (`REQ-7`): the `field-notes` domain owns them (scoped per lab). The domain defines the kinds, what makes each unique, and how each is parsed. The engine may transport them. It must not replace them, mint substitutes, or read meaning into them silently.
+- **Acceptance criterion ids** (`AC-7.1`): the `field-notes` domain owns them, with the same rights and limits as requirement ids. The domain also owns the meaning of the `7.1` structure. The engine may carry them without parsing the structure. Any link to `REQ-7` is a domain relation, and the engine must not infer it.
+
+**Part 3: Authority conservation (events a to d)**
+
+- **(a) Conserved.** Only the display label changed. Authority is not a label. Its identity is owner Dana, kind acceptance, subject `field-notes` release candidates, scope all version lines, basis `PD-3`, and none of that changed. The rename is lawful as long as nothing is derived from the label. No decision is needed. A correct record would keep the authority's identity separate from its label. It could note the rename as a presentation change, with both labels linked to the same authority identity.
+
+- **(b) Widened.** Authority was reconstructed from capability and reachability, and the scope was widened.
+  - The proxy grant covers patch candidates on the 2.1 line, and it excludes minor and major lines. `2.2.0-rc.1` is a minor line, so it is explicitly excluded.
+  - The grant also has no delegation rights. Omar is not the proxy, and his engineering identity is not a grantee.
+  - The wrapper `gatekeeper` lets any engineer use the token, so reachability stands in for authority. That is forbidden.
+  - The acceptance is not valid under this grant.
+  - Lawful acceptance would need an explicit decision. Either Dana decides directly, or she issues a new grant naming the grantor, the actor, the subject, the scope that includes the 2.2 line, permitted and excluded decisions, validity, delegation rights, revocation and provenance. The wrapper may only restrict or faithfully carry the existing grant. For example, it could allow only `accept-bot` and only patch candidates on 2.1 within the validity period.
+  - A correct record would show the acting identity as Omar calling through `gatekeeper`. It would show that no authority basis exists, or it would cite the new decision.
+
+- **(c) Reconstructed, with the actor identity conflated.** The scope itself was in bounds. `2.1.4-rc.2` is a patch candidate on the 2.1 line. The date (today is 2026-10-13) is within validity, the grant is dated 2026-10-02, and no revocation is reported.
+  - The record lists the acting identity as `Dana`. Dana is the human authority. The actor was `accept-bot`. Proxy actor identity and human-authority identity must stay distinct.
+  - The mode is missing. The record must show proxy mode.
+  - A correct record would contain these coordinates:
+    - source: Dana's authority, with basis `PD-3`, via the proxy grant (provenance `M-12`)
+    - subject: `2.1.4-rc.2`
+    - acting identity: `accept-bot`
+    - mode: proxy
+    - scope: patch candidates on the 2.1 line
+    - change class: patch
+    - disposition: accepted
+    - supersession: none, if none applies
+
+- **(d) Widened.** The proxy claimed an independence it cannot confer.
+  - Raj wrote `CH-40` and reviewed it himself. That is implementer self-review.
+  - Proxy authority does not make implementer self-review independent. The record "independent review: yes, by proxy of Dana" widens the proxy past its grant. Recording it did not make it so.
+  - Dana's grant, as recorded, does not give the bot authority to declare review independence.
+  - The acceptance of the candidate may stand only as an acceptance decision within scope. That depends on whether its patch scope is in bounds, which the facts do not say. The independence claim has no basis.
+  - A correct record would show the review as self-review by Raj, with the reviewer identity and mode stated. It would show the independence claim as not met, and it would show the acceptance with the proxy's scope. Alternatively, an actual independent reviewer is required before the acceptance. Any independence claim must rest on a separate explicit authority decision with its own basis.
+
+**No method source**
+
+- The METHOD block does not say which kind applies to the dashboard object in fact 3. The release kind is given, but a kind for dashboard objects is not.
+- It does not say whether `REQ-9`'s authority scope is the product or a lab.
+- It does not say what a conforming serialisation looks like for the flat export file. It only says the hierarchy must be preserved.
+- It does not say whether an acceptance within grant scope can stand when an independence claim in the same record is false. That question comes from event (d).
+- It does not state what standard is used to test the validity window or the revocation status on the date of event (c). I used today's date and the facts given.
+# step exit 0
+# end 2026-10-12T15:24:45Z

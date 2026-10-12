@@ -1,0 +1,151 @@
+# console log for qualification/runs/F-01/20261012T151929Z-A-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:19:29Z
+# step A-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-01/20261012T151929Z-A-0R2 --step-id A-0R2 --card qualification/cases/F-01/CARD.md --block "METHOD frame-declaration-and-activation=a_c/set-6/projection-frame-declaration-and-activation-materialized.json" --block "TASK=qualification/cases/F-01/TASK-A.md" --model sonnet
+## Part 1: Frame declaration
+
+**Frame: F-E1-ledger-export-trailer-count (revision r1, declared for this task)**
+
+**Evaluation Family**
+- Question E1: on build `b-120`, does the trailer count equal the source table's row count at export time?
+- Predicate: trailer integer == row count of the source table at export time, as R-3 defines it.
+- Closed result algebra: satisfied, falsified, indeterminate, out_of_frame, invalid_basis.
+- Nothing is coerced to satisfied.
+
+**Subject And Basis**
+- Workspace: `W-ledger-export`, service `ledger-export`, file `exporter.py`.
+- Commit: `c0ffee12`, which is build `b-120`.
+- File SHA-256: `5f1a…9c2e`. Only the abbreviated hash is stated; the full hash is missing.
+- Configuration: `export.yaml` revision 14.
+- Database: production table `ledger_rows`. Since 2026-10-09 reads come from a read replica with documented lag of up to 30 s.
+- Time of claim: 2026-10-11T16:00Z.
+- Basis status:
+  - Code and config are immutable coordinates.
+  - The table is a moving basis. No advancement-detection method or reevaluation condition is stated for it.
+  - The basis mixes build `b-118` evidence with a `b-120` subject, with no composite relation declared.
+- Missing: the export run's own coordinates (build, replica position or snapshot, export start and end times) and the transaction isolation level.
+
+**Material Manifold**
+- Entities: `exporter.py`, `export.yaml`, the read transaction, the streamed rows, the `SELECT COUNT(*)`, the trailer line, the primary, the replica, and `ledger_rows`.
+- Relation from D-3: open read transaction → stream rows → `COUNT(*)` → write count as trailer.
+- Relation from R-3: the trailer carries the source row count at export time.
+- Interaction: replica lag of up to 30 s.
+- Missing: whether `COUNT(*)` runs in the same transaction snapshot as the streamed rows, and whether "source table" means the primary or the replica.
+
+**Coordinates And Equality**
+- Two row counts are equal only if they are taken at a declared common table state, such as the same snapshot or the same replica position.
+- Equal integers from different states do not establish equality.
+- Build identity is by commit hash, not by label or date.
+- Missing: the declared relation between "export time" and a replica position.
+
+**Invariants**
+- R-3 (meaning owned by Mara).
+- D-3 as the design under evaluation.
+- Every result binds its exact subject and basis (RF-005).
+- Evidence about a different build or table is not evidence about this one.
+
+**Authorities**
+- Frame-set: not stated.
+- Semantic: Mara, for the meaning of R-3 (including primary versus replica).
+- Evaluation: not stated. This actor evaluates only as a candidate evaluator.
+- Operation: Deon for `exporter.py` and `export.yaml`; Priya for database configuration.
+- Decision: Mara, for the release decision.
+
+**Evidence**
+- Admissible sources are V1, V2 and V3, each used only for what its provenance and basis support.
+- Provenance: CI run 4471, OPS-391, CHG-2026-1009.
+- Exclusions: claim K itself is not evidence. A green test label is not acceptance.
+- Missing: any record of the primary's or replica's row count at export time, and the build of the V2 export.
+
+**Capability Envelope**
+- This actor has only the text of this card and the subject facts.
+- It has no repository, database, CI or log access, and cannot run tests or queries.
+- Evaluation independence from the claim owner: not stated.
+- Fit test: attention, time and capability measures are not stated.
+
+**Boundary And Exclusions**
+- Irrelevant: other tables and other consumers.
+- Prohibited assumptions:
+  - V2 ran on `b-120`.
+  - The primary's count equalled the trailer.
+  - Tests on a 25-row fixture predict production behaviour.
+  - Replica lag is zero.
+  - `COUNT(*)` shares the stream's snapshot.
+- Out of frame: anything needing a query, a run, or the code of `exporter.py` itself. The code is not given.
+
+**Optional Frame Relations**
+- E2 supplies a build-applicability judgement of V1.
+- E3 supplies a table-state judgement about the replica move.
+- Both are used only as declared inputs. No outputs are consumed here, and they are not evaluated in this result.
+
+**Invalidation And Recharting**
+- Any new commit, a change to `export.yaml`, or a change to the replica, lag or isolation level.
+- New evidence for V2's build or the true row count.
+- A semantic ruling from Mara on "source table".
+- Any of these makes this frame or its results stale.
+
+**Qualification**
+- Representative case: a fixture table, which V1 covers for `b-118`.
+- Counterexample class: writes landing between streaming and `COUNT(*)`, or replica lag.
+- Known residual: no production-grade evidence tied to `b-120`.
+
+## Part 2: Frame Evaluation Result
+
+**Activation:** `RFA-E1-ledger-export-b120-2026-10-11T16:00Z`. This is a local label assigned for this task. The frame was bound to the E1 subject and basis stated in Part 1.
+
+- **Frame identity and revision:** F-E1-ledger-export-trailer-count, r1.
+- **Activation identity:** RFA-E1-ledger-export-b120-2026-10-11T16:00Z.
+- **Evaluation:** E1. On `b-120`, does the trailer count equal the source table's row count at export time?
+- **Subject and basis:**
+  - Subject: `exporter.py` at `c0ffee12` (`b-120`), config `export.yaml` r14, production `ledger_rows`.
+  - Basis: replica reads since 2026-10-09 with lag up to 30 s; claim time 2026-10-11T16:00Z.
+  - The table state is moving and has no declared detection method.
+- **Actor and capability envelope:** a no-tools actor working only from the card and task text. It cannot run queries, tests or code.
+- **Authorities:**
+  - Semantic: Mara.
+  - Evaluation: not stated.
+  - Operation: Deon for code and config, Priya for the database.
+  - Decision: Mara.
+- **Admissible evidence:**
+  - V1: three green tests on `b-118`, against a 25-row fixture. It is not about `b-120` and not about the production table, so it bears on E1 only as weak, build-mismatched evidence of design intent.
+  - V2: a production export trailer of 1,204,311 on 2026-10-10. The build is unstated and no reference count was recorded, so it cannot support or refute equality.
+  - V3: the replica move, which establishes possible lag but not a measured discrepancy.
+- **Result:** `indeterminate`.
+- **Inference relation:**
+  - Law: equality needs a count taken at a common declared table state (Coordinates And Equality).
+  - Observation: V1 matches a fixture on another build. V2 has a trailer but no reference count and no build. V3 shows a lag window.
+  - Inference: no admissible observation puts `b-120`'s trailer and the source count at the same table state, so neither satisfied nor falsified follows.
+  - Not returned:
+    - `satisfied`: nothing was observed against the `b-120` production state.
+    - `falsified`: no counterexample was observed. Lag is a possibility, not an observation.
+    - `invalid_basis`: considered. The code and config coordinates are exact, and the shortfall is missing evidence rather than a basis that cannot support the evaluation. The moving table state is carried as an assumption below.
+    - `out_of_frame`: partly applicable. "Source table" (primary or replica) and the transaction snapshot relation are undeclared relations. This result names `indeterminate` as the member returned. The undeclared-relation ground is recorded under the out_of_frame residual and is not excluded.
+- **Assumptions whose failure could change the result:**
+  - V2 ran on `b-120`.
+  - `COUNT(*)` shares the read transaction's snapshot.
+  - "Source table" means the replica's state as read.
+  - The fixture behaviour generalises.
+- **Residual uncertainty:** the evidence that would decide is:
+  1. A `b-120` production export with the build id and export start and end times.
+  2. The row count from the same replica at the same snapshot, or the primary's count if Mara rules that is the referent.
+  3. Confirmation that `COUNT(*)` runs in the same transaction snapshot as the stream (isolation level, from `exporter.py` and the DB configuration).
+- **out_of_frame residual** (recorded because it is a lawful secondary ground; the result member remains `indeterminate`):
+  - Missing relation: the meaning of "source table at export time" under replica reads, and the snapshot relation between stream and count.
+  - Owner: Mara for the meaning; Deon for the code; Priya for the database configuration.
+  - Reconfiguration pressure: add the replica-versus-primary semantic ruling and the snapshot relation to the frame's Material Manifold and Coordinates sections.
+- **Invalidation conditions:** as in the frame's Invalidation And Recharting section. That includes any commit, config, replica or isolation-level change, a new export run, and a semantic ruling.
+- **Consuming decision or conjunction:** Mara's release decision on claim K. Any conjunction with E2 and E3 is not performed here.
+
+## Claim K
+
+This result does not support "R-3 is satisfied on `b-120`" and does not refute it. On E1 it returns `indeterminate`, and it says nothing about "ready to ship". Mara owns the meaning of R-3 and the release decision, so she disposes of K. Deon and Priya own the code and database changes that could supply the missing evidence.
+
+## No method source
+
+- The METHOD block gives no rule for choosing between `invalid_basis` and `indeterminate` when a moving basis has no declared advancement detection. It draws the boundary only for `out_of_frame` versus `indeterminate`.
+- It gives no scheme for stable frame or activation identity strings or revision numbering. I assigned the labels above.
+- It does not say how to record the fit test on the attention, time and capability dimensions (residual `fit-test-is-not-operationalised`).
+- It does not say how E1, E2 and E3 combine into a verdict on claim K.
+- It does not say who the evaluation authority is when none is named. I wrote "not stated".
+# step exit 0
+# end 2026-10-12T15:20:09Z

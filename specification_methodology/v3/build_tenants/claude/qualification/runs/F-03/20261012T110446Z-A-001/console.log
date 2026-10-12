@@ -1,0 +1,70 @@
+# console log for qualification/runs/F-03/20261012T110446Z-A-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T11:04:46Z
+# step A-001: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T110446Z-A-001 --step-id A-001 --card qualification/cases/F-03/CARD.md --block "METHOD carrier-retention=a_c/set-5/projection-carrier-retention-materialized.json" --block "TASK=qualification/cases/F-03/TASK-A.md" --model sonnet
+## Work 1
+
+1. **Carrier selection.**
+   - **Upstream authority:** `WI-14` is an exact, product-authorised instruction from Sofia. It supplies the upstream work authority for a one-run contract.
+   - **Matching row:** Row 5. Authority exists, and no admitted ticket or sprint covers the work. The work ends in this run and needs no surviving state.
+   - **Contract source:** an intake-drafted run-scoped contract, `EC-1`.
+   - **Durable-ticket decision:** no durable ticket.
+2. **Contract state: admitted.** All the coordinates are present in `runs/2026-10-12-ec1/admission.json`:
+   - Mechanism `admit.py 2.1` under authority `docs-admission`. This is the mechanism and authority the product definition binds.
+   - Contract digest `sha256:3c…41`, which is the digest of `EC-1`.
+   - Decision `admitted`.
+   - Evidence: `admit.py` log line 7.
+   - The result sits on the contract's named durable surface, `runs/2026-10-12-ec1/`, which is the surface the product definition binds for run-scoped work.
+3. **Execution may begin now.** It is limited to `EC-1`'s territory and closure criterion: the one link target on the install page, with nothing else touched. Closure is checked against `EC-1`'s link-check proof.
+4. **Surviving obligation: none.** The result of the run is recorded in `runs/2026-10-12-ec1/` before return. That is the contract's result record, not a carried obligation.
+
+## Work 2
+
+1. **Carrier selection.**
+   - **Upstream authority:** the selected outcome in `GW-7` ("every page carries the v2 frontmatter format"), owned by Sofia and current. I treat this as the upstream work authority (see `No method source`).
+   - **Matching row:** Row 3. No exact admitted ticket covers the work, and no sprint is open, so the local carrier boundary is the current run. The work needs independent state beyond this run: three sessions, with migrated and remaining pages known at each later session's start.
+   - **Contract source:** one durable ticket plus a run-scoped contract.
+   - **Durable-ticket decision:** a ticket is required. It may be created only under ticket-state authority, which is Marco's. The agent holds none, so it must not create it.
+2. **Contract state: drafted.** It is not admitted. The "admitted" text in `EC-2`, the `In progress` card and the lane are the agent's own prose and carrier placement. They are not admission evidence, and the agent may not infer admission from its own draft. Missing coordinates:
+   - **Mechanism and authority:** no `admit.py` run and no `docs-admission` decision exists.
+   - **Contract digest:** `sha256:9a…07` exists only on the draft, not in any admitted result.
+   - **Decision:** none.
+   - **Evidence:** none. No file under `runs/` or `tickets/` refers to `EC-2`.
+   - **Durable result surface:** the named surface is the conversation, which is not durable evidence. With no authorised surface, admission refuses.
+   - Admitting `EC-2` would also not admit `GW-7`'s basis. That belongs to Sofia.
+3. **Execution may not begin.** Execution needs admission or an explicit human override of the exact contract, and neither exists. No pages are migrated. The agent returns the missing work authority and admission without executing:
+   - No ticket covers the work.
+   - Marco, who holds ticket-state authority, must create the ticket.
+   - `EC-2` must be re-drafted from that ticket with a durable result surface under `runs/`.
+   - `admit.py` must then admit it, with the result and coordinates recorded.
+   - The agent does not create the ticket or treat the card as admission.
+4. **Surviving obligation: yes.** Migrating the 40 pages, with the migrated and remaining sets, must outlast the run.
+   - **Place:** a new run record directory `runs/2026-10-12-ec2/`, named as `EC-2`'s result and evidence surface in place of the conversation. It must not be written into `EC-1`'s directory.
+   - **Why this place:**
+     - A sprint-local entry is unavailable because no sprint is open.
+     - `tickets/` is the correct long-term carrier but needs ticket-state authority, which the agent lacks. Where that authority is absent, the obligation is kept in the contract's named durable result surface.
+     - `runs/` is the product-bound durable result and evidence surface for run-scoped work.
+     - `GOALS.md` is Sofia-only, and goals are not the unit of execution tracking.
+     - The board lane is not a bound carrier and not evidence.
+     - The conversation is not durable.
+   - **What the agent records there:**
+     - The obligation: migrate all 40 pages to v2 frontmatter under `GW-7`, expected over three sessions.
+     - The state: 0 pages migrated, 40 remaining (list the pages by name).
+     - `EC-2`'s digest `sha256:9a…07` and its state, drafted and not admitted, with the missing coordinates above.
+     - A note that the "admitted" text and the board card are not evidence.
+     - Closure marked withheld on ticket-state authority, and also on admission.
+     - The required re-entry:
+       - Marco creates the ticket for the exact work.
+       - The agent derives a fresh run-scoped contract from it.
+       - `admit.py` admits it.
+       - Execution then proceeds.
+       - Later sessions read the ticket.
+
+## No method source
+
+- Whether a selected outcome in a current goals wave counts as the agent's upstream work authority for a run. The method names an exact instruction and the selected outcome as authority sources, but not who confirms it for the agent. I assumed it does.
+- The exact path and format of `EC-2`'s result record. `runs/2026-10-12-ec2/` is my analogy to `EC-1`.
+- Whether a Worker may write under `runs/`. The product binds it, and `EC-1` shows it in use.
+- What to do with the misleading board card, such as removing or correcting it.
+# step exit 0
+# end 2026-10-12T11:05:19Z

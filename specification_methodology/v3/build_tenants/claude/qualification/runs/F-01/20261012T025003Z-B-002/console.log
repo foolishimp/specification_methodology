@@ -1,0 +1,95 @@
+# console log for qualification/runs/F-01/20261012T025003Z-B-002
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T02:50:03Z
+# calibrate: python3 -I qualification/instruments/bounded_step.py --run-dir qualification/runs/F-01/20261012T025003Z-B-002 --calibrate --model sonnet
+CALIBRATION calibrate: context_tokens=2246 on 235 input bytes; reply='ok'
+# calibrate exit 0
+# step B-2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-01/20261012T025003Z-B-002 --step-id B-2 --card qualification/cases/F-01/CARD.md --block "METHOD coverage-and-revision=a_c/set-2/projection-coverage-and-revision-materialized.json" --block "TASK=qualification/cases/F-01/TASK-B.md" --model sonnet
+## 1. Coverage ledger: Coverage(W-notify, G, B, E, S, T)
+
+B = commit `9e1d2f44` with config rev 41. T = 2026-10-11T12:00Z. Operation authority is "none (read-only)" in every row, because the subject says no evaluation mutates anything.
+
+| Field | E1 | E2 | E3 |
+|---|---|---|---|
+| evaluation | No message is sent twice for one event. | Schema v7 consumers accept v8 payloads. | The retry policy bounds total sends to three per event. |
+| provenance | NR-2 | NR-5 | D-9 |
+| subject and basis | Commit `9e1d2f44` at config rev 41. The closed result is bound to rev 39, so it is stale for B. | Schema revisions 7 and 8. | Config rev 41. The closed result is bound to rev 39, so it is stale for B. |
+| selected frames | F-A | F-B | F-A |
+| actor envelope | Engineer with repository access and the staging replay harness. | Any actor with the two schema files. | Engineer with repository access and the staging replay harness. |
+| semantic authority | Lena | Lena | Platform team |
+| operation authority | none | none | none |
+| decision authority | Tomas (release) | Tomas (release) | Tomas (release) |
+| evidence | Held: replay of 10,000 events on 2026-10-10 with zero duplicates, on rev 39. Needed: a replay on rev 41. | Held: contract test of 2026-10-09, `satisfied`. | Held: a `satisfied` result of 2026-10-10 on rev 39. Needed: a re-evaluation on rev 41. |
+| dependencies | Shares config rev with E3. | None stated. | Shares config rev with E1. |
+| status | `conditionally_covered` | `covered` | `conditionally_covered` |
+| residual | The retry window changed from 60 s to 300 s at 08:00Z on 10-11. Whether that changes duplicates is not shown, so the old result is invalidated before reliance and kept as predecessor. F-A's declared family is "on one commit" and names no config coordinate. | Not in the subject: whether the schema files are unchanged at `9e1d2f44` since 10-09. The route from NR-5 to G is not stated. | Same as E1: the old result is invalidated and preserved. Condition to lift: re-activation on rev 41. |
+
+| Field | E4 | E5 | E6 |
+|---|---|---|---|
+| evaluation | The dead-letter queue is empty before release. | The rate limiter drops no events under a burst of 500/s. | Every consumer verifies webhook signatures. |
+| provenance | Release checklist item 7 | Post-mortem of INC-77 | Security obligation SEC-3 |
+| subject and basis | Not exact. See the residual. | Not stated in the subject. A burst of 500/s is the load; no commit or config is bound. | Not stated. |
+| selected frames | F-C and F-A, both activated, with no combining rule. | None. No declared frame is shown to be capable. | None. No frame's family includes it. |
+| actor envelope | F-C: operations lead with dashboard access. F-A: engineer with repository access and the replay harness. Whether log inspection sits inside F-A's envelope is not stated. | Missing: the required competence and context are not stated. | Missing. |
+| semantic authority | Missing: the owner of the checklist item's meaning is not recorded. | Missing: not recorded. | Ari |
+| operation authority | none | none | none |
+| decision authority | Tomas for the release. No decision rule owns the conjunction of the two results. | Missing for this evaluation: only Tomas's release authority is recorded. | Missing: unrecorded. |
+| evidence | F-C: dashboard showed 0 messages at 09:00Z, `satisfied`. F-A: log inspection showed 12 messages stuck in `dlq-shadow` at 09:30Z, `falsified`. | None. A burst test would be needed; none is described. | None. |
+| dependencies | F-A and F-C overlap on the same evaluation. | Not stated. | Not stated. |
+| status | `conflicted` | `uncovered` | `uncovered` |
+| residual | See below. | The historical failure INC-77 stays a coverage input until a frame detects or excludes its recurrence. The route to G is not stated. | No decision owner. The set is not closed for this row. Nothing records an exclusion by authority, so `excluded_by_authority` does not apply. The route to G is not stated. |
+
+E4 residual:
+- **Different coordinates.** The two results come from different times (09:00Z and 09:30Z), different sources (dashboard and logs) and differently named queues (the dead-letter queue and `dlq-shadow`). Whether `dlq-shadow` is the queue E4 names is not decided.
+- **No rule.** No rule combines the two results.
+- **Surviving failure.** The `falsified` result survives and cannot be discarded by the `satisfied` one.
+- **Unknown.** Whether a wider log window would make the question decidable.
+
+**Composite for G at T:**
+- Success cannot be projected.
+- Surviving failures and gaps: E4 `falsified` (unresolved conflict); E1 and E3 invalid for B; E5 and E6 uncovered.
+- Operational full coverage cannot be claimed for this tuple.
+- E4, E5 and E6 are not authority-closed.
+
+## 2. Diagnostic order for the signal
+
+The signal combines "reviewers expand context without a decidable question" and "two actors use the same frame name but evaluate different relations".
+
+1. **Was the correct declared frame activated?** Partly established.
+   - F-C fits E4, since it covers queue state at a named time.
+   - F-A's declared family is sender delivery on one commit. The subject does not say whether F-A was declared as an alternative for E4, so this is `unknown`.
+   - Both frames are declared members of S, so this question does not locate the defect.
+   - F-A's `falsified` result must not be discarded on frame-fit grounds. A counterexample found by one contributor survives.
+2. **Were the subject and basis exact?** No.
+   - E4's subject is not pinned to one queue coordinate.
+   - The two results are bound to different times and sources.
+   - Apparent equality ("the dead-letter queue", "delivery") does not establish coordinate equality.
+
+I stop here because question 2 locates the defect. It explains the symptoms. Each actor said "evaluated delivery" about a different relation. A wider log window cannot settle a question whose subject is undefined. Questions 3 to 8 are not answered.
+
+The visible absence of a combining rule (question 6) is recorded in the ledger as the reason E4 is `conflicted`. It is not the first defect, because there is nothing coordinate-equal to combine yet.
+
+## 3. Revision action
+
+**Action:** clarify activation or evidence acquisition.
+
+**What it changes:** F-C's declaration, as a new frame revision. It fixes the queue coordinate set and the named observation time for E4, and it makes F-A's E4 observation use the same coordinates and time. The meaning of which queues E4 names must come from E4's semantic owner, who is not recorded. The acting frame cannot decide it.
+
+**What it reopens:**
+- F-C's E4 activation (`satisfied`).
+- F-A's E4 activation (`falsified`). It is re-run on the corrected coordinates, and its predecessor is preserved.
+- The E4 coverage claim and its `conflicted` status. A combining rule is still needed after the re-run.
+- The Coverage(W, G, B, E, S, T) claim at T, because S changes. Any release composite for G that relied on E4 is reopened with it.
+
+**What it does not reopen:** F-B's E2 activation and F-A's E1, E3 and E5 activations are untouched by this revision.
+
+E1 and E3 are stale for a separate cause, the config advance to rev 41. They need re-activation on rev 41 regardless.
+
+## No method source
+
+- **Status for a stale result.** The METHOD block does not say which of the seven statuses fits a result whose basis has advanced. It says only that the result is invalidated before reliance. I chose `conditionally_covered` for E1 and E3.
+- **Unrecorded owners.** It does not say how to treat a missing semantic or decision owner. It says only that the row is not closed. I recorded these as "missing".
+- **Mapping to a revision action.** It does not map a diagnostic stopping point to a specific revision action. I chose "clarify activation" from the cause.
+- **Domain facts.** Whether `dlq-shadow` is the dead-letter queue, and whether the retry window is material to E1 and E3, are subject facts the method does not decide.
+# step exit 0
+# end 2026-10-12T02:51:13Z

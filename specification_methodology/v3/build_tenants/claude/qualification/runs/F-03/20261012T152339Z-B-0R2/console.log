@@ -1,0 +1,96 @@
+# console log for qualification/runs/F-03/20261012T152339Z-B-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:23:39Z
+# step B-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152339Z-B-0R2 --step-id B-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD release-and-successor=a_c/set-6/projection-release-and-successor-materialized.json" --block "TASK=qualification/cases/F-03/TASK-B.md" --model sonnet
+**1. Options P1 and P2**
+
+**P1 is unlawful.**
+- It moves the immutable RC cut `v1.4.0-rc.2`. An immutable RC tag never moves, and it makes no difference that rc.2 was never accepted.
+- Moving it would also silently change what the historical selector `v1.4.0` peels to. That selector is the Version-Line Selector for the old unqualified profile.
+- It would use an unqualified ref in a shared source. Since 2026-10-05 the repository has two namespaces, so it may not publish new unqualified cuts.
+- The method's repair for a defect is a higher RC.
+
+**P2 is partly lawful.**
+- *Lawful:* creating `ledger_cli/v1.4.0-rc.3` and `ledger_cli/v1.4.0`.
+  - Identities touched: the Project Release Namespace `ledger_cli`, the new Immutable RC Cut rc.3, and the new qualified Version-Line Selector.
+  - rc.3 is a higher ordinal on the same line, and the qualified selector is absent, so it can be created.
+  - It also touches the Candidate Source, the RC Branch `rc/ledger_cli/1.4.0`, and the Project Subtree `tools/ledger`.
+- *Unlawful:* force-moving the unqualified `v1.4.0`.
+  - It touches the historical Version-Line Selector and the immutable rc.2 cut it peels to.
+  - That selector must stay at its object and simply stops being current. "So old links get the fix" is not a reason: public URIs stay unchanged, and moving a selector updates no consumer.
+
+**Refs a lawful publication creates or moves**
+- Create `refs/tags/ledger_cli/v1.4.0-rc.3` as an annotated tag over the fix commit.
+- Create `refs/tags/ledger_cli/v1.4.0` as an annotated selector over the same commit. It is created, not force-moved.
+- Advance `refs/heads/rc/ledger_cli/1.4.0`, which already carries the fix.
+- Optionally create `refs/heads/release/ledger_cli/1.4.0` at the same commit.
+- Push all of these atomically where the transport supports it. Then verify remotely that the selector, the rc.3 tag and the release branch resolve to the same commit.
+- Untouched: `v1.4.0-rc.1`, `v1.4.0-rc.2` and unqualified `v1.4.0`.
+
+**What Priya's record lacks.** It needs to bind all of the following:
+- The namespace `ledger_cli` and its owning authority (Lena).
+- The qualified ref, not the bare tag name.
+- The annotated tag object, the peeled commit and the repository-root tree.
+- The Project Subtree root `tools/ledger` and the Git tree at that root.
+- The member inventory and the release-scoped claim bytes. The inventory digest `sha256:77…e1` alone is not a complete reacquirable identity.
+- The exact predecessor, `v1.3.2-rc.1`, and the disposition of every predecessor claim (see part 4).
+
+**2. Lena's message**
+
+**What it achieves.**
+- Acceptance is a verdict on the exact immutable rc.3. It does not move the selector or create another carrier.
+- It is only coherent if the required exact-cut review and operator checks are complete. Tom's finding is a gap that must be recorded or resolved first.
+
+**What it does not achieve.**
+- It does not make a later fix part of the accepted subject. The verdict stays attached to rc.3's bytes.
+- `v1.4.0-final` is a second final cut after an accepted RC, and the method has none. The name is also unqualified.
+
+**What the method requires.**
+- If the wrong sentence is a byte capable of affecting the Product or a release-scoped claim, Priya fixes it and publishes `ledger_cli/v1.4.0-rc.4` over the new commit.
+- The selector then advances to rc.4 under the strictly monotonic advancement rule.
+- rc.4 gets its own exact-cut review and acceptance by Lena. rc.3's acceptance does not carry over.
+- The release note is a release-facing asset reconciled to the subject at publication, so the sentence is a qualifying-byte candidate. The method does not settle whether this particular sentence is one (see `No method source`).
+
+**3. `billing-svc`**
+
+**Operative basis now.** It is the exact cut `stdo://releases/v1.4.0-rc.1/` with installed-manifest digest `sha256:12…9c`.
+
+**The engineer's sentence does not hold.**
+- The selector only says which published RC is highest. It never says which cut governs a consumer.
+- Moving the selector updates no consumer.
+
+**What a lawful adoption requires**
+- Channel resolution enumerates the RC tags of the namespace, including the preserved unqualified ones.
+  - It selects the greatest ordinal, rc.3.
+  - It requires the rc.3 tag and the selector to be annotated and to peel to the same commit.
+  - It fails closed if the selector lags.
+- rc.3 is above rc.1, so the channel does not refuse it as a downgrade.
+- A read-only plan binds the current Product Definition bytes and basis to the target cut. The target is identified by its annotated tag object, peeled commit, tree and installed-manifest digest. The plan emits a deterministic digest.
+- The operator accepts that exact digest.
+- A separate mutating invocation supplies the digest and re-derives it before changing anything. It refuses on selector, target, manifest or definition drift.
+- Adoption then installs, verifies and pins rc.3 (or rc.4, if that is the target).
+
+**The CI job's single invocation is unlawful.**
+- `adopt --latest --yes` plans and applies in one call.
+- Planning inside a mutating invocation is not external presentation and cannot authorise itself.
+- It must be split into a plan step, a human acceptance of the digest, and an apply step that takes that digest.
+
+**4. Predecessor claim dispositions (predecessor `v1.3.2-rc.1`)**
+
+| Claim | Disposition | Reason |
+|---|---|---|
+| C1 | Conserved | The module was rewritten, so the missing patch proves nothing. The 1.4.0 column-order test passes and is relevant evidence. Priya's record is empty, so she must record this disposition and the evidence. |
+| C2 | Unresolved | "Intentionally removed" needs a current Product authority decision, and none exists. "Nobody uses it" is not a decision. This blocks qualification of C2 until the Product authority removes the claim or it is otherwise disposed. |
+| C3 | Unresolved | "Conserved (same name)" is name similarity, and no test exists. Similarity is not proof of conservation. This blocks qualification of C3 until relevant behavioural evidence shows the old output is preserved. Otherwise it must be disposed some other way, for example superseded or removed. |
+| C4 | Unresolved | The release basis names no watched source, observation boundary, inclusion policy or successor candidate for `support/1.3.x`. The basis must be completed. The timezone fix then needs a semantic disposition at material integration and again at exact-cut qualification. Until then the retained claims it may affect cannot be qualified. |
+
+Dispositions are part of what the cut binds. Any change to them after publication means a higher RC.
+
+**No method source**
+- Who the "current Product authority" is for C2. The task names Lena only as release and acceptance authority.
+- Whether Tom's wrong sentence is a "byte capable of affecting the Product or a release-scoped claim", which decides whether it forces rc.4.
+- Who the consumer-side operator is who accepts the adoption digest for `billing-svc`.
+- The plan-digest algorithm and the semantics of the `adopt` flags. The METHOD block only points to PRODUCT_DEFINITION §4, which it does not include.
+- The annotated tag message format.
+# step exit 0
+# end 2026-10-12T15:24:20Z

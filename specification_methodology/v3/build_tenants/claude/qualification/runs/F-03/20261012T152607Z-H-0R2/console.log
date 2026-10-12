@@ -1,0 +1,73 @@
+# console log for qualification/runs/F-03/20261012T152607Z-H-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:26:07Z
+# step H-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152607Z-H-0R2 --step-id H-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD world-model-cut=a_c/set-6/projection-world-model-cut-materialized.json" --block "TASK=qualification/cases/F-03/TASK-H.md" --model sonnet
+**1. Surfaces and discrimination**
+
+**C-1 "Berth"**
+
+| Surface | Status |
+|---|---|
+| identity | stated value (berth code, register 2026-3) |
+| boundary | stated value (quay length between two bollards, with lay-by quays excluded) |
+| authority | stated value (harbour master's office) |
+| state | stated value (`available`, `allocated`, `closed`) |
+| evidence | stated value (register 2026-3, allocation system berth table) |
+| treatment | stated value (pilotage manual §2, a destination) |
+| covariance | stated absence ("no covariance study performed; none claimed") |
+| ambiguity | stated value (B-07 and B-08 share bollard 41, unresolved; this is a declared residual) |
+
+- **Discrimination:** C-1 is discriminated. It names a null peer, the lay-by quay, and says what separates it: lay-by quays are never allocated to vessels.
+- **Kind of evidence:** the evidence is declarative, resting on the register text, and the cut says so. It states that no intervention was made. That bounds its evidence altitude. The claim is modest, so the bound is proportional.
+
+**C-2 "Vessel call"**
+
+| Surface | Status |
+|---|---|
+| identity | stated value (call id from the port community system) |
+| boundary | stated value in form only. It is a list of table columns, which is the weak form of boundary claim. |
+| authority | none of these. The field is empty, which is not a stated absence. |
+| state | stated value |
+| evidence | stated value (`calls` table), thin |
+| treatment | formally a stated value, but untraceable. It was written from general knowledge and no customs source was consulted, so it is invented rather than recovered. |
+| covariance | none of these. There is no field. |
+| ambiguity | stated absence ("none"). It is formally lawful, but unsupported given the gaps above. |
+
+- **Discrimination:** C-2 is not discriminated. It names no plausible alternative boundary and gives no null peer or reinterpretation.
+- **Kind of evidence:** it rests on neither declarative nor interventional discrimination. The only support is the source table.
+
+**2. Attribute claim records**
+
+- **`max_draught`:** it has a lawful claim record. It has a value, a source (register 2026-3, page 4), an authority, and observed and published coordinates.
+- **`tug_required`:** it has no lawful claim record. A conversation with a pilot is not a ledger entry, because there is no provenance, authority or coordinates. It is an attribute that exists on the published cut without support, so C-1 is not sufficiently saturated.
+- **What follows for C-1:** `tug_required` must be removed, or recorded as an explicit ambiguity. It may be kept only once a qualified ledger entry exists, with an authoritative source.
+
+**3. The 2026-10-05 edit**
+
+- **Lawfulness:** the edit is not lawful. Published cuts are immutable.
+- **What publication requires:** changing the boundary of `B-07` to end at bollard 42 needs a new cut that supersedes the 2026-09-02 `C-1`. The new cut must show all eight surfaces again, with the discrimination basis. It must also address the bollard 41/42 ambiguity and say what evidence supports the new boundary. The register 2026-3 evidence does not support bollard 42.
+
+**4. Verdicts**
+
+| Item | Verdict | Core member | Counterexample |
+|---|---|---|---|
+| C-1 admissible entity cut (verdict 1) | admissible | satisfied | none |
+| C-2 entity cut not admissible (verdict 2) | not admissible | falsified | authority is empty. Covariance is absent from the cut. The treatment is untraceable. The boundary is undiscriminated. |
+| C-1 sufficiently saturated (verdict 11) | not saturated | falsified | `tug_required` has no support. |
+| `max_draught` | no separate verdict; it counts as traceably supported under verdict 11 | none | none |
+| In-place edit | no profile verdict in the METHOD block | none | none |
+
+- **C-1:** verdicts 1 and 11 are separate questions and neither is coerced into the other.
+- **C-2:** it is falsified, not indeterminate, because the failures are decidable.
+
+**No method source**
+
+- The METHOD block lists no profile verdict for an in-place edit of a published cut. It states the immutability requirement only.
+- The METHOD block does not say whether an unsupported attribute on a published cut also affects the §9 admissibility verdict, or only the §11 saturation verdict.
+- The METHOD block does not enumerate the five core result members. Only "satisfied", "falsified" and "indeterminate" are named in context, with "invalid_basis" appearing in verdict 9.
+- It sets no test for when a stated absence such as "ambiguity: none" is implausible and so lacks support.
+- It does not specify how a supersession is identified or versioned (new cut identity, links).
+- It does not say what makes a conversational source such as the pilot's an acceptable authority for a ledger entry.
+- It does not define thresholds for "evidence altitude proportional to the claim."
+# step exit 0
+# end 2026-10-12T15:26:33Z

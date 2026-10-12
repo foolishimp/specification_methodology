@@ -1,0 +1,118 @@
+# console log for qualification/runs/F-01/20261012T024901Z-B-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T02:49:01Z
+# calibrate: python3 -I qualification/instruments/bounded_step.py --run-dir qualification/runs/F-01/20261012T024901Z-B-001 --calibrate --model sonnet
+CALIBRATION calibrate: context_tokens=2247 on 235 input bytes; reply='ok'
+# calibrate exit 0
+# step B-1: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-01/20261012T024901Z-B-001 --step-id B-1 --card qualification/cases/F-01/CARD.md --block "METHOD coverage-and-revision=a_c/set-2/projection-coverage-and-revision-materialized.json" --block "TASK=qualification/cases/F-01/TASK-B.md" --model sonnet
+## 1. Coverage ledger for (W-notify, G, B = 9e1d2f44 / config rev 41, E, S, T = 2026-10-11T12:00Z)
+
+Operation authority is `none` on every row, because the subject says no evaluation performs a mutation. The method's rule for this is that a read-only evaluation declares none.
+
+**E1: no message is sent twice for one event**
+- Provenance: requirement NR-2.
+- Subject and basis: commit `9e1d2f44`. The closed result is bound to config rev 39, but the claim is at rev 41.
+- Frames: F-A (`delivery`).
+- Actor envelope: an engineer with repository access and the staging replay harness. No named actor is recorded.
+- Semantic authority: Lena.
+- Decision authority: Tomas (release).
+- Evidence: replay of 10,000 events on 2026-10-10 with zero duplicates, at rev 39.
+- Dependencies: the retry-window setting, which changed from 60 s to 300 s at rev 40/41. E3 shares this input.
+- Status: `conditionally_covered`. F-A is capable, but the `satisfied` result is invalidated by the changed basis. It cannot be relied on until F-A is reactivated at rev 41.
+- Residual: F-A's declared family binds "one commit" and does not name config revision as a coordinate. Whether the retry window affects duplicates is not decided by the subject.
+
+**E2: schema v7 consumers accept v8 payloads**
+- Provenance: requirement NR-5.
+- Subject and basis: schema revisions 7 and 8.
+- Frames: F-B (`schema-compat`).
+- Actor envelope: any actor with the two schema files. No named actor is recorded.
+- Semantic authority: Lena.
+- Decision authority: Tomas (release).
+- Evidence: contract test on 2026-10-09, `satisfied`.
+- Dependencies: none stated.
+- Status: `covered`.
+- Residual: the subject does not say that the schema files at `9e1d2f44` are still revisions 7 and 8. That is unconfirmed, not known to be broken.
+
+**E3: the retry policy bounds total sends to three per event**
+- Provenance: design note D-9.
+- Subject and basis: config rev 39. Config is now rev 41.
+- Frames: F-A.
+- Actor envelope: as E1.
+- Semantic authority: the platform team.
+- Decision authority: Tomas (release).
+- Evidence: `satisfied` on 2026-10-10 at rev 39.
+- Dependencies: the retry-window change, which is directly material.
+- Status: `conditionally_covered`. The result is invalidated before reliance by the changed basis.
+- Residual: reactivation at rev 41 is required.
+
+**E4: the dead-letter queue is empty before release**
+- Provenance: release checklist item 7.
+- Subject and basis: the subject is "the dead-letter queue", but the two activations observed different things. F-C looked at the dashboard at 09:00Z and saw 0. F-A looked at `dlq-shadow` logs at 09:30Z and saw 12 stuck. The two are described as the "same basis", yet their times differ and so do the queue objects named. Apparent equality is not coordinate equality.
+- Frames: F-C is the declared match (queue state at a named time). F-A was also activated, but its declared family is sender delivery on one commit.
+- Actor envelope: F-C needs the operations lead with dashboard access. F-A needs an engineer with repository access and the replay harness. Whether log inspection of a queue fits F-A's envelope is not recorded.
+- Semantic authority: the owner of checklist item 7 is not recorded. The meaning of "dead-letter queue", and whether `dlq-shadow` counts, is therefore missing.
+- Decision authority: Tomas owns the release. No conjunction rule or owner for combining the two results is declared.
+- Evidence: F-C `satisfied`, F-A `falsified`.
+- Dependencies: F-A and F-C results, plus the identity of `dlq-shadow` versus the DLQ.
+- Status: `conflicted`.
+- Residual: the falsifier from the one contributor survives the join. Agreement or a green dashboard cannot discard it.
+
+**E5: the rate limiter drops no events under a burst of 500/s**
+- Provenance: post-mortem of INC-77.
+- Subject and basis: not bound. Nothing was activated.
+- Frames: none selected. The subject does not show that F-A can evaluate this.
+- Actor envelope: missing.
+- Semantic authority: missing (the INC-77 owner is not recorded).
+- Decision authority: Tomas for the release. No separate owner is recorded.
+- Evidence: none required or collected. Missing.
+- Dependencies: not stated.
+- Status: `uncovered`.
+- Residual: a rate-limiter drop is not obviously a duplicate send. Whether E5 has a route to G is not decided by the subject.
+
+**E6: every consumer verifies webhook signatures**
+- Provenance: security obligation SEC-3.
+- Subject and basis: not bound.
+- Frames: none. No frame's family includes it.
+- Actor envelope: missing.
+- Semantic authority: Ari.
+- Decision authority: unrecorded. The row cannot close.
+- Evidence: none required or collected. Missing.
+- Dependencies: not stated.
+- Status: `uncovered`.
+- Residual: no authority-backed exclusion exists, so `excluded_by_authority` is not available. Whether SEC-3 has a route to G is not decided by the subject.
+
+**Composite:** the set cannot project success for G. E4 is a known conflict, E1 and E3 are invalidated, and E5 and E6 are uncovered. Only E2 is covered. This is coverage relative to the tuple only, with no claim that no other evaluation exists.
+
+## 2. Diagnostic order applied to the E4 signal
+
+1. **Was the correct declared frame activated?** No for F-A, which is a partial answer. E4 asks for queue state at a named time, which is F-C's declared family, so F-C was the correct activation. F-A's declared family is "delivery behaviour of the sender on one commit". E4 is not in it, so activating F-A on E4 was an activation outside its family. This fits the signal "two actors use the same frame name but evaluate different material relations".
+
+**Stop here.** The defect is located at question 1: one activation was made under a frame whose family does not cover the evaluation. Questions 2 to 8 are not answered. The order exists so that later questions (subject exactness, missing conjunction, a new frame) do not run before the activation is corrected. The unresolved subject and time differences are carried forward in the ledger as residual.
+
+## 3. Revision action
+
+**Clarify activation or evidence acquisition**, applied to F-A and F-C and to the E4 row of the inventory. The change:
+- Record that E4 is activated under F-C.
+- State that F-A is not a declared frame for E4.
+- Require F-C's activation to name the exact queue objects and the time.
+- Retain the 09:30Z `dlq-shadow` observation as an unresolved falsifier. It is not discarded.
+
+This is a material revision, so F-A and F-C each take a new revision coordinate. Tomas declares and accepts the frame set. If the meaning of "dead-letter queue" or `dlq-shadow` has to change, that is accepted only at the owner of checklist item 7, whose identity is not recorded. Tomas cannot accept it inside the acting frame.
+
+It reopens:
+- **Activations:** the F-C activation on E4 (09:00Z, `satisfied`) and the F-A activation on E4 (09:30Z, `falsified`).
+- **Results:** both E4 results, until re-evaluated on the clarified subject and time.
+- **Coverage claims:** the E4 row (`conflicted`), and any composite or release verdict for G that depends on E4.
+
+E1 and E3 are also reopened, but by a different cause: the config rev 39 to 41 basis change. This action does not reopen them and they need their own reactivation. E2 is not reopened, because it is demonstrably independent of E4. E5 and E6 are untouched, and their uncovered status stands.
+
+## No method source
+
+- The METHOD block does not define what each of the seven coverage statuses means in the boundary case of a capable frame whose result is stale. I chose `conditionally_covered`, and `unknown` or `uncovered` could be argued.
+- It does not give a test for whether an activation is "in" a frame's declared family, so the question 1 answer rests on my reading of the family text.
+- It does not say how to judge whether the retry-window change is material to F-A. It also doesn't say whether F-A must name config revision as a coordinate.
+- It does not say how to judge whether E5 or E6 has a route to G.
+- It does not identify the owner of checklist item 7, the meaning of `dlq-shadow`, the semantic owner of INC-77, or the decision owner of SEC-3. These stay missing in the ledger.
+- It does not say who accepts a frame revision beyond the frame-set authority. I assumed Tomas, as the declarer.
+# step exit 0
+# end 2026-10-12T02:50:03Z

@@ -1,93 +1,178 @@
 # Claude Tenant Design: Document Structure
 
-Status: tenant HOW for the STDO 3 document set, C3 construction, branch
-`tenant/claude/c3`. Not common WHAT; not accepted. Builder basis
-`stdo://releases/v2.5.1-rc.2/`, manifest `3d860ff4…2782`. Common inputs:
-`C1-inputs-20261011-03` at input commit `80b46944f1c1`, verified at activation.
+Status: tenant HOW for the STDO 3 candidate on `tenant/claude/c3-v3`; not
+common WHAT; not accepted. Builder basis `stdo://releases/v2.5.1-rc.2/`.
+Inputs: [Intent](../../../specification/INTENT.md),
+[Product](../../../specification/PRODUCT.md) (C3 contract),
+[requirements](../../../specification/requirements/README.md), the common
+[frontier](../../../specification/requirements/PREDECESSOR_CLAIMS.md) and
+its [tenant copy](../frontier/PREDECESSOR_CLAIMS.md), and the accepted
+[PRINCIPLES](PRINCIPLES.md), unchanged here.
 
-Governing inputs: the common [Intent](../../../specification/INTENT.md),
-[Product](../../../specification/PRODUCT.md), the common principles
-[questions](../../../specification/requirements/PRINCIPLES.md), the tentative
-[capability questions](../../../specification/requirements/CAPABILITIES.md),
-the [conformance discriminators](../../../specification/conformance/README.md)
-and this tenant's accepted C1 realisation
-[design/PRINCIPLES.md](PRINCIPLES.md) (`28c9b127…b7ec`).
+## Purpose
 
-## Purpose of the realisation
+The candidate is the foundational axioms first, then the whole v2.5.1-rc.2
+corpus restated on them in this tenant's own text, complete and applicable
+with the predecessor no longer operative. Every frontier row receives one
+UP-015 disposition and, where conserved or superseded, a locus that
+resolves to the tenant's text.
 
-A finite actor, human or model, should recover from these documents what it
-needs to do bounded governed work with less interpretive reconstruction than
-the 2.5.1 corpus requires, and nothing the 2.5.1 corpus requires should be
-lost without an explicit disposition. Every clause therefore carries two
-things: the principle that requires it, and its disposition relative to the
-rc.2 clause it conserves, reframes or supersedes.
+Two first-pass errors are retired: sizing the corpus to one activation,
+and counting a route to the rc.2 clause (FOUNDATIONS §1) as a disposition.
+The corpus is as large as the law requires and an activation reads a
+projected frame; a route is provenance under the standalone successor
+requirement. The first-pass files
+are starting text where they already restate; each is rewritten at its
+member's activation; nothing is accepted by presence.
 
-## Tiers and files
+## Tiers and members
 
-| Tier | File | Carries | Requiring principles |
-|---|---|---|---|
-| 1 | [FOUNDATIONS.md](../standards/FOUNDATIONS.md) | ontology, the commitments as law, the algebra of composition and conservation, hypotheses | P0–P6 |
-| 1 | [CALCULUS.md](../standards/CALCULUS.md) | the bounded step: intake, context construction under an envelope, grant, output; the result algebra; totality dispositions; refinement; work state and restart; cost and proportionality; reuse | P0, P4b, P5 |
-| 1 | [EVALUATION.md](../standards/EVALUATION.md) | claims, evidence, independent assessment, review results, acceptance, conformance of realisations, method self-qualification and recoverability | P6, P1 |
-| 2 | [SPEC_METHOD.md](../standards/SPEC_METHOD.md) | the particular method: constitutional chain, one WHAT and tenant HOWs, outcome conservation, change classes and re-entry, activation roles, checkpoints, release lineage | P2 with the tier-1 documents |
-| 2 | [CONFORMANCE.md](../standards/CONFORMANCE.md) | the counterexample and trial cases the method must pass, with independently specified expectations | P6 |
-| 3 | [PROFILES.md](../standards/PROFILES.md) | how software design, graph execution, UX and world-model profiles import the core and what stays out of it | P0 boundary |
-| route | [README.md](../standards/README.md) | learn, apply, review and machine routes; document map | recoverability (derived from P0) |
+Files are under `standards/` unless a path says otherwise. Obligations are
+PRODUCT's C3 tier table; the organisation is this tenant's. A member marked
+new exists only after its activation.
 
-Seven files. The 2.5.1 corpus has 52 standards members; the contraction is
-by import and derivation, not by dropping obligations. Glossary and compressed
-views are derived from these files later, never authored separately.
+### Tier 1, foundations
 
-## Derivation map
+| Member | Owes | Why a member |
+|---|---|---|
+| FOUNDATIONS.md | ontology with the frame objects (§2), C (proposed as P0) and P1 to P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 |
+| REFERENCE_FRAME.md, new | the frame law: RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |
+| ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality (UP-014), reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |
+| AXIOMATIC_CALCULUS.md, new | the a_c theory in full: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, exact identity, conformance obligations | the projection that produces every frame is defined here |
+| IDENTITY.md, new | scoped identity, uniqueness, type and stability, hierarchy, authority split, UP-004, parsing, version boundary | the tier receives IDENTITY_METHOD; cited too widely for a subsection |
+| EVALUATION.md | claims, evidence and authority law, litmus, independent assessment, review results, acceptance, conformance, qualification of the method | keeps its role; receives the generic evidence law and the reviewer-result law |
 
-| Mechanism | Document | Derived from | rc.2 disposition |
-|---|---|---|---|
-| Bounded activation with intake, grant, territory | CALCULUS §1 | P0, P6 | UP-020 conserved; RF engagement functions conserved |
-| Context construction under an envelope | CALCULUS §2 | P0 | AC-010/011, RF-002/003/004/014/017 conserved; the operation that joins them is new |
-| One core result algebra with declared refinements | CALCULUS §3 | totality (P0, open world, P6) | RF-012 and AC-007 conserved, restated once (T1.2); work result, UP-020 dispositions, ambiguity outcomes conserved as refinements |
-| Faithful refinement A → B → … → X | CALCULUS §4 | P0, P4 | ODD graph functions generalised; UP-017/021 conserved |
-| Work state, resumption and restart | CALCULUS §5 | P0, P5 | UP-020 checkpoint clause conserved; generic work state, reconciliation of uncertain effects and non-idempotence new |
-| Proportionality and selected cost | CALCULUS §6 | P0, P2 | UP-014, UP-019, UP-005 conserved |
-| Independent assessment with freeze | EVALUATION §3 | P6, probabilistic construction | UP-007, UP-022, RF-007 conserved |
-| Conformance of realisations | EVALUATION §6 | P1, P6 | reconstruction litmus and UP-022 conserved |
-| Recoverability of the method's documents | EVALUATION §7 | P0 with actor change | RF-013, UP-018, Method Self-Qualification conserved; the benchmark is new |
-| Constitutional chain, one WHAT and tenant HOWs | SPEC_METHOD §1–2 | P2 | constitutional chain, ambiguity governance, reconstruction litmus conserved |
-| Outcome conservation | SPEC_METHOD §3 | P2 | UP-013 conserved |
-| Change classes and re-entry | SPEC_METHOD §4 | P4b, P2 | SPEC_METHOD change classes and TICKET triage conserved; carrier choice reframed as HOW |
-| Successor dispositions | SPEC_METHOD §6 | P3, P6 | UP-015 conserved; applied to this corpus |
+ACTIVATION section 3 is the one definition of the result algebra; RF-012
+(REFERENCE_FRAME) and AC-007 (AXIOMATIC_CALCULUS) restate their laws on it
+in their own words and define it nowhere else: two distinct predecessor
+claims over one definition, not a merged law; their unification stays the
+C2 question PRINCIPLES names.
 
-## Steel threads
+### Tier 2, Spec Method
 
-Each thread freezes a document increment, encodes it in a_c, and has a fresh
-actor use it against a CONFORMANCE case under independent assessment.
+| Member | Owes | Why a member |
+|---|---|---|
+| SPEC_METHOD.md | the particular method: constitutional chain, process constitution, manifesto, ambiguity governance, requirement and design law, change classes and re-entry, migration, UP-012, UP-013 | keeps its role; carries every SPEC_METHOD clause that is not generic |
+| PRODUCT_DEFINITION.md, new | the overlay and layout independence, STDO-SURFACE-001, bootstrap rule, a project's version boundary | a fifth of SPEC_METHOD; how one project binds to the method; the semantics the schemas and templates realise |
+| TICKETS.md, new | work carriers: ticket and sprint model, layout, authority, triage-first intake, closure by condition, migration, ticket shape | the tier owes carriers and triage; the first pass reduced 60 KB to one section |
+| ASSURANCE.md, new | evidence rules, verification layers, testing taxonomy, test authority, scenario bundles, path coverage, trace closure, the testing frame set, counterexample localisation, module-derived unit tests | the tier owes assurance and testing law; spread over three rc.2 members with no home |
+| RELEASE.md, new | release identities, qualified refs, phases, candidate, immutable RC, exact-cut qualification, monotonic advancement, selector adoption, naming, cohorts, UP-015 | the tier owes release mechanics; the first pass carried lineage only |
+| CONFORMANCE.md | the cases the method must pass, with independently specified expectations; the common discriminators | acceptance criterion 5 |
 
-| Thread | Increment | Discriminating case | State (2026-10-11) |
-|---|---|---|---|
-| T1 | FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4 | an activation whose required basis exceeds a declared context cap; a coupled case that cannot fit; the result is refinement or a truthful out_of_frame, never omission | first fixture run twice and reviewed; T1.2 frozen (`cee1157`), encoded, run twice under CASE-2 (`eb9b935`); unassessed |
-| T2 | SPEC_METHOD, CALCULUS §4–7 | two bounded results join under an outer contract; a detected failure and an uncovered obligation both survive | frozen (`97f1259`), encoded, run twice under T-03-04 (`f33e6ae`); unassessed |
-| T3 | EVALUATION §5–8, CONFORMANCE complete, PROFILES | an interrupted construction resumes over current work state with an uncertain external effect; no blind repetition | frozen (`c539daa`), encoded, run twice under T-05; unassessed |
-| T4 | README route, a_c program for the set, recoverability trial against 2.5.1 as baseline | a fresh actor recovers a bounded activation from the documents; fidelity and reconstruction cost measured | frozen, encoded as the set program, trial R-01 run; unassessed; see `qualification/RETURNS.md` for commits |
+### Tier 3, profiles
 
-The C3 build pass constructed the seven files as a first complete draft so
-that T1 could be cut from a whole, not from fragments; the threads then
-revised them, each after the author's pre-freeze route check by fresh step
-actors. Authored documents are not steel-thread execution; execution is the
-cases' runs, and nothing is passed until an independent assessor says so.
+| Member | Owes | Why a member |
+|---|---|---|
+| PROFILES.md | the boundary: how a profile imports the tiers above, what stays out of the core, the index | keeps its role as index and boundary only |
+| EXECUTIVE_BASELINE.md, new | STDO_REFERENCE_FRAME_BASELINE in full: profile terms, Executive attention and drift locks, derived frames, engagement transition, adoption, failure classification | the tier receives the frame catalogues and Executive law; this construction runs under it |
+| DESIGN_MODULE.md, new | DESIGN_MODULE_METHOD realisation law: ontology-first design, prime law, carrier set, boundary evaluators, totality, effect edge, coupling | 121 KB of realisation law; PROFILES §3 was a stub |
+| ODD.md, TRAVERSAL_OCCURRENCE.md, UX.md, WORLD_MODEL.md, new | each predecessor profile in full, importing the tiers above | the tier owes a full restatement per profile; a stub cannot carry 15 to 85 sections |
 
-## Proof plan
+### Guides, route, packaging
 
-Per document: links and `stdo://` fragments resolve; every clause has a
-requiring principle and an rc.2 disposition; no profile term (HoG, ledger,
-worksite, edge, Markov overlay, F_D/F_P/F_H as names) appears in tier 1 or 2
-except in a disposition table or the hypotheses list, which names the Markov
-construct in order to exclude it from law. Per thread: a_c program validated with `ac.py`
-against the pinned Axiom Indexer subject; a conformance case run with the
-author withheld; an independent review reading the branch at a named commit.
+POSTING_GUIDE.md and WRITING_GUIDE.md restate their predecessors.
+GLOSSARY.md, new, is the non-deciding locator index whose rows route to the
+owning successor clause, never to rc.2; generated from anchors where
+possible. README.md carries the routes by task, the document map and the
+layout. Packaging members and paths are in the member map; the candidate
+mirrors the installed layout so the inventory comparison at the RC cut is
+mechanical.
+
+## Member map
+
+| rc.2 member or group | Tenant members that receive it |
+|---|---|
+| README.md | README; PRODUCT_DEFINITION §4, §12 (installed cut, store, manifest) |
+| AXIOMATIC_CALCULUS.md | AXIOMATIC_CALCULUS |
+| DESIGN_MODULE_METHOD.md | DESIGN_MODULE; SPEC_METHOD (core rule, non-goals); ASSURANCE (6A to 6C) |
+| GLOSSARY_GUIDE.md | GLOSSARY |
+| IDENTITY_METHOD.md | IDENTITY; DESIGN_MODULE (defaults from a bound realisation) |
+| ODD_METHOD.md | ODD; ACTIVATION (graph-function refinement, by note) |
+| POSTING_GUIDE.md | POSTING_GUIDE; SPEC_METHOD (UP-012) |
+| REFERENCE_FRAME_METHOD.md | REFERENCE_FRAME; FOUNDATIONS (frame objects); ACTIVATION (engagement as the step); EVALUATION (qualification) |
+| RELEASE_METHOD.md | RELEASE; FOUNDATIONS (release objects); EVALUATION (UP-015 as acceptance evidence) |
+| SPEC_METHOD.md | SPEC_METHOD; PRODUCT_DEFINITION (overlay, SURFACE-001, bootstrap); ACTIVATION (UP-014, UP-020, UP-021; consumes the work boundary); FOUNDATIONS (work boundary, product taxonomy); EVALUATION (evidence rules, litmus); ASSURANCE (testing law) |
+| STDO_REFERENCE_FRAME_BASELINE.md | EXECUTIVE_BASELINE; ASSURANCE (testing frames, interface integration); EVALUATION (reviewer result, triage projection) |
+| TICKET_METHOD.md | TICKETS; SPEC_METHOD (change classes as the triage target) |
+| TRAVERSAL_OCCURRENCE_PROFILE.md | TRAVERSAL_OCCURRENCE |
+| UX_METHOD.md | UX |
+| WORLD_MODEL_METHOD.md | WORLD_MODEL |
+| WRITING_GUIDE.md | WRITING_GUIDE |
+| compressions (10) | `a_c/` program, map and frames, proposed `superseded` by the relation "projection from the set program"; `stdo_bootstrap.md` to PRODUCT_DEFINITION and bootstrap templates |
+| schemas (2) | `standards/schemas/`, governed by PRODUCT_DEFINITION and RELEASE |
+| templates (24) | `standards/templates/`, governed by SPEC_METHOD, TICKETS, PRODUCT_DEFINITION, REFERENCE_FRAME |
+| plugin (17) | `plugins/spec/`, each skill re-routed to its successor frames |
+| licence (1) | `LICENSE` at the candidate root |
+| release note (1) | `release/release-note.md`, written at the RC cut under RELEASE |
+| manifest (1) | written at the RC cut under RELEASE; schema in the schemas row |
+
+## Disposition vocabulary
+
+Every frontier row takes exactly one of `conserved` (restated in the
+tenant's own text; the locus resolves; an author-independent source
+comparison finds the determination present), `superseded` (an accepted
+successor relation, named), `intentionally removed` (Jim's decision and
+reason) or `not applicable` (bounded reason); `unresolved` is the only
+other state and blocks qualification. Every clause carries the principle
+that requires it, C (proposed as P0) and P1 to P6 of
+[PRINCIPLES](PRINCIPLES.md), and may carry a provenance route into
+`stdo://releases/v2.5.1-rc.2/`. A clause with
+no predecessor row is new law, admitted only with the purpose and material
+relation that require it (criterion 6). `reframed` is a note on how a
+conserved claim was carried, never a disposition. A member's Writer fills the
+Disposition and Successor locus columns of its cone in the tenant frontier
+copy; the Reviewer checks them; the Executive consolidates accepted rows
+into the common file through the pen.
+
+## Activation unit
+
+A finite actor is activated on a projected reference frame, never on the
+corpus. The set program under `a_c/` (a_c.text, validated per the common
+dependency contract) encodes the corpus; each member's activation extends
+it and publishes one projected frame per selected task of the contract. A frame is the subject plus the
+clauses the task needs and nothing else, materialised or reference-only.
+Its bytes are measured with `wc -c` before any actor reads it and recorded
+with the activation under `qualification/`. A frame that exceeds its
+envelope is refined or returns `out_of_frame`, never padded with the
+corpus. A member's Writer reads the rc.2 member it restates and the frames
+of its dependencies; a member larger than one activation is declared as a
+cone of sections.
+
+## Construction order
+
+One Writer activation per member or declared cone, in this sequence:
+
+1. REFERENCE_FRAME, with the foundation repairs it forces: FOUNDATIONS
+   gains frame, frame set, lens and coverage ledger as ontology objects and
+   takes the UP-015 vocabulary; CALCULUS becomes ACTIVATION and admits the
+   intake before the step, whose context is an activated frame. The member
+   map is reviewed with this member.
+2. AXIOMATIC_CALCULUS.
+3. SPEC_METHOD, with PRODUCT_DEFINITION split off, its generic law in tier
+   1 and its testing law in ASSURANCE.
+4. TICKET_METHOD into TICKETS.
+5. STDO_REFERENCE_FRAME_BASELINE into EXECUTIVE_BASELINE, its testing
+   frames into ASSURANCE, its reviewer law into EVALUATION.
+6. RELEASE_METHOD and IDENTITY_METHOD into RELEASE and IDENTITY.
+7. DESIGN_MODULE_METHOD into DESIGN_MODULE, SPEC_METHOD and ASSURANCE.
+8. ODD, TRAVERSAL_OCCURRENCE, UX, WORLD_MODEL; PROFILES reduced to index
+   and boundary.
+9. Guides, GLOSSARY and README.
+10. Packaging: the compressions' successor, schemas, templates, plugin,
+    licence, release note, manifest (RELEASE); closes before any RC cut.
+
+Each step: the Writer returns one closed result and disposes its cone's
+rows in the tenant frontier copy; a Reviewer who is not the author, by
+default of another model family (same family is a declared exception,
+reason in the activation, marked on the result), is activated on every
+`candidate_ready`; the Executive disposes; the pen ledgers. Per-member
+proof is the contract's six criteria plus: links and anchors resolve; every
+clause has its principle; no profile term in tier 1 or 2 outside a
+disposition note.
 
 ## Cost
 
-Declared for this build pass: 150,000 generated tokens, 4 hours wall. Start
-2026-10-11T09:35:30Z. Spend reported in `qualification/RETURNS.md` with wall
-time by `date -u`; token counters are unavailable on this host and are
-recorded as such. Selected because the pass's governed question is whether a
-whole-corpus draft fits one bounded activation.
+Envelopes are declared per activation by the Executive (context bytes,
+wall, spend) and reported in each return in `qualification/RETURNS.md`:
+bytes measured before the read, wall by `date -u`, spend as the host
+reports it or as unavailable.
