@@ -617,6 +617,12 @@ boundary: definitions at the workspace root and definitions at arbitrarily
 deep nested project roots (P3; rc.2
 #recursive-discovery-and-explicit-composition).
 
+For a requested Product scope exactly one applicable definition is
+selected; zero or several unresolved definitions fail closed, and a
+symlinked definition is refused (P6, P5; provenance rc.2
+authority_compressions/stdo_bootstrap.md, discovery claims 1 and 2, a
+compression claim no rc.2 body states).
+
 Directory nesting creates no implicit inheritance, ownership, composition
 or constitutional override. Parent and child definitions stay independent
 until `composition` explicitly relates them. Each composition entry records
