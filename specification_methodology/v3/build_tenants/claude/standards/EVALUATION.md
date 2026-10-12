@@ -14,26 +14,53 @@ governing basis, the relation between witness and claim, the nearest weaker
 property it excludes, and its falsifier, before a witness is selected.
 Without these it is evidence discovery, not proof. Packaging, syntax,
 compilation, presence, invocation or local behaviour never substitutes for a
-semantic, authority-bearing, installed or end-to-end claim because the
-weaker property is easier to measure (P6; conserves
+semantic, authority-bearing, installed, release or end-to-end claim because
+the weaker property is easier to measure (P6; conserves
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001)).
 
+Boundary congruence. A checker, validator, harness, reviewer or other
+assurance surface supporting promotion or closure binds the exact claimed
+subject and its authoritative composition relation. Evidence over one file
+or carrier proves only that boundary; it cannot establish a multi-file or
+carrier-set claim. Cross-carrier satisfaction and conflict are decided at
+the declared composite boundary (P3, P6). A claim of mechanical enforcement
+names an executable or reproducible predicate and a witness reachable
+through the declared ordinary assurance path; a planned or
+specification-only harness is planned evidence, not observed verification,
+and until both the predicate and such a witness are observed the claim
+remains open or is explicitly downgraded to the planned property (P6;
+conserves
+[UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022),
+first two paragraphs).
+
 A claim's quantifier, population and scope cannot exceed its evaluated
-evidence. Generalising a local observation needs a declared inference
-relation, the comparable population and explicit counterexample treatment.
-Later counterevidence invalidates every dependent verdict until the
-claim-evidence relation is requalified
-([UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)).
+evidence. Generalising a local defect or observation needs a declared
+inference relation, the relevant comparable population, explicit
+counterexample treatment and governing evidence. Later counterevidence
+invalidates every dependent verdict until the claim-evidence relation is
+superseded, withdrawn or requalified (UP-022). The quantifier rule and the
+boundary rule are false if assurance observes a weaker or different
+subject, if per-carrier evidence closes an unevaluated composite claim, if
+mechanical enforcement lacks its predicate or a reachable witness, if
+planned evidence is reported as observed verification, if a verdict outruns
+its evaluated population or declared inference relation, or if dependent
+verdicts survive material counterevidence without requalification.
 
 ## 2. Separation
 
-Semantic law defines what an evaluation means; evidence supplies
-observations; the evaluator applies the declared relation; decision
-authority disposes. One actor may lawfully perform several; the record keeps
-them distinguishable. Evidence change may invalidate a verdict without
-changing law; projection change may invalidate a view without changing
-truth; semantic change requires re-entry and invalidates dependent
-acceptance (conserves
+Three bases stay distinct (P6, P1): the semantic basis, the constitutional
+and accepted-design relations that define what a claim means; the evidence
+basis, the exact artifacts, events, logs, tests and observations used to
+evaluate it; and the state projection, a current view derived from admitted
+semantic and evidence bases. Semantic law defines what an evaluation means;
+evidence supplies observations; the evaluator applies the declared
+relation; decision authority disposes. One actor may lawfully perform
+several; the record keeps them distinguishable. Evidence change may
+invalidate a verdict without changing law; projection change may invalidate
+a view without changing semantic truth; semantic change requires lawful
+re-entry and invalidates affected downstream acceptance. A broad digest may
+conservatively invalidate a review; it does not prove that every semantic
+relation changed (conserves
 [UP-008](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#semantic-evidence-and-projection-separation-stdo-up-008),
 [RF-007](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)).
 
@@ -62,8 +89,11 @@ before opening the candidate; it reads the subject at a named immutable
 identity, never a working tree; it makes no repair; it does not assess its
 own authorship. Reusing the constructor's judgment does not satisfy
 independence; shared mechanical evidence may be reused, judgment may not
-(ACTIVATION §7). Any post-exposure revision is a declared intervention and a
-new subject (UP-022).
+(ACTIVATION §7). Any post-exposure revision is a declared intervention: it
+is either a method constituent with its own qualification boundary or a new
+qualification subject, and it cannot retroactively make the original
+frozen construction pass. This law prescribes no actor type or count,
+review-round count, engine, prompt or orchestration (UP-022).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -104,14 +134,45 @@ judgment (P6). Conformance establishes neither identical behaviour outside Σ
 nor equal cost; semantic equivalence and computational equivalence are
 separate claims with separate evidence. Several realisations may conform to
 one Σ; sufficiency does not require unique derivation or equality with an
-incumbent (conserves the
-[Reconstruction Litmus](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#reconstruction-litmus)
-and
+incumbent. A weak Σ that admits materially different behaviours either
+declares the latitude or is repaired before a decision-complete design is
+claimed.
+
+Layered sufficiency. A specification arranged in layers is sufficient when
+a competent actor can derive a conformant next layer from each layer; the
+derivation need not be unique, since different realisations may satisfy the
+same upper layer, and the test is sufficiency, not determinism. A failure
+to derive at any boundary is a defect of the upper layer: unclear,
+contradictory, underspecified, not concrete or decomposable enough, or
+polluted with accidental lower-layer detail. A boundary that can be crossed
+only by hiding a major unresolved ambiguity is not yet sufficient even if
+some downstream artifact can be produced. For an already accepted relation,
+reconstruction may reuse its exact current basis and sufficient evidence
+after checking applicability and invalidation (ACTIVATION §7);
+reconstructability requires a correct reconstruction route, not its
+execution at every use, grants no restart authority and does not excuse
+stale success. The claim determines the reconstruction span; a local
+selected function does not require recreating the whole subject. New
+material counterexamples still challenge the affected relation (P2, P1,
+P0; conserves the
+[Reconstruction Litmus](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#reconstruction-litmus),
+whose application to the method's own chain, with the diagnosis per layer,
+is SPEC_METHOD §2).
+
+Comparison. After freeze the evaluator compares the frozen result against
+the mandatory governing semantic basis for semantic conformance or
+equivalence. A separately held expected or reference outcome, if one exists
+and is applicable, is optional evidence and explicitly non-authoritative;
+semantic equivalence to it is required only where the governing basis
+requires it. A lawful alternative construction permitted by the basis
+passes. Subjective similarity to the basis or the reference is insufficient
+to establish conformance or equivalence. Byte or structural identity,
+unique derivation, determinism and incumbent equality are not generic
+comparison criteria. A construction outside the declared competence or
+configuration envelope cannot indict generic method sufficiency (P6, P1;
+conserves
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
-comparison rule, under which unique derivation, determinism and incumbent
-equality are not generic comparison criteria). A weak Σ that admits materially different
-behaviours either declares the latitude or is repaired before a
-decision-complete design is claimed.
+comparison rule).
 
 ## 7. Qualification of frames and of the method
 
@@ -150,14 +211,20 @@ generalise to an unevaluated population by naming the frame generically
 
 ### Method self-qualification
 
-The method is qualified the way it qualifies anything else: a fresh
-competent constructor, inside a declared envelope, using only the declared
-ordinary method and authority surfaces and declared trial subjects, with
-material reference outcomes, incumbent realisations, author memory and ad
-hoc rescue withheld until freeze wherever earlier exposure would
-compromise reconstructive independence; then an independent evaluator
-compares the frozen result with the method's mandatory relation
-population. This conserves
+The method is qualified the way it qualifies anything else. Qualification
+of generic method sufficiency consumes the work boundary (FOUNDATIONS §2),
+the construction and assessment relation of ACTIVATION §1 and the layered
+sufficiency of §6; it creates no second process. A fresh competent
+constructor operates inside a declared capability, context and
+configuration envelope, using only the declared ordinary method and
+authority surfaces and declared trial subjects. An independently
+authorised evaluator has a declared governing basis and comparison
+predicate. Material expected or reference outcomes, source exemplars or
+incumbent realisations, author memory and ad hoc rescue are withheld from
+the constructor until its construction result is frozen wherever earlier
+exposure would compromise reconstructive independence; then the evaluator
+compares the frozen result with the method's mandatory relation population
+under the comparison rule of §6. This conserves
 [Method Self-Qualification](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#method-self-qualification),
 which leaves the constructor, freeze and assessor protocols to the
 governing authority, and
@@ -198,6 +265,36 @@ outcomes may serve as optional comparison evidence after freeze; they are
 not mandatory target answers unless the governing basis explicitly requires
 equivalence (§6).
 
+Derived guidance. Changed derived guidance, a compression, a frame packet,
+a skill or any other projection of the method, is qualified against
+source-derived expected behaviour, including the affected permissions,
+exclusions and invalidators. For a native use claim, an ordinary actor
+applies that guidance through its declared entry and available context.
+Digest integrity and index generation establish identity and structure,
+not semantic fidelity or usability. Mechanical and operational claims
+require their own executable observations, including the applicable
+workload and operational assumptions of ACTIVATION §6; semantic agreement
+cannot substitute for those observations (P6, P1; UP-022).
+
+The qualification law is false if constructor competence or its
+capability, context or configuration envelope, or evaluator authority,
+governing basis or comparison predicate, is undeclared, or an
+out-of-envelope construction is used to indict the method; if the
+constructor uses supplemental method or authority input that is not
+declared; if a material expected or reference outcome, source exemplar or
+incumbent realisation, author memory or ad hoc rescue is exposed to the
+constructor before freeze where that exposure compromises reconstructive
+independence; if comparison omits the mandatory governing semantic basis,
+proceeds under constructor authority instead of independently authorised
+evaluator authority, or is self-adjusted after seeing the result; if a
+reference outcome is used as authority, reference equivalence is required
+where the governing basis does not require it, basis-required reference
+equivalence is omitted, subjective similarity is used as proof, or
+identity, unique derivation, determinism or incumbent equality substitutes
+for semantic conformance or equivalence; or if a post-exposure revision is
+unclassified or is used to make the original frozen construction pass
+retroactively (§3).
+
 Recoverability benchmark (new; derived from P0 with the actor-change
 premise). For a selected activation, measure whether a fresh actor given
 only the published documents recovers the governing relations with fidelity
@@ -213,13 +310,14 @@ detected and the cost.
 
 | rc.2 clause | Disposition |
 |---|---|
-| UP-001, UP-022 | conserved; §1, §3, §6 |
-| UP-008, RF-007, AC-018, AC-019 | conserved; §2 |
+| UP-001 | conserved; §1; row in the table below |
+| UP-022 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, the qualification protocol, derived guidance and the falsifiers in §7; row in the table below |
+| UP-008, RF-007, AC-018, AC-019 | conserved; §2; UP-008's row in the table below |
 | UP-007 | conserved; §3 |
-| RF-013, UP-022 qualification protocol | conserved; §7; the benchmark is new |
+| RF-013 | conserved; §7; the benchmark is new |
 | RF frame qualification, method self-qualification | conserved; §7; rows in the table below |
-| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5 |
-| Reconstruction Litmus | conserved; §6 |
+| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3 and UP-020's delegation in ACTIVATION §1 |
+| Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
 | TICKET judgment continuity | conserved via ACTIVATION §7 |
 | Baseline Reviewer and technical triage | conserved by reference; §4 states the result shape |
 
@@ -230,3 +328,12 @@ REFERENCE_FRAME_METHOD.md):
 |---|---|---|
 | #frame-qualification | conserved | §7 Frame qualification |
 | #method-self-qualification | conserved | §7 Method self-qualification |
+
+SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #proof-target-identity-and-adequacy-stdo-up-001 | conserved; the six named relations and the weaker-property rule including release proof | §1 |
+| #semantic-evidence-and-projection-separation-stdo-up-008 | conserved; the three bases, the three invalidation cases and the digest rule | §2 |
+| #assurance-boundary-congruence-and-method-qualification-stdo-up-022 | conserved in full; the nine falsifiers are split between §1 (boundary, enforcement, quantifier) and §7 (qualification) | §1, §3, §6, §7 |
+| #reconstruction-litmus | conserved; the generic law here, the five layer derivations and the per-layer diagnoses in SPEC_METHOD §2; the design-view coverage gate stays with the design profile | §6 Layered sufficiency; SPEC_METHOD §2 Reconstruction litmus |

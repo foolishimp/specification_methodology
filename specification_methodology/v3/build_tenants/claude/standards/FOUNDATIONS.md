@@ -164,6 +164,59 @@ invalidation condition; the binding may be expressed entirely in
 source-linked prose, and representation cannot create, widen or replace it
 (P3, P6).
 
+### Product lineage objects
+
+Software is recursive and compositional: a released product may build the
+next released version of itself, a dependent product, or downstream project
+artifacts. Most taxonomy drift in recursive systems comes from collapsing
+the roles below into one overloaded word such as "product". Each role is an
+object with its own identity (P3; provenance
+`stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#recursive-product-taxonomy`,
+whose bounded context `urn:stdo:bounded-context:recursive-product-taxonomy`
+this member now owns under the selected complete basis; the concept
+identities below are carried unchanged).
+
+| Term | Definition | Requires |
+|---|---|---|
+| Substrate (`urn:stdo:concept:recursive-product-taxonomy:substrate`) | a lower product or runtime used to build other products | P3 |
+| Development product (`urn:stdo:concept:recursive-product-taxonomy:development-product`) | the role of one exact install of a released product while that install acts as builder substrate for a source project; the role creates no new product identity and transfers no meaning or authority from the builder to the product being authored | P3, P6 |
+| Source project (`urn:stdo:concept:recursive-product-taxonomy:source-project`) | the mutable workspace building the next release cut | P3 |
+| Release cut (`urn:stdo:concept:recursive-product-taxonomy:release-cut`) | one immutable annotated release-candidate boundary over a published feature set | P3 |
+| Product (`urn:stdo:concept:recursive-product-taxonomy:product`) | the released immutable thing resulting when that release cut is accepted | P3 |
+| Install (`urn:stdo:concept:recursive-product-taxonomy:install`) | a stamped workspace instance of that released product | P3 |
+| Artifact (`urn:stdo:concept:recursive-product-taxonomy:artifact`) | any published output built by a source project or by a configured installed product | P3 |
+| Product definition (`urn:stdo:concept:recursive-product-taxonomy:product-definition`) | the present-tense source-project authority surface, conventionally carried by `PRODUCT.md`; it defines the current product WHAT for decomposition and is not the released product artifact | P3, P2 |
+
+The governing rules: a mutable source workspace is not called a product;
+when a released product acts as builder substrate, the exact install is
+bound as a development product without confusing it with the product being
+authored; an immutable release cut or installed product is not confused
+with the mutable source project building the next cut; the product
+definition is the surface of a source project, not the released product
+artifact; products may depend on other products; installed products may
+build the next version of themselves or other products. The compiler
+analogy is the intended model: bootstrap source, release P0, install P0,
+use P0 to build the source for P1, release P1. The taxonomy is load-bearing:
+blurred, dependency and self-hosting errors compound quickly and are
+expensive to unwind. SPEC_METHOD §6 applies these objects to lineage and
+release.
+
+### Work boundary
+
+The method governs the boundary around a probabilistic, agentic or
+delegated work unit; it does not absorb the worker's internal solution
+strategy into the framework (P0, P6; provenance
+`stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#probabilistic-work-boundary`).
+The declared boundary of such a unit is an object with six parts, which the
+live specification and design declare: the input and output contract; the
+required context; the capability or role expectation; the admissible
+evidence and evaluator regime; the provenance obligation; and the lawful
+stop, hold, gap, continuation or completion states. The worker, tool, agent
+or domain implementation owns the internal HOW inside that boundary unless
+the product explicitly promotes part of that HOW into reusable declared
+structure. The step of ACTIVATION §1 is this unit with its intake, context
+and result algebra made exact.
+
 ## 3. Commitments
 
 P0 Bounded construction. A finite actor realises a selected outer contract
@@ -174,6 +227,19 @@ Premises: a selected outcome (P2); the actor of one step need not be the
 actor of the next and may re-acquire declared sources but not private
 memory; step-produced facts are not re-acquirable; the world is open; a
 step's output is a candidate until evaluated.
+
+P0's boundary commitment (the work boundary of §2): deterministic checks
+and validation are evidence surfaces; they may optimise or prove a
+domain-local path where the domain can make part of the work precise, and
+they do not authorise the method, a runtime or a framework to absorb domain
+solution strategy as constitutional law. Any unconstrained part of a
+probabilistic worker's reasoning remains hidden worker-internal activity
+and is forced back through the declared contracts, evidence, provenance and
+control truth of the boundary. A framework layer that prescribes domain
+solution strategy beyond the declared work contract and control truth has
+crossed its authority boundary (P6). A profile may bind the unit to its own
+traversal unit, in which that traversal is the admissible external space;
+PROFILES §2 keeps that binding.
 
 P1 Interpretation. Subject, representation and interpretation are distinct;
 meaning holds within a declared context through a declared contract.
@@ -318,12 +384,14 @@ traversal composition laws of any runtime.
 | RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; consumed by EVALUATION |
-| UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and ACTIVATION §6 |
+| UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; P2 consumes them; UP-005 is disposed at the design profile |
 | UP-015 | conserved; applied to this corpus in §1 |
 | UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by ACTIVATION §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
-| UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation |
-| UP-020 | conserved; consumed by ACTIVATION §1, §3, §5 |
-| Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by ACTIVATION §1 and §3 |
+| UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation; UP-021 and its standing structural qualification are restated in full in ACTIVATION §4 |
+| UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
+| SM Probabilistic Work Boundary | conserved; restated in §2 Work boundary and §3 under P0; ACTIVATION §1 consumes it; row in the table below |
+| SM Recursive Product Taxonomy | conserved; restated in §2 Product lineage objects; SPEC_METHOD §6 consumes it; row in the table below |
+| SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement is ACTIVATION §3 and its hard stops ACTIVATION §4 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |
 
 Rows of other members above still read "conserved by reference" from the
@@ -353,3 +421,10 @@ REFERENCE_FRAME_METHOD.md):
 | #active-frame-configuration | conserved | §2 Frame objects |
 | #lens | conserved | §2 Frame objects |
 | #role-persona-abstraction-and-component | conserved | §2 Frame objects |
+
+SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #probabilistic-work-boundary | conserved; the six declared parts, the worker's ownership of the internal HOW, the evidence-surface rule and the authority-boundary rule; the profile binding to one traversal is generalised and kept by PROFILES §2 | §2 Work boundary; §3 P0 |
+| #recursive-product-taxonomy | conserved; the eight objects with their concept identities, the six governing rules, the compiler analogy and the load-bearing claim | §2 Product lineage objects |

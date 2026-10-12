@@ -408,14 +408,14 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Canonical Compression | `#canonical-compression` |  | 2,678 | unresolved | |
-| Position | `#position` |  | 574 | unresolved | |
-| STDO Method Identity | `#stdo-method-identity` |  | 836 | unresolved | |
-| Probabilistic Work Boundary | `#probabilistic-work-boundary` |  | 1,499 | unresolved | |
-| Recursive Product Taxonomy | `#recursive-product-taxonomy` |  | 2,924 | unresolved | |
-| Manifesto | `#manifesto` |  | 1,738 | unresolved | |
-| Spec-Drivenness Litmus | `#spec-drivenness-litmus` |  | 1,316 | unresolved | |
-| Process Constitution | `#process-constitution` |  | 2,563 | unresolved | |
+| Canonical Compression | `#canonical-compression` |  | 2,678 | conserved; restated as the canonical statement with each clause's owning section named | `SPEC_METHOD.md#canonical-statement` |
+| Position | `#position` |  | 574 | conserved | `SPEC_METHOD.md#position` |
+| STDO Method Identity | `#stdo-method-identity` |  | 836 | conserved; the bounded-context identity is carried unchanged; the owners of T, D and O are named by successor member | `SPEC_METHOD.md#method-identity` |
+| Probabilistic Work Boundary | `#probabilistic-work-boundary` |  | 1,499 | conserved; restated as the work-boundary object and P0's boundary commitment; the profile binding to one traversal is generalised and kept by PROFILES §2 | `FOUNDATIONS.md#work-boundary`; `FOUNDATIONS.md#3-commitments` |
+| Recursive Product Taxonomy | `#recursive-product-taxonomy` |  | 2,924 | conserved; the eight objects with their concept identities, the six governing rules, the compiler analogy and the load-bearing claim restated as ontology | `FOUNDATIONS.md#product-lineage-objects`; applied at `SPEC_METHOD.md#6-lineage-and-release` |
+| Manifesto | `#manifesto` |  | 1,738 | conserved | `SPEC_METHOD.md#manifesto` |
+| Spec-Drivenness Litmus | `#spec-drivenness-litmus` |  | 1,316 | conserved; all thirteen conditions | `SPEC_METHOD.md#spec-drivenness-litmus` |
+| Process Constitution | `#process-constitution` |  | 2,563 | conserved; the definition overlay's binding is at PRODUCT_DEFINITION §1 and §8 | `SPEC_METHOD.md#process-constitution` |
 | STDO Product Definition Overlay And Layout Independence | `#stdo-product-definition-overlay-and-layout-independence` |  | 2,941 | conserved; the product-definition-routing bounded context is owned by PRODUCT_DEFINITION rather than SPEC_METHOD; `IDENTITY_METHOD.md` carried as the IDENTITY member | `PRODUCT_DEFINITION.md#1-overlay-and-layout-independence` |
 | &nbsp;&nbsp;Required Definition Relations | `#required-definition-relations` |  | 2,033 | conserved | `PRODUCT_DEFINITION.md#2-required-definition-relations` |
 | &nbsp;&nbsp;Constitutional-Set Sufficiency | `#constitutional-set-sufficiency` |  | 1,964 | conserved; "Design Module Method Ontology" carried as the design profile's accepted design ontology of a realisation boundary | `PRODUCT_DEFINITION.md#3-constitutional-set-sufficiency` |
@@ -428,40 +428,40 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 | &nbsp;&nbsp;Recursive Discovery And Explicit Composition | `#recursive-discovery-and-explicit-composition` |  | 3,173 | conserved | `PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition` |
 | &nbsp;&nbsp;Semantic-Resolution Conformance Cases | `#semantic-resolution-conformance-cases` |  | 1,669 | conserved; "Reference Frame Method evaluation context" carried as the reference-frame-evaluation bounded context of REFERENCE_FRAME §1 | `PRODUCT_DEFINITION.md#10-semantic-resolution-conformance-cases` |
 | One Constitutional Surface And Version Boundary (`STDO-SURFACE-001`) | `#one-constitutional-surface-and-version-boundary-stdo-surface-001` | STDO-SURFACE-001 | 2,041 | conserved; "standard" carried as "member" | `PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary` |
-| Constitutional Chain | `#constitutional-chain` |  | 4,052 | unresolved | |
-| Sprint Execution Boundary | `#sprint-execution-boundary` |  | 2,635 | unresolved | |
-| Ambiguity Governance Rule | `#ambiguity-governance-rule` |  | 3,434 | unresolved | |
-| Operational Lifecycle Sufficiency Rule | `#operational-lifecycle-sufficiency-rule` |  | 1,889 | unresolved | |
-| Change Management Rule | `#change-management-rule` |  | 174 | unresolved | |
-| &nbsp;&nbsp;Universal Intake Triage | `#universal-intake-triage` |  | 3,368 | unresolved | |
-| &nbsp;&nbsp;Computed Classification And Treatment | `#computed-classification-and-treatment` |  | 4,857 | unresolved | |
-| Consistency Gate Rule | `#consistency-gate-rule` |  | 1,199 | unresolved | |
-| Product Outcome Conservation (`STDO-UP-013`) | `#product-outcome-conservation-stdo-up-013` | UP-013 | 4,432 | unresolved | |
-| Proportional Method And Delivery (`STDO-UP-014`) | `#proportional-method-and-delivery-stdo-up-014` | UP-014 | 4,218 | unresolved | |
-| Agentic Construction Execution (`STDO-UP-020`) | `#agentic-construction-execution-stdo-up-020` | UP-020 | 696 | unresolved | |
-| &nbsp;&nbsp;Sufficient Execution Intake | `#sufficient-execution-intake` |  | 937 | unresolved | |
-| &nbsp;&nbsp;Bounded Causal Construction | `#bounded-causal-construction` |  | 540 | unresolved | |
-| &nbsp;&nbsp;Construction, Assessment, And Delegation | `#construction-assessment-and-delegation` |  | 2,253 | unresolved | |
-| &nbsp;&nbsp;Proportional Disposition | `#proportional-disposition` |  | 1,114 | unresolved | |
-| &nbsp;&nbsp;Transition Evidence And Proof Cadence | `#transition-evidence-and-proof-cadence` |  | 977 | unresolved | |
-| &nbsp;&nbsp;Checkpoint, Continuation, Progress, And Churn | `#checkpoint-continuation-progress-and-churn` |  | 1,744 | unresolved | |
-| Complete Enclosing-Relation Admission (`STDO-UP-021`) | `#complete-enclosing-relation-admission-stdo-up-021` | UP-021 | 3,070 | unresolved | |
-| &nbsp;&nbsp;Standing Structural Qualification | `#standing-structural-qualification` |  | 2,842 | unresolved | |
-| Core Interface Migration Rule | `#core-interface-migration-rule` |  | 1,302 | unresolved | |
-| &nbsp;&nbsp;Constitutional Migration Options | `#constitutional-migration-options` |  | 4,436 | unresolved | |
-| &nbsp;&nbsp;What Counts As A Core Interface | `#what-counts-as-a-core-interface` |  | 445 | unresolved | |
-| &nbsp;&nbsp;Required Migration Protocol | `#required-migration-protocol` |  | 802 | unresolved | |
-| &nbsp;&nbsp;Bridge Prohibition | `#bridge-prohibition` |  | 758 | unresolved | |
-| &nbsp;&nbsp;Projection Discipline | `#projection-discipline` |  | 593 | unresolved | |
-| &nbsp;&nbsp;Inside-Out First Sequencing | `#inside-out-first-sequencing` |  | 1,012 | unresolved | |
-| &nbsp;&nbsp;Hard-Break Discipline | `#hard-break-discipline` |  | 1,155 | unresolved | |
-| &nbsp;&nbsp;Proof-Last Rule For Core Interface Changes | `#proof-last-rule-for-core-interface-changes` |  | 717 | unresolved | |
-| &nbsp;&nbsp;Closure Criterion | `#closure-criterion` |  | 1,661 | unresolved | |
-| Release Version Boundary | `#release-version-boundary` |  | 875 | unresolved | |
-| Evidence Rules | `#evidence-rules` |  | 96 | unresolved | |
-| &nbsp;&nbsp;Proof Target Identity And Adequacy (`STDO-UP-001`) | `#proof-target-identity-and-adequacy-stdo-up-001` | UP-001 | 594 | unresolved | |
-| &nbsp;&nbsp;Semantic, Evidence, And Projection Separation (`STDO-UP-008`) | `#semantic-evidence-and-projection-separation-stdo-up-008` | UP-008 | 727 | unresolved | |
-| &nbsp;&nbsp;Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`) | `#assurance-boundary-congruence-and-method-qualification-stdo-up-022` | UP-022 | 5,342 | unresolved | |
+| Constitutional Chain | `#constitutional-chain` |  | 4,052 | conserved; the WHAT and HOW bindings are at PRODUCT_DEFINITION §8 | `SPEC_METHOD.md#constitutional-chain` |
+| Sprint Execution Boundary | `#sprint-execution-boundary` |  | 2,635 | conserved; sprint and ticket mechanics at TICKETS | `SPEC_METHOD.md#sprint-execution-boundary` |
+| Ambiguity Governance Rule | `#ambiguity-governance-rule` |  | 3,434 | conserved; the bounded-context and concept identities carried unchanged; the ambiguity outcome refinement is ACTIVATION §3 and the hard stops ACTIVATION §4; the profile shorthands named are generalised to "a profile's runtime shorthands" | `SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle` |
+| Operational Lifecycle Sufficiency Rule | `#operational-lifecycle-sufficiency-rule` |  | 1,889 | conserved | `SPEC_METHOD.md#operational-lifecycle-sufficiency` |
+| Change Management Rule | `#change-management-rule` |  | 174 | conserved | `SPEC_METHOD.md#4-change-management` |
+| &nbsp;&nbsp;Universal Intake Triage | `#universal-intake-triage` |  | 3,368 | conserved; the six determinations, the triangulation across frames, the smallest sufficient configuration, the six classes with their re-entry and flows, the below-Goals assertion and the drift rule | `SPEC_METHOD.md#universal-intake-triage`; `SPEC_METHOD.md#change-classes` |
+| &nbsp;&nbsp;Computed Classification And Treatment | `#computed-classification-and-treatment` |  | 4,857 | conserved; C, J and O, the producer and its output fields, the four-step ordered walk, the nonconformance rule, unknown treatment, retry and reuse restored in full | `SPEC_METHOD.md#computed-classification-and-treatment` |
+| Consistency Gate Rule | `#consistency-gate-rule` |  | 1,199 | conserved | `SPEC_METHOD.md#consistency-gate` |
+| Product Outcome Conservation (`STDO-UP-013`) | `#product-outcome-conservation-stdo-up-013` | UP-013 | 4,432 | conserved in full; the acceptance interval is also EVALUATION §5 and the outcome object FOUNDATIONS §2; "Prime" generalised to "the prime law of a design profile" | `SPEC_METHOD.md#3-outcome-conservation` |
+| Proportional Method And Delivery (`STDO-UP-014`) | `#proportional-method-and-delivery-stdo-up-014` | UP-014 | 4,218 | conserved; the relation, effective reasoning complexity, the constraint test, the symbolic-design paragraph, the disproportion test and the method's own execution in ACTIVATION §6; the delivery priority in SPEC_METHOD §8; "Ontology, IACS, Prime" generalised to "a detailed algebra or semantic design view" | `ACTIVATION.md#6-cost-and-proportionality`; `SPEC_METHOD.md#8-bounded-execution-in-this-method` |
+| Agentic Construction Execution (`STDO-UP-020`) | `#agentic-construction-execution-stdo-up-020` | UP-020 | 696 | conserved; the normative relation and the non-prescription of worker internals; SPEC_METHOD §8 binds the generic terms to the product outcome | `ACTIVATION.md#1-the-step` |
+| &nbsp;&nbsp;Sufficient Execution Intake | `#sufficient-execution-intake` |  | 937 | conserved; all six intake items; the design-profile input laws consumed by reference to PROFILES §3 | `ACTIVATION.md#intake` |
+| &nbsp;&nbsp;Bounded Causal Construction | `#bounded-causal-construction` |  | 540 | conserved | `ACTIVATION.md#execution-unit` |
+| &nbsp;&nbsp;Construction, Assessment, And Delegation | `#construction-assessment-and-delegation` |  | 2,253 | conserved; "Executive" written "coordinating role" in tier 1; the proxy limits also at EVALUATION §5 | `ACTIVATION.md#roles-and-delegation` |
+| &nbsp;&nbsp;Proportional Disposition | `#proportional-disposition` |  | 1,114 | conserved; the four dispositions with conditions, global correctness and the repeated-rejection rule | `ACTIVATION.md#disposition` |
+| &nbsp;&nbsp;Transition Evidence And Proof Cadence | `#transition-evidence-and-proof-cadence` |  | 977 | conserved | `ACTIVATION.md#transition-evidence` |
+| &nbsp;&nbsp;Checkpoint, Continuation, Progress, And Churn | `#checkpoint-continuation-progress-and-churn` |  | 1,744 | conserved; checkpoint, preservation checkpoint fields, restart, the progress categories and the six falsifiers; "Product" written "the selected outcome" in tier 1 | `ACTIVATION.md#5-work-state-and-restart` |
+| Complete Enclosing-Relation Admission (`STDO-UP-021`) | `#complete-enclosing-relation-admission-stdo-up-021` | UP-021 | 3,070 | conserved in full | `ACTIVATION.md#complete-enclosing-relation-admission` |
+| &nbsp;&nbsp;Standing Structural Qualification | `#standing-structural-qualification` |  | 2,842 | conserved; all ten forms with their required observations | `ACTIVATION.md#standing-structural-qualification` |
+| Core Interface Migration Rule | `#core-interface-migration-rule` |  | 1,302 | conserved | `SPEC_METHOD.md#core-interface-migration` |
+| &nbsp;&nbsp;Constitutional Migration Options | `#constitutional-migration-options` |  | 4,436 | conserved | `SPEC_METHOD.md#constitutional-migration-options` |
+| &nbsp;&nbsp;What Counts As A Core Interface | `#what-counts-as-a-core-interface` |  | 445 | conserved | `SPEC_METHOD.md#what-counts-as-a-core-interface` |
+| &nbsp;&nbsp;Required Migration Protocol | `#required-migration-protocol` |  | 802 | conserved | `SPEC_METHOD.md#required-migration-protocol` |
+| &nbsp;&nbsp;Bridge Prohibition | `#bridge-prohibition` |  | 758 | conserved | `SPEC_METHOD.md#bridge-prohibition` |
+| &nbsp;&nbsp;Projection Discipline | `#projection-discipline` |  | 593 | conserved | `SPEC_METHOD.md#projection-discipline` |
+| &nbsp;&nbsp;Inside-Out First Sequencing | `#inside-out-first-sequencing` |  | 1,012 | conserved | `SPEC_METHOD.md#inside-out-first-sequencing` |
+| &nbsp;&nbsp;Hard-Break Discipline | `#hard-break-discipline` |  | 1,155 | conserved | `SPEC_METHOD.md#hard-break-discipline` |
+| &nbsp;&nbsp;Proof-Last Rule For Core Interface Changes | `#proof-last-rule-for-core-interface-changes` |  | 717 | conserved | `SPEC_METHOD.md#proof-last-rule` |
+| &nbsp;&nbsp;Closure Criterion | `#closure-criterion` |  | 1,661 | conserved; the retention relation is cited by live surface immutability | `SPEC_METHOD.md#closure-criterion` |
+| Release Version Boundary | `#release-version-boundary` |  | 875 | conserved; release mechanics stay with RELEASE, carried by provenance until that member exists | `SPEC_METHOD.md#6-lineage-and-release` |
+| Evidence Rules | `#evidence-rules` |  | 96 | not applicable: heading with no claim beyond naming its three children (96 bytes), which are disposed individually | `SPEC_METHOD.md#9-evidence` |
+| &nbsp;&nbsp;Proof Target Identity And Adequacy (`STDO-UP-001`) | `#proof-target-identity-and-adequacy-stdo-up-001` | UP-001 | 594 | conserved; the six named relations and the weaker-property rule including release proof | `EVALUATION.md#1-claims` |
+| &nbsp;&nbsp;Semantic, Evidence, And Projection Separation (`STDO-UP-008`) | `#semantic-evidence-and-projection-separation-stdo-up-008` | UP-008 | 727 | conserved; the three bases, the three invalidation cases and the digest rule | `EVALUATION.md#2-separation` |
+| &nbsp;&nbsp;Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`) | `#assurance-boundary-congruence-and-method-qualification-stdo-up-022` | UP-022 | 5,342 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, the qualification protocol, derived guidance and the falsifiers in §7 | `EVALUATION.md#1-claims`; `EVALUATION.md#3-independent-assessment`; `EVALUATION.md#6-conformance-of-realisations`; `EVALUATION.md#method-self-qualification` |
 | Verification Layers | `#verification-layers` |  | 1,477 | conserved; the profile-flavoured example (compositional graphs, Fragment types, discovery workflow) generalised to a reusable composable unit | `ASSURANCE.md#1-verification-layers` |
 | Testing Strategy Taxonomy | `#testing-strategy-taxonomy` |  | 4,014 | conserved in full (both authority sources, sandbox-only UAT, harnessed and live modes, necessary-not-sufficient rule, terminology list); the product-assurance bounded context is owned by ASSURANCE; `DESIGN_MODULE_METHOD.md` carried as the DESIGN_MODULE member and "IACS" as the carrier inventory the design declares | `ASSURANCE.md#2-testing-strategy-taxonomy` |
 | &nbsp;&nbsp;Fixture And Proof Portability Rule | `#fixture-and-proof-portability-rule` |  | 829 | conserved | `ASSURANCE.md#fixture-and-proof-portability` |
@@ -469,24 +469,24 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 | Scenario Bundle Rule | `#scenario-bundle-rule` |  | 969 | conserved | `ASSURANCE.md#4-scenario-bundle` |
 | Installed Dev Proof Rule | `#installed-dev-proof-rule` |  | 619 | conserved | `ASSURANCE.md#5-installed-dev-proof` |
 | Significant Path Coverage Rule | `#significant-path-coverage-rule` |  | 659 | conserved | `ASSURANCE.md#6-significant-path-coverage` |
-| Requirement Categories | `#requirement-categories` |  | 1,790 | unresolved | |
-| Reconstruction Litmus | `#reconstruction-litmus` |  | 2,684 | unresolved | |
-| Design Rule | `#design-rule` |  | 864 | unresolved | |
-| Renewal Path | `#renewal-path` |  | 1,504 | unresolved | |
-| Trace Closure And Anti-Drift Rule | `#trace-closure-and-anti-drift-rule` |  | 101 | unresolved | |
-| &nbsp;&nbsp;Ownership | `#ownership` |  | 206 | unresolved | |
-| &nbsp;&nbsp;Downstream Closure | `#downstream-closure` |  | 709 | unresolved | |
-| &nbsp;&nbsp;Drift Signals | `#drift-signals` |  | 1,397 | unresolved | |
-| Live Surface Immutability | `#live-surface-immutability` |  | 1,091 | unresolved | |
-| Fundamental Migration Rule | `#fundamental-migration-rule` |  | 3,159 | unresolved | |
-| Transformation Wave Rule | `#transformation-wave-rule` |  | 1,485 | unresolved | |
-| Legacy Classification Rule | `#legacy-classification-rule` |  | 786 | unresolved | |
-| Requirement Classification Rules | `#requirement-classification-rules` |  | 769 | unresolved | |
-| Specification Surface Rule | `#specification-surface-rule` |  | 2,539 | unresolved | |
+| Requirement Categories | `#requirement-categories` |  | 1,790 | conserved | `SPEC_METHOD.md#requirement-categories-and-classification` |
+| Reconstruction Litmus | `#reconstruction-litmus` |  | 2,684 | conserved; the generic layered-sufficiency law in EVALUATION §6, the five layer derivations and the per-layer diagnoses in SPEC_METHOD §2; the design-view coverage gate stays with the design profile | `EVALUATION.md#6-conformance-of-realisations`; `SPEC_METHOD.md#reconstruction-litmus` |
+| Design Rule | `#design-rule` |  | 864 | conserved | `SPEC_METHOD.md#design-rule` |
+| Renewal Path | `#renewal-path` |  | 1,504 | conserved | `SPEC_METHOD.md#renewal-path` |
+| Trace Closure And Anti-Drift Rule | `#trace-closure-and-anti-drift-rule` |  | 101 | conserved | `SPEC_METHOD.md#trace-closure-and-anti-drift` |
+| &nbsp;&nbsp;Ownership | `#ownership` |  | 206 | conserved | `SPEC_METHOD.md#trace-closure-and-anti-drift` |
+| &nbsp;&nbsp;Downstream Closure | `#downstream-closure` |  | 709 | conserved | `SPEC_METHOD.md#trace-closure-and-anti-drift` |
+| &nbsp;&nbsp;Drift Signals | `#drift-signals` |  | 1,397 | conserved; all ten signals | `SPEC_METHOD.md#trace-closure-and-anti-drift` |
+| Live Surface Immutability | `#live-surface-immutability` |  | 1,091 | conserved | `SPEC_METHOD.md#live-surface-immutability` |
+| Fundamental Migration Rule | `#fundamental-migration-rule` |  | 3,159 | conserved; the eight rules, three classifications, seven steps and three migration conditions | `SPEC_METHOD.md#fundamental-migration` |
+| Transformation Wave Rule | `#transformation-wave-rule` |  | 1,485 | conserved | `SPEC_METHOD.md#transformation-wave` |
+| Legacy Classification Rule | `#legacy-classification-rule` |  | 786 | conserved | `SPEC_METHOD.md#requirement-categories-and-classification` |
+| Requirement Classification Rules | `#requirement-classification-rules` |  | 769 | conserved | `SPEC_METHOD.md#requirement-categories-and-classification` |
+| Specification Surface Rule | `#specification-surface-rule` |  | 2,539 | conserved | `SPEC_METHOD.md#specification-surface-rule` |
 | Bootstrap Rule | `#bootstrap-rule` |  | 6,674 | conserved in full (scaffold bindings, authority split, singular-authority rule, folder shape, requirement sources, fourteen-step sequence); the predecessor's own mutable source path is generalised to the method's source workspace | `PRODUCT_DEFINITION.md#12-bootstrap` |
-| Method | `#method` |  | 4,613 | unresolved | |
-| ADR Conventions | `#adr-conventions` |  | 910 | unresolved | |
-| &nbsp;&nbsp;ADR Folder Convention | `#adr-folder-convention` |  | 1,692 | unresolved | |
+| Method | `#method` |  | 4,613 | conserved; the four procedures in full; the design-module co-evolution predicate named without its symbol | `SPEC_METHOD.md#procedures` |
+| ADR Conventions | `#adr-conventions` |  | 910 | conserved | `SPEC_METHOD.md#10-design-records` |
+| &nbsp;&nbsp;ADR Folder Convention | `#adr-folder-convention` |  | 1,692 | conserved | `SPEC_METHOD.md#10-design-records` |
 
 ## STDO_REFERENCE_FRAME_BASELINE.md
 
