@@ -1,0 +1,90 @@
+# console log for qualification/runs/F-03/20261012T110751Z-G-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T11:07:51Z
+# step G-001: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T110751Z-G-001 --step-id G-001 --card qualification/cases/F-03/CARD.md --block "METHOD ux-replay=a_c/set-5/projection-ux-replay-materialized.json" --block "TASK=qualification/cases/F-03/TASK-G.md" --model sonnet
+**1. B1, B2, B3**
+
+- **B1: through the membrane.**
+  - Update is pure. It returns State with `selected = id` and the declared Cmd `FetchTides(id)`.
+  - `fx.ts`, the declared effect mechanism, performs the request and returns `TidesLoaded(result)` as a Msg.
+  - Rules: `ux-process-model-is-the-elm-architecture` and `ux-effects-only-at-the-membrane`. Nothing needs to move.
+- **B2: outside the membrane.**
+  - The view handler calls `api.saveFavourite(id)` directly, which is I/O outside the membrane.
+  - It sets the local signal `isFav`, so the view holds state continuation. No Msg is emitted, and State has no favourites field.
+  - Rules: `ux-effects-only-at-the-membrane`, `ux-view-does-not-own-continuation`, and `ux-stack-is-free-and-the-model-is-not`. The last rejects a realisation that mutates state outside a typed reducer, whatever the stack.
+  - Move:
+    - The click handler emits `FavouriteToggled(id)`.
+    - The reducer holds favourites in State and returns `SaveFavourite(id)`.
+    - `fx.ts` performs the save and returns the outcome as a Msg.
+    - `isFav` is derived from State.
+  - The declared Msg set has no Msg for the save outcome, so the design module needs one added.
+- **B3: outside the membrane.**
+  - The `createEffect` contains a conditional that decides a state transition: offline sends `ShowOfflineBanner`, otherwise it does something else.
+  - It also calls `fetch` itself instead of interpreting a declared Cmd. It duplicates `FetchTides` from B1.
+  - `ShowOfflineBanner` is not in the declared Msg set.
+  - Rules: `ux-membrane-interprets-one-declared-cmd` and `ux-effects-only-at-the-membrane`.
+  - Move:
+    - The offline decision goes into the reducer. On `StationChosen`, the reducer sets an offline or banner field in State and returns `FetchTides(id)` or no Cmd.
+    - The fetch stays only in `fx.ts` via `FetchTides`.
+    - The effect handler is removed, or it interprets exactly one declared Cmd.
+
+**2. The replay proof**
+
+- **What it establishes:** For the station-choosing path, replaying `Open`, `StationChosen(s-12)`, `TidesLoaded(ok)` from the fixture State gives the expected final State and the Cmds `FetchStations`, `FetchTides(s-12)`. It includes success and failure Msgs and a fixed clock, and it passes. It is a valid proof for that family and for the reducer.
+- **Continuation not leaked:** It does not show this.
+  - It replays only the reducer. B2 and B3 sit outside the reducer, in the view handler and in `createEffect`.
+  - B2 is not in the log at all, and the signal `isFav` is exactly the hidden view state the Msg-replay test catches.
+  - B3's effect would run on the replayed `selected` change outside the proof, so the proof cannot see it.
+  - Leakage is therefore present, not excluded.
+- **Coverage:** Not every family is covered. The choosing family has one proof. The favourites family has none, since nothing else exists under `replay/`.
+
+**3. The debug pane**
+
+- **Governed.** It is reachable from the product shell. It can overwrite cached tide data that `station-picker` reads, so it can change product truth. Either trigger governs it by default.
+- **Not lawfully exempt.** Exemption needs all seven records, and one is missing.
+- **Present (six):**
+  - exemption scope: "debug pane only"
+  - permitted operations: "view cache, clear cache"
+  - mutation bounded: "bounded to cache clear"
+  - visible `DEBUG` label
+  - superseding surface: "Cache settings"
+  - retirement condition and owning ticket: "when Cache settings ships", `T-55`
+- **Missing (one):** the non-closure condition that blocks release if the scaffold remains.
+- **Mismatch:** The pane can overwrite cache, which is wider than the recorded mutation bound "clear cache". The mutation record is present but does not match the actual behaviour.
+- With the exemption incomplete, the pane stays governed and is evaluated under the §15 table.
+- `DM-UX-3` names the profile for "production UI only". That does not take the pane out of governance, because the default triggers apply.
+
+**4. Verdicts the closure claim reaches**
+
+- **Row 2, violation (falsified):**
+  - A failure pattern is present. The counterexamples are B2, with a direct API call plus a view-local `isFav` and no Msg, and B3, with conditional logic and a direct `fetch` in an effect handler.
+  - Row 1 (compliant) therefore does not hold, and nothing is coerced to satisfied.
+  - The disagreement between the two compliance tests does not matter here, because the surface fails under either.
+- **Row 3, replay proof (satisfied, narrowly):**
+  - The proof passes for the station-choosing family only.
+  - It does not support closure.
+- **Row 4, closure without the §8 proof (falsified):**
+  - The counterexample is the favourites family, which has no proof.
+  - No UX sprint is open, so this is not escrow.
+  - The §11 accessibility declarations are not stated in the record, so I do not judge them.
+  - The debug pane has no recorded complete exemption, so it is also open under this row.
+- **Row 5, carrier (not reached):**
+  - `FavouriteToggled` and `SaveFavourite` are declared, so a carrier exists in the design module. The code bypasses it.
+  - Typed-contract bindings are not stated, so I do not establish a missing carrier.
+- **Row 6, ambiguity:**
+  - The one ambiguous point is whether the debug pane is in adoption scope. The stricter reading governs it, so the result is not satisfied.
+  - The ambiguity does not by itself yield satisfied, out_of_frame or indeterminate.
+- **Row 7, design module incomplete (invalid_basis):**
+  - The Msg set lacks `ShowOfflineBanner` and a save-outcome Msg. That is a possible gap, but I cannot decide it without the §14 review questions.
+- **Overall:** The closure claim for `station-picker` in release 1.4 maps to the core member **falsified**. B1 is compliant and the choosing-family proof passes, but neither rescues closure.
+
+**No method source**
+
+- The §13 failure-pattern list is referenced but not supplied, so I matched B2 and B3 to the rejected-realisation and membrane clauses instead.
+- The §11 accessibility obligations are not supplied.
+- The §14 review questions are not supplied, so row 7 stays undecided.
+- The §7 typed-contract and carrier rules are not supplied, so row 5 stays undecided.
+- Which of the two compliance tests applies is pending Jim's ruling and is not in the METHOD block. It does not change the result here.
+- The METHOD block does not say whether a Cmd needs a declared outcome Msg, so I could not rule on the save-outcome Msg beyond noting the gap.
+# step exit 0
+# end 2026-10-12T11:08:25Z

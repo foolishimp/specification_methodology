@@ -6,22 +6,36 @@ these definitions by reference and adds none of its own.
 
 ## 1. Vocabulary of standing
 
-A clause in this corpus has one standing relative to the rc.2 builder:
+Every claim of the predecessor cut `stdo://releases/v2.5.1-rc.2/` receives
+exactly one disposition in this corpus. The frontier is the tenant copy of
+[PREDECESSOR_CLAIMS](../frontier/PREDECESSOR_CLAIMS.md), one row per
+predecessor section; the values are those of UP-015,
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+(provenance
+[rc.2 UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)),
+applied to the corpus itself:
 
-- conserved: the rc.2 clause governs unchanged; the route is given;
-- reframed: the obligation is kept and restated at a different scope or
-  owner; the rc.2 clause continues to govern its own scope; the route and
-  the change are given;
-- superseded: an accepted successor relation replaces it; the route and the
-  successor are given;
-- new: no rc.2 clause states it; the requiring principle is given.
+- conserved: the claim is restated in this corpus's own text with every
+  determination the predecessor makes, and the locus names where; a route
+  to the predecessor is provenance, never the disposition;
+- superseded: an accepted successor relation replaces the claim; the
+  successor clause and what changed are named;
+- intentionally removed: Jim's decision as Product authority, with the
+  reason; no Writer records this value;
+- not applicable: the claim has no successor effect; the bounded reason is
+  given;
+- unresolved: the only other state; it blocks qualification of the
+  affected claim.
 
-A commitment has one standing relative to the others: recovered, derived
-(with named premises), independent (argued by non-entailment) or hypothesis.
-This is
-[UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
-applied to the corpus itself: an undisposed rc.2 obligation blocks
-qualification.
+A note that a conserved claim was reframed, carried at a different scope
+or by a different owner, is commentary on the carrying, never a
+disposition. A clause with no predecessor row is new law and names the
+purpose and material relation that require it. A commitment has one
+standing relative to the others: recovered, derived (with named premises),
+independent (argued by non-entailment) or hypothesis. Every clause names
+the principle (P0 to P6, §3) that requires it. This corpus is complete and
+applicable without the predecessor remaining operative; the predecessor
+stays the builder of this construction until a release decision.
 
 ## 2. Ontology
 
@@ -37,19 +51,20 @@ qualification.
 | Step | one bounded unit of work: intake, selected context, grant, execution, output | P0 |
 | Step-produced fact | a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable and is not one | P0, P4b |
 | Claim | an assertion with subject, property, basis, witness relation and falsifier | P6 |
-| Evidence | artifacts, events, observations used to evaluate a claim on a basis | P6 |
+| Evidence | the exact observations or artifacts admitted to evaluate a claim on a basis; each carries provenance, subject identity, basis and scope; evidence becomes neither semantic truth nor decision authority by being available inside a frame | P6 |
 | Judgment | a recorded evaluation over an unchanged subject, with evaluator, decision, evidence, scope and revising observation | P6 |
-| Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability | P6 |
+| Authority | an identity-bearing permission to operate or to dispose acceptance within a scope; never minted from capability, label or reachability; its kinds are defined under Authority kinds below | P6 |
 | Residual | a material uncertainty, omission, loss or unproven relation that remains until an authorised disposition | P4b |
-| Basis | the exact immutable set of definitions a step, claim or result binds; mixed bases need an explicit composite relation | P6 |
-| Material | of a relation, uncertainty or closure: its change can alter a result, the validity of a basis, the sufficiency of evidence or an authority; the relation family of CALCULUS §2 is the material relations of a step | P2, P6 |
+| Basis | the exact state a step, claim, result or evaluation binds: every version, identity, time, topology, authority, configuration or evidence coordinate whose change can alter it; immutable, or moving with a declared way of detecting advancement and a declared condition for reevaluation; mixed bases need an explicit composite relation | P6, P3 |
+| Material | of a relation: its lawful change can change an evaluation's result, invalidate its basis, change the admissible evidence, change who may perform a material operation, or change who may decide the evaluation or a material operation; of an uncertainty or closure: likewise; materiality is evaluation-relative, so a relation material in one frame may be irrelevant in another; the relation family of ACTIVATION §2 is the material relations of a step | P2, P6 |
 
 Dispositions: subject, representation and interpretation conserve
 [AC Interpretation And Models](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#interpretation-and-models)
 and
 [bounded-context semantic resolution](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#bounded-context-semantic-resolution);
 identity conserves
-[IDENTITY_METHOD](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#1-scoped-identity)
+[IDENTITY_METHOD](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#1-scoped-identity),
+restated in [IDENTITY §2](IDENTITY.md#scoped-identity),
 and
 [AC-002](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-002-scoped-identity);
 outcome conserves
@@ -59,7 +74,8 @@ actor and envelope conserve
 claim, judgment and authority conserve
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001),
 [AC-014](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-014-judgment-separation),
-[UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004);
+[UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004),
+restated in [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004);
 residual and basis conserve
 [AC-009](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-009-residual-conservation)
 and
@@ -69,6 +85,158 @@ Step and step-produced fact are reframed from the
 and
 [Return A Closed Result](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#return-a-closed-result)
 to the generic unit.
+
+### Frame objects
+
+The reference frame and the objects it binds are first-class in this
+corpus. Each is defined here once; [REFERENCE_FRAME](REFERENCE_FRAME.md)
+states the laws over them and [ACTIVATION](ACTIVATION.md) the step that
+activates one. Provenance for this subsection and the three that follow is
+`stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#definitions`
+and its child sections.
+
+| Term | Definition | Requires |
+|---|---|---|
+| Evaluation | a declared question whose admissible result family, evidence basis, decision authority and, where it performs a material action, operation authority are known; it may ask for a judgment, prediction, construction, comparison, proof, refusal, classification or action recommendation | P6, P2 |
+| Evaluation family | evaluations that need the same material-relation manifold, authority basis and result algebra; similar wording does not prove that two evaluations share a family | P1, P2 |
+| Workspace | the bounded body of material reasoned over or acted upon, which may include constitutional sources, domain assets, designs, implementations, tools, runtime state, evidence, historical records, external dependencies and human decisions; broader than a repository, which is one possible carrier | P3 |
+| Material-relation manifold | the finite, jointly interpretable set of variables, entities, identities, states, relations, invariants, authorities, observations and exclusions an evaluation family needs; a bounded relation space whose coordinate charts may overlap; no geometric mathematics or runtime abstraction is implied | P0, P2 |
+| Coordinate | the complete local position from which a value, event, decision, observation or action is interpreted: the basis, identity, lineage, input, evidence and authority information the evaluation requires; equal names, values, shapes, locations or apparent topology positions do not establish coordinate equality, which follows a declared relation | P1, P3 |
+| Topology | the relation structure among the material entities, capabilities, authorities, lifecycle state spaces, adjacencies and seams visible to a frame at one basis; a frame need not hold the workspace's complete topology; a state-value change preserves the frame topology only when it preserves every such entity, relation, lifecycle, authority, capability, adjacency and seam, and a transition that changes any of them is a topology mutation that may invalidate the frame's coordinates | P3 |
+| Capability envelope | the competence, context capacity, tools, access, applicable evaluation- or assurance-independence conditions and configuration required to activate a frame and perform its evaluations; the same frame may be usable by one actor and unusable by another; actor capability may justify a different frame size or activation sequence and can neither waive an invariant nor widen authority | P0, P6 |
+| Reference frame | a finite specification of the attention, coordinates, authority, evidence and result relations required to perform one declared evaluation family over a stated basis; its components are the frame tuple below | P0 |
+| Activated frame | one frame declaration bound to an exact evaluation, workspace subject, basis, actor and evidence-acquisition boundary; a reusable declaration is not evidence that a particular activation was correct | P3, P6 |
+| Frame set | the human-declared family of frames available for a governed outcome or workspace; it may intentionally hold overlaps, alternatives, specialist frames, broad exploratory frames and separately activated assurance frames; it is not required to be a partition, tree, stack or exhaustive ontology | P6 |
+| Active frame configuration | the set of frame activations and declared result relations used for one evaluation or decision; one frame, or several disjoint, overlapping or composed frames; separately activated evaluations may be disjoint or overlapping | P4a |
+| Lens | a reusable family of questions applied across a frame configuration; authority, capability and reuse, temporal behaviour, transport and proof are lenses when named abstractly; a lens becomes a frame only when instantiated with a bounded evaluation, basis, material manifold, evidence, authorities, result algebra and capability envelope | P2 |
+| Role, persona, abstraction, component | a role allocates responsibility or authority; a persona alters an actor's approach or salience; an abstraction hides or contracts detail; a component is a structural part of a subject; each may help construct or activate a frame and none is a reference frame by identity alone; one component may appear in several frames and one frame may cross several components | P3, P6 |
+
+### Authority kinds
+
+Authority takes these kinds (P6): frame-set authority, the human authority
+that declares or accepts a project frame set; semantic authority, the
+owner of meaning for a material relation; evaluation authority, the role
+permitted to perform an evaluation; operation authority, the owner-issued
+grant to construct, transform, admit, publish or mutate a material subject
+where an evaluation performs such an operation; decision authority, the
+role permitted to accept, reject or otherwise dispose a result; and actor
+identity, the human, agent, tool or process performing the work, which is
+an identity and not an authority. These may coincide in a lawful case and
+never collapse by default. Declaring, selecting, activating or executing a
+frame grants no semantic, operation or decision authority. A read-only
+evaluation declares no operation authority; an effectful evaluation
+inherits the exact operation grant from its existing owner, and the frame
+does not create that grant. Human authority may act directly or through an
+explicitly admitted bounded proxy where the governing identity and
+authority law permits it; proxy identity and human-authority identity stay
+distinct (P6, P3).
+
+### Disjointness and independence
+
+Three relations stay distinct (P6, P1). Frame disjointness is structural:
+two frames share no material variable, coordinate, evidence or result
+dependency for the declared evaluations. Evaluation independence is
+procedural: separately activated evaluations neither consume nor influence
+one another's unclosed working results, although they may inspect the same
+subject, overlap in their manifolds and later supply closed results to one
+conjunction. Assurance independence is claim-relative: the governing
+assurance law states the non-authorship, evidence-acquisition,
+reference-exposure, actor and configuration separation a verdict needs to
+count as independent assurance (EVALUATION §3). Disjoint frames need not
+be independently evaluated; independently activated evaluations need not
+be disjoint; and the unqualified word "independent" establishes none of
+the three.
+
+### The frame tuple
+
+A reference frame F is the tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩
+(P0): Q the evaluation family; B the workspace and topology basis; M the
+material-relation manifold; C the coordinate and equality law; I the
+applicable invariant set; A the authority relation; E the admissible
+evidence and provenance law; X the exclusion and prohibited-assumption set;
+R the closed result algebra (ACTIVATION §3); J the invalidation and rechart
+condition; K the actor capability envelope; and D the optional set of
+declared dependencies, overlaps, inputs and outputs involving other frames.
+The tuple specifies the relation; it is not a required schema or runtime
+carrier (P2). Operationally a frame is an evaluation contract that defines
+the finite attention scope one evaluation family requires. A prompt, a
+context packet, a symbolic program or any other representation is a
+projection of an activated frame, not the frame (P1). A frame is bound
+when every material coordinate above resolves to an exact source, subject,
+basis, authority, evidence route, actor envelope, result relation and
+invalidation condition; the binding may be expressed entirely in
+source-linked prose, and representation cannot create, widen or replace it
+(P3, P6).
+
+### Product lineage objects
+
+Software is recursive and compositional: a released product may build the
+next released version of itself, a dependent product, or downstream project
+artifacts. Most taxonomy drift in recursive systems comes from collapsing
+the roles below into one overloaded word such as "product". Each role is an
+object with its own identity (P3; provenance
+`stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#recursive-product-taxonomy`,
+whose bounded context `urn:stdo:bounded-context:recursive-product-taxonomy`
+this member now owns under the selected complete basis; the concept
+identities below are carried unchanged).
+
+| Term | Definition | Requires |
+|---|---|---|
+| Substrate (`urn:stdo:concept:recursive-product-taxonomy:substrate`) | a lower product or runtime used to build other products | P3 |
+| Development product (`urn:stdo:concept:recursive-product-taxonomy:development-product`) | the role of one exact install of a released product while that install acts as builder substrate for a source project; the role creates no new product identity and transfers no meaning or authority from the builder to the product being authored | P3, P6 |
+| Source project (`urn:stdo:concept:recursive-product-taxonomy:source-project`) | the mutable workspace building the next release cut | P3 |
+| Release cut (`urn:stdo:concept:recursive-product-taxonomy:release-cut`) | one immutable annotated release-candidate boundary over a published feature set | P3 |
+| Product (`urn:stdo:concept:recursive-product-taxonomy:product`) | the released immutable thing resulting when that release cut is accepted | P3 |
+| Install (`urn:stdo:concept:recursive-product-taxonomy:install`) | a stamped workspace instance of that released product | P3 |
+| Artifact (`urn:stdo:concept:recursive-product-taxonomy:artifact`) | any published output built by a source project or by a configured installed product | P3 |
+| Product definition (`urn:stdo:concept:recursive-product-taxonomy:product-definition`) | the present-tense source-project authority surface, conventionally carried by `PRODUCT.md`; it defines the current product WHAT for decomposition and is not the released product artifact | P3, P2 |
+
+The governing rules: a mutable source workspace is not called a product;
+when a released product acts as builder substrate, the exact install is
+bound as a development product without confusing it with the product being
+authored; an immutable release cut or installed product is not confused
+with the mutable source project building the next cut; the product
+definition is the surface of a source project, not the released product
+artifact; products may depend on other products; installed products may
+build the next version of themselves or other products. The compiler
+analogy is the intended model: bootstrap source, release P0, install P0,
+use P0 to build the source for P1, release P1. The taxonomy is load-bearing:
+blurred, dependency and self-hosting errors compound quickly and are
+expensive to unwind. SPEC_METHOD §6 applies these objects to lineage and
+release.
+
+Release objects. A release cut has three neighbours that release keeps
+distinct from it and from each other (P3, P6; provenance
+`stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#release-identities`).
+A candidate source is the mutable source-project state constructing a
+possible successor; it is non-operative for released consumers. A release
+subject is the exact declared product member set or artifact that one
+release cut binds, described by that cut's release-scoped claims; a
+carrier that holds it does not thereby make co-located material a
+member. A version-line selector is a mutable
+alias naming the highest-ordinal published release cut on one version
+line of one project; it is convenient discovery, not immutable identity,
+and not sufficient as an exact basis ([RELEASE §1](RELEASE.md#1-context-and-position)
+states which).
+Equal version text does not collapse these objects. A selector or a
+mutable carrier may move; a release cut never moves. RELEASE §2 realises
+them, with the carriers that hold them, as refs of one release source.
+
+### Work boundary
+
+The method governs the boundary around a probabilistic, agentic or
+delegated work unit; it does not absorb the worker's internal solution
+strategy into the framework (P0, P6; provenance
+`stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#probabilistic-work-boundary`).
+The declared boundary of such a unit is an object with six parts, which the
+live specification and design should declare: the input and output contract; the
+required context; the capability or role expectation; the admissible
+evidence and evaluator regime; the provenance obligation; and the lawful
+stop, hold, gap, continuation or completion states. The worker, tool, agent
+or domain implementation owns the internal HOW inside that boundary unless
+the product explicitly promotes part of that HOW into reusable declared
+structure. The step of ACTIVATION §1 is this unit with its intake, context
+and result algebra made exact.
 
 ## 3. Commitments
 
@@ -80,6 +248,19 @@ Premises: a selected outcome (P2); the actor of one step need not be the
 actor of the next and may re-acquire declared sources but not private
 memory; step-produced facts are not re-acquirable; the world is open; a
 step's output is a candidate until evaluated.
+
+P0's boundary commitment (the work boundary of §2): deterministic checks
+and validation are evidence surfaces; they may optimise or prove a
+domain-local path where the domain can make part of the work precise, and
+they do not authorise the method, a runtime or a framework to absorb domain
+solution strategy as constitutional law. Any unconstrained part of a
+probabilistic worker's reasoning remains hidden worker-internal activity
+and is forced back through the declared contracts, evidence, provenance and
+control truth of the boundary. A framework layer that prescribes domain
+solution strategy beyond the declared work contract and control truth has
+crossed its authority boundary (P6). A profile may bind the unit to its own
+traversal unit, in which that traversal is the admissible external space;
+PROFILES §2 keeps that binding.
 
 P1 Interpretation. Subject, representation and interpretation are distinct;
 meaning holds within a declared context through a declared contract.
@@ -105,12 +286,13 @@ representation identity stay separate; a boundary is a claim with a proof
 obligation. Independent: equal capacity admits identity by persistence or by
 digest. Conserves AC-002, AC-014, the
 [recursive Product taxonomy](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#recursive-product-taxonomy),
-[Entity Cut Construction Law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law).
+[Entity Cut Construction Law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law),
+restated in [WORLD_MODEL §9](WORLD_MODEL.md#9-entity-cut-construction).
 
 P4a Typed composition. Two steps compose only when the first's result type
-and judgment satisfy the second's domain and preconditions; composition
-retains both identities, intermediate results, judgments, evidence,
-authority, provenance and stop states. Independent. Conserves
+and judgment satisfy the second's exact declared domain and preconditions;
+composition retains both identities, intermediate results, judgments,
+evidence, authority, provenance and stop states. Independent. Conserves
 [AC-016](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition),
 [RF-010](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-010-composition-on-demand).
 
@@ -137,7 +319,7 @@ Conserves
 [RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit),
 [AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
 [Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule);
-RF-012 and AC-007 are restated once in CALCULUS §3 and continue to govern.
+RF-012 and AC-007 are restated once in ACTIVATION §3 and continue to govern.
 
 P6 Justification and authority. Definitions, assumptions, observations,
 candidate judgments and accepted claims have distinct standing; evidence
@@ -146,7 +328,7 @@ neither is minted by the other. Independent: a bounded actor satisfying all
 else can still take a green label as acceptance. Conserves UP-001,
 [UP-008](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#semantic-evidence-and-projection-separation-stdo-up-008),
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022),
-UP-004,
+UP-004 ([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)),
 [RF-006](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation),
 [RF-007](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation).
 
@@ -184,12 +366,18 @@ many instances while each instance keeps its responsibility and binding
 ([UP-019](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#computational-realization-projection-stdo-up-019),
 [UP-023](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#capability-and-foundation-selection-stdo-up-023)).
 
-Formal fragment (new in this corpus; P1). Where 𝒜 is the free category on
-typed primitives, ℐ the selected carrier sets with total functions and 𝒞_H
-pairs of functions with additive costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H are
-functors and S is not faithful; that S is not an equivalence. Any further
-categorical claim defines its objects, arrows, identities and composition and
-proves preservation (conserves
+Formal fragment (hypothesis; P1). Hypothesis H1 of the accepted
+[principles](../design/PRINCIPLES.md#4-derivation-graph), categorical
+structure: with 𝒜 the free category on typed primitives, ℐ the selected
+carrier sets with total functions and 𝒞_H pairs of functions with additive
+costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H would be
+functors, S neither faithful nor an equivalence. No rc.2 clause and no
+argument in this corpus establishes it: S and R_H are not defined on
+arrows, and no preservation of identities or composition is proved. Until
+someone writes the objects, arrows and laws and proves them, the diagram is
+notation; it is not law and is carried for falsification with §5. A
+categorical claim, this one included, defines its objects, arrows,
+identities and composition and proves preservation (conserves
 [functor kinds](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#traversals-and-functor-kinds),
 which states that obligation and asserts no categorical functor itself).
 H names an architecture, never a runtime.
@@ -199,6 +387,7 @@ H names an architecture, never a runtime.
 Not law; carried for falsification: categorical equivalence of 𝒜 and ℐ under
 some reformulation; universal algorithmic capture of meaning; the statistical
 Markov boundary (candidate status under
+[WORLD_MODEL §4](WORLD_MODEL.md#epistemic-status); provenance
 [WORLD_MODEL_METHOD](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#epistemic-status-of-the-construct));
 traversal composition laws of any runtime.
 
@@ -206,15 +395,63 @@ traversal composition laws of any runtime.
 
 | rc.2 clause family | Disposition in this corpus |
 |---|---|
-| AC-001 to AC-012, AC-014 to AC-019 | conserved by reference; AC-007 is restated in CALCULUS §3 as the one result algebra |
-| AC-013 transformation record | conserved; its fields are the conservation accounting above |
-| AC-020 layer and release separation | conserved by reference; applied in SPEC_METHOD §6 |
-| RF-001 to RF-017 | conserved by reference; RF-012 restated in CALCULUS §3; RF-002/003/014/017 consumed by CALCULUS §2 |
-| UP-001, UP-004, UP-008, UP-022 | conserved; consumed by EVALUATION |
-| UP-013, UP-014, UP-005 | conserved; consumed by SPEC_METHOD §3 and CALCULUS §6 |
-| UP-015 | conserved; applied to this corpus in §1 |
-| UP-016, UP-018, UP-019, UP-023 | conserved; UP-018 consumed by CALCULUS §1, UP-019/023 by §4 above; UP-016 stays in the software-design profile |
-| UP-017, UP-021 | conserved; reframed with AC-005, AC-009 and AC-013 into P4b's one obligation |
-| UP-020 | conserved; consumed by CALCULUS §1, §3, §5 |
-| Probabilistic Work Boundary, Ambiguity Governance | conserved; consumed by CALCULUS §1 and §3 |
-| ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved by reference in PROFILES; nothing imported into tier 1 |
+| AC Position, Derivation Provenance, Scope | conserved; restated in AXIOMATIC_CALCULUS §1 |
+| AC Core Signature, Typed Records and its five records | conserved; restated in AXIOMATIC_CALCULUS §2 and §3; Semantic Object and Residual are related to the §2 objects Object and Residual, the definitions stay here |
+| AC-001, AC-003, AC-004, AC-012 | conserved; restated in AXIOMATIC_CALCULUS §4 |
+| AC-002, AC-005, AC-006, AC-009, AC-014 | conserved; restated in AXIOMATIC_CALCULUS §4 as laws over the §2 objects Object, Authority, Basis, Residual and Judgment, which are defined once here; P3, P4b and P6 consume them |
+| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the one result algebra of ACTIVATION §3 |
+| AC-008, AC-011 | conserved; restated in AXIOMATIC_CALCULUS §4; their generic forms over any two values and any reference are the Latitude and Reference-versus-body paragraphs of §4 above |
+| AC-010 | conserved; restated in AXIOMATIC_CALCULUS §4; applied by ACTIVATION §2 |
+| AC-013 transformation | conserved; restated in full in AXIOMATIC_CALCULUS §4; its delta fields are the conservation accounting of §4 above |
+| AC Fundamental Laws heading | not applicable: heading with no claim text (20 bytes); listed in AXIOMATIC_CALCULUS §11 |
+| AC Traversals And Functor Kinds, AC-015, AC-016 | conserved; restated in AXIOMATIC_CALCULUS §5; P4a consumes AC-016; the formal fragment of §4 above is a hypothesis held to the functor-kind proof obligation |
+| AC Interpretation And Models, AC-017, AC-018, AC-019 | conserved; restated in AXIOMATIC_CALCULUS §6; P1 consumes them; the generic structural-and-semantic separation is EVALUATION §2 |
+| AC Subject And Carrier Boundaries, AC-020 | conserved; restated in AXIOMATIC_CALCULUS §7; applied to release lineage in SPEC_METHOD §6 |
+| AC Exact Calculus Identity | conserved; the identity law is restated in AXIOMATIC_CALCULUS §8; the record instance is a release artefact issued under RELEASE and AC-020 at this corpus's own release |
+| AC Application Boundary, External Imports And Specializations, Exclusions, Conformance Obligations | conserved; restated in AXIOMATIC_CALCULUS §9 and §10 |
+| RF definitions (#definitions and its 17 children) | conserved; restated in §2 (amended rows, frame objects, authority kinds, disjointness and independence, the frame tuple); rows in the table below |
+| RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
+| RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
+| UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
+| UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; UP-005 restated in DESIGN_MODULE §6 Boundary and governance cost, its proportionality relation ACTIVATION §6; P2 consumes them |
+| UP-015 | conserved; restated in full in RELEASE §9, applied to this corpus in §1 and to acceptance evidence in EVALUATION §5 |
+| RM Release Identities | conserved; candidate source, release subject and version-line selector restated in §2 Release objects beside the release cut; their realisation as refs, with the namespace, subtree and branch carriers, in RELEASE §2, whose §11 lists the RELEASE_METHOD rows |
+| IDENTITY_METHOD scoped identity | conserved; the Object of §2 carries scoped identity, whose laws are IDENTITY §2 |
+| UP-016, UP-018, UP-019, UP-023 | conserved; all four restated in DESIGN_MODULE §5 and §7, which disposes their rows; UP-016's admission semantics are ACTIVATION §4, UP-018's general reconstruction rule ACTIVATION §1 Intake, and UP-019's and UP-023's shared machinery §4 above, each pointed to |
+| UP-017, UP-021 | conserved; UP-017 restated in DESIGN_MODULE §5 Bounded frame conservation, which disposes its row, its frame instance being P4b's one obligation (reframed with AC-005, AC-009 and AC-013) and its seam rule ACTIVATION §1 and §4; UP-021 and its standing structural qualification are restated in full in ACTIVATION §4 |
+| UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
+| SM Probabilistic Work Boundary | conserved; restated in §2 Work boundary and §3 under P0; ACTIVATION §1 consumes it; row in the table below |
+| SM Recursive Product Taxonomy | conserved; restated in §2 Product lineage objects; SPEC_METHOD §6 consumes it; row in the table below |
+| SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement is ACTIVATION §3 and its hard stops ACTIVATION §4 |
+| ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved; restated in full in the ODD, DESIGN_MODULE, UX and WORLD_MODEL members, which dispose their rows and are indexed in PROFILES §2 to §5; nothing imported into tier 1 |
+
+RF rows received by this member (anchors into rc.2
+REFERENCE_FRAME_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #definitions | not applicable: heading with no claim text (15 bytes); its children are disposed individually | §2 |
+| #evaluation | conserved | §2 Frame objects (Evaluation, Evaluation family) |
+| #workspace | conserved | §2 Frame objects |
+| #basis | conserved | §2 ontology table, Basis |
+| #material-relation | conserved | §2 ontology table, Material |
+| #material-relation-manifold | conserved | §2 Frame objects |
+| #coordinate | conserved | §2 Frame objects |
+| #topology | conserved | §2 Frame objects |
+| #evidence | conserved | §2 ontology table, Evidence |
+| #authority | conserved | §2 Authority kinds |
+| #disjointness-and-independence | conserved | §2 Disjointness and independence |
+| #capability-envelope | conserved | §2 Frame objects |
+| #reference-frame | conserved | §2 Frame objects; §2 The frame tuple |
+| #activated-frame | conserved | §2 Frame objects |
+| #frame-set | conserved | §2 Frame objects |
+| #active-frame-configuration | conserved | §2 Frame objects |
+| #lens | conserved | §2 Frame objects |
+| #role-persona-abstraction-and-component | conserved | §2 Frame objects |
+
+SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
+
+| Anchor | Disposition | Locus |
+|---|---|---|
+| #probabilistic-work-boundary | conserved; the six declared parts, the worker's ownership of the internal HOW, the evidence-surface rule and the authority-boundary rule; the profile binding to one traversal is generalised and kept by PROFILES §2 | §2 Work boundary; §3 P0 |
+| #recursive-product-taxonomy | conserved; the eight objects with their concept identities, the six governing rules, the compiler analogy and the load-bearing claim | §2 Product lineage objects |

@@ -1,0 +1,82 @@
+# console log for qualification/runs/F-02/20261012T075214Z-A-001
+# tenant root: /Users/jim/src/apps/specification_methodology-claude-evA/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T07:52:14Z
+# step A-001: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-02/20261012T075214Z-A-001 --step-id A-001 --card qualification/cases/F-02/CARD.md --block "METHOD transformation-and-judgment=a_c/set-4/projection-transformation-and-judgment-materialized.json" --block "TASK=qualification/cases/F-02/TASK-A.md" --model sonnet
+## Transformation record
+
+- **id**: not stated. The subject gives only the traversal id, and the transformation needs its own exact identity.
+- **traversal**: `v-req-to-design-3`.
+- **domain_model**: `M-billing@r3`. Its exact content identity is not stated. The subject gives the name, signature `sig-billing-1`, calculus basis `calc-1`, basis `4a1f9e20` and grammar `cj-1`, but no model digest. A name alone refuses.
+- **codomain_model**: `M-billing@r4`, with content identity `sha256:7d…e9`. The subject gives that digest only as the judgment's subject digest. It is not stated to be the full model identity.
+- **context**: `W-invoice-rounding`.
+- **owner**: Tomas.
+- **scope**: design records derived from REQ-12.
+- **basis**: `4a1f9e20`. Both models and the traversal share it, and they share signature `sig-billing-1`, so this is a same-basis transformation.
+- **operation_authority**: grant `G-88`, issued by Ravi. It permits adding design records under REQ-12. It does not permit edits to requirement, latitude or residual records.
+- **preconditions**: not stated.
+- **preservation_relation**: not stated. No relation id is given. Byte-identity under `cj-1` is available for the digest-equal records, but no exact typed relation is named.
+- **preserved**: REQ-12 and LAT-12a. Both have the same kind, owner and digest (`a1…01`, `a1…02`) under `cj-1`, and the same basis.
+- **introduced**: DES-12.1. It is absent from r3 and carries a complete record in r4. Owner is Tomas, digest `b2…04`.
+- **removed**: none declarable.
+- **RES-4 (unplaced)**: the delta does not close.
+  - RES-4 appears in both models with different digests (`a1…03` against `b2…03`).
+  - It cannot be preserved, because a changed field refuses preservation.
+  - It cannot be removed, because a removed identity must be absent from r4.
+  - It cannot be introduced, because an introduced identity must be absent from r3.
+  - So Local_b = P ⊔ R and Local_b′ = P ⊔ N fail for this identity.
+- **external_preserved**: `ext:iso-4217-minor-units`.
+  - Target is `iso4217@2024-06`, kind published table, reference domain currency data, basis relation pinned, resolution basis `4a1f9e20`.
+  - All fields are the same in r3 and r4.
+- **external_introduced**: empty.
+- **external_removed**: empty.
+- **external_resolution_witnesses**: one witness for `ext:iso-4217-minor-units`, with these fields:
+  - `domain_model` is r3 and `codomain_model` is r4. The exact model identities are missing, as above.
+  - The `domain_resolution` and `codomain_resolution` tuples are field-equal.
+  - `decision` is equal.
+  - `evidence` is `EV-iso-pin-2`. That is the resolution's pin evidence. No evidence for the equality decision itself is stated, which is a gap.
+- **residuals**:
+  - RES-4 survives in r4 but was altered, and no disposition is on file.
+  - The change to its consequence text (adding DES-12.1's exclusion assumption) is an edit to a residual record. Owner is Lena, and G-88 does not permit that edit.
+  - The edit also leaves a gap: the exclusion assumption was added without any competent disposition of the credit-note ambiguity.
+  - No other residuals are stated.
+- **evidence**: `RN-31`. No evidence of a disposition of RES-4, and no evidence of authority for editing it.
+- **provenance**: performed by Tomas on 2026-10-11 under `v-req-to-design-3` and `G-88`.
+- **stop_states**: stop on any change to a requirement record. REQ-12 is unchanged, so this stop is not triggered. No other stop states are stated.
+- **invalidation**: not stated.
+- **re_entry**: not stated. RES-4's own re_entry is Requirements.
+
+## Application
+
+The record supports **refusal**, not a proposed successor. The local delta does not close, because RES-4 is changed under an unchanged id and so fits none of preserved, removed or introduced. The step also exceeds `G-88`, which forbids edits to residual records, and the model identities, preservation relation and witness evidence are not established. Any one of these gaps refuses.
+
+## Judgment record
+
+- **id**: not stated.
+- **kind**: evaluation (conformance) judgment. It is not an admission or acceptance judgment. The subject gives no kind label.
+- **subject**: `M-billing@r4`.
+- **subject_digest**: `sha256:7d…e9`.
+- **context**: `W-invoice-rounding`. This is assumed from the workspace; the subject states no context for the judgment.
+- **owner**: not stated. Nadia is the evaluator.
+- **scope**: billing design records. The decision covers whether DES-12.1 conforms to REQ-12 within LAT-12a. It does not cover the change to RES-4, `G-88` compliance or the transformation's closure.
+- **basis**: `4a1f9e20`, with build `b-40` for the test evidence.
+- **evaluator**: Nadia, independent design reviewer.
+- **authority**: evaluation authority over billing design records.
+- **decision**: DES-12.1 conforms to REQ-12 within LAT-12a.
+- **evidence**: `RN-31` and test run `TR-205` on build `b-40`.
+- **provenance**: Nadia examined r4 against REQ-12 and LAT-12a.
+- **decided_at**: 2026-10-12T09:00Z.
+
+## Promotion
+
+Promotion needs a separate acceptance (or admission) judgment by Ravi, who holds acceptance authority for billing design records. It must point to an unchanged subject and its digest, and be linked by an explicit promotion relation. Nadia's evaluation judgment is not acceptance and does not promote r4. Given the refusal, r4 as it stands should not be promoted. A corrected successor would have a new digest, so it needs a new evaluation judgment and then Ravi's acceptance.
+
+## No method source
+
+- Vocabulary for the judgment `kind` and `decision` values, and for transformation `stop_states`.
+- Id formats for transformation and judgment records.
+- Whether an unchanged id with a changed record may be revised in place. The method only implies remove-and-introduce under a new id.
+- The shape of the explicit promotion relation and of an acceptance judgment.
+- Which authority may dispose of or edit a residual. The subject names Lena as owner; the method does not say who holds disposition authority.
+- What the judgment's `context` and `owner` should be, and what the transformation's `preconditions`, `invalidation` and `re_entry` should contain.
+# step exit 0
+# end 2026-10-12T07:52:45Z

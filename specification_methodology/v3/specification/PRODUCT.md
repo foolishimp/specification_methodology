@@ -36,7 +36,7 @@ Jim's [recorded instruction](../.ai-workspace/tickets/active/T-001-common-defini
 
 This authorisation admits construction boundaries and initial review work. It does not accept the working foundations, future capabilities, implementation, release or adoption. Jim retains the C1 common-principles and C2 capability/acceptance decisions.
 
-C3 disposition grant (PROPOSED, awaiting Jim's review). For C3 construction the Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose a member restatement as `local_repair`, `re_enter` or `reject` within its grant, and may dispose it `accept` into the tenant's candidate only on a closed author-independent Reviewer result of `satisfied` with every row of the member's frontier cone disposed. Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain Jim's. The Reviewer supplies severity as evidence; priority, boundary effect and disposition are the Executive's decisions and are ledgered as separate entries in the work carrier by the common pen, never by the Executive activation itself.
+C3 disposition grant (accepted by Jim on 2026-10-12 as configuration of the installed STDO-UP-020 disposition relation). For C3 construction the Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose a member restatement as `local_repair`, `re_enter` or `reject` within its grant, and may dispose it `accept` into the tenant's candidate only on a closed author-independent Reviewer result of `satisfied` with every row of the member's frontier cone disposed. Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain Jim's. The Reviewer supplies severity as evidence; priority, boundary effect and disposition are the Executive's decisions and are ledgered as separate entries in the work carrier by the common pen, never by the Executive activation itself.
 
 [build_tenants/README.md](../build_tenants/README.md) is the common tenant entry and return HOW selected for initial construction. Tenant effects stay inside their grants; requested common changes return to the common pen. An Executive cannot perform implementation or Git effects under that role.
 
@@ -59,14 +59,18 @@ installed STDO law and no release cut.
   A needed common change is requested from the pen and reaches the tenant by
   merging `main` inward. A tenant does not edit tickets, common files or the
   peer tenant.
-- Work carrier (PROPOSED). C3 work is carried by tickets under
-  `.ai-workspace/tickets/`, one per Writer activation or per declared cone of
-  the frontier. The ticket has one writing owner, the common pen, acting as
-  a Writer activation in common territory. The pen opens each ticket with
-  the intake triage the Executive has performed, and records the closed
-  Writer result, the Reviewer result, the triage, the Executive's
-  disposition and the next authorised activation, each as the Executive
-  decided it, before that next activation starts. The Executive activation
+- Work carrier (accepted 2026-10-12; corrected to the installed
+  [Work-Carrier-To-Execution Rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule)).
+  C3 work is carried by one upstream authority ticket and one tenant-local
+  duplicate per build tenant under `.ai-workspace/tickets/`. Each member
+  activation is a run-scoped execution contract derived from the tenant
+  ticket, drafted by the pen on the Executive's selection and admitted
+  distinctly from drafting; it is not a further ticket. The ticket has one
+  writing owner, the common pen, acting as a Writer activation in common
+  territory. The pen records each admitted contract, the closed Writer
+  result, the Reviewer result, the triage, the Executive's disposition and
+  the next authorised activation, each as the Executive decided it, before
+  that next activation starts. The Executive activation
   decides and holds no write grant to tickets, common files, candidates or
   worktrees. The tenant Writer's return is written in its own territory
   (`build_tenants/<tenant>/qualification/`) and never in the ticket. The
@@ -115,7 +119,7 @@ C0 cannot close C1; C1 cannot silently close C2. No full standards set, a_c prog
 
 ## C3 Construction Contract
 
-Status: PROPOSED on branch `common/c3-contract` for Jim's review. Nothing here is selected until he accepts it; the C3 checkpoint stays NOT_SELECTED in [GOALS](GOALS.md) until then. Where this section fixes C2 matters (acceptance criteria, audiences), it proposes them for the same decision.
+Status: accepted by Jim on 2026-10-12 as this project's configuration of the installed STDO 2.5.1 Executive engagement; C2 closed and C3 selected by that approval ([GOALS](GOALS.md)). Governing process: the baseline's [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions and TICKET_METHOD admission. Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
 
 Outcome. Each tenant produces a candidate for the target version: its foundational axioms and the full predecessor corpus restated on them per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), with every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md) carrying one UP-015 disposition and a successor locus, and with projected reference frames as the activation unit. The predecessor cut stays immutable and operative as builder until a release decision; it is not a component of the successor.
 
@@ -133,11 +137,11 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 
 Activation unit. Each tenant publishes projected reference frames, one per selected task, from its restated corpus (a_c projections or an equivalent the tenant declares). A frame carries the clauses an actor needs for that task and nothing else. A frame, with its subject, is what any actor is activated on. Context is measured in bytes before the actor reads anything and recorded with the activation.
 
-Audiences and tasks (PROPOSED selection of the open owner decision). Audiences: a fresh model actor activated on one frame against a declared subject; a human method owner reading by route; the Writer, Reviewer and Executive actors constructing or assessing the successor itself. Assumed knowledge: none beyond the activated frame and the subject; during construction, the installed predecessor for source routes. Tasks: do a bounded piece of work; resume work another actor left; review work; decide acceptance or release; apply a profile; construct or assess a successor member.
+Audiences and tasks (decided 2026-10-12). Audiences: a fresh model actor activated on one frame against a declared subject; a human method owner reading by route; the Writer, Reviewer and Executive actors constructing or assessing the successor itself. Assumed knowledge: none beyond the activated frame and the subject; during construction, the installed predecessor for source routes. Tasks: do a bounded piece of work; resume work another actor left; review work; decide acceptance or release; apply a profile; construct or assess a successor member.
 
 Executive loop. Existing authority is this contract and the ticket. The Executive selects the smallest dependency-ready set `M` from the frontier, normally one member or one declared cone, and activates one Writer per element with the UP-020 intake: exact outcome and checkpoint, the rows in scope, governing invariants, grant and write territory, evidence obligations, exclusions, stop and re-entry conditions, the context, wall and spend envelope, and the exact bounded action. The Writer returns one closed work result: `candidate_ready` with transition evidence (the restated text, its dispositions, its frames, its measured activations), `refused`, `incomplete` or `re_entry_requested`. The Executive evaluates the result, activates the Reviewer for every `candidate_ready` (independent review is required for every member), consumes the Reviewer's closed result, applies the disposition grant above, has the common pen ledger the decision in the ticket, and issues the next already-authorised activation. The Executive activation holds no write grant and never mutates ticket, candidate, common or worktree bytes; a same-actor role change is ledgered by the pen before the effect, and the actor is no longer Executive for that effect.
 
-Acceptance criteria for one member restatement (PROPOSED C2 contract, applied at C3):
+Acceptance criteria for one member restatement (the C2 contract, accepted 2026-10-12, applied at C3):
 
 1. Every row of the member's frontier cone has exactly one UP-015 disposition and, for `conserved` and `superseded`, a successor locus that resolves.
 2. For every `conserved` row the Reviewer's author-independent source comparison finds the claim semantically present in the successor's own text, which is UP-015's semantic conservation evidenced under the standalone successor requirement. A route alone, a label match or a paraphrase that drops a determination fails.
@@ -154,8 +158,8 @@ Closure. C3 closes for a tenant when every row of its frontier is disposed and e
 
 ## Open Owner Decisions
 
-- Audiences, tasks and assumed knowledge: OPEN; a selection is PROPOSED in the [C3 Construction Contract](#c3-construction-contract) for Jim's decision.
-- C2 acceptance criteria: OPEN; the per-member criteria in the same contract are PROPOSED for the same decision.
+- Audiences, tasks, assumed knowledge and the C2 acceptance criteria: DECIDED 2026-10-12, in the [C3 Construction Contract](#c3-construction-contract).
+- C3 Executive and Reviewer actors per tenant: OPEN; Jim names them in the tenant tickets. Until then every execution contract stays `drafted`.
 - Release lineage: DECIDED 2026-10-12, see [Product Identity And Lineage](#product-identity-and-lineage); the target version continues the existing STDO Specification Methodology line.
 - Candidate/RC ref naming: follows the existing `specification_methodology` release namespace under RELEASE_METHOD; the exact candidate ordinal and cut are selected before an RC cut. The earlier `rc/stdo_3/3.0.0` proposal is withdrawn by the lineage decision.
 - Construction-scope layout: DECIDED 2026-10-12; `specification_methodology/v2/` and `specification_methodology/v3/` side by side, identifiers unchanged. Performed as its own bounded change, independent of this contract.

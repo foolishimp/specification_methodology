@@ -1,0 +1,35 @@
+# console log for qualification/runs/F-03/20261012T152518Z-F-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:25:18Z
+# step F-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-03/20261012T152518Z-F-0R2 --step-id F-0R2 --card qualification/cases/F-03/CARD.md --block "METHOD traversal-lineage=a_c/set-6/projection-traversal-lineage-materialized.json" --block "TASK=qualification/cases/F-03/TASK-F.md" --model sonnet
+**1. `ev-101` and `ev-102`**
+- Cause is not established. The only grounds are time (within one minute), a shared SKU and a shared actor. Timestamp, adjacency, common subject and shared actor do not create cause, so the recorded `causally_precedes_event(ev-101, ev-102)` has no standing.
+- Cause would be established only by an admitted causal claim, submitted and admitted under competent authority and evidence. That claim would have to pass an OP-002 semantic cut, with one identical source frontier and a successor equal to that frontier plus exactly the admitted event.
+- The resulting edge would sit in G_evt_cause, which must stay acyclic.
+
+**2. `ev-103`**
+- The edit is not lawful. Events are immutable (OP-003, OP-006). Rewriting the content under the same id is a rewrite and a retrospective re-identification of the corrected fact.
+- A lawful correction adds a new event, admitted with its declared scope. It records `corrects_event(new, ev-103)`.
+- Both events stay: `ev-103` keeps its original reading of 14, and the new event carries the corrected value.
+- Later projection changes only through an explicit selection law.
+
+**3. `L-9`**
+- The edge is not lawful.
+- The law that decides is the closed relation families (typed lineage) law. `causally_precedes_occurrence` is Occurrence → Occurrence, and its source `ev-107` is a FrameworkEvent. A ref resolved under the wrong sort refuses.
+- This is a structural refusal, so the stop is `refusal`, carrying `refuse_wrong_type`. It maps to **falsified**. It would map to invalid_basis only if the refusal carried `refuse_invalid_basis` or came with an `invalid_basis` decision.
+- An event-to-occurrence link would be `event_for`, and only if the event's scope law names that exact occurrence. Event-to-event cause would be `causally_precedes_event`, which needs an admitted claim.
+
+**4. Reorder policy**
+- `observed_at` may order eligible facts so a projection can select current truth. This holds only because its comparison law, basis and admitting authority are declared explicitly (OP-004).
+- It may not confer semantic, admission, causal or decision authority.
+- Treating the event with the greatest `observed_at` as the approval decision is therefore unlawful. Approval needs its own decision authority.
+
+**5. Stopped occurrences**
+- `occ-23`: stop `hold`, core member **indeterminate**. The deciding evidence is not yet admitted, while every required relation and capability is declared and was exercised. The residual must name the evidence that would decide, here the observation of the newest frontier beyond `F-9`.
+- `occ-24`: stop `partial_effect`, core member **falsified**. The effect has ended with the warehouse error, and the observed post-state shows part of the intended outcome not reached (2 of 5 SKUs), which is the counterexample. Beside the member, the `partial_effect` residual and its re-entry must survive. They record that the subject changed (stock decremented for 3 SKUs). Falsified never licenses treating the effect as absent, and the explicit re-entry must precede any further effect.
+- `occ-25`: stop `gap`, core member **invalid_basis**. The required reference `r-77` is unresolved in `model_validation`, so this is not a refusal. The `gap` is retained until the reference is repaired, and the basis cannot support the judgment until then.
+
+**No method source**
+none
+# step exit 0
+# end 2026-10-12T15:25:35Z

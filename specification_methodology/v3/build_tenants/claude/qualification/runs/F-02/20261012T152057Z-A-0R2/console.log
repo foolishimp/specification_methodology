@@ -1,0 +1,79 @@
+# console log for qualification/runs/F-02/20261012T152057Z-A-0R2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-12T15:20:57Z
+# step A-0R2: python3 -I qualification/instruments/bounded_step.py --cap 400000 --run-dir qualification/runs/F-02/20261012T152057Z-A-0R2 --step-id A-0R2 --card qualification/cases/F-02/CARD.md --block "METHOD transformation-and-judgment=a_c/set-6/projection-transformation-and-judgment-materialized.json" --block "TASK=qualification/cases/F-02/TASK-A.md" --model sonnet
+## Transformation record
+
+Subject to the refusal below, the record has these fields:
+
+- **id:** missing. No identity for t is stated.
+- **traversal:** `v-req-to-design-3`.
+- **domain_model:** `M-billing@r3`. This is a label only. The exact content identity is missing: no r3 model digest, and no committed signature, population, external-resolution map or model-content identity.
+- **codomain_model:** `M-billing@r4`. The only digest stated is `sha256:7d…e9`, which is truncated and appears only in the judgment. Whether it is the full model identity is not stated.
+- **context:** `W-invoice-rounding`.
+- **owner:** Tomas.
+- **scope:** design records derived from REQ-12.
+- **basis:** `4a1f9e20`. Both models share this basis, signature `sig-billing-1` and calculus basis `calc-1`, so the step is a same-basis transformation.
+- **operation_authority:** grant `G-88`, issued by Ravi. It permits adding design records under REQ-12. It does not permit edits to requirement, latitude or residual records.
+- **preconditions:** none stated.
+- **preservation_relation:** none named. Records can be compared by byte identity under `cj-1`, but no exact typed equality relation is stated, and no relation is available for records that differ.
+- **preserved:** `REQ-12` and `LAT-12a`. Each has the same kind, owner, scope and basis, and an identical `cj-1` digest (`a1…01`, `a1…02`).
+- **introduced:** `DES-12.1`. It is absent from r3, and it is a design clause owned by Tomas, covered by `G-88`.
+- **removed:** none can be stated, for the reason below.
+- **Unclassifiable identity (RES-4):**
+  - `RES-4` is in both models, but its digest changed from `a1…03` to `b2…03` because its consequence text changed.
+  - It cannot be preserved, because a changed field refuses preservation.
+  - It cannot be removed, because it is present in the successor.
+  - It cannot be introduced, because it is present in the input.
+  - The closed local delta therefore cannot be established.
+  - A lawful form would remove `RES-4` and introduce a new residual identity.
+  - Alternatively, `RES-4` could stay byte-identical.
+- **external_preserved:** `ext:iso-4217-minor-units`. Every resolution field is identical in r3 and r4: target `iso4217@2024-06`, kind published table, domain currency data, basis relation pinned, resolution basis `4a1f9e20`.
+- **external_introduced:** none.
+- **external_removed:** none.
+- **external_resolution_witnesses:** one witness is required for the preserved external resolution. Its tuples can be filled field-equal from the subject, with decision `equal`. No witness record is on file, and its evidence is not stated. `EV-iso-pin-2` is the evidence for the resolution, not for a witness.
+- **residuals:** `RES-4` (ambiguity: whether credit notes are invoices for REQ-12) must survive into the successor. It does survive in r4, but in altered form. No authorised disposition is on file, so none is available as evidence for removing it.
+- **evidence:** `RN-31`.
+- **provenance:** performed by Tomas on 2026-10-11 under `v-req-to-design-3`.
+- **stop_states:** stop on any change to a requirement record. This is the stop contract of the traversal, and t's own stop states are not stated.
+- **invalidation:** missing.
+- **re_entry:** missing.
+- **Authority mismatch:** the change to `RES-4`, a residual record owned by Lena, exceeds `G-88`. The step is therefore broader than its operation authority.
+
+## Application
+
+The record supports refusal. The local partition cannot be closed because `RES-4` is changed under its own identity, and that edit is outside `G-88`. The model identities, preservation relation and witness are also not established. r4 is not a lawful proposed successor, and it cannot admit itself.
+
+## Judgment record
+
+- **id:** missing.
+- **kind:** evaluation judgment, a conformance finding.
+- **subject:** `M-billing@r4`, unchanged by the judgment.
+- **subject_digest:** `sha256:7d…e9`. It is truncated in the subject.
+- **context:** `W-invoice-rounding`.
+- **owner:** missing. No owner is stated.
+- **scope:** conformance of DES-12.1 to REQ-12 within LAT-12a.
+- **basis:** `4a1f9e20`, with build `b-40`.
+- **evaluator:** Nadia, the independent design reviewer.
+- **authority:** evaluation authority over billing design records.
+- **decision:** DES-12.1 conforms to REQ-12 within LAT-12a.
+- **evidence:** `RN-31` and test run `TR-205`.
+- **provenance:** missing beyond the evidence listed and the evaluator. No evaluation record or process is stated.
+- **decided_at:** 2026-10-12T09:00Z.
+
+The judgment does not cover the lawfulness of the transformation or the `RES-4` change. It does not admit or accept r4.
+
+## Promotion
+
+Promotion needs an explicit relation between the unchanged r4 and an admission or acceptance judgment. That relation does not exist yet, and Nadia's evaluation does not substitute for it. Ravi holds acceptance authority for billing design records. Promotion should follow a lawful successor, with `RES-4` handled by removal and a new identity or by restoration, under authority from Lena or a disposition. The successor would then need its own digest and judgment.
+
+## No method source
+
+- The METHOD block gives no format for ids or digests.
+- It gives no rule for whether a truncated digest counts as an exact model identity.
+- It gives no field set for the promotion relation.
+- It gives no definition of "acceptance judgment" versus "admission judgment".
+- It does not say how to record authority breaches, such as an edit beyond `G-88`.
+- It does not say who has authority to dispose of a residual such as `RES-4`.
+# step exit 0
+# end 2026-10-12T15:21:25Z
