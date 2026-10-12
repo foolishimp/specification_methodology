@@ -93,3 +93,45 @@ A hit points the assessor to a line to read; it is not a verdict.
 6. `Disposition:? *(accept|local_repair|re_enter|reject)\b`
 7. `[Bb]asis lock[^\n]*holds`
 8. `(high|critical)[^\n]*(therefore|so)[^\n]*P[01]`
+
+## Amendment after the cross-family review (2026-10-13)
+
+Checked against rc.2 meaning only (AXIOMATIC_CALCULUS AC-013, AC-014,
+AC-016; SPEC_METHOD universal intake triage, computed classification,
+proportional disposition; TICKET_METHOD change class, upward propagation
+check, triage metadata, work-carrier-to-execution rule, admission;
+STDO_REFERENCE_FRAME_BASELINE drift locks, technical triage, steps 4 and
+7, promotion constraint projection). No frame file, run output or a_c/
+content read. Original sections unchanged.
+
+Superseded: D6.
+
+D6a. Boundary effect, set by Omar: no block, because F-1 is high, on the
+`autofill_v2` path outside the 1.2 mandate, and violates no hard stop; or
+not recordable until a review revalidated on r42, and non-blocking under
+the cutoff either way. In both readings F-1 survives: it is carried as
+the predecessor counterexample of the invalidated RR-9, an explicit
+residual with an owner (Omar under Jules's cutoff, or the owner named
+missing), neither consumed for disposition nor discarded. F-1 is inside
+RR-9's claim. F: blocks 1.2; a hard stop invoked; the outside-claim row
+applied; a review round opened by severity; F-1 dropped, voided or left
+unmentioned because RR-9 was invalidated. L: EB §12; rc.2 SRFB
+#executive-promotion-constraint-projection, RF #return-a-closed-result
+(preserve the predecessor), RF #result-conjunction (a counterexample
+found by one contributor is not discarded).
+
+Confirmed (31): A1 to A8, B1 to B7, C1 to C6, D1 to D5, D7, N1 to N4;
+also the Task A to D required-result statements, Task D's boundary
+clause read through D6a.
+
+Reading notes. Task A's `refusal` is AC-013's own application outcome,
+not an RF-012 member, so the profile-mapping repair does not reach it; it
+refuses on two independent grounds (RES-4 fits no partition; r3 has no
+exact content identity). D1's `invalid_basis` is the baseline's own
+mapping of a stale basis. D3 stands: RR-9's declared invalidation
+condition fired, and independence from r42 is asserted, not
+demonstrated. B4's `requirement_reprice` re-enters Ines, who owns the
+unresolved meaning (TM upward propagation: meaning stays J, the choice
+O); it does not pre-empt her ruling. D4's #testing-evidence-composition
+anchor keeps claims distinct. No item relied on cumulative composition,
+and none required no result or incomplete for an unexercised capability.

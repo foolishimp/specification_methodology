@@ -265,3 +265,49 @@ RF-017.
 - incomplete as the result, no result word
 - both in S, both declared, evaluated delivery (as the Q1 ground)
 - E1 and E3 unaffected, only E4 reopened (after a frame revision)
+
+## Amendment after the cross-family review (2026-10-13)
+
+Checked against rc.2 meaning only (REFERENCE_FRAME_METHOD RF-005,
+RF-012, Applicability, Return A Closed Result, Result Conjunction,
+Diagnostic Order, Revision Actions; the baseline Reviewer triage
+projection). No frame file, run output or a_c/ content read. Original
+sections unchanged.
+
+Superseded: A12a (and A12 with it).
+
+A12b. Result: indeterminate or out_of_frame, each with its ground
+stated. rc.2 defines indeterminate as admissible evidence that cannot
+decide the predicate, which is the case on b-120: V1 is on b-118, V2
+names no build and records no source-table count, and nothing else pairs
+a trailer with the count at export time. A12a failed indeterminate on a
+tenant precondition (every required relation declared) that rc.2 does
+not contain. Sat: indeterminate, the inference relation stating that
+evidence gap and the residual keeping the meaning of "source table"
+after CHG-2026-1009 open for Mara; or out_of_frame naming the undeclared
+relation (that meaning, Mara's) or the capability the record-holder
+lacks (an export on b-120 with the source-table count recorded at export
+time), the other gap kept in the residual. Fals: satisfied, falsified;
+invalid_basis (b-120's coordinates are exact; the open question is
+semantic); no result word, or incomplete as the result (the record was
+exercised and a supported result survives); a result with no gap named;
+the actor fixing the meaning. A14 stands: K stays unresolved pending
+evidence on b-120 and Mara's ruling. ACTIVATION §3; rc.2 RF-012, RF-006,
+#reconfigure-when-necessary, the worked binding's stop clause
+(indeterminate on unresolved evidence), the baseline triage projection
+(out_of_frame names the missing relation or capability).
+
+Withdrawn signature: "result: indeterminate (Task A)" from the
+2026-10-12 amendment no longer points at a failure.
+
+Confirmed (32): A1 to A11, A13, A14, A15; B1 to B8, B9a, B10, B11a,
+B12a, B13; N1 to N5.
+
+Reading notes. B11a and B12a follow rc.2 #return-a-closed-result: a
+stated demonstration that the revision cannot touch a result's material
+inputs is the recorded re-check, and that result survives; a bare
+"unaffected" is not. B4's "Fals: covered" rests on rc.2 Coverage Basis:
+the retry window is E3's own input, so the advance invalidates its
+coverage on the tuple's basis. No item relied on cumulative composition;
+B5 and B13 rest on result conjunction, which rc.2 keeps apart from
+material composition (RF-010).
