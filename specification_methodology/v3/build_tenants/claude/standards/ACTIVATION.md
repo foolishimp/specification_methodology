@@ -436,10 +436,10 @@ other outcomes without coercion, and each output satisfies the next step's
 declared domain and preconditions, as typed composition requires (P4a;
 [AXIOMATIC_CALCULUS §5 AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)).
 Then a successful composite carries P₀ to Pₙ by induction. A refinement
-carries an earlier output or the outer input to a later step only through a
-declared adapter, itself a step composed under AC-016, or a declared
-specialised contract, in either case one whose declared domain names what is
-carried; a specialised contract is declared under its owner's exact
+carries an earlier output to a later step other than the next only through
+a declared adapter, itself a step composed under AC-016, or a declared
+specialised contract, in either case one whose declared domain names what
+is carried; a specialised contract is declared under its owner's exact
 authority, context, basis, scope, preservation, loss, refusal and
 invalidation law (P4a, P4b; provenance rc.2
 [AC External Imports And Specializations](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#external-imports-and-specializations)).
@@ -455,8 +455,7 @@ transition within its enclosing relation, or none (the law below). This
 generalises ODD
 [graph functions](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#graph-functions),
 which refine one outer vector into a small inner workflow, to any
-realisation; PROFILES §2 keeps the ODD binding, which declares that
-profile's cumulative environment law as such a specialised contract.
+realisation; PROFILES §2 keeps the ODD binding.
 
 ### Complete enclosing-relation admission
 
@@ -708,7 +707,7 @@ reconstructed semantic outcomes (P5, P6).
 
 | rc.2 clause | Disposition |
 |---|---|
-| UP-020 and its six subsections | conserved in full; §1 (relation, intake, execution unit, roles and delegation), §3 (disposition), §5 (checkpoint, continuation, progress, churn, falsifiers), §7 (transition evidence and proof cadence); the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new; rows in the table below |
+| UP-020 and its six subsections | conserved in full; §1 (relation, intake, execution unit, roles and delegation), §3 (disposition), §5 (checkpoint, continuation, progress, churn, falsifiers), §7 (transition evidence and proof cadence); the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new: the work-state object is the object UP-020's restart rule operates on (P3), and reconciliation and non-idempotence follow from P5 with the open-world premise and P6, the material relation being whether an external effect whose response was lost has occurred; rows in the table below |
 | UP-018 | conserved; restated in DESIGN_MODULE §7 Invariant reconstruction sufficiency, which disposes its row; its general reconstruction-without-history rule is §1 Intake |
 | Probabilistic Work Boundary | conserved; the object and commitment are FOUNDATIONS §2 and §3; §1 consumes them |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
