@@ -141,8 +141,10 @@ cut; it does not govern the installed consumer (P6, P3;
 
 Both the authoring library and an installed distribution contain three
 classes of document. Method members are the constitutional method
-surfaces; in the predecessor library they are the `*_METHOD.md` members.
-Guides (`*_GUIDE.md`) are operational guides and application standards
+surfaces; in the predecessor library they are the `*_METHOD.md` members,
+and in this corpus they are the members that [README](README.md#documents)
+names as method members: the tier 1 and tier 2 standards and, when a
+project selects them, the tier 3 profiles. Guides (`*_GUIDE.md`) are operational guides and application standards
 that refine application of the method. Templates (`*_TEMPLATE.md`) are
 reusable starter forms and examples and are convenience artifacts only.
 Only method members are constitutional method surfaces (P6, P3).
@@ -176,8 +178,9 @@ fully determine the worker's internal solution path. One vector or edge
 traversal is the bounded unit of probabilistic compute (P0).
 
 Binding of the bounded step, new in this corpus. FOUNDATIONS P0 lets a
-profile bind the bounded step to its own traversal unit and names this
-profile as the keeper of that binding. Direction: from the step of
+profile bind the bounded step to its own traversal unit and names
+[PROFILES §2](PROFILES.md#2-graph-execution), which indexes this profile,
+as the keeper of that binding. Direction: from the step of
 FOUNDATIONS P0 to one declared ODD vector or edge traversal. Preserved
 meaning: the step's selected context fits the actor's envelope, the
 actor's internal path within the step is its own, and the traversal is
@@ -254,16 +257,18 @@ P0).
 Binding of refinement, new in this corpus.
 [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) generalises the
 refinement of one outer vector into an inner workflow to any realisation
-and names this profile as the keeper of the ODD binding. Direction: from
-the refinement of ACTIVATION §4 to a graph function that refines one
-outer vector. Preserved meaning: the outer vector stays the callable
-contract, and the inner steps conserve it and every applicable invariant.
-Narrowed scope: one published outer vector and its declared inner
-workflow. Addition: inside the workflow, composition follows the
-cumulative typed environment of §11.8, so a later inner function's domain
-is satisfied over the carried environment and not only by the previous
-output; where the wording of ACTIVATION §4 reads the next step's domain as
-satisfied by the previous output, this profile's law is §11.8.
+and names [PROFILES §2](PROFILES.md#2-graph-execution), which indexes this
+profile, as the keeper of the ODD binding. Direction: from the refinement
+of ACTIVATION §4 to a graph function that refines one outer vector.
+Preserved meaning: the outer vector stays the callable contract; the inner
+steps conserve it and every applicable invariant; and an inner step's
+input is the outer input together with every earlier output retained for
+it, its preconditions ranging over that cumulative input, as ACTIVATION §4
+states. Narrowed scope: one published outer vector and its declared inner
+workflow, with the cumulative input of ACTIVATION §4 bound to the
+cumulative carried environment of §11.8, so that what is retained for a
+later inner function is what that environment carries and its
+preconditions are its `environment.requires` over that environment.
 Invalidation: a change to ACTIVATION §4, to the outer vector or to a
 function's environment declaration invalidates the binding until it is
 evaluated again (P4a, P4b, P1).
@@ -924,6 +929,31 @@ block
 Each disposition is replay-visible and must carry basis and reason refs
 sufficient to reproduce the decision (P5, P6).
 
+Mapping of the closure decision to the core result algebra, new in this
+corpus. Purpose: the one-algebra rule of
+[ACTIVATION §3](ACTIVATION.md#3-result-algebra), under which a profile
+with its own decision vocabulary declares a total mapping to the five core
+members and adds none. Material relation: each closure decision to exactly
+one core member, which is what a composite over the edge joins; the
+decision keeps its own vocabulary and its basis and reason refs (P5, P6).
+
+| Decision | Core member | Reason |
+|---|---|---|
+| `close` | satisfied | the ledger's admitted evidence fulfils the edge's obligations on the exact basis |
+| `yield` | indeterminate | the edge stays lawful and its closure is not yet decided; it reaches indeterminate by the stop-state route of construction availability's `incomplete`, without failure classification, as A9 requires |
+| `retry` | falsified | admitted evidence shows that this attempt did not fulfil the edge while the same action stays lawful; A9 separates this failure-classified re-attempt from yield |
+| `repair` | falsified | the result is locally defective against the edge's obligations while the governing relation stays coherent (ACTIVATION §3 Disposition, `local_repair`) |
+| `re-enter` | invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change; the loss is stated below |
+| `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame (ACTIVATION §4) |
+| `block` | invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis; A8 states no cause, so the nearest member is taken and the loss is stated below |
+
+`re-enter` and `block` have no single member under ACTIVATION §3: a
+re-entry or a block caused by an undeclared relation, capability or
+authority would be out_of_frame, as construction availability maps
+`re_entry_requested` to out_of_frame or invalid_basis. This mapping takes
+invalid_basis for both and so loses that distinction in the core member;
+the decision's basis and reason refs keep the cause (P5, P6).
+
 A9 Yield is lawful iterate. `yield` is the lawful iteration boundary (P5):
 
 ```text
@@ -1005,8 +1035,8 @@ outcome and any admitted bounded-basis refs. The first
 admits `ConstructionIntent`, which preserves those authority refs. The
 second is the post-action projection produced from `NextActionBasis` plus
 fresh `eval_gap` truth. Both must be reachable from their predecessor
-refs. A13 asks that the decision be reproducible from the inputs; A13a
-asks that each governing carrier or projection carry the predecessor refs
+refs. A13 requires that the decision be reproducible from the inputs;
+A13a requires that each governing carrier or projection carry the predecessor refs
 that make reproduction reachable without external joins. A broken
 predecessor chain is non-replayable at the carrier level and therefore
 fails A13 (P3, P4b).
@@ -1518,19 +1548,22 @@ imperatives ("do not", "declare") are written as indicative law or as
 written as labelled paragraphs; American spellings are written British in
 prose and kept in identifiers (P6, P3).
 
-Three clauses have no predecessor row and are new, each admitted because
-another member names this profile as the keeper of a binding: the binding
-of the bounded step of FOUNDATIONS P0 (§5 Probabilistic compute), the
-binding of the refinement of ACTIVATION §4 (§5 Graph functions), and the
-opening note that roles are not functor kinds, which restates ACTIVATION
-§1 and AXIOMATIC_CALCULUS §5 together (P0, P1).
+Four clauses have no predecessor row and are new. Two are bindings that
+FOUNDATIONS P0 and ACTIVATION §4 assign to PROFILES §2, which indexes them
+in this profile: the binding of the bounded step of FOUNDATIONS P0 (§5
+Probabilistic compute) and the binding of the refinement of ACTIVATION §4
+(§5 Graph functions). The third is the opening note that roles are not
+functor kinds, which restates ACTIVATION §1 and AXIOMATIC_CALCULUS §5
+together. The fourth is the mapping of the A8 closure decisions to the
+core result algebra (§11.5D), which ACTIVATION §3 requires of a profile
+with its own closure vocabulary (P0, P1, P5).
 
 | rc.2 anchor | Disposition | Locus |
 |---|---|---|
 | #1-position | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated | §1 |
 | #2-method-role | conserved; WORLD_MODEL_METHOD written as the world-model profile (WORLD_MODEL, tier 3) | §2 |
 | #3-method-composition | conserved | §3 |
-| #4-method-folder-semantics | conserved; the three classes and the rule that only method members are constitutional restated, the class named by its predecessor membership (`*_METHOD.md`); which successor members form the class, now that no suffix marks it, is a residual for README or PRODUCT_DEFINITION; the authoring path `specification/standards/` written generically, its successor path bound at packaging | §4 |
+| #4-method-folder-semantics | conserved; the three classes and the rule that only method members are constitutional restated generically, the class named by its predecessor membership (`*_METHOD.md`) and in this corpus by the method members the standards README names (the tier 1 and tier 2 standards and, when a project selects them, the tier 3 profiles); the authoring path `specification/standards/` written generically, its successor path bound at packaging | §4 |
 | #5-graph-model | conserved | §5 |
 | #nodes | conserved; the ten example names kept as illustrative | §5 Nodes |
 | #vectors | conserved | §5 Vectors |
@@ -1562,7 +1595,7 @@ opening note that roles are not functor kinds, which restates ACTIVATION
 | #117-manual-walkthrough-must-still-be-lawful | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | §11.7 |
 | #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | §11.7A |
 | #117b-real-authority-path-negative-proof-stdo-up-010 | conserved in full, with the supported-relation block carried exactly; this section is UP-010's only successor home | §11.7B |
-| #118-cumulative-environment-law-is-mandatory | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; ACTIVATION §4 states refinement in the chained form this law rejects (residual) | §11.8 |
+| #118-cumulative-environment-law-is-mandatory | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; ACTIVATION §4 states the generic cumulative input this law specialises, and §5 Graph functions binds the two | §11.8 |
 | #119-global-convergence-must-be-stable-under-zoom | conserved; "usually" kept | §11.9 |
 | #12-scenario-rule | conserved | §12 |
 | #13-installed-dev-rule | conserved | §13 |

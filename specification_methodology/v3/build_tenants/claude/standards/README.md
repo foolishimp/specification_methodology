@@ -54,6 +54,9 @@ current state under explicit uncertainty.
 | [EXECUTIVE_BASELINE.md](EXECUTIVE_BASELINE.md) | 3 | the optional Executive, Worker and Reviewer profile: canonical compression, authority boundary, engagement applicability, profile terms, Executive attention with its drift locks and no-mutation rule, the derived Executive, Worker and Reviewer frames, steel-thread delivery, the twelve generic specialist families, the engagement transition with the promotion constraint projection, handoff and coverage application, adoption or project configuration, actor binding, profile qualification, failure classification, anti-patterns, closure |
 | [DESIGN_MODULE.md](DESIGN_MODULE.md) | 3 | the optional software-design profile: purpose, position and graph-execution alignment; boundary closure evaluators and ingress collapse; functional bias and Python typing; ontology-first design with proportional design sequencing, decision-complete symbolic design, bounded frame conservation (UP-017), native constructability (UP-002), capability and foundation selection (UP-023), entity, authority, transformation-admission (UP-016) and function completeness, Prime atoms, whole-family contraction and root conservation (UP-003), ontology projection; Prime law with governance cost (UP-005), the carrier set, promotion and inflation; the three-view gate with invariant reconstruction (UP-018) and computational realisation (UP-019); theoretical framing; module taxonomy; realisation rules; review questions and checklist; adoption, relations and identity defaults |
 
+The constitutional method members of this corpus are its tier 1 and tier 2
+standards and, when a project selects them, its tier 3 profiles (P6, P3).
+
 Each clause names the principle that requires it (P0 to P6, defined in
 FOUNDATIONS §3) and, where it restates or supersedes an rc.2 clause, may
 carry that clause's route as provenance; a route is never the disposition

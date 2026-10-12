@@ -13,8 +13,8 @@ record and the functor kinds F_D, F_P and F_H are
 composition at [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition);
 the calculus basis is [§8](AXIOMATIC_CALCULUS.md#8-calculus-identity). The
 core result algebra is [ACTIVATION §3](ACTIVATION.md#3-result-algebra).
-Occurrence, lineage, frontier, projection, claim, cut and grant are this
-profile's own terms. A route written `rc.2 #anchor` is into
+Occurrence, lineage, frontier and cut are this profile's own terms, named
+by its sorts and relations. A route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/TRAVERSAL_OCCURRENCE_PROFILE.md` and
 is provenance only (P3, P1).
 
@@ -764,6 +764,56 @@ Each constraint declares zero latitude unless its exact record names a
 | `stale_currentness` | `EffectSubject` | re-observe and re-judge before effect |
 | `unobserved_external_mutation` | `SubjectBinding` | observe or retain an explicit material unknown |
 
+Mapping to the core result algebra, new in this corpus. Purpose: the
+one-algebra rule of [ACTIVATION §3](ACTIVATION.md#3-result-algebra), under
+which a profile with its own decision or stop vocabulary declares a total
+mapping to the five core members and adds none, and the requirement of
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+that a traversal's stop algebra map totally to that algebra (P5). Material
+relation: each stop kind and each judgment decision to exactly one core
+member, the value keeping its own vocabulary, residual and re-entry law.
+This signature's stop contract thereby fixes, for every traversal of a
+model under this profile, the per-traversal `stop_states` mapping that
+AXIOMATIC_CALCULUS §5 otherwise leaves to each traversal record, and such
+a record declares `stop_states` consistent with this table (P5, P3). A
+judgment decision is the evaluation's result and a stop is the step's;
+where values emitted together map to different members, as `stale` with
+`hold` and an `invalid_basis` decision with `refusal` do, each answers its
+own question (ACTIVATION §3).
+
+| Value | Core member | Reason |
+|---|---|---|
+| stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state); it reaches indeterminate by the stop-state route of construction availability's `incomplete`, not as the evaluation's result, and its residual names the evidence that would decide |
+| stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
+| stop `refusal` | falsified | every refusal in the constraint table is the stop of a falsified constraint, as construction availability maps `refused` to falsified; the structural loss is stated below |
+| stop `invalid_basis` | invalid_basis | the same member; the constraint rule above maps `invalid_basis` only to it |
+| stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an undeclared scope is `hold` plus `unresolved_scope`, so the ground of out_of_frame, a missing declaration, is absent, and the spelling is not the core's out_of_frame |
+| stop `partial_effect` | falsified | the observed post-state defeats the intended outcome as a whole; the loss is stated below |
+| `transition_evaluation` `partial` | falsified | the ground of stop `partial_effect`, which it yields; the loss is stated below |
+| `transition_evaluation` `refused` | falsified | it is the image of a falsified `transition_subject_complete` under the constraint table and yields `refusal`, so it maps back to the constraint's member |
+
+The remaining judgment decisions follow the constraint rule above: the
+first decision each judgment lists maps to satisfied; `refused`,
+`out_of_scope`, `unauthorized` and `stale`, which the constraint table
+makes the images of a falsified constraint, map to falsified, `refused`
+carrying the structural loss stated below; `hold`, the image of an indeterminate
+constraint, maps to indeterminate; `gap` maps to invalid_basis on the
+ground of the stop so named; and `invalid_basis` and the `falsified` and
+`indeterminate` of `transition_evaluation` map to the members so named
+(P5, P6).
+
+Stop `refusal` and decision `refused` also follow a structural refusal:
+an unknown or missing field under the closed value contract, a reference
+that fails AC-003, or a basis, cardinality or type mismatch. Under
+ACTIVATION §3 such a case reads as invalid_basis. This mapping reports it
+falsified; where an `invalid_basis` decision is emitted with the refusal,
+that decision is the evaluation's result and governs (P5, P6).
+
+Falsified for `partial` and `partial_effect` does not record that the
+subject changed. The `partial_effect` residual and its re-entry carry
+that fact and survive every join (FOUNDATIONS §4); the core member alone
+never licenses treating the effect as absent (P5, P4b).
+
 `Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and
 `F_H` from `b_ac` and no other functor kind. The profile changes none of
 their laws, which are AXIOMATIC_CALCULUS §5 (P3, P6).
@@ -920,7 +970,7 @@ endpoint (P3).
 ### OP-002 Atomic semantic admission
 
 For a relation claim, one admitted semantic cut contains the unchanged
-claim, its admission judgment, the event with its scope and admission
+claim, its admission judgment, the event and its scope and admission
 judgment, the deterministic materialised relation, the exact source
 frontier, and the unique successor frontier. The source frontier that the
 claim, the event and the cut name is one identical frontier, and the
@@ -1332,6 +1382,11 @@ notation `instantiate_signature`, `OccurrenceSignatureDefinition` and the
 is stated as the profile's own; American spellings are written British in
 prose and kept in identifiers (P3, P6).
 
+One clause has no predecessor row and is new: the mapping of the stop
+kinds and judgment decisions to the core result algebra (Closed
+constraint, judgment, residual and stop kinds), which ACTIVATION §3 and
+AXIOMATIC_CALCULUS §5 require (P5).
+
 | rc.2 anchor | Disposition | Locus |
 |---|---|---|
 | #position | conserved; both URN blocks carried exactly | Position |
@@ -1341,7 +1396,7 @@ prose and kept in identifiers (P3, P6).
 | #finite-reference-domain-table | conserved; the basis codes, every table row, the external-resolution expansion and `ResolutionRefDomain` carried exactly | Closed semantic-object sorts, Finite reference-domain table |
 | #closed-event-kind-population | conserved | Closed event-kind population |
 | #closed-relation-families | conserved; the twenty-four relation kinds, qualifier record, value domains, contract, cardinality function and congruence law carried exactly | Closed relation families |
-| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; no mapping of the stop kinds to the core algebra is declared (residual) | Closed constraint, judgment, residual and stop kinds |
+| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core algebra is new, with `partial` and `partial_effect` mapped to falsified and a structural refusal reported falsified, each loss stated (residual) | Closed constraint, judgment, residual and stop kinds |
 | #occurrence-identity | conserved | Occurrence identity |
 | #op-001-seed-acyclicity | conserved | OP-001 |
 | #candidate-judgment-event-and-relation-separation | conserved | Candidate, judgment, event and relation separation |
@@ -1356,6 +1411,7 @@ prose and kept in identifiers (P3, P6).
 | #op-007-scope-conservation | conserved | OP-007 |
 | #authority-and-adoption | conserved | Authority and adoption |
 | #exact-profile-identity | conserved | Exact profile identity |
-| #closed-profile-signature | conserved; the signature, basis and identity blocks and the ten-fragment list carried exactly, the fragments resolving to this member's headings; the member path written `standards/TRAVERSAL_OCCURRENCE.md` and the calculus clause `#2-signature`, the carried block's "Core Signature clause" being AXIOMATIC_CALCULUS §2 Signature; the rc.2 edition count "fourteen members" superseded by AXIOMATIC_CALCULUS §8, which retains the principle-ref set without a hard-coded count | Exact profile identity, Closed profile signature |
+| #closed-profile-signature | conserved, save the sentence split to the child row below; the signature, basis and identity blocks and the ten-fragment list carried exactly, the fragments resolving to this member's headings; the member path written `standards/TRAVERSAL_OCCURRENCE.md` and the calculus clause `#2-signature`, the carried block's "Core Signature clause" being AXIOMATIC_CALCULUS §2 Signature | Exact profile identity, Closed profile signature |
+| #closed-profile-signature-fourteen-members | superseded by AXIOMATIC_CALCULUS §8; the rc.2 sentence "For the calculus edition bound by this profile publication candidate, that population has fourteen members" counted the derivation account of the rc.2 calculus edition; §8 retains the principle-ref population as the exact expansion of the bound calculus member's derivation account, without a hard-coded count and recomputed when that account changes, so the population law stays and the edition count is replaced by the size that account yields; child row of `#closed-profile-signature`, its anchor synthetic | Closed profile signature |
 | #exclusions | conserved | Exclusions |
 | #conformance-obligations | conserved; all twenty-one obligations | Conformance obligations |

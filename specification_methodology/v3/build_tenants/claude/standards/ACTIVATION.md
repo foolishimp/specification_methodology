@@ -383,11 +383,19 @@ difficult evaluation alone does not prove that another frame is required
 (P5, P2; rc.2 RF #reconfigure-when-necessary).
 
 Refinement. An outer transformation T: A → X with success predicates P₀ … Pₙ
-is faithfully refined by steps Tᵢ when each admitted input satisfying Pᵢ
-yields an output satisfying Pᵢ₊₁, retains every applicable invariant, exposes
-other outcomes without coercion, and each output satisfies the next step's
-domain and preconditions (P4a). Then a successful composite carries P₀ to
-Pₙ by induction. Coverage of the outer obligations, correctness of the local
+is refined by steps Tᵢ. The input of a step is the outer input together
+with every earlier output retained for it; passing only the previous
+output is the special case in which nothing else is retained, and each Pᵢ
+ranges over the cumulative input after i steps. The refinement is faithful
+when each admitted input satisfying Pᵢ yields an output with which the next
+step's input satisfies Pᵢ₊₁, retains every applicable invariant, exposes
+other outcomes without coercion, and each step's input satisfies that
+step's domain and preconditions, the preconditions ranging over that
+cumulative input (P4a). Then a successful composite carries P₀ to Pₙ by
+induction. The cumulative input conserves the generic law that ODD §11.8
+specialises (P4a, P4b; provenance rc.2
+[ODD_METHOD §11.8](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#118-cumulative-environment-law-is-mandatory)).
+Coverage of the outer obligations, correctness of the local
 implications and legitimate authority are premises, not conclusions; "each
 step passed" is weaker than "the outer contract was conserved". Required
 coupled relations must fit together in some step; unrelated obligations stay
@@ -659,7 +667,7 @@ reconstructed semantic outcomes (P5, P6).
 | RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and AXIOMATIC_CALCULUS §4 states AC-007 as law, and each points here; their rows are disposed in those members; the tenant text carries labelled tightenings: undefined term, unexercised capability |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
 | Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
-| ODD graph functions | conserved; generalised in §4 to any realisation; PROFILES §2 keeps the ODD binding |
+| ODD graph functions, ODD 11.8 | conserved; graph functions generalised in §4 to any realisation; the generic part of 11.8, a step's input as the outer input with every earlier output retained for it, conserved in §4 as the refinement input, the 11.8 row itself disposed in ODD §11.8; PROFILES §2 keeps the ODD binding |
 | UP-017 | conserved; §4 |
 | UP-021 and Standing Structural Qualification | conserved in full; §4; rows in the table below |
 | UP-014, UP-005, UP-019 | conserved; §6 in full for UP-014's relation and method execution, its delivery priority in SPEC_METHOD §8; the allowance rule is new; rows in the table below |

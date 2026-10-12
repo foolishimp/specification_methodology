@@ -285,7 +285,9 @@ digest. Conserves AC-002, AC-014, the
 [Entity Cut Construction Law](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#entity-cut-construction-law).
 
 P4a Typed composition. Two steps compose only when the first's result type
-and judgment satisfy the second's domain and preconditions; composition
+and judgment, with the outer input and every earlier result retained for
+the second, satisfy the second's domain and preconditions, the first's
+result alone being the special case (ACTIVATION §4); composition
 retains both identities, intermediate results, judgments, evidence,
 authority, provenance and stop states. Independent. Conserves
 [AC-016](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition),
@@ -392,7 +394,7 @@ traversal composition laws of any runtime.
 | AC-010 | conserved; restated in AXIOMATIC_CALCULUS §4; applied by ACTIVATION §2 |
 | AC-013 transformation | conserved; restated in full in AXIOMATIC_CALCULUS §4; its delta fields are the conservation accounting of §4 above |
 | AC Fundamental Laws heading | not applicable: heading with no claim text (20 bytes); listed in AXIOMATIC_CALCULUS §11 |
-| AC Traversals And Functor Kinds, AC-015, AC-016 | conserved; restated in AXIOMATIC_CALCULUS §5; P4a and the formal fragment of §4 above consume them |
+| AC Traversals And Functor Kinds, AC-015, AC-016 | conserved; restated in AXIOMATIC_CALCULUS §5; P4a and the formal fragment of §4 above consume them; P4a widens the second step's input to the cumulative input of ACTIVATION §4 and keeps AC-016's first-result form as its special case |
 | AC Interpretation And Models, AC-017, AC-018, AC-019 | conserved; restated in AXIOMATIC_CALCULUS §6; P1 consumes them; the generic structural-and-semantic separation is EVALUATION §2 |
 | AC Subject And Carrier Boundaries, AC-020 | conserved; restated in AXIOMATIC_CALCULUS §7; applied to release lineage in SPEC_METHOD §6 |
 | AC Exact Calculus Identity | conserved; the identity law is restated in AXIOMATIC_CALCULUS §8; the record instance is a release artefact issued under RELEASE and AC-020 at this corpus's own release |
