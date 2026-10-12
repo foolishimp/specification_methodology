@@ -69,3 +69,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 2026-10-12T01:32:20Z — Drafted by the common pen with T-002. No actor bound beyond the Writer, nothing admitted, no construction started.
 
 2026-10-12T01:39:03Z — Jim bound the Executive to Claude and waived further paperwork: "the purpose is to manage everyone's reference frames such that you can manage attention, begin". EC-CLAUDE-001 admitted. Activation W1 (design reframe, member map, tenant frontier copy) issued to a fresh Writer context on `tenant/claude/c3-v3`.
+
+2026-10-12T01:56:20Z — W1 returned candidate_ready at 9ff18ba (design reframed, 24-member list, total member map, frontier copy 690 rows unresolved); subject verified in territory. Executive dispositions on residuals: CALCULUS to ACTIVATION rename approved for member 1; PRODUCT_DEFINITION tier-2 member approved; compressions superseded-by-projection relation parked unresolved pending Jim. R1 (fresh reviewer, same-family exception) activated on 9ff18ba. W2 (REFERENCE_FRAME_METHOD, 81 rows) activated with 9ff18ba as provisional basis; a design finding from R1 may invalidate parts of W2.
