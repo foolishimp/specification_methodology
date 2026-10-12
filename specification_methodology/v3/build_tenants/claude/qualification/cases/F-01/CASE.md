@@ -1,0 +1,144 @@
+# F-01 Frame usability: a fresh actor applies the REFERENCE_FRAME member from its projected frame
+
+Identity: urn:stdo-3:claude:case:F-01. A fixture for the usability evidence
+of the REFERENCE_FRAME member, designed under
+[DOCUMENT_STRUCTURE](../../../design/DOCUMENT_STRUCTURE.md) "Activation
+unit": a finite actor is activated on a projected reference frame, never on
+the corpus. Status: designed; no run exists; the expectations are not
+written here.
+
+## Claim under test
+
+A fresh actor given only the projected frame and the task applies the
+member without private knowledge or author memory. Concretely: for each
+task below, one fresh headless actor whose whole context is the instrument's
+system line, the routing card, one projected frame of the set-2 program as
+the only METHOD block, and the task as the TASK block, produces the output
+the task asks for, and the governing relations it applies are those of
+REFERENCE_FRAME, FOUNDATIONS §2 and ACTIVATION §1 to §3 and §7 as the
+set-2 program encodes them. The actor has no tools, no memory and no
+repository; the card carries no method content.
+
+Two tasks, one frame each:
+
+| Task | Frame (METHOD block) | What the actor must apply |
+|---|---|---|
+| A | `frame-declaration-and-activation` | the minimal frame declaration (REFERENCE_FRAME §13), activation on an exact subject and basis (ACTIVATION §1, §2), the minimal evaluation result with one member of the result algebra (REFERENCE_FRAME §13, ACTIVATION §3, §7) |
+| B | `coverage-and-revision` | the coverage ledger fields and statuses (REFERENCE_FRAME §8), the diagnostic order on a missing-frame signal (§10), one revision action with the activations, results and coverage claims it reopens (§10) |
+
+## Subject under test
+
+The standards at commit `1a68fd5` on `tenant/claude/c3-v3`, whose digests
+are in the set-2 record under
+[a_c/set-2/](../../../a_c/set-2/README.md), encoded as program
+`urn:stdo-3:claude:program:a-c-text:set-2` (canonical digest
+`sha256:4cc36994c07d5ad637f380cb3b6b577b9b19b996f3b0e55b7335d7ee838aca01`),
+and the two frame files projected from it, which are the bytes the actor
+receives:
+
+| Frame file | SHA-256 | Bytes |
+|---|---|---|
+| `a_c/set-2/projection-frame-declaration-and-activation-materialized.json` | `94bb707a8234a17f11647a690dffaa49a0814a16faae5dc7d04d7694fc959231` | 247,020 |
+| `a_c/set-2/projection-coverage-and-revision-materialized.json` | `ae12446d197aea778aff725606562e69cfdb14624d1e27978c497c025facc08e` | 208,066 |
+
+The frame files are introduced by the W3 commit that introduces this case;
+a run names that commit in the runs table. The frames and this fixture were
+authored by the same actor as the set-2 program.
+
+## Fixture material
+
+- [CARD.md](CARD.md) (`237ea8f9…47b23`, 455 bytes): the routing card every
+  actor receives. It names the two blocks, tells the actor the METHOD block
+  is its only method source, and tells it to return only what the task
+  asks for and to say where it had no method source. It carries no method
+  content; a card that did would contaminate the claim.
+- [TASK-A.md](TASK-A.md) (`93b314b2…624d5`, 3,136 bytes): workspace
+  `W-ledger-export`, a basis with two builds, a configuration revision and
+  a read-replica move, three evidence items, named authorities, three
+  evaluations E1 to E3 and an owner's claim K; the instruction to declare a
+  frame for E1 per the minimal frame declaration, activate it, return a
+  minimal evaluation result, say what the result does and does not say
+  about K, and list what had no method source. The record is invented and is
+  evidence about no product.
+- [TASK-B.md](TASK-B.md) (`48b2ebd6…ef41e`, 3,985 bytes): workspace
+  `W-notify`, a governed outcome, a basis whose configuration revision
+  advanced, a declared frame set of three frames, an evaluation inventory
+  of six evaluations (two closed, one whose basis changed, one with two
+  conflicting activations on the same basis, two never activated, one of
+  them with no decision owner recorded), named authorities and an observed
+  signal from a release meeting; the instruction to produce the coverage
+  ledger with statuses, apply the diagnostic order to the signal, name one
+  revision action with what it reopens, and list what had no method source.
+  Invented likewise.
+
+## Instrument invocations
+
+The instrument is
+[bounded_step.py](../../instruments/bounded_step.py) at
+`f92ca26b3e4fda953d8732f0665861d54a9121df67451ea90f981555c6ffe81d`, the
+version repaired for R-01 run 002. Each task is one step. Run from the
+tenant root `specification_methodology/v3/build_tenants/claude/`; the
+instrument itself starts the actor in a fresh empty directory outside any
+repository, so no CLAUDE.md enters the actor's context (the R-01 finding).
+
+Task A:
+
+```sh
+python3 -I qualification/instruments/bounded_step.py --cap 400000 \
+  --run-dir qualification/runs/<run-id> --step-id A-<n> \
+  --card qualification/cases/F-01/CARD.md \
+  --block "METHOD frame-declaration-and-activation=a_c/set-2/projection-frame-declaration-and-activation-materialized.json" \
+  --block "TASK=qualification/cases/F-01/TASK-A.md" \
+  --model sonnet
+```
+
+Task B:
+
+```sh
+python3 -I qualification/instruments/bounded_step.py --cap 400000 \
+  --run-dir qualification/runs/<run-id> --step-id B-<n> \
+  --card qualification/cases/F-01/CARD.md \
+  --block "METHOD coverage-and-revision=a_c/set-2/projection-coverage-and-revision-materialized.json" \
+  --block "TASK=qualification/cases/F-01/TASK-B.md" \
+  --model sonnet
+```
+
+Cap: 400,000 bytes of whole context per step, as in R-01. Model: `sonnet`,
+the model id as the instrument logs it. One calibration step per run
+(`--calibrate`) records the headless CLI's framework overhead. Each task
+runs twice per run (the trial is probabilistic); allowance per run: five
+actor starts and 20 minutes wall.
+
+Measured-context requirement: the instrument measures the whole context in
+bytes, with every component's SHA-256, before any actor exists, logs the
+`measured` event to `lifecycle.jsonl`, and refuses a context over the cap
+without starting an actor. A run record is admissible only when its
+`measured` events carry the frame file digests above; a different digest is
+a different subject. The dry-run measurement at design time (no actor
+started), from this fixture at these digests: task A 250,979 bytes (system
+182, card 455, METHOD block 247,073, TASK block 3,154, header 115); task B
+212,852 bytes (system 182, card 455, METHOD block 208,108, TASK block
+4,003, header 104). Both fit the cap. Each run's `lifecycle.jsonl`, the
+`steps/*.in.md`, `steps/*.out.md` and `steps/*.usage.json` files are kept
+under the run directory; the operator judges nothing.
+
+## Expectations
+
+Written by an independent context before any run; see EXPECTATIONS.md.
+
+## Assessment
+
+An assessor other than the author, under a review Jim authorises, reads
+the run directory at a named commit after the expectations exist, and
+returns a review result per EVALUATION §4 over the expectations, judging
+each record against the member's relations as the set-2 program encodes
+them and the costs as logged. The assessor makes no repair. The author's
+structural check of a record (the four parts present, a result word from
+the algebra, a status word from the seven) is mechanical evidence under
+EVALUATION §2, not assessment.
+
+## Runs and assessments
+
+| Run | Operator | Record | Assessment |
+|---|---|---|---|
+| none | | | |
