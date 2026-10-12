@@ -774,14 +774,17 @@ mapping to the five core members and adds none, and the requirement of
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
 that a traversal's stop algebra map totally to that algebra (P5). Material
 relation: each stop kind and each judgment decision, read with the source
-of a refusal, to exactly one core member, the value keeping its own
-vocabulary, residual and re-entry law. This mapping is the profile's
+of a refusal and, for stop `partial_effect` and decision `partial`, with
+what the effect evidence and the bounded post-observation establish, to
+exactly one core member, the value keeping its own vocabulary, residual
+and re-entry law. This mapping is the profile's
 default. A traversal record's `stop_states` may refine it for that
 traversal, as AXIOMATIC_CALCULUS §5 leaves to the record which of `hold`,
 `gap` and `refusal` map to which non-satisfied core member, by a binding
 declared in the shape of [PROFILES §1](PROFILES.md#1-the-boundary): its
 direction, preserved meaning, narrowed scope and invalidation; the other
-stops and every judgment decision keep this mapping's member, and a
+stops and every judgment decision keep this mapping's member or
+conditional rule, and a
 record that declares no binding takes the default (P5, P3, P1). A
 judgment decision is the evaluation's result and a stop is the step's;
 where values emitted together map to different members, as `stale` with
@@ -791,19 +794,20 @@ where values emitted together map to different members, as `stale` with
 |---|---|---|
 | stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state) while every relation and capability the judgment requires is declared by this closed signature and was exercised, which is the second case of ACTIVATION §3; its residual names the evidence that would decide |
 | stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
-| stop `refusal` | falsified or invalid_basis | falsified for a refusal in the constraint table, which is the stop of a falsified constraint, as construction availability maps `refused` to falsified; invalid_basis for a structural refusal, named below, whose subject or basis cannot support the judgment (ACTIVATION §3) |
+| stop `refusal` | falsified or invalid_basis | falsified for a refusal in the constraint table, which is the stop of a falsified constraint, as construction availability maps `refused` to falsified; invalid_basis for a structural refusal, named below, whose subject or basis cannot support the judgment (ACTIVATION §3); invalid_basis for a refusal of admission under the `unresolved_scope` re-entry, which follows an indeterminate `event_scope_compatible` and no counterexample: the event's scope, which `event_admission` requires as evidence, stays undeclared, so the subject cannot support the admission judgment, and the `unresolved_scope` residual is retained, naming the scope declaration that would decide (P5, P6) |
 | stop `invalid_basis` | invalid_basis | the same member; the constraint rule above maps `invalid_basis` only to it |
 | stop `out_of_scope` | falsified | it is emitted only with `refusal`, when `event_scope_compatible` is falsified by a declared scope that conflicts with the admitting authority; an event scope not yet declared is `hold` plus `unresolved_scope` while the signature declares the scope relation, so the ground of out_of_frame, a missing declaration in the frame, is absent, and the spelling is not the core's out_of_frame |
-| stop `partial_effect` | falsified | the observed post-state defeats the intended outcome as a whole; the loss is stated below |
-| `transition_evaluation` `partial` | falsified | the ground of stop `partial_effect`, which it yields; the loss is stated below |
+| stop `partial_effect` | falsified or indeterminate | falsified when the effect evidence establishes that the effect has ended and the bounded post-observation shows part of the intended outcome not reached, the unreached part being the counterexample; otherwise indeterminate, as the effect law of [Mutable-subject effect relation](#mutable-subject-effect-relation) names: an effect that has begun and cannot establish its complete disposition supplies no counterexample. Where the bounded post-observation that law then requires is not yet acquired, the stop reaches indeterminate by the stop-state route of construction availability's `incomplete` (ACTIVATION §3, third case); where it is acquired and still cannot decide, as ACTIVATION §3's second case. The `partial_effect` residual names the post-observation and explicit disposition that would decide; the loss is stated below (P5, P6) |
+| `transition_evaluation` `partial` | falsified or indeterminate | the ground of stop `partial_effect`, which it yields, under the same rule: falsified when the effect evidence establishes that the effect has ended and the post-observation shows part of the intended outcome not reached; otherwise indeterminate, as ACTIVATION §3's second case, since the decision's required evidence includes the post-observation and a missing one is `indeterminate` plus `unobserved_subject_state` under `transition_subject_complete`. The `partial_effect` residual names the explicit disposition that would decide; the loss is stated below (P5, P6) |
 | `transition_evaluation` `refused` | falsified or invalid_basis | falsified as the image of a falsified `transition_subject_complete` under the constraint table, which yields `refusal`, so it maps back to the constraint's member; invalid_basis for a structural refusal, as for stop `refusal` |
 
 The remaining judgment decisions follow the constraint rule above: the
 first decision each judgment lists maps to satisfied; `refused`,
 `out_of_scope`, `unauthorized` and `stale`, which the constraint table
 makes the images of a falsified constraint, map to falsified, save that
-`refused` maps to invalid_basis when it follows a structural refusal; `hold`, the image of an indeterminate
-constraint, maps to indeterminate; `gap` maps to invalid_basis on the
+`refused` maps to invalid_basis when it follows a structural refusal or a
+refusal under the `unresolved_scope` re-entry, as for stop `refusal`;
+`hold`, the image of an indeterminate constraint, maps to indeterminate; `gap` maps to invalid_basis on the
 ground of the stop so named; and `invalid_basis` and the `falsified` and
 `indeterminate` of `transition_evaluation` map to the members so named
 (P5, P6).
@@ -825,10 +829,12 @@ that fails AC-003. Stop `refusal` and decision `refused` from such a
 source map to invalid_basis, the member an `invalid_basis` decision
 emitted with the refusal states as the evaluation's result (P5, P6).
 
-Falsified for `partial` and `partial_effect` does not record that the
-subject changed. The `partial_effect` residual and its re-entry carry
-that fact and survive every join (FOUNDATIONS §4); the core member alone
-never licenses treating the effect as absent (P5, P4b).
+Neither member to which `partial` and `partial_effect` map records that
+the subject changed. The `partial_effect` residual and its re-entry carry
+that fact and survive every join (FOUNDATIONS §4). Falsified never
+licenses treating the effect as absent; indeterminate never licenses
+treating it as absent or as complete; under either member the explicit
+re-entry precedes any further effect (P5, P4b).
 
 `Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and
 `F_H` from `b_ac` and no other functor kind. The profile changes none of
@@ -1412,7 +1418,7 @@ AXIOMATIC_CALCULUS §5 require (P5).
 | #finite-reference-domain-table | conserved; the basis codes, every table row, the external-resolution expansion and `ResolutionRefDomain` carried exactly | Closed semantic-object sorts, Finite reference-domain table |
 | #closed-event-kind-population | conserved | Closed event-kind population |
 | #closed-relation-families | conserved; the twenty-four relation kinds, qualifier record, value domains, contract, cardinality function and congruence law carried exactly | Closed relation families |
-| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core algebra is new, as the profile's default, refinable per traversal by `stop_states` in the PROFILES §1 binding shape; `partial` and `partial_effect` map to falsified with the loss stated; a constraint-table refusal maps to falsified and a structural refusal to invalid_basis | Closed constraint, judgment, residual and stop kinds |
+| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the stop kinds and judgment decisions to the core algebra is new, as the profile's default, refinable per traversal by `stop_states` in the PROFILES §1 binding shape; `partial` and `partial_effect` map by the effect evidence, to falsified when the effect has ended and the post-observation shows part of the intended outcome not reached and otherwise to indeterminate under the conserved effect law, the loss stated for both; a constraint-table refusal maps to falsified, and a structural refusal or a refusal under the `unresolved_scope` re-entry to invalid_basis | Closed constraint, judgment, residual and stop kinds |
 | #occurrence-identity | conserved | Occurrence identity |
 | #op-001-seed-acyclicity | conserved | OP-001 |
 | #candidate-judgment-event-and-relation-separation | conserved | Candidate, judgment, event and relation separation |
