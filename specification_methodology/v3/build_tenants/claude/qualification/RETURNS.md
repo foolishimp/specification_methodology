@@ -466,3 +466,37 @@ is closed: every run of every case awaits an authorised independent
 assessment; every program awaits an author-independent fidelity judgment;
 the Axiom Indexer dependency use awaits Jim's selection; the independence
 policy and the C2 contract are Jim's; merge is on his acceptance.
+
+## W1 return, 2026-10-12T01:53:57Z
+
+RESULT: candidate_ready
+COMMIT: the commit carrying this entry on tenant/claude/c3-v3 (SHA in the Executive-facing return; it cannot be inside its own commit)
+FILES: design/DOCUMENT_STRUCTURE.md (rewritten, 11,996 bytes); frontier/PREDECESSOR_CLAIMS.md (new, 76,568 bytes); qualification/RETURNS.md (this entry)
+MEMBERS: tier 1 FOUNDATIONS, REFERENCE_FRAME*, ACTIVATION (CALCULUS renamed at member 1), AXIOMATIC_CALCULUS*, IDENTITY*, EVALUATION; tier 2 SPEC_METHOD, PRODUCT_DEFINITION*, TICKETS*, ASSURANCE*, RELEASE*, CONFORMANCE; tier 3 PROFILES (index and boundary), EXECUTIVE_BASELINE*, DESIGN_MODULE*, ODD*, TRAVERSAL_OCCURRENCE*, UX*, WORLD_MODEL*; guides POSTING_GUIDE*, WRITING_GUIDE*, GLOSSARY*; route README; packaging a_c/ (compressions' successor), standards/schemas/, standards/templates/, plugins/spec/, LICENSE, release/release-note.md (* new; 24 standards bodies)
+MAP:
+README.md -> README; RELEASE (installed cut, store, manifest)
+AXIOMATIC_CALCULUS.md -> AXIOMATIC_CALCULUS
+DESIGN_MODULE_METHOD.md -> DESIGN_MODULE; SPEC_METHOD (core rule, non-goals); ASSURANCE (6A to 6C)
+GLOSSARY_GUIDE.md -> GLOSSARY
+IDENTITY_METHOD.md -> IDENTITY; DESIGN_MODULE (bound-realisation defaults)
+ODD_METHOD.md -> ODD; ACTIVATION (graph-function refinement, by note)
+POSTING_GUIDE.md -> POSTING_GUIDE; SPEC_METHOD (UP-012)
+REFERENCE_FRAME_METHOD.md -> REFERENCE_FRAME; FOUNDATIONS (ontology objects); ACTIVATION (engagement as the step); EVALUATION (qualification)
+RELEASE_METHOD.md -> RELEASE; FOUNDATIONS (recursive product objects); EVALUATION (UP-015 as acceptance evidence)
+SPEC_METHOD.md -> SPEC_METHOD; PRODUCT_DEFINITION (overlay, SURFACE-001, bootstrap); ACTIVATION (work boundary, UP-014/020/021); FOUNDATIONS (product taxonomy); EVALUATION (evidence rules, litmus); ASSURANCE (testing law)
+STDO_REFERENCE_FRAME_BASELINE.md -> EXECUTIVE_BASELINE; ASSURANCE (testing frames, interface integration); EVALUATION (reviewer result, triage projection)
+TICKET_METHOD.md -> TICKETS; SPEC_METHOD (change classes as the triage target)
+TRAVERSAL_OCCURRENCE_PROFILE.md -> TRAVERSAL_OCCURRENCE
+UX_METHOD.md -> UX
+WORLD_MODEL_METHOD.md -> WORLD_MODEL
+WRITING_GUIDE.md -> WRITING_GUIDE
+compressions (10) -> a_c/ program, map and frames, proposed superseded by "projection from the set program"; stdo_bootstrap.md -> PRODUCT_DEFINITION and bootstrap templates
+schemas (2) -> standards/schemas/ under PRODUCT_DEFINITION and RELEASE
+templates (24) -> standards/templates/ under SPEC_METHOD, TICKETS, PRODUCT_DEFINITION, REFERENCE_FRAME
+plugin (17) -> plugins/spec/, each skill re-routed to its successor frames
+licence (1) -> LICENSE at the candidate root
+release note (1) -> release/release-note.md at the RC cut under RELEASE
+NON-CHANGES: design/PRINCIPLES.md; the seven first-pass standards/ files (FOUNDATIONS section 1 still defines conserved by route, fixed at member 1); a_c/, qualification cases, runs and instruments, reviews/; the common specification/ and tickets; the frontier copy differs from the common file only in its first heading and the inserted provenance paragraph (690 rows, all unresolved, 725 table lines carried; verified by diff).
+RESIDUALS: (1) CALCULUS.md -> ACTIVATION.md rename is my decision to remove the name collision with AXIOMATIC_CALCULUS; a_c/set digests and case records cite CALCULUS.md as frozen history; confirm or veto before member 1. (2) PRODUCT_DEFINITION as its own tier-2 member for SPEC_METHOD's overlay, SURFACE-001 and bootstrap law (about 600 lines) rather than inside SPEC_METHOD; confirm. (3) The compressions' superseded relation "projection from the set program" needs Jim's acceptance before it is a valid disposition; those 10 rows stay unresolved until then. (4) The member map is reviewed with member 1 per the contract; the Reviewer family for member 1 is not selected here. (5) No gate script exists in the tenant; earlier "tenant gate" runs were ad hoc, so I ran link, heading-depth, whitespace and byte-diff checks by hand on the changed files only.
+MEASURED: input bytes read about 115,000 (file reads plus command outputs, tallied per call; envelope 300 KB); wall 2026-10-12T01:39:43Z to 2026-10-12T01:53:57Z UTC
+STOP BASIS: complete
