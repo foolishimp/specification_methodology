@@ -54,45 +54,45 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`
 
 | Section | Anchor | Identifiers | Bytes | Disposition | Successor locus |
 |---|---|---|---|---|---|
-| Position | `#position` |  | 1,866 | unresolved | |
-| Derivation Provenance | `#derivation-provenance` |  | 3,724 | unresolved | |
-| Scope | `#scope` |  | 659 | unresolved | |
-| Core Signature | `#core-signature` |  | 4,767 | unresolved | |
-| Typed Records | `#typed-records` |  | 560 | unresolved | |
-| &nbsp;&nbsp;Semantic Object | `#semantic-object` |  | 333 | unresolved | |
-| &nbsp;&nbsp;Typed Relation | `#typed-relation` |  | 396 | unresolved | |
-| &nbsp;&nbsp;Constraint | `#constraint` |  | 537 | unresolved | |
-| &nbsp;&nbsp;Latitude | `#latitude` |  | 337 | unresolved | |
-| &nbsp;&nbsp;Residual | `#residual` |  | 611 | unresolved | |
-| Fundamental Laws | `#fundamental-laws` |  | 20 | unresolved | |
-| &nbsp;&nbsp;AC-001 Closed Signature | `#ac-001-closed-signature` | AC-001 | 390 | unresolved | |
-| &nbsp;&nbsp;AC-002 Scoped Identity | `#ac-002-scoped-identity` | AC-002 | 218 | unresolved | |
-| &nbsp;&nbsp;AC-003 Reference Closure | `#ac-003-reference-closure` | AC-003 | 426 | unresolved | |
-| &nbsp;&nbsp;AC-004 Relation Typing | `#ac-004-relation-typing` | AC-004 | 227 | unresolved | |
-| &nbsp;&nbsp;AC-005 Authority Conservation | `#ac-005-authority-conservation` | AC-005 | 323 | unresolved | |
-| &nbsp;&nbsp;AC-006 Basis Coherence | `#ac-006-basis-coherence` | AC-006 | 246 | unresolved | |
-| &nbsp;&nbsp;AC-007 Constraint And Refusal | `#ac-007-constraint-and-refusal` | AC-007 | 274 | unresolved | |
-| &nbsp;&nbsp;AC-008 Explicit Latitude | `#ac-008-explicit-latitude` | AC-008 | 221 | unresolved | |
-| &nbsp;&nbsp;AC-009 Residual Conservation | `#ac-009-residual-conservation` | AC-009 | 258 | unresolved | |
-| &nbsp;&nbsp;AC-010 Material Closure | `#ac-010-material-closure` | AC-010 | 558 | unresolved | |
-| &nbsp;&nbsp;AC-011 Projection | `#ac-011-projection` | AC-011 | 435 | unresolved | |
-| &nbsp;&nbsp;AC-012 Overlay | `#ac-012-overlay` | AC-012 | 355 | unresolved | |
-| &nbsp;&nbsp;AC-013 Transformation | `#ac-013-transformation` | AC-013 | 6,410 | unresolved | |
-| &nbsp;&nbsp;AC-014 Judgment Separation | `#ac-014-judgment-separation` | AC-014 | 448 | unresolved | |
-| Traversals And Functor Kinds | `#traversals-and-functor-kinds` |  | 1,875 | unresolved | |
-| &nbsp;&nbsp;AC-015 Functor Classification | `#ac-015-functor-classification` | AC-015 | 202 | unresolved | |
-| &nbsp;&nbsp;AC-016 Typed Composition | `#ac-016-typed-composition` | AC-016 | 556 | unresolved | |
-| Interpretation And Models | `#interpretation-and-models` |  | 1,235 | unresolved | |
-| &nbsp;&nbsp;AC-017 Interpretation Fidelity | `#ac-017-interpretation-fidelity` | AC-017 | 377 | unresolved | |
-| &nbsp;&nbsp;AC-018 Structural And Semantic Separation | `#ac-018-structural-and-semantic-separation` | AC-018 | 324 | unresolved | |
-| &nbsp;&nbsp;AC-019 Valid Model | `#ac-019-valid-model` | AC-019 | 800 | unresolved | |
-| Subject And Carrier Boundaries | `#subject-and-carrier-boundaries` |  | 895 | unresolved | |
-| &nbsp;&nbsp;AC-020 Layer And Release Separation | `#ac-020-layer-and-release-separation` | AC-020 | 733 | unresolved | |
-| Exact Calculus Identity | `#exact-calculus-identity` |  | 3,655 | unresolved | |
-| Application Boundary | `#application-boundary` |  | 392 | unresolved | |
-| External Imports And Specializations | `#external-imports-and-specializations` |  | 385 | unresolved | |
-| Exclusions | `#exclusions` |  | 471 | unresolved | |
-| Conformance Obligations | `#conformance-obligations` |  | 1,251 | unresolved | |
+| Position | `#position` |  | 1,866 | conserved | `AXIOMATIC_CALCULUS.md#1-position` |
+| Derivation Provenance | `#derivation-provenance` |  | 3,724 | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" generalised to profile, realisation and carrier | `AXIOMATIC_CALCULUS.md#derivation-provenance` |
+| Scope | `#scope` |  | 659 | conserved | `AXIOMATIC_CALCULUS.md#scope` |
+| Core Signature | `#core-signature` |  | 4,767 | conserved | `AXIOMATIC_CALCULUS.md#2-signature` |
+| Typed Records | `#typed-records` |  | 560 | conserved | `AXIOMATIC_CALCULUS.md#3-typed-records` |
+| &nbsp;&nbsp;Semantic Object | `#semantic-object` |  | 333 | conserved | `AXIOMATIC_CALCULUS.md#semantic-object` |
+| &nbsp;&nbsp;Typed Relation | `#typed-relation` |  | 396 | conserved | `AXIOMATIC_CALCULUS.md#typed-relation` |
+| &nbsp;&nbsp;Constraint | `#constraint` |  | 537 | conserved | `AXIOMATIC_CALCULUS.md#constraint` |
+| &nbsp;&nbsp;Latitude | `#latitude` |  | 337 | conserved | `AXIOMATIC_CALCULUS.md#latitude` |
+| &nbsp;&nbsp;Residual | `#residual` |  | 611 | conserved | `AXIOMATIC_CALCULUS.md#residual` |
+| Fundamental Laws | `#fundamental-laws` |  | 20 | not applicable: heading with no claim text (20 bytes); its children are disposed individually | `AXIOMATIC_CALCULUS.md#4-fundamental-laws` |
+| &nbsp;&nbsp;AC-001 Closed Signature | `#ac-001-closed-signature` | AC-001 | 390 | conserved | `AXIOMATIC_CALCULUS.md#ac-001-closed-signature` |
+| &nbsp;&nbsp;AC-002 Scoped Identity | `#ac-002-scoped-identity` | AC-002 | 218 | conserved; scoped identity is defined at FOUNDATIONS.md §2 Object, the law is in the locus | `AXIOMATIC_CALCULUS.md#ac-002-scoped-identity` |
+| &nbsp;&nbsp;AC-003 Reference Closure | `#ac-003-reference-closure` | AC-003 | 426 | conserved | `AXIOMATIC_CALCULUS.md#ac-003-reference-closure` |
+| &nbsp;&nbsp;AC-004 Relation Typing | `#ac-004-relation-typing` | AC-004 | 227 | conserved | `AXIOMATIC_CALCULUS.md#ac-004-relation-typing` |
+| &nbsp;&nbsp;AC-005 Authority Conservation | `#ac-005-authority-conservation` | AC-005 | 323 | conserved; authority kinds are defined at FOUNDATIONS.md §2, the law is in the locus | `AXIOMATIC_CALCULUS.md#ac-005-authority-conservation` |
+| &nbsp;&nbsp;AC-006 Basis Coherence | `#ac-006-basis-coherence` | AC-006 | 246 | conserved; basis is defined at FOUNDATIONS.md §2, the law is in the locus | `AXIOMATIC_CALCULUS.md#ac-006-basis-coherence` |
+| &nbsp;&nbsp;AC-007 Constraint And Refusal | `#ac-007-constraint-and-refusal` | AC-007 | 274 | conserved; stated as a law over constraints using the algebra defined once in `ACTIVATION.md#3-result-algebra`, consistent with its three-case boundary; the declared algebra is tightened to the core or a declared refinement with a total mapping | `AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal` |
+| &nbsp;&nbsp;AC-008 Explicit Latitude | `#ac-008-explicit-latitude` | AC-008 | 221 | conserved; generic form over any two values at FOUNDATIONS.md §4 | `AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude` |
+| &nbsp;&nbsp;AC-009 Residual Conservation | `#ac-009-residual-conservation` | AC-009 | 258 | conserved | `AXIOMATIC_CALCULUS.md#ac-009-residual-conservation` |
+| &nbsp;&nbsp;AC-010 Material Closure | `#ac-010-material-closure` | AC-010 | 558 | conserved; applied by ACTIVATION.md §2 | `AXIOMATIC_CALCULUS.md#ac-010-material-closure` |
+| &nbsp;&nbsp;AC-011 Projection | `#ac-011-projection` | AC-011 | 435 | conserved; applied by ACTIVATION.md §2 | `AXIOMATIC_CALCULUS.md#ac-011-projection` |
+| &nbsp;&nbsp;AC-012 Overlay | `#ac-012-overlay` | AC-012 | 355 | conserved | `AXIOMATIC_CALCULUS.md#ac-012-overlay` |
+| &nbsp;&nbsp;AC-013 Transformation | `#ac-013-transformation` | AC-013 | 6,410 | conserved in full; FOUNDATIONS.md §4 conservation accounting consumes its delta fields | `AXIOMATIC_CALCULUS.md#ac-013-transformation` |
+| &nbsp;&nbsp;AC-014 Judgment Separation | `#ac-014-judgment-separation` | AC-014 | 448 | conserved; the judgment object is defined at FOUNDATIONS.md §2, the record and the law are in the locus | `AXIOMATIC_CALCULUS.md#ac-014-judgment-separation` |
+| Traversals And Functor Kinds | `#traversals-and-functor-kinds` |  | 1,875 | conserved; the stop algebra is tied to the one result algebra of ACTIVATION.md §3 (tightening); the traversal record's ownership against same-spelled terms is made explicit | `AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds` |
+| &nbsp;&nbsp;AC-015 Functor Classification | `#ac-015-functor-classification` | AC-015 | 202 | conserved | `AXIOMATIC_CALCULUS.md#ac-015-functor-classification` |
+| &nbsp;&nbsp;AC-016 Typed Composition | `#ac-016-typed-composition` | AC-016 | 556 | conserved; P4a at FOUNDATIONS.md §3 is its generic form over steps | `AXIOMATIC_CALCULUS.md#ac-016-typed-composition` |
+| Interpretation And Models | `#interpretation-and-models` |  | 1,235 | conserved | `AXIOMATIC_CALCULUS.md#6-interpretation-and-models` |
+| &nbsp;&nbsp;AC-017 Interpretation Fidelity | `#ac-017-interpretation-fidelity` | AC-017 | 377 | conserved | `AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity` |
+| &nbsp;&nbsp;AC-018 Structural And Semantic Separation | `#ac-018-structural-and-semantic-separation` | AC-018 | 324 | conserved; generic form over every review at EVALUATION.md §2 | `AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation` |
+| &nbsp;&nbsp;AC-019 Valid Model | `#ac-019-valid-model` | AC-019 | 800 | conserved; the checker rule's generic form at EVALUATION.md §2 | `AXIOMATIC_CALCULUS.md#ac-019-valid-model` |
+| Subject And Carrier Boundaries | `#subject-and-carrier-boundaries` |  | 895 | conserved | `AXIOMATIC_CALCULUS.md#7-layers` |
+| &nbsp;&nbsp;AC-020 Layer And Release Separation | `#ac-020-layer-and-release-separation` | AC-020 | 733 | conserved; applied to release lineage by SPEC_METHOD.md §6 | `AXIOMATIC_CALCULUS.md#ac-020-layer-and-release-separation` |
+| Exact Calculus Identity | `#exact-calculus-identity` |  | 3,655 | conserved; every determination of the identity law and the record shape is restated; the record instance (the coordinates) is a release artefact issued after the bytes exist, not a claim of the section; this edition's identity is bound at its own release under RELEASE and AC-020 and the predecessor's coordinates are recorded as provenance | `AXIOMATIC_CALCULUS.md#8-calculus-identity` |
+| Application Boundary | `#application-boundary` |  | 392 | conserved | `AXIOMATIC_CALCULUS.md#application-boundary` |
+| External Imports And Specializations | `#external-imports-and-specializations` |  | 385 | conserved | `AXIOMATIC_CALCULUS.md#external-imports-and-specialisations` |
+| Exclusions | `#exclusions` |  | 471 | conserved; "graph storage topology" and "world-model ontology" generalised to any storage topology and any domain ontology | `AXIOMATIC_CALCULUS.md#exclusions` |
+| Conformance Obligations | `#conformance-obligations` |  | 1,251 | conserved | `AXIOMATIC_CALCULUS.md#10-conformance-obligations` |
 
 ## DESIGN_MODULE_METHOD.md
 
