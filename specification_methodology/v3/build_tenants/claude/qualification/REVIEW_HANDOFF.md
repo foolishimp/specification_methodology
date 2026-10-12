@@ -34,8 +34,25 @@ on branch `common/c3-executive-setup`.
 
 | Rows | Count |
 |---|---|
-| Disposed and accepted (text reviewed and cold-actor evidence where the contract requires it) | 680 |
+| Text accepted on author-independent same-family review | 680 |
+| of which cold-actor evidence is current (checkpoint B: TICKET carrier and retention, RELEASE, IDENTITY, DESIGN_MODULE, ODD, TRAVERSAL, UX, WORLD_MODEL, PRODUCT_DEFINITION with GLOSSARY) | 412 |
+| of which cold-actor evidence is stale (REFERENCE_FRAME, AXIOMATIC_CALCULUS, SPEC_METHOD core, STDO_REFERENCE_FRAME_BASELINE with its ASSURANCE parts: carried text was edited after their runs at ac3ec5f and 978d324) | 268 |
 | Unresolved, pending Jim: ten compressions and the requirements template's bootstrap entrypoint | 11 |
+
+The current-evidence count includes rows with no cold-actor task (POSTING_GUIDE, WRITING_GUIDE, README and the packaging members), for which the contract's frame criterion was not exercised. Stale evidence becomes current again by re-running the frames against the current text or by an explicit clause-level re-acceptance; neither has been done.
+
+## Changed after its last review
+
+These commits changed member text after the review that accepted it. Each was inspected by the Executive or verified mechanically; none has had an independent review. Target them first.
+
+| Commits | What changed | Last check |
+|---|---|---|
+| 424c490, 0ed6afd, 3e14bf6, 1740390, b051270 | residual sweep: 35 edits across all members, including 17 restored modal words in members 1 to 3, the glossary ownership fix and the ODD and TRAVERSAL glossary indexes | Writer's scripted checks; Executive read of the return |
+| e105ec8, e1cca7c | about 25 clauses conserved from rc.2 compressions, each tagged "a claim no rc.2 body states" | Executive diff check (additions only) |
+| 7e6470b | AC-016 statement of reading; composite output tied to X; ODD and TRAVERSAL mappings by cause | Executive inspection |
+| ad9c16f, 9b1e752 | TICKETS modal restorations; SPEC_METHOD isolation import and generalisation notes | Executive inspection |
+| 4087e8e | packaging repair: template entrypoint placeholder, compression citations, refresh registry | Executive inspection |
+| 978d324, 3244847, f52108c, c44df67, a655a53, bed4d99, 2f565c2, 8f5276b | repairs the Executive made itself under a ledgered role transition: ASSURANCE UP-022 locus; RELEASE and IDENTITY routes; UP-019 cost words and identity-defaults scope; PROFILES restricted-term ruling; UX and WORLD_MODEL mapping corrections; stale dispositions rows; ownership inclusions; PRODUCT_DEFINITION §9 definition selection | none independent |
 
 ## What a reviewer is asked to do
 
@@ -82,8 +99,11 @@ another model family:
 
 - The compression ruling: whether the ten compressions are superseded by
   projected frames and the bootstrap by a projected bootstrap frame. An
-  audit found about 25 compression-only claims; they are now conserved in
-  the members, so supersession would lose none of those found.
+  audit found about 25 compression-only claims, now conserved in the
+  members, so supersession would lose none of those found. The audit is a
+  lower bound: its scripted detector found 2 of the 4 such claims a hand
+  read found in the bootstrap, so the eight scripted compressions may hold
+  more.
 - The UX compliance-test choice.
 - Authorising this review, accepting the checkpoint, and merging
   `tenant/claude/c3-v3` and `common/c3-executive-setup`.
