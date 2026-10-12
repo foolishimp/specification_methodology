@@ -205,7 +205,9 @@ conjunction or decision rule (P4a; §6; rc.2
 An activated frame declares the topology changes capable of invalidating
 its coordinates or its materiality judgment. A detected material topology
 mutation causes reevaluation, frame revision or recharting before the
-previous result is reused (P3, P4b; rc.2
+previous result is reused. Revision of the frame itself invalidates for
+reuse every result bound to the prior revision coordinate; §10 Revision
+actions states that rule (P3, P4b; rc.2
 #rf-011-topology-mutation-and-recharting).
 
 ### RF-012 Closed results
@@ -600,6 +602,21 @@ Diagnosis asks, in this order (P2; rc.2 #diagnostic-order):
 7. Is the evaluation family itself wrong or incomplete?
 8. Is another frame required?
 
+Question 1 is answered by family inclusion, not by set membership. An
+evaluation is within a frame's family when the question it decides is one
+the frame's declared evaluation family states, at the frame's declared
+coordinates (RF-001). Membership of the frame in the frame set, the frame's
+name, a role label or similar wording of the question does not place an
+evaluation in the frame's family; an activation of a frame on an evaluation
+outside its family answers question 1 no, whatever the frame's standing in
+the set. The test is a tightening the predecessor implies and does not
+state (P2, the evaluations determine the attention surface; P1, a name
+carries no meaning; the material relation drawn is evaluation-to-family
+inclusion; rc.2 #diagnostic-order, #evaluation, where similar wording
+proves no shared family, #rf-001-evaluation-relativity and
+#applicability-and-required-results, where a frame name or listed family is
+no activation trigger by itself).
+
 The order prevents every difficult evaluation from creating another frame.
 
 ### Revision actions
@@ -613,6 +630,20 @@ is no longer material; or revise the project evaluation inventory. Every
 material revision changes frame identity or revision coordinates and states
 which prior activations, results and coverage claims require reevaluation
 (P3, P4b).
+
+Stated plainly: revising a frame produces a new frame revision coordinate.
+Every prior closed result bound to the previous revision is bound to a
+mismatched coordinate (RF-005) and is invalidated for reuse until it is
+re-checked against the new revision (RF-011; ACTIVATION §7). The revision
+record lists those results as reopened; a result leaves that list only by a
+recorded re-check that finds it demonstrably independent of the change, or
+by re-evaluation on the new revision. A revision does not select which of
+the results bound to the prior revision it reopens, and silence does not
+keep a result closed. This restates what RF-005, RF-011 and the sentence
+above carry in combination (P3, P4b; rc.2 #revision-actions,
+#rf-005-exact-basis-and-coordinates, #return-a-closed-result, whose
+demonstrably independent surviving results are the re-check's one
+survival route).
 
 ## 11. The activation packet
 

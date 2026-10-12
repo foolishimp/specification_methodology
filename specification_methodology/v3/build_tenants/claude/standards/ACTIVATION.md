@@ -196,12 +196,40 @@ invalid-basis result follows the declared algebra rather than being coerced
 to success is the sentence above; both are restated here once and continue
 to govern.
 
-Where evidence is missing because a relation or capability needed to obtain
-it was not declared, the result is out_of_frame; indeterminate is reserved
-for the case where the declared capability was exercised and the admissible
-evidence still cannot decide (P5, finite capacity and graceful total
-handling; the material relation drawn is the out_of_frame boundary,
-capability declared and exercised versus capability not declared).
+The boundary between out_of_frame and indeterminate is drawn on what the
+activated frame declares and on what the step did with it (P5, finite
+capacity and graceful total handling; the material relation drawn is the
+out_of_frame boundary, capability declared and exercised versus capability
+not declared; rc.2 RF #rf-012-closed-results). Three cases, and only the
+first two are members of the algebra:
+
+- out_of_frame when the claim requires a material relation or an evaluator
+  capability that the activated frame does not declare. The result names the
+  missing relation or capability, its owner where the subject gives one, and
+  the reconfiguration pressure it creates (§4; rc.2 RF
+  #reconfigure-when-necessary). A term the claim depends on and the frame
+  leaves undefined is an undeclared material relation: its meaning can alter
+  the result and it enters through no declared input (RF-003; P1). Whether
+  the step exercised anything is irrelevant to this member; the ground is
+  the missing declaration.
+- indeterminate when every relation and capability the claim requires is
+  declared and was exercised in the step, and the admissible evidence still
+  cannot decide. The result names the evidence that would decide, as its
+  residual uncertainty (rc.2 RF #return-a-closed-result).
+- A declared capability that the step did not exercise yields no Reference
+  Frame Method result for the evaluation at all: the claim is unresolved,
+  not out of frame and not indeterminate, as a missing premise leaves a
+  question unresolved rather than false (rc.2 RF
+  #applicability-and-required-results). The step's stop state is
+  `incomplete` under the construction availability refinement below, its
+  work state (§5) carries the unexercised capability as a residual, and the
+  actor says so rather than selecting a core member (P6; an actor cannot
+  report an evaluation it did not perform). The evaluation's result and the
+  step's stop state answer different questions (§1, Output), so the mapping
+  of `incomplete` to the core does not make the evaluation indeterminate.
+
+The first two cases restate RF-012's members with the boundary made
+explicit; the third is a tightening RF-012 does not name (P5, P6).
 
 Evaluation. The evaluator applies the activated frame's declared
 invariants, evidence rules and result algebra. It distinguishes semantic
