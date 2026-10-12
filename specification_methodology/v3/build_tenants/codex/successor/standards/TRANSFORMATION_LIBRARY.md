@@ -35,7 +35,7 @@ invalid_basis with original citations and residual coverage. Where required,
 the assessor is independent of authorship. A judgment supplies no repair,
 acceptance or next-action authority.
 
-If an assessment protocol carries an assessor-disposition field, retain its
+For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
 the cone is preserved, a local realization is defective, an owning relation
 needs re-entry or a competing truth path violates the basis. This is assessment
@@ -86,8 +86,8 @@ composition obligation, not a universal category theorem for arbitrary software.
 After interruption, bind the same work identity to its observed current state.
 Reassess only materially affected premises and retain applicable work. Reconstruct
 needed authority and observations from their declared owners, not private memory.
-Uncertainty about effects, freshness or evidence remains explicit. Churn is an
-instance of rejected or superseded construction. Repeating an unchanged failed
+Uncertainty about effects, freshness or evidence remains explicit. Rejected or
+superseded construction is churn. Repeating an unchanged failed
 relation without a supported causal change is a prohibited retry practice;
 it is not the definition of all churn.
 
