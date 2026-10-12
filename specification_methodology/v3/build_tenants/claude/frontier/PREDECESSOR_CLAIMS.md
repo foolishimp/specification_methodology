@@ -416,18 +416,18 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 | Manifesto | `#manifesto` |  | 1,738 | unresolved | |
 | Spec-Drivenness Litmus | `#spec-drivenness-litmus` |  | 1,316 | unresolved | |
 | Process Constitution | `#process-constitution` |  | 2,563 | unresolved | |
-| STDO Product Definition Overlay And Layout Independence | `#stdo-product-definition-overlay-and-layout-independence` |  | 2,941 | unresolved | |
-| &nbsp;&nbsp;Required Definition Relations | `#required-definition-relations` |  | 2,033 | unresolved | |
-| &nbsp;&nbsp;Constitutional-Set Sufficiency | `#constitutional-set-sufficiency` |  | 1,964 | unresolved | |
-| &nbsp;&nbsp;Shared Installed Release Basis And Toolchain Manager | `#shared-installed-release-basis-and-toolchain-manager` |  | 6,894 | unresolved | |
-| &nbsp;&nbsp;&nbsp;&nbsp;Explicit Complete Consumer Update | `#explicit-complete-consumer-update` |  | 3,276 | unresolved | |
-| &nbsp;&nbsp;Bounded-Context Semantic Resolution | `#bounded-context-semantic-resolution` |  | 4,717 | unresolved | |
-| &nbsp;&nbsp;Local Constitutional Binding | `#local-constitutional-binding` |  | 1,508 | unresolved | |
-| &nbsp;&nbsp;Collective Reference-Frame Basis | `#collective-reference-frame-basis` |  | 4,713 | unresolved | |
-| &nbsp;&nbsp;WHAT, HOW, And Work Carriers | `#what-how-and-work-carriers` |  | 1,822 | unresolved | |
-| &nbsp;&nbsp;Recursive Discovery And Explicit Composition | `#recursive-discovery-and-explicit-composition` |  | 3,173 | unresolved | |
-| &nbsp;&nbsp;Semantic-Resolution Conformance Cases | `#semantic-resolution-conformance-cases` |  | 1,669 | unresolved | |
-| One Constitutional Surface And Version Boundary (`STDO-SURFACE-001`) | `#one-constitutional-surface-and-version-boundary-stdo-surface-001` | STDO-SURFACE-001 | 2,041 | unresolved | |
+| STDO Product Definition Overlay And Layout Independence | `#stdo-product-definition-overlay-and-layout-independence` |  | 2,941 | conserved; the product-definition-routing bounded context is owned by PRODUCT_DEFINITION rather than SPEC_METHOD; `IDENTITY_METHOD.md` carried as the IDENTITY member | `PRODUCT_DEFINITION.md#1-overlay-and-layout-independence` |
+| &nbsp;&nbsp;Required Definition Relations | `#required-definition-relations` |  | 2,033 | conserved | `PRODUCT_DEFINITION.md#2-required-definition-relations` |
+| &nbsp;&nbsp;Constitutional-Set Sufficiency | `#constitutional-set-sufficiency` |  | 1,964 | conserved; "Design Module Method Ontology" carried as the design profile's accepted design ontology of a realisation boundary | `PRODUCT_DEFINITION.md#3-constitutional-set-sufficiency` |
+| &nbsp;&nbsp;Shared Installed Release Basis And Toolchain Manager | `#shared-installed-release-basis-and-toolchain-manager` |  | 6,894 | conserved in full (basis pair, manifest binding, adoption and fleet plans, hashing rule, seven manager functions, store and registry law, physical-entry rule, selector and basis fields, six command boundaries, fail-closed list, schema-locator rule, agent bootstrap marker law, exact prune list); `RELEASE_METHOD.md` carried as the RELEASE member | `PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager` |
+| &nbsp;&nbsp;&nbsp;&nbsp;Explicit Complete Consumer Update | `#explicit-complete-consumer-update` |  | 3,276 | conserved in full | `PRODUCT_DEFINITION.md#explicit-complete-consumer-update` |
+| &nbsp;&nbsp;Bounded-Context Semantic Resolution | `#bounded-context-semantic-resolution` |  | 4,717 | conserved; the semantic-resolution bounded context is owned by PRODUCT_DEFINITION; `GLOSSARY_GUIDE.md` carried as the GLOSSARY member; relation kinds related to AC-012 without redefinition | `PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution` |
+| &nbsp;&nbsp;Local Constitutional Binding | `#local-constitutional-binding` |  | 1,508 | conserved | `PRODUCT_DEFINITION.md#6-local-constitutional-binding` |
+| &nbsp;&nbsp;Collective Reference-Frame Basis | `#collective-reference-frame-basis` |  | 4,713 | conserved; `REFERENCE_FRAME_METHOD.md` carried as REFERENCE_FRAME and `STDO_REFERENCE_FRAME_BASELINE.md` as the Executive baseline profile member; the activation packet and the step are pointed to REFERENCE_FRAME §11 and ACTIVATION §1 | `PRODUCT_DEFINITION.md#7-collective-reference-frame-basis` |
+| &nbsp;&nbsp;WHAT, HOW, And Work Carriers | `#what-how-and-work-carriers` |  | 1,822 | conserved; the build-tenancy bounded context is owned by PRODUCT_DEFINITION; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection SPEC_METHOD §4 and TICKETS | `PRODUCT_DEFINITION.md#8-what-how-and-work-carriers` |
+| &nbsp;&nbsp;Recursive Discovery And Explicit Composition | `#recursive-discovery-and-explicit-composition` |  | 3,173 | conserved | `PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition` |
+| &nbsp;&nbsp;Semantic-Resolution Conformance Cases | `#semantic-resolution-conformance-cases` |  | 1,669 | conserved; "Reference Frame Method evaluation context" carried as the reference-frame-evaluation bounded context of REFERENCE_FRAME §1 | `PRODUCT_DEFINITION.md#10-semantic-resolution-conformance-cases` |
+| One Constitutional Surface And Version Boundary (`STDO-SURFACE-001`) | `#one-constitutional-surface-and-version-boundary-stdo-surface-001` | STDO-SURFACE-001 | 2,041 | conserved; "standard" carried as "member" | `PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary` |
 | Constitutional Chain | `#constitutional-chain` |  | 4,052 | unresolved | |
 | Sprint Execution Boundary | `#sprint-execution-boundary` |  | 2,635 | unresolved | |
 | Ambiguity Governance Rule | `#ambiguity-governance-rule` |  | 3,434 | unresolved | |
@@ -462,13 +462,13 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 | &nbsp;&nbsp;Proof Target Identity And Adequacy (`STDO-UP-001`) | `#proof-target-identity-and-adequacy-stdo-up-001` | UP-001 | 594 | unresolved | |
 | &nbsp;&nbsp;Semantic, Evidence, And Projection Separation (`STDO-UP-008`) | `#semantic-evidence-and-projection-separation-stdo-up-008` | UP-008 | 727 | unresolved | |
 | &nbsp;&nbsp;Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`) | `#assurance-boundary-congruence-and-method-qualification-stdo-up-022` | UP-022 | 5,342 | unresolved | |
-| Verification Layers | `#verification-layers` |  | 1,477 | unresolved | |
-| Testing Strategy Taxonomy | `#testing-strategy-taxonomy` |  | 4,014 | unresolved | |
-| &nbsp;&nbsp;Fixture And Proof Portability Rule | `#fixture-and-proof-portability-rule` |  | 829 | unresolved | |
-| Test Authority Rule | `#test-authority-rule` |  | 470 | unresolved | |
-| Scenario Bundle Rule | `#scenario-bundle-rule` |  | 969 | unresolved | |
-| Installed Dev Proof Rule | `#installed-dev-proof-rule` |  | 619 | unresolved | |
-| Significant Path Coverage Rule | `#significant-path-coverage-rule` |  | 659 | unresolved | |
+| Verification Layers | `#verification-layers` |  | 1,477 | conserved; the profile-flavoured example (compositional graphs, Fragment types, discovery workflow) generalised to a reusable composable unit | `ASSURANCE.md#1-verification-layers` |
+| Testing Strategy Taxonomy | `#testing-strategy-taxonomy` |  | 4,014 | conserved in full (both authority sources, sandbox-only UAT, harnessed and live modes, necessary-not-sufficient rule, terminology list); the product-assurance bounded context is owned by ASSURANCE; `DESIGN_MODULE_METHOD.md` carried as the DESIGN_MODULE member and "IACS" as the carrier inventory the design declares | `ASSURANCE.md#2-testing-strategy-taxonomy` |
+| &nbsp;&nbsp;Fixture And Proof Portability Rule | `#fixture-and-proof-portability-rule` |  | 829 | conserved | `ASSURANCE.md#fixture-and-proof-portability` |
+| Test Authority Rule | `#test-authority-rule` |  | 470 | conserved | `ASSURANCE.md#3-test-authority` |
+| Scenario Bundle Rule | `#scenario-bundle-rule` |  | 969 | conserved | `ASSURANCE.md#4-scenario-bundle` |
+| Installed Dev Proof Rule | `#installed-dev-proof-rule` |  | 619 | conserved | `ASSURANCE.md#5-installed-dev-proof` |
+| Significant Path Coverage Rule | `#significant-path-coverage-rule` |  | 659 | conserved | `ASSURANCE.md#6-significant-path-coverage` |
 | Requirement Categories | `#requirement-categories` |  | 1,790 | unresolved | |
 | Reconstruction Litmus | `#reconstruction-litmus` |  | 2,684 | unresolved | |
 | Design Rule | `#design-rule` |  | 864 | unresolved | |
@@ -483,7 +483,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md`
 | Legacy Classification Rule | `#legacy-classification-rule` |  | 786 | unresolved | |
 | Requirement Classification Rules | `#requirement-classification-rules` |  | 769 | unresolved | |
 | Specification Surface Rule | `#specification-surface-rule` |  | 2,539 | unresolved | |
-| Bootstrap Rule | `#bootstrap-rule` |  | 6,674 | unresolved | |
+| Bootstrap Rule | `#bootstrap-rule` |  | 6,674 | conserved in full (scaffold bindings, authority split, singular-authority rule, folder shape, requirement sources, fourteen-step sequence); the predecessor's own mutable source path is generalised to the method's source workspace | `PRODUCT_DEFINITION.md#12-bootstrap` |
 | Method | `#method` |  | 4,613 | unresolved | |
 | ADR Conventions | `#adr-conventions` |  | 910 | unresolved | |
 | &nbsp;&nbsp;ADR Folder Convention | `#adr-folder-convention` |  | 1,692 | unresolved | |
