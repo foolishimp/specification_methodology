@@ -465,6 +465,440 @@
           "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
         }
       ]
+    },
+    {
+      "id": "eb-task-d",
+      "path": "standards/frames/eb-task-d.md",
+      "task": "Acting as Executive in the coordinated branch, revalidate the drift locks after a configuration change, evaluate a candidate_ready work result, keep severity, priority, frame result and current-boundary effect of a review finding distinct with their owners, and apply one disposition or say why none can be applied and name the next action within the grant.",
+      "bytes": 73614,
+      "sha256": "2c621f7f7dacbc976d2fe453feaaf96683fb9f4eb2404a4f6274f00675ed2d4c",
+      "scope": "The owning sections for the Executive and Reviewer frames, technical triage, the work-result values, Executive attention with its no-mutation rule and drift locks, the executive configuration, the complete engagement transition with its promotion constraints, actor binding and independence, construction availability and disposition, closed-result reuse and invalidation, independent assessment and review results with their triage projection, testing evidence composition, and the core result algebra with its conjunction.",
+      "routes": [
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "executive",
+          "section_sha256": "ce18bfb7e1f42ba87b4780b1604caac0307a0cc511be724154d9fddb47f401a8"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "reviewer",
+          "section_sha256": "cfaa7043616a6f9ebcb7bdd600f9b23f27780126801876f0c706156c3391af23"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "technical-triage-severity-priority-and-boundary-effect",
+          "section_sha256": "3ac88d770bd58d2535b6cb9bf9329cef1fe63538c2715136ef484c234e56f01b"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "work-result",
+          "section_sha256": "71d9b8fcdb0463f91cdc5936ab71fc981c9d2908de7f7d16fba4ba190b2d8147"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "6-executive-attention-evaluation-and-action",
+          "section_sha256": "86b1f23c8b3ecf700acc4473f0e8bb77f5177777f021ab88b8592d33725b07fc"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "the-executive-configuration",
+          "section_sha256": "9a31a3b99cd799992707a017c487632b90facc9ecfaf0e9e0122a2bf319c690a"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "12-complete-engagement-transition",
+          "section_sha256": "ee1d075aabc972c3d6d181ad4789dbe5cdd9c2f40087c2acf77edbd24e482230"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "17-actor-binding-and-independence",
+          "section_sha256": "60227a4900330ac66aaad66861779634a58669add4ddff2ad9259a30d2b44664"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "construction-availability",
+          "section_sha256": "f1f5b51b545c1746f1b1e7cf68946562eb6a00819882f60c978e6d1df7f05307"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "disposition",
+          "section_sha256": "a6e292ad1963a9b37868d9455f1cd1c83f0c0e989321fcc4b5653d8e1b985e5c"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "7-closed-result-and-reuse",
+          "section_sha256": "e29bece054e8972536801465d2d5c807e7ff7e5f169f1be62b202991e2c3ffe8"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "3-independent-assessment",
+          "section_sha256": "22338527fe2f81680d065006d7796af9fc868111011a550ce46c9bcf3f9f4d09"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "4-review-results",
+          "section_sha256": "c42a455c66c14eb3e6c1a26729a0fafe279ba1de82be93d92d289f19902a5883"
+        },
+        {
+          "owner": "standards/ASSURANCE.md",
+          "owner_sha256": "c2a5e1de9fb09eb2050d0c58a0b9f78f4990147370afdfe3a17e61fafe3773cf",
+          "anchor": "10-testing-evidence-composition",
+          "section_sha256": "a423a4fc66ba8191ed9d4d2d2f674a9ac0f0928dbe2facf2bf8babfed00a4e1f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "results",
+          "section_sha256": "1e656fc0d5468d1c19f159a9179c317a1af1bae3911be413f0af6fd315176e0f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "conjunction-of-results",
+          "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
+    },
+    {
+      "id": "dm-task-d",
+      "path": "standards/frames/dm-task-d.md",
+      "task": "For a refactor inside an accepted boundary and a new boundary, decide decision completeness, the sequencing mode and the affected set of the design gate, what the Ontology and three-view gate requires and lacks, whether each change may be promoted and what standing retained code has, whether the substrate selection is acceptable, and whether the Prime evidence establishes a globally Prime family and conserves root authority.",
+      "bytes": 87988,
+      "sha256": "9992d8d6897e37db7643119351d26ab3304ae962e6f32d453fdd5c5627ae8141",
+      "scope": "The owning sections for ontology-first design, proportional design sequencing and decision completeness, native constructability, the authority model, Prime atoms with whole-family and recursive contraction and root conservation, the Ontology and three-view design gate with its axiom verdicts and the design verdict as a disposition, the change classes, and the core result algebra with its conjunction.",
+      "routes": [
+        {
+          "owner": "standards/DESIGN_MODULE.md",
+          "owner_sha256": "9e65842c53e53def620f74f361495ad2c482e5de47237694f54f5c7c15d876a5",
+          "anchor": "5-ontology-first-design",
+          "section_sha256": "05e3a50ba030b2b9f3fee4a0c16acf177439475ab10f29b3623dcc3ad28205e8"
+        },
+        {
+          "owner": "standards/DESIGN_MODULE.md",
+          "owner_sha256": "9e65842c53e53def620f74f361495ad2c482e5de47237694f54f5c7c15d876a5",
+          "anchor": "7-ontology-and-three-view-design-gate",
+          "section_sha256": "4265a00f62bd95a106c08d0191e05ad57563adf65875356235a7843f3029f80d"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "disposition",
+          "section_sha256": "a6e292ad1963a9b37868d9455f1cd1c83f0c0e989321fcc4b5653d8e1b985e5c"
+        },
+        {
+          "owner": "standards/SPEC_METHOD.md",
+          "owner_sha256": "929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15",
+          "anchor": "change-classes",
+          "section_sha256": "2875fb58f75690d54ecadc116230baac91ec0e2edc950d265f0d38afe079534b"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "results",
+          "section_sha256": "1e656fc0d5468d1c19f159a9179c317a1af1bae3911be413f0af6fd315176e0f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "conjunction-of-results",
+          "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "path": "standards/frames/configuration.md",
+      "task": "Propose and justify a configuration for remaining multi-part work across actors with stated capabilities and context capacities, with each activation, its inputs and bytes, its result and where it goes, the dependency order, what each exchange carries and who holds each effect authority; judge a familiar proposal and its optimality claim; and evaluate one stated check with its result value and what was not performed.",
+      "bytes": 79486,
+      "sha256": "c4132b8efc69232ec5415fb4b7470a3dd53d07acc84ffc99b8db84a0aa50ef8a",
+      "scope": "The owning sections for transitions, intake, configuration with its optimality rule, roles and delegation, context construction with the size measurement, fit test and acquisition, the activation packet, closed results and reuse, construction availability and effects as the step result mappings, finite attention, capability fit and no assumed hierarchy, authority kinds and the kinds of independence, independent assessment and adequate attention, the executive configuration as one example, and the core result algebra with its conjunction.",
+      "routes": [
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "transitions",
+          "section_sha256": "f9ece0e058aa228baac4d8329008b966fa8c82ca90f92a91586dccd1896baf6b"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "intake",
+          "section_sha256": "4fdd2e3af24ae45e90063793b9c39bf720e0f70ae88367cf48dd324726c6645d"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "configuration",
+          "section_sha256": "21c9f8a99164378e56d5fd7f10a30d1b7f633fdc15f8239347fcc747504baeb8"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "roles-and-delegation",
+          "section_sha256": "68fa8b53a5429b95705fd132b8cbdf16c30b59044fef01519cbb636f55dba2db"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "2-context-construction-under-an-envelope",
+          "section_sha256": "0ca91f47fcbdaff31a1d36dfc1cde9d2c5cd7b5535cc2ebfb0822923cacd89d2"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "7-closed-result-and-reuse",
+          "section_sha256": "e29bece054e8972536801465d2d5c807e7ff7e5f169f1be62b202991e2c3ffe8"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "construction-availability",
+          "section_sha256": "f1f5b51b545c1746f1b1e7cf68946562eb6a00819882f60c978e6d1df7f05307"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "effects",
+          "section_sha256": "3df5a0502174fa005a1c52e0398cda00332394b0affe100b7abe13691e7fd913"
+        },
+        {
+          "owner": "standards/REFERENCE_FRAME.md",
+          "owner_sha256": "92464e86126e807e8e225a08c8d42ce929f11b823dfb07e204b34ff1b3ae57bc",
+          "anchor": "rf-002-finite-attention",
+          "section_sha256": "3e31bf856a42ae0a5fbc7ad618594fe0caae3a1025eb9734a9f410e6232c2449"
+        },
+        {
+          "owner": "standards/REFERENCE_FRAME.md",
+          "owner_sha256": "92464e86126e807e8e225a08c8d42ce929f11b823dfb07e204b34ff1b3ae57bc",
+          "anchor": "rf-009-no-assumed-hierarchy",
+          "section_sha256": "bd1ad9baeda317fa22f4b0aa5d0503e1ce71dbc3aa159a30f2507a4275d8c140"
+        },
+        {
+          "owner": "standards/REFERENCE_FRAME.md",
+          "owner_sha256": "92464e86126e807e8e225a08c8d42ce929f11b823dfb07e204b34ff1b3ae57bc",
+          "anchor": "rf-012-closed-results",
+          "section_sha256": "06df5c6c55c6d05b5600e5c342d3159650dee5aef284835da6b880d6db536684"
+        },
+        {
+          "owner": "standards/REFERENCE_FRAME.md",
+          "owner_sha256": "92464e86126e807e8e225a08c8d42ce929f11b823dfb07e204b34ff1b3ae57bc",
+          "anchor": "rf-014-capability-fit",
+          "section_sha256": "9b77c72738ec4d982904d86d3249912d806f277c97572ef1e4c3ec8d43f4ec1a"
+        },
+        {
+          "owner": "standards/REFERENCE_FRAME.md",
+          "owner_sha256": "92464e86126e807e8e225a08c8d42ce929f11b823dfb07e204b34ff1b3ae57bc",
+          "anchor": "11-the-activation-packet",
+          "section_sha256": "c78a5a30d36d8996bbd363b74b1ac562059f9897862337a5a8088742c95e1f1c"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "3-independent-assessment",
+          "section_sha256": "22338527fe2f81680d065006d7796af9fc868111011a550ce46c9bcf3f9f4d09"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "frame-qualification",
+          "section_sha256": "ec97b0ac31faadfe5260ffe2d4fc16f47276879cf813c3af702967465472811c"
+        },
+        {
+          "owner": "standards/EXECUTIVE_BASELINE.md",
+          "owner_sha256": "9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784",
+          "anchor": "the-executive-configuration",
+          "section_sha256": "9a31a3b99cd799992707a017c487632b90facc9ecfaf0e9e0122a2bf319c690a"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "authority-kinds",
+          "section_sha256": "4fa31aab2c47047d260bb996ec6d8d6c5b19607cff53c227f5571253940796a1"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "disjointness-and-independence",
+          "section_sha256": "b38f72ed8a33a8b01d21dd5ff94c809842bd16e327374df7138b444c6fbc9e5f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "results",
+          "section_sha256": "1e656fc0d5468d1c19f159a9179c317a1af1bae3911be413f0af6fd315176e0f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "conjunction-of-results",
+          "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
+    },
+    {
+      "id": "binding",
+      "path": "standards/frames/binding.md",
+      "task": "State the build-tenant binding of a software tenant and a human-process tenant of one requirement set, keep author, actor and operation kind distinct, say what a zero-diagnostic structural check of a process model establishes, and give the result value of a conformance predicate for a faster plan that merges independent assessments and automates a required human decision.",
+      "bytes": 68322,
+      "sha256": "3486a1c1e6d2ee41c31d4cbca32655cb30969e8308d46318f3d6cc0c5bdb719d",
+      "scope": "The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.",
+      "routes": [
+        {
+          "owner": "standards/SPEC_METHOD.md",
+          "owner_sha256": "929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15",
+          "anchor": "11-build-tenant-binding",
+          "section_sha256": "8f65f4671e145ebc02f12affb6c032fcbbf382b62f33f1d02e5b0f78dcbe8c2d"
+        },
+        {
+          "owner": "standards/SPEC_METHOD.md",
+          "owner_sha256": "929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15",
+          "anchor": "5-ambiguity-governance-and-lifecycle",
+          "section_sha256": "18249de4fa2fdb043c7c93067da25be5f571fa8c326230aeaaa9f0fe3902271f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "2-ontology",
+          "section_sha256": "62bac5c62913bbe78b39327b43e3b41baf3eddbf6c323d02bcbad2041f1a858e"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "2-separation",
+          "section_sha256": "ee782967d72c2d9916809e84fb32945778f779ab13687687374b25aa09919cba"
+        },
+        {
+          "owner": "standards/EVALUATION.md",
+          "owner_sha256": "feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710",
+          "anchor": "3-independent-assessment",
+          "section_sha256": "22338527fe2f81680d065006d7796af9fc868111011a550ce46c9bcf3f9f4d09"
+        },
+        {
+          "owner": "standards/AXIOMATIC_CALCULUS.md",
+          "owner_sha256": "20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e",
+          "anchor": "ac-018-structural-and-semantic-separation",
+          "section_sha256": "3343c52e6e3834dafcf76ccc9bd1d47fbd75136bf6f8e4b4069f797b349246ae"
+        },
+        {
+          "owner": "standards/AXIOMATIC_CALCULUS.md",
+          "owner_sha256": "20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e",
+          "anchor": "ac-019-valid-model",
+          "section_sha256": "7aaaafe552ccee7f4235ef6844158d298b3e1dab820596d51a7e54453f51c5b1"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "effects",
+          "section_sha256": "3df5a0502174fa005a1c52e0398cda00332394b0affe100b7abe13691e7fd913"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "results",
+          "section_sha256": "1e656fc0d5468d1c19f159a9179c317a1af1bae3911be413f0af6fd315176e0f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "conjunction-of-results",
+          "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
+    },
+    {
+      "id": "stale-summary",
+      "path": "standards/frames/stale-summary.md",
+      "task": "Resume interrupted work as a new session from a retained summary that disagrees with the current workspace: keep or correct each summary line, give results for migration, review, batch completion and hand-off predicates, say which retained work survives a changed dependency, and give the next action within the grant and what waits.",
+      "bytes": 67239,
+      "sha256": "781891f13c4e127bcf5689af24528c07ee439518accfc8763ae96e8e653d650b",
+      "scope": "The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.",
+      "routes": [
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "transitions",
+          "section_sha256": "f9ece0e058aa228baac4d8329008b966fa8c82ca90f92a91586dccd1896baf6b"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "2-context-construction-under-an-envelope",
+          "section_sha256": "0ca91f47fcbdaff31a1d36dfc1cde9d2c5cd7b5535cc2ebfb0822923cacd89d2"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "construction-availability",
+          "section_sha256": "f1f5b51b545c1746f1b1e7cf68946562eb6a00819882f60c978e6d1df7f05307"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "effects",
+          "section_sha256": "3df5a0502174fa005a1c52e0398cda00332394b0affe100b7abe13691e7fd913"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "5-work-state-and-restart",
+          "section_sha256": "28ee5a5d16b56349a1c5061199b08579b67d5506e937527dc13eb91dd19c418b"
+        },
+        {
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84",
+          "anchor": "7-closed-result-and-reuse",
+          "section_sha256": "e29bece054e8972536801465d2d5c807e7ff7e5f169f1be62b202991e2c3ffe8"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "45ebcc7e05b2c26bb515f6e3d1c3aa32b5d5a6b26848dba131b8521534745f43",
+          "anchor": "execution-and-verification-authority-separation-up-007",
+          "section_sha256": "1ab12c3f616897d3d6da337612f714f9ceef4087de906edcc8e5084782c1f619"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "45ebcc7e05b2c26bb515f6e3d1c3aa32b5d5a6b26848dba131b8521534745f43",
+          "anchor": "recorded-judgment-and-owner-ruling-continuity",
+          "section_sha256": "a1710b42b9675bbb7d7d8b420f6968575e6ebaceb3a48c9bf6e65862bd870840"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "45ebcc7e05b2c26bb515f6e3d1c3aa32b5d5a6b26848dba131b8521534745f43",
+          "anchor": "condition-based-closure-and-reuse",
+          "section_sha256": "30f6cd2ad06a1cd06e25ba744f156d0d29a89f4b9cc8e07b9c8c00a6f9cf750d"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "45ebcc7e05b2c26bb515f6e3d1c3aa32b5d5a6b26848dba131b8521534745f43",
+          "anchor": "one-truth-state-projection-and-drift-refusal-up-009",
+          "section_sha256": "1ad8727820cf2c6b99b61974445092c18a1399c3224b3c453c1de8bd877c9a71"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "results",
+          "section_sha256": "1e656fc0d5468d1c19f159a9179c317a1af1bae3911be413f0af6fd315176e0f"
+        },
+        {
+          "owner": "standards/FOUNDATIONS.md",
+          "owner_sha256": "0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815",
+          "anchor": "conjunction-of-results",
+          "section_sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
     }
   ]
 }
