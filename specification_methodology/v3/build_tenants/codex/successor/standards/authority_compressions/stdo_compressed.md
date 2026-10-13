@@ -27,8 +27,8 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983
-  TRANSFORMATION_LIBRARY.md: 1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6
+  FOUNDATIONS.md: 12d3dfbb4fcea4da6c7e4b0054c24be6d73f14b19b297f00dd14efa8fe9b196a
+  TRANSFORMATION_LIBRARY.md: 6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de
   AXIOMATIC_CALCULUS.md: e233e1e25974f21d28f2c7d9cb54eec10b41d52419e5d63a912d8970938da917
   TRAVERSAL_OCCURRENCE_PROFILE.md: ee8371a08bb3ab27e9e105eb69b686e00f7f48e5c337f9a51068cc793775be8b
   REFERENCE_FRAME_METHOD.md: 951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6
@@ -46,8 +46,6 @@ source_digests:
   POSTING_GUIDE.md: 1bfc2740e3920084fccf479e970dd958ee7fff75d889f453e53010dc72fa567c
 index_digests:
   GLOSSARY_GUIDE.md: 042a85cf3b0ffcfb2623f9d69010fe0432fb23382e71db1656cd24072ec6001b
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---

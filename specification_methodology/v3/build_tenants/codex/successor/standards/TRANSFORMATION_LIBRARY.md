@@ -84,7 +84,8 @@ non-performance and uncertain effects retain their separate coordinates.
   evidence for P cannot supply G.
 
 An instance of Acquire returns support adequate for its selected predicate, or
-an indeterminate result with the unresolved support; Transform preserves the material
+the applicable core result on that exact acquisition predicate, retaining its
+scope, basis or insufficient-support cause; Transform preserves the material
 relations of the selected X-to-Y contract; Evaluate judges P rather than granting
 effects; Conjoin uses the selected composite rule; Dispose chooses only from
 already permitted actions. Bind supplies their current instance coordinates.
@@ -151,10 +152,9 @@ Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
 summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. If required material does not fit,
-act on an already authorised refinement or reassignment, request the owning
-decision, or return the applicable core
-result with the unresolved relation. Capacity does not license omission.
+it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](FOUNDATIONS.md#finite-capacity-and-total-handling);
+the selected grant determines available refinement, reassignment or escalation.
+Capacity does not license omission.
 
 ## Transform
 

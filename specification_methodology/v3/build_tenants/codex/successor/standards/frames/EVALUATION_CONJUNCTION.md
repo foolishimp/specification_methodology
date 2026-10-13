@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `12d3dfbb4fcea4da6c7e4b0054c24be6d73f14b19b297f00dd14efa8fe9b196a`.
 
 ## Result algebra
 
@@ -30,41 +30,55 @@ The verdict has exactly these values:
 | `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
 | `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
 
-Performance concerns the named predicate and is `performed`, `not_performed`
-or `unconfirmed`. The legal pairs are:
+Performance records whether the named predicate's declared evaluation procedure
+reached its conclusion; it is `performed`, `not_performed` or `unconfirmed`.
+The activation binds that procedure and its conclusion boundary before use. The legal pairs are:
 
 | Performance | Permitted verdicts | Meaning |
 |---|---|---|
-| `performed` | Any of the five verdicts | The named evaluation ran; scope or basis diagnosis can prevent a judgment of the subject property. |
-| `not_performed` | `indeterminate` only | Evidence establishes that the named evaluation did not run. |
-| `unconfirmed` | `indeterminate` only | Whether the named evaluation ran is not established. |
+| `performed` | Any of the five verdicts | The procedure concluded, including a scoped basis or capability diagnosis. |
+| `not_performed` | `indeterminate` only | Evidence establishes no conclusion: it never started or aborted; retain which occurred. |
+| `unconfirmed` | `indeterminate` only | Whether the procedure concluded is not established. |
 
 A missing required judgment stays an absent coverage slot, with the known
 performance fact or its uncertainty; it is not a fabricated child result. A
 performed but undecidable evaluation differs from a known unperformed one and
-from unconfirmed execution. A failed admission check can be performed while
-downstream work is not performed. Every result projection preserves these
+from unconfirmed execution. A failed admission check can conclude while
+downstream work does not. The plan fixes which predicates are required; a
+precondition is evidence for its dependent evaluation unless the plan separately
+requires that precondition as a predicate. A concluding basis/scope diagnosis
+on P reports invalid_basis/out_of_frame on P with its supporting evidence; a
+different admission predicate is not silently substituted for P. An aborted
+procedure does not erase separately authenticated counterexamples observed
+during the attempt. Every result projection preserves these
 coordinates and the original predicate; a verdict alone is an insufficient
 handoff where performance is material.
 
-An effect observation is `not_requested`, `not_started`, `completed`, `partial`
-or `unknown`. These values describe the selected effect and observation
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`,
+`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation
 boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
 an authenticated rejection before mutation. Transport dispatch alone proves
 neither effect completion nor absence; `unknown` includes a lost acknowledgment
 after possible execution.
-`partial` means an observed completed part and an observed unexecuted remainder.
+`reverted` means that every begun part is observed to have been reversed within
+the declared boundary, with the reversal and any unstarted remainder retained
+as evidence. Irreversible messages or other material external effects must not
+be excluded from that boundary to claim reversal. `partial` means an observed
+completed part and an observed unexecuted or reverted remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
 An empty local log or discarded context does not establish no effect. When no
 effect is part of the operation, `not_requested` states that scope.
 
-A domain refinement preserves its qualified original outcome and supplies a
+A refined value is the pair of original domain outcome and cause in its
+declared reason domain, including an explicit missing-reason case. A domain
+refinement preserves that qualified original outcome and supplies a
 total, reason-sensitive map into this record. If the original outcome is too
 coarse to determine a verdict, its required reason distinguishes the cases; a
 consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
-A missing required reason makes that contribution inadmissible for its slot;
+A missing required reason maps the claimed predicate to indeterminate and
+leaves that contribution inadmissible as deciding support for its slot;
 retain its raw outcome and unresolved authentication. Its claimed predicate
 remains indeterminate until admissible evidence decides it. An independently
 established invalid basis instead yields invalid_basis for that diagnosis.
@@ -91,7 +105,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `12d3dfbb4fcea4da6c7e4b0054c24be6d73f14b19b297f00dd14efa8fe9b196a`.
 
 ## Result conjunction
 
@@ -107,7 +121,8 @@ applied; this does not change component performance. Aggregate effect state is
 computed over the declared composite effect scope: any unknown gives unknown;
 all not_requested gives not_requested; completed with only completed or
 not_requested gives completed; not_started with only not_started or
-not_requested gives not_started; every remaining fully observed mixture gives
+not_requested gives not_started; reverted with only reverted, not_started or
+not_requested gives reverted; every remaining fully observed mixture gives
 partial. Retain which component each observation concerns. The combining
 operation's own lack of mutation cannot label an effectful composite not_requested.
 
@@ -121,14 +136,14 @@ authenticated finding.
 
 For an interpretable composite predicate and governing basis:
 
-1. Any authenticated, applicable falsification of a required predicate makes
+1. Any authenticated, applicable falsification of a required predicate or material join makes
    the conjunction `falsified`. Missing or undecidable other coverage remains
    explicit alongside it.
 2. With no such falsification, an invalid required basis prevents satisfaction
    and yields `invalid_basis`; a required out-of-frame judgment yields
    `out_of_frame` when no invalid basis applies.
 3. Otherwise any unresolved applicability, missing evaluation, undecidable
-   predicate or unproved material join yields `indeterminate`.
+   predicate or undecided material join yields `indeterminate`.
 4. `satisfied` requires every applicable obligation and material join to be
    authentically satisfied, with coverage itself established. An empty list
    proves nothing unless the declared required set is established as empty.
@@ -140,10 +155,19 @@ Effect uncertainty prevents satisfaction where the predicate requires a known
 effect state. An unrelated effect does not automatically invalidate a different
 predicate; the dependency relation must justify its relevance.
 
-A declared disjunction, selection or other logical operator evaluates its own
-predicate in the same result algebra; it cannot relabel that predicate as
-conjunction. Sequential composition records a downstream evaluation as
-`not_performed` when it did not run. A lawful regrouping requires the same interpretable composite basis, required
+A declared operator states its truth and falsity conditions over exact leaf
+predicates and joins. Its result can be satisfied only when authenticated
+evidence establishes its truth condition and the material joins and coverage
+needed for that condition. It can be falsified only on an established falsity
+condition. Otherwise the invalid_basis, out_of_frame, indeterminate order
+applies to dependencies that could decide it. Authentication, original failure
+retention, performance and effect composition remain the rules above. Negation
+or disjunction evaluates a different predicate; it cannot erase a failed leaf
+or pass that result off as conjunction of all leaves. A first-nonfailure rule
+cannot turn an undecided fallback into success.
+
+Sequential composition records an unreturned dependent evaluation as an absent
+slot, with known non-conclusion or unconfirmed conclusion as observed. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union and the above verdict/effect operations are associative. An invalid
@@ -152,8 +176,11 @@ arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
 supplies no such permission.
 
-Sequential operations compose only under the library's typed composition
-contract. Their returned result evaluates the declared outer predicate using
+Sequential operations compose under their applicable owning contracts:
+[UP-016/017](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+for design composition and [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+within a_c. Their returned result applies the operator rule above to the
+declared outer predicate using
 its preservation argument and the retained component results. For a pipeline
 whose contract requires every stage postcondition, this is the conjunction
 above; a recovery path need not require a failed earlier test to become true.
@@ -438,7 +465,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de`.
 
 ## Bind
 
@@ -447,7 +474,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de`.
 
 ## Acquire
 
@@ -455,13 +482,12 @@ Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
 summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. If required material does not fit,
-act on an already authorised refinement or reassignment, request the owning
-decision, or return the applicable core
-result with the unresolved relation. Capacity does not license omission.
+it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
+the selected grant determines available refinement, reassignment or escalation.
+Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de`.
 
 ## Evaluate
 
@@ -481,7 +507,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de`.
 
 ## Conjoin
 

@@ -10,8 +10,8 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983
-  TRANSFORMATION_LIBRARY.md: 1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6
+  FOUNDATIONS.md: 12d3dfbb4fcea4da6c7e4b0054c24be6d73f14b19b297f00dd14efa8fe9b196a
+  TRANSFORMATION_LIBRARY.md: 6abf317ef235b08778e3ff5edc2477effab8fd05f328b91f14fcfb4953a0c3de
   SPEC_METHOD.md: 1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa
   REFERENCE_FRAME_METHOD.md: 951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6
   STDO_REFERENCE_FRAME_BASELINE.md: 269704685039f4f4f26516e5529e8545ac1a11847a445ee80f1fc929c17689f9
@@ -20,8 +20,6 @@ source_digests:
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
   - bootstrap
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 
