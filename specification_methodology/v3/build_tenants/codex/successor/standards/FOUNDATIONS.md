@@ -430,10 +430,11 @@ effect boundary and the selected effect parts within it. First resolve a current
 observation for each part, retaining the contributing observations, identities,
 ordering and any supported supersession. A later timestamp alone is no
 supersession argument. Conflicting or insufficient observations leave the part
-unknown. Every material part that may have been affected, including an
-unrequested part or one owned by an absent evaluation slot, is unknown without
-sufficient observation unless evidence establishes not_started. Only an
-established effect-free scope gives not_requested; no request is not that proof.
+unknown. Normalize every material possibly affected part, including one owned
+by an absent evaluation slot, through the effect-observation rule in
+[Result algebra](#result-algebra). That rule distinguishes a requested part
+that did not start from an unrequested possible part observed not to begin.
+The composite supplies no different classification for either case.
 
 Sequential stages can affect the same part. Their local completion labels are
 not inputs to the composite join until mapped onto that part's observed state

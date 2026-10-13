@@ -20,7 +20,7 @@ its roles or outcomes. An absent basis remains unresolved; this view supplies
 none. The source owners and original work/attempt coordinates remain material
 where the selected recovery contract requires them.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
 
 ## Result algebra
 
@@ -145,7 +145,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
 
 ## Result conjunction
 
@@ -162,10 +162,11 @@ effect boundary and the selected effect parts within it. First resolve a current
 observation for each part, retaining the contributing observations, identities,
 ordering and any supported supersession. A later timestamp alone is no
 supersession argument. Conflicting or insufficient observations leave the part
-unknown. Every material part that may have been affected, including an
-unrequested part or one owned by an absent evaluation slot, is unknown without
-sufficient observation unless evidence establishes not_started. Only an
-established effect-free scope gives not_requested; no request is not that proof.
+unknown. Normalize every material possibly affected part, including one owned
+by an absent evaluation slot, through the effect-observation rule in
+[Result algebra](../FOUNDATIONS.md#result-algebra). That rule distinguishes a requested part
+that did not start from an unrequested possible part observed not to begin.
+The composite supplies no different classification for either case.
 
 Sequential stages can affect the same part. Their local completion labels are
 not inputs to the composite join until mapped onto that part's observed state
@@ -261,7 +262,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
 
 ## Workspace and context
 
@@ -316,7 +317,7 @@ reconstruction; it is not universally the work state or a compulsory recovery
 algorithm.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
 
 ## Bounded construction
 

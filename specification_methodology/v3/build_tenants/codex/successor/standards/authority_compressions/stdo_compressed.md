@@ -27,7 +27,7 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b
+  FOUNDATIONS.md: e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b
   TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
   AXIOMATIC_CALCULUS.md: 8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09
   TRAVERSAL_OCCURRENCE_PROFILE.md: afd43348a3a9d10bbd1e0452b0efcfb2f93aa19fc6257a046673679096f2308d
@@ -918,8 +918,7 @@ layer that owns the missing truth.
   relation, lifecycle, authority, capability, adjacency, and seam is preserved;
   otherwise the activation requires topology recharting.
 - Foundations owns the five core verdicts and their complete result record.
-  A frame preserves its exact predicate, domain outcome and cause, evaluation
-  performance and extent, effects, evidence and unresolved obligations.
+  Frames apply its legal pairs and predicate-bound domain-refinement rule.
   Missing context, evidence, authority or capability cannot become satisfaction.
 - Coverage is relative to an exact workspace, governed outcome, basis, known
   evaluation inventory, frame set, and time. It covers material interactions,
@@ -1027,7 +1026,8 @@ layer that owns the missing truth.
   Product role, authority, coverage, or return topology refuses, invalidates,
   or re-enters rather than enlarging the Executive frame.
 - For work requiring coordinated engagement, Executive attempts Worker activation; an
-  activation refusal returns directly to Executive and creates no Worker result;
+  activation refusal returns to the assigning authority or declared result
+  carrier and creates no Worker result;
   after lawful activation, the Baseline's Work result binds each original
   outcome and cause to the exact bounded-availability predicate under the core
   rule. A verdict alone cannot recover the finer outcome; availability does not
