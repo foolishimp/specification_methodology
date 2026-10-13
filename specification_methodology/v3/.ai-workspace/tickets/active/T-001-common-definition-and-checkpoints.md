@@ -4,19 +4,49 @@ title: Common definition and principles-first checkpoints
 type: spike
 ticket_category: ordinary
 status: active
-goal: GOAL-001
-change_intent: establish the STDO 3 common contract and principles-first construction
-change_class: product_reprice
-re_entry_point: specification_methodology/v3/specification/PRODUCT.md
-triaged_at: 2026-10-11T04:13:29Z
+goal: GOAL-002
+change_intent: derive work configurations from task dependencies and actor limits rather than a fixed role set
+change_class: requirement_reprice
+re_entry_point: specification_methodology/v3/specification/INTENT.md
+triaged_at: 2026-10-13T17:24:05Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-11T05:55:55Z
+updated_at: 2026-10-13T17:30:35Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+Jim assigns the common construction pen to Codex and authorises repair of the revised specification:
+
+> im handing the pen back to you fix the v3 revised specification
+
+The preceding repair follows the [review of the revision at 698485d](../../comments/codex/20261013T141923Z_REVIEW_V3_SPECIFICATION_INTENT_AND_SEMANTICS.md) and is checkpointed at `e38d45a`, with its review record at `8828aea`. Jim then clarified the build-tenant boundary and instructed the common pen to update it:
+
+> build_tenant is exactly the purpose of bounding the requirements ( aka requirements calculus ) to the computation calculus
+
+> computation calculus is bound to a real world tech stack so the requirements can be realised in what ever stack you are looking at a human process etc.
+
+> update
+
+Jim then supplied the conversation he had intended for the common pen while reading Product. His direction is:
+
+> worker, executive, revierwer emerge out of reference frames - which is the need to do context management
+
+> because we have have 2 finite resources, context and attention - and some others like token cost, but those two are the key drivers to create ref frames to manage context
+
+> if i wanted to go back to first principles, if i wanted to go from A -> Z, because of finite compute resources, i need to go from A -> B -> C etc. and our entire methodology is about defining A, defining Z and managing the series of transitions to Z
+
+Jim clarifies that the named roles are possible configurations, not the foundational inventory:
+
+> i was providing deeper foundational insight, that executive, worker, reviewer are emergent, but not the only possible configration, and to bake them directly into product, needs to go back to why they emerge, human hierachical structures are evolved over hundreds of years for unreliable biologial units that can also be modelled as limited context and attention
+
+> correct biological systems modelled in a particular way can self organise into many optimal structures
+
+> give our task based focus, an executive with long term goals to manage the long term delivery, by having a limited set of data points from the worker
+
+Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
 
 Jim selected Codex as the common construction pen, asked it to read and evaluate Claude's revised proposal carrying Jim's principles-first checkpoint feedback, then create the structure and documents enabling independent tenants. His instruction was:
 
@@ -26,11 +56,15 @@ This record preserves that actual setup and independent C1 preparation/attempt a
 
 ## Selected Contract
 
-Target truth: one separate stdo_3 root, installed STDO 2.5.1 RC2 builder basis, useful working common WHAT and independent Codex/Claude entry contracts.
+Target truth: a clear, consistent common specification for the next major release of Specification Methodology, in `specification_methodology/v3/`, under the installed STDO 2.5.1 RC2 builder basis. The selected two tenant lines, single result algebra, standalone successor and foundational relationships remain the construction contract.
 
-Superseded truth: no legacy method law or released bytes. Earlier planning placement suggestions are inputs, not authority over this new root.
+Preimage: main at `a3262492549aa55180b34fbbb10d7ef97aeb056b`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-Common pen: Claude from 2026-10-12 (Codex reviews); Codex penned setup and C1. Checkpoint c91cc10b386539b301cd1a9717ec535afee50c23 preserves the corrected setup. The present administrative Writer activates the existing Codex ticket and routes its state; the following tenant Writer owns only its C1 candidate and ticket return. Executive coordinates without FS/Git mutation. Preserve existing 2.*, input posts, Axiom/Representation, stack_release.json and unrelated work.
+Triage: `requirement_reprice`, correcting the earlier update's prominence of three named roles. Re-entry begins at Intent and follows Product, the bounded-frame requirement, frame basis, conformance and current status. Task dependencies, limited context and attention, actor fallibility and assurance needs motivate arrangements of responsibilities and information exchange. These admit multiple configurations and adaptation within their contracts. The local Executive has a particular derivation: long-term delivery decisions use sufficient bounded worker results while workers focus on tasks. This source project's installed construction configuration stays selected. Build-tenant binding, all principle bodies, historical C1 acceptance, authority, independence and the steel-thread contract remain unchanged. The biological analogy supplies no asserted theorem or historical conclusion.
+
+Common pen: Codex. This activation is the common Writer, with effects limited to `specification/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md`, this ticket and `.ai-workspace/comments/codex/` under the v3 source root. Local checkpoint commits on main provide review visibility under Jim's recorded instruction below to commit this specification revision on main. This grant excludes tenant implementation changes, tenant activation, publication and checkpoint acceptance. Executive coordination carries no file or Git write authority.
+
+Exit evidence: the common WHAT permits different work configurations and explains how they arise; the local construction binding explains the Executive's long-term focus and sufficient bounded results; no fixed role inventory, hierarchy, new universal report or optimisation campaign is introduced. Discriminators cover alternative configurations, adaptive allocation and unsupported optimality. Existing conformance, grants, tenant, release and unrelated work are preserved. Affected links, current definition verification and independent frozen source review complete the bounded return. Jim's sign-off and the next tenant input snapshot remain later decisions.
 
 ## Milestones And Closure
 
@@ -49,15 +83,15 @@ Proof surface: exact Product Definition, common documents, installed basis verif
 
 Non-closure: unresolved common principles, unselected capabilities, missing independent tenant review, unknown material derivations or changed common semantics without Jim's decision. Each tenant's lifecycle remains at its own suffixed ticket.
 
-## Ready Independent Tasks
+## Historical Independent C1 Tasks
 
-[Codex](T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) were selected for separately declared C1 Writer activation; each wrote only its own design/PRINCIPLES.md and ticket state. The reciprocal C1 cross-reviews that followed were executed under the then-current grants and are historical. From 2026-10-11 all tenant work and reviews follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation): tenant branch and sparse worktree, own territory only, reviews authorised by Jim one at a time, read at a named commit and written in the reviewer's own tenant; no candidate repair or self-review is permitted. Tenant returns live in the tenant and are mirrored to these tickets by the common pen.
+[Codex](T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) were selected for separately declared C1 Writer activation; each wrote only its own design/PRINCIPLES.md and ticket state. The reciprocal C1 cross-reviews and their tenant destinations were the grants in force then. Current work and review placement follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation).
 
-Codex's initial author activation is selected against C1-inputs-20261011-02; current author state belongs to T-001-CODEX. Consult the peer's owning ticket for its state. The C0 precondition is satisfied, and the prior -01 tuple remains retired. Neither task depends on full T-001 completion. Authoring accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
+Codex's initial author activation used C1-inputs-20261011-02; its record belongs to T-001-CODEX. Initial peer realisations were unread until frozen returns. These grants start no current work. The current C3 carrier is [T-002](T-002-c3-successor-construction.md).
 
 ## Common C1 Input Snapshot
 
-Snapshot ID: C1-inputs-20261011-03. Sole current tuple for activations after 2026-10-11T09:25:23Z; -02 is retired below and remains the historical input contract of both C1 initial attempts, their successors and their reviews.
+Snapshot ID: C1-inputs-20261011-03. Historical final C1 tuple, selected on 2026-10-11T09:25:23Z; it does not bind C3. -02 is retained below as the historical input contract of both C1 initial attempts, their successors and their reviews. The next C3 snapshot is recorded in T-002 after common sign-off.
 
 Input commit: `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1` on `main`. Every member hash below is read from that commit's tree (`git show 80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1:<path>`), per [Development Isolation](../../../specification/PRODUCT.md#development-isolation). This record is written in a descendant commit and is excluded from its own tuple.
 
@@ -189,3 +223,188 @@ Executive independently confirmed all ten basis-relative targets, the local rela
 2026-10-12T00:54:17Z — Codex reviewed `83b6f67` (layout) and `e8a2409` (contract): mechanics sound, changes required in worker-facing instructions. Jim assigned the common pen to Claude with Codex reviewing. On `common/c3-contract`, now containing the layout merge `52120e5`: Development Isolation cones, the Inputs path, the identity table's predecessor path and INTENT's construction directory corrected to the `specification_methodology/v2`/`v3` layout; the pen declaration updated in PRODUCT Construction Authority, the frame basis (common definition and C3 ledger Writer rows), this ticket's Selected Contract and re-entry point, and the v3 CLAUDE.md/AGENTS.md; the apps-level AGENTS.md aligned with its CLAUDE.md to the post-merge layout. Snapshot tables and earlier entries keep their historical paths. Still unmerged; awaiting Codex review and Jim's merge.
 
 2026-10-12T01:32:20Z — Jim approved the next-steps plan with the condition that the work be done under the STDO 2.5.1 Executive process. The pen recorded GOAL-002, closed C2 and selected C3 in GOALS, marked the contract accepted as configuration of the installed engagement, corrected its work-carrier rule to TICKET_METHOD, and drafted T-002 with tenant duplicates T-002-CLAUDE and T-002-CODEX. Executive and Reviewer actors remain unbound; nothing is admitted. On branch `common/c3-executive-setup`, awaiting Codex review and Jim's merge.
+
+2026-10-13T07:27:00Z — Jim's instructions of 2026-10-13, after the two cross-assessments and two direct comparisons of the candidates at `31f28f9`: "consolidation wins over discipline"; "single algebra is what ive been asking for all along, should it be entrenched in product md so i dont get drift"; and, citing the [categorical groundwork strategy](../../comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#recommended-action), "i want to incorporate this plan … which takes an even stronger stance, synthesis all three, with the current claude v3 work as baseline". The pen reads "all three" as the categorical plan, the consolidated successor line on the Claude baseline with Codex contributions, and the single result algebra. The other plausible reading, the Claude candidate, the Codex candidate and the strategy, changes the same files in the same way. Intake triage per Universal Intake Triage:
+
+- Substantive: yes; the method's direction, the successor's construction line and the result law change.
+- Boundary: common WHAT, namely INTENT, PRODUCT, `requirements/README.md`, `conformance/README.md`, REFERENCE_FRAME_BASIS (its C3 rows configure one line) and GOALS, plus the T-001 and T-002 ledgers. No tenant territory is edited.
+- Change class: `intent_reprice`, re-entering at INTENT.md. The categorical direction, axiomatic programming as the computational model, the demonstration standard, one consolidated line and one result algebra are direction. The change flows to Product (Result Algebra, Categorical Construction, Successor Line, the C3 contract amendment and the open owner decisions), to requirements (the single result algebra requirement, which answers the question on unifying RF-012 and AC-007 that was carried to C2 at C1 closure and left unanswered when C2 closed, and the categorical demonstration standard) and to conformance (four discriminators).
+- Downstream to re-prove: acceptance criterion 5 gains those discriminators while C3 is under way. Frames whose task returns a result without the core algebra or its profile mapping must be re-projected and re-proved. Results defined outside the core must be refined into it. Evidence that still satisfies its criteria stays valid. The Codex tenant line changes role at merge, from a separate candidate to contribution and review.
+- Release scope: none.
+
+Codex's direct comparison recommended fixing both candidates and running a controlled comparison before choosing, with Codex's carried corpus as the synthesis base. Jim's decision supersedes it for the base. The comparison's seam table (one owner per shared relation; the predicate and domain outcome kept with a common result; availability never becoming acceptance) is carried into the requirement. [Codex's critique](../../comments/codex/20261013T074253Z_REVIEW_DIRECT_COMPARISON_SYNTHESIS_RECOMMENDATION.md) of the Claude comparison showed that Jim had already selected the reading of "restated on the axioms" for the comparison. The draft writes that reading into the standalone successor requirement for C3, and records that relocation alone is not supersession. Not decided here and left open in the Product: the steel thread's carrier and envelope, successor identity and packaging, and the Executive and Reviewer actors. Drafted on branch `common/v3-direction-synthesis` in worktree `../specification_methodology-common`; nothing is self-accepted. Awaits Codex review and Jim's merge.
+
+2026-10-13T08:05:00Z — [Codex's critique](../../comments/codex/20261013T074253Z_REVIEW_DIRECT_COMPARISON_SYNTHESIS_RECOMMENDATION.md#revised-recommendation) recommended a bounded repair and comparison round before selecting the base and held a lower-change Codex base to be a plausible provisional choice. Jim answered: "i dont want a codex base if i had said that i was incorrect". The base stays the Claude tenant candidate and is not subject to that round. A defect found in the base is repaired in the base by lawful re-entry, with contributor parts entering as named contributions. The reading of "restated on the axioms" Jim selected stands; it does not choose a base. The pen amended the Product's Contributor row to say the Codex candidate is not a base candidate, and the GOALS revision record. Still open: confirmation of the single result algebra, Porting reads and K2-for-C3 attributions, and the commit sequence.
+
+2026-10-13T09:34:52Z — Jim's further instructions: "i will allow each codebase to synthesis onto their own the best aspects of the other", then "we will do it in two steps 1. update the specifications -> product, requirements as you suggested which is aligned on my requirements". This replaces the one-line framing of the two entries above. Neither tenant line becomes a contributor to the other. Each keeps its own base and takes named parts of the other, and the Claude line is not rebuilt on the Codex candidate. The pen revised the draft on the same branch:
+
+- INTENT Direction, the PRODUCT status, boundary and identity lines, the C3 contract, REFERENCE_FRAME_BASIS, GOAL-002 and T-002 return to per-tenant wording.
+- The Product's Successor Line section is replaced by [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis), one row per line. Porting reads run in both directions.
+- The categorical direction, the demonstration standard, the single result algebra requirement and its C3 contract lines, the conformance discriminators, the reading of "restated on the axioms" for C3 and the rule that relocation is not supersession are kept. Jim's "as you suggested which is aligned on my requirements" confirms them.
+- Added as an open owner decision: how a ported part is reviewed, since the default cross-family Reviewer is the part's source author and the C3 Independence rule forbids a Reviewer assessing its own authorship.
+
+This revision is the specification update. The tenant synthesis follows it, under T-002-CLAUDE and T-002-CODEX once actors are bound. Awaits Codex review and Jim's merge.
+
+2026-10-13T09:58:00Z — Jim: "to confirm 1. create the new unified specification, we will review and sign off on it". The pen reads "the new unified specification" as the common specification on this branch: one WHAT and one result algebra governing both tenant lines. On that instruction the pen commits the revision on `common/v3-direction-synthesis` as the review subject, after committing the five input posts it links to on `main`. The PROPOSED markers stay until Jim signs off; the tenant synthesis is not started.
+
+2026-10-13T10:35:58Z — Jim, on the Intent at `e96be6f`: "from intent this is a meaningless statement -- Recover existing STDO principles and ABG lessons, then distinguish general foundations, the particular Spec Method, and domain or operational realisations. Reduce repeated interpretation and competing semantic ownership while retaining material distinctions." Offered a replacement, he selected "One-owner law (Recommended)", whose text is: "Every determination of the method has one owner. Foundations own what holds for any method. Spec Method is one method built on them. A domain or operational profile owns only its own bindings. A lower tier refers to or refines an owner's determination; it never defines a second one." He then quoted the Intent's lineage paragraph ("This scope constructs v3.0.0 of the STDO Specification Methodology, continuing the existing product line; … A route to the predecessor is not restatement.") and said: "i dont want abstract references to past projects, the intent is a clear statement of what we are doing, its the mission statement". Intake triage per Universal Intake Triage:
+
+- Substantive: yes; the Intent is rewritten as a mission statement and a single ownership law is added.
+- Boundary: INTENT, PRODUCT (boundary paragraphs), `requirements/README.md` (new Single Ownership Requirement; the result algebra purpose line), `conformance/README.md` (one discriminator), GOALS and the T-001 and T-002 ledgers.
+- Change class: `intent_reprice`, re-entering at INTENT.md, within the revision under review on this branch.
+- Downstream to re-prove: acceptance criterion 5 gains a fifth discriminator, which applies to every member of both candidates. A member that decides a question already owned elsewhere in the same candidate must refer to or refine the owner, and a frame's copy of a clause must name its owning locus.
+- Release scope: none.
+
+Each sentence removed from the Intent, and where its content is owned:
+
+| Removed Intent sentence | Owning locus or disposition |
+|---|---|
+| Recover existing STDO principles and ABG lessons | dropped: C1 history; C1 closed 2026-10-11 |
+| distinguish general foundations, the particular Spec Method, and domain or operational realisations | the Intent's one-owner paragraph; PRODUCT boundary and tier obligations |
+| Reduce repeated interpretation and competing semantic ownership while retaining material distinctions | the Intent's one-owner paragraph; the [single ownership requirement](../../../specification/requirements/README.md#single-ownership-requirement) |
+| This scope constructs v3.0.0 …, continuing the existing product line | the Mission's first sentence; [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| `specification_methodology/v3/` … beside … `specification_methodology/v2/` | PRODUCT identity, construction scope row |
+| The predecessor is the installed v2.5.1-rc.2 cut | PRODUCT boundary, second paragraph |
+| UP-015's four dispositions | [successor disposition requirement](../../../specification/requirements/README.md#successor-disposition-requirement) |
+| the successor stands alone; every conserved claim restated | the Mission's axioms-first sentence; [standalone successor requirement](../../../specification/requirements/README.md#standalone-successor-requirement) |
+| axioms first, then the full predecessor corpus restated | the Mission's axioms-first sentence; standalone successor requirement |
+| The corpus may be as large as the law requires | PRODUCT boundary, second paragraph (moved; it had no other owner) |
+| A finite actor is activated on a projected reference frame, never the corpus | PRODUCT boundary, second paragraph; C3 contract, activation unit |
+| A route to the predecessor is not restatement | standalone successor requirement |
+| The methodology is implemented as documents; a common contract supports independent tenant designs | PRODUCT boundary ("realised as documents"; "one common WHAT"); the Direction keeps one sentence on the two candidates |
+| Members are reviewed across actor families | C3 contract, Independence |
+| Intent → Product → Specification → Realisation recurs | the recursive Product taxonomy recovered under [P3](../../../specification/requirements/PRINCIPLES.md#p3-identity-state-and-representation), restated in each candidate's Spec Method tier |
+| Orthogonal interpretations do not become consecutive workflow stages | PRODUCT boundary ("orthogonal concerns") |
+| Deep review of principles precedes capability selection | dropped: C1 and C2 history; the Checkpoints section owns the order |
+| Observations from later actual use determine lawful repair and re-entry | the Spec Method tier's change classes and re-entry (tier obligations) |
+| Incomplete knowledge, failure and interruption must have truthful dispositions within selected authority | [P5](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) and [P6](../../../specification/requirements/PRINCIPLES.md#p6-justified-claims-and-separate-authority); result algebra items 3 to 5 |
+
+The Intent keeps the categorical paragraph, the Demonstration Standard, the result algebra sentence, the steel-thread paragraph and the Standing section; "installed method" and "predecessor corpus" are named as STDO 2.5.1. The Purpose heading becomes Mission, and the result algebra requirement's purpose line now links there. Committed on `common/v3-direction-synthesis` as part of the revision under review; the PROPOSED markers stay until Jim signs off.
+
+2026-10-13T11:07:29Z — Jim, on the Intent at `a47bf0e`: "i dont want to meention v3.0.0 I dont need to call it STDO - do you even know what it stands for? articulate what we are trying to achieve fully, what the product is at a high level, etc." (STDO stands for Specification, Ticketing, Design and Outcome-Driven Development, per the installed SPEC_METHOD's method identity.) The pen rewrote the Intent within the same `intent_reprice`. It now states the mission, the problem, the finite actors and their outer contract, what the product is and what it achieves, drawn from Jim's [working Product definition of 2026-10-06](../../../../v2/.ai-workspace/comments/codex/20261006T010215Z_STRATEGY_STDO_3_0_WORKING_PRODUCT_DEFINITION.md#working-product-statement) and his categorical strategy. Jim's own wording is kept for the one-owner paragraph, the result algebra sentence, the categorical paragraph and the Demonstration Standard. Removed from the Intent, and where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| the target version name | [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| the predecessor version name | PRODUCT boundary, second paragraph |
+| the builder ("Installed … RC2 governs its construction") | T-002 Product-Chain Basis; the Intent's Direction keeps the unnamed compiler relation |
+| the sentence on the two tenant candidates | [PRODUCT, Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis) |
+| "This is a working source-project definition" | PRODUCT status line |
+
+The requirement links that pointed to the Intent's Mission now point to its "What The Product Is" section. PRODUCT still uses "STDO 3" and the v3.0.0 identity Jim decided on 2026-10-12; it is unchanged pending his word.
+
+2026-10-13T11:23:42Z — Jim: "this is a product definiton, dont use Jim - does apple tell you Steve", then "why do i need standing in my intent - the document is the standing unless there is something else". The pen replaced every naming of Jim in the product definition surfaces under `specification/` with the role "the product owner": INTENT, PRODUCT, GOALS, REFERENCE_FRAME_BASIS, and requirements README, PRINCIPLES, A_C_DEPENDENCY and PREDECESSOR_CLAIMS; 72 occurrences, wording only, with no change to any decision or its date. The Intent's Standing section is removed. Its content is owned elsewhere: acceptance and decision authority in [PRODUCT, construction authority](../../../specification/PRODUCT.md#construction-authority); release and adoption state in [GOALS](../../../specification/GOALS.md); the limit on categorical claims in the Intent's Demonstration Standard. Tickets, posts and the bootstrap instruction files are work records and keep the owner's name.
+
+2026-10-13T11:32:27Z — Asked whether PRODUCT should also drop "STDO 3" and v3.0.0, Jim answered: "if you are asking I havent established the tone? check the writing guide for STDO 2.5.1 ( which was a conveinient compression of specification ticket design outcome - as abbreviations of the major methods". The pen applied the installed [WRITING_GUIDE](stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md) to the product definition: present-tense live truth, no narrated transitions, no stale law, version labels only for immutable release facts and selector bindings.
+
+- PRODUCT is titled "Product". Its product sections come first: boundary, identity, result algebra, categorical construction, and dependencies and acceptance. The source project's construction (tenants, construction authority, development isolation, cross-synthesis, checkpoints and the C3 contract) sits under one "Source Project Construction" heading. Every section heading keeps its text, so inbound anchors resolve.
+- The identity table states the release as the next major release on the existing `specification_methodology` line; the version label and the product acronym are gone from the prose. `stdo_3.json`'s display name changes to match; identifiers are unchanged, and `--verify` passes.
+- Removed, with where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| status line; "Selected/Decided/Allowed by … on …"; PROPOSED and "awaiting review" markers; "Amended on …"; "(accepted …; corrected to …)" | history: GOALS revision record and this ticket; review state: GOALS rows |
+| "Codex held the common construction pen for setup and C1" | history: this ticket |
+| the C1 authorisation paragraphs and the Shared Construction Contract | history: GOALS (C1 closed 2026-10-11) and PRINCIPLES C1 Disposition; the live sentences (tenants, common WHAT, review results, release selection) kept once under Source Project Construction |
+| the C0 to C2 checkpoint narrative | GOALS checkpoint rows |
+| DECIDED items in Open Owner Decisions | the sections that state them: C3 contract (audiences and criteria), standalone successor requirement (restated on the axioms), identity table (lineage and layout) |
+| the withdrawn `rc/stdo_3/3.0.0` proposal | history: this ticket |
+| "No Axiom RC2 Product Install … C1 needs source recovery" | A_C_DEPENDENCY |
+| "Runnable cases … are selected at C2" | stale; the discriminators are C3 acceptance criterion 5 |
+| duplicate statements that release selection is the product owner's (three places) | kept once, Source Project Construction |
+
+- REFERENCE_FRAME_BASIS: title, subject and authority rows, and the "Setup standing" row lose their C1 and version wording. The C1 activation rows are replaced by one "Common definition" row in the activation table.
+- requirements README: the "Source" lines keep their source link and lose decision dates and PROPOSED markers. The stale C1/C2 intro is removed. The claim that the local axiom arrays are empty, which was false since the definition carries two local axioms, now names them.
+- conformance README: the C1/C2 status line becomes the C3 criterion-5 binding.
+- CAPABILITIES: the C1/C2 status is replaced. The graceful-totality thread candidate is superseded by the categorical steel thread.
+- GOALS: the title and the product naming in GOAL-002, the C3 row and open decisions are changed. Dated state and the revision record are GOALS' purpose and stay.
+- Left unchanged: PRINCIPLES (the accepted C1 record) and PREDECESSOR_CLAIMS (frontier data). Both still use C1 and version wording that belongs to their records.
+
+
+### 2026-10-14: Context pass over the specification
+
+Jim's direction, verbatim:
+
+- "verbose giberish very disatisfied i'm looking for something tight, and real."
+- Jim's Mission sentence, written into INTENT: "To define a precise method for constructing software and processes, with a categorical direction and an axiomatic representation of its laws, so that the method can be mechanically checked and applied to itself. -- fore example"
+- "committiing is the only easy way for me to read in vsc commit to main"
+- "it makes no sense, because it has not real context - what i objected to is floral language, or short hand references to products that implies you know what it is. You need to give sufficient context,"
+- "have you finished updating specification"
+
+Commits on `main`:
+
+- `9b83c65`: Intent cut to Jim's Mission sentence. This over-compressed the Intent into unexplained shorthand.
+- `78ffcd6` and `0e8fe08`: Intent rewritten so each term is explained at first use, and each point is stated once.
+- `c06cbf5`: PRODUCT.
+- `7e97745`: GOALS. The stale C2 wave statement is replaced by the current C3 state, which fixes Codex's F2.
+- `0037fde`, `99bdbf5`, `402b608`, `1aef5be` and `64910bb`: requirements README, CAPABILITIES, A_C_DEPENDENCY, conformance and REFERENCE_FRAME_BASIS.
+- `441b888`: six meaning changes found on review, restored.
+
+Before each file was rewritten, its obligation sentences were extracted and paired with their new wording. Headings, numbered steps and acceptance criteria are kept. Links check clean, and `stdo status --definition stdo_3.json --verify` passes.
+
+Left unchanged: PRINCIPLES and PREDECESSOR_CLAIMS.
+
+Open:
+- Codex's F1, the scope of the worked-join item.
+- Codex review of these commits, which Construction Authority requires before a merge. They were committed to `main` on Jim's direction, so that Jim can read them.
+
+### 2026-10-14: Finishing the specification revision
+
+Jim's direction, verbatim: "i want you to finish 7 and will review holistically". Step 7 is the specification update with Jim's additions and the categorical groundwork strategy, with Claude holding the pen.
+
+Commits on `main`:
+
+- `f931142`: Codex F1 applied. Items 1 to 5 of the categorical demonstration standard apply to each claim as far as they apply. Item 6, the worked join, applies to accepting the capability and to a claim asserting that join.
+- `cdd48a4`: the GOALS C3 row now records the first pass that produced both bases at `31f28f9`. The categorical row now records both Codex clarifications as applied.
+- `1b2b124`: T-002 reactivation made conditional, per Codex's activation caution.
+- `8a77d02`: cross-synthesis phase sections added to T-002-CLAUDE and T-002-CODEX. Each states its base, contributions and porting reads, and that its actors and ported-part review are open. No execution contract is drafted.
+- `2c10e05`: `build_tenants/README.md` updated from the closed C1 task to the current phase. Peer reads are allowed under Porting reads as well as authorised reviews.
+- `9abc93e`: the v3 `CLAUDE.md` and `AGENTS.md` project paragraphs updated to the current phase. The STDO Bootstrap block is unchanged, and the two files remain identical.
+- `4efd4b5`: a cold reader with no project context listed the terms and sentences it could not follow in the specification and the tenant entry contract. Each was fixed where it first appears, with no change to any obligation.
+
+Left for Jim's sign-off:
+
+- the C3 input snapshot, which must name the signed-off commit;
+- removal of the `common/v3-direction-synthesis` branch and its worktree;
+- Codex's review of `1b8ad1b..HEAD`.
+
+Open decisions for Jim:
+
+- the Executive and Reviewer for each line in the cross-synthesis phase, including whether the 2026-10-12 binding recorded in T-002-CLAUDE carries over;
+- how a part ported from the peer is reviewed.
+
+Left unchanged: PRINCIPLES, PREDECESSOR_CLAIMS and tenant territory.
+
+### 2026-10-14: Common pen returned to Codex
+
+2026-10-13T14:33:25Z — Jim authorised the repair quoted under Owner Instruction. Codex enters the common Writer role under the Selected Contract above, after verifying the exact installed builder and Product Definition. The five review findings and three residual corrections form the repair frontier. The source-project README's live C1 route is also repaired as an affected entry path. This entry records the role and territory before those effects; no C3 execution contract or acceptance is supplied by it.
+
+Writer return for frozen review: the common repair is `candidate_ready`. Intent is reduced from 1,155 to 530 words while retaining the selected mission, foundational relationship, categorical direction, axiomatic programming, single ownership and result algebra, bounded frames, recovery and standalone successor. Product owns the detailed structure and distinguishes the candidate interpretation from external Products. The conformance cases retain authenticated judgments and add the misbound-result, unchanged-bytes invalidation and insufficient-frame discriminators. Current pen and review destinations are aligned, the source README routes to current grants, and obsolete frontier proposal status is removed. Mechanical checks: 202 affected links resolved (two tenant entry targets checked for existence only), whitespace passed, instruction files agree and their installed bootstrap blocks are unchanged, and exact builder/Product Definition verification passed. The previous review post is preserved verbatim. This local checkpoint is for review; tenant bytes, release bytes and open owner decisions are unchanged.
+
+2026-10-13T14:53:37Z — Frozen repair: `e38d45af09987ce8a75b8d1b4219868163b8434e` on main. Two fresh read-only Codex activations independently reviewed Intent/direction and common contracts/routing against the preimage. Both returned no further changes required within their scopes. Their findings and verification limits are posted in the [repair review](../../comments/codex/20261013T145337Z_REVIEW_V3_COMMON_SPECIFICATION_REPAIR.md). These are same-family source reviews independent of authorship, not C3 member qualification. The bounded repair return is ready for owner review; this ticket remains active for its other checkpoint obligations. Owner sign-off, the next input snapshot and C3 actor/ported-part review decisions remain open.
+
+### 2026-10-14: Build-tenant computational binding
+
+2026-10-13T16:44:35Z — Intake and common Writer activation. Jim's clarification and update instruction are quoted under Owner Instruction. Codex continues as common Writer in the Selected Contract's territory from `8828aea`, after verifying the exact installed builder and Product Definition. This entry records the activation before source edits. It selects no tenant execution and changes no installed law or released bytes. A fresh bounded source review will check the completed binding and its affected consumers; no cross-family tenant acceptance is claimed.
+
+Writer return: `candidate_ready` for frozen source review. Eight common files carry the binding and its affected consumers. The proposed formalisation now permits human, machine and mixed architectures; the six principle bodies and historical C1 disposition remain byte-identical. The steel-thread contract, both tenant implementations, Product Definition, instruction files, v2 and companion/cohort bytes are unchanged. All 173 checked affected links resolve; whitespace and current Product Definition verification pass. Exact installed builder verification passed at intake. No executable trial or categorical theorem is claimed by these document checks.
+
+2026-10-13T16:54:56Z — Source update checkpointed at `832efd3f68b0557fdce2826e5efaf811b448c924`. The fresh bounded reader returned no changes required after inspecting the frozen binding, its C3 consumer and conformance cases. The [review](../../comments/codex/20261013T165456Z_REVIEW_V3_BUILD_TENANT_COMPUTATIONAL_BINDING.md) records the same-family scope, source locations and evidence limits. The common update is ready for owner review. No tenant activation or qualification is inferred; this ticket remains active for its other checkpoint obligations.
+
+### 2026-10-14: Context, attention and bounded transitions
+
+2026-10-13T17:07:19Z — Common Writer re-entry from `df4816d`. Jim's supplied conversation steers the continuing common repair; his own statements are quoted under Owner Instruction. Codex records this activation before source effects. Installed RF-002/003/004/006/007/008 and the derived baseline frames supply the existing context, sufficiency, irrelevance, authority and role relations. Current definition verification passed. Claude's proposed deductions are assessed separately from the owner's direction: context freshness alone cannot establish independence; finite capacity alone cannot supply purpose or authority; time and cost are not wholly determined by context size; and an unresolved-item count is not a universal distance to completion. No predecessor claim is selected for removal by this organising account. The pre-existing untracked current-contract review is preserved outside this increment.
+
+Writer return: `candidate_ready` for frozen source review. Eight common files connect A and Z, bounded transitions, context and attention, sufficient frames and derived responsibilities. C3 consumes the frame requirement in its frontier, activation and actual-use criteria. Five discriminator rows cover size without adequacy, fresh-context self-review, omitted frontier items, discovery/target revision and sufficient direct work. All 184 checked affected links resolve; whitespace and Product Definition verification pass. The steel-thread contract, build-tenant binding, P1–P4, P6 and historical C1 disposition, both tenant trees, v2 and companion/cohort bytes are unchanged. The unrelated untracked review is hash-preserved. These are document checks, not a human/agent-use trial or checkpoint acceptance.
+
+2026-10-13T17:19:04Z — Source update checkpointed at `c316b49586e7c9712984169d088d0100d334843c`. The fresh bounded reader returned no changes required; the common Writer checked the returned reasoning against the source. The [review](../../comments/codex/20261013T171904Z_REVIEW_V3_CONTEXT_ATTENTION_AND_TRANSITIONS.md) records the exact scope and limits. It expressly checks that finite capacity imposes neither universal decomposition nor serial scheduling, that resource limits do not confer authority or independence, and that counts, repetition or refinement alone establish neither progress nor churn. This follows Jim's further instruction to exercise independent judgment on Claude's analysis. The common update is ready for owner review. T-001 remains active; no tenant activation, C3 member acceptance, actual-use qualification or release is inferred.
+
+### 2026-10-14: Configurations derived from task and actor constraints
+
+2026-10-13T17:24:05Z — Common Writer re-entry from `a326249`. Jim's clarification above exposes a remaining conceptual restriction: denying a universal three-actor sequence still leaves the named trio too prominent as the generic model. The repair starts from required operations, dependencies, context, attention and assurance, then explains possible allocations and the local Executive's longer decision horizon. Installed RF-009 expressly distinguishes configuration, authority and dependency structures; it assumes no hierarchy. The same current construction grant and installed builder remain in force. This entry precedes source edits. The unrelated untracked review is preserved at SHA-256 `5a4db767b7ff9a5dc5fbda27688c38e53def0e48b3949dda2723370ff94954dc`.
+
+Writer return: `candidate_ready` for frozen source review. Seven common files replace the generic named-role account with constrained configuration choices and explain the local Executive's long-term delivery responsibility. Four discriminators cover peer arrangements, adaptive allocation, unsupported optimality and an insufficient compact task result. All 162 affected links resolve; whitespace and Product Definition verification pass. Principle bodies, installed construction grants, build-tenant binding, steel-thread contract, both tenant implementations and sibling/release bytes are unchanged. No biological, historical or global-optimality claim is introduced, and no execution trial is claimed.
+
+2026-10-13T17:30:35Z — Frozen source `be784145cf77fcc1551dcbd666dad57188fa21fb` received a fresh bounded read-only review with no changes required. The common Writer checked the returned reasoning, including the Executive's unchanged access limits and the difference between generic configuration choices and C3's selected process. The [review post](../../comments/codex/20261013T173035Z_REVIEW_V3_DERIVED_WORK_CONFIGURATIONS.md) records the evidence and limits. The correction is ready for owner review; this ticket and the outstanding common acceptance decisions remain open.
+
+2026-10-14 — Owner instruction: “im going to bed, run to completion and we will review when done”. The preceding clarification makes the continuing workspace the truth surface and actor context a disposable account. Common-pen Writer activation: incorporate that clarification, repair the C3 disposition/locus inconsistency and the stale Codex implementation route, and record the Codex rebuild activation. Tenant construction remains isolated; final owner review, merge and release remain open. Unrelated untracked review `20261013T170400Z_REVIEW_V3_SPECIFICATION_CURRENT_CONTRACT.md` is preserved.

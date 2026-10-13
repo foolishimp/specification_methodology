@@ -54,13 +54,13 @@ These six commitments organise the independent deep attempts. Existing STDO sour
 
 ## P5 Finite Capacity And Graceful Total Handling
 
-**Bounded formulation.** Actors have finite context, attention, time and capability. A selected control model has explicit dispositions for unknown or inadequate conditions: refine, recover, yield, re-enter or terminate. It can continue within the current contract when supported.
+**Bounded formulation.** Actors have finite context and finite attention. These drive context management: a reference frame selects sufficient relevant material for one bounded task within the actor's capability. Work beyond one activation proceeds through compatible bounded transitions. Time, spend and other resources remain constraints of the selected execution binding. A selected control model has explicit dispositions for unknown or inadequate conditions: refine, recover, yield, re-enter or terminate. It can continue within the current contract when supported.
 
-**Standing.** Finite attention, material sufficiency, closed results and practical totality are recovered. The unified graceful-recovery account is a proposed generalisation. C1 assesses whether proposed derivations of purpose, identity, composition or decision authority follow, require additional premises or leave independent commitments. This setup selects no outcome.
+**Standing.** Finite attention, material sufficiency, irrelevance exclusion, closed results and practical totality are recovered. The [bounded-transition and frame requirement](README.md#bounded-transitions-and-reference-frames) applies them to context management and derived responsibilities. Purpose, identity, composition, authority and assurance supply their own applicable premises; finite capacity alone does not discharge them. The broader unified graceful-recovery account remains a proposed generalisation.
 
 **Premises/dependencies.** A selected actor/capability envelope, sufficient material relations, permitted actions and observable outcome distinctions. Complete world knowledge and guaranteed termination of every problem are not assumptions.
 
-**Recovery.** [RF-002 finite attention](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-002-finite-attention), [RF-003 material sufficiency](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency), [RF-012 closed results](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results), [RF-014 capability fit](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit) and [Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule).
+**Recovery.** [RF-002 finite attention](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-002-finite-attention), [RF-003 material sufficiency](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency), [RF-004 irrelevance exclusion](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion), [RF-012 closed results](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results), [RF-014 capability fit](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit) and [Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule).
 
 **Review question/falsifier.** Can insufficient context cause silent omission or an unhandled state? Restart is another iteration over current persistent work state: recover applicable progress and observe changed dependencies. Logs supply audit/observability and may support recovery evidence; no universal obligation requires every history body at every step.
 
@@ -78,7 +78,7 @@ These six commitments organise the independent deep attempts. Existing STDO sour
 
 ## Proposed Formalisation And Open Claims
 
-Retain U (purpose), O (object), Σ (common WHAT), 𝒜 (algorithmic descriptions), ℐ (informational interpretations) and 𝒞_H (computational realisations over architecture H).
+Retain U (purpose), O (object), Σ (common WHAT), 𝒜 (algorithmic descriptions), ℐ (informational interpretations) and 𝒞_H (computational realisations over a declared execution architecture H). H may comprise people, machines or a combination, with their resources and interactions, under the [build-tenant binding requirement](README.md#build-tenant-binding-requirement).
 
 Proposed maps are S:𝒜→ℐ and R_H:𝒜→𝒞_H. A tenant realisation a_j conforms when its interpreted behaviour satisfies Σ. Conformance, semantic equivalence and computational equivalence are different claims; costs depend on input, state and architecture.
 
@@ -88,7 +88,7 @@ Categorical equivalence, universal algorithmic meaning, stronger Markov properti
 
 ## C1 Disposition
 
-C1 closed 2026-10-11 by Jim's decision. Tenant C1 realisations may differ while
+C1 closed 2026-10-11 by the product owner's decision. Tenant C1 realisations may differ while
 answering these questions; each is reviewed and accepted on its own. Accepted
 at closure, both at input commit `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1`:
 
@@ -101,7 +101,7 @@ at closure, both at input commit `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1`:
   Claude's source-first review of the initial candidate and one repair
   successor.
 
-Post-repair confirmation checks were waived by Jim. Both realisations hold
+Post-repair confirmation checks were waived by the product owner. Both realisations hold
 that conservation is conditional on a selected outer contract and faithful
 refinement, not on finite capacity alone. A merged synthesis exists as
 commentary only (`.ai-workspace/comments/claude/`, SYNTHESIS post) and is a C2
