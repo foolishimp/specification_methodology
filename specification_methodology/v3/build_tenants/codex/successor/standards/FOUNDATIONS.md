@@ -377,8 +377,9 @@ operation's own lack of mutation cannot label an effectful composite not_request
 
 First authenticate each contribution against its producer, subject, basis and
 required plan membership. An unauthenticated claim cannot discharge an
-obligation. A missing planned judgment remains `not_performed`; required
-coverage outside an authenticated plan remains uncovered. These are separate
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
 conditions. An invalid contribution does not erase an independently
 authenticated finding.
 
