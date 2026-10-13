@@ -6,8 +6,8 @@ applicability, output, the configuration of responsibilities over frames,
 roles and delegation); context construction under an envelope, with the
 size measurement and fit test, acquisition, activation and evaluation; the
 refinements of the core for admission and activation and for the step's
-results, and disposition; totality and refinement, with licensing and
-approximate steps; work state and restart, with the workspace and an
+results, and disposition; totality and refinement, with the hard stops,
+licensing and approximate steps; work state and restart, with the workspace and an
 actor's account; cost and proportionality; the closed result and reuse. It uses
 the objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result
 algebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the frame
@@ -60,7 +60,7 @@ standing of the consequences below is stated in
 | P0 (recovered), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent); instance premise d | A step starts only from an intake that reconstructs its governing relations without history, and only after an admission its drafting actor does not certify; its output is a candidate with its step-produced facts | [Intake](#intake); [Admission](#admission); [Output](#output) | the carrier (ticket, sprint entry, run-scoped contract): [TICKETS](TICKETS.md) |
 | P1 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | Applicability is decided from basis-bound facts; an unresolved premise withholds the dependent claim and is never read as false | [Applicability](#applicability) | which obligations apply to a subject: the owning evaluation and its scope declarations |
 | P0 (recovered), P2 (independent), P4a (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c, d | Responsibilities are allocated to frames from operations, dependencies, capabilities and assurance; no role inventory, hierarchy or actor sequence follows; reconfiguration keeps dependencies, obligations, effects, authority and independence | [Configuration](#configuration); [Roles and delegation](#roles-and-delegation) | the configuration (frames, topology, coordinator, role names) and its explanation: the design that selects it; the executive configuration: [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) |
-| P2 (independent), P6 (independent); instance premise a | Completion needs evidence against the applicable destination; a count, an empty list or a revised destination is no such evidence; a stop names its cause and keeps what is owed | [Transitions](#transitions): Completion, Destination change, Stops | accepting a completion claim: the decision owner ([§3 Disposition](#disposition)) |
+| P2 (independent), P6 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | Completion needs evidence against the applicable destination; a count, an empty list or a revised destination is no such evidence; a stop names its cause and keeps what is owed | [Transitions](#transitions): Completion, Destination change, Stops | accepting a completion claim: the decision owner ([§3 Disposition](#disposition)) |
 | P5 (derived from P0 and P6, with P0's open-world premise), P2 (independent), P6 (independent); instance premise d | Every non-satisfied result has a named next move, an explicit unknown class included, and reconfiguration follows the cause; a hard stop holds whatever the risk appetite | [§4](#4-totality-and-refinement), Hard stops and the paragraphs before Refinement | the ambiguity policy and its risk appetite: the project's declared policy ([SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle)) |
 | P4a (independent), P1 (independent), P6 (independent); instance premise b | A refinement or rewrite step is admissible only under a law declared for its subject, and each layer discharges what it preserves; a refinement is faithful only when its steps are exact and each output meets the next step's declared domain; a composite with an approximate step is adequate only within its stated adequacy relation and end-to-end bound | [Refinement](#refinement) | the laws declared for a subject: the subject's owner |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P3 (independent), P6 (independent); instance premise d | Admission of a material transition derives and validates the complete enclosing relation on one basis identity and commits all of it or none; qualification covers every admission owner and supported boundary | [Complete enclosing-relation admission](#complete-enclosing-relation-admission); [Standing structural qualification](#standing-structural-qualification) | the supported boundaries and the operating or threat model: the accepted design |
@@ -376,8 +376,8 @@ decision that needs it. This law is new in this corpus.
 
 Roles are relations over steps that a configuration allocates
 (Configuration above), not kinds of actor and not a fixed inventory.
-Where a configuration's operations include construction, assessment and
-disposition, this member names the responsibilities for them: a
+Where a configuration's operations include construction, assessment or
+disposition, this member names the responsibility for each: a
 constructor owns the bounded implementation and its self-review; an
 assessor evaluates a frozen candidate independently; a decision owner
 disposes. A configuration may allocate other responsibilities. Where
@@ -387,7 +387,7 @@ the constructor's summary (EVALUATION §3). This preserves the
 independent-review relation and prescribes no actor count: one actor may
 occupy different roles across different claims when independence for the
 assessed claim is preserved; no role name confers an operation
-([RF-016](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-016-implementation-neutrality);
+([RF-016](REFERENCE_FRAME.md#rf-016-implementation-neutrality);
 P6; provenance rc.2 SPEC_METHOD #construction-assessment-and-delegation).
 
 The governing authority relation declares whether a bounded proxy may
@@ -435,14 +435,17 @@ the actor's envelope B:
 1. Compute the material closure of Z under R (AC-010,
    [AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-010-material-closure);
    provenance rc.2 AXIOMATIC_CALCULUS #ac-010-material-closure).
-   If the closure is not finite and unique on the exact basis, activation
-   returns `closure_unresolved` (§3, Admission and activation) and no step
-   proceeds; it does not guess.
+   If Z, R, the required-edge semantics, the basis or the scope is not
+   exact, or the closure is not finite and unique on the exact basis,
+   activation returns `closure_unresolved` (§3, Admission and activation)
+   and no step proceeds; it does not guess.
 2. Project the closure to the selected context, recording its boundary: the
    excluded, external, unresolved, translated and invalidation-sensitive
    seams (AC-011,
    [AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-011-projection);
    provenance rc.2 AXIOMATIC_CALCULUS #ac-011-projection).
+   If the projection returns a gap or refusal, activation returns
+   `closure_unresolved` and no step proceeds.
    Material not in the closure stays out; adjacent material does not enter
    because it exists
    ([RF-004](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion)).
@@ -479,6 +482,11 @@ the actor's envelope B:
    ([§3 Admission and activation](#admission-and-activation)). Silent
    omission to fit is never one of them
    ([RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit)).
+   None of these options silently reduces the required predicate: the
+   obligations the step preserves stay bound
+   ([§1 Transitions](#transitions)), a narrowing of them is a destination
+   change under its owning authority (§1, Destination change), and what
+   the selected context leaves undecided stays an explicit unknown.
    Within its grant a step selects refinement, sequencing and compression
    itself; selecting another actor or enlarging the envelope re-enters the
    owner of the grant or envelope, who may delegate that choice in the grant
@@ -506,7 +514,7 @@ unresolved question, the actor acquires the deciding owner sections
 directly: the owning sections that decide the task's questions, which are
 declared inputs of the selected basis. Only material in the exact selected
 basis is acquired: where that basis has no derived surface for the task,
-its exact owner sections are used, and a candidate source, a moving
+its exact owner sections are used, and a candidate source, a version-line
 selector or another basis is no substitute for it
 ([FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects)).
 The actor reads the selected material and the actual subject, and follows
@@ -542,7 +550,7 @@ assumption whose failure could change the result (P6; rc.2 RF #evaluate).
 Standalone scope. A derived surface or projected frame decides standalone
 only the questions that its own source members own. It refuses to close a
 question owned by another member, or one that joins the law of several
-owners; the step returns out_of_frame
+owners; the evaluation of that question returns `out_of_frame`
 ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) naming the owning
 members, and
 the question is decided from those members at their current digests or
@@ -633,10 +641,10 @@ maps none of them again:
 
 | Outcome | Cause | Core value |
 |---|---|---|
-| `activated` | the contract is admitted with its admission evidence (§1), the material closure is finite and unique (§2, step 1), and activation returns `activated_frame` | satisfied |
+| `activated` | the contract is admitted with its admission evidence (§1), Z, R, the required-edge semantics, the basis and the scope are exact and the material closure is finite and unique (§2, step 1), its projection returns a selected context (§2, step 2), and activation returns `activated_frame` | satisfied |
 | `admission_refused(authority)` | the work authority the step needs is not admitted: no admission mechanism or explicit human override admits the exact contract, or no durable result and evidence surface is authorised and available; the outcome names the missing authority or surface and its owner | out_of_frame |
 | `admission_refused(basis)` | the contract's cited outcome, prerequisite or experiment basis, or the exact subject and basis it names, cannot support it; the outcome names that basis | invalid_basis |
-| `closure_unresolved` | the material closure of the seed set is not finite and unique on the exact basis (§2, step 1); the outcome names the basis coordinates that leave it open | invalid_basis |
+| `closure_unresolved` | the seed set Z, the relation family R, the required-edge semantics, the basis or the scope is not exact, or the material closure is not finite and unique on the exact basis (§2, step 1; AC-010), or the projection of the closure returns a gap or refusal (§2, step 2; AC-011); the outcome names the condition that fails and the basis coordinates that leave it open | invalid_basis |
 | `out_of_frame` | no available frame and actor pairing declares a material relation or capability the evaluation needs (§2, Activation), or no fit option of §2 step 3 fits the selected context to an actor's envelope | out_of_frame |
 | `activation_refusal` with its cause | a cause REFERENCE_FRAME §5 states | the core value REFERENCE_FRAME §5 maps that cause to |
 
@@ -664,7 +672,7 @@ exists (P5, P6; provenance
 |---|---|---|
 | `candidate_ready` | satisfied | an exact candidate and its transition evidence are available |
 | `refused` | falsified | lawful activation occurred, and a governing prohibition or an owner-valid construction refusal defeats the requested construction; the prohibition or refusal is the counterexample |
-| `incomplete` | falsified | the lawfully activated step stopped without its output, because an evaluation the output needs was not performed or could not be decided on the admissible evidence, or bounded execution ended first; the stop basis and the residuals name which |
+| `incomplete` | falsified | the lawfully activated step stopped without its output, because an evaluation the output needs was not performed or could not be decided on the admissible evidence, or bounded execution ended first; the stop basis is the counterexample, and it and the residuals name which |
 | `re_entry_requested(authority)` | out_of_frame | a material decision the step needs lies outside its grant; the value names the owner of that decision |
 | `re_entry_requested(basis)` | invalid_basis | the activated basis can no longer support the work |
 
@@ -688,7 +696,7 @@ not performed thus stays distinct from one whose evidence cannot decide
 (P5, P6).
 
 An assessing step that ends `incomplete` leaves each criterion it did not
-close not performed: no result, never `falsified`. The `falsified` of its
+evaluate not performed: no result, never `falsified`. The `falsified` of its
 availability concerns its own output, never the subject under assessment
 (P6).
 
@@ -790,10 +798,10 @@ the existing core.
 
 ## 4. Totality and refinement
 
-Dispositions after any non-satisfied result are named in advance: continue
+Next moves after any non-satisfied result are named in advance: continue
 within the current contract when supported; refine; recover; yield; re-enter
 the owning relation; terminate. Each admitted condition class has a declared
-disposition, including an explicit unknown class. Total handling does not
+next move, including an explicit unknown class. Total handling does not
 claim that every external condition is recognised, that an invoked provider
 terminates, or that every request can be completed. A hanging external call,
 an unsatisfiable demand and a lost post-effect response are three different
@@ -808,8 +816,10 @@ remain hard stops regardless of risk appetite. Typical hard-stop classes
 include: a violated invariant or guarantee; an absent required authority
 surface; a missing declared capability for an executional or operational
 stage; an undeclared irreversible side effect; and an explicit policy gate
-requiring human approval. A hard stop halts the work at its condition whatever the policy
-(§3 Ambiguity outcome, `blocked`). This section owns the hard stops;
+requiring human approval. A hard stop halts the work at its condition whatever the policy:
+for a declared ambiguity, with the §3 Ambiguity outcome `blocked`;
+otherwise, as a stop of [§1 Transitions](#transitions), Stops. This
+section owns the hard stops;
 [SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle)
 applies them to the method's chain of authority surfaces (P6, P5;
 provenance rc.2
@@ -820,7 +830,7 @@ incompatible result causes one of: supply the missing admissible evidence;
 select another actor inside the frame's capability envelope; activate
 another existing frame; refine or extend a frame declaration; revise the
 frame set (REFERENCE_FRAME §10); change the evaluation; or re-enter the
-governing product or method relation. The disposition follows the cause; a
+governing product or method relation. The next move follows the cause; a
 difficult evaluation alone does not prove that another frame is required
 (P5, P2; rc.2 RF #reconfigure-when-necessary).
 
@@ -1047,8 +1057,8 @@ the consequences below is stated in
 |---|---|---|---|
 | P3 (independent), P0 (recovered); instance premises a, b | Work state is an object: the workspace, the governing basis, the applicable closed results and judgments, the residuals and the uncertainty over external effects | [§5](#5-work-state-and-restart), first paragraph | its carrier (files, an event stream, another admitted owner): the profile or realisation |
 | P0 (recovered), P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent); instance premises a, c | The workspace is the truth surface and an actor's context a disposable account of it; current evidence corrects the account; discarding the account resets nothing | [The workspace and an actor's account](#the-workspace-and-an-actors-account) | the observations and reconciliations a resumption needs: the recovery contract, which is the resuming step's intake with the work state |
-| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise d | An effect of uncertain completion is reconciled before any repetition or dependent action; resumption does not imply idempotence | §5 Resumption; [§3 Effects](#effects) | none |
-| P2 (independent), P6 (independent); instance premise b | Acceptance binds one exact checkpoint; a restart states why repair of retained work is insufficient; progress is accepted movement towards the selected outcome, not a count | §5 Checkpoint and Progress | progress and churn projections: their consumer |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise d | An effect of uncertain completion is reconciled before any repetition or dependent action; resumption does not imply idempotence | [§5](#5-work-state-and-restart) Resumption; [§3 Effects](#effects) | none |
+| P2 (independent), P6 (independent); instance premise b | Acceptance binds one exact checkpoint; a restart states why repair of retained work is insufficient; progress is accepted movement towards the selected outcome, not a count | [§5](#5-work-state-and-restart) Checkpoint and Progress | progress and churn projections: their consumer |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P0 (recovered), P6 (independent); instance premise c | Handoff is by closed results without private working context; reuse checks exact applicability and invalidators; a reused judgment does not satisfy a required independent judgment | [§7](#7-closed-result-and-reuse) | none; each closed result states its own invalidation conditions |
 | P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise c | A reviewable transition names its exact candidate, changes, proof and disposition; a same-process proof does not establish a reconstructable authority claim where the loss of process state is a counterexample | [Transition evidence](#transition-evidence) | the representation of transition evidence: its consumer |
 
@@ -1201,9 +1211,9 @@ the consequences below is stated in
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
 | P2 (independent), P0 (recovered); instance premise b | A method obligation is proportional only when the ambiguity it removes justifies the reasoning complexity it adds, and that complexity is not raw size | [§6](#6-cost-and-proportionality), first three paragraphs | the justification of a constraint family: its owning law, once for the family |
-| P2 (independent), P0 (recovered), P1 (independent); instance premise b | A detailed symbolic design that resolves material alternatives within reasoning capacity is proportional; an addition that duplicates truth or adds reconciliation paths without reducing ambiguity is not | §6, symbolic-design paragraph | none |
-| P2 (independent), P0 (recovered), P6 (independent); instance premise b | The method's own acquisition, hashing, review and evidence serve an identified need; repetition supplies neither validity nor independence | §6, method's own execution | none |
-| P0 (recovered), P2 (independent); instance premise c | A cost claim declares its allowance and reports spend measured under the selected execution binding, or recorded as unmeasured; costs that could conceal one another are kept apart; no universal quota follows | §6, Cost is selected | the allowance: the activation that makes the claim; limits, and the units and boundaries of measurement: the selected execution binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)) |
+| P2 (independent), P0 (recovered), P1 (independent); instance premise b | A detailed symbolic design that resolves material alternatives within reasoning capacity is proportional; an addition that duplicates truth or adds reconciliation paths without reducing ambiguity is not | [§6](#6-cost-and-proportionality), symbolic-design paragraph | none |
+| P2 (independent), P0 (recovered), P6 (independent); instance premise b | The method's own acquisition, hashing, review and evidence serve an identified need; repetition supplies neither validity nor independence | [§6](#6-cost-and-proportionality), method's own execution | none |
+| P0 (recovered), P2 (independent); instance premise c | A cost claim declares its allowance and reports spend measured under the selected execution binding, or recorded as unmeasured; costs that could conceal one another are kept apart; no universal quota follows | [§6](#6-cost-and-proportionality), Cost is selected | the allowance: the activation that makes the claim; limits, and the units and boundaries of measurement: the selected execution binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)) |
 | P2 (independent), P0 (recovered); instance premise a | Delivery for a product outcome is prioritised by this relation over likelihood, impact, reversibility, dependency and delayed feedback; probability waives no hard stop | [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), outside this member | the default priority, the smallest supported product path first: SPEC_METHOD §8 |
 
 ## 7. Closed result and reuse
@@ -1299,7 +1309,7 @@ SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
 | #agentic-construction-execution-stdo-up-020 | conserved; the normative relation and the non-prescription of worker internals | §1 The step |
 | #sufficient-execution-intake | conserved; all six items; the design-profile input laws are consumed by reference to DESIGN_MODULE | §1 Intake |
 | #bounded-causal-construction | conserved | §1 Execution unit |
-| #construction-assessment-and-delegation | conserved; constructor, assessor and decision owner are named as the responsibilities a configuration allocates where its operations include construction, assessment and disposition, not as an inventory of roles (§1 Configuration); "No Executive activation is required" is written "No coordinating activation is required"; "Executive mutation restrictions remain applicable" is read as the restriction a selected configuration places on its coordinating role, as the executive configuration places it on its Executive; the proxy limits are also EVALUATION §5 | §1 Roles and delegation |
+| #construction-assessment-and-delegation | conserved; constructor, assessor and decision owner are named as the responsibilities a configuration allocates where its operations include construction, assessment or disposition, not as an inventory of roles (§1 Configuration); "No Executive activation is required" is written "No coordinating activation is required"; "Executive mutation restrictions remain applicable" is read as the restriction a selected configuration places on its coordinating role, as the executive configuration places it on its Executive; the proxy limits are also EVALUATION §5 | §1 Roles and delegation |
 | #proportional-disposition | conserved; "Assessment returns one of these semantic dispositions" is read as the decision owner's disposition after assessment, an assessor's recommendation being evidence for it, as EVALUATION §8 reads #reviewer-result-and-triage-projection | §3 Disposition |
 | #transition-evidence-and-proof-cadence | conserved; "the assessor disposition" is read as the decision owner's disposition or the assessor's recommended disposition, which §3 Disposition separates | §7 Transition evidence |
 | #checkpoint-continuation-progress-and-churn | conserved; "Product" is written "the selected outcome" in tier 1 | §5 |
