@@ -327,3 +327,14 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
 
   Variance: C3S-04 to C3S-08 CASE.md files name the F-02 card, and C6 used the generic `C3S-CARD.md` as briefed.
 - AS1 (C3S-01 to C3S-04) and AS2 (C3S-05 to C3S-08), assessment by actors that wrote neither frames, oracles nor outputs, started.
+
+2026-10-13T23:08Z — Returns and close of this run:
+- RC12 returned (`6eea724`).
+  - The generator and frames hold: 35 tests pass, and all 146 `Source:` digests and section digests match.
+  - Material RC12-3: the finite check constrains only that a gap or a not-performed result is never `satisfied`, and two FOUNDATIONS §4 clauses are not encoded. Its README overclaims.
+  - Minor: RC12-1, RC12-2 and RC12-4 to RC12-9. The ruling RC12-8 calls unrecorded is in the C2 entry above.
+
+  Disposition: recorded open, not repaired in this run. The product owner has asked whether the candidate should carry code at all.
+- AS2 returned (`0c69364`): C3S-05 to C3S-08. 4 of 8 runs are `satisfied`, all 8 reached their required core results, and no failure traces to method text or frames. Minor method findings M1 to M3.
+- AS1 returned: C3S-01 to C3S-04. All 10 runs are `falsified` under strict grading. The required core result was reached in four of five tasks; C3S-03 was not (occ-24). Method-text findings MT-1 to MT-6, with MT-1 a conservation defect in REFERENCE_FRAME §10. Disposition: recorded open for the next round.
+- Handoff written: [HANDOFF.md](HANDOFF.md). This run stops here, at the product owner's review. No member is accepted, no merge is requested, and the pen has transcribed nothing yet.
