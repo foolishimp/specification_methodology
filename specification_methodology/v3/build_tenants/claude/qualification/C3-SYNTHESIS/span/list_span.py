@@ -32,6 +32,19 @@ runs no git command that changes state.
 --check-loci checks that every `conserved` or `superseded` row names at
 least one locus and that each locus file exists and each anchor is a
 heading of that file, and prints each failure.
+
+Rows are keyed by member and anchor, never by line number, because rows are
+inserted into the frontier (I2 inserted five child rows). The base is
+compared row by row under that key. A delta cites rows by the line numbers
+of the frontier it was written against; every delta so far numbers the
+862-line frontier that the base also numbers. A cited line is read through
+the base frontier. Where the delta also cites an anchor for it, the row is
+kept only if its anchor agrees (a cited path may omit a leading
+directory); otherwise the current frontier's row at that line is tried,
+and then, for a cell that cites one line, the one row carrying the cited
+anchor (a child row cited as "after 516"). A cited anchor that none of
+these resolves is reported as a warning. Output lines show each row's
+current line number.
 """
 
 import argparse
@@ -153,7 +166,7 @@ def cells(line):
 
 
 def frontier_rows(text):
-    """Rows with a disposition: line -> dict(member, anchor, disp, locus)."""
+    """Rows with a disposition: (member, anchor) -> dict(line, member, anchor, disp, locus)."""
     rows, member, started = {}, None, False
     for n, line in enumerate(text.split("\n"), 1):
         if line.startswith("## "):
@@ -166,8 +179,69 @@ def frontier_rows(text):
         if c[0] in ("Section", "Member") or set("".join(c)) <= set("-: "):
             continue
         anchor = c[1].strip("`") if len(c) == 6 else c[0].strip("`")
-        rows[n] = dict(member=member, anchor=anchor, disp=c[-2], locus=c[-1])
+        key = (member, anchor)
+        if key in rows:
+            sys.exit(f"duplicate frontier row {key} at lines {rows[key]['line']} and {n}")
+        rows[key] = dict(line=n, member=member, anchor=anchor, disp=c[-2], locus=c[-1])
     return rows
+
+
+def by_line(rows):
+    return {r["line"]: k for k, r in rows.items()}
+
+
+class Resolver:
+    """Resolves a delta's cited line, with the anchors it cites, to a row key."""
+
+    def __init__(self, rows, base_rows):
+        self.rows = rows
+        self.base_line = by_line(base_rows)
+        self.cur_line = by_line(rows)
+
+    def cited(self, x):
+        return x in self.base_line or x in self.cur_line
+
+    def resolve(self, x, anchors, single):
+        """Return (key or None, warning or None).
+
+        Without a cited anchor the line is read through the base frontier
+        only. With one, the base row is kept if its anchor agrees; then the
+        current row at that line; then, for a cell citing one line, the one
+        row that carries the anchor."""
+        base_k = self.base_line.get(x)
+        base_k = base_k if base_k in self.rows else None
+        if not anchors:
+            return base_k, None
+        cur_k = self.cur_line.get(x)
+        for k in (base_k, cur_k):
+            if k is not None and anchor_matches(self.rows[k]["anchor"], anchors):
+                return k, None
+        if single:
+            hits = [k for k, r in self.rows.items() if anchor_matches(r["anchor"], anchors)]
+            if len(hits) > 1 and base_k is not None:
+                hits = [k for k in hits if k[0] == base_k[0]]
+            if len(hits) == 1:
+                return hits[0], None
+        shown = self.rows[base_k]["anchor"] if base_k else "no row"
+        return base_k, f"line {x} reads as {shown}, not in {sorted(anchors)}"
+
+
+def anchor_matches(anchor, cited):
+    """A row anchor matches a cited anchor, or a cited path that ends it."""
+    return anchor in cited or any(
+        not a.startswith("#") and anchor.endswith("/" + a) for a in cited)
+
+
+def cited_anchors(header, c):
+    """Backticked anchors or member paths in the delta row's anchor cells."""
+    cols = [i for i, h in enumerate(header) if "anchor" in h.lower() or h.strip().lower() == "member"]
+    if not cols and len(c) > 1:
+        cols = [1]
+    found = set()
+    for i in cols:
+        if i < len(c):
+            found.update(re.findall(r"`([^`]+)`", c[i]))
+    return found
 
 
 def disposition_value(disp):
@@ -214,8 +288,8 @@ def numbers(text):
     return found
 
 
-def delta_lists(src, rows):
-    """T and D rows from every delta file, with their delta names."""
+def delta_lists(src, rows, resolver):
+    """T and D rows (keyed by member and anchor) from every delta file, with their delta names."""
     t_rows, d_rows, warnings = {}, {}, []
     for name in src.listdir(DELTAS):
         if not name.endswith(".md"):
@@ -235,16 +309,17 @@ def delta_lists(src, rows):
                     continue
                 if set("".join(c)) <= set("-: "):
                     continue
-                nums = [x for x in numbers(c[0]) if x in rows]
-                if any("isposition" in h for h in header) and header[0].lower().startswith("line"):
+                nums = [x for x in numbers(c[0]) if resolver.cited(x)]
+                is_t = any("isposition" in h for h in header) and header[0].lower().startswith("line")
+                if is_t or span_sec:
+                    anchors = cited_anchors(header, c)
+                    target = t_rows if is_t else d_rows
                     for x in nums:
-                        t_rows.setdefault(x, set()).add(tag)
-                elif span_sec:
-                    anchors = re.findall(r"`#([^`]+)`", c[1]) if len(c) > 1 else []
-                    for x in nums:
-                        d_rows.setdefault(x, set()).add(tag)
-                        if anchors and rows[x]["anchor"].lstrip("#") not in anchors:
-                            warnings.append(f"{tag}: line {x} anchor {rows[x]['anchor']} not in {anchors}")
+                        key, warn = resolver.resolve(x, anchors, len(nums) == 1)
+                        if warn:
+                            warnings.append(f"{tag}: {warn}")
+                        if key is not None:
+                            target.setdefault(key, set()).add(tag)
                 continue
             header = None
             if line.strip() == "":
@@ -259,12 +334,15 @@ def delta_lists(src, rows):
                                      kept):
                     a = int(m.group(1))
                     b = int(m.group(2)) if m.group(2) else a
+                    anchors = {m.group(3).strip("`")} if m.group(3) and a == b else set()
                     for x in range(a, b + 1):
-                        if x not in rows:
+                        if not resolver.cited(x):
                             continue
-                        d_rows.setdefault(x, set()).add(tag)
-                        if m.group(3) and a == b and rows[x]["anchor"] != m.group(3).strip("`"):
-                            warnings.append(f"{tag}: line {x} anchor {rows[x]['anchor']} != {m.group(3)}")
+                        key, warn = resolver.resolve(x, anchors, a == b)
+                        if warn:
+                            warnings.append(f"{tag}: {warn}")
+                        if key is not None:
+                            d_rows.setdefault(key, set()).add(tag)
     return t_rows, d_rows, warnings
 
 
@@ -279,8 +357,8 @@ def owner_refs(member_file, text):
 
 def compute_span(src, base):
     rows = frontier_rows(src.read(FRONTIER))
-    t_rows, d_rows, warnings = delta_lists(src, rows)
     base_rows = frontier_rows(base.read(FRONTIER) or "")
+    t_rows, d_rows, warnings = delta_lists(src, rows, Resolver(rows, base_rows))
     for n, row in rows.items():
         old = base_rows.get(n)
         if old is None or (old["disp"], old["locus"]) != (row["disp"], row["locus"]):
@@ -326,7 +404,8 @@ def compute_span(src, base):
 def check_loci(src):
     rows = frontier_rows(src.read(FRONTIER))
     cache, failures, checked = {}, [], 0
-    for n, row in rows.items():
+    for row in rows.values():
+        n = row["line"]
         if disposition_value(row["disp"]) not in ("conserved", "superseded"):
             continue
         checked += 1
@@ -368,14 +447,12 @@ def main():
     if a.format == "markdown":
         print("| Line | Member | Anchor | Reasons | Changed locus sections (S) | Owner references (R) |")
         print("|---|---|---|---|---|---|")
-        for n in sorted(span):
-            r = span[n]
-            print(f"| {n} | {r['member']} | `{r['anchor']}` | {' '.join(r['reasons'])} | "
+        for r in sorted(span.values(), key=lambda r: r["line"]):
+            print(f"| {r['line']} | {r['member']} | `{r['anchor']}` | {' '.join(r['reasons'])} | "
                   f"{'; '.join(r['s']) or '-'} | {'; '.join(r['r']) or '-'} |")
     else:
-        for n in sorted(span):
-            r = span[n]
-            print(n, r["member"], r["anchor"], " ".join(r["reasons"]))
+        for r in sorted(span.values(), key=lambda r: r["line"]):
+            print(r["line"], r["member"], r["anchor"], " ".join(r["reasons"]))
     counts = {k: sum(1 for r in span.values() if any(x.startswith(k) for x in r["reasons"]))
               for k in "TDSR"}
     print(f"\nspan rows: {len(span)} of {len(rows)} rows with a disposition; "

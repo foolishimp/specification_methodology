@@ -511,7 +511,9 @@ base method starts with the three (P5, P3; rc.2 #allowed-status).
 The ticket statuses, any local state a project adds, the lanes below, the
 sprint statuses of §3 and the `migration_strategy` and `library_usage`
 values of §6 are declared states of their carriers, not results, and map
-to no core value. The close classifications and debt-entry outcomes of §3
+to no core value; the recorded `change_class` is a declared state under
+[SPEC_METHOD §4](SPEC_METHOD.md#change-classes). The close
+classifications and debt-entry outcomes of §3
 Close review are results, mapped there. An evaluation that reads a
 declared state returns its own core value with its predicate under
 [FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material
@@ -1131,7 +1133,7 @@ conjunction as the gate over the affected span.
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved
-acceptance, the authorised Writer may record the satisfied bounded result in
+acceptance, the authorised constructor may record the satisfied bounded result in
 the existing carrier, without adding a ticket, a coordinating appointment,
 a review or a recreated design view solely to mark completion. This waives
 no condition that actually applies, including sprint-close law (§3) and the

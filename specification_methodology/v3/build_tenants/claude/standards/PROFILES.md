@@ -19,9 +19,10 @@ it; neither is restricted here. A profile may bind a core mechanism to one of th
 the binding is declared in the profile with its direction, preserved
 meaning, narrowed scope and invalidation. The declared-binding rule is new
 (P0 boundary, P1); its shape follows ODD's specialisations of F_P and F_H,
-which
-[ODD probabilistic compute](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#probabilistic-compute)
-owns in the graph-native context and carries as their provenance.
+which [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute) owns in
+the graph-native context and carries as their provenance; the
+predecessor's section is rc.2
+[ODD probabilistic compute](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md#probabilistic-compute).
 
 Import rule. A profile imports the generic families of tiers 1 and 2 that
 its rules rest on, and owns only its own bindings: the terms and choices

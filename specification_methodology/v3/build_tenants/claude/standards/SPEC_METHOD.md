@@ -506,7 +506,8 @@ declared classes of this member: the kinds of evidence of §3 (material
 advance, prerequisite readiness, preservation, regression), the old-path
 classes of §7 Required migration protocol, the implementation
 classifications `carry_across`, `redundant` and `rewrite` of §7
-Fundamental migration, and the ADR `Status:` values of §10. Each records
+Fundamental migration, and the ADR `Status:` values of §10; the change
+classes are declared states under §4 Change classes. Each records
 a declared classification of its subject, not the answer to a predicate
 that an evaluation decides. An evaluation that reads them returns its own
 core value with its predicate under
@@ -796,6 +797,17 @@ DESIGN_MODULE_METHOD #invariant-reconstruction-sufficiency-stdo-up-018).
 Triage records the change intent, the class, the re-entry point and when
 triage occurred, wherever substantive work begins.
 [TICKETS §4](TICKETS.md#change-class) records the class on the carrier.
+
+The change classes are declared states of a change that intake triage
+records, not results, and map to no core value. An evaluation that reads
+a declared class returns its own core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). A close classification
+of [TICKETS §3](TICKETS.md#close-review) that names a layer, such as
+`design_reframe`, is a result for its own predicate, mapped there, and
+carries the class at which the work re-enters as its domain outcome.
+Purpose and material relation: a declared class is never combined as an
+evaluation result, so a change classed `realization_refactor` cannot stand
+in for a `satisfied` result that no upstream drift occurred (P5, P1).
 
 ### Computed classification and treatment
 
@@ -1836,7 +1848,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #ambiguity-governance-rule | conserved; the four outcomes are named with the values of ACTIVATION §3, which maps them into the core ("carried forward" is `carried`); the hard stops ACTIVATION §4; build-tenant or stack choice is the binding of §11; new, applying §11 rule 2: the admission makes an operation human adjudication, and a person who decides under policy without it acts under the policy that governs lawful probabilistic processing, whose definition is unchanged | §5 |
 | #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value | §2 Operational lifecycle sufficiency |
 | #change-management-rule | conserved | §4 |
-| #universal-intake-triage | conserved; all six determinations, the triangulation and the six classes with their flows; the frames' results combine under the conjunction of FOUNDATIONS §4 | §4 Universal intake triage; §4 Change classes |
+| #universal-intake-triage | conserved; all six determinations, the triangulation and the six classes with their flows; the frames' results combine under the conjunction of FOUNDATIONS §4; the change classes are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §4 Universal intake triage; §4 Change classes |
 | #computed-classification-and-treatment | conserved; C, J and O and the four-step ordered walk restored in full; the walk's values are stated as facts that map to no core value, and the unknown effect state is `completion_unknown` of ACTIVATION §3 | §4 Computed classification and treatment |
 | #consistency-gate-rule | conserved; the closure conjunction is the conjunction of FOUNDATIONS §4 | §4 Consistency gate |
 | #product-outcome-conservation-stdo-up-013 | conserved in full; EVALUATION §5 carries the acceptance interval and FOUNDATIONS §2 the outcome object | §3 |

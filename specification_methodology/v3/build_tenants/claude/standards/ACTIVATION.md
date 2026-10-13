@@ -416,9 +416,9 @@ already accepted; this delegation does not weaken direct human acceptance
 where the governing product or release law requires it (P6).
 
 When one capable context has sufficient existing work authority, exact
-intake and operation grant, it may enter directly as constructor or
-Writer. No coordinating activation is required solely to appoint that
-Writer. The applicable configuration (Configuration above) selects
+intake and operation grant, it may enter directly as constructor. No
+coordinating activation is required solely to appoint that constructor.
+The applicable configuration (Configuration above) selects
 coordination when material contexts, authority, capability or required
 independence need it; a role or frame name alone does not create that
 need. Direct entry preserves

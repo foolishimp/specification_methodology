@@ -655,14 +655,18 @@ The audit must inventory at least these surfaces (P6):
 
 Where these surfaces admit a consequential entity transformation, ABG's
 admission authority is the graph-native specialisation of transformation
-admission completeness
-([STDO-UP-016](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016),
-whose successor home is the software-design profile, PROFILES §3). ABG's
-broader execution, supervision, retry and projection authority continues
-to derive from this profile and is not thereby reclassified as admission
-authority. `F_P` and `F_H` are the ODD projections of the
-candidate-producer and human-adjudication roles that UP-016 declares
-generically (P6, P1).
+admission completeness, whose admission semantics
+[ACTIVATION §4](ACTIVATION.md#complete-enclosing-relation-admission) owns;
+the software-design profile restates the predecessor rule in
+[DESIGN_MODULE, Transformation admission completeness](DESIGN_MODULE.md#transformation-admission-completeness-up-016)
+(provenance rc.2
+[STDO-UP-016](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)).
+ABG's broader execution, supervision, retry and projection authority
+continues to derive from this profile and is not thereby reclassified as
+admission authority. `F_P` and `F_H` are the ODD projections of the
+candidate-producer and human-adjudication roles, which this profile binds
+to the source concepts of SPEC_METHOD §5 in
+[§5 Probabilistic compute](#probabilistic-compute) (P6, P1).
 
 Reviewing produced artifacts alone does not satisfy the audit. It must
 include a code, call-graph or static-surface review appropriate to the
@@ -936,6 +940,14 @@ Product outcome or bounded basis and supplies it through a new
 `initial_selection` or a basis-bearing resume. Default graph following is
 ordinary, but it is still an `evaluate_next` decision and not hidden
 sequential control (P5, P2, P6).
+
+Selection is not a result of the core. `evaluate_next`'s selection, a
+typed no-action disposition included, selects what is invoked next and is
+not a value of the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it maps to no core
+value. The closure decision it follows, where there is one, carries the
+core value, as mapped under A8 below, and selection stays invocational
+(A11) (P5, P6).
 
 A4a Evaluation function separation. `synthesize_model`, `eval_gap`,
 `evaluate_next` and `evaluate_action` are separate authority functions.
@@ -1704,9 +1716,9 @@ in the format of FOUNDATIONS §3 Foundation to law (P0, P1, P5, P6).
 | #114-the-gtl-module-is-the-operative-publication-surface | conserved | §11.4 |
 | #115-current-state-is-a-projection-over-constructive-history | conserved | §11.5 |
 | #115a-abg-owns-continuation-and-re-entry | conserved | §11.5A |
-| #115b-execution-authority-audit | conserved; the five-surface inventory carried exactly; UP-016 keeps its rc.2 route, its successor home being the software-design profile | §11.5B |
+| #115b-execution-authority-audit | conserved; the five-surface inventory carried exactly; UP-016's admission semantics are linked to their owner, ACTIVATION §4, and the predecessor rule to its restatement in the software-design profile, with the rc.2 route kept as provenance; the roles that F_P and F_H project are reached through the bindings of §5 Probabilistic compute to SPEC_METHOD §5 | §11.5B |
 | #115c-projection-source-coherence | conserved | §11.5C |
-| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile; the mapping of the closure decisions to the core result algebra is new, for the predicate "the edge's obligations are fulfilled on the exact basis", with `retry`, `repair`, `re-enter` and `block` split by cause into refined values, each mapped to exactly one core value | §11.5D |
+| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile; the mapping of the closure decisions to the core result algebra is new, for the predicate "the edge's obligations are fulfilled on the exact basis", with `retry`, `repair`, `re-enter` and `block` split by cause into refined values, each mapped to exactly one core value; new: `evaluate_next`'s selection, a typed no-action disposition included, is stated to be no result of the core, the closure decision it follows, where there is one, carrying the core value | §11.5D |
 | #116-product-specific-semantics-sit-above-the-shared-carrier | conserved | §11.6 |
 | #117-manual-walkthrough-must-still-be-lawful | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | §11.7 |
 | #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | §11.7A |

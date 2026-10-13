@@ -1,12 +1,12 @@
-# STDO 3 Standards (Claude tenant realisation)
+# Standards (Claude tenant realisation)
 
-Status: the Claude tenant's STDO 3 candidate, under construction member by
+Status: the Claude tenant's candidate, under construction member by
 member on the order of [DOCUMENT_STRUCTURE](../design/DOCUMENT_STRUCTURE.md);
 the first pass (steel threads T1 to T4) is its starting text. Not
 released, not installed, not common WHAT. Builder basis
 `stdo://releases/v2.5.1-rc.2/`.
 
-STDO 3 is a specification methodology for construction and evaluation by
+This specification methodology is for construction and evaluation by
 actors with finite context, attention, time and capability. Its core
 statement: interpret a scoped subject; select a purpose and governing
 contract; transform within admitted authority while conserving its material
@@ -84,7 +84,7 @@ in its last section, Source dispositions. Every predecessor row's
 disposition and locus are also in the tenant
 [frontier](../frontier/PREDECESSOR_CLAIMS.md). The corpus is applicable
 without the rc.2 cut, which remains the operative builder of this
-construction until STDO 3 is released.
+construction until this candidate is released.
 
 The verbatim frames live in `frames/`, with their manifest
 `frames/FRAME_INPUTS.json`. Each frame copies, byte for byte, the owning

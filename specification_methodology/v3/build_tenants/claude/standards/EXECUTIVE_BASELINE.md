@@ -392,7 +392,9 @@ Executive assigns priority (P6, P2).
 
 The Product-owned Project Reference-Frame Basis binds the severity scale,
 the priority scale, the current-boundary decision cutoff and the
-non-waivable hard stops. This profile imposes no universal numeric scale.
+non-waivable hard stops, whose owner is
+[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement). This profile
+imposes no universal numeric scale.
 Severity, priority, the frame result (FOUNDATIONS §4 Results) and the
 current-boundary effect are four distinct values; none of them alone makes
 a finding release-blocking (P6, P1).
@@ -979,12 +981,14 @@ relation, not an organisational or runtime hierarchy (P2, P4a; ACTIVATION
 §4).
 
 Coverage records the union of admissible observations the activated frames
-contribute. A composite claim is `satisfied` only through a declared
-conjunction in which every applicable constraint is satisfied and every
-material cross-frame seam preserves, or lawfully translates, exact
-identity, coordinate and basis, carried value or evidence, lifecycle scope,
-authority and provenance (FOUNDATIONS §4 Conjunction of results;
-REFERENCE_FRAME §6 for translation). A missing or non-commuting
+contribute. A composite claim takes the value of its declared conjunction
+under
+[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Reported value. This profile's declared rule makes each material
+cross-frame seam a mandatory result or required coverage: the seam
+preserves, or lawfully translates, exact identity, coordinate and basis,
+carried value or evidence, lifecycle scope, authority and provenance
+(REFERENCE_FRAME §6 for translation). A missing or non-commuting
 seam returns the applicable `falsified`, `indeterminate`, `out_of_frame` or
 `invalid_basis`; no frame is selected as dominant (P4a, P5).
 
