@@ -101,11 +101,12 @@ review-round count, engine, prompt or orchestration (UP-022).
 
 Independence rests on authorship and on the evidence conditions above, not
 on a new context. The assessor may read the same governing sources as the
-constructor. A fresh context alone establishes no independence: an author
-that opens a fresh context to review its own candidate is still its
-author, and its review is self-review, which stays construction output and
-cannot be relabelled as independent assessment (P6; UP-007 applied to a
-fresh context).
+constructor. A fresh context alone establishes no independence, and it
+supplies no review authority the author lacks: an author that opens a
+fresh context to review its own candidate is still its author, and its
+review is self-review, which stays construction output and cannot be
+relabelled as independent assessment (P6; UP-007 applied to a fresh
+context).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -208,19 +209,27 @@ not require unique derivation or equality with an incumbent. A weak Σ that
 admits materially different behaviours either declares the latitude or is
 repaired before a decision-complete design is claimed.
 
-Equivalence ladder. Conformance, semantic equivalence, computational
-equivalence and categorical equivalence are separate claims with separate
-evidence (P1, P6). Conformance establishes neither identical behaviour
-outside Σ nor equal cost. Semantic equivalence of realisations claims that
-two realisations, or a realisation and a declared reference outcome, have
+Equivalence ladder. The ladder is the list of the four claims named next,
+each a rung; the rungs are listed, not ordered, and no rung implies
+another. Conformance, semantic equivalence, computational equivalence and
+categorical equivalence are separate claims with separate evidence (P1,
+P6). Conformance establishes neither identical behaviour outside Σ nor
+equal cost. Semantic equivalence of realisations claims that two
+realisations, or a realisation and a declared reference outcome, have
 identical interpreted behaviour on a stated domain, behaviour outside Σ
-included. Computational equivalence claims that two realisations compute
-the same function at equal cost for declared workloads on a declared
-architecture H. Categorical equivalence
-is a claim about categories and the maps between them: FOUNDATIONS §4,
-Formal fragment, owns what a category or functor claim must show and
-defines the symbols 𝒜, ℐ and 𝒞_H used here, and a map's preservation of
-identities and composition is a further claim distinct from every rung.
+included. In this member semantic equivalence is always this equivalence
+of realisations, not the equivalence of concepts across bounded contexts
+that
+[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)
+governs, and semantic conformance, in the comparison rule below, is
+conformance with the governing semantic basis as Σ. Computational
+equivalence claims that two realisations compute the same function at
+equal cost for declared workloads on a declared architecture H.
+Categorical equivalence is a claim about categories and the maps between
+them: FOUNDATIONS §4, Formal fragment, owns what a category or functor
+claim must show and defines the symbols 𝒜, ℐ and 𝒞_H used here, and a
+map's preservation of identities and composition is a further claim
+distinct from every rung.
 For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H, conformance to Σ, semantic
 equivalence and computational equivalence remain different claims.
 Categorical equivalence additionally requires the appropriate quasi-inverse
@@ -415,8 +424,8 @@ premise). For a selected activation, measure whether a fresh actor given
 only the published documents recovers the governing relations with fidelity
 judged independently, and at what reconstruction cost, against the rc.2
 corpus as baseline. The context transferred is measured as ACTIVATION §2
-step 3 measures size; time and spend are measured where the selected
-execution binding measures them. The fidelity judgment is actual-use
+step 3 measures size; time and spend are measured where measurable, under
+the selected execution binding. The fidelity judgment is actual-use
 evidence under Frame qualification above, and the size measured is not
 evidence of it. A document set that requires private validator knowledge,
 whole-corpus loading or a prior actor's memory fails the benchmark

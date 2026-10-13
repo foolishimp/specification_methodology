@@ -67,13 +67,12 @@ specialise its relations under their own authority, and that external
 relation neither enters nor amends this member (P2: an obligation stops
 where its purpose stops). This member owns the reference-frame-evaluation
 bounded context, `urn:stdo:bounded-context:reference-frame-evaluation`,
-under its exact publication basis. The context holds only frame
+under its exact publication basis. This member owns only its frame
 declaration, activation, evaluation, basis, relation, result, coverage,
-revision and qualification concepts. A concept of these kinds that another
-member defines enters the context by the imports below and keeps that
-member as its owner. A same-spelled profile, product, role or runtime
-carrier is not imported by proximity or nominal match (P3, P1; rc.2
-#position).
+revision and qualification concepts. The context also holds the concepts
+imported below, each kept by its owner. A same-spelled profile, product,
+role or runtime carrier is not imported by proximity or nominal match (P3,
+P1; rc.2 #position).
 
 Substrate. A reference frame may be represented in prose, structured data,
 a prompt, a design asset, a typed carrier, a runtime context or any other
@@ -108,13 +107,15 @@ declared in Scope above (P1, P3).
 
 These are reference-only imports into
 `urn:stdo:bounded-context:reference-frame-evaluation`. They provide no
-semantic, evaluation, operation or decision authority. Where Scope names
-evaluation, basis, activation, result or qualification, it names the
-imported concept, and this member defines none of them a second time. A
-refinement this member states, such as the function outcomes of §5, names
-its owner in this table and maps back to it. A frame or frame family that
-a profile or product declares in this context is that owner's
-specialisation under Scope above and is not imported here (P1, P3, P6).
+semantic, evaluation, operation or decision authority. Scope bounds what
+this member owns; a concept of those kinds that another member defines,
+such as evaluation, basis, the activation step, the core results or
+qualification, is imported here, and this member defines it no second
+time. A refinement this member states, such as the function outcomes of §5
+or the coverage statuses of §8, names its owner in this table and maps
+back to it. A frame or frame family that a profile or product declares in
+this context is that owner's specialisation under Scope above and is not
+imported here (P1, P3, P6).
 The declaration is new in this corpus. Purpose and material relation: each
 concept used here keeps one owning section, so its meaning cannot diverge
 between that owner and this member (P1, P6).
@@ -421,7 +422,8 @@ revise(frame_set, new_evidence, failures, capability_change, topology_change)
 `declare` is §4; `activate` and `evaluate` are ACTIVATION §1 and §2;
 `evaluate` returns its result under RF-012, and the closed result is
 returned and reused under ACTIVATION §7; `conjoin` and `translate` are §6;
-`audit_coverage` is §8; `revise` is §10. EVALUATION §7 qualifies each.
+`audit_coverage` is §8, which maps the statuses of its ledger to the core;
+`revise` is §10. EVALUATION §7 qualifies each.
 
 The outcomes of `activate`, `conjoin` and `translate` form a refinement of
 the core algebra, stated under the refinement rule of
@@ -433,22 +435,23 @@ one core value according to its cause carries the cause in its name, as in
 `activation_refusal(basis)` (P5, P6). The refinement is new in this
 corpus. Purpose and material relation: a consumer that combines these
 outcomes with other results reads them in the one core, so a refusal, a
-conflict or a loss is neither mistaken for success nor merged with an
-evaluation that was not performed.
+conflict or a loss outside the accepted loss is neither mistaken for
+success nor merged with an evaluation that was not performed.
 
 | Function and predicate | Outcome | Cause | Core value |
 |---|---|---|---|
 | `activate`: the frame is activated for this evaluation, subject, basis and actor | `activated_frame` | the frame declaration is bound to the exact evaluation, subject, basis and actor | `satisfied` |
-| | `activation_refusal(capability)` | the actor is outside the frame's declared capability envelope; the refusal names the capability that fails | `falsified` |
+| | `activation_refusal(capability)` | the frame declares a capability the evaluation needs, and the selected actor's declared envelope lacks it; the refusal names that capability and its owner where the subject gives one | `out_of_frame` |
 | | `activation_refusal(authority)` | the activation needs semantic, evaluation, operation or decision authority that is not admitted to it; the refusal names that authority's owner | `out_of_frame` |
-| | `activation_refusal(basis)` | the subject or basis is stale, advanced, ambiguous or mismatched (RF-005) | `invalid_basis` |
+| | `activation_refusal(basis)` | the subject or basis is stale, advanced, ambiguous or mismatched (RF-005), a topology mismatch included: the subject's topology is not the topology basis the frame declares (RF-011) | `invalid_basis` |
 | `conjoin`: the composite predicate holds under the declared decision rule | `decision(holds)` | the conjunction of FOUNDATIONS §4 reports `satisfied` | `satisfied` |
 | | `decision(fails)` | the conjunction reports `falsified`, and no mandatory result for the same claim is `satisfied` | `falsified` |
 | | `conflict` | the conjunction reports `falsified` while mandatory results for the same claim disagree, one `satisfied` and another `falsified`; the counterexample survives the join, and the disagreement stays unresolved for the decision authority | `falsified` |
 | | `indeterminate` | the conjunction reports `indeterminate` | `indeterminate` |
 | `translate`: the value or evidence enters the target frame as the declared translation states | `translated_value` | the value or evidence is carried into the target coordinates with its declared meaning | `satisfied` |
 | | `declared_loss` | the value or evidence is carried with a loss inside the declared accepted loss; the loss travels with it as a residual (P4b) | `satisfied` |
-| | `refusal(condition)` | a refusal condition the translation declares holds, a loss outside the accepted loss included | `falsified` |
+| | `refusal(condition)` | a refusal condition the translation declares holds, a loss outside the accepted loss included; or the value or evidence fails identity or equality under the translation's declared equality law | `falsified` |
+| | `refusal(authority)` | an authority mismatch the translation does not declare: the value or evidence carries semantic, evaluation, operation or decision authority whose relation to the target frame's authority the translation states neither as preserved nor as a refusal condition; the refusal names that authority's owner | `out_of_frame` |
 | | `refusal(basis)` | the source value or evidence binds a stale, advanced, ambiguous or mismatched basis or coordinate (RF-005) | `invalid_basis` |
 
 Where no frame the actor can use declares a material relation or
@@ -456,11 +459,17 @@ capability the evaluation needs, `activate` returns `out_of_frame` itself
 ([ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
 Activation). Where the conjunction reports `out_of_frame` or
 `invalid_basis`, `conjoin` returns that value; the signatures name no
-outcome for either case. A planned assessment without a closed result, and
-required coverage that no planned assessment addresses, are no outcome of
-`conjoin`: [FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) records
-them beside the reported value, and they map to no core value. The
-outcomes of `activate` answer whether a frame was activated, never the
+outcome for either case, and the `refusal` that EVALUATION §7 names for
+`conjoin` on a basis mismatch is this returned `invalid_basis`. Under a
+declared veto or deferral, `conjoin` returns the outcome above whose cause
+holds for the value the conjunction reports
+([FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results)), or that value
+itself where it is `out_of_frame` or `invalid_basis`. A planned
+assessment without a closed result, and required coverage that no planned
+assessment addresses, are no outcome of `conjoin`:
+[FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) records them
+beside the reported value, and they map to no core value. The outcomes of
+`activate` answer whether a frame was activated, never the
 evaluation's claim: a refused activation performs no evaluation.
 `decision(holds)` assesses the composite predicate and is not its
 acceptance, which is a separate result
@@ -593,6 +602,40 @@ The ledger holds at least, for each evaluation (P4b, P6; rc.2
 The baseline coverage statuses are `covered`, `separately_covered`,
 `conditionally_covered`, `conflicted`, `uncovered`, `unknown` and
 `excluded_by_authority`.
+
+The statuses form a refinement of the core, stated under the refinement
+rule of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results). They answer
+whether a row's coverage obligation is met, for the predicate "on the
+declared coverage tuple, a capable frame of S covers the evaluation with
+no unresolved conflict among the frames, results or authorities that
+cover it, or a governing authority the row cites excludes it". Each status
+maps to exactly one core value, and the value travels with that predicate
+and with the status, whose meaning stays here (P5, P6):
+
+| Status | Cause | Core value |
+|---|---|---|
+| `covered` | a capable frame of S evaluates it on the tuple, with no unresolved conflict among what covers it | `satisfied` |
+| `separately_covered` | separately activated frames of S each evaluate it on the tuple, with no unresolved conflict among them (High-risk separately activated coverage) | `satisfied` |
+| `excluded_by_authority` | the governing authority the row cites excludes the evaluation from the claim (Operational full coverage, item 7) | `satisfied` |
+| `conditionally_covered` | a capable frame of S covers it only under a condition the audit has not established; the residual names the condition and the evidence that would decide it | `indeterminate` |
+| `conflicted` | the frames, results or authorities that cover it conflict, and the conflict is unresolved; the conflict is the counterexample and stays unresolved for the decision authority (Operational full coverage, item 6) | `falsified` |
+| `uncovered` | no capable frame of S evaluates it, and no cited authority excludes it; that absence is the counterexample | `falsified` |
+| `unknown` | the admissible evidence cannot decide whether a capable frame of S covers it, as where the actor capability or the materiality is unknown | `indeterminate` |
+
+These values are results of `audit_coverage` for this predicate, never
+results of the covered evaluation itself. `satisfied` for an excluded row
+establishes that the obligation is met by the cited exclusion, never that
+the evaluation is covered or was performed; the status keeps that
+distinction (FOUNDATIONS §4 Results, Recording). In a conjunction over the
+governed claim, an evaluation whose row is `uncovered` is required
+coverage that no planned assessment addresses
+([FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results)), never a
+`falsified` component. Where the coverage tuple itself is stale, advanced,
+ambiguous or mismatched, the audit returns `invalid_basis` (RF-005) and
+assigns no status. The mapping is new in this corpus. Purpose and material
+relation: a coverage claim combined with other results is read in the one
+core, so a conditional, conflicted, unknown or uncovered row is never read
+as covered, and a cited exclusion is never read as a failure (P5, P6).
 
 ### Interaction coverage
 
@@ -998,7 +1041,7 @@ another member.
 | Anchor | Disposition | Locus |
 |---|---|---|
 | #canonical-compression | conserved | §1 |
-| #position | conserved; the context's concepts that other members define enter it by reference-only import, not by a statement of inclusion (§1 Imports into this context) | §1 (scope, substrate, imports); the bounded-context identity is carried unchanged |
+| #position | conserved; the context also holds the concepts other members define, by reference-only import (§1 Imports into this context) | §1 (scope, substrate, imports); the bounded-context identity and the bound on what this member owns are carried unchanged |
 | #core-claims | conserved | §2 |
 | #reference-frame-laws | not applicable: heading with no claim text (24 bytes); its children are disposed individually | §3 |
 | #rf-001-evaluation-relativity | conserved | §3 RF-001 |
@@ -1032,7 +1075,7 @@ another member.
 | #coverage-basis | conserved | §8 |
 | #evaluation-inventory | conserved; "Ontology" written as the design's ontology | §8 |
 | #coverage-dimensions | conserved | §8 |
-| #coverage-ledger | conserved | §8 |
+| #coverage-ledger | conserved; the mapping of the coverage statuses to the core is new | §8 Coverage ledger |
 | #interaction-coverage | conserved | §8 |
 | #authority-coverage | conserved | §8 |
 | #failure-coverage | conserved | §8 |
