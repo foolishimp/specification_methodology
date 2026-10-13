@@ -274,3 +274,24 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
 - Rd returned `candidate_ready`, committed `fe24ae3`: RBd's minor findings repaired. Open for the handoff: the UX §4 compliance-test disagreement with the predecessor stays pending the product owner.
 - C2 (the finite-oracle template, port 6, with an instance over FOUNDATIONS §4 conjunction) started.
 - RBc returned (`c77aa5e`). Material M1: AC-007 let a basis condition outrank a demonstrated constraint violation, and F9 presented that precedence as derived. The predecessor AC-007 states no precedence. Ruling (option a): a refusal that names a demonstrated violation keeps `refusal(constraint)`, which maps to `falsified`. The basis condition is recorded with it as its own `invalid_basis` result. A refusal that names only basis conditions maps to `invalid_basis`. Reason: a known failure survives every join and a counterexample is never discarded (FOUNDATIONS §4; predecessor RF Result Conjunction). This is consistent with the 2026-10-12 meaning. The precedence is an added choice owned by AXIOMATIC_CALCULUS. Disposition: `local_repair` as Rc, with RBc's minor findings.
+
+2026-10-13T21:52Z — Returns and dispositions:
+- Rb returned `candidate_ready`, committed `59ed097`. EXECUTIVE_BASELINE carries an effect of unknown completion in the work-result record and requires it to be reconciled before work is reactivated, and F16 covers the whole member. Rows 516, 522, 543, 560 and 565 are each split into a `conserved` parent and a `superseded` child: the predecessor's mapping from core result to work-result variant is replaced under item 3 of the single result algebra requirement. This replaces the earlier `conserved` reading of 522, 560 and 565.
+- D12 returned `candidate_ready`; non-frame files committed `9aa4491`:
+  - the bootstrap frame (57,625 B) generated;
+  - the template entry point set to `standards/frames/bootstrap.md`;
+  - plugin routes current;
+  - the a_c programs declared bound to the members' text from before the rebuild, with re-encoding open.
+
+  Frames are held uncommitted until they are regenerated after the repairs. Row 802's declared deviation goes to I2.
+- Ra returned `candidate_ready`, committed `fb25f2a`:
+  - TICKETS repricing dispositions are declared recorded states, not results;
+  - PRODUCT_DEFINITION toolchain outcomes are mapped through ACTIVATION §3;
+  - the three accounts of a construction are defined in FOUNDATIONS §2 and applied as SPEC_METHOD §11 rule 7;
+  - requirement statuses are declared states;
+  - RBa's minor findings are repaired.
+- I2 (second integration: Ra, Rb and D12 deltas; the general parent-value rule in FOUNDATIONS §4; GLOSSARY) started.
+- Rc returned `candidate_ready`, committed `99f0e3a`. The ruling on demonstrated violations is applied in AC-007 and TRAVERSAL, and C3S-02 still expects `falsified`. RBc's minor findings are repaired. Residuals:
+  - TRAVERSAL `:904–905` and `:946` still attach `refuse_missing` to a judgment-level refusal;
+  - two basis reclassifications to `refusal(basis)` need cross-family confirmation.
+- RX, a working consistency check across the whole candidate, started.
