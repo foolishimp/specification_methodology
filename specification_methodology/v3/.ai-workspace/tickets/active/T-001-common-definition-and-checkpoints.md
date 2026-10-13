@@ -313,3 +313,30 @@ Left unchanged: PRINCIPLES and PREDECESSOR_CLAIMS.
 Open:
 - Codex's F1, the scope of the worked-join item.
 - Codex review of these commits, which Construction Authority requires before a merge. They were committed to `main` on Jim's direction, so that Jim can read them.
+
+### 2026-10-14: Finishing the specification revision
+
+Jim's direction, verbatim: "i want you to finish 7 and will review holistically". Step 7 is the specification update with Jim's additions and the categorical groundwork strategy, with Claude holding the pen.
+
+Commits on `main`:
+
+- `f931142`: Codex F1 applied. Items 1 to 5 of the categorical demonstration standard apply to each claim as far as they apply. Item 6, the worked join, applies to accepting the capability and to a claim asserting that join.
+- `cdd48a4`: the GOALS C3 row now records the first pass that produced both bases at `31f28f9`. The categorical row now records both Codex clarifications as applied.
+- `1b2b124`: T-002 reactivation made conditional, per Codex's activation caution.
+- `8a77d02`: cross-synthesis phase sections added to T-002-CLAUDE and T-002-CODEX. Each states its base, contributions and porting reads, and that its actors and ported-part review are open. No execution contract is drafted.
+- `2c10e05`: `build_tenants/README.md` updated from the closed C1 task to the current phase. Peer reads are allowed under Porting reads as well as authorised reviews.
+- `9abc93e`: the v3 `CLAUDE.md` and `AGENTS.md` project paragraphs updated to the current phase. The STDO Bootstrap block is unchanged, and the two files remain identical.
+- `4efd4b5`: a cold reader with no project context listed the terms and sentences it could not follow in the specification and the tenant entry contract. Each was fixed where it first appears, with no change to any obligation.
+
+Left for Jim's sign-off:
+
+- the C3 input snapshot, which must name the signed-off commit;
+- removal of the `common/v3-direction-synthesis` branch and its worktree;
+- Codex's review of `1b8ad1b..HEAD`.
+
+Open decisions for Jim:
+
+- the Executive and Reviewer for each line in the cross-synthesis phase, including whether the 2026-10-12 binding recorded in T-002-CLAUDE carries over;
+- how a part ported from the peer is reviewed.
+
+Left unchanged: PRINCIPLES, PREDECESSOR_CLAIMS and tenant territory.
