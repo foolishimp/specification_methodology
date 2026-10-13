@@ -81,17 +81,17 @@ Each step is one or more admitted activations under the existing Executive loop:
 
 | Step | Work | Output | Size |
 |---|---|---|---|
-| 1. Design re-entry | Declare the tenant's binding. The computational calculus covers the operations (frame activations, commits, a_c checker runs, fresh-actor runs), how they compose, their effects and the resources measured (bytes, wall time, spend). The execution environment covers Claude sessions and subagents, git worktrees, the pinned Axiom Indexer, and the product owner's decisions as a human process. State the configuration and why it fits the task. List each port with its receiving section, and fix the re-proof span: the claims whose text the later steps change. | `design/` revised; gap list confirmed against the candidate | estimated 1–2 h |
+| 1. Design re-entry | Declare the tenant's binding. The computational calculus covers the operations (frame activations, commits, a_c checker runs, fresh-actor runs), how they compose, their effects and the resources measured (bytes, wall time, spend). The execution environment covers Claude sessions and subagents, git worktrees, the pinned Axiom Indexer, and the product owner's decisions as a human process. State the configuration and why it fits the task. List each port with its receiving section. Fix the re-proof span, defined by dependency rather than by edits. It contains every claim whose text later steps change. It also contains every claim that depends on a section whose content or ownership changes, even if the claim's own text does not change. Step 2 moves the owners of results and of measurement, so every claim that depends on those owners is in the span. | `design/` revised; gap list confirmed against the candidate | estimated 1–2 h |
 | 2. Foundations | Add the A-to-Z account, the configuration law and resumption, with no fixed role inventory. Give results one owner and combination one definition. Give measurement one owner. Add the premise standing column, the import declarations and the equivalence ladder. Keep the existing categorical diagram (H1) as a hypothesis. | FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION revised | estimated 3–5 h |
 | 3. Foundation to law | One specialization table per material family, about fourteen, worked in parallel within the limit of three activations. | tables in the owning members | estimated 4–8 h |
 | 4. Spec Method and profiles | State the build-tenant binding in SPEC_METHOD. Check that each profile uses the shared contracts where its actors apply them. Check that every profile result maps into the core without raising standing. EXECUTIVE_BASELINE stays an operational profile owning only its own bindings. | SPEC_METHOD, PRODUCT_DEFINITION and the profiles revised | estimated 3–6 h |
 | 5. Frames and actual use | Regenerate frames as verbatim excerpts. Write the oracles before any run. Run fresh actors on the five members where criterion 4 is not established, and on new tasks for configuration and binding. | frame manifest, cases, runs, assessments | estimated 3–5 h; fresh-actor spend estimated USD 5–15 |
 | 6. Packaging | After the owner's ruling on the compressed summaries: set the bootstrap entry, route the public entry to the current frame set, and close the eleven unresolved claims. | packaging closed | estimated 1–3 h after the ruling |
-| 7. Acceptance | Criteria 1 to 6 per member against all 30 discriminators. Criterion 2 is redone only for claims in the re-proof span; other first-pass claim judgments are kept as evidence. Then cross-family review of the whole line before the checkpoint. | closed results, dispositions, checkpoint request | Reviewer cost unknown |
+| 7. Acceptance | Criteria 1 to 6 per member against all 30 discriminators. Criterion 2 is redone for every claim in the re-proof span. A first-pass judgment on a claim outside the span is kept as evidence once its applicability has been checked. | closed results, dispositions, checkpoint request | Reviewer cost unknown (see decision 2) |
 
 Total wall time is estimated at two to three working days if decisions arrive without delay. The basis is measured from the first pass: about ten hours of wall time for 680 claims on 12 October, and at least USD 6.66 across the four fresh-actor batches whose spend was recorded. Session token costs were not measured then and remain unknown.
 
-The steel thread is not part of this rebuild. In the direct comparison I recommended holding Foundations acceptance until the steel thread's amendments land. I withdraw that recommendation. The specification now places the full categorical product after release ([Categorical Construction](../../../specification/PRODUCT.md#categorical-construction), step 4), and the thread is not selected. Holding C3 for it would stop C3 indefinitely. The thread's findings reach the method later through the sections that own them.
+The steel thread is not part of this rebuild; see decision 6.
 
 ## Decisions needed before anything runs
 
@@ -100,28 +100,39 @@ The steel thread is not part of this rebuild. In the direct comparison I recomme
    - `stdo_3.json` routes to `build_tenants/codex/standards/`, which does not exist.
 
    Proposal: I review the revision cross-family, as you assigned when you gave Codex the pen (estimated 1–2 h). The pen then repairs, you sign off at an exact commit, and the pen records the C3 input snapshot in T-002 at that commit. That snapshot is the basis for both lines. If you prefer to waive my review, say so and the snapshot can be taken after Codex's two findings are fixed.
-2. **Actors for the Claude line.** Proposal: your 12 October binding carries over. The Claude session is Executive. Fresh Claude contexts are Writers in `build_tenants/claude/` only, and fresh Claude contexts are Reviewers by declared same-family exception during construction. Codex reviews cross-family at the checkpoint, before any merge.
-3. **Review of ported parts.** Codex is the default cross-family Reviewer but wrote the ported text, and the Independence rule forbids a Reviewer assessing its own authorship. Proposal: split the subject.
-   - A verbatim port is checked against its source by byte comparison.
-   - An adapted port is checked by a Claude Reviewer that did not do the porting, as a declared exception.
-   - Codex reviews only the Claude-written text around the port: re-pointed links, owner declarations and the fit with Claude's owners.
+2. **Actors for the Claude line, and what counts as independent review.** Two rules now bear on this, and they can be read in two ways.
+   - The Independence paragraph of the C3 contract says the Reviewer is never the author of the subject. It allows a same-family Reviewer as a declared exception.
+   - A discriminator Codex added says: "An author opens a fresh context to review its own candidate | A new context does not establish independent authorship…".
+   - If "author" means the tenant (PRODUCT says the tenants are "authored respectively by Codex and Claude"), no Claude context can review the Claude candidate, and your 12 October same-family arrangement no longer qualifies.
+   - If "author" means the activation that wrote the subject, a fresh Claude Reviewer that wrote nothing remains a permitted exception.
 
-   Each reviewer then assesses only text it did not write.
-4. **Who records the Claude line's decisions.** Only the common pen writes tickets, and Codex holds the pen. Three options:
+   Proposal, which holds under either reading:
+   - The Claude session is Executive. Fresh Claude contexts are Writers in `build_tenants/claude/` only.
+   - Same-family reviews run during construction as the Executive's working checks. They do not count towards acceptance.
+   - Every acceptance review is cross-family: Codex reviews each Claude member under criteria 1 to 6, and Claude reviews each Codex member.
+
+   Cost: about 24 Codex member reviews for the Claude line, plus re-reviews. Codex reviewer time per member is unknown. The first pass's same-family member reviews took about 7 to 14 minutes each, measured. Throughput depends on a Codex reviewer being available alongside the pen work. Separately, the pen should settle the meaning of "author" in one sentence.
+3. **Review of ported parts.** Under decision 2, Codex reviews the Claude members, but Codex wrote the ported text, and a Reviewer never assesses its own authorship. Cross-Synthesis requires each port to be compared with its source and with the previous release. Proposal: split the subject so that each part goes to a reviewer that did not write it.
+   - Comparison with the source: the ported text is compared byte for byte with the Codex candidate at the porting commit. Ports stay verbatim where possible, so this check is mechanical.
+   - Comparison with the previous release: a Claude Reviewer that did not do the porting, for every port. The text it assesses was written by Codex. My cross-assessment of the Codex candidate already compared Codex's changed text with the previous release at `31f28f9`, and is reused where its applicability still holds.
+   - Claude's own changes, meaning any adaptation within the port shown as a diff from the source, plus re-pointed links, owner declarations and the fit with Claude's owners: Codex reviews these, because it did not write them.
+4. **Who records the Claude line's decisions.** Only the common pen writes tickets, and Codex holds the pen. The construction Writer cannot do it either: Development Isolation keeps the Writer's return out of the ticket, so a Writer never records the admission of its own run. Three options:
    - Codex records every Claude-line decision. That needs a channel between the sessions through you, which is slow.
    - The pen is returned to Claude, which moves the same problem onto the Codex line.
-   - **Recommended:** each line's Writer may write only its own tenant ticket's Execution Record, while the pen keeps T-002, the specification and the shared files. This changes one rule in [Development Isolation](../../../specification/PRODUCT.md#development-isolation), which the pen makes.
+   - **Recommended:** each line has a ledger-only Writer activation, separate from its construction Writers. That activation's write access covers only its own tenant ticket's Execution Record. The first pass's "Ledger Writer" role worked this way. The pen keeps T-002, the specification and the shared files. This changes one rule in [Development Isolation](../../../specification/PRODUCT.md#development-isolation), which the pen makes.
 5. **Which Codex commit the Claude line ports from.** The specification names `31f28f9`. Codex has an unmerged repair round on `tenant/codex/c3-round-1` at `5b4aebb`, which extends its derivation checks and adds a triage-and-carrier frame. Proposal: port from `31f28f9`, whose parts the cross-assessments examined. Use `5b4aebb` only if that round is reviewed and merged first.
-6. **The compressed summaries** (keep, supersede or remove). Needed before step 6, not before the start.
+6. **The steel thread versus Foundations acceptance.** In the direct comparison I recommended holding Foundations acceptance until the steel thread's amendments land. Proposal: proceed without waiting. The thread is not selected, and waiting would stall C3. The cost is that step 3 of [Categorical Construction](../../../specification/PRODUCT.md#categorical-construction) corrects the method from the thread's evidence before release, with member acceptance in force. Its corrections may therefore reopen Foundations members accepted in this rebuild.
+7. **The compressed summaries** (keep, supersede or remove). Needed before step 6, not before the start.
 
 ## Changes the common pen would make
 
 These follow from the decisions above. None is made by this post.
 
 - Fix Codex's two open findings, plus any from the cross-family review.
+- Settle in one sentence whether "author" in the independence discriminator means the tenant or the activation that wrote the subject.
 - Record the input snapshot at the signed-off commit, and sign off the wording of GOAL-002.
 - Record the actors and the ported-part review rule in the tenant tickets, and move both items out of Open Owner Decisions in PRODUCT.
-- Amend Development Isolation for tenant ledgers, if decision 4 is accepted.
+- Amend Development Isolation for a ledger-only Writer per line, if decision 4 is accepted.
 - Name the porting commit in Cross-Synthesis, if decision 5 changes it.
 - Draft the first cross-synthesis execution contract in T-002-CLAUDE for step 1, then record its admission.
 
