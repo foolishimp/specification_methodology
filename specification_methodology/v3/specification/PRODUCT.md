@@ -2,7 +2,7 @@
 
 ## Product Boundary
 
-The product is a specification methodology. It is a set of documents stating the rules for defining, building, checking and releasing a product, together with the same rules written as axioms in a_c. The [Intent](INTENT.md) states its purpose and its five parts: Foundations, the Spec Method, profiles, a_c and reference frames. Each document of the method is a member.
+The product is a specification methodology. It consists of the documents stating its rules for defining, building, checking and releasing a product, together with their formal interpretation in the axiomatic calculus, a_c. The [Intent](INTENT.md) states its purpose; [Method Structure](#method-structure) defines its parts. Each document of the method is a member.
 
 The method's earlier releases are named STDO, short for Specification, Ticketing, Design and Outcome-Driven Development. The prefix remains in identifiers: a `stdo://` address names a file inside an installed release, which the installed toolchain resolves to the read-only copy on this machine, and rule IDs such as STDO-UP-015 name rules of that release.
 
@@ -10,9 +10,9 @@ The product succeeds the method's previous release, 2.5.1-rc.2. That release is 
 
 A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
-Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product consists of the foundational axioms, which are the Foundations written as axioms, and every member of the previous release restated on them, meaning rewritten so that each rule rests on the axioms. The new release is therefore complete without the previous release in force. The members may be as long as the rules require, because no person or model reads them whole. Each task is carried out from a reference frame, never from the whole set of members.
+Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product establishes its foundational axioms and restates the predecessor corpus on them. Restatement requires the foundation-to-law, ownership-and-use, and standalone-conservation relationships defined there. Unchanged text is permitted when those relationships hold. The new release is complete without the previous release in force. Its corpus may be as large as its obligations require; each actor is activated on a reference frame for its selected task within its declared capability limits.
 
-Each rule has one owning section, in the tiers the [Intent](INTENT.md#what-the-product-is) sets out. The precise obligation is the [single ownership requirement](requirements/README.md#single-ownership-requirement).
+Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
 The categorical groundwork strategy proposes three accounts of any construction. They are independent of the tiers:
 
@@ -22,7 +22,7 @@ The categorical groundwork strategy proposes three accounts of any construction.
 
 A tier may need all three, and none of them is a tier.
 
-a_c interpretations, which are how documents are written as axioms, and the tools that check them, such as the Axiom Indexer, are owned separately from this product. What each depends on and what each proves is recorded under its own identity.
+Each candidate supplies and owns its interpretation of the method in a_c. The calculus, interpretation and encoded carrier have distinct content identities and proof boundaries under the [a_c dependency contract](requirements/A_C_DEPENDENCY.md). The Axiom Indexer checker and the existing released STDO Representation are separately owned Products. A candidate's interpretation does not replace either Product or inherit its acceptance.
 
 Runtimes that execute applications built with the method are outside the product. Examples are ABIogenesis (ABG), which runs typed graph programs and records what happened at run time, its executor HoG, which traverses those programs, and application workflow runtimes.
 
@@ -31,6 +31,29 @@ Example applications, such as Hello World and Data Mapper, are test subjects out
 The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together. The companion products are the Axiom Indexer; the STDO Representation, which publishes the method's canonical a_c map, linking each axiom to its source text; and the plugin, which carries the method's skills for coding agents.
 
 Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two build tenants, the agents that each build a candidate, are described under [Source Project Construction](#source-project-construction).
+
+## Method Structure
+
+The method has three tiers. The [C3 tier obligations](#c3-construction-contract) bind the predecessor coverage each owes.
+
+| Tier | Responsibility |
+|---|---|
+| Foundations | Shared commitments and contracts for interpretation, purpose, identity, composition, finite capacity, evidence, authority, results and reference frames. |
+| Spec Method | Product definition, requirements, construction, assurance, change, re-entry and release, using the foundational contracts. |
+| Profiles | Domain or operational specialisations that import the shared contracts and own their additional bindings. |
+
+The Spec Method develops a product through four descriptions:
+
+- Intent states why it exists and the outcomes it must achieve.
+- Product defines what it is, its parts and boundaries.
+- Specification states its required behaviour, constraints and checks.
+- Realisation supplies design, implementation and evidence against the specification.
+
+Each refinement preserves the obligations above it. A material constituent repeats this structure where it needs its own bounded account. Work records, triage and review connect changes to the earliest affected description.
+
+Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles include the frame catalogues and Executive procedure. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
+
+The a_c interpretation represents the method's laws, results and declared maps, retaining the distinction between premises, derived rules and policy choices. Reference-frame projections select the contract and material for a task from their owning members. Interpretation and projection apply across the tiers; their fidelity is evaluated against their owners.
 
 ## Product Identity And Lineage
 
@@ -112,7 +135,7 @@ Their organisation, wording and a_c encodings may differ. Their accepted outputs
 
 ### Construction Authority
 
-Claude holds the common construction pen, the right to edit the common files. Codex reviews every common change before the product owner merges it. A review result informs the product owner's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md), which records the role and frames each activation uses, states these grants in terms of the installed 2.5.1-rc.2 release's roles and frames.
+Codex holds the common construction pen, the right to edit the common files. Common changes receive review independent of their author before the product owner accepts them. Checkpoint commits on main provide review visibility; they do not supply acceptance. A review result informs the product owner's decision. The [frame basis](REFERENCE_FRAME_BASIS.md) binds these roles and their activations under the installed 2.5.1-rc.2 release.
 
 Work is done in activations. An activation is one run of an agent in one role. There are three roles:
 
@@ -122,7 +145,7 @@ Work is done in activations. An activation is one run of an agent in one role. T
 
 C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
 
-A member restatement is one member of the previous release rewritten into a tenant's candidate. Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers.
+A member restatement supplies the successor text and the relationships required by the [standalone successor requirement](requirements/README.md#standalone-successor-requirement). Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers, with their supported dispositions. The requirement permits unchanged text; neither relocation nor rewriting alone establishes its relationships.
 
 The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose of a member restatement within its grant in four ways:
 
@@ -186,7 +209,8 @@ These are local development rules for this source project. They govern how tenan
   descendant commit, so the record is not part of the snapshot it records.
 - Review. The product owner authorises reviews between tenants. A reviewer
   reads the reviewed tenant's branch at a named commit, never its working
-  tree, and writes only in its own tenant.
+  tree, and writes the review under `.ai-workspace/comments/<reviewer>/`.
+  Review authority grants no candidate or peer-tenant write access.
 - Merge. A tenant branch merges to `main` only on the product owner's
   acceptance of the checkpoint review. The branch is deleted and its
   worktree removed after merge. An unmerged tenant branch is work in

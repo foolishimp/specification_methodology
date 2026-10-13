@@ -94,7 +94,7 @@ A categorical claim about the method, or about a construction made with it, is e
 3. Licensing laws. A construction step is admissible under the laws declared for its subject. With no law declared, only universally valid steps, which hold whatever laws the subject has, are admissible.
 4. Joins. A map between categories is defined on objects and arrows. Its functor laws, that it preserves identities and composition, are shown before it is claimed to be a functor. Conformance, equivalence and functorial preservation are distinct claims.
 5. Representation and evidence.
-   - Laws, records and maps are written in a_c.
+   - Laws, records and maps are represented in a_c, retaining which statements are premises, derived consequences or declared choices.
    - a_c, its interpretations and its carriers (the files and tools that hold it) keep separate identities.
    - Structural validation checks structure only.
    - Each claim names its evidence class: mechanically checked, established by mathematical argument, tested against an independently specified oracle, or unresolved.

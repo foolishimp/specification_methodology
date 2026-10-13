@@ -2,7 +2,7 @@
 
 The two build tenants, [Codex](codex/README.md) and [Claude](claude/README.md), each build their own candidate of the common [Product](../specification/PRODUCT.md) as documents. Their designs, prose organisation, a_c encodings and proofs may differ, within the shared meaning the common specification defines.
 
-The product owner owns the common specification (the WHAT) and its decisions. Claude holds the common construction pen, and Codex reviews common changes before the product owner merges them ([Construction Authority](../specification/PRODUCT.md#construction-authority)). Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests a shared change through the pen. It never edits the common specification, the tickets or its peer's candidate.
+The product owner owns the common specification (the WHAT) and its decisions. Codex holds the common construction pen; common changes receive review independent of their author before owner acceptance ([Construction Authority](../specification/PRODUCT.md#construction-authority)). Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests a shared change through the pen. A tenant Writer does not edit the common specification, the tickets or its peer's candidate.
 
 ## Current Task
 
@@ -30,7 +30,7 @@ The product owner authorises reviews between tenants one at a time, under Develo
 
 - reads the reviewed tenant's branch at a named commit;
 - records its expectations from the sources before opening the candidate;
-- writes only in its own tenant, for example under `reviews/`;
+- writes the review under `.ai-workspace/comments/<reviewer>/`;
 - makes no repair;
 - does not assess work it authored.
 

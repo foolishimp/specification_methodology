@@ -1,6 +1,6 @@
 # Predecessor Claims (STDO-UP-015 frontier)
 
-Status: PROPOSED on branch `common/c3-contract`; mechanical enumeration from the installed manifest, no disposition recorded. Awaits the product owner's review before merge.
+This is the common C3 claim inventory. The tenant entries record their reported dispositions and acceptance limits. Each construction activation binds the applicable entries to its exact candidate; the recorded state does not by itself accept a successor.
 
 STDO 3 is the successor of the installed `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`). Under [Successor Baseline Conservation (STDO-UP-015)](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) every predecessor claim capable of affecting the successor receives exactly one semantic disposition, and an unresolved disposition blocks qualification of the affected claim. This file is the frontier an Executive holds: the enumeration of what must be disposed, at a selected granularity, with each row's current state. Coverage: all 52 standards members of the manifest (member set SHA-256 `2f54671dfde54a6ad87347ac7190028af5e21021988247edf8068ab6248ef7e8`): the 16 Markdown bodies at heading-section granularity and the 36 compression, schema and template members at member granularity; plus the 19 auxiliary members the manifest publishes (licence, plugin, release note) at member granularity.
 

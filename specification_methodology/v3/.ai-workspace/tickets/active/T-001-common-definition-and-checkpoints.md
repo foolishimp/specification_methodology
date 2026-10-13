@@ -4,19 +4,25 @@ title: Common definition and principles-first checkpoints
 type: spike
 ticket_category: ordinary
 status: active
-goal: GOAL-001
-change_intent: establish the STDO 3 common contract and principles-first construction
-change_class: product_reprice
-re_entry_point: specification_methodology/v3/specification/PRODUCT.md
-triaged_at: 2026-10-11T04:13:29Z
+goal: GOAL-002
+change_intent: repair the revised common specification and its entry routes
+change_class: requirement_reprice
+re_entry_point: specification_methodology/v3/specification/INTENT.md
+triaged_at: 2026-10-13T14:33:25Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-11T05:55:55Z
+updated_at: 2026-10-13T14:33:25Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+Jim assigns the common construction pen to Codex and authorises repair of the revised specification:
+
+> im handing the pen back to you fix the v3 revised specification
+
+The current repair follows the [review of the revision at 698485d](../../comments/codex/20261013T141923Z_REVIEW_V3_SPECIFICATION_INTENT_AND_SEMANTICS.md). Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
 
 Jim selected Codex as the common construction pen, asked it to read and evaluate Claude's revised proposal carrying Jim's principles-first checkpoint feedback, then create the structure and documents enabling independent tenants. His instruction was:
 
@@ -26,11 +32,15 @@ This record preserves that actual setup and independent C1 preparation/attempt a
 
 ## Selected Contract
 
-Target truth: one separate stdo_3 root, installed STDO 2.5.1 RC2 builder basis, useful working common WHAT and independent Codex/Claude entry contracts.
+Target truth: a clear, consistent common specification for the next major release of Specification Methodology, in `specification_methodology/v3/`, under the installed STDO 2.5.1 RC2 builder basis. The selected two tenant lines, single result algebra, standalone successor and foundational relationships remain the construction contract.
 
-Superseded truth: no legacy method law or released bytes. Earlier planning placement suggestions are inputs, not authority over this new root.
+Preimage: main at `698485dd87cb83b875506686ca8e01a5ccedfbdb`; the review post has SHA-256 `ab536d6fcce1e4624127f950eed6acbb62a8d220810ccd14469438c41244eb7e`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-Common pen: Claude from 2026-10-12 (Codex reviews); Codex penned setup and C1. Checkpoint c91cc10b386539b301cd1a9717ec535afee50c23 preserves the corrected setup. The present administrative Writer activates the existing Codex ticket and routes its state; the following tenant Writer owns only its C1 candidate and ticket return. Executive coordinates without FS/Git mutation. Preserve existing 2.*, input posts, Axiom/Representation, stack_release.json and unrelated work.
+Triage: `requirement_reprice`, repairing the expression and consistency of existing obligations without changing the selected mission. Re-entry begins at Intent and follows its affected Product, requirement, conformance and routing statements. The fixes cover review findings F1–F5, the three listed residuals, current pen assignment and the stale C1 entry in the source-project README.
+
+Common pen: Codex. This activation is the common Writer, with effects limited to `specification/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md`, this ticket and `.ai-workspace/comments/codex/` under the v3 source root. Local checkpoint commits on main provide review visibility under Jim's recorded instruction below to commit this specification revision on main. This grant excludes tenant implementation changes, tenant activation, publication and checkpoint acceptance. Executive coordination carries no file or Git write authority.
+
+Exit evidence: readable Intent; consistent deciding contracts and entry routes; unchanged tenant and release bytes; exact builder and Product Definition verification; resolving affected links; and a frozen repair for review independent of its author. Jim's sign-off and the next tenant input snapshot remain later decisions.
 
 ## Milestones And Closure
 
@@ -49,15 +59,15 @@ Proof surface: exact Product Definition, common documents, installed basis verif
 
 Non-closure: unresolved common principles, unselected capabilities, missing independent tenant review, unknown material derivations or changed common semantics without Jim's decision. Each tenant's lifecycle remains at its own suffixed ticket.
 
-## Ready Independent Tasks
+## Historical Independent C1 Tasks
 
-[Codex](T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) were selected for separately declared C1 Writer activation; each wrote only its own design/PRINCIPLES.md and ticket state. The reciprocal C1 cross-reviews that followed were executed under the then-current grants and are historical. From 2026-10-11 all tenant work and reviews follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation): tenant branch and sparse worktree, own territory only, reviews authorised by Jim one at a time, read at a named commit and written in the reviewer's own tenant; no candidate repair or self-review is permitted. Tenant returns live in the tenant and are mirrored to these tickets by the common pen.
+[Codex](T-001-CODEX-principles.md) and [Claude](../backlog/T-001-CLAUDE-principles.md) were selected for separately declared C1 Writer activation; each wrote only its own design/PRINCIPLES.md and ticket state. The reciprocal C1 cross-reviews and their tenant destinations were the grants in force then. Current work and review placement follow [Development Isolation](../../../specification/PRODUCT.md#development-isolation).
 
-Codex's initial author activation is selected against C1-inputs-20261011-02; current author state belongs to T-001-CODEX. Consult the peer's owning ticket for its state. The C0 precondition is satisfied, and the prior -01 tuple remains retired. Neither task depends on full T-001 completion. Authoring accepts no common principle or capability. Initial peer realisations remain unread until frozen returns. Common changes return to the pen.
+Codex's initial author activation used C1-inputs-20261011-02; its record belongs to T-001-CODEX. Initial peer realisations were unread until frozen returns. These grants start no current work. The current C3 carrier is [T-002](T-002-c3-successor-construction.md).
 
 ## Common C1 Input Snapshot
 
-Snapshot ID: C1-inputs-20261011-03. Sole current tuple for activations after 2026-10-11T09:25:23Z; -02 is retired below and remains the historical input contract of both C1 initial attempts, their successors and their reviews.
+Snapshot ID: C1-inputs-20261011-03. Historical final C1 tuple, selected on 2026-10-11T09:25:23Z; it does not bind C3. -02 is retained below as the historical input contract of both C1 initial attempts, their successors and their reviews. The next C3 snapshot is recorded in T-002 after common sign-off.
 
 Input commit: `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1` on `main`. Every member hash below is read from that commit's tree (`git show 80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1:<path>`), per [Development Isolation](../../../specification/PRODUCT.md#development-isolation). This record is written in a descendant commit and is excluded from its own tuple.
 
@@ -340,3 +350,9 @@ Open decisions for Jim:
 - how a part ported from the peer is reviewed.
 
 Left unchanged: PRINCIPLES, PREDECESSOR_CLAIMS and tenant territory.
+
+### 2026-10-14: Common pen returned to Codex
+
+2026-10-13T14:33:25Z — Jim authorised the repair quoted under Owner Instruction. Codex enters the common Writer role under the Selected Contract above, after verifying the exact installed builder and Product Definition. The five review findings and three residual corrections form the repair frontier. The source-project README's live C1 route is also repaired as an affected entry path. This entry records the role and territory before those effects; no C3 execution contract or acceptance is supplied by it.
+
+Writer return for frozen review: the common repair is `candidate_ready`. Intent is reduced from 1,155 to 530 words while retaining the selected mission, foundational relationship, categorical direction, axiomatic programming, single ownership and result algebra, bounded frames, recovery and standalone successor. Product owns the detailed structure and distinguishes the candidate interpretation from external Products. The conformance cases retain authenticated judgments and add the misbound-result, unchanged-bytes invalidation and insufficient-frame discriminators. Current pen and review destinations are aligned, the source README routes to current grants, and obsolete frontier proposal status is removed. Mechanical checks: 202 affected links resolved (two tenant entry targets checked for existence only), whitespace passed, instruction files agree and their installed bootstrap blocks are unchanged, and exact builder/Product Definition verification passed. The previous review post is preserved verbatim. This local checkpoint is for review; tenant bytes, release bytes and open owner decisions are unchanged.

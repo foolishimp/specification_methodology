@@ -10,9 +10,11 @@ Both tenants are evaluated against the same independently specified expectations
 | Information and its representation differ | Agreement in structure cannot establish identical meaning or semantic fidelity. |
 | Identity is unchanged while content changes | The current state, and whether an earlier observation still applies, are considered separately. |
 | Typed producers and consumers disagree | The incompatible domain or precondition is made explicit. Fields of the same shape do not make a valid join. |
-| Required assessment A ran and failed, and required assessment B was never covered | A's failure and its citations survive, and B stays unresolved. Every planned assessment is verified as genuinely planned. B is recorded as required coverage that no planned assessment provides, not as a planned assessment that was skipped. |
+| Assessment A failed and required coverage B is uncovered | A's authenticated failure and its citations survive, and B stays unresolved. Every planned assessment's returned judgement is authenticated against its producer, subject, basis and supporting evidence. B is required coverage outside those assessments, not an omitted planned judgement. |
+| A genuinely planned assessment carries a judgement from a different subject | Plan membership does not authenticate the returned judgement. The misbound result cannot satisfy the assessment obligation. |
 | The context a task needs is interdependent and does not fit one actor | Narrowing the task lawfully, handing it to another capable actor, or a truthful stop keeps the material obligations. |
-| The basis or evidence changes | Whether affected work still applies is checked again, and unchanged supported work is kept. |
+| A material dependency changes or a new observation invalidates an earlier claim | Affected applicability and validity are checked before reuse, including when the candidate's bytes are unchanged. Demonstrably independent supported work is kept. |
+| A task packet contains relevant rules but lacks material context or authority | A rule packet alone is insufficient. The activated frame binds the contract, subject, evidence, capability and permitted effects required for the task. |
 | An interruption leaves work partly written | Recovery uses the current workspace and the applicable work state. It does not erase progress or invent a completed assessment. |
 | A parse or map succeeds | The claim stays mechanical until independently sufficient semantic and practical evidence exists. |
 | A change to work carriers or process is proposed as new law | The claimed obligation is justified by its purpose and material relation, or identified as unsupported overhead. |

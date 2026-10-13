@@ -5,12 +5,12 @@
 Three things are kept distinct:
 
 - the a_c theory, which is the calculus itself;
-- a subject's interpretation in a_c, which is how particular documents are written as axioms;
+- a subject's interpretation in a_c: a model whose symbols and constraints are bound to that subject's meaning;
 - the carriers and tools that hold and check it.
 
-This product uses the separately owned Axiom Indexer, a program that checks a_c, for later evaluation. The common method documents and each tenant's interpretation have their own identities.
+This product uses the separately owned Axiom Indexer, a program that checks a_c, for later evaluation. Each candidate owns its required method interpretation. Its documents, interpretation and encoded carrier have distinct content identities and proof boundaries; that separation does not exclude the interpretation from the candidate.
 
-The Product Definition names `../axiom_indexer/stdo_default.json`, the neighbouring Axiom Indexer Product Definition, which says where that product's source is. Its source path can change, and the definition found there does not replace the fixed dependency pin below. No installed copy of the Axiom Indexer 2.5.1-rc.2 release is selected or verified for this source project. A fixed, tagged version is available. Nothing is acquired or run until an evaluation is separately selected.
+The Product Definition's composition field names `../../axiom_indexer/stdo_default.json`, resolved relative to the v3 source root containing `stdo_3.json`. It locates the neighbouring Axiom Indexer Product Definition. Its source path can change, and the definition found there does not replace the fixed dependency pin below. No installed copy of the Axiom Indexer 2.5.1-rc.2 release is selected or verified for this source project. A fixed, tagged version is available. Nothing is acquired or run until an evaluation is separately selected.
 
 ## Directed Mechanical Dependency Relation
 
@@ -59,7 +59,7 @@ A later selected installed copy must verify exact subject membership and bytes b
 
 For each selected, frozen tenant output, keep:
 
-- the source-to-model dispositions, which record how each source clause was written in a_c;
+- the source-to-model dispositions, which record how each source clause is represented in the a_c model;
 - the signature, which is the declared vocabulary;
 - the exact program, maps and bindings;
 - reproducible mechanical results;
@@ -68,8 +68,8 @@ For each selected, frozen tenant output, keep:
 
 The installed a_c rules [AC-017 and AC-018](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity) separate two properties:
 
-- fidelity: whether the axioms mean what the source means;
-- structure: whether the axioms are well-formed.
+- fidelity: whether the model preserves the source's meaning, including its premises, consequences and declared choices;
+- structure: whether the model is well-formed under the selected checking contract.
 
 [Axiom validation](../../../../axiom_indexer/specification/requirements/REQ-P-VALIDATION.md) checks structure. Unless a separately selected contract requires it, it does not interpret every logical, operator, arity or type rule. It never proves truth, satisfiability or acceptance, that a full model satisfies the axioms, or that a theorem holds.
 
