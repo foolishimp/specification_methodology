@@ -220,3 +220,19 @@ RA4 returned for ACTIVATION at `e31a9d9`: questions 1 to 4 `satisfied` (transiti
 - B7 returned `candidate_ready`, committed `bafb3f9`. ASSURANCE and RELEASE refer to the result owners, RELEASE §9 owns the successor disposition values, and F14 and F15 are in place. Reading confirmed: each successor disposition is a claim that qualification evaluates in the core, under EXPECTATIONS ambiguity A3. Its row 402 supersedes A5a's row 402.
 - C5 (independent oracles and three new tasks: configuration, build-tenant binding, stale summary) started.
 - B3b returned `candidate_ready`, committed `2ba64b4`. TRAVERSAL refusal causes are bound to AC-007, and stop splits keep their parent's value. Ruling on its question: a basis mismatch inside a model or a qualifier record is AC-007's "mixed bases", `refusal(basis)`, which maps to `invalid_basis`. B1b (consistency repairs in AXIOMATIC_CALCULUS, TRAVERSAL, SPEC_METHOD and DESIGN_MODULE) started.
+
+2026-10-13T20:52Z — C3 returned: independent oracles for the cases below, written before any frame or run, by an actor that read no candidate text. Each copied task is byte-identical to its source.
+
+| Case | Tasks |
+|---|---|
+| C3S-01 | REFERENCE_FRAME, F-01 tasks A and B |
+| C3S-02 | AXIOMATIC_CALCULUS, F-02 task A |
+| C3S-03 | TRAVERSAL_OCCURRENCE, F-03 task F |
+
+Source of two rulings the oracles cite: on 2026-10-12, Codex's cross-family review of the Claude candidate required that:
+- TRAVERSAL `partial_effect` and `partial` map to `falsified` only on demonstrated non-attainment, and otherwise to `indeterminate`;
+- a refusal for a falsified constraint, structural constraints included, maps to `falsified`, with `invalid_basis` only for an invalid-basis refusal or a co-emitted `invalid_basis` decision.
+
+T-002-CLAUDE records both in its execution record (the entries for the Codex review and for W26, R25 and W28). B3 and B3b keep both.
+
+C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning of coverage status, and Task A's acceptable values. They are carried to the assessment step.
