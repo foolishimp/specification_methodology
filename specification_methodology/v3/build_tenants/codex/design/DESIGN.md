@@ -1,83 +1,86 @@
 # Method Structure
 
-## Boundary
+## Binding and outcome
 
-The realization implements the shared Intent, Product and requirements.
-The standards contain the method contracts. Design, review, provenance,
-conservation and qualification records remain outside the package.
-The package entry records authorship; standards begin with a title and the
-current method text.
+The common requirements determine the method's meaning and permitted outcomes.
+This tenant binds them to document construction, source comparison, frame
+projection, predicate evaluation and authorised disposition. Sequential
+composition preserves the declared subject and obligations; independent tasks
+may run concurrently only within disjoint write territories and compatible
+inputs. Effects are document edits, commits, local checker execution and
+explicitly granted decisions. The execution environment is a mixed process:
+Codex construction, separate review activations, Git worktrees, Python checkers,
+the pinned Axiom Indexer and the product owner's decisions. Byte counts measure
+selected inputs; wall time and CLI spend measure the declared process boundary.
+Unmeasured parent-session overhead remains unknown.
 
-## Ownership
+The workspace is the continuing truth surface. Actor context is a bounded
+projection acquired from its current state and authoritative external inputs.
+The method must still work after that private projection is discarded. A stale
+summary cannot override current observation. External effects need their actual
+owning observation; a local file is no proof that a remote effect did not occur.
 
-| Owner | Material responsibility | Foundation/library relation |
+## Ownership and consumers
+
+| Owning locus | Responsibility | Deciding consumers |
 |---|---|---|
-| FOUNDATIONS | Explicit premises, contextual meaning, purpose, identity, composition, finite capacity and separate judgment/authority | Owns declared premises and standing; particular rules require the stated specialization arguments. |
-| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and work/recovery and transformation-admission specializations; concrete types, policy and grants stay with method owners. |
-| AXIOMATIC_CALCULUS | Formal entities, claims, interpretations and typed calculus | Formal refinement of interpretation and conservation; mechanics remain a separate Product. |
-| REFERENCE_FRAME_METHOD | Material context, frame coverage, capability and evaluation law | Acquire/Evaluate/Conjoin over bounded responsibility. |
-| STDO_REFERENCE_FRAME_BASELINE | Optional generic specialist and Executive/Worker/Reviewer configurations | Operational instances, preserving role grants and independence. |
-| SPEC_METHOD | Goals, Intent, Product, specification, conformance and owning-layer re-entry | Purpose/WHAT governs transformations and their lawful effects. |
-| DESIGN_MODULE_METHOD | Ontology, algebra, state machine, calculus, transformation admission and computational realization | Typed construction and compositional assurance. |
-| IDENTITY_METHOD | Scoped naming, immutable coordinates and governed change | Identity is distinct from path, bytes, representation and lifecycle. |
-| ODD_METHOD and TRAVERSAL_OCCURRENCE_PROFILE | Optional graph-native and traversal relations | Domain meaning stays with its owner; traversal realizes selected computation. |
-| WORLD_MODEL_METHOD | Optional world-model objects, observations, treatments and hypotheses | State/interpretation and empirical claims remain distinct. |
-| UX_METHOD | Optional user outcomes, surfaces, journey and evidence | Interface obligations follow selected transformations and purposes. |
-| TICKET_METHOD | Selected durable work-carrier profile | Records current work and decisions without manufacturing authority. |
-| RELEASE_METHOD | Successor conservation, exact cuts, publication and adoption | Accept is distinct from release; conserved claims retain current support. |
-| GLOSSARY_GUIDE, POSTING_GUIDE, WRITING_GUIDE | Discovery, communication and artifact practice | Read models and explanations do not become competing law. |
-| Schemas, templates, compressions, plugin | Material distribution and interaction contracts | Derived views bind exact source and scope; stale projections cannot substitute for source. |
+| FOUNDATIONS: commitments | Premises and standing, scoped interpretation, authority/evidence separation | Every family's conditional argument |
+| FOUNDATIONS: result algebra | One result record, core values and conjunction; predicate and original outcome preserved | RF, a_c, work, admission, profiles, release |
+| FOUNDATIONS: workspace and context | Current material state, acquired context, validity and resumption | Library Acquire/Transform; Spec triage; frame acquisition; ticket reuse |
+| FOUNDATIONS: bounded construction | A-to-Z obligations, finite context/attention and conditional configuration | Spec construction, optional baseline, domain controllers |
+| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose as reusable responsibilities | Method family use contracts; no compulsory six-stage workflow |
+| REFERENCE_FRAME_METHOD | Frame objects, task sufficiency, evaluation contracts, configuration and diagnostic scope | All selected task frames |
+| AXIOMATIC_CALCULUS | Formal entities and a_c-specific evaluation/refinement mechanics | a_c interpretation and optional profiles |
+| SPEC_METHOD | Intent/Product/Specification/Realisation, tenant binding, triage and re-entry | Product construction and ordinary work entry |
+| DESIGN_MODULE_METHOD | Module contracts, admission and computational realisation | Implementation and integration |
+| IDENTITY_METHOD | Naming, coordinates, immutable basis and permitted identity changes | Source selection, install and release |
+| TICKET_METHOD; RELEASE_METHOD | Concrete work carriers; successor and release boundaries | Work scheduling and promotion decisions |
+| ODD; TRAVERSAL; WORLD_MODEL; UX | Additional domain choices, each with result refinement | Only explicitly adopted domain tasks |
+| STDO_REFERENCE_FRAME_BASELINE | Optional task catalogue and Executive arrangement | This construction's selected coordination; no universal role inventory |
+| Guides and distribution | Writing, discovery and faithful source projections | Humans, ordinary skills and cold task activations |
 
-Preserving stable section routes permits a complete predecessor-to-successor
-comparison. The physical members are not primitive operations. A responsibility
-frame projects the material clauses across members rather than making an actor
-interpret a whole file collection.
+Premises constrain a rule but do not choose every policy. Each material family
+states its premises, conditional consequences and separately owned choices.
+Consumers bind the shared contracts at the deciding operation. A cross-reference
+without this use relation is insufficient. Existing domain wording is retained
+where it remains its unique owner; common result/context contracts are removed
+from competing owners or made explicit refinements.
 
-## Contraction and change
+## Source contributions
 
-Consolidate explanatory mechanisms in the library while retaining distinct
-semantic determinations at their current owner. Do not combine independent
-assessment with author judgment, F11-like aggregation with acceptance, or evidence
-with permission. A new helper, frame or serialized carrier is justified only by
-a material distinction the existing contracts cannot preserve.
+Own lineage starts at 31f28f90c4a9b15243d84630fc4799024a9cd7ac and retains the
+repairs through 5b4aebb9773acd4a7027d74814772faaa17820f1. Peer reads use only the
+Claude tree at 31f28f90c4a9b15243d84630fc4799024a9cd7ac.
 
-The first repaired branch is premises -> generic transformation contract ->
-library work/recovery specialization -> particular Spec Method rules ->
-ordinary stdo-work acquisition ->
-actual task interpretation. Foundations defines the premises, the library owns
-the generic contract vocabulary, and detailed methods retain concrete policy
-and authority. This is a conditional dependency argument, not an assertion that
-all rules follow from finite capacity or that every method has been rebuilt.
+| Named peer contribution | Receiving responsibility | Adaptation and rejected overreach |
+|---|---|---|
+| ACTIVATION context construction and faithful refinement | Foundations workspace/context and bounded construction; library Acquire | Keep material closure and lawful refinement; measurement is per binding, not a universal numeric cap |
+| ACTIVATION work state and reuse | Foundations resumption and current validity | Persistent reality outlives context; no mandatory history reload or guaranteed idempotence |
+| FOUNDATIONS evidence, identity and conservation | Core result record and composition argument | Retain source, predicate and loss; no claim all choices follow from capacity |
+| PROFILES binding | Family use contracts and Spec tenant binding | Profiles add scoped policy; no generic ban on vocabulary or mandatory roles |
+| ACTIVATION/TRAVERSAL evidence-sensitive result maps | Core and domain refinement maps | Preserve non-performance and unknown effects; no green conversion by changing predicates |
 
-Transformation admission follows the same pattern: the library specialization
-states its premises, consequences and independent policy, Design Module Method
-consumes that contract at UP-016/017, and the constitutional-derivation view
-projects both the argument and its deciding consumer. UP-021 retains enclosing
-admission and standing-test ownership. Triage/carrier work has its own exact
-owner selection in the ordinary work entry; a fixture answer does not select it.
+Imported concepts are reconstructed against the new common specification, not
+used as a new base. Reviewer records distinguish source fidelity, adaptation and
+integration. Their authorship conditions and acceptance remain separately stated.
 
-Historical derivation verification uses a successor-owned immutable resource.
-It binds the original manifest and reconstructs its required exact member bytes
-by projections of successor-owned text. Original identity preimages, historical
-coordinates and external judgments remain distinct. The resource is distribution
-evidence for the existing byte predicates, not another operative corpus. Its
-materialization, inventory and checks follow the same package/source boundary.
+## Dependency and proof order
 
-This increment conserves predecessor determinations. It introduces the explicitly
-scoped foundation/library account and standalone organization required by the
-common Product. It does not delete inconvenient duties or silently supersede a
-claim whose replacement requires Jim's decision. Unresolved conservation or use
-evidence remains a residual; preservation by text is not efficacy proof.
+1. Shared state/context, result and conditional construction contracts.
+2. Core deciding families and profiles using those owners.
+3. Source-bound ordinary entry frames, formal interpretation and distribution.
+4. Frozen logical reviews and fresh actual-use trials with independent oracles.
+5. Repairs over affected dependency closure, then a frozen review return.
 
-## Practical proof
+A core-owner change affects every consumer even if its bytes do not change.
+Historical judgments are not promoted to the new cut. The predecessor frontier
+is checked row by row for coverage and meaning; automated route checks establish
+coordinates only. Categorical hypotheses remain hypotheses unless their objects,
+arrows, equality, identity, composition and preservation are demonstrated.
 
-First prove a bounded construction/recovery task with independent source-first
-assessment. Expand dependency-ready member cones, then assess each frozen member
-against its predecessor and common discriminators. Validate authentic membership,
-local routes, schema/template contracts, compression digests, permitted effects
-and reconstructed current work. Use a_c for a separately declared finite model;
-mechanical validity does not prove semantic equivalence of the complete corpus.
+## Constitutional surface
 
-The final return distinguishes constructed, mechanically checked, independently
-assessed, practically exercised, owner-accepted and released claims. It counts
-closed obligations and exposed residuals rather than files or green commands.
+Only present method law belongs in the package. Author credit is Dimitar Popov
+once at package entry. Build plans, ports, reviews, provenance, dispositions and
+qualification stay outside it. Frames are named projections of owning clauses,
+regenerated and checked when any selected owner changes.

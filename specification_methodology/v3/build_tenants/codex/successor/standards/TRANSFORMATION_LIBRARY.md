@@ -8,7 +8,7 @@ co-located, not compulsory stages, actors or runtime APIs.
 
 The contracts below are conditional on selected foundational premises and
 instance choices. Particular methods retain ownership of their concrete types,
-result algebras, applicability, adoption, admission and operation grants.
+result refinements, applicability, adoption, admission and operation grants.
 A contract definition does not supersede an owner determination or authorize
 its use.
 
@@ -31,8 +31,8 @@ semantic owner is the STDO Specification Methodology Product authority.
 Direction is source to this contract account; meanings are unchanged owner-qualified
 references, with no translation, loss, inverse or ownership transfer. The source
 context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
-Its exact source member SHA256 is
-`44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Its exact source member digest is supplied by the selected complete cut or
+frozen source inventory.
 The target has its own exact member digest supplied by the frozen activation
 or selected installed manifest. A review carrier is not an installed dependency
 and supplies no authority. An activation binds
@@ -87,8 +87,8 @@ its admitted insufficient/unknown outcome; Transform preserves the material
 relations of the selected X-to-Y contract; Evaluate judges P rather than granting
 effects; Conjoin uses the selected composite rule; Dispose chooses only from
 already permitted actions. Bind supplies their current instance coordinates.
-A single function can discharge several responsibilities. Each admitted result
-algebra and independent assessment condition stays with the particular owner.
+A single function can discharge several responsibilities. Every result uses the [core algebra](FOUNDATIONS.md#result-algebra); domain
+refinements and independent assessment conditions stay with their owners.
 
 ## Work/recovery specialization
 
@@ -134,7 +134,7 @@ commitments do not choose an admission predicate, quorum or supported topology.
 The [design admission consumer](DESIGN_MODULE_METHOD.md#admission-contract-use)
 binds this contract to its transition relation and uses the consequences to
 distinguish valid support from a shape-correct candidate lacking material basis
-or authority. Its predicate, result algebra, commit-unit decomposition and
+or authority. Its predicate, result refinement, commit-unit decomposition and
 permitted direct/composite/nested forms remain domain policy. This argument
 neither derives those choices nor creates an additional validation pass.
 
@@ -146,34 +146,33 @@ are explicit results. A name, path, cached result or available tool is no grant.
 
 ## Acquire
 
-Resolve enough authentic material for the selected operation or evaluation.
-Declare completeness, freshness, coupled invariants and interpretation. Resolve
-references when their bodies are needed. Unavailable evidence, insufficient
-context or capability returns pressure for refinement, support, re-entry or a
-truthful stop. Acquisition cannot silently drop a governing obligation.
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to the
+selected task. Bind the current subject, requirements, grant and destination;
+resolve sufficient authentic material and material dependencies; reconcile stale
+summaries with observations. Measure context where the execution binding selects
+it, and assess actual adequacy separately. If required material does not fit,
+refine under the grant, acquire a capable actor or return the applicable core
+result with the unresolved relation. Capacity does not license omission.
 
 ## Transform
 
 Construct output or perform effects within the bound contract. Preserve the
 original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated Baseline WorkerResult instance
 uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
-retains M_b_prime*/hold/gap/refusal. These are domain examples, not a common
-mandatory enum. Observe uncertain external effects
+retains M_b_prime*/hold/gap/refusal. These are original domain outcomes mapped under the core result contract. Observe uncertain external effects
 before repeating them. The worker's internal search is its HOW; it cannot widen
 the outer outcome or effect grant.
 
 ## Evaluate
 
-Judge a declared predicate on an exact subject using sufficient admissible
-evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
-or invalid_basis; externally owned compatible extensions preserve RF-012's explicit indeterminate,
-out-of-frame and invalid-basis pressure under their declared contracts. Preserve original citations and residual coverage.
-Other judgment domains retain their admitted result algebras. Where required,
-the assessor is independent of authorship. A result mints no new grant. A
-domain-owned judgment or control function may exercise acceptance, closure or
-next-action authority already bound by its contract, as in a_c admission or ODD
-evaluate_action/evaluate_next. A Baseline Reviewer instance retains only its
-source-defined evaluation authority and cannot perform a reserved owner decision.
+Apply the [core result algebra](FOUNDATIONS.md#result-algebra) to the exact
+predicate, subject and basis. Preserve the original domain outcome, performance,
+effect observations, citations and residual coverage. A domain's evaluation
+rule determines what evidence decides its predicate; it does not introduce a
+parallel result algebra. Required independent authorship remains part of that
+rule. Evaluation supplies no new operation or decision grant. A function may
+exercise decision authority already admitted by its own contract, while a
+Baseline Reviewer retains its evaluation-only grant.
 
 For an UP-020 assessment retain the assessor-disposition field's
 evidence classification alongside the predicate result. It can describe that
@@ -184,21 +183,13 @@ evidence; the actor carrying bound decision authority alone performs the authori
 
 ## Conjoin
 
-Consume results under the declared authentication, conjunction or decision rule
-on a declared common outcome. Preserve incompatible/conflicting cases so the
-owning rule can return conflict or its other admitted outcome; incompatibility
-is not a reason to silently omit a result.
-Retain each applicable known failure, its producer and citations. Retain required
-uncovered coverage separately. For an instance whose admission contract declares
-planned assessment slots, authenticate each planned slot; an omitted planned
-judgment is handled by that owner's declared admission/result rule; no generic
-falsification or rejection is inferred from absence alone. An authenticated set
-can still leave a different required responsibility uncovered. The declared
-conjunction or decision rule determines the aggregate result. A conjunctive
-whole-outcome claim requires every applicable required predicate and seam;
-unknown applicability prevents that wider conjunctive satisfaction. A declared
-disjunctive rule retains its own semantics. No result may silently erase a
-known failure or uncovered responsibility from the evidence it consumed.
+Apply [Result conjunction](FOUNDATIONS.md#result-conjunction) to the selected
+composite predicate, required coverage and material joins. Authenticate each
+contribution and retain its predicate, original outcome and supporting evidence.
+Known failure and required uncovered coverage both survive the aggregate. A
+planned but absent judgment is not confused with uncovered coverage outside an
+authenticated plan. Another declared logical operator uses the same core result
+record on its own predicate; it cannot silently weaken conjunction.
 
 ## Dispose
 
@@ -210,7 +201,7 @@ Accept binds an exact checkpoint; it does not imply release. A Product-outcome
 acceptance interval is separately governed by
 [UP-013](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
 
-Other instances retain their own result domains. [Ticket Method](TICKET_METHOD.md)
+Other instances retain their original domain classifications as core refinements. [Ticket Method](TICKET_METHOD.md)
 owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
 owns conserved/superseded/intentionally removed/not applicable. An actor carrying
 that contract's bound operation authority may record condition-based closure
@@ -251,36 +242,23 @@ composition obligation nor a universal category theorem for arbitrary software.
 
 ## Recovery law
 
-[UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) owns the
-construction, progress, checkpoint and proof determinations summarized here.
-[Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment)
-owns retained-fact applicability, invalidation before reliance, unknown effect
-handling and recomputation of the wider frontier where independence is unproved.
-After interruption, bind the same work identity to its observed current state.
-Reassess materially affected premises and retain applicable work. Where
-independence is unproved, recompute the governing wider frontier. Reconstruct
-needed authority and observations from their declared owners, not private memory.
-Uncertainty about effects, freshness or evidence remains explicit. Rejected or
-superseded construction is churn. Repeating an unchanged failed
-relation without a supported causal change is a prohibited retry practice;
-it is not the definition of all churn.
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) before
+selecting the next dependent action. Bind current work identity, observe changed
+material state, retain applicable work and reconsider affected support. Unknown
+effects stay unknown until sufficiently observed or reconciled. Private context
+is replaceable; the workspace survives the actor.
 
-Accepted material movement toward the selected Product is progress. Prerequisite
-work names the Product obligation it enables. Preservation and repeated proof
-are evidence, not new Product progress. Discovered distance revises the forecast;
-it is not negative progress. File, event, commit and token volume do not measure
-progress. A proposed construction restart identifies why repair is insufficient, what
-survives and which causal assumptions change under UP-020. This is distinct from
-process resumption over retained current work. Deletion, archival, quarantine
-and salvage mechanics remain consumer-owned under UP-013; this summary imposes
-no additional discard law. Each actual operation still needs its existing grant.
+[Bounded construction](FOUNDATIONS.md#bounded-construction) supplies progress,
+stop and total-handling distinctions. Spec Method binds Product progress and
+owning-layer re-entry; Ticket Method binds carrier reuse; adopted profiles bind
+their additional recovery duties. A failed relation needs a causal repair before
+retry. A process restart by itself is an acquisition event, not proof that a
+construction restart or workspace deletion is required.
 
-Use the cheapest focused proof that can falsify the active relation. Whole-
-candidate qualification belongs at a declared boundary unless affected risk
-requires it earlier. For a durable or reconstructable authority claim, where loss
-of incidental process state is a material counterexample, destroy or exclude
-that state and compare reconstructed semantic outcomes; a same-
-process check cannot prove durable authority.
+Use the cheapest focused proof capable of falsifying the affected relation.
+For a claim of continuity independent of private actor state, exclude that state
+and compare the reconstructed decision with current material reality. A
+same-context exercise cannot establish that claim.
 
 ## Cost and contraction
 
