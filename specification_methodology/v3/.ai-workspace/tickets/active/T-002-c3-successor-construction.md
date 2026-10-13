@@ -10,13 +10,14 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-12T01:32:20Z
+updated_at: 2026-10-13T09:34:52Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
 dependencies: [T-001]
 links:
   - specification/PRODUCT.md#c3-construction-contract
+  - specification/PRODUCT.md#cross-synthesis
   - specification/requirements/PREDECESSOR_CLAIMS.md
   - stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition
   - stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule
@@ -45,7 +46,7 @@ Performed by the common pen on 2026-10-12T01:32:20Z against [Universal Intake Tr
 
 ## Selected Contract
 
-Target truth: for each tenant, one candidate for STDO Specification Methodology v3.0.0 consisting of its foundational axioms and the full v2.5.1-rc.2 corpus restated on them; every row of the frontier carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; projected reference frames are the activation unit; each member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint.
+Target truth: for each tenant, one candidate for STDO Specification Methodology v3.0.0 consisting of its foundational axioms and the full v2.5.1-rc.2 corpus restated on them; every row of the frontier carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; projected reference frames are the activation unit; each member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
 
 Superseded truth: the first-pass reading of STDO 3 as a thin core that conserves the predecessor by reference; the goal that the whole corpus fits one bounded activation; every first-pass standing claim and self-declared completion. The first pass remains on `main` as history.
 
@@ -103,7 +104,7 @@ Selected by dependency and by what the first pass lost; the Executive may reorde
 | 9 | GLOSSARY_GUIDE, POSTING_GUIDE, WRITING_GUIDE, README | 35 |
 | 10 | compressions, schemas, templates, plugin, licence, release note | 55 |
 
-The first activation of each tenant also returns the tenant's member list and the map from every rc.2 member to the tenant members that receive it; the map is reviewed with member 1.
+The first activation of each tenant also returns the tenant's member list and the map from every rc.2 member to the tenant members that receive it; the map is reviewed with member 1. A part of the peer candidate enters a member's cone only as a named contribution under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
 
 ## Milestones And Closure
 
@@ -128,3 +129,7 @@ To be bound by the pen in the first descendant commit after this revision reache
 ## Execution Record
 
 2026-10-12T01:32:20Z — Ticket drafted by the common pen (Claude) on branch `common/c3-executive-setup` on Jim's approval; intake triage performed as recorded above; GOAL-002 added; tenant-local duplicates T-002-CLAUDE and T-002-CODEX drafted in the backlog lane with their first execution contracts `drafted`. No Executive actor is bound, nothing is admitted, no construction has started. Awaits Codex review and Jim's merge.
+
+2026-10-13T09:34:52Z — Jim's decisions of 2026-10-13, recorded in [T-001](T-001-common-definition-and-checkpoints.md#execution-record), amend this ticket on branch `common/v3-direction-synthesis`: each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis), with Porting reads in both directions. Target truth and the sequencing note name that rule; the per-tenant structure is unchanged. Acceptance criterion 5 gains four conformance discriminators (single result algebra and categorical claims) for both lines. Affected span to re-prove in each line: frames whose task returns a result without the core algebra or its profile mapping, and any member whose results define values outside the core. Evidence that still satisfies its criteria stays valid. Open before the first cone with a ported part is accepted: how that part is reviewed, since the default cross-family Reviewer is its source author. The pen updates T-002-CLAUDE and T-002-CODEX after merge. No actor is bound and nothing is admitted. Awaits Codex review and Jim's merge.
+
+2026-10-13T10:35:58Z — The revision under review adds the [single ownership requirement](../../../specification/requirements/README.md#single-ownership-requirement) and a fifth conformance discriminator ("Two loci in one candidate decide the same question"), recorded in [T-001](T-001-common-definition-and-checkpoints.md#execution-record). Affected span to re-prove in each line under acceptance criterion 5: every member, since any member may decide a question owned elsewhere in the same candidate; and every projected frame, whose clause copies must name their owning locus. Evidence that still satisfies its criteria stays valid. No actor is bound and nothing is admitted.

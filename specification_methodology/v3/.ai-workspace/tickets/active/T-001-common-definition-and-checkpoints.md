@@ -189,3 +189,100 @@ Executive independently confirmed all ten basis-relative targets, the local rela
 2026-10-12T00:54:17Z — Codex reviewed `83b6f67` (layout) and `e8a2409` (contract): mechanics sound, changes required in worker-facing instructions. Jim assigned the common pen to Claude with Codex reviewing. On `common/c3-contract`, now containing the layout merge `52120e5`: Development Isolation cones, the Inputs path, the identity table's predecessor path and INTENT's construction directory corrected to the `specification_methodology/v2`/`v3` layout; the pen declaration updated in PRODUCT Construction Authority, the frame basis (common definition and C3 ledger Writer rows), this ticket's Selected Contract and re-entry point, and the v3 CLAUDE.md/AGENTS.md; the apps-level AGENTS.md aligned with its CLAUDE.md to the post-merge layout. Snapshot tables and earlier entries keep their historical paths. Still unmerged; awaiting Codex review and Jim's merge.
 
 2026-10-12T01:32:20Z — Jim approved the next-steps plan with the condition that the work be done under the STDO 2.5.1 Executive process. The pen recorded GOAL-002, closed C2 and selected C3 in GOALS, marked the contract accepted as configuration of the installed engagement, corrected its work-carrier rule to TICKET_METHOD, and drafted T-002 with tenant duplicates T-002-CLAUDE and T-002-CODEX. Executive and Reviewer actors remain unbound; nothing is admitted. On branch `common/c3-executive-setup`, awaiting Codex review and Jim's merge.
+
+2026-10-13T07:27:00Z — Jim's instructions of 2026-10-13, after the two cross-assessments and two direct comparisons of the candidates at `31f28f9`: "consolidation wins over discipline"; "single algebra is what ive been asking for all along, should it be entrenched in product md so i dont get drift"; and, citing the [categorical groundwork strategy](../../comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#recommended-action), "i want to incorporate this plan … which takes an even stronger stance, synthesis all three, with the current claude v3 work as baseline". The pen reads "all three" as the categorical plan, the consolidated successor line on the Claude baseline with Codex contributions, and the single result algebra. The other plausible reading, the Claude candidate, the Codex candidate and the strategy, changes the same files in the same way. Intake triage per Universal Intake Triage:
+
+- Substantive: yes; the method's direction, the successor's construction line and the result law change.
+- Boundary: common WHAT, namely INTENT, PRODUCT, `requirements/README.md`, `conformance/README.md`, REFERENCE_FRAME_BASIS (its C3 rows configure one line) and GOALS, plus the T-001 and T-002 ledgers. No tenant territory is edited.
+- Change class: `intent_reprice`, re-entering at INTENT.md. The categorical direction, axiomatic programming as the computational model, the demonstration standard, one consolidated line and one result algebra are direction. The change flows to Product (Result Algebra, Categorical Construction, Successor Line, the C3 contract amendment and the open owner decisions), to requirements (the single result algebra requirement, which answers the question on unifying RF-012 and AC-007 that was carried to C2 at C1 closure and left unanswered when C2 closed, and the categorical demonstration standard) and to conformance (four discriminators).
+- Downstream to re-prove: acceptance criterion 5 gains those discriminators while C3 is under way. Frames whose task returns a result without the core algebra or its profile mapping must be re-projected and re-proved. Results defined outside the core must be refined into it. Evidence that still satisfies its criteria stays valid. The Codex tenant line changes role at merge, from a separate candidate to contribution and review.
+- Release scope: none.
+
+Codex's direct comparison recommended fixing both candidates and running a controlled comparison before choosing, with Codex's carried corpus as the synthesis base. Jim's decision supersedes it for the base. The comparison's seam table (one owner per shared relation; the predicate and domain outcome kept with a common result; availability never becoming acceptance) is carried into the requirement. [Codex's critique](../../comments/codex/20261013T074253Z_REVIEW_DIRECT_COMPARISON_SYNTHESIS_RECOMMENDATION.md) of the Claude comparison showed that Jim had already selected the reading of "restated on the axioms" for the comparison. The draft writes that reading into the standalone successor requirement for C3, and records that relocation alone is not supersession. Not decided here and left open in the Product: the steel thread's carrier and envelope, successor identity and packaging, and the Executive and Reviewer actors. Drafted on branch `common/v3-direction-synthesis` in worktree `../specification_methodology-common`; nothing is self-accepted. Awaits Codex review and Jim's merge.
+
+2026-10-13T08:05:00Z — [Codex's critique](../../comments/codex/20261013T074253Z_REVIEW_DIRECT_COMPARISON_SYNTHESIS_RECOMMENDATION.md#revised-recommendation) recommended a bounded repair and comparison round before selecting the base and held a lower-change Codex base to be a plausible provisional choice. Jim answered: "i dont want a codex base if i had said that i was incorrect". The base stays the Claude tenant candidate and is not subject to that round. A defect found in the base is repaired in the base by lawful re-entry, with contributor parts entering as named contributions. The reading of "restated on the axioms" Jim selected stands; it does not choose a base. The pen amended the Product's Contributor row to say the Codex candidate is not a base candidate, and the GOALS revision record. Still open: confirmation of the single result algebra, Porting reads and K2-for-C3 attributions, and the commit sequence.
+
+2026-10-13T09:34:52Z — Jim's further instructions: "i will allow each codebase to synthesis onto their own the best aspects of the other", then "we will do it in two steps 1. update the specifications -> product, requirements as you suggested which is aligned on my requirements". This replaces the one-line framing of the two entries above. Neither tenant line becomes a contributor to the other. Each keeps its own base and takes named parts of the other, and the Claude line is not rebuilt on the Codex candidate. The pen revised the draft on the same branch:
+
+- INTENT Direction, the PRODUCT status, boundary and identity lines, the C3 contract, REFERENCE_FRAME_BASIS, GOAL-002 and T-002 return to per-tenant wording.
+- The Product's Successor Line section is replaced by [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis), one row per line. Porting reads run in both directions.
+- The categorical direction, the demonstration standard, the single result algebra requirement and its C3 contract lines, the conformance discriminators, the reading of "restated on the axioms" for C3 and the rule that relocation is not supersession are kept. Jim's "as you suggested which is aligned on my requirements" confirms them.
+- Added as an open owner decision: how a ported part is reviewed, since the default cross-family Reviewer is the part's source author and the C3 Independence rule forbids a Reviewer assessing its own authorship.
+
+This revision is the specification update. The tenant synthesis follows it, under T-002-CLAUDE and T-002-CODEX once actors are bound. Awaits Codex review and Jim's merge.
+
+2026-10-13T09:58:00Z — Jim: "to confirm 1. create the new unified specification, we will review and sign off on it". The pen reads "the new unified specification" as the common specification on this branch: one WHAT and one result algebra governing both tenant lines. On that instruction the pen commits the revision on `common/v3-direction-synthesis` as the review subject, after committing the five input posts it links to on `main`. The PROPOSED markers stay until Jim signs off; the tenant synthesis is not started.
+
+2026-10-13T10:35:58Z — Jim, on the Intent at `e96be6f`: "from intent this is a meaningless statement -- Recover existing STDO principles and ABG lessons, then distinguish general foundations, the particular Spec Method, and domain or operational realisations. Reduce repeated interpretation and competing semantic ownership while retaining material distinctions." Offered a replacement, he selected "One-owner law (Recommended)", whose text is: "Every determination of the method has one owner. Foundations own what holds for any method. Spec Method is one method built on them. A domain or operational profile owns only its own bindings. A lower tier refers to or refines an owner's determination; it never defines a second one." He then quoted the Intent's lineage paragraph ("This scope constructs v3.0.0 of the STDO Specification Methodology, continuing the existing product line; … A route to the predecessor is not restatement.") and said: "i dont want abstract references to past projects, the intent is a clear statement of what we are doing, its the mission statement". Intake triage per Universal Intake Triage:
+
+- Substantive: yes; the Intent is rewritten as a mission statement and a single ownership law is added.
+- Boundary: INTENT, PRODUCT (boundary paragraphs), `requirements/README.md` (new Single Ownership Requirement; the result algebra purpose line), `conformance/README.md` (one discriminator), GOALS and the T-001 and T-002 ledgers.
+- Change class: `intent_reprice`, re-entering at INTENT.md, within the revision under review on this branch.
+- Downstream to re-prove: acceptance criterion 5 gains a fifth discriminator, which applies to every member of both candidates. A member that decides a question already owned elsewhere in the same candidate must refer to or refine the owner, and a frame's copy of a clause must name its owning locus.
+- Release scope: none.
+
+Each sentence removed from the Intent, and where its content is owned:
+
+| Removed Intent sentence | Owning locus or disposition |
+|---|---|
+| Recover existing STDO principles and ABG lessons | dropped: C1 history; C1 closed 2026-10-11 |
+| distinguish general foundations, the particular Spec Method, and domain or operational realisations | the Intent's one-owner paragraph; PRODUCT boundary and tier obligations |
+| Reduce repeated interpretation and competing semantic ownership while retaining material distinctions | the Intent's one-owner paragraph; the [single ownership requirement](../../../specification/requirements/README.md#single-ownership-requirement) |
+| This scope constructs v3.0.0 …, continuing the existing product line | the Mission's first sentence; [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| `specification_methodology/v3/` … beside … `specification_methodology/v2/` | PRODUCT identity, construction scope row |
+| The predecessor is the installed v2.5.1-rc.2 cut | PRODUCT boundary, second paragraph |
+| UP-015's four dispositions | [successor disposition requirement](../../../specification/requirements/README.md#successor-disposition-requirement) |
+| the successor stands alone; every conserved claim restated | the Mission's axioms-first sentence; [standalone successor requirement](../../../specification/requirements/README.md#standalone-successor-requirement) |
+| axioms first, then the full predecessor corpus restated | the Mission's axioms-first sentence; standalone successor requirement |
+| The corpus may be as large as the law requires | PRODUCT boundary, second paragraph (moved; it had no other owner) |
+| A finite actor is activated on a projected reference frame, never the corpus | PRODUCT boundary, second paragraph; C3 contract, activation unit |
+| A route to the predecessor is not restatement | standalone successor requirement |
+| The methodology is implemented as documents; a common contract supports independent tenant designs | PRODUCT boundary ("realised as documents"; "one common WHAT"); the Direction keeps one sentence on the two candidates |
+| Members are reviewed across actor families | C3 contract, Independence |
+| Intent → Product → Specification → Realisation recurs | the recursive Product taxonomy recovered under [P3](../../../specification/requirements/PRINCIPLES.md#p3-identity-state-and-representation), restated in each candidate's Spec Method tier |
+| Orthogonal interpretations do not become consecutive workflow stages | PRODUCT boundary ("orthogonal concerns") |
+| Deep review of principles precedes capability selection | dropped: C1 and C2 history; the Checkpoints section owns the order |
+| Observations from later actual use determine lawful repair and re-entry | the Spec Method tier's change classes and re-entry (tier obligations) |
+| Incomplete knowledge, failure and interruption must have truthful dispositions within selected authority | [P5](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) and [P6](../../../specification/requirements/PRINCIPLES.md#p6-justified-claims-and-separate-authority); result algebra items 3 to 5 |
+
+The Intent keeps the categorical paragraph, the Demonstration Standard, the result algebra sentence, the steel-thread paragraph and the Standing section; "installed method" and "predecessor corpus" are named as STDO 2.5.1. The Purpose heading becomes Mission, and the result algebra requirement's purpose line now links there. Committed on `common/v3-direction-synthesis` as part of the revision under review; the PROPOSED markers stay until Jim signs off.
+
+2026-10-13T11:07:29Z — Jim, on the Intent at `a47bf0e`: "i dont want to meention v3.0.0 I dont need to call it STDO - do you even know what it stands for? articulate what we are trying to achieve fully, what the product is at a high level, etc." (STDO stands for Specification, Ticketing, Design and Outcome-Driven Development, per the installed SPEC_METHOD's method identity.) The pen rewrote the Intent within the same `intent_reprice`. It now states the mission, the problem, the finite actors and their outer contract, what the product is and what it achieves, drawn from Jim's [working Product definition of 2026-10-06](../../../../v2/.ai-workspace/comments/codex/20261006T010215Z_STRATEGY_STDO_3_0_WORKING_PRODUCT_DEFINITION.md#working-product-statement) and his categorical strategy. Jim's own wording is kept for the one-owner paragraph, the result algebra sentence, the categorical paragraph and the Demonstration Standard. Removed from the Intent, and where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| the target version name | [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| the predecessor version name | PRODUCT boundary, second paragraph |
+| the builder ("Installed … RC2 governs its construction") | T-002 Product-Chain Basis; the Intent's Direction keeps the unnamed compiler relation |
+| the sentence on the two tenant candidates | [PRODUCT, Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis) |
+| "This is a working source-project definition" | PRODUCT status line |
+
+The requirement links that pointed to the Intent's Mission now point to its "What The Product Is" section. PRODUCT still uses "STDO 3" and the v3.0.0 identity Jim decided on 2026-10-12; it is unchanged pending his word.
+
+2026-10-13T11:23:42Z — Jim: "this is a product definiton, dont use Jim - does apple tell you Steve", then "why do i need standing in my intent - the document is the standing unless there is something else". The pen replaced every naming of Jim in the product definition surfaces under `specification/` with the role "the product owner": INTENT, PRODUCT, GOALS, REFERENCE_FRAME_BASIS, and requirements README, PRINCIPLES, A_C_DEPENDENCY and PREDECESSOR_CLAIMS; 72 occurrences, wording only, with no change to any decision or its date. The Intent's Standing section is removed. Its content is owned elsewhere: acceptance and decision authority in [PRODUCT, construction authority](../../../specification/PRODUCT.md#construction-authority); release and adoption state in [GOALS](../../../specification/GOALS.md); the limit on categorical claims in the Intent's Demonstration Standard. Tickets, posts and the bootstrap instruction files are work records and keep the owner's name.
+
+2026-10-13T11:32:27Z — Asked whether PRODUCT should also drop "STDO 3" and v3.0.0, Jim answered: "if you are asking I havent established the tone? check the writing guide for STDO 2.5.1 ( which was a conveinient compression of specification ticket design outcome - as abbreviations of the major methods". The pen applied the installed [WRITING_GUIDE](stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md) to the product definition: present-tense live truth, no narrated transitions, no stale law, version labels only for immutable release facts and selector bindings.
+
+- PRODUCT is titled "Product". Its product sections come first: boundary, identity, result algebra, categorical construction, and dependencies and acceptance. The source project's construction (tenants, construction authority, development isolation, cross-synthesis, checkpoints and the C3 contract) sits under one "Source Project Construction" heading. Every section heading keeps its text, so inbound anchors resolve.
+- The identity table states the release as the next major release on the existing `specification_methodology` line; the version label and the product acronym are gone from the prose. `stdo_3.json`'s display name changes to match; identifiers are unchanged, and `--verify` passes.
+- Removed, with where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| status line; "Selected/Decided/Allowed by … on …"; PROPOSED and "awaiting review" markers; "Amended on …"; "(accepted …; corrected to …)" | history: GOALS revision record and this ticket; review state: GOALS rows |
+| "Codex held the common construction pen for setup and C1" | history: this ticket |
+| the C1 authorisation paragraphs and the Shared Construction Contract | history: GOALS (C1 closed 2026-10-11) and PRINCIPLES C1 Disposition; the live sentences (tenants, common WHAT, review results, release selection) kept once under Source Project Construction |
+| the C0 to C2 checkpoint narrative | GOALS checkpoint rows |
+| DECIDED items in Open Owner Decisions | the sections that state them: C3 contract (audiences and criteria), standalone successor requirement (restated on the axioms), identity table (lineage and layout) |
+| the withdrawn `rc/stdo_3/3.0.0` proposal | history: this ticket |
+| "No Axiom RC2 Product Install … C1 needs source recovery" | A_C_DEPENDENCY |
+| "Runnable cases … are selected at C2" | stale; the discriminators are C3 acceptance criterion 5 |
+| duplicate statements that release selection is the product owner's (three places) | kept once, Source Project Construction |
+
+- REFERENCE_FRAME_BASIS: title, subject and authority rows, and the "Setup standing" row lose their C1 and version wording. The C1 activation rows are replaced by one "Common definition" row in the activation table.
+- requirements README: the "Source" lines keep their source link and lose decision dates and PROPOSED markers. The stale C1/C2 intro is removed. The claim that the local axiom arrays are empty, which was false since the definition carries two local axioms, now names them.
+- conformance README: the C1/C2 status line becomes the C3 criterion-5 binding.
+- CAPABILITIES: the C1/C2 status is replaced. The graceful-totality thread candidate is superseded by the categorical steel thread.
+- GOALS: the title and the product naming in GOAL-002, the C3 row and open decisions are changed. Dated state and the revision record are GOALS' purpose and stay.
+- Left unchanged: PRINCIPLES (the accepted C1 record) and PREDECESSOR_CLAIMS (frontier data). Both still use C1 and version wording that belongs to their records.
+

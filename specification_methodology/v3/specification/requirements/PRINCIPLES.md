@@ -88,7 +88,7 @@ Categorical equivalence, universal algorithmic meaning, stronger Markov properti
 
 ## C1 Disposition
 
-C1 closed 2026-10-11 by Jim's decision. Tenant C1 realisations may differ while
+C1 closed 2026-10-11 by the product owner's decision. Tenant C1 realisations may differ while
 answering these questions; each is reviewed and accepted on its own. Accepted
 at closure, both at input commit `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1`:
 
@@ -101,7 +101,7 @@ at closure, both at input commit `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1`:
   Claude's source-first review of the initial candidate and one repair
   successor.
 
-Post-repair confirmation checks were waived by Jim. Both realisations hold
+Post-repair confirmation checks were waived by the product owner. Both realisations hold
 that conservation is conditional on a selected outer contract and faithful
 refinement, not on finite capacity alone. A merged synthesis exists as
 commentary only (`.ai-workspace/comments/claude/`, SYNTHESIS post) and is a C2
