@@ -1,0 +1,743 @@
+{
+  "kind": "R1-R10-selected-interpretation-repair",
+  "source_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "exact_changed_clauses": [
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:acquisition",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:frame"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:context"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:grant"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:workspace-truth"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-capacity"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:outer-preservation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "bounded operation is activated"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "include current subject and known material dependencies; a rule packet without its subject, an inaccessible digest or an unsupported stale summary is insufficient; partial projection, sparse checkout and an empty record prove no authoritative absence; acquire the owner or retain indeterminacy; exclude irrelevant content unless needed to establish irrelevance; decomposition cannot drop material outer obligations to meet capacity"
+        }
+      ],
+      "statement": "acquire current task, subject, destination, grant, relevant observation and known material dependencies directly or through declared inputs",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#bounded-construction",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#workspace-and-context"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:allocation",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:configuration"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:frame"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-capacity"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-authority"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:outer-preservation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "any fixed or adaptive allocation or reconfiguration is selected"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "every allocation preserves material dependencies, outstanding obligations, observed and uncertain effects, admitted authority and required independence; functional, communication, authority and evaluation dependencies are distinct; no unique topology follows from capacity; an optimality claim states objective, constraints, comparison scope and evidence"
+        }
+      ],
+      "statement": "A configuration allocates operations and information to capable actors and\ndeclares the material dependencies between their frames. It assigns effects\nonly within grants the allocator holds and may delegate. Its existing design\nor frame record explains the allocation against operations, dependencies,\ncapabilities, assurance, resource limits and failure assumptions.\nFinite context and attention, actor fallibility, communication costs and required\nassurance constrain that allocation. They do not uniquely derive a hierarchy\nor a fixed inventory of roles. An adequate configuration can use one actor,\npeers, a hierarchy or supported adaptive allocation.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#configuration"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:composite-invalid",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:evidence"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:authentication"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "composite subject or governing basis cannot be interpreted"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "declare once whether each relation is an admission condition or required material join; failed admission prevents interpretation while a false join falsifies an admitted conjunction; retain component failure without falsely assigning the invalid aggregate scope The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."
+        }
+      ],
+      "statement": "aggregate invalid_basis, with independently valid component failures and their scope exposed",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:composition-order",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:transition"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:conjunction-rest"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-composition"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "sequential operations compose, results are regrouped or operations are reordered"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "Sequential composition records an unreturned dependent evaluation as an absent\nslot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required\nleaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure\nhidden by the grouping. On that fixed domain, retained component sets combine\nby union, the conjunction precedence is associative, and the effect join over\nnormalized disjoint parts is associative. This grants no associativity to an\narbitrary declared operator; regrouping it requires preservation of the same\nouter predicate and its own demonstrated associativity law. An invalid\nintermediate join is a failed premise of that rewrite, not evidence that every\narbitrary grouping is equivalent. Reordering\noperations additionally needs an effect-independence law; associativity alone\nsupplies no such permission."
+        }
+      ],
+      "statement": "Sequential operations compose under their applicable owning contracts:\n[UP-016/017](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)\nfor design composition and [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)\nwithin a_c. Their returned result applies the operator rule above to the\ndeclared outer predicate using\nits preservation argument and the retained component results. For a pipeline\nwhose contract requires every stage postcondition, this is the conjunction\nabove; a recovery path need not require a failed earlier test to become true.\nUnexecuted stages remain coverage facts, with no invented evaluations. A\nsequence without an established outer interpretation or join returns the\napplicable unresolved or invalid-basis result rather than a guessed success.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition",
+        "repo://codex-v3/successor/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:conjunction-failure",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:obligation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:evidence"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:authentication"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:applicability"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "composite predicate/basis is interpretable and a required applicable predicate or material join is authentically falsified"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "an invalid contribution cannot erase an independently authenticated failure The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."
+        }
+      ],
+      "statement": "aggregate verdict=falsified; retain its producer/citations plus all other uncovered coverage and uncertainty",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:conjunction-rest",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:obligation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:authentication"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:conjunction-failure"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:effect-join"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "interpretable composite has no authenticated applicable falsification"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "An empty list proves nothing unless the declared required set is established as empty. The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."
+        }
+      ],
+      "statement": "For an interpretable composite with no authenticated applicable falsification: an invalid required basis yields invalid_basis; otherwise a required out-of-frame judgment yields out_of_frame; otherwise unresolved applicability, missing evaluation, an undecidable predicate or undecided material join yields indeterminate. Satisfied requires every applicable obligation and material join authentically satisfied, with coverage itself established, subject also to the declared effect dependencies. Effect uncertainty prevents satisfaction where the predicate requires a known effect state. An unrelated effect does not automatically invalidate a different predicate; the dependency relation must justify its relevance.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:coordinator",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "additional domain policy"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:configuration"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:obligation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:allocation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:independence"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:acquisition"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-authority"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "the consumer adopts and lawfully activates the optional task-based Executive arrangement"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "this is additional profile policy, not core topology or authority; configuration preservation applies to every arrangement independently of this optional Executive"
+        }
+      ],
+      "statement": "the profile owns its long-term frontier/results procedure and bounded evaluation choices under its declared grants",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#configuration",
+        "repo://codex-v3/successor/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:effect-join",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:effect"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:effect-observation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:authentication"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "observations combine over a declared composite effect scope"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "Conflicting or insufficient observations leave the part unknown. Retained ordering is not itself a selection or supersession rule. Temporal stage labels are not joined until mapped to the observed state of each part at the composite boundary."
+        }
+      ],
+      "statement": "The composite declares its\neffect boundary and the selected effect parts within it. First resolve a current\nobservation for each part, retaining the contributing observations, identities,\nordering and any supported supersession. A later timestamp alone is no\nsupersession argument. Conflicting or insufficient observations leave the part\nunknown. Normalize every material possibly affected part, including one owned\nby an absent evaluation slot, through the effect-observation rule in\n[Result algebra](#result-algebra). That rule distinguishes a requested part\nthat did not start from an unrequested possible part observed not to begin.\nThe composite supplies no different classification for either case.\n\nSequential stages can affect the same part. Their local completion labels are\nnot inputs to the composite join until mapped onto that part's observed state\nat the composite boundary. A completed deployment followed by its completed\nrollback is reverted for the deployment effect; a subsequent completed\nreapplication is completed there. The historical rollback remains evidence.\nThe declarations retain every material external part, including irreversible\nones; a local reversal cannot silently remove them from the scope.\n\nOver the resulting disjoint part observations: any unknown gives unknown;\nall not_requested gives not_requested; completed with only completed or\nnot_requested gives completed; not_started with only not_started or\nnot_requested gives not_started; reverted with only reverted, not_started or\nnot_requested gives reverted; every remaining fully observed mixture gives\npartial. Retain each observation's part and contributing components. The combining\noperation's own lack of mutation cannot label an effectful composite not_requested.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:effect-observation",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:effect"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:result-binding"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-interpretation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "an effect observation is reported on a boundary containing every material part the operation may have affected under its supported operating model and any observed departure, whether requested or unintended"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "These source conditions apply to every material possible part, including an unintended part of a nominally read-only operation; the effect observation is independent of the predicate verdict."
+        }
+      ],
+      "statement": "An effect observation is `not_requested`, `not_started`, `completed`, `partial`,\n`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation\nboundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including\nan authenticated rejection before mutation. Transport dispatch alone proves\nneither effect completion nor absence; `unknown` includes a lost acknowledgment\nafter possible execution.\n`reverted` means that at least one part began and every begun part is observed to have been reversed within\nthe declared boundary, with the reversal and any unstarted remainder retained\nas evidence. For every effect value, the boundary includes each material part\nthe operation may have affected under its supported operating model and any\nobserved departure, whether requested or unintended. Irreversible messages or\nother material external effects cannot be omitted to improve a result.\n`partial` means an observed\ncompleted part and an observed unexecuted or reverted remainder.\nIf any material remainder has unknown completion, the state is `unknown`,\nretaining the completed parts as evidence. An effect can be completed while\nthe intended product outcome is falsified.\nAn empty local log or discarded context does not establish no effect.\n`not_requested` states an established effect-free scope under that operating\nmodel; lack of a request alone is insufficient. A material possible unintended\neffect without sufficient observation is `unknown`. If observation establishes\nthat an unrequested possible part did not begin, it contributes `not_requested`\nat this boundary, retaining that observation and any earlier uncertainty.\nIt is not an uncompleted requested remainder. A requested part observed not to\nbegin remains `not_started`.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:logical-operator",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:predicate"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:authentication"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:effect-join"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "a logical operator combines results"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "when the combining evaluation is applied it is performed without changing components; authentic truth or falsity decides the declared outer predicate only after wellformedness is established; otherwise material deciding dependencies retain invalid_basis then out_of_frame then indeterminate; retain failed leaves and never pass negation, disjunction or fallback off as conjunction The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."
+        }
+      ],
+      "statement": "truth and falsity conditions are disjoint and exhaustive on fully decided admitted leaves and required joins; overlapping, incomplete or uninterpretable declarations are invalid_basis; unresolved wellformedness is indeterminate and supplies neither satisfaction nor falsification, preserving independently valid leaves",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:nonperformance",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:predicate"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:result-binding"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "a result is originated, reported, projected or consumed"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "retain observed extent, interruption and conclusion separately; an absent return establishes neither nonperformance nor an inconclusive evaluation; missing judgments remain coverage slots; a precondition is evidence unless separately required by the plan; an admission predicate cannot silently replace the downstream predicate Dispatch or admission alone does not establish performance. The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."
+        }
+      ],
+      "statement": "evidence establishing undertaking gives performed even if interrupted or inadequate; evidence establishing no undertaking gives not_performed; undertaking not established gives unconfirmed",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:performance-compatibility",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:result-binding"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "a core result is originated, reported, projected or consumed"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "possible enum pairs are not automatic admissibility; performance describes what evidence establishes, not an unobserved world fact; preserve extent, interruption, conclusion and all effect coordinates Dispatch or admission alone does not establish performance."
+        }
+      ],
+      "statement": "evidence establishing undertaking permits performed with any of five evidence-supported verdicts; established nonundertaking and unconfirmed undertaking prohibit satisfied and permit a negative or diagnostic verdict only with separately admissible support; otherwise indeterminate",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:premise-capacity",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#assumes",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "premise"
+        }
+      ],
+      "statement": "Actors have finite resources; the selected control domain admits truthful handling of unknown, inadequate and interrupted conditions without omniscience, universal idempotence or guaranteed solution.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#foundational-commitments"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:premise-purpose",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#assumes",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "premise"
+        }
+      ],
+      "statement": "A selected outcome and adequacy relation are premises supplied by the purpose owner. Value choices come from the purpose owner. A local successful operation need not satisfy the selected outcome; value choices do not follow from capacity.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#foundational-commitments"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:refinement",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:verdict-domain"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:nonperformance"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:effect-observation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "domain outcome is reported"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "Admissible new evidence does not rewrite the original qualified outcome or observed performance. A separate performed positive evaluation retains its own record and deciding support under the legal-pair rule; an unconfirmed original is not promoted to satisfied."
+        }
+      ],
+      "statement": "A refined value is the pair of original domain outcome and cause in its\ndeclared reason domain, including an explicit missing-reason case. A domain\nrefinement preserves that qualified original outcome and supplies a\ntotal, reason-sensitive map into this record. If the original outcome is too\ncoarse to determine a verdict, its required reason distinguishes the cases; a\nconsumer cannot guess from a word such as `refused`, `ready` or `accepted`.\nA missing required reason maps the claimed predicate to indeterminate and\nleaves that contribution inadmissible as deciding support for its slot;\nretain its raw outcome and unresolved authentication. Its claimed predicate\nremains indeterminate until admissible evidence decides it. Independently\nestablished counterevidence or a basis/scope diagnosis uses the legal pairs above\non that same bound predicate; it does not invent execution or completion.\nRequested or material possible unintended effects without sufficient observation\nare unknown, never defaulted to not_requested. Unconfirmed evaluation performance\nstays unconfirmed. Domain meaning stays with its domain owner.\nNo refinement turns failure, undecidability, non-performance or unknown effect\ncompletion into greater standing. A new result over a different predicate does\nnot overwrite the earlier result.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:clause:total-control",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing",
+          "literal": "source-owned method law"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:transition"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input",
+          "ref": "urn:codex-stdo3:synthesis:symbol:result"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-capacity"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:verdict-domain"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:effect-observation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise",
+          "ref": "urn:codex-stdo3:synthesis:clause:premise-authority"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard",
+          "literal": "a total control contract is declared or any admitted control state is encountered"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification",
+          "literal": "repair, re-entry, refusal, yield or termination stays within the actual grant; total control promises neither external termination, omniscience nor a solution to every world problem"
+        }
+      ],
+      "statement": "supply a defined response for every admitted control state, including unavailable input, unknown world conditions, failed preconditions, partial effects, exhausted capability and revoked or exhausted authority",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#bounded-construction"
+      ]
+    }
+  ],
+  "exact_grant_identity_symbols": [
+    {
+      "uri": "urn:codex-stdo3:synthesis:symbol:grant",
+      "kind": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#concept",
+      "label": "Actual effect or decision authority",
+      "source_refs": [
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#foundational-commitments"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:symbol:identity",
+      "kind": "repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#concept",
+      "label": "Scoped work identity and current state",
+      "source_refs": [
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#foundational-commitments"
+      ]
+    }
+  ],
+  "exact_residuals": [
+    {
+      "uri": "urn:codex-stdo3:synthesis:residual:core-coverage",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:codex-stdo3:synthesis:clause:acquisition",
+        "urn:codex-stdo3:synthesis:clause:allocation",
+        "urn:codex-stdo3:synthesis:clause:applicability",
+        "urn:codex-stdo3:synthesis:clause:composite-invalid",
+        "urn:codex-stdo3:synthesis:clause:composition-order",
+        "urn:codex-stdo3:synthesis:clause:conjunction-failure",
+        "urn:codex-stdo3:synthesis:clause:conjunction-rest",
+        "urn:codex-stdo3:synthesis:clause:context-reset",
+        "urn:codex-stdo3:synthesis:clause:coordinator",
+        "urn:codex-stdo3:synthesis:clause:decision-stop",
+        "urn:codex-stdo3:synthesis:clause:effect-join",
+        "urn:codex-stdo3:synthesis:clause:effect-observation",
+        "urn:codex-stdo3:synthesis:clause:freshness",
+        "urn:codex-stdo3:synthesis:clause:logical-operator",
+        "urn:codex-stdo3:synthesis:clause:nonperformance",
+        "urn:codex-stdo3:synthesis:clause:outer-preservation",
+        "urn:codex-stdo3:synthesis:clause:performance-compatibility",
+        "urn:codex-stdo3:synthesis:clause:progress-stop",
+        "urn:codex-stdo3:synthesis:clause:refinement",
+        "urn:codex-stdo3:synthesis:clause:reuse",
+        "urn:codex-stdo3:synthesis:clause:total-control"
+      ],
+      "detail": "The program is selected textual interpretation, not complete core coverage. Finite implementation excludes complete result carriers, conjunction/effect dependency integration, retained-component-set union, applicability, independent negative support in nonperformed conjunction slots, missing or unauthenticated joins, non-Boolean dependency ordering, workspace reacquisition/invalidation/freshness, construction and configuration. Family fidelity is unresolved without its exact source frame. Encoding under the RC2 tool does not establish successor-calculus equivalence.",
+      "re_entry_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:residual:fine-policy",
+      "kind": "omission",
+      "subject_refs": [
+        "urn:codex-stdo3:synthesis:clause:consumer-axiomatic-calculus",
+        "urn:codex-stdo3:synthesis:clause:consumer-design",
+        "urn:codex-stdo3:synthesis:clause:consumer-engagement",
+        "urn:codex-stdo3:synthesis:clause:consumer-identity",
+        "urn:codex-stdo3:synthesis:clause:consumer-odd",
+        "urn:codex-stdo3:synthesis:clause:consumer-reference-frame",
+        "urn:codex-stdo3:synthesis:clause:consumer-release",
+        "urn:codex-stdo3:synthesis:clause:consumer-spec",
+        "urn:codex-stdo3:synthesis:clause:consumer-ticket",
+        "urn:codex-stdo3:synthesis:clause:consumer-traversal",
+        "urn:codex-stdo3:synthesis:clause:consumer-ux",
+        "urn:codex-stdo3:synthesis:clause:consumer-world-model",
+        "urn:codex-stdo3:synthesis:clause:family-acquire",
+        "urn:codex-stdo3:synthesis:clause:family-bind",
+        "urn:codex-stdo3:synthesis:clause:family-conjoin",
+        "urn:codex-stdo3:synthesis:clause:family-dispose",
+        "urn:codex-stdo3:synthesis:clause:family-evaluate",
+        "urn:codex-stdo3:synthesis:clause:family-transform"
+      ],
+      "detail": "Family relationships are modeled, not every fine domain rule, predecessor disposition, publication asset or normative clause. Whole-corpus fidelity and acceptance remain open.",
+      "re_entry_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#material-families",
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:synthesis:residual:semantic-proof",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:codex-stdo3:synthesis:clause:conjunction-rest",
+        "urn:codex-stdo3:synthesis:clause:context-reset",
+        "urn:codex-stdo3:synthesis:clause:refinement",
+        "urn:codex-stdo3:synthesis:clause:safe-reentry"
+      ],
+      "detail": "Finite examples are separately authored executable interpretations, not execution of a_c clauses or independent source-fidelity acceptance. Real external effects and whole-method adequacy remain outside them.",
+      "re_entry_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#finite-oracle"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#finite-oracle",
+        "repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"
+      ]
+    }
+  ],
+  "scope": "Only R1-R10 textual repairs are reassessed. A1-A7 are settled by the preceding review. No family clause changed; all eighteen family-source fidelity claims remain unresolved. The finite source/code/oracle packet remains frozen for its separate review. Structural closure and these textual clauses prove no finite implementation or whole-core acceptance."
+}

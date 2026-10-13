@@ -1,0 +1,77 @@
+Independent exact-owner consistency check. No tools or source beyond this prompt. Earlier finding: composite effect classifier duplicated the single-effect rule and treated an unrequested possible part observed absent as an incomplete requested remainder. The composite now imports that rule. Check only this owner/consumer relation and requested/unrequested {observedabsent,unknown,completed,reverted} discriminators, including completedrequested + observedabsentunrequested = completed, and completedrequested+unknownunrequested=unknown. Return <=350words, no unrelated scope. Source9bc8962.
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`,
+`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`reverted` means that at least one part began and every begun part is observed to have been reversed within
+the declared boundary, with the reversal and any unstarted remainder retained
+as evidence. For every effect value, the boundary includes each material part
+the operation may have affected under its supported operating model and any
+observed departure, whether requested or unintended. Irreversible messages or
+other material external effects cannot be omitted to improve a result.
+`partial` means an observed
+completed part and an observed unexecuted or reverted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
+An empty local log or discarded context does not establish no effect.
+`not_requested` states an established effect-free scope under that operating
+model; lack of a request alone is insufficient. A material possible unintended
+effect without sufficient observation is `unknown`. If observation establishes
+that an unrequested possible part did not begin, it contributes `not_requested`
+at this boundary, retaining that observation and any earlier uncertainty.
+It is not an uncompleted requested remainder. A requested part observed not to
+begin remains `not_started`.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. The composite declares its
+effect boundary and the selected effect parts within it. First resolve a current
+observation for each part, retaining the contributing observations, identities,
+ordering and any supported supersession. A later timestamp alone is no
+supersession argument. Conflicting or insufficient observations leave the part
+unknown. Normalize every material possibly affected part, including one owned
+by an absent evaluation slot, through the effect-observation rule in
+[Result algebra](#result-algebra). That rule distinguishes a requested part
+that did not start from an unrequested possible part observed not to begin.
+The composite supplies no different classification for either case.
+
+Sequential stages can affect the same part. Their local completion labels are
+not inputs to the composite join until mapped onto that part's observed state
+at the composite boundary. A completed deployment followed by its completed
+rollback is reverted for the deployment effect; a subsequent completed
+reapplication is completed there. The historical rollback remains evidence.
+The declarations retain every material external part, including irreversible
+ones; a local reversal cannot silently remove them from the scope.
+
+Over the resulting disjoint part observations: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; reverted with only reverted, not_started or
+not_requested gives reverted; every remaining fully observed mixture gives
+partial. Retain each observation's part and contributing components. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
+
+First authenticate each contribution against its producer, subject, basis and
+required plan membership. An unauthenticated claim cannot discharge an
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
+conditions. An invalid contribution does not erase an independently
+authenticated finding.
+
+For an interpretable composite predicate and governing basis:
+
+1. Any authenticated, applicable falsification of a required predicate or material join makes
+   the conjunction `falsified`. Missing or undecidable other coverage remains
+   explicit alongside it.
+2. With no such falsification, an invalid required basis prevents satisfaction
+   and yields `invalid_basis`; a required out-of-frame judgment yields
+   `out_of_frame` when no invalid basis applies.
+3. Otherwise any unresolved applicability, missing evaluation, undecidable
+   predicate or undecided material join yields `indeterminate`.
+4. `satisfied` requires every applicable obligation and material join to be
+   authentically satisfied, with coverage itself established. An empty list
+   proves nothing unless the declared required set is established as empty.
+

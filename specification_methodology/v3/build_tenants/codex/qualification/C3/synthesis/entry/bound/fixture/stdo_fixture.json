@@ -1,0 +1,94 @@
+{
+  "$schema": "stdo://releases/v2.5.1-rc.2/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:qualification-fixture:entry-d1",
+    "name": "Disposable D1 method-qualification fixture",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo:qualification-fixture:entry-d1:context",
+      "definition": "./TASK.md"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.5.1",
+      "basis": {
+        "uri": "stdo://releases/v2.5.1-rc.2/",
+        "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+      }
+    },
+    "additional_authorities": [
+      "./TASK.md",
+      "./EXECUTION_CONTRACT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./REFERENCE_FRAME_BASIS.md",
+      "authority": [
+        "./EXECUTION_CONTRACT.md"
+      ],
+      "applies_to": [
+        "urn:stdo:qualification-fixture:entry-d1"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./TASK.md",
+    "product": "./TASK.md",
+    "specification": [
+      "./TASK.md"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo:qualification-fixture:entry-d1:supplied",
+        "root": "./workspace/",
+        "design": [
+          "./DESIGN.md"
+        ],
+        "implementation": [
+          "./workspace/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./TASK.md",
+    "tickets": {
+      "root": "./records/tickets/",
+      "lanes": {
+        "backlog": "./records/tickets/backlog/",
+        "active": "./records/tickets/active/",
+        "completed": "./records/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./records/comments/"
+    }
+  },
+  "composition": []
+}

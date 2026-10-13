@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "claude",
+    "-p",
+    "--model",
+    "sonnet",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--no-session-persistence",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--setting-sources",
+    "",
+    "--max-budget-usd",
+    "0.65",
+    "--system-prompt",
+    "Review only the supplied frozen source and explicit proof limits. No tools, private memory, ambient authority or tenant ranking. Resolve the initial findings within the changed cone and report honest residuals."
+  ],
+  "start_utc": "2026-10-13T08:24:24.455283+00:00",
+  "elapsed_seconds": 165.2,
+  "exit_code": 0,
+  "source_commit": "8bb32132633d3974ef3c3230d99753aa20a9bb22",
+  "stdin_sha256": "a1b4db7a4b3a8ddaf4c2f4d5c6543675bb95c0e54452ce557276cd3970474896",
+  "stdin_utf8_bytes": 251064,
+  "stdout_sha256": "f24bd90302cff0e4be02665e09ddb34ee5e1c559394858d6b79e7f6b99054c33",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_version": "2.1.296 (Claude Code)",
+  "limits": "Changed-cone source recheck only; actual model and cost are in the response."
+}

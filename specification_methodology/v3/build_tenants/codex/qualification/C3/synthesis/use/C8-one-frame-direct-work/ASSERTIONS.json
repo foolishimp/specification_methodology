@@ -1,0 +1,208 @@
+{
+  "case": "C8-one-frame-direct-work",
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "ISSUE_9.md": {
+          "sha256": "5b9d044e8cffe14edff9d7c59c66e9b70e1d01254a271eb8c99b46a69b3c208b",
+          "bytes": 229
+        },
+        "POLICY.md": {
+          "sha256": "326584ec80b8af6560af321209d7e36db446cb5f1de4350a0628da6d61dee0b1",
+          "bytes": 167
+        },
+        "tests/test_paging.py": {
+          "sha256": "786b8f69110ac6210e60cc0d427a0e936dbc576ee11d8f020220ecbcb2102879",
+          "bytes": 347
+        },
+        "utils/paging.py": {
+          "sha256": "ab42262d2af4fb9d824b3c3db1e9173603608687c9c9d247af959328e4297396",
+          "bytes": 142
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "existing tests preserved exactly as functions",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "before: original two tests pass but do not expose the issue",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "before: actual issue 9 reproduces",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: all actor tests execute",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: four specified cases and ValueError guard",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: observation of unspecified negative-total behavior",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [
+    {
+      "name": "before: original two tests pass but do not expose the issue",
+      "cwd": "C8-one-frame-direct-work/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import json, runpy\nnamespace = runpy.run_path('tests/test_paging.py')\nnames = sorted(n for n in namespace if n.startswith('test_') and callable(namespace[n]))\nfor name in names: namespace[name]()\nprint(json.dumps({'tests_executed': names, 'count': len(names)}))\n"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "{\"tests_executed\": [\"test_empty\", \"test_exact\"], \"count\": 2}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.02042,
+      "status": "met"
+    },
+    {
+      "name": "before: actual issue 9 reproduces",
+      "cwd": "C8-one-frame-direct-work/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "from utils.paging import page_count\nassert page_count(11,10)==2"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": 1,
+      "required_stderr_fragment": "AssertionError",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n    assert page_count(11,10)==2\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_seconds": 0.02032,
+      "status": "met"
+    },
+    {
+      "name": "after: all actor tests execute",
+      "cwd": "C8-one-frame-direct-work/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import json, runpy\nnamespace = runpy.run_path('tests/test_paging.py')\nnames = sorted(n for n in namespace if n.startswith('test_') and callable(namespace[n]))\nfor name in names: namespace[name]()\nprint(json.dumps({'tests_executed': names, 'count': len(names)}))\n"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "{\"tests_executed\": [\"test_empty\", \"test_exact\", \"test_less_than_one_page\", \"test_partial_last_page\"], \"count\": 4}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.020015,
+      "status": "met"
+    },
+    {
+      "name": "after: four specified cases and ValueError guard",
+      "cwd": "C8-one-frame-direct-work/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "from utils.paging import page_count\nfor args,expected in [((11,10),2),((1,10),1),((20,10),2),((0,10),0)]:\n assert page_count(*args)==expected\ntry:\n page_count(5,0)\nexcept ValueError:\n pass\nelse:\n raise AssertionError('ValueError guard missing')\nprint('five required behavioral assertions passed')"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "five required behavioral assertions passed\n",
+      "stderr": "",
+      "elapsed_seconds": 0.016902,
+      "status": "met"
+    },
+    {
+      "name": "after: observation of unspecified negative-total behavior",
+      "cwd": "C8-one-frame-direct-work/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "from utils.paging import page_count\nprint({'page_count(-5,10)':page_count(-5,10),'predecessor_floor_result':-5//10})"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "{'page_count(-5,10)': 0, 'predecessor_floor_result': -1}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.016879,
+      "status": "met"
+    }
+  ],
+  "independent_grading_pending": [
+    "Grade direct-work proportionality and report. Negative-total behavior changed from -1 to 0; the fixture defines no negative-total contract, and the actor disclosed this limit. No external owner acceptance is inferred."
+  ],
+  "counts": {
+    "met": 9,
+    "not_met": 0,
+    "subprocess_executions": 5
+  }
+}

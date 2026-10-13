@@ -1,0 +1,180 @@
+{
+  "kind": "bounded_derivation_verification_check",
+  "positive": {
+    "valid": true,
+    "historical_principle_refs_verified": 14,
+    "historical_members_reconstructed": 3,
+    "calculus_basis_identity": "urn:stdo:axiomatic-calculus-basis:sha256:f70afada51dbe674a0fe42ee6d1677bbf8680f548078331cdce4884d0c3a2b07",
+    "profile_basis_identity": "urn:stdo:traversal-occurrence-profile-basis:sha256:f62dffed2150325bebf3cd1d8d887c52515b1e68c37ee95fcc197471d8d17f84",
+    "observed_acquisition": {
+      "boundary": "Python audit open/socket events during verify; interpreter and fixture setup excluded",
+      "package_data_reads": [
+        "standards/AXIOMATIC_CALCULUS.md",
+        "standards/TRAVERSAL_OCCURRENCE_PROFILE.md",
+        "standards/verification_material/DERIVATION_SOURCES.json",
+        "standards/IDENTITY_METHOD.md",
+        "standards/REFERENCE_FRAME_METHOD.md",
+        "standards/SPEC_METHOD.md"
+      ],
+      "outside_package_reads": 0,
+      "network_events": []
+    }
+  },
+  "negative_controls": [
+    {
+      "case": "verification resource absent; original cut unavailable",
+      "refused": true,
+      "expected_reason": "publication member absent: standards/verification_material/DERIVATION_SOURCES.json",
+      "reason": "publication member absent: standards/verification_material/DERIVATION_SOURCES.json"
+    },
+    {
+      "case": "resource differs from publication digest",
+      "refused": true,
+      "expected_reason": "publication member digest: standards/verification_material/DERIVATION_SOURCES.json",
+      "reason": "publication member digest: standards/verification_material/DERIVATION_SOURCES.json"
+    },
+    {
+      "case": "missing historical member under coherent publication pins",
+      "refused": true,
+      "expected_reason": "missing historical verification member",
+      "reason": "missing historical verification member"
+    },
+    {
+      "case": "wrong reconstruction under coherent publication pins",
+      "refused": true,
+      "expected_reason": "reconstructed historical digest",
+      "reason": "reconstructed historical digest"
+    },
+    {
+      "case": "incomplete declared principle population",
+      "refused": true,
+      "expected_reason": "incomplete or invented principle refs",
+      "reason": "incomplete or invented principle refs"
+    },
+    {
+      "case": "historical digest substituted",
+      "refused": true,
+      "expected_reason": "historical manifest digest",
+      "reason": "historical manifest digest"
+    },
+    {
+      "case": "profile imports another calculus identity",
+      "refused": true,
+      "expected_reason": "profile calculus binding",
+      "reason": "profile calculus binding"
+    },
+    {
+      "case": "extra calculus record field",
+      "refused": true,
+      "expected_reason": "calculus record shape",
+      "reason": "calculus record shape"
+    },
+    {
+      "case": "schema clause absent under coherent publication pins",
+      "refused": true,
+      "expected_reason": "missing calculus schema fragment",
+      "reason": "missing calculus schema fragment"
+    },
+    {
+      "case": "semantic-address rule absent",
+      "refused": true,
+      "expected_reason": "unsupported semantic address rule",
+      "reason": "unsupported semantic address rule"
+    },
+    {
+      "case": "duplicate historical member",
+      "refused": true,
+      "expected_reason": "duplicate or extra historical member",
+      "reason": "duplicate or extra historical member"
+    },
+    {
+      "case": "duplicate byte range",
+      "refused": true,
+      "expected_reason": "overlapping or unordered reconstruction ranges",
+      "reason": "overlapping or unordered reconstruction ranges"
+    },
+    {
+      "case": "out-of-order byte ranges",
+      "refused": true,
+      "expected_reason": "overlapping or unordered reconstruction ranges",
+      "reason": "overlapping or unordered reconstruction ranges"
+    },
+    {
+      "case": "unbound literal reconstruction bytes",
+      "refused": true,
+      "expected_reason": "reconstructed historical digest",
+      "reason": "reconstructed historical digest"
+    },
+    {
+      "case": "source pin differs from published member",
+      "refused": true,
+      "expected_reason": "reconstruction source pin",
+      "reason": "reconstruction source pin"
+    },
+    {
+      "case": "relative path escape",
+      "refused": true,
+      "expected_reason": "uncatalogued publication member: ../outside.md",
+      "reason": "uncatalogued publication member: ../outside.md"
+    },
+    {
+      "case": "duplicate semantic address under coherent publication pins",
+      "refused": true,
+      "expected_reason": "ambiguous profile signature fragment",
+      "reason": "ambiguous profile signature fragment"
+    },
+    {
+      "case": "member symlink outside publication",
+      "refused": true,
+      "expected_reason": "member escapes publication package",
+      "reason": "member escapes publication package"
+    },
+    {
+      "case": "missing authentic historical fragment under coherent pins",
+      "refused": true,
+      "expected_reason": "missing historical fragment",
+      "reason": "missing historical fragment"
+    }
+  ],
+  "valid": true,
+  "resource_bytes": 17156,
+  "literal_reconstruction_bytes": 0,
+  "address_population_guard": "digit/underscore address retained; unsupported syntax refuses",
+  "limits": [
+    "Hypothetical schema-valid publication fixture, not an issued release",
+    "Content/reference verification, not independent derivation or acceptance",
+    "Canonical checker limited to string/integer identity records",
+    "Publication member-set stream follows the installed manifest recipe",
+    "Identity verification is qualification tooling, not a native installed admission engine"
+  ],
+  "subject": {
+    "kind": "frozen_codex_package",
+    "source_commit": "8bb32132633d3974ef3c3230d99753aa20a9bb22",
+    "package_member_count": 80,
+    "package_content_sha256": "56107ddd6cb2c0d835add4a6e8317cd9cbc3bf0c83777570f12a7de8a70de015",
+    "digest_recipe": "SHA-256 of sorted path/sha256 descriptors as compact sorted-key JSON"
+  },
+  "checker_source_pins": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/check_candidate.py",
+      "sha256": "c68ed06f8931ede3c0eeab80213641409f38a0b76ad4a861a6c2107b39add620"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/check_distribution.py",
+      "sha256": "755f01a144cf2542d2c65fb7616868cd43bf99d2282a6a1397791f8163dbbd0d"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/refresh_views.py",
+      "sha256": "fd09775a07c0b26c0fe289f7bc8ecaa518490a84ae82c108eaeb6f4d6a4d82f2"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/round-1/check_acquisition.py",
+      "sha256": "ad9b43e0859d622cd6745eb449477174590ab2423a92964898819fabc4059c2a"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/round-1/derivation_material.py",
+      "sha256": "1ba4e7da9c5f1e415b059d3e89c411413f44f54d141cb49065d613fa3180cee0"
+    }
+  ],
+  "positive_basis_scope": "Hypothetical v0.0.0-rc.1 fixture identities, not issued identities"
+}

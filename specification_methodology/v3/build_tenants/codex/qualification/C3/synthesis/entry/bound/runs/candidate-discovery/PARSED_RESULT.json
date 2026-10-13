@@ -1,0 +1,96 @@
+{
+  "edits": [
+    {
+      "path": "deploy/env.example",
+      "content": "APP_API_TOKEN=changeme\nAPP_TOKEN_TTL=3600\nLOG_LEVEL=info\n"
+    },
+    {
+      "path": "src/settings.py",
+      "content": "import os\n\nTOKEN = os.environ['APP_API_TOKEN']\nTOKEN_TTL = int(os.environ.get('APP_TOKEN_TTL', '3600'))\n"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "content": "#!/bin/sh\n: \"${APP_API_TOKEN:?missing}\"\necho ok\n"
+    },
+    {
+      "path": "docs/config.md",
+      "content": "# Configuration\n| Variable | Meaning |\n|---|---|\n| APP_API_TOKEN | API token |\n| APP_TOKEN_TTL | Token lifetime in seconds |\n| LOG_LEVEL | Log verbosity |\n"
+    }
+  ],
+  "report": "These are proposals only: nothing was applied and no tests were run. The change renames the exact variable APP_TOKEN to APP_API_TOKEN in deploy/env.example. It also updates the two workspace files that read that name, src/settings.py (required os.environ lookup) and scripts/check_env.sh (the ${...:?missing} guard), plus the docs table in docs/config.md. Without those consumer updates the app and the check script would fail once the new example is used. APP_TOKEN_TTL is a different variable that only shares a prefix with the old name, so it is left as is in every file, and LOG_LEVEL is unchanged. I did not add a fallback to the old name: no requirement or design asks for one, and the method says a retained compatibility mechanism needs a stated reason. The remaining risk is any deployed environment outside this workspace that still sets only APP_TOKEN. After this change it would fail at startup or in check_env.sh, so it must set APP_API_TOKEN.",
+  "results": {
+    "method": "candidate: frozen successor stdo-work SKILL.md (commit 9982ab803b4e1111b0f1fa9e0a654a254dd43f20), used as the explicitly selected experimental method; the installed rc.2 builder remains construction authority",
+    "product_basis": {
+      "requested_scope": "the disposable D1 fixture Product (TASK.md is its WHAT, workspace/ is its HOW)",
+      "candidates_discovered": [
+        "stdo_fixture.json"
+      ],
+      "selected_definition": {
+        "path": "/private/tmp/stdo-bound-entry-h2n_lcsa/stdo_fixture.json",
+        "definition_id": "urn:stdo:qualification-fixture:entry-d1"
+      },
+      "basis": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "verification": "Taken from the supplied receipt projection controls/VERIFIED_BASIS.json (valid: true, installed: true, failures: []). Its definition path, identity, basis URI and manifest SHA match the definition file. I did not run `stdo status --verify` myself (only read tools were available), and I did not read the full receipt at controls/BUILDER_STATUS.json."
+    },
+    "responsibility_frame": {
+      "selected_route": "intake triage / lawful re-entry / carrier selection",
+      "acquired": [
+        "installed rc.2 SPEC_METHOD.md \u00a7Universal Intake Triage",
+        "installed rc.2 SPEC_METHOD.md \u00a7Computed Classification And Treatment",
+        "REFERENCE_FRAME_BASIS.md (adopts the rc.2 STDO_REFERENCE_FRAME_BASELINE without reductions)"
+      ],
+      "note": "The verified rc.2 cut has no curated frames/ views, so I used the exact owner clauses. I did not use the candidate's frames/TRIAGE_CARRIER.md, because it is unverified candidate material and the method says a mutable candidate is no fallback. I did not read STDO_REFERENCE_FRAME_BASELINE.md or REFERENCE_FRAME_METHOD.md themselves; that coverage remains unresolved."
+    },
+    "work_basis": {
+      "upstream_authority": "EXECUTION_CONTRACT.md: the owning Executive's grant under EC-CODEX-SYN-01. It states that the existing grant and task are enough upstream work authority.",
+      "carrier": "A run-scoped work carrier made of the actor's return plus the host's application/rejection record, as the contract states. No ticket or sprint is adopted, and stdo-ticket was not invoked.",
+      "admission": {
+        "mechanism": "an existing exact owner grant (EXECUTION_CONTRACT.md) covering proposal-only edits to workspace/; I am citing it, not asking for new approval",
+        "decision": "the edit proposals were within the grant's scope",
+        "evidence": "EXECUTION_CONTRACT.md, controls/ACTIVATION.md"
+      },
+      "change_intent": "Rename the env var APP_TOKEN to APP_API_TOKEN in deploy/env.example and keep everything that depends on it working.",
+      "change_class": "realization_refactor",
+      "re_entry_point": "the realized surface (workspace/)",
+      "upstream_unchanged": "TASK.md (WHAT, unchanged requested outcome), DESIGN.md (declares no interface policy) and stdo_fixture.json were not changed",
+      "target_truth": "Every workspace consumer reads APP_API_TOKEN for the API token. APP_TOKEN_TTL and LOG_LEVEL keep their names and values.",
+      "superseded_truth": "the APP_TOKEN name for the API token",
+      "write_territory": "workspace/ only",
+      "durable_result_surface": "the host's application/rejection record (the actor cannot write durable evidence)"
+    },
+    "classification": {
+      "authority_traversal": "The task targets deploy/env.example. Consumers of the exact name APP_TOKEN, found by reading all 4 workspace files: src/settings.py:3 (required lookup), scripts/check_env.sh:2 (required guard), docs/config.md:4 (documentation). Prefix-only matches that are not dependents: APP_TOKEN_TTL in env.example:2, settings.py:4 and config.md:5. Unresolved frontier: environments and deployments outside the workspace.",
+      "public_delta": {
+        "removed": [
+          "APP_TOKEN"
+        ],
+        "added": [
+          "APP_API_TOKEN (example value 'changeme', same as before)"
+        ],
+        "unchanged": [
+          "APP_TOKEN_TTL=3600",
+          "LOG_LEVEL=info"
+        ],
+        "note": "This is a removal plus an addition. No owner provides a relation that keeps the old name's identity."
+      },
+      "accepted_design_coverage": "DESIGN.md declares no interface policy or traces. Coverage is the task statement itself; there is no separate accepted-design trace."
+    },
+    "proof": {
+      "performed": "Static reading only: I checked that every exact-name consumer in workspace/ is updated, that no proposed file still refers to the bare APP_TOKEN, and that APP_TOKEN_TTL is left alone.",
+      "not_performed": "No settings.py import, no check_env.sh run and no oracle evaluation, because no execution tools were available. The host's evaluation is still required."
+    },
+    "non_changes": [
+      "APP_TOKEN_TTL in all files",
+      "LOG_LEVEL",
+      "TASK.md",
+      "DESIGN.md",
+      "stdo_fixture.json"
+    ],
+    "residuals": [
+      "Any environment outside the workspace that sets only APP_TOKEN is unknown and must move to APP_API_TOKEN. I added no backward-compatibility fallback because no obligation for one is stated.",
+      "The candidate reference-frame baseline evaluations were not acquired in full."
+    ],
+    "work_result": "A candidate is returned and closure is withheld. Application, the oracle evaluation and acceptance are up to the host and the owning authority."
+  }
+}

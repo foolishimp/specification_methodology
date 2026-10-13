@@ -1,6 +1,6 @@
 # Glossary Semantic Index
 
-This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. a glossary row is no new definition or default interpretation.
+This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. A glossary row is no new definition or default interpretation.
 
 ## Index Contract
 
@@ -20,6 +20,26 @@ proximity, a heading, or inclusion in this file creates no identity,
 inheritance, import, equivalence, or authority. Resolution follows
 `SPEC_METHOD.md#bounded-context-semantic-resolution`; this index supplies no
 fallback decision.
+
+## Acquisition use
+
+F2 distinguishes a spelling from its interpreted meaning; F3 binds the owner
+and exact basis; F5 requires sufficient bounded acquisition. The index supplies
+routes as this guide's glossary convention. At use, resolve the row's owner in the selected
+basis and acquire the material clause under
+[Workspace and context](FOUNDATIONS.md#workspace-and-context). Apply
+[bounded-context semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+before concluding that the occurrence's route remains ambiguous. A retrieval report uses the
+[core result](FOUNDATIONS.md#result-algebra) on route resolution, retaining the
+original locator outcome and reason. Resolution in the selected complete basis
+is satisfied; a route established invalid in that basis is falsified. Partial
+acquisition that neither resolves the route nor establishes its invalidity, or
+ambiguity that bounded-context semantic resolution leaves undecided, is
+indeterminate. A concluded ambiguity follows its reason under the core rule;
+a demonstrated lack of a required unique owner falsifies route resolution.
+An unusable basis is invalid_basis. A route outside the bound evaluation scope
+is out_of_frame. Acquiring irrelevant members is no condition of resolution.
+Missing reasons follow the core rule. None reports semantic acceptance.
 
 ## Method Identity Index
 

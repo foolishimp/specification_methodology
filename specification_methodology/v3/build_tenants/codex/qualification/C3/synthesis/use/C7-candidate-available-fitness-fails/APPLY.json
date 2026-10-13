@@ -1,0 +1,213 @@
+{
+  "case": "C7-candidate-available-fitness-fails",
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "grant": {
+    "paths": [
+      "PIPELINE.md",
+      "publish/api.md"
+    ],
+    "prefixes": [],
+    "source": "TASK.json and workspace/ACCEPTANCE.md; build/ and spec/ read-only",
+    "conditions": "Publishing is conditional on the supplied acceptance criteria."
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "7e341a2fb14fc735a790548ca3048f1905e96407091cf130edfa64541ea12e42",
+      "bytes": 424
+    },
+    "PROMPT.txt": {
+      "sha256": "293110e08bd0a1fb243bf8478f76133ab1d3c22bdfb394d2d7fe2b9ac0e6c05e",
+      "bytes": 30095
+    },
+    "TASK.json": {
+      "sha256": "0cf6a0623bb69139e3bb797a256b8bed2b83ddf3a5559e88f9cda83b77dd36ae",
+      "bytes": 1074
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "7a0d7656583fae4fe35153895f96c8896279ca0c2a626bdde071f09a57e1caf8",
+      "bytes": 2356
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "293110e08bd0a1fb243bf8478f76133ab1d3c22bdfb394d2d7fe2b9ac0e6c05e",
+      "bytes": 30095
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "96784ba07283f195310ad54716a8a592ae9d856558141a1c9d4b7f22a1a7b003",
+      "bytes": 6369
+    },
+    "actor/RESULT.md": {
+      "sha256": "f25d5b5049d94da23947fea55fea12bb968f36e020c1a1b4c29b0bd0f964ce42",
+      "bytes": 4304
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/ACCEPTANCE.md": {
+      "sha256": "7f48b46792824ad27c02e52414bfc32608ca14eba03469475e780b5ffda8dd83",
+      "bytes": 220
+    },
+    "workspace/PIPELINE.md": {
+      "sha256": "2af9848b8ba35eb61ba6c6abefd6189c2820d4a7ee13c668a566bca8d932a3d0",
+      "bytes": 63
+    },
+    "workspace/build/api.md": {
+      "sha256": "4866c9d0346a734efafc2a83e176bc791141448cf0c0a981dfc7f7554ebbd83c",
+      "bytes": 100
+    },
+    "workspace/build/gen.log": {
+      "sha256": "df9fede1e4852b8800692f9e1176afa859cc2532f7178fdcf01934d511432a15",
+      "bytes": 55
+    },
+    "workspace/publish/api.md": {
+      "sha256": "7503893fa0499a8996fd326d67401b9d9c43874574daefe4bc01200c64332b99",
+      "bytes": 33
+    },
+    "workspace/spec/api.yaml": {
+      "sha256": "82f470725dafb1874401ef7a2df01b1522174545b7047d37bf7bba0d145a8847",
+      "bytes": 160
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "bare_json",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "PIPELINE.md"
+  ],
+  "changed_paths": [
+    "PIPELINE.md"
+  ],
+  "before": {
+    "ACCEPTANCE.md": {
+      "sha256": "7f48b46792824ad27c02e52414bfc32608ca14eba03469475e780b5ffda8dd83",
+      "bytes": 220
+    },
+    "PIPELINE.md": {
+      "sha256": "2af9848b8ba35eb61ba6c6abefd6189c2820d4a7ee13c668a566bca8d932a3d0",
+      "bytes": 63
+    },
+    "build/api.md": {
+      "sha256": "4866c9d0346a734efafc2a83e176bc791141448cf0c0a981dfc7f7554ebbd83c",
+      "bytes": 100
+    },
+    "build/gen.log": {
+      "sha256": "df9fede1e4852b8800692f9e1176afa859cc2532f7178fdcf01934d511432a15",
+      "bytes": 55
+    },
+    "publish/api.md": {
+      "sha256": "7503893fa0499a8996fd326d67401b9d9c43874574daefe4bc01200c64332b99",
+      "bytes": 33
+    },
+    "spec/api.yaml": {
+      "sha256": "82f470725dafb1874401ef7a2df01b1522174545b7047d37bf7bba0d145a8847",
+      "bytes": 160
+    }
+  },
+  "after": {
+    "ACCEPTANCE.md": {
+      "sha256": "7f48b46792824ad27c02e52414bfc32608ca14eba03469475e780b5ffda8dd83",
+      "bytes": 220
+    },
+    "PIPELINE.md": {
+      "sha256": "cef94879df675094b5c520003e278ade0526593dee101ef1f3f40690862316d4",
+      "bytes": 786
+    },
+    "build/api.md": {
+      "sha256": "4866c9d0346a734efafc2a83e176bc791141448cf0c0a981dfc7f7554ebbd83c",
+      "bytes": 100
+    },
+    "build/gen.log": {
+      "sha256": "df9fede1e4852b8800692f9e1176afa859cc2532f7178fdcf01934d511432a15",
+      "bytes": 55
+    },
+    "publish/api.md": {
+      "sha256": "7503893fa0499a8996fd326d67401b9d9c43874574daefe4bc01200c64332b99",
+      "bytes": 33
+    },
+    "spec/api.yaml": {
+      "sha256": "82f470725dafb1874401ef7a2df01b1522174545b7047d37bf7bba0d145a8847",
+      "bytes": 160
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "doc-gen step produced candidate build/api.md",
+      "subject": "build/api.md",
+      "basis": "build/gen.log",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "original_outcome": "gen-docs 1.3 exit 0, 3 operations written",
+      "effect": "completed",
+      "evidence": [
+        "build/gen.log"
+      ],
+      "note": "availability only, not fitness"
+    },
+    {
+      "predicate": "ACCEPTANCE (a): every operation in spec/api.yaml has a section",
+      "subject": "build/api.md",
+      "basis": "spec/api.yaml; ACCEPTANCE.md",
+      "verdict": "falsified",
+      "performance": "performed",
+      "effect": "not_requested",
+      "evidence": [
+        "spec/api.yaml lists DELETE /items/{id}",
+        "build/api.md has no DELETE /items/{id} section"
+      ]
+    },
+    {
+      "predicate": "ACCEPTANCE (b): no section contains TODO",
+      "subject": "build/api.md",
+      "basis": "ACCEPTANCE.md",
+      "verdict": "falsified",
+      "performance": "performed",
+      "effect": "not_requested",
+      "evidence": [
+        "build/api.md section GET /items/{id}: 'TODO: describe'"
+      ]
+    },
+    {
+      "predicate": "build/api.md accepted for publishing (conjunction of a and b)",
+      "subject": "build/api.md",
+      "basis": "ACCEPTANCE.md; spec/api.yaml",
+      "verdict": "falsified",
+      "performance": "performed",
+      "effect": "not_requested",
+      "components": [
+        "ACCEPTANCE (a) falsified",
+        "ACCEPTANCE (b) falsified"
+      ],
+      "uncovered": []
+    },
+    {
+      "predicate": "docs published (build/api.md copied to publish/api.md)",
+      "subject": "publish/api.md",
+      "basis": "ACCEPTANCE.md",
+      "verdict": "falsified",
+      "performance": "performed",
+      "effect": "not_started",
+      "evidence": [
+        "acceptance falsified, so publishing is not permitted; no edit proposed to publish/"
+      ],
+      "residual": "existing publish/api.md is stale and of unknown provenance; left unchanged"
+    },
+    {
+      "predicate": "PIPELINE.md updated with the step record",
+      "subject": "PIPELINE.md",
+      "basis": "task grant",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "effect": "unknown",
+      "note": "edit proposed; the host applies it and I cannot observe the result"
+    }
+  ],
+  "actor_report": "Bind: The task says to update PIPELINE.md and publish only if appropriate, without editing build/ or spec/. ACCEPTANCE.md is the governing basis for acceptance and publishing. The subject is build/api.md; the reference is spec/api.yaml.\n\nEvaluate (FOUNDATIONS Result algebra, TRANSFORMATION_LIBRARY Evaluate):\n- spec/api.yaml declares 4 operations: GET /items, POST /items, GET /items/{id}, DELETE /items/{id}.\n- build/api.md has 3 sections. DELETE /items/{id} is missing, so criterion (a) is falsified.\n- The GET /items/{id} section contains TODO, so criterion (b) is falsified.\n- gen.log shows exit 0 and 3 operations written. Under the Result algebra rule that candidate availability and fitness are separate predicates, a successful generator run does not establish fitness.\n\nConjoin (FOUNDATIONS Result conjunction rule 1): An applicable required predicate is falsified, so acceptance is falsified. Both failures and their citations are kept in the record.\n\nPublishing: ACCEPTANCE.md permits copying only accepted docs, so it is not appropriate. I proposed no edit to publish/. The publish effect was not started.\n\nOnly PIPELINE.md is edited.\n\nUnresolved:\n- To pass acceptance, build/api.md needs a DELETE /items/{id} section and a real description for GET /items/{id}. That means regenerating or fixing it, which is outside this grant because build/ must not be edited.\n- publish/api.md is already stale relative to the spec. Its origin is unknown. I left it unchanged because there is no grant to alter or remove it.\n- gen.log is the only evidence that the generator ran. I did not independently confirm it.",
+  "assertion_counts": {
+    "met": 7,
+    "not_met": 0,
+    "subprocess_executions": 0
+  },
+  "assertions_sha256": "96340caabb93e71990ca7af7a857b576410b8b197f51ea422c8053507ee4c6bc",
+  "inputs_unchanged": true
+}

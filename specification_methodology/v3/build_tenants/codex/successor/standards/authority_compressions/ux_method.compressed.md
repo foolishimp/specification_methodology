@@ -2,14 +2,12 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ux-method/v1
 source_ref: ../UX_METHOD.md
-source_digest: 5fbbaba763c8d73e9fccd827fc4992b667daa813042076c1c7719fcd61c9f317
+source_digest: 37d3859c7b6e8ee0d293c9aae2421d379e2cbb10243afbed9a60174a5188a07f
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 

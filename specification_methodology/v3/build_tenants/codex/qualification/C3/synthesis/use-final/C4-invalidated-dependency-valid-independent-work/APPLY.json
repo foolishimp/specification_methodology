@@ -1,0 +1,198 @@
+{
+  "case": "C4-invalidated-dependency-valid-independent-work",
+  "candidate_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "grant": {
+    "paths": [
+      "VALIDATION.md",
+      "RELEASE_CHECKLIST.md"
+    ],
+    "prefixes": [],
+    "source": "TASK.json; data/ and schema/ read-only"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "dd7f0cb2ecf46b81b153984f42aa9f65cb4b6b8049ce9943f27b8e8a3b6ad570",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "bd2da837b6305f1d7ab1e97732e6d8c0bbf0c9d5e3ddb67f3d829edd95dccdb0",
+      "bytes": 54137
+    },
+    "TASK.json": {
+      "sha256": "dcb8dff147d810fec5ede4ba2b6dba3d96a3de63b05d80a82e92568706317440",
+      "bytes": 1230
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "b041622a589fe7f467569d3ce787bdd86e9e3cf7268ddd1cc7cca2e0f750e5b5",
+      "bytes": 2338
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "bd2da837b6305f1d7ab1e97732e6d8c0bbf0c9d5e3ddb67f3d829edd95dccdb0",
+      "bytes": 54137
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "40ded573ec355495a0bbaa62a8ce908dc6aa87e4b1ca60dfd3f044063e4a5821",
+      "bytes": 6984
+    },
+    "actor/RESULT.md": {
+      "sha256": "8fcb10d888fbdbb22ef79fa2db98e33d659fdf4545da28f788832406e5104668",
+      "bytes": 4938
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/RELEASE_CHECKLIST.md": {
+      "sha256": "3b113284f787c2f9fcf8d1b39890fb9b3b1737b941ba96cf79d545218a4c2492",
+      "bytes": 98
+    },
+    "workspace/VALIDATION.md": {
+      "sha256": "c0bf37b4a4e48c83db2dd747951a9c19cb7e1937332817b6706e030cfc9b1946",
+      "bytes": 275
+    },
+    "workspace/data/customers.json": {
+      "sha256": "e79be2e0e4421431927ed32b1c880658c864ca13f9963e08a67b579acea74eb2",
+      "bytes": 68
+    },
+    "workspace/data/orders.json": {
+      "sha256": "571b475e43e6c8271c81b5bdfc7dce5d08d32f70bbe748c6e8cbe4385f06897b",
+      "bytes": 45
+    },
+    "workspace/schema/customers.schema.json": {
+      "sha256": "538a77dcaadffc76b5f5278c4b9d3610d61cd20e05a829633fd17114333a3261",
+      "bytes": 81
+    },
+    "workspace/schema/orders.schema.json": {
+      "sha256": "abb88b851d90d151c652b32495640ceabb589a07eec9db0b77135858a6c9a11d",
+      "bytes": 93
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "RELEASE_CHECKLIST.md",
+    "VALIDATION.md"
+  ],
+  "changed_paths": [
+    "RELEASE_CHECKLIST.md",
+    "VALIDATION.md"
+  ],
+  "before": {
+    "RELEASE_CHECKLIST.md": {
+      "sha256": "3b113284f787c2f9fcf8d1b39890fb9b3b1737b941ba96cf79d545218a4c2492",
+      "bytes": 98
+    },
+    "VALIDATION.md": {
+      "sha256": "c0bf37b4a4e48c83db2dd747951a9c19cb7e1937332817b6706e030cfc9b1946",
+      "bytes": 275
+    },
+    "data/customers.json": {
+      "sha256": "e79be2e0e4421431927ed32b1c880658c864ca13f9963e08a67b579acea74eb2",
+      "bytes": 68
+    },
+    "data/orders.json": {
+      "sha256": "571b475e43e6c8271c81b5bdfc7dce5d08d32f70bbe748c6e8cbe4385f06897b",
+      "bytes": 45
+    },
+    "schema/customers.schema.json": {
+      "sha256": "538a77dcaadffc76b5f5278c4b9d3610d61cd20e05a829633fd17114333a3261",
+      "bytes": 81
+    },
+    "schema/orders.schema.json": {
+      "sha256": "abb88b851d90d151c652b32495640ceabb589a07eec9db0b77135858a6c9a11d",
+      "bytes": 93
+    }
+  },
+  "after": {
+    "RELEASE_CHECKLIST.md": {
+      "sha256": "a0466b8ee9495ad6158c77f427bdc8ca009d7becc87987f3b061b6ad65d9bae0",
+      "bytes": 258
+    },
+    "VALIDATION.md": {
+      "sha256": "a06e32fc5e7003a5527eb5ad8dad2cebbccdfcffc06f2d4012e09c83a0946675",
+      "bytes": 1003
+    },
+    "data/customers.json": {
+      "sha256": "e79be2e0e4421431927ed32b1c880658c864ca13f9963e08a67b579acea74eb2",
+      "bytes": 68
+    },
+    "data/orders.json": {
+      "sha256": "571b475e43e6c8271c81b5bdfc7dce5d08d32f70bbe748c6e8cbe4385f06897b",
+      "bytes": 45
+    },
+    "schema/customers.schema.json": {
+      "sha256": "538a77dcaadffc76b5f5278c4b9d3610d61cd20e05a829633fd17114333a3261",
+      "bytes": 81
+    },
+    "schema/orders.schema.json": {
+      "sha256": "abb88b851d90d151c652b32495640ceabb589a07eec9db0b77135858a6c9a11d",
+      "bytes": 93
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "data/orders.json conforms to schema/orders.schema.json (current, version 2)",
+      "subject": "data/orders.json as supplied",
+      "basis": "schema/orders.schema.json version 2",
+      "verdict": "falsified",
+      "performance": "performed",
+      "evidence": "Manual inspection: items id=1 and id=2 both lack required \"currency\"",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "data/customers.json conforms to schema/customers.schema.json (current, version 1)",
+      "subject": "data/customers.json as supplied",
+      "basis": "schema/customers.schema.json version 1",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "Manual inspection: array of objects; both items have id and email",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "V1 is a current pass",
+      "subject": "VALIDATION.md record V1",
+      "basis": "current schema/orders.schema.json version 2",
+      "verdict": "falsified",
+      "performance": "performed",
+      "evidence": "V1 basis is version 1; current schema is version 2, which the current data fails (V3)",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "every record in VALIDATION.md is a current pass (release gate)",
+      "subject": "proposed VALIDATION.md",
+      "basis": "RELEASE_CHECKLIST.md rule",
+      "verdict": "falsified",
+      "performance": "performed",
+      "evidence": "Conjunction: V3 falsified and V1 stale/not current; V2 satisfied",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "VALIDATION.md and the Gate line are updated per the task",
+      "subject": "VALIDATION.md, RELEASE_CHECKLIST.md",
+      "basis": "task grant (no edits to data/ or schema/)",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "evidence": "Full replacement edits proposed for those two files only; host application not observed",
+      "effects": "unknown"
+    },
+    {
+      "predicate": "orders nonconformance resolved (data fix vs schema change)",
+      "subject": "data/orders.json / schema/orders.schema.json",
+      "basis": "owner decision outside grant",
+      "verdict": "out_of_frame",
+      "performance": "not_performed",
+      "evidence": "Task forbids edits to data/ and schema/; the remedy choice is reserved to its owner",
+      "effects": "not_requested"
+    }
+  ],
+  "actor_report": "Observations: schema/orders.schema.json is now version 2 and requires [id, amount, currency]. V1's basis was version 1, so V1 is stale and cannot count as a current pass (FOUNDATIONS Workspace and context; RF-005 Exact Basis). In data/orders.json, both items ({id:1, amount:12.5} and {id:2, amount:8}) lack \"currency\". schema/customers.schema.json is still version 1, and both customer items have id and email.\n\nWork: I re-evaluated both subjects against the current workspace by manual inspection. The schemas use only array/object type and `required` keys, so inspection decides them. No validator or command was run. I added V3 as a new result on the version 2 basis instead of overwriting V1, because a new result on a different basis does not overwrite the earlier one (Result algebra). V1 is annotated as stale and superseded. I annotated V2 as re-checked and still current. I set Gate to blocked, because the checklist requires every record to be a current pass and V3 is falsified. This records the gate state only. It is not a release acceptance.\n\nUnresolved: whether to fix the orders data (add currency) or change the schema is outside this grant. data/ and schema/ may not be edited, and the choice belongs to their owner (RF-006; SPEC_METHOD Computed Classification: candidate behavior cannot author its own target law). The checks rely on manual inspection, not a validator run. A tool-based run, if the release requires one, is still outstanding. The file effects are proposals only; the host's application is not observed by me.",
+  "assertion_counts": {
+    "met": 8,
+    "not_met": 0,
+    "subprocess_executions": 2
+  },
+  "assertions_sha256": "aeaaf11954c2c1abfb779e75087c2362ef8b549ac63fe5d2c9c1bd99376c96b0",
+  "inputs_unchanged": true
+}

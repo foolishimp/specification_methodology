@@ -1,0 +1,1 @@
+Rename the environment variable APP_TOKEN to APP_API_TOKEN in deploy/env.example. Anything that depends on that name must keep working. You may edit any file in the workspace. Return exact edit proposals and a short report.

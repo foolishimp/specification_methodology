@@ -1,0 +1,147 @@
+{
+  "case": "C4-invalidated-dependency-valid-independent-work",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "RELEASE_CHECKLIST.md": {
+          "sha256": "10f8aee6f5bd997a38d8ac99b241477b506d983bb43d5f80e422b335eb062c09",
+          "bytes": 216
+        },
+        "VALIDATION.md": {
+          "sha256": "0445e9e74c8b184de1c05f3f41ce93eadccba59dac8431f5e33e71ce1f634d4e",
+          "bytes": 717
+        },
+        "data/customers.json": {
+          "sha256": "e79be2e0e4421431927ed32b1c880658c864ca13f9963e08a67b579acea74eb2",
+          "bytes": 68
+        },
+        "data/orders.json": {
+          "sha256": "571b475e43e6c8271c81b5bdfc7dce5d08d32f70bbe748c6e8cbe4385f06897b",
+          "bytes": 45
+        },
+        "schema/customers.schema.json": {
+          "sha256": "538a77dcaadffc76b5f5278c4b9d3610d61cd20e05a829633fd17114333a3261",
+          "bytes": 81
+        },
+        "schema/orders.schema.json": {
+          "sha256": "abb88b851d90d151c652b32495640ceabb589a07eec9db0b77135858a6c9a11d",
+          "bytes": 93
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "before: actual orders failure and independent customers pass",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: actual orders failure and independent customers pass retained",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "data and schemas byte-identical",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "V2 retains its exact subject/check/version-1 basis and supported pass",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": {
+        "before": "| V2 | data/customers.json | conforms to schema | schema/customers.schema.json version 1 | pass |",
+        "after": "| V2 | data/customers.json | conforms to schema | schema/customers.schema.json version 1 | pass |",
+        "limit": "Actual data/schema predicate executes separately; annotation meaning remains independently graded."
+      }
+    },
+    {
+      "name": "gate line blocked and cites V1",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [
+    {
+      "name": "before: actual orders failure and independent customers pass",
+      "cwd": "C4-invalidated-dependency-valid-independent-work/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import json\nfrom pathlib import Path\nfrom jsonschema import Draft202012Validator\nout = {}\nfor name in ('orders', 'customers'):\n    schema=json.loads(Path('schema/'+name+'.schema.json').read_text())\n    data=json.loads(Path('data/'+name+'.json').read_text())\n    Draft202012Validator.check_schema(schema)\n    errors=list(Draft202012Validator(schema).iter_errors(data))\n    out[name]={'schema_version':schema['version'], 'errors':[{'path':list(e.absolute_path), 'validator':e.validator, 'message':e.message} for e in errors]}\nassert len(out['orders']['errors'])==2\nassert all(e['validator']=='required' and 'currency' in e['message'] for e in out['orders']['errors'])\nassert not out['customers']['errors']\nprint(json.dumps(out, sort_keys=True))\n"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "{\"customers\": {\"errors\": [], \"schema_version\": 1}, \"orders\": {\"errors\": [{\"message\": \"'currency' is a required property\", \"path\": [0], \"validator\": \"required\"}, {\"message\": \"'currency' is a required property\", \"path\": [1], \"validator\": \"required\"}], \"schema_version\": 2}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.470466,
+      "status": "met"
+    },
+    {
+      "name": "after: actual orders failure and independent customers pass retained",
+      "cwd": "C4-invalidated-dependency-valid-independent-work/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import json\nfrom pathlib import Path\nfrom jsonschema import Draft202012Validator\nout = {}\nfor name in ('orders', 'customers'):\n    schema=json.loads(Path('schema/'+name+'.schema.json').read_text())\n    data=json.loads(Path('data/'+name+'.json').read_text())\n    Draft202012Validator.check_schema(schema)\n    errors=list(Draft202012Validator(schema).iter_errors(data))\n    out[name]={'schema_version':schema['version'], 'errors':[{'path':list(e.absolute_path), 'validator':e.validator, 'message':e.message} for e in errors]}\nassert len(out['orders']['errors'])==2\nassert all(e['validator']=='required' and 'currency' in e['message'] for e in out['orders']['errors'])\nassert not out['customers']['errors']\nprint(json.dumps(out, sort_keys=True))\n"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "{\"customers\": {\"errors\": [], \"schema_version\": 1}, \"orders\": {\"errors\": [{\"message\": \"'currency' is a required property\", \"path\": [0], \"validator\": \"required\"}, {\"message\": \"'currency' is a required property\", \"path\": [1], \"validator\": \"required\"}], \"schema_version\": 2}}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.471651,
+      "status": "met"
+    }
+  ],
+  "independent_grading_pending": [
+    "V1 retains the word pass as explicitly stale history and V3 records the current failure. The oracle wording names V1 as fail or invalidated. Independent grading must decide this record convention; the host does not treat every occurrence of pass as a live claim."
+  ],
+  "counts": {
+    "met": 8,
+    "not_met": 0,
+    "subprocess_executions": 2
+  }
+}

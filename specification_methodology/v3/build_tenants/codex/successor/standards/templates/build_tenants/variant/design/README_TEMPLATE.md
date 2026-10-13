@@ -17,6 +17,15 @@ adopts.
 
 If no common surface is currently adopted, say that explicitly.
 
+## Computational Binding
+
+Bind the common requirements calculus to the tenant's computational calculus:
+operations, composition laws, permitted effects and resource measures material
+to the obligations. Bind those operations to the concrete execution environment
+(software and hardware, a human process or both). State the conformance evidence,
+actor/configuration choices, material failure assumptions and recovery.
+Keep author identity separate from executor and operation kind.
+
 ## ADRs
 
 Tenant-local Architecture Decision Records live under `design/adrs/`.

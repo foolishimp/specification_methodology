@@ -46,7 +46,8 @@ For every known material evaluation record:
 
 - stable evaluation identity and provenance:
 - exact subject and basis:
-- required result algebra:
+- core result owner and any domain refinement (predicate, original outcome,
+  performance, effects and residual coverage):
 - material frame family or declaration:
 - dependencies and affected Product edges:
 - disposition: `activate | non_material | residual`
@@ -71,6 +72,7 @@ For each available project frame record:
 - actor capability, access, configuration, and independence envelope:
 - dependencies, overlaps, inputs, outputs, conjunctions, or translations:
 - result consumer and return relation:
+- current workspace/authoritative-input acquisition and material freshness:
 - invalidation and qualification evidence:
 
 Actor identity and frame identity remain separate. One actor may occupy several
@@ -100,6 +102,11 @@ direction and effect here. A cutoff cannot waive a hard stop or turn an
 out-of-claim observation into a blocker.
 
 ## Executive Attention, Evaluation, And Action
+
+Complete this section where the project adopts the Executive configuration.
+Otherwise name the selected configuration and bind the equivalent material
+coordination obligations in its existing frame declaration; role labels alone
+are not a requirement to activate additional actors.
 
 - exact governed outcome, current MVP or release mandate, and basis lock:
 - unresolved evaluation frontier and dependency relation:

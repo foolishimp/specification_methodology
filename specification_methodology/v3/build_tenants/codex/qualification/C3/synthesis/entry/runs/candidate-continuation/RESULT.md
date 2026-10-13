@@ -1,0 +1,97 @@
+```json
+{
+  "edits": [
+    {
+      "path": "src/settings.py",
+      "content": "import os\n\n# APP_TOKEN is the pre-rename name, still accepted until no deployment sets it.\nTOKEN = os.environ.get('APP_API_TOKEN', os.environ.get('APP_TOKEN'))\nif TOKEN is None:\n    raise KeyError('APP_API_TOKEN')\nTOKEN_TTL = int(os.environ.get('APP_TOKEN_TTL', '3600'))\n"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "content": "#!/bin/sh\n# APP_TOKEN is the pre-rename name, used only when APP_API_TOKEN is unset, until no deployment sets it.\n: \"${APP_API_TOKEN=${APP_TOKEN-}}\"\n: \"${APP_API_TOKEN:?missing}\"\necho ok\n"
+    },
+    {
+      "path": "docs/config.md",
+      "content": "# Configuration\n| Variable | Meaning |\n|---|---|\n| APP_API_TOKEN | API token (formerly APP_TOKEN, which is still accepted as a fallback) |\n| APP_TOKEN_TTL | Token lifetime in seconds |\n| LOG_LEVEL | Log verbosity |\n"
+    }
+  ],
+  "report": "The rename in deploy/env.example is already applied and correct, so I've left it alone. Right now the workspace is broken: src/settings.py and scripts/check_env.sh still read APP_TOKEN, which deploy/env.example no longer sets. I'm proposing the three unapplied edits again. settings.py and docs/config.md are unchanged from last time. check_env.sh has one fix. Before, if APP_API_TOKEN was set but empty and APP_TOKEN was set, the script passed while settings.py used the empty value. Now it falls back to APP_TOKEN only when APP_API_TOKEN is unset, the same rule settings.py uses. APP_TOKEN_TTL is a separate variable and stays as it is. Both files still accept APP_TOKEN as a fallback; remove it once no deployment sets APP_TOKEN. These are proposals only: nothing was applied and no tests or commands were run.",
+  "results": {
+    "method": "candidate: successor plugins/spec/skills/stdo-work/SKILL.md (frozen commit 79e53e3f100b280adbd11e46352bbdc4a7eb1195), unmodified ordinary entry; continuation via the index's work/recovery route",
+    "product_basis": {
+      "selection": "Reused from the prior return (records/FIRST_ACTOR_RETURN.json); basis, subject and grant unchanged. Re-read PRODUCT_BASIS.md: exactly one candidate, stdo_3.json (urn:stdo:product-definition:stdo-3). It applies only because ACTIVATION.md names it.",
+      "verification": "Relied on the supplied receipt in controls/VERIFIED_BASIS.json: basis stdo://releases/v2.5.1-rc.2/, manifest 3d860ff4…2ff782, installed=true (this refers to the rc.2 builder), valid=true, no failures. I did not run stdo status --verify. I did not hash the exported definition independently.",
+      "result": "satisfied_on_supplied_receipt"
+    },
+    "responsibility_frame": {
+      "route": "work/recovery (standards/README.md:24 -> frames/WORK_RECOVERY.md)",
+      "acquired": [
+        "WORK_RECOVERY.md 251-372 (Workspace and context, Bounded construction, Work/recovery specialization)",
+        "WORK_RECOVERY.md 530-566 (Checkpoint, Continuation, Progress, And Churn)",
+        "PRODUCT_BASIS.md (full)"
+      ],
+      "not_acquired": "SPEC_METHOD intake text beyond the projected clauses, and the Project Reference-Frame Basis. These were not needed for this fixture continuation and are kept as unresolved coverage."
+    },
+    "current_state_observation": {
+      "source": "Read/Grep of workspace/ in this call, compared with records/HOST_APPLICATION.json workspace_after",
+      "findings": [
+        "deploy/env.example is byte-identical to the prior proposal (57 bytes, matching the host record). This partial work is valid and kept; it is not proposed again.",
+        "src/settings.py (100 bytes), scripts/check_env.sh (44 bytes) and docs/config.md are unchanged originals. Their byte counts match the host record; I computed none of the sha256 values.",
+        "Grep found no other APP_TOKEN or APP_API_TOKEN dependents in workspace/.",
+        "S1 (current): the documented name and its consumers disagree, so check_env.sh fails with 'missing' and settings.py raises KeyError for anyone who sets only APP_API_TOKEN from env.example."
+      ]
+    },
+    "execution_contract": {
+      "carrier": "Intake-drafted run-scoped contract, continued from the prior return; no ticket or sprint; stdo-ticket not invoked",
+      "upstream_authority": "controls/ACTIVATION.md owner grant: inspection and proposals only",
+      "goal": "controls/TASK.md: rename APP_TOKEN to APP_API_TOKEN in deploy/env.example; anything that depends on the name must keep working",
+      "reentry": "Realization; no requirement or design layer changes",
+      "target_truth": "APP_API_TOKEN is the documented variable that settings.py and check_env.sh read. APP_TOKEN works as a fallback only when APP_API_TOKEN is unset, until the removal trigger.",
+      "write_territory": "workspace/ (proposals only); remaining paths: src/settings.py, scripts/check_env.sh, docs/config.md",
+      "admission": {
+        "mechanism": "Cited owner grant (ACTIVATION.md) plus host validation of granted proposals",
+        "observed_decision": "Indeterminate. I observed no deterministic admission or exact human override of the drafted contract. Execution is limited to returning unapplied candidates.",
+        "durable_result_surface": "The host application record under records/. This call cannot write to it."
+      }
+    },
+    "construction": {
+      "retained_from_prior": [
+        "deploy/env.example (applied)",
+        "src/settings.py proposal (unchanged)",
+        "docs/config.md proposal (unchanged)"
+      ],
+      "candidate_repair": {
+        "path": "scripts/check_env.sh",
+        "from": ": \"${APP_API_TOKEN:=${APP_TOKEN-}}\"",
+        "to": ": \"${APP_API_TOKEN=${APP_TOKEN-}}\"",
+        "reason": "With APP_API_TOKEN='' and APP_TOKEN set, the prior candidate passed the check while settings.py used ''. Falling back only when the variable is unset matches settings.py, and an empty effective token is still rejected, as the original :? did. This repairs the candidate inside the existing grant; the requested outcome is unchanged."
+      },
+      "retained_mechanism": {
+        "what": "Read-side fallback to APP_TOKEN in settings.py and check_env.sh",
+        "obligation": "TASK.md 'must keep working'; dependents outside the workspace cannot be observed",
+        "removal_trigger": "No deployment sets APP_TOKEN"
+      }
+    },
+    "proof": {
+      "performed": "Static review of current files and Grep over workspace/ only",
+      "not_performed": [
+        "sh scripts/check_env.sh with: only APP_API_TOKEN; only APP_TOKEN; neither; APP_API_TOKEN='' with APP_TOKEN set (expect missing)",
+        "python import of src/settings.py under the same four environments",
+        "grep -rnw APP_TOKEN workspace/ after application, expecting only the fallback lines and the docs note"
+      ]
+    },
+    "non_changes": [
+      "deploy/env.example (already in target state)",
+      "APP_TOKEN_TTL name and default",
+      "LOG_LEVEL"
+    ],
+    "residuals": [
+      "Consumers outside the workspace (CI, secret stores, manifests) could not be observed",
+      "Until the host applies the three remaining proposals, the workspace stays in the broken state S1",
+      "No deterministic admission of the drafted contract; no durable result surface written by this actor",
+      "Byte identity of the exported definition and the stdo verify step were not checked independently",
+      "Required evaluations from the Project Reference-Frame Basis were not resolved"
+    ],
+    "work_result": "Candidate returned for the remaining paths. Closure is withheld until the host validates and applies these proposals and the proof listed above is run."
+  }
+}
+```

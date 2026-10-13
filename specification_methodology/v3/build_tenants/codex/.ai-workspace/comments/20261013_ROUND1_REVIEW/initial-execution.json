@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "claude",
+    "-p",
+    "--model",
+    "sonnet",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--no-session-persistence",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--setting-sources",
+    "",
+    "--max-budget-usd",
+    "1",
+    "--system-prompt",
+    "Review only the supplied frozen source and explicit proof limits. Do not use tools, private memory or ambient authority. Return material findings and a bounded verdict within 1200 words."
+  ],
+  "start_utc": "2026-10-13T08:07:19.287149+00:00",
+  "elapsed_seconds": 99.691,
+  "exit_code": 0,
+  "source_commit": "84c6ebd2ffdf5d91b3b7da15617d0c25e682545c",
+  "stdin_sha256": "ddc4f50d23c4521855bbe5d1b9bd7f82d21150364ff8195ba3c4d5efd3950d53",
+  "stdin_utf8_bytes": 128321,
+  "stdout_sha256": "11621dd239d1fce972a10af2a051e938074f5b391cebb3ea51d09f45f1b73713",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_version": "2.1.296 (Claude Code)",
+  "limits": "Bounded changed-cone source assessment; actual model and reported cost remain in stdout."
+}

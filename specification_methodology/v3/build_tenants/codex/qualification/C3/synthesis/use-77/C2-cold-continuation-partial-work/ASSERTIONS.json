@@ -1,0 +1,182 @@
+{
+  "case": "C2-cold-continuation-partial-work",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "PLAN.md": {
+          "sha256": "3503d997ed4ff52161a96079f20763c649ed35c2c8069c06aafdc23abacadf4d",
+          "bytes": 268
+        },
+        "WORKLOG.md": {
+          "sha256": "2f389382dc10370027f708deb1de216d0b168761ff7da890c7aada6f77575f73",
+          "bytes": 451
+        },
+        "src/a.py": {
+          "sha256": "e5a9e7872a8c815bc788664a7547441b3a02f13376694656d5df93472eef311f",
+          "bytes": 42
+        },
+        "src/b.py": {
+          "sha256": "16793d41d150069ce1b9ac6978d47c30ef0c95757877f2890467e99c85a749de",
+          "bytes": 133
+        },
+        "src/c.py": {
+          "sha256": "26ba8d98cd24b7b05d79680bee64de28460cb461fb468a7dd0887276ed1d04ce",
+          "bytes": 98
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "no old identifier in the three source files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "a.py and PLAN are byte-identical",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "b.py report function retained",
+      "status": "met",
+      "actual": "FunctionDef(name='report', args=arguments(args=[arg(arg='xs')]), body=[Return(value=Call(func=Name(id='compute_total', ctx=Load()), args=[Name(id='xs', ctx=Load())]))])",
+      "expected": "FunctionDef(name='report', args=arguments(args=[arg(arg='xs')]), body=[Return(value=Call(func=Name(id='compute_total', ctx=Load()), args=[Name(id='xs', ctx=Load())]))])",
+      "detail": null
+    },
+    {
+      "name": "existing worklog step retained",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "no reviewer output fabricated",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "before: b.summary observes undefined old identifier",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "before: c import observes incomplete rename",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: all three modules and five function calls",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [
+    {
+      "name": "before: b.summary observes undefined old identifier",
+      "cwd": "C2-cold-continuation-partial-work/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import sys\nsys.path.insert(0, 'src')\nimport b\nb.summary([1, 2, 3])"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": 1,
+      "required_stderr_fragment": "NameError",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 4, in <module>\n    b.summary([1, 2, 3])\n    ~~~~~~~~~^^^^^^^^^^^\n  File \"/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/use-77/C2-cold-continuation-partial-work/workspace/src/b.py\", line 9, in summary\n    return calc_total(xs) / len(xs)\n           ^^^^^^^^^^\nNameError: name 'calc_total' is not defined\n",
+      "elapsed_seconds": 0.020252,
+      "status": "met"
+    },
+    {
+      "name": "before: c import observes incomplete rename",
+      "cwd": "C2-cold-continuation-partial-work/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import sys\nsys.path.insert(0, 'src')\nimport c"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": 1,
+      "required_stderr_fragment": "ImportError",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n    import c\n  File \"/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/use-77/C2-cold-continuation-partial-work/workspace/src/c.py\", line 1, in <module>\n    from a import calc_total\nImportError: cannot import name 'calc_total' from 'a' (/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/use-77/C2-cold-continuation-partial-work/workspace/src/a.py)\n",
+      "elapsed_seconds": 0.020234,
+      "status": "met"
+    },
+    {
+      "name": "after: all three modules and five function calls",
+      "cwd": "C2-cold-continuation-partial-work/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import sys\nsys.path.insert(0, 'src')\nimport a, b, c\nassert a.compute_total([]) == 0\nassert b.report([1,2,3]) == 6\nassert b.summary([1,2,3]) == 2\nassert c.grand([1,2],[3,4]) == 10\nassert c.grand([],[]) == 0\nprint('five function assertions passed')"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "five function assertions passed\n",
+      "stderr": "",
+      "elapsed_seconds": 0.018367,
+      "status": "met"
+    }
+  ],
+  "independent_grading_pending": [
+    "Grade recognition of the unlogged partial b.py edit, retained open rv-2 review, and whether the extra unknown-src residual is justified by the supplied workspace boundary."
+  ],
+  "counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 3
+  }
+}

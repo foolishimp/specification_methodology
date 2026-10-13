@@ -2,14 +2,12 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43
+source_digest: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 

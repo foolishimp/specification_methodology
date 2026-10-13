@@ -1,0 +1,177 @@
+{
+  "case": "C1-stale-summary-vs-workspace",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "grant": {
+    "paths": [
+      "HANDOFF.md"
+    ],
+    "prefixes": [
+      "src/",
+      "docs/",
+      "tests/"
+    ],
+    "source": "TASK.json and workspace/TICKET-12.md"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "1b956ed180246c2b3381b8c725836e1ba6bb90ecda118676829632e0b51ef5c2",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "e9e1ecb58a94d77bf3bf59deec9e23005ceb39d65290c997dc82303417c78f11",
+      "bytes": 54990
+    },
+    "TASK.json": {
+      "sha256": "089390881879ea1481eb3d3ebb3e357af5ebbda3e06c70cafe36044fd53b7e27",
+      "bytes": 1022
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "a497d1182984c391b28e87fb821c55f1a25bbde3de0da9a16e294c110e782c6f",
+      "bytes": 2336
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "e9e1ecb58a94d77bf3bf59deec9e23005ceb39d65290c997dc82303417c78f11",
+      "bytes": 54990
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "75dd71c0336ee0823deccbbcf10d22313d7cb3b196b67fdc21851c075a0ac34d",
+      "bytes": 6777
+    },
+    "actor/RESULT.md": {
+      "sha256": "3e1114eaaf8ba57ffb788ba55721002f26ec9ff5afef5e12d02d8d753f01a2b2",
+      "bytes": 4724
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/HANDOFF.md": {
+      "sha256": "3bb1fc750b65a9942a99d64421d50e71ce5b0d4548ab3e69248a71db87f76361",
+      "bytes": 243
+    },
+    "workspace/TICKET-12.md": {
+      "sha256": "c4f9c70c00ba019bf5cb3ad80f30e26195fda187693768c6eab549e1fa2df5c1",
+      "bytes": 187
+    },
+    "workspace/docs/limits.md": {
+      "sha256": "d06ab6aed4813125f1b74ef51e3086165949e7a7919cda11e4cf746c3314b706",
+      "bytes": 66
+    },
+    "workspace/src/limits.py": {
+      "sha256": "53a8adebf2580d5912e79b4c5d1c1cc4e8690b8fc8657b47e4d9cd0df2058865",
+      "bytes": 31
+    },
+    "workspace/tests/test_limits.py": {
+      "sha256": "5b1c96604a9534552e8ed994cf80844568de18d39ad7c83605ca643c7ef2bd41",
+      "bytes": 118
+    }
+  },
+  "application_action": "created_retained_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "HANDOFF.md",
+    "docs/limits.md",
+    "tests/test_limits.py"
+  ],
+  "changed_paths": [
+    "HANDOFF.md",
+    "docs/limits.md",
+    "tests/test_limits.py"
+  ],
+  "before": {
+    "HANDOFF.md": {
+      "sha256": "3bb1fc750b65a9942a99d64421d50e71ce5b0d4548ab3e69248a71db87f76361",
+      "bytes": 243
+    },
+    "TICKET-12.md": {
+      "sha256": "c4f9c70c00ba019bf5cb3ad80f30e26195fda187693768c6eab549e1fa2df5c1",
+      "bytes": 187
+    },
+    "docs/limits.md": {
+      "sha256": "d06ab6aed4813125f1b74ef51e3086165949e7a7919cda11e4cf746c3314b706",
+      "bytes": 66
+    },
+    "src/limits.py": {
+      "sha256": "53a8adebf2580d5912e79b4c5d1c1cc4e8690b8fc8657b47e4d9cd0df2058865",
+      "bytes": 31
+    },
+    "tests/test_limits.py": {
+      "sha256": "5b1c96604a9534552e8ed994cf80844568de18d39ad7c83605ca643c7ef2bd41",
+      "bytes": 118
+    }
+  },
+  "after": {
+    "HANDOFF.md": {
+      "sha256": "2426e9a7c6b4c65fbb1ef4cd0bb9428b9325e6f9f9ac18039a9cda20c16422a9",
+      "bytes": 579
+    },
+    "TICKET-12.md": {
+      "sha256": "c4f9c70c00ba019bf5cb3ad80f30e26195fda187693768c6eab549e1fa2df5c1",
+      "bytes": 187
+    },
+    "docs/limits.md": {
+      "sha256": "f2e334190bbb968fa3fab9f77942c5f80a67443ebd6135190733985ea01115aa",
+      "bytes": 67
+    },
+    "src/limits.py": {
+      "sha256": "53a8adebf2580d5912e79b4c5d1c1cc4e8690b8fc8657b47e4d9cd0df2058865",
+      "bytes": 31
+    },
+    "tests/test_limits.py": {
+      "sha256": "eecaa940586e1fc6ce01ff22274da82e03a96d8cac0d305e7516d02bea098e5d",
+      "bytes": 119
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "src/limits.py states MAX_ITEMS = 100",
+      "subject": "src/limits.py as observed in supplied workspace",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "Observed file content 'MAX_ITEMS = 100\\nMAX_BATCH = 10\\n'",
+      "effect": "not_requested (no edit proposed to this file in this session; its prior change came from an earlier session and is observed as present)"
+    },
+    {
+      "predicate": "HANDOFF.md accurately describes current workspace state at re-entry",
+      "subject": "HANDOFF.md (previous session) vs observed files",
+      "verdict": "falsified",
+      "performance": "performed",
+      "evidence": "Handoff says MAX_ITEMS = 50 unchanged and tests passing; observed src states 100 and test asserts 50",
+      "effect": "edit proposed to correct HANDOFF.md; application unknown to this actor"
+    },
+    {
+      "predicate": "src/limits.py, docs/limits.md and tests/test_limits.py all state the same item limit of 100 (TICKET-12)",
+      "subject": "workspace after host applies proposed edits",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "Proposed content of docs and tests states 100 and src already states 100, but application of the proposals is not observed by this actor",
+      "effect": "unknown (proposals handed to host; application not observed)"
+    },
+    {
+      "predicate": "tests/test_limits.py passes",
+      "subject": "workspace after host applies proposed edits",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "No execution capability in this session; the test was not run",
+      "effect": "not_requested"
+    },
+    {
+      "predicate": "TICKET-12 closure: all declared obligations satisfied and accepted",
+      "subject": "TICKET-12",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "Depends on the indeterminate consistency and test results above and on any owner acceptance; no self-acceptance made",
+      "effect": "not_requested"
+    }
+  ],
+  "actor_report": "Observations (current workspace, re-acquired rather than trusting the handoff, per FOUNDATIONS 'Workspace and context' and SPEC_METHOD UP-020 'Checkpoint, Continuation...' restart rule): HANDOFF.md claims src/limits.py still has MAX_ITEMS = 50 and tests pass, but the observed src/limits.py already contains MAX_ITEMS = 100. The previous session's edit therefore appears to have been applied without the handoff being updated. That makes the handoff's 'tests passing' claim stale: tests/test_limits.py asserts MAX_ITEMS == 50 and would fail against the observed source. docs/limits.md still states 50. Per the unknown-effect rule, I did not repeat the src edit. I observed its effect as present, and the file needs no change. Work: I proposed edits so docs/limits.md and tests/test_limits.py state 100, matching src. MAX_BATCH = 10 is untouched everywhere. I also updated HANDOFF.md to reflect the observed state, the stale prior claims and the remaining obligations. All edits are within the TICKET-12 grant (src/, docs/, tests/, HANDOFF.md). Unresolved: (1) I had no execution tools, so the test suite was not run. Whether tests pass is not established by me (FOUNDATIONS Result algebra: not_performed cannot pair with satisfied). (2) The edits are proposals; whether they are applied is up to the host, so the effect state is unknown to me. (3) Ticket closure needs the consistency predicate evaluated on the applied files plus any owner acceptance (TICKET_METHOD Condition-Based Closure). I am not self-accepting it (UP-020 direct entry: no self-acceptance at a boundary owned elsewhere).",
+  "assertion_counts": {
+    "met": 8,
+    "not_met": 0,
+    "subprocess_executions": 3
+  },
+  "assertions_sha256": "567d3fe18b867a49c994cec4049d39718a83eb47ef8956771865922f8364f5a8",
+  "inputs_unchanged": true
+}

@@ -1,0 +1,211 @@
+{
+  "case": "C5-failed-A-plus-required-coverage-B-outside-plan",
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "grant": {
+    "paths": [
+      "GATE.md"
+    ],
+    "prefixes": [],
+    "source": "TASK.json: only GATE.md"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "38f39a9e3fca0175095b8a774262b2188b27ca5f55e0bb93342446b3f37f29d6",
+      "bytes": 424
+    },
+    "PROMPT.txt": {
+      "sha256": "3de938cc33c399227bad3cf627552379ab25457f2ce024a8159bd8c36bc02414",
+      "bytes": 30439
+    },
+    "TASK.json": {
+      "sha256": "4556e289ff671a2aa95c43139fd13129588bb25b94cd13e64fac7915844a92da",
+      "bytes": 1431
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "d115e7ba662d215dfc0e8c025c16cd071cf2585c3344609b8a58de31ff8d46ca",
+      "bytes": 2336
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "3de938cc33c399227bad3cf627552379ab25457f2ce024a8159bd8c36bc02414",
+      "bytes": 30439
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "e081ed2abdbb52b3cb78fc55defd2ce18349af427350b0395283846934e1761d",
+      "bytes": 9010
+    },
+    "actor/RESULT.md": {
+      "sha256": "358f09f0beff4e67a0bccf0f00367ae02c73f911c9b7a809450fe7b0fa5f80a3",
+      "bytes": 6971
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/ASSESSMENT_PLAN.md": {
+      "sha256": "3ac7e4af8f3f98c243213c61dabac7e934f3ae58ba039dea13dc03079f945cf1",
+      "bytes": 191
+    },
+    "workspace/COVERAGE.md": {
+      "sha256": "e0ef9972a6f52826c72f99e4cf5c24a162ac35336818a3d7285cb28ddd1799d5",
+      "bytes": 148
+    },
+    "workspace/GATE.md": {
+      "sha256": "6b6759e0926e468b4ae163ff2888e5c4820425f22b9b0a617c6b921f28598d8c",
+      "bytes": 36
+    },
+    "workspace/HEAD": {
+      "sha256": "3cb8dd09a272aaed9298b46f72822d93834817d8934302a82fd707ef13aaafe5",
+      "bytes": 8
+    },
+    "workspace/auth/login.py": {
+      "sha256": "73b6f13252c451dcd2fa64e7f93aaa2b5f40ed0b8c4d2c4405f7ff6fc5a7c767",
+      "bytes": 77
+    },
+    "workspace/evidence/A1.md": {
+      "sha256": "28d2322862c13642e22f4175f972b06f6a8b5a51f2ee4638eae1153d915174d0",
+      "bytes": 137
+    },
+    "workspace/export/export.py": {
+      "sha256": "b2c66e72f9872767e408a75ca96ebc029b27d0e7bd7d603cc0b9de7ef09175b1",
+      "bytes": 79
+    },
+    "workspace/results/A1.json": {
+      "sha256": "7a3d08f304021018846a0172707954c6a61934dfa89882024064622cd33288d5",
+      "bytes": 215
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "GATE.md"
+  ],
+  "changed_paths": [
+    "GATE.md"
+  ],
+  "before": {
+    "ASSESSMENT_PLAN.md": {
+      "sha256": "3ac7e4af8f3f98c243213c61dabac7e934f3ae58ba039dea13dc03079f945cf1",
+      "bytes": 191
+    },
+    "COVERAGE.md": {
+      "sha256": "e0ef9972a6f52826c72f99e4cf5c24a162ac35336818a3d7285cb28ddd1799d5",
+      "bytes": 148
+    },
+    "GATE.md": {
+      "sha256": "6b6759e0926e468b4ae163ff2888e5c4820425f22b9b0a617c6b921f28598d8c",
+      "bytes": 36
+    },
+    "HEAD": {
+      "sha256": "3cb8dd09a272aaed9298b46f72822d93834817d8934302a82fd707ef13aaafe5",
+      "bytes": 8
+    },
+    "auth/login.py": {
+      "sha256": "73b6f13252c451dcd2fa64e7f93aaa2b5f40ed0b8c4d2c4405f7ff6fc5a7c767",
+      "bytes": 77
+    },
+    "evidence/A1.md": {
+      "sha256": "28d2322862c13642e22f4175f972b06f6a8b5a51f2ee4638eae1153d915174d0",
+      "bytes": 137
+    },
+    "export/export.py": {
+      "sha256": "b2c66e72f9872767e408a75ca96ebc029b27d0e7bd7d603cc0b9de7ef09175b1",
+      "bytes": 79
+    },
+    "results/A1.json": {
+      "sha256": "7a3d08f304021018846a0172707954c6a61934dfa89882024064622cd33288d5",
+      "bytes": 215
+    }
+  },
+  "after": {
+    "ASSESSMENT_PLAN.md": {
+      "sha256": "3ac7e4af8f3f98c243213c61dabac7e934f3ae58ba039dea13dc03079f945cf1",
+      "bytes": 191
+    },
+    "COVERAGE.md": {
+      "sha256": "e0ef9972a6f52826c72f99e4cf5c24a162ac35336818a3d7285cb28ddd1799d5",
+      "bytes": 148
+    },
+    "GATE.md": {
+      "sha256": "d9c47c34910d379ad38c1951780a95dae40e51a37505e3ae987665640b0c499c",
+      "bytes": 3739
+    },
+    "HEAD": {
+      "sha256": "3cb8dd09a272aaed9298b46f72822d93834817d8934302a82fd707ef13aaafe5",
+      "bytes": 8
+    },
+    "auth/login.py": {
+      "sha256": "73b6f13252c451dcd2fa64e7f93aaa2b5f40ed0b8c4d2c4405f7ff6fc5a7c767",
+      "bytes": 77
+    },
+    "evidence/A1.md": {
+      "sha256": "28d2322862c13642e22f4175f972b06f6a8b5a51f2ee4638eae1153d915174d0",
+      "bytes": 137
+    },
+    "export/export.py": {
+      "sha256": "b2c66e72f9872767e408a75ca96ebc029b27d0e7bd7d603cc0b9de7ef09175b1",
+      "bytes": 79
+    },
+    "results/A1.json": {
+      "sha256": "7a3d08f304021018846a0172707954c6a61934dfa89882024064622cd33288d5",
+      "bytes": 215
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "CR-1: auth/ meets ASVS-L1",
+      "subject": "auth/@3f2c9a1",
+      "basis": "ASVS-L1 per ASSESSMENT_PLAN.md A1",
+      "verdict": "falsified",
+      "performance": "performed",
+      "original_domain_outcome": "A1 judgement 'fail' (ASVS 2.4.1 not met)",
+      "citations": [
+        "results/A1.json: auth/login.py:3 password compared with == against stored plaintext",
+        "evidence/A1.md: ASVS 2.4.1 Not met"
+      ],
+      "effect": "not_requested",
+      "residual": "producer identity asserted by file only"
+    },
+    {
+      "predicate": "CR-2: exported records older than 30 days are purged",
+      "subject": "export/@3f2c9a1",
+      "basis": "retention rule in COVERAGE.md; no planned assessment",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "coverage": "uncovered (outside authenticated plan)",
+      "original_domain_outcome": "none; unauthenticated comment 'reviewed OK by dev team' not admitted",
+      "effect": "not_requested",
+      "residual": "no CR-2 assessment planned or performed; export.py shows no purge logic (non-deciding)"
+    },
+    {
+      "predicate": "R-9 gate: all required coverage satisfied",
+      "subject": "release R-9 @3f2c9a1",
+      "basis": "COVERAGE.md + ASSESSMENT_PLAN.md",
+      "verdict": "falsified",
+      "performance": "performed",
+      "components": [
+        "CR-1 falsified/performed",
+        "CR-2 indeterminate/not_performed, uncovered"
+      ],
+      "effect": "not_requested",
+      "residual": "CR-2 uncovered; release disposition authority unbound"
+    },
+    {
+      "predicate": "edit proposal: GATE.md replaced",
+      "subject": "GATE.md",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "effect": "not_started",
+      "note": "proposal only; the host applies and verifies"
+    }
+  ],
+  "actor_report": "Work: I bound the composite subject (R-9 at HEAD 3f2c9a1), the required set (COVERAGE.md: CR-1, CR-2) and the plan (ASSESSMENT_PLAN.md: A1 only). I proposed a full replacement of GATE.md only. I ran nothing and applied nothing; the host applies the proposal.\n\nCR-1: falsified, performed. A1 is planned and matches the plan on producer, subject commit (equal to HEAD), basis and paths. Its 'fail' outcome carries a reason (citation plus ASVS 2.4.1 'Not met'). auth/login.py:3 corroborates it. Sources: FOUNDATIONS Result algebra (refined outcome needs a reason), Result conjunction (authenticate against producer, subject, basis and plan membership), RF-005.\n\nCR-2: indeterminate, not_performed, recorded as uncovered coverage outside the authenticated plan. The 'reviewed OK by dev team' comment is an unauthenticated claim and does not discharge the item. export.py visibly has no purge logic, but with no declared assessment scope I record this as a non-deciding observation, not a falsification. Sources: Result conjunction ('An unauthenticated claim cannot discharge an obligation'; 'required coverage outside an authenticated plan remains uncovered'), RF-015.\n\nOverall: falsified by conjunction rule 1. CR-2 is retained as uncovered. Aggregate performance is performed; effect is not_requested.\n\nUnresolved:\n- A1 producer identity rests only on file contents; there is no independent attestation.\n- No CR-2 assessment exists.\n- No release decision authority is bound in the workspace, so GATE.md records the evaluation only (RF-006, RF-007; Result algebra on decision predicates).",
+  "assertion_counts": {
+    "met": 8,
+    "not_met": 0,
+    "subprocess_executions": 0
+  },
+  "assertions_sha256": "4bd96d30adde789d71e372e15f1c515321dc34b6b105a547314620a130545942",
+  "inputs_unchanged": true
+}

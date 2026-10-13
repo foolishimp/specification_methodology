@@ -1,0 +1,168 @@
+{
+  "kind": "codex-v3-synthesis-finite-interpretation",
+  "valid": true,
+  "fixed_oracle_cases": 79,
+  "exhaustive_conjunction_cases": 1620,
+  "syntactic_coordinate_pairs": 15,
+  "potentially_legal_coordinate_pairs": 13,
+  "evidence_guard_coordinate_cases": 1080,
+  "evidence_states": 72,
+  "missing_reason_refinement_cases": 30,
+  "refinement_grid_cases": 1470,
+  "negation_cases": 5,
+  "temporal_effect_cases": 15,
+  "operator_rows": 24,
+  "operator_fixed_cases": 9,
+  "and_associativity_cases": 125,
+  "effect_composition_cases": 216,
+  "exhaustive_verdicts": {
+    "invalid_basis": 1028,
+    "indeterminate": 143,
+    "satisfied": 1,
+    "falsified": 298,
+    "out_of_frame": 150
+  },
+  "detected_mutants": [
+    "unknown-erases-failure",
+    "missing-assessment-performed",
+    "candidate-means-fit",
+    "unknown-means-effect-not-started",
+    "out-of-scope-means-out-of-frame",
+    "known-prefix-means-partial",
+    "blind-retry",
+    "inconclusive-run-called-unperformed",
+    "raw-temporal-labels-joined"
+  ],
+  "mutant_counterexamples": [
+    {
+      "mutant": "unknown-erases-failure",
+      "input": [
+        "F",
+        "M"
+      ],
+      "actual": "indeterminate",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "missing-assessment-performed",
+      "input": [
+        "satisfied",
+        "not_performed"
+      ],
+      "actual": true,
+      "expected": false
+    },
+    {
+      "mutant": "candidate-means-fit",
+      "input": [
+        "candidate_ready",
+        "fitness"
+      ],
+      "actual": "satisfied",
+      "expected": "indeterminate"
+    },
+    {
+      "mutant": "unknown-means-effect-not-started",
+      "input": [
+        false,
+        null
+      ],
+      "actual": "not_started",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "out-of-scope-means-out-of-frame",
+      "input": [
+        "out_of_scope",
+        "event_scope_compatible"
+      ],
+      "actual": "out_of_frame",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "known-prefix-means-partial",
+      "input": [
+        true,
+        null
+      ],
+      "actual": "partial",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "blind-retry",
+      "input": [
+        "unknown",
+        false,
+        true
+      ],
+      "actual": "permitted_initial_dispatch",
+      "expected": "observe_or_return_unresolved"
+    },
+    {
+      "mutant": "inconclusive-run-called-unperformed",
+      "input": {
+        "undertaken": true,
+        "extent": "completed_at_120rps_below_required_load",
+        "conclusion": "inconclusive",
+        "deciding": null,
+        "effect": "completed"
+      },
+      "actual": "not_performed",
+      "expected": "performed"
+    },
+    {
+      "mutant": "raw-temporal-labels-joined",
+      "input": {
+        "name": "deployment-then-rollback",
+        "parts": [
+          "deployment"
+        ],
+        "observations": [
+          {
+            "id": "deploy",
+            "part": "deployment",
+            "state": "completed"
+          },
+          {
+            "id": "rollback",
+            "part": "deployment",
+            "state": "reverted",
+            "supersedes": [
+              "deploy"
+            ],
+            "supersession_proved": true,
+            "begun_and_reversal_proved": true
+          }
+        ],
+        "effect": "reverted"
+      },
+      "actual": "partial",
+      "expected": "reverted"
+    }
+  ],
+  "logical_counterexample": {
+    "claim": "arbitrary implication associativity",
+    "left": false,
+    "right": true,
+    "mutant_credit": false
+  },
+  "elapsed_seconds": 0.008566582924686372,
+  "inputs": {
+    "ORACLE.json": "699c7173c6f6ced5847d2b41d94f948da657fbadf71df5bd76327147be1d864f",
+    "model.py": "ef258fc35f5645b9945191a009f01733533014d58bcc1e0cce1f96fe40f79d67",
+    "finite_check.py": "95b879c3167c537f326eea93d6ee7b74cdc6d0760982a1070b1d0fb1a47c4e97",
+    "program.json": "2f25ccc99bb9d3c977247efdc0c6bbff88f719f50b3cb901a97a6e49070a637f"
+  },
+  "limits": [
+    "Finite AND and declared Boolean operator domains only; no universal categorical proof",
+    "Effect associativity only for disjoint normalized current parts; temporal cases consume stipulated supersession proof",
+    "Thirteen potentially legal performance/verdict pairs still require evidence guards; enum membership does not admit a result",
+    "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+    "No executable workspace reacquisition, invalidation, freshness, construction or configuration proof is supplied",
+    "Recovery is a decision table assuming already acquired current authority, fresh effect observations and applicable idempotence",
+    "AND is a predicate-decision projection only: no conjunction/effect dependency integration or retained-component union proof",
+    "Applicability, independently supported nonperformed conjunction slots, missing/unauthenticated joins and non-Boolean operator leaves are outside this finite grid",
+    "Temporal list order and externally supplied supersession evidence are fixture stipulations, not authenticated by this model",
+    "ac.py does not execute these semantic predicates; independent source-first review is required"
+  ]
+}
