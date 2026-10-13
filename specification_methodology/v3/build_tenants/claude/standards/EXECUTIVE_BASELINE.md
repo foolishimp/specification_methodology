@@ -1,37 +1,59 @@
 # EXECUTIVE_BASELINE
 
-Tier 3. An optional profile that maps three engagement frames (Executive,
-Worker, Reviewer) and a catalogue of specialist frames onto the law of
-tiers 1 and 2. It imports [FOUNDATIONS](FOUNDATIONS.md),
+Tier 3. An optional operational profile. It describes the executive
+configuration: one configuration in the sense of
+[ACTIVATION §1 Configuration](ACTIVATION.md#configuration), with three
+engagement frames (Executive, Worker, Reviewer) and a catalogue of
+specialist frames, mapped onto the law of tiers 1 and 2. An operational
+profile owns only its own bindings, the terms and choices it adds for its
+operation. Here they are: the three frames with their grants, limits and
+prohibitions, and the explanation of their allocation (§5 to §10); the
+catalogue of specialist-frame families (§11); the Executive engagement
+procedure (§6, §12 to §15); the reading of
+each work-result value for the Worker (§5 Work result); and the records for
+adoption, project configuration, qualification and closure (§16 to §22).
+
+It imports [FOUNDATIONS](FOUNDATIONS.md),
 [REFERENCE_FRAME](REFERENCE_FRAME.md), [ACTIVATION](ACTIVATION.md),
 [EVALUATION](EVALUATION.md), [SPEC_METHOD](SPEC_METHOD.md),
 [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md) and
 [ASSURANCE](ASSURANCE.md) by reference and defines none of their objects
-again: the frame, frame set, activation packet and method functions are
-REFERENCE_FRAME's; intake, admission, applicability, the one result
-algebra and the four dispositions are ACTIVATION §1 and §3; the
+again: the frame, frame set, activation packet and method functions, with
+the outcomes of `activate`, are REFERENCE_FRAME's; the core result algebra
+and the conjunction of results are
+[FOUNDATIONS §4](FOUNDATIONS.md#results); intake, admission,
+applicability, configuration, and roles and delegation are ACTIVATION §1,
+and the refinements of the core for steps, with the four dispositions, are
+[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); the
 independent-assessment protocol and the review-result shape, including the
 result and triage projection, are EVALUATION §3 and §4; the product
 testing frames, testing value, path erasure, subject acquisition,
 counterexample localisation and the interface integration frame are
-ASSURANCE §7 to §13. Every clause names the principle that requires it (P0
-to P6, FOUNDATIONS §3). A route written `rc.2 #anchor` is into
+ASSURANCE §7 to §13. Each clause names the principle that requires it (P0
+to P6, FOUNDATIONS §3), as FOUNDATIONS §1 requires. A route written
+`rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md`
 and is provenance only; every predecessor row received here is restated in
 this text, and nothing here depends on that cut to be applied.
 
-Role names used here bind the tier-1 roles of ACTIVATION §1: Worker is the
-constructor, Reviewer the assessor, Executive the coordinating role that
-acts as decision owner or its admitted proxy (P1: a label is bound to the
-relation it names, not imported by spelling).
+The frames take the responsibilities that
+[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)
+names where a configuration's operations include construction, assessment
+and disposition: the Worker frame carries the constructor's, the Reviewer
+frame the assessor's, and the Executive frame is the configuration's
+coordinator, which disposes as decision owner or its admitted proxy within
+the grant existing authority admits. A frame name binds the responsibility
+the configuration allocates to it, not a role imported by spelling, and
+grants no authority by itself (P1, P6).
 
 ## 1. Canonical compression
 
 REFERENCE_FRAME defines the finite engagement unit. The selected complete
 method cut defines specification, design, construction, assessment,
 disposition, checkpoint, continuation, identity and release law. This
-profile maps three practical engagement frames onto those owners and adds
-no owner of its own (P6, P0; rc.2 #canonical-compression):
+profile maps three practical engagement frames onto those owners; it owns
+only the bindings its lead names and no rule of those owners (P6, P0; rc.2
+#canonical-compression):
 
 ```text
 existing project authority
@@ -78,8 +100,10 @@ narrower green frames cannot establish an unevaluated Product composition
 or user outcome (P6, P4a).
 
 A project may adopt this profile or define another frame configuration
-(§16). The choice is admitted by the existing project authority that owns
-the affected decision. A local axioms file may carry the decision; carrying
+(§16). The executive configuration is selected where it fits the task; it
+is not the method's default (§7 The executive configuration). The choice
+is admitted by the existing project authority that owns the affected
+decision. A local axioms file may carry the decision; carrying
 it does not make the file a new constitutional owner (P6).
 
 ## 2. Status and authority boundary
@@ -95,7 +119,9 @@ mappings this profile uses are ASSURANCE's.
 
 | Relation | Owner in this method | Use in this profile |
 |---|---|---|
-| frame declaration, activation, result algebra, conjunction, translation, coverage and revision | REFERENCE_FRAME; ACTIVATION §1 and §3 | defines each engagement frame and the active configuration |
+| frame declaration, activation and its outcomes, translation, coverage and revision | REFERENCE_FRAME | defines each engagement frame and the active configuration |
+| core result algebra and conjunction of results | FOUNDATIONS §4 Results and Conjunction of results | supplies the one result every frame returns and the rule every declared conjunction applies |
+| configuration of responsibilities over frames, and roles and delegation | ACTIVATION §1 Configuration and Roles and delegation | the executive configuration is one configuration under that law; this profile owns its frames, their grants, limits and prohibitions, and its explanation (§7) |
 | bounded-frame conservation and execution intake | ACTIVATION §1 Intake, consuming the design profile's bounded-frame conservation laws ([DESIGN_MODULE](DESIGN_MODULE.md)) | supplies the Worker activation basis |
 | construction, self-review, assessment, disposition, checkpoint and continuation | ACTIVATION §1, §3 and §5 | supplies the complete execution transition |
 | constructor and independent-assessor separation | EVALUATION §3 | supplies Reviewer independence and traceability of the exact verdict |
@@ -123,12 +149,16 @@ summaries and commentary neither select nor adopt it (P6, P3).
 
 ## 3. Engagement applicability
 
-Direct entry, and the coordination that activates when it cannot cover
-the material contexts, authority, capability or required independence, are
-[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation);
-here the directly entering role is Worker (Writer) and the coordinating
-role Executive. A role or frame name alone creates no review obligation
-either (P0, P6; rc.2 #engagement-applicability).
+Direct entry is
+[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation).
+The configuration that adds coordination where direct entry cannot cover
+the material contexts, authority, capability or required independence is
+selected under
+[ACTIVATION §1 Configuration](ACTIVATION.md#configuration). Where the
+executive configuration is selected, the directly entering frame is Worker
+(Writer) and the coordinating frame Executive. A role or frame name alone
+creates no review obligation either (P0, P6; rc.2
+#engagement-applicability).
 
 This profile adds to direct entry (P2, P6):
 
@@ -148,11 +178,65 @@ This profile adds to direct entry (P2, P6):
 The transition of §12 and the handoffs of §13 apply when the coordinated
 branch is selected. Direct work returns its closed result to the declared
 work authority or existing result carrier, with the same result algebra
-(ACTIVATION §3) and the same separation of operation from decision. In
+(FOUNDATIONS §4 Results, refined for steps by ACTIVATION §3) and the same
+separation of operation from decision. In
 either branch, applicability is ACTIVATION §1 (Applicability), and valid
 computed facts, judgments and owner rulings (C/J/O) are reused under
 ACTIVATION §7. No route alters a Product's exact adopted basis or supplies
 missing authority (P6, P4b).
+
+### Foundation to law
+
+This member is material family F16, Executive engagement. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. An actor enters the
+family here, at the choice between direct entry and coordination. The
+family imports five families under
+[PROFILES §1](PROFILES.md#1-the-boundary): F1, frames and context
+([REFERENCE_FRAME §1](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit));
+F2, transitions, steps and configuration
+([ACTIVATION §1](ACTIVATION.md#1-the-step)); F3, results and their
+combination ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)); F4, work
+state, resumption and reuse
+([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)); and F6, claims,
+evidence, assessment and acceptance
+([EVALUATION §1](EVALUATION.md#1-claims)). Its instance premises hold where
+the executive configuration is selected; they are adopted with it and do
+not follow from the foundations (P1, P6):
+
+- I1: the work is a series of bounded tasks under one governed outcome,
+  and carrying out a bounded change and managing delivery across the tasks
+  need separate attention;
+- I2: existing project authority (Goals, Product, requirements, accepted
+  design, a work item, identity or release law) holds every decision grant
+  the configuration applies;
+- I3: the actors are fallible and have finite context and attention, and a
+  constructing actor may be probabilistic.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P6 (independent), P0 (recovered); F2 imported | the profile owns only its bindings; where it conflicts with an owning clause, the owning clause controls; inclusion in a cut makes it available, and only a Product-owned basis adopts it | [§1](#1-canonical-compression); [§2](#2-status-and-authority-boundary) | adoption of this optional profile: the adopting Product's basis ([PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)) |
+| P0 (recovered), P2 (independent); F2 imported; I1 | a task that one sufficient frame covers is entered directly as Worker (Writer), binding the same intake, territory, obligations, evidence, stop conditions and result consumer, and gains no review or owner ceremony from this profile | [§3](#3-engagement-applicability), this section | the direct route's additions to direct entry: this profile; direct entry and the selection of coordination: [ACTIVATION §1](ACTIVATION.md#configuration) |
+| P6 (independent), P2 (independent) | delivery practice and observed failure inform frame selection, qualification and revision without becoming method authority or importing a consumer's architecture | [§4](#4-empirical-revision-boundary) | none |
+| P0 (recovered), P2 (independent), P5 (derived), P6 (independent); F2 imported; I1, I3 | construction, assessment and coordination are allocated to the Worker, Reviewer and Executive frames, and the allocation is explained; the configuration is selected where it fits, and its grants, limits and prohibitions hold wherever it is selected | [§7 The executive configuration](#the-executive-configuration); [§5](#5-profile-terms) Engagement frame, Executive, Worker, Reviewer | the three frames, their names and the explanation of their allocation: this profile; the selection for a project: the existing authority of [§16](#16-adoption-or-project-defined-configuration) |
+| P6 (independent), P3 (independent); F2 imported; I2 | the Executive applies only decision authority already granted and acquires no operation authority from its label; it modifies no candidate, Product or worktree bytes, and a mutation needs a separately activated Worker or Writer, with a role change recorded before the effect | [§6](#6-executive-attention-evaluation-and-action) The three duties, No mutation while Executive; [§8](#8-derived-executive-frame) | the prohibition of every Executive edit, small, test-only or reversible ones included: this profile |
+| P0 (recovered), P4b (derived), P2 (independent); F2, F4 imported; I1 | the Executive holds the frontier and the closed-result ledger, not any evaluator's working context, and acquires what a decision needs beyond them through its frame inputs or a further bounded evaluation; it waits for decision-relevant events and revalidates the drift locks before activation and before disposition | [§6](#6-executive-attention-evaluation-and-action) Attention cycle, Event-driven attention, Drift locks; [§7 The executive configuration](#the-executive-configuration), Coordination | the five locks, and event-driven attention with bounded fallback observation: this profile |
+| P2 (independent), P6 (independent) | delivery is sequenced around the smallest real runnable path, widened in bounded increments, and a passing thread establishes only the relations it exercised | [§8 Steel-thread delivery](#steel-thread-delivery) | the steel-thread sequence as profile law: this profile; the general sequencing heuristic: [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method) |
+| P5 (derived), P6 (independent); F3 imported | a Worker returns one work-result value, which maps to exactly one core value and is neither an assessment nor an acceptance; a refused activation creates no Worker result | [§5 Work result](#work-result); [§9](#9-derived-worker-frame); [§12](#12-complete-engagement-transition) steps 2 and 3 | the reading of each value for the Worker: this profile; the values and their mapping: [ACTIVATION §3](ACTIVATION.md#construction-availability); the outcomes of `activate`: [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) |
+| P6 (independent), P1 (independent); F6 imported; I3 | Worker self-review stays construction evidence; where independent assessment is required, a separately activated Reviewer that is not the author evaluates the exact live subject and returns evidence-bound technical triage and no disposition | [§10](#10-derived-reviewer-frame); [§12](#12-complete-engagement-transition) steps 4 to 6; [§17](#17-actor-binding-and-independence) | when independent assessment is required: [EVALUATION §3](EVALUATION.md#3-independent-assessment) and the work authority; the triage fields: this profile; the severity scale: the adopting Product |
+| P6 (independent), P2 (independent), P5 (derived); F3, F6 imported; I2 | severity, priority, frame result, current-boundary effect and disposition stay distinct values; the Executive acts on exactly one of the four dispositions within its grant, and lowering priority waives no hard stop | [§5 Technical triage, severity, priority and boundary effect](#technical-triage-severity-priority-and-boundary-effect); [§12](#12-complete-engagement-transition) step 7 and Promotion constraint projection | the severity and priority scales, the decision cutoff and the hard stops: the adopting Product's basis ([§19](#19-baseline-specific-basis-and-activation-additions)); the four dispositions: [ACTIVATION §3](ACTIVATION.md#disposition) |
+| P0 (recovered), P1 (independent), P2 (independent), P4a (independent), P5 (derived); F1 imported | specialist evaluation is organised in twelve generic families, each instantiated where material, evidenced as non-material by capable authority, or kept as an explicit residual; a composite claim is `satisfied` only through a declared conjunction whose material seams are preserved or lawfully translated | [§11](#11-derived-generic-specialist-frame-set); [§14](#14-coverage-application) | the twelve families, their questions and falsifiers: this profile; each instance: the adopting project |
+| P4a (independent), P3 (independent), P6 (independent); F1, F4 imported | every result returns through a declared relation, carrying its closed result and source routes, not the producer's working context; flattening projections across candidates or bases establishes no relation | [§13](#13-handoff-projection); [§6](#6-executive-attention-evaluation-and-action) Attention cycle | the eight projections and their minimum content: this profile; their carriers: the existing project records |
+| P5 (derived), P2 (independent), P6 (independent); F1 imported | a frame that cannot decide names what is missing; the Executive diagnoses in the declared order before a frame is added or revised, and an upstream change re-enters at its owner | [§15](#15-missing-frame-and-re-entry-application); [§20](#20-failure-classification); [§21](#21-anti-patterns) | the two diagnostic steps this profile adds, the failure table and the anti-patterns: this profile |
+| P6 (independent), P3 (independent); F2 imported; I2 | adoption or a project-defined configuration is admitted by the smallest existing authority that owns the decision and records its basis; a departure from method law is a separate method basis or a non-conformance, never local frame selection | [§16](#16-adoption-or-project-defined-configuration); [§19](#19-baseline-specific-basis-and-activation-additions) | adoption and the content of the basis: the adopting Product ([PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)) |
+| P6 (independent), P1 (independent); F6 imported | the profile is qualified and applied only on the evidence actually evaluated; mechanical checks establish no semantic truth, and a closed `indeterminate` result or a review event satisfies no unresolved obligation | [§18](#18-profile-qualification); [§22](#22-closure) | the twenty-six trial obligations and the twenty-four closure conditions: this profile |
+
+The table is new in this corpus; it has no rc.2 row. Purpose and material
+relation: a reader of this profile sees which of its rules rest on the
+commitments and imported families, and which are choices this profile or
+the adopting Product makes, so no profile choice is presented as following
+from the foundations (P6, P2).
 
 ## 4. Empirical revision boundary
 
@@ -281,7 +365,7 @@ capability envelope support it, the triage records (P6, P5; rc.2
 
 Missing causal or repair evidence stays explicit. Where the missing
 relation can change the evaluation, the Reviewer returns `indeterminate` or
-`out_of_frame` pressure (ACTIVATION §3); it does not invent precision and
+`out_of_frame` pressure (FOUNDATIONS §4 Results); it does not invent precision and
 does not send work sideways to the Worker (P5).
 
 Severity grades the consequence if the finding manifests. Priority orders
@@ -293,7 +377,7 @@ Executive assigns priority (P6, P2).
 The Product-owned Project Reference-Frame Basis binds the severity scale,
 the priority scale, the current-boundary decision cutoff and the
 non-waivable hard stops. This profile imposes no universal numeric scale.
-Severity, priority, the frame result (ACTIVATION §3) and the
+Severity, priority, the frame result (FOUNDATIONS §4 Results) and the
 current-boundary effect are four distinct values; none of them alone makes
 a finding release-blocking (P6, P1).
 
@@ -311,35 +395,50 @@ triage projection).
 
 A work result is the Worker's closed output to its declared consumer; in
 the coordinated branch that consumer is the Executive. It exists only after
-a successful Worker activation. An `activation_refusal` (REFERENCE_FRAME
-§5) returns to the assigning authority or declared result carrier and
-creates neither a Worker activation nor a Worker result (P5, P6; rc.2
-#work-result).
+a successful Worker activation. An `activation_refusal`, with the cause and
+core value that
+[REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) gives it,
+returns to the assigning authority or declared result carrier and creates
+neither a Worker activation nor a Worker result. This applies to the
+Worker the rule that
+[ACTIVATION §3 Admission and activation](ACTIVATION.md#admission-and-activation)
+states for every step (P5, P6; rc.2 #work-result).
 
-The variants `candidate_ready`, `refused`, `incomplete` and
-`re_entry_requested` are the construction availability refinement of
-ACTIVATION §3, which defines their total mapping to the core algebra. In
-this profile they are carriers, not new semantic dispositions, and each
-variant has this reading (P5):
+The work-result values are the five values of construction availability,
+the refinement that
+[ACTIVATION §3](ACTIVATION.md#construction-availability) defines for the
+predicate "a candidate is available". ACTIVATION §3 owns their grounds,
+maps each to exactly one core value, and states that the mapping is total
+and exclusive after lawful activation. In this profile they are carriers,
+not new semantic dispositions, and none of them is an assessment or an
+acceptance of the candidate (FOUNDATIONS §4 Results). This profile binds
+only what each value means for the Worker and its consumer; the core value
+shown with each is ACTIVATION §3's (P5, P6):
 
-- `candidate_ready` (with `satisfied`): an exact candidate and its
-  transition evidence are available;
-- `refused` (with `falsified`): lawful activation occurred, and a governing
-  prohibition or an owner-valid construction refusal defeats the requested
-  construction;
-- `incomplete` (with `indeterminate`): the valid activation produced no
-  candidate because admissible evidence or bounded execution cannot yet
-  decide or complete the relation; and
-- `re_entry_requested` (with `out_of_frame` or `invalid_basis`): a material
-  decision lies outside Worker authority, or the activated basis can no
-  longer support the work.
+- `candidate_ready` (`satisfied`): the Worker's exact candidate and its
+  transition evidence are available to the consumer, which decides whether
+  independent review is required (§12 step 4); it is not `accept`;
+- `refused` (`falsified`): the Worker was lawfully activated and its
+  construction is defeated; the Executive verifies the basis and applies
+  the existing authority relation (§12 step 4);
+- `incomplete` (`falsified`): the Worker produced no candidate; its
+  residuals and stop basis name each evaluation it did not perform, which
+  has no result, and each it performed that its evidence could not decide,
+  which keeps its own `indeterminate`. The work result is never read as
+  `indeterminate`, and the Executive reactivates work only where current
+  authority already permits it (§12 step 4);
+- `re_entry_requested(authority)` (`out_of_frame`): a material decision lies
+  outside the Worker's grant; the value names that decision's owner, to
+  which the Executive returns the question; and
+- `re_entry_requested(basis)` (`invalid_basis`): the activated basis can no
+  longer support the Worker's construction; the Executive revalidates the
+  basis lock (§6 Drift locks) before any further activation.
 
-The mapping is total and exclusive after lawful activation. Payload
-wording, stop timing or actor preference cannot select another variant. A
-capability, authority, stale-basis, ambiguous-basis or topology mismatch
-known during activation is an `activation_refusal`, never a synthetic
-Worker result (P5, P6). Consumers choose the representation; ACTIVATION §1
-and §3 stay the owners of the execution relation and its dispositions.
+A capability, authority, stale-basis, ambiguous-basis or topology mismatch
+known during activation is an `activation_refusal` with its cause, never a
+synthetic Worker result (P5, P6). Consumers choose the representation;
+ACTIVATION §1 and §3 stay the owners of the execution relation, its
+results and its dispositions.
 
 The result references the current computed classification, supporting
 evidence, residual judgments and original rulings through their existing
@@ -405,8 +504,12 @@ Worker or Writer relation carrying the exact operation grant, subject and
 write territory. A same-actor role transition is explicit and is recorded in
 the existing work carrier before the effect; for that effect the actor is no
 longer acting as Executive. Recording or delegating after an Executive edit
-cannot authorise the edit retroactively (P6, P3; ACTIVATION §1, the
-coordinating role mutates nothing).
+cannot authorise the edit retroactively (P6, P3). This prohibition is this
+profile's, and it applies wherever the executive configuration is selected
+([ACTIVATION §1 Configuration](ACTIVATION.md#configuration), Example; §7);
+an operation grant covering a construction, status and checkpoint sequence
+does not lift it
+([ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)).
 
 ### Attention cycle
 
@@ -497,9 +600,10 @@ locks (P3, P6, P2; rc.2 #executive-drift-locks):
 On a failed lock: changed Product meaning requires
 re-entry. A stale or substituted basis is `invalid_basis`. Missing material
 scope is `out_of_frame`. Missing operation authority refuses the activation
-or the effect. An unresolved mandatory conflict prevents a satisfied
+or the effect; a refused activation is `activation_refusal(authority)`
+(REFERENCE_FRAME §5). An unresolved mandatory conflict prevents a satisfied
 conjunction. The Executive repairs none of these by making its own frame
-larger (P5, P6; ACTIVATION §3).
+larger (P5, P6; FOUNDATIONS §4 Results and Conjunction of results).
 
 ### Product-chain basis
 
@@ -567,6 +671,74 @@ engagement frame
 The notation needs no Cartesian-product schema and no universal frame
 runtime (P2, RF-016).
 
+### The executive configuration
+
+The executive configuration is the configuration this profile describes,
+in the sense of [ACTIVATION §1 Configuration](ACTIVATION.md#configuration).
+It allocates construction to the Worker frame, specialised as Writer for
+documents and records; assessment, where it is required, to the Reviewer
+frame; and coordination across tasks to the Executive frame, which disposes
+within the decision grant existing authority admits (§5, §8 to §10). It is
+one configuration, selected where it fits the task, not an inventory of
+roles that all work needs. Existing authority selects it or another
+configuration under §16, and a configuration with other frames, names or
+topology is evaluated against its own task as ACTIVATION §1 Configuration
+states, not by its distance from this one (P0, P2, P6).
+
+Where it is selected, every grant, limit and prohibition this profile
+places on its frames is in force without exception: the Executive's
+prohibition on mutation (§6 No mutation while Executive) and the
+exclusions of the Worker and Reviewer frames (§9, §10) among them.
+Selecting the configuration makes none of them optional, and no operation
+grant lifts them (P6).
+
+Explanation of the allocation. ACTIVATION §1 Configuration requires the
+design that selects a configuration to explain its allocation; for this
+configuration the explanation is (P0, P5, P6):
+
+- fit: task-based work in which carrying out a bounded change and managing
+  delivery across successive tasks need separate attention; where one
+  sufficient frame covers the task, direct entry applies instead (§3);
+- resource limits assumed: every actor has a finite context and attention
+  envelope, so no frame holds the whole workspace. The Worker's context
+  holds one causal cone (§9), the Reviewer's one exact claim with its
+  evidence (§10), and the Executive's the outcome, the frontier and the
+  closed-result ledger (§6), never the working context of an evaluator.
+  The adopting Product's basis records the concrete capability envelopes
+  (§16 Adopt this baseline); time, spend and other resource limits are
+  those of the selected execution binding (ACTIVATION §6);
+- failure assumptions: a constructor can be wrong about its own candidate,
+  so its self-review is construction output and required assessment is
+  independent (EVALUATION §3); a coordinator that also changed the subject
+  would decide on its own effects, so the Executive makes none (§6); a
+  result can become stale or bound to another subject, so the Executive
+  revalidates the drift locks before activation and disposition (§6); an
+  activation can fail, so a refused activation returns with its cause and
+  no Worker result (§5 Work result); and a bounded view can lack what a
+  task frame knows, so results carry every blocker material to delivery
+  (next paragraph).
+
+Coordination. The Executive is this configuration's coordinator, and
+[ACTIVATION §1 Configuration](ACTIVATION.md#configuration), Coordination
+across tasks, owns the rule for a coordinator's bounded view. Here that
+view is the closed-result ledger (§6 Attention cycle) with the
+work-result and review-result projections of §13. The Executive acquires
+what a decision needs beyond that view through its frame inputs (§8) or
+by activating a further bounded evaluation (§6). The residuals and the
+stop basis of those two projections are where a compact result carries
+every blocker material to delivery, as that rule requires (P0, P4b,
+P6).
+
+This subsection is new; it has no rc.2 row. Purpose and material relation:
+ACTIVATION §1 makes the executive configuration one example among lawful
+configurations and leaves its frames, prohibitions and explanation to this
+profile. Without the explanation the allocation could be applied where it
+does not fit or read as the method's default; without the statement that
+its prohibitions hold wherever it is selected, selection could be read as
+relaxing them. The material relation is whether a task receives this
+allocation only where it fits, and whether its prohibitions and its
+reporting of blockers hold wherever it is used.
+
 ## 8. Derived Executive frame
 
 The Executive frame, in the shape of a frame declaration (REFERENCE_FRAME
@@ -583,7 +755,7 @@ The Executive frame, in the shape of a frame declaration (REFERENCE_FRAME
 | evidence | live authority surfaces, frame results, Reviewer technical triage, exact candidate identity, transition evidence, coverage residuals and specialist results |
 | capability envelope | enough method, Product, release or MVP, authority, workspace, triage and actor-selection competence to configure, prioritise and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
 | exclusions | candidate, Product or worktree byte mutation and implementation effects while occupying the frame; implementation ownership; silently rewriting Reviewer evidence or severity; claiming independent review without a qualifying activation; semantic reconstruction owned elsewhere; disposition outside the admitted grant |
-| result | one core result (ACTIVATION §3), the assigned priority and current-boundary effect, and one existing disposition where the basis is decidable |
+| result | one core result (FOUNDATIONS §4 Results), the assigned priority and current-boundary effect, and one existing disposition (ACTIVATION §3 Disposition) where the basis is decidable |
 | invalidation | a material change of method, authority, outcome, mandate, triage policy, checkpoint, candidate, evidence, finding, capability or topology |
 
 The frame adds no `authorize` or `no_action` disposition. Activation is the
@@ -644,7 +816,7 @@ only through the existing operation grants (P6, P4b).
 | evidence | live implementation, tests and test source, analysis, generated artifacts, installed or operational behaviour where claimed, reconstruction, mutations and exact transition evidence |
 | capability envelope | the declared method, domain, implementation, tool, access and finite-context competence the causal cone requires |
 | exclusions | upstream semantic change, unauthorised cone expansion, self-acceptance, hidden competing paths, and advancing after returning the work result |
-| result | one core result (ACTIVATION §3) and exactly one work-result variant (§5) |
+| result | exactly one work-result value, which carries the one core value ACTIVATION §3 maps it to for "a candidate is available" (§5 Work result); each evaluation the Worker performed keeps its own core result (FOUNDATIONS §4 Results) |
 | invalidation | a material change of intake, basis, checkpoint, dependency, configuration, capability or topology |
 
 `candidate_ready` binds the exact candidate and the transition evidence of
@@ -785,7 +957,8 @@ contribute. A composite claim is `satisfied` only through a declared
 conjunction in which every applicable constraint is satisfied and every
 material cross-frame seam preserves, or lawfully translates, exact
 identity, coordinate and basis, carried value or evidence, lifecycle scope,
-authority and provenance (REFERENCE_FRAME §6). A missing or non-commuting
+authority and provenance (FOUNDATIONS §4 Conjunction of results;
+REFERENCE_FRAME §6 for translation). A missing or non-commuting
 seam returns the applicable `falsified`, `indeterminate`, `out_of_frame` or
 `invalid_basis`; no frame is selected as dominant (P4a, P5).
 
@@ -851,7 +1024,8 @@ REFERENCE_FRAME §11; for this step it identifies (P0, P6; rc.2
 
 If activation detects a known capability, authority, subject, basis or
 topology mismatch, it returns `activation_refusal` directly to the
-Executive. No Worker frame is active, no Worker evaluation occurs, and the
+Executive, with the cause and core value REFERENCE_FRAME §5 gives it. No
+Worker frame is active, no Worker evaluation occurs, and the
 Executive does not manufacture a Worker result to represent the failed
 activation (P5, P6).
 
@@ -869,10 +1043,13 @@ WorkerResult
   | re_entry_requested(owner, material_relation, evidence)
 ```
 
-The notation explains and mandates no schema. Each variant accompanies
-exactly one core result under the mapping of ACTIVATION §3 (construction
-availability), read as in §5 (Work result); the mapping applies only after
-lawful activation. The Worker does not send a candidate directly into an
+The notation explains and mandates no schema. The material relation of
+`re_entry_requested` names its cause, authority or basis, which is part of
+the value. Each value maps to exactly one core value for "a candidate is
+available" under
+[ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability),
+read as in §5 Work result; the mapping applies only after lawful
+activation. The Worker does not send a candidate directly into an
 implicitly active Reviewer. It stops after returning the result (P5,
 P6).
 
@@ -931,7 +1108,7 @@ which here contains (P6, P5; rc.2 #6-reviewer-returns-to-executive):
   population;
 - the Reviewer actor and the independence conditions;
 - the evidence and the ordinary assurance path acquired;
-- the core result;
+- the core result (FOUNDATIONS §4 Results);
 - findings, counterexamples and adjacent observations;
 - for each finding, where supportable: the affected claim, severity, causal
   assessment and confidence, blast radius, workaround, repair complexity,
@@ -950,14 +1127,17 @@ edit the candidate, direct the repair or authorise continuation (P6; rc.2
 
 The Executive verifies that every consumed result is still bound to the
 current subject and basis, revalidates the complete Product view and the
-current MVP or release mandate, applies any declared result conjunction,
-assigns priority, records the effect on the current promotion boundary, and
-acts on exactly one disposition within its grant: `accept`, `local_repair`,
-`re_enter` or `reject` (ACTIVATION §3; P6, P5; rc.2
+current MVP or release mandate, applies any declared result conjunction
+(FOUNDATIONS §4 Conjunction of results), assigns priority, records the
+effect on the current promotion boundary, and acts on exactly one
+disposition within its grant: `accept`, `local_repair`, `re_enter` or
+`reject` (ACTIVATION §3; P6, P5; rc.2
 #7-executive-disposes-and-checkpoints).
 
 ACTIVATION §3 and §5 stay the owners of each disposition, the exact accepted
-checkpoint and the next already-authorised bounded action. A repair creates
+checkpoint and the next already-authorised bounded action. The disposition
+is the acceptance result; neither `candidate_ready` nor a satisfied review
+result is acceptance (FOUNDATIONS §4 Results). A repair creates
 a new candidate, and an affected review is reactivated against it.
 Acceptance does not widen the Product outcome or authorise an unselected
 successor (P4b, EVALUATION §5).
@@ -990,7 +1170,7 @@ artifact type (P2, P6; rc.2 #handoff-projection).
 | Projection | Producer to consumer | Minimum material content | Owning law |
 |---|---|---|---|
 | Worker activation | Executive to Worker | exact intake, basis, affected cone, inherited operation grant, mutation subject and write territory where applicable, frames, evidence, exclusions, stop and re-entry conditions | REFERENCE_FRAME §11; ACTIVATION §1 |
-| activation refusal | the activation relation to Executive | attempted frame, subject and basis, actor, the failed capability or authority predicate, evidence and reconfiguration pressure; no Worker result | REFERENCE_FRAME §5; ACTIVATION §1 |
+| activation refusal | the activation relation to Executive | attempted frame, subject and basis, actor, the cause (capability, authority or basis) with its failed predicate, evidence and reconfiguration pressure; no Worker result | REFERENCE_FRAME §5; ACTIVATION §3 Admission and activation |
 | work result | Worker to Executive | result variant, exact subject if any, transition evidence, non-changes, residuals, stop basis | ACTIVATION §3 and §7 |
 | Reviewer activation | Executive to Reviewer | exact subject, claim, composition boundary, evidence population, Product-selected severity scale, authority, independence, invalidation | REFERENCE_FRAME §11; EVALUATION §3 and §7 |
 | review result | Reviewer to Executive | exact verdict basis, evidence, findings, counterexamples, technical triage, residuals, invalidation; no priority and no disposition, a recommendation being evidence only | EVALUATION §3 and §4; ACTIVATION §3 |
@@ -1047,7 +1227,7 @@ REFERENCE_FRAME §8, authority coverage).
 ## 15. Missing-frame and re-entry application
 
 Any active frame may return `out_of_frame`, `indeterminate` or
-`invalid_basis` (ACTIVATION §3). The closed result names the missing
+`invalid_basis` (FOUNDATIONS §4 Results). The closed result names the missing
 relation, coordinate, evidence, authority, capability or interaction that
 can change the evaluation (P5; rc.2
 #missing-frame-and-re-entry-application).
@@ -1071,8 +1251,10 @@ repair an upstream authority gap by making its frame larger (P6).
 
 ### Existing authority selects the configuration
 
-The frame configuration is admitted by the smallest existing project
-authority that owns the material decision (P6, P2; rc.2
+A frame configuration, in the sense of
+[ACTIVATION §1 Configuration](ACTIVATION.md#configuration), this profile's
+executive configuration or another, is admitted by the smallest existing
+project authority that owns the material decision (P6, P2; rc.2
 #existing-authority-selects-the-configuration):
 
 - Goals or admitted work authority own bounded work selection;
@@ -1124,6 +1306,9 @@ REFERENCE_FRAME §4):
 - intentional overlap, separately activated evaluations and required
   assurance independence;
 - the conjunction, translation and composition actually used;
+- the explanation of the allocation, with its material resource limits and
+  failure assumptions, that ACTIVATION §1 Configuration requires of every
+  configuration;
 - the mapping to the applicable construction, assessment, disposition,
   identity and release obligations;
 - coverage and residual uncertainty; and
@@ -1131,10 +1316,13 @@ REFERENCE_FRAME §4):
 
 A project configuration need not keep the labels Executive, Worker and
 Reviewer or map one local frame to each. It keeps every applicable method
-relation and identifies how its evaluations cover the claims it makes. A
-local axioms document may carry the accepted configuration; its authority is
-the cited Goals, Product, requirement or accepted-design decision, not the
-document's category (P6, P1).
+relation and identifies how its evaluations cover the claims it makes. It
+is evaluated against its task, its dependencies, its actors' limits, the
+authority it applies and the required assurance, as ACTIVATION §1
+Configuration states, never by its labels, its topology or its difference
+from this profile. A local axioms document may carry the accepted
+configuration; its authority is the cited Goals, Product, requirement or
+accepted-design decision, not the document's category (P6, P1).
 
 ### Extension versus replacement
 
@@ -1151,15 +1339,20 @@ selection (P6, EVALUATION §6).
 
 ## 17. Actor binding and independence
 
-Frames and actors are separate identities. One actor may occupy several
-frames across different activations where authority and any claimed
-independence are preserved. Humans, agents, deterministic tools or mixed
-configurations may occupy them. The profile prescribes no actor count (P3,
-P6, RF-016; rc.2 #actor-binding-and-independence).
+Frames and actors are separate identities: activation binds an actor to
+a frame ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration)). In
+this configuration, as
+[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)
+permits for any configuration, one actor may occupy several frames across
+different activations where authority and any claimed independence are
+preserved. Humans, agents, deterministic tools or mixed configurations may
+occupy them. The profile prescribes no actor count (P3, P6, RF-016; rc.2
+#actor-binding-and-independence).
 
 Where independent review is required, EVALUATION §3 controls: the
 activation records the exact subject and verdict carrier, and the Reviewer
-is not the author of that subject. For generic method qualification,
+is not the author of that subject; a fresh context of the author is still
+the author. For generic method qualification,
 EVALUATION §7 adds its declared capability, configuration, comparison
 basis, reference-exposure and freeze conditions (P6).
 
@@ -1197,9 +1390,9 @@ A representative profile trial establishes at least that (P6, P5):
    grant, subject and write territory; an in-territory mutation succeeds
    only under that grant and an out-of-territory mutation refuses, without
    granting operation authority to another frame;
-5. every work-result variant is mapped disjointly from its core result and
-   returns to its declared consumer, the Executive in the coordinated
-   branch;
+5. every work-result value is selected by its cause, maps to exactly one
+   core value as ACTIVATION §3 states, and returns to its declared
+   consumer, the Executive in the coordinated branch;
 6. a sufficient direct local case starts and finishes as Writer in its
    existing carrier without Executive appointment or independent review,
    and a coordinated `candidate_ready` also reaches disposition without a
@@ -1280,7 +1473,9 @@ or adoption authority (P6, P2; rc.2
 - role-specific actor capability, authority and independence bindings:
 - Product-selected severity and priority scales, current-boundary cutoff,
   non-waivable hard stops, and the Reviewer-to-Executive triage relation:
-- work-result to core-result mapping (ACTIVATION §3):
+- work-result to core-result mapping: ACTIVATION §3 construction
+  availability, recorded by reference, with any project refinement of a
+  work-result value mapped under FOUNDATIONS §4 Results:
 - the twelve generic family declarations, non-material evidence or
   explicit residuals:
 - Product-testing claims, frame topology, material combination
@@ -1316,7 +1511,7 @@ rc.2 #failure-classification; REFERENCE_FRAME §10).
 | one actor receives every specialist concern as one global context and repeatedly misses known violations | attention-surface or capability mismatch; refine and independently activate frames |
 | every local frame is green but an affected Product edge is unevaluated | missing Product Composition activation |
 | a child result directly starts repair, review, publication or continuation | return-topology and decision-authority violation |
-| a compression, summary, generated map or prior result replaces current source authority | invalid basis or evidence substitution |
+| a compression, summary, generated map or prior result replaces current source authority | invalid basis or evidence substitution; the current workspace and its authoritative inputs govern, and a retained account never overrules current evidence ([ACTIVATION §5](ACTIVATION.md#the-workspace-and-an-actors-account)) |
 | the Worker cannot see a material violation visible from another evaluation | missing or misactivated specialist frame, capability mismatch, or oversized frame |
 | the Reviewer asks assurance code to recreate Product or implementation meaning | Reviewer authority bleed, or a missing capability or reuse frame |
 | a harness derives current owner state from raw events or payloads although an installed owner projection exists | rival semantic interpreter and invalid assurance subject |
@@ -1429,8 +1624,9 @@ A project has applied this baseline to one outcome when (P6, P2):
 3. Executive, Worker and Reviewer are available finite evaluation frames,
    activated only where applicable, not a hierarchy or actor identities;
 4. activation refusal stays distinct from Worker results, and every Worker
-   result maps exclusively from one closed core result and returns to its
-   declared consumer, first to the Executive in the coordinated branch;
+   result is one work-result value selected by its cause, maps to exactly
+   one core value as ACTIVATION §3 states, and returns to its declared
+   consumer, first to the Executive in the coordinated branch;
 5. existing work authority decides whether an exact candidate requires
    independent review; the coordinated Executive activates the Reviewer
    where required, and the sufficient direct branch adds no such
@@ -1504,9 +1700,9 @@ and in those members' tables.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #canonical-compression | conserved; the testing-frame evidence topology moves to ASSURANCE §7 with the frames | §1; ASSURANCE §7 |
-| #status-and-authority-boundary | conserved; the ownership table is rewritten onto tenant members, and the owners DESIGN_MODULE, IDENTITY and RELEASE are linked | §2 |
-| #engagement-applicability | conserved; direct entry itself is ACTIVATION §1, and the profile's additions are restated here | §3 |
+| #canonical-compression | conserved; the testing-frame evidence topology moves to ASSURANCE §7 with the frames; "adds no owner of its own" is written as owning only the bindings the lead names, as an operational profile under the common single ownership requirement, item 2 | §1; ASSURANCE §7 |
+| #status-and-authority-boundary | conserved; the ownership table is rewritten onto tenant members, and the owners DESIGN_MODULE, IDENTITY and RELEASE are linked; the core result algebra with its conjunction (FOUNDATIONS §4) and the configuration law (ACTIVATION §1 Configuration) have their own rows | §2 |
+| #engagement-applicability | conserved; direct entry itself is ACTIVATION §1 Roles and delegation, the selection of coordination ACTIVATION §1 Configuration, and the profile's additions are restated here | §3 |
 | #empirical-revision-boundary | conserved | §4 |
 | #profile-terms | not applicable: heading with no claim text (17 bytes); its children are disposed individually | §5 |
 | #engagement-frame | conserved | §5 Engagement frame |
@@ -1515,21 +1711,21 @@ and in those members' tables.
 | #testing-frame | conserved; defined in tier 2 because the testing frames use it | ASSURANCE §7 |
 | #authoritative-product-path | conserved; defined in tier 2 because the testing frames use it | ASSURANCE §7 |
 | #material-combinatorial-complexity | conserved; defined in tier 2 because the testing frames use it | ASSURANCE §7 |
-| #executive | conserved; the proxy is admitted under EVALUATION §5 and ACTIVATION §1 | §5 Executive |
-| #executive-attention-evaluation-and-action | conserved; the three duties, the no-mutation rule, the attention cycle and the severity-versus-decision ledger rule | §6 |
+| #executive | conserved; the proxy is admitted under EVALUATION §5 and ACTIVATION §1; the frame is the executive configuration's coordinator (lead; §7 The executive configuration) | §5 Executive |
+| #executive-attention-evaluation-and-action | conserved; the three duties, the no-mutation rule, the attention cycle and the severity-versus-decision ledger rule; the no-mutation rule is owned here, binds wherever the executive configuration is selected (§7), and is not lifted by a sequence grant (ACTIVATION §1 Roles and delegation) | §6 |
 | #event-driven-executive-attention | conserved | §6 Event-driven attention |
 | #executive-drift-locks | conserved; the five locks as a table, with their failure consequences | §6 Drift locks |
 | #product-chain-basis | conserved; the role map lives in the basis (PRODUCT_DEFINITION §7) | §6 Product-chain basis |
-| #worker | conserved | §5 Worker |
-| #reviewer | conserved | §5 Reviewer |
+| #worker | conserved; the Worker frame carries the constructor's responsibility that ACTIVATION §1 Roles and delegation names (lead) | §5 Worker |
+| #reviewer | conserved; the Reviewer frame carries the assessor's responsibility that ACTIVATION §1 Roles and delegation names (lead) | §5 Reviewer |
 | #technical-triage-severity-priority-and-boundary-effect | conserved; the per-result projection is EVALUATION §4 | §5 Technical triage, severity, priority and boundary effect |
-| #work-result | conserved; the total mapping is ACTIVATION §3's construction availability refinement, and the variant readings, refusal exclusion and C/J/O reuse are restated here | §5 Work result |
+| #work-result | superseded in its mapping, because the rc.2 claim pairs `incomplete` with `indeterminate`. The replacement relation is the common single result algebra requirement, item 3: an evaluation that was not performed stays distinct from one whose evidence cannot decide. FOUNDATIONS §4 Results restates it, and ACTIVATION §3 Construction availability applies it by mapping `incomplete` to `falsified` for "a candidate is available"; `re_entry_requested` is split by cause into two values, each mapped once. The rest of the mapping, its totality and exclusivity are conserved at ACTIVATION §3; the activation-refusal exclusion is stated for every step at ACTIVATION §3 Admission and activation and applied to the Worker here; the reading of each value for the Worker and C/J/O reuse are restated here | §5 Work result; ACTIVATION §3 Construction availability; ACTIVATION §3 Admission and activation |
 | #exact-candidate | conserved | §5 Exact candidate |
 | #baseline-adoption-projection | conserved | §5 Baseline-adoption projection |
-| #non-hierarchical-frame-configuration | conserved | §7 |
+| #non-hierarchical-frame-configuration | conserved; the active configuration is the executive configuration under ACTIVATION §1 Configuration (§7 The executive configuration) | §7 |
 | #derived-executive-frame | conserved; table of eleven elements | §8 |
 | #steel-thread-delivery | conserved | §8 Steel-thread delivery |
-| #derived-worker-frame | conserved; table of eleven elements | §9 |
+| #derived-worker-frame | conserved; table of eleven elements; the result row reads one work-result value with the one core value ACTIVATION §3 maps it to, each evaluation the Worker performed keeping its own core result, under the replacement recorded at #work-result | §9 |
 | #derived-reviewer-frame | conserved; table of eleven elements | §10 |
 | #derived-generic-specialist-frame-set | conserved; all twelve families as a table | §11 |
 | #derived-product-testing-frame-set | conserved; the frame set in tier 2, available and activated only where the governing configuration or work authority selects it, as the predecessor's "when this profile supports" required; its relation to the Proof family here | ASSURANCE §7; §11 Relation to the testing and interface frames |
@@ -1550,26 +1746,28 @@ and in those members' tables.
 | #complete-engagement-transition | conserved | §12 |
 | #1-existing-authority-selects-the-basis | conserved | §12 step 1 |
 | #2-executive-activates-worker | conserved | §12 step 2 |
-| #3-worker-returns-to-executive | conserved | §12 step 3 |
+| #3-worker-returns-to-executive | superseded in its mapping sentence, as at #work-result: the rc.2 mapping `indeterminate -> incomplete` is replaced by the common single result algebra requirement, item 3, applied by ACTIVATION §3 Construction availability; the `WorkerResult` notation, the after-activation condition and the stop rule are conserved, and the cause of `re_entry_requested` is named as part of its value | §12 step 3; ACTIVATION §3 Construction availability |
 | #4-executive-evaluates-the-work-result | conserved | §12 step 4 |
 | #5a-candidate-does-not-require-independent-review | conserved | §12 step 5A |
 | #5b-candidate-requires-independent-review | conserved | §12 step 5B |
 | #6-reviewer-returns-to-executive | conserved | §12 step 6 |
 | #reviewer-result-and-triage-projection | conserved; the projection table is tier-1 law with assessor and decision owner in place of Reviewer and Executive | EVALUATION §4 Result and triage projection; §12 step 6 |
-| #7-executive-disposes-and-checkpoints | conserved | §12 step 7 |
+| #7-executive-disposes-and-checkpoints | conserved; the disposition is the acceptance result, never inferred from `candidate_ready` or a satisfied review (FOUNDATIONS §4 Results) | §12 step 7 |
 | #executive-promotion-constraint-projection | conserved; all four rows | §12 Promotion constraint projection |
-| #handoff-projection | conserved; all eight projections | §13 |
+| #handoff-projection | conserved; all eight projections; the activation-refusal projection carries the cause that REFERENCE_FRAME §5 maps, and its owners are REFERENCE_FRAME §5 and ACTIVATION §3 Admission and activation | §13 |
 | #coverage-application | conserved; all fourteen rows | §14 |
 | #missing-frame-and-re-entry-application | conserved; the order is REFERENCE_FRAME §10 with the profile's two specific steps stated | §15 |
 | #product-owned-adoption-or-project-defined-configuration | not applicable: heading with no claim text (59 bytes); its children are disposed individually | §16 |
-| #existing-authority-selects-the-configuration | conserved | §16 Existing authority selects the configuration |
+| #existing-authority-selects-the-configuration | conserved; the configuration selected is one in the sense of ACTIVATION §1 Configuration | §16 Existing authority selects the configuration |
 | #adopt-this-baseline | conserved | §16 Adopt this baseline |
-| #define-a-project-configuration | conserved | §16 Define a project configuration |
+| #define-a-project-configuration | conserved; the explanation of the allocation and the evaluation of a configuration by its task, which ACTIVATION §1 Configuration requires of every configuration, are applied here | §16 Define a project configuration |
 | #extension-versus-replacement | conserved | §16 Extension versus replacement |
-| #actor-binding-and-independence | conserved | §17 |
-| #profile-qualification | conserved; all twenty-six trial obligations | §18 |
-| #baseline-specific-project-basis-additions | conserved; the block heading reads "Executive Baseline Adoption Additions" | §19 Project-basis additions |
+| #actor-binding-and-independence | conserved; the actor-count rule applies ACTIVATION §1 Roles and delegation; that an author's fresh context is still the author is EVALUATION §3's | §17 |
+| #profile-qualification | conserved; all twenty-six trial obligations; obligation 5, "mapped disjointly from its core result", is written as a value selected by its cause and mapped to exactly one core value, because `refused` and `incomplete` now share `falsified` under the replacement recorded at #work-result | §18 |
+| #baseline-specific-project-basis-additions | conserved; the block heading reads "Executive Baseline Adoption Additions"; the mapping field records ACTIVATION §3 construction availability by reference, with any project refinement mapped under FOUNDATIONS §4 Results | §19 Project-basis additions |
 | #baseline-specific-activation-additions | conserved; the three frame additions as a table | §19 Activation additions |
-| #failure-classification | conserved; all twenty-eight rows | §20 |
+| #failure-classification | conserved; all twenty-eight rows; the row on a compression, summary, generated map or prior result refers to ACTIVATION §5 The workspace and an actor's account, which states its rule for tier 1 | §20 |
 | #anti-patterns | conserved; all thirty-two | §21 |
-| #closure | conserved; all twenty-four conditions | §22 |
+| #closure | conserved; all twenty-four conditions; condition 4, "maps exclusively from one closed core result", is written as one work-result value selected by its cause and mapped to exactly one core value, under the replacement recorded at #work-result | §22 |
+| Foundation to law | no rc.2 row; §3 Foundation to law holds table F16 in the format of FOUNDATIONS §3 Foundation to law; it decides nothing and names the rule that states each consequence | §3 Foundation to law |
+| The executive configuration | no rc.2 row; §7 The executive configuration is new: the configuration this profile describes under ACTIVATION §1 Configuration, selected where it fits the task, its grants, limits and prohibitions in force wherever it is selected, the explanation of its allocation, and the Executive as coordinator, with its purpose and material relation stated there | §7 The executive configuration |
