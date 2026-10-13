@@ -159,9 +159,10 @@ Capacity does not license omission.
 ## Transform
 
 Construct output or perform effects within the bound contract. Preserve the
-original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated Baseline WorkerResult instance
-uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
-retains M_b_prime*/hold/gap/refusal. These are original domain outcomes mapped under the core result contract. Apply the unknown-effect rule at [Workspace and context](FOUNDATIONS.md#workspace-and-context). The worker's internal search is its HOW; it cannot widen
+original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated
+[Baseline WorkerResult](STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame)
+retains its declared outcomes; an [AC-013 instance](AXIOMATIC_CALCULUS.md#ac-013-transformation)
+retains that owner's outcomes. These are original domain outcomes mapped under the core result contract. Apply the unknown-effect rule at [Workspace and context](FOUNDATIONS.md#workspace-and-context). The worker's internal search is its HOW; it cannot widen
 the outer outcome or effect grant.
 
 ## Evaluate
@@ -247,9 +248,9 @@ is replaceable; the workspace survives the actor.
 
 [Bounded construction](FOUNDATIONS.md#bounded-construction) supplies progress,
 stop and total-handling distinctions. Spec Method binds Product progress and
-owning-layer re-entry; Ticket Method binds carrier reuse; adopted profiles bind
-their additional recovery duties. A failed relation needs a causal repair before
-retry. A process restart by itself is an acquisition event, not proof that a
+owning-layer re-entry; [Ticket Method](TICKET_METHOD.md#work-carrier-to-execution-rule) binds carrier use; adopted profiles bind
+their additional recovery duties. Retry applies the causal-change condition in
+[Bounded construction](FOUNDATIONS.md#bounded-construction). A process restart by itself is an acquisition event, not proof that a
 construction restart or workspace deletion is required.
 
 Select a proof adequate to falsify the affected relation and satisfying its

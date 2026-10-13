@@ -204,7 +204,7 @@ it does not introduce another method result algebra.
 
 Process resumption applies [Workspace and context](#workspace-and-context).
 The Spec Method binds its product-specific triage and progress predicates;
-Ticket Method binds carrier retention; adopted runtime profiles bind stronger
+[Ticket Method](TICKET_METHOD.md#work-carrier-to-execution-rule) binds carrier use; adopted runtime profiles bind stronger
 history or replay duties within their scope. None of those bindings turns
 private actor context into the continuing work state.
 
@@ -305,8 +305,19 @@ The activation binds that procedure and its conclusion boundary before use. The 
 | Performance | Permitted verdicts | Meaning |
 |---|---|---|
 | `performed` | Any of the five verdicts | The procedure concluded, including a scoped basis or capability diagnosis. |
-| `not_performed` | `indeterminate` only | Evidence establishes no conclusion: it never started or aborted; retain which occurred. |
-| `unconfirmed` | `indeterminate` only | Whether the procedure concluded is not established. |
+| `not_performed` | Any except `satisfied`, with the evidence condition below | Evidence establishes no conclusion: it never started or aborted; retain which occurred. |
+| `unconfirmed` | Any except `satisfied`, with the evidence condition below | Whether the procedure concluded is not established. |
+
+Non-conclusion does not erase admissible evidence already obtained. An
+authenticated counterexample to the bound predicate can establish falsified
+before its procedure concludes; an established basis or scope diagnosis can
+likewise establish invalid_basis or out_of_frame. The result identifies that
+evidence independently of any claim that the procedure concluded. Without
+such deciding evidence it is indeterminate. Satisfaction requires the declared
+procedure's conclusion and its required evidence; a partial attempt cannot
+stand in for that conclusion. For example, a suite aborted after a witnessed
+failure falsifies “all tests pass” while remaining not_performed at the declared
+whole-suite conclusion boundary. Both facts survive conjunction.
 
 A missing required judgment stays an absent coverage slot, with the known
 performance fact or its uncertainty; it is not a fabricated child result. A
@@ -328,7 +339,7 @@ boundary, not the predicate verdict. `not_started` needs evidence that the selec
 an authenticated rejection before mutation. Transport dispatch alone proves
 neither effect completion nor absence; `unknown` includes a lost acknowledgment
 after possible execution.
-`reverted` means that every begun part is observed to have been reversed within
+`reverted` means that at least one part began and every begun part is observed to have been reversed within
 the declared boundary, with the reversal and any unstarted remainder retained
 as evidence. Irreversible messages or other material external effects must not
 be excluded from that boundary to claim reversal. `partial` means an observed
@@ -348,8 +359,9 @@ consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
 A missing required reason maps the claimed predicate to indeterminate and
 leaves that contribution inadmissible as deciding support for its slot;
 retain its raw outcome and unresolved authentication. Its claimed predicate
-remains indeterminate until admissible evidence decides it. An independently
-established invalid basis instead yields invalid_basis for that diagnosis.
+remains indeterminate until admissible evidence decides it. Independently
+established counterevidence or a basis/scope diagnosis uses the legal pairs above
+on that same bound predicate; it does not invent a completed procedure.
 Requested effects without sufficient observation are unknown, never defaulted
 to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
 No refinement turns failure, undecidability, non-performance or unknown effect
@@ -382,13 +394,29 @@ The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
 
 The aggregate evaluation has performance performed when its combining rule is
-applied; this does not change component performance. Aggregate effect state is
-computed over the declared composite effect scope: any unknown gives unknown;
+applied; this does not change component performance. The composite declares its
+effect boundary and the selected effect parts within it. First resolve a current
+observation for each part, retaining the contributing observations, identities,
+ordering and any supported supersession. A later timestamp alone is no
+supersession argument. Conflicting or insufficient observations leave the part
+unknown. A requested part without sufficient observation, including a part
+owned by an absent evaluation slot, is unknown unless evidence establishes
+not_started. No requested parts gives not_requested.
+
+Sequential stages can affect the same part. Their local completion labels are
+not inputs to the composite join until mapped onto that part's observed state
+at the composite boundary. A completed deployment followed by its completed
+rollback is reverted for the deployment effect; a subsequent completed
+reapplication is completed there. The historical rollback remains evidence.
+The declarations retain every material external part, including irreversible
+ones; a local reversal cannot silently remove them from the scope.
+
+Over the resulting disjoint part observations: any unknown gives unknown;
 all not_requested gives not_requested; completed with only completed or
 not_requested gives completed; not_started with only not_started or
 not_requested gives not_started; reverted with only reverted, not_started or
 not_requested gives reverted; every remaining fully observed mixture gives
-partial. Retain which component each observation concerns. The combining
+partial. Retain each observation's part and contributing components. The combining
 operation's own lack of mutation cannot label an effectful composite not_requested.
 
 First authenticate each contribution against its producer, subject, basis and
@@ -413,7 +441,12 @@ For an interpretable composite predicate and governing basis:
    authentically satisfied, with coverage itself established. An empty list
    proves nothing unless the declared required set is established as empty.
 
-If the composite subject or governing basis itself cannot be interpreted, the
+The composite declaration distinguishes its admission conditions from the
+material joins of the predicate being evaluated. Each relation has one of
+those roles in that evaluation. A failed admission condition prevents an
+interpretation; a false required join is counterevidence within an admitted
+interpretation. The result names that declared role instead of reclassifying a
+known failed join as a missing basis. If the composite subject or governing basis itself cannot be interpreted, the
 aggregate is `invalid_basis`; independently valid component failures and their
 scope remain exposed. This does not pronounce them false or forgotten.
 Effect uncertainty prevents satisfaction where the predicate requires a known
@@ -421,11 +454,17 @@ effect state. An unrelated effect does not automatically invalidate a different
 predicate; the dependency relation must justify its relevance.
 
 A declared operator states its truth and falsity conditions over exact leaf
-predicates and joins. Its result can be satisfied only when authenticated
+predicates and joins. On its fully decided admitted domain, those conditions
+are disjoint and exhaustive, including failure of a required join. An
+overlapping, incomplete or uninterpretable operator declaration is invalid_basis;
+its unresolved well-formedness remains explicit and supplies no satisfaction.
+Its result can be satisfied only when authenticated
 evidence establishes its truth condition and the material joins and coverage
 needed for that condition. It can be falsified only on an established falsity
-condition. Otherwise the invalid_basis, out_of_frame, indeterminate order
-applies to dependencies that could decide it. Authentication, original failure
+condition. Otherwise a material invalid_basis yields invalid_basis, a material
+out_of_frame yields out_of_frame when no invalid basis applies, and every
+remaining undecided case is indeterminate. Only dependencies needed to decide
+the bound predicate enter that ordering. Authentication, original failure
 retention, performance and effect composition remain the rules above. Negation
 or disjunction evaluates a different predicate; it cannot erase a failed leaf
 or pass that result off as conjunction of all leaves. A first-nonfailure rule
@@ -433,7 +472,7 @@ cannot turn an undecided fallback into success.
 
 Sequential composition records an unreturned dependent evaluation as an absent
 slot, with known non-conclusion or unconfirmed conclusion as observed. A lawful regrouping requires the same interpretable composite basis, required
-leaf predicates, joins and authentication, with no intermediate basis failure
+leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union and the above verdict/effect operations are associative. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
