@@ -190,3 +190,7 @@ More follow-ups held:
 - `WORLD_MODEL.md:25` stale owners (B6);
 - the GLOSSARY Semantic Import and Build Tenant rows (B10);
 - README `:34`, `:61` (D1).
+
+2026-10-13T20:15Z — Correction to the entry that records A1b's return. It says RA1's minor findings were repaired. A1b's return lists six as unchanged: 1b, 1c and 4b in FOUNDATIONS, and 2b, 6b and 6c in ACTIVATION. RA4 found the discrepancy. Those six are open and are now assigned: the ACTIVATION three to A4c, the FOUNDATIONS three to the repair after RA5.
+
+RA4 returned for ACTIVATION at `e31a9d9`: questions 1 to 4 `satisfied` (transitions, configuration, measurement and attention, workspace, refinement licensing). Questions 5 to 9 are `falsified` on 14 minor findings, none material. Disposition: `local_repair` as A4c on ACTIVATION, covering RA4's findings 5a (ACTIVATION part), 5b, 5c, 6a, 7a, 8a, 8b and 9b to 9e. RA4 also notes again that A4b measured its inputs after reading them, against the Limits of the C3 contract; the handoff carries this as a known variance.
