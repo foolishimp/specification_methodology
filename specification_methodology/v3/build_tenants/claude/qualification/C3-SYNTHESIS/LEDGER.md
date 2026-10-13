@@ -295,3 +295,23 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
   - TRAVERSAL `:904–905` and `:946` still attach `refuse_missing` to a judgment-level refusal;
   - two basis reclassifications to `refusal(basis)` need cross-family confirmation.
 - RX, a working consistency check across the whole candidate, started.
+
+2026-10-13T22:35Z — Returns and dispositions:
+- I2 returned `candidate_ready`, committed `b90315b`:
+  - 40 frontier edits from Ra, Rb and D12, with the `superseded` child rows inserted after their parents and row 802's deviation accepted;
+  - the general parent-value rule in FOUNDATIONS §4;
+  - two GLOSSARY rows.
+
+  The inflated SPAN.md was not committed; the span script keyed rows by line number.
+- RX returned (`122d928`), a consistency check across the whole candidate:
+  - RX-1 (bootstrap frame not committed) and RX-2 (frame copies differing from their owners) were blocking, and both are the frames deliberately held until regeneration;
+  - RX-3 to RX-12 were minor. Of 2,716 links, 1 was broken; there was no second owner of the core values and no raised standing; 21 of 21 family tables were present.
+
+  Disposition: I3 for the minor findings, then frame regeneration by the Executive.
+- I3 returned `candidate_ready`, committed `24348b0`:
+  - RX-3 to RX-12 repaired;
+  - Rc's frontier rows applied;
+  - TRAVERSAL judgment-level refusals take their cause from AC-007;
+  - the span script keys rows by member and anchor, giving a re-proof span of 303 of 696 rows and 0 locus failures across 666 rows.
+- Role change to Writer: frames regenerated at the final member text and committed with the bootstrap frame and manifest (`600dbfd`). `generate_frames.py --check` exits 0, and the 35 generator tests pass. Link check across the members: 2,658 relative links, with every problem inside `standards/frames/`. Frames are verbatim excerpts one directory deeper, and their copied relative links do not resolve there, because C1 did not port Codex's link rewriting (`relocate`). This is recorded as a residual. Role back to Executive.
+- C6 (fresh-actor runs: 9 tasks, 2 repetitions each, Sonnet, 110,000-byte cap, spend stop at USD 15) started.
