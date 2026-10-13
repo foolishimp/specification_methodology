@@ -11,7 +11,7 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 C3, cross-synthesis phase. Each tenant builds on its own candidate at `31f28f9` and takes named parts of the other's ([Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis)). The work is carried by each tenant's ticket under [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md):
 
 - [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md);
-- [Codex](../.ai-workspace/tickets/backlog/T-002-CODEX-c3-successor-construction.md).
+- [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md).
 
 Nothing runs until an execution contract is admitted in that ticket. The actors for this phase are not yet named.
 

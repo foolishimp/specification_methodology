@@ -34,7 +34,7 @@ Construction proceeds through numbered checkpoints, C0 to C3, described under [C
 
 ## Construction And Context Management
 
-The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A includes the material workspace state and the justified knowledge available about it; unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
+The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A distinguishes the material workspace state from the actor's account of it. The workspace is the continuing truth surface for the construction; context is a bounded, revisable account acquired from that surface and its authoritative inputs. An observation can correct that account. A stored belief or successful prior result cannot overrule contrary current evidence; unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
 
 When the work exceeds one activation's capacity, it proceeds through bounded transitions A → B → C → … . Each transition retains the applicable outer obligations. Composition depends on compatible contracts and discharged preservation obligations. Discovery may add obligations or invalidate a claim. An authorised change may revise the destination; it does not establish that the previous destination was reached. Progress is judged against the selected outcome and evidence, rather than the number of remaining items alone.
 
@@ -294,7 +294,7 @@ Where this section and the installed baseline (STDO_REFERENCE_FRAME_BASELINE, th
 Outcome. Each tenant produces a candidate of the product with three things:
 
 - its foundational axioms and every member of the previous release restated on them, per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement);
-- for every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), one UP-015 disposition and a successor locus, which is the section of the candidate where the claim now lives;
+- for every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), one UP-015 disposition, with a resolving successor locus for each conserved or superseded claim and the required bounded reason or owner decision for other dispositions;
 - reference frames assembled from the candidate, as the unit every actor is started on.
 
 The previous release stays immutable and in force as the building tool until a release decision. It is not part of the new release.
