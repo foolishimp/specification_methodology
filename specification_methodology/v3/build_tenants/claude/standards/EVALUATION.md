@@ -352,8 +352,9 @@ below is stated in
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | A conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject returns `out_of_frame`, which is recorded, not hidden | [CONFORMANCE](CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history |
 | P0 (recovered), P6 (independent); instance premise c | A trial of bounded construction declares its per-actor context cap and total-work budget before each run, counts the context transferred across every delegated actor, and keeps its acceptance criteria independent of the constructing actor | [CONFORMANCE §2](CONFORMANCE.md#2-trials-from-the-comparative-baseline), the paragraph after the trial table, outside this member | a required basis larger than the cap, and repetition of probabilistic trials with varied task order: CONFORMANCE §2; each cap and budget: the trial's declaration |
 
-§8 records dispositions and decides nothing. CONFORMANCE §1 to §3 list the
-cases, which are the choices named in the last two rows, and its §4
+§8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
+cases, which are the choices named in the last two rows, its §5 maps the
+common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 ## 7. Qualification of frames and of the method

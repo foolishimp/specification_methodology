@@ -519,20 +519,20 @@ each trace is in its table (P1, P6).
 | F5 | Proportionality and cost | [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) | ACTIVATION §6; SPEC_METHOD §8 delivery priority |
 | F6 | Claims, evidence, assessment and acceptance | [EVALUATION §1](EVALUATION.md#1-claims) | EVALUATION §1 to §5 |
 | F7 | Conformance, equivalence and qualification | [EVALUATION §6](EVALUATION.md#6-conformance-of-realisations) | EVALUATION §6, §7; CONFORMANCE |
-| F8 | Identity | [IDENTITY §1](IDENTITY.md#1-position), table pending | IDENTITY |
-| F9 | The a_c calculus | [AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position), table pending | AXIOMATIC_CALCULUS |
+| F8 | Identity | [IDENTITY §1](IDENTITY.md#1-position) | IDENTITY |
+| F9 | The a_c calculus | [AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position) | AXIOMATIC_CALCULUS |
 | F10 | Constitutional chain, outcome and build-tenant binding | [SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain) | SPEC_METHOD §1 to §3, §6, §9 to §11 |
 | F11 | Change management and ambiguity | [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) | SPEC_METHOD §4, §5, §7 |
 | F12 | Binding a project to the method | [PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence) | PRODUCT_DEFINITION; FOUNDATIONS §2 Imports between members except its result grounds (F3) |
 | F13 | Work carriers | [TICKETS §5](TICKETS.md#5-from-carrier-to-execution) | TICKETS |
-| F14 | Assurance and testing | [ASSURANCE §1](ASSURANCE.md#1-verification-layers), table pending | ASSURANCE |
-| F15 | Release and successor conservation | [RELEASE §1](RELEASE.md#1-context-and-position), table pending | RELEASE; FOUNDATIONS §2 Product lineage objects |
+| F14 | Assurance and testing | [ASSURANCE §1](ASSURANCE.md#1-verification-layers) | ASSURANCE |
+| F15 | Release and successor conservation | [RELEASE §1](RELEASE.md#1-context-and-position) | RELEASE; FOUNDATIONS §2 Product lineage objects |
 | F16 | Engagement baseline (operational profile) | [EXECUTIVE_BASELINE §3](EXECUTIVE_BASELINE.md#3-engagement-applicability) | EXECUTIVE_BASELINE |
 | F17 | Software design | [DESIGN_MODULE §1](DESIGN_MODULE.md#1-purpose-and-position) | DESIGN_MODULE |
 | F18 | Outcome-driven development | [ODD §1](ODD.md#1-position) | ODD |
 | F19 | Traversal occurrence | [TRAVERSAL_OCCURRENCE, Position](TRAVERSAL_OCCURRENCE.md#position) | TRAVERSAL_OCCURRENCE |
-| F20 | UX | [UX §1](UX.md#1-position), table pending | UX |
-| F21 | World model | [WORLD_MODEL §1](WORLD_MODEL.md#1-position), table pending | WORLD_MODEL |
+| F20 | UX | [UX §1](UX.md#1-position) | UX |
+| F21 | World model | [WORLD_MODEL §1](WORLD_MODEL.md#1-position) | WORLD_MODEL |
 
 Members and sections with no family table, each with its reason:
 
@@ -935,7 +935,7 @@ traversal composition laws of any runtime.
 | AC Core Signature, Typed Records and its five records | conserved; restated in AXIOMATIC_CALCULUS §2 and §3; Semantic Object and Residual are related to the §2 objects Object and Residual, the definitions stay here |
 | AC-001, AC-003, AC-004, AC-012 | conserved; restated in AXIOMATIC_CALCULUS §4 |
 | AC-002, AC-005, AC-006, AC-009, AC-014 | conserved; restated in AXIOMATIC_CALCULUS §4 as laws over the §2 objects Object, Authority, Basis, Residual and Judgment, which are defined once here; P3, P4b and P6 consume them |
-| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the core result algebra of §4 Results, where its no-coercion rule is restated |
+| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the core result algebra of §4 Results, where its no-coercion rule is restated; AXIOMATIC_CALCULUS AC-007 maps the outcomes of a constraint's judgment into §4 Results value by value for a named predicate, and the outcomes of the member's operations by cause |
 | AC-008, AC-011 | conserved; restated in AXIOMATIC_CALCULUS §4; their generic forms over any two values and any reference are the Latitude and Reference-versus-body paragraphs of §4 above |
 | AC-010 | conserved; restated in AXIOMATIC_CALCULUS §4; applied by ACTIVATION §2 |
 | AC-013 transformation | conserved; restated in full in AXIOMATIC_CALCULUS §4; its delta fields are the conservation accounting of §4 above |
@@ -948,7 +948,7 @@ traversal composition laws of any runtime.
 | RF definitions (#definitions and its 17 children) | conserved; restated in §2 (amended rows, frame objects, authority kinds, disjointness and independence, the frame tuple); rows in the table below |
 | RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in §4 Results, and the rule of result conjunction once in §4 Conjunction of results |
 | RF-012, AC-007 core values | conserved; the five values with their meanings, the no-coercion rule and the boundary between out_of_frame and indeterminate are restated in §4 Results, whose first two boundary cases restate RF-012's values; two clauses there are tightenings that rc.2 implies and does not state: the undefined-term clause, because a relation is material when its lawful change can change the evaluation result, which a term's meaning can, and an undefined term neither appears in the frame nor enters through a declared input (rc.2 #material-relation, RF-003; P1); and the unexercised-capability case, because RF-012, Return A Closed Result, Applicability And Required Results and Result Conjunction together return what a sufficient evaluation supports and leave the unexercised part open (P5, P6); REFERENCE_FRAME §3 and AXIOMATIC_CALCULUS §4 state them as laws and dispose their rows; ACTIVATION §3 refines the core for steps. New in §4 Results, each required by the single result algebra and its purpose stated there: the standing relation and the no-raise rule, the separation of a not-performed evaluation from an indeterminate one, the recording of predicate and domain outcome with the core value, the separation of availability, assessment and acceptance, and the rule for refinements. RF-012's externally owned compatible extension is a refinement that a member, profile or adopting Product defines under §4 Refinements, which names that owner. Family F3 at the end of §4 Results traces these rules to the commitments |
-| RF Result Conjunction; the conjunction sentences of Applicability And Required Results | conserved; the conjunction rule is restated in §4 Conjunction of results, which also carries the combination rule formerly stated under conservation accounting; REFERENCE_FRAME §6 and ACTIVATION §1 Applicability refer to it, and REFERENCE_FRAME §15 and ACTIVATION §8 dispose the rows. New there, with the purpose stated there: the three inputs kept apart, the gap record, the travelling predicate, and the reported value where only gaps remain or the declared basis relations disagree |
+| RF Result Conjunction; the conjunction sentences of Applicability And Required Results | conserved; the conjunction rule is restated in §4 Conjunction of results, which also carries the combination rule formerly stated under conservation accounting; REFERENCE_FRAME §6 and ACTIVATION §1 Applicability refer to it, and REFERENCE_FRAME §15 and ACTIVATION §8 dispose the rows. New there, with the purpose stated there: the three inputs kept apart, the gap record, the travelling predicate, the reported value where only gaps remain or the declared basis relations disagree; and, where every mandatory result is `satisfied`, the declared basis relations agree and no gap remains, that a `falsified` result that is not mandatory stays in the record, that the declared rule states how results that are not mandatory count, and that without a material counterexample to a mandatory constraint the value is the one the declared rule gives over the mandatory results |
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
 | UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; UP-005 restated in DESIGN_MODULE §6 Boundary and governance cost, its proportionality relation ACTIVATION §6; P2 consumes them |
