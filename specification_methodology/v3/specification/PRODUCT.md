@@ -61,7 +61,7 @@ No member, profile or frame defines its own parallel set of outcomes. A refineme
 
 Categorical construction is a general capability of the method. The method defines categories of its own constructs and joins between categories, which are maps from one category to another. It permits a construction step only where declared laws allow it. Specification documents are the objects. Derivations and refinements are the arrows, and each states what it must preserve. A join of an algorithm category with a computation category is the acceptance instance for the capability. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a claim without it is a hypothesis.
 
-[CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it (the working foundations in [PRINCIPLES](requirements/PRINCIPLES.md)), its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet: the product owner has not chosen it for current work, and nothing unselected may be run or relied on.
+[CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it (the working foundations in [PRINCIPLES](requirements/PRINCIPLES.md)), its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet: the product owner has not chosen it for current work.
 
 Sequence:
 
@@ -265,7 +265,7 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 | guides | posting (how commentary posts are written), writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
 | packaging | manifest, schemas, templates, compressions (the shortened summaries of the standards) or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before a release-candidate cut |
 
-The previous-release members named in the table: DESIGN_MODULE_METHOD is the discipline for designing implementation modules; ODD_METHOD is the outcome-driven development profile; TRAVERSAL_OCCURRENCE_PROFILE is an optional a_c profile for recording histories of an application over a subject that changes outside it; the plugin carries the method's skills for coding agents.
+The previous-release members named in the table: DESIGN_MODULE_METHOD is the discipline for designing implementation modules; ODD_METHOD is the outcome-driven development profile; TRAVERSAL_OCCURRENCE_PROFILE is an optional a_c profile for recording histories of an application over a subject that changes outside it.
 
 Activation unit. Each tenant publishes reference frames assembled from its restated members, one per selected task. They are generated from the a_c form of the members (a_c projections) or by an equivalent the tenant declares. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation.
 
