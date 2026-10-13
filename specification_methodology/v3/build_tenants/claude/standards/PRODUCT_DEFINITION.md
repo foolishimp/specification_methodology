@@ -10,12 +10,14 @@ discovery with explicit composition, the semantic-resolution conformance
 cases, the one constitutional surface and version boundary
 (STDO-SURFACE-001), and the bootstrap of a project. Consumes
 [FOUNDATIONS](FOUNDATIONS.md) (object, authority and its kinds, basis,
-residual), [REFERENCE_FRAME](REFERENCE_FRAME.md) (frame set, frame-set
-declaration, activation packet), [ACTIVATION](ACTIVATION.md) (the step and
-the result algebra) and [EVALUATION](EVALUATION.md) (claims, separation,
-conformance); adds no definition to tier 1. The generic WHAT and HOW law
-and the recursive product taxonomy are [SPEC_METHOD §2 and
-§6](SPEC_METHOD.md); release identities, cohorts and selectors are the
+residual, imports between members, results),
+[REFERENCE_FRAME](REFERENCE_FRAME.md) (frame set, frame-set declaration,
+activation packet), [ACTIVATION](ACTIVATION.md) (the step) and
+[EVALUATION](EVALUATION.md) (claims, separation, conformance); adds no
+definition to tier 1. The generic WHAT and HOW law and the recursive
+product taxonomy are [SPEC_METHOD §2 and §6](SPEC_METHOD.md); the relation
+between a WHAT and the build tenants that realise it is
+[SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding); release identities, cohorts and selectors are the
 release law (the [RELEASE](RELEASE.md) member); assurance and testing law is
 [ASSURANCE](ASSURANCE.md). The schemas, templates, filenames, manifest
 fields and commands named here are this Product's own realisation shapes,
@@ -23,7 +25,8 @@ accepted as interoperability boundaries under §11; they are not profile
 terms. Three bounded contexts the predecessor placed in its SPEC_METHOD are
 owned here: product-definition-routing (§1 to §4, §9, §12),
 semantic-resolution (§5, §6, §10) and build-tenancy (§8). Every clause
-names the principle that requires it (P0 to P6, FOUNDATIONS §3). A route
+names the principle that requires it (P0 to P6, FOUNDATIONS §3); the
+member's family table (F12) closes §1. A route
 written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md` and is provenance
 only; under the standalone successor requirement every predecessor row
@@ -83,6 +86,47 @@ STDO-SURFACE-001 (§11). It standardises only identity, location, relation
 and discovery fields and absorbs no meaning owned by a referenced
 constitutional, Product, requirement, design, ticket or commentary surface
 (P6, P2).
+
+### Foundation to law: binding a project to the method
+
+This family (F12 in the index of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))
+decides how one project binds to the method. Its instance premises, which
+the commitments do not supply, are named in the rows as follows: own
+authorities, a project has its own product WHAT under its own authorities
+and adopts the method without becoming part of it; chosen layout, the
+project's governing documents, realisations and work carriers already
+live where the project placed them; shared workspace, several projects,
+product definitions, tenants and actors share one workspace or machine;
+recurring terms, one term occurs in several bounded contexts with
+different meanings; released method, the method is published as
+immutable released versions that a project selects, installs and later
+replaces. The index also assigns to this family the rule of
+[FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members);
+the table traces that rule in its sixth row, whose rule column names that
+section, and owns none of it. Each commitment's standing is written as the
+table of commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P6 (independent); P3 (independent); P2 (independent); P1 (independent); instance: own authorities, chosen layout | A project binds to the method through one definition for each distinct product WHAT. The definition locates the governing surfaces and records their relations without holding their content, so adoption needs no restructuring, and content repeated in the definition would be a rival authority. | [§1](#1-overlay-and-layout-independence); [§2](#2-required-definition-relations) | the JSON overlay, the filename convention and Definition Label, the schema and template, and the relation fields of §2: interoperability choices of this member, accepted under [§11](#11-one-constitutional-surface-and-version-boundary) |
+| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P1 (independent); instance: own authorities, shared workspace | Each definition line, Product, release, tenant and project keeps its own identity. A locator, filename, path or nesting mints no identity, authority, inheritance or composition. Discovery selects exactly one applicable definition for a scope or fails closed, and composition is explicit and verifies the identity it expects. | [§1](#1-overlay-and-layout-independence), the identity paragraphs; [§9](#9-recursive-discovery-and-explicit-composition) | the composition entry fields and the checks of a conforming discovered set: domain choices of this member |
+| P2 (independent); P1 (independent); P3 (independent); P6 (independent); instance: own authorities | The documents a project selects make recoverable, together, what its actors need to interpret it, whatever their number. A derived entry point neither narrows nor replaces the complete selected set, and a design ontology supplies no missing Product meaning. | [§3](#3-constitutional-set-sufficiency) | the five dimensions, axioms, ontology, epistemology, taxonomy and semantics: a domain choice of this member |
+| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); P1 (independent); instance: released method, shared workspace | One complete immutable release governs a project, selected by exact identity and verified before use. No mutable selector, cache, registry entry, alias or local copy replaces that selection. A change of release, or a consumer update, takes effect only on acceptance of the exact plan presented, and a state that cannot be verified fails closed, with prior state kept or recovered. | [§4](#4-shared-installed-release-basis-and-toolchain-manager); [Explicit complete consumer update](#explicit-complete-consumer-update); [§12](#12-bootstrap), the authority split | the toolchain manager, its shared store, its commands and their boundaries, the canonical hashing rule, the marker-bounded bootstrap block and the discovery prune list: interoperability choices of this member under §11 |
+| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance: recurring terms | A material term occurrence admits exactly one concept under an explicit bounded context, and zero or several fail closed. Equal spelling, location or proximity establishes no meaning, equality or authority. Meaning crosses contexts only by an explicit owner-authorised relation, and a local disambiguation names its owner, scope and candidates. | [§5](#5-bounded-context-semantic-resolution); [§6](#6-local-constitutional-binding); [§10](#10-semantic-resolution-conformance-cases) | the semantic address, the resolution order, the relation kinds other than import, the carrier coordinates and the minimum conformance cases: domain choices of this member; each local axiom, override and disambiguation: the authority its entry names |
+| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: shared workspace | A concept used outside its owning section keeps one meaning and one owner: the member that uses it refers to that owner, defines nothing again, loses nothing and gains no authority over it. An activation binds each member's own coordinates, re-establishes applicability after a change, and reports a missing source meaning, adoption or authority binding before relying on the concept. | [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members); its use between a project's bounded contexts: [§5](#5-bounded-context-semantic-resolution), Semantic Import | the contents of an import declaration and the two forms of an import: choices of FOUNDATIONS §2 |
+| P0 (recovered); P6 (independent); P3 (independent); P2 (independent); P1 (independent); instance: own authorities | The finite actors that engage a Product do so through a frame basis its authority admits. Profile availability, Product adoption and activation for one actor and subject are distinct relations. The definition locates the shared basis and records no activation, agent or temporary configuration; frames and actors keep separate identities, and a chain of Products keeps every lineage identity distinct. | [§7](#7-collective-reference-frame-basis) | adoption of an available profile or a project configuration, its frame set and every grant: the adopting Product's authority; the basis template: a starter of this member, not authority |
+| P3 (independent); P2 (independent); P6 (independent); P1 (independent); instance: own authorities, chosen layout | The definition locates the constitutional WHAT, each independent realisation of it and each work carrier, and each keeps its own authority: one registry identifies the tenants, goals own the work wave, tickets own ticket state and comments stay commentary. | [§8](#8-what-how-and-work-carriers) | the `what`, `how` and `ticketing` fields and the registry companion as a projection: choices of this member; each tenant's binding of the WHAT: that tenant's design, under [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) |
+| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); instance: released method | The method has one authority surface. Each law has one owning member, and the members govern only together, as one released version. A derived surface preserves the owning clauses' conditions, carries the digests of its sources and is stale when one changes; a matching digest establishes identity, not fidelity. | [§11](#11-one-constitutional-surface-and-version-boundary) | which concrete forms the method accepts as interoperability boundaries: this member (§1, §4); any widening of Product scope to an executable tool, runtime or realisation: separate explicit human authorisation |
+| P2 (independent); P3 (independent); P6 (independent); instance: chosen layout, released method | A project begins by copying the definition template from its selected release and binding its existing surfaces. It creates no competing local method root, and its first requirement surface may come from any legitimate constitutional input. | [§12](#12-bootstrap) | the default scaffold, the folder shape and the order of the fourteen steps: template defaults of this member, not path law |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §12 and for FOUNDATIONS §2 Imports between
+members; the grounds of `out_of_frame` and `invalid_basis` stated there
+are traced by family F3 at
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). §13 records
+dispositions and decides nothing.
 
 ## 2. Required definition relations
 
@@ -400,7 +444,12 @@ Zero applicable concepts is unresolved meaning; more than one is ambiguous
 meaning. Both fail closed at a material boundary: an agent, design, schema,
 implementation, test, translation or reviewer must not select one by
 familiarity, frequency, recency, nominal match or a context-free glossary
-fallback (P5, P1).
+fallback (P5, P1). For an evaluation that depends on such an occurrence,
+the definition, import or disambiguation that would select one concept is
+a material relation its frame does not declare: the evaluation returns
+`out_of_frame` and names that relation and its owner, as
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or
+indeterminate, states (P5, P1).
 
 The glossary (the [GLOSSARY](GLOSSARY.md) member) is a non-deciding locator index. Each
 record points to an exact source clause that declares the bounded context
@@ -425,15 +474,33 @@ states (P1, P6, P4b):
   provenance; and
 - its lifecycle and invalidation conditions.
 
-A Semantic Import adopts the cited meaning unchanged for its declared
-target scope. A Semantic Translation declares how meaning changes in one
-direction. Semantic Equivalence requires the governing authorities to
-establish the claimed equality; neither identical spelling nor two opposing
-translations proves it automatically. A Semantic Disambiguation selects one
-meaning for one scope and does not make competing concepts equal. No
-relation widens its source or target authority (P1, P6; these four kinds
-are related to the typed relations that AC-012, AXIOMATIC_CALCULUS §4,
-names, with Semantic Import defined here).
+The four relation kinds refine the rule of
+[FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members),
+which owns what an import is, its direction, its loss and its lack of
+authority, and states that a use that changes, narrows or loses the source
+meaning is not an import. That rule is stated for members. Here it
+applies between any two bounded contexts, with the context an owning
+authority declares as source or target. A carrier's concept references,
+bounded-context identities, direction and loss are the contents of an
+import declaration under that rule; its semantic owners are authorities,
+distinct from the owning clause to which a concept reference resolves.
+Each kind reads in the owner's terms once (P1, P6):
+
+| Kind | In the terms of FOUNDATIONS §2 Imports between members |
+|---|---|
+| Semantic Import | an import, applied for its declared target scope; its unchanged meaning, direction, loss and lack of authority are those FOUNDATIONS §2 states |
+| Semantic Translation | not an import, because it declares how meaning changes in one direction; its carrier states the coordinates an import declaration states (the concept, its owner, the source and target contexts and the direction) and declares the changed meaning and the loss. A specialisation (below) is a translation |
+| Semantic Equivalence | not an import: each concept keeps its own owner and context, and neither adopts the other's meaning. The governing authorities establish the claimed equality; neither identical spelling nor two opposing translations proves it automatically |
+| Semantic Disambiguation | not an import: it selects one meaning for one scope and does not make competing concepts equal. Where the selected concept is owned in another bounded context, it enters that scope only by the import, translation or equivalence its carrier declares (§6) |
+
+No relation widens its source or target authority; for an import,
+FOUNDATIONS §2 states this, and for the other three kinds this section
+does (P1, P6). These four kinds are related to the typed relations that
+AC-012, AXIOMATIC_CALCULUS §4, names. The reading of each kind in the
+owner's terms is new in this corpus. Purpose and material relation: an
+import has one definition, so a translation, equivalence or
+disambiguation cannot pass as an import that adopts meaning unchanged
+(P1, P6).
 
 A specialisation is a directional translation whose target preserves the
 declared source meaning while narrowing its admissible instances or adding
@@ -533,7 +600,7 @@ basis, evidence boundary and capability envelope; what the agent receives
 is the activation packet of REFERENCE_FRAME §11, and the step it performs
 is ACTIVATION §1. The Product Definition records the durable shared basis;
 a ticket or other authorised work instruction carries the activation
-packet. That execution binding does not mutate the overlay, and the overlay
+packet. An Agent Frame Activation does not mutate the overlay, and the overlay
 registers no agents, assigns no permanent frames and persists no temporary
 active frame configuration (P3, P0).
 
@@ -575,14 +642,20 @@ evaluation and authority relations (P1, P3).
 
 This member owns the build-tenancy bounded context,
 `urn:stdo:bounded-context:build-tenancy`, under the selected complete STDO
-basis. The multi-build-tenant work-item relation of
-[TICKETS §4](TICKETS.md#multi-build-tenant-independence) is a
-concept of this context owned there (statement of ownership, P1, P3). It governs the realisation relation that SPEC_METHOD §2 states
-generically: one constitutional product WHAT is realised by one or more
-independent project-owned HOW tenants. A build tenant is one such
-realisation. Build tenancy is the one-or-more relation; one tenant is its
-singleton case, and multi-build-tenancy begins when the same WHAT has more
-than one independent realisation (P3, P2; rc.2
+basis. These concepts of the context are owned in other members, each by
+an explicit owner relation (§5) (P1, P3):
+
+- the build tenant, the relation by which one constitutional product WHAT
+  is realised by one or more independent project-owned HOW tenants, and
+  each tenant's build-tenant binding:
+  [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), its terms and
+  rule 1;
+- the multi-build-tenant work-item relation:
+  [TICKETS §4](TICKETS.md#multi-build-tenant-independence).
+
+In this context build tenancy is that one-or-more relation; one tenant is
+its singleton case, and multi-build-tenancy begins when the same WHAT has
+more than one independent realisation (P3, P2; rc.2
 #what-how-and-work-carriers).
 
 `what.intent`, `what.product` and `what.specification` locate the current
@@ -592,8 +665,9 @@ specification may cite more than one requirement or specification surface
 
 The Tenant Registry is the canonical `how.build_tenants` collection for the
 product's independent HOW realisations. Each entry has stable identity and
-locates its root, design and implementation surfaces. The Common
-Build-Tenant Surface is the realisation law bound by `how.common` and
+locates its root, design and implementation surfaces; the tenant's
+binding, which those surfaces declare, is governed by SPEC_METHOD §11.
+The Common Build-Tenant Surface is the realisation law bound by `how.common` and
 explicitly adopted across more than one tenant. A separate
 `TENANT_REGISTRY.md` may remain as a human-readable companion or generated
 projection and cannot become a second tenant-identity or location
@@ -917,16 +991,21 @@ disposition, and is recorded in the row.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #stdo-product-definition-overlay-and-layout-independence | conserved; the owner of the product-definition-routing bounded context is this member rather than SPEC_METHOD; `IDENTITY_METHOD.md` is carried as the [IDENTITY](IDENTITY.md) member | §1 |
+| #stdo-product-definition-overlay-and-layout-independence | conserved; the owner of the product-definition-routing bounded context is this member rather than SPEC_METHOD; `IDENTITY_METHOD.md` is carried as the [IDENTITY](IDENTITY.md) member; the family table under Foundation to law is new | §1 |
 | #required-definition-relations | conserved | §2 |
 | #constitutional-set-sufficiency | conserved; "the accepted Design Module Method Ontology" is carried as the design profile's accepted design ontology of a realisation boundary, losing no determination | §3 |
 | #shared-installed-release-basis-and-toolchain-manager | conserved in full: the basis pair, the manifest binding, the Adoption and Fleet Adoption Plans, the hashing rule, the seven manager functions, the store and registry law, the physical-entry rule, the selector and basis fields, the six command boundaries, the fail-closed list, the schema-locator rule, the agent bootstrap marker law and the exact prune list; `RELEASE_METHOD.md` as owner of the selector's alias semantics is carried as the [RELEASE](RELEASE.md) member | §4 |
 | #explicit-complete-consumer-update | conserved in full | §4 Explicit complete consumer update |
-| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the [GLOSSARY](GLOSSARY.md) member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined | §5 |
+| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the [GLOSSARY](GLOSSARY.md) member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined; Semantic Import is the import of FOUNDATIONS §2 Imports between members, which states the unchanged-meaning import once, applied here between a project's bounded contexts for a declared target scope; the mapping of translation, equivalence and disambiguation to that rule's terms is new, and the `out_of_frame` result of an evaluation that depends on unresolved or ambiguous meaning applies FOUNDATIONS §4 Results | §5; [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members) |
 | #local-constitutional-binding | conserved | §6 |
-| #collective-reference-frame-basis | conserved; `REFERENCE_FRAME_METHOD.md` is carried as REFERENCE_FRAME and `STDO_REFERENCE_FRAME_BASELINE.md` as the Executive baseline profile member; the activation packet and the step are pointed to REFERENCE_FRAME §11 and ACTIVATION §1, which define them | §7 |
-| #what-how-and-work-carriers | conserved; the owner of the build-tenancy bounded context is this member; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection is SPEC_METHOD §4 and [TICKETS](TICKETS.md), neither restated here | §8 |
+| #collective-reference-frame-basis | conserved; `REFERENCE_FRAME_METHOD.md` is carried as REFERENCE_FRAME and `STDO_REFERENCE_FRAME_BASELINE.md` as the Executive baseline profile member; the activation packet and the step are pointed to REFERENCE_FRAME §11 and ACTIVATION §1, which define them; "that execution binding" is written "an Agent Frame Activation", the term the same paragraph defines, because SPEC_METHOD §11 gives "execution binding" another meaning | §7 |
+| #what-how-and-work-carriers | conserved; the owner of the build-tenancy bounded context is this member; the build tenant and the relation by which one WHAT is realised by one or more independent tenants are restated in SPEC_METHOD §11, its terms and rule 1, to which §8 refers as concepts of this context owned there; build tenancy, its singleton case, multi-build-tenancy, the registry, the common surface and the carrier bindings here; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection is SPEC_METHOD §4 and [TICKETS](TICKETS.md), neither restated here | §8; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) |
 | #recursive-discovery-and-explicit-composition | conserved | §9 |
 | #semantic-resolution-conformance-cases | conserved; "Reference Frame Method evaluation context" is carried as the reference-frame-evaluation bounded context owned by REFERENCE_FRAME §1 | §10 |
 | #one-constitutional-surface-and-version-boundary-stdo-surface-001 | conserved; "standard" is carried as "member" | §11 |
 | #bootstrap-rule | conserved in full: the scaffold bindings, the authority split, the singular-authority rule, the folder shape, the requirement sources and the fourteen-step sequence; the predecessor's own mutable source path `specification_methodology/specification/standards/` is generalised to the method's source workspace, since this line's source path differs and the law does not depend on it | §12 |
+
+New law with no predecessor row: the family table at §1, which decides
+nothing beyond the rules it cites;
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns
+its format and the standing of its consequences.

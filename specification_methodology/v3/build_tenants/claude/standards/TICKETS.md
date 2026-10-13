@@ -21,7 +21,8 @@ same principles. The change classes a ticket records are
 of every clause here that names a class; the step side of admission is
 [ACTIVATION §1](ACTIVATION.md#admission); the generic law of claims,
 independent assessment and acceptance is EVALUATION §1, §3 and §5; the
-testing law is ASSURANCE. This member defines none of those twice. A route
+testing law is ASSURANCE. This member defines none of those twice. Its
+family table (F13) opens §5. A route
 written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md` and is provenance
 only; nothing here depends on that cut to be applied.
@@ -280,12 +281,41 @@ local paydown debt only when the governing method allows that debt to
 survive as explicit follow-up; it cannot accept hidden authority drift
 (P6).
 
-Standing of the close classifications, new in this corpus. Purpose: the
-one-algebra rule of [ACTIVATION §3](ACTIVATION.md#3-result-algebra). The
-six classifications are close-review decisions over reviewed items, not
-evaluation results: like the dispositions of ACTIVATION §3, each consumes
-the core results of the item's review and is not one, so they declare no
-core mapping and add no core member (P5, P6).
+Close classifications as results. A close classification is the outcome
+of close review for one reviewed item, made against the sprint authority
+the manifest cites. Like a disposition of
+[ACTIVATION §3](ACTIVATION.md#disposition), it consumes the core results
+of the item's review and stays separate from them, as acceptance stays
+separate from assessment ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)).
+Each classification maps to exactly one core value for the predicate "the
+reviewed item is accepted as compliant under the sprint authority" (P5,
+P6):
+
+| Classification | Core value | Ground |
+|---|---|---|
+| `accepted` | satisfied | the item is compliant under the sprint authority |
+| `local_paydown` | falsified | local debt remains; the debt is the counterexample, and the paydown ticket carries it |
+| `design_reframe` | invalid_basis | the accepted design that governs the item must change, so the authority the sprint cites cannot support accepting it |
+| `requirement_reprice` | invalid_basis | a governing requirement must change, with the same consequence |
+| `product_reprice` | invalid_basis | the work changes the product definition, which the authority the sprint cites cannot support |
+| `remove` | falsified | the work is backed out or kept out of closure; the reason for removal is the counterexample |
+
+The layer that `design_reframe`, `requirement_reprice` and
+`product_reprice` name is a declared fact, not a further result: it is
+the change class of [SPEC_METHOD §4](SPEC_METHOD.md#change-classes) at
+which the work re-enters, and it travels with the core value as the
+domain outcome (FOUNDATIONS §4 Results, Recording). The outcome of a
+debt entry, accepted, ticketed, repriced or removed (Sprint status,
+`closed`), maps in the same way for the predicate "the debt entry is
+accepted under the sprint authority": accepted to `satisfied`, ticketed
+and removed to `falsified`, repriced to `invalid_basis`, on the grounds of
+`accepted`, `local_paydown`, `remove` and the repricing classifications
+respectively. The mappings add no core value. The condition for `closed`
+above requires an outcome for every item and debt entry, not a
+`satisfied` one. The mappings are new in this corpus.
+Purpose and material relation: a consumer that combines close outcomes
+with other results cannot read remaining debt, needed repricing or
+removal as compliance (P5, P6).
 
 ## 4. Ticket rules
 
@@ -500,6 +530,41 @@ proof question and cites the clauses used (P2, P6; provenance rc.2
 authority_compressions/ticket_method.compressed.md, a claim no rc.2 body
 states; prompt construction is
 [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)).
+
+### Foundation to law: work carriers
+
+This family (F13 in the index of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))
+decides which record carries a piece of work, what that record may claim
+and when the work closes. Its instance premises, which the commitments do
+not supply, are named in the rows as follows: lifetimes, work and its
+obligations last one run, one bounded batch or longer; several surfaces,
+goals, tickets, comments, boards and summaries can each appear to state
+the same work state; several tenants, one work item may be realised in
+more than one build tenant; migrations, some work replaces one
+authoritative truth path with another across producers, consumers and
+proofs; carriers vary, a project may keep its carriers in files, trackers
+or services. Each commitment's standing is written as the table of
+commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P2 (independent); P6 (independent); P0 (recovered); instance: lifetimes | Every execution runs under one run-scoped contract drawn from the smallest carrier whose lifetime covers the work: an admitted ticket, a sprint entry or the run itself. A durable ticket is created only for state that must survive and only under ticket-state authority, and an obligation that must outlive the run is recorded before the run returns. | [Carrier selection](#carrier-selection); §1 [Goals](#goals), [Ticket records](#ticket-records), [Execution contracts](#execution-contracts) | the carrier kinds and the selection table: domain choices of this member; where each carrier lives: the product definition ([PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)) |
+| P6 (independent); P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); instance: lifetimes | Work executes only under admitted upstream work authority. A carrier's presence, lane, status or prose is neither the admission of a contract nor the admission of a growth basis, and execution and closure read the same admitted contract, which shows what counts as completion and what still counts as failure. | [Carrier selection](#carrier-selection); [Execution contract admission](#execution-contract-admission); [Evaluation criteria and non-closure conditions](#evaluation-criteria-and-non-closure-conditions) | the contract's minimum fields: this member; the admission mechanism and the result and evidence surface: the product definition. The step side of admission is law at [ACTIVATION §1](ACTIVATION.md#admission), not a choice |
+| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); instance: several surfaces, carriers vary | Work state has one authority chain: goals own the work wave, the ticket owns its state and milestone authority its milestones. A board, comment, index or summary is a projection, each surface answers one question, contradiction among the authorities blocks closure, and a milestone's acceptance proves only its claim. Another carrier is lawful only as an explicit rebinding with no rival left. | [One-truth state projection and drift refusal (UP-009)](#one-truth-state-projection-and-drift-refusal-up-009); §1 [Comments](#comments), [Milestones and phase-scoped truth (UP-006)](#milestones-and-phase-scoped-truth-up-006); §2 [Default layout](#default-layout), [Bindings and projections](#bindings-and-projections), [Carrier substitution](#carrier-substitution); §4 [Status](#status), [Lanes](#lanes); §9 [Relationship to other surfaces](#relationship-to-other-surfaces) | the default layout, the lanes and the minimum status sets: domain choices of this member, which a project may extend; a rebinding of ticket authority: the product definition |
+| P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P3 (independent); instance: lifetimes | A sprint batches repeated closure law over a bounded scope and never batches away triage. It defers only declared local proof, as escrow paid down at close review, and law-changing work leaves it. It closes only when every item and debt entry is classified and the follow-up work is durable, and each classification is a result mapped into the core. | [§3](#3-sprint-rules); §1 [Sprints](#sprints) | the manifest fields, the sprint statuses, the escrow lists and the six close classifications and the debt outcomes with their mappings: domain choices of this member; whether debt may survive as follow-up: the governing method |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); P6 (independent); P3 (independent); P1 (independent) | A ticket records the triage that admitted it: change intent, change class and re-entry point. The upward walk re-enters at the first missing or insufficient layer, never at a familiar file. | §4 [Required fields](#required-fields), [Types](#types), [Category](#category), [Change class](#change-class), [Upward propagation check](#upward-propagation-check), [Triage metadata](#triage-metadata), [One durable record per ticket](#one-durable-record-per-ticket) | the required fields and the minimum types and categories: domain choices of this member, which a project may extend; the change classes: domain choices of [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) |
+| P3 (independent); P6 (independent); P1 (independent); instance: several tenants | One ticket closes at most one build-tenant lifecycle. Proof, closure, repricing and reopening stay tenant-local, and one tenant's green status hides no other tenant's blocker. | §4 [Multi-build-tenant independence](#multi-build-tenant-independence); §6 [Multi-build-tenant review](#multi-build-tenant-review) | the suffixed ticket identifier and the `source_ticket` and `build_tenant` fields: domain choices of this member; tenant identity: the product definition's tenant registry |
+| P6 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); P4a (independent); P1 (independent); instance: migrations | A migration ticket closes only when the old truth path no longer holds authority in its declared scope, shown by negative or structural proof. Mixed state, proxies, wrappers and green tests alone do not count, and a downstream ticket does not close while its source-carrier ticket is open. | §6 [Declaration and checklist](#declaration-and-checklist) to [Mixed-state negative proof](#mixed-state-negative-proof); §4 [Inside-out sequencing](#inside-out-sequencing) | the declaration, the checklist, the strategy and library values, the recurrence thresholds, the review questions and the break order: domain choices of this member. The migration law is [SPEC_METHOD §7](SPEC_METHOD.md#7-migration), not a choice |
+| P6 (independent); P1 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); P2 (independent); P3 (independent) | Authority to author is not independent authority to verify. A review verdict is bounded by its claim and traceable to it. A judgment or owner ruling is recorded once, in its original terms, and reused while it applies, and changed evidence invalidates what it affects. | §7 [Execution and verification authority separation (UP-007)](#execution-and-verification-authority-separation-up-007), [Recorded judgment and owner-ruling continuity](#recorded-judgment-and-owner-ruling-continuity) | the four repricing dispositions of an obligation: this member. The assessment protocol and the reuse law are [EVALUATION §3](EVALUATION.md#3-independent-assessment) and [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), not choices |
+| P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable) | A work claim is complete only when every applicable obligation is satisfied by valid evidence and no non-closure condition remains; review evaluates those conditions, and its occurrence is not the closing event. A test takes its expected result from admitted work authority, never from the implementation. | §7 [Condition-based closure and reuse](#condition-based-closure-and-reuse), [Test case authority](#test-case-authority) | the five-step reconciliation order: this member. The conjunction and the general test law are [FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) and [ASSURANCE §3](ASSURANCE.md#3-test-authority), not choices |
+| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise) | A ticket's terms resolve under the project's semantic resolution, and an unresolved or multiply resolved material term blocks admission and closure of the affected claim until its owner resolves it. | [Bounded-context term binding](#bounded-context-term-binding) | none here: the resolution law is [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
+| P2 (independent); P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P0 (recovered); instance: carriers vary | Any carrier shape that keeps the required fields and sections is lawful, and an actor reads this member only for the question a derived surface leaves open. | [§8](#8-recommended-shapes); §9 [Operating mode](#operating-mode); the opening paragraph of this section | the three recommended shapes, the default local-file carrier and its search commands: domain choices of this member |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §9. §10 records dispositions and decides
+nothing.
 
 ### Carrier selection
 
@@ -1027,9 +1092,12 @@ required judgment and owner ruling is present and applicable; and no active
 non-closure condition remains. A mandatory obligation whose applicability is
 unknown, or whose evidence is insufficient, withholds the dependent claim;
 evidence presence alone is not satisfaction. The existing owner decides any
-reserved acceptance (P6, P5; rc.2 #condition-based-closure-and-reuse;
-[SPEC_METHOD §4](SPEC_METHOD.md#consistency-gate) states the same
-conjunction as the gate over the affected span).
+reserved acceptance (P6, P5; rc.2 #condition-based-closure-and-reuse).
+This condition is the
+[conjunction of results](FOUNDATIONS.md#conjunction-of-results) with the
+declared obligations as required coverage;
+[SPEC_METHOD §4](SPEC_METHOD.md#consistency-gate) applies the same
+conjunction as the gate over the affected span.
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved
@@ -1322,7 +1390,7 @@ are carried verbatim, including their American spellings and the word
 | #sprint-status | conserved | §3 Sprint status |
 | #sprint-admission | conserved | §3 Sprint admission |
 | #sprint-compliance-escrow | conserved in full; both lists and the exit rule; two profile terms generalised (above) | §3 Compliance escrow |
-| #sprint-close-review | conserved | §3 Close review |
+| #sprint-close-review | conserved; the six classifications and the debt-entry outcomes are mapped into the core result algebra of FOUNDATIONS §4 Results as ACTIVATION §3 Disposition is, and the mappings are new; the layer named by `design_reframe`, `requirement_reprice` and `product_reprice` is the change class of SPEC_METHOD §4, a declared fact | §3 Close review |
 | #ticket-rules | not applicable: heading with no claim text (16 bytes); its children are disposed individually | §4 |
 | #one-durable-record-per-ticket | conserved | §4 One durable record per ticket |
 | #multi-build-tenant-ticket-independence | conserved; the bounded context is cited at PRODUCT_DEFINITION §8 | §4 Multi-build-tenant independence |
@@ -1339,7 +1407,7 @@ are carried verbatim, including their American spellings and the word
 | #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7 | §7 Recorded judgment and owner-ruling continuity |
 | #bounded-context-term-binding | conserved; the resolution law is PRODUCT_DEFINITION §5 | §5 Bounded-context term binding |
 | #evaluation-criteria-and-non-closure-conditions | conserved | §5 Evaluation criteria and non-closure conditions |
-| #condition-based-closure-and-reuse | conserved; one term generalised (above) | §7 Condition-based closure and reuse |
+| #condition-based-closure-and-reuse | conserved; one term generalised (above); the closure condition is named as the conjunction of FOUNDATIONS §4 Conjunction of results, with the declared obligations as required coverage | §7 Condition-based closure and reuse |
 | #test-case-authority | conserved in full; ASSURANCE §3 points here for the ticket-local rule | §7 Test case authority |
 | #implementation-migration-category | conserved; the slice-promotion rule and the slice derivation are SPEC_METHOD §7, the ticket-local consequence here | §6 Declaration and checklist; §6 Closure of a migration ticket; SPEC_METHOD §7 Constitutional migration options |
 | #migration-strategy-requirements | conserved | §6 Strategy requirements |
@@ -1356,3 +1424,8 @@ are carried verbatim, including their American spellings and the word
 | #operating-mode | conserved | §9 Operating mode |
 | #relationship-to-other-surfaces | conserved | §9 Relationship to other surfaces |
 | #future-extensions | conserved; the listed growths and the default-carrier and substitution law | §2 Carrier substitution |
+
+New law with no predecessor row: the family table at §5, which decides
+nothing beyond the rules it cites;
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns
+its format and the standing of its consequences.
