@@ -439,8 +439,9 @@ No refinement or mapping raises a result's standing (P5, P6):
 Not performed. An evaluation that is required or planned and was not
 performed has no closed result; an actor cannot report an evaluation it
 did not perform (P6). Nothing is coerced to success: a failed,
-indeterminate, out-of-frame or invalid-basis result returns its own value,
-never `satisfied`, and a missing result, being no result, enters every
+indeterminate, out-of-frame, out-of-scope or invalid-basis result follows
+the declared result algebra and returns its own value under it, never
+`satisfied`, and a missing result, being no result, enters every
 conjunction over it as a gap: a planned assessment without a closed result
 where an assessment was planned, and uncovered coverage where none was.
 This
@@ -465,7 +466,8 @@ No outcome exists outside the core; a refinement adds no core value and
 keeps the pressure of `indeterminate`, `out_of_frame` and `invalid_basis`
 explicit. Where a refined value would map to one of two core values
 according to its cause, the cause is part of the refined value and each
-resulting value maps once (P5, P1). The step's refinements are
+resulting value maps once (P5, P1). The refinements for admission,
+activation and steps are
 [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
 member and profile states its mapping where it defines its values.
 
@@ -585,11 +587,11 @@ never counts toward the candidate's fitness or acceptance.
 
 Reported value. The conjunction is `satisfied` only when every mandatory
 result is `satisfied` with valid applicable evidence, the declared basis
-relations agree, and the second and third inputs are empty; a known
-failure of a mandatory result or of a required obligation therefore never
-leaves the composite `satisfied`. Where a
-mandatory result is not `satisfied`, the conjunction reports a
-non-satisfied value chosen by its declared rule from those returned; no
+relations agree, and the second and third inputs are empty. A composite
+with a known failure or an uncovered required obligation cannot project
+success. Where a mandatory result is not `satisfied`, the conjunction
+reports a non-satisfied value chosen by its declared rule from those
+returned; no
 universal order among the non-satisfied values exists, and each
 application declares its own. Where every returned result is `satisfied`
 and a gap remains, the conjunction reports `indeterminate`, because the
