@@ -11,7 +11,7 @@ Each excerpt names its owner, section and exact member digest. Required coupled
 relations outside this selection remain material and require source re-entry;
 an unresolved governing relation is not silently satisfied by the view.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `9c481e21be2861fb59f1c19114fe61b705009a39ff8a645cc04f8dec26b28177`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
 
 ## Result algebra
 
@@ -94,7 +94,11 @@ the intended product outcome is falsified.
 An empty local log or discarded context does not establish no effect.
 `not_requested` states an established effect-free scope under that operating
 model; lack of a request alone is insufficient. A material possible unintended
-effect without sufficient observation is `unknown`.
+effect without sufficient observation is `unknown`. If observation establishes
+that an unrequested possible part did not begin, it contributes `not_requested`
+at this boundary, retaining that observation and any earlier uncertainty.
+It is not an uncompleted requested remainder. A requested part observed not to
+begin remains `not_started`.
 
 A refined value is the pair of original domain outcome and cause in its
 declared reason domain, including an explicit missing-reason case. A domain
@@ -132,7 +136,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `9c481e21be2861fb59f1c19114fe61b705009a39ff8a645cc04f8dec26b28177`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
 
 ## Result conjunction
 
@@ -248,7 +252,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `9c481e21be2861fb59f1c19114fe61b705009a39ff8a645cc04f8dec26b28177`.
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
 
 ## Workspace and context
 
@@ -303,7 +307,7 @@ reconstruction; it is not universally the work state or a compulsory recovery
 algorithm.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `9c481e21be2861fb59f1c19114fe61b705009a39ff8a645cc04f8dec26b28177`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b`.
 
 ## Bounded construction
 

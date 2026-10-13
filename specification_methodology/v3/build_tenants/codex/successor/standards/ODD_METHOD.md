@@ -1016,11 +1016,14 @@ Eval only affects traversal after its own L/E admission.
 ```
 
 Here `true` qualifies an admitted claim, not the existence of the workspace.
-L cannot overrule contrary current observations of W. Such an observation
-enters evidence admission; pending that decision, the affected claim is not
-reused as current support for closure or dependent next-action selection.
-Once admitted, it invalidates affected current claims through the declared
-re-entry relation. It is not
+L cannot overrule contrary current observations of W. The evidence-admission
+owner admits the supported observation and the affected currentness uncertainty
+into L/E under the existing evidence contract before dependent closure or
+next-action selection. Those consumers read that admitted evidence through L;
+while its interpretation is unresolved, the affected claim is not reused as
+current support. Recording the observation supplies no verdict on the claim.
+Its admitted interpretation invalidates affected claims through the declared
+re-entry relation. Missing admission supplies no currentness proof. It is not
 silently discarded because the earlier ledger is immutable. The immutable
 history remains an account of what was admitted at its stated basis.
 

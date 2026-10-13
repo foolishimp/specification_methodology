@@ -374,7 +374,11 @@ the intended product outcome is falsified.
 An empty local log or discarded context does not establish no effect.
 `not_requested` states an established effect-free scope under that operating
 model; lack of a request alone is insufficient. A material possible unintended
-effect without sufficient observation is `unknown`.
+effect without sufficient observation is `unknown`. If observation establishes
+that an unrequested possible part did not begin, it contributes `not_requested`
+at this boundary, retaining that observation and any earlier uncertainty.
+It is not an uncompleted requested remainder. A requested part observed not to
+begin remains `not_started`.
 
 A refined value is the pair of original domain outcome and cause in its
 declared reason domain, including an explicit missing-reason case. A domain

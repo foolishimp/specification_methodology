@@ -10,7 +10,7 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: 9c481e21be2861fb59f1c19114fe61b705009a39ff8a645cc04f8dec26b28177
+  FOUNDATIONS.md: 7d40caafc8efe21269506f9029bca585c88d256d0cd1ec1f1de9bf29dcdd890b
   TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
   SPEC_METHOD.md: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
   REFERENCE_FRAME_METHOD.md: 7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213
