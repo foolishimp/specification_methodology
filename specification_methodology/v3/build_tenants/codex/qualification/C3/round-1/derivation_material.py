@@ -141,6 +141,19 @@ def build(root, historical):
 
 def verify(root, manifest_bytes, calculus_basis_bytes, profile_basis_bytes):
     manifest, basis, profile = map(load, [manifest_bytes, calculus_basis_bytes, profile_basis_bytes])
+    fail_if(set(basis) != {"kind", "schema_version", "concept_identity", "derivation_basis", "publication_basis"},
+            "calculus record shape")
+    fail_if(set(profile) != {"kind", "schema_version", "concept_identity", "calculus_basis_identity",
+                            "occurrence_signature", "occurrence_signature_sha256", "publication_basis"},
+            "profile record shape")
+    fail_if(set(basis["derivation_basis"]) != {"release_uri", "manifest_sha256", "principle_refs"},
+            "derivation record shape")
+    publication_fields = {"release_uri", "manifest_sha256", "member_uri", "member_sha256"}
+    fail_if(set(basis["publication_basis"]) != publication_fields or
+            set(profile["publication_basis"]) != publication_fields, "publication record shape")
+    fail_if(set(profile["occurrence_signature"]) != {"kind", "schema_version", "calculus_basis_identity",
+            "calculus_signature_schema_clause_ref", "occurrence_signature_clause_refs", "profile_member_sha256"},
+            "signature record shape")
     inventory = members(manifest)
     calculus = read_member(root, CALCULUS, inventory)
     profile_text = read_member(root, PROFILE, inventory).decode()
@@ -202,6 +215,7 @@ def verify(root, manifest_bytes, calculus_basis_bytes, profile_basis_bytes):
     spec = spec_from_file_location("documentary_check", checker_path)
     checker = module_from_spec(spec)
     spec.loader.exec_module(checker)
+    fail_if("core-signature" not in checker.anchors(calculus.decode()), "missing calculus schema fragment")
     for reference in required:
         name, fragment = reference[len(historical_release):].split("#", 1)
         fail_if(fragment not in checker.anchors(resolved[name].decode()), "missing historical fragment")
@@ -318,6 +332,14 @@ def test(root):
         damaged = load(profile)
         damaged["occurrence_signature"]["calculus_basis_identity"] = "urn:stdo:wrong-calculus"
         refused("profile imports another calculus identity", pb=canonical(damaged))
+        damaged = load(basis)
+        damaged["unowned_field"] = "extra"
+        refused("extra calculus record field", bb=canonical(damaged))
+        original_calculus = (cold / CALCULUS).read_bytes()
+        (cold / CALCULUS).write_bytes(original_calculus.replace(b"## Core Signature\n", b"## Missing Schema\n"))
+        mb, bb, pb = fixture(cold)
+        refused("schema clause absent under coherent publication pins", mb, bb, pb)
+        (cold / CALCULUS).write_bytes(original_calculus)
         return {"kind": "bounded_derivation_verification_check", "positive": positive,
                 "negative_controls": controls, "valid": all(c["refused"] for c in controls),
                 "resource_bytes": len(original),

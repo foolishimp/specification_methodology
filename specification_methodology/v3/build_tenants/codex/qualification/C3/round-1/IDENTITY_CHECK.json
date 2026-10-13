@@ -4,15 +4,15 @@
     "valid": true,
     "historical_principle_refs_verified": 14,
     "historical_members_reconstructed": 3,
-    "calculus_basis_identity": "urn:stdo:axiomatic-calculus-basis:sha256:68ebacd3e312fdd9bfadcdda14f3f9060e1ecafd40d7bdc5c91262b0d5324bf1",
-    "profile_basis_identity": "urn:stdo:traversal-occurrence-profile-basis:sha256:fe8de97b605363947a6824486e1f43fa0f7b4dd8154fb1210e0126328c6390e5",
+    "calculus_basis_identity": "urn:stdo:axiomatic-calculus-basis:sha256:789808a9b2d1cdb2082e9dfcc6f538e7752072c654e24514f0f3200c501ea885",
+    "profile_basis_identity": "urn:stdo:traversal-occurrence-profile-basis:sha256:3813a7a1ef0771f0c552ad02b4cdfc750d7449e679d6658f23a54252cbda0841",
     "predecessor_or_network_reads": 0
   },
   "negative_controls": [
     {
       "case": "verification resource absent; original cut unavailable",
       "refused": true,
-      "reason": "[Errno 2] No such file or directory: '/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-codex-identity-ddxcbizz/successor/standards/verification_material/DERIVATION_SOURCES.json'"
+      "reason": "[Errno 2] No such file or directory: '/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-codex-identity-5np_fc2f/successor/standards/verification_material/DERIVATION_SOURCES.json'"
     },
     {
       "case": "resource differs from publication digest",
@@ -43,6 +43,16 @@
       "case": "profile imports another calculus identity",
       "refused": true,
       "reason": "profile calculus binding"
+    },
+    {
+      "case": "extra calculus record field",
+      "refused": true,
+      "reason": "calculus record shape"
+    },
+    {
+      "case": "schema clause absent under coherent publication pins",
+      "refused": true,
+      "reason": "missing calculus schema fragment"
     }
   ],
   "valid": true,
