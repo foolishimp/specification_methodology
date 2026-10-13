@@ -1,8 +1,10 @@
 # ACTIVATION
 
-Tier 1. Owns how bounded work proceeds: the step (intake, execution unit,
-admission, applicability, output, roles and delegation); context
-construction under an envelope, activation and evaluation; the
+Tier 1. Owns how bounded work proceeds: the step (transitions from a
+current state to a destination, intake, execution unit, admission,
+applicability, output, the configuration of responsibilities over frames,
+roles and delegation); context construction under an envelope, activation
+and evaluation; the
 refinements of the core for admission and activation and for the step's
 results, and disposition; totality and refinement; work state
 and restart; cost and proportionality; the closed result and reuse. It uses
@@ -10,7 +12,8 @@ the objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result
 algebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the frame
 object and the outcomes of `activate` of
 [REFERENCE_FRAME](REFERENCE_FRAME.md) (§5). It defines the step-level
-concepts it introduces, among them the execution unit, the work state,
+concepts it introduces, among them the current state, the destination,
+the transition, the configuration, the execution unit, the work state,
 progress and churn, proportionality and the closed result, and refines the
 core for admission, activation and steps (§3); it redefines nothing those
 members own. A route
@@ -38,6 +41,89 @@ assessment where required; one of accept, local repair, re-enter or reject
 (§3); the exact accepted checkpoint; the next already-authorised bounded
 action (§5). Provenance:
 [UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020).
+
+### Transitions
+
+Construction moves work from a current state towards a destination
+(P0, P2). The current state is the material state of the workspace and
+its authoritative inputs, together with what is justifiably known about
+that state, with the unknowns explicit. The work state of §5 records it:
+the workspace, the governing basis, and the closed results and judgments
+that still apply, with the residuals and the uncertainty over external
+effects as the explicit unknowns. An actor's context is an account of the
+current state, not the state itself
+([§5](#the-workspace-and-an-actors-account)) (P3, P5).
+
+The destination is defined by constraints: the selected outcome with its
+acceptance conditions (Outcome U, [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology))
+and the governing obligations the work must keep. It names no single
+state: its acceptance conditions admit several realised states. Its
+owning authority defines it (P2, P6).
+
+A transition is a bounded change from the current state to a next state,
+carried out by one step. Where the work exceeds one activation's capacity,
+the outer transformation towards the destination is refined into a series
+of bounded transitions under §4 Refinement, each carried out by its own
+step; work that fits one activation is a single transition. Each
+transition binds the obligations it must preserve: the outer obligations
+of the destination and of the governing relations it affects, as far as
+they apply to it. A step's intake binds the current state, the
+destination and the obligations: the governed outcome names the
+destination, or the prerequisite towards it, that the step serves; the
+exact subject and basis identify the current state it starts from; and
+the affected relation set with its governing invariants holds the
+obligations it preserves (Intake below; P0, P4a).
+Transitions compose only as §4 Refinement permits.
+
+Discovery. Construction, observation and evaluation change the current
+state and what is known about it. A new observation may add obligations,
+which join the known work, or invalidate a claim, which is re-established
+or withdrawn before anything relies on it (§7). Discovery can enlarge the
+known work while knowledge improves (P5, P4b).
+
+Open work outside attention. An obligation outside a frame's current
+attention stays open. A bounded view disposes of none of the work it
+excludes, and the next decision keeps its material dependencies on that
+work (P4b, P6).
+
+Destination change. An authorised change may revise the destination. The
+change follows its owning authority and re-enters at the owning relation
+(§4). A revised destination does not establish that the previous
+destination was reached, and a candidate that satisfies the revised
+destination is no evidence that it satisfies the previous one (P2, P6).
+
+Completion. Work is complete only when sufficient evidence shows that the
+current state satisfies the applicable destination and its acceptance
+conditions; accepting that claim is the decision owner's disposition
+(§3 Disposition). An empty list of known work, a count of closed or
+remaining items, or the absence of a recorded counterexample does not
+establish completion (P6;
+[RF-015](REFERENCE_FRAME.md#rf-015-residual-uncertainty)).
+
+Stops. Work that cannot continue ends in an explicit stop that names its
+cause: a step that cannot deliver its output stops with a value of
+construction availability other than `candidate_ready`, and a declared
+ambiguity that halts the work or exceeds the step's authority stops it
+with `blocked` or `escalated` (§3). A refused admission or activation
+stops the work without creating a step (§3 Admission and activation).
+The work state (§5) retains the unresolved outcome, the residuals and the
+obligations still owed. A stop reaches no destination and discards none
+of these (P4b, P5).
+
+Progress. Progress is judged against the selected outcome and the
+evidence for it, as §5 defines progress, not by the number of remaining
+items alone: discovery
+can raise that number while the work moves towards the destination (P2).
+
+Purpose and material relation: finite context and attention (P0) mean
+that an outcome beyond one activation is reached through bounded steps.
+Binding the destination and the preserved obligations at each transition
+keeps the outer contract through that decomposition. Keeping completion,
+destination change and stops apart prevents a count, an exhausted list or
+a revised destination from standing in for evidence that the applicable
+destination is satisfied (P2, P6). The state, the destination and the
+obligations are those that the intake and the work state already bind; no
+further carrier is required. This account is new in this corpus.
 
 ### Intake
 
@@ -158,14 +244,123 @@ internal path is not part of the output
 and is not governed (FOUNDATIONS §2, work boundary; provenance
 [Probabilistic Work Boundary](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#probabilistic-work-boundary)).
 
+### Configuration
+
+A configuration allocates a task's responsibilities and information
+exchanges to frames; activation binds an actor to each frame (§2). It
+spans the task's work. The active frame configuration of
+[FOUNDATIONS §2](FOUNDATIONS.md#frame-objects) is the part of it used for
+one evaluation or decision (P0, P6).
+
+Allocation. The allocation is derived from the task's operations, the
+dependencies among them, the capabilities of the available actors and the
+required assurance. These conditions constrain a configuration without
+determining it. One frame or several, fixed or adaptive allocation, a
+hierarchy, peer coordination, or an arrangement that changes as actors
+allocate work within their contracts may each be adequate. The method
+prescribes no role inventory, hierarchy, coordinator or actor sequence
+(P0, P2; [RF-016](REFERENCE_FRAME.md#rf-016-implementation-neutrality)).
+
+Explanation. The design that selects a configuration explains its
+allocation, including the material resource limits it assumes, such as
+context, attention, time and spend, and its assumptions about failure. The
+explanation is recorded in the existing design, frame declarations and
+work records; no separate configuration carrier is required. It is
+proportional (§6): for a direct entry, the intake states it, its
+capability envelopes carrying the resource limits and its stale,
+out-of-scope and re-entry conditions the failure assumptions (P2, P6).
+
+Direct entry. A one-frame configuration is lawful. One directly
+authorised task that fits a sufficient frame may be entered directly, as
+Roles and delegation below states, subject to any separately required
+assessment (P0, P2).
+
+Evaluation of a configuration. A configuration is evaluated against the
+task, its dependencies, the actors' limits, the authority it applies and
+the required assurance. Its labels, its topology, and the presence or
+absence of a coordinator or of familiar roles neither accept nor reject
+it (P1, P6).
+
+Distinct relations. Within a configuration, functional decomposition,
+communication, authority and evaluation dependency stay distinct relation
+structures under [RF-009](REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy),
+which owns that rule. Naming or selecting a frame grants no authority
+([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds);
+[RF-006](REFERENCE_FRAME.md#rf-006-authority-conservation)): each
+activation binds its subject, result algebra, actor capability and
+admitted authority through its intake (Intake above) and its activation
+(§2).
+
+Reconfiguration. The allocation, and every reconfiguration, preserves the
+material dependencies, the outstanding obligations, the effects,
+including those of unknown completion, the admitted authority and the
+required independence. A reconfiguration is any change of allocation
+during the work, including actors redistributing work among themselves
+and the changes §4 Reconfiguration selects after a result. An outstanding
+obligation and the results that depend on it move with the work. An
+effect of unknown completion is resolved sufficiently for the next
+dependent action before that action (§3 Effects, §5). Required
+independence keeps its authorship and evidence conditions
+([EVALUATION §3](EVALUATION.md#3-independent-assessment)), which a fresh
+context alone does not meet. An adaptive or self-organised arrangement is
+exempt from none of these conditions (P4b, P5, P6).
+
+Coordination across tasks. Where a configuration separates carrying out a
+bounded change from managing delivery across successive tasks, the frame
+that manages delivery, a coordinator, keeps the longer-term outcome. It
+decides from a sufficient bounded view of the closed results of the task
+frames (§7), not from their working context. When a decision needs
+information that view lacks, the coordinator acquires it through its
+permitted frame inputs or requests a further bounded evaluation. Missing
+information is never assumed favourable. A task result never omits a
+blocker material to delivery: a compact result keeps every residual and
+stop material to delivery, and its size is no evidence that none exists
+(P0, P4b, P6).
+
+Optimality. Adequacy and optimality are separate claims. A claim that a
+configuration is optimal is relative to stated objectives, constraints and
+comparison scope, and rests on evidence for that comparison. Familiarity,
+persistence or self-organisation is no such evidence. Different
+objectives or actor models can favour different configurations (P2, P6).
+
+Example. The executive configuration, which the
+[executive baseline profile](EXECUTIVE_BASELINE.md) defines, is one
+configuration, for task-based work in which a bounded change and delivery
+across tasks need separate attention. It allocates construction,
+assessment and disposition (Roles and delegation below) to three frames: a
+Worker frame, specialised as Writer for documents and records, constructs;
+a Reviewer frame assesses; an Executive frame keeps the longer-term
+outcome, selects the next work and disposes within its decision grant, and
+mutates nothing. That profile owns its frames, their grants, limits and
+prohibitions, and its explanation; they apply where it is selected. It is
+not the method's default. A configuration with other frames, names or
+topology is evaluated as Evaluation of a configuration above states.
+
+Purpose and material relation: finite context and attention bound each
+responsibility (P0); dependencies between tasks require exchanges and
+compatible results (P4a); and fallible actors with incomplete knowledge
+require checking and recovery (P5, P6). These conditions constrain a
+configuration without determining it, so the method states what every
+allocation preserves and leaves the arrangement to the design. A
+coordinator that decides from a bounded view relies on what the view
+holds, so a blocker missing from a task result would be read as absent
+(P4b). The material relation is whether an allocation or a reallocation
+can drop an obligation, an effect or a required independence, move
+authority with position in a decomposition, or hide a blocker from the
+decision that needs it. This law is new in this corpus.
+
 ### Roles and delegation
 
-Roles are relations over steps: a constructor owns the bounded
-implementation and its self-review; an assessor evaluates a frozen
-candidate independently; a decision owner disposes. Where independent
-assessment supports promotion, the assessor evaluates the exact live
-subject, its authority paths, proof and installed state, not the
-constructor's summary (EVALUATION §3). This preserves the
+Roles are relations over steps that a configuration allocates
+(Configuration above), not kinds of actor and not a fixed inventory.
+Where a configuration's operations include construction, assessment and
+disposition, this member names the responsibilities for them: a
+constructor owns the bounded implementation and its self-review; an
+assessor evaluates a frozen candidate independently; a decision owner
+disposes. A configuration may allocate other responsibilities. Where
+independent assessment supports promotion, the assessor evaluates the
+exact live subject, its authority paths, proof and installed state, not
+the constructor's summary (EVALUATION §3). This preserves the
 independent-review relation and prescribes no actor count: one actor may
 occupy different roles across different claims when independence for the
 assessed claim is preserved; no role name confers an operation
@@ -184,11 +379,12 @@ already accepted; this delegation does not weaken direct human acceptance
 where the governing product or release law requires it (P6).
 
 When one capable context has sufficient existing work authority, exact
-intake and operation grant, it may enter directly as constructor or Writer. No
-coordinating activation is required solely to appoint that Writer. The
-applicable frame configuration selects coordination when material
-contexts, authority, capability or required independence need it; a role
-or frame name alone does not create that need. Direct entry preserves
+intake and operation grant, it may enter directly as constructor or
+Writer. No coordinating activation is required solely to appoint that
+Writer. The applicable configuration (Configuration above) selects
+coordination when material contexts, authority, capability or required
+independence need it; a role or frame name alone does not create that
+need. Direct entry preserves
 execution-contract admission (Admission above), the smallest lawful
 carrier, the required assessment and the reserved decisions; it permits
 bounded work and condition-based result recording, not self-acceptance at a
@@ -199,8 +395,12 @@ checkpoint sequence. Actual role transitions are recorded in the existing
 work carrier; a status change alone requires neither a new grant nor
 rehashing an unchanged subject. A material change to the operation, the
 subject, the territory, the authority or the validity conditions requires
-the affected binding to be resolved before effect. The restriction that a
-coordinating role mutates nothing remains applicable (P6, P3).
+the affected binding to be resolved before effect. Where the selected
+configuration restricts its coordinating role from mutation, as the
+executive configuration (Configuration above) restricts its Executive,
+the restriction that the coordinating role mutates nothing remains
+applicable; an operation grant covering the sequence does not lift it
+(P6, P3).
 
 ## 2. Context construction under an envelope
 
@@ -814,6 +1014,8 @@ reconstructed semantic outcomes (P5, P6).
 | rc.2 clause | Disposition |
 |---|---|
 | UP-020 and its six subsections | conserved in full; §1 (relation, intake, execution unit, roles and delegation), §3 (disposition), §5 (checkpoint, continuation, progress, churn, falsifiers), §7 (transition evidence and proof cadence); the generic work-state object, reconciliation of uncertain effects and non-idempotence in §5 are new: the work-state object is the object UP-020's restart rule operates on (P3), and reconciliation and non-idempotence follow from P5 with the open-world premise and P6, the material relation being whether an external effect whose response was lost has occurred; rows in the table below |
+| Transitions | no rc.2 row; §1 Transitions is new: the current state, the destination defined by constraints, bounded transitions preserving the outer obligations, discovery, destination change, completion on evidence and explicit stops, with its purpose and material relation stated there; progress and churn stay §5, refinement §4 |
+| Configuration | no rc.2 row; §1 Configuration is new: allocation of responsibilities and information exchanges to frames, its explanation, direct entry by reference to Roles and delegation, evaluation of a configuration, reconfiguration, coordination across tasks and optimality claims, with its purpose and material relation stated there; the distinct relation structures stay RF-009 in REFERENCE_FRAME §3; the executive configuration is an example, owned by EXECUTIVE_BASELINE |
 | UP-018 | conserved; restated in DESIGN_MODULE §7 Invariant reconstruction sufficiency, which disposes its row; its general reconstruction-without-history rule is §1 Intake |
 | Probabilistic Work Boundary | conserved; the object and commitment are FOUNDATIONS §2 and §3; §1 consumes them |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
@@ -853,7 +1055,7 @@ SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
 | #agentic-construction-execution-stdo-up-020 | conserved; the normative relation and the non-prescription of worker internals | §1 The step |
 | #sufficient-execution-intake | conserved; all six items; the design-profile input laws are consumed by reference to DESIGN_MODULE | §1 Intake |
 | #bounded-causal-construction | conserved | §1 Execution unit |
-| #construction-assessment-and-delegation | conserved; "Executive" is written "coordinating role" in tier 1; the proxy limits are also EVALUATION §5 | §1 Roles and delegation |
+| #construction-assessment-and-delegation | conserved; constructor, assessor and decision owner are named as the responsibilities a configuration allocates where its operations include construction, assessment and disposition, not as an inventory of roles (§1 Configuration); "No Executive activation is required" is written "No coordinating activation is required"; "Executive mutation restrictions remain applicable" is read as the restriction a selected configuration places on its coordinating role, as the executive configuration places it on its Executive; the proxy limits are also EVALUATION §5 | §1 Roles and delegation |
 | #proportional-disposition | conserved; "Assessment returns one of these semantic dispositions" is read as the decision owner's disposition after assessment, an assessor's recommendation being evidence for it, as EVALUATION §8 reads #reviewer-result-and-triage-projection | §3 Disposition |
 | #transition-evidence-and-proof-cadence | conserved; "the assessor disposition" is read as the decision owner's disposition or the assessor's recommended disposition, which §3 Disposition separates | §7 Transition evidence |
 | #checkpoint-continuation-progress-and-churn | conserved; "Product" is written "the selected outcome" in tier 1 | §5 |
