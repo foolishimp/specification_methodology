@@ -1,46 +1,41 @@
 # FOUNDATIONS
 
-Tier 1. Owns the vocabulary of standing and its application to this corpus
-(§1); the ontology, with the frame,
-authority, lineage and work-boundary objects (§2); the commitments P0 to P6
-(§3); the algebra of composition and conservation, the core result algebra
-and the conjunction of results (§4); and the hypotheses (§5). Other members
-use these definitions by reference or refine them. A refinement names its
-owner here and never redefines it; a refinement of results maps each of its
-values into the core ([Results](#results)).
+Tier 1. Owns the vocabulary of standing (§1); the ontology, with the frame,
+authority, lineage and work-boundary objects, and the rule for imports
+between members (§2); the commitments P0 to P6 (§3); the algebra of
+composition and conservation, the core result algebra and the conjunction
+of results (§4); and the hypotheses (§5). Other members import these
+definitions ([Imports between members](#imports-between-members)) or
+refine them. A refinement names its owner here and never redefines it; a
+refinement of results maps each of its values into the core
+([Results](#results)).
 
 ## 1. Vocabulary of standing
 
-Every claim of the predecessor cut `stdo://releases/v2.5.1-rc.2/` receives
-exactly one disposition in this corpus. The frontier is the tenant copy of
-[PREDECESSOR_CLAIMS](../frontier/PREDECESSOR_CLAIMS.md), one row per
-predecessor section; the values are those of UP-015,
-[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
-(provenance
-[rc.2 UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)),
-applied to the corpus itself:
+The standing of a foundational claim is what grounds it relative to the
+other foundational claims: whether the method adopts it as a premise,
+taking it without derivation, derives it from them or holds it for test
+(P6). A foundational claim is a commitment (P0 to P6, §3) or a hypothesis
+(§4 Formal fragment, §5). Each has exactly one of four standings:
 
-- conserved: the claim is restated in this corpus's own text with every
-  determination the predecessor makes, and the locus names where; a route
-  to the predecessor is provenance, never the disposition;
-- superseded: an accepted successor relation replaces the claim; the
-  successor clause and what changed are named;
-- intentionally removed: Jim's decision as Product authority, with the
-  reason; no Writer records this value;
-- not applicable: the claim has no successor effect; the bounded reason is
-  given;
-- unresolved: the only other state; it blocks qualification of the
-  affected claim.
+- recovered: an adopted premise that states as one commitment what
+  several rules of the method state in parts; those rules are named as its
+  sources, not as its proof;
+- independent: an adopted premise argued by non-entailment, that is, by a
+  case in which the other commitments hold and this one fails;
+- derived: a consequence of other commitments, with the premises it
+  follows from named;
+- hypothesis: a claim that no clause and no argument of this method
+  establishes; it is not law and is carried for falsification (§5).
 
-A note that a conserved claim was reframed, carried at a different scope
-or by a different owner, is commentary on the carrying, never a
-disposition. A clause with no predecessor row is new law and names the
-purpose and material relation that require it. A commitment has one
-standing relative to the others: recovered, derived (with named premises),
-independent (argued by non-entailment) or hypothesis. Every clause names
-the principle (P0 to P6, §3) that requires it. This corpus is complete and
-applicable without the predecessor remaining operative; the predecessor
-stays the builder of this construction until a release decision.
+The recovered and independent commitments are the method's adopted
+premises, and the derived ones are consequences of them. A premise is
+never presented as derived, and a hypothesis never as law (P6). This
+standing is distinct from the standing of a result, which is what the
+result establishes about its predicate (§4 Results), and from the
+disposition a successor gives a predecessor claim
+([RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015))
+(P1, P6). Every clause names the principle (P0 to P6, §3) that requires it.
 
 ## 2. Ontology
 
@@ -52,7 +47,7 @@ stays the builder of this construction until a release decision.
 | Context | the declared scope under which an interpretation holds: subject, definitions, basis, admissible observations | P1 |
 | Outcome U | a selected, owner-defined, directly verifiable state with an acceptance interval; adequacy of a transformation is judged against it | P2 |
 | Object O | a subject with scoped identity (authority, kind, value), a boundary, current state and declared material relations; identity survives admissible state and encoding change | P3 |
-| Actor | whoever performs a step within a declared capability envelope (context, attention, time, capability); roles (constructor, reviewer, executive) are relations an actor occupies, not kinds of actor | P0, P6 |
+| Actor | whoever performs a step within a declared capability envelope (context, attention, time, capability); a role is a relation an actor occupies, not a kind of actor, and which roles exist is set by a configuration ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration)), not by this definition | P0, P6 |
 | Step | one bounded unit of work: intake, selected context, grant, execution, output | P0 |
 | Step-produced fact | a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable and is not one | P0, P4b |
 | Claim | an assertion with subject, property, basis, witness relation and falsifier | P6 |
@@ -114,7 +109,7 @@ and its child sections.
 | Frame set | the human-declared family of frames available for a governed outcome or workspace; it may intentionally hold overlaps, alternatives, specialist frames, broad exploratory frames and separately activated assurance frames; it is not required to be a partition, tree, stack or exhaustive ontology | P6 |
 | Active frame configuration | the set of frame activations and declared result relations used for one evaluation or decision; one frame, or several disjoint, overlapping or composed frames; separately activated evaluations may be disjoint or overlapping | P4a |
 | Lens | a reusable family of questions applied across a frame configuration; authority, capability and reuse, temporal behaviour, transport and proof are lenses when named abstractly; a lens becomes a frame only when instantiated with a bounded evaluation, basis, material manifold, evidence, authorities, result algebra and capability envelope | P2 |
-| Role, persona, abstraction, component | a role allocates responsibility or authority; a persona alters an actor's approach or salience; an abstraction hides or contracts detail; a component is a structural part of a subject; each may help construct or activate a frame and none is a reference frame by identity alone; one component may appear in several frames and one frame may cross several components | P3, P6 |
+| Role, persona, abstraction, component | a role allocates responsibility or authority, and the authority comes only from an admitted grant: naming a role or a frame grants none (Authority above; Authority kinds below); a persona alters an actor's approach or salience; an abstraction hides or contracts detail; a component is a structural part of a subject; each may help construct or activate a frame and none is a reference frame by identity alone; one component may appear in several frames and one frame may cross several components | P3, P6 |
 
 ### Authority kinds
 
@@ -243,6 +238,58 @@ or domain implementation owns the internal HOW inside that boundary unless
 the product explicitly promotes part of that HOW into reusable declared
 structure. The step of ACTIVATION §1 is this unit with its intake, context
 and result algebra made exact.
+
+### Imports between members
+
+A member that uses a concept another member defines imports it and does
+not define it again (P1, P3; provenance
+`stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#bounded-context-semantic-resolution`,
+whose semantic import adopts the cited meaning unchanged). An import is
+reference-only. Source and target meanings are identical owner-qualified
+references, not new local definitions. Direction is from the named source
+to the importing context; loss is none and no translation or ownership
+transfer is asserted. An import provides no semantic, evaluation,
+operation or decision authority (P6). A use that changes, narrows or loses
+the source meaning is not an import and is never declared as one.
+
+An import declaration states, for each imported concept (P1, P3, P6):
+
+- what is imported: the concept, under the name its owner gives it;
+- its owner: the owning section of the member that defines it, which is a
+  place in the text, not a semantic authority (Authority kinds above);
+- the source context: the bounded context the owning member declares, or
+  that member itself where it declares none;
+- the target context and the member that owns it;
+- the direction and the loss, which one sentence may state for all the
+  concepts of one declaration.
+
+An import takes one of two forms. A declaration states these contents
+for each imported concept in one place. A reference at the point of use
+that names the owning section is also an import: it states what is
+imported and its owner; its source context is the one the list above
+names, its target is the using member's context, and its direction, loss
+and lack of authority are those stated above. A concept another member
+defines enters a bounded context only by one of these forms, never by
+proximity or equal spelling (P1, P3).
+
+An activation binds each member's distinct coordinates in its selected
+complete governing basis; equal cut selection does not mean equal member
+coordinates. Lifecycle and adoption remain source-owned. A changed member,
+selected basis, source declaration or adoption premise requires fresh
+applicability before use. An activation lacking the source meaning,
+adoption or authority binding reports that unresolved relation before
+dependent reliance rather than interpreting it from equal spelling (P3,
+P5). For an evaluation that depends on the imported concept, a missing
+source meaning, adoption or authority binding is an undeclared material
+relation, the ground of `out_of_frame` ([Results](#results), Out of frame
+or indeterminate); a changed member or basis whose applicability is not
+yet re-established is the ground of `invalid_basis` (§4 Results).
+
+New in this corpus: the declaration's contents and its two forms, a member
+as source context, and the two grounds above. Purpose and material
+relation: a concept used outside its owning section keeps one meaning and
+one owner, so two members cannot answer one question two ways, and using
+a concept grants no authority over it (P1, P6).
 
 ## 3. Commitments
 
@@ -653,7 +700,7 @@ traversal composition laws of any runtime.
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
 | UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; UP-005 restated in DESIGN_MODULE §6 Boundary and governance cost, its proportionality relation ACTIVATION §6; P2 consumes them |
-| UP-015 | conserved; restated in full in RELEASE §9, applied to this corpus in §1 and to acceptance evidence in EVALUATION §5 |
+| UP-015 | conserved; restated in full in RELEASE §9, which owns the disposition values, and applied to acceptance evidence in EVALUATION §5; the standing of §1 is not a disposition |
 | RM Release Identities | conserved; candidate source, release subject and version-line selector restated in §2 Release objects beside the release cut; their realisation as refs, with the namespace, subtree and branch carriers, in RELEASE §2, whose §11 lists the RELEASE_METHOD rows |
 | IDENTITY_METHOD scoped identity | conserved; the Object of §2 carries scoped identity, whose laws are IDENTITY §2 |
 | UP-016, UP-018, UP-019, UP-023 | conserved; all four restated in DESIGN_MODULE §5 and §7, which disposes their rows; UP-016's admission semantics are ACTIVATION §4, UP-018's general reconstruction rule ACTIVATION §1 Intake, and UP-019's and UP-023's shared machinery §4 above, each pointed to |
@@ -661,6 +708,7 @@ traversal composition laws of any runtime.
 | UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
 | SM Probabilistic Work Boundary | conserved; restated in §2 Work boundary and §3 under P0; ACTIVATION §1 consumes it; row in the table below |
 | SM Recursive Product Taxonomy | conserved; restated in §2 Product lineage objects; SPEC_METHOD §6 consumes it; row in the table below |
+| SM Bounded-Context Semantic Resolution, its semantic import | conserved at PRODUCT_DEFINITION §5, which disposes the row; §2 Imports between members applies the unchanged-meaning import to concepts one member uses from another; new there, with its purpose stated: the declaration's contents and two forms, a member as source context, and the grounds of `out_of_frame` and `invalid_basis` |
 | SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement, mapped into the core, is ACTIVATION §3 Ambiguity outcome and its hard stops ACTIVATION §4 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved; restated in full in the ODD, DESIGN_MODULE, UX and WORLD_MODEL members, which dispose their rows and are indexed in PROFILES §2 to §5; nothing imported into tier 1 |
 
