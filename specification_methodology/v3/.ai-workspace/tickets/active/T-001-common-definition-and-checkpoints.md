@@ -10,7 +10,7 @@ change_class: requirement_reprice
 re_entry_point: specification_methodology/v3/specification/INTENT.md
 triaged_at: 2026-10-13T17:07:19Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T17:07:19Z
+updated_at: 2026-10-13T17:19:04Z
 dependencies: []
 ---
 
@@ -388,3 +388,5 @@ Writer return: `candidate_ready` for frozen source review. Eight common files ca
 2026-10-13T17:07:19Z — Common Writer re-entry from `df4816d`. Jim's supplied conversation steers the continuing common repair; his own statements are quoted under Owner Instruction. Codex records this activation before source effects. Installed RF-002/003/004/006/007/008 and the derived baseline frames supply the existing context, sufficiency, irrelevance, authority and role relations. Current definition verification passed. Claude's proposed deductions are assessed separately from the owner's direction: context freshness alone cannot establish independence; finite capacity alone cannot supply purpose or authority; time and cost are not wholly determined by context size; and an unresolved-item count is not a universal distance to completion. No predecessor claim is selected for removal by this organising account. The pre-existing untracked current-contract review is preserved outside this increment.
 
 Writer return: `candidate_ready` for frozen source review. Eight common files connect A and Z, bounded transitions, context and attention, sufficient frames and derived responsibilities. C3 consumes the frame requirement in its frontier, activation and actual-use criteria. Five discriminator rows cover size without adequacy, fresh-context self-review, omitted frontier items, discovery/target revision and sufficient direct work. All 184 checked affected links resolve; whitespace and Product Definition verification pass. The steel-thread contract, build-tenant binding, P1–P4, P6 and historical C1 disposition, both tenant trees, v2 and companion/cohort bytes are unchanged. The unrelated untracked review is hash-preserved. These are document checks, not a human/agent-use trial or checkpoint acceptance.
+
+2026-10-13T17:19:04Z — Source update checkpointed at `c316b49586e7c9712984169d088d0100d334843c`. The fresh bounded reader returned no changes required; the common Writer checked the returned reasoning against the source. The [review](../../comments/codex/20261013T171904Z_REVIEW_V3_CONTEXT_ATTENTION_AND_TRANSITIONS.md) records the exact scope and limits. It expressly checks that finite capacity imposes neither universal decomposition nor serial scheduling, that resource limits do not confer authority or independence, and that counts, repetition or refinement alone establish neither progress nor churn. This follows Jim's further instruction to exercise independent judgment on Claude's analysis. The common update is ready for owner review. T-001 remains active; no tenant activation, C3 member acceptance, actual-use qualification or release is inferred.
