@@ -286,3 +286,30 @@ The requirement links that pointed to the Intent's Mission now point to its "Wha
 - GOALS: the title and the product naming in GOAL-002, the C3 row and open decisions are changed. Dated state and the revision record are GOALS' purpose and stay.
 - Left unchanged: PRINCIPLES (the accepted C1 record) and PREDECESSOR_CLAIMS (frontier data). Both still use C1 and version wording that belongs to their records.
 
+
+### 2026-10-14: Context pass over the specification
+
+Jim's direction, verbatim:
+
+- "verbose giberish very disatisfied i'm looking for something tight, and real."
+- Jim's Mission sentence, written into INTENT: "To define a precise method for constructing software and processes, with a categorical direction and an axiomatic representation of its laws, so that the method can be mechanically checked and applied to itself. -- fore example"
+- "committiing is the only easy way for me to read in vsc commit to main"
+- "it makes no sense, because it has not real context - what i objected to is floral language, or short hand references to products that implies you know what it is. You need to give sufficient context,"
+- "have you finished updating specification"
+
+Commits on `main`:
+
+- `9b83c65`: Intent cut to Jim's Mission sentence. This over-compressed the Intent into unexplained shorthand.
+- `78ffcd6` and `0e8fe08`: Intent rewritten so each term is explained at first use, and each point is stated once.
+- `c06cbf5`: PRODUCT.
+- `7e97745`: GOALS. The stale C2 wave statement is replaced by the current C3 state, which fixes Codex's F2.
+- `0037fde`, `99bdbf5`, `402b608`, `1aef5be` and `64910bb`: requirements README, CAPABILITIES, A_C_DEPENDENCY, conformance and REFERENCE_FRAME_BASIS.
+- `441b888`: six meaning changes found on review, restored.
+
+Before each file was rewritten, its obligation sentences were extracted and paired with their new wording. Headings, numbered steps and acceptance criteria are kept. Links check clean, and `stdo status --definition stdo_3.json --verify` passes.
+
+Left unchanged: PRINCIPLES and PREDECESSOR_CLAIMS.
+
+Open:
+- Codex's F1, the scope of the worked-join item.
+- Codex review of these commits, which Construction Authority requires before a merge. They were committed to `main` on Jim's direction, so that Jim can read them.
