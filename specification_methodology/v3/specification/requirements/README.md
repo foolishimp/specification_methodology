@@ -68,4 +68,4 @@ A categorical claim about the method, or about a construction made with it, is e
 5. Representation and evidence. Laws, records and maps are written in a_c; a_c, its interpretations and its carriers keep separate identities. Structural validation checks structure only. Each claim names its evidence class: mechanically checked, established by mathematical argument, tested against an independently specified oracle, or unresolved.
 6. Worked join. One algorithm category joined with one computation category is the acceptance instance.
 
-A categorical statement without this demonstration is a hypothesis. Purpose and material relation: the categorical direction ([Intent](../INTENT.md#demonstration-standard)) is useful only where its constructions preserve meaning, and these items are what preservation must show.
+A categorical statement without this demonstration is a hypothesis. Purpose and material relation: the categorical direction ([Intent](../INTENT.md#mission)) is useful only where its constructions preserve meaning, and these items are what preservation must show.
