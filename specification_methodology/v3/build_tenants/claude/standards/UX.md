@@ -7,26 +7,32 @@ law; the effect membrane; carrier binding; view continuation and the
 Msg-replay proof; view shape; type sharing; the accessibility minimum;
 realisation discretion; adoption with the scaffold and exemption law and
 UX sprint compliance escrow; the failure patterns; the review questions;
-and the mapping of this profile's results to the core algebra. It refines
+and this profile's refinements of the core result algebra. It refines
 [DESIGN_MODULE](DESIGN_MODULE.md) for modules that realise a UX surface
 and imports [FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md),
 [EVALUATION](EVALUATION.md), [SPEC_METHOD](SPEC_METHOD.md) and
-[TICKETS](TICKETS.md) by reference, defining none of their objects again:
-the result algebra is ACTIVATION §3; ambiguity governance SPEC_METHOD §5;
-the sprint boundary SPEC_METHOD §4; sprint mechanics, compliance escrow
-and close classification TICKETS §3; functional bias without language
-mandate DESIGN_MODULE §4; the effect edge and the other realisation rules
-DESIGN_MODULE §10. The graph-execution profile is named through
-[PROFILES §2](PROFILES.md#2-graph-execution); its member is not on this
-branch and is not linked (P6, P2).
+[TICKETS](TICKETS.md) by reference under
+[PROFILES §1](PROFILES.md#1-the-boundary), defining none of their objects
+again: the core result algebra is
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the step's
+refinements of it, among them construction availability and the ambiguity
+outcome, are [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition);
+ambiguity governance SPEC_METHOD §5; the sprint boundary SPEC_METHOD §4;
+sprint mechanics, compliance escrow and close classification TICKETS §3;
+functional bias without language mandate DESIGN_MODULE §4; the effect
+edge and the other realisation rules DESIGN_MODULE §10. The
+graph-execution profile is [ODD](ODD.md), indexed in
+[PROFILES §2](PROFILES.md#2-graph-execution) (P6, P2).
 
 This profile's own terms are UX surface, State, Msg, Update, View,
 ViewTree, Cmd and Sub (§4), view-local ephemera (§5), effect membrane
 (§6), product-truth-changing message and admitted product carrier (§3),
 Msg-replay test and Msg-replay proof (§8), scaffold and exemption record
-(§12) and UX sprint (§12). AssetSurface, graph function, workorder and ABG
-are the graph-execution profile's terms, used here as that profile names
-them. Binding declared under PROFILES §1 (new; it reads TICKETS' tier-2
+(§12), UX sprint (§12) and the refined result values of §15. Graph
+function and ABG are the graph-execution profile's terms, used here as
+that profile names them; AssetSurface and workorder name carriers that a
+product's design publishes or admits (§3, §7), used here as that design
+names them. Binding declared under PROFILES §1 (new; it reads TICKETS' tier-2
 generalisation back to this profile's objects so the escrow law has an
 exact subject on a UX surface): where TICKETS §3 Compliance escrow names
 "replay proof for product-meaningful user-interface interactions" and
@@ -39,8 +45,9 @@ profile governs; invalidation: a change of this profile's definition of
 the replay proof or of the bound contract re-evaluates the binding (P1,
 P6).
 
-Every clause names the principle that requires it (P0 to P6, FOUNDATIONS
-§3; C is proposed as P0). The predecessor's "must" is written in the
+Each clause names the principle that requires it (P0 to P6, FOUNDATIONS
+§3), as [FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing)
+requires. The predecessor's "must" is written in the
 indicative; its "should", "may", "may not", "recommended", "typically",
 "mandatory", "optional", "allowed", "at least" and "non-normative" keep
 their force. A route written `rc.2 #anchor` is into
@@ -76,6 +83,59 @@ work either satisfies the stricter interpretation, reprices through the
 governing constitutional method, or records a scoped exemption in the
 design module before implementation proceeds (P5, P6; §15 states the
 result).
+
+### Foundation to law
+
+This member is material family F20, UX. The table below shows which of
+its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. The family imports
+three families under [PROFILES §1](PROFILES.md#1-the-boundary): F2,
+transitions, steps and configuration
+([ACTIVATION §1](ACTIVATION.md#1-the-step)); F3, results and their
+combination ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)); and F4,
+work state, resumption and reuse
+([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)). It refines the
+software-design profile, family F17
+([DESIGN_MODULE §1](DESIGN_MODULE.md#1-purpose-and-position)), for
+modules that realise a UX surface (§2); where a row's rule refines a
+DESIGN_MODULE rule, its choice column names that rule. Its instance
+premises hold where a UX surface is realised under this profile; they are
+adopted with it and do not follow from the foundations (P1, P6):
+
+- I1: a product exposes UX surfaces, through which people and systems
+  observe the product's admitted truth and request changes to it;
+- I2: the product's design, outside the UX layer, declares the admitted
+  truth and the carriers that change it;
+- I3: UI stacks differ by project, and their ecosystems accept patterns
+  that keep state, continuation or effects in the view;
+- I4: data reaches a UX surface across seams that the surface does not
+  control;
+- I5: UX work iterates in short cycles, in which proof for each change
+  can cost more than the expected correction.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P6 (independent), P1 (independent); F2 imported; I1, I2 | a UX surface renders admitted truth and changes it only through an admitted carrier, so the UX layer never becomes the hidden constructive carrier; where no carrier exists, the surface is blocked and the work re-enters to author the carrier or reprice the requirement instead of inventing one | [§3](#3-product-truth-and-admitted-carriers); [§7](#7-carrier-binding) | the five carrier kinds and the five binding requirements: this profile; which carriers and contracts exist: the product's design |
+| P0 (recovered), P1 (independent), P4a (independent); F2 imported; I3 | every change of product-meaningful state is a typed transition computed without effects from the current state and a declared message, and the view is a function of state alone, so a surface's behaviour follows from its declared inputs | [§1](#1-position); [§4](#4-process-model); [§5](#5-state-transitions); [§9](#9-view-shape) | the Elm Architecture as the process model, with State, Msg, Update, View, Cmd and Sub, and the unmount test for view-local ephemera: this profile |
+| P0 (recovered), P5 (derived); F2 imported | effects occur only where a declared membrane interprets declared Cmd values, and their outcomes return as typed messages, so no effect hides in rendering or in decision logic | [§6](#6-effect-membrane) | the effect membrane, a refinement of [DESIGN_MODULE §10 Effect edge](DESIGN_MODULE.md#effect-edge), and the handler forms it names: this profile; the interpreter mechanism: the project |
+| P4b (derived), P6 (independent); F4 imported | a surface's behaviour is reproducible by replaying its messages against an empty state, so continuation never leaks into the view, and a product surface claims closure only with an executable replay proof for each product-meaningful interaction family | [§8](#8-continuation-and-replay); [§8 Msg-replay proof](#msg-replay-proof) | the Msg-replay test and the six contents of a replay proof: this profile; the proof surface: the project's design module ([§12](#12-adoption), step 7) |
+| P3 (independent), P1 (independent), P6 (independent); I4 | UX-consumed types come from the contract shared by front end and back end, and data crossing an untrusted or out-of-process seam is validated at runtime before it enters state | [§10](#10-type-sharing) | the six seams, at which this profile makes the preference of [DESIGN_MODULE §4](DESIGN_MODULE.md#4-functional-bias-and-typing) for parsing foreign data once at ingress an obligation, and one typed schema yielding both compile-time types and runtime validators: this profile; the schema mechanism: the project |
+| P2 (independent), P6 (independent); I1 | a surface that is the public face of a product capability declares the accessibility minimum, and an internal debug surface is exempt only with its exemption recorded | [§11](#11-accessibility-minimum) | the five declarations, with WCAG AA as the recommended default for web: this profile; a stricter accessibility refinement: the project |
+| P2 (independent), P1 (independent); I3 | the stack is free while the process model is preserved, and realisations are tested against the model, never ranked | [§4 Process model without stack mandate](#process-model-without-stack-mandate); [§4 Realisation discretion](#realisation-discretion) | the process model without stack mandate, mirroring [DESIGN_MODULE §4 Functional bias without language mandate](DESIGN_MODULE.md#functional-bias-without-language-mandate): this profile; which of the two compliance tests governs, the test over §4 to §10 with no §13 failure pattern or the test over §4 to §8: pending the product owner's ruling, §15 applying the stricter meanwhile; the language, framework, state container, effect interpreter, runtime validator and toolchain: the project, in its design module |
+| P6 (independent); I3 | an adopting surface has one UX realisation authority; existing code, conventions and artifacts are evidence only, and an ambiguity fails closed instead of weakening the process model | [§1 Authority](#authority); [§2](#2-role-and-composition) | adoption, per project and per surface, with its scope: the adopting project's design modules ([§12](#12-adoption)); the stack: the project's ADRs, which may not weaken the process model |
+| P6 (independent), P4b (derived); F4 imported; I5 | a scaffold is exempt only with a recorded scope and retirement condition and never becomes production by accumulation; a UX sprint defers proof only as visible escrow that closure still pays, and closes only with every finding classified | [§12 Scaffold and exemption](#scaffold-and-exemption); [§12 UX sprint compliance escrow](#ux-sprint-compliance-escrow) | the five default-governance conditions, the escrowable and non-escrowable items and the close triggers: this profile; the generic escrow law and the six close classifications: [TICKETS §3](TICKETS.md#3-sprint-rules); the sprint boundary: [SPEC_METHOD §4](SPEC_METHOD.md#sprint-execution-boundary) |
+| P5 (derived), P6 (independent); F3 imported | each verdict of this profile is a refined value mapped to exactly one core value for a named predicate, so a review, a replay proof, a closure claim and a carrier check combine with other results without one being read as another or coerced to success | [§15](#15-results-of-this-profile) | the four refinements and their values: this profile |
+
+The other sections, among them the role and composition (§2), the failure
+patterns (§13) and the review questions (§14), apply these consequences,
+and every clause names the principle that requires it
+([FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing)). The table is
+new in this corpus. Purpose and material relation: an actor started on
+this member sees which rules follow from the foundations and the imported
+families, and which are choices of this profile, the product or the
+project, with their owners, so no choice is presented as derived (P6,
+P1).
 
 ## 2. Role and composition
 
@@ -642,29 +702,75 @@ P5).
 
 ## 15. Results of this profile
 
-New clause. Purpose: the one-algebra rule of ACTIVATION §3, under which a
-profile's own result or stop vocabulary declares a total mapping to the
-five core members and adds none; the material relation is that this
-profile's verdicts decide closure of a UX surface and enter composites
-that consume only core members (P5, P6). Each verdict below answers its own question and maps as stated;
-nothing is coerced to satisfied.
+This section owns this profile's refinements of the core result algebra
+of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Each refinement names
+the question it answers and the predicate its mapping is for, and maps
+each of its values to exactly one core value. The predicate travels with
+the value, so a `satisfied` for one predicate never counts toward another
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+and no mapping raises a result's standing: nothing is coerced to
+`satisfied` (P5, P6). The refinements are new in this corpus. Purpose and
+material relation: this profile's verdicts decide closure of a UX surface
+and enter conjunctions with the results of other members, which combine
+only in the core, so a review, a proof, a closure claim and a carrier
+check are each read for their own predicate and none is read as another
+(P5, P6).
 
-| Profile verdict | Question | Core member |
+| Refinement | Question | Predicate of the mapping |
 |---|---|---|
-| compliant | do §4 to §10 hold under inspection with no §13 failure pattern present (§4 Realisation discretion) | satisfied; this row applies the stricter of the two compliance tests the predecessor states, which disagree (§4 Realisation discretion against the §12 compliance criterion); the choice is pending Jim's ruling and is not settled by this mapping |
-| violation, including "constitutionally rejected" (§4) | is a §13 failure pattern present | falsified; the pattern present is the counterexample |
-| replay proof passes or fails (§8) | does the proof reproduce the expected final State and Cmd sequence without a dependency §8 lists | satisfied when it passes; falsified when it fails |
-| closure claimed without the §8 proof or the §11 obligations (§12) | does every product-meaningful interaction family carry its proof and the surface its accessibility declarations, absent a recorded exemption | falsified; the family or obligation without proof is the counterexample; inside an open UX sprint the gap is escrow and closure is not claimed |
-| blocked for want of a carrier (§3, §7) | does a product-truth-changing message or action have an admitted carrier or typed contract | the surface's evaluation is falsified (§13 pattern 13); the construction step stops as ACTIVATION §3's `re_entry_requested`, core out_of_frame, naming the missing carrier, its owner in the product's design, and the re-entry (author the carrier or reprice the requirement) |
-| fails closed (§1 Authority) | is the surface compliant where this profile is ambiguous for the case | the result of the stricter interpretation where that reading is fixed, satisfied or falsified; out_of_frame where the ambiguity leaves a term the claim depends on undefined, naming the term and its owner (ACTIVATION §3, first case); indeterminate only where the stricter reading is fixed and the admissible evidence cannot decide, naming the evidence that would; never satisfied by the ambiguity alone |
-| design module incomplete (§14) | can each review question be answered from the design module | invalid_basis: the design module cannot support the review evaluation |
+| surface review | does the surface comply with this profile (§4 Realisation discretion, §13, §14) | the UX surface complies with this profile on the exact basis |
+| replay proof | does a Msg-replay proof hold (§8 Msg-replay proof) | the Msg-replay proof reproduces its expected final State and ordered Cmd values, and its correctness depends on nothing that §8 Msg-replay proof lists |
+| closure obligations | where closure of a product UX surface is claimed, are the obligations met that closure requires (§12 UX sprint compliance escrow) | each product-meaningful interaction family of the surface carries its Msg-replay proof and the surface carries its §11 declarations, unless a recorded exemption covers the obligation |
+| carrier admission | does each product-truth-changing message have an admitted carrier (§3, §7) | every product-truth-changing message or action of the surface maps to an admitted product carrier or typed product contract |
+
+| Refinement | Value | Core value | Ground |
+|---|---|---|---|
+| surface review | `compliant` | satisfied | §4 to §10 hold under inspection and no §13 failure pattern is present (§4 Realisation discretion), with every §14 review question answered from the design module. This is the stricter of the two compliance tests the predecessor states, which disagree: §4 Process model without stack mandate counts a realisation that preserves §4 to §8 as compliant. The choice between them is pending the product owner's ruling and is not settled by this mapping |
+| surface review | `violation` | falsified | the test of `compliant` fails: a §13 failure pattern is present, a realisation that §4 Process model without stack mandate rejects is used, or a rule of §4 to §10 does not hold under inspection; the pattern, realisation or rule is the counterexample |
+| surface review | `design_module_incomplete` | invalid_basis | no counterexample of `violation` is found, and a §14 review question cannot be answered from the design module, so the design module, on which the review rests, cannot support the evaluation; the value names the unanswered question |
+| replay proof | `replay_passes` | satisfied | the proof reproduces its expected final State and ordered Cmd values on its injected deterministic values, and no dependency that §8 lists decides its correctness |
+| replay proof | `replay_fails` | falsified | the proof diverges from its expected final State or Cmd values, or its correctness depends on something §8 lists; the divergence or the dependency is the counterexample |
+| closure obligations | `closure_obligations_met` | satisfied | every product-meaningful interaction family carries its Msg-replay proof and the surface its accessibility declarations, or a recorded exemption covers the obligation |
+| closure obligations | `closure_unproven` | falsified | an interaction family lacks its proof or the surface an accessibility declaration, with no recorded exemption; that family or obligation is the counterexample. Inside an open UX sprint closure is not claimed, and a deferred obligation is escrow under §12 |
+| carrier admission | `carrier_admitted` | satisfied | each product-truth-changing message or action maps to an admitted carrier of §3 and binds under §7 to an AssetSurface contract where the product publishes one, otherwise to the equivalent typed contract its design module names |
+| carrier admission | `carrier_missing` | falsified | a product-truth-changing message or action has no admitted carrier or typed contract (§13 pattern 13); that message or action is the counterexample |
+
+Where none of these values applies, the evaluation returns a core value
+directly under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results):
+`indeterminate` where the admissible evidence cannot decide its predicate,
+naming the evidence that would decide; `out_of_frame` where its claim
+needs a relation or capability that its frame does not declare; and
+`invalid_basis` where its subject or basis cannot support it on a ground
+other than `design_module_incomplete` (P5).
+
+Fail closed (§1 Authority). Where this profile is ambiguous for a case,
+the surface review applies the stricter interpretation and returns
+`compliant` or `violation` under it; the ambiguity alone never yields
+`compliant`. Where the ambiguity leaves a term the review depends on
+undefined, so that no stricter interpretation is fixed, the review returns
+`out_of_frame` and names the term and its owner
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or
+indeterminate, first case). A reprice or a scoped exemption, the other
+two exits of §1 Authority, is a re-entry or a scope recorded in the
+design module, not a value of this section (P5, P6).
+
+Blocked for want of a carrier (§3, §7). The surface's carrier admission
+returns `carrier_missing`, and its review returns `violation` (§13 pattern
+13), each for its own predicate. A construction step that needs the
+missing carrier stops with `re_entry_requested(authority)`, which
+[ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+maps; the stop names the missing carrier, its owner in the product's
+design and the re-entry, which is to author the carrier or to reprice the
+requirement (P5, P6).
 
 Two collisions are resolved here (P1): "blocked" for want of a carrier is
-not the ambiguity outcome `blocked` of ACTIVATION §3, and "design module
-incomplete" is not the construction availability member `incomplete`. An
-exempt scaffold is a recorded scope (§12), not a result; evaluations
-outside its recorded scope proceed under this table. The six close
-classifications of §12 belong to TICKETS §3 and are not mapped here (P6).
+not the ambiguity outcome `blocked` of
+[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome), and
+`design_module_incomplete` is not the value `incomplete` of ACTIVATION §3
+Construction availability. An exempt scaffold is a recorded scope (§12),
+not a result; evaluations outside its recorded scope proceed under this
+section. The six close classifications of §12 belong to TICKETS §3 and are
+not mapped here (P6).
 
 ## 16. Source dispositions
 
@@ -674,24 +780,32 @@ named. Every conserved row is restated in this member's own text; a route
 is provenance only. Generalisations recorded here: "UX_METHOD.md" and
 "this method" are written "this profile"; "DESIGN_MODULE_METHOD.md",
 "SPEC_METHOD.md" and "TICKET_METHOD.md" as DESIGN_MODULE, SPEC_METHOD and
-TICKETS; "ODD_METHOD.md" as the graph-execution profile (PROFILES §2),
-whose own terms (AssetSurface, graph function, workorder, ABG) this
-tier-3 profile keeps; "WORLD_MODEL_METHOD.md" as WORLD_MODEL;
+TICKETS; "ODD_METHOD.md" as the graph-execution profile, ODD (PROFILES
+§2), whose own terms graph function and ABG this tier-3 profile keeps;
+AssetSurface and workorder are kept as the names of carriers that a
+product's design publishes or admits; "WORLD_MODEL_METHOD.md" as
+WORLD_MODEL;
 "method-compliant", "method violation" and "method closure" as compliant
 with, a violation of, and closure under this profile. The predecessor's
 section numbers are written as this member's: §4 to §10 keep their
 numbers; §12 is §4 Realisation discretion; §13, §13A and §13B are §12 and
 its subsections; §14 is §13; §15 is §14; §8A is §8 Msg-replay proof.
 
+Three clauses have no predecessor row and are new: the declared binding of
+TICKETS §3's escrow terms (lead); the refinements of the core result
+algebra (§15), which FOUNDATIONS §4 Results requires of a profile with its
+own result vocabulary; and the family table (§1 Foundation to law), in
+the format of FOUNDATIONS §3 Foundation to law (P1, P5, P6).
+
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #1-position | conserved; the one instruction, the four TEA statements, the view not a state owner, the three violations even where conventionally accepted | §1 |
+| #1-position | conserved; the one instruction, the four TEA statements, the view not a state owner, the three violations even where conventionally accepted; the family table under Foundation to law is new | §1 |
 | #1a-constitutional-authority-rule | conserved; sole UX realisation authority, ADRs choose the stack and may not weaken the model, the seven evidence-only kinds, fail closed with its three exits; ambiguity governance is SPEC_METHOD §5, pointed to | §1 Authority; §15 |
 | #2-method-role | conserved; the three roles, the refinement with its four additions, no duplication with the five parent rules, the four UX-only concerns | §2 |
 | #3-method-composition | conserved; the three per-surface cases, the three-answer composition rule | §2 |
 | #3a-ux-projection-and-constructive-carrier-boundary | conserved; projection and control surfaces, the five view-local concerns, the six product-truth changes, the five admitted carriers, no hidden constructive carrier, blocked until authored or repriced | §3; §15 |
 | #4-process-model-elm-architecture | conserved; the five elements with both signatures, the runtime-owned loop | §4 |
-| #4a-process-model-without-language-or-framework-mandate | conserved; model constitutional and stack free, the DESIGN_MODULE §4 mirror, compliance for preserving §4 to §8, the four non-normative examples, the four rejected realisations and three stack-independent violations, framework choice recorded with justification, no ranking | §4 Process model without stack mandate |
+| #4a-process-model-without-language-or-framework-mandate | conserved; model constitutional and stack free, the DESIGN_MODULE §4 mirror, compliance for preserving §4 to §8, the four non-normative examples, the four rejected realisations and three stack-independent violations, framework choice recorded with justification, no ranking; its compliance test, preservation of §4 to §8, disagrees with the test of #12-realization-discretion, and §15 applies the stricter test of #12, the choice being pending the product owner's ruling | §4 Process model without stack mandate; §15 |
 | #5-state-transition-law | conserved; the five declarations, the six Cmd fields, the pure reducer, view-local ephemera with its three conditions at "may" force, product-meaningful state without exception, the unmount discipline test | §5 |
 | #6-effect-membrane-rule | conserved; the membrane's two translations, the three allowed inside, the three forbidden outside, one job, logic in the reducer, the named handlers, the violation and its repair; stated as the UX refinement of DESIGN_MODULE §10 Effect edge | §6 |
 | #7-assetsurface-binding-rule | conserved; the five binding requirements, the same contract on both sides, the equivalent typed contract, absence blocks | §7 |
@@ -700,7 +814,7 @@ its subsections; §14 is §13; §15 is §14; §8A is §8 Msg-replay proof.
 | #9-view-shape-rule | conserved; the five view properties, shape as a stack decision, the signature and no side effects, the out-of-render mutation violation and its membrane exception | §9 |
 | #10-type-sharing-rule | conserved; shared contract, no re-declaration, "typically", mandatory runtime validation at the six seams, the typed-schema mechanism, compile-time TypeScript not sufficient, UX-local types allowed and not shadowing | §10 |
 | #11-accessibility-minimum | conserved; the five declarations with WCAG AA as the recommended default, not optional for product capabilities, optional for debug surfaces with the exemption recorded, intentionally minimal, project-local refinement | §11 |
-| #12-realization-discretion | conserved; opinionated about the model only, the six choices, recorded with justification against §4 and §6, no ranking, the compliance test over §4 to §10 and the failure patterns | §4 Realisation discretion; §15 |
+| #12-realization-discretion | conserved; opinionated about the model only, the six choices, recorded with justification against §4 and §6, no ranking, the compliance test over §4 to §10 and the failure patterns; §15 applies this test as `compliant`, the stricter of the two, pending the product owner's ruling on the disagreement with #4a | §4 Realisation discretion; §15 |
 | #13-adoption-guidance | conserved; the nine adoption steps, per-project adoption at "may" with the scope recorded; step 3's structural carrier diagram is pointed to DESIGN_MODULE §6 and §7 | §12 |
 | #13a-scaffold-and-exemption-law | conserved; the five default-governance conditions, the seven exemption record items at "may be exempt only when", no production UX by accumulation and its three exits | §12 Scaffold and exemption |
 | #13b-ux-sprint-compliance-escrow | conserved; the primary use case, the cost condition at "may", not weakening the model, the seven escrowable and five non-escrowable items, the exit and the hidden-carrier rule, the "should close" condition and five triggers, the forensic walkthrough, the six classifications pointed to TICKETS §3 with the UX reading of `accepted`, the paydown and no-close conditions, defer but not erase; the generic escrow law is TICKETS §3 and SPEC_METHOD §4, pointed to | §12 UX sprint compliance escrow; TICKETS §3 |
