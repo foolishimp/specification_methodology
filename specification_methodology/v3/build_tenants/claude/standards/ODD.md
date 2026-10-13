@@ -15,7 +15,7 @@ only (P0, P1).
 Two definitions are used here and owned elsewhere. The a_c traversal record
 and the functor kinds are
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds);
-the core result algebra is [ACTIVATION §3](ACTIVATION.md#3-result-algebra).
+the core result algebra is [FOUNDATIONS §4 Results](FOUNDATIONS.md#results).
 This profile's graph traversal and its F_D, F_P and F_H shorthands are its
 own concepts and are not those records by spelling. The Executive, Worker
 and Reviewer of [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) are roles, and roles
@@ -75,6 +75,58 @@ not decoration around a process. GTL is the language expression of the
 profile. ABG is the substrate of traversal governance, binding and runtime
 truth that realises the GTL program without owning the domain's internal
 HOW (P0, P6).
+
+### Foundation to law
+
+This member is material family F18, outcome-driven development. The table
+below shows which of its rules follow from which premises, in the format
+of [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. The family imports
+four families under [PROFILES §1](PROFILES.md#1-the-boundary): F2,
+transitions, steps and configuration ([ACTIVATION §1](ACTIVATION.md#1-the-step));
+F3, results and their combination ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results));
+F4, work state, resumption and reuse ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart));
+and F9, the `a_c` calculus ([AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position)).
+Its instance premises hold where a product is built with this profile;
+they are adopted with it and do not follow from the foundations (P1, P6):
+
+- I1: a selected Product outcome is admitted as external authority for
+  the work;
+- I2: the work changes a mutable workspace, beside which an immutable
+  ledger and event log record the admitted work;
+- I3: bounded probabilistic workers carry out the constructive actions,
+  and their reports and artifacts are observations.
+
+Standing of the commitments cited: P0 recovered; P1, P2, P4a and P6
+independent; P4b and P5 derived ([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P0; P6; F2 imported; I3 | the worker's internal path within a bounded step is its own, and the worker cannot close the edge, emit runtime events, mutate ledgers or decide re-entry | [§5 Probabilistic compute](#probabilistic-compute); A5 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | one vector or edge traversal as the bounded step, declared as a binding in §5 Probabilistic compute; the graph as the process model, GTL as its language role and ABG as the single authority for traversal governance and runtime truth (§1, §10): this member |
+| P6; I2; I3 | no edge closes from an artifact, a worker report or process success; closure is a fold over admitted evidence, and the workspace counts only through the ledger | A1, A1a and A6 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | carrier names other than those of the loop: the implementation, which keeps the authority shape (§11.5D) |
+| P4b; F4 imported; I2 | every closure-relevant callout is admitted to the immutable ledger, a correction appends, and every closure decision and next-action selection is reproducible by replay from its predecessor refs | A1a, A13 and A13a in [§11.5D](#115d-constructive-evaluation-and-yield-loop); [§11.5](#115-current-state-is-a-projection-over-constructive-history) | the replay inputs listed in A13: this member |
+| P5; F4 imported | work that is still lawful returns control without failure classification, with a replay-visible resume basis, and liveness alone never closes or fails semantic truth | A9 and A10 in [§11.5D](#115d-constructive-evaluation-and-yield-loop); [§11.5A](#115a-abg-owns-continuation-and-re-entry) | `yield` as the lawful iteration boundary, distinct from retry, block and timeout: this member |
+| P5; F3 imported | the closure decision is a closed sum type, each closure decision and audit outcome maps to exactly one core value for a named predicate, and `evaluate_next` is total | A4, A8 and its mapping in [§11.5D](#115d-constructive-evaluation-and-yield-loop); the audit mapping in [§9](#9-method-governance-and-audit) | the seven closure decisions and the default of graph following in A4: this member; the priority policy: the product (A15) |
+| P2; I1 | the selected outcome bounds the loop: every action binds the gap to exact target assets and obligations, and a reprice requests re-entry and selects nothing | A2 and A4 in [§11.5D](#115d-constructive-evaluation-and-yield-loop), with its selected-outcome paragraphs | which outcome is selected: its owner under [SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation) |
+| P4a; F2 imported | a graph function refines an outer vector under typed refinement, a later function reads earlier outputs only through its declared environment, and the loop recurses over published refinement | [§5 Graph functions](#graph-functions); [§11.8](#118-cumulative-environment-law-is-mandatory); A14 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | the cumulative carried environment as the specialised contract for carrying earlier outputs: this member |
+| P6; P1 | `synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action` hold separate authorities, and no command, report, query or service becomes a rival source of traversal truth | A0, A4a, A12, A15 and A16 in [§11.5D](#115d-constructive-evaluation-and-yield-loop); [§11.5B](#115b-execution-authority-audit) | the four-function split: this member; domain asset meaning, catalogue meaning and gap interpretation: the product (A15) |
+| P1; F9 imported | this profile's traversal and its F_D, F_P and F_H shorthands are its own concepts and meet the `a_c` functor kinds and the source concepts of SPEC_METHOD §5 only through declared specialisation | this member's lead; [§5 Probabilistic compute](#probabilistic-compute) | the F_P and F_H specialisations: this member, under PROFILES §1 |
+| P6 | a consumer, a reference realisation or a historical product may prove or falsify conformance and supplies no method authority, and automation never outruns a lawful manual traversal of the same graph | §1; [§11.7](#117-manual-walkthrough-must-still-be-lawful) | the concrete realisations of the GTL and ABG roles: the consumer, in its own Product, requirements and design |
+| P0; P3; P4a; P6 | every operative constructive step is a named graph function over explicit typed assets, and the function catalogue and the GTL module publish every callable surface, so nothing operative stays in prose, prompt memory or a hidden loop | [§11.1](#111-typed-assets-and-nodes-are-explicit) to [§11.4](#114-the-gtl-module-is-the-operative-publication-surface); [§14](#14-dogfooding-rule) | which assets, functions and catalogue entries a product publishes: the product |
+| P3; P6 | the installed product and the product it builds, and the selected immutable release and mutable source, stay distinct authorities; decisive proof runs against the installed development form, and a release version is not graph truth | [§4](#4-method-library-classes); [§6](#6-product-boundary); [§7](#7-self-host-boundary); [§13](#13-installed-dev-rule); [§15](#15-release-boundary) | which release a consumer selects: the consumer ([PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager)); the target project's domain, surfaces and outputs: the target project (§6) |
+| P1; P3 | shared structural law and a product's local semantic bindings stay distinct, and a capability class is a layer idea, not a universal instance name | [§8](#8-responsibility-layers-and-local-binding); [§11.6](#116-product-specific-semantics-sit-above-the-shared-carrier) | local asset names, asset meanings, proof lanes and query overlays: the product |
+| P6; P5 | negative proof exercises the supported authority path and never manufactures the refusal it should derive, and agentic work is admitted through the constitutional process | [§11.7A](#117a-conforming-agentic-development); [§11.7B](#117b-real-authority-path-negative-proof-stdo-up-010) | the authority packet and artifact admission: [SPEC_METHOD](SPEC_METHOD.md) and [TICKETS](TICKETS.md) |
+| P4a; P2 | a refined inner chain closes, the enclosing contract stays true after fold-back, and a scenario names the boundary, assets, vectors and evidence that close it | [§11.9](#119-global-convergence-must-be-stable-under-zoom); [§12](#12-scenario-rule) | which scenarios a product keeps: the product |
+
+The other sections, among them the method role and composition (§2,
+§3), the failure patterns (§16), the invocation rule and reading order
+(§17, §18), the checklist (§19) and the compression (§20), apply these
+consequences, and every clause names the principle that requires it
+([FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing)). The table is
+new in this corpus. Purpose and material relation: an actor started on
+this member sees which rules follow from the foundations and which are
+choices, and who owns each choice, so no choice is presented as derived
+(P6, P1).
 
 ## 2. Method role
 
@@ -390,6 +442,19 @@ and worth incorporating into it. If the result is incorporation, the
 implementation is not fully approved until this profile is updated. If the
 result is non-compliance, the implementation should be repriced, repaired
 or rejected, not normalised by repetition (P6).
+
+Mapping of the audit outcome to the core result algebra, new in this
+corpus. Purpose: [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) states
+the outcome of every evaluation in the core. Material relation: a design,
+ticket or proof that consumes the audit reads incorporation as neither
+compliance nor failure. Each outcome maps for the predicate "the move
+complies with the current profile" (P5, P6):
+
+| Outcome | Core value | Ground |
+|---|---|---|
+| compliant | satisfied | the move meets the law of the current profile |
+| non-compliant | falsified | the law of this profile that the move violates is the counterexample |
+| valid and worth incorporating | out_of_frame | the current profile does not declare the law the move needs; the outcome names that law, this profile as its owner and the update it requires, which is the reconfiguration pressure of out_of_frame ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or indeterminate) |
 
 In practice no shared structural pattern becomes approved by usage; no
 grey pattern becomes constitutional by drift; reusable structural law is
@@ -940,25 +1005,62 @@ Each disposition is replay-visible and must carry basis and reason refs
 sufficient to reproduce the decision (P5, P6).
 
 Mapping of the closure decision to the core result algebra, new in this
-corpus. Purpose: the one-algebra rule of
-[ACTIVATION §3](ACTIVATION.md#3-result-algebra), under which a profile
-with its own decision vocabulary declares a total mapping to the five core
-members and adds none. Material relation: each closure decision, read with
-the cause or evidence its basis and reason refs record, to exactly one core
-member, which is what a composite over the edge joins; the decision keeps
-its own vocabulary and its basis and reason refs, which A8 requires to be
-sufficient to reproduce it and which therefore carry that cause or
-evidence (P5, P6).
+corpus. Purpose: [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) states
+every outcome in the core or in a refinement that maps each refined value
+to exactly one core value and adds no core value. Material relation: a
+composite over the edge joins each closure decision as one core value, so
+a failure, an undecided closure and a needed re-entry stay distinct (P5,
+P6). The closure decision is `evaluate_action`'s result over admitted
+evidence, mapped for the predicate "the edge's obligations are fulfilled
+on the exact basis". The bounded action it judges has its own step result
+under [ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+for "a candidate is available", and neither value counts toward the
+other's predicate
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).
+Each decision keeps its own vocabulary and its basis and reason refs
+beside its core value (P5, P6).
 
-| Decision | Core member | Reason |
+Refined by cause. Where a decision would map to one of two core values
+according to its cause, the cause is part of the refined value, written
+in parentheses as in `re-enter(basis)`, and each refined value maps once
+(FOUNDATIONS §4 Results, Refinements). The cause is read from the
+decision's basis and reason refs, which A8 requires to be sufficient to
+reproduce it. The seven decisions of A8 stay the closed vocabulary; a
+refined value names a decision and its cause and adds no decision (P5,
+P6). The causes are:
+
+- `retry(defeated)`: admissible evidence defeats the edge for this attempt
+  while the same action stays lawful; `retry(undecided)`: every other
+  retry, as after a liveness interruption, which alone never gives
+  `retry(defeated)` (A10).
+- `repair(implementation)` and `repair(proof)`: the result is locally
+  defective while the governing relation stays coherent
+  ([ACTIVATION §3 Disposition](ACTIVATION.md#disposition), `local_repair`).
+  `repair(implementation)`: admitted evidence shows the implementation
+  failing an edge obligation; `repair(proof)`: every other repair, the
+  defect being in the proof.
+- `re-enter(undeclared)` and `block(undeclared)`: the cause is a relation,
+  capability or authority that no admitted basis declares;
+  `re-enter(basis)` and `block(basis)`: every other cause, the current
+  basis being unable to support the edge, as when it is stale, substituted
+  or unrepairable. A decision with both causes records both and takes the
+  `basis` value, as
+  [ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+  decides for `re_entry_requested`.
+
+| Decision | Core value | Ground |
 |---|---|---|
 | `close` | satisfied | the ledger's admitted evidence fulfils the edge's obligations on the exact basis |
-| `yield` | indeterminate | the edge stays lawful and its closure is not yet decided; it reaches indeterminate by the stop-state route of construction availability's `incomplete`, not as the evaluation's result, without failure classification, as A9 requires |
-| `retry` | falsified or indeterminate | falsified only when admissible evidence defeats the edge for this attempt while the same action stays lawful, otherwise indeterminate; a liveness interruption alone never yields falsified (A10); A9 separates this failure-classified re-attempt from yield |
-| `repair` | falsified or indeterminate | the result is locally defective while the governing relation stays coherent (ACTIVATION §3 Disposition, `local_repair`), whose defect is in the implementation or in the proof; falsified when admitted evidence shows the implementation failing an edge obligation, the failing obligation row being the counterexample; otherwise indeterminate, the defect being in the proof, so the admitted evidence cannot decide the obligation, and the decision's reason refs name the repaired proof that would decide (P5, P6) |
-| `re-enter` | out_of_frame or invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change; the member follows the cause in the decision's reason refs, as construction availability maps `re_entry_requested` under ACTIVATION §3: out_of_frame when the cause is an undeclared relation, capability or authority, and invalid_basis for every other cause, the current basis being unable to support the edge, as when it is stale, substituted or unrepairable |
-| `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame (ACTIVATION §4) |
-| `block` | out_of_frame or invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis; the member follows the cause in the decision's reason refs, as for `re-enter` |
+| `yield` | indeterminate | the edge stays lawful and the admitted evidence, progress or a waiting state, does not yet decide its obligations; the replay-visible resume basis names what would decide; no failure is classified, as A9 requires |
+| `retry(defeated)` | falsified | the evidence that defeats the edge for this attempt is the counterexample; A9 separates this failure-classified re-attempt from yield |
+| `retry(undecided)` | indeterminate | the attempt ended without evidence that decides the edge's obligations; the decision's reason refs name the re-attempt that would decide |
+| `repair(implementation)` | falsified | the failing obligation row is the counterexample (P5, P6) |
+| `repair(proof)` | indeterminate | the defect is in the proof, so the admitted evidence cannot decide the obligation; the decision's reason refs name the repaired proof that would decide (P5, P6) |
+| `re-enter(undeclared)` | out_of_frame | the edge cannot close on its current basis because an upstream asset or governing relation must change, and the change needs a relation, capability or authority that no admitted basis declares; the decision names it and its owner |
+| `re-enter(basis)` | invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change, and that basis cannot support the edge |
+| `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or indeterminate) |
+| `block(undeclared)` | out_of_frame | `evaluate_action` decides that the action just taken leaves the edge unable to proceed, because it needs a relation, capability or authority that no admitted basis declares |
+| `block(basis)` | invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis, which cannot support it |
 
 A9 Yield is lawful iterate. `yield` is the lawful iteration boundary (P5):
 
@@ -1559,19 +1661,21 @@ imperatives ("do not", "declare") are written as indicative law or as
 written as labelled paragraphs; American spellings are written British in
 prose and kept in identifiers (P6, P3).
 
-Four clauses have no predecessor row and are new. Two are bindings that
+Six clauses have no predecessor row and are new. Two are bindings that
 FOUNDATIONS P0 and ACTIVATION §4 assign to PROFILES §2, which indexes them
 in this profile: the binding of the bounded step of FOUNDATIONS P0 (§5
 Probabilistic compute) and the binding of the refinement of ACTIVATION §4
 (§5 Graph functions). The third is the opening note that roles are not
 functor kinds, which restates ACTIVATION §1 and AXIOMATIC_CALCULUS §5
-together. The fourth is the mapping of the A8 closure decisions to the
-core result algebra (§11.5D), which ACTIVATION §3 requires of a profile
-with its own closure vocabulary (P0, P1, P5).
+together. The fourth and fifth are the mappings of the A8 closure
+decisions (§11.5D) and of the §9 audit outcomes to the core result
+algebra, which FOUNDATIONS §4 Results requires of a profile with its own
+result vocabulary. The sixth is the family table (§1 Foundation to law),
+in the format of FOUNDATIONS §3 Foundation to law (P0, P1, P5, P6).
 
 | rc.2 anchor | Disposition | Locus |
 |---|---|---|
-| #1-position | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated | §1 |
+| #1-position | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated; the family table under Foundation to law is new | §1 |
 | #2-method-role | conserved; WORLD_MODEL_METHOD written as the world-model profile (WORLD_MODEL, tier 3) | §2 |
 | #3-method-composition | conserved | §3 |
 | #4-method-folder-semantics | conserved; the three classes and the rule that only method members are constitutional restated generically, the class named by its predecessor membership (`*_METHOD.md`) and in this corpus by the method members the standards README names (the tier 1 and tier 2 standards and, when a project selects them, the tier 3 profiles); the authoring path `specification/standards/` written generically, its successor path bound at packaging | §4 |
@@ -1584,7 +1688,7 @@ with its own closure vocabulary (P0, P1, P5).
 | #6-product-boundary | conserved | §6 |
 | #7-self-host-boundary-rule | conserved | §7 |
 | #8-responsibility-layers-and-local-binding | conserved | §8 |
-| #9-method-governance-and-audit | conserved; "ODD_METHOD.md" written as this profile | §9 |
+| #9-method-governance-and-audit | conserved; "ODD_METHOD.md" written as this profile; the mapping of the three audit outcomes to the core result algebra is new | §9 |
 | #10-what-an-odd-product-is | conserved; the application boundary block carried exactly; the `reference_frame_bases` meaning routed to REFERENCE_FRAME | §10 |
 | #product-specification-software-development-topology | conserved | §10 Product specification |
 | #product-realization-software-development-topology | conserved | §10 Product realisation |
@@ -1601,7 +1705,7 @@ with its own closure vocabulary (P0, P1, P5).
 | #115a-abg-owns-continuation-and-re-entry | conserved | §11.5A |
 | #115b-execution-authority-audit | conserved; the five-surface inventory carried exactly; UP-016 keeps its rc.2 route, its successor home being the software-design profile | §11.5B |
 | #115c-projection-source-coherence | conserved | §11.5C |
-| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile | §11.5D |
+| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile; the mapping of the closure decisions to the core result algebra is new, for the predicate "the edge's obligations are fulfilled on the exact basis", with `retry`, `repair`, `re-enter` and `block` split by cause into refined values, each mapped to exactly one core value | §11.5D |
 | #116-product-specific-semantics-sit-above-the-shared-carrier | conserved | §11.6 |
 | #117-manual-walkthrough-must-still-be-lawful | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | §11.7 |
 | #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | §11.7A |
