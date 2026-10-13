@@ -1,18 +1,17 @@
 # REFERENCE_FRAME
 
-Tier 1. Owns the reference frame as a first-class object: what a frame is
-and the laws every frame obeys, how a frame set is declared and selected,
-how frames relate and act together, how coverage of a workspace is audited
-and bounded, how a frame set is revised, and what an actor receives when it
-is activated on a frame. Consumes the definitions of
-[FOUNDATIONS §2](FOUNDATIONS.md) (frame objects, authority kinds,
-disjointness and independence, the frame tuple) and adds none. The bounded
-step that activates one frame, and the result algebra, are
-[ACTIVATION](ACTIVATION.md); qualification of a frame and of this method is
-[EVALUATION §7](EVALUATION.md). Every clause names the principle that
-requires it (P0 to P6, FOUNDATIONS §3). A route written `rc.2 #anchor` is
-into `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md` and
-is provenance only; nothing here depends on that cut to be applied.
+Tier 1. Owns the reference frame as a first-class object of engagement:
+the laws every frame obeys, how a frame set is declared and selected, how
+frames relate and act together, how coverage of a workspace is audited and
+bounded, how a frame set is revised, and what an actor receives when it is
+activated on a frame. The frame objects, the step that activates a frame,
+the core result algebra with its conjunction, and qualification belong to
+other members; this member imports them unchanged and defines none of them
+(§1, Imports into this context). Each clause names the principle that
+requires it (P0 to P6, FOUNDATIONS §3), as FOUNDATIONS §1 requires. A route
+written `rc.2 #anchor` is into
+`stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md` and is
+provenance only; nothing here depends on that cut to be applied.
 
 ## 1. The frame as the engagement unit
 
@@ -29,7 +28,7 @@ declared evaluation family
   + admissible evidence and exclusions
   + actor capability envelope
   = activated reference frame
-  -> one member of the result algebra of ACTIVATION §3
+  -> one closed result in the core algebra of FOUNDATIONS §4 Results
 ```
 
 A project engages a body of work through a declared frame set (P6, P2):
@@ -68,28 +67,57 @@ specialise its relations under their own authority, and that external
 relation neither enters nor amends this member (P2: an obligation stops
 where its purpose stops). This member owns the reference-frame-evaluation
 bounded context, `urn:stdo:bounded-context:reference-frame-evaluation`,
-under its exact publication basis, and owns only its own concepts: frame
+under its exact publication basis. The context holds only frame
 declaration, activation, evaluation, basis, relation, result, coverage,
-revision and qualification. A same-spelled profile, product, role or
-runtime carrier is not imported by proximity or nominal match (P3, P1;
-rc.2 #position).
-
-Statement of ownership, new in this corpus. The reference-frame-evaluation
-context explicitly includes, as concepts of that context owned at their
-defining loci, the frame objects of
-[FOUNDATIONS §2](FOUNDATIONS.md#frame-objects), the frame tuple included,
-the result algebra of [ACTIVATION §3](ACTIVATION.md#3-result-algebra),
-its refinements and dispositions included, and the specialist frame
-families of [EXECUTIVE_BASELINE §11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set). Where the list above names
-evaluation or result, it names these included concepts and defines neither
-a second time. This inclusion is the explicit owner relation that
-[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)
-requires for a concept of this context defined in another member (P1, P3).
+revision and qualification concepts. A concept of these kinds that another
+member defines enters the context by the imports below and keeps that
+member as its owner. A same-spelled profile, product, role or runtime
+carrier is not imported by proximity or nominal match (P3, P1; rc.2
+#position).
 
 Substrate. A reference frame may be represented in prose, structured data,
 a prompt, a design asset, a typed carrier, a runtime context or any other
 form its consumer selects. No class, aggregate, actor, controller, service,
 registry, graph or frame engine is required (P2; RF-016).
+
+### Imports into this context
+
+This member imports the concepts below into
+`urn:stdo:bounded-context:reference-frame-evaluation` under the import rule
+of [FOUNDATIONS §2](FOUNDATIONS.md#imports-between-members). Source and
+target meanings are identical owner-qualified references, not new local
+definitions. Direction is from the named source to this context; loss is
+none and no translation or ownership transfer is asserted. FOUNDATIONS,
+ACTIVATION and EVALUATION declare no bounded-context identity, so each
+row's source context is its member; the target context and its owner are
+declared in Scope above (P1, P3).
+
+| Referenced concept | Source context | Exact source concept and owner |
+|---|---|---|
+| evaluation, evaluation family, workspace, material-relation manifold, coordinate, topology, capability envelope, reference frame, activated frame, frame set, active frame configuration, lens; role, persona, abstraction and component | FOUNDATIONS | [Frame objects](FOUNDATIONS.md#frame-objects), FOUNDATIONS §2 |
+| subject, outcome, basis, material relation, evidence, actor, claim, judgment, residual | FOUNDATIONS | [Ontology](FOUNDATIONS.md#2-ontology), FOUNDATIONS §2 |
+| frame-set, semantic, evaluation, operation and decision authority; actor identity | FOUNDATIONS | [Authority kinds](FOUNDATIONS.md#authority-kinds), FOUNDATIONS §2 |
+| frame disjointness, evaluation independence and assurance independence | FOUNDATIONS | [Disjointness and independence](FOUNDATIONS.md#disjointness-and-independence), FOUNDATIONS §2 |
+| the frame tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩ | FOUNDATIONS | [The frame tuple](FOUNDATIONS.md#the-frame-tuple), FOUNDATIONS §2 |
+| the core result values, their meanings and standing, the evaluation not performed, and refinements of the core | FOUNDATIONS | [Results](FOUNDATIONS.md#results), FOUNDATIONS §4 |
+| conjunction and composition of results, with the declared decision rule | FOUNDATIONS | [Conjunction of results](FOUNDATIONS.md#conjunction-of-results), FOUNDATIONS §4 |
+| activation as a step: intake, admission, applicability, context construction with its size measurement, activation and evaluation | ACTIVATION | [The step](ACTIVATION.md#1-the-step), ACTIVATION §1; [Context construction under an envelope](ACTIVATION.md#2-context-construction-under-an-envelope), ACTIVATION §2 |
+| the step's result refinements and disposition | ACTIVATION | [Step results and disposition](ACTIVATION.md#3-step-results-and-disposition), ACTIVATION §3 |
+| the closed result and its reuse | ACTIVATION | [Closed result and reuse](ACTIVATION.md#7-closed-result-and-reuse), ACTIVATION §7 |
+| qualification of a frame and of this method | EVALUATION | [Qualification of frames and of the method](EVALUATION.md#7-qualification-of-frames-and-of-the-method), EVALUATION §7 |
+
+These are reference-only imports into
+`urn:stdo:bounded-context:reference-frame-evaluation`. They provide no
+semantic, evaluation, operation or decision authority. Where Scope names
+evaluation, basis, activation, result or qualification, it names the
+imported concept, and this member defines none of them a second time. A
+refinement this member states, such as the function outcomes of §5, names
+its owner in this table and maps back to it. A frame or frame family that
+a profile or product declares in this context is that owner's
+specialisation under Scope above and is not imported here (P1, P3, P6).
+The declaration is new in this corpus. Purpose and material relation: each
+concept used here keeps one owning section, so its meaning cannot diverge
+between that owner and this member (P1, P6).
 
 ## 2. Core claims
 
@@ -137,8 +165,13 @@ An activated frame contains a finite attention surface that fits the
 selected actor's declared capability envelope. A frame that needs
 undeclared ambient memory, conversation history or an effectively global
 workspace context is not reconstructable for that actor (P0; rc.2
-#rf-002-finite-attention). ACTIVATION §2 measures the fit where the
-contract selects measurement.
+#rf-002-finite-attention). The fit is tested in
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+which owns the measurement of the context's size and when it applies.
+Whether the actor attends adequately to a frame that fits is a separate
+question, answered by actual-use evidence under
+[EVALUATION §7](EVALUATION.md#frame-qualification); a size measurement
+does not answer it (P0, P6).
 
 ### RF-003 Material sufficiency
 
@@ -197,10 +230,19 @@ evaluation uses is declared where it is used (P1, P3; rc.2
 Frames may relate through disjointness, overlap, refinement, restriction,
 translation, temporal succession, composition or governance (§7). Parent
 and child relations apply only where explicitly declared. Functional
-decomposition, authority precedence, frame configuration, subject topology
-and evaluation dependency are distinct relation structures; a consumer may
-align them where the governed subject warrants it and may not silently
-treat them as one hierarchy (P3, P1; rc.2 #rf-009-no-assumed-hierarchy).
+decomposition, communication, authority precedence, frame configuration,
+subject topology and evaluation dependency are distinct relation
+structures; a consumer may align them where the governed subject warrants
+it and may not silently treat them as one hierarchy (P3, P1; rc.2
+#rf-009-no-assumed-hierarchy). Communication is the exchange of
+information between frames, or between the actors activated on them. An
+exchange by itself grants no authority and establishes neither a
+decomposition nor an evaluation dependency (P6, P1). Communication is new
+in this list. Purpose and material relation: a configuration assigns
+information exchanges as well as responsibilities
+([ACTIVATION §1](ACTIVATION.md#configuration)), and an exchange read as a
+grant or as a dependency would move authority or change a result without a
+declared relation.
 
 ### RF-010 Composition on demand
 
@@ -224,17 +266,19 @@ invalidates for reuse every result bound to the prior revision coordinate;
 
 ### RF-012 Closed results
 
-Every evaluation returns a member of its declared result algebra. A
-performed evaluation returns a member; an evaluation not performed because
-a declared capability was not exercised owes the step's stop state, not a
-member (ACTIVATION §3, third case). The core
-algebra is defined once, in ACTIVATION §3: `satisfied`, `falsified`,
-`indeterminate`, `out_of_frame` and `invalid_basis`, with the meanings and
-the no-coercion rule given there; this member does not define it a second
-time. An externally owned compatible extension may refine that algebra
-while preserving explicit indeterminate, out-of-frame and invalid-basis
-pressure; it may neither add a core member nor coerce one to success (P5;
-rc.2 #rf-012-closed-results).
+Every performed evaluation of a frame returns one closed result in the
+frame's declared result algebra: the core algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), or a refinement mapped
+into it under that section. That section owns the five core values
+(`satisfied`, `falsified`, `indeterminate`, `out_of_frame` and
+`invalid_basis`), their meanings and the rules over them: that nothing is
+coerced to success; that a refinement adds no core value, keeps
+indeterminate, out-of-frame and invalid-basis pressure explicit and raises
+no result's standing; and that an evaluation not performed has no result,
+its stop state being
+[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition). This law
+applies them to every frame and defines none of them (P5; rc.2
+#rf-012-closed-results).
 
 ### RF-013 Reconstructable activation
 
@@ -336,9 +380,13 @@ cost buys material risk reduction or better actor fit (P2, P6).
 These considerations create no universal resource ledger, benchmark, budget
 or measurement gate. A resource control applies only through an explicitly
 selected frame and its owning applicability and work scope; ACTIVATION §6
-is that selection where capability fit or a cost claim is the governed
-question. Frame selection cannot waive another applicable semantic,
-authority, evidence or independence constraint (P2, P6).
+is that selection where a cost claim is the governed question. The test
+that an activated frame's context fits the selected actor is RF-002's,
+distinct from the actor context that selection weighs, and
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
+owns its measurement and when the measurement applies. Frame selection
+cannot waive another applicable semantic, authority, evidence or
+independence constraint (P2, P6).
 
 ## 5. Method functions
 
@@ -370,9 +418,53 @@ revise(frame_set, new_evidence, failures, capability_change, topology_change)
   -> proposed_frame_set_delta
 ```
 
-`declare` is §4; `activate`, `evaluate` and the closed result are
-ACTIVATION §1 to §3 and §7; `conjoin` and `translate` are §6;
+`declare` is §4; `activate` and `evaluate` are ACTIVATION §1 and §2;
+`evaluate` returns its result under RF-012, and the closed result is
+returned and reused under ACTIVATION §7; `conjoin` and `translate` are §6;
 `audit_coverage` is §8; `revise` is §10. EVALUATION §7 qualifies each.
+
+The outcomes of `activate`, `conjoin` and `translate` form a refinement of
+the core algebra, stated under the refinement rule of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results): each outcome below maps
+to exactly one core value for the predicate its function names, the value
+travels with that predicate and with the outcome, whose meaning stays here,
+and an outcome named in the signatures above that would map to more than
+one core value according to its cause carries the cause in its name, as in
+`activation_refusal(basis)` (P5, P6). The refinement is new in this
+corpus. Purpose and material relation: a consumer that combines these
+outcomes with other results reads them in the one core, so a refusal, a
+conflict or a loss is neither mistaken for success nor merged with an
+evaluation that was not performed.
+
+| Function and predicate | Outcome | Cause | Core value |
+|---|---|---|---|
+| `activate`: the frame is activated for this evaluation, subject, basis and actor | `activated_frame` | the frame declaration is bound to the exact evaluation, subject, basis and actor | `satisfied` |
+| | `activation_refusal(capability)` | the actor is outside the frame's declared capability envelope; the refusal names the capability that fails | `falsified` |
+| | `activation_refusal(authority)` | the activation needs semantic, evaluation, operation or decision authority that is not admitted to it; the refusal names that authority's owner | `out_of_frame` |
+| | `activation_refusal(basis)` | the subject or basis is stale, advanced, ambiguous or mismatched (RF-005) | `invalid_basis` |
+| `conjoin`: the composite predicate holds under the declared decision rule | `decision(holds)` | the conjunction of FOUNDATIONS §4 reports `satisfied` | `satisfied` |
+| | `decision(fails)` | the conjunction reports `falsified`, and no mandatory result for the same claim is `satisfied` | `falsified` |
+| | `conflict` | the conjunction reports `falsified` while mandatory results for the same claim disagree, one `satisfied` and another `falsified`; the counterexample survives the join, and the disagreement stays unresolved for the decision authority | `falsified` |
+| | `indeterminate` | the conjunction reports `indeterminate` | `indeterminate` |
+| `translate`: the value or evidence enters the target frame as the declared translation states | `translated_value` | the value or evidence is carried into the target coordinates with its declared meaning | `satisfied` |
+| | `declared_loss` | the value or evidence is carried with a loss inside the declared accepted loss; the loss travels with it as a residual (P4b) | `satisfied` |
+| | `refusal(condition)` | a refusal condition the translation declares holds, a loss outside the accepted loss included | `falsified` |
+| | `refusal(basis)` | the source value or evidence binds a stale, advanced, ambiguous or mismatched basis or coordinate (RF-005) | `invalid_basis` |
+
+Where no frame the actor can use declares a material relation or
+capability the evaluation needs, `activate` returns `out_of_frame` itself
+([ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+Activation). Where the conjunction reports `out_of_frame` or
+`invalid_basis`, `conjoin` returns that value; the signatures name no
+outcome for either case. A planned assessment without a closed result, and
+required coverage that no planned assessment addresses, are no outcome of
+`conjoin`: [FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) records
+them beside the reported value, and they map to no core value. The
+outcomes of `activate` answer whether a frame was activated, never the
+evaluation's claim: a refused activation performs no evaluation.
+`decision(holds)` assesses the composite predicate and is not its
+acceptance, which is a separate result
+([FOUNDATIONS §4](FOUNDATIONS.md#results)).
 
 ## 6. Frames in conjunction
 
@@ -390,18 +482,12 @@ evaluation independence; rc.2 #independently-activated-co-evaluation).
 
 ### Result conjunction
 
-A declared decision rule consumes closed frame results. The rule states
-which results are mandatory; how conflict and indeterminacy are handled;
-which basis relations must agree; which decision authority owns the
-conjunction; and whether any result may veto or defer the decision.
-Conjunction does not transfer the semantic authority of a contributing
-frame (P6, P4a). Every mandatory constraint is satisfied with valid
-applicable evidence. Common agreement cannot discard a constraint or a
-material counterexample that only one contributor found. A missing,
-wrong-subject, conflicted or indeterminate mandatory result stays
-unresolved under the declared rule; aggregate green status cannot replace
-it (P4b, P5; FOUNDATIONS §4 conservation accounting; rc.2
-#result-conjunction).
+A declared decision rule consumes the closed results of several frames.
+The rule, what it must state, and the conjunction it computes are
+[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+over the core values of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results);
+this member defines no conjunction of its own. The outcomes of `conjoin`
+map to the core as §5 states (P4a, P5, P6; rc.2 #result-conjunction).
 
 ### Evidence or coordinate translation
 
@@ -879,7 +965,7 @@ RF-016).
 ```
 
 The out_of_frame residual field is new in this corpus; it carries what
-[ACTIVATION §3](ACTIVATION.md#3-result-algebra) requires an out_of_frame
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) requires an out_of_frame
 result to name, and reads `none` for any other result (P5).
 
 ## 14. Closure
@@ -906,26 +992,27 @@ A project operates under this member when (rc.2 #closure):
 
 RF rows received by this member. Rows that land in FOUNDATIONS, ACTIVATION
 or EVALUATION are listed in those members. Anchors are into rc.2
-REFERENCE_FRAME_METHOD.md; a locus is a section of this file.
+REFERENCE_FRAME_METHOD.md; a locus is a section of this file unless it names
+another member.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
 | #canonical-compression | conserved | §1 |
-| #position | conserved | §1 (scope, substrate); the bounded-context identity is carried unchanged |
+| #position | conserved; the context's concepts that other members define enter it by reference-only import, not by a statement of inclusion (§1 Imports into this context) | §1 (scope, substrate, imports); the bounded-context identity is carried unchanged |
 | #core-claims | conserved | §2 |
 | #reference-frame-laws | not applicable: heading with no claim text (24 bytes); its children are disposed individually | §3 |
 | #rf-001-evaluation-relativity | conserved | §3 RF-001 |
-| #rf-002-finite-attention | conserved | §3 RF-002; measurement of fit in ACTIVATION §2 |
+| #rf-002-finite-attention | conserved | §3 RF-002; the fit test and the size measurement are ACTIVATION §2; adequate attention is evaluated from actual use under EVALUATION §7 |
 | #rf-003-material-sufficiency | conserved | §3 RF-003 |
 | #rf-004-irrelevance-exclusion | conserved | §3 RF-004 |
 | #rf-005-exact-basis-and-coordinates | conserved | §3 RF-005 |
 | #rf-006-authority-conservation | conserved | §3 RF-006 |
 | #rf-007-semantic-evidence-and-verdict-separation | conserved | §3 RF-007; applied to review in EVALUATION §2 |
 | #rf-008-overlap-without-identity-collapse | conserved | §3 RF-008 |
-| #rf-009-no-assumed-hierarchy | conserved | §3 RF-009 |
+| #rf-009-no-assumed-hierarchy | conserved; communication is added as a distinct relation structure, new in this corpus, with its purpose stated | §3 RF-009 |
 | #rf-010-composition-on-demand | conserved | §3 RF-010; §6 |
 | #rf-011-topology-mutation-and-recharting | conserved | §3 RF-011 |
-| #rf-012-closed-results | conserved; the tenant text carries a labelled tightening: unexercised capability owes stop state | §3 RF-012; the algebra itself is defined once in ACTIVATION §3 |
+| #rf-012-closed-results | conserved; the five values, their meanings, the no-coercion and refinement rules and the evaluation not performed are owned by FOUNDATIONS §4 Results, with the stop state in ACTIVATION §3; RF-012 states the law over frames and defines none of them | FOUNDATIONS §4 Results; §3 RF-012 |
 | #rf-013-reconstructable-activation | conserved | §3 RF-013 |
 | #rf-014-capability-fit | conserved | §3 RF-014; the step's own selection among fit options is ACTIVATION §2 |
 | #rf-015-residual-uncertainty | conserved | §3 RF-015 |
@@ -933,11 +1020,11 @@ REFERENCE_FRAME_METHOD.md; a locus is a section of this file.
 | #rf-017-proportional-compression | conserved | §3 RF-017 |
 | #engagement-atom-and-semantic-prime | conserved; the predecessor's "Prime or equivalent" is generalised to any semantic-contraction law an adopting method supplies (the design profile's prime law is one such; tier 1 names no profile term) | §3 Engagement atom and semantic atom |
 | #human-frame-set-declaration | conserved | §4 |
-| #frame-set-optimization | conserved | §4 Frame-set selection |
-| #method-functions | conserved | §5 |
+| #frame-set-optimization | conserved | §4 Frame-set selection; the fit test and its measurement are ACTIVATION §2, cost proportionality ACTIVATION §6 |
+| #method-functions | conserved; the mapping of the outcomes of `activate`, `conjoin` and `translate` to the core, each split by cause where needed, is new | §5 |
 | #using-frames-in-conjunction | conserved | §6 |
 | #independently-activated-co-evaluation | conserved | §6 |
-| #result-conjunction | conserved | §6 |
+| #result-conjunction | conserved; the conjunction and its declared rule are owned by FOUNDATIONS §4 Conjunction of results; §6 names the frame relation and refers | FOUNDATIONS §4 Conjunction of results; §6 Result conjunction |
 | #evidence-or-coordinate-translation | conserved | §6 |
 | #material-composition | conserved | §6 |
 | #frame-relations | conserved | §7 |
