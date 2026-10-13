@@ -61,6 +61,26 @@ One Executive (this Claude session) keeps the outcome, the basis and the frontie
 
 2026-10-13T17:56Z (UTC) — Role change, Executive to Writer, for setup: branch `tenant/claude/c3-synthesis` cut from the input commit, sparse worktree created, this ledger written. Role returns to Executive after the setup commit.
 
-2026-10-13T18:14Z — Activations W1 (design re-entry and verified work plan; territory `design/` and `qualification/C3-SYNTHESIS/PLAN.md`) and R0 (independent expectations; territory `qualification/C3-SYNTHESIS/EXPECTATIONS.md`) started together. R0 reads only the common specification and the installed release, and opens neither candidate.
+2026-10-13T17:58Z — Activations W1 (design re-entry and verified work plan; territory `design/` and `qualification/C3-SYNTHESIS/PLAN.md`) and R0 (independent expectations; territory `qualification/C3-SYNTHESIS/EXPECTATIONS.md`) started together. R0 reads only the common specification and the installed release, and opens neither candidate.
 
-2026-10-13T18:29Z — R0 returned `candidate_ready`: EXPECTATIONS.md (22,754 B). It contains 87 expectations across the eight items, 12 negative expectations, 10 ported-part checks and 8 recorded ambiguities in the common specification (A1 to A8). R0 confirms it opened neither candidate. Disclosure: it read the common `PREDECESSOR_CLAIMS.md` header, which summarises earlier Claude-line findings. Executive disposition: accept as the oracle for this rebuild's working reviews. A1 to A8 go to the product owner and the pen in the handoff. Role change to Writer to commit it and this entry, then back to Executive.
+2026-10-13T18:12Z — R0 returned `candidate_ready`: EXPECTATIONS.md (22,754 B). It contains 87 expectations across the eight items, 12 negative expectations, 10 ported-part checks and 8 recorded ambiguities in the common specification (A1 to A8). R0 confirms it opened neither candidate. Disclosure: it read the common `PREDECESSOR_CLAIMS.md` header, which summarises earlier Claude-line findings. Executive disposition: accept as the oracle for this rebuild's working reviews. A1 to A8 go to the product owner and the pen in the handoff. Role change to Writer to commit it and this entry, then back to Executive.
+
+2026-10-13T18:13Z — Common input changed on `main` after the snapshot. The common pen committed `bb76b1d` and `a7eba66` for the Codex line. Material changes:
+- PRODUCT Construction And Context Management and the Bounded Transitions requirement item 5 now treat the workspace as the continuing truth surface, with each actor's context as a disposable account of it;
+- one new discriminator (31 in total): a fresh actor whose retained summary disagrees with the current workspace;
+- the `stdo_3.json` route to the Codex candidate is corrected;
+- GOAL-002 wording is signed off.
+
+Role change to Writer: `main` at `a7eba66` merged inward (`923c755`), as Development Isolation directs for common changes. The snapshot now has these members, at `a7eba66` and matching the pen's Codex snapshot in T-002; all other members are unchanged:
+
+| Member | SHA-256 |
+|---|---|
+| `specification/INTENT.md` | `dc80dd0e091afe33bfdd097a0850a94aef0d3a7e52ab46ac96b535e76afafec1` |
+| `specification/PRODUCT.md` | `c2cfbb87cab2f181dcc7c1b7284a481e0391ea72b02ff2ac46c144eafdbc0b76` |
+| `specification/GOALS.md` | `20d2a3a69fead88c0b93d3d35681475a5cab130c481c92474c7f2036f35d1662` |
+| `specification/requirements/README.md` | `5d01452ee16fc1b8ac85be9d587fdc2f35687e5aa217c4de644314727882dd1d` |
+| `specification/conformance/README.md` | `c4791ca16345345e5c5136a153d6e929d54ec1f191ad98d05ca57a4755485f95` |
+| `stdo_3.json` | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | `3f25650ae4ce45ee31381bee876c47b8e7cb78d6aef50e5654591c7f5f8fd82b` |
+
+R0 is asked to add expectations for the two amendments. W1, still running, is told of the change. Role back to Executive.
