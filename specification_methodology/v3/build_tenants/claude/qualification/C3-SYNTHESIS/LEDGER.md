@@ -255,3 +255,22 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
 - RBc (ODD, TRAVERSAL, AXIOMATIC_CALCULUS, IDENTITY, CONFORMANCE) started.
 - RBd returned (`f0456ed`): minor findings only; 22 changed determinations sampled, none lost. Disposition: `local_repair` as Rd.
 - RBb returned (`a5a9a9f`). Its two material findings are F-1 (no field for an effect of unknown completion in the work-result record) and F-2 (F16 leaves rules untraced). It confirms that DESIGN_MODULE's `not_applicable` mapping is truthful and that rows 516 and 543 are `superseded`. RBb questions rows 522, 560 and 565, which change meaning but are recorded `conserved`. The earlier confirmation of 560 and 565 is withdrawn pending re-examination: each row whose meaning changed under the single result algebra requirement becomes `superseded` with the same replacement relation. Disposition: `local_repair` as Rb.
+
+2026-10-13T21:36Z — Returns and dispositions:
+- I1 returned `candidate_ready`, committed `4bb1f4e`:
+  - 75 delta rows applied to the frontier copy, with conflicts resolved toward the later delta and recorded;
+  - 0 locus failures across 660 `conserved` or `superseded` rows;
+  - the re-proof span is 266 of 691 rows;
+  - 46 GLOSSARY rows added;
+  - the README routes are current, and the set-4 route and the person's name are removed;
+  - six "table pending" marks are cleared.
+
+  Accepted: I1's change to frontier rows 176, 179 and 180, which match the GLOSSARY move. Flagged for review: I1's extension of the GLOSSARY §2 locator rule.
+- D12 (bootstrap frame, template entry point, plugin routes, a_c status note) started.
+- RBa returned (`2d6b7bc`). §11 satisfies binding items 1 to 6, and nothing was lost from the old §11. Material findings M1 (TICKETS repricing dispositions unmapped) and M2 (PRODUCT_DEFINITION toolchain outcomes unmapped). Disposition: `local_repair` as Ra, which also carries:
+  - requirement status values as declared states;
+  - the three accounts of a construction, defined once in FOUNDATIONS §2 as an added choice owned by the Intent and applied in SPEC_METHOD §11;
+  - the F11 standing lead.
+- Rd returned `candidate_ready`, committed `fe24ae3`: RBd's minor findings repaired. Open for the handoff: the UX §4 compliance-test disagreement with the predecessor stays pending the product owner.
+- C2 (the finite-oracle template, port 6, with an instance over FOUNDATIONS §4 conjunction) started.
+- RBc returned (`c77aa5e`). Material M1: AC-007 let a basis condition outrank a demonstrated constraint violation, and F9 presented that precedence as derived. The predecessor AC-007 states no precedence. Ruling (option a): a refusal that names a demonstrated violation keeps `refusal(constraint)`, which maps to `falsified`. The basis condition is recorded with it as its own `invalid_basis` result. A refusal that names only basis conditions maps to `invalid_basis`. Reason: a known failure survives every join and a counterexample is never discarded (FOUNDATIONS §4; predecessor RF Result Conjunction). This is consistent with the 2026-10-12 meaning. The precedence is an added choice owned by AXIOMATIC_CALCULUS. Disposition: `local_repair` as Rc, with RBc's minor findings.
