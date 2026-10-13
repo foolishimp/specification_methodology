@@ -1091,9 +1091,9 @@ stated, not a bar to publication.
 
 The admission consumer binds the eight-surface predicate and its required
 evidence, then conjoins the component results through
-[result conjunction](FOUNDATIONS.md#result-conjunction). A supported stated
-absence or non-applicability can satisfy the explicitness obligation; it does
-not establish an absent property or turn an unexamined property into absence.
+[result conjunction](FOUNDATIONS.md#result-conjunction). A stated absence or
+non-applicability can satisfy the explicitness obligation; the absence claim
+itself needs its support. An unexamined property remains unresolved.
 One demonstrated failed admission obligation remains visible alongside a
 different unresolved obligation. No sparse-publication allowance removes an
 applicable failed requirement. Publication proceeds only under the owning
@@ -1335,8 +1335,9 @@ and applicability of their evidence. Required claim checks use the shared
 conjunction; it retains falsified claims, missing coverage and each source's
 limits. A composed publication cannot promote a candidate geometric claim into
 an established one or erase loss by averaging successful checks. A mathematical
-claim of adjunction or equivalence requires its stated objects, maps and laws;
-the method's vocabulary alone does not prove it.
+claim of adjunction or equivalence follows
+[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions); the method's
+vocabulary alone does not prove it.
 
 Higher-order models are composed from published domain artifacts. They do not
 erase them.
@@ -1394,9 +1395,9 @@ The semantic control plane consists of:
 The high-volume data plane consists of deterministic executable artifacts
 compiled from accepted semantic understanding.
 
-The build tenant supplies the computational binding: executable operations and
-their composition, effect sites, authority and resource dimensions in its
-actual environment. Human source interpretation, machine transformation and
+The build tenant supplies the computational binding under
+[Spec Method](SPEC_METHOD.md#what-how-and-work-carriers).
+Human source interpretation, machine transformation and
 mixed assurance can realize different operations in the same construction.
 The selected means preserve the same governing predicates; a human title or a
 tool name does not supply a missing contract. Bulk execution retains the

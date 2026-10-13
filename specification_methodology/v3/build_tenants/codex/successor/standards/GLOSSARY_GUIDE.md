@@ -25,12 +25,17 @@ fallback decision.
 
 F2 distinguishes a spelling from its interpreted meaning; F3 binds the owner
 and exact basis; F5 requires sufficient bounded acquisition. The index supplies
-routes as a packaging choice. At use, resolve the row's owner in the selected
+routes as this guide's glossary convention. At use, resolve the row's owner in the selected
 basis and acquire the material clause under
-[Workspace and context](FOUNDATIONS.md#workspace-and-context). A stale or
-ambiguous route leaves the term unresolved. A retrieval report uses the
+[Workspace and context](FOUNDATIONS.md#workspace-and-context). Apply
+[bounded-context semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+before concluding that the occurrence's route remains ambiguous. A retrieval report uses the
 [core result](FOUNDATIONS.md#result-algebra) on route resolution, retaining the
-original locator outcome; it does not report semantic acceptance.
+original locator outcome and reason. Resolution in the selected complete basis
+is satisfied; a route established invalid in that basis is falsified; partial
+acquisition or unresolved ambiguity is indeterminate; an unusable basis is
+invalid_basis. A route outside the bound evaluation scope is out_of_frame.
+Missing reasons follow the core rule. None reports semantic acceptance.
 
 ## Method Identity Index
 

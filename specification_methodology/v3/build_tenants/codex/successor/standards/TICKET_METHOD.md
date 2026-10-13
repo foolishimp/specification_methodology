@@ -727,17 +727,24 @@ An admitted execution contract should be:
 
 Admission evaluates `this exact contract is admissible under this cited work
 authority and basis`. Its result preserves the original admission outcome:
-`admitted` maps to `satisfied`; `rejected` with a demonstrated violation maps to
+`admitted` maps to `satisfied` when the admission evaluation establishes that
+predicate; `rejected` with a demonstrated violation maps to
 `falsified`; missing deciding evidence maps to `indeterminate`; missing
 admission scope or capability maps to `out_of_frame`; and unusable authority
 or subject coordinates map to `invalid_basis`. A reason accompanies every
-refusal. `drafted` and `superseded` are carrier states, not evaluation verdicts.
+refusal; a missing required reason follows the core missing-reason rule.
+`drafted` and `superseded` are carrier states, not evaluation verdicts.
 An old admission is not a current grant merely because its text remains in
 the workspace. Neither admission satisfaction nor `active` status establishes
 that the admitted work has been performed or completed.
 
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
+
+An explicit override has a separate decision result on the exact contract and
+bound mandate. It can authorise work only within that mandate and leaves the
+admission evaluation's verdict intact. The carrier's `admitted` state cannot
+convert a failed evaluation into satisfaction.
 
 Execution-contract admission validates a proposed contract against its cited
 Product outcome, prerequisite, or experiment basis; it does not admit that
@@ -902,8 +909,8 @@ path-relative authority and explicit disposition rules in `SPEC_METHOD.md`.
 Closure evaluates `every applicable declared obligation of this exact work
 claim is satisfied and no active non-closure condition remains` through
 [core conjunction](FOUNDATIONS.md#result-conjunction). Bind the obligation set,
-each predicate, its subject/basis and the required judgments and rulings before
-conjoining. A known failure remains visible when another obligation has no
+each predicate and its subject/basis before conjoining, including every required
+judgment and owner ruling as a required conjunct. A known failure remains visible when another obligation has no
 assessment. Missing or unknown applicability cannot become satisfaction.
 The core result records the original closure outcome, actual performance,
 effects and residuals; evidence presence alone is not completion. The existing
@@ -1328,7 +1335,8 @@ that a state transition is valid carries its own core result and exact
 predicate. `completed` is recorded only after Condition-Based Closure And
 Reuse holds, including any required owner decision; lane placement cannot
 make it hold. A cancelled activity does not thereby satisfy its original
-delivery predicate.
+delivery predicate. Where obligations were withdrawn or deferred, completed
+carrier state retains those decisions and does not assert their delivery.
 
 ### Ticket Lanes
 

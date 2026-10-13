@@ -276,7 +276,7 @@ This methodology is not only a local operating note for one implementation. It i
 
 Its role is meta-constitutional:
 
-- it defines how goals, intent, product, requirements, design, code, evidence, and repricing relate
+- it defines how goals, intent, product, requirements, design, realisation, evidence, and repricing relate
 - it defines what counts as specification sufficiency
 - it defines what kinds of requirement truth exist
 - it defines how authority flows during iterative delivery
@@ -836,14 +836,20 @@ outcomes, constraints, evidence obligations and permitted changes without
 choosing every means of execution. A tenant's design supplies its computational
 calculus and concrete binding: which operations realise those requirements,
 how they compose, which actors or mechanisms perform them, what effects they
-permit, and how their outcomes are observed. The binding may use software,
+permit, the operational assumptions and how their outcomes are observed. The binding may use software,
 hardware, people, organisations or a mixture. A machine architecture is one
 binding, not the definition of computation for the method.
+
+A computational calculus may be reused wherever its bindings satisfy the
+common obligations. Actor identity and author identity do not determine
+operation kind: a person performing a procedure is not thereby making a human
+adjudication. An a_c representation neither selects the executor nor proves
+realisation conformance by passing structural validation.
 
 At design admission, each affected requirement identifies its realising
 operation or invariant, the preservation obligation at its interfaces, and the
 evidence capable of defeating the claimed realisation. Context, attention,
-time, memory, communication and spend are measured at the boundary declared
+time, memory, communication, human effort and spend state their units and are measured at the boundary declared
 by that binding where they are material. A requirement-to-operation route
 alone does not discharge preservation or demonstrate fitness. A tenant cannot
 repair an inconvenient requirement by silently changing the common `WHAT`.
@@ -1015,9 +1021,9 @@ Goals → Intent → Product Definition → Requirements → Design → Realisat
 - **Delta** reveals drift between intended truth and realized state.
 - **Scenarios** test operational meaning — can the system actually do the thing the words describe?
 - **Gap analysis** identifies where real use cases hit the current model and reveal insufficiency.
-- **Repricing** updates goals, intent, product, requirements, design, or code when the system no longer harmonizes. When gap analysis reveals constitutional insufficiency, it generates new **Goals** and/or **Intent**.
+- **Repricing** updates goals, intent, product, requirements, design, or realisation when the system no longer harmonizes. When gap analysis reveals constitutional insufficiency, it generates new **Goals** and/or **Intent**.
 
-This is the homeostatic loop. Every link in the chain is load-bearing. A break at any link — goals with no downstream repricing path, an unowned requirement, an ungrounded design record, code without a design decision — creates accidental law.
+This is the homeostatic loop. Every link in the chain is load-bearing. A break at any link — goals with no downstream repricing path, an unowned requirement, an ungrounded design record, realisation without a design decision — creates accidental law.
 
 The workspace persists through this loop. At each activation, current material
 state and valid authority define the new A; Z names the admitted acceptance
@@ -1289,8 +1295,10 @@ observe the affected current state, compare it with the report and retained
 results, and distinguish an actual defect from a stale belief. Reuse valid
 observations and rulings. If an effect may already have occurred, resolve that
 uncertainty before recommending an action that depends on its absence. An old
-conversation, event or work summary supplies a route to evidence, not a veto on
-current reality. The classification result retains the exact diagnosis
+conversation or work summary supplies a route to evidence, not a veto on
+current reality. Events that record effects are observations; apply the core
+effect and supported-supersession rules before treating them as stale. A local
+absence cannot erase a recorded external effect. The classification result retains the exact diagnosis
 predicate, evidence and residuals under the common result contract.
 
 Use the smallest sufficient applicable frame configuration under
@@ -1303,12 +1311,12 @@ correction under sufficient existing law.
 
 The minimum lawful change classes are:
 
-- `goal_reprice`: current bounded work-wave focus changes; re-enters at Goals and may flow through Intent, Product, Requirements, Design, Code, and Evidence where that focus changes deeper constitutional truth
-- `intent_reprice`: directional or scope change; re-enters at Intent and flows through Product, Requirements, Design, Code, and Evidence
-- `product_reprice`: current product realization changes while directional intent remains stable; re-enters at Product and flows through Requirements, Design, Code, and Evidence
-- `requirement_reprice`: constitutional truth changes while project direction remains stable; re-enters at Requirements and flows through Design, Code, and Evidence
-- `design_reframe`: realization structure changes while active intent and requirement truth remain stable; re-enters at Design and flows through Code and Evidence
-- `realization_refactor`: local code, configuration, or attribute change with no intended constitutional or structural change; re-enters at the realized surface only and must prove no upstream drift
+- `goal_reprice`: current bounded work-wave focus changes; re-enters at Goals and may flow through Intent, Product, Requirements, Design, Realisation, and Evidence where that focus changes deeper constitutional truth
+- `intent_reprice`: directional or scope change; re-enters at Intent and flows through Product, Requirements, Design, Realisation, and Evidence
+- `product_reprice`: current product realization changes while directional intent remains stable; re-enters at Product and flows through Requirements, Design, Realisation, and Evidence
+- `requirement_reprice`: constitutional truth changes while project direction remains stable; re-enters at Requirements and flows through Design, Realisation, and Evidence
+- `design_reframe`: realization structure changes while active intent and requirement truth remain stable; re-enters at Design and flows through Realisation and Evidence
+- `realization_refactor`: local implementation, procedure, configuration, or attribute change with no intended constitutional or structural change; re-enters at the realized surface only and must prove no upstream drift
 
 Smaller changes may re-enter below Goals only if they explicitly assert that no
 upstream constitutional surface is changing.
@@ -1675,15 +1683,24 @@ that disposition; an assessment verdict is not acceptance authority.
 | Disposition | Condition on the exact candidate claim | Core verdict |
 |---|---|---|
 | `accept` | the candidate closes its declared cone and preserves every affected governing relation | `satisfied` |
-| `local_repair` | a demonstrated implementation or proof defect defeats the claim while the governing relation remains coherent | `falsified` |
-| `re_enter` | the intended candidate cannot satisfy the current contract without changing Product, requirement, identity, lifecycle, authority, public contract or accepted design | `falsified` |
+| `local_repair`, demonstrated counterexample | a demonstrated defect defeats the claim while the governing relation remains coherent | `falsified` |
+| `local_repair`, inadequate proof | missing or defective proof leaves the candidate claim undecided; the evidence supports a local proof repair | `indeterminate` |
+| `re_enter`, defeated candidate | the intended candidate cannot satisfy an interpretable current contract without an owning-layer change | `falsified` |
+| `re_enter`, unusable governing basis | the governing requirements cannot supply a coherent interpretation for this assessment | `invalid_basis` |
 | `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
 
 The proposed remedy retains its original domain outcome; the core verdict does
-not choose among remedies. Insufficient evidence returns `indeterminate`, a
+not choose among remedies. Governing-requirement coherence is an admission
+condition here; the candidate's alignment, including its design's alignment
+with those requirements, is an evaluated relation. A contradictory design does
+not by itself invalidate otherwise interpretable requirements. A proof defect
+can falsify the proof's own claim without falsifying the implementation claim.
+Insufficient evidence returns `indeterminate`, a
 missing material evaluation capability returns `out_of_frame`, and an
-unusable basis returns `invalid_basis`, without inventing a completed
-assessment or forcing a disposition. Required judgments compose by
+unusable basis returns `invalid_basis`. A proposed remedy accompanies any of
+these when its cause and authority are supported; the verdict alone neither
+forces a remedy nor forbids a useful authorised repair. Preserve missing causes
+under the core rule. Required judgments compose by
 [core conjunction](FOUNDATIONS.md#result-conjunction); a known failure survives
 alongside missing coverage. A construction result satisfying only `an exact
 candidate is available` never substitutes for this assessment predicate.
@@ -2574,7 +2591,7 @@ This is how the system stays alive instead of becoming a frozen constitution. Th
 1. A real use case (scenario, deployment, external review) hits the current model
 2. Gap analysis identifies what the constitution cannot express
 3. If the gap is constitutional (not just a missing implementation), new goals and/or intent are written
-4. The repriced surface then flows forward through the chain: product → requirements → design → code
+4. The repriced surface then flows forward through the chain: product → requirements → design → realisation
 
 New intents emerge from repeated, real use-case pressure against the current model — not from abstract speculation. The gap must be concrete before it becomes intent. Ad hoc coding pressure does not generate intent; explicit gap analysis does.
 
@@ -3021,7 +3038,7 @@ When a real use case reveals a gap:
 2. Then write the **Scenario** as the first substantive project artifact for the
    gap so the pressure becomes concrete and testable.
 3. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
-4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).
+4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → realisation).
 5. If implementation: write requirements/design as needed, then implement.
 
 The intake source does not change this rule.

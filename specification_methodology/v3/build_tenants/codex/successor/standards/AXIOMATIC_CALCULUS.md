@@ -440,8 +440,10 @@ maps exactly once on that same subject, basis and predicate:
 | the exact subject or basis cannot support this evaluation | `invalid_basis` |
 
 The result retains the original outcome, performance and known effect state.
-Not undertaking an evaluation cannot be reported as a negative domain finding
-or a positive proof. A finer refusal names its cause and map; no refusal is
+Non-performance alone establishes neither a negative domain finding nor a
+positive proof. Separately admissible counterevidence retains its deciding
+force under the shared legal pairs without inventing execution. A finer refusal
+names its cause and map; no refusal is
 coerced to success. Missing mandatory evaluations remain explicit coverage
 residuals when judgments are conjoined.
 
@@ -454,11 +456,19 @@ another model's semantic truth.
 
 `hold`, `gap`, `refusal` and `refuse` always carry a declared cause: an undecided
 predicate maps to `indeterminate`; missing material frame scope or capability
-to `out_of_frame`; an unusable basis to `invalid_basis`; and an established
-prohibition or counterexample to `falsified`. The pair of original outcome and
-cause, not the shorthand alone, identifies one refinement case. A bare stop
-word cannot satisfy a consumer. Implementations bind these mappings before
-execution and retain performance, known effects, evidence and residuals.
+to `out_of_frame`; an unusable basis to `invalid_basis`; and an admissible
+counterexample to that predicate to `falsified`. An established prohibition
+falsifies only the permission or admission predicate it defeats. Refusing an
+interpreter because its grant is absent does not falsify the model's constraint
+predicate. On that constraint, retain the actual evaluation performance and
+any separately admissible counterevidence or supported scope/basis diagnosis;
+without deciding support the unevaluated predicate remains `indeterminate`.
+The refusal of permission is a separately bound result.
+
+The pair of original outcome and cause, not the shorthand alone, identifies one
+refinement case. A bare stop word cannot satisfy a consumer. Implementations
+bind these mappings before execution and retain performance, known effects,
+evidence and residuals.
 
 ### AC-008 Explicit Latitude
 
@@ -717,6 +727,12 @@ bind the shared result contract. `decision` retains the original calculus or
 interpreted-domain outcome; it is not another verdict enum. The exact
 interpretation declares its map before the judgment is used. A carrier may
 encode these relations through resolved records rather than repeated bodies.
+Each field is required by this semantic contract. The selected signature closes
+its value domain and cardinality as well as its identity-bearing reference
+domains. Performance uses the shared legal pairs and retains the observed
+extent: an interrupted evaluation already undertaken is `performed`, not an
+unperformed evaluation. An absent effect observation cannot default a requested
+operation to `not_requested`.
 
 `predicate` resolves the adopted predicate contract; identity-bearing
 `residuals` resolve the calculus's existing residual records. `effects` records
@@ -829,7 +845,19 @@ When the composition claims that several constraints hold, it uses
 [core conjunction](FOUNDATIONS.md#result-conjunction) over their exact
 predicates and coverage. A stop at one traversal cannot erase a valid
 counterexample from another; a successful traversal does not satisfy an
-unperformed dependent traversal. Effect-sensitive composition also binds
+unperformed dependent traversal. Otherwise the application declares the outer
+predicate, exact leaf predicates, material joins, and disjoint, exhaustive truth
+and falsity conditions on its fully decided admitted domain. Its result uses
+the declared-operator rule in
+[result conjunction](FOUNDATIONS.md#result-conjunction), with only the
+dependencies needed to decide that predicate. A fallback may establish its
+declared outer predicate while retaining an earlier failed leaf; it cannot
+report that every stage succeeded. An absent dependent return remains an absent
+slot, with its known performance or uncertainty. An uninterpretable operator
+declaration supplies no guessed success. This clause owns typed traversal
+composition; the core owns result evaluation for the declared outer operator.
+
+Effect-sensitive composition also binds
 the current-state and uncertainty rules in
 [workspace and context](FOUNDATIONS.md#workspace-and-context).
 

@@ -238,8 +238,9 @@ Outside the membrane (in render code, in pure helpers consumed by render, in the
 
 The membrane has one job: interpret declared `Cmd` values. It is not where logic lives. Branching, conditional state derivation, and multi-step business decisions belong in the reducer; the membrane interprets a single declared `Cmd` per effect.
 
-Effect returns preserve observed completion, partial execution and uncertainty
-as distinct typed `Msg` cases under the command's contract. The method result
+Effect returns distinguish each shared effect state the command can produce
+as typed `Msg` cases under its contract, including observed non-start and
+reversal where applicable. The method result
 records the corresponding shared effect state; it does not replace the UX
 domain's message algebra. A failed response after dispatch can mean `unknown`
 effects, not proof of no mutation. Before a dependent repeat, the declared
@@ -319,7 +320,8 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 Each replay assessment returns the shared
 [result record](FOUNDATIONS.md#result-algebra) on the exact interaction-family
 predicate, preserving the original test outcome and observed command/effect
-trace. A demonstrated expected-state or command mismatch is `falsified`; a
+trace. A demonstrated expected-state or command mismatch, or a dependency on
+any source excluded by this replay contract, is `falsified`; a
 proof not run retains `not_performed` and cannot satisfy the predicate.
 Missing decisive trace is `indeterminate`; an unusable fixture or governing
 basis is `invalid_basis`; an interaction outside the declared assessment domain
@@ -520,9 +522,10 @@ who may accept, reprice or remove work remains bound by the existing grant.
 
 Sprint-close eligibility and product UX method closure are separate predicates.
 The former may permit a declared local paydown under its governing policy;
-the latter retains all applicable proof and accessibility obligations. Their
-required results are conjoined by the shared owner without converting the
-sprint-close decision into evidence that the debt is resolved.
+the latter conjoins its applicable proof, accessibility and exemption results
+through [core conjunction](FOUNDATIONS.md#result-conjunction). Sprint-close
+eligibility is not a conjunct of that method-closure predicate and supplies no
+evidence that the debt is resolved.
 
 The sprint may close with explicit local paydown tickets only where the debt is
 local to UX realization and the governing method allows follow-up. It may not

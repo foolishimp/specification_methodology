@@ -248,7 +248,9 @@ behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
 Each qualification item records its exact predicate and core result. A passed
-item maps to `satisfied`; an actual counterexample maps to `falsified`; absent
+item maps to `satisfied` only with established performance and all required
+coverage and evidence on the exact cut; skipped work or a cached green label
+does not establish those conditions. An actual counterexample maps to `falsified`; absent
 deciding evidence maps to `indeterminate`; an unavailable required evaluation
 capability maps to `out_of_frame`; and an unusable subject or basis maps to
 `invalid_basis`. Preserve the finer diagnostic or original outcome and whether

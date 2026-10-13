@@ -11,7 +11,7 @@ Each excerpt names its owner, section and exact member digest. Required coupled
 relations outside this selection remain material and require source re-entry;
 an unresolved governing relation is not silently satisfied by the view.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result algebra
 
@@ -126,7 +126,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result conjunction
 
@@ -218,7 +218,10 @@ Sequential composition records an unreturned dependent evaluation as an absent
 slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
-by union and the above verdict/effect operations are associative. An invalid
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
 arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
@@ -237,7 +240,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Workspace and context
 
@@ -292,7 +295,7 @@ reconstruction; it is not universally the work state or a compulsory recovery
 algorithm.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Bounded construction
 
@@ -329,7 +332,7 @@ and cannot establish that the old destination was reached. Repeating a failed
 relation needs a supported causal change; elapsed activity is no repair.
 
 
-Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ### Universal Intake Triage
 
@@ -380,8 +383,10 @@ observe the affected current state, compare it with the report and retained
 results, and distinguish an actual defect from a stale belief. Reuse valid
 observations and rulings. If an effect may already have occurred, resolve that
 uncertainty before recommending an action that depends on its absence. An old
-conversation, event or work summary supplies a route to evidence, not a veto on
-current reality. The classification result retains the exact diagnosis
+conversation or work summary supplies a route to evidence, not a veto on
+current reality. Events that record effects are observations; apply the core
+effect and supported-supersession rules before treating them as stale. A local
+absence cannot erase a recorded external effect. The classification result retains the exact diagnosis
 predicate, evidence and residuals under the common result contract.
 
 Use the smallest sufficient applicable frame configuration under
@@ -394,12 +399,12 @@ correction under sufficient existing law.
 
 The minimum lawful change classes are:
 
-- `goal_reprice`: current bounded work-wave focus changes; re-enters at Goals and may flow through Intent, Product, Requirements, Design, Code, and Evidence where that focus changes deeper constitutional truth
-- `intent_reprice`: directional or scope change; re-enters at Intent and flows through Product, Requirements, Design, Code, and Evidence
-- `product_reprice`: current product realization changes while directional intent remains stable; re-enters at Product and flows through Requirements, Design, Code, and Evidence
-- `requirement_reprice`: constitutional truth changes while project direction remains stable; re-enters at Requirements and flows through Design, Code, and Evidence
-- `design_reframe`: realization structure changes while active intent and requirement truth remain stable; re-enters at Design and flows through Code and Evidence
-- `realization_refactor`: local code, configuration, or attribute change with no intended constitutional or structural change; re-enters at the realized surface only and must prove no upstream drift
+- `goal_reprice`: current bounded work-wave focus changes; re-enters at Goals and may flow through Intent, Product, Requirements, Design, Realisation, and Evidence where that focus changes deeper constitutional truth
+- `intent_reprice`: directional or scope change; re-enters at Intent and flows through Product, Requirements, Design, Realisation, and Evidence
+- `product_reprice`: current product realization changes while directional intent remains stable; re-enters at Product and flows through Requirements, Design, Realisation, and Evidence
+- `requirement_reprice`: constitutional truth changes while project direction remains stable; re-enters at Requirements and flows through Design, Realisation, and Evidence
+- `design_reframe`: realization structure changes while active intent and requirement truth remain stable; re-enters at Design and flows through Realisation and Evidence
+- `realization_refactor`: local implementation, procedure, configuration, or attribute change with no intended constitutional or structural change; re-enters at the realized surface only and must prove no upstream drift
 
 Smaller changes may re-enter below Goals only if they explicitly assert that no
 upstream constitutional surface is changing.
@@ -407,7 +412,7 @@ upstream constitutional surface is changing.
 The absence of a declared change class is process drift.
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ### Computed Classification And Treatment
 
@@ -487,7 +492,7 @@ dependencies; recompute the wider frontier where independence is unproved.
 ---
 
 
-Source: [TICKET_METHOD.md — Upward Propagation Check](../TICKET_METHOD.md#upward-propagation-check); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
+Source: [TICKET_METHOD.md — Upward Propagation Check](../TICKET_METHOD.md#upward-propagation-check); SHA256 `b1d7a45d40fb978012052694c40e286a88a3cd60e7a50560fb405a10cf28c24f`.
 
 ### Upward Propagation Check
 
@@ -514,7 +519,7 @@ outcome or established governing insufficiency follows the owning re-entry;
 unresolved meaning remains J and reserved choice O.
 
 
-Source: [TICKET_METHOD.md — Work-Carrier-To-Execution Rule](../TICKET_METHOD.md#work-carrier-to-execution-rule); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
+Source: [TICKET_METHOD.md — Work-Carrier-To-Execution Rule](../TICKET_METHOD.md#work-carrier-to-execution-rule); SHA256 `b1d7a45d40fb978012052694c40e286a88a3cd60e7a50560fb405a10cf28c24f`.
 
 ### Work-Carrier-To-Execution Rule
 
@@ -578,7 +583,7 @@ surface, and non-closure conditions. Resulting state still flows through proof,
 gap analysis, and repricing.
 
 
-Source: [TICKET_METHOD.md — Execution Contract Admission](../TICKET_METHOD.md#execution-contract-admission); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
+Source: [TICKET_METHOD.md — Execution Contract Admission](../TICKET_METHOD.md#execution-contract-admission); SHA256 `b1d7a45d40fb978012052694c40e286a88a3cd60e7a50560fb405a10cf28c24f`.
 
 ### Execution Contract Admission
 
@@ -601,17 +606,24 @@ An admitted execution contract should be:
 
 Admission evaluates `this exact contract is admissible under this cited work
 authority and basis`. Its result preserves the original admission outcome:
-`admitted` maps to `satisfied`; `rejected` with a demonstrated violation maps to
+`admitted` maps to `satisfied` when the admission evaluation establishes that
+predicate; `rejected` with a demonstrated violation maps to
 `falsified`; missing deciding evidence maps to `indeterminate`; missing
 admission scope or capability maps to `out_of_frame`; and unusable authority
 or subject coordinates map to `invalid_basis`. A reason accompanies every
-refusal. `drafted` and `superseded` are carrier states, not evaluation verdicts.
+refusal; a missing required reason follows the core missing-reason rule.
+`drafted` and `superseded` are carrier states, not evaluation verdicts.
 An old admission is not a current grant merely because its text remains in
 the workspace. Neither admission satisfaction nor `active` status establishes
 that the admitted work has been performed or completed.
 
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
+
+An explicit override has a separate decision result on the exact contract and
+bound mandate. It can authorise work only within that mandate and leaves the
+admission evaluation's verdict intact. The carrier's `admitted` state cannot
+convert a failed evaluation into satisfaction.
 
 Execution-contract admission validates a proposed contract against its cited
 Product outcome, prerequisite, or experiment basis; it does not admit that
@@ -622,7 +634,7 @@ retaining an active execution contract cannot create or renew authority that
 the owning work-wave authority has not admitted.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -706,7 +718,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -816,15 +828,24 @@ that disposition; an assessment verdict is not acceptance authority.
 | Disposition | Condition on the exact candidate claim | Core verdict |
 |---|---|---|
 | `accept` | the candidate closes its declared cone and preserves every affected governing relation | `satisfied` |
-| `local_repair` | a demonstrated implementation or proof defect defeats the claim while the governing relation remains coherent | `falsified` |
-| `re_enter` | the intended candidate cannot satisfy the current contract without changing Product, requirement, identity, lifecycle, authority, public contract or accepted design | `falsified` |
+| `local_repair`, demonstrated counterexample | a demonstrated defect defeats the claim while the governing relation remains coherent | `falsified` |
+| `local_repair`, inadequate proof | missing or defective proof leaves the candidate claim undecided; the evidence supports a local proof repair | `indeterminate` |
+| `re_enter`, defeated candidate | the intended candidate cannot satisfy an interpretable current contract without an owning-layer change | `falsified` |
+| `re_enter`, unusable governing basis | the governing requirements cannot supply a coherent interpretation for this assessment | `invalid_basis` |
 | `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
 
 The proposed remedy retains its original domain outcome; the core verdict does
-not choose among remedies. Insufficient evidence returns `indeterminate`, a
+not choose among remedies. Governing-requirement coherence is an admission
+condition here; the candidate's alignment, including its design's alignment
+with those requirements, is an evaluated relation. A contradictory design does
+not by itself invalidate otherwise interpretable requirements. A proof defect
+can falsify the proof's own claim without falsifying the implementation claim.
+Insufficient evidence returns `indeterminate`, a
 missing material evaluation capability returns `out_of_frame`, and an
-unusable basis returns `invalid_basis`, without inventing a completed
-assessment or forcing a disposition. Required judgments compose by
+unusable basis returns `invalid_basis`. A proposed remedy accompanies any of
+these when its cause and authority are supported; the verdict alone neither
+forces a remedy nor forbids a useful authorised repair. Preserve missing causes
+under the core rule. Required judgments compose by
 [core conjunction](../FOUNDATIONS.md#result-conjunction); a known failure survives
 alongside missing coverage. A construction result satisfying only `an exact
 candidate is available` never substitutes for this assessment predicate.
@@ -905,7 +926,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
+Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `b1d7a45d40fb978012052694c40e286a88a3cd60e7a50560fb405a10cf28c24f`.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
@@ -958,7 +979,7 @@ carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-003 Material Sufficiency
 
@@ -971,7 +992,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -981,7 +1002,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-006 Authority Conservation
 
@@ -991,7 +1012,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-007 Semantic, Evidence, And Verdict Separation](../REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-007 Semantic, Evidence, And Verdict Separation](../REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
@@ -1002,7 +1023,7 @@ Decision authority disposes the result. A frame declaration keeps these roles
 distinguishable even when one actor lawfully performs several of them.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-012 Closed Results
 
@@ -1010,15 +1031,26 @@ Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An unclassified finer outcome is not
-silently treated as satisfaction.
+verdict for the declared predicate. An outcome lacking its required reason
+follows the core missing-reason rule.
 
 An activation attempt and the work it would authorize are different subjects.
-A refused activation records its own result with the failed admission
-predicate, cause and evidence; it does not fabricate a performed work result.
-Missing capability maps to `out_of_frame`, an unusable subject/basis to
-`invalid_basis`, an established admission prohibition to `falsified`, and
-unresolved admissible admission evidence to `indeterminate`. Successful
+A refused activation records its own result on “this frame may be activated
+for this actor, subject and basis”, with its cause and evidence. Established
+failure of an admission condition maps to `falsified`; unresolved admissibility
+maps to `indeterminate`. Capability, authority, basis and topology are the
+conditions being checked, not the admission check's own capability or basis.
+A declared ambiguity that prevents admission therefore falsifies admission;
+uncertainty about whether that ambiguity exists remains indeterminate. If the
+admission check itself lacks scope or a usable basis, its result follows the
+core diagnosis rule instead. Missing causes follow the core missing-reason rule.
+
+Where the plan requires the downstream work predicate, a separately established
+capability or basis diagnosis can report `out_of_frame` or `invalid_basis` on
+that predicate with its actual performance. Otherwise its slot stays absent
+with the observed performance fact. Neither case fabricates a Worker return,
+and an admission prohibition alone is no counterexample to downstream fitness.
+Successful
 activation satisfies admission only. The work remains `not_performed` until
 actually undertaken. Each result retains performance and known effect state.
 
@@ -1030,7 +1062,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ## Minimal Evaluation Result
 

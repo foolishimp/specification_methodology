@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result algebra
 
@@ -124,7 +124,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result conjunction
 
@@ -216,7 +216,10 @@ Sequential composition records an unreturned dependent evaluation as an absent
 slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
-by union and the above verdict/effect operations are associative. An invalid
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
 arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
@@ -235,7 +238,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Bounded construction
 
@@ -296,26 +299,33 @@ permitted direct/composite/nested forms remain domain policy. This argument
 neither derives those choices nor creates an additional validation pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6`.
+Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
 
 #### Admission contract use
 
 Bind the relation above through the library's
 [transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate on the scoped entity and
-admission-valid predecessor, with the material support the owning relation
-requires. Its output domain is that relation's declared durable result or
-other supported outcome. These are semantic parameters, not a new carrier
+Here its input domain is the declared candidate and predecessor on the scoped
+entity, under an interpretable authoritative admission basis and with the
+material support the owning relation requires. Its output domain is that
+relation's declared durable result or other supported outcome. These are
+semantic parameters, not a new carrier
 schema or common result enum. This method owns the design completeness test;
 UP-021 owns the admission decision and standing-test semantics.
 
 The admission assessment returns the shared
 [result record](../FOUNDATIONS.md#result-algebra) on the predicate that this exact
 candidate satisfies the declared admission relation at its current basis.
-Preserve the domain admission outcome and evidence. A stale or contradictory
-admission basis is `invalid_basis`; an unsupported boundary is `out_of_frame`;
-a counterexample on a valid admitted basis is `falsified`; missing decisive
-evidence is `indeterminate`. `satisfied` requires the whole admission predicate.
+For this assessment, predecessor continuity, predecessor currentness and the
+admitter's grant are material joins of that predicate. Established stale
+predecessor state or a defeated grant therefore falsifies the admission claim
+under an interpretable governing basis; it is not relabelled a missing basis.
+Missing evidence about those joins leaves the admission claim `indeterminate`.
+An uninterpretable or contradictory governing basis is `invalid_basis`; an
+unsupported evaluation boundary is `out_of_frame`. Preserve the domain
+admission outcome and evidence. `satisfied` requires the whole admission
+predicate, including its joins. Basis advancement before the semantic commit
+still prevents effect and requires the current-basis re-entry owned by UP-021.
 An assessment not performed retains `performance = not_performed`. Construction
 of a well-formed candidate is a different predicate and cannot stand in for
 admission. The effect component records the actual commit/publication state,
@@ -330,7 +340,7 @@ admission. Where a governing seam remains unresolved, use UP-017's affected
 relation set and the owning result algebra rather than inventing a local pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6`.
+Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 
@@ -410,20 +420,27 @@ This law is false if any of the following holds:
 
 Bind the relation above through the library's
 [transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate on the scoped entity and
-admission-valid predecessor, with the material support the owning relation
-requires. Its output domain is that relation's declared durable result or
-other supported outcome. These are semantic parameters, not a new carrier
+Here its input domain is the declared candidate and predecessor on the scoped
+entity, under an interpretable authoritative admission basis and with the
+material support the owning relation requires. Its output domain is that
+relation's declared durable result or other supported outcome. These are
+semantic parameters, not a new carrier
 schema or common result enum. This method owns the design completeness test;
 UP-021 owns the admission decision and standing-test semantics.
 
 The admission assessment returns the shared
 [result record](../FOUNDATIONS.md#result-algebra) on the predicate that this exact
 candidate satisfies the declared admission relation at its current basis.
-Preserve the domain admission outcome and evidence. A stale or contradictory
-admission basis is `invalid_basis`; an unsupported boundary is `out_of_frame`;
-a counterexample on a valid admitted basis is `falsified`; missing decisive
-evidence is `indeterminate`. `satisfied` requires the whole admission predicate.
+For this assessment, predecessor continuity, predecessor currentness and the
+admitter's grant are material joins of that predicate. Established stale
+predecessor state or a defeated grant therefore falsifies the admission claim
+under an interpretable governing basis; it is not relabelled a missing basis.
+Missing evidence about those joins leaves the admission claim `indeterminate`.
+An uninterpretable or contradictory governing basis is `invalid_basis`; an
+unsupported evaluation boundary is `out_of_frame`. Preserve the domain
+admission outcome and evidence. `satisfied` requires the whole admission
+predicate, including its joins. Basis advancement before the semantic commit
+still prevents effect and requires the current-basis re-entry owned by UP-021.
 An assessment not performed retains `performance = not_performed`. Construction
 of a well-formed candidate is a different predicate and cannot stand in for
 admission. The effect component records the actual commit/publication state,
@@ -438,7 +455,7 @@ admission. Where a governing seam remains unresolved, use UP-017's affected
 relation set and the owning result algebra rather than inventing a local pass.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -522,7 +539,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -600,7 +617,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 ## Test Authority Rule
 
@@ -616,7 +633,7 @@ operator confidence, ambient habit, or an unlabeled test corpus.
 ---
 
 
-Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6`.
+Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
 
 ### 1. Authority Seam Closure
 
@@ -650,7 +667,7 @@ For projection and query modules, seam closure also requires source coherence:
 - negative tests must cover structural drift, not only missing source truth
 
 
-Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6`.
+Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
@@ -716,7 +733,7 @@ constitutional functionality
 ```
 
 
-Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6`.
+Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
 
 ## 8. Totality Rule
 
@@ -752,7 +769,7 @@ Projects using this method should avoid:
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-003 Material Sufficiency
 
@@ -765,7 +782,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -775,7 +792,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-006 Authority Conservation
 
@@ -785,7 +802,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-014 Capability Fit
 
@@ -829,7 +846,7 @@ retains that owner's outcomes. These are original domain outcomes mapped under t
 the outer outcome or effect grant.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-012 Closed Results
 
@@ -837,15 +854,26 @@ Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An unclassified finer outcome is not
-silently treated as satisfaction.
+verdict for the declared predicate. An outcome lacking its required reason
+follows the core missing-reason rule.
 
 An activation attempt and the work it would authorize are different subjects.
-A refused activation records its own result with the failed admission
-predicate, cause and evidence; it does not fabricate a performed work result.
-Missing capability maps to `out_of_frame`, an unusable subject/basis to
-`invalid_basis`, an established admission prohibition to `falsified`, and
-unresolved admissible admission evidence to `indeterminate`. Successful
+A refused activation records its own result on “this frame may be activated
+for this actor, subject and basis”, with its cause and evidence. Established
+failure of an admission condition maps to `falsified`; unresolved admissibility
+maps to `indeterminate`. Capability, authority, basis and topology are the
+conditions being checked, not the admission check's own capability or basis.
+A declared ambiguity that prevents admission therefore falsifies admission;
+uncertainty about whether that ambiguity exists remains indeterminate. If the
+admission check itself lacks scope or a usable basis, its result follows the
+core diagnosis rule instead. Missing causes follow the core missing-reason rule.
+
+Where the plan requires the downstream work predicate, a separately established
+capability or basis diagnosis can report `out_of_frame` or `invalid_basis` on
+that predicate with its actual performance. Otherwise its slot stays absent
+with the observed performance fact. Neither case fabricates a Worker return,
+and an admission prohibition alone is no counterexample to downstream fitness.
+Successful
 activation satisfies admission only. The work remains `not_performed` until
 actually undertaken. Each result retains performance and known effect state.
 
@@ -857,7 +885,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ## Minimal Evaluation Result
 

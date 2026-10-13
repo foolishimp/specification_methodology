@@ -17,6 +17,8 @@ explicit effect boundaries. Those choices refine the shared obligations; they
 are not logical consequences of finite capacity alone. The applicable clauses
 below own their conditions and exceptions. ODD alignment, Python typing, UX and
 world-model refinements retain their declared adoption scopes.
+Theoretical analogies supply no additional prerequisite. Cross-member
+references preserve each relation's declared semantic scope and owner.
 
 At design admission, bind the candidate boundary, its basis, material relation
 set and grant. Acquire the source and seam evidence needed for that relation
@@ -876,20 +878,27 @@ This law is false if any of the following holds:
 
 Bind the relation above through the library's
 [transformation-admission specialization](TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate on the scoped entity and
-admission-valid predecessor, with the material support the owning relation
-requires. Its output domain is that relation's declared durable result or
-other supported outcome. These are semantic parameters, not a new carrier
+Here its input domain is the declared candidate and predecessor on the scoped
+entity, under an interpretable authoritative admission basis and with the
+material support the owning relation requires. Its output domain is that
+relation's declared durable result or other supported outcome. These are
+semantic parameters, not a new carrier
 schema or common result enum. This method owns the design completeness test;
 UP-021 owns the admission decision and standing-test semantics.
 
 The admission assessment returns the shared
 [result record](FOUNDATIONS.md#result-algebra) on the predicate that this exact
 candidate satisfies the declared admission relation at its current basis.
-Preserve the domain admission outcome and evidence. A stale or contradictory
-admission basis is `invalid_basis`; an unsupported boundary is `out_of_frame`;
-a counterexample on a valid admitted basis is `falsified`; missing decisive
-evidence is `indeterminate`. `satisfied` requires the whole admission predicate.
+For this assessment, predecessor continuity, predecessor currentness and the
+admitter's grant are material joins of that predicate. Established stale
+predecessor state or a defeated grant therefore falsifies the admission claim
+under an interpretable governing basis; it is not relabelled a missing basis.
+Missing evidence about those joins leaves the admission claim `indeterminate`.
+An uninterpretable or contradictory governing basis is `invalid_basis`; an
+unsupported evaluation boundary is `out_of_frame`. Preserve the domain
+admission outcome and evidence. `satisfied` requires the whole admission
+predicate, including its joins. Basis advancement before the semantic commit
+still prevents effect and requires the current-basis re-entry owned by UP-021.
 An assessment not performed retains `performance = not_performed`. Construction
 of a well-formed candidate is a different predicate and cannot stand in for
 admission. The effect component records the actual commit/publication state,
@@ -1494,23 +1503,40 @@ product declares replay, event, graph, or carrier ownership.
 
 The design pack evaluates every applicable product, graph, language, runtime,
 handler and module axiom using the shared
-[result algebra](FOUNDATIONS.md#result-algebra). Existing `pass`, `fail` and
-`not_applicable` labels are domain refinements, not another result algebra:
+[result algebra](FOUNDATIONS.md#result-algebra). Applicability and conformance
+are separate predicates on the named design boundary and governing basis.
+Existing `pass`, `fail` and `not_applicable` labels retain their original domain
+meaning and map on the predicate actually evaluated:
 
 - `pass` maps to `satisfied` on the exact axiom predicate with its evidence;
 - `fail` maps to `falsified` on that predicate with its counterexample;
-- `not_applicable` maps to `out_of_frame` on the selected domain, with the
-  governing reason for exclusion. It is not a successful axiom check.
+- a supported `not_applicable` falsifies "this axiom applies to this boundary"
+  under the owning applicability law. It reports no conformance judgment on
+  the excluded axiom;
+- an unsupported exclusion leaves that applicability predicate `indeterminate`
+  and cannot remove the axiom from required coverage.
 
 Missing decisive evidence remains `indeterminate`; an unusable governing basis
-remains `invalid_basis`; an unperformed check retains `not_performed`. An
-applicability determination is a separate predicate. Only a supported exclusion
-under the owning applicability law removes an axiom from the required set.
+remains `invalid_basis`. An applicable axiom outside the evaluation's bound
+scope or capability is `out_of_frame`, not excluded. Performance uses the shared
+legal pairs. An interrupted evaluation already undertaken remains `performed`
+with its extent and any witnessed counterexample; a check never undertaken
+remains `not_performed`, and uncertain execution remains `unconfirmed`.
+
+Only supported applicability results determine exclusions. The conformance
+gate retains those results as coverage evidence; it does not conjoin a true
+exclusion's falsified applicability predicate as if it were a failed required
+axiom. Unresolved applicability keeps coverage unresolved.
 
 The minimum evaluation columns are:
 
-| Axiom | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |
-|---|---|---|---|---|---|---|---|---|---|
+| Axiom and evaluated predicate | Exact subject and basis | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Original domain outcome | Core verdict | Performance and extent | Effects | Residual and gap owner |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+Columns may resolve existing evidence and result records rather than duplicate
+them. The core verdict is one of the five shared values. The table retains the
+selected predicate and original label, including a reasoned applicability
+result; a bare `pass`, `fail` or `not_applicable` is not a complete handoff.
 
 The cross-view evaluation must prove that:
 
@@ -1615,10 +1641,13 @@ boundaries, selected implementations, and domain-to-computational mappings. The
 cross-view evaluation extends to prove the domain views and this projection
 describe one system.
 
-The build tenant owns this binding from common requirements to executable
-operations and their actual environment. A machine stack, a human procedure
-and a mixed process each state their operations, composition, effect locations,
-authority and relevant resource dimensions. An operation performed by a person
+This projection applies the build-tenant binding owned by
+[SPEC_METHOD's WHAT, HOW, And Work Carriers](SPEC_METHOD.md#what-how-and-work-carriers).
+The tenant design binds common requirements to executable operations and their
+actual environment under that law. A machine stack, a human procedure and a
+mixed process each state their operations, composition, effect locations,
+authority and material resource measures, with their units and observation
+boundaries. An operation performed by a person
 retains its input, outcome, refusal and recovery contract; a role title is not
 its implementation. The domain, algorithmic, informational and computational
 accounts must agree on the same obligations. Software-module mechanics apply
@@ -2025,7 +2054,7 @@ The preferred sequence is:
 4. publish resulting events or projections downstream
 
 The effect return preserves `not_requested`, `not_started`, `completed`,
-`partial` or `unknown` in the shared record as observed. A transport failure
+`partial`, `reverted` or `unknown` in the shared record as observed. A transport failure
 after dispatch is not proof that an effect did not occur. Re-entry observes the
 current owning state before any dependent repeat, through
 [workspace and context](FOUNDATIONS.md#workspace-and-context). It can reacquire

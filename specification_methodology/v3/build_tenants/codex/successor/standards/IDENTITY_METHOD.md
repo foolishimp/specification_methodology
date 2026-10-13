@@ -12,7 +12,7 @@ applicability where their owning contract requires them; they are not universal
 object-identity fields. Equal representation
 alone supplies neither identity equality nor permission; continuing identity
 alone supplies no claim that content or evidence is current. The choice of
-readable or opaque names, encoding, hierarchy and optional coordinates remains
+readable or opaque names, encoding, the concrete scoping hierarchy and optional coordinates remains
 with the adopting owner; those formats do not follow from finite context.
 
 At the identity-reading boundary, Bind and Acquire recover the identity
@@ -50,6 +50,12 @@ fragment resolves under it. Missing, duplicate, altered, incomplete or unbound
 material refuses the affected verification. Re-entry requires authentic complete
 verification material; an installed predecessor supplies no exception to these
 checks and is not an implicit fallback.
+
+The refusal retains its cause on the affected verification predicate. A
+demonstrated duplicate, alteration, incompleteness or absence in the complete
+authoritative member set is falsified. A missing authentic basis binding is
+invalid_basis; material not yet acquired leaves the predicate indeterminate.
+Absence from a sparse checkout does not establish authoritative absence.
 
 The [derivation resource](verification_material/DERIVATION_SOURCES.json) is
 distribution evidence for these byte predicates, not a second constitutional
@@ -400,8 +406,8 @@ currentness.
 Before reuse, observe the current owning state and the relevant invalidators
 under [workspace and context](FOUNDATIONS.md#workspace-and-context). A stable
 identity cannot keep stale content, a revoked grant or an old observation
-current. Renaming a coordinate does not by itself replace the subject; a real
-identity transition requires the owning law and explicit relation above.
+current. A changed coordinate neither establishes nor ends continuity;
+continuity across it requires the owning transition relation above.
 
 ---
 

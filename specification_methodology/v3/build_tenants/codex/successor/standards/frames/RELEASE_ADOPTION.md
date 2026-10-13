@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result algebra
 
@@ -124,7 +124,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result conjunction
 
@@ -216,7 +216,10 @@ Sequential composition records an unreturned dependent evaluation as an absent
 slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
-by union and the above verdict/effect operations are associative. An invalid
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
 arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
@@ -235,7 +238,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `7d338fa95c66e997df73e1d19b4a02d361044d7c812b31154bd3d16c18f1e4d7`.
 
 ## Release Identities
 
@@ -262,7 +265,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `7d338fa95c66e997df73e1d19b4a02d361044d7c812b31154bd3d16c18f1e4d7`.
 
 ## Immutable RC Publication
 
@@ -303,7 +306,7 @@ then complete or repair only the still-authorised missing relation without
 moving an immutable published cut.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `7d338fa95c66e997df73e1d19b4a02d361044d7c812b31154bd3d16c18f1e4d7`.
 
 ## Exact-Cut Qualification
 
@@ -323,7 +326,9 @@ behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
 Each qualification item records its exact predicate and core result. A passed
-item maps to `satisfied`; an actual counterexample maps to `falsified`; absent
+item maps to `satisfied` only with established performance and all required
+coverage and evidence on the exact cut; skipped work or a cached green label
+does not establish those conditions. An actual counterexample maps to `falsified`; absent
 deciding evidence maps to `indeterminate`; an unavailable required evaluation
 capability maps to `out_of_frame`; and an unusable subject or basis maps to
 `invalid_basis`. Preserve the finer diagnostic or original outcome and whether
@@ -339,7 +344,7 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `7d338fa95c66e997df73e1d19b4a02d361044d7c812b31154bd3d16c18f1e4d7`.
 
 ## Selector And Consumer Adoption
 
@@ -389,7 +394,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `7d338fa95c66e997df73e1d19b4a02d361044d7c812b31154bd3d16c18f1e4d7`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -414,7 +419,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e`.
 
 #### Explicit Complete Consumer Update
 
@@ -466,7 +471,7 @@ paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -476,7 +481,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-006 Authority Conservation
 
@@ -486,7 +491,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-012 Closed Results
 
@@ -494,15 +499,26 @@ Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An unclassified finer outcome is not
-silently treated as satisfaction.
+verdict for the declared predicate. An outcome lacking its required reason
+follows the core missing-reason rule.
 
 An activation attempt and the work it would authorize are different subjects.
-A refused activation records its own result with the failed admission
-predicate, cause and evidence; it does not fabricate a performed work result.
-Missing capability maps to `out_of_frame`, an unusable subject/basis to
-`invalid_basis`, an established admission prohibition to `falsified`, and
-unresolved admissible admission evidence to `indeterminate`. Successful
+A refused activation records its own result on “this frame may be activated
+for this actor, subject and basis”, with its cause and evidence. Established
+failure of an admission condition maps to `falsified`; unresolved admissibility
+maps to `indeterminate`. Capability, authority, basis and topology are the
+conditions being checked, not the admission check's own capability or basis.
+A declared ambiguity that prevents admission therefore falsifies admission;
+uncertainty about whether that ambiguity exists remains indeterminate. If the
+admission check itself lacks scope or a usable basis, its result follows the
+core diagnosis rule instead. Missing causes follow the core missing-reason rule.
+
+Where the plan requires the downstream work predicate, a separately established
+capability or basis diagnosis can report `out_of_frame` or `invalid_basis` on
+that predicate with its actual performance. Otherwise its slot stays absent
+with the observed performance fact. Neither case fabricates a Worker return,
+and an admission prohibition alone is no counterexample to downstream fitness.
+Successful
 activation satisfies admission only. The work remains `not_performed` until
 actually undertaken. Each result retains performance and known effect state.
 

@@ -242,8 +242,9 @@ environment: software and hardware, people and communication, or a mixed
 process, with the effects and resource costs material to its obligations. They are
 simultaneous descriptions, not successive SDLC stages.
 
-To assert a category, specify objects, typed arrows, identities and associative
-composition. To assert a functor, show identity and composition preservation.
+To assert a category, specify its domain, objects, typed arrows, arrow equality,
+identities and associative composition. To assert a functor, define its action
+on objects and arrows and show identity and composition preservation.
 For a proposed categorical model, A names the algorithmic account, I the
 interpreted informational account, and C_H the computational realization on a
 declared architecture H. They name categories only after the required objects,
@@ -252,6 +253,19 @@ conformance to Sigma_contract, semantic
 equivalence and computational equivalence remain different claims. Categorical
 equivalence additionally requires the appropriate quasi-inverse and natural
 isomorphisms on a stated domain; an analogy or matching result is insufficient.
+
+Each claimed refinement states and discharges what it preserves. Exact
+rewriting preserves meaning; approximation declares its adequacy relation and
+an end-to-end bound, since local tolerances alone do not compose. Each step uses
+laws valid for its declared subject; without additional laws only universally
+valid steps are licensed. Laws, records and maps claimed for the method are
+represented in a_c with premises, consequences and declared choices distinct.
+The calculus, its interpretation and its carriers retain separate identities.
+Classify the evidence for each claim as mechanically checked, mathematically
+argued, tested against an independently specified oracle or unresolved.
+Structural validation supplies no semantic proof. Claiming the method's
+categorical construction capability also requires a worked algorithm-to-
+computation join; an unproved categorical account remains a hypothesis.
 
 State sufficiency for a selected decision, statistical Markov properties,
 conditional independence, a mathematical Markov category and a runtime monad
@@ -481,7 +495,10 @@ Sequential composition records an unreturned dependent evaluation as an absent
 slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
-by union and the above verdict/effect operations are associative. An invalid
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
 arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone

@@ -56,7 +56,8 @@ and mixed work where the governing product or method permits them.
 The [foundations](FOUNDATIONS.md#bounded-construction) supply the finite-context
 and finite-attention premises. Given a task, relevant dependencies and a capable
 actor, they require a sufficient bounded acquisition rather than an assumed
-global context. RF-002 through RF-004 decide that acquisition; RF-013 and RF-014
+global context. RF-002 through RF-004 refine the core acquisition contract for
+frame activation; RF-013 and RF-014
 decide reconstructability and fit. Choosing a particular frame partition,
 evaluation protocol or actor arrangement remains a declared method choice.
 
@@ -435,15 +436,26 @@ Every evaluation returns the [core result](FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An unclassified finer outcome is not
-silently treated as satisfaction.
+verdict for the declared predicate. An outcome lacking its required reason
+follows the core missing-reason rule.
 
 An activation attempt and the work it would authorize are different subjects.
-A refused activation records its own result with the failed admission
-predicate, cause and evidence; it does not fabricate a performed work result.
-Missing capability maps to `out_of_frame`, an unusable subject/basis to
-`invalid_basis`, an established admission prohibition to `falsified`, and
-unresolved admissible admission evidence to `indeterminate`. Successful
+A refused activation records its own result on “this frame may be activated
+for this actor, subject and basis”, with its cause and evidence. Established
+failure of an admission condition maps to `falsified`; unresolved admissibility
+maps to `indeterminate`. Capability, authority, basis and topology are the
+conditions being checked, not the admission check's own capability or basis.
+A declared ambiguity that prevents admission therefore falsifies admission;
+uncertainty about whether that ambiguity exists remains indeterminate. If the
+admission check itself lacks scope or a usable basis, its result follows the
+core diagnosis rule instead. Missing causes follow the core missing-reason rule.
+
+Where the plan requires the downstream work predicate, a separately established
+capability or basis diagnosis can report `out_of_frame` or `invalid_basis` on
+that predicate with its actual performance. Otherwise its slot stays absent
+with the observed performance fact. Neither case fabricates a Worker return,
+and an admission prohibition alone is no counterexample to downstream fitness.
+Successful
 activation satisfies admission only. The work remains `not_performed` until
 actually undertaken. Each result retains performance and known effect state.
 
@@ -588,7 +600,7 @@ evaluate(activated_frame, admissible_evidence)
   -> result + evidence + residuals
 
 conjoin(decision_rule, frame_results)
-  -> decision | conflict | indeterminate
+  -> core_result + retained_conflicts + residuals
 
 translate(source_frame, target_frame, value_or_evidence, mapping)
   -> translated_value | declared_loss | refusal
@@ -655,9 +667,9 @@ Apply [workspace and context](FOUNDATIONS.md#workspace-and-context) before
 relying on a prior frame or summary. Reacquire changed material observations,
 reconcile stale beliefs, and retain only results whose validity conditions still
 hold. A fresh activation can continue from the current workspace after private
-context is discarded. Unknown effects withhold any dependent repetition until
-their owning observation resolves the uncertainty or an authorised recovery
-contract permits another action.
+context is discarded. Unknown effects use the core recovery condition in
+[Workspace and context](FOUNDATIONS.md#workspace-and-context). A grant to retry
+does not establish that repeating the effect is safe.
 
 When no available frame and actor pairing can lawfully perform the evaluation,
 activation returns a refusal or `out_of_frame` pressure. Work does not proceed
@@ -722,12 +734,14 @@ A declared decision rule consumes closed frame results through
 binding states:
 
 - which results are mandatory;
-- how conflict and indeterminacy are handled;
+- how conflicting or indeterminate contributions are routed for re-evaluation;
 - which basis relations must agree;
 - what decision authority owns the conjunction; and
 - whether any result may veto or defer the decision.
 
-Conjunction does not transfer the semantic authority of a contributing frame.
+The verdict is the core conjunction result; conflict annotates retained
+contradictory contributions and cannot downgrade an authenticated applicable
+falsification. Conjunction does not transfer the semantic authority of a contributing frame.
 The core rule retains both a known falsification and any uncovered required
 coverage. This consumer binds the mandatory claim set before aggregation and
 returns its coverage and residuals with the verdict. Counting agreeing frames

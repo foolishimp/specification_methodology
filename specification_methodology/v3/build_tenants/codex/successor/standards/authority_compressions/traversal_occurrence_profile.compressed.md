@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/traversal-occurrence-profile/v1
 source_ref: ../TRAVERSAL_OCCURRENCE_PROFILE.md
-source_digest: ee8371a08bb3ab27e9e105eb69b686e00f7f48e5c337f9a51068cc793775be8b
+source_digest: a37b0da9fad1f5560a1a0dbe5fcf58f9903dbaa1c692e8a2f7781bd08579182c
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform

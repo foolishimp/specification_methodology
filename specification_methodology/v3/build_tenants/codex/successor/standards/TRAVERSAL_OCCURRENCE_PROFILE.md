@@ -372,14 +372,29 @@ B_adopted   = exact Product-adoption basis relation named for that external kind
 | `J:*.evidence/provenance` | 0..* |  |  | `EvidenceOrProvenance` | `B_adopted` |
 | `J:*.decided_at` | 1 |  |  | `DecisionCoordinate` | `B_adopted` |
 
-The inherited `Judgment.verdict` and `Judgment.performance` use the shared
-closed values. `effects` reports shared effect-state observations over the
-boundary identified by the judgment's predicate, subject and existing
-evidence/provenance coordinates. It introduces no additional identity-bearing
-nested record or hidden reference domain. Resolved carriers must preserve those
-same relations. A historical checker bound to an older calculus schema checks
-that schema only; it cannot certify these successor Judgment relations by
-accepting an older record without them.
+The inherited AC-014 record shape, the reference-domain rows above and these
+value contracts close all nineteen Judgment fields. The following values are
+not identity references and therefore are not extra `RefDomain` rows:
+
+| Qualified field | Cardinality | Closed value contract |
+|---|---|---|
+| `J:*.id` | 1 | Exact scoped identity, unique in the model's disjoint local populations under AC-003. |
+| `J:*.subject_digest` | 1 | SHA-256 digest of the canonical unchanged subject named by `subject`. |
+| `J:*.verdict` | 1 | `satisfied`, `falsified`, `indeterminate`, `invalid_basis` in the profile's admitted constraint domain. An out-of-domain request returns core `out_of_frame` at the invocation boundary, not an in-domain judgment. |
+| `J:*.decision` | 1 | Exactly one value from the closed decision domain of the judgment's declared `kind`, with its required reason and mapping below. |
+| `J:*.performance` | 1 | `performed`, `not_performed`, `unconfirmed`; the core legal pairs and evidence conditions apply. Observed extent and interruption remain in the retained outcome/evidence. |
+| `J:*.effects` | 1 field; 1..* observations | Each selected-boundary observation is `not_requested`, `not_started`, `completed`, `partial`, `reverted` or `unknown` under the core effect law. Boundaries and material parts resolve through the existing predicate, subject, evidence and provenance coordinates. |
+
+No requested effects gives an explicit `not_requested` observation. A requested
+part without sufficient observation is `unknown`; an absent or empty field is
+not a default and fails this signature. Multiple stages affecting the same part
+are reconciled on the declared boundary before composition under
+[result conjunction](FOUNDATIONS.md#result-conjunction). Every material part
+remains recoverable through the existing evidence relations. These are semantic
+value contracts, not a new nested identity schema or a mandated carrier layout.
+Resolved carriers preserve them. A historical checker bound to an older
+calculus schema checks that schema only; it cannot certify these successor
+Judgment relations by accepting an older record without them.
 
 The inherited transformation's external-resolution coordinates are closed by
 the following finite expansion rather than hidden inside the three local-delta
@@ -761,7 +776,7 @@ The closed judgment domains are:
 | `occurrence_admission` | `Occurrence` | `admitted`, `hold`, `refused`, `invalid_basis` | exact occurrence id/digest and resolved pre-existing seed inputs | missing seed retains `hold` plus `unresolved_cause`; re-enter with a new complete occurrence candidate |
 | `event_admission` | `FrameworkEvent` | `admitted`, `hold`, `refused`, `invalid_basis`, `out_of_scope` | exact event id/digest, payload digest, scope authority, and source frontier | unresolved scope retains `hold` plus `unresolved_scope`; incompatible scope refuses |
 | `claim_admission` | `RelationClaim` | `admitted`, `hold`, `refused`, `invalid_basis` | exact claim id/digest, endpoints, qualifiers, claimant authority, and current source frontier | unresolved cause or stale frontier retains `hold`; re-enter with a new claim over the current frontier |
-| `semantic_cut_admission` | `SemanticAdmissionCut` | `admitted`, `hold`, `refused`, `invalid_basis` | exact seven-member cut and source/successor frontier equality | incomplete or inconsistent cut refuses; stale source frontier retains `hold` plus `stale_frontier` and requires reconstruction |
+| `semantic_cut_admission` | `SemanticAdmissionCut` | `admitted`, `hold`, `refused`, `invalid_basis` | exact seven-member cut and source/successor frontier equality | core conjunction decides; demonstrated membership or equality failure refuses; held or missing judgments alone do not fabricate a refusal; invalid required basis stays explicit; stale source frontier retains `hold` plus `stale_frontier` and requires reconstruction |
 | `effect_readiness` | `EffectSubject` | `ready`, `stale`, `unauthorized`, `hold`, `invalid_basis` | exact pre-observation, invocation, operation, grant, territory, and invalidation state | stale yields `hold` plus `stale_currentness` and re-observation; unauthorized yields `refusal` and no dispatch |
 | `transition_evaluation` | `TransitionSubject` | `satisfied`, `falsified`, `partial`, `indeterminate`, `refused`, `invalid_basis` | exact pre/post observations, intended outcome, disposition, and bounded effect evidence | partial yields `partial_effect`; indeterminate retains `hold` plus a declared residual; refused yields `refusal` |
 | `frontier_projection` | `Projection` | `admitted`, `hold`, `gap`, `refused`, `invalid_basis` | exact projection/frontier ids and digests, complete members, basis, precedence law, boundary, and residuals | stale frontier retains `hold` plus `stale_frontier`; unresolved lineage retains `gap`; re-enter with a new projection |
@@ -913,7 +928,24 @@ Each judgment has the complete inherited context, owner, scope, basis,
 evaluator, authority, predicate, verdict, decision, performance, effects,
 evidence, residuals, provenance, and decision-time
 fields. A missing cut judgment, non-`admitted` decision, wrong subject or
-digest, or cross-basis judgment refuses the semantic cut.
+digest, or cross-basis judgment leaves the semantic cut unadmitted; these
+conditions do not all establish the same verdict.
+
+Contribution authentication requires the exact subject, digest, declared basis
+and judgment authority. A mismatched contribution cannot decide the required
+slot; retain the missing admissible support rather than inventing its result.
+Within an interpretable cut, the required membership and equality relations
+below are material joins. An established failure of such a join is
+counterevidence to cut admission, not a missing governing basis.
+
+Apply core conjunction before mapping the composite result: `falsified` maps to
+`refused`, `invalid_basis` to `invalid_basis`, `indeterminate` to `hold`, and
+`satisfied` permits `admitted` only with all three exact admission decisions
+above. Thus an authenticated refusal survives a missing companion; a held or
+absent judgment alone does not fabricate a refusal; and an invalid required
+basis remains invalid when no applicable falsification decides the conjunction.
+An uninterpretable composite basis follows the core invalid-basis rule. A
+missing `j_a` remains an absent slot, not a newly invented held judgment.
 
 An admission event identity binds its event kind, payload digest, scope,
 optional occurrence, exact claim, claim judgment, source frontier, owner,
@@ -970,8 +1002,11 @@ its admission judgment, the event and its scope/admission judgment, the
 deterministic materialized relation, the exact source frontier, and the unique
 successor frontier. The source frontier named by the claim, event, and cut is
 identical. The successor equals that frontier plus exactly the admitted event.
-Missing, conflicting, or inconsistent members refuse the cut. This is semantic
-atomicity; the profile does not prescribe a storage or transaction mechanism.
+A demonstrated missing or inconsistent required member defeats the complete-cut
+predicate; missing judgment support keeps the cut unadmitted under the
+conjunction rule above. No unresolved or refused cut admits a subset. This is
+semantic atomicity; the profile does not prescribe a storage or transaction
+mechanism.
 
 ### OP-003 Correction Without Erasure
 
@@ -1066,7 +1101,8 @@ does not satisfy the grant.
 The disposition law is closed:
 
 - `no_effect` has no dispatched invocation and records that no domain effect
-  was attempted;
+  was attempted, whether no operation was requested or a requested operation
+  stopped before dispatch;
 - `completed_effect` binds one dispatched invocation, bounded post-observation,
   and sufficient effect evidence;
 - `partial_effect` binds one dispatched invocation, bounded post-observation,
@@ -1081,14 +1117,24 @@ The disposition law is closed:
 the later outcome without rewriting the invocation.
 
 The shared return conserves the effect observation, rather than mapping labels
-without evidence. `no_effect` with no requested operation is `not_requested`;
+without evidence. `no_effect` with no requested operation is `not_requested`.
+For a requested operation stopped before dispatch, `no_effect` is `not_started`
+only with authenticated non-dispatch evidence. Without that support the claimed
+disposition remains unadmitted and the requested effect is `unknown`.
 `refused_effect` with evidence that no mutation began is `not_started`;
 `completed_effect` with its required observation is `completed`.
-`partial_effect` retains the domain's incomplete-effect disposition: the core
-state is `partial` only when a completed part and an unexecuted remainder are
-both known; an uncertain remainder is `unknown`, even if some execution is
-observed. A dispatch followed by lost transport
-cannot become `no_effect`, `refused_effect` or `completed_effect`. Missing
+
+`partial_effect` retains the domain's incomplete-effect disposition and its
+re-entry requirement. At the declared core boundary, a completed part with a
+known unexecuted or reverted remainder is `partial`. If at least one part began
+and every begun part is observed reversed, the state is `reverted`, retaining
+the reversal and any unstarted remainder. Every material external part stays
+inside the boundary; a local rollback cannot conceal an irreversible message.
+Any uncertain material remainder makes the state `unknown`, retaining the
+observed parts. The original domain disposition and reason remain visible;
+these refinements add no effect-operation authority or new disposition kind.
+A dispatch followed by lost transport without resolving observation cannot
+become `no_effect`, `refused_effect` or `completed_effect`. Missing
 post-observation remains an explicit residual and prevents a complete profile
 disposition from being manufactured. Observation is required before any action
 that depends on whether that effect happened, including a repeat.

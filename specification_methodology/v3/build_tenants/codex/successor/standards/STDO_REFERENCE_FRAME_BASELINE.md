@@ -337,8 +337,9 @@ activations. Recursion follows declared evaluation dependencies and bounded
 refinements; it does not nest or join undifferentiated copies of every frame.
 The Executive acquires the portion of the durable frontier and closed results
 material to its current decision. If that decision does not fit, it refines the
-coordination question or obtains another bounded evaluation; it cannot drop a
-material dependency. Closed results retain source routes, blockers, uncertainty
+coordination question, obtains another bounded evaluation or returns the
+applicable stop retaining the unresolved obligation; it cannot drop a material
+dependency. Closed results retain source routes, blockers, uncertainty
 and invalidators so long-term coordination does not require each evaluator's
 private context. An omitted obligation remains open in the workspace.
 
@@ -501,17 +502,22 @@ Worker result.
 
 The work-result variants are finer domain outcomes, not another result algebra
 or STDO semantic dispositions. Every result carries the shared core record,
-the actual performance and effect state, and one exact predicate. The refined
+the actual performance and effect state, and one exact predicate: “the requested
+candidate and transition evidence are available on the activated basis within
+the admitted grant's declared bounds”. The bounds include a delivery time only
+where the grant requires it. A later delivery does not repair a missed bound
+on the original predicate; changed bounds identify a successor claim. The refined
 cases map as follows:
 
 | Original work outcome and cause | Predicate and evidence condition | Core verdict |
 |---|---|---|
-| `candidate_ready` | the exact requested candidate and transition evidence are available on the stated basis | `satisfied` |
+| `candidate_ready` | the bound availability predicate is established, including its declared bounds | `satisfied` |
 | `refused` | an established governing prohibition or owner-valid refusal defeats the requested construction claim after lawful activation | `falsified` |
 | `incomplete`, `undecided` | admissible evidence or unfinished bounded work cannot establish the declared construction claim | `indeterminate` |
 | `incomplete`, `postcondition_defeated` | an observed missing delivery, deadline or other required postcondition defeats that exact claim | `falsified` |
 | `re_entry_requested`, `outside_frame` | a material relation, decision or capability needed to establish the claim lies outside the activated frame | `out_of_frame` |
 | `re_entry_requested`, `basis_invalid` | the activated subject or basis cannot support the claim | `invalid_basis` |
+| any variant lacking its required cause | apply the core missing-reason rule; retain the raw outcome without inventing deciding support | `indeterminate` unless separately admissible evidence establishes the core diagnosis |
 
 The cause makes the mapping exclusive; a generic re-entry request without it
 is insufficient. `candidate_ready` establishes availability only, not fitness,

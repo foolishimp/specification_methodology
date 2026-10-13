@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result algebra
 
@@ -124,7 +124,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Result conjunction
 
@@ -216,7 +216,10 @@ Sequential composition records an unreturned dependent evaluation as an absent
 slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
-by union and the above verdict/effect operations are associative. An invalid
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
 arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
@@ -235,7 +238,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
+Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `69b7a67a0203b43756052f8ea0b45e6345cd11e3c5b550e0294ac9d0fb5ba782`.
 
 ## Configuration
 
@@ -263,7 +266,7 @@ authority and required independence. A claim that one arrangement is optimal nam
 objective, constraints, comparison scope and evidence.
 
 
-Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `85c6af1282e2c3d01fb6bb867dc5d9935a3b871386bf75e6d74818cfed7ae5aa`.
+Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `29cfd5515e3b74ec154a616392573da9399ec733a76f26f6733257d591d69c1e`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry
 
@@ -299,7 +302,7 @@ has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
 
-Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `85c6af1282e2c3d01fb6bb867dc5d9935a3b871386bf75e6d74818cfed7ae5aa`.
+Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `29cfd5515e3b74ec154a616392573da9399ec733a76f26f6733257d591d69c1e`.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
@@ -316,7 +319,7 @@ Do not confuse:
 - product-specific semantic law
 
 
-Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `45bcba7d8f514e0e1ebc5fdec7ed85f17617de9ae1f43861c233c6d9a8ca89fe`.
+Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `26f4ef4944d0e44b91fe093d04aa5ff0ea6cca25cbf93a4ad1cf626f800e2e58`.
 
 ## 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation
 
@@ -362,7 +365,8 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 Each replay assessment returns the shared
 [result record](../FOUNDATIONS.md#result-algebra) on the exact interaction-family
 predicate, preserving the original test outcome and observed command/effect
-trace. A demonstrated expected-state or command mismatch is `falsified`; a
+trace. A demonstrated expected-state or command mismatch, or a dependency on
+any source excluded by this replay contract, is `falsified`; a
 proof not run retains `not_performed` and cannot satisfy the predicate.
 Missing decisive trace is `indeterminate`; an unusable fixture or governing
 basis is `invalid_basis`; an interaction outside the declared assessment domain
@@ -374,7 +378,7 @@ the no-effect predicate only when that is the declared interaction contract.
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `a30c798e40ca30024d9eea629017bed28079fead4232e659d30f11b5045d5c4f`.
+Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `ea0e2faffb6dbfe6eb200b3407beeeae3b103c0972a63c4ee2190bb4006d95a4`.
 
 ## Theoretical Underpinnings Of The Markov Object
 
@@ -547,7 +551,7 @@ for all design work. The relation runs the other way:
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `a30c798e40ca30024d9eea629017bed28079fead4232e659d30f11b5045d5c4f`.
+Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `ea0e2faffb6dbfe6eb200b3407beeeae3b103c0972a63c4ee2190bb4006d95a4`.
 
 ### Markov Object
 
@@ -575,7 +579,7 @@ Object*. Discovery obligations in *Entity Cut Construction Law*.
 Representation-substrate obligations in *Markov Object Construction Law*.
 
 
-Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `a30c798e40ca30024d9eea629017bed28079fead4232e659d30f11b5045d5c4f`.
+Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `ea0e2faffb6dbfe6eb200b3407beeeae3b103c0972a63c4ee2190bb4006d95a4`.
 
 ## Proof Law
 
@@ -606,7 +610,7 @@ model.
 ---
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `ee8371a08bb3ab27e9e105eb69b686e00f7f48e5c337f9a51068cc793775be8b`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `a37b0da9fad1f5560a1a0dbe5fcf58f9903dbaa1c692e8a2f7781bd08579182c`.
 
 ### OP-004 Precedence Is Not Authority
 
@@ -616,7 +620,7 @@ The coordinate orders eligible facts; it does not gain semantic, admission,
 causal, or decision authority.
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `ee8371a08bb3ab27e9e105eb69b686e00f7f48e5c337f9a51068cc793775be8b`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `a37b0da9fad1f5560a1a0dbe5fcf58f9903dbaa1c692e8a2f7781bd08579182c`.
 
 ## Authority And Adoption
 
@@ -642,7 +646,7 @@ An absent or incomplete adoption means the profile is available but inactive
 for that Product.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-003 Material Sufficiency
 
@@ -655,7 +659,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -665,7 +669,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-006 Authority Conservation
 
@@ -675,7 +679,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87`.
 
 ### RF-012 Closed Results
 
@@ -683,15 +687,26 @@ Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An unclassified finer outcome is not
-silently treated as satisfaction.
+verdict for the declared predicate. An outcome lacking its required reason
+follows the core missing-reason rule.
 
 An activation attempt and the work it would authorize are different subjects.
-A refused activation records its own result with the failed admission
-predicate, cause and evidence; it does not fabricate a performed work result.
-Missing capability maps to `out_of_frame`, an unusable subject/basis to
-`invalid_basis`, an established admission prohibition to `falsified`, and
-unresolved admissible admission evidence to `indeterminate`. Successful
+A refused activation records its own result on “this frame may be activated
+for this actor, subject and basis”, with its cause and evidence. Established
+failure of an admission condition maps to `falsified`; unresolved admissibility
+maps to `indeterminate`. Capability, authority, basis and topology are the
+conditions being checked, not the admission check's own capability or basis.
+A declared ambiguity that prevents admission therefore falsifies admission;
+uncertainty about whether that ambiguity exists remains indeterminate. If the
+admission check itself lacks scope or a usable basis, its result follows the
+core diagnosis rule instead. Missing causes follow the core missing-reason rule.
+
+Where the plan requires the downstream work predicate, a separately established
+capability or basis diagnosis can report `out_of_frame` or `invalid_basis` on
+that predicate with its actual performance. Otherwise its slot stays absent
+with the observed performance fact. Neither case fabricates a Worker return,
+and an admission prohibition alone is no counterexample to downstream fitness.
+Successful
 activation satisfies admission only. The work remains `not_performed` until
 actually undertaken. Each result retains performance and known effect state.
 

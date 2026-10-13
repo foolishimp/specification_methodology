@@ -45,7 +45,7 @@ GTL and ABG roles select no concrete package and transfer no Product meaning.
 The consumers below return the shared [result record](FOUNDATIONS.md#result-algebra)
 and use [result conjunction](FOUNDATIONS.md#result-conjunction) for required
 obligations. Domain decisions retain their original outcome and exact predicate.
-The operations add no compulsory six-stage workflow or categorical-equivalence
+The operations add no compulsory six-stage workflow, runtime API or categorical-equivalence
 claim. The IntentLineage-to-NextActionProjection loop applies within a selected
 ODD scope.
 
@@ -317,11 +317,12 @@ solution strategy.
 The traversal return uses the shared
 [result record](FOUNDATIONS.md#result-algebra) for every compute means. An
 `F_D` success establishes only its declared decidable predicate; an `F_P`
-candidate establishes availability only until its fitness is assessed; an
+candidate establishes only availability; fitness and acceptance remain separate.
+An
 `F_H` decision records the exact mandate exercised rather than unlimited human
 authority. Each binding declares evidence, permitted stops, recovery and
-effect observations. The human, machine or mixed implementation can differ
-while these obligations remain the same.
+effect observations. The implementation follows the
+[Spec Method tenant binding](SPEC_METHOD.md#what-how-and-work-carriers).
 
 ### Graph Functions
 
@@ -1016,7 +1017,8 @@ Eval only affects traversal after its own L/E admission.
 
 Here `true` qualifies an admitted claim, not the existence of the workspace.
 L cannot overrule contrary current observations of W. Such an observation
-re-enters evidence admission and invalidates affected current claims; it is not
+enters evidence admission; once admitted, it invalidates affected current
+claims through the declared re-entry relation. It is not
 silently discarded because the earlier ledger is immutable. The immutable
 history remains an account of what was admitted at its stated basis.
 
@@ -1142,8 +1144,8 @@ AdmittedEvidence
 -> EdgeClosureDecision
 ```
 
-`evaluate_action` binds the exact target-obligation predicates and required
-evidence set before folding them with the shared
+`evaluate_action` consumes the admitted `TargetObligationBinding` and its required
+evidence set, fixed before the action, before folding them with the shared
 [result conjunction](FOUNDATIONS.md#result-conjunction). A known falsified
 obligation and its citations survive alongside a different unassessed
 obligation. Missing evidence, a worker that did not run and uncertain effects
@@ -1187,7 +1189,9 @@ sufficient to reproduce the decision.
 These are domain dispositions refining the shared
 [result algebra](FOUNDATIONS.md#result-algebra), not a competing verdict set.
 The `EdgeClosureDecision` result binds the predicate that this disposition was
-lawfully issued for this subject, current basis and mandate. A lawful decision
+lawfully issued for this subject, current basis and mandate. Satisfaction of
+that decision predicate requires its F_D/ABG/product admission; an unadmitted
+evaluator proposal supplies no admission fact. A lawful decision
 can be `satisfied` while the edge's fitness remains falsified or unresolved.
 The ledger retains the separate obligation assessments that justify that
 decision, with their predicates, performance, evidence and effects:
@@ -1195,14 +1199,16 @@ decision, with their predicates, performance, evidence and effects:
 - `close` requires `satisfied` for the complete declared edge-closure predicate;
 - a demonstrated obligation violation is `falsified` even when the disposition
   selects `repair`, `retry`, `re-enter`, `reprice`, `block` or `yield`;
-- an unproved closure predicate is `indeterminate`, with the pending work or
-  evidence kept, including a productive `yield`;
+- with no authenticated falsified obligation, an undecided closure predicate is
+  `indeterminate`, with pending work or evidence kept, including a productive
+  `yield`; otherwise core conjunction preserves the falsification;
 - an unusable basis is `invalid_basis`; a request outside the admitted action
   domain is `out_of_frame`;
 - an unperformed worker or evaluation retains `performance = not_performed`.
 
-If performance itself cannot be established, retain `unconfirmed` with an
-indeterminate predicate rather than asserting the worker did or did not run.
+If performance itself cannot be established, retain `unconfirmed` rather than
+asserting the worker did or did not run. The predicate follows the core legal
+pairs, including any independently established counterevidence or diagnosis.
 The decision's complete return preserves its original domain disposition and
 the ledger's assessment records. It cannot relabel an obligation failure as a
 successful product outcome. Each result therefore has one verdict on its own
@@ -1220,7 +1226,7 @@ preserves A9: yielding is not itself evidence of semantic failure.
 same edge or attempt remains lawful
 progress or waiting state is admitted
 resume basis is replay-visible
-control returns without failure classification
+the yield disposition adds no failure classification; retained assessments remain
 ```
 
 Yield is not retry. Yield is not block. Yield is not timeout. Yield is not a
@@ -1385,7 +1391,7 @@ service method output
 
 If any of those artifacts conflict with the admitted `EdgeFulfillmentLedger`,
 `EdgeClosureDecision`, or `NextActionProjection`, the ledger, decision, and
-projection chain owns the account of what was admitted. A contrary current
+projection chain governs admitted closure and next-action selection. A contrary current
 observation still triggers affected re-observation and evidence admission
 under A1; historical admission does not prove present conformance. If that
 chain is absent, the edge has not
