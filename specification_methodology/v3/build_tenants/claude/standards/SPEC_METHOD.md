@@ -124,8 +124,8 @@ defines the structural how, and ADRs are one durable form of that record
 boundary reduces the space of lawful interpretations and surfaces major
 ambiguity explicitly; detection is mandatory; blocking or escalation is
 policy under declared risk appetite, except for hard-stop prerequisite
-failures (§5). Products, applications, modules, functions, build
-tenants and runtime surfaces are implementations of the constitutional
+failures (§5; ACTIVATION §4). Products, applications, modules, functions,
+build tenants and runtime surfaces are implementations of the constitutional
 documents, not substitutes for them. Scenarios verify operational meaning
 where capability claims need end-to-end proof ([ASSURANCE §4](ASSURANCE.md#4-scenario-bundle)). Code realises
 decisions. Design is derivable from requirements, which are derivable from
@@ -167,22 +167,25 @@ derived from P0 and P6, with P0's open-world premise.
 | P1 independent; P2 independent; instance: layered surfaces, several realisations | A layer is sufficient when a competent actor can derive a conformant next layer from it. A failure to derive is a defect of the upper layer, and several conformant realisations may satisfy one layer; the generic law is [EVALUATION §6](EVALUATION.md#6-conformance-of-realisations), Layered sufficiency. A realisation choice that no upper layer constrains belongs to design. | [Reconstruction litmus](#reconstruction-litmus); [Spec-drivenness litmus](#spec-drivenness-litmus) items 1 to 5; [Specification surface rule](#specification-surface-rule); [Design rule](#design-rule); [Requirement categories and classification](#requirement-categories-and-classification), the category axis | the layers of the chain and their order, and the conventional surface names: domain choices of this member ([Constitutional chain](#constitutional-chain), [Process constitution](#process-constitution)); where each surface lives: the product definition ([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)) |
 | P3 independent; instance: layered surfaces, immutable releases | A live constitutional surface is versioned history. It changes by supersession or withdrawal, never in place; it states current truth in the present tense; a version label names an immutable release fact, not recency. | [Live surface immutability](#live-surface-immutability); [Specification surface rule](#specification-surface-rule); [§6](#6-lineage-and-release), the release version boundary; [Spec-drivenness litmus](#spec-drivenness-litmus) item 9 | the exact tag `v<version>-rc.<n>` and the selector tag `v<version>`: a domain choice of this member, with release mechanics at [RELEASE](RELEASE.md#2-release-identities) |
 | P2 independent; P5 derived; instance: layered surfaces | Use exposes conditions the current specification cannot express. A constitutional gap reprices the surface that cannot express it, or is carried as recorded, governed debt; an unanswered lifecycle phase is a recorded gap, never a silent absence. | [Renewal path](#renewal-path); [Operational lifecycle sufficiency](#operational-lifecycle-sufficiency); [Spec-drivenness litmus](#spec-drivenness-litmus) items 11 and 13 | the phases of the operational lifecycle and the `Gap:` and `Unanswered:` markers: domain choices of this member |
-| P2 independent; P6 independent; instance: owned layers | Product progress is judged against one selected outcome. Evidence evaluates the claim and never selects, enlarges or replaces the outcome. Growth authority comes from an admitted basis and ends with it. | [§3](#3-outcome-conservation) | one selected, directly verifiable outcome per work wave; the four kinds of evidence; admission recorded in the existing goals or ticket authority: policy choices of this member, with the carriers at [TICKETS](TICKETS.md) |
+| P2 independent; P6 independent; instance: owned layers | Product progress is judged against one selected outcome. Evidence evaluates the claim and never selects, enlarges or replaces the outcome. Growth authority comes from an admitted basis and ends with it. A regression or unresolved gap blocks further promotion only on the affected path. | [§3](#3-outcome-conservation) | one selected, directly verifiable outcome per work wave; the four kinds of evidence; admission recorded in the existing goals or ticket authority: policy choices of this member, with the carriers at [TICKETS](TICKETS.md); deletion, archival, quarantine and salvage mechanics: consumers |
 | P6 independent; P4b derived; P5 derived; instance: owned layers | A closure claim carries its authority trace, its realisation proof, negative proof where drift is plausible and the open pressure that remains. | [§9](#9-evidence); [Spec-drivenness litmus](#spec-drivenness-litmus) item 10 | none here: the rules of evidence are EVALUATION §1 to §3, §6 and §7, and ASSURANCE |
 | P3 independent; P6 independent; instance: immutable releases, several realisations | Lineage objects keep distinct identities. A reusable method change keeps one authority relation from its evidence to the consumer that realises it, and a consumer selects one complete released version. | [§6](#6-lineage-and-release); [Shared method adoption and propagation](#shared-method-adoption-and-propagation-stdo-up-012) | the eight-step adoption chain: a policy choice of this member; the lineage objects: [FOUNDATIONS §2](FOUNDATIONS.md#product-lineage-objects) |
 | P3 independent; P1 independent; instance: layered surfaces | The method's own terms resolve within a declared bounded context. | [Method identity](#method-identity) | the context identity and the reading of STDO as four pillars with their owning members: domain choices of this member |
 | P1 independent; P4a independent; P6 independent; instance: several realisations | Where a design profile governs a boundary, its semantic steps read as transforms over admitted truth with effects explicit at the edge, and a boundary that composes higher-order or effectful computation has an explicit composition and effect algebra. | [Realisation shape](#realisation-shape) | the "should" force of the core rule, its scope to boundaries the design profile governs, and the optional vocabulary: choices of this member, with the profile at [DESIGN_MODULE](DESIGN_MODULE.md) |
-| P2 independent; P1 independent; P6 independent; instance: several realisations | The same obligations may be realised by different means. The obligations decide fitness; the kind of executor alone neither accepts nor rejects a realisation. A person performing an operation does not thereby adjudicate, a convenient stack weakens no obligation, and structural validation of a representation is not execution conformance. | [§11](#11-build-tenant-binding), rules 1, 2, 4 and 6 | the division of a binding into requirements calculus, computational calculus and execution environment: a domain choice of this member; each tenant's calculus and environment: that tenant's design |
-| P6 independent; P4a independent; P0 recovered; instance: several realisations | A binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. A calculus may serve wherever its laws hold, whoever executes it. A project's mechanics for developing several tenants are that project's own law. | [§11](#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, and their units: each tenant's binding, as its obligations require; the development mechanics: the project's product definition or the tenant's design |
+| P2 independent; P1 independent; P6 independent; instance: several realisations | The same obligations may be realised by different means. The obligations decide fitness; the kind of executor alone neither accepts nor rejects a realisation. A person performing an operation does not thereby adjudicate, a convenient stack weakens no obligation, and structural validation of a representation is not execution conformance. A change that needs a weaker obligation is a change to the WHAT at its owning layer. | [§11](#11-build-tenant-binding), rules 1, 2, 4 and 6, and Application in this method | the division of a binding into requirements calculus, computational calculus and execution environment: a domain choice of this member; each tenant's calculus and environment: that tenant's design |
+| P0 recovered; P1 independent; P2 independent; P4a independent; P6 independent; P5 derived; instance: several realisations | A binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. A calculus may serve wherever its laws hold, whoever executes it. A project's mechanics for developing several tenants are that project's own law. | [§11](#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, and their units: each tenant's binding, as its obligations require; the development mechanics: the project's product definition or the tenant's design |
+| P1 independent; P0 recovered; P6 independent; instance: several realisations | The steps of a construction, what its data means and how it is carried out stay three separate accounts across the binding, and a binding that maps one account to another states what the mapping preserves and how that is established. | [§11](#11-build-tenant-binding), rule 7 | the three accounts of a construction: an added choice whose owner is the Intent of the Product that owns this corpus, in its Direction, defined at [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction) |
 
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
 The table accounts for §1 to §3, §6 and §9 to §11. §1 Canonical statement
 decides nothing of its own: each clause names its owning section. §8
 binds the step of ACTIVATION to this method's terms; its delivery
-priority is accounted for by family F5 at ACTIVATION §6, and its binding
-of the step by family F2 at ACTIVATION §1. §12 records dispositions and
-decides nothing.
+priority is accounted for by family F5 at ACTIVATION §6, and the rest of
+it by family F2 at ACTIVATION §1, whose paragraph after its table names
+the rows §8 applies and the families that trace its statement of the
+step's results and its use of the tenant's binding. §12 records
+dispositions and decides nothing.
 
 ### Constitutional chain
 
@@ -496,6 +499,23 @@ nothing live remains unclassified (P3; rc.2 #legacy-classification-rule):
 | Active | remains live constitutional law in the current surface | has an owning design decision; write or update one |
 | Orphaned | no longer part of the intended system | remove or explicitly supersede |
 
+The lifecycle statuses (Active, Deferred, Superseded, Orphaned), the
+categories and the legacy classifications are declared states of a
+requirement, not results, and map to no core value. So are the other
+declared classes of this member: the kinds of evidence of §3 (material
+advance, prerequisite readiness, preservation, regression), the old-path
+classes of §7 Required migration protocol, the implementation
+classifications `carry_across`, `redundant` and `rewrite` of §7
+Fundamental migration, and the ADR `Status:` values of §10. Each records
+a declared classification of its subject, not the answer to a predicate
+that an evaluation decides. An evaluation that reads them returns its own
+core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material
+relation: a declared state is never combined as an evaluation result, so
+a requirement marked Active, or evidence classed as material advance,
+cannot stand in for a `satisfied` result, and a requirement marked
+Deferred or Orphaned cannot stand in for a `falsified` one (P5, P1).
+
 ### Trace closure and anti-drift
 
 Spec-driven development requires constitutional trace closure: the rule
@@ -694,8 +714,9 @@ at one product; shared interfaces, a shared interface has several
 producers and consumers; reserved decisions, a decision may be taken
 under declared policy or be reserved to a human authority. Standing of
 the commitments cited (FOUNDATIONS §3): P0 recovered; P1, P2, P3, P4a and
-P6 independent; P4b derived from P0, P2 and the step-produced-facts
-premise; P5 derived from P0, the open-world premise and P6.
+P6 independent; P4b derived from P0 and P2, with P0's premise that
+step-produced facts are not re-acquirable; P5 derived from P0 and P6,
+with P0's open-world premise.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
@@ -1514,8 +1535,9 @@ consumer receives a step's return, is set by the configuration that
 task's operations, dependencies, actor capabilities and required
 assurance; this member adds no role inventory, coordinator or sequence. A
 step's return goes to the consumer the configuration declares. Where the
-configuration has a coordinator, the coordinator decides from the closed
-results of the task frames within its decision grant and selects the next
+configuration has a coordinator, the coordinator decides as
+[ACTIVATION §1 Configuration](ACTIVATION.md#configuration), Coordination
+across tasks, states, within its decision grant, and selects the next
 authorised action. The executive configuration, with its Executive,
 Worker and Reviewer frames, is one such configuration; the executive
 baseline profile owns it, and it governs where it is selected
@@ -1719,6 +1741,14 @@ Rules:
    neither selects an automated executor nor shows that the process meets
    its requirements; execution conformance needs its own evidence under
    rule 4 (P1, P6).
+7. Three accounts. The algorithmic, informational and computational
+   accounts of a construction, which
+   [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction)
+   defines, apply across the binding, from the requirements calculus
+   through the computational calculus to the execution environment. The
+   binding keeps the three accounts apart, and where it maps one account
+   to another it states what the mapping preserves and how that
+   preservation is established (P1, P0, P6).
 
 Application in this method. The relation governs realisation at four
 points. The Design rule (§2) places the choice of stack, human process or
@@ -1737,8 +1767,12 @@ review points and the merge rule, is that project's own law, bound in its
 product definition as local axioms
 ([PRODUCT_DEFINITION §6](PRODUCT_DEFINITION.md#6-local-constitutional-binding))
 or chosen in a tenant's design. This method prescribes none of these
-mechanics; the independence of each tenant's ticket lifecycle is
-[TICKETS §4](TICKETS.md#multi-build-tenant-independence) (P6, P0).
+mechanics. What it does prescribe for several tenants, the independence
+of each tenant's ticket lifecycle and the review of each tenant's
+tickets, is
+[TICKETS §4](TICKETS.md#multi-build-tenant-independence) and
+[§6 Multi-build-tenant review](TICKETS.md#multi-build-tenant-review)
+(P6, P0).
 
 Purpose and material relation: the same obligations can be realised by
 different means, software, people or both. The tenant owns its choice of
@@ -1747,13 +1781,13 @@ particular stack never becomes method machinery and a human or mixed
 process needs no parallel method. The material relation is whether the
 kind of executor, a person's participation, a tool's convenience or a
 structural validation can change what satisfies an obligation, or grant
-authority (P2, P1, P6). Three determinations conserve the predecessor's
-constitutional chain (rc.2 #constitutional-chain), stated before in §2:
-one WHAT realised by one or more independent tenants whatever the layout,
-tenant-local realisation derivative until ratified (rule 1), and
-conformance of a tenant judged under EVALUATION §6 without identical
-behaviour outside the contract (rule 4). The rest of this section is new
-in this corpus.
+authority (P2, P1, P6). Two determinations conserve the predecessor's
+constitutional chain (rc.2 #constitutional-chain): one WHAT realised by
+one or more independent tenants whatever the layout, and tenant-local
+realisation derivative until ratified (rule 1). Rule 4 applies by
+reference the law of EVALUATION §6 that conforming tenants need not
+behave identically outside the contract, which is new in that member.
+The rest of this section is new in this corpus.
 
 ## 12. Source dispositions
 
@@ -1797,7 +1831,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #manifesto | conserved | §2 Manifesto |
 | #spec-drivenness-litmus | conserved | §2 Spec-drivenness litmus |
 | #process-constitution | conserved; the definition overlay's binding is PRODUCT_DEFINITION §1; the `how.build_tenants` entries are written "tenant registry entries" | §1 Process constitution |
-| #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout, derivative tenant-local realisation and tenant conformance under EVALUATION §6 are restated in §11 rules 1 and 4, to which §2 refers | §2 Constitutional chain; §11 |
+| #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout and derivative tenant-local realisation are restated in §11 rule 1, to which §2 refers; §11 rule 4 applies by reference the law of EVALUATION §6 that conforming tenants need not behave identically outside the contract, which is new in that member and has no rc.2 clause | §2 Constitutional chain; §11 |
 | #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
 | #ambiguity-governance-rule | conserved; the four outcomes are named with the values of ACTIVATION §3, which maps them into the core ("carried forward" is `carried`); the hard stops ACTIVATION §4; build-tenant or stack choice is the binding of §11; new, applying §11 rule 2: the admission makes an operation human adjudication, and a person who decides under policy without it acts under the policy that governs lawful probabilistic processing, whose definition is unchanged | §5 |
 | #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value | §2 Operational lifecycle sufficiency |
@@ -1842,8 +1876,8 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #live-surface-immutability | conserved | §2 Live surface immutability |
 | #fundamental-migration-rule | conserved | §7 Fundamental migration |
 | #transformation-wave-rule | conserved | §7 Transformation wave |
-| #legacy-classification-rule | conserved | §2 Requirement categories and classification |
-| #requirement-classification-rules | conserved | §2 Requirement categories and classification |
+| #legacy-classification-rule | conserved; the legacy classifications are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §2 Requirement categories and classification |
+| #requirement-classification-rules | conserved; the lifecycle statuses and the categories are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §2 Requirement categories and classification |
 | #specification-surface-rule | conserved | §2 Specification surface rule |
 | #method | conserved; the four procedures in full | §4 Procedures |
 | #adr-conventions | conserved | §10 |
@@ -1868,11 +1902,16 @@ AXIOMATIC_CALCULUS §7; POSTING_GUIDE's other rows at
 received here (§6, the table's last row).
 
 New law with no predecessor row, each stating its purpose and material
-relation where it is written: §11 Build-tenant binding, except the three
-determinations it conserves from #constitutional-chain; the statement in
-§4 that the computed walk's values are facts, not results; the statement
-in §2 Operational lifecycle sufficiency that its phase states and markers
-are declared states, not results; and the §5 sentences on what makes an
+relation where it is written: §11 Build-tenant binding, except the two
+determinations it conserves from #constitutional-chain, with its rule 7
+applying the three accounts of a construction that FOUNDATIONS §2
+defines; the statement in §4 that the computed walk's values are facts,
+not results; the statement in §2 Operational lifecycle sufficiency that
+its phase states and markers are declared states, not results; the
+statement in §2 Requirement categories and classification that the
+requirement statuses, categories and legacy classifications, and the
+declared classes of §3, §7 and §10 it names, are declared states, not
+results; and the §5 sentences on what makes an
 operation human adjudication, which apply §11 rule 2 and take its
 purpose. The two family tables at §2 and §4 decide nothing beyond the
 rules they cite;

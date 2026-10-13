@@ -508,6 +508,17 @@ The minimum ticket status model is `backlog`, `active` and `completed`. A
 project may add `blocked`, `cancelled` or other explicit local states; the
 base method starts with the three (P5, P3; rc.2 #allowed-status).
 
+The ticket statuses, any local state a project adds, the lanes below, the
+sprint statuses of §3 and the `migration_strategy` and `library_usage`
+values of §6 are declared states of their carriers, not results, and map
+to no core value. The close classifications and debt-entry outcomes of §3
+Close review are results, mapped there. An evaluation that reads a
+declared state returns its own core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material
+relation: a declared state is never combined as an evaluation result, so
+a ticket marked `completed`, or a sprint marked `closed`, cannot stand in
+for a `satisfied` result (P5, P1).
+
 ### Lanes
 
 Backlog tickets live at the product definition's
@@ -1084,6 +1095,25 @@ delta needed to decide it, with the original ruling preserved separately.
 A general instruction to continue does not accept an undisclosed
 architectural or scope change (P4b, P6, P2).
 
+The four repricing dispositions are recorded states of the obligation,
+set by its owning authority; they are not results and map to no core
+value. Each records the standing the obligation keeps after repricing,
+as the lifecycle statuses of
+[SPEC_METHOD §2](SPEC_METHOD.md#requirement-categories-and-classification)
+record a requirement's, and answers no predicate that an evaluation
+decides on evidence. They differ from the disposition of an assessed
+candidate ([ACTIVATION §3 Disposition](ACTIVATION.md#disposition)), which
+is the acceptance result that FOUNDATIONS §4 Results places in the core,
+because a repricing disposition accepts no candidate; and from the
+disposition of a predecessor claim
+([RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)),
+which is a claim that qualification evaluates. An evaluation that reads
+them returns its own core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material
+relation: a recorded disposition is never combined as an evaluation
+result, so a retained obligation is never read as satisfied, and a
+superseded, deferred or withdrawn one never as discharged (P5, P1, P6).
+
 ### Condition-based closure and reuse
 
 A work claim is complete only when every applicable declared obligation is
@@ -1404,7 +1434,7 @@ are carried verbatim, including their American spellings and the word
 | #work-carrier-to-execution-rule | conserved; the table, the carrier rules and the obligation-retention order here; the step-side admission relation is ACTIVATION §1, defined once there | §5 Carrier selection; ACTIVATION §1 Admission |
 | #execution-contract-admission | conserved; logging and availability here; the states and self-certification rule at ACTIVATION §1; basis admission at SPEC_METHOD §3 | §5 Execution contract admission; ACTIVATION §1 Admission; SPEC_METHOD §3 |
 | #execution-and-verification-authority-separation-stdo-up-007 | conserved; the generic assessment protocol is EVALUATION §3 | §7 Execution and verification authority separation (UP-007) |
-| #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7 | §7 Recorded judgment and owner-ruling continuity |
+| #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7; the four repricing dispositions of an obligation are stated as recorded states that map to no core value (new, with its purpose stated where it is written) | §7 Recorded judgment and owner-ruling continuity |
 | #bounded-context-term-binding | conserved; the resolution law is PRODUCT_DEFINITION §5 | §5 Bounded-context term binding |
 | #evaluation-criteria-and-non-closure-conditions | conserved | §5 Evaluation criteria and non-closure conditions |
 | #condition-based-closure-and-reuse | conserved; one term generalised (above); the closure condition is named as the conjunction of FOUNDATIONS §4 Conjunction of results, with the declared obligations as required coverage | §7 Condition-based closure and reuse |
@@ -1417,7 +1447,7 @@ are carried verbatim, including their American spellings and the word
 | #impacted-interface-review-checklist | conserved | §6 Impacted interface review checklist |
 | #required-break-order-and-break-to-closure-map | conserved | §6 Break order and break-to-closure map |
 | #mixed-state-negative-proof | conserved; one term generalised (above) | §6 Mixed-state negative proof |
-| #allowed-status | conserved | §4 Status |
+| #allowed-status | conserved; the ticket statuses, with the sprint statuses, the lanes and the migration declaration values, are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §4 Status |
 | #ticket-lanes | conserved | §4 Lanes |
 | #one-truth-state-projection-and-drift-refusal-stdo-up-009 | conserved | §7 One-truth state projection and drift refusal (UP-009) |
 | #recommended-ticket-shape | conserved; the three shapes carried verbatim | §8 |
@@ -1426,6 +1456,11 @@ are carried verbatim, including their American spellings and the word
 | #future-extensions | conserved; the listed growths and the default-carrier and substitution law | §2 Carrier substitution |
 
 New law with no predecessor row: the family table at §5, which decides
-nothing beyond the rules it cites;
+nothing beyond the rules it cites; the statement in §4 Status that the
+ticket and sprint statuses, the lanes and the migration declaration
+values are declared states, not results; and the statement in §7
+Recorded judgment and owner-ruling continuity that the four repricing
+dispositions of an obligation are recorded states, not results. Each
+statement states its purpose and material relation where it is written.
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns
-its format and the standing of its consequences.
+the table's format and the standing of its consequences.

@@ -65,6 +65,20 @@ standing of the consequences below is stated in
 | P4a (independent), P1 (independent), P6 (independent); instance premise b | A refinement or rewrite step is admissible only under a law declared for its subject, and each layer discharges what it preserves; a refinement is faithful only when its steps are exact and each output meets the next step's declared domain; a composite with an approximate step is adequate only within its stated adequacy relation and end-to-end bound | [Refinement](#refinement) | the laws declared for a subject: the subject's owner |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P3 (independent), P6 (independent); instance premise d | Admission of a material transition derives and validates the complete enclosing relation on one basis identity and commits all of it or none; qualification covers every admission owner and supported boundary | [Complete enclosing-relation admission](#complete-enclosing-relation-admission); [Standing structural qualification](#standing-structural-qualification) | the supported boundaries and the operating or threat model: the accepted design |
 
+[SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method),
+outside this member, binds the step to that member's terms and applies
+these rows, except its delivery priority, which family F5 traces at §6.
+Its execution relation applies the second and fourth rows; its binding of
+the selected outcome to the product outcome, and of the owning relations
+and re-entry conditions to the chain's layers and change classes, applies
+the first and sixth rows; and its rule that the configuration sets the
+frames for construction, assessment and disposition, the consumer of a
+step's return and any coordinator applies the fourth row. Two of its
+statements apply other sections: the step's results in the core apply
+§3, which family F3 traces, and the computational relations, actors and
+resource limits of the tenant's binding apply SPEC_METHOD §11, which
+family F10 traces. SPEC_METHOD §8 keeps its owner.
+
 ### Transitions
 
 Construction moves work from a current state towards a destination
@@ -758,7 +772,7 @@ the exact basis" (P5, P6):
 
 | Outcome | Core value | Ground |
 |---|---|---|
-| `resolved` | satisfied | a decision was taken by lawful probabilistic processing or by human adjudication, as policy permits, and recorded |
+| `resolved` | satisfied | a decision was taken under the policy that permits lawful probabilistic processing, or by human adjudication, and recorded |
 | `carried` | falsified | policy permits work to continue with the ambiguity open; the open ambiguity is the counterexample, and it stays a recorded residual that names the evidence or decision that would resolve it |
 | `escalated` | out_of_frame | policy or risk appetite reserves the decision to human adjudication, an authority the step does not hold; the value names that authority |
 | `blocked` | falsified | the ambiguity stays unresolved, and policy or a hard stop (§4) halts work at it; the open ambiguity is the counterexample, and the value names the halting condition and what would lift it |

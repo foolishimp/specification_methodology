@@ -14,8 +14,11 @@ residual, imports between members, results),
 [REFERENCE_FRAME](REFERENCE_FRAME.md) (frame set, frame-set declaration,
 activation packet), [ACTIVATION](ACTIVATION.md) (the step) and
 [EVALUATION](EVALUATION.md) (claims, separation, conformance); adds no
-definition to tier 1. The generic WHAT and HOW law and the recursive
-product taxonomy are [SPEC_METHOD §2 and §6](SPEC_METHOD.md); the relation
+definition to tier 1. The generic WHAT and HOW law is
+[SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain); the recursive product
+taxonomy is
+[FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects),
+which SPEC_METHOD §6 applies; the relation
 between a WHAT and the build tenants that realise it is
 [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding); release identities, cohorts and selectors are the
 release law (the [RELEASE](RELEASE.md) member); assurance and testing law is
@@ -390,6 +393,67 @@ across independent filesystem paths: abrupt process or host loss, or
 unavailable rollback storage, requires recovery from the presented
 preimages before the complete relation can be claimed (P5, P4b).
 
+Outcomes as results. The outcomes of the manager's operations in §4,
+its refusals, its reported completion and the recovery that
+loss requires, are stated in the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) through the refinements
+of [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition), each
+for its own predicate; the cause of an outcome selects its value, and the
+mapping adds no core value (P5, P6):
+
+- Effect. An operation that writes, such as `install`, `sync`, a mutating
+  `adopt`, fleet adoption or the complete consumer update, has an
+  intended external effect, recorded under
+  [ACTIVATION §3 Effects](ACTIVATION.md#effects) for the predicate "the
+  intended effect occurred". Reported completion is `completed`
+  (`satisfied`) only where evidence about the subject establishes the
+  effect in full, as the complete update's verification of every
+  selected resulting binding and companion does. A refusal before any
+  effect, with the retained prior state as the evidence about the
+  subject, and a caught application failure whose restored preimages are
+  verified, are `not_effected` (`falsified`); newly staged immutable
+  installs left unused are named with the value as the part that did
+  occur. Abrupt process or host loss, unavailable rollback storage, or a
+  restoration not verified is `completion_unknown` (`indeterminate`),
+  never `completed` or `not_effected`; recovery from the presented
+  preimages reconciles it, as
+  [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) states, before
+  any repetition or claim of the complete relation.
+- Refusal. A refusal also answers whether the operation may apply its
+  effect on the exact subject and basis it binds. Found before the
+  operation begins, it is an outcome of
+  [ACTIVATION §3 Admission and activation](ACTIVATION.md#admission-and-activation),
+  for "the step is lawfully admitted and activated on the exact subject
+  and basis"; found after it has begun, as by the recheck after immutable
+  staging, it is a value of
+  [construction availability](ACTIVATION.md#construction-availability),
+  for "a candidate is available". A missing explicit acceptance of the
+  exact plan, or missing whole-selection authorisation of a fleet write,
+  is missing operation authority: `admission_refused(authority)`
+  (`out_of_frame`), naming the acceptance or authorisation needed and
+  its owner. Every other refusal has a basis cause: drift of the Product
+  Definition bytes or of a consumer preimage; a stale plan; each other
+  condition of the fail-closed list above, ambiguous discovery included
+  because it leaves no exact subject; a path, locator or marker span that
+  escapes or breaks its boundary; and missing, ambiguous, changed or
+  unavailable derived-context evidence, which holds the complete update.
+  It is `admission_refused(basis)` before the operation begins and
+  `re_entry_requested(basis)` after, `invalid_basis` in both, and names
+  the basis coordinate that fails and, for derived-context evidence, the
+  source owner whose re-entry repairs it.
+- Command without an intended effect. A command without an intended
+  external effect, such as `verify` or `adopt --dry-run`, has no value
+  under Effects, and its refusal maps by cause as above. A condition it
+  reports about the subject it evaluates, such as a member that `verify`
+  finds missing, extra or changed, is a counterexample to that command's
+  own predicate, `falsified`, not a refusal.
+
+Purpose and material relation: a consumer that combines the manager's
+outcomes with other results cannot read a refused or failed operation as
+completed, an operation of unknown completion as either completed or not
+effected, or a refusal for missing acceptance as one for a defective
+basis (P5, P6). This mapping is new in this corpus.
+
 ## 5. Bounded-context semantic resolution
 
 This member owns this law in the semantic-resolution bounded context,
@@ -447,8 +511,10 @@ familiarity, frequency, recency, nominal match or a context-free glossary
 fallback (P5, P1). For an evaluation that depends on such an occurrence,
 the definition, import or disambiguation that would select one concept is
 a material relation its frame does not declare: the evaluation returns
-`out_of_frame` and names that relation and its owner, as
-[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or
+`out_of_frame` and names that relation and its owner, or returns
+`indeterminate` where the admissible evidence also cannot decide the
+claim and so gives that ground too, and in either case names the ground,
+as [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or
 indeterminate, states (P5, P1).
 
 The glossary (the [GLOSSARY](GLOSSARY.md) member) is a non-deciding locator index. Each
@@ -490,7 +556,7 @@ Each kind reads in the owner's terms once (P1, P6):
 |---|---|
 | Semantic Import | an import, applied for its declared target scope; its unchanged meaning, direction, loss and lack of authority are those FOUNDATIONS §2 states |
 | Semantic Translation | not an import, because it declares how meaning changes in one direction; its carrier states the coordinates an import declaration states (the concept, its owner, the source and target contexts and the direction) and declares the changed meaning and the loss. A specialisation (below) is a translation |
-| Semantic Equivalence | not an import: each concept keeps its own owner and context, and neither adopts the other's meaning. The governing authorities establish the claimed equality; neither identical spelling nor two opposing translations proves it automatically |
+| Semantic Equivalence | not an import: each concept keeps its own owner and context, and neither adopts the other's meaning. It requires the governing authorities to establish the claimed equality; neither identical spelling nor two opposing translations proves it automatically |
 | Semantic Disambiguation | not an import: it selects one meaning for one scope and does not make competing concepts equal. Where the selected concept is owned in another bounded context, it enters that scope only by the import, translation or equivalence its carrier declares (§6) |
 
 No relation widens its source or target authority; for an import,
@@ -994,9 +1060,9 @@ disposition, and is recorded in the row.
 | #stdo-product-definition-overlay-and-layout-independence | conserved; the owner of the product-definition-routing bounded context is this member rather than SPEC_METHOD; `IDENTITY_METHOD.md` is carried as the [IDENTITY](IDENTITY.md) member; the family table under Foundation to law is new | §1 |
 | #required-definition-relations | conserved | §2 |
 | #constitutional-set-sufficiency | conserved; "the accepted Design Module Method Ontology" is carried as the design profile's accepted design ontology of a realisation boundary, losing no determination | §3 |
-| #shared-installed-release-basis-and-toolchain-manager | conserved in full: the basis pair, the manifest binding, the Adoption and Fleet Adoption Plans, the hashing rule, the seven manager functions, the store and registry law, the physical-entry rule, the selector and basis fields, the six command boundaries, the fail-closed list, the schema-locator rule, the agent bootstrap marker law and the exact prune list; `RELEASE_METHOD.md` as owner of the selector's alias semantics is carried as the [RELEASE](RELEASE.md) member | §4 |
-| #explicit-complete-consumer-update | conserved in full | §4 Explicit complete consumer update |
-| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the [GLOSSARY](GLOSSARY.md) member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined; Semantic Import is the import of FOUNDATIONS §2 Imports between members, which states the unchanged-meaning import once, applied here between a project's bounded contexts for a declared target scope; the mapping of translation, equivalence and disambiguation to that rule's terms is new, and the `out_of_frame` result of an evaluation that depends on unresolved or ambiguous meaning applies FOUNDATIONS §4 Results | §5; [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members) |
+| #shared-installed-release-basis-and-toolchain-manager | conserved in full: the basis pair, the manifest binding, the Adoption and Fleet Adoption Plans, the hashing rule, the seven manager functions, the store and registry law, the physical-entry rule, the selector and basis fields, the six command boundaries, the fail-closed list, the schema-locator rule, the agent bootstrap marker law and the exact prune list; `RELEASE_METHOD.md` as owner of the selector's alias semantics is carried as the [RELEASE](RELEASE.md) member; new: the drift refusal and the fail-closed list are mapped into the core by cause through ACTIVATION §3, at the end of §4 Explicit complete consumer update | §4 |
+| #explicit-complete-consumer-update | conserved in full; new: reported completion, refusal before consumer effects, a caught application failure, abrupt loss or unavailable rollback, and the holds on derived-context evidence are mapped into the core through ACTIVATION §3 Effects and the step refinements of ACTIVATION §3, value by value, at the end of the subsection | §4 Explicit complete consumer update |
+| #bounded-context-semantic-resolution | conserved; the owner of the semantic-resolution bounded context is this member; `GLOSSARY_GUIDE.md` is carried as the [GLOSSARY](GLOSSARY.md) member; the relation kinds are related to AC-012 (AXIOMATIC_CALCULUS §4) without being redefined; Semantic Import is the import of FOUNDATIONS §2 Imports between members, which states the unchanged-meaning import once, applied here between a project's bounded contexts for a declared target scope; the mapping of translation, equivalence and disambiguation to that rule's terms is new, and the result of an evaluation that depends on unresolved or ambiguous meaning, `out_of_frame`, or `indeterminate` where FOUNDATIONS §4 Results gives that ground too, with the ground named, applies FOUNDATIONS §4 Results | §5; [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members) |
 | #local-constitutional-binding | conserved | §6 |
 | #collective-reference-frame-basis | conserved; `REFERENCE_FRAME_METHOD.md` is carried as REFERENCE_FRAME and `STDO_REFERENCE_FRAME_BASELINE.md` as the Executive baseline profile member; the activation packet and the step are pointed to REFERENCE_FRAME §11 and ACTIVATION §1, which define them; "that execution binding" is written "an Agent Frame Activation", the term the same paragraph defines, because SPEC_METHOD §11 gives "execution binding" another meaning | §7 |
 | #what-how-and-work-carriers | conserved; the owner of the build-tenancy bounded context is this member; the build tenant and the relation by which one WHAT is realised by one or more independent tenants are restated in SPEC_METHOD §11, its terms and rule 1, to which §8 refers as concepts of this context owned there; build tenancy, its singleton case, multi-build-tenancy, the registry, the common surface and the carrier bindings here; the generic WHAT/HOW law is SPEC_METHOD §2 and carrier selection is SPEC_METHOD §4 and [TICKETS](TICKETS.md), neither restated here | §8; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) |
@@ -1006,6 +1072,9 @@ disposition, and is recorded in the row.
 | #bootstrap-rule | conserved in full: the scaffold bindings, the authority split, the singular-authority rule, the folder shape, the requirement sources and the fourteen-step sequence; the predecessor's own mutable source path `specification_methodology/specification/standards/` is generalised to the method's source workspace, since this line's source path differs and the law does not depend on it | §12 |
 
 New law with no predecessor row: the family table at §1, which decides
-nothing beyond the rules it cites;
+nothing beyond the rules it cites; and the mapping of the toolchain
+manager's operation outcomes into the core through ACTIVATION §3, at the
+end of §4 Explicit complete consumer update, which states its purpose and
+material relation there.
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns
-its format and the standing of its consequences.
+the table's format and the standing of its consequences.

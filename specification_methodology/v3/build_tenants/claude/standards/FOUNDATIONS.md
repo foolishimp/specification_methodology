@@ -1,8 +1,8 @@
 # FOUNDATIONS
 
 Tier 1. Owns the vocabulary of standing (§1); the ontology, with the frame,
-authority, lineage and work-boundary objects, and the rule for imports
-between members (§2); the commitments P0 to P6 with their standing, the
+authority, lineage and work-boundary objects, the three accounts of a
+construction, and the rule for imports between members (§2); the commitments P0 to P6 with their standing, the
 foundation-to-law format with the standing of its consequences, and the
 index of material families (§3); the algebra of composition and
 conservation, the core result algebra, the conjunction of results and the
@@ -240,6 +240,30 @@ or domain implementation owns the internal HOW inside that boundary unless
 the product explicitly promotes part of that HOW into reusable declared
 structure. The step of ACTIVATION §1 is this unit with its intake, context
 and result algebra made exact.
+
+### Accounts of a construction
+
+A construction is the realisation of a selected outer contract through
+steps, as P0 states it (§3). Three accounts of a construction stay
+distinct (P1, P0):
+
+- the algorithmic description: the steps;
+- the informational interpretation: what the data means, given under an
+  Interpretation (the ontology table above);
+- the computational realisation: how people, machines or combinations of
+  them carry it out in a declared execution environment; for a build
+  tenant that environment is the one
+  [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) defines.
+
+The distinction is kept for any construction and is independent of the
+tiers of this corpus: a construction may need all three accounts, and no
+account is a tier (P1). The distinction is an added choice in the sense
+of §3 Foundation to law, not a commitment, and has none of the standings
+of §1; its owner is the Intent of the Product that owns this corpus, in
+its Direction. Purpose and material relation: the steps, the meaning of
+the data and the means of execution can each change while the others
+hold, so a claim about one account is never taken for a claim about
+another (P1, P6).
 
 ### Imports between members
 
@@ -540,7 +564,9 @@ Members and sections with no family table, each with its reason:
   vocabulary of standing, the objects the commitments are about, and the
   commitments themselves with this format, which every family table cites
   as its premises. §2 Work boundary is the object that P0's boundary
-  commitment states. FOUNDATIONS §5: its hypotheses are not law and decide
+  commitment states. §2 Accounts of a construction states a distinction
+  and decides no outcome of its own; family F10 traces its use at
+  SPEC_METHOD §11. FOUNDATIONS §5: its hypotheses are not law and decide
   no outcome.
 - PROFILES: §1 owns the import rule that every profile table cites in its
   premise column; §2 to §6 index the profiles, whose own tables trace
@@ -968,10 +994,11 @@ New law with no predecessor row, each part stating its purpose and
 material relation where it stands: the opening paragraph of §3 and the
 standing column of its table; §3 Foundation to law, with the family table
 format, instance premises, the standing of the consequences and the index
-of families; the family F3 table at the end of §4 Results; and, in §4
+of families; the family F3 table at the end of §4 Results; in §4
 Formal fragment, arrow equality, associativity, the representation in a_c
 and the evidence class, which the AC Traversals And Functor Kinds row
-above names.
+above names; and §2 Accounts of a construction, an added choice whose
+owner is the Intent of the Product that owns this corpus.
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):
