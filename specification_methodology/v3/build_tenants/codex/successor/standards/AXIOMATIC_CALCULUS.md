@@ -909,6 +909,14 @@ inside that predecessor cut, and is retained without a hard-coded member count.
 The set is recomputed when the derivation account changes. It cannot depend on
 the publication carrier or calculus-basis identity being created.
 
+The exact historical addresses and byte predicates can resolve through
+successor-owned [derivation verification material](IDENTITY_METHOD.md#derivation-verification-material).
+Its immutable publication membership binds the evidence; its reconstructed
+historical bytes bind the original predecessor manifest and fragments. This
+resolution keeps the derivation record and its identity unchanged and requires
+no predecessor installation or remote retrieval. Evidence does not make the
+historical clauses operative for a successor consumer.
+
 `publication_basis` binds the distinct immutable successor carrier and this
 standard's exact bytes. Its member URI resolves inside its release URI. The
 record is external because this standard cannot contain its own final byte

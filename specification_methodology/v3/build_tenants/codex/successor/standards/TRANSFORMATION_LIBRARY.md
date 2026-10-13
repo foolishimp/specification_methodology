@@ -117,7 +117,29 @@ The [ordinary work entry](../plugins/spec/skills/stdo-work/SKILL.md#acquire-the-
 locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
+## Transformation-admission specialization
+
+This instance assumes a consequential entity transition, an identified current
+predecessor, a declared candidate family, a durable commit boundary and actual
+admission authority. These domain choices supplement F1–F6; the foundational
+commitments do not choose an admission predicate, quorum or supported topology.
+
+| Premises | Conditional consequence | Particular deciding owner and policy |
+|---|---|---|
+| F2, F3; current entity and predecessor are material | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
+| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants; the domain declares material seams and proves far-side independence where claimed. |
+| F6; proposal, judgment and durable admission are distinct | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
+| F2, F5; supported forms or commit effects are unresolved | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
+
+The [design admission consumer](DESIGN_MODULE_METHOD.md#admission-contract-use)
+binds this contract to its transition relation and uses the consequences to
+distinguish valid support from a shape-correct candidate lacking material basis
+or authority. Its predicate, result algebra, commit-unit decomposition and
+permitted direct/composite/nested forms remain domain policy. This argument
+neither derives those choices nor creates an additional validation pass.
+
 ## Bind
+
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings

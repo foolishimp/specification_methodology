@@ -23,6 +23,35 @@ not define generic identity law. Release distinctions remain owned by release
 law; carrying release coordinates does not turn release identity into object
 identity.
 
+## Derivation Verification Material
+
+Historical derivation coordinates bind their original accepted cut, manifest,
+members and fragments. Resolving those coordinates is a verification operation;
+it does not require that predecessor to remain installed or operative. A complete
+successor can carry the exact verification evidence under its own immutable
+manifest without changing the historical coordinates or basis-record preimage.
+
+The verification material contains the exact historical manifest bytes and their
+declared digest. Each required historical member is either carried as exact
+evidence bytes or reconstructed by a declared ordered byte-range projection of
+successor-owned members, with literal reconstruction bytes where necessary.
+The source member path and digest resolve in the successor publication manifest;
+reconstructed bytes have the exact historical member digest in the historical
+manifest. Every required fragment resolves under the recorded semantic-address
+rule. Missing, duplicate, altered, incomplete or unbound material refuses the
+affected verification. Historical retrieval is optional when this complete
+material is available; it is not a hidden fallback required by admission.
+
+The [derivation resource](verification_material/DERIVATION_SOURCES.json) is
+distribution evidence for these byte predicates, not a second constitutional
+surface. It adds no field to the calculus or profile basis record; the existing
+publication-manifest digest binds its declared membership. Source projections
+bind the exact current member digests;
+changed sources require new verification material before reuse. A successful
+reconstruction establishes content and reference checks only. Acceptance of
+the historical cut, semantic derivation, successor admission and publication
+remain separate judgments at their existing owners.
+
 
 ## Position
 

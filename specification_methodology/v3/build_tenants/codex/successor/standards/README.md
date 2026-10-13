@@ -24,6 +24,16 @@ Responsibility views project selected material clauses:
 [release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
 no view is sufficient for every task.
 
+For intake triage, lawful re-entry, work-carrier selection or execution-contract
+admission, acquire the [triage/carrier frame](frames/TRIAGE_CARRIER.md).
+For typed construction handoffs and transformation admission, acquire the
+[constitutional-derivation frame](frames/CONSTITUTIONAL_DERIVATION.md), which
+projects the library specialization and its deciding Design Method consumer.
+These selections follow the task's responsibility, not a candidate's fixture
+answer. Each view names its owner sections and exact member digests. Material
+coupled responsibilities outside the selection require source re-entry under
+the existing sufficiency law; a prepared frame grants no work or admission.
+
 ## Method owners
 
 | Responsibility | Owning or locating member |

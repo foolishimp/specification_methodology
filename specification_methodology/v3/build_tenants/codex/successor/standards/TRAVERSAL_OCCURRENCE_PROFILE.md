@@ -1206,6 +1206,16 @@ with the right shape, an unresolved basis record, a mismatched manifest or
 member, a missing or extra principle ref, an invented or absent fragment, an
 unbound predecessor byte sequence, or a same-carrier derivation refuses.
 
+Resolve the historical byte predicates from complete successor-owned
+[derivation verification material](IDENTITY_METHOD.md#derivation-verification-material)
+when present in the exact publication manifest. Verify the material's member
+digest, its source-member pins, reconstructed historical digests and complete
+principle-ref population before admitting the imported basis. The original
+historical manifest and clause identities remain distinct from the successor
+publication and external judgments. This evidence resolution requires neither
+the predecessor Install nor historical retrieval; absent or defective material
+retains the refusal conditions above.
+
 The profile publication member resolves by the same manifest/member rule. A
 mutable source path, strategy post, implementation, or consumer mapping cannot
 substitute for either imported basis or publication identity.

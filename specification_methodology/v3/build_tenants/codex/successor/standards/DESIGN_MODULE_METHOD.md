@@ -867,6 +867,25 @@ This law is false if any of the following holds:
 - a projection-triggered reaction uses its own reconstructive state as
   self-authenticating admission evidence.
 
+#### Admission contract use
+
+Bind the relation above through the library's
+[transformation-admission specialization](TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
+Here its input domain is the declared candidate on the scoped entity and
+admission-valid predecessor, with the material support the owning relation
+requires. Its output domain is that relation's declared durable result or
+other supported outcome. These are semantic parameters, not a new carrier
+schema or common result enum. This method owns the design completeness test;
+UP-021 owns the admission decision and standing-test semantics.
+
+Apply that specialization in the existing admission assessment: a
+shape-correct candidate reconstructed by a projector cannot establish
+admission when it lacks the required predecessor continuity or admitter grant.
+The same candidate with authentic current-basis support and actual authority
+is evaluated against the owning predicate; those facts alone do not guarantee
+admission. Where a governing seam remains unresolved, use UP-017's affected
+relation set and the owning result algebra rather than inventing a local pass.
+
 ### Atomic Functions And Higher-Order Composition
 
 The Ontology must derive the smallest parameterized atomic function families

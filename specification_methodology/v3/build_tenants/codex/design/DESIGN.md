@@ -13,7 +13,7 @@ current method text.
 | Owner | Material responsibility | Foundation/library relation |
 |---|---|---|
 | FOUNDATIONS | Explicit premises, contextual meaning, purpose, identity, composition, finite capacity and separate judgment/authority | Owns declared premises and standing; particular rules require the stated specialization arguments. |
-| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and the authored work/recovery specialization; concrete types, policy and grants stay with method owners. |
+| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose | Owns generic conditional contracts and work/recovery and transformation-admission specializations; concrete types, policy and grants stay with method owners. |
 | AXIOMATIC_CALCULUS | Formal entities, claims, interpretations and typed calculus | Formal refinement of interpretation and conservation; mechanics remain a separate Product. |
 | REFERENCE_FRAME_METHOD | Material context, frame coverage, capability and evaluation law | Acquire/Evaluate/Conjoin over bounded responsibility. |
 | STDO_REFERENCE_FRAME_BASELINE | Optional generic specialist and Executive/Worker/Reviewer configurations | Operational instances, preserving role grants and independence. |
@@ -48,6 +48,20 @@ actual task interpretation. Foundations defines the premises, the library owns
 the generic contract vocabulary, and detailed methods retain concrete policy
 and authority. This is a conditional dependency argument, not an assertion that
 all rules follow from finite capacity or that every method has been rebuilt.
+
+Transformation admission follows the same pattern: the library specialization
+states its premises, consequences and independent policy, Design Module Method
+consumes that contract at UP-016/017, and the constitutional-derivation view
+projects both the argument and its deciding consumer. UP-021 retains enclosing
+admission and standing-test ownership. Triage/carrier work has its own exact
+owner selection in the ordinary work entry; a fixture answer does not select it.
+
+Historical derivation verification uses a successor-owned immutable resource.
+It binds the original manifest and reconstructs its required exact member bytes
+by projections of successor-owned text. Original identity preimages, historical
+coordinates and external judgments remain distinct. The resource is distribution
+evidence for the existing byte predicates, not another operative corpus. Its
+materialization, inventory and checks follow the same package/source boundary.
 
 This increment conserves predecessor determinations. It introduces the explicitly
 scoped foundation/library account and standalone organization required by the

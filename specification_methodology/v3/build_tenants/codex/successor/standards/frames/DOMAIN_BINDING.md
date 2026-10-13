@@ -9,27 +9,6 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry
@@ -361,7 +340,7 @@ model.
 ---
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `9c15f79d3c918866b0856ad925122c00705791d457b3ff9a948070b2a4cbfcd2`.
 
 ### OP-004 Precedence Is Not Authority
 
@@ -371,7 +350,7 @@ The coordinate orders eligible facts; it does not gain semantic, admission,
 causal, or decision authority.
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `9c15f79d3c918866b0856ad925122c00705791d457b3ff9a948070b2a4cbfcd2`.
 
 ## Authority And Adoption
 
