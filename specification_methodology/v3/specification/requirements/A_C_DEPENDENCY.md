@@ -10,11 +10,11 @@ Three things are kept distinct:
 
 This product uses the separately owned Axiom Indexer, a program that checks a_c, for later evaluation. The common method documents and each tenant's interpretation have their own identities.
 
-The Product Definition names `../axiom_indexer/stdo_default.json`, the neighbouring Axiom Indexer Product Definition, which says where that product's source is. Its source path can change, and its operative definition does not replace the fixed dependency pin below. No installed copy of the Axiom Indexer 2.5.1-rc.2 release is selected or verified for this source project. A fixed, tagged version is available. Nothing is acquired or run until an evaluation is separately selected.
+The Product Definition names `../axiom_indexer/stdo_default.json`, the neighbouring Axiom Indexer Product Definition, which says where that product's source is. Its source path can change, and the definition found there does not replace the fixed dependency pin below. No installed copy of the Axiom Indexer 2.5.1-rc.2 release is selected or verified for this source project. A fixed, tagged version is available. Nothing is acquired or run until an evaluation is separately selected.
 
 ## Directed Mechanical Dependency Relation
 
-Relation identity: `urn:stdo-3:relation:a-c-mechanical-evaluation-dependency`. It runs from this product (`urn:stdo:product-definition:stdo-3`) to the separately owned Axiom Indexer (`urn:stdo:product-definition:axiom-indexer`). Its purpose is mechanical checking of an explicitly selected, frozen subject of this product under this contract. The neighbouring definition says where the Axiom Indexer is; the fixed pins below bind the selected subject.
+Relation identity: `urn:stdo-3:relation:a-c-mechanical-evaluation-dependency`. It runs from this product (`urn:stdo:product-definition:stdo-3`) to the separately owned Axiom Indexer (`urn:stdo:product-definition:axiom-indexer`). Its purpose is mechanical checking of an explicitly selected, frozen part of this product under this contract. The neighbouring definition says where the Axiom Indexer is; the fixed pins below identify the exact Axiom Indexer release used, the dependency's mechanical subject.
 
 The product owner selects and accepts this dependency's use within this product. The Axiom Indexer keeps its own Product meaning and its own repair and release authority. Before any mechanical use, an activation requires:
 
@@ -26,12 +26,12 @@ A tag being available does not make it installed. No installed copy or evaluatio
 
 The following invalidate the affected use or reuse:
 
-- a change to the definition or to the Axiom Indexer's identity;
+- a change to the Axiom Indexer's Product Definition or identity;
 - drift in its release or members;
 - a change in the contract's meaning;
 - results bound to a different subject or basis.
 
-The dependent claim is then withheld and returned to its actual owner for verification and explicit rebinding. Unchanged supported relations need not be discarded. This section defines this one dependency and introduces no general installation or runtime protocol.
+The dependent claim is then withheld and returned to its actual owner for verification and explicit rebinding, which records the new exact version the claim depends on. Results that rely only on unchanged, still-supported relations need not be discarded. This section defines this one dependency and introduces no general installation or runtime protocol.
 
 ## Fixed Theory
 
@@ -71,7 +71,7 @@ The installed a_c rules [AC-017 and AC-018](stdo://releases/v2.5.1-rc.2/standard
 - fidelity: whether the axioms mean what the source means;
 - structure: whether the axioms are well-formed.
 
-[Axiom validation](../../../../axiom_indexer/specification/requirements/REQ-P-VALIDATION.md) does not interpret every logical, operator, arity or type rule without a separately selected contract. It does not prove truth, satisfiability, acceptance, or full admitted-model or theorem claims.
+[Axiom validation](../../../../axiom_indexer/specification/requirements/REQ-P-VALIDATION.md) checks structure. Unless a separately selected contract requires it, it does not interpret every logical, operator, arity or type rule. It never proves truth, satisfiability or acceptance, that a full model satisfies the axioms, or that a theorem holds.
 
 a_c is derived from the method's own principles. Running independent procedures over it does not give it an independent axiomatic origin.
 

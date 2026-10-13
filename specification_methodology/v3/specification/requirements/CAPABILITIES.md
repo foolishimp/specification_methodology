@@ -13,7 +13,7 @@ Which capabilities follow from the accepted principles, and with which assumptio
 - Optional profiles: can a domain add the meaning it needs while generic rules and test subjects stay separate?
 - Self-improvement: can observations identify the right owner of a repair, then support a successor release that is evaluated independently?
 
-The previous release's [thirteen logical capabilities](../../../v2/specification/SCENARIOS.md#logical-functions) inform which capabilities are recovered, under that release's [rule for agent-performed construction](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), STDO-UP-020. They are not thirteen mandatory stages, and they are not automatically accepted features.
+The previous release's [thirteen logical capabilities](../../../v2/specification/SCENARIOS.md#logical-functions), the logical functions its scenarios define, are inputs when deciding which capabilities the new release keeps. They are read under that release's [rule for agent-performed construction](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), STDO-UP-020. They are not thirteen mandatory stages, and they are not automatically accepted features.
 
 Every selected capability identifies:
 
@@ -23,6 +23,6 @@ Every selected capability identifies:
 - its observable adequate outcome;
 - its conformance expectations, specified independently of the author.
 
-Cost measures are selected where a claim needs them. No universal budget, ticket-first workflow or actor count is introduced.
+Cost measures are selected where a claim needs them. Selecting a capability introduces no universal budget, no requirement that all work in the method starts from a ticket, and no fixed number of actors. The construction of this release does run from tickets, under [Development Isolation](../PRODUCT.md#development-isolation).
 
 The steel thread is the one named in [Categorical Construction](../PRODUCT.md#categorical-construction). Its selection is an open owner decision.

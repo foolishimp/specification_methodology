@@ -10,8 +10,8 @@ Both tenants are evaluated against the same independently specified expectations
 | Information and its representation differ | Agreement in structure cannot establish identical meaning or semantic fidelity. |
 | Identity is unchanged while content changes | The current state, and whether an earlier observation still applies, are considered separately. |
 | Typed producers and consumers disagree | The incompatible domain or precondition is made explicit. Fields of the same shape do not make a valid join. |
-| Required assessment A ran and failed, and required assessment B was never covered | A's failure and its citations survive, and B stays unresolved. Every planned assessment slot is authenticated. B is recorded as required coverage that is missing, not as a planned judgement that was omitted. |
-| The context a task needs cannot be split and does not fit one actor | Lawful refinement, another capable actor or a truthful stop keeps the material obligations. |
+| Required assessment A ran and failed, and required assessment B was never covered | A's failure and its citations survive, and B stays unresolved. Every planned assessment is verified as genuinely planned. B is recorded as required coverage that no planned assessment provides, not as a planned assessment that was skipped. |
+| The context a task needs is interdependent and does not fit one actor | Narrowing the task lawfully, handing it to another capable actor, or a truthful stop keeps the material obligations. |
 | The basis or evidence changes | Whether affected work still applies is checked again, and unchanged supported work is kept. |
 | An interruption leaves work partly written | Recovery uses the current workspace and the applicable work state. It does not erase progress or invent a completed assessment. |
 | A parse or map succeeds | The claim stays mechanical until independently sufficient semantic and practical evidence exists. |

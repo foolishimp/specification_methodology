@@ -4,15 +4,17 @@
 
 The product is a specification methodology. It is a set of documents stating the rules for defining, building, checking and releasing a product, together with the same rules written as axioms in a_c. The [Intent](INTENT.md) states its purpose and its five parts: Foundations, the Spec Method, profiles, a_c and reference frames. Each document of the method is a member.
 
+The method's earlier releases are named STDO, short for Specification, Ticketing, Design and Outcome-Driven Development. The prefix remains in identifiers: a `stdo://` address names a file inside an installed release, which the installed toolchain resolves to the read-only copy on this machine, and rule IDs such as STDO-UP-015 name rules of that release.
+
 The product succeeds the method's previous release, 2.5.1-rc.2. That release is installed read-only at `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`) and is the tool used to build this one.
 
 A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
-Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product consists of the foundational axioms and every member of the previous release restated on them. The new release is therefore complete without the previous release in force. The members may be as long as the rules require, because no person or model reads them whole. Each task is carried out from a reference frame, never from the whole set of members.
+Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product consists of the foundational axioms, which are the Foundations written as axioms, and every member of the previous release restated on them, meaning rewritten so that each rule rests on the axioms. The new release is therefore complete without the previous release in force. The members may be as long as the rules require, because no person or model reads them whole. Each task is carried out from a reference frame, never from the whole set of members.
 
 Each rule has one owning section, in the tiers the [Intent](INTENT.md#what-the-product-is) sets out. The precise obligation is the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-Three proposed accounts of a construction are independent of the tiers:
+The categorical groundwork strategy proposes three accounts of any construction. They are independent of the tiers:
 
 - the algorithmic description: the steps;
 - the informational interpretation: what the data means;
@@ -20,13 +22,15 @@ Three proposed accounts of a construction are independent of the tiers:
 
 A tier may need all three, and none of them is a tier.
 
-a_c interpretations, which are how documents are written as axioms, and the tools that check them, such as the Axiom Indexer, keep their own separately owned dependency and proof identities.
+a_c interpretations, which are how documents are written as axioms, and the tools that check them, such as the Axiom Indexer, are owned separately from this product. What each depends on and what each proves is recorded under its own identity.
 
 Runtimes that execute applications built with the method are outside the product. Examples are ABIogenesis (ABG), which runs typed graph programs and records what happened at run time, its executor HoG, which traverses those programs, and application workflow runtimes.
 
 Example applications, such as Hello World and Data Mapper, are test subjects outside the product. So is the sum-and-histogram example used by the steel thread. Their particular features never become general method rules because they were used once.
 
-The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together.
+The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together. The companion products are the Axiom Indexer; the STDO Representation, which publishes the method's canonical a_c map, linking each axiom to its source text; and the plugin, which carries the method's skills for coding agents.
+
+Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two build tenants, the agents that each build a candidate, are described under [Source Project Construction](#source-project-construction).
 
 ## Product Identity And Lineage
 
@@ -38,7 +42,7 @@ The product changes nothing in the 2.* line: not its source project, its release
 | Source project | `specification_methodology/v3/`, beside the 2.* source project, which it does not overwrite |
 | Identifiers | `urn:stdo:product-definition:stdo-3`, `urn:stdo-3:bounded-context:method` and the `urn:stdo-3:` tenant identities are identifiers, not names. They do not change with the directory or the display name. |
 
-[stdo_3.json](../stdo_3.json) is the machine-readable Product Definition that the installed release's tools read to locate this source project. It carries this identity in its product name and in a local axiom that points to this section. Its schema has no version field.
+[stdo_3.json](../stdo_3.json) is the machine-readable Product Definition that the installed release's tools read to locate this source project. It carries this identity in its product name and in a local axiom that points to this section. A local axiom is a rule this source project adds on top of the installed release's law. Its schema has no version field.
 
 ## Result Algebra
 
@@ -51,13 +55,13 @@ The Foundations own the method's single result algebra: one set of outcome value
 - work steps;
 - effects (changes made to files or systems).
 
-No member, profile or frame defines its own parallel set of outcomes. A refinement gives finer outcomes for one domain. It keeps the evaluated predicate and the domain's original outcome alongside the core value, and it never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md) check it in every member under acceptance criterion 5 of the [C3 Construction Contract](#c3-construction-contract).
+No member, profile or frame defines its own parallel set of outcomes. A refinement gives finer outcomes for one domain. It keeps the evaluated predicate and the domain's original outcome alongside the core value, and it never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md), the common test cases every member is checked against, check it in every member under acceptance criterion 5 of the [C3 Construction Contract](#c3-construction-contract).
 
 ## Categorical Construction
 
 Categorical construction is a general capability of the method. The method defines categories of its own constructs and joins between categories, which are maps from one category to another. It permits a construction step only where declared laws allow it. Specification documents are the objects. Derivations and refinements are the arrows, and each states what it must preserve. A join of an algorithm category with a computation category is the acceptance instance for the capability. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a claim without it is a hypothesis.
 
-[CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it, its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet.
+[CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it (the working foundations in [PRINCIPLES](requirements/PRINCIPLES.md)), its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet: the product owner has not chosen it for current work, and nothing unselected may be run or relied on.
 
 Sequence:
 
@@ -68,7 +72,7 @@ Sequence:
    - A failure counts against the method only when triangulation places the cause in the method. Triangulation tests the candidate causes from several reference frames over the same subject.
    - Corrected clauses are reviewed independently.
    - The standalone successor requirement, member acceptance and release obligations stay in force.
-   - The steel thread supports its own join only, not the qualification of the whole method.
+   - The steel thread supports its own join only. It is not evidence that the whole method works.
 4. The full categorical product is built on the released method.
 
 Steel thread. Its subject is the sum-and-histogram example. A list of numbers is split across partitions. The example computes their exact sum, and an approximate quantile (such as the 95th percentile) from histograms built per partition. It belongs to no project, it stays outside the method's own members, and it runs under the installed release. Its minimum contract:
@@ -81,10 +85,10 @@ Steel thread. Its subject is the sum-and-histogram example. A list of numbers is
    - two concrete execution bindings, which are two ways of running the computation;
    - a comparison of returned meaning, required effects and diagnostics;
    - a refused-input case and an interrupted or uncertain-effect case, run beside normal completion.
-5. Measured latency, bytes moved and memory over a declared workload, with the measurement boundaries stated. The activation's context, time and spend limits are recorded. Only the cost and generality claims those measurements support are made.
+5. Measured latency, bytes moved and memory over a declared workload, with the measurement boundaries stated. The context, time and spend limits of the run that executes it are recorded. Only the cost and generality claims those measurements support are made.
 6. The steel thread's own chain from Intent through Product and Specification to Realisation. Each derivation step is an arrow whose preservation obligation is stated and discharged. A failed derivation is attributed under step 3 and counts against the method only when triangulation places the cause in the method.
 
-Reference design. The [category-of-algorithms design](../.ai-workspace/comments/claude/assets/20261001T133903Z_STRATEGY_a-category-of-algorithms-with-computation.compressed.md) is a reference design and the steel thread's subject matter. It is read with the [corrections](../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#corrections-to-the-attached-design) in the categorical groundwork strategy. Its five layers are not method rules.
+Reference design. The [category-of-algorithms design](../.ai-workspace/comments/claude/assets/20261001T133903Z_STRATEGY_a-category-of-algorithms-with-computation.compressed.md) is a reference design and the steel thread's subject matter. It is read with the [corrections](../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#corrections-to-the-attached-design) in the categorical groundwork strategy. Its five layers are not method rules. They are: the domain calculus (algorithms and their laws); the computational algebra (distributed operations and the cost grade on each arrow); the computational calculus (lawful plans and rewrites); the workload (volumes, arrival rates and service levels); and the binding to a technology stack and operational model.
 
 Three further ideas from that design stay unresolved until a real example needs them and supports them:
 
@@ -94,7 +98,7 @@ Three further ideas from that design stay unresolved until a real example needs 
 
 ## Dependencies And Acceptance
 
-[The a_c dependency contract](requirements/A_C_DEPENDENCY.md) fixes the exact a_c theory and the exact, unchangeable Axiom Indexer subject used for mechanical checks. The neighbouring Axiom Indexer Product Definition only says where to find that product; it does not fix the version.
+[The a_c dependency contract](requirements/A_C_DEPENDENCY.md) fixes the exact a_c theory and the exact, unchangeable Axiom Indexer release used for mechanical checks. The neighbouring Axiom Indexer Product Definition only says where to find that product; it does not fix the version.
 
 The [conformance discriminators](conformance/README.md) are the common checks every member is held to. None of the following shows that a member's meaning is acceptable now: passing syntax checks, valid maps, the number of documents, a local approval or an earlier passing run.
 
@@ -108,7 +112,7 @@ Their organisation, wording and a_c encodings may differ. Their accepted outputs
 
 ### Construction Authority
 
-Claude holds the common construction pen, the right to edit the common files. Codex reviews every common change before the product owner merges it. A review result informs the product owner's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md), which records the role and frames each activation uses, binds these grants to the installed 2.5.1-rc.2 release.
+Claude holds the common construction pen, the right to edit the common files. Codex reviews every common change before the product owner merges it. A review result informs the product owner's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md), which records the role and frames each activation uses, states these grants in terms of the installed 2.5.1-rc.2 release's roles and frames.
 
 Work is done in activations. An activation is one run of an agent in one role. There are three roles:
 
@@ -116,18 +120,18 @@ Work is done in activations. An activation is one run of an agent in one role. T
 - a Writer writes files inside its granted territory;
 - a Reviewer checks a Writer's result and is never its author.
 
-C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), lets a coordinator decide the outcome of each delegated result. This grant sets that decision for C3.
+C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
 
 A member restatement is one member of the previous release rewritten into a tenant's candidate. Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers.
 
 The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose of a member restatement within its grant in four ways:
 
-- `local_repair`: fix it locally, because the implementation is defective while the governing relation holds;
+- `local_repair`: fix it locally, because the restatement is defective while the rule it implements is sound;
 - `re_enter`: send it back to an upstream stage that must change;
 - `reject`;
-- `accept` into the tenant's candidate, only on a closed Reviewer result of `satisfied` from a Reviewer independent of the author, with every row of the member's frontier cone disposed.
+- `accept` into the tenant's candidate, only when a Reviewer independent of the author returns a closed result of `satisfied` and every row of the member's frontier cone is disposed. A closed result is a final result in the installed result family: `satisfied`, `falsified`, `indeterminate`, `out_of_frame` or `invalid_basis`.
 
-Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain the product owner's. The Reviewer supplies severity as evidence. Priority, boundary effect and disposition are the Executive's decisions. The common pen records each as a separate entry in the work carrier, never the Executive activation itself.
+Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain the product owner's. The Reviewer supplies severity as evidence. Priority, boundary effect (whether the result changes what may be promoted towards a release) and disposition are the Executive's decisions. The common pen, not the Executive activation, records each as a separate entry in the ticket, which is the work carrier.
 
 [build_tenants/README.md](../build_tenants/README.md) states how a tenant starts work and returns results. A tenant's changes stay inside its grant, and a change it needs in common files is requested from the common pen. An Executive cannot write files or perform Git operations in that role.
 
@@ -156,7 +160,9 @@ These are local development rules for this source project. They govern how tenan
     per build tenant under `.ai-workspace/tickets/`.
   - Each member activation runs under an execution contract derived from the
     tenant ticket. The pen drafts the contract on the Executive's selection,
-    and the contract is admitted as a separate step. It is not a further
+    and the contract is admitted as a separate step: the pen records the
+    Executive's decision to run it in the ticket, with the contract's
+    identity and digest, before execution. It is not a further
     ticket.
   - The ticket has one writing owner, the common pen, acting as a Writer
     activation in common territory. Before the next activation starts, the
@@ -167,8 +173,8 @@ These are local development rules for this source project. They govern how tenan
     common files, candidates or worktrees.
   - The tenant Writer's return is written in its own territory
     (`build_tenants/<tenant>/qualification/`) and never in the ticket.
-  - The ticket is the only action carrier. No Writer activation starts
-    without one, and no disposition exists until the pen has recorded it.
+  - The ticket is the only record that can authorise an action. No Writer
+    activation starts without one, and no disposition exists until the pen has recorded it.
 - Inputs. Tenant worktrees use sparse-checkout cone mode. A declared shared
   input outside the cone is read from the snapshot's input commit with
   `git show <input-commit>:<path>`, never from a working tree. A
@@ -219,25 +225,25 @@ Each line's Executive selects each part into the frontier cone of the member it 
 
 Construction proceeds through checkpoints:
 
-- C0, structure and bootstrap: closed;
+- C0, structure and bootstrap (setting up this source project and the instruction files that route agents to it): closed;
 - C1, principles: closed;
 - C2, capabilities and conformance: closed;
 - C3: builds each tenant's candidate under the [C3 Construction Contract](#c3-construction-contract).
 
 The state of the closed checkpoints is in [GOALS](GOALS.md).
 
-In C3, members are restated under Executive coordination and evaluated independently. Their frames are tested by fresh actors in actual use, and their a_c tests are bound separately. Release and adoption are later explicit decisions over an exact accepted set of members and its dependencies.
+In C3, members are restated under Executive coordination and evaluated independently. Their frames are tested by fresh actors in actual use, and their a_c checks are selected separately under the [a_c dependency contract](requirements/A_C_DEPENDENCY.md). Release, and adoption (a project choosing to install and use the release), are later explicit decisions over an exact accepted set of members and its dependencies.
 
 ### C3 Construction Contract
 
 This section configures, for this source project, the installed 2.5.1-rc.2 Executive engagement: the previous release's procedure for coordinating agent work through an Executive. The governing process is:
 
-- the [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), the step sequence from selecting the basis to closing a result;
+- the [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), the step sequence from selecting the basis (the exact sources, versions and decisions the work is done against) to closing a result;
 - [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), which keep the outcome and basis fixed;
 - [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions;
-- TICKET_METHOD admission of execution contracts.
+- admission of execution contracts under TICKET_METHOD, the previous release's rules for tickets and execution contracts.
 
-Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+Where this section and the installed baseline (STDO_REFERENCE_FRAME_BASELINE, the previous release's catalogue of standard frames and its Executive procedure) differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
 
 Outcome. Each tenant produces a candidate of the product with three things:
 
@@ -254,12 +260,14 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 | Tier | Owes | Receives from the previous release |
 |---|---|---|
 | foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
-| Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, work carriers and triage, assurance and testing law, change classes and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
+| Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, work carriers and triage, assurance and testing law, change classes (the kinds of change, each with the stage it re-enters at) and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
 | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
-| guides | posting, writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
+| guides | posting (how commentary posts are written), writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
 | packaging | manifest, schemas, templates, compressions (the shortened summaries of the standards) or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before a release-candidate cut |
 
-Activation unit. Each tenant publishes reference frames assembled from its restated members, as a_c projections or an equivalent the tenant declares, one per selected task. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation.
+The previous-release members named in the table: DESIGN_MODULE_METHOD is the discipline for designing implementation modules; ODD_METHOD is the outcome-driven development profile; TRAVERSAL_OCCURRENCE_PROFILE is an optional a_c profile for recording histories of an application over a subject that changes outside it; the plugin carries the method's skills for coding agents.
+
+Activation unit. Each tenant publishes reference frames assembled from its restated members, one per selected task. They are generated from the a_c form of the members (a_c projections) or by an equivalent the tenant declares. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation.
 
 Audiences and tasks.
 
@@ -305,10 +313,10 @@ Acceptance criteria for one member restatement:
 
 1. Every row of the member's frontier cone has exactly one UP-015 disposition. Each `conserved` or `superseded` row also has a successor locus that resolves.
 2. For every `conserved` row, the Reviewer compares the source independently of the author and finds the claim's meaning present in the new release's own text. This is UP-015's semantic conservation, evidenced under the standalone successor requirement. A link to the source alone, a matching label, or a paraphrase that drops part of a rule fails.
-3. Every `superseded` row names the accepted successor relation. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason.
+3. Every `superseded` row names the accepted successor relation. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason, one that states the limits of what it covers.
 4. Each selected task of the member has a frame that fits one bounded activation within the declared limits. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory.
 5. The [conformance discriminators](conformance/README.md) hold against the member's text under logical review, which is a reviewer's reasoned reading, not a mechanical check.
-6. The restatement adds no new obligation without naming the purpose and the material relation that require it. It makes no needless change to work carriers or process.
+6. The restatement adds no new obligation without naming the purpose and the material relation that require it, meaning why it exists and what it protects. It makes no needless change to work carriers or process.
 
 Independence. The Reviewer is never the author of the subject. By default the Reviewer is from a different model family from the Writer. A same-family Reviewer is a declared exception, with its reason in the activation record, and its result is marked as such.
 
@@ -321,6 +329,6 @@ Closure. C3 closes for a tenant when every row of its frontier is disposed and e
 - The Executive and Reviewer actors for each tenant in C3. The product owner names them in the tenant tickets. Until then every execution contract stays `drafted`.
 - Review of a ported part. By default a member is reviewed by the peer tenant's model family, which is the source author of any part ported from the peer. The [Independence](#c3-construction-contract) rule forbids a Reviewer assessing its own authorship. The product owner decides how a ported part is reviewed before the first frontier cone with a contribution is accepted.
 - The steel thread: its selection, its work carrier, and its spend and time limits. The steel thread is step 2 of [Categorical Construction](#categorical-construction).
-- Identity and packaging of the new release. One question is whether the compressions are kept, superseded or removed. The other is how a_c and Traversal Occurrence Profile identities are issued and admitted without depending on files of the previous release. Decided before a release-candidate cut.
+- Identity and packaging of the new release. One question is whether the compressions are kept, superseded or removed. The other is how identifiers for a_c concepts and for the Traversal Occurrence Profile are issued and accepted into use without depending on files of the previous release. Decided before a release-candidate cut.
 - Candidate number and release-candidate cut, in the `specification_methodology` release namespace under RELEASE_METHOD. Decided before a release-candidate cut.
-- Cohort relation: which versions of the companion products are released together with this one. The companion products are the Axiom Indexer, STDO Representation and the plugin. Decided before a release-candidate cut. Existing Product identifiers and the current cohort are unchanged, and the installed 2.5.1-rc.2 release is the operative builder.
+- Cohort relation: which versions of the companion products are released together with this one. Decided before a release-candidate cut. Existing Product identifiers and the current cohort are unchanged, and the installed 2.5.1-rc.2 release is the operative builder.

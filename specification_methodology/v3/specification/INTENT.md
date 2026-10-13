@@ -21,17 +21,17 @@ The product is the method's documents together with the a_c form of its rules. I
 
    A part large enough to need its own account goes through the same four stages. The Spec Method also covers how work is recorded in tickets, how a change restarts at the earliest stage it affects, how results are reviewed and how releases are cut.
 3. Profiles: extensions that apply the Spec Method to one kind of construction. For example:
-   - outcome-driven development, for software built as typed domain data and named graph functions executed by a graph runtime;
+   - outcome-driven development, for software whose behaviour is published as named functions over a typed graph of domain data, executed by a runtime that walks that graph;
    - user-interface construction, where the screen is computed from typed state and state changes only through typed messages;
    - world modelling, which builds a layer of meaning over existing source systems so that their data can be interpreted.
-4. a_c: the formal notation in which the rules, the records of results and the maps between parts are written.
+4. a_c: the formal notation in which the rules, the records of results and the maps between categories are written.
 5. Reference frames: the per-task documents described above. A rule copied into a frame names the section that owns it.
 
 One owner per rule. Each rule, definition, list of allowed values or procedure step is written in exactly one section of the method. The parts form tiers in this order: Foundations, then the Spec Method, then the profiles. A rule is owned by the highest tier it holds for. Any other place refers to that section, or narrows the rule for its own use with a link back to it. It never restates the rule differently. A question answered in two places can be answered two ways. The precise obligation is the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
 One result algebra. Every check, judgement and task reports its result in one shared set of outcome values. The Foundations define those values once, together with how results combine. A part that needs finer outcomes subdivides a shared value, and a subdivision never makes a result look better than it is; for example, a failure never counts as a success. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement).
 
-The specification is the program: declared laws are the building blocks, refinement layers stack them, and construction is constraint-based and requirements-based. A construction step is valid only where the rules declared for the thing being built permit it.
+The specification is the program: declared laws are the building blocks, refinement layers stack them, and construction is constraint-based and requirements-based. That is, the specification states the laws and requirements a construction must satisfy, not the steps to produce it; each stage adds detail within the laws of the stage above, and a construction is correct when it satisfies them. A construction step is valid only where the rules declared for the thing being built permit it.
 
 ## What It Achieves
 
@@ -50,6 +50,6 @@ The specification is the program: declared laws are the building blocks, refinem
 
 ## Direction
 
-The method is built using its own previous release, installed as a fixed tool, as a compiler is compiled by its previous version.
+The method is built using its own previous release, as a compiler is compiled by its previous version. That release is installed: a published, read-only copy on the machine, with its tools, which cannot change while it is in use.
 
 The categorical approach is tried on one thin end-to-end example, the steel thread, before it is applied to the whole method. The steel thread joins one category of algorithms with one category of computation, and it is built using the installed previous release. The method is corrected from what the steel thread shows, and the full categorical product is then built on the corrected release. Carrying the existing rules into the new release continues alongside.

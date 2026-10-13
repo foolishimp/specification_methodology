@@ -2,7 +2,7 @@
 
 The common requirements bind both build tenants' candidates. This file holds the requirements that come from this Product. The other files hold the rest:
 
-- [PRINCIPLES](PRINCIPLES.md): the working foundations and their review questions.
+- [PRINCIPLES](PRINCIPLES.md): the working foundations, the candidate first principles both tenants built from at C1, and their review questions.
 - [CAPABILITIES](CAPABILITIES.md): the capability questions. Each capability's acceptance contract is selected separately.
 - [A_C_DEPENDENCY](A_C_DEPENDENCY.md): the exact a_c theory and checker this product depends on, and the limits of what the checker proves.
 - [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the frontier under STDO-UP-015, with one row per predecessor claim giving its disposition and successor locus.
@@ -30,13 +30,13 @@ Source: this Product. The successor stands alone. Every `conserved` claim is sta
 
 Restated on the axioms. The successor is on its axioms when three relationships hold:
 
-1. Foundation to law. Each material family of deciding contracts is a group of rules that decide outcomes. Each identifies three things:
+1. Foundation to law. A family of deciding contracts is a group of related rules that decide outcomes; a material family is one whose outcomes matter to the product. Each material family identifies three things:
    - the foundational premises it rests on;
    - the consequences that follow from them;
    - any additional domain or policy choices, with their owners.
 
-   The whole set of members is accounted for. A bounded demonstration is not presented as a derivation of every member.
-2. Ownership and use. The Spec Method and the profiles use the shared contracts along the paths by which they are actually entered and applied, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
+   The whole set of members is accounted for. A demonstration over a few members is not presented as a derivation of every member.
+2. Ownership and use. The Spec Method and the profiles use the shared contracts at the points where an actor actually enters and applies them, not only by cross-reference, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
 3. Standalone conservation. Text the successor owns supplies every conserved determination needed for use.
 
 Unchanged predecessor text satisfies these where it carries the relationships. Copied text does not establish the foundational relationship just by being present, and the share of text rewritten is not evidence that a relationship holds.
@@ -51,7 +51,7 @@ A determination's owner is an owning locus: one section of one member. Owner her
 2. The owning tier follows the [tier obligations](../PRODUCT.md#c3-construction-contract):
    - the Foundations own what holds for any method;
    - the Spec Method owns what holds for this method;
-   - a domain or operational profile owns only its own bindings;
+   - a domain profile, such as world modelling, or an operational profile, such as the frame catalogues and Executive procedure, owns only its own bindings: the terms and choices it adds for its domain or operation;
    - the guides own their posting, writing and glossary conventions;
    - packaging owns no method determination.
 3. Every other locus refers to the owner or refines it. A refinement names its owner and maps each of its values or cases back to the owner's. It never contradicts or redefines the owner's determination.
@@ -91,7 +91,7 @@ A categorical claim about the method, or about a construction made with it, is e
 
 1. Objects and arrows. For each category claimed: its objects, its arrows, when two arrows are equal, its identities, and associative composition.
 2. Preservation per layer. Each refinement layer states what it preserves of the layer above and discharges that obligation. An exact step preserves meaning. An approximate step states its adequacy relation (how close is close enough) and an end-to-end bound. A fixed tolerance at each step does not compose into an end-to-end bound.
-3. Licensing laws. A construction step is admissible under the laws declared for its subject. With no law declared, only universally valid steps are admissible.
+3. Licensing laws. A construction step is admissible under the laws declared for its subject. With no law declared, only universally valid steps, which hold whatever laws the subject has, are admissible.
 4. Joins. A map between categories is defined on objects and arrows. Its functor laws, that it preserves identities and composition, are shown before it is claimed to be a functor. Conformance, equivalence and functorial preservation are distinct claims.
 5. Representation and evidence.
    - Laws, records and maps are written in a_c.

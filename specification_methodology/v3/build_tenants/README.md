@@ -41,10 +41,10 @@ An actual Claude review runs as Claude, and an actual Codex review runs as Codex
 Before any effect, each activation:
 
 - verifies the current input snapshot from its input commit, and the fixed builder basis, which is the installed release;
-- stops and rebinds if a material input changes;
+- stops if a material input changes, and records the changed input before continuing;
 - names explicitly any additional material source it selects.
 
-Declared shared inputs outside the tenant's sparse checkout are read with `git show <input-commit>:<path>`. The tenant freezes the exact subject it authored, and records its pin, basis, residuals and return in its own return record.
+Declared shared inputs outside the tenant's sparse checkout are read with `git show <input-commit>:<path>`. The tenant freezes the exact subject it authored, and records its pin, basis, residuals (what it left unresolved) and return in its own return record.
 
 A tenant's self-check is not acceptance. One reviewer's GO cannot close the peer's task or a checkpoint. The product owner resolves conflicts.
 
