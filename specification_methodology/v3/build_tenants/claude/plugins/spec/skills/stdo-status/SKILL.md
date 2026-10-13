@@ -21,7 +21,9 @@ read-only.
 1. From the verified definition, read Goals, bound work lanes, selected outcome,
    exact checkpoint/workspace,
    accepted design, proof, and exact review results. Comments and dashboards
-   are projections.
+   are projections. Acquire owning sections under the selected basis's
+   `ACTIVATION.md` section 2, Acquisition; work state and resumption are its
+   section 5.
    Resolve each reported ticket to its unique current authoritative carrier,
    including a referenced peer ticket. A historical link, predecessor section
    or another ticket's summary cannot establish its current lane or admission.

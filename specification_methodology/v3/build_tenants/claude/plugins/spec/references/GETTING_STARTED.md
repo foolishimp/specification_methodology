@@ -87,7 +87,10 @@ Before acting, resolve:
 6. the admitted ticket, sprint entry, or equivalent work carrier; and
 7. only the exact owning standard needed for the action.
 
-Do not bulk-load the standards corpus. A new LLM should be able to state this
+Acquire item 7 under the basis's `ACTIVATION.md` section 2, Acquisition: a
+derived surface whose sources are current where one serves the task,
+otherwise the owning sections that decide it. Do not bulk-load the
+standards corpus. A new LLM should be able to state this
 compact basis before it changes anything:
 
 ```text
@@ -614,8 +617,12 @@ Definition:
   authority, and projection;
 - `RELEASE.md`: immutable cuts, qualified transport refs, publication,
   successor identity, and release evidence;
-- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` section 2 and `ACTIVATION.md`
-  section 3: bounded evaluation and result law; and
+- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` sections 2 and 4 (Results) and
+  `ACTIVATION.md` sections 2 and 3: bounded evaluation, acquisition and
+  result law;
+- `frames/` in the standards tree: verbatim frames, each copying the owning
+  sections one task needs, among them the bootstrap frame; a frame owns no
+  determination; and
 - `EXECUTIVE_BASELINE.md`: optional Executive, Worker, Reviewer,
   technical-triage, and disposition profile, with its testing frames in
   `ASSURANCE.md`.

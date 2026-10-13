@@ -25,7 +25,9 @@ read-only.
    capability-, and scale-change invalidation.
 2. Reacquire live authority, implementation, tests, fixtures, installed or
    runtime evidence, and material history. Do not use the Worker summary as
-   evidence.
+   evidence. Acquire owning sections under the selected basis's
+   `ACTIVATION.md` section 2, Acquisition; review law is `EVALUATION.md`
+   sections 3 and 4.
    Reuse exact applicable computed facts and traceable prior judgments after
    checking their support and invalidation. This does not replace your own
    assessment where the claim requires independence. Determine required
@@ -63,7 +65,8 @@ read-only.
 - Check satisfied closure conditions; your review event cannot establish them
   or create an additional closing ceremony.
 
-Keep the result projection total:
+Keep the result projection total over the core values of `FOUNDATIONS.md`
+section 4, Results:
 
 - `satisfied`: no finding; triage is `not_applicable`;
 - `falsified`: findings carry complete triage or explicit field-level

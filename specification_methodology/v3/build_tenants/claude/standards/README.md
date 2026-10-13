@@ -89,10 +89,32 @@ construction until STDO 3 is released.
 The verbatim frames live in `frames/`, with their manifest
 `frames/FRAME_INPUTS.json`. Each frame copies, byte for byte, the owning
 sections that one task needs and names each source with its digest; the
-owning sections decide, and a frame owns no determination. When an actor
-reads a frame and when it reads the owning sections instead is
-[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
-Acquisition.
+owning sections decide, and a frame owns no determination. A frame whose
+source digests no longer match the members is stale
+([PRODUCT_DEFINITION §11](PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary)).
+When an actor reads a frame and when it reads the owning sections instead
+is [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+Acquisition. The frames and their tasks:
+
+| Frame | Task |
+|---|---|
+| [bootstrap](frames/bootstrap.md) | enter the method for a task not yet specified: what the method is, the exact basis and the one applicable product definition, frame activation and admission, the core result values, and acquisition of the deciding owner sections |
+| [rf-task-a](frames/rf-task-a.md) | declare one reference frame for one evaluation, activate it on an exact subject and basis, return a minimal result, and say what it settles about an owner's claim and who disposes the claim |
+| [rf-task-b](frames/rf-task-b.md) | produce the coverage ledger for a declared coverage tuple, apply the diagnostic order to an observed signal, and name one revision action with what it reopens |
+| [ac-task-a](frames/ac-task-a.md) | write the transformation record for one step between two exact models with its application outcome, a judgment record over the successor, and what promoting the successor requires and who holds it |
+| [traversal-task-f](frames/traversal-task-f.md) | judge causal claims, an event correction, a typed lineage edge and a precedence coordinate in an occurrence history, and give each stopped occurrence its stop kind, core result value and what survives beside it |
+| [eb-task-d](frames/eb-task-d.md) | as Executive in the coordinated branch, revalidate the drift locks, evaluate a `candidate_ready` work result, keep a finding's severity, priority, frame result and boundary effect distinct, and apply one disposition or say why none applies |
+| [dm-task-d](frames/dm-task-d.md) | for a refactor inside an accepted boundary and a new boundary, decide decision completeness, sequencing and the affected set, the three-view gate, promotion and the standing of retained code, the substrate selection, and the Prime evidence with root authority |
+| [configuration](frames/configuration.md) | propose and justify a configuration for multi-part work across actors with stated capabilities and context capacities, judge a familiar proposal and its optimality claim, and evaluate one stated check |
+| [binding](frames/binding.md) | state the build-tenant binding of a software tenant and a human-process tenant of one requirement set, keep author, actor and operation kind distinct, and give the results of a structural check and a conformance predicate |
+| [stale-summary](frames/stale-summary.md) | resume interrupted work from a retained summary that disagrees with the workspace, give results for its predicates, say which retained work survives a changed dependency, and give the next action |
+
+The a_c programs in [`../a_c/`](../a_c/README.md), set-2 to set-6, are
+bound to member digests from before the current rebuild of these members.
+They are not current interpretations of the rebuilt members, and
+re-encoding them is open work. The verbatim frames above are the
+activation unit. The predecessor's compressed summaries keep their
+`unresolved` rows in the frontier pending the product owner's ruling.
 
 ## Library and installed basis
 

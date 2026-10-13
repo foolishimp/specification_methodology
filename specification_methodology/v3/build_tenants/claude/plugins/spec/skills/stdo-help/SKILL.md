@@ -31,6 +31,9 @@ guidance. This skill remains read-only.
 1. Resolve the verified definition's bootstrap entrypoint and accepted Project
    Reference-Frame Basis.
    Fail closed on a missing, ambiguous, damaged, or placeholder basis.
+   A fresh actor enters on that entrypoint. Acquire any further owning
+   section under the selected basis's `ACTIVATION.md` section 2,
+   Acquisition, from that exact basis only.
 2. Read the smallest relevant project surface: Goals, Intent, Product, affected
    requirements, accepted design, work carrier, then the owning standard.
    Start from available source routes, exact computed status and still-valid

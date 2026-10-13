@@ -15,6 +15,20 @@ Read and apply
 execution contract or changing any surface. Continue only from its exactly-one
 verified selection; that selection grants no work or mutation authority.
 
+## Acquire The Deciding Owners
+
+Enter through the verified definition's declared bootstrap entrypoint. Then
+acquire what this work needs under the selected basis's `ACTIVATION.md`
+section 2, Acquisition: a derived surface whose sources are current where one
+serves the task, such as a verbatim frame of the cut, and otherwise the owning
+sections that decide the task's questions. Acquire only from the exact
+selected basis; a candidate source, a version-line selector or another basis
+is no substitute. Acquisition is read-only and grants no role, operation or
+decision; effectful work still needs the admitted contract below. Before
+dependent action, return a missing binding (no available frame declaring what
+the evaluation needs, or an absent or unverifiable basis) with the outcome
+that section names.
+
 ## Classify From The Available Evidence
 
 Apply the selected basis's intake and agentic-construction rules
