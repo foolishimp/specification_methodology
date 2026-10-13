@@ -1,0 +1,60 @@
+**1. `ev-101` and `ev-102`**
+- Cause is not established. Predicate: "`ev-101` causally precedes `ev-102`".
+- Cause arises only from an admitted causal claim under competent authority and evidence. Timestamp, adjacency, a shared SKU or actor, and correlation do not create it.
+- The projection's `causally_precedes_event` edge therefore carries no cause. No claim was submitted, so `claim_admission` was not performed. That leaves no closed result and a planned assessment without a closed result. It is not `indeterminate`.
+- To establish cause:
+  1. Submit a `RelationClaim` of kind `causally_precedes_event` from `ev-101` to `ev-102`. It needs the exact qualifiers, the claimant's authority and evidence, and the current source frontier.
+  2. Get `claim_admission` = admitted.
+  3. Get a claim-admission event, with `event_admission` admitted.
+  4. Materialize the relation.
+  5. Get the semantic cut with `semantic_cut_admission` admitted, and the successor frontier.
+- Until then the residual is `unresolved_cause`. If a claim is submitted and the evidence cannot decide it, the result is `hold` plus `unresolved_cause`, core `indeterminate`.
+- The `event_causation_acyclic` graph holds only admitted causal edges.
+
+**2. `ev-103`**
+- The edit is not lawful. An admitted event is immutable, and its identity binds its payload digest. Keeping the id while changing the content rewrites the corrected fact.
+- It also breaks the frontier, because frontier identity binds event content digests. A same-id, non-identical collision refuses with `refuse_duplicate`. Never mint rival facts.
+- A lawful correction adds a new event with its own id and its own admission cut:
+  - It records `corrects_event(new, ev-103)`, with all nine qualifier fields.
+  - `ev-103` stays as observed (14), and the new event carries the corrected reading.
+  - The new frontier is the old one plus the new event once.
+  - Later projection uses an explicit selection law to prefer the correction. Nothing is deleted or re-identified.
+- Competing corrections remain a `competing_lineage` residual until an authorized `frontier_projection` resolves them.
+
+**3. `L-9`**
+- The edge is not lawful.
+- `causally_precedes_occurrence` is typed `Occurrence → Occurrence`. Its source here is a `FrameworkEvent`. The deciding laws are AC-004 (exact source and target sorts) and the closed relation families table. The mismatched or wrong-typed edge refuses `occurrence_admission`.
+- The qualifier cause is `refuse_wrong_type`.
+- Stop: `refusal(constraint)`. Core: `falsified`, with the wrong-sort edge as the counterexample.
+- The edge must not enter any occurrence's `lineage_refs`.
+- An event-to-event cause would need `causally_precedes_event` with an admitted claim.
+
+**4. Reorder policy and the precedence coordinate**
+- `observed_at`, latest first, may order eligible facts to select current truth in a projection. That requires its comparison law, basis and admitting authority to be explicit.
+- It may not gain semantic, admission, causal or decision authority (OP-004).
+- So the greatest `observed_at` cannot serve as the approval decision for a pending reorder. Approval needs its own judgment from an authority that owns it.
+- It also cannot create cause, or admit or correct events.
+
+**5. Stopped occurrences**
+- **`occ-23`**
+  - Stop `hold`. Core `indeterminate`.
+  - The residual `stale_frontier` must survive, with its re-entry: construct a new exact frontier and projection.
+  - It is not `out_of_frame`: the relation and capability were declared and exercised.
+  - It is not a missing result: the judgment was applied and stopped.
+- **`occ-24`**
+  - Stop `partial_effect`, refined as `partial_effect(unknown)`. Core `indeterminate`.
+  - The stated facts do not say the effect ended. An error return is not evidence of ending.
+  - If effect evidence did establish that the effect had ended, with the post-observation showing the unreached part, it would be `partial_effect(ended)`. Core would be `falsified`, with the unreached 2 of 5 SKUs as the counterexample.
+  - Either way, the `partial_effect` residual survives. So do the fact that 3 of 5 SKUs were decremented, and the mandatory re-entry before any further effect: a bounded post-observation and an explicit disposition.
+  - Neither core value records that the subject changed. The effect is never treated as absent or complete, and it is not retried blindly.
+  - The predicate is "the intended effect occurred".
+- **`occ-25`**
+  - A local reference with no record in the model's closed populations is dangling (AC-003). It refuses; it is not a `gap`.
+  - Stop `refusal(constraint)`. Core `falsified`, with `r-77` as the counterexample.
+  - The occurrence is not admitted and its identity is not minted.
+  - The dangling reference, the refusal, and any co-reported basis condition as its own `invalid_basis` result must survive.
+  - Re-entry is a new complete occurrence candidate.
+  - If `r-77` were instead an external reference whose declared resolution had not yet been evaluated, the stop would be `gap`, core `invalid_basis`. The task does not say.
+
+**No method source**
+none. The task facts left open are whether the `occ-24` effect evidence establishes that the effect ended, whether `r-77` has a declared external domain, and which judgment kind `occ-23` belongs to.

@@ -1,0 +1,150 @@
+## Bindings
+
+A build-tenant binding has two parts. The calculus binding maps the requirements calculus (G1–G4) to a computational calculus. The execution binding maps that calculus to an execution environment. The facts name no registry entry or design decision for either tenant, so the bindings below are reconstructed from the described processes. They are not declared bindings.
+
+**Tenant S**
+
+- **Operations**
+  - `assign(application, pool) → two assessor assignments`. It runs as Lu's nightly job and writes to the database.
+  - `submit_assessment(assignment) → score 0–10 plus reasons`. It writes to the database. Each assessor's score field is hidden from the other until both are submitted.
+  - `rank(score1, score2) → ranking`. It is pure.
+  - `present(both assessments, ranking) → chair`. It is read-only.
+  - `record_decision(decision, reasons, the two scores used)`. It writes to the database.
+  - `notify(decision) → email`. It has an external effect.
+- **Composition:** the operations run in the order assign → submit ×2 → rank → present → record_decision → notify. Visibility of each assessment is gated on both being recorded. The decision operation takes the chair's input.
+- **Effects:** the database writes are internal. The email is an external effect. If the send response is lost, the effect is recorded as `completion_unknown` (core value `indeterminate`), not as `completed` or `not_effected`.
+- **Resource measure material to G4:**
+  - Elapsed time, in working days.
+  - It starts at application submission and stops at notification.
+  - For S the stop is either "email sent" or "email delivered"; that boundary is not stated in the facts and must be declared.
+  - The limit is 20 working days.
+  - The nightly job adds up to one day of assignment latency.
+- **Other measures:** G1–G3 need no further measure. Human effort and machine resources are not needed by any selected obligation.
+- **Operational assumptions:** the assessor pool is available. The assessors are not applicants. The field hiding holds. The database is access-controlled. Email delivery is reliable, or its failure is detected.
+- **Execution environment:** a web application with a database (a technology stack). Hamid decides as chair and Lu operates. The humans are the external assessors, the chair and the operator.
+
+**Tenant H**
+
+- **Operations**
+  - `log(application)` onto paper.
+  - `assign(rota) → two staff assessors`.
+  - `issue_sheet`.
+  - `return_sheet` in a sealed envelope.
+  - `open_when_both_arrived`.
+  - `rank` by a fixed spreadsheet formula over the two scores.
+  - `pass(both sheets, ranking) → chair`.
+  - `decide_and_write_reasons` on the decision form.
+  - `post_letter`.
+- **Composition:** the order is the same as S's, and sheets are opened only after both envelopes have arrived. That ordering is what makes the visibility rule hold in H.
+- **Effects:** the paper records are internal. The posted letter is external. If the post is lost or delivery is unobserved, the effect is `completion_unknown`.
+- **Resource measure:** elapsed time in working days, from submission to the letter posted. Whether "notified" means posted or received is not stated and must be declared. The limit is 20 working days. Envelope transit time is inside the boundary if the stop is "received".
+- **Operational assumptions:** the sealed envelopes stay sealed until Pia opens them. Pia does not open an envelope early. The rota never gives an assessor their own application. The spreadsheet formula is fixed. Pia and Jon are available.
+- **Execution environment:** a human process of people (Pia, the rota staff, Jon), paper documents, envelopes, a spreadsheet and the post.
+
+**Shared calculus?** They can, but the facts do not show that they do.
+
+- A calculus may be reused across execution environments wherever each binding satisfies its laws.
+- Replacing the executor while the laws hold changes the execution binding, not the calculus. So H's lead is wrong that "no software" requires a different calculus. It requires a different execution environment, which is a different execution binding.
+- A shared calculus needs both bindings to show that the laws hold. The facts do not show that for either tenant.
+
+## Author, actor and operation
+
+- **Author, actor and operation are distinct.** None of them determines another.
+- **Operation kind** is what an operation does, together with the authority that kind requires.
+- **Actor identity** is not an authority.
+- **Authorship** bears on independence of assessment.
+
+**Jon**
+- **Author:** he wrote the description of tenant H's process, so he is the author of that realised subject.
+- **Actor:** he is the chair in H.
+- **Operations**
+  - Deciding the award (kind: decide). This is a decision G2 reserves to a human. The governing authority must admit him for it. G2 names the chair, but the facts record no grant document.
+  - Writing the reasons on the form (kind: record).
+  - Receiving the sheets is not an adjudication.
+- **Consequence of his authorship:** he cannot be the independent assessor of H's description. His statement about H conforming is the author's own claim. It is not independent assessment.
+
+**Pia**
+- **Author:** none is stated. She did not author the description.
+- **Actor:** she is the clerk.
+- **Operations**
+  - Logging (record).
+  - Assigning from the rota (a mechanical selection that applies the rota; kind: construct).
+  - Issuing sheets, opening envelopes, passing sheets and posting the letter (kind: relay or carrying out a step).
+  - Computing the ranking (a fixed-formula transformation).
+- **Not decide or adjudicate.** The method's examples name no "compute" kind, so I classed the ranking closest to a computation under a fixed formula.
+
+**Lu**
+- **Author:** none is stated.
+- **Actor:** he is the operator in S.
+- **Operations**
+  - Running the nightly assignment job (carry out).
+  - Under Plan F, pressing `send` (relay or carry out).
+- **Not decide or adjudicate.** The award under Plan F is made by the system rule (both scores ≥ 8), not by Lu.
+
+**Status-report statements**
+1. "Ranking in H is a human judgement because Pia computes it": **rejected.**
+   - Who performs an operation does not decide its kind.
+   - A person who carries out a step does not adjudicate by doing so.
+   - Pia applies a fixed formula, and the facts show no authority admitting her to adjudicate.
+   - The ranking is an input to the chair's decision, not the decision.
+2. "Lu's step is human adjudication": **rejected.**
+   - Pressing `send` relays a result the system already produced.
+   - Nothing in the facts shows an admission making it adjudication.
+   - The chair's weekly list comes after the award, so it is not a decision either.
+   - The award is an automated result substituted for G2's required human decision.
+
+## Model check
+
+**Established:** the zero-diagnostic result establishes structural conformance of the formal model to the checker's rules. That means closed syntax, types, identities, references, bases and mechanically decidable predicates. It is evidence for semantic review.
+
+**Not established:**
+- That the model faithfully represents the process (semantic fidelity).
+- That tenant H meets G1–G4. Execution conformance needs its own evidence.
+- That Jon holds decision authority.
+- That the independence conditions hold.
+- That the model is a valid a_c model. That needs semantic acceptance as well, and a checker cannot claim the semantic or authority subset without an exact decision contract the model supplies.
+
+Jon's statement therefore overreaches. He is also the author of H's description, so it is not independent assessment. On the evidence given, the predicate "H conforms to G1–G4" is undecided (`indeterminate`).
+
+## Plan F
+
+**Result: `falsified`.**
+
+The deciding facts are two counterexamples, each of which falsifies its obligation by rule.
+
+1. **Part 1, both tenants.**
+   - The second assessor reads the first assessor's score and reasons and marks agree or disagree.
+   - This merges the two required independent assessments. G1 says neither assessor sees the other's score or reasons before both are recorded.
+   - No second score of 0–10 with reasons is produced, so G1's two-assessment requirement fails.
+   - G3's "the two scores it used" fails with it.
+   - The lost independent assessment has no applicable closed result.
+2. **Part 2, tenant S.**
+   - The system issues the award when both scores are 8 or higher.
+   - This substitutes an automated result for the chair's decision that G2 reserves to a person.
+   - Lu pressing `send` and the chair's weekly list do not restore the decision.
+   - G3 also fails, because no chair reasons are recorded for these awards.
+
+The rule for such a plan is that the binding's conformance for that obligation is `falsified`. A known failure survives every join of the conjunction. The conjunction therefore cannot be `satisfied`. For H the falsifier is part 1 alone. For S it is parts 1 and 2.
+
+**The agreement figures.**
+- In 4 of 200 applications the scores differed by more than one point, so 196 of 200 (98%) were within one point.
+- This is matching outputs, which does not discharge lost independence or authority.
+- The figures come from independent scoring. They do not show what scores anchored on a visible first score would be, so they are evidence on a different basis.
+- They say nothing about whether the chair would have agreed with the 8-or-higher auto-award.
+
+**The savings.**
+- Cutting cost by 30% and time by six working days is a convenience. It does not weaken an obligation.
+- G4 may well be satisfied, but a `satisfied` for G4 does not count toward G1 or G2.
+- Only Ama can weaken G1 or G2, by a change to the WHAT at its owning layer. The finance office or a tenant cannot.
+- The cost and time figures also lack a stated unit and boundary, so on their own they support no conformance claim.
+
+## No method source
+
+- The operation-kind vocabulary does not name the kinds "compute", "assign" or "log". I classed them by nearest kind and said so.
+- The conjunction's declared rule for choosing among non-satisfied values is not given in the task. I relied on the §11 rule that falsifies the binding for that obligation.
+- Which results are mandatory is not declared. I assumed G1–G4 are all mandatory.
+- The method does not define "working day" or the meaning of "notified" (sent, delivered or posted). These affect G4's measure boundary.
+- The facts record no grants for Jon, Hamid or the other roles, so the authority admitting each chair was assumed from G2.
+- The facts do not say how G1's "different people, not the applicant" is evidenced.
+- The facts do not say whether each tenant's computational calculus satisfies its laws.
+- The facts do not say who authored the formal model or which checker produced the zero diagnostics.

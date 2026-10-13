@@ -1,0 +1,54 @@
+# console log for qualification/runs/C3S-03/TASK-r1
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-13T22:39:25Z
+# step TASK-r1: python3 -I qualification/instruments/bounded_step.py --cap 110000 --run-dir qualification/runs/C3S-03/TASK-r1 --step-id TASK-r1 --card qualification/cases/C3S-CARD.md --block METHOD=standards/frames/traversal-task-f.md --block TASK=qualification/cases/C3S-03/TASK.md --model sonnet
+**1. `ev-101` and `ev-102`**
+- Cause is not established. The predicate is "cause is established between the two events". Cause comes only from an admitted causal claim under competent authority and evidence. Timestamp, adjacency, a shared subject, a shared actor and correlation do not create cause.
+- The projection's `causally_precedes_event(ev-101, ev-102)` therefore has no admitted basis.
+- Cause would be established by a `RelationClaim` of kind `causally_precedes_event`. It needs claimant authority and evidence, a `claim_admission` judgment of `admitted`, an admitted claim-admission event, and a complete semantic cut with its judgment. The edge must also keep the event-causation graph acyclic.
+- No claim was submitted, so the claim judgment was not performed. It has no closed result and must not be read as `indeterminate`. The recorded edge is not an admitted relation.
+
+**2. `ev-103`**
+- The operator's edit is not lawful. Events are immutable, and the event identity binds the payload digest. Editing the payload while keeping the id leaves the stored payload with a mismatched digest. That is a structural defect and refuses under `event_admission`, as `refusal(constraint)`, which maps to falsified. No rewrite or re-identification is permitted.
+- A lawful correction adds a new immutable event through the full claim-admission cut. The cut contains the claim, `j_c`, the event, `j_e`, the materialised `corrects_event(new, ev-103)`, the successor frontier, and `j_a`.
+- Both events stay. Later projection changes only through an explicit selection law. The original `ev-103` must be restored to its admitted content, since the correction does not erase its target.
+- The value the correction carries (14 or another) is not stated in the task. It must come from evidence and authority.
+
+**3. `L-9`**
+- The edge is not lawful. `causally_precedes_occurrence` requires an `Occurrence` source and an `Occurrence` target. Its source `ev-107` is a `FrameworkEvent`. AC-004 relation typing and the closed relation-families table decide this.
+- It is a wrong-sort edge, `refuse_wrong_type`, refused at occurrence admission. The stop is `refusal(constraint)`, which maps to falsified, with the wrong source sort as the counterexample.
+- The edge is not repaired by relabelling. `causally_precedes_event` needs an event target, and an event-to-occurrence cause has no declared kind.
+- The facts do not say whether `ev-107` was admitted or whether any causal claim exists. Even so, the edge fails on typing.
+
+**4. Reorder policy**
+- `observed_at`, latest first, may order eligible facts so a projection selects current stock. It must be explicit, with its comparison law, basis and admitting authority, and it must act over a complete frontier. A latest-only summary does not prove completeness.
+- The coordinate gains no semantic, admission, causal or decision authority. So it may not decide whether a pending reorder is approved. That needs a judgment by a decision authority holding an owner-issued grant.
+- It also may not create cause or admit anything. The policy's use of "greatest `observed_at`" as the approval decision is outside the coordinate's lawful role.
+
+**5. Stopped occurrences**
+- **`occ-23`:** the stop is `hold`, which is `indeterminate`.
+  - Its predicate is "the application can reach its declared result on the exact basis".
+  - The residual is `stale_frontier`, on the `frontier_projection` judgment. The newest frontier is unobserved.
+  - Re-entry is to construct a new exact frontier and projection.
+  - It is not `out_of_frame`, because every relation and capability was declared and exercised.
+  - The `stale_frontier` residual and its re-entry survive beside the value.
+- **`occ-24`:** the stop is `partial_effect`. The facts do not say the effect ended, and an error response is not evidence that it ended. So I read it as `partial_effect(unknown)`, which is `indeterminate`.
+  - The disposition is `partial_effect(unknown)`, which gives `completion_unknown`.
+  - The decision is `partial(unknown)`, on the predicate "the intended effect occurred".
+  - If effect evidence establishes that the effect ended, it becomes `partial_effect(ended)` and `partial(ended)`, which are falsified. The post-state defeating the intended outcome supports this, but the ended fact is the missing evidence.
+  - What must survive: the `partial_effect` residual and the dispatched invocation.
+  - Also the named part that occurred (3 of 5 SKUs decremented) and the bounded post-observation.
+  - Also the explicit disposition and re-entry before any further effect.
+  - It must not be treated as absent or as complete. Neither core value records that the subject changed, so the residual carries that fact.
+- **`occ-25`:** the stop is `refusal(constraint)`, which is `falsified`.
+  - It is a refusal at `occurrence_admission`.
+  - A local `identity_depends_on` ref `r-77` resolves to no record in the model's closed population. That is dangling, which refuses under AC-003.
+  - It is not `gap`, because `gap` applies only where resolution is still open. An example is an external resolution not yet evaluated.
+  - The dangling ref `r-77` is the counterexample. It survives as a known failure through every join, and no occurrence identity is minted.
+  - The refusal names no basis condition. If `r-77` were an external ref with unevaluated resolution, the stop would instead be `gap`, which is `invalid_basis`.
+
+**No method source**
+- none
+- The facts leave these open: whether `occ-24`'s effect ended, whether `r-77` is local, and whether `ev-107` was admitted. I answered conditionally where they matter.
+# step exit 0
+# end 2026-10-13T22:39:56Z

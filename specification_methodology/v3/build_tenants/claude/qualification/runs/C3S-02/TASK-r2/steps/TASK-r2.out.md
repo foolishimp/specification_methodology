@@ -1,0 +1,90 @@
+## Transformation record
+
+```text
+t = {
+  id: MISSING. No transformation identity is stated.
+  traversal: v-req-to-design-3
+  domain_model: M-billing@r3. Basis calc-1, signature sig-billing-1, source basis 4a1f9e20, grammar cj-1,
+      local population {REQ-12, LAT-12a, RES-4}, External_M {ext:iso-4217-minor-units}.
+      MISSING: the exact model content identity (digest) of r3.
+  codomain_model: M-billing@r4, content digest sha256:7d…e9 (truncated as given). Same basis and signature, cj-1,
+      local population {REQ-12, LAT-12a, RES-4', DES-12.1}.
+      MISSING: the digest of r4's External_M and resolution map as a separate committed item. The subject says only that it is the same.
+  context: W-invoice-rounding
+  owner: Tomas
+  scope: design records derived from REQ-12
+  basis: 4a1f9e20 (calculus basis calc-1)
+  operation_authority: G-88, issued by Ravi. It permits adding design records under REQ-12.
+      It does not permit edits to requirement, latitude or residual records.
+  preconditions: MISSING. None are stated beyond the traversal's stop contract.
+  preservation_relation: MISSING. No typed equality relation is named.
+      The only available proof is byte-identity under cj-1 (alternative 1).
+  preserved: REQ-12 (a1…01 = a1…01), LAT-12a (a1…02 = a1…02)
+  introduced: DES-12.1 (complete record, owner Tomas, digest b2…04)
+  removed: none declared
+  UNCLASSIFIABLE: RES-4. It is in both models with the same id but a different digest (a1…03 to b2…03).
+      A changed field bars it from preserved. It is present in r4, so it cannot be removed.
+      It is present in r3, so it cannot be introduced.
+      The closed local delta Local_b = P ⊔ R and Local_b' = P ⊔ N therefore cannot be proven.
+  external_preserved: the resolution tuple for ext:iso-4217-minor-units, with every field equal in r3 and r4
+      (target iso4217@2024-06; kind published table; domain currency data; relation pinned; basis 4a1f9e20; evidence EV-iso-pin-2)
+  external_introduced: empty
+  external_removed: empty
+  external_resolution_witnesses: one is required for the preserved tuple (decision: equal, both tuples field-equal).
+      The tuples are field-equal on the stated facts, but no witness record is on file.
+      MISSING: the witness evidence identity. EV-iso-pin-2 is the resolution evidence, not stated as witness evidence.
+  residuals: RES-4 carries on in r4 with an edited consequence. No authorised disposition is on file.
+  evidence: RN-31. No disposition evidence for RES-4.
+  provenance: performed by Tomas on 2026-10-11. Nothing further is stated.
+  stop_states: the traversal's stop contract is "stop on any change to a requirement record".
+      MISSING: the core-value mapping per stop value.
+      On the stated facts REQ-12 is unchanged, so this stop is not shown triggered.
+  invalidation: MISSING
+  re_entry: MISSING. RES-4's own re_entry is Requirements, but that belongs to the residual, not to t.
+}
+```
+
+Defects that bear on the record:
+- **RES-4 edit:** this is an edit to a residual record. G-88 and the traversal scope (design records) do not cover it. The edit is therefore outside `operation_authority` and `scope`, which AC-013 says must equal or restrict the traversal's (the traversal's own operation authority is stated only as G-88).
+- **Residual conservation:** a changed residual with no authorised disposition on file also breaches AC-009.
+
+## Application
+
+The record supports `refusal(constraint)`, core value `falsified`, for the predicate "the application yields its declared result on the exact basis". The counterexample is RES-4. It is edited, so it fits none of preserved, removed or introduced, and the edit exceeds G-88 and the traversal scope. Because of this, r4 is not available as a lawful proposed successor `M_b_prime*` (not `satisfied`). The missing r3 content digest and the missing preservation relation are basis conditions. They are reported beside it as a separate `invalid_basis` result whose repair is to supply them.
+
+## Judgment record
+
+```text
+Judgment = {
+  id: MISSING
+  kind: MISSING (the judgment kind and any functor-kind classification are not stated)
+  subject: M-billing@r4
+  subject_digest: sha256:7d…e9
+  context: W-invoice-rounding
+  owner: MISSING (Nadia is the evaluator; the owner coordinate is not separately stated)
+  scope: conformance of DES-12.1 to REQ-12 within LAT-12a
+  basis: 4a1f9e20 (the subject's basis). The judgment's own basis binding is not stated; the build is b-40.
+  evaluator: Nadia, independent design reviewer
+  authority: evaluation authority over billing design records
+  decision: DES-12.1 conforms to REQ-12 within LAT-12a.
+      This is core value satisfied, for that predicate only.
+  evidence: RN-31; test run TR-205 on build b-40
+  provenance: MISSING beyond the evidence listed
+  decided_at: 2026-10-12T09:00Z
+}
+```
+
+This is not a judgment of the transformation's lawfulness, of the RES-4 edit, or of acceptance. It leaves r4 unchanged. It states no result for the RES-4 credit-note question, which DES-12.1 assumes away. `RN-31` is also the step's own evidence, so the two are not independent on that item.
+
+## Promotion
+
+Promoting r4 needs an explicit relation between the unchanged r4 and an admission or acceptance judgment by Ravi, who holds acceptance authority for billing design records. Nadia's evaluation judgment cannot stand in for it. Before that, r4 needs a lawful successor. Either RES-4 is restored byte-identical, or its change is an authorised disposition by competent authority, with RES-4's owner Lena presumably holding the semantic side and the operation grant still to be named. The missing coordinates must also be supplied (see No method source).
+
+## No method source
+
+- No method rule says who holds operation authority for editing a residual, so I cannot name the holder.
+- The method gives no format for transformation or judgment identities.
+- It gives no rule for choosing the judgment kind.
+- It does not map the judgment's wording "conforms" to a core value. I read it as `satisfied` for the stated predicate.
+- It does not fix how a stop contract worded as free text maps to stop values.
+- I could not name Lena as holder of semantic authority over the RES-4 disposition from the method alone. I took it from her ownership of RES-4 in the subject.
