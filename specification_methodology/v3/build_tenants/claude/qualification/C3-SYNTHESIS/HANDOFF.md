@@ -17,7 +17,7 @@ This was read as rebuilding the Claude candidate on its own base at `31f28f9`, n
 
 The method is prose. Its 23 members in `standards/` are Markdown, and so are the frames in `standards/frames/`. Code exists only as qualification tooling under `qualification/`, covered below.
 
-| New common obligation | Where the candidate meets it |
+| New common obligation | Where the candidate addresses it (same-family checks only) |
 |---|---|
 | Restated on the axioms, relation 1 (foundation to law) | FOUNDATIONS §3 states premises P0 to P6, each with its standing: recovered, independent or derived. It owns the four-column table format and indexes 21 families of deciding rules. Each family has its table in its owning member, at the point where an actor enters it. |
 | Relation 2 (ownership and use) | Members use the shared contracts where their actors apply them. PROFILES §1 owns the profile import rule. FOUNDATIONS §2 owns imports between members, and PRODUCT_DEFINITION §5 refines it. |
@@ -78,13 +78,17 @@ C3S-01 to C3S-04 ([AS1](reviews/AS1.md)): all 10 runs `falsified` under strict g
 | C3S-01 A (REFERENCE_FRAME) | reached | format only (sentence limits) |
 | C3S-01 B | reached | the reopen list was missed |
 | C3S-02 (AXIOMATIC_CALCULUS) | reached | r1 lacks a scope ground and offers a grant as a cure; r2 fails on format only |
-| C3S-03 (TRAVERSAL_OCCURRENCE) | not reached | occ-24 given `indeterminate` where `falsified` was required |
+| C3S-03 (TRAVERSAL_OCCURRENCE) | not reached under this oracle | occ-24: both actors gave `indeterminate`; the new oracle requires `falsified` |
 | C3S-04 (EXECUTIVE_BASELINE) | reached in all five rows | no residual owner named; format |
 
 Method-text findings from AS1, all open:
-- **MT-1:** REFERENCE_FRAME §10 says a change that "clarifies an activation" is non-material and reopens nothing. The predecessor has no such clause. This is a conservation defect to repair or justify.
+- **MT-1:** REFERENCE_FRAME §10 says a change that "clarifies an activation" is non-material and reopens nothing. The predecessor has no such clause. The clause is inherited: it was already in the base at `31f28f9` and was not introduced by this rebuild. It is a conservation defect to repair or justify.
 - **MT-2:** REFERENCE_FRAME §10 gives no standing for an out-of-family activation's result.
-- **MT-3:** TRAVERSAL `partial_effect(ended)` requires separate proof that the effect ended, which pushed both actors to `indeterminate`. The split made in this rebuild should be re-checked against the 12 October meaning.
+- **MT-3, and an oracle conflict on occ-24.** Two independent oracles derived from the same predecessor disagree.
+  - The first pass's F-03 oracle, as amended by R25, requires occ-24 `indeterminate`. Both actors answered that.
+  - Tonight's C3S-03 oracle requires `falsified`.
+  - The base text already made `partial_effect` conditional on what the effect evidence establishes. This rebuild split that condition into `partial_effect(ended)` and `partial_effect(unknown)`, which is consistent with the 12 October meaning: `falsified` only on demonstrated non-attainment.
+  - Whether occ-24's facts demonstrate that the effect ended decides the question. It needs a ruling, preferably cross-family, and neither oracle has been edited. MT-3 is one possible cause, not a demonstrated one.
 - **MT-4:** REFERENCE_FRAME §5 `activation_refusal(authority)` does not separate an authority that was refused from one that was never recorded.
 - **MT-5 and MT-6:** minor.
 
