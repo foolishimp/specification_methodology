@@ -37,17 +37,18 @@ evidence bytes or reconstructed by a declared ordered byte-range projection of
 successor-owned members, with literal reconstruction bytes where necessary.
 The source member path and digest resolve in the successor publication manifest;
 reconstructed bytes have the exact historical member digest in the historical
-manifest. Every required fragment resolves under the recorded semantic-address
-rule. Missing, duplicate, altered, incomplete or unbound material refuses the
-affected verification. Historical retrieval is optional when this complete
-material is available; it is not a hidden fallback required by admission.
+manifest. The material records the semantic-address rule, and every required
+fragment resolves under it. Missing, duplicate, altered, incomplete or unbound
+material refuses the affected verification. Re-entry requires authentic complete
+verification material; an installed predecessor supplies no exception to these
+checks and is not an implicit fallback.
 
 The [derivation resource](verification_material/DERIVATION_SOURCES.json) is
 distribution evidence for these byte predicates, not a second constitutional
 surface. It adds no field to the calculus or profile basis record; the existing
 publication-manifest digest binds its declared membership. Source projections
-bind the exact current member digests;
-changed sources require new verification material before reuse. A successful
+bind the exact current member digests; changed sources require new verification
+material before reuse. A successful
 reconstruction establishes content and reference checks only. Acceptance of
 the historical cut, semantic derivation, successor admission and publication
 remain separate judgments at their existing owners.

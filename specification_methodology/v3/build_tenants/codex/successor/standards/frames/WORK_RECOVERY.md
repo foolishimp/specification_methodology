@@ -20,7 +20,7 @@ its roles or outcomes. An absent basis remains unresolved; this view supplies
 none. The source owners and original work/attempt coordinates remain material
 where the selected recovery contract requires them.
 
-Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Work/recovery specialization
 

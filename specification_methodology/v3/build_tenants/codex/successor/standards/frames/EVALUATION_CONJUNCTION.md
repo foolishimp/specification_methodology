@@ -269,17 +269,16 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Bind
-
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Acquire
 
@@ -290,7 +289,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Evaluate
 
@@ -313,7 +312,7 @@ path remains. This is assessment
 evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Conjoin
 

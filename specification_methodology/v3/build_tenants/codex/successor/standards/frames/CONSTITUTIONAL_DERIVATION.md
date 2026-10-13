@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Transformation-admission specialization
 
@@ -21,7 +21,7 @@ commitments do not choose an admission predicate, quorum or supported topology.
 | Premises | Conditional consequence | Particular deciding owner and policy |
 |---|---|---|
 | F2, F3; current entity and predecessor are material | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
-| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants; the domain declares material seams and proves far-side independence where claimed. |
+| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence. |
 | F6; proposal, judgment and durable admission are distinct | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
 | F2, F5; supported forms or commit effects are unresolved | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
 
@@ -500,17 +500,16 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Bind
-
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Acquire
 
@@ -521,7 +520,7 @@ context or capability returns pressure for refinement, support, re-entry or a
 truthful stop. Acquisition cannot silently drop a governing obligation.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `ebf50ae7f258b25ed1580aa8e7a8ab909a0b29205ab1d8eb0e9abc7f8882089b`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920`.
 
 ## Transform
 

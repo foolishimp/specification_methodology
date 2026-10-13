@@ -31,7 +31,7 @@ For intake triage, lawful re-entry, carrier selection or execution-contract
 admission, use the index's triage/carrier route. For a typed construction handoff
 or transformation admission, use its constitutional-derivation route. Resolve
 the selected view from the verified basis; its owner sections and digests make
-the initial acquisition reproducible without an author's private selection.
+the initial acquisition reproducible from that published route.
 For another task use its relevant route or directly acquire the deciding owners.
 Select only available material in the verified basis: a cut without a curated
 view still uses its exact owner clauses; a mutable candidate is no fallback.

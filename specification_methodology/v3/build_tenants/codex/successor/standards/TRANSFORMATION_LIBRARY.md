@@ -127,7 +127,7 @@ commitments do not choose an admission predicate, quorum or supported topology.
 | Premises | Conditional consequence | Particular deciding owner and policy |
 |---|---|---|
 | F2, F3; current entity and predecessor are material | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
-| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants; the domain declares material seams and proves far-side independence where claimed. |
+| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence. |
 | F6; proposal, judgment and durable admission are distinct | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
 | F2, F5; supported forms or commit effects are unresolved | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
 
@@ -139,7 +139,6 @@ permitted direct/composite/nested forms remain domain policy. This argument
 neither derives those choices nor creates an additional validation pass.
 
 ## Bind
-
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings

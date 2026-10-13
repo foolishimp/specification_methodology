@@ -22,6 +22,9 @@ old = {row["path"]: row for row in inventory["members"]}
 rows = []
 repo = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"],
                                   cwd=base, text=True).strip())
+if args.source_commit:
+    args.source_commit = subprocess.check_output(
+        ["git", "rev-parse", args.source_commit + "^{commit}"], cwd=repo, text=True).strip()
 for path in sorted(root.rglob("*")):
     if not path.is_file():
         continue
