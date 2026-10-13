@@ -917,9 +917,10 @@ layer that owns the missing truth.
 - A state-value change preserves topology only when every material entity,
   relation, lifecycle, authority, capability, adjacency, and seam is preserved;
   otherwise the activation requires topology recharting.
-- The baseline result family is `satisfied`, `falsified`, `indeterminate`,
-  `out_of_frame`, or `invalid_basis`. Missing context, evidence, authority, or
-  capability cannot be converted to satisfaction.
+- Foundations owns the five core verdicts and their complete result record.
+  A frame preserves its exact predicate, domain outcome and cause, evaluation
+  performance and extent, effects, evidence and unresolved obligations.
+  Missing context, evidence, authority or capability cannot become satisfaction.
 - Coverage is relative to an exact workspace, governed outcome, basis, known
   evaluation inventory, frame set, and time. It covers material interactions,
   semantic/operation/decision authority, failure, capability, separately
@@ -1007,8 +1008,9 @@ layer that owns the missing truth.
   path. Excluded threats give no retention claim; hypothetical hostility and
   internal location alone establish neither applicability nor trust. A repair
   proposal acquires obligation only through its owner.
-- Executive consumes that technical triage with the complete Product view and
-  current MVP or release mandate. It assigns priority, determines the effect on
+- Executive consumes that technical triage with the bounded Product frontier
+  material to its decision and current MVP or release mandate. It preserves
+  unresolved obligations outside the acquired view. It assigns priority, determines the effect on
   the current promotion boundary, applies exactly one existing `STDO-UP-020`
   disposition, and selects only an already-authorized next action. Severity,
   priority, frame result, boundary effect, and disposition remain distinct.
@@ -1026,10 +1028,11 @@ layer that owns the missing truth.
   or re-enters rather than enlarging the Executive frame.
 - For work requiring coordinated engagement, Executive attempts Worker activation; an
   activation refusal returns directly to Executive and creates no Worker result;
-  after lawful activation, `satisfied`, `falsified`, `indeterminate`, and
-  `out_of_frame | invalid_basis` map exclusively to `candidate_ready`,
-  `refused`, `incomplete`, and `re_entry_requested`. Its Worker result returns
-  to Executive. For a candidate, Executive either dispositions directly when
+  after lawful activation, the Baseline's Work result binds each original
+  outcome and cause to the exact bounded-availability predicate under the core
+  rule. A verdict alone cannot recover the finer outcome; availability does not
+  establish fitness or acceptance. Its Worker result returns to Executive.
+  For a candidate, Executive either dispositions directly when
   independent review is not required or activates Reviewer, receives the closed
   review result, and then applies exactly one existing `STDO-UP-020`
   disposition.
