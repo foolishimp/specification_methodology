@@ -48,7 +48,7 @@ that must catch it.
 | C-06 Report volume as traffic | a 2.4 GB report presented as model spend | ACTIVATION §6 | report volume and model traffic are separated in the cost record | not run |
 | C-07 Operational variable missed at intake | a provider permission profile that changed before activation | ACTIVATION §1 | the intake names operational variables; a change returns invalid_basis before effects | not run |
 | C-08 Method as amplifier of a wrong vector | engine completeness delivered while the Product outcome regressed | SPEC_METHOD §3 | progress is judged only against the selected outcome; the evidence surface cannot enlarge it | not run |
-| C-09 Deterministic drift into probabilistic responsibility | a kernel component deciding what a worker must decide | PROFILES §2, FOUNDATIONS §2 (roles as relations) | the boundary is declared and the misallocation returns re_enter at the owning relation | not run |
+| C-09 Deterministic drift into probabilistic responsibility | a kernel component deciding what a worker must decide | ODD §5 Probabilistic compute, FOUNDATIONS §2 Work boundary | the boundary is declared and the misallocation returns re_enter at the owning relation | not run |
 | C-10 Scenario patched around a framework defect | a fixture simplified to dodge a kernel bug | SPEC_METHOD §4 | owner triage before repair; the framework is fixed, the fixture restored | not run |
 | C-11 Closure by approval | a work item closed on reviewer sign-off with its stated condition unmet | EVALUATION §5 | closure follows the stated condition; the reviewer result is input only | not run |
 | C-12 Carrier churn as findings | a review whose findings are all ticket, column and filename matters | ACTIVATION §6 | findings are judged by ambiguity removed; carrier findings are costed as churn | not run |
@@ -142,11 +142,11 @@ whose task returns a result.
 | 14 | Actors redistribute work during execution, including work with effects of uncertain completion | The permitted reconfiguration retains outstanding obligations and result dependencies, resolves material effect uncertainty before dependent action, and preserves authority and required independence. Self-organisation supplies no exemption from these conditions. | ACTIVATION §1 Configuration (Reconfiguration), §3 Effects, §5 | CD-01 |
 | 15 | An arrangement is called optimal because it is familiar, persistent or self-organised | Adequacy and optimality remain separate claims. An optimality claim needs stated objectives, constraints and comparison scope with supporting evidence. Different models or objectives can favour different configurations. | ACTIVATION §1 Configuration (Optimality) | L-15 optimality is a separate claim |
 | 16 | A coordinator receives a compact task result that omits a blocker material to delivery | Small size is insufficient. The coordinator retains the longer-term outcome and acquires the information needed for the next decision through its permitted frame inputs. Missing information cannot be assumed favourable. | ACTIVATION §1 Configuration (Coordination across tasks), §7 | L-16 a compact result hides no blocker |
-| 17 | A material dependency changes or a new observation invalidates an earlier claim | Affected applicability and validity are checked before reuse, including when the candidate's bytes are unchanged. Demonstrably independent supported work is kept. | ACTIVATION §7, §1 Transitions (Discovery); EVALUATION §2 | T-06 |
+| 17 | A material dependency changes or a new observation invalidates an earlier claim | Affected applicability and validity are checked before reuse, including when the candidate's bytes are unchanged. Demonstrably independent supported work is kept. | ACTIVATION §7, §1 Transitions (Discovery); EVALUATION §2 | T-06; L-17 for unchanged bytes |
 | 18 | A task packet contains relevant rules but lacks material context or authority | A rule packet alone is insufficient. The activated frame binds the contract, subject, evidence, capability and permitted effects required for the task. | REFERENCE_FRAME §11; ACTIVATION §1 Configuration (Distinct relations), §2 (Activation) | L-18 a rule packet is not an activation |
 | 19 | A fresh actor has no private history, and a retained summary disagrees with the current workspace | The actor acquires the current subject and its authoritative inputs, corrects the stale account, retains applicable work and continues within its grant. Discarding context does not erase the workspace or prove an uncertain external effect absent. | ACTIVATION §5 The workspace and an actor's account, §3 Effects | CD-03 |
-| 20 | An interruption leaves work partly written | Recovery uses the current workspace and the applicable work state. It does not erase progress or invent a completed assessment. | ACTIVATION §5 (Resumption; The workspace and an actor's account); FOUNDATIONS §4 Results (Not performed) | T-05 |
-| 21 | A parse or map succeeds | The claim stays mechanical until independently sufficient semantic and practical evidence exists. | EVALUATION §2, §7 (Derived guidance); AXIOMATIC_CALCULUS AC-018, AC-019 | T-07 |
+| 20 | An interruption leaves work partly written | Recovery uses the current workspace and the applicable work state. It does not erase progress or invent a completed assessment. | ACTIVATION §5 (Resumption; The workspace and an actor's account); FOUNDATIONS §4 Results (Not performed) | T-05; L-20 for partly written work |
+| 21 | A parse or map succeeds | The claim stays mechanical until independently sufficient semantic and practical evidence exists. | EVALUATION §2, §7 (Derived guidance); AXIOMATIC_CALCULUS AC-018, AC-019 | T-07; L-21 for practical evidence |
 | 22 | A change to work carriers or process is proposed as new law | The claimed obligation is justified by its purpose and material relation, or identified as unsupported overhead. | ACTIVATION §6; SPEC_METHOD §4; TICKETS §5 Carrier selection | L-22 new law states its purpose |
 | 23 | The same requirements are realised by software, a human team or a mixed process | Each build tenant supplies its computational calculus, concrete execution binding and conformance evidence. The requirements decide fitness; the kind of executor alone neither rejects nor accepts the realisation. | SPEC_METHOD §11 rules 1, 2 and 4 | CD-02 |
 | 24 | A faster execution plan merges two required independent assessments or substitutes an automated result for a required human decision | Matching outputs or lower cost cannot discharge the lost independence or authority obligation. The binding fails conformance. | SPEC_METHOD §11 rules 2 and 4; EVALUATION §3 | CD-02 |
@@ -160,17 +160,20 @@ whose task returns a result.
 
 Coverage. Eleven discriminators are exercised by cases: 4 (T-03), 5
 (T-04), 7 (T-01), 13 and 14 (CD-01), 17 (T-06), 19 (CD-03), 20 (T-05), 21
-(T-07), and 23 and 24 (CD-02). For 4 and 5 the case tests part of the
-expected distinction, and checks L-04 and L-05 cover the rest. The other
-twenty are exercised by logical-review checks only. No case has recorded
-a pass. Runs by fresh constructors exist for T-01, T-03, T-04 and T-05,
+(T-07), and 23 and 24 (CD-02). For 4, 5, 17, 20 and 21 the case tests
+part of the expected distinction, and checks L-04, L-05, L-17, L-20 and
+L-21 cover the rest. The other twenty are exercised by logical-review
+checks only. No case has recorded a pass. Runs by fresh constructors exist for T-01, T-03, T-04 and T-05,
 and for R-01 and R-02, which exercise no discriminator; each run bound an
 earlier revision of this corpus and none has been assessed, so none is
 actual-use evidence for this revision (EVALUATION §7). T-06, T-07, CD-01, CD-02 and CD-03 have not
 been run. A case that has not been run on this revision and assessed has no
 result for it: it is a planned assessment without a closed result, never a
 pass ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed), and
-the logical review of its discriminators does not stand in for it.
+the logical review of its discriminators does not stand in for it. No
+logical-review check is recorded for this revision: each is a planned
+assessment without a closed result until a review records it
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed).
 
 Purpose and material relation: a reader sees, for each discriminator,
 whether actual use or only a reasoned reading exercises it and which

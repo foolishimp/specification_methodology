@@ -167,7 +167,7 @@ which the commitments do not supply:
 | P3 (independent), P5 (derived from P0 and P6); (i) | every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](#2-signature), [§3](#3-typed-records), [AC-001](#ac-001-closed-signature), [AC-003](#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family's sorts, value domains, reference domains and admissible kinds: the owning signature |
 | P3 (independent), P4a (independent) | identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](#ac-002-scoped-identity), [AC-004](#ac-004-relation-typing) | each relation kind's sorts, qualifiers and any declared symmetry: the owning signature |
 | P6 (independent), P4b (derived from P0 and P2), P3 (independent) | copying, interpreting, encoding, evaluating or transporting a record transfers no authority, and every record, model and result binds an exact basis, mixed bases only under an owned composite-basis relation | [AC-005](#ac-005-authority-conservation), [AC-006](#ac-006-basis-coherence) | each composite-basis relation: the owner it names |
-| P5 (derived from P0 and P6), P6 (independent) | a constraint's judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal is falsified by the violation it names, or invalid_basis where it names a condition of the basis the operation acts on, the basis taking precedence | [AC-007](#ac-007-constraint-and-refusal); [§5](#5-traversals-and-functor-kinds), the stop algebra | the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature's stop contract; the stop mapping of one traversal: its record, under §5 |
+| P5 (derived from P0 and P6), P6 (independent) | a constraint's judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal's cause is part of its value, a demonstrated violation it names mapping to falsified and a condition of the basis the operation acts on to invalid_basis | [AC-007](#ac-007-constraint-and-refusal); [§5](#5-traversals-and-functor-kinds), the stop algebra | the cause of a refusal that names both a demonstrated violation and a condition of the basis, `refusal(constraint)`, with the basis condition reported beside it as its own invalid_basis result: this member, in AC-007; the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature's stop contract; the stop mapping of one traversal: its record, under §5 |
 | P1 (independent), P6 (independent) | two values differ only through a declared latitude or transformation relation; silence is not latitude, and latitude grants no authority beyond its owner, scope, basis and invalidation law | [Latitude](#latitude), [AC-008](#ac-008-explicit-latitude) | each latitude record: its owner |
 | P4b (derived from P0 and P2), P6 (independent) | a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](#residual), [AC-009](#ac-009-residual-conservation) | each residual kind's domains: the owning signature; each disposition: the competent authority |
 | P0 (recovered), P2 (independent), P4b (derived from P0 and P2) | material closure is the least lawful record closure, defined only on exact inputs and claiming no minimal size or cost; a projection contains the closure, records its seams and never silently trims a required member to fit a carrier or capability budget | [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection) | the seed set and the relation family: the evaluation that applies them, for a step [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) |
@@ -543,29 +543,45 @@ exact basis" (P5, P6):
 |---|---|---|
 | declared result | satisfied | the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results) |
 | `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |
-| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open, as for a required reference not yet resolved; the result is undefined on this basis until it is supplied. A reference established to resolve to nothing is dangling and refuses (AC-003) |
-| `refusal(constraint)` | falsified | the record, model, carrier, transformation or application under judgment violates a declared law of this member or a constraint of its signature, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015); the violation is the counterexample |
-| `refusal(basis)` | invalid_basis | the refusal names a condition of the basis the operation acts on: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |
+| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model's closed population, and an external reference whose declared resolution has been evaluated and yields no target |
+| `refusal(constraint)` | falsified | every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample |
+| `refusal(basis)` | invalid_basis | the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |
 
 The cause is part of a refusal's value, because a refusal would otherwise
 map to falsified or to invalid_basis according to its cause, and a refined
 value maps to exactly one core value (FOUNDATIONS §4 Results,
-Refinements). A refusal that names conditions of both kinds takes
-`refusal(basis)`, because no decision can be taken on a basis that cannot
-support it. A basis mismatch inside a model or a record, a relation's
-qualifier record included, is mixed bases with no composite-basis relation
-(AC-006): a coordinate of the model or record binds, or a reference in it
-resolves on, a basis that the governing basis relation does not admit, as
-a wrong-basis reference of AC-003 does. Its refusal is `refusal(basis)`,
-in the structural admission that judges that model or record as in every
-other operation, and never `refusal(constraint)` for a violated constraint
-of a signature, even where the signature declares the basis relation.
-One defect can bear on two predicates: a model that violates
-AC-001 is `refusal(constraint)` in the structural admission that judges
-it and `refusal(basis)` in a projection over it, and each outcome answers
-its own predicate. An operation that was not applied has no outcome. A
-stop `gap` is a closed result with the value invalid_basis; it is not the
-absence of a result that
+Refinements). A refusal that names a demonstrated violation of a declared
+law or constraint by the record, model, carrier, transformation or
+application under judgment is `refusal(constraint)`, whatever condition of
+the basis it also names. The basis condition is recorded with the refusal
+and reported beside it as its own `invalid_basis` result, which names the
+basis repair and answers the predicate of the evaluation that the
+condition leaves without a supporting basis, never the operation-outcome
+predicate that the refusal answers
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Predicates travel). A refusal that names only conditions of the basis is
+`refusal(basis)`. A violation inside an input that the operation acts on
+as its basis is a condition of the basis for that operation, not a
+violation by what it judges, as the projection below shows. Purpose and
+material relation: a demonstrated violation is a known failure, which
+survives every join only as a `falsified` result, so a basis condition
+named beside it neither hides the failure nor discards its counterexample,
+and the basis repair stays named (FOUNDATIONS §4 Conjunction of results,
+Survival; P5, P6). A basis mismatch inside a model or a record, a
+relation's qualifier record included, is mixed bases with no
+composite-basis relation (AC-006): a coordinate of the model or record
+binds, or a reference in it resolves on, a basis that the governing basis
+relation does not admit, as a wrong-basis reference of AC-003 does. It is
+a condition of the basis, in the structural admission that judges that
+model or record as in every other operation, and never a violated
+constraint of a signature, even where the signature declares the basis
+relation; a refusal that names only such a mismatch is `refusal(basis)`.
+One defect can bear on two predicates: a model that violates AC-001 is
+`refusal(constraint)` in the structural admission that judges it and
+`refusal(basis)` in a projection over it, and each outcome answers its own
+predicate. An operation that was not applied has no outcome. A stop `gap`
+is a closed result with the value invalid_basis; it is not the absence of
+a result that
 [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)
 records as a gap. A signature's stop contract and a traversal record map
 stops of their own under §5.
@@ -1303,7 +1319,7 @@ is provenance only.
 | #ac-004-relation-typing | conserved | §4 AC-004 |
 | #ac-005-authority-conservation | conserved; authority kinds are defined at FOUNDATIONS §2, the law is here; P4b consumes it | §4 AC-005 |
 | #ac-006-basis-coherence | conserved; basis is defined at FOUNDATIONS §2, the law is here | §4 AC-006 |
-| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified), a basis mismatch inside a model or a record, a relation's qualifier record and a wrong-basis reference included, being mixed bases and so `refusal(basis)` | §4 AC-007; core at FOUNDATIONS §4 Results |
+| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified), a basis mismatch inside a model or a record, a relation's qualifier record and a wrong-basis reference included, being mixed bases, a condition of the basis, so that a refusal naming only it is `refusal(basis)`; new, an added choice of this member where rc.2 states no order between the causes: a refusal that names a demonstrated violation by what is under judgment is `refusal(constraint)` whatever condition of the basis it also names, the basis condition reported beside it as its own invalid_basis result and a violation inside an input acted on as the basis being a condition of the basis, so that no known failure is hidden behind a basis condition; new: `gap` is limited to a resolution that its declared relation has not yet decided, and a reference evaluated to no target is dangling | §4 AC-007; core at FOUNDATIONS §4 Results |
 | #ac-008-explicit-latitude | conserved; the generic form over any two values is FOUNDATIONS §4 | §4 AC-008 |
 | #ac-009-residual-conservation | conserved; P4b consumes it | §4 AC-009 |
 | #ac-010-material-closure | conserved; applied by ACTIVATION §2; new: the gap or refusal is `gap` or `refusal(basis)` by cause, each invalid_basis under AC-007 | §4 AC-010 |

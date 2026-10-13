@@ -15,11 +15,13 @@ the calculus basis is [§8](AXIOMATIC_CALCULUS.md#8-calculus-identity). The
 core result algebra is [FOUNDATIONS §4 Results](FOUNDATIONS.md#results),
 and the effect refinement this profile refines is
 [ACTIVATION §3 Effects](ACTIVATION.md#effects).
-Here occurrence, lineage, frontier and cut name only this profile's sorts
-and relations: `Occurrence`, its `lineage_refs` and typed lineage
-relations, `EventFrontier` and `SemanticAdmissionCut`. They claim neither
-the core's release cut nor its product lineage, nor any other member's
-frontier. A route written `rc.2 #anchor` is into
+Here occurrence, lineage, frontier, cut and projection name only this
+profile's sorts and relations: `Occurrence`, its `lineage_refs` and typed
+lineage relations, `EventFrontier`, `SemanticAdmissionCut` and
+`Projection`. They claim neither the core's release cut nor its product
+lineage, nor any other member's frontier; a `frontier_projection`
+judgment judges a `Projection` record and is not an
+[AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection) projection. A route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/TRAVERSAL_OCCURRENCE_PROFILE.md` and
 is provenance only (P3, P1).
 
@@ -68,11 +70,12 @@ adopted with it and do not follow from the foundations (P1, P6):
   an owner-issued grant.
 
 Standing of the commitments cited: P0 recovered; P1, P3 and P6
-independent; P4b and P5 derived ([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)).
+independent; P4b derived from P0 and P2, and P5 derived from P0 and P6
+([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)).
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
-| P3; F9 imported; I2 | an occurrence model stays an ordinary `a_c` model under one exact basis, and the profile adds sorts and value domains but no record kind | [Imported calculus boundary](#imported-calculus-boundary); [Exact profile identity](#exact-profile-identity) | the closed sorts, reference domains, event kinds, relation families and qualifier domains: this member |
+| P3; F9 imported; I2 | an occurrence model stays an ordinary `a_c` model under one exact basis, and the profile adds sorts and value domains but no record kind; its sorts, reference domains, event kinds and relation families are closed, so an unknown, missing or mistyped element refuses | [Imported calculus boundary](#imported-calculus-boundary); [Closed semantic-object sorts](#closed-semantic-object-sorts), [Finite reference-domain table](#finite-reference-domain-table), [Closed event-kind population](#closed-event-kind-population), [Closed relation families](#closed-relation-families); [Exact profile identity](#exact-profile-identity) | the closed sorts, reference domains, event kinds, relation families and qualifier domains: this member |
 | P3; P4b; I1 | each traversal application is one immutable occurrence; a reapplication mints a new one, and a correction appends without erasing | [Occurrence identity](#occurrence-identity), [OP-003](#op-003-correction-without-erasure), [OP-006](#op-006-immutable-iteration-history) | the identity inputs of an occurrence: this member |
 | P0; P3; I1 | the external subject stays the carrier of its reality; an observation, event or projection describes it and replaces none of it | [OP-005](#op-005-mutable-reality-conservation) | whether snapshot or rollback exists: a separately authorised application of the adopting Product |
 | P6; I3 | no operation is lawful without a matching grant, and functor kind, traversal, operation, executor, actor, grant and invocation stay distinct coordinates | [Mutable-subject effect relation](#mutable-subject-effect-relation) | a territory containment relation in place of exact equality: the adopting Product, in its compatible signature |
@@ -843,24 +846,32 @@ Refined by cause. Where a stop or decision would map to one of two core
 values according to its cause, the cause is part of the refined value,
 written in parentheses as in `refusal(basis)`, and each refined value maps
 once (FOUNDATIONS §4 Results, Refinements). The cause is read from what
-the record already carries: for a refusal, the condition it names; for a
+the record already carries: for a refusal, the conditions it names; for a
 `partial_effect` or `partial`, the effect evidence and the bounded
 post-observation. A refusal's cause is the one that the operation-outcome
 rows `refusal(constraint)` and `refusal(basis)` of
 [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
-state for the condition the refusal names, `basis` where it names
-conditions of both kinds, and AC-007 gives each cause its core value. The
-refusal qualifier records that cause and does not choose it, so this
-profile and AC-007 give one refusal one value. The closed populations
-above are unchanged; a refined value names a kind and its cause and adds
-no kind (P5, P3). The causes are:
+state for the conditions the refusal names: `constraint` where it names a
+demonstrated violation by the record, model, carrier, transformation or
+application under judgment, whatever condition of the basis it also names,
+and `basis` where it names only conditions of the basis, a violation
+inside an input that the operation acts on as its basis included. AC-007
+gives each cause its core value and reports a basis condition named beside
+a violation as its own invalid_basis result. Where a relation qualifier
+records the cause, it records it and does not choose it, so this profile
+and AC-007 give one refusal one value. The closed populations above are
+unchanged; a refined value names a kind and its cause and adds no kind
+(P5, P3). The causes are:
 
-- `refusal(basis)`: the refusal names a condition of the basis the
-  operation acts on, as AC-007 lists for that value, and carries
-  `refuse_invalid_basis`; no other refusal carries it. A basis mismatch
+- `refusal(basis)`: the refusal names one or more conditions of the basis
+  the operation acts on, as AC-007 lists for that value, and no
+  demonstrated violation by what is under judgment; where a relation
+  qualifier records its cause, it carries `refuse_invalid_basis`, which
+  records a condition of the basis and no other cause. A basis mismatch
   inside the model or a record is the mixed bases that AC-007 lists for
-  this value, so a refusal for one has this cause: a coordinate and basis
-  mismatch or a basis-relation mismatch refused at model validation
+  this value, a condition of the basis, so a refusal that names only such
+  a mismatch has this cause: a coordinate and basis mismatch or a
+  basis-relation mismatch refused at model validation
   ([Finite reference-domain table](#finite-reference-domain-table)), a
   qualifier basis mismatch refused at structural admission
   ([Closed relation families](#closed-relation-families)) and a
@@ -868,43 +879,48 @@ no kind (P5, P3). The causes are:
   ([Candidate, judgment, event and relation separation](#candidate-judgment-event-and-relation-separation)).
   None is the counterexample of a structural constraint. A refusal emitted
   with an `invalid_basis` decision, as `model_validation`'s "refusal or
-  invalid basis" allows, has this cause, because that decision names a
-  condition of the basis and its repair. A refusal with this cause takes
-  this value even where it also follows a falsified constraint, as AC-007
-  rules for a refusal that names conditions of both kinds, because the
+  invalid basis" allows, has this cause where it names no demonstrated
+  violation, because that decision names a condition of the basis and its
+  repair. Where the refusal also names a demonstrated violation by what is
+  under judgment, it has cause `constraint` below, as AC-007 rules, and
+  the co-emitted `invalid_basis` decision is the basis condition's own
+  result: it keeps invalid_basis for its own predicate, because the
   constraint rule above maps `invalid_basis` only to that core value and
   the judgment table keeps `refused` and `invalid_basis` distinct.
-- `refusal(constraint)`: every other refusal. It names no condition that
-  AC-007 lists for `refusal(basis)`, and the record, model, carrier,
-  transformation or application under judgment violates a constraint of
-  the occurrence signature, as AC-007 states for this value. It follows a
-  falsified constraint and carries `refuse_missing`, `refuse_duplicate`,
-  `refuse_wrong_type` or `refuse_out_of_scope`, and the defect it names
-  is the counterexample. The falsified constraint is one of three: a row
-  of the constraint table, which maps `falsified` to `refused` plus
-  `refusal`; a structural constraint, named below; or the requirement
-  that an admitted event carry a lawful declared scope. A
+- `refusal(constraint)`: every other refusal, that is, every refusal that
+  names a demonstrated violation by what is under judgment, whatever
+  condition of the basis it also names, or names no condition that AC-007
+  lists for `refusal(basis)`. The record, model, carrier, transformation
+  or application under judgment violates a constraint of the occurrence
+  signature, as AC-007 states for this value, and a basis condition the
+  refusal also names is recorded with it and reported as its own
+  invalid_basis result. It follows a falsified constraint, and the defect
+  it names is the counterexample; where a relation qualifier records its
+  cause, it carries `refuse_missing`, `refuse_duplicate`,
+  `refuse_wrong_type` or `refuse_out_of_scope`. The falsified constraint
+  is one of three: a row of the constraint table, which maps `falsified`
+  to `refused` plus `refusal`; a structural constraint, named below; or
+  the requirement that an admitted event carry a lawful declared scope. A
   refusal of admission under the `unresolved_scope` re-entry carries
-  `refuse_missing`: `event_admission` requires the event's scope
-  authority as evidence and the re-entry names the lawful scope
-  declaration as what must be supplied, so the event candidate still
-  lacking it when the re-entry closes is the counterexample. The
-  `unresolved_scope` residual is retained, naming the undeclared scope,
-  and re-entry is a new event candidate with a lawful declared scope. A
-  seed that falsifies `occurrence_seed_complete`, an event scope missing
-  when that re-entry closes or incompatible with the admitting authority,
-  and a duplicate, missing, extra, reversed or mismatched edge are each a
-  defect of the occurrence or event under judgment that violates a
-  constraint of the signature. None is the seed set, scope or
-  required-edge semantics of the basis the operation acts on, which
-  AC-007 lists for `refusal(basis)`, so a refusal for any of them has
-  this cause there. The same defect can bear on the predicate of another
-  operation that acts on that record as its basis, as AC-007 rules (P5,
-  P6).
+  `refuse_missing`: `event_admission` requires the event's scope authority
+  as evidence and the re-entry names the lawful scope declaration as what
+  must be supplied, so the event candidate still lacking it when the
+  re-entry closes is the counterexample. The `unresolved_scope` residual
+  is retained, naming the undeclared scope, and re-entry is a new event
+  candidate with a lawful declared scope. A seed that falsifies
+  `occurrence_seed_complete`, an event scope missing when that re-entry
+  closes or incompatible with the admitting authority, and a duplicate,
+  missing, extra, reversed or mismatched edge are each a defect of the
+  occurrence or event under judgment that violates a constraint of the
+  signature. None is the seed set, scope or required-edge semantics of the
+  basis the operation acts on, which AC-007 lists for `refusal(basis)`, so
+  a refusal for any of them has this cause there. The same defect can bear
+  on the predicate of another operation that acts on that record as its
+  basis, as AC-007 rules (P5, P6).
 - `refused(basis)` and `refused(constraint)`: decision `refused` of any
-  judgment, by the cause of the refusal it yields: `refused(basis)` when
-  that refusal carries `refuse_invalid_basis`, otherwise
-  `refused(constraint)`.
+  judgment, by the cause of the refusal it yields, which the conditions
+  that refusal names decide under AC-007 as above: `refused(basis)` when
+  that refusal is `refusal(basis)`, otherwise `refused(constraint)`.
 - `partial_effect(ended)`: the effect evidence establishes that the
   effect has ended, and the bounded post-observation shows part of the
   intended outcome not reached; the unreached part is the counterexample.
@@ -923,7 +939,7 @@ no kind (P5, P3). The causes are:
 | Value | Core value | Ground |
 |---|---|---|
 | stop `hold` | indeterminate | the step stops with the deciding evidence not yet admitted (missing seed, unresolved cause or scope, stale frontier or currentness, unobserved state), so the admissible evidence cannot decide whether the application can reach its declared result ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results); rc.2 RF-012); its residual names the evidence that would decide |
-| stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
+| stop `gap` | invalid_basis | a reference or lineage member the judgment requires is unresolved, its resolution still open as AC-007 defines for `gap`, so the closure it rests on is undefined on this basis (AC-003, AC-010) and the basis cannot support the judgment until repaired |
 | stop `refusal(constraint)` | falsified | the falsified constraint's defect is the counterexample, as construction availability maps `refused` to falsified (P5, P6) |
 | stop `refusal(basis)` | invalid_basis | the basis cannot support the judgment; the constraint rule above maps `invalid_basis` only to that core value |
 | stop `invalid_basis` | invalid_basis | the same core value; the constraint rule above maps `invalid_basis` only to it |
@@ -951,16 +967,12 @@ traversal does not re-map it. `hold`, `gap`, `refusal(constraint)` and
 gives them, as the table above states. A traversal record's `stop_states`
 may refine those four values by cause for that traversal, by a binding
 declared in the shape of [PROFILES §1](PROFILES.md#1-the-boundary): its
-direction, preserved meaning, narrowed scope and invalidation. Each
-refined value names its parent value and a cause, adds no kind, and maps
-to its parent's core value: a value refined from `hold` to
-indeterminate, from `gap` or `refusal(basis)` to invalid_basis, and from
-`refusal(constraint)` to falsified. No refined value takes `satisfied` or
-any other core value. A different core value needs a different parent
-value, which only the member that owns the parent declares, here
-AXIOMATIC_CALCULUS. The other stops and every judgment decision keep the
-mapping above unrefined, and a record that declares no binding takes it
-unrefined (P5, P3, P1).
+direction, preserved meaning, narrowed scope and invalidation. A refined
+value adds no kind and takes its core value under the parent-value rule
+of [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds),
+which this profile applies and does not restate. The other stops and
+every judgment decision keep the mapping above unrefined, and a record
+that declares no binding takes it unrefined (P5, P3, P1).
 
 A structural refusal is one whose source is this profile's closed
 structure rather than a row of the constraint table: an unknown or missing
@@ -985,19 +997,25 @@ is the refusal of a falsified structural constraint: the closed structure
 is the declared predicate, and the unknown kind, unknown or missing
 field, wrong type or mismatched edge is the counterexample that defeats
 it (FOUNDATIONS §4 Results). A basis mismatch at any of these sources
-is not among them: it is the mixed bases of AC-007 and takes
+is not among them: it is the mixed bases of AC-007, a condition of the
+basis, so a refusal that names only such a mismatch takes
 `refusal(basis)`, as stated for that value above. A stop `refusal` or
 decision `refused` from such a source therefore takes
 `refusal(constraint)` or `refused(constraint)`, and takes
 `refusal(basis)` or `refused(basis)` only under the cause stated for
 those values, as every refusal does: a source in the closed structure
-does not make a refusal an invalid basis (P5, P6). A required reference that `model_validation` leaves unresolved
-is not refused: it retains `gap` until repaired and maps to invalid_basis
-by that stop's row (P5). The refusal qualifier, not the core value,
-records whether the defect is a missing, duplicate, wrong-typed or
-out-of-scope input or an invalid basis; the stop keeps it in its own
-vocabulary, so the mapping drops none of the distinctions the qualifier
-draws (P5, P4b).
+does not make a refusal an invalid basis (P5, P6). A required reference
+that `model_validation` leaves unresolved, its resolution still open as
+AC-007 defines for `gap`, is not refused: it retains `gap` until repaired
+and maps to invalid_basis by that stop's row. A reference evaluated to no
+target, a local reference with no record in the closed populations
+included, is dangling and refuses under
+[AC-003](AXIOMATIC_CALCULUS.md#ac-003-reference-closure) (P5). Where a
+relation qualifier records the cause of a refusal, the qualifier, not
+the core value, records whether the defect is a missing, duplicate,
+wrong-typed or out-of-scope input or an invalid basis; the stop keeps it
+in its own vocabulary, so the mapping drops none of the distinctions the
+qualifier draws (P5, P4b).
 
 Neither core value to which the `partial` and `partial_effect` values map
 records that the subject changed. The `partial_effect` residual and its
@@ -1616,7 +1634,7 @@ FOUNDATIONS §3 Foundation to law (P6, P1).
 | #finite-reference-domain-table | conserved; the basis codes, every table row, the external-resolution expansion and `ResolutionRefDomain` carried exactly | Closed semantic-object sorts, Finite reference-domain table |
 | #closed-event-kind-population | conserved | Closed event-kind population |
 | #closed-relation-families | conserved; the twenty-four relation kinds, qualifier record, value domains, contract, cardinality function and congruence law carried exactly | Closed relation families |
-| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the judgment decisions and stop kinds to the core algebra is new, each refinement naming its predicate, as the profile's mapping for every traversal, `hold`, `gap` and the two `refusal` values taking the core values AXIOMATIC_CALCULUS AC-007 gives them, and a traversal record's `stop_states` refining those four values by cause in the PROFILES §1 binding shape, each refined value keeping its parent's core value; values whose core value depends on their cause are split by it: `partial_effect(ended)` and `partial(ended)` map to falsified when the effect has ended and the post-observation shows part of the intended outcome not reached, and `partial_effect(unknown)` and `partial(unknown)` to indeterminate otherwise, under the conserved effect law, the loss stated for both; `refusal(constraint)` and `refused(constraint)` map to falsified when the refusal follows a falsified constraint, a row of the constraint table or a structural constraint, or closes the `unresolved_scope` re-entry carrying `refuse_missing`, and `refusal(basis)` and `refused(basis)` to invalid_basis only when the refusal carries `refuse_invalid_basis` or is emitted with an `invalid_basis` decision, the cause of each refusal being the one AXIOMATIC_CALCULUS AC-007 states for the condition it names and the qualifier recording it, and a basis mismatch inside the model or a record, a qualifier record included, being AC-007's mixed bases and so `refusal(basis)` | Closed constraint, judgment, residual and stop kinds |
+| #closed-constraint-judgment-residual-and-stop-kinds | conserved; the four kind populations and three tables carried exactly; functor-kind laws pointed to AXIOMATIC_CALCULUS §5; the mapping of the judgment decisions and stop kinds to the core algebra is new, each refinement naming its predicate, as the profile's mapping for every traversal, `hold`, `gap` and the two `refusal` values taking the core values AXIOMATIC_CALCULUS AC-007 gives them, and a traversal record's `stop_states` refining those four values by cause in the PROFILES §1 binding shape, each refined value keeping its parent's core value; values whose core value depends on their cause are split by it: `partial_effect(ended)` and `partial(ended)` map to falsified when the effect has ended and the post-observation shows part of the intended outcome not reached, and `partial_effect(unknown)` and `partial(unknown)` to indeterminate otherwise, under the conserved effect law, the loss stated for both; `refusal(constraint)` and `refused(constraint)` map to falsified when the refusal follows a falsified constraint, a row of the constraint table or a structural constraint, or closes the `unresolved_scope` re-entry carrying `refuse_missing`, whatever condition of the basis the refusal also names, that condition and any co-emitted `invalid_basis` decision being reported as their own invalid_basis result, and `refusal(basis)` and `refused(basis)` to invalid_basis only when the refusal names conditions of the basis and no demonstrated violation by what is under judgment, a refusal emitted with an `invalid_basis` decision included and a violation inside an input acted on as the basis being a condition of the basis, the cause of each refusal being the one AXIOMATIC_CALCULUS AC-007 states for the conditions it names, a relation qualifier recording it where one records the cause, and a basis mismatch inside the model or a record, a qualifier record included, being AC-007's mixed bases, a condition of the basis, so that a refusal naming only it is `refusal(basis)`; an unresolved reference retains `gap` only while its resolution is open as AC-007 defines, a reference evaluated to no target being dangling | Closed constraint, judgment, residual and stop kinds |
 | #occurrence-identity | conserved | Occurrence identity |
 | #op-001-seed-acyclicity | conserved | OP-001 |
 | #candidate-judgment-event-and-relation-separation | conserved | Candidate, judgment, event and relation separation |
