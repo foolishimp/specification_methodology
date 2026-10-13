@@ -315,3 +315,15 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
   - the span script keys rows by member and anchor, giving a re-proof span of 303 of 696 rows and 0 locus failures across 666 rows.
 - Role change to Writer: frames regenerated at the final member text and committed with the bootstrap frame and manifest (`600dbfd`). `generate_frames.py --check` exits 0, and the 35 generator tests pass. Link check across the members: 2,658 relative links, with every problem inside `standards/frames/`. Frames are verbatim excerpts one directory deeper, and their copied relative links do not resolve there, because C1 did not port Codex's link rewriting (`relocate`). This is recorded as a residual. Role back to Executive.
 - C6 (fresh-actor runs: 9 tasks, 2 repetitions each, Sonnet, 110,000-byte cap, spend stop at USD 15) started.
+
+2026-10-13T22:46Z — Returns and dispositions:
+- C2 returned `candidate_ready`, committed `967ab8b`. It is the finite-oracle template (port 6), with an exhaustive check of the FOUNDATIONS §4 conjunction rule: 516 cases and 1,404 joins, 24,531 assertions, and both wrong variants caught on 206 cases each. The C2 author wrote both the encoding and the check. RC12 is therefore asked to judge the encoding's fidelity.
+
+  Ruling on C2's question: the pattern is ported with a few lines copied verbatim, and the design's port row 6 is corrected to say so (Executive as Writer, in the same commit).
+- RC12, a working review of the generator, the frames and the finite oracle, started.
+- C6 returned `candidate_ready`, committed `735262d`. Eighteen runs (nine tasks, two each) on `claude-sonnet-5-5`, all exited 0. Every measured context equals its dry run and is under the 110,000-byte cap. Spend was USD 3.2215 at list price. No oracle text reached any actor.
+
+  On C6's note: the frames and their SHA-256 values were committed in `standards/frames/FRAME_INPUTS.json` at `600dbfd`, which precedes every run. That commit is the pre-run record of the frame digests that C3S-01 to C3S-03 require.
+
+  Variance: C3S-04 to C3S-08 CASE.md files name the F-02 card, and C6 used the generic `C3S-CARD.md` as briefed.
+- AS1 (C3S-01 to C3S-04) and AS2 (C3S-05 to C3S-08), assessment by actors that wrote neither frames, oracles nor outputs, started.
