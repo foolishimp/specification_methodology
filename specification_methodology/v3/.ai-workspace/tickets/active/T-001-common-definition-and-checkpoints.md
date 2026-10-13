@@ -5,18 +5,28 @@ type: spike
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: derive work configurations from task dependencies and actor limits rather than a fixed role set
+change_intent: reconstruct the method from its essential pillars and expose its logic as usable constraint surfaces
 change_class: requirement_reprice
 re_entry_point: specification_methodology/v3/specification/INTENT.md
-triaged_at: 2026-10-13T17:24:05Z
+triaged_at: 2026-10-13T23:47:54Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T17:30:35Z
+updated_at: 2026-10-13T23:47:54Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Current iteration 3 direction
+
+Jim identifies the merged Codex candidate as iteration 2 and instructs: “update v3/specification given the current pillars, and then do v3 iteration 3”. He explains that the algebraic and computational calculi are two of the essential reductions, alongside Markov objects, ODD transformations, functional design, Spec Method and project structure, reference frames, information semantics, evidence and authority. He describes a_c as logic compression of the prose that creates constraint surfaces within which work can happen. These clarify the original reconstruction outcome; preserving inherited document boundaries is not the outcome.
+
+Iteration 2 is checkpointed on main at `a9adce2c811547ff1ac4cff2e89148b18c396aeb`. Its Codex tenant tree is exactly the reviewed `3ad1fca` tree. The [review applicability record](../../comments/codex/20261013T234754Z_REVIEW_ITERATION_2_FINDINGS_AND_SUCCESSOR.md) retains the three entry defects and limits the recommendation to keep the existing architecture to the review's actual sample.
+
+Current common Writer activation: re-enter the requirement definition on that preimage, update Intent, Product, the existing requirement files, conformance, frame basis and their live routes, and record the exact successor for Codex iteration 3. Write territory is the common v3 specification, routing files, T-001, T-002, T-002-CODEX and Codex commentary. This activation makes no tenant or peer-ticket changes. It preserves released v2, predecessor coverage and removal authority, current identity, installed builder and the earlier frozen evidence. A nonauthor frozen-source review checks the completed update before the input snapshot is recorded. The owner's instruction authorises continuing Codex construction on that recorded input; final common/candidate acceptance and release remain owner decisions.
+
+Exit evidence: the pillars determine the reconstruction requirements; constraint surfaces and a_c's role are explicit; shared laws govern their consumers; conservation does not mandate inherited document partitions; conformance rejects explanatory overlays and semantic loss disguised as compression. Changes remain in their declared owners with no fixed document count, role inventory, numeric context cap or automatic acceptance claim. The following Selected Contract is historical for the prior correction and is superseded by this activation where its scope differs.
 
 Jim assigns the common construction pen to Codex and authorises repair of the revised specification:
 

@@ -5,7 +5,7 @@ type: feature
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: construct each tenant's v3.0.0 successor candidate, the axioms plus the full predecessor corpus restated, with every predecessor claim disposed under STDO-UP-015
+change_intent: reconstruct each tenant's v3.0.0 candidate from the essential pillars with demonstrated reduction and complete predecessor accounting
 change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
@@ -24,6 +24,10 @@ links:
 ---
 
 # T-002 — v3.0.0 Successor Construction
+
+## Current Iteration
+
+2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 owns the common amendment and exact input snapshot; T-002-CODEX owns the Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
 ## Owner Instruction
 
@@ -46,7 +50,7 @@ Performed by the common pen on 2026-10-12T01:32:20Z against [Universal Intake Tr
 
 ## Selected Contract
 
-Target truth: for each tenant, one candidate for STDO Specification Methodology v3.0.0 consisting of its foundational axioms and the full v2.5.1-rc.2 corpus restated on them; every row of the frontier carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; projected reference frames are the activation unit; each member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
+Target truth: for each tenant, one standalone candidate for STDO Specification Methodology v3.0.0 reconstructed from the [pillars](../../../specification/PRODUCT.md#foundational-reduction), with the [reduction](../../../specification/requirements/README.md#foundational-reduction-requirement) and [constraint-surface](../../../specification/requirements/README.md#constraint-surfaces-and-logic-compression) relationships demonstrated. Every frontier row carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; material obligations are preserved without prescribing their previous member partitions. Projected reference frames are the activation unit; each successor member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
 
 Superseded truth: the first-pass reading of STDO 3 as a thin core that conserves the predecessor by reference; the goal that the whole corpus fits one bounded activation; every first-pass standing claim and self-declared completion. The first pass remains on `main` as history.
 

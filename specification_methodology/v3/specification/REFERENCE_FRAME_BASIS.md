@@ -17,7 +17,7 @@ The installed [Reference Frame Method](stdo://releases/v2.5.1-rc.2/standards/REF
 
 ## Activations And Owners
 
-The rows bind the installed baseline frames under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and [Cross-Synthesis](PRODUCT.md#cross-synthesis). Their context selection follows the [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames). Writer is the Worker specialisation for document and record effects here. The Executive and Reviewer actors for each tenant are not yet named, and an actor that is not named can be given no activation.
+The rows bind the installed baseline frames under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and [Cross-Synthesis](PRODUCT.md#cross-synthesis). Their context selection follows the [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames). Writer is the Worker specialisation for document and record effects here. Current actor assignments and exact input snapshots are recorded in each tenant's admitted contract; a grant to the Codex line does not activate the Claude line. An actor without the required binding can be given no dependent activation.
 
 | Frame activation | Subject and result | Actor binding and limits |
 |---|---|---|
@@ -41,6 +41,8 @@ Each activation binds the following:
 - what it returns.
 
 These apply within the scope actually selected. A role or status label alone confers no authority.
+
+For reconstruction work, the frame includes the applicable [pillar contributions](PRODUCT.md#foundational-reduction), affected shared owners and consumer decisions. Its return distinguishes semantic conservation, demonstrated reduction and mere relocation. An a_c or acquisition frame additionally binds the [constraint-surface requirement](requirements/README.md#constraint-surfaces-and-logic-compression), so a structural check cannot stand in for source fidelity or task sufficiency.
 
 ## Conservation And Stops
 

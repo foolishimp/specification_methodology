@@ -7,6 +7,15 @@ Both tenants are evaluated against the same independently specified expectations
 | Discriminator | Expected distinction |
 |---|---|
 | A derivation or independence argument is claimed | Each claimed derivation shows its premises. Claimed independence is argued, not assumed. |
+| A new foundations introduction accompanies unchanged rival rules in the consumers | Correspondence alone does not establish reduction. The deciding consumers must use one shared determination or a justified refinement. |
+| Several predecessor clauses are implemented by one shared successor law | Evaluate each material obligation and its consuming bindings. Shared ownership can conserve several claims without retaining their former document partitions; a bare link cannot supply omitted meaning. |
+| A candidate deletes an exception to make the core smaller | Size reduction cannot erase a material obligation. Give it a valid disposition and preserve its required behavior, or obtain the owning removal decision. |
+| A functional helper is promoted into a new public mechanism | Require the material distinction or independent boundary that needs it. Shared machinery and subordinate helpers do not create new semantic or authority owners by naming alone. |
+| A bounded object is declared a Markov object because its interface is small | An ordinary useful boundary supplies no proof of the stronger sufficiency or independence claim. State its assumptions and evidence; an unsupported claim stays unresolved. |
+| An a_c model omits a source condition but passes its schema check | The model fails fidelity for a decision affected by that condition. Mechanical validity cannot authorise the work that the owning source prohibits. |
+| A compressed constraint surface treats an unresolved premise as unrestricted freedom | Preserve the unresolved dependency and apply the relevant stop, acquisition or refinement rule. Unknown permission is not a grant. |
+| A task has several solutions inside the same constraint surface | Permit the alternatives that satisfy its contract. The method constrains admissibility without absorbing the worker's internal solution strategy. |
+| Ordinary entry points to an earlier formal interpretation marked current | Bind the current source, signature, program, maps and evidence boundary. Earlier models retain historical standing and cannot qualify the successor by selection error. |
 | Information and its representation differ | Agreement in structure cannot establish identical meaning or semantic fidelity. |
 | Identity is unchanged while content changes | The current state, and whether an earlier observation still applies, are considered separately. |
 | Typed producers and consumers disagree | The incompatible domain or precondition is made explicit. Fields of the same shape do not make a valid join. |

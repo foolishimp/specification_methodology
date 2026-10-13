@@ -1,10 +1,13 @@
-# Tentative Capability Questions
+# Capabilities And Evidence
 
-These are questions about which capabilities the method needs, not accepted obligations. A capability's acceptance contract is selected separately, as for [Categorical Construction](../PRODUCT.md#categorical-construction).
+The current reconstruction must provide the capabilities required by the [pillars](../PRODUCT.md#foundational-reduction), [standalone successor](README.md#standalone-successor-requirement), [reduction](README.md#foundational-reduction-requirement) and [constraint-surface](README.md#constraint-surfaces-and-logic-compression) requirements. The questions below test their adequacy. A particular trial's subject and acceptance scope are selected in its work contract; the categorical steel thread retains its separate selection.
 
 Which capabilities follow from the accepted principles, and with which assumptions?
 
 - Foundational derivation: can a reader tell which commitments are independent, which are derived from others, which generalise others, and which are unresolved?
+- Foundational reduction: do shared laws replace repeated determinations at actual consumers, with the remaining domain distinctions justified and the predecessor obligations accounted for?
+- Constraint surfaces: can an actor recover what is required, permitted, prohibited and unresolved from the current prose and its a_c interpretation, then work inside that boundary without a prescribed internal solution strategy?
+- Objects and transformations: do identity, state, object boundaries, functional composition and ODD traversal retain their meanings across the algorithmic, informational and computational accounts? Are stronger Markov or categorical claims supported only within their demonstrated scope?
 - Purpose and specification: can one common specification (WHAT) admit different conforming realisations (HOWs)? It must do so without confusing two things that mean the same with two things that compute the same.
 - Bounded work: can an actor get enough context, refine its work, combine results, and stop truthfully with an unknown when it must?
 - Evidence and authority: can real claims be evaluated, material failures kept on record, and owner decisions reused without widening their scope?
