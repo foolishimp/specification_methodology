@@ -2,10 +2,11 @@
 
 Tier 1. Owns how claims are justified and accepted: claims, evidence,
 independent assessment, review results, acceptance, conformance of
-realisations, and the qualification of frames and of the method itself.
-Consumes
-[FOUNDATIONS](FOUNDATIONS.md) and the result algebra in
-[ACTIVATION §3](ACTIVATION.md).
+realisations and the equivalence ladder, the qualification of frames and
+of the method itself, and actual-use evidence of adequate attention.
+Consumes [FOUNDATIONS](FOUNDATIONS.md), whose
+[Results](FOUNDATIONS.md#results) own the core result values this member
+uses; it defines no result values of its own.
 
 ## 1. Claims
 
@@ -98,6 +99,14 @@ qualification subject, and it cannot retroactively make the original
 frozen construction pass. This law prescribes no actor type or count,
 review-round count, engine, prompt or orchestration (UP-022).
 
+Independence rests on authorship and on the evidence conditions above, not
+on a new context. The assessor may read the same governing sources as the
+constructor. A fresh context alone establishes no independence: an author
+that opens a fresh context to review its own candidate is still its
+author, and its review is self-review, which stays construction output and
+cannot be relabelled as independent assessment (P6; UP-007 applied to a
+fresh context).
+
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
 policy the governing basis states for the claim; the default where it is not
@@ -105,12 +114,21 @@ stated is that they are not independent.
 
 ## 4. Review results
 
-A review returns one core result (ACTIVATION §3) for each declared predicate it
-evaluated, with: the exact subject and basis, the evidence consulted, the
-findings ranked by consequence, each finding's evidence and the smallest
-bounded correction, the residual uncertainty, and the invalidation
-conditions. It may recommend a disposition, which is evidence only and
-never a disposition; it does not apply one. A finding
+A review returns one core result
+([FOUNDATIONS §4, Results](FOUNDATIONS.md#results)) for each declared
+predicate it evaluated, with: the exact subject and basis, the evidence
+consulted, the findings ranked by consequence, each finding's evidence and
+the smallest bounded correction, the residual uncertainty, and the
+invalidation conditions. A declared predicate the review planned and did
+not evaluate has no result (FOUNDATIONS §4, Results). The review names it
+as not performed and reports no core value for it, neither
+`indeterminate` nor `falsified`, so that conjunction keeps it apart from
+an undecided predicate and from required coverage that no planned
+assessment addresses
+([FOUNDATIONS §4, Conjunction of results](FOUNDATIONS.md#conjunction-of-results);
+P5, P6). It may recommend a disposition
+([ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition)), which is
+evidence only and never a disposition; it does not apply one. A finding
 without evidence a consumer can chase is commentary.
 
 ### Result and triage projection
@@ -128,10 +146,12 @@ RF-007). The fields of a triage are declared by the profile that adopts it, and
 the scales it uses are bound by the adopting Product (P2, P6; provenance
 [reviewer result and triage projection](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer-result-and-triage-projection)).
 
-The projection of the finding-level triage payload is total over the result
-algebra of ACTIVATION §3. The payload classes `complete`, `indeterminate`
-and `not_applicable` classify the triage only; they are not new results,
-dispositions, priorities or lifecycle states (P5, P1).
+The projection of the finding-level triage payload is total over the core
+values of [FOUNDATIONS §4, Results](FOUNDATIONS.md#results). A predicate
+not performed has no result and so no triage payload; the payload class
+`indeterminate` never stands for it. The payload classes `complete`,
+`indeterminate` and `not_applicable` classify the triage only; they are
+not new results, dispositions, priorities or lifecycle states (P5, P1).
 
 | Core result | Finding and triage payload | Decision-owner consumption constraint |
 |---|---|---|
@@ -183,13 +203,32 @@ authority, and its record is that decision (P6, P3, P4b).
 
 A realisation aⱼ conforms to a specification Σ when its interpreted behaviour
 satisfies Σ under a declared interpretation contract (P1) and an independent
-judgment (P6). Conformance establishes neither identical behaviour outside Σ
-nor equal cost; semantic equivalence and computational equivalence are
-separate claims with separate evidence. Several realisations may conform to
-one Σ; sufficiency does not require unique derivation or equality with an
-incumbent. A weak Σ that admits materially different behaviours either
-declares the latitude or is repaired before a decision-complete design is
-claimed.
+judgment (P6). Several realisations may conform to one Σ; sufficiency does
+not require unique derivation or equality with an incumbent. A weak Σ that
+admits materially different behaviours either declares the latitude or is
+repaired before a decision-complete design is claimed.
+
+Equivalence ladder. Conformance, semantic equivalence, computational
+equivalence and categorical equivalence are separate claims with separate
+evidence (P1, P6). Conformance establishes neither identical behaviour
+outside Σ nor equal cost. Semantic equivalence of realisations claims that
+two realisations, or a realisation and a declared reference outcome, have
+identical interpreted behaviour on a stated domain, behaviour outside Σ
+included. Computational equivalence claims that two realisations compute
+the same function at equal cost for declared workloads on a declared
+architecture H. Categorical equivalence
+is a claim about categories and the maps between them: FOUNDATIONS §4,
+Formal fragment, owns what a category or functor claim must show and
+defines the symbols 𝒜, ℐ and 𝒞_H used here, and a map's preservation of
+identities and composition is a further claim distinct from every rung.
+For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H, conformance to Σ, semantic
+equivalence and computational equivalence remain different claims.
+Categorical equivalence additionally requires the appropriate quasi-inverse
+and natural isomorphisms on a stated domain; an analogy or matching result
+is insufficient. Evidence for one claim is not reported as a result for
+another (§1). The ladder is new law: it keeps a matching output, an analogy
+or a passing conformance check from being read as equivalence or as
+preserved structure (P1, P6).
 
 Layered sufficiency. A specification arranged in layers is sufficient when
 a competent actor can derive a conformant next layer from each layer; the
@@ -261,6 +300,29 @@ Qualification binds the exact frame revision, actor envelope, evaluation
 family, basis class and evidence conditions evaluated. It does not
 generalise to an unevaluated population by naming the frame generically
 (§1, the quantifier rule).
+
+Adequate attention. The capability test asks two questions, and they are
+evaluated separately. Whether the declared actor class can hold the frame
+is fit: for the context dimension, the size of the selected
+representation, measured as ACTIVATION §2 step 3 measures it, against the
+declared capacity; the envelope's other dimensions are fitted as RF-014
+states. Whether the actor class
+operates the frame adequately is adequate attention, and only actual-use
+evidence establishes it: actors of the declared class apply the frame to
+its declared tasks under its declared conditions, and the results are
+judged against expectations recorded from the governing sources before the
+results are opened, by an assessor under §3 where the claim needs
+independent assessment. A size measurement, or any byte or token
+threshold, establishes fit and nothing about attention; a frame that fits
+is not thereby adequately attended. Actual-use evidence binds the frame
+revision, actor class, tasks and conditions evaluated, like the
+qualification above, and establishes no universal attention score (§1,
+the quantifier rule). Time, spend and other resource limits are those of
+the selected execution binding
+([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)), not of this
+test. The separation is new law: finite attention makes fit necessary
+(RF-002), and only use shows that a frame that fits is applied, so a frame
+is never qualified for attention because it fits (P0, P6).
 
 ### Method self-qualification
 
@@ -351,10 +413,14 @@ retroactively (§3).
 Recoverability benchmark (new; derived from P0 with the actor-change
 premise). For a selected activation, measure whether a fresh actor given
 only the published documents recovers the governing relations with fidelity
-judged independently, and at what reconstruction cost (context transferred,
-time, and spend where measurable), against the rc.2 corpus as baseline. A
-document set that requires private validator knowledge, whole-corpus loading
-or a prior actor's memory fails the benchmark regardless of its content.
+judged independently, and at what reconstruction cost, against the rc.2
+corpus as baseline. The context transferred is measured as ACTIVATION §2
+step 3 measures size; time and spend are measured where the selected
+execution binding measures them. The fidelity judgment is actual-use
+evidence under Frame qualification above, and the size measured is not
+evidence of it. A document set that requires private validator knowledge,
+whole-corpus loading or a prior actor's memory fails the benchmark
+regardless of its content.
 This is the observable for the matrix criteria F27 and F28; F29 and F30 are
 the same observation reported with the task completed, the material errors
 detected and the cost.
@@ -364,17 +430,24 @@ detected and the cost.
 | rc.2 clause | Disposition |
 |---|---|
 | UP-001 | conserved; §1; row in the table below |
-| UP-022 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, the qualification protocol, derived guidance and the falsifiers in §7; row in the table below |
+| UP-022 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, whose terms the equivalence ladder defines, the qualification protocol, derived guidance and the falsifiers in §7; row in the table below |
 | UP-008, RF-007 | conserved; §2; UP-008's row in the table below |
 | AC-018, AC-019 | conserved; restated in [AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models), which disposes their rows; §2 states their generic form |
-| UP-007 | conserved; §3 |
-| RF-013 | conserved; §7; the benchmark is new |
-| RF frame qualification, method self-qualification | conserved; §7; rows in the table below |
+| UP-007 | conserved; §3; the fresh-context paragraph applies its rule that self-review cannot be relabelled as independent |
+| RF-013 | conserved; §7; the benchmark is new, and its measurements refer to ACTIVATION §2 for size and to the execution binding for time and spend |
+| RF frame qualification, method self-qualification | conserved; §7; rows in the table below; the adequate-attention paragraph is new |
 | UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3, UP-004 in full in IDENTITY §6 and UP-020's delegation in ACTIVATION §1 |
 | UP-015 as acceptance evidence | conserved; §5 states what acceptance requires of the successor disposition record; the law is restated in full in RELEASE §9 and applied to this corpus in FOUNDATIONS §1 |
 | Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
 | TICKET judgment continuity | conserved; restated in [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity), its generic reuse law in ACTIVATION §7 |
-| Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |
+| Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive, over the core values of FOUNDATIONS §4 Results; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |
+
+New law in this member, with no rc.2 clause: the equivalence ladder (§6),
+the separation of fit from adequate attention with its actual-use evidence
+(§7 Frame qualification) and the recoverability benchmark (§7 Method
+self-qualification); each states its purpose and material relation where
+it is written. The rule that a planned evaluation not performed has no
+result is owned by FOUNDATIONS §4 Results; §4 applies it to reviews.
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):
