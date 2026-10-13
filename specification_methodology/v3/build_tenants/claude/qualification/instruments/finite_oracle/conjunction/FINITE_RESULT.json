@@ -1,0 +1,272 @@
+{
+  "kind": "finite_oracle_result",
+  "instance": "conjunction_of_results",
+  "evidence_class": "tested against an independently specified oracle",
+  "result": {
+    "predicate": "On the declared domain, the encoded conjunction rule meets properties P0 to P5 for every value it may report, on the flat conjunction and on every two-way join of its components",
+    "core_value": "satisfied",
+    "domain_outcome": "all 24531 assertions hold; every declared mutant is falsified"
+  },
+  "bindings": {
+    "source": {
+      "path": "standards/FOUNDATIONS.md",
+      "sha256": "259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71",
+      "sections": [
+        {
+          "anchor": "results",
+          "lines": "671-862",
+          "sha256": "b6ef8aa8de80984489ad3c7b850766943ed4d900e3fd8362b43a5158d90897d8"
+        },
+        {
+          "anchor": "conjunction-of-results",
+          "lines": "863-956",
+          "sha256": "815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c"
+        }
+      ]
+    },
+    "oracle_source": {
+      "path": "../../specification/requirements/README.md",
+      "sha256": "5d01452ee16fc1b8ac85be9d587fdc2f35687e5aa217c4de644314727882dd1d",
+      "sections": [
+        {
+          "anchor": "single-result-algebra-requirement",
+          "lines": "90-110",
+          "sha256": "e3fba2f2cf86b923cef6c8ef64f8362830a7e165fe618702cb4652cb0735e278"
+        }
+      ]
+    },
+    "model": {
+      "path": "qualification/instruments/finite_oracle/conjunction/model.py",
+      "sha256": "6ec832c5a9780ed4973aef59d836280f48066e10934bf1c317d1fd71cecb874d"
+    },
+    "mutants": {
+      "path": "qualification/instruments/finite_oracle/conjunction/mutants.py",
+      "sha256": "0f84184d787873b1e6ccece593e5fa788dce15088ca1d35d275a22120e7bf444"
+    },
+    "executable": [
+      {
+        "path": "qualification/instruments/finite_oracle/template.py",
+        "sha256": "7055b3e599f86fdc275c57d748dd1f7972bbcc0fd082d0bf91ac1d43b6c4f8bf"
+      },
+      {
+        "path": "qualification/instruments/finite_oracle/conjunction/check.py",
+        "sha256": "d4fe476b60ff3ace3813873ae640646f6fecb4faf743cadc7e50fa976bf24a85"
+      },
+      {
+        "path": "qualification/instruments/generate_frames.py",
+        "sha256": "8c9dc7ce612518c3d24996aef4ebecd0766b9154b53f860ee0dda4d974b058e3"
+      }
+    ]
+  },
+  "domain": {
+    "components": "one to three mandatory components, each one of the five core values or no closed result (planned, not performed): 6 + 36 + 216 = 258 assignments",
+    "uncovered": "one required obligation, uncovered or absent: 2",
+    "cases": "258 x 2 = 516",
+    "joins": "for two or three components, every split into a left and a right part, with the obligation, when present, held by either part",
+    "fixed": "declared basis relations agree; no results that are not mandatory; no counterexample other than the components' own falsified values; no coverage admitted"
+  },
+  "properties": {
+    "P0_core_value": "the conjunction reports one value of the core and nothing outside it (requirement items 2 and 6)",
+    "P1_satisfied_only_if": "satisfied only when every mandatory component is satisfied and there is no gap (brief; requirement item 3, first two bullets, applied to the composite)",
+    "P2_failure_survives": "every falsified component is a known failure in the record, keeps its value, and survives every join; no other component is a known failure (brief)",
+    "P3a_gap_never_satisfied": "a gap, not performed or uncovered, is never satisfied (brief)",
+    "P3b_gap_kind_recorded": "the record names exactly the gap kinds present, the not-performed components by index and the uncovered obligation (brief; requirement item 3, third bullet: non-performance stays distinct from undecidability)",
+    "P4_no_mapping_raises_standing": "each component keeps its own value: a closed result is not remapped and a component without a closed result carries no core value (requirement item 3)",
+    "P5_success_reachable": "with every component satisfied and no gap, the conjunction reports satisfied (non-vacuity guard; this check's reading of FOUNDATIONS \u00a74 Conjunction of results, Reported value, last sentence, not a requirement property)"
+  },
+  "counts": {
+    "cases": 516,
+    "outputs": 1920,
+    "value_checks": 3228,
+    "assertions": 24531,
+    "classes": {
+      "gap_kinds=none": 155,
+      "gap_kinds=not_performed": 103,
+      "gap_kinds=not_performed+uncovered": 103,
+      "gap_kinds=uncovered": 155,
+      "known_failure_present": 206,
+      "reports_from_returned_non_satisfied": 488,
+      "reports_own_indeterminate": 25,
+      "reports_satisfied": 3
+    }
+  },
+  "mutants": {
+    "no_result_as_satisfied": {
+      "predicate": "the variant no_result_as_satisfied meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 206,
+      "by_property": {
+        "P1_satisfied_only_if": 11,
+        "P3a_gap_never_satisfied": 11,
+        "P3b_gap_kind_recorded": 206,
+        "P4_no_mapping_raises_standing": 206
+      },
+      "output_differs_from_model": 206,
+      "value_set_differs_from_model": 11,
+      "first_counterexample": {
+        "case": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "failed": [
+          "P1_satisfied_only_if",
+          "P3a_gap_never_satisfied",
+          "P3b_gap_kind_recorded",
+          "P4_no_mapping_raises_standing"
+        ],
+        "model": {
+          "lawful": [
+            "indeterminate"
+          ],
+          "record": {
+            "components": [
+              null
+            ],
+            "known_failures": [],
+            "not_performed": [
+              0
+            ],
+            "required": [],
+            "covered": [],
+            "uncovered": [],
+            "gap_kinds": [
+              "not_performed"
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "satisfied"
+          ],
+          "record": {
+            "components": [
+              "satisfied"
+            ],
+            "known_failures": [],
+            "not_performed": [],
+            "required": [],
+            "covered": [],
+            "uncovered": [],
+            "gap_kinds": []
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P1_satisfied_only_if": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "P3a_gap_never_satisfied": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "P3b_gap_kind_recorded": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "P4_no_mapping_raises_standing": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        }
+      }
+    },
+    "no_result_as_indeterminate": {
+      "predicate": "the variant no_result_as_indeterminate meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 206,
+      "by_property": {
+        "P3b_gap_kind_recorded": 206,
+        "P4_no_mapping_raises_standing": 206
+      },
+      "output_differs_from_model": 206,
+      "value_set_differs_from_model": 120,
+      "first_counterexample": {
+        "case": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "failed": [
+          "P3b_gap_kind_recorded",
+          "P4_no_mapping_raises_standing"
+        ],
+        "model": {
+          "lawful": [
+            "indeterminate"
+          ],
+          "record": {
+            "components": [
+              null
+            ],
+            "known_failures": [],
+            "not_performed": [
+              0
+            ],
+            "required": [],
+            "covered": [],
+            "uncovered": [],
+            "gap_kinds": [
+              "not_performed"
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "indeterminate"
+          ],
+          "record": {
+            "components": [
+              "indeterminate"
+            ],
+            "known_failures": [],
+            "not_performed": [],
+            "required": [],
+            "covered": [],
+            "uncovered": [],
+            "gap_kinds": []
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P3b_gap_kind_recorded": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        },
+        "P4_no_mapping_raises_standing": {
+          "components": [
+            "no_closed_result"
+          ],
+          "uncovered": false
+        }
+      }
+    }
+  },
+  "limits": [
+    "Fidelity is not established: the check does not show that FOUNDATIONS \u00a74 states the rule model.py encodes; that is a reviewer's judgement against the bound section digests",
+    "The oracle properties are this check's reading of the single result algebra requirement and the C2 brief; their fidelity to the requirement is likewise a reviewer's judgement",
+    "The encoding and the oracle share an author, the C2 Writer, who wrote model.py first: the oracle is independent of the encoding in its source (the requirement, not FOUNDATIONS), not in its author",
+    "P5 checks this encoding's reading that, with every mandatory result satisfied, agreeing bases and no gap, the declared rule gives satisfied (FOUNDATIONS \u00a74 Conjunction of results, Reported value, last sentence); FOUNDATIONS leaves that value to the declared rule",
+    "The choice among non-satisfied values is modelled as the set of values a declared rule may report; every value in the set is checked, so every choice is covered, but no particular declared rule is",
+    "Domain: one to three mandatory components; the empty conjunction is not in the domain",
+    "Basis relations are fixed at agreeing: the invalid_basis rule for disagreeing bases (Reported value, fourth sentence) is not exercised",
+    "No results that are not mandatory (Reported value, sixth sentence) and no counterexample found outside the components (Reported value, last sentence) are in the domain",
+    "Coverage is one obligation, uncovered or absent; no part of a join covers another part's obligation, so the recomputation of uncovered coverage is exercised only where it changes nothing",
+    "Joins are two-way splits of one flat conjunction into contiguous parts, combined as a union of component records; nested conjunctions whose parts carry their own composite predicates are not modelled",
+    "Predicates and domain outcomes are represented only by component position; refinements and their mappings, effects whose completion is unknown, and the separation of availability, assessment and acceptance (requirement items 2 to 5 beyond this domain) are not exercised",
+    "A failed or refused run writes no result; an older result file stays bound to its own digests",
+    "A finite check on the declared domain only: no claim beyond it, and no categorical or universal claim"
+  ]
+}
