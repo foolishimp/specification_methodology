@@ -150,3 +150,29 @@ RA1, a working review of A1, started.
 - A4b (measurement owner, acquisition rule, workspace as truth surface, refinement licensing, F2, F4, F5) started.
 - A5a returned `candidate_ready`, committed `951ac81`. Ruling on its one unplaced determination: "superseded: the successor clause and what changed are named" is dropped. It was added in the tenant with no predecessor source, it is stricter than the common Successor Disposition Requirement, and RELEASE's restated UP-015 governs `superseded`.
 - A5b (premise standing column, Foundation to law format and family index, F3, formal fragment, RA23 m8) started.
+
+2026-10-13T19:54Z — Returns and dispositions:
+- B3 returned `candidate_ready`, committed `57f4526`. ODD closure decisions, ODD audit outcomes and the TRAVERSAL refusals, partial effects and effect dispositions are split by cause, and each maps to one core value. The meanings from the 12 October cross-family review are kept, and tables F18 and F19 are in place. B2 started.
+- B1 returned `candidate_ready`, committed `73a0a44`. SPEC_METHOD §11 states the build-tenant binding as method law (items 1 to 6). The old §11 (this source project's local development law) is owned by the common Product's Development Isolation, and the tenant design binds it. F10 and F11 are in place. Rulings:
+  - ACTIVATION §4 owns the hard stops, and SPEC_METHOD §5 becomes a reference;
+  - the F2 index row also accounts for SPEC_METHOD §8.
+
+  B4 started.
+- A4b returned `candidate_ready`, committed `e31a9d9`. ACTIVATION §2 step 3 is the only owner of size measurement, which applies wherever an envelope declares a context capacity. Also added:
+  - the acquisition rule (port 5, adapted);
+  - the workspace as truth surface;
+  - refinement licensing;
+  - hard stops stated in full;
+  - tables F2, F4 and F5.
+
+  A4b disclosed that it measured its inputs after reading rather than before, and that its spend is unavailable. RA4, a working review of ACTIVATION covering A1b, A4a and A4b, started.
+
+Follow-ups held for later activations:
+- SPEC_METHOD §5 hard-stop sentence becomes a reference to ACTIVATION §4;
+- standards README: where each member's dispositions live, and the README route (D1);
+- design: the core mapping of the tool-operation outcomes in CONSTRUCTION_BINDING §3;
+- B8: AXIOMATIC_CALCULUS outcomes and whether a traversal binding may re-map `refusal(constraint)`;
+- RELEASE `:605–609` and `:657` (B7);
+- EVALUATION `:449` (A8);
+- GLOSSARY rows for the new terms (A7/B10);
+- plugin `stdo-work` routed to ACTIVATION §2 Acquisition (D2).
