@@ -1,0 +1,89 @@
+{
+  "source_commit": "79e53e3f100b280adbd11e46352bbdc4a7eb1195",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "calls": [
+    {
+      "name": "candidate-discovery",
+      "mode": "candidate",
+      "source_commit": "79e53e3f100b280adbd11e46352bbdc4a7eb1195",
+      "baseline_manifest": null,
+      "elapsed_seconds": 110.98433474998455,
+      "selected_material_bytes": 48513,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "total_cost_usd": 0.48174859999999997,
+      "acquisition_count": 20,
+      "returned_material_by_requested_path": {
+        "method": 29569,
+        "control": 4117,
+        "mixed_directory_discovery": 1327,
+        "workspace": 388,
+        "common_scope": 12090
+      },
+      "session_id": "c292f3b2-fcbe-4f32-a03d-52e22e35d142"
+    },
+    {
+      "name": "candidate-continuation",
+      "mode": "candidate",
+      "source_commit": "79e53e3f100b280adbd11e46352bbdc4a7eb1195",
+      "baseline_manifest": null,
+      "elapsed_seconds": 68.47041595797054,
+      "selected_material_bytes": 44339,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "total_cost_usd": 0.3495548,
+      "acquisition_count": 19,
+      "returned_material_by_requested_path": {
+        "method": 28665,
+        "control": 4117,
+        "mixed_directory_discovery": 172,
+        "durable_record": 9174,
+        "workspace": 825
+      },
+      "session_id": "ae86c3a0-27ea-4605-ac25-74a6af1905f6"
+    },
+    {
+      "name": "rc2-discovery",
+      "mode": "baseline",
+      "source_commit": null,
+      "baseline_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "elapsed_seconds": 53.69007095799316,
+      "selected_material_bytes": 40373,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "total_cost_usd": 0.2920092000000001,
+      "acquisition_count": 16,
+      "returned_material_by_requested_path": {
+        "method": 13012,
+        "control": 14768,
+        "workspace": 498,
+        "mixed_directory_discovery": 47,
+        "common_scope": 11083
+      },
+      "session_id": "6167261b-0d6c-4ff8-9dbc-c1d2f427663b"
+    }
+  ],
+  "total_cost_usd": 1.1233126,
+  "total_seconds": 233.14482166594826,
+  "verdict": "qualification_open",
+  "candidate_discovery": "all four dependents found, fixed oracle failed",
+  "continuation": "persisted valid env retained; remaining three found; fixed oracle still failed",
+  "baseline": "stopped before construction at Product Definition applicability",
+  "comparative_effectiveness": "unproved; baseline did not reach same construction boundary",
+  "no_more_calls_under_this_activation": true
+}

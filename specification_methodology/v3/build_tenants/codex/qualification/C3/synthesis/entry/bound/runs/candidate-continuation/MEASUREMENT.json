@@ -1,0 +1,400 @@
+{
+  "name": "candidate-continuation",
+  "mode": "candidate",
+  "continuation": true,
+  "source_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "baseline_manifest": null,
+  "root": "/private/tmp/stdo-bound-entry-h2n_lcsa",
+  "elapsed_seconds": 50.885744874947704,
+  "exit_code": 0,
+  "host_stop": null,
+  "prompt_bytes": 1386,
+  "tool_material_bytes": 42237,
+  "selected_material_bytes": 43623,
+  "selected_material_bound": 120000,
+  "acquisitions": [
+    {
+      "tool_use_id": "toolu_01SwRMwwcTTHyavargaSgBpv",
+      "returned_material_bytes": 13208,
+      "cumulative_selected_bytes": 14594,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01SwRMwwcTTHyavargaSgBpv",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/source/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md"
+        },
+        "source_file_bytes": 12468,
+        "source_file_sha256": "885c493b45bea9aa2c6c8a5bba0a581f185dd41524b15923bb989c3c3dce8758"
+      }
+    },
+    {
+      "tool_use_id": "toolu_0164K8rpxYNrPTfr5YkjBVUF",
+      "returned_material_bytes": 228,
+      "cumulative_selected_bytes": 14822,
+      "is_error": false,
+      "request": {
+        "id": "toolu_0164K8rpxYNrPTfr5YkjBVUF",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/controls/TASK.md"
+        },
+        "source_file_bytes": 224,
+        "source_file_sha256": "5cdbc051c6f6eac74ae13b21cfbcdb3e9de95b2ba0eddd9d21c5528e825de2d6"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01YKEcjfmQc92p8vgwyAhbUq",
+      "returned_material_bytes": 1644,
+      "cumulative_selected_bytes": 16466,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01YKEcjfmQc92p8vgwyAhbUq",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/controls/ACTIVATION.md"
+        },
+        "source_file_bytes": 1572,
+        "source_file_sha256": "a79d39f147452d10e5cd055e2ed10da9fc789952dbfdff4cbeeb5d4c46d2a838"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01WiHkWVMtAzDQUEe25diayW",
+      "returned_material_bytes": 621,
+      "cumulative_selected_bytes": 17087,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01WiHkWVMtAzDQUEe25diayW",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/controls/VERIFIED_BASIS.json"
+        },
+        "source_file_bytes": 588,
+        "source_file_sha256": "a5588d8000f63da9959df0ef1fecd03606f1dbea8b0734ac29346a6f6f159296"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01RViumPW3T1wNvdBnwoM9Na",
+      "returned_material_bytes": 987,
+      "cumulative_selected_bytes": 18074,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01RViumPW3T1wNvdBnwoM9Na",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/controls/EXPORT.json"
+        },
+        "source_file_bytes": 933,
+        "source_file_sha256": "d50e8aa547f6c055402e9516c7136d27391e3c07216962c098f3d3cecdbc3f11"
+      }
+    },
+    {
+      "tool_use_id": "toolu_019agHgCkGbkfZZV5b4Vmvxf",
+      "returned_material_bytes": 61,
+      "cumulative_selected_bytes": 18135,
+      "is_error": false,
+      "request": {
+        "id": "toolu_019agHgCkGbkfZZV5b4Vmvxf",
+        "tool": "Glob",
+        "input": {
+          "pattern": "**/*",
+          "path": "/private/tmp/stdo-bound-entry-h2n_lcsa/records"
+        }
+      }
+    },
+    {
+      "tool_use_id": "toolu_0155NNe3vCYVa8UpkvWYkdKe",
+      "returned_material_bytes": 110,
+      "cumulative_selected_bytes": 18245,
+      "is_error": false,
+      "request": {
+        "id": "toolu_0155NNe3vCYVa8UpkvWYkdKe",
+        "tool": "Glob",
+        "input": {
+          "pattern": "**/*",
+          "path": "/private/tmp/stdo-bound-entry-h2n_lcsa/workspace"
+        }
+      }
+    },
+    {
+      "tool_use_id": "toolu_016fFPb6xmEDpUyWFqkCPYMS",
+      "returned_material_bytes": 7461,
+      "cumulative_selected_bytes": 25706,
+      "is_error": false,
+      "request": {
+        "id": "toolu_016fFPb6xmEDpUyWFqkCPYMS",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/records/FIRST_ACTOR_RETURN.json"
+        },
+        "source_file_bytes": 7179,
+        "source_file_sha256": "716bd1a6612887ac4a9f0bbfaf3967083340159572ac38c74742310888d7cc45"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01TBqnKxQtpe92mA8XufLedm",
+      "returned_material_bytes": 1831,
+      "cumulative_selected_bytes": 27537,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01TBqnKxQtpe92mA8XufLedm",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/records/HOST_APPLICATION.json"
+        },
+        "source_file_bytes": 1660,
+        "source_file_sha256": "e3d8206c89737bd43985a8fbec754fff2c046610c7c5097c2ae57fd725283064"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01JcefG93XoWcHZSnvtbfUvi",
+      "returned_material_bytes": 110,
+      "cumulative_selected_bytes": 27647,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01JcefG93XoWcHZSnvtbfUvi",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/workspace/src/settings.py"
+        },
+        "source_file_bytes": 100,
+        "source_file_sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01J6SAkppQWVYpipbrDSPc7L",
+      "returned_material_bytes": 52,
+      "cumulative_selected_bytes": 27699,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01J6SAkppQWVYpipbrDSPc7L",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/workspace/scripts/check_env.sh"
+        },
+        "source_file_bytes": 44,
+        "source_file_sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01C4RghLyoToRHeaYqRG7eN8",
+      "returned_material_bytes": 165,
+      "cumulative_selected_bytes": 27864,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01C4RghLyoToRHeaYqRG7eN8",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/workspace/docs/config.md"
+        },
+        "source_file_bytes": 151,
+        "source_file_sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a"
+      }
+    },
+    {
+      "tool_use_id": "toolu_015uzRT6wejEJHrxmbZFf452",
+      "returned_material_bytes": 65,
+      "cumulative_selected_bytes": 27929,
+      "is_error": false,
+      "request": {
+        "id": "toolu_015uzRT6wejEJHrxmbZFf452",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/workspace/deploy/env.example"
+        },
+        "source_file_bytes": 57,
+        "source_file_sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01CkX8zCU42zJXAgrPKRyb9D",
+      "returned_material_bytes": 1868,
+      "cumulative_selected_bytes": 29797,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01CkX8zCU42zJXAgrPKRyb9D",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/EXECUTION_CONTRACT.md"
+        },
+        "source_file_bytes": 1775,
+        "source_file_sha256": "48c9fb94436c73afbcdce25467e1fc7777f7600065077aaf964bed7c20f2ff5b"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Ct8Yydun4hdsdNGK9DeP2A",
+      "returned_material_bytes": 803,
+      "cumulative_selected_bytes": 30600,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01Ct8Yydun4hdsdNGK9DeP2A",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/REFERENCE_FRAME_BASIS.md"
+        },
+        "source_file_bytes": 776,
+        "source_file_sha256": "e7e275393c2beb78bb37e2de0154ca975c469b38363990c1298c2826d8a0c1b8"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Eu9mhNfZq4NH6dfyCXgaoe",
+      "returned_material_bytes": 2556,
+      "cumulative_selected_bytes": 33156,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01Eu9mhNfZq4NH6dfyCXgaoe",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/stdo_fixture.json"
+        },
+        "source_file_bytes": 2280,
+        "source_file_sha256": "9932de5eb23444f982cd172ee3260efbc7c250556c73f6093634a1a7f2c886c2"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Y7LkQX7TM9abkAeg7oZ6wW",
+      "returned_material_bytes": 6348,
+      "cumulative_selected_bytes": 39504,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01Y7LkQX7TM9abkAeg7oZ6wW",
+        "tool": "Glob",
+        "input": {
+          "pattern": "*",
+          "path": "/private/tmp/stdo-bound-entry-h2n_lcsa"
+        }
+      }
+    },
+    {
+      "tool_use_id": "toolu_01YKCN2g7AyzPw27oLKw3oDb",
+      "returned_material_bytes": 239,
+      "cumulative_selected_bytes": 39743,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01YKCN2g7AyzPw27oLKw3oDb",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/DESIGN.md"
+        },
+        "source_file_bytes": 227,
+        "source_file_sha256": "4664d354d065ba3bccd266f230a6267485d3e999a0f2b7e8879c37c268938303"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01YBAj6Q3qN5wTKfs7YUnLqK",
+      "returned_material_bytes": 16,
+      "cumulative_selected_bytes": 39759,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01YBAj6Q3qN5wTKfs7YUnLqK",
+        "tool": "Grep",
+        "input": {
+          "pattern": "(?i)recover|interrupt|partial",
+          "path": "/private/tmp/stdo-bound-entry-h2n_lcsa/installed/standards/README.md",
+          "output_mode": "content"
+        },
+        "source_file_bytes": 2330,
+        "source_file_sha256": "7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01R9C2scuCyXoYWK8rdk3hek",
+      "returned_material_bytes": 54,
+      "cumulative_selected_bytes": 39813,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01R9C2scuCyXoYWK8rdk3hek",
+        "tool": "Grep",
+        "input": {
+          "pattern": "(?i)^#+ .*(recover|interrupt|resum|continu|current.state)",
+          "path": "/private/tmp/stdo-bound-entry-h2n_lcsa/installed/standards/SPEC_METHOD.md",
+          "output_mode": "content"
+        },
+        "source_file_bytes": 157952,
+        "source_file_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01VsjQdYYWJF4mLqcg8WMMCQ",
+      "returned_material_bytes": 3810,
+      "cumulative_selected_bytes": 43623,
+      "is_error": false,
+      "request": {
+        "id": "toolu_01VsjQdYYWJF4mLqcg8WMMCQ",
+        "tool": "Read",
+        "input": {
+          "file_path": "/private/tmp/stdo-bound-entry-h2n_lcsa/installed/standards/SPEC_METHOD.md",
+          "offset": 1633,
+          "limit": 60
+        },
+        "source_file_bytes": 157952,
+        "source_file_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4"
+      }
+    }
+  ],
+  "tools_seen": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "path_violations": [],
+  "native_result": {
+    "subtype": "success",
+    "is_error": false,
+    "total_cost_usd": 0.2906952,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 20265,
+      "cache_read_input_tokens": 85036,
+      "output_tokens": 5576,
+      "output_tokens_details": {
+        "thinking_tokens": 711
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 20265,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 3234,
+          "cache_read_input_tokens": 23503,
+          "cache_creation_input_tokens": 1478,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1478
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-opus-5-5": {
+        "inputTokens": 12,
+        "outputTokens": 5576,
+        "cacheReadInputTokens": 85036,
+        "cacheCreationInputTokens": 20265,
+        "webSearchRequests": 0,
+        "costUSD": 0.2906952,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 711,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "num_turns": 22,
+    "session_id": "2525b8c1-5035-4551-8c29-f25a0f265ea1"
+  },
+  "measurement_boundary": "Supplied prompt plus actual UTF-8 returned tool content, repeated reads counted; excludes provider system/hidden overhead, tool schemas, and actor-authored messages.",
+  "workspace_unchanged_by_actor": true
+}

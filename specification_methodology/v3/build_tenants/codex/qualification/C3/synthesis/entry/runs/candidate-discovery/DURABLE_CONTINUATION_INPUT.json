@@ -1,0 +1,59 @@
+{
+  "prior_call": "candidate-discovery",
+  "host_deliberate_partial_application": true,
+  "not_a_provider_crash": true,
+  "applied_paths": [
+    "deploy/env.example"
+  ],
+  "unapplied_proposed_paths": [
+    "src/settings.py",
+    "scripts/check_env.sh",
+    "docs/config.md"
+  ],
+  "workspace_before": [
+    {
+      "path": "deploy/env.example",
+      "bytes": 53,
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997"
+    },
+    {
+      "path": "docs/config.md",
+      "bytes": 151,
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "bytes": 44,
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc"
+    },
+    {
+      "path": "src/settings.py",
+      "bytes": 100,
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18"
+    }
+  ],
+  "workspace_after": [
+    {
+      "path": "deploy/env.example",
+      "bytes": 57,
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098"
+    },
+    {
+      "path": "docs/config.md",
+      "bytes": 151,
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "bytes": 44,
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc"
+    },
+    {
+      "path": "src/settings.py",
+      "bytes": 100,
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18"
+    }
+  ],
+  "host_did_not_invent_or_repair_proposals": true,
+  "unapplied_proposals_have_no_application_or_acceptance_claim": true
+}

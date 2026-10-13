@@ -1,0 +1,101 @@
+{
+  "case": "C7-candidate-available-fitness-fails",
+  "candidate_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "ACCEPTANCE.md": {
+          "sha256": "7f48b46792824ad27c02e52414bfc32608ca14eba03469475e780b5ffda8dd83",
+          "bytes": 220
+        },
+        "PIPELINE.md": {
+          "sha256": "c604866744762d3b0033893d9cc15a685ebec2905e0f8a982f6574fab2f4b492",
+          "bytes": 870
+        },
+        "build/api.md": {
+          "sha256": "4866c9d0346a734efafc2a83e176bc791141448cf0c0a981dfc7f7554ebbd83c",
+          "bytes": 100
+        },
+        "build/gen.log": {
+          "sha256": "df9fede1e4852b8800692f9e1176afa859cc2532f7178fdcf01934d511432a15",
+          "bytes": 55
+        },
+        "publish/api.md": {
+          "sha256": "7503893fa0499a8996fd326d67401b9d9c43874574daefe4bc01200c64332b99",
+          "bytes": 33
+        },
+        "spec/api.yaml": {
+          "sha256": "82f470725dafb1874401ef7a2df01b1522174545b7047d37bf7bba0d145a8847",
+          "bytes": 160
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "actual missing operation is DELETE /items/{id}",
+      "status": "met",
+      "actual": [
+        [
+          "DELETE",
+          "/items/{id}"
+        ]
+      ],
+      "expected": [
+        [
+          "DELETE",
+          "/items/{id}"
+        ]
+      ],
+      "detail": null
+    },
+    {
+      "name": "actual candidate still has TODO defect",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "candidate availability independently observed",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "published copy, build, spec and acceptance untouched",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [],
+  "independent_grading_pending": [
+    "Grade the PIPELINE candidate/fitness/acceptance/publishing distinction and the report. Static operation extraction is for this fixed YAML subset only, not a general API parser or a real publishing test."
+  ],
+  "counts": {
+    "met": 7,
+    "not_met": 0,
+    "subprocess_executions": 0
+  }
+}

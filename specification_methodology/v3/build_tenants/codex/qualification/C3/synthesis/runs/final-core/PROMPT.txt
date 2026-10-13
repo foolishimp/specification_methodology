@@ -1,0 +1,1028 @@
+Independent source-first re-review of the repaired shared core. You did not author it. Judge concrete material counterexamples against the common requirements; no style requests or universal new mechanisms. In particular exercise: aborted suite with authenticated failure; no concluded procedure and independently observed invalid basis; deployment then rollback then reapplication on the same effect part; an absent dispatched effect; complete irreversible external effects alongside local rollback; unknown or conflicting supersession; OR/negation with known failed joins; overlapping/incomplete operator declarations; admission relation versus evaluated join. Verify the conditions on the associativity claim. Report any remaining contradiction and its minimal counterexample, or state the bounded checks that hold. Source-port acceptance and complete-corpus acceptance are separate.
+
+CANDIDATE 875a56e3d93503b4abc84f895f6aeb51d29cc372
+COMMON
+# Common Requirements
+
+The common requirements bind both build tenants' candidates. This file holds the requirements that come from this Product. The other files hold the rest:
+
+- [PRINCIPLES](PRINCIPLES.md): the working foundations, the candidate first principles both tenants built from at C1, and their review questions.
+- [CAPABILITIES](CAPABILITIES.md): the capability questions. Each capability's acceptance contract is selected separately.
+- [A_C_DEPENDENCY](A_C_DEPENDENCY.md): the exact a_c theory and checker this product depends on, and the limits of what the checker proves.
+- [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the frontier under STDO-UP-015, with one row per predecessor claim giving its disposition and, where required, its successor locus.
+
+The working foundation statements in PRINCIPLES are content under evaluation, not installed law. The installed 2.5.1-rc.2 release is the law the builders work under, and it is the predecessor the new release evolves from.
+
+The Product Definition (`stdo_3.json`) adds two local axioms: the Product's [identity](../PRODUCT.md#product-identity-and-lineage) and [development isolation](../PRODUCT.md#development-isolation) sections. Its override and disambiguation lists are empty, so it overrides no installed rule and disambiguates no installed term.
+
+A determination is a rule, definition, list of allowed values or procedure step that an actor must apply.
+
+## Successor Disposition Requirement
+
+Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015), a rule of the installed release. Every predecessor claim that could affect the successor receives exactly one disposition before the successor is accepted:
+
+- `conserved`: the successor keeps the claim;
+- `superseded`: an accepted successor relation replaces the claim, and is named;
+- `intentionally removed`: the product owner, as Product authority, removes the claim and gives the reason;
+- `not applicable`: the claim has no effect on the successor, with a bounded reason.
+
+Conservation is about meaning. Similar naming does not prove it, and the absence of an edit carrying a claim does not prove the claim was lost. UP-015 does not by itself require a kept claim to be rewritten in the successor's wording. `reframed` is a note on how a conserved claim was carried, not a disposition.
+
+## Standalone Successor Requirement
+
+Source: this Product. The successor stands alone. Every `conserved` claim is stated in the successor's own text, so that the successor is complete and usable without the predecessor in force. A link to the predecessor shows where a claim came from, not that it is conserved. Under this requirement a link alone satisfies no disposition. This requirement is why construction comes in this order: the axioms first, then the whole predecessor restated on them.
+
+Restated on the axioms. The successor is on its axioms when three relationships hold:
+
+1. Foundation to law. A family of deciding contracts is a group of related rules that decide outcomes; a material family is one whose outcomes matter to the product. Each material family identifies three things:
+   - the foundational premises it rests on;
+   - the consequences that follow from them;
+   - any additional domain or policy choices, with their owners.
+
+   The whole set of members is accounted for. A demonstration over a few members is not presented as a derivation of every member.
+2. Ownership and use. The Spec Method and the profiles use the shared contracts at the points where an actor actually enters and applies them, not only by cross-reference, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
+3. Standalone conservation. Text the successor owns supplies every conserved determination needed for use.
+
+Unchanged predecessor text satisfies these where it carries the relationships. Copied text does not establish the foundational relationship just by being present, and the share of text rewritten is not evidence that a relationship holds.
+
+## Bounded Transitions And Reference Frames
+
+Source: [Construction And Context Management](../PRODUCT.md#construction-and-context-management), [P4–P6](PRINCIPLES.md#p4-typed-composition-and-conservation), and the installed [Reference Frame laws](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws), including [RF-009 No Assumed Hierarchy](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-009-no-assumed-hierarchy).
+
+1. Construction binds the described current state, destination constraints and the obligations each selected transition must preserve. Discovery and evaluation may change the known work. A destination change follows its owning authority and re-entry rules. Completion requires sufficient evidence against the applicable destination and its acceptance conditions; an explicit stop retains the unresolved outcome.
+2. Context management selects a frame that fits the actor's declared capability and contains the contract and material sufficient for its task. Known material relations appear in the frame or enter through declared authoritative inputs. Irrelevant material stays outside active attention unless needed to establish irrelevance. Capacity pressure never licenses omission of a material obligation; refine the task, select a capable actor or return the applicable stop.
+3. Context fit and adequate attention are evaluated separately. Bytes or tokens measure the selected representation's size. Actual-use evidence evaluates whether the actor applies the frame adequately to its declared task and conditions. It establishes no universal attention score. Time, spend and other resource limits remain those of the selected execution binding.
+4. A configuration assigns responsibilities and information exchanges to frames from the task's operations, dependencies, actor capabilities and assurance requirements. Its design explains the allocation, including material resource limits and assumptions about failure. It may use one frame or several, fixed or adaptive allocation, with no prescribed role inventory or hierarchy. The permitted allocation and reconfiguration preserve material dependencies, outstanding obligations, effects, admitted authority and required independence. Functional decomposition, communication, authority and evaluation dependency remain distinct. Selection or naming of a frame grants no authority. Each activation still binds its subject, result, capability and admitted authority. Required reviewer independence retains its authorship and evidence conditions; common sources and relevant evidence may be shared, while a fresh context alone does not satisfy independence.
+5. The material workspace and its authoritative external inputs persist across activations; an actor's context is a disposable projection, not a second truth surface. An activation observes the subject and basis its contract binds, including committed snapshots and declared external systems; an absent sparse file is not evidence of absence. Admissible contrary evidence reopens the affected claim under its drift and re-entry rules. It does not silently rebind the basis, change a governing requirement or confer authority. Acquisition reconciles material disagreement with cached beliefs or summaries. Discarding private context does not reset the workspace. Resumption starts from the current material state and retains applicable valid work. New observations may invalidate affected claims, and unknown effects are resolved sufficiently for the next dependent action. The method imposes no universal reset or complete-history replay obligation; the applicable recovery contract determines the necessary observations and effects. Closed results support bounded handoffs without transferring private working context; their reuse retains the existing validity and independence conditions.
+
+Purpose and material relation: finite context and attention require bounded, sufficient work and assessment. Task structure and assurance requirements constrain how that work is organised. These obligations preserve the selected destination through decomposition, coordination and recovery without deriving purpose or authority from resource limits. The configuration is stated in existing design, frame and work records; no additional carrier is required.
+
+## Build-Tenant Binding Requirement
+
+Source: this Product's [Build-Tenant Binding](../PRODUCT.md#build-tenant-binding). Each candidate's Spec Method states and applies this relation between a product's common WHAT and its tenant realisations.
+
+1. A build tenant binds the common requirements calculus to a declared computational calculus and binds that calculus to a concrete execution environment. These bindings are part of its existing design and realisation surfaces.
+2. The execution environment may be a technology stack, a human process or a combination. Its selection remains within the common requirements, including any required human decision. Author identity, actor identity and operation kind remain distinct; a person performing an operation does not by itself make that operation human adjudication.
+3. The binding identifies the operations, composition laws, effects, resource measures and operational assumptions material to conformance. Human effort, elapsed time, communication and machine resources are measured where the selected obligations need them, with their units and boundaries stated.
+4. Conformance evidence establishes how the bound realisation satisfies the required meaning and constraints, including applicable authority, independence, failure and recovery conditions. A convenient stack cannot weaken an obligation. A categorical preservation claim also meets the [demonstration standard](#categorical-demonstration-standard).
+5. A computational calculus may be reused across tenants and execution environments where the bindings satisfy its laws. A different language, tool or team does not by itself require a different calculus.
+6. Representation of the requirements and bindings in a_c does not prescribe their executor or establish execution conformance through structural validation alone.
+
+Purpose and material relation: the same common obligations can be realised through different means. The tenant owns those choices and their evidence, while the common specification retains its meaning. This keeps a particular stack from becoming universal method machinery and permits human and mixed processes without a parallel methodology.
+
+## Single Ownership Requirement
+
+Source: this Product's [Intent](../INTENT.md#what-the-product-is).
+
+A determination's owner is an owning locus: one section of one member. Owner here names a place in the text, not a person with decision authority.
+
+1. Within one candidate, every determination has exactly one owning locus. Each tenant candidate is its own scope, so the same determination appearing in both candidates is not a second owner.
+2. The owning tier follows the [tier obligations](../PRODUCT.md#c3-construction-contract):
+   - the Foundations own what holds for any method;
+   - the Spec Method owns what holds for this method;
+   - a domain profile, such as world modelling, or an operational profile, such as the frame catalogues and Executive procedure, owns only its own bindings: the terms and choices it adds for its domain or operation;
+   - the guides own their posting, writing and glossary conventions;
+   - packaging owns no method determination.
+3. Every other locus refers to the owner or refines it. A refinement names its owner and maps each of its values or cases back to the owner's. It never contradicts or redefines the owner's determination.
+4. A reference frame's copy of a clause names its owning locus and is not a second owner. A copy that differs from its owner is a conformance defect, repaired by copying again from the owner.
+5. Conserved text restated under the [standalone successor requirement](#standalone-successor-requirement) is the successor's own owning locus for that determination, not a duplicate of the predecessor.
+6. A part ported under [Cross-Synthesis](../PRODUCT.md#cross-synthesis) takes one owning locus in the receiving candidate.
+7. Where two loci decide the same question, one is made the owner and the other refers to it or refines it. No rule of precedence between loci substitutes for that.
+
+Purpose and material relation, meaning why the requirement exists and what it protects: a question decided in two places is interpreted twice and can be answered two ways. One owning locus gives one answer per question within a candidate. The [single result algebra requirement](#single-result-algebra-requirement) is this requirement applied to results.
+
+## Single Result Algebra Requirement
+
+Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)). It unifies the previous release's two evaluation algebras, which C1 left to be unified ([C1 Disposition](PRINCIPLES.md#c1-disposition)):
+
+- RF-012, the closed results of reference-frame evaluations;
+- AC-007, the constraint and refusal outcomes of a_c.
+
+1. The Foundations own exactly one core result algebra. Results of constraints, judgements, frames, stops, work and effects are stated in it or as refinements of it.
+2. A member or profile that needs finer outcomes defines a refinement. Every refined value maps to exactly one core value, and no outcome exists outside the core.
+3. A refinement never raises a result's standing:
+   - a falsified or failed result never maps to a satisfied or successful one;
+   - a result that admissible evidence cannot decide never maps to satisfied;
+   - an evaluation that was not performed stays distinct from one whose evidence cannot decide;
+   - an effect whose completion is unknown never maps to no effect or to completed.
+4. The core value travels with the evaluated predicate and the original domain outcome. A mapping never owns domain meaning; the domain owner keeps it.
+5. A step having produced a candidate never maps to the candidate's fitness or acceptance. Availability, assessment and acceptance remain separate results.
+6. Conjunction and composition of results are defined once, over the core.
+7. A reference frame whose task returns a result carries the core algebra or its profile's mapping into it.
+
+Purpose and material relation: this is the [single ownership requirement](#single-ownership-requirement) applied to results, as the [Intent](../INTENT.md#what-the-product-is) directs. One set of outcome values across the tiers removes competing ownership of results. Items 3 to 5 keep, when results are combined, the distinctions between failure, undecidability, non-performance and uncertain effects. Those distinctions are required by [P5 and P6](PRINCIPLES.md): finite capacity with graceful handling, and justified claims with separate authority.
+
+## Categorical Demonstration Standard
+
+Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)) and the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply).
+
+A categorical claim about the method, or about a construction made with it, is established only with items 1 to 5, as far as they apply to it. Acceptance of the categorical capability, and any claim that asserts the worked join itself, also require item 6:
+
+1. Objects and arrows. For each category claimed: its objects, its arrows, when two arrows are equal, its identities, and associative composition.
+2. Preservation per layer. Each refinement layer states what it preserves of the layer above and discharges that obligation. An exact step preserves meaning. An approximate step states its adequacy relation (how close is close enough) and an end-to-end bound. A fixed tolerance at each step does not compose into an end-to-end bound.
+3. Licensing laws. A construction step is admissible under the laws declared for its subject. With no law declared, only universally valid steps, which hold whatever laws the subject has, are admissible.
+4. Joins. A map between categories is defined on objects and arrows. Its functor laws, that it preserves identities and composition, are shown before it is claimed to be a functor. Conformance, equivalence and functorial preservation are distinct claims.
+5. Representation and evidence.
+   - Laws, records and maps are represented in a_c, retaining which statements are premises, derived consequences or declared choices.
+   - a_c, its interpretations and its carriers (the files and tools that hold it) keep separate identities.
+   - Structural validation checks structure only.
+   - Each claim names its evidence class: mechanically checked, established by mathematical argument, tested against an independently specified oracle, or unresolved.
+6. Worked join. One algorithm category joined with one computation category is the acceptance instance for the categorical capability.
+
+A categorical statement without the demonstration it requires is a hypothesis. Purpose and material relation: the categorical direction ([Intent](../INTENT.md#mission)) is useful only where its constructions preserve meaning, and these items are what preservation must show.
+
+FOUNDATIONS
+# STDO Foundations
+
+STDO specifies purposeful construction by actors with finite resources. This
+member declares the foundational commitments for that method domain and the
+premises on which its conditional construction contracts depend. The
+[Transformation Library](TRANSFORMATION_LIBRARY.md) defines their shared
+contract operations; particular methods bind their types, predicates, refinements
+of the result algebra and authority. Neither adopted premises nor an entailment argument
+appoints an actor or supplies an operation grant.
+
+Particular methods own their deciding clauses. Their conditional specialization
+does not assign all software or calculus definitions a common purpose,
+signature or workflow.
+
+## Premises and standing
+
+An actor has finite attention, context, time, storage and capability. This is a
+resource premise. It does not choose an outcome, confer authority, identify an
+object or prove compatible composition. Those commitments require their own
+premises.
+
+A selected purpose U_foundation supplies an adequacy predicate and reserved value choices.
+An object O_subject supplies a scoped identity, boundary, current state and material
+relations. An interpretation context kappa_interpretation determines the meaning available to
+a consumer. A governing specification Sigma_contract declares obligations and admissible
+variation. For an evaluation performing operations, the imported operation authority bounds
+its permitted effects. Other operations retain the grants of their owning
+contracts. Decision authority bounds disposition. These remain distinct
+source-owned relations. Observations and arguments
+support claims only on their declared subject and basis.
+
+The declared bounded context is `urn:stdo:bounded-context:foundations`.
+Its owner is the STDO Specification Methodology Product authority. Its selected
+basis is this member's definitions at the exact member digest together with the
+cited source-owned clauses, bound under the activation's governing cut. Its scope
+is the locally defined premises, shared deciding contracts and explicitly scoped hypotheses,
+including the account in Orthogonal descriptions. The authority vocabulary
+uses the explicit imports below. Named domain cases retain their source context
+and do not become local role or outcome definitions. The context identity is stable
+across location or permitted representation changes; a new digest still changes
+content and may change applicability.
+
+These symbols do not define similarly spelled symbols in method-identity,
+traversal, ticket, world-model or calculus contexts.
+[Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+governs cross-context use; no shared default interpretation is inferred.
+
+The premises below are adopted commitments for the selected methodology domain,
+not theorems derived from finite capacity alone. Particular method rules need
+these premises plus their stated domain and policy choices. A conditional
+argument preserves that distinction; it does not manufacture authority.
+
+## Foundational commitments
+
+This section is the owning locus of F1–F6 in this method realization; the
+Product authority declared above is the context's semantic authority.
+They do not rename the separately scoped authority concepts imported below.
+
+| Commitment | Premise and standing | Distinction retained |
+|---|---|---|
+| F1 Purpose | Adopt a selected outcome and adequacy relation for purposeful construction. Value choices come from the purpose owner. | A local successful operation need not satisfy the selected outcome. |
+| F2 Interpretation | Claims are interpreted on a declared subject and basis; unsupported interpretation remains unresolved. | Encoding or structural validity is not semantic evidence. |
+| F3 Identity and current state | Work has scoped identity and observable persistent state; representation and historical observation are separate. | Re-entry need not recreate completed work, and history need not describe current effects. |
+| F4 Typed composition | A composite conserves its outer contract's material relations under declared compatibility and loss. | Shared machinery does not merge owners, findings or authority. |
+| F5 Finite capacity and total handling | Actor resources are finite; the selected control domain admits truthful handling of unknown, inadequate and interrupted conditions. | Total handling is not omniscience, universal idempotence or guaranteed solution. |
+| F6 Evidence and authority | Evidence supports claims; operation and decision authority come from their bound owners. | A judgment or available tool is not permission. |
+
+For this domain, these premises require a transformation contract to explain
+what counts as an adequate result, which subject and interpretation it uses,
+what state and material relations survive, which unknown outcomes it admits,
+and which effects or dispositions are authorized. Only material bindings are
+required by the selected instance. The contract vocabulary is defined once in
+[the library's foundational contract](TRANSFORMATION_LIBRARY.md#foundational-contract).
+A function in another domain retains its own dependencies; these commitments do
+not add a purpose field or a mandatory record to every calculus entity.
+
+A specialization fixes additional types, predicates, policy and adoption
+conditions without discarding its selected generic contract's guarantees. The
+[work/recovery argument](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+shows the premises, consequences and independent choices for one complete chain.
+Each deciding family states the corresponding premises, consequences and
+additional choices at its own use contract. A family without that argument
+remains an unsupported specialisation.
+
+## Interpretation and representation
+
+A representation is an encoding. An interpretation relates that encoding to
+meaning under a declared context. Equal encodings can have different meanings;
+different encodings can represent the same scoped meaning. A parser, structural
+validator or successful join does not establish interpretation fidelity.
+
+An operational algorithm can make an interpretation testable. Universal claims
+that every meaning has an algorithmic encoding require a defined domain,
+adequacy relation and argument; they remain hypotheses outside that domain.
+For an a_c subject interpretation, the
+[calculus fidelity law](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+owns that calculus-specific obligation. In reference-frame evaluation,
+[RF-007](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)
+owns separation of semantics, evidence and verdict. These examples supply no
+universal authority for interpretations outside their declared domains. The
+governing contract determines admissible loss, abstraction and which consumer
+distinctions must remain recoverable; this account supplies no additional loss law.
+
+## Purpose and interfaces
+
+The [Product outcome law](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013)
+owns the requiring relation for Product-outcome-bearing work;
+[proportional method law](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+owns justification of method burden. The purpose owner fixes the observable adequate outcome. An interface exists
+because a transformation needs to acquire, convey, judge or effect a material
+relation. Its obligations derive from that relation and the outer contract.
+A convenient signature, existing function or local test cannot invent Product
+meaning. Within UP-014's scope, the method owner justifies material method burden.
+This does not add a purpose dependency to calculus definitions or constraints.
+
+## Identity, state and evidence
+
+Identity distinguishes an object within a declared scope. Identity may survive
+a rename, relocation, representation change or allowed state transition.
+Content equality does not establish identity; unchanged identity does not
+establish current content. A digest binds bytes, not all semantic meaning or
+permission.
+
+[Identity Method](IDENTITY_METHOD.md) owns governed names and coordinate changes.
+Work state is the current subject under construction. An event, assessment or
+receipt is evidence of a scoped observation or judgment. Acceptance is an owner
+decision. None of these substitutes for another. Historical evidence remains
+historical when current premises change. Reuse requires supported applicability,
+including identity, basis, freshness and the predicate actually assessed.
+
+## Reference-only semantic imports
+
+Source and target meanings are identical owner-qualified references, not new
+local definitions. Direction is from the named source to this foundational
+context; loss is none and no translation or ownership transfer is asserted.
+The target semantic owner is the STDO Specification Methodology Product authority,
+the same owner declared above. The source context is declared by
+[Frame Method's Position](REFERENCE_FRAME_METHOD.md#position), whose owner is
+REFERENCE_FRAME_METHOD.md. The source basis is that member at the exact digest bound by the selected
+complete cut or frozen source inventory.
+The target basis is this member at its exact member digest supplied by the
+frozen activation or selected installed manifest. A review carrier is not an
+installed dependency and supplies no authority.
+An activation binds each member's distinct coordinates in its selected complete
+governing basis; equal cut selection does not mean equal member coordinates.
+Lifecycle and adoption remain source-owned. A changed member, selected basis,
+source declaration or adoption premise requires fresh applicability before use.
+
+| Referenced concept | Source context | Exact source concept and owner |
+|---|---|---|
+| frame-set authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human authority that declares or accepts the project frame set |
+| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relation |
+| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluation |
+| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operation |
+| decision authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to accept, reject, or otherwise dispose its result |
+| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work. |
+
+These are reference-only imports into urn:stdo:bounded-context:foundations.
+They provide no semantic, evaluation, operation or decision authority. Baseline
+Reviewer/Worker examples and ODD runtime roles are direct, owner-qualified
+domain references; this context neither imports their role labels nor creates
+aliases. Their results refine the common outcome type below. Their linked contracts and adoption conditions
+remain necessary for any material domain use. An activation lacking the source meaning,
+adoption or authority binding reports that unresolved relation before dependent
+reliance rather than interpreting it from equal spelling.
+
+## Typed composition and conservation
+
+Relations compose only when their source and destination types, interpretation,
+identity, lifecycle, preconditions, authority and effects are compatible. A
+handoff conserves the material outer contract and original producer coordinates.
+It retains known failures and their citations, required uncovered coverage and
+uncertainty. Local success cannot erase a failed or missing material relation.
+
+[Bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+owns the design obligation. Conservation concerns recoverable meaning, not copying bodies. A reference is
+sufficient when its authentic owner, exact selector, availability and consumer
+resolution preserve the required relation. A digest of unavailable material
+does not supply context. Shared machinery may serve several instances while
+their semantic owners, responsibility and independence remain distinct.
+
+## Finite capacity and total handling
+
+The [frame laws](REFERENCE_FRAME_METHOD.md#reference-frame-laws) own material
+sufficiency and capability; the [totality rule](DESIGN_MODULE_METHOD.md#8-totality-rule)
+owns closed design handling. Each activation binds the actor and capability
+envelope materially needed by its claim. No universal numeric budget, resource
+ledger or measurement gate follows.
+Dependent reliance needs sufficient material context and capability for its
+selected claim. An authorized useful discriminator, first candidate or unrelated
+work can proceed under its own sufficient grant while another relation is
+unresolved; uncertainty is not universal paralysis. If a coupled required
+relation does not fit, the actor reports the misfit. The existing
+human authority named in RF-014 may select refinement, another actor,
+sequencing or lawful compression under RF-014. Any delegation must come from a
+separate applicable grant; RF-014 itself supplies none. The actor acts on an already
+authorized response, requests the owning decision, or stops with an explicit
+unresolved result; capacity supplies no configuration grant. Never replace a difficult
+required relation with an easier claim merely to report success.
+
+[Bounded construction](#bounded-construction) owns total control handling.
+The design totality rule refines that contract for its admitted control domain;
+it does not introduce another method result algebra.
+
+Process resumption applies [Workspace and context](#workspace-and-context).
+The Spec Method binds its product-specific triage and progress predicates;
+[Ticket Method](TICKET_METHOD.md#work-carrier-to-execution-rule) binds carrier use; adopted runtime profiles bind stronger
+history or replay duties within their scope. None of those bindings turns
+private actor context into the continuing work state.
+
+## Judgment and authority
+
+The [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+owns authority conservation for frame evaluation. Within a_c,
+[AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
+judgment separation. Where a consumer has adopted the construction engagement
+profile and lawfully activated the applicable engagement,
+[the Baseline](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
+owns its exact Reviewer/Executive application of the detailed laws. Other
+domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
+have distinct standing. A judgment binds a predicate, exact subject, basis,
+evidence, assessor and any required independence. An operation grant permits
+specified effects; decision authority retains its separately bound mandate.
+Neither evidence shape nor actor capability
+mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
+Reviewer and Executive retain their exact roles from that profile. This account
+assigns neither role or its authority. Domain control such as ODD next-action
+selection remains with its own named function; the explanation appoints none.
+
+Unknown applicability, missing context, incompatible basis and failed predicates
+remain observable. Severity grades the supported consequence if a finding manifests. Priority,
+disposition, selected action and promotion effect remain distinct; their
+assignment follows the applicable mandate. The semantic result remains separate from the authoritative construction
+disposition to repair, re-enter, reject or accept.
+
+## Orthogonal descriptions
+
+Keep three accounts distinct. An algorithmic account specifies the selected
+transformation. An informational account explains interpreted distinctions and
+their preservation. A computational account realises the operation through a concrete execution
+environment: software and hardware, people and communication, or a mixed
+process, with the effects and resource costs material to its obligations. They are
+simultaneous descriptions, not successive SDLC stages.
+
+To assert a category, specify objects, typed arrows, identities and associative
+composition. To assert a functor, show identity and composition preservation.
+For a proposed categorical model, A names the algorithmic account, I the
+interpreted informational account, and C_H the computational realization on a
+declared architecture H. They name categories only after the required objects,
+arrows and laws have been supplied. For a proposed span A -> I and A -> C_H,
+conformance to Sigma_contract, semantic
+equivalence and computational equivalence remain different claims. Categorical
+equivalence additionally requires the appropriate quasi-inverse and natural
+isomorphisms on a stated domain; an analogy or matching result is insufficient.
+
+State sufficiency for a selected decision, statistical Markov properties,
+conditional independence, a mathematical Markov category and a runtime monad
+are separate claims. The method neither asserts nor rejects them universally.
+Their domains, laws and falsifiers must be supplied before using them as proof.
+
+## Canonical transformations
+
+The [transformation library](TRANSFORMATION_LIBRARY.md) describes Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose. The library defines a shared contract vocabulary with conditional obligations
+for this selected method domain. Particular methods specialize it through their
+own types, predicates and authority; it is not six compulsory stages or six
+runtime APIs. No operation authority follows from a contract definition.
+A changed detailed determination still returns to its owning contract.
+
+## Construction and use
+
+The corpus may exceed one actor's capacity. An activation consumes a sufficient
+projected reference frame and exact subject, with acquisition paths for required
+material. The projection has declared fidelity and scope; it is not a rival
+source of authority. Independent evaluation may require overlapping context at
+a different capability or evidence altitude.
+
+Product acceptance, universal mathematical truth, operational efficiency and
+release each need their own evidence and authority. Foundational explanation
+does not transfer authority from a named detailed method owner.
+
+## Result algebra
+
+A result makes a claim about one predicate on one subject and basis. Its core
+record contains the predicate, exact subject and basis, verdict, performance,
+original qualified domain outcome, supporting evidence and citations, unresolved
+obligations and material effect observations. A reference can carry these when
+its resolution preserves their meaning and availability. This is a semantic
+contract, not a mandatory serialization format or additional work carrier.
+
+The verdict has exactly these values:
+
+| Value | Meaning for the bound predicate |
+|---|---|
+| `satisfied` | Admissible evidence establishes the predicate under its declared evaluation rule. |
+| `falsified` | Admissible evidence establishes a counterexample or failure of that predicate. |
+| `indeterminate` | The available admissible evidence does not decide the predicate. |
+| `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
+| `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
+
+Performance records whether the named predicate's declared evaluation procedure
+reached its conclusion; it is `performed`, `not_performed` or `unconfirmed`.
+The activation binds that procedure and its conclusion boundary before use. The legal pairs are:
+
+| Performance | Permitted verdicts | Meaning |
+|---|---|---|
+| `performed` | Any of the five verdicts | The procedure concluded, including a scoped basis or capability diagnosis. |
+| `not_performed` | Any except `satisfied`, with the evidence condition below | Evidence establishes no conclusion: it never started or aborted; retain which occurred. |
+| `unconfirmed` | Any except `satisfied`, with the evidence condition below | Whether the procedure concluded is not established. |
+
+Non-conclusion does not erase admissible evidence already obtained. An
+authenticated counterexample to the bound predicate can establish falsified
+before its procedure concludes; an established basis or scope diagnosis can
+likewise establish invalid_basis or out_of_frame. The result identifies that
+evidence independently of any claim that the procedure concluded. Without
+such deciding evidence it is indeterminate. Satisfaction requires the declared
+procedure's conclusion and its required evidence; a partial attempt cannot
+stand in for that conclusion. For example, a suite aborted after a witnessed
+failure falsifies “all tests pass” while remaining not_performed at the declared
+whole-suite conclusion boundary. Both facts survive conjunction.
+
+A missing required judgment stays an absent coverage slot, with the known
+performance fact or its uncertainty; it is not a fabricated child result. A
+performed but undecidable evaluation differs from a known unperformed one and
+from unconfirmed execution. A failed admission check can conclude while
+downstream work does not. The plan fixes which predicates are required; a
+precondition is evidence for its dependent evaluation unless the plan separately
+requires that precondition as a predicate. A concluding basis/scope diagnosis
+on P reports invalid_basis/out_of_frame on P with its supporting evidence; a
+different admission predicate is not silently substituted for P. An aborted
+procedure does not erase separately authenticated counterexamples observed
+during the attempt. Every result projection preserves these
+coordinates and the original predicate; a verdict alone is an insufficient
+handoff where performance is material.
+
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`,
+`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`reverted` means that at least one part began and every begun part is observed to have been reversed within
+the declared boundary, with the reversal and any unstarted remainder retained
+as evidence. Irreversible messages or other material external effects must not
+be excluded from that boundary to claim reversal. `partial` means an observed
+completed part and an observed unexecuted or reverted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
+An empty local log or discarded context does not establish no effect. When no
+effect is part of the operation, `not_requested` states that scope.
+
+A refined value is the pair of original domain outcome and cause in its
+declared reason domain, including an explicit missing-reason case. A domain
+refinement preserves that qualified original outcome and supplies a
+total, reason-sensitive map into this record. If the original outcome is too
+coarse to determine a verdict, its required reason distinguishes the cases; a
+consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
+A missing required reason maps the claimed predicate to indeterminate and
+leaves that contribution inadmissible as deciding support for its slot;
+retain its raw outcome and unresolved authentication. Its claimed predicate
+remains indeterminate until admissible evidence decides it. Independently
+established counterevidence or a basis/scope diagnosis uses the legal pairs above
+on that same bound predicate; it does not invent a completed procedure.
+Requested effects without sufficient observation are unknown, never defaulted
+to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
+No refinement turns failure, undecidability, non-performance or unknown effect
+completion into greater standing. A new result over a different predicate does
+not overwrite the earlier result.
+
+Candidate availability, candidate fitness and authorised acceptance are three
+predicates. `candidate_ready` can satisfy availability while fitness remains
+falsified or unassessed. A lawful yield can satisfy the selected yielding
+contract while product completion remains unresolved. A decision result binds
+the predicate “disposition D on subject S at basis B was made under mandate M
+by its bound authority”. A lawful rejection can satisfy that predicate while
+candidate fitness remains undecided. Recording the decision is not its authority.
+A not-applicable classification needs a supported applicability judgment; it is
+never a synonym for a missing evaluation.
+
+A stop reports the actual destination or task predicate through this record,
+with its reason, observed effects and outstanding obligations. Its verdict
+is indeterminate when the outcome remains undecided, falsified when admissible
+evidence defeats that predicate, or the established scope/basis diagnosis.
+Lawfulness of stopping is a separate decision predicate.
+
+## Result conjunction
+
+Conjunction evaluates whether all required predicates and their material joins
+hold on the declared composite subject and basis. It retains the contributing
+results, their authentication and predicate mapping, known failures and their
+citations, uncovered required coverage, uncertain effects and invalidators.
+The aggregate is another result in the same algebra, with those components
+available through sufficient references. Its summary never replaces them.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. The composite declares its
+effect boundary and the selected effect parts within it. First resolve a current
+observation for each part, retaining the contributing observations, identities,
+ordering and any supported supersession. A later timestamp alone is no
+supersession argument. Conflicting or insufficient observations leave the part
+unknown. A requested part without sufficient observation, including a part
+owned by an absent evaluation slot, is unknown unless evidence establishes
+not_started. No requested parts gives not_requested.
+
+Sequential stages can affect the same part. Their local completion labels are
+not inputs to the composite join until mapped onto that part's observed state
+at the composite boundary. A completed deployment followed by its completed
+rollback is reverted for the deployment effect; a subsequent completed
+reapplication is completed there. The historical rollback remains evidence.
+The declarations retain every material external part, including irreversible
+ones; a local reversal cannot silently remove them from the scope.
+
+Over the resulting disjoint part observations: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; reverted with only reverted, not_started or
+not_requested gives reverted; every remaining fully observed mixture gives
+partial. Retain each observation's part and contributing components. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
+
+First authenticate each contribution against its producer, subject, basis and
+required plan membership. An unauthenticated claim cannot discharge an
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
+conditions. An invalid contribution does not erase an independently
+authenticated finding.
+
+For an interpretable composite predicate and governing basis:
+
+1. Any authenticated, applicable falsification of a required predicate or material join makes
+   the conjunction `falsified`. Missing or undecidable other coverage remains
+   explicit alongside it.
+2. With no such falsification, an invalid required basis prevents satisfaction
+   and yields `invalid_basis`; a required out-of-frame judgment yields
+   `out_of_frame` when no invalid basis applies.
+3. Otherwise any unresolved applicability, missing evaluation, undecidable
+   predicate or undecided material join yields `indeterminate`.
+4. `satisfied` requires every applicable obligation and material join to be
+   authentically satisfied, with coverage itself established. An empty list
+   proves nothing unless the declared required set is established as empty.
+
+The composite declaration distinguishes its admission conditions from the
+material joins of the predicate being evaluated. Each relation has one of
+those roles in that evaluation. A failed admission condition prevents an
+interpretation; a false required join is counterevidence within an admitted
+interpretation. The result names that declared role instead of reclassifying a
+known failed join as a missing basis. If the composite subject or governing basis itself cannot be interpreted, the
+aggregate is `invalid_basis`; independently valid component failures and their
+scope remain exposed. This does not pronounce them false or forgotten.
+Effect uncertainty prevents satisfaction where the predicate requires a known
+effect state. An unrelated effect does not automatically invalidate a different
+predicate; the dependency relation must justify its relevance.
+
+A declared operator states its truth and falsity conditions over exact leaf
+predicates and joins. On its fully decided admitted domain, those conditions
+are disjoint and exhaustive, including failure of a required join. An
+overlapping, incomplete or uninterpretable operator declaration is invalid_basis;
+its unresolved well-formedness remains explicit and supplies no satisfaction.
+Its result can be satisfied only when authenticated
+evidence establishes its truth condition and the material joins and coverage
+needed for that condition. It can be falsified only on an established falsity
+condition. Otherwise a material invalid_basis yields invalid_basis, a material
+out_of_frame yields out_of_frame when no invalid basis applies, and every
+remaining undecided case is indeterminate. Only dependencies needed to decide
+the bound predicate enter that ordering. Authentication, original failure
+retention, performance and effect composition remain the rules above. Negation
+or disjunction evaluates a different predicate; it cannot erase a failed leaf
+or pass that result off as conjunction of all leaves. A first-nonfailure rule
+cannot turn an undecided fallback into success.
+
+Sequential composition records an unreturned dependent evaluation as an absent
+slot, with known non-conclusion or unconfirmed conclusion as observed. A lawful regrouping requires the same interpretable composite basis, required
+leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
+hidden by the grouping. On that fixed domain, retained component sets combine
+by union and the above verdict/effect operations are associative. An invalid
+intermediate join is a failed premise of that rewrite, not evidence that every
+arbitrary grouping is equivalent. Reordering
+operations additionally needs an effect-independence law; associativity alone
+supplies no such permission.
+
+Sequential operations compose under their applicable owning contracts:
+[UP-016/017](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+for design composition and [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+within a_c. Their returned result applies the operator rule above to the
+declared outer predicate using
+its preservation argument and the retained component results. For a pipeline
+whose contract requires every stage postcondition, this is the conjunction
+above; a recovery path need not require a failed earlier test to become true.
+Unexecuted stages remain coverage facts, with no invented evaluations. A
+sequence without an established outer interpretation or join returns the
+applicable unresolved or invalid-basis result rather than a guessed success.
+
+## Workspace and context
+
+The workspace is the continuing material state of the construction, including
+its authoritative requirements, work products and durable records. Material
+external state is observed through its owning interface. The actor's context is
+a bounded account acquired from these sources. It is fallible and disposable.
+Acquisition observes the subject and basis the activation actually binds,
+including frozen snapshots where selected. Admissible contrary current evidence
+reopens affected claims through their drift and re-entry rules; it does not
+silently select a different basis. Current observations correct stale beliefs;
+they do not grant permission to
+change a requirement to match the implementation. What exists and what must
+exist remain different questions on the same truth surface.
+
+Acquisition binds the current task, subject, destination constraints, authority
+and relevant observations. It includes known material dependencies directly or
+through declared available inputs, and excludes irrelevant material unless
+needed to establish irrelevance. A rule packet without its current subject is
+insufficient. A digest without accessible meaning is insufficient. A summary
+without supported freshness cannot override its owner. Absence from a partial
+projection, sparse checkout or empty local record is not evidence of absence
+in the bound subject; acquire its authoritative source or retain indeterminacy.
+
+An observation binds its source and observation time or version. Where the
+subject may change between observation and effect, the binding supplies the
+material freshness or concurrency condition: re-observe, compare a revision,
+use a protected snapshot or return uncertainty. No universal isolation scheme
+follows. The selected operation cannot assume a stale read is still current.
+
+The cycle is acquisition from current state, a bounded authorised operation,
+observation of its result, and acquisition for the next operation. Results use
+[the result algebra](#result-algebra). The cycle can stop after any operation
+without inventing completion. Private context can be discarded between cycles;
+resumption reconstructs sufficient context from the continuing workspace and
+authoritative inputs. It neither erases progress nor requires a transcript of
+every earlier activation.
+
+Reuse requires supported applicability: the same claim scope, adequate current
+basis and evidence, valid dependencies and required independent authorship.
+Changed support reopens the affected dependent claims. Unchanged independent
+work remains usable; when dependency independence cannot be established, inspect the
+wider affected scope. A stored green label is not a validity argument.
+
+Before repeating an operation with uncertain effects, observe or reconcile
+sufficiently to decide the next dependent action. A granted idempotent operation
+may be retried where its idempotence is established for that subject and effect.
+Otherwise select another permitted action or return the unresolved result.
+A workspace that retains partial progress does not make every operation
+idempotent. An event log may support observation, audit or domain-specific
+reconstruction; it is not universally the work state or a compulsory recovery
+algorithm.
+
+## Bounded construction
+
+A describes current material state and what is justified about it. Z is the
+selected set of constraints and acceptance conditions; many states may satisfy
+it. Intent, Product and Specification refine Z under their owning authority.
+Write material intermediate states as S0 → S1 → …, reserving Z for the
+destination constraint set and naming a satisfying endpoint separately. A
+transition binds its preconditions, permitted effects, result predicate and
+outer obligations. Where finite context or attention prevents one adequate
+activation, refine the task into supported transitions over those states.
+
+Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
+identity identifies the work; compatibility and assurance determine which
+transitions compose. These are additional premises, not consequences of a
+resource bound. Decomposition preserves all material outer obligations and
+the joins between parts. Local success establishes the outer outcome only
+when the required coverage and preservation argument hold.
+
+A total control contract supplies a response for every admitted control state,
+including unavailable input, unknown world conditions, failed preconditions,
+partial effects, exhausted capability and revoked or exhausted authority. Its
+outcomes use the core result algebra. Its alternatives may include repair,
+re-entry, refusal, yielding or termination under the actual grant. It does not
+promise to solve every problem or make an external process terminate.
+Deterministic, probabilistic and human operations retain their selected outcome
+models; their enclosing control handles the observed result truthfully.
+
+Progress is supported movement toward the selected destination. Useful discovery
+can enlarge the known frontier; counts alone are no distance metric. Stopping
+can be lawful without completion. Completion needs the required evidence and
+acceptance conditions on the current candidate. Changing Z follows its owner
+and cannot establish that the old destination was reached. Repeating a failed
+relation needs a supported causal change; elapsed activity is no repair.
+
+## Configuration
+
+A configuration allocates operations and information to capable actors and
+declares the material dependencies between their frames. It assigns effects
+only within grants the allocator holds and may delegate. Its existing design
+or frame record explains the allocation against operations, dependencies,
+capabilities, assurance, resource limits and failure assumptions.
+Finite context and attention, actor fallibility, communication costs and required
+assurance constrain that allocation. They do not uniquely derive a hierarchy
+or a fixed inventory of roles. An adequate configuration can use one actor,
+peers, a hierarchy or supported adaptive allocation.
+
+Producing, checking and accepting remain different responsibilities even where
+one actor is permitted to perform several. Required independent review retains
+its authorship and evidence conditions; a new context alone does not supply it.
+Roles acquire authority from their grants, never from their names. Functional
+decomposition, communication, authority and evaluation dependency are distinct.
+
+The optional [Executive arrangement](STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action)
+specialises this contract for longer-term delivery through bounded worker
+results. Its procedure and grants belong to that profile. Every allocation and reconfiguration, fixed or adaptive, preserves material
+dependencies, outstanding obligations, observed and uncertain effects, admitted
+authority and required independence. A claim that one arrangement is optimal names its
+objective, constraints, comparison scope and evidence.
+
+## Core contract derivations
+
+| Deciding family | Foundational premises | Conditional consequence | Additional choice and owner |
+|---|---|---|---|
+| Result record | F1 selects the predicate; F2 binds interpreted evidence; F6 separates judgment from authority | A useful handoff must retain which claim was actually decided and cannot infer permission from success | This member chooses five verdicts plus explicit performance and effect coordinates; domain owners supply finer predicates and evidence rules |
+| Result conjunction | F2 authenticates claims; F4 preserves all required relations | A failed required predicate defeats conjunction; missing coverage cannot supply success; failures and uncertainty must remain available | This member chooses the stated aggregation precedence and effect join for interpretable conjunction; other operators retain their declared predicates |
+| Workspace and context | F3 supplies persistent observed state; F2 makes the account revisable; F5 bounds context and attention | Continuity requires sufficient reacquisition, not preservation of a private belief; stale support must be reconsidered | Domain owners choose observation/freshness protocols and any stronger replay duties; the execution binding selects measurement |
+| Bounded construction | F1 supplies Z; F3 identifies changing work; F4 requires preserved outer obligations; F5 bounds an activation | Large work needs supported refinement or an explicit stop; local success alone does not prove the destination | Spec Method owns re-entry and Product progress, Design owns concrete total control domains, and grants bound permitted responses |
+| Configuration | F4 supplies task dependencies; F5 bounds actors; F6 supplies grants; the task supplies fallibility and assurance assumptions | Allocation must conserve dependencies and required checks within capability; no unique hierarchy follows | Operational profiles and tenant designs choose topology, allocation, communication and assurance mechanisms |
+
+These are conditional arguments in the selected methodology domain. The table
+neither proves completeness for the world nor selects a universal executor.
+
+LIBRARY
+# Transformation Library
+
+This member owns the shared transformation contract vocabulary for the
+purposeful, specification-governed construction domain declared by
+[Foundations](FOUNDATIONS.md#foundational-commitments). Bind, Acquire, Transform,
+Evaluate, Conjoin and Dispose are responsibilities that can be composed or
+co-located, not compulsory stages, actors or runtime APIs.
+
+The contracts below are conditional on selected foundational premises and
+instance choices. Particular methods retain ownership of their concrete types,
+result refinements, applicability, adoption, admission and operation grants.
+A contract definition does not supersede an owner determination or authorize
+its use.
+
+Its shared contract vocabulary resolves in bounded context
+`urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
+Methodology Product authority. The basis is this exact member digest and its
+cited source-owned contracts under the activation's governing cut; its scope
+is the generic contract vocabulary, conditional specialization arguments and
+the explicitly imported authority vocabulary.
+Named domain examples retain their source context; their role labels, types and
+outcome enums are not local definitions or a shared library contract. A linked family correspondence
+uses that context, while each named source function keeps its own context and
+contract. Equal spelling is no equivalence or import. One function may have
+several correspondences: this account is neither a partition nor a hierarchy.
+
+## Reference-only semantic imports
+
+The target context is urn:stdo:bounded-context:transformation-library and its
+semantic owner is the STDO Specification Methodology Product authority.
+Direction is source to this contract account; meanings are unchanged owner-qualified
+references, with no translation, loss, inverse or ownership transfer. The source
+context and owner are declared in [Frame Method's Position](REFERENCE_FRAME_METHOD.md#position).
+Its exact source member digest is supplied by the selected complete cut or
+frozen source inventory.
+The target has its own exact member digest supplied by the frozen activation
+or selected installed manifest. A review carrier is not an installed dependency
+and supplies no authority. An activation binds
+each member's distinct coordinates in its selected complete governing basis.
+Changed member, basis,
+source declaration or adoption premise invalidates reliance until applicability
+is re-established. Source lifecycle and adoption conditions remain unchanged.
+
+| Referenced concept | Source context | Exact source concept and owner |
+|---|---|---|
+| frame-set authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human authority that declares or accepts the project frame set |
+| semantic authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner of meaning for a material relation |
+| evaluation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to perform an evaluation |
+| operation authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the owner-issued grant to construct, transform, admit, publish, or mutate a material subject where an evaluation performs such an operation |
+| decision authority | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the role permitted to accept, reject, or otherwise dispose its result |
+| actor identity | urn:stdo:bounded-context:reference-frame-evaluation | [Frame authority](REFERENCE_FRAME_METHOD.md#authority): the human, agent, tool, or process performing work. |
+
+These imports provide no semantic, evaluation, operation or decision authority.
+Missing meaning or authority bindings remain unresolved before dependent use.
+The named Baseline Reviewer and WorkerResult cases below are owner-qualified
+domain examples, not imported local role labels, aliases or outcome types.
+Their source contracts retain applicability, adoption and activation conditions.
+
+## Foundational contract
+
+Premise owner: FOUNDATIONS.md, context urn:stdo:bounded-context:foundations,
+under the selected complete STDO basis. F1–F6 retain their exact definitions
+at that source. Direction is source premises to the library's conditional
+contracts; no meaning is translated or lost and no authority is transferred.
+The target is this member's context and its Product owner declared above. The
+activation or installed manifest binds both exact member digests. A changed
+premise, basis or adoption condition reopens the affected argument before use.
+
+For one selected operation, let X and Y be its declared input and output
+domains, K its interpretation, P its required outcome predicate, I its material
+identity/state relations and G its actual effect or decision grant. These are
+parameters, not serialized fields or a universal schema. The instance owns its original domain outcomes and their total refinement into
+[the core result algebra](FOUNDATIONS.md#result-algebra). Unknown judgment,
+non-performance and uncertain effects retain their separate coordinates.
+
+- F1 and F2 require P to be about the intended subject under K; satisfying a
+  different predicate cannot establish that outcome.
+- F3 and F4 require I and the outer contract's material support to survive a
+  handoff. Permitted variation or loss is an explicit instance choice.
+- F2 requires a truthful unknown when material support is insufficient; F5
+  supplies the selected domain's handling alternatives. Neither requires
+  stopping unrelated authorized work.
+- F6 requires an actual G before a dependent effect or disposition. Sufficient
+  evidence for P cannot supply G.
+
+An instance of Acquire returns support adequate for its selected predicate, or
+the applicable core result on that exact acquisition predicate, retaining its
+scope, basis or insufficient-support cause; Transform preserves the material
+relations of the selected X-to-Y contract; Evaluate judges P rather than granting
+effects; Conjoin uses the selected composite rule; Dispose chooses only from
+already permitted actions. Bind supplies their current instance coordinates.
+A single function can discharge several responsibilities. Every result uses the [core algebra](FOUNDATIONS.md#result-algebra); domain
+refinements and independent assessment conditions stay with their owners.
+
+## Work/recovery specialization
+
+This chain specializes the generic contract for interrupted, purposeful work.
+It assumes an admitted work identity, persistent workspace, selected outcome,
+actual grants and a material uncertain effect. These are explicit instance
+premises; they do not follow from finite capacity alone.
+
+| Premises | Conditional consequence | Particular contract and independent choice |
+|---|---|---|
+| F1, F2; selected outcome and current subject | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
+| F2, F5; coupled material obligations and finite actor | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
+| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) and [Ticket reuse](TICKET_METHOD.md#work-carrier-to-execution-rule) bind applicability, invalidation and the wider frontier when dependency independence is unproved. Their concrete freshness rules are domain policy. |
+| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | [Workspace and context](FOUNDATIONS.md#workspace-and-context) owns the generic unknown-effect rule; [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) binds its Product context. The operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
+| F1, F4, F6; required results and current mandate | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
+
+The consequences are arguments about the stated premises, not proofs of every
+source clause. Concrete work-carrier layout, number of actors, numeric budgets,
+optional Baseline adoption, release procedure and all domain result enums are
+independent choices. They are not inferred from the foundational commitments.
+This chain leaves those choices at their owners and adds no mandatory ledger.
+
+A recovery activation uses the sufficient projected clauses and actual subject.
+It need not load this entire argument, every method or historical event bodies.
+The [ordinary work entry](../plugins/spec/skills/stdo-work/SKILL.md#acquire-the-responsibility-frame)
+locates that material after basis selection. Its projection does not become a
+rival authority or guarantee sufficiency for a different task.
+
+## Transformation-admission specialization
+
+This instance assumes a consequential entity transition, an identified current
+predecessor, a declared candidate family, a durable commit boundary and actual
+admission authority. These domain choices supplement F1–F6; the foundational
+commitments do not choose an admission predicate, quorum or supported topology.
+
+| Premises | Conditional consequence | Particular deciding owner and policy |
+|---|---|---|
+| F2, F3; current entity and predecessor are material | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
+| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence. |
+| F6; proposal, judgment and durable admission are distinct | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
+| F2, F5; supported forms or commit effects are unresolved | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
+
+The [design admission consumer](DESIGN_MODULE_METHOD.md#admission-contract-use)
+binds this contract to its transition relation and uses the consequences to
+distinguish valid support from a shape-correct candidate lacking material basis
+or authority. Its predicate, result refinement, commit-unit decomposition and
+permitted direct/composite/nested forms remain domain policy. This argument
+neither derives those choices nor creates an additional validation pass.
+
+## Bind
+
+Recover the current purpose, subject identity, governing specification, role,
+authority, state and required relations. Conflicting, missing or stale bindings
+are explicit results. A name, path, cached result or available tool is no grant.
+
+## Acquire
+
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to the
+selected task. Bind the current subject, requirements, grant and destination;
+resolve sufficient authentic material and material dependencies; reconcile stale
+summaries with observations. Measure context where the execution binding selects
+it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](FOUNDATIONS.md#finite-capacity-and-total-handling);
+the selected grant determines available refinement, reassignment or escalation.
+Capacity does not license omission.
+
+## Transform
+
+Construct output or perform effects within the bound contract. Preserve the
+original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated
+[Baseline WorkerResult](STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame)
+retains its declared outcomes; an [AC-013 instance](AXIOMATIC_CALCULUS.md#ac-013-transformation)
+retains that owner's outcomes. These are original domain outcomes mapped under the core result contract. Apply the unknown-effect rule at [Workspace and context](FOUNDATIONS.md#workspace-and-context). The worker's internal search is its HOW; it cannot widen
+the outer outcome or effect grant.
+
+## Evaluate
+
+Apply the [core result algebra](FOUNDATIONS.md#result-algebra) to the exact
+predicate, subject and basis. Preserve the original domain outcome, performance,
+effect observations, citations and residual coverage. A domain's evaluation
+rule determines what evidence decides its predicate; it does not introduce a
+parallel result algebra. Required independent authorship remains part of that
+rule. Evaluation supplies no new operation or decision grant. A function may
+exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](STDO_REFERENCE_FRAME_BASELINE.md) retains the
+grant defined by that profile.
+
+For an UP-020 assessment, the original assessor classification is a
+reason-qualified outcome on the exact cone-preservation predicate. The
+[Spec disposition consumer](SPEC_METHOD.md#proportional-disposition) owns its
+mapping and conditions. The actor with bound decision authority separately
+returns the authorised disposition; the library supplies no second table.
+
+## Conjoin
+
+Apply [Result conjunction](FOUNDATIONS.md#result-conjunction) to the selected
+composite predicate, required coverage and material joins. Authenticate each
+contribution and retain its predicate, original outcome and supporting evidence.
+Known failure and required uncovered coverage both survive the aggregate. A
+planned but absent judgment is not confused with uncovered coverage outside an
+authenticated plan. Another declared logical operator uses the same core result
+record on its own predicate; it cannot silently weaken conjunction.
+
+## Dispose
+
+The actor carrying bound decision authority consumes exact closed work and evaluation results with the
+current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
+or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action or stop under the instance's
+permitted outcomes. Domain-specific yield remains with its declared owner. It cannot change upstream meaning or take a reserved owner decision.
+Accept binds an exact checkpoint; it does not imply release. A Product-outcome
+acceptance interval is separately governed by
+[UP-013](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
+
+Other instances retain their original domain classifications as core refinements. [Ticket Method](TICKET_METHOD.md)
+owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+owns conserved/superseded/intentionally removed/not applicable. An actor carrying
+that contract's bound operation authority may record condition-based closure
+when that owning contract permits it.
+Sharing Dispose machinery changes none of those grants or classifications.
+
+The [UP-020 disposition conditions](SPEC_METHOD.md#proportional-disposition)
+determine accept, local repair, re-entry and rejection for that contract. They
+are applied once at that owner; this library does not redefine them.
+
+## Composition law
+
+[Transformation admission](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+and [bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+own design composition; [Foundations](FOUNDATIONS.md#result-conjunction) owns result conjunction;
+[Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction) binds its
+application to declared frames, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+owns its typed traversal composition. The account below preserves each owning
+contract's restrictions; an explicit translation is lawful only where that
+contract admits it.
+
+For a selected construction handoff T: X -> Y and S: Y -> Z, the applicable
+owner determines admission and the conserved meaning, identity, basis,
+lifecycle, effects and authorities. A coherent composite basis can join distinct
+bases under its declared topology; distinct authorities remain distinct and
+conserved. Neither matching every field nor translating every difference is a
+universal precondition. The outer contract determines required invariants. A
+shared helper may serve several contracts without changing their owners.
+Where independent judgment is required, author self-assessment does not replace it.
+
+Identity and associative-composition claims follow their declared owner and
+domain laws. For an algorithmic/categorical model, those laws and their proof
+are separately required; this explanatory family establishes neither a new
+composition obligation nor a universal category theorem for arbitrary software.
+
+## Recovery law
+
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) before
+selecting the next dependent action. Bind current work identity, observe changed
+material state, retain applicable work and reconsider affected support. Unknown
+effects stay unknown until sufficiently observed or reconciled. Private context
+is replaceable; the workspace survives the actor.
+
+[Bounded construction](FOUNDATIONS.md#bounded-construction) supplies progress,
+stop and total-handling distinctions. Spec Method binds Product progress and
+owning-layer re-entry; [Ticket Method](TICKET_METHOD.md#work-carrier-to-execution-rule) binds carrier use; adopted profiles bind
+their additional recovery duties. Retry applies the causal-change condition in
+[Bounded construction](FOUNDATIONS.md#bounded-construction). A process restart by itself is an acquisition event, not proof that a
+construction restart or workspace deletion is required.
+
+Select a proof adequate to falsify the affected relation and satisfying its
+required independence. Its cost selection follows [UP-014](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014).
+For a claim of continuity independent of private actor state, exclude that state
+and compare the reconstructed decision with current material reality. A
+same-context exercise cannot establish that claim.
+
+## Cost and contraction
+
+[Method proportionality](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+owns the justification of method burden; apply its deciding definition rather
+than treating raw counts as proof of improvement. For a computational or handoff cost claim, select those
+measures material to that claim. Possible measures include transferred/acquired
+bytes, attention, I/O, CPU, addressable memory, critical-path elapsed time,
+aggregate work or displaced human assurance. This is an illustrative choice,
+not an all-fields obligation, universal quota or separate accounting carrier.
+
+A reference reduces storage only when its resolution preserves adequacy. A
+smaller document or faster local preparation does not prove whole-path
+improvement. Contract duplicated meaning and authority only while preserving
+required distinctions and independent evaluations.

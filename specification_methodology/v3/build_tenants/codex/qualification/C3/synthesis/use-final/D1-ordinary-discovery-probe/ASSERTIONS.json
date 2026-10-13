@@ -1,0 +1,250 @@
+{
+  "case": "D1-ordinary-discovery-probe",
+  "candidate_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "deploy/env.example": {
+          "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098",
+          "bytes": 57
+        },
+        "docs/config.md": {
+          "sha256": "eaea8aab23849d46176afc88df76eab0eee08f5b660da7f158cc6784c22ef374",
+          "bytes": 155
+        },
+        "scripts/check_env.sh": {
+          "sha256": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233",
+          "bytes": 48
+        },
+        "src/settings.py": {
+          "sha256": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d",
+          "bytes": 104
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "exact variable rename is the only byte change in all four files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "old exact variable absent; distinct TTL variable retained",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "before: Python consumer fails with only the new variable",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: Python consumer works with only the new variable",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "before: shell consumer fails with only the new variable",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: shell consumer works with only the new variable",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: shell consumer still rejects missing token",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "after: Python consumer still rejects missing token",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": "see executable trace with the same name"
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [
+    {
+      "name": "before: Python consumer fails with only the new variable",
+      "cwd": "D1-ordinary-discovery-probe/workspace",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import runpy\ns=runpy.run_path('src/settings.py')\nassert s['TOKEN']=='fixture-token-only' and s['TOKEN_TTL']==3600\nprint('renamed token and retained TTL are consumed')"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C",
+        "APP_API_TOKEN": "fixture-token-only",
+        "APP_TOKEN_TTL": "3600",
+        "LOG_LEVEL": "info"
+      },
+      "returncode": 1,
+      "expected_returncode": 1,
+      "required_stderr_fragment": "KeyError",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n    s=runpy.run_path('src/settings.py')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"src/settings.py\", line 3, in <module>\n    TOKEN = os.environ['APP_TOKEN']\n            ~~~~~~~~~~^^^^^^^^^^^^^\n  File \"<frozen os>\", line 717, in __getitem__\nKeyError: 'APP_TOKEN'\n",
+      "elapsed_seconds": 0.022465,
+      "status": "met"
+    },
+    {
+      "name": "after: Python consumer works with only the new variable",
+      "cwd": "D1-ordinary-discovery-probe/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import runpy\ns=runpy.run_path('src/settings.py')\nassert s['TOKEN']=='fixture-token-only' and s['TOKEN_TTL']==3600\nprint('renamed token and retained TTL are consumed')"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C",
+        "APP_API_TOKEN": "fixture-token-only",
+        "APP_TOKEN_TTL": "3600",
+        "LOG_LEVEL": "info"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "renamed token and retained TTL are consumed\n",
+      "stderr": "",
+      "elapsed_seconds": 0.019587,
+      "status": "met"
+    },
+    {
+      "name": "before: shell consumer fails with only the new variable",
+      "cwd": "D1-ordinary-discovery-probe/workspace",
+      "argv": [
+        "/bin/sh",
+        "scripts/check_env.sh"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C",
+        "APP_API_TOKEN": "fixture-token-only",
+        "APP_TOKEN_TTL": "3600",
+        "LOG_LEVEL": "info"
+      },
+      "returncode": 1,
+      "expected_returncode": "nonzero",
+      "required_stderr_fragment": "APP_TOKEN",
+      "stdout": "",
+      "stderr": "scripts/check_env.sh: line 2: APP_TOKEN: missing\n",
+      "elapsed_seconds": 0.004276,
+      "status": "met"
+    },
+    {
+      "name": "after: shell consumer works with only the new variable",
+      "cwd": "D1-ordinary-discovery-probe/after",
+      "argv": [
+        "/bin/sh",
+        "scripts/check_env.sh"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C",
+        "APP_API_TOKEN": "fixture-token-only",
+        "APP_TOKEN_TTL": "3600",
+        "LOG_LEVEL": "info"
+      },
+      "returncode": 0,
+      "expected_returncode": 0,
+      "required_stderr_fragment": null,
+      "stdout": "ok\n",
+      "stderr": "",
+      "elapsed_seconds": 0.003941,
+      "status": "met"
+    },
+    {
+      "name": "after: shell consumer still rejects missing token",
+      "cwd": "D1-ordinary-discovery-probe/after",
+      "argv": [
+        "/bin/sh",
+        "scripts/check_env.sh"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": "nonzero",
+      "required_stderr_fragment": "APP_API_TOKEN",
+      "stdout": "",
+      "stderr": "scripts/check_env.sh: line 2: APP_API_TOKEN: missing\n",
+      "elapsed_seconds": 0.003608,
+      "status": "met"
+    },
+    {
+      "name": "after: Python consumer still rejects missing token",
+      "cwd": "D1-ordinary-discovery-probe/after",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-c",
+        "import runpy\ns=runpy.run_path('src/settings.py')\nassert s['TOKEN']=='fixture-token-only' and s['TOKEN_TTL']==3600\nprint('renamed token and retained TTL are consumed')"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": 1,
+      "required_stderr_fragment": "KeyError",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n    s=runpy.run_path('src/settings.py')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"src/settings.py\", line 3, in <module>\n    TOKEN = os.environ['APP_API_TOKEN']\n            ~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"<frozen os>\", line 717, in __getitem__\nKeyError: 'APP_API_TOKEN'\n",
+      "elapsed_seconds": 0.022586,
+      "status": "met"
+    }
+  ],
+  "independent_grading_pending": [
+    "Grade discovered consumer coverage and the reported external-dependency residual. Tests cover the complete supplied workspace only, with a synthetic environment and no secret or deployment system."
+  ],
+  "counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 6
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "Explicit finite expectations from the selected source; separately specified from the executable, with same-Writer fidelity still requiring independent review",
+  "conjunction": [
+    {"name": "all-required", "values": ["S", "S"], "join": "S", "basis": true, "coverage": true, "expected": "satisfied", "failures": [], "missing": []},
+    {"name": "failure-plus-missing", "values": ["F", "M"], "join": "S", "basis": true, "coverage": true, "expected": "falsified", "failures": ["A"], "missing": ["B"]},
+    {"name": "failure-plus-aborted", "values": ["F", "H"], "join": "S", "basis": true, "coverage": true, "expected": "falsified", "failures": ["A"], "missing": ["B"]},
+    {"name": "failure-plus-unknown", "values": ["F", "U"], "join": "S", "basis": true, "coverage": true, "expected": "falsified", "failures": ["A"], "missing": []},
+    {"name": "failure-plus-invalid-contribution", "values": ["F", "I"], "join": "S", "basis": true, "coverage": true, "expected": "falsified", "failures": ["A"], "missing": []},
+    {"name": "outer-basis-invalid", "values": ["F", "S"], "join": "S", "basis": false, "coverage": true, "expected": "invalid_basis", "failures": ["A"], "missing": []},
+    {"name": "invalid-contribution", "values": ["S", "I"], "join": "S", "basis": true, "coverage": true, "expected": "invalid_basis", "failures": [], "missing": []},
+    {"name": "out-of-frame-contribution", "values": ["S", "O"], "join": "S", "basis": true, "coverage": true, "expected": "out_of_frame", "failures": [], "missing": []},
+    {"name": "unauthenticated-failure", "values": ["S", "X"], "join": "S", "basis": true, "coverage": true, "expected": "indeterminate", "failures": [], "missing": []},
+    {"name": "missing-planned-evaluation", "values": ["S", "M"], "join": "S", "basis": true, "coverage": true, "expected": "indeterminate", "failures": [], "missing": ["B"]},
+    {"name": "coverage-unknown", "values": ["S", "S"], "join": "S", "basis": true, "coverage": false, "expected": "indeterminate", "failures": [], "missing": []},
+    {"name": "join-unknown", "values": ["S", "S"], "join": "U", "basis": true, "coverage": true, "expected": "indeterminate", "failures": [], "missing": []},
+    {"name": "join-false", "values": ["S", "S"], "join": "F", "basis": true, "coverage": true, "expected": "falsified", "failures": ["join"], "missing": []}
+  ],
+  "refinement": [
+    {"domain": "candidate_ready", "predicate": "availability", "verdict": "satisfied", "performance": "performed", "effect": "not_requested"},
+    {"domain": "assessment_undecidable", "predicate": "fitness", "verdict": "indeterminate", "performance": "performed", "effect": "not_requested"},
+    {"domain": "out_of_scope", "predicate": "event_scope_compatible", "verdict": "falsified", "performance": "performed", "effect": "not_started"},
+    {"domain": "lost_acknowledgment", "predicate": "effect_completed", "verdict": "indeterminate", "performance": "performed", "effect": "unknown"},
+    {"domain": "yield", "predicate": "yield_contract", "verdict": "satisfied", "performance": "performed", "effect": "not_requested"}
+  ],
+  "refused_predicate_substitutions": [
+    {"domain": "candidate_ready", "predicate": "fitness"},
+    {"domain": "candidate_ready", "predicate": "acceptance"},
+    {"domain": "yield", "predicate": "product_complete"}
+  ],
+  "effect_observations": [
+    {"units": [], "expected": "not_requested"},
+    {"units": [false, false], "expected": "not_started"},
+    {"units": [true, true], "expected": "completed"},
+    {"units": [true, false], "expected": "partial"},
+    {"units": [true, null], "expected": "unknown"},
+    {"units": [false, null], "expected": "unknown"},
+    {"units": ["reverted"], "expected": "reverted"},
+    {"units": ["reverted", false], "expected": "reverted"},
+    {"units": ["reverted", true], "expected": "partial"},
+    {"units": ["reverted", null], "expected": "unknown"}
+  ],
+  "recovery": [
+    {"state": "unknown", "idempotent": false, "grant": true, "expected": "observe_or_return_unresolved"},
+    {"state": "unknown", "idempotent": true, "grant": false, "expected": "withhold_effect"},
+    {"state": "unknown", "idempotent": true, "grant": true, "expected": "permitted_idempotent_retry"},
+    {"state": "completed", "idempotent": false, "grant": true, "expected": "retain_completed_progress"},
+    {"state": "not_started", "idempotent": false, "grant": true, "expected": "permitted_initial_dispatch"}
+  ]
+}

@@ -1,33 +1,35 @@
 # Codex C3 Construction Return
 
-Current subject: the package inventory in [CANDIDATE.json](CANDIDATE.json).
-The [bounded repair round](round-1/RETURN.md) records the direct-comparison
-repairs, frozen source, current checks and independent source-review limits.
-The [current-surface correction](surface-repair/RETURN.md) records the owner
-ruling, exact changed boundary and artifact evidence.
+The current rebuild is recorded in the [synthesis return](synthesis/RETURN.md).
+Its frozen product source is `9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd`;
+[CANDIDATE.json](CANDIDATE.json) binds all 80 package members to that commit.
+The evidence checkpoint is a descendant and does not change those product bytes.
 
-The package contains one [standards corpus](../../successor/standards/README.md).
-Its [entry](../../successor/README.md) names the package author once. Earlier
-manuscripts, construction provenance and reviews are commentary outside the
-package. Design and qualification carriers remain outside it.
+Read the [method package](../../successor/README.md), its
+[standards index](../../successor/standards/README.md), or the
+[tenant design](../../design/DESIGN.md). The package names Dimitar Popov once.
+Construction history, source ports, disposition claims, reviews and qualification
+remain outside its constitutional surface.
 
-The [conservation map](CONSERVATION.json) records all 690 author dispositions
-and resolving loci; it supplies no authoritative per-member acceptance.
-The source-package inventory has 79 method/distribution members and one package
-entry. Actual release notes remain an owner-selected publication obligation;
-the manifest-schema exercise uses a separate hypothetical fixture.
+The [conservation map](CONSERVATION.json) records 691 author dispositions:
+657 conserved, 33 superseded, one historical release-note member not applicable,
+and none intentionally removed. Resolving every locus establishes coordinates;
+it does not supply independent acceptance of each claim. The
+[frontier](FRONTIER.json) retains that distinction.
 
-Previous source comparisons and reader exercises retain their frozen subjects,
-including the foundation recovery source at edc884f. Their judgments and
-limitations are preserved in the [prior return](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/PRIOR_C3_RETURN.md).
-The current-surface correction changes placement and construction narration.
-The repair round adds an admission specialization, reproducible triage/carrier
-acquisition and packaged derivation-verification evidence within the original
-design. The frozen source is
-`8bb32132633d3974ef3c3230d99753aa20a9bb22`; the inventory records that input in
-a descendant checkpoint. Earlier checks and judgments retain their own cuts.
-Neither correction supplies independent whole-member or whole-method acceptance.
+This rebuild integrates the workspace/context principle, conditional frame and
+role configurations, one result algebra and its deciding consumers, concrete
+tenant binding, ordinary acquisition routes and packaged historical identity
+verification. The [use-trial findings](synthesis/USE_ADJUDICATION.md) distinguish
+fixed source defects, actor errors, trial corrections and retained failures.
 
-Whole-corpus foundation reconstruction, per-member acceptance, common
-integration, installed qualification, release and owner selection remain open.
-The bounded round's provider calls and source reviews are recorded separately.
+The [surface correction](surface-repair/RETURN.md),
+[earlier bounded repair round](round-1/RETURN.md), and
+[prior construction return](../../../../.ai-workspace/comments/codex/20261013_CURRENT_SURFACE_REPAIR/PRIOR_C3_RETURN.md)
+remain historical evidence at their own source cuts. They do not gain standing
+on this source through regenerated hashes or successful artifact checks.
+
+The return supplies a review candidate. Per-member acceptance, imported-part
+review policy, owner checkpoint acceptance, common integration, immutable
+installed qualification and release remain open. The categorical steel thread
+has not been selected or executed by this rebuild.

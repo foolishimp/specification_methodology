@@ -1,0 +1,166 @@
+{
+  "case": "D1-ordinary-discovery-probe",
+  "candidate_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "grant": {
+    "paths": [],
+    "prefixes": [
+      ""
+    ],
+    "source": "TASK.json: any file in the workspace"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "ea66f5afcd18b601876bfad63d8f78c594006e6e476f2735ed393a5d9b47c3dc",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "e3a8f2aa043c541ad72aabbaf1a055e396b6ee2bedaf0dbb9e0a6e1bcf4e7d4d",
+      "bytes": 53709
+    },
+    "TASK.json": {
+      "sha256": "a5d19daed9887a02150dbe9bf40bdca108beeb0c87b6f70817174121a2895e79",
+      "bytes": 781
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "147e6e98f9969781448016a4e47a66efae48552a4210dec5ede7798fe1b46dff",
+      "bytes": 2335
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "e3a8f2aa043c541ad72aabbaf1a055e396b6ee2bedaf0dbb9e0a6e1bcf4e7d4d",
+      "bytes": 53709
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "8cae71c23ac4ffa0e34576466b20b1ede07addaaacfcf6dad6e016157a3cfa52",
+      "bytes": 7136
+    },
+    "actor/RESULT.md": {
+      "sha256": "09bff87686208d695c53bbd4beaa81b1a865b188acc436a78956437c408357ca",
+      "bytes": 5081
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "workspace/docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "workspace/scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "workspace/src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "changed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "before": {
+    "deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "after": {
+    "deploy/env.example": {
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098",
+      "bytes": 57
+    },
+    "docs/config.md": {
+      "sha256": "eaea8aab23849d46176afc88df76eab0eee08f5b660da7f158cc6784c22ef374",
+      "bytes": 155
+    },
+    "scripts/check_env.sh": {
+      "sha256": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233",
+      "bytes": 48
+    },
+    "src/settings.py": {
+      "sha256": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d",
+      "bytes": 104
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "deploy/env.example declares APP_API_TOKEN in place of APP_TOKEN, with APP_TOKEN_TTL and LOG_LEVEL unchanged",
+      "subject": "proposed replacement content for deploy/env.example",
+      "basis": "task statement + supplied workspace snapshot",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "static comparison of the proposed content against the snapshot",
+      "effect": {
+        "state": "unknown",
+        "boundary": "sandbox file write by host; not observed by this actor"
+      },
+      "unresolved": []
+    },
+    {
+      "predicate": "every in-workspace reference to the exact variable APP_TOKEN is updated to APP_API_TOKEN, and no reference to APP_TOKEN_TTL is altered",
+      "subject": "proposed contents of src/settings.py, scripts/check_env.sh, docs/config.md, deploy/env.example",
+      "basis": "supplied workspace snapshot (4 files)",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "manual exact-token inspection of all four supplied files; the only exact references were the four lines changed",
+      "effect": {
+        "state": "unknown",
+        "boundary": "sandbox file writes by host; not observed by this actor"
+      },
+      "unresolved": []
+    },
+    {
+      "predicate": "everything that depends on the variable name keeps working after the rename",
+      "subject": "workspace plus any external deployment environments",
+      "basis": "supplied snapshot only; external environments not supplied",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "no execution of settings.py or check_env.sh was possible. In-workspace consumers were statically updated, but external environment sources that set APP_TOKEN are unobserved",
+      "effect": {
+        "state": "not_requested",
+        "boundary": "no runtime or external effect performed by this actor"
+      },
+      "unresolved": [
+        "external env and secret configurations must provide APP_API_TOKEN, or the owner must decide on a transitional APP_TOKEN fallback",
+        "runtime execution of settings.py and check_env.sh under the new variable has not been run",
+        "executable bit on scripts/check_env.sh after the host write"
+      ]
+    }
+  ],
+  "actor_report": "Observations (acquired only from the supplied workspace snapshot, per FOUNDATIONS 'Workspace and context'): the exact identifier APP_TOKEN appears in four files. It is the line `APP_TOKEN=changeme` in deploy/env.example, `os.environ['APP_TOKEN']` in src/settings.py, `${APP_TOKEN:?missing}` in scripts/check_env.sh, and a table row in docs/config.md. A distinct variable, APP_TOKEN_TTL, shares the prefix and appears in env.example, settings.py and docs/config.md. The task scopes the rename to APP_TOKEN only, so APP_TOKEN_TTL is intentionally unchanged in all three files. Renaming it would change a second contract that the task did not grant.\n\nWork: I renamed APP_TOKEN to APP_API_TOKEN in deploy/env.example as requested. I also updated every in-workspace dependent on that name (settings.py, check_env.sh, docs/config.md) so that the rename does not break the reader. Without the settings.py change, the KeyError would occur at import time. Without the check_env.sh change, the script would fail with 'missing'. All other bytes are preserved.\n\nNon-changes: APP_TOKEN_TTL, LOG_LEVEL, the Python constant name TOKEN, and the script logic are unchanged. I added no backward-compatibility fallback to APP_TOKEN. That would keep the old name live and widen the requested change. It is a product choice that remains with the owner.\n\nLimits (RF-006 and the result algebra; no execution tools): I ran nothing and observed no applied effect. These are proposals only. Whether the host's write preserves the executable bit on scripts/check_env.sh is unobserved.\n\nUnresolved (FOUNDATIONS 'Workspace and context': absence from a partial projection is not evidence of absence): dependents outside this workspace are unobserved. Examples include real .env files, CI variables, secret stores, container or orchestration manifests, and running deployments that set APP_TOKEN. Any such environment must start setting APP_API_TOKEN, or the owner must choose a transitional fallback. Otherwise settings.py and check_env.sh will fail there. For this reason, 'everything that depends on the name keeps working' stays indeterminate beyond the workspace boundary.",
+  "assertion_counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 6
+  },
+  "assertions_sha256": "d4964d8913c8c3ca8ef62789c12f6efe2ccdfe85b79de52051819c9419b0ca38",
+  "inputs_unchanged": true
+}

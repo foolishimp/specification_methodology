@@ -1,0 +1,9 @@
+{
+  "id": "C6-absent-vs-undecidable-assessment",
+  "task": "Fill in STATUS.md for release S-4 from the workspace. For each planned assessment give its result and a one-line reason, then the overall result. Only STATUS.md may be edited. Return the exact edit proposal.",
+  "workspace": {
+    "ASSESSMENT_PLAN.md": "# S-4 planned assessments\n- P1: producer perf-team; subject svc@v2.0; criterion p95 latency < 200 ms at sustained 500 rps; result in results/P1.json\n- P2: producer a11y-team; subject web@v2.0; criterion WCAG 2.2 AA; result in results/P2.json\n",
+    "results/P1.json": "{\"assessment\":\"P1\",\"producer\":\"perf-team\",\"subject\":\"svc@v2.0\",\"run\":{\"requested_rps\":500,\"achieved_rps\":120,\"p95_ms\":140,\"generator_cpu_pct\":100},\"notes\":\"Generator host hit its CPU limit at about 120 rps; load did not rise above that during the run.\"}\n",
+    "STATUS.md": "# S-4 assessments\nP1:\nP2:\nOverall:\n"
+  }
+}

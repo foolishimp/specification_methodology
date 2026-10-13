@@ -1,0 +1,256 @@
+{
+  "started_utc": "2026-10-13T19:55:06.882251+00:00",
+  "operations": [
+    {
+      "operation": "validate",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "reference-only",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "materialized",
+      "exit": 0
+    },
+    {
+      "operation": "exact-join",
+      "exit": 0
+    },
+    {
+      "operation": "finite-interpretation",
+      "exit": 0
+    }
+  ],
+  "program_counts": {
+    "symbols": 14,
+    "clauses": 53,
+    "residuals": 3,
+    "frames": 5
+  },
+  "projection_parity": true,
+  "configuration_closure_clauses": 49,
+  "index_semantics": "Named roots plus transitive dependency closure; no direct-index completeness requirement asserted",
+  "joined_input_bytes": 119385,
+  "selected_input_cap_bytes": 120000,
+  "finite_review_input_bytes": 111034,
+  "finite": {
+    "kind": "codex-v3-synthesis-finite-interpretation",
+    "valid": true,
+    "fixed_oracle_cases": 79,
+    "exhaustive_conjunction_cases": 1620,
+    "syntactic_coordinate_pairs": 15,
+    "potentially_legal_coordinate_pairs": 13,
+    "evidence_guard_coordinate_cases": 1080,
+    "evidence_states": 72,
+    "missing_reason_refinement_cases": 30,
+    "refinement_grid_cases": 1470,
+    "negation_cases": 5,
+    "temporal_effect_cases": 15,
+    "operator_rows": 24,
+    "operator_fixed_cases": 9,
+    "and_associativity_cases": 125,
+    "effect_composition_cases": 216,
+    "exhaustive_verdicts": {
+      "invalid_basis": 1028,
+      "indeterminate": 143,
+      "satisfied": 1,
+      "falsified": 298,
+      "out_of_frame": 150
+    },
+    "detected_mutants": [
+      "unknown-erases-failure",
+      "missing-assessment-performed",
+      "candidate-means-fit",
+      "unknown-means-effect-not-started",
+      "out-of-scope-means-out-of-frame",
+      "known-prefix-means-partial",
+      "blind-retry",
+      "inconclusive-run-called-unperformed",
+      "raw-temporal-labels-joined"
+    ],
+    "mutant_counterexamples": [
+      {
+        "mutant": "unknown-erases-failure",
+        "input": [
+          "F",
+          "M"
+        ],
+        "actual": "indeterminate",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "missing-assessment-performed",
+        "input": [
+          "satisfied",
+          "not_performed"
+        ],
+        "actual": true,
+        "expected": false
+      },
+      {
+        "mutant": "candidate-means-fit",
+        "input": [
+          "candidate_ready",
+          "fitness"
+        ],
+        "actual": "satisfied",
+        "expected": "indeterminate"
+      },
+      {
+        "mutant": "unknown-means-effect-not-started",
+        "input": [
+          false,
+          null
+        ],
+        "actual": "not_started",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "out-of-scope-means-out-of-frame",
+        "input": [
+          "out_of_scope",
+          "event_scope_compatible"
+        ],
+        "actual": "out_of_frame",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "known-prefix-means-partial",
+        "input": [
+          true,
+          null
+        ],
+        "actual": "partial",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "blind-retry",
+        "input": [
+          "unknown",
+          false,
+          true
+        ],
+        "actual": "permitted_initial_dispatch",
+        "expected": "observe_or_return_unresolved"
+      },
+      {
+        "mutant": "inconclusive-run-called-unperformed",
+        "input": {
+          "undertaken": true,
+          "extent": "completed_at_120rps_below_required_load",
+          "conclusion": "inconclusive",
+          "deciding": null,
+          "effect": "completed"
+        },
+        "actual": "not_performed",
+        "expected": "performed"
+      },
+      {
+        "mutant": "raw-temporal-labels-joined",
+        "input": {
+          "name": "deployment-then-rollback",
+          "parts": [
+            "deployment"
+          ],
+          "observations": [
+            {
+              "id": "deploy",
+              "part": "deployment",
+              "state": "completed"
+            },
+            {
+              "id": "rollback",
+              "part": "deployment",
+              "state": "reverted",
+              "supersedes": [
+                "deploy"
+              ],
+              "supersession_proved": true,
+              "begun_and_reversal_proved": true
+            }
+          ],
+          "effect": "reverted"
+        },
+        "actual": "partial",
+        "expected": "reverted"
+      }
+    ],
+    "logical_counterexample": {
+      "claim": "arbitrary implication associativity",
+      "left": false,
+      "right": true,
+      "mutant_credit": false
+    },
+    "elapsed_seconds": 0.008566582924686372,
+    "inputs": {
+      "ORACLE.json": "699c7173c6f6ced5847d2b41d94f948da657fbadf71df5bd76327147be1d864f",
+      "model.py": "ef258fc35f5645b9945191a009f01733533014d58bcc1e0cce1f96fe40f79d67",
+      "finite_check.py": "95b879c3167c537f326eea93d6ee7b74cdc6d0760982a1070b1d0fb1a47c4e97",
+      "program.json": "2f25ccc99bb9d3c977247efdc0c6bbff88f719f50b3cb901a97a6e49070a637f"
+    },
+    "limits": [
+      "Finite AND and declared Boolean operator domains only; no universal categorical proof",
+      "Effect associativity only for disjoint normalized current parts; temporal cases consume stipulated supersession proof",
+      "Thirteen potentially legal performance/verdict pairs still require evidence guards; enum membership does not admit a result",
+      "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+      "No executable workspace reacquisition, invalidation, freshness, construction or configuration proof is supplied",
+      "Recovery is a decision table assuming already acquired current authority, fresh effect observations and applicable idempotence",
+      "AND is a predicate-decision projection only: no conjunction/effect dependency integration or retained-component union proof",
+      "Applicability, independently supported nonperformed conjunction slots, missing/unauthenticated joins and non-Boolean operator leaves are outside this finite grid",
+      "Temporal list order and externally supplied supersession evidence are fixture stipulations, not authenticated by this model",
+      "ac.py does not execute these semantic predicates; independent source-first review is required"
+    ]
+  },
+  "source_observations_stable": true,
+  "input_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "historical_exclusions": [
+    "pre-9982/",
+    "pre-146e6ad/",
+    "pre-independent-review-repair/"
+  ],
+  "historical_archive_unchanged": true,
+  "pins": {
+    "program-map-drift-mutant.json": "efd1548f150a2f71f67ac0e6287136ee57ffab0917b8e4f7e2c041673e6215dd",
+    "bindings.json": "3341b7727bdd525442ec0e2b5bad00ae27caef5c973e08fed5deae36fc0c7f2d",
+    "SOURCE_DELTA.json": "edefbf5e371462fb8adf52d196a06f6bfcbb0dff98642baa456969fbeae787a6",
+    "program.json": "2f25ccc99bb9d3c977247efdc0c6bbff88f719f50b3cb901a97a6e49070a637f",
+    "SOURCE.md": "2351818be25a58afe32b1d014bf48fefbcdf7c4d8c8d70029d983cae7b3258b4",
+    "REVIEW_DISPOSITIONS.md": "bfbfc80b81a72d08cf50f3651fb71d819fd8bfda14df8e7022a6eb8e3a51b624",
+    "MAP_DRIFT_REFUSAL.json": "68c88575230015818819ea43228acb731a385e3fad19e6aef98170cbbaae2836",
+    "sections-finite.json": "7ff41d7ff25c3a45c816c98207b8be2afa9dd194894b4aceffdff57b96d3fbda",
+    "projection-reference-only.json": "c39ca0e16f980d0ad594de21be7cd70741220a8a623b06f8fb81326e63630c17",
+    "FINITE_REQUEST.txt": "21c07d009283f001b6303aecb1449153ee20c7e9d7fc823948601fede21390e7",
+    "SIGNATURE.md": "b4c411ebf08b8129596e5c50f414bf9be2e8532ce502de59e4d30705eaffb385",
+    "ORACLE.json": "699c7173c6f6ced5847d2b41d94f948da657fbadf71df5bd76327147be1d864f",
+    "model.py": "ef258fc35f5645b9945191a009f01733533014d58bcc1e0cce1f96fe40f79d67",
+    "finite_check.py": "95b879c3167c537f326eea93d6ee7b74cdc6d0760982a1070b1d0fb1a47c4e97",
+    "CORE_SOURCE_EXCERPTS.md": "4167bcebf9cc44ace51aaf543e65d2edef9ee74d34c5f6517c470abc625b771b",
+    "FINITE_RESULT.json": "ad6023b8b49eb55a47bd23ea3932a77dcad3b00e066c69bb91c6a95b739bfae3",
+    "sections.json": "1ba0aa065789a9b291766b7d001e083c341212723a5dc296b7ae3aeb49b88d81",
+    "SOURCE_INVENTORY.json": "68a8b763b0bdf09fb84479cf7a8e53ae1d96b1ab8b8f4d4e938b7f876a605ad8",
+    "project-reference-only.report.json": "c3a045394a24d6604e84e2e457b171fde623a407177c38f1361bd3de48ceb471",
+    "validation.json": "f173f2ae3a8009f7809a0e8ca5f261737e9d3026814cf6cb486b832070089a9c",
+    "REINSPECTION.md": "98b749bc4fa9b2a1132d2583085c4541e3a53c9519c8bb2b1b4162f7ce6cca8d",
+    "REQUEST.txt": "50e81f965dcb2d9b995973871d16453109f905acdd849d4b4db07e233ec4d8f9",
+    "SOURCE_APPLICABILITY.json": "e68a73b45770785292169ed1a65d482b4165e6b6a1500f389943e6d66ed05254",
+    "project-materialized.report.json": "c3a045394a24d6604e84e2e457b171fde623a407177c38f1361bd3de48ceb471",
+    "projection-configuration.json": "4314bde2ea2965287337caea386108cf00a45308f55cbd7a191930b5ae7a647a",
+    "projection-materialized.json": "66cfb12741c0292fa6cfaea5b8f2f7b678287905d24b5a03ecc6c02045752e3c",
+    "map.json": "cc927e18adedbd0f47bbda4417d438566095cf7c429c2d1fbb1fe2b9940e04c3",
+    "EMPTY_SELECTION_REFUSAL.json": "3b19d072a996dd96dc1735d3621e0ff9624365273880874ac72b107a30003755",
+    "qualify.py": "affdde62c49a666d8d8f93fe510d6329233bf52a9491947dec8ca45ceae61b26",
+    "build_program.py": "126800ed030f33d72785565ccd63401b90abbaead42c5b316f60250c45971fb1",
+    "INSTALL_VERIFICATION.json": "a0017055faedba5646181d0ff397a73832291ed96aeed3b97d32fac5ab7c35ab"
+  },
+  "elapsed_seconds": 0.8757750419899821,
+  "finished_utc": "2026-10-13T19:55:07.758029+00:00",
+  "valid": true,
+  "limits": [
+    "Author-owned bounded interpretation, not complete-corpus fidelity or acceptance",
+    "Fixed ac.py verifies structure and source relations only",
+    "Finite oracle is algorithmically separate, same Writer; independent source-first assessment remains required"
+  ]
+}

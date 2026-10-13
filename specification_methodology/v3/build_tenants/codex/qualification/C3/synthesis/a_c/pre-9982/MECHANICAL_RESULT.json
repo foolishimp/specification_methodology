@@ -1,0 +1,210 @@
+{
+  "started_utc": "2026-10-13T18:39:28.913223+00:00",
+  "operations": [
+    {
+      "operation": "validate",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "reference-only",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "materialized",
+      "exit": 0
+    },
+    {
+      "operation": "exact-join",
+      "exit": 0
+    },
+    {
+      "operation": "finite-interpretation",
+      "exit": 0
+    }
+  ],
+  "program_counts": {
+    "symbols": 14,
+    "clauses": 53,
+    "residuals": 2,
+    "frames": 5
+  },
+  "projection_parity": true,
+  "configuration_closure_clauses": 24,
+  "joined_input_bytes": 118363,
+  "selected_input_cap_bytes": 120000,
+  "finite_review_input_bytes": 49248,
+  "finite": {
+    "kind": "codex-v3-synthesis-finite-interpretation",
+    "valid": true,
+    "fixed_oracle_cases": 36,
+    "exhaustive_conjunction_cases": 1620,
+    "core_coordinate_cases": 15,
+    "legal_core_coordinate_pairs": 7,
+    "effect_composition_cases": 216,
+    "exhaustive_verdicts": {
+      "invalid_basis": 1028,
+      "indeterminate": 143,
+      "satisfied": 1,
+      "falsified": 298,
+      "out_of_frame": 150
+    },
+    "detected_mutants": [
+      "unknown-erases-failure",
+      "missing-assessment-performed",
+      "candidate-means-fit",
+      "unknown-means-effect-not-started",
+      "out-of-scope-means-out-of-frame",
+      "known-prefix-means-partial",
+      "blind-retry",
+      "reset-erases-workspace"
+    ],
+    "mutant_counterexamples": [
+      {
+        "mutant": "unknown-erases-failure",
+        "input": [
+          "F",
+          "M"
+        ],
+        "actual": "indeterminate",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "missing-assessment-performed",
+        "input": [
+          "satisfied",
+          "not_performed"
+        ],
+        "actual": true,
+        "expected": false
+      },
+      {
+        "mutant": "candidate-means-fit",
+        "input": [
+          "candidate_ready",
+          "fitness"
+        ],
+        "actual": {
+          "predicate": "fitness",
+          "domain_outcome": "candidate_ready",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "effect": "not_requested"
+        },
+        "expected": "refused predicate substitution"
+      },
+      {
+        "mutant": "unknown-means-effect-not-started",
+        "input": [
+          false,
+          null
+        ],
+        "actual": "not_started",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "out-of-scope-means-out-of-frame",
+        "input": [
+          "out_of_scope",
+          "event_scope_compatible"
+        ],
+        "actual": "out_of_frame",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "known-prefix-means-partial",
+        "input": [
+          true,
+          null
+        ],
+        "actual": "partial",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "blind-retry",
+        "input": [
+          "unknown",
+          false,
+          true
+        ],
+        "actual": "permitted_initial_dispatch",
+        "expected": "observe_or_return_unresolved"
+      },
+      {
+        "mutant": "reset-erases-workspace",
+        "input": {
+          "completed_units": 1,
+          "effect": "completed",
+          "basis": "r1"
+        },
+        "actual": {
+          "completed_units": 0,
+          "effect": "not_started",
+          "basis": "r1"
+        },
+        "expected": {
+          "completed_units": 1,
+          "effect": "completed",
+          "basis": "r1"
+        }
+      }
+    ],
+    "context_reset_trace": {
+      "workspace_retained": true,
+      "private_context_rebuilt": true,
+      "duplicate_effect": false
+    },
+    "elapsed_seconds": 0.0052697500213980675,
+    "inputs": {
+      "ORACLE.json": "e6b4e6c550bd3a8089390174474be3906c3c9b49d92f3b370df338a166130b79",
+      "model.py": "a422d6cc55741e9fb9e29557867205282adbf4296dc06df83f59dfa2990b9b9d",
+      "finite_check.py": "61a57f2f9b1fde7fa40ca017cfc3dc6eebc7ba4bcfaafb50aeee5d2336318721",
+      "program.json": "b25cb4768cbcde7b167a727d79ee2e78071dede9f176de89573eab530d0f66c1"
+    },
+    "limits": [
+      "Finite AND domain only; no universal categorical proof",
+      "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+      "Context-reset trace is a finite state model, not an external transport or native-agent trial",
+      "ac.py does not execute these semantic predicates; independent source-first review is required"
+    ]
+  },
+  "source_observations_stable": true,
+  "pins": {
+    "program-map-drift-mutant.json": "9198af965b19cdf713cbbcb48cfaada774ab678e2b13cb35d7d711c7d55c04c9",
+    "bindings.json": "3341b7727bdd525442ec0e2b5bad00ae27caef5c973e08fed5deae36fc0c7f2d",
+    "program.json": "b25cb4768cbcde7b167a727d79ee2e78071dede9f176de89573eab530d0f66c1",
+    "SOURCE.md": "31ed44c7ed3b8fd43b7dfd0ec61de5986ddc7bba045ceed14a3411d203b8e8cc",
+    "MAP_DRIFT_REFUSAL.json": "1a7b1ca5b6300bd418cf64bde2fb6d32f1d810426f3bc233dd4e064d9acbf579",
+    "sections-finite.json": "229260a68fb585e0de074ccdddddd3e488427a01253a7ddd18836fd1d0d4aef2",
+    "projection-reference-only.json": "c95b90ad0e275e2c0d6d9c5bd989013a86a636ec994d41ed327cb8ac6971da5e",
+    "FINITE_REQUEST.txt": "6bf4ee0fd1236416975dc8502d17450461fb17c0713ab5a2006bbc58e0cc0c6e",
+    "SIGNATURE.md": "3b09ba3da0b192839241472572b4514bc023e262d7fa9e7e347623ca58329bbe",
+    "ORACLE.json": "e6b4e6c550bd3a8089390174474be3906c3c9b49d92f3b370df338a166130b79",
+    "model.py": "a422d6cc55741e9fb9e29557867205282adbf4296dc06df83f59dfa2990b9b9d",
+    "finite_check.py": "61a57f2f9b1fde7fa40ca017cfc3dc6eebc7ba4bcfaafb50aeee5d2336318721",
+    "CORE_SOURCE_EXCERPTS.md": "cabf64f6a23d3037b5bb05984312d42ad3cc441a6572d5656b30d06710704fba",
+    "FINITE_RESULT.json": "040e734b354e180bd4f57b1e55455debad3418bb731a250d99fca7f52d885ba6",
+    "sections.json": "d68548cf965cdda1be3be11aba65763e1aba60788850a8fa79ab6f8064f08e5c",
+    "SOURCE_INVENTORY.json": "a15c21b560f733a496c53e120613160090f5ccca7ba23e280606d1fc66927fe6",
+    "project-reference-only.report.json": "68101f1b1d2508e29ab5f7a9c2d5bf2ebb3cc584232ea9910cbd4c89dadd88f4",
+    "validation.json": "b3b45f87acab5f3bf9a9fcce3d975933e26f56e178a0808eb6e1982f7d379b4e",
+    "REQUEST.txt": "257a5dc03b0ed9f38298a39fe16605d20a063950b09b94b2f9005ef3e76809e8",
+    "project-materialized.report.json": "68101f1b1d2508e29ab5f7a9c2d5bf2ebb3cc584232ea9910cbd4c89dadd88f4",
+    "projection-configuration.json": "fd0e64aef7a5d0bc94176c7a30cd562c5e482d47b0e8bffc022724f58fea4a5a",
+    "projection-materialized.json": "7e39e699baf04ca45ee755b5f77f03fc8a1d3b052c1948634e21a603a3765d12",
+    "map.json": "0d7a86fa0e03e528aced82afaf98537ecb030617afb5de70c28df82f5d72f10a",
+    "EMPTY_SELECTION_REFUSAL.json": "5ca4a456f38826a91617b2bda3cd26e9633ed41ab42fbb9c898e6012a3e970d7",
+    "qualify.py": "7bd37afe9d560ed50f86ae06e739594342686969dfc155fb0b74447c7d18134f",
+    "build_program.py": "814a6e5b6c5bceb0909c03c653d5d09c45b4843ee94277ac1a01f6cc4aa9aa49",
+    "INSTALL_VERIFICATION.json": "6cde53634b03e096848de2ffaa0f3a295239d1eb53affa37c93148c702b7360b"
+  },
+  "elapsed_seconds": 0.8496358749689534,
+  "finished_utc": "2026-10-13T18:39:29.762880+00:00",
+  "valid": true,
+  "limits": [
+    "Author-owned bounded interpretation, not complete-corpus fidelity or acceptance",
+    "Fixed ac.py verifies structure and source relations only",
+    "Finite oracle is algorithmically separate, same Writer; independent source-first assessment remains required"
+  ]
+}

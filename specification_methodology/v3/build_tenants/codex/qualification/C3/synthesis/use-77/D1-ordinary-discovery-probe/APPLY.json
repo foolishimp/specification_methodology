@@ -1,0 +1,155 @@
+{
+  "case": "D1-ordinary-discovery-probe",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "grant": {
+    "paths": [],
+    "prefixes": [
+      ""
+    ],
+    "source": "TASK.json: any file in the workspace"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "c72b756bdd61cea9ee28eb2dd4ad60c46b1d63f5e4f016924779c4d023683767",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "8349f82234f157dab25a464d668689a08f34c188b87710b17fdd59adb3e8551a",
+      "bytes": 54751
+    },
+    "TASK.json": {
+      "sha256": "a5d19daed9887a02150dbe9bf40bdca108beeb0c87b6f70817174121a2895e79",
+      "bytes": 781
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "ee6d3681ee06473917a940c3ec090ccae1d92735429ba83a34654efd91399f22",
+      "bytes": 2336
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "8349f82234f157dab25a464d668689a08f34c188b87710b17fdd59adb3e8551a",
+      "bytes": 54751
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "e5deb2cc36249e0bad16a4faf54626dd5403890c9a1d8269e49047ea35ad126c",
+      "bytes": 6380
+    },
+    "actor/RESULT.md": {
+      "sha256": "4f2016f60c8aebf0e3d393b4edda4aaa999c6044987a9f82e683d6ad45068ba7",
+      "bytes": 4392
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "workspace/docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "workspace/scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "workspace/src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "application_action": "created_retained_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "changed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "before": {
+    "deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "after": {
+    "deploy/env.example": {
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098",
+      "bytes": 57
+    },
+    "docs/config.md": {
+      "sha256": "96545daf41a7a39d9c1ea5a1c623f48974caf07dc9ff256411df1822b82ea474",
+      "bytes": 213
+    },
+    "scripts/check_env.sh": {
+      "sha256": "e1fb7e38823560212b5733ed1e47a01f39044e53cce067d9e3de45ee16058a89",
+      "bytes": 168
+    },
+    "src/settings.py": {
+      "sha256": "0fef0b5af5e681a4fc6c6b547326e0acd7ad35829aff47c674e7f01dacf6bfd8",
+      "bytes": 246
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "deploy/env.example declares APP_API_TOKEN in place of APP_TOKEN, leaving APP_TOKEN_TTL and LOG_LEVEL unchanged",
+      "subject": "proposed deploy/env.example",
+      "basis": "supplied workspace snapshot + task",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "proposed file content compared against the original by inspection",
+      "effect": "not_started (proposal only; the host applies it)"
+    },
+    {
+      "predicate": "every in-workspace consumer of APP_TOKEN reads APP_API_TOKEN",
+      "subject": "src/settings.py, scripts/check_env.sh, docs/config.md",
+      "basis": "supplied workspace snapshot",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "all three references located and updated by inspection; APP_TOKEN_TTL references intentionally untouched",
+      "effect": "not_started (proposal only)"
+    },
+    {
+      "predicate": "anything that depends on the variable name keeps working",
+      "subject": "workspace consumers plus unobserved external environments",
+      "basis": "supplied workspace snapshot; external state not available",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "no execution available; external setters of APP_TOKEN not observable; the deprecated fallback is designed to preserve them but has not been run",
+      "unresolved": [
+        "run settings import and check_env.sh with only APP_API_TOKEN, with only APP_TOKEN, and with neither",
+        "inventory deployed env/CI secrets and migrate them to APP_API_TOKEN",
+        "owner decision on when to remove the APP_TOKEN fallback"
+      ],
+      "effect": "unknown for external environments (not observed)"
+    }
+  ],
+  "actor_report": "Observations: I acquired the four supplied workspace files as the current subject. Three files depend on the exact name APP_TOKEN: src/settings.py (os.environ['APP_TOKEN']), scripts/check_env.sh (${APP_TOKEN:?missing}) and docs/config.md (table row). APP_TOKEN_TTL shares the prefix but is a distinct variable. The task renames only APP_TOKEN, so I left APP_TOKEN_TTL unchanged in every file. Renaming it would change a governing relation outside the grant (RF-006).\n\nWork: I renamed APP_TOKEN to APP_API_TOKEN in deploy/env.example and updated every in-workspace consumer to read the new name. The workspace cannot show the deployed environments, CI secrets or operator shells that may set APP_TOKEN today. Absence from this partial projection is not evidence that those consumers are absent (FOUNDATIONS Workspace and context). To keep them working, settings.py and check_env.sh still accept APP_TOKEN as a fallback:\n- settings.py: APP_API_TOKEN wins whenever it is set, including when it is set to an empty string, which matches the original membership semantics. If neither variable is set it still raises KeyError, but the error names 'APP_TOKEN'.\n- check_env.sh: APP_API_TOKEN is filled from APP_TOKEN when it is unset or empty, then checked with the same :? unset-or-empty rule as before.\nThe docs record the deprecated alias.\n\nUnresolved:\n(1) Nothing was executed. I have no execution tools, so whether the rename works end to end has not been tested and is indeterminate.\n(2) Real environments outside the workspace were not observed. Whether they need migrating, and when the fallback can be removed, belongs to their owners. I did not decide either.\n(3) Keeping the fallback is my judgment, not a rule supplied by the task. Its owner may prefer a hard cut, in which case the fallback lines can be dropped.\n(4) Effects: these are proposals only. Applying them is up to the host, so I report the file effect as not_started from my side.",
+  "assertion_counts": {
+    "met": 9,
+    "not_met": 2,
+    "subprocess_executions": 6
+  },
+  "assertions_sha256": "e7b786d6f5d07ebd6a58bf94d80c85e5c826d3676dbdbfde94211de5572af1b1",
+  "inputs_unchanged": true
+}

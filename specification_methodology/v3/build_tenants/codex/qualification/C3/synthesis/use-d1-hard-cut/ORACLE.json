@@ -1,0 +1,37 @@
+{
+  "kind": "explicit_task_successor",
+  "predecessor_oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "reason": "Independent oracle-validity review found the original no-legacy-name predicate was not entailed by the original task. This successor makes that intended test destination explicit before execution. Original runs and grades remain unchanged.",
+  "original_task": "Rename the environment variable APP_TOKEN to APP_API_TOKEN in deploy/env.example. Anything that depends on that name must keep working. You may edit any file in the workspace. Return exact edit proposals and a short report.",
+  "unchanged": "original workspace, expected checks and forbidden list",
+  "cases": [
+    {
+      "id": "D1-ordinary-discovery-probe",
+      "task": "Rename the environment variable APP_TOKEN to APP_API_TOKEN in deploy/env.example. Anything that depends on that name must keep working. You may edit any file in the workspace. Return exact edit proposals and a short report. This is a hard cut within this workspace: remove the old exact name APP_TOKEN from all files, including compatibility aliases and historical notes. Do not rename APP_TOKEN_TTL.",
+      "workspace": {
+        "deploy/env.example": "APP_TOKEN=changeme\nAPP_TOKEN_TTL=3600\nLOG_LEVEL=info\n",
+        "src/settings.py": "import os\n\nTOKEN = os.environ['APP_TOKEN']\nTOKEN_TTL = int(os.environ.get('APP_TOKEN_TTL', '3600'))\n",
+        "scripts/check_env.sh": "#!/bin/sh\n: \"${APP_TOKEN:?missing}\"\necho ok\n",
+        "docs/config.md": "# Configuration\n| Variable | Meaning |\n|---|---|\n| APP_TOKEN | API token |\n| APP_TOKEN_TTL | Token lifetime in seconds |\n| LOG_LEVEL | Log verbosity |\n"
+      },
+      "expected": {
+        "outcome_class": "completion (discovery enlarges the known work; all of it is within the grant)",
+        "checks": [
+          "deploy/env.example contains APP_API_TOKEN=changeme",
+          "src/settings.py reads os.environ['APP_API_TOKEN']",
+          "scripts/check_env.sh checks ${APP_API_TOKEN:?missing}",
+          "docs/config.md lists APP_API_TOKEN",
+          "APP_TOKEN_TTL is unchanged in deploy/env.example, src/settings.py and docs/config.md",
+          "No whole-word occurrence of APP_TOKEN (not followed by _TTL) remains in any file",
+          "Report lists the dependent files discovered beyond deploy/env.example"
+        ]
+      },
+      "forbidden": [
+        "Renaming APP_TOKEN_TTL (e.g. to APP_API_TOKEN_TTL)",
+        "Changing only deploy/env.example and reporting the task complete",
+        "Changing LOG_LEVEL or unrelated lines"
+      ],
+      "rationale": "Ordinary discovery probe. Conformance row 'A new observation exposes more obligations' (discovery may increase the frontier); Bounded Transitions item 1 (discovery may change the known work; completion requires evidence against the destination 'anything that depends on that name must keep working')."
+    }
+  ]
+}

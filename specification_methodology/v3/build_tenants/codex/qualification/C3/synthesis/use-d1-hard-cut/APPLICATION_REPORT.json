@@ -1,0 +1,96 @@
+{
+  "candidate_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "recorded_at": "2026-10-13T19:35:30.366769+00:00",
+  "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+  "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "script_sha256": "e0340bfccc1ffad033aec575529afe02b409f13dd04a0fe9f6e633e6a3a548db",
+  "oracle_sha256": "8392aacc95357bf010e355adb88225c19222b0cb783bc50227875932befe7bf5",
+  "guard_negative_controls": [
+    {
+      "case": "../escape",
+      "rejected": true
+    },
+    {
+      "case": "/absolute",
+      "rejected": true
+    },
+    {
+      "case": "a/../escape",
+      "rejected": true
+    },
+    {
+      "case": "a//b",
+      "rejected": true
+    },
+    {
+      "case": "a\\b",
+      "rejected": true
+    },
+    {
+      "case": "./x",
+      "rejected": true
+    },
+    {
+      "case": "C:/escape",
+      "rejected": true
+    },
+    {
+      "case": "readonly",
+      "rejected": true
+    },
+    {
+      "case": "duplicate",
+      "rejected": true
+    },
+    {
+      "case": "V2 wrong version",
+      "rejected": true
+    },
+    {
+      "case": "V2 adverse pass annotation",
+      "rejected": true
+    },
+    {
+      "case": "P1 wrong actor producer",
+      "rejected": true
+    },
+    {
+      "case": "P1 missing actor producer",
+      "rejected": true
+    },
+    {
+      "case": "P1 wrong source producer",
+      "rejected": true
+    }
+  ],
+  "semantic_acceptance": "not_performed; independent grader owns acceptance",
+  "cases": [
+    {
+      "case": "D1-ordinary-discovery-probe",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "deploy/env.example",
+        "docs/config.md",
+        "scripts/check_env.sh",
+        "src/settings.py"
+      ],
+      "counts": {
+        "met": 11,
+        "not_met": 0,
+        "subprocess_executions": 6
+      },
+      "error": null,
+      "apply_sha256": "6cff8953931244330b0772058b0664db39cd975006fee5958310c41c9aec4777"
+    }
+  ],
+  "oracle_unchanged": true,
+  "elapsed_seconds": 0.093743,
+  "totals": {
+    "cases": 1,
+    "applications": 1,
+    "checks_met": 11,
+    "checks_not_met": 0,
+    "subprocess_executions": 6
+  }
+}

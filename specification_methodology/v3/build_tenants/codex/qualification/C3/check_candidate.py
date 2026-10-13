@@ -116,6 +116,10 @@ def check(root, partial=False):
                 if not partial:
                     failures.append(f"unresolved author disposition: {row['id']}")
                 continue
+            if row["disposition"] == "not applicable":
+                if not row.get("reason"):
+                    failures.append(f"missing bounded non-applicability reason: {row['id']}")
+                continue
             if not locus:
                 failures.append(f"missing successor locus: {row['id']}")
                 continue

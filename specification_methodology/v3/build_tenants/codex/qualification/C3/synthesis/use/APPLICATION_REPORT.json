@@ -1,0 +1,216 @@
+{
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "recorded_at": "2026-10-13T18:54:16.465680+00:00",
+  "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+  "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "script_sha256": "65b7f4c8e3051f5bfd9b5ab77ed80c9f5443f58d1485ea35b76ca06d96667c66",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "guard_negative_controls": [
+    {
+      "case": "../escape",
+      "rejected": true
+    },
+    {
+      "case": "/absolute",
+      "rejected": true
+    },
+    {
+      "case": "a/../escape",
+      "rejected": true
+    },
+    {
+      "case": "a//b",
+      "rejected": true
+    },
+    {
+      "case": "a\\b",
+      "rejected": true
+    },
+    {
+      "case": "./x",
+      "rejected": true
+    },
+    {
+      "case": "C:/escape",
+      "rejected": true
+    },
+    {
+      "case": "readonly",
+      "rejected": true
+    },
+    {
+      "case": "duplicate",
+      "rejected": true
+    }
+  ],
+  "semantic_acceptance": "not_performed; independent grader owns acceptance",
+  "cases": [
+    {
+      "case": "C1-stale-summary-vs-workspace",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "HANDOFF.md",
+        "docs/limits.md",
+        "tests/test_limits.py"
+      ],
+      "counts": {
+        "met": 8,
+        "not_met": 0,
+        "subprocess_executions": 3
+      },
+      "error": null,
+      "apply_sha256": "84e3aa228410c536be258ef0ec3c1901e98aee33421cfd23ac956ef33414318e"
+    },
+    {
+      "case": "C2-cold-continuation-partial-work",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "WORKLOG.md",
+        "src/b.py",
+        "src/c.py"
+      ],
+      "counts": {
+        "met": 11,
+        "not_met": 0,
+        "subprocess_executions": 3
+      },
+      "error": null,
+      "apply_sha256": "8c3bd2890b6c14bd4a05ca4ee0abf44a42727643f34a41fe6ddf398f9b8c1fe4"
+    },
+    {
+      "case": "C3-completed-external-effect-lost-ack",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "CHANGELOG.md",
+        "STATUS.md"
+      ],
+      "counts": {
+        "met": 7,
+        "not_met": 0,
+        "subprocess_executions": 1
+      },
+      "error": null,
+      "apply_sha256": "e2cbf3cd02c55831d8b8500b70b16ed230a4f2440a10197a689b512b9b16f401"
+    },
+    {
+      "case": "C3b-unknown-external-effect-lawful-stop",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [],
+      "counts": {
+        "met": 8,
+        "not_met": 0,
+        "subprocess_executions": 1
+      },
+      "error": null,
+      "apply_sha256": "d6f47af8531c2ee3c17003ee277cbddac77a7b32c43955f933e3bc15aa07483a"
+    },
+    {
+      "case": "C4-invalidated-dependency-valid-independent-work",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "RELEASE_CHECKLIST.md",
+        "VALIDATION.md"
+      ],
+      "counts": {
+        "met": 8,
+        "not_met": 0,
+        "subprocess_executions": 2
+      },
+      "error": null,
+      "apply_sha256": "a0a3884fc849962c24aa4cc33c672c6934276911c26f3141afcf13466cc7a152"
+    },
+    {
+      "case": "C5-failed-A-plus-required-coverage-B-outside-plan",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "GATE.md"
+      ],
+      "counts": {
+        "met": 8,
+        "not_met": 0,
+        "subprocess_executions": 0
+      },
+      "error": null,
+      "apply_sha256": "54ff47641ccdd3208347ad9013cd5bd9928cc99fd157f2f843c0e8ac43cce899"
+    },
+    {
+      "case": "C6-absent-vs-undecidable-assessment",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "STATUS.md"
+      ],
+      "counts": {
+        "met": 5,
+        "not_met": 1,
+        "subprocess_executions": 0
+      },
+      "error": null,
+      "apply_sha256": "4e399910e391f9c4ee7a99b0fe70b9656040458f4125d6db6a530731a37117b5"
+    },
+    {
+      "case": "C7-candidate-available-fitness-fails",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "PIPELINE.md"
+      ],
+      "counts": {
+        "met": 7,
+        "not_met": 0,
+        "subprocess_executions": 0
+      },
+      "error": null,
+      "apply_sha256": "66c04a867684c0fff493007a6862d522d362bdd14eb734ecbaa2cb11ba3d0888"
+    },
+    {
+      "case": "C8-one-frame-direct-work",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "tests/test_paging.py",
+        "utils/paging.py"
+      ],
+      "counts": {
+        "met": 9,
+        "not_met": 0,
+        "subprocess_executions": 5
+      },
+      "error": null,
+      "apply_sha256": "b0a17d40bb6a0fe482a77229a5541a1fb05441ac921e4b98213a80d0746714ac"
+    },
+    {
+      "case": "D1-ordinary-discovery-probe",
+      "application_status": "applied",
+      "inputs_unchanged": true,
+      "changed_paths": [
+        "deploy/env.example",
+        "docs/config.md",
+        "scripts/check_env.sh",
+        "src/settings.py"
+      ],
+      "counts": {
+        "met": 11,
+        "not_met": 0,
+        "subprocess_executions": 6
+      },
+      "error": null,
+      "apply_sha256": "9af95f3bf1431f2d6352e095c5018eef1bd1a7a9359ad978bcf6645bff725e93"
+    }
+  ],
+  "oracle_unchanged": true,
+  "elapsed_seconds": 1.391778,
+  "totals": {
+    "cases": 10,
+    "applications": 10,
+    "checks_met": 82,
+    "checks_not_met": 1,
+    "subprocess_executions": 21
+  }
+}
