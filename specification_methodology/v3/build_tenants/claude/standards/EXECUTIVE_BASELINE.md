@@ -187,8 +187,9 @@ missing authority (P6, P4b).
 
 ### Foundation to law
 
-This member is material family F16, Executive engagement. The table below
-shows which of its rules follow from which premises, in the format of
+This member is material family F16, Engagement baseline (operational
+profile). The table below shows which of its rules follow from which
+premises, in the format of
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
 which also states the standing of the consequences. An actor enters the
 family here, at the choice between direct entry and coordination. The

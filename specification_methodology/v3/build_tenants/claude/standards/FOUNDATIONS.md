@@ -806,8 +806,8 @@ core.
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
 | P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none |
-| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains | [Conjunction of results](#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule |
-| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule |
+| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule |
+| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule |
 | P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](#4-algebra) Composition; [Conjunction of results](#conjunction-of-results), Composition of results; [RF-010](REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation |
 | P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation) |
 | P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](#4-algebra) Reference versus body | none |
@@ -833,7 +833,8 @@ core. A member or profile that combines results applies this rule and
 declares only the choices it leaves open (P4a, P4b, P5, P6). Purpose and
 material relation: failure, undecidability, non-performance and uncertain
 effects stay distinct after combination, so a composite can neither report
-success nor hide which kind of gap it has while one of them remains.
+success nor hide which kind of gap it has while one of them remains in
+what it requires.
 
 A conjunction takes three inputs and keeps them apart:
 
@@ -875,8 +876,9 @@ never counts toward the candidate's fitness or acceptance.
 Reported value. The conjunction is `satisfied` only when every mandatory
 result is `satisfied` with valid applicable evidence, the declared basis
 relations agree, and the second and third inputs are empty. A composite
-with a known failure or an uncovered required obligation cannot project
-success. Where a mandatory result is not `satisfied`, the conjunction
+with a material counterexample to a mandatory constraint or an uncovered
+required obligation cannot project success. Where a mandatory result is
+not `satisfied`, the conjunction
 reports a non-satisfied value chosen by its declared rule from those
 returned; no universal order among the non-satisfied values exists, and
 the member or profile that applies the conjunction declares its own in
@@ -888,13 +890,20 @@ every mandatory returned result is `satisfied`, the declared basis
 relations agree and a gap remains, the conjunction reports
 `indeterminate`, because the results it holds cannot decide the composite
 predicate; that value is the conjunction's own, and the gaps stay
-recorded by kind.
+recorded by kind. A `falsified` result that is not mandatory stays in the
+conjunction's record with its predicate and is never discarded. Where
+every mandatory result is `satisfied`, the declared basis relations agree
+and no gap remains, a material counterexample to a mandatory constraint
+falsifies the conjunction whichever contributor found it, and without one
+the conjunction's value is the one its declared rule gives over the
+mandatory results.
 
 The declared rule. A conjunction declares which results are mandatory; how
 conflict and indeterminacy are handled; which basis relations must agree,
 results on different bases combining only under a declared coherent
 composite basis (§2, Basis); which decision authority owns the
-conjunction; and whether any result may veto or defer the decision.
+conjunction; how results that are not mandatory count; and whether any
+result may veto or defer the decision.
 Conjunction does not transfer the semantic authority of a contributing
 evaluation (P6, P4a).
 
