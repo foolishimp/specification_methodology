@@ -156,9 +156,9 @@ its specification is written as layered surfaces that actors interpret;
 several realisations, one specification may have several realisations,
 which change over time; immutable releases, a release is an immutable
 identity. Standing of the commitments cited (FOUNDATIONS §3): P0
-recovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0, P2
-and the step-produced-facts premise; P5 derived from P0, the open-world
-premise and P6.
+recovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and
+P2, with P0's premise that step-produced facts are not re-acquirable; P5
+derived from P0 and P6, with P0's open-world premise.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
@@ -585,6 +585,15 @@ implementation precedent, prompt prose or test fixture; it reprices the
 appropriate constitutional surface or carries the ambiguity as explicit,
 governed debt (§5).
 
+A phase answered, a phase declared not applicable with its reason, and a
+named `Gap:` or `Unanswered:` marker are declared states of the surface
+for that phase, not results, and map to no core value. An evaluation that
+reads them returns its own core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material
+relation: a declared state is never combined as an evaluation result, so
+a phase marked answered or not applicable cannot stand in for a
+`satisfied` result (P5, P1).
+
 ## 3. Outcome conservation
 
 Every product-outcome-bearing work wave identifies one explicitly selected,
@@ -882,10 +891,10 @@ Closure requires every applicable declared obligation satisfied by valid,
 applicable evidence and every required judgment or ruling, with no active
 non-closure condition. That requirement is the
 [conjunction of results](FOUNDATIONS.md#conjunction-of-results), with the
-declared obligations as its required coverage: a known failure, a required
-judgment or ruling without a closed result, or an obligation that no
-evidence addresses keeps the conjunction from `satisfied`, and each stays
-recorded by kind (P5, P6).
+declared obligations as its required coverage: a material counterexample
+to a mandatory constraint, a required judgment or ruling without a closed
+result, or an obligation that no evidence addresses keeps the conjunction
+from `satisfied`, and each stays recorded by kind (P5, P6).
 [TICKETS §7](TICKETS.md#condition-based-closure-and-reuse) owns work-state
 recording and reuse. A
 review event, a passing aggregate, a completed artifact or a status change
@@ -1085,15 +1094,11 @@ appetite escalates more major ambiguity to explicit human judgment; a
 higher one permits more bounded probabilistic decision-making. In either
 case the ambiguity and the decision are recorded.
 
-Some conditions are not optional ambiguity decisions and remain hard stops
-regardless of risk appetite. Typical hard-stop classes include: a violated
-invariant or guarantee; an absent required authority surface; a missing
-declared capability for an executional or operational stage; an undeclared
-irreversible side effect; an explicit policy gate requiring human approval
-(ACTIVATION §4). The
-method is therefore not "eliminate all ambiguity before work"; it is "make
-ambiguity visible, govern it explicitly, and reduce it progressively until
-downstream realisation is sufficiently constrained".
+The hard stops of [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)
+hold regardless of risk appetite. The method is therefore not "eliminate
+all ambiguity before work"; it is "make ambiguity visible, govern it
+explicitly, and reduce it progressively until downstream realisation is
+sufficiently constrained".
 
 The operational lifecycle sufficiency rule (§2) is this governance applied
 to lifecycle phases: an unanswered phase is a recorded gap, never a silent
@@ -1795,7 +1800,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout, derivative tenant-local realisation and tenant conformance under EVALUATION §6 are restated in §11 rules 1 and 4, to which §2 refers | §2 Constitutional chain; §11 |
 | #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
 | #ambiguity-governance-rule | conserved; the four outcomes are named with the values of ACTIVATION §3, which maps them into the core ("carried forward" is `carried`); the hard stops ACTIVATION §4; build-tenant or stack choice is the binding of §11; new, applying §11 rule 2: the admission makes an operation human adjudication, and a person who decides under policy without it acts under the policy that governs lawful probabilistic processing, whose definition is unchanged | §5 |
-| #operational-lifecycle-sufficiency-rule | conserved | §2 Operational lifecycle sufficiency |
+| #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value | §2 Operational lifecycle sufficiency |
 | #change-management-rule | conserved | §4 |
 | #universal-intake-triage | conserved; all six determinations, the triangulation and the six classes with their flows; the frames' results combine under the conjunction of FOUNDATIONS §4 | §4 Universal intake triage; §4 Change classes |
 | #computed-classification-and-treatment | conserved; C, J and O and the four-step ordered walk restored in full; the walk's values are stated as facts that map to no core value, and the unknown effect state is `completion_unknown` of ACTIVATION §3 | §4 Computed classification and treatment |
@@ -1865,9 +1870,11 @@ received here (§6, the table's last row).
 New law with no predecessor row, each stating its purpose and material
 relation where it is written: §11 Build-tenant binding, except the three
 determinations it conserves from #constitutional-chain; the statement in
-§4 that the computed walk's values are facts, not results; and the §5
-sentences on what makes an operation human adjudication, which apply §11
-rule 2 and take its purpose. The two
-family tables at §2 and §4 decide nothing beyond the rules they cite;
+§4 that the computed walk's values are facts, not results; the statement
+in §2 Operational lifecycle sufficiency that its phase states and markers
+are declared states, not results; and the §5 sentences on what makes an
+operation human adjudication, which apply §11 rule 2 and take its
+purpose. The two family tables at §2 and §4 decide nothing beyond the
+rules they cite;
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns
 their format.

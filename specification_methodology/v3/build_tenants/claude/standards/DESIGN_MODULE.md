@@ -65,7 +65,7 @@ results reads each result in the one core and never reads a record entry
 as a result (P5, P6).
 
 Every clause names the principle that requires it (P0 to P6, FOUNDATIONS
-§3; C is proposed as P0). The predecessor's "must" is written in the
+§3). The predecessor's "must" is written in the
 indicative; its "should", "may", "recommended", "typical", "preferred",
 "normally", "usually", "minimum", "where practical" and "allowed" keep
 their force. A route written `rc.2 #anchor` is into

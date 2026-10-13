@@ -552,7 +552,15 @@ map to falsified or to invalid_basis according to its cause, and a refined
 value maps to exactly one core value (FOUNDATIONS §4 Results,
 Refinements). A refusal that names conditions of both kinds takes
 `refusal(basis)`, because no decision can be taken on a basis that cannot
-support it. One defect can bear on two predicates: a model that violates
+support it. A basis mismatch inside a model or a record, a relation's
+qualifier record included, is mixed bases with no composite-basis relation
+(AC-006): a coordinate of the model or record binds, or a reference in it
+resolves on, a basis that the governing basis relation does not admit, as
+a wrong-basis reference of AC-003 does. Its refusal is `refusal(basis)`,
+in the structural admission that judges that model or record as in every
+other operation, and never `refusal(constraint)` for a violated constraint
+of a signature, even where the signature declares the basis relation.
+One defect can bear on two predicates: a model that violates
 AC-001 is `refusal(constraint)` in the structural admission that judges
 it and `refusal(basis)` in a projection over it, and each outcome answers
 its own predicate. An operation that was not applied has no outcome. A
@@ -900,17 +908,21 @@ never to `satisfied`. A stop this member writes, `hold`, `gap`,
 `refusal(constraint)` or `refusal(basis)`, has the meaning and the core
 value that AC-007 gives it. The signature's stop contract declares any
 further stop value with the one core value it maps to, and may refine a
-stop value by cause, each refined value mapping to exactly one core value.
-A traversal record's `stop_states` binds the stop mapping of that
-traversal, exactly one core value for each stop value; it may refine a
-value of the signature's stop contract further for that traversal, each
-refined value mapping to exactly one core value. Neither the stop contract
-nor a traversal's `stop_states` maps `refusal(constraint)`, or a value
-refined from it, to a core value other than `falsified`, and neither
-raises a result's standing (P5, P6). Purpose and material relation: one
-stop of one traversal has one core value, so its consumers cannot read it
-two ways, and no refinement turns a violated constraint into a case that
-the evidence merely cannot decide.
+stop value by cause. A traversal record's `stop_states` binds the stop
+mapping of that traversal, exactly one core value for each stop value; it
+may refine a value of the signature's stop contract further by cause for
+that traversal. Each refined value, whether the stop contract or a
+`stop_states` declares it, names its parent value and its cause and maps
+to its parent's core value: a value refined from `hold` to indeterminate,
+from `gap` or `refusal(basis)` to invalid_basis, and from
+`refusal(constraint)` to falsified. No refined value takes `satisfied`. A
+different core value needs a different parent value, which only the member
+that owns the parent declares; for these four stops that member is this
+one. Neither the stop contract nor a traversal's `stop_states` raises a
+result's standing (P5, P6). Purpose and material relation: one stop of one
+traversal has one core value, so its consumers cannot read it two ways,
+and no refinement gives a stop another core value, so a violated
+constraint never becomes a case that the evidence merely cannot decide.
 
 - `F_D` classifies deterministic evaluation or proof over declared
   properties. It returns a judgment and does not perform the domain
@@ -1291,7 +1303,7 @@ is provenance only.
 | #ac-004-relation-typing | conserved | §4 AC-004 |
 | #ac-005-authority-conservation | conserved; authority kinds are defined at FOUNDATIONS §2, the law is here; P4b consumes it | §4 AC-005 |
 | #ac-006-basis-coherence | conserved; basis is defined at FOUNDATIONS §2, the law is here | §4 AC-006 |
-| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified) | §4 AC-007; core at FOUNDATIONS §4 Results |
+| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified), a basis mismatch inside a model or a record, a relation's qualifier record and a wrong-basis reference included, being mixed bases and so `refusal(basis)` | §4 AC-007; core at FOUNDATIONS §4 Results |
 | #ac-008-explicit-latitude | conserved; the generic form over any two values is FOUNDATIONS §4 | §4 AC-008 |
 | #ac-009-residual-conservation | conserved; P4b consumes it | §4 AC-009 |
 | #ac-010-material-closure | conserved; applied by ACTIVATION §2; new: the gap or refusal is `gap` or `refusal(basis)` by cause, each invalid_basis under AC-007 | §4 AC-010 |
@@ -1299,7 +1311,7 @@ is provenance only.
 | #ac-012-overlay | conserved | §4 AC-012 |
 | #ac-013-transformation | conserved in full; FOUNDATIONS §4 conservation accounting consumes its delta fields; new: the application's stops take their core values under AC-007 | §4 AC-013 |
 | #ac-014-judgment-separation | conserved; the judgment object is defined at FOUNDATIONS §2, the record and the law are here | §4 AC-014 |
-| #traversals-and-functor-kinds | conserved; the stop algebra is a refinement of the core result algebra of FOUNDATIONS §4 Results, each stop value mapped to exactly one core value (tightening, P5); the stops this member writes take AC-007's values; a signature's stop contract and a traversal record's `stop_states` may refine stop values, never moving `refusal(constraint)` from falsified and never raising standing (new); the traversal record's ownership against same-spelled terms is made explicit (P3); the obligation of a model claiming categorical functor laws is carried by FOUNDATIONS §4 Formal fragment, to which the section refers | §5; FOUNDATIONS §4 Formal fragment |
+| #traversals-and-functor-kinds | conserved; the stop algebra is a refinement of the core result algebra of FOUNDATIONS §4 Results, each stop value mapped to exactly one core value (tightening, P5); the stops this member writes take AC-007's values; a signature's stop contract and a traversal record's `stop_states` may refine stop values by cause, each refined value keeping its parent's core value and none taking `satisfied`, a different core value needing a different parent value from the member that owns the parent, and neither raising standing (new); the traversal record's ownership against same-spelled terms is made explicit (P3); the obligation of a model claiming categorical functor laws is carried by FOUNDATIONS §4 Formal fragment, to which the section refers | §5; FOUNDATIONS §4 Formal fragment |
 | #ac-015-functor-classification | conserved; new: the incomplete application is `refusal(constraint)` under AC-007, distinct from a step's `incomplete` | §5 AC-015 |
 | #ac-016-typed-composition | conserved; P4a consumes it | §5 AC-016 |
 | #interpretation-and-models | conserved; the interpretation contract is related to FOUNDATIONS §2 Interpretation; new: the stops take their core values under AC-007 | §6 |
