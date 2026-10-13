@@ -157,3 +157,25 @@ Input commit: `bb76b1d0a158ff5b20c7fd2eb933f8ffc798160b`. Member hashes come fro
 | `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
 | `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 10918 | `d5dd09ccccd8838c5d66e5ce197302debf1f4b58683e3cae91e723626b1c4a0a` |
 | `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 15845 | `5865608a191aded349f6dcf7a563f83501ee20d3f267ec6f0502012d3f377f15` |
+
+### Codex rebuild input successor after independent review
+
+Input commit `98102157321990bdc483cd1c37f83f2b7aa477b9` supersedes bb76b1d for further reliance: the source/basis clarification and accurate pending-owner state are incorporated. The first input and review remain historical. No destination obligation is weakened.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 5434 | `dc80dd0e091afe33bfdd097a0850a94aef0d3a7e52ab46ac96b535e76afafec1` |
+| `specification/PRODUCT.md` | 42436 | `5527d270210c4d7603e5c4f330894a07e0f52d194e11e02318b18c784464db34` |
+| `specification/GOALS.md` | 14634 | `d2e2d025af9ded004eab6ad9acd922f89881b4b4b54f2f50bf8dd9bcc3af5c2e` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 6463 | `8f6d268bc51211ffccd7ab714b15891b6670429ecdabb9ffd8e0c8c0892090aa` |
+| `specification/requirements/README.md` | 17336 | `032541fc43652f7e8214c4dc8ca2ab5cbe871707efb4f7335b6bea914e515a50` |
+| `specification/requirements/PRINCIPLES.md` | 12599 | `0542778cdf097bf224f0e5305cf9a13f7bc9a30d39aa3f4e1d4c59c0ddf1803c` |
+| `specification/requirements/CAPABILITIES.md` | 2823 | `729f122f97e1f6f39ccee828319ca5203bfa74816d3bf2cc9f400080bce76cb4` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6469 | `e1ace7eb86a6c4a4a554c562fd3a9ec5b2c6e32027147b19c509bb52e370c9e4` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 8734 | `c4791ca16345345e5c5136a153d6e929d54ec1f191ad98d05ca57a4755485f95` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4060 | `3f25650ae4ce45ee31381bee876c47b8e7cb78d6aef50e5654591c7f5f8fd82b` |
+| `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 11655 | `3f30e3c8564eb6f77ee2c8d0e6ee5032911d771cbf86b2ac3e99d441a8ae8b0e` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 18046 | `9ba023a8f30be226485f9726c36422c5dfac34d6cf8ac31418fcdeb373ef34b8` |

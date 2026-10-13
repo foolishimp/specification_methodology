@@ -61,7 +61,7 @@ Contracts derive from this ticket per T-002's Admission Mechanism. State is one 
 - envelope: context, wall and spend allowances set by the Executive at admission and recorded here; measured context and spend reported in the return
 - stop and re-entry: if restating the member requires changing an axiom or principle, stop and return `re_entry_requested` naming the clause; if a row cannot be disposed within the grant, return `incomplete` with the residual; never dispose `intentionally removed` without Jim's recorded decision
 - result consumer: the Executive, through this ticket's execution record
-- state: drafted; admission requires a bound Executive
+- state: superseded by EC-CODEX-SYN-01
 
 Later contracts follow T-002's member sequencing, one per member or declared cone, and are drafted by the pen on the Executive's selection.
 
@@ -69,7 +69,7 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 
 | Milestone | State | Closure condition |
 |---|---|---|
-| M1 design reframed and EC-CODEX-001 admitted | OPEN | design restated; member map declared; contract `admitted` and ledgered |
+| M1 design reframed and EC-CODEX-SYN-01 admitted | OPEN | design restated; member map declared; contract `admitted` and ledgered |
 | M2 member 1 accepted | OPEN | Reviewer `satisfied` on all six criteria; `accept` ledgered |
 | M3 all members accepted | OPEN | every frontier row disposed; every member accepted |
 | C3 closure for this tenant | OPEN; Jim's | Jim accepts |
@@ -79,6 +79,8 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 2026-10-12T01:32:20Z — Drafted by the common pen with T-002. No actor bound beyond the Writer, nothing admitted, no construction started.
 
 ## Rebuild Activation
+
+The admission entry below is part of this ticket's Execution Record. The recorded SHA-256 covers the exact EC-CODEX-SYN-01 heading and bullet text through its closure line, including the terminating newline.
 
 ### EC-CODEX-SYN-01 — complete the revised Codex candidate
 
@@ -95,3 +97,5 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 - Closure: frozen candidate, complete checks and source reviews with explicit coverage/residuals. Owner acceptance remains open. An internal candidate_ready result does not mean C3 accepted.
 
 2026-10-14 — Executive selected EC-CODEX-SYN-01. Ledger Writer records it ADMITTED, contract SHA-256 `d5df2236d8f07d299ccc58d12f574a1908b1c340ecb3653c1c30ecaeaab186d8`, before construction. EC-CODEX-001 is superseded. Next activation: Codex Writer for design and shared core; nonauthor audits are bounded working checks.
+
+2026-10-14 — Core Writer returned candidate `3cfb2ab`. Independent core review requests bounded repairs to the result codomain/composition and remaining duplicate owners; Executive disposition `local_repair`, with no member acceptance. Next authorised Writer activation: repair those core contracts and integrate the dependency-ready method/profile returns; then fresh review and use trials. Common-pen Writer separately repairs review findings on source/basis wording and recording. These are explicit role changes before those effects.
