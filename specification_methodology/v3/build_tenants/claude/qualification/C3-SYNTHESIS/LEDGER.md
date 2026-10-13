@@ -140,3 +140,13 @@ RA1, a working review of A1, started.
 - A4a, for ACTIVATION §1 Transitions and Configuration, started.
 - W1b returned `candidate_ready`, committed `105b5a4`: all 29 RW1 findings repaired. The design now reads "author" as the tenant, so every same-family review is a working check only. The design governs where PLAN rows differ; the stale rows are handled in the briefs of A5b and wave B.
 - A5a, for the FOUNDATIONS §1 trim, §2 imports and the Actor row, started.
+
+2026-10-13T19:33Z — Returns and dispositions:
+- A3b returned `candidate_ready`, committed `b7b8e34`. RA23's M1 and M2 are repaired. `activation_refusal(capability)` now maps to `out_of_frame`, and topology mismatch to `invalid_basis`. The coverage statuses map to the core for "the coverage obligation is met"; an authorised exclusion counts as met, never as covered or performed. RA23's minor findings are repaired except m8, which goes to A5b.
+- A gap in PLAN: the family tables for wave A members (F1 to F7) had no activation. They are assigned as follows: F2, F4 and F5 to A4b, F3 to A5b, and F1, F6 and F7 to a new activation A8 on REFERENCE_FRAME and EVALUATION.
+- Wave B starts before A7, because the design fixes the table format (CROSS_SYNTHESIS Part 1). At most four activations run at once.
+- B1 (SPEC_METHOD build-tenant binding, F10, F11) and B3 (ODD and TRAVERSAL mappings, F18, F19) started.
+- A4a returned `candidate_ready`, committed `b5af087`: ACTIVATION §1 gains Transitions and Configuration, and the Executive, Writer and Reviewer roles become one example configuration. Its reading is confirmed: the predecessor's Executive mutation restriction binds wherever that configuration is selected.
+- A4b (measurement owner, acquisition rule, workspace as truth surface, refinement licensing, F2, F4, F5) started.
+- A5a returned `candidate_ready`, committed `951ac81`. Ruling on its one unplaced determination: "superseded: the successor clause and what changed are named" is dropped. It was added in the tenant with no predecessor source, it is stricter than the common Successor Disposition Requirement, and RELEASE's restated UP-015 governs `superseded`.
+- A5b (premise standing column, Foundation to law format and family index, F3, formal fragment, RA23 m8) started.
