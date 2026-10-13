@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `6ad337e53e365c4442f3d64b91dfe86b36eca300def360baa44b468a9baf476e`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
 
 ## Result algebra
 
@@ -30,26 +30,33 @@ The verdict has exactly these values:
 | `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
 | `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
 
-Performance records whether the named predicate's declared evaluation procedure
-reached its conclusion; it is `performed`, `not_performed` or `unconfirmed`.
-The activation binds that procedure and its conclusion boundary before use. The legal pairs are:
+Performance records whether the named predicate's declared evaluation was
+actually undertaken; it is `performed`, `not_performed` or `unconfirmed`.
+The activation identifies that evaluation separately from dispatch, admission
+or the work being assessed. Retain the observed extent, interruption and
+conclusion in its outcome and evidence. The legal pairs are:
 
 | Performance | Permitted verdicts | Meaning |
 |---|---|---|
-| `performed` | Any of the five verdicts | The procedure concluded, including a scoped basis or capability diagnosis. |
-| `not_performed` | Any except `satisfied`, with the evidence condition below | Evidence establishes no conclusion: it never started or aborted; retain which occurred. |
-| `unconfirmed` | Any except `satisfied`, with the evidence condition below | Whether the procedure concluded is not established. |
+| `performed` | Any of the five verdicts | Evidence establishes that the evaluation was undertaken, including a scoped basis or capability diagnosis. Its extent and conclusion remain separate facts. |
+| `not_performed` | Any except `satisfied`, with the evidence condition below | Evidence establishes that the evaluation was not undertaken. Dispatch or admission alone does not establish performance. |
+| `unconfirmed` | Any except `satisfied`, with the evidence condition below | Whether the evaluation was undertaken is not established. |
 
-Non-conclusion does not erase admissible evidence already obtained. An
-authenticated counterexample to the bound predicate can establish falsified
-before its procedure concludes; an established basis or scope diagnosis can
-likewise establish invalid_basis or out_of_frame. The result identifies that
-evidence independently of any claim that the procedure concluded. Without
-such deciding evidence it is indeterminate. Satisfaction requires the declared
-procedure's conclusion and its required evidence; a partial attempt cannot
-stand in for that conclusion. For example, a suite aborted after a witnessed
-failure falsifies “all tests pass” while remaining not_performed at the declared
-whole-suite conclusion boundary. Both facts survive conjunction.
+An interruption does not erase evaluation already undertaken or admissible
+evidence obtained. A suite aborted after a witnessed failure is performed with
+that partial extent and falsifies “all tests pass”. A completed load test that
+cannot generate its required load is performed but indeterminate on the
+requested service-performance predicate. Neither case is a never-run test.
+Satisfaction still requires all evidence and completion conditions selected by
+the predicate's evaluation rule; performed alone proves none of them.
+
+When the selected evaluation was not undertaken or its performance is
+unconfirmed, separately admissible counterevidence to its bound predicate can
+still establish falsified; an established basis or scope diagnosis can likewise
+establish invalid_basis or out_of_frame. The result identifies that independent
+support without inventing execution. Without deciding support it is
+indeterminate. An absent return establishes neither non-performance nor an
+undecidable evaluation: retain the missing slot and what is actually known.
 
 A missing required judgment stays an absent coverage slot, with the known
 performance fact or its uncertainty; it is not a fabricated child result. A
@@ -93,7 +100,7 @@ leaves that contribution inadmissible as deciding support for its slot;
 retain its raw outcome and unresolved authentication. Its claimed predicate
 remains indeterminate until admissible evidence decides it. Independently
 established counterevidence or a basis/scope diagnosis uses the legal pairs above
-on that same bound predicate; it does not invent a completed procedure.
+on that same bound predicate; it does not invent execution or completion.
 Requested effects without sufficient observation are unknown, never defaulted
 to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
 No refinement turns failure, undecidability, non-performance or unknown effect
@@ -117,7 +124,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `6ad337e53e365c4442f3d64b91dfe86b36eca300def360baa44b468a9baf476e`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
 
 ## Result conjunction
 
@@ -206,7 +213,7 @@ or pass that result off as conjunction of all leaves. A first-nonfailure rule
 cannot turn an undecided fallback into success.
 
 Sequential composition records an unreturned dependent evaluation as an absent
-slot, with known non-conclusion or unconfirmed conclusion as observed. A lawful regrouping requires the same interpretable composite basis, required
+slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union and the above verdict/effect operations are associative. An invalid
@@ -228,7 +235,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `6ad337e53e365c4442f3d64b91dfe86b36eca300def360baa44b468a9baf476e`.
+Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `2456d48d4a2c595be45371faaf41058a5011b8705144b8b551238a2b68a61d56`.
 
 ## Configuration
 
