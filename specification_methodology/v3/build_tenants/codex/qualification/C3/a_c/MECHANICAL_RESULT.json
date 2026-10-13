@@ -1,0 +1,122 @@
+{
+  "operations": [
+    {
+      "operation": "finite-token-check",
+      "exit": 0,
+      "cases": 608,
+      "label_permission_counterexamples": 32
+    },
+    {
+      "operation": "assertions-disabled",
+      "exit": 1,
+      "refused": true,
+      "old_receipt_unchanged": true
+    },
+    {
+      "operation": "validate",
+      "exit": 0,
+      "program_suffix": ""
+    },
+    {
+      "operation": "validate",
+      "exit": 0,
+      "program_suffix": "-mutant"
+    },
+    {
+      "operation": "empty-frame-selection",
+      "exit": 1,
+      "refused": true
+    },
+    {
+      "operation": "project",
+      "exit": 0,
+      "mode": "reference-only"
+    },
+    {
+      "operation": "project",
+      "exit": 0,
+      "mode": "materialized"
+    },
+    {
+      "operation": "partial-frame-transitive-closure",
+      "exit": 0
+    },
+    {
+      "operation": "wrong-program-old-map",
+      "exit": 1,
+      "refused": true,
+      "diagnostic": "map_mismatch"
+    },
+    {
+      "operation": "exact-join",
+      "exit": 0,
+      "exact": true
+    }
+  ],
+  "tool_dependency_members_verified": 7,
+  "projection_relations_equal": true,
+  "complete_selected_clause_closure": true,
+  "compared_keys": [
+    "closure",
+    "clause_relations",
+    "residual_routes",
+    "source_routes"
+  ],
+  "partial_selection_transitive_closure": true,
+  "pins": {
+    "SOURCE.md": "0161d2526a348fb2d94bc2f22cb855b9647428d2025efce30edb7e57b2a5c312",
+    "ENCODING.md": "7090de8eeed6d344e0e73648a68a0d42d039efff31a44d91a25cba896d3d298f",
+    "program.json": "0b0fc30fc15d76ba4dabc15ff0aed8ea091a8aab3d0ba35db2d9642a8217139f",
+    "program-mutant.json": "0147676086c88b099c5c69be1b992e76e67992e0b2f8f91b4d2fd01d8b8f6a43",
+    "finite_check.py": "63e868dcdc0981fb65397a13d4f41031d093d01d45ea3f536491829d33a8929e",
+    "qualify.py": "52282daeee7dca4b6407dee7bcb43db3fc1fcdc9fdf8b36d10c34736acf93bdd",
+    "bindings.json": "3341b7727bdd525442ec0e2b5bad00ae27caef5c973e08fed5deae36fc0c7f2d",
+    "INSTALL_VERIFICATION.json": "8d7c0622a32e9c23abcbe338fbc51fbdd013abc78af717e466b527a8081ee53c",
+    "FINITE_RESULT.json": "5c46b06b5fcb869bb973cf0d628d8c37dce876d4a610a1581530dc94c689dd6f",
+    "map.json": "75e0bcf96437f091430a402fe0fad0fa1687a3c5a29ec52c1e804f6ad2139c80",
+    "projection-reference-only.json": "3874e4588b449839abdd6422eb186793ef29251e76e5271546b084c805d80a04",
+    "projection-authority-only.json": "878f78b81108bb013505be3f05091fc7e46a174cc31cea60305ae0dd8242e4c7",
+    "REQUEST.txt": "eb4fec62e1e738004f4bb9214834bf238603674c7a168178e3cc507677e08ca7"
+  },
+  "tool_member_pins": [
+    {
+      "path": ".agents/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "type": "symlink"
+    },
+    {
+      "path": ".claude/skills/axiomatize-corpus",
+      "sha256": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "type": "symlink"
+    },
+    {
+      "path": "build_tenants/core/code/ac.py",
+      "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/SKILL.md",
+      "sha256": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/agents/openai.yaml",
+      "sha256": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/output-contract.md",
+      "sha256": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b",
+      "type": "file"
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/program.schema.json",
+      "sha256": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+      "type": "file"
+    }
+  ],
+  "limits": [
+    "No semantic predicate or fidelity inference from validation/projection/join",
+    "Token executable is a separately reviewed interpretation; ac.py does not execute it"
+  ]
+}

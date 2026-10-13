@@ -1,0 +1,84 @@
+{
+  "subject_commit": "bde7bc76fd03adec62af81963a4b7509fe9fa2d3",
+  "argv": [
+    "claude",
+    "-p",
+    "--safe-mode",
+    "--tools",
+    "",
+    "--permission-mode",
+    "dontAsk",
+    "--output-format",
+    "json",
+    "--no-session-persistence",
+    "--model",
+    "opus",
+    "--effort",
+    "medium",
+    "--max-budget-usd",
+    "2.0"
+  ],
+  "prompt_bytes": 133340,
+  "prompt_sha256": "ded09ea7762161128423aaccb3a3aad509d33a4d300e8d44be23abbbe7929967",
+  "context_allowance_bytes": 600000,
+  "wall_allowance_seconds": 360,
+  "spend_allowance_usd": 2.0,
+  "role": "author-independent Reviewer",
+  "provider_cwd": "/private/tmp",
+  "exit_code": 0,
+  "is_error": false,
+  "total_cost_usd": 0.810737,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 47185,
+    "cache_read_input_tokens": 1445,
+    "output_tokens": 21648,
+    "output_tokens_details": {
+      "thinking_tokens": 16880
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47185,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 21648,
+        "cache_read_input_tokens": 1445,
+        "cache_creation_input_tokens": 47185,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 47185
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 21648,
+      "cacheReadInputTokens": 1445,
+      "cacheCreationInputTokens": 47185,
+      "webSearchRequests": 0,
+      "costUSD": 0.810737,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 16880,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "session_id": "6093093f-ff59-4f4e-a198-1a9aa157f19c",
+  "num_turns": 1,
+  "elapsed_seconds": 203.149
+}

@@ -1,0 +1,354 @@
+# Evaluation and Conjunction Frame
+
+Scope: Judge and combine declared material predicates without erasing a failed relation, its original citations, incompatible basis or uncovered coverage. This frame supplies no acceptance or repair grant.
+
+Bind this scope to the exact subject, selected governing basis, actor, capability
+envelope, required coverage and existing grant before use. Any missing material
+relation remains unresolved. The excerpts below are derived acquisition views of
+the named owners; those owners retain authority. Section text is retained, with
+relative links relocated to the same targets. A source digest binds the entire
+owner, not proof that this selection suffices for another task.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+## Reference Frame Laws
+
+### RF-001 Evaluation Relativity
+
+Every frame declares the evaluation family it supports. A frame with no
+declared evaluation family has no testable sufficiency boundary.
+
+### RF-002 Finite Attention
+
+An activated frame contains a finite attention surface that fits the selected
+actor's declared capability envelope. A frame that requires undeclared ambient
+memory, conversation history, or an effectively global workspace context is
+not reconstructable for that actor.
+
+### RF-003 Material Sufficiency
+
+Every known relation whose lawful change can alter the evaluation result,
+basis validity, evidence sufficiency, operation authority, or decision
+authority appears in the frame or enters through a declared authoritative
+input.
+
+Omitting a material relation makes the frame insufficient. The method does not
+require proving that no undiscovered material relation exists.
+
+### RF-004 Irrelevance Exclusion
+
+Relations that cannot affect the declared evaluation remain outside active
+attention unless they are required to establish irrelevance. A frame does not
+expand merely because adjacent workspace material exists.
+
+### RF-005 Exact Basis And Coordinates
+
+Every result binds its exact subject, basis, coordinates, and evidence scope.
+A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
+requires reactivation. Apparent equality does not substitute for declared
+coordinate equality.
+
+### RF-006 Authority Conservation
+
+A frame carries and applies admitted authority. It does not mint, widen,
+transfer, or reconstruct semantic, evaluation, operation, or decision authority
+from actor identity, available capability, evidence shape, implementation
+reachability, or frame selection.
+
+### RF-007 Semantic, Evidence, And Verdict Separation
+
+Semantic law defines what the evaluation means. Evidence supplies observations.
+The evaluator applies the declared relation. Where the evaluation performs a
+material operation, the existing operation owner supplies the exact grant.
+Decision authority disposes the result. A frame declaration keeps these roles
+distinguishable even when one actor lawfully performs several of them.
+
+### RF-008 Overlap Without Identity Collapse
+
+Frames may share entities, variables, evidence, or coordinates. Shared material
+does not establish identical meaning, basis, authority, or result. Every
+cross-frame equality or translation used by an evaluation is declared where it
+is needed.
+
+### RF-009 No Assumed Hierarchy
+
+Frames may relate through disjointness, overlap, refinement, restriction,
+translation, temporal succession, composition, or governance. Parent and child
+relations apply only where explicitly declared.
+
+Functional decomposition, authority precedence, frame configuration, subject
+topology, and evaluation dependency are distinct relation structures. A
+consumer may align them where the governed subject warrants it. It may not
+silently treat them as one hierarchy.
+
+### RF-010 Composition On Demand
+
+Using several frames does not require composing their internal manifolds.
+Composition law is required only when the governing evaluation combines their
+internal variables, transports evidence or values across them, or treats their
+operations as one material execution relation.
+
+Independently activated evaluations may instead return closed results to one
+declared conjunction or decision rule.
+
+### RF-011 Topology Mutation And Recharting
+
+An activated frame declares the topology changes capable of invalidating its
+coordinates or materiality judgment. A detected material topology mutation
+causes reevaluation, frame revision, or recharting before the previous result
+is reused.
+
+### RF-012 Closed Results
+
+Every evaluation returns a member of its declared result algebra. The baseline
+result family is:
+
+- `satisfied`: the declared predicate holds on the exact basis;
+- `falsified`: a declared counterexample defeats it;
+- `indeterminate`: available admissible evidence cannot decide it;
+- `out_of_frame`: the evaluation requires an undeclared material relation or
+  capability; or
+- `invalid_basis`: the subject or basis cannot support the evaluation.
+
+An externally owned compatible extension may refine this algebra while
+preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
+
+### RF-013 Reconstructable Activation
+
+A fresh competent actor inside the declared capability envelope can reconstruct
+the activated evaluation from the frame declaration, exact subject, basis, and
+admissible inputs without undocumented conversational or historical context.
+
+### RF-014 Capability Fit
+
+Frame adequacy includes actor usability. When the material manifold exceeds an
+actor's capability envelope, human authority may select another actor, refine
+the frame, sequence activations, or provide a lawful compression. The actor may
+not silently omit material relations to fit context.
+
+### RF-015 Residual Uncertainty
+
+Coverage and evaluation results retain known uncertainty. Unresolved relations,
+uncovered evaluations, contested evidence, and unknown capability remain
+explicit. Absence of a recorded counterexample is not evidence of universal
+completeness.
+
+### RF-016 Implementation Neutrality
+
+This method requires the declared relations and observable outcomes. It does
+not require a frame runtime, universal carrier, registry, controller, prompt
+format, repository layout, collaboration topology, worker count, or software
+framework.
+
+### RF-017 Proportional Compression
+
+A frame compresses accumulated practice when its declaration preserves the
+material distinctions and failure detections required by its evaluation family
+while fitting its capability envelope.
+
+Compression does not require a unique smallest frame. Intentional overlap is
+retained where it supplies independently activated evaluation, different
+capability fit, different evidence altitude, or useful fault detection. Frames
+are merged only when the merged frame preserves evaluation meaning, authority,
+capability fit, and proportional reasoning cost.
+
+### Engagement Atom And Semantic Prime
+
+A reference frame is atomic at engagement altitude: it is activated and
+evaluated as one bounded attention unit. Semantic irreducibility is a separate
+question. One frame may contain several semantic atoms, and one semantic atom
+may participate in several frames.
+
+Where an adopting method supplies a Prime or equivalent semantic-contraction
+law, that law governs the domain atom family. Frame-set contraction then asks a
+different question: whether two frame declarations support the same evaluation
+relation without material difference in evidence, authority, capability fit,
+evaluation or assurance independence, or failure detection. A frame set is not
+contracted into a disjoint minimum merely because its material variables
+overlap.
+
+---
+
+
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+### Applicability And Required Results
+
+The owning evaluation and scope declarations determine which frame obligations
+apply to the exact subject. Evaluate their declared predicates from sufficient
+basis-bound facts. A true predicate requires the applicable evaluation and
+result; a false predicate excludes only that obligation under its cited
+authority. Missing or ambiguous premises leave applicability unresolved, not
+false. A frame name, available tool or listed family is no activation trigger
+by itself. Where applicability needs residual semantic judgment, retain that
+judgment and its evidence rather than representing it as a computed fact.
+
+A required result that is absent, stale, bound to another subject/basis or
+incapable of establishing its claim cannot satisfy a dependent conjunction.
+Unresolved applicability withholds the dependent claim until sufficient
+evidence or the owning decision resolves it. Other applicable constraints
+remain in force even if only one evaluation detects them. Qualification of an
+applicability rule must distinguish true, false and unknown premises, required
+missing or wrong-subject results, and a sufficient positive result under a
+finite declared fixture; always skipping or always activating cannot satisfy
+those different expected outcomes.
+
+
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+## Using Frames In Conjunction
+
+Frames participate together through four distinct relations.
+
+### Independently Activated Co-Evaluation
+
+Several frames may evaluate the same subject through separate activations and
+return closed results. They may overlap in subject, manifold, or evidence
+sources, but neither evaluation consumes or influences the other's unclosed
+working result. This is useful for assurance independence, different evidence
+altitudes, or distinct failure perspectives.
+
+### Result Conjunction
+
+A declared decision rule consumes closed frame results. The rule states:
+
+- which results are mandatory;
+- how conflict and indeterminacy are handled;
+- which basis relations must agree;
+- what decision authority owns the conjunction; and
+- whether any result may veto or defer the decision.
+
+Conjunction does not transfer the semantic authority of a contributing frame.
+
+Every mandatory constraint must be satisfied with valid applicable evidence.
+Common agreement cannot discard a constraint or material counterexample found
+by only one contributor. Missing, wrong-subject, conflicted or indeterminate
+mandatory results remain unresolved under the declared rule; aggregate green
+status cannot replace them.
+
+### Evidence Or Coordinate Translation
+
+One frame supplies evidence or a value consumed inside another frame. The
+translation declares source and target coordinates, preserved meaning,
+accepted loss, provenance, equality law, and refusal conditions.
+
+### Material Composition
+
+Several frame-governed operations form one material execution or reasoning
+relation. The owning application declares the composition, shared invariants,
+effect or decision order where material, closure, failure, and semantic,
+operation, and decision-authority conservation.
+
+Composition is introduced only when the evaluation requires it. A possible
+future interaction does not require a general composition law in every frame.
+
+---
+
+
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+
+## Minimal Evaluation Result
+
+```markdown
+# Frame Evaluation Result
+
+- frame identity and revision:
+- activation identity:
+- evaluation:
+- subject and basis:
+- actor and capability envelope:
+- semantic, evaluation, operation where material, and decision authority:
+- admissible evidence:
+- result:
+- inference relation:
+- residual uncertainty:
+- invalidation conditions:
+- consuming decision or conjunction:
+```
+
+---
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a`.
+
+## Bind
+
+Recover the current purpose, subject identity, governing specification, role,
+authority, state and required relations. Conflicting, missing or stale bindings
+are explicit results. A name, path, cached result or available tool is no grant.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a`.
+
+## Acquire
+
+Resolve enough authentic material for the selected operation or evaluation.
+Declare completeness, freshness, coupled invariants and interpretation. Resolve
+references when their bodies are needed. Unavailable evidence, insufficient
+context or capability returns pressure for refinement, support, re-entry or a
+truthful stop. Acquisition cannot silently drop a governing obligation.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a`.
+
+## Evaluate
+
+Judge a declared predicate on an exact subject using sufficient admissible
+evidence. RF-012's closed base is satisfied, falsified, indeterminate, out_of_frame
+or invalid_basis; externally owned compatible extensions preserve RF-012's explicit indeterminate,
+out-of-frame and invalid-basis pressure under their declared contracts. Preserve original citations and residual coverage.
+Other judgment domains retain their admitted result algebras. Where required,
+the assessor is independent of authorship. A result mints no new grant. A
+domain-owned judgment or control function may exercise acceptance, closure or
+next-action authority already bound by its contract, as in a_c admission or ODD
+evaluate_action/evaluate_next. A Baseline Reviewer instance retains only its
+source-defined evaluation authority and cannot perform a reserved owner decision.
+
+For an UP-020 assessment retain the assessor-disposition field's
+evidence classification alongside the predicate result. It can describe that
+the cone is preserved, a local realization is defective, an owning relation
+needs re-entry, a governing relation is violated, or an undisposed competing truth
+path remains. This is assessment
+evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a`.
+
+## Conjoin
+
+Consume results under the declared authentication, conjunction or decision rule
+on a declared common outcome. Preserve incompatible/conflicting cases so the
+owning rule can return conflict or its other admitted outcome; incompatibility
+is not a reason to silently omit a result.
+Retain each applicable known failure, its producer and citations. Retain required
+uncovered coverage separately. For an instance whose admission contract declares
+planned assessment slots, authenticate each planned slot; an omitted planned
+judgment is handled by that owner's declared admission/result rule; no generic
+falsification or rejection is inferred from absence alone. An authenticated set
+can still leave a different required responsibility uncovered. The declared
+conjunction or decision rule determines the aggregate result. A conjunctive
+whole-outcome claim requires every applicable required predicate and seam;
+unknown applicability prevents that wider conjunctive satisfaction. A declared
+disjunctive rule retains its own semantics. No result may silently erase a
+known failure or uncovered responsibility from the evidence it consumed.

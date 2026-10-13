@@ -1,0 +1,45 @@
+{
+  "id": "evaluation",
+  "frame": "EVALUATION_CONJUNCTION",
+  "task": "Evaluate the actual summary candidate against the supplied frozen observations. Give a closed result, cite every defect, and return the smallest truthful replacement summary without inventing any assessment or grant. Do not decide acceptance.",
+  "subject": "summary.md",
+  "material": {
+    "subject": "catalog/source-v1",
+    "basis": "contract-v1",
+    "required_coverage": [
+      "A",
+      "B"
+    ],
+    "planned_assessment_slots": [
+      "slot-A"
+    ],
+    "planned_slot_results": [
+      {
+        "slot": "slot-A",
+        "producer": "independent-observer/A/attempt-1",
+        "subject": "catalog/source-v1",
+        "basis": "contract-v1",
+        "coverage": [
+          "A"
+        ],
+        "result": "falsified",
+        "finding": "Permission was inferred from a display label.",
+        "citations": [
+          "source/A.md#permission-branch"
+        ]
+      }
+    ],
+    "source_observation": {
+      "coordinate": "source/A.md#permission-branch",
+      "actual_text": "A display label authorizes publication.",
+      "predicate": "A display label must confer no operation authority."
+    },
+    "assessment_admission": "The single planned slot is supplied and bound to these fixture coordinates. No omitted planned judgment exists. B is uncovered required coverage. These are fixture-authenticated bytes, not a native runtime authentication proof.",
+    "operation_grant": "Review and propose a summary only. No public contract edit or acceptance authority.",
+    "conjunction_rule": "A required falsified result vetoes satisfaction; all applicable known findings/lineage/citations survive. Uncovered B stays unresolved separately. Only slot A is planned and admitted. No judgment for B is invented."
+  },
+  "subject_sha256": "4f973d767c4824cdcae53b3cad1767929d436e3933fa19395000f83341b9a76a",
+  "fixture_owner": "Codex C3 fixture Writer under the tenant-only grant",
+  "consuming_decision": "Codex C3 Executive may accept/repair this bounded fixture proof only; common acceptance, upstream changes and publication remain reserved.",
+  "measurement_limit": "The host Writer checks Git membership/digests before dispatch. The tool-free consumer evaluates supplied bytes and cannot independently reacquire or compute those digests."
+}

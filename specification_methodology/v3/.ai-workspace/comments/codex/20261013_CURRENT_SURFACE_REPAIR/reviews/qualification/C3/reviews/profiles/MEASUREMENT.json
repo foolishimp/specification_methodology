@@ -1,0 +1,83 @@
+{
+  "subject_commit": "97e348464b413f0820467413049f25741759d5a7",
+  "argv": [
+    "claude",
+    "-p",
+    "--safe-mode",
+    "--tools",
+    "",
+    "--permission-mode",
+    "dontAsk",
+    "--output-format",
+    "json",
+    "--no-session-persistence",
+    "--model",
+    "opus",
+    "--effort",
+    "medium",
+    "--max-budget-usd",
+    "6"
+  ],
+  "prompt_bytes": 462592,
+  "prompt_sha256": "5fc42e276d45ff34265e3e40e8b8056dc6e995db858f7dc66ab37613d00f80b7",
+  "context_allowance_bytes": 600000,
+  "wall_allowance_seconds": 480,
+  "spend_allowance_usd": 6,
+  "role": "author-independent Reviewer",
+  "exit_code": 0,
+  "is_error": false,
+  "total_cost_usd": 1.5364474,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 166763,
+    "cache_read_input_tokens": 2377,
+    "output_tokens": 10093,
+    "output_tokens_details": {
+      "thinking_tokens": 7073
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 166763,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 10093,
+        "cache_read_input_tokens": 2377,
+        "cache_creation_input_tokens": 166763,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 166763
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 10093,
+      "cacheReadInputTokens": 2377,
+      "cacheCreationInputTokens": 166763,
+      "webSearchRequests": 0,
+      "costUSD": 1.5364474,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 7073,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "session_id": "aa183182-37fc-4d52-853b-cefe819698cb",
+  "num_turns": 1,
+  "elapsed_seconds": 91.942
+}

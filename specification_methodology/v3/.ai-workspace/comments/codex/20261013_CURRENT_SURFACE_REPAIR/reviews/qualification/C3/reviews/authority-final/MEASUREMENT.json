@@ -1,0 +1,83 @@
+{
+  "subject_commit": "23de1101beafaf88f1ec33cef86955c9b923a283",
+  "argv": [
+    "claude",
+    "-p",
+    "--safe-mode",
+    "--tools",
+    "",
+    "--permission-mode",
+    "dontAsk",
+    "--output-format",
+    "json",
+    "--no-session-persistence",
+    "--model",
+    "opus",
+    "--effort",
+    "medium",
+    "--max-budget-usd",
+    "6"
+  ],
+  "prompt_bytes": 177429,
+  "prompt_sha256": "fe8a7880db2d51851d931a5883cda34e22e4a23b3f1cdcd52629166886fe1cd0",
+  "context_allowance_bytes": 600000,
+  "wall_allowance_seconds": 480,
+  "spend_allowance_usd": 6,
+  "role": "author-independent Reviewer",
+  "exit_code": 0,
+  "is_error": false,
+  "total_cost_usd": 0.8867314000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 64851,
+    "cache_read_input_tokens": 2377,
+    "output_tokens": 18372,
+    "output_tokens_details": {
+      "thinking_tokens": 14060
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 64851,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 18372,
+        "cache_read_input_tokens": 2377,
+        "cache_creation_input_tokens": 64851,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 64851
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 18372,
+      "cacheReadInputTokens": 2377,
+      "cacheCreationInputTokens": 64851,
+      "webSearchRequests": 0,
+      "costUSD": 0.8867314000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 14060,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "session_id": "bef8e291-1232-4a02-a37d-61a79c0d807a",
+  "num_turns": 1,
+  "elapsed_seconds": 173.467
+}

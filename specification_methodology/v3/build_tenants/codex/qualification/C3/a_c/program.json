@@ -1,0 +1,306 @@
+{
+  "kind": "axiom-indexer.axiomatic-program",
+  "schema_version": 1,
+  "uri": "urn:codex-stdo3:c3:program:source-v1-refined",
+  "calculus_ref": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
+  "source_basis": "repo://codex-v3/",
+  "frame_refs": [
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join"
+  ],
+  "vocabulary_refs": [
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#consequence",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#conserves",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#input",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+    "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires"
+  ],
+  "symbols": [
+    {
+      "uri": "urn:codex-stdo3:c3:symbol:findings",
+      "kind": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+      "label": "Planned-slot admission and required coverage",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:symbol:join",
+      "kind": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+      "label": "Declared producer/consumer semantic domains",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:symbol:observed",
+      "kind": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+      "label": "Known or unknown current observation",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:symbol:permission",
+      "kind": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+      "label": "Exact current-owner permission",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:symbol:state",
+      "kind": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#concept",
+      "label": "Two-token single-valued ownership state",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:codex-stdo3:c3:clause:effect-recovery",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "After an unknown possible effect, observe/reconcile actual state or stop unresolved before a potentially duplicating retry; no operation authority follows."
+        }
+      ],
+      "statement": "Unknown external effects do not permit blind repetition.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#transform"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:clause:finding-conservation",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#conserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#input",
+          "ref": "urn:codex-stdo3:c3:symbol:findings"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "literal": "Exactly planned slot A is supplied and authenticated, bound to source-v1 and its one original producer; B is required uncovered coverage, not an omitted planned slot."
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#consequence",
+          "literal": "Retain A falsified, its original producer and source/A.md#permission-branch, and B uncovered; remain non-green."
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "Missing or supplied-but-unauthenticated A invalidates a complete planned-set claim; never invent the judgment."
+        }
+      ],
+      "statement": "Known failure and uncovered responsibility coexist without loss of lineage or coverage.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#conjoin"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:clause:permission",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#input",
+          "ref": "urn:codex-stdo3:c3:symbol:state"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:symbol:permission"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:symbol:observed"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "Unknown current observation returns unresolved with no effect; known missing exact permission returns refused with no effect."
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "An exact assignment grant names issuer equal to the selected token current owner, the exact token, destination and operation assign. A label or an inspect grant supplies no assignment permission."
+        }
+      ],
+      "statement": "A named owner or display label alone never authorizes a token assignment.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#bind"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:clause:role-boundary",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:clause:finding-conservation"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:clause:token-transfer"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:clause:typed-join"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "A predicate result supplies no action or acceptance grant; a decision owner acts only within its existing grant."
+        }
+      ],
+      "statement": "Evidence and authoritative disposition stay separate.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#dispose"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:clause:token-transfer",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#conserves",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "ref": "urn:codex-stdo3:c3:clause:permission"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#input",
+          "ref": "urn:codex-stdo3:c3:symbol:state"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#consequence",
+          "literal": "With known state and exact permission, only the selected token receives the named destination owner; token set and single-valued ownership survive."
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "Resumption re-observes actual state; no universal idempotence is asserted."
+        }
+      ],
+      "statement": "The bounded transfer conserves all unselected state and handles unavailable observation without an effect.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
+        "repo://codex-v3/successor/standards/TRANSFORMATION_LIBRARY.md#transform"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:clause:typed-join",
+      "clause_type": "constraint",
+      "operator": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#requires",
+      "arguments": [
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#input",
+          "ref": "urn:codex-stdo3:c3:symbol:join"
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#premise",
+          "literal": "LengthMetres -> DurationSeconds is incompatible; DurationMilliseconds -> DurationSeconds requires divide by 1000."
+        },
+        {
+          "role": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#qualification",
+          "literal": "Compatible types confer no operation permission."
+        }
+      ],
+      "statement": "Field-shape equality cannot supply semantic compatibility.",
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#typed-composition-and-conservation"
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "uri": "urn:codex-stdo3:c3:residual:scope",
+      "kind": "unresolved",
+      "subject_refs": [
+        "urn:codex-stdo3:c3:clause:effect-recovery",
+        "urn:codex-stdo3:c3:clause:finding-conservation",
+        "urn:codex-stdo3:c3:clause:permission",
+        "urn:codex-stdo3:c3:clause:role-boundary",
+        "urn:codex-stdo3:c3:clause:token-transfer",
+        "urn:codex-stdo3:c3:clause:typed-join"
+      ],
+      "detail": "No universal categorical equivalence, statistical Markov property, distributed exactly-once effect, runtime capacity, practical adequacy, complete-corpus fidelity or release is proved. The executable interpretation models token states only, not the other qualitative relations. Finite model success, source fidelity, practical adequacy, category equivalence, corpus qualification and release are distinct predicates; no one supplies the others.",
+      "re_entry_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#residuals"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#residuals",
+        "repo://codex-v3/successor/standards/FOUNDATIONS.md#orthogonal-descriptions"
+      ]
+    }
+  ],
+  "frame_indexes": [
+    {
+      "uri": "urn:codex-stdo3:c3:index:authority",
+      "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation",
+      "scope": "Separate predicate/model results from operation or acceptance grants; handle unknown effects without blind repetition.",
+      "clause_refs": [
+        "urn:codex-stdo3:c3:clause:effect-recovery",
+        "urn:codex-stdo3:c3:clause:role-boundary"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#authority-and-interpretation"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:index:findings",
+      "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation",
+      "scope": "Conserve A falsified and B uncovered under an exact admitted planned set.",
+      "clause_refs": [
+        "urn:codex-stdo3:c3:clause:finding-conservation",
+        "urn:codex-stdo3:c3:clause:role-boundary"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#finding-conservation"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:index:tokens",
+      "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state",
+      "scope": "Evaluate exact permission, observation and ownership preservation in the finite token state.",
+      "clause_refs": [
+        "urn:codex-stdo3:c3:clause:effect-recovery",
+        "urn:codex-stdo3:c3:clause:permission",
+        "urn:codex-stdo3:c3:clause:token-transfer"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#token-state"
+      ]
+    },
+    {
+      "uri": "urn:codex-stdo3:c3:index:typed",
+      "frame_ref": "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join",
+      "scope": "Judge semantic unit compatibility without minting an operation grant.",
+      "clause_refs": [
+        "urn:codex-stdo3:c3:clause:typed-join"
+      ],
+      "residual_refs": [
+        "urn:codex-stdo3:c3:residual:scope"
+      ],
+      "source_refs": [
+        "repo://codex-v3/qualification/C3/a_c/SOURCE.md#typed-join"
+      ]
+    }
+  ]
+}

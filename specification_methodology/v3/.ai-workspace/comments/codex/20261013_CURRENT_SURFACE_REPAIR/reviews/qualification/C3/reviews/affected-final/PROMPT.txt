@@ -1,0 +1,1778 @@
+You are an independent source-first Reviewer. No tools or ambient/peer context. This is an affected-relation confirmation, not reopening every unchanged owner. Judge only (1) explanatory direction versus an unproved universal entailment/derivation, (2) AC-014/017 scope and other role/authority owners, (3) README deciding/non-deciding standing, (4) exact ODD function identities, complete listed outputs, closure versus next-action and admission ownership, and (5) no new normative hierarchy inferred by the binding introductions. Give literal RF results for those claims, exact counterexamples and limits. Do not require a short acquisition view to restate every unrelated obligation; no summary may contradict its owner. Do not substitute author intent for actual candidate text. Source 0ff2ed70c55d0fcb13efeef1d57b9dd3359463f1. No repair/acceptance authority.
+
+=== Immutable owner AXIOMATIC_CALCULUS.md SHA256 cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d ===
+## Position
+
+The **STDO Axiomatic Calculus for Governed Symbolic Systems**, written `a_c`,
+is STDO's domain-specific, carrier-neutral constitutional calculus for
+representing and relating governed symbolic systems.
+
+Its stable concept identity is:
+
+```text
+urn:stdo:concept:axiomatic-calculus:a-c
+```
+
+This standard owns that concept in bounded context:
+
+```text
+urn:stdo:bounded-context:axiomatic-calculus
+```
+
+`a_c` is a separately identifiable calculus derived from STDO principles. It
+defines sorts, typed objects, relations, constraints, latitude, residual
+uncertainty, traversals, functor kinds, judgments, closure, projections,
+transformations, models, and validity laws. Those definitions do not depend on
+a derivation-source record layout, a selected subject interpretation, a
+particular carrier, a model provider, a runtime, or a repository topology.
+
+`a_c` makes no claim of universal applicability, logical completeness,
+consistency, decidability, soundness, or category-theoretic status except where
+an exact, separately identified proof establishes that claim for a declared
+fragment, model, or relation.
+
+STDO principles are the derivation provenance of the calculus. Application of
+the calculus to any exact subject is a separately owned downstream relation.
+Those relations are distinct:
+
+```text
+exact predecessor STDO principles ──derive──> a_c
+a_c + exact subject X              ──interpret──> a_c.X
+a_c.X + exact accepted semantic judgment J_X
+      + exact carrier C            ──encode─────> a_c.X.C
+```
+
+The calculus, an interpreted model, and an encoded carrier are distinct
+governed layers with separate content identities and proof boundaries. A layer
+becomes a released Product only through separately authorized Product
+acceptance and release. Neither interpretation nor encoding can redefine the
+calculus.
+
+
+## Derivation Provenance
+
+The calculus contracts recurring principles already established by STDO:
+
+- scoped identity and authority conservation from
+  [`IDENTITY_METHOD.md#core-law`](IDENTITY_METHOD.md#core-law) and
+  [`IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004`](IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004);
+- exact bounded-context meaning and explicit cross-context relations from
+  [`SPEC_METHOD.md#bounded-context-semantic-resolution`](SPEC_METHOD.md#bounded-context-semantic-resolution);
+- probabilistic construction as a bounded evaluation class from
+  [`REFERENCE_FRAME_METHOD.md#position`](REFERENCE_FRAME_METHOD.md#position)
+  and
+  [`REFERENCE_FRAME_METHOD.md#evaluation`](REFERENCE_FRAME_METHOD.md#evaluation);
+- delegated probabilistic construction, exact candidate production, and
+  construction-versus-assessment separation from
+  [`SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020);
+- governed ambiguity, bounded probabilistic processing, explicit human
+  adjudication, and hard-stop separation from
+  [`SPEC_METHOD.md#ambiguity-governance-rule`](SPEC_METHOD.md#ambiguity-governance-rule);
+- exact-basis evaluation, evidence-and-verdict separation, authority
+  conservation, and closed results from
+  [`REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates`](REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates),
+  [`REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation`](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation),
+  [`REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation`](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation),
+  and
+  [`REFERENCE_FRAME_METHOD.md#rf-012-closed-results`](REFERENCE_FRAME_METHOD.md#rf-012-closed-results);
+- constitutional derivation and re-entry from
+  [`SPEC_METHOD.md#constitutional-chain`](SPEC_METHOD.md#constitutional-chain);
+- finite material closure, projection, authority conservation, residual
+  uncertainty, and capability fit from
+  [`REFERENCE_FRAME_METHOD.md#reference-frame-laws`](REFERENCE_FRAME_METHOD.md#reference-frame-laws); and
+- singular released authority from
+  [`SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001`](SPEC_METHOD.md#one-constitutional-surface-and-version-boundary-stdo-surface-001).
+
+These references establish provenance. The definitions and laws below are the
+sole normative authority for the meaning of `a_c` within the selected complete
+STDO cut. A consumer does not need an implicit STDO representation, GTL
+carrier, or downstream implementation to interpret the calculus.
+
+This standard introduces the generic calculus identities `F_D`, `F_P`, and
+`F_H`. It does not import those identities from an equal-spelled graph,
+runtime, ODD, or application shorthand. The predecessor clauses establish the
+substrate-neutral evaluation, probabilistic-processing, human-adjudication,
+authority, evidence, and refusal principles from which the generic definitions
+below are derived. Nominal equality with a predecessor or downstream shorthand
+creates no concept-identity, import, or equivalence relation.
+
+The relative links above identify derivation clause families in this authoring
+source. Issuance of an exact `AxiomaticCalculusBasis` resolves and records their
+absolute predecessor-cut semantic addresses under
+`derivation_basis.release_uri`. The mutable authoring links are not themselves
+the digest-bound derivation references.
+
+The derivation direction is one-way. A model of STDO under `a_c`, an encoded
+carrier, a proof tool, or a successful application cannot amend the source
+principles or this calculus.
+
+
+### AC-014 Judgment Separation
+
+A judgment points to an unchanged subject:
+
+```text
+Judgment = {
+  id,
+  kind,
+  subject,
+  subject_digest,
+  context,
+  owner,
+  scope,
+  basis,
+  evaluator,
+  authority,
+  decision,
+  evidence,
+  provenance,
+  decided_at
+}
+```
+
+Issuing a judgment does not transform, rewrite, reissue, or rename its subject.
+Promotion is an explicit relation between the unchanged subject and its
+admission or acceptance judgment.
+
+
+### AC-017 Interpretation Fidelity
+
+Every admitted model record maps to exact subject provenance or is explicitly
+identified as model-local content under competent authority. Every evaluated
+subject declaration has a retained, omitted, residual, inapplicable, or refused
+disposition. Interpretation cannot treat absence as immateriality without a
+recorded basis and authority.
+
+
+
+=== Immutable owner REFERENCE_FRAME_METHOD.md SHA256 6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7 ===
+## Reference Frame Laws
+
+### RF-001 Evaluation Relativity
+
+Every frame declares the evaluation family it supports. A frame with no
+declared evaluation family has no testable sufficiency boundary.
+
+### RF-002 Finite Attention
+
+An activated frame contains a finite attention surface that fits the selected
+actor's declared capability envelope. A frame that requires undeclared ambient
+memory, conversation history, or an effectively global workspace context is
+not reconstructable for that actor.
+
+### RF-003 Material Sufficiency
+
+Every known relation whose lawful change can alter the evaluation result,
+basis validity, evidence sufficiency, operation authority, or decision
+authority appears in the frame or enters through a declared authoritative
+input.
+
+Omitting a material relation makes the frame insufficient. The method does not
+require proving that no undiscovered material relation exists.
+
+### RF-004 Irrelevance Exclusion
+
+Relations that cannot affect the declared evaluation remain outside active
+attention unless they are required to establish irrelevance. A frame does not
+expand merely because adjacent workspace material exists.
+
+### RF-005 Exact Basis And Coordinates
+
+Every result binds its exact subject, basis, coordinates, and evidence scope.
+A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
+requires reactivation. Apparent equality does not substitute for declared
+coordinate equality.
+
+### RF-006 Authority Conservation
+
+A frame carries and applies admitted authority. It does not mint, widen,
+transfer, or reconstruct semantic, evaluation, operation, or decision authority
+from actor identity, available capability, evidence shape, implementation
+reachability, or frame selection.
+
+### RF-007 Semantic, Evidence, And Verdict Separation
+
+Semantic law defines what the evaluation means. Evidence supplies observations.
+The evaluator applies the declared relation. Where the evaluation performs a
+material operation, the existing operation owner supplies the exact grant.
+Decision authority disposes the result. A frame declaration keeps these roles
+distinguishable even when one actor lawfully performs several of them.
+
+### RF-008 Overlap Without Identity Collapse
+
+Frames may share entities, variables, evidence, or coordinates. Shared material
+does not establish identical meaning, basis, authority, or result. Every
+cross-frame equality or translation used by an evaluation is declared where it
+is needed.
+
+### RF-009 No Assumed Hierarchy
+
+Frames may relate through disjointness, overlap, refinement, restriction,
+translation, temporal succession, composition, or governance. Parent and child
+relations apply only where explicitly declared.
+
+Functional decomposition, authority precedence, frame configuration, subject
+topology, and evaluation dependency are distinct relation structures. A
+consumer may align them where the governed subject warrants it. It may not
+silently treat them as one hierarchy.
+
+### RF-010 Composition On Demand
+
+Using several frames does not require composing their internal manifolds.
+Composition law is required only when the governing evaluation combines their
+internal variables, transports evidence or values across them, or treats their
+operations as one material execution relation.
+
+Independently activated evaluations may instead return closed results to one
+declared conjunction or decision rule.
+
+### RF-011 Topology Mutation And Recharting
+
+An activated frame declares the topology changes capable of invalidating its
+coordinates or materiality judgment. A detected material topology mutation
+causes reevaluation, frame revision, or recharting before the previous result
+is reused.
+
+### RF-012 Closed Results
+
+Every evaluation returns a member of its declared result algebra. The baseline
+result family is:
+
+- `satisfied`: the declared predicate holds on the exact basis;
+- `falsified`: a declared counterexample defeats it;
+- `indeterminate`: available admissible evidence cannot decide it;
+- `out_of_frame`: the evaluation requires an undeclared material relation or
+  capability; or
+- `invalid_basis`: the subject or basis cannot support the evaluation.
+
+An externally owned compatible extension may refine this algebra while
+preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
+
+### RF-013 Reconstructable Activation
+
+A fresh competent actor inside the declared capability envelope can reconstruct
+the activated evaluation from the frame declaration, exact subject, basis, and
+admissible inputs without undocumented conversational or historical context.
+
+### RF-014 Capability Fit
+
+Frame adequacy includes actor usability. When the material manifold exceeds an
+actor's capability envelope, human authority may select another actor, refine
+the frame, sequence activations, or provide a lawful compression. The actor may
+not silently omit material relations to fit context.
+
+### RF-015 Residual Uncertainty
+
+Coverage and evaluation results retain known uncertainty. Unresolved relations,
+uncovered evaluations, contested evidence, and unknown capability remain
+explicit. Absence of a recorded counterexample is not evidence of universal
+completeness.
+
+### RF-016 Implementation Neutrality
+
+This method requires the declared relations and observable outcomes. It does
+not require a frame runtime, universal carrier, registry, controller, prompt
+format, repository layout, collaboration topology, worker count, or software
+framework.
+
+### RF-017 Proportional Compression
+
+A frame compresses accumulated practice when its declaration preserves the
+material distinctions and failure detections required by its evaluation family
+while fitting its capability envelope.
+
+Compression does not require a unique smallest frame. Intentional overlap is
+retained where it supplies independently activated evaluation, different
+capability fit, different evidence altitude, or useful fault detection. Frames
+are merged only when the merged frame preserves evaluation meaning, authority,
+capability fit, and proportional reasoning cost.
+
+### Engagement Atom And Semantic Prime
+
+A reference frame is atomic at engagement altitude: it is activated and
+evaluated as one bounded attention unit. Semantic irreducibility is a separate
+question. One frame may contain several semantic atoms, and one semantic atom
+may participate in several frames.
+
+Where an adopting method supplies a Prime or equivalent semantic-contraction
+law, that law governs the domain atom family. Frame-set contraction then asks a
+different question: whether two frame declarations support the same evaluation
+relation without material difference in evidence, authority, capability fit,
+evaluation or assurance independence, or failure detection. A frame set is not
+contracted into a disjoint minimum merely because its material variables
+overlap.
+
+---
+
+
+
+=== Immutable owner SPEC_METHOD.md SHA256 7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4 ===
+### Bounded-Context Semantic Resolution
+
+`SPEC_METHOD.md` owns this law in the semantic-resolution bounded context
+`urn:stdo:bounded-context:semantic-resolution` under the selected complete STDO
+basis. The glossary may index this identity but does not participate in its
+declaration.
+
+A **term** is a lexical label used in an occurrence, not a context-free concept
+identity. A **bounded context** is an explicitly identified semantic scope in
+which a governed vocabulary, concept set, and relation set are jointly
+interpretable under named authority. A **concept reference** is an exact,
+resolvable reference to a meaning owned by an authority under a selected basis;
+the reference locates that meaning but does not mint it or its authority.
+
+A bounded context exists only when an owning authority declares its stable
+identity, owner, selected basis, and governed semantic scope. A consuming
+standard may define a concept inside that context only through an explicit
+owner relation. A filename, heading, index row, glossary section, schema value,
+or bare URI cannot constitute the context.
+
+Every material term occurrence resolves under this **semantic address**:
+
+```text
+(term, bounded-context identity, owning authority, selected basis, governed scope)
+```
+
+Equal spelling, capitalization, shape, file location, directory nesting, actor,
+or implementation does not establish equal meaning, concept identity,
+equivalence, inheritance, or authority. Different spelling also does not prove
+different meaning. Those relations follow only from the applicable semantic
+address or an explicit authorized relation.
+
+Resolution proceeds in this order:
+
+1. identify the occurrence's governed scope and nearest explicit bounded-
+   context declaration;
+2. identify the exact selected basis and the authorities applicable to that
+   context and scope;
+3. collect context-local definitions and explicitly imported concept
+   references admitted by those authorities and that basis;
+4. apply every applicable owner-authorized override or disambiguation; and
+5. admit the occurrence only when exactly one concept remains.
+
+A document, section, schema field, operation, or other owning surface may
+declare a context for all subordinate occurrences, so uniquely resolved prose
+does not need to repeat a qualifier on every term. A repository, directory,
+filename, heading, glossary match, prompt, actor, or nearby definition does not
+declare a bounded context by accident.
+
+Zero applicable concepts is unresolved meaning. More than one is ambiguous
+meaning. Both fail closed at a material boundary: an agent, design, schema,
+implementation, test, translation, or reviewer must not select one by
+familiarity, frequency, recency, nominal match, or a context-free glossary
+fallback.
+
+`GLOSSARY_GUIDE.md` is a non-deciding locator index. Each record points to an
+exact source clause that declares the bounded context and owns the indexed
+concept. The glossary defines neither and cannot repair a missing declaration.
+An indexed concept is applicable only when the semantic address selects its
+owning clause or the target context explicitly imports it; appearance in the
+glossary creates no shared default.
+
+A cross-context relation is explicit and owner-authorized. Its carrier states:
+
+- exact source and target concept references and bounded-context identities;
+- whether the relation imports unchanged meaning, disambiguates a use,
+  translates directionally, including a specialization, or establishes the
+  stronger equivalence claim;
+- direction and any lawful inverse where material;
+- preserved meaning, changed meaning, loss, and refusal conditions;
+- source and target semantic owners without transferring either authority;
+- selected source and target bases, governed scope, and provenance; and
+- lifecycle and invalidation conditions.
+
+A **Semantic Import** adopts the cited meaning unchanged for its declared target
+scope. A **Semantic Translation** declares how meaning changes in one direction.
+**Semantic Equivalence** requires the governing authorities to establish the
+claimed equality; neither identical spelling nor two opposing translations
+proves it automatically. A **Semantic Disambiguation** selects one meaning for
+one scope and does not make competing concepts equal. No relation widens its
+source or target authority.
+
+A specialization is a directional translation whose target preserves the
+declared source meaning while narrowing its admissible instances or adding
+target-context constraints. It identifies the exact target concept, preserved
+and narrowed meaning, excluded source instances, and absence or law of any
+inverse. Calling a term a specialization without those coordinates establishes
+nothing.
+
+
+
+=== Immutable owner ODD_METHOD.md SHA256 b33dd5b868e66e27c583b3237e93421ab12d502b38368bf075973c1bf7faef2d ===
+### 11.5D Constructive Evaluation And Yield Loop
+
+Every ODD product over GTL/ABG must preserve one constructive evaluation loop
+from intent lineage and model synthesis through observation to next lawful
+action.
+
+This is the method-level homeostasis loop. The constitutional surface names the
+operative functions directly: `synthesize_model`, `eval_gap`, `evaluate_next`,
+and `evaluate_action`.
+
+The selected Product outcome under `STDO-UP-013` is external authority for this
+loop. Product models, gaps, assurance, ledgers, and projections may interpret
+that outcome but cannot author, select, or enlarge it. `evaluate_next` may
+select material work only within that outcome or an admitted bounded
+prerequisite or experiment. Graph or edge closure is evidence toward Product
+acceptance; it is not Product or release acceptance. When the selected outcome
+is accepted, an admitted prerequisite is discharged, an admitted experiment's
+stated decision is resolved, another admitted terminal condition is reached, or
+its governing basis or bound is exhausted, rejected, withdrawn, superseded,
+repriced away, or falsified, the loop selects no further material work without
+another admitted basis. A `reprice` disposition requests lawful constitutional
+re-entry; it does not perform the reprice or select the successor outcome.
+
+The loop is framework-independent. Product implementations may use different
+carrier names, but they must preserve this authority shape:
+
+```text
+selected Product outcome and admitted bounded-basis refs
+-> TargetObligationBinding
+
+IntentLineage
+-> ProductAssetModel
+-> ObservationSnapshot
+-> GapPressureRow
+-> TargetObligationBinding
+-> PriorityProjection
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> NextActionProjection
+```
+
+The objects have these method-level meanings:
+
+| Object | Definition | Authority |
+| --- | --- | --- |
+| `IntentLineage` | Admitted source intent and its lineage refs: human, imported source, prior product, intent engine, or prior synthesized construction intent. | ABG event-log truth over source intent. It seeds the product model and must not invent graph actions. |
+| `ProductAssetModel` | Desired and known typed asset model synthesized from intent lineage, prior model, and admitted product truth. | Product-owned model truth whose publication basis is carried by admitted events and product-owned projection refs. It is not runtime fact or action authority. |
+| `Worksite` | Current workspace, runtime archive, transform assets, product asset root, profile, and observed file or process state. | Observable substrate, not authority by itself. |
+| `RuntimeEventLog` | Append-only admitted runtime facts. | ABG runtime truth. |
+| `RuntimeProjection` | Replay-derived current runtime state over event log and execution basis. | ABG projection truth. |
+| `ObservationSnapshot` | Read-only view of runtime truth plus worksite facts relevant to construction. | ABG evaluator carrier with product domain rows. |
+| `GapPressureRow` | Typed pressure over missing, partial, blocked, waiting, or ambiguous assets and evidence. | Product domain meaning over admitted observation. |
+| `TargetObligationBinding` | Exact binding from gap pressure to the selected Product outcome, any admitted prerequisite or experiment basis, target assets, required roles, evidence refs, and admissible graph outcomes. | Product domain binding over GTL/ABG action authority. |
+| `ActionCatalog` | Published lawful graph actions: graph functions, vectors, targets, inputs, and eligible outcomes. | GTL/product publication consumed by ABG. |
+| `NextActionBasis` | Sum type naming why `evaluate_next` is being called: `initial_selection`, `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. `post_reprice` records a re-entry request and carries no action-selection authority. | Dispatch basis for next-action evaluation. It is not a separate controller. |
+| `PriorityProjection` | Deterministic ranking over bound lawful actions under visible policy. | ABG evaluator kernel plus product policy. |
+| `ConstructionIntent` | Admitted selected action for one bounded graph invocation, preserving the selected outcome or admitted bounded-basis refs carried by its target binding. | ABG admission and traversal authority. |
+| `AdmittedEvidence` | Admitted worker, process, product, execution, materialization, liveness, and postflight evidence. | ABG/product admission, not worker self-closure. |
+| `EdgeFulfillmentLedger` | Evidence and convergence carrier for one edge attempt or version. | Closure evidence truth. |
+| `EdgeClosureDecision` | Sum type over the ledger: close, yield, retry, repair, re-enter, reprice, block. | Closure decision truth. |
+| `NextActionProjection` | Read model that observes `NextActionBasis` plus current truth and selects a next graph action only when lawful. | ABG next-action evaluation projection with product policy. |
+
+The loop has one model synthesis function and three distinct evaluation
+functions. They may share underlying libraries, but they must not share
+authority:
+
+| Function | Inputs | Output | Boundary |
+| --- | --- | --- | --- |
+| `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, select work, invoke work, or close work. |
+| `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It does not choose work and does not close work. |
+| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It does not admit construction intent and does not evaluate the result of an action. |
+| `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
+
+The word `evaluator` is not sufficient by itself. A design, ticket, code module,
+or proof must name which function it is implementing or consuming:
+`synthesize_model`, `eval_gap`, `evaluate_next`, or `evaluate_action`.
+
+Intent has lineage through the loop. Bootstrap or external intent may come from a
+human, imported source, prior product, or intent engine. That intent seeds the
+product asset model used by `eval_gap`. Current construction intent is
+synthesized against that model and the observed gap, then admitted by a distinct
+admission step after `evaluate_next` selects a published graph action. Intent
+does not invent unpublished actions; gap-derived action selection provides the
+selected action basis for admitting current construction intent over an
+already-published graph function or vector. `ConstructionIntent` must cite the
+lineage, selected action, and `TargetObligationBinding` that preserve the exact
+selected Product outcome and any admitted bounded-basis refs.
+
+The loop is governed by these axioms:
+
+**A0. One Surface**
+
+There is one authoritative computational surface for traversal consequence:
+
+```text
+IntentLineage
+-> ProductAssetModel
+-> ObservationSnapshot
+-> GapPressureRow
+-> TargetObligationBinding
+-> PriorityProjection
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> NextActionProjection
+```
+
+No CLI branch, prompt prose, postflight string, gap-dossier action list, query
+projection, service method, or local operator summary may become a rival source
+of traversal truth.
+
+**A1. Worksite Is Observed, Not Trusted**
+
+The file system, process output, screen logs, worker artifacts, and product
+files are observations. They become authority only after admission into typed
+evidence and fold into ledger and decision truth.
+
+**A1a. Workspace-Ledger Governed Work Pair**
+
+The worksite/workspace and ledger form the governed work pair:
+
+```text
+W = mutable workspace under construction
+L = immutable governed ledger of work over W
+E = immutable event log / replay spine
+Ev = evaluator work over L
+```
+
+The workspace is where F_P construction occurs. The ledger is the immutable
+governed account of closure-relevant work over that workspace. The ledger is not
+a copy of the workspace; it is the admitted trace of callout basis, observed
+deltas, file refs, digests, execution evidence, obligations touched, claims
+made, evaluator inputs, evaluator outputs, and admission status.
+
+The loop is:
+
+```text
+F_P acts in W.
+Admission records governed facts in L.
+E orders and anchors L entries with predecessor refs.
+Ev evaluates a declared L snapshot, not ambient W.
+Ev output is itself F_P work and is admitted back into L/E.
+L/E constrain the next lawful F_P action in W.
+```
+
+The consistency rule is:
+
+```text
+W can change without being true.
+L can be true without being the whole W.
+Closure can only use W through L.
+Eval can only judge W through L.
+Eval only affects traversal after its own L/E admission.
+```
+
+Every closure-relevant F_P callout that does work needs ledger admission.
+Evaluator work is not outside F_P merely because it reads ledgers. Evaluator work
+is F_P work over governed ledger state, and its result must be admitted into the
+immutable ledger/event spine before it can affect closure, routing, or traversal.
+Corrections append or supersede ledger/event facts; they do not rewrite the
+governed history of work.
+
+**A1b. Ledger Is Governed Attention**
+
+A ledger is the system's governed attention over construction history.
+
+This is a structural analogy, not an implementation dependency on transformer
+attention. Model attention selects from context through learned weights. ODD
+ledger attention is typed, immutable, lineage-constrained, policy-bounded, and
+replayable.
+
+An evaluator may attend only to admitted ledger rows reachable through declared
+lineage, predecessor refs, target binding, policy, and the relevant event-log
+cursor. Workspace facts, worker prose, archives, summaries, or controller memory
+outside that reachable ledger set are not inside the evaluator's lawful
+attention surface.
+
+Lineage is therefore not only provenance bookkeeping. Lineage is the attention
+graph: it determines which evidence the evaluator may see, what must be ignored,
+and which predecessor chain makes the judgment reproducible.
+
+**A2. Exact Target Binding**
+
+Every constructive action must bind the current gap to exact target assets and
+obligations before invocation:
+
+```text
+selected Product outcome ref
++ optional admitted prerequisite or experiment basis ref
++ gap pressure + target assets + required roles + evidence refs
+-> TargetObligationBinding
+```
+
+A broad edge cannot satisfy a specific product or evidence gap unless the
+binding proves that edge is the lawful action for those exact assets.
+
+**A3. Published Action Law**
+
+`evaluate_next` may rank only published lawful actions from the action catalog.
+If the desired action is unpublished, the lawful result is a typed no-action
+disposition, not fallback to a broad executive graph or local script.
+
+**A4. Evaluate_Next Totality**
+
+`evaluate_next` must be total.
+
+If `NextActionBasis` is `initial_selection`, `evaluate_next` selects from the
+current model, current gap, target binding, catalog, and policy. If
+`NextActionBasis` is `post_yield_resume`, `evaluate_next` resumes or yields the
+same edge from replay-visible resume truth without classifying the action as
+failure. If `NextActionBasis` is `post_close_graph_continuation`,
+`evaluate_next` may select the next graph edge after the current edge is closed,
+or no action when the graph is complete. For `post_retry`, `post_repair`,
+`post_reenter`, and `post_block`:
+
+```text
+if higher-priority lawful action exists:
+  select it
+else if current graph edge remains lawful:
+  follow the graph
+else if authority is missing:
+  reprice or block
+else:
+  block with typed no-action disposition
+```
+
+For `post_reprice`, `evaluate_next` must return a typed no-action disposition
+while constitutional re-entry remains unresolved. The reprice decision cannot
+authorize a replacement action. Work may be evaluated again only after lawful
+re-entry separately admits an exact selected Product outcome or bounded basis
+and supplies it through a new `initial_selection` or basis-bearing resume.
+
+Default graph following is ordinary, but it is still an `evaluate_next`
+decision, not hidden sequential control.
+
+**A4a. Evaluation Function Separation**
+
+`synthesize_model`, `eval_gap`, `evaluate_next`, and `evaluate_action` are
+separate authority functions.
+
+`synthesize_model` may synthesize the current product asset model from
+event-log-backed intent lineage, prior model, and admitted product truth only.
+It must not observe the worksite, admit construction intent, invoke work, close
+work, or select next action.
+
+`eval_gap` may emit observation and gap pressure only. It must not admit
+construction intent, invoke work, close work, or select next action.
+
+`evaluate_action` may fold admitted action evidence into ledger and closure
+decision only. It must not select the next graph action.
+
+`evaluate_next` may bind target obligations, rank lawful published actions, and
+publish next-action projection. It must not admit construction intent or decide
+whether the prior action closed, yielded, failed, or requires repair except by
+consuming the admitted `EdgeClosureDecision`.
+
+Any module that lets one of these functions perform another function's authority
+creates a rival control surface and violates A0.
+
+**A5. F_P Freedom, F_D Authority**
+
+F_P may inspect, discover, reason, draft, transform, and propose within the
+bounded action. F_P must not close the edge, emit runtime events, mutate ledgers,
+or decide re-entry. F_D/ABG/product admission owns durable evidence and closure
+truth.
+
+**A6. Evidence Before Closure**
+
+No edge closes from raw artifact presence, raw worker report, raw process
+success, or CLI summary. Closure is a fold over admitted evidence:
+
+```text
+AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+```
+
+**A7. Ledger Is Evidence, Not Action Selector**
+
+`EdgeFulfillmentLedger` records evidence and convergence:
+
+```text
+counts
+obligation rows
+materialization refs
+liveness refs
+admission refs
+edge_converged
+```
+
+It does not select the next action. Action selection belongs to `evaluate_next`
+over `EdgeClosureDecision` plus fresh `eval_gap` truth.
+
+**A8. Closure Decision Is A Sum Type**
+
+The closure decision vocabulary is:
+
+```text
+close
+yield
+retry
+repair
+re-enter
+reprice
+block
+```
+
+Each disposition is replay-visible and must carry basis and reason refs
+sufficient to reproduce the decision.
+
+**A9. Yield Is Lawful Iterate**
+
+`yield` is the lawful iteration boundary:
+
+```text
+same edge or attempt remains lawful
+progress or waiting state is admitted
+resume basis is replay-visible
+control returns without failure classification
+```
+
+Yield is not retry. Yield is not block. Yield is not timeout. Yield is not a
+local CLI loop. It is the pressure-release state that lets long-running,
+bounded, or partially productive work return control without losing the current
+edge.
+
+**A10. Liveness Does Not Close Semantic Truth**
+
+Liveness observes activity, inactivity, process state, and interruption. It can
+support yield or liveness interruption. It cannot by itself declare semantic
+failure, semantic closure, or requirement non-satisfaction.
+
+**A11. Re-Entry Is Graph Law**
+
+Repair and re-entry are graph actions selected by `evaluate_next` from admitted
+closure truth and published action authority. They are not local retry branches
+over strings.
+
+`evaluate_action` may emit `repair` or `re-enter` as a closure disposition.
+`evaluate_next` selects which published graph action realizes that repair or
+re-entry. Disposition is conceptual; selection is invocational.
+
+**A12. Public Query Is A Read-Only Evaluation View**
+
+A public query or gaps view may render read-only outputs from `eval_gap`,
+`evaluate_action`, and `evaluate_next`: gap pressure, closure decision, and
+next-action projection. It must not append events, invoke workers, admit intent,
+run `evaluate_action`, or choose traversal by itself.
+
+**A13. Replayability**
+
+Every closure decision and next-action selection must be reproducible from:
+
+```text
+RuntimeEventLog
++ execution basis
++ ABG event-log-backed IntentLineage
++ ProductAssetModel publication basis and its event refs
++ selected Product outcome identity and admitted bounded-basis refs
++ GapPressureRow
++ TargetObligationBinding
++ ActionCatalog
++ admitted evidence
++ EdgeFulfillmentLedger
++ EdgeClosureDecision
++ NextActionBasis
++ visible policy refs
+```
+
+If replay cannot reproduce the decision, the implementation has created hidden
+state.
+
+**A13a. Causal Chain Integrity**
+
+Each governing admitted or replay-derived carrier and projection in the loop
+must reference its causal predecessor refs:
+
+```text
+selected Product outcome and admitted bounded-basis refs
+-> TargetObligationBinding
+
+IntentLineage
+-> ProductAssetModel
+-> GapPressureRow
+-> TargetObligationBinding
+-> PriorityProjection
+-> NextActionProjection (selected_action)
+-> ConstructionIntent
+-> AdmittedEvidence
+-> EdgeFulfillmentLedger
+-> EdgeClosureDecision
+-> NextActionBasis
+-> NextActionProjection (next)
+```
+
+The target binding must be reachable from the exact selected Product outcome
+and any admitted bounded-basis refs. The first `NextActionProjection` in the
+chain carries the selected action that admits `ConstructionIntent`, which
+preserves those authority refs. The second `NextActionProjection` is the
+post-action projection produced from `NextActionBasis` plus fresh `eval_gap`
+truth. Both must be reachable from their predecessor refs.
+
+A13 requires that the decision can be reproduced from the inputs. A13a
+requires that each governing carrier or projection carry the predecessor refs
+that make reproduction reachable without external joins. A broken predecessor
+chain is non-replayable at the carrier level and therefore fails A13.
+
+**A14. Recursive Published Refinement**
+
+The homeostasis loop recurses over published refinement.
+
+If a graph function refines an outer vector into published inner vectors, each
+inner vector boundary obeys `synthesize_model`, `eval_gap`, `evaluate_next`, and
+`evaluate_action` with its own visible model, gap, binding, action, evidence,
+ledger, closure, and next-action projection.
+
+If the inner realization is intentionally opaque, it is ordinary implementation
+inside one bounded action. It may use local control flow to compute the action's
+internal result, but it must not publish, dispatch, retry, repair, re-enter, or
+close graph work as a hidden traversal controller. Once a refinement is
+published as graph structure, it is governed by the loop recursively.
+
+**A15. Method Ownership**
+
+ABG owns runtime truth, event replay, graph-call lifecycle, actor/process
+supervision, continuation, and re-entry mechanics. The product owns domain asset
+meaning, graph-function catalog meaning, gap interpretation, and priority
+policy. Design Module Method governs realization modules inside that split; it
+must not fragment `eval_gap`, `evaluate_next`, or `evaluate_action` into
+module-local decision authorities.
+
+**A16. Constitutional Override**
+
+For any ticket, design, code module, or proof that touches `synthesize_model`,
+`eval_gap`, `evaluate_next`, `evaluate_action`, traversal, gap evaluation,
+action selection, construction intent, worker invocation, evidence admission,
+fulfillment, liveness, closure, re-entry, public query, or live proof, the
+causally applicable members of this axiom set and the constitutional equation
+are the controlling acceptance constraints for the selected Product outcome
+and affected published boundary. Unchanged accepted relations cite their
+accepted basis rather than being re-proven. The axiom family does not authorize
+horizontal realization growth, create Product work, or widen the selected
+outcome.
+
+Ticket-local closure wording, test names, source-grep checks, compact CLI
+summaries, or implementation notes cannot weaken the constitutional loop. If a
+ticket appears complete by its local checklist but leaves a rival traversal
+consequence path, the ticket is not constitutionally complete. The lawful
+result is to request lawful re-entry, keep the gap as a closure blocker, or
+admit separately bounded paydown under an independently selected Product
+outcome or prerequisite basis.
+
+The following artifacts may provide evidence, diagnostics, or read-model
+context only. They must not independently close an edge, select a next action,
+or route retry, repair, or re-entry:
+
+```text
+gap dossier
+postflight report
+assurance report
+materialization manifest
+runtime liveness projection
+run summary
+worker prose
+screen or PTY transcript
+prompt package
+harness target argument
+source-grep test
+CLI branch or compact output
+public query or gaps view
+service method output
+```
+
+If any of those artifacts conflict with the admitted `EdgeFulfillmentLedger`,
+`EdgeClosureDecision`, or `NextActionProjection`, the ledger, decision, and
+projection chain wins. If that chain is absent, the edge has not
+constitutionally closed and the next action has not been constitutionally
+selected.
+
+The constitutional equation is:
+
+```text
+let U = (selected_product_outcome_ref, optional_admitted_bounded_basis_ref)
+let L = project_intent_lineage_from_event_log(source_intent_refs, prior_intent_refs)
+let M0 = synthesize_model(L, prior_model, admitted_product_truth)
+let G0 = eval_gap(M0, RuntimeEventLog, RuntimeProjection, Worksite)
+let O = G0.observation
+let B0 = bind(U, G0.pressures, ActionCatalog, target obligations)
+let Q0 = initial_selection(L, M0)
+let N0 = evaluate_next(Q0, G0, B0, ActionCatalog, Policy)
+let I = admit_construction_intent(L, B0, N0.selected_action, N0.next_action_projection)
+let E = admit_evidence(invoke(I))
+let A = evaluate_action(I, E, B0, Policy)
+let M1 = synthesize_model(L, M0, admitted_product_truth)
+let G1 = eval_gap(M1, RuntimeEventLog, RuntimeProjection, Worksite)
+let B1 = bind(U, G1.pressures, ActionCatalog, target obligations)
+let Q1 = next_action_basis_from(A.decision)
+let N1 = evaluate_next(Q1, G1, B1, ActionCatalog, Policy)
+
+return N1
+```
+
+Where:
+
+```text
+A.ledger = EdgeFulfillmentLedger
+A.decision = EdgeClosureDecision
+A.decision.disposition in {close, yield, retry, repair, re-enter, reprice, block}
+Q0.kind = initial_selection
+Q1.kind in {
+  post_yield_resume,
+  post_close_graph_continuation,
+  post_retry,
+  post_repair,
+  post_reenter,
+  post_reprice,
+  post_block
+}
+Q1.kind = post_reprice and no separately admitted constitutional basis
+  => N1 = typed no-action pending re-entry
+```
+
+The implementation is correct only when the next work decision is derived from
+that equation, `U` remains causally reachable through the target binding and
+construction intent, and no other path can decide what work happens next.
+
+
+
+=== Immutable owner UX_METHOD.md SHA256 a7cca45d6064d7fc864edd86e3913c9462cfe2a52ae3d1519c6a031713dccae7 ===
+### 1A. Constitutional Authority Rule
+
+When a product, ticket, design module, or review adopts this method for a UX
+surface, `UX_METHOD.md` is the sole UX realization authority for that surface.
+
+Project-local ADRs may choose the stack. They may not weaken the process model.
+
+Existing code, component-library convention, screenshots, comments, design
+history, prototype behavior, and generated artifacts are evidence only. They do
+not override this method.
+
+If this method appears ambiguous in a concrete case, the surface fails closed:
+the work must either satisfy the stricter interpretation, reprice through the
+governing constitutional method, or record a scoped exemption in the design
+module before implementation proceeds.
+
+---
+
+
+## 2. Method Role
+
+`SPEC_METHOD.md` defines constitutional process and lawful re-entry.
+
+`ODD_METHOD.md` defines graph-native constructive carrier law.
+
+`DESIGN_MODULE_METHOD.md` defines deterministic module-level realization discipline.
+
+`UX_METHOD.md` refines `DESIGN_MODULE_METHOD.md` with the additional rules required when a module realizes a UX surface — render purity, state-transition algebra, effect-membrane discipline, and accessibility minimums — under the Elm Architecture process model.
+
+`UX_METHOD.md` does not duplicate `DESIGN_MODULE_METHOD.md`. Where the parent method already governs (immutability, totality, effect-edge discipline, no-semantic-center, coupling), `UX_METHOD.md` cites and extends it. Where UX has concerns the parent does not address (render lifecycle, browser events, layout, accessibility), `UX_METHOD.md` is authoritative.
+
+---
+
+
+
+=== Immutable discovery/standing owner README ===
+# Standards Library
+
+This tree authors the normative shared specification methodology. One complete
+immutable released RC cut of this tree is the constitutional member set of the
+selectable STDO Product; the release may also carry subordinate executable and
+interaction tooling:
+
+- constitutional method surfaces such as `REFERENCE_FRAME_METHOD.md`,
+  `SPEC_METHOD.md`, `ODD_METHOD.md`, `IDENTITY_METHOD.md`, and
+  `WORLD_MODEL_METHOD.md`
+- the fundamental carrier-neutral `AXIOMATIC_CALCULUS.md`, whose `a_c` theory
+  remains separate from interpreted subject models and carrier encodings
+- the application-neutral `TRAVERSAL_OCCURRENCE_PROFILE.md`, which instantiates
+  one closed model-family signature under an exact `a_c` basis without changing
+  the calculus or selecting a consumer; adoption remains optional;
+- derived application profiles such as `STDO_REFERENCE_FRAME_BASELINE.md`
+- companion governance and operating surfaces such as `POSTING_GUIDE.md`,
+  `WRITING_GUIDE.md`, `RELEASE_METHOD.md`, `TICKET_METHOD.md`, and
+  `DESIGN_MODULE_METHOD.md`
+- the non-deciding semantic locator index `GLOSSARY_GUIDE.md`, whose rows point
+  to context-declaring owning clauses and never define a shared default
+- source-maintained compressed read models under `authority_compressions/` for
+  prompt-construction installs that need compact shared-method authority
+- normative interoperability schemas under `schemas/`, including the
+  layout-neutral STDO Product Definition Overlay and deterministic installed-
+  release manifest
+- starter templates under `templates/`, including the single per-product
+  `PRODUCT_DEFINITION_TEMPLATE.json`, project specification templates, and
+  `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`, plus agent bootstrap templates
+  such as `CLAUDE_TEMPLATE.md` and `AGENTS_TEMPLATE.md`
+
+The STDO toolchain manager installs complete immutable cuts once in a shared
+versioned store and resolves logical release URIs without putting machine-local
+paths in Product Definitions. Project-local copies remain possible when
+explicitly bound and verified, but are not the default. Installed bytes derive
+authority from the exact RC cut, Product Definition basis URI, manifest digest,
+and member inventory. Neither mutable authoring head nor the moving version-line
+selector silently replaces that consumer basis.
+
+
+=== Frozen candidate FOUNDATIONS.md ===
+# STDO Foundations
+
+STDO specifies purposeful construction by actors with finite resources. A method
+claim is scoped to a purpose, interpreted subject, governing basis, actor and
+evidence. These foundations organise the method. The explanatory direction abstracts
+recurring relations from the detailed owners, then maps instances back to those
+exact contracts. It creates no normative hierarchy, derivation provenance or
+constitutional specialization relation. [Spec Method](SPEC_METHOD.md)
+owns constitutional construction and [Frame Method](REFERENCE_FRAME_METHOD.md)
+owns material evaluation context; explanatory consolidation preserves their
+source-owned determinations.
+
+## Premises and standing
+
+An actor has finite attention, context, time, storage and capability. This is a
+resource premise. It does not choose an outcome, confer authority, identify an
+object or prove compatible composition. Those commitments require their own
+premises.
+
+A selected purpose U_foundation supplies an adequacy predicate and reserved value choices.
+An object O_subject supplies a scoped identity, boundary, current state and material
+relations. An interpretation context kappa_interpretation determines the meaning available to
+a consumer. A governing specification Sigma_contract declares obligations and admissible
+variation. A grant bounds who may act and decide. Observations and arguments
+support claims only on their declared subject and basis.
+
+The declared bounded context is `urn:stdo:bounded-context:foundations`.
+Its owner is the STDO Specification Methodology Product authority. Its selected
+basis is this member's definitions at the exact member digest together with the
+cited source-owned clauses, bound under the activation's governing cut. Its scope
+is the whole member's explanatory terms, symbols and explicitly scoped hypotheses,
+including the account in Orthogonal descriptions. The context identity is stable
+across location or permitted representation changes; a new digest still changes
+content and may change applicability.
+
+These symbols do not define similarly spelled symbols in method-identity,
+traversal, ticket, world-model or calculus contexts.
+[Bounded-context resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+governs cross-context use; no shared default interpretation is inferred.
+
+These premises explain how the source-owned obligations fit together: preserve
+the selected outcome and constraints, supply material context, conserve identity
+and authority, and report supported outcomes. This is an explanatory account,
+not an entailment proof or replacement derivation basis for those laws. Finite
+capacity alone does not select the other premises or confer authority.
+
+## Interpretation and representation
+
+A representation is an encoding. An interpretation relates that encoding to
+meaning under a declared context. Equal encodings can have different meanings;
+different encodings can represent the same scoped meaning. A parser, structural
+validator or successful join does not establish interpretation fidelity.
+
+An operational algorithm can make an interpretation testable. Universal claims
+that every meaning has an algorithmic encoding require a defined domain,
+adequacy relation and argument; they remain hypotheses outside that domain.
+Within an adopted a_c interpretation, the
+[calculus fidelity law](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+owns that calculus-specific obligation. In reference-frame evaluation,
+[RF-007](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)
+owns separation of semantics, evidence and verdict. These examples supply no
+universal authority for interpretations outside their declared domains. Loss or abstraction is admissible only when the governing contract permits it
+and the required consumer distinctions remain recoverable.
+
+## Purpose and interfaces
+
+The [Product outcome law](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013)
+owns the requiring relation for Product-outcome-bearing work;
+[proportional method law](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+owns justification of method burden. The purpose owner fixes the observable adequate outcome. An interface exists
+because a transformation needs to acquire, convey, judge or effect a material
+relation. Its obligations derive from that relation and the outer contract.
+A convenient signature, existing function or local test cannot invent Product
+meaning. An obligation with no requiring purpose or invariant must be justified
+or removed by its owner.
+
+## Identity, state and evidence
+
+Identity distinguishes an object within a declared scope. Identity may survive
+a rename, relocation, representation change or allowed state transition.
+Content equality does not establish identity; unchanged identity does not
+establish current content. A digest binds bytes, not all semantic meaning or
+permission.
+
+[Identity Method](IDENTITY_METHOD.md) owns governed names and coordinate changes.
+Work state is the current subject under construction. An event, assessment or
+receipt is evidence of a scoped observation or judgment. Acceptance is an owner
+decision. None of these substitutes for another. Historical evidence remains
+historical when current premises change. Reuse requires supported applicability,
+including identity, basis, freshness and the predicate actually assessed.
+
+## Typed composition and conservation
+
+Relations compose only when their source and destination types, interpretation,
+identity, lifecycle, preconditions, authority and effects are compatible. A
+handoff conserves the material outer contract and original producer coordinates.
+It retains known failures and their citations, required uncovered coverage and
+uncertainty. Local success cannot erase a failed or missing material relation.
+
+[Bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+owns the design obligation. Conservation concerns recoverable meaning, not copying bodies. A reference is
+sufficient when its authentic owner, exact selector, availability and consumer
+resolution preserve the required relation. A digest of unavailable material
+does not supply context. Shared machinery may serve several instances while
+their semantic owners, responsibility and independence remain distinct.
+
+## Finite capacity and total handling
+
+The [frame laws](REFERENCE_FRAME_METHOD.md#reference-frame-laws) own material
+sufficiency and capability; the [totality rule](DESIGN_MODULE_METHOD.md#8-totality-rule)
+owns closed design handling. Each activation binds the actor and capability
+envelope materially needed by its claim. No universal numeric budget, resource
+ledger or measurement gate follows.
+Before acting, establish sufficient material context and capability. If the
+coupled relation does not fit, the actor reports the misfit. The existing
+human or delegated configuration authority selects refinement, another actor,
+sequencing or lawful compression under RF-014. The actor acts on an already
+authorized response, requests the owning decision, or stops with an explicit
+unresolved result; capacity supplies no configuration grant. Never replace a difficult
+required relation with an easier claim merely to report success.
+
+A total control function has a defined response for every input in its declared
+control domain, including unknown external conditions. It need not solve every
+world state or guarantee termination of every problem. Deterministic functions
+can have a small closed state machine; probabilistic workers can explore more
+outcomes while an enclosing finite control algebra handles failure, incomplete
+work, refusal, recovery and exhausted authority truthfully.
+
+Process resumption is another iteration over the current work state under
+[agentic construction law](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). Observe the workspace
+and affected dependencies, retain applicable progress, then choose a permitted
+action. This does not imply every side effect is idempotent. An uncertain effect
+must be observed, reconciled or returned unresolved before any repetition that
+could duplicate it. General logging supplies observability and audit and may support reconstruction.
+An adopted domain may assign stronger standing: ODD owns RuntimeEventLog as
+runtime truth and its admitted ledger/evidence relations. Those duties remain
+within ODD scope. Reloading all history is not a generic method requirement.
+
+## Judgment and authority
+
+The [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+owns authority conservation for frame evaluation. Within a_c,
+[AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
+judgment separation. Where the construction engagement profile is selected,
+[the Baseline](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
+owns its exact Reviewer/Executive application of the detailed laws. Other
+domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
+have distinct standing. A judgment binds a predicate, exact subject, basis,
+evidence, assessor and any required independence. An authority grant permits
+specified operations or decisions. Neither evidence shape nor actor capability
+mints a grant. In the selected construction engagement, a Reviewer judges and a decision
+owner disposes under its existing grant. Domain control such as ODD next-action
+selection remains with its own named function; the explanation appoints none.
+
+Unknown applicability, missing context, incompatible basis and failed predicates
+remain observable. Severity grades the supported consequence if a finding manifests. Priority,
+disposition, selected action and promotion effect remain distinct; their
+assignment follows the applicable mandate. The semantic result remains separate from the authoritative construction
+disposition to repair, re-enter, reject or accept.
+
+## Orthogonal descriptions
+
+Keep three accounts distinct. An algorithmic account specifies the selected
+transformation. An informational account explains interpreted distinctions and
+their preservation. A computational account realizes the operation over a
+hardware and I/O architecture, with material resource costs. They are
+simultaneous descriptions, not successive SDLC stages.
+
+To assert a category, specify objects, typed arrows, identities and associative
+composition. To assert a functor, show identity and composition preservation.
+For a proposed categorical model, A names the algorithmic account, I the
+interpreted informational account, and C_H the computational realization on a
+declared architecture H. They name categories only after the required objects,
+arrows and laws have been supplied. For a proposed span A -> I and A -> C_H,
+conformance to Sigma_contract, semantic
+equivalence and computational equivalence remain different claims. Categorical
+equivalence additionally requires the appropriate quasi-inverse and natural
+isomorphisms on a stated domain; an analogy or matching result is insufficient.
+
+State sufficiency for a selected decision, statistical Markov properties,
+conditional independence, a mathematical Markov category and a runtime monad
+are separate claims. The method neither asserts nor rejects them universally.
+Their domains, laws and falsifiers must be supplied before using them as proof.
+
+## Canonical transformations
+
+The [transformation library](TRANSFORMATION_LIBRARY.md) expresses Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose. Instances bind contracts and owners;
+they are not six compulsory stages or six runtime APIs. The detailed method
+members determine their domain contracts, which the library describes through
+shared families; no authority derives from that description. A new primitive needs a material distinction the existing algebra
+cannot preserve.
+
+## Construction and use
+
+The corpus may exceed one actor's capacity. An activation consumes a sufficient
+projected reference frame and exact subject, with acquisition paths for required
+material. The projection has declared fidelity and scope; it is not a rival
+source of authority. Independent evaluation may require overlapping context at
+a different capability or evidence altitude.
+
+Product acceptance, universal mathematical truth, operational efficiency and
+release each need their own evidence and authority. Foundational explanation
+does not transfer authority from a named detailed method owner.
+
+
+=== Frozen candidate TRANSFORMATION_LIBRARY.md ===
+# Transformation Library
+
+An instance is bound by purpose, exact subject and state, interpretation,
+governing basis, actor capability, inputs, required constraints, permitted
+effects, output predicate, failures and consumer. This is a logical contract,
+not a mandatory record schema. A sufficient existing carrier can express it.
+
+These are shared explanatory families. [Spec Method](SPEC_METHOD.md) owns
+construction and outcome law; [Frame Method](REFERENCE_FRAME_METHOD.md) owns
+reference-frame evaluation and composition. The calculus and domain members
+retain their own composition and judgment laws. Domain members determine their admitted outcome and
+disposition sets. The library does not supersede those meanings.
+
+## Bind
+
+Recover the current purpose, subject identity, governing specification, role,
+authority, state and required relations. Conflicting, missing or stale bindings
+are explicit results. A name, path, cached result or available tool is no grant.
+
+## Acquire
+
+Resolve enough authentic material for the selected operation or evaluation.
+Declare completeness, freshness, coupled invariants and interpretation. Resolve
+references when their bodies are needed. Unavailable evidence, insufficient
+context or capability returns pressure for refinement, support, re-entry or a
+truthful stop. Acquisition cannot silently drop a governing obligation.
+
+## Transform
+
+Construct output or perform effects within the bound contract. Preserve the
+original producer, material inputs and observed effects. Return the instance-owned outcome. A selected Baseline WorkerResult instance
+uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
+retains M_b_prime*/hold/gap/refusal. These are domain examples, not a common
+mandatory enum. Observe uncertain external effects
+before repeating them. The worker's internal search is its HOW; it cannot widen
+the outer outcome or effect grant.
+
+## Evaluate
+
+Judge a declared predicate on an exact subject using sufficient admissible
+evidence. For a reference-frame evaluation, return satisfied, falsified,
+indeterminate, out_of_frame or invalid_basis with original citations and residual
+coverage. Other judgment domains retain their admitted result algebras. Where required,
+the assessor is independent of authorship. A judgment supplies no repair,
+acceptance or next-action authority.
+
+For an UP-020 assessment retain the assessor-disposition field's
+evidence classification alongside the predicate result. It can describe that
+the cone is preserved, a local realization is defective, an owning relation
+needs re-entry or a competing truth path violates the basis. This is assessment
+evidence; the decision owner alone performs the authoritative disposition.
+
+## Conjoin
+
+Combine only compatible, authenticated results on a declared common outcome.
+Retain each applicable known failure, its producer and citations. Retain required
+uncovered coverage separately. For an instance whose admission contract declares
+planned assessment slots, authenticate each planned slot; an omitted planned
+judgment is handled by that owner's declared admission/result rule; no generic
+falsification or rejection is inferred from absence alone. An authenticated set
+can still leave a different required responsibility uncovered. Satisfaction requires
+every applicable material predicate and seam to be supported. An incompatible
+basis or unknown applicability prevents a wider satisfied claim.
+
+## Dispose
+
+The decision owner consumes exact closed work and evaluation results with the
+current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
+or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action or stop under the instance's
+permitted outcomes. Domain-specific yield remains with its declared owner. It cannot change upstream meaning or take a reserved owner decision.
+Accept binds an exact checkpoint; it does not imply release. A Product-outcome
+acceptance interval is separately governed by
+[UP-013](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
+
+Other instances retain their own result domains. [Ticket Method](TICKET_METHOD.md)
+owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+owns conserved/superseded/intentionally removed/not applicable. An authorized
+Writer may record condition-based closure when that owning contract permits it.
+Sharing Dispose machinery changes none of those grants or classifications.
+
+Accept requires closure of the declared cone and preservation of every affected
+governing relation. Local repair applies when realization or proof is defective
+and the governing relation remains coherent. Re-entry applies when Product,
+requirement, identity, lifecycle, authority, public contract or accepted design
+must change. Reject applies to a violated governing relation or an undisposed
+competing truth path. These conditions preserve the evidence classification
+without transferring decision authority to an assessor.
+
+## Composition law
+
+[Transformation admission](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+and [bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+own design composition; [Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction)
+owns frame conjunction, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+owns its typed traversal composition. The account below preserves each owning
+contract's restrictions; an explicit translation is lawful only where that
+contract admits it.
+
+For T: X -> Y and S: Y -> Z, S after T is admitted only when carried meaning,
+identity, basis, lifecycle, effects and authority match or have a lawful explicit
+translation. Composition preserves the outer predicate and material invariant
+set. A shared helper may implement several instances; differing semantic owners
+remain parameters or distinct contracts. Independent judgment cannot be
+compressed into author self-assessment.
+
+An identity transformation preserves the selected subject and interpretation;
+associative regrouping is valid only when it preserves observable effects,
+failure, material context and decision boundaries. This states a bounded
+composition obligation, not a universal category theorem for arbitrary software.
+
+## Recovery law
+
+[UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) owns the
+construction, progress, checkpoint and proof determinations summarized here.
+After interruption, bind the same work identity to its observed current state.
+Reassess only materially affected premises and retain applicable work. Reconstruct
+needed authority and observations from their declared owners, not private memory.
+Uncertainty about effects, freshness or evidence remains explicit. Rejected or
+superseded construction is churn. Repeating an unchanged failed
+relation without a supported causal change is a prohibited retry practice;
+it is not the definition of all churn.
+
+Accepted material movement toward the selected Product is progress. Prerequisite
+work names the Product obligation it enables. Preservation and repeated proof
+are evidence, not new Product progress. Discovered distance revises the forecast;
+it is not negative progress. File, event, commit and token volume do not measure
+progress. A proposed construction restart identifies why repair is insufficient, what
+survives and which causal assumptions change under UP-020. This is distinct from
+process resumption over retained current work. Deletion, archival, quarantine
+and salvage mechanics remain consumer-owned under UP-013; this summary imposes
+no additional discard law. Each actual operation still needs its existing grant.
+
+Use the cheapest focused proof that can falsify the active relation. Whole-
+candidate qualification belongs at a declared boundary unless affected risk
+requires it earlier. When reconstructability matters, destroy or exclude the
+incidental process state and compare reconstructed semantic outcomes; a same-
+process check cannot prove durable authority.
+
+## Cost and contraction
+
+[Method proportionality](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
+is ambiguity removed relative to effective reasoning complexity; raw counts alone
+cannot establish it. For a computational or handoff cost claim, select those
+measures material to that claim. Possible measures include transferred/acquired
+bytes, attention, I/O, CPU, addressable memory, critical-path elapsed time,
+aggregate work or displaced human assurance. This is an illustrative choice,
+not an all-fields obligation, universal quota or separate accounting carrier.
+
+A reference reduces storage only when its resolution preserves adequacy. A
+smaller document or faster local preparation does not prove whole-path
+improvement. Contract duplicated meaning and authority only while preserving
+required distinctions and independent evaluations.
+
+
+=== Frozen candidate README.md ===
+# Standards Library
+
+This directory contains the deciding methods, explanatory account and
+non-deciding views of the STDO Specification Methodology. The complete cut also includes its declared
+projections, schemas, templates, frames and interaction assets. A selectable STDO Product is one complete immutable released RC cut
+with exact identity, manifest and membership. Its subordinate executable and
+interaction tooling retain separately declared responsibilities.
+
+## Foundations and shared library
+
+[Foundations](FOUNDATIONS.md) states finite capacity, interpretation, purpose,
+identity, typed composition, total handling and separate judgment/authority.
+[Transformation Library](TRANSFORMATION_LIBRARY.md) supplies Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
+material contracts and owners; these are not compulsory phases or a runtime API.
+Responsibility views project selected material clauses:
+[work/recovery](frames/WORK_RECOVERY.md),
+[evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md),
+[constitutional derivation](frames/CONSTITUTIONAL_DERIVATION.md),
+[domain binding](frames/DOMAIN_BINDING.md), and
+[release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
+no view is sufficient for every task.
+
+## Method owners
+
+| Responsibility | Deciding text |
+|---|---|
+| Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
+| Context, evaluation and frame composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md) |
+| Operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
+| Constitutional WHAT and lawful construction | [Spec Method](SPEC_METHOD.md) |
+| Structural HOW, transformation admission and realization | [Design Module Method](DESIGN_MODULE_METHOD.md) |
+| Scoped names and exact identities | [Identity Method](IDENTITY_METHOD.md) |
+| Graph-native domain | [ODD Method](ODD_METHOD.md) |
+| Application-neutral traversal model family (adoption optional) | [Traversal Occurrence Profile](TRAVERSAL_OCCURRENCE_PROFILE.md) |
+| State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
+| UX surface realization | [UX Method](UX_METHOD.md) |
+| Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
+| Exact cuts, conservation, publication and adoption | [Release Method](RELEASE_METHOD.md) |
+| Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
+| Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
+
+The source-standing distinctions are retained: constitutional method surfaces
+include Spec, Frame, ODD, Identity and World Model; the carrier-neutral calculus
+and optional Traversal profile retain their own signatures; the Baseline is a
+derived application profile; Design, Ticket, Release, Posting and Writing are
+companion governance/operating surfaces; UX owns its adopted realization
+process; the Glossary is a non-deciding locator. Foundations and the library
+are explanatory organization and contract families under the Methodology
+Product authority; they preserve the detailed owning determinations.
+
+A derived profile retains its owning determinations under the
+[Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
+interpreted a_c subject models and separately owned mechanical encodings.
+Traversal adoption is optional and binds an exact signature and basis.
+
+## Distribution and entry
+
+[Compressions](authority_compressions/README.md) are digest-bound, non-deciding
+read models. Raw members retain deciding authority at all times; a sufficient
+current projection conveys their duties without acquiring authority, and stale
+or insufficient views require acquisition of their exact owners. [Templates](templates/README.md)
+provide starter realizations: a single per-Product Definition, project specification
+templates, a project frame basis and agent bootstrap templates. Normative
+interoperability schemas under `schemas/` define the layout-neutral Product
+Definition Overlay and deterministic installed-release manifest. Plugin interaction assets route work;
+they mint no authority or workflow engine.
+
+The toolchain installs a complete immutable cut in a shared versioned store and
+resolves logical release URIs without machine-local paths in Product Definitions.
+A local copy is operative only when explicitly bound and verified; it is not
+the default. An exact cut, Product Definition basis URI, manifest digest
+and member inventory establish consumer basis. A mutable source head or moving
+selector cannot replace it. Distribution artifact presence conveys no release
+or operation authority.
+
+Under [Frame Method sufficiency](REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency)
+and [irrelevance exclusion](REFERENCE_FRAME_METHOD.md#rf-004-irrelevance-exclusion),
+acquire the sufficient responsibility frame, exact subject and material
+dependencies for one action. The entire corpus is acquired only when material
+to the selected claim. The frame's result,
+required independent assessment and owner's disposition determine supported
+continuation. The projected frames are declared members of the complete
+documentary member set. Their source owners, exact bytes and fidelity remain
+required; a frame is not an independently selectable method version.
+
+
+=== Frozen candidate ODD_METHOD.md ===
+# ODD Method
+
+<!-- STDO3_PROFILE_BINDING_START -->
+## Foundation And Transformation Binding
+
+This member is the graph-native ODD constitutional method surface of STDO;
+its declared obligations apply in a Product-selected ODD scope.
+It maps [Foundations](FOUNDATIONS.md) and the
+[Transformation Library](TRANSFORMATION_LIBRARY.md). Selection of this method
+activates its declared ODD obligations in the consumer's governed scope;
+availability supplies no Product semantics, concrete runtime identity or grant.
+Its constitutional composition uses [Spec Method](SPEC_METHOD.md),
+[Design Module Method](DESIGN_MODULE_METHOD.md),
+[Reference Frame Method](REFERENCE_FRAME_METHOD.md),
+[Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md).
+[World Model Method](WORLD_MODEL_METHOD.md) and [UX Method](UX_METHOD.md)
+retain their separate applicability and semantic owners.
+
+The scoped identity and authority distinctions explained in Foundations and
+owned by the detailed method members are realized here through
+consumer-bound ODD, GTL and ABG capability roles, exact typed assets and published
+carriers. A method role does not select a package or transfer a concrete
+Product's meaning. A cumulative typed environment conserves more than the most
+recent result. Published refinement preserves the enclosing contract when
+folded back, and each actual traversal boundary retains its own evidence,
+lineage, failure and continuation law.
+
+| Shared transformation | ODD refinement and preserved distinction |
+|---|---|
+| Bind | Recover the selected Product outcome, any admitted bounded prerequisite or experiment, IntentLineage, exact target obligations, published action contract, execution basis and consumer-bound authorities. A target or controller label supplies no authority. |
+| Acquire | Observe the worksite, runtime facts and admitted source truth; retain current gap pressure, structural source coherence and lineage-reachable evidence. Observation, model synthesis and admitted evidence remain different relations. |
+| Transform | One published GraphFunction or lawful composition performs bounded construction under the admitted vector contract. The worker retains internal HOW, produces required evidence for owning native admission and returns control to the bound ABG authority. This row grants no runtime-event or ledger mutation. |
+| Evaluate | The exact §11.5D function table owns one synthesis and three evaluation functions: synthesize_model -> ProductAssetModel; eval_gap -> ObservationSnapshot + GapPressureRow; evaluate_action -> EdgeFulfillmentLedger + EdgeClosureDecision; evaluate_next -> PriorityProjection + NextActionProjection + selected_action, including the typed no-action result while post_reprice is unresolved. No name or partial output in this account replaces that table or confers Reviewer control. |
+| Conjoin | Compatible published refinements and cumulative environments preserve their outer contract, exact producer coordinates, admitted evidence, unresolved obligations and zoom-stable closure. A local green path does not decide enclosing acceptance. |
+| Dispose | evaluate_action folds admitted evidence into EdgeFulfillmentLedger and EdgeClosureDecision under F_D/ABG/product admission. Separately, evaluate_next consumes that admitted decision and fresh eval_gap truth to produce its exact next-action outputs; it cannot decide prior closure. ABG admission/traversal authority separately admits ConstructionIntent. A11's conceptual disposition versus invocational selection and the no-rival-control-path law remain operative; this row appoints no replacement owner. |
+
+These correspondences preserve this method's individual contracts and owners.
+They add no six-stage workflow, runtime API or categorical-equivalence claim.
+The IntentLineage-to-NextActionProjection loop applies within a selected ODD scope.
+
+
+
+=== Frozen candidate WORLD_MODEL_METHOD.md ===
+# World Model Method
+
+<!-- STDO3_PROFILE_BINDING_START -->
+## Foundation And Transformation Binding
+
+This member is the world-model constitutional method surface of STDO. It
+maps [Foundations](FOUNDATIONS.md) and the
+[Transformation Library](TRANSFORMATION_LIBRARY.md), with
+[Spec Method](SPEC_METHOD.md), [Identity Method](IDENTITY_METHOD.md),
+[Design Module Method](DESIGN_MODULE_METHOD.md),
+[Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md)
+as common surfaces under their own applicability conditions. These links create
+no new prerequisite; the theoretical Design Module relation below remains
+non-prerequisite. Where the consuming Product also
+selects graph-native realization, [ODD Method](ODD_METHOD.md) retains execution
+shape and traversal law while this member retains world-model meaning.
+Availability of either method leaves its adoption and operation authority with
+the declared owners.
+
+World-model scoped identity,
+interpretation and typed composition refine the shared foundation: source
+systems retain operational sovereignty; qualified claims enter an attribute
+ledger; immutable entity cuts publish bounded semantic understanding; treatments,
+covariance, adjoint interpretation, uncertainty and declared loss remain
+recoverable. Builder Project remains the directional specialization declared
+below, with no inverse or equivalence to every Source Project. Query,
+probabilistic overlays and compiled execution remain downstream under their own
+roles and authority.
+
+| Shared transformation | World-model refinement and preserved distinction |
+|---|---|
+| Bind | Establish the selected world-model scope, source authority, fully qualified concepts, recursive Product identities, Builder-Project specialization and publication/adoption basis. Identity, representation and current content retain separate meanings. |
+| Acquire | Observe the strongest available source evidence, trace concrete source surfaces, qualify claims under assurance and retain the attribute-ledger support, evidence limits and residual ambiguity required by the entity claim. Code availability is not a prerequisite. |
+| Transform | Construct bounded entity cuts, explicit treatments and immutable published artifacts from the qualified ledger; derive projections and compile accepted semantics where delivery requires execution. The semantic layer and source operational truth retain their separate owners. |
+| Evaluate | Apply the eight-surface entity-cut admissibility test and proportionate discrimination. In a declared representation space, verify an optional identity direction under held-out treatment and null-peer discrimination. Overlay-publication verification and the unclosed statistical promotion gate remain different predicates. |
+| Conjoin | Compose published domain artifacts without erasing local identity, basis, bounded-context authority, treatment meaning, declared loss or ambiguity. Geometric directions computed in different representation spaces do not compose. A changed space supersedes the prior overlay; generic translation vocabulary does not waive that rule. |
+| Dispose | Competent owners publish, supersede or retain unresolved claims under the declared assurance and publication law. Refit evidence or a changed representation space produces a new overlay; prior accepted ledger facts and published cuts retain their immutable history. |
+
+Markov-object and geometric-overlay claims retain the epistemic standing,
+empirical limits and promotion predicate stated in this method. An ordinary
+entity cut uses its own admissibility test. Held-out treatment verification and
+formal conditional-independence closure remain separate judgments with separate
+evidence. The pinned empirical companion supplies research evidence under its
+declared limits; the method's owning authority controls amendment.
+
+
+
+=== Frozen candidate UX_METHOD.md ===
+# UX Method
+
+<!-- STDO3_PROFILE_BINDING_START -->
+## Foundation And Transformation Binding
+
+This member owns the adopted UX realization process of STDO. It
+maps [Foundations](FOUNDATIONS.md), the
+[Transformation Library](TRANSFORMATION_LIBRARY.md) and
+[Design Module Method](DESIGN_MODULE_METHOD.md). Its own adoption, default
+coverage, scaffold and exemption clauses determine the covered surface. The
+common [Spec Method](SPEC_METHOD.md) and
+[Ticket Method](TICKET_METHOD.md) retain constitutional process and work
+lifecycle. [ODD Method](ODD_METHOD.md) and
+[World Model Method](WORLD_MODEL_METHOD.md) retain their separate selected
+carrier and domain meanings.
+
+The shared foundation's typed
+transformations and authority separation are realized by State, Msg, pure
+Update, pure View and Cmd/Sub interpreted at a declared effect membrane. The
+Elm process model remains constitutional within adoption, while language,
+framework and concrete stack choices remain in the project design. A
+product-truth-changing message resolves an admitted typed Product carrier;
+view-local ephemera retain their limited scope and unmount test.
+
+| Shared transformation | UX refinement and preserved distinction |
+|---|---|
+| Bind | Declare the covered surface, adopted method, State/Msg/Update/Cmd/Sub algebras, shared AssetSurface or equivalent typed contracts, runtime ownership, stack justification and any bounded exemption. |
+| Acquire | Derive State from the admitted typed contracts, import shared types and runtime-validate every untrusted or out-of-process payload before it enters UX state. Inputs to a View remain explicitly declared. |
+| Transform | Pure Update describes State transitions and Cmd values; pure View projects State. The declared runtime membrane interprets effects and returns success or failure Msg values, preserving deterministic replay correlations. |
+| Evaluate | Executable Msg replay checks initial and final State, ordered Cmd values and typed effect outcomes with injected deterministic values. Render/effect discipline, admitted carriers, accessibility and exemption predicates retain the exact closure rules below. |
+| Conjoin | The covered module satisfies applicable Design Module and UX law together. Shared front-end/back-end contracts, replay evidence and product-meaningful interaction families remain sufficient across the declared surface. |
+| Dispose | The sprint-close forensic walkthrough classifies findings under its complete six-class list below, including accepted. Existing competent owners act on those findings only under their own grants. Escrow defers selected local proof during iteration and retains method-closure obligations. |
+
+These correspondences preserve this method's process model and scoped authority.
+They supply no new UI stack mandate or six-stage UX workflow. UX commands do not
+acquire runtime continuation or product-truth authority merely by being emitted.
+
+
+
+=== Frozen candidate SPEC_METHOD.md ===
+# Spec-Driven Homeostatic Methodology
+
+This member owns its particular constitutional contracts.
+[Foundations](FOUNDATIONS.md) and the
+[Transformation Library](TRANSFORMATION_LIBRARY.md) organise recurring premises
+and responsibilities abstracted from the detailed owners. A selected purpose,
+interpreted subject, governing specification, sufficient evidence and actual
+owner grants supply the premises of the constitutional chain below. Finite
+capacity explains bounded work; it does not alone establish those premises or
+confer authority.
+
+Bind is refined here by Product-definition routing, semantic resolution and
+lawful intake. Acquire is refined by constitutional and execution sufficiency.
+Transform is refined by bounded construction, change classes and migration.
+Evaluate and Conjoin are refined by the evidence, assurance and consistency
+laws. Dispose is refined by owner decisions, exact checkpoints and lawful
+continuation. These associations explain the detailed laws; the transformations
+remain reusable relations, rather than compulsory workflow stages or runtime
+APIs. The following clauses retain their owners, predicates, permissions,
+refusals, lifecycle and invalidation conditions.
+
+The general method and conditionally applicable realization profiles retain
+their separate scopes. Graph-native meanings remain owned by `ODD_METHOD.md`;
+module realization remains owned by `DESIGN_MODULE_METHOD.md`. Each detailed
+relation remains owned by its declared standard. Cross-member references
+consume that owner without transferring authority.
+
+
+
+=== Frozen candidate AXIOMATIC_CALCULUS.md ===
+# The STDO Axiomatic Calculus for Governed Symbolic Systems
+
+## Position
+
+The **STDO Axiomatic Calculus for Governed Symbolic Systems**, written `a_c`,
+is STDO's domain-specific, carrier-neutral constitutional calculus for
+representing and relating governed symbolic systems.
+
+The [foundations](FOUNDATIONS.md) explain shared premises of
+interpretation, identity, typed composition, finite material context, evidence
+and authority. This member specifies the concrete calculus contract through the
+signature, records and AC laws below. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
+names recurring contract responsibilities; calculus applications express them
+through these exact records and laws. Its vocabulary does not replace AC-013's
+transformation contract or establish category-theoretic functor laws.
+
+Its stable concept identity is:
+
+```text
+urn:stdo:concept:axiomatic-calculus:a-c
+```
+
+This standard owns that concept in bounded context:
+
+```text
+urn:stdo:bounded-context:axiomatic-calculus
+```
+
+`a_c` is a separately identifiable calculus derived from STDO principles. It
+defines sorts, typed objects, relations, constraints, latitude, residual
+uncertainty, traversals, functor kinds, judgments, closure, projections,
+transformations, models, and validity laws. Those definitions do not depend on
+a derivation-source record layout, a selected subject interpretation, a
+particular carrier, a model provider, a runtime, or a repository topology.
+
+`a_c` makes no claim of universal applicability, logical completeness,
+consistency, decidability, soundness, or category-theoretic status except where
+an exact, separately identified proof establishes that claim for a declared
+fragment, model, or relation.
+
+STDO principles are the derivation provenance of the calculus. Application of
+the calculus to any exact subject is a separately owned downstream relation.
+Those relations are distinct:
+
+```text
+exact predecessor STDO principles ──derive──> a_c
+a_c + exact subject X              ──interpret──> a_c.X
+a_c.X + exact accepted semantic judgment J_X
+      + exact carrier C            ──encode─────> a_c.X.C
+```
+
+The calculus, an interpreted model, and an encoded carrier are distinct
+governed layers with separate content identities and proof boundaries. A layer
+becomes a released Product only through separately authorized Product
+acceptance and release. Neither interpretation nor encoding can redefine the
+calculus.
+
+
+
+=== Frozen candidate REFERENCE_FRAME_METHOD.md ===
+# Reference Frame Method
+
+## Canonical Compression
+
+A human or computational actor has finite context, finite attention, finite
+time, and bounded capability. A material workspace may contain more relevant
+truth, history, topology, authority, and evidence than one actor can evaluate
+at once.
+
+The Reference Frame Method makes that limit explicit:
+
+```text
+declared evaluation family
+  + exact workspace and topology basis
+  + finite material relations and coordinates
+  + applicable invariants and authorities
+  + admissible evidence and exclusions
+  + actor capability envelope
+  = activated reference frame
+  -> satisfied | falsified | indeterminate | out_of_frame | invalid_basis
+```
+
+A project engages a body of work through a declared frame set:
+
+```text
+workspace and governed outcome
+  + accumulated practice and historical failures
+  + available actor capabilities
+  + human judgment
+  -> declared frame set
+  -> bounded evaluations
+  -> conjunction or translation where required
+  -> coverage ledger and residual uncertainty
+  -> empirical frame-set revision
+```
+
+The reference frame is the atomic engagement unit. Frame-set selection,
+activation, evaluation, conjunction, translation, coverage, and revision are
+separate method functions. A frame does not need to contain a universal theory
+of its possible relationships before it can support a bounded evaluation.
+
+`Atomic engagement unit` names the unit that can be activated and evaluated as
+one bounded context. It does not assert that every relation inside the frame is
+one irreducible semantic atom. A frame may carry several semantic atoms and
+several owner relations without merging their meaning or authority.
+
+---
+
+## Position
+
+This method governs how finite actors construct and use bounded reasoning or
+execution contexts over a changing body of work. It applies to human work,
+agentic work, deterministic evaluation, probabilistic construction, assurance,
+and mixed work where the governing product or method permits them.
+
+The [foundations](FOUNDATIONS.md) explain the finite-actor premise and distinguish
+purpose, interpretation, identity, evidence and authority. This member owns the
+bounded frame declaration, activation, evaluation, result, coverage and revision
+relations. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
+organizes recurring contract responsibilities; the method functions below
+supply concrete instances while retaining their exact applicability, result algebras,
+owner boundaries and qualification obligations.
+
+This is an engagement meta-method. It does not define an application profile,
+role mapping, Product-owned frame-basis binding, domain Product, specification
+taxonomy, design ontology, runtime, workflow, adoption relation, or assurance
+implementation. External methods and Products may import or specialize these
+relations under their own authority. That external relation does not enter or
+amend the principles.
+
+`REFERENCE_FRAME_METHOD.md` owns the reference-frame-evaluation bounded context
+`urn:stdo:bounded-context:reference-frame-evaluation` under its exact
+publication basis. This standard owns only its frame declaration, activation,
+evaluation, basis, relation, result, coverage, revision, and qualification
+concepts. A same-spelled profile, Product, role, or runtime carrier is not
+imported by proximity or nominal match.
+
+The method is substrate-neutral. A reference frame may be represented in prose,
+structured data, a prompt, a design asset, a typed carrier, a runtime context,
+or another form selected by its consumer. No class, aggregate, actor,
+controller, service, registry, graph, or frame engine is required.
+
+---
+
+
+
+=== Frozen candidate RELEASE_METHOD.md ===
+# Release Method
+
+This member owns its release-specific identity, qualification, publication and selection contracts. [Foundations](FOUNDATIONS.md) and the [transformation library](TRANSFORMATION_LIBRARY.md) explain the recurring distinctions and Evaluate/Conjoin/Dispose families; this member does not own those shared families in other domains. Candidate preservation, acceptance, publication and consumer adoption remain distinct decisions. Its version/ref examples illustrate the declared release identities; each actual cut requires its own authorized exact binding.
+
+
+=== Frozen candidate GLOSSARY_GUIDE.md ===
+# Glossary Semantic Index
+
+This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. a glossary row is no new definition or default interpretation.
+
