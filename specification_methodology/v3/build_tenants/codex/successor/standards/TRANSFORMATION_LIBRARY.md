@@ -69,8 +69,9 @@ premise, basis or adoption condition reopens the affected argument before use.
 For one selected operation, let X and Y be its declared input and output
 domains, K its interpretation, P its required outcome predicate, I its material
 identity/state relations and G its actual effect or decision grant. These are
-parameters, not serialized fields or a universal schema. The instance owns its
-admitted outcome set, including how it represents unknown or refused handling.
+parameters, not serialized fields or a universal schema. The instance owns its original domain outcomes and their total refinement into
+[the core result algebra](FOUNDATIONS.md#result-algebra). Unknown judgment,
+non-performance and uncertain effects retain their separate coordinates.
 
 - F1 and F2 require P to be about the intended subject under K; satisfying a
   different predicate cannot establish that outcome.
@@ -83,7 +84,7 @@ admitted outcome set, including how it represents unknown or refused handling.
   evidence for P cannot supply G.
 
 An instance of Acquire returns support adequate for its selected predicate, or
-its admitted insufficient/unknown outcome; Transform preserves the material
+an indeterminate result with the unresolved support; Transform preserves the material
 relations of the selected X-to-Y contract; Evaluate judges P rather than granting
 effects; Conjoin uses the selected composite rule; Dispose chooses only from
 already permitted actions. Bind supplies their current instance coordinates.
@@ -101,8 +102,8 @@ premises; they do not follow from finite capacity alone.
 |---|---|---|
 | F1, F2; selected outcome and current subject | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
 | F2, F5; coupled material obligations and finite actor | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
-| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | Computed Classification And Treatment and Ticket condition-based reuse choose applicability, invalidation and the wider frontier when independence is unproved. Their concrete freshness rules are domain policy. |
-| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | Computed Classification And Treatment supplies the unknown-effect rule; the operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
+| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) and [Ticket reuse](TICKET_METHOD.md#work-carrier-to-execution-rule) bind applicability, invalidation and the wider frontier when dependency independence is unproved. Their concrete freshness rules are domain policy. |
+| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | [Workspace and context](FOUNDATIONS.md#workspace-and-context) owns the generic unknown-effect rule; [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) binds its Product context. The operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
 | F1, F4, F6; required results and current mandate | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
 
 The consequences are arguments about the stated premises, not proofs of every
@@ -151,7 +152,8 @@ selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
 summaries with observations. Measure context where the execution binding selects
 it, and assess actual adequacy separately. If required material does not fit,
-refine under the grant, acquire a capable actor or return the applicable core
+act on an already authorised refinement or reassignment, request the owning
+decision, or return the applicable core
 result with the unresolved relation. Capacity does not license omission.
 
 ## Transform
@@ -159,8 +161,7 @@ result with the unresolved relation. Capacity does not license omission.
 Construct output or perform effects within the bound contract. Preserve the
 original producer, material inputs and observed effects. Return the instance-owned outcome. A consumer-adopted, lawfully activated Baseline WorkerResult instance
 uses candidate_ready/refused/incomplete/re_entry_requested; an AC-013 instance
-retains M_b_prime*/hold/gap/refusal. These are original domain outcomes mapped under the core result contract. Observe uncertain external effects
-before repeating them. The worker's internal search is its HOW; it cannot widen
+retains M_b_prime*/hold/gap/refusal. These are original domain outcomes mapped under the core result contract. Apply the unknown-effect rule at [Workspace and context](FOUNDATIONS.md#workspace-and-context). The worker's internal search is its HOW; it cannot widen
 the outer outcome or effect grant.
 
 ## Evaluate
@@ -171,15 +172,14 @@ effect observations, citations and residual coverage. A domain's evaluation
 rule determines what evidence decides its predicate; it does not introduce a
 parallel result algebra. Required independent authorship remains part of that
 rule. Evaluation supplies no new operation or decision grant. A function may
-exercise decision authority already admitted by its own contract, while a
-Baseline Reviewer retains its evaluation-only grant.
+exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](STDO_REFERENCE_FRAME_BASELINE.md) retains the
+grant defined by that profile.
 
-For an UP-020 assessment retain the assessor-disposition field's
-evidence classification alongside the predicate result. It can describe that
-the cone is preserved, a local realization is defective, an owning relation
-needs re-entry, a governing relation is violated, or an undisposed competing truth
-path remains. This is assessment
-evidence; the actor carrying bound decision authority alone performs the authoritative disposition.
+For an UP-020 assessment, the original assessor classification is a
+reason-qualified outcome on the exact cone-preservation predicate. The
+[Spec disposition consumer](SPEC_METHOD.md#proportional-disposition) owns its
+mapping and conditions. The actor with bound decision authority separately
+returns the authorised disposition; the library supplies no second table.
 
 ## Conjoin
 
@@ -208,20 +208,17 @@ that contract's bound operation authority may record condition-based closure
 when that owning contract permits it.
 Sharing Dispose machinery changes none of those grants or classifications.
 
-Accept requires closure of the declared cone and preservation of every affected
-governing relation. Local repair applies when realization or proof is defective
-and the governing relation remains coherent. Re-entry applies when Product,
-requirement, identity, lifecycle, authority, public contract or accepted design
-must change. Reject applies to a violated governing relation or an undisposed
-competing truth path. These conditions preserve the evidence classification
-without transferring decision authority to an assessor.
+The [UP-020 disposition conditions](SPEC_METHOD.md#proportional-disposition)
+determine accept, local repair, re-entry and rejection for that contract. They
+are applied once at that owner; this library does not redefine them.
 
 ## Composition law
 
 [Transformation admission](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
 and [bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
-own design composition; [Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction)
-owns frame conjunction, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+own design composition; [Foundations](FOUNDATIONS.md#result-conjunction) owns result conjunction;
+[Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction) binds its
+application to declared frames, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
 owns its typed traversal composition. The account below preserves each owning
 contract's restrictions; an explicit translation is lawful only where that
 contract admits it.
@@ -255,7 +252,8 @@ their additional recovery duties. A failed relation needs a causal repair before
 retry. A process restart by itself is an acquisition event, not proof that a
 construction restart or workspace deletion is required.
 
-Use the cheapest focused proof capable of falsifying the affected relation.
+Select a proof adequate to falsify the affected relation and satisfying its
+required independence. Its cost selection follows [UP-014](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014).
 For a claim of continuity independent of private actor state, exclude that state
 and compare the reconstructed decision with current material reality. A
 same-context exercise cannot establish that claim.
@@ -263,8 +261,8 @@ same-context exercise cannot establish that claim.
 ## Cost and contraction
 
 [Method proportionality](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014)
-is ambiguity removed relative to effective reasoning complexity; raw counts alone
-cannot establish it. For a computational or handoff cost claim, select those
+owns the justification of method burden; apply its deciding definition rather
+than treating raw counts as proof of improvement. For a computational or handoff cost claim, select those
 measures material to that claim. Possible measures include transferred/acquired
 bytes, attention, I/O, CPU, addressable memory, critical-path elapsed time,
 aggregate work or displaced human assurance. This is an illustrative choice,

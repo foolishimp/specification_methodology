@@ -197,12 +197,9 @@ authorized response, requests the owning decision, or stops with an explicit
 unresolved result; capacity supplies no configuration grant. Never replace a difficult
 required relation with an easier claim merely to report success.
 
-A total control function has a defined response for every input in its declared
-control domain, including unknown external conditions. It need not solve every
-world state or guarantee termination of every problem. Deterministic functions
-can have a small closed state machine; probabilistic workers can explore more
-outcomes while an enclosing finite control algebra handles failure, incomplete
-work, refusal, recovery and exhausted authority truthfully.
+[Bounded construction](#bounded-construction) owns total control handling.
+The design totality rule refines that contract for its admitted control domain;
+it does not introduce another method result algebra.
 
 Process resumption applies [Workspace and context](#workspace-and-context).
 The Spec Method binds its product-specific triage and progress predicates;
@@ -300,19 +297,33 @@ The verdict has exactly these values:
 | `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
 | `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
 
-Performance is `performed` or `not_performed` for the named predicate, not
-the whole activation. A missing evaluation remains a missing required slot,
-recorded as `not_performed` in the enclosing coverage; it supplies no fabricated
-child result or assessor judgment. A performed but
-undecidable evaluation has `performed` with `indeterminate`. A failed
-admission can itself be evaluated while the downstream work remains
-`not_performed`; these are different predicates and different results.
+Performance concerns the named predicate and is `performed`, `not_performed`
+or `unconfirmed`. The legal pairs are:
+
+| Performance | Permitted verdicts | Meaning |
+|---|---|---|
+| `performed` | Any of the five verdicts | The named evaluation ran; scope or basis diagnosis can prevent a judgment of the subject property. |
+| `not_performed` | `indeterminate` only | Evidence establishes that the named evaluation did not run. |
+| `unconfirmed` | `indeterminate` only | Whether the named evaluation ran is not established. |
+
+A missing required judgment stays an absent coverage slot, with the known
+performance fact or its uncertainty; it is not a fabricated child result. A
+performed but undecidable evaluation differs from a known unperformed one and
+from unconfirmed execution. A failed admission check can be performed while
+downstream work is not performed. Every result projection preserves these
+coordinates and the original predicate; a verdict alone is an insufficient
+handoff where performance is material.
 
 An effect observation is `not_requested`, `not_started`, `completed`, `partial`
 or `unknown`. These values describe the selected effect and observation
-boundary, not the predicate verdict. `not_started` needs evidence that dispatch
-did not occur; `unknown` includes a lost acknowledgment after possible execution.
-An effect can be completed while the intended product outcome is falsified.
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`partial` means an observed completed part and an observed unexecuted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
 An empty local log or discarded context does not establish no effect. When no
 effect is part of the operation, `not_requested` states that scope.
 
@@ -320,8 +331,12 @@ A domain refinement preserves its qualified original outcome and supplies a
 total, reason-sensitive map into this record. If the original outcome is too
 coarse to determine a verdict, its required reason distinguishes the cases; a
 consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
-Missing required reason or evidence leaves the claimed predicate indeterminate
-or invalid on its actual basis. Domain meaning stays with its domain owner.
+A missing required reason makes that contribution inadmissible for its slot;
+retain its raw outcome and unresolved authentication. Its claimed predicate
+remains indeterminate until admissible evidence decides it. An independently
+established invalid basis instead yields invalid_basis for that diagnosis.
+Requested effects without sufficient observation are unknown, never defaulted
+to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
 No refinement turns failure, undecidability, non-performance or unknown effect
 completion into greater standing. A new result over a different predicate does
 not overwrite the earlier result.
@@ -330,9 +345,17 @@ Candidate availability, candidate fitness and authorised acceptance are three
 predicates. `candidate_ready` can satisfy availability while fitness remains
 falsified or unassessed. A lawful yield can satisfy the selected yielding
 contract while product completion remains unresolved. A decision result binds
-the mandate actually exercised; recording the decision is not its authority.
+the predicate “disposition D on subject S at basis B was made under mandate M
+by its bound authority”. A lawful rejection can satisfy that predicate while
+candidate fitness remains undecided. Recording the decision is not its authority.
 A not-applicable classification needs a supported applicability judgment; it is
 never a synonym for a missing evaluation.
+
+A stop reports the actual destination or task predicate through this record,
+with its reason, observed effects and outstanding obligations. Its verdict
+is indeterminate when the outcome remains undecided, falsified when admissible
+evidence defeats that predicate, or the established scope/basis diagnosis.
+Lawfulness of stopping is a separate decision predicate.
 
 ## Result conjunction
 
@@ -342,6 +365,15 @@ results, their authentication and predicate mapping, known failures and their
 citations, uncovered required coverage, uncertain effects and invalidators.
 The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. Aggregate effect state is
+computed over the declared composite effect scope: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; every remaining fully observed mixture gives
+partial. Retain which component each observation concerns. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
 
 First authenticate each contribution against its producer, subject, basis and
 required plan membership. An unauthenticated claim cannot discharge an
@@ -374,10 +406,23 @@ predicate; the dependency relation must justify its relevance.
 A declared disjunction, selection or other logical operator evaluates its own
 predicate in the same result algebra; it cannot relabel that predicate as
 conjunction. Sequential composition records a downstream evaluation as
-`not_performed` when it did not run. Regrouping conjoined results preserves the
-required predicate set, authentication and retained evidence. Reordering
+`not_performed` when it did not run. A lawful regrouping requires the same interpretable composite basis, required
+leaf predicates, joins and authentication, with no intermediate basis failure
+hidden by the grouping. On that fixed domain, retained component sets combine
+by union and the above verdict/effect operations are associative. An invalid
+intermediate join is a failed premise of that rewrite, not evidence that every
+arbitrary grouping is equivalent. Reordering
 operations additionally needs an effect-independence law; associativity alone
 supplies no such permission.
+
+Sequential operations compose only under the library's typed composition
+contract. Their returned result evaluates the declared outer predicate using
+its preservation argument and the retained component results. For a pipeline
+whose contract requires every stage postcondition, this is the conjunction
+above; a recovery path need not require a failed earlier test to become true.
+Unexecuted stages remain coverage facts, with no invented evaluations. A
+sequence without an established outer interpretation or join returns the
+applicable unresolved or invalid-basis result rather than a guessed success.
 
 ## Workspace and context
 
@@ -385,7 +430,11 @@ The workspace is the continuing material state of the construction, including
 its authoritative requirements, work products and durable records. Material
 external state is observed through its owning interface. The actor's context is
 a bounded account acquired from these sources. It is fallible and disposable.
-Current observations correct stale beliefs; they do not grant permission to
+Acquisition observes the subject and basis the activation actually binds,
+including frozen snapshots where selected. Admissible contrary current evidence
+reopens affected claims through their drift and re-entry rules; it does not
+silently select a different basis. Current observations correct stale beliefs;
+they do not grant permission to
 change a requirement to match the implementation. What exists and what must
 exist remain different questions on the same truth surface.
 
@@ -413,7 +462,7 @@ every earlier activation.
 Reuse requires supported applicability: the same claim scope, adequate current
 basis and evidence, valid dependencies and required independent authorship.
 Changed support reopens the affected dependent claims. Unchanged independent
-work remains usable; when independence cannot be established, inspect the
+work remains usable; when dependency independence cannot be established, inspect the
 wider affected scope. A stored green label is not a validity argument.
 
 Before repeating an operation with uncertain effects, observe or reconcile
@@ -430,9 +479,11 @@ algorithm.
 A describes current material state and what is justified about it. Z is the
 selected set of constraints and acceptance conditions; many states may satisfy
 it. Intent, Product and Specification refine Z under their owning authority.
-A transition binds its preconditions, permitted effects, result predicate and
+Write material intermediate states as S0 → S1 → …, reserving Z for the
+destination constraint set and naming a satisfying endpoint separately. A
+transition binds its preconditions, permitted effects, result predicate and
 outer obligations. Where finite context or attention prevents one adequate
-activation, refine the task into supported transitions A → B → C → … .
+activation, refine the task into supported transitions over those states.
 
 Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
 identity identifies the work; compatibility and assurance determine which
@@ -443,7 +494,8 @@ when the required coverage and preservation argument hold.
 
 A total control contract supplies a response for every admitted control state,
 including unavailable input, unknown world conditions, failed preconditions,
-partial effects and exhausted capability. Its alternatives may include repair,
+partial effects, exhausted capability and revoked or exhausted authority. Its
+outcomes use the core result algebra. Its alternatives may include repair,
 re-entry, refusal, yielding or termination under the actual grant. It does not
 promise to solve every problem or make an external process terminate.
 Deterministic, probabilistic and human operations retain their selected outcome
@@ -458,8 +510,11 @@ relation needs a supported causal change; elapsed activity is no repair.
 
 ## Configuration
 
-A configuration allocates operations, information and permitted effects to
-capable actors and declares the material dependencies between their frames.
+A configuration allocates operations and information to capable actors and
+declares the material dependencies between their frames. It assigns effects
+only within grants the allocator holds and may delegate. Its existing design
+or frame record explains the allocation against operations, dependencies,
+capabilities, assurance, resource limits and failure assumptions.
 Finite context and attention, actor fallibility, communication costs and required
 assurance constrain that allocation. They do not uniquely derive a hierarchy
 or a fixed inventory of roles. An adequate configuration can use one actor,
@@ -471,10 +526,22 @@ its authorship and evidence conditions; a new context alone does not supply it.
 Roles acquire authority from their grants, never from their names. Functional
 decomposition, communication, authority and evaluation dependency are distinct.
 
-In a task-based Executive arrangement, the coordination frame holds the longer
-term outcome, a sufficient bounded view of open obligations and closed worker
-results. It requests further bounded evaluation when that view cannot support
-the next decision. Work outside its current attention remains in the workspace
-frontier. An adaptive reassignment preserves outstanding obligations, effect
-uncertainty, authority and independent assessment. A claim that one arrangement
-is optimal names its objective, constraints, comparison scope and evidence.
+The optional [Executive arrangement](STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action)
+specialises this contract for longer-term delivery through bounded worker
+results. Its procedure and grants belong to that profile. An adaptive
+reassignment preserves outstanding obligations, effect uncertainty, authority
+and independent assessment. A claim that one arrangement is optimal names its
+objective, constraints, comparison scope and evidence.
+
+## Core contract derivations
+
+| Deciding family | Foundational premises | Conditional consequence | Additional choice and owner |
+|---|---|---|---|
+| Result record | F1 selects the predicate; F2 binds interpreted evidence; F6 separates judgment from authority | A useful handoff must retain which claim was actually decided and cannot infer permission from success | This member chooses five verdicts plus explicit performance and effect coordinates; domain owners supply finer predicates and evidence rules |
+| Result conjunction | F2 authenticates claims; F4 preserves all required relations | A failed required predicate defeats conjunction; missing coverage cannot supply success; failures and uncertainty must remain available | This member chooses the stated aggregation precedence and effect join for interpretable conjunction; other operators retain their declared predicates |
+| Workspace and context | F3 supplies persistent observed state; F2 makes the account revisable; F5 bounds context and attention | Continuity requires sufficient reacquisition, not preservation of a private belief; stale support must be reconsidered | Domain owners choose observation/freshness protocols and any stronger replay duties; the execution binding selects measurement |
+| Bounded construction | F1 supplies Z; F3 identifies changing work; F4 requires preserved outer obligations; F5 bounds an activation | Large work needs supported refinement or an explicit stop; local success alone does not prove the destination | Spec Method owns re-entry and Product progress, Design owns concrete total control domains, and grants bound permitted responses |
+| Configuration | F4 supplies task dependencies; F5 bounds actors; F6 supplies grants; the task supplies fallibility and assurance assumptions | Allocation must conserve dependencies and required checks within capability; no unique hierarchy follows | Operational profiles and tenant designs choose topology, allocation, communication and assurance mechanisms |
+
+These are conditional arguments in the selected methodology domain. The table
+neither proves completeness for the world nor selects a universal executor.
