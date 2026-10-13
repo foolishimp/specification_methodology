@@ -4,7 +4,7 @@
 
 The product is a specification methodology. It is a set of documents stating the rules for defining, building, checking and releasing a product, together with the same rules written as axioms in a_c. The [Intent](INTENT.md) states its purpose and its five parts: Foundations, the Spec Method, profiles, a_c and reference frames. Each document of the method is a member.
 
-The product replaces the method's previous release, 2.5.1-rc.2. That release is installed read-only at `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`) and is the tool used to build this one.
+The product succeeds the method's previous release, 2.5.1-rc.2. That release is installed read-only at `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`) and is the tool used to build this one.
 
 A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
@@ -20,7 +20,7 @@ Three proposed accounts of a construction are independent of the tiers:
 
 A tier may need all three, and none of them is a tier.
 
-Programs that interpret or check a_c, such as the Axiom Indexer, are separate products. Their dependency and proof identities are owned separately from this product.
+a_c interpretations, which are how documents are written as axioms, and the tools that check them, such as the Axiom Indexer, keep their own separately owned dependency and proof identities.
 
 Runtimes that execute applications built with the method are outside the product. Examples are ABIogenesis (ABG), which runs typed graph programs and records what happened at run time, its executor HoG, which traverses those programs, and application workflow runtimes.
 

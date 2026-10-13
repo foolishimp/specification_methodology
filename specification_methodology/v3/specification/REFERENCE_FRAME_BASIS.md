@@ -55,6 +55,6 @@ The following are kept distinct:
 
 Unknown premises and unknown applicability stay explicit. Unchanged source recovery and valid judgements may be reused while their validity conditions hold. A judgement that must be independent stays independent.
 
-A missing, stale or contradictory authority relation that matters, or one outside the actor's territory, stops the action that depends on it. The case is returned to the relation's owner. Tenant territory and stops are bound by the [tenant entry contract](../build_tenants/README.md).
+An authority relation that matters and is missing, stale, contradictory or outside the actor's territory stops the action that depends on it. The case is returned to the relation's owner. Tenant territory and stops are bound by the [tenant entry contract](../build_tenants/README.md).
 
 Verifying the bootstrap shows only that the installed release is present and that routing to it works. This file adds no proposed axiom to the installed release's law.

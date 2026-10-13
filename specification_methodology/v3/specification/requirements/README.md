@@ -2,7 +2,7 @@
 
 The common requirements bind both build tenants' candidates. This file holds the requirements that come from this Product. The other files hold the rest:
 
-- [PRINCIPLES](PRINCIPLES.md): the working foundations accepted at C1, each with its review question.
+- [PRINCIPLES](PRINCIPLES.md): the working foundations and their review questions.
 - [CAPABILITIES](CAPABILITIES.md): the capability questions. Each capability's acceptance contract is selected separately.
 - [A_C_DEPENDENCY](A_C_DEPENDENCY.md): the exact a_c theory and checker this product depends on, and the limits of what the checker proves.
 - [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the frontier under STDO-UP-015, with one row per predecessor claim giving its disposition and successor locus.
