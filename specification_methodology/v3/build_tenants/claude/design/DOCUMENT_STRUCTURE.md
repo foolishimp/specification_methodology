@@ -37,11 +37,22 @@ Files are under `standards/` unless a path says otherwise. What each tier
 owes is fixed by the [C3 tier table](../../../specification/PRODUCT.md#c3-construction-contract);
 the member split is this tenant's.
 
+Identifiers carried from the previous release: `RF-nnn` are its numbered
+reference-frame laws, `AC-nnn` its numbered a_c laws, and `UP-nnn`
+(`STDO-UP-nnn` in full) its numbered method rules. Those named in this
+file are UP-004, authority identity and conservation; UP-012, shared
+method adoption and propagation; UP-013, product outcome conservation;
+UP-014, proportional method and delivery; UP-015, successor baseline
+conservation, which defines the disposition values; UP-020, agentic
+construction execution; and UP-021, complete enclosing-relation
+admission. STDO-SURFACE-001 is its rule of one constitutional surface and
+version boundary.
+
 ### Tier 1, foundations
 
 | Member | Owns |
 |---|---|
-| FOUNDATIONS.md | the vocabulary of standing; the ontology with the frame objects; P0 to P6 with a standing column; the foundation-to-law format and family index; the core result algebra and its conjunction; composition and conservation; the generic import rule; hypotheses |
+| FOUNDATIONS.md | the vocabulary of standing; the ontology with the frame objects; P0 to P6 with a standing column; the foundation-to-law format, the standing of its consequences and the family index; the core result algebra and its conjunction; composition and conservation; the generic import rule; hypotheses |
 | REFERENCE_FRAME.md | the frame as a first-class object: RF-001 to RF-017, frame sets, method functions, frames in conjunction (by reference to the core conjunction), coverage, revision, the activation packet |
 | ACTIVATION.md | bounded work: transitions from current state to destination, the step, intake, admission, configuration, context construction and the size measurement, the step's result refinements and dispositions, totality and refinement, work state and resumption, proportionality, closed results and reuse |
 | AXIOMATIC_CALCULUS.md | the a_c theory: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, identity, conformance obligations |
@@ -69,7 +80,7 @@ core result algebra.
 |---|---|
 | PROFILES.md | the boundary: how a profile imports the tiers above, what stays out of the core, the index |
 | EXECUTIVE_BASELINE.md | the operational profile restating STDO_REFERENCE_FRAME_BASELINE: profile terms, Executive attention and drift locks, the derived frames, the engagement transition, adoption and project configuration, failure classification |
-| DESIGN_MODULE.md | the DESIGN_MODULE_METHOD realisation law: ontology-first design, Prime, carrier set, boundary evaluators, totality, effect edge, coupling |
+| DESIGN_MODULE.md | the DESIGN_MODULE_METHOD realisation law: ontology-first design, Prime (the irreducible design relations, its Prime semantic atoms), carrier set, boundary evaluators, totality, effect edge, coupling |
 | ODD.md, TRAVERSAL_OCCURRENCE.md, UX.md, WORLD_MODEL.md | each predecessor profile in full |
 
 ### Guides, route, packaging
@@ -83,47 +94,74 @@ release-candidate cut is mechanical.
 
 ## Ownership decisions
 
-Each decision fixes one owning section for a question the current
-candidate decides in more than one place, or adds an owner the common
-specification now requires. The evidence for each defect is in the
+Each decision fixes one owning section for a question the base candidate
+decides in more than one place, or adds an owner the common specification
+requires. The evidence for each defect is in the
 [verified gap list](../qualification/C3-SYNTHESIS/PLAN.md#verified-gap-list).
+Line citations in this section are to the members at the base,
+`build_tenants/claude/` at `31f28f9`, before this rebuild's changes.
 
 **D1. Core result algebra and conjunction: FOUNDATIONS §4.** A new
 subsection "Results" owns the core values, their meanings, the standing
-relation, the rule that no refinement raises standing, and conjunction
-and composition of results. ACTIVATION §3 keeps the step's refinements
-(construction availability, disposition, ambiguity outcome), each mapped
-into the core. RF-012 in REFERENCE_FRAME §3, REFERENCE_FRAME §6 Result
-conjunction, AC-007 in AXIOMATIC_CALCULUS §4 and EVALUATION §4 refer to
-the owner and define nothing further. Reason: the
-[single result algebra requirement](../../../specification/requirements/README.md#single-result-algebra-requirement)
+relation, the rule that no refinement raises standing, and the rule that
+a core value travels with the evaluated predicate and the original domain
+outcome while the domain owner keeps the domain meaning (item 4 of the
+[single result algebra requirement](../../../specification/requirements/README.md#single-result-algebra-requirement)).
+A second new subsection, "Conjunction of results", owns conjunction and
+composition of results. ACTIVATION §3 keeps the step's refinements
+(construction availability, disposition, ambiguity outcome, effects), each
+mapped into the core. RF-012 in REFERENCE_FRAME §3, REFERENCE_FRAME §6
+Result conjunction, AC-007 in AXIOMATIC_CALCULUS §4 and EVALUATION §4
+refer to the owner and define nothing further. Reason: the requirement
 places the core in the Foundations and defines conjunction once over it.
-`FOUNDATIONS.md:3–5` already claims the algebra while `ACTIVATION.md:6–8`
-says ACTIVATION adds no definitions; values and conjunction in one section
-end both conflicts. The core must meet these constraints:
+At the base, `ACTIVATION.md:3–5` lists the result algebra among what
+ACTIVATION owns, while `ACTIVATION.md:6–8` says ACTIVATION adds no
+definitions and `FOUNDATIONS.md:3–5` says no later member adds any.
+ACTIVATION is already tier 1, so the requirement alone does not force a
+move. Placing the values and conjunction in FOUNDATIONS is this tenant's
+choice: the core sits beside the commitments it rests on, and one section
+ends both conflicts. The core must meet these constraints:
 
 - the core keeps the five values of RF-012 (`satisfied`, `falsified`,
   `indeterminate`, `out_of_frame`, `invalid_basis`), so RF-012 stays
   `conserved`. An evaluation that was not performed has no closed result;
-  it is never mapped to `indeterminate` or to any other core value.
-  Conjunction takes three inputs and keeps them apart: the core values
+  it is never mapped to `indeterminate` or to any other core value;
+- conjunction takes three inputs and keeps them apart: the core values
   returned; the planned assessments that have no closed result; and the
-  required coverage that no planned assessment addresses. A conjunction
-  with either of the last two is never `satisfied`, and the record names
-  which kind of gap it has. This keeps non-performance distinct from
-  undecidability without a sixth core value (the common specification's
-  single result algebra requirement, item 3, read with item 4);
+  required coverage that no planned assessment addresses. The second and
+  third inputs are the conjunction's gaps, of two kinds: not performed and
+  uncovered. A conjunction with a gap is never `satisfied`. Where every
+  returned value is `satisfied` and a gap remains, the conjunction reports
+  `indeterminate` as its own value for the composite predicate, because
+  the results it holds cannot decide that predicate; this value is not a
+  mapping of the assessment that was not performed. Where a mandatory
+  returned value is not `satisfied`, the conjunction's declared rule
+  chooses the reported value from the non-satisfied values returned. In
+  both cases the record names each gap by kind, and every gap is carried
+  with the composite through every join. The gap record keeps
+  non-performance distinct from undecidability (item 3), and the core
+  keeps five values;
 - a work step's `incomplete` maps to `falsified` only for the predicate
   "a candidate is available", which travels with the value, and never to
   `indeterminate`. A Reviewer step that ends `incomplete` leaves each of its
   criteria not performed: no result, never `falsified`;
+- the step's other work-result values and the dispositions map as
+  ACTIVATION §3 states. For "a candidate is available": `candidate_ready`
+  to `satisfied`, `refused` to `falsified`, `re_entry_requested(authority)`
+  to `out_of_frame` and `re_entry_requested(basis)` to `invalid_basis`.
+  For "the candidate is accepted at its declared boundary", the four
+  dispositions of UP-020: `accept` to `satisfied`, `local_repair` and
+  `reject` to `falsified`, `re_enter` to `invalid_basis`. The disposition
+  is the acceptance result, separate from availability and assessment
+  (item 5);
 - effects are a refinement with three values (completed, not effected,
   completion unknown), mapped to `satisfied`, `falsified` and
   `indeterminate` for the predicate "the intended effect occurred"; an
   unknown completion never maps to completed or to no effect;
-- each refined value maps to exactly one core value. Where a refined value
-  maps today to one of two core values by its cause, the cause becomes part
-  of the refined value, and each resulting value maps once;
+- each refined value maps to exactly one core value. A refined value that
+  would map to one of two core values according to its cause takes the
+  cause into the value, and each resulting value maps once, as
+  `re_entry_requested` does;
 - `candidate_ready` maps to `satisfied` only for the predicate "a candidate
   is available", which travels with the value. A conjunction keeps each
   component's predicate with its value, so an availability `satisfied`
@@ -134,13 +172,15 @@ construction owns the size measurement and the fit test against the
 declared capacity. RF-002 refers to it. ACTIVATION §6 owns proportionality
 only and refers to the execution binding for time and spend. EVALUATION §7
 Frame qualification owns actual-use evidence of adequate attention, kept
-separate from size. The present conflict, unconditional measurement at
-`ACTIVATION.md:211–214` against measurement only where selected at
+separate from size. At the base, unconditional measurement at
+`ACTIVATION.md:211–214` conflicts with measurement only where selected at
 `REFERENCE_FRAME.md:140–141`, `REFERENCE_FRAME.md:336–340`,
-`ACTIVATION.md:59–60` and `ACTIVATION.md:654–657`, is resolved in ACTIVATION
-§2 in one direction with its reason. Recommended reading: size is measured
-whenever the actor's envelope declares a size capacity; a measurement is
-not a budget, and no universal budget follows.
+`ACTIVATION.md:59–60` and `ACTIVATION.md:654–657`. ACTIVATION §2 resolves
+the conflict in one direction with its reason, and activation A4b of the
+[PLAN](../qualification/C3-SYNTHESIS/PLAN.md) fixes that direction. The
+reading this design recommends to A4b: size is measured whenever the
+actor's envelope declares a size capacity; a measurement is not a budget,
+and no universal budget follows.
 
 **D3. Transitions and configuration: ACTIVATION §1.** ACTIVATION §1 gains
 the account of work from a current state A to a destination Z through
@@ -152,7 +192,12 @@ disposable account of them. The fixed role list in the Actor row of
 FOUNDATIONS §2 (`FOUNDATIONS.md:50`) and the three roles of ACTIVATION §1
 (`ACTIVATION.md:149–153`) become examples of a derived allocation.
 SPEC_METHOD §8 refers. EXECUTIVE_BASELINE keeps its catalogue and its
-project configuration (§16) as its own bindings.
+project configuration (§16) as its own bindings. RF-009 in REFERENCE_FRAME
+§3 owns the rule that functional decomposition, communication, authority,
+configuration and evaluation dependency are distinct relation structures;
+ACTIVATION §1 Configuration refers to RF-009 for that rule and owns only
+the derivation of an allocation from operations, dependencies, actor
+capabilities and assurance.
 
 **D4. Build-tenant binding: a new SPEC_METHOD section.** It owns the
 general law: a tenant binds the requirements calculus to a computational
@@ -163,10 +208,12 @@ PRODUCT_DEFINITION §8 refers to it from the tenant registry. This tenant's
 own binding is [CONSTRUCTION_BINDING](CONSTRUCTION_BINDING.md).
 
 **D5. Foundation to law: FOUNDATIONS §3 and the owning members.**
-FOUNDATIONS §3 owns the table format (ported part 1) and a non-deciding
-index that names each material family, its owning section and the members
-it accounts for. Each family's table sits in its owning member, at the
-section where an actor enters that family. Reason: relation 2 requires
+FOUNDATIONS §3 owns the table format and the standing of the consequences
+(ported part 1), and a non-deciding index that names each material family,
+its owning section and the members it accounts for. Each family's table
+sits in its owning member, at the section where an actor enters that
+family; it states its own instance premises and refers to FOUNDATIONS §3
+for the standing of its consequences. Reason: relation 2 requires
 shared contracts to be used where an actor applies them; a table at the
 entry section is in the frame an actor is started on, while a central
 table would be a cross-reference and would make FOUNDATIONS a second owner
@@ -185,20 +232,31 @@ the standards README, which owns no determination.
 
 **D7. Imports between members: FOUNDATIONS §2.** A tier-1 member that uses
 a concept owned by another member declares the import (source owner,
-target, direction, loss, no transfer of authority). The generic rule moves
-to FOUNDATIONS §2, because tier-1 members need it and a tier-1 member must
-not depend on a tier-2 owner. PRODUCT_DEFINITION §5 (`:412–443`) refines it
-for a project's bounded contexts and maps its four relation kinds back to
-the owner.
+target, direction, loss, no transfer of authority). FOUNDATIONS §2 owns
+that import rule, because tier-1 members need it. This tenant reads the
+tier order of [PRODUCT, Method Structure](../../../specification/PRODUCT.md#method-structure),
+where the Spec Method uses the foundational contracts and profiles import
+the shared contracts, as requiring that a tier-1 member not depend on a
+tier-2 owner. PRODUCT_DEFINITION §5 (`PRODUCT_DEFINITION.md:412–443`) owns
+translation, equivalence and disambiguation between a project's bounded
+contexts, and refers to FOUNDATIONS §2 for import.
 
 **D8. Categorical and refinement claims.** FOUNDATIONS §4 Formal fragment
 owns what a categorical claim must show: items 1, 4 and 5 of the
-[categorical demonstration standard](../../../specification/requirements/README.md#categorical-demonstration-standard);
-it keeps H1 as a hypothesis. EVALUATION §6 owns the equivalence ladder
-(ported part 4). ACTIVATION §4 Refinement owns items 2 and 3 for
-refinement and rewrite steps: the licensing law declared for the subject,
-exact steps preserving meaning, and approximate steps stating an adequacy
-relation and an end-to-end bound.
+[categorical demonstration standard](../../../specification/requirements/README.md#categorical-demonstration-standard),
+except the distinction named next. It keeps H1, the claim that the
+semantic map S: 𝒜 → ℐ and the realisation map R_H: 𝒜 → 𝒞_H are functors
+(symbols as in [CROSS_SYNTHESIS](CROSS_SYNTHESIS.md)), as a hypothesis.
+EVALUATION §6 owns the equivalence ladder (ported part 4) and with it the
+distinction, in item 4, between conformance, equivalence and functorial
+preservation; FOUNDATIONS §4 refers to EVALUATION §6 for that
+distinction. ACTIVATION §4 Refinement owns items 2 and 3 for refinement
+and rewrite steps: the licensing law declared for the subject, exact steps
+preserving meaning, and approximate steps stating an adequacy relation and
+an end-to-end bound. Item 6, the worked join, has no locus while the
+categorical capability is not selected
+([PRODUCT, Categorical Construction](../../../specification/PRODUCT.md#categorical-construction));
+it waits for the product owner's selection.
 
 ## Member map
 
@@ -206,7 +264,7 @@ relation and an end-to-end bound.
 |---|---|
 | README.md | README; PRODUCT_DEFINITION §4, §12 (installed cut, store, manifest) |
 | AXIOMATIC_CALCULUS.md | AXIOMATIC_CALCULUS |
-| DESIGN_MODULE_METHOD.md | DESIGN_MODULE; SPEC_METHOD (core rule, non-goals); ASSURANCE (6A to 6C) |
+| DESIGN_MODULE_METHOD.md | DESIGN_MODULE; SPEC_METHOD (core rule, non-goals); ASSURANCE (6A to 6C, the predecessor's three rules for unit proof derived from a module) |
 | GLOSSARY_GUIDE.md | GLOSSARY |
 | IDENTITY_METHOD.md | IDENTITY; DESIGN_MODULE (defaults from a bound realisation) |
 | ODD_METHOD.md | ODD; ACTIVATION (graph-function refinement, by note) |
@@ -225,17 +283,21 @@ relation and an end-to-end bound.
 | templates (24) | `standards/templates/`, governed by SPEC_METHOD, TICKETS, PRODUCT_DEFINITION, REFERENCE_FRAME |
 | plugin (17) | `plugins/spec/`, each skill routed to its successor frames and owners |
 | licence (1) | `LICENSE` at the candidate root |
-| release note (1) | `release/release-note.md`, written at the RC cut under RELEASE |
+| release note (1) | `release/release-note.md`, written at the release-candidate (RC) cut under RELEASE |
 | manifest (1) | written at the RC cut under RELEASE; schema in the schemas row |
 
 ## Disposition record
 
-The disposition values and their conditions are owned by
-[RELEASE §9](../standards/RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
-and, for this product, by the common
-[successor requirements](../../../specification/requirements/README.md#successor-disposition-requirement)
-and acceptance criteria 1 and 3. This section states only how this
-construction records them.
+This construction's records are governed by the installed
+[UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015),
+the common
+[Successor Disposition Requirement](../../../specification/requirements/README.md#successor-disposition-requirement)
+and acceptance criteria 1 and 3, which own the disposition values and
+their conditions. [RELEASE §9](../standards/RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+is the candidate's restatement of UP-015; as a candidate member it does
+not govern the work that builds it
+([CONSTRUCTION_BINDING](CONSTRUCTION_BINDING.md), section 2). This
+section states only how this construction records the dispositions.
 
 - The tenant frontier copy holds one disposition per row. A `conserved` or
   `superseded` row has a successor locus that resolves; other rows carry
@@ -257,9 +319,12 @@ A finite actor is started on a frame and its subject, never on the corpus.
 A frame is a verbatim excerpt of the owning sections its task needs, each
 excerpt under a `Source:` line naming its owning section and that member's
 digest. The manifest `standards/frames/FRAME_INPUTS.json` lists each frame's
-routes with owner and section digests; a generator regenerates every frame
-from the manifest whenever an owner changes, so a copy never drifts from its
-owner ([CROSS_SYNTHESIS](CROSS_SYNTHESIS.md), part 5). A frame whose task
+routes with owner and section digests. The generator regenerates every
+frame from the manifest whenever an owner changes; it finds section
+boundaries outside fenced code blocks, refuses where a boundary is
+ambiguous and never truncates a section, so a copy never drifts from its
+owner
+([CROSS_SYNTHESIS](CROSS_SYNTHESIS.md), part 5). A frame whose task
 returns a result includes the owner of the core result algebra, or its
 profile's mapping into it. For a task with no published frame, the actor
 acquires the deciding owner sections directly (ACTIVATION §2). a_c
