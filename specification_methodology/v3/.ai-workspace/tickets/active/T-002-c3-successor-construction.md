@@ -135,3 +135,25 @@ To be bound by the pen in the first descendant commit after this revision reache
 2026-10-13T10:35:58Z — The revision under review adds the [single ownership requirement](../../../specification/requirements/README.md#single-ownership-requirement) and a fifth conformance discriminator ("Two loci in one candidate decide the same question"), recorded in [T-001](T-001-common-definition-and-checkpoints.md#execution-record). Affected span to re-prove in each line under acceptance criterion 5: every member, since any member may decide a question owned elsewhere in the same candidate; and every projected frame, whose clause copies must name their owning locus. Evidence that still satisfies its criteria stays valid. No actor is bound and nothing is admitted.
 
 2026-10-14 — Jim authorises Codex to run the rebuild to completion and return for review. EC-CODEX-SYN-01 is admitted in the active Codex tenant ticket. This selects construction and independent defect review on that line; ported-part policy acceptance, per-member acceptance, checkpoint acceptance, peer activation and release are separate. Common-pen Writer records the forthcoming immutable input snapshot; the continuing workspace/context clarification changes the common obligations and is included in that snapshot.
+
+### C3 Codex rebuild input snapshot — 2026-10-14
+
+Input commit: `bb76b1d0a158ff5b20c7fd2eb933f8ffc798160b`. Member hashes come from that commit. This recording commit is its descendant. Owner authorisation is the run-to-completion instruction recorded above; source corrections remain visible for final review.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 5434 | `dc80dd0e091afe33bfdd097a0850a94aef0d3a7e52ab46ac96b535e76afafec1` |
+| `specification/PRODUCT.md` | 42123 | `c2cfbb87cab2f181dcc7c1b7284a481e0391ea72b02ff2ac46c144eafdbc0b76` |
+| `specification/GOALS.md` | 14347 | `20d2a3a69fead88c0b93d3d35681475a5cab130c481c92474c7f2036f35d1662` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 6463 | `8f6d268bc51211ffccd7ab714b15891b6670429ecdabb9ffd8e0c8c0892090aa` |
+| `specification/requirements/README.md` | 16989 | `5d01452ee16fc1b8ac85be9d587fdc2f35687e5aa217c4de644314727882dd1d` |
+| `specification/requirements/PRINCIPLES.md` | 12599 | `0542778cdf097bf224f0e5305cf9a13f7bc9a30d39aa3f4e1d4c59c0ddf1803c` |
+| `specification/requirements/CAPABILITIES.md` | 2823 | `729f122f97e1f6f39ccee828319ca5203bfa74816d3bf2cc9f400080bce76cb4` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6469 | `e1ace7eb86a6c4a4a554c562fd3a9ec5b2c6e32027147b19c509bb52e370c9e4` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 8734 | `c4791ca16345345e5c5136a153d6e929d54ec1f191ad98d05ca57a4755485f95` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4060 | `3f25650ae4ce45ee31381bee876c47b8e7cb78d6aef50e5654591c7f5f8fd82b` |
+| `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 10918 | `d5dd09ccccd8838c5d66e5ce197302debf1f4b58683e3cae91e723626b1c4a0a` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 15845 | `5865608a191aded349f6dcf7a563f83501ee20d3f267ec6f0502012d3f377f15` |
