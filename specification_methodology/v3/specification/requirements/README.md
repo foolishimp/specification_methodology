@@ -29,7 +29,7 @@ Unchanged predecessor prose satisfies these where it carries the relationships. 
 
 ## Single Ownership Requirement
 
-Source: this Product's [Intent](../INTENT.md#mission), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review.
+Source: this Product's [Intent](../INTENT.md#what-the-product-is), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review.
 
 A determination is a rule, definition, value set or procedure step that an actor must apply. Its owner is an owning locus: one section of one member. Owner here names a place in the text, not decision authority.
 
@@ -55,7 +55,7 @@ Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), Jim's dec
 6. Conjunction and composition of results are defined once, over the core.
 7. A projected frame whose task returns a result carries the core algebra or its profile's mapping into it.
 
-Purpose and material relation: this is the [single ownership requirement](#single-ownership-requirement) applied to results, as the [Intent](../INTENT.md#mission) directs; one outcome vocabulary across tiers removes competing ownership of results. Items 3 to 5 retain the distinctions that failure, undecidability, non-performance and uncertain effects must keep under composition ([P5 and P6](PRINCIPLES.md)).
+Purpose and material relation: this is the [single ownership requirement](#single-ownership-requirement) applied to results, as the [Intent](../INTENT.md#what-the-product-is) directs; one outcome vocabulary across tiers removes competing ownership of results. Items 3 to 5 retain the distinctions that failure, undecidability, non-performance and uncertain effects must keep under composition ([P5 and P6](PRINCIPLES.md)).
 
 ## Categorical Demonstration Standard
 

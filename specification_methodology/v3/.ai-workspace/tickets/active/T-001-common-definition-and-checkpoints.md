@@ -246,3 +246,16 @@ Each sentence removed from the Intent, and where its content is owned:
 | Incomplete knowledge, failure and interruption must have truthful dispositions within selected authority | [P5](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) and [P6](../../../specification/requirements/PRINCIPLES.md#p6-justified-claims-and-separate-authority); result algebra items 3 to 5 |
 
 The Intent keeps the categorical paragraph, the Demonstration Standard, the result algebra sentence, the steel-thread paragraph and the Standing section; "installed method" and "predecessor corpus" are named as STDO 2.5.1. The Purpose heading becomes Mission, and the result algebra requirement's purpose line now links there. Committed on `common/v3-direction-synthesis` as part of the revision under review; the PROPOSED markers stay until Jim signs off.
+
+2026-10-13T11:07:29Z — Jim, on the Intent at `a47bf0e`: "i dont want to meention v3.0.0 I dont need to call it STDO - do you even know what it stands for? articulate what we are trying to achieve fully, what the product is at a high level, etc." (STDO stands for Specification, Ticketing, Design and Outcome-Driven Development, per the installed SPEC_METHOD's method identity.) The pen rewrote the Intent within the same `intent_reprice`. It now states the mission, the problem, the finite actors and their outer contract, what the product is and what it achieves, drawn from Jim's [working Product definition of 2026-10-06](../../../../v2/.ai-workspace/comments/codex/20261006T010215Z_STRATEGY_STDO_3_0_WORKING_PRODUCT_DEFINITION.md#working-product-statement) and his categorical strategy. Jim's own wording is kept for the one-owner paragraph, the result algebra sentence, the categorical paragraph and the Demonstration Standard. Removed from the Intent, and where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| the target version name | [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| the predecessor version name | PRODUCT boundary, second paragraph |
+| the builder ("Installed … RC2 governs its construction") | T-002 Product-Chain Basis; the Intent's Direction keeps the unnamed compiler relation |
+| the sentence on the two tenant candidates | [PRODUCT, Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis) |
+| "This is a working source-project definition" | PRODUCT status line |
+
+The requirement links that pointed to the Intent's Mission now point to its "What The Product Is" section. PRODUCT still uses "STDO 3" and the v3.0.0 identity Jim decided on 2026-10-12; it is unchanged pending his word.
+
