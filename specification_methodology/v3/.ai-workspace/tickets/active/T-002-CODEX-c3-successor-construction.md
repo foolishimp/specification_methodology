@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-13T20:22:52Z
+updated_at: 2026-10-13T23:47:54Z
 priority: high
 dependencies: [T-002]
 ---
@@ -20,6 +20,12 @@ dependencies: [T-002]
 # T-002-CODEX — Codex Tenant Execution Line
 
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
+
+## Current Owner Direction
+
+2026-10-14: Jim identifies the current candidate as v3 iteration 2, instructs the common pen to update the specification around the current pillars and then perform iteration 3, and requests: “i want a full checkpoint commit and merge of the current work”. The checkpoint precedes that successor. This authorises merging the current Codex tenant for a review baseline; it supersedes the earlier execution contract's no-merge restriction for this checkpoint only. It does not accept C3 members, release the candidate or activate the peer tenant.
+
+2026-10-13T23:47:54Z — Checkpoint Writer activation, selected by the Executive on that instruction. Exact inputs are main `04b0c9a52b7c893ee792273babe0927da26e17f1` and clean Codex head `3ad1fca31dc93ba0847bbbbf308312a554daa1f6`. Territory: this ticket, the two pending Codex review posts, the [review applicability record](../../comments/codex/20261013T234754Z_REVIEW_ITERATION_2_FINDINGS_AND_SUCCESSOR.md), and the Git operations required to checkpoint and merge this tenant. Preserve both pending reviews as written, all frozen evidence, peer worktrees and the installed builder. Check the merge's source tree and scope; remove the merged Codex branch and worktree after verification under Development Isolation. Iteration 3 receives a new tenant branch after the common input is recorded. No push or tag is selected.
 
 ## Tenant Re-Entry
 
