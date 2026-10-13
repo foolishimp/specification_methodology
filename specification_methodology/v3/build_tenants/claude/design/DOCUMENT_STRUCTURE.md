@@ -102,14 +102,21 @@ places the core in the Foundations and defines conjunction once over it.
 says ACTIVATION adds no definitions; values and conjunction in one section
 end both conflicts. The core must meet these constraints:
 
-- a required evaluation or step that was not performed has a core value
-  distinct from `indeterminate` (proposed name `not_performed`). A separate
-  value is chosen over carrying the distinction only in the domain outcome,
-  because conjunction is defined over the core and can preserve only
-  distinctions the core holds. `not_performed` is the result of a planned
-  assessment or step that was not carried out; required coverage that no
-  planned assessment addresses is an uncovered obligation, not a result,
-  and conjunction keeps the two apart;
+- the core keeps the five values of RF-012 (`satisfied`, `falsified`,
+  `indeterminate`, `out_of_frame`, `invalid_basis`), so RF-012 stays
+  `conserved`. An evaluation that was not performed has no closed result;
+  it is never mapped to `indeterminate` or to any other core value.
+  Conjunction takes three inputs and keeps them apart: the core values
+  returned; the planned assessments that have no closed result; and the
+  required coverage that no planned assessment addresses. A conjunction
+  with either of the last two is never `satisfied`, and the record names
+  which kind of gap it has. This keeps non-performance distinct from
+  undecidability without a sixth core value (the common specification's
+  single result algebra requirement, item 3, read with item 4);
+- a work step's `incomplete` maps to `falsified` only for the predicate
+  "a candidate is available", which travels with the value, and never to
+  `indeterminate`. A Reviewer step that ends `incomplete` leaves each of its
+  criteria not performed: no result, never `falsified`;
 - effects are a refinement with three values (completed, not effected,
   completion unknown), mapped to `satisfied`, `falsified` and
   `indeterminate` for the predicate "the intended effect occurred"; an

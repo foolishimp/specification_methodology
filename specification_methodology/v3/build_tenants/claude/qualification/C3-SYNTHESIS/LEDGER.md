@@ -84,3 +84,18 @@ Role change to Writer: `main` at `a7eba66` merged inward (`923c755`), as Develop
 | `build_tenants/README.md` | `3f25650ae4ce45ee31381bee876c47b8e7cb78d6aef50e5654591c7f5f8fd82b` |
 
 R0 is asked to add expectations for the two amendments. W1, still running, is told of the change. Role back to Executive.
+
+2026-10-13T18:27Z — W1 returned `candidate_ready` (committed `087ebe1`):
+- `design/` rewritten: DOCUMENT_STRUCTURE, README, new CONSTRUCTION_BINDING and CROSS_SYNTHESIS;
+- PLAN.md (30,929 B): the verified gap list, 21 material families, the re-proof span (at least about 154 of 691 rows, to be committed by A6), and activation waves A to D with disjoint territories.
+
+W1's corrections to the proposal are accepted:
+- the eleventh unresolved row is the requirements template, not the bootstrap;
+- there are 21 families, not about 14;
+- premise standing is stated inline, and the gap is the missing family tables.
+
+Executive disposition on design decision D1: `local_repair`. W1 proposed a sixth core result value, `not_performed`. Ruling: the core keeps RF-012's five values, so RF-012 stays `conserved`. An evaluation that was not performed has no closed result. Conjunction keeps three inputs apart: the core values returned, the planned assessments with no closed result, and the required coverage that no planned assessment addresses. A work step's `incomplete` maps to `falsified` only for "a candidate is available", never to `indeterminate`. A Reviewer step that ends `incomplete` leaves its criteria not performed.
+
+Reason: item 3 of the common single result algebra requirement asks that non-performance stay distinct, not that it have its own core value. Item 4 carries the domain outcome with the value; R0 recorded both readings as ambiguity A2. The smaller change conserves RF-012 and does not widen the re-proof span. The alternative, a sixth core value with RF-012 `superseded`, goes to the product owner in the handoff.
+
+Role change to Writer: DOCUMENT_STRUCTURE D1 and PLAN rows A1, A2 and B6 plus the fixed interfaces were edited to this ruling, then committed. Role back to Executive. Wave A starts: A1, A2 and A3.
