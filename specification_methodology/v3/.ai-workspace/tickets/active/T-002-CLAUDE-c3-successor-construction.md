@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/claude/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-12T01:32:20Z
+updated_at: 2026-10-14T00:00:00Z
 priority: high
 dependencies: [T-002]
 ---
@@ -24,6 +24,16 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 ## Tenant Re-Entry
 
 The tenant's design must be reframed before realisation: the first-pass design carried the retired goal that the whole corpus fits one bounded activation and treated a route to the predecessor as conservation. Re-entry is at the tenant's `design/`, which must state the accepted outcome, the tenant's member list and the map from every rc.2 member to the tenant members that receive it, before member 1 is restated.
+
+## Cross-Synthesis Phase
+
+State: drafted, not started. This phase follows Jim's decision of 2026-10-13 that each line keeps its own base and takes named parts of the other ([Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis)).
+
+- Base: this tenant's candidate, `build_tenants/claude/` at `31f28f90c4a9b15243d84630fc4799024a9cd7ac`, with its frontier record.
+- Contributions: named parts of the Codex candidate at the same commit. Each enters only inside one member's frontier cone, as the Executive selects it. The parts proposed for porting are those nominated in the reviews listed under Cross-Synthesis.
+- Reads: the Writer and Reviewer may read the Codex candidate at that commit under [Porting reads](../../../specification/PRODUCT.md#development-isolation). Ported text is written only under `build_tenants/claude/`.
+- Actors: the Executive and Reviewer for this phase are open ([Open Owner Decisions](../../../specification/PRODUCT.md#open-owner-decisions)). The Actors table below records the first pass under Jim's 2026-10-12 binding; whether that binding carries into this phase is Jim's decision. How a ported part is reviewed is also Jim's decision, made before the first frontier cone with a contribution is accepted.
+- No execution contract for this phase is drafted or admitted.
 
 ## Actors
 
