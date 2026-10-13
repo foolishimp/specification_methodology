@@ -1,6 +1,6 @@
 # STDO 3 Product
 
-Status: working common Product definition; structure construction selected, principles and capabilities awaiting their checkpoints.
+Status: working common Product definition. C3 successor construction is selected; each tenant's candidate may take named parts of the other ([Cross-Synthesis](#cross-synthesis)). Categorical construction is named as a generic capability; its acceptance contract is derived from the categorical steel thread. The sections selected on 2026-10-13 are PROPOSED in wording, awaiting review.
 
 ## Product Boundary
 
@@ -10,11 +10,49 @@ The target version is the successor of the installed `stdo://releases/v2.5.1-rc.
 
 The structure distinguishes general foundations, Spec Method as one particular methodology, and optional domain profiles and operational realisations. Proposed algorithmic, informational and computational interpretations are orthogonal concerns.
 
-The source project owns one common WHAT. Codex and Claude are independent build tenants supplying HOW and documentary implementations. Their organisation, wording and encodings may differ while their accepted outputs satisfy the same common contract and independently specified expectations.
+Categorical construction is a generic capability of the method ([Categorical Construction](#categorical-construction)). The method has one result algebra, owned by the foundations tier ([Result Algebra](#result-algebra)).
+
+The source project owns one common WHAT. Codex and Claude are independent build tenants supplying HOW and documentary implementations. Their organisation, wording and encodings may differ while their accepted outputs satisfy the same common contract and independently specified expectations. Each tenant may take named parts of the other's candidate onto its own ([Cross-Synthesis](#cross-synthesis)).
 
 The method semantics expressed by tenant documents are distinct from the common construction specification that governs those documents. A tenant design is not a replacement Product definition. a_c interpretations and tools retain separately owned dependency and proof identities.
 
-ABG, HoG and application workflow runtimes remain outside this Product. A worked application, Hello World or Data Mapper is an external example or test subject. Its particulars cannot become generic method functionality by precedent.
+ABG, HoG and application workflow runtimes remain outside this Product. A worked application, Hello World, Data Mapper or the sum-and-histogram steel thread is an external example or test subject. Its particulars cannot become generic method functionality by precedent.
+
+## Result Algebra
+
+Selected by Jim on 2026-10-13; wording PROPOSED, awaiting review.
+
+The foundations tier owns the single result algebra of the method. Constraint, judgment, frame, stop, work and effect results are stated in it or as refinements of it. No member, profile or frame defines a parallel outcome vocabulary. A refinement keeps the evaluated predicate and the original domain outcome with the core value and never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md) check it in every member under C3 acceptance criterion 5.
+
+## Categorical Construction
+
+Selected by Jim on 2026-10-13; wording PROPOSED, awaiting review.
+
+The method defines categories of its own constructs and joins between categories, and it licenses each construction step by declared laws. Specification artifacts are objects. Derivations and refinements are arrows with stated preservation obligations. A join of an algorithm category with a computation category is the acceptance instance. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a statement without it is a hypothesis.
+
+The capability's acceptance contract, with its requiring principles, scope, observable outcome and conformance expectations as [CAPABILITIES](requirements/CAPABILITIES.md) requires, is derived from the steel thread's evidence at step 3 below. It is not yet selected.
+
+Sequence:
+
+1. Intent and Product carry the categorical direction, axiomatic programming as the computational model and the demonstration standard.
+2. One thin categorical steel thread proves the direction under the installed method.
+3. The method is amended from the thread's evidence. Each finding returns to its actual owner; a failure is a method finding only when triangulation establishes the method as its owner. Amended clauses are independently reviewed. The standalone successor, member acceptance and release obligations remain in force. The thread supports its own join, not qualification of the whole method.
+4. The full categorical product is built on the released method.
+
+Steel thread. Its subject is the neutral sum-and-histogram example, a test subject outside the constitutional corpus, run under the installed method. Its minimum contract:
+
+1. A declared purpose; input and result meanings; the exact sum law; the approximate-quantile adequacy relation with its quantile convention, bucket coverage and output rule; and the material failure outcomes.
+2. Concrete objects and arrows of the example's categories, their equality, identity and composition, and the specific maps claimed, related to the algorithmic, informational and computational accounts.
+3. One exact partition-and-reduction rewrite and one bounded approximation, each with explicit conditions and an end-to-end adequacy argument.
+4. An independently specified exact oracle, two concrete execution bindings, and comparison of returned meaning, required effects and diagnostics. A refusal case and an interruption or uncertain-effect case run beside normal completion.
+5. Measured latency, bytes moved and memory over a declared workload, with measurement boundaries and the activation's context, time and spend envelope. Only the cost and generality claims those observations support are made.
+6. The thread's own chain from Intent through Product and Specification to Realisation, each derivation step an arrow with a stated and discharged preservation obligation. A failed derivation is attributed under step 3 and counts against the method when triangulation establishes the method as its owner.
+
+The thread's selection, work carrier and envelope are open owner decisions.
+
+Reference design. The [2026-10-01 category-of-algorithms design](../.ai-workspace/comments/claude/assets/20261001T133903Z_STRATEGY_a-category-of-algorithms-with-computation.compressed.md) is a reference design and the thread's subject matter, read with the [corrections](../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#corrections-to-the-attached-design) of the categorical groundwork strategy. Its five layers are not method machinery.
+
+The sheaf account, a universal grade algebra and second-domain generality stay unresolved until an instance requires and supports them.
 
 ## Product Identity And Lineage
 
@@ -94,6 +132,10 @@ installed STDO law and no release cut.
   checkpoint review. The branch is deleted and its worktree removed after
   merge. An unmerged tenant branch is work in progress, not a lineage;
   `git worktree prune` runs only after merge.
+- Porting reads. Jim authorised on 2026-10-13 each tenant's Writer and
+  Reviewer activations to read the peer tenant's candidate at the commit
+  named in [Cross-Synthesis](#cross-synthesis), for porting and comparison.
+  Ported text is written only in the porting tenant's own territory.
 - Release cuts. `rc/*` and `release/*` remain governed by the installed
   RELEASE_METHOD and are not tenant branches.
 
@@ -107,6 +149,19 @@ Initial attempts are independent. Both can read common input posts and installed
 
 Each tenant's C1 principles realisation is reviewed and accepted separately; realisations may differ while answering the common questions. The common WHAT is not replaced by a merged tenant basis. Selection or combination of tenant outputs for a release requires Jim's explicit common-owner decision.
 
+## Cross-Synthesis
+
+Allowed by Jim on 2026-10-13; wording PROPOSED, awaiting review.
+
+| Line | Base | Takes named parts from |
+|---|---|---|
+| Claude | the Claude tenant candidate, `build_tenants/claude/` at `31f28f90c4a9b15243d84630fc4799024a9cd7ac`, with its frontier record | the Codex tenant candidate at the same commit |
+| Codex | the Codex tenant candidate, `build_tenants/codex/` at the same commit, with its frontier record | the Claude tenant candidate at the same commit |
+
+Inputs: the cross-assessments ([Claude on Codex](../.ai-workspace/comments/claude/20261013T043048Z_REVIEW_CODEX_V3_CANDIDATE_CROSS_ASSESSMENT.md), [Codex on Claude](../.ai-workspace/comments/codex/20261013T043456Z_REVIEW_CLAUDE_V3_CANDIDATE_CROSS_ASSESSMENT.md)), the direct comparisons ([Claude](../.ai-workspace/comments/claude/20261013T062917Z_REVIEW_V3_CANDIDATES_DIRECT_COMPARISON.md), [Codex](../.ai-workspace/comments/codex/20261013T064524Z_REVIEW_STDO_V3_DIRECT_COMPARISON_AND_PATH.md)) and [Codex's critique](../.ai-workspace/comments/codex/20261013T074253Z_REVIEW_DIRECT_COMPARISON_SYNTHESIS_RECOMMENDATION.md) of the Claude comparison.
+
+Each line keeps its own base. A part of the peer candidate enters a line only as a named contribution inside a member's cone. The Writer records the part's source locus, the single deciding owner it takes in the receiving line and the frontier disposition it supports. The Reviewer compares it with its source and with the predecessor. A ported part never creates a second owner for a determination. A relocated, unchanged determination stays `conserved` at its new locus; `superseded` requires an accepted replacement relation. The parts nominated in the cross-assessments are the initial port candidates; each line's Executive selects each one as an element of a member's cone. Both lines are bound by the [single result algebra](#result-algebra). Selection or combination of the lines for a release remains Jim's explicit decision.
+
 ## Checkpoints
 
 - C0: bootstrap the separate scope, common contract and independent entry routes; mechanical readiness and review only.
@@ -119,7 +174,7 @@ C0 cannot close C1; C1 cannot silently close C2. No full standards set, a_c prog
 
 ## C3 Construction Contract
 
-Status: accepted by Jim on 2026-10-12 as this project's configuration of the installed STDO 2.5.1 Executive engagement; C2 closed and C3 selected by that approval ([GOALS](GOALS.md)). Governing process: the baseline's [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions and TICKET_METHOD admission. Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+Status: accepted by Jim on 2026-10-12 as this project's configuration of the installed STDO 2.5.1 Executive engagement; C2 closed and C3 selected by that approval ([GOALS](GOALS.md)). Governing process: the baseline's [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions and TICKET_METHOD admission. Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md). Amended on 2026-10-13 for [cross-synthesis](#cross-synthesis) and the [single result algebra](#result-algebra); the amendment is PROPOSED in wording, awaiting review.
 
 Outcome. Each tenant produces a candidate for the target version: its foundational axioms and the full predecessor corpus restated on them per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), with every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md) carrying one UP-015 disposition and a successor locus, and with projected reference frames as the activation unit. The predecessor cut stays immutable and operative as builder until a release decision; it is not a component of the successor.
 
@@ -129,13 +184,13 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 
 | Tier | Owes | Receives from the predecessor |
 |---|---|---|
-| foundations | ontology, principles with standing, result algebra, the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
+| foundations | ontology, principles with standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
 | Spec Method | constitutional chain, requirements and design law, work carriers and triage, assurance and testing law, change classes and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
 | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
 | guides | posting, writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
 | packaging | manifest, schemas, templates, compressions or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before an RC cut |
 
-Activation unit. Each tenant publishes projected reference frames, one per selected task, from its restated corpus (a_c projections or an equivalent the tenant declares). A frame carries the clauses an actor needs for that task and nothing else. A frame, with its subject, is what any actor is activated on. Context is measured in bytes before the actor reads anything and recorded with the activation.
+Activation unit. Each tenant publishes projected reference frames, one per selected task, from its restated corpus (a_c projections or an equivalent the tenant declares). A frame carries the clauses an actor needs for that task and nothing else. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. A frame, with its subject, is what any actor is activated on. Context is measured in bytes before the actor reads anything and recorded with the activation.
 
 Audiences and tasks (decided 2026-10-12). Audiences: a fresh model actor activated on one frame against a declared subject; a human method owner reading by route; the Writer, Reviewer and Executive actors constructing or assessing the successor itself. Assumed knowledge: none beyond the activated frame and the subject; during construction, the installed predecessor for source routes. Tasks: do a bounded piece of work; resume work another actor left; review work; decide acceptance or release; apply a profile; construct or assess a successor member.
 
@@ -160,6 +215,10 @@ Closure. C3 closes for a tenant when every row of its frontier is disposed and e
 
 - Audiences, tasks, assumed knowledge and the C2 acceptance criteria: DECIDED 2026-10-12, in the [C3 Construction Contract](#c3-construction-contract).
 - C3 Executive and Reviewer actors per tenant: OPEN; Jim names them in the tenant tickets. Until then every execution contract stays `drafted`.
+- Review of a ported part: OPEN. By default a member is reviewed by the peer tenant's model family, which is the source author of any part ported from the peer; the [Independence](#c3-construction-contract) rule forbids a Reviewer assessing its own authorship. Jim decides how a ported part is reviewed before the first cone with a contribution is accepted.
+- Categorical steel thread selection, work carrier, and spend and time envelope: OPEN; the thread follows acceptance of the [Categorical Construction](#categorical-construction) change.
+- Reading of "restated on the axioms": DECIDED 2026-10-13, selected for the candidate comparison and confirmed for C3; stated in the [standalone successor requirement](requirements/README.md#standalone-successor-requirement) (wording PROPOSED, awaiting review).
+- Successor identity and packaging: whether the compressions are kept, superseded or removed, and how a_c and Traversal identity issuance and admission complete without predecessor bytes: OPEN before an RC cut.
 - Release lineage: DECIDED 2026-10-12, see [Product Identity And Lineage](#product-identity-and-lineage); the target version continues the existing STDO Specification Methodology line.
 - Candidate/RC ref naming: follows the existing `specification_methodology` release namespace under RELEASE_METHOD; the exact candidate ordinal and cut are selected before an RC cut. The earlier `rc/stdo_3/3.0.0` proposal is withdrawn by the lineage decision.
 - Construction-scope layout: DECIDED 2026-10-12; `specification_methodology/v2/` and `specification_methodology/v3/` side by side, identifiers unchanged. Performed as its own bounded change, independent of this contract.

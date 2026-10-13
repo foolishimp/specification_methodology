@@ -16,6 +16,10 @@ Both tenants are evaluated against independently specified common expectations. 
 | Interruption leaves authored progress | Recovery uses the current workspace and applicable work state; it does not erase progress or fabricate completed assessment. |
 | A parse or map succeeds | The claim remains mechanical until independently sufficient semantic and practical evidence exists. |
 | Carrier/process churn is proposed as new law | The claimed obligation is justified by purpose and material relation, or identified as unsupported overhead. |
+| A member or profile defines its own result values | Each value maps to exactly one core result. Failure, undecidability, non-performance and unknown effect completion never map to a higher standing. The evaluated predicate and the domain outcome travel with the core value ([requirement](../requirements/README.md#single-result-algebra-requirement)). |
+| A frame's task returns a result | The frame carries the core result algebra or its profile's mapping into it. |
+| A functor or categorical join is claimed | Objects, arrows, arrow equality, identity and composition are given and the functor laws are shown before the claim; otherwise the claim is a hypothesis ([standard](../requirements/README.md#categorical-demonstration-standard)). |
+| A rewrite or refinement step is applied | Its licensing law is declared for the subject. An exact step preserves meaning; an approximate step states its adequacy relation and an end-to-end bound. |
 
 C1 can find logical counterexamples and contradictions without executing a runtime. C3+ actual-use cases must perform real construction, observe genuine defects, preserve effect uncertainty and re-enter lawfully.
 
