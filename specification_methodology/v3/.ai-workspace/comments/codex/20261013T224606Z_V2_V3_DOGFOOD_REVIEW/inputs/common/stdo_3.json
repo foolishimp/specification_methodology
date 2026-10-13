@@ -1,0 +1,178 @@
+{
+  "$schema": "stdo://releases/v2.5.1-rc.2/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:stdo-3",
+    "name": "Specification Methodology, next major release (source project specification_methodology/v3)",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo-3:bounded-context:method",
+      "definition": "./specification/PRODUCT.md#product-boundary"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/2.5.1",
+      "basis": {
+        "uri": "stdo://releases/v2.5.1-rc.2/",
+        "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+      }
+    },
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/STDO_REFERENCE_FRAME_BASELINE.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/AXIOMATIC_CALCULUS.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/DESIGN_MODULE_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/TICKET_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/RELEASE_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/additional_authorities/0",
+        "uri": "INTENT.md"
+      },
+      {
+        "basis": "#/constitution/additional_authorities/1",
+        "uri": "PRODUCT.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [
+      {
+        "uri": "./specification/PRODUCT.md#product-identity-and-lineage",
+        "authority": [
+          "./specification/PRODUCT.md#construction-authority"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-3"
+        ]
+      },
+      {
+        "uri": "./specification/PRODUCT.md#development-isolation",
+        "authority": [
+          "./specification/PRODUCT.md#construction-authority"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-3"
+        ]
+      }
+    ],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md",
+      "authority": [
+        "./specification/PRODUCT.md#construction-authority",
+        "./.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#owner-instruction"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:stdo-3"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/",
+      "./specification/conformance/"
+    ]
+  },
+  "how": {
+    "common": [
+      "./build_tenants/README.md"
+    ],
+    "build_tenants": [
+      {
+        "id": "urn:stdo-3:build-tenant:codex",
+        "root": "./build_tenants/codex/",
+        "design": [
+          "./build_tenants/codex/design/"
+        ],
+        "implementation": [
+          "./build_tenants/codex/successor/",
+          "./build_tenants/codex/a_c/"
+        ]
+      },
+      {
+        "id": "urn:stdo-3:build-tenant:claude",
+        "root": "./build_tenants/claude/",
+        "design": [
+          "./build_tenants/claude/design/"
+        ],
+        "implementation": [
+          "./build_tenants/claude/standards/",
+          "./build_tenants/claude/a_c/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    }
+  },
+  "composition": [
+    {
+      "product_definition": "../../axiom_indexer/stdo_default.json",
+      "target_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "relation": "./specification/requirements/A_C_DEPENDENCY.md#directed-mechanical-dependency-relation",
+      "contracts": [
+        "./specification/requirements/A_C_DEPENDENCY.md"
+      ]
+    }
+  ]
+}

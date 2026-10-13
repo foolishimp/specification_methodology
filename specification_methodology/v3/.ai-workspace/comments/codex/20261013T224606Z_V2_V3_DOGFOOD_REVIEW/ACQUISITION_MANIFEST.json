@@ -1,0 +1,387 @@
+{
+  "activation": "RF-V2-V3-COMP-01",
+  "created_utc": "2026-10-13T22:49:44.042650+00:00",
+  "roles": {
+    "executive": "/root",
+    "assessor": "/root/v2_v3_dogfood_reviewer",
+    "preparation_and_report_writer": "same actor in separately declared effect operation",
+    "corroborator": "fresh Claude CLI, no tools, no prior author returns"
+  },
+  "governing_basis": "installed v2.5.1-rc.2",
+  "v3_standing": "frozen experimental review protocol and comparison subject; no adoption",
+  "source_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "evidence_commit": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6",
+  "common_input_commit": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73",
+  "grant_commit": "bbb266340cd3c3a0f0106412c3bcd912f311e437",
+  "limits": {
+    "frame_selected_bytes": 160000,
+    "cli_selected_bytes": 120000,
+    "cli_usd": 8,
+    "cli_seconds": 900,
+    "wall_minutes": 60
+  },
+  "activation_files": {
+    "ACTIVATION.md": {
+      "sha256": "b3e9b4039af7bc41931718b9d19e2902d32416aeb888eec02d05c87d2cf886df",
+      "bytes": 3421
+    },
+    "ACTIVATION.json": {
+      "sha256": "f1ef73fdd28ba216cb9b776d398896a026462289aad37bb09802f77670e2b72e",
+      "bytes": 1336
+    }
+  },
+  "snapshots": [
+    {
+      "path": "inputs/v2/standards/README.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/README.md",
+      "sha256": "7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+      "bytes": 2330,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/standards/REFERENCE_FRAME_METHOD.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md",
+      "sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
+      "bytes": 55118,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/standards/AXIOMATIC_CALCULUS.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "bytes": 37849,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/standards/authority_compressions/stdo_bootstrap.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/authority_compressions/stdo_bootstrap.md",
+      "sha256": "f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a",
+      "bytes": 5772,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/standards/authority_compressions/stdo_compressed.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/authority_compressions/stdo_compressed.md",
+      "sha256": "3dfe3bf0913925f5daac497cef7920fdfd0a4f3d4afea1bfc996b0715119819e",
+      "bytes": 74836,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/plugins/spec/skills/stdo-review/SKILL.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-review/SKILL.md",
+      "sha256": "99f3d12012c7c3a39fc6ac5b80f4cc54c40d2709c536ec17a535647608ecf4db",
+      "bytes": 4578,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/plugins/spec/skills/stdo-work/SKILL.md",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/plugins/spec/skills/stdo-work/SKILL.md",
+      "sha256": "39d9f88af4b574c4e30f45adc3b19ed324c25ae453d7359112af71aa9d4d4d8f",
+      "bytes": 10078,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/README.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/README.md",
+      "sha256": "5d6f51dfa13e43e59f4f791003e10d3f09288d2a925b2afb80a0d74b46b21cda",
+      "bytes": 6852,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/REFERENCE_FRAME_METHOD.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md",
+      "sha256": "7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213",
+      "bytes": 59857,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/AXIOMATIC_CALCULUS.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09",
+      "bytes": 45331,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/authority_compressions/stdo_bootstrap.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/authority_compressions/stdo_bootstrap.md",
+      "sha256": "2e78793131bee51dc3e851e16c7ce0d1dda5dbac7e03a56a545c91e2326e426a",
+      "bytes": 6773,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/authority_compressions/stdo_compressed.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/authority_compressions/stdo_compressed.md",
+      "sha256": "a45b3269627128d8417b86d3c9a1618b5ae00dbcf6c54bf45c7c46f8c5208c65",
+      "bytes": 76062,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/plugins/spec/skills/stdo-review/SKILL.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-review/SKILL.md",
+      "sha256": "99f3d12012c7c3a39fc6ac5b80f4cc54c40d2709c536ec17a535647608ecf4db",
+      "bytes": 4578,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/plugins/spec/skills/stdo-work/SKILL.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md",
+      "sha256": "bee64a2f41d6a8961135817ac1b4f88ac028913e430009cf7ac323742b54c38f",
+      "bytes": 12377,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/README.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/README.md",
+      "sha256": "56bacbdfd8e2d2667046d41e6f23b13624eb61caaf55bfc9736430485753a6e9",
+      "bytes": 843,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/FOUNDATIONS.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/FOUNDATIONS.md",
+      "sha256": "e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b",
+      "bytes": 44792,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/TRANSFORMATION_LIBRARY.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md",
+      "sha256": "4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd",
+      "bytes": 20424,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/frames/WORK_RECOVERY.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md",
+      "sha256": "c18b9749f3eaca3776dc254394f0e2eee3ef26b7e17bb3c94c302885f67d4364",
+      "bytes": 53174,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/frames/EVALUATION_CONJUNCTION.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/frames/EVALUATION_CONJUNCTION.md",
+      "sha256": "c0662803016fe4d194019879ecd760419cdf59850e3f7bddba03a5cb4ed5dc64",
+      "bytes": 33463,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v3/standards/frames/TRIAGE_CARRIER.md",
+      "origin": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd:specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+      "sha256": "db3e122376281f919c2d5a3d1282de980881bda186da8e6ea9d7bb956f45c786",
+      "bytes": 67563,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/common/stdo_3.json",
+      "origin": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73:specification_methodology/v3/stdo_3.json",
+      "sha256": "e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12",
+      "bytes": 5020,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/common/specification/PRODUCT.md",
+      "origin": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73:specification_methodology/v3/specification/PRODUCT.md",
+      "sha256": "5527d270210c4d7603e5c4f330894a07e0f52d194e11e02318b18c784464db34",
+      "bytes": 42436,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/common/specification/REFERENCE_FRAME_BASIS.md",
+      "origin": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73:specification_methodology/v3/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "8f6d268bc51211ffccd7ab714b15891b6670429ecdabb9ffd8e0c8c0892090aa",
+      "bytes": 6463,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/common/specification/requirements/README.md",
+      "origin": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73:specification_methodology/v3/specification/requirements/README.md",
+      "sha256": "032541fc43652f7e8214c4dc8ca2ab5cbe871707efb4f7335b6bea914e515a50",
+      "bytes": 17336,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/common/specification/conformance/README.md",
+      "origin": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73:specification_methodology/v3/specification/conformance/README.md",
+      "sha256": "c4791ca16345345e5c5136a153d6e929d54ec1f191ad98d05ca57a4755485f95",
+      "bytes": 8734,
+      "standing": "frozen input; copying does not assert full reading"
+    },
+    {
+      "path": "inputs/v2/manifest.json",
+      "origin": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/manifest.json",
+      "sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "bytes": 12434,
+      "standing": "frozen input; copying does not assert full reading"
+    }
+  ],
+  "packets": [
+    {
+      "path": "packets/source_assessment.txt",
+      "sha256": "4149acb824751265ff55c511d4e6fdbe199213a75911a7b39de4333bde34f863",
+      "bytes": 103548,
+      "selections": [
+        {
+          "kind": "v3",
+          "path": "standards/FOUNDATIONS.md",
+          "first_line": 1,
+          "last_line": 235,
+          "selected_bytes": 16106,
+          "member_sha256": "e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/FOUNDATIONS.md",
+          "first_line": 296,
+          "last_line": 643,
+          "selected_bytes": 22893,
+          "member_sha256": "e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/TRANSFORMATION_LIBRARY.md",
+          "first_line": 1,
+          "last_line": 275,
+          "selected_bytes": 20424,
+          "member_sha256": "4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 344,
+          "last_line": 508,
+          "selected_bytes": 7864,
+          "member_sha256": "7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 628,
+          "last_line": 773,
+          "selected_bytes": 6628,
+          "member_sha256": "7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 1376,
+          "last_line": 1405,
+          "selected_bytes": 772,
+          "member_sha256": "7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213"
+        },
+        {
+          "kind": "v2",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 289,
+          "last_line": 447,
+          "selected_bytes": 6574,
+          "member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7"
+        },
+        {
+          "kind": "v2",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 562,
+          "last_line": 710,
+          "selected_bytes": 6129,
+          "member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7"
+        },
+        {
+          "kind": "v2",
+          "path": "standards/REFERENCE_FRAME_METHOD.md",
+          "first_line": 1312,
+          "last_line": 1344,
+          "selected_bytes": 910,
+          "member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7"
+        },
+        {
+          "kind": "v2",
+          "path": "standards/authority_compressions/stdo_bootstrap.md",
+          "first_line": 1,
+          "last_line": 96,
+          "selected_bytes": 5772,
+          "member_sha256": "f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/README.md",
+          "first_line": 1,
+          "last_line": 105,
+          "selected_bytes": 6852,
+          "member_sha256": "5d6f51dfa13e43e59f4f791003e10d3f09288d2a925b2afb80a0d74b46b21cda"
+        }
+      ]
+    },
+    {
+      "path": "packets/matched_v2.txt",
+      "sha256": "38a822670d97dd31cfaa51c04d375c51cdac3ae867fdbdde7a1b9867c510d560",
+      "bytes": 92761,
+      "selections": [
+        {
+          "kind": "v2",
+          "path": "standards/authority_compressions/stdo_bootstrap.md",
+          "first_line": 1,
+          "last_line": 96,
+          "selected_bytes": 5772,
+          "member_sha256": "f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a"
+        },
+        {
+          "kind": "v2",
+          "path": "standards/authority_compressions/stdo_compressed.md",
+          "first_line": 1,
+          "last_line": 1137,
+          "selected_bytes": 74836,
+          "member_sha256": "3dfe3bf0913925f5daac497cef7920fdfd0a4f3d4afea1bfc996b0715119819e"
+        },
+        {
+          "kind": "v2",
+          "path": "plugins/spec/skills/stdo-work/SKILL.md",
+          "first_line": 1,
+          "last_line": 175,
+          "selected_bytes": 10078,
+          "member_sha256": "39d9f88af4b574c4e30f45adc3b19ed324c25ae453d7359112af71aa9d4d4d8f"
+        }
+      ]
+    },
+    {
+      "path": "packets/matched_v3.txt",
+      "sha256": "08ad6a61d487527875476ca1cf8208718e74f1268731b07d608b9f66e075377b",
+      "bytes": 97288,
+      "selections": [
+        {
+          "kind": "v3",
+          "path": "standards/authority_compressions/stdo_bootstrap.md",
+          "first_line": 1,
+          "last_line": 112,
+          "selected_bytes": 6773,
+          "member_sha256": "2e78793131bee51dc3e851e16c7ce0d1dda5dbac7e03a56a545c91e2326e426a"
+        },
+        {
+          "kind": "v3",
+          "path": "standards/authority_compressions/stdo_compressed.md",
+          "first_line": 1,
+          "last_line": 1156,
+          "selected_bytes": 76062,
+          "member_sha256": "a45b3269627128d8417b86d3c9a1618b5ae00dbcf6c54bf45c7c46f8c5208c65"
+        },
+        {
+          "kind": "v3",
+          "path": "plugins/spec/skills/stdo-work/SKILL.md",
+          "first_line": 1,
+          "last_line": 210,
+          "selected_bytes": 12377,
+          "member_sha256": "bee64a2f41d6a8961135817ac1b4f88ac028913e430009cf7ac323742b54c38f"
+        }
+      ]
+    }
+  ],
+  "runner": {
+    "origin": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6:specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/run_actor.py",
+    "original_sha256": "b273c3fd45c1180bfd629002a60338f043d902602df6bca7f4c99648225fd525",
+    "local_sha256": "92a68bbc0206685bdb758880d0986b78ff563397c17e88f3ffc2d2b5683acc84",
+    "change": "Temporary isolated cwd placed inside admitted effect territory. Safe/restricted/no-tools settings retained."
+  },
+  "baseline_verification": {
+    "path": "BASELINE_VERIFICATION.json",
+    "sha256": "a18ff286cce141321079a15a2a9bbad670b5bfc714a24f1b3d1195ae66bd0919",
+    "valid": true
+  }
+}
