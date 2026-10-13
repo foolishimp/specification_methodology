@@ -1,82 +1,197 @@
 # Claude Tenant Design: Document Structure
 
-Status: tenant HOW for the STDO 3 candidate on `tenant/claude/c3-v3`; not
-common WHAT; not accepted. Builder basis `stdo://releases/v2.5.1-rc.2/`.
-Inputs: [Intent](../../../specification/INTENT.md),
-[Product](../../../specification/PRODUCT.md) (C3 contract),
-[requirements](../../../specification/requirements/README.md), the common
-[frontier](../../../specification/requirements/PREDECESSOR_CLAIMS.md) and
-its [tenant copy](../frontier/PREDECESSOR_CLAIMS.md), and the accepted
-[PRINCIPLES](PRINCIPLES.md), unchanged here.
+Status: tenant HOW for the Claude line's candidate, on branch
+`tenant/claude/c3-synthesis`. Not common WHAT; not accepted. Builder:
+`stdo://releases/v2.5.1-rc.2/`. Inputs: the common
+[Intent](../../../specification/INTENT.md),
+[Product](../../../specification/PRODUCT.md) (the C3 Construction Contract
+and Cross-Synthesis),
+[requirements](../../../specification/requirements/README.md),
+[conformance discriminators](../../../specification/conformance/README.md),
+the common [frontier](../../../specification/requirements/PREDECESSOR_CLAIMS.md)
+and its [tenant copy](../frontier/PREDECESSOR_CLAIMS.md), at the snapshot
+recorded in the [ledger](../qualification/C3-SYNTHESIS/LEDGER.md#basis).
+Companion design files: [CONSTRUCTION_BINDING](CONSTRUCTION_BINDING.md)
+(how this tenant builds) and [CROSS_SYNTHESIS](CROSS_SYNTHESIS.md) (parts
+taken from the Codex candidate).
 
 ## Purpose
 
-The candidate is the foundational axioms first, then the whole v2.5.1-rc.2
-corpus restated on them in this tenant's own text, complete and applicable
-with the predecessor no longer operative. Every frontier row receives one
-UP-015 disposition and, where conserved or superseded, a locus that
-resolves to the tenant's text.
+The candidate is the foundational axioms first, then every member of the
+2.5.1-rc.2 release restated on them in this tenant's own text, usable with
+the predecessor no longer in force. "Restated on the axioms" means the
+three relations of the
+[standalone successor requirement](../../../specification/requirements/README.md#standalone-successor-requirement):
+foundation to law, ownership and use, and standalone conservation.
+Unchanged predecessor wording is permitted in a clause where those
+relations hold. A link to the predecessor is provenance; it never
+satisfies a disposition.
 
-Two first-pass errors are retired: sizing the corpus to one activation,
-and counting a route to the rc.2 clause (FOUNDATIONS §1) as a disposition.
-The corpus is as large as the law requires and an activation reads a
-projected frame; a route is provenance under the standalone successor
-requirement. The first-pass files
-are starting text where they already restate; each is rewritten at its
-member's activation; nothing is accepted by presence.
+The corpus is as large as its obligations require. No actor reads it
+whole: each actor is started on a frame for its task (Activation unit,
+below).
 
 ## Tiers and members
 
-Files are under `standards/` unless a path says otherwise. Obligations are
-PRODUCT's C3 tier table; the organisation is this tenant's. A member marked
-new exists only after its activation.
+Files are under `standards/` unless a path says otherwise. What each tier
+owes is fixed by the [C3 tier table](../../../specification/PRODUCT.md#c3-construction-contract);
+the member split is this tenant's.
 
 ### Tier 1, foundations
 
-| Member | Owes | Why a member |
-|---|---|---|
-| FOUNDATIONS.md | ontology with the frame objects (§2), C (proposed as P0) and P1 to P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 |
-| REFERENCE_FRAME.md, new | the frame law: RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |
-| ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality (UP-014), reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |
-| AXIOMATIC_CALCULUS.md, new | the a_c theory in full: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, exact identity, conformance obligations | the projection that produces every frame is defined here |
-| IDENTITY.md, new | scoped identity, uniqueness, type and stability, hierarchy, authority split, UP-004, parsing, version boundary | the tier receives IDENTITY_METHOD; cited too widely for a subsection |
-| EVALUATION.md | claims, evidence and authority law, litmus, independent assessment, review results, acceptance, conformance, qualification of the method | keeps its role; receives the generic evidence law and the reviewer-result law |
-
-ACTIVATION section 3 is the one definition of the result algebra; RF-012
-(REFERENCE_FRAME) and AC-007 (AXIOMATIC_CALCULUS) restate their laws on it
-in their own words and define it nowhere else: two distinct predecessor
-claims over one definition, not a merged law; their unification stays the
-C2 question PRINCIPLES names.
+| Member | Owns |
+|---|---|
+| FOUNDATIONS.md | the vocabulary of standing; the ontology with the frame objects; P0 to P6 with a standing column; the foundation-to-law format and family index; the core result algebra and its conjunction; composition and conservation; the generic import rule; hypotheses |
+| REFERENCE_FRAME.md | the frame as a first-class object: RF-001 to RF-017, frame sets, method functions, frames in conjunction (by reference to the core conjunction), coverage, revision, the activation packet |
+| ACTIVATION.md | bounded work: transitions from current state to destination, the step, intake, admission, configuration, context construction and the size measurement, the step's result refinements and dispositions, totality and refinement, work state and resumption, proportionality, closed results and reuse |
+| AXIOMATIC_CALCULUS.md | the a_c theory: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, identity, conformance obligations |
+| IDENTITY.md | scoped identity, uniqueness, type, stability, hierarchy, authority split, UP-004, parsing, version boundary |
+| EVALUATION.md | claims, evidence, independent assessment, review results, acceptance, conformance and the equivalence ladder, qualification of frames and of the method, actual-use evidence of adequate attention |
 
 ### Tier 2, Spec Method
 
-| Member | Owes | Why a member |
-|---|---|---|
-| SPEC_METHOD.md | the particular method: constitutional chain, process constitution, manifesto, ambiguity governance, requirement and design law, change classes and re-entry, migration, UP-012, UP-013 | keeps its role; carries every SPEC_METHOD clause that is not generic |
-| PRODUCT_DEFINITION.md, new | the overlay and layout independence, STDO-SURFACE-001, bootstrap rule, a project's version boundary | a fifth of SPEC_METHOD; how one project binds to the method; the semantics the schemas and templates realise |
-| TICKETS.md, new | work carriers: ticket and sprint model, layout, authority, triage-first intake, closure by condition, migration, ticket shape | the tier owes carriers and triage; the first pass reduced 60 KB to one section |
-| ASSURANCE.md, new | evidence rules, verification layers, testing taxonomy, test authority, scenario bundles, path coverage, trace closure, the testing frame set, counterexample localisation, module-derived unit tests | the tier owes assurance and testing law; spread over three rc.2 members with no home |
-| RELEASE.md, new | release identities, qualified refs, phases, candidate, immutable RC, exact-cut qualification, monotonic advancement, selector adoption, naming, cohorts, UP-015 | the tier owes release mechanics; the first pass carried lineage only |
-| CONFORMANCE.md | the cases the method must pass, with independently specified expectations; the common discriminators | acceptance criterion 5 |
+| Member | Owns |
+|---|---|
+| SPEC_METHOD.md | the particular method: constitutional chain, process constitution, requirement and design law, outcome conservation, change classes and re-entry, ambiguity governance, migration, UP-012, UP-013, the general law of build-tenant binding |
+| PRODUCT_DEFINITION.md | how one project binds to the method: overlay and layout independence, bounded-context resolution for a project's terms, STDO-SURFACE-001, bootstrap, build tenancy as a registry |
+| TICKETS.md | work carriers: ticket and sprint model, layout, authority, triage-first intake, closure by condition, migration, ticket shape |
+| ASSURANCE.md | evidence rules, verification layers, testing taxonomy, test authority, scenario bundles, path coverage, trace closure, testing frames, counterexample localisation, module-derived unit tests |
+| RELEASE.md | release identities, qualified refs, phases, immutable RC, exact-cut qualification, selector adoption, naming, cohorts, UP-015 |
+| CONFORMANCE.md | the cases the method must pass, with independently specified expectations, mapped to the common discriminators |
 
 ### Tier 3, profiles
 
-| Member | Owes | Why a member |
-|---|---|---|
-| PROFILES.md | the boundary: how a profile imports the tiers above, what stays out of the core, the index | keeps its role as index and boundary only |
-| EXECUTIVE_BASELINE.md, new | STDO_REFERENCE_FRAME_BASELINE in full: profile terms, Executive attention and drift locks, derived frames, engagement transition, adoption, failure classification | the tier receives the frame catalogues and Executive law; this construction runs under it |
-| DESIGN_MODULE.md, new | DESIGN_MODULE_METHOD realisation law: ontology-first design, prime law, carrier set, boundary evaluators, totality, effect edge, coupling | 121 KB of realisation law; PROFILES §3 was a stub |
-| ODD.md, TRAVERSAL_OCCURRENCE.md, UX.md, WORLD_MODEL.md, new | each predecessor profile in full, importing the tiers above | the tier owes a full restatement per profile; a stub cannot carry 15 to 85 sections |
+Each profile imports the tiers above and owns only its own bindings: the
+terms and choices it adds, and the mapping of its result values into the
+core result algebra.
+
+| Member | Owns |
+|---|---|
+| PROFILES.md | the boundary: how a profile imports the tiers above, what stays out of the core, the index |
+| EXECUTIVE_BASELINE.md | the operational profile restating STDO_REFERENCE_FRAME_BASELINE: profile terms, Executive attention and drift locks, the derived frames, the engagement transition, adoption and project configuration, failure classification |
+| DESIGN_MODULE.md | the DESIGN_MODULE_METHOD realisation law: ontology-first design, Prime, carrier set, boundary evaluators, totality, effect edge, coupling |
+| ODD.md, TRAVERSAL_OCCURRENCE.md, UX.md, WORLD_MODEL.md | each predecessor profile in full |
 
 ### Guides, route, packaging
 
 POSTING_GUIDE.md and WRITING_GUIDE.md restate their predecessors.
-GLOSSARY.md, new, is the non-deciding locator index whose rows route to the
-owning successor clause, never to rc.2; generated from anchors where
-possible. README.md carries the routes by task, the document map and the
-layout. Packaging members and paths are in the member map; the candidate
-mirrors the installed layout so the inventory comparison at the RC cut is
-mechanical.
+GLOSSARY.md is the non-deciding locator index; its rows route to the
+owning successor clause, never to rc.2. README.md carries the routes by
+task, the document map and the layout, and owns no method determination.
+Packaging mirrors the installed layout so the inventory comparison at a
+release-candidate cut is mechanical.
+
+## Ownership decisions
+
+Each decision fixes one owning section for a question the current
+candidate decides in more than one place, or adds an owner the common
+specification now requires. The evidence for each defect is in the
+[verified gap list](../qualification/C3-SYNTHESIS/PLAN.md#verified-gap-list).
+
+**D1. Core result algebra and conjunction: FOUNDATIONS §4.** A new
+subsection "Results" owns the core values, their meanings, the standing
+relation, the rule that no refinement raises standing, and conjunction
+and composition of results. ACTIVATION §3 keeps the step's refinements
+(construction availability, disposition, ambiguity outcome), each mapped
+into the core. RF-012 in REFERENCE_FRAME §3, REFERENCE_FRAME §6 Result
+conjunction, AC-007 in AXIOMATIC_CALCULUS §4 and EVALUATION §4 refer to
+the owner and define nothing further. Reason: the
+[single result algebra requirement](../../../specification/requirements/README.md#single-result-algebra-requirement)
+places the core in the Foundations and defines conjunction once over it.
+`FOUNDATIONS.md:3–5` already claims the algebra while `ACTIVATION.md:6–8`
+says ACTIVATION adds no definitions; values and conjunction in one section
+end both conflicts. The core must meet these constraints:
+
+- a required evaluation or step that was not performed has a core value
+  distinct from `indeterminate` (proposed name `not_performed`). A separate
+  value is chosen over carrying the distinction only in the domain outcome,
+  because conjunction is defined over the core and can preserve only
+  distinctions the core holds. `not_performed` is the result of a planned
+  assessment or step that was not carried out; required coverage that no
+  planned assessment addresses is an uncovered obligation, not a result,
+  and conjunction keeps the two apart;
+- effects are a refinement with three values (completed, not effected,
+  completion unknown), mapped to `satisfied`, `falsified` and
+  `indeterminate` for the predicate "the intended effect occurred"; an
+  unknown completion never maps to completed or to no effect;
+- each refined value maps to exactly one core value. Where a refined value
+  maps today to one of two core values by its cause, the cause becomes part
+  of the refined value, and each resulting value maps once;
+- `candidate_ready` maps to `satisfied` only for the predicate "a candidate
+  is available", which travels with the value. A conjunction keeps each
+  component's predicate with its value, so an availability `satisfied`
+  never counts toward fitness or acceptance.
+
+**D2. Measurement of context size: ACTIVATION §2.** Step 3 of context
+construction owns the size measurement and the fit test against the
+declared capacity. RF-002 refers to it. ACTIVATION §6 owns proportionality
+only and refers to the execution binding for time and spend. EVALUATION §7
+Frame qualification owns actual-use evidence of adequate attention, kept
+separate from size. The present conflict, unconditional measurement at
+`ACTIVATION.md:211–214` against measurement only where selected at
+`REFERENCE_FRAME.md:140–141`, `REFERENCE_FRAME.md:336–340`,
+`ACTIVATION.md:59–60` and `ACTIVATION.md:654–657`, is resolved in ACTIVATION
+§2 in one direction with its reason. Recommended reading: size is measured
+whenever the actor's envelope declares a size capacity; a measurement is
+not a budget, and no universal budget follows.
+
+**D3. Transitions and configuration: ACTIVATION §1.** ACTIVATION §1 gains
+the account of work from a current state A to a destination Z through
+bounded transitions, and the configuration law of the
+[Bounded Transitions requirement](../../../specification/requirements/README.md#bounded-transitions-and-reference-frames)
+item 4. ACTIVATION §5 gains item 5: the workspace and its authoritative
+inputs are the continuing truth surface and an actor's context is a
+disposable account of them. The fixed role list in the Actor row of
+FOUNDATIONS §2 (`FOUNDATIONS.md:50`) and the three roles of ACTIVATION §1
+(`ACTIVATION.md:149–153`) become examples of a derived allocation.
+SPEC_METHOD §8 refers. EXECUTIVE_BASELINE keeps its catalogue and its
+project configuration (§16) as its own bindings.
+
+**D4. Build-tenant binding: a new SPEC_METHOD section.** It owns the
+general law: a tenant binds the requirements calculus to a computational
+calculus and that calculus to an execution environment, under items 1 to
+6 of the
+[Build-Tenant Binding requirement](../../../specification/requirements/README.md#build-tenant-binding-requirement).
+PRODUCT_DEFINITION §8 refers to it from the tenant registry. This tenant's
+own binding is [CONSTRUCTION_BINDING](CONSTRUCTION_BINDING.md).
+
+**D5. Foundation to law: FOUNDATIONS §3 and the owning members.**
+FOUNDATIONS §3 owns the table format (ported part 1) and a non-deciding
+index that names each material family, its owning section and the members
+it accounts for. Each family's table sits in its owning member, at the
+section where an actor enters that family. Reason: relation 2 requires
+shared contracts to be used where an actor applies them; a table at the
+entry section is in the frame an actor is started on, while a central
+table would be a cross-reference and would make FOUNDATIONS a second owner
+of each family's choices.
+
+**D6. Successor dispositions: RELEASE §9.** RELEASE §9 owns the UP-015
+values. FOUNDATIONS §1 keeps the vocabulary of standing (recovered,
+derived, independent, hypothesis) and the rule that a clause names its
+requiring principle. That vocabulary is the only one for standing: the
+recovered and independent commitments are the method's adopted premises,
+and the derived ones are consequences of them. Its application of UP-015 to this corpus
+(`FOUNDATIONS.md:9–28`, `:36–38`) concerns this construction, not any
+method, so it leaves the Foundations: the record procedure is the
+Disposition record section below, and the corpus's standing is stated in
+the standards README, which owns no determination.
+
+**D7. Imports between members: FOUNDATIONS §2.** A tier-1 member that uses
+a concept owned by another member declares the import (source owner,
+target, direction, loss, no transfer of authority). The generic rule moves
+to FOUNDATIONS §2, because tier-1 members need it and a tier-1 member must
+not depend on a tier-2 owner. PRODUCT_DEFINITION §5 (`:412–443`) refines it
+for a project's bounded contexts and maps its four relation kinds back to
+the owner.
+
+**D8. Categorical and refinement claims.** FOUNDATIONS §4 Formal fragment
+owns what a categorical claim must show: items 1, 4 and 5 of the
+[categorical demonstration standard](../../../specification/requirements/README.md#categorical-demonstration-standard);
+it keeps H1 as a hypothesis. EVALUATION §6 owns the equivalence ladder
+(ported part 4). ACTIVATION §4 Refinement owns items 2 and 3 for
+refinement and rewrite steps: the licensing law declared for the subject,
+exact steps preserving meaning, and approximate steps stating an adequacy
+relation and an end-to-end bound.
 
 ## Member map
 
@@ -98,81 +213,62 @@ mechanical.
 | UX_METHOD.md | UX |
 | WORLD_MODEL_METHOD.md | WORLD_MODEL |
 | WRITING_GUIDE.md | WRITING_GUIDE |
-| compressions (10) | `a_c/` program, map and frames, proposed `superseded` by the relation "projection from the set program"; `stdo_bootstrap.md` to PRODUCT_DEFINITION and bootstrap templates |
+| compressions (10) | unresolved until the product owner rules whether they are kept, superseded or removed (ledger default 7); the candidate's frames are verbatim excerpts, not compressions |
 | schemas (2) | `standards/schemas/`, governed by PRODUCT_DEFINITION and RELEASE |
 | templates (24) | `standards/templates/`, governed by SPEC_METHOD, TICKETS, PRODUCT_DEFINITION, REFERENCE_FRAME |
-| plugin (17) | `plugins/spec/`, each skill re-routed to its successor frames |
+| plugin (17) | `plugins/spec/`, each skill routed to its successor frames and owners |
 | licence (1) | `LICENSE` at the candidate root |
 | release note (1) | `release/release-note.md`, written at the RC cut under RELEASE |
 | manifest (1) | written at the RC cut under RELEASE; schema in the schemas row |
 
-## Disposition vocabulary
+## Disposition record
 
-Every frontier row takes exactly one of `conserved` (restated in the
-tenant's own text; the locus resolves; an author-independent source
-comparison finds the determination present), `superseded` (an accepted
-successor relation, named), `intentionally removed` (Jim's decision and
-reason) or `not applicable` (bounded reason); `unresolved` is the only
-other state and blocks qualification. Every clause carries the principle
-that requires it, C (proposed as P0) and P1 to P6 of
-[PRINCIPLES](PRINCIPLES.md), and may carry a provenance route into
-`stdo://releases/v2.5.1-rc.2/`. A clause with
-no predecessor row is new law, admitted only with the purpose and material
-relation that require it (criterion 6). `reframed` is a note on how a
-conserved claim was carried, never a disposition. A member's Writer fills the
-Disposition and Successor locus columns of its cone in the tenant frontier
-copy; the Reviewer checks them; the Executive consolidates accepted rows
-into the common file through the pen.
+The disposition values and their conditions are owned by
+[RELEASE §9](../standards/RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+and, for this product, by the common
+[successor requirements](../../../specification/requirements/README.md#successor-disposition-requirement)
+and acceptance criteria 1 and 3. This section states only how this
+construction records them.
+
+- The tenant frontier copy holds one disposition per row. A `conserved` or
+  `superseded` row has a successor locus that resolves; other rows carry
+  their bounded reason or the product owner's decision.
+- `intentionally removed` is recorded only on the product owner's decision,
+  never by a Writer.
+- A rule moved unchanged to a new place stays `conserved` with its new
+  locus; `superseded` needs an accepted replacement relation.
+- A Writer returns the rows it changes as a frontier delta in its own
+  territory; the integration activation applies the deltas to the frontier
+  copy; a Reviewer checks them; the common pen consolidates accepted rows
+  into the common file.
+- A clause with no predecessor row is new law and names the purpose and the
+  material relation that require it (acceptance criterion 6).
 
 ## Activation unit
 
-A finite actor is activated on a projected reference frame, never on the
-corpus. The set program under `a_c/` (a_c.text, validated per the common
-dependency contract) encodes the corpus; each member's activation extends
-it and publishes one projected frame per selected task of the contract. A frame is the subject plus the
-clauses the task needs and nothing else, materialised or reference-only.
-Its bytes are measured with `wc -c` before any actor reads it and recorded
-with the activation under `qualification/`. A frame that exceeds its
-envelope is refined or returns `out_of_frame`, never padded with the
-corpus. A member's Writer reads the rc.2 member it restates and the frames
-of its dependencies; a member larger than one activation is declared as a
-cone of sections.
+A finite actor is started on a frame and its subject, never on the corpus.
+A frame is a verbatim excerpt of the owning sections its task needs, each
+excerpt under a `Source:` line naming its owning section and that member's
+digest. The manifest `standards/frames/FRAME_INPUTS.json` lists each frame's
+routes with owner and section digests; a generator regenerates every frame
+from the manifest whenever an owner changes, so a copy never drifts from its
+owner ([CROSS_SYNTHESIS](CROSS_SYNTHESIS.md), part 5). A frame whose task
+returns a result includes the owner of the core result algebra, or its
+profile's mapping into it. For a task with no published frame, the actor
+acquires the deciding owner sections directly (ACTIVATION §2). a_c
+projections of the members may be published beside the frames; they are
+not the activation unit and their fidelity is a separate claim.
 
-## Construction order
+Context size and adequate attention are measured separately, as
+[CONSTRUCTION_BINDING](CONSTRUCTION_BINDING.md#resources-measured) states.
 
-One Writer activation per member or declared cone, in this sequence:
+## Per-member proof
 
-1. REFERENCE_FRAME, with the foundation repairs it forces: FOUNDATIONS
-   gains frame, frame set, lens and coverage ledger as ontology objects and
-   takes the UP-015 vocabulary; CALCULUS becomes ACTIVATION and admits the
-   intake before the step, whose context is an activated frame. The member
-   map is reviewed with this member.
-2. AXIOMATIC_CALCULUS.
-3. SPEC_METHOD, with PRODUCT_DEFINITION split off, its generic law in tier
-   1 and its testing law in ASSURANCE.
-4. TICKET_METHOD into TICKETS.
-5. STDO_REFERENCE_FRAME_BASELINE into EXECUTIVE_BASELINE, its testing
-   frames into ASSURANCE, its reviewer law into EVALUATION.
-6. RELEASE_METHOD and IDENTITY_METHOD into RELEASE and IDENTITY.
-7. DESIGN_MODULE_METHOD into DESIGN_MODULE, SPEC_METHOD and ASSURANCE.
-8. ODD, TRAVERSAL_OCCURRENCE, UX, WORLD_MODEL; PROFILES reduced to index
-   and boundary.
-9. Guides, GLOSSARY and README.
-10. Packaging: the compressions' successor, schemas, templates, plugin,
-    licence, release note, manifest (RELEASE); closes before any RC cut.
-
-Each step: the Writer returns one closed result and disposes its cone's
-rows in the tenant frontier copy; a Reviewer who is not the author, by
-default of another model family (same family is a declared exception,
-reason in the activation, marked on the result), is activated on every
-`candidate_ready`; the Executive disposes; the pen ledgers. Per-member
-proof is the contract's six criteria plus: links and anchors resolve; every
-clause has its principle; no profile term in tier 1 or 2 outside a
-disposition note.
-
-## Cost
-
-Envelopes are declared per activation by the Executive (context bytes,
-wall, spend) and reported in each return in `qualification/RETURNS.md`:
-bytes measured before the read, wall by `date -u`, spend as the host
-reports it or as unavailable.
+A member is proved by the C3 contract's six acceptance criteria and all 31
+conformance discriminators, plus these tenant checks: every link and
+anchor resolves; every clause names the principle that requires it; no
+profile term appears in tier 1 or 2 outside a disposition note; every
+result value the member defines maps to exactly one core value; and every
+question the member decides has one owning section in the candidate. The
+order of work for the current rebuild is in
+[PLAN](../qualification/C3-SYNTHESIS/PLAN.md).
