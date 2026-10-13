@@ -8,11 +8,14 @@ monotonic version-line advancement, the selector and its relation to
 consumer adoption, naming, release-scoped assets and the Product subject,
 coordinated release-matched asset cohorts, acceptance, external
 qualification dependencies and successor baseline conservation
-(STDO-UP-015). It consumes [FOUNDATIONS](FOUNDATIONS.md) (§1 the
-disposition vocabulary applied to this corpus; §2 the product lineage
-objects, among them the release objects candidate source, release cut,
-release subject and version-line selector, defined there once),
-[IDENTITY](IDENTITY.md) (object identity and its boundary with release
+(STDO-UP-015) with its disposition values. Its family table (F15) is §1
+Foundation to law. It consumes [FOUNDATIONS](FOUNDATIONS.md) (§2 the
+product lineage objects, among them the release objects candidate source,
+release cut, release subject and version-line selector, defined there
+once; §4 [Results](FOUNDATIONS.md#results), the core result algebra, and
+[Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+[ACTIVATION §3 Effects](ACTIVATION.md#effects) (the result of an intended
+effect), [IDENTITY](IDENTITY.md) (object identity and its boundary with release
 version), [EVALUATION](EVALUATION.md) (§1 claims, §5 acceptance),
 [AXIOMATIC_CALCULUS §7](AXIOMATIC_CALCULUS.md#7-layers) (AC-020, layer
 and release separation) and [§8](AXIOMATIC_CALCULUS.md#8-calculus-identity)
@@ -73,6 +76,63 @@ re-entry point, affected scope, downstream proof obligations and
 version-line disposition
 ([SPEC_METHOD §4](SPEC_METHOD.md#universal-intake-triage)). The existence
 of an RC window does not authorise untriaged mutation (P0, P6).
+
+Results. This member defines no result values of its own. Where it says
+that an operation is refused, stops or fails closed, a precondition of
+that operation does not hold and the operation does not proceed; its
+intended effect is reported under
+[ACTIVATION §3 Effects](ACTIVATION.md#effects), never as `completed`.
+Where it calls a release state invalid or a cohort incomplete, or says
+that a verification fails, the condition named is a counterexample to the
+predicate that check evaluates, and the check returns its value under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). What the disposition
+values of §9 are, §9 states. Purpose and material relation: release
+outcomes combine with every other result in the one core, so a refused
+publication or a failed verification is never read as a published or
+qualified cut (P5, P6).
+
+### Foundation to law: release and successor conservation
+
+This family (F15 in the index of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))
+decides how a product's releases are identified, published, qualified,
+accepted and selected, and how a successor conserves its predecessor's
+claims. Its instance premises, which the commitments do not supply, are
+named in the rows as follows: recursive products, a released product may
+build other products and the next version of itself; published cuts, a
+project publishes point-in-time cuts of its product for review, replay and
+adoption by consumers it does not control; mutable carriers, the carrier
+that holds a release has movable names and may hold several independently
+released projects; derived assets, some products are released with
+derived or distributed assets that must match their source; external
+services, some claims depend on services outside the carrier; successor
+lines, a product evolves from a predecessor release whose claims may
+affect it. The index also assigns to this family
+[FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects);
+the table traces that section in its first two rows, whose rule column
+names it, and owns none of it. Each commitment's standing is written as
+the table of commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P3 (independent); P6 (independent); instance: recursive products | Substrate, development product, source project, release cut, product, install, artifact and product definition are distinct objects, each with its own identity. A mutable source workspace is not called a product; an install acting as builder substrate is bound as a development product and transfers no meaning or authority to the product being authored; a product definition is a source-project surface, not the released artifact. | [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects), the taxonomy and its governing rules | the eight roles, their concept identities and the compiler analogy as the intended model: choices of FOUNDATIONS §2; their application to lineage: [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release) (family F10) |
+| P3 (independent); P6 (independent); instance: published cuts, mutable carriers | A candidate source, a release cut, a release subject and a version-line selector are distinct, and equal version text collapses none. A selector or mutable carrier may move and a release cut never moves; a selector is discovery, not identity and not an exact basis; material does not become a member by sharing a carrier. | [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects), Release objects; [§1](#1-context-and-position), the selector paragraph; [§2](#2-release-identities) | the four generic objects: choices of FOUNDATIONS §2; their realisation as Git branches, tags and aliases in the seven identities: domain choices of this member |
+| P3 (independent); P6 (independent); P0 (recovered); instance: published cuts | Release process is separate from live specification and owns neither Product meaning nor consumer adoption. Release handling follows intake triage, and an open release window authorises no untriaged change. | [§1](#1-context-and-position) | the bounded-context identity and the cut and selector name forms: domain choices of this member; triage: [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11) |
+| P5 (derived from P0 and P6, with P0's open-world premise); P6 (independent) | A refused, stopped or fail-closed release operation, an invalid state and a failed check report in the one core, so none is read as success. | [§1](#1-context-and-position), Results | none |
+| P3 (independent); P6 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance: mutable carriers | Where one carrier holds several independently released projects, each project's refs carry its own namespace, assigned by Product release authority and never inferred from a name or path. A cut binds the namespace, exact ref and commit, subtree root and tree, member inventory, claims and dispositions; a tag over a shared commit makes no sibling a member, and an inventory without these is not a reacquirable identity. Existing refs and public URIs are conserved, never recreated or moved. | [§2](#2-release-identities), Project-qualified Git refs, Project-subtree release identity, Historical ref and public-URI conservation; [§5](#5-naming); [§6 Product subject and repository carrier](#product-subject-and-repository-carrier) | the ref shapes, the namespace pattern, the canonical root spelling, the naming examples and the unqualified single-project profile: domain choices of this member; each namespace, the three allocated ones included: the Product release authority |
+| P3 (independent); P6 (independent); P0 (recovered); P5 (derived from P0 and P6, with P0's open-world premise); instance: published cuts | Release proceeds in three phases: mutable candidate construction, non-operative for released consumers; immutable publication of one exact subject for review and replay; exact-cut qualification, acceptance and explicit adoption. There is no second final cut, and a change to any qualifying byte, a release-scoped asset included, needs a higher immutable cut. | [§3](#3-phases), Mutable candidate construction and Immutable RC publication; [§6 Release-scoped assets](#release-scoped-assets) | the ten publication steps, the six release-scoped surfaces and the RC ordinal: domain choices of this member |
+| P6 (independent); P1 (independent); P3 (independent); instance: published cuts | Qualification binds the exact cut, claims, basis, each claimed property with its observation boundary, evidence, verdicts, gaps and successor relation. Evidence matches the claim, so source, packaging or presence evidence does not stand for a stronger claim. Acceptance is the human authority's verdict over the exact immutable cut; it moves no selector, and a change to a qualifying byte leaves the verdict on the old cut. | [§3 Exact-cut qualification](#exact-cut-qualification); [§8 Acceptance criteria](#acceptance-criteria) | the seven acceptance criteria: domain choices of this member; the generic claim and acceptance law: [EVALUATION §1](EVALUATION.md#1-claims) and [§5](EVALUATION.md#5-acceptance) (family F6); acceptance of each cut: the human Product authority |
+| P3 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P6 (independent); instance: published cuts, mutable carriers | The selector advances strictly by ordinal, only to an existing immutable cut, and is refused otherwise. It answers which highest cut exists, never which cut governs a consumer. A consumer changes its basis only by an explicit adoption whose presented plan is accepted; drift invalidates that acceptance, and resolution fails closed. | [§3 Monotonic version-line advancement](#monotonic-version-line-advancement); [§4](#4-selector-and-consumer-adoption) | the seven advancement steps, the four refusal conditions and the channel URI as discovery selector: domain choices of this member; the adoption plan, its hashing and the manager commands: [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager) (family F12) |
+| P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0's open-world premise); P6 (independent); instance: derived assets, mutable carriers | A declared cohort of products and derived assets carries one exact version suffix, and equal versions establish matching only. A missing, stale or differently versioned member makes the cohort incomplete; a source change invalidates the derived members, which are regenerated and released under the new cut. Publication is atomic or refused, each ref guarded against an unexpected remote state, and verification refuses a partial cohort. | [§7](#7-coordinated-release-matched-asset-cohorts), Two-commit construction and one publication transaction, Qualification and recovery | declaring each cohort: the declaring Product authority; the five members of the STDO stack cohort, the two-commit construction and the per-ref lease: domain choices of this member; any same-version recovery: separately authorised recovery law |
+| P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: external services | A claim that depends on an external service is qualified against a healthy dependency or narrowed before acceptance; a skipped evaluation has no result and establishes nothing about the dependent capability. | [§8 External qualification dependencies](#external-qualification-dependencies) | none |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: successor lines | A successor names the exact immutable predecessor it evolves, and every predecessor claim that can affect it receives one disposition. A disposition is a claim evaluated on evidence: naming or code similarity does not prove conservation, and a missing patch does not prove loss. An unresolved disposition leaves a gap in the affected claim's qualification, so that claim cannot be qualified. | [§9](#9-successor-baseline-conservation-stdo-up-015) | the four disposition values: this member, restating UP-015; each removal: the current Product authority; the record of a successor's dispositions: that successor's construction |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P6 (independent); instance: successor lines | Where a maintenance or support line may affect retained claims, the release basis names its watched source, observation boundary, inclusion policy and successor candidate, and relevant changes receive a disposition at integration and at qualification. | [§9](#9-successor-baseline-conservation-stdo-up-015), the support-line paragraph | the record, branch strategy, comparison and proof mechanism: the consumer |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
+objects. §10 records open questions and decides nothing; §11 records
+dispositions and decides nothing.
 
 ## 2. Release identities
 
@@ -571,8 +631,10 @@ Product for carrier and migration classification while still blocking the
 dependent release claim (P6, P5;
 rc.2 #external-qualification-dependencies).
 
-A clean skip caused by an unhealthy external dependency may preserve
-correct Product classification, but it cannot establish that the
+A clean skip caused by an unhealthy external dependency is an evaluation
+not performed, which has no result
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed). It may
+preserve correct Product classification, but it cannot establish that the
 dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
@@ -595,6 +657,22 @@ successor-native realisation preserves behaviour, and naming or code
 similarity does not prove conservation without relevant evidence (P6,
 P1).
 
+Each disposition is a claim the successor makes about one predecessor
+claim ([EVALUATION §1](EVALUATION.md#1-claims)), not a result value; its
+predicate is its value's wording above. It is distinct from the decision
+owner's disposition of an assessed candidate
+([ACTIVATION §3 Disposition](ACTIVATION.md#disposition)), which is an
+acceptance result. Qualification evaluates each
+disposition on evidence and records a value of the core result algebra
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) with that predicate.
+An unresolved disposition states no claim and so has no result: in the
+qualification of the affected claim it is a planned assessment without a
+closed result, which is why it blocks that qualification
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Gaps). Purpose and material relation: a recorded disposition establishes
+nothing until it is evaluated, so no disposition stands as a result (P6,
+P5).
+
 Where a maintenance or support line may affect retained claims, the
 release basis identifies the watched source, observation boundary,
 inclusion policy and successor candidate. Relevant changes receive
@@ -602,11 +680,9 @@ semantic disposition at material integration and exact-cut qualification.
 The consumer owns its record, branch strategy, comparison and proof
 mechanism (P4b, P6).
 
-FOUNDATIONS §1 applies this law to this corpus, as successor of
-`stdo://releases/v2.5.1-rc.2/`, together with the Product's separate
-standalone successor requirement; EVALUATION §5 states what acceptance
-requires of the disposition record. Both are applications of this
-section, not part of it (P4b, P6).
+[EVALUATION §5](EVALUATION.md#5-acceptance) states what acceptance
+requires of the disposition record; it applies this section and is not
+part of it (P4b, P6).
 
 ## 10. Open questions
 
@@ -634,7 +710,7 @@ objects and realised here.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #release-publication-context | conserved; owner, concept identity, owned identities and transitions, and the two exclusions (Product meaning, consumer adoption) | §1 |
+| #release-publication-context | conserved; owner, concept identity, owned identities and transitions, and the two exclusions (Product meaning, consumer adoption); the Results paragraph and the family table under Foundation to law are new | §1 |
 | #position | conserved; distinctness from live specification, the cut name and its single-project and shared-source forms, the selector name and its latest-published meaning, the downstream-of-triage rule with its five determinations | §1 |
 | #release-identities | conserved; all seven identities, the no-collapse rule and what may and never moves; candidate source, release cut, release subject and version-line selector in their generic form | §2; FOUNDATIONS §2 Release objects |
 | #project-qualified-git-refs | conserved; the namespace pattern and authority, the four ref shapes verbatim, the prohibition of unqualified future refs, the single-project condition and the three allocated namespaces | §2 Project-qualified Git refs |
@@ -653,6 +729,16 @@ objects and realised here.
 | #qualification-and-recovery | conserved; content, local-ref-graph and post-publication qualification, the recovery exception and its limits, the non-retroactivity of the cohort law | §7 Qualification and recovery |
 | #product-subject-and-repository-carrier | conserved; the four declarations, carrier versus subject, no post-review delta, bookkeeping after publication | §6 Product subject and repository carrier |
 | #acceptance-criteria | conserved; the seven criteria, attachment to the immutable identity, the selector's independence, separate adoption | §8 Acceptance criteria; EVALUATION §5 |
-| #external-qualification-dependencies | conserved; the out-of-Product classification that still blocks, the clean-skip rule, qualify or narrow | §8 External qualification dependencies |
-| #successor-baseline-conservation-stdo-up-015 | conserved in full; the exact predecessor origin and its immutability, one semantic disposition per affecting claim, the four dispositions as worded, the blocking rule, semantic conservation with both non-proofs, the support-line paragraph with its four basis elements, two integration points and consumer ownership | §9; FOUNDATIONS §1 applies it to this corpus; EVALUATION §5 as acceptance evidence |
+| #external-qualification-dependencies | conserved; the out-of-Product classification that still blocks, the clean-skip rule, qualify or narrow; the clean skip is stated as an evaluation not performed, which has no result under FOUNDATIONS §4 Results | §8 External qualification dependencies |
+| #successor-baseline-conservation-stdo-up-015 | conserved in full; the exact predecessor origin and its immutability, one semantic disposition per affecting claim, the four dispositions as worded, the blocking rule, semantic conservation with both non-proofs, the support-line paragraph with its four basis elements, two integration points and consumer ownership; new: each disposition read as a claim whose predicate is its value's wording, evaluated under FOUNDATIONS §4 Results, and an unresolved disposition as a planned assessment without a closed result; its application to this corpus is the tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md), which holds every predecessor row's disposition and locus | §9; EVALUATION §5 as acceptance evidence |
 | #open-questions | conserved; both questions carried as open | §10 |
+
+New in this member, with no rc.2 row: the family table at §1 Foundation
+to law, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law); it
+decides nothing beyond the rules it names. Purpose and material relation:
+a reader sees which release rules follow from the commitments and which
+are added choices with their owners, so no added choice is presented as
+derived (P6, P2). The Results paragraph of §1 and the evaluation of
+dispositions in §9 state their purpose where they are written; the clean
+skip of §8 applies FOUNDATIONS §4 Results and adds no rule.
