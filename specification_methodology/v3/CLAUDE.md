@@ -2,13 +2,13 @@
 
 This scope is the peer source project located by [stdo_3.json](stdo_3.json). Read its exact installed STDO basis, [Product](specification/PRODUCT.md), [Goals](specification/GOALS.md), [frame basis](specification/REFERENCE_FRAME_BASIS.md) and applicable work grant before effects.
 
-Common WHAT is owned by Jim; Claude holds its construction pen under [T-001](.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) (assigned 2026-10-12; Codex penned setup and C1) and Codex reviews common changes before Jim merges them. Working principles and tentative capability questions do not alter the installed builder law or become accepted through presence.
+Jim owns the common WHAT. Claude holds its construction pen under [T-001](.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md), and Codex reviews common changes before Jim merges them. Working principles and tentative capability questions do not alter the installed builder law or become accepted through presence.
 
-C1 is principles-first. Codex and Claude make independent initial attempts in their own tenant territory. Do not read the peer's realisation before the initial frozen returns. Shared input posts, source clauses and working common principles are available to both. Tenant implementations, wording and a_c encodings are HOW; neither tenant can redefine shared meaning or select itself as canonical. Tenant work and reviews follow [Development Isolation](specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory; reviews between tenants only when Jim authorises them, read at a named commit, written in the reviewer's tenant.
+Current work is C3, cross-synthesis phase. Each tenant line builds on its own candidate at `31f28f9` and takes named parts of the other under [Cross-Synthesis](specification/PRODUCT.md#cross-synthesis), carried by its tenant ticket under [T-002](.ai-workspace/tickets/active/T-002-c3-successor-construction.md). The phase's Executive and Reviewer actors are not yet named, so no execution contract is admitted. Tenant implementations, wording and a_c encodings are HOW; neither tenant can redefine shared meaning or select itself as canonical. Tenant work follows the [tenant entry contract](build_tenants/README.md) and [Development Isolation](specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant reads its peer's candidate only under Porting reads or in a review Jim authorises.
 
 An Executive coordinates and decides only inside its grant. It does not mutate files or Git. A separately declared Writer performs effects in exact granted territory. Independent source-first reviewers inspect a frozen subject, do not repair it and cannot assess their own authorship.
 
-The current setup creates no tenant implementation or trial. [C1 tasks](build_tenants/README.md#initial-principles-task) are ready for separately selected activation. Capabilities and steel threads await C1/C2 decisions. Preserve all sibling source roots, current cohort, prior posts and unrelated work. No release or adoption is implied.
+Preserve all sibling source roots, current cohort, prior posts and unrelated work. No release or adoption is implied.
 
 <!-- STDO_BOOTSTRAP_START -->
 ## STDO Bootstrap
