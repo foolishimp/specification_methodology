@@ -187,3 +187,50 @@ A ported part is text copied from the Codex candidate (P §Development Isolation
 - **A6. Applicability.** "As far as they apply" is a judgement, and P itself calls documents "objects". E-6-1 treats asserted composition, identity or functoriality as a claim; descriptive use labelled as direction passes.
 - **A7. Materiality.** R §Standalone Successor 1 does not say who judges a family material, or what form the accounting takes.
 - **A8. Unnominated parts.** P §Cross-Synthesis calls the nominated parts "proposed" and says the Executive "selects" them. Record a port from outside those reviews here rather than failing it; PT-1 to PT-10 still apply.
+
+## Amendment 1 (a7eba66)
+
+Source change, read as the diff `9a38e95..923c755` of `specification/`:
+
+- R §Bounded Transitions item 5 gains three sentences. They make the workspace persistent, the actor's context a disposable projection, and require reconciliation on acquisition.
+- P §Construction And Context Management ¶1 makes the workspace the continuing truth surface and context a revisable account. It adds that a stored belief or prior result cannot overrule contrary current evidence.
+- I §What It Achieves states that an account can be discarded and rebuilt.
+- C adds a row, "A fresh actor has no private history, and a retained summary disagrees with the current workspace".
+- P §C3 Outcome bullet 2 now requires a resolving successor locus only for `conserved` and `superseded` rows; the other dispositions need their bounded reason or owner decision.
+
+The GOALS changes in the same diff alter no expectation.
+
+### New expectations
+
+Tier F, from the tier table's bounded activation and work state.
+
+| ID | Source | Find | Fails |
+|---|---|---|---|
+| E-2-10 | R 5, sentence 1; P ¶1; I | The workspace and its authoritative external inputs are stated to persist across activations. An actor's context is a bounded, revisable, disposable account acquired from them, not a second truth surface. | An actor's private context or a carried summary is treated as authoritative state. A later activation must inherit a prior actor's context. |
+| E-2-11 | R 5, sentence 2; P ¶1 | Acquisition observes the current subject and its authoritative inputs. It reconciles material disagreement with cached beliefs or summaries. Contrary current evidence corrects the account, and unknowns stay explicit. | A stored belief, a summary or a successful prior result overrules contrary current evidence. A disagreement is ignored or settled in the summary's favour. |
+| E-2-12 | R 5, sentence 3; C new row | Discarding private context resets nothing: workspace, valid progress and outstanding obligations remain. Discarding context does not show that an uncertain external effect is absent. | A fresh context is treated as a clean slate. Absence from context or memory is taken as "not done" or "no effect". |
+| E-7-31 | C new row, the 19th | A text case: the fresh actor acquires the current subject and inputs, corrects the stale account, keeps applicable work and continues within its grant. | The summary is trusted over the workspace. Applicable work is discarded. The actor acts outside its grant to resolve the disagreement. Missing history is read as the absence of an uncertain effect. |
+
+The negative expectations gain two rules. A conforming candidate does not:
+
+- N-13 treat an actor's context or a retained summary as a truth surface that overrules the current workspace (E-2-10, E-2-11);
+- N-14 treat discarding context as resetting the workspace or as proving an uncertain effect absent (E-2-12).
+
+### Changes to existing expectations
+
+- **E-2-8.** It is unchanged in substance. Its source is now R 5, sentences 4–8. E-2-10 to E-2-12 cover the new sentences.
+- **§7 numbering.** C now has 31 rows. IDs stay stable:
+
+  | Expectations | C rows |
+  |---|---|
+  | E-7-1 to E-7-18 | 1–18 |
+  | E-7-31 | 19 |
+  | E-7-19 to E-7-30 | 20–31 |
+
+  E-7-17 (invalidated claim) and E-7-19 (interruption) remain distinct from E-7-31, which covers a stale private account against a current workspace.
+- **E-8-1.** This entry is replaced. Find: every PREDECESSOR_CLAIMS row has one disposition. Each `conserved` or `superseded` row has a resolving successor locus. Each other row has its bounded reason or owner decision. Fails: a row has no disposition, or lacks the locus, reason or decision its disposition requires. A missing locus on a `not applicable` or `intentionally removed` row no longer fails E-8-1.
+- **E-8-10.** Read "all 30 rows of §7" as all 31 rows, E-7-1 to E-7-31.
+
+### Ambiguity
+
+- **A9. Recorded results.** A closed result recorded in the workspace is workspace material. P also says a successful prior result cannot overrule contrary current evidence. Read together, the record that the result was returned persists, while the claim it makes about the subject keeps its validity conditions (E-7-17) and yields to contrary current evidence. The source does not say this explicitly.
