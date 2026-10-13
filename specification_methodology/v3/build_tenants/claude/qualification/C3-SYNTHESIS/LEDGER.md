@@ -121,3 +121,15 @@ Executive rulings on A1's three readings:
 - rows 516 and 543: `superseded` only if their rc.2 claim maps `incomplete` to `indeterminate`, with the common single result algebra requirement named as the replacement relation; B2 verifies the claim text first.
 
 RA1, a working review of A1, started.
+
+2026-10-13T19:02Z — Returns and dispositions:
+- A3 returned `candidate_ready`, committed `9d6dd49`. REFERENCE_FRAME refers to its owners for results, conjunction and measurement. Port 3 supplies the import declarations, partly verbatim. §5 outcomes are split by cause. Gap A3 reported, with no activation assigned: the §8 coverage statuses have no core mapping. It goes to the repair after RA23.
+- RA23, a working review of A2 and A3, started.
+- RW1 returned (`c02ee03`): all five questions `falsified`, with 6 material and 23 minor findings and nothing blocking. Disposition: `local_repair` as W1b on `design/`. The two that most need fixing are F1 (independence when the tenant is the author) and F14 (the frame generator must not cut sections at headings inside code blocks; this gates frame generation).
+- RA1 returned (`9f9bd2f`) with two material findings:
+  - five admission and activation outcomes in ACTIVATION have no core value;
+  - `carried` and `blocked` are mapped to `indeterminate`, although an open ambiguity is a known state.
+
+  Disposition: `local_repair` as A1b. The admission and activation outcomes get their own refinement, mapped by cause. `carried` and `blocked` map to `falsified` for "the ambiguity is resolved". RA1's minor findings are repaired at the same time.
+- Outside the subject, RA1 found `gap`, `hold` and `refusal` outcomes in AXIOMATIC_CALCULUS with no mapping. These are added to B8's scope.
+- A4a and A5a wait for A1b, because they edit the same members.
