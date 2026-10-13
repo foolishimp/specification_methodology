@@ -116,10 +116,39 @@
   ],
   "failures": [],
   "valid": true,
-  "elapsed_seconds": 0.484,
+  "elapsed_seconds": 0.522,
   "limits": [
     "No semantic fidelity from structural success",
     "No published cut, native v3 install or plugin-host qualification; actual release note remains an owner-selected publication obligation",
     "Python 3.8 syntax only, not an executed Python 3.8 compatibility test"
+  ],
+  "subject": {
+    "kind": "frozen_codex_package",
+    "source_commit": "8bb32132633d3974ef3c3230d99753aa20a9bb22",
+    "package_member_count": 80,
+    "package_content_sha256": "56107ddd6cb2c0d835add4a6e8317cd9cbc3bf0c83777570f12a7de8a70de015",
+    "digest_recipe": "SHA-256 of sorted path/sha256 descriptors as compact sorted-key JSON"
+  },
+  "checker_source_pins": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/check_candidate.py",
+      "sha256": "c68ed06f8931ede3c0eeab80213641409f38a0b76ad4a861a6c2107b39add620"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/check_distribution.py",
+      "sha256": "755f01a144cf2542d2c65fb7616868cd43bf99d2282a6a1397791f8163dbbd0d"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/refresh_views.py",
+      "sha256": "fd09775a07c0b26c0fe289f7bc8ecaa518490a84ae82c108eaeb6f4d6a4d82f2"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/round-1/check_acquisition.py",
+      "sha256": "ad9b43e0859d622cd6745eb449477174590ab2423a92964898819fabc4059c2a"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/round-1/derivation_material.py",
+      "sha256": "1ba4e7da9c5f1e415b059d3e89c411413f44f54d141cb49065d613fa3180cee0"
+    }
   ]
 }
