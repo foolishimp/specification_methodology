@@ -10,7 +10,7 @@ change_class: requirement_reprice
 re_entry_point: specification_methodology/v3/specification/INTENT.md
 triaged_at: 2026-10-13T14:33:25Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T14:33:25Z
+updated_at: 2026-10-13T14:53:37Z
 dependencies: []
 ---
 
@@ -356,3 +356,5 @@ Left unchanged: PRINCIPLES, PREDECESSOR_CLAIMS and tenant territory.
 2026-10-13T14:33:25Z — Jim authorised the repair quoted under Owner Instruction. Codex enters the common Writer role under the Selected Contract above, after verifying the exact installed builder and Product Definition. The five review findings and three residual corrections form the repair frontier. The source-project README's live C1 route is also repaired as an affected entry path. This entry records the role and territory before those effects; no C3 execution contract or acceptance is supplied by it.
 
 Writer return for frozen review: the common repair is `candidate_ready`. Intent is reduced from 1,155 to 530 words while retaining the selected mission, foundational relationship, categorical direction, axiomatic programming, single ownership and result algebra, bounded frames, recovery and standalone successor. Product owns the detailed structure and distinguishes the candidate interpretation from external Products. The conformance cases retain authenticated judgments and add the misbound-result, unchanged-bytes invalidation and insufficient-frame discriminators. Current pen and review destinations are aligned, the source README routes to current grants, and obsolete frontier proposal status is removed. Mechanical checks: 202 affected links resolved (two tenant entry targets checked for existence only), whitespace passed, instruction files agree and their installed bootstrap blocks are unchanged, and exact builder/Product Definition verification passed. The previous review post is preserved verbatim. This local checkpoint is for review; tenant bytes, release bytes and open owner decisions are unchanged.
+
+2026-10-13T14:53:37Z — Frozen repair: `e38d45af09987ce8a75b8d1b4219868163b8434e` on main. Two fresh read-only Codex activations independently reviewed Intent/direction and common contracts/routing against the preimage. Both returned no further changes required within their scopes. Their findings and verification limits are posted in the [repair review](../../comments/codex/20261013T145337Z_REVIEW_V3_COMMON_SPECIFICATION_REPAIR.md). These are same-family source reviews independent of authorship, not C3 member qualification. The bounded repair return is ready for owner review; this ticket remains active for its other checkpoint obligations. Owner sign-off, the next input snapshot and C3 actor/ported-part review decisions remain open.
