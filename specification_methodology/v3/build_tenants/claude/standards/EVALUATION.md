@@ -56,10 +56,10 @@ It covers §1 to §5 of this member. Its instance premises are: (a) claims
 about exact subjects are relied on for promotion, closure or release; (b)
 the evidence available is finite, and may observe a weaker or different
 subject, or another basis, than the one claimed; (c) a constructing actor
-may be probabilistic or otherwise fallible, which §3 calls the
-probabilistic-construction premise; (d) each boundary at which a claim is
-relied on has a decision owner. They are conditions of the work this family
-governs, not commitments, and do not follow from finite capacity alone.
+may be probabilistic or otherwise fallible; (d) each boundary at which a
+claim is relied on has a decision owner. They are conditions of the work
+this family governs, not commitments, and do not follow from finite
+capacity alone.
 P0's premise that a step's output is a candidate until evaluated is cited
 by name. The standing of the consequences below is stated in
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
@@ -125,7 +125,8 @@ scope (P3;
 A constructor's self-review is construction output, not assessment. Where
 promotion needs independent assessment, the assessor evaluates the exact
 live subject, authority paths, proof and installed state, not the
-constructor's summary (P6 with the probabilistic-construction premise;
+constructor's summary (P6, and P0 with its premise that a step's output is
+a candidate until evaluated; instance premise (c) of §1 Foundation to law;
 conserves
 [UP-007](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007)).
 
