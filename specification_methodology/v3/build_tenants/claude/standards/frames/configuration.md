@@ -33,9 +33,9 @@ Routes, in order:
 19. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 20. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 79486 bytes.
+Size of this frame: 80897 bytes.
 
-Source: ACTIVATION.md#transitions sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#transitions sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Transitions
 
@@ -121,7 +121,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#intake sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Intake
 
@@ -165,7 +165,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#configuration sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Configuration
 
@@ -273,7 +273,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#roles-and-delegation sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Roles and delegation
 
@@ -305,9 +305,9 @@ already accepted; this delegation does not weaken direct human acceptance
 where the governing product or release law requires it (P6).
 
 When one capable context has sufficient existing work authority, exact
-intake and operation grant, it may enter directly as constructor or
-Writer. No coordinating activation is required solely to appoint that
-Writer. The applicable configuration (Configuration above) selects
+intake and operation grant, it may enter directly as constructor. No
+coordinating activation is required solely to appoint that constructor.
+The applicable configuration (Configuration above) selects
 coordination when material contexts, authority, capability or required
 independence need it; a role or frame name alone does not create that
 need. Direct entry preserves
@@ -329,7 +329,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ## 2. Context construction under an envelope
 
@@ -502,7 +502,7 @@ is read as if it fit, a fit is taken as adequate attention, or a decision
 rests on material other than its deciding owners at the selected basis.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ## 7. Closed result and reuse
 
@@ -549,7 +549,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#construction-availability sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Construction availability
 
@@ -600,7 +600,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#effects sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Effects
 
@@ -771,7 +771,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710
+Source: EVALUATION.md#3-independent-assessment sha256=6383bebb0238da55ec4ea779f44d077f558f0f32ccfcfbfca38845efed9946b6
 
 ## 3. Independent assessment
 
@@ -810,7 +810,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#frame-qualification sha256=feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710
+Source: EVALUATION.md#frame-qualification sha256=6383bebb0238da55ec4ea779f44d077f558f0f32ccfcfbfca38845efed9946b6
 
 ### Frame qualification
 
@@ -869,7 +869,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=9712e57985961fe3bcc63725219623b171747cb9c86d9f89eda044b2588f1784
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=920ace2bcc86375eba17d6ad3486213bdeabaa7a8cbc0f34aa9e1eca08083a9c
 
 ### The executive configuration
 
@@ -885,10 +885,12 @@ configuration under §16, and a configuration with other frames, names or
 topology is evaluated against its own task as ACTIVATION §1 Configuration
 states, not by its distance from this one (P0, P2, P6).
 
-Where it is selected, every grant, limit and prohibition this profile
-places on its frames is in force without exception: the Executive's
-prohibition on mutation (§6 No mutation while Executive) and the
-exclusions of the Worker and Reviewer frames (§9, §10) among them.
+Where it is selected, every grant, duty, limit and prohibition this
+profile places on its frames is in force without exception: the
+Executive's prohibition on mutation (§6 No mutation while Executive), its
+duties under §6 The three duties, Attention cycle, Event-driven attention
+and Drift locks, and the exclusions of the Worker and Reviewer frames (§9,
+§10) among them.
 Selecting the configuration makes none of them optional, and no operation
 grant lifts them (P6).
 
@@ -914,20 +916,28 @@ configuration the explanation is (P0, P5, P6):
   result can become stale or bound to another subject, so the Executive
   revalidates the drift locks before activation and disposition (§6); an
   activation can fail, so a refused activation returns with its cause and
-  no Worker result (§5 Work result); and a bounded view can lack what a
-  task frame knows, so results carry every blocker material to delivery
-  (next paragraph).
+  no Worker result (§5 Work result); an effectful activation can stop
+  with an effect whose completion is unknown, as where a response was
+  lost, so the work result names each intended effect with its
+  [ACTIVATION §3 Effects](ACTIVATION.md#effects) value, and an effect of
+  unknown completion is reconciled under
+  [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart), sufficiently
+  for the next dependent action, before work is reactivated or that
+  action is taken (§12 step 4, §13); and a
+  bounded view can lack what a task frame knows, so results carry every
+  blocker material to delivery (next paragraph).
 
 Coordination. The Executive is this configuration's coordinator, and
 [ACTIVATION §1 Configuration](ACTIVATION.md#configuration), Coordination
 across tasks, owns the rule for a coordinator's bounded view. Here that
 view is the closed-result ledger (§6 Attention cycle) with the
-work-result and review-result projections of §13. The Executive acquires
-what a decision needs beyond that view through its frame inputs (§8) or
-by activating a further bounded evaluation (§6). The residuals and the
-stop basis of those two projections are where a compact result carries
-every blocker material to delivery, as that rule requires (P0, P4b,
-P6).
+work-result, review-result and specialist-result projections of §13. The
+Executive acquires what a decision needs beyond that view through its
+frame inputs (§8) or by activating a further bounded evaluation (§6). A
+compact result carries every blocker material to delivery, as that rule
+requires, in the residuals, stop basis and effect values of a work
+result, the findings, counterexamples and residuals of a review result,
+and the residuals of a specialist result (P0, P4b, P6).
 
 This subsection is new; it has no rc.2 row. Purpose and material relation:
 ACTIVATION §1 makes the executive configuration one example among lawful
@@ -940,7 +950,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#authority-kinds sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Authority kinds
 
@@ -963,7 +973,7 @@ authority law permits it; proxy identity and human-authority identity stay
 distinct (P6, P3).
 
 
-Source: FOUNDATIONS.md#disjointness-and-independence sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#disjointness-and-independence sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Disjointness and independence
 
@@ -982,7 +992,7 @@ be disjoint; and the unqualified word "independent" establishes none of
 the three.
 
 
-Source: FOUNDATIONS.md#results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Results
 
@@ -1063,7 +1073,17 @@ to exactly one core value. No outcome exists outside the core; a
 refinement adds no core value and keeps the pressure of `indeterminate`,
 `out_of_frame` and `invalid_basis` explicit. Where a refined value would
 map to one of two core values according to its cause, the cause is part of
-the refined value and each resulting value maps once (P5, P1). The
+the refined value and each resulting value maps once (P5, P1). A further
+refinement, by a member, profile, project or adopting Product, may split a
+refined value by cause. The parent-value rule governs every such split:
+each child value names its parent value and its cause and keeps its
+parent's core value; a child that needs a different core value needs a
+different parent value, which only the owner of the parent declares; and
+no child takes `satisfied` from a parent that is not `satisfied`. No
+further refinement raises a result's standing (P5, P6, P1). Purpose and
+material relation: a consumer that reads a parent value reads the same
+core value from each of its children, so a split by cause adds a domain
+distinction and never changes what the parent establishes (P5, P6). The
 refinements for admission, activation and steps are
 [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
 member, profile and adopting Product states its mapping where it defines
@@ -1143,7 +1163,7 @@ core.
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
 | P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
 | P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile or adopting Product that defines it |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
 | P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](EVALUATION.md#5-acceptance) names |
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
@@ -1167,7 +1187,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#conjunction-of-results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Conjunction of results
 

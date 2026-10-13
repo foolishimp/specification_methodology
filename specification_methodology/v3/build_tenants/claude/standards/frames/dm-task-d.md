@@ -19,9 +19,9 @@ Routes, in order:
 5. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 6. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 87988 bytes.
+Size of this frame: 89502 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=9e65842c53e53def620f74f361495ad2c482e5de47237694f54f5c7c15d876a5
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=0e85a89839ef654a18aa6564b76fef077d65b88c918db98e7fc85e45994ee5d1
 
 ## 5. Ontology-first design
 
@@ -660,7 +660,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=9e65842c53e53def620f74f361495ad2c482e5de47237694f54f5c7c15d876a5
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=0e85a89839ef654a18aa6564b76fef077d65b88c918db98e7fc85e45994ee5d1
 
 ## 7. Ontology and three-view design gate
 
@@ -922,10 +922,11 @@ the axiom verdicts and the cross-view proofs, and stays separate from both
 (FOUNDATIONS §4 Results, availability, assessment and acceptance): a matrix in which every applicable axiom is
 `pass` is evidence for the design authority, never the verdict, and a
 step that produced the pack establishes neither. An axiom whose result
-is not `satisfied`, whether `fail` or a core value recorded directly, or
-an applicable axiom with no result, keeps the verdict non-accepted as a
-failed axiom does, because a combination with a non-satisfied mandatory
-result or a gap is never `satisfied`
+is not `satisfied`, whether `fail` or a core value recorded directly, an
+applicable axiom with no result, or an axiom with no result whose
+applicability is not established false, keeps the verdict non-accepted
+as a failed axiom does, because a combination with a non-satisfied
+mandatory result or a gap is never `satisfied`
 ([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results))
 (P6, P5). The binding to ACTIVATION §3 is new in this corpus. Purpose and
 material relation: neither a passing matrix nor a produced design pack is
@@ -1060,7 +1061,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#disposition sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Disposition
 
@@ -1102,7 +1103,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15
+Source: SPEC_METHOD.md#change-classes sha256=0716a914948812f858b69a7a49473bba64c8bf11d8e331b89363c1536f8d80b5
 
 ### Change classes
 
@@ -1128,8 +1129,19 @@ Triage records the change intent, the class, the re-entry point and when
 triage occurred, wherever substantive work begins.
 [TICKETS §4](TICKETS.md#change-class) records the class on the carrier.
 
+The change classes are declared states of a change that intake triage
+records, not results, and map to no core value. An evaluation that reads
+a declared class returns its own core value with its predicate under
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). A close classification
+of [TICKETS §3](TICKETS.md#close-review) that names a layer, such as
+`design_reframe`, is a result for its own predicate, mapped there, and
+carries the class at which the work re-enters as its domain outcome.
+Purpose and material relation: a declared class is never combined as an
+evaluation result, so a change classed `realization_refactor` cannot stand
+in for a `satisfied` result that no upstream drift occurred (P5, P1).
 
-Source: FOUNDATIONS.md#results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+
+Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Results
 
@@ -1210,7 +1222,17 @@ to exactly one core value. No outcome exists outside the core; a
 refinement adds no core value and keeps the pressure of `indeterminate`,
 `out_of_frame` and `invalid_basis` explicit. Where a refined value would
 map to one of two core values according to its cause, the cause is part of
-the refined value and each resulting value maps once (P5, P1). The
+the refined value and each resulting value maps once (P5, P1). A further
+refinement, by a member, profile, project or adopting Product, may split a
+refined value by cause. The parent-value rule governs every such split:
+each child value names its parent value and its cause and keeps its
+parent's core value; a child that needs a different core value needs a
+different parent value, which only the owner of the parent declares; and
+no child takes `satisfied` from a parent that is not `satisfied`. No
+further refinement raises a result's standing (P5, P6, P1). Purpose and
+material relation: a consumer that reads a parent value reads the same
+core value from each of its children, so a split by cause adds a domain
+distinction and never changes what the parent establishes (P5, P6). The
 refinements for admission, activation and steps are
 [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
 member, profile and adopting Product states its mapping where it defines
@@ -1290,7 +1312,7 @@ core.
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
 | P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
 | P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile or adopting Product that defines it |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
 | P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](EVALUATION.md#5-acceptance) names |
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
@@ -1314,7 +1336,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#conjunction-of-results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Conjunction of results
 

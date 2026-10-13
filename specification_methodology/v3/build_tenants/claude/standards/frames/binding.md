@@ -23,9 +23,9 @@ Routes, in order:
 9. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 10. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 68322 bytes.
+Size of this frame: 70943 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=0716a914948812f858b69a7a49473bba64c8bf11d8e331b89363c1536f8d80b5
 
 ## 11. Build-tenant binding
 
@@ -157,6 +157,14 @@ Rules:
    neither selects an automated executor nor shows that the process meets
    its requirements; execution conformance needs its own evidence under
    rule 4 (P1, P6).
+7. Three accounts. The algorithmic, informational and computational
+   accounts of a construction, which
+   [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction)
+   defines, apply across the binding, from the requirements calculus
+   through the computational calculus to the execution environment. The
+   binding keeps the three accounts apart, and where it maps one account
+   to another it states what the mapping preserves and how that
+   preservation is established (P1, P0, P6).
 
 Application in this method. The relation governs realisation at four
 points. The Design rule (§2) places the choice of stack, human process or
@@ -175,8 +183,12 @@ review points and the merge rule, is that project's own law, bound in its
 product definition as local axioms
 ([PRODUCT_DEFINITION §6](PRODUCT_DEFINITION.md#6-local-constitutional-binding))
 or chosen in a tenant's design. This method prescribes none of these
-mechanics; the independence of each tenant's ticket lifecycle is
-[TICKETS §4](TICKETS.md#multi-build-tenant-independence) (P6, P0).
+mechanics. What it does prescribe for several tenants, the independence
+of each tenant's ticket lifecycle and the review of each tenant's
+tickets, is
+[TICKETS §4](TICKETS.md#multi-build-tenant-independence) and
+[§6 Multi-build-tenant review](TICKETS.md#multi-build-tenant-review)
+(P6, P0).
 
 Purpose and material relation: the same obligations can be realised by
 different means, software, people or both. The tenant owns its choice of
@@ -185,16 +197,16 @@ particular stack never becomes method machinery and a human or mixed
 process needs no parallel method. The material relation is whether the
 kind of executor, a person's participation, a tool's convenience or a
 structural validation can change what satisfies an obligation, or grant
-authority (P2, P1, P6). Three determinations conserve the predecessor's
-constitutional chain (rc.2 #constitutional-chain), stated before in §2:
-one WHAT realised by one or more independent tenants whatever the layout,
-tenant-local realisation derivative until ratified (rule 1), and
-conformance of a tenant judged under EVALUATION §6 without identical
-behaviour outside the contract (rule 4). The rest of this section is new
-in this corpus.
+authority (P2, P1, P6). Two determinations conserve the predecessor's
+constitutional chain (rc.2 #constitutional-chain): one WHAT realised by
+one or more independent tenants whatever the layout, and tenant-local
+realisation derivative until ratified (rule 1). Rule 4 applies by
+reference the law of EVALUATION §6 that conforming tenants need not
+behave identically outside the contract, which is new in that member.
+The rest of this section is new in this corpus.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=929b85fbeef554bf0a2e8fabd21277672a538662daf1cf7c63a32cf18daa2a15
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=0716a914948812f858b69a7a49473bba64c8bf11d8e331b89363c1536f8d80b5
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -265,7 +277,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#2-ontology sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ## 2. Ontology
 
@@ -469,6 +481,30 @@ the product explicitly promotes part of that HOW into reusable declared
 structure. The step of ACTIVATION §1 is this unit with its intake, context
 and result algebra made exact.
 
+### Accounts of a construction
+
+A construction is the realisation of a selected outer contract through
+steps, as P0 states it (§3). Three accounts of a construction stay
+distinct (P1, P0):
+
+- the algorithmic description: the steps;
+- the informational interpretation: what the data means, given under an
+  Interpretation (the ontology table above);
+- the computational realisation: how people, machines or combinations of
+  them carry it out in a declared execution environment; for a build
+  tenant that environment is the one
+  [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) defines.
+
+The distinction is kept for any construction and is independent of the
+tiers of this corpus: a construction may need all three accounts, and no
+account is a tier (P1). The distinction is an added choice in the sense
+of §3 Foundation to law, not a commitment, and has none of the standings
+of §1; its owner is the Intent of the Product that owns this corpus, in
+its Direction. Purpose and material relation: the steps, the meaning of
+the data and the means of execution can each change while the others
+hold, so a claim about one account is never taken for a claim about
+another (P1, P6).
+
 ### Imports between members
 
 A member that uses a concept another member defines imports it and does
@@ -526,7 +562,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: EVALUATION.md#2-separation sha256=feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710
+Source: EVALUATION.md#2-separation sha256=6383bebb0238da55ec4ea779f44d077f558f0f32ccfcfbfca38845efed9946b6
 
 ## 2. Separation
 
@@ -560,7 +596,7 @@ scope (P3;
 [RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=feddcb5f7a95ff949ba241db70929336a711de58aee04cce8ce946286ad1d710
+Source: EVALUATION.md#3-independent-assessment sha256=6383bebb0238da55ec4ea779f44d077f558f0f32ccfcfbfca38845efed9946b6
 
 ## 3. Independent assessment
 
@@ -599,7 +635,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-018 Structural and semantic separation
 
@@ -612,7 +648,7 @@ this law is its form over `a_c` models (P1, P6; rc.2
 #ac-018-structural-and-semantic-separation).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-019 Valid model
 
@@ -635,7 +671,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=ff21891b092d5c81b01f21d6f43e2556ff28ce95333f67d8cd8e783a4f3fed84
+Source: ACTIVATION.md#effects sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
 
 ### Effects
 
@@ -660,7 +696,7 @@ a case that no added core value solves, and this refinement records it in
 the existing core.
 
 
-Source: FOUNDATIONS.md#results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Results
 
@@ -741,7 +777,17 @@ to exactly one core value. No outcome exists outside the core; a
 refinement adds no core value and keeps the pressure of `indeterminate`,
 `out_of_frame` and `invalid_basis` explicit. Where a refined value would
 map to one of two core values according to its cause, the cause is part of
-the refined value and each resulting value maps once (P5, P1). The
+the refined value and each resulting value maps once (P5, P1). A further
+refinement, by a member, profile, project or adopting Product, may split a
+refined value by cause. The parent-value rule governs every such split:
+each child value names its parent value and its cause and keeps its
+parent's core value; a child that needs a different core value needs a
+different parent value, which only the owner of the parent declares; and
+no child takes `satisfied` from a parent that is not `satisfied`. No
+further refinement raises a result's standing (P5, P6, P1). Purpose and
+material relation: a consumer that reads a parent value reads the same
+core value from each of its children, so a split by cause adds a domain
+distinction and never changes what the parent establishes (P5, P6). The
 refinements for admission, activation and steps are
 [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
 member, profile and adopting Product states its mapping where it defines
@@ -821,7 +867,7 @@ core.
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
 | P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
 | P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile or adopting Product that defines it |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
 | P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](EVALUATION.md#5-acceptance) names |
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
@@ -845,7 +891,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#conjunction-of-results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Conjunction of results
 

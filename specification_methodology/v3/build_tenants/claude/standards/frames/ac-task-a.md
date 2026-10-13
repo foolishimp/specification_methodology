@@ -28,9 +28,9 @@ Routes, in order:
 14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 57125 bytes.
+Size of this frame: 59465 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#authority-kinds sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Authority kinds
 
@@ -53,7 +53,7 @@ authority law permits it; proxy identity and human-authority identity stay
 distinct (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#2-signature sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#2-signature sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ## 2. Signature
 
@@ -171,7 +171,7 @@ code or any other representation only when its encoding profile proves
 that every tuple relation is preserved or explicitly refused (P1, P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ## 3. Typed records
 
@@ -310,7 +310,7 @@ domains. An undeclared residual kind or value refuses structural admission
 (P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-002 Scoped identity
 
@@ -321,7 +321,7 @@ carrier equality does not establish semantic identity. Scoped identity
 applies it to every identity in `I` (P3; rc.2 #ac-002-scoped-identity).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-003 Reference closure
 
@@ -334,7 +334,7 @@ undeclared-field references refuse structural admission (P3, P5; rc.2
 #ac-003-reference-closure).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-005 Authority conservation
 
@@ -346,7 +346,7 @@ transporting a record does not transfer authority (P6, P4b; rc.2
 #ac-005-authority-conservation).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-006 Basis coherence
 
@@ -357,7 +357,7 @@ coherent composite basis by proximity (P6, P3; rc.2
 #ac-006-basis-coherence).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-007 Constraint and refusal
 
@@ -407,29 +407,45 @@ exact basis" (P5, P6):
 |---|---|---|
 | declared result | satisfied | the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results) |
 | `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |
-| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open, as for a required reference not yet resolved; the result is undefined on this basis until it is supplied. A reference established to resolve to nothing is dangling and refuses (AC-003) |
-| `refusal(constraint)` | falsified | the record, model, carrier, transformation or application under judgment violates a declared law of this member or a constraint of its signature, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015); the violation is the counterexample |
-| `refusal(basis)` | invalid_basis | the refusal names a condition of the basis the operation acts on: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |
+| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model's closed population, and an external reference whose declared resolution has been evaluated and yields no target |
+| `refusal(constraint)` | falsified | every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample |
+| `refusal(basis)` | invalid_basis | the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |
 
 The cause is part of a refusal's value, because a refusal would otherwise
 map to falsified or to invalid_basis according to its cause, and a refined
 value maps to exactly one core value (FOUNDATIONS §4 Results,
-Refinements). A refusal that names conditions of both kinds takes
-`refusal(basis)`, because no decision can be taken on a basis that cannot
-support it. A basis mismatch inside a model or a record, a relation's
-qualifier record included, is mixed bases with no composite-basis relation
-(AC-006): a coordinate of the model or record binds, or a reference in it
-resolves on, a basis that the governing basis relation does not admit, as
-a wrong-basis reference of AC-003 does. Its refusal is `refusal(basis)`,
-in the structural admission that judges that model or record as in every
-other operation, and never `refusal(constraint)` for a violated constraint
-of a signature, even where the signature declares the basis relation.
-One defect can bear on two predicates: a model that violates
-AC-001 is `refusal(constraint)` in the structural admission that judges
-it and `refusal(basis)` in a projection over it, and each outcome answers
-its own predicate. An operation that was not applied has no outcome. A
-stop `gap` is a closed result with the value invalid_basis; it is not the
-absence of a result that
+Refinements). A refusal that names a demonstrated violation of a declared
+law or constraint by the record, model, carrier, transformation or
+application under judgment is `refusal(constraint)`, whatever condition of
+the basis it also names. The basis condition is recorded with the refusal
+and reported beside it as its own `invalid_basis` result, which names the
+basis repair and answers the predicate of the evaluation that the
+condition leaves without a supporting basis, never the operation-outcome
+predicate that the refusal answers
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Predicates travel). A refusal that names only conditions of the basis is
+`refusal(basis)`. A violation inside an input that the operation acts on
+as its basis is a condition of the basis for that operation, not a
+violation by what it judges, as the projection below shows. Purpose and
+material relation: a demonstrated violation is a known failure, which
+survives every join only as a `falsified` result, so a basis condition
+named beside it neither hides the failure nor discards its counterexample,
+and the basis repair stays named (FOUNDATIONS §4 Conjunction of results,
+Survival; P5, P6). A basis mismatch inside a model or a record, a
+relation's qualifier record included, is mixed bases with no
+composite-basis relation (AC-006): a coordinate of the model or record
+binds, or a reference in it resolves on, a basis that the governing basis
+relation does not admit, as a wrong-basis reference of AC-003 does. It is
+a condition of the basis, in the structural admission that judges that
+model or record as in every other operation, and never a violated
+constraint of a signature, even where the signature declares the basis
+relation; a refusal that names only such a mismatch is `refusal(basis)`.
+One defect can bear on two predicates: a model that violates AC-001 is
+`refusal(constraint)` in the structural admission that judges it and
+`refusal(basis)` in a projection over it, and each outcome answers its own
+predicate. An operation that was not applied has no outcome. A stop `gap`
+is a closed result with the value invalid_basis; it is not the absence of
+a result that
 [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)
 records as a gap. A signature's stop contract and a traversal record map
 stops of their own under §5.
@@ -444,7 +460,7 @@ the activation outcome `closure_unresolved` of
 predicate (P5, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-008 Explicit latitude
 
@@ -455,7 +471,7 @@ the same rule for any two values; this law is its form over `L` and `T`
 (P6, P1; rc.2 #ac-008-explicit-latitude).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-009 Residual conservation
 
@@ -465,7 +481,7 @@ disposition creates an exact successor model. Absence from a projection is
 not resolution (P4b; rc.2 #ac-009-residual-conservation).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-013 Transformation
 
@@ -655,7 +671,7 @@ step: what was preserved, introduced and removed, the external resolution
 witnesses and the residuals.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ### AC-014 Judgment separation
 
@@ -687,7 +703,7 @@ subject. Promotion is an explicit relation between the unchanged subject
 and its admission or acceptance judgment (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=20d8a50e2296910d86f1726c40edfa4148269d50c3fedf73629bf595d1416d2e
+Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
 ## 5. Traversals and functor kinds
 
@@ -809,7 +825,7 @@ universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
 topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
 
 
-Source: FOUNDATIONS.md#results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Results
 
@@ -890,7 +906,17 @@ to exactly one core value. No outcome exists outside the core; a
 refinement adds no core value and keeps the pressure of `indeterminate`,
 `out_of_frame` and `invalid_basis` explicit. Where a refined value would
 map to one of two core values according to its cause, the cause is part of
-the refined value and each resulting value maps once (P5, P1). The
+the refined value and each resulting value maps once (P5, P1). A further
+refinement, by a member, profile, project or adopting Product, may split a
+refined value by cause. The parent-value rule governs every such split:
+each child value names its parent value and its cause and keeps its
+parent's core value; a child that needs a different core value needs a
+different parent value, which only the owner of the parent declares; and
+no child takes `satisfied` from a parent that is not `satisfied`. No
+further refinement raises a result's standing (P5, P6, P1). Purpose and
+material relation: a consumer that reads a parent value reads the same
+core value from each of its children, so a split by cause adds a domain
+distinction and never changes what the parent establishes (P5, P6). The
 refinements for admission, activation and steps are
 [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
 member, profile and adopting Product states its mapping where it defines
@@ -970,7 +996,7 @@ core.
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
 | P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
 | P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile or adopting Product that defines it |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
 | P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](EVALUATION.md#5-acceptance) names |
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
@@ -994,7 +1020,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=0a04ebd2be5d199498f1c2c87626f4d80bfacb3f1cc30883e4ee401e1a6c8815
+Source: FOUNDATIONS.md#conjunction-of-results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
 
 ### Conjunction of results
 
