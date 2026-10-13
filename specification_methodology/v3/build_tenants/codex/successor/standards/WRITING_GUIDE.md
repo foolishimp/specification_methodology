@@ -124,7 +124,8 @@ and the authority required for that disposition.
 
 Active specification should describe the current constitutional surface in present tense.
 
-If something is no longer live:
+If something is no longer live, act within the owning authority and any
+required recorded UP-015 disposition:
 
 - delete it
 - supersede it

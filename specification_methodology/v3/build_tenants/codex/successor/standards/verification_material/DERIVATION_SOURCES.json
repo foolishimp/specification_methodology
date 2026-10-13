@@ -35,19 +35,19 @@
       "historical_member": "standards/IDENTITY_METHOD.md",
       "historical_member_sha256": "e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
       "source_member": "standards/IDENTITY_METHOD.md",
-      "source_member_sha256": "8b5502965231e29a73a471cca42bc3adc759a20e85439c6d3dfc5a39b754c360",
+      "source_member_sha256": "0b4158d98d7f0be980218865fa75e767042007a3ad49326b86252d67074e5a6d",
       "segments": [
         {
           "start_byte": 0,
           "end_byte": 18
         },
         {
-          "start_byte": 4707,
-          "end_byte": 13506
+          "start_byte": 4852,
+          "end_byte": 13651
         },
         {
-          "start_byte": 14474,
-          "end_byte": 17007
+          "start_byte": 14619,
+          "end_byte": 17152
         }
       ]
     },
@@ -55,7 +55,7 @@
       "historical_member": "standards/REFERENCE_FRAME_METHOD.md",
       "historical_member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
       "source_member": "standards/REFERENCE_FRAME_METHOD.md",
-      "source_member_sha256": "bb536cb61485662e3f3a6ae652836eaf797a57e95f0e7976ed05b9588fcecd87",
+      "source_member_sha256": "7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213",
       "segments": [
         {
           "start_byte": 0,
@@ -87,100 +87,107 @@
           "literal_utf8": "Every evaluation returns a member of its declared result algebra. The baseline\nresult family is:\n"
         },
         {
-          "start_byte": 19227,
-          "end_byte": 19228
+          "start_byte": 19341,
+          "end_byte": 19342
         },
         {
           "literal_utf8": "- `satisfied`: the declared predicate holds on the exact basis;\n- `falsified`: a declared counterexample defeats it;\n- `indeterminate`: available admissible evidence cannot decide it;\n- `out_of_frame`: the evaluation requires an undeclared material relation or\n  capability; or\n- `invalid_basis`: the subject or basis cannot support the evaluation.\n"
         },
         {
-          "start_byte": 20007,
-          "end_byte": 20008
+          "start_byte": 20121,
+          "end_byte": 20122
         },
         {
           "literal_utf8": "An externally owned compatible extension may refine this algebra while\npreserving explicit indeterminate, out-of-frame, and invalid-basis pressure.\n"
         },
         {
-          "start_byte": 20910,
-          "end_byte": 26107
+          "start_byte": 21024,
+          "end_byte": 26221
         },
         {
           "literal_utf8": "  -> decision | conflict | indeterminate\n"
         },
         {
-          "start_byte": 26157,
-          "end_byte": 26549
+          "start_byte": 26271,
+          "end_byte": 26663
         },
         {
           "literal_utf8": "software interfaces.\n"
         },
         {
-          "start_byte": 26897,
-          "end_byte": 28936
+          "start_byte": 27228,
+          "end_byte": 29267
         },
         {
-          "start_byte": 29457,
-          "end_byte": 29730
+          "start_byte": 29788,
+          "end_byte": 29867
+        },
+        {
+          "literal_utf8": "activation returns a refusal or `out_of_frame` pressure. Work does not proceed\nthrough implied context.\n"
+        },
+        {
+          "start_byte": 30116,
+          "end_byte": 30206
         },
         {
           "literal_utf8": "result algebra. It distinguishes semantic law, observed evidence, inference,\n"
         },
         {
-          "start_byte": 29844,
-          "end_byte": 29954
+          "start_byte": 30320,
+          "end_byte": 30430
         },
         {
           "literal_utf8": "The result identifies the frame and activation, subject, basis, evaluation,\nactor, evidence, verdict, residual uncertainty, and invalidation conditions.\n"
         },
         {
-          "start_byte": 30164,
-          "end_byte": 30315
+          "start_byte": 30640,
+          "end_byte": 30791
         },
         {
           "literal_utf8": "An unchanged consumer checks exact applicability and reuses a valid closed\nresult. Role, conversation or resumption changes alone do not invalidate it.\nChanged material inputs or a declared revising observation invalidates the\naffected result before reliance; preserve its predecessor/successor relation\nand any demonstrably independent surviving results. Required independent\n"
         },
         {
-          "start_byte": 30528,
-          "end_byte": 31739
+          "start_byte": 31004,
+          "end_byte": 32215
         },
         {
           "literal_utf8": "A declared decision rule consumes closed frame results. The rule states:\n"
         },
         {
-          "start_byte": 31892,
-          "end_byte": 31924
+          "start_byte": 32368,
+          "end_byte": 32400
         },
         {
           "literal_utf8": "- how conflict and indeterminacy are handled;\n"
         },
         {
-          "start_byte": 32003,
-          "end_byte": 32145
+          "start_byte": 32479,
+          "end_byte": 32621
         },
         {
           "literal_utf8": "Conjunction does not transfer the semantic authority of a contributing frame.\n\nEvery mandatory constraint must be satisfied with valid applicable evidence.\nCommon agreement cannot discard a constraint or material counterexample found\nby only one contributor. Missing, wrong-subject, conflicted or indeterminate\nmandatory results remain unresolved under the declared rule; aggregate green\nstatus cannot replace them.\n"
         },
         {
-          "start_byte": 32674,
-          "end_byte": 45642
+          "start_byte": 33150,
+          "end_byte": 46118
         },
         {
           "literal_utf8": "- evaluation:\n"
         },
         {
-          "start_byte": 45676,
-          "end_byte": 58069
+          "start_byte": 46152,
+          "end_byte": 58545
         },
         {
-          "start_byte": 58110,
-          "end_byte": 58261
+          "start_byte": 58586,
+          "end_byte": 58737
         },
         {
           "literal_utf8": "- result:\n"
         },
         {
-          "start_byte": 58343,
-          "end_byte": 59381
+          "start_byte": 58819,
+          "end_byte": 59857
         }
       ]
     },
@@ -188,7 +195,7 @@
       "historical_member": "standards/SPEC_METHOD.md",
       "historical_member_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4",
       "source_member": "standards/SPEC_METHOD.md",
-      "source_member_sha256": "8e521830710aac583b379d2377921d223901b201a117ebb9643cf0f2195a6a5e",
+      "source_member_sha256": "d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae",
       "segments": [
         {
           "start_byte": 0,
@@ -203,96 +210,131 @@
         },
         {
           "start_byte": 4817,
-          "end_byte": 13703
+          "end_byte": 10929
+        },
+        {
+          "literal_utf8": "We make **design** the explicit structural bridge between requirements and code.\n"
+        },
+        {
+          "start_byte": 11017,
+          "end_byte": 11018
+        },
+        {
+          "literal_utf8": "We require **code** to be derivable from requirements and design, not defended as accidental precedent.\n"
+        },
+        {
+          "start_byte": 11129,
+          "end_byte": 11512
+        },
+        {
+          "literal_utf8": "We keep **authority directional** even while iterating: goals govern intent, intent governs product definition, product definition governs requirements, requirements govern design, and requirements plus design govern code.\n"
+        },
+        {
+          "start_byte": 11742,
+          "end_byte": 13724
         },
         {
           "literal_utf8": "- it defines how goals, intent, product, requirements, design, code, evidence, and repricing relate\n"
         },
         {
-          "start_byte": 13810,
-          "end_byte": 44654
+          "start_byte": 13831,
+          "end_byte": 44675
         },
         {
-          "start_byte": 46201,
-          "end_byte": 54396
+          "start_byte": 46502,
+          "end_byte": 54697
         },
         {
           "literal_utf8": "Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta\n"
         },
         {
-          "start_byte": 54522,
-          "end_byte": 55690
+          "start_byte": 54823,
+          "end_byte": 55991
         },
         {
           "literal_utf8": "- **Code** realizes those decisions.\n- **Events** record what actually happened.\n- **Projection** reconstructs current truth from the event stream.\n"
         },
         {
-          "start_byte": 56229,
-          "end_byte": 56499
+          "start_byte": 56530,
+          "end_byte": 56800
         },
         {
           "literal_utf8": "- **Repricing** updates goals, intent, product, requirements, design, or code when the system no longer harmonizes. When gap analysis reveals constitutional insufficiency, it generates new **Goals** and/or **Intent**.\n"
         },
         {
-          "start_byte": 56724,
-          "end_byte": 56725
+          "start_byte": 57025,
+          "end_byte": 57026
         },
         {
           "literal_utf8": "This is the homeostatic loop. Every link in the chain is load-bearing. A break at any link — goals with no downstream repricing path, an unowned requirement, an ungrounded design record, code without a design decision — creates accidental law.\n"
         },
         {
-          "start_byte": 57431,
-          "end_byte": 68999
+          "start_byte": 57732,
+          "end_byte": 69300
         },
         {
-          "start_byte": 69792,
-          "end_byte": 70350
+          "start_byte": 70093,
+          "end_byte": 70651
         },
         {
           "literal_utf8": "- `goal_reprice`: current bounded work-wave focus changes; re-enters at Goals and may flow through Intent, Product, Requirements, Design, Code, and Evidence where that focus changes deeper constitutional truth\n- `intent_reprice`: directional or scope change; re-enters at Intent and flows through Product, Requirements, Design, Code, and Evidence\n- `product_reprice`: current product realization changes while directional intent remains stable; re-enters at Product and flows through Requirements, Design, Code, and Evidence\n- `requirement_reprice`: constitutional truth changes while project direction remains stable; re-enters at Requirements and flows through Design, Code, and Evidence\n- `design_reframe`: realization structure changes while active intent and requirement truth remain stable; re-enters at Design and flows through Code and Evidence\n- `realization_refactor`: local code, configuration, or attribute change with no intended constitutional or structural change; re-enters at the realized surface only and must prove no upstream drift\n"
         },
         {
-          "start_byte": 71458,
-          "end_byte": 87638
+          "start_byte": 71759,
+          "end_byte": 87939
         },
         {
-          "start_byte": 88078,
-          "end_byte": 91253
+          "start_byte": 88379,
+          "end_byte": 91554
         },
         {
           "literal_utf8": "Assessment returns one of these semantic dispositions:\n"
         },
         {
-          "start_byte": 91622,
-          "end_byte": 91623
+          "start_byte": 91923,
+          "end_byte": 91924
         },
         {
           "literal_utf8": "| Disposition | Condition |\n|---|---|\n| `accept` | the candidate closes its declared cone and preserves every affected governing relation |\n| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |\n| `re_enter` | Product, requirement, identity, lifecycle, authority, public contract, or accepted design must change |\n| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |\n"
         },
         {
-          "start_byte": 94101,
-          "end_byte": 96112
+          "start_byte": 94402,
+          "end_byte": 96413
         },
         {
           "literal_utf8": "neither acceptance, promotion nor publication. A proposed restart identifies\nwhy repair of retained work is insufficient, which obligations and evidence\nsurvive, and which causal assumptions change; reconstructability alone does\nnot select reconstruction.\n"
         },
         {
-          "start_byte": 96764,
-          "end_byte": 139180
+          "start_byte": 97065,
+          "end_byte": 139481
         },
         {
           "literal_utf8": "4. The repriced surface then flows forward through the chain: product → requirements → design → code\n"
         },
         {
-          "start_byte": 139294,
-          "end_byte": 163178
+          "start_byte": 139595,
+          "end_byte": 139973
+        },
+        {
+          "literal_utf8": "- code is repeatedly re-derived against the current constitutional surface\n"
+        },
+        {
+          "start_byte": 140055,
+          "end_byte": 140156
+        },
+        {
+          "literal_utf8": "What must remain stable is the full direction of authority: goals govern intent, intent governs product, product governs requirements, requirements govern design, and requirements plus design govern code, even when the project advances through many iterations.\n"
+        },
+        {
+          "start_byte": 140424,
+          "end_byte": 163493
         },
         {
           "literal_utf8": "4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).\n"
         },
         {
-          "start_byte": 163351,
-          "end_byte": 166266
+          "start_byte": 163666,
+          "end_byte": 166581
         }
       ]
     }

@@ -250,13 +250,17 @@ presence does not prove usability unless presence is the exact claim.
 Each qualification item records its exact predicate and core result. A passed
 item maps to `satisfied` only with established performance and all required
 coverage and evidence on the exact cut; skipped work or a cached green label
-does not establish those conditions. An actual counterexample maps to `falsified`; absent
-deciding evidence maps to `indeterminate`; an unavailable required evaluation
-capability maps to `out_of_frame`; and an unusable subject or basis maps to
-`invalid_basis`. Preserve the finer diagnostic or original outcome and whether
-the item was actually performed. Conjoin the declared required claim set using
-the shared rule. A valid known failure and a skipped required item both remain
-visible; neither can be flattened into a green release summary.
+does not establish those conditions. Otherwise determine the item's verdict
+through the [core result law](FOUNDATIONS.md#result-algebra), retaining any
+independently admissible counterevidence or basis/scope diagnosis. Without
+admissible deciding support it is `indeterminate`; the passed label cannot
+raise its standing. Preserve the finer diagnostic or original outcome and
+performance (`performed`, `not_performed` or `unconfirmed`) under the core legal
+pairs. A missing required judgment remains an absent slot with the known
+performance fact or uncertainty, not an invented assessment. Conjoin the
+declared required claim set using the shared rule. A valid known failure and a
+skipped required item both remain visible; neither can be flattened into a
+green release summary.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review

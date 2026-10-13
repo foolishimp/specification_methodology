@@ -227,9 +227,9 @@ We define the full constitutional **what** in **requirements**, not merely a fea
 
 We prefer declaring desired truth and lawful boundaries over prescribing step-by-step imperative procedure.
 
-We make **design** the explicit structural bridge between requirements and code.
+We make **design** the explicit structural bridge between requirements and realisation.
 
-We require **code** to be derivable from requirements and design, not defended as accidental precedent.
+We require **realisation** to be derivable from requirements and design, not defended as accidental precedent.
 
 We treat spec-driven development as a **disambiguation pipeline**: each major gate reduces the space of lawful interpretations before downstream realization proceeds.
 
@@ -237,7 +237,7 @@ We demand **evidence** for claims through scenarios, tests, events, projection, 
 
 We treat **repricing** as part of correctness: when reality exposes a constitutional gap, the specification must change.
 
-We keep **authority directional** even while iterating: goals govern intent, intent governs product definition, product definition governs requirements, requirements govern design, and requirements plus design govern code.
+We keep **authority directional** even while iterating: goals govern intent, intent governs product definition, product definition governs requirements, requirements govern design, and requirements plus design govern realisation.
 
 We keep the **live operative surface** in the present tense only: once a new current reality is established, transitional paths are erased from the live product unless explicitly retained as compatibility features.
 
@@ -840,17 +840,21 @@ permit, the operational assumptions and how their outcomes are observed. The bin
 hardware, people, organisations or a mixture. A machine architecture is one
 binding, not the definition of computation for the method.
 
-A computational calculus may be reused wherever its bindings satisfy the
-common obligations. Actor identity and author identity do not determine
-operation kind: a person performing a procedure is not thereby making a human
-adjudication. An a_c representation neither selects the executor nor proves
-realisation conformance by passing structural validation.
+A computational calculus may be reused across tenants and execution environments
+where its bindings satisfy its laws and the common obligations. A different
+language, tool or team does not by itself require a different calculus. Author
+identity, actor identity and operation kind remain distinct; neither identity
+determines operation kind. A person performing a procedure is not thereby making
+a human adjudication. An a_c representation neither selects the executor nor
+proves realisation conformance by passing structural validation.
 
 At design admission, each affected requirement identifies its realising
 operation or invariant, the preservation obligation at its interfaces, and the
-evidence capable of defeating the claimed realisation. Context, attention,
-time, memory, communication, human effort and spend state their units and are measured at the boundary declared
-by that binding where they are material. A requirement-to-operation route
+evidence capable of defeating the claimed realisation. Context, time, memory,
+communication, human effort and spend state their units and are measured at the
+boundary declared by that binding where they are material. Attention adequacy
+is evaluated through actual-use evidence; no universal attention unit or score
+is required. A requirement-to-operation route
 alone does not discharge preservation or demonstrate fitness. A tenant cannot
 repair an inconvenient requirement by silently changing the common `WHAT`.
 
@@ -2598,10 +2602,10 @@ New intents emerge from repeated, real use-case pressure against the current mod
 This flow is not a one-pass waterfall computation. It is a cumulative iteration:
 
 - requirements and design are refined over time
-- code is repeatedly re-derived against the current constitutional surface
+- realisation is repeatedly re-derived against the current constitutional surface
 - gaps discovered during implementation, testing, replay, or scenario work feed back into repricing
 
-What must remain stable is the full direction of authority: goals govern intent, intent governs product, product governs requirements, requirements govern design, and requirements plus design govern code, even when the project advances through many iterations.
+What must remain stable is the full direction of authority: goals govern intent, intent governs product, product governs requirements, requirements govern design, and requirements plus design govern realisation, even when the project advances through many iterations.
 
 ---
 

@@ -1092,8 +1092,9 @@ stated, not a bar to publication.
 The admission consumer binds the eight-surface predicate and its required
 evidence, then conjoins the component results through
 [result conjunction](FOUNDATIONS.md#result-conjunction). A stated absence or
-non-applicability can satisfy the explicitness obligation; the absence claim
-itself needs its support. An unexamined property remains unresolved.
+non-applicability can satisfy the explicitness obligation; the absence or
+non-applicability claim itself needs support as part of admission. An
+unexamined property remains unresolved.
 One demonstrated failed admission obligation remains visible alongside a
 different unresolved obligation. No sparse-publication allowance removes an
 applicable failed requirement. Publication proceeds only under the owning

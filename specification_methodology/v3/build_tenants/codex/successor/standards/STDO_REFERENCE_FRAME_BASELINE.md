@@ -329,7 +329,8 @@ while U is non-empty:
   update U from coverage, dependencies, conflicts, and discovered materiality
 
 stop only when every mandatory evaluation is closed, or governing authority
-has explicitly retained every remaining residual consistently with the claim
+has explicitly retained every remaining residual consistently with the claim,
+or an applicable stop returns every remaining obligation as open
 ```
 
 This relation requires no scheduler or frame engine. `M` may contain parallel
@@ -512,12 +513,12 @@ cases map as follows:
 | Original work outcome and cause | Predicate and evidence condition | Core verdict |
 |---|---|---|
 | `candidate_ready` | the bound availability predicate is established, including its declared bounds | `satisfied` |
-| `refused` | an established governing prohibition or owner-valid refusal defeats the requested construction claim after lawful activation | `falsified` |
-| `incomplete`, `undecided` | admissible evidence or unfinished bounded work cannot establish the declared construction claim | `indeterminate` |
-| `incomplete`, `postcondition_defeated` | an observed missing delivery, deadline or other required postcondition defeats that exact claim | `falsified` |
+| `refused` | an established governing prohibition or owner-valid refusal defeats the bound availability predicate after lawful activation | `falsified` |
+| `incomplete`, `undecided` | admissible evidence or unfinished bounded work cannot establish the bound availability predicate | `indeterminate` |
+| `incomplete`, `postcondition_defeated` | an observed missing delivery, missed declared bound or missing required transition evidence defeats the bound availability predicate | `falsified` |
 | `re_entry_requested`, `outside_frame` | a material relation, decision or capability needed to establish the claim lies outside the activated frame | `out_of_frame` |
 | `re_entry_requested`, `basis_invalid` | the activated subject or basis cannot support the claim | `invalid_basis` |
-| any variant lacking its required cause | apply the core missing-reason rule; retain the raw outcome without inventing deciding support | `indeterminate` unless separately admissible evidence establishes the core diagnosis |
+| any variant lacking its required cause or its row's evidence condition | retain the raw outcome without inventing deciding support; independently admissible evidence on the same bound predicate remains available | apply the core missing-reason rule; the unsupported label supplies no verdict |
 
 The cause makes the mapping exclusive; a generic re-entry request without it
 is insufficient. `candidate_ready` establishes availability only, not fitness,

@@ -53,8 +53,10 @@ checks and is not an implicit fallback.
 
 The refusal retains its cause on the affected verification predicate. A
 demonstrated duplicate, alteration, incompleteness or absence in the complete
-authoritative member set is falsified. A missing authentic basis binding is
-invalid_basis; material not yet acquired leaves the predicate indeterminate.
+authoritative member set is falsified. Unbound material, lacking an authentic
+basis binding, is invalid_basis; material not yet acquired leaves the predicate
+indeterminate. Missing reasons or unsupported labels follow the core
+missing-reason rule without erasing independently admissible findings.
 Absence from a sparse checkout does not establish authoritative absence.
 
 The [derivation resource](verification_material/DERIVATION_SOURCES.json) is

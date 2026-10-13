@@ -1017,8 +1017,10 @@ Eval only affects traversal after its own L/E admission.
 
 Here `true` qualifies an admitted claim, not the existence of the workspace.
 L cannot overrule contrary current observations of W. Such an observation
-enters evidence admission; once admitted, it invalidates affected current
-claims through the declared re-entry relation. It is not
+enters evidence admission; pending that decision, the affected claim is not
+reused as current support for closure or dependent next-action selection.
+Once admitted, it invalidates affected current claims through the declared
+re-entry relation. It is not
 silently discarded because the earlier ledger is immutable. The immutable
 history remains an account of what was admitted at its stated basis.
 
@@ -1199,15 +1201,17 @@ decision, with their predicates, performance, evidence and effects:
 - `close` requires `satisfied` for the complete declared edge-closure predicate;
 - a demonstrated obligation violation is `falsified` even when the disposition
   selects `repair`, `retry`, `re-enter`, `reprice`, `block` or `yield`;
-- with no authenticated falsified obligation, an undecided closure predicate is
-  `indeterminate`, with pending work or evidence kept, including a productive
-  `yield`; otherwise core conjunction preserves the falsification;
+- an undecided closure predicate is `indeterminate` only when core conjunction
+  has no deciding falsification, invalid basis or out-of-frame result; pending
+  work or evidence remains visible, including on a productive `yield`;
 - an unusable basis is `invalid_basis`; a request outside the admitted action
   domain is `out_of_frame`;
-- an unperformed worker or evaluation retains `performance = not_performed`.
+- an unperformed evaluation retains `performance = not_performed`; the
+  worker's non-start is a separate observed fact about the assessed work and
+  its effects, not non-performance of an evaluation that actually ran.
 
-If performance itself cannot be established, retain `unconfirmed` rather than
-asserting the worker did or did not run. The predicate follows the core legal
+If the evaluation's performance cannot be established, retain `unconfirmed`;
+report the worker's observed execution and effects separately. The predicate follows the core legal
 pairs, including any independently established counterevidence or diagnosis.
 The decision's complete return preserves its original domain disposition and
 the ledger's assessment records. It cannot relabel an obligation failure as a

@@ -380,13 +380,14 @@ not identity references and therefore are not extra `RefDomain` rows:
 |---|---|---|
 | `J:*.id` | 1 | Exact scoped identity, unique in the model's disjoint local populations under AC-003. |
 | `J:*.subject_digest` | 1 | SHA-256 digest of the canonical unchanged subject named by `subject`. |
-| `J:*.verdict` | 1 | `satisfied`, `falsified`, `indeterminate`, `invalid_basis` in the profile's admitted constraint domain. An out-of-domain request returns core `out_of_frame` at the invocation boundary, not an in-domain judgment. |
+| `J:*.verdict` | 1 | The five core verdicts, including `out_of_frame` for an established material scope or capability shortfall while evaluating an in-domain subject. An out-of-domain request returns `out_of_frame` at the invocation boundary, not a fabricated in-domain judgment. |
 | `J:*.decision` | 1 | Exactly one value from the closed decision domain of the judgment's declared `kind`, with its required reason and mapping below. |
 | `J:*.performance` | 1 | `performed`, `not_performed`, `unconfirmed`; the core legal pairs and evidence conditions apply. Observed extent and interruption remain in the retained outcome/evidence. |
 | `J:*.effects` | 1 field; 1..* observations | Each selected-boundary observation is `not_requested`, `not_started`, `completed`, `partial`, `reverted` or `unknown` under the core effect law. Boundaries and material parts resolve through the existing predicate, subject, evidence and provenance coordinates. |
 
-No requested effects gives an explicit `not_requested` observation. A requested
-part without sufficient observation is `unknown`; an absent or empty field is
+An established effect-free scope gives an explicit `not_requested` observation
+under the core rule. Any material possibly affected part, requested or
+unintended, without sufficient observation is `unknown`; an absent or empty field is
 not a default and fails this signature. Multiple stages affecting the same part
 are reconciled on the declared boundary before composition under
 [result conjunction](FOUNDATIONS.md#result-conjunction). Every material part
@@ -756,10 +757,9 @@ partial_effect
 
 Every admitted constraint evaluation returns the shared
 [result record](FOUNDATIONS.md#result-algebra) on its exact subject, basis and
-predicate. Within this profile's declared constraint domain its verdict is
-`satisfied`, `falsified`, `indeterminate` or `invalid_basis`. A request outside
-that domain returns `out_of_frame` at the invocation boundary; it is not forged
-into an in-domain judgment. Performance and effect state remain separate
+predicate. All five core verdicts are available when evaluating an in-domain
+subject. A request outside that domain returns `out_of_frame` at the invocation
+boundary; it is not forged into an in-domain judgment. Performance and effect state remain separate
 coordinates. An omitted or unperformed evaluation is never a positive result.
 
 The judgment decisions below are domain refinements. `satisfied` maps to the
@@ -775,8 +775,8 @@ The closed judgment domains are:
 | `model_validation` | `OccurrenceModelSubject` | `valid`, `hold`, `refused`, `invalid_basis` | exact model id/digest, profile basis, and typed graph populations | refusal or invalid basis; unresolved refs retain `gap` until repaired |
 | `occurrence_admission` | `Occurrence` | `admitted`, `hold`, `refused`, `invalid_basis` | exact occurrence id/digest and resolved pre-existing seed inputs | missing seed retains `hold` plus `unresolved_cause`; re-enter with a new complete occurrence candidate |
 | `event_admission` | `FrameworkEvent` | `admitted`, `hold`, `refused`, `invalid_basis`, `out_of_scope` | exact event id/digest, payload digest, scope authority, and source frontier | unresolved scope retains `hold` plus `unresolved_scope`; incompatible scope refuses |
-| `claim_admission` | `RelationClaim` | `admitted`, `hold`, `refused`, `invalid_basis` | exact claim id/digest, endpoints, qualifiers, claimant authority, and current source frontier | unresolved cause or stale frontier retains `hold`; re-enter with a new claim over the current frontier |
-| `semantic_cut_admission` | `SemanticAdmissionCut` | `admitted`, `hold`, `refused`, `invalid_basis` | exact seven-member cut and source/successor frontier equality | core conjunction decides; demonstrated membership or equality failure refuses; held or missing judgments alone do not fabricate a refusal; invalid required basis stays explicit; stale source frontier retains `hold` plus `stale_frontier` and requires reconstruction |
+| `claim_admission` | `RelationClaim` | `admitted`, `hold`, `refused`, `invalid_basis` | exact claim id/digest, endpoints, qualifiers, claimant authority, and current source frontier | unresolved cause retains `hold` plus `unresolved_cause`; established staleness falsifies admission while retaining `hold` plus `stale_frontier`; re-enter with a new claim over the current frontier |
+| `semantic_cut_admission` | `SemanticAdmissionCut` | `admitted`, `hold`, `refused`, `invalid_basis` | exact seven-member cut and source/successor frontier equality | conjoin claim/event judgments and declared cut joins; missing, held or unauthenticated judgment support retains `hold` plus `unresolved_cause`, naming its slot; established staleness falsifies admission while retaining `hold` plus `stale_frontier`; re-entry follows the unchanged-subject rule below |
 | `effect_readiness` | `EffectSubject` | `ready`, `stale`, `unauthorized`, `hold`, `invalid_basis` | exact pre-observation, invocation, operation, grant, territory, and invalidation state | stale yields `hold` plus `stale_currentness` and re-observation; unauthorized yields `refusal` and no dispatch |
 | `transition_evaluation` | `TransitionSubject` | `satisfied`, `falsified`, `partial`, `indeterminate`, `refused`, `invalid_basis` | exact pre/post observations, intended outcome, disposition, and bounded effect evidence | partial yields `partial_effect`; indeterminate retains `hold` plus a declared residual; refused yields `refusal` |
 | `frontier_projection` | `Projection` | `admitted`, `hold`, `gap`, `refused`, `invalid_basis` | exact projection/frontier ids and digests, complete members, basis, precedence law, boundary, and residuals | stale frontier retains `hold` plus `stale_frontier`; unresolved lineage retains `gap`; re-enter with a new projection |
@@ -790,8 +790,9 @@ from prose.
 validation, admission or readiness predicates. They do not establish the
 intended external outcome. `hold`, `gap` and `indeterminate` retain
 `indeterminate` where decisive evidence is missing. A demonstrated false
-predicate remains `falsified`, retaining `refused`, `stale`, `unauthorized` or
-`out_of_scope` as mapped below. In particular `out_of_scope` from a false
+predicate remains `falsified`, retaining `refused`, `stale`, `unauthorized`,
+`out_of_scope` or the declared `hold` for an established stale frontier as
+mapped below. In particular `out_of_scope` from a false
 `event_scope_compatible` constraint is a falsified compatibility claim; its
 spelling does not turn it into the invocation-boundary `out_of_frame` result.
 For a `partial` transition, the exact intended-outcome predicate and evidence
@@ -799,6 +800,18 @@ determine `falsified` if non-fulfilment is established, or `indeterminate` if
 fulfilment remains unknown. Its effect state separately retains observed
 partiality or uncertainty. These distinctions make each complete return map to
 one core verdict without discarding the profile's finer decision.
+
+Source-frontier currentness is a material join of claim admission, cut
+admission and frontier projection. Established staleness falsifies that exact
+predicate; its `hold` decision with cause `stale_frontier` prevents use and
+requires reconstruction. Unknown currentness is indeterminate. The word
+`hold` alone decides neither case. A missing material scope or capability on
+an in-domain subject retains core `out_of_frame`, stop `out_of_scope` and
+`unresolved_cause` naming the missing relation. Its decision is `hold`, or
+`indeterminate` for `transition_evaluation`, whose domain has no `hold` value.
+Re-enter with a capable frame under the original subject/basis or retain the
+stop. These diagnostic rules apply to every judgment kind without adding a
+second verdict domain.
 
 The closed constraint domains are:
 
@@ -808,12 +821,12 @@ The closed constraint domains are:
 | `occurrence_causation_acyclic` | `OccurrenceModelSubject` | `model_validation` | `refused` plus `refusal` | `hold` plus `unresolved_cause` |
 | `event_causation_acyclic` | `OccurrenceModelSubject` | `model_validation` | `refused` plus `refusal` | `hold` plus `unresolved_cause` |
 | `occurrence_seed_complete` | `Occurrence` | `occurrence_admission` | `refused` plus `refusal` | `hold` plus `unresolved_cause` |
-| `relation_claim_admissible` | `RelationClaim` | `claim_admission` | `refused` plus `refusal` | `hold` plus `unresolved_cause` or `stale_frontier` |
-| `semantic_cut_complete` | `SemanticAdmissionCut` | `semantic_cut_admission` | `refused` plus `refusal` | `hold` plus `stale_frontier` |
+| `relation_claim_admissible` | `RelationClaim` | `claim_admission` | `refused` plus `refusal`; established stale frontier retains `hold` plus `stale_frontier` | `hold` plus `unresolved_cause` |
+| `semantic_cut_complete` | `SemanticAdmissionCut` | `semantic_cut_admission` | `refused` plus `refusal`; established stale frontier retains `hold` plus `stale_frontier` | `hold` plus `unresolved_cause` naming the undecided slot or join |
 | `pre_effect_current` | `EffectSubject` | `effect_readiness` | `stale` plus `hold` and `stale_currentness` | `hold` plus `stale_currentness` |
 | `operation_grant_contains_effect` | `EffectSubject` | `effect_readiness` | `unauthorized` plus `refusal` | `hold` plus `unobserved_subject_state` |
 | `event_scope_compatible` | `FrameworkEvent` | `event_admission` | `out_of_scope` plus `refusal` | `hold` plus `unresolved_scope` |
-| `frontier_complete` | `Projection` | `frontier_projection` | `refused` plus `refusal` | `hold` plus `stale_frontier` |
+| `frontier_complete` | `Projection` | `frontier_projection` | `refused` plus `refusal`; established stale frontier retains `hold` plus `stale_frontier` | `hold` plus `unresolved_cause` |
 | `transition_subject_complete` | `TransitionSubject` | `transition_evaluation` | `refused` plus `refusal` | `indeterminate` plus `unobserved_subject_state` |
 
 Each constraint declares zero latitude unless its exact record names a
@@ -823,10 +836,10 @@ Each constraint declares zero latitude unless its exact record names a
 |---|---|---|
 | `unobserved_subject_state` | `SubjectBinding` | acquire a bounded observation or retain hold |
 | `partial_effect` | `EffectInvocation` | acquire post-observation and explicit disposition |
-| `unresolved_cause` | claim or event | acquire authority and evidence or retain unresolved |
+| `unresolved_cause` | exact judgment subject | acquire the named missing authority, evidence, judgment or frame capability; re-evaluate the unchanged subject when applicable, otherwise construct its successor |
 | `unresolved_scope` | `FrameworkEvent` | declare lawful scope or refuse admission |
 | `competing_lineage` | `EventFrontier` | apply an authorized `frontier_projection` judgment |
-| `stale_frontier` | `Projection` | construct a new exact frontier and projection |
+| `stale_frontier` | claim, semantic cut or projection | construct a new subject over the current exact frontier; no stale subject is rewritten in place |
 | `stale_currentness` | `EffectSubject` | re-observe and re-judge before effect |
 | `unobserved_external_mutation` | `SubjectBinding` | observe or retain an explicit material unknown |
 
@@ -895,9 +908,11 @@ RelationClaim c
   -> Judgment j_a over unchanged a
 ```
 
-Conjoin the required claim, event and semantic-cut predicates through
-[result conjunction](FOUNDATIONS.md#result-conjunction), retaining each exact
-judgment and required equality relation. A refusal remains visible beside a
+Evaluate `j_a` by conjoining the authenticated claim judgment `j_c`, event
+judgment `j_e` and the cut's declared material joins through
+[result conjunction](FOUNDATIONS.md#result-conjunction). `j_a` is this
+evaluation's output, never its own input. Retain each exact component judgment
+and required equality relation. A refusal remains visible beside a
 missing judgment; absence cannot erase the refusal or complete the cut. The
 conjunction does not widen the admission authority of any participant.
 
@@ -938,14 +953,25 @@ Within an interpretable cut, the required membership and equality relations
 below are material joins. An established failure of such a join is
 counterevidence to cut admission, not a missing governing basis.
 
-Apply core conjunction before mapping the composite result: `falsified` maps to
-`refused`, `invalid_basis` to `invalid_basis`, `indeterminate` to `hold`, and
-`satisfied` permits `admitted` only with all three exact admission decisions
-above. Thus an authenticated refusal survives a missing companion; a held or
-absent judgment alone does not fabricate a refusal; and an invalid required
-basis remains invalid when no applicable falsification decides the conjunction.
-An uninterpretable composite basis follows the core invalid-basis rule. A
-missing `j_a` remains an absent slot, not a newly invented held judgment.
+Apply core conjunction before mapping `j_a`: `falsified` maps to `refused`,
+except that established source-frontier staleness retains the declared `hold`
+and `stale_frontier` without lowering the verdict. `invalid_basis` maps to
+`invalid_basis`; `indeterminate` and `out_of_frame` retain the causes and stops
+declared above. `satisfied` permits `admitted` only when `j_c` and `j_e` are
+exact admitted judgments and all required joins are established. Thus an
+authenticated refusal survives a missing companion; a held or absent judgment
+alone does not fabricate a refusal; and an invalid required basis remains
+invalid when no applicable falsification decides the conjunction. An
+uninterpretable composite basis follows the core invalid-basis rule.
+
+The downstream consumer requires the resulting `j_a` to admit the cut. A
+missing `j_a` remains that consumer's absent slot, not an input to its own
+evaluation or an invented held judgment. A new judgment may evaluate unchanged
+cut bytes after missing support is supplied. If a referenced judgment, frontier
+or other cut member changes, construct the corresponding successor cut;
+never replace a member behind an existing digest. Missing support cannot make
+an actually incomplete or mismatched cut complete. The duplicate-cut rule below
+applies to cut identity, not to a newly identified judgment over unchanged bytes.
 
 An admission event identity binds its event kind, payload digest, scope,
 optional occurrence, exact claim, claim judgment, source frontier, owner,
@@ -1117,7 +1143,8 @@ The disposition law is closed:
 the later outcome without rewriting the invocation.
 
 The shared return conserves the effect observation, rather than mapping labels
-without evidence. `no_effect` with no requested operation is `not_requested`.
+without evidence. `no_effect` uses `not_requested` only for an established
+effect-free scope under the core rule, not merely an absent operation request.
 For a requested operation stopped before dispatch, `no_effect` is `not_started`
 only with authenticated non-dispatch evidence. Without that support the claimed
 disposition remains unadmitted and the requested effect is `unknown`.

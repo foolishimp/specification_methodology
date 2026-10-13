@@ -732,7 +732,13 @@ predicate; `rejected` with a demonstrated violation maps to
 `falsified`; missing deciding evidence maps to `indeterminate`; missing
 admission scope or capability maps to `out_of_frame`; and unusable authority
 or subject coordinates map to `invalid_basis`. A reason accompanies every
-refusal; a missing required reason follows the core missing-reason rule.
+refusal. For every original outcome, including an `admitted` label whose claim
+is not established, apply the [core result law](FOUNDATIONS.md#result-algebra)
+and its legal performance pairs. Missing deciding support gives `indeterminate`;
+the label cannot override separately admissible counterevidence or a basis/scope
+diagnosis. Missing required reasons follow that same core law. A required
+admission evaluation with no result remains an absent slot, with its known
+performance or uncertainty; a carrier state does not fabricate a result.
 `drafted` and `superseded` are carrier states, not evaluation verdicts.
 An old admission is not a current grant merely because its text remains in
 the workspace. Neither admission satisfaction nor `active` status establishes
@@ -743,8 +749,10 @@ basis without deterministic admission or explicit human override.
 
 An explicit override has a separate decision result on the exact contract and
 bound mandate. It can authorise work only within that mandate and leaves the
-admission evaluation's verdict intact. The carrier's `admitted` state cannot
-convert a failed evaluation into satisfaction.
+admission evaluation's existing verdict intact. If no evaluation result exists,
+its required slot remains absent with the known performance fact or uncertainty;
+the override supplies only its own decision result and bounded authority. The
+carrier's `admitted` state cannot convert failure or absence into satisfaction.
 
 Execution-contract admission validates a proposed contract against its cited
 Product outcome, prerequisite, or experiment basis; it does not admit that
@@ -910,8 +918,13 @@ Closure evaluates `every applicable declared obligation of this exact work
 claim is satisfied and no active non-closure condition remains` through
 [core conjunction](FOUNDATIONS.md#result-conjunction). Bind the obligation set,
 each predicate and its subject/basis before conjoining, including every required
-judgment and owner ruling as a required conjunct. A known failure remains visible when another obligation has no
-assessment. Missing or unknown applicability cannot become satisfaction.
+judgment and owner ruling as a required conjunct. Each ruling is evidence for
+the exact disposition that closure requires on this subject and basis under
+its mandate: for example, `the authorised owner accepted this exact subject`.
+Lawfulness of a different disposition does not satisfy that predicate. Retain
+the original ruling and its own decision result rather than relabeling it as
+the required acceptance. A known failure remains visible when another obligation
+has no assessment. Missing or unknown applicability cannot become satisfaction.
 The core result records the original closure outcome, actual performance,
 effects and residuals; evidence presence alone is not completion. The existing
 owner decides any reserved acceptance.

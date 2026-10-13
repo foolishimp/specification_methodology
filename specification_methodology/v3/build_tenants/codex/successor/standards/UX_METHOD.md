@@ -320,7 +320,7 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 Each replay assessment returns the shared
 [result record](FOUNDATIONS.md#result-algebra) on the exact interaction-family
 predicate, preserving the original test outcome and observed command/effect
-trace. A demonstrated expected-state or command mismatch, or a dependency on
+trace. A demonstrated expected-state or command mismatch, or a demonstrated dependency on
 any source excluded by this replay contract, is `falsified`; a
 proof not run retains `not_performed` and cannot satisfy the predicate.
 Missing decisive trace is `indeterminate`; an unusable fixture or governing
@@ -522,8 +522,11 @@ who may accept, reprice or remove work remains bound by the existing grant.
 
 Sprint-close eligibility and product UX method closure are separate predicates.
 The former may permit a declared local paydown under its governing policy;
-the latter conjoins its applicable proof, accessibility and exemption results
-through [core conjunction](FOUNDATIONS.md#result-conjunction). Sprint-close
+the latter conjoins its applicable proof and accessibility results through
+[core conjunction](FOUNDATIONS.md#result-conjunction). An authorised recorded
+exemption is the supported applicability judgment that removes only its
+exempted obligation; no absent exemption is a missing mandatory result.
+Sprint-close
 eligibility is not a conjunct of that method-closure predicate and supplies no
 evidence that the debt is resolved.
 

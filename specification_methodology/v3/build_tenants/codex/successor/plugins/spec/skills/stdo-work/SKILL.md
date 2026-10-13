@@ -40,9 +40,8 @@ Acquire the bound subject and basis from the workspace, its selected snapshot
 and authoritative inputs before relying on a retained summary. Discarded private context does not reset the workspace. The
 selected work/recovery or triage frame carries the workspace/context contract
 and core result algebra. Keep candidate availability, fitness and authorised
-acceptance as separate predicates. Carry the complete core result record,
-including its predicate, subject and basis, original outcome and reason,
-performance, evidence, effect observations and unresolved coverage.
+acceptance as separate predicates. Carry the complete core result record under
+its owning definition in the selected frame.
 
 Read the selected frame and the actual subject. Follow material source and
 coupled-obligation references when the task needs them. The view alone makes no

@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: b1d7a45d40fb978012052694c40e286a88a3cd60e7a50560fb405a10cf28c24f
+source_digest: a91012c780f94c8cc0df85dd6912116ef1ad4c47a4bc070526fd39de2fbb1094
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform

@@ -436,8 +436,9 @@ Every evaluation returns the [core result](FOUNDATIONS.md#result-algebra)
 bound to its exact frame, activation, subject, basis and predicate. The five
 verdicts and their conjunction have that single owner. A frame-specific outcome
 retains its original domain meaning and has one explicit mapping to the core
-verdict for the declared predicate. An outcome lacking its required reason
-follows the core missing-reason rule.
+verdict for the declared predicate. An outcome lacking its required reason,
+outside the declared mapping, or without its mapping's required support follows
+the core missing-reason rule; its label supplies no deciding evidence.
 
 An activation attempt and the work it would authorize are different subjects.
 A refused activation records its own result on “this frame may be activated
@@ -615,8 +616,11 @@ revise(frame_set, new_evidence, failures, capability_change, topology_change)
 These signatures describe method relations. They do not require callable
 software interfaces. Their returned values, refusal words and decision
 outcomes are domain outputs; each evaluated claim about them uses RF-012's
-shared core result on its exact predicate. A returned `decision` does not
-prove it is authorised or correct without that judgment. The frame binds any
+shared core result on its exact predicate. A governing decision rule may consume
+these results through the library's [Dispose](TRANSFORMATION_LIBRARY.md#dispose)
+responsibility under its bound authority; that decision is separate from the
+conjunction verdict. A returned `decision` does not prove it is authorised or
+correct without that judgment. The frame binds any
 finer case mapping before its outcome is consumed.
 
 ---
@@ -672,8 +676,10 @@ context is discarded. Unknown effects use the core recovery condition in
 does not establish that repeating the effect is safe.
 
 When no available frame and actor pairing can lawfully perform the evaluation,
-activation returns a refusal or `out_of_frame` pressure. Work does not proceed
-through implied context.
+activation returns an RF-012 activation refusal. A separately established
+`out_of_frame` result on the downstream work predicate follows RF-012's rule;
+it is not fabricated from the activation refusal. Work does not proceed through
+implied context.
 
 ### Evaluate
 

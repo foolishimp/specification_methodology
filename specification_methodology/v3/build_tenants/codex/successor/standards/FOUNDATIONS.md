@@ -362,14 +362,19 @@ neither effect completion nor absence; `unknown` includes a lost acknowledgment
 after possible execution.
 `reverted` means that at least one part began and every begun part is observed to have been reversed within
 the declared boundary, with the reversal and any unstarted remainder retained
-as evidence. Irreversible messages or other material external effects must not
-be excluded from that boundary to claim reversal. `partial` means an observed
+as evidence. For every effect value, the boundary includes each material part
+the operation may have affected under its supported operating model and any
+observed departure, whether requested or unintended. Irreversible messages or
+other material external effects cannot be omitted to improve a result.
+`partial` means an observed
 completed part and an observed unexecuted or reverted remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
-An empty local log or discarded context does not establish no effect. When no
-effect is part of the operation, `not_requested` states that scope.
+An empty local log or discarded context does not establish no effect.
+`not_requested` states an established effect-free scope under that operating
+model; lack of a request alone is insufficient. A material possible unintended
+effect without sufficient observation is `unknown`.
 
 A refined value is the pair of original domain outcome and cause in its
 declared reason domain, including an explicit missing-reason case. A domain
@@ -383,8 +388,9 @@ retain its raw outcome and unresolved authentication. Its claimed predicate
 remains indeterminate until admissible evidence decides it. Independently
 established counterevidence or a basis/scope diagnosis uses the legal pairs above
 on that same bound predicate; it does not invent execution or completion.
-Requested effects without sufficient observation are unknown, never defaulted
-to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
+Requested or material possible unintended effects without sufficient observation
+are unknown, never defaulted to not_requested. Unconfirmed evaluation performance
+stays unconfirmed. Domain meaning stays with its domain owner.
 No refinement turns failure, undecidability, non-performance or unknown effect
 completion into greater standing. A new result over a different predicate does
 not overwrite the earlier result.
@@ -420,9 +426,10 @@ effect boundary and the selected effect parts within it. First resolve a current
 observation for each part, retaining the contributing observations, identities,
 ordering and any supported supersession. A later timestamp alone is no
 supersession argument. Conflicting or insufficient observations leave the part
-unknown. A requested part without sufficient observation, including a part
-owned by an absent evaluation slot, is unknown unless evidence establishes
-not_started. No requested parts gives not_requested.
+unknown. Every material part that may have been affected, including an
+unrequested part or one owned by an absent evaluation slot, is unknown without
+sufficient observation unless evidence establishes not_started. Only an
+established effect-free scope gives not_requested; no request is not that proof.
 
 Sequential stages can affect the same part. Their local completion labels are
 not inputs to the composite join until mapped onto that part's observed state
@@ -477,9 +484,10 @@ predicate; the dependency relation must justify its relevance.
 A declared operator states its truth and falsity conditions over exact leaf
 predicates and joins. On its fully decided admitted domain, those conditions
 are disjoint and exhaustive, including failure of a required join. An
-overlapping, incomplete or uninterpretable operator declaration is invalid_basis;
-its unresolved well-formedness remains explicit and supplies no satisfaction.
-Its result can be satisfied only when authenticated
+overlapping, incomplete or uninterpretable operator declaration is invalid_basis.
+Unresolved well-formedness makes the operator result indeterminate and supplies
+neither satisfaction nor falsification; independently valid leaf results remain
+visible. Once well-formedness is established, its result can be satisfied only when authenticated
 evidence establishes its truth condition and the material joins and coverage
 needed for that condition. It can be falsified only on an established falsity
 condition. Otherwise a material invalid_basis yields invalid_basis, a material
