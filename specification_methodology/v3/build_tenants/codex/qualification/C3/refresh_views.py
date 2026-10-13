@@ -1,4 +1,4 @@
-"""Refresh exact derivative routes and digests; does not confer semantic acceptance."""
+"""Refresh exact derivative routes/digests; summary meaning needs separate review."""
 import hashlib
 import json
 from pathlib import Path
@@ -17,12 +17,12 @@ def slug(v):
     v = unicodedata.normalize('NFC', v)
     return re.sub(r'\s', '-', re.sub(r'[^\w\-\s]', '', v))
 
-def relocate(match):
+def relocate(match, owner_name=None):
     value = match[2]
     if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', value):
         return match[0]
     if value.startswith('#'):
-        raise ValueError('Local fragment needs an owning member coordinate')
+        return match[1] + '../' + owner_name + value + match[3]
     return match[1] + '../' + value + match[3]
 
 def refresh():
@@ -57,7 +57,7 @@ def refresh():
             i, h = matches[0]
             end = next((n.start() for n in headings[i + 1:] if len(n[1]) <= len(h[1])), len(text))
             raw = text[h.start():end].rstrip() + '\n'
-            rendered = re.sub(r'(\[[^\]]*\]\()([^\n]+?)(\))', relocate, raw)
+            rendered = re.sub(r'(\[[^\]]*\]\()([^\n]+?)(\))', lambda m: relocate(m, owner.name), raw)
             parts.append(f"\nSource: [{owner.name} — {h[2]}](../{str(Path(entry['owner']).relative_to('standards'))}#{entry['anchor']}); "
                          f"SHA256 `{sha(owner)}`.\n\n" + rendered)
             entry['owner_sha256'] = sha(owner)

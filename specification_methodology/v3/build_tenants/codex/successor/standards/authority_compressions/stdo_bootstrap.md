@@ -10,12 +10,12 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: 4f7f2353ff1d25c4e43d76023c1782a5a633ba3245ee4a90580a92d5c4517b2f
-  TRANSFORMATION_LIBRARY.md: e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920
-  SPEC_METHOD.md: fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43
-  REFERENCE_FRAME_METHOD.md: 44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488
-  STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
-  RELEASE_METHOD.md: 26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373
+  FOUNDATIONS.md: fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983
+  TRANSFORMATION_LIBRARY.md: 1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6
+  SPEC_METHOD.md: 1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa
+  REFERENCE_FRAME_METHOD.md: 951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6
+  STDO_REFERENCE_FRAME_BASELINE.md: 269704685039f4f4f26516e5529e8545ac1a11847a445ee80f1fc929c17689f9
+  RELEASE_METHOD.md: 939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
@@ -27,9 +27,17 @@ stale_if_source_digest_changes: true
 
 # STDO Discovery Bootstrap
 
+The [core result contract](../FOUNDATIONS.md#result-algebra) owns outcomes and
+[result conjunction](../FOUNDATIONS.md#result-conjunction) owns their conjunctive
+combination. Domain labels below are refinements on their exact predicates,
+retaining original outcomes, performance and effect observations.
+[Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
+governs context reconstruction and conditional reuse.
+
+
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
 organise shared premises and transformation families. Detailed owners retain
-their exact applicability, result domains and operation grants. Use a sufficient
+their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
 

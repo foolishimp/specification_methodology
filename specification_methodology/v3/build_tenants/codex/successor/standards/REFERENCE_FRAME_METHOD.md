@@ -53,13 +53,21 @@ execution contexts over a changing body of work. It applies to human work,
 agentic work, deterministic evaluation, probabilistic construction, assurance,
 and mixed work where the governing product or method permits them.
 
-The [foundations](FOUNDATIONS.md) explain the finite-actor premise and distinguish
-purpose, interpretation, identity, evidence and authority. This member owns the
-bounded frame declaration, activation, evaluation, result, coverage and revision
-relations. The [shared transformation library](TRANSFORMATION_LIBRARY.md)
-describes recurring contract responsibilities; these are explanatory
-correspondences to the method functions below, which retain their exact applicability, result algebras,
-owner boundaries and qualification obligations.
+The [foundations](FOUNDATIONS.md#bounded-construction) supply the finite-context
+and finite-attention premises. Given a task, relevant dependencies and a capable
+actor, they require a sufficient bounded acquisition rather than an assumed
+global context. RF-002 through RF-004 decide that acquisition; RF-013 and RF-014
+decide reconstructability and fit. Choosing a particular frame partition,
+evaluation protocol or actor arrangement remains a declared method choice.
+
+This member owns frame declaration, activation, evaluation, coverage and
+revision. It consumes the shared [result algebra](FOUNDATIONS.md#result-algebra),
+[conjunction](FOUNDATIONS.md#result-conjunction) and
+[workspace/context relation](FOUNDATIONS.md#workspace-and-context) at the
+deciding operations below. Its finer outcomes refine that algebra; they do not
+create another core result family. The
+[transformation library](TRANSFORMATION_LIBRARY.md) binds acquisition,
+evaluation and result consumption without imposing an execution sequence.
 
 This is an engagement meta-method. It does not define an application profile,
 role mapping, Product-owned frame-basis binding, domain Product, specification
@@ -128,7 +136,10 @@ implementations, tools, runtime state, evidence, historical records, external
 dependencies, and human decisions.
 
 The workspace is broader than a repository. A repository is one possible
-carrier.
+carrier. [Workspace and context](FOUNDATIONS.md#workspace-and-context) governs
+the distinction between this material state and an actor's acquired view.
+Observed state can defeat a stale summary; the summary cannot change the state.
+External effects require observations from their owning surfaces.
 
 ### Basis
 
@@ -264,7 +275,7 @@ where:
 - \(A\) is the authority relation;
 - \(E\) is the admissible evidence and provenance law;
 - \(X\) is the exclusion and prohibited-assumption set;
-- \(R\) is the closed result algebra;
+- \(R\) is the shared core result algebra with the frame's declared refinements;
 - \(J\) is the invalidation and rechart condition;
 - \(K\) is the actor capability envelope; and
 - \(D\) is the optional set of declared dependencies, overlaps, inputs, and
@@ -388,6 +399,10 @@ is needed.
 
 ### RF-009 No Assumed Hierarchy
 
+The [configuration relation](FOUNDATIONS.md#configuration) governs allocation
+of tasks to bounded frames. Roles label selected responsibilities; they are not
+an exhaustive primitive inventory or a prerequisite for every task.
+
 Frames may relate through disjointness, overlap, refinement, restriction,
 translation, temporal succession, composition, or governance. Parent and child
 relations apply only where explicitly declared.
@@ -416,18 +431,28 @@ is reused.
 
 ### RF-012 Closed Results
 
-Every evaluation returns a member of its declared result algebra. The baseline
-result family is:
+Every evaluation returns the [core result](FOUNDATIONS.md#result-algebra)
+bound to its exact frame, activation, subject, basis and predicate. The five
+verdicts and their conjunction have that single owner. A frame-specific outcome
+retains its original domain meaning and has one explicit mapping to the core
+verdict for the declared predicate. An unclassified finer outcome is not
+silently treated as satisfaction.
 
-- `satisfied`: the declared predicate holds on the exact basis;
-- `falsified`: a declared counterexample defeats it;
-- `indeterminate`: available admissible evidence cannot decide it;
-- `out_of_frame`: the evaluation requires an undeclared material relation or
-  capability; or
-- `invalid_basis`: the subject or basis cannot support the evaluation.
+An activation attempt and the work it would authorize are different subjects.
+A refused activation records its own result with the failed admission
+predicate, cause and evidence; it does not fabricate a performed work result.
+Missing capability maps to `out_of_frame`, an unusable subject/basis to
+`invalid_basis`, an established admission prohibition to `falsified`, and
+unresolved admissible admission evidence to `indeterminate`. Successful
+activation satisfies admission only. The work remains `not_performed` until
+actually undertaken. Each result retains performance and known effect state.
 
-An externally owned compatible extension may refine this algebra while
-preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
+Where execution cannot be confirmed, retain the core `unconfirmed` performance
+state. An absent return is not evidence that an invoked operation did not run.
+
+A domain may refine these cases but cannot erase a failure, unknown, refusal,
+non-performance or uncertain effect, or promote candidate availability into
+fitness, acceptance or authority.
 
 ### RF-013 Reconstructable Activation
 
@@ -576,7 +601,11 @@ revise(frame_set, new_evidence, failures, capability_change, topology_change)
 ```
 
 These signatures describe method relations. They do not require callable
-software interfaces.
+software interfaces. Their returned values, refusal words and decision
+outcomes are domain outputs; each evaluated claim about them uses RF-012's
+shared core result on its exact predicate. A returned `decision` does not
+prove it is authorised or correct without that judgment. The frame binds any
+finer case mapping before its outcome is consumed.
 
 ---
 
@@ -622,6 +651,14 @@ configuration capable of the evaluation. Activation binds each reusable frame
 declaration to the exact subject and basis. It loads the declared material
 relations and evidence sources rather than an undifferentiated workspace dump.
 
+Apply [workspace and context](FOUNDATIONS.md#workspace-and-context) before
+relying on a prior frame or summary. Reacquire changed material observations,
+reconcile stale beliefs, and retain only results whose validity conditions still
+hold. A fresh activation can continue from the current workspace after private
+context is discarded. Unknown effects withhold any dependent repetition until
+their owning observation resolves the uncertainty or an authorised recovery
+contract permits another action.
+
 When no available frame and actor pairing can lawfully perform the evaluation,
 activation returns a refusal or `out_of_frame` pressure. Work does not proceed
 through implied context.
@@ -629,22 +666,21 @@ through implied context.
 ### Evaluate
 
 The evaluator applies the frame's declared invariants, evidence rules, and
-result algebra. It distinguishes semantic law, observed evidence, inference,
+predicate-bound core result refinement under RF-012. It distinguishes semantic law, observed evidence, inference,
 and decision. It records every assumption whose failure could change the
 result.
 
 ### Return A Closed Result
 
-The result identifies the frame and activation, subject, basis, evaluation,
-actor, evidence, verdict, residual uncertainty, and invalidation conditions.
+The result identifies the frame and activation, subject, basis, predicate,
+actor, core verdict, original domain outcome, performance, known effects,
+evidence, residual uncertainty, and invalidation conditions.
 The frame's internal working context does not need to be transferred when its
 closed result and provenance are sufficient for the consuming decision.
 
-An unchanged consumer checks exact applicability and reuses a valid closed
-result. Role, conversation or resumption changes alone do not invalidate it.
-Changed material inputs or a declared revising observation invalidates the
-affected result before reliance; preserve its predecessor/successor relation
-and any demonstrably independent surviving results. Required independent
+The consumer applies the core workspace/context validity rule before reuse.
+Preserve the predecessor/successor relation for revised results and any
+demonstrably independent surviving results. Required independent
 evaluations may share valid mechanical evidence but must still supply their
 own sufficiently acquired evidence and judgments under the declared
 independence conditions.
@@ -681,7 +717,9 @@ altitudes, or distinct failure perspectives.
 
 ### Result Conjunction
 
-A declared decision rule consumes closed frame results. The rule states:
+A declared decision rule consumes closed frame results through
+[core conjunction](FOUNDATIONS.md#result-conjunction). Its frame-specific
+binding states:
 
 - which results are mandatory;
 - how conflict and indeterminacy are handled;
@@ -690,12 +728,10 @@ A declared decision rule consumes closed frame results. The rule states:
 - whether any result may veto or defer the decision.
 
 Conjunction does not transfer the semantic authority of a contributing frame.
-
-Every mandatory constraint must be satisfied with valid applicable evidence.
-Common agreement cannot discard a constraint or material counterexample found
-by only one contributor. Missing, wrong-subject, conflicted or indeterminate
-mandatory results remain unresolved under the declared rule; aggregate green
-status cannot replace them.
+The core rule retains both a known falsification and any uncovered required
+coverage. This consumer binds the mandatory claim set before aggregation and
+returns its coverage and residuals with the verdict. Counting agreeing frames
+cannot discharge another frame's applicable constraint.
 
 ### Evidence Or Coordinate Translation
 
@@ -1044,7 +1080,7 @@ universal Product profile and selects no implementation or representation.
 ## Frame
 - declaration identity and revision:
   urn:example:frame:product-chain-drift:1
-- evaluation:
+- evaluation and exact predicate:
   Does candidate urn:example:candidate:change:7 preserve the selected Product
   definition and every affected contract in the declared Product chain?
 - result algebra:
@@ -1325,11 +1361,13 @@ claim:
 - frame identity and revision:
 - activation identity:
 - evaluation:
+- exact predicate and domain refinement:
 - subject and basis:
 - actor and capability envelope:
 - semantic, evaluation, operation where material, and decision authority:
 - admissible evidence:
-- result:
+- core verdict and original domain outcome:
+- performance and known effect state:
 - inference relation:
 - residual uncertainty:
 - invalidation conditions:

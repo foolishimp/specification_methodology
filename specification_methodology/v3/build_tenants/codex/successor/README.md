@@ -9,7 +9,7 @@ The [standards library](standards/README.md) is the method entry.
 [Foundations](standards/FOUNDATIONS.md) states the premises. The
 [transformation library](standards/TRANSFORMATION_LIBRARY.md) defines shared
 conditional contracts. Particular methods own their concrete types, policy,
-result algebras and authority.
+refinements of the single result algebra and authority.
 
 [Responsibility views](standards/README.md#foundations-and-shared-library) project
 selected clauses for bounded tasks. Plugin skills route actors to sufficient

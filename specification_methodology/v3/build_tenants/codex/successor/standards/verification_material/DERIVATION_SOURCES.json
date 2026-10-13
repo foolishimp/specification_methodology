@@ -35,15 +35,19 @@
       "historical_member": "standards/IDENTITY_METHOD.md",
       "historical_member_sha256": "e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
       "source_member": "standards/IDENTITY_METHOD.md",
-      "source_member_sha256": "258ee3dbe7e79a9ddc54fa792f3a782bd5349d1c39c211e0bc7ce130487e7b3c",
+      "source_member_sha256": "6c92780e6f0d6f1a18d3b853aec22a058c121db5872fba6ca567287be94bf573",
       "segments": [
         {
           "start_byte": 0,
           "end_byte": 18
         },
         {
-          "start_byte": 3315,
-          "end_byte": 14647
+          "start_byte": 4309,
+          "end_byte": 13108
+        },
+        {
+          "start_byte": 14088,
+          "end_byte": 16621
         }
       ]
     },
@@ -51,15 +55,118 @@
       "historical_member": "standards/REFERENCE_FRAME_METHOD.md",
       "historical_member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
       "source_member": "standards/REFERENCE_FRAME_METHOD.md",
-      "source_member_sha256": "44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488",
+      "source_member_sha256": "951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6",
       "segments": [
         {
           "start_byte": 0,
           "end_byte": 1996
         },
         {
-          "start_byte": 2536,
-          "end_byte": 55658
+          "start_byte": 3011,
+          "end_byte": 6243
+        },
+        {
+          "literal_utf8": "carrier.\n"
+        },
+        {
+          "start_byte": 6542,
+          "end_byte": 12182
+        },
+        {
+          "literal_utf8": "- \\(R\\) is the closed result algebra;\n"
+        },
+        {
+          "start_byte": 12263,
+          "end_byte": 17336
+        },
+        {
+          "start_byte": 17563,
+          "end_byte": 18772
+        },
+        {
+          "literal_utf8": "Every evaluation returns a member of its declared result algebra. The baseline\nresult family is:\n"
+        },
+        {
+          "start_byte": 19187,
+          "end_byte": 19188
+        },
+        {
+          "literal_utf8": "- `satisfied`: the declared predicate holds on the exact basis;\n- `falsified`: a declared counterexample defeats it;\n- `indeterminate`: available admissible evidence cannot decide it;\n- `out_of_frame`: the evaluation requires an undeclared material relation or\n  capability; or\n- `invalid_basis`: the subject or basis cannot support the evaluation.\n"
+        },
+        {
+          "start_byte": 19785,
+          "end_byte": 19786
+        },
+        {
+          "literal_utf8": "An externally owned compatible extension may refine this algebra while\npreserving explicit indeterminate, out-of-frame, and invalid-basis pressure.\n"
+        },
+        {
+          "start_byte": 20133,
+          "end_byte": 25763
+        },
+        {
+          "literal_utf8": "software interfaces.\n"
+        },
+        {
+          "start_byte": 26111,
+          "end_byte": 28150
+        },
+        {
+          "start_byte": 28651,
+          "end_byte": 28924
+        },
+        {
+          "literal_utf8": "result algebra. It distinguishes semantic law, observed evidence, inference,\n"
+        },
+        {
+          "start_byte": 29038,
+          "end_byte": 29148
+        },
+        {
+          "literal_utf8": "The result identifies the frame and activation, subject, basis, evaluation,\nactor, evidence, verdict, residual uncertainty, and invalidation conditions.\n"
+        },
+        {
+          "start_byte": 29358,
+          "end_byte": 29509
+        },
+        {
+          "literal_utf8": "An unchanged consumer checks exact applicability and reuses a valid closed\nresult. Role, conversation or resumption changes alone do not invalidate it.\nChanged material inputs or a declared revising observation invalidates the\naffected result before reliance; preserve its predecessor/successor relation\nand any demonstrably independent surviving results. Required independent\n"
+        },
+        {
+          "start_byte": 29722,
+          "end_byte": 30933
+        },
+        {
+          "literal_utf8": "A declared decision rule consumes closed frame results. The rule states:\n"
+        },
+        {
+          "start_byte": 31086,
+          "end_byte": 31384
+        },
+        {
+          "literal_utf8": "\nEvery mandatory constraint must be satisfied with valid applicable evidence.\nCommon agreement cannot discard a constraint or material counterexample found\nby only one contributor. Missing, wrong-subject, conflicted or indeterminate\nmandatory results remain unresolved under the declared rule; aggregate green\nstatus cannot replace them.\n"
+        },
+        {
+          "start_byte": 31671,
+          "end_byte": 44639
+        },
+        {
+          "literal_utf8": "- evaluation:\n"
+        },
+        {
+          "start_byte": 44673,
+          "end_byte": 57066
+        },
+        {
+          "start_byte": 57107,
+          "end_byte": 57258
+        },
+        {
+          "literal_utf8": "- result:\n"
+        },
+        {
+          "start_byte": 57340,
+          "end_byte": 58378
         }
       ]
     },
@@ -67,15 +174,73 @@
       "historical_member": "standards/SPEC_METHOD.md",
       "historical_member_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4",
       "source_member": "standards/SPEC_METHOD.md",
-      "source_member_sha256": "fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43",
+      "source_member_sha256": "1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa",
       "segments": [
         {
           "start_byte": 0,
           "end_byte": 38
         },
         {
-          "start_byte": 1427,
-          "end_byte": 159341
+          "start_byte": 1784,
+          "end_byte": 4591
+        },
+        {
+          "literal_utf8": "The point is to make software re-derivable, auditable, and correctable under\nexplicit authority.\n"
+        },
+        {
+          "start_byte": 4817,
+          "end_byte": 44647
+        },
+        {
+          "start_byte": 45772,
+          "end_byte": 53967
+        },
+        {
+          "literal_utf8": "Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta\n"
+        },
+        {
+          "start_byte": 54093,
+          "end_byte": 55261
+        },
+        {
+          "literal_utf8": "- **Code** realizes those decisions.\n- **Events** record what actually happened.\n- **Projection** reconstructs current truth from the event stream.\n"
+        },
+        {
+          "start_byte": 55800,
+          "end_byte": 56537
+        },
+        {
+          "start_byte": 56988,
+          "end_byte": 68555
+        },
+        {
+          "start_byte": 69167,
+          "end_byte": 86958
+        },
+        {
+          "start_byte": 87398,
+          "end_byte": 90573
+        },
+        {
+          "literal_utf8": "Assessment returns one of these semantic dispositions:\n"
+        },
+        {
+          "start_byte": 90942,
+          "end_byte": 90943
+        },
+        {
+          "literal_utf8": "| Disposition | Condition |\n|---|---|\n| `accept` | the candidate closes its declared cone and preserves every affected governing relation |\n| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |\n| `re_enter` | Product, requirement, identity, lifecycle, authority, public contract, or accepted design must change |\n| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |\n"
+        },
+        {
+          "start_byte": 92638,
+          "end_byte": 94649
+        },
+        {
+          "literal_utf8": "neither acceptance, promotion nor publication. A proposed restart identifies\nwhy repair of retained work is insufficient, which obligations and evidence\nsurvive, and which causal assumptions change; reconstructability alone does\nnot select reconstruction.\n"
+        },
+        {
+          "start_byte": 95301,
+          "end_byte": 164789
         }
       ]
     }

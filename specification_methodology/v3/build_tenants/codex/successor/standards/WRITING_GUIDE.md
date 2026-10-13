@@ -99,6 +99,14 @@ If a sentence sounds informative but does not change authority, constraint, or d
 
 ## Practical Layer Checks
 
+Apply [workspace-derived acquisition](FOUNDATIONS.md#workspace-and-context)
+to the current owning surface before revising it. F1 supplies the writing
+purpose; F2 and F4 require preserved interpretation and obligations; F5
+motivates sufficient relevant context. The style choices in this guide are
+its own conventions, not deductions from a byte limit. A writing review uses
+the [core result](FOUNDATIONS.md#result-algebra) on the preservation or style
+predicate actually checked; shorter text alone establishes neither.
+
 When writing or revising a specification artifact, ask:
 
 1. Can the next downstream layer derive from this?

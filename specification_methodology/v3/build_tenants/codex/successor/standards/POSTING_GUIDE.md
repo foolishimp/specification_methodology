@@ -18,6 +18,15 @@ Posts are not constitutional truth. They are working commentary that may later i
 
 ## Boundary
 
+F2 requires observations and claims to retain their basis; F6 separates evidence
+from authority. A post's location and conventions are this guide's choices.
+Before publishing a review or handoff, apply
+[Workspace and context](FOUNDATIONS.md#workspace-and-context) to its current
+subject and report any judgment through the
+[core result](FOUNDATIONS.md#result-algebra), with its predicate, evidence and
+limits. Commentary can carry that result; it cannot supply an absent decision.
+
+
 Use a post when the content is:
 
 - provisional

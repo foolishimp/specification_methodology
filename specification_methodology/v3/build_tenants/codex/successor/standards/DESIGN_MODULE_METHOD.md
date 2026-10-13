@@ -1,29 +1,31 @@
 # Design Module Method
 
-This member relates the [Foundations](FOUNDATIONS.md) and
-[Transformation Library](TRANSFORMATION_LIBRARY.md) for realization design
-under `SPEC_METHOD.md`. Given a governed Product outcome, constitutional
-requirements and an actual design grant, its Ontology and material constraint
-network make identity, lifecycle, authority, composition and effects
-recoverable at a bounded design cut. Its Prime, carrier, module and projection
-laws preserve that network through realization; local mechanical success does
-not establish semantic completeness or acceptance.
+## Governing Relations
 
-Bind and Acquire take their concrete design obligations from the governing
-frames, accepted Ontology, source relations and sufficient reconstruction
-evidence. Transform takes its admission, carrier and effect conditions from
-the accepted design. Evaluate and Conjoin compare the affected views,
-implementation and proof against those same relations. Dispose remains with
-the owning design or Product authority. These are explanations of the laws
-below, not a second design package or execution protocol.
+The premises are a governed Product outcome, admitted requirements, a current
+material boundary, finite actor capacity and an actual design grant. Given
+those premises, [bounded construction](FOUNDATIONS.md#bounded-construction)
+requires the boundary to expose the obligations a local transformation must
+preserve. [Workspace and context](FOUNDATIONS.md#workspace-and-context)
+requires its reconstruction from current source and still-valid evidence,
+rather than the designer's remembered account. Authority does not follow from
+capability or from a plausible implementation.
 
-Generic design relations remain distinct from their conditionally applicable
-mechanics. ODD alignment applies inside an ODD-governed Product; Python typing
-applies to a Python boundary governed by this method; UX and world-model
-refinements retain their declared scopes and standing. Theoretical analogies
-supply no additional prerequisite. Detailed duties, lawful alternatives and
-refusal conditions remain with their owning clause. Cross-member references
-preserve each relation's declared semantic scope and owner.
+This method makes additional design choices: Ontology-first semantic ownership,
+Prime contraction, an irreducible carrier set, three related design views and
+explicit effect boundaries. Those choices refine the shared obligations; they
+are not logical consequences of finite capacity alone. The applicable clauses
+below own their conditions and exceptions. ODD alignment, Python typing, UX and
+world-model refinements retain their declared adoption scopes.
+
+At design admission, bind the candidate boundary, its basis, material relation
+set and grant. Acquire the source and seam evidence needed for that relation
+set. Design and implementation transform within it. Evaluate each required
+relation and use the shared [result conjunction](FOUNDATIONS.md#result-conjunction)
+at the cross-view gate. The design authority disposes of the resulting
+candidate under its grant. These operations instantiate the
+[Transformation Library](TRANSFORMATION_LIBRARY.md); they do not add a
+compulsory workflow or a second acceptance record.
 
 
 ## 1. Purpose
@@ -126,9 +128,12 @@ The core rule is:
 **semantic steps should read as transforms over admitted truth; effects should
 be explicit and pushed to the edge**
 
-If a reader must inspect orchestration code, mutable workspace state, service
-methods, or fallback defaults to determine what the system means, the design is
-too imperative and too coupled.
+If a reader must infer governing meaning from orchestration code, mutable
+workspace conventions, service methods or fallback defaults rather than the
+admitted contract, the design is too imperative and too coupled. Inspecting
+current workspace state remains necessary to determine what is actually
+present and which contract facts still hold; that observation does not make
+incidental state the authority for intended meaning.
 
 ## 3A. ODD Alignment And Escalation Rule
 
@@ -878,6 +883,18 @@ other supported outcome. These are semantic parameters, not a new carrier
 schema or common result enum. This method owns the design completeness test;
 UP-021 owns the admission decision and standing-test semantics.
 
+The admission assessment returns the shared
+[result record](FOUNDATIONS.md#result-algebra) on the predicate that this exact
+candidate satisfies the declared admission relation at its current basis.
+Preserve the domain admission outcome and evidence. A stale or contradictory
+admission basis is `invalid_basis`; an unsupported boundary is `out_of_frame`;
+a counterexample on a valid admitted basis is `falsified`; missing decisive
+evidence is `indeterminate`. `satisfied` requires the whole admission predicate.
+An assessment not performed retains `performance = not_performed`. Construction
+of a well-formed candidate is a different predicate and cannot stand in for
+admission. The effect component records the actual commit/publication state,
+including `partial` or `unknown` where appropriate.
+
 Apply that specialization in the existing admission assessment: a
 shape-correct candidate reconstructed by a projector cannot establish
 admission when it lacks the required predecessor continuity or admitter grant.
@@ -1475,12 +1492,20 @@ product declares replay, event, graph, or carrier ownership.
 
 ### Cross-view axiom evaluation
 
-The design pack must evaluate every applicable product, graph, language,
-runtime, handler, and module axiom with one of:
+The design pack evaluates every applicable product, graph, language, runtime,
+handler and module axiom using the shared
+[result algebra](FOUNDATIONS.md#result-algebra). Existing `pass`, `fail` and
+`not_applicable` labels are domain refinements, not another result algebra:
 
-- `pass`;
-- `fail`; or
-- `not_applicable`, with a reason.
+- `pass` maps to `satisfied` on the exact axiom predicate with its evidence;
+- `fail` maps to `falsified` on that predicate with its counterexample;
+- `not_applicable` maps to `out_of_frame` on the selected domain, with the
+  governing reason for exclusion. It is not a successful axiom check.
+
+Missing decisive evidence remains `indeterminate`; an unusable governing basis
+remains `invalid_basis`; an unperformed check retains `not_performed`. An
+applicability determination is a separate predicate. Only a supported exclusion
+under the owning applicability law removes an axiom from the required set.
 
 The minimum evaluation columns are:
 
@@ -1512,6 +1537,15 @@ be visible through the product's declared graph or compute algebra. A relied-on
 by imperative glue in a plugin, shell, service, script, or test harness.
 
 ### Gate and retrospective work
+
+Conjoin the required Ontology, design-view, constructability and axiom results
+using [result conjunction](FOUNDATIONS.md#result-conjunction). Keep each
+predicate, failure, citation and unresolved obligation. A proved failure in
+one view remains visible when another view has no assessment. No view count,
+empty result set or supported exclusion substitutes for the complete required
+set. The conjunction supports the design authority's decision; it is not that
+decision. Domain dispositions such as `accepted` and `non-accepted` remain
+reported with their authority and the predicate actually decided.
 
 For a new or semantically changed boundary, the Ontology and design verdict must
 both be `accepted` before the affected implementation, public contract, or
@@ -1580,6 +1614,16 @@ identity and key structures, algorithms, algebraic laws, mutation and effect
 boundaries, selected implementations, and domain-to-computational mappings. The
 cross-view evaluation extends to prove the domain views and this projection
 describe one system.
+
+The build tenant owns this binding from common requirements to executable
+operations and their actual environment. A machine stack, a human procedure
+and a mixed process each state their operations, composition, effect locations,
+authority and relevant resource dimensions. An operation performed by a person
+retains its input, outcome, refusal and recovery contract; a role title is not
+its implementation. The domain, algorithmic, informational and computational
+accounts must agree on the same obligations. Software-module mechanics apply
+where software realizes the boundary, not as a demand to disguise every human
+step as code.
 
 For a material producer-to-consumer path, this projection identifies fact
 establishment, consuming operations, applicable basis and invalidators, effect
@@ -1929,6 +1973,14 @@ Convenience is not sufficient justification.
 Semantic functions should be total or as close to total as the language and
 problem allow.
 
+At a method boundary their outcomes use the
+[shared result record](FOUNDATIONS.md#result-algebra), retaining the function's
+domain outcome. Invalid basis, an unsupported input domain, insufficient
+evidence and a demonstrated failure remain distinct. A typed return says what
+happened; it does not guarantee that an external computation terminates. The
+owning transition states its permitted recovery, re-entry, yield or termination
+for each supported result, including unknown effects.
+
 Preferred shape:
 
 - invalid input is rejected at the boundary
@@ -1971,6 +2023,14 @@ The preferred sequence is:
 2. transform it into a typed plan or outcome
 3. apply effects at the edge using that plan or outcome
 4. publish resulting events or projections downstream
+
+The effect return preserves `not_requested`, `not_started`, `completed`,
+`partial` or `unknown` in the shared record as observed. A transport failure
+after dispatch is not proof that an effect did not occur. Re-entry observes the
+current owning state before any dependent repeat, through
+[workspace and context](FOUNDATIONS.md#workspace-and-context). It can reacquire
+a sufficient frame after private context is discarded without resetting the
+workspace or assuming every effect is idempotent.
 
 If a function both decides the semantic meaning and directly performs the write,
 the design should be treated as suspect.

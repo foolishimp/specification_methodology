@@ -1,15 +1,23 @@
 # Identity Method
 
-This member relates [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
-and the [Transformation Library](TRANSFORMATION_LIBRARY.md) for scoped,
-typed identity and authority conservation. The scoped identity minimum is
+## Governing Relations
+
+The premises are a subject to distinguish, an owning authority, a declared kind
+and a lifecycle across which references must remain usable. The identity and
+evidence commitments in [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
+then require consumers to distinguish the subject from its representation and
+to preserve admitted authority through composition. The scoped identity minimum is
 authority, kind and value. Governing basis and lifecycle qualify authority or
 applicability where their owning contract requires them; they are not universal
 object-identity fields. Equal representation
 alone supplies neither identity equality nor permission; continuing identity
-alone supplies no claim that content or evidence is current.
+alone supplies no claim that content or evidence is current. The choice of
+readable or opaque names, encoding, hierarchy and optional coordinates remains
+with the adopting owner; those formats do not follow from finite context.
 
-Bind and Acquire recover the identity coordinates and their authentic owner.
+At the identity-reading boundary, Bind and Acquire recover the identity
+coordinates and their authentic owner under the
+[Transformation Library](TRANSFORMATION_LIBRARY.md).
 Transform and composition preserve the admitted identity and authority
 relations or use an explicit owning transition. Evaluate checks uniqueness,
 kind distinction, parsing, stability and applicable evidence. Dispose remains
@@ -52,6 +60,14 @@ material before reuse. A successful
 reconstruction establishes content and reference checks only. Acceptance of
 the historical cut, semantic derivation, successor admission and publication
 remain separate judgments at their existing owners.
+
+Verification returns the shared [result record](FOUNDATIONS.md#result-algebra)
+for the exact historical-coordinate and byte-reconstruction predicates. Conjoin
+required member, digest, fragment and unique-membership checks with
+[result conjunction](FOUNDATIONS.md#result-conjunction), preserving failed and
+unresolved checks separately. A successful byte check is `satisfied` only for
+that content predicate. It cannot be remapped to semantic derivation,
+acceptance or current authority by changing the predicate after evaluation.
 
 
 ## Position
@@ -370,6 +386,22 @@ Therefore:
 
 If a domain needs family ids, it should publish them explicitly as
 `requirement_family` identities rather than rely on string-shape accidents.
+
+At admission, the identity reader returns the shared
+[result record](FOUNDATIONS.md#result-algebra) on the declared scoped-identity
+predicate. Preserve any domain parsing/refusal outcome. A demonstrated kind,
+uniqueness or coordinate violation is `falsified` on a valid basis; unavailable
+decisive evidence is `indeterminate`; an unusable authoritative basis is
+`invalid_basis`; a request outside the reader's declared domain is
+`out_of_frame`. A check not run retains `not_performed`. Syntactic parsing alone
+can satisfy only its syntax predicate, not authenticity, grant validity or
+currentness.
+
+Before reuse, observe the current owning state and the relevant invalidators
+under [workspace and context](FOUNDATIONS.md#workspace-and-context). A stable
+identity cannot keep stale content, a revoked grant or an old observation
+current. Renaming a coordinate does not by itself replace the subject; a real
+identity transition requires the owning law and explicit relation above.
 
 ---
 

@@ -9,7 +9,160 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Result algebra
+
+A result makes a claim about one predicate on one subject and basis. Its core
+record contains the predicate, exact subject and basis, verdict, performance,
+original qualified domain outcome, supporting evidence and citations, unresolved
+obligations and material effect observations. A reference can carry these when
+its resolution preserves their meaning and availability. This is a semantic
+contract, not a mandatory serialization format or additional work carrier.
+
+The verdict has exactly these values:
+
+| Value | Meaning for the bound predicate |
+|---|---|
+| `satisfied` | Admissible evidence establishes the predicate under its declared evaluation rule. |
+| `falsified` | Admissible evidence establishes a counterexample or failure of that predicate. |
+| `indeterminate` | The available admissible evidence does not decide the predicate. |
+| `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
+| `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
+
+Performance concerns the named predicate and is `performed`, `not_performed`
+or `unconfirmed`. The legal pairs are:
+
+| Performance | Permitted verdicts | Meaning |
+|---|---|---|
+| `performed` | Any of the five verdicts | The named evaluation ran; scope or basis diagnosis can prevent a judgment of the subject property. |
+| `not_performed` | `indeterminate` only | Evidence establishes that the named evaluation did not run. |
+| `unconfirmed` | `indeterminate` only | Whether the named evaluation ran is not established. |
+
+A missing required judgment stays an absent coverage slot, with the known
+performance fact or its uncertainty; it is not a fabricated child result. A
+performed but undecidable evaluation differs from a known unperformed one and
+from unconfirmed execution. A failed admission check can be performed while
+downstream work is not performed. Every result projection preserves these
+coordinates and the original predicate; a verdict alone is an insufficient
+handoff where performance is material.
+
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`
+or `unknown`. These values describe the selected effect and observation
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`partial` means an observed completed part and an observed unexecuted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
+An empty local log or discarded context does not establish no effect. When no
+effect is part of the operation, `not_requested` states that scope.
+
+A domain refinement preserves its qualified original outcome and supplies a
+total, reason-sensitive map into this record. If the original outcome is too
+coarse to determine a verdict, its required reason distinguishes the cases; a
+consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
+A missing required reason makes that contribution inadmissible for its slot;
+retain its raw outcome and unresolved authentication. Its claimed predicate
+remains indeterminate until admissible evidence decides it. An independently
+established invalid basis instead yields invalid_basis for that diagnosis.
+Requested effects without sufficient observation are unknown, never defaulted
+to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
+No refinement turns failure, undecidability, non-performance or unknown effect
+completion into greater standing. A new result over a different predicate does
+not overwrite the earlier result.
+
+Candidate availability, candidate fitness and authorised acceptance are three
+predicates. `candidate_ready` can satisfy availability while fitness remains
+falsified or unassessed. A lawful yield can satisfy the selected yielding
+contract while product completion remains unresolved. A decision result binds
+the predicate “disposition D on subject S at basis B was made under mandate M
+by its bound authority”. A lawful rejection can satisfy that predicate while
+candidate fitness remains undecided. Recording the decision is not its authority.
+A not-applicable classification needs a supported applicability judgment; it is
+never a synonym for a missing evaluation.
+
+A stop reports the actual destination or task predicate through this record,
+with its reason, observed effects and outstanding obligations. Its verdict
+is indeterminate when the outcome remains undecided, falsified when admissible
+evidence defeats that predicate, or the established scope/basis diagnosis.
+Lawfulness of stopping is a separate decision predicate.
+
+
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Result conjunction
+
+Conjunction evaluates whether all required predicates and their material joins
+hold on the declared composite subject and basis. It retains the contributing
+results, their authentication and predicate mapping, known failures and their
+citations, uncovered required coverage, uncertain effects and invalidators.
+The aggregate is another result in the same algebra, with those components
+available through sufficient references. Its summary never replaces them.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. Aggregate effect state is
+computed over the declared composite effect scope: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; every remaining fully observed mixture gives
+partial. Retain which component each observation concerns. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
+
+First authenticate each contribution against its producer, subject, basis and
+required plan membership. An unauthenticated claim cannot discharge an
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
+conditions. An invalid contribution does not erase an independently
+authenticated finding.
+
+For an interpretable composite predicate and governing basis:
+
+1. Any authenticated, applicable falsification of a required predicate makes
+   the conjunction `falsified`. Missing or undecidable other coverage remains
+   explicit alongside it.
+2. With no such falsification, an invalid required basis prevents satisfaction
+   and yields `invalid_basis`; a required out-of-frame judgment yields
+   `out_of_frame` when no invalid basis applies.
+3. Otherwise any unresolved applicability, missing evaluation, undecidable
+   predicate or unproved material join yields `indeterminate`.
+4. `satisfied` requires every applicable obligation and material join to be
+   authentically satisfied, with coverage itself established. An empty list
+   proves nothing unless the declared required set is established as empty.
+
+If the composite subject or governing basis itself cannot be interpreted, the
+aggregate is `invalid_basis`; independently valid component failures and their
+scope remain exposed. This does not pronounce them false or forgotten.
+Effect uncertainty prevents satisfaction where the predicate requires a known
+effect state. An unrelated effect does not automatically invalidate a different
+predicate; the dependency relation must justify its relevance.
+
+A declared disjunction, selection or other logical operator evaluates its own
+predicate in the same result algebra; it cannot relabel that predicate as
+conjunction. Sequential composition records a downstream evaluation as
+`not_performed` when it did not run. A lawful regrouping requires the same interpretable composite basis, required
+leaf predicates, joins and authentication, with no intermediate basis failure
+hidden by the grouping. On that fixed domain, retained component sets combine
+by union and the above verdict/effect operations are associative. An invalid
+intermediate join is a failed premise of that rewrite, not evidence that every
+arbitrary grouping is equivalent. Reordering
+operations additionally needs an effect-independence law; associativity alone
+supplies no such permission.
+
+Sequential operations compose only under the library's typed composition
+contract. Their returned result evaluates the declared outer predicate using
+its preservation argument and the retained component results. For a pipeline
+whose contract requires every stage postcondition, this is the conjunction
+above; a recovery path need not require a failed earlier test to become true.
+Unexecuted stages remain coverage facts, with no invented evaluations. A
+sequence without an established outer interpretation or join returns the
+applicable unresolved or invalid-basis result rather than a guessed success.
+
+
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
 
 ## Release Identities
 
@@ -36,7 +189,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
 
 ## Immutable RC Publication
 
@@ -67,8 +220,17 @@ published higher RC without matching selector advancement is an invalid,
 fail-closed release state; it never authorizes resolution of the older cut as
 the version-line latest.
 
+Publication returns a core result for the exact predicate `the declared cut
+and required public ref relation exist at the selected remote`. A local tag or
+successful command alone cannot satisfy that predicate. A transport failure
+after dispatch leaves effects `unknown` until the owning remote is observed;
+it does not establish that publication never occurred. Apply
+[workspace and context](../FOUNDATIONS.md#workspace-and-context) before retry,
+then complete or repair only the still-authorised missing relation without
+moving an immutable published cut.
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
+
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
 
 ## Exact-Cut Qualification
 
@@ -87,6 +249,15 @@ Evidence matches the claim. Source success does not prove packaged or installed
 behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
+Each qualification item records its exact predicate and core result. A passed
+item maps to `satisfied`; an actual counterexample maps to `falsified`; absent
+deciding evidence maps to `indeterminate`; an unavailable required evaluation
+capability maps to `out_of_frame`; and an unusable subject or basis maps to
+`invalid_basis`. Preserve the finer diagnostic or original outcome and whether
+the item was actually performed. Conjoin the declared required claim set using
+the shared rule. A valid known failure and a skipped required item both remain
+visible; neither can be flattened into a green release summary.
+
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
 requires any qualifying-byte change, the verdict remains attached to the old
@@ -95,7 +266,7 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
 
 ## Selector And Consumer Adoption
 
@@ -145,7 +316,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -170,7 +341,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
 
 #### Explicit Complete Consumer Update
 
@@ -222,7 +393,7 @@ paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -232,7 +403,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-006 Authority Conservation
 
@@ -242,19 +413,29 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-012 Closed Results
 
-Every evaluation returns a member of its declared result algebra. The baseline
-result family is:
+Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
+bound to its exact frame, activation, subject, basis and predicate. The five
+verdicts and their conjunction have that single owner. A frame-specific outcome
+retains its original domain meaning and has one explicit mapping to the core
+verdict for the declared predicate. An unclassified finer outcome is not
+silently treated as satisfaction.
 
-- `satisfied`: the declared predicate holds on the exact basis;
-- `falsified`: a declared counterexample defeats it;
-- `indeterminate`: available admissible evidence cannot decide it;
-- `out_of_frame`: the evaluation requires an undeclared material relation or
-  capability; or
-- `invalid_basis`: the subject or basis cannot support the evaluation.
+An activation attempt and the work it would authorize are different subjects.
+A refused activation records its own result with the failed admission
+predicate, cause and evidence; it does not fabricate a performed work result.
+Missing capability maps to `out_of_frame`, an unusable subject/basis to
+`invalid_basis`, an established admission prohibition to `falsified`, and
+unresolved admissible admission evidence to `indeterminate`. Successful
+activation satisfies admission only. The work remains `not_performed` until
+actually undertaken. Each result retains performance and known effect state.
 
-An externally owned compatible extension may refine this algebra while
-preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
+Where execution cannot be confirmed, retain the core `unconfirmed` performance
+state. An absent return is not evidence that an invoked operation did not run.
+
+A domain may refine these cases but cannot erase a failure, unknown, refusal,
+non-performance or uncertain effect, or promote candidate availability into
+fitness, acceptance or authority.

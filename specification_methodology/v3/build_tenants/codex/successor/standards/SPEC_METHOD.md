@@ -10,9 +10,15 @@ identifying conditional consequences and independent purpose, policy or
 authority choices for the rows mapped there.
 
 The constitutional chain retains its direction from Goals. That selection,
-its grants, concrete result domains and other particular determinations are not
-derived from finite capacity. Existing clauses below state the complete local
-contracts; neither a foundation argument nor a shared helper supplies permission.
+its grants and domain-specific dispositions are additional method choices,
+not consequences of finite capacity alone. The
+[bounded-construction relation](FOUNDATIONS.md#bounded-construction) governs
+how sufficient steps preserve the declared A-to-Z contract; the
+[workspace/context relation](FOUNDATIONS.md#workspace-and-context) governs
+intake and re-entry. UP-020 consumes the shared
+[result algebra](FOUNDATIONS.md#result-algebra) for construction, assessment
+and disposition without merging their predicates or authority. Neither a
+foundation argument nor a shared helper supplies permission.
 Bind, Acquire, Transform, Evaluate, Conjoin and Dispose can be composed within
 these contracts without imposing six stages or a new runtime API.
 
@@ -69,8 +75,9 @@ forcing close review; they are not authority layers and cannot hide drift.
 Spec-driven development treats specification as constitutional source, not as
 commentary on code after the fact.
 
-The point is to make software re-derivable, auditable, and correctable under
-explicit authority.
+The point is to make governed work re-derivable, auditable, and correctable under
+explicit authority. Software, human processes and mixed processes realise the
+same declared obligations through separately bound build tenants.
 
 Its overriding bias is declarative rather than imperative.
 
@@ -824,6 +831,23 @@ It governs the realization relation defined here: one constitutional product
 relation; one tenant is its singleton case and multi-build-tenancy begins when
 the same `WHAT` has more than one independent realization.
 
+The common `WHAT` is the requirements calculus: it states admissible states,
+outcomes, constraints, evidence obligations and permitted changes without
+choosing every means of execution. A tenant's design supplies its computational
+calculus and concrete binding: which operations realise those requirements,
+how they compose, which actors or mechanisms perform them, what effects they
+permit, and how their outcomes are observed. The binding may use software,
+hardware, people, organisations or a mixture. A machine architecture is one
+binding, not the definition of computation for the method.
+
+At design admission, each affected requirement identifies its realising
+operation or invariant, the preservation obligation at its interfaces, and the
+evidence capable of defeating the claimed realisation. Context, attention,
+time, memory, communication and spend are measured at the boundary declared
+by that binding where they are material. A requirement-to-operation route
+alone does not discharge preservation or demonstrate fitness. A tenant cannot
+repair an inconvenient requirement by silently changing the common `WHAT`.
+
 `what.intent`, `what.product`, and `what.specification` locate the current
 constitutional `WHAT`. Intent and Product each have one canonical entrypoint;
 specification may cite more than one requirement or specification surface.
@@ -966,7 +990,7 @@ may author a future cut; it must not silently govern a consumer.
 ## Constitutional Chain
 
 ```
-Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta
+Goals → Intent → Product Definition → Requirements → Design → Realisation → Observations → Projection → Delta
                                                                                        ↓
                                                                                   Scenarios
                                                                                        ↓
@@ -981,15 +1005,26 @@ Goals → Intent → Product Definition → Requirements → Design → Code →
 - **Requirements** define invariant truths the system must satisfy.
 - **Design** defines the structural decisions, interfaces, carrier surfaces, and delivery topology that make those truths achievable.
 - **ADRs** are one durable form of design record, not a second constitutional layer above design.
-- **Code** realizes those decisions.
-- **Events** record what actually happened.
-- **Projection** reconstructs current truth from the event stream.
+- **Realisation** carries those decisions in the tenant's concrete environment;
+  code is the software case, and a performed human procedure is another case.
+- **Observations** establish what occurred and what currently exists at their
+  declared boundaries. Events are a durable carrier where selected.
+- **Projection** presents the observations relevant to a declared question.
+  It is checked against its source and current state; it is not another truth
+  surface and does not require every consumer to replay a complete event stream.
 - **Delta** reveals drift between intended truth and realized state.
 - **Scenarios** test operational meaning — can the system actually do the thing the words describe?
 - **Gap analysis** identifies where real use cases hit the current model and reveal insufficiency.
 - **Repricing** updates goals, intent, product, requirements, design, or code when the system no longer harmonizes. When gap analysis reveals constitutional insufficiency, it generates new **Goals** and/or **Intent**.
 
 This is the homeostatic loop. Every link in the chain is load-bearing. A break at any link — goals with no downstream repricing path, an unowned requirement, an ungrounded design record, code without a design decision — creates accidental law.
+
+The workspace persists through this loop. At each activation, current material
+state and valid authority define the new A; Z names the admitted acceptance
+constraints. The actor acquires sufficient context for the next bounded
+transition. Discarding that context does not rewind A. A new observation can
+invalidate a belief or dependent result; it cannot silently change Z or create
+permission. Revising Z follows the owning re-entry relation below.
 
 `GOALS.md` is the bounded work-wave surface. It captures the current overriding concerns for the next body of work, keeps temporary focus out of deeper constitutional layers until it is intentionally repriced there, and is more immediate than intent while remaining higher-level than product definition and requirements.
 
@@ -1248,6 +1283,15 @@ constrain the supported cause, preserve unresolved alternatives and uncertainty,
 and identify the smallest sufficient lawful scope of repair. The frame that
 exposes a failure need not contain its cause. Repeating the same analysis under
 different frame names supplies no additional causal evidence.
+
+Intake first applies [workspace and context](FOUNDATIONS.md#workspace-and-context):
+observe the affected current state, compare it with the report and retained
+results, and distinguish an actual defect from a stale belief. Reuse valid
+observations and rulings. If an effect may already have occurred, resolve that
+uncertainty before recommending an action that depends on its absence. An old
+conversation, event or work summary supplies a route to evidence, not a veto on
+current reality. The classification result retains the exact diagnosis
+predicate, evidence and residuals under the common result contract.
 
 Use the smallest sufficient applicable frame configuration under
 [frame applicability and conjunction](REFERENCE_FRAME_METHOD.md#method-functions), with
@@ -1557,6 +1601,13 @@ memory, or implementation folklore. The intake identifies:
 - construction and assessment authority; and
 - the conditions that require upstream re-entry.
 
+The selected frame is acquired from the current workspace and authoritative
+external inputs under [workspace and context](FOUNDATIONS.md#workspace-and-context).
+Its contract identifies current A, admitted Z, the bounded transition and the
+observations needed to establish its result. Prior summaries may locate those
+inputs; private actor memory is not a prerequisite. Context fit cannot be
+achieved by dropping a known material relation.
+
 Where `DESIGN_MODULE_METHOD.md` applies, `STDO-UP-017` bounded-frame
 conservation, `STDO-UP-016` transformation-admission completeness,
 `STDO-UP-018` invariant-reconstruction sufficiency, and `STDO-UP-019`
@@ -1615,14 +1666,34 @@ resolved before effect. Executive mutation restrictions remain applicable.
 
 ### Proportional Disposition
 
-Assessment returns one of these semantic dispositions:
+Assessment evaluates the exact predicate `the candidate closes its declared
+cone and preserves every affected governing relation` through the shared
+[result algebra](FOUNDATIONS.md#result-algebra). It returns evidence and a
+proposed semantic disposition. Only the existing decision authority applies
+that disposition; an assessment verdict is not acceptance authority.
 
-| Disposition | Condition |
-|---|---|
-| `accept` | the candidate closes its declared cone and preserves every affected governing relation |
-| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |
-| `re_enter` | Product, requirement, identity, lifecycle, authority, public contract, or accepted design must change |
-| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |
+| Disposition | Condition on the exact candidate claim | Core verdict |
+|---|---|---|
+| `accept` | the candidate closes its declared cone and preserves every affected governing relation | `satisfied` |
+| `local_repair` | a demonstrated implementation or proof defect defeats the claim while the governing relation remains coherent | `falsified` |
+| `re_enter` | the intended candidate cannot satisfy the current contract without changing Product, requirement, identity, lifecycle, authority, public contract or accepted design | `falsified` |
+| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
+
+The proposed remedy retains its original domain outcome; the core verdict does
+not choose among remedies. Insufficient evidence returns `indeterminate`, a
+missing material evaluation capability returns `out_of_frame`, and an
+unusable basis returns `invalid_basis`, without inventing a completed
+assessment or forcing a disposition. Required judgments compose by
+[core conjunction](FOUNDATIONS.md#result-conjunction); a known failure survives
+alongside missing coverage. A construction result satisfying only `an exact
+candidate is available` never substitutes for this assessment predicate.
+
+The applied disposition has a separate decision result under the core contract:
+the predicate concerns that disposition on the exact subject and basis under
+the bound mandate. A lawful recorded `reject` may satisfy that decision
+predicate without establishing a candidate counterexample. It never overwrites
+the assessment result. The table classifies evidence for a proposed remedy;
+it does not turn policy decisions into fitness verdicts.
 
 Global correctness means conserving every global relation affected by the
 bounded action. It does not require proving the whole Product inside every
@@ -1662,10 +1733,16 @@ Product outcome or affected relation set.
 A preservation checkpoint may retain unfinished or unaccepted work under an
 existing exact operation grant. Identify its parent or predecessor, included
 territory, concurrent-writer disposition and durable evidence location. It is
-neither acceptance, promotion nor publication. A proposed restart identifies
-why repair of retained work is insufficient, which obligations and evidence
-survive, and which causal assumptions change; reconstructability alone does
-not select reconstruction.
+neither acceptance, promotion nor publication.
+
+An ordinary restart reacquires a sufficient frame over the current workspace;
+it is another iteration, not a request to rebuild from the original A. Apply
+the core current-state, result-validity and unknown-effect rules before the
+next dependent action. Preserve applicable partial work and valid evidence.
+If a proposed recovery instead discards or rebuilds work, identify why repair
+of retained work is insufficient, which obligations and evidence survive,
+which causal assumptions change and which existing operation grant permits
+that effect. Reconstructability alone does not select reconstruction.
 
 Accepted material Product movement is progress. Prerequisite work names the
 Product obligation it enables. Preservation and repeated proof are evidence,

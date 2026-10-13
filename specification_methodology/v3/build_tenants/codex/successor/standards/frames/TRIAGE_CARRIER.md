@@ -11,7 +11,250 @@ Each excerpt names its owner, section and exact member digest. Required coupled
 relations outside this selection remain material and require source re-entry;
 an unresolved governing relation is not silently satisfied by the view.
 
-Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Result algebra
+
+A result makes a claim about one predicate on one subject and basis. Its core
+record contains the predicate, exact subject and basis, verdict, performance,
+original qualified domain outcome, supporting evidence and citations, unresolved
+obligations and material effect observations. A reference can carry these when
+its resolution preserves their meaning and availability. This is a semantic
+contract, not a mandatory serialization format or additional work carrier.
+
+The verdict has exactly these values:
+
+| Value | Meaning for the bound predicate |
+|---|---|
+| `satisfied` | Admissible evidence establishes the predicate under its declared evaluation rule. |
+| `falsified` | Admissible evidence establishes a counterexample or failure of that predicate. |
+| `indeterminate` | The available admissible evidence does not decide the predicate. |
+| `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
+| `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
+
+Performance concerns the named predicate and is `performed`, `not_performed`
+or `unconfirmed`. The legal pairs are:
+
+| Performance | Permitted verdicts | Meaning |
+|---|---|---|
+| `performed` | Any of the five verdicts | The named evaluation ran; scope or basis diagnosis can prevent a judgment of the subject property. |
+| `not_performed` | `indeterminate` only | Evidence establishes that the named evaluation did not run. |
+| `unconfirmed` | `indeterminate` only | Whether the named evaluation ran is not established. |
+
+A missing required judgment stays an absent coverage slot, with the known
+performance fact or its uncertainty; it is not a fabricated child result. A
+performed but undecidable evaluation differs from a known unperformed one and
+from unconfirmed execution. A failed admission check can be performed while
+downstream work is not performed. Every result projection preserves these
+coordinates and the original predicate; a verdict alone is an insufficient
+handoff where performance is material.
+
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`
+or `unknown`. These values describe the selected effect and observation
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`partial` means an observed completed part and an observed unexecuted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
+An empty local log or discarded context does not establish no effect. When no
+effect is part of the operation, `not_requested` states that scope.
+
+A domain refinement preserves its qualified original outcome and supplies a
+total, reason-sensitive map into this record. If the original outcome is too
+coarse to determine a verdict, its required reason distinguishes the cases; a
+consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
+A missing required reason makes that contribution inadmissible for its slot;
+retain its raw outcome and unresolved authentication. Its claimed predicate
+remains indeterminate until admissible evidence decides it. An independently
+established invalid basis instead yields invalid_basis for that diagnosis.
+Requested effects without sufficient observation are unknown, never defaulted
+to not_requested. Unconfirmed evaluation performance stays unconfirmed. Domain meaning stays with its domain owner.
+No refinement turns failure, undecidability, non-performance or unknown effect
+completion into greater standing. A new result over a different predicate does
+not overwrite the earlier result.
+
+Candidate availability, candidate fitness and authorised acceptance are three
+predicates. `candidate_ready` can satisfy availability while fitness remains
+falsified or unassessed. A lawful yield can satisfy the selected yielding
+contract while product completion remains unresolved. A decision result binds
+the predicate “disposition D on subject S at basis B was made under mandate M
+by its bound authority”. A lawful rejection can satisfy that predicate while
+candidate fitness remains undecided. Recording the decision is not its authority.
+A not-applicable classification needs a supported applicability judgment; it is
+never a synonym for a missing evaluation.
+
+A stop reports the actual destination or task predicate through this record,
+with its reason, observed effects and outstanding obligations. Its verdict
+is indeterminate when the outcome remains undecided, falsified when admissible
+evidence defeats that predicate, or the established scope/basis diagnosis.
+Lawfulness of stopping is a separate decision predicate.
+
+
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Result conjunction
+
+Conjunction evaluates whether all required predicates and their material joins
+hold on the declared composite subject and basis. It retains the contributing
+results, their authentication and predicate mapping, known failures and their
+citations, uncovered required coverage, uncertain effects and invalidators.
+The aggregate is another result in the same algebra, with those components
+available through sufficient references. Its summary never replaces them.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. Aggregate effect state is
+computed over the declared composite effect scope: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; every remaining fully observed mixture gives
+partial. Retain which component each observation concerns. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
+
+First authenticate each contribution against its producer, subject, basis and
+required plan membership. An unauthenticated claim cannot discharge an
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
+conditions. An invalid contribution does not erase an independently
+authenticated finding.
+
+For an interpretable composite predicate and governing basis:
+
+1. Any authenticated, applicable falsification of a required predicate makes
+   the conjunction `falsified`. Missing or undecidable other coverage remains
+   explicit alongside it.
+2. With no such falsification, an invalid required basis prevents satisfaction
+   and yields `invalid_basis`; a required out-of-frame judgment yields
+   `out_of_frame` when no invalid basis applies.
+3. Otherwise any unresolved applicability, missing evaluation, undecidable
+   predicate or unproved material join yields `indeterminate`.
+4. `satisfied` requires every applicable obligation and material join to be
+   authentically satisfied, with coverage itself established. An empty list
+   proves nothing unless the declared required set is established as empty.
+
+If the composite subject or governing basis itself cannot be interpreted, the
+aggregate is `invalid_basis`; independently valid component failures and their
+scope remain exposed. This does not pronounce them false or forgotten.
+Effect uncertainty prevents satisfaction where the predicate requires a known
+effect state. An unrelated effect does not automatically invalidate a different
+predicate; the dependency relation must justify its relevance.
+
+A declared disjunction, selection or other logical operator evaluates its own
+predicate in the same result algebra; it cannot relabel that predicate as
+conjunction. Sequential composition records a downstream evaluation as
+`not_performed` when it did not run. A lawful regrouping requires the same interpretable composite basis, required
+leaf predicates, joins and authentication, with no intermediate basis failure
+hidden by the grouping. On that fixed domain, retained component sets combine
+by union and the above verdict/effect operations are associative. An invalid
+intermediate join is a failed premise of that rewrite, not evidence that every
+arbitrary grouping is equivalent. Reordering
+operations additionally needs an effect-independence law; associativity alone
+supplies no such permission.
+
+Sequential operations compose only under the library's typed composition
+contract. Their returned result evaluates the declared outer predicate using
+its preservation argument and the retained component results. For a pipeline
+whose contract requires every stage postcondition, this is the conjunction
+above; a recovery path need not require a failed earlier test to become true.
+Unexecuted stages remain coverage facts, with no invented evaluations. A
+sequence without an established outer interpretation or join returns the
+applicable unresolved or invalid-basis result rather than a guessed success.
+
+
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Workspace and context
+
+The workspace is the continuing material state of the construction, including
+its authoritative requirements, work products and durable records. Material
+external state is observed through its owning interface. The actor's context is
+a bounded account acquired from these sources. It is fallible and disposable.
+Acquisition observes the subject and basis the activation actually binds,
+including frozen snapshots where selected. Admissible contrary current evidence
+reopens affected claims through their drift and re-entry rules; it does not
+silently select a different basis. Current observations correct stale beliefs;
+they do not grant permission to
+change a requirement to match the implementation. What exists and what must
+exist remain different questions on the same truth surface.
+
+Acquisition binds the current task, subject, destination constraints, authority
+and relevant observations. It includes known material dependencies directly or
+through declared available inputs, and excludes irrelevant material unless
+needed to establish irrelevance. A rule packet without its current subject is
+insufficient. A digest without accessible meaning is insufficient. A summary
+without supported freshness cannot override its owner.
+
+An observation binds its source and observation time or version. Where the
+subject may change between observation and effect, the binding supplies the
+material freshness or concurrency condition: re-observe, compare a revision,
+use a protected snapshot or return uncertainty. No universal isolation scheme
+follows. The selected operation cannot assume a stale read is still current.
+
+The cycle is acquisition from current state, a bounded authorised operation,
+observation of its result, and acquisition for the next operation. Results use
+[the result algebra](../FOUNDATIONS.md#result-algebra). The cycle can stop after any operation
+without inventing completion. Private context can be discarded between cycles;
+resumption reconstructs sufficient context from the continuing workspace and
+authoritative inputs. It neither erases progress nor requires a transcript of
+every earlier activation.
+
+Reuse requires supported applicability: the same claim scope, adequate current
+basis and evidence, valid dependencies and required independent authorship.
+Changed support reopens the affected dependent claims. Unchanged independent
+work remains usable; when dependency independence cannot be established, inspect the
+wider affected scope. A stored green label is not a validity argument.
+
+Before repeating an operation with uncertain effects, observe or reconcile
+sufficiently to decide the next dependent action. A granted idempotent operation
+may be retried where its idempotence is established for that subject and effect.
+Otherwise select another permitted action or return the unresolved result.
+A workspace that retains partial progress does not make every operation
+idempotent. An event log may support observation, audit or domain-specific
+reconstruction; it is not universally the work state or a compulsory recovery
+algorithm.
+
+
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983`.
+
+## Bounded construction
+
+A describes current material state and what is justified about it. Z is the
+selected set of constraints and acceptance conditions; many states may satisfy
+it. Intent, Product and Specification refine Z under their owning authority.
+Write material intermediate states as S0 → S1 → …, reserving Z for the
+destination constraint set and naming a satisfying endpoint separately. A
+transition binds its preconditions, permitted effects, result predicate and
+outer obligations. Where finite context or attention prevents one adequate
+activation, refine the task into supported transitions over those states.
+
+Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
+identity identifies the work; compatibility and assurance determine which
+transitions compose. These are additional premises, not consequences of a
+resource bound. Decomposition preserves all material outer obligations and
+the joins between parts. Local success establishes the outer outcome only
+when the required coverage and preservation argument hold.
+
+A total control contract supplies a response for every admitted control state,
+including unavailable input, unknown world conditions, failed preconditions,
+partial effects, exhausted capability and revoked or exhausted authority. Its
+outcomes use the core result algebra. Its alternatives may include repair,
+re-entry, refusal, yielding or termination under the actual grant. It does not
+promise to solve every problem or make an external process terminate.
+Deterministic, probabilistic and human operations retain their selected outcome
+models; their enclosing control handles the observed result truthfully.
+
+Progress is supported movement toward the selected destination. Useful discovery
+can enlarge the known frontier; counts alone are no distance metric. Stopping
+can be lawful without completion. Completion needs the required evidence and
+acceptance conditions on the current candidate. Changing Z follows its owner
+and cannot establish that the old destination was reached. Repeating a failed
+relation needs a supported causal change; elapsed activity is no repair.
+
+
+Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
 
 ### Universal Intake Triage
 
@@ -57,6 +300,15 @@ and identify the smallest sufficient lawful scope of repair. The frame that
 exposes a failure need not contain its cause. Repeating the same analysis under
 different frame names supplies no additional causal evidence.
 
+Intake first applies [workspace and context](../FOUNDATIONS.md#workspace-and-context):
+observe the affected current state, compare it with the report and retained
+results, and distinguish an actual defect from a stale belief. Reuse valid
+observations and rulings. If an effect may already have occurred, resolve that
+uncertainty before recommending an action that depends on its absence. An old
+conversation, event or work summary supplies a route to evidence, not a veto on
+current reality. The classification result retains the exact diagnosis
+predicate, evidence and residuals under the common result contract.
+
 Use the smallest sufficient applicable frame configuration under
 [frame applicability and conjunction](../REFERENCE_FRAME_METHOD.md#method-functions), with
 [causal localization](../STDO_REFERENCE_FRAME_BASELINE.md#counterexample-localization)
@@ -80,7 +332,7 @@ upstream constitutional surface is changing.
 The absence of a declared change class is process drift.
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
 
 ### Computed Classification And Treatment
 
@@ -160,7 +412,7 @@ dependencies; recompute the wider frontier where independence is unproved.
 ---
 
 
-Source: [TICKET_METHOD.md — Upward Propagation Check](../TICKET_METHOD.md#upward-propagation-check); SHA256 `2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417`.
+Source: [TICKET_METHOD.md — Upward Propagation Check](../TICKET_METHOD.md#upward-propagation-check); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
 
 ### Upward Propagation Check
 
@@ -187,7 +439,7 @@ outcome or established governing insufficiency follows the owning re-entry;
 unresolved meaning remains J and reserved choice O.
 
 
-Source: [TICKET_METHOD.md — Work-Carrier-To-Execution Rule](../TICKET_METHOD.md#work-carrier-to-execution-rule); SHA256 `2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417`.
+Source: [TICKET_METHOD.md — Work-Carrier-To-Execution Rule](../TICKET_METHOD.md#work-carrier-to-execution-rule); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
 
 ### Work-Carrier-To-Execution Rule
 
@@ -251,7 +503,7 @@ surface, and non-closure conditions. Resulting state still flows through proof,
 gap analysis, and repricing.
 
 
-Source: [TICKET_METHOD.md — Execution Contract Admission](../TICKET_METHOD.md#execution-contract-admission); SHA256 `2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417`.
+Source: [TICKET_METHOD.md — Execution Contract Admission](../TICKET_METHOD.md#execution-contract-admission); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
 
 ### Execution Contract Admission
 
@@ -267,9 +519,21 @@ Minimum expected states are:
 
 An admitted execution contract should be:
 
-- logged in runtime/event truth
-- available to prompt assembly
+- recorded in the selected work carrier, including an event log when that is
+  its declared realisation
+- available to frame or prompt assembly
 - available to later closure checking
+
+Admission evaluates `this exact contract is admissible under this cited work
+authority and basis`. Its result preserves the original admission outcome:
+`admitted` maps to `satisfied`; `rejected` with a demonstrated violation maps to
+`falsified`; missing deciding evidence maps to `indeterminate`; missing
+admission scope or capability maps to `out_of_frame`; and unusable authority
+or subject coordinates map to `invalid_basis`. A reason accompanies every
+refusal. `drafted` and `superseded` are carrier states, not evaluation verdicts.
+An old admission is not a current grant merely because its text remains in
+the workspace. Neither admission satisfaction nor `active` status establishes
+that the admitted work has been performed or completed.
 
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
@@ -283,7 +547,7 @@ retaining an active execution contract cannot create or renew authority that
 the owning work-wave authority has not admitted.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -367,7 +631,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -402,6 +666,13 @@ memory, or implementation folklore. The intake identifies:
 - selected computational or common-library dispositions;
 - construction and assessment authority; and
 - the conditions that require upstream re-entry.
+
+The selected frame is acquired from the current workspace and authoritative
+external inputs under [workspace and context](../FOUNDATIONS.md#workspace-and-context).
+Its contract identifies current A, admitted Z, the bounded transition and the
+observations needed to establish its result. Prior summaries may locate those
+inputs; private actor memory is not a prerequisite. Context fit cannot be
+achieved by dropping a known material relation.
 
 Where `DESIGN_MODULE_METHOD.md` applies, `STDO-UP-017` bounded-frame
 conservation, `STDO-UP-016` transformation-admission completeness,
@@ -461,14 +732,34 @@ resolved before effect. Executive mutation restrictions remain applicable.
 
 ### Proportional Disposition
 
-Assessment returns one of these semantic dispositions:
+Assessment evaluates the exact predicate `the candidate closes its declared
+cone and preserves every affected governing relation` through the shared
+[result algebra](../FOUNDATIONS.md#result-algebra). It returns evidence and a
+proposed semantic disposition. Only the existing decision authority applies
+that disposition; an assessment verdict is not acceptance authority.
 
-| Disposition | Condition |
-|---|---|
-| `accept` | the candidate closes its declared cone and preserves every affected governing relation |
-| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |
-| `re_enter` | Product, requirement, identity, lifecycle, authority, public contract, or accepted design must change |
-| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |
+| Disposition | Condition on the exact candidate claim | Core verdict |
+|---|---|---|
+| `accept` | the candidate closes its declared cone and preserves every affected governing relation | `satisfied` |
+| `local_repair` | a demonstrated implementation or proof defect defeats the claim while the governing relation remains coherent | `falsified` |
+| `re_enter` | the intended candidate cannot satisfy the current contract without changing Product, requirement, identity, lifecycle, authority, public contract or accepted design | `falsified` |
+| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
+
+The proposed remedy retains its original domain outcome; the core verdict does
+not choose among remedies. Insufficient evidence returns `indeterminate`, a
+missing material evaluation capability returns `out_of_frame`, and an
+unusable basis returns `invalid_basis`, without inventing a completed
+assessment or forcing a disposition. Required judgments compose by
+[core conjunction](../FOUNDATIONS.md#result-conjunction); a known failure survives
+alongside missing coverage. A construction result satisfying only `an exact
+candidate is available` never substitutes for this assessment predicate.
+
+The applied disposition has a separate decision result under the core contract:
+the predicate concerns that disposition on the exact subject and basis under
+the bound mandate. A lawful recorded `reject` may satisfy that decision
+predicate without establishing a candidate counterexample. It never overwrites
+the assessment result. The table classifies evidence for a proposed remedy;
+it does not turn policy decisions into fitness verdicts.
 
 Global correctness means conserving every global relation affected by the
 bounded action. It does not require proving the whole Product inside every
@@ -508,10 +799,16 @@ Product outcome or affected relation set.
 A preservation checkpoint may retain unfinished or unaccepted work under an
 existing exact operation grant. Identify its parent or predecessor, included
 territory, concurrent-writer disposition and durable evidence location. It is
-neither acceptance, promotion nor publication. A proposed restart identifies
-why repair of retained work is insufficient, which obligations and evidence
-survive, and which causal assumptions change; reconstructability alone does
-not select reconstruction.
+neither acceptance, promotion nor publication.
+
+An ordinary restart reacquires a sufficient frame over the current workspace;
+it is another iteration, not a request to rebuild from the original A. Apply
+the core current-state, result-validity and unknown-effect rules before the
+next dependent action. Preserve applicable partial work and valid evidence.
+If a proposed recovery instead discards or rebuilds work, identify why repair
+of retained work is insufficient, which obligations and evidence survive,
+which causal assumptions change and which existing operation grant permits
+that effect. Reconstructability alone does not select reconstruction.
 
 Accepted material Product movement is progress. Prerequisite work names the
 Product obligation it enables. Preservation and repeated proof are evidence,
@@ -533,7 +830,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417`.
+Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a`.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
@@ -586,7 +883,7 @@ carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-003 Material Sufficiency
 
@@ -599,7 +896,7 @@ Omitting a material relation makes the frame insufficient. The method does not
 require proving that no undiscovered material relation exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -609,7 +906,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-006 Authority Conservation
 
@@ -619,7 +916,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-007 Semantic, Evidence, And Verdict Separation](../REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-007 Semantic, Evidence, And Verdict Separation](../REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
@@ -630,25 +927,35 @@ Decision authority disposes the result. A frame declaration keeps these roles
 distinguishable even when one actor lawfully performs several of them.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ### RF-012 Closed Results
 
-Every evaluation returns a member of its declared result algebra. The baseline
-result family is:
+Every evaluation returns the [core result](../FOUNDATIONS.md#result-algebra)
+bound to its exact frame, activation, subject, basis and predicate. The five
+verdicts and their conjunction have that single owner. A frame-specific outcome
+retains its original domain meaning and has one explicit mapping to the core
+verdict for the declared predicate. An unclassified finer outcome is not
+silently treated as satisfaction.
 
-- `satisfied`: the declared predicate holds on the exact basis;
-- `falsified`: a declared counterexample defeats it;
-- `indeterminate`: available admissible evidence cannot decide it;
-- `out_of_frame`: the evaluation requires an undeclared material relation or
-  capability; or
-- `invalid_basis`: the subject or basis cannot support the evaluation.
+An activation attempt and the work it would authorize are different subjects.
+A refused activation records its own result with the failed admission
+predicate, cause and evidence; it does not fabricate a performed work result.
+Missing capability maps to `out_of_frame`, an unusable subject/basis to
+`invalid_basis`, an established admission prohibition to `falsified`, and
+unresolved admissible admission evidence to `indeterminate`. Successful
+activation satisfies admission only. The work remains `not_performed` until
+actually undertaken. Each result retains performance and known effect state.
 
-An externally owned compatible extension may refine this algebra while
-preserving explicit indeterminate, out-of-frame, and invalid-basis pressure.
+Where execution cannot be confirmed, retain the core `unconfirmed` performance
+state. An absent return is not evidence that an invoked operation did not run.
+
+A domain may refine these cases but cannot erase a failure, unknown, refusal,
+non-performance or uncertain effect, or promote candidate availability into
+fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6`.
 
 ## Minimal Evaluation Result
 
@@ -658,11 +965,13 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 - frame identity and revision:
 - activation identity:
 - evaluation:
+- exact predicate and domain refinement:
 - subject and basis:
 - actor and capability envelope:
 - semantic, evaluation, operation where material, and decision authority:
 - admissible evidence:
-- result:
+- core verdict and original domain outcome:
+- performance and known effect state:
 - inference relation:
 - residual uncertainty:
 - invalidation conditions:

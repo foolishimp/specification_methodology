@@ -1,6 +1,6 @@
 # Glossary Semantic Index
 
-This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. a glossary row is no new definition or default interpretation.
+This locator index supports Acquire in the [transformation library](TRANSFORMATION_LIBRARY.md). The named owning clause determines meaning; [Foundations](FOUNDATIONS.md) explains that separation. A glossary row is no new definition or default interpretation.
 
 ## Index Contract
 
@@ -20,6 +20,17 @@ proximity, a heading, or inclusion in this file creates no identity,
 inheritance, import, equivalence, or authority. Resolution follows
 `SPEC_METHOD.md#bounded-context-semantic-resolution`; this index supplies no
 fallback decision.
+
+## Acquisition use
+
+F2 distinguishes a spelling from its interpreted meaning; F3 binds the owner
+and exact basis; F5 requires sufficient bounded acquisition. The index supplies
+routes as a packaging choice. At use, resolve the row's owner in the selected
+basis and acquire the material clause under
+[Workspace and context](FOUNDATIONS.md#workspace-and-context). A stale or
+ambiguous route leaves the term unresolved. A retrieval report uses the
+[core result](FOUNDATIONS.md#result-algebra) on route resolution, retaining the
+original locator outcome; it does not report semantic acceptance.
 
 ## Method Identity Index
 

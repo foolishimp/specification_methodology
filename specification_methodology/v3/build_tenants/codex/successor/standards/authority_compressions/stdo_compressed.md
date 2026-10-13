@@ -27,25 +27,25 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 4f7f2353ff1d25c4e43d76023c1782a5a633ba3245ee4a90580a92d5c4517b2f
-  TRANSFORMATION_LIBRARY.md: e6e320ae863434aace3319087b27796c753d4670c79273776f205dc6a4752920
-  AXIOMATIC_CALCULUS.md: 5da71cb7fa57d5f2646670e66bc4c82a82d645f7a60776004166d26e32fb87ac
-  TRAVERSAL_OCCURRENCE_PROFILE.md: 9c15f79d3c918866b0856ad925122c00705791d457b3ff9a948070b2a4cbfcd2
-  REFERENCE_FRAME_METHOD.md: 44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488
-  STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
-  SPEC_METHOD.md: fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43
+  FOUNDATIONS.md: fe7967a4e311c1091186695aebc4aec4f7ceabd9a10bc7673509ab9b9f9bc983
+  TRANSFORMATION_LIBRARY.md: 1ec7e198a6bf65c95492ffcbdd7e32cb213b708b7bc1e3d6b96de823821943c6
+  AXIOMATIC_CALCULUS.md: e233e1e25974f21d28f2c7d9cb54eec10b41d52419e5d63a912d8970938da917
+  TRAVERSAL_OCCURRENCE_PROFILE.md: ee8371a08bb3ab27e9e105eb69b686e00f7f48e5c337f9a51068cc793775be8b
+  REFERENCE_FRAME_METHOD.md: 951e48d65137b7fe34d341e55937765ee8278ce93f5313adab37bd38419ddff6
+  STDO_REFERENCE_FRAME_BASELINE.md: 269704685039f4f4f26516e5529e8545ac1a11847a445ee80f1fc929c17689f9
+  SPEC_METHOD.md: 1f067302c6503c1927157f45c5b3a0e0b6811e6a09739398256c1df4781140fa
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: c26816f83b1f3b4c190f18ae17a167cff1e21e933cde18ec12553a304202c998
-  ODD_METHOD.md: 0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc
-  WORLD_MODEL_METHOD.md: 31e754ad45c39db27618a5e6689cee372773d4863ee05cb77dd4512425fd028c
-  TICKET_METHOD.md: 2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417
-  UX_METHOD.md: 5fbbaba763c8d73e9fccd827fc4992b667daa813042076c1c7719fcd61c9f317
-  IDENTITY_METHOD.md: 258ee3dbe7e79a9ddc54fa792f3a782bd5349d1c39c211e0bc7ce130487e7b3c
-  RELEASE_METHOD.md: 26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373
-  POSTING_GUIDE.md: a9d67e70aa1dd8390f82ab44da7bb72f9240545efc30bf2873b1f7165a273cc1
+  DESIGN_MODULE_METHOD.md: 97223569973f83e3623b2b2d4f6500aeb494b183fe2c20420226384954397af6
+  ODD_METHOD.md: 85c6af1282e2c3d01fb6bb867dc5d9935a3b871386bf75e6d74818cfed7ae5aa
+  WORLD_MODEL_METHOD.md: a30c798e40ca30024d9eea629017bed28079fead4232e659d30f11b5045d5c4f
+  TICKET_METHOD.md: 7c461eb735eb810edcdf046d3cf7908a38176c884c48be82f8cd06c0f368cd2a
+  UX_METHOD.md: 45bcba7d8f514e0e1ebc5fdec7ed85f17617de9ae1f43861c233c6d9a8ca89fe
+  IDENTITY_METHOD.md: 6c92780e6f0d6f1a18d3b853aec22a058c121db5872fba6ca567287be94bf573
+  RELEASE_METHOD.md: 939b96aae430f9f2b3717123da72aaf0516fcfba3e63b66483e97b2ee3478e5c
+  POSTING_GUIDE.md: 1bfc2740e3920084fccf479e970dd958ee7fff75d889f453e53010dc72fa567c
 index_digests:
-  GLOSSARY_GUIDE.md: b2771ac69fd47d45d436c87bc35b57062e457f422c4df008f5caf5d441af18db
+  GLOSSARY_GUIDE.md: 042a85cf3b0ffcfb2623f9d69010fe0432fb23382e71db1656cd24072ec6001b
 generated_by: codex
 generated_at: 2026-10-12
 stale_if_source_digest_changes: true
@@ -54,9 +54,17 @@ stale_if_index_digest_changes: true
 
 # STDO Compressed Authority
 
+The [core result contract](../FOUNDATIONS.md#result-algebra) owns outcomes and
+[result conjunction](../FOUNDATIONS.md#result-conjunction) owns their conjunctive
+combination. Domain labels below are refinements on their exact predicates,
+retaining original outcomes, performance and effect observations.
+[Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
+governs context reconstruction and conditional reuse.
+
+
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
 organise shared premises and transformation families. Detailed owners retain
-their exact applicability, result domains and operation grants. Use a sufficient
+their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
 

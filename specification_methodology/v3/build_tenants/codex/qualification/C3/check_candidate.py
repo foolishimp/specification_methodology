@@ -102,8 +102,8 @@ def check(root, partial=False):
         mapping = json.loads(conservation.read_text())
         rows = mapping["rows"]
         checks["frontier_rows"] = len(rows)
-        if len(rows) != 690 or len({row["id"] for row in rows}) != 690:
-            failures.append("frontier must contain exactly 690 distinct selected rows")
+        if len(rows) != 691 or len({row["id"] for row in rows}) != 691:
+            failures.append("frontier must contain exactly 691 distinct selected rows, including the common synthetic child")
         for name, pin in mapping.get("successor_member_pins", {}).items():
             path = root / name
             if not path.is_file() or digest(path) != pin["sha256"]:

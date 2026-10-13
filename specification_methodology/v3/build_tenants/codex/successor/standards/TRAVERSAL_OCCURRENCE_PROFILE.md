@@ -1,7 +1,7 @@
 # The `a_c` Traversal Occurrence Profile over Mutable Subjects
 
 <!-- STDO3_PROFILE_BINDING_START -->
-## Foundation And Transformation Binding
+## Governing Relations
 
 This optional profile refines [Foundations](FOUNDATIONS.md) and the
 [Transformation Library](TRANSFORMATION_LIBRARY.md) for immutable histories over
@@ -12,10 +12,20 @@ retain their own identities. The foundation's generic work and evidence law does
 not enroll every model in this profile or supply a scheduler, state store,
 rollback mechanism or operation authority.
 
-The closed profile fixes every finite field reference domain, cardinality,
+The premises are a mutable subject, bounded observations, explicit operation
+authority and a claim that an immutable record describes one application. From
+[workspace and context](FOUNDATIONS.md#workspace-and-context), the record and
+the actor's context cannot replace the subject or establish unobserved effects.
+From scoped identity and compatible composition, a later application preserves
+the identity and standing of earlier claims while evaluating the current state.
+
+This profile additionally chooses append-only occurrence history, a closed
+signature and exact semantic-admission cuts. These are adopted profile policies,
+not necessary consequences of finite context or requirements on every method
+user. The closed profile fixes every finite field reference domain, cardinality,
 closed enum, inherited record family, refusal mapping, signature preimage and
 publication-resolution condition. The shared
-foundation explains the preserved distinctions; the closed profile determines
+foundation supplies the shared result and current-state contracts; the profile determines
 its exact records and predicates. A stable SubjectBinding points to mutable
 reality, while each traversal application has a fresh immutable occurrence.
 Application, operation kind, operation, executor, actor, grant and effect
@@ -30,7 +40,10 @@ invocation remain separate coordinates.
 | Conjoin | Semantic admission preserves the complete seven-member cut, three admitted judgments, required relation records, equal source-frontier bindings and unique successor frontier. Typed causal subgraphs remain distinct from wider lineage and precedence. |
 | Dispose | Existing competent Product authorities own adoption, operations, admission, correction and projection decisions. No-effect, completed-effect, partial-effect and refused-effect dispositions retain the exact evidence and further-effect restrictions stated below. |
 
-These correspondences neither mint a grant nor weaken the closed signature.
+The admission and effect consumers below apply the shared
+[result algebra](FOUNDATIONS.md#result-algebra) and
+[result conjunction](FOUNDATIONS.md#result-conjunction). These bindings neither
+mint a grant nor weaken the closed signature.
 Semantic atomicity retains its profile meaning and imposes no storage
 transaction. Reapplication retains the evolving subject and prior immutable
 history; it supplies no universal side-effect idempotence or rollback guarantee.
@@ -354,8 +367,19 @@ B_adopted   = exact Product-adoption basis relation named for that external kind
 | `J:*.subject` | 1 | `AnyLocal` |  | `JudgmentSubject` | `B_model or B_adopted` |
 | `J:*.evaluator` | 1 |  |  | `Evaluator` | `B_adopted` |
 | `J:*.authority` | 1 |  |  | `AuthorityGrant` | `B_adopted` |
+| `J:*.predicate` | 1 |  |  | `PredicateContract` | `B_adopted` |
+| `J:*.residuals` | 0..* | `X` |  |  | `B_model` |
 | `J:*.evidence/provenance` | 0..* |  |  | `EvidenceOrProvenance` | `B_adopted` |
 | `J:*.decided_at` | 1 |  |  | `DecisionCoordinate` | `B_adopted` |
+
+The inherited `Judgment.verdict` and `Judgment.performance` use the shared
+closed values. `effects` reports shared effect-state observations over the
+boundary identified by the judgment's predicate, subject and existing
+evidence/provenance coordinates. It introduces no additional identity-bearing
+nested record or hidden reference domain. Resolved carriers must preserve those
+same relations. A historical checker bound to an older calculus schema checks
+that schema only; it cannot certify these successor Judgment relations by
+accepting an older record without them.
 
 The inherited transformation's external-resolution coordinates are closed by
 the following finite expansion rather than hidden inside the three local-delta
@@ -715,11 +739,19 @@ out_of_scope
 partial_effect
 ```
 
-Every constraint predicate returns exactly one of `satisfied`, `falsified`,
-`indeterminate`, or `invalid_basis`. `satisfied` maps to the judgment's positive
-decision, which is the first decision listed below; `invalid_basis` maps only
-to `invalid_basis`. The constraint table fixes every other mapping. An
-implementation cannot turn an omitted result, residual, or stop into success.
+Every admitted constraint evaluation returns the shared
+[result record](FOUNDATIONS.md#result-algebra) on its exact subject, basis and
+predicate. Within this profile's declared constraint domain its verdict is
+`satisfied`, `falsified`, `indeterminate` or `invalid_basis`. A request outside
+that domain returns `out_of_frame` at the invocation boundary; it is not forged
+into an in-domain judgment. Performance and effect state remain separate
+coordinates. An omitted or unperformed evaluation is never a positive result.
+
+The judgment decisions below are domain refinements. `satisfied` maps to the
+positive decision, which is first in each row; `invalid_basis` maps only to
+`invalid_basis`. The constraint table fixes other mappings. Keep the original
+decision, constraint predicate, evidence, residuals and stop in the shared
+return. The table does not define a second aggregation or result algebra.
 
 The closed judgment domains are:
 
@@ -738,6 +770,20 @@ Each is an inherited `Judgment` and therefore carries unchanged subject id and
 digest, evaluator, authority, evidence, provenance, and decision coordinate.
 The judgment kind defines the applicable stops and residuals; none is inferred
 from prose.
+
+`valid`, `admitted` and `ready` mean `satisfied` only for their respective
+validation, admission or readiness predicates. They do not establish the
+intended external outcome. `hold`, `gap` and `indeterminate` retain
+`indeterminate` where decisive evidence is missing. A demonstrated false
+predicate remains `falsified`, retaining `refused`, `stale`, `unauthorized` or
+`out_of_scope` as mapped below. In particular `out_of_scope` from a false
+`event_scope_compatible` constraint is a falsified compatibility claim; its
+spelling does not turn it into the invocation-boundary `out_of_frame` result.
+For a `partial` transition, the exact intended-outcome predicate and evidence
+determine `falsified` if non-fulfilment is established, or `indeterminate` if
+fulfilment remains unknown. Its effect state separately retains observed
+partiality or uncertainty. These distinctions make each complete return map to
+one core verdict without discarding the profile's finer decision.
 
 The closed constraint domains are:
 
@@ -834,6 +880,12 @@ RelationClaim c
   -> Judgment j_a over unchanged a
 ```
 
+Conjoin the required claim, event and semantic-cut predicates through
+[result conjunction](FOUNDATIONS.md#result-conjunction), retaining each exact
+judgment and required equality relation. A refusal remains visible beside a
+missing judgment; absence cannot erase the refusal or complete the cut. The
+conjunction does not widen the admission authority of any participant.
+
 Only `j_c.decision = admitted`, `j_e.decision = admitted`, and
 `j_a.decision = admitted` admit the complete semantic cut. `c`, `j_c`, `e`,
 `j_e`, `r`, `a`, and `j_a` have distinct identities and authority.
@@ -858,7 +910,8 @@ j_a.subject_digest = sha256(canonical bytes of a)
 ```
 
 Each judgment has the complete inherited context, owner, scope, basis,
-evaluator, authority, decision, evidence, provenance, and decision-time
+evaluator, authority, predicate, verdict, decision, performance, effects,
+evidence, residuals, provenance, and decision-time
 fields. A missing cut judgment, non-`admitted` decision, wrong subject or
 digest, or cross-basis judgment refuses the semantic cut.
 
@@ -1020,12 +1073,28 @@ The disposition law is closed:
   bounded evidence, the `partial_effect` residual and stop, and explicit
   re-entry before any further effect; and
 - `refused_effect` binds the refused invocation attempt and `refusal` stop, with
-  evidence that no authorized mutation began.
+  evidence that no mutation began.
 
 `invokes_effect` exists if and only if a concrete invocation was dispatched.
 `unauthorized` or `stale` readiness never dispatches it. The immutable
 `EffectInvocation` contains no future disposition; `EffectDisposition` records
 the later outcome without rewriting the invocation.
+
+The shared return conserves the effect observation, rather than mapping labels
+without evidence. `no_effect` with no requested operation is `not_requested`;
+`refused_effect` with evidence that no mutation began is `not_started`;
+`completed_effect` with its required observation is `completed`.
+`partial_effect` retains the domain's incomplete-effect disposition: the core
+state is `partial` only when a completed part and an unexecuted remainder are
+both known; an uncertain remainder is `unknown`, even if some execution is
+observed. A dispatch followed by lost transport
+cannot become `no_effect`, `refused_effect` or `completed_effect`. Missing
+post-observation remains an explicit residual and prevents a complete profile
+disposition from being manufactured. Observation is required before any action
+that depends on whether that effect happened, including a repeat.
+An unauthorized mutation is still an actual effect. Lack of permission cannot
+establish `not_started` or justify a `refused_effect` disposition that conceals
+observed or uncertain mutation.
 
 `j_ready` judges the unchanged `EffectSubject` immediately before effect
 dispatch under the application's declared currentness and invalidation law. If
