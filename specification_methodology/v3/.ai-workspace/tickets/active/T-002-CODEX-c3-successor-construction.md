@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T00:00:00Z
+updated_at: 2026-10-13T20:22:52Z
 priority: high
 dependencies: [T-002]
 ---
@@ -40,7 +40,7 @@ State: admitted for the Codex rebuild under the execution contract below. This p
 | Frame | Actor | State |
 |---|---|---|
 | Executive | this Codex session in its coordination frame, under Jim's run-to-completion instruction; no mutation in this frame | bound |
-| Writer | the Codex tenant context, territory `build_tenants/codex/` only | ready |
+| Writer | the Codex tenant context, territory `build_tenants/codex/` only | returned frozen review candidate |
 | Reviewer | fresh Claude review activations for Codex-authored changes; nonauthor Codex working checks for imported source, with provenance disclosed | construction review; owner policy decision remains open |
 | Ledger Writer | common pen Codex, explicitly separate Writer activation | bound |
 | Fresh actor for usability evidence | any family, cold context outside any repository or instruction-file load path | per activation |
@@ -69,7 +69,7 @@ Later contracts follow T-002's member sequencing, one per member or declared con
 
 | Milestone | State | Closure condition |
 |---|---|---|
-| M1 design reframed and EC-CODEX-SYN-01 admitted | OPEN | design restated; member map declared; contract `admitted` and ledgered |
+| M1 design reframed and EC-CODEX-SYN-01 admitted | COMPLETE | design restated; member map declared; contract `admitted` and ledgered; frozen source `9bc8962`, evidence `3ad1fca` |
 | M2 member 1 accepted | OPEN | Reviewer `satisfied` on all six criteria; `accept` ledgered |
 | M3 all members accepted | OPEN | every frontier row disposed; every member accepted |
 | C3 closure for this tenant | OPEN; Jim's | Jim accepts |
@@ -101,3 +101,11 @@ The admission entry below is part of this ticket's Execution Record. The recorde
 2026-10-14 — Core Writer returned candidate `3cfb2ab`. Independent core review requests bounded repairs to the result codomain/composition and remaining duplicate owners; Executive disposition `local_repair`, with no member acceptance. Next authorised Writer activation: repair those core contracts and integrate the dependency-ready method/profile returns; then fresh review and use trials. Common-pen Writer separately repairs review findings on source/basis wording and recording. These are explicit role changes before those effects.
 
 2026-10-14 — Integrated package `a746559` has 80 members; artifact checks pass and ten fresh use actors have returned. Core re-review identifies procedure/evidence and overlapping-effect composition defects; Executive disposition `local_repair`, preserving all prior runs at their actual source cut. Next Writer activations: parent repairs Foundations and its consumers; the artifact Writer applies and checks sandbox returns only under `qualification/C3/synthesis/use/`; the profile Writer constructs an ordinary-entry and cold-continuation trial only under `qualification/C3/synthesis/entry/`. The a_c Writer refreshes its interpretation after the repaired source freezes. Fresh nonauthor source and result reviews follow; these are working checks, not member acceptance. All remain within EC-CODEX-SYN-01 and its aggregate CLI allowance.
+
+2026-10-14 — Package `9982ab8` passes the artifact and source-blind identity checks. The C6 actual-use counterexample rejects the earlier review prescription equating performance with conclusion; performance now retains actual undertaking and extent. Ten fresh successor outputs are preserved separately. Re-review finds residual consumer mappings and stop wording requiring bounded correction. Executive disposition `local_repair`; next parent Writer repairs only demonstrated contradictions and affected projections, then freezes and rechecks. Qualification Writers apply successor proposals, repair evidenced harness selectors, refresh the a_c interpretation and return exact-scope results. Ordinary entry remains bound to its truthful installed rc.2 basis; no source-fallback rule is weakened. One older grading call exceeded its configured USD 2 provider allowance and returned no judgment; actual reported spend is retained and subsequent calls are bounded against the aggregate allowance. No member acceptance or release is recorded.
+
+2026-10-14 — Product source is frozen at `9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd`. The final source review supports the single effect owner within its selected cases. Independent a_c reviews expose contradictions in the qualification interpretation, not a new grant to change source. Executive disposition `local_repair`: the a_c Writer corrects evidence guards, refinement and operator handling, records coverage limits and returns bounded delta packets; no further product mutation is selected. Parent qualification Writer refreshes artifact/identity checks and records use-test disagreements, the D1 task/oracle mismatch and its explicit hard-cut successor. Common Ledger Writer records this activation before those effects. Aggregate paid-call spend remains bounded by EC-CODEX-SYN-01; no member acceptance, tenant merge, push or release is selected.
+
+2026-10-14 — The final a_c counterexample review confirms the N1 repair and seven R repairs, but finds an incomplete-boundary guard gap plus dependency and declared-limit residue. Executive selects one bounded qualification-only repair: parent Writer fixes C1–C8 in the interpretation and finite diagnostics, reruns its affected checks and reports the actual review boundary. The unchanged product remains `9bc8962`. A final targeted reviewer may consume only the remaining aggregate allowance; broader core/family implementation is outside this repair. Parent Writer then freezes qualification and the common Ledger Writer posts the visible return. Member acceptance remains open.
+
+2026-10-14 — EC-CODEX-SYN-01 returns a frozen review candidate: product `9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd`, qualification `3ad1fca31dc93ba0847bbbbf308312a554daa1f6` on `tenant/codex/c3-synthesis`. The tenant worktree is clean. [The visible return](../../comments/codex/20261013T202252Z_RETURN_CODEX_V3_SYNTHESIS.md) links the package and full evidence. Artifact/identity checks pass; 31 actor proposals were applied across successive cuts, with failures, repairs and applicability limits preserved. Independent a_c review confirms substantive repairs; final declaration corrections have parent checks. The 69 CLI calls report USD 29.6238964, including the historical individual-cap overrun. M1 is complete; M2/M3 and Jim's C3 acceptance remain open. No member acceptance, canonical selection, tenant merge, push or release is recorded. All construction/review workers have returned. Common Ledger Writer checkpoints only this ticket and the visible return on main.
