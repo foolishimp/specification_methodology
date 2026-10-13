@@ -2,14 +2,12 @@
 
 The common contract governs both tenant realisations.
 
-- [PRINCIPLES](PRINCIPLES.md): substantive working foundations and review questions for C1.
-- [CAPABILITIES](CAPABILITIES.md): tentative capability questions for C2 after principles acceptance.
+- [PRINCIPLES](PRINCIPLES.md): the working foundations and their review questions.
+- [CAPABILITIES](CAPABILITIES.md): capability questions; each capability's acceptance contract is selected separately.
 - [A_C_DEPENDENCY](A_C_DEPENDENCY.md): exact theory, mechanical dependency and proof limits.
-- [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the STDO-UP-015 frontier, one row per predecessor claim with its disposition and successor locus (PROPOSED, awaiting review).
+- [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the STDO-UP-015 frontier, one row per predecessor claim with its disposition and successor locus.
 
-Working foundation statements are evaluated content. Installed STDO 2.5.1 RC2 remains builder law and is the predecessor the successor evolves. The Product Definition's local axiom, override and disambiguation arrays remain empty.
-
-C1 reviews derivations, independence, recovery and hypotheses. Capability closure conditions and runnable conformance cases await C2.
+Working foundation statements are evaluated content. The installed 2.5.1-rc.2 release is builder law and the predecessor the successor evolves. The Product Definition's local axioms are the Product's [identity](../PRODUCT.md#product-identity-and-lineage) and [development isolation](../PRODUCT.md#development-isolation) sections; its override and disambiguation arrays are empty.
 
 ## Successor Disposition Requirement
 
@@ -17,9 +15,9 @@ Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#su
 
 ## Standalone Successor Requirement
 
-Source: this Product, the product owner's decision of 2026-10-12; PROPOSED in wording, awaiting review. The successor stands alone: every `conserved` claim is restated in the successor's own text, so that the successor is complete and applicable without the predecessor remaining operative. A route to the predecessor is evidence of where a claim came from, not of its conservation; under this requirement a route alone satisfies no disposition. The requirement is the reason the construction order is axioms first and then the full predecessor corpus restated.
+Source: this Product. The successor stands alone: every `conserved` claim is restated in the successor's own text, so that the successor is complete and applicable without the predecessor remaining operative. A route to the predecessor is evidence of where a claim came from, not of its conservation; under this requirement a route alone satisfies no disposition. The requirement is the reason the construction order is axioms first and then the full predecessor corpus restated.
 
-Restated on the axioms. Reading selected by the product owner on 2026-10-13 for the candidate comparison and confirmed for C3; wording PROPOSED, awaiting review. The successor is on its axioms when three relationships hold:
+Restated on the axioms. The successor is on its axioms when three relationships hold:
 
 1. Foundation to law. Each material family of deciding contracts identifies its applicable foundational premises, its conditional consequences, and its additional domain or policy choices with their owners. The full corpus is accounted for; a bounded demonstration is not presented as derivation of every member.
 2. Ownership and use. Spec Method and profiles consume the shared contracts, along actual entry and application paths, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
@@ -29,7 +27,7 @@ Unchanged predecessor prose satisfies these where it carries the relationships. 
 
 ## Single Ownership Requirement
 
-Source: this Product's [Intent](../INTENT.md#what-the-product-is), the product owner's decision of 2026-10-13; PROPOSED in wording, awaiting review.
+Source: this Product's [Intent](../INTENT.md#what-the-product-is).
 
 A determination is a rule, definition, value set or procedure step that an actor must apply. Its owner is an owning locus: one section of one member. Owner here names a place in the text, not decision authority.
 
@@ -45,7 +43,7 @@ Purpose and material relation: a question decided at two loci is interpreted twi
 
 ## Single Result Algebra Requirement
 
-Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), the product owner's decision of 2026-10-13; PROPOSED in wording, awaiting review. It answers the question carried to C2 on unifying the RF-012 and AC-007 evaluation algebras ([C1 Disposition](PRINCIPLES.md#c1-disposition)).
+Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)). It unifies the RF-012 and AC-007 evaluation algebras ([C1 Disposition](PRINCIPLES.md#c1-disposition)).
 
 1. The foundations tier owns exactly one core result algebra. Constraint, judgment, frame, stop, work and effect results are stated in it or as refinements of it.
 2. A member or profile that needs finer outcomes defines a refinement. Every refined value maps to exactly one core value; no outcome exists outside the core.
@@ -59,7 +57,7 @@ Purpose and material relation: this is the [single ownership requirement](#singl
 
 ## Categorical Demonstration Standard
 
-Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)), the product owner's decision of 2026-10-13 incorporating the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply); PROPOSED in wording, awaiting review.
+Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)) and the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply).
 
 A categorical claim about the method, or about a construction made with it, is established only with:
 

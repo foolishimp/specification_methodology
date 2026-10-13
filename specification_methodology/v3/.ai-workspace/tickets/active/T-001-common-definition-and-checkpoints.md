@@ -261,3 +261,28 @@ The requirement links that pointed to the Intent's Mission now point to its "Wha
 
 2026-10-13T11:23:42Z — Jim: "this is a product definiton, dont use Jim - does apple tell you Steve", then "why do i need standing in my intent - the document is the standing unless there is something else". The pen replaced every naming of Jim in the product definition surfaces under `specification/` with the role "the product owner": INTENT, PRODUCT, GOALS, REFERENCE_FRAME_BASIS, and requirements README, PRINCIPLES, A_C_DEPENDENCY and PREDECESSOR_CLAIMS; 72 occurrences, wording only, with no change to any decision or its date. The Intent's Standing section is removed. Its content is owned elsewhere: acceptance and decision authority in [PRODUCT, construction authority](../../../specification/PRODUCT.md#construction-authority); release and adoption state in [GOALS](../../../specification/GOALS.md); the limit on categorical claims in the Intent's Demonstration Standard. Tickets, posts and the bootstrap instruction files are work records and keep the owner's name.
 
+2026-10-13T11:32:27Z — Asked whether PRODUCT should also drop "STDO 3" and v3.0.0, Jim answered: "if you are asking I havent established the tone? check the writing guide for STDO 2.5.1 ( which was a conveinient compression of specification ticket design outcome - as abbreviations of the major methods". The pen applied the installed [WRITING_GUIDE](stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md) to the product definition: present-tense live truth, no narrated transitions, no stale law, version labels only for immutable release facts and selector bindings.
+
+- PRODUCT is titled "Product". Its product sections come first: boundary, identity, result algebra, categorical construction, and dependencies and acceptance. The source project's construction (tenants, construction authority, development isolation, cross-synthesis, checkpoints and the C3 contract) sits under one "Source Project Construction" heading. Every section heading keeps its text, so inbound anchors resolve.
+- The identity table states the release as the next major release on the existing `specification_methodology` line; the version label and the product acronym are gone from the prose. `stdo_3.json`'s display name changes to match; identifiers are unchanged, and `--verify` passes.
+- Removed, with where each item is owned:
+
+| Removed | Owning locus |
+|---|---|
+| status line; "Selected/Decided/Allowed by … on …"; PROPOSED and "awaiting review" markers; "Amended on …"; "(accepted …; corrected to …)" | history: GOALS revision record and this ticket; review state: GOALS rows |
+| "Codex held the common construction pen for setup and C1" | history: this ticket |
+| the C1 authorisation paragraphs and the Shared Construction Contract | history: GOALS (C1 closed 2026-10-11) and PRINCIPLES C1 Disposition; the live sentences (tenants, common WHAT, review results, release selection) kept once under Source Project Construction |
+| the C0 to C2 checkpoint narrative | GOALS checkpoint rows |
+| DECIDED items in Open Owner Decisions | the sections that state them: C3 contract (audiences and criteria), standalone successor requirement (restated on the axioms), identity table (lineage and layout) |
+| the withdrawn `rc/stdo_3/3.0.0` proposal | history: this ticket |
+| "No Axiom RC2 Product Install … C1 needs source recovery" | A_C_DEPENDENCY |
+| "Runnable cases … are selected at C2" | stale; the discriminators are C3 acceptance criterion 5 |
+| duplicate statements that release selection is the product owner's (three places) | kept once, Source Project Construction |
+
+- REFERENCE_FRAME_BASIS: title, subject and authority rows, and the "Setup standing" row lose their C1 and version wording. The C1 activation rows are replaced by one "Common definition" row in the activation table.
+- requirements README: the "Source" lines keep their source link and lose decision dates and PROPOSED markers. The stale C1/C2 intro is removed. The claim that the local axiom arrays are empty, which was false since the definition carries two local axioms, now names them.
+- conformance README: the C1/C2 status line becomes the C3 criterion-5 binding.
+- CAPABILITIES: the C1/C2 status is replaced. The graceful-totality thread candidate is superseded by the categorical steel thread.
+- GOALS: the title and the product naming in GOAL-002, the C3 row and open decisions are changed. Dated state and the revision record are GOALS' purpose and stay.
+- Left unchanged: PRINCIPLES (the accepted C1 record) and PREDECESSOR_CLAIMS (frontier data). Both still use C1 and version wording that belongs to their records.
+

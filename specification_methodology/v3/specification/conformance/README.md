@@ -1,6 +1,6 @@
 # Common Conformance Questions
 
-Status: C1 logical review expectations; runnable trials and complete acceptance criteria await C2.
+These discriminators are acceptance criterion 5 of the [C3 Construction Contract](../PRODUCT.md#c3-construction-contract).
 
 Both tenants are evaluated against independently specified common expectations. The reviewer acquires these expectations and the actual source before inspecting the candidate. No observed green result is recorded here.
 
@@ -22,6 +22,6 @@ Both tenants are evaluated against independently specified common expectations. 
 | A functor or categorical join is claimed | Objects, arrows, arrow equality, identity and composition are given and the functor laws are shown before the claim; otherwise the claim is a hypothesis ([standard](../requirements/README.md#categorical-demonstration-standard)). |
 | A rewrite or refinement step is applied | Its licensing law is declared for the subject. An exact step preserves meaning; an approximate step states its adequacy relation and an end-to-end bound. |
 
-C1 can find logical counterexamples and contradictions without executing a runtime. C3+ actual-use cases must perform real construction, observe genuine defects, preserve effect uncertainty and re-enter lawfully.
+Logical review finds counterexamples and contradictions without executing a runtime. Actual-use cases perform real construction, observe genuine defects, preserve effect uncertainty and re-enter lawfully.
 
-A later neutral finite token-transfer case tests the selected a_c fragment separately from STDO interpretation fidelity. Author-independent source comparison, mechanical checks, formal derivations and practical adequacy remain different evidence.
+A later neutral finite token-transfer case tests the selected a_c fragment separately from the method's interpretation fidelity. Author-independent source comparison, mechanical checks, formal derivations and practical adequacy remain different evidence.
