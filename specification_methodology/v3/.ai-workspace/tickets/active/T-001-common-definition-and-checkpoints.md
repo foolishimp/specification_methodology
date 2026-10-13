@@ -5,12 +5,12 @@ type: spike
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: explain bounded construction from A to Z through context management and derived frames
+change_intent: derive work configurations from task dependencies and actor limits rather than a fixed role set
 change_class: requirement_reprice
 re_entry_point: specification_methodology/v3/specification/INTENT.md
-triaged_at: 2026-10-13T17:07:19Z
+triaged_at: 2026-10-13T17:24:05Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T17:19:04Z
+updated_at: 2026-10-13T17:24:05Z
 dependencies: []
 ---
 
@@ -38,6 +38,14 @@ Jim then supplied the conversation he had intended for the common pen while read
 
 > if i wanted to go back to first principles, if i wanted to go from A -> Z, because of finite compute resources, i need to go from A -> B -> C etc. and our entire methodology is about defining A, defining Z and managing the series of transitions to Z
 
+Jim clarifies that the named roles are possible configurations, not the foundational inventory:
+
+> i was providing deeper foundational insight, that executive, worker, reviewer are emergent, but not the only possible configration, and to bake them directly into product, needs to go back to why they emerge, human hierachical structures are evolved over hundreds of years for unreliable biologial units that can also be modelled as limited context and attention
+
+> correct biological systems modelled in a particular way can self organise into many optimal structures
+
+> give our task based focus, an executive with long term goals to manage the long term delivery, by having a limited set of data points from the worker
+
 Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
 
 Jim selected Codex as the common construction pen, asked it to read and evaluate Claude's revised proposal carrying Jim's principles-first checkpoint feedback, then create the structure and documents enabling independent tenants. His instruction was:
@@ -50,13 +58,13 @@ This record preserves that actual setup and independent C1 preparation/attempt a
 
 Target truth: a clear, consistent common specification for the next major release of Specification Methodology, in `specification_methodology/v3/`, under the installed STDO 2.5.1 RC2 builder basis. The selected two tenant lines, single result algebra, standalone successor and foundational relationships remain the construction contract.
 
-Preimage: main at `df4816d402966d7b27d047c3f8335a47b0d1c25f`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+Preimage: main at `a3262492549aa55180b34fbbb10d7ef97aeb056b`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-Triage: `requirement_reprice`, making the owner's A-to-Z account and context-management derivation explicit. Re-entry begins at Intent and follows Product, P5, common requirements, frame basis, C3 attention and use criteria, conformance and current status. Finite context and finite attention motivate sufficient bounded frames. Worker, Reviewer and Executive are derived frame responsibilities; their grants and independence still depend on existing authority and assurance rules. Current state, target refinement, admissible transitions, conditional reuse and truthful stopping retain their existing owners. The build-tenant binding remains unchanged. The earlier repairs and reviews retain their historical bases.
+Triage: `requirement_reprice`, correcting the earlier update's prominence of three named roles. Re-entry begins at Intent and follows Product, the bounded-frame requirement, frame basis, conformance and current status. Task dependencies, limited context and attention, actor fallibility and assurance needs motivate arrangements of responsibilities and information exchange. These admit multiple configurations and adaptation within their contracts. The local Executive has a particular derivation: long-term delivery decisions use sufficient bounded worker results while workers focus on tasks. This source project's installed construction configuration stays selected. Build-tenant binding, all principle bodies, historical C1 acceptance, authority, independence and the steel-thread contract remain unchanged. The biological analogy supplies no asserted theorem or historical conclusion.
 
 Common pen: Codex. This activation is the common Writer, with effects limited to `specification/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md`, this ticket and `.ai-workspace/comments/codex/` under the v3 source root. Local checkpoint commits on main provide review visibility under Jim's recorded instruction below to commit this specification revision on main. This grant excludes tenant implementation changes, tenant activation, publication and checkpoint acceptance. Executive coordination carries no file or Git write authority.
 
-Exit evidence: a coherent explanation from A and Z through bounded transitions; one owned context-management requirement connecting sufficiency, attention and derived frames; C3 consumes it without a new universal actor sequence or budget; counterexamples distinguish byte fit from adequacy, fresh context from independence and obligation count from progress; unchanged tenant, release and unrelated work; resolving affected links; current Product Definition verification; and frozen source review independent of authorship. Jim's sign-off and the next tenant input snapshot remain later decisions.
+Exit evidence: the common WHAT permits different work configurations and explains how they arise; the local construction binding explains the Executive's long-term focus and sufficient bounded results; no fixed role inventory, hierarchy, new universal report or optimisation campaign is introduced. Discriminators cover alternative configurations, adaptive allocation and unsupported optimality. Existing conformance, grants, tenant, release and unrelated work are preserved. Affected links, current definition verification and independent frozen source review complete the bounded return. Jim's sign-off and the next tenant input snapshot remain later decisions.
 
 ## Milestones And Closure
 
@@ -390,3 +398,9 @@ Writer return: `candidate_ready` for frozen source review. Eight common files ca
 Writer return: `candidate_ready` for frozen source review. Eight common files connect A and Z, bounded transitions, context and attention, sufficient frames and derived responsibilities. C3 consumes the frame requirement in its frontier, activation and actual-use criteria. Five discriminator rows cover size without adequacy, fresh-context self-review, omitted frontier items, discovery/target revision and sufficient direct work. All 184 checked affected links resolve; whitespace and Product Definition verification pass. The steel-thread contract, build-tenant binding, P1–P4, P6 and historical C1 disposition, both tenant trees, v2 and companion/cohort bytes are unchanged. The unrelated untracked review is hash-preserved. These are document checks, not a human/agent-use trial or checkpoint acceptance.
 
 2026-10-13T17:19:04Z — Source update checkpointed at `c316b49586e7c9712984169d088d0100d334843c`. The fresh bounded reader returned no changes required; the common Writer checked the returned reasoning against the source. The [review](../../comments/codex/20261013T171904Z_REVIEW_V3_CONTEXT_ATTENTION_AND_TRANSITIONS.md) records the exact scope and limits. It expressly checks that finite capacity imposes neither universal decomposition nor serial scheduling, that resource limits do not confer authority or independence, and that counts, repetition or refinement alone establish neither progress nor churn. This follows Jim's further instruction to exercise independent judgment on Claude's analysis. The common update is ready for owner review. T-001 remains active; no tenant activation, C3 member acceptance, actual-use qualification or release is inferred.
+
+### 2026-10-14: Configurations derived from task and actor constraints
+
+2026-10-13T17:24:05Z — Common Writer re-entry from `a326249`. Jim's clarification above exposes a remaining conceptual restriction: denying a universal three-actor sequence still leaves the named trio too prominent as the generic model. The repair starts from required operations, dependencies, context, attention and assurance, then explains possible allocations and the local Executive's longer decision horizon. Installed RF-009 expressly distinguishes configuration, authority and dependency structures; it assumes no hierarchy. The same current construction grant and installed builder remain in force. This entry precedes source edits. The unrelated untracked review is preserved at SHA-256 `5a4db767b7ff9a5dc5fbda27688c38e53def0e48b3949dda2723370ff94954dc`.
+
+Writer return: `candidate_ready` for frozen source review. Seven common files replace the generic named-role account with constrained configuration choices and explain the local Executive's long-term delivery responsibility. Four discriminators cover peer arrangements, adaptive allocation, unsupported optimality and an insufficient compact task result. All 162 affected links resolve; whitespace and Product Definition verification pass. Principle bodies, installed construction grants, build-tenant binding, steel-thread contract, both tenant implementations and sibling/release bytes are unchanged. No biological, historical or global-optimality claim is introduced, and no execution trial is claimed.

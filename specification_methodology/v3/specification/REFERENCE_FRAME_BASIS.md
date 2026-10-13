@@ -1,6 +1,6 @@
 # Project Reference-Frame Basis
 
-This file binds the installed release's reference frames to this source project and attaches actors to their activations. Worker, Reviewer and Executive name derived responsibilities under the [context-management contract](PRODUCT.md#construction-and-context-management). Each activation receives the material and admitted authority for its task.
+This file binds the installed release's reference frames to this source project and attaches actors to their activations. Its Worker, Reviewer and Executive arrangement is the selected construction configuration under the [context-management contract](PRODUCT.md#construction-and-context-management). It separates attention to bounded tasks, longer-term delivery and the assessment this contract requires. These named responsibilities are not the method's complete set of possible configurations. Each activation receives the material and admitted authority for its task.
 
 ## Declaration
 

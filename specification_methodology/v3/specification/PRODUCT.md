@@ -40,7 +40,9 @@ When the work exceeds one activation's capacity, it proceeds through bounded tra
 
 Finite context and finite attention drive context management. Context bounds what an activation can hold; attention bounds what it can use effectively for its selected task. A reference frame selects sufficient relevant material and the task contract within those limits. Time, spend and other resources constrain the selected execution binding as applicable. The [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames) owns these obligations.
 
-Worker, Reviewer and Executive are derived frame responsibilities for construction, assessment and coordination. Their subject, purpose and result distinguish them; admitted authority bounds their effects and decisions. The [construction binding](#construction-authority) attaches this source project's actors to those frames. A fresh context supports a bounded assessment but does not establish independence from authorship or grant decision authority.
+Roles and coordination structures emerge from allocating required operations and information to actors. Task dependencies require exchanges and compatible results; actor fallibility and incomplete knowledge motivate the applicable checking and recovery. Limited context and attention bound each responsibility. These conditions constrain a configuration without uniquely determining it. Functional decomposition, communication, authority and evaluation dependency remain distinct relations.
+
+A realisation may use a hierarchy, peer coordination or an arrangement that adapts as actors allocate work within their contracts. Its design relates that choice to the task, actor capabilities, communication costs and required assurance. Several configurations may be adequate; an optimality claim is relative to stated objectives, constraints and comparison scope. Operational profiles and build tenants own these choices. The [construction binding](#construction-authority) selects one configuration for building this release.
 
 ## Method Structure
 
@@ -61,7 +63,7 @@ The Spec Method develops a product through four descriptions:
 
 Each refinement preserves the obligations above it. A material constituent repeats this structure where it needs its own bounded account. Work records, triage and review connect changes to the earliest affected description.
 
-Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles specialise the reference-frame contract as Worker, Reviewer and Executive frames, with their task catalogues and coordination procedure. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
+Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles specialise the reference-frame contract through task catalogues and justified coordination arrangements. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
 
 The a_c interpretation represents the method's laws, results and declared maps, retaining the distinction between premises, derived rules and policy choices. Reference-frame projections select the contract and material for a task from their owning members. Interpretation and projection apply across the tiers; their fidelity is evaluated against their owners.
 
@@ -155,7 +157,7 @@ Their organisation, wording and a_c encodings may differ. Their accepted outputs
 
 Codex holds the common construction pen, the right to edit the common files. Common changes receive review independent of their author before the product owner accepts them. Checkpoint commits on main provide review visibility; they do not supply acceptance. A review result informs the product owner's decision. The [frame basis](REFERENCE_FRAME_BASIS.md) binds these roles and their activations under the installed 2.5.1-rc.2 release.
 
-Work is done in activations. An activation binds a capable actor to a selected reference frame, its subject and admitted authority. The responsibilities below specialise that contract for this source project:
+Work is done in activations. An activation binds a capable actor to a selected reference frame, its subject and admitted authority. This source project's task-based construction separates two attention needs: carrying out a bounded change and managing delivery across successive tasks. The Executive retains the longer-term outcome and uses a sufficient bounded view of worker results to decide what follows. It requests further bounded evaluation when a decision needs more information. Independent assessment provides the checking required by this construction contract. These needs explain the selected responsibilities below; their named arrangement is one configuration under the installed builder:
 
 - an Executive frame selects the next work and disposes results within its decision grant, with no file or Git mutation;
 - a Worker frame constructs a bounded result; the Writer frame used here specialises it for changes to documents and records in an exact granted territory;
