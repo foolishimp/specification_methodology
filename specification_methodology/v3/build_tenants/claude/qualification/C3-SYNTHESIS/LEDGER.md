@@ -194,3 +194,20 @@ More follow-ups held:
 2026-10-13T20:15Z — Correction to the entry that records A1b's return. It says RA1's minor findings were repaired. A1b's return lists six as unchanged: 1b, 1c and 4b in FOUNDATIONS, and 2b, 6b and 6c in ACTIVATION. RA4 found the discrepancy. Those six are open and are now assigned: the ACTIVATION three to A4c, the FOUNDATIONS three to the repair after RA5.
 
 RA4 returned for ACTIVATION at `e31a9d9`: questions 1 to 4 `satisfied` (transitions, configuration, measurement and attention, workspace, refinement licensing). Questions 5 to 9 are `falsified` on 14 minor findings, none material. Disposition: `local_repair` as A4c on ACTIVATION, covering RA4's findings 5a (ACTIVATION part), 5b, 5c, 6a, 7a, 8a, 8b and 9b to 9e. RA4 also notes again that A4b measured its inputs after reading them, against the Limits of the C3 contract; the handoff carries this as a known variance.
+
+2026-10-13T20:34Z — Returns and dispositions:
+- RA5 returned for FOUNDATIONS at `a929514` (`fbfe915`) with five material findings:
+  - the RF-010 triggers were dropped;
+  - the independence cases for P1 to P3 vary only capacity;
+  - P4b has no argument;
+  - index rows point to tables that do not yet exist;
+  - the import owner is inverted in §6.
+
+  Disposition: `local_repair` as A5c, together with RA1's open 1b, 1c and 4b.
+- B6 (UX, WORLD_MODEL, PROFILES, F20, F21) started.
+- A4c returned `candidate_ready`, committed `a4542ef`. All RA4 findings and RA1's open ACTIVATION minors are repaired. A4c disclosed the same read-before-measure variance as A4b.
+- B8 (IDENTITY, AXIOMATIC_CALCULUS, F8, F9) started. Ruling given to B8: a per-traversal stop-state binding may refine a TRAVERSAL value but never re-map `refusal(constraint)` away from `falsified`, and never raises standing.
+- A8 returned `candidate_ready`, committed `59ae2a4`: F1 (36 rows), F6 and F7 are in place, and EVALUATION's FOUNDATIONS §1 citation is re-pointed to RELEASE §9. A8 disclosed a stray scratch file written outside the territory and deleted at once. B7 (ASSURANCE, RELEASE, F14, F15) started.
+- B5 returned `candidate_ready`, committed `f3408e6`. Design axiom verdicts map for the predicate "the design meets the axiom, or the axiom does not apply": `not_applicable` maps to `satisfied`, needs a false applicability premise, and never counts as conformance. Design verdicts are acceptance results bound to ACTIVATION §3. Both readings are confirmed and flagged for cross-family attention in the handoff.
+- C3, independent oracles for REFERENCE_FRAME, AXIOMATIC_CALCULUS and TRAVERSAL test tasks written from sources only, started.
+- A5c returned `candidate_ready`, committed `681aae3`. Ruling on its open conjunction case: the declared decision rule states how non-mandatory results count. A non-mandatory `falsified` result is kept in the record, never discarded. A material counterexample to a mandatory constraint falsifies the conjunction whoever found it (predecessor RF-010). Otherwise the declared rule's value over the mandatory results stands. A5d applies this together with three small cross-file items.
