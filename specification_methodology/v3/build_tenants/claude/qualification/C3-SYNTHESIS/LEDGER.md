@@ -133,3 +133,10 @@ RA1, a working review of A1, started.
   Disposition: `local_repair` as A1b. The admission and activation outcomes get their own refinement, mapped by cause. `carried` and `blocked` map to `falsified` for "the ambiguity is resolved". RA1's minor findings are repaired at the same time.
 - Outside the subject, RA1 found `gap`, `hold` and `refusal` outcomes in AXIOMATIC_CALCULUS with no mapping. These are added to B8's scope.
 - A4a and A5a wait for A1b, because they edit the same members.
+
+2026-10-13T19:15Z — Returns and dispositions:
+- A1b returned `candidate_ready`, committed `858ebde`: admission and activation outcomes refined and mapped by cause; `carried` and `blocked` map to `falsified`; RA1's minor findings repaired. Its repairs are checked by the next working review of ACTIVATION. A1b asked for one ruling: a missing capability that refuses activation maps to `out_of_frame`, not `falsified`. The core defines `out_of_frame` as an evaluation that needs an undeclared material relation or capability, and ACTIVATION §2 step 3 already returns `out_of_frame` for a context that does not fit. Assigned to A3b.
+- RA23 returned (`e4bd1be`): two material findings, M1 ("owns only" weakened in REFERENCE_FRAME §1) and M2 (an unmapped `translate` authority refusal), plus 8 minor. Disposition: `local_repair` as A3b on REFERENCE_FRAME and EVALUATION, together with the capability ruling and A3's unmapped §8 coverage statuses.
+- A4a, for ACTIVATION §1 Transitions and Configuration, started.
+- W1b returned `candidate_ready`, committed `105b5a4`: all 29 RW1 findings repaired. The design now reads "author" as the tenant, so every same-family review is a working check only. The design governs where PLAN rows differ; the stale rows are handled in the briefs of A5b and wave B.
+- A5a, for the FOUNDATIONS §1 trim, §2 imports and the Actor row, started.
