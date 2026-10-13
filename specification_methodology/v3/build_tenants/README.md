@@ -2,6 +2,8 @@
 
 The two build tenants, [Codex](codex/README.md) and [Claude](claude/README.md), each build their own candidate of the common [Product](../specification/PRODUCT.md) as documents. Their designs, prose organisation, a_c encodings and proofs may differ, within the shared meaning the common specification defines.
 
+Each candidate's Spec Method implements the [build-tenant binding requirement](../specification/requirements/README.md#build-tenant-binding-requirement): requirements are realised through a computational calculus bound to a concrete technology stack, human process or mixed environment. Each candidate applies that requirement to its own realisation. Codex and Claude identify the authors; their names alone select no execution environment for the method they express.
+
 The product owner owns the common specification (the WHAT) and its decisions. Codex holds the common construction pen; common changes receive review independent of their author before owner acceptance ([Construction Authority](../specification/PRODUCT.md#construction-authority)). Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests a shared change through the pen. A tenant Writer does not edit the common specification, the tickets or its peer's candidate.
 
 ## Current Task

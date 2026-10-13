@@ -5,12 +5,12 @@ type: spike
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: repair the revised common specification and its entry routes
+change_intent: bind requirements to computation and real-world execution through build tenants
 change_class: requirement_reprice
-re_entry_point: specification_methodology/v3/specification/INTENT.md
-triaged_at: 2026-10-13T14:33:25Z
+re_entry_point: specification_methodology/v3/specification/PRODUCT.md
+triaged_at: 2026-10-13T16:44:35Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T14:53:37Z
+updated_at: 2026-10-13T16:50:49Z
 dependencies: []
 ---
 
@@ -22,7 +22,15 @@ Jim assigns the common construction pen to Codex and authorises repair of the re
 
 > im handing the pen back to you fix the v3 revised specification
 
-The current repair follows the [review of the revision at 698485d](../../comments/codex/20261013T141923Z_REVIEW_V3_SPECIFICATION_INTENT_AND_SEMANTICS.md). Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
+The preceding repair follows the [review of the revision at 698485d](../../comments/codex/20261013T141923Z_REVIEW_V3_SPECIFICATION_INTENT_AND_SEMANTICS.md) and is checkpointed at `e38d45a`, with its review record at `8828aea`. Jim then clarified the build-tenant boundary and instructed the common pen to update it:
+
+> build_tenant is exactly the purpose of bounding the requirements ( aka requirements calculus ) to the computation calculus
+
+> computation calculus is bound to a real world tech stack so the requirements can be realised in what ever stack you are looking at a human process etc.
+
+> update
+
+Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
 
 Jim selected Codex as the common construction pen, asked it to read and evaluate Claude's revised proposal carrying Jim's principles-first checkpoint feedback, then create the structure and documents enabling independent tenants. His instruction was:
 
@@ -34,13 +42,13 @@ This record preserves that actual setup and independent C1 preparation/attempt a
 
 Target truth: a clear, consistent common specification for the next major release of Specification Methodology, in `specification_methodology/v3/`, under the installed STDO 2.5.1 RC2 builder basis. The selected two tenant lines, single result algebra, standalone successor and foundational relationships remain the construction contract.
 
-Preimage: main at `698485dd87cb83b875506686ca8e01a5ccedfbdb`; the review post has SHA-256 `ab536d6fcce1e4624127f950eed6acbb62a8d220810ccd14469438c41244eb7e`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+Preimage: main at `8828aea60988b8aa11657d8f74ff2e7ce5b252aa`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-Triage: `requirement_reprice`, repairing the expression and consistency of existing obligations without changing the selected mission. Re-entry begins at Intent and follows its affected Product, requirement, conformance and routing statements. The fixes cover review findings F1–F5, the three listed residuals, current pen assignment and the stale C1 entry in the source-project README.
+Triage: `requirement_reprice`, making the owner's requirements-to-computation binding explicit at the existing build-tenant boundary. The mission is unchanged. Re-entry begins at Product and follows the affected Intent, common requirement, proposed formalisation, conformance, tenant entry and current status. The common method owns the binding obligation; each tenant owns its selected calculus, concrete execution binding and conformance evidence. Human, machine and mixed execution are within the account. Formal representation in a_c does not select an execution model. The earlier repair and its reviews retain their historical basis.
 
 Common pen: Codex. This activation is the common Writer, with effects limited to `specification/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md`, this ticket and `.ai-workspace/comments/codex/` under the v3 source root. Local checkpoint commits on main provide review visibility under Jim's recorded instruction below to commit this specification revision on main. This grant excludes tenant implementation changes, tenant activation, publication and checkpoint acceptance. Executive coordination carries no file or Git write authority.
 
-Exit evidence: readable Intent; consistent deciding contracts and entry routes; unchanged tenant and release bytes; exact builder and Product Definition verification; resolving affected links; and a frozen repair for review independent of its author. Jim's sign-off and the next tenant input snapshot remain later decisions.
+Exit evidence: one owned binding requirement used by the affected common surfaces; human and mixed execution covered without equating actor identity with operation kind; shared calculus reuse permitted where its laws hold; conformance cases preserving authority and meaning across bindings; unchanged tenant and release bytes; exact builder and Product Definition verification; resolving affected links; and frozen source review independent of authorship. Jim's sign-off and the next tenant input snapshot remain later decisions.
 
 ## Milestones And Closure
 
@@ -358,3 +366,9 @@ Left unchanged: PRINCIPLES, PREDECESSOR_CLAIMS and tenant territory.
 Writer return for frozen review: the common repair is `candidate_ready`. Intent is reduced from 1,155 to 530 words while retaining the selected mission, foundational relationship, categorical direction, axiomatic programming, single ownership and result algebra, bounded frames, recovery and standalone successor. Product owns the detailed structure and distinguishes the candidate interpretation from external Products. The conformance cases retain authenticated judgments and add the misbound-result, unchanged-bytes invalidation and insufficient-frame discriminators. Current pen and review destinations are aligned, the source README routes to current grants, and obsolete frontier proposal status is removed. Mechanical checks: 202 affected links resolved (two tenant entry targets checked for existence only), whitespace passed, instruction files agree and their installed bootstrap blocks are unchanged, and exact builder/Product Definition verification passed. The previous review post is preserved verbatim. This local checkpoint is for review; tenant bytes, release bytes and open owner decisions are unchanged.
 
 2026-10-13T14:53:37Z — Frozen repair: `e38d45af09987ce8a75b8d1b4219868163b8434e` on main. Two fresh read-only Codex activations independently reviewed Intent/direction and common contracts/routing against the preimage. Both returned no further changes required within their scopes. Their findings and verification limits are posted in the [repair review](../../comments/codex/20261013T145337Z_REVIEW_V3_COMMON_SPECIFICATION_REPAIR.md). These are same-family source reviews independent of authorship, not C3 member qualification. The bounded repair return is ready for owner review; this ticket remains active for its other checkpoint obligations. Owner sign-off, the next input snapshot and C3 actor/ported-part review decisions remain open.
+
+### 2026-10-14: Build-tenant computational binding
+
+2026-10-13T16:44:35Z — Intake and common Writer activation. Jim's clarification and update instruction are quoted under Owner Instruction. Codex continues as common Writer in the Selected Contract's territory from `8828aea`, after verifying the exact installed builder and Product Definition. This entry records the activation before source edits. It selects no tenant execution and changes no installed law or released bytes. A fresh bounded source review will check the completed binding and its affected consumers; no cross-family tenant acceptance is claimed.
+
+Writer return: `candidate_ready` for frozen source review. Eight common files carry the binding and its affected consumers. The proposed formalisation now permits human, machine and mixed architectures; the six principle bodies and historical C1 disposition remain byte-identical. The steel-thread contract, both tenant implementations, Product Definition, instruction files, v2 and companion/cohort bytes are unchanged. All 173 checked affected links resolve; whitespace and current Product Definition verification pass. Exact installed builder verification passed at intake. No executable trial or categorical theorem is claimed by these document checks.

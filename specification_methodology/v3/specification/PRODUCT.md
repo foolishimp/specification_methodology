@@ -18,7 +18,7 @@ The categorical groundwork strategy proposes three accounts of any construction.
 
 - the algorithmic description: the steps;
 - the informational interpretation: what the data means;
-- the computational realisation: how it runs on a given machine.
+- the computational realisation: how people, machines or combinations of them carry it out in a declared execution environment.
 
 A tier may need all three, and none of them is a tier.
 
@@ -55,6 +55,14 @@ Profiles include outcome-driven development of typed graph programs, user-interf
 
 The a_c interpretation represents the method's laws, results and declared maps, retaining the distinction between premises, derived rules and policy choices. Reference-frame projections select the contract and material for a task from their owning members. Interpretation and projection apply across the tiers; their fidelity is evaluated against their owners.
 
+## Build-Tenant Binding
+
+A build tenant binds the common requirements calculus to a computational calculus grounded in a real-world execution environment. It owns the design, realisation and evidence for that binding. The [binding requirement](requirements/README.md#build-tenant-binding-requirement) governs its conformance.
+
+The requirements calculus comprises the obligations, permitted outcomes and rules for refining and composing the construction. The computational calculus describes executable operations, their composition and permitted transformations, with the effects and resource behaviour relevant to those obligations. Its execution environment supplies the concrete means: a technology stack, a human process or a combination. A human process can use people, roles, documents, communication channels and decision procedures.
+
+The common specification bounds the permitted realisations. Each tenant selects its computational calculus and execution binding within those bounds. The algorithmic, informational and computational accounts apply across this relation. Formal representation in a_c supports checking the relation; it does not select its executor. A tenant's author and the actors that carry out its realised process are separate coordinates.
+
 ## Product Identity And Lineage
 
 | Coordinate | Binding |
@@ -88,7 +96,7 @@ Categorical construction is a general capability of the method. The method defin
 
 Sequence:
 
-1. The Intent and this Product state three things: the categorical direction; axiomatic programming as the computational model, in which the specification is the program; and the demonstration standard.
+1. The Intent and this Product state the categorical direction, the axiomatic representation of requirements, the [build-tenant binding](#build-tenant-binding) to computation and concrete execution, and the demonstration standard.
 2. One thin end-to-end example, the steel thread, tests the direction under the installed previous release.
 3. The method is corrected from the steel thread's evidence.
    - Each finding goes back to the section that actually owns its cause.
@@ -129,7 +137,7 @@ The [conformance discriminators](conformance/README.md) are the common checks ev
 
 This source project is where the next release is written. It owns one common WHAT: the specification in `specification/`, which states what the product must be.
 
-Two build tenants supply the HOW. The tenants are the AI coding agents Codex and Claude. Each builds its own candidate of the product as documents under `build_tenants/<tenant>/`.
+Two build tenants supply the HOW, authored respectively by Codex and Claude. Each supplies its own candidate of the product as documents under `build_tenants/<tenant>/`, applying the [build-tenant binding requirement](requirements/README.md#build-tenant-binding-requirement). Author identity alone selects no execution environment for the method the candidate expresses.
 
 Their organisation, wording and a_c encodings may differ. Their accepted outputs satisfy the same common contract and the same independently specified expectations. The method a tenant's documents express is distinct from this common specification, which governs how they are built. A tenant design does not replace this Product definition, and the common WHAT is not replaced by a merge of the tenants' work. Selecting or combining tenant candidates for a release is the product owner's decision.
 
@@ -284,7 +292,7 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 | Tier | Owes | Receives from the previous release |
 |---|---|---|
 | foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
-| Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, work carriers and triage, assurance and testing law, change classes (the kinds of change, each with the stage it re-enters at) and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
+| Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, [build-tenant binding](requirements/README.md#build-tenant-binding-requirement), work carriers and triage, assurance and testing law, change classes (the kinds of change, each with the stage it re-enters at) and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
 | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
 | guides | posting (how commentary posts are written), writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
 | packaging | manifest, schemas, templates, compressions (the shortened summaries of the standards) or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before a release-candidate cut |

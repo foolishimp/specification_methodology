@@ -41,6 +41,19 @@ Restated on the axioms. The successor is on its axioms when three relationships 
 
 Unchanged predecessor text satisfies these where it carries the relationships. Copied text does not establish the foundational relationship just by being present, and the share of text rewritten is not evidence that a relationship holds.
 
+## Build-Tenant Binding Requirement
+
+Source: this Product's [Build-Tenant Binding](../PRODUCT.md#build-tenant-binding). Each candidate's Spec Method states and applies this relation between a product's common WHAT and its tenant realisations.
+
+1. A build tenant binds the common requirements calculus to a declared computational calculus and binds that calculus to a concrete execution environment. These bindings are part of its existing design and realisation surfaces.
+2. The execution environment may be a technology stack, a human process or a combination. Its selection remains within the common requirements, including any required human decision. Author identity, actor identity and operation kind remain distinct; a person performing an operation does not by itself make that operation human adjudication.
+3. The binding identifies the operations, composition laws, effects, resource measures and operational assumptions material to conformance. Human effort, elapsed time, communication and machine resources are measured where the selected obligations need them, with their units and boundaries stated.
+4. Conformance evidence establishes how the bound realisation satisfies the required meaning and constraints, including applicable authority, independence, failure and recovery conditions. A convenient stack cannot weaken an obligation. A categorical preservation claim also meets the [demonstration standard](#categorical-demonstration-standard).
+5. A computational calculus may be reused across tenants and execution environments where the bindings satisfy its laws. A different language, tool or team does not by itself require a different calculus.
+6. Representation of the requirements and bindings in a_c does not prescribe their executor or establish execution conformance through structural validation alone.
+
+Purpose and material relation: the same common obligations can be realised through different means. The tenant owns those choices and their evidence, while the common specification retains its meaning. This keeps a particular stack from becoming universal method machinery and permits human and mixed processes without a parallel methodology.
+
 ## Single Ownership Requirement
 
 Source: this Product's [Intent](../INTENT.md#what-the-product-is).
