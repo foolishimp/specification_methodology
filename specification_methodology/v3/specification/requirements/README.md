@@ -13,13 +13,13 @@ C1 reviews derivations, independence, recovery and hypotheses. Capability closur
 
 ## Successor Disposition Requirement
 
-Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015), installed law. Every predecessor claim capable of affecting the successor receives exactly one disposition before the successor is accepted: `conserved` (the successor retains the claim), `superseded` (an accepted successor relation replaces it, named), `intentionally removed` (Jim as Product authority, with the reason) or `not applicable` (no successor effect, with a bounded reason). Conservation is semantic: naming similarity does not prove it and patch absence does not prove loss. UP-015 does not by itself require a retained claim to be rewritten into successor prose. `reframed` is a note on how a conserved claim was carried, not a disposition.
+Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015), installed law. Every predecessor claim capable of affecting the successor receives exactly one disposition before the successor is accepted: `conserved` (the successor retains the claim), `superseded` (an accepted successor relation replaces it, named), `intentionally removed` (the product owner as Product authority, with the reason) or `not applicable` (no successor effect, with a bounded reason). Conservation is semantic: naming similarity does not prove it and patch absence does not prove loss. UP-015 does not by itself require a retained claim to be rewritten into successor prose. `reframed` is a note on how a conserved claim was carried, not a disposition.
 
 ## Standalone Successor Requirement
 
-Source: this Product, Jim's decision of 2026-10-12; PROPOSED in wording, awaiting review. The successor stands alone: every `conserved` claim is restated in the successor's own text, so that the successor is complete and applicable without the predecessor remaining operative. A route to the predecessor is evidence of where a claim came from, not of its conservation; under this requirement a route alone satisfies no disposition. The requirement is the reason the construction order is axioms first and then the full predecessor corpus restated.
+Source: this Product, the product owner's decision of 2026-10-12; PROPOSED in wording, awaiting review. The successor stands alone: every `conserved` claim is restated in the successor's own text, so that the successor is complete and applicable without the predecessor remaining operative. A route to the predecessor is evidence of where a claim came from, not of its conservation; under this requirement a route alone satisfies no disposition. The requirement is the reason the construction order is axioms first and then the full predecessor corpus restated.
 
-Restated on the axioms. Reading selected by Jim on 2026-10-13 for the candidate comparison and confirmed by him for C3; wording PROPOSED, awaiting review. The successor is on its axioms when three relationships hold:
+Restated on the axioms. Reading selected by the product owner on 2026-10-13 for the candidate comparison and confirmed for C3; wording PROPOSED, awaiting review. The successor is on its axioms when three relationships hold:
 
 1. Foundation to law. Each material family of deciding contracts identifies its applicable foundational premises, its conditional consequences, and its additional domain or policy choices with their owners. The full corpus is accounted for; a bounded demonstration is not presented as derivation of every member.
 2. Ownership and use. Spec Method and profiles consume the shared contracts, along actual entry and application paths, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
@@ -29,7 +29,7 @@ Unchanged predecessor prose satisfies these where it carries the relationships. 
 
 ## Single Ownership Requirement
 
-Source: this Product's [Intent](../INTENT.md#what-the-product-is), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review.
+Source: this Product's [Intent](../INTENT.md#what-the-product-is), the product owner's decision of 2026-10-13; PROPOSED in wording, awaiting review.
 
 A determination is a rule, definition, value set or procedure step that an actor must apply. Its owner is an owning locus: one section of one member. Owner here names a place in the text, not decision authority.
 
@@ -45,7 +45,7 @@ Purpose and material relation: a question decided at two loci is interpreted twi
 
 ## Single Result Algebra Requirement
 
-Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review. It answers the question carried to C2 on unifying the RF-012 and AC-007 evaluation algebras ([C1 Disposition](PRINCIPLES.md#c1-disposition)).
+Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), the product owner's decision of 2026-10-13; PROPOSED in wording, awaiting review. It answers the question carried to C2 on unifying the RF-012 and AC-007 evaluation algebras ([C1 Disposition](PRINCIPLES.md#c1-disposition)).
 
 1. The foundations tier owns exactly one core result algebra. Constraint, judgment, frame, stop, work and effect results are stated in it or as refinements of it.
 2. A member or profile that needs finer outcomes defines a refinement. Every refined value maps to exactly one core value; no outcome exists outside the core.
@@ -59,7 +59,7 @@ Purpose and material relation: this is the [single ownership requirement](#singl
 
 ## Categorical Demonstration Standard
 
-Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)), Jim's decision of 2026-10-13 incorporating the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply); PROPOSED in wording, awaiting review.
+Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)), the product owner's decision of 2026-10-13 incorporating the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply); PROPOSED in wording, awaiting review.
 
 A categorical claim about the method, or about a construction made with it, is established only with:
 

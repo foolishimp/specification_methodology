@@ -51,7 +51,3 @@ A categorical statement without that demonstration is a hypothesis. The precise 
 The method is built with its own installed earlier release, as a compiler is built with its previous version.
 
 The categorical direction is proved by a real consumer before it is generalised. One thin steel thread, joining an algorithm category with a computation category, is built under the installed release. The method is amended from what the thread shows, and the full categorical product is then built on the released method. Restating the existing method on the axioms continues alongside.
-
-## Standing
-
-Jim owns this Intent and decides acceptance. Nothing here is released or adopted yet, and no universal mathematical claim is made.
