@@ -87,7 +87,7 @@ Purpose and material relation: this is the [single ownership requirement](#singl
 
 Source: this Product ([Categorical Construction](../PRODUCT.md#categorical-construction)) and the [categorical groundwork strategy](../../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#what-the-method-must-supply).
 
-A categorical claim about the method, or about a construction made with it, is established only with:
+A categorical claim about the method, or about a construction made with it, is established only with items 1 to 5, as far as they apply to it. Acceptance of the categorical capability, and any claim that asserts the worked join itself, also require item 6:
 
 1. Objects and arrows. For each category claimed: its objects, its arrows, when two arrows are equal, its identities, and associative composition.
 2. Preservation per layer. Each refinement layer states what it preserves of the layer above and discharges that obligation. An exact step preserves meaning. An approximate step states its adequacy relation (how close is close enough) and an end-to-end bound. A fixed tolerance at each step does not compose into an end-to-end bound.
@@ -98,6 +98,6 @@ A categorical claim about the method, or about a construction made with it, is e
    - a_c, its interpretations and its carriers (the files and tools that hold it) keep separate identities.
    - Structural validation checks structure only.
    - Each claim names its evidence class: mechanically checked, established by mathematical argument, tested against an independently specified oracle, or unresolved.
-6. Worked join. One algorithm category joined with one computation category is the acceptance instance.
+6. Worked join. One algorithm category joined with one computation category is the acceptance instance for the categorical capability.
 
-A categorical statement without this demonstration is a hypothesis. Purpose and material relation: the categorical direction ([Intent](../INTENT.md#mission)) is useful only where its constructions preserve meaning, and these items are what preservation must show.
+A categorical statement without the demonstration it requires is a hypothesis. Purpose and material relation: the categorical direction ([Intent](../INTENT.md#mission)) is useful only where its constructions preserve meaning, and these items are what preservation must show.

@@ -55,7 +55,7 @@ No member, profile or frame defines its own parallel set of outcomes. A refineme
 
 ## Categorical Construction
 
-Categorical construction is a general capability of the method. The method defines categories of its own constructs and joins between categories, which are maps from one category to another. It permits a construction step only where declared laws allow it. Specification documents are the objects. Derivations and refinements are the arrows, and each states what it must preserve. A join of an algorithm category with a computation category is the acceptance instance. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a claim without it is a hypothesis.
+Categorical construction is a general capability of the method. The method defines categories of its own constructs and joins between categories, which are maps from one category to another. It permits a construction step only where declared laws allow it. Specification documents are the objects. Derivations and refinements are the arrows, and each states what it must preserve. A join of an algorithm category with a computation category is the acceptance instance for the capability. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a claim without it is a hypothesis.
 
 [CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it, its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet.
 
