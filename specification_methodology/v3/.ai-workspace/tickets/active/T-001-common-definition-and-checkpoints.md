@@ -10,7 +10,7 @@ change_class: requirement_reprice
 re_entry_point: specification_methodology/v3/specification/INTENT.md
 triaged_at: 2026-10-13T17:24:05Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T17:24:05Z
+updated_at: 2026-10-13T17:30:35Z
 dependencies: []
 ---
 
@@ -404,3 +404,5 @@ Writer return: `candidate_ready` for frozen source review. Eight common files co
 2026-10-13T17:24:05Z — Common Writer re-entry from `a326249`. Jim's clarification above exposes a remaining conceptual restriction: denying a universal three-actor sequence still leaves the named trio too prominent as the generic model. The repair starts from required operations, dependencies, context, attention and assurance, then explains possible allocations and the local Executive's longer decision horizon. Installed RF-009 expressly distinguishes configuration, authority and dependency structures; it assumes no hierarchy. The same current construction grant and installed builder remain in force. This entry precedes source edits. The unrelated untracked review is preserved at SHA-256 `5a4db767b7ff9a5dc5fbda27688c38e53def0e48b3949dda2723370ff94954dc`.
 
 Writer return: `candidate_ready` for frozen source review. Seven common files replace the generic named-role account with constrained configuration choices and explain the local Executive's long-term delivery responsibility. Four discriminators cover peer arrangements, adaptive allocation, unsupported optimality and an insufficient compact task result. All 162 affected links resolve; whitespace and Product Definition verification pass. Principle bodies, installed construction grants, build-tenant binding, steel-thread contract, both tenant implementations and sibling/release bytes are unchanged. No biological, historical or global-optimality claim is introduced, and no execution trial is claimed.
+
+2026-10-13T17:30:35Z — Frozen source `be784145cf77fcc1551dcbd666dad57188fa21fb` received a fresh bounded read-only review with no changes required. The common Writer checked the returned reasoning, including the Executive's unchanged access limits and the difference between generic configuration choices and C3's selected process. The [review post](../../comments/codex/20261013T173035Z_REVIEW_V3_DERIVED_WORK_CONFIGURATIONS.md) records the evidence and limits. The correction is ready for owner review; this ticket and the outstanding common acceptance decisions remain open.
