@@ -4,7 +4,7 @@
 
 To define a precise method for constructing software and processes, with a categorical direction and an axiomatic representation of its laws, so that the method can be mechanically checked and applied to itself.
 
-The method lets people and computational actors turn an explicit purpose into requirements, construct independent realisations, and judge them against those requirements. It separates what a product must achieve from the choices made to build it.
+The method defines the current state A, the constraints on an acceptable destination Z, and the transitions that can carry work between them. People and computational actors make those transitions within finite resources. Intent, Product and Specification refine the destination; construction and evaluation establish whether it has been reached. The method separates what must be achieved from the choices made to realise it.
 
 ## What The Product Is
 
@@ -24,8 +24,10 @@ The method applies its own construction and evaluation process to its successor.
 
 ## What It Achieves
 
-Each task has a reference frame: the bounded contract that binds its purpose, subject, governing rules, required material, authority, actor capability and result. The actor can make progress, seek a lawful refinement or continuation, or stop with an explicit reason when the task cannot be completed within that contract.
+Actors have finite context and finite attention. Context limits what an activation can hold; attention limits what it can effectively use for its task. Context management selects a sufficient reference frame: the task's purpose, subject, governing rules, required material, authority and result, within the actor's capability. It retains material dependencies and excludes irrelevant material. Work that exceeds one frame is refined into bounded transitions, with lawful continuation or an explicit stop when necessary.
 
-Resumption uses the current workspace and retains valid progress. Recorded results are reusable while they remain applicable and their validity conditions hold. Changed dependencies and observations that invalidate a claim reopen the affected work. Independent assessment still supplies its own sufficient evidence and judgement.
+Worker, Reviewer and Executive are derived reference frames for construction, assessment and coordination. Each binds an actor to its task and existing authority. Independent assessment retains its own evidence and authorship conditions. The [frame requirement](requirements/README.md#bounded-transitions-and-reference-frames) connects these responsibilities to context and attention management.
+
+Resumption uses the current workspace as the next starting state and retains valid progress. Recorded results are reusable while they remain applicable and their validity conditions hold. Changed dependencies and observations that invalidate a claim reopen the affected work. A change to the destination follows its owning authority and re-entry rules.
 
 Producing a candidate, checking it and accepting it remain distinct acts. Results record their basis, evidence and unresolved matters so that later work can use them without depending on an earlier actor's private memory. The released method stands alone, with the predecessor's material claims accounted for under the [successor requirements](requirements/README.md#standalone-successor-requirement).

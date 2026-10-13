@@ -5,12 +5,12 @@ type: spike
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: bind requirements to computation and real-world execution through build tenants
+change_intent: explain bounded construction from A to Z through context management and derived frames
 change_class: requirement_reprice
-re_entry_point: specification_methodology/v3/specification/PRODUCT.md
-triaged_at: 2026-10-13T16:44:35Z
+re_entry_point: specification_methodology/v3/specification/INTENT.md
+triaged_at: 2026-10-13T17:07:19Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T16:54:56Z
+updated_at: 2026-10-13T17:07:19Z
 dependencies: []
 ---
 
@@ -30,6 +30,14 @@ The preceding repair follows the [review of the revision at 698485d](../../comme
 
 > update
 
+Jim then supplied the conversation he had intended for the common pen while reading Product. His direction is:
+
+> worker, executive, revierwer emerge out of reference frames - which is the need to do context management
+
+> because we have have 2 finite resources, context and attention - and some others like token cost, but those two are the key drivers to create ref frames to manage context
+
+> if i wanted to go back to first principles, if i wanted to go from A -> Z, because of finite compute resources, i need to go from A -> B -> C etc. and our entire methodology is about defining A, defining Z and managing the series of transitions to Z
+
 Common acceptance remains Jim's. The earlier setup instruction below is historical authority for C0 and C1.
 
 Jim selected Codex as the common construction pen, asked it to read and evaluate Claude's revised proposal carrying Jim's principles-first checkpoint feedback, then create the structure and documents enabling independent tenants. His instruction was:
@@ -42,13 +50,13 @@ This record preserves that actual setup and independent C1 preparation/attempt a
 
 Target truth: a clear, consistent common specification for the next major release of Specification Methodology, in `specification_methodology/v3/`, under the installed STDO 2.5.1 RC2 builder basis. The selected two tenant lines, single result algebra, standalone successor and foundational relationships remain the construction contract.
 
-Preimage: main at `8828aea60988b8aa11657d8f74ff2e7ce5b252aa`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+Preimage: main at `df4816d402966d7b27d047c3f8335a47b0d1c25f`. The installed builder manifest is `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-Triage: `requirement_reprice`, making the owner's requirements-to-computation binding explicit at the existing build-tenant boundary. The mission is unchanged. Re-entry begins at Product and follows the affected Intent, common requirement, proposed formalisation, conformance, tenant entry and current status. The common method owns the binding obligation; each tenant owns its selected calculus, concrete execution binding and conformance evidence. Human, machine and mixed execution are within the account. Formal representation in a_c does not select an execution model. The earlier repair and its reviews retain their historical basis.
+Triage: `requirement_reprice`, making the owner's A-to-Z account and context-management derivation explicit. Re-entry begins at Intent and follows Product, P5, common requirements, frame basis, C3 attention and use criteria, conformance and current status. Finite context and finite attention motivate sufficient bounded frames. Worker, Reviewer and Executive are derived frame responsibilities; their grants and independence still depend on existing authority and assurance rules. Current state, target refinement, admissible transitions, conditional reuse and truthful stopping retain their existing owners. The build-tenant binding remains unchanged. The earlier repairs and reviews retain their historical bases.
 
 Common pen: Codex. This activation is the common Writer, with effects limited to `specification/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md`, this ticket and `.ai-workspace/comments/codex/` under the v3 source root. Local checkpoint commits on main provide review visibility under Jim's recorded instruction below to commit this specification revision on main. This grant excludes tenant implementation changes, tenant activation, publication and checkpoint acceptance. Executive coordination carries no file or Git write authority.
 
-Exit evidence: one owned binding requirement used by the affected common surfaces; human and mixed execution covered without equating actor identity with operation kind; shared calculus reuse permitted where its laws hold; conformance cases preserving authority and meaning across bindings; unchanged tenant and release bytes; exact builder and Product Definition verification; resolving affected links; and frozen source review independent of authorship. Jim's sign-off and the next tenant input snapshot remain later decisions.
+Exit evidence: a coherent explanation from A and Z through bounded transitions; one owned context-management requirement connecting sufficiency, attention and derived frames; C3 consumes it without a new universal actor sequence or budget; counterexamples distinguish byte fit from adequacy, fresh context from independence and obligation count from progress; unchanged tenant, release and unrelated work; resolving affected links; current Product Definition verification; and frozen source review independent of authorship. Jim's sign-off and the next tenant input snapshot remain later decisions.
 
 ## Milestones And Closure
 
@@ -374,3 +382,9 @@ Writer return for frozen review: the common repair is `candidate_ready`. Intent 
 Writer return: `candidate_ready` for frozen source review. Eight common files carry the binding and its affected consumers. The proposed formalisation now permits human, machine and mixed architectures; the six principle bodies and historical C1 disposition remain byte-identical. The steel-thread contract, both tenant implementations, Product Definition, instruction files, v2 and companion/cohort bytes are unchanged. All 173 checked affected links resolve; whitespace and current Product Definition verification pass. Exact installed builder verification passed at intake. No executable trial or categorical theorem is claimed by these document checks.
 
 2026-10-13T16:54:56Z — Source update checkpointed at `832efd3f68b0557fdce2826e5efaf811b448c924`. The fresh bounded reader returned no changes required after inspecting the frozen binding, its C3 consumer and conformance cases. The [review](../../comments/codex/20261013T165456Z_REVIEW_V3_BUILD_TENANT_COMPUTATIONAL_BINDING.md) records the same-family scope, source locations and evidence limits. The common update is ready for owner review. No tenant activation or qualification is inferred; this ticket remains active for its other checkpoint obligations.
+
+### 2026-10-14: Context, attention and bounded transitions
+
+2026-10-13T17:07:19Z — Common Writer re-entry from `df4816d`. Jim's supplied conversation steers the continuing common repair; his own statements are quoted under Owner Instruction. Codex records this activation before source effects. Installed RF-002/003/004/006/007/008 and the derived baseline frames supply the existing context, sufficiency, irrelevance, authority and role relations. Current definition verification passed. Claude's proposed deductions are assessed separately from the owner's direction: context freshness alone cannot establish independence; finite capacity alone cannot supply purpose or authority; time and cost are not wholly determined by context size; and an unresolved-item count is not a universal distance to completion. No predecessor claim is selected for removal by this organising account. The pre-existing untracked current-contract review is preserved outside this increment.
+
+Writer return: `candidate_ready` for frozen source review. Eight common files connect A and Z, bounded transitions, context and attention, sufficient frames and derived responsibilities. C3 consumes the frame requirement in its frontier, activation and actual-use criteria. Five discriminator rows cover size without adequacy, fresh-context self-review, omitted frontier items, discovery/target revision and sufficient direct work. All 184 checked affected links resolve; whitespace and Product Definition verification pass. The steel-thread contract, build-tenant binding, P1–P4, P6 and historical C1 disposition, both tenant trees, v2 and companion/cohort bytes are unchanged. The unrelated untracked review is hash-preserved. These are document checks, not a human/agent-use trial or checkpoint acceptance.

@@ -30,7 +30,17 @@ Example applications, such as Hello World and Data Mapper, are test subjects out
 
 The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together. The companion products are the Axiom Indexer; the STDO Representation, which publishes the method's canonical a_c map, linking each axiom to its source text; and the plugin, which carries the method's skills for coding agents.
 
-Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two build tenants, the agents that each build a candidate, are described under [Source Project Construction](#source-project-construction).
+Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two candidate build tenants are described under [Source Project Construction](#source-project-construction).
+
+## Construction And Context Management
+
+The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A includes the material workspace state and the justified knowledge available about it; unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
+
+When the work exceeds one activation's capacity, it proceeds through bounded transitions A → B → C → … . Each transition retains the applicable outer obligations. Composition depends on compatible contracts and discharged preservation obligations. Discovery may add obligations or invalidate a claim. An authorised change may revise the destination; it does not establish that the previous destination was reached. Progress is judged against the selected outcome and evidence, rather than the number of remaining items alone.
+
+Finite context and finite attention drive context management. Context bounds what an activation can hold; attention bounds what it can use effectively for its selected task. A reference frame selects sufficient relevant material and the task contract within those limits. Time, spend and other resources constrain the selected execution binding as applicable. The [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames) owns these obligations.
+
+Worker, Reviewer and Executive are derived frame responsibilities for construction, assessment and coordination. Their subject, purpose and result distinguish them; admitted authority bounds their effects and decisions. The [construction binding](#construction-authority) attaches this source project's actors to those frames. A fresh context supports a bounded assessment but does not establish independence from authorship or grant decision authority.
 
 ## Method Structure
 
@@ -38,7 +48,7 @@ The method has three tiers. The [C3 tier obligations](#c3-construction-contract)
 
 | Tier | Responsibility |
 |---|---|
-| Foundations | Shared commitments and contracts for interpretation, purpose, identity, composition, finite capacity, evidence, authority, results and reference frames. |
+| Foundations | Shared commitments and contracts for interpretation, purpose, identity, composition, finite context and attention, evidence, authority, results and reference frames. |
 | Spec Method | Product definition, requirements, construction, assurance, change, re-entry and release, using the foundational contracts. |
 | Profiles | Domain or operational specialisations that import the shared contracts and own their additional bindings. |
 
@@ -51,7 +61,7 @@ The Spec Method develops a product through four descriptions:
 
 Each refinement preserves the obligations above it. A material constituent repeats this structure where it needs its own bounded account. Work records, triage and review connect changes to the earliest affected description.
 
-Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles include the frame catalogues and Executive procedure. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
+Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles specialise the reference-frame contract as Worker, Reviewer and Executive frames, with their task catalogues and coordination procedure. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
 
 The a_c interpretation represents the method's laws, results and declared maps, retaining the distinction between premises, derived rules and policy choices. Reference-frame projections select the contract and material for a task from their owning members. Interpretation and projection apply across the tiers; their fidelity is evaluated against their owners.
 
@@ -145,11 +155,13 @@ Their organisation, wording and a_c encodings may differ. Their accepted outputs
 
 Codex holds the common construction pen, the right to edit the common files. Common changes receive review independent of their author before the product owner accepts them. Checkpoint commits on main provide review visibility; they do not supply acceptance. A review result informs the product owner's decision. The [frame basis](REFERENCE_FRAME_BASIS.md) binds these roles and their activations under the installed 2.5.1-rc.2 release.
 
-Work is done in activations. An activation is one run of an agent in one role. There are three roles:
+Work is done in activations. An activation binds a capable actor to a selected reference frame, its subject and admitted authority. The responsibilities below specialise that contract for this source project:
 
-- the Executive selects the next work and decides what happens to each result, and it edits nothing;
-- a Writer writes files inside its granted territory;
-- a Reviewer checks a Writer's result and is never its author.
+- an Executive frame selects the next work and disposes results within its decision grant, with no file or Git mutation;
+- a Worker frame constructs a bounded result; the Writer frame used here specialises it for changes to documents and records in an exact granted territory;
+- a Reviewer frame assesses a frozen subject against the applicable contract, with independently acquired evidence, no repair grant and no assessment of its own authorship.
+
+These frames organise context and attention for their respective tasks. Their names confer no authority. The existing grants below and in each activation supply the permitted effects and decisions.
 
 C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
 
@@ -285,13 +297,13 @@ Outcome. Each tenant produces a candidate of the product with three things:
 
 The previous release stays immutable and in force as the building tool until a release decision. It is not part of the new release.
 
-Frontier. The frontier is the work still open. For each tenant the Executive holds `U0`: every `unresolved` row of PREDECESSOR_CLAIMS.md for that tenant, plus every evaluation this contract requires that is not closed on the current basis. Each tenant declares its own member list and a map from every member of the previous release to the tenant members that receive its content. The map is part of the tenant's frontier record and is reviewed with the first member.
+Frontier. The frontier is the work still open. For each tenant the Executive manages `U0`: every `unresolved` row of PREDECESSOR_CLAIMS.md for that tenant, plus every evaluation this contract requires that is not closed on the current basis. Its active frame selects a sufficient bounded view of that frontier, applicable authority and closed results for the next decision. Excluded items remain in the frontier; their absence from active attention supplies no disposition. Each tenant declares its own member list and a map from every member of the previous release to the tenant members that receive its content. The map is part of the tenant's frontier record and is reviewed with the first member.
 
 Tier obligations. A tenant's organisation and wording are its own; what each tier owes is common:
 
 | Tier | Owes | Receives from the previous release |
 |---|---|---|
-| foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
+| foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object for [context and attention management](requirements/README.md#bounded-transitions-and-reference-frames), bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
 | Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, [build-tenant binding](requirements/README.md#build-tenant-binding-requirement), work carriers and triage, assurance and testing law, change classes (the kinds of change, each with the stage it re-enters at) and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
 | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
 | guides | posting (how commentary posts are written), writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
@@ -299,7 +311,7 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 
 The previous-release members named in the table: DESIGN_MODULE_METHOD is the discipline for designing implementation modules; ODD_METHOD is the outcome-driven development profile; TRAVERSAL_OCCURRENCE_PROFILE is an optional a_c profile for recording histories of an application over a subject that changes outside it.
 
-Activation unit. Each tenant publishes reference frames assembled from its restated members, one per selected task. They are generated from the a_c form of the members (a_c projections) or by an equivalent the tenant declares. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation.
+Activation unit. Each tenant publishes reference frames assembled from its restated members, one per selected task, under the [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames). They contain the contract and material sufficient for that task and exclude irrelevant material, retaining material dependencies and declared acquisition routes. They are generated from the a_c form of the members (a_c projections) or by an equivalent the tenant declares. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation. This measures size; acceptance criterion 4 evaluates whether the selected actor can use the frame adequately.
 
 Audiences and tasks.
 
@@ -346,13 +358,13 @@ Acceptance criteria for one member restatement:
 1. Every row of the member's frontier cone has exactly one UP-015 disposition. Each `conserved` or `superseded` row also has a successor locus that resolves.
 2. For every `conserved` row, the Reviewer compares the source independently of the author and finds the claim's meaning present in the new release's own text. This is UP-015's semantic conservation, evidenced under the standalone successor requirement. A link to the source alone, a matching label, or a paraphrase that drops part of a rule fails.
 3. Every `superseded` row names the accepted successor relation. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason, one that states the limits of what it covers.
-4. Each selected task of the member has a frame that fits one bounded activation within the declared limits. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory.
+4. Each selected task of the member has a frame that fits one bounded activation within the declared limits, supplies the material needed for the task and excludes irrelevant material. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory. This is evidence of adequate context and attention for the tested task, actor and conditions; byte fit alone does not establish it.
 5. The [conformance discriminators](conformance/README.md) hold against the member's text under logical review, which is a reviewer's reasoned reading, not a mechanical check.
 6. The restatement adds no new obligation without naming the purpose and the material relation that require it, meaning why it exists and what it protects. It makes no needless change to work carriers or process.
 
 Independence. The Reviewer is never the author of the subject. By default the Reviewer is from a different model family from the Writer. A same-family Reviewer is a declared exception, with its reason in the activation record, and its result is marked as such.
 
-Limits. Every activation declares its limits: context in bytes, wall time and spend. It reports the context measured before reading and the spend afterwards. This contract sets no universal budget. The Executive selects and records the limits for each activation.
+Limits. Every activation declares its limits: context in bytes, wall time and spend. It reports the context measured before reading and the spend afterwards. Attention is addressed through sufficient relevant frames and the actual-use evidence in criterion 4; it is not inferred from a byte or token count. This contract sets no universal budget. The Executive selects and records the limits for each activation.
 
 Closure. C3 closes for a tenant when every row of its frontier is disposed and every member is accepted under the grant above. The product owner accepts the checkpoint.
 
