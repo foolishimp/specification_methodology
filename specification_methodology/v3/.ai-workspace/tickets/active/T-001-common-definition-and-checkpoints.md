@@ -212,3 +212,37 @@ Codex's direct comparison recommended fixing both candidates and running a contr
 This revision is the specification update. The tenant synthesis follows it, under T-002-CLAUDE and T-002-CODEX once actors are bound. Awaits Codex review and Jim's merge.
 
 2026-10-13T09:58:00Z — Jim: "to confirm 1. create the new unified specification, we will review and sign off on it". The pen reads "the new unified specification" as the common specification on this branch: one WHAT and one result algebra governing both tenant lines. On that instruction the pen commits the revision on `common/v3-direction-synthesis` as the review subject, after committing the five input posts it links to on `main`. The PROPOSED markers stay until Jim signs off; the tenant synthesis is not started.
+
+2026-10-13T10:35:58Z — Jim, on the Intent at `e96be6f`: "from intent this is a meaningless statement -- Recover existing STDO principles and ABG lessons, then distinguish general foundations, the particular Spec Method, and domain or operational realisations. Reduce repeated interpretation and competing semantic ownership while retaining material distinctions." Offered a replacement, he selected "One-owner law (Recommended)", whose text is: "Every determination of the method has one owner. Foundations own what holds for any method. Spec Method is one method built on them. A domain or operational profile owns only its own bindings. A lower tier refers to or refines an owner's determination; it never defines a second one." He then quoted the Intent's lineage paragraph ("This scope constructs v3.0.0 of the STDO Specification Methodology, continuing the existing product line; … A route to the predecessor is not restatement.") and said: "i dont want abstract references to past projects, the intent is a clear statement of what we are doing, its the mission statement". Intake triage per Universal Intake Triage:
+
+- Substantive: yes; the Intent is rewritten as a mission statement and a single ownership law is added.
+- Boundary: INTENT, PRODUCT (boundary paragraphs), `requirements/README.md` (new Single Ownership Requirement; the result algebra purpose line), `conformance/README.md` (one discriminator), GOALS and the T-001 and T-002 ledgers.
+- Change class: `intent_reprice`, re-entering at INTENT.md, within the revision under review on this branch.
+- Downstream to re-prove: acceptance criterion 5 gains a fifth discriminator, which applies to every member of both candidates. A member that decides a question already owned elsewhere in the same candidate must refer to or refine the owner, and a frame's copy of a clause must name its owning locus.
+- Release scope: none.
+
+Each sentence removed from the Intent, and where its content is owned:
+
+| Removed Intent sentence | Owning locus or disposition |
+|---|---|
+| Recover existing STDO principles and ABG lessons | dropped: C1 history; C1 closed 2026-10-11 |
+| distinguish general foundations, the particular Spec Method, and domain or operational realisations | the Intent's one-owner paragraph; PRODUCT boundary and tier obligations |
+| Reduce repeated interpretation and competing semantic ownership while retaining material distinctions | the Intent's one-owner paragraph; the [single ownership requirement](../../../specification/requirements/README.md#single-ownership-requirement) |
+| This scope constructs v3.0.0 …, continuing the existing product line | the Mission's first sentence; [PRODUCT, identity and lineage](../../../specification/PRODUCT.md#product-identity-and-lineage) |
+| `specification_methodology/v3/` … beside … `specification_methodology/v2/` | PRODUCT identity, construction scope row |
+| The predecessor is the installed v2.5.1-rc.2 cut | PRODUCT boundary, second paragraph |
+| UP-015's four dispositions | [successor disposition requirement](../../../specification/requirements/README.md#successor-disposition-requirement) |
+| the successor stands alone; every conserved claim restated | the Mission's axioms-first sentence; [standalone successor requirement](../../../specification/requirements/README.md#standalone-successor-requirement) |
+| axioms first, then the full predecessor corpus restated | the Mission's axioms-first sentence; standalone successor requirement |
+| The corpus may be as large as the law requires | PRODUCT boundary, second paragraph (moved; it had no other owner) |
+| A finite actor is activated on a projected reference frame, never the corpus | PRODUCT boundary, second paragraph; C3 contract, activation unit |
+| A route to the predecessor is not restatement | standalone successor requirement |
+| The methodology is implemented as documents; a common contract supports independent tenant designs | PRODUCT boundary ("realised as documents"; "one common WHAT"); the Direction keeps one sentence on the two candidates |
+| Members are reviewed across actor families | C3 contract, Independence |
+| Intent → Product → Specification → Realisation recurs | the recursive Product taxonomy recovered under [P3](../../../specification/requirements/PRINCIPLES.md#p3-identity-state-and-representation), restated in each candidate's Spec Method tier |
+| Orthogonal interpretations do not become consecutive workflow stages | PRODUCT boundary ("orthogonal concerns") |
+| Deep review of principles precedes capability selection | dropped: C1 and C2 history; the Checkpoints section owns the order |
+| Observations from later actual use determine lawful repair and re-entry | the Spec Method tier's change classes and re-entry (tier obligations) |
+| Incomplete knowledge, failure and interruption must have truthful dispositions within selected authority | [P5](../../../specification/requirements/PRINCIPLES.md#p5-finite-capacity-and-graceful-total-handling) and [P6](../../../specification/requirements/PRINCIPLES.md#p6-justified-claims-and-separate-authority); result algebra items 3 to 5 |
+
+The Intent keeps the categorical paragraph, the Demonstration Standard, the result algebra sentence, the steel-thread paragraph and the Standing section; "installed method" and "predecessor corpus" are named as STDO 2.5.1. The Purpose heading becomes Mission, and the result algebra requirement's purpose line now links there. Committed on `common/v3-direction-synthesis` as part of the revision under review; the PROPOSED markers stay until Jim signs off.

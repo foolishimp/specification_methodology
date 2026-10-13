@@ -1,14 +1,16 @@
 # STDO 3 Intent
 
-## Purpose
+## Mission
 
-Construct a coherent specification methodology that lets finite actors do useful work against explicit purpose, meaning, constraints and evidence.
-
-Recover existing STDO principles and ABG lessons, then distinguish general foundations, the particular Spec Method, and domain or operational realisations. Reduce repeated interpretation and competing semantic ownership while retaining material distinctions.
+We are building v3.0.0 of the STDO Specification Methodology: a coherent specification methodology that lets finite actors do useful work against explicit purpose, meaning, constraints and evidence.
 
 v3.0.0 lays the groundwork for building processes and software by defining categories and joining them, such as a category of algorithms joined with a category of computation. The computational model is axiomatic programming. Declared laws are the building blocks. Refinement layers stack them. The laws constrain what any construction may do. The specification is the program: construction is constraint-based and requirements-based.
 
-This scope constructs v3.0.0 of the STDO Specification Methodology, continuing the existing product line; `specification_methodology/v3/` is its construction directory, beside the 2.* source project at `specification_methodology/v2/`. The predecessor is the installed v2.5.1-rc.2 cut. Under that cut's successor law (STDO-UP-015) every predecessor claim receives one disposition: conserved, superseded by a named relation, intentionally removed by Product authority, or not applicable with a reason. This Product further requires that the successor stand alone: every conserved claim is restated in the successor's own text, so the successor is complete without the predecessor remaining operative (the standalone successor requirement in [requirements/README.md](requirements/README.md#standalone-successor-requirement)). The construction order is: establish the foundational axioms first, then restate the full predecessor corpus on them. The corpus may be as large as the law requires. A finite actor is never activated on the corpus; it is activated on a projected reference frame, which is the unit that fits one bounded activation. A route to the predecessor is not restatement.
+We build it axioms first. The foundational axioms are established, then everything STDO 2.5.1 establishes is restated on them, so v3.0.0 is complete without STDO 2.5.1.
+
+Every determination of the method has one owner. Foundations own what holds for any method. Spec Method is one method built on them. A domain or operational profile owns only its own bindings. A lower tier refers to or refines an owner's determination; it never defines a second one. The precise obligation is the [single ownership requirement](requirements/README.md#single-ownership-requirement).
+
+The method has one result algebra. Every tier, profile and frame states its outcomes in it or as a refinement of it.
 
 ## Demonstration Standard
 
@@ -25,15 +27,9 @@ A categorical statement without that demonstration is a hypothesis. The precise 
 
 ## Direction
 
-The methodology is implemented as documents. A common Intent, Product and specification contract supports independent tenant designs, prose organisations and representations. Each tenant's candidate keeps its own base and may take the best parts of the other candidate onto it as named contributions. Members are reviewed across actor families.
+Codex and Claude each build a v3.0.0 candidate against this common specification. Each keeps its own base and takes the best parts of the other.
 
-The method has one result algebra. Every tier, profile and frame states its outcomes in it or as a refinement of it.
-
-The categorical half is derived from a real consumer. One thin categorical steel thread proves the direction under the installed method before the method is amended from its evidence. The full categorical product is built on the released method. The restatement of the predecessor corpus is the conservation half and continues alongside.
-
-Intent → Product → Specification → Realisation recurs where a material constituent needs its own bounded account. Orthogonal algorithmic, informational and computational interpretations do not become consecutive workflow stages.
-
-Deep review of principles precedes capability selection. Observations from later actual use determine lawful repair and re-entry. Incomplete knowledge, failure and interruption must have truthful dispositions within selected authority.
+The categorical half is derived from a real consumer. One thin categorical steel thread proves the direction under STDO 2.5.1 before the method is amended from its evidence. The full categorical product is built on the released method. The restatement of STDO 2.5.1 is the conservation half and continues alongside.
 
 ## Standing
 

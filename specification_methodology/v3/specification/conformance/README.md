@@ -16,6 +16,7 @@ Both tenants are evaluated against independently specified common expectations. 
 | Interruption leaves authored progress | Recovery uses the current workspace and applicable work state; it does not erase progress or fabricate completed assessment. |
 | A parse or map succeeds | The claim remains mechanical until independently sufficient semantic and practical evidence exists. |
 | Carrier/process churn is proposed as new law | The claimed obligation is justified by purpose and material relation, or identified as unsupported overhead. |
+| Two loci in one candidate decide the same question | One is the owning locus. The other refers to it or refines it with a mapping back to it; a frame's copy names its owner. No precedence rule between loci substitutes for an owner. |
 | A member or profile defines its own result values | Each value maps to exactly one core result. Failure, undecidability, non-performance and unknown effect completion never map to a higher standing. The evaluated predicate and the domain outcome travel with the core value ([requirement](../requirements/README.md#single-result-algebra-requirement)). |
 | A frame's task returns a result | The frame carries the core result algebra or its profile's mapping into it. |
 | A functor or categorical join is claimed | Objects, arrows, arrow equality, identity and composition are given and the functor laws are shown before the claim; otherwise the claim is a hypothesis ([standard](../requirements/README.md#categorical-demonstration-standard)). |

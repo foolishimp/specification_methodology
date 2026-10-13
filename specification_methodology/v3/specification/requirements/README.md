@@ -27,6 +27,22 @@ Restated on the axioms. Reading selected by Jim on 2026-10-13 for the candidate 
 
 Unchanged predecessor prose satisfies these where it carries the relationships. Copied text does not establish the foundational relationship by its presence, and the share of text rewritten is not evidence that a relationship holds.
 
+## Single Ownership Requirement
+
+Source: this Product's [Intent](../INTENT.md#mission), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review.
+
+A determination is a rule, definition, value set or procedure step that an actor must apply. Its owner is an owning locus: one section of one member. Owner here names a place in the text, not decision authority.
+
+1. Within one candidate, every determination has exactly one owning locus. Each tenant candidate is its own scope; the same determination in the two candidates does not make a second owner.
+2. The owning tier follows the [tier obligations](../PRODUCT.md#c3-construction-contract): foundations own what holds for any method; Spec Method owns what holds for this method; a domain or operational profile owns only its own bindings; guides own their posting, writing and glossary conventions; packaging owns no method determination.
+3. Every other locus refers to the owner or refines it. A refinement names its owner and maps each of its values or cases back to the owner's; it never contradicts or redefines the owner's determination.
+4. A projected frame's copy of a clause names its owning locus and is not a second owner. A copy that differs from its owner is a conformance defect, repaired by re-projecting from the owner.
+5. Conserved text restated under the [standalone successor requirement](#standalone-successor-requirement) is the successor's own owning locus for that determination, not a duplicate of the predecessor.
+6. A part ported under [Cross-Synthesis](../PRODUCT.md#cross-synthesis) takes one owning locus in the receiving candidate.
+7. Where two loci decide the same question, one is made the owner and the other refers to or refines it. No precedence rule between loci substitutes for that.
+
+Purpose and material relation: a question decided at two loci is interpreted twice and can be answered two ways. One owning locus gives one answer per question within a candidate. The [single result algebra requirement](#single-result-algebra-requirement) is this requirement applied to results.
+
 ## Single Result Algebra Requirement
 
 Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), Jim's decision of 2026-10-13; PROPOSED in wording, awaiting review. It answers the question carried to C2 on unifying the RF-012 and AC-007 evaluation algebras ([C1 Disposition](PRINCIPLES.md#c1-disposition)).
@@ -39,7 +55,7 @@ Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)), Jim's dec
 6. Conjunction and composition of results are defined once, over the core.
 7. A projected frame whose task returns a result carries the core algebra or its profile's mapping into it.
 
-Purpose and material relation: one outcome vocabulary across tiers removes competing semantic ownership of results ([Intent](../INTENT.md#direction)). Items 3 to 5 retain the distinctions that failure, undecidability, non-performance and uncertain effects must keep under composition ([P5 and P6](PRINCIPLES.md)).
+Purpose and material relation: this is the [single ownership requirement](#single-ownership-requirement) applied to results, as the [Intent](../INTENT.md#mission) directs; one outcome vocabulary across tiers removes competing ownership of results. Items 3 to 5 retain the distinctions that failure, undecidability, non-performance and uncertain effects must keep under composition ([P5 and P6](PRINCIPLES.md)).
 
 ## Categorical Demonstration Standard
 
