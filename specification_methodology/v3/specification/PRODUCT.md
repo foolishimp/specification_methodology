@@ -2,121 +2,182 @@
 
 ## Product Boundary
 
-The product is a specification methodology realised as documents, with an axiomatic representation of its laws. It defines purposeful construction and evaluation by actors with finite context, attention, time and capability.
+The product is a specification methodology. It is a set of documents stating the rules for defining, building, checking and releasing a product, together with the same rules written as axioms in a_c. The [Intent](INTENT.md) states its purpose and its five parts: Foundations, the Spec Method, profiles, a_c and reference frames. Each document of the method is a member.
 
-The product succeeds the installed release `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`). That release's claims are enumerated in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), and each receives one disposition under [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015). Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement) the product consists of the foundational axioms and the full predecessor corpus restated on them, complete without the predecessor remaining operative. The corpus may be as large as the law requires. A finite actor is activated on a projected reference frame, never on the corpus as a whole.
+The product replaces the method's previous release, 2.5.1-rc.2. That release is installed read-only at `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`) and is the tool used to build this one.
 
-The structure distinguishes general foundations, Spec Method as one particular methodology, and domain profiles and operational realisations. Each determination has one owning locus ([single ownership requirement](requirements/README.md#single-ownership-requirement)). Proposed algorithmic, informational and computational interpretations are orthogonal concerns.
+A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
-Categorical construction is a generic capability of the method ([Categorical Construction](#categorical-construction)). The method has one result algebra, owned by the foundations tier ([Result Algebra](#result-algebra)).
+Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product consists of the foundational axioms and every member of the previous release restated on them. The new release is therefore complete without the previous release in force. The members may be as long as the rules require, because no person or model reads them whole. Each task is carried out from a reference frame, never from the whole set of members.
 
-a_c interpretations and tools keep separately owned dependency and proof identities. ABG, HoG and application workflow runtimes are outside the product. A worked application, Hello World, Data Mapper or the sum-and-histogram steel thread is an external example or test subject; its particulars cannot become generic method functionality by precedent.
+Each rule has one owning section, in the tiers the [Intent](INTENT.md#what-the-product-is) sets out. The precise obligation is the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The product changes no 2.* source, release, companion Product or stack-release selection.
+Three proposed accounts of a construction are independent of the tiers:
+
+- the algorithmic description: the steps;
+- the informational interpretation: what the data means;
+- the computational realisation: how it runs on a given machine.
+
+A tier may need all three, and none of them is a tier.
+
+Programs that interpret or check a_c, such as the Axiom Indexer, are separate products. Their dependency and proof identities are owned separately from this product.
+
+Runtimes that execute applications built with the method are outside the product. Examples are ABIogenesis (ABG), which runs typed graph programs and records what happened at run time, its executor HoG, which traverses those programs, and application workflow runtimes.
+
+Example applications, such as Hello World and Data Mapper, are test subjects outside the product. So is the sum-and-histogram example used by the steel thread. Their particular features never become general method rules because they were used once.
+
+The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together.
 
 ## Product Identity And Lineage
 
 | Coordinate | Binding |
 |---|---|
 | Product line | the Specification Methodology, whose 2.* source project is `specification_methodology/v2/` (`urn:stdo:product-definition:specification-methodology`) and whose release namespace is `specification_methodology` |
-| Release | the next major release on that line; its release identities follow the installed RELEASE_METHOD in the same namespace |
+| Release | the next major release on that line; its release identities follow the installed RELEASE_METHOD, the previous release's rules for cutting and publishing releases, in the same namespace |
 | Predecessor | `stdo://releases/v2.5.1-rc.2/`, immutable |
 | Source project | `specification_methodology/v3/`, beside the 2.* source project, which it does not overwrite |
 | Identifiers | `urn:stdo:product-definition:stdo-3`, `urn:stdo-3:bounded-context:method` and the `urn:stdo-3:` tenant identities are identifiers, not names. They do not change with the directory or the display name. |
 
-[stdo_3.json](../stdo_3.json) carries this identity in its product name and in a local-constitution axiom routed to this section. Its schema has no version field.
+[stdo_3.json](../stdo_3.json) is the machine-readable Product Definition that the installed release's tools read to locate this source project. It carries this identity in its product name and in a local axiom that points to this section. Its schema has no version field.
 
 ## Result Algebra
 
-The foundations tier owns the single result algebra of the method. Constraint, judgment, frame, stop, work and effect results are stated in it or as refinements of it. No member, profile or frame defines a parallel outcome vocabulary. A refinement keeps the evaluated predicate and the original domain outcome with the core value and never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md) check it in every member under C3 acceptance criterion 5.
+The Foundations own the method's single result algebra: one set of outcome values, and one way of combining them, in which every result is reported. The following are stated in it or as refinements of it:
+
+- constraint checks;
+- review judgements;
+- reference-frame evaluations;
+- stops;
+- work steps;
+- effects (changes made to files or systems).
+
+No member, profile or frame defines its own parallel set of outcomes. A refinement gives finer outcomes for one domain. It keeps the evaluated predicate and the domain's original outcome alongside the core value, and it never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md) check it in every member under acceptance criterion 5 of the [C3 Construction Contract](#c3-construction-contract).
 
 ## Categorical Construction
 
-The method defines categories of its own constructs and joins between categories, and it licenses each construction step by declared laws. Specification artifacts are objects. Derivations and refinements are arrows with stated preservation obligations. A join of an algorithm category with a computation category is the acceptance instance. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a statement without it is a hypothesis.
+Categorical construction is a general capability of the method. The method defines categories of its own constructs and joins between categories, which are maps from one category to another. It permits a construction step only where declared laws allow it. Specification documents are the objects. Derivations and refinements are the arrows, and each states what it must preserve. A join of an algorithm category with a computation category is the acceptance instance. The [categorical demonstration standard](requirements/README.md#categorical-demonstration-standard) states what each categorical claim must show; a claim without it is a hypothesis.
 
-The capability's acceptance contract, with its requiring principles, scope, observable outcome and conformance expectations as [CAPABILITIES](requirements/CAPABILITIES.md) requires, is derived from the steel thread's evidence at step 3 below. It is not yet selected.
+[CAPABILITIES](requirements/CAPABILITIES.md) requires every capability to have an acceptance contract: the principles that require it, its scope, its observable outcome and its conformance expectations. This capability's contract is derived from the steel thread's evidence at step 3 below. It has not been selected yet.
 
 Sequence:
 
-1. Intent and Product carry the categorical direction, axiomatic programming as the computational model and the demonstration standard.
-2. One thin categorical steel thread proves the direction under the installed release.
-3. The method is amended from the thread's evidence. Each finding returns to its actual owner; a failure is a method finding only when triangulation establishes the method as its owner. Amended clauses are independently reviewed. The standalone successor, member acceptance and release obligations remain in force. The thread supports its own join, not qualification of the whole method.
+1. The Intent and this Product state three things: the categorical direction; axiomatic programming as the computational model, in which the specification is the program; and the demonstration standard.
+2. One thin end-to-end example, the steel thread, tests the direction under the installed previous release.
+3. The method is corrected from the steel thread's evidence.
+   - Each finding goes back to the section that actually owns its cause.
+   - A failure counts against the method only when triangulation places the cause in the method. Triangulation tests the candidate causes from several reference frames over the same subject.
+   - Corrected clauses are reviewed independently.
+   - The standalone successor requirement, member acceptance and release obligations stay in force.
+   - The steel thread supports its own join only, not the qualification of the whole method.
 4. The full categorical product is built on the released method.
 
-Steel thread. Its subject is the neutral sum-and-histogram example, a test subject outside the constitutional corpus, run under the installed release. Its minimum contract:
+Steel thread. Its subject is the sum-and-histogram example. A list of numbers is split across partitions. The example computes their exact sum, and an approximate quantile (such as the 95th percentile) from histograms built per partition. It belongs to no project, it stays outside the method's own members, and it runs under the installed release. Its minimum contract:
 
-1. A declared purpose; input and result meanings; the exact sum law; the approximate-quantile adequacy relation with its quantile convention, bucket coverage and output rule; and the material failure outcomes.
-2. Concrete objects and arrows of the example's categories, their equality, identity and composition, and the specific maps claimed, related to the algorithmic, informational and computational accounts.
-3. One exact partition-and-reduction rewrite and one bounded approximation, each with explicit conditions and an end-to-end adequacy argument.
-4. An independently specified exact oracle, two concrete execution bindings, and comparison of returned meaning, required effects and diagnostics. A refusal case and an interruption or uncertain-effect case run beside normal completion.
-5. Measured latency, bytes moved and memory over a declared workload, with measurement boundaries and the activation's context, time and spend envelope. Only the cost and generality claims those observations support are made.
-6. The thread's own chain from Intent through Product and Specification to Realisation, each derivation step an arrow with a stated and discharged preservation obligation. A failed derivation is attributed under step 3 and counts against the method when triangulation establishes the method as its owner.
+1. A stated purpose and the meaning of the inputs and results. The exact law for the sum. For the approximate quantile: the adequacy relation (how close is close enough), the quantile convention, how the buckets cover the range, and the output rule. The failure outcomes that matter.
+2. The actual objects and arrows of the example's categories, when two arrows are equal, identity and composition, and each specific map claimed. Each is related to the algorithmic, informational and computational accounts.
+3. One exact rewrite that splits the input and combines the partial results (partition and reduction). One bounded approximation. Each has explicit conditions and an argument that the end-to-end result is adequate.
+4. Execution and comparison:
+   - an exact oracle, a reference computation specified independently of the one under test;
+   - two concrete execution bindings, which are two ways of running the computation;
+   - a comparison of returned meaning, required effects and diagnostics;
+   - a refused-input case and an interrupted or uncertain-effect case, run beside normal completion.
+5. Measured latency, bytes moved and memory over a declared workload, with the measurement boundaries stated. The activation's context, time and spend limits are recorded. Only the cost and generality claims those measurements support are made.
+6. The steel thread's own chain from Intent through Product and Specification to Realisation. Each derivation step is an arrow whose preservation obligation is stated and discharged. A failed derivation is attributed under step 3 and counts against the method only when triangulation places the cause in the method.
 
-Reference design. The [category-of-algorithms design](../.ai-workspace/comments/claude/assets/20261001T133903Z_STRATEGY_a-category-of-algorithms-with-computation.compressed.md) is a reference design and the thread's subject matter, read with the [corrections](../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#corrections-to-the-attached-design) of the categorical groundwork strategy. Its five layers are not method machinery.
+Reference design. The [category-of-algorithms design](../.ai-workspace/comments/claude/assets/20261001T133903Z_STRATEGY_a-category-of-algorithms-with-computation.compressed.md) is a reference design and the steel thread's subject matter. It is read with the [corrections](../.ai-workspace/comments/claude/20261013T012745Z_STRATEGY_categorical_groundwork.md#corrections-to-the-attached-design) in the categorical groundwork strategy. Its five layers are not method rules.
 
-The sheaf account, a universal grade algebra and second-domain generality stay unresolved until an instance requires and supports them.
+Three further ideas from that design stay unresolved until a real example needs them and supports them:
+
+- the sheaf account, which says which computations can be split across partitions and glued back;
+- a universal grade algebra, which is one way of composing every cost measure on an arrow (latency, bytes moved, memory, width);
+- generality across a second domain.
 
 ## Dependencies And Acceptance
 
-[The a_c dependency contract](requirements/A_C_DEPENDENCY.md) records the exact theory and immutable mechanical subject. The sibling Product Definition is a routing locator, not the pin.
+[The a_c dependency contract](requirements/A_C_DEPENDENCY.md) fixes the exact a_c theory and the exact, unchangeable Axiom Indexer subject used for mechanical checks. The neighbouring Axiom Indexer Product Definition only says where to find that product; it does not fix the version.
 
-The [conformance discriminators](conformance/README.md) are the common expectations every member is checked against. Syntax, valid maps, document count, local approval and historical green outcomes do not establish current semantic acceptance.
+The [conformance discriminators](conformance/README.md) are the common checks every member is held to. None of the following shows that a member's meaning is acceptable now: passing syntax checks, valid maps, the number of documents, a local approval or an earlier passing run.
 
 ## Source Project Construction
 
-The source project owns one common WHAT. Codex and Claude are independent build tenants supplying HOW and documentary implementations. Their organisation, wording and encodings may differ; their accepted outputs satisfy the same common contract and independently specified expectations. The method semantics expressed by tenant documents are distinct from the common construction specification that governs them. A tenant design is not a replacement Product definition, and the common WHAT is not replaced by a merged tenant basis. Selection or combination of tenant candidates for a release is the product owner's decision.
+This source project is where the next release is written. It owns one common WHAT: the specification in `specification/`, which states what the product must be.
+
+Two build tenants supply the HOW. The tenants are the AI coding agents Codex and Claude. Each builds its own candidate of the product as documents under `build_tenants/<tenant>/`.
+
+Their organisation, wording and a_c encodings may differ. Their accepted outputs satisfy the same common contract and the same independently specified expectations. The method a tenant's documents express is distinct from this common specification, which governs how they are built. A tenant design does not replace this Product definition, and the common WHAT is not replaced by a merge of the tenants' work. Selecting or combining tenant candidates for a release is the product owner's decision.
 
 ### Construction Authority
 
-Claude holds the common construction pen. Codex reviews every common change before the product owner merges it. A review result informs the product owner's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md) binds these grants to the installed 2.5.1-rc.2 release.
+Claude holds the common construction pen, the right to edit the common files. Codex reviews every common change before the product owner merges it. A review result informs the product owner's decision and adopts nothing by itself. The [frame basis](REFERENCE_FRAME_BASIS.md), which records the role and frames each activation uses, binds these grants to the installed 2.5.1-rc.2 release.
 
-C3 disposition grant, configuring the installed [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) disposition relation. The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose a member restatement as `local_repair`, `re_enter` or `reject` within its grant, and may dispose it `accept` into the tenant's candidate only on a closed author-independent Reviewer result of `satisfied` with every row of the member's frontier cone disposed. Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain the product owner's. The Reviewer supplies severity as evidence; priority, boundary effect and disposition are the Executive's decisions and are ledgered as separate entries in the work carrier by the common pen, never by the Executive activation itself.
+Work is done in activations. An activation is one run of an agent in one role. There are three roles:
 
-[build_tenants/README.md](../build_tenants/README.md) is the common tenant entry and return HOW. Tenant effects stay inside their grants; requested common changes return to the common pen. An Executive cannot perform implementation or Git effects under that role.
+- the Executive selects the next work and decides what happens to each result, and it edits nothing;
+- a Writer writes files inside its granted territory;
+- a Reviewer checks a Writer's result and is never its author.
+
+C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), lets a coordinator decide the outcome of each delegated result. This grant sets that decision for C3.
+
+A member restatement is one member of the previous release rewritten into a tenant's candidate. Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers.
+
+The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose of a member restatement within its grant in four ways:
+
+- `local_repair`: fix it locally, because the implementation is defective while the governing relation holds;
+- `re_enter`: send it back to an upstream stage that must change;
+- `reject`;
+- `accept` into the tenant's candidate, only on a closed Reviewer result of `satisfied` from a Reviewer independent of the author, with every row of the member's frontier cone disposed.
+
+Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions remain the product owner's. The Reviewer supplies severity as evidence. Priority, boundary effect and disposition are the Executive's decisions. The common pen records each as a separate entry in the work carrier, never the Executive activation itself.
+
+[build_tenants/README.md](../build_tenants/README.md) states how a tenant starts work and returns results. A tenant's changes stay inside its grant, and a change it needs in common files is requested from the common pen. An Executive cannot write files or perform Git operations in that role.
 
 ### Development Isolation
 
-Local development law for this source project. It governs how tenant work is isolated and merged and changes no installed law and no release cut.
+These are local development rules for this source project. They govern how tenant work is kept apart and merged, and they change no installed rule and no release cut.
 
 - Lineage. `main` is the sole lineage of this source project. The common
   WHAT (`specification/`, the Product Definition, `.ai-workspace/`) is
-  authored on `main` by the common pen.
+  written on `main` by the common pen.
 - Tenant branches. Each build tenant works on a short-lived topic branch
   `tenant/<tenant>/<checkpoint>` cut from `main`, in its own git worktree,
   with a sparse checkout limited to `specification_methodology/v3/specification/`,
   `specification_methodology/v3/.ai-workspace/` and its own
   `specification_methodology/v3/build_tenants/<tenant>/`. The
-  peer tenant's directory is not materialised in that worktree.
+  peer tenant's directory is not present in that worktree.
 - Territory. A tenant commits only under its own `build_tenants/<tenant>/`.
   A needed common change is requested from the pen and reaches the tenant by
   merging `main` inward. A tenant does not edit tickets, common files or the
   peer tenant.
-- Work carrier, under the installed
-  [Work-Carrier-To-Execution Rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule).
-  C3 work is carried by one upstream authority ticket and one tenant-local
-  duplicate per build tenant under `.ai-workspace/tickets/`. Each member
-  activation is a run-scoped execution contract derived from the tenant
-  ticket, drafted by the pen on the Executive's selection and admitted
-  distinctly from drafting; it is not a further ticket. The ticket has one
-  writing owner, the common pen, acting as a Writer activation in common
-  territory. The pen records each admitted contract, the closed Writer
-  result, the Reviewer result, the triage, the Executive's disposition and
-  the next authorised activation, each as the Executive decided it, before
-  that next activation starts. The Executive activation
-  decides and holds no write grant to tickets, common files, candidates or
-  worktrees. The tenant Writer's return is written in its own territory
-  (`build_tenants/<tenant>/qualification/`) and never in the ticket. The
-  ticket is the only action carrier: no Writer activation starts without
-  one, and no disposition exists until the pen has ledgered it.
-- Inputs. Tenant worktrees use cone mode. A declared shared input outside
-  the cone is read from the snapshot's input commit with
-  `git show <input-commit>:<path>`, never from an ambient working tree. A
+- Work carrier. The installed
+  [Work-Carrier-To-Execution Rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule)
+  requires every run to execute under one run-scoped execution contract,
+  derived from an existing ticket.
+  - C3 work is carried by one upstream authority ticket and one tenant copy
+    per build tenant under `.ai-workspace/tickets/`.
+  - Each member activation runs under an execution contract derived from the
+    tenant ticket. The pen drafts the contract on the Executive's selection,
+    and the contract is admitted as a separate step. It is not a further
+    ticket.
+  - The ticket has one writing owner, the common pen, acting as a Writer
+    activation in common territory. Before the next activation starts, the
+    pen records, each as the Executive decided it: the admitted contract, the
+    closed Writer result, the Reviewer result, the triage, the Executive's
+    disposition and the next authorised activation.
+  - The Executive activation decides and holds no write grant to tickets,
+    common files, candidates or worktrees.
+  - The tenant Writer's return is written in its own territory
+    (`build_tenants/<tenant>/qualification/`) and never in the ticket.
+  - The ticket is the only action carrier. No Writer activation starts
+    without one, and no disposition exists until the pen has recorded it.
+- Inputs. Tenant worktrees use sparse-checkout cone mode. A declared shared
+  input outside the cone is read from the snapshot's input commit with
+  `git show <input-commit>:<path>`, never from a working tree. A
   file absent from the cone is neither licence to read elsewhere nor
   evidence that the declared input is absent.
 - Snapshot. A checkpoint input snapshot names the input commit on `main`
-  whose tree holds every member and records each member's hash as read from
-  that commit. The ticket entry that records the snapshot is a later,
-  descendant commit; the record is excluded from its own tuple.
+  whose tree holds every member, and it records each member's hash as read
+  from that commit. The ticket entry that records the snapshot is a later,
+  descendant commit, so the record is not part of the snapshot it records.
 - Review. The product owner authorises reviews between tenants. A reviewer
   reads the reviewed tenant's branch at a named commit, never its working
   tree, and writes only in its own tenant.
@@ -124,72 +185,142 @@ Local development law for this source project. It governs how tenant work is iso
   acceptance of the checkpoint review. The branch is deleted and its
   worktree removed after merge. An unmerged tenant branch is work in
   progress, not a lineage; `git worktree prune` runs only after merge.
-- Porting reads. Each tenant's Writer and Reviewer activations may read the
+- Porting reads. Porting is copying a part of the peer tenant's candidate
+  into one's own. Each tenant's Writer and Reviewer activations may read the
   peer tenant's candidate at the commit named in
   [Cross-Synthesis](#cross-synthesis), for porting and comparison. Ported
   text is written only in the porting tenant's own territory.
-- Release cuts. `rc/*` and `release/*` are governed by the installed
+- Release cuts. `rc/*` and `release/*` branches are governed by the installed
   RELEASE_METHOD and are not tenant branches.
 
 ### Cross-Synthesis
+
+Each tenant line builds on its own candidate and takes named parts from the other.
 
 | Line | Base | Takes named parts from |
 |---|---|---|
 | Claude | the Claude tenant candidate, `build_tenants/claude/` at `31f28f90c4a9b15243d84630fc4799024a9cd7ac`, with its frontier record | the Codex tenant candidate at the same commit |
 | Codex | the Codex tenant candidate, `build_tenants/codex/` at the same commit, with its frontier record | the Claude tenant candidate at the same commit |
 
-Each line keeps its own base. A part of the peer candidate enters a line only as a named contribution inside a member's cone. The Writer records the part's source locus, the single deciding owner it takes in the receiving line and the frontier disposition it supports. The Reviewer compares it with its source and with the predecessor. A ported part never creates a second owner for a determination. A relocated, unchanged determination stays `conserved` at its new locus; `superseded` requires an accepted replacement relation. Both lines are bound by the [single result algebra](#result-algebra).
+A frontier record is a tenant's record of where each predecessor claim is disposed.
 
-The initial port candidates are the parts nominated in the cross-assessments ([Claude on Codex](../.ai-workspace/comments/claude/20261013T043048Z_REVIEW_CODEX_V3_CANDIDATE_CROSS_ASSESSMENT.md), [Codex on Claude](../.ai-workspace/comments/codex/20261013T043456Z_REVIEW_CLAUDE_V3_CANDIDATE_CROSS_ASSESSMENT.md)) and the direct comparisons ([Claude](../.ai-workspace/comments/claude/20261013T062917Z_REVIEW_V3_CANDIDATES_DIRECT_COMPARISON.md), [Codex](../.ai-workspace/comments/codex/20261013T064524Z_REVIEW_STDO_V3_DIRECT_COMPARISON_AND_PATH.md)). Each line's Executive selects each one as an element of a member's cone.
+A part of the peer candidate enters a line only as a named contribution inside one member's frontier cone. The Writer records where the part came from, the single section that owns it in the receiving line, and the disposition it supports. The Reviewer compares it with its source and with the previous release.
+
+A ported part never creates a second owner for a rule. A rule moved unchanged to a new place stays `conserved`; `superseded` requires an accepted replacement relation. Both lines are bound by the [single result algebra](#result-algebra).
+
+The parts proposed for porting are those nominated in two sets of reviews:
+
+- the cross-assessments, in which each tenant reviewed the other's candidate ([Claude on Codex](../.ai-workspace/comments/claude/20261013T043048Z_REVIEW_CODEX_V3_CANDIDATE_CROSS_ASSESSMENT.md), [Codex on Claude](../.ai-workspace/comments/codex/20261013T043456Z_REVIEW_CLAUDE_V3_CANDIDATE_CROSS_ASSESSMENT.md));
+- the direct comparisons ([Claude](../.ai-workspace/comments/claude/20261013T062917Z_REVIEW_V3_CANDIDATES_DIRECT_COMPARISON.md), [Codex](../.ai-workspace/comments/codex/20261013T064524Z_REVIEW_STDO_V3_DIRECT_COMPARISON_AND_PATH.md)).
+
+Each line's Executive selects each part into the frontier cone of the member it belongs to.
 
 ### Checkpoints
 
-C0 to C2 are closed; their state is in [GOALS](GOALS.md). C3 constructs each tenant's candidate under the [C3 Construction Contract](#c3-construction-contract) through Executive-coordinated member restatements, independent evaluation, actual-use frames and separately bound a_c tests. Release and adoption are later explicit selections over an exact accepted corpus and its dependencies.
+Construction proceeds through checkpoints:
+
+- C0, structure and bootstrap: closed;
+- C1, principles: closed;
+- C2, capabilities and conformance: closed;
+- C3: builds each tenant's candidate under the [C3 Construction Contract](#c3-construction-contract).
+
+The state of the closed checkpoints is in [GOALS](GOALS.md).
+
+In C3, members are restated under Executive coordination and evaluated independently. Their frames are tested by fresh actors in actual use, and their a_c tests are bound separately. Release and adoption are later explicit decisions over an exact accepted set of members and its dependencies.
 
 ### C3 Construction Contract
 
-This section is the source project's configuration of the installed 2.5.1-rc.2 Executive engagement. Governing process: the baseline's [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions and TICKET_METHOD admission. Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+This section configures, for this source project, the installed 2.5.1-rc.2 Executive engagement: the previous release's procedure for coordinating agent work through an Executive. The governing process is:
 
-Outcome. Each tenant produces a candidate of the product: its foundational axioms and the full predecessor corpus restated on them per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), with every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md) carrying one UP-015 disposition and a successor locus, and with projected reference frames as the activation unit. The predecessor release stays immutable and operative as builder until a release decision; it is not a component of the successor.
+- the [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), the step sequence from selecting the basis to closing a result;
+- [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), which keep the outcome and basis fixed;
+- [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions;
+- TICKET_METHOD admission of execution contracts.
 
-Frontier. The Executive holds `U0` = every `unresolved` row of PREDECESSOR_CLAIMS.md for the tenant, plus every evaluation the contract below requires that is not closed on the current basis. Each tenant declares its own member list and a map from every rc.2 member to the tenant members that receive it. The map is part of the tenant's frontier record and is reviewed with the first member.
+Where this section and the installed baseline differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+
+Outcome. Each tenant produces a candidate of the product with three things:
+
+- its foundational axioms and every member of the previous release restated on them, per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement);
+- for every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), one UP-015 disposition and a successor locus, which is the section of the candidate where the claim now lives;
+- reference frames assembled from the candidate, as the unit every actor is started on.
+
+The previous release stays immutable and in force as the building tool until a release decision. It is not part of the new release.
+
+Frontier. The frontier is the work still open. For each tenant the Executive holds `U0`: every `unresolved` row of PREDECESSOR_CLAIMS.md for that tenant, plus every evaluation this contract requires that is not closed on the current basis. Each tenant declares its own member list and a map from every member of the previous release to the tenant members that receive its content. The map is part of the tenant's frontier record and is reviewed with the first member.
 
 Tier obligations. A tenant's organisation and wording are its own; what each tier owes is common:
 
-| Tier | Owes | Receives from the predecessor |
+| Tier | Owes | Receives from the previous release |
 |---|---|---|
-| foundations | ontology, principles with standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
-| Spec Method | constitutional chain, requirements and design law, work carriers and triage, assurance and testing law, change classes and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
+| foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
+| Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, work carriers and triage, assurance and testing law, change classes and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
 | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
 | guides | posting, writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
-| packaging | manifest, schemas, templates, compressions or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before an RC cut |
+| packaging | manifest, schemas, templates, compressions (the shortened summaries of the standards) or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before a release-candidate cut |
 
-Activation unit. Each tenant publishes projected reference frames, one per selected task, from its restated corpus (a_c projections or an equivalent the tenant declares). A frame carries the clauses an actor needs for that task and nothing else. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. A frame, with its subject, is what any actor is activated on. Context is measured in bytes before the actor reads anything and recorded with the activation.
+Activation unit. Each tenant publishes reference frames assembled from its restated members, as a_c projections or an equivalent the tenant declares, one per selected task. A frame whose task returns a result carries the core result algebra or its profile's mapping into it. Every actor is started on a frame together with its subject. The context is measured in bytes before the actor reads anything and recorded with the activation.
 
-Audiences and tasks. Audiences: a fresh model actor activated on one frame against a declared subject; a human method owner reading by route; the Writer, Reviewer and Executive actors constructing or assessing the successor itself. Assumed knowledge: none beyond the activated frame and the subject; during construction, the installed predecessor for source routes. Tasks: do a bounded piece of work; resume work another actor left; review work; decide acceptance or release; apply a profile; construct or assess a successor member.
+Audiences and tasks.
 
-Executive loop. Existing authority is this contract and the ticket. The Executive selects the smallest dependency-ready set `M` from the frontier, normally one member or one declared cone, and activates one Writer per element with the UP-020 intake: exact outcome and checkpoint, the rows in scope, governing invariants, grant and write territory, evidence obligations, exclusions, stop and re-entry conditions, the context, wall and spend envelope, and the exact bounded action. The Writer returns one closed work result: `candidate_ready` with transition evidence (the restated text, its dispositions, its frames, its measured activations), `refused`, `incomplete` or `re_entry_requested`. The Executive evaluates the result, activates the Reviewer for every `candidate_ready` (independent review is required for every member), consumes the Reviewer's closed result, applies the disposition grant above, has the common pen ledger the decision in the ticket, and issues the next already-authorised activation. The Executive activation holds no write grant and never mutates ticket, candidate, common or worktree bytes; a same-actor role change is ledgered by the pen before the effect, and the actor is no longer Executive for that effect.
+- Audiences:
+  - a fresh model actor started on one frame against a declared subject;
+  - a human method owner reading by following links;
+  - the Writer, Reviewer and Executive actors building or assessing the new release itself.
+- Assumed knowledge: none beyond the frame and the subject. During construction, the installed previous release is also available for following source links.
+- Tasks:
+  - do a bounded piece of work;
+  - resume work another actor left;
+  - review work;
+  - decide acceptance or release;
+  - apply a profile;
+  - build or assess a member of the new release.
+
+Executive loop.
+
+1. The Executive's authority comes from this contract and the ticket.
+2. It selects from the frontier the smallest set `M` of work whose prerequisites are done, normally one member or one declared frontier cone.
+3. It starts one Writer per element of `M` with the UP-020 intake:
+   - the exact outcome and checkpoint;
+   - the rows in scope;
+   - the governing invariants;
+   - the grant and write territory;
+   - the evidence required;
+   - exclusions;
+   - stop and re-entry conditions;
+   - the context, wall-time and spend limits;
+   - the exact bounded action.
+4. The Writer returns one closed work result:
+   - `candidate_ready`, with evidence of the change: the restated text, its dispositions, its frames and its measured activations;
+   - `refused`;
+   - `incomplete`;
+   - `re_entry_requested`.
+5. The Executive evaluates the result and starts the Reviewer for every `candidate_ready`. Independent review is required for every member.
+6. It reads the Reviewer's closed result and applies the disposition grant above.
+7. It has the common pen record the decision in the ticket, then starts the next already-authorised activation.
+
+The Executive activation holds no write grant and never changes ticket, candidate, common or worktree files. If the same actor changes role, the pen records the change before the effect, and the actor is no longer Executive for that effect.
 
 Acceptance criteria for one member restatement:
 
-1. Every row of the member's frontier cone has exactly one UP-015 disposition and, for `conserved` and `superseded`, a successor locus that resolves.
-2. For every `conserved` row the Reviewer's author-independent source comparison finds the claim semantically present in the successor's own text, which is UP-015's semantic conservation evidenced under the standalone successor requirement. A route alone, a label match or a paraphrase that drops a determination fails.
-3. Every `superseded` row names the accepted successor relation; every `intentionally removed` row names the product owner's decision and reason; every `not applicable` row carries a bounded reason.
-4. The member's selected tasks each have a projected frame that fits one bounded activation under the declared envelope, and a fresh actor given only that frame and the subject applies it against expectations specified independently of the author, without private validator knowledge or author memory.
-5. The [conformance discriminators](conformance/README.md) hold against the member's text under logical review.
-6. The restatement introduces no new obligation without naming the purpose and material relation that require it, and no carrier or process churn.
+1. Every row of the member's frontier cone has exactly one UP-015 disposition. Each `conserved` or `superseded` row also has a successor locus that resolves.
+2. For every `conserved` row, the Reviewer compares the source independently of the author and finds the claim's meaning present in the new release's own text. This is UP-015's semantic conservation, evidenced under the standalone successor requirement. A link to the source alone, a matching label, or a paraphrase that drops part of a rule fails.
+3. Every `superseded` row names the accepted successor relation. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason.
+4. Each selected task of the member has a frame that fits one bounded activation within the declared limits. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory.
+5. The [conformance discriminators](conformance/README.md) hold against the member's text under logical review, which is a reviewer's reasoned reading, not a mechanical check.
+6. The restatement adds no new obligation without naming the purpose and the material relation that require it. It makes no needless change to work carriers or process.
 
-Independence. The Reviewer is never the author of the subject. By default the Reviewer is a different model family from the Writer; a same-family Reviewer is a declared exception with its reason in the activation record, and its result is marked as such.
+Independence. The Reviewer is never the author of the subject. By default the Reviewer is from a different model family from the Writer. A same-family Reviewer is a declared exception, with its reason in the activation record, and its result is marked as such.
 
-Envelopes. Every activation declares its context allowance in bytes, its wall-time allowance and its spend allowance, and reports the measured context before read and the spend after. No universal budget is set by this contract; the Executive selects each envelope per activation and records it.
+Limits. Every activation declares its limits: context in bytes, wall time and spend. It reports the context measured before reading and the spend afterwards. This contract sets no universal budget. The Executive selects and records the limits for each activation.
 
 Closure. C3 closes for a tenant when every row of its frontier is disposed and every member is accepted under the grant above. The product owner accepts the checkpoint.
 
 ## Open Owner Decisions
 
-- C3 Executive and Reviewer actors per tenant. The product owner names them in the tenant tickets; until then every execution contract stays `drafted`.
-- Review of a ported part. By default a member is reviewed by the peer tenant's model family, which is the source author of any part ported from the peer; the [Independence](#c3-construction-contract) rule forbids a Reviewer assessing its own authorship. The product owner decides how a ported part is reviewed before the first cone with a contribution is accepted.
-- Categorical steel thread selection, work carrier, and spend and time envelope. The thread is step 2 of [Categorical Construction](#categorical-construction).
-- Successor identity and packaging: whether the compressions are kept, superseded or removed, and how a_c and Traversal identity issuance and admission complete without predecessor bytes. Decided before an RC cut.
-- Candidate ordinal and RC cut, in the `specification_methodology` release namespace under RELEASE_METHOD. Decided before an RC cut.
-- Cohort relation. Decided before an RC cut. Existing Product IDs and the current cohort are unchanged; the installed 2.5.1-rc.2 release is the operative builder basis.
+- The Executive and Reviewer actors for each tenant in C3. The product owner names them in the tenant tickets. Until then every execution contract stays `drafted`.
+- Review of a ported part. By default a member is reviewed by the peer tenant's model family, which is the source author of any part ported from the peer. The [Independence](#c3-construction-contract) rule forbids a Reviewer assessing its own authorship. The product owner decides how a ported part is reviewed before the first frontier cone with a contribution is accepted.
+- The steel thread: its selection, its work carrier, and its spend and time limits. The steel thread is step 2 of [Categorical Construction](#categorical-construction).
+- Identity and packaging of the new release. One question is whether the compressions are kept, superseded or removed. The other is how a_c and Traversal Occurrence Profile identities are issued and admitted without depending on files of the previous release. Decided before a release-candidate cut.
+- Candidate number and release-candidate cut, in the `specification_methodology` release namespace under RELEASE_METHOD. Decided before a release-candidate cut.
+- Cohort relation: which versions of the companion products are released together with this one. The companion products are the Axiom Indexer, STDO Representation and the plugin. Decided before a release-candidate cut. Existing Product identifiers and the current cohort are unchanged, and the installed 2.5.1-rc.2 release is the operative builder.
