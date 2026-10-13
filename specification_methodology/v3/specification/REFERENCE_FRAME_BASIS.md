@@ -1,5 +1,7 @@
 # Project Reference-Frame Basis
 
+This file binds the installed release's roles and reference frames to this source project. It states which activations exist, what each works on and returns, and who may perform it.
+
 ## Declaration
 
 | Coordinate | Binding |
@@ -9,29 +11,50 @@
 | Governing method | stdo://releases/v2.5.1-rc.2/ |
 | Manifest SHA256 | 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782 |
 | Construction authority | [Product](PRODUCT.md#construction-authority) |
-| Subject | This source project and only explicitly selected tenant/case territory |
+| Subject | This source project, and only tenant or case territory that is explicitly selected |
 
-The exact installed [Frame Method](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws) and [baseline](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression) supply applicable roles and evaluation law. This small binding does not copy a profile or create a runtime.
+The installed [Reference Frame Method](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws) and its [baseline](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression) supply the roles and the rules for evaluation. This binding copies no profile and creates no runtime.
 
 ## Activations And Owners
 
-The rows bind the installed baseline frames under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and [Cross-Synthesis](PRODUCT.md#cross-synthesis). The Executive and Reviewer actors per tenant are not yet named; an unbound actor admits no activation.
+The rows bind the installed baseline frames under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and [Cross-Synthesis](PRODUCT.md#cross-synthesis). The Executive and Reviewer actors for each tenant are not yet named, and an actor that is not named can be given no activation.
 
-| Activation | Subject and result | Actor binding and envelope |
+| Activation | Subject and result | Actor binding and limits |
 |---|---|---|
-| Common definition | Shared purpose, boundary, checkpoint and affected clauses; supported, contradicted or unresolved relations | The common construction pen (Claude), with Codex reviewing; common acceptance is the product owner's. |
-| C3 Executive | The tenant's frontier (`PREDECESSOR_CLAIMS.md` rows and required evaluations), the ticket ledger as read, closed Writer and Reviewer results; selects `M`, activates, consumes, decides the disposition within the grant, issues the next authorised activation | The product owner, or one activation the product owner selects; no write grant of any kind, to tickets, common files, candidates, peer territory or worktrees; its decisions are ledgered by the C3 ledger Writer below before the next activation; context held to the frontier and closed results, never the candidate text |
-| C3 ledger Writer | The C3 tickets: opens each with the Executive's performed triage; records each closed Writer result, Reviewer result, triage, Executive disposition and next authorised activation as the Executive decided it | The common pen (Claude; Codex reviews), as a Writer activation in common territory; ticket writes only; no candidate, tenant or decision authority |
-| C3 Writer | One member or declared cone: the restated text, its dispositions, its frames and their measured activations; returns `candidate_ready`, `refused`, `incomplete` or `re_entry_requested` with transition evidence | The tenant's own actor family; own territory only, with reads of the peer candidate under [Porting reads](PRODUCT.md#development-isolation); context, wall and spend envelope declared in the activation and measured before read |
-| C3 Reviewer | One frozen member at a named commit, the predecessor source and independently acquired expectations; for a named contribution, its source locus in the peer candidate at the commit named in [Cross-Synthesis](PRODUCT.md#cross-synthesis), read under [Porting reads](PRODUCT.md#development-isolation); one closed Reference Frame Method result per acceptance criterion, findings with severity, no repair | Author-independent; a different model family from the Writer by default; same family only as a declared exception with reason; writes only in its own tenant |
-| C3 fresh actor | One projected frame and one subject; the actual-use evidence for criterion 4 | Any family; cold context outside any repository or instruction-file load path; context measured before read and recorded |
+| Common definition | The shared purpose, boundary, checkpoints and affected clauses. Returns each relation as supported, contradicted or unresolved. | The common construction pen (Claude), with Codex reviewing. Common acceptance is the product owner's. |
+| C3 Executive | Works on the tenant's frontier (`PREDECESSOR_CLAIMS.md` rows and required evaluations), the ticket record as read, and closed Writer and Reviewer results. Selects the next set of work `M`, starts activations, reads their results, decides each disposition within the grant, and issues the next authorised activation. | The product owner, or one activation the product owner selects. It holds no write grant of any kind: not to tickets, common files, candidates, peer territory or worktrees. The C3 ledger Writer below records its decisions before the next activation. Its context is limited to the frontier and closed results, never the candidate text. |
+| C3 ledger Writer | The C3 tickets. Opens each with the triage the Executive performed. Records each closed Writer result, Reviewer result, triage, Executive disposition and next authorised activation as the Executive decided it. | The common pen (Claude, with Codex reviewing), as a Writer activation in common territory. Writes tickets only, with no authority over candidates, tenants or decisions. |
+| C3 Writer | One member or declared frontier cone. Produces the restated text, its dispositions, its frames and their measured activations. Returns `candidate_ready`, `refused`, `incomplete` or `re_entry_requested`, with evidence of the change. | The tenant's own model family, in its own territory only. It may read the peer candidate under [Porting reads](PRODUCT.md#development-isolation). Its context, wall-time and spend limits are declared in the activation, and its context is measured before it reads. |
+| C3 Reviewer | One frozen member at a named commit, the predecessor source and independently obtained expectations. For a named contribution, it also reads the part's source in the peer candidate at the commit named in [Cross-Synthesis](PRODUCT.md#cross-synthesis), under [Porting reads](PRODUCT.md#development-isolation). Returns one closed Reference Frame Method result per acceptance criterion, with findings and their severity, and no repair. | Independent of the author. A different model family from the Writer by default; the same family only as a declared exception with its reason. Writes only in its own tenant. |
+| C3 fresh actor | One frame and one subject. Produces the actual-use evidence for acceptance criterion 4. | Any model family. It starts with no prior context, outside any repository and outside any path from which instruction files load. Its context is measured before it reads and recorded. |
 
-Each activation binds its purpose, exact subject/preimage, governing basis and source routes, capability/access, permitted effects, preserved relations, evidence, stop conditions and return. These coordinates apply within actual selected scope; labels alone confer no authority.
+Each activation binds the following:
+
+- its purpose;
+- its exact subject and the inputs it came from;
+- the governing basis and source routes;
+- capability and access;
+- permitted effects;
+- the relations it must preserve;
+- evidence;
+- stop conditions;
+- what it returns.
+
+These apply within the scope actually selected. A label alone confers no authority.
 
 ## Conservation And Stops
 
-Keep common WHAT, tenant HOW, work state, observations, candidate output and acceptance judgment distinct. Unknown premises and applicability remain explicit. Ordinary unchanged source recovery and valid judgments may be reused under their validity conditions; independently required judgment remains independent.
+The following are kept distinct:
 
-A material missing, stale, contradictory or out-of-territory authority relation withholds dependent action and returns to its owner. Tenant territory and stops are bound by the [tenant entry contract](../build_tenants/README.md).
+- the common specification (WHAT);
+- each tenant's realisation (HOW);
+- work state;
+- observations;
+- candidate output;
+- acceptance judgement.
 
-Bootstrap verification establishes installed-basis and routing readiness. This configuration imports no proposed axiom into the installed builder constitution.
+Unknown premises and unknown applicability stay explicit. Unchanged source recovery and valid judgements may be reused while their validity conditions hold. A judgement that must be independent stays independent.
+
+A missing, stale or contradictory authority relation that matters, or one outside the actor's territory, stops the action that depends on it. The case is returned to the relation's owner. Tenant territory and stops are bound by the [tenant entry contract](../build_tenants/README.md).
+
+Verifying the bootstrap shows only that the installed release is present and that routing to it works. This file adds no proposed axiom to the installed release's law.
