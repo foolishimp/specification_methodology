@@ -176,3 +176,17 @@ Follow-ups held for later activations:
 - EVALUATION `:449` (A8);
 - GLOSSARY rows for the new terms (A7/B10);
 - plugin `stdo-work` routed to ACTIVATION §2 Acquisition (D2).
+
+2026-10-13T20:11Z — Returns and dispositions:
+- A5b returned `candidate_ready`, committed `a929514`. FOUNDATIONS §3 gains a standing table using the four §1 terms, P0 names its sources, and P4a gets a non-entailment case. Also added: Foundation to law (the format, the standing of consequences, and the 21-family index), the formal fragment carrying categorical items 1, 4 and 5 with H1 kept as a hypothesis, and F3. RA5, a working review of FOUNDATIONS, started.
+- B2 returned `candidate_ready`, committed `9439c26`. EXECUTIVE_BASELINE becomes an operational profile and gains a §7 "executive configuration" and F16. Work results are mapped once. Rows 516 and 543 are `superseded`: the predecessor text pairs `incomplete` with `indeterminate`, and the replacement relation is item 3 of the common single result algebra requirement. Rows 560 and 565 stay `conserved`, as B2 read them.
+- A8 (F1, F6, F7 and EVALUATION `:449`) started.
+- B4 returned `candidate_ready`, committed `2f2338b`. PRODUCT_DEFINITION §5 reads its relation kinds in FOUNDATIONS §2 terms, and "execution binding" is renamed. TICKETS close classifications are mapped as dispositions. F12 and F13 are in place. B5 started.
+
+More follow-ups held:
+- `FOUNDATIONS.md:914` (the semantic import owner, now FOUNDATIONS §2);
+- the F10 lead shortening the P4b and P5 standing (SPEC_METHOD);
+- PROFILES §6 "bind the tier-1 roles" and the PROFILES §1 import rule (B6);
+- `WORLD_MODEL.md:25` stale owners (B6);
+- the GLOSSARY Semantic Import and Build Tenant rows (B10);
+- README `:34`, `:61` (D1).
