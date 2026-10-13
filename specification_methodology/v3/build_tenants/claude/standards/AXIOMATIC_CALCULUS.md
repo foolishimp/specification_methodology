@@ -7,10 +7,12 @@ calculus identity, the application boundary, external imports, exclusions
 and the conformance obligations of this member. Consumes the ontology of
 [FOUNDATIONS §2](FOUNDATIONS.md) (subject, representation, interpretation,
 context, object, claim, evidence, judgment, authority, residual, basis,
-material) and the result algebra of [ACTIVATION §3](ACTIVATION.md); it
-states laws over those objects and defines none of them a second time.
-Every clause names the principle that requires it (P0 to P6, FOUNDATIONS
-§3). A route written `rc.2 #anchor` is into
+material) and the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it states laws over
+those objects and defines none of them a second time. Each clause names
+the principle (P0 to P6) that requires it, as
+[FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing) requires. A
+route written `rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`; a route
 written `rc.2 MEMBER #anchor` is into that member of the same cut. Routes
 are provenance only; nothing here depends on that cut to be applied.
@@ -37,7 +39,9 @@ runtime and no repository topology (P1, P2).
 `a_c` claims no universal applicability, logical completeness,
 consistency, decidability, soundness or category-theoretic status except
 where an exact, separately identified proof establishes that claim for a
-declared fragment, model or relation (P6).
+declared fragment, model or relation; for category-theoretic status that
+proof is the demonstration of
+[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (P6).
 
 The principles are the derivation provenance of the calculus. Application
 of the calculus to any exact subject is a separately owned downstream
@@ -72,7 +76,7 @@ derivation account that the identity record of §8 binds (P6; rc.2
   FOUNDATIONS §2 (Interpretation, Context) under P1; derived from rc.2
   SPEC_METHOD #bounded-context-semantic-resolution;
 - probabilistic construction as a bounded evaluation class: P0 with the
-  probabilistic-construction premise and ACTIVATION §1; derived from rc.2
+  work boundary of FOUNDATIONS §2 and ACTIVATION §1; derived from rc.2
   REFERENCE_FRAME_METHOD #position and #evaluation;
 - delegated probabilistic construction, exact candidate production and
   construction-versus-assessment separation: ACTIVATION §1 (Output and
@@ -83,8 +87,9 @@ derivation account that the identity record of §8 binds (P6; rc.2
   SPEC_METHOD #ambiguity-governance-rule;
 - exact-basis evaluation, evidence-and-verdict separation, authority
   conservation and closed results: REFERENCE_FRAME RF-005, RF-006 and
-  RF-007 and the algebra of ACTIVATION §3 under RF-012; derived from the
-  rc.2 REFERENCE_FRAME_METHOD laws of the same numbers;
+  RF-007 and the core result algebra of FOUNDATIONS §4 Results, which
+  restates RF-012; derived from the rc.2 REFERENCE_FRAME_METHOD laws of
+  the same numbers;
 - constitutional derivation and re-entry: SPEC_METHOD §1 and §4; derived
   from rc.2 SPEC_METHOD #constitutional-chain;
 - finite material closure, projection, authority conservation, residual
@@ -138,6 +143,49 @@ answers:
 declarations are material, supply semantic acceptance, select a carrier,
 execute a model or prove that one interpretation is uniquely correct (P2,
 P6).
+
+### Foundation to law
+
+This member is material family F9, the `a_c` calculus. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Instance premises,
+which the commitments do not supply:
+
+- (i) a governed symbolic system is represented by a finite model whose
+  records stand for its objects, relations, constraints, residuals,
+  traversals, transformations and judgments;
+- (ii) a model is interpreted from an exact subject and may be encoded in
+  a carrier, and subject, model and carrier are separately identified;
+- (iii) some predicates over a model are decided mechanically, and others
+  need bounded probabilistic construction or explicit human adjudication.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P1 (independent), P6 (independent); (i) | the calculus is derived one way from the method's principles and is separate from its application: interpreting a subject and encoding a model are distinct relations, and no model, carrier, proof tool or successful application amends the calculus or the principles | [§1](#1-position), [Derivation provenance](#derivation-provenance) | the concept identity, its bounded context and the name `a_c`: this member |
+| P2 (independent), P6 (independent) | the calculus governs the form of a symbolic model and claims no status that a separately identified proof has not established; it chooses no subject vocabulary or materiality, supplies no semantic acceptance, selects no carrier and executes nothing | [§1](#1-position), the claims it does not make; [Scope](#scope); [Exclusions](#exclusions) | none |
+| P3 (independent), P5 (derived from P0 and P6); (i) | every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](#2-signature), [§3](#3-typed-records), [AC-001](#ac-001-closed-signature), [AC-003](#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family's sorts, value domains, reference domains and admissible kinds: the owning signature |
+| P3 (independent), P4a (independent) | identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](#ac-002-scoped-identity), [AC-004](#ac-004-relation-typing) | each relation kind's sorts, qualifiers and any declared symmetry: the owning signature |
+| P6 (independent), P4b (derived from P0 and P2), P3 (independent) | copying, interpreting, encoding, evaluating or transporting a record transfers no authority, and every record, model and result binds an exact basis, mixed bases only under an owned composite-basis relation | [AC-005](#ac-005-authority-conservation), [AC-006](#ac-006-basis-coherence) | each composite-basis relation: the owner it names |
+| P5 (derived from P0 and P6), P6 (independent) | a constraint's judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal is falsified by the violation it names, or invalid_basis where it names a condition of the basis the operation acts on, the basis taking precedence | [AC-007](#ac-007-constraint-and-refusal); [§5](#5-traversals-and-functor-kinds), the stop algebra | the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature's stop contract; the stop mapping of one traversal: its record, under §5 |
+| P1 (independent), P6 (independent) | two values differ only through a declared latitude or transformation relation; silence is not latitude, and latitude grants no authority beyond its owner, scope, basis and invalidation law | [Latitude](#latitude), [AC-008](#ac-008-explicit-latitude) | each latitude record: its owner |
+| P4b (derived from P0 and P2), P6 (independent) | a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](#residual), [AC-009](#ac-009-residual-conservation) | each residual kind's domains: the owning signature; each disposition: the competent authority |
+| P0 (recovered), P2 (independent), P4b (derived from P0 and P2) | material closure is the least lawful record closure, defined only on exact inputs and claiming no minimal size or cost; a projection contains the closure, records its seams and never silently trims a required member to fit a carrier or capability budget | [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection) | the seed set and the relation family: the evaluation that applies them, for a step [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) |
+| P3 (independent), P6 (independent) | an overlay adds records without mutating its basis; override, disambiguation, equivalence, specialisation or translation exists only as a typed relation with its authority | [AC-012](#ac-012-overlay) | each overlay relation: its owner |
+| P4b (derived from P0 and P2), P3 (independent), P6 (independent) | a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record |
+| P6 (independent), P3 (independent) | a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](#ac-014-judgment-separation) | none |
+| P4a (independent), P3 (independent), P6 (independent); (iii) | a traversal is a typed contract applied under exactly one functor kind; deterministic evaluation, probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application |
+| P1 (independent), P6 (independent), P4b (derived from P0 and P2); (ii), (iii) | an interpretation proposes a model that its construction does not accept; every admitted record has exact provenance or is identified as model-local, every evaluated subject declaration has a disposition, structural success is evidence for semantic review and never a substitute, and a valid model satisfies every applicable law | [§6](#6-interpretation-and-models), [AC-017](#ac-017-interpretation-fidelity), [AC-018](#ac-018-structural-and-semantic-separation), [AC-019](#ac-019-valid-model) | the interpretation contract and the semantic selection and acceptance authority: the downstream authority of the subject; a decision contract for a semantic subset: the model that supplies it |
+| P3 (independent), P6 (independent); (ii) | the calculus, an interpreted model and an encoded carrier have separate identities, judgments and proof obligations; encoding needs an accepted judgment over the unchanged model, and a downstream success ratifies no upstream layer | [§7](#7-layers), [AC-020](#ac-020-layer-and-release-separation) | Product status of a layer: the external authority that selects and releases it |
+| P3 (independent), P6 (independent) | an edition's identity is an external record over its published bytes and its derivation clauses, created after the bytes exist; interpreted and encoded identities bind their upstream identities, and judgments stay outside the identities they judge | [§8](#8-calculus-identity) | the record shape, RFC 8785 canonicalisation, SHA-256 and the order of principle references: this member; the record grammar and issuance authority for interpreted and encoded identities: the owning Product; issuance of this edition's record: its release, under [RELEASE](RELEASE.md) |
+| P2 (independent), P6 (independent) | the calculus selects, constructs, accepts or releases no concrete interpretation or carrier, and an application's import, translation or specialisation stays external to it | [Application boundary](#application-boundary), [External imports and specialisations](#external-imports-and-specialisations) | each application's subject, interpretation, carrier and imports: the downstream authority that owns the application |
+| P6 (independent) | a review or qualification of this member covers each law with positive and refusal cases, and no example, checker, model or carrier qualifies a law beyond the claim it evaluates | [§10](#10-conformance-obligations) | the ten obligations as the minimum coverage: this member |
+
+§11 records where each predecessor claim is carried and decides nothing.
+The table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which rules of the calculus follow from the
+foundations and which are choices, with the owner of each choice, so no
+choice is presented as derived (P6, P1).
 
 ## 2. Signature
 
@@ -451,17 +499,77 @@ coherent composite basis by proximity (P6, P3; rc.2
 
 Each constraint names its governed subject, predicate, judgment kind,
 latitude and refusal (§3, Constraint). The judgment of a constraint
-returns a member of its declared result algebra, which is the core algebra
-of ACTIVATION §3 or a declared refinement with a total mapping to it. A
-failed, missing, indeterminate, out-of-scope or invalid-basis result
-returns its member under that algebra and is never coerced to satisfied.
-ACTIVATION §3 defines the members, the no-coercion rule and the boundary
-among out_of_frame, indeterminate and a judgment that was not performed;
-this law uses that definition and adds nothing to the algebra. Where this
-member says that a condition refuses, the applicable structural or
-semantic evaluation returns a non-satisfied member naming the condition;
-the record, model or carrier is not admitted, and nothing is dropped
-silently (P5, P6; rc.2 #ac-007-constraint-and-refusal).
+returns one value of the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), directly or through a
+refinement that the owning signature declares and that maps each of its
+values to exactly one core value. Under the no-coercion rule of
+FOUNDATIONS §4 Results, a failed, missing, indeterminate, out-of-scope or
+invalid-basis result of a constraint follows that algebra and is never
+coerced to satisfied (P5, P6; rc.2 #ac-007-constraint-and-refusal). The
+core values, the rule that no mapping raises a result's standing and the
+boundary among out_of_frame, indeterminate and an evaluation that was not
+performed are FOUNDATIONS §4 Results'. This law applies them to the
+judgment of a constraint and to the outcomes of the operations of this
+member, and adds no core value.
+
+Constraint results. The outcomes of a constraint's judgment map for the
+predicate "the constraint's predicate holds for its governed subject on
+the exact basis" (P5, P6):
+
+| Outcome | Core value | Ground |
+|---|---|---|
+| holds | satisfied | the judgment establishes the predicate on the exact basis |
+| failed | falsified | a counterexample defeats the predicate; the judgment names it |
+| indeterminate | indeterminate | the admissible evidence cannot decide the predicate; the judgment names the evidence that would decide |
+| out of scope | out_of_frame | the predicate is asked of a subject or relation outside the constraint's declared `applies_to`, context or scope, so deciding it needs a relation the constraint does not declare; the judgment names that relation, with its owner where the subject gives one |
+| invalid basis | invalid_basis | the subject or basis cannot support the judgment; the judgment names the basis repair |
+
+A missing result is no value of this refinement: a judgment that was not
+performed has no closed result, is never `indeterminate`, and enters every
+conjunction over it as a planned assessment without a closed result
+(FOUNDATIONS §4 Results, Not performed).
+
+Operation outcomes. A closure (AC-010), a projection (AC-011), the
+structural admission of a record, model or carrier, the application of a
+transformation (AC-013) and an interpretation (§6) each end in their
+declared result or in one of the stops `hold`, `gap` and `refusal` that
+this member writes. Where this member says that a condition refuses, the
+operation returns `refusal` naming the condition; the record, model or
+carrier is not admitted, and nothing is dropped silently. Each outcome
+maps for the predicate "the operation yields its declared result on the
+exact basis" (P5, P6):
+
+| Outcome | Core value | Ground |
+|---|---|---|
+| declared result | satisfied | the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results) |
+| `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |
+| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open, as for a required reference not yet resolved; the result is undefined on this basis until it is supplied. A reference established to resolve to nothing is dangling and refuses (AC-003) |
+| `refusal(constraint)` | falsified | the record, model, carrier, transformation or application under judgment violates a declared law of this member or a constraint of its signature, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015); the violation is the counterexample |
+| `refusal(basis)` | invalid_basis | the refusal names a condition of the basis the operation acts on: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |
+
+The cause is part of a refusal's value, because a refusal would otherwise
+map to falsified or to invalid_basis according to its cause, and a refined
+value maps to exactly one core value (FOUNDATIONS §4 Results,
+Refinements). A refusal that names conditions of both kinds takes
+`refusal(basis)`, because no decision can be taken on a basis that cannot
+support it. One defect can bear on two predicates: a model that violates
+AC-001 is `refusal(constraint)` in the structural admission that judges
+it and `refusal(basis)` in a projection over it, and each outcome answers
+its own predicate. An operation that was not applied has no outcome. A
+stop `gap` is a closed result with the value invalid_basis; it is not the
+absence of a result that
+[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)
+records as a gap. A signature's stop contract and a traversal record map
+stops of their own under §5.
+
+The mappings of both tables are new. Purpose and material relation: a
+constraint result or an operation's stop combines with results of other
+members only through the one core, so a refusal, a hold or a gap is
+neither read as success nor mistaken for another case; and a closure or
+projection that is not established has the value invalid_basis here, as
+the activation outcome `closure_unresolved` of
+[ACTIVATION §3](ACTIVATION.md#admission-and-activation) has for its own
+predicate (P5, P6).
 
 ### AC-008 Explicit latitude
 
@@ -490,10 +598,13 @@ closure_R(M, Z) = lfp(lambda Q: Z union required_R(M, Q))
 
 The result is defined only when `Z`, `R`, required-edge semantics, basis
 and scope are exact and the fixed point is finite and unique. Failure to
-establish those conditions returns a gap or refusal. Least closure means
-least lawful record closure under `R`; it does not claim globally minimal
-prose, bytes, tokens, cost or cognitive effort. ACTIVATION §2 applies this
-closure to the construction of a step's context under an envelope.
+establish those conditions returns a gap or refusal: `gap` where a
+condition is unresolved on the basis, otherwise `refusal(basis)`, because
+each condition bears on the basis the closure acts on (AC-007). Least
+closure means least lawful record closure under `R`; it does not claim
+globally minimal prose, bytes, tokens, cost or cognitive effort.
+ACTIVATION §2 applies this closure to the construction of a step's context
+under an envelope.
 
 ### AC-011 Projection
 
@@ -504,7 +615,9 @@ A projection selects a view of a model without changing selected meaning
 project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal
 ```
 
-`M_Z` contains the material closure of `Z`. `Boundary_Z` records excluded,
+`M_Z` contains the material closure of `Z`, so a projection's `gap` or
+`refusal` is that of the closure it contains or of the model it acts on:
+`gap` or `refusal(basis)` (AC-007). `Boundary_Z` records excluded,
 external, unresolved, translated and invalidation-sensitive seams. A
 projection is not a new semantic owner and cannot silently trim a required
 member to satisfy a carrier or capability budget. FOUNDATIONS §4 states
@@ -700,7 +813,9 @@ T[t](M_b, inputs) -> M_b_prime* | hold | gap | refusal
 
 The exact transformation identity `t` declares every mutation it may
 perform. The input model remains unchanged; `M_b_prime*` is a proposed
-successor. A proposed successor does not accept or admit itself (P6).
+successor. A proposed successor does not accept or admit itself (P6). The
+stops `hold`, `gap` and `refusal` take their core values under AC-007 by
+their causes.
 FOUNDATIONS §4 consumes this law as the conservation accounting of every
 step: what was preserved, introduced and removed, the external resolution
 witnesses and the residuals.
@@ -778,14 +893,24 @@ F_K[v](X_v) -> Y_v | Omega_v
 
 where `F_K` is one functor kind, `v` is one exact traversal identity,
 `X_v` and `Y_v` are its typed input and result domains, and `Omega_v` is
-its closed stop algebra. `Omega_v` is declared by the signature's stop
-contract as a refinement of the core result algebra of ACTIVATION §3 with
-a total mapping to it; it adds no core member and coerces none to
-satisfied. The signature's stop contract constrains the kinds; the
-traversal record's `stop_states` declares, per traversal, which of `hold`,
-`gap` and `refusal` map to which non-satisfied core member. The stop
-members this member writes, `hold`, `gap` and `refusal`, are
-non-satisfied members under that mapping (P5).
+its closed stop algebra. `Omega_v` is a refinement of the core result
+algebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results): it adds no
+core value, and each of its stop values maps to exactly one core value,
+never to `satisfied`. A stop this member writes, `hold`, `gap`,
+`refusal(constraint)` or `refusal(basis)`, has the meaning and the core
+value that AC-007 gives it. The signature's stop contract declares any
+further stop value with the one core value it maps to, and may refine a
+stop value by cause, each refined value mapping to exactly one core value.
+A traversal record's `stop_states` binds the stop mapping of that
+traversal, exactly one core value for each stop value; it may refine a
+value of the signature's stop contract further for that traversal, each
+refined value mapping to exactly one core value. Neither the stop contract
+nor a traversal's `stop_states` maps `refusal(constraint)`, or a value
+refined from it, to a core value other than `falsified`, and neither
+raises a result's standing (P5, P6). Purpose and material relation: one
+stop of one traversal has one core value, so its consumers cannot read it
+two ways, and no refinement turns a violated constraint into a case that
+the evidence merely cannot decide.
 
 - `F_D` classifies deterministic evaluation or proof over declared
   properties. It returns a judgment and does not perform the domain
@@ -793,7 +918,7 @@ non-satisfied members under that mapping (P5).
 - `F_P` classifies bounded probabilistic interpretation, construction or
   proposal under an exact traversal contract. Its result has no semantic,
   admission, acceptance or closure authority merely because it is useful
-  or repeatable (P6, P0 with the probabilistic-construction premise).
+  or repeatable (P6, P0; instance premise (iii) of §1 Foundation to law).
 - `F_H` classifies explicit human adjudication under an exact identity,
   authority grant, subject, basis and decision contract. Human presence
   grants no ambient authority (P6).
@@ -805,17 +930,22 @@ Different traversals may share one functor kind without sharing identity,
 semantics, inputs, outputs, authority or evidence (P3, P6).
 
 "Functor kind" is an `a_c` term for this traversal classification. It does
-not by itself assert a category-theoretic functor. A model claiming
-categorical functor laws additionally defines its source and target
-categories and proves identity and composition preservation; FOUNDATIONS
-§4's formal fragment carries that obligation for the method's own
-hypothesis (P6, P1).
+not by itself assert a category-theoretic functor. A model that claims
+categorical functor laws carries the demonstration that
+[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, requires of
+every categorical claim (P6, P1).
 
 ### AC-015 Functor classification
 
 Every functor application binds exactly one functor kind and one traversal
 identity. Applying any `F_*` kind without the bracketed traversal identity
-`[v]` is incomplete (P3; rc.2 #ac-015-functor-classification).
+`[v]` is incomplete (P3; rc.2 #ac-015-functor-classification). Such an
+application violates this law, and its outcome is `refusal(constraint)`
+under AC-007; this sense of incomplete is not the construction-availability
+value `incomplete` of a step
+([ACTIVATION §3](ACTIVATION.md#construction-availability)). Purpose and
+material relation: an application without its traversal has one core
+value, and the shared word does not let it be read as a step's stop (P5).
 
 ### AC-016 Typed composition
 
@@ -844,7 +974,9 @@ Interpret_a_c(subject_basis, signature, interpretation_contract)
   -> M_subject* | hold | gap | refusal
 ```
 
-The trailing `*` marks a proposed model that has not received the
+The stops `hold`, `gap` and `refusal` take their core values under AC-007
+by their causes. The trailing `*` marks a proposed model that has not
+received the
 applicable semantic acceptance judgment. The interpretation contract is
 the Interpretation of FOUNDATIONS §2 made exact for one subject and one
 signature. It declares:
@@ -932,7 +1064,13 @@ judgment subject identity and digest and `M_X`; hold or refusal cannot be
 encoded. `D_C` is a judgment over unchanged carrier bytes; it is not a
 transformed carrier. The admitted encoding evidence relation is the exact
 triple `(G_C, J_X, D_C)`; neither judgment enters the identity of its
-subject (P6, P3).
+subject (P6, P3). Each judgment answers its own predicate, that `M_X` is
+accepted and that the carrier bytes are admitted: `accepted` and
+`admitted` map to satisfied, a hold maps as AC-007's `hold`, and `refuse`
+is a `refusal` that takes its core value under AC-007 by its cause (P5,
+P6). The mapping is new; its purpose is that an acceptance or admission
+judgment combines with other results only through the one core, so a
+withheld or refused judgment is never read as accepted.
 
 ### AC-020 Layer and release separation
 
@@ -1050,10 +1188,11 @@ this member is issued under the tier-2
 [RELEASE](RELEASE.md) member and under AC-020, after the release bytes exist, with
 `publication_basis` naming that release and this member's bytes in it and
 `derivation_basis` naming the predecessor cut and the derivation account
-of §1. This authoring text is a source project surface, not the
-identity-bearing release, and it is not the identity-bearing source of the
-released calculus that the common dependency contract pins
-([A_C_DEPENDENCY](../../../specification/requirements/A_C_DEPENDENCY.md)).
+of §1. This authoring text is a source project surface. It is neither the
+identity-bearing release of this edition nor the identity-bearing source
+of any released calculus edition: a dependency on a released edition
+binds that edition's identity under this section, with its release,
+manifest digest and member digest, and never an authoring text (P3, P6).
 The predecessor edition's coordinates are recorded here as provenance of
 this edition's derivation, not as this edition's identity: cut
 `stdo://releases/v2.5.1-rc.2/`, manifest SHA-256
@@ -1135,7 +1274,7 @@ is provenance only.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #position | conserved; the derivation diagram is written with plain arrows | §1 |
+| #position | conserved; the derivation diagram is written with plain arrows; the proof that category-theoretic status needs is named as the demonstration of FOUNDATIONS §4 Formal fragment; the family table F9 under Foundation to law is new | §1 |
 | #derivation-provenance | conserved; the derivation account is carried with absolute rc.2 routes beside the successor member that now states each commitment; "ODD" and "GTL" are generalised to profile, realisation and carrier, losing no determination; "graph, runtime, ODD, or application shorthand" is generalised to a runtime, a profile, a realisation or an application, which include the graph case; field correction: the predecessor says the resolved address array is recorded under `derivation_basis.release_uri`, this member says `derivation_basis.principle_refs`, the array field that the record shape in both editions actually declares for it (`release_uri` holds one URI); that is a correction that tightens the text to the record, not a change of law | §1 Derivation provenance |
 | #scope | conserved | §1 Scope |
 | #core-signature | conserved; the carrier list "records, tables, graphs, terms" is generalised to records, tables, terms, clauses, code or any other representation, which includes graphs | §2 |
@@ -1152,22 +1291,22 @@ is provenance only.
 | #ac-004-relation-typing | conserved | §4 AC-004 |
 | #ac-005-authority-conservation | conserved; authority kinds are defined at FOUNDATIONS §2, the law is here; P4b consumes it | §4 AC-005 |
 | #ac-006-basis-coherence | conserved; basis is defined at FOUNDATIONS §2, the law is here | §4 AC-006 |
-| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the algebra defined once in ACTIVATION §3, consistent with its three-case boundary; the declared algebra is tightened to the core or a declared refinement with a total mapping | §4 AC-007; algebra at ACTIVATION §3 |
+| #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified) | §4 AC-007; core at FOUNDATIONS §4 Results |
 | #ac-008-explicit-latitude | conserved; the generic form over any two values is FOUNDATIONS §4 | §4 AC-008 |
 | #ac-009-residual-conservation | conserved; P4b consumes it | §4 AC-009 |
-| #ac-010-material-closure | conserved; applied by ACTIVATION §2 | §4 AC-010 |
-| #ac-011-projection | conserved; applied by ACTIVATION §2; the trimming rule's generic form is FOUNDATIONS §4 | §4 AC-011 |
+| #ac-010-material-closure | conserved; applied by ACTIVATION §2; new: the gap or refusal is `gap` or `refusal(basis)` by cause, each invalid_basis under AC-007 | §4 AC-010 |
+| #ac-011-projection | conserved; applied by ACTIVATION §2; the trimming rule's generic form is FOUNDATIONS §4; new: the gap or refusal is that of the contained closure or of the model acted on, `gap` or `refusal(basis)` under AC-007 | §4 AC-011 |
 | #ac-012-overlay | conserved | §4 AC-012 |
-| #ac-013-transformation | conserved in full; FOUNDATIONS §4 conservation accounting consumes its delta fields | §4 AC-013 |
+| #ac-013-transformation | conserved in full; FOUNDATIONS §4 conservation accounting consumes its delta fields; new: the application's stops take their core values under AC-007 | §4 AC-013 |
 | #ac-014-judgment-separation | conserved; the judgment object is defined at FOUNDATIONS §2, the record and the law are here | §4 AC-014 |
-| #traversals-and-functor-kinds | conserved; the stop algebra is tied to the one result algebra of ACTIVATION §3 (tightening, P5); the traversal record's ownership against same-spelled terms is made explicit (P3) | §5 |
-| #ac-015-functor-classification | conserved | §5 AC-015 |
+| #traversals-and-functor-kinds | conserved; the stop algebra is a refinement of the core result algebra of FOUNDATIONS §4 Results, each stop value mapped to exactly one core value (tightening, P5); the stops this member writes take AC-007's values; a signature's stop contract and a traversal record's `stop_states` may refine stop values, never moving `refusal(constraint)` from falsified and never raising standing (new); the traversal record's ownership against same-spelled terms is made explicit (P3); the obligation of a model claiming categorical functor laws is carried by FOUNDATIONS §4 Formal fragment, to which the section refers | §5; FOUNDATIONS §4 Formal fragment |
+| #ac-015-functor-classification | conserved; new: the incomplete application is `refusal(constraint)` under AC-007, distinct from a step's `incomplete` | §5 AC-015 |
 | #ac-016-typed-composition | conserved; P4a consumes it | §5 AC-016 |
-| #interpretation-and-models | conserved; the interpretation contract is related to FOUNDATIONS §2 Interpretation | §6 |
+| #interpretation-and-models | conserved; the interpretation contract is related to FOUNDATIONS §2 Interpretation; new: the stops take their core values under AC-007 | §6 |
 | #ac-017-interpretation-fidelity | conserved; P1 consumes it | §6 AC-017 |
 | #ac-018-structural-and-semantic-separation | conserved; the generic form over every review is EVALUATION §2 | §6 AC-018 |
 | #ac-019-valid-model | conserved; the checker rule's generic form is EVALUATION §2 | §6 AC-019 |
-| #subject-and-carrier-boundaries | conserved | §7 |
+| #subject-and-carrier-boundaries | conserved; new: the decisions of the acceptance and carrier-admission judgments mapped to the core for their own predicates, `refuse` and a hold under AC-007 | §7 |
 | #ac-020-layer-and-release-separation | conserved; applied to release lineage by SPEC_METHOD §6 | §7 AC-020 |
 | #exact-calculus-identity | conserved; every determination of the identity law and the record shape is restated; the record instance (the coordinates) is a release artefact issued after the bytes exist, not a claim of the section, so this edition's identity is bound at its release under RELEASE and AC-020 and the predecessor's coordinates are recorded as provenance | §8 |
 | #application-boundary | conserved | §9 Application boundary |

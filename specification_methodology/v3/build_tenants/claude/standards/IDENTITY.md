@@ -16,9 +16,11 @@ calculus, and the identity of one calculus edition is
 [AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity);
 neither is restated here. Release identity, its names and its forms are
 the release law of [RELEASE](RELEASE.md); this member states only the
-boundary between it and object identity. Every clause names the principle
-that requires it (P0 to P6, FOUNDATIONS §3): identity is P3's commitment
-and authority P6's. A route written `rc.2 #anchor` is into
+boundary between it and object identity. Each clause names the principle
+(P0 to P6) that requires it, as
+[FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing) requires:
+identity is P3's commitment and authority P6's. A route written
+`rc.2 #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md` and is
 provenance only; nothing here depends on that cut to be applied.
 
@@ -37,6 +39,42 @@ unique by hierarchy and type (P3; rc.2 #position). That means:
 
 The engine should carry identity safely. The domain should define
 semantic identity law for its own constitutional objects (P3, P6).
+
+### Foundation to law
+
+This member is material family F8, identity. The table below shows which
+of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Instance premises,
+which the commitments do not supply:
+
+- (i) a governed project holds objects of many kinds, some owned by a
+  runtime or engine and some by the domain that defines them;
+- (ii) identities are written in serialised or readable forms that people
+  and parsers read;
+- (iii) a project publishes releases, whose versions are coordinates of
+  the release and not of each object.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
+|---|---|---|---|
+| P3 (independent); (i) | identity is always scoped and should be interpretable at minimum through authority, kind and value; it is unique within its lawful scope rather than as a naked global string, and it is typed, so different kinds of thing should not be collapsed into one identity space | [Scoped identity](#scoped-identity), [Uniqueness](#uniqueness), [Type](#type) | the optional further coordinates and the identity kinds in use: the authority that owns the objects, under [§5](#5-authority-split) |
+| P3 (independent), P4b (derived from P0 and P2) | identity should remain stable for the lifecycle it serves, and a changed identity should be related explicitly to the old one, never silently reused for a different object | [Stability](#stability) | none |
+| P3 (independent), P1 (independent); (ii) | readability is a convenience for recognition: an opaque identity is lawful, a readable one is lawful only while it preserves uniqueness in scope, and no reader should infer that a readable form is safer or more authoritative | [§3](#3-readable-and-opaque-identity) | whether an identity is opaque, readable or hybrid: the authority that owns it, under §5 |
+| P3 (independent); (i), (ii) | identity should be made unique by hierarchy where appropriate, so a family and its members, or a runtime identity and a domain identity, stay distinct kinds even where both serialise as strings | [§4](#4-identity-hierarchy) | the general model `authority / kind / value / revision`: this member; which segments a serialisation shows: the authority that owns the identity |
+| P3 (independent), P6 (independent); (i) | a runtime may give its own objects opaque identities under its own generation rules and should not impose domain grammar on domain objects; the domain owns the semantic identity grammar of its constitutional objects, which the runtime may transport but should not silently invent their meaning | [§5](#5-authority-split) | the generation rules of runtime identities: the runtime; the domain's identity kinds, distinctions, uniqueness and parsing: the domain |
+| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | authority is an identity-bearing relation that composition, delegation and projection restrict or carry faithfully and never silently widen; elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis; proxy identity and human-authority identity stay distinct | [§6](#6-authority-identity-and-conservation-stdo-up-004) | each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile |
+| P3 (independent), P6 (independent) | a default identity format that a runtime realisation publishes is lawful only while derived domains may override it; an override is lawful only if it preserves scoped uniqueness, kind distinction, deterministic parsing or reading, non-aliasing between family and member identities and stable downstream traceability, and it is published in domain authority, not only as regex assumptions hidden in implementation code | [§7](#7-default-formats-and-overrides) | the defaults: the bound runtime realisation ([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)); each override and its publication surface: the domain |
+| P3 (independent), P1 (independent); (ii) | regex over prose is at most a provisional extractor; a parser distinguishes concrete identity kinds from grouping labels, and subordinate identities from the identity their readable form derives from | [§8](#8-parsing) | whether the domain needs family identities: the domain |
+| P3 (independent), P6 (independent); (iii) | release version is not object identity; object identity, release identity, publication or revision coordinates and mutable discovery selectors may relate and are not interchangeable | [§9](#9-release-version-boundary) | release identity, its names and its forms: [RELEASE](RELEASE.md) |
+| P3 (independent), P6 (independent) | an identity surface that cannot answer the minimum questions is under-defined | [§10](#10-minimum-questions) | the seven questions: this member |
+| P3 (independent), P1 (independent), P0 (recovered) | implementations should prefer typed identity readers and published identity law over regex mining; the first lawful repair contains the immediate bug, and the enduring repair publishes identity law and moves implementations onto it | [§12](#12-consequence-for-implementations) | none |
+
+§11 applies these rows to examples and decides nothing beyond them; §13
+records where each predecessor claim is carried and decides nothing. The
+table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which identity rules follow from the
+foundations and which are choices, with the owner of each choice, so no
+choice is presented as derived (P6, P3).
 
 ## 2. Core law
 
@@ -352,7 +390,7 @@ RELEASE §1, not in this tier-1 member.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #position | conserved; the four properties, not a flat string convention, hierarchy and type, the three consequences, the engine and domain "should" clauses | §1 |
+| #position | conserved; the four properties, not a flat string convention, hierarchy and type, the three consequences, the engine and domain "should" clauses; the family table F8 under Foundation to law is new | §1 |
 | #core-law | not applicable: heading with no claim text (12 bytes, the heading line); its four children are disposed individually | §2 |
 | #1-scoped-identity | conserved; always scoped, "at minimum ... should be interpretable", the model `authority + kind + value`, the four optional coordinates | §2 Scoped identity; FOUNDATIONS §2 Object |
 | #2-uniqueness-law | conserved; uniqueness in lawful scope, not a naked global string, the three requirements | §2 Uniqueness |
