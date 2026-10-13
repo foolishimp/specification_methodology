@@ -1,8 +1,13 @@
 # FOUNDATIONS
 
-Tier 1. Owns the ontology, the commitments as law, the algebra of composition
-and conservation, and the list of hypotheses. Every later document consumes
-these definitions by reference and adds none of its own.
+Tier 1. Owns the vocabulary of standing and its application to this corpus
+(§1); the ontology, with the frame,
+authority, lineage and work-boundary objects (§2); the commitments P0 to P6
+(§3); the algebra of composition and conservation, the core result algebra
+and the conjunction of results (§4); and the hypotheses (§5). Other members
+use these definitions by reference or refine them. A refinement names its
+owner here and never redefines it; a refinement of results maps each of its
+values into the core ([Results](#results)).
 
 ## 1. Vocabulary of standing
 
@@ -154,7 +159,8 @@ A reference frame F is the tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩
 material-relation manifold; C the coordinate and equality law; I the
 applicable invariant set; A the authority relation; E the admissible
 evidence and provenance law; X the exclusion and prohibited-assumption set;
-R the closed result algebra (ACTIVATION §3); J the invalidation and rechart
+R the closed result algebra (§4 [Results](#results), or a refinement mapped
+into it); J the invalidation and rechart
 condition; K the actor capability envelope; and D the optional set of
 declared dependencies, overlaps, inputs and outputs involving other frames.
 The tuple specifies the relation; it is not a required schema or runtime
@@ -319,7 +325,8 @@ Conserves
 [RF-014](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-014-capability-fit),
 [AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
 [Totality Rule](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#8-totality-rule);
-RF-012 and AC-007 are restated once in ACTIVATION §3 and continue to govern.
+RF-012 and AC-007 are restated once in §4 [Results](#results) and continue
+to govern.
 
 P6 Justification and authority. Definitions, assumptions, observations,
 candidate judgments and accepted claims have distinct standing; evidence
@@ -335,18 +342,16 @@ UP-004 ([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up
 ## 4. Algebra
 
 Composition. For steps s₁: X → Y and s₂: Y → Z, s₂ ∘ s₁ exists only under P4a.
-The composite's output carries both steps' step-produced facts. Composition
-law is required only where the governing evaluation combines internal
-variables or transports values across steps; independent closed results may
-instead go to one declared conjunction (RF-010).
+The composite's output carries both steps' step-produced facts; its result
+is composed as [Conjunction of results](#conjunction-of-results) states.
+Composition law is required only where the governing evaluation combines
+internal variables or transports values across steps; independent closed
+results may instead go to one declared conjunction (RF-010).
 
 Conservation accounting. Every transformation records what it preserved,
 introduced and removed, its external resolution witnesses and its residuals
-(AC-013). For a required obligation set R and admitted coverage C, uncovered
-coverage is R minus C; combining results takes the union of known failures
-and recomputes uncovered coverage; a composite with a known failure or an
-uncovered required obligation cannot project success. A known failure A and
-an uncovered obligation B survive every join.
+(AC-013). How results, known failures and uncovered coverage combine is
+[Conjunction of results](#conjunction-of-results).
 
 Reference versus body. A reference conserves a relation when its owner,
 exact selector, authenticity, availability and completeness support the same
@@ -382,6 +387,236 @@ identities and composition and proves preservation (conserves
 which states that obligation and asserts no categorical functor itself).
 H names an architecture, never a runtime.
 
+### Results
+
+Every performed evaluation returns one value of the core result algebra,
+directly or as a refined value mapped into it (P5):
+
+| Value | Meaning |
+|---|---|
+| `satisfied` | the declared predicate holds on the exact basis |
+| `falsified` | a declared counterexample defeats it |
+| `indeterminate` | the available admissible evidence cannot decide it |
+| `out_of_frame` | the evaluation requires an undeclared material relation or capability |
+| `invalid_basis` | the subject or basis cannot support the evaluation |
+
+This core is the only one. Results of constraints, judgments, frame
+evaluations, stops, work steps and effects are stated in it or in a
+refinement mapped into it, so that results from any members combine under
+one rule ([Conjunction of results](#conjunction-of-results)). Purpose and
+material relation: no combination can report success while a failure, an
+undecided question, an unperformed evaluation or an uncertain effect
+remains, and none of these can be mistaken for another (P5, P6).
+
+Recording. A result records its core value together with the predicate
+evaluated and the original domain outcome, which is the refined value
+where a refinement produced it. A mapping into the core never owns domain
+meaning: the member or profile that defines the refined value keeps it,
+and a consumer that needs the domain distinction reads the domain outcome,
+never the core value alone (P1, P6).
+
+Standing. The standing of a result is what it establishes about its
+predicate; it is distinct from the standing of a commitment (§1). Only
+`satisfied` establishes the predicate. `falsified` establishes that the
+predicate fails and names the counterexample. `indeterminate`,
+`out_of_frame` and `invalid_basis` establish neither, and each names what
+would decide: the evidence, the missing relation or capability with its
+owner where the subject gives one, or the basis repair. By support for the
+predicate, `satisfied` stands above each other value, and the other four
+are not ordered among themselves.
+
+No refinement or mapping raises a result's standing (P5, P6):
+
+- a falsified or failed result never maps to a satisfied or successful one;
+- a result that admissible evidence cannot decide never maps to
+  `satisfied`;
+- an evaluation that was not performed stays distinct from one whose
+  evidence cannot decide: it has no closed result, and it is never mapped
+  to `indeterminate` or to any other core value;
+- an effect whose completion is unknown never maps to no effect or to
+  completed.
+
+Not performed. An evaluation that is required or planned and was not
+performed has no closed result; an actor cannot report an evaluation it
+did not perform (P6). Nothing is coerced to success: a failed,
+indeterminate, out-of-frame or invalid-basis result returns its own value,
+never `satisfied`, and a missing result, being no result, enters every
+conjunction over it as a gap: a planned assessment without a closed result
+where an assessment was planned, and uncovered coverage where none was.
+This
+conserves
+[RF-012](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results),
+whose five values the table restates unchanged, and
+[AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
+whose rule that a failed, missing, indeterminate, out-of-scope or
+invalid-basis result follows the declared algebra rather than being
+coerced to success is the sentence before; both are restated here once and
+continue to govern.
+[REFERENCE_FRAME §3](REFERENCE_FRAME.md#rf-012-closed-results) states
+RF-012 as a law over frames and
+[AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
+states AC-007 as a law over constraints; each uses this core and neither
+defines it again.
+
+Refinements. A member or profile that needs finer outcomes defines a
+refinement. The refinement names the question it answers and the predicate
+its mapping is for, and maps every refined value to exactly one core value.
+No outcome exists outside the core; a refinement adds no core value and
+keeps the pressure of `indeterminate`, `out_of_frame` and `invalid_basis`
+explicit. Where a refined value would map to one of two core values
+according to its cause, the cause is part of the refined value and each
+resulting value maps once (P5, P1). The step's refinements are
+[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
+member and profile states its mapping where it defines its values.
+
+Availability, assessment and acceptance are separate results, each with its
+own predicate: that a step produced a candidate; that the candidate meets
+its declared criteria; and that the decision owner accepts it at its
+boundary. A step having produced a candidate never maps to the candidate's
+fitness or acceptance, and acceptance is never inferred from a successful
+step (P6; [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition),
+[EVALUATION §4](EVALUATION.md#4-review-results) and
+[§5](EVALUATION.md#5-acceptance)).
+
+Out of frame or indeterminate. The boundary between these values is drawn
+on what the activated frame declares and on what the step did with it (P5,
+finite capacity and graceful total handling; the material relation drawn
+is the three-way out_of_frame boundary: capability not declared, capability
+declared and exercised, capability declared and not exercised; rc.2 RF
+#rf-012-closed-results). Three cases; the first two name core values, and
+the third names none:
+
+- `out_of_frame` when the claim requires a material relation or an
+  evaluator capability that the activated frame does not declare. The
+  result names the missing relation or capability, its owner where the
+  subject gives one, and the reconfiguration pressure it creates
+  ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement); rc.2 RF
+  #reconfigure-when-necessary). A term the claim depends on and the frame
+  leaves undefined is an undeclared material relation: its meaning can
+  alter the result and it enters through no declared input (rc.2 RF
+  #material-relation, RF-003; P1). Whether the step exercised anything is
+  irrelevant to this value; the ground is the missing declaration.
+- `indeterminate` when the available admissible evidence cannot decide the
+  claim (rc.2 RF-012). The result names the evidence that would decide, as
+  its residual uncertainty (rc.2 RF #return-a-closed-result). Where the
+  claim also depends on an undeclared relation or capability,
+  `out_of_frame` and `indeterminate` each have a lawful ground; the result
+  names the value it returns and that ground, and this boundary excludes
+  neither (P5).
+- no value of its own when the step did not exercise a declared capability
+  the evaluation requires. A result is returned wherever a sufficient
+  evaluation or an applicable judgment exists without that capability,
+  identifying its evidence, verdict and residual uncertainty like any
+  closed result (rc.2 RF #rf-012-closed-results, #return-a-closed-result):
+  a counterexample found by what was exercised, as when source inspection
+  falsifies A in a claim of A and B, returns `falsified`, and common
+  agreement cannot discard it (rc.2 RF #result-conjunction). Where none
+  exists because the capability was not exercised, the evaluation was not
+  performed and has no result: the step's stop state carries it,
+  `incomplete` under
+  [construction availability](ACTIVATION.md#construction-availability), and
+  its work state ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart))
+  carries the unexercised capability as a residual (P6). In either case
+  the unexercised part, B above, has no result: in every conjunction over
+  it, it is a planned assessment without a closed result, and the known
+  failure A survives with it ([Conjunction of results](#conjunction-of-results)).
+  The evaluation's result and the step's stop state answer different
+  questions, so the step's stop value never becomes the evaluation's
+  result.
+
+The first two cases restate RF-012's values. The undefined-term clause of
+the first is a tightening the predecessor implies and does not state: a
+relation is material when its lawful change can change the evaluation
+result, which a term's meaning can, and an undefined term neither appears
+in the frame nor enters through a declared input (rc.2 RF
+#material-relation, #rf-003-material-sufficiency; P1). The third is a
+tightening the predecessor implies and does not state: RF-012, Return A
+Closed Result, Applicability And Required Results and Result Conjunction
+together return what a sufficient evaluation supports and leave the
+unexercised part open (P5, P6).
+
+### Conjunction of results
+
+Conjunction combines results into one result for a composite predicate: a
+claim made of component claims, a decision over several evaluations, or
+the outer contract of composed steps. It is defined here once, over the
+core. A member or profile that combines results applies this rule and
+declares only the choices it leaves open (P4a, P4b, P5, P6). Purpose and
+material relation: failure, undecidability, non-performance and uncertain
+effects stay distinct after combination, so a composite can neither report
+success nor hide which kind of gap it has while one of them remains.
+
+A conjunction takes three inputs and keeps them apart:
+
+1. the closed results returned, each a core value with its predicate and
+   domain outcome;
+2. the planned assessments that have no closed result applicable to the
+   composite: evaluations the composite requires that were not performed,
+   or whose result is absent, stale, bound to another subject or basis, or
+   incapable of establishing its claim;
+3. the required coverage that no planned assessment addresses: for a
+   required obligation set R and the coverage C that the planned
+   assessments admit, the uncovered coverage R minus C.
+
+Gaps. A conjunction with any item in the second or third input is never
+`satisfied`. Its record names which kind of gap it has, not performed,
+uncovered or both, and each item. An uncovered obligation is never
+reported as satisfied or as an omitted planned assessment; a planned
+assessment without a closed result is never reported as uncovered or as an
+`indeterminate` component.
+
+Survival. Every known failure (a `falsified` result with its
+counterexample), every planned assessment without a closed result and
+every uncovered obligation is carried with the composite and survives every
+join: combining conjunctions takes the union of known failures and of
+planned assessments without a closed result, and recomputes uncovered
+coverage over the combined obligations. A known failure A and an uncovered
+obligation B survive every join. Common agreement among contributors
+cannot discard a constraint or a material counterexample that only one
+contributor found. A missing, wrong-subject, conflicted or indeterminate
+mandatory result stays unresolved under the declared rule, and aggregate
+satisfied status cannot replace it (P4b, P5).
+
+Predicates travel. Each component keeps its predicate and domain outcome
+through every join, so an uncertain effect stays distinct from a failure
+and from an undecided claim, and a `satisfied` for one predicate never
+counts toward another: a step's `satisfied` for "a candidate is available"
+never counts toward the candidate's fitness or acceptance.
+
+Reported value. The conjunction is `satisfied` only when every mandatory
+result is `satisfied` with valid applicable evidence, the declared basis
+relations agree, and the second and third inputs are empty; a known
+failure of a mandatory result or of a required obligation therefore never
+leaves the composite `satisfied`. Where a
+mandatory result is not `satisfied`, the conjunction reports a
+non-satisfied value chosen by its declared rule from those returned; no
+universal order among the non-satisfied values exists, and each
+application declares its own. Where every returned result is `satisfied`
+and a gap remains, the conjunction reports `indeterminate`, because the
+results it holds cannot decide the composite predicate; that value is the
+conjunction's own, and the gaps stay recorded by kind.
+
+The declared rule. A conjunction declares which results are mandatory; how
+conflict and indeterminacy are handled; which basis relations must agree,
+results on different bases combining only under a declared coherent
+composite basis (§2, Basis); which decision authority owns the
+conjunction; and whether any result may veto or defer the decision.
+Conjunction does not transfer the semantic authority of a contributing
+evaluation (P6, P4a).
+
+Composition of results. The result of composed steps for the outer
+predicate is the conjunction of the steps' results, with the outer
+contract's obligations as the required coverage. That each step returned
+`satisfied` supports the outer predicate only where the refinement's
+premises hold ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement),
+Refinement).
+
+Provenance: rc.2 RF #result-conjunction and
+#applicability-and-required-results, and the combination rule of
+conservation accounting. The three inputs kept apart, the gap record, the
+travelling predicate and the reported value where only gaps remain are new,
+with the purpose stated above (P5, P6).
+
 ## 5. Hypotheses
 
 Not law; carried for falsification: categorical equivalence of 𝒜 and ℐ under
@@ -399,7 +634,7 @@ traversal composition laws of any runtime.
 | AC Core Signature, Typed Records and its five records | conserved; restated in AXIOMATIC_CALCULUS §2 and §3; Semantic Object and Residual are related to the §2 objects Object and Residual, the definitions stay here |
 | AC-001, AC-003, AC-004, AC-012 | conserved; restated in AXIOMATIC_CALCULUS §4 |
 | AC-002, AC-005, AC-006, AC-009, AC-014 | conserved; restated in AXIOMATIC_CALCULUS §4 as laws over the §2 objects Object, Authority, Basis, Residual and Judgment, which are defined once here; P3, P4b and P6 consume them |
-| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the one result algebra of ACTIVATION §3 |
+| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the core result algebra of §4 Results, where its no-coercion rule is restated |
 | AC-008, AC-011 | conserved; restated in AXIOMATIC_CALCULUS §4; their generic forms over any two values and any reference are the Latitude and Reference-versus-body paragraphs of §4 above |
 | AC-010 | conserved; restated in AXIOMATIC_CALCULUS §4; applied by ACTIVATION §2 |
 | AC-013 transformation | conserved; restated in full in AXIOMATIC_CALCULUS §4; its delta fields are the conservation accounting of §4 above |
@@ -410,7 +645,9 @@ traversal composition laws of any runtime.
 | AC Exact Calculus Identity | conserved; the identity law is restated in AXIOMATIC_CALCULUS §8; the record instance is a release artefact issued under RELEASE and AC-020 at this corpus's own release |
 | AC Application Boundary, External Imports And Specializations, Exclusions, Conformance Obligations | conserved; restated in AXIOMATIC_CALCULUS §9 and §10 |
 | RF definitions (#definitions and its 17 children) | conserved; restated in §2 (amended rows, frame objects, authority kinds, disjointness and independence, the frame tuple); rows in the table below |
-| RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in ACTIVATION §3 |
+| RF-001 to RF-017, engagement atom, frame set, functions, conjunction, relations, coverage, completeness, revision, activation packet, violations, declarations, closure | conserved; restated in REFERENCE_FRAME, whose §15 lists the rows; the algebra RF-012 names is defined once in §4 Results, and the rule of result conjunction once in §4 Conjunction of results |
+| RF-012, AC-007 core values | conserved; the five values with their meanings, the no-coercion rule and the boundary between out_of_frame and indeterminate are restated in §4 Results, with two labelled tightenings derived there: undefined term (rc.2 #material-relation, RF-003) and unexercised capability (RF-012, Return A Closed Result, Applicability And Required Results, Result Conjunction); REFERENCE_FRAME §3 and AXIOMATIC_CALCULUS §4 state them as laws and dispose their rows; ACTIVATION §3 refines the core for steps. New in §4 Results, each required by the single result algebra and its purpose stated there: the standing relation and the no-raise rule, the separation of a not-performed evaluation from an indeterminate one, the recording of predicate and domain outcome with the core value, the separation of availability, assessment and acceptance, and the rule for refinements |
+| RF Result Conjunction; the conjunction sentences of Applicability And Required Results | conserved; the conjunction rule is restated in §4 Conjunction of results, which also carries the combination rule formerly stated under conservation accounting; REFERENCE_FRAME §6 and ACTIVATION §1 Applicability refer to it, and REFERENCE_FRAME §15 and ACTIVATION §8 dispose the rows. New there: the three inputs kept apart, the gap record, the travelling predicate and the reported value where only gaps remain |
 | RF engagement, frame qualification, method self-qualification | conserved; restated in ACTIVATION §1 to §4 and §7 and in EVALUATION §7, whose tables list the rows |
 | UP-001, UP-004, UP-008, UP-022 | conserved; UP-004 restated in IDENTITY §6, whose §13 lists the IDENTITY_METHOD rows; all four consumed by EVALUATION |
 | UP-013, UP-014, UP-005 | conserved; UP-013 restated in SPEC_METHOD §3 and UP-014 in ACTIVATION §6 with its delivery priority in SPEC_METHOD §8; UP-005 restated in DESIGN_MODULE §6 Boundary and governance cost, its proportionality relation ACTIVATION §6; P2 consumes them |
@@ -422,7 +659,7 @@ traversal composition laws of any runtime.
 | UP-020 | conserved; restated in ACTIVATION §1, §3, §5 and §7 |
 | SM Probabilistic Work Boundary | conserved; restated in §2 Work boundary and §3 under P0; ACTIVATION §1 consumes it; row in the table below |
 | SM Recursive Product Taxonomy | conserved; restated in §2 Product lineage objects; SPEC_METHOD §6 consumes it; row in the table below |
-| SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement is ACTIVATION §3 and its hard stops ACTIVATION §4 |
+| SM Ambiguity Governance | conserved; restated in SPEC_METHOD §5; its outcome refinement, mapped into the core, is ACTIVATION §3 Ambiguity outcome and its hard stops ACTIVATION §4 |
 | ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved; restated in full in the ODD, DESIGN_MODULE, UX and WORLD_MODEL members, which dispose their rows and are indexed in PROFILES §2 to §5; nothing imported into tier 1 |
 
 RF rows received by this member (anchors into rc.2

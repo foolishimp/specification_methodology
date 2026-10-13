@@ -1,11 +1,17 @@
 # ACTIVATION
 
-Tier 1. Owns how bounded work proceeds: the step (intake, admission,
-applicability, activation), context construction under an envelope, the
-result algebra, totality, refinement, work state and restart, cost, the
-closed result and reuse. Consumes [FOUNDATIONS](FOUNDATIONS.md) and the
-frame object of [REFERENCE_FRAME](REFERENCE_FRAME.md); adds no
-definitions. A route written `rc.2 RF #anchor` is into
+Tier 1. Owns how bounded work proceeds: the step (intake, execution unit,
+admission, applicability, output, roles and delegation); context
+construction under an envelope, activation and evaluation; the step's
+result refinements and disposition; totality and refinement; work state
+and restart; cost and proportionality; the closed result and reuse. It uses
+the objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result
+algebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) and the frame
+object of [REFERENCE_FRAME](REFERENCE_FRAME.md). It defines the step-level
+concepts it introduces, among them the execution unit, the work state,
+progress and churn, proportionality and the closed result, and refines the
+core for steps (§3); it redefines nothing those members own. A route
+written `rc.2 RF #anchor` is into
 `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md` and is
 provenance only.
 
@@ -41,7 +47,8 @@ relations without conversation history, commentary or a prior actor's memory
 - the exact workspace subject and basis, and the inputs it may acquire,
   each by identity and hash or by an input commit;
 - the evaluation or evaluation family the step performs and its result
-  algebra (§3);
+  algebra: the core of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) or
+  a refinement mapped into it (§3);
 - the bounded affected relation set and the applicable governing
   invariants;
 - the accepted transformation-admission relations the step relies on (§4);
@@ -126,7 +133,8 @@ applicability needs residual semantic judgment, that judgment and its
 evidence are retained as a judgment, never represented as a computed fact
 (P6, P1). A required result that is absent, stale, bound to another subject
 or basis, or incapable of establishing its claim cannot satisfy a dependent
-conjunction; unresolved applicability withholds the dependent claim until
+conjunction ([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results));
+unresolved applicability withholds the dependent claim until
 sufficient evidence or the owning decision resolves it; other applicable
 constraints stay in force even if only one evaluation detects them (P4b,
 P5). Qualification of an applicability rule distinguishes true, false and
@@ -140,7 +148,8 @@ expected outcomes (EVALUATION §7; rc.2 RF
 
 The step's output is a candidate plus its step-produced facts: judgments with
 their evidence, residuals, observations, authority decisions, provenance, and
-one stop state from §3. The actor's internal path is not part of the output
+one stop state, a value of construction availability (§3). The actor's
+internal path is not part of the output
 and is not governed (FOUNDATIONS §2, work boundary; provenance
 [Probabilistic Work Boundary](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#probabilistic-work-boundary)).
 
@@ -243,10 +252,17 @@ perform the evaluation, activation returns a refusal or out_of_frame; work
 does not proceed through implied context (P0, P5; rc.2 RF
 #select-and-activate).
 
+Evaluation. The evaluator applies the activated frame's declared
+invariants, evidence rules and result algebra. It distinguishes semantic
+law, observed evidence, inference and decision, and records every
+assumption whose failure could change the result (P6; rc.2 RF #evaluate).
+
 Standalone scope. A derived surface or projected frame decides standalone
 only the questions that its own source members own. It refuses to close a
 question owned by another member, or one that joins the law of several
-owners; the step returns out_of_frame (§3) naming the owning members, and
+owners; the step returns out_of_frame
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) naming the owning
+members, and
 the question is decided from those members at their current digests or
 from a derived surface whose declared sources include every owner of it
 (P6, P1; provenance rc.2 authority_compressions/stdo_compressed.md,
@@ -279,118 +295,109 @@ procedure is new in this corpus (P0). The method does not require proving
 that no undiscovered material relation exists
 ([RF-003](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency)).
 
-## 3. Result algebra
+## 3. Step results and disposition
 
-One core algebra for every evaluation and every step's stop state (P5):
+A step returns its results in the core algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results): each evaluation it
+performed returns one core value with its predicate and domain outcome,
+and an evaluation it did not perform has no result. The step's own
+outcomes answer other questions than its evaluations do. This section owns
+them as four refinements of the core. Each names the question it answers
+and the predicate its mapping is for, and maps each of its values to
+exactly one core value; the predicate travels with the value, so no
+refinement's `satisfied` counts toward another predicate
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).
+Purpose and material relation: work, decisions and effects stand in the
+one core (P5, P6), so a consumer that combines them cannot read
+availability as fitness or acceptance, a carried ambiguity as resolved, or
+an unknown effect as none.
 
-| Result | Meaning |
-|---|---|
-| satisfied | the declared predicate holds on the exact basis |
-| falsified | a declared counterexample defeats it |
-| indeterminate | admissible evidence cannot decide it |
-| out_of_frame | the evaluation needs an undeclared material relation or capability |
-| invalid_basis | the subject or basis cannot support the evaluation |
+| Refinement | Question | Predicate of the mapping |
+|---|---|---|
+| construction availability | did the step yield its output | a candidate is available |
+| disposition | what the decision owner does with an assessed candidate | the candidate is accepted at its declared boundary |
+| ambiguity outcome | what happened to a declared ambiguity | the declared ambiguity is resolved on the exact basis |
+| effects | did an intended external effect occur | the intended effect occurred |
 
-Nothing is coerced to success; a missing, failed or out-of-scope result
-returns its member, never satisfied. This conserves
-[RF-012](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-012-closed-results),
-whose five members the table restates unchanged, and
-[AC-007](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal),
-whose rule that a failed, missing, indeterminate, out-of-scope or
-invalid-basis result follows the declared algebra rather than being coerced
-to success is the sentence above; both are restated here once and continue
-to govern. REFERENCE_FRAME §3 states RF-012 as a law over frames and
-[AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
-states AC-007 as a law over constraints; each uses this algebra and neither
-defines it again.
+A profile that refines these values for its own units maps each of its
+values to exactly one core value under FOUNDATIONS §4 Results and adds no
+core value.
 
-The boundary between out_of_frame and indeterminate is drawn on what the
-activated frame declares and on what the step did with it (P5, finite
-capacity and graceful total handling; the material relation drawn is the
-out_of_frame boundary, three-way: capability not declared, capability
-declared and exercised, capability declared and not exercised; rc.2 RF
-#rf-012-closed-results). Three cases; the first two name members of the
-algebra, and the third names none of its own:
+### Construction availability
 
-- out_of_frame when the claim requires a material relation or an evaluator
-  capability that the activated frame does not declare. The result names the
-  missing relation or capability, its owner where the subject gives one, and
-  the reconfiguration pressure it creates (§4; rc.2 RF
-  #reconfigure-when-necessary). A term the claim depends on and the frame
-  leaves undefined is an undeclared material relation: its meaning can alter
-  the result and it enters through no declared input (rc.2 RF
-  #material-relation, RF-003; P1). Whether the step exercised anything is
-  irrelevant to this member; the ground is the missing declaration.
-- indeterminate when the available admissible evidence cannot decide the
-  claim (rc.2 RF-012). The result names the evidence that would decide, as
-  its residual uncertainty (rc.2 RF #return-a-closed-result). Where the
-  claim also depends on an undeclared relation or capability, out_of_frame
-  and indeterminate each have a lawful ground; the result names the member
-  it returns and that ground, and this boundary excludes neither (P5).
-- no member of its own when the step did not exercise a declared
-  capability the evaluation requires. A result is returned wherever a
-  sufficient evaluation or an applicable judgment exists without that
-  capability, identifying its evidence, verdict and residual uncertainty
-  like any closed result (rc.2 RF #rf-012-closed-results,
-  #return-a-closed-result): a counterexample found by what was exercised,
-  as when source inspection falsifies A in a claim of A and B, returns
-  falsified, and common agreement cannot discard it (rc.2 RF
-  #result-conjunction). Where none exists because the capability was not
-  exercised, there is no result for that evaluation: the step's stop state
-  carries it, `incomplete` under the construction availability refinement
-  below, and its work state (§5) carries the unexercised capability as a
-  residual (P6; an actor cannot report an evaluation it did not perform).
-  In either case the unexercised part, B above, is an uncovered required
-  obligation, never a result: an absent required result cannot satisfy a
-  dependent conjunction, and a missing mandatory result remains unresolved
-  (rc.2 RF #applicability-and-required-results, #result-conjunction); a
-  known failure A and an uncovered obligation B survive every join
-  (FOUNDATIONS §4). The evaluation's result and the step's stop state
-  answer different questions (§1, Output), so the mapping of `incomplete`
-  to the core does not make the evaluation indeterminate.
+A step's output is a candidate until evaluated (FOUNDATIONS §3, P0): the
+constructed subject of a constructing step, or the closed results of an
+assessing step. Construction availability records whether that output
+exists (P5, P6; provenance
+[work result](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#work-result)):
 
-The first two cases restate RF-012's members. The undefined-term clause of the first is a tightening the
-predecessor implies and does not state: a relation is material when its
-lawful change can change the evaluation result, which a term's meaning can,
-and an undefined term neither appears in the frame nor enters through a
-declared input (rc.2 RF #material-relation, #rf-003-material-sufficiency;
-P1). The third is a tightening the predecessor implies and does not state:
-RF-012, Return A Closed Result, Applicability And Required Results and
-Result Conjunction together return what a sufficient evaluation supports
-and leave the unexercised part open (P5, P6).
+| Value | Core value | Ground |
+|---|---|---|
+| `candidate_ready` | satisfied | an exact candidate and its transition evidence are available |
+| `refused` | falsified | lawful activation occurred, and a governing prohibition or an owner-valid construction refusal defeats the requested construction; the prohibition or refusal is the counterexample |
+| `incomplete` | falsified | the lawfully activated step stopped without its output, because an evaluation the output needs was not performed or could not be decided on the admissible evidence, or bounded execution ended first; the stop basis and the residuals name which |
+| `re_entry_requested(authority)` | out_of_frame | a material decision the step needs lies outside its grant; the value names the owner of that decision |
+| `re_entry_requested(basis)` | invalid_basis | the activated basis can no longer support the work |
 
-Evaluation. The evaluator applies the activated frame's declared
-invariants, evidence rules and result algebra. It distinguishes semantic
-law, observed evidence, inference and decision, and records every
-assumption whose failure could change the result (P6; rc.2 RF #evaluate).
+The mapping is total and exclusive after lawful activation: the cause of
+the stop selects the value, and payload wording, stop timing or actor
+preference cannot select another. A mismatch known during activation is no
+value of this refinement, because no step exists; activation refuses
+(§2, Activation).
 
-A composite over several results declares its conjunction (FOUNDATIONS §4).
-The member it reports is chosen by that declared rule; every known failure
-and uncovered obligation survives the join and is carried with the
-composite. No universal order among the non-satisfied members exists; an
-application declares its own.
+`satisfied` here establishes availability only and never counts toward the
+candidate's fitness or acceptance (FOUNDATIONS §4 Results).
 
-Declared refinements answer different questions and keep their own
-vocabulary, each with a total mapping to the core:
+`incomplete` maps to `falsified` only for "a candidate is available", never
+to `indeterminate`. The step's evaluations keep their own results: each
+evaluation it performed returns its core value, `indeterminate` where the
+admissible evidence could not decide; each evaluation it planned and did
+not perform has no result, and its work state (§5) carries it as a
+residual with the capability or the execution left unfinished
+(FOUNDATIONS §4 Results, the third case of the boundary). This replaces
+the predecessor's pairing of `incomplete` with `indeterminate`, which
+merged an evaluation not performed with one whose evidence cannot decide
+(P5, P6).
 
-| Refinement | Question | Members | Core mapping |
-|---|---|---|---|
-| construction availability | did the step yield a candidate | candidate_ready, refused, incomplete, re_entry_requested | satisfied, falsified, indeterminate, out_of_frame or invalid_basis respectively ([work result](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#work-result)) |
-| disposition | what the decision owner does with an assessed candidate | accept, local_repair, re_enter, reject | consumes a core result; is not one ([UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)) |
-| ambiguity outcome | what happened to a declared ambiguity | resolved, carried, escalated, blocked | a policy state over a core result ([Ambiguity Governance](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#ambiguity-governance-rule)) |
-| profile closure decisions | how a profile's unit closes | profile-defined | the profile declares its mapping; it may not add a core member |
+An assessing step that ends `incomplete` leaves each criterion it did not
+close not performed: no result, never `falsified`. The `falsified` of its
+availability concerns its own output, never the subject under assessment
+(P6).
+
+The cause of a re-entry request is part of its value, because the
+predecessor's single `re_entry_requested` mapped to `out_of_frame` or to
+`invalid_basis` according to its cause. A stop with both causes records
+both and takes `re_entry_requested(basis)`, because a decision cannot be
+taken on a basis that cannot support it (P5, P3).
 
 ### Disposition
 
-Assessment of a candidate returns one of four semantic dispositions (P6,
-P5; provenance rc.2 SPEC_METHOD #proportional-disposition):
+The decision owner disposes an assessed candidate with one of four
+semantic dispositions (§1, Roles and delegation; P6, P5; provenance rc.2
+SPEC_METHOD #proportional-disposition). An assessor may recommend one; the
+recommendation is evidence for the decision owner, never a disposition
+([EVALUATION §4](EVALUATION.md#4-review-results)). The disposition is the
+acceptance result: it consumes the candidate's availability and assessment
+results and stays separate from both (FOUNDATIONS §4 Results). Each maps
+to the core for the predicate "the candidate is accepted at its declared
+boundary":
 
-| Disposition | Condition |
-|---|---|
-| `accept` | the candidate closes its declared cone and preserves every affected governing relation |
-| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |
-| `re_enter` | the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change |
-| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |
+| Disposition | Condition | Core value |
+|---|---|---|
+| `accept` | the candidate closes its declared cone and preserves every affected governing relation | satisfied |
+| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent | falsified |
+| `re_enter` | the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change | invalid_basis |
+| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | falsified |
+
+For `local_repair` the local defect, and for `reject` the violated relation
+or the competing truth path, is the counterexample to accepting this
+candidate; a repaired candidate is a new candidate with its own results.
+For `re_enter` the governing basis the candidate was built and assessed on
+must change, so that basis cannot support acceptance; the change re-enters
+at its owning relation (§4). The core values are new; they place
+acceptance in the one core, as FOUNDATIONS §4 Results requires, so that a
+consumer combining results cannot take availability or assessment as
+acceptance (P6).
 
 Global correctness means conserving every global relation affected by the
 bounded action; it does not require proving the whole product inside every
@@ -401,6 +408,49 @@ sufficiency. The method sets no rejection-count threshold, mandatory
 review-round count or review state machine; it prohibits repeating an
 unchanged failed construction relation as if iteration alone could close
 it (P2).
+
+### Ambiguity outcome
+
+A declared ambiguity is resolved, carried, escalated or blocked, and the
+outcome is recorded either way (§4, which also names the hard stops;
+[SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle)
+applies this to the method's chain of authority surfaces). Each outcome
+maps to the core for the predicate "the declared ambiguity is resolved on
+the exact basis" (P5, P6):
+
+| Outcome | Core value | Ground |
+|---|---|---|
+| `resolved` | satisfied | a decision was taken by lawful probabilistic processing or by human adjudication, as policy permits, and recorded |
+| `carried` | indeterminate | policy permits work to continue with the ambiguity open; it stays a recorded residual that names the evidence or decision that would resolve it |
+| `escalated` | out_of_frame | policy or risk appetite reserves the decision to human adjudication, an authority the step does not hold; the value names that authority |
+| `blocked` | indeterminate | the ambiguity stays unresolved, and policy or a hard stop (§4) halts work at it; the value names the halting condition and what would lift it |
+
+No outcome other than `resolved` maps to `satisfied`, so a dependent claim
+cannot rest on a carried, escalated or blocked ambiguity as if it were
+resolved. The mapping is new; it places ambiguity outcomes in the one
+core, which FOUNDATIONS §4 Results requires of every outcome (P5, P6).
+
+### Effects
+
+An effectful step's intended external effect has one of three values,
+mapped for the predicate "the intended effect occurred" (P5 with the
+open-world premise, P6):
+
+| Value | Core value | Ground |
+|---|---|---|
+| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full |
+| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | the evidence cannot establish whether the intended effect occurred, as for an effect that began and whose end is not observed, or a request whose response was lost |
+
+`not_effected` requires evidence about the subject. A lost response, an
+absent record, or an actor's context that holds no trace of the effect is
+not that evidence, and the value stays `completion_unknown`; §5 reconciles
+it before any repetition or dependent action. `completion_unknown` never
+maps to `completed` or to `not_effected`. The refinement is new. Its
+material relation is whether an action whose external effect may have
+occurred is repeated or relied on; §4 names a lost post-effect response as
+a case that no added core value solves, and this refinement records it in
+the existing core.
 
 ## 4. Totality and refinement
 
@@ -713,9 +763,13 @@ reconstructed semantic outcomes (P5, P6).
 | Probabilistic Work Boundary | conserved; the object and commitment are FOUNDATIONS §2 and §3; §1 consumes them |
 | RF engagement (establish basis, applicability, select and activate, evaluate, return, reconfigure) | conserved; §1 to §4 and §7; rows in the table below |
 | AC-010, AC-011 | conserved; the laws themselves are restated in AXIOMATIC_CALCULUS §4, which disposes their rows; §2 applies them, joined with RF-002/003/004/014/017 into one operation (new); the step's local selection among fit options under an admitted grant is carried from RF-014; the RF laws themselves are restated in REFERENCE_FRAME §3 |
-| RF-012, AC-007 | conserved; the algebra is defined once, in §3; REFERENCE_FRAME §3 states RF-012 as law and AXIOMATIC_CALCULUS §4 states AC-007 as law, and each points here; their rows are disposed in those members; the tenant text carries two labelled tightenings the predecessor implies, each derived in §3: undefined term (rc.2 #material-relation, RF-003), unexercised capability (RF-012, Return A Closed Result, Applicability And Required Results, Result Conjunction) |
+| RF-012, AC-007 | conserved; the core algebra, its meanings and its two labelled tightenings are FOUNDATIONS §4 Results, whose §6 lists them; REFERENCE_FRAME §3 and AXIOMATIC_CALCULUS §4 dispose their rows; §3 here refines the core for steps |
+| RF Result Conjunction, the conjunction sentences of Applicability And Required Results | conserved; the conjunction rule, including the rule for a composite over several results formerly stated in §3, is FOUNDATIONS §4 Conjunction of results; §1 Applicability refers to it |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the rows are disposed at the TICKETS member |
-| Baseline work result, UP-020 dispositions, Ambiguity Governance outcomes | conserved as declared refinements in §3 |
+| Baseline work result | superseded in its mapping: §3 Construction availability maps `incomplete` to falsified for "a candidate is available" in place of the predecessor's indeterminate, because the predecessor merged an evaluation not performed with one whose evidence cannot decide, which FOUNDATIONS §4 Results keeps distinct; `re_entry_requested` is split by its cause into two values, each mapped once; the rest of the mapping, its totality and exclusivity are conserved in §3; the variant readings and the activation-refusal exclusion stay in EXECUTIVE_BASELINE §5, which disposes the row |
+| UP-020 dispositions | conserved in §3 Disposition; their core values for acceptance are new, with the purpose stated there |
+| Ambiguity Governance outcomes | conserved in §3 Ambiguity outcome; their core values are new, with the purpose stated there; SPEC_METHOD §5 disposes the row |
+| Effects | no rc.2 row; §3 Effects is new, with its purpose and material relation stated there |
 | ODD graph functions, ODD 11.8 | conserved; graph functions generalised in §4 to any realisation as typed refinement; 11.8 is not generalised: it stays profile law, its row disposed in ODD §11.8, and ODD §5 Graph functions declares its cumulative carried environment as the specialised contract through which §4 lets a refinement carry earlier outputs; PROFILES §2 keeps the ODD binding |
 | UP-017 | conserved; restated in DESIGN_MODULE §5 Bounded frame conservation, which disposes its row; its seam rule is §1 Execution unit and §4 |
 | UP-021 and Standing Structural Qualification | conserved in full; §4; rows in the table below |
@@ -730,9 +784,9 @@ REFERENCE_FRAME_METHOD.md):
 |---|---|---|
 | #engagement | not applicable: heading with no claim text (14 bytes); its children are disposed individually | §1 |
 | #establish-the-evaluation-basis | conserved | §1 Intake |
-| #applicability-and-required-results | conserved | §1 Applicability |
+| #applicability-and-required-results | conserved; its conjunction sentence applies FOUNDATIONS §4 Conjunction of results, which owns the rule | §1 Applicability |
 | #select-and-activate | conserved | §2 (Activation paragraph) |
-| #evaluate | conserved | §3 (Evaluation paragraph) |
+| #evaluate | conserved | §2 (Evaluation paragraph) |
 | #return-a-closed-result | conserved | §7 |
 | #reconfigure-when-necessary | conserved | §4 (Reconfiguration paragraph) |
 
