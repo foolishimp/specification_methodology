@@ -99,3 +99,25 @@ Executive disposition on design decision D1: `local_repair`. W1 proposed a sixth
 Reason: item 3 of the common single result algebra requirement asks that non-performance stay distinct, not that it have its own core value. Item 4 carries the domain outcome with the value; R0 recorded both readings as ambiguity A2. The smaller change conserves RF-012 and does not widen the re-proof span. The alternative, a sixth core value with RF-012 `superseded`, goes to the product owner in the handoff.
 
 Role change to Writer: DOCUMENT_STRUCTURE D1 and PLAN rows A1, A2 and B6 plus the fixed interfaces were edited to this ruling, then committed. Role back to Executive. Wave A starts: A1, A2 and A3.
+
+2026-10-13T18:47Z — Wave A, first returns. Each Writer's subject was committed by the Executive acting as Writer, with role back to Executive after each commit.
+
+- A2 returned `candidate_ready`, committed `823507e`. Changes to EVALUATION:
+  - the equivalence ladder ported into §6, adapted in notation only (Codex FOUNDATIONS lines 254–258);
+  - §7 owns actual-use evidence of adequate attention;
+  - §3 states that an author's fresh context is not independent;
+  - §4 refers to FOUNDATIONS Results.
+
+  No frontier row changes disposition, and 8 rows are listed for re-proof.
+- RW1, a working review of W1's design at `f7851aa`, started in parallel.
+- A1 returned `candidate_ready`. Changes:
+  - FOUNDATIONS §4 gains Results (the five values, standing, the no-raise rule, predicate and domain outcome, not-performed as no result) and Conjunction of results (three inputs kept apart);
+  - ACTIVATION §3 is renamed "Step results and disposition": `incomplete` maps to `falsified` for "a candidate is available", and `re_entry_requested` is split by cause;
+  - 7 delta rows go to A7; frontier rows 516 and 543 go to B2.
+
+Executive rulings on A1's three readings:
+- a conjunction whose returned values are all `satisfied` but which has a gap reports `indeterminate`, with each gap recorded by kind — confirmed. The gap record carries the not-performed distinction, which is the D1 ruling;
+- the Executive disposition is mapped into the core as the acceptance result — confirmed under item 5 (availability, assessment and acceptance are separate results);
+- rows 516 and 543: `superseded` only if their rc.2 claim maps `incomplete` to `indeterminate`, with the common single result algebra requirement named as the replacement relation; B2 verifies the claim text first.
+
+RA1, a working review of A1, started.
