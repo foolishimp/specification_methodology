@@ -22,8 +22,8 @@ record keeps the three inputs apart (Conjunction of results, 875-885).
 SOURCE = {
     'path': 'standards/FOUNDATIONS.md',
     'sections': {
-        'results': 'b6ef8aa8de80984489ad3c7b850766943ed4d900e3fd8362b43a5158d90897d8',
-        'conjunction-of-results': '815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c',
+        'results': '2e020cbfbfa3c93ecb27a098e62cc26225a0d9bd7598e4c405c4110dd9d11e26',
+        'conjunction-of-results': 'e426656616cd9c3909ea2bd54afa8c7eaf7b78159ea9300cf599c4cb94a37766',
     },
 }
 

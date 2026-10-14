@@ -25,18 +25,25 @@ PREDICATE = ('On the declared domain, the encoded conjunction rule meets propert
 
 # Line numbers cited below are those of standards/FOUNDATIONS.md at 8b42994;
 # the run refuses if either bound FOUNDATIONS section has changed.
+# Re-declared in I3-3i after review: requirement item 2 now says "No evaluation
+# or decision outcome exists outside the core" and adds explicit conditions;
+# P0 still follows from it, and P4 rests on item 3, unchanged. The new
+# lifecycle paragraph concerns recorded states, outside this domain. In
+# FOUNDATIONS the Results rule body is unchanged (its family table changed),
+# and Conjunction of results adds Stale results, which concerns bases that
+# disagree, outside this domain of agreeing bases.
 ORACLE_SOURCES = [
     {
         'path': '../../specification/requirements/README.md',
         'sections': {
-            'single-result-algebra-requirement': 'e3fba2f2cf86b923cef6c8ef64f8362830a7e165fe618702cb4652cb0735e278',
+            'single-result-algebra-requirement': 'f485ce8d400b9114a5e82f948a0d5057dee64fb3f4deb004f7d79d7fbfdfe82c',
         },
     },
     {
         'path': 'standards/FOUNDATIONS.md',
         'sections': {
-            'results': 'b6ef8aa8de80984489ad3c7b850766943ed4d900e3fd8362b43a5158d90897d8',
-            'conjunction-of-results': '815da4dc4e14b25df43578266f1657e84ef2e703d449c5179d16426430e7bf7c',
+            'results': '2e020cbfbfa3c93ecb27a098e62cc26225a0d9bd7598e4c405c4110dd9d11e26',
+            'conjunction-of-results': 'e426656616cd9c3909ea2bd54afa8c7eaf7b78159ea9300cf599c4cb94a37766',
         },
     },
 ]
