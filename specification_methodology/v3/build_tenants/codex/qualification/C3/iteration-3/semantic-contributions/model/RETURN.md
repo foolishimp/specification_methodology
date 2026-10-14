@@ -18,3 +18,7 @@ The parent adapter must preserve four shared dictionaries (`owner_scopes`, `exte
 Acquisition measured 95086 unique assigned raw-source bytes and 38771 bytes across ten needed shared owner bodies. Source-output requests, including recovery after tool truncation, total 171044 bytes. This is not total actor context or process I/O. Wall time from first observed clock to return recording was 1043.94 seconds. `ACQUISITION.json` records the output-truncation/reacquisition event and excluded overhead. Active context, complete delivered prompt bytes/tokens, host retention and capacity were not instrumented; no universal fit claim is made.
 
 The check cases are author-constructed discriminants, not an independent oracle. No live Product or external empirical program was assessed. The research companion pin and its negative statistical standing are preserved as source declarations. Independent fidelity review, parent integration, actual-use proof, adoption and acceptance remain separate work. Exact artifact hashes and the complete source-ID partition are in `RETURN.json`.
+
+## Subsequent source-account review
+
+The author result above names the original contribution at `b345306`. F02 later falsified its Markov-standing applicability coverage. [The bounded repair](F02_REPAIR.md) records the successor and its pending independent readback; the original return is not a current whole-fidelity verdict.

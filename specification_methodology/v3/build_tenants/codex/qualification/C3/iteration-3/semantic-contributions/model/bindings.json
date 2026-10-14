@@ -4967,14 +4967,36 @@
       "interpretation_standing": "authored_semantic_binding",
       "applicability": {
         "scope_ref": "world",
-        "trigger": "Any claim that a Markov construct/overlay is a formally established blanket.",
+        "trigger": "Using, materializing, publishing or interpreting a Markov construct or overlay, including evaluating a formally established-blanket claim. Ordinary entity cuts retain their separate admission test.",
         "unknown": "Unresolved applicability remains explicit."
       },
-      "predicate": "Established statistical Markov standing requires the direction-native conditional-independence promotion predicate; publication treatment verification or method adoption does not satisfy it.",
+      "predicate": "Represent and propagate the current candidate-class standing of the Markov construct and its overlays; a formally established claim requires the direction-native conditional-independence promotion predicate, which publication treatment verification or method adoption does not satisfy.",
+      "definition": {
+        "declared_meaning": "The construct and published overlays have candidate-class epistemic standing on the declared source basis. Lawful published entity cuts do not inherit that status.",
+        "ordinary_overlay_publication": {
+          "formal_claim_required": false,
+          "standing": "candidate-class overlay of a candidate construct",
+          "certified_blanket": false
+        },
+        "ordinary_entity_cut": {
+          "standing_owner": "WORLD_MODEL_METHOD.admissibility",
+          "inherits_markov_candidate_status": false
+        },
+        "tooling_default": {
+          "modality": "should",
+          "publication_kind": "candidate-class",
+          "formally_closed_kind_requires": "a real promotion-gate result for that cut"
+        },
+        "promotion_gate": {
+          "predicate": "Given the identity projection, residual variation along remaining components is independent of the target under plausible treatments.",
+          "source_report": "The test and its multi-layer successor did not meet the predicate; the gate is not relocated to accommodate this negative result."
+        }
+      },
       "obligations": [
         "Preserve reported negative tests including multi-layer successor; do not relocate gate to fit their results.",
-        "Published overlays remain candidate-class constructs; stronger kind requires actual gate result.",
-        "Propagate this standing downstream."
+        "Published overlays are candidate-class overlays of the candidate construct, not certified blankets of a formally established object.",
+        "Propagate this standing downstream.",
+        "Materializing tooling should default to candidate-class publication and reserve formally-closed publication for cuts backed by a real promotion-gate result."
       ],
       "permissions_exceptions": [
         "Method adoption does not require empirical completion.",
@@ -5005,7 +5027,7 @@
       ],
       "result_mapping": {
         "contract_ref": "core_result",
-        "local_predicate": "Residual variation conditioned on the identity projection is independent of target under declared plausible treatments.",
+        "local_predicate": "Apply the actual selected predicate: accurate candidate-standing representation/propagation for ordinary construct or overlay use; the direction-native promotion predicate for a formally established claim. Publication-kind data is not an evaluation verdict.",
         "source_report": "The pinned empirical program and multi-layer successor tested it and did not meet it.",
         "lifecycle": "candidate-class is publication-kind data; no verdict alias. A lawful ordinary entity cut can coexist with this failed stronger gate."
       },
@@ -5027,15 +5049,11 @@
       "external_inputs": [
         {
           "input_ref": "statistical",
-          "required_when": "Any claim that a Markov construct/overlay is a formally established blanket."
+          "required_when": "Evaluating a formally established-blanket claim or a request for formally-closed publication; no successful formal test is required merely to retain candidate standing."
         },
         {
           "input_ref": "representation",
-          "required_when": "Any claim that a Markov construct/overlay is a formally established blanket."
-        },
-        {
-          "input_ref": "verification",
-          "required_when": "Any claim that a Markov construct/overlay is a formally established blanket."
+          "required_when": "Identifying the selected overlay and its representation for the standing query; this does not apply to an ordinary entity cut."
         }
       ],
       "prior_standing": "bounded_semantic_binding"
