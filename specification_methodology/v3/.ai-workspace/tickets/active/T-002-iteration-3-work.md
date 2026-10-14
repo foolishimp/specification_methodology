@@ -119,8 +119,9 @@ subjects; a current assessment re-anchors them to its actual candidate.
 
 A finding closes through a recorded review of the exact corrected subject
 that disposes its original counterexample against the owning requirement and
-identifies the repair and evidence used. Its primary destination owns that
-closure; supporting items and conditional later demonstrations do not silently
+identifies the repair and evidence used. Unless a row explicitly assigns a
+different primary or separates distinct parts, its first-listed work item
+owns the finding's closure. Supporting items and conditional later demonstrations do not silently
 expand it. Routing alone closes nothing. I3-14 records independent exit
 assessments and their actor/independence bounds; author returns remain such.
 
