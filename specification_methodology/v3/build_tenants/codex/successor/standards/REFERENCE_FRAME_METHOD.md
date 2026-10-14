@@ -62,7 +62,9 @@ decide reconstructability and fit. Choosing a particular frame partition,
 evaluation protocol or actor arrangement remains a declared method choice.
 
 This member owns frame declaration, activation, evaluation, coverage and
-revision. It consumes the shared [result algebra](FOUNDATIONS.md#result-algebra),
+revision as foundations-tier frame law. Its authority vocabulary remains scoped
+to those relations; other operations retain their owning contracts' grants.
+It consumes the shared [result algebra](FOUNDATIONS.md#result-algebra),
 [conjunction](FOUNDATIONS.md#result-conjunction) and
 [workspace/context relation](FOUNDATIONS.md#workspace-and-context) at the
 deciding operations below. Its finer outcomes refine that algebra; they do not
@@ -341,6 +343,17 @@ cross several components.
 
 ## Reference Frame Laws
 
+The [F1–F6 commitments](FOUNDATIONS.md#foundational-commitments) constrain these
+families conditionally; this member owns the frame-specific policies in the
+last column. They do not follow from finite capacity alone.
+
+| Law family | Premises and conditional consequence | Separately owned choice |
+|---|---|---|
+| Evaluation boundary, acquisition and compression: RF-001–005, RF-013–014, RF-017 | F1 selects the question; F2 requires supported interpretation; F3 distinguishes current subject from acquired view; F5 bounds actor capacity. If a frame supports that question, its material distinctions and usable basis must survive bounded acquisition. | This method selects the frame tuple, family-relative sufficiency, reconstructability and compression criteria. The human frame-set owner selects the partition and actor envelope; the subject owners supply material meaning. |
+| Authority and overlapping meaning: RF-006–008 | F2 and F4 preserve meaning across typed relations; F6 separates evidence from grants. Shared material therefore cannot by itself equate meanings or confer authority. | This method distinguishes semantic, evaluation, operation and decision authority in a frame; each existing owner supplies its actual grant and each translation owner supplies the coordinate relation. |
+| Configuration and material combination: RF-009–011, RF-016 | F3 makes topology changes relevant to dependent support; F4 requires material joins to preserve the outer claim; F5 and F6 require bounded allocation without invented grants. Combining results alone need not combine internal execution. | This method selects composition-on-demand, explicit recharting and implementation neutrality. The frame-set owner chooses topology; the declared composition and decision owners bind the required joins under the shared laws. |
+| Closed results and uncertainty: RF-012, RF-015 | F2 requires evidence on an exact predicate; F5 admits undecidable or unperformed work; F6 prevents a result granting permission. A closed return must preserve those distinctions. | Foundations owns the result codomain and conjunction. This method owns the activation/work predicate split and each frame owns its declared refinements; the decision owner owns disposition. |
+
 ### RF-001 Evaluation Relativity
 
 Every frame declares the evaluation family it supports. A frame with no
@@ -366,7 +379,8 @@ exists.
 
 Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to `Q`'s
 attention surface: exclude relations established irrelevant to that evaluation,
-retaining any material needed to establish irrelevance.
+retaining any material needed to establish irrelevance. A frame does not expand
+merely because adjacent workspace material exists.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -495,6 +509,9 @@ framework.
 
 ### RF-017 Proportional Compression
 
+A frame declaration compresses accumulated practice lawfully only when it
+preserves the material distinctions and failure detections required by its
+whole declared evaluation family, with adequate capability fit under RF-014.
 A frame view applies [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
 from the owning declaration and material subject to the actor's evaluation
 `Q`. Its required distinctions include `Q`'s failure detections; its adequacy
@@ -745,6 +762,19 @@ frame's evaluation as consumer. Bind both `C` coordinate/equality laws and the
 translation's refusal conditions alongside the shared preservation, loss and
 provenance requirements.
 
+The returned `translated_value`, `declared_loss` or `refusal` is retained with
+its cause. Evaluate “this translation meets the bound target-use contract on
+these source/target coordinates”: supported preservation, including expressly
+admitted loss, maps to `satisfied`; an established forbidden loss, equality,
+identity, basis-compatibility or authority violation maps to `falsified`;
+undecided preservation or loss permission maps to `indeterminate`. If that
+evaluation itself lacks material scope/capability or a usable basis, the map is
+`out_of_frame` or `invalid_basis`, respectively. Missing causes use RF-012's
+missing-reason rule. A coordinate mismatch established by a valid check is a
+failed translation condition, not necessarily an invalid basis for the check.
+All cases preserve actual performance and effects; refusal does not establish
+the target predicate the untranslated evidence was intended to support.
+
 ### Material Composition
 
 Apply [Composition law](TRANSFORMATION_LIBRARY.md#composition-law) to the
@@ -785,6 +815,15 @@ only the relations needed for its evaluations and coverage claims.
 ---
 
 ## Workspace Coverage
+
+F1 requires coverage relative to a governed outcome; F2 and F3 require evidence
+on its exact current basis; F4 makes interactions material; F5 rules out
+inferring unknown completeness from a finite inventory; F6 reserves exclusion
+and disposition to their owners. Consequently a coverage claim needs supported
+evaluation, interaction and authority coverage plus its residual boundary.
+This method chooses the ledger vocabulary and eight criteria below. Human
+frame-set authority selects the inventory and required independence under the
+governing outcome; no foundation determines one universal inventory.
 
 ### Coverage Basis
 
@@ -861,18 +900,27 @@ The coverage ledger contains at least:
 | decision authority | owner of disposition |
 | evidence | required observations and provenance |
 | dependencies | material frame or seam relations |
-| status | coverage disposition |
+| status | recorded coverage state used by the coverage predicate below |
 | residual | uncertainty, exclusion, or re-entry condition |
 
-The baseline coverage statuses are:
+The baseline coverage states describe the allocation/evidence record; they do
+not report whether the row's underlying evaluation predicate is true:
 
-- `covered`;
-- `separately_covered`;
-- `conditionally_covered`;
-- `conflicted`;
-- `uncovered`;
-- `unknown`; and
-- `excluded_by_authority`.
+| Recorded state | Input meaning |
+|---|---|
+| `covered` | a capable frame is identified with its coverage support |
+| `separately_covered` | such coverage is separately activated, with the required independence support |
+| `conditionally_covered` | coverage depends on named conditions whose support is recorded |
+| `conflicted` | named coverage or frame-result contributions conflict |
+| `uncovered` | a known evaluation lacks the required coverage |
+| `unknown` | evidence does not establish its coverage state |
+| `excluded_by_authority` | a cited owner decision excludes the evaluation within its exact scope |
+
+The [Operational Full Coverage](#operational-full-coverage) predicate evaluates
+these inputs. No state is a fixed verdict: `covered` can conceal unsupported
+capability, and an exclusion can be lawful, prohibited or unresolved. An
+exclusion decision's own authority result remains separately predicate-bound
+under the core decision rule; recording the state supplies no grant.
 
 ### Interaction Coverage
 
@@ -920,6 +968,21 @@ A frame set has **operational full coverage** for its declared tuple when:
 6. no unresolved frame-result conflict is hidden by aggregation;
 7. excluded evaluations cite governing authority; and
 8. uncovered and unknown residuals are explicit and compatible with the claim.
+
+The exact predicate is “the declared frame set has operational full coverage
+for `Coverage(W, G, B, E, S, T)` under these eight criteria”. Evaluate each
+applicable criterion and required seam through RF-012, then use
+[core conjunction](FOUNDATIONS.md#result-conjunction). Supported satisfaction
+of every required criterion maps to `satisfied`; a demonstrated uncovered
+mandatory evaluation, unlawful exclusion or other defeated criterion maps to
+`falsified`; undecided truth of a required criterion, including whether a
+condition, conflict or residual is compatible with the claim, maps to
+`indeterminate` unless the core precedence preserves an established failure or
+diagnosis. An unusable evaluation basis maps to `invalid_basis`; material scope
+or capability outside the coverage evaluator's frame maps to `out_of_frame`.
+Missing causes or unsupported state labels use the core missing-reason rule.
+Retain the ledger, leaves, actual performance and effects. A successful audit
+can thus establish a falsified coverage claim; an absent audit remains absent.
 
 Operational full coverage is relative to its tuple. It is not a claim that no
 undiscovered evaluation exists.
@@ -1219,7 +1282,7 @@ method claims:
 | `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority, and residual boundary; missing authority or evaluation basis refuses |
 | `activate` | exact subject/basis and capable-actor activation succeeds; stale, ambiguous, topology-mismatched, unauthorized, and capability-incompatible activations refuse or return the applicable closed pressure |
 | `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |
-| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy, and declared veto return conflict, indeterminate, or refusal without flattening frame meaning |
+| `conjoin` | exercise [core conjunction](FOUNDATIONS.md#result-conjunction): all required claims and joins satisfied; an authenticated applicable failure retained beside missing coverage; invalid composite or required basis; required out-of-frame contribution; and unresolved mandatory contribution. Conflict, veto and refusal remain predicate-bound evidence or decision annotations, never replacement verdicts; preserve the core precedence and every frame's meaning |
 | `translate` | preserved coordinates and provenance reach the target; declared loss remains explicit; identity, basis, authority, or equality mismatch refuses |
 | `audit_coverage` | evaluation, interaction, semantic/operation/decision authority, failure, capability, and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
 | `revise` | historical failure, topology mutation, evidence change, and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction, and coverage claim requiring reevaluation |

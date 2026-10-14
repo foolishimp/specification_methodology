@@ -24,6 +24,16 @@ Reapplication preserves the evolving subject and admitted prior history without
 assuming side-effect idempotence. Semantic atomicity prescribes no storage
 transaction.
 
+Within adoption, [F1–F6](FOUNDATIONS.md#foundational-commitments) support these
+conditional families; this profile owns the additional finite policies.
+
+| Material family | Premise → consequence under shared law | Additional profile choice |
+|---|---|---|
+| Identity, seed and lineage: OP-001, OP-003, OP-004, OP-006 | F2/F3/F4 require scoped interpretable identity and preserved causal joins; later results cannot establish their own predecessor basis, and temporal order alone supplies no authority. | This member chooses immutable occurrences/events, seed acyclicity, append-only correction and explicit typed lineage; its closed signature, not F3 alone, fixes the record populations. |
+| Semantic admission: OP-002 | F2/F4/F6 require authenticated complete support and an actual admission grant; successful isolated members cannot establish the composite without its joins. | This member chooses the exact seven-member atomic cut and three admitted judgments. Semantic atomicity imposes no storage transaction. |
+| Effects and changing reality: OP-005 | F3/F5/F6 require current observations, truthful uncertainty and effect authority before dependent action. Workspace/result laws preserve actual effects despite refusal or lost context. | This member chooses stable SubjectBinding, pre/post observations and the closed effect dispositions/readiness relations; snapshots/rollback require separate authorization. |
+| Frontier and adoption: OP-007 | F1/F2/F4/F6 require faithful scope, complete material support and preserved grants; a projection cannot manufacture membership or authority. | This member chooses complete immutable EventFrontiers, exact basis/precedence and closed publication/adoption identity. Product adoption supplies concrete roles and grants. |
+
 <!-- STDO3_PROFILE_BINDING_END -->
 
 ## Position
@@ -561,7 +571,13 @@ OccurrenceRelationQualifiers = {
 }
 ```
 
-The qualifier value domains are closed:
+The qualifier value domains are closed. They declare a relation's preservation,
+loss and refusal policy; they are not completed evaluation returns. A use of
+that policy evaluates the relation's exact constraint predicate through the
+judgment contract below, retaining the observed defect or missing support.
+A `refuse_missing` policy tag alone proves neither that a required member is
+absent nor that the evaluation was performed.
+
 
 ```text
 cardinality = exactly_one | zero_or_one | zero_or_more | one_or_more
@@ -769,11 +785,19 @@ predicate remains `falsified`, retaining `refused`, `stale`, `unauthorized`,
 mapped below. In particular `out_of_scope` from a false
 `event_scope_compatible` constraint is a falsified compatibility claim; its
 spelling does not turn it into the invocation-boundary `out_of_frame` result.
-For a `partial` transition, the exact intended-outcome predicate and evidence
-determine `falsified` if non-fulfilment is established, or `indeterminate` if
-fulfilment remains unknown. Its effect state separately retains observed
-partiality or uncertainty. These distinctions make each complete return map to
-one core verdict without discarding the profile's finer decision.
+For `transition_evaluation`, bind the exact intended-outcome predicate on
+the declared pre/post observations. Its `falsified` decision means evidence
+establishes non-fulfilment of that predicate and maps to core falsified.
+A `partial` decision retains one of these reason cases in its existing
+evidence/provenance: `unfulfilled` when evidence establishes non-fulfilment
+maps to falsified; `unknown` when that evidence does not decide fulfilment
+maps to indeterminate. Missing required reason/support also maps to
+indeterminate without inventing a completed judgment or erasing known
+counterevidence. The existing invalid-basis and scope diagnoses remain
+available on the same predicate. These are reason cases, not new Decision,
+Residual or Stop kinds. Keep actual partial observations and cause even when
+the verdict is falsified. Effect state separately follows the core effect
+observation law; outcome failure does not imply no effect.
 
 Source-frontier currentness is a material join of claim admission, cut
 admission and frontier projection. Established staleness falsifies that exact
@@ -1126,14 +1150,14 @@ disposition remains unadmitted and the requested effect is `unknown`.
 `completed_effect` with its required observation is `completed`.
 
 `partial_effect` retains the domain's incomplete-effect disposition and its
-re-entry requirement. At the declared core boundary, a completed part with a
-known unexecuted or reverted remainder is `partial`. If at least one part began
-and every begun part is observed reversed, the state is `reverted`, retaining
-the reversal and any unstarted remainder. Every material external part stays
-inside the boundary; a local rollback cannot conceal an irreversible message.
-Any uncertain material remainder makes the state `unknown`, retaining the
-observed parts. The original domain disposition and reason remain visible;
-these refinements add no effect-operation authority or new disposition kind.
+re-entry requirement. Classify its actual observations using the single
+[core effect observation law](FOUNDATIONS.md#result-algebra) and, for multiple
+parts, its [effect join](FOUNDATIONS.md#result-conjunction), with this
+invocation's full material boundary. The original domain disposition, observed
+parts, reversal evidence and unknown remainder remain visible; a local rollback
+cannot conceal an irreversible message. The domain `partial_effect` can
+therefore retain core partial, reverted or unknown as that owner decides.
+These refinements add no effect-operation authority or new disposition kind.
 A dispatch followed by lost transport without resolving observation cannot
 become `no_effect`, `refused_effect` or `completed_effect`. Missing
 post-observation remains an explicit residual and prevents a complete profile

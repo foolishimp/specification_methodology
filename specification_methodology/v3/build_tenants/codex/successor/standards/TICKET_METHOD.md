@@ -10,8 +10,20 @@ actual lifetime. Tickets, sprints and the default file layout are this member's
 additional policy, not universal consequences of finite capacity. Admission and
 closure consume the shared [result algebra](FOUNDATIONS.md#result-algebra) and
 [conjunction](FOUNDATIONS.md#result-conjunction) at their deciding boundaries.
+The bindings below preserve core performance, coverage, diagnostic precedence
+and actual effects. They add no evaluation pass or record to the existing work.
 
 ## Core Model
+
+This carrier family assumes [F1, F3, F5 and F6](FOUNDATIONS.md#foundational-commitments)
+and work whose obligations may survive an activation. Continued reliance then
+requires recoverable identity, state and authority under
+[workspace and context](FOUNDATIONS.md#workspace-and-context). This member
+chooses Goals, tickets, sprints, run contracts, the smallest-carrier rule and
+UP-006 milestone truth. Product and ticket-state authorities select their
+bindings; filenames and lifecycle states do not create execution or acceptance
+authority. UP-006 applies core conjunction to closure-bearing milestone claims
+without merging their scopes or treating deferred work as delivered.
 
 ### Goals
 
@@ -188,6 +200,14 @@ ticket authority to that carrier and no rival remains.
 
 ## Sprint Rules
 
+Given F1, F4–F6 and locally deferrable proof cost, a batch can preserve its
+outer obligations while changing proof cadence. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+supplies preservation and authority, not permission to defer. This family
+chooses the manifest, admission, escrow exclusions and close review below;
+the governing domain policy decides what debt may survive. Sprint status is
+recorded lifecycle state; any admission, closure or state-transition determination
+returns the core result on that exact predicate.
+
 ### One Durable Record Per Sprint
 
 Each sprint has one durable manifest record. The default carrier is one
@@ -237,8 +257,8 @@ governance/closure law, public carrier shape, and release criteria.
 walkthrough, test, design wording, or trace cleanup intentionally deferred until
 sprint close.
 
-`paydown_policy` states how deferred debt becomes accepted, ticketed, repriced,
-or removed during close review.
+`paydown_policy` binds deferred debt to the classifications and durable
+follow-up required by [Sprint Close Review](#sprint-close-review).
 
 ### Sprint Status
 
@@ -254,8 +274,8 @@ The intended meaning is:
 - `active`: iteration is admitted inside the sprint boundary
 - `closing`: new iteration is frozen while close review and paydown
   classification run
-- `closed`: close review finished and all remaining debt is accepted, ticketed,
-  repriced, or removed
+- `closed`: [Sprint Close Review](#sprint-close-review) finished with its
+  classification and durable follow-up conditions satisfied
 - `superseded`: the sprint boundary was wrong and a new authority surface,
   sprint, or ticket set replaced it
 
@@ -342,12 +362,52 @@ Each reviewed item is classified as one of:
 - `product_reprice`: the work changes product definition
 - `remove`: the work should be backed out or kept out of closure
 
+These six values classify treatment. The assessment separately evaluates
+`this exact item meets the currently applicable compliance obligations under
+the sprint and cited domain authority`. For every raw classification, bind the
+reason to the [core result](FOUNDATIONS.md#result-algebra):
+
+| Established assessment reason | Core verdict on item compliance |
+|---|---|
+| every applicable obligation is established, including any required acceptance | `satisfied`; only this supports the compliance meaning of `accepted` |
+| demonstrated unmet obligation or authority drift | `falsified` |
+| insufficient proof, unresolved requirement/applicability or missing reason | `indeterminate` |
+| uninterpretable or contradictory governing subject/basis | `invalid_basis` |
+| assessment outside the bound scope or capability | `out_of_frame` |
+
+`local_paydown` can retain a demonstrated defect or an unproved obligation;
+repricing can concern a defeated current claim or an unresolved intended change.
+`remove` can be selected by authority without a demonstrated defect. Thus the
+treatment word alone cannot choose the compliance verdict. Preserve the exact
+cause and all findings; apply core conjunction when several obligations decide
+the item. Lawfully deferred evidence remains debt and does not become proof.
+
+The applied treatment has a separate decision predicate: `disposition D on
+this item at this basis was made under the sprint's bound mandate`. For each of
+the six D values, the core decision rule requires actual authority and the
+conditions in its definition above: a supported lawful decision is `satisfied`,
+a demonstrated absent or unauthorized decision is `falsified`, and insufficient
+decision evidence is `indeterminate`, retaining basis/scope diagnoses. A raw
+`accepted` label cannot supply its missing compliance assessment; a raw
+`local_paydown` label cannot supply its ticket or permission to retain the debt.
+Required decisions and assessments keep their actual performance or absent
+coverage, and effects such as backing work out require observed completion.
+
+Domain consumers bind their own compliance obligations here and refer to this
+map. Supported alternatives within those obligations remain permitted; no
+preferred implementation is implied by acceptance.
+
 A sprint may move to `closed` only when every item and every debt entry is
 classified and the resulting paydown or repricing work is durable.
 
 Sprint close can accept local paydown debt only when the governing method allows
 that debt to survive as explicit follow-up. Sprint close cannot accept hidden
 authority drift.
+
+Closure evaluates this sprint's classification, permitted-debt and durable
+follow-up conditions through [Condition-Based Closure And Reuse](#condition-based-closure-and-reuse).
+Its satisfaction can coexist with an open paydown ticket; it cannot establish
+repayment, item compliance or delivery of an unfulfilled obligation.
 
 ---
 
@@ -643,6 +703,13 @@ That means the ticket must record at least:
 
 ### Work-Carrier-To-Execution Rule
 
+This admission/continuation family uses F2, F3 and F6 on the selected work and
+its surviving obligations. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+requires authentic current support and actual grants. Ticket Method chooses
+the carrier-lifetime partition, deterministic admission or exact human override,
+durable result surface and recorded-J/O continuity. Those choices preserve the
+existing work authority; creating a carrier cannot repair a missing grant.
+
 Every execution governed by this method uses one run-scoped execution contract.
 The required lifetime of the work or obligation selects the smallest lawful
 source carrier. First establish applicable upstream work authority, then select
@@ -702,6 +769,13 @@ Execution and closure use the same admitted categorization, criteria, proof
 surface, and non-closure conditions. Resulting state still flows through proof,
 gap analysis, and repricing.
 
+`Stop`, `re-enter` and `missing authority` retain the exact failed or undecided
+admission predicate under [Execution Contract Admission](#execution-contract-admission)
+and the [core stop rule](FOUNDATIONS.md#result-algebra). They do not convert a
+missing admission into a delivery result or imply that requested effects never
+started. A decision to create, reuse or defer a carrier separately binds the
+table's lifetime condition and actual ticket-state authority.
+
 ### Execution Contract Admission
 
 The runtime execution flow should treat the ticket, sprint entry, or drafted
@@ -727,11 +801,20 @@ Bind the selected carrier, current upstream authority, admission mechanism,
 contract identity, criteria and durable result surface under
 [Work-Carrier-To-Execution](#work-carrier-to-execution-rule). Its Result condition
 evaluates that predicate, retaining `admitted` or reason-qualified `rejected`
-as the original domain outcome. The core law decides verdict, actual performance,
-counterevidence and absent required assessment; the carrier label decides none
-of them. `drafted` and `superseded` are carrier states. Admission is distinct
-from performance or completion of the admitted work, and its Currentness
-condition governs reliance on an earlier grant.
+as the original domain outcome. This owner's reason domain is: established
+admissibility (`satisfied`); demonstrated violation of the contract's admission
+conditions (`falsified`); missing deciding evidence (`indeterminate`); admission
+evaluation outside its bound scope or capability (`out_of_frame`); and unusable
+subject or governing authority/basis coordinates (`invalid_basis`). A known
+defeated grant within an interpretable basis is a violation, not missing
+evidence. Every refusal retains its reason. An `admitted` label with missing
+support or reason is `indeterminate`, retaining separately authenticated
+counterevidence or a scope/basis diagnosis under the core legal pairs. A
+required admission evaluation with no result remains an absent slot with known
+performance or uncertainty, not an invented assessment. `drafted` and
+`superseded` are carrier states. Admission is distinct from performance or
+completion of the admitted work; Currentness governs reliance on an earlier
+grant.
 
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
@@ -753,6 +836,13 @@ the owning work-wave authority has not admitted.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
+Given F2 and F6 and a claim requiring independent assessment, author evidence
+cannot itself establish that independence or transfer acceptance authority.
+The [configuration contract](FOUNDATIONS.md#configuration) preserves required
+independence. UP-007 chooses its applicable boundaries, durable trace and
+promotion-blocking policy below; the governing owner selects required review
+and any reserved decision. Fresh context alone changes no authorship relation.
+
 Authority to author or implement a change is not independent authority to
 verify it. Where independent review is required, the reviewer is not the author
 of the reviewed subject and identifies the exact subject, basis, scope,
@@ -772,7 +862,8 @@ review verdict. This rule requires no separate receipt, carrier, or review
 round.
 
 A review verdict is bounded by the exact reviewed claim and its applicable hard
-stops. A finding blocks current promotion only when it falsifies that claim,
+stops, using the [core result record](FOUNDATIONS.md#result-algebra). A finding
+blocks current promotion only when it falsifies that claim,
 exposes competing or ambiguous authority on its acceptance path, violates
 applicable active authority, safety, or retained accepted behavior, or
 establishes a material architectural decision with durable consequences that
@@ -781,6 +872,13 @@ forecloses an admitted Product outcome.
 A valid observation outside that boundary is repricing input. It does not by
 itself widen the reviewed subject, block its bounded claim, or require a new
 ticket, artifact, review round, or implementation increment.
+
+`Blocks promotion` and `repricing input` classify a finding's relevance under
+that policy; neither is a verdict on the reviewed claim. Any determination
+that promotion is admissible evaluates the actual affected gate conditions.
+Known violations falsify that predicate; unknown required evidence keeps it
+indeterminate, with core scope/basis diagnoses and coverage retained. A finding
+outside the promotion boundary does not make that predicate satisfied.
 
 A direct or lawfully proxied human ruling receives durable disposition before
 the next affected acceptance boundary. Its source wording remains distinct
@@ -818,7 +916,8 @@ reassessment is required. Acquire the relevant current workspace and sufficient
 evidence through that condition, rather than re-authoring an unchanged judgment
 or requiring a complete historical transcript.
 
-Required independent assessment may consume valid C, but its assessor acquires
+Under [UP-007](#execution-and-verification-authority-separation-stdo-up-007),
+required independent assessment may consume valid C, but its assessor acquires
 sufficient exact evidence and supplies its own judgment under the actual
 independence condition. Reusing the author's J cannot satisfy that condition.
 
@@ -846,6 +945,13 @@ results under the core contract. Their predicate concerns the authorised
 disposition on the exact obligation and basis, not whether the original
 delivery obligation has been fulfilled. Withdrawal or deferral cannot be
 projected as successful delivery.
+
+For each of `retained`, `superseded`, `deferred` and `withdrawn`, bind the exact
+obligation, successor or later-resolution relation where applicable, and actual
+owner mandate. A supported lawful ruling satisfies that decision predicate;
+a demonstrated absent or unauthorized ruling falsifies it; missing reason or
+authority evidence leaves it indeterminate, retaining core scope/basis diagnoses.
+Preserve any separate known delivery failure and the ruling's actual effects.
 
 ### Bounded-Context Term Binding
 
@@ -970,6 +1076,13 @@ A passing test is closure evidence only when the test expectation can be traced
 back to the admitted ticket and its governing authority chain.
 
 ### Implementation Migration Category
+
+Given F3, F4 and F6 and a migration spanning surviving obligations, local
+completion cannot establish closure of an unexamined interface family. Apply
+[Spec's migration law](SPEC_METHOD.md#core-interface-migration-rule) and the
+shared preservation contract. This ticket family chooses the concrete
+declaration, break/closure map and review checklist; it supplies evidence to
+that law, not another migration policy or permission to reinterpret it.
 
 If `ticket_category: implementation_migration`, the ticket must carry both:
 
@@ -1353,7 +1466,12 @@ readable without forcing deferred work into comments or goals.
 
 ### One-Truth State Projection And Drift Refusal (`STDO-UP-009`)
 
-Work state has one authority chain: Goals own the bounded work wave, the ticket
+Given F2, F3 and F6, a work view cannot establish or alter an owner's current
+state merely by displaying it. [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+supplies that consequence. UP-009 chooses the work-carrier authority chain and
+drift refusal; the listed owners retain their actual state-transition grants.
+
+Work-carrier state has one authority chain: Goals own the bounded work wave, the ticket
 owns ticket state, milestone authority owns subordinate milestone state, and
 accepted design owns realization decisions. Comments, dashboards, registers,
 indexes, and generated summaries are projections.

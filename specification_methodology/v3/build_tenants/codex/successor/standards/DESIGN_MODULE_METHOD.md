@@ -21,6 +21,19 @@ Design acceptance evaluates the required relations through the core result
 conjunction and the design authority's existing decision. Application of the
 shared law adds neither a compulsory workflow nor a second acceptance record.
 
+The following conditional arguments use [F1–F6](FOUNDATIONS.md#foundational-commitments)
+under this member's adoption. The last column names policy chosen here, not a
+consequence of capacity alone; project design owns its concrete realization.
+
+| Material family | Premise and shared consequence | Additional policy and owner |
+|---|---|---|
+| Ontology, constructability and admission: UP-002, UP-016, sections 4B and 5E | F2/F4/F6 require interpreted meaning, compatible realization and actual admission authority; structural validity alone cannot establish design fitness or authorize promotion. Contract application binds the accepted semantic basis and complete material relation at the gate. | This Design Method chooses Ontology-first derivation, native constructability, entity/lifecycle and authority matrices, and three-view evidence with proportional sequencing. Spec UP-021 owns enclosing-relation admission. |
+| Prime, IACS and boundary cost: UP-003, UP-005, sections 5–5C | F1/F4/F5 require adequate realization within material obligations and finite resources; factoring is lawful only while required meanings and roles survive composition. | This member chooses whole-family Prime contraction, declared atom domains, IACS, promotion and boundary-cost tests; it does not infer a unique implementation or a numerical minimum from F5. |
+| Affected frames and reconstruction: UP-017, UP-018 | F2/F3/F4/F5 require sufficient current support for the bounded action and every material join. Missing governing relations prevent a supported reconstruction or preservation claim. | This member chooses affected-frame declarations and the four action classifications below, allows frame networks and existing artifacts, and requires the private-history-withheld discriminator. |
+| Computational realization and foundation selection: UP-019, UP-023 | F1/F4/F5/F6 require actual operations to preserve selected obligations, roles and grants within material resource limits. Shared machinery alone neither establishes role equivalence nor authority. | This member chooses the domain-to-computational projection, bounded discovery, candidate-composition and elimination evidence, and undominated frontier; the Product owns acceptance limits and workloads. |
+| Functional realization and seams: sections 3–4A and 7–13 | F2/F3/F4/F5/F6 require preserved meaning, supported current inputs, total bounded handling and effects under the actual grant. Shared projection/result laws decide those relations, not implementation style. | This member owns the stated preferences, prohibitions, conditional functional-claim duties, Python refinement, ingress, carrier, interface and dependency policies; their modal strength and adoption scope remain as stated below. |
+| Module proof, lifecycle and review: sections 5D, 6A–6C, 11B–11D and 14–14A | F1/F2/F6 require evidence for the exact claimed behavior and distinguish assessment from acceptance. Reuse applies the Foundations currentness relation to the actual accepted evidence. | This member chooses reference derivation, module-owned proof and lifecycle confirmation; optimization/recurrence and post-ticket review retain their local scope and re-entry limits. |
+
 ## 1. Purpose
 
 This method exists for projects that want a stronger implementation discipline
@@ -290,7 +303,10 @@ Projects using this method must avoid:
 
 ---
 
-The semantic kernel is pure for the same admitted inputs. Time, randomness,
+Where a project claims functional bias, pure transforms, immutable carriers,
+single-owner truth or low-coupling realization, the following additional duties
+apply to that exact boundary. The semantic kernel is pure for the same admitted
+inputs. Time, randomness,
 UUID minting, environment/process/filesystem/network reads and global registries
 belong to declared ingress or effect boundaries. Identity creation is explicitly
 owned there. Invalid or incomplete truth is rejected at ingress; transforms use
@@ -383,8 +399,8 @@ staleness, and the affected projection set decidable. A reprice of a governing
 source invalidates only the affected Ontology relations and downstream
 projections until their impact is re-evaluated. Code, tests, generated schemas,
 or a single implementing agent cannot self-ratify missing Ontology authority.
-The Ontology verdict may live in the same design pack and acceptance record as
-the three-view verdict; this rule does not require a second document, ticket, or
+The Ontology acceptance decision may live in the same design pack and record as
+the three-view acceptance decision; this rule does not require a second document, ticket, or
 approval ceremony.
 
 Proportionality applies. A **material semantic boundary** is one whose change
@@ -860,16 +876,15 @@ other outcome. These are semantic bindings, not a new carrier. The library's
 relates this use to its foundations. This method owns design completeness;
 UP-021 owns admission and standing-test semantics.
 
-The assessment predicate is that this exact candidate satisfies that declared
-admission relation at its current basis. Predecessor continuity, currentness
-and admitter authority are material joins: established stale predecessor state
-or a defeated grant is `falsified`; missing evidence about them is
-`indeterminate`. An uninterpretable or contradictory governing basis is
-`invalid_basis`; an unsupported evaluation boundary is `out_of_frame`.
-`satisfied` requires the whole predicate and its joins. Preserve the domain
-outcome and the core performance/effect record, including non-performance,
-partial publication or unknown effects. Candidate well-formedness is a
-different predicate.
+Use [UP-021's admission predicate and reason-sensitive map](SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021)
+with this candidate, current authoritative basis, complete design-declared
+relation and commit unit. Predecessor continuity, currentness and admitter
+authority are material joins. UP-021 owns their missing, stale, incompatible
+and unusable-basis distinctions, required trust-boundary validation and the
+separate assessment, authorized decision and observed commit predicates.
+Preserve the qualified domain outcome and performance/effect record, including
+non-performance, partial publication or unknown effects. Candidate
+well-formedness is a different predicate.
 
 A shape-correct projector candidate therefore requires authentic
 current-predecessor support and the actual grant at this gate; those facts
@@ -1342,9 +1357,10 @@ values. Neither substitutes for the other. Repeating federal method in local
 design is not reconstruction.
 
 The evidence must recover every governing relation in the action's causally
-closed affected set and distinguish:
+closed affected set and distinguish the following action classifications.
+These describe the action/relation pair; they are not evaluation verdicts.
 
-| Decision | Action against the governing relation |
+| Action classification | Action against the governing relation |
 |---|---|
 | preserves | Operates inside the intact relation. |
 | changes | Alters the relation and requires acceptance by re-entry at that relation. |
@@ -1352,8 +1368,24 @@ closed affected set and distinguish:
 | violates | Contradicts the relation, leaves an equivalent path undisposed, or accepts a changed relation only inside the acting frame. |
 
 Thus locus of acceptance separates change from violation; explicit disposition,
-not equivalence alone, separates lawful duplication from violation. Missing
-relations or an undecidable distinction leave this sufficiency claim unmet.
+not equivalence alone, separates lawful duplication from violation.
+
+Evaluate two named predicates separately through the core result record:
+"the selected method and accepted design suffice to reconstruct the governing
+relations and classify action A on affected set M" and, when action conformance
+is assessed, "A is lawful against those relations." Demonstrated complete
+reconstruction satisfies the first even when the recovered action classification
+is `violates`; an established missing material relation or indistinguishable
+required case falsifies it. Unexamined support or an undecided distinction is
+indeterminate. The lawfulness predicate is satisfied by supported `preserves`,
+by `changes` with the required accepted re-entry, or by `duplicates` with its
+required explicit disposition; a demonstrated `violates` falsifies it.
+A proposed change or duplicate without decided acceptance/disposition retains
+indeterminate lawfulness unless evidence already establishes a violation.
+Unusable subject/basis and established scope/capability shortfall retain
+invalid_basis and out_of_frame on the affected predicate. Preserve the action
+classification, reason, performance and evidence; a label without its required
+support establishes neither predicate.
 
 This is a property of the existing Ontology, authority/admission relation,
 frame declaration, views and module mapping, not another artifact. It is bound
@@ -1498,22 +1530,27 @@ by imperative glue in a plugin, shell, service, script, or test harness.
 ### Gate and retrospective work
 
 At the gate, apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
-to the exact design-acceptance claim and conjoin the required Ontology,
-design-view, constructability and axiom results under the core law. The design
-authority then records its `accepted` or `non-accepted` disposition on that
-predicate. This binds the existing gate's coverage and authority; no view
-count, empty set or supported exclusion substitutes for the required set.
+to the admissibility of the exact design assessment and its support. Conjoin
+the required Ontology, design-view, constructability and axiom results for the
+design-conformance predicate. The design authority separately records its
+`accepted` or `non-accepted` decision. An acceptance decision requires the
+satisfied conformance result and the authority's lawful mandate; non-acceptance
+retains the actual failed, unresolved or diagnosed conformance result and does
+not itself mean falsified. Evaluate the lawfulness of either decision through
+the core [decision predicate](FOUNDATIONS.md#result-algebra), preserving the
+decision and its reason. No view count, empty set or supported exclusion
+substitutes for the required assessment coverage.
 
-For a new or semantically changed boundary, the Ontology and design verdict must
+For a new or semantically changed boundary, the Ontology and design decisions must
 both be `accepted` before the affected implementation, public contract, or
 semantic carrier is promoted or the work claims design-method closure. Any
 failed applicable axiom, missing functionality disposition, unresolved
-authority path, or blocking realization gap keeps the verdict non-accepted.
+authority path, or blocking realization gap keeps the decision non-accepted.
 
 For an unchanged `realization_refactor`, the gate is proportional: cite the
 accepted Ontology and design basis, identify the touched projection set, and
 prove that entities, relationships, lifecycle, authority, functions, effects,
-and public semantics have no delta. That proof reuses the existing verdict; it
+and public semantics have no delta. That proof reuses the existing accepted basis; it
 does not create a new Ontology or acceptance ceremony.
 
 When `co_evolution_admissible(B)` holds, implementation may precede or develop
@@ -1538,7 +1575,7 @@ semantic boundary with unrelated bootstrap, test-harness, projection, or
 delivery shapes merely to look complete.
 
 If the Ontology, any of the three views, the cross-view evaluation, or either
-accepted verdict is absent, the boundary is not design-method complete. Work
+acceptance decision is absent, the boundary is not design-method complete. Work
 may continue as provisional co-evolution only when
 `co_evolution_admissible(B)` holds, but the affected boundary may not be
 promoted, published, or closed.
@@ -1580,16 +1617,19 @@ mixed process each state their operations, composition, effect locations,
 authority and material resource measures, with their units and observation
 boundaries. An operation performed by a person
 retains its input, outcome, refusal and recovery contract; a role title is not
-its implementation. The domain, algorithmic, informational and computational
-accounts must agree on the same obligations. Software-module mechanics apply
+its implementation. The [orthogonal accounts](FOUNDATIONS.md#orthogonal-descriptions) must agree
+on the same obligations; domain semantics supply the subject those accounts
+describe. Software-module mechanics apply
 where software realizes the boundary, not as a demand to disguise every human
 step as code.
 
 For a material producer-to-consumer path, this projection identifies fact
 establishment, consuming operations, applicable basis and invalidators, effect
-boundaries, retained alternatives and accumulated work. Use the validity and
-reuse relation owned by `SPEC_METHOD.md` `STDO-UP-021`; method and assurance
-operations are included where material. Component-local success cannot
+boundaries, retained alternatives and accumulated work. Apply the validity and
+reuse relation owned by [workspace and context](FOUNDATIONS.md#workspace-and-context);
+[Spec UP-021](SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021)
+adds enclosing-relation admission conditions. Method and assurance operations
+are included where material. Component-local success cannot
 establish the complete-path claim, and different names do not establish
 different computational responsibilities.
 
@@ -1931,17 +1971,24 @@ Convenience is not sufficient justification.
 ## 8. Totality Rule
 
 Semantic functions should be total, or as close as the language and problem
-allow. Bind their admitted input domain, intended result and permitted recovery,
-re-entry, yield or termination under
+allow. Bind their admitted input domain, intended result and permitted repair,
+re-entry, refusal, yielding or termination under
 [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and
 [bounded construction](FOUNDATIONS.md#bounded-construction). The method-boundary
 return uses the core result record with the original domain outcome.
 
-The functional policy is to reject invalid input at ingress, consume admitted
-carriers in kernels, and return typed explicit failure where practical.
-Prefer closed Result-like outcomes and explicit validation, unsupported and
-rejected cases. Hidden preconditions, semantic `.get(...)` fallback chains
-and controller defaults that reconstruct missing truth violate that policy.
+The preferred functional shape rejects invalid input at ingress, consumes
+admitted carriers in kernels, and returns typed explicit failure where practical.
+Projects should prefer closed Result-like outcomes and explicit validation,
+unsupported and rejected cases, and should avoid hidden preconditions, semantic
+`.get(...)` fallback chains and controller defaults reconstructing missing truth.
+For an assessed method-boundary outcome, bind the actual function predicate:
+an established intended result satisfies it; demonstrated rejection or
+non-fulfilment falsifies it only when that evidence defeats that predicate.
+Insufficient evidence remains indeterminate, an invalid governing basis is
+invalid_basis, and an unsupported evaluation domain is out_of_frame.
+An unsupported/rejected domain label without its reason cannot choose among
+these cases. Performance and effects remain separate core coordinates.
 Closed handling does not promise external-computation termination.
 
 ---
@@ -2213,7 +2260,7 @@ substitutes a weaker property for the governed claim.
 The complete selected function is the causal closure of the declared claim,
 not the whole Product or the whole history of its construction. The existing
 4B and 5E unchanged-boundary rules permit reuse of a current accepted Ontology,
-design verdict and sufficient reconstruction evidence after checking their
+design acceptance decision and sufficient reconstruction evidence after checking their
 exact scope, traces, applicability and invalidators. A new role, conversation
 or review occurrence does not itself require re-authoring that evidence or
 recreating the three views. Missing, stale or ambiguous coverage is not a
@@ -2311,7 +2358,7 @@ failed relation.
 ## 14A. Functional Realization Review Checklist
 
 A claim of functional bias, pure transforms, immutable carriers, single-owner
-truth or low coupling selects the realization policies in section 14 for its
+truth or low coupling selects the [section 4 policies](#4-functional-bias-without-language-mandate) and section 14 owner routes for its
 exact boundary. Evaluate them against the admitted Ontology, atom/IACS mapping,
 three views, computational binding, implementation and module-owned proof.
 The check applies in any language to modules, carriers and data entities.
@@ -2326,7 +2373,7 @@ this checklist does not introduce stricter duplicate gates.
 Two proof duties of this functional-realization claim remain explicit:
 functional equivalence to the specification and, when present, the reference
 realization at the semantic boundary; and negative proof that imperative,
-open-payload or effect-edge-erasure bypasses fail closed. A graph-native
+open-payload or effect-edge-erasure bypasses fail closed. An ODD-governed
 boundary additionally uses ODD's supported real authority-path proof.
 
 For an unchanged boundary, use the accepted basis and no-material-semantic-delta

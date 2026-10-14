@@ -15,6 +15,9 @@ Conjoin and Dispose responsibilities. Candidate preservation, acceptance,
 publication and consumer adoption remain distinct decisions. Its version/ref
 examples illustrate the declared release identities; each actual cut requires
 its own authorised exact binding.
+Result bindings below preserve core legal performance pairs, diagnostic
+precedence, absent coverage and actual effects. They describe the existing
+checks and decisions without adding an evaluation stage or evidence carrier.
 
 ## Release-Publication Context
 
@@ -60,6 +63,14 @@ affected scope, downstream proof obligations, and version-line disposition.
 The existence of an RC window does not authorize untriaged mutation.
 
 ## Release Identities
+
+This identity/publication family assumes [F2–F4 and F6](FOUNDATIONS.md#foundational-commitments)
+with separately governed Products and observable release carriers. A claim
+then needs its exact subject, compatible member/ref relations and actual grant
+under [Contract application](TRANSFORMATION_LIBRARY.md#contract-application).
+This member chooses immutable annotated cuts, qualified namespaces, subtree
+identity, historical conservation and monotonic selectors. Product release
+authorities assign namespaces and subjects; co-location cannot choose them.
 
 The release-publication context distinguishes:
 
@@ -174,7 +185,7 @@ The release process has three phases:
 
 There is no second final cut after an accepted RC. Publication immediately
 makes the new highest ordinal discoverable through the version-line selector;
-acceptance remains a verdict over the exact immutable RC rather than a second
+acceptance remains a decision over the exact immutable RC rather than a second
 carrier. If any byte capable of affecting the Product or a release-scoped claim
 changes, the project publishes and reviews a higher immutable RC cut instead.
 
@@ -229,7 +240,28 @@ local command success or failure cannot decide the remote effect. After
 observation, complete or repair only the still-authorised missing relation;
 never move an immutable published cut.
 
+The publication, advancement, selector-resolution and cohort gates below each
+bind their stated conditions as their exact predicate. `Refused`, `fails closed`
+and `stops` preserve the domain reason: a demonstrated missing/incorrect ref,
+nonmonotonic target, stale accepted plan, defeated lease or unsupported required
+atomic transport falsifies that gate's admissibility predicate; unavailable
+remote or deciding evidence leaves it `indeterminate`. An uninterpretable
+governing subject/basis gives `invalid_basis`; evaluation outside its declared
+scope/capability gives `out_of_frame`; established fulfillment of all conditions
+gives `satisfied`. Missing reasons cannot justify satisfaction. A gate result
+does not establish actual publication/adoption, and a refused call does not
+prove `not_started` after possible dispatch. Preserve the core performance,
+coverage and observed-effect coordinates at each selected boundary.
+
 ## Exact-Cut Qualification
+
+Given F1–F4 and F6, evidence for a narrower or different subject cannot establish
+this cut's claim, and a satisfied assessment cannot make an owner decision.
+The shared [result/conjunction contract](FOUNDATIONS.md#result-conjunction)
+supplies those consequences. Release policy separately chooses exact-cut review,
+required operator checks and human acceptance; the Product declares its claim
+set, external dependencies and any lawful narrowing. Supported alternative
+realizations use those same claim conditions, not an assumed preferred build.
 
 Qualification binds:
 
@@ -253,6 +285,17 @@ above. Evaluate that property using the shared Result condition, preserving the
 item's original outcome and finer diagnostic. The release's declared required
 claim set supplies the conjunction; its core result, performance and coverage
 determine standing rather than a passed label or cached release summary.
+
+For the item's claimed property, `passed` maps to `satisfied` only with
+established performance and every required coverage/evidence condition on the
+exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
+`cached green` or any other raw label without deciding support is
+`indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
+diagnosis and separately authenticated counterevidence under the core legal
+pairs. Missing reasons follow the core missing-reason rule. A missing required
+judgment remains an absent coverage slot, not a fabricated skipped evaluation;
+the declared conjunction retains a known failure beside that slot. Actual
+performance and uncertain effects are preserved independently of those labels.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
@@ -289,6 +332,12 @@ the selector backward. The selector is therefore equivalent to
 `v<version>-rc.latest`, while every concrete RC tag remains addressable.
 
 ## Selector And Consumer Adoption
+
+F2, F3 and F6 imply that discovery of current publication is neither an exact
+consumer basis nor permission to change one. This family chooses separate
+presentation and mutation, digest-bound plans and same-line downgrade refusal.
+The actual consumer authority accepts the selected plan; supported retention of
+an older immutable cut remains lawful through the exact-basis route below.
 
 The version-line selector answers only:
 
@@ -380,6 +429,15 @@ belong in release-scoped carriers and consumer basis bindings.
 
 ## Coordinated Release-Matched Asset Cohorts
 
+Given F3, F4 and F6 and an explicitly declared cross-Product cohort, local member
+success cannot establish the material joins of the cohort or merge its owners.
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and core
+conjunction supply that consequence. This family additionally chooses exact
+version matching, the two-commit construction, atomic publication and ref leases.
+The declaring authorities select the cohort; separately authorized recovery
+owns any historical-backfill exception. Those policies are not universal
+atomicity requirements for unrelated operations.
+
 A Product authority may declare an explicit cross-Product **Release-Matched
 Asset Cohort** when one source corpus and its required distributed or derived
 assets must remain usable as one versioned set. The declaring relation names
@@ -414,6 +472,14 @@ index is regenerated, mechanically validated, independently qualified where
 required, and released under the same new cut name. A stale index may remain
 immutable history; it cannot accompany the changed source as the current
 cohort.
+
+`Complete`/`incomplete` describes the declared cohort relation. Evaluation of
+`every required cohort member and release/source relation holds` is `satisfied`
+only with established complete coverage; an observed missing or incongruent
+required member is `falsified`, and unobserved or unavailable closure evidence
+is `indeterminate`, retaining core basis/scope diagnoses. An unknown required
+set cannot become a proved empty cohort. This assessment and the later
+remote-publication observation remain different predicates.
 
 ### Two-Commit Construction And One Publication Transaction
 
@@ -544,6 +610,14 @@ before acceptance.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
+This family assumes F1–F4 and F6 and a successor whose claims derive from an
+identified predecessor. Naming, code similarity or patch absence cannot then
+establish semantic preservation, and evidence cannot authorize removal. The
+shared [preservation contract](TRANSFORMATION_LIBRARY.md#contract-application)
+supplies those constraints. UP-015 chooses complete predecessor disposition and
+watched-support-line policy. Product authority owns removal and acceptance of
+changed meaning; the consumer chooses its comparison and durable record.
+
 A successor identifies the exact predecessor immutable RC whose semantic claims
 it evolves. That origin remains immutable for the candidate. Every predecessor
 claim capable of affecting the successor receives one semantic disposition:
@@ -552,6 +626,37 @@ claim capable of affecting the successor receives one semantic disposition:
 - **superseded** — an accepted successor relation replaces it;
 - **intentionally removed** — current Product authority removes it; or
 - **not applicable** — it has no successor effect, with a bounded reason.
+
+These are row dispositions, not interchangeable verdicts on retention. Bind
+each semantic assessment to the predicate for its exact predecessor claim and
+successor relation:
+
+| Row disposition | Semantic predicate assessed | Required decision relation |
+|---|---|---|
+| `conserved` | the successor retains this predecessor claim's meaning | recording the conservation disposition under the bound mandate |
+| `superseded` | the named successor relation replaces this predecessor claim | actual acceptance of that successor relation by its governing authority, plus the bound disposition |
+| `intentionally removed` | this predecessor claim is excluded from the successor's governing claim set | actual removal by current Product authority; omission alone supplies no decision |
+| `not applicable` | this predecessor claim has no effect on the declared successor scope | supported applicability determination and the bound disposition; scope cannot be silently narrowed |
+
+On each named semantic predicate, established fulfillment maps to `satisfied`,
+an admissible counterexample to `falsified`, and insufficient evidence or a
+missing reason to `indeterminate`. An uninterpretable subject/governing basis
+is `invalid_basis`; assessment outside scope/capability is `out_of_frame`.
+Preserve the original row and cause, actual performance and absent coverage
+under the [core result contract](FOUNDATIONS.md#result-algebra). Satisfaction
+of removal or non-applicability is not a claim that predecessor meaning was
+retained. Retention and replacement may be shown by any supported realization,
+not only a familiar structure or byte-identical implementation.
+
+For a row's claimed authorized disposition, the separate decision predicate is
+`this disposition D on the exact claim and basis was made under its bound
+mandate`. A supported lawful decision is
+`satisfied`; a demonstrated absent/unauthorized decision is `falsified`;
+unconfirmed authority, reason or decision is `indeterminate`, retaining core
+basis/scope diagnoses. The table's required acceptance or removal decision is
+an actual additional obligation where named, not a decision manufactured by
+recording a row. Neither predicate overwrites the other, any known semantic
+failure, or observed and uncertain effects.
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a

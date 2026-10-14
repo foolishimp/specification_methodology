@@ -24,6 +24,20 @@ carriers, control grants and domain outcomes below specialize shared
 preservation, projection, currentness and result law. They require no additional
 generic workflow, runtime API, categorical-equivalence claim or actor hierarchy.
 
+These material families use [F1–F6](FOUNDATIONS.md#foundational-commitments)
+conditionally within ODD adoption. The named ODD policies are additional choices
+owned here; the consuming Product binds their concrete contracts and grants.
+
+| Material family | Premise → consequence under shared law | Additional ODD policy |
+|---|---|---|
+| Typed graph and Product boundaries: sections 5–7, 11.1–11.4, 11.8 | F2/F4/F6 require compatible interpreted carriers and preserved authority at composition; last-output wiring cannot substitute for a required earlier input. | Published graph functions, explicit assets/catalog/GTL module, cumulative environment, and installed/self-host separation are this profile's chosen realization. |
+| Control ownership: A0, A4a, A5, A7, A12, A15, A16 | F4/F6 require distinct operations to retain their actual grants when machinery is shared. Contract application therefore cannot infer action authority from a report, model or projection. | The four-function table and ABG admission/traversal divide are the chosen control architecture; query reads and function sharing do not merge authority. |
+| Targets and lawful actions: A2, A3, A11 | F1/F3/F6 require current actions to preserve the selected outcome and actual mandate. An action outside that bound cannot be selected merely because it is available. | Exact TargetObligationBinding, published-action selection and graph-owned re-entry are required; Product authority owns outcome changes and bounded prerequisite/experiment admission. |
+| Observation, lineage and recovery: A1, A1a, A1b, A13, A13a | F2/F3/F4/F6 require sufficient authentic current support and causal joins; history does not overrule changed reality. Workspace/currentness law preserves uncertain effects before dependent repetition. | ODD additionally requires admitted reachable ledger/event support and replay-visible decisions. This ledger/replay architecture is not a universal consequence of F3 or F5. |
+| Total control and liveness: A4, A8, A9, A10 | F1/F5/F6 require truthful bounded handling without equating activity, lawful stopping or a permitted decision with achieved purpose. | The seven closure dispositions, typed no-action and replay-visible yield are ODD's control vocabulary; A8 binds separate decision and fitness predicates. |
+| Closure across refinement: A6, A14, 11.9 | F1/F4/F6 require all material outer obligations and joins to survive composition; inner success alone cannot establish outer closure. | ODD requires evidence-before-closure and recursive application at published boundaries, while opaque internal algorithms remain permitted. |
+| Process and authority-path proof: 11.7–11.7B, UP-010 | F2/F6 require evidence about the actual claimed process and authority path, not a preconstructed verdict. | This member chooses manual/agentic walkthrough and supported-path negative proof; the method/actor cause distinction below does not itself decide conformance. |
+
 <!-- STDO3_PROFILE_BINDING_END -->
 
 ## 1. Position
@@ -298,6 +312,13 @@ An
 authority. Each binding declares evidence, permitted stops, recovery and
 effect observations. The implementation follows the
 [Spec Method tenant binding](SPEC_METHOD.md#what-how-and-work-carriers).
+A returned compute-kind label is not an assessment. For the declared F_D
+predicate, `success` requires establishing evidence and `failure` a
+counterexample; absent deciding evidence remains indeterminate. F_P candidate
+availability can be satisfied by an authenticated produced candidate without
+deciding its fitness. F_H assesses the core decision predicate on its exact
+mandate. Invalid basis and scope/capability diagnoses, missing reasons,
+performance and effects retain their core meanings for each bound predicate.
 
 ### Graph Functions
 
@@ -461,9 +482,19 @@ When an implementation or design move is not clearly covered by the current meth
 - non-compliant with the current method
 - valid and worth incorporation into `ODD_METHOD.md`
 
-If the result is incorporation, the implementation is not fully approved until the method surface is updated accordingly.
+Assess "move X conforms to the applicable current ODD contract at basis B"
+through the core result record. Supported `compliant` is satisfied and
+demonstrated `non-compliant` is falsified on that predicate; missing deciding
+support is indeterminate, unusable basis invalid_basis, and an established
+scope/capability shortfall out_of_frame. Preserve the original finding and
+reason. `incorporation` is a proposed method-change treatment, not another
+conformance verdict: the current assessment remains, and its merit and lawful
+ratification need their own predicate, evidence and authority.
 
-If the result is non-compliance, the implementation should be repriced, repaired, or rejected rather than normalized by repetition.
+If incorporation is selected, the implementation is not fully approved until
+the method surface is lawfully updated and applicable conformance established.
+If non-compliance is established, the implementation should be repriced,
+repaired or rejected rather than normalized by repetition.
 
 The practical rule is:
 
@@ -845,6 +876,16 @@ repriced away, or falsified, the loop selects no further material work without
 another admitted basis. A `reprice` disposition requests lawful constitutional
 re-entry; it does not perform the reprice or select the successor outcome.
 
+These terminal conditions are control reasons, not completion verdicts.
+The stop returns the selected outcome or bounded-task predicate through the
+[core stop contract](FOUNDATIONS.md#result-algebra): admissible completion
+evidence satisfies it; a demonstrated unmet required condition falsifies it;
+exhaustion or withdrawal with no deciding outcome evidence leaves it
+indeterminate. An invalid evaluation basis or established scope/capability
+diagnosis retains its own core value. The reason, actual performance, effects
+and unresolved obligations survive, while lawfulness of stopping is assessed
+separately. Neither a stop nor a lawful no-action result fabricates completion.
+
 The loop is framework-independent. Product implementations may use different
 carrier names, but they must preserve this authority shape:
 
@@ -895,7 +936,19 @@ authority:
 | `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, admit construction intent, select work, invoke work, or close work. |
 | `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It emits observation and gap pressure only; it does not admit construction intent, invoke work, choose work or close work. |
 | `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It may bind target obligations and rank lawful actions, but does not admit construction intent or decide whether the prior action closed, yielded, failed or requires repair; it consumes the admitted EdgeClosureDecision for that classification. |
-| `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
+| `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation only. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not admit construction intent, invoke work or choose the next graph action. |
+
+`missing`, `partial`, `blocked`, `waiting` and `ambiguous` in a
+GapPressureRow describe the observed asset/evidence condition relative to the
+desired model; they are domain data, not five verdict aliases. An `eval_gap`
+assessment binds "this pressure accurately characterizes asset/evidence X
+against model M at observation O." Supporting observation satisfies that
+characterization; a demonstrated mismatch falsifies it; undecided source
+support is indeterminate. An invalid model/observation basis or an established
+scope/capability shortfall uses the corresponding core diagnosis. Preserve the
+pressure, evidence, performance and uncertainty. A correctly observed missing
+asset can satisfy this characterization while its Product obligation remains
+unfulfilled.
 
 The word `evaluator` is not sufficient by itself. A design, ticket, code module,
 or proof must name which function it is implementing or consuming:
@@ -1113,8 +1166,12 @@ admission refs
 edge_converged
 ```
 
-It does not select the next action. Action selection belongs to `evaluate_next`
-over `EdgeClosureDecision` plus fresh `eval_gap` truth.
+`edge_converged` projects the result of A6's complete edge-closure
+predicate; it cannot be set from counts, liveness or artifact presence alone.
+A true projection requires satisfied closure. A false/open projection retains
+the failed or unresolved result and its reason, rather than treating every
+open edge as falsified. It does not select the next action. Action selection
+belongs to `evaluate_next` over `EdgeClosureDecision` plus fresh `eval_gap` truth.
 
 **A8. Closure Decision Is A Sum Type**
 
@@ -1164,8 +1221,14 @@ successful product outcome. Each result therefore has one verdict on its own
 explicit predicate; the disposition determines permitted subsequent treatment.
 `evaluate_next` separately judges lawful next-action selection. A valid typed
 no-action return can satisfy that selection contract while the product remains
-incomplete; it cannot satisfy the product-completion predicate. This mapping
-preserves A9: yielding is not itself evidence of semantic failure.
+incomplete; it cannot satisfy the product-completion predicate. For either
+decision predicate, satisfaction needs evidence of the bound authority and
+contract conditions; an established violation, such as unauthorized selection,
+falsifies it; undecided mandate or required support leaves it indeterminate.
+Invalid governing interpretation or established scope/capability limits retain
+invalid_basis or out_of_frame on that decision predicate. Preserve the original
+action/no-action/disposition and reason rather than guessing from the label.
+This mapping preserves A9: yielding is not itself evidence of semantic failure.
 
 **A9. Yield Is Lawful Iterate**
 
@@ -1460,7 +1523,21 @@ The walkthrough proves at two levels:
 - the work it produces must be lawful: correct change-class, traceable, admitted
 - a point where the walkthrough cannot proceed is a method defect only when a competent agent, correctly configured and using the declared authority, still cannot decide — ambiguity, a missing step, contradictory authority, or an un-decidable change-class in an owning surface. That defect is repriced into the owning authority surface, the same way a failed manual traversal is a graph defect under §11.7.
 
-An agent that ignored the declared authority, relied on stale memory, or reasoned badly has produced agent error, not a method defect. Admission rejects the malformed artifact either way, so a bad agent turn neither becomes law nor silently indicts the method.
+An agent that ignored the declared authority, relied on stale memory, or
+reasoned badly has produced agent error, not evidence by itself of a method
+defect. Admission rejects a demonstrated malformed artifact either way.
+
+`method defect` and `agent error` are causal findings with provenance,
+not verdict aliases. The method assessment binds "the named owning clauses
+supply a decidable required step for the declared competent actor and authority
+packet"; a demonstrated missing, ambiguous or contradictory owning relation
+that prevents that step falsifies this predicate. Evidence that the declared
+step is decidable satisfies it. Undecided cause or insufficient walkthrough
+evidence remains indeterminate; an unusable basis or an evaluation outside
+scope retains the core diagnosis. An actor-error finding does not by itself
+satisfy method adequacy, and a malformed-artifact refusal does not by itself
+falsify it. Record the separate artifact and method assessments with their
+performance, effects and causal evidence.
 
 This proof is independent of any automated runtime. A live lane that depends on external execution conditions — an overloaded model API, a flaky transport — cannot prove the constitutional process is sound, because it conflates process validity with runtime availability. The walkthrough proves the process; the runtime only executes it.
 
@@ -1535,6 +1612,15 @@ For current product closure, live current requirements that lack an executable p
 - realized
 - explicitly deferred
 - explicitly repriced out of the active branch
+
+Deferral or repricing is an authorized change to the applicable obligation set,
+not evidence that the original requirement was realized. Retain the original
+assessment and the owning disposition/support for any exclusion. Evaluate the
+current outer closure predicate by core conjunction over all still-applicable
+obligations and joins. `closed` requires that satisfied result and the owning
+closure decision; `open` is a lifecycle state retaining the actual falsified,
+indeterminate or diagnosed result. Unknown applicability cannot remove required
+coverage.
 
 For the active software line, the immediate pressure is usually realized testcase or archived test evidence, but the governing law is proof-lane aware: the witness must be a governed realized proof surface appropriate to the requirement class.
 

@@ -46,7 +46,7 @@ accepted design, ticket, identity, or release law. The Worker carries only the
 construction or transformation authority in its admitted intake. No frame gains
 admission, publication, mutation, or other operation authority from its label.
 
-This profile also derives twelve generic specialist-frame families: Product,
+This profile also selects twelve generic specialist-frame families: Product,
 Product Composition, Design, Design Component, Public Boundary, Entity,
 Operator, Owner, Effect, Reuse/Foundation, Install, and Proof. They separate recurring evaluation
 questions that otherwise collapse across constitutional `WHAT`, structural
@@ -56,7 +56,7 @@ components, services, files, or runtime types. An activation selects only the
 families material to its exact evaluation and retains an explicit residual for
 any material family it cannot cover.
 
-This profile also derives four Product-testing specialist-frame families:
+This profile also selects four Product-testing specialist-frame families:
 user acceptance, end to end, integration, and unit. They are activated inside
 the same conditionally selected engagement relation; they are not new
 roles, stages, authorities, or a testing hierarchy. Their ordinary evidence
@@ -88,7 +88,9 @@ does not become a new constitutional owner merely by carrying it.
 
 ## Status And Authority Boundary
 
-This document is an optional derived role and evaluation profile. It has no
+This document is an optional specialized role and evaluation profile. “Derived”
+in its frame headings means an application of shared law with the additional
+profile choices identified below, not a uniquely forced role inventory. It has no
 independent ownership of STDO's execution protocol or of any Product binding.
 
 The ownership layers are distinct:
@@ -122,9 +124,9 @@ Every requirement in this profile is either:
 1. an exact application of a cited owning STDO relation; or
 2. a condition for claiming adoption of this optional profile.
 
-Neither kind creates a second amendment path for the owning federal law. If the
-profile conflicts with an owning STDO clause, the owning clause controls and the
-profile requires revision.
+Neither kind creates a second amendment path for the owning federal law. A
+profile statement that contradicts its cited owner is a defective application
+and requires revision; it supplies no alternative version of that owner's law.
 
 Inclusion in an exact released standards cut or another admitted method basis
 makes this profile available; it does not adopt it. Adoption requires a
@@ -333,6 +335,12 @@ has explicitly retained every remaining residual consistently with the claim,
 or an applicable stop returns every remaining obligation as open
 ```
 
+These conditions govern ending the attention cycle, not satisfaction of the
+Product outcome. A stop uses the [core stop rule](FOUNDATIONS.md#result-algebra)
+on the exact interrupted predicate and cause, retaining open obligations,
+actual performance and effects. Closed evaluations can include falsifications;
+ending the loop cannot promote those results or residuals to satisfaction.
+
 This relation requires no scheduler or frame engine. `M` may contain parallel
 activations. Recursion follows declared evaluation dependencies and bounded
 refinements; it does not nest or join undifferentiated copies of every frame.
@@ -457,6 +465,12 @@ assign priority, apply disposition, or activate the next frame.
 
 ### Technical triage, severity, priority, and boundary effect
 
+Under [F2 and F6](FOUNDATIONS.md#foundational-commitments), evidence about a
+failure does not supply a grant to select its response. Given this profile's
+Reviewer/Executive separation, severity and authorized priority therefore remain
+distinct. This profile chooses that allocation and the triage fields below;
+Product authority separately chooses scales, cutoffs and non-waivable stops.
+
 **Technical triage** is the Reviewer-owned assessment of one finding against
 the exact evaluated claim and basis. Where supported by admissible evidence and
 the actor capability envelope, it records:
@@ -490,6 +504,17 @@ residual. Executive then applies exactly one existing `STDO-UP-020`
 disposition. A hard stop or falsified mandatory claim cannot be waived by
 lowering priority. An observation outside the exact claim boundary cannot
 create another review round merely by receiving a severe label.
+
+The three boundary-effect labels are decision payloads. When their decision is
+evaluated, bind “this boundary-effect determination for this finding and exact
+promotion boundary was made under the current Product mandate by its bound
+authority”. Evidence that it satisfies that decision contract maps to
+`satisfied`; an established mandate, grant or hard-stop violation maps to
+`falsified`; an undecided mandate/application maps to `indeterminate`; missing
+evaluation scope/capability maps to `out_of_frame`; an unusable decision basis
+maps to `invalid_basis`. Missing causes use the core missing-reason rule. A
+lawful `blocks` decision can satisfy this predicate while the candidate claim
+is falsified; neither label determines the other result.
 
 ### Work result
 
@@ -566,6 +591,16 @@ owner's decision.
 ---
 
 ## Non-Hierarchical Frame Configuration
+
+The [F1, F4, F5 and F6 premises](FOUNDATIONS.md#foundational-commitments), applied
+through [Configuration](FOUNDATIONS.md#configuration), require sufficient task
+allocation that preserves the outcome, material dependencies, capability limits
+and grants. When an adopting Product requires independent assurance, its
+assurance owner adds that independence premise. These premises constrain the
+Executive, Worker and Reviewer contracts below; they do not force three roles.
+This profile chooses their labels, return flow, Executive mutation exclusion
+and event-driven attention policy. Existing Product authority chooses adoption,
+direct versus coordinated activation and actual grants.
 
 The active configuration uses three distinct relation structures:
 
@@ -746,6 +781,15 @@ model. A suggested repair becomes an obligation only through its proper owner.
 
 ## Derived Generic Specialist Frame Set
 
+F1–F4 require an evaluation to preserve the selected outcome, exact subject,
+meaning and material joins; F5 bounds what one actor can cover; F6 prevents
+broader coverage from absorbing another owner. Given Product work with those
+material questions, separate bounded evaluations must retain their claim and
+authority boundaries. This profile chooses the following twelve archetypes;
+the cited domain owners supply their predicates and an adopting Product chooses
+material instantiations. Neither Foundations nor adoption requires twelve
+actors or components.
+
 This profile declares the following generic frame families for Product work.
 Each row is an evaluation archetype under `REFERENCE_FRAME_METHOD.md`, not a
 complete frame declaration. An adopting project binds the exact subject,
@@ -789,7 +833,21 @@ family as one of:
 - evidenced as non-material to the exact outcome by the authority capable of
   making that determination; or
 - retained as an explicit uncovered, conditional, conflicted, or
-  `out_of_frame` residual.
+  scope/capability residual (with any actual `out_of_frame` evaluation result
+  referenced separately).
+
+These are inventory treatments, not alternate evaluation verdicts. When
+evaluating “every family is accounted for on this outcome and basis”, supported
+material instantiation, supported non-materiality or an explicit justified
+residual satisfies that family's accounting predicate. An established omission
+or disproved treatment defeats it (`falsified`); undecided treatment or missing
+reason is `indeterminate`; an unusable basis is `invalid_basis`; evaluation
+scope/capability outside the frame is `out_of_frame`. Apply core conjunction to
+the required family-accounting predicates and retain performance and effects.
+Accounting for a residual does not establish adequate coverage or the family's
+underlying Product claim. Those claims use
+[Operational Full Coverage](REFERENCE_FRAME_METHOD.md#operational-full-coverage)
+and each family's exact evaluation predicate, respectively.
 
 Absence of a named file, component, runtime object, or actor is not evidence
 that a family is non-material. Conversely, adopting this profile does not
@@ -818,6 +876,15 @@ material. They are not part of this baseline.
 ---
 
 ## Derived Product Testing Frame Set
+
+F1 and F2 require evidence congruent with the claimed outcome; F3 binds the
+actual subject; F4 prevents local proof from proving an unevaluated composition;
+F6 preserves the claim owner's meaning. Therefore a testing result can support
+only the path, population and oracle it actually evaluates. This profile chooses
+four frame archetypes and their evidence boundaries. Spec's testing and
+assurance owners, the Product and accepted design select the actual claims,
+required populations and acceptance policy; the four-frame inventory is not a
+consequence of F1–F6 alone.
 
 When this profile supports Product promotion, closure, or release assurance,
 testing is configured as a claim-relative specialist-frame set. The kind of
@@ -1113,29 +1180,14 @@ the implementation under test need not be trusted as that oracle.
 
 ### Counterexample Localization
 
-A testing counterexample is returned to its earliest supported causal frontier
-on the declared path. The frontier contains the causally minimal violated owner
-relations or seam coordinates established by the evidence; earliest means
-minimal under the declared causal relation, not first in log or clock order.
-
-The localization result represents exactly one of:
-
-- one unique violated locus;
-- a jointly established set of incomparable earliest violated loci whose
-  combined violation is necessary to the supported causal explanation;
-- unresolved alternative frontiers when the evidence supports several possible
-  causal explanations but cannot establish which occurred; or
-- `indeterminate` when the evidence cannot support a bounded frontier.
-
-Localization records the subject, basis, frontier form and members, causal
-evidence, expected relations, observed counterexample, and downstream claims
-invalidated by it. It does not collapse a jointly established set into one
-arbitrary owner or misreport unresolved alternatives as a joint cause.
-
-A localized frontier does not itself authorize broader test expansion,
-compatibility repair, another controller, or reinterpretation of unchanged
-upstream meaning. Any resulting scope or design change follows the existing
-re-entry relation.
+Apply [Spec's Counterexample Localization](SPEC_METHOD.md#counterexample-localization)
+to the testing counterexample, exact runnable or design subject, declared causal
+path, owner relations and seams. Its causal-frontier forms, evidence duties,
+exact localization predicate and reason-sensitive core mapping govern this
+profile application. Preserve the original testing result alongside the
+localization result and use the supported frontier for the existing re-entry
+relation. This application supplies neither repair authority nor an additional
+always-required evaluation stage.
 
 ---
 
@@ -1166,6 +1218,15 @@ generic family nor a fifth testing type, role or universal activation gate.
 | qualification | representative sensitivity and refusal cases below, bound to actual subjects, actor envelopes and independently stated expected relations; mechanical source checks do not supply semantic or live-user qualification |
 
 ### Interface Integration Claim Boundaries
+
+F2 and F4 require preservation across producer/consumer meanings and joins;
+F3 distinguishes the actual subject from a view; F5 requires usable participant
+context; F6 preserves each owner's grants. For a claimed complete user path,
+those premises require evidence about its material interfaces, actual selection
+and user outcome. This profile chooses the four claim boundaries and ordinary
+real-path restrictions below. Product, interface and accepted-design owners
+select applicability, source paths and permitted effects; a design-only claim
+does not acquire a runtime obligation merely by using this frame.
 
 | Claim | Evaluation and evidence boundary |
 |---|---|
@@ -1213,7 +1274,12 @@ not become another contract owner. For each material seam:
    active input and historical context; current validity and byte availability.
 4. Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to the
    mutable subject of each later operation. Its observation is distinct from
-   immutable authority, artifacts, history and prior candidates.
+   immutable authority, artifacts, history and prior candidates. For an ordinary
+   real-path claim, a pre-step snapshot does not replace the actual current
+   subject that the later operation must observe. This restriction on the
+   mutable operational subject does not change an explicitly frozen authority
+   or artifact basis or require repeating valid work merely because the actor
+   changes.
 5. Follow the actual callable path and existing effect owners through the
    selected exit and any required fresh observation. Hidden fallback, state
    injection, manually repaired output, private entry or undeclared retry
@@ -1377,6 +1443,12 @@ The Reviewer payload projection is total across the shared core verdicts as
 bound by RF-012. `complete`, `indeterminate`, and `not_applicable` below classify
 the finding-level triage payload; they are not new evaluation results,
 dispositions, priorities, or lifecycle states.
+
+`not_applicable` here means that finding-level triage is inapplicable to the
+bound payload: satisfaction supplies no adverse finding, while an invalid
+basis prevents a claim-relative technical finding. The latter still carries
+the basis diagnostic and its actual performance; it is not a missing review or
+a supported non-applicability judgment about the original review predicate.
 
 | Core verdict for the review predicate | Finding and triage payload | Executive consumption constraint |
 |---|---|---|
@@ -1636,9 +1708,11 @@ A representative profile trial establishes at least:
    grant, subject, and write territory; an in-territory mutation succeeds only
    under that exact grant and an out-of-territory mutation refuses, without
    granting operation authority to another frame;
-5. every Worker work-result variant is disjointly mapped from its Reference
-   Frame Method result and returns to its declared consumer, Executive in the
-   coordinated branch;
+5. each qualified `(Worker work-result variant, cause)` maps to exactly one
+   core verdict on the [Work result](#work-result) availability predicate,
+   including missing-reason handling, and returns to its declared consumer,
+   Executive in the coordinated branch; several cases may map to one verdict,
+   so the original variant and cause remain required;
 6. a sufficient direct local case starts and finishes as Writer in its existing
    carrier without Executive appointment or independent review; a coordinated
    `candidate_ready` also reaches disposition without Reviewer activation when

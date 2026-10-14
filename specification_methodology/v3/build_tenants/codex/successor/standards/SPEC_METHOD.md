@@ -28,6 +28,15 @@ module realization remains owned by `DESIGN_MODULE_METHOD.md`. Each detailed
 relation remains owned by its declared standard. Cross-member references
 consume that owner without transferring authority.
 
+The family arguments at the use contracts below identify F1–F6 from that
+premise layer, the consequences conditional on their domain assumptions, and
+the separately owned policy choices. Lifecycle, change-class and triage labels
+are bound input, not evaluations. Every determination using them returns the
+core record on its exact predicate; unsupported input remains unresolved.
+The bindings add no evaluation stage or carrier. Every mapping retains the
+core's legal performance pairs, diagnostic precedence, absent coverage and
+actual effects; a raw label cannot override independently admissible evidence.
+
 
 ## Canonical Compression
 
@@ -125,6 +134,14 @@ and design should declare:
 - the admissible evidence and evaluator regime
 - the provenance obligation
 - the lawful stop, hold, gap, continuation, or completion states
+
+These are instance-declared control states. Before use, the work contract binds
+each returned state and reason to its actual task predicate under the
+[core stop rule](FOUNDATIONS.md#result-algebra). A completion label needs
+established completion; a defeated task remains `falsified`, and an undecided
+task remains `indeterminate` unless its scope or basis diagnosis applies.
+Missing reasons, non-performance and uncertain effects retain their core
+coordinates. Lawfulness of stopping or continuing is a separate decision.
 
 The worker, tool, agent, or domain implementation owns the internal HOW inside
 that declared boundary unless the product explicitly promotes part of that HOW
@@ -317,6 +334,15 @@ So if project-specific design and code disappeared, recovery would proceed throu
 ---
 
 ## STDO Product Definition Overlay And Layout Independence
+
+This routing family assumes F2 interpretation, F3 identity, F4 composition and
+F6 authority, with separately governed Products and material cross-context
+relations. A locator or equal spelling therefore cannot establish meaning,
+identity or permission; [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+binds the selected source and every material relation. This member chooses the
+overlay, complete installed basis, semantic address, explicit composition and
+bootstrap contracts below. Product authorities choose their bindings, tenants,
+frame adoption and local meanings; physical layout remains permitted latitude.
 
 `SPEC_METHOD.md` owns the product-definition-routing bounded context
 `urn:stdo:bounded-context:product-definition-routing` under the selected
@@ -541,6 +567,16 @@ cut as `constitution.stdo.basis`; spelling variation cannot cross that basis.
 No cache, registry entry, source checkout, version alias, schema, or agent file
 may silently replace the basis selected in the Product Definition.
 
+For these manager checks, bind the requested operation and evaluate `its exact
+selected inputs meet the declared command conditions` through Contract
+application. A demonstrated violated condition is `falsified`; unavailable
+deciding evidence is `indeterminate`; an uninterpretable subject or governing
+basis is `invalid_basis`; evaluation outside its scope or capability is
+`out_of_frame`; all conditions established gives `satisfied`. Thus `fail closed`
+or `refusal` records the reason and withholds the dependent operation, not a
+sixth verdict. Publication, adoption and recovery completion are separate
+effectful predicates, evaluated from actual observations under the core record.
+
 `constitution.agent_bootstrap` does not embed another constitution. It names
 one basis-qualified bootstrap entrypoint and the local instruction files whose
 small discovery block the manager owns between explicit markers. Each target
@@ -613,6 +649,14 @@ It does not claim a crash-atomic transaction across independent filesystem
 paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
+`Complete update` evaluates `every selected resulting binding and companion
+satisfies the accepted plan`. A witnessed mismatch falsifies that predicate;
+unobserved completion leaves it indeterminate. A refusal before consumer
+mutation needs observed `not_started` at that boundary. `Restore` or `recovery`
+is an operation, not proof of reversal: report `reverted` only from the core's
+required observation of every begun part. Keep staged-install and consumer
+effects on their actual boundaries, including `partial` or `unknown` effects.
+
 ### Bounded-Context Semantic Resolution
 
 `SPEC_METHOD.md` owns this law in the semantic-resolution bounded context
@@ -667,6 +711,15 @@ meaning. Both fail closed at a material boundary: an agent, design, schema,
 implementation, test, translation, or reviewer must not select one by
 familiarity, frequency, recency, nominal match, or a context-free glossary
 fallback.
+
+Resolution evaluates `this material occurrence has exactly one admissible
+meaning under its semantic address`. Established unique resolution is
+`satisfied`. A complete applicable set with zero or multiple concepts is
+`falsified`; an incomplete search or unavailable definition is `indeterminate`,
+not a proved zero. An invalid or contradictory semantic address/basis is
+`invalid_basis`; a boundary outside the evaluator's scope or capability is
+`out_of_frame`. Retain the unresolved/ambiguous diagnostic and withhold the
+dependent use; no result selects a conventional default meaning.
 
 `GLOSSARY_GUIDE.md` is a non-deciding locator index. Each record points to an
 exact source clause that declares the bounded context and owns the indexed
@@ -962,6 +1015,13 @@ guessed meaning does not pass semantic conformance.
 
 ## One Constitutional Surface And Version Boundary (`STDO-SURFACE-001`)
 
+Given F2, F3 and F6, a claim interpreted under one selected constitution cannot
+gain a different meaning or authority through a view. The
+[faithful-projection contract](TRANSFORMATION_LIBRARY.md#faithful-projection)
+supplies that consequence. STDO-SURFACE-001 additionally chooses one complete
+released method cut and one owner per law; release authority admits that cut,
+and this member reserves expansion of STDO Product scope to human authority.
+
 The shared methodology is modular in authorship and singular in authority.
 Each law has one owning standard; other standards consume it by reference. The
 standards become operative only as one complete released STDO version.
@@ -998,6 +1058,15 @@ may author a future cut; it must not silently govern a consumer.
 ---
 
 ## Constitutional Chain
+
+This family assumes F1 purpose, F2 interpretation, F4 preservation and F6
+authority, together with a Product whose downstream work must realise declared
+obligations. A downstream success then needs adequate upstream meaning and
+traceable authority; [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+preserves those relations. This member chooses the chain, its change classes,
+requirement categories, reconstruction and trace-closure rules. Goals and
+Product owners select outcomes; Design selects any realisation allowed by the
+constraints. The chain does not derive a unique implementation from F1–F6.
 
 ```
 Goals → Intent → Product Definition → Requirements → Design → Realisation → Observations → Projection → Delta
@@ -1119,6 +1188,13 @@ appropriate cost optimization for that domain.
 
 ## Ambiguity Governance Rule
 
+Given F1, F2, F5 and F6 and a material unresolved interpretation, unsupported
+meaning cannot become an established result or permission. Apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to the
+affected claim. This family chooses mandatory detection, lifecycle sufficiency
+and the hard stops below; the Product's declared risk policy separately chooses
+which remaining ambiguities may be carried, resolved or escalated.
+
 `SPEC_METHOD.md` owns the substrate-neutral ambiguity-governance bounded
 context `urn:stdo:bounded-context:ambiguity-governance` under the selected
 complete STDO basis. Graph/runtime shorthands such as `F_D`, `F_P`, and `F_H`
@@ -1181,6 +1257,18 @@ risk appetite escalates more major ambiguity to explicit human judgment. A
 higher risk appetite permits more bounded probabilistic decision-making. In either
 case, the ambiguity and the decision must be recorded.
 
+`Resolved`, `carried forward`, `escalated` and `blocked` record handling, not four
+verdicts on the affected Product claim. Evaluate `the identified ambiguity is
+resolved under its governing meaning`: established resolution is `satisfied`,
+an established remaining ambiguity is `falsified`, and insufficient evidence is
+`indeterminate`, retaining applicable `invalid_basis` or `out_of_frame`
+diagnoses. A carried or escalated ambiguity may still be unresolved. Separately,
+the core decision predicate evaluates whether the recorded handling was made
+under the bound policy and authority: supported lawful handling is `satisfied`,
+a demonstrated violation is `falsified`, and unsupported handling is
+`indeterminate`, subject to the same basis/scope diagnoses. Neither result
+settles delivery or grants authority outside that policy.
+
 Some conditions are not optional ambiguity decisions and therefore remain hard
 stops regardless of risk appetite. Typical hard-stop classes include:
 
@@ -1189,6 +1277,14 @@ stops regardless of risk appetite. Typical hard-stop classes include:
 - missing declared capability for an executional or operational stage
 - undeclared irreversible side effect
 - explicit policy gate requiring human approval
+
+A hard stop returns the affected task predicate through the
+[core stop rule](FOUNDATIONS.md#result-algebra). A witnessed invariant violation
+or unmet required authorization can falsify admissibility; missing evidence
+about a requirement or approval leaves it indeterminate. An unusable governing
+basis or an evaluation outside capability retains its own diagnosis. The stop
+label proves neither non-performance nor absence of effects; an undeclared or
+uncertain effect needs actual observation before dependent action.
 
 The methodology is therefore not "eliminate all ambiguity before work." It is
 "make ambiguity visible, govern it explicitly, and reduce it progressively until
@@ -1304,7 +1400,7 @@ decides whether the candidate or its governing relation needs correction.
 
 Select the smallest sufficient applicable configuration under
 [frame applicability and conjunction](REFERENCE_FRAME_METHOD.md#method-functions),
-with [causal localization](STDO_REFERENCE_FRAME_BASELINE.md#counterexample-localization)
+with [causal localization](#counterexample-localization)
 where required. This selection prescribes neither a reviewer count nor another
 review round; the bound independence and repair authority remain applicable.
 
@@ -1322,7 +1418,58 @@ upstream constitutional surface is changing.
 
 The absence of a declared change class is process drift.
 
+### Counterexample Localization
+
+This owner applies when assurance or intake requires causal diagnosis of a
+counterexample on a declared path; it does not add a separate pass to every
+change. F2–F4 and F6 require the claimed cause to remain tied to its subject,
+causal relation and evidence, without granting repair authority. This family
+chooses the earliest supported frontier and the forms below; the Product and
+design owners supply the path and governing relations. An adopted evaluation
+profile applies this owner within its selected task.
+
+A testing counterexample is returned to its earliest supported causal frontier
+on the declared path. The frontier contains the causally minimal violated owner
+relations or seam coordinates established by the evidence; earliest means
+minimal under the declared causal relation, not first in log or clock order.
+
+The localization result represents exactly one of:
+
+- one unique violated locus;
+- a jointly established set of incomparable earliest violated loci whose
+  combined violation is necessary to the supported causal explanation;
+- unresolved alternative frontiers when the evidence supports several possible
+  causal explanations but cannot establish which occurred; or
+- `indeterminate` when the evidence cannot support a bounded frontier.
+
+Localization records the subject, basis, frontier form and members, causal
+evidence, expected relations, observed counterexample, and downstream claims
+invalidated by it. It does not collapse a jointly established set into one
+arbitrary owner or misreport unresolved alternatives as a joint cause.
+
+The evaluated predicate is `the evidence establishes this stated earliest
+causal frontier for this counterexample`. A supported unique locus or jointly
+necessary set maps to `satisfied` on that predicate. Unresolved alternatives,
+an unsupported bounded frontier or a missing required reason maps to
+`indeterminate`. Independently admissible evidence defeating the claimed
+frontier gives `falsified`; an uninterpretable subject/causal basis gives
+`invalid_basis`; diagnosis outside the evaluation scope/capability gives
+`out_of_frame`. Apply the [core result contract](FOUNDATIONS.md#result-algebra)
+with actual performance and effects. Satisfaction of localization never
+overwrites the original counterexample's result or establishes repair success.
+
+A localized frontier does not itself authorize broader test expansion,
+compatibility repair, another controller, or reinterpretation of unchanged
+upstream meaning. Any resulting scope or design change follows the existing
+re-entry relation.
+
 ### Computed Classification And Treatment
+
+This triage family assumes F1–F4 and F6 on the exact requested change and its
+material dependencies. A label or local delta cannot decide governing
+insufficiency; the shared Support and Currentness conditions supply that
+constraint. Spec owns change-class and re-entry policy, while the actual source
+owners retain meaning, residual judgment and reserved rulings.
 
 Intake supplies one reusable classification result rather than requiring each
 role to reconstruct the same facts. `C` denotes reproducible facts and declared
@@ -1368,6 +1515,29 @@ The computed result must expose:
    missing premise still unresolved. A label or filename cannot select the
    route. When rules settle the question, invent no residual judgment.
 
+The delta and coverage words describe evidence; when C determines them, it
+returns these predicate-bound refinements. A declared comparison or coverage
+scope may include any supported state, including no change or no candidate;
+familiar success cases are not an implicit restriction.
+
+| Determination | Supported reason | Core verdict on that predicate |
+|---|---|---|
+| `the exact relation/member differs from its predecessor` | `changed`: authenticated difference | `satisfied` |
+| same delta predicate | `unchanged`: complete comparison establishes equality | `falsified` |
+| same delta predicate | `unknown`: missing candidate, incomplete enumeration or unavailable comparison | `indeterminate` |
+| `accepted design covers this exact changed relation` | `covered`: current accepted scope, trace and acceptance establish coverage | `satisfied` |
+| same coverage predicate | `missing` or `outside-scope`: complete evidence establishes absence or exclusion from accepted scope | `falsified` |
+| same coverage predicate | `missing`, `stale` or `ambiguous`: support does not decide current coverage | `indeterminate` |
+
+For either predicate, an unusable subject/basis gives `invalid_basis`, and an
+evaluation outside its bound scope/capability gives `out_of_frame`; those
+diagnoses differ from design scope excluding a relation. A missing reason gives
+`indeterminate` under the core law, retaining independently established
+counterevidence. C/J/O and change classes remain annotations and treatment
+choices. A treatment determination evaluates its named rule premises; an
+applied ruling uses the separate core decision predicate. Neither can be
+inferred from delta or coverage labels alone.
+
 A Public delta or other nonconformance does not itself require changing the
 governing contract. If that contract remains sufficient for the authorized
 outcome, reject or locally repair the candidate within its grant. Re-enter
@@ -1395,6 +1565,8 @@ carrier and recorded-J/O continuity rules.
 
 ## Consistency Gate Rule
 
+No gate may close while the affected active surfaces are internally inconsistent.
+
 Closure of a declared change span applies
 [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
 on its closure evidence, then evaluates the conjunction of all applicable
@@ -1406,8 +1578,9 @@ condition. Its consistency predicates require:
 - tests and qualification prove the active intended behavior rather than stale precedent
 
 The shared Result condition governs that conjunction; a local artifact's
-fitness is a different predicate. `TICKET_METHOD.md` owns work-state recording
-and reuse of the resulting exact claim.
+fitness is a different predicate. `TICKET_METHOD.md` owns ticket-state recording
+and the carrier binding for reuse; [workspace and context](FOUNDATIONS.md#workspace-and-context)
+owns applicability of the resulting exact claim.
 
 When a code/test mismatch appears during ticketed work, implementation behavior
 is evidence but not authority. The mismatch is reconciled through the admitted
@@ -1419,15 +1592,28 @@ defines the ticket-local test-case authority rule.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
+Given F1, F3 and F6 and a selected outcome instance, evidence about another
+activity cannot establish its progress or renew its grant. The shared
+[bounded-construction contract](FOUNDATIONS.md#bounded-construction) retains
+that distinction. UP-013 chooses acceptance intervals, exhaustion and the
+bounded prerequisite/experiment policy; the work-wave authority admits those
+bases and the Product owner controls outcome meaning.
+
 Every Product-outcome-bearing work wave identifies one explicitly selected,
 unresolved, directly verifiable Product-defined outcome and declares the
 acceptance interval for that instance. Product-progress claims and promotion
 onto the supported Product path are judged against that same outcome.
 
 Evidence distinguishes material advance, prerequisite readiness, preservation,
-and regression. Only material advance projects Product progress. Prerequisite
-work names the Product obligation it enables and remains bounded. Preservation
-is useful evidence but is not progress.
+and regression. These are progress annotations on results, not verdicts. For
+`this transition materially advances the selected unresolved Product outcome`,
+established material advance is `satisfied`; prerequisite-only or
+preservation-only work and observed regression are `falsified`. Unmeasured or
+undecidable movement is `indeterminate`, retaining basis/scope diagnoses under
+the core law. Readiness and preservation use their own predicates and may be
+satisfied while this progress predicate is not. Only material advance projects
+Product progress. Prerequisite work names the Product obligation it enables
+and remains bounded.
 
 The exact bound outcome instance stops selecting later Product-progress work
 when the owning authority accepts it. Its witnesses remain regression and
@@ -1493,6 +1679,13 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 ## Proportional Method And Delivery (`STDO-UP-014`)
+
+Given F1, F2 and F5 and a material method burden, finite reasoning resources
+make the burden's contribution to the selected purpose relevant; capacity alone
+does not supply its value. UP-014 chooses the proportionality relation and
+delivery-priority policy below. The governing owner supplies its ambiguity,
+cost and outcome evidence; the [constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface)
+retains every supported alternative the selected constraints permit.
 
 Proportionality is the relation between semantic ambiguity removed and
 effective reasoning complexity introduced. A method obligation is proportional
@@ -1567,6 +1760,13 @@ priority relation, not a fixed global execution sequence or scheduling runtime.
 ---
 
 ## Agentic Construction Execution (`STDO-UP-020`)
+
+The [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+applies F1–F6 to this delegated construction family: current subject and
+sufficient evidence constrain the next step, while findings cannot create a
+grant. UP-020 supplies the particular cone, proxy, checkpoint and remedy policy;
+governing authorities select the outcome, delegation and required independent
+assessment. Worker topology and internal search remain permitted variation.
 
 When construction is delegated to a probabilistic or agentic worker, the
 method governs the execution relation without prescribing the worker's model,
@@ -1698,7 +1898,8 @@ Global correctness means conserving every global relation affected by the
 bounded action. It does not require proving the whole Product inside every
 local action.
 
-Repeated rejection against one unchanged boundary requires reassessment of the
+Under [bounded construction](FOUNDATIONS.md#bounded-construction), repeated
+rejection against one unchanged boundary requires reassessment of the
 frame altitude, causal cone, common components, design-versus-code placement,
 and authority sufficiency. The method sets no rejection-count threshold,
 mandatory review-round count, or review state machine; it prohibits repeating
@@ -1742,9 +1943,10 @@ of retained work is insufficient, which obligations and evidence survive,
 which causal assumptions change and which existing operation grant permits
 that effect. Reconstructability alone does not select reconstruction.
 
-Accepted material Product movement is progress. Prerequisite work names the
-Product obligation it enables. Preservation and repeated proof are evidence,
-not new progress. Rejected or superseded construction is churn. Discovery of
+Accepted material Product movement is progress under
+[UP-013's predicate and annotations](#product-outcome-conservation-stdo-up-013).
+Rejected or superseded construction is churn, a history/cost annotation that
+cannot establish outcome movement or noncompliance by itself. Discovery of
 previously hidden distance revises the forecast but is not itself negative
 implementation progress. Paperwork, code volume, test count, commit count, and
 review count are not Product progress by themselves.
@@ -1763,6 +1965,13 @@ reported as accepted Product progress.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
+This family assumes F2–F4 and F6 with a consequential transition and actual
+admission owners. The [admission specialization](TRANSFORMATION_LIBRARY.md#transformation-admission-specialization)
+shows why local evidence cannot establish an unsupported enclosing join or
+grant. UP-021 adds exact-basis, trust-boundary validation and complete-or-none
+semantic commit policies. Design owns supported forms and declared coherent
+compositions; those choices do not follow from finite capacity.
+
 Each admission owner applies
 [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to the
 admission of the exact complete material transition. Its support universe is
@@ -1770,9 +1979,13 @@ every participant and equality join whose identity, validity, authority,
 currentness or transition can affect or be affected by admission. The owner
 independently derives and validates that relation from authoritative inputs;
 the shared Support condition governs crossing seams and independence claims.
-Apply Currentness to established facts, including material mutation, rollback,
-authority or basis changes, expiry and actual trust boundaries. Reuse retains
-the owner's admission responsibility and separately required independent
+Apply Currentness to established facts. Material mutation, rollback, changed
+authority or basis, expired validity, and crossing an actual trust boundary
+each require the applicable validation before reliance or effect. The last
+trigger applies even when the claimed fact is unchanged. Caller or owner
+assertions of completeness, validity, prior admission or authority do not
+establish truth; unsupported prior success is not an established fact. Reuse
+retains the owner's admission responsibility and separately required independent
 judgment. The following complete-transition conditions are specific to this
 admission relation:
 
@@ -1781,7 +1994,44 @@ identity through admission. If validity or currentness can advance after
 preflight, admission remains conditional on the declared predecessor and
 currentness law for that basis or re-enters derivation and validation without
 effect. Participating owners bind an equal basis or a design-declared coherent
-composite basis; independently valid mixed-basis judgments cannot combine.
+composite basis. Independently valid judgments without that relation cannot
+establish admission; retain the basis or join diagnosis under the map below.
+
+The admission assessment predicate is `this exact candidate satisfies the
+complete declared transition relation at the current authoritative basis`.
+This section owns its reason-sensitive map; consumers refer here. Preserve
+`admitted`, `refused` or `effect-free re-entry` as the original outcome and
+apply the [single core result/conjunction](FOUNDATIONS.md#result-conjunction):
+
+| Admission reason | Core result on the admission predicate |
+|---|---|
+| complete relation, every applicable condition and material join established | `satisfied`; supports the assessed `admitted` outcome, not proof of commit |
+| forged identity/authority, stale predecessor, defeated grant, omitted required participant or join, or another demonstrated violation of an interpretable relation | `falsified`; retain the specific refusal/re-entry reason |
+| unresolved enclosing ambiguity, missing support, undecided currentness or missing required reason | `indeterminate`; no guessed completeness or authority |
+| uninterpretable/contradictory governing subject or basis, including mixed owner bases with no interpretable admitted composite | `invalid_basis`; retain the mixed-basis refusal diagnosis |
+| evaluation outside its bound scope or capability | `out_of_frame`; the wider obligation remains open |
+
+Where an interpretable composite basis exists, an established incompatible
+participant or join is `falsified`; missing join evidence is `indeterminate`.
+Conjunction retains any authenticated failure beside uncovered or invalid
+contributions. Mere difference between valid bases is not a failure when their
+declared coherent composition holds. Supported arbitrary predecessor states
+and direct/composite/nested forms use the same contract, not a preferred shape.
+
+`Not applicable` for an unsupported form instead evaluates `this form is outside
+the design-declared supported boundary`: `satisfied` requires a supported
+exclusion, `falsified` a supported included case, and `indeterminate` unresolved
+applicability, with core basis/scope diagnoses retained. It cannot replace a
+missing admission assessment. An authorized admission/refusal/re-entry decision
+has its separate core decision predicate; assessment alone grants none.
+
+Admission satisfaction, actual semantic commit and atomicity are separate
+claims. `Without effect` is a required refusal observation: report `not_started`
+only when no requested transition effect began, and retain observed `partial`,
+`reverted` or `unknown` effects on their actual boundaries. An observed subset
+falsifies complete-or-none publication even if preflight admission satisfied;
+unobserved publication remains unresolved and requires observation before
+dependent re-entry. A refusal label cannot erase an effect that occurred.
 
 Every participant and join is validated before any transition effect. Internal
 evaluation order and lawful reuse are implementation-owned, but no participant
@@ -1813,6 +2063,10 @@ acceptance predicate or require defensive work; any proposed scope expansion
 returns to its owning authority. Supported malformed inputs, stale state and
 effect boundaries retain their required checks:
 
+Each case returns the admission, applicability or publication predicate it
+actually tests through the owning map above. The observations below do not
+define another conjunction or infer no effect from refusal.
+
 | Form | Required observation |
 |---|---|
 | direct | the complete direct relation is derived, validated, and admitted once |
@@ -1820,7 +2074,7 @@ effect boundaries retain their required checks:
 | forged | forged identity, membership, equality, or authority reachable within the supported operating/threat model is refused without effect; exclusion requires its owning authority, not a helper's inability to construct the case |
 | ambiguous enclosing relation | unresolved participant, join, seam, or relation identity ambiguity is refused without effect |
 | stale / advanced basis | stale input is refused, and basis advancement between preflight and admission causes effect-free re-entry rather than mixed-basis admission |
-| incoherent multi-owner basis | owner judgments on bases that are neither equal nor joined by a design-declared coherent composite basis cannot combine and are refused without effect |
+| incoherent multi-owner basis | retain `invalid_basis` for an uninterpretable composite, or the core result of a defeated/undecided join on an interpretable composite; withhold admission and verify the required absence of transition effect |
 | competing same-scope admission authority | an undisposed competing same-scope path cannot establish the transition |
 | reconstructed / fresh-process | the same basis reconstructs the same relation, basis identity, and outcome or refusal |
 | exact replay equality | replay over the same basis reproduces exactly the enclosing relation, basis identity, and complete outcome or refusal |
@@ -1837,6 +2091,16 @@ reconstruction does not compare the complete semantic result.
 ---
 
 ## Core Interface Migration Rule
+
+Given F2–F4 and F6 and an affected shared authority path, changing one component
+does not establish preservation across unexamined producers, consumers and
+views. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+and [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) carry
+that consequence. This family chooses hard-break sequencing, re-adoption,
+path-relative promotion and final retirement. Human Product authority selects
+fundamental re-adoption; explicitly disjoint compatibility scopes retain their
+lawful latitude. Live-surface supersession and legacy classification below use
+these same authority and preservation premises, not an automatic deletion rule.
 
 Core interface changes are not ordinary local patches.
 
@@ -2127,6 +2391,16 @@ decisions.
 
 The following rules govern how constitutional claims are proved in practice.
 
+This evidence family assumes F1–F4 and F6: a witness establishes only its bound
+property, and changed evidence does not author changed meaning or permission.
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) supply
+those consequences. UP-001 chooses explicit proof-target and weaker-property
+exclusion; UP-008 chooses separate semantic, evidence and projection bindings.
+UP-022 additionally chooses assurance-boundary, fresh-constructor and exposure
+conditions. The claim owner supplies the property and required scope; the
+authorized evaluator supplies evidence, not a substitute target.
+
 ### Proof Target Identity And Adequacy (`STDO-UP-001`)
 
 For a load-bearing proof, apply
@@ -2194,7 +2468,9 @@ governing semantic basis for semantic conformance or equivalence. Any separately
 held material expected or reference outcome, if one exists and is applicable,
 is optional evidence and explicitly non-authoritative. Semantic equivalence to
 that reference is required only where the governing basis requires it. A lawful
-alternative construction permitted by the basis passes. Subjective similarity
+alternative construction permitted by the basis satisfies its semantic
+conformance predicate when the declared evidence establishes it, through the
+core result record. Subjective similarity
 to the basis or reference is insufficient to establish semantic conformance or
 equivalence. Byte or structural identity, unique derivation, determinism, and
 incumbent equality are not generic comparison criteria. A construction outside
@@ -2271,6 +2547,14 @@ basis. This section owns the Product-level test-authority taxonomy.
 the shared context does not merge those authority sources.
 
 Every executable proof surface must declare its authority source.
+
+Given F1, F2, F4–F6 and a claim spanning operational boundaries, a narrower
+witness cannot establish the composed claim. The evidence contracts above
+apply here. This member chooses the two authority classes, sandbox/live
+distinction, written test authority, fixture portability, installed-dev and
+significant-path rules. Product owners choose supported scenarios; Design owns
+module proof. Those policies admit varied runners and realizations while
+preserving the exact claim and evidence boundary.
 
 For ticketed work, the immediate proof authority is the admitted ticket and its
 triage path. Tests derive from the ticket's lawful re-entry point and the
@@ -2373,6 +2657,13 @@ If a proof needs external project evidence, one of these must be true:
 
 Missing external fixtures must fail with a governed diagnostic that names the
 fixture authority and lane. They must not masquerade as product semantic failure.
+
+For the Product property the diagnostic is `indeterminate` when the fixture
+absence leaves evidence insufficient, retaining independent counterevidence or
+basis/scope diagnoses. A separately assessed `required fixture is available`
+predicate may be `falsified` when absence is established. Preserve whether the
+Product evaluation was undertaken; an unavailable fixture is not by itself a
+Product counterexample.
 
 ---
 
@@ -2564,6 +2855,15 @@ What must remain stable is the full direction of authority: goals govern intent,
 ## Trace Closure And Anti-Drift Rule
 
 Spec-driven development requires constitutional trace closure.
+
+This family applies F1–F4 and F6 to the declared constitutional chain: a live
+obligation needs an owning realization or an explicit unresolved/deferred
+relation, and historical evidence cannot change current authority. The shared
+[preservation and currentness conditions](TRANSFORMATION_LIBRARY.md#contract-application)
+supply those constraints. This member separately chooses trace metadata,
+live-surface supersession/withdrawal, lifecycle/category axes and bootstrap
+roles. Design and Product authorities retain their respective structure and
+meaning choices; the labels and default scaffold do not determine a verdict.
 
 ### Ownership
 
