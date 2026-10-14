@@ -496,3 +496,20 @@ Execution decisions for the rest of the iteration:
 - Step 4 is narrowed by variance, for the owner's token limit: the i3 interpretation encodes only the shared-owner determinations of the result algebra and conjunction, authority kinds, reuse and invalidation, the promotion block, the step-result refinements, boundaries (pillar 2) and constraint surfaces (pillar 10). Every other heading section of G1 to G4 is disposed `not-encoded-i3`, which is uncovered and blocks C3 closure for interpretation coverage (conformance discriminator 14). Frame indexes are made only for tasks whose deciding owners are encoded.
 
 2026-10-14T18:39Z — Step 3 returned (I3-4c at `d906b37`, I3-4d). Source-settlement commit: `3ab7ef9`. Every member file is settled at it; step 4 encodes from it, and member text changes after it only through step 7.
+
+2026-10-14T18:45Z — Step 4 returned and the candidate is frozen (I3-6). Commits `d267233` (I3-5s), `79a9db0` (I3-5e, I3-5m, I3-5k), `416bdb5` (I3-5v).
+- Interpretation `a_c/i3/`: 64 clauses quoted verbatim from the settled members, 4 frame indexes, no residuals; G1 to G4 dispositions 15 `encoded`, 8 `no determination`, 181 `not-encoded-i3`; G5 to G13 not encoded. Partial coverage blocks C3 closure for interpretation coverage.
+- Checker, as the product owner selected: the pinned Axiom Indexer `v2.5.1-rc.2` was verified against its tag, commit, tree, subtree, all seven member SHA-256 values and the aggregate `55a2061b…`; `validate` `valid` with 0 diagnostics; 4 indexes projected in both modes; a second run was byte-identical. Structural validation only.
+- Frames: 12, including the new `acceptance-release` and `member-build-assess`; `generate_frames.py --check` exits 0.
+- Variance: `standards/README.md`'s paragraph on the `a_c` sets was corrected after the source-settlement commit `3ab7ef9`, to name `i3/` current as INTERPRETATION §7 requires. README is not encoded, so no clause is stale.
+
+**Freeze.** Subject S2 for every assessment is commit `416bdb5` on `tenant/claude/c3-synthesis`. Digests (SHA-256 of the sorted `shasum -a 256` lines of each tree's files):
+- 23 members `standards/*.md`: `e755bdbdc659e4094a2f9b98c4dc85c93ffa361d1c7cf3eb5ab6620aa5f644ce`
+- all of `standards/`: `14a6bbddef635937653300fea3cefe6b38c44682700b13242f08eaade27a5763`
+- `standards/frames/`: `c50eea10e8118f4080e3790d0e2dfbec0b6daa1443d498e566c14093bb65cbcb`
+- `a_c/i3/`: `528cdf1da297369cd6a7039772d1606922d0d9b71db235d4cefa4cc822ea68cd`
+- `qualification/instruments/`: `7c2b3f752ffa5b54706ac105fc27d921c827eae51be15a1cdfdb3b91d41823b5`
+- `plugins/`: `5e73f8e3b36c85bbd5ced9e19f0630e9f4f7761fa6b4a1fb669398a1c1f14d7f`
+- `frontier/PREDECESSOR_CLAIMS.md`: `e490204a175667b38eb57c542dba78329ec891856cd9219adbaaa02b0114db0d`
+
+Next: step 6 as one combined final working review against ORACLE by a non-author sonnet subagent, with the desk-traced deciding-path comparisons and the interpretation fidelity cases written before the model is opened. No paid trials (owner decision); criterion 4 stays unevidenced.
