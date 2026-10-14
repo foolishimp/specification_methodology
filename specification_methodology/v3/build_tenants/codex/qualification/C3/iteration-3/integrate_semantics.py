@@ -142,6 +142,11 @@ def normalize_shared(contribution, group):
             return value
         result = {}
         for key, item in value.items():
+            # Closed continuation phases may already name the exact shared owner.
+            # Accept only an existing full identity; never prefix it a second time.
+            if key in ('scope_ref', 'input_ref', 'contract_ref') and isinstance(item, str) and item in contracts:
+                result[key] = item
+                continue
             field = None
             if key == 'scope_ref' and 'owner_scopes' in part:
                 field = 'owner_scopes'
@@ -375,6 +380,18 @@ def integration_controls(base, contributions, carrier):
     def missing_predicate(c):
         next(r for r in c['construction']['bindings'] if r['representation_kind'] == 'constraint')['predicate'] = None
     refused('Undecomposed deciding source', missing_predicate, 'deciding row lacks a predicate')
+    returned_ids = {r['id'] for part in contributions.values() for r in part['bindings']}
+    changed_base = copy.deepcopy(base)
+    retained = next(r for r in changed_base['determinations'] if r['id'] not in returned_ids)
+    retained['unrepresented_scope'] = ['A retained source condition still requires representation.']
+    try:
+        merge(changed_base, contributions, carrier)
+    except ValueError as error:
+        if 'explicit source meaning remains unrepresented' not in str(error):
+            raise ValueError('Retained source omission: wrong refusal: ' + str(error)) from error
+        controls.append({'case': 'Unchanged binding retains a source omission', 'result': str(error)})
+    else:
+        raise ValueError('Retained source omission escaped final-row validation')
     return controls
 
 

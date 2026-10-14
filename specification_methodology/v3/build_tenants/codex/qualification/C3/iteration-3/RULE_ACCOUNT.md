@@ -1,10 +1,10 @@
 # Integrated Determination and Rule Account
 
 This account integrates the closed source-family returns under EC-CODEX-I3-02.
-Compiler preflight found 25 retained core rows that still declare omitted source
-meaning. Their completion is open under I3-R2-CORE-READY-COMPLETE-01; the earlier
-integration completion result is superseded at that scope. Independent semantic
-fidelity and acceptance also remain open.
+The successor completes the 25 retained core rows refused by the first compiler
+preflight and repairs the independently found Markov-standing trigger. The failed
+account remains frozen at `a6d5f00`. Independent semantic fidelity and acceptance
+remain separate; the fixed review receives a separately scoped successor readback.
 
 ## Subject and schema
 
@@ -38,14 +38,16 @@ unknown.
 
 There are **697 accounted units**: 662 stable raw-standard units and 35 conditional
 package/carrier units. These are accounting units, not 697 independent laws.
-The current kinds are 440 constraints, 36 consumer bindings, 206 definitions/data
+The current kinds are 415 constraints, 54 consumer bindings, 213 definitions/data
 and 15 non-deciding locators. The account contains 37 shared semantic contracts.
 All 521 previously pending raw-source units received returned construction.
 Every previously ready or locator row was inspected in its assigned contribution;
-81 existing core bindings remain unchanged. Other ready bindings were refined or
-replaced. The compiler identified 25 unchanged core bindings with explicit source omissions.
-Those rows need exact owner comparison and completion before compilation; their
-old ready label does not establish semantic completeness.
+56 existing core bindings remain unchanged. Other ready bindings were refined or
+replaced. The compiler identified 25 retained core bindings with explicit source
+omissions; a separate Writer compared their exact owners and completed those
+bindings, including result/effect joining and custom-operator admissibility. The
+25 replacements include seven definition/argument rows and 18 consumer bindings.
+Their 107 source-block mappings support traceability, not an independent fidelity verdict.
 
 | Owner population | Units |
 |---|---:|
@@ -130,16 +132,20 @@ attention, reasoning tokens and spend are not inferred from file sizes.
 The contribution checks are author evidence at their exact scopes:
 [core](semantic-contributions/core/RETURN.md),
 [Baseline](semantic-contributions/core/baseline/RETURN.json),
+[retained core completion](semantic-contributions/core/ready-completion/RETURN.json),
 [generic method](semantic-contributions/method/RETURN.json),
 [construction](semantic-contributions/construction/RETURN.json),
-[World Model/UX](semantic-contributions/model/RETURN.json) and
+[World Model/UX](semantic-contributions/model/RETURN.json), its
+[standing repair](semantic-contributions/model/F02_REPAIR.md), and
 [carriers](semantic-contributions/carrier/RETURN.md).
 
 The [integration result](SEMANTIC_INTEGRATION_CHECK.json) verifies source pins,
 unique/disjoint ownership, complete declared construction and resolvable semantic
-references. Six counterexamples reject an unclassified semantic field, a missing
+references. Seven counterexamples reject an unclassified semantic field, a missing
 source construction, a changed owner preimage, a missing shared applicability
-contract, a missing owner dependency and a null deciding predicate. These tests
+contract, a missing owner dependency, a null deciding predicate and an omission
+retained in an otherwise unchanged binding. The adapter accepts an already
+qualified shared identity only when its exact owner exists. These tests
 establish boundary integrity; they do not prove that an authored predicate is
 faithful to every source condition.
 

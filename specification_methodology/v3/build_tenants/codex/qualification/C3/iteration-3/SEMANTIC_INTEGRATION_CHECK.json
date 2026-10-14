@@ -3,12 +3,12 @@
   "source_commit": "6bcc4126efd54c41e412affc29e3801dc9deeb5b",
   "count": 697,
   "kinds": {
-    "constraint": 440,
-    "consumer_binding": 36,
-    "definition_data": 206,
+    "constraint": 415,
+    "consumer_binding": 54,
+    "definition_data": 213,
     "non_deciding_locator": 15
   },
-  "sha256": "74b4140f328446ae60fd5a4a3ec17483264c1cef30086e391ebf8310e3d46044",
+  "sha256": "ed950af6ba3d1fea77088c9d2e19c2cce26c4b98bcc9be4ce317ce7fd4fc946b",
   "independent_fidelity": "unassessed",
   "counterexamples": [
     {
@@ -34,6 +34,10 @@
     {
       "case": "Undecomposed deciding source",
       "result": "DESIGN_MODULE_METHOD.1-authority-seam-closure: deciding row lacks a predicate"
+    },
+    {
+      "case": "Unchanged binding retains a source omission",
+      "result": "AXIOMATIC_CALCULUS.position: explicit source meaning remains unrepresented"
     }
   ]
 }
