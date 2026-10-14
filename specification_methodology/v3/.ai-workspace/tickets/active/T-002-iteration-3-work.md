@@ -24,7 +24,7 @@ next activation without relabelling the existing repairs or evidence.
 
 The governing builder is installed `v2.5.1-rc.2`, manifest
 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
-The successor common input is recorded in [T-002's snapshot](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot).
+The historical consolidated common input is recorded in [T-002's snapshot](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot). The next shared input for both lines is selected and recorded separately after the round-2 repairs.
 The previous input `C3-CODEX-I3-01` at `cae6fe3` remains the basis on which the
 initial iteration 3 construction and bounded repairs were performed.
 
@@ -50,6 +50,8 @@ absence from main does not authorise a candidate merge. The same checkpoint's
 | F | [Codex review of Claude iteration 2](../../comments/codex/20261014T000519Z_REVIEW_CLAUDE_V3_REVISION_2_PURPOSE_AND_IMPLEMENTATION.md), subject `768cf8c5915d23b2721f47e96ad196ffef7e05ec`, SHA-256 `758baef0ed7c14fc9afae3695fba1f39765c05c7cf88e1fde09383f0d8012fe8`. Historical report; current peer disposition unassessed. |
 | C | [Claude common-specification round 1](../../comments/claude/20261014T013233Z_REVIEW_I3_COMMON_SPECIFICATION.md), committed at `afb6ad6`, common subject `7c058ed`. Includes SR1–SR4 and the pre-recorded expectations. Common repair is I3-00; detailed dispositions are in the [round-1 response](../../comments/codex/20261014T030729Z_REVIEW_I3_ROUND_1_DISPOSITION_AND_REPAIR.md). |
 | G | [Codex common/candidate review](../../comments/codex/20261014T014603Z_REVIEW_I3_COMMON_CONTRACT_AND_CODEX_REPAIR_CHECKPOINT.md), common `7c058ed`, candidate `d832a51`, SHA-256 `f0317995f5962485db502bf4275f6dac922666d8f6a7112bff41b4f47b4b773c`. Bounded source support; confirms the existing stale distribution and open qualification. No new candidate finding. |
+| CC / AR / CON | Companion-source coverage: [CC](../../comments/codex/20261014T001000Z_REVIEW_ITERATION_3_COMMON_CONTRACT.md), prospective routing F1, was resolved by the historical EC-CODEX-I3-01 admission; current routing needs its own check. [AR](../../comments/codex/20261013T234754Z_REVIEW_ITERATION_2_FINDINGS_AND_SUCCESSOR.md) confirms E-F1–F3 and narrows the architecture recommendation; those findings retain E's destinations. [CON](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md) reports no actionable finding on its frozen common subject. None qualifies the current candidate. |
+| R2 | The [round-2 common review](../../comments/claude/20261014T013233Z_REVIEW_I3_COMMON_SPECIFICATION.md#round-2-findings-subject-55bbf9e), including RR1, RR2 and RR3, is routed to common I3-00 and the [successor disposition record](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md). Its corrections become shared inputs, not automatically defects in either candidate. |
 
 ## Requirement trace
 
@@ -92,12 +94,12 @@ older review's subject or verdict.
 
 | ID | Work, owner and current state | Observable exit proof |
 |---|---|---|
-| I3-00 | **Common standard — ROUND 2 READY FOR CLAUDE REVIEW.** Historical consolidation and recording completed: the [same-family nonauthor working review](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md) covered `6c2debb`, and [I3-02 input](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot) records `7b2f933` with 30 hashes. C's applicable common findings are corrected through `55bbf9e`; the [handoff](../../comments/codex/20261014T033341Z_HANDOFF_I3_SPECIFICATION_ROUND_2.md) joins the bounded working reviews. Claude's review and owner sign-off remain open. | Findings evaluated against their owners; corrected common source frozen and independently reviewed; owner sign-off separately recorded. The next tenant input is selected and recorded explicitly, never inferred from a source or recording commit. |
+| I3-00 | **Common standard — ROUND-2 REPAIR, FRESH REVIEW PENDING.** Historical input I3-02 and the `55bbf9e` review subject retain their recorded bases. RR1–RR3 are evaluated in the [successor response](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md); the new source and both prepared contracts are the next review subject. | Every selected finding has an explicit disposition and evidence; corrected common source receives fresh nonauthor review. Select and record the shared input and each construction admission explicitly. Final common acceptance remains a separate owner decision. |
 | I3-01 | **Foundation-to-law coverage — OPEN; bounded arguments returned.** Tenant design/member Writers account for material deciding families, including inherited rules, and distinguish premises, consequences and owned policy. | Every material deciding rule is covered by an intelligible argument and consuming binding. Independent review finds neither unaccounted families nor a policy represented as a theorem. The old 77-law count is evidence to examine, not a mandatory partition. R1–R2; H1. |
 | I3-02 | **Shared ownership and actual reduction — REPAIR RETURNED, whole-corpus audit open.** Tenant core/consumer Writers reconcile conjunction, applicability, result and attention owners; generic causal localisation is moved to Spec with Baseline consuming it. | One determination per question, usable without an optional profile where generic; affected consumers obey it. Compare actual decisions and acquisition with exact rc.2 and Codex iteration 2 on comparable tasks and conditions. Show removed determinations/reconciliations, justify remaining distinctions and preserve meaning. Independent integrated assessment covers cross-member consumers; added argument prose alone proves no reduction. R2–R3. |
 | I3-03 | **Domain result integration — REPAIR RETURNED, inventory open.** Member owners finish predicate-and-condition mappings, particularly Ticket sprint close, Release UP-015, Spec UP-021, RF coverage and a_c refusal/treatment. | Account for the review's value sets as actual results or domain data. Every evaluation/decision has a total owner-defined core mapping; no caller/core loop, label guessing or promotion of failed/unknown work. Exercise failure plus missing coverage and unavailable causes. R3–R4; H2. |
 | I3-04 | **Contraction conservation — REPAIR RETURNED.** Consumer Writers preserve triggers, modal force, conditional adoption and exceptions in the ten S findings and affected callers. | Independent source comparison on the repaired cut plus counterexamples distinguishes required, permitted, preferred and prohibited work. Validate trust-boundary admission, gate scope, projection family coverage, optional ODD, uncertainty and authority. R2–R5. |
-| I3-05 | **Pillars at real decisions — OPEN; sampled evidence exists.** Tenant design and proof owners connect objects/Markov assumptions, algebraic laws, functional design, outcome-driven operations and maps, WHAT/HOW structure, workspace recovery and concrete human/machine bindings to deciding paths. | Independently specified successful, refused and unresolved cases; explicit units, boundary, actors, assumptions and failure modes; supported reuse after restart and dependency change. Outcome-driven contracts govern transition, evaluation, continuation, recovery and termination. Strong Markov, equivalence and functor claims stay bounded by their proof. R1, R7–R9. |
+| I3-05 | **Pillars at real decisions — OPEN; sampled evidence exists.** Tenant design and proof owners connect objects/Markov assumptions, algebraic laws, functional design, outcome-driven operations and maps, WHAT/HOW structure, workspace recovery and concrete human/machine bindings to deciding paths. | Independently specified successful, refused and unresolved cases; explicit units, boundary, actors, assumptions and failure modes; supported reuse after restart and dependency change. Generic outcome-driven transition contracts govern construction, evaluation, continuation, recovery and termination without requiring the optional typed-graph profile. Strong Markov, equivalence and functor claims stay bounded by their proof. R1, R7–R9. |
 | I3-06 | **Conservation and replacement relations — OPEN, author draft only.** Tenant proof Writer integrates and verifies the 47 draft relations, corrects mislabeled conservation and the historical “unchanged dispositions” claim, and checks all 691 rows. | Every row has a truthful disposition, complete carrying loci and, if superseded, its own identifiable replacement relation. Compare meaning, not headings/digests; check global bindings and compression rows. Proposed replacements stay pending until accepted. No unapproved removal. R1, R5; H3. |
 | I3-07 | **Port accounting — OPEN.** Tenant Writer maps each already-named contribution from `31f28f9` to one receiving owner, affected frontier and disposition. | Source/predecessor/receiver comparison under the selected port-review policy; disclosed authorship limits. No new peer reading or port is selected by this list. The open review-policy decision remains explicit. R2, R5, R10. |
 | I3-08 | **Current entry and derived views — OPEN; initial entry fixes reported by the author.** Packaging Writer reconciles skill routes, compressed bodies, six frame views, a_c landing page, inventories and pins after the final source repairs. | Independent source/view semantic comparison as well as matching hashes; ordinary entry selects current governing material; generic chain covers human/mixed realisation. E's reported fixes at `b99ca785` do not qualify later derivatives. R3, R5–R6, R8. |
@@ -112,10 +114,16 @@ older review's subject or verdict.
 
 ## Review-to-work index
 
-The finite packet is the reviews named in the source table above, including
-their named supporting reports. The index does not claim coverage of every
-historical project review. Locations in those reports belong to their frozen
-subjects; a current assessment re-anchors them to its actual candidate.
+The selected packet consists of the owner-supplied iteration-2 reviews, the
+iteration-3 common/core/conservation/interpretation reviews, their named
+supporting reports and the round-1/round-2 common reviews listed above. The
+companion-source row records CC, AR and CON explicitly, including their
+existing dispositions. Check packet membership against those source reports
+and the owner's named review inputs, then check individual findings against
+their reports; the index's own rows cannot prove source completeness. Older
+C1/C2 attempts and historical trials remain outside this repair packet unless
+a current finding explicitly depends on them. Locations belong to each
+report's frozen subject; current assessment re-anchors them to its candidate.
 
 A finding closes through a recorded review of the exact corrected subject
 that disposes its original counterexample against the owning requirement and
@@ -124,6 +132,11 @@ different primary or separates distinct parts, its first-listed work item
 owns the finding's closure. Supporting items and conditional later demonstrations do not silently
 expand it. Routing alone closes nothing. I3-14 records independent exit
 assessments and their actor/independence bounds; author returns remain such.
+
+H-M rows coordinate aggregate findings in H. Their primaries own only those
+aggregate conclusions; the cited constituent CR findings retain the primary
+of their own row. An aggregate closes only after its required constituent
+results are available. An H-M row never reassigns a CR finding's closure.
 
 | Review findings | Work |
 |---|---|
@@ -164,17 +177,20 @@ assessments and their actor/independence bounds; author returns remain such.
 | H minor rows: binding owner; tenant binding; categorical assertions; role labels; duplicate deciders; moved loci; limits; single-model evidence | Respectively CR3-F4; CR3-F5; CR3-F6,F9; CR3-F7,F8; CR2-10–19; CR4-F5,F7,F8; CR5-11; CR5-12. Retain their existing destinations above. |
 | C-B1, M1–M10; SR1–SR4, including the expectation ambiguities A1–A9 | I3-00 common repair, with individual judgments and source routes in the round-1 response. Candidate applicability flows through R1–R12; the response does not close candidate findings. |
 | G: bounded source support, stale distribution and open qualification | I3-06–14 remain open; corroboration of existing work, not a new 736-defect inventory. |
+| RR1 M1/M2/M4 and N1–N7; RR2-01–08 and O1/O2; RR3-01–20 | I3-00; every individual disposition is recorded in the round-2 response. CC/AR/CON retain the scopes and destinations in the source table. |
 
-For CR3-F6/F9, I3-05 and I3-12 can close the bounded text/assertion findings
-when the current claim is corrected and reviewed. I3-15 is required only for
+For CR3-F6/F9, I3-05 owns closure of the bounded text/assertion findings;
+I3-12 supplies supporting conformance evidence after the claim is corrected
+and reviewed. I3-15 is required only for
 the separately selected categorical capability or worked-join claim. It does
 not block closing an unrelated text counterexample.
 
 ## Reported peer findings
 
 These are F's findings on `768cf8c`, not an assessment of the current Claude
-candidate. All are **UNASSIGNED / CURRENT DISPOSITION UNASSESSED** here.
-The peer's Executive or owner selects its uptake and own ticket records it.
+candidate. Their **CURRENT DISPOSITION IS UNASSESSED** here.
+The prepared EC-CLAUDE-I3-01 assigns current-source evaluation on the peer line
+when admitted; that line's own ticket records its decisions.
 The common requirements apply on the peer's next selected basis, not
 retroactively to an earlier task's evidence.
 
@@ -202,9 +218,10 @@ and its Construction Authority; this table only routes their consequences.
 
 ## Sequence after consolidation
 
-1. Repair and review I3-00's round-2 common source. Record owner sign-off
-   separately. Select and record the next exact input before the next tenant
-   activation; merge only that recorded basis inward under Development Isolation.
+1. Repair and review I3-00's round-2 common source. Select and record the
+   shared input and separate admissions for the authorised draft construction.
+   Final common acceptance is recorded separately; it is not inferred from
+   input selection. Each tenant merges only that recording commit inward.
 2. Reconcile design and finish I3-01–05 as one source-consistent increment.
    Triage any common-contract counterexample at its owner before changing HOW.
 3. Complete I3-06–09 against that source: dispositions, named ports, derived

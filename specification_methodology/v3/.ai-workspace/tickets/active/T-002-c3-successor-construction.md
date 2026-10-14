@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T03:33:41Z
+updated_at: 2026-10-14T07:19:45Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,7 +27,7 @@ links:
 
 ## Current Iteration
 
-The owner's review-repair instruction is recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-review-repair). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; reported peer findings are indexed without assignment or current peer assessment. It is an appendix, not another work carrier or grant. The [corrected round-2 subject](../../comments/codex/20261014T033341Z_HANDOFF_I3_SPECIFICATION_ROUND_2.md) is ready for Claude's review; owner sign-off remains open. Historical snapshots below retain their subjects: [C3-CODEX-I3-02](#c3-codex-iteration-3-consolidated-input-snapshot) records the earlier reviewed consolidation, not acceptance of subsequent repairs. A next input must be explicitly recorded after its selection; no tenant implementation is activated by this common repair.
+The owner selects closure of round 2 and preparation of both implementation lines under [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; historical peer findings are routed for current-source evaluation without claiming they remain present. The [round-2 response](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md) records common repairs. Both next contracts are prepared against one [shared input](#shared-i3-input-after-round-2); each is admitted only after the exact input is recorded. Their construction authority is distinct from final common acceptance, reserved member acceptance and release. Historical snapshots and contracts below retain their subjects.
 
 2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 records the common amendment; this T-002 ticket records the exact input snapshot; T-002-CODEX records Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
@@ -38,6 +38,12 @@ On 2026-10-12 Jim approved the next-steps plan derived from the revised v3 Produ
 > ok i approve this work, but i want it done under stdo 2.5.1 executive process
 
 This ticket is the upstream work authority for that wave. It governs the installed [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition) as the process, with the [C3 Construction Contract](../../../specification/PRODUCT.md#c3-construction-contract) as this project's configuration of it. Where the two differ, the installed baseline governs and the contract is corrected. Jim retains acceptance of the C3 checkpoint, every merge to `main`, every `intentionally removed` disposition and the release decisions.
+
+## Shared I3 Input After Round 2
+
+Preparation identity: `C3-I3-R2-01`. The owner requests both successive implementations after the common repair. The common Writer prepares [EC-CODEX-I3-02](T-002-CODEX-c3-successor-construction.md#ec-codex-i3-02--construct-the-successor-on-the-repaired-i3-input) and [EC-CLAUDE-I3-01](T-002-CLAUDE-c3-successor-construction.md#ec-claude-i3-01--construct-the-successor-on-the-repaired-i3-input). The input commit B and member hashes are recorded here in a descendant R after fresh nonauthor source review. Until that recording and the separate admissions, these contracts remain drafts.
+
+Both lines receive the same common requirement bytes. Each keeps its own candidate preimage, preceding comparison subject, territory and findings. The Codex work appendix records its open implementation work. The Claude contract requires current-source evaluation of the reported F1–F5 and complete accounting against the same common requirements; it makes no current defect or acceptance claim about that branch. No new peer-source inspection is selected. Common acceptance is separate from this explicitly selected draft-construction basis.
 
 ## Intake Triage
 
@@ -52,7 +58,7 @@ Performed by the common pen on 2026-10-12T01:32:20Z against [Universal Intake Tr
 
 ## Selected Contract
 
-Target truth: for each tenant, one standalone candidate for STDO Specification Methodology v3.0.0 reconstructed from the [pillars](../../../specification/PRODUCT.md#foundational-reduction), with the [reduction](../../../specification/requirements/README.md#foundational-reduction-requirement) and [constraint-surface](../../../specification/requirements/README.md#constraint-surfaces-and-logic-compression) relationships demonstrated. Every frontier row carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; material obligations are preserved without prescribing their previous member partitions. Projected reference frames are the activation unit; each successor member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
+Target truth: for each tenant, one standalone candidate for STDO Specification Methodology v3.0.0 reconstructed from the [pillars](../../../specification/PRODUCT.md#foundational-reduction), with the [reduction](../../../specification/requirements/README.md#foundational-reduction-requirement) and [constraint-surface](../../../specification/requirements/README.md#constraint-surfaces-and-logic-compression) relationships demonstrated. Every frontier row carries one UP-015 disposition and, where conserved or superseded, the successor locus or loci needed to recover its claim, each resolving; material obligations are preserved without prescribing their previous member partitions. Projected reference frames are the activation unit; each successor member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
 
 Superseded truth: the first-pass reading of STDO 3 as a thin core that conserves the predecessor by reference; the goal that the whole corpus fits one bounded activation; every first-pass standing claim and self-declared completion. The first pass remains on `main` as history.
 
@@ -73,7 +79,7 @@ Directory nesting under `specification_methodology/` creates no composition edge
 
 ## Executive Activation
 
-State: drafted, actor unbound. Jim names the Executive actor per tenant (frame basis, [C3 activations](../../../specification/REFERENCE_FRAME_BASIS.md#activations-and-owners)); until then no Worker activation is admitted.
+Historical setup draft: the actors were then unbound. Current successor actors and admissions are recorded in each tenant's Current Iteration 3 Contract, against the shared input above.
 
 | Coordinate | Binding |
 |---|---|

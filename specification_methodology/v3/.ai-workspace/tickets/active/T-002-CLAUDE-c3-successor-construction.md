@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/claude/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T00:00:00Z
+updated_at: 2026-10-14T07:19:45Z
 priority: high
 dependencies: [T-002]
 ---
@@ -21,13 +21,34 @@ dependencies: [T-002]
 
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
 
+## Current Iteration 3 Contract
+
+Preparation state: drafted for the owner's requested next implementation. The common input and this contract are admitted in the descendant recording step after frozen-source review. No tenant starts from a draft. Earlier sections retain their historical subjects; this section selects the successor for the next run rather than rewriting an old admission.
+
+### EC-CLAUDE-I3-01 — construct the successor on the repaired I3 input
+
+- Authority and outcome: Jim's instruction to close round 2 and prepare both successive implementations. Continue this tenant's own candidate to a coherent frozen draft of the common Product, ready for independent review. This is construction authority, with no common, member, checkpoint or release acceptance.
+- Common input: `C3-I3-R2-01`, whose exact input commit and member hashes are recorded in [T-002](T-002-c3-successor-construction.md#shared-i3-input-after-round-2). The installed builder is `v2.5.1-rc.2`, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`. The input selection does not adopt the candidate as the builder.
+- Candidate preimage: `5ab44d5c51bf5956d12b120d83159f6c28eee3a9`, tenant tree `b75d6aa6d08ffd129684bc162af0effc16de64e6`. Resume that work on `tenant/claude/c3-synthesis` in `/Users/jim/src/apps/specification_methodology-claude`. A separately declared tenant Git Writer may merge the shared recording commit inward, verifying the tenant tree is unchanged before source construction. Material candidate drift is reported before dependent work; it is not silently overwritten.
+- Comparison: the installed predecessor and the preceding tenant candidate `5ab44d5c51bf5956d12b120d83159f6c28eee3a9` are the two fixed comparison subjects. Compare materially affected deciding paths under the reduction requirement, including adverse changes. This selection precedes the new reconstruction and cannot be replaced after seeing results. Existing permitted peer contributions retain the frozen `31f28f90c4a9b15243d84630fc4799024a9cd7ac` porting basis; no new peer inspection is selected.
+- Actors: the Claude tenant session acts as Executive for its line, with no effects in that role. It selects bounded Writer activations and consumes their closed returns under the installed process. Writers act only in the tenant territory below; the common pen records admissions and dispositions in this ticket. Fresh nonauthor working reviewers inspect frozen subjects. Same-family defect reviews disclose their limits; cross-tenant reviews retain the owner's separate authorisation. Acceptance-review assignments and the ported-part acceptance policy remain reserved.
+- Territory and effects: candidate design, documents, a_c representation, derived material, trials and returns only under `specification_methodology/v3/build_tenants/claude/`. Record returns in its existing qualification surface. Authorised reviewers write their own comments; they do not repair. No common, peer, v2, release or cohort mutation is granted to the tenant.
+- Required work: Reconcile the tenant design and current source with the shared I3 requirements. Establish the current disposition of historical F1–F5 from the source and its own evidence; the common index does not declare them still present or already repaired. Complete reduction, result mappings, interpretation coverage, current acquisition views, conservation and actual-use evidence on this line. The recorded branch preimage is not a common acceptance of its earlier return.
+- Sequence: reconcile design and shared owners; repair their consumer bindings; complete the claim dispositions and named port accounting; regenerate current interpretations and views; freeze the candidate; run applicable independent source and actual-use assessments; triage and repair supported defects before retry. Each Writer receives its exact cone, source, authority, limits and exit proof. Common-specification defects return to the common pen.
+- Evidence: all six criteria retain their common scope and installed evaluation semantics. Preserve original findings, failure citations, unresolved coverage, modal force, authority and domain exceptions. Compare against the two declared baselines; test actual ordinary entry, recovery and selected frames with independently specified expectations. A changed source, frame or task retains its own evidence subject.
+- Resources: each activation declares the context, elapsed-time and spend boundaries required by Product. Report supplied context, cumulative acquisition, active retained context, wall time and spend separately where instrumented; identify unknown platform portions and make no unsupported fit claim. The owner has imposed no new universal numeric cap. Any paid actor trial must bind a separately recorded applicable allowance and its remaining balance; a new contract does not reset an old allowance.
+- Stops and continuation: preserve valid workspace progress, observe unknown effects before dependent action, and return material missing authority or input drift to its owner. Continue independent authorised work. Required acceptance or publication decisions block only the action that depends on them.
+- Return: one exact frozen candidate and its evidence, with source-linked remaining gaps and a closed installed work evaluation. Earlier trials and acceptance claims retain their subjects. No candidate merge, push, tag, publication, removal of an obligation, changed-meaning acceptance or categorical steel-thread execution follows from this contract.
+
+Admission record: pending the common repair review and shared input recording. The contract's digest is the UTF-8 block from its `### EC-CLAUDE-I3-01` heading through its Return line, with one final newline.
+
 ## Tenant Re-Entry
 
 The tenant's design must be reframed before realisation: the first-pass design carried the retired goal that the whole corpus fits one bounded activation and treated a route to the predecessor as conservation. Re-entry is at the tenant's `design/`, which must state the accepted outcome, the tenant's member list and the map from every rc.2 member to the tenant members that receive it, before member 1 is restated.
 
 ## Cross-Synthesis Phase
 
-State: drafted, not started. This phase follows Jim's decision of 2026-10-13 that each line keeps its own base and takes named parts of the other ([Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis)).
+Historical 2026-10-13 setup state: drafted, not started under that recorded grant. The current successor is prepared separately above; this paragraph does not describe the current branch. This phase followed Jim's decision of 2026-10-13 that each line keeps its own base and takes named parts of the other ([Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis)).
 
 - Base: this tenant's candidate, `build_tenants/claude/` at `31f28f90c4a9b15243d84630fc4799024a9cd7ac`, with its frontier record.
 - Contributions: named parts of the Codex candidate at the same commit. Each enters only inside one member's frontier cone, as the Executive selects it. The parts proposed for porting are those nominated in the reviews listed under Cross-Synthesis.

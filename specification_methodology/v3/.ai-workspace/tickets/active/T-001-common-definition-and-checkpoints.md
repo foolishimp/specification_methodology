@@ -10,13 +10,37 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-14T06:14:47Z
+updated_at: 2026-10-14T07:19:45Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Round-2 closure and next tenant inputs
+
+2026-10-14T06:40:39Z — Jim instructs: “do that close the round 2 findings”, following the proposal to correct the common contract, freeze one input and prepare both tenant execution contracts. Subject: main `ca8b9c32fc9013aa34f22cdb436988344f318449`; review packet: the round-2 report and RR1–RR3 committed at `fc0de7e`, against `55bbf9e`. The installed builder remains 2.5.1-rc.2 at the recorded manifest. Executive triage: `product_reprice`, repairing acceptance, acquisition and construction-contract consistency; Intent receives wording alignment only. Existing owner direction on the pillars remains applicable.
+
+The common Ledger Writer records this selection before activation. Two bounded read-only evaluations examine (1) installed result/applicability law and reduction/context findings, and (2) review coverage, historical contract integrity and work routing. They return evidence and proposed dispositions, contribute to repair design and supply no independent acceptance of the repair. The common Writer then edits only common specification, routing, T-001, T-002, both tenant tickets, the I3 work appendix and Codex commentary. Preserve frozen reports and admitted historical contract bytes; make no tenant-implementation, peer-worktree, v2, release or cohort changes. Checkpoint the corrected common source on main, obtain fresh nonauthor source reviews, and record a shared successor input and separately identified tenant contracts. No paid trial or implementation run is selected. No arbitrary new numeric cap is imposed; report measured time and uninstrumented resource limits. Exit: every round-2 finding is corrected or explicitly disposed against its counterexample, successor checks and review limits are recorded, and both tenants have a reproducible starting contract. Candidate/member acceptance, merges and release remain separate decisions.
+
+Owner-source clarification for M1: the conversation contains the following directions, preceding the iteration-3 update:
+
+> the steer i gave on what is on v3, the algebraic calculus the computational calculus are my reductions of what is essential
+
+> markov objects, functors between categories through F_C,F_D,F_P in outcome driven development, design module method advocating functional principles, specification method and its project structure etc.etc.
+
+> at some point the axiomatic calculus was a way of defining the logic tree from those prose documents as a form of logic compression
+
+> to create constraint surfaces within which work can happen
+
+The table's names are the pen's organisation of those contributions and the earlier context/workspace discussion, not a claimed verbatim owner taxonomy or new independent axioms. “Specification and project structure” collects the WHAT/HOW and tenancy relations. “World models, identity and Markov objects” identifies the subjects, boundaries and state needed for a sufficiency claim. “Information and interpretation” states the meaning preserved by representations. “Evidence, correction and authority” connects observation, repair and permission already required by the method. “Axiomatic calculus” directly carries the quoted logic-compression instruction. The two calculi remain separate. Intent's alternate list now routes to the single Product table. This records the reasons without requesting the same direction again or treating it as acceptance of every implementing clause.
+
+Historical review limits and corrections: the prior working reviews did not inspect SR1-09/10/11/13 or SR4 N-1–N-5, T-5–T-7, P-1–P-7, W-0 and W-1–W-3. Their results never established full round-1 closure. TC-03's prior closure covered its sampled routes; RR2-02/RR3-07 reopen it on the aggregate aliases. The successor closure rule preserves each constituent's original primary. Round-1 Intent edits aligned the same mission's wording with the selected pillars; they were not an unrecorded change of mission above the Product re-entry. The separately requested executive summary retains its own record below.
+
+For this selected construction preparation, an exact reviewed common input may be selected and admitted for draft implementation before final common acceptance. The snapshot records the permitted basis; it does not accept changed meanings, a candidate or a checkpoint. The C1-era sentence requiring common sign-off before the next snapshot is historical and does not govern this owner-authorised preparation.
+
+Writer verification: the 691 predecessor-claim rows are unchanged, the original EC-CODEX-I3-01 admission reproduces its 4,459-byte SHA-256, and both tenant worktrees remain clean at their recorded preimages. The parent acts next as the Git Writer to freeze the common repair. Executive then selects two fresh nonauthor working-review frames on that exact commit: contract/law consistency, and review traceability/admission integrity. Each acquires its assigned frozen sources independently and returns one closed installed result with findings and coverage limits. They write only their own Codex review posts. These are declared same-family working reviews; they provide independent acquisition and defect detection, not cross-family assessment or final owner acceptance. Neither reviewer has contributed to these repairs. No tenant body or paid trial is in scope. Any supported residual re-enters the common Writer and receives an affected-source recheck before the shared input is recorded.
 
 ### Intent executive summary
 
@@ -28,7 +52,7 @@ Writer return: added a 280-word executive summary before Mission. The existing I
 
 ### Current review repair
 
-Current return — [Round 2 is ready for Claude review](../../comments/codex/20261014T033341Z_HANDOFF_I3_SPECIFICATION_ROUND_2.md). The Executive consumes the closed contract review on `dad25ef` and the [closed trace recheck](../../comments/codex/20261014T033144Z_REVIEW_I3_ROUND_2_TRACE_RECHECK.md) on `55bbf9ee7bc8e37235ef0588f9afea0f8ccbabbc`. Their selected predicates are satisfied on that successor: the contract's governing sources are unchanged, and each original tracking counterexample and the intermediate digest-label defect has an explicit successor disposition. Prior falsified results keep their subjects. This conjoins the bounded working evaluations only; it supplies no common, member or release acceptance. The common Writer records this handoff and the current status projection, with no change to governing requirements or tenant source. No further worker or paid trial is selected. Claude review, Jim's sign-off and selection of the next exact tenant input remain open.
+Historical round-1 return — [Round 2 was ready for Claude review](../../comments/codex/20261014T033341Z_HANDOFF_I3_SPECIFICATION_ROUND_2.md). The Executive consumed the closed contract review on `dad25ef` and the [closed trace recheck](../../comments/codex/20261014T033144Z_REVIEW_I3_ROUND_2_TRACE_RECHECK.md) on `55bbf9ee7bc8e37235ef0588f9afea0f8ccbabbc`. Their selected predicates were reported satisfied on that successor. Round 2 subsequently exposed the alias-routing counterexample and the evidence limits recorded above; the old reports remain frozen. That conjunction supplied no common, member or release acceptance. The current repair and input-preparation instruction is the section above.
 
 2026-10-14 — Jim instructs: “reviews have completed evaluate and correct”. The Executive evaluates Claude's common-specification round 1 at `afb6ad6e84d20e93fe98635736909ed562815d0a`, reviewing common subject `7c058ed52b9f3cdecf6277026be5d18507efc527`, and the completed Codex common/candidate review. The latter reviews Codex tenant `d832a51a4f91afca2ffa2e31636236f8729abf6c`; it adds no candidate defect beyond the already-open qualification work. Two read-only, same-family triage activations inspect the common findings and their owners. They contribute to repair design and are not independent acceptance of the repair.
 
@@ -135,7 +159,7 @@ Codex's initial author activation used C1-inputs-20261011-02; its record belongs
 
 ## Common C1 Input Snapshot
 
-Snapshot ID: C1-inputs-20261011-03. Historical final C1 tuple, selected on 2026-10-11T09:25:23Z; it does not bind C3. -02 is retained below as the historical input contract of both C1 initial attempts, their successors and their reviews. The next C3 snapshot is recorded in T-002 after common sign-off.
+Snapshot ID: C1-inputs-20261011-03. Historical final C1 tuple, selected on 2026-10-11T09:25:23Z; it does not bind C3. -02 is retained below as the historical input contract of both C1 initial attempts, their successors and their reviews. The then-planned next C3 snapshot after common sign-off is historical; current input selection follows the owner-authorised preparation recorded above.
 
 Input commit: `80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1` on `main`. Every member hash below is read from that commit's tree (`git show 80b46944f1c1c7fac220fe2f23f0b1674ed8aaa1:<path>`), per [Development Isolation](../../../specification/PRODUCT.md#development-isolation). This record is written in a descendant commit and is excluded from its own tuple.
 

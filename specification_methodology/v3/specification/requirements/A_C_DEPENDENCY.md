@@ -40,7 +40,7 @@ The dependent claim is then withheld and returned to its actual owner for verifi
 - Manifest SHA256: 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782
 - AXIOMATIC_CALCULUS.md SHA256: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
-This is the calculus basis used to encode the required interpretation. The method subject represented is the exact current tenant candidate, including its own calculus statements; it is a separate coordinate. Representing a successor theory does not silently replace this encoding basis or prove that theory true. Any required change to the dependency's theory or checking contract re-enters this common owner before dependent use. Compatible carrier structure remains mechanically checkable within the selected checker's declared contract.
+This is the encoding basis for construction and checking under the installed builder. The method subject represented is the exact current tenant candidate, including its own calculus statements; it is a separate coordinate. Representing a successor theory does not silently replace this encoding basis or prove that theory true. The released interpretation's encoding basis and its standalone acquisition follow the [identity and packaging decision](../PRODUCT.md#open-owner-decisions). Any required change to the construction dependency's theory or checking contract re-enters this common owner before dependent use. Compatible carrier structure remains mechanically checkable within the selected checker's declared contract.
 
 ## Immutable Mechanical Subject
 
@@ -62,13 +62,13 @@ A later selected installed copy must verify exact subject membership and bytes b
 
 The interpretation serves the [constraint-surface and logic-compression requirement](README.md#constraint-surfaces-and-logic-compression), which owns required coverage, independently specified fidelity cases and actual-use evidence. It makes the source's governing dependencies and remaining freedom recoverable for work. A well-formed model that omits a material condition can admit prohibited work. Coverage follows the method's owned determinations, not the number of clauses the checker accepts; a checked subset does not qualify the complete interpretation.
 
-For each selected, frozen tenant output, keep:
+For the required interpretation and the frozen outputs offered as its evidence, retain the following for the scope each claim needs. Intermediate drafts do not each require a separate qualification:
 
 - the exact method subject represented and the separate calculus basis used;
 - the source-to-model dispositions, which record how each source clause is represented in the a_c model;
 - the signature, which is the declared vocabulary;
 - the exact program, maps and bindings;
-- reproducible mechanical results;
+- reproducible mechanical results where that evaluation is selected;
 - a fidelity judgement made independently of the author, reading the source first;
 - evidence from actual use.
 
