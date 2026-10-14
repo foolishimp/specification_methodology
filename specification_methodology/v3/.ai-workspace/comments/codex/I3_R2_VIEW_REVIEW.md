@@ -126,3 +126,46 @@ Unassessed scope includes the rest of the raw corpus and aggregate summary, comp
 The overall fidelity result is `falsified` despite the satisfied narrow copy/digest checks. The two findings preserve their exact original subject D. A successor's repair or readback cannot retroactively alter this result; it requires its own exact subject. Changes to the subject bytes, source owners, frame selection/routes, governing installed/common basis, claimed task scope or assurance assumptions invalidate reuse beyond the matching coordinates. Actual use can reveal additional material dependencies not established by this review.
 
 This result returns to the Executive for disposition. The apparent owning re-entry is the affected derived-summary generation under the unchanged governing owners, followed by whatever scoped independent review is separately admitted. No repair, acceptance, priority, next activation, or effect authority is conferred here.
+
+## D2 scoped successor readback — I3-R2-VIEW-REPAIR-FREEZE-01
+
+**Verdict: `satisfied`, only for the claim that D2 repairs F1 and F2 above.** The exact successor is `6bcc4126efd54c41e412affc29e3801dc9deeb5b`, acquired from `/Users/jim/src/apps/specification_methodology-codex`. The installed STDO v2.5.1-rc.2 and common B bindings remain those recorded above; this readback did not repeat the installed verification. The original D=`f2cb3e593757d094d008102551925e871a0204ff` result remains **`falsified`**. The successor result neither replaces that result nor extends its coverage.
+
+The supplied readback grant selects only the two findings, their raw owners and the affected summaries. The applicable workspace/repository/v3 instructions were acquired. Raw owner passages were read before the repaired summary passages. All candidate acquisition used immutable `git show` objects; live changed candidate bytes, peer material, author rationale, oracle expectations and account data were not acquired. No candidate repair, Git mutation or subdelegation occurred. The only write is this appended result.
+
+Here `D2:P/...:Lx-Ly` uses the same candidate prefix and immutable-source notation as the original report, with the successor commit above.
+
+### F1 successor result: satisfied
+
+D2:P/`standards/TRAVERSAL_OCCURRENCE_PROFILE.md:748-753,802-812` still allows all five core verdicts and still requires the specific `out_of_frame` diagnosis for an in-domain subject missing material scope or capability. The complete owner file is byte-identical to D.
+
+D2:P/`standards/authority_compressions/traversal_occurrence_profile.compressed.md:83-89` now lists `satisfied`, `falsified`, `indeterminate`, `invalid_basis` and `out_of_frame`. It explicitly preserves `out_of_frame` and its cause for the missing-material-scope/capability case, distinguishes the outside-domain invocation boundary, and retains exact judgment evidence, stop, residual and re-entry law. Its source digest at `:5` matches the acquired owner.
+
+The original counterexample—a valid in-domain `semantic_cut_admission` assessment lacking a required material relation or capability—is no longer excluded by the summary. It can retain `out_of_frame` and the owner's `hold` decision, `out_of_scope` stop and `unresolved_cause` residual; the owner's distinct `transition_evaluation` decision remains `indeterminate`. The repair does not create a second result algebra or turn unperformed evaluation into success. No new material or minor defect is established in this changed passage. Confidence is high from the explicit text and unchanged owner.
+
+### F2 successor result: satisfied
+
+D2:P/`standards/TICKET_METHOD.md:713-739` retains the ordinary carrier-lifetime partition and the particular explicit ticket-state instruction selecting durable recording. Its execution-admission separation remains at `:737-745`. The complete owner file is byte-identical to D.
+
+D2:P/`standards/authority_compressions/stdo_compressed.md:383-389` now says an explicit instruction from ticket-state authority “may also select a durable record” and immediately preserves that the instruction neither admits an execution contract nor widens upstream work authority. Read with its ordinary selection rule at `:375-387`, this states the missing exception rather than making lifetime the sole possible basis for durability.
+
+The original counterexample—authorized work ending this run, without independently surviving work state, accompanied by the competent ticket-state owner's explicit durable-record instruction—is now permitted by the summary. Mere ticket absence or a generic work request still supplies no such instruction, and durability still supplies no execution admission. No new material or minor defect is established in this changed passage. Confidence is high from the explicit exception and unchanged owner.
+
+### Exact acquisition and limits
+
+| Frozen D2 file under P | Complete bytes | SHA-256 | Semantically read lines and bytes |
+| --- | ---: | --- | --- |
+| `standards/TRAVERSAL_OCCURRENCE_PROFILE.md` | 80,238 | `94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a` | 740-815; 6,326 bytes |
+| `standards/TICKET_METHOD.md` | 71,236 | `d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d` | 705-745; 3,191 bytes |
+| `standards/authority_compressions/traversal_occurrence_profile.compressed.md` | 13,388 | `1c3861e2c49644eec28ff85e661b2e2b81902e6e2d6e3bf3e2b38403e54a2907` | 1-25 and 76-100; 2,348 bytes |
+| `standards/authority_compressions/stdo_compressed.md` | 76,728 | `7ba1dab413b38338c915b539cf40620491905cfba7dd3bc521662d3160fd0cc9` | 1-35 and 375-405; 3,499 bytes |
+
+The deciding-owner passages total **9,517 bytes**; inspected summary passages total **5,847 bytes**, for **15,364 bytes** of selected text. Complete D2 blobs total **241,590 bytes**, loaded for exact hashing and comparison. Full-blob acquisition is not full-body semantic review. The corresponding original blobs were acquired for comparison; repeated transport, instruction reads, report reads and the original blobs are not included in that D2 byte total. Comparison of each complete affected summary with D showed exactly its one repair hunk and no other changes within those two files. Both complete owner files compared equal. Frame selections were outside this readback and were not rechecked.
+
+The original report's preserved preimage is **20,243 bytes**, SHA-256 `3f5746b24e0dc7b6ad1ab683c03c972f3b182836539d3e854fcca6ce92bbeefd`. The append was verified against that exact byte prefix.
+
+Readback timing began at **2026-10-14 11:39:53 UTC**. Frozen acquisition and comparison completed by **11:40:37 UTC**; the assessment/result-preparation measurement was **11:41:07 UTC**, **74 seconds** after start. Final report serialization follows that measurement. Token usage, paid cost, repeated transport and production attention were not measured; no paid calls were made.
+
+This is the same nonauthor Reviewer following up its own original findings, in the same model family and host context. It supplies no additional model-family, host or administrative independence and no independent runtime execution. The initial nine-summary/98-excerpt checks were not repeated or promoted to a new whole-candidate result. Other summaries, routes, source domains, practical entry, interpretation generation, installed-v3 behavior and downstream impact remain outside this readback.
+
+The two documentary counterexamples are resolved on D2; Executive disposition remains separate. Reuse is limited to these exact summary/owner bytes, the inherited governing basis and this two-finding claim. A change to those coordinates or a wider claim requires its own evaluation. This `satisfied` result supplies no whole-candidate acceptance, member acceptance, installed-v3 qualification, release decision or effect grant.
