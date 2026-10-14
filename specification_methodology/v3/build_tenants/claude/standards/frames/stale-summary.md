@@ -28,9 +28,9 @@ Routes, in order:
 11. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 72225 bytes.
+Size of this frame: 72332 bytes.
 
-Source: ACTIVATION.md#transitions sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#transitions sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Transitions
 
@@ -116,7 +116,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 2. Context construction under an envelope
 
@@ -289,7 +289,7 @@ is read as if it fit, a fit is taken as adequate attention, or a decision
 rests on material other than its deciding owners at the selected basis.
 
 
-Source: ACTIVATION.md#construction-availability sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#construction-availability sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Construction availability
 
@@ -340,7 +340,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#effects sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Effects
 
@@ -353,16 +353,17 @@ premise, P6):
 | Value | Core value | Ground |
 |---|---|---|
 | `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
+| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
 not that evidence, and the value stays `completion_unknown`.
 `completion_unknown` never maps to `completed` or to `not_effected`.
 
-Whether the effect has ended is a second question, not the predicate
-above. An effect has ended where evidence about the subject establishes
+Whether the effect has ended is a second question beside the predicate
+above, and it enters the value only as a conjunct of `completed`. An
+effect has ended where evidence about the subject establishes
 that it no longer acts on the subject or that it never began. Where an
 effect began and the evidence does not establish its end, the end is not
 established, and that is recorded beside the value as a residual naming
@@ -392,7 +393,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#5-work-state-and-restart sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 5. Work state and restart
 
@@ -524,7 +525,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 7. Closed result and reuse
 

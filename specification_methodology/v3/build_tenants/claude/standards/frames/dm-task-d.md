@@ -1064,7 +1064,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#disposition sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Disposition
 
@@ -1106,7 +1106,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
+Source: SPEC_METHOD.md#change-classes sha256=3f8a6cdc93649f370441356961275676c3472f2117d0045c7849ab9351194994
 
 ### Change classes
 

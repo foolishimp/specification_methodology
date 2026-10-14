@@ -327,7 +327,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-001 Evaluation relativity
 
@@ -336,7 +336,7 @@ declared evaluation family has no testable sufficiency boundary (P2; rc.2
 #rf-001-evaluation-relativity).
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-002 Finite attention
 
@@ -353,7 +353,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-003 Material sufficiency
 
@@ -366,7 +366,7 @@ material relation exists (P2; P0 with the open-world premise; rc.2
 #rf-003-material-sufficiency).
 
 
-Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-004 Irrelevance exclusion
 
@@ -376,7 +376,7 @@ does not expand because adjacent workspace material exists (P2; rc.2
 #rf-004-irrelevance-exclusion).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-005 Exact basis and coordinates
 
@@ -387,7 +387,7 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 #rf-005-exact-basis-and-coordinates).
 
 
-Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-006 Authority conservation
 
@@ -398,7 +398,7 @@ implementation reachability or frame selection (P6; rc.2
 #rf-006-authority-conservation).
 
 
-Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-007 Semantic, evidence and verdict separation
 
@@ -412,7 +412,7 @@ performs several of them (P6; rc.2
 this law to review.
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-011 Topology mutation and recharting
 
@@ -425,7 +425,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 #rf-011-topology-mutation-and-recharting).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-012 Closed results
 
@@ -444,7 +444,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-013 Reconstructable activation
 
@@ -455,7 +455,7 @@ conversational or historical context (P0 with the actor-change premise;
 rc.2 #rf-013-reconstructable-activation).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-014 Capability fit
 
@@ -469,7 +469,7 @@ actor may not silently omit material relations to fit its context (P0, P5;
 rc.2 #rf-014-capability-fit).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-015 Residual uncertainty
 
@@ -480,7 +480,7 @@ universal completeness (P4b, P6; open-world premise; rc.2
 #rf-015-residual-uncertainty).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#5-method-functions sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ## 5. Method functions
 
@@ -569,7 +569,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#7-frame-relations sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#7-frame-relations sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ## 7. Frame relations
 
@@ -597,7 +597,7 @@ only the relations its evaluations and coverage claims need (P3, P2;
 RF-009).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ## 11. The activation packet
 
@@ -671,7 +671,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### Minimal frame declaration
 
@@ -718,7 +718,7 @@ Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=8b73ca27159dc574545b
 ```
 
 
-Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### Minimal evaluation result
 
@@ -806,7 +806,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#admission-and-activation sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Admission and activation
 
@@ -844,7 +844,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#disposition sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Disposition
 
@@ -886,7 +886,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 7. Closed result and reuse
 

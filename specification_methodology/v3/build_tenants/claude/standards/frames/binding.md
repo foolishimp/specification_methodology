@@ -26,9 +26,9 @@ Routes, in order:
 9. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 10. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 73765 bytes.
+Size of this frame: 73874 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=3f8a6cdc93649f370441356961275676c3472f2117d0045c7849ab9351194994
 
 ## 11. Build-tenant binding
 
@@ -103,7 +103,7 @@ Rules:
    - the operations, each with its inputs, outputs, effects and outcome
      values; each outcome value maps to exactly one core value under
      [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and an intended
-     external effect, one of unknown completion included, is recorded as
+     external effect, one of uncertain completion included, is recorded as
      [ACTIVATION §3 Effects](../ACTIVATION.md#effects) states;
    - the composition laws, and the transformations the calculus permits;
    - the resource measures;
@@ -209,7 +209,7 @@ behave identically outside the contract, which is new in that member.
 The rest of this section is new in this corpus.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=3f8a6cdc93649f370441356961275676c3472f2117d0045c7849ab9351194994
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -674,7 +674,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#effects sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Effects
 
@@ -687,16 +687,17 @@ premise, P6):
 | Value | Core value | Ground |
 |---|---|---|
 | `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
+| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
 not that evidence, and the value stays `completion_unknown`.
 `completion_unknown` never maps to `completed` or to `not_effected`.
 
-Whether the effect has ended is a second question, not the predicate
-above. An effect has ended where evidence about the subject establishes
+Whether the effect has ended is a second question beside the predicate
+above, and it enters the value only as a conjunct of `completed`. An
+effect has ended where evidence about the subject establishes
 that it no longer acts on the subject or that it never began. Where an
 effect began and the evidence does not establish its end, the end is not
 established, and that is recorded beside the value as a residual naming

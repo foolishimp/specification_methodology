@@ -30,7 +30,7 @@ Routes, in order:
 
 Size of this frame: 59146 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
+Source: SPEC_METHOD.md#canonical-statement sha256=3f8a6cdc93649f370441356961275676c3472f2117d0045c7849ab9351194994
 
 ### Canonical statement
 
@@ -132,7 +132,7 @@ mutable carrier may move; a release cut never moves. RELEASE §2 realises
 them, with the carriers that hold them, as refs of one release source.
 
 
-Source: PRODUCT_DEFINITION.md#2-required-definition-relations sha256=a1164496638a281f62f6c8bc0afe0c4ead71d9fc957d26a725d32b209b26c91b
+Source: PRODUCT_DEFINITION.md#2-required-definition-relations sha256=e0b2a6621d1543a138909c1f7401a6ed2c903bf07184600e16178b1f8640d60a
 
 ## 2. Required definition relations
 
@@ -177,7 +177,7 @@ every local disambiguation names the exact context in which its resolution
 applies (P1, P3).
 
 
-Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=a1164496638a281f62f6c8bc0afe0c4ead71d9fc957d26a725d32b209b26c91b
+Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=e0b2a6621d1543a138909c1f7401a6ed2c903bf07184600e16178b1f8640d60a
 
 ## 9. Recursive discovery and explicit composition
 
@@ -253,7 +253,7 @@ the semantic subset of these checks are distinct claims (EVALUATION §2;
 P1, P6).
 
 
-Source: PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary sha256=a1164496638a281f62f6c8bc0afe0c4ead71d9fc957d26a725d32b209b26c91b
+Source: PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary sha256=e0b2a6621d1543a138909c1f7401a6ed2c903bf07184600e16178b1f8640d60a
 
 ## 11. One constitutional surface and version boundary
 
@@ -358,7 +358,7 @@ source-linked prose, and representation cannot create, widen or replace it
 (P3, P6).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ## 11. The activation packet
 
@@ -432,7 +432,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#intake sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Intake
 
@@ -476,7 +476,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#admission sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Admission
 
@@ -512,7 +512,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 2. Context construction under an envelope
 

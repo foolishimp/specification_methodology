@@ -31,7 +31,7 @@ Routes, in order:
 14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 93138 bytes.
+Size of this frame: 93357 bytes.
 
 Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=35b1775596e145751c348a506203f50166d9fdcb15f1d3ae1dc9f3d9a8b26224
 
@@ -159,7 +159,7 @@ the activation outcome `closure_unresolved` of
 predicate (P5, P6).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-event-kind-population sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#closed-event-kind-population sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Closed event-kind population
 
@@ -191,7 +191,7 @@ to this signature; it cannot add an undeclared value to this population
 (P3, P5).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-relation-families sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#closed-relation-families sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Closed relation families
 
@@ -366,7 +366,7 @@ relations are finite and free of duplicates. `inverse_kind_ref_or_none`
 is explicit; silence implies no inverse (P3, P4a).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Closed constraint, judgment, residual and stop kinds
 
@@ -595,12 +595,13 @@ unchanged; a refined value names a kind and its cause and adds no kind
 - `partial_effect(not_attained)`: the admitted evidence establishes that
   the intended outcome is not met and that no later completion of the
   effect can meet it. The effect evidence and the bounded
-  post-observation, read under the outcome contract, show part of the
-  intended outcome not reached where nothing left of the effect can reach
-  it: the effect has ended short, or an interval that the outcome contract
-  bounds has closed with only part reached. The unreached part is the
-  counterexample. Whether the effect has ended is not part of this cause:
-  where the evidence does not establish the end, the `partial_effect`
+  post-observation, read under the outcome contract, show the intended
+  outcome not met where nothing left of the effect can meet it, for
+  example where the effect has ended short, or an interval that the
+  outcome contract bounds has closed with only part reached. The evidence
+  of non-attainment, such as the unreached part, is the counterexample.
+  Whether the effect has ended is not part of this cause: where the
+  evidence does not establish the end, the `partial_effect`
   residual records it beside the value, as
   [ACTIVATION §3 Effects](../ACTIVATION.md#effects) states.
 - `partial_effect(undecided)`: every other `partial_effect`. The admitted
@@ -609,7 +610,8 @@ unchanged; a refined value names a kind and its cause and adds no kind
   [effect law](../TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation) requires is not yet
   acquired, or it shows part reached while a later completion of the
   effect could still meet the outcome, or it shows the outcome met while
-  the effect may still be acting, or a response was lost and no
+  the effect may still be acting, so whether the outcome is met once the
+  effect settles is undecided, or a response was lost and no
   counterexample is observed. A lost response, an absent record or an
   actor's context holding no trace of the effect is no evidence about the
   subject, so it establishes neither non-attainment nor the end of the
@@ -717,7 +719,7 @@ repetition (P5, P4b).
 their laws, which are AXIOMATIC_CALCULUS §5 (P3, P6).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#occurrence-identity sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#occurrence-identity sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Occurrence identity
 
@@ -771,7 +773,7 @@ future result or event cannot be smuggled into its own occurrence seed
 (P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Candidate, judgment, event and relation separation
 
@@ -891,7 +893,7 @@ delete, rewrite or retrospectively re-identify the corrected fact (P3,
 P4b).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Causality and typed lineage
 
@@ -921,7 +923,7 @@ authority are explicit. The coordinate orders eligible facts; it gains no
 semantic, admission, causal or decision authority (P6, P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Mutable-subject effect relation
 
@@ -1014,7 +1016,7 @@ predicate, "the intended effect occurred"; the causes of the two
 | Disposition | Effects value | Core value | Ground |
 |---|---|---|---|
 | `completed_effect` | `completed` | satisfied | the bounded post-observation and sufficient effect evidence establish that the intended effect occurred and that the effect has ended |
-| `partial_effect(not_attained)` | `not_effected` | falsified | the admitted evidence establishes that part of the intended outcome is not reached and that no later completion of the effect can reach it; the part that did occur is named with the value, and an end of the effect that the evidence does not establish is recorded beside it, not in it |
+| `partial_effect(not_attained)` | `not_effected` | falsified | the admitted evidence establishes that the intended outcome is not attained and that no later completion of the effect can attain it; the part that did occur is named with the value, and an end of the effect that the evidence does not establish is recorded beside it, not in it |
 | `partial_effect(undecided)` | `completion_unknown` | indeterminate | the evidence cannot decide whether the intended outcome is or will be reached |
 | `refused_effect` | `not_effected` | falsified | the evidence shows that no authorised mutation began |
 | `no_effect` | `not_effected` | falsified | the admitted disposition records that no invocation was dispatched, and the record is exact because `invokes_effect` exists if and only if one was; so the occurrence effected nothing on the subject |
@@ -1052,7 +1054,7 @@ subject, so the admitted occurrence and event history is append-only even
 when the external subject changes repeatedly (P3, P4b).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Event frontier and projection
 
@@ -1083,7 +1085,7 @@ subject-wide, publication-wide or otherwise independent of any occurrence
 stay independent (P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#authority-and-adoption sha256=6cab767167b34f1226b131d851c99e0277513f17a6189e2c2ae592a031b783e7
+Source: TRAVERSAL_OCCURRENCE.md#authority-and-adoption sha256=aef247b9de5def96613bb987a7b50aec3089ebdd98921e12da3ef85195ff6c1c
 
 ## Authority and adoption
 
@@ -1109,7 +1111,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#effects sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Effects
 
@@ -1122,16 +1124,17 @@ premise, P6):
 | Value | Core value | Ground |
 |---|---|---|
 | `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
+| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
 not that evidence, and the value stays `completion_unknown`.
 `completion_unknown` never maps to `completed` or to `not_effected`.
 
-Whether the effect has ended is a second question, not the predicate
-above. An effect has ended where evidence about the subject establishes
+Whether the effect has ended is a second question beside the predicate
+above, and it enters the value only as a conjunct of `completed`. An
+effect has ended where evidence about the subject establishes
 that it no longer acts on the subject or that it never began. Where an
 effect began and the evidence does not establish its end, the end is not
 established, and that is recorded beside the value as a residual naming

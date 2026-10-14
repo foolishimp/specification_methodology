@@ -36,9 +36,9 @@ Routes, in order:
 19. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 20. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 83781 bytes.
+Size of this frame: 83892 bytes.
 
-Source: ACTIVATION.md#transitions sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#transitions sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Transitions
 
@@ -124,7 +124,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#intake sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Intake
 
@@ -168,7 +168,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#configuration sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Configuration
 
@@ -219,12 +219,12 @@ admitted authority through its intake (Intake above) and its activation
 
 Reconfiguration. The allocation, and every reconfiguration, preserves the
 material dependencies, the outstanding obligations, the effects,
-including those of unknown completion, the admitted authority and the
+including those of uncertain completion, the admitted authority and the
 required independence. A reconfiguration is any change of allocation
 during the work, including actors redistributing work among themselves
 and the changes §4 Reconfiguration selects after a result. An outstanding
 obligation and the results that depend on it move with the work. An
-effect of unknown completion is resolved sufficiently for the next
+effect of uncertain completion is resolved sufficiently for the next
 dependent action before that action (§3 Effects, §5). Required
 independence keeps its authorship and evidence conditions
 ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)), which a fresh
@@ -276,7 +276,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#roles-and-delegation sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Roles and delegation
 
@@ -332,7 +332,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 2. Context construction under an envelope
 
@@ -505,7 +505,7 @@ is read as if it fit, a fit is taken as adequate attention, or a decision
 rests on material other than its deciding owners at the selected basis.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ## 7. Closed result and reuse
 
@@ -552,7 +552,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#construction-availability sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Construction availability
 
@@ -603,7 +603,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
+Source: ACTIVATION.md#effects sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
 
 ### Effects
 
@@ -616,16 +616,17 @@ premise, P6):
 | Value | Core value | Ground |
 |---|---|---|
 | `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
+| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
 not that evidence, and the value stays `completion_unknown`.
 `completion_unknown` never maps to `completed` or to `not_effected`.
 
-Whether the effect has ended is a second question, not the predicate
-above. An effect has ended where evidence about the subject establishes
+Whether the effect has ended is a second question beside the predicate
+above, and it enters the value only as a conjunct of `completed`. An
+effect has ended where evidence about the subject establishes
 that it no longer acts on the subject or that it never began. Where an
 effect began and the evidence does not establish its end, the end is not
 established, and that is recorded beside the value as a residual naming
@@ -655,7 +656,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-002 Finite attention
 
@@ -672,7 +673,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-009 No assumed hierarchy
 
@@ -694,7 +695,7 @@ grant or as a dependency would move authority or change a result without a
 declared relation.
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-012 Closed results
 
@@ -713,7 +714,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ### RF-014 Capability fit
 
@@ -727,7 +728,7 @@ actor may not silently omit material relations to fit its context (P0, P5;
 rc.2 #rf-014-capability-fit).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=8b73ca27159dc574545b355f9895a8609aa8e9eef7b0ea482d693b5c394ef394
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=5056be822f76b9d6343e191576e1feda62d6066e2c0b5bc426176c2d4bd0af76
 
 ## 11. The activation packet
 
