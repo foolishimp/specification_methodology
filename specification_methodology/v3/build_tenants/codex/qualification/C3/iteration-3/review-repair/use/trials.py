@@ -2,6 +2,7 @@
 import argparse
 from contextlib import redirect_stdout
 from datetime import datetime, timezone
+import fcntl
 import hashlib
 import importlib.util
 import io
@@ -99,6 +100,15 @@ def prepare(commit, evaluation_projection):
 
 
 def acquire(root, route, section, start, end):
+    # This local POSIX harness can receive concurrent reader processes. Keep
+    # first-read timing, cumulative admission and event append one transaction.
+    # OS ownership releases the lock on process exit; the empty file is no lease.
+    with (root / '.reader.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        return acquire_locked(root, route, section, start, end)
+
+
+def acquire_locked(root, route, section, start, end):
     manifest = json.loads((root / 'manifest.json').read_text())
     log = root / 'acquisition.jsonl'
     prior = [json.loads(x) for x in log.read_text().splitlines()] if log.exists() else []
