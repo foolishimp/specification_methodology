@@ -60,11 +60,11 @@ The frozen Codex candidate is a substantial and largely honest piece of work. It
 
 It does not meet the C3 contract on the obligations its strategy makes hardest. That strategy keeps the predecessor's members, adds a foundation layer and rewrites selectively. Four gaps follow:
 1. **Foundation to law.** Only 12 of 77 deciding laws show the argument from foundations that relation 1 requires. By the candidate's own FOUNDATIONS rule, the other 65 are "unsupported specialisations", yet its design says every family states its argument.
-2. **One result algebra across the carried members.** 47 of 79 result-value sets have no per-value mapping into the core, and 18 pairs of sections decide the same question.
+2. **One result algebra across the carried members.** Of 79 result-value sets, 19 fail outright and 28 more have no definite mapping into the core. 18 pairs of sections decide the same question.
 3. **Conservation records.** Six rows recorded `conserved` changed meaning in this synthesis. The conservation record states that dispositions are unchanged, when 34 changed.
 4. **Actual use.** The frozen frames are almost untested. One frame-alone run used frozen bytes, and its task had been rewritten.
 
-It is not acceptable for C3 as frozen. The repairs are tractable and are listed at the end.
+As frozen, it does not meet relation 1, the single result algebra, criterion 3 (each `superseded` row names its replacement relation) or criterion 4 (actual use). Acceptance is the product owner's decision. The repairs are tractable and are listed at the end.
 
 ## Results against the expectations
 
@@ -94,10 +94,13 @@ Severity is about C3 acceptance. "Introduced" means the defect arrived in this s
 - FOUNDATIONS states its own rule: "Each deciding family states the corresponding premises, consequences and additional choices at its own use contract. A family without that argument remains an unsupported specialisation" (`FOUNDATIONS.md:80–83`).
 - Counted per numbered law, 12 laws carry an argument: 7 in the TRANSFORMATION_LIBRARY tables and 5 resting on core families. Another 9 are partial, 50 have only a generic member preamble, and 6 have nothing.
 - `DESIGN.md:42–43` ("Each material family states its premises, conditional consequences and separately owned choices") and the method return claim full coverage. The return's list of open obligations leaves the gap out.
-- The verdict also holds under a coarser grouping into families.
+- The count is per numbered law, which is finer than the requirement's "group of related rules". Under a coarser grouping, for example RF-001 to RF-017 as one family, a member preamble arguably covers some families. The verdict still holds, because the Spec Method's own preamble limits its argument to UP-020 and computed treatment. That leaves its chain, change-class, evidence and assurance families with no argument (CR1, granularity caveat).
 
-**H2. Most carried result-value sets are not mapped into the core.** (CR2-01, CR2-20, CR1 F4, CR3 F-1; inherited text, introduced claim.)
-- Of 79 value sets across the members: 32 are mapped value by value, 28 rely only on the core's default rule, 17 have no core reference at all, and 2 are defective.
+**H2. Many carried result-value sets have no definite mapping into the core.** (CR2-01, CR2-20, CR1 F4, CR3 F-1; inherited text, introduced claim.)
+- Of 79 value sets across the members:
+  - 32 are mapped value by value.
+  - 19 fail item 2 of the requirement outright: 17 have no core reference at all and 2 are defective.
+  - 28 rely only on FOUNDATIONS' general rules (`FOUNDATIONS.md:398–410`). Those rules bar any refinement from raising standing and fix the predicates for availability, fitness, acceptance and decisions. They do not assign a core value to each value of a set such as the coverage statuses, so these 28 sets have no definite mapping. Where the line falls between this group and the 17 is the reviewer's judgement (CR2).
 - The unmapped sets sit in deciding members: SPEC, TICKET, RELEASE, REFERENCE_FRAME, the Executive baseline and DESIGN.
 - Example: the sprint-close classification (`TICKET_METHOD.md:336–346`) gates `closed` on values with no core mapping. TRANSFORMATION_LIBRARY declares them core refinements (`:205–206`), and UX maps the same list (`:512–520`) without naming the owner.
 - The return's claim that "consumers refine their own outcomes into" the core is contradicted by the text.
@@ -108,8 +111,8 @@ Severity is about C3 acceptance. "Introduced" means the defect arrived in this s
   - AXIOMATIC_CALCULUS `#derivation-provenance`, where "the sole normative authority" for a_c became shared ownership;
   - TICKET_METHOD `#execution-contracts`.
 
-  Each should be `superseded` with a named relation. The changes are often right under the new requirements, but the label is wrong. The Claude line had the same defect class, and it was split and repaired there overnight.
-- `CONSERVATION.json` states "dispositions and historical judgment subjects unchanged", while 34 dispositions changed between `a746559` and `3ad1fca`.
+  Each should be `superseded` with a named relation. The changes are often right under the new requirements, but the label is wrong. The Claude line had the same defect class and repaired it overnight; those repairs have not yet been reviewed cross-family.
+- The `synthesis` entry of `CONSERVATION.json` repeats the round 1 entry word for word: "Author loci and pins refreshed; dispositions and historical judgment subjects unchanged." Its own rows show 657 `conserved`, 33 `superseded` and 1 `not applicable`, against the earlier all-`conserved` map. The entry is inaccurate and looks copied: the record does not state the 34 disposition changes it carries.
 - The 33 `superseded` rows share 14 reason strings and point at the old section rather than the replacing owner, so criterion 3's "names the accepted successor relation" is not met.
 
 **H4. Criterion 4 is not evidenced for the frozen frames.** (CR5-01; introduced gap.)
