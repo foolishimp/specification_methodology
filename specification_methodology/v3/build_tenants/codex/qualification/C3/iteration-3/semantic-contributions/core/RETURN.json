@@ -1,0 +1,68 @@
+{
+  "schema": "stdo.semantic-contribution-return.v1",
+  "activation": "I3-R2-ACCOUNT-COMPLETE-01",
+  "governing_run": "EC-CODEX-I3-02",
+  "role": "Codex bounded semantic-construction Writer",
+  "source_commit": "f2cb3e593757d094d008102551925e871a0204ff",
+  "input_account_commit": "fe4fcbe",
+  "input_account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+  "common_input": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
+  "installed_builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "verified": true
+  },
+  "work_result": "incomplete",
+  "overall_evaluation": {
+    "predicate": "Every source unit assigned to this core Writer has a completed authored semantic binding or an explicitly preserved inspected ready binding.",
+    "verdict": "falsified",
+    "basis": "Six assigned owner paths in the frozen v1.3 account; source f2cb3e5; no scope exclusion of Baseline.",
+    "evidence": "67 Baseline units are explicitly unfinished; available source was not semantically acquired. All remaining assigned IDs are partitioned into 93 authored replacements and 81 unchanged ready bindings.",
+    "performance": "performed",
+    "effects": "completed",
+    "effect_boundary": "Only files directly inside semantic-contributions/core/; no source/account/common/peer/Git mutation.",
+    "residuals": [
+      "66 Baseline pending source units and one locator need the fresh sequential Writer selected by parent.",
+      "Semantic fidelity and acceptance of this authored contribution require their actual independent assessment/authority; structural checks do not supply them."
+    ]
+  },
+  "constructed_scope": {
+    "pending_units_authored": 89,
+    "locator_bindings": 3,
+    "ready_repair": "FOUNDATIONS.foundational-commitments reclassified as definition_data with adopted F1-F6 and embedded specialization obligations.",
+    "unchanged_ready_bindings": 81,
+    "row_local_argument_and_inputs": "All 93 source_refs, typed premises and required-input applicability checked by stable ID; full compact argument/input inventory also inspected by author."
+  },
+  "author_validation": {
+    "mechanical_passed": true,
+    "cases": 20,
+    "case_standing": "Source-specific author inspection, not executable independent oracle or fresh external trial.",
+    "checks_file": "AUTHOR_CHECKS.json",
+    "cases_file": "AUTHOR_CASES.json"
+  },
+  "measurements": {
+    "source_cumulative_emitted_bytes": 214670,
+    "source_unique_selected_bytes": 208321,
+    "wall_window": {
+      "from_utc": "2026-10-14T10:58:01.380605+00:00",
+      "to_utc": "2026-10-14T11:17:17.752952+00:00",
+      "wall_seconds": 1156.372,
+      "boundary": "First exact timestamp retained after routing/ticket acquisition through final author check; earlier routing work is excluded. Approximate activation start separately recorded."
+    },
+    "paid_calls": 0
+  },
+  "limitations": [
+    "Initial file-name-only AGENTS discovery included sibling paths; no peer bodies were read.",
+    "Initial ticket extraction printed grant and following ticket history with output truncation; not used as current semantic evidence.",
+    "Account parsed by tool in full, but model acquired only selected metadata and rows.",
+    "Platform inherited context, host context residency, reasoning token use and tool wrapper overhead are not measured.",
+    "Some applicable Product authority sections were read after initial contribution writes; exact grant/routing/builder had already selected the task. This sequencing limitation is retained, not presented as compliant pre-effect acquisition.",
+    "Inherited system/developer/parent context bytes",
+    "Active retained context and token usage",
+    "Host model capacity/fallibility boundary",
+    "Tool-wrapper/serialization and initial routing output bytes"
+  ],
+  "authority_limit": "No source repair, account integration, acceptance, release, paid call, peer-content inspection or subdelegation performed. Parent owns disposition and separate Baseline activation.",
+  "bindings_sha256": "30623d13bfbdf10585a21b64339c6ce9da69a9afce87bf8520804433ec9efdad",
+  "checks_sha256": "c4570b874389025276f59ea40bc3887edb79144d5b49785dd6bc4f565bbf8a49"
+}

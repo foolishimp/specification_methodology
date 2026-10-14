@@ -1,0 +1,67 @@
+{
+  "schema": "stdo.semantic-contribution-author-check.v1",
+  "input_account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+  "bindings_sha256": "30623d13bfbdf10585a21b64339c6ce9da69a9afce87bf8520804433ec9efdad",
+  "passed": true,
+  "errors": [],
+  "checks": [
+    "exact account hash/schema/source commit",
+    "six immutable source member pins",
+    "authored immediate-body hash recomputation",
+    "stable IDs and exact disjoint assignment partition",
+    "complete five-owner pending-ID accounting",
+    "definition/locator versus deciding representation",
+    "typed dependency resolution and declared consumer binding",
+    "shared result contract resolution",
+    "explicit unfinished-unit pins",
+    "author-case references",
+    "all row-local argument source IDs, typed premise bindings and exact input applicability"
+  ],
+  "counts": {
+    "assigned_rows": 241,
+    "authored_replacements": 93,
+    "unchanged_ready": 81,
+    "unfinished_units": 67,
+    "pending_units_authored": 89,
+    "author_cases": 20
+  },
+  "source_members": [
+    {
+      "path": "standards/AXIOMATIC_CALCULUS.md",
+      "bytes": 53136,
+      "sha256": "da2778fd029b6aa204d116d8451e18aa2af49ad5beda3663ddfe4ca909507df0",
+      "matches_account": true
+    },
+    {
+      "path": "standards/FOUNDATIONS.md",
+      "bytes": 45675,
+      "sha256": "aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189",
+      "matches_account": true
+    },
+    {
+      "path": "standards/IDENTITY_METHOD.md",
+      "bytes": 17137,
+      "sha256": "efe14dff289da7fe11e523efcc6e28eced61199bdf337c07833b00b68bbef493",
+      "matches_account": true
+    },
+    {
+      "path": "standards/REFERENCE_FRAME_METHOD.md",
+      "bytes": 65889,
+      "sha256": "db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1",
+      "matches_account": true
+    },
+    {
+      "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "bytes": 138487,
+      "sha256": "4b6b923a18527efca339496e8e1ae56e61786237b72cd3e51d8594efa6b18b1d",
+      "matches_account": true
+    },
+    {
+      "path": "standards/TRANSFORMATION_LIBRARY.md",
+      "bytes": 28081,
+      "sha256": "596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09",
+      "matches_account": true
+    }
+  ],
+  "semantic_limit": "Mechanical checks establish identities, shape and coverage accounting only. AUTHOR_CASES records source-specific author inspection, not independent evidence or semantic acceptance."
+}
