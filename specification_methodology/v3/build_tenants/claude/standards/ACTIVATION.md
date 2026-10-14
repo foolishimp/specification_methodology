@@ -330,12 +330,12 @@ admitted authority through its intake (Intake above) and its activation
 
 Reconfiguration. The allocation, and every reconfiguration, preserves the
 material dependencies, the outstanding obligations, the effects,
-including those of unknown completion, the admitted authority and the
+including those of uncertain completion, the admitted authority and the
 required independence. A reconfiguration is any change of allocation
 during the work, including actors redistributing work among themselves
 and the changes §4 Reconfiguration selects after a result. An outstanding
 obligation and the results that depend on it move with the work. An
-effect of unknown completion is resolved sufficiently for the next
+effect of uncertain completion is resolved sufficiently for the next
 dependent action before that action (§3 Effects, §5). Required
 independence keeps its authorship and evidence conditions
 ([EVALUATION §3](EVALUATION.md#3-independent-assessment)), which a fresh
@@ -799,16 +799,17 @@ premise, P6):
 | Value | Core value | Ground |
 |---|---|---|
 | `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
+| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
 not that evidence, and the value stays `completion_unknown`.
 `completion_unknown` never maps to `completed` or to `not_effected`.
 
-Whether the effect has ended is a second question, not the predicate
-above. An effect has ended where evidence about the subject establishes
+Whether the effect has ended is a second question beside the predicate
+above, and it enters the value only as a conjunct of `completed`. An
+effect has ended where evidence about the subject establishes
 that it no longer acts on the subject or that it never began. Where an
 effect began and the evidence does not establish its end, the end is not
 established, and that is recorded beside the value as a residual naming

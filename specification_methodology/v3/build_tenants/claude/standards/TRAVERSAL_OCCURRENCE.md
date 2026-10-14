@@ -929,12 +929,13 @@ unchanged; a refined value names a kind and its cause and adds no kind
 - `partial_effect(not_attained)`: the admitted evidence establishes that
   the intended outcome is not met and that no later completion of the
   effect can meet it. The effect evidence and the bounded
-  post-observation, read under the outcome contract, show part of the
-  intended outcome not reached where nothing left of the effect can reach
-  it: the effect has ended short, or an interval that the outcome contract
-  bounds has closed with only part reached. The unreached part is the
-  counterexample. Whether the effect has ended is not part of this cause:
-  where the evidence does not establish the end, the `partial_effect`
+  post-observation, read under the outcome contract, show the intended
+  outcome not met where nothing left of the effect can meet it, for
+  example where the effect has ended short, or an interval that the
+  outcome contract bounds has closed with only part reached. The evidence
+  of non-attainment, such as the unreached part, is the counterexample.
+  Whether the effect has ended is not part of this cause: where the
+  evidence does not establish the end, the `partial_effect`
   residual records it beside the value, as
   [ACTIVATION §3 Effects](ACTIVATION.md#effects) states.
 - `partial_effect(undecided)`: every other `partial_effect`. The admitted
@@ -943,7 +944,8 @@ unchanged; a refined value names a kind and its cause and adds no kind
   [effect law](#mutable-subject-effect-relation) requires is not yet
   acquired, or it shows part reached while a later completion of the
   effect could still meet the outcome, or it shows the outcome met while
-  the effect may still be acting, or a response was lost and no
+  the effect may still be acting, so whether the outcome is met once the
+  effect settles is undecided, or a response was lost and no
   counterexample is observed. A lost response, an absent record or an
   actor's context holding no trace of the effect is no evidence about the
   subject, so it establishes neither non-attainment nor the end of the
@@ -1336,7 +1338,7 @@ predicate, "the intended effect occurred"; the causes of the two
 | Disposition | Effects value | Core value | Ground |
 |---|---|---|---|
 | `completed_effect` | `completed` | satisfied | the bounded post-observation and sufficient effect evidence establish that the intended effect occurred and that the effect has ended |
-| `partial_effect(not_attained)` | `not_effected` | falsified | the admitted evidence establishes that part of the intended outcome is not reached and that no later completion of the effect can reach it; the part that did occur is named with the value, and an end of the effect that the evidence does not establish is recorded beside it, not in it |
+| `partial_effect(not_attained)` | `not_effected` | falsified | the admitted evidence establishes that the intended outcome is not attained and that no later completion of the effect can attain it; the part that did occur is named with the value, and an end of the effect that the evidence does not establish is recorded beside it, not in it |
 | `partial_effect(undecided)` | `completion_unknown` | indeterminate | the evidence cannot decide whether the intended outcome is or will be reached |
 | `refused_effect` | `not_effected` | falsified | the evidence shows that no authorised mutation began |
 | `no_effect` | `not_effected` | falsified | the admitted disposition records that no invocation was dispatched, and the record is exact because `invokes_effect` exists if and only if one was; so the occurrence effected nothing on the subject |

@@ -450,9 +450,9 @@ mapping adds no core value (P5, P6):
 
 Purpose and material relation: a consumer that combines the manager's
 outcomes with other results cannot read a refused or failed operation as
-completed, an operation of unknown completion as either completed or not
-effected, or a refusal for missing acceptance as one for a defective
-basis (P5, P6). This mapping is new in this corpus.
+completed, an operation whose value is `completion_unknown` as either
+completed or not effected, or a refusal for missing acceptance as one
+for a defective basis (P5, P6). This mapping is new in this corpus.
 
 ## 5. Bounded-context semantic resolution
 

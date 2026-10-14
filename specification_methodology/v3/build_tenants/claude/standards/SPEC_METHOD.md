@@ -1697,7 +1697,7 @@ Rules:
    - the operations, each with its inputs, outputs, effects and outcome
      values; each outcome value maps to exactly one core value under
      [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and an intended
-     external effect, one of unknown completion included, is recorded as
+     external effect, one of uncertain completion included, is recorded as
      [ACTIVATION §3 Effects](ACTIVATION.md#effects) states;
    - the composition laws, and the transformations the calculus permits;
    - the resource measures;
