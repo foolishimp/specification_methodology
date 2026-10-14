@@ -1,0 +1,86 @@
+{
+  "group": "G4",
+  "symbols": [],
+  "clauses": [
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:rf-decision-holds",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "REFERENCE_FRAME §5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "decision(holds) maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "decision(holds)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the composite predicate holds under the declared decision rule"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "`conjoin`: the composite predicate holds under the declared decision rule — `decision(holds)` — the conjunction of FOUNDATIONS §4 reports `satisfied` — `satisfied`",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/REFERENCE_FRAME.md#5-method-functions"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:rf-decision-fails",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "REFERENCE_FRAME §5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "decision(fails) maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "decision(fails)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the composite predicate holds under the declared decision rule"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`decision(fails)` — the conjunction reports `falsified`, and no mandatory result for the same claim is `satisfied` — `falsified`",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/REFERENCE_FRAME.md#5-method-functions"
+      ]
+    }
+  ],
+  "residuals": [],
+  "frame_indexes": []
+}

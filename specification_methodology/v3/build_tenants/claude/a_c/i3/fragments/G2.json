@@ -1,0 +1,788 @@
+{
+  "group": "G2",
+  "symbols": [
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:closed-result",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Closed result: a result with its frame, subject, basis, evidence and invalidation conditions",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:invalidator",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Invalidator: a material input change, a changed basis or a declared revising observation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:three-invalidators",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:closed-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:invalidator"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4b"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p3"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "An invalidator invalidates the affected result before reliance, even where the subject's own bytes are unchanged, preserving its predecessor/successor relation and any demonstrably independent surviving results.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:invalidators-are-three",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:invalidator"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §7"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "three kinds of invalidator: material input change, changed basis, declared revising observation"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "separate trigger lists in each member, or one owner list"
+        }
+      ],
+      "statement": "The invalidators are three: - a material input change: a change to the result's subject or to an input it rests on, including the admissible evidence that bears on its predicate; newly acquired or changed admissible evidence is such a change when it is material to the result as [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) defines material, that is, when it could change the result's value; - a changed basis: a change to any coordinate of the basis the result binds (FOUNDATIONS §2, Basis); - a declared revising observation: an observation that the result or judgment itself names as one that would revise it, once it occurs.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:reuse-not-by-role-change",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:permits",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:closed-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "may"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4b"
+        }
+      ],
+      "statement": "A closed result is reused by an unchanged consumer that checks exact applicability; a role, conversation or resumption change alone invalidates nothing.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:only-admitted-contract-activates",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:what-creates-no-authority"
+        }
+      ],
+      "statement": "Only an admitted contract activates a step: no result, child completion, tool output, model response, shared actor or lateral handoff activates another step or authorises continuation by itself, and a profile that routes results names its instances of this rule.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#admission"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:disp-accept",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "accept maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "accept"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the candidate is accepted at its declared boundary"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "`accept` — the candidate closes its declared cone and preserves every affected governing relation — satisfied",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#disposition"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:disp-local-repair",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "local_repair maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "local_repair"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the candidate is accepted at its declared boundary"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`local_repair` — implementation or proof is locally defective while the governing relation remains coherent — falsified",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#disposition"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:disp-re-enter",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "re_enter maps to invalid_basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "re_enter"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the candidate is accepted at its declared boundary"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:invalid_basis"
+        }
+      ],
+      "statement": "`re_enter` — the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change — invalid_basis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#disposition"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:disp-reject",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Disposition"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "reject maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "reject"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the candidate is accepted at its declared boundary"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`reject` — the candidate violates a governing relation or leaves an undisposed competing truth path — falsified",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#disposition"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:avail-candidate-ready",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Construction availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "candidate_ready maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "candidate_ready"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "a candidate is available"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "`candidate_ready` — satisfied — an exact candidate and its transition evidence are available",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-availability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:avail-refused",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Construction availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "refused maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "refused"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "a candidate is available"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`refused` — falsified — lawful activation occurred, and a governing prohibition or an owner-valid construction refusal defeats the requested construction; the prohibition or refusal is the counterexample",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-availability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:avail-incomplete",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Construction availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "incomplete maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "incomplete"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "a candidate is available"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`incomplete` — falsified — the lawfully activated step stopped without its output, because an evaluation the output needs was not performed or could not be decided on the admissible evidence, or bounded execution ended first; the stop basis is the counterexample, and it and the residuals name which",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-availability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:avail-re-entry-authority",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Construction availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "re_entry_requested(authority) maps to out_of_frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "re_entry_requested(authority)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "a candidate is available"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:out_of_frame"
+        }
+      ],
+      "statement": "`re_entry_requested(authority)` — out_of_frame — a material decision the step needs lies outside its grant; the value names the owner of that decision",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-availability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:avail-re-entry-basis",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Construction availability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "re_entry_requested(basis) maps to invalid_basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "re_entry_requested(basis)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "a candidate is available"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:invalid_basis"
+        }
+      ],
+      "statement": "`re_entry_requested(basis)` — invalid_basis — the activated basis can no longer support the work",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-availability"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:effect-completed",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Effects"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "completed maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "completed"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the intended effect occurred"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "`completed` — satisfied — evidence about the subject establishes that the intended effect occurred in full and that the effect has ended",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#effects"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:effect-not-effected",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Effects"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "not_effected maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "not_effected"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the intended effect occurred"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`not_effected` — falsified — evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, an interval that the declared outcome bounds has closed with part of it not done, or the part already done has itself made the declared outcome unattainable, as when it destroyed what the outcome needed; any part that did occur is named with the value",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#effects"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:effect-completion-unknown",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Effects"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "completion_unknown maps to indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "completion_unknown"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the intended effect occurred"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:indeterminate"
+        }
+      ],
+      "statement": "`completion_unknown` — indeterminate — neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#effects"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:amb-resolved",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Ambiguity outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "resolved maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "resolved"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the declared ambiguity is resolved on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "`resolved` — satisfied — a decision was taken under the policy that permits lawful probabilistic processing, or by human adjudication, and recorded",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#ambiguity-outcome"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:amb-carried",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Ambiguity outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "carried maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "carried"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the declared ambiguity is resolved on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`carried` — falsified — policy permits work to continue with the ambiguity open; the open ambiguity is the counterexample, and it stays a recorded residual that names the evidence or decision that would resolve it",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#ambiguity-outcome"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:amb-escalated",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Ambiguity outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "escalated maps to out_of_frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "escalated"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the declared ambiguity is resolved on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:out_of_frame"
+        }
+      ],
+      "statement": "`escalated` — out_of_frame — policy or risk appetite reserves the decision to human adjudication, an authority the step does not hold; the value names that authority",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#ambiguity-outcome"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:amb-blocked",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "ACTIVATION §3 Ambiguity outcome"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "blocked maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "blocked"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the declared ambiguity is resolved on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`blocked` — falsified — the ambiguity stays unresolved, and policy or a hard stop (§4) halts work at it; the open ambiguity is the counterexample, and the value names the halting condition and what would lift it",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#ambiguity-outcome"
+      ]
+    }
+  ],
+  "residuals": [],
+  "frame_indexes": [
+    {
+      "uri": "urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation",
+      "frame_ref": "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse",
+      "scope": "Decide whether a closed result may be reused or is invalidated: the three invalidators and reuse after an exact applicability check.",
+      "clause_refs": [
+        "urn:stdo-3:claude:i3:clause:three-invalidators",
+        "urn:stdo-3:claude:i3:clause:invalidators-are-three",
+        "urn:stdo-3:claude:i3:clause:reuse-not-by-role-change"
+      ],
+      "residual_refs": [],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#7-closed-result-and-reuse"
+      ]
+    }
+  ]
+}

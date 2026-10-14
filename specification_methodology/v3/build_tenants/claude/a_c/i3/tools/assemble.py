@@ -167,6 +167,11 @@ def program(symbols, clauses, residuals, indexes):
     vocab = sorted({s['kind'] for s in syms} | {c['operator'] for c in clauses.values()}
                    | {a['role'] for c in clauses.values() for a in c['arguments']})
     frames = sorted({ix['frame_ref'] for ix in indexes.values()})
+    canon = lambda item: dict(item, **{k: sorted(set(item[k])) for k in ('source_refs', 'clause_refs', 'residual_refs', 'subject_refs', 're_entry_refs') if k in item})
+    symbols = {u: canon(x) for u, x in symbols.items()}
+    clauses = {u: canon(x) for u, x in clauses.items()}
+    residuals = {u: canon(x) for u, x in residuals.items()}
+    indexes = {u: canon(x) for u, x in indexes.items()}
     return {
         'kind': 'axiom-indexer.axiomatic-program', 'schema_version': 1,
         'uri': 'urn:stdo-3:claude:i3:program', 'calculus_ref': 'stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md',
