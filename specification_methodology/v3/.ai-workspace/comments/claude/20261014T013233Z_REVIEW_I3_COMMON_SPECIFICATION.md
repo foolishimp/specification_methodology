@@ -3,7 +3,8 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T01:32:33Z
 **Addresses**: the common specification `specification_methodology/v3/specification/` for iteration 3, at the commit the common pen names as frozen for each round
-**Status**: Expectations recorded. The subject is not yet frozen, so no finding is recorded.
+**Status**: Round 1 complete (subject `7c058ed`). Expectations committed at `f4007ce`, before the subject was read.
+**Updated**: 2026-10-14T01:50:05Z
 
 ## Authority and independence
 
@@ -80,7 +81,136 @@ Also used:
 
 ## Rounds
 
-None yet. Each round will add a section holding:
+Each round adds a section holding:
 - the frozen commit and the diff from the previous round;
 - findings ranked by severity, each with evidence and the smallest repair;
 - the state of every earlier finding: closed, still open, or new.
+
+## Round 1: subject `7c058ed`
+
+### Subject and scope
+
+The subject is the common specification and the consolidated work list at `7c058ed52b9f3cdecf6277026be5d18507efc527`, as the pen's [handoff](../codex/20261014T012413Z_HANDOFF_I3_FOR_CLAUDE_REVIEW.md) names it:
+- `specification/` in full;
+- the work list `.ai-workspace/tickets/active/T-002-iteration-3-work.md`;
+- T-001, T-002, T-002-CODEX and T-002-CLAUDE, read for authority and status.
+
+The comparison is with `a7eba66`, the basis both lines built revision 2 against: 9 files changed in `specification/`, with 108 insertions and 30 deletions.
+
+Not reviewed in this round: the Codex implementation checkpoint `d832a51`. The handoff marks it as a separate subject whose I3 qualification is unfinished.
+
+Four Claude reviewers each covered part of the expectations, working from `git archive` copies of the subject. Their full reports are in [round-1 assets](assets/20261014T013233Z_i3_review/round-1/):
+
+| Report | Expectations covered | Findings |
+|---|---|---|
+| [SR1](assets/20261014T013233Z_i3_review/round-1/SR1.md) | 1, 2, 3, 8, 10 | 13 |
+| [SR2](assets/20261014T013233Z_i3_review/round-1/SR2.md) | 6, 9, and the handoff's consistency question | 25 |
+| [SR3](assets/20261014T013233Z_i3_review/round-1/SR3.md) | 4 and 11, the work list | 12 |
+| [SR4](assets/20261014T013233Z_i3_review/round-1/SR4.md) | 5, 7, 12, 13 | 19 |
+
+The synthesis re-read the subject for the pillar table (`PRODUCT.md:39–49`) and for criterion 3 on superseded relations (`PRODUCT.md:380`) before relying on them.
+
+### Verdict
+
+The specification is not ready for sign-off. One finding is blocking and about twenty are material; the rest are minor.
+
+The architecture of the update is sound:
+- every new requirement has a declared owner, and PRODUCT summarises each requirement accurately;
+- the a_c and constraint-surface text is complete and does not overstate structural checks;
+- reconstructing member boundaries is permitted while every predecessor claim stays accounted for;
+- no new requirement can be met by only one candidate's present design;
+- the work list accounts for every finding on the Codex candidate, with no false closure.
+
+The gaps are in four places:
+- the owner's pillar list;
+- whether the reduction and a_c requirements can be tested and are wired into acceptance;
+- the rules of the acceptance process itself;
+- a work list that covers only one of the two lines.
+
+Most corrections land in work item I3-00, which the list marks COMPLETE and which needs reopening.
+
+### Results against the expectations
+
+| # | Expectation | Result | Evidence |
+|---|---|---|---|
+| 1 | The owner's pillars are present and testable | Falsified | No pillar is the algebraic calculus. The computational calculus is folded into "Computational realisation" (`PRODUCT.md:47`), which covers execution binding. "Axiomatic calculus" is added and "Functional design and algebra" merged, with no reason given anywhere (SR1 Q1) |
+| 2 | a_c stated as the owner described it | Holds in definition; indeterminate in acceptance | The definition is complete and modest (SR1 Q2). Whether C3 acceptance checks the interpretation, and which theory it models, is not stated (SR1-03, SR1-04; SR4 T-3) |
+| 3 | Document boundaries are free | Mostly holds | Reconstruction is permitted, but a conserved claim takes one successor locus only, and the tier table's member lists read as binding (SR1-06, SR1-07) |
+| 4 | Review work consolidated and traceable | Falsified for the Claude line | Every finding on the Codex candidate is carried. None of Codex's F1–F5 on the Claude candidate is carried, and nor are the Claude line's obligations under the new standard (SR3; interested) |
+| 5 | Neutrality between tenants | Holds | No new requirement favours one candidate's design (SR4 Q1) |
+| 6 | One owner per rule in the specification | Falsified on several pairs | SR2 Q1, for example the acceptance composition and the reviewers' write territory below |
+| 7 | Each new requirement testable | Falsified for reduction | No pass rule. "Deciding path", the acquisition measure and the "preceding" candidate are undefined, and "where available" allows the comparison to be skipped. Criterion 6 is judged per member, but reduction spans members (SR4 T-1, T-2; SR2) |
+| 8 | Purpose and proportionality | Falsified | Changes to accepted items are recorded nowhere: criteria 3, 4 and 6 (approved at C2) and the Mission sentence. The two new requirements lack the purpose paragraph the specification itself demands (SR1-10, SR1-11) |
+| 9 | Consistent with its own laws | Falsified | The frame basis's review result set, "supported, contradicted or unresolved" (`REFERENCE_FRAME_BASIS.md:24`), has no mapping into the result algebra (SR2-03) |
+| 10 | a_c dependency boundary kept | Holds | SR1 Q2 |
+| 11 | Known defects closed or tracked | Partly | The Codex-line findings are tracked. The Claude-line findings and owner decisions are not (SR3) |
+| 12 | Writing | Holds with minor findings | SR4 Q4 |
+| 13 | Process | Falsified | I3-00 is marked COMPLETE without the owner's sign-off as its closure condition, and GOALS has no row for it (SR4 P-1) |
+
+### Findings
+
+#### Blocking
+
+**B1. No rule says who accepts a `superseded` successor relation, and member acceptance depends on it.** (SR2-01, SR4 T-4)
+- Criterion 3 requires every `superseded` row to name "the accepted successor relation", and "Proposed replacements remain pending until accepted" (`PRODUCT.md:380`).
+- A member is accepted only when every row is disposed.
+- The installed UP-020 rule bars the Executive from accepting a change of meaning.
+
+As written, no member that supersedes anything can be accepted. Smallest correction: reserve acceptance of replacement relations to the product owner, recorded before the member's `accept`, or name another acceptor explicitly. (Work item I3-00; it also unblocks I3-06.)
+
+#### Material
+
+1. **Pillars.** (SR1 Q1, Q5; SR1-02)
+   - Align the pillar table with the owner's list: make the algebraic and computational calculi distinct pillars, or record why they are folded or renamed.
+   - Record the reason for adding "Axiomatic calculus" as a pillar.
+   - Link the pillars to the principles accepted at C1.
+   - The owner's list exists only as the pen's paraphrase. Ask the owner to confirm the list verbatim before the next round.
+2. **Reduction cannot yet be decided the same way twice.** (SR4 T-1, T-2; SR2)
+   - Give "demonstrated reduction" a pass rule.
+   - Define "deciding path", what "acquisition" measures, and which candidate is "preceding".
+   - Remove the "where available" escape.
+   - Add a whole-candidate reduction check, because criterion 6 per member cannot detect contraction that spans members.
+3. **a_c and constraint surfaces are outside acceptance.** (SR4 T-3; SR1-03, SR1-04)
+   - Put constraint-surface and a_c fidelity obligations into the C3 outcome, a criterion and the closure rule.
+   - Say whether a partial interpretation can pass, and what it must declare.
+   - Name the theory the interpretation models: the installed `a_c` rules, or a successor.
+4. **Reopened decisions are unrecorded.** (SR1-10, SR1-11) List each accepted C1, C2 or C3 item the update changes, with the reason, and add the purpose paragraph to each new requirement.
+5. **Acceptance composition.** (SR2-02) PRODUCT accepts a member on one `satisfied` result (`PRODUCT.md:195`), but the Reviewer returns one result per criterion (`REFERENCE_FRAME_BASIS.md:28`). State the conjunction rule once.
+6. **The specification's own result set.** (SR2-03) Map "supported, contradicted, unresolved" into the core, or replace it with core values plus a domain outcome.
+7. **Process and authority.** (SR2; SR4 P-1)
+   - `.ai-workspace/` is reserved to the common pen, but reviewers must write their reports there. Say which surfaces each role writes.
+   - The rule "a merge implies acceptance" conflicts with the owner-directed merge `a9adce2`. Record that merge as an owner variance.
+   - Define "author" for reviewer independence: the tenant or the activation.
+   - Make the owner's sign-off the closure condition of I3-00, and give it a GOALS row.
+8. **The work list covers one line.** (SR3; interested: these findings concern the Claude line)
+   - Either add a Claude-line section, or scope the claim at `GOALS.md:11` ("traces every remaining requirement and review finding") to the Codex line.
+   - A Claude-line section would carry Codex's F1–F5, with their state on the Claude branch: F1, F2, F4 and F5 repaired and pending cross-family confirmation, F3 open. It would also carry the new standard's obligations for that line.
+   - Codex's review of the Claude candidate is not committed on any branch. The pen should commit it so that it can be cited.
+9. **Work-list mechanics.** (SR3-03, SR3-05, SR3-06, SR3-07)
+   - The consolidation review checked coverage only against the list's own keys.
+   - Owner decisions are treated as work or left untracked: acceptance-review assignment, compressions, identifiers, candidate number and cohort.
+   - Findings routed to several items have no rule for when they close.
+   - I3-02, I3-05 and I3-11 ask for less than the reduction requirement does (`requirements/README.md:57–58`).
+10. **Boundaries.** (SR1-06, SR1-07) Allow a conserved claim more than one successor locus. Say whether the tier table's member lists bind, or only illustrate.
+
+#### Minor
+
+About 45 further findings, including undefined terms, wording and cross-reference gaps, are in the four reports with locations and corrections.
+
+### Required corrections, in order
+
+1. Name the acceptor of replacement relations (B1).
+2. Settle the pillar list with the owner and record reasons for any merge, rename or addition (M1).
+3. Give reduction a pass rule, definitions and a whole-candidate check (M2).
+4. Wire a_c and constraint-surface fidelity into the C3 outcome, criteria and closure (M3).
+5. Record reopened decisions, and add purpose paragraphs (M4).
+6. State the acceptance conjunction, and map the frame basis's result set (M5, M6).
+7. Fix the process rules: write territories, the merge variance, "author", and I3-00 closure (M7).
+8. Complete the work list for the Claude line, or scope its claim, and correct its mechanics (M8, M9).
+9. Correct the boundary rules (M10).
+
+### Independence and limits
+
+Claude is a tenant governed by this specification. Findings M8 and SR4 N-1 concern the Claude line and are marked interested. Several new clauses respond to Claude's own earlier findings on the Codex candidate (H1, H2), and judging those clauses is not fully independent.
+
+The reviewers sampled `PREDECESSOR_CLAIMS.md` rather than reading every row, and read neither candidate. They read Codex's review of the Claude candidate from the working tree, identified by its SHA-256, because it is uncommitted. Nothing in this round selects repairs. The pen repairs, the next frozen commit is round 2, and the product owner's sign-off closes the review.
