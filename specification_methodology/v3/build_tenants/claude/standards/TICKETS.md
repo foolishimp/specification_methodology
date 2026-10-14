@@ -12,7 +12,7 @@ test case authority; the implementation-migration ticket category with its
 declaration, checklist and review rules; one-truth state projection; the
 recommended ticket and sprint shape; the operating mode. It is realised
 from [FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md) and
-[EVALUATION](EVALUATION.md) and is the T pillar named by
+[EVALUATION](EVALUATION.md) and is the T area named by
 [SPEC_METHOD §1](SPEC_METHOD.md#method-identity): nothing here is
 foundational, every clause names the principle that requires it (P0 to P6,
 FOUNDATIONS §3), and each mechanism could be realised differently under the
@@ -281,24 +281,30 @@ local paydown debt only when the governing method allows that debt to
 survive as explicit follow-up; it cannot accept hidden authority drift
 (P6).
 
-Close classifications as results. A close classification is the outcome
-of close review for one reviewed item, made against the sprint authority
-the manifest cites. Like a disposition of
-[ACTIVATION §3](ACTIVATION.md#disposition), it consumes the core results
-of the item's review and stays separate from them, as acceptance stays
-separate from assessment ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)).
-Each classification maps to exactly one core value for the predicate "the
-reviewed item is accepted as compliant under the sprint authority" (P5,
-P6):
+Close classifications as dispositions. A close classification is the
+outcome of close review for one reviewed item, made against the sprint
+authority the manifest cites. It is a disposition of
+[ACTIVATION §3 Disposition](ACTIVATION.md#disposition), refined for the
+sprint's close boundary: the candidate is the reviewed item, and its
+declared boundary is the sprint's close under the cited authority. The
+law of that section applies to it unchanged: it consumes the core
+results of the item's review and stays separate from them, as acceptance
+stays separate from assessment
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)), and an assessor's
+proposed classification is a recommendation, not the classification.
+Each classification is exactly one disposition and takes that
+disposition's core value, for the predicate "the reviewed item is
+accepted as compliant under the sprint authority", the disposition's
+predicate at this boundary (P5, P6):
 
-| Classification | Core value | Ground |
-|---|---|---|
-| `accepted` | satisfied | the item is compliant under the sprint authority |
-| `local_paydown` | falsified | local debt remains; the debt is the counterexample, and the paydown ticket carries it |
-| `design_reframe` | invalid_basis | the accepted design that governs the item must change, so the authority the sprint cites cannot support accepting it |
-| `requirement_reprice` | invalid_basis | a governing requirement must change, with the same consequence |
-| `product_reprice` | invalid_basis | the work changes the product definition, which the authority the sprint cites cannot support |
-| `remove` | falsified | the work is backed out or kept out of closure; the reason for removal is the counterexample |
+| Classification | Disposition | Core value | Ground, and how it narrows or differs from the disposition's condition |
+|---|---|---|---|
+| `accepted` | `accept` | satisfied | the item is compliant under the sprint authority |
+| `local_paydown` | `local_repair` | falsified | local debt remains and is captured by a paydown ticket; the debt is the counterexample. The governing relation stays coherent, because an item whose governing authority must change takes a repricing classification instead. It differs from `local_repair` in where the repair is carried: by the paydown ticket, which survives the close where the method allows that debt to survive |
+| `design_reframe` | `re_enter` | invalid_basis | the accepted design that governs the item must change, so the authority the sprint cites cannot support accepting it |
+| `requirement_reprice` | `re_enter` | invalid_basis | a governing requirement must change, with the same consequence |
+| `product_reprice` | `re_enter` | invalid_basis | the work changes the product definition, which the authority the sprint cites cannot support |
+| `remove` | `reject` | falsified | the work is backed out or kept out of closure. Its condition is wider than `reject`'s: the reason for removal is the counterexample, whether or not it is a violated governing relation or a competing truth path |
 
 The layer that `design_reframe`, `requirement_reprice` and
 `product_reprice` name is a declared fact, not a further result: it is
@@ -306,11 +312,13 @@ the change class of [SPEC_METHOD §4](SPEC_METHOD.md#change-classes) at
 which the work re-enters, and it travels with the core value as the
 domain outcome (FOUNDATIONS §4 Results, Recording). The outcome of a
 debt entry, accepted, ticketed, repriced or removed (Sprint status,
-`closed`), maps in the same way for the predicate "the debt entry is
-accepted under the sprint authority": accepted to `satisfied`, ticketed
-and removed to `falsified`, repriced to `invalid_basis`, on the grounds of
-`accepted`, `local_paydown`, `remove` and the repricing classifications
-respectively. The mappings add no core value. The condition for `closed`
+`closed`), is likewise a disposition at the close boundary, for the
+predicate "the debt entry is accepted under the sprint authority":
+accepted is `accept` (`satisfied`), ticketed is `local_repair` and
+removed is `reject` (`falsified`), and repriced is `re_enter`
+(`invalid_basis`), on the grounds of `accepted`, `local_paydown`,
+`remove` and the repricing classifications respectively. The mappings
+add no disposition and no core value. The condition for `closed`
 above requires an outcome for every item and debt entry, not a
 `satisfied` one. The mappings are new in this corpus.
 Purpose and material relation: a consumer that combines close outcomes
@@ -480,17 +488,27 @@ proves no coverage. Missing or ambiguous evidence leaves the affected
 treatment unknown; it is not proof that the governing layer itself is
 absent (P6).
 
-The walk goes upward to the first missing layer. If the governing
-requirement is missing or insufficient, re-enter its owner. If that
-requirement is sufficient but the realising design is missing or
-insufficient, re-enter Design. Follow an actual upstream Goal, Intent or
-Product change to its owner rather than stopping at a familiar file. When
-the current requirement and accepted design suffice and the implementation
-deviates, repair or reject the candidate under `realization_refactor`. A
-candidate's public violation does not select a new contract. An explicitly
-changed desired outcome or an established governing insufficiency follows
-the owning re-entry; unresolved meaning remains J and a reserved choice
-remains O (P2, P6).
+The re-entry rule is SPEC_METHOD §4's: the
+[change classes](SPEC_METHOD.md#change-classes) with their re-entry
+points, and the smallest lawful re-entry that step 4 of
+[Computed classification and treatment](SPEC_METHOD.md#computed-classification-and-treatment)
+exposes, with the paragraph after the four steps: a candidate's public
+violation does not select a new contract, and the governing owner is
+re-entered only for an explicitly changed desired outcome or an
+established governing insufficiency. For a bug, this check
+refines that rule into an upward walk from the realised surface that
+stops at the first layer that is missing or insufficient for the
+authorised outcome, and the class is the one that re-enters there:
+
+| Where the walk stops | Change class | Action |
+|---|---|---|
+| the governing requirement is missing or insufficient | `requirement_reprice` | re-enter the requirement's owner |
+| the requirement is sufficient, and the realising design is missing or insufficient | `design_reframe` | re-enter Design |
+| an actual upstream Goal, Intent or Product change | `goal_reprice`, `intent_reprice` or `product_reprice` | follow the change to its owner rather than stopping at a familiar file |
+| the current requirement and accepted design suffice, and the implementation deviates | `realization_refactor` | repair or reject the candidate |
+
+Unresolved meaning remains J and a reserved choice remains O, as that
+paragraph states (P2, P6).
 
 ### Triage metadata
 
@@ -995,9 +1013,13 @@ This section states what those laws require of work carriers.
 ### Execution and verification authority separation (UP-007)
 
 Authority to author or implement a change is not independent authority to
-verify it. Where independent review is required, the reviewer is not the
-author of the reviewed subject and identifies the exact subject, basis,
-scope, exclusions, evidence, verdict and unresolved findings (P6; rc.2
+verify it. What counts as independent, including that the reviewer is
+not the author of the reviewed subject, and the protocol an independent
+assessment follows are
+[EVALUATION §3](EVALUATION.md#3-independent-assessment). Where
+independent review is required, the reviewer identifies the exact
+subject, basis, scope, exclusions, evidence, verdict and unresolved
+findings (P6; rc.2
 #execution-and-verification-authority-separation-stdo-up-007). Review
 findings must cite current authority and the code or proof paths they
 rest on, not only historical commentary (P6, P1; provenance rc.2
@@ -1006,7 +1028,10 @@ states).
 
 Self-review remains useful authoring evidence and cannot be relabelled as
 independent. Human authority may accept or reject the claim; it does not
-make implementer self-review independent. Independent review is required at
+make implementer self-review independent. The boundaries at which this
+method requires independent assessment are this member's policy, which
+EVALUATION §3 names; a governing basis may add others, as that section
+states. Independent review is required at
 product, qualification, release and explicitly risk-bearing boundaries that
 claim it, not for every local implementation step (P6, P2).
 
@@ -1062,14 +1087,18 @@ P6; rc.2 #recorded-judgment-and-owner-ruling-continuity; C, J and O are
 the annotations of [SPEC_METHOD §4](SPEC_METHOD.md#computed-classification-and-treatment)).
 
 Later roles and resumed runs recover the result and check its
-applicability rather than re-author unchanged judgment. Changed material
-evidence, a changed basis or the stated revising observation causes
-reassessment of what it affects, preserving the original result and its
-successor relation; unrelated conclusions are retained only where their
-independence from the change is supported. A new role or conversation alone
-is not an invalidator. The result may reference current C outputs; reuse
-cannot silently turn unknown facts into established premises (P4b, P5;
-ACTIVATION §7). Required independent assessment may consume valid C, but
+applicability rather than re-author unchanged judgment. Reuse and
+invalidation are
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse): changed material
+inputs, a declared revising observation or a changed basis invalidate
+the affected result, preserving the original result and its successor
+relation and keeping only demonstrably independent results, and a new
+role or conversation alone invalidates nothing. For a recorded judgment
+the material inputs include its supporting computed facts and evidence,
+and its declared revising observation is the one the record states;
+reassessment covers what the change affects. The result may reference
+current C outputs; reuse cannot silently turn unknown facts into
+established premises (P4b, P5). Required independent assessment may consume valid C, but
 its assessor acquires sufficient exact evidence and supplies its own
 judgment under the actual independence condition; reusing the author's J
 cannot satisfy that condition (P6; EVALUATION §3).
@@ -1127,9 +1156,10 @@ evidence presence alone is not satisfaction. The existing owner decides any
 reserved acceptance (P6, P5; rc.2 #condition-based-closure-and-reuse).
 This condition is the
 [conjunction of results](FOUNDATIONS.md#conjunction-of-results) with the
-declared obligations as required coverage;
-[SPEC_METHOD §4](SPEC_METHOD.md#consistency-gate) applies the same
-conjunction as the gate over the affected span.
+declared obligations as required coverage. This section owns the
+closure condition of a work claim;
+[SPEC_METHOD §4 Consistency gate](SPEC_METHOD.md#consistency-gate)
+applies it as the gate over a declared change span.
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved
@@ -1140,7 +1170,11 @@ no condition that actually applies, including sprint-close law (§3) and the
 design profile's law (P6, P2).
 
 An unchanged obligation reuses valid applicable evidence and recorded J
-and O. A material counterexample, changed evidence or a changed basis
+and O under the reuse rule of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse). For a work
+claim, the changed material inputs and revising observations that rule
+names include a material counterexample, changed evidence and a stated
+revising observation of a recorded J; with a changed basis, each
 invalidates the affected claim and its dependent results before further
 reliance. An unrelated observation is retained as bounded repricing input;
 it does not reopen a satisfied claim or expand the work automatically.
@@ -1422,7 +1456,7 @@ are carried verbatim, including their American spellings and the word
 | #sprint-status | conserved | §3 Sprint status |
 | #sprint-admission | conserved | §3 Sprint admission |
 | #sprint-compliance-escrow | conserved in full; both lists and the exit rule; two profile terms generalised (above) | §3 Compliance escrow |
-| #sprint-close-review | conserved; the six classifications and the debt-entry outcomes are mapped into the core result algebra of FOUNDATIONS §4 Results as ACTIVATION §3 Disposition is, and the mappings are new; the layer named by `design_reframe`, `requirement_reprice` and `product_reprice` is the change class of SPEC_METHOD §4, a declared fact | §3 Close review |
+| #sprint-close-review | conserved; the six classifications and the debt-entry outcomes are stated as dispositions of ACTIVATION §3 refined for the sprint's close boundary, each taking its disposition's core value, with the differences of `local_paydown` and `remove` from their dispositions' conditions stated, and the mappings are new; the layer named by `design_reframe`, `requirement_reprice` and `product_reprice` is the change class of SPEC_METHOD §4, a declared fact | §3 Close review |
 | #ticket-rules | not applicable: heading with no claim text (16 bytes); its children are disposed individually | §4 |
 | #one-durable-record-per-ticket | conserved | §4 One durable record per ticket |
 | #multi-build-tenant-ticket-independence | conserved; the bounded context is cited at PRODUCT_DEFINITION §8 | §4 Multi-build-tenant independence |
@@ -1431,15 +1465,15 @@ are carried verbatim, including their American spellings and the word
 | #ticket-category | conserved | §4 Category |
 | #inside-out-first-ticket-sequencing | conserved | §4 Inside-out sequencing |
 | #change-class | conserved; the classes themselves are SPEC_METHOD §4 | §4 Change class |
-| #upward-propagation-check | conserved in full; the walk upward to the first missing layer | §4 Upward propagation check |
+| #upward-propagation-check | conserved in full; the walk upward to the first missing layer, stated as a refinement of the re-entry rule of SPEC_METHOD §4 with each stopping point mapped to its change class | §4 Upward propagation check |
 | #triage-metadata | conserved | §4 Triage metadata |
 | #work-carrier-to-execution-rule | conserved; the table, the carrier rules and the obligation-retention order here; the step-side admission relation is ACTIVATION §1, defined once there | §5 Carrier selection; ACTIVATION §1 Admission |
 | #execution-contract-admission | conserved; logging and availability here; the states and self-certification rule at ACTIVATION §1; basis admission at SPEC_METHOD §3 | §5 Execution contract admission; ACTIVATION §1 Admission; SPEC_METHOD §3 |
-| #execution-and-verification-authority-separation-stdo-up-007 | conserved; the generic assessment protocol is EVALUATION §3 | §7 Execution and verification authority separation (UP-007) |
-| #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7; the four repricing dispositions of an obligation are stated as recorded states that map to no core value (new, with its purpose stated where it is written) | §7 Recorded judgment and owner-ruling continuity |
+| #execution-and-verification-authority-separation-stdo-up-007 | conserved; what counts as independent, the reviewer not being the author included, and the generic assessment protocol are EVALUATION §3; the boundaries that require independent review are kept here as this method's policy, which EVALUATION §3 names | §7 Execution and verification authority separation (UP-007) |
+| #recorded-judgment-and-owner-ruling-continuity | conserved; the generic reuse law is ACTIVATION §7, which the reassessment sentence now applies by reference, naming the record's supporting facts and evidence and its stated revising observation as instances of that law's invalidators; the four repricing dispositions of an obligation are stated as recorded states that map to no core value (new, with its purpose stated where it is written) | §7 Recorded judgment and owner-ruling continuity |
 | #bounded-context-term-binding | conserved; the resolution law is PRODUCT_DEFINITION §5 | §5 Bounded-context term binding |
 | #evaluation-criteria-and-non-closure-conditions | conserved | §5 Evaluation criteria and non-closure conditions |
-| #condition-based-closure-and-reuse | conserved; one term generalised (above); the closure condition is named as the conjunction of FOUNDATIONS §4 Conjunction of results, with the declared obligations as required coverage | §7 Condition-based closure and reuse |
+| #condition-based-closure-and-reuse | conserved; one term generalised (above); the closure condition is named as the conjunction of FOUNDATIONS §4 Conjunction of results, with the declared obligations as required coverage, and this section is named its owner, which SPEC_METHOD §4 Consistency gate applies; the invalidators are named as instances of the reuse rule of ACTIVATION §7, the stated revising observation of a recorded J among them, as §7 Recorded judgment and owner-ruling continuity already required | §7 Condition-based closure and reuse |
 | #test-case-authority | conserved in full; ASSURANCE §3 points here for the ticket-local rule | §7 Test case authority |
 | #implementation-migration-category | conserved; the slice-promotion rule and the slice derivation are SPEC_METHOD §7, the ticket-local consequence here | §6 Declaration and checklist; §6 Closure of a migration ticket; SPEC_METHOD §7 Constitutional migration options |
 | #migration-strategy-requirements | conserved | §6 Strategy requirements |

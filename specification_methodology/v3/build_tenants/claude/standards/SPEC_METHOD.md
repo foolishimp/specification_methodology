@@ -91,11 +91,13 @@ one imperative catch-all document (P2).
 This member owns the method-identity bounded context
 `urn:stdo:bounded-context:method-identity` under the selected complete
 basis (P3; rc.2 #stdo-method-identity). Within that context STDO is the
-shorthand for the method's four pillars: S, Specification, owned by this
-member; T, Ticketing, owned by [TICKETS](TICKETS.md); D, Design, owned by
-the design profile member [DESIGN_MODULE](DESIGN_MODULE.md); and O,
-Outcome-Driven Development, the complete pillar whose identity and
-realisation meaning are owned by its profile member [ODD](ODD.md). The expansion does not make the four owning
+shorthand for the method's four named areas. A named area is the body of
+the method's law that one letter of STDO names and one member owns: S,
+Specification, owned by this member; T, Ticketing, owned by
+[TICKETS](TICKETS.md); D, Design, owned by the design profile member
+[DESIGN_MODULE](DESIGN_MODULE.md); and O, Outcome-Driven Development, the
+complete area whose identity and realisation meaning are owned by its
+profile member [ODD](ODD.md). The expansion does not make the four owning
 members independently selectable and does not reduce the released product
 to four members: consumer authority remains one complete immutable released
 cut with its exact member inventory ([RELEASE](RELEASE.md)).
@@ -167,14 +169,14 @@ derived from P0 and P6, with P0's open-world premise.
 | P1 independent; P2 independent; instance: layered surfaces, several realisations | A layer is sufficient when a competent actor can derive a conformant next layer from it. A failure to derive is a defect of the upper layer, and several conformant realisations may satisfy one layer; the generic law is [EVALUATION §6](EVALUATION.md#6-conformance-of-realisations), Layered sufficiency. A realisation choice that no upper layer constrains belongs to design. | [Reconstruction litmus](#reconstruction-litmus); [Spec-drivenness litmus](#spec-drivenness-litmus) items 1 to 5; [Specification surface rule](#specification-surface-rule); [Design rule](#design-rule); [Requirement categories and classification](#requirement-categories-and-classification), the category axis | the layers of the chain and their order, and the conventional surface names: domain choices of this member ([Constitutional chain](#constitutional-chain), [Process constitution](#process-constitution)); where each surface lives: the product definition ([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)) |
 | P3 independent; instance: layered surfaces, immutable releases | A live constitutional surface is versioned history. It changes by supersession or withdrawal, never in place; it states current truth in the present tense; a version label names an immutable release fact, not recency. | [Live surface immutability](#live-surface-immutability); [Specification surface rule](#specification-surface-rule); [§6](#6-lineage-and-release), the release version boundary; [Spec-drivenness litmus](#spec-drivenness-litmus) item 9 | the exact tag `v<version>-rc.<n>` and the selector tag `v<version>`: a domain choice of this member, with release mechanics at [RELEASE](RELEASE.md#2-release-identities) |
 | P2 independent; P5 derived; instance: layered surfaces | Use exposes conditions the current specification cannot express. A constitutional gap reprices the surface that cannot express it, or is carried as recorded, governed debt; an unanswered lifecycle phase is a recorded gap, never a silent absence. | [Renewal path](#renewal-path); [Operational lifecycle sufficiency](#operational-lifecycle-sufficiency); [Spec-drivenness litmus](#spec-drivenness-litmus) items 11 and 13 | the phases of the operational lifecycle and the `Gap:` and `Unanswered:` markers: domain choices of this member |
-| P2 independent; P6 independent; instance: owned layers | Product progress is judged against one selected outcome. Evidence evaluates the claim and never selects, enlarges or replaces the outcome. Growth authority comes from an admitted basis and ends with it. A regression or unresolved gap blocks further promotion only on the affected path. | [§3](#3-outcome-conservation) | one selected, directly verifiable outcome per work wave; the four kinds of evidence; admission recorded in the existing goals or ticket authority: policy choices of this member, with the carriers at [TICKETS](TICKETS.md); deletion, archival, quarantine and salvage mechanics: consumers |
+| P2 independent; P6 independent; instance: owned layers | Product progress is judged against one selected outcome. Evidence evaluates the claim and never selects, enlarges or replaces the outcome. Growth authority comes from an admitted basis and ends with it. A regression or unresolved gap blocks further promotion only on the affected path. | [§3](#3-outcome-conservation) | one selected, directly verifiable outcome per work wave; the four kinds of evidence, three of them refining the progress categories of [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) and regression added; admission recorded in the existing goals or ticket authority: policy choices of this member, with the carriers at [TICKETS](TICKETS.md); deletion, archival, quarantine and salvage mechanics: consumers |
 | P6 independent; P4b derived; P5 derived; instance: owned layers | A closure claim carries its authority trace, its realisation proof, negative proof where drift is plausible and the open pressure that remains. | [§9](#9-evidence); [Spec-drivenness litmus](#spec-drivenness-litmus) item 10 | none here: the rules of evidence are EVALUATION §1 to §3, §6 and §7, and ASSURANCE |
 | P3 independent; P6 independent; instance: immutable releases, several realisations | Lineage objects keep distinct identities. A reusable method change keeps one authority relation from its evidence to the consumer that realises it, and a consumer selects one complete released version. | [§6](#6-lineage-and-release); [Shared method adoption and propagation](#shared-method-adoption-and-propagation-stdo-up-012) | the eight-step adoption chain: a policy choice of this member; the lineage objects: [FOUNDATIONS §2](FOUNDATIONS.md#product-lineage-objects) |
-| P3 independent; P1 independent; instance: layered surfaces | The method's own terms resolve within a declared bounded context. | [Method identity](#method-identity) | the context identity and the reading of STDO as four pillars with their owning members: domain choices of this member |
+| P3 independent; P1 independent; instance: layered surfaces | The method's own terms resolve within a declared bounded context. | [Method identity](#method-identity) | the context identity and the reading of STDO as four named areas with their owning members: domain choices of this member |
 | P1 independent; P4a independent; P6 independent; instance: several realisations | Where a design profile governs a boundary, its semantic steps read as transforms over admitted truth with effects explicit at the edge, and a boundary that composes higher-order or effectful computation has an explicit composition and effect algebra. | [Realisation shape](#realisation-shape) | the "should" force of the core rule, its scope to boundaries the design profile governs, and the optional vocabulary: choices of this member, with the profile at [DESIGN_MODULE](DESIGN_MODULE.md) |
 | P2 independent; P1 independent; P6 independent; instance: several realisations | The same obligations may be realised by different means. The obligations decide fitness; the kind of executor alone neither accepts nor rejects a realisation. A person performing an operation does not thereby adjudicate, a convenient stack weakens no obligation, and structural validation of a representation is not execution conformance. A change that needs a weaker obligation is a change to the WHAT at its owning layer. | [§11](#11-build-tenant-binding), rules 1, 2, 4 and 6, and Application in this method | the division of a binding into requirements calculus, computational calculus and execution environment: a domain choice of this member; each tenant's calculus and environment: that tenant's design |
-| P0 recovered; P1 independent; P2 independent; P4a independent; P6 independent; P5 derived; instance: several realisations | A binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. A calculus may serve wherever its laws hold, whoever executes it. A project's mechanics for developing several tenants are that project's own law. | [§11](#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, and their units: each tenant's binding, as its obligations require; the development mechanics: the project's product definition or the tenant's design |
-| P1 independent; P0 recovered; P6 independent; instance: several realisations | The steps of a construction, what its data means and how it is carried out stay three separate accounts across the binding, and a binding that maps one account to another states what the mapping preserves and how that is established. | [§11](#11-build-tenant-binding), rule 7 | the three accounts of a construction: an added choice whose owner is the Intent of the Product that owns this corpus, in its Direction, defined at [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction) |
+| P0 recovered; P1 independent; P2 independent; P4a independent; P6 independent; P5 derived; instance: several realisations | A binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. A calculus may serve wherever its laws hold, whoever executes it. A project's mechanics for developing several tenants are that project's own law. | [§11](#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, the limits on them, and their units and boundaries: each tenant's binding, as its obligations require, under the resource-limit law of [ACTIVATION §6 Resource limits](ACTIVATION.md#resource-limits); the development mechanics: the project's product definition or the tenant's design |
+| P1 independent; P0 recovered; P4a independent; P6 independent; instance: several realisations | The steps of a construction, what its data means and how it is carried out stay three separate accounts across the binding. A mapping from one account to another is a transformation, so it states and discharges its preservation under the law of [ACTIVATION §4 Refinement](ACTIVATION.md#refinement) and, where it is recorded in a_c, of [AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation). | [§11](#11-build-tenant-binding), rule 7 | which accounts a mapping joins, and the evidence that discharges its preservation in the environment: each tenant's binding; the three accounts of a construction: an added choice whose owner is the Intent of the Product that owns this corpus, in its Direction, defined at [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction) |
 
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
@@ -504,9 +506,10 @@ categories and the legacy classifications are declared states of a
 requirement, not results, and map to no core value. So are the other
 declared classes of this member: the kinds of evidence of §3 (material
 advance, prerequisite readiness, preservation, regression), the old-path
-classes of §7 Required migration protocol, the implementation
-classifications `carry_across`, `redundant` and `rewrite` of §7
-Fundamental migration, and the ADR `Status:` values of §10; the change
+classes of §7 Required migration protocol, the inherited-material
+classes adopted, superseded, deferred and orphaned and the
+implementation classifications `carry_across`, `redundant` and `rewrite`
+of §7 Fundamental migration, and the ADR `Status:` values of §10; the change
 classes are declared states under §4 Change classes. Each records
 a declared classification of its subject, not the answer to a predicate
 that an evaluation decides. An evaluation that reads them returns its own
@@ -516,6 +519,22 @@ relation: a declared state is never combined as an evaluation result, so
 a requirement marked Active, or evidence classed as material advance,
 cannot stand in for a `satisfied` result, and a requirement marked
 Deferred or Orphaned cannot stand in for a `falsified` one (P5, P1).
+
+The legacy classification answers one question: what standing an
+inherited requirement holds in the project's own live requirement
+surface. The disposition of a predecessor claim under
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+answers another: what a successor release does with a claim of the
+released predecessor it evolves, a claim that qualification evaluates.
+Where a project's work is also such a successor, each predecessor claim
+takes its RELEASE §9 disposition by that section's predicates, and no
+lifecycle status or legacy classification supplies or replaces it: a
+requirement marked Active may still be `superseded` where its meaning
+changed, Superseded names no accepted successor relation, and Orphaned
+is not an intentional removal. Purpose and material relation: two
+vocabularies with overlapping words would otherwise let a project-level
+record stand in for a successor disposition that its owner has not made
+(P6, P3).
 
 ### Trace closure and anti-drift
 
@@ -598,9 +617,13 @@ phase only by naming the deferment and the surface that will own its later
 resolution.
 
 The rule is an ambiguity detector, not a demand that every requirement
-become a release plan. If a phase is not applicable, the surface says why.
-If it is unknown, a named gap such as `Gap:` or `Unanswered:` is recorded.
-Silent absence is not a valid lifecycle answer. When the lifecycle signal is
+become a release plan. Each phase has one of three answers, and this
+section owns them: the phase is answered by the surface; if a phase is
+not applicable, the surface says why; if it is unknown, a named gap such
+as `Gap:` or `Unanswered:` is recorded.
+Silent absence is not a valid lifecycle answer.
+[ASSURANCE §16](ASSURANCE.md#16-module-lifecycle-confirmation) applies
+the three answers to the design evidence of a governed boundary. When the lifecycle signal is
 missing, downstream design may not fill the gap by local convention,
 implementation precedent, prompt prose or test fixture; it reprices the
 appropriate constitutional surface or carries the ambiguity as explicit,
@@ -625,9 +648,18 @@ outcome (P2; rc.2 #product-outcome-conservation-stdo-up-013; FOUNDATIONS §2
 Outcome U is the generic object).
 
 Evidence distinguishes material advance, prerequisite readiness,
-preservation and regression. Only material advance projects product
-progress. Prerequisite work names the product obligation it enables and
-remains bounded. Preservation is useful evidence, not progress.
+preservation and regression. The first three refine the progress
+categories of [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)
+(Progress) for a product outcome: material advance is progress there,
+accepted material movement toward the selected product outcome, and only
+material advance projects product progress; prerequisite readiness is
+its prerequisite work, which names the product obligation it enables and
+here also remains bounded; preservation is its preservation and repeated
+proof, useful evidence, not progress. Regression is this member's added
+category, which ACTIVATION §5 does not name: evidence of regression
+projects no progress, and its need is the promotion block in the last
+paragraph of this section. Churn and the revision of the forecast are
+ACTIVATION §5's, unchanged here.
 
 The exact bound outcome instance stops selecting later product-progress
 work when the owning authority accepts it; its witnesses remain regression
@@ -723,9 +755,9 @@ with P0's open-world premise.
 |---|---|---|---|
 | P6 independent; P2 independent; instance: changing specification, one front door | A change re-enters at the layer that owns what it changes, and a changed governing relation is accepted only at its owner. The label a report arrives under does not select its process, and a change that re-enters below Goals asserts that nothing above it changes. | [§4](#4-change-management); [Universal intake triage](#universal-intake-triage), the six determinations; [Change classes](#change-classes); [Procedures](#procedures) | the six change classes with their names, re-entry points and flows, and the four procedures: domain choices of this member; where the class is recorded: [TICKETS §4](TICKETS.md#change-class) |
 | P1 independent; P6 independent; P5 derived; instance: one front door | A diagnosis is supported only by frames that test it against their own variables and evidence. The same analysis under another frame name adds no evidence, the frame that exposes a failure need not contain its cause, and a diagnosis grants no repair. | [Universal intake triage](#universal-intake-triage), the triangulation | the smallest sufficient frame configuration for each case: chosen under [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) and §6 |
-| P4b derived; P6 independent; P3 independent; instance: changing specification | A classification computed once is recorded with its producer, inputs, unknowns and invalidators and is reused only after its applicability is checked. Reproducible fact, residual judgment and reserved ruling stay apart, and candidate behaviour cannot author its own target law. | [Computed classification and treatment](#computed-classification-and-treatment) | the C, J and O annotations and the order of the four steps: domain choices of this member; continuity of recorded judgments and rulings: [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) |
+| P4b derived; P6 independent; P3 independent; instance: changing specification | A classification computed once is recorded with its producer, inputs, unknowns and invalidators and is reused only after its applicability is checked. Reproducible fact, residual judgment and reserved ruling stay apart, and candidate behaviour cannot author its own target law. | [Computed classification and treatment](#computed-classification-and-treatment) | the C, J and O annotations, the order of the four steps and the material inputs of C named as instances of the reuse rule's: domain choices of this member; reuse and invalidation: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); continuity of recorded judgments and rulings: [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) |
 | P5 derived; instance: changing specification | An unknown relation, delta or effect stays unknown. It withholds dependent reliance and promotion, not unrelated authorised work, and an effect of uncertain completion is never treated as no effect. | [Computed classification and treatment](#computed-classification-and-treatment), its last paragraphs | none |
-| P6 independent; P4b derived; P5 derived; instance: changing specification | No gate closes while the affected surfaces are inconsistent. Closure is the conjunction of the declared obligations with valid evidence; an event, an aggregate or a status does not replace it, and implementation behaviour is evidence, not authority. | [Consistency gate](#consistency-gate) | none; the work-state record: [TICKETS §7](TICKETS.md#condition-based-closure-and-reuse) |
+| P6 independent; P4b derived; P5 derived; instance: changing specification | No gate closes while the affected surfaces are inconsistent. Closure is the conjunction of the declared obligations with valid evidence; an event, an aggregate or a status does not replace it, and implementation behaviour is evidence, not authority. | [Consistency gate](#consistency-gate) | none; the closure condition, which the gate applies to its change span: [TICKETS §7](TICKETS.md#condition-based-closure-and-reuse); reuse: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) |
 | P2 independent; P0 recovered; instance: changing specification | Proof cost may be deferred inside a batch only while the deferred cost stays local, visible, bounded and repayable. A sprint is not an authority layer, and a carrier is chosen for the lifetime the work needs. | [Sprint execution boundary](#sprint-execution-boundary); [Carriers](#carriers) | the sprint with its required statements and close triggers: a policy choice of this member, its mechanics at [TICKETS §3](TICKETS.md#3-sprint-rules); whether escrow suits a domain: the profile that adopts it |
 | P5 derived; P6 independent; P2 independent; instance: reserved decisions | Major ambiguity at a boundary is detected and recorded with its outcome. Whether it blocks is policy, a hard stop holds whatever the policy, and no dependent claim rests on an ambiguity that is carried, escalated or blocked as if it were resolved. | [§5](#5-ambiguity-governance-and-lifecycle); [Spec-drivenness litmus](#spec-drivenness-litmus) item 12 | the risk appetite, which sets the threshold between probabilistic decision and human adjudication: the project's declared policy; the order of narrowing, the major and micro split and the two concept identities: domain choices of this member; the hard-stop classes: [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) |
 | P3 independent; P6 independent; instance: shared interfaces | One authority governs each request, fact, identity, state and projection on an acceptance path. A migration stays incomplete while old and new contracts both stay authoritative; a projection stays downstream of the authoritative carrier; a promoted slice does not close its migration. | [Core interface migration](#core-interface-migration); [Constitutional migration options](#constitutional-migration-options); [What counts as a core interface](#what-counts-as-a-core-interface); [Required migration protocol](#required-migration-protocol); [Bridge prohibition](#bridge-prohibition); [Projection discipline](#projection-discipline); [Transformation wave](#transformation-wave) | the two strategies, the presumption for bounded evolution, and the old-path classes `remove`, `replace`, `re-authorize` and `temporary scaffolding`: policy and domain choices of this member; selecting fundamental re-adoption: the human authority owning the affected product boundary |
@@ -900,9 +932,15 @@ as no effect, and is reconciled as ACTIVATION §5 states before any retry
 or dependent action (P5).
 
 A new role, conversation or resumption reuses valid C after checking exact
-applicability. A changed request, candidate, basis, owner or root relation,
-projection, design trace or acceptance, rule, configuration or material
-evidence invalidates its affected claims before reliance. Predecessor and
+applicability; reuse and invalidation are
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), which this
+paragraph applies to C. The material inputs of C, whose change is that
+rule's material input change and invalidates the affected claims of C
+before reliance, are by name: the request, the candidate, an owner or
+root relation, a projection, a design trace or acceptance, a rule
+applied, the configuration and the material evidence. A changed basis
+and a declared revising observation, that rule's other two
+invalidators, invalidate likewise. Predecessor and
 successor identities, changed inputs, surviving facts and affected J
 dependencies are preserved; the wider frontier is recomputed where
 independence is unproved (ACTIVATION §7).
@@ -921,16 +959,16 @@ the active intended behaviour rather than stale precedent. If that proof is
 missing the change remains open even if one local artifact already looks
 correct.
 
-Closure requires every applicable declared obligation satisfied by valid,
-applicable evidence and every required judgment or ruling, with no active
-non-closure condition. That requirement is the
-[conjunction of results](FOUNDATIONS.md#conjunction-of-results), with the
-declared obligations as its required coverage: a material counterexample
+The gate closes only under the closure condition that
+[TICKETS §7 Condition-based closure and reuse](TICKETS.md#condition-based-closure-and-reuse)
+owns, applied here with the obligations declared for the change span as
+its required coverage. A material counterexample
 to a mandatory constraint, a required judgment or ruling without a closed
-result, or an obligation that no evidence addresses keeps the conjunction
-from `satisfied`, and each stays recorded by kind (P5, P6).
-[TICKETS §7](TICKETS.md#condition-based-closure-and-reuse) owns work-state
-recording and reuse. A
+result, or an obligation that no evidence addresses keeps the gate from
+closing, and each stays recorded by kind (P5, P6). Reuse of the gate's
+evidence and results is
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); TICKETS §7
+records the work state on its carrier. A
 review event, a passing aggregate, a completed artifact or a status change
 cannot substitute for that conjunction (EVALUATION §5).
 
@@ -1476,6 +1514,23 @@ lawful form of supersession, not a violation of live surface immutability
 (§2), because the new line creates a new constitutional surface rather than
 silently mutating the old one.
 
+The four classes of inherited constitutional material record the
+standing each inherited statement holds in the new line's constitutional
+surfaces. That is the question the legacy classifications of
+[§2 Requirement categories and classification](#requirement-categories-and-classification)
+answer for an inherited requirement, so for a requirement the two are one
+classification: adopted is Active, explicitly re-adopted as live law of
+the new line, and superseded, deferred and orphaned are Superseded,
+Deferred and Orphaned, with that table's meanings. For other inherited
+constitutional material the classes keep their names and the steps
+above. They are declared states of the new line's surfaces and, as §2
+states, none of them is or supplies the
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+disposition of a predecessor claim (P3, P6). Purpose and material
+relation: an inherited requirement in a migration falls under both this
+step and the legacy classification rule, and reading them as one
+classification leaves no two records of one standing to reconcile (P3).
+
 ### Transformation wave
 
 Refactor and migration should be understood as a transformation wave over
@@ -1653,12 +1708,10 @@ Terms used in this section:
   execution binding, from that computational calculus to its execution
   environment. A tenant's registry entry locates the tenant; it is not the
   binding.
-- Author identity is the party responsible for the content of a realised
-  subject; authorship is one of the conditions on which the independence
-  of an assessment of that subject rests, with the evidence conditions
-  ([EVALUATION §3](EVALUATION.md#3-independent-assessment)). Actor
-  identity is whoever performs one operation; it is an identity, not an
-  authority ([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)).
+- Author identity and actor identity are as
+  [EVALUATION §3](EVALUATION.md#3-independent-assessment) defines them:
+  authorship is one condition of an assessment's independence there, and
+  an actor's identity is not an authority.
   Operation kind is what an operation does, such as construct, assess,
   relay, record, measure or decide, together with the authority that kind
   of operation requires.
@@ -1711,8 +1764,12 @@ Rules:
    conformance claim. The size of a selected context is measured as
    [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
    step 3 measures it, against the capacity the binding declares for the
-   actor. Time, spend and the other resource limits of a step are those of
-   the execution binding. Where a configuration states its resource limits
+   actor. The law for declaring, measuring and honouring resource limits
+   is [ACTIVATION §6 Resource limits](ACTIVATION.md#resource-limits), and
+   this rule binds it: the values of a step's time, spend and other
+   resource limits, and the units and boundaries the environment can
+   measure, are those of the execution binding, stated before the
+   activation they limit. Where a configuration states its resource limits
    and its assumptions about failure
    ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration)), it takes
    them from this binding (P0, P2, P5).
@@ -1759,9 +1816,16 @@ Rules:
    [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction)
    defines, apply across the binding, from the requirements calculus
    through the computational calculus to the execution environment. The
-   binding keeps the three accounts apart, and where it maps one account
-   to another it states what the mapping preserves and how that
-   preservation is established (P1, P0, P6).
+   binding keeps the three accounts apart. A mapping from one account to
+   another is a transformation: what it preserves, the law that licenses
+   it, and whether it is exact or approximate with its adequacy relation
+   and end-to-end bound, are stated and discharged under
+   [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), and where it is
+   recorded in a_c its record is
+   [AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation). The binding adds
+   only which accounts the mapping joins and the evidence, in its
+   execution environment, that discharges the preservation (P1, P0, P4a,
+   P6).
 
 Application in this method. The relation governs realisation at four
 points. The Design rule (§2) places the choice of stack, human process or
@@ -1838,7 +1902,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 |---|---|---|
 | #canonical-compression | conserved; each clause of the compression is owned by a section of this corpus and the statement is restated with those owners named | §1 Canonical statement |
 | #position | conserved | §1 Position |
-| #stdo-method-identity | conserved; the owning members of T, D and O are named by successor member | §1 Method identity |
+| #stdo-method-identity | conserved; the owning members of T, D and O are named by successor member; the predecessor's "four key pillars" is written "four named areas", with the term defined where it is written, so that "pillar" keeps no second sense in this corpus | §1 Method identity |
 | #probabilistic-work-boundary | conserved; restated as the work-boundary object and P0's commitment; the profile binding to one traversal is generalised and kept by PROFILES §2 | FOUNDATIONS §2 Work boundary, §3 P0; ACTIVATION §1 consumes it |
 | #recursive-product-taxonomy | conserved; the eight objects with their concept identities, the governing rules and the compiler analogy are restated as ontology | FOUNDATIONS §2 Product lineage objects; §6 here consumes them |
 | #manifesto | conserved | §2 Manifesto |
@@ -1847,12 +1911,12 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout and derivative tenant-local realisation are restated in §11 rule 1, to which §2 refers; §11 rule 4 applies by reference the law of EVALUATION §6 that conforming tenants need not behave identically outside the contract, which is new in that member and has no rc.2 clause | §2 Constitutional chain; §11 |
 | #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
 | #ambiguity-governance-rule | conserved; the four outcomes are named with the values of ACTIVATION §3, which maps them into the core ("carried forward" is `carried`); the hard stops ACTIVATION §4; build-tenant or stack choice is the binding of §11; new, applying §11 rule 2: the admission makes an operation human adjudication, and a person who decides under policy without it acts under the policy that governs lawful probabilistic processing, whose definition is unchanged | §5 |
-| #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value | §2 Operational lifecycle sufficiency |
+| #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value; this section is named the owner of the three answers, which ASSURANCE §16 applies to design evidence | §2 Operational lifecycle sufficiency |
 | #change-management-rule | conserved | §4 |
 | #universal-intake-triage | conserved; all six determinations, the triangulation and the six classes with their flows; the frames' results combine under the conjunction of FOUNDATIONS §4; the change classes are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §4 Universal intake triage; §4 Change classes |
-| #computed-classification-and-treatment | conserved; C, J and O and the four-step ordered walk restored in full; the walk's values are stated as facts that map to no core value, and an effect of uncertain completion is `completion_unknown`, or `not_effected` with its end not established, of ACTIVATION §3 | §4 Computed classification and treatment |
-| #consistency-gate-rule | conserved; the closure conjunction is the conjunction of FOUNDATIONS §4 | §4 Consistency gate |
-| #product-outcome-conservation-stdo-up-013 | conserved in full; EVALUATION §5 carries the acceptance interval and FOUNDATIONS §2 the outcome object | §3 |
+| #computed-classification-and-treatment | conserved; C, J and O and the four-step ordered walk restored in full; the walk's values are stated as facts that map to no core value, and an effect of uncertain completion is `completion_unknown`, or `not_effected` with its end not established, of ACTIVATION §3; the invalidators of C are named as the material inputs of the reuse rule of ACTIVATION §7, which also names the changed basis and the declared revising observation | §4 Computed classification and treatment |
+| #consistency-gate-rule | conserved; the closure condition is owned by TICKETS §7 Condition-based closure and reuse and applied here to the change span, as the conjunction of FOUNDATIONS §4; reuse is ACTIVATION §7 | §4 Consistency gate; TICKETS §7 Condition-based closure and reuse |
+| #product-outcome-conservation-stdo-up-013 | conserved in full; EVALUATION §5 carries the acceptance interval and FOUNDATIONS §2 the outcome object; material advance, prerequisite readiness and preservation are stated as refinements of the progress categories of ACTIVATION §5, regression as this member's added category | §3 |
 | #proportional-method-and-delivery-stdo-up-014 | conserved; the proportionality relation and its application to the method's execution in ACTIVATION §6, the delivery priority here | ACTIVATION §6; §8 here |
 | #agentic-construction-execution-stdo-up-020 | conserved; the normative relation and the non-prescription of worker internals | ACTIVATION §1 The step; §8 here binds the terms, the step's results in the core and the tenant's binding |
 | #sufficient-execution-intake | conserved; all six intake items and the design-profile inputs | ACTIVATION §1 Intake |
@@ -1887,9 +1951,9 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #downstream-closure | conserved | §2 Trace closure and anti-drift, Downstream closure |
 | #drift-signals | conserved; all ten signals | §2 Trace closure and anti-drift, Drift signals |
 | #live-surface-immutability | conserved | §2 Live surface immutability |
-| #fundamental-migration-rule | conserved | §7 Fundamental migration |
+| #fundamental-migration-rule | conserved; for an inherited requirement the four classes of inherited constitutional material are stated as the legacy classifications of §2, adopted being Active, so that one requirement is classified once; their relation to the successor dispositions of RELEASE §9 is stated (both new, with their purpose stated where they are written) | §7 Fundamental migration |
 | #transformation-wave-rule | conserved | §7 Transformation wave |
-| #legacy-classification-rule | conserved; the legacy classifications are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §2 Requirement categories and classification |
+| #legacy-classification-rule | conserved; the legacy classifications are stated as declared states that map to no core value, and their relation to the successor dispositions of RELEASE §9 is stated (both new, with their purpose stated where they are written) | §2 Requirement categories and classification |
 | #requirement-classification-rules | conserved; the lifecycle statuses and the categories are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §2 Requirement categories and classification |
 | #specification-surface-rule | conserved | §2 Specification surface rule |
 | #method | conserved; the four procedures in full | §4 Procedures |
@@ -1924,7 +1988,10 @@ its phase states and markers are declared states, not results; the
 statement in §2 Requirement categories and classification that the
 requirement statuses, categories and legacy classifications, and the
 declared classes of §3, §7 and §10 it names, are declared states, not
-results; and the §5 sentences on what makes an
+results; the paragraph after it relating those states to the successor
+dispositions of RELEASE §9; the paragraph of §7 Fundamental migration
+reading its classes as the legacy classifications for an inherited
+requirement; and the §5 sentences on what makes an
 operation human adjudication, which apply §11 rule 2 and take its
 purpose. The two family tables at §2 and §4 decide nothing beyond the
 rules they cite;

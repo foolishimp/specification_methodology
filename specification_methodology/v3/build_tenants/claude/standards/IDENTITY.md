@@ -10,11 +10,12 @@ surface; lawful and unlawful examples; and the consequence for
 implementations. It consumes [FOUNDATIONS](FOUNDATIONS.md) §2, where
 Object (a subject with scoped identity of authority, kind and value),
 Authority with its kinds, and Basis are defined once, and adds no
-definition to tier 1. The same scoped identity is
-[AC-002](AXIOMATIC_CALCULUS.md#ac-002-scoped-identity) within the
-calculus, and the identity of one calculus edition is
-[AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity);
-neither is restated here. Release identity, its names and its forms are
+definition to tier 1. [AC-002](AXIOMATIC_CALCULUS.md#ac-002-scoped-identity)
+applies the scoped identity of §2 to every identity within the calculus,
+with a map of its coordinates to authority, kind and value. The identity
+of one calculus edition is
+[AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity), which
+this member does not restate. Release identity, its names and its forms are
 the release law of [RELEASE](RELEASE.md); this member states only the
 boundary between it and object identity. Each clause names the principle
 (P0 to P6) that requires it, as
@@ -62,7 +63,7 @@ which the commitments do not supply:
 | P3 (independent), P1 (independent); (ii) | readability is a convenience for recognition: an opaque identity is lawful, a readable one is lawful only while it preserves uniqueness in scope, and no reader should infer that a readable form is safer or more authoritative | [§3](#3-readable-and-opaque-identity) | whether an identity is opaque, readable or hybrid: the authority that owns it, under §5 |
 | P3 (independent); (i), (ii) | identity should be made unique by hierarchy where appropriate, so a family and its members, or a runtime identity and a domain identity, stay distinct kinds even where both serialise as strings | [§4](#4-identity-hierarchy) | the general model `authority / kind / value / revision`: this member; which segments a serialisation shows: the authority that owns the identity |
 | P3 (independent), P6 (independent); (i) | a runtime may give its own objects opaque identities under its own generation rules and should not impose domain grammar on domain objects; the domain owns the semantic identity grammar of its constitutional objects, which the runtime may transport but should not silently invent their meaning | [§5](#5-authority-split) | the generation rules of runtime identities: the runtime; the domain's identity kinds, distinctions, uniqueness and parsing: the domain |
-| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | authority is an identity-bearing relation that composition, delegation and projection restrict or carry faithfully and never silently widen; elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis; proxy identity and human-authority identity stay distinct | [§6](#6-authority-identity-and-conservation-stdo-up-004) | each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile |
+| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | P6 makes authority a permission that capability, labels and reachability never create, and P3 scopes every identity by authority and kind, so authority is an identity-bearing relation whose owner, kind, subject, scope and basis must survive every carrier: composition, delegation and projection restrict it or carry it faithfully and never silently widen it. P4b makes an authority decision a step-produced fact that cannot be re-acquired, so elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis, and a recorded ruling keeps its coordinates and cannot be widened by recording. Proxy identity and human-authority identity stay distinct for the same reason as any two kinds under P3 | [§6](#6-authority-identity-and-conservation-stdo-up-004) | what creates no authority and what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), with this section's instances; the nine grant fields: this section; each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile |
 | P3 (independent), P6 (independent) | a default identity format that a runtime realisation publishes is lawful only while derived domains may override it; an override is lawful only if it preserves scoped uniqueness, kind distinction, deterministic parsing or reading, non-aliasing between family and member identities and stable downstream traceability, and it is published in domain authority, not only as regex assumptions hidden in implementation code | [§7](#7-default-formats-and-overrides) | the defaults: the bound runtime realisation ([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)); each override and its publication surface: the domain |
 | P3 (independent), P1 (independent); (ii) | regex over prose is at most a provisional extractor; a parser distinguishes concrete identity kinds from grouping labels, and subordinate identities from the identity their readable form derives from | [§8](#8-parsing) | whether the domain needs family identities: the domain |
 | P3 (independent), P6 (independent); (iii) | release version is not object identity; object identity, release identity, publication or revision coordinates and mutable discovery selectors may relate and are not interchangeable | [§9](#9-release-version-boundary) | release identity, its names and its forms: [RELEASE](RELEASE.md) |
@@ -191,11 +192,13 @@ object and its kinds are FOUNDATIONS §2).
 
 Composition, delegation, adapters, projections, wrappers and registries
 may restrict or faithfully carry admitted authority. They do not silently
-widen scope, add a role, increase cardinality, change kind, or
-reconstruct authority from actor identity, payload shape or available
-capability. Elevation, transfer, split, merge, proxy grant, revocation and
-retirement require an explicit authority decision and identifiable basis
-(P6, P4b).
+widen scope, add a role, increase cardinality or change kind. Nor do they
+reconstruct authority from anything that creates none: that list is
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)', and
+its instances for an identity-bearing relation include actor identity,
+payload shape and available capability. Elevation, transfer, split,
+merge, proxy grant, revocation and retirement require an explicit
+authority decision and identifiable basis (P6, P4b).
 
 Human authority may act directly or through an explicitly admitted
 bounded proxy. Proxy actor identity and human-authority identity remain
@@ -206,10 +209,14 @@ validity, delegation rights, revocation and provenance (P6, P3).
 
 A direct or proxied decision preserves its source, subject and basis,
 acting identity and mode, scope, change class, disposition and
-supersession. Recording a ruling cannot widen it. Proxy authority does
-not make implementer self-review independent or confer unrelated runtime
-or domain authority (P6, P4b). EVALUATION §5 applies this law to
-acceptance.
+supersession. Recording a ruling cannot widen it. What a proxy can never
+decide is stated at
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); for
+authority identity its instances are that proxy authority does not make
+implementer self-review independent
+([EVALUATION §3](EVALUATION.md#3-independent-assessment)) and confers no
+unrelated runtime or domain authority (P6, P4b). EVALUATION §5 applies
+this law to acceptance.
 
 ## 7. Default formats and overrides
 
@@ -401,7 +408,7 @@ RELEASE §1, not in this tier-1 member.
 | #authority-split | not applicable: heading with no claim text (19 bytes, the heading line); its two children are disposed individually | §5 |
 | #engine-owned-identity | conserved; the six runtime-owned kinds (graph calls and frames generalised), opaque identities and local generation, the three "should optimise" aims, the "should not impose" rule | §5 Engine-owned identity |
 | #domain-owned-identity | conserved; the six domain-owned examples, the four things the domain defines, transport without invented meaning | §5 Domain-owned identity |
-| #authority-identity-and-conservation-stdo-up-004 | conserved in full; authority as an identity-bearing relation and its five preserved coordinates, restriction or faithful carriage only, the six prohibitions, the seven explicit-decision transitions, direct or proxied human authority, distinct proxy identity (the profile projection generalised), the nine grant fields, the eight preserved decision coordinates, no widening by recording, the two proxy limits | §6; EVALUATION §5 applies it; FOUNDATIONS §2 Authority kinds |
+| #authority-identity-and-conservation-stdo-up-004 | conserved in full; authority as an identity-bearing relation and its five preserved coordinates, restriction or faithful carriage only, the six prohibitions, the seven explicit-decision transitions, direct or proxied human authority, distinct proxy identity (the profile projection generalised), the nine grant fields, the eight preserved decision coordinates, no widening by recording, the two proxy limits; the reconstruction sources and the proxy limits are stated as instances of the lists owned at FOUNDATIONS §2 Authority kinds | §6; EVALUATION §5 applies it; FOUNDATIONS §2 Authority kinds |
 | #default-formats-and-overrides | not applicable: heading with no claim text (33 bytes, the heading line); its three children are disposed individually | §7 |
 | #defaults-from-a-bound-abg-realization | conserved; the "may publish" permission for a consumer-bound runtime realisation's own runtime surfaces and default surface kinds is restated in DESIGN_MODULE §12 Identity defaults from a bound runtime realisation; its identity-law determinations (starter conventions and convenience contracts, not universal doctrine, lawful only while overridable) are in §7 Derived domain overrides | DESIGN_MODULE §12 Identity defaults from a bound runtime realisation; §7 Derived domain overrides |
 | #derived-domain-overrides | conserved; override permission, the five preservation conditions, publication in domain authority, no hidden regex assumptions | §7 Derived domain overrides |

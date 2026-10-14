@@ -3,7 +3,9 @@
 This file applies the common
 [Foundational Reduction Requirement](../../../specification/requirements/README.md#foundational-reduction-requirement)
 to this tenant's candidate for iteration 3. It is tenant HOW, written by
-Writer activation I3-1 under `EC-CLAUDE-I3-01`, and accepts nothing.
+Writer activation I3-1 under `EC-CLAUDE-I3-01` and completed by Writer
+activation I3-2e (clusters R30 to R34, the loci marked "added by
+I3-2e", design discrepancy c and section 4.7). It accepts nothing.
 
 Terms, from the common requirements:
 
@@ -54,8 +56,29 @@ It is a lower bound:
 - POSTING_GUIDE, WRITING_GUIDE, schemas and most templates were read only
   at search hits.
 
-Activation I3-2e completes the inventory before the integrated
-assessment.
+Activation I3-2e completed the inventory before the integrated
+assessment, by its own read-only sweep at `5ab44d5`, with no helper:
+
+- POSTING_GUIDE, WRITING_GUIDE and the 23 Markdown template files were
+  read in full;
+- `PRODUCT_DEFINITION_TEMPLATE.json` was read as its scalar values,
+  without its URI and identifier lines;
+- the two schemas were read by extracting every enumeration, constant,
+  pattern and description. They state no value set and no rule beyond
+  PRODUCT_DEFINITION and RELEASE, so they add no cluster;
+- wording variants were searched across all 23 members, the templates
+  and the plugin for these questions: what creates no authority, implicit
+  activation and continuation, invalidation, closure conditions,
+  promotion blocks, independence triggers, resource limits, hard-stop
+  waivers, commentary standing, current-surface writing and version
+  labels, value-like uses of "missing", and disposition vocabularies;
+- each hit was read in context before it was classified.
+
+What I3-2e added is marked "added by I3-2e" in the existing clusters,
+plus five new clusters (R30 to R34), design discrepancy c and the paths
+and coverage rows of section 4.7. The inventory is still a lower bound:
+the variant search is lexical, and an actor's reading can still find a
+rival that no search term reaches.
 
 Source sample by I3-1: after the sweeps, this activation re-read 20 rival
 loci at source, spread over R7, R11, R12, R14, R16 and R21:
@@ -79,7 +102,7 @@ sweeps, which re-read about half their quotes.
 
 Each "owner" below is a design decision of this file. The update of
 [DOCUMENT_STRUCTURE](DOCUMENT_STRUCTURE.md#ownership-decisions) records
-them beside D1 to D8 (PLAN I3-2e). Section 3 lists what each rival
+them beside D1 to D8 (PLAN I3-2e; recorded as D9). Section 3 lists what each rival
 becomes. A change of predecessor meaning in doing so is a proposed
 replacement relation for the product owner, never a silent edit.
 
@@ -88,7 +111,7 @@ replacement relation for the product owner, never a silent edit.
 | 1, pillar contributions and the four-way split | section 2 |
 | 2, recurring determinations, shared owner, consumers | section 3 |
 | 3, distinctions kept, retained primitives, scope, force, triggers and exceptions | section 3, per cluster; guards in section 4 |
-| 4, member boundaries from responsibilities | DOCUMENT_STRUCTURE (update planned, PLAN I3-2e) |
+| 4, member boundaries from responsibilities | DOCUMENT_STRUCTURE, updated by I3-2e (D9, member map, conformance map) |
 | 5, deciding paths against the two fixed baselines | section 4 |
 | 6, challenge cases | section 5 and [PLAN §5](../qualification/C3-ITER3/PLAN.md#5-trial-design) |
 
@@ -444,6 +467,23 @@ activation that does it.
     is permissive where the owner is mandatory.
   - Duplicates of the digest rule are at `PRODUCT_DEFINITION.md:876`,
     `DESIGN_MODULE.md:1889`, `SPEC_METHOD.md:855` and `ASSURANCE.md:788`.
+  - Added by I3-2e, further trigger lists that cite no owner:
+    - `plugins/spec/skills/stdo-work/SKILL.md:146–147`: "Function
+      boundaries alone do not invalidate them; mutation, rollback,
+      authority/basis change and actual trust boundaries" do, its own
+      list; `:165` and `stdo-ticket/SKILL.md:74` ("invalidate only
+      affected support"); `GETTING_STARTED.md:525`;
+    - the basis template, `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:160–164`
+      ("checking its question, subject/basis, evidence and invalidators
+      … a new role or session alone does not"), `:184–187` (its own
+      fourteen change kinds) and `:191–192`;
+    - `REFERENCE_FRAME.md:629–630`, "Changing any material member may
+      invalidate the coverage result", permissive like EVALUATION:101;
+    - `EXECUTIVE_BASELINE.md:1442`, "a changed candidate or basis
+      invalidates the affected review result", a subset list; `:546` and
+      `:814–815` are narrower restatements;
+    - domain lists: `ASSURANCE.md:728` (testing-frame invalidation, a
+      full list of its own), `DESIGN_MODULE.md:388`, `WORLD_MODEL.md:286`.
 - Removed: partly. The predecessor has five differing invalidator lists:
   P:RF:635–640, P:SPEC:1318–1321, P:TICKET:787–793 and 885–887,
   P:DMM:2180–2187, P:BASE:497–500. Under the predecessor an actor takes
@@ -455,6 +495,12 @@ activation that does it.
   a projection change, is stated as a named instance of the owner's
   material-input change, never as a parallel list. EVALUATION:101 takes
   the owner's mandatory force (I3-2b, I3-2c, I3-3b).
+  Added by I3-2e: the plugin and template lists refer to ACTIVATION §7
+  (I3-3d); RF:630 takes the owner's force (I3-3j, which holds
+  REFERENCE_FRAME after I3-2b); EB:1442, :546 and :815 refer (I3-3a);
+  ASSURANCE:728 states its list as named instances of the owner's
+  material-input change (I3-3h); DM:388 and WM:286 likewise (I3-3b,
+  I3-3d).
 
 ### R8 Frame revision and diagnostic order
 
@@ -514,6 +560,9 @@ activation that does it.
   - `plugins/spec/skills/stdo-work/SKILL.md:111`: "an unknown condition
     needs a bounded resolution or explicit residual". The owner instead
     withholds the dependent claim.
+  - Added by I3-2e: the basis template `:58–61` restates the owner ("A
+    false predicate excludes only its own obligation; an unknown predicate
+    does not mean false"), a duplicate in agreement; I3-3d makes it refer.
 - Removed: the predecessor stated "unresolved, not false" twice (P:RF:592–608,
   P:TICKET:874); the candidate states it once. The lifecycle rule
   (P:SPEC:1169, P:DMM:1838–1845) is still stated twice.
@@ -537,6 +586,12 @@ activation that does it.
     basis".
   - `EXECUTIVE_BASELINE.md:1103` gives its own trigger list and cites
     EVALUATION §3, which does not state it.
+  - Added by I3-2e: `plugins/spec/references/GETTING_STARTED.md:603`
+    acts on "independent review is required" and adds "freeze before
+    material reference exposure where generic-method qualification
+    requires it", a condition no member states. The skill refers to the
+    TICKETS triggers and states the freeze as an instance of an owner
+    rule, or it is reported for an owner (I3-3d).
   - `EXECUTIVE_BASELINE.md:885` credits EVALUATION §3 with a traceability
     rule that sits at `TICKETS.md:1013`.
   - "Author identity" is defined only at `SPEC_METHOD.md:1656`; EVALUATION
@@ -571,6 +626,19 @@ activation that does it.
     `ACTIVATION.md:408–409` and `IDENTITY.md:198`.
   - "Recording a result without review" is stated at `ACTIVATION.md:426`,
     `TICKETS.md:1135` and `EXECUTIVE_BASELINE.md:171`.
+  - Added by I3-2e, domain instances of "creates no authority" that cite
+    no owner: `REFERENCE_FRAME.md:320` (an exchange), `EXECUTIVE_BASELINE.md:48`
+    (a role), `AXIOMATIC_CALCULUS.md:407` (latitude), `ACTIVATION.md:1200`
+    (capability), `SPEC_METHOD.md:819` (C/J/O annotations),
+    `plugins/spec/skills/stdo-review/SKILL.md:49` (test presence). Each
+    agrees with FOUNDATIONS:127. The lists that make a result or tool
+    output authorise continuation are cluster R31.
+  - Resolution of the two loci 4.6 left conditional on I3-2e:
+    `DESIGN_MODULE.md:769` ("Composition does not widen authority
+    implicitly") and `PRODUCT_DEFINITION.md:77` ("A URI locator,
+    filename, path or display label cannot mint or widen identity
+    authority") are domain instances that agree with the owner. Neither
+    yields a different outcome, so no path is added (4.7).
 - Removed: no. The predecessor already had differing lists
   (P:RF:361–364, P:IDENTITY:220–222) and two proxy limits (P:RF:203,
   P:IDENTITY:225). The candidate keeps the pattern.
@@ -582,6 +650,11 @@ activation that does it.
     and IDENTITY referring.
   - One owner for recording a result without review, ACTIVATION §1, with
     the others referring (I3-2a, I3-2b, I3-2c, I3-3b).
+  - Added by I3-2e: each domain instance cites FOUNDATIONS:127 and keeps
+    only its domain term: RF:320 in I3-3j; EB:48 in I3-3a; SM:819 in
+    I3-3f; the skill in I3-3d. AC:407 and ACTIVATION:1200 are prose that
+    only I3-2b and I3-2a hold, outside their intake; the Executive extends
+    those intakes or schedules a follow-up (return I3-2e).
 
 ### R13 Successor dispositions and other disposition vocabularies
 
@@ -636,6 +709,14 @@ activation that does it.
     `TICKETS.md:1121`, `EXECUTIVE_BASELINE.md:1651`, the basis template
     `:165` and `plugins/spec/skills/stdo-ticket/SKILL.md:68`;
     SPEC_METHOD and TICKETS each cite the other.
+  - Added by I3-2e: `SPEC_METHOD.md:1580–1582` (§9 Evidence), "Closure
+    requires authority trace, realisation proof, negative proof where
+    drift is plausible, and a present-tense statement of the residual open
+    pressure", a second closure condition with a different content list
+    that neither SPEC_METHOD:924 nor TICKETS:1121 relates to;
+    `TICKETS.md:111`, "Ticket completion requires every closure-bearing
+    milestone to be accepted", a milestone-level condition stated beside
+    the owner.
 - Removed:
   - UP-020 dispositions: predecessor P:SPEC:1601–1606 (table) and
     P:BASE:1416–1420 ("`STDO-UP-020` disposition within its grant:
@@ -663,6 +744,10 @@ activation that does it.
   - One owner for the closure condition, TICKETS, with the others
     referring (I3-2c, I3-3a, I3-3d).
   - ODD resolves the homonyms (I3-3c).
+  - Added by I3-2e: SPEC_METHOD:1580 states its four items as evidence
+    the owner's condition requires for a realisation claim, or refers;
+    TICKETS:111 states how milestone acceptance relates to the owner's
+    condition (I3-3f).
 
 ### R15 Build-tenant binding
 
@@ -693,6 +778,13 @@ activation that does it.
     equivalent for material coordination". `ACTIVATION.md:373` says the
     executive profile "is not the method's default".
   - `EXECUTIVE_BASELINE.md:165–178` repeats `TICKETS.md:1134–1138`.
+  - Added by I3-2e: the basis template's sections "Executive Attention,
+    Evaluation, And Action" and "Activation And Return Topology"
+    (`PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:103–143`) give every
+    project a coordinated Executive topology and state EB's rules
+    ("Executive performs no file or Git mutation", `:141`). It binds a
+    direct Writer path at `:121–124`, but its remaining structure presumes
+    the profile.
 - Removed: direct entry was stated twice in the predecessor, at
   P:SPEC:1576–1580 ("When one capable context has sufficient existing
   work authority, exact intake and operation grant, it may enter directly
@@ -704,11 +796,17 @@ activation that does it.
 - Retained: EB frames, with their need stated at `EXECUTIVE_BASELINE.md:692`.
 - I3 action:
   - One list of relation structures at ACTIVATION §1; the others cite it
-    and name any profile addition (I3-2a, I3-2b, I3-3a).
+    and name any profile addition (I3-2a, I3-2b, I3-3a). Corrected by
+    design discrepancy c: the one list is RF-009's, as D3 and
+    `ACTIVATION.md:322–324` already state; ACTIVATION §1 and the others
+    cite RF-009.
   - Admission of a configuration moves to ACTIVATION §1, and EB refers
     (I3-2a, I3-3a).
   - Templates and skills say "coordination the applicable configuration
     selects" (I3-3d).
+  - Added by I3-2e: the basis template marks its Executive sections as
+    the executive profile's binding, selected only when that profile is
+    adopted, and keeps a configuration-neutral slot (I3-3d).
 
 ### R17 Change classes, triage and re-entry
 
@@ -877,6 +975,12 @@ activation that does it.
     ruling.
 - Retained: the UP-009 drift refusal (`TICKETS.md:1197`); TRAVERSAL
   `stale_frontier`.
+- Added by I3-2e, duplicates in agreement: the basis template `:201–202`
+  ("Prompts, summaries, symbolic maps, compressions, and other
+  projections may route attention. They do not replace the sources");
+  the product-definition schema's selector description ("never operative
+  constitutional authority without digest-bound explicit resolution and
+  adoption").
 - I3 action:
   - The generic staleness rule moves to ACTIVATION §2 (tier 1), with
     PRODUCT_DEFINITION §11 refining it for packaging carriers. This
@@ -891,6 +995,9 @@ activation that does it.
 - Still deciding: as R5 for "non-waivable hard stops". The predecessor
   had three loci (P:SPEC:1117, P:BASE:451–459, P:DMM:2192); the candidate
   has one owner with an unstated binder relation.
+- Added by I3-2e: the basis template `:100–101`, "A cutoff cannot waive a
+  hard stop", agrees with the owner; it refers with R5's template action
+  (I3-3d).
 - I3 action: with R5.
 
 ### R25 When a finding blocks promotion
@@ -902,9 +1009,29 @@ activation that does it.
   - `EXECUTIVE_BASELINE.md:1183`: by the Product cutoff, "no block follows
     mechanically";
   - `DESIGN_MODULE.md:1876` repeats TICKETS's conditions.
+  - Added by I3-2e:
+    - the basis template `:86–87` and `:91–101`: "A cutoff cannot waive
+      a hard stop or turn an out-of-claim observation into a blocker";
+      it agrees with TICKETS:1021 but states it as template law;
+    - `plugins/spec/skills/stdo-status/SKILL.md:68–69`, "Keep adjacent
+      observations from becoming automatic release blockers";
+    - `RELEASE.md:616`, "all release-blocking gaps are closed", which uses
+      the predicate without naming its owner;
+    - `EXECUTIVE_BASELINE.md:399–400`, none of four values "alone makes
+      a finding release-blocking";
+    - `DESIGN_MODULE.md:522`, contradictory projections "block
+      promotion", a domain instance of falsification.
+  - Resolution of the locus 4.6 left conditional on I3-2e:
+    `DESIGN_MODULE.md:1876–1884` states what the design check
+    determines (lawful boundary, complete claim, competing authority,
+    foreclosing decision, falsification or hard stop). It does not state
+    when a finding blocks, so it decides no block outcome of its own and
+    no path is added (4.7). The existing action, that DESIGN_MODULE
+    refers for the block rule, stands.
 - I3 action: EVALUATION §5 owns the rule, and TICKETS, EB and
   DESIGN_MODULE refer, keeping their domain triggers (I3-2b, I3-2c,
-  I3-3a, I3-3b).
+  I3-3a, I3-3b). Added by I3-2e: the template and the skill refer
+  (I3-3d); RELEASE:616 names the owner (I3-3h); EB:399 refers (I3-3a).
 
 ### R26 Progress judgement
 
@@ -929,6 +1056,18 @@ activation that does it.
     (`AXIOMATIC_CALCULUS.md:583`);
   - "disposition" names four different sets (ACTIVATION §3, RELEASE §9,
     `TICKETS.md:1095`, `:286`).
+  - Added by I3-2e:
+    - a fifth "disposition", `activate | non_material | residual`, for an
+      evaluation in the basis template's inventory
+      (`PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:53`; cluster R34);
+    - "missing" as an evidence status beside "satisfied" and "invalid"
+      (`:56`), where FOUNDATIONS:721 makes missing the absence of a
+      result;
+    - "adoption" in three senses: a profile (`PRODUCT_DEFINITION.md:656`,
+      R21), a shared-method lesson (SPEC_METHOD §6, UP-012) and a release
+      basis (`RELEASE.md:387`, `templates/README.md:117–122`);
+    - `Closed` as a post's discussion state (`POSTING_GUIDE.md:125`)
+      beside ticket closure.
 - I3 action: each sense either takes a qualified name or states its
   predicate where used. GLOSSARY lists the senses with their owners
   (I3-3e).
@@ -944,6 +1083,211 @@ activation that does it.
 - I3 action: each refers to the owner and adds only its domain fields
   (I3-2b, I3-2c, I3-3d).
 
+### R30 Resource limits (added by I3-2e)
+
+- Owner: ACTIVATION §6 Cost and proportionality, which states the generic
+  resource-limit law: an activation declares its context, time, spend and
+  other resource limits with their units and measurement boundaries, and
+  reports them. SPEC_METHOD §11 binds that law: a tenant's execution
+  binding supplies the units, boundaries and values. This is design
+  discrepancy b, recorded in DOCUMENT_STRUCTURE D2, D4 and D7.
+- Refers or refines: `ACTIVATION.md:193` (intake declares the allowance
+  under §6), `:302` (a configuration explains its resource limits),
+  `EXECUTIVE_BASELINE.md:722`, `:1347`, `CONFORMANCE.md:44`.
+- Still deciding:
+  - `ACTIVATION.md:1230–1232`: "Time, spend and other resource limits,
+    with the units and boundaries of their measurement, are those of" the
+    selected execution binding;
+  - `EVALUATION.md:411–412`: "Time, spend and other resource limits are
+    those of the selected execution binding";
+  - `SPEC_METHOD.md:1523–1524` (§8) and `:1714–1715` (§11), each saying
+    the limits "are those of the execution binding".
+  - The four agree with one another, but no tier-1 section owns the law
+    that tier-1 members apply. A tier-1 path must cross into tier 2,
+    which D7 forbids.
+- Removed: not a predecessor reduction case; the provenance at
+  `ACTIVATION.md:1231` is UP-014's selection rule, which had no binding.
+- Retained: none.
+- I3 action:
+  - ACTIVATION §6 states the generic law (I3-2a, in its row).
+  - SPEC_METHOD §11 binds it and §8 (`:1523`) refers (I3-2c; its row
+    names §11, and §8 is added here).
+  - EVALUATION:411 refers to ACTIVATION §6 (I3-3j, which holds
+    EVALUATION).
+
+### R31 Implicit activation and continuation (added by I3-2e)
+
+- Owner: ACTIVATION §1 Admission (`ACTIVATION.md:225–229`). Execution
+  begins only after deterministic admission or an explicit human
+  override. The drafting actor never infers admission from its own draft,
+  a carrier, lane placement or an `active` label. ACTIVATION §3 Admission
+  and activation owns the refusal value.
+- Refers or refines:
+  - a Reviewer does not "authorise continuation":
+    `EVALUATION.md:216`, `EXECUTIVE_BASELINE.md:1161`;
+  - `EXECUTIVE_BASELINE.md:1567`, the violation table, cites ACTIVATION
+    §1 and §5.
+- Still deciding:
+  - `EXECUTIVE_BASELINE.md:565–570`: "No lateral handoff, child
+    completion, model response, tool output or shared actor implicitly
+    activates another frame or authorises continuation. A consumer
+    receives the closed result and its source routes, not the child's
+    hidden reasoning context". This is a generic rule stated only in an
+    optional profile, in its own words (conformance row 10). It cites
+    ACTIVATION §7, not §1 Admission. The owner's list of what does not
+    admit (draft, carrier, lane, label) and the profile's list (handoff,
+    child completion, model response, tool output, shared actor) do not
+    coincide.
+  - The basis template, `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:138–143`,
+    states the profile's list as template law for every project. It adds
+    "Changing roles does not create authority or independent assessment".
+- Removed: no. The predecessor stated the profile's sentence in
+  STDO_REFERENCE_FRAME_BASELINE ("implicitly activates", one hit at the
+  rc.2 tag), and the candidate keeps it in the profile and the template.
+- Retained: none.
+- I3 action:
+  - ACTIVATION §1 Admission states the generic rule once, with both lists
+    as instances. Only I3-2a holds that text, and this is outside its
+    intake.
+  - EB:565–570 refers and keeps the Executive return route (I3-3a).
+  - The template refers (I3-3d).
+
+### R32 Current-surface writing and version labels (added by I3-2e)
+
+- Owner: SPEC_METHOD §2 Specification surface rule
+  (`SPEC_METHOD.md:398–408`):
+  - constitutional specification "is written in the present tense";
+  - what is no longer live "is deleted, superseded or moved to
+    commentary";
+  - explicit version labels "are reserved for immutable release facts,
+    selector bindings, or clearly historical or superseded material".
+- Refers or refines: `GOALS_TEMPLATE.md:17–18`, `PRODUCT_TEMPLATE.md:3`,
+  `INTENT_TEMPLATE.md:3`.
+- Still deciding:
+  - `WRITING_GUIDE.md:114–125` (§9):
+    - "should describe … in present tense", advisory force where the
+      owner is mandatory;
+    - labels "only for an immutable release fact, an explicit mutable
+      selector binding or clearly historical material", which omits
+      superseded material;
+    - it names SPEC_METHOD §6 as stating "the same boundary", while the
+      owner is §2.
+    - §7 (`:92–96`) restates the stale-law rule.
+  - `SPEC_METHOD.md:1160–1163` (§6): surfaces "should therefore describe
+    current truth by role, boundary and status rather than by
+    release-line version labels". It is advisory and points back to §2.
+  - `SPEC_METHOD.md:168` (F10 consequence): "a version label names an
+    immutable release fact, not recency", one use where the owner allows
+    three.
+  - `RELEASE.md:465–466`: branding "does not belong in live present-tense
+    Product or requirements surfaces merely to signal recency". Its scope
+    is Product and requirements surfaces only.
+- Removed: no. The predecessor stated the rule in SPEC_METHOD and
+  WRITING_GUIDE, the latter "present tense at 'should'"
+  (`WRITING_GUIDE.md:148`), and the candidate keeps both.
+- Retained: WRITING_GUIDE's practice (style, habits, tone, layer checks)
+  is the guide's own subject, not a rival.
+- I3 action:
+  - SPEC_METHOD §6 and the F10 row refer to §2 (I3-2c, inside its
+    territory but outside its listed loci; otherwise I3-3f).
+  - RELEASE:465 refers (I3-3h).
+  - WRITING_GUIDE §7 and §9 refer to the owner for the rule and its
+    force, keep the writing practice, and correct the pointer. No step 1
+    or step 2 activation holds WRITING_GUIDE; this design proposes I3-3f
+    with WRITING_GUIDE added to its territory.
+  - If the guide's "should" is predecessor meaning that the owner's
+    mandatory force changes, the change is a proposed replacement
+    relation (I3-4b).
+
+### R33 Standing of commentary (added by I3-2e)
+
+- Owner:
+  - POSTING_GUIDE §2 Boundary and §9 Ratification
+    (`POSTING_GUIDE.md:35–40`, `:158–160`) for what a post is used for
+    and when its content becomes consequential;
+  - FOUNDATIONS §2 Authority kinds for the rule that writing a surface
+    creates no authority (R12);
+  - PRODUCT_DEFINITION §11 (`:860–863`) for comments as derived or
+    authoring surfaces (R23).
+- Refers or refines (duplicates in agreement): `PRODUCT_DEFINITION.md:749`,
+  `TICKETS.md:113–114`, `EXECUTIVE_BASELINE.md:149`, `EVALUATION.md:176`,
+  `plugins/spec/skills/stdo-ticket/SKILL.md:63`.
+- Still deciding:
+  - `TICKETS.md:71–74`: comments "are for publishing ideas, strategy
+    notes, reviews, handoffs, closure summaries, and decisions with their
+    reasoning". This is a content list of its own beside POSTING_GUIDE §1
+    and §5. It admits "decisions", where POSTING_GUIDE §2 excludes "live
+    design decisions" from posts.
+  - Both bind the same `ticketing.comments.root` carrier, and neither
+    states whether a comment and a post are the same object.
+- Removed: no. The predecessor stated both (TICKET_METHOD #comments,
+  POSTING_GUIDE).
+- Retained: POSTING_GUIDE's categories, structure and discussion states,
+  which are the guide's own carrier rules.
+- Family: POSTING_GUIDE has no family table (section 2, pillar 1). Its
+  deciding rules are accounted under F13 Work carriers through the family
+  index.
+- I3 action:
+  - TICKETS §1 refers to POSTING_GUIDE for what a comment carries, and
+    states that a recorded decision's authority is its owning surface
+    (I3-3f).
+  - The F13 table accounts for POSTING_GUIDE §2, §7 and §9 (I3-3f).
+  - The FOUNDATIONS §3 index entry names POSTING_GUIDE under F13. Only
+    I3-2a holds that text, and this is outside its intake.
+
+### R34 Determinations stated only in templates (added by I3-2e)
+
+- Owner, by question:
+  - REFERENCE_FRAME §8 Coverage for the states of an evaluation in an
+    inventory and for coverage completeness;
+  - SPEC_METHOD §10 Design records for ADR retention;
+  - PRODUCT_DEFINITION §8 for the tenant registry.
+  - A template is a derived authoring surface (PRODUCT_DEFINITION §11,
+    R23) and owns no determination.
+- Still deciding:
+  - The basis template's evaluation inventory,
+    `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:53`: "disposition:
+    `activate | non_material | residual`".
+    - No member states, maps or declares these values.
+    - `non_material` would drop an evaluation from coverage. The coverage
+      values of `REFERENCE_FRAME.md:683–703` require
+      `excluded_by_authority`, with an authority, for that.
+  - The basis template `:155–158`, "Coverage is complete only when every
+    mandatory material evaluation and interaction is closed, or governing
+    authority explicitly retains its residual", a completeness rule
+    beside RF §8.
+  - The basis template `:56`, an evidence status "satisfied/missing/invalid"
+    (R27).
+  - The ADR README templates (`build_tenants/common/design/adrs/README_TEMPLATE.md:41`,
+    `:45`, and the variant copy) state two rules that SPEC_METHOD §10
+    does not:
+    - "ADRs are append-only history; do not delete superseded ADRs unless
+      they are being explicitly retired";
+    - "If the scope narrows during implementation, move the ADR … and
+      record the move in the supersession chain".
+  - `TENANT_REGISTRY_TEMPLATE.md:35–41`, "Suggested lifecycle states". No
+    owner states a tenant lifecycle; the list is suggested, not deciding.
+  - Not a rival: `templates/README.md:78` cites "PRODUCT_DEFINITION.md
+    section 6" for the import, translation or equivalence relation, which
+    §5 owns. This is a pointer defect.
+- Removed: no. These are the predecessor's template texts, conserved as
+  packaging. At the rc.2 tag, `non_material` is at
+  `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md:52`. The ADR
+  supersession rule is at the common and variant ADR README templates
+  (`:45`, `:43`).
+- Retained: none stated.
+- I3 action:
+  - RF §8 either adopts the evaluation-inventory values as declared
+    states, mapped to its coverage values or excluded with an authority,
+    or the template uses RF §8's values (I3-3j for RF, I3-3d for the
+    template).
+  - The template's completeness sentence refers to RF §8 (I3-3d).
+  - SPEC_METHOD §10 adopts or declines the two ADR rules (I3-3f), and the
+    ADR templates refer (I3-3d).
+  - I3-3d corrects the README pointer.
+  - A change of predecessor template meaning is a proposed replacement
+    relation (I3-4b).
+
 ### Design discrepancies found
 
 - **a.** D1 says RF-012, RF §6, AC-007 and EVALUATION §4 "define nothing
@@ -955,6 +1299,24 @@ activation that does it.
   places in SPEC_METHOD §11 (tier 2). ACTIVATION:1232 and EVALUATION:412
   (tier 1) depend on it, which D7 forbids. ACTIVATION §6 owns the generic
   resource-limit law, and SPEC_METHOD §11 binds it (I3-2a, I3-2c, I3-2e).
+  I3-2e made this cluster R30 and recorded the correction in D2, D4 and
+  D7.
+- **c** (found by I3-2e). Two places name different owners of the list of
+  distinct relation structures.
+  - D3 and `ACTIVATION.md:322–324` name RF-009 ("under RF-009, which
+    owns that rule").
+  - R16's action named ACTIVATION §1.
+  - This design keeps D3, because the member text already applies it. RF-009
+    owns the list; ACTIVATION §1, EB:656 and RF:980 cite it. R16's action
+    is corrected in place.
+  - I3-2a and I3-2b started from the uncorrected wording. If either has
+    moved the list into ACTIVATION §1, the Executive reconciles it before
+    I3-3a cites it.
+
+D1 (discrepancy a) is corrected in DOCUMENT_STRUCTURE. The correction
+also adds a fifth refinement: D1 counted four for ACTIVATION §3, but
+the table that opens ACTIVATION §3 (`ACTIVATION.md:612–637`) has five,
+including admission and activation.
 
 ### Summary
 
@@ -988,10 +1350,27 @@ activation that does it.
 | R26 progress | ACTIVATION §5 | 1 | not applicable |
 | R27 label homonyms | per sense | many | no |
 | R29 preservation | ACTIVATION §4; AC-013 | 3 | not applicable |
+| R30 resource limits (I3-2e) | ACTIVATION §6, bound by SPEC_METHOD §11 | 4 | not applicable |
+| R31 implicit activation (I3-2e) | ACTIVATION §1 Admission | 2 | no |
+| R32 current surface and labels (I3-2e) | SPEC_METHOD §2 | 5 | no |
+| R33 commentary (I3-2e) | POSTING_GUIDE §2, §9 | 1, plus 5 duplicates | no |
+| R34 template-only rules (I3-2e) | RF §8; SPEC_METHOD §10; PRODUCT_DEFINITION §8 | 5, plus 1 pointer | no |
 
 Loci still deciding independently or duplicating an owner: about 100
 across 26 clusters (R28 is not used; relation-structure lists are in R16). The heaviest are R7, R12, R14, R16 and R21, in SPEC_METHOD,
 TICKETS, EXECUTIVE_BASELINE, the profiles and the plugin.
+
+I3-2e added about 60 loci:
+- 17 to existing clusters as rivals: R7 9, R11 1, R14 2, R16 1, R25 4;
+- about 20 to existing clusters as domain instances or duplicates in
+  agreement: R10, R12, R23, R24, R25, and R27's four further senses;
+- 17 rivals and 6 duplicates in the new clusters R30 to R34.
+
+The counts in the rows for R1 to R29 above are I3-1's and are not
+changed. The loci added by I3-2e are listed in their clusters. The total
+is now about 160 loci across 31 clusters. The heaviest are still R7,
+R12, R14, R16 and R21; the basis template and the plugin skills are now
+the largest single sources outside the members.
 
 ## 4. Deciding paths
 
@@ -1238,6 +1617,70 @@ checked for consistency by the working source reviews, not by a path.
 Uncovered loci: 7 rows, each a duplicate in agreement, a row-level check
 or a conditional addition.
 
+### 4.7 Additions by I3-2e
+
+Writer activation I3-2e added these paths and rows after I3-1 and before
+any measurement, under the addition rule at the head of this section. At
+2026-10-14T16:58:51Z no `qualification/C3-ITER3/paths/` file existed, so
+no trace on any subject existed. Sections 4.1 to 4.6 are unchanged: no
+path, task, guard, dimension or row there is removed or redefined. The
+new paths use the same subjects, entries, dimensions, outcome rule and
+protocol. Each states a task that is also posed on S0.
+
+| Path | Task kind | Situation the task states | Clusters | S1 and S2 entry | Guard items |
+|---|---|---|---|---|---|
+| DP-41 | work | a project's frame basis, written from the starter template, marks one mandatory evaluation `non_material`; its frame set then changes and coverage is proposed complete; a tool output is offered as permission to continue | R34, R31, R7, R12 | the basis template and the plugin's work skill | an evaluation leaves coverage only by the owner's exclusion rule and authority; a material change invalidates the coverage result; no tool output, child result or handoff admits a step or grants authority |
+| DP-42 | resume | after a repair, one closed review result's candidate has changed and one ticket result's support has not; an observation outside the reviewed claim is proposed as a release blocker | R7, R25, R24 | the plugin's work and status skills; eb-task-d | every invalidator of the owner applied and unrelated valid results kept; a finding blocks only under the one promotion-block rule; no hard stop waived |
+| DP-43 | review | a requirements surface narrates a transition and labels current law with a version line | R32 | README route to SPEC_METHOD §2 and WRITING_GUIDE | the owner's modal force kept; only the owner's label uses admitted; one owner for the rule |
+| DP-44 | decide | close a ticket whose realisation is proven and whose negative proof is absent where drift is plausible | R14 | README route to SPEC_METHOD §9 and TICKETS | one closure condition applied; review alone does not close |
+| DP-45 | work | record a design decision and a closure summary on the project's commentary carrier | R33 | README route to POSTING_GUIDE and TICKETS §1 | commentary establishes no ticket, design or requirement truth; the decision is recorded at its owning surface |
+| DP-46 | work | in a human-process tenant, a step reaches its declared time limit before its result is closed | R30 | binding | the limit, its units and its owner are reachable from tier 1; no obligation is dropped; a truthful stop or narrowing is recorded |
+
+DP-46, like DP-26, claims no reduction against S0. S0 has no
+build-tenant binding owner (R15, R30), so the outcome rule is applied
+against S1 only, and the S0 trace records what an actor reaches.
+
+Expected adverse changes, declared before measurement:
+- DP-43, M5 against S0 on route entry, where WRITING_GUIDE refers to the
+  owner instead of restating the rule (TO2);
+- DP-46, M5 against S1, because the owner moves to tier 1 and the binding
+  stays in tier 2 (TO2).
+
+Coverage of the loci added by I3-2e:
+
+| Cluster | Locus | Path |
+|---|---|---|
+| R7 | stdo-work skill:146–147, :165; stdo-ticket skill:74; GETTING_STARTED:525 | DP-42 |
+| R7 | basis template :160–164, :184–187, :191–192; REFERENCE_FRAME:629–630 | DP-41 |
+| R7 | EXECUTIVE_BASELINE:1442 | DP-42 (eb-task-d) |
+| R7 | EXECUTIVE_BASELINE:546, :814–815; ASSURANCE:728; DESIGN_MODULE:388; WORLD_MODEL:286 | uncovered: domain instances, checked against ACTIVATION §7 by the working check of the member's step 2 activation |
+| R10 | basis template :58–61 | DP-31 (template; R10 is among its clusters) |
+| R11 | GETTING_STARTED:603 | uncovered: a consumer that acts on the trigger; its added freeze condition is reported for an owner in I3-3d |
+| R12 | REFERENCE_FRAME:320, EXECUTIVE_BASELINE:48, AXIOMATIC_CALCULUS:407, ACTIVATION:1200, SPEC_METHOD:819, stdo-review skill:49 | uncovered: domain instances in agreement with FOUNDATIONS:127 |
+| R12 | DESIGN_MODULE:769, PRODUCT_DEFINITION:77 (conditional in 4.6) | resolved: domain instances in agreement; no different outcome, no path |
+| R14 | SPEC_METHOD:1580–1582; TICKETS:111 | DP-44 |
+| R16 | basis template :103–143 | DP-31 (template; R16 is among its clusters) |
+| R23 | basis template :201–202; schema selector description | uncovered: duplicates in agreement |
+| R24 | basis template :100–101 | DP-42 |
+| R25 | basis template :86–87, :91–101; stdo-status skill:68–69 | DP-42 |
+| R25 | RELEASE:616 | DP-21 (route through RELEASE; the path is unchanged) |
+| R25 | EXECUTIVE_BASELINE:399–400 | DP-34 (the path is unchanged) |
+| R25 | DESIGN_MODULE:522 | uncovered: a domain instance of falsification |
+| R25 | DESIGN_MODULE:1876–1884 (conditional in 4.6) | resolved: states what the design check covers, not when a finding blocks; no path |
+| R27 | basis template :53, :56; the three "adoption" senses; POSTING_GUIDE `Closed` | DP-41 (template senses); otherwise reconciliations inside other paths, as in 4.4 |
+| R30 | ACTIVATION:1230–1232, EVALUATION:411–412, SPEC_METHOD:1523–1524, :1714–1715 | DP-46 |
+| R31 | EXECUTIVE_BASELINE:565–570; basis template :138–143 | DP-41 |
+| R32 | WRITING_GUIDE:92–96, :114–125; SPEC_METHOD:168, :1160–1163; RELEASE:465–466 | DP-43 |
+| R33 | TICKETS:71–74 | DP-45 |
+| R33 | PRODUCT_DEFINITION:749, :860–863; TICKETS:113–114; EXECUTIVE_BASELINE:149; EVALUATION:176; stdo-ticket skill:63 | uncovered: duplicates in agreement |
+| R34 | basis template :53, :155–158, :56 | DP-41 |
+| R34 | ADR README templates :41, :45; TENANT_REGISTRY_TEMPLATE:35–41 | uncovered: template-only retention and lifecycle rules with no rival owner text; I3-3f decides whether SPEC_METHOD §10 adopts the ADR rules |
+| R34 | templates/README.md:78 | uncovered: a pointer defect, corrected in I3-3d |
+
+The paths of 4.4 are partitioned among I3-7d1 to I3-7d4 by number.
+DP-41 to DP-46 need an assignment in PLAN before the S0 and S1 traces
+start; this design proposes I3-7d4 or a fifth tracing activation.
+
 ## 5. Challenge cases
 
 Item 6 of the reduction requirement asks for independently specified
@@ -1255,6 +1698,9 @@ Their tasks are drawn from the paths above:
 | failure preservation | DP-01, DP-03, DP-04, DP-05, DP-30 |
 | recovery | DP-03, DP-07, DP-08, DP-31 |
 
+The paths added in 4.7 also supply cases: refused, DP-41, DP-44 and
+DP-45; failure preservation, DP-46; recovery, DP-42; successful, DP-43. No trial task in PLAN §5 uses them yet.
+
 Expectations are fixed before any trial by an actor that wrote neither
 the member text nor the frames. A Claude writer is a declared
 same-family exception; a cross-family set is requested through the
@@ -1262,7 +1708,13 @@ product owner.
 
 ## 6. Limits
 
-- The inventory is a lower bound (section 1). I3-2e completes it.
+- The inventory is a lower bound (section 1). I3-2e completed the sweep
+  of guides, templates and schemas, and a lexical search for wording
+  variants. It found 5 clusters and about 60 loci. A rival worded beyond
+  those search terms can still be missed, and the integrated assessment
+  checks for one. The plugin files that I3-1 left uninspected
+  (`plugins/spec/claude-skills/refresh`, `REFRESH.md`, `PRODUCT_BASIS.md`,
+  `openai.yaml`) were not read by I3-2e either. They are open for I3-3d.
 - Every owner and rival classification is the author's. The integrated
   assessment, by a reviewer the product owner assigns, judges it.
 - The pillar account binds a pillar list the product owner has not yet

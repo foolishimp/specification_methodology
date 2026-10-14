@@ -179,6 +179,7 @@ which the commitments do not supply:
 | P3 (independent), P6 (independent); (ii) | the calculus, an interpreted model and an encoded carrier have separate identities, judgments and proof obligations; encoding needs an accepted judgment over the unchanged model, and a downstream success ratifies no upstream layer | [§7](#7-layers), [AC-020](#ac-020-layer-and-release-separation) | Product status of a layer: the external authority that selects and releases it |
 | P3 (independent), P6 (independent) | an edition's identity is an external record over its published bytes and its derivation clauses, created after the bytes exist; interpreted and encoded identities bind their upstream identities, and judgments stay outside the identities they judge | [§8](#8-calculus-identity) | the record shape, RFC 8785 canonicalisation, SHA-256 and the order of principle references: this member; the record grammar and issuance authority for interpreted and encoded identities: the owning Product; issuance of this edition's record: its release, under [RELEASE](RELEASE.md) |
 | P2 (independent), P6 (independent) | the calculus selects, constructs, accepts or releases no concrete interpretation or carrier, and an application's import, translation or specialisation stays external to it | [Application boundary](#application-boundary), [External imports and specialisations](#external-imports-and-specialisations) | each application's subject, interpretation, carrier and imports: the downstream authority that owns the application |
+| P0 (recovered), P2 (independent), P4b (derived from P0 and P2), P6 (independent); (i), (iii) | P0 bounds what an actor can hold and P2 fixes the task's destination, so an actor needs the constraints of one task, not the whole model, and the material closure and projection of AC-010 and AC-011 supply them as a constraint surface. P4b keeps every residual until an authorised disposition, so unresolved conditions travel with the surface and block the work that depends on them; P6 keeps authority, evidence and acceptance apart, so a surface grants no authority and its validity, fidelity and sufficiency for a task are separate claims | [Constraint surfaces](#constraint-surfaces) | the interpretation used and which one is current: the downstream authority of the subject; the seed set and relation family of a task: the activation that applies them, for a step [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope); a mechanical projection: a separately selected checking contract |
 | P6 (independent) | a review or qualification of this member covers each law with positive and refusal cases, and no example, checker, model or carrier qualifies a law beyond the claim it evaluates | [§10](#10-conformance-obligations) | the ten obligations as the minimum coverage: this member |
 
 §11 records where each predecessor claim is carried and decides nothing.
@@ -455,11 +456,18 @@ closed (P3, P5; rc.2 #ac-001-closed-signature).
 
 ### AC-002 Scoped identity
 
-An identity resolves one member under one type, context, owner, scope and
-basis. Equal spelling, payload equality, position in any structure or
-carrier equality does not establish semantic identity. Scoped identity
-(authority, kind, value) is defined at FOUNDATIONS §2, Object; this law
-applies it to every identity in `I` (P3; rc.2 #ac-002-scoped-identity).
+This law applies the scoped identity of
+[IDENTITY §2](IDENTITY.md#scoped-identity), the identity of an Object of
+FOUNDATIONS §2, to every identity in `I`. Its coordinates map to that
+identity as follows: the owner is the identity's authority, the type is
+its kind, and the member it resolves is what its value denotes; context,
+scope and basis are further coordinates, which IDENTITY §2 permits and
+`a_c` requires. So an identity resolves one member under one type,
+context, owner, scope and basis. That equal representations do not
+establish equal meaning is FOUNDATIONS §2, Representation. The `a_c`
+binding beside it: equal spelling, payload equality, position in any
+structure and carrier equality do not establish semantic identity (P3;
+rc.2 #ac-002-scoped-identity).
 
 ### AC-003 Reference closure
 
@@ -482,18 +490,23 @@ unless the relation kind explicitly declares symmetry (P4a, P3; rc.2
 
 Objects, relations, constraints, latitude, residuals, traversals,
 transformations, projections and judgments retain their declared semantic,
-operation, evaluation and decision authority (the kinds of FOUNDATIONS §2,
-Authority kinds). Copying, interpreting, encoding, evaluating or
-transporting a record does not transfer authority (P6, P4b; rc.2
-#ac-005-authority-conservation).
+operation, evaluation and decision authority (the kinds of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)). What
+creates no authority is listed there; in `a_c` its instances are copying,
+interpreting, encoding, evaluating and transporting a record, none of
+which transfers authority (P6, P4b; rc.2 #ac-005-authority-conservation).
 
 ### AC-006 Basis coherence
 
-Every fundamental record, model and result binds an exact basis
-(FOUNDATIONS §2, Basis). Mixed bases require an explicitly owned
-composite-basis relation. Individually valid coordinates do not create a
-coherent composite basis by proximity (P6, P3; rc.2
-#ac-006-basis-coherence).
+Every result binds its exact basis under
+[RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates), which
+owns the exact-basis rule for results; what a basis is, including that
+mixed bases need an explicit composite relation, is FOUNDATIONS §2,
+Basis. This law binds the same rule to every fundamental record and model
+of `a_c`: each binds an exact basis, the composite-basis relation of a
+mixed basis is an explicitly owned record, and individually valid
+coordinates do not create a coherent composite basis by proximity (P6, P3;
+rc.2 #ac-006-basis-coherence).
 
 ### AC-007 Constraint and refusal
 
@@ -643,10 +656,13 @@ project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal
 `refusal` is that of the closure it contains or of the model it acts on:
 `gap` or `refusal(basis)` (AC-007). `Boundary_Z` records excluded,
 external, unresolved, translated and invalidation-sensitive seams. A
-projection is not a new semantic owner and cannot silently trim a required
-member to satisfy a carrier or capability budget. FOUNDATIONS §4 states
-the trimming rule for any reference; ACTIVATION §2 applies the projection
-to a step's context, and every projected frame of this corpus is one.
+projection is not a new semantic owner. It is a reference, so the rule
+that no reference trims a required member to fit a carrier or budget,
+stated at [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Reference versus
+body, applies to it: here the required members are those of the material
+closure of `Z`, and a capability budget is one such budget. ACTIVATION §2
+applies the projection to a step's context, and every projected frame of
+this corpus is one.
 
 ### AC-012 Overlay
 
@@ -1038,12 +1054,14 @@ as immateriality without a recorded basis and authority (P1, P4b, P6; rc.2
 
 ### AC-018 Structural and semantic separation
 
-Structural conformance of a model decides closed syntax, types,
-identities, references, bases and mechanically decidable predicates.
-Semantic fidelity decides the meaning and materiality of the
-interpretation. Structural success is evidence for semantic review, not a
-substitute for it. EVALUATION §2 applies this separation to every review;
-this law is its form over `a_c` models (P1, P6; rc.2
+The separation of structural conformance from semantic fidelity, and the
+rule that structural success is evidence for semantic review and no
+substitute for it, are [EVALUATION §2](EVALUATION.md#2-separation)'s,
+which owns them for every review. This law binds them to `a_c`: the
+structural conformance of a model covers its closed syntax, types,
+identities, references, bases and mechanically decidable predicates, and
+the semantic fidelity of an interpretation covers its meaning and
+materiality (P1, P6; rc.2
 #ac-018-structural-and-semantic-separation).
 
 ### AC-019 Valid model
@@ -1250,6 +1268,85 @@ this member by being useful to an application (P6, P2; rc.2
 #external-imports-and-specializations). PROFILES §1 states the same
 rule from the profile's side as the declared-binding rule.
 
+### Constraint surfaces
+
+A constraint surface states, for a declared subject and work boundary,
+the obligations and the permitted freedom of the work: its objects and
+their meanings, the predicates and dependencies that bear on it, the
+admissible operations, the required results, the authority, the evidence
+and the conditions still unresolved. It constrains the work without
+prescribing the worker's internal solution strategy beyond those
+obligations (P2, P6).
+
+An interpretation of a subject in `a_c` (§6) yields the constraint surface
+of a task by projection. The task's declared subject and work boundary
+are the seed set `Z`, with the dependency relation family `R` the task
+declares, and the surface is `project(M_subject, Z, R)` (AC-011) over the
+material closure of AC-010. Its parts come from the records of this
+member:
+
+| Part of the surface | Records and laws that supply it |
+|---|---|
+| objects and meanings | the semantic objects of `M_Z` (§3), with identity under AC-002 and provenance under AC-017 |
+| predicates and dependencies | the constraints (§3, AC-007) and typed relations (AC-004) in the closure; a premise shared by several constraints is one record, and the closure imposes no tree shape and no execution order |
+| admissible operations | the traversals and transformations in the closure (§5, AC-013), each with its preconditions and operation authority |
+| required results | each constraint's judgment kind and its outcomes, mapped to the core values of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) under AC-007 |
+| permitted freedom | the latitude records (AC-008); what no obligation fixes and a latitude admits is the worker's choice |
+| authority | the authority each record retains (AC-005); the surface grants none |
+| evidence | the judgments (AC-014) and the evidence, provenance and basis coordinates of the records (AC-006) |
+| unresolved conditions | the residuals in the closure (AC-009) and the seams recorded in `Boundary_Z` (AC-011) |
+
+Conditions on its use:
+
+1. **Standing kept.** Each element keeps the standing the interpretation
+   records for it: premise, derived consequence, policy choice,
+   observation or unresolved claim. A policy choice keeps its owner, and a
+   preference is never read as an obligation.
+2. **Unresolved blocks.** A residual, a `hold`, a `gap` or an external
+   predicate not yet established keeps its source and its required
+   acquisition, and it blocks every operation and result that depends on
+   it until its premise is established. A missing premise or an omitted
+   obligation never becomes permission or a satisfied result (AC-007,
+   AC-009).
+3. **Routes, not observations.** The surface carries the constraints and
+   the acquisition routes of the material inputs the task needs. It
+   supplies no observation, effect grant or task context: a step acquires
+   those from the workspace and its selected authoritative inputs, at the
+   acquisition step of
+   [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+   which is where a step uses a surface. The workspace stays the basis for
+   reacquisition.
+4. **Exact subject and basis.** The surface binds the exact subject the
+   interpretation represents and, as a separate coordinate, the calculus
+   basis and signature used to represent it. A projection from an
+   interpretation bound to other subject bytes, or whose basis is not
+   established, returns `refusal(basis)`, which is `invalid_basis` (AC-006,
+   AC-011).
+5. **A derived view.** The surface is a derived view of the owning prose,
+   not a second owner. A surface that changes the permitted or required
+   work is a fidelity defect (AC-017), repaired at the source or the
+   derivation that caused it. An approximate surface declares its
+   adequacy relation and its end-to-end bound.
+6. **Separate claims.** Structural validity of a surface is a structural
+   claim that a checker may decide (AC-019); its fidelity is a semantic
+   judgment ([EVALUATION §2](EVALUATION.md#2-separation), AC-018); its
+   sufficiency for a task is shown only by actual use
+   ([EVALUATION §7](EVALUATION.md#frame-qualification)). A mechanical
+   projection runs only under a separately selected checking contract.
+   None of these claims grants operation or acceptance authority.
+
+This section states how any interpretation yields a surface; under the
+Application boundary above it selects, constructs and accepts no
+interpretation. The downstream authority of a subject owns its
+interpretation and which interpretation is current. Ordinary entry
+selects the current exact interpretation with its limits, and an earlier
+interpretation is identified as historical. Purpose and material
+relation: an actor has to recover the constraints of one task within
+finite context and attention (P0, P2); the surface carries them from
+their owners with their dependencies, freedom and open conditions, so
+the actor neither loads the whole model nor loses an uncertainty (P4b,
+P5, P6). This is new law.
+
 ### Exclusions
 
 `a_c` is not (P2; rc.2 #exclusions):
@@ -1314,11 +1411,11 @@ is provenance only.
 | #residual | conserved; related to FOUNDATIONS §2 Residual | §3 Residual |
 | #fundamental-laws | not applicable: heading with no claim text (20 bytes); its children are disposed individually | §4 |
 | #ac-001-closed-signature | conserved | §4 AC-001 |
-| #ac-002-scoped-identity | conserved; scoped identity is defined at FOUNDATIONS §2 Object and P3, the law is here; "graph position" is generalised to position in any structure, which includes it | §4 AC-002 |
+| #ac-002-scoped-identity | conserved; the scoped-identity law is IDENTITY §2, and AC-002 applies it with a map of its coordinates; the representation rule is FOUNDATIONS §2, and the `a_c` binding beside it is here; "graph position" is generalised to position in any structure, which includes it | §4 AC-002 |
 | #ac-003-reference-closure | conserved | §4 AC-003 |
 | #ac-004-relation-typing | conserved | §4 AC-004 |
-| #ac-005-authority-conservation | conserved; authority kinds are defined at FOUNDATIONS §2, the law is here; P4b consumes it | §4 AC-005 |
-| #ac-006-basis-coherence | conserved; basis is defined at FOUNDATIONS §2, the law is here | §4 AC-006 |
+| #ac-005-authority-conservation | conserved; authority kinds and what creates no authority are FOUNDATIONS §2 Authority kinds, with the five `a_c` instances here; P4b consumes it | §4 AC-005 |
+| #ac-006-basis-coherence | conserved; basis is defined at FOUNDATIONS §2, the exact-basis rule for results is RF-005, and the binding to records and models with the composite-basis rule is here | §4 AC-006 |
 | #ac-007-constraint-and-refusal | conserved; stated as a law over constraints using the core result algebra of FOUNDATIONS §4 Results, where its no-coercion rule is restated, consistent with the boundary among out_of_frame, indeterminate and an evaluation not performed; the declared algebra is tightened to the core or a declared refinement mapping each value once; new: its outcomes mapped value by value for a named predicate (holds to satisfied, failed to falsified, indeterminate to indeterminate, out of scope to out_of_frame, invalid basis to invalid_basis, a missing result to no closed result), and the operation outcomes of this member mapped by cause (declared result to satisfied, `hold` to indeterminate, `gap` and `refusal(basis)` to invalid_basis, `refusal(constraint)` to falsified), a basis mismatch inside a model or a record, a relation's qualifier record and a wrong-basis reference included, being mixed bases, a condition of the basis, so that a refusal naming only it is `refusal(basis)`; new, an added choice of this member where rc.2 states no order between the causes: a refusal that names a demonstrated violation by what is under judgment is `refusal(constraint)` whatever condition of the basis it also names, the basis condition reported beside it as its own invalid_basis result and a violation inside an input acted on as the basis being a condition of the basis, so that no known failure is hidden behind a basis condition; new: `gap` is limited to a resolution that its declared relation has not yet decided, and a reference evaluated to no target is dangling | §4 AC-007; core at FOUNDATIONS §4 Results |
 | #ac-008-explicit-latitude | conserved; the generic form over any two values is FOUNDATIONS §4 | §4 AC-008 |
 | #ac-009-residual-conservation | conserved; P4b consumes it | §4 AC-009 |
@@ -1332,7 +1429,7 @@ is provenance only.
 | #ac-016-typed-composition | conserved; P4a consumes it | §5 AC-016 |
 | #interpretation-and-models | conserved; the interpretation contract is related to FOUNDATIONS §2 Interpretation; new: the stops take their core values under AC-007 | §6 |
 | #ac-017-interpretation-fidelity | conserved; P1 consumes it | §6 AC-017 |
-| #ac-018-structural-and-semantic-separation | conserved; the generic form over every review is EVALUATION §2 | §6 AC-018 |
+| #ac-018-structural-and-semantic-separation | conserved; EVALUATION §2 owns the separation for every review, and AC-018 binds it to `a_c` models | §6 AC-018 |
 | #ac-019-valid-model | conserved; the checker rule's generic form is EVALUATION §2 | §6 AC-019 |
 | #subject-and-carrier-boundaries | conserved; new: the decisions of the acceptance and carrier-admission judgments mapped to the core for their own predicates, `refuse` and a hold under AC-007 | §7 |
 | #ac-020-layer-and-release-separation | conserved; applied to release lineage by SPEC_METHOD §6 | §7 AC-020 |
@@ -1341,3 +1438,7 @@ is provenance only.
 | #external-imports-and-specializations | conserved | §9 External imports and specialisations |
 | #exclusions | conserved; "graph storage topology" and "world-model ontology" are generalised to any storage topology and any domain ontology, which include them | §9 Exclusions |
 | #conformance-obligations | conserved | §10 |
+
+New law in §9, with no rc.2 clause: Constraint surfaces, which states how
+an interpretation yields the constraint surface of a task; it states its
+purpose and material relation where it is written.

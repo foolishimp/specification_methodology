@@ -1037,13 +1037,16 @@ surface that states (P6, P5):
 - the owner, source truth and authority boundary for the lifecycle
   decisions.
 
-Each lifecycle phase is one of: answered by the active design,
+Each lifecycle phase takes one of the three answers that
+[SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency)
+owns, applied here to design evidence: answered by the active design,
 requirement, release, deployment or telemetry surface; declared not
 applicable with a reason; or recorded as a named `Gap:` or `Unanswered:`
-item with an owning follow-up. A phase list without answers,
-not-applicable reasons or named gaps is not design-method evidence (P5,
-P6). The three are states of the design evidence for a phase, not result
-values; a named gap is a residual
+item, which in design evidence also names its owning follow-up. A phase
+list without answers, not-applicable reasons or named gaps is not
+design-method evidence (P5, P6). The three are declared states of the
+design evidence for a phase under that section, not result values; a
+named gap is a residual
 ([FOUNDATIONS §2](FOUNDATIONS.md#2-ontology)) that remains until its
 owning follow-up disposes it (P4b, P5).
 
@@ -1093,7 +1096,7 @@ force.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #canonical-compression | conserved in part here: the testing-frame evidence topology; the rest of the row is EXECUTIVE_BASELINE §1 | §7 The set |
+| #canonical-compression | conserved; carried in two loci: the testing-frame evidence topology here, the rest of the row at EXECUTIVE_BASELINE §1 | §7 The set; EXECUTIVE_BASELINE §1 |
 | #testing-frame | conserved | §7 Terms |
 | #authoritative-product-path | conserved | §7 Terms |
 | #material-combinatorial-complexity | conserved | §7 Terms |
@@ -1117,7 +1120,7 @@ force.
 |---|---|---|
 | #6a-design-to-module-to-implementation-unit-tests-evidence-route | conserved in full; both chains, derivation versus feedback, co-evolution and design-gated cases, the unchanged-refactor rule, the agentic handoff without a second protocol, the five completeness requirements, re-expression against module ownership, the module boundary as reasoning surface, both seven-step chains, the too-weak proof surface | §14 |
 | #6b-module-derived-unit-test-rule | conserved in full; the authority-source split, module-owned proof lanes, the five "should be traceable" sources, the five forbidden primary sources, the required question, helper tests permitted but not canonical, the three-part canonical rule with "may exist", not closure-ready without the lane | §15 |
-| #6c-module-lifecycle-confirmation-rule | conserved in full; the lifecycle of every designed surface, confirmation before closure, the chain consumed not redefined, not a release plan, the nine stated items, the three phase states, the bare list is not evidence, implementation proves only within its authority, the governed-gap rule and the five forbidden closure bases; the reading of the three phase states as states of the evidence, not result values, with a named gap as a residual, is new | §16 |
+| #6c-module-lifecycle-confirmation-rule | conserved in full; the lifecycle of every designed surface, confirmation before closure, the chain consumed not redefined, not a release plan, the nine stated items, the three phase states, the bare list is not evidence, implementation proves only within its authority, the governed-gap rule and the five forbidden closure bases; the three phase states are applied as the three answers that SPEC_METHOD §2 Operational lifecycle sufficiency owns, keeping here the owning follow-up a named gap names in design evidence; the reading of the three phase states as states of the evidence, not result values, with a named gap as a residual, is new | §16 |
 
 New in this member, with no rc.2 row: the family table at §1 Foundation
 to law, in the format of

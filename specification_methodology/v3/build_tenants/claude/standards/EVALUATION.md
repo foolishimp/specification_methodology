@@ -70,16 +70,18 @@ by name. The standing of the consequences below is stated in
 | P3 (independent), P6 (independent); instance premise b | An assurance surface supporting promotion or closure binds the exact claimed subject and its authoritative composition relation. Evidence over one file or carrier proves only that boundary and cannot establish a multi-file or carrier-set claim; cross-carrier satisfaction and conflict are decided at the declared composite boundary | [§1](#1-claims), Boundary congruence | each claim's composite boundary: the authority that declares the claimed subject and its composition relation |
 | P6 (independent); instance premise b | A claim of mechanical enforcement names an executable or reproducible predicate and a witness reachable through the declared ordinary assurance path. A planned or specification-only harness is planned evidence, not observed verification, and until both are observed the claim stays open or is downgraded to the planned property | [§1](#1-claims), Boundary congruence, the sentences on mechanical enforcement | the ordinary assurance path: the project's assurance design under [ASSURANCE](ASSURANCE.md#1-verification-layers) |
 | P6 (independent); instance premise b | A claim's quantifier, population and scope cannot exceed its evaluated evidence. Generalising a local defect or observation needs a declared inference relation, the comparable population, explicit counterexample treatment and governing evidence; later counterevidence invalidates every dependent verdict until the claim-evidence relation is superseded, withdrawn or requalified. The rules of §1 are false under the falsifiers §1 lists | [§1](#1-claims), the quantifier rule and its falsifiers | the inference relation and the comparable population of a generalisation: the author of the claim, who declares them with it |
-| P6 (independent), P1 (independent) | The semantic basis, the evidence basis and the state projection stay distinct, as do semantic law, evidence, the evaluator's application and the disposition, and the record keeps them distinguishable where one actor performs several. Evidence change may invalidate a verdict without changing law; projection change may invalidate a view without changing semantic truth; semantic change requires lawful re-entry and invalidates affected downstream acceptance. A broad digest may invalidate a review conservatively and does not prove that every semantic relation changed | [§2](#2-separation), first paragraph | the re-entry a semantic change takes: [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11) |
+| P6 (independent), P1 (independent) | P1 keeps a representation apart from its meaning, and P6 makes a verdict a claim on evidence that a separate decision authority disposes. So the semantic basis, the evidence basis and the state projection stay distinct, as do semantic law, evidence, the evaluator's application and the disposition, and the record keeps them distinguishable where one actor performs several. It follows that an evidence change can invalidate a verdict without any change of law, a projection change can invalidate a view without changing semantic truth, and a semantic change invalidates affected downstream acceptance; a changed broad digest shows a changed representation, not that every semantic relation changed | [§2](#2-separation), first two paragraphs | when an evidence change invalidates a verdict, with mandatory force where it does: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) (family F4); when a derived view is stale: [ACTIVATION §2](ACTIVATION.md#staleness-of-derived-surfaces); the re-entry a semantic change takes: [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11); invalidating a review conservatively on a broad digest change: permitted by this section, required nowhere; the frame and a_c bindings of these separations: RF-007 and AC-018 |
 | P1 (independent), P6 (independent), P3 (independent) | Structural conformance decides closed syntax, types, identities, references, bases and mechanically decidable predicates; semantic fidelity decides meaning and materiality. A checker decides the structural subset and claims a semantic or authority subset only under an exact lawful decision contract. A valid parse, a valid map, a green test and a historical judgment each establish exactly their own claim, and evidence bound to another basis is excluded, not admitted with a narrower scope | [§2](#2-separation), second paragraph | each decision contract under which a checker decides a semantic subset: the model that supplies it ([AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models)) |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise c | A constructor's self-review is construction output, not assessment. Where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary | [§3](#3-independent-assessment), first paragraph | which promotions need independent assessment: the governing basis of each promotion |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise c | A constructor's self-review is construction output, not assessment. Where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary | [§3](#3-independent-assessment), first paragraph | the boundaries at which this method requires independent assessment: the Spec Method policy at [TICKETS, UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007); further boundaries: the governing basis of each promotion |
 | P6 (independent), P3 (independent); instance premise c | Assessment binds a subject frozen by identity before material reference exposure and read at a named immutable identity, never a working tree; the assessor makes no repair and does not assess its own authorship. Shared mechanical evidence may be reused; the constructor's judgment may not. A revision after exposure is a declared intervention or a new qualification subject, and cannot make the original frozen construction pass retroactively | [§3](#3-independent-assessment), Protocol | recording the assessor's expectations from the governing source before it opens the candidate: a policy choice of this section; actor type and count, review rounds, engine, prompt and orchestration: the governing authority, through the configuration of [ACTIVATION §1](ACTIVATION.md#configuration) |
 | P6 (independent); instance premise c | Independence rests on authorship and the evidence conditions, not on a new context, and the assessor may read the constructor's governing sources. An author that opens a fresh context to review its own candidate is still its author; its review stays self-review and cannot be relabelled as independent assessment. Independence across actor families is declared, not assumed | [§3](#3-independent-assessment), the last two paragraphs | whether two activations of one model family are independent for a semantic judgment: the governing basis of the claim; the default where it is silent, that they are not: this section |
+| P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](#3-independent-assessment), the author-identity paragraph | none |
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise) | A review result carries, for each predicate it evaluated, the exact subject and basis, the evidence consulted, the findings ranked by consequence with each finding's evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions. A recommended disposition is evidence only and never a disposition, and the review applies none; a finding without evidence a consumer can chase is commentary | [§4](#4-review-results), first paragraph | none |
 | P6 (independent), P2 (independent), P1 (independent) | Severity, the assessor's grade of consequence, is evaluation evidence. Priority, the effect on the current promotion boundary and the disposition are the decision owner's and stay distinct values even where a policy maps one to another; a recommended disposition is never adopted mechanically. The decision owner consumes no `indeterminate` or `out_of_frame` result as satisfaction or as a settled finding, and returns an `invalid_basis` result through the declared basis re-entry relation without consuming it. The payload classes `complete`, `indeterminate` and `not_applicable` classify the triage only and are not results, dispositions, priorities or lifecycle states | [Result and triage projection](#result-and-triage-projection), its first two paragraphs and the consumption column of its table | the triage fields: the profile that adopts the triage, such as [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); the scales, and the priority and boundary policy: the adopting Product |
 | P6 (independent), P2 (independent) | An observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. The assessor returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the last two paragraphs | none |
 | P6 (independent), P2 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise d | Acceptance is the decision owner's disposition over an unchanged subject; recording it cannot widen it, and it exhausts only the instance and interval it names. A work item closes by the condition it stated, and a reviewer result is an input to closure, never the closure; green labels, document counts, review counts and historical outcomes are not acceptance | [§5](#5-acceptance), first paragraph | the acceptance boundary, its interval and its decision owner: the governing basis that names them; the closing condition of a work item: that work item ([TICKETS](TICKETS.md#7-authority-judgment-closure-and-state)) |
-| P6 (independent), P3 (independent); instance premise d | A human decision may be exercised directly or through an explicitly admitted bounded proxy whose grant names its scope and exclusions; a proxy cannot change Product meaning, requirements, governing authority or accepted design, and such a change re-enters at its owning relation | [§5](#5-acceptance), the proxy sentences | whether a proxy is admitted, with its scope and exclusions: the human authority that grants it, under [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004) |
+| P6 (independent), P3 (independent); instance premise d | A human decision may be exercised directly or through an explicitly admitted bounded proxy; applied to acceptance, a proxy cannot change Product meaning, requirements, governing authority or accepted design, and such a change re-enters at its owning relation | [§5](#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it |
+| P6 (independent); instance premise d | By P6 a verdict is bounded by the exact claim it evaluated, so a finding can block current promotion only through a condition that bears on that claim's acceptance at the current boundary, and an observation outside the claim blocks nothing by itself. By instance premise d blocking is the decision owner's act, so no block follows mechanically from a finding or its severity; a non-waivable hard stop is by definition one that no decision waives, so a valid falsification of a mandatory claim under it blocks whatever the priority or cutoff | [§5, When a finding blocks promotion](#when-a-finding-blocks-promotion) | the four blocking conditions (falsifies the claim; competing or ambiguous authority on its acceptance path; violated active authority, safety or retained accepted behaviour; a durable architectural decision foreclosing an admitted Product outcome): this section, conserving UP-007; the decision cutoff and the severity and priority scales: the adopting Product; the hard stops and which are non-waivable: [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) and the owner of each stop; domain triggers, such as a design check's: the profile or work carrier that refers to §5 |
 | P6 (independent), P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance premise a | Where the subject is a successor, its acceptance evidence includes the successor disposition record. A claim whose disposition is unresolved cannot be qualified and so cannot be accepted; an intentionally removed disposition is a decision of the current Product authority, and its record is that decision | [§5](#5-acceptance), second paragraph | the disposition values and how the record is evaluated: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15); each removal: the current Product authority |
 
 The core result a review returns for each evaluated predicate, the rule
@@ -98,22 +100,37 @@ evaluate it; and the state projection, a current view derived from admitted
 semantic and evidence bases. Semantic law defines what an evaluation means;
 evidence supplies observations; the evaluator applies the declared
 relation; decision authority disposes. One actor may lawfully perform
-several; the record keeps them distinguishable. Evidence change may
-invalidate a verdict without changing law; projection change may invalidate
-a view without changing semantic truth; semantic change requires lawful
-re-entry and invalidates affected downstream acceptance. A broad digest may
-conservatively invalidate a review; it does not prove that every semantic
-relation changed (conserves
+several; the record keeps them distinguishable. This section owns these
+separations. [RF-007](REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation)
+binds them to a frame declaration and
+[AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)
+to an a_c model; each adds only its domain binding.
+
+An evidence change can invalidate a verdict without any change of law.
+Whether a given change does so is decided by the reuse rule of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), and where it
+does, the invalidation is mandatory and takes effect before reliance. A
+projection change can invalidate a view without changing semantic truth;
+when a derived view is stale is decided by
+[ACTIVATION §2, Staleness of derived surfaces](ACTIVATION.md#staleness-of-derived-surfaces).
+A semantic change requires lawful re-entry and invalidates affected
+downstream acceptance. A broad digest may conservatively
+invalidate a review; it does not prove that every semantic relation
+changed (conserves
 [UP-008](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#semantic-evidence-and-projection-separation-stdo-up-008),
 [RF-007](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)).
 
 Structural conformance decides closed syntax, types, identities, references,
 bases and mechanically decidable predicates. Semantic fidelity decides
-meaning and materiality. A checker decides the structural subset; it claims a
+meaning and materiality. Structural success is evidence for semantic
+review, not a substitute for it. A checker decides the structural subset; it claims a
 semantic or authority subset only under an exact lawful decision contract
-supplied by the model
-([AC-018](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation),
-[AC-019](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-019-valid-model)).
+supplied by the model. For a_c models,
+[AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)
+and [AC-019](AXIOMATIC_CALCULUS.md#ac-019-valid-model) bind this rule to
+the model's records and validity conditions (P1, P6; provenance rc.2
+AXIOMATIC_CALCULUS #ac-018-structural-and-semantic-separation,
+#ac-019-valid-model).
 A valid parse, a valid map, a green test and a historical judgment each
 establish exactly their own claim. Evidence bound to a basis other than
 the evaluated one is excluded by basis; it is not admitted with a narrower
@@ -129,6 +146,9 @@ constructor's summary (P6, and P0 with its premise that a step's output is
 a candidate until evaluated; instance premise (c) of §1 Foundation to law;
 conserves
 [UP-007](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007)).
+This section decides what counts as independent assessment. Which
+boundaries require it is a policy choice, whose owner the family table
+of §1 names; a governing basis may add boundaries.
 
 Protocol: the subject is frozen by identity before material reference
 exposure; the assessor records its expectations from the governing source
@@ -141,6 +161,15 @@ is either a method constituent with its own qualification boundary or a new
 qualification subject, and it cannot retroactively make the original
 frozen construction pass. This law prescribes no actor type or count,
 review-round count, engine, prompt or orchestration (UP-022).
+
+Author identity is the party responsible for the content of a realised
+subject. It is distinct from actor identity, whoever performs one
+operation, which is an identity and not an authority
+([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)).
+Authorship is one of the conditions on
+which the independence of an assessment rests; the evidence conditions are
+the other (P6, P3; provenance: the definition moves here from the build
+binding terms of SPEC_METHOD §11, which refers to it).
 
 Independence rests on authorship and on the evidence conditions above, not
 on a new context. The assessor may read the same governing sources as the
@@ -182,7 +211,9 @@ assessor's evidence-bound assessment of each finding against the exact
 evaluated claim and basis. Severity, the assessor's grade of consequence,
 is evaluation evidence. Priority, the effect on the current promotion
 boundary and the disposition are the decision owner's (ACTIVATION §1,
-Roles and delegation) and stay distinct values even where a
+Roles and delegation; when a finding can block is
+[§5, When a finding blocks promotion](#when-a-finding-blocks-promotion))
+and stay distinct values even where a
 Product-defined policy maps one to another. A recommended disposition
 is evidence for the decision owner: it is not a disposition, a
 priority or a boundary effect, and it is never adopted mechanically (P6,
@@ -227,11 +258,15 @@ A work item closes by the condition it stated, not by a reviewer's approval;
 a reviewer result is an input to closure, never the closure. Green labels,
 document counts, review counts and historical outcomes are not acceptance.
 A human decision may be exercised directly or through an explicitly admitted
-bounded proxy whose grant names its scope and exclusions
-([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); provenance rc.2 IDENTITY_METHOD #authority-identity-and-conservation-stdo-up-004);
-a proxy cannot change Product meaning, requirements, governing authority
-or accepted design, and such a change re-enters at its owning relation
-([UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
+bounded proxy. What a proxy grant names is
+[IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)'s,
+and what a proxy can never decide is
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)'. Applied
+to acceptance: a proxy cannot change Product meaning, requirements,
+governing authority or accepted design, and such a change re-enters at its
+owning relation (provenance rc.2 IDENTITY_METHOD
+#authority-identity-and-conservation-stdo-up-004 and
+[UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)).
 
 Where the subject is a successor, its acceptance evidence includes the
 successor disposition record of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
@@ -242,6 +277,49 @@ unresolved cannot be qualified and so cannot be accepted; how the record
 is evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).
 An intentionally removed disposition is a decision of the current Product
 authority, and its record is that decision (P6, P3, P4b).
+
+### When a finding blocks promotion
+
+A finding is a defect a review reports against the exact claim it
+evaluated (§4). Blocking current promotion is the decision owner's act
+over that finding (§4, Result and triage projection). This section is the
+one statement of when a finding can block; profiles and work carriers
+refer to it and add only their domain triggers.
+
+A review verdict is bounded by the exact reviewed claim and its applicable
+hard stops ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)). A
+finding can block current promotion only when it:
+
+1. falsifies that claim;
+2. exposes competing or ambiguous authority on the claim's acceptance
+   path;
+3. violates applicable active authority, safety or retained accepted
+   behaviour; or
+4. establishes a material architectural decision with durable
+   consequences that forecloses an admitted Product outcome.
+
+These conditions are necessary. Which of them suffice is decided as
+follows:
+
+| Consumed condition | Effect on the current promotion boundary |
+|---|---|
+| a valid falsification of a mandatory claim governed by a non-waivable hard stop | the boundary blocks, whatever the assigned priority or the decision cutoff |
+| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the current mandate, the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |
+| a finding meeting none of the four conditions | it does not block |
+| an observation outside the exact reviewed claim | repricing or re-entry input, returned as §4 states: by itself it does not widen the reviewed subject, block its bounded claim, or require a new ticket, artifact, review round or implementation increment |
+
+Severity selects neither priority nor a block mechanically, and priority
+neither erases severity nor waives a hard stop. The decision cutoff is the
+adopting Product's policy; this member sets no cutoff (P6, P2; conserves
+[UP-007](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007)'s
+blocking conditions and the
+[Executive promotion constraint projection](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection)
+with the Executive written as the decision owner). Purpose and material
+relation: the method stated these conditions in a work carrier, a design
+profile and the Executive profile, so an actor reconciled three texts; one
+statement gives every review consumer the same answer, and the conditions
+keep a bounded review from blocking on observations outside its claim
+while a non-waivable hard stop still blocks.
 
 ## 6. Conformance of realisations
 
@@ -275,8 +353,14 @@ map's preservation of identities and composition is a further claim
 distinct from every rung.
 For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H, conformance to Σ, semantic
 equivalence and computational equivalence remain different claims.
-Categorical equivalence additionally requires the appropriate quasi-inverse
-and natural isomorphisms on a stated domain; an analogy or matching result
+A claim of categorical equivalence meets each item of the Formal fragment
+that applies to it: its categories with their objects, arrows, arrow
+equality, identities and composition; its maps defined on objects and
+arrows and called functors only once preservation of identities and
+composition is proved; its representation in a_c; and its evidence class.
+This rung adds one requirement of its own to those items: a quasi-inverse
+functor, and natural isomorphisms between each composite of the pair and
+the identity functor, on a stated domain. An analogy or matching result
 is insufficient. Evidence for one claim is not reported as a result for
 another (§1). The ladder is new law: it keeps a matching output, an analogy
 or a passing conformance check from being read as equivalence or as
@@ -340,16 +424,16 @@ below is stated in
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
 | P1 (independent), P6 (independent); instance premise a | A realisation conforms to a specification when its interpreted behaviour satisfies it under a declared interpretation contract and an independent judgment. Several realisations may conform to one specification; sufficiency does not require unique derivation or equality with an incumbent. A specification that admits materially different behaviours either declares the latitude or is repaired before a decision-complete design is claimed | [§6](#6-conformance-of-realisations), first paragraph | the interpretation contract and any declared latitude: the owner of the specification ([FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Latitude) |
-| P1 (independent), P6 (independent) | Conformance, semantic equivalence, computational equivalence and categorical equivalence are separate claims with separate evidence, and no rung implies another. Conformance establishes neither identical behaviour outside the specification nor equal cost; categorical equivalence additionally requires a quasi-inverse and natural isomorphisms on a stated domain, and a map's preservation of identities and composition is a further claim. Evidence for one claim is never reported as a result for another | [§6](#6-conformance-of-realisations), Equivalence ladder | the four rungs and their definitions: this section; the stated domain, workloads and architecture H of an equivalence claim: the author of the claim; what a category or functor claim must show: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (family F3) |
+| P1 (independent), P6 (independent) | Conformance, semantic equivalence, computational equivalence and categorical equivalence are separate claims with separate evidence, and no rung implies another. Conformance establishes neither identical behaviour outside the specification nor equal cost; a categorical equivalence claim meets the items of the Formal fragment that apply to it and adds a quasi-inverse functor and natural isomorphisms on a stated domain, and a map's preservation of identities and composition is a further claim. Evidence for one claim is never reported as a result for another | [§6](#6-conformance-of-realisations), Equivalence ladder | the four rungs and their definitions: this section; the stated domain, workloads and architecture H of an equivalence claim: the author of the claim; what a category or functor claim must show: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (family F3) |
 | P2 (independent), P1 (independent), P0 (recovered); instance premises a, b | A layered specification is sufficient when a competent actor can derive a conformant next layer from each layer, not necessarily uniquely. A failure to derive is a defect of the upper layer, and a boundary that can be crossed only by hiding a major unresolved ambiguity is not sufficient. Reconstruction of an accepted relation may reuse its exact current basis and sufficient evidence after checking applicability and invalidation; reconstructability requires a correct route, not its execution at every use, grants no restart authority and does not excuse stale success; the claim determines the reconstruction span, and new material counterexamples still challenge the relation | [§6](#6-conformance-of-realisations), Layered sufficiency | the layers of the method's own chain and the diagnosis per layer: [SPEC_METHOD §2](SPEC_METHOD.md#reconstruction-litmus) (family F10) |
 | P6 (independent), P1 (independent); instance premise b | After freeze, the evaluator compares the frozen result with the mandatory governing semantic basis. A separately held expected or reference outcome is optional and non-authoritative evidence; a lawful alternative construction the basis permits passes. Subjective similarity is insufficient, and byte or structural identity, unique derivation, determinism and incumbent equality are not generic comparison criteria. A construction outside the declared competence or configuration envelope cannot indict generic method sufficiency | [§6](#6-conformance-of-realisations), Comparison | whether equivalence to a reference outcome is required: the governing basis |
 | P6 (independent), P2 (independent); instance premises b, c | A candidate frame is qualified in proportion to its claims, by at least the decision, reconstruction, sensitivity, irrelevance, basis, authority, counterexample, capability and result-consumption tests. Qualification binds the exact frame revision, actor envelope, evaluation family, basis class and evidence conditions evaluated, and does not generalise to an unevaluated population by naming the frame generically | [Frame qualification](#frame-qualification), the tests and the paragraph after them | the nine minimum tests: this section; the representative cases for each claim: the qualification that evaluates it |
-| P0 (recovered), P6 (independent); instance premise c | Fit and adequate attention are evaluated separately. Fit, for the context dimension, is the measured size of the selected representation against the declared capacity; adequate attention is established only by actual-use evidence, judged against expectations recorded from the governing sources before the results are opened. A size measurement or any byte or token threshold establishes fit and nothing about attention; actual-use evidence binds the frame revision, actor class, tasks and conditions evaluated and establishes no universal attention score | [Frame qualification](#frame-qualification), Adequate attention | the tasks and conditions evaluated: the qualification; the size measurement: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3 (family F1); time, spend and other resource limits: the selected execution binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)) |
+| P0 (recovered), P6 (independent); instance premise c | Fit and adequate attention are evaluated separately. Fit, for the context dimension, is the measured size of the selected representation against the declared capacity; adequate attention is established only by actual-use evidence, judged against expectations recorded from the governing sources before the results are opened. A size measurement or any byte or token threshold establishes fit and nothing about attention; actual-use evidence binds the frame revision, actor class, tasks and conditions evaluated and establishes no universal attention score | [Frame qualification](#frame-qualification), Adequate attention | the tasks and conditions evaluated: the qualification; the size measurement: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3 (family F1); time, spend and other resource limits: the selected execution binding, under [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) (family F5) |
 | P6 (independent), P0 (recovered, with its actor-change premise), P1 (independent); instance premises b, c | The method is qualified the way it qualifies anything else, with no second process. A fresh competent constructor inside a declared envelope uses only the declared ordinary method and authority surfaces and declared trial subjects; an independently authorised evaluator has a declared governing basis and comparison predicate; expected or reference outcomes, source exemplars, incumbent realisations, author memory and ad hoc rescue are withheld from the constructor until its result is frozen wherever earlier exposure would compromise reconstructive independence; comparison follows §6. The qualification law is false under the falsifiers §7 lists | [Method self-qualification](#method-self-qualification), first paragraph and the falsifiers | the constructor, freeze, assessor, acceptance and release protocols: the governing authority |
 | P6 (independent); instance premise c | The qualification population is every function and failure relation the method claims, each with its representative observations. One valid frame-set declaration and coverage result establishes only `declare` and the evaluated `audit_coverage`, and the other relations by no implication; each relation is exercised through positive, boundary and falsifying cases; every verdict states exactly what it evaluated, and an unevaluated function or branch stays open rather than inheriting a whole-method verdict. Prior exemplars are optional comparison evidence after freeze | [Method self-qualification](#method-self-qualification), the population table and the paragraph after it | the relations: [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) (family F1); the representative observations listed: this section; staging: the governing authority |
 | P6 (independent), P1 (independent); instance premise b | Changed derived guidance, such as a compression, a frame packet or a skill, is qualified against source-derived expected behaviour, including the affected permissions, exclusions and invalidators; a native use claim is shown by an ordinary actor applying it through its declared entry. Digest integrity and index generation establish identity and structure, not semantic fidelity or usability, and mechanical and operational claims require their own executable observations | [Method self-qualification](#method-self-qualification), Derived guidance | the applicable workload and operational assumptions: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) (family F5) |
 | P0 (recovered, with its actor-change premise), P6 (independent); instance premise b | For a selected activation, a fresh actor given only the published documents recovers the governing relations with fidelity judged independently, at a measured reconstruction cost. The fidelity judgment is actual-use evidence, and the size measured is not evidence of it. A document set that requires private validator knowledge, whole-corpus loading or a prior actor's memory fails, whatever its content | [Method self-qualification](#method-self-qualification), Recoverability benchmark | the rc.2 corpus as baseline, and the matrix criteria the benchmark reports for: this section; the activation measured: the qualification that runs it; time and spend measurement: the selected execution binding |
-| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | A conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject returns `out_of_frame`, which is recorded, not hidden | [CONFORMANCE](CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history |
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | A conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history |
 | P0 (recovered), P6 (independent); instance premise c | A trial of bounded construction declares its per-actor context cap and total-work budget before each run, counts the context transferred across every delegated actor, and keeps its acceptance criteria independent of the constructing actor | [CONFORMANCE §2](CONFORMANCE.md#2-trials-from-the-comparative-baseline), the paragraph after the trial table, outside this member | a required basis larger than the cap, and repetition of probabilistic trials with varied task order: CONFORMANCE §2; each cap and budget: the trial's declaration |
 
 §8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
@@ -409,8 +493,8 @@ is not thereby adequately attended. Actual-use evidence binds the frame
 revision, actor class, tasks and conditions evaluated, like the
 qualification above, and establishes no universal attention score (§1,
 the quantifier rule). Time, spend and other resource limits are those of
-the selected execution binding
-([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)), not of this
+the selected execution binding, under the resource-limit law of
+[ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality), not of this
 test. The separation is new law: finite attention makes fit necessary
 (RF-002), and only use shows that a frame that fits is applied, so a frame
 is never qualified for attention because it fits (P0, P6).
@@ -522,12 +606,12 @@ detected and the cost.
 |---|---|
 | UP-001 | conserved; §1; row in the table below |
 | UP-022 | conserved in full; boundary congruence, mechanical enforcement and the quantifier rule in §1, freeze and post-exposure revision in §3, the comparison rule in §6, whose terms the equivalence ladder defines, the qualification protocol, derived guidance and the falsifiers in §7; row in the table below |
-| UP-008, RF-007 | conserved; §2; UP-008's row in the table below |
-| AC-018, AC-019 | conserved; restated in [AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models), which disposes their rows; §2 states their generic form |
-| UP-007 | conserved; §3; the fresh-context paragraph applies its rule that self-review cannot be relabelled as independent |
+| UP-008, RF-007 | conserved; §2, which owns the separations; RF-007 binds them to a frame declaration at [REFERENCE_FRAME RF-007](REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation); when an evidence change invalidates a verdict is ACTIVATION §7's; UP-008's row in the table below |
+| AC-018, AC-019 | conserved; §2 owns the generic form, and [AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) binds it to a_c models and disposes their rows |
+| UP-007 | conserved; what counts as independent in §3, where the fresh-context paragraph applies its rule that self-review cannot be relabelled as independent; its blocking conditions in §5 When a finding blocks promotion; its trigger boundaries and traceability rule at [TICKETS](TICKETS.md#execution-and-verification-authority-separation-up-007) |
 | RF-013 | conserved; §7; the benchmark is new, and its measurements refer to ACTIVATION §2 for size and to the execution binding for time and spend |
 | RF frame qualification, method self-qualification | conserved; §7; rows in the table below; the adequate-attention paragraph is new |
-| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3, UP-004 in full in IDENTITY §6 and UP-020's delegation in ACTIVATION §1 |
+| UP-013 acceptance interval, AC-014, UP-004 proxy grant, UP-020 proxy limits | conserved; §5; UP-013 is restated in SPEC_METHOD §3, UP-004 in full in IDENTITY §6, the proxy limit at FOUNDATIONS §2 Authority kinds, which §5 applies to acceptance, and UP-020's delegation in ACTIVATION §1 |
 | UP-015 as acceptance evidence | conserved; §5 states what acceptance requires of the successor disposition record; the law is restated in full in RELEASE §9, which owns the disposition values; its application to this corpus is the tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md), which holds every predecessor row's disposition and locus |
 | Reconstruction Litmus | conserved; the generic layered-sufficiency law in §6, its application to the chain in SPEC_METHOD §2; row in the table below |
 | TICKET judgment continuity | conserved; restated in [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity), its generic reuse law in ACTIVATION §7 |
@@ -545,6 +629,10 @@ acceptance, conformance and qualification follow from the commitments and
 which are added choices with their owners, so no added choice is presented
 as derived (P6, P2). The rule that a planned evaluation not performed has
 no result is owned by FOUNDATIONS §4 Results; §4 applies it to reviews.
+The definition of author identity in §3 was stated in SPEC_METHOD §11 and
+is owned here, because independence, which it conditions, is this
+member's. §5 When a finding blocks promotion owns the rule on blocking
+that TICKETS, DESIGN_MODULE and EXECUTIVE_BASELINE consume.
 
 RF rows received by this member (anchors into rc.2
 REFERENCE_FRAME_METHOD.md):
@@ -568,4 +656,5 @@ STDO_REFERENCE_FRAME_BASELINE.md):
 
 | Anchor | Disposition | Locus |
 |---|---|---|
+| #executive-promotion-constraint-projection | conserved; the four consumed conditions as the table of §5 When a finding blocks promotion, with the Executive written as the decision owner; the Executive's application stays in EXECUTIVE_BASELINE | §5 When a finding blocks promotion |
 | #reviewer-result-and-triage-projection | conserved; all five result rows and the adjacent-observation rule; "Reviewer" written as assessor and "Executive" as decision owner; the sentence on the recommended disposition reconciles §4's "recommends a disposition" with the predecessor's "no priority or disposition" | §4 Result and triage projection |

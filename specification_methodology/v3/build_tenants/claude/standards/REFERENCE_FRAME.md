@@ -283,20 +283,22 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 
 A frame carries and applies admitted authority. It does not mint, widen,
 transfer or reconstruct semantic, evaluation, operation or decision
-authority from actor identity, available capability, evidence shape,
-implementation reachability or frame selection (P6; rc.2
-#rf-006-authority-conservation).
+authority from anything that creates none. That list is
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)'; its
+instances in a frame include actor identity, available capability,
+evidence shape, implementation reachability and frame selection (P6;
+rc.2 #rf-006-authority-conservation).
 
 ### RF-007 Semantic, evidence and verdict separation
 
-Semantic law defines what the evaluation means. Evidence supplies
-observations. The evaluator applies the declared relation. Where the
-evaluation performs a material operation, the existing operation owner
-supplies the exact grant. Decision authority disposes the result. A frame
-declaration keeps these roles distinguishable even when one actor lawfully
-performs several of them (P6; rc.2
-#rf-007-semantic-evidence-and-verdict-separation). EVALUATION §2 applies
-this law to review.
+The separation of semantic law, evidence, the evaluator's application
+and the disposing decision authority is
+[EVALUATION §2](EVALUATION.md#2-separation)'s. This law binds it to a
+frame: a frame declaration keeps these roles distinguishable even when
+one actor lawfully performs several of them, and where the evaluation
+performs a material operation, the existing operation owner supplies the
+exact grant as a further role the declaration keeps apart (P6; rc.2
+#rf-007-semantic-evidence-and-verdict-separation).
 
 ### RF-008 Overlap without identity collapse
 
@@ -372,13 +374,15 @@ rc.2 #rf-013-reconstructable-activation).
 ### RF-014 Capability fit
 
 Frame adequacy includes actor usability. When the material manifold
-exceeds an actor's capability envelope, human authority may select
-another actor, refine the frame, sequence activations or provide a lawful
-compression (RF-017); the selection is human authority's, exercised
-directly or in advance through the grant, and ACTIVATION §2 says which of
-these a step selects itself and which re-enter the grant's owner. The
-actor may not silently omit material relations to fit its context (P0, P5;
-rc.2 #rf-014-capability-fit).
+exceeds an actor's capability envelope, the remedies are those of
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
+step 3, which owns the list: among them selecting another actor, refining
+the frame into steps, sequencing activations and a lawful compression
+(RF-017). Choosing among them is human authority's, exercised directly or
+in advance through the grant; ACTIVATION §2 says which of them a step
+selects itself and which re-enter the grant's owner. The actor may not
+silently omit material relations to fit its context (P0, P5; rc.2
+#rf-014-capability-fit).
 
 ### RF-015 Residual uncertainty
 
@@ -458,8 +462,11 @@ reversibility when the set proves inadequate. No optimisation algorithm is
 prescribed. Human authority may accept a non-minimal set where its added
 cost buys material risk reduction or better actor fit (P2, P6).
 
-These considerations create no universal resource ledger, benchmark, budget
-or measurement gate. A resource control applies only through an explicitly
+These considerations create no universal resource ledger, benchmark,
+budget or measurement gate: cost is selected, not universal, under
+[ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality), which owns
+resource limits, and these four are its instances in frame selection. In
+frame selection a resource control applies only through an explicitly
 selected frame and its owning applicability and work scope; ACTIVATION §6
 is that selection where a cost claim is the governed question. The test
 that an activated frame's context fits the selected actor is RF-002's,
@@ -583,7 +590,15 @@ map to the core as §5 states (P4a, P5, P6; rc.2 #result-conjunction).
 One frame supplies evidence or a value consumed inside another. The
 translation declares source and target coordinates, preserved meaning,
 accepted loss, provenance, equality law and refusal conditions (P1, P4b;
-rc.2 #evidence-or-coordinate-translation).
+rc.2 #evidence-or-coordinate-translation). What a statement of preserved
+meaning and accepted loss must show, and the law that licenses the
+step, are
+[ACTIVATION §4, Refinement](ACTIVATION.md#refinement), and where the
+translation is represented in `a_c` it is recorded in the preservation,
+introduced, removed and residual fields of
+[AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation). This section adds
+only the frame fields: the source and target coordinates, the
+provenance, the equality law and the refusal conditions.
 
 ### Material composition
 
@@ -889,7 +904,8 @@ clarification that finds a recorded activation outside its frame's family,
 so that the result fails the exact applicability check of ACTIVATION §7
 ([RF-001](#rf-001-evaluation-relativity);
 [Diagnostic order](#diagnostic-order) question 1), or newly acquired
-admissible evidence that bears on a closed result, reopens that result
+admissible evidence that bears on a closed result, an instance of the
+revising observation of ACTIVATION §7, reopens that result
 and every coverage ledger row and coverage claim that consumed it, and
 preserves every demonstrably independent surviving result. A harmless
 explanatory clarification, which changes no material input and is no
@@ -1153,15 +1169,15 @@ another member.
 | #rf-003-material-sufficiency | conserved | §3 RF-003 |
 | #rf-004-irrelevance-exclusion | conserved | §3 RF-004 |
 | #rf-005-exact-basis-and-coordinates | conserved | §3 RF-005 |
-| #rf-006-authority-conservation | conserved | §3 RF-006 |
-| #rf-007-semantic-evidence-and-verdict-separation | conserved | §3 RF-007; applied to review in EVALUATION §2 |
+| #rf-006-authority-conservation | conserved; the list of what creates no authority is FOUNDATIONS §2 Authority kinds, with the five frame instances here | §3 RF-006 |
+| #rf-007-semantic-evidence-and-verdict-separation | conserved; EVALUATION §2 owns the separation, and RF-007 binds it to a frame declaration with the operation-grant role | §3 RF-007; EVALUATION §2 |
 | #rf-008-overlap-without-identity-collapse | conserved | §3 RF-008 |
 | #rf-009-no-assumed-hierarchy | conserved; communication is added as a distinct relation structure, new in this corpus, with its purpose stated | §3 RF-009 |
 | #rf-010-composition-on-demand | conserved | §3 RF-010; §6 |
 | #rf-011-topology-mutation-and-recharting | conserved | §3 RF-011 |
 | #rf-012-closed-results | conserved; the five values, their meanings, the no-coercion and refinement rules and the evaluation not performed are owned by FOUNDATIONS §4 Results, with the stop state in ACTIVATION §3; RF-012 states the law over frames and defines none of them | FOUNDATIONS §4 Results; §3 RF-012 |
 | #rf-013-reconstructable-activation | conserved | §3 RF-013 |
-| #rf-014-capability-fit | conserved | §3 RF-014; the step's own selection among fit options is ACTIVATION §2 |
+| #rf-014-capability-fit | conserved; the remedy list and the step's own selection among them are ACTIVATION §2 | §3 RF-014; ACTIVATION §2 |
 | #rf-015-residual-uncertainty | conserved | §3 RF-015 |
 | #rf-016-implementation-neutrality | conserved | §3 RF-016 |
 | #rf-017-proportional-compression | conserved | §3 RF-017 |
@@ -1172,7 +1188,7 @@ another member.
 | #using-frames-in-conjunction | conserved | §6 |
 | #independently-activated-co-evaluation | conserved | §6 |
 | #result-conjunction | conserved; the conjunction and its declared rule are owned by FOUNDATIONS §4 Conjunction of results; §6 names the frame relation and refers | FOUNDATIONS §4 Conjunction of results; §6 Result conjunction |
-| #evidence-or-coordinate-translation | conserved | §6 |
+| #evidence-or-coordinate-translation | conserved; the six declared items kept; preservation and loss refer to ACTIVATION §4 Refinement and AC-013 | §6 |
 | #material-composition | conserved | §6 |
 | #frame-relations | conserved | §7 |
 | #workspace-coverage | not applicable: heading with no claim text (22 bytes); its children are disposed individually | §8 |
