@@ -367,3 +367,14 @@ Started in parallel:
 - RF1: REFERENCE_FRAME §10 (F1).
 - TR2: TRAVERSAL partial effects, with ACTIVATION §3 Effects consistency (F2).
 - TL: finite-check reported values (F4) and frame link rebasing (F5).
+
+2026-10-14T01:07Z — Revision 2b returns:
+- RF1, committed `3940e7a`. In REFERENCE_FRAME §10, the question whether a frame needs a new revision coordinate is now separate from whether a result stays valid, which ACTIVATION §7 owns. The tenant-added sentence "reopens no result" is removed here and at `:170`. The predecessor's nine revision actions are kept.
+- TR2, committed `85a96d8`. `partial_effect`, and decision `partial`, now split into `(not_attained)` → `falsified` and `(undecided)` → `indeterminate`. Whether the effect has ended is a separate residual. ACTIVATION §3 Effects requires `completed` to establish the end, and reconciliation before retry also covers `not_effected` whose end is not established.
+- I4, committed `de7c617`: GLOSSARY, EXECUTIVE_BASELINE, SPEC_METHOD and frontier rows 547 and 641 aligned; "uncertain completion" now covers both values.
+- TL, committed `719449f`:
+  - the finite check gains reported-value properties P6 to P8, and four value-only mutations are each detected;
+  - the domain is stated, and the two §4 clauses it does not encode are explicitly excluded;
+  - the generator rebases frame links, and 42 tests pass.
+- Role change to Writer: frames regenerated and design row 5 updated (`716e20c`). `--check` exits 0, and all 2,672 relative links across the members and frames resolve; 526 were broken before.
+- RV2b (working review of RF1, TR2 and I4) and R0i3 (independent expectations for iteration 3) are running. Next: rerun C3S-01 task B and C3S-03 on the regenerated frames, then iteration 3.
