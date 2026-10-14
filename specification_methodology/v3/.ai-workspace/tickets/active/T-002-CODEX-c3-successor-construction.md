@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T13:42:23Z
+updated_at: 2026-10-14T18:03:48Z
 priority: high
 dependencies: [T-002]
 ---
@@ -23,7 +23,7 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## Current Iteration 3 Contract
 
-The next selected run is `EC-CODEX-I3-03`, prepared below under the owner's instruction to close I3 and complete the supported consolidated repairs. Its admission and exact common input are recorded separately before execution. The EC-CODEX-I3-02 return and admitted bytes below remain the historical predecessor; its ordinary-entry comparison does not establish frame-specific fit or candidate acceptance.
+The consolidated repair `EC-CODEX-I3-03` returns `candidate_ready` at tenant checkpoint `c29b2be37f9a12e050478be97793927d99c01781`, on closed common input C3-I3-CLOSED-01. The [visible return and 63-item disposition list](../../comments/codex/20261014T180348Z_RETURN_I3_SPEC_AND_CODEX_CONSOLIDATED_REPAIR.md) binds the unchanged package `ef5e514`, independent working readbacks, 30/30 fixed task assertions, the qualification-reader repair and remaining acceptance obligations. The tenant worktree is clean; all delegated Workers and Reviewers have returned. The EC-CODEX-I3-02 return and admitted bytes below remain the historical predecessor; its ordinary-entry comparison does not establish frame-specific fit or candidate acceptance.
 
 ### EC-CODEX-I3-03 — Complete the consolidated I3 repair
 
@@ -423,3 +423,6 @@ The admission entry below is part of this ticket's Execution Record. The recorde
 2026-10-14T00:45:00Z — Current qualification subject `4889563` retains product source `b99ca785`. Artifact and cold identity checks pass; the selected a_c frame's residual scope is narrowed from all domain consumers to its actual shared-law task, with omitted domain policies explicit. A fresh nonauthor Reviewer evaluates its textual fidelity; two fresh source-entry actors receive the same neutral scenario at iteration 2 and iteration 3, without access to one another or to the expected determinations. These source-use trials do not qualify every published frame or an installed v3. The [core working review](../../comments/codex/20261014T004200Z_REVIEW_ITERATION_3_SHARED_CONTRACT.md) reports bounded no-findings and leaves broader consistency open.
 
 2026-10-14 — Jim supplies the [frozen iteration 2 critical review](../../comments/claude/20261013T235754Z_REVIEW_CODEX_V3_FROZEN_CANDIDATE.md), at main `02e6c0e`, for evaluation during iteration 3. Executive checks applicability rather than carrying its old counts into the successor. Live examples remain in sprint-close mapping, conservation dispositions and compression bodies. Disposition: bounded local repair under EC-CODEX-I3-01. Method Writer owns SPEC_METHOD, TICKET_METHOD and RELEASE_METHOD plus its iteration-3 repair record; core and other consumers stay outside that grant. Each repair must distinguish domain data from results, conserve current policy, and bind actual evaluation/decision predicates to the shared result owner. Foundation arguments distinguish consequences from owned policy choices; no law is invented merely to fill a numbered-law count. Parent Writer owns conservation corrections and packaging. Later consumer grants are named before effects. Frozen reviews and use results retain their actual subjects; no C3 acceptance is inferred.
+
+
+2026-10-14T18:03:48Z — The Executive consumes the closed source/native readbacks and fixed-oracle assessment (`afb48d587e95cfb24ddd9112a3d4e27f7d360b275157e4d846cc59b669da8a7f`): 30 supported, zero failed or ambiguous task assertions; six independent construction probes and 56 source/catalog emissions reproduce. The complete package remains `ef5e514`; final tenant evidence is `c29b2be`. A concurrent acquisition-counter defect is repaired only in qualification instrumentation at `eda1eeb`; original attempts `28e46fd` retain their measurement limits. The bounded construction conjunction is satisfied and returns `candidate_ready`. No semantic counterexample selects another candidate repair. Member/replacement/port decisions, complete fidelity/fit, installed qualification, categorical thread, integrated acceptance and release remain reserved. Common Ledger Writer records this result; Git Writer checkpoints only this ledger and the visible post. Tenant merge to main and push remain unselected.
