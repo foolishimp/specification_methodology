@@ -356,3 +356,14 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
 - **F5 (Low), accepted:** the frames' copied relative links break. Disposition `local_repair`: the generator rebases relative links for the frames directory, and source identities and section digests stay over the owner bytes.
 
 Codex also notes that the common specification's new Foundational Reduction requirement is not retroactive to this rebuild's `a7eba66` basis, and that a Claude iteration 3 needs an explicitly bound task. No repair has started. The product owner is asked whether to repair F1, F2, F4 and F5 now on this branch, and whether the Claude line starts iteration 3.
+
+2026-10-14T00:50Z — Owner instruction, recorded verbatim. To the question "Codex's five findings check out against the source. How should the Claude line proceed?", the product owner answered: "Repair now, then iteration 3 (Recommended)". That option read: "Fix F1, F2, F4 and F5 on the tenant branch now … Then start iteration 3 under the new Reduction and Constraint Surfaces requirements, using the fixed rules as its base."
+
+This admits:
+- revision 2b, repairing F1, F2, F4 and F5 on this branch against the `a7eba66` basis;
+- then a Claude-line iteration 3, bound to the current common specification on `main`.
+
+Started in parallel:
+- RF1: REFERENCE_FRAME §10 (F1).
+- TR2: TRAVERSAL partial effects, with ACTIVATION §3 Effects consistency (F2).
+- TL: finite-check reported values (F4) and frame link rebasing (F5).
