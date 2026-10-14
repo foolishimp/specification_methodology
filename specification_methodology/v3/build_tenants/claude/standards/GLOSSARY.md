@@ -18,7 +18,11 @@ meanings in the selected complete STDO basis (P6, P1; rc.2
 #index-contract).
 
 Each row records an indexed spelling, the bounded-context identity
-declared by the cited owning clause, and the exact owning concept clause;
+declared by the cited owning clause, and the exact owning concept clause.
+§17 uses a second row form for a label that several clauses use: the
+label, a locator naming where that use occurs, and the owning clause. The
+locator only says where to look; it defines nothing and declares no
+context, which the owning clause supplies;
 §2 states how a row records a concept that a context holds by import, and
 a concept whose member declares no bounded context for it.
 The owning clause together with the selected basis identifies the candidate meaning;
@@ -371,7 +375,7 @@ Purpose and material relation: an actor that read one sense into another
 clause reconciled the two by itself; this index points each sense to its
 owner.
 
-| Label | Sense | Owning clause |
+| Label | Where this use occurs (locator, not a definition) | Owning clause |
 |---|---|---|
 | `indeterminate` | a core result value: admissible evidence cannot decide | [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) |
 | `indeterminate` | a triage payload class, not a result | [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection) |
