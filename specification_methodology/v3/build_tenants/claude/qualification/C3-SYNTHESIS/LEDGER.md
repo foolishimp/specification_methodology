@@ -411,3 +411,28 @@ Effect: the Claude line's iteration 3 is admitted by the product owner. It start
 3. the product owner signs off the specification at a named commit.
 
 Iteration 3 then binds to that signed-off commit, merged inward. The provisional expectations in `qualification/C3-ITER3/EXPECTATIONS.md` are re-derived against that commit before any construction. Until then no Claude construction runs. The common pen is asked to record this owner decision in T-002-CLAUDE.
+
+## Iteration 3
+
+2026-10-14T16:01Z — Owner instruction, recorded verbatim. To "Do you want me to start Claude's iteration-3 build now?", the product owner answered ">.< yes".
+
+The answer is read as the product owner confirming `EC-CLAUDE-I3-01` (admitted by the common pen at `651581c`; SHA-256 `3c928885b7c185d467ad3764289ae796b259c0982d71f8ee46be6b944860b859`) and starting it now. Effects:
+- It settles round 3 findings RT2-01 and RT2-02 for this line, by owner action.
+- His sign-off on the common specification is still open, so the open decisions in the round 3 review are carried as known gaps:
+  - the changes to accepted conditions;
+  - the pillar list;
+  - the 51 Codex-line replacement relations.
+- Nothing is assumed accepted.
+
+Role change to Writer, for the contract's Git step:
+- The 24 member hashes of input `C3-I3-R2-01` were checked at B `355aa86`: 24 match, 0 mismatch.
+- The tenant tree drifted from the contract's preimage `5ab44d5` (`b75d6aa6…`) by one ledger entry (`81032c4`). It is not material, and it is reported as the contract requires.
+- The recording commit `651581c` was merged inward (`22991db`). The tenant tree is unchanged by the merge (`1101bdb1…`), and `specification/` equals B.
+
+Role back to Executive.
+
+Oracle for this iteration: `qualification/C3-ITER3/ORACLE.md`. It is a byte copy of the independent oracle written from the `355aa86` specification for the review of the Codex iteration 3 candidate, by an actor that opened neither candidate. It holds 98 expectations, 12 negative expectations and 12 recorded ambiguities. It supersedes the provisional `EXPECTATIONS.md`, which was derived from the unfinished `6c2debb` and is kept as history.
+
+Resources: no numeric cap is imposed by the owner. Under the contract, paid actor trials on this line bind a recorded allowance. Executive default: USD 15 for iteration 3 trials, balance USD 15.00, which the owner may change.
+
+Next: I3-1, design re-entry and a verified reduction inventory and plan. It also establishes the current disposition of Codex's F1–F5 from source and evidence, as the contract requires.
