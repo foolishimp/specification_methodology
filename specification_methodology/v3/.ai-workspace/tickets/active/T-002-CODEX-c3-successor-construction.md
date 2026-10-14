@@ -31,6 +31,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## Tenant Re-Entry
 
+Input-amendment A1 Writer return: recording commit `5543840bc92dc618d525695002c40569b5a92630` is merged inward at `d832a51a4f91afca2ffa2e31636236f8729abf6c`. The Codex tenant tree remains `dd222838b69addb683343e42992a2b08c1e459a0`, equal to repair checkpoint `de8232a`, and the worktree is clean. All 30 snapshot members match input B; the recording step changes no requirement bytes. Executive records I3-00 complete for consolidation and leaves I3-01–16 at their stated status. No further Writer or trial is running under this consolidation.
+
 ### EC-CODEX-I3-01 input amendment A1
 
 The remaining work under EC-CODEX-I3-01 binds common input

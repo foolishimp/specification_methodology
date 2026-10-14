@@ -13,6 +13,12 @@ their repairs are checkpointed on `tenant/codex/c3-iteration-3` at `de8232a`.
 Generated material and qualification still bind the earlier source. This is
 not a qualified distribution, completed C3 or an accepted release.
 
+The common recording commit `5543840` is merged inward at tenant commit
+`d832a51a4f91afca2ffa2e31636236f8729abf6c`. Its Codex tenant tree is exactly
+`dd222838b69addb683343e42992a2b08c1e459a0`, unchanged from `de8232a`, and the
+tenant worktree is clean. The requirement update is therefore present for the
+next activation without relabelling the existing repairs or evidence.
+
 ## Basis and evidence subjects
 
 The governing builder is installed `v2.5.1-rc.2`, manifest
