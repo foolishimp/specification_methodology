@@ -1,8 +1,10 @@
 """Frozen, instruction-confined task acquisition; no host-context fit claim."""
 import argparse
+from contextlib import redirect_stdout
 from datetime import datetime, timezone
 import hashlib
 import importlib.util
+import io
 import json
 from pathlib import Path
 import re
@@ -158,11 +160,50 @@ def main():
     p.add_argument('--evaluation-projection', required=True)
     r = sub.add_parser('read'); r.add_argument('root', type=Path); r.add_argument('route')
     r.add_argument('--section'); r.add_argument('--start', type=int); r.add_argument('--end', type=int)
+    sub.add_parser('self-check')
     args = parser.parse_args()
     if args.operation == 'prepare':
         prepare(args.source_commit, args.evaluation_projection)
-    else:
+    elif args.operation == 'read':
         acquire(args.root, args.route, args.section, args.start, args.end)
+    else:
+        checks = {}
+        with tempfile.TemporaryDirectory(prefix='stdo-i3-reader-control-') as folder:
+            root = Path(folder)
+            data = b'# Subject\nExact task material.\n'
+            (root / '0.txt').write_bytes(data)
+            manifest = {'routes': {'run://control/frame': {'file': '0.txt', 'sha256': sha(data), 'bytes': len(data)}},
+                        'started_monotonic': None, 'started_utc': None, 'maximum_acquired_bytes': 512, 'wall_seconds': 600}
+            write(root / 'manifest.json', manifest)
+            with redirect_stdout(io.StringIO()) as captured:
+                acquire(root, 'run://control/frame', None, None, None)
+            logged = json.loads((root / 'acquisition.jsonl').read_text())
+            checks['exact_material_and_emission_measurement'] = captured.getvalue().encode() == data and logged['emitted_bytes'] == len(data) and logged['sha256'] == sha(data)
+            def refused(route):
+                previous = (root / 'acquisition.jsonl').read_bytes()
+                try:
+                    with redirect_stdout(io.StringIO()):
+                        acquire(root, route, None, None, None)
+                except ValueError:
+                    return (root / 'acquisition.jsonl').read_bytes() == previous
+                return False
+            checks['undeclared_route_refused_without_material'] = refused('oracle')
+            (root / '0.txt').write_bytes(data + b'changed')
+            checks['changed_source_refused_without_material'] = refused('run://control/frame')
+            (root / '0.txt').write_bytes(data)
+            current = json.loads((root / 'manifest.json').read_text())
+            current['maximum_acquired_bytes'] = len(data)
+            write(root / 'manifest.json', current)
+            checks['cumulative_allowance_refused_before_emission'] = refused('run://control/frame')
+            current.update(maximum_acquired_bytes=512, started_monotonic=time.monotonic()-601)
+            write(root / 'manifest.json', current)
+            checks['expired_trial_refused_before_emission'] = refused('run://control/frame')
+        report = {'valid': all(checks.values()), 'checks': checks, 'reader_sha256': sha(Path(__file__).read_bytes()),
+                  'limit': 'Reader behavior only; instruction confinement is not a filesystem security boundary or host-context measurement.'}
+        write(HERE / 'READER_CHECK.json', report)
+        print(json.dumps(report, indent=2))
+        if not report['valid']:
+            raise SystemExit(1)
 
 
 if __name__ == '__main__':
