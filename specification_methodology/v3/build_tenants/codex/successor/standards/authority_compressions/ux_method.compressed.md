@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ux-method/v1
 source_ref: ../UX_METHOD.md
-source_digest: 1aaa7aa4cb0dff936380b966681ebf9fd8dc7e9bb55b6a53feba8d45b9448711
+source_digest: 495d279bee2689ee8c8306e81741f385ff0df3ed231f31ad6bd208423a7b7ae4
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -17,6 +17,13 @@ stale_if_source_digest_changes: true
 
 UX surfaces are projection and control surfaces. The view does not own
 continuation, product truth, or hidden constructive work.
+
+UX state and message variants are domain data. When an operation makes an
+evaluation or authority claim, its exact predicate consumes the shared result
+record through [UX governing relations](../UX_METHOD.md#governing-relations).
+Preserve domain causes, actual performance and effects. Sprint treatment,
+compliance and closure remain separate under the Ticket-owned maps consumed
+by UX escrow.
 
 ## Process Model
 

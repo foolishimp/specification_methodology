@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result algebra
 
@@ -85,7 +85,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -134,7 +134,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result conjunction
 
@@ -251,9 +251,20 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ## Reference Frame Laws
+
+The [F1–F6 commitments](../FOUNDATIONS.md#foundational-commitments) constrain these
+families conditionally; this member owns the frame-specific policies in the
+last column. They do not follow from finite capacity alone.
+
+| Law family | Premises and conditional consequence | Separately owned choice |
+|---|---|---|
+| Evaluation boundary, acquisition and compression: RF-001–005, RF-013–014, RF-017 | F1 selects the question; F2 requires supported interpretation; F3 distinguishes current subject from acquired view; F5 bounds actor capacity. If a frame supports that question, its material distinctions and usable basis must survive bounded acquisition. | This method selects the frame tuple, family-relative sufficiency, reconstructability and compression criteria. The human frame-set owner selects the partition and actor envelope; the subject owners supply material meaning. |
+| Authority and overlapping meaning: RF-006–008 | F2 and F4 preserve meaning across typed relations; F6 separates evidence from grants. Shared material therefore cannot by itself equate meanings or confer authority. | This method distinguishes semantic, evaluation, operation and decision authority in a frame; each existing owner supplies its actual grant and each translation owner supplies the coordinate relation. |
+| Configuration and material combination: RF-009–011, RF-016 | F3 makes topology changes relevant to dependent support; F4 requires material joins to preserve the outer claim; F5 and F6 require bounded allocation without invented grants. Combining results alone need not combine internal execution. | This method selects composition-on-demand, explicit recharting and implementation neutrality. The frame-set owner chooses topology; the declared composition and decision owners bind the required joins under the shared laws. |
+| Closed results and uncertainty: RF-012, RF-015 | F2 requires evidence on an exact predicate; F5 admits undecidable or unperformed work; F6 prevents a result granting permission. A closed return must preserve those distinctions. | Foundations owns the result codomain and conjunction. This method owns the activation/work predicate split and each frame owns its declared refinements; the decision owner owns disposition. |
 
 ### RF-001 Evaluation Relativity
 
@@ -280,7 +291,8 @@ exists.
 
 Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to `Q`'s
 attention surface: exclude relations established irrelevant to that evaluation,
-retaining any material needed to establish irrelevance.
+retaining any material needed to establish irrelevance. A frame does not expand
+merely because adjacent workspace material exists.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -409,6 +421,9 @@ framework.
 
 ### RF-017 Proportional Compression
 
+A frame declaration compresses accumulated practice lawfully only when it
+preserves the material distinctions and failure detections required by its
+whole declared evaluation family, with adequate capability fit under RF-014.
 A frame view applies [Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection)
 from the owning declaration and material subject to the actor's evaluation
 `Q`. Its required distinctions include `Q`'s failure detections; its adequacy
@@ -438,7 +453,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### Applicability And Required Results
 
@@ -459,7 +474,7 @@ wrong-subject required results, and a sufficient positive result within a finite
 declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ## Using Frames In Conjunction
 
@@ -498,6 +513,19 @@ frame's evaluation as consumer. Bind both `C` coordinate/equality laws and the
 translation's refusal conditions alongside the shared preservation, loss and
 provenance requirements.
 
+The returned `translated_value`, `declared_loss` or `refusal` is retained with
+its cause. Evaluate “this translation meets the bound target-use contract on
+these source/target coordinates”: supported preservation, including expressly
+admitted loss, maps to `satisfied`; an established forbidden loss, equality,
+identity, basis-compatibility or authority violation maps to `falsified`;
+undecided preservation or loss permission maps to `indeterminate`. If that
+evaluation itself lacks material scope/capability or a usable basis, the map is
+`out_of_frame` or `invalid_basis`, respectively. Missing causes use RF-012's
+missing-reason rule. A coordinate mismatch established by a valid check is a
+failed translation condition, not necessarily an invalid basis for the check.
+All cases preserve actual performance and effects; refusal does not establish
+the target predicate the untranslated evidence was intended to support.
+
 ### Material Composition
 
 Apply [Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) to the
@@ -512,7 +540,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ## Minimal Evaluation Result
 
@@ -538,7 +566,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Bind
 
@@ -547,7 +575,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Acquire
 
@@ -560,7 +588,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Evaluate
 
@@ -580,7 +608,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Conjoin
 
@@ -593,7 +621,7 @@ authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Contract application
 

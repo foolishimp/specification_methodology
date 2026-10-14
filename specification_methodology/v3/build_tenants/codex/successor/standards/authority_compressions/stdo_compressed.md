@@ -27,22 +27,22 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea
-  TRANSFORMATION_LIBRARY.md: 65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c
-  AXIOMATIC_CALCULUS.md: 4134002e63d76424af0b4b8158fd7209ca0e3ec3216ff578b3e7482013d32fda
-  TRAVERSAL_OCCURRENCE_PROFILE.md: ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234
-  REFERENCE_FRAME_METHOD.md: 34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2
-  STDO_REFERENCE_FRAME_BASELINE.md: eae3b37f353fb781a22aca47255b395f4e027793598c558bea88ac4309b61230
-  SPEC_METHOD.md: 7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529
+  FOUNDATIONS.md: aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189
+  TRANSFORMATION_LIBRARY.md: 596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09
+  AXIOMATIC_CALCULUS.md: da2778fd029b6aa204d116d8451e18aa2af49ad5beda3663ddfe4ca909507df0
+  TRAVERSAL_OCCURRENCE_PROFILE.md: 94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a
+  REFERENCE_FRAME_METHOD.md: db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1
+  STDO_REFERENCE_FRAME_BASELINE.md: 4b6b923a18527efca339496e8e1ae56e61786237b72cd3e51d8594efa6b18b1d
+  SPEC_METHOD.md: 0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0
-  ODD_METHOD.md: 57a6da7f6f5696eb354947a799afc222050cdd0d13005f913577f5f6580b5998
-  WORLD_MODEL_METHOD.md: 462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680
-  TICKET_METHOD.md: baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646
-  UX_METHOD.md: 1aaa7aa4cb0dff936380b966681ebf9fd8dc7e9bb55b6a53feba8d45b9448711
+  DESIGN_MODULE_METHOD.md: 721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24
+  ODD_METHOD.md: 2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268
+  WORLD_MODEL_METHOD.md: 31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6
+  TICKET_METHOD.md: d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d
+  UX_METHOD.md: 495d279bee2689ee8c8306e81741f385ff0df3ed231f31ad6bd208423a7b7ae4
   IDENTITY_METHOD.md: efe14dff289da7fe11e523efcc6e28eced61199bdf337c07833b00b68bbef493
-  RELEASE_METHOD.md: b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062
+  RELEASE_METHOD.md: d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89
   POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
   GLOSSARY_GUIDE.md: d433155845187b39e504b34fbb079690fefcab141d213e1179e535b7027b88f3
@@ -61,7 +61,8 @@ governs context reconstruction and conditional reuse.
 
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
-organise shared premises and transformation families. Detailed owners retain
+own the shared result, context, configuration and conditional transformation
+contracts. Detailed owners retain
 their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
@@ -273,6 +274,13 @@ refuse cross-law closure.
 Use the smallest current authority surface that can decide the question:
 
 `Goals -> Intent -> Product Definition -> Requirements -> Design -> Realisation -> Observations -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
+
+The common WHAT constrains admissible outcomes and evidence. A build tenant
+binds those requirements to its concrete operations, actors, effects and
+observations. Software, hardware, people and mixed processes are permitted
+bindings; a human executor is not thereby a human adjudicator. Generic
+outcome-driven construction does not require adopting the graph-native ODD
+profile. Preservation across these bindings needs its own evidence.
 
 When a lower layer needs a change in meaning, re-enter at the smallest upstream
 layer that owns the missing truth.

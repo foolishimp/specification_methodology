@@ -1,20 +1,22 @@
-"""Refresh current derivatives without changing any historical qualification.
+"""Generate current documentary derivatives from explicit inputs.
 
-The historical helpers are reused as algorithms, with all output locations bound
-to this iteration. Refreshing coordinates supplies no semantic acceptance.
+Conservation is an independently authored input. This module never writes it.
+Source freezing, interpretation construction and full inventory are separate.
 """
 import argparse
 import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import subprocess
+import sys
 
+sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
 TENANT = HERE.parents[2]
-PACKAGE = TENANT / "successor"
+PACKAGE = TENANT / 'successor'
 PREVIOUS = HERE.parent
-COMMON_INPUT = "cae6fe366395148558efb84c85501b768f6593fc"
 
 
 def load_module(name, path):
@@ -24,84 +26,209 @@ def load_module(name, path):
     return module
 
 
+# These source parsing functions have no output effects or selected-path globals.
+PARSE = load_module('artifact_source_parsing', PREVIOUS / 'synthesis/check_artifacts.py')
+
+
 def read(path):
     return json.loads(path.read_text())
-
-
-def write(name, value):
-    (HERE / name).write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
 
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def refresh_views():
-    target = HERE / "FRAME_INPUTS.json"
-    index = read(target if target.exists() else PREVIOUS / "FRAME_INPUTS.json")
-    # Every existing frame keeps its domain-specific owners. The shared law
-    # replaces those owners' repeated bodies and must be available to the reader.
-    for frame in index["frames"]:
-        route = {"owner": "standards/TRANSFORMATION_LIBRARY.md", "anchor": "contract-application"}
-        if not any(r["owner"] == route["owner"] and r["anchor"] == route["anchor"] for r in frame["routes"]):
-            frame["routes"].append(route)
-    index["standing"] = "Current iteration 3 source-bound views; sufficiency requires task-specific evidence."
-    index["input_commit"] = COMMON_INPUT
-    write("FRAME_INPUTS.json", index)
-    helper = load_module("i3_views", PREVIOUS / "refresh_views.py")
-    helper.base, helper.root, helper.std = TENANT, PACKAGE, PACKAGE / "standards"
-    helper.__file__ = str(HERE / "refresh_views.py")
-    helper.refresh()
+def write_path(path, value):
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
 
 
-def inventory(source_commit=None):
-    previous = read(PREVIOUS / "CANDIDATE.json")
-    members = {row["path"]: row for row in previous["members"]}
-    repo = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=TENANT, text=True).strip())
-    if source_commit:
-        source_commit = subprocess.check_output(["git", "rev-parse", source_commit + "^{commit}"], cwd=repo, text=True).strip()
-    rows = []
-    for path in sorted(PACKAGE.rglob("*")):
-        if not path.is_file():
+def write(name, value):
+    write_path(HERE / name, value)
+
+
+def exact_commit(value):
+    resolved = subprocess.check_output(['git', 'rev-parse', value + '^{commit}'], cwd=TENANT, text=True).strip()
+    if value != resolved:
+        raise ValueError('Use the full immutable commit, not a branch or abbreviation')
+    return resolved
+
+
+def verify_common(value):
+    exact_commit(value)
+    repo = Path(subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=TENANT, text=True).strip())
+    common = TENANT.parents[1] / 'specification'
+    # Work-state records may advance independently. Constitutional inputs may not.
+    paths = [common / n for n in ['INTENT.md', 'PRODUCT.md', 'REFERENCE_FRAME_BASIS.md']]
+    paths += sorted((common / 'requirements').rglob('*.md'))
+    paths += sorted((common / 'conformance').rglob('*.md'))
+    for path in paths:
+        frozen = subprocess.check_output(['git', 'show', value + ':' + str(path.relative_to(repo))], cwd=repo)
+        if frozen != path.read_bytes():
+            raise ValueError('Common constitutional input drift: ' + str(path.relative_to(repo)))
+    return value
+
+
+def protected_pins(support=HERE):
+    return {name: sha(support / name) for name in ['CONSERVATION.json', 'FRONTIER.json']}
+
+
+def compression_body(path):
+    text = path.read_text()
+    if not text.startswith('---\n'):
+        return None
+    front, body = text[4:].split('---', 1)
+    return front, body
+
+
+def compression_owners(path, package=PACKAGE):
+    path, package = path.resolve(), package.resolve()
+    pair = compression_body(path)
+    if pair is None:
+        return {}
+    front, _ = pair
+    owners = {}
+    single = re.search(r'^source_ref: (.+)$', front, re.M)
+    if single:
+        owner = (path.parent / single[1]).resolve()
+        owner.relative_to(package.resolve())
+        owners[str(owner.relative_to(package.resolve()))] = sha(owner)
+    for match in re.finditer(r'^  ([\w/.-]+): ([0-9a-f]{64})$', front, re.M):
+        owner = PARSE.confined(package / 'standards', match[1])
+        owners[str(owner.relative_to(package))] = sha(owner)
+    return owners
+
+
+def render_views(package, support, common_input):
+    """Prepare all changes before writing; declarations select the task routes."""
+    package, support = package.resolve(), support.resolve()
+    index = read(support / 'FRAME_INPUTS.json')
+    changes = {}
+    reviews = index.get('compression_body_reviews', {})
+    for path in sorted((package / 'standards/authority_compressions').glob('*.md')):
+        pair = compression_body(path)
+        if pair is None:
             continue
-        if source_commit:
-            frozen = subprocess.check_output(["git", "show", source_commit + ":" + str(path.relative_to(repo))], cwd=repo)
-            if frozen != path.read_bytes():
-                raise ValueError("Package differs from frozen source: " + str(path))
-        relative = str(path.relative_to(PACKAGE))
-        row = dict(members.get(relative, {"path": relative, "role": "Product member", "expected_installed_path": relative}))
-        row.update(sha256=sha(path), bytes=path.stat().st_size)
+        front, body = pair
+        name = str(path.relative_to(package))
+        review = reviews.get(name, {})
+        owners = compression_owners(path, package)
+        if (review.get('body_sha256') != hashlib.sha256(body.encode()).hexdigest()
+                or review.get('owner_pins') != owners):
+            raise ValueError('Compression body/source reconciliation not recorded: ' + name)
+        single = re.search(r'^source_ref: (.+)$', front, re.M)
+        if single:
+            front = re.sub(r'^source_digest: [0-9a-f]{64}$',
+                           'source_digest: ' + sha((path.parent / single[1]).resolve()), front, flags=re.M)
+        front = re.sub(r'^(  ([\w/.-]+): )([0-9a-f]{64})$',
+                       lambda m: m[1] + sha(package / 'standards' / m[2]), front, flags=re.M)
+        changes[path] = '---\n' + front + '---' + body
+    for frame in index['frames']:
+        path = PARSE.confined(package, frame['path'])
+        routes = frame['routes']
+        if len({(r['owner'], r['anchor']) for r in routes}) != len(routes):
+            raise ValueError('Duplicate frame route: ' + frame['path'])
+        parts = [path.read_text().split('\nSource:', 1)[0].rstrip()]
+        for route in routes:
+            owner = PARSE.confined(package, route['owner'])
+            heading, raw = PARSE.section(owner.read_text(), route['anchor'])
+            def relocate(match):
+                target = match[2]
+                if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', target):
+                    return match[0]
+                return match[1] + '../' + (owner.name if target.startswith('#') else '') + target + match[3]
+            rendered = re.sub(r'(\[[^\]]*\]\()([^\n]+?)(\))', relocate, raw)
+            link = '../' + str(Path(route['owner']).relative_to('standards')) + '#' + route['anchor']
+            parts.append('\nSource: [' + owner.name + ' — ' + heading['heading'] + '](' + link + '); '
+                         + 'SHA256 `' + sha(owner) + '`.\n\n' + rendered)
+            route.update(owner_sha256=sha(owner), section_sha256=hashlib.sha256(raw.encode()).hexdigest())
+        value = '\n'.join(parts).rstrip() + '\n'
+        changes[path] = value
+        frame.update(sha256=hashlib.sha256(value.encode()).hexdigest(), bytes=len(value.encode()))
+    if index.get('source_linked_summaries'):
+        raise ValueError('No current source-linked summary renderer is selected')
+    index.update(input_commit=common_input, standing='Exact current excerpts and author-reconciled summaries; semantic fidelity and task sufficiency require separate proof.')
+    return changes, index
+
+
+def refresh_views(common_input, package=PACKAGE, support=HERE):
+    protected = protected_pins(support)
+    changes, index = render_views(package, support, common_input)
+    for path, value in changes.items():
+        path.write_text(value)
+    write_path(support / 'FRAME_INPUTS.json', index)
+    if protected != protected_pins(support):
+        raise ValueError('Conservation input changed during generation; derived subject is invalid')
+    return len(index['frames'])
+
+
+def inventory(source_commit, common_input, document_source_commit):
+    source_commit, document_source_commit = map(exact_commit, [source_commit, document_source_commit])
+    repo = Path(subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=TENANT, text=True).strip())
+    prefix = str(PACKAGE.relative_to(repo))
+    current = PARSE.tree_pins(PACKAGE)
+    frozen = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', source_commit, '--', prefix], cwd=repo, text=True).splitlines()
+    if {p[len(prefix) + 1:] for p in frozen} != set(current):
+        raise ValueError('Frozen package membership differs from working package')
+    rows = []
+    for name, pin in current.items():
+        raw = subprocess.check_output(['git', 'show', source_commit + ':' + prefix + '/' + name], cwd=repo)
+        if hashlib.sha256(raw).hexdigest() != pin['sha256'] or len(raw) != pin['bytes']:
+            raise ValueError('Package differs from frozen source: ' + name)
+        if not name.startswith('interpretation/'):
+            document = subprocess.check_output(['git', 'show', document_source_commit + ':' + prefix + '/' + name], cwd=repo)
+            if document != raw:
+                raise ValueError('Document changed after interpretation source freeze: ' + name)
+        row = dict(path=name, **pin)
+        if name == 'README.md':
+            row['role'] = 'package entry'
+        elif name.startswith('interpretation/'):
+            row.update(role='source-package interpretation', installation_mapping='not selected by this source construction')
+        else:
+            row.update(role='Product member', expected_installed_path=name)
         rows.append(row)
-    previous.update(members=rows, source_input_commit=COMMON_INPUT,
+    previous = read(HERE / 'CANDIDATE.json')
+    previous.update(members=rows, source_input_commit=common_input,
                     candidate_body_input_commit=source_commit, inventory_input_commit=source_commit,
-                    standing="Codex iteration 3 author candidate; independent member and owner acceptance remain open.",
-                    snapshot_order="Source commit precedes inventory recording." if source_commit else "Working source; immutable inventory pending.")
-    write("CANDIDATE.json", previous)
-    mapping = read(PREVIOUS / "CONSERVATION.json")
-    historical_fields = {k: mapping.pop(k) for k in list(mapping)
-                         if any(part in k for part in ("confirmation", "synthesis", "applicability", "review_routes", "surface_repair"))}
-    mapping["historical_qualification"] = {"path": "../CONSERVATION.json", "subject": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6", "fields": historical_fields}
-    mapping.update(input_commit=COMMON_INPUT, candidate_source_commit=source_commit,
-                   standing="Author mapping; all predecessor obligations retained. Coordinates alone do not establish conservation or acceptance.")
-    for name, pin in mapping["successor_member_pins"].items():
-        path = PACKAGE / name
-        pin.update(sha256=sha(path), bytes=path.stat().st_size)
-    for row in mapping["rows"]:
-        if row.get("successor_sha256"):
-            row["successor_sha256"] = sha(PACKAGE / row["successor_locus"].split("#", 1)[0])
-        row["acceptance"] = "current_independent_review_pending"
-    mapping["contraction_evidence"] = ["METHOD_REDUCTION.md", "PROFILE_REDUCTION.md", "FRAME_CALCULUS_REDUCTION.md", "PARENT_REDUCTION.md"]
-    write("CONSERVATION.json", mapping)
-    write("FRONTIER.json", {"input_commit": COMMON_INPUT, "candidate_source_commit": source_commit,
-          "row_count": len(mapping["rows"]), "rows": mapping["rows"]})
-    print(json.dumps({"members": len(rows), "predecessor_rows": len(mapping["rows"]), "source_commit": source_commit}))
+                    document_source_input_commit=document_source_commit,
+                    standing='Codex I3 source candidate; independent member acceptance and installed qualification remain open.',
+                    snapshot_order='Document source precedes interpretation; complete source precedes this inventory recording.')
+    write('CANDIDATE.json', previous)
+    return len(rows)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--source-commit")
-    parser.add_argument("--views", action="store_true")
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--common-input', required=True)
+    parser.add_argument('--expect-conservation-sha256', required=True)
+    parser.add_argument('--source-commit')
+    parser.add_argument('--document-source-commit')
+    parser.add_argument('--views', action='store_true')
+    parser.add_argument('--verification-material', action='store_true')
     args = parser.parse_args()
-    if args.views:
-        refresh_views()
-    inventory(args.source_commit)
+    common = verify_common(args.common_input)
+    protected = protected_pins()
+    if protected['CONSERVATION.json'] != args.expect_conservation_sha256:
+        raise ValueError('Conservation preimage changed; reacquire the owning Writer return')
+    if not (args.views or args.verification_material or args.source_commit):
+        parser.error('Select views, verification material, or frozen inventory')
+    if bool(args.source_commit) != bool(args.document_source_commit):
+        parser.error('Full inventory requires both source and document-source commits')
+    report = {}
+    try:
+        if args.views:
+            report['frames'] = refresh_views(common)
+        if args.verification_material:
+            helper = load_module('current_derivation_material', PREVIOUS / 'synthesis/derivation_material.py')
+            result = helper.build(PACKAGE, PARSE.INSTALLED)
+            report['derivation_members'] = len(result['members'])
+        if args.source_commit:
+            report['members'] = inventory(args.source_commit, common, args.document_source_commit)
+    finally:
+        if protected != protected_pins():
+            raise ValueError('Conservation changed during generation; discard derived outputs')
+    report['conservation_preserved'] = protected
+    print(json.dumps(report, indent=2))
+
+
+if __name__ == '__main__':
+    main()

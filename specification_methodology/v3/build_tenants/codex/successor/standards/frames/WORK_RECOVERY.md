@@ -20,7 +20,7 @@ its roles or outcomes. An absent basis remains unresolved; this view supplies
 none. The source owners and original work/attempt coordinates remain material
 where the selected recovery contract requires them.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result algebra
 
@@ -96,7 +96,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -145,7 +145,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result conjunction
 
@@ -262,7 +262,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Workspace and context
 
@@ -306,6 +306,10 @@ basis and evidence, valid dependencies and required independent authorship.
 Changed support reopens the affected dependent claims. Unchanged independent
 work remains usable; when dependency independence cannot be established, inspect the
 wider affected scope. A stored green label is not a validity argument.
+Changed support invalidates the affected result for reliance, while retaining
+its historical observation. A role, conversation or resumption change alone is
+not an invalidator; the continuing consumer checks exact applicability before
+reusing the closed result.
 
 Before repeating an operation with uncertain effects, observe or reconcile
 sufficiently to decide the next dependent action. A granted idempotent operation
@@ -317,7 +321,7 @@ reconstruction; it is not universally the work state or a compulsory recovery
 algorithm.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Bounded construction
 
@@ -354,7 +358,7 @@ and cannot establish that the old destination was reached. Repeating a failed
 relation needs a supported causal change; elapsed activity is no repair.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Work/recovery specialization
 
@@ -384,9 +388,16 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
+
+The [work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+applies F1–F6 to this delegated construction family: current subject and
+sufficient evidence constrain the next step, while findings cannot create a
+grant. UP-020 supplies the particular cone, proxy, checkpoint and remedy policy;
+governing authorities select the outcome, delegation and required independent
+assessment. Worker topology and internal search remain permitted variation.
 
 When construction is delegated to a probabilistic or agentic worker, the
 method governs the execution relation without prescribing the worker's model,
@@ -518,7 +529,8 @@ Global correctness means conserving every global relation affected by the
 bounded action. It does not require proving the whole Product inside every
 local action.
 
-Repeated rejection against one unchanged boundary requires reassessment of the
+Under [bounded construction](../FOUNDATIONS.md#bounded-construction), repeated
+rejection against one unchanged boundary requires reassessment of the
 frame altitude, causal cone, common components, design-versus-code placement,
 and authority sufficiency. The method sets no rejection-count threshold,
 mandatory review-round count, or review state machine; it prohibits repeating
@@ -562,9 +574,10 @@ of retained work is insufficient, which obligations and evidence survive,
 which causal assumptions change and which existing operation grant permits
 that effect. Reconstructability alone does not select reconstruction.
 
-Accepted material Product movement is progress. Prerequisite work names the
-Product obligation it enables. Preservation and repeated proof are evidence,
-not new progress. Rejected or superseded construction is churn. Discovery of
+Accepted material Product movement is progress under
+[UP-013's predicate and annotations](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
+Rejected or superseded construction is churn, a history/cost annotation that
+cannot establish outcome movement or noncompliance by itself. Discovery of
 previously hidden distance revises the forecast but is not itself negative
 implementation progress. Paperwork, code volume, test count, commit count, and
 review count are not Product progress by themselves.
@@ -582,9 +595,15 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
 
 ### Computed Classification And Treatment
+
+This triage family assumes F1–F4 and F6 on the exact requested change and its
+material dependencies. A label or local delta cannot decide governing
+insufficiency; the shared Support and Currentness conditions supply that
+constraint. Spec owns change-class and re-entry policy, while the actual source
+owners retain meaning, residual judgment and reserved rulings.
 
 Intake supplies one reusable classification result rather than requiring each
 role to reconstruct the same facts. `C` denotes reproducible facts and declared
@@ -630,6 +649,29 @@ The computed result must expose:
    missing premise still unresolved. A label or filename cannot select the
    route. When rules settle the question, invent no residual judgment.
 
+The delta and coverage words describe evidence; when C determines them, it
+returns these predicate-bound refinements. A declared comparison or coverage
+scope may include any supported state, including no change or no candidate;
+familiar success cases are not an implicit restriction.
+
+| Determination | Supported reason | Core verdict on that predicate |
+|---|---|---|
+| `the exact relation/member differs from its predecessor` | `changed`: authenticated difference | `satisfied` |
+| same delta predicate | `unchanged`: complete comparison establishes equality | `falsified` |
+| same delta predicate | `unknown`: missing candidate, incomplete enumeration or unavailable comparison | `indeterminate` |
+| `accepted design covers this exact changed relation` | `covered`: current accepted scope, trace and acceptance establish coverage | `satisfied` |
+| same coverage predicate | `missing` or `outside-scope`: complete evidence establishes absence or exclusion from accepted scope | `falsified` |
+| same coverage predicate | `missing`, `stale` or `ambiguous`: support does not decide current coverage | `indeterminate` |
+
+For either predicate, an unusable subject/basis gives `invalid_basis`, and an
+evaluation outside its bound scope/capability gives `out_of_frame`; those
+diagnoses differ from design scope excluding a relation. A missing reason gives
+`indeterminate` under the core law, retaining independently established
+counterevidence. C/J/O and change classes remain annotations and treatment
+choices. A treatment determination evaluates its named rule premises; an
+applied ruling uses the separate core decision predicate. Neither can be
+inferred from delta or coverage labels alone.
+
 A Public delta or other nonconformance does not itself require changing the
 governing contract. If that contract remains sufficient for the authorized
 outcome, reject or locally repair the candidate within its grant. Re-enter
@@ -656,7 +698,7 @@ carrier and recorded-J/O continuity rules.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-003 Material Sufficiency
 
@@ -668,7 +710,7 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-006 Authority Conservation
 
@@ -678,7 +720,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-012 Closed Results
 
@@ -718,9 +760,16 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646`.
+Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d`.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
+
+Given F2 and F6 and a claim requiring independent assessment, author evidence
+cannot itself establish that independence or transfer acceptance authority.
+The [configuration contract](../FOUNDATIONS.md#configuration) preserves required
+independence. UP-007 chooses its applicable boundaries, durable trace and
+promotion-blocking policy below; the governing owner selects required review
+and any reserved decision. Fresh context alone changes no authorship relation.
 
 Authority to author or implement a change is not independent authority to
 verify it. Where independent review is required, the reviewer is not the author
@@ -741,7 +790,8 @@ review verdict. This rule requires no separate receipt, carrier, or review
 round.
 
 A review verdict is bounded by the exact reviewed claim and its applicable hard
-stops. A finding blocks current promotion only when it falsifies that claim,
+stops, using the [core result record](../FOUNDATIONS.md#result-algebra). A finding
+blocks current promotion only when it falsifies that claim,
 exposes competing or ambiguous authority on its acceptance path, violates
 applicable active authority, safety, or retained accepted behavior, or
 establishes a material architectural decision with durable consequences that
@@ -750,6 +800,13 @@ forecloses an admitted Product outcome.
 A valid observation outside that boundary is repricing input. It does not by
 itself widen the reviewed subject, block its bounded claim, or require a new
 ticket, artifact, review round, or implementation increment.
+
+`Blocks promotion` and `repricing input` classify a finding's relevance under
+that policy; neither is a verdict on the reviewed claim. Any determination
+that promotion is admissible evaluates the actual affected gate conditions.
+Known violations falsify that predicate; unknown required evidence keeps it
+indeterminate, with core scope/basis diagnoses and coverage retained. A finding
+outside the promotion boundary does not make that predicate satisfied.
 
 A direct or lawfully proxied human ruling receives durable disposition before
 the next affected acceptance boundary. Its source wording remains distinct
@@ -771,7 +828,7 @@ carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
 
 
-Source: [TICKET_METHOD.md — Condition-Based Closure And Reuse](../TICKET_METHOD.md#condition-based-closure-and-reuse); SHA256 `baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646`.
+Source: [TICKET_METHOD.md — Condition-Based Closure And Reuse](../TICKET_METHOD.md#condition-based-closure-and-reuse); SHA256 `d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d`.
 
 ### Condition-Based Closure And Reuse
 
@@ -799,7 +856,7 @@ the claim or expanding work. Record the exact evaluated scope, satisfied
 conditions, evidence and residuals in the existing carrier.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -809,7 +866,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-014 Capability Fit
 
@@ -819,7 +876,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Contract application
 

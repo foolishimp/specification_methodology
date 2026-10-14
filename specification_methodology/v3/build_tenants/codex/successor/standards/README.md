@@ -108,3 +108,12 @@ this entry creates no alternative continuation owner. The projected frames are
 declared members of the complete
 constitutional member set. Their source owners, exact bytes and fidelity remain
 required; a frame is not an independently selectable method version.
+
+The [method interpretation](../interpretation/README.md) supplies the encoded
+determinations, source routes and unresolved conditions for symbolic acquisition.
+Its document-source inventory is distinct from the complete package inventory.
+Use its declared projection and re-entry contract when an interpretation is
+material to the task. The underlying owners decide meaning, while the encoded
+relation and its checker supply only their declared evidence. Reading this
+source package for assessment neither changes an operative Product basis nor
+establishes an installed release.

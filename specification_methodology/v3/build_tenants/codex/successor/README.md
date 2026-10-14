@@ -15,3 +15,10 @@ refinements of the single result algebra and authority.
 selected clauses for bounded tasks. Plugin skills route actors to sufficient
 material and the exact basis selected by their Product Definition. Views and
 skills preserve their owning clauses and confer no operation or decision grant.
+
+The [method interpretation](interpretation/README.md) represents the source
+determinations and their dependencies for bounded acquisition. Its source
+inventory identifies the document subject; its encoding theory, carrier and
+checker have separate coordinates. Structural validation does not establish
+semantic fidelity or acceptance. Assessing an explicitly selected source
+package does not adopt it as the actor's governing method or install a release.

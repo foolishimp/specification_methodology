@@ -10,12 +10,12 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: 07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea
-  TRANSFORMATION_LIBRARY.md: 65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c
-  SPEC_METHOD.md: 7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529
-  REFERENCE_FRAME_METHOD.md: 34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2
-  STDO_REFERENCE_FRAME_BASELINE.md: eae3b37f353fb781a22aca47255b395f4e027793598c558bea88ac4309b61230
-  RELEASE_METHOD.md: b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062
+  FOUNDATIONS.md: aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189
+  TRANSFORMATION_LIBRARY.md: 596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09
+  SPEC_METHOD.md: 0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0
+  REFERENCE_FRAME_METHOD.md: db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1
+  STDO_REFERENCE_FRAME_BASELINE.md: 4b6b923a18527efca339496e8e1ae56e61786237b72cd3e51d8594efa6b18b1d
+  RELEASE_METHOD.md: d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
@@ -34,7 +34,8 @@ governs context reconstruction and conditional reuse.
 
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
-organise shared premises and transformation families. Detailed owners retain
+own shared result, context, configuration and conditional transformation
+contracts. Detailed owners retain
 their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.

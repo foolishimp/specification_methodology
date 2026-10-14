@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result algebra
 
@@ -85,7 +85,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -134,7 +134,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result conjunction
 
@@ -251,9 +251,17 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
 
 ## Release Identities
+
+This identity/publication family assumes [F2–F4 and F6](../FOUNDATIONS.md#foundational-commitments)
+with separately governed Products and observable release carriers. A claim
+then needs its exact subject, compatible member/ref relations and actual grant
+under [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application).
+This member chooses immutable annotated cuts, qualified namespaces, subtree
+identity, historical conservation and monotonic selectors. Product release
+authorities assign namespaces and subjects; co-location cannot choose them.
 
 The release-publication context distinguishes:
 
@@ -278,7 +286,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
 
 ## Immutable RC Publication
 
@@ -317,10 +325,31 @@ local command success or failure cannot decide the remote effect. After
 observation, complete or repair only the still-authorised missing relation;
 never move an immutable published cut.
 
+The publication, advancement, selector-resolution and cohort gates below each
+bind their stated conditions as their exact predicate. `Refused`, `fails closed`
+and `stops` preserve the domain reason: a demonstrated missing/incorrect ref,
+nonmonotonic target, stale accepted plan, defeated lease or unsupported required
+atomic transport falsifies that gate's admissibility predicate; unavailable
+remote or deciding evidence leaves it `indeterminate`. An uninterpretable
+governing subject/basis gives `invalid_basis`; evaluation outside its declared
+scope/capability gives `out_of_frame`; established fulfillment of all conditions
+gives `satisfied`. Missing reasons cannot justify satisfaction. A gate result
+does not establish actual publication/adoption, and a refused call does not
+prove `not_started` after possible dispatch. Preserve the core performance,
+coverage and observed-effect coordinates at each selected boundary.
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062`.
+
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
 
 ## Exact-Cut Qualification
+
+Given F1–F4 and F6, evidence for a narrower or different subject cannot establish
+this cut's claim, and a satisfied assessment cannot make an owner decision.
+The shared [result/conjunction contract](../FOUNDATIONS.md#result-conjunction)
+supplies those consequences. Release policy separately chooses exact-cut review,
+required operator checks and human acceptance; the Product declares its claim
+set, external dependencies and any lawful narrowing. Supported alternative
+realizations use those same claim conditions, not an assumed preferred build.
 
 Qualification binds:
 
@@ -345,6 +374,17 @@ item's original outcome and finer diagnostic. The release's declared required
 claim set supplies the conjunction; its core result, performance and coverage
 determine standing rather than a passed label or cached release summary.
 
+For the item's claimed property, `passed` maps to `satisfied` only with
+established performance and every required coverage/evidence condition on the
+exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
+`cached green` or any other raw label without deciding support is
+`indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
+diagnosis and separately authenticated counterevidence under the core legal
+pairs. Missing reasons follow the core missing-reason rule. A missing required
+judgment remains an absent coverage slot, not a fabricated skipped evaluation;
+the declared conjunction retains a known failure beside that slot. Actual
+performance and uncertain effects are preserved independently of those labels.
+
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
 requires any qualifying-byte change, the verdict remains attached to the old
@@ -353,9 +393,15 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
 
 ## Selector And Consumer Adoption
+
+F2, F3 and F6 imply that discovery of current publication is neither an exact
+consumer basis nor permission to change one. This family chooses separate
+presentation and mutation, digest-bound plans and same-line downgrade refusal.
+The actual consumer authority accepts the selected plan; supported retention of
+an older immutable cut remains lawful through the exact-basis route below.
 
 The version-line selector answers only:
 
@@ -403,9 +449,17 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
+
+This family assumes F1–F4 and F6 and a successor whose claims derive from an
+identified predecessor. Naming, code similarity or patch absence cannot then
+establish semantic preservation, and evidence cannot authorize removal. The
+shared [preservation contract](../TRANSFORMATION_LIBRARY.md#contract-application)
+supplies those constraints. UP-015 chooses complete predecessor disposition and
+watched-support-line policy. Product authority owns removal and acceptance of
+changed meaning; the consumer chooses its comparison and durable record.
 
 A successor identifies the exact predecessor immutable RC whose semantic claims
 it evolves. That origin remains immutable for the candidate. Every predecessor
@@ -415,6 +469,37 @@ claim capable of affecting the successor receives one semantic disposition:
 - **superseded** — an accepted successor relation replaces it;
 - **intentionally removed** — current Product authority removes it; or
 - **not applicable** — it has no successor effect, with a bounded reason.
+
+These are row dispositions, not interchangeable verdicts on retention. Bind
+each semantic assessment to the predicate for its exact predecessor claim and
+successor relation:
+
+| Row disposition | Semantic predicate assessed | Required decision relation |
+|---|---|---|
+| `conserved` | the successor retains this predecessor claim's meaning | recording the conservation disposition under the bound mandate |
+| `superseded` | the named successor relation replaces this predecessor claim | actual acceptance of that successor relation by its governing authority, plus the bound disposition |
+| `intentionally removed` | this predecessor claim is excluded from the successor's governing claim set | actual removal by current Product authority; omission alone supplies no decision |
+| `not applicable` | this predecessor claim has no effect on the declared successor scope | supported applicability determination and the bound disposition; scope cannot be silently narrowed |
+
+On each named semantic predicate, established fulfillment maps to `satisfied`,
+an admissible counterexample to `falsified`, and insufficient evidence or a
+missing reason to `indeterminate`. An uninterpretable subject/governing basis
+is `invalid_basis`; assessment outside scope/capability is `out_of_frame`.
+Preserve the original row and cause, actual performance and absent coverage
+under the [core result contract](../FOUNDATIONS.md#result-algebra). Satisfaction
+of removal or non-applicability is not a claim that predecessor meaning was
+retained. Retention and replacement may be shown by any supported realization,
+not only a familiar structure or byte-identical implementation.
+
+For a row's claimed authorized disposition, the separate decision predicate is
+`this disposition D on the exact claim and basis was made under its bound
+mandate`. A supported lawful decision is
+`satisfied`; a demonstrated absent/unauthorized decision is `falsified`;
+unconfirmed authority, reason or decision is `indeterminate`, retaining core
+basis/scope diagnoses. The table's required acceptance or removal decision is
+an actual additional obligation where named, not a decision manufactured by
+recording a row. Neither predicate overwrites the other, any known semantic
+failure, or observed and uncertain effects.
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
@@ -428,7 +513,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
 
 #### Explicit Complete Consumer Update
 
@@ -479,8 +564,16 @@ It does not claim a crash-atomic transaction across independent filesystem
 paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
+`Complete update` evaluates `every selected resulting binding and companion
+satisfies the accepted plan`. A witnessed mismatch falsifies that predicate;
+unobserved completion leaves it indeterminate. A refusal before consumer
+mutation needs observed `not_started` at that boundary. `Restore` or `recovery`
+is an operation, not proof of reversal: report `reverted` only from the core's
+required observation of every begun part. Keep staged-install and consumer
+effects on their actual boundaries, including `partial` or `unknown` effects.
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -490,7 +583,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-006 Authority Conservation
 
@@ -500,7 +593,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-012 Closed Results
 
@@ -540,7 +633,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Contract application
 

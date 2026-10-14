@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646
+source_digest: d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -20,6 +20,13 @@ execution contract with explicit intake, smallest lawful re-entry, target truth,
 superseded truth, closure law, non-closure conditions, proof, and admission
 state. Required carrier lifetime decides whether that contract derives from a
 durable ticket, a sprint-local entry, or an intake draft.
+
+Treatment, item compliance and sprint closure are distinct predicates.
+`accepted`, `local_paydown`, repricing and `remove` retain their qualified
+domain meanings; their labels alone do not choose a core verdict. Apply the
+reason-sensitive maps in [Sprint Close Classification](../TICKET_METHOD.md#sprint-close-review).
+Lawful closure with permitted durable debt does not establish repayment or
+item compliance. Missing assessment remains missing coverage.
 
 ## Carrier-Binding Compression
 

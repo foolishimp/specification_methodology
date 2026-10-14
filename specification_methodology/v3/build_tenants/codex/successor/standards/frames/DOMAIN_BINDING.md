@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result algebra
 
@@ -85,7 +85,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -134,7 +134,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Result conjunction
 
@@ -251,7 +251,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
+Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
 
 ## Configuration
 
@@ -279,7 +279,7 @@ authority and required independence. A claim that one arrangement is optimal nam
 objective, constraints, comparison scope and evidence.
 
 
-Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `57a6da7f6f5696eb354947a799afc222050cdd0d13005f913577f5f6580b5998`.
+Source: [ODD_METHOD.md — 11.5A ABG Owns Continuation And Re-Entry](../ODD_METHOD.md#115a-abg-owns-continuation-and-re-entry); SHA256 `2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268`.
 
 ### 11.5A ABG Owns Continuation And Re-Entry
 
@@ -315,7 +315,7 @@ has drifted into a different architecture that only happens to publish some
 ODD-shaped artifacts.
 
 
-Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `57a6da7f6f5696eb354947a799afc222050cdd0d13005f913577f5f6580b5998`.
+Source: [ODD_METHOD.md — 11.6 Product-Specific Semantics Sit Above The Shared Carrier](../ODD_METHOD.md#116-product-specific-semantics-sit-above-the-shared-carrier); SHA256 `2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268`.
 
 ### 11.6 Product-Specific Semantics Sit Above The Shared Carrier
 
@@ -332,7 +332,7 @@ Do not confuse:
 - product-specific semantic law
 
 
-Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `1aaa7aa4cb0dff936380b966681ebf9fd8dc7e9bb55b6a53feba8d45b9448711`.
+Source: [UX_METHOD.md — 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation](../UX_METHOD.md#8-ux-twin-of-odd-115a--view-does-not-own-continuation); SHA256 `495d279bee2689ee8c8306e81741f385ff0df3ed231f31ad6bd208423a7b7ae4`.
 
 ## 8. UX Twin Of ODD §11.5A — View Does Not Own Continuation
 
@@ -361,7 +361,8 @@ A replay proof includes:
 - an ordered `Msg` log
 - the expected final `State`
 - the expected ordered `Cmd` values
-- the success and failure `Msg` values returned by interpreted `Cmd`s
+- the typed outcome `Msg` values returned by interpreted `Cmd`s, including
+  unresolved effects wherever admitted by the interaction contract
 - injected deterministic values for time, randomness, generated ids, and
   external payloads
 
@@ -378,8 +379,12 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 Each replay assessment returns the shared
 [result record](../FOUNDATIONS.md#result-algebra) on the exact interaction-family
 predicate, preserving the original test outcome and observed command/effect
-trace. A demonstrated expected-state or command mismatch, or a demonstrated dependency on
-any source excluded by this replay contract, is `falsified`; a
+trace. Evidence of the expected final State, ordered Cmds and typed returns
+under the declared replay conditions satisfies that replay predicate.
+A replay can correctly reproduce an unknown-effect Msg without establishing
+completion of the underlying effect. A demonstrated expected-state or command
+mismatch, or a demonstrated dependency on any source excluded by this replay
+contract, is `falsified`; a
 proof not run retains `not_performed` and cannot satisfy the predicate.
 Missing decisive trace is `indeterminate`; an unusable fixture or governing
 basis is `invalid_basis`; an interaction outside the declared assessment domain
@@ -391,7 +396,7 @@ the no-effect predicate only when that is the declared interaction contract.
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680`.
+Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6`.
 
 ## Theoretical Underpinnings Of The Markov Object
 
@@ -564,7 +569,7 @@ for all design work. The relation runs the other way:
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680`.
+Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6`.
 
 ### Markov Object
 
@@ -592,7 +597,7 @@ Object*. Discovery obligations in *Entity Cut Construction Law*.
 Representation-substrate obligations in *Markov Object Construction Law*.
 
 
-Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680`.
+Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6`.
 
 ## Proof Law
 
@@ -623,7 +628,7 @@ model.
 ---
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — OP-004 Precedence Is Not Authority](../TRAVERSAL_OCCURRENCE_PROFILE.md#op-004-precedence-is-not-authority); SHA256 `94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a`.
 
 ### OP-004 Precedence Is Not Authority
 
@@ -633,7 +638,7 @@ The coordinate orders eligible facts; it does not gain semantic, admission,
 causal, or decision authority.
 
 
-Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234`.
+Source: [TRAVERSAL_OCCURRENCE_PROFILE.md — Authority And Adoption](../TRAVERSAL_OCCURRENCE_PROFILE.md#authority-and-adoption); SHA256 `94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a`.
 
 ## Authority And Adoption
 
@@ -659,7 +664,7 @@ An absent or incomplete adoption means the profile is available but inactive
 for that Product.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-003 Material Sufficiency
 
@@ -671,7 +676,7 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -681,7 +686,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-006 Authority Conservation
 
@@ -691,7 +696,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
 
 ### RF-012 Closed Results
 
@@ -731,7 +736,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
 
 ## Contract application
 
@@ -845,3 +850,87 @@ claim. A self-consistent model, matching schema, checksum or generated diff
 checks a different relation. Failure re-enters the first owning defect: source
 ambiguity, interpretation, projection, producer or consumer. It does not license
 changing the source to agree with its view.
+
+
+Source: [FOUNDATIONS.md — Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+
+## Orthogonal descriptions
+
+Keep three accounts distinct. An algorithmic account specifies the selected
+transformation. An informational account explains interpreted distinctions and
+their preservation. A computational account realises the operation through a concrete execution
+environment: software and hardware, people and communication, or a mixed
+process, with the effects and resource costs material to its obligations. They are
+simultaneous descriptions, not successive SDLC stages.
+
+To assert a category, specify its domain, objects, typed arrows, arrow equality,
+identities and associative composition. To assert a functor, define its action
+on objects and arrows and show identity and composition preservation.
+For a proposed categorical model, A names the algorithmic account, I the
+interpreted informational account, and C_H the computational realization on a
+declared architecture H. They name categories only after the required objects,
+arrows and laws have been supplied. For a proposed span A -> I and A -> C_H,
+conformance to Sigma_contract, semantic
+equivalence and computational equivalence remain different claims. Categorical
+equivalence additionally requires the appropriate quasi-inverse and natural
+isomorphisms on a stated domain; an analogy or matching result is insufficient.
+
+Each claimed refinement states and discharges what it preserves. Exact
+rewriting preserves meaning; approximation declares its adequacy relation and
+an end-to-end bound, since local tolerances alone do not compose. Each step uses
+laws valid for its declared subject; without additional laws only universally
+valid steps are licensed. Laws, records and maps claimed for the method are
+represented in a_c with premises, consequences and declared choices distinct.
+The calculus, its interpretation and its carriers retain separate identities.
+Classify the evidence for each claim as mechanically checked, mathematically
+argued, tested against an independently specified oracle or unresolved.
+Structural validation supplies no semantic proof. Claiming the method's
+categorical construction capability also requires a worked algorithm-to-
+computation join; an unproved categorical account remains a hypothesis.
+
+State sufficiency for a selected decision, statistical Markov properties,
+conditional independence, a mathematical Markov category and a runtime monad
+are separate claims. The method neither asserts nor rejects them universally.
+Their domains, laws and falsifiers must be supplied before using them as proof.
+
+
+Source: [ODD_METHOD.md — Governing Relations](../ODD_METHOD.md#governing-relations); SHA256 `2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268`.
+
+## Governing Relations
+
+This graph-native profile applies in a Product-declared ODD scope under lawful
+activation. Its consumer binds the ODD, GTL and ABG roles to concrete
+realizations; availability selects neither a package nor a Product meaning or
+grant. Spec, Design, Frame, Ticket, Release, World Model and UX retain their
+own applicability and owners.
+
+At each published action and evaluation boundary, apply
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) with the
+exact selected Product outcome or admitted bounded prerequisite/experiment,
+IntentLineage, TargetObligationBinding, published action contract, current
+execution basis and consumer-bound authority. Its material dependencies are
+the inputs and causal predecessors declared by the constructive loop.
+[Constraint surface](../TRANSFORMATION_LIBRARY.md#constraint-surface) bounds the
+worker's external obligations while leaving its internal HOW open.
+
+This member owns graph-native actions, cumulative typed environments, admitted
+runtime facts and the four-function consequence loop. Their exact functions,
+carriers, control grants and domain outcomes below specialize shared
+preservation, projection, currentness and result law. They require no additional
+generic workflow, runtime API, categorical-equivalence claim or actor hierarchy.
+
+These material families use [F1–F6](../FOUNDATIONS.md#foundational-commitments)
+conditionally within ODD adoption. The named ODD policies are additional choices
+owned here; the consuming Product binds their concrete contracts and grants.
+
+| Material family | Premise → consequence under shared law | Additional ODD policy |
+|---|---|---|
+| Typed graph and Product boundaries: sections 5–7, 11.1–11.4, 11.8 | F2/F4/F6 require compatible interpreted carriers and preserved authority at composition; last-output wiring cannot substitute for a required earlier input. | Published graph functions, explicit assets/catalog/GTL module, cumulative environment, and installed/self-host separation are this profile's chosen realization. |
+| Control ownership: A0, A4a, A5, A7, A12, A15, A16 | F4/F6 require distinct operations to retain their actual grants when machinery is shared. Contract application therefore cannot infer action authority from a report, model or projection. | The four-function table and ABG admission/traversal divide are the chosen control architecture; query reads and function sharing do not merge authority. |
+| Targets and lawful actions: A2, A3, A11 | F1/F3/F6 require current actions to preserve the selected outcome and actual mandate. An action outside that bound cannot be selected merely because it is available. | Exact TargetObligationBinding, published-action selection and graph-owned re-entry are required; Product authority owns outcome changes and bounded prerequisite/experiment admission. |
+| Observation, lineage and recovery: A1, A1a, A1b, A13, A13a | F2/F3/F4/F6 require sufficient authentic current support and causal joins; history does not overrule changed reality. Workspace/currentness law preserves uncertain effects before dependent repetition. | ODD additionally requires admitted reachable ledger/event support and replay-visible decisions. This ledger/replay architecture is not a universal consequence of F3 or F5. |
+| Total control and liveness: A4, A8, A9, A10 | F1/F5/F6 require truthful bounded handling without equating activity, lawful stopping or a permitted decision with achieved purpose. | The seven closure dispositions, typed no-action and replay-visible yield are ODD's control vocabulary; A8 binds separate decision and fitness predicates. |
+| Closure across refinement: A6, A14, 11.9 | F1/F4/F6 require all material outer obligations and joins to survive composition; inner success alone cannot establish outer closure. | ODD requires evidence-before-closure and recursive application at published boundaries, while opaque internal algorithms remain permitted. |
+| Process and authority-path proof: 11.7–11.7B, UP-010 | F2/F6 require evidence about the actual claimed process and authority path, not a preconstructed verdict. | This member chooses manual/agentic walkthrough and supported-path negative proof; the method/actor cause distinction below does not itself decide conformance. |
+
+<!-- STDO3_PROFILE_BINDING_END -->

@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0
+source_digest: 721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -49,10 +49,12 @@ Implementation and tests cannot select or accept the affected semantic answer.
 The Ontology remains subordinate to constitutional `WHAT`. It may not invent
 product meaning.
 
-This asset projects `DESIGN_MODULE_METHOD.md` only. It is standalone for
-DMM-owned decisions, including IACS revision, but cannot close the SPEC-owned
-`STDO-UP-022` assurance decision. For that decision, route to the digest-current
-SPEC source or compression, or to the aggregate STDO compression.
+This asset projects `DESIGN_MODULE_METHOD.md`. Its decisions consume the shared
+result and contract owners cited by that method. Transformation admission
+consumes [Spec's enclosing-admission contract](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021),
+including its reason-sensitive result mapping and trust-boundary validation.
+Acquire material shared conditions and Spec-owned assurance obligations from
+their owners or sufficient projections. A local DMM summary cannot close them.
 
 Inside the SPEC-declared product-assurance bounded context, DMM owns the
 module-derived `Unit Test` concept and proof relation. Unit proof derives from

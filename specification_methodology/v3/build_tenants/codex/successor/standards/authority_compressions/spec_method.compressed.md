@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529
+source_digest: 0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -27,10 +27,18 @@ select a downstream repository, package, vendor, Product, or concrete
 implementation. Constitutional examples therefore demonstrate enabled
 capabilities through neutral identities rather than consumer precedent.
 
-This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
-decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
-For that decision, route to the digest-current DMM source or compression, or to
-the aggregate STDO compression.
+This asset projects `SPEC_METHOD.md`. Its decisions consume the shared result,
+context and contract owners cited by that method. Acquire those owners whenever
+their conditions are material; this summary cannot replace them. DMM-owned IACS
+revision additionally requires the digest-current DMM source or sufficient
+projection.
+
+Common WHAT bounds admissible states, outcomes, constraints and evidence. Each
+build tenant binds those requirements to concrete operations, actors, effects,
+operational assumptions and observation through its design. Software, hardware,
+people and mixed processes are permitted bindings. Actor identity does not
+choose operation kind. Requirement-to-operation routes require their actual
+preservation evidence; an a_c structural check cannot supply it.
 
 ## Intake Triage Compression
 

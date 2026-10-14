@@ -1,86 +1,59 @@
 {
-  "kind": "stdo_synthesis_artifact_qualification",
-  "valid": true,
-  "input_fingerprint_before": "3b0fb640026b04fcf99967fea7ef9cc382ee65ba739c19b0dd39099b48ed1769",
-  "input_fingerprint_after": "3b0fb640026b04fcf99967fea7ef9cc382ee65ba739c19b0dd39099b48ed1769",
-  "recording_head": "b99ca785b05e4f818b1e012c20f38228be10e46d",
-  "python_executable": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
-  "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "kind": "stdo.current-source-artifact-check",
+  "draft": true,
+  "valid": false,
+  "frozen_artifact_valid": false,
+  "source_input_commit": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
+  "inventory_input_commit": "b99ca785b05e4f818b1e012c20f38228be10e46d",
+  "document_source_input_commit": null,
+  "fingerprint_before": "714c37a5c877d7de0ad20f45ea046f407e50fcf8d66c227d1335a3bfedbad467",
+  "fingerprint_after": "714c37a5c877d7de0ad20f45ea046f407e50fcf8d66c227d1335a3bfedbad467",
+  "checker_sha256": "d8fb5b6855dd701dde0a2f0cc21fc4431dd9a2b46af8a8290b679cb7427807e3",
+  "historical_algorithms_sha256": "6e94013a2f48f8b828370e7473aebbdec77e999967271d0df205f99796de0d00",
   "counts": {
-    "package_members": 80,
-    "package_bytes": 1678022,
-    "members_verified_at_declared_commit": 80,
-    "common_frontier_rows": 691,
-    "conservation_rows": 691,
-    "predecessor_members_verified": 71,
     "markdown_members": 66,
     "json_members": 7,
-    "links_resolved_locally": 776,
+    "links_resolved_locally": 886,
     "external_links_not_fetched": 0,
     "logical_release_links": 0,
     "author_attributions": 1,
-    "exact_excerpt_sections": 95,
-    "local_fragment_relocations_checked": 19,
+    "exact_excerpt_sections": 98,
+    "local_fragment_relocations_checked": 23,
     "excerpt_views": 6,
-    "compression_source_pins": 32
+    "compression_source_pins": 32,
+    "schemas_structurally_valid": 2
   },
   "details": {
-    "candidate_standing": "Codex iteration 3 author candidate; independent member and owner acceptance remain open.",
-    "inventory_input_commit": "b99ca785b05e4f818b1e012c20f38228be10e46d",
-    "author_disposition_counts": {
-      "conserved": 657,
-      "intentionally removed": 0,
-      "not applicable": 1,
-      "superseded": 33
-    },
-    "synthetic_child": {
-      "id": "TRAVERSAL_OCCURRENCE_PROFILE.md#closed-profile-signature-fourteen-members",
-      "source_member": "standards/TRAVERSAL_OCCURRENCE_PROFILE.md",
-      "source_anchor": "#closed-profile-signature",
-      "source_selection": "Synthetic common child row: exact fourteen-member historical derivation sentence, 107 bytes.",
-      "successor_locus": "standards/TRAVERSAL_OCCURRENCE_PROFILE.md#closed-profile-signature",
-      "disposition": "conserved",
-      "claim_owner": "author; independent assessment and owner acceptance remain separate",
-      "comparison_group": "profiles",
-      "note": "The selected derivation basis retains its fourteen references; the source enumeration is conserved as an edition-specific fact, not a universal fixed count.",
-      "successor_sha256": "ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234",
-      "acceptance": "current_independent_review_pending"
-    },
-    "frontier_acquisition_snapshot": {
-      "input_commit": "cae6fe366395148558efb84c85501b768f6593fc",
-      "rows": 691,
-      "matches_current_common_row_ids": true,
-      "standing": "input acquisition snapshot; current common WHAT supplies the compared row identities"
-    },
-    "schema_checks": {
-      "schemas_checked": 2,
-      "definition_controls": [
-        {
-          "field": "uri",
-          "rejected": true
-        },
-        {
-          "field": "manifest_sha256",
-          "rejected": true
-        }
-      ],
-      "extra_auxiliary_category_rejected": true,
-      "template_entrypoints_resolved": 4,
-      "install_namespace_product_members": 79,
-      "package_entry_excluded_from_hypothetical_install": "README.md",
-      "subject": "hypothetical instances only; no release, install, sync or channel change"
+    "generation_experiment": {
+      "already_current": true,
+      "repeat_identical": true,
+      "semantic_map_and_frontier_preserved": true,
+      "changed_owner_refused_before_writes": true,
+      "unreconciled_summary_refused_before_writes": true,
+      "scope": "Generation behavior in a disposable copy; no semantic fidelity conclusion."
     }
   },
-  "failures": [],
-  "ownership_search_signals": [],
-  "elapsed_seconds": 2.669,
+  "failures": [
+    {
+      "group": "links",
+      "message": "README.md -> missing interpretation/README.md"
+    },
+    {
+      "group": "links",
+      "message": "plugins/spec/skills/stdo-work/SKILL.md -> missing ../../../../interpretation/README.md"
+    },
+    {
+      "group": "links",
+      "message": "standards/README.md -> missing ../interpretation/README.md"
+    }
+  ],
+  "elapsed_seconds": 1.687,
   "limits": [
-    "Artifact coordinates and reproducibility, not semantic conservation or whole-method fitness",
-    "Author dispositions and resolved loci are not independent acceptance",
-    "Source-bound excerpts are not proof of task sufficiency or ordinary-use success",
-    "Schema instances and release note are hypothetical; no release, installation or plugin-host proof",
-    "Ownership search signals require contextual review; their absence proves no semantic property",
-    "External web links were not fetched; known installed rc.2 routes were checked locally",
-    "This qualification Writer authored package consumer laws; this is not independent semantic review"
+    "Author artifact checks, not semantic acceptance or whole-method fitness.",
+    "Exact excerpts and declared routes do not establish frame sufficiency.",
+    "Compression body reconciliation is author evidence, not independent fidelity.",
+    "interpretation/ is source-package material; its issued installation contract remains unselected.",
+    "Schemas checked for structure only; no installed-v3 publication, plugin-host or adoption claim.",
+    "External links not fetched; exact installed rc.2 logical routes checked locally."
   ]
 }

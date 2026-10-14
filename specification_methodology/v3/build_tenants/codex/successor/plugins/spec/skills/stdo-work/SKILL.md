@@ -46,6 +46,13 @@ its owning definition in the selected frame.
 Read the selected frame and the actual subject. Follow material source and
 coupled-obligation references when the task needs them. The view alone makes no
 universal sufficiency claim and supplies no role, effect or decision grant.
+If symbolic acquisition is material, follow the selected package's
+[method interpretation](../../../../interpretation/README.md). Verify its
+document-source inventory and declared encoding/checker basis before consuming
+a projection, and re-enter its named sources for unresolved conditions. An
+interpretation's structural validity does not establish permission or semantic
+fidelity. A source package selected as an assessment subject remains distinct
+from the actor's operative installed method basis.
 Do not load the corpus merely because it is present. If coupled material does
 not fit the capable activation, retain the unknown and use an already-authorized
 refinement, support or stop; do not silently reduce the required predicate.
