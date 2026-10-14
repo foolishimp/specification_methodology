@@ -3,52 +3,26 @@
 <!-- STDO3_PROFILE_BINDING_START -->
 ## Governing Relations
 
-This optional profile refines [Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md) for immutable histories over
-an externally mutable subject. It imports the exact
-[Axiomatic Calculus](AXIOMATIC_CALCULUS.md) basis through the closed instantiation
-law below. Its profile signature, adoption mapping and owner-issued grants
-retain their own identities. The foundation's generic work and evidence law does
-not enroll every model in this profile or supply a scheduler, state store,
-rollback mechanism or operation authority.
+This optional profile binds
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+immutable histories over an externally mutable subject. Its admission, effect
+readiness and frontier-projection consumers below supply the exact record
+families, predicates, equality relations, grants and result refinements.
 
-The premises are a mutable subject, bounded observations, explicit operation
-authority and a claim that an immutable record describes one application. From
-[workspace and context](FOUNDATIONS.md#workspace-and-context), the record and
-the actor's context cannot replace the subject or establish unobserved effects.
-From scoped identity and compatible composition, a later application preserves
-the identity and standing of earlier claims while evaluating the current state.
+The adopted policies are the closed signature, append-only occurrence/event
+history and atomic semantic-admission cut. The exact calculus basis, profile
+signature and Product adoption retain separate identities. Their finite
+reference domains, cardinalities, enums, inherited records, refusal mappings
+and publication-resolution conditions remain the concrete application contract.
 
-This profile additionally chooses append-only occurrence history, a closed
-signature and exact semantic-admission cuts. These are adopted profile policies,
-not necessary consequences of finite context or requirements on every method
-user. The closed profile fixes every finite field reference domain, cardinality,
-closed enum, inherited record family, refusal mapping, signature preimage and
-publication-resolution condition. The shared
-foundation supplies the shared result and current-state contracts; the profile determines
-its exact records and predicates. A stable SubjectBinding points to mutable
-reality, while each traversal application has a fresh immutable occurrence.
-Application, operation kind, operation, executor, actor, grant and effect
-invocation remain separate coordinates.
-
-| Shared transformation | Occurrence-profile refinement and preserved distinction |
-|---|---|
-| Bind | Resolve the exact imported calculus and profile basis, stable subject binding, traversal application, intended outcome, operation kind and existing owner-issued effect grant. No future result, judgment or event enters an occurrence seed. |
-| Acquire | Obtain bounded pre-effect and post-effect observations, currentness and invalidation evidence, exact external resolutions and the complete event frontier needed by the declared judgment. Missing, stale or ambiguous coordinates retain their prescribed refusal, hold or residual. |
-| Transform | A separately identified and authorized operation may affect the external subject only after exact effect readiness. Candidate claims, invocations, admitted events, materialized relations and later dispositions preserve their distinct immutable identities. |
-| Evaluate | Each inherited Judgment binds its unchanged subject and digest, kind, evaluator, existing authority, exact evidence, provenance and closed decision domain. Readiness, transition and projection judgments conserve the corresponding stop and re-entry laws. |
-| Conjoin | Semantic admission preserves the complete seven-member cut, three admitted judgments, required relation records, equal source-frontier bindings and unique successor frontier. Typed causal subgraphs remain distinct from wider lineage and precedence. |
-| Dispose | Existing competent Product authorities own adoption, operations, admission, correction and projection decisions. No-effect, completed-effect, partial-effect and refused-effect dispositions retain the exact evidence and further-effect restrictions stated below. |
-
-The admission and effect consumers below apply the shared
-[result algebra](FOUNDATIONS.md#result-algebra) and
-[result conjunction](FOUNDATIONS.md#result-conjunction). These bindings neither
-mint a grant nor weaken the closed signature.
-Semantic atomicity retains its profile meaning and imposes no storage
-transaction. Reapplication retains the evolving subject and prior immutable
-history; it supplies no universal side-effect idempotence or rollback guarantee.
-The exact imported calculus's derivation basis is an identity-bearing part of
-AxiomaticCalculusBasis; its exact resolution remains an admission/refusal condition.
+[Workspace and context](FOUNDATIONS.md#workspace-and-context) governs current
+observation and uncertain effects; the profile adds its bounded observations,
+currentness law and immutable history. It supplies no scheduler, state store,
+rollback mechanism or grant. Subject binding, traversal application, operation
+kind, operation, executor, actor and invocation are distinct coordinates.
+Reapplication preserves the evolving subject and admitted prior history without
+assuming side-effect idempotence. Semantic atomicity prescribes no storage
+transaction.
 
 <!-- STDO3_PROFILE_BINDING_END -->
 
@@ -908,13 +882,13 @@ RelationClaim c
   -> Judgment j_a over unchanged a
 ```
 
-Evaluate `j_a` by conjoining the authenticated claim judgment `j_c`, event
-judgment `j_e` and the cut's declared material joins through
-[result conjunction](FOUNDATIONS.md#result-conjunction). `j_a` is this
-evaluation's output, never its own input. Retain each exact component judgment
-and required equality relation. A refusal remains visible beside a
-missing judgment; absence cannot erase the refusal or complete the cut. The
-conjunction does not widen the admission authority of any participant.
+For semantic-cut admission apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+`a` and its complete tuple below, under the exact profile basis and competent
+admission grant. The required support is authenticated `j_c`, `j_e` and
+the declared membership/equality joins. Conjoin them through the core law;
+`j_a` is that assessment's output, never its own input. Retain the exact
+component judgments and joins under their own identities.
 
 Only `j_c.decision = admitted`, `j_e.decision = admitted`, and
 `j_a.decision = admitted` admit the complete semantic cut. `c`, `j_c`, `e`,
@@ -946,12 +920,12 @@ fields. A missing cut judgment, non-`admitted` decision, wrong subject or
 digest, or cross-basis judgment leaves the semantic cut unadmitted; these
 conditions do not all establish the same verdict.
 
-Contribution authentication requires the exact subject, digest, declared basis
-and judgment authority. A mismatched contribution cannot decide the required
-slot; retain the missing admissible support rather than inventing its result.
-Within an interpretable cut, the required membership and equality relations
-below are material joins. An established failure of such a join is
-counterevidence to cut admission, not a missing governing basis.
+The application's contribution bindings are the exact subject, digest,
+declared basis and judgment authority required above. Contract application
+decides their support; the membership and equality relations below are material
+joins of cut admission under an interpretable profile basis. A demonstrated
+join failure therefore falsifies that predicate rather than changing its
+governing basis.
 
 Apply core conjunction before mapping `j_a`: `falsified` maps to `refused`,
 except that established source-frontier staleness retains the declared `hold`
@@ -1023,16 +997,13 @@ not claims that contain their own future event endpoint.
 
 ### OP-002 Atomic Semantic Admission
 
-For a relation claim, one admitted semantic cut contains the unchanged claim,
-its admission judgment, the event and its scope/admission judgment, the
-deterministic materialized relation, the exact source frontier, and the unique
-successor frontier. The source frontier named by the claim, event, and cut is
-identical. The successor equals that frontier plus exactly the admitted event.
-A demonstrated missing or inconsistent required member defeats the complete-cut
-predicate; missing judgment support keeps the cut unadmitted under the
-conjunction rule above. No unresolved or refused cut admits a subset. This is
-semantic atomicity; the profile does not prescribe a storage or transaction
-mechanism.
+The semantic commit unit is the complete seven-member cut declared by
+[Candidate, Judgment, Event, And Relation Separation](#candidate-judgment-event-and-relation-separation),
+with its exact three admitted judgments, required relation records and unique
+successor frontier. The application admits that whole unit or none; an
+unresolved or refused cut cannot admit a subset. Missing or inconsistent members
+and missing judgment support keep their distinct core results at that gate.
+This is semantic atomicity, not a prescribed storage or transaction mechanism.
 
 ### OP-003 Correction Without Erasure
 
@@ -1094,9 +1065,12 @@ Functor kind, traversal, domain operation, executor, actor, grant, and effect
 invocation are different coordinates. `F_P`, `F_D`, or `F_H` classification
 does not by itself identify, authorize, or execute `op_n`.
 
-No operation is lawful without a matching grant naming the subject binding,
-operation kind, and effect territory. Profile construction and occurrence
-admission mint no grant.
+Effect readiness applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+the unchanged `EffectSubject` immediately before dispatch. Its authority
+binding is the owner-issued grant for the subject binding, operation kind and
+effect territory under the exact relations below. Profile construction and
+occurrence admission supply none of that grant.
 
 For invocation `inv_n`, operation instance `op_n`, grant `g_n`, and occurrence
 `o_n`, all operation bindings are exact:
@@ -1179,10 +1153,11 @@ required. This law does not require a lock or transaction implementation.
 
 ### OP-005 Mutable Reality Conservation
 
-`W` remains the mutable reality carrier. Observation, evidence, result,
-checkpoint, event, projection, cache, or model content may describe `W`; none
-replaces it. A later traversal application observes the then-current `W` under
-the stable binding when authority is unchanged.
+Apply [workspace and context](FOUNDATIONS.md#workspace-and-context) with
+`W` as the external reality carrier and `SubjectBinding` as its stable
+binding. A later traversal application observes the then-current `W` while
+that authority remains unchanged. Occurrence records, checkpoints, events,
+projections, caches and models are accounts of that subject, not substitutes.
 
 Snapshotting or rollback may be supplied by a separately authorized
 application. This profile neither requires nor forbids it and does not infer
@@ -1197,10 +1172,13 @@ subject changes repeatedly.
 
 ## Event Frontier And Projection
 
-An `EventFrontier` binds the complete event member set evaluated, its exact
-basis, and the declared precedence law. A projection judgment points to one
-unchanged `Projection` identity and digest; that projection binds exactly one
-unchanged frontier.
+Projection judgment applies
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) to
+one unchanged `Projection` identity/digest and its exact `EventFrontier`.
+The source binding is that frontier's complete event member set, exact basis
+and declared precedence law. The target interpretation is the declared
+projection rule with its selected relations, boundaries and residuals.
+These bindings are the profile's completeness and fidelity criteria.
 
 For profile basis `b`, scope `s`, and precedence law `p`, there is one empty
 frontier `F_0(b,s,p)`. Admitting event `e_k_plus_1` constructs a successor whose
@@ -1225,10 +1203,10 @@ otherwise occurrence-independent facts remain independent.
 This profile owns only the application-neutral record, relation, identity,
 causal, effect-boundary, frontier, and refusal laws above.
 
-It grants no semantic, operation, evaluation, admission, decision, correction,
-continuation, or closure authority. Every material operation and judgment
-resolves an existing owner-issued grant. Copying a profile record or adopting
-the profile transfers no authority.
+Every material operation or judgment applies Contract application's authority
+condition to an existing owner-issued grant for its declared domain role.
+Profile adoption and record construction supply no semantic, operation,
+evaluation, admission, decision, correction, continuation or closure grant.
 
 A Product adoption declares at least:
 

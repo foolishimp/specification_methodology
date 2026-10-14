@@ -221,14 +221,13 @@ published higher RC without matching selector advancement is an invalid,
 fail-closed release state; it never authorizes resolution of the older cut as
 the version-line latest.
 
-Publication returns a core result for the exact predicate `the declared cut
-and required public ref relation exist at the selected remote`. A local tag or
-successful command alone cannot satisfy that predicate. A transport failure
-after dispatch leaves effects `unknown` until the owning remote is observed;
-it does not establish that publication never occurred. Apply
-[workspace and context](FOUNDATIONS.md#workspace-and-context) before retry,
-then complete or repair only the still-authorised missing relation without
-moving an immutable published cut.
+Publication applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the granted remote operation, and evaluates `the declared cut and required
+public ref relation exist at the selected remote` from that remote's state.
+Its Currentness and Result conditions govern transport failure after dispatch:
+local command success or failure cannot decide the remote effect. After
+observation, complete or repair only the still-authorised missing relation;
+never move an immutable published cut.
 
 ## Exact-Cut Qualification
 
@@ -247,20 +246,13 @@ Evidence matches the claim. Source success does not prove packaged or installed
 behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
-Each qualification item records its exact predicate and core result. A passed
-item maps to `satisfied` only with established performance and all required
-coverage and evidence on the exact cut; skipped work or a cached green label
-does not establish those conditions. Otherwise determine the item's verdict
-through the [core result law](FOUNDATIONS.md#result-algebra), retaining any
-independently admissible counterevidence or basis/scope diagnosis. Without
-admissible deciding support it is `indeterminate`; the passed label cannot
-raise its standing. Preserve the finer diagnostic or original outcome and
-performance (`performed`, `not_performed` or `unconfirmed`) under the core legal
-pairs. A missing required judgment remains an absent slot with the known
-performance fact or uncertainty, not an invented assessment. Conjoin the
-declared required claim set using the shared rule. A valid known failure and a
-skipped required item both remain visible; neither can be flattened into a
-green release summary.
+Each qualification item applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its witness under the exact cut, claimed property and observation boundary
+above. Evaluate that property using the shared Result condition, preserving the
+item's original outcome and finer diagnostic. The release's declared required
+claim set supplies the conjunction; its core result, performance and coverage
+determine standing rather than a passed label or cached release summary.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
@@ -480,13 +472,11 @@ set, and every fetched remote expected object ID or required absence to that
 unchanged content result. Post-publication qualification
 verifies the same relation from remote refs and refuses a partial cohort.
 
-On resumption, inspect the actual local and remote state relevant to these
-relations and reacquire a sufficient frame. The process may discard its former
-private context; it cannot discard observed effects or assume an uncertain
-publication was atomic. Retain valid frozen-subject evidence, invalidate only
-affected claims, and use the existing authorised recovery relation for any
-remaining effect. The core workspace/context contract governs this reset of
-belief; it does not authorise resetting repositories or remote refs.
+On resumption, apply Contract application's Currentness condition to the exact
+local and remote ref relations above and their frozen-subject evidence. The
+complete remote relation, not a prior assumption of atomicity, determines the
+publication effect. Remaining effects require the existing authorised recovery
+relation; reacquiring context supplies no repository or remote-ref reset grant.
 
 A historically published source cut may be the basis of a later same-version
 backfill only when separately authorized recovery law names that exception.
@@ -535,12 +525,10 @@ rolls back the version-line selector. Consumer adoption separately evaluates
 the exact latest target presented by the channel and mutates only after its
 digest-bound plan is accepted.
 
-Qualification and the owner decision are different predicates. A satisfied
-qualification conjunction establishes the named evidence obligations only.
-The result for `the authorised owner accepted this exact cut` requires the
-actual decision and its authority. An unperformed decision remains
-`not_performed`; its absence cannot be inferred away from a green test result.
-Similarly, acceptance is not evidence that a consumer adopted the cut.
+Apply Contract application to reliance on qualification evidence and the actual
+owner decision required above. Qualification, `the authorised owner accepted
+this exact cut` and consumer adoption are three distinct predicates; their core
+results retain their respective evidence, authority and actual performance.
 
 ## External Qualification Dependencies
 

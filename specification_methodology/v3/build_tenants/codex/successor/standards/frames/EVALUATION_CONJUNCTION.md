@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
 
 ## Result algebra
 
@@ -134,7 +134,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
 
 ## Result conjunction
 
@@ -251,7 +251,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ## Reference Frame Laws
 
@@ -269,19 +269,18 @@ not reconstructable for that actor.
 
 ### RF-003 Material Sufficiency
 
-Every known relation whose lawful change can alter the evaluation result,
-basis validity, evidence sufficiency, operation authority, or decision
-authority appears in the frame or enters through a declared authoritative
-input.
-
-Omitting a material relation makes the frame insufficient. The method does not
-require proving that no undiscovered material relation exists.
+Apply [Contract application: Support](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the evaluation family `Q`: its known material relations, as defined by
+[Material relation](../REFERENCE_FRAME_METHOD.md#material-relation), enter `M` or a declared authoritative
+input. An omitted material relation makes the activation insufficient. This
+known-relation boundary does not require proving that no undiscovered relation
+exists.
 
 ### RF-004 Irrelevance Exclusion
 
-Relations that cannot affect the declared evaluation remain outside active
-attention unless they are required to establish irrelevance. A frame does not
-expand merely because adjacent workspace material exists.
+Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to `Q`'s
+attention surface: exclude relations established irrelevant to that evaluation,
+retaining any material needed to establish irrelevance.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -410,9 +409,10 @@ framework.
 
 ### RF-017 Proportional Compression
 
-A frame compresses accumulated practice when its declaration preserves the
-material distinctions and failure detections required by its evaluation family
-while fitting its capability envelope.
+A frame view applies [Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection)
+from the owning declaration and material subject to the actor's evaluation
+`Q`. Its required distinctions include `Q`'s failure detections; its adequacy
+includes the capability fit in RF-014.
 
 Compression does not require a unique smallest frame. Intentional overlap is
 retained where it supplies independently activated evaluation, different
@@ -438,7 +438,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### Applicability And Required Results
 
@@ -451,18 +451,15 @@ false. A frame name, available tool or listed family is no activation trigger
 by itself. Where applicability needs residual semantic judgment, retain that
 judgment and its evidence rather than representing it as a computed fact.
 
-A required result that is absent, stale, bound to another subject/basis or
-incapable of establishing its claim cannot satisfy a dependent conjunction.
-Unresolved applicability withholds the dependent claim until sufficient
-evidence or the owning decision resolves it. Other applicable constraints
-remain in force even if only one evaluation detects them. Qualification of an
-applicability rule must distinguish true, false and unknown premises, required
-missing or wrong-subject results, and a sufficient positive result under a
-finite declared fixture; always skipping or always activating cannot satisfy
-those different expected outcomes.
+Use that applicability determination to bind the required set in
+[Result conjunction](../REFERENCE_FRAME_METHOD.md#result-conjunction), including unresolved applicability.
+Other applicable constraints remain in force even if only one evaluation detects
+them. Qualification distinguishes true, false and unknown premises, missing or
+wrong-subject required results, and a sufficient positive result within a finite
+declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ## Using Frames In Conjunction
 
@@ -488,26 +485,26 @@ binding states:
 - what decision authority owns the conjunction; and
 - whether any result may veto or defer the decision.
 
-The verdict is the core conjunction result; conflict annotates retained
-contradictory contributions and cannot downgrade an authenticated applicable
-falsification. Conjunction does not transfer the semantic authority of a contributing frame.
-The core rule retains both a known falsification and any uncovered required
-coverage. This consumer binds the mandatory claim set before aggregation and
-returns its coverage and residuals with the verdict. Counting agreeing frames
-cannot discharge another frame's applicable constraint.
+These parameters bind the mandatory claims and material joins before the core
+rule is applied. Its result carries coverage, conflicts and residuals; the
+decision rule cannot replace a required constraint with a count of agreeing
+frames or acquire a contributing frame's semantic authority.
 
 ### Evidence Or Coordinate Translation
 
-One frame supplies evidence or a value consumed inside another frame. The
-translation declares source and target coordinates, preserved meaning,
-accepted loss, provenance, equality law, and refusal conditions.
+Apply [Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the producing frame's value or evidence as source and the receiving
+frame's evaluation as consumer. Bind both `C` coordinate/equality laws and the
+translation's refusal conditions alongside the shared preservation, loss and
+provenance requirements.
 
 ### Material Composition
 
-Several frame-governed operations form one material execution or reasoning
-relation. The owning application declares the composition, shared invariants,
-effect or decision order where material, closure, failure, and semantic,
-operation, and decision-authority conservation.
+Apply [Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) to the
+frame-governed operations and the declared outer execution or reasoning
+predicate. The application binds shared invariants, material effect or decision
+order, closure and failure conditions, using each frame's `A`, `C` and `D`
+relations for authority, coordinates and joins.
 
 Composition is introduced only when the evaluation requires it. A possible
 future interaction does not require a general composition law in every frame.
@@ -515,7 +512,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ## Minimal Evaluation Result
 
@@ -541,7 +538,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Bind
 
@@ -550,7 +547,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Acquire
 
@@ -563,7 +560,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Evaluate
 
@@ -583,7 +580,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Conjoin
 
@@ -594,3 +591,119 @@ Known failure and required uncovered coverage both survive the aggregate. A
 planned but absent judgment is not confused with uncovered coverage outside an
 authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+
+## Contract application
+
+A contract bounds an operation by its input and output domains, intended
+predicate, governing constraints, material relations, evidence rule and actual
+grants. Its binding names their owners and current basis. These are semantic
+coordinates, not a required record format. An existing design, frame, function
+or work carrier can supply them; this law requires no additional carrier or
+validation stage.
+
+The application predicate is: **this proposed operation or reliance is
+admissible under this bound contract**. It differs from the predicate that the
+operation achieves its intended outcome. Application uses the following
+conditions once at the responsible consumer:
+
+1. **Binding.** Identify the actual subject, intended predicate, governing
+   interpretation, applicable policy and source/current-state coordinates.
+   Names or equal bytes alone do not supply identity, standing or applicability.
+2. **Support.** Account for the conditions and material dependencies capable
+   of changing this determination. Inspect through an affected seam until its
+   governing obligations are covered or evidence establishes independence of
+   the far side. A task boundary, partial listing or absence of observed failure
+   does not establish that independence. The domain selects its completeness
+   and sufficiency criteria; the actor does not silently narrow them.
+3. **Preservation.** Show that required input, output and cross-boundary
+   relations hold under the declared compatibility or translation. Retain
+   identity, meaning, lifecycle, producer/evidence coordinates, constraints,
+   authority and effect distinctions where material. A difference may be
+   lawful; it needs the instance's admitted relation. Neither universal field
+   equality nor an invented translation decides compatibility.
+4. **Authority.** Establish the actual operation or decision grant for the
+   selected effect. Keep the owners of meaning, evidence, operation and
+   disposition distinct. Shared code, a source reference or a satisfied
+   judgment supplies no missing grant. Required independent assessment retains
+   its owning conditions.
+5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
+   to evidence reuse, observations, concurrency and uncertain effects. A
+   supported changed dependency reopens the affected determination; an
+   unsupported currentness claim stays unresolved. A previously satisfied
+   check can be reused on supported unchanged premises; this law does not
+   require rechecking fixed graphs or every unchanged relation on every event.
+6. **Result.** Apply the [core result and conjunction law](../FOUNDATIONS.md#result-algebra)
+   on the actual predicates. Retain known failures, absent required coverage,
+   scope/basis diagnoses, original domain outcomes, performance and effects.
+   Unknown applicability is not non-applicability. A supported failure does
+   not disappear because another required condition is undecided.
+
+A consumer binds these conditions to its decision and domain exceptions rather
+than copying the generic conditions into a second rule. Its dependency and
+authority arguments are part of the existing decision evidence. Conditional
+exceptions must be named at their owning policy; a generic application cannot
+invent one. A library helper can implement several consumers, but their
+subjects, required evidence and powers remain separate.
+
+These conditions constrain what counts as admissible; they do not give a
+universal algorithm for deciding arbitrary predicates. Insufficient support
+returns the applicable core uncertainty or scope/basis result. A known violated
+condition is retained with its evidence. A supported admissibility result
+permits only the already-granted operation; it predicts neither success nor
+termination. The control contract handles its observed outcome separately.
+
+### Constraint surface
+
+For a current subject and basis, the bound contract describes the work allowed
+by its constraints and grants. It also exposes obligations still unresolved.
+This is the task's constraint surface. It distinguishes the permitted choices
+inside the contract from the choices reserved to an owner. A missing condition
+is not freedom; a condition proved irrelevant to this task need not be loaded
+again while that proof remains applicable.
+
+The surface can be represented as prose, typed relations, predicates, a_c or a
+faithful task view. Dependencies can form a graph; they need not form a tree or
+prescribe one execution order. A model must retain the distinction between
+established facts, assumed premises, discretionary choices and unknowns. Its
+constraint satisfaction result does not authenticate its observations or
+appoint an actor. [a_c interpretation](../AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+binds the source-to-model relation and its independent evidence.
+
+Two different implementations may both lie within this surface. Selection
+between them follows the declared outcome, cost and owner criteria, not a
+hidden requirement for the author's preferred implementation. A worker acquires
+the sufficient constraints **and the actual material subject**; the abstract
+surface alone is not a complete activation.
+
+### Faithful projection
+
+A projection or interpretation applies Contract application to a declared
+source-to-consumer relation. Its binding states the authoritative source and
+selector, target interpretation, consumer task, required distinctions, admitted
+loss or approximation, and invalidation conditions. Source and target retain
+their own identities. The domain owns additional publication and adoption
+conditions.
+
+For an exact projection, a consumer must recover the same material
+determinations from the view and the owning source. Approximation requires a
+declared adequacy relation and evidence of its end-to-end bound; local
+tolerances alone do not compose. Lost authority, a weakened condition or an
+unknown promoted to permission is a fidelity defect, not compression.
+
+The binding determines whether a full reproduction, a narrower sufficient view
+or an available authentic reference is required. Omitted task-irrelevant
+material can remain at its owner. Material omissions, stale sources or
+unavailable references prevent the corresponding reliance; they do not require
+copying every source body into every event. A view has no independent power to
+change its source meaning. Its currentness is established from the selected
+source and dependency state, not from its label or generation timestamp alone.
+
+Check fidelity against independently specified source decisions: at least the
+material permissible, prohibited and unresolved distinctions for the selected
+claim. A self-consistent model, matching schema, checksum or generated diff
+checks a different relation. Failure re-enters the first owning defect: source
+ambiguity, interpretation, projection, producer or consumer. It does not license
+changing the source to agree with its view.

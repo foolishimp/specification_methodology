@@ -27,22 +27,22 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b
-  TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
-  AXIOMATIC_CALCULUS.md: 8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09
-  TRAVERSAL_OCCURRENCE_PROFILE.md: afd43348a3a9d10bbd1e0452b0efcfb2f93aa19fc6257a046673679096f2308d
-  REFERENCE_FRAME_METHOD.md: 7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213
-  STDO_REFERENCE_FRAME_BASELINE.md: 3e42ef02d525f9dbc9c9d45b51490a7c7de335128aa6bc327338b716f90df4ca
-  SPEC_METHOD.md: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
+  FOUNDATIONS.md: 07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea
+  TRANSFORMATION_LIBRARY.md: 65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c
+  AXIOMATIC_CALCULUS.md: 4134002e63d76424af0b4b8158fd7209ca0e3ec3216ff578b3e7482013d32fda
+  TRAVERSAL_OCCURRENCE_PROFILE.md: ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234
+  REFERENCE_FRAME_METHOD.md: 34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2
+  STDO_REFERENCE_FRAME_BASELINE.md: eae3b37f353fb781a22aca47255b395f4e027793598c558bea88ac4309b61230
+  SPEC_METHOD.md: 7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018
-  ODD_METHOD.md: 616a43eff236c7d71e5884372b9440c5ef60dc0bbe61b5acc1dbae1cbebadd70
-  WORLD_MODEL_METHOD.md: 6e19e429fa7003c0885844fbc642cf1d6b6b4dbc6a7341bfcce555b791defba1
-  TICKET_METHOD.md: a91012c780f94c8cc0df85dd6912116ef1ad4c47a4bc070526fd39de2fbb1094
-  UX_METHOD.md: 37d3859c7b6e8ee0d293c9aae2421d379e2cbb10243afbed9a60174a5188a07f
-  IDENTITY_METHOD.md: 0b4158d98d7f0be980218865fa75e767042007a3ad49326b86252d67074e5a6d
-  RELEASE_METHOD.md: 6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede
+  DESIGN_MODULE_METHOD.md: 10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0
+  ODD_METHOD.md: 57a6da7f6f5696eb354947a799afc222050cdd0d13005f913577f5f6580b5998
+  WORLD_MODEL_METHOD.md: 462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680
+  TICKET_METHOD.md: baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646
+  UX_METHOD.md: 1aaa7aa4cb0dff936380b966681ebf9fd8dc7e9bb55b6a53feba8d45b9448711
+  IDENTITY_METHOD.md: efe14dff289da7fe11e523efcc6e28eced61199bdf337c07833b00b68bbef493
+  RELEASE_METHOD.md: b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062
   POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
   GLOSSARY_GUIDE.md: d433155845187b39e504b34fbb079690fefcab141d213e1179e535b7027b88f3
@@ -272,7 +272,7 @@ refuse cross-law closure.
 
 Use the smallest current authority surface that can decide the question:
 
-`Goals -> Intent -> Product Definition -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
+`Goals -> Intent -> Product Definition -> Requirements -> Design -> Realisation -> Observations -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
 
 When a lower layer needs a change in meaning, re-enter at the smallest upstream
 layer that owns the missing truth.

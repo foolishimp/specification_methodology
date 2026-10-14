@@ -5,8 +5,9 @@ released STDO cut. They are prompt-construction inputs, not replacement
 constitutional authority and not independently selectable method versions.
 
 The watched source account, method, profile and schema members follow. Each
-retains its declared standing: Foundations and the library are non-deciding
-explanations; the detailed owners retain deciding law.
+retains its declared ownership: Foundations and the library own shared deciding
+contracts; domain methods bind them and own their additional policies. Views
+project those owners and acquire no independent deciding authority.
 
 - `../FOUNDATIONS.md`
 - `../TRANSFORMATION_LIBRARY.md`
@@ -56,5 +57,5 @@ the exact installed basis and raw owners. It is digest-bound to Foundations, the
 Method, Reference Frame Method, the optional STDO Reference Frame Baseline,
 Release Method, and the Product Definition schema. The exact header lists all
 watched sources; the bootstrap cannot select or replace them. Foundations and
-the library organise explanations; detailed deciding law remains at its named
-owner.
+the library supply their shared law; particular method policies remain at their
+named owners.

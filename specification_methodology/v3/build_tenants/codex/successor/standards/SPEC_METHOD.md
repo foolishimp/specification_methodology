@@ -2,8 +2,8 @@
 
 This member owns the particular constitutional contracts of Spec Method.
 The [foundational commitments](FOUNDATIONS.md#foundational-commitments) supply
-its declared premise layer. The [shared contract](TRANSFORMATION_LIBRARY.md#foundational-contract)
-provides generic transformation vocabulary. The
+its declared premise layer. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+governs use of those contracts through the domain bindings below. The
 [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
 relates those premises to this member's UP-020 and computed-treatment rules,
 identifying conditional consequences and independent purpose, policy or
@@ -1294,24 +1294,19 @@ and identify the smallest sufficient lawful scope of repair. The frame that
 exposes a failure need not contain its cause. Repeating the same analysis under
 different frame names supplies no additional causal evidence.
 
-Intake first applies [workspace and context](FOUNDATIONS.md#workspace-and-context):
-observe the affected current state, compare it with the report and retained
-results, and distinguish an actual defect from a stale belief. Reuse valid
-observations and rulings. If an effect may already have occurred, resolve that
-uncertainty before recommending an action that depends on its absence. An old
-conversation or work summary supplies a route to evidence, not a veto on
-current reality. Events that record effects are observations; apply the core
-effect and supported-supersession rules before treating them as stale. A local
-absence cannot erase a recorded external effect. The classification result retains the exact diagnosis
-predicate, evidence and residuals under the common result contract.
+Intake applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the classification of the exact request against the affected current Product
+state. Its binding selects the report, governing sources, workspace and external
+observations, retained results and actual assessment grant. Currentness decides
+which support can be reused; the diagnosis itself is evaluated under the core
+result contract. [Computed treatment](#computed-classification-and-treatment)
+decides whether the candidate or its governing relation needs correction.
 
-Use the smallest sufficient applicable frame configuration under
-[frame applicability and conjunction](REFERENCE_FRAME_METHOD.md#method-functions), with
-[causal localization](STDO_REFERENCE_FRAME_BASELINE.md#counterexample-localization)
-where required. This does not prescribe a reviewer count or a new review round;
-required independence remains intact. A diagnosis does not grant repair effects
-or establish that governing meaning must change: a candidate may instead need
-correction under sufficient existing law.
+Select the smallest sufficient applicable configuration under
+[frame applicability and conjunction](REFERENCE_FRAME_METHOD.md#method-functions),
+with [causal localization](STDO_REFERENCE_FRAME_BASELINE.md#counterexample-localization)
+where required. This selection prescribes neither a reviewer count nor another
+review round; the bound independence and repair authority remain applicable.
 
 The minimum lawful change classes are:
 
@@ -1336,24 +1331,23 @@ denotes a ruling reserved to its actual owner. These annotations grant no
 authority and introduce no calculus kind, runtime, classifier interface, or
 mandatory document.
 
-The explicitly selected source, worksite, or qualification capability produces
-C over the exact request and desired outcome, known targets and effects,
-operation grant and work lifetime, Product Definition and governing basis,
-baseline and available candidate, declared relations, accepted design and
-trace bindings, evidence, and applicable rules. Its output identifies the
-producer and procedure revision, inputs, result, scope, source routes,
-reproduction relation, unknowns and invalidators. Missing candidate or evidence
-is an input state, not a claim that nothing changed.
+The selected source, worksite or qualification capability applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to producing
+and relying on C. Its binding comprises the exact request and desired outcome,
+targets and effects, operation grant and work lifetime, Product Definition and
+basis, baseline and available candidate, declared relations, accepted design,
+trace bindings, evidence and rules. C records its producer and procedure
+revision, inputs, result, scope, source routes, reproduction relation, unknowns
+and invalidators. Missing candidate or evidence is an input state.
 
 The computed result must expose:
 
-1. **Authority traversal.** Follow explicit source, ownership, dependency,
-   composition and projection declarations from the affected targets and
-   effects. Identify each reached layer and owner, its exact basis and
-   changed/unchanged/unknown relation, the traversed edges, and the unresolved
-   frontier. Include root, authority and grant changes even when Public bytes
-   are equal. An absent edge does not prove irrelevance; undeclared or
-   semantically uncertain materiality remains J.
+1. **Authority traversal.** Apply the shared Support condition through the
+   source, ownership, dependency, composition and projection declarations of
+   affected targets and effects. Report reached layers and owners, exact bases,
+   changed/unchanged/unknown relations, traversed edges and unresolved frontier.
+   Root, authority and grant changes remain in scope when Public bytes are
+   equal. Undeclared or semantically uncertain materiality remains J.
 2. **Public delta.** Enumerate the complete relevant serialized member universe
    under its owning declaration and applicable projection, including helper and
    generated dependencies. Report added and removed identities and every
@@ -1383,44 +1377,37 @@ insufficiency. C determines that consequence only from sufficient declared
 premises; unresolved intended meaning or necessity is J and any reserved
 decision remains O. Candidate behavior cannot author its own target law.
 
-Unknown treatment withholds dependent reliance or promotion, not unrelated
-authorized work. An existing bounded construction or evidence grant may permit
-the cheapest useful discriminator, including obtaining the first candidate,
-without asserting that the candidate is conformant. It carries its own exact subject,
-territory, operations and stop conditions. Update the affected C result before
-dependent effects or promotion rely on newly available evidence. Correct a
-mistaken route at its smallest affected owner; preserve the original cause,
-attempted subject, observed effect state and valid progress. Retry requires
-the applicable outcome, authority and safe-recovery conditions; an unknown
-effect state cannot be silently treated as no effect.
+Under the shared application conditions, unknown treatment withholds dependent
+reliance or promotion. An existing bounded construction or evidence grant may
+permit the cheapest useful discriminator, including a first candidate; that
+grant binds its subject, territory, operations and stops without claiming
+conformance. A mistaken route is corrected at its smallest affected owner.
 
-A new role, conversation or resumption reuses valid C after checking exact
-applicability. Changed request, candidate, basis, owner/root relation,
-projection, design trace/acceptance, rule, configuration or material evidence
-invalidates its affected claims before reliance. Preserve predecessor and
-successor identities, changed inputs, surviving facts and affected J
-dependencies; recompute the wider frontier where independence is unproved.
-`TICKET_METHOD.md` owns the existing carrier and recorded-J/O continuity rules.
+For C reuse, the Currentness binding includes request, candidate, basis,
+owner/root relation, projection, design trace/acceptance, rule, configuration and
+material evidence. Refresh the affected result before dependent reliance;
+preserve predecessor/successor identities, original cause and attempted subject,
+observed effects, surviving facts and affected J dependencies. Recompute the
+wider frontier where independence is unproved. `TICKET_METHOD.md` owns the
+carrier and recorded-J/O continuity rules.
 
 ---
 
 ## Consistency Gate Rule
 
-No gate may close while the affected active surfaces are internally inconsistent.
-
-For the declared change span, the framework must prove:
+Closure of a declared change span applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its closure evidence, then evaluates the conjunction of all applicable
+obligations and required judgments or rulings, with no active non-closure
+condition. Its consistency predicates require:
 
 - the upstream surface remains sufficient for the downstream surface
 - downstream artifacts do not contradict active upstream truth
 - tests and qualification prove the active intended behavior rather than stale precedent
 
-If that proof is missing, the change remains open even if one local artifact already looks correct.
-
-Closure requires every applicable declared obligation satisfied by valid,
-applicable evidence and every required judgment or ruling, with no active
-non-closure condition. `TICKET_METHOD.md` owns work-state recording and reuse.
-A review event, passing aggregate, completed artifact or status change cannot
-substitute for that conjunction.
+The shared Result condition governs that conjunction; a local artifact's
+fitness is a different predicate. `TICKET_METHOD.md` owns work-state recording
+and reuse of the resulting exact claim.
 
 When a code/test mismatch appears during ticketed work, implementation behavior
 is evidence but not authority. The mismatch is reconciled through the admitted
@@ -1602,9 +1589,9 @@ accepted governing basis
 
 ### Sufficient Execution Intake
 
-A bounded action begins from an authority basis sufficient to reconstruct its
-governing relations without conversation history, commentary, prior-worker
-memory, or implementation folklore. The intake identifies:
+For the proposed bounded action, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application). The
+execution binding identifies:
 
 - the selected Product outcome, prerequisite, or admitted experiment;
 - the bounded affected relation set and applicable governing invariants;
@@ -1613,12 +1600,9 @@ memory, or implementation folklore. The intake identifies:
 - construction and assessment authority; and
 - the conditions that require upstream re-entry.
 
-The selected frame is acquired from the current workspace and authoritative
-external inputs under [workspace and context](FOUNDATIONS.md#workspace-and-context).
-Its contract identifies current A, admitted Z, the bounded transition and the
-observations needed to establish its result. Prior summaries may locate those
-inputs; private actor memory is not a prerequisite. Context fit cannot be
-achieved by dropping a known material relation.
+Acquire its [constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface)
+and material subject for current A, admitted Z, the bounded transition and the
+observations needed to establish the result.
 
 Where `DESIGN_MODULE_METHOD.md` applies, `STDO-UP-017` bounded-frame
 conservation, `STDO-UP-016` transformation-admission completeness,
@@ -1628,13 +1612,10 @@ consumes those laws; it does not create a second design package.
 
 ### Bounded Causal Construction
 
-The execution unit is the smallest coherent causal dependency cone capable of
-delivering working behavior while preserving every affected governing
-relation. It need not coincide with one function, file, module, ticket field,
-or design document.
-
-A seam whose far side can causally affect, or be affected by, the action is
-inside the cone unless the basis establishes that it cannot participate.
+Apply Contract application's Support condition to the execution unit: the
+smallest coherent causal dependency cone capable of delivering the selected
+behavior while preserving every affected governing relation. Its material seams
+follow that condition, not function, file, module, ticket or document boundaries.
 Unrelated incompleteness outside the cone is recorded as repricing input and
 does not block the bounded claim.
 
@@ -1699,15 +1680,12 @@ condition here; the candidate's alignment, including its design's alignment
 with those requirements, is an evaluated relation. A contradictory design does
 not by itself invalidate otherwise interpretable requirements. A proof defect
 can falsify the proof's own claim without falsifying the implementation claim.
-Insufficient evidence returns `indeterminate`, a
-missing material evaluation capability returns `out_of_frame`, and an
-unusable basis returns `invalid_basis`. A proposed remedy accompanies any of
-these when its cause and authority are supported; the verdict alone neither
-forces a remedy nor forbids a useful authorised repair. Preserve missing causes
-under the core rule. Required judgments compose by
-[core conjunction](FOUNDATIONS.md#result-conjunction); a known failure survives
-alongside missing coverage. A construction result satisfying only `an exact
-candidate is available` never substitutes for this assessment predicate.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+the assessment and its supporting results; its Result condition supplies the
+core verdict and conjunction. A proposed remedy requires supported cause and
+authority; the verdict alone neither selects a remedy nor forbids useful
+authorised repair. `An exact candidate is available` remains the construction
+predicate, separate from this cone-preservation assessment.
 
 The applied disposition has a separate decision result under the core contract:
 the predicate concerns that disposition on the exact subject and basis under
@@ -1756,10 +1734,9 @@ existing exact operation grant. Identify its parent or predecessor, included
 territory, concurrent-writer disposition and durable evidence location. It is
 neither acceptance, promotion nor publication.
 
-An ordinary restart reacquires a sufficient frame over the current workspace;
-it is another iteration, not a request to rebuild from the original A. Apply
-the core current-state, result-validity and unknown-effect rules before the
-next dependent action. Preserve applicable partial work and valid evidence.
+Continuation applies Contract application's Currentness condition to the next
+action over the continuing workspace, retaining applicable partial work and
+evidence. An ordinary restart selects no rebuild from the original A.
 If a proposed recovery instead discards or rebuilds work, identify why repair
 of retained work is insufficient, which obligations and evidence survive,
 which causal assumptions change and which existing operation grant permits
@@ -1786,24 +1763,18 @@ reported as accepted Product progress.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
-For a material transition, each admission owner is independently responsible
-for deriving and validating the complete enclosing relation from authoritative
-inputs. The relation contains every participant and equality join whose
-identity, validity, authority, currentness, or transition can affect or be
-affected by admission; each crossing seam includes its relevant far side or
-authoritatively establishes
-that the far side cannot participate. Caller or owner assertions of
-completeness, validity, prior admission, or authority do not establish truth.
-
-An owner may consume established facts when their exact subject, basis, scope,
-provenance and validity remain applicable to its relation. Their production and
-invalidation must be recoverable; an unsupported assertion of prior success is
-not such a fact. A function, component, role, conversation or status boundary
-alone invalidates none of those coordinates and requires no repeated derivation.
-Material mutation, rollback, changed authority or basis, expired validity, and
-an actual trust boundary trigger the applicable validation before reliance or
-effect. Reuse does not transfer the owner's admission responsibility, omit a
-participant or satisfy a separately required independent judgment.
+Each admission owner applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to the
+admission of the exact complete material transition. Its support universe is
+every participant and equality join whose identity, validity, authority,
+currentness or transition can affect or be affected by admission. The owner
+independently derives and validates that relation from authoritative inputs;
+the shared Support condition governs crossing seams and independence claims.
+Apply Currentness to established facts, including material mutation, rollback,
+authority or basis changes, expiry and actual trust boundaries. Reuse retains
+the owner's admission responsibility and separately required independent
+judgment. The following complete-transition conditions are specific to this
+admission relation:
 
 Derivation and validation bind one exact admission-valid authoritative basis
 identity through admission. If validity or currentness can advance after
@@ -2031,20 +2002,13 @@ of the live product. In that case the compatibility path must be:
 
 ### Projection Discipline
 
-Projections, reports, status views, and topology views may reflect the
-authoritative carrier.
-
-They must not become a second closure surface.
-
-Therefore:
-
-- if runtime, reporting, topology, and proof can disagree about closure because
-  they consume different carriers or different closure laws, the migration is
-  incomplete
-- if a projection can independently close while the authoritative carrier is
-  still open, the migration is incomplete
-- if the authoritative carrier can close while a projection still depends on an
-  older law, the migration is incomplete
+Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) to
+runtime, reporting, status, topology and proof views of the authoritative
+carrier. This migration binding requires one governing closure relation across
+those views. A different carrier or closure law that permits conflicting
+determinations, a view that independently closes an open source, or a view
+retaining superseded closure law leaves the migration incomplete, even when the
+authoritative carrier itself can close.
 
 ### Inside-Out First Sequencing
 
@@ -2148,28 +2112,14 @@ project slice acceptance as migration, qualification, or release closure.
 
 ## Release Version Boundary
 
-The only exact operative release identifier is the immutable RC cut tag
-`v<version>-rc.<n>`.
-
-That cut is:
-
-- a point-in-time release identity
-- a boundary over the feature set accepted for that cut
-- part of release metadata and release-process evaluation
-
-It is not part of the live project specification.
-
-The mutable `v<version>` tag is a version-line discovery selector to the
-highest-ordinal published immutable RC. It is not an exact dependency,
-evidence, or constitutional basis and cannot silently change a consumer
-selection.
-
-Active constitutional and shared realization surfaces should therefore describe
-current truth by role, boundary, and status rather than by release-line version
-labels.
-
-Release criteria, immutable RC publication, selector advancement, and the
-process for cutting a release belong to `RELEASE_METHOD.md`.
+Use [Release identities](RELEASE_METHOD.md#release-identities) and
+[Selector and consumer adoption](RELEASE_METHOD.md#selector-and-consumer-adoption)
+to bind an exact operative cut and distinguish it from discovery. The immutable
+cut bounds the feature set accepted at that point and belongs to release
+metadata and evaluation. Active constitutional and shared realization surfaces
+describe current truth by role, boundary and status rather than release-line
+branding. Release criteria, publication and advancement remain Release Method's
+decisions.
 
 ---
 
@@ -2179,11 +2129,12 @@ The following rules govern how constitutional claims are proved in practice.
 
 ### Proof Target Identity And Adequacy (`STDO-UP-001`)
 
-Every load-bearing proof identifies the exact subject, intended property,
-governing basis, relation between witness and claim, nearest weaker excluded
-property, and falsification condition before selecting its witness. Without
-those relations, the result is evidence discovery rather than closure-grade
-proof.
+For a load-bearing proof, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its witness for the exact subject, intended property and governing basis.
+Before selecting that witness, bind its relation to the claim, the nearest
+weaker excluded property and the falsification condition. Missing these
+relations leaves evidence discovery, not closure-grade proof.
 
 Packaging, syntax, compilation, file presence, invocation, or local behavior
 must not substitute for semantic, authority-bearing, installed, release, or
@@ -2200,19 +2151,20 @@ The method distinguishes:
 - **state projection**: a current view derived from admitted semantic and
   evidence bases.
 
-Evidence change may invalidate a verdict without changing law. Projection
-change may invalidate a view without changing semantic truth. Semantic change
-requires lawful re-entry and invalidates affected downstream acceptance. A
-broad digest may conservatively invalidate review, but it does not prove that
-every semantic relation changed.
+Apply Contract application's Currentness condition to the verdict and
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) to its view.
+Evidence or view changes do not themselves change meaning. Semantic change
+requires lawful re-entry and invalidates affected downstream acceptance; a
+broad digest may conservatively invalidate review without proving that every
+semantic relation changed.
 
 ### Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`)
 
-A checker, validator, harness, reviewer, or other assurance surface supporting
-promotion or closure binds the exact claimed subject and its authoritative
-composition relation. Evidence over one file or carrier proves only that
-boundary; it cannot establish a multi-file or carrier-set claim. Cross-carrier
-satisfaction and conflict are decided at the declared composite boundary.
+An assurance consumer applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its checker, validator, harness or review for the claimed promotion or
+closure predicate. Its support boundary is the authoritative composite subject;
+single-carrier evidence leaves unexamined cross-carrier obligations open.
 
 A claim of mechanical enforcement names an executable or reproducible predicate
 and a witness reachable through the declared ordinary assurance path. A planned

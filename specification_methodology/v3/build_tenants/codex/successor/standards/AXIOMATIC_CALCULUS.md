@@ -426,26 +426,12 @@ coordinates do not create a coherent composite basis by proximity.
 
 ### AC-007 Constraint And Refusal
 
-Each constraint names its governed subject, predicate, judgment kind,
-latitude, and refusal. Its evaluation produces the
-[core result](FOUNDATIONS.md#result-algebra). Its finer constraint outcome
-maps exactly once on that same subject, basis and predicate:
-
-| Constraint outcome | Core verdict |
-|---|---|
-| admissible evidence establishes the predicate | `satisfied` |
-| an admissible counterexample defeats the predicate | `falsified` |
-| admissible evidence does not decide the predicate | `indeterminate` |
-| a necessary material relation or capability lies outside the frame | `out_of_frame` |
-| the exact subject or basis cannot support this evaluation | `invalid_basis` |
-
-The result retains the original outcome, performance and known effect state.
-Non-performance alone establishes neither a negative domain finding nor a
-positive proof. Separately admissible counterevidence retains its deciding
-force under the shared legal pairs without inventing execution. A finer refusal
-names its cause and map; no refusal is
-coerced to success. Missing mandatory evaluations remain explicit coverage
-residuals when judgments are conjoined.
+Each `Constraint` binds its `applies_to`, `predicate`, `basis`, `judgment_kind`,
+`latitude_ref` and `refusal` to [Evaluate](TRANSFORMATION_LIBRARY.md#evaluate).
+The [core result](FOUNDATIONS.md#result-algebra) owns all five verdict meanings,
+legal performance pairs, effects and missing-reason handling; AC-014 carries
+that record. Finer outcomes use the following reason-sensitive mapping on the
+same subject, basis and predicate.
 
 The outcome shorthands used by projection, transformation, interpretation and
 admission below are refinements under the same rule. Returning a projection,
@@ -499,16 +485,18 @@ tokens, cost, or cognitive effort.
 
 ### AC-011 Projection
 
-A projection selects a view of a model without changing selected meaning:
+A projection selects an exact view without changing selected meaning. Apply
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) from model
+`M` to that view for the declared consumer task:
 
 ```text
 project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal
 ```
 
-`M_Z` contains the material closure of `Z`. `Boundary_Z` records excluded,
-external, unresolved, translated, and invalidation-sensitive seams. A
-projection is not a new semantic owner and cannot silently trim a required
-member to satisfy a carrier or capability budget.
+`M_Z` contains AC-010's material closure of `Z` under `R`. `Boundary_Z` records
+excluded, external, unresolved, translated and invalidation-sensitive seams.
+Those coordinates bind the shared contract's support and loss boundary; a
+carrier or capability budget supplies no permission to trim required members.
 
 ### AC-012 Overlay
 
@@ -728,11 +716,8 @@ interpreted-domain outcome; it is not another verdict enum. The exact
 interpretation declares its map before the judgment is used. A carrier may
 encode these relations through resolved records rather than repeated bodies.
 Each field is required by this semantic contract. The selected signature closes
-its value domain and cardinality as well as its identity-bearing reference
-domains. Performance uses the shared legal pairs and retains the observed
-extent: an interrupted evaluation already undertaken is `performed`, not an
-unperformed evaluation. An absent effect observation cannot default a requested
-operation to `not_requested`.
+its value domain, cardinality and identity-bearing reference domains. The core
+result contract determines performance, observed extent and effect state.
 
 `predicate` resolves the adopted predicate contract; identity-bearing
 `residuals` resolve the calculus's existing residual records. `effects` records
@@ -828,38 +813,26 @@ incomplete.
 
 ### AC-016 Typed Composition
 
-Two traversals compose only when the first result type and judgment satisfy the
-second traversal's exact domain and preconditions:
+Apply [Composition law](TRANSFORMATION_LIBRARY.md#composition-law) to the two
+exact traversal contracts:
 
 ```text
 F_K2[w] compose F_K1[v]
 ```
 
-Composition retains both traversal identities, intermediate results,
-judgments, evidence, authority, provenance, and stop states. It cannot flatten
-probabilistic proposal, deterministic evaluation, and human decision into one
-undifferentiated operation. `a_c` prescribes no universal `F_P -> F_D -> F_H`
-sequence; each application owns its lawful topology.
+The typed join requires `v`'s result type and judgment to satisfy `w`'s domain
+and preconditions. Bind the outer predicate to the required leaf predicates,
+intermediate results and material joins, retaining both traversal identities,
+judgments, evidence, authority, provenance and stop states. Its result uses the
+core conjunction or declared-operator rule selected by that predicate; its
+effect boundary includes the traversals' material effects under the shared
+currentness law.
 
-When the composition claims that several constraints hold, it uses
-[core conjunction](FOUNDATIONS.md#result-conjunction) over their exact
-predicates and coverage. A stop at one traversal cannot erase a valid
-counterexample from another; a successful traversal does not satisfy an
-unperformed dependent traversal. Otherwise the application declares the outer
-predicate, exact leaf predicates, material joins, and disjoint, exhaustive truth
-and falsity conditions on its fully decided admitted domain. Its result uses
-the declared-operator rule in
-[result conjunction](FOUNDATIONS.md#result-conjunction), with only the
-dependencies needed to decide that predicate. A fallback may establish its
-declared outer predicate while retaining an earlier failed leaf; it cannot
-report that every stage succeeded. An absent dependent return remains an absent
-slot, with its known performance or uncertainty. An uninterpretable operator
-declaration supplies no guessed success. This clause owns typed traversal
-composition; the core owns result evaluation for the declared outer operator.
-
-Effect-sensitive composition also binds
-the current-state and uncertainty rules in
-[workspace and context](FOUNDATIONS.md#workspace-and-context).
+The kinds retain their distinct proposal, evaluation and human-decision
+contracts. `a_c` prescribes no universal `F_P -> F_D -> F_H` sequence. An
+application chooses its lawful topology and outer operator without changing
+the constituent predicates or AC-007 refinements. Categorical claims additionally
+meet the library's demonstration conditions.
 
 ## Interpretation And Models
 
@@ -894,11 +867,41 @@ a separately recorded authority judgment.
 
 ### AC-017 Interpretation Fidelity
 
-Every admitted model record maps to exact subject provenance or is explicitly
+Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the exact subject declarations as source, the selected signature and
+interpretation contract as target meaning, and the declared use of `M_subject`
+as consumer. Every admitted record maps to exact subject provenance or is
 identified as model-local content under competent authority. Every evaluated
-subject declaration has a retained, omitted, residual, inapplicable, or refused
-disposition. Interpretation cannot treat absence as immateriality without a
-recorded basis and authority.
+declaration has a retained, omitted, residual, inapplicable or refused
+disposition; omission or inapplicability needs its recorded basis and authority.
+
+The interpretation preserves source logic through the existing populations:
+`O` identifies the subject objects and meanings; `E` carries typed dependency
+and preservation relations; `C` binds predicates and consequences; `L` states
+permitted and forbidden variation; `X` retains unresolved conditions and their
+consequences; and `V`, `T` and `J` bind operations, transformations and judgments.
+Signature-defined sorts, qualifiers and predicates distinguish premises,
+derived consequences, policy choices, observations and unresolved claims.
+This adds no record family or fixed dependency-tree shape.
+
+A task consumes that model through AC-011, selecting `Z` for its question and
+`R` for the material dependency closure. The resulting view and `Boundary_Z`
+instantiate the library's [Constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface):
+the source-owned obligations, permitted choices, required evidence and open
+conditions remain recoverable. The activation separately acquires the actual
+material subject and authoritative inputs under the Frame Method. Model facts
+are claims with source/currentness support, not the world state or an effect
+grant. Changing observations reopens affected reliance under the shared
+currentness rule; unchanged independent support remains reusable.
+
+Fidelity evidence compares source and model on independently specified
+permissible, prohibited and unresolved decisions for the claimed scope. Where
+the source permits distinct implementations, the model must retain that
+latitude. A model or task projection that omits a required premise, turns an
+unknown into permission, or admits only the author's preferred implementation
+fails that relation even if its structure validates. The selected source,
+interpretation, projection and admitted approximation bounds identify the
+scope of this evidence.
 
 ### AC-018 Structural And Semantic Separation
 

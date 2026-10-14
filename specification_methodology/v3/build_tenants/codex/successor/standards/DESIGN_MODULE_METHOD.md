@@ -2,33 +2,24 @@
 
 ## Governing Relations
 
-The premises are a governed Product outcome, admitted requirements, a current
-material boundary, finite actor capacity and an actual design grant. Given
-those premises, [bounded construction](FOUNDATIONS.md#bounded-construction)
-requires the boundary to expose the obligations a local transformation must
-preserve. [Workspace and context](FOUNDATIONS.md#workspace-and-context)
-requires its reconstruction from current source and still-valid evidence,
-rather than the designer's remembered account. Authority does not follow from
-capability or from a plausible implementation.
+This profile governs the adopted design boundary. At admission and review, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) with the
+governing Product and requirements, accepted Ontology/design basis, proposed
+boundary and its complete material-relation set `M(B)`, required evidence and
+the actual design or effect grant. The [constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface)
+leaves local implementation choices open only within that admitted relation.
 
-This method makes additional design choices: Ontology-first semantic ownership,
-Prime contraction, an irreducible carrier set, three related design views and
-explicit effect boundaries. Those choices refine the shared obligations; they
-are not logical consequences of finite capacity alone. The applicable clauses
-below own their conditions and exceptions. ODD alignment, Python typing, UX and
-world-model refinements retain their declared adoption scopes.
-Theoretical analogies supply no additional prerequisite. Cross-member
-references preserve each relation's declared semantic scope and owner.
+This member owns additional design policies: Ontology-first semantic ownership,
+decision-complete sequencing, Prime contraction, the irreducible carrier set,
+three design views and functional realization with explicit effect boundaries.
+The clauses below bind those policies to shared conservation, projection,
+currentness and result contracts at the consuming gate. ODD alignment, Python
+typing, UX and world-model refinements retain their declared adoption scopes;
+theoretical analogies add no prerequisite.
 
-At design admission, bind the candidate boundary, its basis, material relation
-set and grant. Acquire the source and seam evidence needed for that relation
-set. Design and implementation transform within it. Evaluate each required
-relation and use the shared [result conjunction](FOUNDATIONS.md#result-conjunction)
-at the cross-view gate. The design authority disposes of the resulting
-candidate under its grant. These operations instantiate the
-[Transformation Library](TRANSFORMATION_LIBRARY.md); they do not add a
-compulsory workflow or a second acceptance record.
-
+Design acceptance evaluates the required relations through the core result
+conjunction and the design authority's existing decision. Application of the
+shared law adds neither a compulsory workflow nor a second acceptance record.
 
 ## 1. Purpose
 
@@ -185,34 +176,22 @@ but fails one of these evaluators, it is not real progress under this method.
 
 ### 1. Authority Seam Closure
 
-Each change must not increase the number of truth surfaces.
+For each changed semantic boundary, bind its authoritative carrier or contract
+and every consuming interface under
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application).
+The change must not increase truth surfaces; seam-closure work reduces existing
+rival surfaces. Removing the authoritative carrier must make its consumers fail
+closed, rather than reconstructing its meaning from raw artifacts, controller
+state or payload fragments. [Ingress Collapse](#3b-ingress-collapse-rule)
+governs raw input.
 
-When duplicate or rival truth surfaces already exist, seam-closure work should
-reduce them.
-
-This means:
-
-- one authoritative carrier or contract at each semantic boundary
-- no controller-side reconstruction of already-admitted truth
-- no downstream surface silently rebuilding source truth from raw artifacts
-- no raw or open payload trusted past ingress
-
-The test is:
-
-- if the authoritative carrier were removed, would the system fail closed, or
-  would another path silently reconstruct the same meaning?
-
-If meaning survives by reconstruction, the seam is not closed.
-
-For projection and query modules, seam closure also requires source coherence:
-
-- the projection must name the admitted carrier, runtime, event, or source truth
-  it derives from
-- reconstructed catalog, ownership, route, status, or closure truth must be
-  structurally compared against the admitted source carrier before publication
-- same-name but different-shape carriers must fail closed unless an explicit
-  migration design makes the divergence lawful
-- negative tests must cover structural drift, not only missing source truth
+Projection and query publication applies
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) to the
+named admitted carrier, runtime, event or source truth. Catalog, ownership,
+route, status and closure views must structurally compare their exposed relation
+with that source before publication. Same-name/different-shape carriers refuse
+unless an explicit migration design admits the difference. Negative proof
+covers structural drift as well as missing source truth.
 
 ### 2. Essential Carrier Consolidation
 
@@ -310,6 +289,21 @@ Projects using this method must avoid:
   authority path
 
 ---
+
+The semantic kernel is pure for the same admitted inputs. Time, randomness,
+UUID minting, environment/process/filesystem/network reads and global registries
+belong to declared ingress or effect boundaries. Identity creation is explicitly
+owned there. Invalid or incomplete truth is rejected at ingress; transforms use
+local admitted carriers directly rather than re-entering parsers or loaders on
+locally assembled truth. Defaults are explicit, ratified and carrier-owned.
+Each function has a declared responsibility: admission, semantics and effects
+must not be mixed behind one convenience helper. Semantic algebra depends on
+carrier contracts rather than runtime shells; admission depends on validation
+rather than semantic orchestration. Package, bootstrap, controller, adapter and
+runtime-shell layers stay below the semantic center. Effect boundaries remain
+typed and do not erase carrier truth into open objects. These policies retain the
+Immutable Carrier Rule's justified-mutation cases and the adopted language's
+expressive limits.
 
 ## 4A. Python Typing Rule
 
@@ -539,46 +533,27 @@ and views when those surfaces jointly carry the complete relation.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
-`M(B)` closes one governed boundary. A bounded local action is taken inside a
-frame that derives from other accepted frames, and its lawfulness depends on
-relations the acting frame does not itself own.
+For a proposed action inside `M(B)`, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and its
+[composition law](TRANSFORMATION_LIBRARY.md#composition-law). This design
+binding declares the governing accepted frames, bounded affected relations,
+inherited invariants, crossing authority/composition seams and subordinate
+frames opened by unresolved material distinctions.
 
-`Global` and `local` are relative to the selected frame. Each material design
-frame must identify:
+The governing structure may be a network: entity lifecycle and operational
+consistency, domain admission and runtime authority, or several sibling
+consumers may govern the same component. A single parent is sufficient only
+where the actual structure is hierarchical. The shared support condition
+decides seam closure through the causally relevant far-side relation or
+evidenced independence; this declaration supplies the concrete relations.
 
-- the governing frames and accepted relations from which it derives;
-- the bounded affected relation set of the proposed action;
-- the applicable inherited invariants;
-- the authority and composition seams crossing that set; and
-- the subordinate frames opened by unresolved material distinctions.
-
-A frame may derive from more than one governing frame. A persistence component
-belongs to an entity lifecycle boundary and an operational consistency
-boundary; an admission function belongs to a domain transition and a
-runtime-authority boundary; a shared callable may be consumed by several
-sibling domains without becoming subordinate to one. A single governing frame
-is lawful where the structure is genuinely hierarchical, and is not required.
-Governing frames form a constraint network for the same reason `M(B)` does.
-
-Every seam crossing the affected set must either include its causally relevant
-far-side relation in that set, or state why that relation cannot affect, and
-cannot be affected by, the bounded action. This makes the declared set testable
-against its own declared seams without requiring a closure algorithm or
-recursive expansion through irrelevant relations.
-
-The result is evaluated against every affected governing frame, preserves each
-applicable accepted relation, and updates only affected subordinate
-projections. A bounded local action conserves governing truth; it does not
-rewrite it. A result that changes a governing relation re-enters at that
-relation before acceptance.
-
-A subordinate frame opens only when a material distinction cannot be resolved
-at the governing altitude. This rule does not require recursively documenting
-irrelevant descendants.
-
-This law is false if a change is locally valid inside the selected frame but
-violates, duplicates, or silently reinterprets an invariant in any affected
-governing frame.
+Evaluate preservation against every affected governing frame and update only
+affected subordinate projections. Changing an accepted governing relation
+requires re-entry at that relation before acceptance. Open a subordinate frame
+only for a material distinction unresolved at the governing altitude; neither
+a closure algorithm nor recursive documentation of irrelevant descendants is
+required. A locally valid action that violates, duplicates or silently
+reinterprets an affected governing invariant fails this obligation.
 
 Discovered functionality is evidence about required behavior. It is not yet an
 architectural operation. A discovered verb, screen action, endpoint, command,
@@ -876,41 +851,33 @@ This law is false if any of the following holds:
 
 #### Admission contract use
 
-Bind the relation above through the library's
-[transformation-admission specialization](TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate and predecessor on the scoped
-entity, under an interpretable authoritative admission basis and with the
-material support the owning relation requires. Its output domain is that
-relation's declared durable result or other supported outcome. These are
-semantic parameters, not a new carrier
-schema or common result enum. This method owns the design completeness test;
-UP-021 owns the admission decision and standing-test semantics.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the declared candidate and predecessor on the scoped entity. Bind the
+authoritative admission basis, the complete relation and commit unit declared
+above, its required support, admitter grant and supported durable-result or
+other outcome. These are semantic bindings, not a new carrier. The library's
+[admission specialization](TRANSFORMATION_LIBRARY.md#transformation-admission-specialization)
+relates this use to its foundations. This method owns design completeness;
+UP-021 owns admission and standing-test semantics.
 
-The admission assessment returns the shared
-[result record](FOUNDATIONS.md#result-algebra) on the predicate that this exact
-candidate satisfies the declared admission relation at its current basis.
-For this assessment, predecessor continuity, predecessor currentness and the
-admitter's grant are material joins of that predicate. Established stale
-predecessor state or a defeated grant therefore falsifies the admission claim
-under an interpretable governing basis; it is not relabelled a missing basis.
-Missing evidence about those joins leaves the admission claim `indeterminate`.
-An uninterpretable or contradictory governing basis is `invalid_basis`; an
-unsupported evaluation boundary is `out_of_frame`. Preserve the domain
-admission outcome and evidence. `satisfied` requires the whole admission
-predicate, including its joins. Basis advancement before the semantic commit
-still prevents effect and requires the current-basis re-entry owned by UP-021.
-An assessment not performed retains `performance = not_performed`. Construction
-of a well-formed candidate is a different predicate and cannot stand in for
-admission. The effect component records the actual commit/publication state,
-including `partial` or `unknown` where appropriate.
+The assessment predicate is that this exact candidate satisfies that declared
+admission relation at its current basis. Predecessor continuity, currentness
+and admitter authority are material joins: established stale predecessor state
+or a defeated grant is `falsified`; missing evidence about them is
+`indeterminate`. An uninterpretable or contradictory governing basis is
+`invalid_basis`; an unsupported evaluation boundary is `out_of_frame`.
+`satisfied` requires the whole predicate and its joins. Preserve the domain
+outcome and the core performance/effect record, including non-performance,
+partial publication or unknown effects. Candidate well-formedness is a
+different predicate.
 
-Apply that specialization in the existing admission assessment: a
-shape-correct candidate reconstructed by a projector cannot establish
-admission when it lacks the required predecessor continuity or admitter grant.
-The same candidate with authentic current-basis support and actual authority
-is evaluated against the owning predicate; those facts alone do not guarantee
-admission. Where a governing seam remains unresolved, use UP-017's affected
-relation set and the owning result algebra rather than inventing a local pass.
+A shape-correct projector candidate therefore requires authentic
+current-predecessor support and the actual grant at this gate; those facts
+alone do not establish the remaining admission conditions. Unresolved seams
+use UP-017's declared affected set under the shared support condition. Basis
+advancement before semantic commit prevents the effect and requires UP-021
+current-basis re-entry. This is the existing admission assessment, not an
+additional validation pass.
 
 ### Atomic Functions And Higher-Order Composition
 
@@ -1025,32 +992,22 @@ accepted boundary cites the existing Prime basis rather than recreating it.
 
 ### Ontology Projection Law
 
-The Ontology is one semantic truth. The following must preserve it and must not
-become independent semantic authorities:
+Each design projection applies
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) with the
+accepted Ontology as semantic source and its identity, relationship, lifecycle,
+authority, function and effect laws as required distinctions. The targets are
+domain/class, sequence and state views; authority/effect matrices; IACS;
+public APIs, operation registers, SDK/CLI surfaces; schemas, codecs, manifests
+and catalogs; target architecture and modules; and implementation, test and
+proof inventories through accepted design and owning requirements.
 
-- class or domain diagrams;
-- sequence diagrams;
-- state and lifecycle diagrams;
-- authority and effect matrices;
-- the Irreducible Architectural Carrier Set;
-- public APIs, operation registers, SDK and CLI surfaces;
-- schemas, codecs, manifests, and generated catalogs;
-- target architecture and module design;
-- implementation modules through accepted target design; and
-- test and proof inventories through requirements and accepted design.
-
-Each design projection must identify its Ontology source and the identity,
-relationship, lifecycle, authority, function, or effect law it preserves. Any
-intentional omission or flattening must declare accepted loss and a failure
-condition. Target design may add structural `HOW` that is absent from the
-Ontology, but it may not originate rival semantic meaning. Implementation and
-tests trace through that accepted design rather than bypassing it.
-
-If a public operation, sequence message, state transition, carrier, or effect
-cannot be traced through accepted design to the accepted Ontology, it is
-ungrounded design and must not enter the active product line. An implementation
-branch or test expectation must trace to requirements plus accepted design; it
-must preserve, but need not be enumerated by, the Ontology.
+The binding names its Ontology source and the laws preserved. Intentional
+omission or flattening declares accepted loss and a failure condition. Target
+design may add structural HOW, but cannot originate rival semantic meaning.
+A public operation, message, transition, carrier or effect untraceable through
+accepted design to the Ontology cannot enter the active line. Implementation
+branches and test expectations trace to requirements plus accepted design;
+they preserve the Ontology without needing individual enumeration in it.
 
 ---
 
@@ -1377,58 +1334,34 @@ a new local model without that derivation creates another truth surface.
 
 ### Invariant Reconstruction Sufficiency (`STDO-UP-018`)
 
-The evidence above is not a documentation deliverable. It is the durable
-reasoning state a bounded actor needs, because the actor selecting a local
-action generally does not hold the reasoning that produced the governing
-frames. Dialogue, commentary, prior-agent memory, and implementation folklore
-are not that state.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the proposed bounded action and the accepted material-frame basis. Its
+support is the selected STDO basis plus accepted design: the method supplies
+the required relations and deciding laws; design supplies their concrete
+values. Neither substitutes for the other. Repeating federal method in local
+design is not reconstruction.
 
-Given an accepted material-frame basis, as determined by the existing material
-semantic boundary definition, and a proposed bounded action, the selected STDO
-basis together with the accepted design must be sufficient to recover every
-governing relation in the action's causally closed affected set, and to decide
-whether the action preserves, changes, duplicates, or violates each of those
-relations.
+The evidence must recover every governing relation in the action's causally
+closed affected set and distinguish:
 
-The two inputs are distinct and neither substitutes for the other. The selected
-method describes which relations are required and how to reason about them; the
-accepted design supplies the concrete invariant values. A design that restates
-federal decision law to satisfy this rule reproduces the local-method
-duplication this law exists to remove.
-
-The four decisions are distinguished as follows:
-
-| Decision | The action, against a governing relation |
+| Decision | Action against the governing relation |
 |---|---|
-| preserves | leaves the relation intact and operates inside it |
-| changes | alters the relation itself, and therefore re-enters at that relation before acceptance |
-| duplicates | establishes an equivalent path that is explicitly disposed as a constituent, replica, replacement, or deliberately independent realization |
-| violates | contradicts the relation, or establishes an equivalent path that is left undisposed |
+| preserves | Operates inside the intact relation. |
+| changes | Alters the relation and requires acceptance by re-entry at that relation. |
+| duplicates | Establishes an equivalent path explicitly disposed as constituent, replica, replacement or deliberately independent realization. |
+| violates | Contradicts the relation, leaves an equivalent path undisposed, or accepts a changed relation only inside the acting frame. |
 
-The boundary between `changes` and `violates` is the locus of acceptance, not
-the size of the delta: an otherwise lawful change accepted inside the acting
-frame rather than at the relation it changes is a violation. The boundary
-between `duplicates` and `violates` is disposition, not equivalence: an
-equivalent path is lawful when disposed and a defect when not.
+Thus locus of acceptance separates change from violation; explicit disposition,
+not equivalence alone, separates lawful duplication from violation. Missing
+relations or an undecidable distinction leave this sufficiency claim unmet.
 
-Sufficiency is bound to a declared action and its affected set. It is not a
-claim over an unbounded space of possible future changes, and the performance
-of any particular reviewer is not evidence either way.
-
-This obligation adds no artifact. It is satisfied through the Ontology
-evidence, authority matrix, transformation-admission relation, frame
-declaration, views, and module mapping already required, and is a property of
-that material rather than a separate package.
-
-This law is false if, for a declared bounded action, the accepted design does
-not expose a governing relation in that action's causally closed affected set,
-or the preserve, change, duplicate, or violate decision cannot be reached from
-the selected STDO basis and accepted design, without conversation history,
-commentary, prior-worker memory, or implementation folklore.
-
-Where the sufficiency of a boundary is tested, the test uses named cases with
-known governing relations and expected decisions, evaluated with conversation
-history, commentary, prior-worker memory, and implementation folklore withheld.
+This is a property of the existing Ontology, authority/admission relation,
+frame declaration, views and module mapping, not another artifact. It is bound
+to the declared action and affected set, not all possible future changes or
+the performance of a particular reviewer. Test named cases with independently
+known relations and expected decisions while withholding conversation history,
+commentary, prior-worker memory and implementation folklore. Those materials
+cannot supply a missing governing relation.
 
 ### Domain model
 
@@ -1564,14 +1497,12 @@ by imperative glue in a plugin, shell, service, script, or test harness.
 
 ### Gate and retrospective work
 
-Conjoin the required Ontology, design-view, constructability and axiom results
-using [result conjunction](FOUNDATIONS.md#result-conjunction). Keep each
-predicate, failure, citation and unresolved obligation. A proved failure in
-one view remains visible when another view has no assessment. No view count,
-empty result set or supported exclusion substitutes for the complete required
-set. The conjunction supports the design authority's decision; it is not that
-decision. Domain dispositions such as `accepted` and `non-accepted` remain
-reported with their authority and the predicate actually decided.
+At the gate, apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the exact design-acceptance claim and conjoin the required Ontology,
+design-view, constructability and axiom results under the core law. The design
+authority then records its `accepted` or `non-accepted` disposition on that
+predicate. This binds the existing gate's coverage and authority; no view
+count, empty set or supported exclusion substitutes for the required set.
 
 For a new or semantically changed boundary, the Ontology and design verdict must
 both be `accepted` before the affected implementation, public contract, or
@@ -1999,34 +1930,19 @@ Convenience is not sufficient justification.
 
 ## 8. Totality Rule
 
-Semantic functions should be total or as close to total as the language and
-problem allow.
+Semantic functions should be total, or as close as the language and problem
+allow. Bind their admitted input domain, intended result and permitted recovery,
+re-entry, yield or termination under
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and
+[bounded construction](FOUNDATIONS.md#bounded-construction). The method-boundary
+return uses the core result record with the original domain outcome.
 
-At a method boundary their outcomes use the
-[shared result record](FOUNDATIONS.md#result-algebra), retaining the function's
-domain outcome. Invalid basis, an unsupported input domain, insufficient
-evidence and a demonstrated failure remain distinct. A typed return says what
-happened; it does not guarantee that an external computation terminates. The
-owning transition states its permitted recovery, re-entry, yield or termination
-for each supported result, including unknown effects.
-
-Preferred shape:
-
-- invalid input is rejected at the boundary
-- semantic kernels consume admitted carriers only
-- failure is returned in a typed and explicit form when practical
-
-Projects using this method should prefer:
-
-- `Result`-like or closed outcome carriers
-- explicit validation stages
-- explicit "unsupported" or "rejected" outcomes
-
-Projects using this method should avoid:
-
-- partial functions that assume hidden preconditions
-- semantic `.get(...)` fallback chains
-- controller code that reconstructs missing truth from defaults
+The functional policy is to reject invalid input at ingress, consume admitted
+carriers in kernels, and return typed explicit failure where practical.
+Prefer closed Result-like outcomes and explicit validation, unsupported and
+rejected cases. Hidden preconditions, semantic `.get(...)` fallback chains
+and controller defaults that reconstruct missing truth violate that policy.
+Closed handling does not promise external-computation termination.
 
 ---
 
@@ -2053,13 +1969,12 @@ The preferred sequence is:
 3. apply effects at the edge using that plan or outcome
 4. publish resulting events or projections downstream
 
-The effect return preserves `not_requested`, `not_started`, `completed`,
-`partial`, `reverted` or `unknown` in the shared record as observed. A transport failure
-after dispatch is not proof that an effect did not occur. Re-entry observes the
-current owning state before any dependent repeat, through
-[workspace and context](FOUNDATIONS.md#workspace-and-context). It can reacquire
-a sufficient frame after private context is discarded without resetting the
-workspace or assuming every effect is idempotent.
+Bind the actual write, publication, invocation or other effect boundary to the
+core effect record through
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application).
+[Workspace and context](FOUNDATIONS.md#workspace-and-context) decides unknown
+effect reconciliation and any dependent repeat on current owning state,
+including after private context is discarded.
 
 If a function both decides the semantic meaning and directly performs the write,
 the design should be treated as suspect.
@@ -2068,27 +1983,13 @@ the design should be treated as suspect.
 
 ## 10. No Semantic Center Rule
 
-No controller, manager, service method, runtime loop, or public wrapper should
-be the hidden semantic center of the system.
-
-That includes:
-
-- deciding meaning procedurally in orchestration code
-- rebuilding truth from payload fragments
-- rehydrating current law from legacy files or fallbacks
-- flattening typed meaning into ad hoc dict handling and `.get(...)` chains
-
-A module is acting as an unlawful semantic center when reviewers must read it to
-discover:
-
-- what counts as closure
-- what identity means
-- what failure means
-- what work is next
-- what the current truth is
-
-Those meanings should already exist in carriers, contracts, or explicit design
-modules.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to each controller, manager, service, loop or public wrapper using its declared
+role. Closure, identity, failure, next-work and current-truth determinations
+must come from their admitted carriers, contracts or explicit design owners.
+A wrapper that decides them through procedural orchestration, legacy fallbacks,
+payload-fragment reconstruction or open-dictionary handling becomes an
+undeclared semantic center and fails the authority/preservation conditions.
 
 ---
 
@@ -2347,23 +2248,14 @@ closure until this bounded design check is complete.
 
 ## 12. Interface Bleed Prohibition
 
-No interface should bleed semantic authority into another interface family.
-
-Interface bleed exists when:
-
-- one interface reconstructs another interface's source truth
-- projection logic becomes closure logic
-- report or prompt logic becomes admission logic
-- public wrappers decide kernel semantics
-- adapters invent meaning instead of translating boundaries
-
-The required shape is:
-
-- each interface family has one authoritative source truth
-- downstream interfaces consume that truth
-- crossing an interface boundary does not create a new semantic center
-
-Low coupling requires semantic non-bleed, not only small functions.
+For a crossing between interface families, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to their
+declared source and consumer roles; apply Faithful projection when the consumer
+is a view. Each family has its authoritative source, and downstream interfaces
+consume it. Projection-to-closure, report/prompt-to-admission,
+wrapper-to-kernel and adapter-to-semantic-owner changes are undeclared authority
+transfers, not ordinary interface translation. This is semantic non-bleed;
+smaller functions alone do not establish it.
 
 ---
 
@@ -2390,290 +2282,58 @@ Otherwise the proxy path must be removed.
 
 ## 14. Design Review Questions
 
-When reviewing code under this method, ask:
+Review the exact adopted boundary and claim by applying
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application).
+Acquire the applicable owners below with the actual design and implementation.
+The table selects the required decision evidence; it is not another definition
+of those decisions.
 
-1. Does semantic law live in typed carriers or in orchestration code?
-2. Are the main steps readable as transforms over admitted truth?
-3. Are effects isolated to explicit edge modules?
-4. Can projections or reports invent closure independently?
-5. Does each projection/query module derive from an admitted source carrier, or
-   can it reconstruct a same-name but structurally different truth surface?
-6. Is mutation justified, bounded, and local?
-7. Can consumers pattern-match the source carrier directly?
-8. Is any proxy or compatibility surface still silently authoritative?
-9. Would removing the authoritative carrier make the system fail closed rather
-   than silently rebuilding truth?
-10. Does each new function project accepted Prime atoms without convenience
-    aggregation or rival semantic authority?
-11. Does any interface bleed semantic authority into another interface family?
-12. For Python, does any governed semantic surface still rely on `Any`, open
-    dict payloads, or untyped defs?
-13. Has the boundary declared its Irreducible Architectural Carrier Set?
-14. Which shapes are Subordinate Payloads, and why are they not staying
-    subordinate?
-15. Does every promoted top-level type pass the Promotion Test?
-16. Has typed closure caused Boundary Inflation by multiplying peer types or
-    parallel schema migrations?
-17. Does this change avoid increasing truth surfaces, and reduce duplicate truth
-    where duplicate truth exists?
-18. Is any foreign or open payload still trusted past ingress?
-19. Did enforcement follow proof, or is the typing/schema work cosmetic?
-20. If this boundary governs another actor, is it publishing state and
-    admissible routes, or imperatively prescribing strategy?
-21. If a reference realization exists, has the target boundary been derived
-    explicitly from reference design to target design to target module assets
-    rather than from code drift?
-22. Does a module-bounded domain projection exist and accurately show IACS
-    carriers, their Prime-atom projection mappings, subordinate payloads,
-    visibility, ownership, and deferred families from the accepted Ontology?
-23. Do the unit tests derive from module ownership and module assets rather
-    than from helper layout or incidental code shape?
-24. If the change claims cleanup or optimization, does it stay boundary-local,
-    behavior-preserving, and authority-neutral rather than becoming silent
-    redesign?
-25. If a cross-boundary opportunity was discovered, was it kept out of the
-    current change unless the owning authority admitted it at the lawful
-    re-entry point?
-26. If the same realization pattern has already appeared elsewhere, did review
-    make an explicit library/commonization decision rather than allowing
-    another silent local rebuild?
-27. If this would be the third local rebuild of the same realization pattern,
-    is the change design-method conformant because it consumes or extends the
-    governing library or records an explicit do-not-commonize decision?
-28. If the ticket is making a design-method closure claim, did the bounded
-    design check cover the exact claim and applicable hard stops without
-    automatically absorbing optional discovery?
-29. If the project is ODD-governed, is this module realizing a declared
-    outcome traversal rather than substituting for the graph function?
-30. Has review checked whether a deterministic module boundary is actually an
-    operative edge traversal that should be declared under `ODD_METHOD.md`?
-31. Do `F_D` evaluators, deterministic transforms, and effect shells remain
-    subordinate to the GTL/ABG graph carrier rather than becoming the hidden
-    program?
-32. Does the boundary have a lifecycle confirmation against the canonical
-    `SPEC_METHOD.md` operational lifecycle chain, or named `Gap:` /
-    `Unanswered:` items for unresolved phases?
-33. Are release, deployment, live usage, observed telemetry, and retirement
-    questions answered by the proper authority surface rather than invented by
-    implementation, prompt prose, local convention, or fixtures?
-34. If a lifecycle phase is declared not applicable, is the reason explicit and
-    compatible with the product and requirement authority?
-35. Does the boundary have distinct Mermaid domain, sequence, and state-machine
-    views rather than one carrier inventory or broad flowchart?
-36. Does every sequence participant exist in the domain model, and does every
-    message bind to a declared transform, graph/C constructor, interpreter act,
-    or effect boundary?
-37. Does every state transition derive from admitted carrier, event, or
-    projection truth rather than controller-local memory?
-38. Does the axiom matrix evaluate every applicable product, graph, language,
-    runtime, handler, and module law with `pass`, `fail`, or reasoned
-    `not_applicable`?
-39. Is any relied-on graph, batch, retry, recursion, or workflow constructor
-    still `semantic_not_realized`, and if so are promotion and closure blocked
-    rather than bypassed with imperative glue?
-40. Is the proportional sequencing relation justified, and is the design
-    verdict explicitly `accepted` before promotion or closure and, where
-    design-gated, before retained implementation establishes an unresolved or
-    contradictory relation or chooses a materially non-equivalent network?
-41. Does one accepted Ontology exist before IACS, public operation, schema,
-    module, or implementation promotion?
-42. Does the Ontology enumerate entities, identities, relationships,
-    invariants, and logical lifecycle completeness without treating mutable CRUD
-    as the default?
-43. Does every Ontology function or transition declare proposer, evaluator,
-    verifier, admitter, executor, projector, and retirement authority as
-    applicable, with actor and capability kept distinct from authority?
-44. Has every discovered functionality item been derived through an atomic
-    function or higher-order composition, explicitly deferred or excluded, or
-    assigned to a named gap?
-45. Was Prime contraction applied to the complete candidate semantic-atom
-    family and all proposed realization projections, with every accepted
-    atom's admitted domain recorded, rather than only to functions, carriers,
-    or isolated units?
-46. Does the boundary declare its composition and effect algebra and prove
-    identity, closure, cardinality, effect, and authority conservation where
-    applicable?
-47. Are the class, sequence, state, IACS, public contract, adapter, code, and
-    test surfaces traceable projections of the Ontology with any accepted loss
-    declared?
-48. Would removing the Ontology reveal ungrounded meaning in a downstream view,
-    operation register, controller, or implementation branch?
-49. Before constructing a material generic capability or common mechanic, was
-    it stated without Product, domain, module, vendor, file, or incumbent labels,
-    with declared semantic or authority-bearing relations distinguished from
-    generic mechanics?
-50. Does bounded discovery record every searched source or category, cutoff
-    time and version basis, applicability criteria, exclusions, predecessor or
-    incumbent status, and residual unknown, with later material candidates
-    invalidating affected selection evidence?
-51. Did foundation selection compare credible candidate compositions across
-    the decision-relevant lifecycle dimensions without incumbent, source-order,
-    local-code, or dependency-count preference?
-52. Are hard authority, Product-contract, safety, security, licensing, and
-    constructability failures eliminative, while unknown evidence remains
-    explicit rather than becoming a favorable score?
-53. Does every reused foundation hold only explicitly assigned roles, preserving
-    each declared relation's owner, role kind, subject, scope, basis, lifecycle,
-    and refusal invariants without authority widening?
-54. Is the selected composition undominated under the evidence, and did the
-    existing tradeoff owner apply declared priorities and risk tolerances rather
-    than asserting an undefined total ordering?
-55. Does every rejected material candidate carry decisive evidence or a
-    falsifier, while an unresolved frontier remains a gap rather than an
-    unsupported preference?
-56. Did any newly exposed material generic subproblem recursively re-enter the
-    foundation-selection relation before its implementation was retained?
+| Review question family | Owning policy and material subject |
+|---|---|
+| Meaning, effects, mutation, ingress and defaults | [Core Rule](#3-core-rule); [Functional Bias](#4-functional-bias-without-language-mandate); [Authority Seam Closure](#1-authority-seam-closure); [Ingress Collapse](#3b-ingress-collapse-rule); [Immutable Carrier](#7-immutable-carrier-rule); [Totality](#8-totality-rule); [Effect-Edge](#9-effect-edge-rule); [No Semantic Center](#10-no-semantic-center-rule); [Coupling](#11-coupling-rule); [Interface Bleed](#12-interface-bleed-prohibition); [Proxy Interface](#13-proxy-interface-prohibition); [Governance/Strategy Separation](#11a-governancestrategy-separation-rule). Inspect the active source-to-consumer and effect paths. |
+| Typed closure and language binding | [Enforcement After Proof](#3-enforcement-after-proof) and, for Python, [Python Typing](#4a-python-typing-rule). Inspect parsing/admission and the adopted strict-checker boundary. |
+| Atom and carrier justification | [Ontology-First Design](#4b-ontology-first-design-rule), [Atomic Functions](#atomic-functions-and-higher-order-composition), [Prime](#5-prime-law), [IACS](#5a-irreducible-architectural-carrier-set-rule), [Promotion Test](#5b-promotion-test) and [Boundary Inflation](#5c-boundary-inflation-prohibition). Inspect the complete semantic family, domains and realization mappings. |
+| Domain, behavior, lifecycle and authority consistency | [Ontology And Three-View Behavioral Design Gate](#5e-ontology-and-three-view-behavioral-design-gate) and its [cross-view axiom evaluation](#cross-view-axiom-evaluation). Inspect the accepted network, all required views, messages, authority paths, constructor realization and proportional gate. |
+| Reference derivation and module proof | [Reference-Derived Module Design](#5d-reference-derived-module-design-rule) and [Design To Module To (Implementation, Unit Tests)](#6a-design-to-module-to-implementation-unit-tests-evidence-route), including [Module-Derived Unit Test](#6b-module-derived-unit-test-rule). Inspect the reference-to-target mapping and module-owned claims. |
+| Algorithms and dependencies | [Capability And Foundation Selection](#capability-and-foundation-selection-stdo-up-023) and [Computational Realization Projection](#computational-realization-projection-stdo-up-019). Inspect discovery, material exclusions/unknowns, candidate compositions, eliminative failures, the undominated frontier, role conservation and recursive material subproblems. |
+| Cleanup, reuse and scope | [Opportunistic Optimization](#11b-opportunistic-optimization-rule), [Recurrence Extraction](#11c-recurrence-extraction-rule) and [Post-Ticket Design Review](#11d-post-ticket-design-review-rule). Inspect the exact claim, hard stops, prior recurrence and any separately admitted re-entry. |
+| Runtime or UX specialization | [ODD Alignment And Escalation](#3a-odd-alignment-and-escalation-rule) and the applicable ODD/UX owner. Inspect whether a module realizes the published traversal or has acquired its control authority. |
+| Intended operational use | [Module Lifecycle Confirmation](#6c-module-lifecycle-confirmation-rule) and its Spec lifecycle owner. Inspect phase evidence, reasoned exclusions and owned gaps. |
 
-If these questions cannot be answered cleanly, the realization is too coupled
-or too imperative.
+A review result identifies the concrete predicates, their evidence and residuals
+through the shared result contract. A missing answer on a required relation
+prevents the corresponding design-conformance claim; use the owner to determine
+whether the defect is coupling, imperative meaning, incompleteness or another
+failed relation.
 
 ---
 
 ## 14A. Functional Realization Review Checklist
 
-When a project claims functional bias, pure transforms, immutable carriers,
-single-owner truth, or low-coupling realization, review must explicitly check:
+A claim of functional bias, pure transforms, immutable carriers, single-owner
+truth or low coupling selects the realization policies in section 14 for its
+exact boundary. Evaluate them against the admitted Ontology, atom/IACS mapping,
+three views, computational binding, implementation and module-owned proof.
+The check applies in any language to modules, carriers and data entities.
 
-- [ ] Does the change preserve the constitutional `WHAT` and keep realization work
-      inside lawful `HOW` surfaces only?
-- [ ] Does the active boundary have one accepted Ontology that derives its
-      entities, identities, relationships, invariants, lifecycle, authority,
-      atomic functions, higher-order composition, effects, and projections?
-- [ ] Does the entity-lifecycle completeness matrix give every declare/create,
-      read/project, update/transition, and delete/retire question a lawful
-      function, reasoned `not_applicable`, or named owned gap?
-- [ ] Does the authority matrix distinguish actor, capability, proposal,
-      evaluation, verification, admission, execution, projection, and
-      retirement without implicit authority widening?
-- [ ] Does the function-derivation matrix dispose every discovered
-      functionality item and prevent direct verb-to-operation promotion?
-- [ ] Has whole-family Prime contraction factored repeated behavior into
-      parameterized atomic functions and declared higher-order composition
-      before peer functions, operations, or carriers are promoted?
-- [ ] Does Prime evidence cover the complete candidate semantic-atom family,
-      record every accepted atom's admitted domain, and map accepted atoms to
-      every proposed realization projection?
-- [ ] Are the IACS, three views, public contracts, adapters, implementation, and
-      tests fidelity-checked projections of the accepted Ontology rather than
-      independent design authorities?
-- [ ] If a reference realization exists, is the new realization functionally
-      equivalent at the semantic boundary without copying incidental
-      implementation drift?
-- [ ] If a reference realization exists, does the target design explicitly map
-      reference design to target design to target module boundary before
-      implementation?
-- [ ] Before constructing a material generic capability, did the boundary run
-      the proportional `STDO-UP-023` foundation-selection pass, record bounded
-      discovery and the undominated frontier, distinguish declared relations
-      from generic mechanics, preserve every assigned role and authority tuple,
-      and record decisive evidence for selected and rejected candidates?
-- [ ] Do implementation and unit tests both derive from the same module
-      boundary assets rather than from code-first decomposition?
-- [ ] Does each semantic truth surface still have one clear authoritative owner?
-- [ ] Does the change reduce duplicated truth, controller reconstruction, and
-      rival local authority paths?
-- [ ] Do semantic functions consume admitted carriers only?
-- [ ] Are semantic functions pure for the same admitted inputs?
-- [ ] Are time, randomness, UUID minting, environment reads, process state,
-      filesystem, network, and global registries absent from the semantic
-      center?
-- [ ] If identity is introduced, is identity creation explicitly owned by a
-      declared ingress or effect boundary rather than hidden inside semantic
-      helpers?
-- [ ] Are carriers immutable and returned as new values rather than mutated in
-      place?
-- [ ] Is shared mutable state absent from the semantic center?
-- [ ] Do semantic transforms operate directly on local admitted carriers rather
-      than re-entering parsers, validators, or loaders on locally assembled
-      truth?
-- [ ] Is invalid or incomplete truth rejected at ingress instead of being
-      repaired procedurally inside semantic code?
-- [ ] Are defaults explicit, ratified, and carrier-owned rather than
-      helper-owned?
-- [ ] Does each function have one clear owner and one clear responsibility
-      rather than mixing admission, semantics, and effects?
-- [ ] Is coupling low by dependency shape:
-      semantic algebra depends on carrier contracts, not runtime shells;
-      admission depends on validation, not semantic orchestration; effect code
-      stays at the edge
-- [ ] Does no function both decide semantic meaning and perform effects?
-- [ ] Are effect boundaries explicit, typed, and unable to erase carrier truth
-      into open objects?
-- [ ] Do package, bootstrap, controller, adapter, and runtime-shell layers stay
-      below the semantic center?
-- [ ] Do governance and observability surfaces publish facts, eligibility, and
-      provenance only without imperative builder or executor strategy?
-- [ ] Does the active boundary have complete Mermaid domain, sequence, and
-      state-machine views that match the current IACS, visibility, ownership,
-      behavior, lifecycle, and deferred-family split?
-- [ ] Does the active boundary carry a complete cross-view axiom matrix and an
-      explicit `accepted` design verdict with no bypassed realization gap?
-- [ ] Do the unit tests for the active boundary derive from module ownership,
-      IACS, and structural carrier assets rather than from helper layout?
-- [ ] If the change includes cleanup or optimization, does it stay
-      boundary-local, behavior-preserving, and authority-neutral?
-- [ ] If the same realization pattern has appeared before, has the ticket made
-      an explicit library/commonization decision rather than rebuilding it
-      again silently?
-- [ ] If a reusable library/commonization surface exists, does the ticket
-      explicitly consume or extend it rather than duplicating the pattern
-      locally?
-- [ ] If no reusable library/commonization surface is used, is there an
-      explicit rationale that the pattern is boundary-specific or not yet a
-      lawful commonization candidate?
-- [ ] If a cross-boundary opportunity was discovered, was it kept out of the
-      current change unless the owning authority admitted it at the lawful
-      re-entry point?
-- [ ] If the ticket is making a design-method closure claim, did the bounded
-      design check cover the exact claim and applicable hard stops without
-      automatically absorbing optional discovery?
-- [ ] Is there a negative proof showing that an imperative bypass, open-payload
-      bypass, or effect-edge erasure fails closed?
-- [ ] If the project is ODD-governed, does the deterministic module sit inside
-      a declared outcome traversal rather than replacing one?
-- [ ] If the module appears to decide next work, traversal closure, semantic
-      target movement, or graph-function identity, has the boundary been
-      repriced under `ODD_METHOD.md`?
-- [ ] Does the active boundary carry lifecycle confirmation against the
-      canonical `SPEC_METHOD.md` operational lifecycle chain, with each phase
-      answered, declared not applicable with a reason, or recorded as a named
-      `Gap:` / `Unanswered:` item?
-- [ ] Are release, deployment, live usage, telemetry, and retirement claims
-      confirmed against product, requirement, design, release, or operational
-      authority rather than derived from implementation convention or fixtures?
+For a new or materially changed boundary, the owning gates require accepted
+Ontology and design, complete lifecycle/authority/function evidence,
+whole-family Prime and domains, applicable foundation selection, complete
+three-view axiom evaluation, and the module/lifecycle proof required by those
+owners. Apply their proportional sequencing and conditional exceptions;
+this checklist does not introduce stricter duplicate gates.
 
-For a new or materially changed boundary, the compact hard-gate version of this
-checklist is:
+Two proof duties of this functional-realization claim remain explicit:
+functional equivalence to the specification and, when present, the reference
+realization at the semantic boundary; and negative proof that imperative,
+open-payload or effect-edge-erasure bypasses fail closed. A graph-native
+boundary additionally uses ODD's supported real authority-path proof.
 
-- [ ] accepted Ontology before promotion or closure and, where design-gated,
-      before retained implementation establishes an unresolved or contradictory
-      relation or chooses a materially non-equivalent network
-- [ ] complete entity lifecycle, authority, and function-derivation evidence
-- [ ] whole-family Prime contraction, accepted atom domains, realization
-      projection mappings, and declared composition/effect algebra
-- [ ] proportional capability/foundation selection for material generic
-      mechanics and dependencies, with bounded discovery, frontier disposition,
-      and exact role and authority conservation
-- [ ] pure functions in the semantic center
-- [ ] immutable carriers with no shared mutable semantic state
-- [ ] one owner per truth surface
-- [ ] low coupling between admission, algebra, and effect edges
-- [ ] no hidden runtime authority in semantic code
-- [ ] accepted domain, sequence, and state-machine projections of the Ontology
-- [ ] complete cross-view axiom evaluation with no bypassed realization gap
-- [ ] functional equivalence to specification and, when present, the reference
-      realization at the semantic boundary
-- [ ] lifecycle confirmation or named lifecycle gaps against the canonical
-      `SPEC_METHOD.md` operational lifecycle chain
-- [ ] negative proof for imperative or open bypass
-
-This checklist is language-agnostic.
-It governs module design, carrier design, data-entity design, and review of
-realization work in any language.
-
-For an unchanged boundary, the hard gate is the accepted basis plus evidence
-of no material semantic-boundary delta. It does not require a new Ontology,
-IACS, three-view asset, cross-view evaluation, or unit-test lane.
+For an unchanged boundary, use the accepted basis and no-material-semantic-delta
+evidence under the gate's reuse rule. No new Ontology, IACS, three-view asset,
+axiom evaluation or unit-test lane follows merely from this review occurrence.
+A required current defect blocks the corresponding claim; optional discovery
+uses Post-Ticket Design Review's scope rule.
 
 ---
 

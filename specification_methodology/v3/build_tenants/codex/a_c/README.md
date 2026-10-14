@@ -1,13 +1,21 @@
 # Codex a_c Interpretation
 
-Current C3 interpretation: [source](../qualification/C3/a_c/SOURCE.md),
-[encoding dispositions](../qualification/C3/a_c/ENCODING.md),
-[six-clause program](../qualification/C3/a_c/program.json),
-[native structural/projection/join checks](../qualification/C3/a_c/MECHANICAL_RESULT.json)
-and [608-case finite token check](../qualification/C3/a_c/FINITE_RESULT.json).
-Independent interpretation and exact applicability are in the
-[C3 return](../qualification/C3/RETURN.md). The executable tests a separately
-authored finite interpretation; ac.py does not execute the program's predicates.
+The current candidate interpretation is the [iteration 3 source binding](../qualification/C3/iteration-3/a_c/SOURCE.md),
+[program](../qualification/C3/iteration-3/a_c/program.json),
+[mechanical result](../qualification/C3/iteration-3/a_c/MECHANICAL_RESULT.json)
+and [iteration 3 return](../qualification/C3/iteration-3/RETURN.md).
+It exposes selected shared constraints and their dependencies. Structural
+validation and closure projection do not execute or authenticate the semantic
+predicates. Source fidelity, actual use and remaining scope are reported
+separately in that return.
+
+## Historical C3 Interpretations
+
+The [iteration 2 synthesis](../qualification/C3/synthesis/a_c/SOURCE.md) retains
+its 53-clause interpretation and original evidence. The earlier
+[six-clause construction](../qualification/C3/a_c/SOURCE.md) retains its own
+subject. Neither is selected by this current entry or retrospectively regraded
+against the new candidate.
 
 ## Preserved Earlier Interpretation
 

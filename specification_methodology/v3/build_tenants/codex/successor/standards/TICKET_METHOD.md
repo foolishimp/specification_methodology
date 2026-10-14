@@ -616,21 +616,17 @@ delta, accepted-design scope and trace coverage, and rule-determined treatment.
 The owning work carrier references that exact result and its residuals; a new
 role does not repeat an unchanged walk.
 
-Before declaring `realization_refactor` for a bug, establish that the current
-requirement and accepted realizing design govern the affected behavior and
-remain sufficient for the authorized outcome. Their mere presence proves no
-coverage. Missing or ambiguous evidence leaves the affected treatment unknown;
-it is not proof that the governing layer itself is absent.
-
-If the governing requirement is actually missing or insufficient, re-enter its
-owner; if that requirement is sufficient but the realizing design is missing or
-insufficient, re-enter Design. Follow any actual upstream Goal, Intent or
-Product change to its owner rather than stopping at a familiar file. When the
-current requirement and accepted design suffice and implementation deviates,
-repair or reject the candidate under `realization_refactor`. A candidate's
-Public violation does not select a new contract. An explicitly changed desired
-outcome or established governing insufficiency follows the owning re-entry;
-unresolved meaning remains J and reserved choice O.
+For a bug, bind that treatment to the current requirement and accepted realizing
+design's coverage of the affected behavior and sufficiency for the authorized
+outcome. Apply the Spec owner's rule to the affected layer: actual requirement
+insufficiency re-enters its owner; sufficient requirements with missing or
+insufficient design re-enter Design; sufficient requirements and design with a
+deviating implementation select repair or rejection under `realization_refactor`.
+An actual upstream Goal, Intent or Product change follows its owner. The
+classifier owns the distinction between missing evidence and established
+insufficiency, and between candidate correction and changed governing meaning;
+the ticket records that result and its J/O residuals instead of determining them
+again from its label or Public delta.
 
 ### Triage Metadata
 
@@ -725,24 +721,17 @@ An admitted execution contract should be:
 - available to frame or prompt assembly
 - available to later closure checking
 
-Admission evaluates `this exact contract is admissible under this cited work
-authority and basis`. Its result preserves the original admission outcome:
-`admitted` maps to `satisfied` when the admission evaluation establishes that
-predicate; `rejected` with a demonstrated violation maps to
-`falsified`; missing deciding evidence maps to `indeterminate`; missing
-admission scope or capability maps to `out_of_frame`; and unusable authority
-or subject coordinates map to `invalid_basis`. A reason accompanies every
-refusal. For every original outcome, including an `admitted` label whose claim
-is not established, apply the [core result law](FOUNDATIONS.md#result-algebra)
-and its legal performance pairs. Missing deciding support gives `indeterminate`;
-the label cannot override separately admissible counterevidence or a basis/scope
-diagnosis. Missing required reasons follow that same core law. A required
-admission evaluation with no result remains an absent slot, with its known
-performance or uncertainty; a carrier state does not fabricate a result.
-`drafted` and `superseded` are carrier states, not evaluation verdicts.
-An old admission is not a current grant merely because its text remains in
-the workspace. Neither admission satisfaction nor `active` status establishes
-that the admitted work has been performed or completed.
+Admission applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to `this exact contract is admissible under this cited work authority and basis`.
+Bind the selected carrier, current upstream authority, admission mechanism,
+contract identity, criteria and durable result surface under
+[Work-Carrier-To-Execution](#work-carrier-to-execution-rule). Its Result condition
+evaluates that predicate, retaining `admitted` or reason-qualified `rejected`
+as the original domain outcome. The core law decides verdict, actual performance,
+counterevidence and absent required assessment; the carrier label decides none
+of them. `drafted` and `superseded` are carrier states. Admission is distinct
+from performance or completion of the admitted work, and its Currentness
+condition governs reliance on an earlier grant.
 
 The system must not allow the model to silently self-certify its own execution
 basis without deterministic admission or explicit human override.
@@ -822,15 +811,12 @@ scope, uncertainty, and a concrete revising observation. That observation must
 let a consumer determine whether the conclusion still applies. A rule-settled
 question needs no invented J record.
 
-Later activations apply the core
-[workspace/context validity rule](FOUNDATIONS.md#workspace-and-context) to the
-recorded result. They observe the relevant current workspace and check the
-question, exact basis and revising conditions rather than re-author unchanged
-judgment. Preserve the original result and its successor relation when
-reassessment is required. The result may reference current C outputs; reuse
-cannot silently turn unknown facts into established premises. Recovery does not
-require a complete historical transcript when the current state and valid
-evidence suffice. Unknown effects still require their owning observation.
+Later reliance applies Contract application's Currentness condition to the
+recorded question, exact basis, current C support and concrete revising
+observation. Retain the original result and its successor relation when
+reassessment is required. Acquire the relevant current workspace and sufficient
+evidence through that condition, rather than re-authoring an unchanged judgment
+or requiring a complete historical transcript.
 
 Required independent assessment may consume valid C, but its assessor acquires
 sufficient exact evidence and supplies its own judgment under the actual
@@ -838,11 +824,10 @@ independence condition. Reusing the author's J cannot satisfy that condition.
 
 Record a direct or lawfully proxied owner ruling in its original wording, with
 its owner, exact subject/basis, permitted scope and effects, conditions and
-source, separately from agent interpretation. Later work consumes that same
-ruling while applicable; it neither widens it nor requests unchanged authority
-again. New ambiguity or a materially changed decision returns only the affected
-question to its owner. J is not O, and recording either cannot create admission,
-acceptance, effects or continuation beyond the original grant.
+source, separately from agent interpretation. Contract application binds later
+reliance to that original mandate without requesting unchanged authority again.
+New ambiguity or a materially changed decision returns the affected question to
+its owner. J is not O; the shared Authority condition governs recording and use.
 
 These results follow the existing run, sprint or durable-ticket lifetime and
 named result/evidence surface. They require no separate judgment registry,
@@ -864,22 +849,17 @@ projected as successful delivery.
 
 ### Bounded-Context Term Binding
 
-Ticket and work-instruction terms resolve under `SPEC_METHOD.md`'s
-Bounded-Context Semantic Resolution law. A ticket may use an unqualified term
-when its cited Product, re-entry surface, execution basis, and affected scope
-select exactly one bounded-context meaning.
+For admission or closure, Contract application's Binding and Preservation
+conditions use [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution)
+on the ticket's Product, re-entry surface, execution basis and affected scope.
+An unqualified occurrence is permitted when those coordinates select exactly
+one meaning. For a cross-context or competing material occurrence, cite the
+applicable overlay disambiguation or owner-authorized semantic-relation carrier;
+consume its meaning rather than duplicate it in ticket prose.
 
-When a ticket spans contexts or a material term has competing meanings, the
-ticket cites the applicable Product Definition Overlay disambiguation or the
-owner-authorized import, translation, equivalence, or disambiguation carrier.
-It may reference that relation rather than duplicate it. Ticket prose, actor
-familiarity, a matching glossary heading, tenant placement, or comment context
-cannot select meaning or transfer authority.
-
-An unresolved or multiply resolved material term blocks execution-contract
-admission and closure for the affected claim. Opening or updating the ticket
-records the pressure but does not cure it; resolution re-enters at the authority
-that owns the missing context or semantic relation.
+An unresolved or multiply resolved material term withholds the affected
+admission or closure. Recording it does not cure it: re-enter the owner of the
+missing context or relation.
 
 ### Evaluation Criteria And Non-Closure Conditions
 
@@ -914,20 +894,15 @@ path-relative authority and explicit disposition rules in `SPEC_METHOD.md`.
 
 ### Condition-Based Closure And Reuse
 
-Closure evaluates `every applicable declared obligation of this exact work
-claim is satisfied and no active non-closure condition remains` through
-[core conjunction](FOUNDATIONS.md#result-conjunction). Bind the obligation set,
-each predicate and its subject/basis before conjoining, including every required
-judgment and owner ruling as a required conjunct. Each ruling is evidence for
-the exact disposition that closure requires on this subject and basis under
-its mandate: for example, `the authorised owner accepted this exact subject`.
-Lawfulness of a different disposition does not satisfy that predicate. Retain
-the original ruling and its own decision result rather than relabeling it as
-the required acceptance. A known failure remains visible when another obligation
-has no assessment. Missing or unknown applicability cannot become satisfaction.
-The core result records the original closure outcome, actual performance,
-effects and residuals; evidence presence alone is not completion. The existing
-owner decides any reserved acceptance.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+reliance on this work claim's closure evidence. Then evaluate `every applicable
+declared obligation of this exact work claim is satisfied and no active
+non-closure condition remains` through its Result condition and core conjunction.
+The bound obligation set includes every required judgment and owner ruling on
+its actual predicate: for example, `the authorised owner accepted this exact
+subject`. A lawful different disposition cannot satisfy that acceptance
+predicate. Retain the ruling's own decision result and the original closure
+outcome; the existing owner still decides reserved acceptance.
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved acceptance,
@@ -936,11 +911,11 @@ carrier without adding a ticket, Executive appointment, review or design-view
 recreation solely to mark completion. This does not waive a condition that
 actually applies, including sprint-close or design-method law.
 
-Reuse and invalidation follow the core current-state contract and Recorded
-Judgment And Owner-Ruling Continuity. An unrelated observation is retained as
-bounded repricing input; it does not reopen a satisfied claim or expand work
-automatically. Closure recording preserves the exact evaluated scope,
-satisfied conditions, evidence and remaining residuals.
+Reuse applies Contract application's Currentness condition with
+[Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity).
+An unrelated observation remains bounded repricing input rather than reopening
+the claim or expanding work. Record the exact evaluated scope, satisfied
+conditions, evidence and residuals in the existing carrier.
 
 ### Test Case Authority
 
@@ -1383,10 +1358,11 @@ owns ticket state, milestone authority owns subordinate milestone state, and
 accepted design owns realization decisions. Comments, dashboards, registers,
 indexes, and generated summaries are projections.
 
-Recency, visibility, or repetition does not turn a projection into truth.
-Contradiction between the owning ticket, required milestones, current Goals, or
-cited acceptance evidence blocks closure. Superseded evidence remains history
-and cannot be projected as current acceptance.
+Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) with
+that authority chain as source, the current work-state consumer as target and
+its required milestones and acceptance evidence as material dependencies.
+Contradiction among those sources blocks closure; historical evidence retains
+its historical standing in the view.
 
 ---
 

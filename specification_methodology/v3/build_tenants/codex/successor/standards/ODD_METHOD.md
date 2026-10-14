@@ -3,51 +3,26 @@
 <!-- STDO3_PROFILE_BINDING_START -->
 ## Governing Relations
 
-This member is the graph-native ODD constitutional method surface of STDO;
-its declared obligations apply in a Product-declared ODD scope under lawful activation.
-It maps [Foundations](FOUNDATIONS.md) and the
-[Transformation Library](TRANSFORMATION_LIBRARY.md). Availability, Product
-adoption and execution-scoped activation remain distinct relations;
-availability supplies no Product semantics, concrete runtime identity or grant.
-Related owner routes are [Spec Method](SPEC_METHOD.md),
-[Design Module Method](DESIGN_MODULE_METHOD.md),
-[Reference Frame Method](REFERENCE_FRAME_METHOD.md),
-[Ticket Method](TICKET_METHOD.md) and [Release Method](RELEASE_METHOD.md), each
-under its own applicability. This list adds no dependency to the composition
-declared below; release remains a separate process surface.
-[World Model Method](WORLD_MODEL_METHOD.md) and [UX Method](UX_METHOD.md)
-retain their separate applicability and semantic owners.
+This graph-native profile applies in a Product-declared ODD scope under lawful
+activation. Its consumer binds the ODD, GTL and ABG roles to concrete
+realizations; availability selects neither a package nor a Product meaning or
+grant. Spec, Design, Frame, Ticket, Release, World Model and UX retain their
+own applicability and owners.
 
-The premises are an adopted ODD outcome, a published typed traversal contract,
-an admitted basis and capable bounded actors. Shared
-[bounded construction](FOUNDATIONS.md#bounded-construction) then requires each
-traversal to preserve its enclosing obligations, and
-[workspace and context](FOUNDATIONS.md#workspace-and-context) requires current
-observation before relying on a remembered work state. Scoped identity and
-authority prevent a capable worker or a read model from acquiring undeclared
-control.
+At each published action and evaluation boundary, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) with the
+exact selected Product outcome or admitted bounded prerequisite/experiment,
+IntentLineage, TargetObligationBinding, published action contract, current
+execution basis and consumer-bound authority. Its material dependencies are
+the inputs and causal predecessors declared by the constructive loop.
+[Constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface) bounds the
+worker's external obligations while leaving its internal HOW open.
 
-ODD makes additional choices: graph-native actions, cumulative typed
-environments, admitted runtime facts and the consequence loop below. These
-choices apply in the adopted scope; finite context alone does not require a
-graph executor, event log or particular actor hierarchy. Consumer-bound ODD,
-GTL and ABG roles select no concrete package and transfer no Product meaning.
-
-| Shared operation | ODD deciding consumer |
-|---|---|
-| Bind | Recover the selected Product outcome, any admitted bounded prerequisite or experiment, IntentLineage, exact target obligations, published action contract, execution basis and consumer-bound authorities. A target or controller label supplies no authority. |
-| Acquire | Observe the worksite, runtime facts and admitted source truth; retain current gap pressure, structural source coherence and lineage-reachable evidence. Observation, model synthesis and admitted evidence remain different relations. |
-| Transform | A published action under the exact A3/A14 action-publication contracts performs bounded construction under the admitted vector contract. The worker retains internal HOW, produces required evidence for owning native admission and returns control to the bound ABG authority. This row grants no runtime-event or ledger mutation. |
-| Evaluate | The exact §11.5D function table owns one synthesis and three evaluation functions: synthesize_model -> ProductAssetModel; eval_gap -> ObservationSnapshot + GapPressureRow; evaluate_action -> EdgeFulfillmentLedger + EdgeClosureDecision; evaluate_next -> PriorityProjection + NextActionProjection + selected_action, including the typed no-action result while post_reprice is unresolved. No name or partial output in this account replaces that table or confers Reviewer control. |
-| Conjoin | Compatible published refinements and cumulative environments preserve their outer contract, exact producer coordinates, admitted evidence, unresolved obligations and zoom-stable closure. A local green path does not decide enclosing acceptance. |
-| Dispose | evaluate_action folds admitted evidence into EdgeFulfillmentLedger and EdgeClosureDecision under F_D/ABG/product admission. Separately, evaluate_next consumes that admitted decision and fresh eval_gap truth to produce its exact next-action outputs; it cannot decide prior closure. ABG admission/traversal authority separately admits ConstructionIntent. A11's conceptual disposition versus invocational selection and the no-rival-control-path law remain operative; this row appoints no replacement owner. |
-
-The consumers below return the shared [result record](FOUNDATIONS.md#result-algebra)
-and use [result conjunction](FOUNDATIONS.md#result-conjunction) for required
-obligations. Domain decisions retain their original outcome and exact predicate.
-The operations add no compulsory six-stage workflow, runtime API or categorical-equivalence
-claim. The IntentLineage-to-NextActionProjection loop applies within a selected
-ODD scope.
+This member owns graph-native actions, cumulative typed environments, admitted
+runtime facts and the four-function consequence loop. Their exact functions,
+carriers, control grants and domain outcomes below specialize shared
+preservation, projection, currentness and result law. They require no additional
+generic workflow, runtime API, categorical-equivalence claim or actor hierarchy.
 
 <!-- STDO3_PROFILE_BINDING_END -->
 
@@ -829,33 +804,23 @@ not currently ODD-correct over GTL/ABG.
 
 ### 11.5C Projection-Source Coherence
 
-Projection and query lanes are downstream read models over admitted carrier,
-runtime, event, or source truth.
+Before publishing an ODD read model, apply
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) to its
+concrete admitted source and consumer interpretation:
 
-They may summarize, index, filter, or render that truth.
+| Projection | Required source and preserved relation |
+|---|---|
+| Function catalog | Admitted GTL module or public carrier and its callable contract. |
+| Asset ownership and start targets | The admitted carrier's ownership and target relation, derived from or structurally compared with that carrier. |
+| Runtime status | ABG runtime facts, events, replay or projection truth. |
+| Domain query overlay | The named admitted domain carrier interpreted under Product-owned domain law. |
 
-They must not reconstruct an alternate authority surface beside the admitted
-carrier.
-
-For an ODD product, this means:
-
-- function catalog views must reconcile to the admitted GTL module or public
-  carrier
-- asset ownership and start-target views must be derived from, or structurally
-  compared against, the admitted carrier they expose
-- runtime status views must derive from ABG runtime facts, events, replay, or
-  projection truth
-- domain query overlays must fail closed when the carrier they describe is
-  missing, stale, or structurally divergent
-
-Name equality is not enough.
-
-A same-named graph function, node, carrier, policy, or route with different
-inputs, outputs, vectors, declarations, ownership, or closure law is a different
-truth surface until reconciled.
-
-Negative proof for a projection must include structural drift, not only missing
-source truth.
+These views may summarize, index, filter or render their sources. Publication
+fails closed on missing, stale or structurally divergent source truth. Compare
+inputs, outputs, vectors, declarations, ownership and closure law: name equality
+does not establish coherence. The projection's negative proof must exercise
+structural drift as well as source absence. None of these publication bindings
+grants runtime, closure or next-action authority.
 
 ### 11.5D Constructive Evaluation And Yield Loop
 
@@ -927,9 +892,9 @@ authority:
 
 | Function | Inputs | Output | Boundary |
 | --- | --- | --- | --- |
-| `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, select work, invoke work, or close work. |
-| `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It does not choose work and does not close work. |
-| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It does not admit construction intent and does not evaluate the result of an action. |
+| `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, admit construction intent, select work, invoke work, or close work. |
+| `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It emits observation and gap pressure only; it does not admit construction intent, invoke work, choose work or close work. |
+| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It may bind target obligations and rank lawful actions, but does not admit construction intent or decide whether the prior action closed, yielded, failed or requires repair; it consumes the admitted EdgeClosureDecision for that classification. |
 | `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
 
 The word `evaluator` is not sufficient by itself. A design, ticket, code module,
@@ -951,25 +916,15 @@ The loop is governed by these axioms:
 
 **A0. One Surface**
 
-There is one authoritative computational surface for traversal consequence:
-
-```text
-IntentLineage
--> ProductAssetModel
--> ObservationSnapshot
--> GapPressureRow
--> TargetObligationBinding
--> PriorityProjection
--> ConstructionIntent
--> AdmittedEvidence
--> EdgeFulfillmentLedger
--> EdgeClosureDecision
--> NextActionProjection
-```
-
-No CLI branch, prompt prose, postflight string, gap-dossier action list, query
-projection, service method, or local operator summary may become a rival source
-of traversal truth.
+The four-function contracts and their constitutional equation define one
+authoritative computational surface for traversal consequence. Each invocation
+applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to its declared inputs, output predicate and authority; composition binds the
+causal chain from IntentLineage through admitted closure to next action.
+A CLI branch, prompt, postflight string, gap-dossier action list, query
+projection, service method or operator summary cannot supply another traversal
+decision path. Such a path fails the shared authority condition with this ODD
+binding, even if it produces the same artifact.
 
 **A1. Worksite Is Observed, Not Trusted**
 
@@ -1109,27 +1064,13 @@ decision, not hidden sequential control.
 
 **A4a. Evaluation Function Separation**
 
-`synthesize_model`, `eval_gap`, `evaluate_next`, and `evaluate_action` are
-separate authority functions.
-
-`synthesize_model` may synthesize the current product asset model from
-event-log-backed intent lineage, prior model, and admitted product truth only.
-It must not observe the worksite, admit construction intent, invoke work, close
-work, or select next action.
-
-`eval_gap` may emit observation and gap pressure only. It must not admit
-construction intent, invoke work, close work, or select next action.
-
-`evaluate_action` may fold admitted action evidence into ledger and closure
-decision only. It must not select the next graph action.
-
-`evaluate_next` may bind target obligations, rank lawful published actions, and
-publish next-action projection. It must not admit construction intent or decide
-whether the prior action closed, yielded, failed, or requires repair except by
-consuming the admitted `EdgeClosureDecision`.
-
-Any module that lets one of these functions perform another function's authority
-creates a rival control surface and violates A0.
+The function table above owns the inputs, outputs and permitted operations of
+`synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action`.
+Apply Contract application's authority condition to that row at invocation.
+The functions may share libraries; their authority functions remain separate.
+An invocation of one function exercising an operation reserved to another row
+fails A0, even when the functions share an implementation module or actor.
+Construction-intent admission remains the distinct step after selection.
 
 **A5. F_P Freedom, F_D Authority**
 
@@ -1149,14 +1090,15 @@ AdmittedEvidence
 -> EdgeClosureDecision
 ```
 
-`evaluate_action` consumes the admitted `TargetObligationBinding` and its required
-evidence set, fixed before the action, before folding them with the shared
-[result conjunction](FOUNDATIONS.md#result-conjunction). A known falsified
-obligation and its citations survive alongside a different unassessed
-obligation. Missing evidence, a worker that did not run and uncertain effects
-remain explicit; none becomes success through an empty fold, a green sibling
-or a smaller target selected after the action. The admitted fold is the basis
-of the closure decision, not permission for the evaluator to select new work.
+`evaluate_action` applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
+reliance on admitted evidence for the edge-closure predicate fixed by the
+`TargetObligationBinding` and required evidence set before the action. It then
+evaluates those exact obligations through core conjunction; admissible reliance
+is not itself edge fitness, and a smaller post-action target cannot replace
+the predicate. The resulting admitted ledger and decision retain the original domain
+assessments and support closure disposition only. The function table reserves
+next-action selection to `evaluate_next`.
 
 **A7. Ledger Is Evidence, Not Action Selector**
 
@@ -1287,13 +1229,15 @@ RuntimeEventLog
 If replay cannot reproduce the decision, the implementation has created hidden
 state.
 
-Replayability does not require retaining the complete ledger in an actor's
-context or redoing still-valid evaluations. Acquire the sufficient reachable
-subset for the selected action, checking its basis and invalidators. After an
-interruption, observe the current worksite and reconcile any `unknown` or
-`partial` effect before a dependent repeat. Current admission and replay then
-reconstruct lawful control without resetting the workspace. A lost response
-after invocation is not evidence of `not_started` or `completed`.
+The recovery consumer applies
+[workspace and context](FOUNDATIONS.md#workspace-and-context) to the current
+worksite and [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the resumed action. Its additional ODD support is the sufficient reachable
+ledger subset with current basis and invalidators. Current admission and replay
+reconstruct control; acquiring that subset does not require complete-history
+context or redoing still-valid evaluations. Resolve material unknown or partial
+effects before a dependent repeat. A lost invocation response supplies neither
+`not_started` nor `completed` evidence.
 
 **A13a. Causal Chain Integrity**
 
@@ -1672,31 +1616,27 @@ acceptance remain a separate process surface.
 
 ## 16. Failure Pattern
 
-The method is being violated when any of these are true:
+An ODD-conformance assessment applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to the
+claimed capability, its published boundary and the causally applicable loop
+contracts. Use the following source-bound failure families; they select
+deciding owners rather than define another checklist law.
 
-1. a claimed product step has no corresponding node or vector
-2. a graph function exists with no clear outer contract
-3. automation performs work that cannot be described as a manual traversal
-4. the installed product depends on authoring-carrier knowledge that a clean target project should not contain
-5. scenarios cannot name the significant paths they intend to prove
-6. the project claims closure without target-relative evidence
-7. the cumulative environment law is bypassed by "last-output feeds next-input" wiring
-8. zoomed and unzoomed views disagree about whether a carrier is closed
-9. imperative service code owns an operative transition that has no published graph-function outcome contract
-10. framework behavior is implemented as workspace orchestration first and only later described with GTL vocabulary
-11. imperative code decides closure, continuation, semantic target movement, or lineage truth outside declared graph-function, ABG runtime, or product-owned carrier truth
-12. a GTL/ABG product or plugin carries hidden execution authority for
-    traversal loops, actor invocation, process supervision, retry,
-    continuation, runtime events, projection, or closure folds
-13. yield or lawful iteration is flattened into retry, block, timeout, local
-    waiting state, or a hidden CLI loop instead of being represented as
-    replay-visible closure disposition
-14. a public query, gaps view, postflight string, service method, or installed
-    operator summary can decide next work outside the constructive evaluation
-    loop
-15. a constitutional process cannot be followed end-to-end by an agentic coder
-    from the declared authority, or a produced constitutional artifact is
-    accepted without passing deterministic admission (§11.7A)
+| Failure family | Owning decision and proof |
+|---|---|
+| Missing node/vector, outer contract or real graph carrier | [Graph Model](#5-graph-model); [Typed Assets](#111-typed-assets-and-nodes-are-explicit); [Graph Functions](#112-graph-functions-are-the-primary-constructive-carrier); [Outcome-First Realization](#112a-outcome-first-realization-order); [GTL Module](#114-the-gtl-module-is-the-operative-publication-surface). |
+| Imperative-first framework or hidden execution/continuation path | [Outcome-First Realization](#112a-outcome-first-realization-order); [ABG Continuation](#115a-abg-owns-continuation-and-re-entry); [Execution Authority Audit](#115b-execution-authority-audit); [A0 and the four-function contract](#115d-constructive-evaluation-and-yield-loop). |
+| Automation with no lawful manual/agentic traversal or ungated artifacts | [Manual Walkthrough](#117-manual-walkthrough-must-still-be-lawful) and [Conforming Agentic Development](#117a-conforming-agentic-development). |
+| Installed builder depends on the target's private authoring knowledge or merges self-host authority | [Product Boundary](#6-product-boundary); [Self-Host Boundary](#7-self-host-boundary-rule); [Installed-Dev Rule](#13-installed-dev-rule). |
+| Scenarios omit significant proving paths or claim target closure without evidence | [Scenario Rule](#12-scenario-rule); [A6](#115d-constructive-evaluation-and-yield-loop); [Real Authority-Path Negative Proof](#117b-real-authority-path-negative-proof-stdo-up-010). |
+| Last-output-only composition or disagreement between coarse and refined closure | [Cumulative Environment](#118-cumulative-environment-law-is-mandatory); [Global Convergence](#119-global-convergence-must-be-stable-under-zoom); [A14](#115d-constructive-evaluation-and-yield-loop). |
+| Yield flattened to retry, block, timeout, local waiting or CLI control | [A4, A8, A9 and A10](#115d-constructive-evaluation-and-yield-loop). |
+| Query, gaps, postflight, service or operator output decides next work | [Projection-Source Coherence](#115c-projection-source-coherence); [A4a, A7, A11, A12 and A16](#115d-constructive-evaluation-and-yield-loop). |
+
+A failure blocks the corresponding conformance claim under its owner.
+Unperformed or inconclusive proof remains the applicable core result; a
+source-grep check or artifact inventory cannot substitute for the selected
+authority-path claim.
 
 ---
 
@@ -1788,28 +1728,20 @@ If an LLM skips that ordering, it will usually either:
 
 ## 19. Ramp-Up Checklist
 
-An LLM ramping into an ODD product should quickly answer:
+A cold actor must readily recover the product's source-to-outcome semantic
+chain; typed assets/nodes; public graph functions, machine-readable catalog and
+GTL module; ABG/Product split; and the exact loop, dispositions and proof lane.
+It acquires the local subjects and the owning contracts selected by section 16,
+under the cold-start route above.
 
-1. What is the product's semantic chain from source to published outcome?
-2. What are the typed domain assets or nodes?
-3. What are the public graph functions?
-4. Where is the machine-readable function catalog?
-5. Where is the GTL module?
-6. What belongs to ABG versus the product?
-7. What is the projection/query lane?
-8. What admitted carrier, runtime, event, or source truth does each projection
-   derive from, and how does it fail closed on structural drift?
-9. What proves that execution authority has not escaped ABG into product or
-   plugin code?
-10. What is the product's constructive evaluation loop from observation to next
-    lawful action?
-11. What are the closure decision dispositions, and how is `yield` represented
-    as replay-visible lawful iteration?
-12. What proof surfaces close the current capabilities?
-13. What outer carrier remains open if a refined inner lane is green but live requirements still lack executable proof?
-14. Can an agentic coder follow the constitutional process from the declared authority alone, and do the artifacts it produces pass deterministic admission?
-
-If those questions cannot be answered quickly, the product is not yet sufficiently ODD-shaped.
+The entry is sufficient only when that material lets the actor determine source
+coherence and structural-drift refusal, execution-authority containment,
+observation-to-action control, replay-visible yield, outer closure with missing
+inner proof, and lawful agentic traversal with deterministic artifact admission.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to this acquisition claim. An unanswered required relation means the product
+is not yet sufficiently specified for that ODD entry; a glossary or generic
+rule packet cannot supply the actual subject.
 
 ---
 

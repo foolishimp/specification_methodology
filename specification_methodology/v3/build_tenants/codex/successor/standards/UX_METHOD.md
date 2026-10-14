@@ -510,25 +510,19 @@ Each finding is classified as:
 - `product_reprice`: product definition must change
 - `remove`: the change should be backed out or kept out of closure
 
-These are domain dispositions on the assessed UX claim. Report each through
-the shared [result record](FOUNDATIONS.md#result-algebra), keeping its cited
-design, exact compliance predicate, evidence and residuals. `accepted` maps to
-`satisfied` only for that compliance predicate. A known violation remains
-`falsified` when its disposition is `local_paydown`, `design_reframe`, a reprice
-or `remove`; an unresolved assessment remains `indeterminate` with that
-disposition rather than acquiring compliance by being assigned a ticket.
-Basis and scope failures retain `invalid_basis` or `out_of_frame`. The owner
-who may accept, reprice or remove work remains bound by the existing grant.
+These dispositions bind [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the exact UX compliance predicate, cited design and current surface.
+`accepted` denotes established compliance. Paydown, reframe, reprice and removal
+name permitted responses, not evidence of compliance: retain the established
+failure or unresolved result on that predicate. Scope and basis diagnoses use
+their core values. The acting owner retains its existing grant.
 
 Sprint-close eligibility and product UX method closure are separate predicates.
-The former may permit a declared local paydown under its governing policy;
-the latter conjoins its applicable proof and accessibility results through
-[core conjunction](FOUNDATIONS.md#result-conjunction). An authorised recorded
-exemption is the supported applicability judgment that removes only its
-exempted obligation; no absent exemption is a missing mandatory result.
-Sprint-close
-eligibility is not a conjunct of that method-closure predicate and supplies no
-evidence that the debt is resolved.
+The former admits local paydown only under its stated policy. The latter
+requires its applicable replay and accessibility proof through core conjunction.
+A recorded authorised exemption decides only its named applicability; an
+unrecorded exemption supplies no such evidence. Closing the sprint establishes
+neither discharge of paydown nor method closure.
 
 The sprint may close with explicit local paydown tickets only where the debt is
 local to UX realization and the governing method allows follow-up. It may not

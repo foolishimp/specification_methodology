@@ -69,13 +69,13 @@ reconstruction establishes content and reference checks only. Acceptance of
 the historical cut, semantic derivation, successor admission and publication
 remain separate judgments at their existing owners.
 
-Verification returns the shared [result record](FOUNDATIONS.md#result-algebra)
-for the exact historical-coordinate and byte-reconstruction predicates. Conjoin
-required member, digest, fragment and unique-membership checks with
-[result conjunction](FOUNDATIONS.md#result-conjunction), preserving failed and
-unresolved checks separately. A successful byte check is `satisfied` only for
-that content predicate. It cannot be remapped to semantic derivation,
-acceptance or current authority by changing the predicate after evaluation.
+Verification applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the exact historical-coordinate and byte-reconstruction predicates. Its
+required checks are member, digest, fragment and unique membership; the
+verification material above supplies their evidence and source identity. The
+core result and conjunction preserve each check and its residuals. This is a
+content-verification binding, not semantic derivation, acceptance or current
+authority. Their predicates remain separate.
 
 
 ## Position

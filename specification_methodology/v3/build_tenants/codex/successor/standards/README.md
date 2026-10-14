@@ -17,9 +17,14 @@ It owns the [single result algebra](FOUNDATIONS.md#result-algebra),
 [result conjunction](FOUNDATIONS.md#result-conjunction),
 [workspace-derived context](FOUNDATIONS.md#workspace-and-context) and
 [configuration contract](FOUNDATIONS.md#configuration).
-[Transformation Library](TRANSFORMATION_LIBRARY.md) supplies Bind, Acquire,
-Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
-material contracts and owners; these are not compulsory phases or a runtime API.
+[Transformation Library](TRANSFORMATION_LIBRARY.md) owns shared
+[contract application](TRANSFORMATION_LIBRARY.md#contract-application),
+[constraint surfaces](TRANSFORMATION_LIBRARY.md#constraint-surface),
+[faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) and
+[composition](TRANSFORMATION_LIBRARY.md#composition-law). Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose organise these responsibilities. Domain
+instances bind their predicates, policies and grants; they do not copy a rival
+generic law or acquire a new runtime API.
 Responsibility views project selected material clauses:
 [work/recovery](frames/WORK_RECOVERY.md),
 [evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md),
@@ -63,8 +68,8 @@ and optional Traversal profile retain their own signatures; the Baseline
 retains its adoption boundary; the Glossary is a non-deciding locator.
 Foundations and the library
 declare the premise layer and shared conditional contracts under the Methodology
-Product authority. Particular methods retain their concrete decisions and
-grants.
+Product authority. Particular methods apply those shared decisions and retain their additional
+policies and grants.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from

@@ -6,7 +6,7 @@ This tenant realizes the shared [Intent](../../specification/INTENT.md) and
 [Product](../../specification/PRODUCT.md). The current method package is
 [successor/](successor/README.md); it contains one [standards library](successor/standards/README.md).
 [Design](design/README.md) owns the document HOW.
-[Qualification](qualification/C3/RETURN.md) records the exact subjects, evidence,
+[Qualification](qualification/C3/iteration-3/RETURN.md) records the exact subjects, evidence,
 limits and remaining acceptance work.
 
 The common pen owns requirements and tickets. Tenant implementation writes stay

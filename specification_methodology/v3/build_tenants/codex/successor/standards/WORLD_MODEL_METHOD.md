@@ -1318,66 +1318,38 @@ does not.
 
 ## Composition Law
 
-Do not build one central monolith first.
+Compose local published domain artifacts and their entity cuts through the
+library's [composition contract](TRANSFORMATION_LIBRARY.md#composition-law).
+The binding is the participating cuts and exact bases, treatment predicates,
+fragment authorities, bounded-context meanings, declared loss and ambiguity.
+Required checks use the core conjunction on those actual claims. Higher-order
+publication retains the local artifacts and their identities.
 
-Build local published domain artifacts and their entity cuts, then
-stitch them.
+A candidate geometric claim cannot acquire established standing through
+composition or averaging. Directions in different representation spaces do not
+compose; changing that space supersedes the prior overlay. This domain policy
+admits no generic translation exception. Claims of adjunction or equivalence
+require the evidence in [Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
 
-Composition must preserve:
-
-- fragment authority
-- bounded-context meaning
-- treatment semantics
-- declared loss
-- ambiguity
-
-Before composing, bind the participating cuts, exact bases, treatment predicates
-and applicability of their evidence. Required claim checks use the shared
-conjunction; it retains falsified claims, missing coverage and each source's
-limits. A composed publication cannot promote a candidate geometric claim into
-an established one or erase loss by averaging successful checks. A mathematical
-claim of adjunction or equivalence follows
-[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions); the method's
-vocabulary alone does not prove it.
-
-Higher-order models are composed from published domain artifacts. They do not
-erase them.
-
-The preferred end-state is a federated world-model mesh rather than a single
-flattened enterprise model.
-
-Detailed mesh topology may remain product-local while the line is still being
-developed. Method-level mesh law should be ratified only once the reusable node
-and edge model is stable.
+Prefer a federated world-model mesh to a flattened central model. Detailed
+mesh topology remains product-local until a reusable node/edge model is
+ratified by the method owner.
 
 ---
 
 ## Projection Law
 
-Projection is downstream convenience, not semantic authority.
+World-model projections apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the semantic kernel as source. The material source relations are governing
+objects, evidence, treatments, covariance edges, adjoint mappings and temporal
+reference artifacts where applicable. Projection bindings retain their exact
+selectors and declared loss; publication supplies no new semantic authority.
 
-The semantic kernel remains primary.
-
-All projections should remain traceable back to:
-
-- governing objects
-- evidence
-- treatments
-- covariance edges
-- adjoint mappings
-- temporal reference artifacts where applicable
-
-Tables, schemas, APIs, mapping documents, and covariant transforms are all
-publication forms over the same semantic kernel.
-
-Because an API usually carries more business semantics than a bare schema, the
-preferred structural order is:
-
-`world model -> API contract -> schema contract`
-
-Query and traversal are also downstream-facing conveniences in this sense. They
-may be a first-class delivery pillar without becoming the constitutional core
-of the method.
+Tables, schemas, APIs, mapping documents and covariant transforms are forms
+over that kernel. Prefer `world model -> API contract -> schema contract`
+because the API commonly carries more domain meaning than a bare schema.
+Query and traversal are downstream delivery capabilities. Their delivery
+importance does not transfer ownership of the semantic kernel.
 
 ---
 

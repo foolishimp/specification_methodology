@@ -9,7 +9,7 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
 
 ## Result algebra
 
@@ -134,7 +134,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
 
 ## Result conjunction
 
@@ -251,7 +251,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea`.
 
 ## Bounded construction
 
@@ -288,7 +288,7 @@ and cannot establish that the old destination was reached. Repeating a failed
 relation needs a supported causal change; elapsed activity is no repair.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Transformation-admission specialization
 
@@ -308,52 +308,45 @@ The [design admission consumer](../DESIGN_MODULE_METHOD.md#admission-contract-us
 binds this contract to its transition relation and uses the consequences to
 distinguish valid support from a shape-correct candidate lacking material basis
 or authority. Its predicate, result refinement, commit-unit decomposition and
-permitted direct/composite/nested forms remain domain policy. This argument
-neither derives those choices nor creates an additional validation pass.
+permitted direct/composite/nested forms remain domain policy. This application neither derives those choices nor creates an additional
+validation pass. [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) supplies the
+shared decision; the design consumer binds its domain admission obligations.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
+Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0`.
 
 #### Admission contract use
 
-Bind the relation above through the library's
-[transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate and predecessor on the scoped
-entity, under an interpretable authoritative admission basis and with the
-material support the owning relation requires. Its output domain is that
-relation's declared durable result or other supported outcome. These are
-semantic parameters, not a new carrier
-schema or common result enum. This method owns the design completeness test;
-UP-021 owns the admission decision and standing-test semantics.
+Apply [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the declared candidate and predecessor on the scoped entity. Bind the
+authoritative admission basis, the complete relation and commit unit declared
+above, its required support, admitter grant and supported durable-result or
+other outcome. These are semantic bindings, not a new carrier. The library's
+[admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization)
+relates this use to its foundations. This method owns design completeness;
+UP-021 owns admission and standing-test semantics.
 
-The admission assessment returns the shared
-[result record](../FOUNDATIONS.md#result-algebra) on the predicate that this exact
-candidate satisfies the declared admission relation at its current basis.
-For this assessment, predecessor continuity, predecessor currentness and the
-admitter's grant are material joins of that predicate. Established stale
-predecessor state or a defeated grant therefore falsifies the admission claim
-under an interpretable governing basis; it is not relabelled a missing basis.
-Missing evidence about those joins leaves the admission claim `indeterminate`.
-An uninterpretable or contradictory governing basis is `invalid_basis`; an
-unsupported evaluation boundary is `out_of_frame`. Preserve the domain
-admission outcome and evidence. `satisfied` requires the whole admission
-predicate, including its joins. Basis advancement before the semantic commit
-still prevents effect and requires the current-basis re-entry owned by UP-021.
-An assessment not performed retains `performance = not_performed`. Construction
-of a well-formed candidate is a different predicate and cannot stand in for
-admission. The effect component records the actual commit/publication state,
-including `partial` or `unknown` where appropriate.
+The assessment predicate is that this exact candidate satisfies that declared
+admission relation at its current basis. Predecessor continuity, currentness
+and admitter authority are material joins: established stale predecessor state
+or a defeated grant is `falsified`; missing evidence about them is
+`indeterminate`. An uninterpretable or contradictory governing basis is
+`invalid_basis`; an unsupported evaluation boundary is `out_of_frame`.
+`satisfied` requires the whole predicate and its joins. Preserve the domain
+outcome and the core performance/effect record, including non-performance,
+partial publication or unknown effects. Candidate well-formedness is a
+different predicate.
 
-Apply that specialization in the existing admission assessment: a
-shape-correct candidate reconstructed by a projector cannot establish
-admission when it lacks the required predecessor continuity or admitter grant.
-The same candidate with authentic current-basis support and actual authority
-is evaluated against the owning predicate; those facts alone do not guarantee
-admission. Where a governing seam remains unresolved, use UP-017's affected
-relation set and the owning result algebra rather than inventing a local pass.
+A shape-correct projector candidate therefore requires authentic
+current-predecessor support and the actual grant at this gate; those facts
+alone do not establish the remaining admission conditions. Unresolved seams
+use UP-017's declared affected set under the shared support condition. Basis
+advancement before semantic commit prevents the effect and requires UP-021
+current-basis re-entry. This is the existing admission assessment, not an
+additional validation pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
+Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0`.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 
@@ -431,65 +424,51 @@ This law is false if any of the following holds:
 
 #### Admission contract use
 
-Bind the relation above through the library's
-[transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization).
-Here its input domain is the declared candidate and predecessor on the scoped
-entity, under an interpretable authoritative admission basis and with the
-material support the owning relation requires. Its output domain is that
-relation's declared durable result or other supported outcome. These are
-semantic parameters, not a new carrier
-schema or common result enum. This method owns the design completeness test;
-UP-021 owns the admission decision and standing-test semantics.
+Apply [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the declared candidate and predecessor on the scoped entity. Bind the
+authoritative admission basis, the complete relation and commit unit declared
+above, its required support, admitter grant and supported durable-result or
+other outcome. These are semantic bindings, not a new carrier. The library's
+[admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization)
+relates this use to its foundations. This method owns design completeness;
+UP-021 owns admission and standing-test semantics.
 
-The admission assessment returns the shared
-[result record](../FOUNDATIONS.md#result-algebra) on the predicate that this exact
-candidate satisfies the declared admission relation at its current basis.
-For this assessment, predecessor continuity, predecessor currentness and the
-admitter's grant are material joins of that predicate. Established stale
-predecessor state or a defeated grant therefore falsifies the admission claim
-under an interpretable governing basis; it is not relabelled a missing basis.
-Missing evidence about those joins leaves the admission claim `indeterminate`.
-An uninterpretable or contradictory governing basis is `invalid_basis`; an
-unsupported evaluation boundary is `out_of_frame`. Preserve the domain
-admission outcome and evidence. `satisfied` requires the whole admission
-predicate, including its joins. Basis advancement before the semantic commit
-still prevents effect and requires the current-basis re-entry owned by UP-021.
-An assessment not performed retains `performance = not_performed`. Construction
-of a well-formed candidate is a different predicate and cannot stand in for
-admission. The effect component records the actual commit/publication state,
-including `partial` or `unknown` where appropriate.
+The assessment predicate is that this exact candidate satisfies that declared
+admission relation at its current basis. Predecessor continuity, currentness
+and admitter authority are material joins: established stale predecessor state
+or a defeated grant is `falsified`; missing evidence about them is
+`indeterminate`. An uninterpretable or contradictory governing basis is
+`invalid_basis`; an unsupported evaluation boundary is `out_of_frame`.
+`satisfied` requires the whole predicate and its joins. Preserve the domain
+outcome and the core performance/effect record, including non-performance,
+partial publication or unknown effects. Candidate well-formedness is a
+different predicate.
 
-Apply that specialization in the existing admission assessment: a
-shape-correct candidate reconstructed by a projector cannot establish
-admission when it lacks the required predecessor continuity or admitter grant.
-The same candidate with authentic current-basis support and actual authority
-is evaluated against the owning predicate; those facts alone do not guarantee
-admission. Where a governing seam remains unresolved, use UP-017's affected
-relation set and the owning result algebra rather than inventing a local pass.
+A shape-correct projector candidate therefore requires authentic
+current-predecessor support and the actual grant at this gate; those facts
+alone do not establish the remaining admission conditions. Unresolved seams
+use UP-017's declared affected set under the shared support condition. Basis
+advancement before semantic commit prevents the effect and requires UP-021
+current-basis re-entry. This is the existing admission assessment, not an
+additional validation pass.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
-For a material transition, each admission owner is independently responsible
-for deriving and validating the complete enclosing relation from authoritative
-inputs. The relation contains every participant and equality join whose
-identity, validity, authority, currentness, or transition can affect or be
-affected by admission; each crossing seam includes its relevant far side or
-authoritatively establishes
-that the far side cannot participate. Caller or owner assertions of
-completeness, validity, prior admission, or authority do not establish truth.
-
-An owner may consume established facts when their exact subject, basis, scope,
-provenance and validity remain applicable to its relation. Their production and
-invalidation must be recoverable; an unsupported assertion of prior success is
-not such a fact. A function, component, role, conversation or status boundary
-alone invalidates none of those coordinates and requires no repeated derivation.
-Material mutation, rollback, changed authority or basis, expired validity, and
-an actual trust boundary trigger the applicable validation before reliance or
-effect. Reuse does not transfer the owner's admission responsibility, omit a
-participant or satisfy a separately required independent judgment.
+Each admission owner applies
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) to the
+admission of the exact complete material transition. Its support universe is
+every participant and equality join whose identity, validity, authority,
+currentness or transition can affect or be affected by admission. The owner
+independently derives and validates that relation from authoritative inputs;
+the shared Support condition governs crossing seams and independence claims.
+Apply Currentness to established facts, including material mutation, rollback,
+authority or basis changes, expiry and actual trust boundaries. Reuse retains
+the owner's admission responsibility and separately required independent
+judgment. The following complete-transition conditions are specific to this
+admission relation:
 
 Derivation and validation bind one exact admission-valid authoritative basis
 identity through admission. If validity or currentness can advance after
@@ -552,7 +531,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae`.
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -630,7 +609,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529`.
 
 ## Test Authority Rule
 
@@ -646,84 +625,53 @@ operator confidence, ambient habit, or an unlabeled test corpus.
 ---
 
 
-Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
+Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0`.
 
 ### 1. Authority Seam Closure
 
-Each change must not increase the number of truth surfaces.
+For each changed semantic boundary, bind its authoritative carrier or contract
+and every consuming interface under
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application).
+The change must not increase truth surfaces; seam-closure work reduces existing
+rival surfaces. Removing the authoritative carrier must make its consumers fail
+closed, rather than reconstructing its meaning from raw artifacts, controller
+state or payload fragments. [Ingress Collapse](../DESIGN_MODULE_METHOD.md#3b-ingress-collapse-rule)
+governs raw input.
 
-When duplicate or rival truth surfaces already exist, seam-closure work should
-reduce them.
-
-This means:
-
-- one authoritative carrier or contract at each semantic boundary
-- no controller-side reconstruction of already-admitted truth
-- no downstream surface silently rebuilding source truth from raw artifacts
-- no raw or open payload trusted past ingress
-
-The test is:
-
-- if the authoritative carrier were removed, would the system fail closed, or
-  would another path silently reconstruct the same meaning?
-
-If meaning survives by reconstruction, the seam is not closed.
-
-For projection and query modules, seam closure also requires source coherence:
-
-- the projection must name the admitted carrier, runtime, event, or source truth
-  it derives from
-- reconstructed catalog, ownership, route, status, or closure truth must be
-  structurally compared against the admitted source carrier before publication
-- same-name but different-shape carriers must fail closed unless an explicit
-  migration design makes the divergence lawful
-- negative tests must cover structural drift, not only missing source truth
+Projection and query publication applies
+[Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection) to the
+named admitted carrier, runtime, event or source truth. Catalog, ownership,
+route, status and closure views must structurally compare their exposed relation
+with that source before publication. Same-name/different-shape carriers refuse
+unless an explicit migration design admits the difference. Negative proof
+covers structural drift as well as missing source truth.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
+Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0`.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
-`M(B)` closes one governed boundary. A bounded local action is taken inside a
-frame that derives from other accepted frames, and its lawfulness depends on
-relations the acting frame does not itself own.
+For a proposed action inside `M(B)`, apply
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) and its
+[composition law](../TRANSFORMATION_LIBRARY.md#composition-law). This design
+binding declares the governing accepted frames, bounded affected relations,
+inherited invariants, crossing authority/composition seams and subordinate
+frames opened by unresolved material distinctions.
 
-`Global` and `local` are relative to the selected frame. Each material design
-frame must identify:
+The governing structure may be a network: entity lifecycle and operational
+consistency, domain admission and runtime authority, or several sibling
+consumers may govern the same component. A single parent is sufficient only
+where the actual structure is hierarchical. The shared support condition
+decides seam closure through the causally relevant far-side relation or
+evidenced independence; this declaration supplies the concrete relations.
 
-- the governing frames and accepted relations from which it derives;
-- the bounded affected relation set of the proposed action;
-- the applicable inherited invariants;
-- the authority and composition seams crossing that set; and
-- the subordinate frames opened by unresolved material distinctions.
-
-A frame may derive from more than one governing frame. A persistence component
-belongs to an entity lifecycle boundary and an operational consistency
-boundary; an admission function belongs to a domain transition and a
-runtime-authority boundary; a shared callable may be consumed by several
-sibling domains without becoming subordinate to one. A single governing frame
-is lawful where the structure is genuinely hierarchical, and is not required.
-Governing frames form a constraint network for the same reason `M(B)` does.
-
-Every seam crossing the affected set must either include its causally relevant
-far-side relation in that set, or state why that relation cannot affect, and
-cannot be affected by, the bounded action. This makes the declared set testable
-against its own declared seams without requiring a closure algorithm or
-recursive expansion through irrelevant relations.
-
-The result is evaluated against every affected governing frame, preserves each
-applicable accepted relation, and updates only affected subordinate
-projections. A bounded local action conserves governing truth; it does not
-rewrite it. A result that changes a governing relation re-enters at that
-relation before acceptance.
-
-A subordinate frame opens only when a material distinction cannot be resolved
-at the governing altitude. This rule does not require recursively documenting
-irrelevant descendants.
-
-This law is false if a change is locally valid inside the selected frame but
-violates, duplicates, or silently reinterprets an invariant in any affected
-governing frame.
+Evaluate preservation against every affected governing frame and update only
+affected subordinate projections. Changing an accepted governing relation
+requires re-entry at that relation before acceptance. Open a subordinate frame
+only for a material distinction unresolved at the governing altitude; neither
+a closure algorithm nor recursive documentation of irrelevant descendants is
+required. A locally valid action that violates, duplicates or silently
+reinterprets an affected governing invariant fails this obligation.
 
 Discovered functionality is evidence about required behavior. It is not yet an
 architectural operation. A discovered verb, screen action, endpoint, command,
@@ -746,56 +694,40 @@ constitutional functionality
 ```
 
 
-Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018`.
+Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0`.
 
 ## 8. Totality Rule
 
-Semantic functions should be total or as close to total as the language and
-problem allow.
+Semantic functions should be total, or as close as the language and problem
+allow. Bind their admitted input domain, intended result and permitted recovery,
+re-entry, yield or termination under
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) and
+[bounded construction](../FOUNDATIONS.md#bounded-construction). The method-boundary
+return uses the core result record with the original domain outcome.
 
-At a method boundary their outcomes use the
-[shared result record](../FOUNDATIONS.md#result-algebra), retaining the function's
-domain outcome. Invalid basis, an unsupported input domain, insufficient
-evidence and a demonstrated failure remain distinct. A typed return says what
-happened; it does not guarantee that an external computation terminates. The
-owning transition states its permitted recovery, re-entry, yield or termination
-for each supported result, including unknown effects.
-
-Preferred shape:
-
-- invalid input is rejected at the boundary
-- semantic kernels consume admitted carriers only
-- failure is returned in a typed and explicit form when practical
-
-Projects using this method should prefer:
-
-- `Result`-like or closed outcome carriers
-- explicit validation stages
-- explicit "unsupported" or "rejected" outcomes
-
-Projects using this method should avoid:
-
-- partial functions that assume hidden preconditions
-- semantic `.get(...)` fallback chains
-- controller code that reconstructs missing truth from defaults
+The functional policy is to reject invalid input at ingress, consume admitted
+carriers in kernels, and return typed explicit failure where practical.
+Prefer closed Result-like outcomes and explicit validation, unsupported and
+rejected cases. Hidden preconditions, semantic `.get(...)` fallback chains
+and controller defaults that reconstruct missing truth violate that policy.
+Closed handling does not promise external-computation termination.
 
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### RF-003 Material Sufficiency
 
-Every known relation whose lawful change can alter the evaluation result,
-basis validity, evidence sufficiency, operation authority, or decision
-authority appears in the frame or enters through a declared authoritative
-input.
+Apply [Contract application: Support](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the evaluation family `Q`: its known material relations, as defined by
+[Material relation](../REFERENCE_FRAME_METHOD.md#material-relation), enter `M` or a declared authoritative
+input. An omitted material relation makes the activation insufficient. This
+known-relation boundary does not require proving that no undiscovered relation
+exists.
 
-Omitting a material relation makes the frame insufficient. The method does not
-require proving that no undiscovered material relation exists.
 
-
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -805,7 +737,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### RF-006 Authority Conservation
 
@@ -815,7 +747,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### RF-014 Capability Fit
 
@@ -825,7 +757,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Bind
 
@@ -834,7 +766,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Acquire
 
@@ -847,7 +779,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
 
 ## Transform
 
@@ -859,7 +791,7 @@ retains that owner's outcomes. These are original domain outcomes mapped under t
 the outer outcome or effect grant.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ### RF-012 Closed Results
 
@@ -899,7 +831,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2`.
 
 ## Minimal Evaluation Result
 
@@ -923,3 +855,119 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ```
 
 ---
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c`.
+
+## Contract application
+
+A contract bounds an operation by its input and output domains, intended
+predicate, governing constraints, material relations, evidence rule and actual
+grants. Its binding names their owners and current basis. These are semantic
+coordinates, not a required record format. An existing design, frame, function
+or work carrier can supply them; this law requires no additional carrier or
+validation stage.
+
+The application predicate is: **this proposed operation or reliance is
+admissible under this bound contract**. It differs from the predicate that the
+operation achieves its intended outcome. Application uses the following
+conditions once at the responsible consumer:
+
+1. **Binding.** Identify the actual subject, intended predicate, governing
+   interpretation, applicable policy and source/current-state coordinates.
+   Names or equal bytes alone do not supply identity, standing or applicability.
+2. **Support.** Account for the conditions and material dependencies capable
+   of changing this determination. Inspect through an affected seam until its
+   governing obligations are covered or evidence establishes independence of
+   the far side. A task boundary, partial listing or absence of observed failure
+   does not establish that independence. The domain selects its completeness
+   and sufficiency criteria; the actor does not silently narrow them.
+3. **Preservation.** Show that required input, output and cross-boundary
+   relations hold under the declared compatibility or translation. Retain
+   identity, meaning, lifecycle, producer/evidence coordinates, constraints,
+   authority and effect distinctions where material. A difference may be
+   lawful; it needs the instance's admitted relation. Neither universal field
+   equality nor an invented translation decides compatibility.
+4. **Authority.** Establish the actual operation or decision grant for the
+   selected effect. Keep the owners of meaning, evidence, operation and
+   disposition distinct. Shared code, a source reference or a satisfied
+   judgment supplies no missing grant. Required independent assessment retains
+   its owning conditions.
+5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
+   to evidence reuse, observations, concurrency and uncertain effects. A
+   supported changed dependency reopens the affected determination; an
+   unsupported currentness claim stays unresolved. A previously satisfied
+   check can be reused on supported unchanged premises; this law does not
+   require rechecking fixed graphs or every unchanged relation on every event.
+6. **Result.** Apply the [core result and conjunction law](../FOUNDATIONS.md#result-algebra)
+   on the actual predicates. Retain known failures, absent required coverage,
+   scope/basis diagnoses, original domain outcomes, performance and effects.
+   Unknown applicability is not non-applicability. A supported failure does
+   not disappear because another required condition is undecided.
+
+A consumer binds these conditions to its decision and domain exceptions rather
+than copying the generic conditions into a second rule. Its dependency and
+authority arguments are part of the existing decision evidence. Conditional
+exceptions must be named at their owning policy; a generic application cannot
+invent one. A library helper can implement several consumers, but their
+subjects, required evidence and powers remain separate.
+
+These conditions constrain what counts as admissible; they do not give a
+universal algorithm for deciding arbitrary predicates. Insufficient support
+returns the applicable core uncertainty or scope/basis result. A known violated
+condition is retained with its evidence. A supported admissibility result
+permits only the already-granted operation; it predicts neither success nor
+termination. The control contract handles its observed outcome separately.
+
+### Constraint surface
+
+For a current subject and basis, the bound contract describes the work allowed
+by its constraints and grants. It also exposes obligations still unresolved.
+This is the task's constraint surface. It distinguishes the permitted choices
+inside the contract from the choices reserved to an owner. A missing condition
+is not freedom; a condition proved irrelevant to this task need not be loaded
+again while that proof remains applicable.
+
+The surface can be represented as prose, typed relations, predicates, a_c or a
+faithful task view. Dependencies can form a graph; they need not form a tree or
+prescribe one execution order. A model must retain the distinction between
+established facts, assumed premises, discretionary choices and unknowns. Its
+constraint satisfaction result does not authenticate its observations or
+appoint an actor. [a_c interpretation](../AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+binds the source-to-model relation and its independent evidence.
+
+Two different implementations may both lie within this surface. Selection
+between them follows the declared outcome, cost and owner criteria, not a
+hidden requirement for the author's preferred implementation. A worker acquires
+the sufficient constraints **and the actual material subject**; the abstract
+surface alone is not a complete activation.
+
+### Faithful projection
+
+A projection or interpretation applies Contract application to a declared
+source-to-consumer relation. Its binding states the authoritative source and
+selector, target interpretation, consumer task, required distinctions, admitted
+loss or approximation, and invalidation conditions. Source and target retain
+their own identities. The domain owns additional publication and adoption
+conditions.
+
+For an exact projection, a consumer must recover the same material
+determinations from the view and the owning source. Approximation requires a
+declared adequacy relation and evidence of its end-to-end bound; local
+tolerances alone do not compose. Lost authority, a weakened condition or an
+unknown promoted to permission is a fidelity defect, not compression.
+
+The binding determines whether a full reproduction, a narrower sufficient view
+or an available authentic reference is required. Omitted task-irrelevant
+material can remain at its owner. Material omissions, stale sources or
+unavailable references prevent the corresponding reliance; they do not require
+copying every source body into every event. A view has no independent power to
+change its source meaning. Its currentness is established from the selected
+source and dependency state, not from its label or generation timestamp alone.
+
+Check fidelity against independently specified source decisions: at least the
+material permissible, prohibited and unresolved distinctions for the selected
+claim. A self-consistent model, matching schema, checksum or generated diff
+checks a different relation. Failure re-enters the first owning defect: source
+ambiguity, interpretation, projection, producer or consumer. It does not license
+changing the source to agree with its view.
